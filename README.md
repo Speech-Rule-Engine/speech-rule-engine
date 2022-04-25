@@ -125,7 +125,7 @@ numbers, e.g., `"1/2"`.
 | `engineReady()` | Returns a promise that resolves as soon as the engine is ready for processing (i.e., all necessary rule files have been loaded and the engine is done updating). **This is important in asynchronous settings.** |
 | `setupEngine(options)` | Takes an [options feature vector](#options) to parameterise the Speech Rule Engine. Returns a promise that resolves as soon as the engine is ready for processing. |
 | `engineSetup()` | Returns the current setup of the engine as an  [options feature vector](#options). |
-| `localeLoader()` | SRE's standard method for loading locales, depending on SRE's mode. For more detail see [discussion on custom loading methods](#custom-loading-method). |
+| `localeLoader()` | SRE's standard method for loading locales, depending on SRE's mode. For more detail see [discussion on locale loading](#locale-loading). |
 
 #### Methods for navigating math expressions:
 
@@ -142,7 +142,7 @@ For more information on keybindings for the walker see here [this dedicated
 page](https://speechruleengine.org/www/keybindings.html).
 
 
-### Options
+### Configuration ####
 
 There are a number of options that allow you to parameterise the Speech Rule
 Engine. They can be set with the `setupEngine(options)` method, which takes an
@@ -150,6 +150,29 @@ options feature vector (an object of option/value pairs) to parameterise the
 engine. The engine's setup can be queried with the `engineSetup()` method that
 returns feature vector representing its current setup. Some options are quite
 internal to SRE and are therefore not exposed via the command line interface.
+
+In addition to programmatically configuring SRE using the ``setupEngine``
+method, you can also set a configuration variable `SREfeature` before SRE is
+loaded. This can be useful, when running SRE as a batch process or when changing
+its locale loading behaviour on startup. For details see the section on [locale
+loading below](#locale-loading).
+
+`SREfeature` should be set in the `global` environment before SRE is loaded into
+Node. The following example sets the locale on load to German:
+
+``` javascript
+var SREfeature = {locale: 'de'}; 
+sre = require('speech-rule-engine');
+sre.engineReady().then(() => console.log(sre.toSpeech('<mo>=</mo>')));
+```
+
+This should yield `ist gleich` as output.
+
+
+### Options
+
+The following is a list of configuration options that can be passed to SRE via
+the `setupEngine` method or the `SREfeature` variable.
 
 #### Options to control speech output
 
@@ -196,64 +219,8 @@ given in decreasing order of interestingness.
 | *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
 | | By default SRE in node is in `async`, in browser in `http`, and on CLI in `sync` mode. |
 | *custom* | Provide a custom method for locale loading. See below for more informaton. |
-| *delay* | Delays loading of base locales. See below for more information. Default is ```false```. |
-
-
-### Custom Loading Method ####
-
-SRE loads its locales and rule sets via loading methods specific for the
-particular environment and mode. I.e., it loads json files from the file system
-in node or via XML HTTP requests in the browser using the `localLoader` method
-that is exposed in the API. These methods can be customised via passing a new
-method to the engine via the feature vector. A loader method takes the locale
-string as input and returns a promise that resolves to the string containing the
-JSON structure of the locale file once loading is successfully completed. In
-other words it should be of type
-
-``` typescript
-(locale: string) => Promise<string>
-```
-
-In node the method can be directly set by passing it to the `setupEngine` method
-via the feature vector. As an example the following method loads locales from a
-local folder at `/tmp/mymaps`.
-
-``` javascript
-sre.setupEngine({
-  custom: loc => {
-    let file = `/tmp/mymaps/${loc}.json`;
-    return new Promise((res, rej) => {
-      try {
-        res(fs.readFileSync(file));
-        console.log(`Loading of locale ${loc} succeeded`);
-      } catch (_) {
-        console.log(`Loading of locale ${loc} failed`);
-        rej('');
-      }
-    });
-  }
-});
-```
-
-For setting a custom loader when using SRE a browser see [the relevant
-discussion in that section](#custom-loading-methods).
-
-
-### Delaying Locale Loading ###
-
-In standard setup SRE loads its base locale files (currently these are
-`base.json` together with `en.json` as fallback rules) on
-initialisation. Setting `delay` to `true`, suppresses this behaviour and the
-base locale is loaded on first explicit call to `setupEngine`, only. 
-
-This can be useful in case the custom load method can only be provided later or
-the `json` path is constructed programmatically by a client application. It is
-also helpful if some locales are webpacked into a distribution and need to be
-loaded with a custom method.
-
-Note, that using `delay` means that locale loading can and has to be handled by
-the developer explicitly. In particular, it implies that English is not
-necessarily loaded as fallback locale.
+| *defaultLocale* | Allows customisation for default locale. Default is ```en``` for English. |
+| | This option is not available in the CLI. See below for more informaton.  |
 
 
 Standalone Tool
@@ -422,9 +389,13 @@ The API will now be available in the ``SRE`` namespace.
 
 In addition to programmatically configuring SRE using the ``setupEngine``
 method, you can also include a configuration element in a website, that can take
-the same options as ``setupEngine``.
+the same options as ``setupEngine``. There are two ways of specifying the
+configuration element:
 
-For example the configuration element
+1. Providing a JSON object in a special script tag of type `text/x-sre-config`.
+2. Setting the `SREfeature` configuration variable.
+
+An example of the first option is the configuration element
 ``` html
 <script type="text/x-sre-config">
 {
@@ -435,48 +406,28 @@ For example the configuration element
 }
 </script>
 ```
-will cause SRE to load JSON files from rawgit and for IE or Edge it will also load Google's
+which will cause SRE to load JSON files from rawgit and for IE or Edge it will also load Google's
 [wicked good xpath library](https://github.com/google/wicked-good-xpath). In addition the speech rules are set to ``mathspeak`` in ``super brief`` style.
 
 **Make sure the configuration element comes before the script tag loading SRE in your website!**
 
-
-### Custom Loading Methods ####
-
-Providing a custom loading method for locale loading in browser mode is very
-similar to its use in node. However, note that since we now want to define a
-function, it can not simply be given in the JSON configuration element in the
-`x-sre-config` script tag.  Instead we need to define the special `SREfeature`
-variable in the header of the file. Again **make sure this script tag comes
-before the script tag loading SRE in your website!**
-
-Here is an example of a custom function to load locales from localhost:
+An alternative is the use of the `SREfeature` variable to specify the feature
+vector to customise SRE when its loaded into the page.  Again **make sure this
+script tag comes before the script tag loading SRE in your website!**
 
 ``` javascript
 <script>
 var SREfeature = {
-"custom": function(loc) {
-    let file = 'http://localhost/sre/lib/mathmaps/' + loc + '.json';
-    let httpRequest = new XMLHttpRequest();
-    return new Promise((res, rej) => {
-      httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4) {
-          console.log('Using my custom loader');
-          let status = httpRequest.status;
-          if (status === 0 || (status >= 200 && status < 400)) {
-            res(httpRequest.responseText);
-          } else {
-            rej(status);
-          }
-        }
-      };
-      httpRequest.open('GET', file, true);
-      httpRequest.send();
-    });
-  }
-}
+"locale": "de"
+};
 </script>
 ```
+
+The use of `SREfeature` is particularly important for setting a custom load
+method in the browser, that can not simply be passed to the JSON object in the
+`x-sre-config` block. For more details see the section on [locale loading
+below](#locale-loading).
+
 
 # Developers Documentation
 
@@ -660,6 +611,165 @@ Import the SRE library as ES6 module into the browser, e.g.,
 SRE currently does not support bundling with `parcel`.
 
 
+Locale Loading
+--------------
+
+### Custom Loading Methods ####
+
+SRE loads its locales and rule sets via loading methods specific for the
+particular environment and mode. I.e., it loads json files from the file system
+in node or via XML HTTP requests in the browser using the `localLoader` method
+that is exposed in the API. These methods can be customised via passing a new
+method to the engine via the feature vector. A loader method takes the locale
+string as input and returns a promise that resolves to the string containing the
+JSON structure of the locale file once loading is successfully completed. In
+other words it should be of type
+
+``` typescript
+(locale: string) => Promise<string>
+```
+
+In node the method can be directly set by passing it to the `setupEngine` method
+via the feature vector. As an example the following method loads locales from a
+local folder at `/tmp/mymaps`.
+
+``` javascript
+sre.setupEngine({
+  custom: loc => {
+    let file = `/tmp/mymaps/${loc}.json`;
+    return new Promise((res, rej) => {
+      try {
+        res(fs.readFileSync(file));
+        console.log(`Loading of locale ${loc} succeeded`);
+      } catch (_) {
+        console.log(`Loading of locale ${loc} failed`);
+        rej('');
+      }
+    });
+  }
+});
+```
+
+### Custom Loading Methods in Node ####
+
+Setting the custom load method with `setupEngine` will only allow you to change
+locale loading behaviour after the SRE has performed basic setup, that is, it
+has already tried to load the base and fallback locale. However, it is often
+desirable to change SRE's loading behaviour before the initial locale files have
+been loaded. This can be down by setting the `SREfeature` vector **before**
+loading SRE.  Here is a code snippet to demonstrate its use:
+
+
+``` javascript
+const fs = require('fs');
+global.SREfeature = {
+  custom: loc => {
+    console.log(`Loading locale ${loc}`);
+    let file = `/tmp/mymaps/${loc}.json`;
+    return new Promise((res, rej) => {
+      try {
+        res(fs.readFileSync(file));
+        console.log(`Loading of locale ${loc} succeeded`);
+      } catch (_) {
+        console.log(`Loading of locale ${loc} failed`);
+        rej('');
+      }
+    });
+  }
+};
+let sre = require(process.cwd() + '/node_modules/speech-rule-engine/lib/sre.js');
+```
+
+### Custom Loading Methods in the Browser ####
+
+Providing a custom loading method for locale loading in browser mode is very
+similar to its use in node. However, note that since we now want to define a
+function, it can not simply be given in the JSON configuration element in the
+`x-sre-config` script tag.  Instead we need to define the special `SREfeature`
+variable in the header of the file. Again **make sure this script tag comes
+before the script tag loading SRE in your website!**
+
+Here is an example of a custom function to load locales from localhost:
+
+``` javascript
+<script>
+var SREfeature = {
+"custom": function(loc) {
+    let file = 'http://localhost/sre/lib/mathmaps/' + loc + '.json';
+    let httpRequest = new XMLHttpRequest();
+    return new Promise((res, rej) => {
+      httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4) {
+          console.log('Using my custom loader');
+          let status = httpRequest.status;
+          if (status === 0 || (status >= 200 && status < 400)) {
+            res(httpRequest.responseText);
+          } else {
+            rej(status);
+          }
+        }
+      };
+      httpRequest.open('GET', file, true);
+      httpRequest.send();
+    });
+  }
+}
+</script>
+```
+
+### Reusing the Standard Loader
+
+SRE exposes its standard locale loader via the API method `localeLoader`. The
+method returns the actual load method that can be applied to an iso locale
+string, e.g., `SRE.localeLoader()('fr');` to load the French locale.  This
+allows its use as a fallback loader in a custom load method, which is particular
+useful when a customised set of rules for a particular locale should be loaded
+from a different location than the rest of the locales.
+
+For example, consider the following code snippet that ensures that only the
+German locale is loaded from a custom directory:
+
+``` javascript
+let SRE = null;
+global.SREfeature = {
+  'custom': async function(loc) {
+    if (loc === 'de') {
+      return new Promise((res, rej) => {
+        try {
+          res(fs.readFileSync('/tmp/mymaps/de.json'));
+        } catch (_) {
+          rej('');
+        }
+      });
+    }
+    console.log('custom loader');
+    return SRE.localeLoader()(loc);
+  }
+};
+SRE = require('speech-rule-engine');
+```
+
+
+### Setting Default Locale ###
+
+In standard setup SRE loads its base locale files together with a default locale
+that acts as a fallback in case rules or symbol mappings are not available in
+the locale that is being used. In standard setup the fallback locale is
+English. This means SRE currently loads `base.json` together with `en.json` as
+fallback rules on initialisation.
+
+This behaviour can be changed by providing SRE with a different fallback locale
+by using `defaultLocale` feature. Note the following:
+
+* If `defaultLocale` is set to a locale that does not exist, English will be
+  retained as fallback.
+* The `base` locale will always be loaded first, regardless of the value of
+  `defaultLocale`.
+* The default locale can currently not be changed when using SRE via the
+  command line interface.
+
+
+
 Coding Style
 ------------
 
@@ -735,7 +845,7 @@ the feature vector for `setupEngine` should not throw an exception but will have
 no effect.
 
 
-| Option      | Value                                                                                                                                                                                                                           | Release                   | Comments                                                                                                                         | 
+| Option      | Value                                                                                                                                                                                                                           | Release                   | Comments                                                                                                                         |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | *cache*     | Boolean flag to switch expression caching during speech generation. Default is ```true```.                                                                                                                                      | *Removed in v3.2.0*       | Expression caching has been removed and the option has no longer any effect.                                                     |
 | *rules*     | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | *Deprecated in v4.0.0*    | Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes. |

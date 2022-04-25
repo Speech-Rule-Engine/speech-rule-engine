@@ -91,12 +91,10 @@ function setSubiso(msg: Locale) {
  * @returns A message object.
  */
 export function getLocale(): Locale {
-  const locale = Engine.getInstance().locale;
-  if (Variables.LOCALES.indexOf(locale) === -1) {
-    console.error('Locale ' + locale + ' does not exist! Using en instead.');
-    Engine.getInstance().locale = 'en';
-  }
-  return (locales[Engine.getInstance().locale] || locales['en'])();
+  const locale = Variables.ensureLocale(
+    Engine.getInstance().locale, Engine.getInstance().defaultLocale);
+  Engine.getInstance().locale = locale;
+  return locales[locale]();
 }
 
 /**

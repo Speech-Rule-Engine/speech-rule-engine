@@ -79,8 +79,8 @@ export function engineSetup(): { [key: string]: boolean | string } {
  * @returns True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */
-export function engineReady(): Promise<any> {
-  return EnginePromise.getall();
+export async function engineReady(): Promise<any> {
+  return setupEngine({}).then(() => EnginePromise.getall());
 }
 
 /**
@@ -408,7 +408,8 @@ export const localePath = FileUtil.localePath;
 
 // Check here for custom method!
 if (SystemExternal.documentSupported) {
-  setupEngine({ mode: EngineConst.Mode.HTTP });
+  setupEngine({ mode: EngineConst.Mode.HTTP }).then(() =>
+    setupEngine({}));
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
     setupEngine({ mode: EngineConst.Mode.ASYNC })

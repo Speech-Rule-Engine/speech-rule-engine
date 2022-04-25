@@ -27,6 +27,7 @@ import * as EngineConst from '../common/engine_const';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import { RulesJson } from '../rule_engine/base_rule_store';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr';
 import * as MathCompoundStore from '../rule_engine/math_compound_store';
 import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
@@ -58,17 +59,31 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
 let _init = false;
 
 /**
- * Init method for the mathmaps. Loads the base locale when called for the
- * first time.
+ * Loads a new locale if necessary. Initialises mathmaps if necessary, by
+ * loading the base locale when called for the first time.
  *
- * @returns Promise that resolves once base is loaded.
+ * @param locale The locale to be loaded. Defaults to current locale of the
+ *     engine.
+ *
+ * @returns Promise that resolves once locale is loaded.
  */
-export function init() {
+export async function loadLocale(locale = Engine.getInstance().locale) {
   if (!_init) {
-    loadLocale('base');
+    _loadLocale(DynamicCstr.BASE_LOCALE);
     _init = true;
   }
-  return EnginePromise.promises['base'];
+  return EnginePromise.promises[DynamicCstr.BASE_LOCALE].then(async () => {
+    let defLoc = Engine.getInstance().defaultLocale;
+    if (defLoc) {
+      _loadLocale(defLoc)
+      return EnginePromise.promises[defLoc].then(async () => {
+        _loadLocale(locale);
+        return EnginePromise.promises[locale];
+      });
+    }
+    _loadLocale(locale);
+    return EnginePromise.promises[locale];
+  });
 }
 
 /**
@@ -77,7 +92,7 @@ export function init() {
  * @param locale The locale to be loaded. Defaults to current locale of the
  *     engine.
  */
-export function loadLocale(locale = Engine.getInstance().locale) {
+function _loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
     retrieveMaps(locale);
@@ -134,7 +149,7 @@ export function retrieveFiles(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().locale = 'en';
+        Engine.getInstance().locale = Engine.getInstance().defaultLocale;
         res(locale);
       }
     );

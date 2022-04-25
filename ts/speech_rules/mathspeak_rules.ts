@@ -18,6 +18,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
+import { DynamicCstr } from '../rule_engine/dynamic_cstr';
 import * as StoreUtil from '../rule_engine/store_util';
 import * as MathspeakFrenchUtil from './mathspeak_french_util';
 import * as MathspeakUtil from './mathspeak_util';
@@ -30,7 +31,8 @@ import * as UnitUtil from './unit_util';
  */
 export function MathspeakRules() {
   // Basic English
-  SpeechRules.addStore('en.speech.mathspeak', '', {
+  SpeechRules.addStore(
+    DynamicCstr.BASE_LOCALE + '.speech.mathspeak', '', {
     CQFspaceoutNumber: MathspeakUtil.spaceoutNumber,
 
     CQFspaceoutIdentifier: MathspeakUtil.spaceoutIdentifier,
@@ -98,13 +100,15 @@ export function MathspeakRules() {
   });
 
   // Spanish
-  SpeechRules.addStore('es.speech.mathspeak', 'en.speech.mathspeak', {
+  SpeechRules.addStore(
+    'es.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
     CTFunitMultipliers: UnitUtil.unitMultipliers,
     CQFoneLeft: UnitUtil.oneLeft
   });
 
   // French
-  SpeechRules.addStore('fr.speech.mathspeak', 'en.speech.mathspeak', {
+  SpeechRules.addStore(
+    'fr.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
     CSFbaselineVerbose: MathspeakFrenchUtil.baselineVerbose,
     CSFbaselineBrief: MathspeakFrenchUtil.baselineBrief,
     // Tensor specific:

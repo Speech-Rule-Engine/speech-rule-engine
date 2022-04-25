@@ -57,7 +57,6 @@ export function addStore(
  * @param domain The rule set or domain.
  * @returns The store for the given constraints.
  */
-// TODO: Make this robust with dynamic constraints and defaults.
 export function getStore(
   locale: string,
   modality: string,
@@ -67,6 +66,9 @@ export function getStore(
     funcStore.get([locale, modality, domain].join('.')) ||
     funcStore.get(
       [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
+    ) ||
+    funcStore.get(
+      [DynamicCstr.BASE_LOCALE, modality, domain].join('.')
     ) ||
     {}
   );

@@ -148,6 +148,11 @@ export class DynamicCstr extends DynamicProperties {
   /**
    *  Default values for to assign. Value is default.
    */
+  public static BASE_LOCALE = 'base';
+
+  /**
+   *  Default values for to assign. Value is default.
+   */
   public static DEFAULT_VALUE = 'default';
 
   /**

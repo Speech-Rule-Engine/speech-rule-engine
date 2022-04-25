@@ -211,7 +211,7 @@ export class Cli {
   /**
    * Method for the command line interface of the Speech Rule Engine
    */
-  public commandLine() {
+  public async commandLine() {
     const commander = SystemExternal.commander;
     const system = System;
     const set = ((key: string) => {
@@ -336,7 +336,7 @@ export class Cli {
         this.enumerate(true).then(() => System.exit(0));
       })
       .parse(this.process.argv);
-    System.setupEngine(this.setup);
+    await System.setupEngine(this.setup);
     const options = commander.opts();
     if (options.verbose) {
       Debugger.getInstance().init(options.log);

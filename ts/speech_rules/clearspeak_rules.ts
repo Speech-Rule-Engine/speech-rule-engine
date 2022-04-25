@@ -18,6 +18,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
+import { DynamicCstr } from '../rule_engine/dynamic_cstr';
 import * as StoreUtil from '../rule_engine/store_util';
 
 import * as ClearspeakUtil from './clearspeak_util';
@@ -30,7 +31,8 @@ import * as SpeechRules from './speech_rules';
  */
 export function ClearspeakRules() {
   // Basic English
-  SpeechRules.addStore('en.speech.clearspeak', '', {
+  SpeechRules.addStore(
+    DynamicCstr.BASE_LOCALE + '.speech.clearspeak', '', {
     CTFpauseSeparator: StoreUtil.pauseSeparator,
     CTFnodeCounter: ClearspeakUtil.nodeCounter,
     CTFcontentIterator: StoreUtil.contentIterator,

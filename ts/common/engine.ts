@@ -24,6 +24,7 @@ import * as Dcstr from '../rule_engine/dynamic_cstr';
 import * as EngineConst from './engine_const';
 
 import { Debugger } from './debugger';
+import { Variables } from './variables';
 
 declare const SREfeature: { [key: string]: any };
 
@@ -60,12 +61,12 @@ export default class Engine {
    * String feature vector.
    */
   public static STRING_FEATURES: string[] = [
-    'delay',
     'markup',
     'style',
     'domain',
     'speech',
     'walker',
+    'defaultLocale',
     'locale',
     'modality',
     'rate',
@@ -98,7 +99,7 @@ export default class Engine {
    */
   public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
-  public delay: boolean = false;
+  public init: boolean = true;
 
   /**
    * Maps domains to comparators.
@@ -116,9 +117,22 @@ export default class Engine {
   public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
 
   /**
+   * The default locale.
+   */
+  public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  public set defaultLocale(loc: string) {
+    this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
+  }
+
+  public get defaultLocale() {
+    return this._defaultLocale;
+  }
+
+  /**
    * Current locale.
    */
-  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+  public locale = this.defaultLocale;
 
   /**
    * Current subiso for the locale.
@@ -245,6 +259,9 @@ export default class Engine {
    *    parameters.
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
+    if (this.defaultLocale) {
+      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] = this.defaultLocale;
+    }
     if (opt_dynamic) {
       const keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {
@@ -379,6 +396,6 @@ export class EnginePromise {
    * @returns All promises combined into one.
    */
   public static getall() {
-    return Promise.allSettled(Object.values(EnginePromise.promises));
+    return Promise.all(Object.values(EnginePromise.promises));
   }
 }
