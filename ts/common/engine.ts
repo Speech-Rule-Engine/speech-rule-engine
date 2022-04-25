@@ -68,6 +68,7 @@ export default class Engine {
     'walker',
     'defaultLocale',
     'locale',
+    'delay',
     'modality',
     'rate',
     'rules',
@@ -99,7 +100,15 @@ export default class Engine {
    */
   public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
+  /**
+   * Init flag, initially set true. Set to false after first setup.
+   */
   public init = true;
+
+  /**
+   * Delay flag, to avoid auto setup of engine.
+   */
+  public delay = false;
 
   /**
    * Maps domains to comparators.
