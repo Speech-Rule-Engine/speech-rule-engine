@@ -405,7 +405,6 @@ export function exit(opt_value?: number) {
  */
 export const localePath = FileUtil.localePath;
 
-// Check here for custom method!
 if (SystemExternal.documentSupported) {
   setupEngine({ mode: EngineConst.Mode.HTTP }).then(() => setupEngine({}));
 } else {

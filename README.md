@@ -161,7 +161,7 @@ loading below](#locale-loading).
 Node. The following example sets the locale on load to German:
 
 ``` javascript
-var SREfeature = {locale: 'de'}; 
+var SREfeature = {locale: 'de'};
 sre = require('speech-rule-engine');
 sre.engineReady().then(() => console.log(sre.toSpeech('<mo>=</mo>')));
 ```
@@ -221,7 +221,8 @@ given in decreasing order of interestingness.
 | *custom* | Provide a custom method for locale loading. See below for more informaton. |
 | *defaultLocale* | Allows customisation for default locale. Default is ```en``` for English. |
 | | This option is not available in the CLI. See below for more informaton.  |
-
+| *delay* | Delays loading of base locales and automatic setup of engine. Default is ```false```. | 
+| | Option should be used only at startup. See below for more information. |
 
 Standalone Tool
 ---------------
@@ -768,6 +769,32 @@ by using `defaultLocale` feature. Note the following:
 * The default locale can currently not be changed when using SRE via the
   command line interface.
 
+
+### Delaying Automatic Locale Loading ###
+
+SRE's setup is automated as much as possible for ease of use, by performing the
+following two steps:
+
+1. On load SRE determines its environment (browser, node, command line) and
+   picks up any options provided via a feature vector.
+2. It then loads the basic locales, taking the configuration options into
+   account, to be ready for translation.
+
+Setting `delay` to `true`, suppresses this behaviour by postponing the second
+step (i.e., the intial locale loading) to the first explicit call to
+`setupEngine`.
+
+This can be useful in case the custom load method can only be provided later or
+the `json` path is constructed programmatically by a client application. It is
+also helpful if some locales are webpacked into a distribution and need to be
+loaded with a custom method.
+
+Note, that using `delay` means that locale loading can and has to be handled by
+the developer explicitly. In particular, it implies that English is not
+necessarily loaded as fallback locale and that calling the `toSpeech` method
+without another call to `setupEngine` generally leads to no speech output. Also,
+while `delay` can be set on any call to `setupEngine`, it really only makes
+sense during initial setup.
 
 
 Coding Style

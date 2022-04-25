@@ -82,6 +82,10 @@ export async function setup(feature: { [key: string]: boolean | string }) {
     engine.init = false;
     return EnginePromise.get();
   }
+  if (engine.delay) {
+    engine.delay = false;
+    return EnginePromise.get();
+  }
   return MathMap.loadLocale();
 }
 
