@@ -12,7 +12,7 @@
     "downlevelIteration": true,
     "noLib": false,
     "alwaysStrict": true,
-    "lib": ["es6", "dom", "es2020"],
+    "lib": ["es6", "dom"],
     "typeRoots": [
       "./node_modules/@types"
     ],
