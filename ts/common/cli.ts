@@ -33,14 +33,15 @@ import { Variables } from './variables';
 export class Cli {
   public process = SystemExternal.extRequire('process');
 
-  public setup: { [key: string]: string | boolean };
+  public setup: { [key: string]: string | boolean } = {
+    mode: EngineConst.Mode.SYNC
+  };
 
   public processors: string[] = [];
 
   public dp: DOMParser;
+
   constructor() {
-    this.setup = { mode: EngineConst.Mode.SYNC };
-    System.setupEngine(this.setup);
     this.dp = new SystemExternal.xmldom.DOMParser({
       errorHandler: function (_key: string, _msg: string) {
         throw new SREError('XML DOM error!');
@@ -336,7 +337,7 @@ export class Cli {
         this.enumerate(true).then(() => System.exit(0));
       })
       .parse(this.process.argv);
-    await System.setupEngine(this.setup);
+    await System.engineReady().then(() => System.setupEngine(this.setup));
     const options = commander.opts();
     if (options.verbose) {
       Debugger.getInstance().init(options.log);
