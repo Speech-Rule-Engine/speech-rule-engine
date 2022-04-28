@@ -138,7 +138,7 @@ set(
       }
       // This avoids temporary attributes (e.g., for grammar) to bleed into
       // the tree.
-      const clone = xml.cloneNode(true) as Element;
+      const clone = DomUtil.cloneNode(xml);
       let speech = SpeechGeneratorUtil.computeMarkup(clone);
       if (setting === EngineConst.Speech.SHALLOW) {
         xml.setAttribute('speech', AuralRendering.finalize(speech));

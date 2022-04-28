@@ -56,7 +56,7 @@ export const SETTINGS: { collapsed: boolean; implicit: boolean } = {
 export function enrich(mml: Element, semantic: SemanticTree): Element {
   // The first line is only to preserve output. This should eventually be
   // deleted.
-  const oldMml = mml.cloneNode(true) as Element;
+  const oldMml = DomUtil.cloneNode(mml);
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
     mml.setAttribute(

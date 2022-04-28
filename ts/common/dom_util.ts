@@ -344,3 +344,13 @@ export function querySelectorAll(node: Element, tag: string): Element[] {
 export function tagName(node: Element): string {
   return node.tagName.toUpperCase();
 }
+
+/**
+ * Deep clone of an Element, depending on the environment.
+ *
+ * @param node The element to be cloned.
+ * @return The deep clone.
+ */
+export function cloneNode(node: Element): Element {
+  return node.cloneNode(true) as Element;
+}
