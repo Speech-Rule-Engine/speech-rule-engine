@@ -188,7 +188,7 @@ function recurseTree(dom: Element): string {
 /**
  * Computes the 2D height of the string.
  *
- * @param {string} str The input string.
+ * @param str The input string.
  * @returns The height of the string.
  */
 function strHeight(str: string): number {
@@ -198,7 +198,7 @@ function strHeight(str: string): number {
 /**
  * Computes the max 2D width of the string.
  *
- * @param {string} str The input string.
+ * @param str The input string.
  * @returns The width of the string.
  */
 function strWidth(str: string): number {
@@ -208,8 +208,8 @@ function strWidth(str: string): number {
 /**
  * Pads a string to the given height.
  *
- * @param {string} str The input string.
- * @param {number} height The height.
+ * @param str The input string.
+ * @param height The height.
  * @returns The padded string.
  */
 function padHeight(str: string, height: number): string {
@@ -220,8 +220,8 @@ function padHeight(str: string, height: number): string {
 /**
  * Pads a string to the given width.
  *
- * @param {string} str The input string.
- * @param {number} width The width.
+ * @param str The input string.
+ * @param width The width.
  * @returns The padded string.
  */
 function padWidth(str: string, width: number): string {
