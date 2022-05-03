@@ -130,8 +130,10 @@ export class SpeechRuleEngine {
     while (parent && !parent.evaluate) {
       parent = parent.parentNode as Document;
     }
-    if (parent.evaluate) {
+    if (parent && parent.evaluate) {
       xpath.currentDocument = parent;
+    } else if (node.ownerDocument) {
+      xpath.currentDocument = node.ownerDocument;
     }
   }
 

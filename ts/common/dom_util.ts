@@ -239,6 +239,7 @@ export function formatXml(xml: string): string {
   }
   return formatted;
 }
+
 /**
  * Checks for two tags if the second is a matching end tag for the first.
  *
@@ -320,14 +321,13 @@ export function tagName(node: Element): string {
  * @return The deep clone.
  */
 export function cloneNode(node: Element): Element {
-  return parseInput(serializeXml(node));
+  return node.cloneNode(true) as Element;
 }
-
 
 /**
  * Serializes and XML element.
- * @param {Element} node The node to serialize.
- * @return {string} The serialized expression.
+ * @param node The node to serialize.
+ * @return The serialized expression.
  */
 export function serializeXml(node: Element): string {
   const xmls = new SystemExternal.xmldom.XMLSerializer();
