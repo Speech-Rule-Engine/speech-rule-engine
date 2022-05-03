@@ -25,7 +25,6 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
 
 import { annotate } from './semantic_annotations';
 import { SemanticVisitor } from './semantic_annotator';
@@ -165,8 +164,7 @@ export class SemanticTree {
    * @returns Serialized string.
    */
   public toString(opt_brief?: boolean): string {
-    const xmls = new SystemExternal.xmldom.XMLSerializer();
-    return xmls.serializeToString(this.xml(opt_brief));
+    return DomUtil.serializeXml(this.xml(opt_brief));
   }
 
   /**

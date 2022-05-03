@@ -354,3 +354,14 @@ export function tagName(node: Element): string {
 export function cloneNode(node: Element): Element {
   return node.cloneNode(true) as Element;
 }
+
+
+/**
+ * Serializes and XML element.
+ * @param {Element} node The node to serialize.
+ * @return {string} The serialized expression.
+ */
+export function serializeXml(node: Element): string {
+  const xmls = new SystemExternal.xmldom.XMLSerializer();
+  return xmls.serializeToString(node);
+}
