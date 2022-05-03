@@ -32,15 +32,14 @@ export function splitAttribute(attr: string | null): string[] {
 }
 
 /**
- * Retrieves a data attribute from a given node. Tries using microdata access if
- * possible.
+ * Retrieves a data attribute from a given node.
  *
  * @param node A DOM node.
  * @param attr The semantic data attribute.
  * @returns The value for that attribute.
  */
 export function getAttribute(node: Element, attr: Attribute): string {
-  return DomUtil.getDataAttribute(node, attr);
+  return node.getAttribute(attr);
 }
 
 /**

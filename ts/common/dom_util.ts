@@ -257,35 +257,6 @@ function matchingStartEnd(start: string, end: string): [boolean, string] {
 }
 
 /**
- * Transforms a data attribute name into its camel cased version.
- *
- * @param attr Micro data attributes.
- * @returns The camel cased attribute.
- */
-export function dataAttribute(attr: string): string {
-  if (attr.match(/^data-/)) {
-    attr = attr.substring(5);
-  }
-  return attr.replace(/-([a-z])/g, (_, index) => index.toUpperCase());
-}
-
-/**
- * Retrieves a data attribute from a given node. Tries using microdata access if
- * possible.
- *
- * @param node A DOM node.
- * @param attr The data attribute.
- * @returns The value for that attribute.
- */
-export function getDataAttribute(node: Element, attr: string): string {
-  // TODO (TS): Get this on the HTML side without crashing in node.
-  // if (node instanceof HTMLElement) {
-  //   return node.dataset[dataAttribute(attr)];
-  // }
-  return node.getAttribute(attr);
-}
-
-/**
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
  *
