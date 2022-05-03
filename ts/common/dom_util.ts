@@ -193,7 +193,7 @@ export function formatXml(xml: string): string {
     let indent = 0;
     if (node.match(/^<\w[^>/]*>[^>]+$/)) {
       // Start node with trailing content.
-      const match = matchingStartEnd_(node, split[0]);
+      const match = matchingStartEnd(node, split[0]);
       if (match[0]) {
         // Combine with end node
         if (match[1]) {
@@ -247,10 +247,7 @@ export function formatXml(xml: string): string {
  * @returns A pair indicating success and the possible
  *     remainder after the end tag, in case it is followed by mixed content.
  */
-export function matchingStartEnd_(
-  start: string,
-  end: string
-): [boolean, string] {
+function matchingStartEnd(start: string, end: string): [boolean, string] {
   if (!end) {
     return [false, ''];
   }
@@ -267,7 +264,7 @@ export function matchingStartEnd_(
  */
 export function dataAttribute(attr: string): string {
   if (attr.match(/^data-/)) {
-    attr = attr.substr(5);
+    attr = attr.substring(5);
   }
   return attr.replace(/-([a-z])/g, (_, index) => index.toUpperCase());
 }
@@ -352,7 +349,7 @@ export function tagName(node: Element): string {
  * @return The deep clone.
  */
 export function cloneNode(node: Element): Element {
-  return node.cloneNode(true) as Element;
+  return parseInput(serializeXml(node));
 }
 
 
