@@ -3497,9 +3497,9 @@ export function functionApplication(): string {
  * Decide when opening and closing fences match. For neutral fences they have
  * to be the same.
  *
- * @param {string} open Opening fence.
- * @param {string} close Closing fence.
- * @returns {boolean} True if the fences are matching.
+ * @param open Opening fence.
+ * @param close Closing fence.
+ * @returns True if the fences are matching.
  */
 export function isMatchingFence(open: string, close: string): boolean {
   if (neutralFences.indexOf(open) !== -1 || metricFences.indexOf(open) !== -1) {

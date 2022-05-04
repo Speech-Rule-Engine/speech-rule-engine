@@ -339,11 +339,7 @@ export class Grammar {
    * Apply grammatical adjustments of the current state to a text string.
    *
    * @param text The text string to be processed.
-   * @param {{adjust: (undefined|boolean),
-   *          preprocess: (undefined|boolean),
-   *          correct: (undefined|boolean),
-   *          translate: (undefined|boolean)}=} opt_flags Flags indicating
-   *     what adjustments should be carried out.
+   * @param opt_flags Flags indicating what adjustments should be carried out.
    *
    * Description of flags:
    * adjust: All grammar adjustments are performed.

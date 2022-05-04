@@ -389,8 +389,8 @@ export class RebuildStree {
   /**
    * Sets a parent for a node.
    *
-   * @param {string} id of the node.
-   * @param {SemanticNode} snode The parent node.
+   * @param id of the node.
+   * @param snode The parent node.
    * @returns The newly assembled child node.
    */
   private setParent(id: string, snode: SemanticNode): SemanticNode {

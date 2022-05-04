@@ -106,7 +106,6 @@ function _loadLocale(locale = Engine.getInstance().locale) {
  *     provided it is returned instead.
  */
 function loadMethod() {
-  // TODO: Custom loader here.
   if (Engine.getInstance().customLoader) {
     return Engine.getInstance().customLoader;
   }

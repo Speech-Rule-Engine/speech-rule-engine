@@ -20,7 +20,6 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
 import { lookupMeaning } from './semantic_attr';
 import {
   SemanticMeaning,
@@ -226,7 +225,7 @@ export class SemanticNode {
    * @param brief If set attributes are omitted.
    * @returns The XML representation of the node.
    */
-  public xml(xml: Document, brief?: boolean): Node {
+  public xml(xml: Document, brief?: boolean): Element {
     /**
      * Translates a list of nodes into XML representation.
      *
@@ -265,10 +264,8 @@ export class SemanticNode {
    * @returns Serialized string.
    */
   public toString(brief = false): string {
-    const xmls = new SystemExternal.xmldom.XMLSerializer();
-    const dp = new SystemExternal.xmldom.DOMParser();
-    const xml = dp.parseFromString('<snode/>', 'text/xml');
-    return xmls.serializeToString(this.xml(xml, brief));
+    const xml = DomUtil.parseInput('<snode/>') as unknown as Document;
+    return DomUtil.serializeXml(this.xml(xml, brief));
   }
 
   /**

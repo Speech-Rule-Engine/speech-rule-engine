@@ -300,8 +300,8 @@ function bothSide(node: SemanticNode): boolean {
 /**
  * Recursively checks a node if it is an eligible fence node.
  *
- * @param {SemanticNode} node The tensor node.
- * @returns {boolean} True if it is a legitimate fence node.
+ * @param node The tensor node.
+ * @returns True if it is a legitimate fence node.
  */
 function recurseBaseNode(node: SemanticNode): boolean {
   if (!node.embellished) {

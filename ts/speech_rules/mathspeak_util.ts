@@ -20,7 +20,6 @@
 
 import * as BaseUtil from '../common/base_util';
 import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
 import * as XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
 
@@ -171,9 +170,7 @@ export function getNestingDepth(
     function (_node) {
       return false;
     };
-  const xmlText = new SystemExternal.xmldom.XMLSerializer().serializeToString(
-    node
-  );
+  const xmlText = DomUtil.serializeXml(node);
   if (!nestingDepth[type]) {
     nestingDepth[type] = {};
   }

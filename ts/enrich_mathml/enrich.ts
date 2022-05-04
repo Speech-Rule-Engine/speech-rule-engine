@@ -34,7 +34,7 @@ import './enrich_case_factory';
  * @returns Semantically enriched MathML node.
  */
 export function semanticMathmlNode(mml: Element): Element {
-  const clone = mml.cloneNode(true) as Element;
+  const clone = DomUtil.cloneNode(mml);
   const tree = Semantic.getTree(clone);
   return EnrichMathml.enrich(clone, tree);
 }

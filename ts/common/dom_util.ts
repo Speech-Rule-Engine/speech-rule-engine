@@ -193,7 +193,7 @@ export function formatXml(xml: string): string {
     let indent = 0;
     if (node.match(/^<\w[^>/]*>[^>]+$/)) {
       // Start node with trailing content.
-      const match = matchingStartEnd_(node, split[0]);
+      const match = matchingStartEnd(node, split[0]);
       if (match[0]) {
         // Combine with end node
         if (match[1]) {
@@ -239,6 +239,7 @@ export function formatXml(xml: string): string {
   }
   return formatted;
 }
+
 /**
  * Checks for two tags if the second is a matching end tag for the first.
  *
@@ -247,45 +248,13 @@ export function formatXml(xml: string): string {
  * @returns A pair indicating success and the possible
  *     remainder after the end tag, in case it is followed by mixed content.
  */
-export function matchingStartEnd_(
-  start: string,
-  end: string
-): [boolean, string] {
+function matchingStartEnd(start: string, end: string): [boolean, string] {
   if (!end) {
     return [false, ''];
   }
   const tag1 = start.match(/^<([^> ]+).*>/);
   const tag2 = end.match(/^<\/([^>]+)>(.*)/);
   return tag1 && tag2 && tag1[1] === tag2[1] ? [true, tag2[2]] : [false, ''];
-}
-
-/**
- * Transforms a data attribute name into its camel cased version.
- *
- * @param attr Micro data attributes.
- * @returns The camel cased attribute.
- */
-export function dataAttribute(attr: string): string {
-  if (attr.match(/^data-/)) {
-    attr = attr.substr(5);
-  }
-  return attr.replace(/-([a-z])/g, (_, index) => index.toUpperCase());
-}
-
-/**
- * Retrieves a data attribute from a given node. Tries using microdata access if
- * possible.
- *
- * @param node A DOM node.
- * @param attr The data attribute.
- * @returns The value for that attribute.
- */
-export function getDataAttribute(node: Element, attr: string): string {
-  // TODO (TS): Get this on the HTML side without crashing in node.
-  // if (node instanceof HTMLElement) {
-  //   return node.dataset[dataAttribute(attr)];
-  // }
-  return node.getAttribute(attr);
 }
 
 /**
@@ -343,4 +312,24 @@ export function querySelectorAll(node: Element, tag: string): Element[] {
  */
 export function tagName(node: Element): string {
   return node.tagName.toUpperCase();
+}
+
+/**
+ * Deep clone of an Element, depending on the environment.
+ *
+ * @param node The element to be cloned.
+ * @return The deep clone.
+ */
+export function cloneNode(node: Element): Element {
+  return node.cloneNode(true) as Element;
+}
+
+/**
+ * Serializes and XML element.
+ * @param node The node to serialize.
+ * @return The serialized expression.
+ */
+export function serializeXml(node: Element): string {
+  const xmls = new SystemExternal.xmldom.XMLSerializer();
+  return xmls.serializeToString(node);
 }
