@@ -258,7 +258,7 @@ set(
           break;
         case EngineConst.Speech.DEEP:
           generator = SpeechGeneratorFactory.generator('Tree');
-          generator.getSpeech(root, enr);
+          generator.getSpeech(enr, enr);
           break;
         default:
           break;
