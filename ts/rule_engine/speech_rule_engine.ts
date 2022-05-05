@@ -417,7 +417,7 @@ export class SpeechRuleEngine {
             const str = context.constructString(node, content) as
               | string
               | Span[];
-            if (str) {
+            if (str || str === '') {
               if (Array.isArray(str)) {
                 descrs = str.map(function (span) {
                   return AuditoryDescription.create(
