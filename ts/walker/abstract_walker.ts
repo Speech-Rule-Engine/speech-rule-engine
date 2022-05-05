@@ -31,6 +31,7 @@ import { AxisMap } from '../rule_engine/dynamic_cstr';
 import { Grammar } from '../rule_engine/grammar';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
 import { SpeechGenerator } from '../speech_generator/speech_generator';
 import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
@@ -40,6 +41,8 @@ import { Levels } from './levels';
 import { RebuildStree } from './rebuild_stree';
 import { Walker, WalkerMoves, WalkerState } from './walker';
 import * as WalkerUtil from './walker_util';
+
+import * as XpathUtil from '../common/xpath_util';
 
 /**
  * The abstract walker class.
@@ -66,6 +69,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   public rootId: string;
   // End of uninitialized fields.
+
+  public skeleton: SemanticSkeleton;
 
   public keyMapping: Map<KeyCode, () => any> = new Map([
     [KeyCode.UP, this.up.bind(this)],
@@ -203,7 +208,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public getRebuilt() {
     if (!this.rebuilt_) {
-      this.rebuilt_ = this.rebuildStree();
+      this.rebuildStree();
     }
     return this.rebuilt_;
   }
@@ -243,17 +248,12 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public getFocus(update = false) {
     if (!this.focus_) {
-      this.focus_ = Focus.factory(
-        this.rootId,
-        [this.rootId],
-        this.getRebuilt(),
-        this.node
-      );
+      this.focus_ = this.singletonFocus(this.rootId);
     }
     if (update) {
       this.updateFocus();
     }
-    return this.focus_ as Focus;
+    return this.focus_;
   }
 
   /**
@@ -277,11 +277,19 @@ export abstract class AbstractWalker<T> implements Walker {
     return this.generator.modality === Attribute.SPEECH;
   }
 
+  public focusDomNodes() {
+    return this.getFocus().getDomNodes();
+  }
+
+  public focusSemanticNodes() {
+    return this.getFocus().getSemanticNodes();
+  }
+
   /**
    * @override
    */
   public speech() {
-    const nodes = this.getFocus().getDomNodes();
+    const nodes = this.focusDomNodes();
     if (!nodes.length) {
       return '';
     }
@@ -298,7 +306,7 @@ export abstract class AbstractWalker<T> implements Walker {
         return this.detail_();
       default: {
         const speech = [];
-        const snodes = this.getFocus().getSemanticNodes();
+        const snodes = this.focusSemanticNodes();
         for (let i = 0, l = nodes.length; i < l; i++) {
           const node = nodes[i];
           const snode = snodes[i] as SemanticNode;
@@ -399,12 +407,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   protected home(): Focus | null {
     this.moved = WalkerMoves.HOME;
-    const focus = Focus.factory(
-      this.rootId,
-      [this.rootId],
-      this.getRebuilt(),
-      this.node
-    );
+    const focus = this.singletonFocus(this.rootId);
     return focus;
   }
 
@@ -512,17 +515,16 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Rebuilds the semantic tree given in the input xml element fully connected
    * with maction elements.
-   *
-   * @returns The reconstructed semantic tree.
    */
-  protected rebuildStree(): RebuildStree {
-    const rebuilt = new RebuildStree(this.getXml());
-    this.rootId = rebuilt.stree.root.id.toString();
-    this.generator.setRebuilt(rebuilt);
-    this.focus_ = Focus.factory(this.rootId, [this.rootId], rebuilt, this.node);
+  protected rebuildStree() {
+    this.rebuilt_ = new RebuildStree(this.getXml());
+    this.rootId = this.rebuilt_.stree.root.id.toString();
+    this.generator.setRebuilt(this.rebuilt_);
+    this.skeleton = SemanticSkeleton.fromTree(this.rebuilt_.stree);
+    this.skeleton.populate();
+    this.focus_ = this.singletonFocus(this.rootId);
     this.levels = this.initLevels();
-    SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), rebuilt.xml);
-    return rebuilt;
+    SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), this.rebuilt_.xml);
   }
 
   /**
@@ -585,7 +587,38 @@ export abstract class AbstractWalker<T> implements Walker {
    *     properties of the old focus.
    */
   public singletonFocus(id: string): Focus {
-    return this.focusFromId(id, [id]);
+    this.getRebuilt();
+    const ids = this.retrieveVisuals(id);
+    return this.focusFromId(id, ids);
+  }
+
+  private retrieveVisuals(id: string): string[] {
+    if (!this.skeleton) {
+      return [id];
+    }
+    let num = parseInt(id, 10);
+    let semStree = this.skeleton.subtreeNodes(num);
+    if (!semStree.length) {
+      return [id];
+    }
+    semStree.unshift(num);
+    const subtreeIds = (id: number, nodes: {[num: number]: boolean}) => {
+      let xmlRoot = XpathUtil.evalXPath(
+        `//*[@data-semantic-id="${id}"]`, this.getXml());
+      let xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
+      xpath.forEach(x => nodes[parseInt(x.textContent, 10)] = true);
+    };
+    const mmlStree: {[num: number]: boolean} = {};
+    const result = [];
+    for (let child of semStree) {
+      if (mmlStree[child]) {
+        continue;
+      }
+      result.push(child.toString());
+      mmlStree[child] = true;
+      subtreeIds(child, mmlStree);
+    }
+    return result;
   }
 
   /**
