@@ -9,7 +9,8 @@
       "direct-speech",
       "default",
       "[t] @ext-speech",
-      "self::*[@ext-speech]"
+      "self::*[@ext-speech]",
+      "priority=Infinity"
     ],
     [
       "Rule",
