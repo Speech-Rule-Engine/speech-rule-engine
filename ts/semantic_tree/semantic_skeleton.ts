@@ -37,7 +37,7 @@ export class SemanticSkeleton {
 
   public parents: { [key: number]: number[] } = null;
 
-  public levelsMap: { [key: number]: Sexp } = null;
+  public levelsMap: { [key: number]: Sexp[] } = null;
 
   /**
    * Compute a skeleton structure for a semantic tree.
@@ -366,7 +366,7 @@ export class SemanticSkeleton {
   private populate_(element: Sexp, layer: Sexp, parents: number[]) {
     if (SemanticSkeleton.simpleCollapseStructure(element)) {
       element = element as number;
-      this.levelsMap[element] = layer;
+      this.levelsMap[element] = layer as Sexp[];
       this.parents[element] =
         element === parents[0] ? parents.slice(1) : parents;
       return;
@@ -381,4 +381,52 @@ export class SemanticSkeleton {
       this.populate_(current, element, newParents);
     }
   }
+
+  /**
+   * Checks if a node is a root of a subtree.
+   * @param id The id number to check.
+   */
+  public isRoot(id: number): boolean {
+    const level = this.levelsMap[id];
+    return id === level[0];
+  }
+
+
+  public directChildren(id: number): number[] {
+    if (!this.isRoot(id)) {
+      return [];
+    }
+    const level = this.levelsMap[id];
+    return level.slice(1).map(child => {
+      if (SemanticSkeleton.simpleCollapseStructure(child)) {
+        return child;
+      }
+      if (SemanticSkeleton.contentCollapseStructure(child)) {
+        return (child as Sexp[])[1];
+      }
+      return (child as Sexp[])[0];
+    }) as number[];
+  }
+
+  public subtreeNodes(id: number): number[] {
+    if (!this.isRoot(id)) {
+      return [];
+    }
+    const subtreeNodes_ = (tree: Sexp, nodes: number[]) => {
+      if (SemanticSkeleton.simpleCollapseStructure(tree)) {
+        nodes.push(tree as number);
+        return;
+      }
+      tree = (tree as Sexp[]);
+      if (SemanticSkeleton.contentCollapseStructure(tree)) {
+        tree = tree.slice(1);
+      }
+      tree.forEach(x => subtreeNodes_(x, nodes));
+    };
+    const level = this.levelsMap[id];
+    const subtree: number[] = [];
+    subtreeNodes_(level.slice(1), subtree);
+    return subtree;
+  }
+
 }

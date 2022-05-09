@@ -155,4 +155,15 @@ export class SyntaxWalker extends AbstractWalker<string> {
   public findFocusOnLevel(id: number) {
     return this.singletonFocus(id.toString());
   }
+
+  public focusDomNodes() {
+    return [this.getFocus().getDomPrimary()];
+  }
+
+  public focusSemanticNodes() {
+    return [this.getFocus().getSemanticPrimary()];
+  }
+
+
+
 }
