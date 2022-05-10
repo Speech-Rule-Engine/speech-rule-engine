@@ -463,7 +463,8 @@ export class Precondition {
    */
   constructor(public query: string, ...cstr: string[]) {
     this.constraints = cstr;
-    this.priority = this.calculatePriority();
+    const [exists, user] = this.presetPriority();
+    this.priority = exists ? user : this.calculatePriority();
   }
 
   /**
@@ -491,6 +492,27 @@ export class Precondition {
     );
     return query * 100 + attr * 10;
   }
+
+  /**
+   * Retrieves a preset priority if one is defined. Note that this priority will
+   * supersede the heuristically computed priorities!
+   *
+   * @return The priority number.
+   */
+  private presetPriority(): [boolean, number] {
+    if (!this.constraints.length) {
+      return [false, 0];
+    }
+    const last = this.constraints[this.constraints.length - 1].
+      match(/^priority=(.*$)/);
+    if (!last) {
+      return [false, 0];
+    }
+    this.constraints.pop();
+    const numb = parseFloat(last[1]);
+    return [true, isNaN(numb) ? 0 : numb];
+  }
+
 }
 
 /**
