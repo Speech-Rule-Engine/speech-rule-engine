@@ -25,22 +25,22 @@ export class Variables {
   public static readonly VERSION: string = '4.0.4';
 
   /**
-   * List of locales to load.
+   * Locale mapping to language names.
    */
-  public static readonly LOCALES: string[] = [
-    'en',
-    'ca',
-    'da',
-    'de',
-    'fr',
-    'es',
-    'hi',
-    'it',
-    'nb',
-    'nn',
-    'sv',
-    'nemeth'
-  ];
+  public static readonly LOCALES: Map<string, string> = new Map([
+    ['ca', 'Catalan'],
+    ['da', 'Danish'],
+    ['de', 'German'],
+    ['en', 'English'],
+    ['es', 'Spanish'],
+    ['fr', 'French'],
+    ['hi', 'Hindi'],
+    ['it', 'Italian'],
+    ['nb', 'Bokmål'],
+    ['nn', 'Nynorsk'],
+    ['sv', 'Swedish'],
+    ['nemeth', 'Nemeth']
+  ]);
 
   /**
    * Ensures a locale exists. If the given locale does not exist, it returns the
@@ -52,8 +52,8 @@ export class Variables {
    *      exist. There is no further check on `def`, however!
    */
   public static ensureLocale(loc: string, def: string): string {
-    if (Variables.LOCALES.indexOf(loc) === -1) {
-      console.error(`Locale ${loc} does not exist! Using ${def} instead.`);
+    if (!Variables.LOCALES.get(loc)) {
+      console.error(`Locale ${loc} does not exist! Using ${Variables.LOCALES.get(def)} instead.`);
       return def;
     }
     return loc;

@@ -73,7 +73,7 @@ export class Cli {
    * Loads all possible locales asynchronously.
    */
   private async loadLocales() {
-    for (const loc of Variables.LOCALES) {
+    for (const loc of Variables.LOCALES.keys()) {
       await System.setupEngine({ locale: loc });
     }
   }
