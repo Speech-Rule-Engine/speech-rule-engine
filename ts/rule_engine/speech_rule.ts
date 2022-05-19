@@ -497,14 +497,14 @@ export class Precondition {
    * Retrieves a preset priority if one is defined. Note that this priority will
    * supersede the heuristically computed priorities!
    *
-   * @return The priority number.
+   * @returns The priority number.
    */
   private presetPriority(): [boolean, number] {
     if (!this.constraints.length) {
       return [false, 0];
     }
-    const last = this.constraints[this.constraints.length - 1].
-      match(/^priority=(.*$)/);
+    const last =
+      this.constraints[this.constraints.length - 1].match(/^priority=(.*$)/);
     if (!last) {
       return [false, 0];
     }
@@ -512,7 +512,6 @@ export class Precondition {
     const numb = parseFloat(last[1]);
     return [true, isNaN(numb) ? 0 : numb];
   }
-
 }
 
 /**

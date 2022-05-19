@@ -384,20 +384,21 @@ export class SemanticSkeleton {
 
   /**
    * Checks if a node is a root of a subtree.
+   *
    * @param id The id number to check.
+   * @returns True if the id is the root of the skeleton.
    */
   public isRoot(id: number): boolean {
     const level = this.levelsMap[id];
     return id === level[0];
   }
 
-
   public directChildren(id: number): number[] {
     if (!this.isRoot(id)) {
       return [];
     }
     const level = this.levelsMap[id];
-    return level.slice(1).map(child => {
+    return level.slice(1).map((child) => {
       if (SemanticSkeleton.simpleCollapseStructure(child)) {
         return child;
       }
@@ -417,16 +418,15 @@ export class SemanticSkeleton {
         nodes.push(tree as number);
         return;
       }
-      tree = (tree as Sexp[]);
+      tree = tree as Sexp[];
       if (SemanticSkeleton.contentCollapseStructure(tree)) {
         tree = tree.slice(1);
       }
-      tree.forEach(x => subtreeNodes_(x, nodes));
+      tree.forEach((x) => subtreeNodes_(x, nodes));
     };
     const level = this.levelsMap[id];
     const subtree: number[] = [];
     subtreeNodes_(level.slice(1), subtree);
     return subtree;
   }
-
 }

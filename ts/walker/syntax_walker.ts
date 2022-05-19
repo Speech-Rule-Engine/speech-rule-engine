@@ -163,7 +163,4 @@ export class SyntaxWalker extends AbstractWalker<string> {
   public focusSemanticNodes() {
     return [this.getFocus().getSemanticPrimary()];
   }
-
-
-
 }

@@ -53,8 +53,10 @@ export class Variables {
    */
   public static ensureLocale(loc: string, def: string): string {
     if (!Variables.LOCALES.get(loc)) {
-      console.error(`Locale ${loc} does not exist! Using`
-        + ` ${Variables.LOCALES.get(def)} instead.`);
+      console.error(
+        `Locale ${loc} does not exist! Using` +
+          ` ${Variables.LOCALES.get(def)} instead.`
+      );
       return def;
     }
     return loc;

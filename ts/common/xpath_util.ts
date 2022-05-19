@@ -222,4 +222,3 @@ export function updateEvaluator(node: Element) {
     xpath.currentDocument = node.ownerDocument;
   }
 }
-

@@ -67,7 +67,7 @@ function hundredsToWords_(num: number, ordinal = false): string {
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
- * @param ordinal Are we computing an ordinal? 
+ * @param ordinal Are we computing an ordinal?
  * @returns The string representation of that number.
  */
 function numberToWords(num: number, ordinal = false): string {

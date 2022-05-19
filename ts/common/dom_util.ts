@@ -318,7 +318,7 @@ export function tagName(node: Element): string {
  * Deep clone of an Element, depending on the environment.
  *
  * @param node The element to be cloned.
- * @return The deep clone.
+ * @returns The deep clone.
  */
 export function cloneNode(node: Element): Element {
   return node.cloneNode(true) as Element;
@@ -326,8 +326,9 @@ export function cloneNode(node: Element): Element {
 
 /**
  * Serializes and XML element.
+ *
  * @param node The node to serialize.
- * @return The serialized expression.
+ * @returns The serialized expression.
  */
 export function serializeXml(node: Element): string {
   const xmls = new SystemExternal.xmldom.XMLSerializer();

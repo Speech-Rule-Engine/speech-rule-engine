@@ -524,7 +524,11 @@ export abstract class AbstractWalker<T> implements Walker {
     this.skeleton.populate();
     this.focus_ = this.singletonFocus(this.rootId);
     this.levels = this.initLevels();
-    SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), this.rebuilt_.xml);
+    SpeechGeneratorUtil.connectMactions(
+      this.node,
+      this.getXml(),
+      this.rebuilt_.xml
+    );
   }
 
   /**
@@ -594,23 +598,24 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Retrieves all root nodes of the visual subtrees.
+   *
    * @param id The id of the root node.
-   * @return The list of ids.
+   * @returns The list of ids.
    */
   private retrieveVisuals(id: string): string[] {
     if (!this.skeleton) {
       return [id];
     }
-    let num = parseInt(id, 10);
-    let semStree = this.skeleton.subtreeNodes(num);
+    const num = parseInt(id, 10);
+    const semStree = this.skeleton.subtreeNodes(num);
     if (!semStree.length) {
       return [id];
     }
     semStree.unshift(num);
-    const mmlStree: {[num: number]: boolean} = {};
+    const mmlStree: { [num: number]: boolean } = {};
     const result = [];
     XpathUtil.updateEvaluator(this.getXml());
-    for (let child of semStree) {
+    for (const child of semStree) {
       if (mmlStree[child]) {
         continue;
       }
@@ -624,17 +629,17 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Find all ids in the subtree spanned at a node and register them.
    *
-   * @param {number} id The root id of the subtree.
-   * @param {{[num: number]: boolean}} nodes The accumulator collecting the
-   *     nodes.
+   * @param id The root id of the subtree.
+   * @param nodes The accumulator collecting the nodes.
    */
-  private subtreeIds(id: number, nodes: {[num: number]: boolean}) {
-    let xmlRoot = XpathUtil.evalXPath(
-      `//*[@data-semantic-id="${id}"]`, this.getXml());
-    let xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
-    xpath.forEach(x => nodes[parseInt(x.textContent, 10)] = true);
-  };
-
+  private subtreeIds(id: number, nodes: { [num: number]: boolean }) {
+    const xmlRoot = XpathUtil.evalXPath(
+      `//*[@data-semantic-id="${id}"]`,
+      this.getXml()
+    );
+    const xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
+    xpath.forEach((x) => (nodes[parseInt(x.textContent, 10)] = true));
+  }
 
   /**
    * Makes a focus for a primary node and a node list, all given by their ids.
