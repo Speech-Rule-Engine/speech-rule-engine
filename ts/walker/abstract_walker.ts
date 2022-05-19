@@ -592,6 +592,11 @@ export abstract class AbstractWalker<T> implements Walker {
     return this.focusFromId(id, ids);
   }
 
+  /**
+   * Retrieves all root nodes of the visual subtrees.
+   * @param id The id of the root node.
+   * @return The list of ids.
+   */
   private retrieveVisuals(id: string): string[] {
     if (!this.skeleton) {
       return [id];
@@ -602,24 +607,34 @@ export abstract class AbstractWalker<T> implements Walker {
       return [id];
     }
     semStree.unshift(num);
-    const subtreeIds = (id: number, nodes: {[num: number]: boolean}) => {
-      let xmlRoot = XpathUtil.evalXPath(
-        `//*[@data-semantic-id="${id}"]`, this.getXml());
-      let xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
-      xpath.forEach(x => nodes[parseInt(x.textContent, 10)] = true);
-    };
     const mmlStree: {[num: number]: boolean} = {};
     const result = [];
+    XpathUtil.updateEvaluator(this.getXml());
     for (let child of semStree) {
       if (mmlStree[child]) {
         continue;
       }
       result.push(child.toString());
       mmlStree[child] = true;
-      subtreeIds(child, mmlStree);
+      this.subtreeIds(child, mmlStree);
     }
     return result;
   }
+
+  /**
+   * Find all ids in the subtree spanned at a node and register them.
+   *
+   * @param {number} id The root id of the subtree.
+   * @param {{[num: number]: boolean}} nodes The accumulator collecting the
+   *     nodes.
+   */
+  private subtreeIds(id: number, nodes: {[num: number]: boolean}) {
+    let xmlRoot = XpathUtil.evalXPath(
+      `//*[@data-semantic-id="${id}"]`, this.getXml());
+    let xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
+    xpath.forEach(x => nodes[parseInt(x.textContent, 10)] = true);
+  };
+
 
   /**
    * Makes a focus for a primary node and a node list, all given by their ids.
