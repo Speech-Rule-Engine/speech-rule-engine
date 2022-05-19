@@ -35,7 +35,7 @@ import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import Engine from '../common/engine';
 import * as EngineConst from '../common/engine_const';
-import { xpath, evalXPath } from '../common/xpath_util';
+import { evalXPath, updateEvaluator } from '../common/xpath_util';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import * as SpeechRules from '../speech_rules/speech_rules';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
@@ -118,25 +118,6 @@ export class SpeechRuleEngine {
     }
   }
 
-  /**
-   * Updates the evaluator method for the document of the given node. This is
-   * particular important for XML documents in Firefox that generates a novel
-   * object (plus evaluate method) for every document.
-   *
-   * @param node The target node that is to be evaluated.
-   */
-  private static updateEvaluator(node: Element) {
-    let parent = node as any as Document;
-    while (parent && !parent.evaluate) {
-      parent = parent.parentNode as Document;
-    }
-    if (parent && parent.evaluate) {
-      xpath.currentDocument = parent;
-    } else if (node.ownerDocument) {
-      xpath.currentDocument = node.ownerDocument;
-    }
-  }
-
   // Dispatch functionality.
   // The timing function is temporary until the MOSS deliverable is done.
   /**
@@ -148,9 +129,7 @@ export class SpeechRuleEngine {
    *   for that node.
    */
   public evaluateNode(node: Element): AuditoryDescription[] {
-    if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
-      SpeechRuleEngine.updateEvaluator(node);
-    }
+    updateEvaluator(node);
     const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
     try {

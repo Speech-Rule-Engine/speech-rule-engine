@@ -202,3 +202,24 @@ export function evaluateString(expression: string, rootNode: Node): string {
   }
   return result.stringValue;
 }
+
+/**
+ * Updates the evaluator method for the document of the given node. This is
+ * particular important for XML documents in Firefox that generates a novel
+ * object (plus evaluate method) for every document.
+ *
+ * @param node The target node that is to be evaluated.
+ */
+export function updateEvaluator(node: Element) {
+  if (Engine.getInstance().mode !== EngineConst.Mode.HTTP) return;
+  let parent = node as any as Document;
+  while (parent && !parent.evaluate) {
+    parent = parent.parentNode as Document;
+  }
+  if (parent && parent.evaluate) {
+    xpath.currentDocument = parent;
+  } else if (node.ownerDocument) {
+    xpath.currentDocument = node.ownerDocument;
+  }
+}
+
