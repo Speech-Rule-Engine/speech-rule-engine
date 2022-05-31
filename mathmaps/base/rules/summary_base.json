@@ -11,6 +11,13 @@
       "self::stree"
     ],
     [
+      "Rule",
+      "context",
+      "default.default",
+      "[t] @context",
+      "self::*[@context]"
+    ],
+    [
       "Precondition",
       "abstr-identifier-long",
       "default.default",

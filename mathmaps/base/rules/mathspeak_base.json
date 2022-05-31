@@ -14,14 +14,6 @@
     ],
     [
       "Rule",
-      "context",
-      "default",
-      "[t] @context; [n] . (grammar:nocontext)",
-      "self::*[@context]",
-      "not(contains(@grammar, \"nocontext\"))"
-    ],
-    [
-      "Rule",
       "stree",
       "default",
       "[n] ./*[1]",
