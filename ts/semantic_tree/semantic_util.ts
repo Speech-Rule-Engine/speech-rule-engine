@@ -224,6 +224,7 @@ export function addAttributes(to: SemanticNode, from: Element) {
   // TODO:
   // Propagate external attributes from singleton mrow-like elements.
   // Cleaner dealing with no breaking attributes.
+  // O(1) despatch for external attribute recognition.
   if (from.hasAttributes()) {
     const attrs = from.attributes;
     for (let i = attrs.length - 1; i >= 0; i--) {
@@ -238,6 +239,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
       }
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
+      }
+      if (key === 'data-contextual-semantic') {
+        to.attributes['context'] = attrs[i].value;
       }
       if (key === 'href') {
         to.attributes['href'] = attrs[i].value;
