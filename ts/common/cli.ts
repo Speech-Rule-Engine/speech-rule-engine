@@ -43,7 +43,7 @@ export class Cli {
 
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
-      errorHandler: function (_key: string, _msg: string) {
+      errorHandler: (_key: string, _msg: string) => {
         throw new SREError('XML DOM error!');
       }
     });
@@ -93,9 +93,7 @@ export class Cli {
           length[index] = Math.max.apply(
             null,
             Object.keys(obj)
-              .map(function (x) {
-                return x.length;
-              })
+              .map((x) => x.length)
               .concat(length[index])
           );
         };
@@ -350,9 +348,7 @@ export class Cli {
     } else {
       this.readline();
     }
-    Debugger.getInstance().exit(function () {
-      System.exit(0);
-    });
+    Debugger.getInstance().exit(() => System.exit(0));
   }
 
   /**
@@ -370,15 +366,11 @@ export class Cli {
         this.processors.push('speech');
       }
       if (input) {
-        this.processors.forEach(function (proc) {
-          processor(proc, input);
-        });
+        this.processors.forEach((proc) => processor(proc, input));
       }
     } catch (err) {
       console.error(err.name + ': ' + err.message);
-      Debugger.getInstance().exit(function () {
-        this.process.exit(1);
-      });
+      Debugger.getInstance().exit(() => this.process.exit(1));
     }
   }
 
