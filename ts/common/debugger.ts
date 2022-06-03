@@ -28,6 +28,8 @@ export class Debugger {
   private isActive_ = false;
   private outputFunction_: (p1: string) => any = console.info;
 
+  private fileHandle: any = Promise.resolve();
+
   /**
    * Output stream of the debug file.
    */
@@ -51,6 +53,7 @@ export class Debugger {
       this.startDebugFile_(opt_file);
     }
     this.isActive_ = true;
+    return this.fileHandle;
   }
 
   /**
@@ -84,9 +87,11 @@ export class Debugger {
    *     debugger.
    */
   public exit(callback: () => any = () => {}) {
-    if (this.isActive_ && this.stream_) {
-      this.stream_.end('', '', callback);
-    }
+    this.fileHandle.then(() => {
+      if (this.isActive_ && this.stream_) {
+        this.stream_.end('', '', callback);
+      }
+    });
   }
 
   /**
@@ -101,20 +106,23 @@ export class Debugger {
    * @param filename The filename to route debug output to.
    */
   private startDebugFile_(filename: string) {
-    this.stream_ = SystemExternal.fs.createWriteStream(filename);
-    this.outputFunction_ = function (...args: string[]) {
-      this.stream_.write(args.join(' '));
-      this.stream_.write('\n');
-    }.bind(this);
-    this.stream_.on(
-      'error',
-      function (_error: Error) {
-        console.info('Invalid log file. Debug information sent to console.');
-        this.outputFunction_ = console.info;
-      }.bind(this)
-    );
-    this.stream_.on('finish', function () {
-      console.info('Finalizing debug file.');
+    this.fileHandle = SystemExternal.fs.promises.open(filename, 'w');
+    this.fileHandle = this.fileHandle.then((handle: any) => {
+      this.stream_ = handle.createWriteStream(filename);
+      this.outputFunction_ = function (...args: string[]) {
+        this.stream_.write(args.join(' '));
+        this.stream_.write('\n');
+      }.bind(this);
+      this.stream_.on(
+        'error',
+        function (_error: Error) {
+          console.info('Invalid log file. Debug information sent to console.');
+          this.outputFunction_ = console.info;
+        }.bind(this)
+      );
+      this.stream_.on('finish', function () {
+        console.info('Finalizing debug file.');
+      });
     });
   }
 
@@ -124,9 +132,10 @@ export class Debugger {
    * @param outputList List of output strings.
    */
   private output_(outputList: string[]) {
-    this.outputFunction_.apply(
-      console.info === this.outputFunction_ ? console : this.outputFunction_,
-      ['Speech Rule Engine Debugger:'].concat(outputList)
-    );
+    this.fileHandle.then(() =>
+      this.outputFunction_.apply(
+        console.info === this.outputFunction_ ? console : this.outputFunction_,
+        ['Speech Rule Engine Debugger:'].concat(outputList)
+      ));
   }
 }

@@ -203,6 +203,7 @@ export class Cli {
         this.runProcessors_((proc, expr) => {
           inter.output.write(ProcessorFactory.output(proc, expr) + '\n');
         }, input);
+        System.engineReady().then(() => Debugger.getInstance().exit(() => System.exit(0)));
       }).bind(this)
     );
   }
@@ -338,17 +339,17 @@ export class Cli {
     await System.engineReady().then(() => System.setupEngine(this.setup));
     const options = commander.opts();
     if (options.verbose) {
-      Debugger.getInstance().init(options.log);
+      await Debugger.getInstance().init(options.log);
     }
     if (options.input) {
       this.execute(options.input);
     }
     if (commander.args.length) {
       commander.args.forEach(this.execute.bind(this));
+      System.engineReady().then(() => Debugger.getInstance().exit(() => System.exit(0)));
     } else {
       this.readline();
     }
-    Debugger.getInstance().exit(() => System.exit(0));
   }
 
   /**
