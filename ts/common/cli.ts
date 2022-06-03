@@ -41,6 +41,8 @@ export class Cli {
 
   public dp: DOMParser;
 
+  private output: any = this.process.stdout;
+
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
       errorHandler: (_key: string, _msg: string) => {
@@ -165,11 +167,11 @@ export class Cli {
    * @param input The name of the input file.
    */
   public execute(input: string) {
-    const options = SystemExternal.commander.opts();
     EnginePromise.getall().then(() => {
-      this.runProcessors_((proc, file) => {
-        console.info(System.processFile(proc, file, options.output));
-      }, input);
+      this.runProcessors_(
+        (proc, file) =>
+          this.output.write(System.processFile(proc, file) + '\n'),
+        input);
     });
   }
 
@@ -179,13 +181,10 @@ export class Cli {
    * to the given output file.
    */
   public readline() {
-    const options = SystemExternal.commander.opts();
     this.process.stdin.setEncoding('utf8');
     const inter = SystemExternal.extRequire('readline').createInterface({
       input: this.process.stdin,
-      output: options.output
-        ? SystemExternal.fs.createWriteStream(options.output)
-        : this.process.stdout
+      output: this.output
     });
     let input = '';
     inter.on(
@@ -338,6 +337,9 @@ export class Cli {
       .parse(this.process.argv);
     await System.engineReady().then(() => System.setupEngine(this.setup));
     const options = commander.opts();
+    if (options.output) {
+      this.output = SystemExternal.fs.createWriteStream(options.output);
+    }
     if (options.verbose) {
       await Debugger.getInstance().init(options.log);
     }

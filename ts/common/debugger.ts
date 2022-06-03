@@ -132,9 +132,13 @@ export class Debugger {
    * @param outputList List of output strings.
    */
   private output_(outputList: string[]) {
+    if (console.info === this.outputFunction_) {
+      this.outputFunction_.apply(console, ['Speech Rule Engine Debugger:'].concat(outputList));
+      return;
+    }
     this.fileHandle.then(() =>
       this.outputFunction_.apply(
-        console.info === this.outputFunction_ ? console : this.outputFunction_,
+        this.outputFunction_,
         ['Speech Rule Engine Debugger:'].concat(outputList)
       ));
   }
