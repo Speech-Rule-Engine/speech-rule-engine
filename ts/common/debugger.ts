@@ -47,6 +47,7 @@ export class Debugger {
    * Flag for the debug mode of the speech rule engine.
    *
    * @param opt_file A filename to log the debug information.
+   * @returns The promise for the debug file handler.
    */
   public init(opt_file?: string) {
     if (opt_file) {
@@ -133,13 +134,17 @@ export class Debugger {
    */
   private output_(outputList: string[]) {
     if (console.info === this.outputFunction_) {
-      this.outputFunction_.apply(console, ['Speech Rule Engine Debugger:'].concat(outputList));
+      this.outputFunction_.apply(
+        console,
+        ['Speech Rule Engine Debugger:'].concat(outputList)
+      );
       return;
     }
     this.fileHandle.then(() =>
       this.outputFunction_.apply(
         this.outputFunction_,
         ['Speech Rule Engine Debugger:'].concat(outputList)
-      ));
+      )
+    );
   }
 }

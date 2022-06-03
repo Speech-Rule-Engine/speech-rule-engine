@@ -171,7 +171,8 @@ export class Cli {
       this.runProcessors_(
         (proc, file) =>
           this.output.write(System.processFile(proc, file) + '\n'),
-        input);
+        input
+      );
     });
   }
 
@@ -202,7 +203,9 @@ export class Cli {
         this.runProcessors_((proc, expr) => {
           inter.output.write(ProcessorFactory.output(proc, expr) + '\n');
         }, input);
-        System.engineReady().then(() => Debugger.getInstance().exit(() => System.exit(0)));
+        System.engineReady().then(() =>
+          Debugger.getInstance().exit(() => System.exit(0))
+        );
       }).bind(this)
     );
   }
@@ -348,7 +351,9 @@ export class Cli {
     }
     if (commander.args.length) {
       commander.args.forEach(this.execute.bind(this));
-      System.engineReady().then(() => Debugger.getInstance().exit(() => System.exit(0)));
+      System.engineReady().then(() =>
+        Debugger.getInstance().exit(() => System.exit(0))
+      );
     } else {
       this.readline();
     }

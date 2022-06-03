@@ -41,7 +41,7 @@ import { getCase } from './enrich_case';
 export const SETTINGS: {
   collapsed: boolean;
   implicit: boolean;
-  wiki: boolean
+  wiki: boolean;
 } = {
   collapsed: true,
   implicit: true,
@@ -843,14 +843,16 @@ export function getInnerNode(node: Element): Element {
  * @param element The original MathML expression.
  * @param name The name of the expression to be printed in the wiki.
  * @param wiki Flag to specify wiki output.
+ * @returns Formatted output string.
  */
 function formattedOutput(
   element: Element | SemanticTree,
   name: string,
-  wiki: boolean = false
+  wiki = false
 ) {
   const output = EnrichAttr.removeAttributePrefix(
-    DomUtil.formatXml(element.toString()));
+    DomUtil.formatXml(element.toString())
+  );
   return wiki ? name + ':\n```html\n' + output + '\n```\n' : output;
 }
 
