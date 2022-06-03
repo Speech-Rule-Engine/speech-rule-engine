@@ -24,7 +24,6 @@ import { EnginePromise } from '../common/engine';
 import * as Semantic from '../semantic_tree/semantic';
 
 import * as EnrichMathml from './enrich_mathml';
-import { removeAttributePrefix } from './enrich_attr';
 import './enrich_case_factory';
 
 /**
@@ -69,11 +68,9 @@ export function semanticMathml(expr: string, callback: (p1: Element) => any) {
  * @param expr MathML expression.
  * @returns The enriched MathML expression.
  */
-export function testTranslation__(expr: string): string {
-  // dummy call
+export function testTranslation(expr: string): Element {
   Debugger.getInstance().init();
-  const mml = semanticMathmlSync(prepareMmlString(expr)).toString();
-  removeAttributePrefix(mml);
+  const mml = semanticMathmlSync(prepareMmlString(expr));
   Debugger.getInstance().exit();
   return mml;
 }

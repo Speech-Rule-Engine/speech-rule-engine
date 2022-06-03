@@ -21,6 +21,7 @@
 import * as L10n from '../l10n/l10n';
 import * as MathMap from '../speech_rules/math_map';
 import * as BrowserUtil from './browser_util';
+import { Debugger } from './debugger';
 import Engine, { EnginePromise } from './engine';
 import * as FileUtil from './file_util';
 import SystemExternal from './system_external';
@@ -62,6 +63,9 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   engine.configurate(feature);
   Engine.BINARY_FEATURES.forEach(setIf);
   Engine.STRING_FEATURES.forEach(setMulti);
+  if (feature.debug) {
+    Debugger.getInstance().init();
+  }
   if (feature.json) {
     SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
   }
