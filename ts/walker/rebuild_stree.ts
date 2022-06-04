@@ -197,6 +197,8 @@ export class RebuildStree {
     const font = WalkerUtil.getAttribute(node, Attribute.FONT);
     const annotation =
       WalkerUtil.getAttribute(node, Attribute.ANNOTATION) || '';
+    const attributes =
+      WalkerUtil.getAttribute(node, Attribute.ATTRIBUTES) || '';
     const id = WalkerUtil.getAttribute(node, Attribute.ID);
     const embellished = WalkerUtil.getAttribute(node, Attribute.EMBELLISHED);
     const fencepointer = WalkerUtil.getAttribute(node, Attribute.FENCEPOINTER);
@@ -205,6 +207,7 @@ export class RebuildStree {
     snode.role = role as SemanticRole;
     snode.font = font ? (font as SemanticFont) : SemanticFont.UNKNOWN;
     snode.parseAnnotation(annotation);
+    snode.parseAttributes(attributes);
     if (fencepointer) {
       snode.fencePointer = fencepointer;
     }

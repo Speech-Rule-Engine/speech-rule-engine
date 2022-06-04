@@ -269,10 +269,11 @@ export class SemanticNode {
   }
 
   /**
-   * Computes a list of attributes of the semantic node.
+   * Computes a list of (internal) attributes of the semantic node. Note, that
+   * this does not include any external attributes that are retained from the
+   * original structure.
    *
-   * @returns A list of
-   *     pairs.
+   * @returns A list of pairs.
    */
   public allAttributes(): [Attribute, string][] {
     const attributes: [Attribute, string][] = [];
@@ -281,7 +282,7 @@ export class SemanticNode {
       attributes.push([Attribute.FONT, this.font]);
     }
     if (Object.keys(this.annotation).length) {
-      attributes.push([Attribute.ANNOTATION, this.xmlAnnotation()]);
+      attributes.push([Attribute.ANNOTATION, this.annotationXml()]);
     }
     if (this.embellished) {
       attributes.push([Attribute.EMBELLISHED, this.embellished]);
@@ -298,12 +299,25 @@ export class SemanticNode {
    *
    * @returns XML string for annotation.
    */
-  public xmlAnnotation(): string {
+  private annotationXml(): string {
     const result: string[] = [];
     for (const key in this.annotation) {
       this.annotation[key].forEach(function (mean) {
         result.push(key + ':' + mean);
       });
+    }
+    return result.join(';');
+  }
+
+  /**
+   * Turns attributes structure into an attribute.
+   *
+   * @returns XML string for annotation.
+   */
+  public attributesXml(): string {
+    const result: string[] = [];
+    for (const [key, value] of Object.entries(this.attributes)) {
+      result.push(key + ':' + value);
     }
     return result.join(';');
   }
@@ -569,6 +583,21 @@ export class SemanticNode {
   private addExternalAttributes(node: Element) {
     for (const attr in this.attributes) {
       node.setAttribute(attr, this.attributes[attr]);
+    }
+  }
+
+  /**
+   * Parses a attributes string as given, for example, in an attribute.
+   *
+   * @param stateStr The state string for the attributes.
+   */
+  public parseAttributes(stateStr: string) {
+    const attributes = stateStr.split(';');
+    for (let i = 0, l = attributes.length; i < l; i++) {
+      const [key, value] = attributes[i].split(':');
+      if (key) {
+        this.attributes[key] = value;
+      }
     }
   }
 

@@ -44,6 +44,7 @@ export enum Attribute {
   FONT = 'data-semantic-font',
   ID = 'data-semantic-id',
   ANNOTATION = 'data-semantic-annotation',
+  ATTRIBUTES = 'data-semantic-attributes',
   OPERATOR = 'data-semantic-operator',
   OWNS = 'data-semantic-owns',
   PARENT = 'data-semantic-parent',
@@ -66,6 +67,7 @@ export const EnrichAttributes: string[] = [
   Attribute.FONT,
   Attribute.ID,
   Attribute.ANNOTATION,
+  Attribute.ATTRIBUTES,
   Attribute.OPERATOR,
   Attribute.OWNS,
   Attribute.PARENT,
@@ -111,6 +113,11 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
   }
   if (semantic.parent) {
     mml.setAttribute(Attribute.PARENT, semantic.parent.id.toString());
+  }
+  // Dealing with external attributes here.
+  const external = semantic.attributesXml();
+  if (external) {
+    mml.setAttribute(Attribute.ATTRIBUTES, external);
   }
   setPostfix(mml, semantic);
 }
