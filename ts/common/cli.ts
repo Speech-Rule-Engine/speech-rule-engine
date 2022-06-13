@@ -41,9 +41,11 @@ export class Cli {
 
   public dp: DOMParser;
 
+  private output: any = this.process.stdout;
+
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
-      errorHandler: function (_key: string, _msg: string) {
+      errorHandler: (_key: string, _msg: string) => {
         throw new SREError('XML DOM error!');
       }
     });
@@ -93,9 +95,7 @@ export class Cli {
           length[index] = Math.max.apply(
             null,
             Object.keys(obj)
-              .map(function (x) {
-                return x.length;
-              })
+              .map((x) => x.length)
               .concat(length[index])
           );
         };
@@ -167,11 +167,12 @@ export class Cli {
    * @param input The name of the input file.
    */
   public execute(input: string) {
-    const options = SystemExternal.commander.opts();
     EnginePromise.getall().then(() => {
-      this.runProcessors_((proc, file) => {
-        console.info(System.processFile(proc, file, options.output));
-      }, input);
+      this.runProcessors_(
+        (proc, file) =>
+          this.output.write(System.processFile(proc, file) + '\n'),
+        input
+      );
     });
   }
 
@@ -181,13 +182,10 @@ export class Cli {
    * to the given output file.
    */
   public readline() {
-    const options = SystemExternal.commander.opts();
     this.process.stdin.setEncoding('utf8');
     const inter = SystemExternal.extRequire('readline').createInterface({
       input: this.process.stdin,
-      output: options.output
-        ? SystemExternal.fs.createWriteStream(options.output)
-        : this.process.stdout
+      output: this.output
     });
     let input = '';
     inter.on(
@@ -205,6 +203,9 @@ export class Cli {
         this.runProcessors_((proc, expr) => {
           inter.output.write(ProcessorFactory.output(proc, expr) + '\n');
         }, input);
+        System.engineReady().then(() =>
+          Debugger.getInstance().exit(() => System.exit(0))
+        );
       }).bind(this)
     );
   }
@@ -339,20 +340,23 @@ export class Cli {
       .parse(this.process.argv);
     await System.engineReady().then(() => System.setupEngine(this.setup));
     const options = commander.opts();
+    if (options.output) {
+      this.output = SystemExternal.fs.createWriteStream(options.output);
+    }
     if (options.verbose) {
-      Debugger.getInstance().init(options.log);
+      await Debugger.getInstance().init(options.log);
     }
     if (options.input) {
       this.execute(options.input);
     }
     if (commander.args.length) {
       commander.args.forEach(this.execute.bind(this));
+      System.engineReady().then(() =>
+        Debugger.getInstance().exit(() => System.exit(0))
+      );
     } else {
       this.readline();
     }
-    Debugger.getInstance().exit(function () {
-      System.exit(0);
-    });
   }
 
   /**
@@ -370,15 +374,11 @@ export class Cli {
         this.processors.push('speech');
       }
       if (input) {
-        this.processors.forEach(function (proc) {
-          processor(proc, input);
-        });
+        this.processors.forEach((proc) => processor(proc, input));
       }
     } catch (err) {
       console.error(err.name + ': ' + err.message);
-      Debugger.getInstance().exit(function () {
-        this.process.exit(1);
-      });
+      Debugger.getInstance().exit(() => this.process.exit(1));
     }
   }
 

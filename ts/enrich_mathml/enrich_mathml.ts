@@ -38,9 +38,14 @@ import { getCase } from './enrich_case';
 /**
  * Object containing settings for the semantic enrichment.
  */
-export const SETTINGS: { collapsed: boolean; implicit: boolean } = {
+export const SETTINGS: {
+  collapsed: boolean;
+  implicit: boolean;
+  wiki: boolean;
+} = {
   collapsed: true,
-  implicit: true
+  implicit: true,
+  wiki: true
 };
 
 /**
@@ -64,10 +69,11 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
       SemanticSkeleton.fromStructure(mml, semantic).toString()
     );
   }
-  Debugger.getInstance().generateOutput(function () {
-    formattedOutput(oldMml, mml, semantic, true);
-    return [];
-  });
+  Debugger.getInstance().generateOutput(() => [
+    formattedOutput(oldMml, 'Original MathML', SETTINGS.wiki),
+    formattedOutput(semantic, 'Semantic Tree', SETTINGS.wiki),
+    formattedOutput(mml, 'Semantically enriched MathML', SETTINGS.wiki)
+  ]);
   return mml;
 }
 
@@ -830,27 +836,6 @@ export function getInnerNode(node: Element): Element {
 }
 
 /**
- * Creates formatted output  for MathML and semantic tree expression.
- * REMARK: Helper function.
- *
- * @param mml The original MathML expression.
- * @param expr The enriched MathML expression.
- * @param tree The semantic tree.
- * @param opt_wiki Flag to specify wiki output.
- */
-export function formattedOutput(
-  mml: Element,
-  expr: Element,
-  tree: SemanticTree,
-  opt_wiki?: boolean
-) {
-  const wiki = opt_wiki || false;
-  formattedOutput_(mml, 'Original MathML', wiki);
-  formattedOutput_(tree, 'Semantic Tree', wiki);
-  formattedOutput_(expr, 'Semantically enriched MathML', wiki);
-}
-
-/**
  * Prints formatted output for MathML and semantic tree expression. Depending on
  * the wiki flag it might wrap it into markup useful for GitHub wikis.
  * REMARK: Helper function.
@@ -858,20 +843,17 @@ export function formattedOutput(
  * @param element The original MathML expression.
  * @param name The name of the expression to be printed in the wiki.
  * @param wiki Flag to specify wiki output.
+ * @returns Formatted output string.
  */
-export function formattedOutput_(
+function formattedOutput(
   element: Element | SemanticTree,
   name: string,
-  wiki: boolean
+  wiki = false
 ) {
-  const output = DomUtil.formatXml(element.toString());
-  if (!wiki) {
-    console.info(output);
-    return;
-  }
-  console.info(
-    name + ':\n```html\n' + EnrichAttr.removeAttributePrefix(output) + '\n```\n'
+  const output = EnrichAttr.removeAttributePrefix(
+    DomUtil.formatXml(element.toString())
   );
+  return wiki ? name + ':\n```html\n' + output + '\n```\n' : output;
 }
 
 /**
