@@ -265,7 +265,7 @@ export class SemanticNode {
    */
   public toString(brief = false): string {
     const xml = DomUtil.parseInput('<snode/>') as unknown as Document;
-    return DomUtil.serializeXml(this.xml(xml, brief));
+    return DomUtil.serializeXml(this.xml(xml.ownerDocument, brief));
   }
 
   /**
