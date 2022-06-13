@@ -270,7 +270,7 @@ export function childrenSubset_(
 
 /**
  * Collates the childnodes in the light of potential contractions of the combine
- * juxtaposition heuristic. This extends the list of know children by those
+ * juxtaposition heuristic. This extends the list of known children by those
  * deeper in the tree.
  *
  * @param node The node whose children are picked.
@@ -292,7 +292,7 @@ export function collateChildNodes_(
       oldChildren.push(child);
       continue;
     }
-    const collect = collectChildNodes_(child);
+    const collect = collectChildNodes_(child, children);
     if (collect.length === 0) {
       continue;
     }
@@ -333,9 +333,11 @@ export function collateChildNodes_(
  * not semantically enriched.
  *
  * @param node The top level node.
+ * @param children The list children to compare to, possibly corresponding to
+ *     nested elements.
  * @returns The lower level children.
  */
-export function collectChildNodes_(node: Element): Element[] {
+export function collectChildNodes_(node: Element, children: Element[]): Element[] {
   const collect = [];
   let newChildren = DomUtil.toArray(node.childNodes);
   while (newChildren.length) {
@@ -343,7 +345,8 @@ export function collectChildNodes_(node: Element): Element[] {
     if (child.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
-    if (child.hasAttribute(EnrichAttr.Attribute.TYPE)) {
+    if (child.hasAttribute(EnrichAttr.Attribute.TYPE) ||
+      children.indexOf(child) !== -1) {
       collect.push(child);
       continue;
     }
