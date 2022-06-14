@@ -368,6 +368,7 @@ export function mergeChildren_(
   newChildren: Element[],
   semantic: SemanticNode
 ) {
+  if (!newChildren.length) return;
   const oldChildren =
     semantic.role === SemanticRole.IMPLICIT &&
     SemanticHeuristics.flags.combine_juxtaposition
