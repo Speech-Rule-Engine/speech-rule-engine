@@ -88,9 +88,10 @@ export class Cli {
    */
   public async enumerate(all = false) {
     const promise = System.setupEngine(this.setup);
+    const order = DynamicCstr.DEFAULT_ORDER.slice(0, -1);  // No topics yet.
     return (all ? this.loadLocales() : promise).then(() =>
       EnginePromise.getall().then(() => {
-        const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
+        const length = order.map((x) => x.length);
         const maxLength = (obj: any, index: number) => {
           length[index] = Math.max.apply(
             null,
@@ -145,18 +146,21 @@ export class Cli {
           }
         }
         let i = 0;
-        let output = '';
-        output += DynamicCstr.DEFAULT_ORDER.slice(
-          0, // No topics yet.
-          -1
-        )
-          .map((x: string) => compStr(x, length[i++]))
-          .join(' | ');
-        output += '\n';
-        length.forEach((x: number) => (output += new Array(x + 3).join('=')));
-        output += '========================\n';
-        output += table.map((x) => x.join(' | ')).join('\n');
-        console.info(output);
+        const header = order.map((x: string) => compStr(x, length[i++]));
+        const markdown = SystemExternal.commander.opts().pprint;
+        const separator = length.map(
+          (x: number) => new Array(x + 1).join(markdown ? '-' : '='));
+        if (!markdown) {
+          separator[i - 1] = separator[i - 1] + '========================';
+        }
+        table.unshift(separator)
+        table.unshift(header)
+        let output = table.map((x) => x.join(' | '));
+        if (markdown) {
+          output = output.map((x) => `| ${x} |`);
+          output.unshift(`# Options SRE v${System.version}\n`);
+        }
+        console.info(output.join('\n'));
       })
     );
   }
