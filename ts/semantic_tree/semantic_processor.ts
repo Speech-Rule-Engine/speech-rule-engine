@@ -3319,6 +3319,7 @@ export default class SemanticProcessor {
           integrand,
           components.intvar
         );
+        SemanticHeuristics.run('intvar_from_fraction', funcNode);
         components.rest.unshift(funcNode);
         return components.rest;
       }

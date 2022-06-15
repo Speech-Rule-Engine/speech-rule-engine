@@ -468,14 +468,62 @@ function recurseJuxtaposition(
 
 
 // New Integral Heuristics
+/**
+ * Heuristic to extract integral variables from elements that are considered to be
+ * in elided products. This implies we ignore any invisible grouping.
+ */
 SemanticHeuristics.add(
   new SemanticMultiHeuristic('intvar_from_implicit', integralArgUnpack)
 );
 
+/**
+ * Unpacks implicit nodes and pushes them to the front of the node list.
+ *
+ * @param nodes The list of nodes.
+ * @returns The updated node list.
+ */
 function integralArgUnpack(nodes: SemanticNode[]): void {
   const firstNode = nodes[0];
   if (SemanticPred.isImplicit(firstNode)) {
     let children = firstNode.childNodes;
     nodes.splice(0, 1, ...children)
+  }
+}
+
+/**
+ * Heuristic to extract find an integral variable as enumerator a fraction.
+ * Just changes the role to integral.
+ */
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic('intvar_from_fraction', integralFractionArg)
+);
+
+/**
+ * If the integrand is a fraction and the integral variable is the enumerator it
+ * adjusts its role to integral an possibly rewrites it into a prefix operator.
+ * 
+ * @param node The integral node.
+ */
+function integralFractionArg(node: SemanticNode): void {
+  const integrand = node.childNodes[1];
+  if (node.childNodes[2].type !== SemanticType.EMPTY ||
+    integrand.type === SemanticType.EMPTY ||
+    integrand.type !== SemanticType.FRACTION) {
+    return;
+  }
+  const enumerator = integrand.childNodes[0];
+  if (SemanticPred.isIntegralDxBoundarySingle(enumerator)) {
+    enumerator.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (SemanticPred.isImplicit(enumerator) &&
+    enumerator.childNodes.length === 2 &&
+    SemanticPred.isIntegralDxBoundary(
+      enumerator.childNodes[0], enumerator.childNodes[1])
+     ) {
+    const prefix = SemanticProcessor.getInstance()['prefixNode_'](
+      enumerator.childNodes[1], [enumerator.childNodes[0]])
+    integrand.childNodes[0] = prefix;
+    prefix.role = SemanticRole.INTEGRAL;
   }
 }
