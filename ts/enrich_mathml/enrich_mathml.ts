@@ -126,7 +126,7 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
-      newNode = attached.parentNode as Element;
+      newNode = parentNode_(attached);
     } else {
       Debugger.getInstance().output('Walktree Case 2.2');
       newNode = getInnerNode(newNode);
@@ -177,7 +177,7 @@ export function introduceNewLayer(
     } else if (children[0]) {
       Debugger.getInstance().output('Walktree Case 1.1.1');
       const node = attachedElement_(children);
-      const oldChildren = childrenSubset_(node.parentNode as Element, children);
+      const oldChildren = childrenSubset_(parentNode_(node), children);
       DomUtil.replaceNode(node, newNode);
       oldChildren.forEach(function (x) {
         newNode.appendChild(x);
@@ -424,10 +424,11 @@ export function insertNewChild_(
   oldChild: Element,
   newChild: Element
 ) {
-  if (!oldChild) {
+  if (!oldChild && !newChild.parentNode) {
     node.insertBefore(newChild, null);
     return;
   }
+  if (!oldChild) return;
   let parent = oldChild;
   let next = parentNode_(parent);
   while (
@@ -452,12 +453,12 @@ export function insertNewChild_(
  * @param node The potential ancestor node.
  * @returns True if child is a descendant of node.
  */
-export function isDescendant_(child: Node, node: Node): boolean {
+export function isDescendant_(child: Element, node: Element): boolean {
   if (!child) {
     return false;
   }
   do {
-    child = child.parentNode;
+    child = parentNode_(child);
     if (child === node) {
       return true;
     }

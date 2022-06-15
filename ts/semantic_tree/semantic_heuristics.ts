@@ -476,8 +476,6 @@ function integralArgUnpack(nodes: SemanticNode[]): void {
   const firstNode = nodes[0];
   if (SemanticPred.isImplicit(firstNode)) {
     let children = firstNode.childNodes;
-    console.log('HERE');
-    children.forEach(x=> console.log(x.parent.toString()));
     nodes.splice(0, 1, ...children)
   }
 }
