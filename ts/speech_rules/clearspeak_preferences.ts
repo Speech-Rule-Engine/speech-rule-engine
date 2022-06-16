@@ -246,7 +246,7 @@ export class ClearspeakPreferences extends DynamicCstr {
         continue;
       }
       const locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
-      if (locPrefs.length < 3) continue; // Remove languages with no reall CS
+      if (locPrefs.length < 3) continue; // Remove languages with no real CS
       const prefs: AxisProperties = (result[locale] = {});
       for (const axis in PREFERENCES.getProperties()) {
         const allSty = PREFERENCES.getProperties()[axis];
