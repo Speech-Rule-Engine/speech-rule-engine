@@ -3427,7 +3427,13 @@ export default class SemanticProcessor {
     args: SemanticNode[] = []
   ): { integrand: SemanticNode[]; intvar: SemanticNode; rest: SemanticNode[] } {
     if (nodes.length === 0) {
-      return { integrand: args, intvar: null, rest: nodes };
+      // Here we have no intvar. Now we can move back wrt. bigop boundary.
+      let partition = SemanticUtil.sliceNodes(args, SemanticPred.isBigOpBoundary);
+      // return { integrand: args, intvar: null, rest: nodes };
+      if (partition.div) {
+        partition.tail.unshift(partition.div);
+      }
+      return {integrand: partition.head, intvar: null, rest: partition.tail};
     }
     SemanticHeuristics.run('intvar_from_implicit', nodes);
     const firstNode = nodes[0];
