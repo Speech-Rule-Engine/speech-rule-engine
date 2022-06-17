@@ -592,6 +592,7 @@ export class SemanticNode {
    * @param stateStr The state string for the attributes.
    */
   public parseAttributes(stateStr: string) {
+    if (!stateStr) return;
     const attributes = stateStr.split(';');
     for (let i = 0, l = attributes.length; i < l; i++) {
       const [key, value] = attributes[i].split(':');
