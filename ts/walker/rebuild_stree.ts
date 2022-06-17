@@ -20,7 +20,6 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
 import { Attribute } from '../enrich_mathml/enrich_attr';
 import { invisibleComma } from '../semantic_tree/semantic_attr';
 import {
@@ -33,7 +32,6 @@ import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory';
 import SemanticProcessor from '../semantic_tree/semantic_processor';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
 import { SemanticTree } from '../semantic_tree/semantic_tree';
-import * as SemanticUtil from '../semantic_tree/semantic_util';
 import * as WalkerUtil from './walker_util';
 
 // Note that reassemble tree will not give you exactly the original tree, as the
@@ -68,29 +66,6 @@ export class RebuildStree {
    * The xml representation of semantic tree.
    */
   public xml: Element;
-
-  /**
-   * Adds external attributes if they exists. Recurses one level if we have a
-   * leaf element with a none-text child.
-   *
-   * @param snode The semantic node.
-   * @param node The mml node.
-   * @param leaf True if it is a leaf node.
-   */
-  public static addAttributes(
-    snode: SemanticNode,
-    node: Element,
-    leaf: boolean
-  ) {
-    if (
-      leaf &&
-      node.childNodes.length === 1 &&
-      node.childNodes[0].nodeType !== DomUtil.NodeType.TEXT_NODE
-    ) {
-      SemanticUtil.addAttributes(snode, node.childNodes[0] as Element);
-    }
-    SemanticUtil.addAttributes(snode, node);
-  }
 
   /**
    * Sets the text content of the semantic node. If no text content is available
@@ -163,11 +138,6 @@ export class RebuildStree {
     );
     const content = WalkerUtil.splitAttribute(
       WalkerUtil.getAttribute(node, Attribute.CONTENT)
-    );
-    RebuildStree.addAttributes(
-      snode,
-      node,
-      !(children.length || content.length)
     );
     if (content.length === 0 && children.length === 0) {
       RebuildStree.textContent(snode, node);
