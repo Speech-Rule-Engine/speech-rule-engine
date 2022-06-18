@@ -465,3 +465,17 @@ function recurseJuxtaposition(
   acc.push(result);
   return recurseJuxtaposition(acc.concat(first), ops, elements);
 }
+
+
+// New Integral Heuristics
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic('intvar_from_implicit', integralArgUnpack)
+);
+
+function integralArgUnpack(nodes: SemanticNode[]): void {
+  const firstNode = nodes[0];
+  if (SemanticPred.isImplicit(firstNode)) {
+    let children = firstNode.childNodes;
+    nodes.splice(0, 1, ...children)
+  }
+}

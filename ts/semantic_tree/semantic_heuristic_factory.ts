@@ -47,7 +47,8 @@ const heuristics: Map<
 export const flags: { [key: string]: boolean } = {
   combine_juxtaposition: true,
   convert_juxtaposition: true,
-  multioperator: true
+  multioperator: true,
+  intvar_from_implicit: true
 };
 
 /**

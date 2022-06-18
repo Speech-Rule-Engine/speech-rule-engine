@@ -126,7 +126,7 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
-      newNode = attached.parentNode as Element;
+      newNode = parentNode_(attached);
     } else {
       Debugger.getInstance().output('Walktree Case 2.2');
       newNode = getInnerNode(newNode);
@@ -177,7 +177,7 @@ export function introduceNewLayer(
     } else if (children[0]) {
       Debugger.getInstance().output('Walktree Case 1.1.1');
       const node = attachedElement_(children);
-      const oldChildren = childrenSubset_(node.parentNode as Element, children);
+      const oldChildren = childrenSubset_(parentNode_(node), children);
       DomUtil.replaceNode(node, newNode);
       oldChildren.forEach(function (x) {
         newNode.appendChild(x);
@@ -368,6 +368,7 @@ export function mergeChildren_(
   newChildren: Element[],
   semantic: SemanticNode
 ) {
+  if (!newChildren.length) return;
   const oldChildren =
     semantic.role === SemanticRole.IMPLICIT &&
     SemanticHeuristics.flags.combine_juxtaposition
@@ -405,8 +406,26 @@ export function mergeChildren_(
       newChildren.shift();
       continue;
     }
+    let oldChild = oldChildren[oldCounter];
+    if (!oldChild) {
+      // Every new child is now either really new or a child of a different
+      // parent.
+      const nextChild = newChildren[1] as Element;
+      if (nextChild && nextChild.parentNode) {
+        // newChild should be inserted before the next, which can then be
+        // skipped. Since the parentNode is different than node we replace it.
+        node = parentNode_(nextChild);
+        node.insertBefore(newChild, nextChild);
+        newChildren.shift();
+        newChildren.shift();
+        continue;
+    }
+      node.insertBefore(newChild, null);
+      newChildren.shift();
+      continue;
+    }
     // newChild is indeed new and needs to be added.
-    insertNewChild_(node, oldChildren[oldCounter], newChild);
+    insertNewChild_(node, oldChild, newChild);
     newChildren.shift();
   }
 }
@@ -423,10 +442,6 @@ export function insertNewChild_(
   oldChild: Element,
   newChild: Element
 ) {
-  if (!oldChild) {
-    node.insertBefore(newChild, null);
-    return;
-  }
   let parent = oldChild;
   let next = parentNode_(parent);
   while (
@@ -451,12 +466,12 @@ export function insertNewChild_(
  * @param node The potential ancestor node.
  * @returns True if child is a descendant of node.
  */
-export function isDescendant_(child: Node, node: Node): boolean {
+export function isDescendant_(child: Element, node: Element): boolean {
   if (!child) {
     return false;
   }
   do {
-    child = child.parentNode;
+    child = parentNode_(child);
     if (child === node) {
       return true;
     }
@@ -892,18 +907,4 @@ export function collapsePunctuated(
     childIds.push(child.id);
   }
   return childIds;
-}
-
-/**
- * Prints a list of nodes.
- *
- * @param title A string to print first.
- * @param nodes A list of nodes.
- */
-export function printNodeList__(title: string, nodes: NodeList) {
-  console.info(title);
-  DomUtil.toArray(nodes).forEach(function (x) {
-    console.info(x.toString());
-  });
-  console.info('<<<<<<<<<<<<<<<<<');
 }
