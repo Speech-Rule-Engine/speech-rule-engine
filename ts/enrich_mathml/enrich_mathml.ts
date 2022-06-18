@@ -410,16 +410,26 @@ export function mergeChildren_(
     if (!oldChild) {
       // Every new child is now either really new or a child of a different
       // parent.
+      if (newChild.parentNode) {
+        // newChild has already a parent. So it is not really new, just the
+        // child of a different parent.  It can be skipped and since the
+        // parentNode is different than node we replace it.
+        node = parentNode_(newChild);
+        newChildren.shift();
+        continue;
+      }
       const nextChild = newChildren[1] as Element;
       if (nextChild && nextChild.parentNode) {
-        // newChild should be inserted before the next, which can then be
-        // skipped. Since the parentNode is different than node we replace it.
+        // newChild is indeed new but the next child has a parent, which must be
+        // different that the one of node. newChild should be inserted before
+        // the next, which can then be skipped. Since the parentNode is
+        // different than node we replace it.
         node = parentNode_(nextChild);
         node.insertBefore(newChild, nextChild);
         newChildren.shift();
         newChildren.shift();
         continue;
-    }
+      }
       node.insertBefore(newChild, null);
       newChildren.shift();
       continue;
