@@ -3428,7 +3428,6 @@ export default class SemanticProcessor {
     if (nodes.length === 0) {
       return { integrand: args, intvar: null, rest: nodes };
     }
-    SemanticHeuristics.run('intvar_from_implicit', nodes);
     const firstNode = nodes[0];
     if (SemanticPred.isGeneralFunctionBoundary(firstNode)) {
       return { integrand: args, intvar: null, rest: nodes };
