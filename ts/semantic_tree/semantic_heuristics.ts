@@ -473,21 +473,22 @@ function recurseJuxtaposition(
  * in elided products. This implies we ignore any invisible grouping.
  */
 SemanticHeuristics.add(
-  new SemanticMultiHeuristic('intvar_from_implicit', integralArgUnpack)
+  new SemanticMultiHeuristic(
+    'intvar_from_implicit',
+    implicitUnpack,
+    (nodes: SemanticNode[]) => nodes[0] && SemanticPred.isImplicit(nodes[0])
+  )
 );
 
 /**
- * Unpacks implicit nodes and pushes them to the front of the node list.
+ * Unpacks implicit nodes and pushes them to the front of the node list. Assumes
+ * that the first node of the given list is an implicit multiplication.
  *
  * @param nodes The list of nodes.
- * @returns The updated node list.
  */
-function integralArgUnpack(nodes: SemanticNode[]): void {
-  const firstNode = nodes[0];
-  if (SemanticPred.isImplicit(firstNode)) {
-    let children = firstNode.childNodes;
-    nodes.splice(0, 1, ...children)
-  }
+function implicitUnpack(nodes: SemanticNode[]) {
+  let children = nodes[0].childNodes;
+  nodes.splice(0, 1, ...children)
 }
 
 /**
@@ -495,8 +496,16 @@ function integralArgUnpack(nodes: SemanticNode[]): void {
  * Just changes the role to integral.
  */
 SemanticHeuristics.add(
-  new SemanticTreeHeuristic('intvar_from_fraction', integralFractionArg)
-);
+  new SemanticTreeHeuristic(
+    'intvar_from_fraction',
+    integralFractionArg,
+    (node: SemanticNode) => {
+      if (node.type !== SemanticType.INTEGRAL) return false;
+      let [, integrand, intvar] = node.childNodes;
+      return intvar.type === SemanticType.EMPTY &&
+        integrand.type === SemanticType.FRACTION
+    }
+  ));
 
 /**
  * If the integrand is a fraction and the integral variable is the enumerator it
@@ -506,24 +515,30 @@ SemanticHeuristics.add(
  */
 function integralFractionArg(node: SemanticNode): void {
   const integrand = node.childNodes[1];
-  if (node.childNodes[2].type !== SemanticType.EMPTY ||
-    integrand.type === SemanticType.EMPTY ||
-    integrand.type !== SemanticType.FRACTION) {
-    return;
-  }
   const enumerator = integrand.childNodes[0];
   if (SemanticPred.isIntegralDxBoundarySingle(enumerator)) {
     enumerator.role = SemanticRole.INTEGRAL;
     return;
   }
-  if (SemanticPred.isImplicit(enumerator) &&
-    enumerator.childNodes.length === 2 &&
-    SemanticPred.isIntegralDxBoundary(
-      enumerator.childNodes[0], enumerator.childNodes[1])
-     ) {
+  if (!SemanticPred.isImplicit(enumerator)) return;
+  const length = enumerator.childNodes.length;
+  const first = enumerator.childNodes[length - 2];
+  const second = enumerator.childNodes[length - 1];
+  if (SemanticPred.isIntegralDxBoundarySingle(second)) {
+    second.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (SemanticPred.isIntegralDxBoundary(first, second)) {
     const prefix = SemanticProcessor.getInstance()['prefixNode_'](
-      enumerator.childNodes[1], [enumerator.childNodes[0]])
-    integrand.childNodes[0] = prefix;
+      second, [first]);
     prefix.role = SemanticRole.INTEGRAL;
+    if (length === 2) {
+      integrand.childNodes[0] = prefix;
+    } else {
+      enumerator.childNodes.pop();
+      enumerator.contentNodes.pop();
+      enumerator.childNodes[length - 2] = prefix;
+      prefix.parent = enumerator;
+    }
   }
 }
