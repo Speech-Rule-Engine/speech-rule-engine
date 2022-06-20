@@ -2225,6 +2225,10 @@ export default class SemanticProcessor {
       prefix
     );
     if (!split.div) {
+      // Check for unit here?
+      if (SemanticPred.isUnitProduct(node)) {
+        node.role = SemanticRole.UNIT;
+      }
       return node;
     }
     return SemanticProcessor.getInstance().operationsTree_(
