@@ -468,14 +468,77 @@ function recurseJuxtaposition(
 
 
 // New Integral Heuristics
+/**
+ * Heuristic to extract integral variables from elements that are considered to be
+ * in elided products. This implies we ignore any invisible grouping.
+ */
 SemanticHeuristics.add(
-  new SemanticMultiHeuristic('intvar_from_implicit', integralArgUnpack)
+  new SemanticMultiHeuristic(
+    'intvar_from_implicit',
+    implicitUnpack,
+    (nodes: SemanticNode[]) => nodes[0] && SemanticPred.isImplicit(nodes[0])
+  )
 );
 
-function integralArgUnpack(nodes: SemanticNode[]): void {
-  const firstNode = nodes[0];
-  if (SemanticPred.isImplicit(firstNode)) {
-    let children = firstNode.childNodes;
-    nodes.splice(0, 1, ...children)
+/**
+ * Unpacks implicit nodes and pushes them to the front of the node list. Assumes
+ * that the first node of the given list is an implicit multiplication.
+ *
+ * @param nodes The list of nodes.
+ */
+function implicitUnpack(nodes: SemanticNode[]) {
+  let children = nodes[0].childNodes;
+  nodes.splice(0, 1, ...children)
+}
+
+/**
+ * Heuristic to extract find an integral variable as enumerator a fraction.
+ * Just changes the role to integral.
+ */
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'intvar_from_fraction',
+    integralFractionArg,
+    (node: SemanticNode) => {
+      if (node.type !== SemanticType.INTEGRAL) return false;
+      let [, integrand, intvar] = node.childNodes;
+      return intvar.type === SemanticType.EMPTY &&
+        integrand.type === SemanticType.FRACTION
+    }
+  ));
+
+/**
+ * If the integrand is a fraction and the integral variable is the enumerator it
+ * adjusts its role to integral an possibly rewrites it into a prefix operator.
+ * 
+ * @param node The integral node.
+ */
+function integralFractionArg(node: SemanticNode): void {
+  const integrand = node.childNodes[1];
+  const enumerator = integrand.childNodes[0];
+  if (SemanticPred.isIntegralDxBoundarySingle(enumerator)) {
+    enumerator.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (!SemanticPred.isImplicit(enumerator)) return;
+  const length = enumerator.childNodes.length;
+  const first = enumerator.childNodes[length - 2];
+  const second = enumerator.childNodes[length - 1];
+  if (SemanticPred.isIntegralDxBoundarySingle(second)) {
+    second.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (SemanticPred.isIntegralDxBoundary(first, second)) {
+    const prefix = SemanticProcessor.getInstance()['prefixNode_'](
+      second, [first]);
+    prefix.role = SemanticRole.INTEGRAL;
+    if (length === 2) {
+      integrand.childNodes[0] = prefix;
+    } else {
+      enumerator.childNodes.pop();
+      enumerator.contentNodes.pop();
+      enumerator.childNodes[length - 2] = prefix;
+      prefix.parent = enumerator;
+    }
   }
 }

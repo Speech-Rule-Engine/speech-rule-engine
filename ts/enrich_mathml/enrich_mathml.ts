@@ -406,8 +406,36 @@ export function mergeChildren_(
       newChildren.shift();
       continue;
     }
+    let oldChild = oldChildren[oldCounter];
+    if (!oldChild) {
+      // Every new child is now either really new or a child of a different
+      // parent.
+      if (newChild.parentNode) {
+        // newChild has already a parent. So it is not really new, just the
+        // child of a different parent.  It can be skipped and since the
+        // parentNode is different than node we replace it.
+        node = parentNode_(newChild);
+        newChildren.shift();
+        continue;
+      }
+      const nextChild = newChildren[1] as Element;
+      if (nextChild && nextChild.parentNode) {
+        // newChild is indeed new but the next child has a parent, which must be
+        // different that the one of node. newChild should be inserted before
+        // the next, which can then be skipped. Since the parentNode is
+        // different than node we replace it.
+        node = parentNode_(nextChild);
+        node.insertBefore(newChild, nextChild);
+        newChildren.shift();
+        newChildren.shift();
+        continue;
+      }
+      node.insertBefore(newChild, null);
+      newChildren.shift();
+      continue;
+    }
     // newChild is indeed new and needs to be added.
-    insertNewChild_(node, oldChildren[oldCounter], newChild);
+    insertNewChild_(node, oldChild, newChild);
     newChildren.shift();
   }
 }
@@ -424,11 +452,6 @@ export function insertNewChild_(
   oldChild: Element,
   newChild: Element
 ) {
-  if (!oldChild && !newChild.parentNode) {
-    node.insertBefore(newChild, null);
-    return;
-  }
-  if (!oldChild) return;
   let parent = oldChild;
   let next = parentNode_(parent);
   while (
@@ -894,18 +917,4 @@ export function collapsePunctuated(
     childIds.push(child.id);
   }
   return childIds;
-}
-
-/**
- * Prints a list of nodes.
- *
- * @param title A string to print first.
- * @param nodes A list of nodes.
- */
-export function printNodeList__(title: string, nodes: NodeList) {
-  console.info(title);
-  DomUtil.toArray(nodes).forEach(function (x) {
-    console.info(x.toString());
-  });
-  console.info('<<<<<<<<<<<<<<<<<');
 }
