@@ -2225,7 +2225,7 @@ export default class SemanticProcessor {
       prefix
     );
     if (!split.div) {
-      // Check for unit here?
+      // Propagate unit over multiplications.
       if (SemanticPred.isUnitProduct(node)) {
         node.role = SemanticRole.UNIT;
       }
