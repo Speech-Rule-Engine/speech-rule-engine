@@ -624,6 +624,25 @@ export function isPureUnit(node: SemanticNode): boolean {
 }
 
 /**
+ * Checks if a given node represents a product of units.
+ *
+ * @param node The node.
+ *
+ * @return True if it is a multiplication/implicit node and all children are
+ *     pure units or only the first is a unit counter.
+ */
+export function isUnitProduct(node: SemanticNode): boolean {
+  const children = node.childNodes;
+  return node.type === SemanticType.INFIXOP &&
+    (node.role === SemanticRole.MULTIPLICATION ||
+      node.role === SemanticRole.IMPLICIT) &&
+    children.length &&
+    (isPureUnit(children[0]) ||
+     isUnitCounter(children[0])) &&
+    node.childNodes.slice(1).every(isPureUnit);
+}
+
+/**
  * Tests if a node is an implicit node or a unit node representing an implicit
  * node.
  *
