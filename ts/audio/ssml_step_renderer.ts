@@ -45,7 +45,8 @@ export class SsmlStepRenderer extends SsmlRenderer {
     const result = [];
     for (let i = 0; i < spans.length; i++) {
       const span = spans[i];
-      const id = span.attributes['extid'];
+      // const id = span.attributes['extid'];
+      const id = span.attributes['id'];
       if (id && !SsmlStepRenderer.MARKS[id]) {
         result.push('<mark name="' + id + '"/>');
         SsmlStepRenderer.MARKS[id] = true;

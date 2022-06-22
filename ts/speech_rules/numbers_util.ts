@@ -68,28 +68,20 @@ export function vulgarFraction(node: Element): string | Span[] {
     conversion.denominator
   ) {
     return [
-      new Span(LOCALE.NUMBERS.numberToWords(conversion.enumerator), {
-        extid: (node.childNodes[0].childNodes[0] as Element).getAttribute(
-          'extid'
-        ),
-        separator: ''
-      }),
-      new Span(LOCALE.NUMBERS.vulgarSep, { separator: '' }),
-      new Span(
+      Span.node(LOCALE.NUMBERS.numberToWords(conversion.enumerator),
+                node.childNodes[0].childNodes[0] as Element,
+                {separator: ''}),
+      Span.stringAttr(LOCALE.NUMBERS.vulgarSep, {separator: ''}),
+      Span.node(
         LOCALE.NUMBERS.numberToOrdinal(
           conversion.denominator,
           conversion.enumerator !== 1
         ),
-        {
-          extid: (node.childNodes[0].childNodes[1] as Element).getAttribute(
-            'extid'
-          )
-        }
-      )
+        node.childNodes[0].childNodes[1] as Element)
     ];
   }
   return [
-    new Span(conversion.content || '', { extid: node.getAttribute('extid') })
+    Span.node(conversion.content || '', node)
   ];
 }
 

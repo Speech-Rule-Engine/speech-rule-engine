@@ -379,10 +379,8 @@ export class SpeechRuleEngine {
           break;
         case ActionType.TEXT:
           {
-            // TODO (span): We need the span concept here as a parameter with
-            // xpath.
             const xpath = attributes['span'];
-            const attrs: { [key: string]: string } = {};
+            let attrs: { [key: string]: string } = {};
             if (xpath) {
               const nodes = evalXPath(xpath, node);
               // TODO: Those could be multiple nodes!
@@ -390,7 +388,7 @@ export class SpeechRuleEngine {
               //       attributes.
               // Generalise the following:
               if (nodes.length) {
-                attrs.extid = (nodes[0] as Element).getAttribute('extid');
+                attrs = Span.getAttributes(nodes[0] as Element);
               }
             }
             const str = context.constructString(node, content) as

@@ -80,7 +80,7 @@ export function markup(descrs: AuditoryDescription[]) {
 export function merge(strs: (Span | string)[]) {
   // TODO (TS): Ensure that these are all spans!
   const span = strs.map((s) => {
-    return typeof s === 'string' ? new Span(s, {}) : s;
+    return typeof s === 'string' ? Span.stringEmpty(s) : s;
   });
   const renderer = renderers.get(Engine.getInstance().markup);
   if (!renderer) {
