@@ -608,6 +608,9 @@ export class SpeechRuleEngine {
    * @param node The XML node.
    */
   private addExternalAttributes_(descr: AuditoryDescription, node: Element) {
+    if (descr.attributes['id'] === undefined) {
+      descr.attributes['id'] = node.getAttribute('id');
+    }
     if (node.hasAttributes()) {
       const attrs = node.attributes;
       for (let i = attrs.length - 1; i >= 0; i--) {

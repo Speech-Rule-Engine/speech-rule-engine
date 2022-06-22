@@ -18,6 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import Engine from '../common/engine';
 import { AuditoryDescription } from './auditory_description';
 import { Span } from './span';
 import { SsmlRenderer } from './ssml_renderer';
@@ -45,8 +46,9 @@ export class SsmlStepRenderer extends SsmlRenderer {
     const result = [];
     for (let i = 0; i < spans.length; i++) {
       const span = spans[i];
-      // const id = span.attributes['extid'];
-      const id = span.attributes['id'];
+      const id = Engine.getInstance().automark ?
+        span.attributes['id'] :
+        span.attributes['extid'];
       if (id && !SsmlStepRenderer.MARKS[id]) {
         result.push('<mark name="' + id + '"/>');
         SsmlStepRenderer.MARKS[id] = true;

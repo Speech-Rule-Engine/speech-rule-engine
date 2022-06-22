@@ -48,7 +48,7 @@ export class Span {
     return new Span(str, attr);
   }
 
-  static attributeList = ['extid'];
+  static attributeList = ['id', 'extid'];
 
   public static getAttributes(node: Element): { [key: string]: string } {
     let attrs: {[key: string]: string} = {};
