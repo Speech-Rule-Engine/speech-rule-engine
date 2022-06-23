@@ -80,6 +80,7 @@ export enum ActionType {
   PERSONALITY = 'PERSONALITY'
 }
 
+// TODO (ts) Rewrite that into maps.
 /**
  * Maps a string to a valid speech rule type.
  *
@@ -366,7 +367,27 @@ export class Action {
         newComps.push(comp);
       }
     }
+    Action.naiveSpan(newComps);
     return new Action(newComps);
+  }
+
+  private static naiveSpan(comps: Component[]) {
+    let first = false;
+    for (let i = 0, comp; comp = comps[i]; i++) {
+      if (first && (comp.type !== ActionType.TEXT || comp.content[0] !== '"')) continue;
+      if (!first && comp.type === ActionType.PERSONALITY)  continue;
+      if (!first) {
+        first = true;
+        continue;
+      }
+      if (comp.attributes?.span) continue;
+      let next = comps[i + 1];
+      if (!next || next.type !== ActionType.NODE) continue;
+      if (!comp.attributes) {
+        comp.attributes = {};
+      }
+      comp.attributes['span'] = next.content;
+    }
   }
 
   /**
