@@ -326,6 +326,19 @@
     ],
     [
       "Precondition",
+      "hyperfraction",
+      "default",
+      "self::fraction",
+      "CQFhyperFraction"
+    ],
+    [
+      "Alias",
+      "hyperfraction",
+      "self::fraction",
+      "contains(@grammar, \"hyperfraction\")"
+    ],
+    [
+      "Precondition",
       "fraction",
       "default",
       "self::fraction"

@@ -66,6 +66,7 @@ export function BrailleRules() {
       CSFoverFraction: NemethUtil.overFraction,
 
       CSFoverBevFraction: NemethUtil.overBevelledFraction,
+      CQFhyperFraction: NemethUtil.hyperFractionBoundary,
       // Radical function.
       CSFopenRadical: NemethUtil.openingRadical,
       CSFcloseRadical: NemethUtil.closingRadical,

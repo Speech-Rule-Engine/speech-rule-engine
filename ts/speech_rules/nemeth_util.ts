@@ -88,6 +88,12 @@ export function overBevelledFraction(node: Element): string {
   );
 }
 
+export function hyperFractionBoundary(node: Element): Element[] {
+  return LOCALE.MESSAGES.regexp.HYPER ===
+    MathspeakUtil.fractionNestingDepth(node).toString() ? [node] : [];
+}
+
+
 /**
  * Nested Braille radicals in Nemeth putting together the nesting counter with
  * the correct indicator string as postfix.

@@ -165,7 +165,8 @@
       "DIGIT_GROUP": ",",
       "JOINER_SUBSUPER": "",
       "JOINER_FRAC": "",
-      "SPACE": "⠀"
+      "SPACE": "⠀",
+      "HYPER": "3"
     },
     "unitTimes": ""
   }
