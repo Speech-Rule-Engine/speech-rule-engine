@@ -17,6 +17,24 @@
       "default",
       "self::*[@font=\"bold-fraktur\"]",
       "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Rule",
+      "ket",
+      "default",
+      "[t] \"begin ket\"; [n] children/*[1]; [t] \"end ket\"",
+      "self::fenced[@role=\"leftright\"]",
+      "content/*[1][@role=\"vbar\"]",
+      "content/*[2][@role!=\"vbar\"]"
+    ],
+    [
+      "Rule",
+      "bra",
+      "default",
+      "[t] \"begin bra\"; [n] children/*[1]; [t] \"end bra\"",
+      "self::fenced[@role=\"leftright\"]",
+      "content/*[1][@role!=\"vbar\"]",
+      "content/*[2][@role=\"vbar\"]"
     ]
   ]
 }

@@ -3040,7 +3040,10 @@ export default class SemanticProcessor {
     } else {
       newNode.role = SemanticRole.SEQUENCE;
     }
-    return newNode;
+    return SemanticHeuristics.run(
+      'braketNotation',
+      newNode
+    ) as SemanticNode;
   }
 
   /**

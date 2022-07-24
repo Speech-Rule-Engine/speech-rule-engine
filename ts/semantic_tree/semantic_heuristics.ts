@@ -465,3 +465,29 @@ function recurseJuxtaposition(
   acc.push(result);
   return recurseJuxtaposition(acc.concat(first), ops, elements);
 }
+
+
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic('braketNotation', braketNotation)
+);
+
+function braketNotation(root: SemanticNode) {
+  if (root.type === SemanticType.PUNCTUATED &&
+    root.role === SemanticRole.SEQUENCE &&
+    root.contentNodes.length === 2) {
+    let cont1 = root.contentNodes[0];
+    let cont2 = root.contentNodes[1];
+    if (cont1 === root.childNodes[0] &&
+      cont2 === root.childNodes[2] &&
+      (cont1.role === SemanticRole.VBAR &&
+        cont2.role !== SemanticRole.VBAR) ||
+      (cont2.role === SemanticRole.VBAR &&
+        cont1.role !== SemanticRole.VBAR)) {
+      root.type = SemanticType.FENCED
+      root.role = SemanticRole.LEFTRIGHT
+      root.childNodes.pop();
+      root.childNodes.shift();
+    }
+  }
+  return root;
+}
