@@ -35,6 +35,31 @@
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Rule",
+      "Unit-normal-test",
+      "default",
+      "[t] text() (grammar:annotation=\"unit\":translate)",
+      "self::text",
+      "@font=\"normal\""
+    ],
+    [
+      "Rule",
+      "limit-new",
+      "default",
+      "[n] children/*[1] (grammar:addArticle); [t] \"as\"; [n] children/*[2]/children/*[1]; [t] \"approaches\"; [n] children/*[2]/children/*[2]",
+      "self::limlower[@role=\"limit function\"]"
+    ],
+    [
+      "Rule",
+      "font-new",
+      "default",
+      "[n] self::* (grammar:ignoreFont=@font)",
+      "self::identifier[@font=\"normal\"]",
+      "@role=\"unknown\"",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))"
     ]
   ]
 }

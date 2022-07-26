@@ -48,7 +48,7 @@ export const flags: { [key: string]: boolean } = {
   combine_juxtaposition: true,
   convert_juxtaposition: true,
   multioperator: true,
-  braketNotation: false
+  braketNotation: true
 };
 
 /**

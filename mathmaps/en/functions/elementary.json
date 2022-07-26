@@ -149,7 +149,8 @@
        "default": "limit"
      },
      "clearspeak": {
-       "default": "lim"
+       "default": "lim",
+       "Functions_Titus": "limit"
      }
    },
    "key": "lim",
