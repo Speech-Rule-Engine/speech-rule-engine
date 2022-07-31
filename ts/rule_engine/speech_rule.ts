@@ -371,10 +371,27 @@ export class Action {
     return new Action(newComps);
   }
 
+  /**
+   * Adds a default span to text components if none is given. Current heuristic
+   * is as follows:
+   *
+   * A textual component gets the next node (if there is any) assigned as span.
+   * The exception is the first component, that gets the entire node assigned.
+   *
+   * IDEAS NOT YET IMPLEMENTED:
+   *
+   * * if text element is last (or only followed by personality) it gets the overall
+   *   element as a span.
+   * * if next element is multinode it gets the overall element as span?
+   *
+   *
+   * @param comps A list of components.
+   */
   private static naiveSpan(comps: Component[]) {
     let first = false;
     for (let i = 0, comp; comp = comps[i]; i++) {
-      if (first && (comp.type !== ActionType.TEXT || comp.content[0] !== '"')) continue;
+      if (first &&
+        (comp.type !== ActionType.TEXT || comp.content[0] !== '"')) continue;
       if (!first && comp.type === ActionType.PERSONALITY)  continue;
       if (!first) {
         first = true;
