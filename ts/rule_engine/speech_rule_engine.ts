@@ -379,17 +379,17 @@ export class SpeechRuleEngine {
           break;
         case ActionType.TEXT:
           {
-            const xpath = attributes['span'];
+            let xpath = attributes['span'];
             let attrs: { [key: string]: string } = {};
+            // Span Custom: Here we compute a customized node for then span.
             if (xpath) {
               const nodes = evalXPath(xpath, node);
               // TODO: Those could be multiple nodes!
               //       We need the right xpath expression and combine their
               //       attributes.
-              // Generalise the following:
-              if (nodes.length) {
-                attrs = Span.getAttributes(nodes[0] as Element);
-              }
+              //       Generalise the following via kind?
+              attrs = nodes.length ?
+                Span.getAttributes(nodes[0] as Element) : {kind: xpath};
             }
             const str = context.constructString(node, content) as
               | string
@@ -608,6 +608,7 @@ export class SpeechRuleEngine {
    * @param node The XML node.
    */
   private addExternalAttributes_(descr: AuditoryDescription, node: Element) {
+    // Span Default:  Here we add the default node id for later marking.
     if (descr.attributes['id'] === undefined) {
       descr.attributes['id'] = node.getAttribute('id');
     }

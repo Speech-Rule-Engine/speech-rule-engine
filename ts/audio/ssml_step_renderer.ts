@@ -24,6 +24,10 @@ import { Span } from './span';
 import { SsmlRenderer } from './ssml_renderer';
 
 export class SsmlStepRenderer extends SsmlRenderer {
+
+  public static MARK_ONCE = false;
+  public static MARK_KIND = true;
+
   private static CHARACTER_ATTR = 'character';
 
   /**
@@ -44,13 +48,19 @@ export class SsmlStepRenderer extends SsmlRenderer {
    */
   public merge(spans: Span[]): string {
     const result = [];
+    // Keeping the last mark is necessary to combine consecutive marks.
+    let lastMark = '';
     for (let i = 0; i < spans.length; i++) {
       const span = spans[i];
+      const kind = SsmlStepRenderer.MARK_KIND ? span.attributes['kind'] : '';
       const id = Engine.getInstance().automark ?
         span.attributes['id'] :
         span.attributes['extid'];
-      if (id && !SsmlStepRenderer.MARKS[id]) {
-        result.push('<mark name="' + id + '"/>');
+      if (id && id !== lastMark &&
+        !(SsmlStepRenderer.MARK_ONCE && SsmlStepRenderer.MARKS[id])) {
+        result.push(kind ?
+          `<mark name="${id}" kind="${kind}"/>` : `<mark name="${id}"/>`);
+        lastMark = id;
         SsmlStepRenderer.MARKS[id] = true;
       }
       if (span.speech.length === 1 && span.speech.match(/[a-zA-Z]/)) {

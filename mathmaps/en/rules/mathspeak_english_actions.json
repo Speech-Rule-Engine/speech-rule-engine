@@ -177,12 +177,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"squared\""
+      "[n] children/*[1]; [t] \"squared\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"cubed\""
+      "[n] children/*[1]; [t] \"cubed\" (span:children/*[2])"
     ],
     [
       "Action",

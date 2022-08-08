@@ -391,7 +391,8 @@ export class Action {
     let first = false;
     for (let i = 0, comp; comp = comps[i]; i++) {
       if (first &&
-        (comp.type !== ActionType.TEXT || comp.content[0] !== '"')) continue;
+        (comp.type !== ActionType.TEXT ||
+          (comp.content[0] !== '"' && !comp.content.match(/^CSF/)))) continue;
       if (!first && comp.type === ActionType.PERSONALITY)  continue;
       if (!first) {
         first = true;
@@ -399,12 +400,17 @@ export class Action {
       }
       if (comp.attributes?.span) continue;
       let next = comps[i + 1];
-      if (!next || next.type !== ActionType.NODE) continue;
-      if (!comp.attributes) {
-        comp.attributes = {};
-      }
-      comp.attributes['span'] = next.content;
+      if (next && next.type !== ActionType.NODE) continue;
+      Action.addNaiveSpan(comp, next ? next.content : 'LAST');
     }
+  }
+
+  // Span Naive: Here we add a custom span for the next node if it exists.
+  private static addNaiveSpan(comp: Component, span: string) {
+    if (!comp.attributes) {
+      comp.attributes = {};
+    }
+    comp.attributes['span'] = span;
   }
 
   /**
