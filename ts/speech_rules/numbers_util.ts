@@ -60,7 +60,7 @@ export function wordCounter(_node: Element, context: string): () => string {
  * @returns The string representation if it is a valid
  *     vulgar fraction.
  */
-export function vulgarFraction(node: Element): string | Span[] {
+export function vulgarFraction(node: Element): Span[] {
   const conversion = convertVulgarFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
   if (
     conversion.convertible &&
