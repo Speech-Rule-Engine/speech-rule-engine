@@ -18,7 +18,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { Span } from '../audio/span';
+import { Span, SpanAttrs } from '../audio/span';
 import * as XpathUtil from '../common/xpath_util';
 import * as srf from './speech_rule_functions';
 
@@ -108,7 +108,36 @@ export class SpeechRuleContext {
    *     function or a string.
    * @returns The result of applying expression to node.
    */
-  public constructString(node: Node, expr: string): string | Span[] {
+  public constructString(node: Node, expr: string): string {
+    const result = this.constructString_(node, expr);
+    // TODO (span): We might need to join with the separator here.
+    return Array.isArray(result) ? result.map(x => x.speech).join('') : result;
+  }
+
+  /**
+   * Constructs a string from the node and the given expression.
+   *
+   * @param node The initial node.
+   * @param expr An Xpath expression string, a name of a custom
+   *     function or a string.
+   * @returns The result of applying expression to node.
+   */
+  public constructSpan(node: Node, expr: string, def: SpanAttrs): Span[] {
+    const result = this.constructString_(node, expr);
+    console.log(result);
+    return Array.isArray(result) ? result :
+      [Span.node(result, node as Element, def)];
+  }
+
+  /**
+   * Constructs a string from the node and the given expression.
+   *
+   * @param node The initial node.
+   * @param expr An Xpath expression string, a name of a custom
+   *     function or a string.
+   * @returns The result of applying expression to node.
+   */
+  private constructString_(node: Node, expr: string): string | Span[] {
     if (!expr) {
       return '';
     }

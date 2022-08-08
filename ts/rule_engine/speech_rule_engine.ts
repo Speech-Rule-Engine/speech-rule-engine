@@ -218,9 +218,8 @@ export class SpeechRuleEngine {
       const value = grammar[key];
       assignment[key] =
         typeof value === 'string'
-          ? // TODO (TS): This could be a span!
-            (context.constructString(node, value) as string)
-          : value;
+        ? context.constructString(node, value)
+        : value;
     }
     Grammar.getInstance().pushState(assignment);
   }
@@ -366,13 +365,9 @@ export class SpeechRuleEngine {
                 context,
                 selects,
                 attributes['sepFunc'],
-                // TODO (span): Sort out those types better.
-                context.constructString(
-                  node,
-                  attributes['separator']
-                ) as string,
+                context.constructString(node, attributes['separator']),
                 attributes['ctxtFunc'],
-                context.constructString(node, attributes['context']) as string
+                context.constructString(node, attributes['context'])
               );
             }
           }
@@ -391,26 +386,13 @@ export class SpeechRuleEngine {
               attrs = nodes.length ?
                 Span.getAttributes(nodes[0] as Element) : {kind: xpath};
             }
-            const str = context.constructString(node, content) as
-              | string
-              | Span[];
-            if (str || str === '') {
-              if (Array.isArray(str)) {
-                descrs = str.map(function (span) {
-                  return AuditoryDescription.create(
+            const str = context.constructSpan(node, content, attrs);
+            descrs = str.map(function (span: Span) {
+              return AuditoryDescription.create(
                     { text: span.speech, attributes: span.attributes },
                     { adjust: true }
-                  );
-                });
-              } else {
-                descrs = [
-                  AuditoryDescription.create(
-                    { text: str, attributes: attrs },
-                    { adjust: true }
-                  )
-                ];
-              }
-            }
+              );
+            });
           }
           break;
         case ActionType.PERSONALITY:

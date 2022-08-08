@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-type SpanAttrs = { [key: string]: string };
+export type SpanAttrs = { [key: string]: string };
 export class Span {
 
   /**
@@ -43,14 +43,16 @@ export class Span {
     return new Span(str, attr);
   }
 
-  public static node(str: string, node: Element, attr: SpanAttrs = {}) {
-    Object.assign(attr, Span.getAttributes(node));
+  // Note: def will overwrite attributes harvested from the node.
+  public static node(str: string, node: Element, def: SpanAttrs = {}) {
+    let attr = Span.getAttributes(node);
+    Object.assign(attr, def);
     return new Span(str, attr);
   }
 
   static attributeList = ['id', 'extid'];
 
-  public static getAttributes(node: Element): { [key: string]: string } {
+  public static getAttributes(node: Element): SpanAttrs {
     let attrs: {[key: string]: string} = {};
     for (let attr of Span.attributeList) {
       if (node.hasAttribute(attr)) {
