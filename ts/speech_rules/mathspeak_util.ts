@@ -18,6 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Span } from '../audio/span';
 import * as BaseUtil from '../common/base_util';
 import * as DomUtil from '../common/dom_util';
 import * as XpathUtil from '../common/xpath_util';
@@ -47,8 +48,10 @@ let nestingDepth: { [k1: string]: { [k2: string]: number } } = {};
  * @param node The node to be processed.
  * @returns The spaced out text.
  */
-export function spaceoutText(node: Element): string {
-  return Array.from(node.textContent).join(' ');
+export function spaceoutText(node: Element): Span[] {
+  // Possible alternative, which is spoken faster.
+  // return [Span.stringEmpty(Array.from(node.textContent).join(' '))];
+  return Array.from(node.textContent).map(Span.stringEmpty);
 }
 
 /**
@@ -307,12 +310,12 @@ export function nestedFraction(
  * @param node The fraction node.
  * @returns The opening string.
  */
-export function openingFractionVerbose(node: Element): string {
-  return nestedFraction(
+export function openingFractionVerbose(node: Element): Span[] {
+  return Span.singleton(nestedFraction(
     node,
     LOCALE.MESSAGES.MS.START,
     LOCALE.MESSAGES.MS.FRAC_V
-  );
+  ));
 }
 
 /**
@@ -321,12 +324,12 @@ export function openingFractionVerbose(node: Element): string {
  * @param node The fraction node.
  * @returns The closing string.
  */
-export function closingFractionVerbose(node: Element): string {
-  return nestedFraction(
+export function closingFractionVerbose(node: Element): Span[] {
+  return Span.singleton(nestedFraction(
     node,
     LOCALE.MESSAGES.MS.END,
     LOCALE.MESSAGES.MS.FRAC_V
-  );
+  ), {kind: 'LAST'});
 }
 
 /**
@@ -335,8 +338,9 @@ export function closingFractionVerbose(node: Element): string {
  * @param node The fraction node.
  * @returns The middle string.
  */
-export function overFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
+export function overFractionVerbose(node: Element): Span[] {
+  return Span.singleton(nestedFraction(
+    node, LOCALE.MESSAGES.MS.FRAC_OVER), {});
 }
 
 /**
@@ -345,12 +349,12 @@ export function overFractionVerbose(node: Element): string {
  * @param node The fraction node.
  * @returns The opening string.
  */
-export function openingFractionBrief(node: Element): string {
-  return nestedFraction(
+export function openingFractionBrief(node: Element): Span[] {
+  return Span.singleton(nestedFraction(
     node,
     LOCALE.MESSAGES.MS.START,
     LOCALE.MESSAGES.MS.FRAC_B
-  );
+  ));
 }
 
 /**
@@ -359,12 +363,12 @@ export function openingFractionBrief(node: Element): string {
  * @param node The fraction node.
  * @returns The closing string.
  */
-export function closingFractionBrief(node: Element): string {
-  return nestedFraction(
+export function closingFractionBrief(node: Element): Span[] {
+  return Span.singleton(nestedFraction(
     node,
     LOCALE.MESSAGES.MS.END,
     LOCALE.MESSAGES.MS.FRAC_B
-  );
+  ), {kind: 'LAST'});
 }
 
 /**
@@ -373,16 +377,15 @@ export function closingFractionBrief(node: Element): string {
  * @param node The fraction node.
  * @returns The opening string.
  */
-export function openingFractionSbrief(node: Element): string {
+export function openingFractionSbrief(node: Element): Span[] {
   const depth = fractionNestingDepth(node);
-  if (depth === 1) {
-    return LOCALE.MESSAGES.MS.FRAC_S;
-  }
-  return LOCALE.FUNCTIONS.combineNestedFraction(
-    LOCALE.MESSAGES.MS.NEST_FRAC,
-    LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-    LOCALE.MESSAGES.MS.FRAC_S
-  );
+  return Span.singleton((depth === 1) ?
+    LOCALE.MESSAGES.MS.FRAC_S :
+    LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.FRAC_S
+    ));
 }
 
 /**
@@ -391,16 +394,15 @@ export function openingFractionSbrief(node: Element): string {
  * @param node The fraction node.
  * @returns The closing string.
  */
-export function closingFractionSbrief(node: Element): string {
+export function closingFractionSbrief(node: Element): Span[] {
   const depth = fractionNestingDepth(node);
-  if (depth === 1) {
-    return LOCALE.MESSAGES.MS.ENDFRAC;
-  }
-  return LOCALE.FUNCTIONS.combineNestedFraction(
-    LOCALE.MESSAGES.MS.NEST_FRAC,
-    LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-    LOCALE.MESSAGES.MS.ENDFRAC
-  );
+  return Span.singleton((depth === 1) ?
+    LOCALE.MESSAGES.MS.ENDFRAC :
+    LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.ENDFRAC
+    ), {kind: 'LAST'});
 }
 
 /**
@@ -409,16 +411,15 @@ export function closingFractionSbrief(node: Element): string {
  * @param node The fraction node.
  * @returns The middle string.
  */
-export function overFractionSbrief(node: Element): string {
+export function overFractionSbrief(node: Element): Span[] {
   const depth = fractionNestingDepth(node);
-  if (depth === 1) {
-    return LOCALE.MESSAGES.MS.FRAC_OVER;
-  }
-  return LOCALE.FUNCTIONS.combineNestedFraction(
-    LOCALE.MESSAGES.MS.NEST_FRAC,
-    LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-    LOCALE.MESSAGES.MS.FRAC_OVER
-  );
+  return Span.singleton((depth === 1) ?
+    LOCALE.MESSAGES.MS.FRAC_OVER :
+    LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.FRAC_OVER
+    ));
 }
 
 /**

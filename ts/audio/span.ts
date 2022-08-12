@@ -43,6 +43,18 @@ export class Span {
     return new Span(str, attr);
   }
 
+  /**
+   * Creates a span singleton for a string.
+   * @param {string} str The string for the span.
+   * @param def Optional attributes.
+   * @return The span singleton.
+   */
+  public static singleton(str: string, def: SpanAttrs = {}): Span[] {
+    return [Span.stringAttr(str, def)];
+  }
+
+
+
   // Note: def will overwrite attributes harvested from the node.
   public static node(str: string, node: Element, def: SpanAttrs = {}) {
     let attr = Span.getAttributes(node);

@@ -124,7 +124,6 @@ export class SpeechRuleContext {
    */
   public constructSpan(node: Node, expr: string, def: SpanAttrs): Span[] {
     const result = this.constructString_(node, expr);
-    console.log(result);
     return Array.isArray(result) ? result :
       [Span.node(result, node as Element, def)];
   }

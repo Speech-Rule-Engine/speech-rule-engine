@@ -25,7 +25,10 @@ import { SsmlRenderer } from './ssml_renderer';
 
 export class SsmlStepRenderer extends SsmlRenderer {
 
+  // Marks have to be unique. That is we cannot mark/highlight a node twice.
   public static MARK_ONCE = false;
+
+  // Output of kind in the mark tag.
   public static MARK_KIND = true;
 
   private static CHARACTER_ATTR = 'character';
@@ -56,6 +59,9 @@ export class SsmlStepRenderer extends SsmlRenderer {
       const id = Engine.getInstance().automark ?
         span.attributes['id'] :
         span.attributes['extid'];
+      // TODO:
+      //   * combine say as character
+      //   * mark again with kind?
       if (id && id !== lastMark &&
         !(SsmlStepRenderer.MARK_ONCE && SsmlStepRenderer.MARKS[id])) {
         result.push(kind ?
