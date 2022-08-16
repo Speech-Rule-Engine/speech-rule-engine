@@ -98,7 +98,7 @@ export class CustomQueries extends FunctionsStore<CustomQuery> {
   }
 }
 
-export type CustomString = (p1: Node) => string | Span[];
+export type CustomString = (p1: Node) => Span[];
 
 export class CustomStrings extends FunctionsStore<CustomString> {
   /**

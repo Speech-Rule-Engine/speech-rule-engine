@@ -92,7 +92,8 @@ export function vulgarFraction(node: Element): Span[] {
  * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
-export function ordinalPosition(node: Node): string {
+export function ordinalPosition(node: Node): Span[] {
   const children = DomUtil.toArray(node.parentNode.childNodes);
-  return LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString();
+  return Span.singleton(
+    LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString());
 }

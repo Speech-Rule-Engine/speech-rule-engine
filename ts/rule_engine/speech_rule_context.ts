@@ -124,8 +124,14 @@ export class SpeechRuleContext {
    */
   public constructSpan(node: Node, expr: string, def: SpanAttrs): Span[] {
     const result = this.constructString_(node, expr);
-    return Array.isArray(result) ? result :
-      [Span.node(result, node as Element, def)];
+    // Add default to the last of the array;
+    if (Array.isArray(result)) {
+      let last = result[result.length - 1];
+      last.attributes = Object.assign({}, def, last.attributes);
+      return result;
+    } else {
+      return [Span.node(result, node as Element, def)];
+    }
   }
 
   /**

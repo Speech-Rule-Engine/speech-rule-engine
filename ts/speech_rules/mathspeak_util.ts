@@ -487,11 +487,12 @@ export function nestedSubSuper(
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function subscriptVerbose(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUBSCRIPT, {
-    sup: LOCALE.MESSAGES.MS.SUPER,
-    sub: LOCALE.MESSAGES.MS.SUB
-  });
+export function subscriptVerbose(node: Element): Span[] {
+  return Span.singleton(
+    nestedSubSuper(node, LOCALE.MESSAGES.MS.SUBSCRIPT, {
+      sup: LOCALE.MESSAGES.MS.SUPER,
+      sub: LOCALE.MESSAGES.MS.SUB
+    }));
 }
 
 /**
@@ -500,11 +501,12 @@ export function subscriptVerbose(node: Element): string {
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function subscriptBrief(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUB, {
-    sup: LOCALE.MESSAGES.MS.SUP,
-    sub: LOCALE.MESSAGES.MS.SUB
-  });
+export function subscriptBrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedSubSuper(node, LOCALE.MESSAGES.MS.SUB, {
+      sup: LOCALE.MESSAGES.MS.SUP,
+      sub: LOCALE.MESSAGES.MS.SUB
+    }));
 }
 
 /**
@@ -513,11 +515,12 @@ export function subscriptBrief(node: Element): string {
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function superscriptVerbose(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUPERSCRIPT, {
-    sup: LOCALE.MESSAGES.MS.SUPER,
-    sub: LOCALE.MESSAGES.MS.SUB
-  });
+export function superscriptVerbose(node: Element): Span[] {
+  return Span.singleton(
+    nestedSubSuper(node, LOCALE.MESSAGES.MS.SUPERSCRIPT, {
+      sup: LOCALE.MESSAGES.MS.SUPER,
+      sub: LOCALE.MESSAGES.MS.SUB
+    }));
 }
 
 /**
@@ -526,11 +529,12 @@ export function superscriptVerbose(node: Element): string {
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function superscriptBrief(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUP, {
-    sup: LOCALE.MESSAGES.MS.SUP,
-    sub: LOCALE.MESSAGES.MS.SUB
-  });
+export function superscriptBrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedSubSuper(node, LOCALE.MESSAGES.MS.SUP, {
+      sup: LOCALE.MESSAGES.MS.SUP,
+      sub: LOCALE.MESSAGES.MS.SUB
+    }));
 }
 
 /**
@@ -539,23 +543,22 @@ export function superscriptBrief(node: Element): string {
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function baselineVerbose(node: Element): string {
+export function baselineVerbose(node: Element): Span[] {
   const baseline = nestedSubSuper(node, '', {
     sup: LOCALE.MESSAGES.MS.SUPER,
     sub: LOCALE.MESSAGES.MS.SUB
   });
-  if (!baseline) {
-    return LOCALE.MESSAGES.MS.BASELINE;
-  }
-  return baseline
-    .replace(
-      new RegExp(LOCALE.MESSAGES.MS.SUB + '$'),
-      LOCALE.MESSAGES.MS.SUBSCRIPT
-    )
-    .replace(
-      new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'),
-      LOCALE.MESSAGES.MS.SUPERSCRIPT
-    );
+  return Span.singleton((!baseline) ?
+    LOCALE.MESSAGES.MS.BASELINE :
+    baseline
+      .replace(
+        new RegExp(LOCALE.MESSAGES.MS.SUB + '$'),
+        LOCALE.MESSAGES.MS.SUBSCRIPT
+      )
+      .replace(
+        new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'),
+        LOCALE.MESSAGES.MS.SUPERSCRIPT
+      ));
 }
 
 /**
@@ -564,12 +567,12 @@ export function baselineVerbose(node: Element): string {
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function baselineBrief(node: Element): string {
+export function baselineBrief(node: Element): Span[] {
   const baseline = nestedSubSuper(node, '', {
     sup: LOCALE.MESSAGES.MS.SUP,
     sub: LOCALE.MESSAGES.MS.SUB
   });
-  return baseline || LOCALE.MESSAGES.MS.BASE;
+  return Span.singleton(baseline || LOCALE.MESSAGES.MS.BASE);
 }
 
 // TODO (sorge) Refactor the following to functions wrt. style attribute.
@@ -606,14 +609,13 @@ export function nestedRadical(
   const depth = radicalNestingDepth(node);
   const index = getRootIndex(node);
   postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(postfix, index) : postfix;
-  if (depth === 1) {
-    return postfix;
-  }
-  return LOCALE.FUNCTIONS.combineNestedRadical(
-    prefix,
-    LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-    postfix
-  );
+  return depth === 1 ?
+    postfix :
+    LOCALE.FUNCTIONS.combineNestedRadical(
+      prefix,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      postfix
+    );
 }
 
 /**
@@ -636,12 +638,13 @@ export function getRootIndex(node: Element): string {
  * @param node The radical node.
  * @returns The opening string.
  */
-export function openingRadicalVerbose(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NESTED,
-    LOCALE.MESSAGES.MS.STARTROOT
-  );
+export function openingRadicalVerbose(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NESTED,
+      LOCALE.MESSAGES.MS.STARTROOT
+    ));
 }
 
 /**
@@ -650,12 +653,13 @@ export function openingRadicalVerbose(node: Element): string {
  * @param node The radical node.
  * @returns The closing string.
  */
-export function closingRadicalVerbose(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NESTED,
-    LOCALE.MESSAGES.MS.ENDROOT
-  );
+export function closingRadicalVerbose(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NESTED,
+      LOCALE.MESSAGES.MS.ENDROOT
+    ));
 }
 
 /**
@@ -664,12 +668,13 @@ export function closingRadicalVerbose(node: Element): string {
  * @param node The radical node.
  * @returns The middle string.
  */
-export function indexRadicalVerbose(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NESTED,
-    LOCALE.MESSAGES.MS.ROOTINDEX
-  );
+export function indexRadicalVerbose(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NESTED,
+      LOCALE.MESSAGES.MS.ROOTINDEX
+    ));
 }
 
 /**
@@ -678,12 +683,13 @@ export function indexRadicalVerbose(node: Element): string {
  * @param node The radical node.
  * @returns The opening string.
  */
-export function openingRadicalBrief(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NEST_ROOT,
-    LOCALE.MESSAGES.MS.STARTROOT
-  );
+export function openingRadicalBrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.STARTROOT
+    ));
 }
 
 /**
@@ -692,12 +698,13 @@ export function openingRadicalBrief(node: Element): string {
  * @param node The radical node.
  * @returns The closing string.
  */
-export function closingRadicalBrief(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NEST_ROOT,
-    LOCALE.MESSAGES.MS.ENDROOT
-  );
+export function closingRadicalBrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.ENDROOT
+    ));
 }
 
 /**
@@ -706,12 +713,13 @@ export function closingRadicalBrief(node: Element): string {
  * @param node The radical node.
  * @returns The middle string.
  */
-export function indexRadicalBrief(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NEST_ROOT,
-    LOCALE.MESSAGES.MS.ROOTINDEX
-  );
+export function indexRadicalBrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.ROOTINDEX
+    ));
 }
 
 /**
@@ -720,12 +728,13 @@ export function indexRadicalBrief(node: Element): string {
  * @param node The radical node.
  * @returns The opening string.
  */
-export function openingRadicalSbrief(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NEST_ROOT,
-    LOCALE.MESSAGES.MS.ROOT
-  );
+export function openingRadicalSbrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.ROOT
+    ));
 }
 
 /**
@@ -734,12 +743,13 @@ export function openingRadicalSbrief(node: Element): string {
  * @param node The radical node.
  * @returns The middle string.
  */
-export function indexRadicalSbrief(node: Element): string {
-  return nestedRadical(
-    node,
-    LOCALE.MESSAGES.MS.NEST_ROOT,
-    LOCALE.MESSAGES.MS.INDEX
-  );
+export function indexRadicalSbrief(node: Element): Span[] {
+  return Span.singleton(
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.INDEX
+    ));
 }
 
 /**
@@ -772,11 +782,11 @@ export function underscoreNestingDepth(node: Element): number {
  * @param node The underscore node.
  * @returns The correct prefix string.
  */
-export function nestedUnderscript(node: Element): string {
+export function nestedUnderscript(node: Element): Span[] {
   const depth = underscoreNestingDepth(node);
-  return (
+  return Span.singleton((
     Array(depth).join(LOCALE.MESSAGES.MS.UNDER) + LOCALE.MESSAGES.MS.UNDERSCRIPT
-  );
+  ));
 }
 
 /**
@@ -808,7 +818,7 @@ export function overscoreNestingDepth(node: Element): number {
  * @returns The endscripts message for the current locale.
  */
 export function endscripts(_node: Element) {
-  return LOCALE.MESSAGES.MS.ENDSCRIPTS;
+  return Span.singleton(LOCALE.MESSAGES.MS.ENDSCRIPTS);
 }
 
 /**
@@ -817,11 +827,11 @@ export function endscripts(_node: Element) {
  * @param node The overscore node.
  * @returns The correct prefix string.
  */
-export function nestedOverscript(node: Element): string {
+export function nestedOverscript(node: Element): Span[] {
   const depth = overscoreNestingDepth(node);
-  return (
+  return Span.singleton((
     Array(depth).join(LOCALE.MESSAGES.MS.OVER) + LOCALE.MESSAGES.MS.OVERSCRIPT
-  );
+  ));
 }
 
 /**
@@ -898,16 +908,17 @@ export function generateBaselineConstraint(): string[] {
  * @param node The label to be processed.
  * @returns The text of the label.
  */
-export function removeParens(node: Element): string {
+export function removeParens(node: Element): Span[] {
   if (
     !node.childNodes.length ||
     !node.childNodes[0].childNodes.length ||
     !node.childNodes[0].childNodes[0].childNodes.length
   ) {
-    return '';
+    return Span.singleton('');
   }
   const content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
-  return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
+  return Span.singleton(
+    content.match(/^\(.+\)$/) ? content.slice(1, -1) : content);
 }
 
 // Generating rules for tensors.
