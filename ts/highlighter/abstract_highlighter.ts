@@ -36,11 +36,16 @@ export interface Highlight {
   position?: string;
 }
 
+let counter = 0;
+
 export abstract class AbstractHighlighter implements Highlighter {
+
+  public counter = counter++;
+
   /**
    * The Attribute for marking highlighted nodes.
    */
-  protected static ATTR = 'sre-highlight';
+  protected ATTR = 'sre-highlight-' + this.counter.toString();
 
   /**
    * The color picker.
@@ -100,6 +105,8 @@ export abstract class AbstractHighlighter implements Highlighter {
    */
   public unhighlight() {
     const nodes = this.currentHighlights.pop();
+    console.log('Unhighlighting nodes for ' + this.counter);
+    // console.log(nodes);
     if (!nodes) {
       return;
     }
@@ -176,7 +183,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @returns True if already highlighted.
    */
   public isHighlighted(node: HTMLElement): boolean {
-    return node.hasAttribute(AbstractHighlighter.ATTR);
+    return node.hasAttribute(this.ATTR);
   }
 
   /**
@@ -185,7 +192,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public setHighlighted(node: HTMLElement) {
-    node.setAttribute(AbstractHighlighter.ATTR, 'true');
+    node.setAttribute(this.ATTR, 'true');
   }
 
   /**
@@ -194,7 +201,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public unsetHighlighted(node: HTMLElement) {
-    node.removeAttribute(AbstractHighlighter.ATTR);
+    node.removeAttribute(this.ATTR);
   }
 
   /**
