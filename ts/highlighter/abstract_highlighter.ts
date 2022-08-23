@@ -105,8 +105,6 @@ export abstract class AbstractHighlighter implements Highlighter {
    */
   public unhighlight() {
     const nodes = this.currentHighlights.pop();
-    console.log('Unhighlighting nodes for ' + this.counter);
-    // console.log(nodes);
     if (!nodes) {
       return;
     }
