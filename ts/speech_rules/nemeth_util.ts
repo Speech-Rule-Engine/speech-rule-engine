@@ -88,6 +88,12 @@ export function overBevelledFraction(node: Element): string {
   );
 }
 
+export function hyperFractionBoundary(node: Element): Element[] {
+  return LOCALE.MESSAGES.regexp.HYPER ===
+    MathspeakUtil.fractionNestingDepth(node).toString() ? [node] : [];
+}
+
+
 /**
  * Nested Braille radicals in Nemeth putting together the nesting counter with
  * the correct indicator string as postfix.
@@ -321,14 +327,14 @@ export function relationIterator(
       (first &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.previousSibling)
-        ? [AuditoryDescription.create({ text: '⠀' + base }, {})]
+        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE + base }, {})]
         : [];
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.nextSibling)
-        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
         : [];
     const descrs = Engine.evaluateNode(content);
     first = false;
@@ -373,7 +379,7 @@ export function implicitIterator(
     const right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
       left && right && content.getAttribute('role') === SemanticRole.SPACE
-        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
         : []
     );
   };
