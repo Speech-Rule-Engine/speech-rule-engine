@@ -28,7 +28,7 @@ import * as DomUtil from '../common/dom_util';
 
 import { annotate } from './semantic_annotations';
 import { SemanticVisitor } from './semantic_annotator';
-import { SemanticRole, SemanticType } from './semantic_meaning';
+import { SemanticRole } from './semantic_meaning';
 import { SemanticMeaningCollator } from './semantic_default';
 import { SemanticMathml } from './semantic_mathml';
 import { SemanticNode } from './semantic_node';
@@ -217,20 +217,8 @@ export class SemanticTree {
  * Visitor to propagate unit expressions if possible.
  */
 const unitVisitor = new SemanticVisitor('general', 'unit', (node, _info) => {
-  if (
-    node.type === SemanticType.INFIXOP &&
-    (node.role === SemanticRole.MULTIPLICATION ||
-      node.role === SemanticRole.IMPLICIT)
-  ) {
-    const children = node.childNodes;
-    if (
-      children.length &&
-      (SemanticPred.isPureUnit(children[0]) ||
-        SemanticPred.isUnitCounter(children[0])) &&
-      node.childNodes.slice(1).every(SemanticPred.isPureUnit)
-    ) {
+  if (SemanticPred.isUnitProduct(node)) {
       node.role = SemanticRole.UNIT;
     }
-  }
   return false;
 });
