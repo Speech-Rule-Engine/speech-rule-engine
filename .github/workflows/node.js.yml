@@ -47,4 +47,4 @@ jobs:
           npm ci --ignore-scripts
           cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
       - name: Run tests for ${{ matrix.block }}
-        run: npm run actionTest js/json/${{ matrix.block }}
+        run: npm run actionTest js/actions/${{ matrix.block }}
