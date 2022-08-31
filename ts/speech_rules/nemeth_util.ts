@@ -19,6 +19,7 @@
  */
 
 import { AuditoryDescription } from '../audio/auditory_description';
+import { Span } from '../audio/span';
 import * as DomUtil from '../common/dom_util';
 import * as XpathUtil from '../common/xpath_util';
 import { Grammar } from '../rule_engine/grammar';
@@ -37,9 +38,9 @@ import * as MathspeakUtil from './mathspeak_util';
  * @param node The fraction node.
  * @returns The opening string.
  */
-export function openingFraction(node: Element): string {
+export function openingFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     LOCALE.MESSAGES.MS.FRACTION_START
   );
@@ -51,9 +52,9 @@ export function openingFraction(node: Element): string {
  * @param node The fraction node.
  * @returns The closing string.
  */
-export function closingFraction(node: Element): string {
+export function closingFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     LOCALE.MESSAGES.MS.FRACTION_END
   );
@@ -65,9 +66,9 @@ export function closingFraction(node: Element): string {
  * @param node The fraction node.
  * @returns The middle string.
  */
-export function overFraction(node: Element): string {
+export function overFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     LOCALE.MESSAGES.MS.FRACTION_OVER
   );
@@ -79,14 +80,20 @@ export function overFraction(node: Element): string {
  * @param node The fraction node.
  * @returns The middle string.
  */
-export function overBevelledFraction(node: Element): string {
+export function overBevelledFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     '⠸' +
     LOCALE.MESSAGES.MS.FRACTION_OVER
   );
 }
+
+export function hyperFractionBoundary(node: Element): Element[] {
+  return LOCALE.MESSAGES.regexp.HYPER ===
+    MathspeakUtil.fractionNestingDepth(node).toString() ? [node] : [];
+}
+
 
 /**
  * Nested Braille radicals in Nemeth putting together the nesting counter with
@@ -96,12 +103,10 @@ export function overBevelledFraction(node: Element): string {
  * @param postfix A postfix string.
  * @returns The opening string.
  */
-export function nestedRadical(node: Element, postfix: string): string {
+export function nestedRadical(node: Element, postfix: string): Span[] {
   const depth = radicalNestingDepth(node);
-  if (depth === 1) {
-    return postfix;
-  }
-  return new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix;
+  return Span.singleton(depth === 1 ? postfix :
+    new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix);
 }
 
 /**
@@ -128,7 +133,7 @@ export function radicalNestingDepth(node: Element, opt_depth?: number): number {
  * @param node The radical node.
  * @returns The opening string.
  */
-export function openingRadical(node: Element): string {
+export function openingRadical(node: Element): Span[] {
   return nestedRadical(node, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
@@ -138,7 +143,7 @@ export function openingRadical(node: Element): string {
  * @param node The radical node.
  * @returns The closing string.
  */
-export function closingRadical(node: Element): string {
+export function closingRadical(node: Element): Span[] {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
@@ -148,7 +153,7 @@ export function closingRadical(node: Element): string {
  * @param node The radical node.
  * @returns The middle string.
  */
-export function indexRadical(node: Element): string {
+export function indexRadical(node: Element): Span[] {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
@@ -321,14 +326,14 @@ export function relationIterator(
       (first &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.previousSibling)
-        ? [AuditoryDescription.create({ text: '⠀' + base }, {})]
+        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE + base }, {})]
         : [];
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.nextSibling)
-        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
         : [];
     const descrs = Engine.evaluateNode(content);
     first = false;
@@ -373,7 +378,7 @@ export function implicitIterator(
     const right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
       left && right && content.getAttribute('role') === SemanticRole.SPACE
-        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
         : []
     );
   };

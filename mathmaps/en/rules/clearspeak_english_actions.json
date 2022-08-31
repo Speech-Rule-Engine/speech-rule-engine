@@ -687,57 +687,57 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"the natural numbers\" (span:.)"
+      "[t] \"the natural numbers\""
     ],
     [
       "Action",
       "integers",
-      "[t] \"the integers\" (span:.)"
+      "[t] \"the integers\""
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"the rational numbers\" (span:.)"
+      "[t] \"the rational numbers\""
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"the real numbers\" (span:.)"
+      "[t] \"the real numbers\""
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"the complex numbers\" (span:.)"
+      "[t] \"the complex numbers\""
     ],
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"the natural numbers with zero\" (span:.)"
+      "[t] \"the natural numbers with zero\""
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"the positive integers\" (span:.)"
+      "[t] \"the positive integers\""
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"the negative integers\" (span:.)"
+      "[t] \"the negative integers\""
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"the positive rational numbers\" (span:.)"
+      "[t] \"the positive rational numbers\""
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"the negative rational numbers\" (span:.)"
+      "[t] \"the negative rational numbers\""
     ],
     [
       "Action",
       "fences-neutral",
-      "[p] (pause:short); [t] \"the absolute value of\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the absolute value of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -747,17 +747,17 @@
     [
       "Action",
       "fences-neutral-cardinality",
-      "[p] (pause:short); [t] \"the cardinality of\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the cardinality of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-determinant",
-      "[p] (pause:short); [t] \"the determinant of\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the determinant of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"the metric of\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the metric of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",

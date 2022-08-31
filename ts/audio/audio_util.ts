@@ -386,13 +386,13 @@ function appendMarkup_(
       // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
         const lastSpan = last['span'].pop();
-        span = new Span(
+        span = Span.stringAttr(
           lastSpan.speech + oldJoin + span.speech,
           lastSpan.attributes
         );
       }
       last['span'].push(span);
-      span = new Span('', {});
+      span = Span.empty();
       last[EngineConst.personalityProps.JOIN] = join;
     }
   }

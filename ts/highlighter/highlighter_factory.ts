@@ -58,6 +58,15 @@ export function highlighter(
   return highlighter;
 }
 
+export function update(
+  back: Color,
+  fore: Color,
+  highlighter: Highlighter
+) {
+  const colorPicker = new ColorPicker(back, fore);
+  highlighter.setColor(colorPicker);
+}
+
 /**
  * Adds highlighter specific events depending on the current Mathjax renderer.
  *

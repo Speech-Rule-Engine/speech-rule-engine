@@ -80,6 +80,7 @@ export enum ActionType {
   PERSONALITY = 'PERSONALITY'
 }
 
+// TODO (ts) Rewrite that into maps.
 /**
  * Maps a string to a valid speech rule type.
  *
@@ -366,7 +367,50 @@ export class Action {
         newComps.push(comp);
       }
     }
+    Action.naiveSpan(newComps);
     return new Action(newComps);
+  }
+
+  /**
+   * Adds a default span to text components if none is given. Current heuristic
+   * is as follows:
+   *
+   * A textual component gets the next node (if there is any) assigned as span.
+   * The exception is the first component, that gets the entire node assigned.
+   *
+   * IDEAS NOT YET IMPLEMENTED:
+   *
+   * * if text element is last (or only followed by personality) it gets the overall
+   *   element as a span.
+   * * if next element is multinode it gets the overall element as span?
+   *
+   *
+   * @param comps A list of components.
+   */
+  private static naiveSpan(comps: Component[]) {
+    let first = false;
+    for (let i = 0, comp; comp = comps[i]; i++) {
+      if (first &&
+        (comp.type !== ActionType.TEXT ||
+          (comp.content[0] !== '"' && !comp.content.match(/^CSF/)))) continue;
+      if (!first && comp.type === ActionType.PERSONALITY)  continue;
+      if (!first) {
+        first = true;
+        continue;
+      }
+      if (comp.attributes?.span) continue;
+      let next = comps[i + 1];
+      if (next && next.type !== ActionType.NODE) continue;
+      Action.addNaiveSpan(comp, next ? next.content : 'LAST');
+    }
+  }
+
+  // Span Naive: Here we add a custom span for the next node if it exists.
+  private static addNaiveSpan(comp: Component, span: string) {
+    if (!comp.attributes) {
+      comp.attributes = {};
+    }
+    comp.attributes['span'] = span;
   }
 
   /**

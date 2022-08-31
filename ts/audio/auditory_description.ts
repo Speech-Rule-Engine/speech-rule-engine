@@ -201,7 +201,7 @@ export class AuditoryDescription {
    *     of this object.
    */
   public descriptionSpan(): Span {
-    return new Span(this.descriptionString(), this.attributes);
+    return Span.stringAttr(this.descriptionString(), this.attributes);
   }
 
   /**

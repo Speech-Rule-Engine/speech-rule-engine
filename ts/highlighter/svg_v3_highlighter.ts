@@ -20,7 +20,7 @@
 
 import * as DomUtil from '../common/dom_util';
 import * as XpathUtil from '../common/xpath_util';
-import { AbstractHighlighter, Highlight } from './abstract_highlighter';
+import { Highlight } from './abstract_highlighter';
 import { ColorPicker } from './color_picker';
 import { SvgHighlighter } from './svg_highlighter';
 
@@ -72,7 +72,7 @@ export class SvgV3Highlighter extends SvgHighlighter {
       rect.setAttribute('transform', transform);
     }
     rect.setAttribute('fill', this.colorString().background);
-    node.setAttribute(AbstractHighlighter.ATTR, 'true');
+    node.setAttribute(this.ATTR, 'true');
     node.parentNode.insertBefore(rect, node);
     info = { node: node, foreground: node.getAttribute('fill') };
     if (node.nodeName === 'rect') {
