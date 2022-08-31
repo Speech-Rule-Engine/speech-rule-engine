@@ -55,7 +55,12 @@ export default class Engine {
   /**
    * Binary feature vector.
    */
-  public static BINARY_FEATURES: string[] = ['strict', 'structure', 'pprint'];
+  public static BINARY_FEATURES: string[] = [
+    'automark',
+    'strict',
+    'structure',
+    'pprint'
+  ];
 
   /**
    * String feature vector.
@@ -193,6 +198,11 @@ export default class Engine {
    * Current browser is MS Edge.
    */
   public isEdge = false;
+
+  /**
+   * Automatic marking of elements for spans.
+   */
+  public automark = false;
 
   /**
    * Percentage of default rate used by external TTS. This can be used to scale

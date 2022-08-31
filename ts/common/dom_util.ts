@@ -92,6 +92,21 @@ export function parseInput(input: string): Element {
   }
 }
 
+// let extIdCount = 0;
+// function addMarkers(node: Element) {
+//   if (Engine.getInstance().automark && tagName(node) !== 'STREE') {
+//     extIdCount = 0;
+//     addExtId(node);
+//   }
+//   return node;
+// }
+// function addExtId(node: Element) {
+//   if (node.nodeType === NodeType.ELEMENT_NODE) {
+//     node.setAttribute('extid', (extIdCount++).toString());
+//     toArray(node.childNodes).forEach(addExtId);
+//   }
+// }
+
 /**
  * Missing Node interface.
  */
@@ -229,7 +244,7 @@ export function formatXml(xml: string): string {
       ) {
         split.unshift();
       }
-      node = node.slice(0, position);
+      node = node.slice(0, position) + rest;
     } else {
       // Empty tag node
       indent = 0;

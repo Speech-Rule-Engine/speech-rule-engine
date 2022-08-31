@@ -30,7 +30,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [base, walker, semantic, en, ca, de, da, fr, es, it, hi, nb, nn, nemeth, sv]
+        block: [base, walker, semantic, en, en-ssml, ca, de, da, fr, es, it, hi, nb, nn, nemeth, sv]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
@@ -47,4 +47,4 @@ jobs:
           npm ci --ignore-scripts
           cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
       - name: Run tests for ${{ matrix.block }}
-        run: npm run actionTest js/json/${{ matrix.block }}
+        run: npm run actionTest js/actions/${{ matrix.block }}.test.js

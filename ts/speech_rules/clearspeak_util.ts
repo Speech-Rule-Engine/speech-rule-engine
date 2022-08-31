@@ -18,6 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Span } from '../audio/span';
 import * as DomUtil from '../common/dom_util';
 import Engine from '../common/engine';
 import * as XpathUtil from '../common/xpath_util';
@@ -429,14 +430,13 @@ register(
  * @param node The node to translate.
  * @returns The ordinal exponent as a word.
  */
-export function ordinalExponent(node: Element): string {
+export function ordinalExponent(node: Element): Span[] {
   const num = parseInt(node.textContent, 10);
-  if (isNaN(num)) {
-    return node.textContent;
-  }
-  return num > 10
-    ? LOCALE.NUMBERS.numericOrdinal(num)
-    : LOCALE.NUMBERS.wordOrdinal(num);
+  return [Span.stringEmpty(
+    isNaN(num) ? node.textContent :
+      (num > 10
+        ? LOCALE.NUMBERS.numericOrdinal(num)
+        : LOCALE.NUMBERS.wordOrdinal(num)))];
 }
 
 export let NESTING_DEPTH: string | null = null;
@@ -447,7 +447,7 @@ export let NESTING_DEPTH: string | null = null;
  * @param node The fenced node.
  * @returns The nesting depth as an ordinal number.
  */
-export function nestingDepth(node: Element): string | null {
+export function nestingDepth(node: Element): Span[] {
   let count = 0;
   const fence = (node as Element).textContent;
   const index = node.getAttribute('role') === 'open' ? 0 : 1;
@@ -462,7 +462,7 @@ export function nestingDepth(node: Element): string | null {
     parent = parent.parentNode as Element;
   }
   NESTING_DEPTH = count > 1 ? LOCALE.NUMBERS.wordOrdinal(count) : '';
-  return NESTING_DEPTH;
+  return [Span.stringEmpty(NESTING_DEPTH)];
 }
 
 /**
@@ -609,6 +609,9 @@ export function layoutFactor_(node: Element): boolean {
  * @param node The node to translate.
  * @returns The ordinal as a word.
  */
-export function wordOrdinal(node: Element): string {
-  return LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
+export function wordOrdinal(node: Element): Span[] {
+  return [
+    Span.stringEmpty(
+      LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10)))
+  ];
 }
