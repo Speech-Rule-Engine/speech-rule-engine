@@ -218,9 +218,8 @@ export class SpeechRuleEngine {
       const value = grammar[key];
       assignment[key] =
         typeof value === 'string'
-          ? // TODO (TS): This could be a span!
-            (context.constructString(node, value) as string)
-          : value;
+        ? context.constructString(node, value)
+        : value;
     }
     Grammar.getInstance().pushState(assignment);
   }
@@ -366,53 +365,34 @@ export class SpeechRuleEngine {
                 context,
                 selects,
                 attributes['sepFunc'],
-                // TODO (span): Sort out those types better.
-                context.constructString(
-                  node,
-                  attributes['separator']
-                ) as string,
+                context.constructString(node, attributes['separator']),
                 attributes['ctxtFunc'],
-                context.constructString(node, attributes['context']) as string
+                context.constructString(node, attributes['context'])
               );
             }
           }
           break;
         case ActionType.TEXT:
           {
-            // TODO (span): We need the span concept here as a parameter with
-            // xpath.
-            const xpath = attributes['span'];
-            const attrs: { [key: string]: string } = {};
+            let xpath = attributes['span'];
+            let attrs: { [key: string]: string } = {};
+            // Span Custom: Here we compute a customized node for then span.
             if (xpath) {
               const nodes = evalXPath(xpath, node);
               // TODO: Those could be multiple nodes!
               //       We need the right xpath expression and combine their
               //       attributes.
-              // Generalise the following:
-              if (nodes.length) {
-                attrs.extid = (nodes[0] as Element).getAttribute('extid');
-              }
+              //       Generalise the following via kind?
+              attrs = nodes.length ?
+                Span.getAttributes(nodes[0] as Element) : {kind: xpath};
             }
-            const str = context.constructString(node, content) as
-              | string
-              | Span[];
-            if (str || str === '') {
-              if (Array.isArray(str)) {
-                descrs = str.map(function (span) {
-                  return AuditoryDescription.create(
+            const str = context.constructSpan(node, content, attrs);
+            descrs = str.map(function (span: Span) {
+              return AuditoryDescription.create(
                     { text: span.speech, attributes: span.attributes },
                     { adjust: true }
-                  );
-                });
-              } else {
-                descrs = [
-                  AuditoryDescription.create(
-                    { text: str, attributes: attrs },
-                    { adjust: true }
-                  )
-                ];
-              }
-            }
+              );
+            });
           }
           break;
         case ActionType.PERSONALITY:
@@ -610,6 +590,10 @@ export class SpeechRuleEngine {
    * @param node The XML node.
    */
   private addExternalAttributes_(descr: AuditoryDescription, node: Element) {
+    // Span Default:  Here we add the default node id for later marking.
+    if (descr.attributes['id'] === undefined) {
+      descr.attributes['id'] = node.getAttribute('id');
+    }
     if (node.hasAttributes()) {
       const attrs = node.attributes;
       for (let i = attrs.length - 1; i >= 0; i--) {

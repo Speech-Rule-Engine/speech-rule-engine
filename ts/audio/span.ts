@@ -19,13 +19,59 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+export type SpanAttrs = { [key: string]: string };
 export class Span {
+
   /**
    * @param speech The textual content of the span.
    * @param attributes Annotations for the textual content.
    */
   constructor(
     public speech: string,
-    public attributes: { [key: string]: string }
-  ) {}
+    public attributes: SpanAttrs
+  ) { }
+
+  public static empty() {
+    return new Span('', {});
+  }
+
+  public static stringEmpty(str: string) {
+    return new Span(str, {});
+  }
+
+  public static stringAttr(str: string, attr: SpanAttrs) {
+    return new Span(str, attr);
+  }
+
+  /**
+   * Creates a span singleton for a string.
+   * @param {string} str The string for the span.
+   * @param def Optional attributes.
+   * @return The span singleton.
+   */
+  public static singleton(str: string, def: SpanAttrs = {}): Span[] {
+    return [Span.stringAttr(str, def)];
+  }
+
+
+
+  // Note: def will overwrite attributes harvested from the node.
+  public static node(str: string, node: Element, def: SpanAttrs = {}) {
+    let attr = Span.getAttributes(node);
+    Object.assign(attr, def);
+    return new Span(str, attr);
+  }
+
+  static attributeList = ['id', 'extid'];
+
+  public static getAttributes(node: Element): SpanAttrs {
+    let attrs: {[key: string]: string} = {};
+    for (let attr of Span.attributeList) {
+      if (node.hasAttribute(attr)) {
+        attrs[attr] = node.getAttribute(attr);
+      }
+    }
+    return attrs;
+  }
+
 }

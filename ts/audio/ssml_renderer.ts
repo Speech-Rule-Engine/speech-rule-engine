@@ -30,7 +30,8 @@ export class SsmlRenderer extends XmlRenderer {
   public finalize(str: string) {
     return (
       '<?xml version="1.0"?><speak version="1.1"' +
-      ' xmlns="http://www.w3.org/2001/10/synthesis">' +
+      ' xmlns="http://www.w3.org/2001/10/synthesis"' +
+        ` xml:lang="${Engine.getInstance().locale}">` +
       '<prosody rate="' +
       Engine.getInstance().getRate() +
       '%">' +

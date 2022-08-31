@@ -257,6 +257,11 @@ export class Cli {
         'none'
       )
       .option(
+        '-e, --automark',
+        'Automatically set marks for external reference.',
+        set('automark')
+      )
+      .option(
         '-r, --rate [value]',
         'Base rate [value] for tagged speech' + ' output.',
         set('rate'),

@@ -137,7 +137,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (!loc) {
       return [];
     }
-    const explorer = item['explorers']['speech'];
+    const explorer = item['explorers']['explorers']['speech'];
     const smart = ClearspeakPreferences.relevantPreferences(
       explorer.walker.getFocus().getSemanticPrimary()
     );

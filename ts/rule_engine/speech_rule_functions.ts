@@ -98,7 +98,7 @@ export class CustomQueries extends FunctionsStore<CustomQuery> {
   }
 }
 
-export type CustomString = (p1: Node) => string | Span[];
+export type CustomString = (p1: Node) => Span[];
 
 export class CustomStrings extends FunctionsStore<CustomString> {
   /**
@@ -110,6 +110,14 @@ export class CustomStrings extends FunctionsStore<CustomString> {
   }
 }
 
+
+/**
+ * Context functions return a string that is attached to the first description
+ * element computed by a rule.
+ *
+ * Seperator functions return auditory descriptions that are interspersed
+ * between the descriptions computed by a rule.
+ */
 export type ContextFunction = (
   p1: Node[] | Node,
   p2: string | null
