@@ -298,7 +298,7 @@ The following is a list of command line options for the speech rule engine.
 | -a | --audit | Generate auditory descriptions (JSON format). |
 | -j | --json  | Generate JSON of semantic tree. |
 | -x | --xml  | Generate XML of semantic tree. |
-| -P | --pprint  | When given output is pretty printed if possible. |
+| -P | --pprint  | When given, output is pretty printed if possible. |
 | | |
 | | |
 | | |
@@ -320,7 +320,8 @@ The following is a list of command line options for the speech rule engine.
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
 | -h | --help   | Enumerates all command line options. |
-|    | --opt    | Enumerates all available options for locale, modality, domain and style. |
+|    | --opt    | Enumerates available options for current locale and modality. Output as markdown with -P option.|
+|    | --opt    | List engine setup options for all available locales. Output as markdown with -P option. |
 | -V | --version  |  Outputs the version number |
 
 

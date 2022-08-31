@@ -335,10 +335,10 @@ export class Cli {
       )
       .option('-v, --verbose', 'Verbose mode.')
       .option('-l, --log [name]', 'Log file [name].')
-      .option('--opt', 'List engine setup options.')
+      .option('--opt', 'List engine setup options. Output as markdown with -P option.')
       .option(
         '--opt-all',
-        'List engine setup options for all available locales.'
+        'List engine setup options for all available locales. Output as markdown with -P option.'
       )
       .on('option:opt', () => {
         this.enumerate().then(() => System.exit(0));
