@@ -21,7 +21,6 @@ jobs:
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
-          npm ci --ignore-scripts
           cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
       - name: Run tests
         run: npm run actionTest js/actions/
