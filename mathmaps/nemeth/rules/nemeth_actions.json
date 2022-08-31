@@ -107,7 +107,7 @@
     [
       "Action",
       "prefix",
-      "[n] text(); [n] children/*[1]"
+      "[m] content/*; [n] children/*[1]"
     ],
     [
       "Action",
@@ -117,7 +117,7 @@
     [
       "Action",
       "postfix",
-      "[n] children/*[1]; [n] text()"
+      "[n] children/*[1]; [m] content/*"
     ],
     [
       "Action",
