@@ -247,6 +247,9 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public getFocus(update = false) {
+    if (this.rootId === null) {
+      this.getRebuilt();
+    }
     if (!this.focus_) {
       this.focus_ = this.singletonFocus(this.rootId);
     }
