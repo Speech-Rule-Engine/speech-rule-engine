@@ -114,10 +114,10 @@ export default class SemanticProcessor {
    *
    * @param table The node to be rewritten a multiline.
    */
-  public static tableToMultiline(table: SemanticNode) {
+  public static tableToMultiline(table: SemanticNode): SemanticNode {
     if (!SemanticPred.tableIsMultiline(table)) {
-      SemanticProcessor.classifyTable(table);
-      return;
+      return SemanticHeuristics.run(
+        'rewrite_subcases', table, SemanticProcessor.classifyTable) as SemanticNode;
     }
     table.type = SemanticType.MULTILINE;
     for (let i = 0, row; (row = table.childNodes[i]); i++) {
@@ -134,6 +134,7 @@ export default class SemanticProcessor {
     }
     SemanticProcessor.binomialForm_(table);
     SemanticProcessor.classifyMultiline(table);
+    return table;
   }
 
   /**
@@ -213,6 +214,7 @@ export default class SemanticProcessor {
         SemanticRole.ARROW
       ) ||
       SemanticProcessor.detectCaleyTable(table);
+    return table;
   }
 
   /**
@@ -2508,6 +2510,8 @@ export default class SemanticProcessor {
    */
   private getFencesInRow_(nodes: SemanticNode[]): SemanticNode[] {
     let partition = SemanticUtil.partitionNodes(nodes, SemanticPred.isFence);
+    // partition.comp.forEach(x => console.log(x.type));
+    partition.rel.forEach(x => console.log(x.role));
     partition = SemanticProcessor.purgeFences_(partition);
     const felem = partition.comp.shift();
     return SemanticProcessor.getInstance().fences_(

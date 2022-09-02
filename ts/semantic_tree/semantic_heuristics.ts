@@ -33,6 +33,9 @@ import { SemanticNode } from './semantic_node';
 import * as SemanticPred from './semantic_pred';
 import SemanticProcessor from './semantic_processor';
 import * as SemanticUtil from './semantic_util';
+import { SemanticSkeleton } from './semantic_skeleton';
+
+import * as DomUtil from '../common/dom_util';
 
 /**
  * Recursively combines implicit nodes as much as possible for the given root
@@ -541,4 +544,130 @@ function integralFractionArg(node: SemanticNode): void {
       prefix.parent = enumerator;
     }
   }
+}
+
+
+// Not sure how that will work yet...
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'rewrite_subcases',
+    rewriteSubcasesTable,
+    (table: SemanticNode) => {
+      let left = true;
+      let right = true;
+      let emph = [];
+      let topLeft = table.childNodes[0].childNodes[0];
+      if (!eligibleNode(topLeft.mathmlTree)) {
+        left = false;
+      } else {
+        for (let i = 1, row; (row = table.childNodes[i]); i++) {
+          if (row.childNodes[0].childNodes.length) {
+            left = false;
+            break;
+          }
+        }
+      }
+      if (left) {
+        emph.push('left');
+      }
+      let topRight = table.childNodes[0].childNodes[table.childNodes[0].childNodes.length - 1];
+      if (!eligibleNode(topRight.mathmlTree)) {
+        right = false;
+      } else {
+        let firstRow = table.childNodes[0].childNodes.length;
+        for (let i = 1, row; (row = table.childNodes[i]); i++) {
+          if (row.childNodes.length >= firstRow) {
+            right = false;
+            break;
+          }
+        }
+      }
+      if (right) {
+        emph.push('right');
+      }
+      if (left || right) {
+        table.annotation['Emph'] = emph;
+        return true;
+      }
+      return false;
+    }
+  )
+)
+
+function eligibleNode(node: Element) {
+  return DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
+    DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) === 'MPADDED' &&
+    DomUtil.tagName(node.childNodes[0].childNodes[1] as Element) === 'MPHANTOM'
+}
+
+const rewritable: SemanticType[] = [
+  SemanticType.PUNCTUATED,
+  SemanticType.RELSEQ,
+  SemanticType.MULTIREL,
+  SemanticType.INFIXOP,
+  SemanticType.PREFIXOP,
+  SemanticType.POSTFIXOP
+];
+
+function rewriteSubcasesTable(table: SemanticNode) {
+  console.log(3);
+  let [left, right] = table.annotation['Emph'];
+  delete table.annotation['Emph'];
+  let row: SemanticNode[] = [];
+  if (left === 'left') {
+    console.log(4);
+    let topLeft = table.childNodes[0].childNodes[0].childNodes[0];
+    row = row.concat(rewriteCell(topLeft, true));
+    for (let i = 0, line; (line = table.childNodes[i]); i++) {
+      line.childNodes.shift();
+    }
+  }
+  row.push(table);
+  if (left === 'right' || right === 'right') {
+    console.log(5);
+    let topRight = table.childNodes[0].childNodes[
+      table.childNodes[0].childNodes.length - 1   
+    ].childNodes[0];
+    row = row.concat(rewriteCell(topRight));
+    table.childNodes[0].childNodes.pop();
+  }
+  SemanticProcessor.tableToMultiline(table);
+  row.forEach(x => console.log(x.type));
+  return SemanticProcessor.getInstance().row(row);
+}
+
+function rewriteCell(cell: SemanticNode, left?: boolean) {
+  if (!cell.childNodes.length) {
+    rewriteFence(cell);
+    return [cell];
+  }
+  if (rewritable.indexOf(cell.type) !== -1) {
+    let children = cell.childNodes;
+    cell.childNodes.forEach(x => console.log(x.type));
+    cell.contentNodes.forEach(x => console.log(x.type));
+    rewriteFence(children[left ? 0 : children.length - 1]);
+    return SemanticSkeleton.combineContentChildren<SemanticNode>(
+      cell, cell.contentNodes, cell.childNodes);
+  }
+  return [cell];
+}
+
+const PUNCT_TO_FENCE_: { [key: string]: SemanticRole } = {
+    [SemanticRole.METRIC]: SemanticRole.METRIC,
+    [SemanticRole.VBAR]: SemanticRole.NEUTRAL,
+    [SemanticRole.OPENFENCE]: SemanticRole.OPEN,
+    [SemanticRole.CLOSEFENCE]: SemanticRole.CLOSE
+  };
+
+
+function rewriteFence(fence: SemanticNode) {
+  if (fence.type !== SemanticType.PUNCTUATION) {
+    return;
+  }
+  let role = PUNCT_TO_FENCE_[fence.role];
+  if (!role) {
+    return;
+  }
+  fence.role = role;
+  fence.type = SemanticType.FENCE;
 }

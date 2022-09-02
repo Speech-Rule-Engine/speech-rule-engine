@@ -281,8 +281,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       []
     );
     newNode.mathmlTree = node;
-    SemanticProcessor.tableToMultiline(newNode);
-    return newNode;
+    return SemanticProcessor.tableToMultiline(newNode);
   }
 
   /**
