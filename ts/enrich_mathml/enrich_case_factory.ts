@@ -22,6 +22,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 import { CaseBinomial } from './case_binomial';
 import { CaseDoubleScript } from './case_double_script';
 import { CaseEmbellished } from './case_embellished';
+import { CaseEmpheq } from './case_empheq';
 import { CaseLimit } from './case_limit';
 import { CaseLine } from './case_line';
 import { CaseMultiscripts } from './case_multiscripts';
@@ -64,6 +65,10 @@ factory.push(
     {
       test: CaseProof.test,
       constr: (node: SemanticNode) => new CaseProof(node)
+    },
+    {
+      test: CaseEmpheq.test,
+      constr: (node: SemanticNode) => new CaseEmpheq(node)
     },
     {
       test: CaseTable.test,

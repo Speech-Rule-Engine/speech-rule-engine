@@ -116,6 +116,8 @@ export default class SemanticProcessor {
    */
   public static tableToMultiline(table: SemanticNode): SemanticNode {
     if (!SemanticPred.tableIsMultiline(table)) {
+      console.log(13);
+      console.log(table.mathmlTree.toString());
       return SemanticHeuristics.run(
         'rewrite_subcases', table, SemanticProcessor.classifyTable) as SemanticNode;
     }
@@ -2510,8 +2512,6 @@ export default class SemanticProcessor {
    */
   private getFencesInRow_(nodes: SemanticNode[]): SemanticNode[] {
     let partition = SemanticUtil.partitionNodes(nodes, SemanticPred.isFence);
-    // partition.comp.forEach(x => console.log(x.type));
-    partition.rel.forEach(x => console.log(x.role));
     partition = SemanticProcessor.purgeFences_(partition);
     const felem = partition.comp.shift();
     return SemanticProcessor.getInstance().fences_(

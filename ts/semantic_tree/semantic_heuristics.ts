@@ -546,13 +546,14 @@ function integralFractionArg(node: SemanticNode): void {
   }
 }
 
-
-// Not sure how that will work yet...
 SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'rewrite_subcases',
     rewriteSubcasesTable,
     (table: SemanticNode) => {
+      // Here semantics would work best. But we do previews into top left and
+      // top right element. If they appear to be created by empheq and the rest
+      // column is empty we will rewrite.
       let left = true;
       let right = true;
       let emph = [];
@@ -610,12 +611,9 @@ const rewritable: SemanticType[] = [
 ];
 
 function rewriteSubcasesTable(table: SemanticNode) {
-  console.log(3);
   let [left, right] = table.annotation['Emph'];
-  delete table.annotation['Emph'];
   let row: SemanticNode[] = [];
   if (left === 'left') {
-    console.log(4);
     let topLeft = table.childNodes[0].childNodes[0].childNodes[0];
     row = row.concat(rewriteCell(topLeft, true));
     for (let i = 0, line; (line = table.childNodes[i]); i++) {
@@ -624,7 +622,6 @@ function rewriteSubcasesTable(table: SemanticNode) {
   }
   row.push(table);
   if (left === 'right' || right === 'right') {
-    console.log(5);
     let topRight = table.childNodes[0].childNodes[
       table.childNodes[0].childNodes.length - 1   
     ].childNodes[0];
@@ -632,8 +629,14 @@ function rewriteSubcasesTable(table: SemanticNode) {
     table.childNodes[0].childNodes.pop();
   }
   SemanticProcessor.tableToMultiline(table);
-  row.forEach(x => console.log(x.type));
-  return SemanticProcessor.getInstance().row(row);
+  let newNode = SemanticProcessor.getInstance().row(row);
+  let annotation = table.annotation['Emph'];
+  table.annotation['Emph'] = ['table'];
+  newNode.annotation['Emph'] = annotation;
+  console.log(newNode.toString());
+  console.log(14);
+  console.log(newNode.mathmlTree);
+  return newNode;
 }
 
 function rewriteCell(cell: SemanticNode, left?: boolean) {
@@ -643,8 +646,6 @@ function rewriteCell(cell: SemanticNode, left?: boolean) {
   }
   if (rewritable.indexOf(cell.type) !== -1) {
     let children = cell.childNodes;
-    cell.childNodes.forEach(x => console.log(x.type));
-    cell.contentNodes.forEach(x => console.log(x.type));
     rewriteFence(children[left ? 0 : children.length - 1]);
     return SemanticSkeleton.combineContentChildren<SemanticNode>(
       cell, cell.contentNodes, cell.childNodes);
@@ -670,4 +671,5 @@ function rewriteFence(fence: SemanticNode) {
   }
   fence.role = role;
   fence.type = SemanticType.FENCE;
+  fence.annotation['Emph'] = ['fence'];
 }
