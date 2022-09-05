@@ -75,7 +75,7 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add lib/sre.js mathmaps/*
+          git add lib/sre.js lib/mathmaps/*
           git commit -m 'Deployment at $TIME' -a
       - name: Push changes
         uses: ad-m/github-push-action@master
