@@ -68,7 +68,7 @@ jobs:
       - name: Commit Deploy
         env:
           TIME: "${{ steps.time.outpus.time }}"
-          run: |
-            npm add lib/sre.js mathmaps/*
-            npm commit -m 'Deployment at $TIME' -a
-            npm push
+        run: |
+          npm add lib/sre.js mathmaps/*
+          npm commit -m 'Deployment at $TIME' -a
+          npm push
