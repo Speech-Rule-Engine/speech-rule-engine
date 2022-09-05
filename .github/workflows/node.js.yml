@@ -54,7 +54,9 @@ jobs:
     runs-on: ubuntu-latest
     name: deploy dev version
     steps:
-      - uses: actions/checkout@deploy
+      - uses: actions/checkout@v3
+        with:
+          ref: deploy
       - name: Downloading the build
         uses: actions/download-artifact@v2
         with:
