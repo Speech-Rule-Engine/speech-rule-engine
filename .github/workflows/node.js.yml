@@ -71,7 +71,7 @@ jobs:
           format: 'YYYY-MM-DD-HH-mm-ss'
       - name: Commit Deploy
         env:
-          TIME: "${{ steps.time.outpus.time }}"
+          TIME: "${{ steps.time.outputs.time }}"
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -81,4 +81,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: deploy
+
