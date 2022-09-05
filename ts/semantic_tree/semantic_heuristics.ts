@@ -596,7 +596,9 @@ SemanticHeuristics.add(
 )
 
 function eligibleNode(node: Element) {
-  return DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
+  return node.childNodes[0] && node.childNodes[0].childNodes[0] &&
+    node.childNodes[0].childNodes[1] &&
+    DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
     DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) === 'MPADDED' &&
     DomUtil.tagName(node.childNodes[0].childNodes[1] as Element) === 'MPHANTOM'
 }
@@ -616,7 +618,7 @@ function rewriteSubcasesTable(table: SemanticNode) {
   if (left === 'left') {
     let topLeft = table.childNodes[0].childNodes[0].childNodes[0];
     row = row.concat(rewriteCell(topLeft, true));
-    for (let i = 0, line; (line = table.childNodes[i]); i++) {
+    for (let i = 0, line: SemanticNode; (line = table.childNodes[i]); i++) {
       line.childNodes.shift();
     }
   }
@@ -633,9 +635,6 @@ function rewriteSubcasesTable(table: SemanticNode) {
   let annotation = table.annotation['Emph'];
   table.annotation['Emph'] = ['table'];
   newNode.annotation['Emph'] = annotation;
-  console.log(newNode.toString());
-  console.log(14);
-  console.log(newNode.mathmlTree);
   return newNode;
 }
 
