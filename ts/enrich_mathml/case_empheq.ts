@@ -61,10 +61,8 @@ export class CaseEmpheq extends AbstractEnrichCase {
     // Basic idea:
     // Recurse until we find the table.
     // Every node that has a mathmlTree should be inserted directly.
-    // For every node that does not have on a new mrow is inserted.
+    // For every node that does not have one a new mrow is inserted.
     // Only insert new mrows without children.
-    console.log('Doing it here!');
-    console.log(this.semantic.toString());
     this.recurseToTable(this.semantic);
     // if (!this.semantic.childNodes.length) {
     //   return this.mml;
@@ -116,20 +114,21 @@ export class CaseEmpheq extends AbstractEnrichCase {
       setAttributes(node.mathmlTree, node);
     }
     node.childNodes.forEach(this.recurseToTable.bind(this));
+    if (node.textContent) {
+      const newContent = node.contentNodes.map(EnrichMathml.cloneContentNode);
+      EnrichMathml.setOperatorAttribute_(node, newContent);
+    }
     node.contentNodes.forEach(this.recurseToTable.bind(this));
   }
 
   private finalizeTable(node: SemanticNode) {
     setAttributes(node.mathmlTree, node);
-    delete node.annotation['Emph'];
     node.contentNodes.forEach((x) => {
       setAttributes(x.mathmlTree, x);
-      delete x.annotation['Emph'];
     });
     node.childNodes.forEach((x) => {
       EnrichMathml.walkTree(x);
     });
-    console.log(10);
   }
   
 }

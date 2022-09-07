@@ -597,10 +597,9 @@ SemanticHeuristics.add(
 
 function eligibleNode(node: Element) {
   return node.childNodes[0] && node.childNodes[0].childNodes[0] &&
-    node.childNodes[0].childNodes[1] &&
     DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
     DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) === 'MPADDED' &&
-    DomUtil.tagName(node.childNodes[0].childNodes[1] as Element) === 'MPHANTOM'
+    DomUtil.tagName(node.childNodes[0].childNodes[node.childNodes[0].childNodes.length - 1] as Element) === 'MPHANTOM'
 }
 
 const rewritable: SemanticType[] = [
@@ -643,11 +642,28 @@ function rewriteCell(cell: SemanticNode, left?: boolean) {
     rewriteFence(cell);
     return [cell];
   }
+  let fence = null;
+  if (cell.type === SemanticType.PUNCTUATED &&
+    (left ? cell.role === SemanticRole.ENDPUNCT : cell.role === SemanticRole.STARTPUNCT)) {
+    let children = cell.childNodes;
+    if (rewriteFence(children[left ? children.length - 1 : 0]))  {
+      cell = children[left ? 0 : children.length - 1];
+      fence = children[left ? children.length - 1 : 0];
+    }
+  }
   if (rewritable.indexOf(cell.type) !== -1) {
     let children = cell.childNodes;
-    rewriteFence(children[left ? 0 : children.length - 1]);
-    return SemanticSkeleton.combineContentChildren<SemanticNode>(
+    rewriteFence(children[left ? children.length - 1 : 0]);
+    let newNodes = SemanticSkeleton.combineContentChildren<SemanticNode>(
       cell, cell.contentNodes, cell.childNodes);
+    if (fence) {
+      if (left) {
+        newNodes.push(fence);
+      } else {
+        newNodes.unshift(fence);
+      }
+    }
+    return newNodes;
   }
   return [cell];
 }
@@ -660,15 +676,16 @@ const PUNCT_TO_FENCE_: { [key: string]: SemanticRole } = {
   };
 
 
-function rewriteFence(fence: SemanticNode) {
+function rewriteFence(fence: SemanticNode): boolean {
   if (fence.type !== SemanticType.PUNCTUATION) {
-    return;
+    return false;
   }
   let role = PUNCT_TO_FENCE_[fence.role];
   if (!role) {
-    return;
+    return false;
   }
   fence.role = role;
   fence.type = SemanticType.FENCE;
   fence.annotation['Emph'] = ['fence'];
+  return true;
 }

@@ -116,8 +116,6 @@ export default class SemanticProcessor {
    */
   public static tableToMultiline(table: SemanticNode): SemanticNode {
     if (!SemanticPred.tableIsMultiline(table)) {
-      console.log(13);
-      console.log(table.mathmlTree.toString());
       return SemanticHeuristics.run(
         'rewrite_subcases', table, SemanticProcessor.classifyTable) as SemanticNode;
     }
