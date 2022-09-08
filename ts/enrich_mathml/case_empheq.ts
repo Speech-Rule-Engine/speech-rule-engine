@@ -61,35 +61,14 @@ export class CaseEmpheq extends AbstractEnrichCase {
     // Recurse until we find the table.
     // Every node that has a mathmlTree should be inserted directly.
     // For every node that does not have one a new mrow is inserted.
+    // For every added operation (implicit, dummy) a new mo is inserted.
     // Only insert new mrows without children.
     this.recurseToTable(this.semantic);
-    // if (!this.semantic.childNodes.length) {
-    //   return this.mml;
-    // }
-    // return this.mml;
-    // this.semantic.contentNodes.forEach(function (x) {
-    //   EnrichMathml.walkTree(x as SemanticNode);
-    //   // TODO: This needs to be done more principled.
-    //   setAttributes(x.mathmlTree as Element, x);
-    // });
-    // this.semantic.childNodes.forEach(function (x) {
-    //   EnrichMathml.walkTree(x as SemanticNode);
-    // });
-    // setAttributes(this.mml, this.semantic);
-    // // TODO: The obsolete parent pointer is related to the issue above.
-    // if (
-    //   this.mml.getAttribute('data-semantic-id') ===
-    //   this.mml.getAttribute('data-semantic-parent')
-    // ) {
-    //   this.mml.removeAttribute('data-semantic-parent');
-    // }
     if (this.mrows.length) {
       let newRow = DomUtil.createElement('mrow');
       let parent = this.mml.parentNode;
       parent.insertBefore(newRow, this.mml);
       for (let mrow of this.mrows) {
-        // mrow.appendChild(this.mml);
-        // this.mml = mrow;
         newRow.appendChild(mrow);
       }
       newRow.appendChild(this.mml);
