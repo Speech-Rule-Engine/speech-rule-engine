@@ -19,7 +19,6 @@
  */
 
 import { SemanticNode } from '../semantic_tree/semantic_node';
-
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 import { setAttributes } from './enrich_attr';
@@ -42,7 +41,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
   public static test(semantic: SemanticNode): boolean {
     return (
       !!semantic.mathmlTree &&
-        !!semantic.annotation['Emph']
+        semantic.hasAnnotation('Emph', 'top')
     );
   }
 
@@ -89,8 +88,9 @@ export class CaseEmpheq extends AbstractEnrichCase {
       let parent = this.mml.parentNode;
       parent.insertBefore(newRow, this.mml);
       for (let mrow of this.mrows) {
-        mrow.appendChild(this.mml);
-        this.mml = mrow;
+        // mrow.appendChild(this.mml);
+        // this.mml = mrow;
+        newRow.appendChild(mrow);
       }
       newRow.appendChild(this.mml);
     }
@@ -98,6 +98,11 @@ export class CaseEmpheq extends AbstractEnrichCase {
   }
 
   private recurseToTable(node: SemanticNode) {
+    if (!(node.hasAnnotation('Emph', 'top') || node.hasAnnotation('Emph', 'fence')) &&
+      (node.hasAnnotation('Emph', 'left') || node.hasAnnotation('Emph', 'right'))) {
+      EnrichMathml.walkTree(node);
+      return;
+    }
     if (!node.mathmlTree ||
       (DomUtil.tagName(node.mathmlTree) === 'MTABLE' && node.annotation['Emph']?.length &&
         node.annotation['Emph'][0] !== 'table')) {
@@ -114,9 +119,18 @@ export class CaseEmpheq extends AbstractEnrichCase {
       setAttributes(node.mathmlTree, node);
     }
     node.childNodes.forEach(this.recurseToTable.bind(this));
-    if (node.textContent) {
-      const newContent = node.contentNodes.map(EnrichMathml.cloneContentNode);
+    if (node.textContent || node.type === 'punctuated') {
+      const newContent = node.contentNodes.map(x => {
+        let newNode = EnrichMathml.cloneContentNode(x);
+        if (newNode.hasAttribute('data-semantic-added')) {
+          this.mrows.unshift(newNode);
+        } else {
+          this.recurseToTable(x);
+        }
+        return newNode;
+      });
       EnrichMathml.setOperatorAttribute_(node, newContent);
+      return;
     }
     node.contentNodes.forEach(this.recurseToTable.bind(this));
   }
@@ -124,7 +138,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
   private finalizeTable(node: SemanticNode) {
     setAttributes(node.mathmlTree, node);
     node.contentNodes.forEach((x) => {
-      setAttributes(x.mathmlTree, x);
+      EnrichMathml.walkTree(x);
     });
     node.childNodes.forEach((x) => {
       EnrichMathml.walkTree(x);

@@ -556,7 +556,6 @@ SemanticHeuristics.add(
       // column is empty we will rewrite.
       let left = true;
       let right = true;
-      let emph = [];
       let topLeft = table.childNodes[0].childNodes[0];
       if (!eligibleNode(topLeft.mathmlTree)) {
         left = false;
@@ -569,7 +568,7 @@ SemanticHeuristics.add(
         }
       }
       if (left) {
-        emph.push('left');
+        table.addAnnotation('Emph', 'left');
       }
       let topRight = table.childNodes[0].childNodes[table.childNodes[0].childNodes.length - 1];
       if (!eligibleNode(topRight.mathmlTree)) {
@@ -584,13 +583,9 @@ SemanticHeuristics.add(
         }
       }
       if (right) {
-        emph.push('right');
+        table.addAnnotation('Emph', 'right');
       }
-      if (left || right) {
-        table.annotation['Emph'] = emph;
-        return true;
-      }
-      return false;
+      return left || right;
     }
   )
 )
@@ -612,28 +607,32 @@ const rewritable: SemanticType[] = [
 ];
 
 function rewriteSubcasesTable(table: SemanticNode) {
-  let [left, right] = table.annotation['Emph'];
+  table.addAnnotation('Emph', 'top');
   let row: SemanticNode[] = [];
-  if (left === 'left') {
+  if (table.hasAnnotation('Emph', 'left')) {
     let topLeft = table.childNodes[0].childNodes[0].childNodes[0];
-    row = row.concat(rewriteCell(topLeft, true));
+    let cells = rewriteCell(topLeft, true);
+    cells.forEach(x => x.addAnnotation('Emph', 'left'));
+    row = row.concat(cells);
     for (let i = 0, line: SemanticNode; (line = table.childNodes[i]); i++) {
       line.childNodes.shift();
     }
   }
   row.push(table);
-  if (left === 'right' || right === 'right') {
+  if (table.hasAnnotation('Emph', 'right')) {
     let topRight = table.childNodes[0].childNodes[
       table.childNodes[0].childNodes.length - 1   
     ].childNodes[0];
-    row = row.concat(rewriteCell(topRight));
+    let cells = rewriteCell(topRight);
+    cells.forEach(x => x.addAnnotation('Emph', 'left'));
+    row = row.concat(cells);
     table.childNodes[0].childNodes.pop();
   }
   SemanticProcessor.tableToMultiline(table);
   let newNode = SemanticProcessor.getInstance().row(row);
   let annotation = table.annotation['Emph'];
   table.annotation['Emph'] = ['table'];
-  newNode.annotation['Emph'] = annotation;
+  annotation.forEach(x => newNode.addAnnotation('Emph', x));
   return newNode;
 }
 
@@ -665,7 +664,7 @@ function rewriteCell(cell: SemanticNode, left?: boolean) {
     }
     return newNodes;
   }
-  return [cell];
+  return fence ? (left ? [cell, fence] : [fence, cell]) : [cell];
 }
 
 const PUNCT_TO_FENCE_: { [key: string]: SemanticRole } = {
@@ -686,6 +685,6 @@ function rewriteFence(fence: SemanticNode): boolean {
   }
   fence.role = role;
   fence.type = SemanticType.FENCE;
-  fence.annotation['Emph'] = ['fence'];
+  fence.addAnnotation('Emph', 'fence');
   return true;
 }
