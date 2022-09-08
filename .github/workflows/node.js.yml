@@ -59,6 +59,9 @@ jobs:
           ref: deploy
           persist-credentials: false
           fetch-depth: 0
+      - name: Moving old files
+        run: |
+          mv lib lib-old
       - name: Downloading the build
         uses: actions/download-artifact@v2
         with:
@@ -76,7 +79,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add lib/sre.js lib/mathmaps/*
-          git commit -m 'Deployment at $TIME' -a
+          git commit --allow-empty -m 'Deployment at $TIME' -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
