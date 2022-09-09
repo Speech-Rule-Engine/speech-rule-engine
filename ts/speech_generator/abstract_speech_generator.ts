@@ -39,7 +39,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  public abstract getSpeech(node: Element, xml: Element): string;
+  public abstract getSpeech(node: Element, xml: Element, root?: Element): string;
 
   /**
    * @override

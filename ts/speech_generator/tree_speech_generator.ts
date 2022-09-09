@@ -30,7 +30,7 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
   /**
    * @override
    */
-  public getSpeech(node: Element, xml: Element) {
+  public getSpeech(node: Element, xml: Element, root: Element = null) {
     const speech = this.generateSpeech(node, xml);
     const nodes = this.getRebuilt().nodeDict;
     for (const key in nodes) {
@@ -38,7 +38,9 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
       //      object.
       const snode = nodes[key];
       const innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
-      const innerNode = WalkerUtil.getBySemanticId(node, key) as Element;
+      const innerNode = WalkerUtil.getBySemanticId(node, key) as Element ||
+        // This takes care of broken elements due to linebreaks.
+        (root && WalkerUtil.getBySemanticId(root, key)) as Element;
       if (!innerMml || !innerNode) {
         continue;
       }
