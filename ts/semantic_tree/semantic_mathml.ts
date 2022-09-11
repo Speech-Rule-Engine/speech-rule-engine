@@ -130,7 +130,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
     SemanticUtil.addAttributes(newNode, mml);
     if (
-      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1
+      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS', 'MACTION'].indexOf(tag) !== -1
     ) {
       return newNode;
     }
@@ -566,10 +566,13 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private action_(node: Element, children: Element[]): SemanticNode {
-    // This here is currently geared towards our collapse actions!
-    return children.length > 1
-      ? this.parse(children[1])
-      : this.getFactory().makeUnprocessed(node);
+    let selection = children[
+      node.hasAttribute('selection') ?
+        parseInt(node.getAttribute('selection'), 10) - 1 :
+        0];
+    let stree = this.parse(selection);
+    stree.mathmlTree = selection;
+    return stree;
   }
 
   /**
