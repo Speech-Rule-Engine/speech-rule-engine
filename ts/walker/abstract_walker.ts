@@ -315,7 +315,7 @@ export abstract class AbstractWalker<T> implements Walker {
           const snode = snodes[i] as SemanticNode;
           speech.push(
             node
-              ? this.generator.getSpeech(node, this.getXml())
+              ? this.generator.getSpeech(node, this.getXml(), this.node)
               : SpeechGeneratorUtil.recomputeMarkup(snode)
           );
         }

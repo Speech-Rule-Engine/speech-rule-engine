@@ -79,3 +79,11 @@ export function getBySemanticId(root: Element, id: string): Element {
   }
   return DomUtil.querySelectorAllByAttrValue(root, Attribute.ID, id)[0];
 }
+
+
+export function getAllBySemanticId(root: Element, id: string): Element[] {
+  if (root.getAttribute(Attribute.ID) === id) {
+    return [root];
+  }
+  return DomUtil.querySelectorAllByAttrValue(root, Attribute.ID, id);
+}
