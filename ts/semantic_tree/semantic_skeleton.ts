@@ -302,13 +302,13 @@ export class SemanticSkeleton {
   private static addAria(node: Element, level: number, posinset: number, setsize: number) {
     // Aria elements
     if (!level) {
-      node.setAttribute('aria-role', 'tree');
+      node.setAttribute('role', 'tree');
       return;
     }
     node.setAttribute('aria-level', level.toString());
     node.setAttribute('aria-posinset', posinset.toString());
     node.setAttribute('aria-setsize', setsize.toString());
-    node.setAttribute('aria-role', 'treeitem');
+    node.setAttribute('role', 'treeitem');
   }
 
   /**
