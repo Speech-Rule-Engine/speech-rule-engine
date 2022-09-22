@@ -208,6 +208,8 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public colorizeAll(node: HTMLElement) {
+    // The following solves the Firefox xpath issue!
+    XpathUtil.updateEvaluator(node);
     const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x: Element) => this.colorize(x as HTMLElement));
   }
