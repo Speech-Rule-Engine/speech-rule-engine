@@ -134,11 +134,8 @@ export class ClearspeakPreferences extends DynamicCstr {
   public static smartPreferences(item: any, locale: string): AxisMap[] {
     const prefs = ClearspeakPreferences.getLocalePreferences();
     const loc = prefs[locale];
-    if (!loc) {
-      return [];
-    }
     const explorer = item?.explorers?.explorers?.speech;
-    if (!explorer) {
+    if (!loc || !explorer) {
       return [];
     }
     const smart = ClearspeakPreferences.relevantPreferences(
