@@ -6,7 +6,8 @@
     "category": "volume",
     "mappings": {
       "default": {
-        "default": "cubic"
+        "default": "cubic",
+        "plural": "cubic"
       }
     },
     "key": "cu",

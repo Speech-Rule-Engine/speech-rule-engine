@@ -6,7 +6,8 @@
     "category": "temperature",
     "mappings": {
       "default": {
-        "default": "Fahrenheit"
+        "default": "Fahrenheit",
+        "plural": "Fahrenheit"
       }
     },
     "key": "F",
@@ -34,7 +35,8 @@
     "category": "temperature",
     "mappings": {
       "default": {
-        "default": "Kelvin"
+        "default": "Kelvin",
+        "plural": "Kelvin"
       }
     },
     "key": "K",

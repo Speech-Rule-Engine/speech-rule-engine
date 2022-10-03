@@ -6,7 +6,8 @@
     "category": "other",
     "mappings": {
       "default": {
-        "default": "square"
+        "default": "square",
+        "plural": "square"
       }
     },
     "key": "sq",

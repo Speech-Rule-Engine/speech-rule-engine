@@ -6,7 +6,8 @@
     "category": "other",
     "mappings": {
       "default": {
-        "default": "dozen"
+        "default": "dozen",
+        "plural": "dozen"
       }
     },
     "key": "doz",
