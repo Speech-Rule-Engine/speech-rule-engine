@@ -16,15 +16,19 @@
       "w"
     ]
   },
-  {"category": "energy",
-   "mappings": {
-     "default": {
-       "default": "Kilowattstunde",
-       "plural": "Kilowattstunden"
-     }
-   },
-   "key": "kwh",
-   "names": ["kwh", "kWh"]
+  {
+    "category": "energy",
+    "mappings": {
+      "default": {
+        "default": "Kilowattstunde",
+        "plural": "Kilowattstunden"
+      }
+    },
+    "key": "kwh",
+    "names": [
+      "kwh",
+      "kWh"
+    ]
   },
   {
     "key": "J",
@@ -87,7 +91,8 @@
     },
     "category": "energy",
     "names": [
-      "Ohm", "ohm"
+      "Ohm",
+      "ohm"
     ]
   },
   {

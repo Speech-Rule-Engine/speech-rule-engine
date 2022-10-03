@@ -43,15 +43,17 @@
       "′"
     ]
   },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "gradi",
-       "default": "grado"
-     }
-   },
-   "key": "°",
-   "names": ["°"]
+  {
+    "category": "time",
+    "mappings": {
+      "default": {
+        "default": "grado"
+      }
+    },
+    "key": "°",
+    "names": [
+      "°"
+    ]
   },
   {
     "key": "hr",

@@ -20,10 +20,10 @@
       "default": {
         "default": "logarithme népérien"
       },
-     "clearspeak": {
-       "default": "l n",
-       "Log_LnAsNaturalLog": "logarithme népérien"
-     }
+      "clearspeak": {
+        "default": "l n",
+        "Log_LnAsNaturalLog": "logarithme népérien"
+      }
     },
     "category": "Logarithm",
     "names": [
@@ -58,7 +58,9 @@
   {
     "key": "gcd",
     "names": [
-      "gcd", "PGCD", "pgcd"
+      "gcd",
+      "PGCD",
+      "pgcd"
     ],
     "mappings": {
       "default": {
@@ -76,7 +78,11 @@
   {
     "key": "lcm",
     "names": [
-      "lcm", "ppcm", "PPCM", "PPMC", "ppmc"
+      "lcm",
+      "ppcm",
+      "PPCM",
+      "PPMC",
+      "ppmc"
     ],
     "mappings": {
       "default": {

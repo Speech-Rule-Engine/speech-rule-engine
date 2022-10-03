@@ -2,42 +2,58 @@
   {
     "locale": "de"
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kubik"
-     }
-   },
-   "key": "cu",
-   "names": ["cu", "cu."]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "Kubik"
+      }
+    },
+    "key": "cu",
+    "names": [
+      "cu",
+      "cu."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kubikinch"
-     }
-   },
-   "key": "cu inch",
-   "names": ["cu in", "cu. in."]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "Kubikinch"
+      }
+    },
+    "key": "cu inch",
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kubikfuß"
-     }
-   },
-   "key": "cu ft",
-   "names": ["cu ft", "cu. ft."]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "Kubikfuß"
+      }
+    },
+    "key": "cu ft",
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kubikyard",
-       "plural": "Kubikyards"
-     }
-   },
-   "key": "cu yd",
-   "names": ["cu yd", "cu. yd."]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "Kubikyard",
+        "plural": "Kubikyards"
+      }
+    },
+    "key": "cu yd",
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ]
   },
   {
     "key": "bbl",
@@ -52,15 +68,19 @@
       "bbl"
     ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Fluid ounce",
-       "plural": "Fluid ounces"
-     }
-   },
-   "key": "fl. oz.",
-   "names": ["fl. oz.", "fl oz"]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "Fluid ounce",
+        "plural": "Fluid ounces"
+      }
+    },
+    "key": "fl. oz.",
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ]
   },
   {
     "key": "gal",
@@ -159,23 +179,30 @@
       "cp."
     ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kubikzentimeter"
-     }
-   },
-   "key": "cc",
-   "names": ["cc", "ccm"]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "Kubikzentimeter"
+      }
+    },
+    "key": "cc",
+    "names": [
+      "cc",
+      "ccm"
+    ]
   },
-  {"category": "volume",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "Liter"
-     }
-   },
-   "key": "l",
-   "names": ["l"]
+  {
+    "category": "volume",
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "Liter"
+      }
+    },
+    "key": "l",
+    "names": [
+      "l"
+    ]
   }
 ]

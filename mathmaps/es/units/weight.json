@@ -132,13 +132,17 @@
       "qtr."
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "centena"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt."]
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "centena"
+      }
+    },
+    "key": "cwt",
+    "names": [
+      "cwt",
+      "cwt."
+    ]
   }
 ]

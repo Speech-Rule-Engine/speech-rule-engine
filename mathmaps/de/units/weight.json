@@ -29,14 +29,18 @@
       "oz."
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Long ton"
-     }
-   },
-   "key": "LT",
-   "names": ["LT", "L.T."]
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Long ton"
+      }
+    },
+    "key": "LT",
+    "names": [
+      "LT",
+      "L.T."
+    ]
   },
   {
     "key": "gr",
@@ -63,14 +67,17 @@
       "g"
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Mikrogramm"
-     }
-   },
-   "key": "mcg",
-   "names": ["mcg"]
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Mikrogramm"
+      }
+    },
+    "key": "mcg",
+    "names": [
+      "mcg"
+    ]
   },
   {
     "key": "t",
@@ -126,13 +133,19 @@
       "qtr."
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Zentner"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt.", "Ztr.", "Ctr."]
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Zentner"
+      }
+    },
+    "key": "cwt",
+    "names": [
+      "cwt",
+      "cwt.",
+      "Ztr.",
+      "Ctr."
+    ]
   }
 ]

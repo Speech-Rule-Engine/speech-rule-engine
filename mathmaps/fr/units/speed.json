@@ -25,7 +25,8 @@
     },
     "key": "rpm",
     "names": [
-      "rpm", "tpm"
+      "rpm",
+      "tpm"
     ]
   },
   {

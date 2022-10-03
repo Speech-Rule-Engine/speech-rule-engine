@@ -65,7 +65,9 @@
     "category": "volume",
     "names": [
       "tbsp",
-      "tbsp.", "Tbsp", "Tbsp."
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
     ]
   },
   {
@@ -95,7 +97,7 @@
       "l"
     ]
   },
-    {
+  {
     "category": "volume",
     "mappings": {
       "default": {
@@ -121,23 +123,31 @@
       "cu. in."
     ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "pied cube"
-     }
-   },
-   "key": "cu ft",
-   "names": ["cu ft", "cu. ft."]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "pied cube"
+      }
+    },
+    "key": "cu ft",
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "yard cube"
-     }
-   },
-   "key": "cu yd",
-   "names": ["cu yd", "cu. yd."]
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "yard cube"
+      }
+    },
+    "key": "cu yd",
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ]
   },
   {
     "category": "volume",
@@ -191,5 +201,4 @@
       "ccm"
     ]
   }
-
 ]

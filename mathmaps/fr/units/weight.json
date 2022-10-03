@@ -61,7 +61,7 @@
       "T"
     ]
   },
-    {
+  {
     "category": "weight",
     "mappings": {
       "default": {
@@ -125,13 +125,18 @@
       "mcg"
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "quintal"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt.", "qq"]
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "quintal"
+      }
+    },
+    "key": "cwt",
+    "names": [
+      "cwt",
+      "cwt.",
+      "qq"
+    ]
   }
 ]

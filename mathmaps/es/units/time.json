@@ -30,7 +30,8 @@
   {
     "key": "min",
     "names": [
-      "min", "′"
+      "min",
+      "′"
     ],
     "mappings": {
       "default": {
@@ -39,14 +40,17 @@
     },
     "category": "time"
   },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "grado"
-     }
-   },
-   "key": "°",
-   "names": ["°"]
+  {
+    "category": "time",
+    "mappings": {
+      "default": {
+        "default": "grado"
+      }
+    },
+    "key": "°",
+    "names": [
+      "°"
+    ]
   },
   {
     "key": "h",
