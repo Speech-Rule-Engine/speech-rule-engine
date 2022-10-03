@@ -50,12 +50,12 @@ export const store = MathCompoundStore;
  * Methods for parsing json structures.
  */
 const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
-  functions: (x: UnicodeJson[]) => x.forEach(MathCompoundStore.addFunctionRules),
-  symbols: (x: UnicodeJson[]) => x.forEach(MathCompoundStore.addSymbolRules),
-  units: (x: UnicodeJson[]) => x.forEach(MathCompoundStore.addUnitRules),
+  functions: MathCompoundStore.addFunctionRules,
+  symbols: MathCompoundStore.addSymbolRules,
+  units: MathCompoundStore.addUnitRules,
   si: (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
   messages: completeLocale,
-  rules: SpeechRuleEngine.getInstance().addStore.bind(SpeechRuleEngine.getInstance())
+  rules: SpeechRuleEngine.addStore
 };
 
 let _init = false;

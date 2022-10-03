@@ -115,7 +115,7 @@ export function generate(locale: string) {
   const oldLocale = Engine.getInstance().locale;
   Engine.getInstance().locale = locale;
   L10n.setLocale();
-  MathCompoundStore.addSymbolRules({ locale: locale } as UnicodeJson);
+  MathCompoundStore.changeLocale({ locale: locale } as UnicodeJson);
   makeDomains_();
   const intervals = INTERVALS;
   for (let i = 0, int; (int = intervals[i]); i++) {
