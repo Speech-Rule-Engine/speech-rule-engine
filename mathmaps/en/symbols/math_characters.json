@@ -1,4 +1,7 @@
-[{"locale": "en"},
+[
+  {
+    "locale": "en"
+  },
   {
     "category": "Ll",
     "mappings": {
@@ -122,7 +125,7 @@
     },
     "key": "2149"
   },
-   {
+  {
     "category": "Ll",
     "mappings": {
       "default": {

@@ -1,4 +1,7 @@
-[{"locale": "en"},
+[
+  {
+    "locale": "en"
+  },
   {
     "category": "Po",
     "mappings": {
@@ -371,7 +374,7 @@
     "mappings": {
       "default": {
         "default": "registered sign"
-     },
+      },
       "mathspeak": {
         "default": "registered trade mark sign"
       },
@@ -1402,7 +1405,6 @@
       "clearspeak": {
         "default": "is a member of"
       }
-
     },
     "key": "2208"
   },

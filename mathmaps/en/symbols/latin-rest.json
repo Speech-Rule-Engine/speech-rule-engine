@@ -1,5 +1,8 @@
-[{"locale": "en"},
-    {
+[
+  {
+    "locale": "en"
+  },
+  {
     "category": "Ll",
     "mappings": {
       "default": {
@@ -9,7 +12,7 @@
     },
     "key": "210E"
   },
- {
+  {
     "category": "Mn",
     "key": "0363",
     "mappings": {

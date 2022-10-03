@@ -1,4 +1,7 @@
-[{"locale": "en"},
+[
+  {
+    "locale": "en"
+  },
   {
     "category": "So",
     "mappings": {
@@ -41,7 +44,7 @@
     "mappings": {
       "default": {
         "default": "black circle",
-        "alternative":  "medium black circle"
+        "alternative": "medium black circle"
       }
     },
     "key": "26AB"
