@@ -315,6 +315,34 @@
     ]
   },
   {
+    "category": "currency",
+    "key": "₸",
+    "mappings": {
+      "default": {
+        "default": "tenge",
+        "plural": "tenge"
+      }
+    },
+    "names": [
+      "₸",
+      "KZT"
+    ]
+  },
+  {
+    "category": "currency",
+    "key": "₺",
+    "mappings": {
+      "default": {
+        "default": "livre turque",
+        "plural": "livres turque"
+      }
+    },
+    "names": [
+      "₺",
+      "TRY"
+    ]
+  },
+  {
     "key": "元",
     "mappings": {
       "default": {

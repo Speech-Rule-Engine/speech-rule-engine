@@ -315,7 +315,8 @@
     "key": "₸",
     "mappings": {
       "default": {
-        "default": "tenge"
+        "default": "tenge",
+        "plural": "tenge"
       }
     },
     "names": [
@@ -328,7 +329,8 @@
     "key": "₺",
     "mappings": {
       "default": {
-        "default": "turkish lira"
+        "default": "turkish lira",
+        "plural": "turkish lira"
       }
     },
     "names": [

@@ -338,6 +338,34 @@
     ]
   },
   {
+    "category": "currency",
+    "key": "₸",
+    "mappings": {
+      "default": {
+        "default": "tenge",
+        "plural": "tenge"
+      }
+    },
+    "names": [
+      "₸",
+      "KZT"
+    ]
+  },
+  {
+    "category": "currency",
+    "key": "₺",
+    "mappings": {
+      "default": {
+        "default": "tyrkisk lira",
+        "plural": "tyrkiske lira"
+      }
+    },
+    "names": [
+      "₺",
+      "TRY"
+    ]
+  },
+  {
     "key": "元",
     "mappings": {
       "default": {
@@ -348,6 +376,20 @@
     "category": "currency",
     "names": [
       "元"
+    ]
+  },
+  {
+    "category": "currency",
+    "key": "¢",
+    "mappings": {
+      "default": {
+        "default": "cent",
+        "plural": "cent"
+      }
+    },
+    "names": [
+      "￠",
+      "¢"
     ]
   }
 ]
