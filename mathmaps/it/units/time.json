@@ -30,7 +30,7 @@
     ]
   },
   {
-    "key": "′",
+    "key": "min",
     "mappings": {
       "default": {
         "plural": "minuti",
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "key": "hr",
+    "key": "h",
     "mappings": {
       "default": {
         "plural": "ore",
