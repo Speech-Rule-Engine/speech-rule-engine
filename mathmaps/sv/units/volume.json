@@ -20,8 +20,8 @@
     "key": "cu inch",
     "mappings": {
       "default": {
-        "default": "kubik tum",
-        "plural": "kubik tum"
+        "default": "kubiktum",
+        "plural": "kubiktum"
       }
     },
     "category": "volume",
@@ -132,8 +132,8 @@
     "key": "fluid dram",
     "mappings": {
       "default": {
-        "default": "fluid dram",
-        "plural": "fluid drams"
+        "default": "flytande drakma",
+        "plural": "flytande drakmer"
       }
     },
     "category": "volume",

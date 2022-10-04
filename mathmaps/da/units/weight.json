@@ -7,7 +7,7 @@
     "mappings": {
       "default": {
         "default": "dram",
-        "plural": "drams"
+        "plural": "dram"
       }
     },
     "category": "weight",

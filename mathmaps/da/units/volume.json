@@ -20,8 +20,8 @@
     "key": "cu inch",
     "mappings": {
       "default": {
-        "default": "kubik inch",
-        "plural": "kubik inches"
+        "default": "kubiktomme",
+        "plural": "kubiktommer"
       }
     },
     "category": "volume",

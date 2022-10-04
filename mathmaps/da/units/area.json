@@ -23,8 +23,8 @@
     "key": "sq inch",
     "mappings": {
       "default": {
-        "default": "kvadrat inch",
-        "plural": "kvadrat inches"
+        "default": "kvadrattomme",
+        "plural": "kvadrattommer"
       }
     },
     "category": "area",
@@ -92,11 +92,11 @@
     ]
   },
   {
-    "key": "ac",
+    "key": "acr",
     "mappings": {
       "default": {
-        "default": "ager",
-        "plural": "agre"
+        "default": "acre",
+        "plural": "acres"
       }
     },
     "category": "area",

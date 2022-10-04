@@ -20,8 +20,8 @@
     "key": "sq inch",
     "mappings": {
       "default": {
-        "default": "kvadrat tum",
-        "plural": "kvadrat tum"
+        "default": "kvadrattum",
+        "plural": "kvadrattum"
       }
     },
     "category": "area",
@@ -89,11 +89,11 @@
     ]
   },
   {
-    "key": "ac",
+    "key": "acr",
     "mappings": {
       "default": {
-        "default": "acre",
-        "plural": "acres"
+        "default": "tunnland",
+        "plural": "tunnland"
       }
     },
     "category": "area",

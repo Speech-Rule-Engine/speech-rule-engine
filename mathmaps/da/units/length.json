@@ -76,8 +76,8 @@
     "key": "rod",
     "mappings": {
       "default": {
-        "default": "rod",
-        "plural": "rods"
+        "default": "stang",
+        "plural": "stænger"
       }
     },
     "category": "length",
@@ -90,8 +90,8 @@
     "key": "chain",
     "mappings": {
       "default": {
-        "default": "chain",
-        "plural": "chains"
+        "default": "kæde",
+        "plural": "kæder"
       }
     },
     "category": "length",

@@ -62,8 +62,8 @@
     "key": "link",
     "mappings": {
       "default": {
-        "default": "link",
-        "plural": "links"
+        "default": "länk",
+        "plural": "länkar"
       }
     },
     "category": "length",
@@ -90,8 +90,8 @@
     "key": "chain",
     "mappings": {
       "default": {
-        "default": "chain",
-        "plural": "chains"
+        "default": "kedja",
+        "plural": "kejdor"
       }
     },
     "category": "length",
