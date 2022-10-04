@@ -17,7 +17,7 @@
     }
   },
   {
-    "key": "cu in",
+    "key": "cu inch",
     "mappings": {
       "default": {
         "default": "kubik tum",
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "key": "fl dr",
+    "key": "fluid dram",
     "mappings": {
       "default": {
         "default": "fluid dram",
@@ -173,7 +173,7 @@
     ]
   },
   {
-    "key": "cp",
+    "key": "cup",
     "mappings": {
       "default": {
         "default": "kopp",

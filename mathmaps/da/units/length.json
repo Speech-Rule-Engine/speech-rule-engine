@@ -59,7 +59,7 @@
     ]
   },
   {
-    "key": "li",
+    "key": "link",
     "mappings": {
       "default": {
         "default": "link",
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "key": "rd",
+    "key": "rod",
     "mappings": {
       "default": {
         "default": "rod",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "key": "ch",
+    "key": "chain",
     "mappings": {
       "default": {
         "default": "chain",

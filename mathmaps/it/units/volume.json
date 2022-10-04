@@ -17,7 +17,7 @@
     }
   },
   {
-    "key": "cu in",
+    "key": "cu inch",
     "mappings": {
       "default": {
         "plural": "pollici cubici",
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "key": "fl dr",
+    "key": "fluid dram",
     "mappings": {
       "default": {
         "plural": "dramme liquide",
@@ -173,7 +173,7 @@
     ]
   },
   {
-    "key": "cp",
+    "key": "cup",
     "mappings": {
       "default": {
         "plural": "tazze",

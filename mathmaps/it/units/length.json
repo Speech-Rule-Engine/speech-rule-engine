@@ -59,7 +59,7 @@
     ]
   },
   {
-    "key": "li",
+    "key": "link",
     "mappings": {
       "default": {
         "plural": "links",
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "key": "rd",
+    "key": "rod",
     "mappings": {
       "default": {
         "plural": "pertiche",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "key": "ch",
+    "key": "chain",
     "mappings": {
       "default": {
         "plural": "catene",

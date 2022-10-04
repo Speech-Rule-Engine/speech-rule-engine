@@ -106,31 +106,5 @@
         "default": "ohm"
       }
     }
-  },
-  {
-    "key": "MΩ",
-    "category": "energy",
-    "names": [
-      "MΩ"
-    ],
-    "si": true,
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "key": "kΩ",
-    "category": "energy",
-    "names": [
-      "kΩ"
-    ],
-    "si": true,
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
   }
 ]
