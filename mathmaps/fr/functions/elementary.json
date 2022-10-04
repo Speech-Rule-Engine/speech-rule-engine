@@ -194,7 +194,7 @@
     "category": "Limits"
   },
   {
-    "key": "lim inf",
+    "key": "liminf",
     "names": [
       "lim inf",
       "liminf"
@@ -207,7 +207,7 @@
     "category": "Limits"
   },
   {
-    "key": "lim sup",
+    "key": "limsup",
     "names": [
       "lim sup",
       "limsup"
