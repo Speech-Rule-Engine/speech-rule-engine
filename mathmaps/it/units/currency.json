@@ -336,32 +336,6 @@
   },
   {
     "category": "currency",
-    "key": "₶",
-    "mappings": {
-      "default": {
-        "plural": "livre tournois",
-        "default": "livre tournois"
-      }
-    },
-    "names": [
-      "₶"
-    ]
-  },
-  {
-    "category": "currency",
-    "key": "₷",
-    "mappings": {
-      "default": {
-        "plural": "spesmili",
-        "default": "spesmilo"
-      }
-    },
-    "names": [
-      "₷"
-    ]
-  },
-  {
-    "category": "currency",
     "key": "₸",
     "mappings": {
       "default": {

@@ -302,36 +302,12 @@
     "key": "₵",
     "mappings": {
       "default": {
-        "default": "cedis"
+        "default": "cedi"
       }
     },
     "names": [
       "₵",
       "GHS"
-    ]
-  },
-  {
-    "category": "currency",
-    "key": "₶",
-    "mappings": {
-      "default": {
-        "default": "livre tournois"
-      }
-    },
-    "names": [
-      "₶"
-    ]
-  },
-  {
-    "category": "currency",
-    "key": "₷",
-    "mappings": {
-      "default": {
-        "default": "spesmilo"
-      }
-    },
-    "names": [
-      "₷"
     ]
   },
   {

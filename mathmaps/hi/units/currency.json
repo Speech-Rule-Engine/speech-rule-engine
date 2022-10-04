@@ -313,30 +313,6 @@
   },
   {
     "category": "currency",
-    "key": "₶",
-    "mappings": {
-      "default": {
-        "default": "लिव्रे तूर्नवा"
-      }
-    },
-    "names": [
-      "₶"
-    ]
-  },
-  {
-    "category": "currency",
-    "key": "₷",
-    "mappings": {
-      "default": {
-        "default": "स्पेसमीलो"
-      }
-    },
-    "names": [
-      "₷"
-    ]
-  },
-  {
-    "category": "currency",
     "key": "₸",
     "mappings": {
       "default": {
