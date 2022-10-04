@@ -73,7 +73,7 @@
     ]
   },
   {
-    "key": "fl oz",
+    "key": "fl. oz.",
     "mappings": {
       "default": {
         "plural": "once liquide",

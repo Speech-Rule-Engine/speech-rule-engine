@@ -41,7 +41,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat-rod",
+        "plural": "kvadrat-rods"
       }
     }
   },

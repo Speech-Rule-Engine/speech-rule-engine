@@ -44,7 +44,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s",
+        "plural": "kvadratrødder"
       }
     }
   },
@@ -53,7 +54,7 @@
     "mappings": {
       "default": {
         "default": "kvadrat fod",
-        "plural": "kvadrat fod"
+        "plural": "kvadratfod"
       }
     },
     "category": "area",
@@ -67,7 +68,7 @@
     "mappings": {
       "default": {
         "default": "kvadrat yard",
-        "plural": "kvadrat yards"
+        "plural": "kvadratyard"
       }
     },
     "category": "area",
@@ -81,7 +82,7 @@
     "mappings": {
       "default": {
         "default": "kvadrat mil",
-        "plural": "kvadrat mile"
+        "plural": "kvadratmil"
       }
     },
     "category": "area",

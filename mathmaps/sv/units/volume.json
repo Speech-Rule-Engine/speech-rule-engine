@@ -73,11 +73,11 @@
     ]
   },
   {
-    "key": "fl oz",
+    "key": "fl. oz.",
     "mappings": {
       "default": {
-        "default": "fluid ounce",
-        "plural": "fluid ounces"
+        "default": "flytande uns",
+        "plural": "flytande uns"
       }
     },
     "category": "volume",

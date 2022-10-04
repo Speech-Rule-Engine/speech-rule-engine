@@ -34,8 +34,8 @@
     "key": "cu ft",
     "mappings": {
       "default": {
-        "default": "kubik fod",
-        "plural": "kubik fod"
+        "default": "kubikfod",
+        "plural": "kubikfod"
       }
     },
     "category": "volume",
@@ -48,8 +48,8 @@
     "key": "cu yd",
     "mappings": {
       "default": {
-        "default": "kubik yard",
-        "plural": "kubik yards"
+        "default": "kubikyard",
+        "plural": "kubikyards"
       }
     },
     "category": "volume",
@@ -73,11 +73,11 @@
     ]
   },
   {
-    "key": "fl oz",
+    "key": "fl. oz.",
     "mappings": {
       "default": {
-        "default": "fluid ounce",
-        "plural": "fluid ounces"
+        "default": "flydende ounce",
+        "plural": "flydende ounces"
       }
     },
     "category": "volume",

@@ -6,8 +6,8 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "farad",
-        "plural": "farader"
+        "default": "Fahrenheit",
+        "plural": "Fahrenheit"
       }
     },
     "category": "temperature",
@@ -21,8 +21,8 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "celsius",
-        "plural": "celsius"
+        "default": "Celsius",
+        "plural": "Celsius"
       }
     },
     "category": "temperature",
