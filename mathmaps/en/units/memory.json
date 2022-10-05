@@ -3,38 +3,38 @@
     "locale": "en"
   },
   {
+    "key": "b",
     "category": "memory",
     "mappings": {
       "default": {
         "default": "bit"
       }
     },
-    "key": "b",
     "names": [
       "b"
     ]
   },
   {
+    "key": "B",
     "category": "memory",
-    "si": true,
     "mappings": {
       "default": {
         "default": "byte"
       }
     },
-    "key": "B",
+    "si": true,
     "names": [
       "B"
     ]
   },
   {
+    "key": "KB",
     "category": "memory",
     "mappings": {
       "default": {
         "default": "kilobyte"
       }
     },
-    "key": "KB",
     "names": [
       "KB"
     ]

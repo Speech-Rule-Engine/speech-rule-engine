@@ -3,18 +3,18 @@
     "locale": "en"
   },
   {
+    "key": "210E",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "italic h",
         "physics": "planck constant"
       }
-    },
-    "key": "210E"
+    }
   },
   {
-    "category": "Mn",
     "key": "0363",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining a"
@@ -22,8 +22,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "0364",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining e"
@@ -31,8 +31,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "0365",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining i"
@@ -40,8 +40,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "0366",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining o"
@@ -49,8 +49,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "0367",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining u"
@@ -58,8 +58,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "0368",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining c"
@@ -67,8 +67,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "0369",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining d"
@@ -76,8 +76,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "036A",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining h"
@@ -85,8 +85,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "036B",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining m"
@@ -94,8 +94,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "036C",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining r"
@@ -103,8 +103,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "036D",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining t"
@@ -112,8 +112,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "036E",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining v"
@@ -121,8 +121,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "036F",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining x"
@@ -130,8 +130,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D62",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript i"
@@ -139,8 +139,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D63",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript r"
@@ -148,8 +148,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D64",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript u"
@@ -157,8 +157,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D65",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript v"
@@ -166,8 +166,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DCA",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining r below"
@@ -175,8 +175,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD3",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining flattened open a above"
@@ -184,8 +184,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD4",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining ae"
@@ -193,8 +193,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD5",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining ao"
@@ -202,8 +202,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD6",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining av"
@@ -211,8 +211,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD7",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining c cedilla"
@@ -220,8 +220,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD8",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining insular d"
@@ -229,8 +229,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DD9",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining eth"
@@ -238,8 +238,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DDA",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining g"
@@ -247,8 +247,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DDB",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining small cap G"
@@ -259,8 +259,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DDC",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining k"
@@ -268,8 +268,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DDD",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining l"
@@ -277,8 +277,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DDE",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining small cap L"
@@ -289,8 +289,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DDF",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining small cap M"
@@ -301,8 +301,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE0",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining n"
@@ -310,8 +310,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE1",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining small cap N"
@@ -322,8 +322,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE2",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining small cap R"
@@ -334,8 +334,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE3",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining r rotunda"
@@ -343,8 +343,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE4",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining s"
@@ -352,8 +352,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE5",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining long s"
@@ -361,8 +361,8 @@
     }
   },
   {
-    "category": "Mn",
     "key": "1DE6",
+    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combining z"
@@ -370,8 +370,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2071",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superscript i"
@@ -379,8 +379,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "207F",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superscript n"
@@ -388,8 +388,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2090",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript a"
@@ -397,8 +397,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2091",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript e"
@@ -406,8 +406,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2092",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript o"
@@ -415,8 +415,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2093",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript x"
@@ -424,8 +424,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2094",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript schwa"
@@ -433,8 +433,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2095",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript h"
@@ -442,8 +442,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2096",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript k"
@@ -451,8 +451,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2097",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript l"
@@ -460,8 +460,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2098",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript m"
@@ -469,8 +469,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2099",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript n"
@@ -478,8 +478,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "209A",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript p"
@@ -487,8 +487,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "209B",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript s"
@@ -496,8 +496,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "209C",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript t"
@@ -505,8 +505,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "2C7C",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript j"
@@ -514,8 +514,8 @@
     }
   },
   {
-    "category": "So",
     "key": "1F12A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tortoise shell bracketed cap S"
@@ -526,8 +526,8 @@
     }
   },
   {
-    "category": "So",
     "key": "1F12B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "circled italic cap C"
@@ -538,8 +538,8 @@
     }
   },
   {
-    "category": "So",
     "key": "1F12C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "circled italic cap R"
@@ -550,8 +550,8 @@
     }
   },
   {
-    "category": "So",
     "key": "1F18A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "crossed negative squared cap P"

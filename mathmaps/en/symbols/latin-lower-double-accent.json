@@ -3,8 +3,8 @@
     "locale": "en"
   },
   {
-    "category": "Ll",
     "key": "01D6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double overdot overbar"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double overdot acute"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double overdot caron"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double overdot grave"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a double overdot overbar"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a overdot overbar"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01ED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o ogonek overbar"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01FB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a ring above acute"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o double overdot overbar"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o tilde overbar"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0231",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o overdot overbar"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E09",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c cedilla acute"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E15",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e overbar grave"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E17",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e overbar acute"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E1D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e cedilla breve"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E2F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i double overdot acute"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E39",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l underdot overbar"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E4D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o tilde acute"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E4F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o tilde double overdot"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E51",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o overbar grave"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E53",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o overbar acute"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E5D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r underdot overbar"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E65",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s acute overdot"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E67",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s caron overdot"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E69",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s underdot overdot"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E79",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u tilde acute"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E7B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u overbar double overdot"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hat acute"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hat grave"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hat hook above"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EAB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hat tilde"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EAD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hat underdot"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EAF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a breve acute"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a breve grave"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a breve hook above"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a breve tilde"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a breve underdot"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EBF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hat acute"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hat grave"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hat hook above"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hat tilde"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hat underdot"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hat acute"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hat grave"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hat hook above"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hat tilde"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hat underdot"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EDB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o acute prime"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EDD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o grave prime"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EDF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hook above prime"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o tilde prime"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o underdot prime"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u acute prime"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EEB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u grave prime"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u hook above prime"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EEF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u tilde prime"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EF1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u underdot prime"

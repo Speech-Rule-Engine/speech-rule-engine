@@ -3,6 +3,7 @@
     "locale": "en"
   },
   {
+    "key": "2190",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -11,10 +12,10 @@
       "mathspeak": {
         "sbrief": "L arrow"
       }
-    },
-    "key": "2190"
+    }
   },
   {
+    "key": "2191",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -23,10 +24,10 @@
       "mathspeak": {
         "sbrief": "U arrow"
       }
-    },
-    "key": "2191"
+    }
   },
   {
+    "key": "2192",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -35,10 +36,10 @@
       "mathspeak": {
         "sbrief": "R arrow"
       }
-    },
-    "key": "2192"
+    }
   },
   {
+    "key": "2193",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -47,10 +48,10 @@
       "mathspeak": {
         "sbrief": "D arrow"
       }
-    },
-    "key": "2193"
+    }
   },
   {
+    "key": "2194",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -59,10 +60,10 @@
       "mathspeak": {
         "sbrief": "L R arrow"
       }
-    },
-    "key": "2194"
+    }
   },
   {
+    "key": "2195",
     "category": "So",
     "mappings": {
       "default": {
@@ -71,10 +72,10 @@
       "mathspeak": {
         "sbrief": "U D arrow"
       }
-    },
-    "key": "2195"
+    }
   },
   {
+    "key": "2196",
     "category": "So",
     "mappings": {
       "default": {
@@ -83,10 +84,10 @@
       "mathspeak": {
         "sbrief": "U L arrow"
       }
-    },
-    "key": "2196"
+    }
   },
   {
+    "key": "2197",
     "category": "So",
     "mappings": {
       "default": {
@@ -95,10 +96,10 @@
       "mathspeak": {
         "sbrief": "U R arrow"
       }
-    },
-    "key": "2197"
+    }
   },
   {
+    "key": "2198",
     "category": "So",
     "mappings": {
       "default": {
@@ -107,10 +108,10 @@
       "mathspeak": {
         "sbrief": "D R arrow"
       }
-    },
-    "key": "2198"
+    }
   },
   {
+    "key": "2199",
     "category": "So",
     "mappings": {
       "default": {
@@ -119,10 +120,10 @@
       "mathspeak": {
         "sbrief": "D L arrow"
       }
-    },
-    "key": "2199"
+    }
   },
   {
+    "key": "219A",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -131,10 +132,10 @@
       "mathspeak": {
         "sbrief": "L arrow with stroke"
       }
-    },
-    "key": "219A"
+    }
   },
   {
+    "key": "219B",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -143,10 +144,10 @@
       "mathspeak": {
         "sbrief": "R arrow with stroke"
       }
-    },
-    "key": "219B"
+    }
   },
   {
+    "key": "219C",
     "category": "So",
     "mappings": {
       "default": {
@@ -155,10 +156,10 @@
       "mathspeak": {
         "sbrief": "L wave arrow"
       }
-    },
-    "key": "219C"
+    }
   },
   {
+    "key": "219D",
     "category": "So",
     "mappings": {
       "default": {
@@ -167,10 +168,10 @@
       "mathspeak": {
         "sbrief": "R wave arrow"
       }
-    },
-    "key": "219D"
+    }
   },
   {
+    "key": "219E",
     "category": "So",
     "mappings": {
       "default": {
@@ -179,10 +180,10 @@
       "mathspeak": {
         "sbrief": "two headed L arrow"
       }
-    },
-    "key": "219E"
+    }
   },
   {
+    "key": "219F",
     "category": "So",
     "mappings": {
       "default": {
@@ -191,10 +192,10 @@
       "mathspeak": {
         "sbrief": "two headed U arrow"
       }
-    },
-    "key": "219F"
+    }
   },
   {
+    "key": "21A0",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -203,10 +204,10 @@
       "mathspeak": {
         "sbrief": "two headed R arrow"
       }
-    },
-    "key": "21A0"
+    }
   },
   {
+    "key": "21A1",
     "category": "So",
     "mappings": {
       "default": {
@@ -215,10 +216,10 @@
       "mathspeak": {
         "sbrief": "two headed D arrow"
       }
-    },
-    "key": "21A1"
+    }
   },
   {
+    "key": "21A2",
     "category": "So",
     "mappings": {
       "default": {
@@ -227,10 +228,10 @@
       "mathspeak": {
         "sbrief": "L arrow with tail"
       }
-    },
-    "key": "21A2"
+    }
   },
   {
+    "key": "21A3",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -239,10 +240,10 @@
       "mathspeak": {
         "sbrief": "R arrow with tail"
       }
-    },
-    "key": "21A3"
+    }
   },
   {
+    "key": "21A4",
     "category": "So",
     "mappings": {
       "default": {
@@ -251,10 +252,10 @@
       "mathspeak": {
         "sbrief": "L arrow from bar"
       }
-    },
-    "key": "21A4"
+    }
   },
   {
+    "key": "21A5",
     "category": "So",
     "mappings": {
       "default": {
@@ -263,10 +264,10 @@
       "mathspeak": {
         "sbrief": "U arrow from bar"
       }
-    },
-    "key": "21A5"
+    }
   },
   {
+    "key": "21A6",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -275,10 +276,10 @@
       "mathspeak": {
         "sbrief": "R arrow from bar"
       }
-    },
-    "key": "21A6"
+    }
   },
   {
+    "key": "21A7",
     "category": "So",
     "mappings": {
       "default": {
@@ -287,10 +288,10 @@
       "mathspeak": {
         "sbrief": "D arrow from bar"
       }
-    },
-    "key": "21A7"
+    }
   },
   {
+    "key": "21A8",
     "category": "So",
     "mappings": {
       "default": {
@@ -299,10 +300,10 @@
       "mathspeak": {
         "sbrief": "U D arrow with base"
       }
-    },
-    "key": "21A8"
+    }
   },
   {
+    "key": "21A9",
     "category": "So",
     "mappings": {
       "default": {
@@ -311,10 +312,10 @@
       "mathspeak": {
         "sbrief": "L arrow with hook"
       }
-    },
-    "key": "21A9"
+    }
   },
   {
+    "key": "21AA",
     "category": "So",
     "mappings": {
       "default": {
@@ -323,10 +324,10 @@
       "mathspeak": {
         "sbrief": "R arrow with hook"
       }
-    },
-    "key": "21AA"
+    }
   },
   {
+    "key": "21AB",
     "category": "So",
     "mappings": {
       "default": {
@@ -335,10 +336,10 @@
       "mathspeak": {
         "sbrief": "L arrow with loop"
       }
-    },
-    "key": "21AB"
+    }
   },
   {
+    "key": "21AC",
     "category": "So",
     "mappings": {
       "default": {
@@ -347,10 +348,10 @@
       "mathspeak": {
         "sbrief": "R arrow with loop"
       }
-    },
-    "key": "21AC"
+    }
   },
   {
+    "key": "21AD",
     "category": "So",
     "mappings": {
       "default": {
@@ -359,10 +360,10 @@
       "mathspeak": {
         "sbrief": "L R wave arrow"
       }
-    },
-    "key": "21AD"
+    }
   },
   {
+    "key": "21AE",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -371,10 +372,10 @@
       "mathspeak": {
         "sbrief": "L R arrow with stroke"
       }
-    },
-    "key": "21AE"
+    }
   },
   {
+    "key": "21AF",
     "category": "So",
     "mappings": {
       "default": {
@@ -383,10 +384,10 @@
       "mathspeak": {
         "sbrief": "D zigzag arrow"
       }
-    },
-    "key": "21AF"
+    }
   },
   {
+    "key": "21B0",
     "category": "So",
     "mappings": {
       "default": {
@@ -395,10 +396,10 @@
       "mathspeak": {
         "sbrief": "U arrow with tip left"
       }
-    },
-    "key": "21B0"
+    }
   },
   {
+    "key": "21B1",
     "category": "So",
     "mappings": {
       "default": {
@@ -407,10 +408,10 @@
       "mathspeak": {
         "sbrief": "U arrow with tip right"
       }
-    },
-    "key": "21B1"
+    }
   },
   {
+    "key": "21B2",
     "category": "So",
     "mappings": {
       "default": {
@@ -419,10 +420,10 @@
       "mathspeak": {
         "sbrief": "D arrow with tip left"
       }
-    },
-    "key": "21B2"
+    }
   },
   {
+    "key": "21B3",
     "category": "So",
     "mappings": {
       "default": {
@@ -431,10 +432,10 @@
       "mathspeak": {
         "sbrief": "D arrow with tip right"
       }
-    },
-    "key": "21B3"
+    }
   },
   {
+    "key": "21B4",
     "category": "So",
     "mappings": {
       "default": {
@@ -443,10 +444,10 @@
       "mathspeak": {
         "sbrief": "R arrow with corner down"
       }
-    },
-    "key": "21B4"
+    }
   },
   {
+    "key": "21B5",
     "category": "So",
     "mappings": {
       "default": {
@@ -455,28 +456,28 @@
       "mathspeak": {
         "sbrief": "D arrow with corner left"
       }
-    },
-    "key": "21B5"
+    }
   },
   {
+    "key": "21B6",
     "category": "So",
     "mappings": {
       "default": {
         "default": "anticlockwise top semicircle arrow"
       }
-    },
-    "key": "21B6"
+    }
   },
   {
+    "key": "21B7",
     "category": "So",
     "mappings": {
       "default": {
         "default": "clockwise top semicircle arrow"
       }
-    },
-    "key": "21B7"
+    }
   },
   {
+    "key": "21B8",
     "category": "So",
     "mappings": {
       "default": {
@@ -485,10 +486,10 @@
       "mathspeak": {
         "sbrief": "U L arrow to long bar"
       }
-    },
-    "key": "21B8"
+    }
   },
   {
+    "key": "21B9",
     "category": "So",
     "mappings": {
       "default": {
@@ -497,28 +498,28 @@
       "mathspeak": {
         "sbrief": "L arrow to bar over R arrow to bar"
       }
-    },
-    "key": "21B9"
+    }
   },
   {
+    "key": "21BA",
     "category": "So",
     "mappings": {
       "default": {
         "default": "anticlockwise open circle arrow"
       }
-    },
-    "key": "21BA"
+    }
   },
   {
+    "key": "21BB",
     "category": "So",
     "mappings": {
       "default": {
         "default": "clockwise open circle arrow"
       }
-    },
-    "key": "21BB"
+    }
   },
   {
+    "key": "21C4",
     "category": "So",
     "mappings": {
       "default": {
@@ -527,10 +528,10 @@
       "mathspeak": {
         "sbrief": "R arrow over L arrow"
       }
-    },
-    "key": "21C4"
+    }
   },
   {
+    "key": "21C5",
     "category": "So",
     "mappings": {
       "default": {
@@ -539,10 +540,10 @@
       "mathspeak": {
         "sbrief": "U arrow L of D arrow"
       }
-    },
-    "key": "21C5"
+    }
   },
   {
+    "key": "21C6",
     "category": "So",
     "mappings": {
       "default": {
@@ -551,10 +552,10 @@
       "mathspeak": {
         "sbrief": "L arrow over R arrow"
       }
-    },
-    "key": "21C6"
+    }
   },
   {
+    "key": "21C7",
     "category": "So",
     "mappings": {
       "default": {
@@ -563,10 +564,10 @@
       "mathspeak": {
         "sbrief": "L paired arrows"
       }
-    },
-    "key": "21C7"
+    }
   },
   {
+    "key": "21C8",
     "category": "So",
     "mappings": {
       "default": {
@@ -575,10 +576,10 @@
       "mathspeak": {
         "sbrief": "U paired arrows"
       }
-    },
-    "key": "21C8"
+    }
   },
   {
+    "key": "21C9",
     "category": "So",
     "mappings": {
       "default": {
@@ -587,10 +588,10 @@
       "mathspeak": {
         "sbrief": "R paired arrows"
       }
-    },
-    "key": "21C9"
+    }
   },
   {
+    "key": "21CA",
     "category": "So",
     "mappings": {
       "default": {
@@ -599,10 +600,10 @@
       "mathspeak": {
         "sbrief": "D paired arrows"
       }
-    },
-    "key": "21CA"
+    }
   },
   {
+    "key": "21CD",
     "category": "So",
     "mappings": {
       "default": {
@@ -611,10 +612,10 @@
       "mathspeak": {
         "sbrief": "L double arrow with stroke"
       }
-    },
-    "key": "21CD"
+    }
   },
   {
+    "key": "21CE",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -623,10 +624,10 @@
       "mathspeak": {
         "sbrief": "L R double arrow with stroke"
       }
-    },
-    "key": "21CE"
+    }
   },
   {
+    "key": "21CF",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -635,10 +636,10 @@
       "mathspeak": {
         "sbrief": "R double arrow with stroke"
       }
-    },
-    "key": "21CF"
+    }
   },
   {
+    "key": "21D0",
     "category": "So",
     "mappings": {
       "default": {
@@ -647,10 +648,10 @@
       "mathspeak": {
         "sbrief": "L double arrow"
       }
-    },
-    "key": "21D0"
+    }
   },
   {
+    "key": "21D1",
     "category": "So",
     "mappings": {
       "default": {
@@ -659,10 +660,10 @@
       "mathspeak": {
         "sbrief": "U double arrow"
       }
-    },
-    "key": "21D1"
+    }
   },
   {
+    "key": "21D2",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -671,10 +672,10 @@
       "mathspeak": {
         "sbrief": "R double arrow"
       }
-    },
-    "key": "21D2"
+    }
   },
   {
+    "key": "21D3",
     "category": "So",
     "mappings": {
       "default": {
@@ -683,10 +684,10 @@
       "mathspeak": {
         "sbrief": "D double arrow"
       }
-    },
-    "key": "21D3"
+    }
   },
   {
+    "key": "21D4",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -695,10 +696,10 @@
       "mathspeak": {
         "sbrief": "L R double arrow"
       }
-    },
-    "key": "21D4"
+    }
   },
   {
+    "key": "21D5",
     "category": "So",
     "mappings": {
       "default": {
@@ -707,10 +708,10 @@
       "mathspeak": {
         "sbrief": "U D double arrow"
       }
-    },
-    "key": "21D5"
+    }
   },
   {
+    "key": "21D6",
     "category": "So",
     "mappings": {
       "default": {
@@ -719,10 +720,10 @@
       "mathspeak": {
         "sbrief": "U L double arrow"
       }
-    },
-    "key": "21D6"
+    }
   },
   {
+    "key": "21D7",
     "category": "So",
     "mappings": {
       "default": {
@@ -731,10 +732,10 @@
       "mathspeak": {
         "sbrief": "U R double arrow"
       }
-    },
-    "key": "21D7"
+    }
   },
   {
+    "key": "21D8",
     "category": "So",
     "mappings": {
       "default": {
@@ -743,10 +744,10 @@
       "mathspeak": {
         "sbrief": "D R double arrow"
       }
-    },
-    "key": "21D8"
+    }
   },
   {
+    "key": "21D9",
     "category": "So",
     "mappings": {
       "default": {
@@ -755,10 +756,10 @@
       "mathspeak": {
         "sbrief": "D L double arrow"
       }
-    },
-    "key": "21D9"
+    }
   },
   {
+    "key": "21DA",
     "category": "So",
     "mappings": {
       "default": {
@@ -767,10 +768,10 @@
       "mathspeak": {
         "sbrief": "L triple arrow"
       }
-    },
-    "key": "21DA"
+    }
   },
   {
+    "key": "21DB",
     "category": "So",
     "mappings": {
       "default": {
@@ -779,10 +780,10 @@
       "mathspeak": {
         "sbrief": "R triple arrow"
       }
-    },
-    "key": "21DB"
+    }
   },
   {
+    "key": "21DC",
     "category": "So",
     "mappings": {
       "default": {
@@ -791,10 +792,10 @@
       "mathspeak": {
         "sbrief": "L squiggle arrow"
       }
-    },
-    "key": "21DC"
+    }
   },
   {
+    "key": "21DD",
     "category": "So",
     "mappings": {
       "default": {
@@ -803,10 +804,10 @@
       "mathspeak": {
         "sbrief": "R squiggle arrow"
       }
-    },
-    "key": "21DD"
+    }
   },
   {
+    "key": "21DE",
     "category": "So",
     "mappings": {
       "default": {
@@ -815,10 +816,10 @@
       "mathspeak": {
         "sbrief": "U arrow with double stroke"
       }
-    },
-    "key": "21DE"
+    }
   },
   {
+    "key": "21DF",
     "category": "So",
     "mappings": {
       "default": {
@@ -827,10 +828,10 @@
       "mathspeak": {
         "sbrief": "D arrow with double stroke"
       }
-    },
-    "key": "21DF"
+    }
   },
   {
+    "key": "21E0",
     "category": "So",
     "mappings": {
       "default": {
@@ -839,10 +840,10 @@
       "mathspeak": {
         "sbrief": "L dashed arrow"
       }
-    },
-    "key": "21E0"
+    }
   },
   {
+    "key": "21E1",
     "category": "So",
     "mappings": {
       "default": {
@@ -851,10 +852,10 @@
       "mathspeak": {
         "sbrief": "U dashed arrow"
       }
-    },
-    "key": "21E1"
+    }
   },
   {
+    "key": "21E2",
     "category": "So",
     "mappings": {
       "default": {
@@ -863,10 +864,10 @@
       "mathspeak": {
         "sbrief": "R dashed arrow"
       }
-    },
-    "key": "21E2"
+    }
   },
   {
+    "key": "21E3",
     "category": "So",
     "mappings": {
       "default": {
@@ -875,10 +876,10 @@
       "mathspeak": {
         "sbrief": "D dashed arrow"
       }
-    },
-    "key": "21E3"
+    }
   },
   {
+    "key": "21E4",
     "category": "So",
     "mappings": {
       "default": {
@@ -887,10 +888,10 @@
       "mathspeak": {
         "sbrief": "L arrow to bar"
       }
-    },
-    "key": "21E4"
+    }
   },
   {
+    "key": "21E5",
     "category": "So",
     "mappings": {
       "default": {
@@ -899,10 +900,10 @@
       "mathspeak": {
         "sbrief": "R arrow to bar"
       }
-    },
-    "key": "21E5"
+    }
   },
   {
+    "key": "21E6",
     "category": "So",
     "mappings": {
       "default": {
@@ -911,10 +912,10 @@
       "mathspeak": {
         "sbrief": "white L arrow"
       }
-    },
-    "key": "21E6"
+    }
   },
   {
+    "key": "21E7",
     "category": "So",
     "mappings": {
       "default": {
@@ -923,10 +924,10 @@
       "mathspeak": {
         "sbrief": "white U arrow"
       }
-    },
-    "key": "21E7"
+    }
   },
   {
+    "key": "21E8",
     "category": "So",
     "mappings": {
       "default": {
@@ -935,10 +936,10 @@
       "mathspeak": {
         "sbrief": "white R arrow"
       }
-    },
-    "key": "21E8"
+    }
   },
   {
+    "key": "21E9",
     "category": "So",
     "mappings": {
       "default": {
@@ -947,10 +948,10 @@
       "mathspeak": {
         "sbrief": "white D arrow"
       }
-    },
-    "key": "21E9"
+    }
   },
   {
+    "key": "21EA",
     "category": "So",
     "mappings": {
       "default": {
@@ -959,10 +960,10 @@
       "mathspeak": {
         "sbrief": "white U arrow from bar"
       }
-    },
-    "key": "21EA"
+    }
   },
   {
+    "key": "21EB",
     "category": "So",
     "mappings": {
       "default": {
@@ -971,10 +972,10 @@
       "mathspeak": {
         "sbrief": "white U arrow on pedestal"
       }
-    },
-    "key": "21EB"
+    }
   },
   {
+    "key": "21EC",
     "category": "So",
     "mappings": {
       "default": {
@@ -983,10 +984,10 @@
       "mathspeak": {
         "sbrief": "white U arrow on pedestal with horizontal bar"
       }
-    },
-    "key": "21EC"
+    }
   },
   {
+    "key": "21ED",
     "category": "So",
     "mappings": {
       "default": {
@@ -995,10 +996,10 @@
       "mathspeak": {
         "sbrief": "white U arrow on pedestal with vertical bar"
       }
-    },
-    "key": "21ED"
+    }
   },
   {
+    "key": "21EE",
     "category": "So",
     "mappings": {
       "default": {
@@ -1007,10 +1008,10 @@
       "mathspeak": {
         "sbrief": "white double U arrow"
       }
-    },
-    "key": "21EE"
+    }
   },
   {
+    "key": "21EF",
     "category": "So",
     "mappings": {
       "default": {
@@ -1019,10 +1020,10 @@
       "mathspeak": {
         "sbrief": "white double U arrow on pedestal"
       }
-    },
-    "key": "21EF"
+    }
   },
   {
+    "key": "21F0",
     "category": "So",
     "mappings": {
       "default": {
@@ -1031,28 +1032,28 @@
       "mathspeak": {
         "sbrief": "white R arrow from wall"
       }
-    },
-    "key": "21F0"
+    }
   },
   {
+    "key": "21F1",
     "category": "So",
     "mappings": {
       "default": {
         "default": "north west arrow to corner"
       }
-    },
-    "key": "21F1"
+    }
   },
   {
+    "key": "21F2",
     "category": "So",
     "mappings": {
       "default": {
         "default": "south east arrow to corner"
       }
-    },
-    "key": "21F2"
+    }
   },
   {
+    "key": "21F3",
     "category": "So",
     "mappings": {
       "default": {
@@ -1061,10 +1062,10 @@
       "mathspeak": {
         "sbrief": "U D white arrow"
       }
-    },
-    "key": "21F3"
+    }
   },
   {
+    "key": "21F4",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1073,10 +1074,10 @@
       "mathspeak": {
         "sbrief": "R arrow with small circle"
       }
-    },
-    "key": "21F4"
+    }
   },
   {
+    "key": "21F5",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1085,10 +1086,10 @@
       "mathspeak": {
         "sbrief": "D arrow L of U arrow"
       }
-    },
-    "key": "21F5"
+    }
   },
   {
+    "key": "21F6",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1097,10 +1098,10 @@
       "mathspeak": {
         "sbrief": "three R arrows"
       }
-    },
-    "key": "21F6"
+    }
   },
   {
+    "key": "21F7",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1109,10 +1110,10 @@
       "mathspeak": {
         "sbrief": "L arrow with vertical stroke"
       }
-    },
-    "key": "21F7"
+    }
   },
   {
+    "key": "21F8",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1121,10 +1122,10 @@
       "mathspeak": {
         "sbrief": "R arrow with vertical stroke"
       }
-    },
-    "key": "21F8"
+    }
   },
   {
+    "key": "21F9",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1133,10 +1134,10 @@
       "mathspeak": {
         "sbrief": "L R arrow with vertical stroke"
       }
-    },
-    "key": "21F9"
+    }
   },
   {
+    "key": "21FA",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1145,10 +1146,10 @@
       "mathspeak": {
         "sbrief": "L arrow with double vertical stroke"
       }
-    },
-    "key": "21FA"
+    }
   },
   {
+    "key": "21FB",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1157,10 +1158,10 @@
       "mathspeak": {
         "sbrief": "R arrow with double vertical stroke"
       }
-    },
-    "key": "21FB"
+    }
   },
   {
+    "key": "21FC",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1169,10 +1170,10 @@
       "mathspeak": {
         "sbrief": "L R arrow with double vertical stroke"
       }
-    },
-    "key": "21FC"
+    }
   },
   {
+    "key": "21FD",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1181,10 +1182,10 @@
       "mathspeak": {
         "sbrief": "L open headed arrow"
       }
-    },
-    "key": "21FD"
+    }
   },
   {
+    "key": "21FE",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1193,10 +1194,10 @@
       "mathspeak": {
         "sbrief": "r open headed arrow"
       }
-    },
-    "key": "21FE"
+    }
   },
   {
+    "key": "21FF",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1205,19 +1206,19 @@
       "mathspeak": {
         "sbrief": "L R open headed arrow"
       }
-    },
-    "key": "21FF"
+    }
   },
   {
+    "key": "2301",
     "category": "So",
     "mappings": {
       "default": {
         "default": "electric arrow"
       }
-    },
-    "key": "2301"
+    }
   },
   {
+    "key": "2303",
     "category": "So",
     "mappings": {
       "default": {
@@ -1226,10 +1227,10 @@
       "mathspeak": {
         "sbrief": "U arrowhead"
       }
-    },
-    "key": "2303"
+    }
   },
   {
+    "key": "2304",
     "category": "So",
     "mappings": {
       "default": {
@@ -1238,10 +1239,10 @@
       "mathspeak": {
         "sbrief": "D arrowhead"
       }
-    },
-    "key": "2304"
+    }
   },
   {
+    "key": "2324",
     "category": "So",
     "mappings": {
       "default": {
@@ -1251,19 +1252,19 @@
       "mathspeak": {
         "sbrief": "U arrowhead between two horizontal bars"
       }
-    },
-    "key": "2324"
+    }
   },
   {
+    "key": "238B",
     "category": "So",
     "mappings": {
       "default": {
         "default": "broken circle with northwest arrow"
       }
-    },
-    "key": "238B"
+    }
   },
   {
+    "key": "2794",
     "category": "So",
     "mappings": {
       "default": {
@@ -1272,10 +1273,10 @@
       "mathspeak": {
         "sbrief": "heavy wide headed R arrow"
       }
-    },
-    "key": "2794"
+    }
   },
   {
+    "key": "2798",
     "category": "So",
     "mappings": {
       "default": {
@@ -1284,10 +1285,10 @@
       "mathspeak": {
         "sbrief": "heavy D R arrow"
       }
-    },
-    "key": "2798"
+    }
   },
   {
+    "key": "2799",
     "category": "So",
     "mappings": {
       "default": {
@@ -1296,10 +1297,10 @@
       "mathspeak": {
         "sbrief": "heavy R arrow"
       }
-    },
-    "key": "2799"
+    }
   },
   {
+    "key": "279A",
     "category": "So",
     "mappings": {
       "default": {
@@ -1308,10 +1309,10 @@
       "mathspeak": {
         "sbrief": "heavy U R arrow"
       }
-    },
-    "key": "279A"
+    }
   },
   {
+    "key": "279B",
     "category": "So",
     "mappings": {
       "default": {
@@ -1320,10 +1321,10 @@
       "mathspeak": {
         "sbrief": "drafting point R arrow"
       }
-    },
-    "key": "279B"
+    }
   },
   {
+    "key": "279C",
     "category": "So",
     "mappings": {
       "default": {
@@ -1332,10 +1333,10 @@
       "mathspeak": {
         "sbrief": "heavy round tipped R arrow"
       }
-    },
-    "key": "279C"
+    }
   },
   {
+    "key": "279D",
     "category": "So",
     "mappings": {
       "default": {
@@ -1344,10 +1345,10 @@
       "mathspeak": {
         "sbrief": "triangle headed R arrow"
       }
-    },
-    "key": "279D"
+    }
   },
   {
+    "key": "279E",
     "category": "So",
     "mappings": {
       "default": {
@@ -1356,10 +1357,10 @@
       "mathspeak": {
         "sbrief": "heavy triangle headed R arrow"
       }
-    },
-    "key": "279E"
+    }
   },
   {
+    "key": "279F",
     "category": "So",
     "mappings": {
       "default": {
@@ -1368,10 +1369,10 @@
       "mathspeak": {
         "sbrief": "dashed triangle headed R arrow"
       }
-    },
-    "key": "279F"
+    }
   },
   {
+    "key": "27A0",
     "category": "So",
     "mappings": {
       "default": {
@@ -1380,10 +1381,10 @@
       "mathspeak": {
         "sbrief": "heavy dashed triangle headed R arrow"
       }
-    },
-    "key": "27A0"
+    }
   },
   {
+    "key": "27A1",
     "category": "So",
     "mappings": {
       "default": {
@@ -1392,10 +1393,10 @@
       "mathspeak": {
         "sbrief": "black R arrow"
       }
-    },
-    "key": "27A1"
+    }
   },
   {
+    "key": "27A2",
     "category": "So",
     "mappings": {
       "default": {
@@ -1404,10 +1405,10 @@
       "mathspeak": {
         "sbrief": "three d top lighted R arrowhead"
       }
-    },
-    "key": "27A2"
+    }
   },
   {
+    "key": "27A3",
     "category": "So",
     "mappings": {
       "default": {
@@ -1416,10 +1417,10 @@
       "mathspeak": {
         "sbrief": "three d bottom lighted R arrowhead"
       }
-    },
-    "key": "27A3"
+    }
   },
   {
+    "key": "27A4",
     "category": "So",
     "mappings": {
       "default": {
@@ -1428,10 +1429,10 @@
       "mathspeak": {
         "sbrief": "black R arrowhead"
       }
-    },
-    "key": "27A4"
+    }
   },
   {
+    "key": "27A5",
     "category": "So",
     "mappings": {
       "default": {
@@ -1440,10 +1441,10 @@
       "mathspeak": {
         "sbrief": "heavy black curved D and R arrow"
       }
-    },
-    "key": "27A5"
+    }
   },
   {
+    "key": "27A6",
     "category": "So",
     "mappings": {
       "default": {
@@ -1452,10 +1453,10 @@
       "mathspeak": {
         "sbrief": "heavy black curved U and R arrow"
       }
-    },
-    "key": "27A6"
+    }
   },
   {
+    "key": "27A7",
     "category": "So",
     "mappings": {
       "default": {
@@ -1464,10 +1465,10 @@
       "mathspeak": {
         "sbrief": "squat black R arrow"
       }
-    },
-    "key": "27A7"
+    }
   },
   {
+    "key": "27A8",
     "category": "So",
     "mappings": {
       "default": {
@@ -1476,10 +1477,10 @@
       "mathspeak": {
         "sbrief": "heavy concave pointed black R arrow"
       }
-    },
-    "key": "27A8"
+    }
   },
   {
+    "key": "27A9",
     "category": "So",
     "mappings": {
       "default": {
@@ -1488,10 +1489,10 @@
       "mathspeak": {
         "sbrief": "right shaded white R arrow"
       }
-    },
-    "key": "27A9"
+    }
   },
   {
+    "key": "27AA",
     "category": "So",
     "mappings": {
       "default": {
@@ -1500,10 +1501,10 @@
       "mathspeak": {
         "sbrief": "left shaded white R arrow"
       }
-    },
-    "key": "27AA"
+    }
   },
   {
+    "key": "27AB",
     "category": "So",
     "mappings": {
       "default": {
@@ -1512,10 +1513,10 @@
       "mathspeak": {
         "sbrief": "back tilted shadowed white R arrow"
       }
-    },
-    "key": "27AB"
+    }
   },
   {
+    "key": "27AC",
     "category": "So",
     "mappings": {
       "default": {
@@ -1524,10 +1525,10 @@
       "mathspeak": {
         "sbrief": "front tilted shadowed white R arrow"
       }
-    },
-    "key": "27AC"
+    }
   },
   {
+    "key": "27AD",
     "category": "So",
     "mappings": {
       "default": {
@@ -1536,10 +1537,10 @@
       "mathspeak": {
         "sbrief": "heavy lower right shadowed white R arrow"
       }
-    },
-    "key": "27AD"
+    }
   },
   {
+    "key": "27AE",
     "category": "So",
     "mappings": {
       "default": {
@@ -1548,10 +1549,10 @@
       "mathspeak": {
         "sbrief": "heavy upper right shadowed white R arrow"
       }
-    },
-    "key": "27AE"
+    }
   },
   {
+    "key": "27AF",
     "category": "So",
     "mappings": {
       "default": {
@@ -1560,10 +1561,10 @@
       "mathspeak": {
         "sbrief": "notched lower right shadowed white R arrow"
       }
-    },
-    "key": "27AF"
+    }
   },
   {
+    "key": "27B1",
     "category": "So",
     "mappings": {
       "default": {
@@ -1572,10 +1573,10 @@
       "mathspeak": {
         "sbrief": "notched upper right shadowed white R arrow"
       }
-    },
-    "key": "27B1"
+    }
   },
   {
+    "key": "27B2",
     "category": "So",
     "mappings": {
       "default": {
@@ -1584,10 +1585,10 @@
       "mathspeak": {
         "sbrief": "circled heavy white R arrow"
       }
-    },
-    "key": "27B2"
+    }
   },
   {
+    "key": "27B3",
     "category": "So",
     "mappings": {
       "default": {
@@ -1596,10 +1597,10 @@
       "mathspeak": {
         "sbrief": "white feathered R arrow"
       }
-    },
-    "key": "27B3"
+    }
   },
   {
+    "key": "27B4",
     "category": "So",
     "mappings": {
       "default": {
@@ -1608,10 +1609,10 @@
       "mathspeak": {
         "sbrief": "black feathered D R arrow"
       }
-    },
-    "key": "27B4"
+    }
   },
   {
+    "key": "27B5",
     "category": "So",
     "mappings": {
       "default": {
@@ -1620,10 +1621,10 @@
       "mathspeak": {
         "sbrief": "black feathered R arrow"
       }
-    },
-    "key": "27B5"
+    }
   },
   {
+    "key": "27B6",
     "category": "So",
     "mappings": {
       "default": {
@@ -1632,10 +1633,10 @@
       "mathspeak": {
         "sbrief": "black feathered U R arrow"
       }
-    },
-    "key": "27B6"
+    }
   },
   {
+    "key": "27B7",
     "category": "So",
     "mappings": {
       "default": {
@@ -1644,10 +1645,10 @@
       "mathspeak": {
         "sbrief": "heavy black feathered D R arrow"
       }
-    },
-    "key": "27B7"
+    }
   },
   {
+    "key": "27B8",
     "category": "So",
     "mappings": {
       "default": {
@@ -1656,10 +1657,10 @@
       "mathspeak": {
         "sbrief": "heavy black feathered R arrow"
       }
-    },
-    "key": "27B8"
+    }
   },
   {
+    "key": "27B9",
     "category": "So",
     "mappings": {
       "default": {
@@ -1668,10 +1669,10 @@
       "mathspeak": {
         "sbrief": "heavy black feathered U R arrow"
       }
-    },
-    "key": "27B9"
+    }
   },
   {
+    "key": "27BA",
     "category": "So",
     "mappings": {
       "default": {
@@ -1680,10 +1681,10 @@
       "mathspeak": {
         "sbrief": "teardrop barbed R arrow"
       }
-    },
-    "key": "27BA"
+    }
   },
   {
+    "key": "27BB",
     "category": "So",
     "mappings": {
       "default": {
@@ -1692,10 +1693,10 @@
       "mathspeak": {
         "sbrief": "heavy teardrop shanked R arrow"
       }
-    },
-    "key": "27BB"
+    }
   },
   {
+    "key": "27BC",
     "category": "So",
     "mappings": {
       "default": {
@@ -1704,10 +1705,10 @@
       "mathspeak": {
         "sbrief": "wedge tailed R arrow"
       }
-    },
-    "key": "27BC"
+    }
   },
   {
+    "key": "27BD",
     "category": "So",
     "mappings": {
       "default": {
@@ -1716,10 +1717,10 @@
       "mathspeak": {
         "sbrief": "heavy wedge tailed R arrow"
       }
-    },
-    "key": "27BD"
+    }
   },
   {
+    "key": "27BE",
     "category": "So",
     "mappings": {
       "default": {
@@ -1728,10 +1729,10 @@
       "mathspeak": {
         "sbrief": "open outlined R arrow"
       }
-    },
-    "key": "27BE"
+    }
   },
   {
+    "key": "27F0",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1740,10 +1741,10 @@
       "mathspeak": {
         "sbrief": "U quadruple arrow"
       }
-    },
-    "key": "27F0"
+    }
   },
   {
+    "key": "27F1",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1752,28 +1753,28 @@
       "mathspeak": {
         "sbrief": "D quadrule arrow"
       }
-    },
-    "key": "27F1"
+    }
   },
   {
+    "key": "27F2",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "anticlockwise gapped circle arrow"
       }
-    },
-    "key": "27F2"
+    }
   },
   {
+    "key": "27F3",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "clockwise gapped circle arrow"
       }
-    },
-    "key": "27F3"
+    }
   },
   {
+    "key": "27F4",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1782,10 +1783,10 @@
       "mathspeak": {
         "sbrief": "R arrow with circled plus"
       }
-    },
-    "key": "27F4"
+    }
   },
   {
+    "key": "27F5",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1794,10 +1795,10 @@
       "mathspeak": {
         "sbrief": "long L arrow"
       }
-    },
-    "key": "27F5"
+    }
   },
   {
+    "key": "27F6",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1806,10 +1807,10 @@
       "mathspeak": {
         "sbrief": "long R arrow"
       }
-    },
-    "key": "27F6"
+    }
   },
   {
+    "key": "27F7",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1818,10 +1819,10 @@
       "mathspeak": {
         "sbrief": "long L R arrow"
       }
-    },
-    "key": "27F7"
+    }
   },
   {
+    "key": "27F8",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1830,10 +1831,10 @@
       "mathspeak": {
         "sbrief": "long l double arrow"
       }
-    },
-    "key": "27F8"
+    }
   },
   {
+    "key": "27F9",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1842,10 +1843,10 @@
       "mathspeak": {
         "sbrief": "long R double arrow"
       }
-    },
-    "key": "27F9"
+    }
   },
   {
+    "key": "27FA",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1854,10 +1855,10 @@
       "mathspeak": {
         "sbrief": "long L R double arrow"
       }
-    },
-    "key": "27FA"
+    }
   },
   {
+    "key": "27FB",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1866,10 +1867,10 @@
       "mathspeak": {
         "sbrief": "long L arrow from bar"
       }
-    },
-    "key": "27FB"
+    }
   },
   {
+    "key": "27FC",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1878,10 +1879,10 @@
       "mathspeak": {
         "sbrief": "long R arrow from bar"
       }
-    },
-    "key": "27FC"
+    }
   },
   {
+    "key": "27FD",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1890,10 +1891,10 @@
       "mathspeak": {
         "sbrief": "long l double arrow from bar"
       }
-    },
-    "key": "27FD"
+    }
   },
   {
+    "key": "27FE",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1902,10 +1903,10 @@
       "mathspeak": {
         "sbrief": "long R double arrow from bar"
       }
-    },
-    "key": "27FE"
+    }
   },
   {
+    "key": "27FF",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1914,10 +1915,10 @@
       "mathspeak": {
         "sbrief": "long r squiggle arrow"
       }
-    },
-    "key": "27FF"
+    }
   },
   {
+    "key": "2900",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1926,10 +1927,10 @@
       "mathspeak": {
         "sbrief": "two headed R arrow with vertical stroke"
       }
-    },
-    "key": "2900"
+    }
   },
   {
+    "key": "2901",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1938,10 +1939,10 @@
       "mathspeak": {
         "sbrief": "two headed R arrow with double vertical stroke"
       }
-    },
-    "key": "2901"
+    }
   },
   {
+    "key": "2902",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1950,10 +1951,10 @@
       "mathspeak": {
         "sbrief": "double L arrow with vertical stroke"
       }
-    },
-    "key": "2902"
+    }
   },
   {
+    "key": "2903",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1962,10 +1963,10 @@
       "mathspeak": {
         "sbrief": "double R arrow with vertical stroke"
       }
-    },
-    "key": "2903"
+    }
   },
   {
+    "key": "2904",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1974,10 +1975,10 @@
       "mathspeak": {
         "sbrief": "double L R arrow with vertical stroke"
       }
-    },
-    "key": "2904"
+    }
   },
   {
+    "key": "2905",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1986,10 +1987,10 @@
       "mathspeak": {
         "sbrief": "two headed R arrow from bar"
       }
-    },
-    "key": "2905"
+    }
   },
   {
+    "key": "2906",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -1998,10 +1999,10 @@
       "mathspeak": {
         "sbrief": "double L arrow from bar"
       }
-    },
-    "key": "2906"
+    }
   },
   {
+    "key": "2907",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2010,19 +2011,19 @@
       "mathspeak": {
         "sbrief": "double R arrow from bar"
       }
-    },
-    "key": "2907"
+    }
   },
   {
+    "key": "2908",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrow down with horizontal stroke"
       }
-    },
-    "key": "2908"
+    }
   },
   {
+    "key": "2909",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2031,10 +2032,10 @@
       "mathspeak": {
         "sbrief": "U arrow with horizontal stroke"
       }
-    },
-    "key": "2909"
+    }
   },
   {
+    "key": "290A",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2043,10 +2044,10 @@
       "mathspeak": {
         "sbrief": "U triple arrow"
       }
-    },
-    "key": "290A"
+    }
   },
   {
+    "key": "290B",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2055,10 +2056,10 @@
       "mathspeak": {
         "sbrief": "D triple arrow"
       }
-    },
-    "key": "290B"
+    }
   },
   {
+    "key": "290C",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2067,10 +2068,10 @@
       "mathspeak": {
         "sbrief": "L double dash arrow"
       }
-    },
-    "key": "290C"
+    }
   },
   {
+    "key": "290D",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2079,10 +2080,10 @@
       "mathspeak": {
         "sbrief": "R double dash arrow"
       }
-    },
-    "key": "290D"
+    }
   },
   {
+    "key": "290E",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2091,10 +2092,10 @@
       "mathspeak": {
         "sbrief": "L triple dash arrow"
       }
-    },
-    "key": "290E"
+    }
   },
   {
+    "key": "290F",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2103,10 +2104,10 @@
       "mathspeak": {
         "sbrief": "r triple dash arrow"
       }
-    },
-    "key": "290F"
+    }
   },
   {
+    "key": "2910",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2115,10 +2116,10 @@
       "mathspeak": {
         "sbrief": "r two headed triple dash arrow"
       }
-    },
-    "key": "2910"
+    }
   },
   {
+    "key": "2911",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2127,10 +2128,10 @@
       "mathspeak": {
         "sbrief": "R arrow with dotted stem"
       }
-    },
-    "key": "2911"
+    }
   },
   {
+    "key": "2912",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2139,10 +2140,10 @@
       "mathspeak": {
         "sbrief": "U arrow to bar"
       }
-    },
-    "key": "2912"
+    }
   },
   {
+    "key": "2913",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2151,10 +2152,10 @@
       "mathspeak": {
         "sbrief": "D arrow to bar"
       }
-    },
-    "key": "2913"
+    }
   },
   {
+    "key": "2914",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2163,10 +2164,10 @@
       "mathspeak": {
         "sbrief": "R arrow with tail with vertical stroke"
       }
-    },
-    "key": "2914"
+    }
   },
   {
+    "key": "2915",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2175,10 +2176,10 @@
       "mathspeak": {
         "sbrief": "R arrow with tail with double vertical stroke"
       }
-    },
-    "key": "2915"
+    }
   },
   {
+    "key": "2916",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2187,10 +2188,10 @@
       "mathspeak": {
         "sbrief": "R two headed arrow with tail"
       }
-    },
-    "key": "2916"
+    }
   },
   {
+    "key": "2917",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2199,10 +2200,10 @@
       "mathspeak": {
         "sbrief": "R two headed arrow with tail with vertical stroke"
       }
-    },
-    "key": "2917"
+    }
   },
   {
+    "key": "2918",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2211,10 +2212,10 @@
       "mathspeak": {
         "sbrief": "R two headed arrow with tail with double vertical stroke"
       }
-    },
-    "key": "2918"
+    }
   },
   {
+    "key": "2919",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2223,10 +2224,10 @@
       "mathspeak": {
         "sbrief": "L arrow tail"
       }
-    },
-    "key": "2919"
+    }
   },
   {
+    "key": "291A",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2235,10 +2236,10 @@
       "mathspeak": {
         "sbrief": "R arrow tail"
       }
-    },
-    "key": "291A"
+    }
   },
   {
+    "key": "291B",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2247,10 +2248,10 @@
       "mathspeak": {
         "sbrief": "L double arrow tail"
       }
-    },
-    "key": "291B"
+    }
   },
   {
+    "key": "291C",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2259,10 +2260,10 @@
       "mathspeak": {
         "sbrief": "R double arrow tail"
       }
-    },
-    "key": "291C"
+    }
   },
   {
+    "key": "291D",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2271,10 +2272,10 @@
       "mathspeak": {
         "sbrief": "L arrow to black diamond"
       }
-    },
-    "key": "291D"
+    }
   },
   {
+    "key": "291E",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2283,10 +2284,10 @@
       "mathspeak": {
         "sbrief": "R arrow to black diamond"
       }
-    },
-    "key": "291E"
+    }
   },
   {
+    "key": "291F",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2295,10 +2296,10 @@
       "mathspeak": {
         "sbrief": "L arrow from bar to black diamond"
       }
-    },
-    "key": "291F"
+    }
   },
   {
+    "key": "2920",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2307,199 +2308,199 @@
       "mathspeak": {
         "sbrief": "R arrow from bar to black diamond"
       }
-    },
-    "key": "2920"
+    }
   },
   {
+    "key": "2921",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north west and south east arrow"
       }
-    },
-    "key": "2921"
+    }
   },
   {
+    "key": "2922",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north east and south west arrow"
       }
-    },
-    "key": "2922"
+    }
   },
   {
+    "key": "2923",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north west arrow with hook"
       }
-    },
-    "key": "2923"
+    }
   },
   {
+    "key": "2924",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north east arrow with hook"
       }
-    },
-    "key": "2924"
+    }
   },
   {
+    "key": "2925",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "south east arrow with hook"
       }
-    },
-    "key": "2925"
+    }
   },
   {
+    "key": "2926",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "south west arrow with hook"
       }
-    },
-    "key": "2926"
+    }
   },
   {
+    "key": "2927",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north west arrow and north east arrow"
       }
-    },
-    "key": "2927"
+    }
   },
   {
+    "key": "2928",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north east arrow and south east arrow"
       }
-    },
-    "key": "2928"
+    }
   },
   {
+    "key": "2929",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "south east arrow and south west arrow"
       }
-    },
-    "key": "2929"
+    }
   },
   {
+    "key": "292A",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "south west arrow and north west arrow"
       }
-    },
-    "key": "292A"
+    }
   },
   {
+    "key": "292D",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "south east arrow crossing north east arrow"
       }
-    },
-    "key": "292D"
+    }
   },
   {
+    "key": "292E",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north east arrow crossing south east arrow"
       }
-    },
-    "key": "292E"
+    }
   },
   {
+    "key": "292F",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "falling diagonal crossing north east arrow"
       }
-    },
-    "key": "292F"
+    }
   },
   {
+    "key": "2930",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "rising diagonal crossing south east arrow"
       }
-    },
-    "key": "2930"
+    }
   },
   {
+    "key": "2931",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north east arrow crossing north west arrow"
       }
-    },
-    "key": "2931"
+    }
   },
   {
+    "key": "2932",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "north west arrow crossing north east arrow"
       }
-    },
-    "key": "2932"
+    }
   },
   {
+    "key": "2933",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "wave arrow pointing directly right"
       }
-    },
-    "key": "2933"
+    }
   },
   {
+    "key": "2934",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrow pointing right then curving up"
       }
-    },
-    "key": "2934"
+    }
   },
   {
+    "key": "2935",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrow pointing right then curving down"
       }
-    },
-    "key": "2935"
+    }
   },
   {
+    "key": "2936",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrow pointing down then curving left"
       }
-    },
-    "key": "2936"
+    }
   },
   {
+    "key": "2937",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrow pointing down then curving right"
       }
-    },
-    "key": "2937"
+    }
   },
   {
+    "key": "2938",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2508,10 +2509,10 @@
       "mathspeak": {
         "sbrief": "R side arc clockwise arrow"
       }
-    },
-    "key": "2938"
+    }
   },
   {
+    "key": "2939",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2520,46 +2521,46 @@
       "mathspeak": {
         "sbrief": "L side arc anticlockwise arrow"
       }
-    },
-    "key": "2939"
+    }
   },
   {
+    "key": "293A",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "top arc anticlockwise arrow"
       }
-    },
-    "key": "293A"
+    }
   },
   {
+    "key": "293B",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom arc anticlockwise arrow"
       }
-    },
-    "key": "293B"
+    }
   },
   {
+    "key": "293C",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "top arc clockwise arrow with minus"
       }
-    },
-    "key": "293C"
+    }
   },
   {
+    "key": "293D",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "top arc anticlockwise arrow with plus"
       }
-    },
-    "key": "293D"
+    }
   },
   {
+    "key": "293E",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2568,10 +2569,10 @@
       "mathspeak": {
         "sbrief": "D R semicircular clockwise arrow"
       }
-    },
-    "key": "293E"
+    }
   },
   {
+    "key": "293F",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2580,28 +2581,28 @@
       "mathspeak": {
         "sbrief": "D L semicircular anticlockwise arrow"
       }
-    },
-    "key": "293F"
+    }
   },
   {
+    "key": "2940",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "anticlockwise closed circle arrow"
       }
-    },
-    "key": "2940"
+    }
   },
   {
+    "key": "2941",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "clockwise closed circle arrow"
       }
-    },
-    "key": "2941"
+    }
   },
   {
+    "key": "2942",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2610,10 +2611,10 @@
       "mathspeak": {
         "sbrief": "R arrow above short L arrow"
       }
-    },
-    "key": "2942"
+    }
   },
   {
+    "key": "2943",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2622,10 +2623,10 @@
       "mathspeak": {
         "sbrief": "L arrow above short R arrow"
       }
-    },
-    "key": "2943"
+    }
   },
   {
+    "key": "2944",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2634,10 +2635,10 @@
       "mathspeak": {
         "sbrief": "short R arrow above L arrow"
       }
-    },
-    "key": "2944"
+    }
   },
   {
+    "key": "2945",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2646,10 +2647,10 @@
       "mathspeak": {
         "sbrief": "R arrow with plus below"
       }
-    },
-    "key": "2945"
+    }
   },
   {
+    "key": "2946",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2658,10 +2659,10 @@
       "mathspeak": {
         "sbrief": "L arrow with plus below"
       }
-    },
-    "key": "2946"
+    }
   },
   {
+    "key": "2947",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2670,10 +2671,10 @@
       "mathspeak": {
         "sbrief": "R arrow through x"
       }
-    },
-    "key": "2947"
+    }
   },
   {
+    "key": "2948",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2682,10 +2683,10 @@
       "mathspeak": {
         "sbrief": "L R arrow through small circle"
       }
-    },
-    "key": "2948"
+    }
   },
   {
+    "key": "2949",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2694,10 +2695,10 @@
       "mathspeak": {
         "sbrief": "U two headed arrow from small circle"
       }
-    },
-    "key": "2949"
+    }
   },
   {
+    "key": "2970",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2706,10 +2707,10 @@
       "mathspeak": {
         "sbrief": "R double arrow with rounded head"
       }
-    },
-    "key": "2970"
+    }
   },
   {
+    "key": "2971",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2718,10 +2719,10 @@
       "mathspeak": {
         "sbrief": "equals sign above R arrow"
       }
-    },
-    "key": "2971"
+    }
   },
   {
+    "key": "2972",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2730,10 +2731,10 @@
       "mathspeak": {
         "sbrief": "tilde operator above R arrow"
       }
-    },
-    "key": "2972"
+    }
   },
   {
+    "key": "2973",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2742,10 +2743,10 @@
       "mathspeak": {
         "sbrief": "L arrow above tilde operator"
       }
-    },
-    "key": "2973"
+    }
   },
   {
+    "key": "2974",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2754,10 +2755,10 @@
       "mathspeak": {
         "sbrief": "R arrow above tilde operator"
       }
-    },
-    "key": "2974"
+    }
   },
   {
+    "key": "2975",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2766,10 +2767,10 @@
       "mathspeak": {
         "sbrief": "R arrow above almost equals"
       }
-    },
-    "key": "2975"
+    }
   },
   {
+    "key": "2976",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2778,10 +2779,10 @@
       "mathspeak": {
         "sbrief": "less than above L arrow"
       }
-    },
-    "key": "2976"
+    }
   },
   {
+    "key": "2977",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2790,10 +2791,10 @@
       "mathspeak": {
         "sbrief": "L arrow through less than"
       }
-    },
-    "key": "2977"
+    }
   },
   {
+    "key": "2978",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2802,10 +2803,10 @@
       "mathspeak": {
         "sbrief": "greater than above R arrow"
       }
-    },
-    "key": "2978"
+    }
   },
   {
+    "key": "2979",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2814,10 +2815,10 @@
       "mathspeak": {
         "sbrief": "subset above R arrow"
       }
-    },
-    "key": "2979"
+    }
   },
   {
+    "key": "297A",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2826,10 +2827,10 @@
       "mathspeak": {
         "sbrief": "L arrow through subset"
       }
-    },
-    "key": "297A"
+    }
   },
   {
+    "key": "297B",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2838,10 +2839,10 @@
       "mathspeak": {
         "sbrief": "suerset above L arrow"
       }
-    },
-    "key": "297B"
+    }
   },
   {
+    "key": "29B3",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2850,10 +2851,10 @@
       "mathspeak": {
         "sbrief": "empty set with R arrow above"
       }
-    },
-    "key": "29B3"
+    }
   },
   {
+    "key": "29B4",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2862,10 +2863,10 @@
       "mathspeak": {
         "sbrief": "empty set with L arrow above"
       }
-    },
-    "key": "29B4"
+    }
   },
   {
+    "key": "29BD",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2874,10 +2875,10 @@
       "mathspeak": {
         "sbrief": "U arrow through circle"
       }
-    },
-    "key": "29BD"
+    }
   },
   {
+    "key": "29EA",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2886,10 +2887,10 @@
       "mathspeak": {
         "sbrief": "black diamond with D arrow"
       }
-    },
-    "key": "29EA"
+    }
   },
   {
+    "key": "29EC",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2898,10 +2899,10 @@
       "mathspeak": {
         "sbrief": "white circle with D arrow"
       }
-    },
-    "key": "29EC"
+    }
   },
   {
+    "key": "29ED",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2910,10 +2911,10 @@
       "mathspeak": {
         "sbrief": "black circle with D arrow"
       }
-    },
-    "key": "29ED"
+    }
   },
   {
+    "key": "2A17",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -2922,46 +2923,46 @@
       "mathspeak": {
         "sbrief": "integral with L arrow with hook"
       }
-    },
-    "key": "2A17"
+    }
   },
   {
+    "key": "2B00",
     "category": "So",
     "mappings": {
       "default": {
         "default": "north east white arrow"
       }
-    },
-    "key": "2B00"
+    }
   },
   {
+    "key": "2B01",
     "category": "So",
     "mappings": {
       "default": {
         "default": "north west white arrow"
       }
-    },
-    "key": "2B01"
+    }
   },
   {
+    "key": "2B02",
     "category": "So",
     "mappings": {
       "default": {
         "default": "south east white arrow"
       }
-    },
-    "key": "2B02"
+    }
   },
   {
+    "key": "2B03",
     "category": "So",
     "mappings": {
       "default": {
         "default": "south west white arrow"
       }
-    },
-    "key": "2B03"
+    }
   },
   {
+    "key": "2B04",
     "category": "So",
     "mappings": {
       "default": {
@@ -2970,10 +2971,10 @@
       "mathspeak": {
         "sbrief": "L R white arrow"
       }
-    },
-    "key": "2B04"
+    }
   },
   {
+    "key": "2B05",
     "category": "So",
     "mappings": {
       "default": {
@@ -2982,10 +2983,10 @@
       "mathspeak": {
         "sbrief": "L black arrow"
       }
-    },
-    "key": "2B05"
+    }
   },
   {
+    "key": "2B06",
     "category": "So",
     "mappings": {
       "default": {
@@ -2994,10 +2995,10 @@
       "mathspeak": {
         "sbrief": "U black arrow"
       }
-    },
-    "key": "2B06"
+    }
   },
   {
+    "key": "2B07",
     "category": "So",
     "mappings": {
       "default": {
@@ -3006,46 +3007,46 @@
       "mathspeak": {
         "sbrief": "D black arrow"
       }
-    },
-    "key": "2B07"
+    }
   },
   {
+    "key": "2B08",
     "category": "So",
     "mappings": {
       "default": {
         "default": "north east black arrow"
       }
-    },
-    "key": "2B08"
+    }
   },
   {
+    "key": "2B09",
     "category": "So",
     "mappings": {
       "default": {
         "default": "north west black arrow"
       }
-    },
-    "key": "2B09"
+    }
   },
   {
+    "key": "2B0A",
     "category": "So",
     "mappings": {
       "default": {
         "default": "south east black arrow"
       }
-    },
-    "key": "2B0A"
+    }
   },
   {
+    "key": "2B0B",
     "category": "So",
     "mappings": {
       "default": {
         "default": "south west black arrow"
       }
-    },
-    "key": "2B0B"
+    }
   },
   {
+    "key": "2B0C",
     "category": "So",
     "mappings": {
       "default": {
@@ -3054,10 +3055,10 @@
       "mathspeak": {
         "sbrief": "L R black arrow"
       }
-    },
-    "key": "2B0C"
+    }
   },
   {
+    "key": "2B0D",
     "category": "So",
     "mappings": {
       "default": {
@@ -3066,10 +3067,10 @@
       "mathspeak": {
         "sbrief": "U D black arrow"
       }
-    },
-    "key": "2B0D"
+    }
   },
   {
+    "key": "2B0E",
     "category": "So",
     "mappings": {
       "default": {
@@ -3078,10 +3079,10 @@
       "mathspeak": {
         "sbrief": "R arrow with tip down"
       }
-    },
-    "key": "2B0E"
+    }
   },
   {
+    "key": "2B0F",
     "category": "So",
     "mappings": {
       "default": {
@@ -3090,10 +3091,10 @@
       "mathspeak": {
         "sbrief": "R arrow with tip up"
       }
-    },
-    "key": "2B0F"
+    }
   },
   {
+    "key": "2B10",
     "category": "So",
     "mappings": {
       "default": {
@@ -3102,10 +3103,10 @@
       "mathspeak": {
         "sbrief": "L arrow with tip down"
       }
-    },
-    "key": "2B10"
+    }
   },
   {
+    "key": "2B11",
     "category": "So",
     "mappings": {
       "default": {
@@ -3114,10 +3115,10 @@
       "mathspeak": {
         "sbrief": "L arrow with tip up"
       }
-    },
-    "key": "2B11"
+    }
   },
   {
+    "key": "2B30",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3126,10 +3127,10 @@
       "mathspeak": {
         "sbrief": "L arrow with small circle"
       }
-    },
-    "key": "2B30"
+    }
   },
   {
+    "key": "2B31",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3138,10 +3139,10 @@
       "mathspeak": {
         "sbrief": "three L arrows"
       }
-    },
-    "key": "2B31"
+    }
   },
   {
+    "key": "2B32",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3150,10 +3151,10 @@
       "mathspeak": {
         "sbrief": "L arrow with circled plus"
       }
-    },
-    "key": "2B32"
+    }
   },
   {
+    "key": "2B33",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3162,10 +3163,10 @@
       "mathspeak": {
         "sbrief": "long l squiggle arrow"
       }
-    },
-    "key": "2B33"
+    }
   },
   {
+    "key": "2B34",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3174,10 +3175,10 @@
       "mathspeak": {
         "sbrief": "L two headed arrow with vertical stroke"
       }
-    },
-    "key": "2B34"
+    }
   },
   {
+    "key": "2B35",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3186,10 +3187,10 @@
       "mathspeak": {
         "sbrief": "L two headed arrow with double vertical stroke"
       }
-    },
-    "key": "2B35"
+    }
   },
   {
+    "key": "2B36",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3198,10 +3199,10 @@
       "mathspeak": {
         "sbrief": "L two headed arrow from bar"
       }
-    },
-    "key": "2B36"
+    }
   },
   {
+    "key": "2B37",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3210,10 +3211,10 @@
       "mathspeak": {
         "sbrief": "L two headed triple dash arrow"
       }
-    },
-    "key": "2B37"
+    }
   },
   {
+    "key": "2B38",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3222,10 +3223,10 @@
       "mathspeak": {
         "sbrief": "L arrow with dotted stem"
       }
-    },
-    "key": "2B38"
+    }
   },
   {
+    "key": "2B39",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3234,10 +3235,10 @@
       "mathspeak": {
         "sbrief": "L arrow with tail with vertical stroke"
       }
-    },
-    "key": "2B39"
+    }
   },
   {
+    "key": "2B3A",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3246,10 +3247,10 @@
       "mathspeak": {
         "sbrief": "L arrow with tail with double vertical stroke"
       }
-    },
-    "key": "2B3A"
+    }
   },
   {
+    "key": "2B3B",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3258,10 +3259,10 @@
       "mathspeak": {
         "sbrief": "L two headed arrow with tail"
       }
-    },
-    "key": "2B3B"
+    }
   },
   {
+    "key": "2B3C",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3270,10 +3271,10 @@
       "mathspeak": {
         "sbrief": "L two headed arrow with tail with vertical stroke"
       }
-    },
-    "key": "2B3C"
+    }
   },
   {
+    "key": "2B3D",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3282,10 +3283,10 @@
       "mathspeak": {
         "sbrief": "L two headed arrow with tail with double vertical stroke"
       }
-    },
-    "key": "2B3D"
+    }
   },
   {
+    "key": "2B3E",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3294,19 +3295,19 @@
       "mathspeak": {
         "sbrief": "L arrow through x"
       }
-    },
-    "key": "2B3E"
+    }
   },
   {
+    "key": "2B3F",
     "category": "Sm",
     "mappings": {
       "default": {
         "default": "wave arrow pointing directly left"
       }
-    },
-    "key": "2B3F"
+    }
   },
   {
+    "key": "2B40",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3315,10 +3316,10 @@
       "mathspeak": {
         "sbrief": "equals sign above L arrow"
       }
-    },
-    "key": "2B40"
+    }
   },
   {
+    "key": "2B41",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3327,10 +3328,10 @@
       "mathspeak": {
         "sbrief": "reverse tilde operator above L arrow"
       }
-    },
-    "key": "2B41"
+    }
   },
   {
+    "key": "2B42",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3339,10 +3340,10 @@
       "mathspeak": {
         "sbrief": "L arrow above reverse almost equals"
       }
-    },
-    "key": "2B42"
+    }
   },
   {
+    "key": "2B43",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3351,10 +3352,10 @@
       "mathspeak": {
         "sbrief": "R arrow through greater than"
       }
-    },
-    "key": "2B43"
+    }
   },
   {
+    "key": "2B44",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3363,10 +3364,10 @@
       "mathspeak": {
         "sbrief": "R arrow through superset"
       }
-    },
-    "key": "2B44"
+    }
   },
   {
+    "key": "2B45",
     "category": "So",
     "mappings": {
       "default": {
@@ -3375,10 +3376,10 @@
       "mathspeak": {
         "sbrief": "L quadrule arrow"
       }
-    },
-    "key": "2B45"
+    }
   },
   {
+    "key": "2B46",
     "category": "So",
     "mappings": {
       "default": {
@@ -3387,10 +3388,10 @@
       "mathspeak": {
         "sbrief": "R quadrule arrow"
       }
-    },
-    "key": "2B46"
+    }
   },
   {
+    "key": "2B47",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3399,10 +3400,10 @@
       "mathspeak": {
         "sbrief": "reverse tilde operator above R arrow"
       }
-    },
-    "key": "2B47"
+    }
   },
   {
+    "key": "2B48",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3411,10 +3412,10 @@
       "mathspeak": {
         "sbrief": "R arrow above reverse almost equals"
       }
-    },
-    "key": "2B48"
+    }
   },
   {
+    "key": "2B49",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3423,10 +3424,10 @@
       "mathspeak": {
         "sbrief": "tilde operator above L arrow"
       }
-    },
-    "key": "2B49"
+    }
   },
   {
+    "key": "2B4A",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3435,10 +3436,10 @@
       "mathspeak": {
         "sbrief": "L arrow above almost equals"
       }
-    },
-    "key": "2B4A"
+    }
   },
   {
+    "key": "2B4B",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3447,10 +3448,10 @@
       "mathspeak": {
         "sbrief": "L arrow above reverse tilde operator"
       }
-    },
-    "key": "2B4B"
+    }
   },
   {
+    "key": "2B4C",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3459,10 +3460,10 @@
       "mathspeak": {
         "sbrief": "R arrow above reverse tilde operator"
       }
-    },
-    "key": "2B4C"
+    }
   },
   {
+    "key": "FFE9",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3471,10 +3472,10 @@
       "mathspeak": {
         "sbrief": "halfwidth L arrow"
       }
-    },
-    "key": "FFE9"
+    }
   },
   {
+    "key": "FFEA",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3483,10 +3484,10 @@
       "mathspeak": {
         "sbrief": "halfwidth U arrow"
       }
-    },
-    "key": "FFEA"
+    }
   },
   {
+    "key": "FFEB",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3495,10 +3496,10 @@
       "mathspeak": {
         "sbrief": "halfwidth R arrow"
       }
-    },
-    "key": "FFEB"
+    }
   },
   {
+    "key": "FFEC",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -3507,7 +3508,6 @@
       "mathspeak": {
         "sbrief": "halfwidth D arrow"
       }
-    },
-    "key": "FFEC"
+    }
   }
 ]

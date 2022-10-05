@@ -3,19 +3,20 @@
     "locale": "en"
   },
   {
+    "key": "kt",
     "category": "speed",
     "mappings": {
       "default": {
         "default": "knot"
       }
     },
-    "key": "kt",
     "names": [
       "kt",
       "kt."
     ]
   },
   {
+    "key": "mph",
     "category": "speed",
     "mappings": {
       "default": {
@@ -23,12 +24,12 @@
         "plural": "miles per hour"
       }
     },
-    "key": "mph",
     "names": [
       "mph"
     ]
   },
   {
+    "key": "rpm",
     "category": "speed",
     "mappings": {
       "default": {
@@ -36,12 +37,12 @@
         "plural": "revolutions per minute"
       }
     },
-    "key": "rpm",
     "names": [
       "rpm"
     ]
   },
   {
+    "key": "kmh",
     "category": "speed",
     "mappings": {
       "default": {
@@ -49,7 +50,6 @@
         "plural": "kilometers per hour"
       }
     },
-    "key": "kmh",
     "names": [
       "kmh",
       "kph"

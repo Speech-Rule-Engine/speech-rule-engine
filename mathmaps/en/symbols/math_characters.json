@@ -3,15 +3,16 @@
     "locale": "en"
   },
   {
+    "key": "2113",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "script l"
       }
-    },
-    "key": "2113"
+    }
   },
   {
+    "key": "2118",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -20,28 +21,28 @@
       "mathspeak": {
         "default": "script upper P"
       }
-    },
-    "key": "2118"
+    }
   },
   {
+    "key": "213C",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "double struck pi"
       }
-    },
-    "key": "213C"
+    }
   },
   {
+    "key": "213D",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "double struck gamma"
       }
-    },
-    "key": "213D"
+    }
   },
   {
+    "key": "213E",
     "category": "Lu",
     "mappings": {
       "default": {
@@ -50,10 +51,10 @@
       "mathspeak": {
         "default": "double struck upper Gamma"
       }
-    },
-    "key": "213E"
+    }
   },
   {
+    "key": "213F",
     "category": "Lu",
     "mappings": {
       "default": {
@@ -62,10 +63,10 @@
       "mathspeak": {
         "default": "double struck upper Pi"
       }
-    },
-    "key": "213F"
+    }
   },
   {
+    "key": "2140",
     "category": "Sm",
     "mappings": {
       "default": {
@@ -74,10 +75,10 @@
       "mathspeak": {
         "default": "double struck sigma summation"
       }
-    },
-    "key": "2140"
+    }
   },
   {
+    "key": "2145",
     "category": "Lu",
     "mappings": {
       "default": {
@@ -86,61 +87,60 @@
       "mathspeak": {
         "default": "double struck italic upper D"
       }
-    },
-    "key": "2145"
+    }
   },
   {
+    "key": "2146",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "double struck italic d"
       }
-    },
-    "key": "2146"
+    }
   },
   {
+    "key": "2147",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "double struck italic e"
       }
-    },
-    "key": "2147"
+    }
   },
   {
+    "key": "2148",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "double struck italic i"
       }
-    },
-    "key": "2148"
+    }
   },
   {
+    "key": "2149",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "double struck italic j"
       }
-    },
-    "key": "2149"
+    }
   },
   {
+    "key": "1D6A4",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "italic dotless i"
       }
-    },
-    "key": "1D6A4"
+    }
   },
   {
+    "key": "1D6A5",
     "category": "Ll",
     "mappings": {
       "default": {
         "default": "italic dotless j"
       }
-    },
-    "key": "1D6A5"
+    }
   }
 ]

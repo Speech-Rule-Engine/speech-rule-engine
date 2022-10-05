@@ -3,63 +3,63 @@
     "locale": "en"
   },
   {
+    "key": "s",
     "category": "time",
-    "si": true,
     "mappings": {
       "default": {
         "default": "second"
       }
     },
-    "key": "s",
+    "si": true,
     "names": [
       "s"
     ]
   },
   {
+    "key": "″",
     "category": "time",
     "mappings": {
       "default": {
         "default": "second"
       }
     },
-    "key": "″",
     "names": [
       "″"
     ]
   },
   {
+    "key": "min",
     "category": "time",
     "mappings": {
       "default": {
         "default": "minute"
       }
     },
-    "key": "min",
     "names": [
       "min",
       "′"
     ]
   },
   {
+    "key": "°",
     "category": "time",
     "mappings": {
       "default": {
         "default": "degree"
       }
     },
-    "key": "°",
     "names": [
       "°"
     ]
   },
   {
+    "key": "h",
     "category": "time",
     "mappings": {
       "default": {
         "default": "hour"
       }
     },
-    "key": "h",
     "names": [
       "h",
       "hr"

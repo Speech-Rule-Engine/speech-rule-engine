@@ -3,141 +3,141 @@
     "locale": "en"
   },
   {
+    "key": "dram",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "dram"
       }
     },
-    "key": "dram",
     "names": [
       "dr",
       "dr."
     ]
   },
   {
+    "key": "oz",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "ounce"
       }
     },
-    "key": "oz",
     "names": [
       "oz",
       "oz."
     ]
   },
   {
+    "key": "lb",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "pound"
       }
     },
-    "key": "lb",
     "names": [
       "lb",
       "lb."
     ]
   },
   {
+    "key": "st",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "stone"
       }
     },
-    "key": "st",
     "names": [
       "st",
       "st."
     ]
   },
   {
+    "key": "qtr",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "quarter"
       }
     },
-    "key": "qtr",
     "names": [
       "qtr",
       "qtr."
     ]
   },
   {
+    "key": "cwt",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "hundredweight"
       }
     },
-    "key": "cwt",
     "names": [
       "cwt",
       "cwt."
     ]
   },
   {
+    "key": "LT",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "long ton"
       }
     },
-    "key": "LT",
     "names": [
       "LT",
       "L.T."
     ]
   },
   {
+    "key": "gr",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "gram"
       }
     },
-    "key": "gr",
     "names": [
       "gr"
     ]
   },
   {
+    "key": "g",
     "category": "weight",
-    "si": true,
     "mappings": {
       "default": {
         "default": "gram"
       }
     },
-    "key": "g",
+    "si": true,
     "names": [
       "g"
     ]
   },
   {
+    "key": "mcg",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "microgram"
       }
     },
-    "key": "mcg",
     "names": [
       "mcg"
     ]
   },
   {
+    "key": "t",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "ton"
       }
     },
-    "key": "t",
     "names": [
       "t",
       "T"
