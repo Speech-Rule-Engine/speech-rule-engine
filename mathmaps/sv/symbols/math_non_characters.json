@@ -4,16 +4,16 @@
   },
   {
     "key": "210F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "So",
     "key": "2114",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "l b stapel"
@@ -22,34 +22,34 @@
   },
   {
     "key": "2116",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "numero tecken"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2117",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ljudinspelning copyright"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "211E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "dubbelförhållandetecken"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "211F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "svar"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2120",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tjänstemärke"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2121",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "telefonsymbol"
@@ -76,16 +76,16 @@
   },
   {
     "key": "2122",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "varumärkestecken"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2123",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "versikel"
@@ -94,52 +94,52 @@
   },
   {
     "key": "2125",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ounce sign"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2126",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ohm"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2127",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "omvänt ohm"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "212A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "grader kelvin"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "212B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "angstroms"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "So",
     "key": "212E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "uppskattad"
@@ -148,16 +148,16 @@
   },
   {
     "key": "2132",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "roterat stort f"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Ll",
     "key": "2139",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "informationskälla"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "So",
     "key": "213A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "roterat stort Q"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "So",
     "key": "213B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "faxsymbol"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2141",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vridet stort G i sans serif"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2142",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vridet stort L i sans serif"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2143",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "omvänt stort L i sans serif"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2144",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vridet stort Y i sans serif"

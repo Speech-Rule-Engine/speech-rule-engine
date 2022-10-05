@@ -5,41 +5,41 @@
   {
     "key": "F",
     "category": "temperature",
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ],
     "mappings": {
       "default": {
         "default": "फेरनहाइट"
       }
-    }
+    },
+    "names": [
+      "F",
+      "F.",
+      "°F"
+    ]
   },
   {
     "key": "C",
     "category": "temperature",
-    "names": [
-      "C",
-      "°C"
-    ],
     "mappings": {
       "default": {
         "default": "सेल्शियस"
       }
-    }
+    },
+    "names": [
+      "C",
+      "°C"
+    ]
   },
   {
     "key": "K",
     "category": "temperature",
-    "names": [
-      "K",
-      "°K"
-    ],
     "mappings": {
       "default": {
         "default": "केल्विन"
       }
-    }
+    },
+    "names": [
+      "K",
+      "°K"
+    ]
   }
 ]

@@ -4,737 +4,737 @@
   },
   {
     "key": "2190",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2191",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amunt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2192",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa dreta",
         "defaultMP": "flecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2193",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa avall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2194",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra i dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2195",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt i avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2196",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa a nord-oest"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2197",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa a nord-est"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2198",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa a sud-est"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2199",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa a sud-oest"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra ratllada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa ratllada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa ondulada esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa ondulada"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb doble punta"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amb doble punta cap amunt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa dreta amb doble punta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amb doble punta cap avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb cua"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa dreta amb cua"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra de barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "barra amb fletxa"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa dreta de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amb barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt i avall amb base"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb ganxo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amb ganxo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb llaç"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amb llaç"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa ondulada esquerra i dreta"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra i dreta ratllada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21AF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa ziga-zaga avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt amb punta esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt amb punta dreta"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa avall amb punta esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa avall amb punta dreta"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa dreta des de cantonada inferior"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap avall des cantonada esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa semicircular superior en sentit antihorari"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa semicircular superior en sentit horari"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa nord-oest a barra llarga"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra a barra dalt de fletxa dreta a barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa circular oberta en sentit antihorari"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa circular oberta en sentit horari"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa dreta amunt de fletxa esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt a l'esquerra de fletxa avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amunt de fletxa dreta"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "dues fletxes cap a l'esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "dues fletxes cap amunt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "dues fletxes"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "dues fletxes cap avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble esquerra ratllada"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa doble esquerra i dreta ratllada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21CF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa doble ratllada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap a l'esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap amunt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa doble"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa doble esquerra-dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap a nord-oest"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap nord-est"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap a sud-est"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap a sud-oest"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa triple esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa triple"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa ondulada esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa ondulada"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap amunt amb doble ratllat"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap avall amb doble ratllat"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de punts cap a l'esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de punts cap amunt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de punts"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de punts avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra a barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa dreta a barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa buida cap a l'esquerra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa buida cap amunt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa buida"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa buida cap avall"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21EA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa buida cap amunt des de barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "21EB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca cap amunt al pedestal"
@@ -742,8 +742,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21EC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca cap amunt sobre pedestal amb barra horitzontal"
@@ -751,8 +751,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21ED",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca cap amunt sobre pedestal amb barra vertical"
@@ -760,8 +760,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21EE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap amunt blanca"
@@ -769,8 +769,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21EF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa doble cap amunt blanca a pedestal"
@@ -778,8 +778,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21F0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca cap a la dreta de la paret"
@@ -787,8 +787,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21F1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de nord-oest a la cantonada"
@@ -796,8 +796,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21F2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa del sud-est a la cantonada"
@@ -805,8 +805,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21F3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca amunt i avall"
@@ -814,8 +814,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa dreta amb cercle petit"
@@ -824,16 +824,16 @@
   },
   {
     "key": "21F5",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap amunt a la dreta de la fletxa cap avall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "21F6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tres fletxes a la dreta"
@@ -841,8 +841,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F7",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb traç vertical"
@@ -850,8 +850,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F8",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb traç vertical"
@@ -859,8 +859,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra dreta amb traç vertical"
@@ -868,8 +868,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb doble traç vertical"
@@ -877,8 +877,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb doble traç vertical"
@@ -886,8 +886,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra dreta amb doble traç vertical"
@@ -896,34 +896,34 @@
   },
   {
     "key": "21FD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb punta buida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb punta buida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra dreta amb punta buida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2301",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa elèctrica"
@@ -931,8 +931,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2303",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt"
@@ -940,8 +940,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2304",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap avall"
@@ -949,8 +949,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2324",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt entre dues barres horitzontals"
@@ -958,8 +958,8 @@
     }
   },
   {
-    "category": "So",
     "key": "238B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle trencat amb la fletxa de nord-oest"
@@ -967,8 +967,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2794",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb cap ample"
@@ -976,8 +976,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2798",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa sud-est pesant"
@@ -985,8 +985,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2799",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta pesant"
@@ -994,8 +994,8 @@
     }
   },
   {
-    "category": "So",
     "key": "279A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa pesant de nord-est"
@@ -1003,8 +1003,8 @@
     }
   },
   {
-    "category": "So",
     "key": "279B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "punt de dibuix fletxa cap a la dreta"
@@ -1012,8 +1012,8 @@
     }
   },
   {
-    "category": "So",
     "key": "279C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa pesant cap a la dreta amb punta rodona"
@@ -1021,8 +1021,8 @@
     }
   },
   {
-    "category": "So",
     "key": "279D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb forma de triangle"
@@ -1030,8 +1030,8 @@
     }
   },
   {
-    "category": "So",
     "key": "279E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb forma de triangle pesant"
@@ -1039,8 +1039,8 @@
     }
   },
   {
-    "category": "So",
     "key": "279F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "triangle puntejat cap a la fletxa cap a la dreta"
@@ -1048,8 +1048,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb forma de triangle de traç pesant"
@@ -1057,8 +1057,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta negra"
@@ -1066,8 +1066,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "punta de fletxa tridimensional cap a la dreta cap amunt"
@@ -1075,8 +1075,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "punta de fletxa cap a la dreta amb il·luminació inferior en tres dimensions"
@@ -1084,8 +1084,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "punta de fletxa negra cap a la dreta"
@@ -1093,8 +1093,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "negre pesant corbat cap avall i cap a la dreta fletxa"
@@ -1102,8 +1102,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "negre pesant corbat cap amunt i cap a la dreta fletxa"
@@ -1111,8 +1111,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "squat fletxa negra cap a la dreta"
@@ -1120,8 +1120,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta de color negre còncava punxeguda pesant"
@@ -1129,8 +1129,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27A9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ombra dreta fletxa blanca cap a la dreta"
@@ -1138,8 +1138,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27AA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ombra cap a l'esquerra blanca a l'esquerra"
@@ -1147,8 +1147,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27AB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca amb ombra inclinada cap enrere"
@@ -1156,8 +1156,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27AC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta blanca ombrejada inclinada cap endavant"
@@ -1165,8 +1165,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27AD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta pesant inferior, ombrejada a la dreta, blanca"
@@ -1174,8 +1174,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27AE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta blanca superior dreta ombrejada pesant"
@@ -1183,8 +1183,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27AF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "amb osca, fletxa dreta cap avall, cap a la dreta"
@@ -1192,8 +1192,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "amb osques, fletxa dreta cap amunt, cap a la dreta"
@@ -1201,8 +1201,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle pesant blanc fletxa cap a la dreta"
@@ -1210,8 +1210,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb plomes blanques"
@@ -1219,8 +1219,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa sud-oriental de plomes negres"
@@ -1228,8 +1228,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb plomes negres"
@@ -1237,8 +1237,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de nord-est amb plomes negres"
@@ -1246,8 +1246,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa sud-oriental amb plomes negres pesants"
@@ -1255,8 +1255,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa dreta pesant amb plomes negres"
@@ -1264,8 +1264,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27B9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa de nord-est amb plomes negres pesants"
@@ -1273,8 +1273,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27BA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "llàgrima-fletxa de fletxa cap a la dreta"
@@ -1282,8 +1282,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27BB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb forma de llàgrima pesant"
@@ -1291,8 +1291,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27BC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta de cua de falca"
@@ -1300,8 +1300,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27BD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta de cua de falca pesant"
@@ -1309,8 +1309,8 @@
     }
   },
   {
-    "category": "So",
     "key": "27BE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "contorn obert fletxa exterior"
@@ -1319,151 +1319,151 @@
   },
   {
     "key": "27F0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa quàdruple cap amunt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa quàdruple cap avall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra des de cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta des de cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amb més en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F5",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa llarga cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa llarga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F7",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa llarga cap a esquerra i dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F8",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa llarga cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa llarga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa llarga cap a esquerra i dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa llarga cap a l'esquerra, des de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa llarga des de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa llarga cap a l'esquerra des de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa llarga des de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa llarga en ziga-zaga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2900",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a la dreta amb traç vertical"
@@ -1471,8 +1471,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2901",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a la dreta amb doble moviment vertical"
@@ -1480,8 +1480,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2902",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa cap a l'esquerra amb traç vertical"
@@ -1489,8 +1489,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2903",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa cap a la dreta amb traç vertical"
@@ -1498,8 +1498,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2904",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquerra dreta doble fletxa amb traç vertical"
@@ -1508,16 +1508,16 @@
   },
   {
     "key": "2905",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "una fletxa de dos caps cap a la dreta des de la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2906",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa cap a l'esquerra des de la barra"
@@ -1525,8 +1525,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2907",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa cap a la dreta des de la barra"
@@ -1534,8 +1534,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2908",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap avall amb traç horitzontal"
@@ -1543,8 +1543,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2909",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap amunt amb traç horitzontal"
@@ -1552,8 +1552,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "290A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa triple cap amunt"
@@ -1561,8 +1561,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "290B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple fletxa cap avall"
@@ -1571,79 +1571,79 @@
   },
   {
     "key": "290C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de guió doble cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de doble guió cap a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de guió triple cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de guió triple cap a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2910",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta de triple guió amb dos capçals"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2911",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb tija de punts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2912",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap amunt a la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2913",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap avall a la barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2914",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb cua amb traç vertical"
@@ -1651,8 +1651,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2915",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb la cua amb doble traç vertical"
@@ -1661,16 +1661,16 @@
   },
   {
     "key": "2916",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta de dos caps amb cua"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2917",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a la dreta amb cua amb traç vertical"
@@ -1678,8 +1678,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2918",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a la dreta amb cua amb doble moviment vertical"
@@ -1688,16 +1688,16 @@
   },
   {
     "key": "2919",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cua de fletxa cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "291A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta"
@@ -1706,61 +1706,61 @@
   },
   {
     "key": "291B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cua de doble fletxa cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cua de doble fletxa cap a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap de diamant farcit a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap de diamant a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa des de barra cap de diamant a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2920",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa des de la barra cap a diamant a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2921",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxes de nord-oest i sud-est"
@@ -1768,8 +1768,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2922",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxes nord-est i sud-oest"
@@ -1778,79 +1778,79 @@
   },
   {
     "key": "2923",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa a nord-oest amb garfi"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2924",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa a nord-est amb garfi"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2925",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa a sud-est amb garfi"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2926",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa a sud-oest amb garfi"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2927",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxes a nord-oest i nord-est"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2928",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxes a nord-est i sud-est"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2929",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxes a sud-est i sud-oest"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "292A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxes a sud-oest i nord-oest"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "292D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa sud-est creuant fletxa nord-est"
@@ -1858,8 +1858,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa nord-est creuant la fletxa sud-est"
@@ -1867,8 +1867,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "caiguda en diagonal que creua la fletxa nord-est"
@@ -1876,8 +1876,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2930",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diagonal ascendent creuant la fletxa sud-est"
@@ -1885,8 +1885,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2931",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa nord-est creuant fletxa nord-oest"
@@ -1894,8 +1894,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2932",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa nord-oest creuant fletxa nord-est"
@@ -1904,16 +1904,16 @@
   },
   {
     "key": "2933",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa ondulada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2934",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa que apunta cap a la dreta i després corba cap amunt"
@@ -1922,52 +1922,52 @@
   },
   {
     "key": "2935",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta que gira cap avall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2936",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap avall que gira cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2937",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap avall que gira cap a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2938",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa semicircular a la dreta en sentit horari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2939",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa semicircular a l'esquerra en sentit antihorari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc superior fletxa cap a l'esquerra"
@@ -1975,8 +1975,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "293B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc inferior fletxa cap a l'esquerra"
@@ -1985,25 +1985,25 @@
   },
   {
     "key": "293C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gir negatiu"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "293D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gir positiu"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta semicircular inferior dreta"
@@ -2011,8 +2011,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "293F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa inferior esquerra semicircular en sentit antihorari"
@@ -2020,8 +2020,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2940",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle tancat en sentit contrari a les agulles del rellotge"
@@ -2029,8 +2029,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2941",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle tancat en el sentit de les agulles del rellotge"
@@ -2038,8 +2038,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2942",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta sobre la fletxa curta cap a l'esquerra"
@@ -2047,8 +2047,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2943",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra sobre la fletxa curta cap a la dreta"
@@ -2056,8 +2056,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2944",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa curta cap a la dreta sobre fletxa cap a l'esquerra"
@@ -2066,16 +2066,16 @@
   },
   {
     "key": "2945",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amb més subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2946",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb més avall"
@@ -2083,8 +2083,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2947",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta a través de X"
@@ -2093,88 +2093,88 @@
   },
   {
     "key": "2948",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra a través de cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2949",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dos caps de fletxa cap amunt des de cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2970",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble fletxa dreta amb el cap arrodonit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2971",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amb igual"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2972",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amb titlla"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2973",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla amb fletxa cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2974",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlli amb fletxa"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2975",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amb gairebé igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2976",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2977",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra a través de menys de"
@@ -2183,25 +2183,25 @@
   },
   {
     "key": "2978",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amb més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2979",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb inclòs"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "297A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra a través del subconjunt"
@@ -2210,34 +2210,34 @@
   },
   {
     "key": "297B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb conté"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunt buit amb fletxa"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunt buit amb fletxa inversa"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29BD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa amunt a través del cercle"
@@ -2245,8 +2245,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamant negre amb fletxa cap avall"
@@ -2254,8 +2254,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle blanc amb fletxa cap avall"
@@ -2263,8 +2263,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29ED",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle negre amb fletxa cap avall"
@@ -2273,16 +2273,16 @@
   },
   {
     "key": "2A17",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb fletxa cap a l'esquerra amb garfi"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2B00",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca de nord-est"
@@ -2290,8 +2290,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B01",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca de nord-oest"
@@ -2299,8 +2299,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B02",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa blanca de sud-est"
@@ -2308,8 +2308,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B03",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sud-oest fletxa blanca"
@@ -2317,8 +2317,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B04",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "esquerra dreta fletxa blanca"
@@ -2326,8 +2326,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B05",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra cap a l'esquerra"
@@ -2335,8 +2335,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B06",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra cap amunt"
@@ -2344,8 +2344,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B07",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra cap avall"
@@ -2353,8 +2353,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B08",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra del nord-est"
@@ -2362,8 +2362,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B09",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra del nord-oest"
@@ -2371,8 +2371,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra sud est"
@@ -2380,8 +2380,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sud-oest fletxa negra"
@@ -2389,8 +2389,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "esquerra dreta fletxa negra"
@@ -2398,8 +2398,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa negra amunt i avall"
@@ -2407,8 +2407,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb la punta cap avall"
@@ -2416,8 +2416,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta amb la punta cap amunt"
@@ -2425,8 +2425,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B10",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb la punta cap avall"
@@ -2434,8 +2434,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B11",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb la punta cap amunt"
@@ -2443,8 +2443,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B30",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb cercle petit"
@@ -2452,8 +2452,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B31",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tres fletxes a l'esquerra"
@@ -2461,8 +2461,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B32",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb un cercle més"
@@ -2470,8 +2470,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B33",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de fletxa llarga cap a l'esquerra"
@@ -2479,8 +2479,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B34",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a l'esquerra amb traç vertical"
@@ -2488,8 +2488,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B35",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a l'esquerra amb doble moviment vertical"
@@ -2497,8 +2497,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B36",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a l'esquerra de la barra"
@@ -2506,8 +2506,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B37",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa triple de dos caps cap a l'esquerra"
@@ -2515,8 +2515,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B38",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb tija puntejada"
@@ -2524,8 +2524,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B39",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb cua amb traç vertical"
@@ -2533,8 +2533,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra amb cua amb doble traç vertical"
@@ -2542,8 +2542,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a l'esquerra amb cua"
@@ -2551,8 +2551,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a l'esquerra amb cua amb traç vertical"
@@ -2560,8 +2560,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de dos caps cap a l'esquerra amb cua amb doble moviment vertical"
@@ -2569,8 +2569,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra a través de X"
@@ -2578,8 +2578,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "onada fletxa apuntant directament a l'esquerra"
@@ -2587,8 +2587,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B40",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe d'igual fletxa amunt a l'esquerra"
@@ -2596,8 +2596,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B41",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de titlla invers sobre la fletxa cap a l'esquerra"
@@ -2605,8 +2605,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B42",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra sobre el revers gairebé igual a"
@@ -2614,8 +2614,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B43",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta a través de més que"
@@ -2623,8 +2623,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B44",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta a través de superset"
@@ -2632,8 +2632,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B45",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa quàdruple cap a l'esquerra"
@@ -2641,8 +2641,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B46",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa quàdruple cap a la dreta"
@@ -2650,8 +2650,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B47",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de titlla invers sobre la fletxa cap a la dreta"
@@ -2659,8 +2659,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B48",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta sobre el revers gairebé igual a"
@@ -2668,8 +2668,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B49",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de titlla sobre la fletxa cap a l'esquerra"
@@ -2677,8 +2677,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra per sobre de gairebé igual a"
@@ -2686,8 +2686,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra sobre l'operador de titlla invers"
@@ -2695,8 +2695,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a la dreta sobre l'operador de titlla invers"
@@ -2704,8 +2704,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFE9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap a l'esquerra de mig ample"
@@ -2713,8 +2713,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa ascendent de mig ample"
@@ -2722,8 +2722,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa de mig ample cap a la dreta"
@@ -2731,8 +2731,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fletxa cap avall de mig ample"

@@ -5,151 +5,151 @@
   {
     "key": "cosh",
     "category": "Hyperbolic",
-    "names": [
-      "cosh"
-    ],
     "mappings": {
       "default": {
         "default": "cosinus hiperbòlic"
       }
-    }
+    },
+    "names": [
+      "cosh"
+    ]
   },
   {
     "key": "coth",
     "category": "Hyperbolic",
-    "names": [
-      "coth"
-    ],
     "mappings": {
       "default": {
         "default": "cotangent hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "coth"
+    ]
   },
   {
     "key": "csch",
     "category": "Hyperbolic",
-    "names": [
-      "csch"
-    ],
     "mappings": {
       "default": {
         "default": "cosecant hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "csch"
+    ]
   },
   {
     "key": "sech",
     "category": "Hyperbolic",
-    "names": [
-      "sech"
-    ],
     "mappings": {
       "default": {
         "default": "secant hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "sech"
+    ]
   },
   {
     "key": "sinh",
     "category": "Hyperbolic",
-    "names": [
-      "sinh"
-    ],
     "mappings": {
       "default": {
         "default": "sinus hiperbòlic"
       }
-    }
+    },
+    "names": [
+      "sinh"
+    ]
   },
   {
     "key": "tanh",
     "category": "Hyperbolic",
-    "names": [
-      "tanh"
-    ],
     "mappings": {
       "default": {
         "default": "tangent hiperbòlic"
       }
-    }
+    },
+    "names": [
+      "tanh"
+    ]
   },
   {
     "key": "arcosh",
     "category": "Area",
-    "names": [
-      "arcosh",
-      "arccosh"
-    ],
     "mappings": {
       "default": {
         "default": "àrea del cosinus hiperbòlic"
       }
-    }
+    },
+    "names": [
+      "arcosh",
+      "arccosh"
+    ]
   },
   {
     "key": "arcoth",
     "category": "Area",
-    "names": [
-      "arcoth",
-      "arccoth"
-    ],
     "mappings": {
       "default": {
         "default": "àrea de la cotangent hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "arcoth",
+      "arccoth"
+    ]
   },
   {
     "key": "arcsch",
     "category": "Area",
-    "names": [
-      "arcsch",
-      "arccsch"
-    ],
     "mappings": {
       "default": {
         "default": "àrea de la cosecant hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "arcsch",
+      "arccsch"
+    ]
   },
   {
     "key": "arsech",
     "category": "Area",
-    "names": [
-      "arsech",
-      "arcsech"
-    ],
     "mappings": {
       "default": {
         "default": "àrea de la secant hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "arsech",
+      "arcsech"
+    ]
   },
   {
     "key": "arsinh",
     "category": "Area",
-    "names": [
-      "arsinh",
-      "arcsinh"
-    ],
     "mappings": {
       "default": {
         "default": "àrea del sinus hiperbòlic"
       }
-    }
+    },
+    "names": [
+      "arsinh",
+      "arcsinh"
+    ]
   },
   {
     "key": "artanh",
     "category": "Area",
-    "names": [
-      "artanh",
-      "arctanh"
-    ],
     "mappings": {
       "default": {
         "default": "àrea de la tangent hiperbòlica"
       }
-    }
+    },
+    "names": [
+      "artanh",
+      "arctanh"
+    ]
   }
 ]

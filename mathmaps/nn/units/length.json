@@ -5,130 +5,130 @@
   {
     "key": "ft",
     "category": "length",
-    "names": [
-      "ft",
-      "ft."
-    ],
     "mappings": {
       "default": {
         "default": "fot"
       }
-    }
+    },
+    "names": [
+      "ft",
+      "ft."
+    ]
   },
   {
     "key": "in",
     "category": "length",
-    "names": [
-      "in",
-      "in."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "in",
+      "in."
+    ]
   },
   {
     "key": "mi",
     "category": "length",
-    "names": [
-      "mi",
-      "mi."
-    ],
     "mappings": {
       "default": {
         "default": "mil"
       }
-    }
+    },
+    "names": [
+      "mi",
+      "mi."
+    ]
   },
   {
     "key": "yd",
     "category": "length",
-    "names": [
-      "yd",
-      "yd."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "yd",
+      "yd."
+    ]
   },
   {
     "key": "link",
     "category": "length",
-    "names": [
-      "li",
-      "li."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "li",
+      "li."
+    ]
   },
   {
     "key": "rod",
     "category": "length",
-    "names": [
-      "rd",
-      "rd."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "rd",
+      "rd."
+    ]
   },
   {
     "key": "chain",
     "category": "length",
-    "names": [
-      "ch",
-      "ch."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "ch",
+      "ch."
+    ]
   },
   {
     "key": "furlong",
     "category": "length",
-    "names": [
-      "fur",
-      "fur."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "fur",
+      "fur."
+    ]
   },
   {
     "key": "n.m.",
     "category": "length",
-    "names": [
-      "n.m."
-    ],
     "mappings": {
       "default": {
         "default": "nautisk mil"
       }
-    }
+    },
+    "names": [
+      "n.m."
+    ]
   },
   {
     "key": "m",
     "category": "length",
-    "names": [
-      "m"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "meter"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "m"
+    ]
   }
 ]

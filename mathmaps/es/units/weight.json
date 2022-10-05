@@ -4,108 +4,109 @@
   },
   {
     "key": "lb",
-    "names": [
-      "lb",
-      "lb."
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "libra"
       }
     },
-    "category": "weight"
+    "names": [
+      "lb",
+      "lb."
+    ]
   },
   {
     "key": "LT",
-    "names": [
-      "LT",
-      "L.T."
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "libra imperiale",
         "plural": "libras imperiales"
       }
     },
-    "category": "weight"
+    "names": [
+      "LT",
+      "L.T."
+    ]
   },
   {
     "key": "oz",
-    "names": [
-      "oz",
-      "oz."
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "onza"
       }
     },
-    "category": "weight"
+    "names": [
+      "oz",
+      "oz."
+    ]
   },
   {
     "key": "mcg",
-    "names": [
-      "mcg"
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "microgramo"
       }
     },
-    "category": "weight"
+    "names": [
+      "mcg"
+    ]
   },
   {
     "key": "gr",
-    "names": [
-      "gr"
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "gramo"
       }
     },
-    "category": "weight"
+    "names": [
+      "gr"
+    ]
   },
   {
     "key": "g",
-    "si": true,
-    "names": [
-      "g"
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "gramo"
       }
     },
-    "category": "weight"
+    "si": true,
+    "names": [
+      "g"
+    ]
   },
   {
     "key": "t",
-    "names": [
-      "t",
-      "T"
-    ],
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "tonelada"
       }
     },
-    "category": "weight"
+    "names": [
+      "t",
+      "T"
+    ]
   },
   {
+    "key": "dram",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "dracma"
       }
     },
-    "key": "dram",
     "names": [
       "dr",
       "dr."
     ]
   },
   {
+    "key": "st",
     "category": "weight",
     "mappings": {
       "default": {
@@ -113,33 +114,32 @@
         "plural": "stones"
       }
     },
-    "key": "st",
     "names": [
       "st",
       "st."
     ]
   },
   {
+    "key": "qtr",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "cuarto corto"
       }
     },
-    "key": "qtr",
     "names": [
       "qtr",
       "qtr."
     ]
   },
   {
+    "key": "cwt",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "centena"
       }
     },
-    "key": "cwt",
     "names": [
       "cwt",
       "cwt."

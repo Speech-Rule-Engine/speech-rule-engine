@@ -4,16 +4,16 @@
   },
   {
     "key": "2500",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2501",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt, vandret indramningstegn"
@@ -22,16 +22,16 @@
   },
   {
     "key": "2502",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys lodret"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2503",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt, lodret indramningstegn"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2504",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med tre korte vandrette streger"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2505",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kraftigt indramningstegn med tre korte vandrette streger"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2506",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med tre korte lodrette streger"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2507",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt indramningstegn med tre korte lodrette streger"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2508",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med fire korte vandrette streger"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2509",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt indramningstegn med fire korte vandrette streger"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "So",
     "key": "250A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med fire korte lodrette streger"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "So",
     "key": "250B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt indramningstegn med fire korte lodrette streger"
@@ -112,16 +112,16 @@
   },
   {
     "key": "250C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys ned og højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "250D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt og kraftigt højrevendt indramningstegn"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "So",
     "key": "250E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og tyndt højrevendt indramningstegn"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "So",
     "key": "250F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedad- og højrevendt indramningstegn"
@@ -148,16 +148,16 @@
   },
   {
     "key": "2510",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys ned og venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2511",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt og kraftigt venstrevendt indramningstegn"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2512",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og tyndt venstrevendt indramningstegn"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2513",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedad- og venstrevendt indramningstegn"
@@ -184,16 +184,16 @@
   },
   {
     "key": "2514",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys op og højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2515",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt ig kraftigt højrevendt indramningstegn"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2516",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt højrevendt indramningstegn"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2517",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opad- og højrevendt indramningstegn"
@@ -220,16 +220,16 @@
   },
   {
     "key": "2518",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys op og venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2519",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt og kraftigt venstrevendt indramningstegn"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "So",
     "key": "251A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt venstrevendt indramningstegn"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "So",
     "key": "251B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opad- og venstrevendt indramningstegn"
@@ -256,16 +256,16 @@
   },
   {
     "key": "251C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys lodret og højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "251D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt lodret og kraftigt højrevendt indramningstegn"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "So",
     "key": "251E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt højre- og nedadvendt indramningstegn"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "So",
     "key": "251F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og tyndt højre- og opadvendt indramningstegn"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2520",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt lodret og tyndt højrevendt indramningstegn"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2521",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt og kraftigt højre- og opadvendt indramningstegn"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2522",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt og kraftigt højre- og nedadvendt indramningstegn"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2523",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt lodret og højrevendt indramningstegn"
@@ -328,16 +328,16 @@
   },
   {
     "key": "2524",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys lodret og venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2525",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt lodret og tykt venstrevendt indramningstegn"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2526",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt venstre- og nedadvendt indramningstegn"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2527",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og tyndt venstre- og opadvendt indramningstegn"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2528",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt lodret og tyndt venstrevendt indramningstegn"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2529",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt og tykt venstre- og opadvendt indramningstegn"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "So",
     "key": "252A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt og tykt venstre- og nedadvendt indramningstegn"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "So",
     "key": "252B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt lodret og venstrevendt indramningstegn"
@@ -400,16 +400,16 @@
   },
   {
     "key": "252C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys ned og vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "252D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstrevendt og tyndt højre- og nedadvendt indramningstegn"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "So",
     "key": "252E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt højrevendt og tyndt venstre- og nedadvendt indramningstegn"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "So",
     "key": "252F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt og tykt vandret indramningstegn"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2530",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og tyndt vandret indramningstegn"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2531",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt højrevendt og tykt venstre- og nedadvendt indramningstegn"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2532",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt venstrevendt og tykt højre- og nedadvendt indramningstegn"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2533",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og vandret indramningstegn"
@@ -472,16 +472,16 @@
   },
   {
     "key": "2534",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys op og vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2535",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstrevendt og tyndt højre- og opadvendt indramningstegn"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2536",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt højrevendt og tyndt venstre- og opadvendt indramningstegn"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2537",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt og tykt vandret indramningstegn"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2538",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt vandret indramningstegn"
@@ -516,8 +516,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2539",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt højrevendt og tykt venstre- og opadvendt indramningstegn"
@@ -525,8 +525,8 @@
     }
   },
   {
-    "category": "So",
     "key": "253A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt venstrevendt og tykt højre- og opadvendt indramningstegn"
@@ -534,8 +534,8 @@
     }
   },
   {
-    "category": "So",
     "key": "253B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og vandret indramningstegn"
@@ -544,16 +544,16 @@
   },
   {
     "key": "253C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lys lodret og vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "253D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstrevendt og tyndt lodret højrevendt indramningstegn"
@@ -561,8 +561,8 @@
     }
   },
   {
-    "category": "So",
     "key": "253E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt højrevendt og tyndt lodret venstrevendt indramningstegn"
@@ -570,8 +570,8 @@
     }
   },
   {
-    "category": "So",
     "key": "253F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt lodret og tykt vandret indramningstegn"
@@ -579,8 +579,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2540",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt vandret nedadvendt indramningstegn"
@@ -588,8 +588,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2541",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt og tyndt vandret opadvendt indramningstegn"
@@ -597,8 +597,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2542",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt lodret og tyndt vandret indramningstegn"
@@ -606,8 +606,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2543",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstre- og opadvendt og tyndt højre- og nedadvendt indramningstegn"
@@ -615,8 +615,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2544",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt højre- og opadvendt og tyndt venstre- og nedadvendt indramningstegn"
@@ -624,8 +624,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2545",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstre- og nedadvendt og tyndt højre- og opadvendt indramningstegn"
@@ -633,8 +633,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2546",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt højre- og nedadvendt og tyndt venstre- og opadvendt indramningstegn"
@@ -642,8 +642,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2547",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt og tykt vandret opadvendt indramningstegn"
@@ -651,8 +651,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2548",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt og tykt vandret nedadvendt indramningstegn"
@@ -660,8 +660,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2549",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt højrevendt og tykt lodret venstrevendt indramningstegn"
@@ -669,8 +669,8 @@
     }
   },
   {
-    "category": "So",
     "key": "254A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt venstrevendt og tykt lodret højrevendt indramningstegn"
@@ -678,8 +678,8 @@
     }
   },
   {
-    "category": "So",
     "key": "254B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt lodret og vandret indramningstegn"
@@ -687,8 +687,8 @@
     }
   },
   {
-    "category": "So",
     "key": "254C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med to korte vandrette streger"
@@ -696,8 +696,8 @@
     }
   },
   {
-    "category": "So",
     "key": "254D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt indramningstegn med to korte vandrette streger"
@@ -705,8 +705,8 @@
     }
   },
   {
-    "category": "So",
     "key": "254E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med to korte lodrette streger"
@@ -714,8 +714,8 @@
     }
   },
   {
-    "category": "So",
     "key": "254F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt indramningstegn med to korte lodrette streger"
@@ -724,268 +724,268 @@
   },
   {
     "key": "2550",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2551",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt lodret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2552",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg ned single og højre dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2553",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg ned dobbelt og højre single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2554",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt ned og højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2555",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg ned single og venstre dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2556",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg ned dobbelt og venstre single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2557",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt ned og venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2558",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg op single og højre dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2559",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg op dobbelt og højre single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt op og højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg op single og venstre dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg op dobbelt og venstre single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt op og venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lodret single og højre dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lodret dobbelt og højre single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2560",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt lodret og højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2561",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lodret single og venstre dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2562",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lodret dobbelt og venstre single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2563",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt lodret og venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2564",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg ned single og vandret dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2565",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg ned dobbelt og vandret single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2566",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt ned og vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2567",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg op single og vandret dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2568",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg op dobbelt og vandret single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2569",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt op and vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "256A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lodret single og vandret dobbelt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "256B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg lodret dobbelt og vandret single"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "256C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "indramnings streg dobbelt lodret og vandret"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "256D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med nedad- og højrevendt bue"
@@ -993,8 +993,8 @@
     }
   },
   {
-    "category": "So",
     "key": "256E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med nedad- og venstrevendt bue"
@@ -1002,8 +1002,8 @@
     }
   },
   {
-    "category": "So",
     "key": "256F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med opad- og venstrevendt bue"
@@ -1011,8 +1011,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2570",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med opad- og højrevendt bue"
@@ -1020,8 +1020,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2571",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt diagonalt indramningstegn fra øverst til højre til nederst til venstre"
@@ -1029,8 +1029,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2572",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt diagonalt indramningstegn fra øverst til venstre til nederst til højre"
@@ -1038,8 +1038,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2573",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt indramningstegn med diagonalt kryds"
@@ -1047,8 +1047,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2574",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt venstrevendt indramningstegn"
@@ -1056,8 +1056,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2575",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt indramningstegn"
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2576",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt højrevendt indramningstegn"
@@ -1074,8 +1074,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2577",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt nedadvendt indramningstegn"
@@ -1083,8 +1083,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2578",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstrevendt indramningstegn"
@@ -1092,8 +1092,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2579",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt indramningstegn"
@@ -1101,8 +1101,8 @@
     }
   },
   {
-    "category": "So",
     "key": "257A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt højrevendt indramningstegn"
@@ -1110,8 +1110,8 @@
     }
   },
   {
-    "category": "So",
     "key": "257B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt nedadvendt indramningstegn"
@@ -1119,8 +1119,8 @@
     }
   },
   {
-    "category": "So",
     "key": "257C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt venstrevendt og tykt højrevendt indramningstegn"
@@ -1128,8 +1128,8 @@
     }
   },
   {
-    "category": "So",
     "key": "257D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tyndt opadvendt og tykt nedadvendt indramningstegn"
@@ -1137,8 +1137,8 @@
     }
   },
   {
-    "category": "So",
     "key": "257E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt venstrevendt og tyndt højrevendt indramningstegn"
@@ -1146,8 +1146,8 @@
     }
   },
   {
-    "category": "So",
     "key": "257F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt opadvendt og tyndt nedadvendt indramningstegn"
@@ -1156,16 +1156,16 @@
   },
   {
     "key": "2580",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre sort kasse"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2581",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "en ottende blok nederst"
@@ -1173,8 +1173,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2582",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "en kvart blok nederst"
@@ -1182,8 +1182,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2583",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tre ottende blok nederst"
@@ -1192,16 +1192,16 @@
   },
   {
     "key": "2584",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre sort kasse"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2585",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fem ottende blok nederst"
@@ -1209,8 +1209,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2586",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "trekvart blok nederst"
@@ -1218,8 +1218,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2587",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "syv ottende blok nederst"
@@ -1228,16 +1228,16 @@
   },
   {
     "key": "2588",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort kasse"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2589",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "syv ottende blok til venstre"
@@ -1245,8 +1245,8 @@
     }
   },
   {
-    "category": "So",
     "key": "258A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "trekvart blok til venstre"
@@ -1254,8 +1254,8 @@
     }
   },
   {
-    "category": "So",
     "key": "258B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fem ottende blok til venstre"
@@ -1263,8 +1263,8 @@
     }
   },
   {
-    "category": "So",
     "key": "258C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "halv blok til venstre"
@@ -1272,8 +1272,8 @@
     }
   },
   {
-    "category": "So",
     "key": "258D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "tre ottende blok til venstre"
@@ -1281,8 +1281,8 @@
     }
   },
   {
-    "category": "So",
     "key": "258E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "en kvart blok til venstre"
@@ -1290,8 +1290,8 @@
     }
   },
   {
-    "category": "So",
     "key": "258F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "en ottende blok til venstre"
@@ -1299,8 +1299,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2590",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "halv blok til højre"
@@ -1309,34 +1309,34 @@
   },
   {
     "key": "2591",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "lys skygge"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2592",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "medium skygge"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2593",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "mørk skygge"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2594",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "en ottende blok øverst"
@@ -1344,8 +1344,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2595",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "en ottende blok til højre"
@@ -1353,8 +1353,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2596",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant nederst til venstre"
@@ -1362,8 +1362,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2597",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant nederst til højre"
@@ -1371,8 +1371,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2598",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til venstre"
@@ -1380,8 +1380,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2599",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til venstre og nederst til venstre og nederst til højre"
@@ -1389,8 +1389,8 @@
     }
   },
   {
-    "category": "So",
     "key": "259A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til venstre og nederst til højre"
@@ -1398,8 +1398,8 @@
     }
   },
   {
-    "category": "So",
     "key": "259B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til venstre og øverst til højre og nederst til venstre"
@@ -1407,8 +1407,8 @@
     }
   },
   {
-    "category": "So",
     "key": "259C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til venstre og øverst til højre og nederst til højre"
@@ -1416,8 +1416,8 @@
     }
   },
   {
-    "category": "So",
     "key": "259D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til højre"
@@ -1425,8 +1425,8 @@
     }
   },
   {
-    "category": "So",
     "key": "259E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til højre og nederst til venstre"
@@ -1434,8 +1434,8 @@
     }
   },
   {
-    "category": "So",
     "key": "259F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øverst til højre og nederst til venstre og nederst til højre"
@@ -1444,25 +1444,25 @@
   },
   {
     "key": "25A0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort kvadrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25A1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvidt kvadrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25A2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant med afrundede hjørner"
@@ -1470,8 +1470,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant, der indeholder en lille sort firkant"
@@ -1479,8 +1479,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant med vandret fyld"
@@ -1488,8 +1488,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant med lodret fyld"
@@ -1497,8 +1497,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant med ortogonalt krydsskraveret fyld"
@@ -1506,8 +1506,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant med fyld fra øverst til venstre til nederst til højre"
@@ -1515,8 +1515,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant med fyld fra øverst til højre til nederst til venstre"
@@ -1524,8 +1524,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25A9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant med diagonalt krydsskraveret fyld"
@@ -1534,25 +1534,25 @@
   },
   {
     "key": "25AA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort kvadrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25AB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvidt kvadrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25AC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort rektangel"
@@ -1561,34 +1561,34 @@
   },
   {
     "key": "25AD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25AE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort lodret rektangel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25AF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid lodret rektangel"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25B0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort parallelogram"
@@ -1597,88 +1597,88 @@
   },
   {
     "key": "25B1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvidt parallellogram"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant pegende op"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende op"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant pegende op"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende op"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant pegende mod højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B7",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende mod højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25B8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant pegende mod højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "trekant pegende mod højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25BA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort pilemarkør, der peger mod højre"
@@ -1686,8 +1686,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25BB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid markør, der peger mod højre"
@@ -1696,475 +1696,475 @@
   },
   {
     "key": "25BC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant pegende ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25BD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25BE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant pegende ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25BF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort treknt pegende mod venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende mod venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25C2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort treknt pegende mod venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid tekant pegende mod venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort trekant med spids mod venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid trekant med spids mod venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort diamant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid diamant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid diamant med sort diamant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "fiskeøje"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "rombe"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "prikket cirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med lodret fyld"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bullseye"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort cirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med venstre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med højre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med nedre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med øvre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med øverste højre  sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort cirkel med øverste venstre kvadrant hvid"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort venstre halvdel af cirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort højre havdel af cirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stor hvid prik på sort baggrund"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel på sort baggrund"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre halvdel af hvid cirkel på sort baggrund"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre halvdel af hvid cirkel på sort baggrund"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre venstre kvadrant cirkulær bue"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre højre kvadrant cirkulær bue"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre højre kvadrant cirkulær bue"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre venstre kvadrant cirkulær bue"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre halvcirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre halvcirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort nedre højre trekant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort nedre venstre trekant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort øvre venstre trekant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort øvre højre trekant"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "komposition"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med venstre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med højre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med øvre venstre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med nedre højre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvidt kvadrat med skærende linie"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid trekant pegende op med prik"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25ED",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "trekant pegende op med venstre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "trekant pegende op med højre halvdel sort"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stor cirkel"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25F0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant med kvadrant øverst til venstre"
@@ -2172,8 +2172,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant med kvadrant nederst til venstre"
@@ -2181,8 +2181,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant med kvadrant nederst til højre"
@@ -2190,8 +2190,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firkant med kvadrant øverst til højre"
@@ -2199,8 +2199,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel med kvadrant øverst til venstre"
@@ -2208,8 +2208,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel med kvadrant nederst til venstre"
@@ -2217,8 +2217,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel med kvadrant nederst til højre"
@@ -2226,8 +2226,8 @@
     }
   },
   {
-    "category": "So",
     "key": "25F7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel med kvadrant øverst til højre"
@@ -2236,79 +2236,79 @@
   },
   {
     "key": "25F8",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre venstre trekant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25F9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre højre trekant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre venstre trekant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvidt medium kvadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sort medium kvadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvidt medium kvadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sort medium kvadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre højre trekant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2B12",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant, hvor den øverste halvdel er sort"
@@ -2316,8 +2316,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B13",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant, hvor den nederste halvdel er sort"
@@ -2325,8 +2325,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B14",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant, hvor den øverste højre diagonale halvdel er sort"
@@ -2334,8 +2334,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B15",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "firkant, hvor den nederste venstre diagonale halvdel er sort"
@@ -2343,8 +2343,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B16",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "rombe, hvor venstre halvdel er sort"
@@ -2352,8 +2352,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B17",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "rombe, hvor højre halvdel er sort"
@@ -2361,8 +2361,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B18",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "rombe, hvor den øverste halvdel er sort"
@@ -2370,8 +2370,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B19",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "rombe, hvor den nederste halvdel er sort"
@@ -2379,8 +2379,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stiplet firkant"
@@ -2388,8 +2388,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stor sort firkant"
@@ -2397,8 +2397,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stor hvid firkant"
@@ -2406,8 +2406,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "meget lille sort firkant"
@@ -2415,8 +2415,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "meget lille hvid firkant"
@@ -2424,8 +2424,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort femkant"
@@ -2433,8 +2433,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B20",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid femkant"
@@ -2442,8 +2442,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B21",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid sekskant"
@@ -2451,8 +2451,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B22",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort sekskant"
@@ -2460,8 +2460,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B23",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vandret sort sekskant"
@@ -2469,8 +2469,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B24",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stor sort cirkel"
@@ -2478,8 +2478,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B25",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "mellemstor sort rombe"
@@ -2487,8 +2487,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B26",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "mellemstor hvid rombe"
@@ -2496,8 +2496,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B27",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "mellemstor sort rombe"
@@ -2505,8 +2505,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B28",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "mellemstor hvid rombe"
@@ -2514,8 +2514,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B29",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "lille sort rombe"
@@ -2523,8 +2523,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "lille sort rombe"
@@ -2532,8 +2532,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "lille hvid rombe"
@@ -2541,8 +2541,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vandret sort ellipse"
@@ -2550,8 +2550,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vandret hvid ellipse"
@@ -2559,8 +2559,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort lodret ellipse"
@@ -2568,8 +2568,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid lodret ellipse"
@@ -2578,34 +2578,34 @@
   },
   {
     "key": "2B50",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid medium stjerne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2B51",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "lille sort stjerne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2B52",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "lille hvid stjerne"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2B53",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sort femkant, der peger mod højre"
@@ -2613,8 +2613,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B54",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid femkant, der peger mod højre"
@@ -2622,8 +2622,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B55",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "stor kraftig cirkel"
@@ -2631,8 +2631,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B56",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kraftig oval med oval indeni"
@@ -2640,8 +2640,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B57",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kraftig cirkel med cirkel indeni"
@@ -2649,8 +2649,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B58",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "kraftig cirkel"
@@ -2658,8 +2658,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2B59",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "andreaskors i en kraftig cirkel"

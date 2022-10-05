@@ -4,84 +4,84 @@
   },
   {
     "key": "cosh",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "coseno iperbolico"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "cosh"
     ]
   },
   {
     "key": "coth",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "cotangente iperbolica"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "coth"
     ]
   },
   {
     "key": "csch",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "cosecante iperbolica"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "csch"
     ]
   },
   {
     "key": "sech",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "secante iperbolica"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "sech"
     ]
   },
   {
     "key": "sinh",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "seno iperbolico"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "sinh"
     ]
   },
   {
     "key": "tanh",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "tangente iperbolica"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "tanh"
     ]
   },
   {
     "key": "arcosh",
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "settore coseno iperbolico"
       }
     },
-    "category": "Area",
     "names": [
       "arcosh",
       "arccosh",
@@ -90,12 +90,12 @@
   },
   {
     "key": "arcoth",
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "settore co-tangente iperbolica"
       }
     },
-    "category": "Area",
     "names": [
       "arcoth",
       "arccoth",
@@ -104,12 +104,12 @@
   },
   {
     "key": "arcsch",
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "settore co-secante iperbolica"
       }
     },
-    "category": "Area",
     "names": [
       "arcsch",
       "arccsch",
@@ -118,12 +118,12 @@
   },
   {
     "key": "arsech",
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "settore secante iperbolica"
       }
     },
-    "category": "Area",
     "names": [
       "arsech",
       "arcsech",
@@ -132,12 +132,12 @@
   },
   {
     "key": "arsinh",
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "settore seno iperbolico"
       }
     },
-    "category": "Area",
     "names": [
       "arsinh",
       "arcsinh",
@@ -146,12 +146,12 @@
   },
   {
     "key": "artanh",
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "settore tangente iperbolica"
       }
     },
-    "category": "Area",
     "names": [
       "artanh",
       "arctanh",

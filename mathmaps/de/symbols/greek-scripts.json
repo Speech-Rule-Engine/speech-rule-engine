@@ -3,8 +3,8 @@
     "locale": "de"
   },
   {
-    "category": "Ll",
     "key": "1D26",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Kapitälchen Gamma"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D27",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Kapitälchen Lamda"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D28",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Kapitälchen Pi"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D29",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Kapitälchen Rho"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D2A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Kapitälchen Psi"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D5E",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "hochgestelltes gamma"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D60",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "hochgestelltes phi"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D66",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "tiefgestelltes beta"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D67",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "tiefgestelltes gamma"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D68",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "tiefgestelltes rho"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D69",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "tiefgestelltes phi"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D6A",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "tiefgestelltes chi"

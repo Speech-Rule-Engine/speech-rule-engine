@@ -4,116 +4,116 @@
   },
   {
     "key": "m",
-    "si": true,
-    "names": [
-      "m"
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "metro"
       }
     },
-    "category": "length"
+    "si": true,
+    "names": [
+      "m"
+    ]
   },
   {
     "key": "ft",
-    "names": [
-      "ft",
-      "ft."
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "pies"
       }
     },
-    "category": "length"
+    "names": [
+      "ft",
+      "ft."
+    ]
   },
   {
     "key": "in",
-    "names": [
-      "in",
-      "in."
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "pulgada"
       }
     },
-    "category": "length"
+    "names": [
+      "in",
+      "in."
+    ]
   },
   {
     "key": "mi",
-    "names": [
-      "mi",
-      "mi."
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "milla"
       }
     },
-    "category": "length"
+    "names": [
+      "mi",
+      "mi."
+    ]
   },
   {
     "key": "yd",
-    "names": [
-      "yd",
-      "yd."
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "yarda"
       }
     },
-    "category": "length"
+    "names": [
+      "yd",
+      "yd."
+    ]
   },
   {
+    "key": "link",
     "category": "length",
     "mappings": {
       "default": {
         "default": "link"
       }
     },
-    "key": "link",
     "names": [
       "li",
       "li."
     ]
   },
   {
+    "key": "rod",
     "category": "length",
     "mappings": {
       "default": {
         "default": "rod"
       }
     },
-    "key": "rod",
     "names": [
       "rd",
       "rd."
     ]
   },
   {
+    "key": "chain",
     "category": "length",
     "mappings": {
       "default": {
         "default": "cadena"
       }
     },
-    "key": "chain",
     "names": [
       "ch",
       "ch."
     ]
   },
   {
+    "key": "furlong",
     "category": "length",
     "mappings": {
       "default": {
         "default": "furlong"
       }
     },
-    "key": "furlong",
     "names": [
       "fur",
       "fur."
@@ -121,15 +121,15 @@
   },
   {
     "key": "n.m.",
-    "names": [
-      "n.m."
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "milla náutica",
         "plural": "millas náuticas"
       }
     },
-    "category": "length"
+    "names": [
+      "n.m."
+    ]
   }
 ]

@@ -5,147 +5,147 @@
   {
     "key": "cos",
     "category": "Trigonometric",
-    "names": [
-      "cos",
-      "cosine"
-    ],
     "mappings": {
       "default": {
         "default": "cosinus"
       }
-    }
+    },
+    "names": [
+      "cos",
+      "cosine"
+    ]
   },
   {
     "key": "cot",
     "category": "Trigonometric",
-    "names": [
-      "cot"
-    ],
     "mappings": {
       "default": {
         "default": "cotangens"
       }
-    }
+    },
+    "names": [
+      "cot"
+    ]
   },
   {
     "key": "csc",
     "category": "Trigonometric",
-    "names": [
-      "csc"
-    ],
     "mappings": {
       "default": {
         "default": "cosekant"
       }
-    }
+    },
+    "names": [
+      "csc"
+    ]
   },
   {
     "key": "sec",
     "category": "Trigonometric",
-    "names": [
-      "sec"
-    ],
     "mappings": {
       "default": {
         "default": "sekant"
       }
-    }
+    },
+    "names": [
+      "sec"
+    ]
   },
   {
     "key": "sin",
     "category": "Trigonometric",
-    "names": [
-      "sin",
-      "sine"
-    ],
     "mappings": {
       "default": {
         "default": "sinus"
       }
-    }
+    },
+    "names": [
+      "sin",
+      "sine"
+    ]
   },
   {
     "key": "tan",
     "category": "Trigonometric",
-    "names": [
-      "tan"
-    ],
     "mappings": {
       "default": {
         "default": "tangens"
       }
-    }
+    },
+    "names": [
+      "tan"
+    ]
   },
   {
     "key": "arccos",
     "category": "Cyclometric",
-    "names": [
-      "arccos"
-    ],
     "mappings": {
       "default": {
         "default": "invers cosinus"
       }
-    }
+    },
+    "names": [
+      "arccos"
+    ]
   },
   {
     "key": "arccot",
     "category": "Cyclometric",
-    "names": [
-      "arccot"
-    ],
     "mappings": {
       "default": {
         "default": "invers cotangens"
       }
-    }
+    },
+    "names": [
+      "arccot"
+    ]
   },
   {
     "key": "arccsc",
     "category": "Cyclometric",
-    "names": [
-      "arccsc"
-    ],
     "mappings": {
       "default": {
         "default": "invers cosekant"
       }
-    }
+    },
+    "names": [
+      "arccsc"
+    ]
   },
   {
     "key": "arcsec",
     "category": "Cyclometric",
-    "names": [
-      "arcsec"
-    ],
     "mappings": {
       "default": {
         "default": "invers sekant"
       }
-    }
+    },
+    "names": [
+      "arcsec"
+    ]
   },
   {
     "key": "arcsin",
     "category": "Cyclometric",
-    "names": [
-      "arcsin"
-    ],
     "mappings": {
       "default": {
         "default": "invers sinus"
       }
-    }
+    },
+    "names": [
+      "arcsin"
+    ]
   },
   {
     "key": "arctan",
     "category": "Cyclometric",
-    "names": [
-      "arctan"
-    ],
     "mappings": {
       "default": {
         "default": "invers tangens"
       }
-    }
+    },
+    "names": [
+      "arctan"
+    ]
   }
 ]

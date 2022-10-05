@@ -4,333 +4,333 @@
   },
   {
     "key": "00E0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a aguda"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con anillo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e aguda"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00ED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i aguda"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EE",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "eñe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o aguda"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u aguda"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Y aguda",
         "defaultMP": "ye aguda"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y diéresis",
         "defaultMP": "ye diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0101",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0103",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con breve"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0105",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0107",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0109",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0113",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0115",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con breve"
@@ -339,61 +339,61 @@
   },
   {
     "key": "0117",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0119",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con breve"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0121",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0123",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con cedilla"
@@ -402,34 +402,34 @@
   },
   {
     "key": "0125",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0129",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "012B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "012D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con breve"
@@ -438,115 +438,115 @@
   },
   {
     "key": "012F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0131",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i sin punto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0135",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j con acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0137",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0140",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con punto mediano"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0144",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0146",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0148",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "014D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "014F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con breve"
@@ -555,196 +555,196 @@
   },
   {
     "key": "0151",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con doble acento agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0155",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0157",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0159",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0161",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0163",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0165",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0169",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con breve"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con anillo arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0171",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con doble acento agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0173",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0175",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0177",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con punto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con carón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01CE",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con acento"
@@ -752,8 +752,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con acento"
@@ -761,8 +761,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con acento"
@@ -770,8 +770,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con acento"
@@ -779,8 +779,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con acento"
@@ -788,8 +788,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k con acento"
@@ -797,8 +797,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01EB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con pecíolo"
@@ -806,8 +806,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j con acento"
@@ -816,16 +816,16 @@
   },
   {
     "key": "01F5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01F9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con grave"
@@ -833,8 +833,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0201",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con doble tumba"
@@ -842,8 +842,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0203",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con letras invertidas"
@@ -851,8 +851,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0205",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con doble tumba"
@@ -860,8 +860,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0207",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con letras invertidas"
@@ -869,8 +869,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0209",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con doble tumba"
@@ -878,8 +878,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con Breve invertida"
@@ -887,8 +887,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con doble tumba"
@@ -896,8 +896,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con letras invertidas"
@@ -905,8 +905,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0211",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con doble sepulcro"
@@ -914,8 +914,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0213",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con letras invertidas"
@@ -923,8 +923,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0215",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con doble tumba"
@@ -932,8 +932,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0217",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con letras invertidas"
@@ -941,8 +941,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0219",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con coma debajo"
@@ -950,8 +950,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con coma debajo"
@@ -959,8 +959,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con caron"
@@ -968,8 +968,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0227",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "con un punto arriba"
@@ -977,8 +977,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0229",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con cedilla"
@@ -986,8 +986,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con punto arriba"
@@ -995,8 +995,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0233",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con Macron"
@@ -1004,8 +1004,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0237",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s in punto j"
@@ -1014,713 +1014,713 @@
   },
   {
     "key": "1E01",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con anillo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E03",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E05",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E07",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E11",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E13",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con acento circunflejo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E19",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con acento circunflejo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con tilde debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "f con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E21",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con macrón"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E23",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E25",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E27",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E29",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con cedilla"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con breve debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con tilde debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E31",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E33",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E35",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E37",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con acento circunflejo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E41",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E43",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E45",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E47",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E49",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E4B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con acento circunflejo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E55",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E57",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E59",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E61",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E63",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E71",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con acento circunflejo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E73",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con diéresis debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E75",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con tilde debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E77",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con acento circunflejo debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "v con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "v con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E81",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E83",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con agudo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E85",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E87",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E89",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "x con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "x con diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E91",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con acento circunflejo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E93",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E95",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E96",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con línea debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E97",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con diéresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E98",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w con anillo arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E99",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con anillo arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E9A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con medio derecho de anillo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con gancho arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con gancho arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con gancho arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con gancho arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con gancho arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con punto debajo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con gancho arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con tilde"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

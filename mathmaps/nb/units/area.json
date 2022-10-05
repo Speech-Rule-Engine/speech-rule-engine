@@ -5,25 +5,25 @@
   {
     "key": "sq",
     "category": "other",
-    "names": [
-      "sq",
-      "sq."
-    ],
     "mappings": {
       "default": {
         "default": "kvadrat"
       }
-    }
+    },
+    "names": [
+      "sq",
+      "sq."
+    ]
   },
   {
     "key": "sq inch",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "square inch",
         "plural": "square inches"
       }
     },
-    "category": "area",
     "names": [
       "sq in",
       "sq. in.",
@@ -34,24 +34,24 @@
   {
     "key": "sq rd",
     "category": "area",
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ],
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "key": "sq ft",
     "mappings": {
       "default": {
         "default": ""
       }
     },
+    "names": [
+      "sq rd",
+      "sq. rd."
+    ]
+  },
+  {
+    "key": "sq ft",
     "category": "area",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    },
     "names": [
       "sq ft",
       "sq. ft."
@@ -59,12 +59,12 @@
   },
   {
     "key": "sq yd",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadratmeter"
       }
     },
-    "category": "area",
     "names": [
       "sq yd",
       "sq. yd."
@@ -72,12 +72,12 @@
   },
   {
     "key": "sq mi",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadratkilometer"
       }
     },
-    "category": "area",
     "names": [
       "sq mi",
       "sq. mi."
@@ -85,13 +85,13 @@
   },
   {
     "key": "acr",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "acre",
         "plural": "acres"
       }
     },
-    "category": "area",
     "names": [
       "ac",
       "ac.",
@@ -102,13 +102,13 @@
   {
     "key": "ha",
     "category": "area",
-    "names": [
-      "ha"
-    ],
     "mappings": {
       "default": {
         "default": "hektar"
       }
-    }
+    },
+    "names": [
+      "ha"
+    ]
   }
 ]

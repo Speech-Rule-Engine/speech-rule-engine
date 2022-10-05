@@ -4,18 +4,19 @@
   },
   {
     "key": "log",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "log"
       }
     },
-    "category": "Logarithm",
     "names": [
       "log"
     ]
   },
   {
     "key": "ln",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logarithme népérien"
@@ -25,43 +26,38 @@
         "Log_LnAsNaturalLog": "logarithme népérien"
       }
     },
-    "category": "Logarithm",
     "names": [
       "ln"
     ]
   },
   {
     "key": "lg",
-    "names": [
-      "lg"
-    ],
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logarithme décimal"
       }
     },
-    "category": "Logarithm"
+    "names": [
+      "lg"
+    ]
   },
   {
     "key": "exp",
-    "names": [
-      "exp",
-      "expt"
-    ],
+    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "exponentielle"
       }
     },
-    "category": "Elementary"
+    "names": [
+      "exp",
+      "expt"
+    ]
   },
   {
     "key": "gcd",
-    "names": [
-      "gcd",
-      "PGCD",
-      "pgcd"
-    ],
+    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "plus grand commun diviseur"
@@ -73,17 +69,15 @@
         "default": "pgcd"
       }
     },
-    "category": "Elementary"
+    "names": [
+      "gcd",
+      "PGCD",
+      "pgcd"
+    ]
   },
   {
     "key": "lcm",
-    "names": [
-      "lcm",
-      "ppcm",
-      "PPCM",
-      "PPMC",
-      "ppmc"
-    ],
+    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "plus petit commun multiple"
@@ -95,178 +89,184 @@
         "default": "ppcm"
       }
     },
-    "category": "Elementary"
+    "names": [
+      "lcm",
+      "ppcm",
+      "PPCM",
+      "PPMC",
+      "ppmc"
+    ]
   },
   {
     "key": "arg",
-    "names": [
-      "arg"
-    ],
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "argument"
       }
     },
-    "category": "Complex"
+    "names": [
+      "arg"
+    ]
   },
   {
     "key": "im",
-    "names": [
-      "im"
-    ],
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "partie imaginaire"
       }
     },
-    "category": "Complex"
+    "names": [
+      "im"
+    ]
   },
   {
     "key": "re",
-    "names": [
-      "re"
-    ],
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "partie réelle"
       }
     },
-    "category": "Complex"
+    "names": [
+      "re"
+    ]
   },
   {
     "key": "inf",
-    "names": [
-      "inf"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "borne inférieure"
       }
     },
-    "category": "Limits"
+    "names": [
+      "inf"
+    ]
   },
   {
     "key": "lim",
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite"
       }
     },
-    "category": "Limits",
     "names": [
       "lim"
     ]
   },
   {
     "key": "max",
-    "names": [
-      "max"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "maximum"
       }
     },
-    "category": "Limits"
+    "names": [
+      "max"
+    ]
   },
   {
     "key": "min",
-    "names": [
-      "min"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "minimum"
       }
     },
-    "category": "Limits"
+    "names": [
+      "min"
+    ]
   },
   {
     "key": "sup",
-    "names": [
-      "sup"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "borne supérieure"
       }
     },
-    "category": "Limits"
+    "names": [
+      "sup"
+    ]
   },
   {
     "key": "liminf",
-    "names": [
-      "lim inf",
-      "liminf"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite inferior"
       }
     },
-    "category": "Limits"
+    "names": [
+      "lim inf",
+      "liminf"
+    ]
   },
   {
     "key": "limsup",
-    "names": [
-      "lim sup",
-      "limsup"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite superior"
       }
     },
-    "category": "Limits"
+    "names": [
+      "lim sup",
+      "limsup"
+    ]
   },
   {
     "key": "injlim",
-    "names": [
-      "injlim",
-      "inj lim"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite inductive"
       }
     },
-    "category": "Limits"
+    "names": [
+      "injlim",
+      "inj lim"
+    ]
   },
   {
     "key": "projlim",
-    "names": [
-      "projlim",
-      "proj lim"
-    ],
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite projective"
       }
     },
-    "category": "Limits"
+    "names": [
+      "projlim",
+      "proj lim"
+    ]
   },
   {
     "key": "mod",
-    "names": [
-      "mod"
-    ],
+    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "modulo"
       }
     },
-    "category": "Elementary"
+    "names": [
+      "mod"
+    ]
   },
   {
     "key": "Pr",
-    "names": [
-      "Pr"
-    ],
+    "category": "Probability",
     "mappings": {
       "default": {
         "default": "probabilité"
       }
     },
-    "category": "Probability"
+    "names": [
+      "Pr"
+    ]
   }
 ]

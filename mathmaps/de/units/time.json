@@ -3,20 +3,21 @@
     "locale": "de"
   },
   {
+    "key": "s",
     "category": "time",
-    "si": true,
     "mappings": {
       "default": {
         "default": "Sekunde",
         "plural": "Sekunden"
       }
     },
-    "key": "s",
+    "si": true,
     "names": [
       "s"
     ]
   },
   {
+    "key": "″",
     "category": "time",
     "mappings": {
       "default": {
@@ -24,12 +25,12 @@
         "plural": "Sekunden"
       }
     },
-    "key": "″",
     "names": [
       "″"
     ]
   },
   {
+    "key": "min",
     "category": "time",
     "mappings": {
       "default": {
@@ -37,25 +38,25 @@
         "plural": "Minuten"
       }
     },
-    "key": "min",
     "names": [
       "min",
       "′"
     ]
   },
   {
+    "key": "°",
     "category": "time",
     "mappings": {
       "default": {
         "default": "Grad"
       }
     },
-    "key": "°",
     "names": [
       "°"
     ]
   },
   {
+    "key": "h",
     "category": "time",
     "mappings": {
       "default": {
@@ -63,7 +64,6 @@
         "plural": "Stunden"
       }
     },
-    "key": "h",
     "names": [
       "h",
       "hr"

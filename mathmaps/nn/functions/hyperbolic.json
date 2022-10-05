@@ -5,151 +5,151 @@
   {
     "key": "cosh",
     "category": "Hyperbolic",
-    "names": [
-      "cosh"
-    ],
     "mappings": {
       "default": {
         "default": "hyperbolsk cosinus"
       }
-    }
+    },
+    "names": [
+      "cosh"
+    ]
   },
   {
     "key": "coth",
     "category": "Hyperbolic",
-    "names": [
-      "coth"
-    ],
     "mappings": {
       "default": {
         "default": "hyperbolsk cotangens"
       }
-    }
+    },
+    "names": [
+      "coth"
+    ]
   },
   {
     "key": "csch",
     "category": "Hyperbolic",
-    "names": [
-      "csch"
-    ],
     "mappings": {
       "default": {
         "default": "hyperbolsk cosecans"
       }
-    }
+    },
+    "names": [
+      "csch"
+    ]
   },
   {
     "key": "sech",
     "category": "Hyperbolic",
-    "names": [
-      "sech"
-    ],
     "mappings": {
       "default": {
         "default": "hyperbolsk secans"
       }
-    }
+    },
+    "names": [
+      "sech"
+    ]
   },
   {
     "key": "sinh",
     "category": "Hyperbolic",
-    "names": [
-      "sinh"
-    ],
     "mappings": {
       "default": {
         "default": "hyperbolsk sinus"
       }
-    }
+    },
+    "names": [
+      "sinh"
+    ]
   },
   {
     "key": "tanh",
     "category": "Hyperbolic",
-    "names": [
-      "tanh"
-    ],
     "mappings": {
       "default": {
         "default": "hyperbolsk tangens"
       }
-    }
+    },
+    "names": [
+      "tanh"
+    ]
   },
   {
     "key": "arcosh",
     "category": "Area",
-    "names": [
-      "arcosh",
-      "arccosh"
-    ],
     "mappings": {
       "default": {
         "default": "arealfunksjon for hyperbolsk cosinus"
       }
-    }
+    },
+    "names": [
+      "arcosh",
+      "arccosh"
+    ]
   },
   {
     "key": "arcoth",
     "category": "Area",
-    "names": [
-      "arcoth",
-      "arccoth"
-    ],
     "mappings": {
       "default": {
         "default": "arealfunksjon for hyperbolsk cotangens"
       }
-    }
+    },
+    "names": [
+      "arcoth",
+      "arccoth"
+    ]
   },
   {
     "key": "arcsch",
     "category": "Area",
-    "names": [
-      "arcsch",
-      "arccsch"
-    ],
     "mappings": {
       "default": {
         "default": "arealfunksjon for hyperbolsk cosecans"
       }
-    }
+    },
+    "names": [
+      "arcsch",
+      "arccsch"
+    ]
   },
   {
     "key": "arsech",
     "category": "Area",
-    "names": [
-      "arsech",
-      "arcsech"
-    ],
     "mappings": {
       "default": {
         "default": "arealfunksjon for hyperbolsk secans"
       }
-    }
+    },
+    "names": [
+      "arsech",
+      "arcsech"
+    ]
   },
   {
     "key": "arsinh",
     "category": "Area",
-    "names": [
-      "arsinh",
-      "arcsinh"
-    ],
     "mappings": {
       "default": {
         "default": "arealfunksjon for hyperbolsk sinus"
       }
-    }
+    },
+    "names": [
+      "arsinh",
+      "arcsinh"
+    ]
   },
   {
     "key": "artanh",
     "category": "Area",
-    "names": [
-      "artanh",
-      "arctanh"
-    ],
     "mappings": {
       "default": {
         "default": "arealfunksjon for hyperbolsk tangens"
       }
-    }
+    },
+    "names": [
+      "artanh",
+      "arctanh"
+    ]
   }
 ]

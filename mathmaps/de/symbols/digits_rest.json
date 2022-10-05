@@ -4,6 +4,7 @@
   },
   {
     "key": "00B2",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "Quadrat"
@@ -12,11 +13,11 @@
         "Exponent_Exponent": "mit Exponent 2",
         "Exponent_OrdinalPower": "zur zweiten Potenz"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00B3",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "Kubik"
@@ -25,39 +26,38 @@
         "Exponent_Exponent": "mit Exponent 3",
         "Exponent_OrdinalPower": "zur dritten Potenz"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BC",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein Viertel"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BD",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein Halb"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BE",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "drei Viertel"
       }
-    },
-    "category": "No"
+    }
   },
   {
-    "category": "No",
     "key": "2150",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein siebtel"
@@ -65,8 +65,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2151",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein neuntel"
@@ -74,8 +74,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2152",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein zehntel"
@@ -83,8 +83,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2153",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein drittel"
@@ -92,8 +92,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2154",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "zwei drittel"
@@ -101,8 +101,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2155",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein fünftel"
@@ -110,8 +110,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2156",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "zwei fünftel"
@@ -119,8 +119,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2157",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "drei fünftel"
@@ -128,8 +128,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2158",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vier fünftel"
@@ -137,8 +137,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2159",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein sechstel"
@@ -146,8 +146,8 @@
     }
   },
   {
-    "category": "No",
     "key": "215A",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "fünf sechstel"
@@ -155,8 +155,8 @@
     }
   },
   {
-    "category": "No",
     "key": "215B",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "ein achtel"
@@ -164,8 +164,8 @@
     }
   },
   {
-    "category": "No",
     "key": "215C",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "drei achtel"
@@ -173,8 +173,8 @@
     }
   },
   {
-    "category": "No",
     "key": "215D",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "fünf achtel"
@@ -182,8 +182,8 @@
     }
   },
   {
-    "category": "No",
     "key": "215E",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "sieben achtel"
@@ -191,8 +191,8 @@
     }
   },
   {
-    "category": "No",
     "key": "215F",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "Bruchzähler eins"
@@ -200,8 +200,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2189",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "null drittel"
@@ -209,8 +209,8 @@
     }
   },
   {
-    "category": "No",
     "key": "3248",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Zehn auf schwarzem Quadrat"
@@ -218,8 +218,8 @@
     }
   },
   {
-    "category": "No",
     "key": "3249",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Zwanzig auf schwarzem Quadrat"
@@ -227,8 +227,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324A",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Dreißig auf schwarzem Quadrat"
@@ -236,8 +236,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324B",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Vierzig auf schwarzem Quadrat"
@@ -245,8 +245,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324C",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Fünfzig auf schwarzem Quadrat"
@@ -254,8 +254,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324D",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Sechzig auf schwarzem Quadrat"
@@ -263,8 +263,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324E",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Siebzig auf schwarzem Quadrat"
@@ -272,8 +272,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324F",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Achtzig auf schwarzem Quadrat"

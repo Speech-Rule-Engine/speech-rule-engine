@@ -3,42 +3,43 @@
     "locale": "de"
   },
   {
+    "key": "deg",
     "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Grad"
       }
     },
-    "key": "deg",
     "names": [
       "deg"
     ]
   },
   {
     "key": "det",
+    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Determinante"
       }
     },
-    "category": "Algebra",
     "names": [
       "det"
     ]
   },
   {
+    "key": "dim",
     "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Dimension"
       }
     },
-    "key": "dim",
     "names": [
       "dim"
     ]
   },
   {
+    "key": "hom",
     "category": "Algebra",
     "mappings": {
       "default": {
@@ -51,32 +52,31 @@
         "default": "hom"
       }
     },
-    "key": "hom",
     "names": [
       "hom",
       "Hom"
     ]
   },
   {
+    "key": "ker",
     "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Kern"
       }
     },
-    "key": "ker",
     "names": [
       "ker"
     ]
   },
   {
+    "key": "Tr",
     "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Spur"
       }
     },
-    "key": "Tr",
     "names": [
       "Tr",
       "tr"

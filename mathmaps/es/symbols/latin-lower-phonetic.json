@@ -4,52 +4,52 @@
   },
   {
     "key": "00F8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o barrada"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0111",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0127",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con guión"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0142",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con guión"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0167",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con guión"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0180",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b con línea"
@@ -58,16 +58,16 @@
   },
   {
     "key": "019B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "lambda tachada"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01B6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con línea"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01BE",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "parada glotal invertida con línea"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con línea"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01FF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con línea y acento agudo"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "023C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con trazo"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0247",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña e con trazo"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0249",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j con trazo"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "024D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "con trazo"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "024F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con trazo"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "025F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña sin puntos j con trazo"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0268",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con trazo"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0284",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña sin puntos j con trazo y gancho"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "parada glotal con trazo"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "parada invertida glotal con trazo"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D13",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "de lado O con trazo"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "iota con trazo"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p con trazo"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "upsilon con trazo"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E9C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "larga s con trazo diagonal"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E9D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña s larga con trazo alto"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "018D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "delta convertido"
@@ -256,16 +256,16 @@
   },
   {
     "key": "1E9B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s larga con punto arriba"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "1E9F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "delta pequeña latina"
@@ -274,16 +274,16 @@
   },
   {
     "key": "0138",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "kra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "017F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s larga"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0183",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b con barra encima"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0185",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "tono seis"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0188",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con gancho"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "018C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con barra encima"
@@ -328,16 +328,16 @@
   },
   {
     "key": "0192",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "f con gancho"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0195",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "hv"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0199",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k con gancho"
@@ -355,16 +355,16 @@
   },
   {
     "key": "019A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "019E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con pierna derecha larga"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01A1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con cuerno"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01A3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "oi"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01A5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p con gancho"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01A8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dos tonos"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01AA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latin letter invertido Esh bucle"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01AB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con palatal gancho"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01AD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con gancho"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01B0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con horn"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01B4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y con gancho"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01B9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ezh invertido"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01BA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ezh con cola"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01BD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "tono cinco"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01BF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "wynn"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01C6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dz con acento"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01C9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "lj"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01CC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "nj"
@@ -516,8 +516,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ae con macron"
@@ -525,8 +525,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01EF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ezh con acento"
@@ -534,8 +534,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dz"
@@ -543,8 +543,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latín letra pequeña yogh"
@@ -552,8 +552,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "026E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "lezh letra pequeña latina"
@@ -561,8 +561,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0292",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ezh"
@@ -570,8 +570,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0293",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña Ezh con Curl"
@@ -579,8 +579,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latín letra pequeña Dezh Digraph"
@@ -588,8 +588,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e convertido"
@@ -597,8 +597,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01FD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ae con acento agudo"
@@ -606,8 +606,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0221",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con rizo"
@@ -615,8 +615,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0223",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ou"
@@ -624,8 +624,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0225",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con gancho"
@@ -633,8 +633,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0234",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con rizo"
@@ -642,8 +642,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0235",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con rizo"
@@ -651,8 +651,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0236",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t con rizo"
@@ -660,8 +660,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0238",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "letra pequeña latina db digraph"
@@ -669,8 +669,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0239",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latín letra pequeña Qp Digraph"
@@ -678,8 +678,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "023F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con cola cruzada"
@@ -687,8 +687,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0240",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con cola swash"
@@ -696,8 +696,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0242",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latín letra pequeña parada glotal"
@@ -705,8 +705,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "024B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "q con cola de gancho"
@@ -714,8 +714,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0250",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida en una"
@@ -723,8 +723,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0251",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "alfa minúscula latina"
@@ -732,8 +732,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0252",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida en alfa"
@@ -741,8 +741,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0253",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b con gancho"
@@ -750,8 +750,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0254",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "abierta o"
@@ -759,8 +759,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0255",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con rizo"
@@ -768,8 +768,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0256",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con cola"
@@ -777,8 +777,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0257",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d con gancho"
@@ -786,8 +786,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0258",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "invertida E"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0259",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "schwa"
@@ -804,8 +804,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "025A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña Schwa con gancho"
@@ -814,16 +814,16 @@
   },
   {
     "key": "025B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e abierta"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "025C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "invertida abierta E"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "025D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "letra pequeña latina invertida E abierta con gancho"
@@ -840,8 +840,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "025E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "cerrada invertida abierta E"
@@ -849,8 +849,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0260",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g con gancho"
@@ -858,8 +858,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0261",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "escritura latina de letras pequeñas G"
@@ -867,8 +867,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0263",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latín letra pequeña gamma"
@@ -876,8 +876,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0264",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "cuerno de carnero de letra pequeña latina"
@@ -885,8 +885,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0265",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "girada h"
@@ -894,8 +894,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0266",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h con gancho"
@@ -903,8 +903,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0267",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña letra latina Heng con gancho"
@@ -912,8 +912,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0269",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latín letra minúscula Iota"
@@ -921,8 +921,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "026B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con tilde medio"
@@ -930,8 +930,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "026C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con cinturón"
@@ -939,8 +939,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "026D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "letra L latina pequeña con gancho Retroflex"
@@ -948,8 +948,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "026F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "girada m"
@@ -957,8 +957,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0270",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta M con pierna larga"
@@ -966,8 +966,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0271",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m con gancho"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0272",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con gancho izquierdo"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0273",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n con gancho retroflex"
@@ -993,8 +993,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0275",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "letra minúscula omega"
@@ -1002,8 +1002,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0277",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "latin Small Letter Closed Omega"
@@ -1011,8 +1011,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0278",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Letra pequeña latina"
@@ -1020,8 +1020,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0279",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta r"
@@ -1029,8 +1029,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "027A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta R con pierna larga"
@@ -1038,8 +1038,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "027B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta R con gancho"
@@ -1047,8 +1047,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "027C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "R con pierna larga"
@@ -1056,8 +1056,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "027D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "R con cola"
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "027E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "R con anzuelo"
@@ -1074,8 +1074,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "027F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "invertida R con anzuelo"
@@ -1083,8 +1083,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0282",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "S con gancho"
@@ -1092,8 +1092,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0283",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Pequeña letra latina esh"
@@ -1101,8 +1101,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0285",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Latín letra pequeña en cuclillas invertida Esh"
@@ -1110,8 +1110,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0286",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Esh minúscula latina con rizo"
@@ -1119,8 +1119,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0287",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta t"
@@ -1128,8 +1128,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0288",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "T con gancho retroflex"
@@ -1137,8 +1137,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0289",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Letra de letra pequeña latina U"
@@ -1146,8 +1146,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "028A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Upsilon"
@@ -1155,8 +1155,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "028B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "V con gancho"
@@ -1164,8 +1164,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "028C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida V"
@@ -1173,8 +1173,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "028D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "girada w"
@@ -1182,8 +1182,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "028E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta y"
@@ -1191,8 +1191,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0290",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Z con gancho retroflex"
@@ -1200,8 +1200,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0291",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con rizo"
@@ -1209,8 +1209,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0295",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "faríngea con voz fricativa"
@@ -1218,8 +1218,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0296",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "invertida parada glotal"
@@ -1227,8 +1227,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0297",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "estirada c"
@@ -1236,8 +1236,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0298",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Carta Bilabial Click"
@@ -1245,8 +1245,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "029A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "cerrada abierta e"
@@ -1254,8 +1254,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "029E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta k"
@@ -1263,8 +1263,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "q con gancho"
@@ -1272,8 +1272,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña letra Dz Digraph"
@@ -1281,8 +1281,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Letra pequeña latina Dz Digraph con Curl"
@@ -1290,8 +1290,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Latín letra pequeña Ts Digraph"
@@ -1299,8 +1299,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Letra pequeña latina Tesh Digraph"
@@ -1308,8 +1308,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Latín letra pequeña Tc Digraph con Curl"
@@ -1317,8 +1317,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02A9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Letra pequeña latina Feng Digraph"
@@ -1326,8 +1326,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02AA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña letra Ls Digraph"
@@ -1335,8 +1335,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02AB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña letra Lz Digraph"
@@ -1344,8 +1344,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02AC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "percusion bilabial"
@@ -1353,8 +1353,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02AD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "de percusión bidental"
@@ -1362,8 +1362,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02AE",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida en H con anzuelo"
@@ -1371,8 +1371,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "02AF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida en H con anzuelo y cola"
@@ -1380,8 +1380,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D02",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta ae"
@@ -1389,8 +1389,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D08",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida abierta E"
@@ -1398,8 +1398,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D09",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "convertida i"
@@ -1407,8 +1407,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D11",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "de lado O"
@@ -1416,8 +1416,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D12",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "de lado abierto O"
@@ -1425,8 +1425,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D14",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "vuelta oe"
@@ -1434,8 +1434,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D16",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "mitad superior O"
@@ -1443,8 +1443,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D17",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Letra latina, letra inferior, mitad inferior O"
@@ -1452,8 +1452,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D1D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "hacia los lados U"
@@ -1461,8 +1461,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D1E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "de lado diaeresizada U"
@@ -1470,8 +1470,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D1F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "girada hacia los lados M"
@@ -1479,8 +1479,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D24",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Carta latina expresada espirante laríngeo"
@@ -1488,8 +1488,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D25",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ain"
@@ -1497,8 +1497,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ue"
@@ -1506,8 +1506,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "B con tilde medio"
@@ -1515,8 +1515,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "D con tilde medio"
@@ -1524,8 +1524,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "F con tilde medio"
@@ -1533,8 +1533,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "M con tilde medio"
@@ -1542,8 +1542,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D70",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "N con tilde medio"
@@ -1551,8 +1551,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D71",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "P con tilde medio"
@@ -1560,8 +1560,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D72",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "R con tilde medio"
@@ -1569,8 +1569,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D73",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "R con anzuelo y tilde medio"
@@ -1578,8 +1578,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D74",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "S con tilde medio"
@@ -1587,8 +1587,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D75",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "T con tilde medio"
@@ -1596,8 +1596,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D76",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z con tilde media"
@@ -1605,8 +1605,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D77",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "girada g"
@@ -1614,8 +1614,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D79",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "insular g"
@@ -1623,8 +1623,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "th con tachado"
@@ -1632,8 +1632,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D80",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "B con gancho palatal"
@@ -1641,8 +1641,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D81",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "D con gancho palatal"
@@ -1650,8 +1650,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D82",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "F con gancho palatino"
@@ -1659,8 +1659,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D83",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "G con gancho palatal"
@@ -1668,8 +1668,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D84",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "K con gancho palatino"
@@ -1677,8 +1677,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D85",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "L con gancho palatino"
@@ -1686,8 +1686,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D86",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "M con gancho palatino"
@@ -1695,8 +1695,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D87",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "N con gancho palatal"
@@ -1704,8 +1704,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D88",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "P con gancho palatino"
@@ -1713,8 +1713,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D89",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "R con gancho palatal"
@@ -1722,8 +1722,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D8A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "S con gancho palatal"
@@ -1731,8 +1731,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D8B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Pequeña letra latina Esh con gancho palatal"
@@ -1740,8 +1740,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D8C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "V con gancho palatal"
@@ -1749,8 +1749,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D8D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "X con gancho palatal"
@@ -1758,8 +1758,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D8E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Z con gancho palatal"
@@ -1767,8 +1767,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D8F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con gancho retroflex"
@@ -1776,8 +1776,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D90",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Alfa latina pequeña letra con gancho retroflex"
@@ -1785,8 +1785,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D91",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "D con gancho y cola"
@@ -1794,8 +1794,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D92",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña E con gancho retroflex"
@@ -1803,8 +1803,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D93",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "E Pequeña Open con Gancho Retroflex"
@@ -1812,8 +1812,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D94",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "E abierta invertido con gancho retroflex"
@@ -1821,8 +1821,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D95",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña Schwa con gancho retroflex"
@@ -1830,8 +1830,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D96",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "I con gancho retroflex"
@@ -1839,8 +1839,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D97",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña latina Open O con gancho retroflex"
@@ -1848,8 +1848,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D98",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Esh de letra pequeña latina con gancho retroflex"
@@ -1857,8 +1857,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D99",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "U con gancho retroflex"
@@ -1866,8 +1866,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D9A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña Ezh con gancho retroflex"
@@ -1876,20 +1876,20 @@
   },
   {
     "key": "0149",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n precedida por apóstrofe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "014B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "eng"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

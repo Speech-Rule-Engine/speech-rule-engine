@@ -5,213 +5,213 @@
   {
     "key": "cu",
     "category": "volume",
-    "names": [
-      "cu",
-      "cu."
-    ],
     "mappings": {
       "default": {
         "default": "cúbic",
         "plural": "cúbics"
       }
-    }
+    },
+    "names": [
+      "cu",
+      "cu."
+    ]
   },
   {
     "key": "cu inch",
     "category": "volume",
-    "names": [
-      "cu in",
-      "cu. in."
-    ],
     "mappings": {
       "default": {
         "default": "polzada cúbica",
         "plural": "plozades cúbiques"
       }
-    }
+    },
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
   },
   {
     "key": "cu ft",
     "category": "volume",
-    "names": [
-      "cu ft",
-      "cu. ft."
-    ],
     "mappings": {
       "default": {
         "default": "peu cúbic",
         "plural": "peus cúbics"
       }
-    }
+    },
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ]
   },
   {
     "key": "cu yd",
     "category": "volume",
-    "names": [
-      "cu yd",
-      "cu. yd."
-    ],
     "mappings": {
       "default": {
         "default": "iarda cúbica",
         "plural": "iardes cúbiques"
       }
-    }
+    },
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ]
   },
   {
     "key": "bbl",
     "category": "volume",
-    "names": [
-      "bbl.",
-      "bbl"
-    ],
     "mappings": {
       "default": {
         "default": "barril",
         "plural": "barrils"
       }
-    }
+    },
+    "names": [
+      "bbl.",
+      "bbl"
+    ]
   },
   {
     "key": "fl. oz.",
     "category": "volume",
-    "names": [
-      "fl. oz.",
-      "fl oz"
-    ],
     "mappings": {
       "default": {
         "default": "unça líquida",
         "plural": "unces líquides"
       }
-    }
+    },
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ]
   },
   {
     "key": "gal",
     "category": "volume",
-    "names": [
-      "gal",
-      "gal."
-    ],
     "mappings": {
       "default": {
         "default": "galó",
         "plural": "galons"
       }
-    }
+    },
+    "names": [
+      "gal",
+      "gal."
+    ]
   },
   {
     "key": "pt",
     "category": "volume",
-    "names": [
-      "pt",
-      "pt."
-    ],
     "mappings": {
       "default": {
         "default": "pinta",
         "plural": "pintes"
       }
-    }
+    },
+    "names": [
+      "pt",
+      "pt."
+    ]
   },
   {
     "key": "qt",
     "category": "volume",
-    "names": [
-      "qt",
-      "qt."
-    ],
     "mappings": {
       "default": {
         "default": "quart",
         "plural": "quarts"
       }
-    }
+    },
+    "names": [
+      "qt",
+      "qt."
+    ]
   },
   {
     "key": "fluid dram",
     "category": "volume",
-    "names": [
-      "fl dr",
-      "fl. dr."
-    ],
     "mappings": {
       "default": {
         "default": "dracma líquida",
         "plural": "dracmes líquides"
       }
-    }
+    },
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
   },
   {
     "key": "tbsp",
     "category": "volume",
-    "names": [
-      "tbsp",
-      "tbsp.",
-      "Tbsp",
-      "Tbsp."
-    ],
     "mappings": {
       "default": {
         "default": "cullerada",
         "plural": "cullerades"
       }
-    }
+    },
+    "names": [
+      "tbsp",
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
+    ]
   },
   {
     "key": "tsp",
     "category": "volume",
-    "names": [
-      "tsp",
-      "tsp."
-    ],
     "mappings": {
       "default": {
         "default": "culleradeta",
         "plural": "culleradetes"
       }
-    }
+    },
+    "names": [
+      "tsp",
+      "tsp."
+    ]
   },
   {
     "key": "cup",
     "category": "volume",
-    "names": [
-      "cp",
-      "cp."
-    ],
     "mappings": {
       "default": {
         "default": "tassa",
         "plural": "tasses"
       }
-    }
+    },
+    "names": [
+      "cp",
+      "cp."
+    ]
   },
   {
     "key": "cc",
     "category": "volume",
-    "names": [
-      "cc",
-      "ccm"
-    ],
     "mappings": {
       "default": {
         "default": "centímetre cúbic",
         "plural": "centímetres cúbics"
       }
-    }
+    },
+    "names": [
+      "cc",
+      "ccm"
+    ]
   },
   {
     "key": "l",
     "category": "volume",
-    "names": [
-      "l"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "litre",
         "plural": "litres"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "l"
+    ]
   }
 ]

@@ -5,75 +5,75 @@
   {
     "key": "deg",
     "category": "Algebra",
-    "names": [
-      "deg"
-    ],
     "mappings": {
       "default": {
         "default": "graus"
       }
-    }
+    },
+    "names": [
+      "deg"
+    ]
   },
   {
     "key": "det",
     "category": "Algebra",
-    "names": [
-      "det"
-    ],
     "mappings": {
       "default": {
         "default": "determinant"
       }
-    }
+    },
+    "names": [
+      "det"
+    ]
   },
   {
     "key": "dim",
     "category": "Algebra",
-    "names": [
-      "dim"
-    ],
     "mappings": {
       "default": {
         "default": "dimensió"
       }
-    }
+    },
+    "names": [
+      "dim"
+    ]
   },
   {
     "key": "hom",
     "category": "Algebra",
-    "names": [
-      "hom",
-      "Hom"
-    ],
     "mappings": {
       "default": {
         "default": "homomorfisme"
       }
-    }
+    },
+    "names": [
+      "hom",
+      "Hom"
+    ]
   },
   {
     "key": "ker",
     "category": "Algebra",
-    "names": [
-      "ker"
-    ],
     "mappings": {
       "default": {
         "default": "nucli"
       }
-    }
+    },
+    "names": [
+      "ker"
+    ]
   },
   {
     "key": "Tr",
     "category": "Algebra",
-    "names": [
-      "Tr",
-      "tr"
-    ],
     "mappings": {
       "default": {
         "default": "traça"
       }
-    }
+    },
+    "names": [
+      "Tr",
+      "tr"
+    ]
   }
 ]

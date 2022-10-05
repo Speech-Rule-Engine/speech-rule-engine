@@ -3,8 +3,8 @@
     "locale": "de"
   },
   {
-    "category": "Ll",
     "key": "01D6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Diärese und Makron"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Diärese und Akut"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Diärese und Caron"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Diärese und Grab"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Diärese und Makron"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Dot Above und Makron"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01ED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Ogonek und Makron"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01FB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Ring oben und akut"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Diärese und Makron"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Tilde und Makron"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0231",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Punkt oben und Makron"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E09",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c mit Cedilla und Akut"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E15",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Makron und Grab"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E17",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Makron und Akut"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E1D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Cedilla und Breve"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E2F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i mit Diärese und Akut"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E39",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l mit Punkt unten und Makron"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E4D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Tilde und Akut"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E4F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Tilde und Diärese"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E51",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Makron und Grab"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E53",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Makron und Akut"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E5D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r mit Punkt unten und Makron"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E65",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s mit Akute und Punkt oben"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E67",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s mit Caron und Punkt oben"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E69",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s mit Punkt unten und Punkt oben"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E79",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Tilde und Akut"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E7B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Makron und Diärese"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Zirkumflex und Akut"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Zirkumflex und Grab"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Zirkumflex und Haken oben"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EAB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Zirkumflex und Tilde"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EAD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Zirkumflex und Punkt darunter"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EAF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Breve und Akut"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Breve und Grab"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Breve und Haken oben"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Breve und Tilde"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a mit Breve und Dot Below"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EBF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Zirkumflex und Akut"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Zirkumflex und Grab"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Zirkumflex und Haken oben"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Zirkumflex und Tilde"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e mit Zirkumflex und Punkt darunter"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Zirkumflex und Akut"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Zirkumflex und Grab"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Zirkumflex und Haken oben"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Zirkumflex und Tilde"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ED9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Zirkumflex und Punkt darunter"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EDB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Horn und Akut"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EDD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Horn und Grab"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EDF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Horn und Haken oben"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Horn und Tilde"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o mit Horn und Punkt"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Horn und Akut"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EEB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Horn und Grab"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Horn und Haken oben"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EEF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Horn und Tilde"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EF1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u mit Horn und Punkt"

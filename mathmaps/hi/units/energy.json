@@ -5,106 +5,106 @@
   {
     "key": "W",
     "category": "energy",
-    "names": [
-      "W",
-      "w"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "वॉट"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "W",
+      "w"
+    ]
   },
   {
     "key": "kwh",
     "category": "energy",
-    "names": [
-      "kwh",
-      "kWh"
-    ],
     "mappings": {
       "default": {
         "default": "किलोवॉट घंटा"
       }
-    }
+    },
+    "names": [
+      "kwh",
+      "kWh"
+    ]
   },
   {
     "key": "J",
     "category": "energy",
-    "names": [
-      "J"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "जूल"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "J"
+    ]
   },
   {
     "key": "N",
     "category": "energy",
-    "names": [
-      "N"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "न्यूटन"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "N"
+    ]
   },
   {
     "key": "A",
     "category": "energy",
-    "names": [
-      "A"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "एम्पियर"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "A"
+    ]
   },
   {
     "key": "V",
     "category": "energy",
-    "names": [
-      "V"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "वॉल्ट"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "V"
+    ]
   },
   {
     "key": "ohm",
     "category": "energy",
-    "names": [
-      "Ohm",
-      "ohm"
-    ],
     "mappings": {
       "default": {
         "default": "ओह्म"
       }
-    }
+    },
+    "names": [
+      "Ohm",
+      "ohm"
+    ]
   },
   {
     "key": "Ω",
     "category": "energy",
-    "names": [
-      "Ω"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "ओह्म"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "Ω"
+    ]
   }
 ]

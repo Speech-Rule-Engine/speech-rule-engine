@@ -4,12 +4,12 @@
   },
   {
     "key": "lb",
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "Pfund"
       }
     },
-    "category": "weight",
     "names": [
       "lb",
       "lb."
@@ -17,26 +17,26 @@
   },
   {
     "key": "oz",
+    "category": "weight",
     "mappings": {
       "default": {
         "plural": "Unzen",
         "default": "Unze"
       }
     },
-    "category": "weight",
     "names": [
       "oz",
       "oz."
     ]
   },
   {
+    "key": "LT",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "Long ton"
       }
     },
-    "key": "LT",
     "names": [
       "LT",
       "L.T."
@@ -44,56 +44,57 @@
   },
   {
     "key": "gr",
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "Gramm"
       }
     },
-    "category": "weight",
     "names": [
       "gr"
     ]
   },
   {
     "key": "g",
-    "si": true,
+    "category": "weight",
     "mappings": {
       "default": {
         "default": "Gramm"
       }
     },
-    "category": "weight",
+    "si": true,
     "names": [
       "g"
     ]
   },
   {
+    "key": "mcg",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "Mikrogramm"
       }
     },
-    "key": "mcg",
     "names": [
       "mcg"
     ]
   },
   {
     "key": "t",
+    "category": "weight",
     "mappings": {
       "default": {
         "plural": "Tonnen",
         "default": "Tonne"
       }
     },
-    "category": "weight",
     "names": [
       "t",
       "T"
     ]
   },
   {
+    "key": "dram",
     "category": "weight",
     "mappings": {
       "default": {
@@ -101,46 +102,45 @@
         "default": "Drachme"
       }
     },
-    "key": "dram",
     "names": [
       "dr",
       "dr."
     ]
   },
   {
+    "key": "st",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "Stone"
       }
     },
-    "key": "st",
     "names": [
       "st",
       "st."
     ]
   },
   {
+    "key": "qtr",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "Viertelzentner"
       }
     },
-    "key": "qtr",
     "names": [
       "qtr",
       "qtr."
     ]
   },
   {
+    "key": "cwt",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "Zentner"
       }
     },
-    "key": "cwt",
     "names": [
       "cwt",
       "cwt.",

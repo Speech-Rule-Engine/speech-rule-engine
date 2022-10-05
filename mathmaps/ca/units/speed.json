@@ -5,54 +5,54 @@
   {
     "key": "kt",
     "category": "speed",
-    "names": [
-      "kt",
-      "kt."
-    ],
     "mappings": {
       "default": {
         "default": "nus",
         "plural": "nusos"
       }
-    }
+    },
+    "names": [
+      "kt",
+      "kt."
+    ]
   },
   {
     "key": "mph",
     "category": "speed",
-    "names": [
-      "mph"
-    ],
     "mappings": {
       "default": {
         "default": "milla per hora",
         "plural": "milles per hora"
       }
-    }
+    },
+    "names": [
+      "mph"
+    ]
   },
   {
     "key": "rpm",
     "category": "speed",
-    "names": [
-      "rpm"
-    ],
     "mappings": {
       "default": {
         "default": "revolució per minut",
         "plural": "revolucions per minut"
       }
-    }
+    },
+    "names": [
+      "rpm"
+    ]
   },
   {
     "key": "kmh",
     "category": "speed",
-    "names": [
-      "kmh"
-    ],
     "mappings": {
       "default": {
         "default": "quilòmetre per hora",
         "plural": "quilòmetres per hora"
       }
-    }
+    },
+    "names": [
+      "kmh"
+    ]
   }
 ]

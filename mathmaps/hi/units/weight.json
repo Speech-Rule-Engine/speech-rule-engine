@@ -5,142 +5,142 @@
   {
     "key": "dram",
     "category": "weight",
-    "names": [
-      "dr",
-      "dr."
-    ],
     "mappings": {
       "default": {
         "default": "ड्राम"
       }
-    }
+    },
+    "names": [
+      "dr",
+      "dr."
+    ]
   },
   {
     "key": "oz",
     "category": "weight",
-    "names": [
-      "oz",
-      "oz."
-    ],
     "mappings": {
       "default": {
         "default": "औंस"
       }
-    }
+    },
+    "names": [
+      "oz",
+      "oz."
+    ]
   },
   {
     "key": "lb",
     "category": "weight",
-    "names": [
-      "lb",
-      "lb."
-    ],
     "mappings": {
       "default": {
         "default": "रतल"
       }
-    }
+    },
+    "names": [
+      "lb",
+      "lb."
+    ]
   },
   {
     "key": "st",
     "category": "weight",
-    "names": [
-      "st",
-      "st."
-    ],
     "mappings": {
       "default": {
         "default": "स्टोन"
       }
-    }
+    },
+    "names": [
+      "st",
+      "st."
+    ]
   },
   {
     "key": "qtr",
     "category": "weight",
-    "names": [
-      "qtr",
-      "qtr."
-    ],
     "mappings": {
       "default": {
         "default": "क़्वार्टर"
       }
-    }
+    },
+    "names": [
+      "qtr",
+      "qtr."
+    ]
   },
   {
     "key": "cwt",
     "category": "weight",
-    "names": [
-      "cwt",
-      "cwt."
-    ],
     "mappings": {
       "default": {
         "default": "हन्ड्रेड्वेट"
       }
-    }
+    },
+    "names": [
+      "cwt",
+      "cwt."
+    ]
   },
   {
     "key": "LT",
     "category": "weight",
-    "names": [
-      "LT",
-      "L.T."
-    ],
     "mappings": {
       "default": {
         "default": "इम्पीरियल टन"
       }
-    }
+    },
+    "names": [
+      "LT",
+      "L.T."
+    ]
   },
   {
     "key": "gr",
     "category": "weight",
-    "names": [
-      "gr"
-    ],
     "mappings": {
       "default": {
         "default": "ग्राम"
       }
-    }
+    },
+    "names": [
+      "gr"
+    ]
   },
   {
     "key": "g",
     "category": "weight",
-    "names": [
-      "g"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "ग्राम"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "g"
+    ]
   },
   {
     "key": "mcg",
     "category": "weight",
-    "names": [
-      "mcg"
-    ],
     "mappings": {
       "default": {
         "default": "माइक्रोग्राम"
       }
-    }
+    },
+    "names": [
+      "mcg"
+    ]
   },
   {
     "key": "t",
     "category": "weight",
-    "names": [
-      "t",
-      "T"
-    ],
     "mappings": {
       "default": {
         "default": "टन"
       }
-    }
+    },
+    "names": [
+      "t",
+      "T"
+    ]
   }
 ]

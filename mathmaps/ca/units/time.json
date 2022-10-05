@@ -5,69 +5,69 @@
   {
     "key": "s",
     "category": "time",
-    "names": [
-      "s"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "segon",
         "plural": "segons"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "s"
+    ]
   },
   {
     "key": "″",
     "category": "time",
-    "names": [
-      "″"
-    ],
     "mappings": {
       "default": {
         "default": "segon",
         "plural": "segons"
       }
-    }
+    },
+    "names": [
+      "″"
+    ]
   },
   {
     "key": "min",
     "category": "time",
-    "names": [
-      "min",
-      "′"
-    ],
     "mappings": {
       "default": {
         "default": "minut",
         "plural": "minuts"
       }
-    }
+    },
+    "names": [
+      "min",
+      "′"
+    ]
   },
   {
     "key": "°",
     "category": "time",
-    "names": [
-      "°"
-    ],
     "mappings": {
       "default": {
         "default": "grau",
         "plural": "graus"
       }
-    }
+    },
+    "names": [
+      "°"
+    ]
   },
   {
     "key": "h",
     "category": "time",
-    "names": [
-      "h",
-      "hr"
-    ],
     "mappings": {
       "default": {
         "default": "hora",
         "plural": "hores"
       }
-    }
+    },
+    "names": [
+      "h",
+      "hr"
+    ]
   }
 ]

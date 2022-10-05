@@ -5,26 +5,26 @@
   {
     "key": "sq",
     "category": "other",
-    "names": [
-      "sq",
-      "sq."
-    ],
     "mappings": {
       "default": {
         "default": "kvadrat",
         "plural": "kvadrat"
       }
-    }
+    },
+    "names": [
+      "sq",
+      "sq."
+    ]
   },
   {
     "key": "sq inch",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrattum",
         "plural": "kvadrattum"
       }
     },
-    "category": "area",
     "names": [
       "sq in",
       "sq. in.",
@@ -35,26 +35,26 @@
   {
     "key": "sq rd",
     "category": "area",
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ],
     "mappings": {
       "default": {
         "default": "kvadrat-rod",
         "plural": "kvadrat-rods"
       }
-    }
+    },
+    "names": [
+      "sq rd",
+      "sq. rd."
+    ]
   },
   {
     "key": "sq ft",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrat fot",
         "plural": "kvadrat fot"
       }
     },
-    "category": "area",
     "names": [
       "sq ft",
       "sq. ft."
@@ -62,13 +62,13 @@
   },
   {
     "key": "sq yd",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrat yard",
         "plural": "kvadrat yards"
       }
     },
-    "category": "area",
     "names": [
       "sq yd",
       "sq. yd."
@@ -76,13 +76,13 @@
   },
   {
     "key": "sq mi",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrat mile",
         "plural": "kvadrat miles"
       }
     },
-    "category": "area",
     "names": [
       "sq mi",
       "sq. mi."
@@ -90,13 +90,13 @@
   },
   {
     "key": "acr",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "tunnland",
         "plural": "tunnland"
       }
     },
-    "category": "area",
     "names": [
       "ac",
       "ac.",
@@ -107,14 +107,14 @@
   {
     "key": "ha",
     "category": "area",
-    "names": [
-      "ha"
-    ],
     "mappings": {
       "default": {
         "default": "hektar",
         "plural": "hektar"
       }
-    }
+    },
+    "names": [
+      "ha"
+    ]
   }
 ]

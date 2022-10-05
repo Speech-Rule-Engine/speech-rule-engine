@@ -3,39 +3,39 @@
     "locale": "fr"
   },
   {
+    "key": "b",
     "category": "memory",
     "mappings": {
       "default": {
         "default": "bit"
       }
     },
-    "key": "b",
     "names": [
       "b"
     ]
   },
   {
+    "key": "B",
     "category": "memory",
-    "si": true,
     "mappings": {
       "default": {
         "default": "octet"
       }
     },
-    "key": "B",
+    "si": true,
     "names": [
       "B",
       "o"
     ]
   },
   {
+    "key": "KB",
     "category": "memory",
     "mappings": {
       "default": {
         "default": "kilooctet"
       }
     },
-    "key": "KB",
     "names": [
       "KB",
       "Ko"

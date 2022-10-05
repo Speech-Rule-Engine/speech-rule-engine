@@ -3,8 +3,8 @@
     "locale": "it"
   },
   {
-    "category": "Zs",
     "key": "0020",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": "spazio"
@@ -13,16 +13,16 @@
   },
   {
     "key": "00A0",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": " "
       }
-    },
-    "category": "Zs"
+    }
   },
   {
-    "category": "Cf",
     "key": "00AD",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "trattino discrezionale"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2000",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": "in quad"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2001",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": "montone quad"
@@ -49,43 +49,43 @@
   },
   {
     "key": "2002",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2003",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2004",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2005",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
-    "category": "Zs",
     "key": "2006",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": "spazio per sei persone"
@@ -94,52 +94,52 @@
   },
   {
     "key": "2007",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2008",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2009",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "200A",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "200B",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Cf",
     "key": "200C",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "zero Width Non-Joiner"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200D",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "zero Width Joiner"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200E",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "marchio da sinistra a destra"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200F",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "marchio da destra a sinistra"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Zl",
     "key": "2028",
+    "category": "Zl",
     "mappings": {
       "default": {
         "default": "separatore di righe"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Zp",
     "key": "2029",
+    "category": "Zp",
     "mappings": {
       "default": {
         "default": "separatore di paragrafi"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202A",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "incorporamento da sinistra a destra"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202B",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "incorporamento da destra a sinistra"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202C",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "pop formattazione direzionale"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202D",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "override da sinistra a destra"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202E",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "override da destra a sinistra"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Zs",
     "key": "202F",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": "spazio indivisibile piccolo"
@@ -247,52 +247,52 @@
   },
   {
     "key": "205F",
+    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2060",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2061",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "di"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2062",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "per"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2063",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "virgola"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Cf",
     "key": "2064",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "più"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206A",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "inibire lo scambio simmetrico"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206B",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "attiva lo scambio simmetrico"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206E",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "forme di cifre nazionali"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206F",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "forme di cifre nominali"
@@ -337,16 +337,16 @@
   },
   {
     "key": "FEFF",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Cf",
     "key": "FFF9",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "ancora di annotazione interlineare"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFFA",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "separatore di annotazioni interlineari"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFFB",
+    "category": "Cf",
     "mappings": {
       "default": {
         "default": "terminatore di annotazione interlineare"

@@ -3,8 +3,8 @@
     "locale": "da"
   },
   {
-    "category": "Ll",
     "key": "1D26",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "gamma med små bogstaver"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D27",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "lambda med små bogstaver"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D28",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pi med små bogstaver"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D29",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "rho med små bogstaver"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D2A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "psi med små bogstaver"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D5E",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "gamma med hævet skrift"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D60",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "phi med hævet skrift"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D66",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "beta med sænket skrift"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D67",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "gamma med sænket skrift"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D68",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "rho med sænket skrift"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D69",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "phi med sænket skrift"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D6A",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "chi med sænket skrift"

@@ -4,152 +4,152 @@
   },
   {
     "key": "cosh",
-    "names": [
-      "cosh"
-    ],
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "coseno hiperbólico"
       }
     },
-    "category": "Hyperbolic"
+    "names": [
+      "cosh"
+    ]
   },
   {
     "key": "coth",
-    "names": [
-      "coth"
-    ],
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "cotangente hiperbólica"
       }
     },
-    "category": "Hyperbolic"
+    "names": [
+      "coth"
+    ]
   },
   {
     "key": "csch",
-    "names": [
-      "csch"
-    ],
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "cosecante hiperbólica"
       }
     },
-    "category": "Hyperbolic"
+    "names": [
+      "csch"
+    ]
   },
   {
     "key": "sech",
-    "names": [
-      "sech"
-    ],
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "secante hiperbólica"
       }
     },
-    "category": "Hyperbolic"
+    "names": [
+      "sech"
+    ]
   },
   {
     "key": "sinh",
-    "names": [
-      "sinh"
-    ],
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "seno hiperbólico"
       }
     },
-    "category": "Hyperbolic"
+    "names": [
+      "sinh"
+    ]
   },
   {
     "key": "tanh",
-    "names": [
-      "tanh"
-    ],
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "tangente hiperbólica"
       }
     },
-    "category": "Hyperbolic"
+    "names": [
+      "tanh"
+    ]
   },
   {
     "key": "arcosh",
-    "names": [
-      "arcosh",
-      "arccosh"
-    ],
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "area coseno hiperbólico"
       }
     },
-    "category": "Area"
+    "names": [
+      "arcosh",
+      "arccosh"
+    ]
   },
   {
     "key": "arcoth",
-    "names": [
-      "arcoth",
-      "arccoth"
-    ],
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "area cotangente hiperbólica"
       }
     },
-    "category": "Area"
+    "names": [
+      "arcoth",
+      "arccoth"
+    ]
   },
   {
     "key": "arcsch",
-    "names": [
-      "arcsch",
-      "arccsch"
-    ],
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "area cosecante hiperbólica"
       }
     },
-    "category": "Area"
+    "names": [
+      "arcsch",
+      "arccsch"
+    ]
   },
   {
     "key": "arsech",
-    "names": [
-      "arsech",
-      "arcsech"
-    ],
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "area secante hiperbólica"
       }
     },
-    "category": "Area"
+    "names": [
+      "arsech",
+      "arcsech"
+    ]
   },
   {
     "key": "arsinh",
-    "names": [
-      "arsinh",
-      "arcsinh"
-    ],
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "area seno hiperbólico"
       }
     },
-    "category": "Area"
+    "names": [
+      "arsinh",
+      "arcsinh"
+    ]
   },
   {
     "key": "artanh",
-    "names": [
-      "artanh",
-      "arctanh"
-    ],
+    "category": "Area",
     "mappings": {
       "default": {
         "default": "area tangente hiperbólica"
       }
     },
-    "category": "Area"
+    "names": [
+      "artanh",
+      "arctanh"
+    ]
   }
 ]

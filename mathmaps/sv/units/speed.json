@@ -5,26 +5,26 @@
   {
     "key": "kt",
     "category": "speed",
-    "names": [
-      "kt",
-      "kt."
-    ],
     "mappings": {
       "default": {
         "default": "knop",
         "plural": "knop"
       }
-    }
+    },
+    "names": [
+      "kt",
+      "kt."
+    ]
   },
   {
     "key": "mph",
+    "category": "speed",
     "mappings": {
       "default": {
         "default": "mile per timme",
         "plural": "miles per timme"
       }
     },
-    "category": "speed",
     "names": [
       "mph"
     ]
@@ -32,27 +32,27 @@
   {
     "key": "rpm",
     "category": "speed",
-    "names": [
-      "rpm"
-    ],
     "mappings": {
       "default": {
         "default": "varv per minut",
         "plural": "varv per minut"
       }
-    }
+    },
+    "names": [
+      "rpm"
+    ]
   },
   {
     "key": "kmh",
     "category": "speed",
-    "names": [
-      "kmh"
-    ],
     "mappings": {
       "default": {
         "default": "kilometer per timme",
         "plural": "kilometer per timme"
       }
-    }
+    },
+    "names": [
+      "kmh"
+    ]
   }
 ]

@@ -3,13 +3,13 @@
     "locale": "fr"
   },
   {
+    "key": "doz",
     "category": "other",
     "mappings": {
       "default": {
         "default": "douzaine"
       }
     },
-    "key": "doz",
     "names": [
       "douz",
       "douz.",

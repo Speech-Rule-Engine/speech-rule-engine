@@ -4,12 +4,12 @@
   },
   {
     "key": "F",
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Fahrenheit"
       }
     },
-    "category": "temperature",
     "names": [
       "F",
       "F.",
@@ -18,12 +18,12 @@
   },
   {
     "key": "C",
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Celsius"
       }
     },
-    "category": "temperature",
     "names": [
       "C",
       "°C"
@@ -31,12 +31,12 @@
   },
   {
     "key": "K",
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Kelvin"
       }
     },
-    "category": "temperature",
     "names": [
       "K",
       "°K"

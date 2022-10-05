@@ -5,65 +5,65 @@
   {
     "key": "s",
     "category": "time",
-    "names": [
-      "s"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "सेकंड"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "s"
+    ]
   },
   {
     "key": "″",
     "category": "time",
-    "names": [
-      "″"
-    ],
     "mappings": {
       "default": {
         "default": "सेकंड"
       }
-    }
+    },
+    "names": [
+      "″"
+    ]
   },
   {
     "key": "min",
     "category": "time",
-    "names": [
-      "min",
-      "′"
-    ],
     "mappings": {
       "default": {
         "default": "मिनट"
       }
-    }
+    },
+    "names": [
+      "min",
+      "′"
+    ]
   },
   {
     "key": "°",
     "category": "time",
-    "names": [
-      "°"
-    ],
     "mappings": {
       "default": {
         "default": "अंश"
       }
-    }
+    },
+    "names": [
+      "°"
+    ]
   },
   {
     "key": "h",
     "category": "time",
-    "names": [
-      "h",
-      "hr"
-    ],
     "mappings": {
       "default": {
         "default": "घंटे",
         "plural": "घंटा"
       }
-    }
+    },
+    "names": [
+      "h",
+      "hr"
+    ]
   }
 ]

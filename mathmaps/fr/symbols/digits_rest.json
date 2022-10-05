@@ -4,6 +4,7 @@
   },
   {
     "key": "00B2",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "au carré"
@@ -14,11 +15,11 @@
       "clearspeak": {
         "default": "au carré"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00B3",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "cubique"
@@ -29,259 +30,258 @@
       "clearspeak": {
         "default": "cubique"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BC",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un quart"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BD",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un demi"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BE",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "trois quarts"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2150",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un septième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2151",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un neuvième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2152",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un dixième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2153",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un tiers"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2154",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "deux tiers"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2155",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un cinquième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2156",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "deux cinquièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2157",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "trois cinquièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2158",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "quatre cinquièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2159",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un sixième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215A",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "cinq sixièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215B",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "un huitième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215C",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "trois huitièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215D",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "cinq huitièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215E",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "sept huitièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215F",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "numérateur un"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2189",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "zero tiers"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "3248",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "dix cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "3249",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vingt cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324A",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "trente cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324B",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "quarante cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324C",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "cinquante cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324D",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "soixante cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324E",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "soixante dix cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324F",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "quatre vingts cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   }
 ]

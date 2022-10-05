@@ -3,8 +3,8 @@
     "locale": "da"
   },
   {
-    "category": "Ll",
     "key": "01D6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tréma og macron"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tréma og accent aigu"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tréma og háček"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tréma og accent grave"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01DF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med tréma og macron"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med prik over og macron"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01ED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med ogonek og macron"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01FB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med bolle over og accent aigu"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tréma og macron"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tilde og macron"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0231",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med prik over og macron"
@@ -103,416 +103,416 @@
   },
   {
     "key": "1E09",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c med cedille og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E15",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med macron og accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E17",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med macron og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cedille og brevis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i med tréma og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E39",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l med prik under og macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E4D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tilde og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E4F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tilde og tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E51",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med macron og accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E53",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med macron og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r med prik nedenunder og macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E65",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s med accent aigu og prik over"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E67",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s med háček og prik ovenover"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E69",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s med prik nedenunder og ovenover"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E79",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tilde og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med macron og tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumfleks og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumfleks og accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumfleks og en krog ovenover"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EAB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumfleks og tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EAD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumfleks og en prik nedenunder"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EAF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis og accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis og krog ovenover"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis og tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis og en prik nedenunder"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumfleks og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumfleks og accent gravis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumfleks og krog ovenover"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumfleks og tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumfleks og en prik nedenunder"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ED1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumfleks og accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ED3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumfleks og accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ED5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumfleks og krog ovenover"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ED7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumfleks og tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ED9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumfleks og en prik nedenunder"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EDB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med accent aigu og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EDD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med accent grave og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EDF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med krog ovenover og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tilde og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o prik under og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med accent aigu og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EEB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med accent grave og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med krog og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EEF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tilde og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med prik under og primtegn"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

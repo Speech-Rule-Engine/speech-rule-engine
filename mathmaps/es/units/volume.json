@@ -4,139 +4,140 @@
   },
   {
     "key": "bbl",
-    "names": [
-      "bbl.",
-      "bbl"
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "barrile"
       }
     },
-    "category": "volume"
+    "names": [
+      "bbl.",
+      "bbl"
+    ]
   },
   {
     "key": "cu",
-    "names": [
-      "cu",
-      "cu."
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "cúbico"
       }
     },
-    "category": "volume"
+    "names": [
+      "cu",
+      "cu."
+    ]
   },
   {
     "key": "fl. oz.",
-    "names": [
-      "fl. oz.",
-      "fl oz"
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "onza líquida",
         "plural": "onzas líquidas"
       }
     },
-    "category": "volume"
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ]
   },
   {
     "key": "gal",
-    "names": [
-      "gal",
-      "gal."
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "galone"
       }
     },
-    "category": "volume"
+    "names": [
+      "gal",
+      "gal."
+    ]
   },
   {
     "key": "pt",
-    "names": [
-      "pt",
-      "pt."
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "pinta"
       }
     },
-    "category": "volume"
+    "names": [
+      "pt",
+      "pt."
+    ]
   },
   {
     "key": "qt",
-    "names": [
-      "qt",
-      "qt."
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "quart"
       }
     },
-    "category": "volume"
+    "names": [
+      "qt",
+      "qt."
+    ]
   },
   {
     "key": "tbsp",
-    "names": [
-      "tbsp",
-      "tbsp.",
-      "Tbsp",
-      "Tbsp."
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "cuchara"
       }
     },
-    "category": "volume"
+    "names": [
+      "tbsp",
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
+    ]
   },
   {
     "key": "tsp",
-    "names": [
-      "tsp",
-      "tsp."
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "cucharilla"
       }
     },
-    "category": "volume"
+    "names": [
+      "tsp",
+      "tsp."
+    ]
   },
   {
     "key": "cc",
-    "names": [
-      "cc",
-      "ccm"
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "centímetro cúbico",
         "plural": "centímetros cúbicos"
       }
     },
-    "category": "volume"
+    "names": [
+      "cc",
+      "ccm"
+    ]
   },
   {
     "key": "l",
-    "si": true,
-    "names": [
-      "l"
-    ],
+    "category": "volume",
     "mappings": {
       "default": {
         "default": "litro"
       }
     },
-    "category": "volume"
+    "si": true,
+    "names": [
+      "l"
+    ]
   },
   {
+    "key": "cu inch",
     "category": "volume",
     "mappings": {
       "default": {
@@ -144,13 +145,13 @@
         "plural": "pulgadas cúbicas"
       }
     },
-    "key": "cu inch",
     "names": [
       "cu in",
       "cu. in."
     ]
   },
   {
+    "key": "cu ft",
     "category": "volume",
     "mappings": {
       "default": {
@@ -158,13 +159,13 @@
         "plural": "pies cúbicos"
       }
     },
-    "key": "cu ft",
     "names": [
       "cu ft",
       "cu. ft."
     ]
   },
   {
+    "key": "cu yd",
     "category": "volume",
     "mappings": {
       "default": {
@@ -172,13 +173,13 @@
         "plural": "yardas cúbicas"
       }
     },
-    "key": "cu yd",
     "names": [
       "cu yd",
       "cu. yd."
     ]
   },
   {
+    "key": "fluid dram",
     "category": "volume",
     "mappings": {
       "default": {
@@ -186,20 +187,19 @@
         "plural": "dracma líquidas"
       }
     },
-    "key": "fluid dram",
     "names": [
       "fl dr",
       "fl. dr."
     ]
   },
   {
+    "key": "cup",
     "category": "volume",
     "mappings": {
       "default": {
         "default": "taza"
       }
     },
-    "key": "cup",
     "names": [
       "cp",
       "cp."

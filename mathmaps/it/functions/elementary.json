@@ -4,18 +4,19 @@
   },
   {
     "key": "log",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmo"
       }
     },
-    "category": "Logarithm",
     "names": [
       "log"
     ]
   },
   {
     "key": "ln",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmo naturale"
@@ -25,7 +26,6 @@
         "Log_LnAsNaturalLog": "logaritmo naturale"
       }
     },
-    "category": "Logarithm",
     "names": [
       "ln"
     ]
@@ -33,88 +33,88 @@
   {
     "key": "lg",
     "category": "Logarithm",
-    "names": [
-      "lg"
-    ],
     "mappings": {
       "default": {
         "default": "logaritmo in basi 10"
       }
-    }
+    },
+    "names": [
+      "lg"
+    ]
   },
   {
     "key": "exp",
     "category": "Elementary",
-    "names": [
-      "exp",
-      "expt"
-    ],
     "mappings": {
       "default": {
         "default": "esponenziale"
       }
-    }
+    },
+    "names": [
+      "exp",
+      "expt"
+    ]
   },
   {
     "key": "gcd",
     "category": "Elementary",
-    "names": [
-      "gcd",
-      "mcd",
-      "MCD"
-    ],
     "mappings": {
       "default": {
         "default": "massimo comun divisore"
       }
-    }
+    },
+    "names": [
+      "gcd",
+      "mcd",
+      "MCD"
+    ]
   },
   {
     "key": "lcm",
     "category": "Elementary",
-    "names": [
-      "lcm",
-      "mcm",
-      "MCM"
-    ],
     "mappings": {
       "default": {
         "default": "minimo comune multiplo"
       }
-    }
+    },
+    "names": [
+      "lcm",
+      "mcm",
+      "MCM"
+    ]
   },
   {
     "key": "arg",
     "category": "Complex",
-    "names": [
-      "arg"
-    ],
     "mappings": {
       "default": {
         "default": "argomento"
       }
-    }
+    },
+    "names": [
+      "arg"
+    ]
   },
   {
     "key": "im",
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "la parte immaginaria del numero complesso"
       }
     },
-    "category": "Complex",
     "names": [
       "im"
     ]
   },
   {
     "key": "re",
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "la parte reale del numero complesso"
       }
     },
-    "category": "Complex",
     "names": [
       "re"
     ]
@@ -122,23 +122,23 @@
   {
     "key": "inf",
     "category": "Limits",
-    "names": [
-      "inf"
-    ],
     "mappings": {
       "default": {
         "default": "estremo inferiore"
       }
-    }
+    },
+    "names": [
+      "inf"
+    ]
   },
   {
     "key": "lim",
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite"
       }
     },
-    "category": "Limits",
     "names": [
       "lim"
     ]
@@ -146,99 +146,99 @@
   {
     "key": "liminf",
     "category": "Limits",
-    "names": [
-      "lim inf",
-      "liminf"
-    ],
     "mappings": {
       "default": {
         "default": "limite inferiore"
       }
-    }
+    },
+    "names": [
+      "lim inf",
+      "liminf"
+    ]
   },
   {
     "key": "limsup",
     "category": "Limits",
-    "names": [
-      "lim sup",
-      "limsup"
-    ],
     "mappings": {
       "default": {
         "default": "limite superiore"
       }
-    }
+    },
+    "names": [
+      "lim sup",
+      "limsup"
+    ]
   },
   {
     "key": "max",
     "category": "Limits",
-    "names": [
-      "max"
-    ],
     "mappings": {
       "default": {
         "default": "massimo"
       }
-    }
+    },
+    "names": [
+      "max"
+    ]
   },
   {
     "key": "min",
     "category": "Limits",
-    "names": [
-      "min"
-    ],
     "mappings": {
       "default": {
         "default": "minimo"
       }
-    }
+    },
+    "names": [
+      "min"
+    ]
   },
   {
     "key": "sup",
     "category": "Limits",
-    "names": [
-      "sup"
-    ],
     "mappings": {
       "default": {
         "default": "estremo superiore"
       }
-    }
+    },
+    "names": [
+      "sup"
+    ]
   },
   {
     "key": "injlim",
     "category": "Limits",
-    "names": [
-      "injlim",
-      "inj lim"
-    ],
     "mappings": {
       "default": {
         "default": "colimiti"
       }
-    }
+    },
+    "names": [
+      "injlim",
+      "inj lim"
+    ]
   },
   {
     "key": "projlim",
     "category": "Limits",
-    "names": [
-      "projlim",
-      "proj lim"
-    ],
     "mappings": {
       "default": {
         "default": "limite proiettivo"
       }
-    }
+    },
+    "names": [
+      "projlim",
+      "proj lim"
+    ]
   },
   {
     "key": "mod",
+    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "modulo"
       }
     },
-    "category": "Elementary",
     "names": [
       "mod"
     ]
@@ -246,13 +246,13 @@
   {
     "key": "Pr",
     "category": "Probability",
-    "names": [
-      "Pr"
-    ],
     "mappings": {
       "default": {
         "default": "probabilità"
       }
-    }
+    },
+    "names": [
+      "Pr"
+    ]
   }
 ]

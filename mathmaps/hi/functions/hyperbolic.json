@@ -5,151 +5,151 @@
   {
     "key": "cosh",
     "category": "Hyperbolic",
-    "names": [
-      "cosh"
-    ],
     "mappings": {
       "default": {
         "default": "हाइपरबोलिक कोसाइन"
       }
-    }
+    },
+    "names": [
+      "cosh"
+    ]
   },
   {
     "key": "coth",
     "category": "Hyperbolic",
-    "names": [
-      "coth"
-    ],
     "mappings": {
       "default": {
         "default": "हाइपरबोलिक कॉट"
       }
-    }
+    },
+    "names": [
+      "coth"
+    ]
   },
   {
     "key": "csch",
     "category": "Hyperbolic",
-    "names": [
-      "csch"
-    ],
     "mappings": {
       "default": {
         "default": "हाइपरबोलिक कोसेक"
       }
-    }
+    },
+    "names": [
+      "csch"
+    ]
   },
   {
     "key": "sech",
     "category": "Hyperbolic",
-    "names": [
-      "sech"
-    ],
     "mappings": {
       "default": {
         "default": "हाइपरबोलिक सेक"
       }
-    }
+    },
+    "names": [
+      "sech"
+    ]
   },
   {
     "key": "sinh",
     "category": "Hyperbolic",
-    "names": [
-      "sinh"
-    ],
     "mappings": {
       "default": {
         "default": "हाइपरबोलिक साइन"
       }
-    }
+    },
+    "names": [
+      "sinh"
+    ]
   },
   {
     "key": "tanh",
     "category": "Hyperbolic",
-    "names": [
-      "tanh"
-    ],
     "mappings": {
       "default": {
         "default": "हाइपरबोलिक टेन"
       }
-    }
+    },
+    "names": [
+      "tanh"
+    ]
   },
   {
     "key": "arcosh",
     "category": "Area",
-    "names": [
-      "arcosh",
-      "arccosh"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम हाइपरबोलिक कोसाइन"
       }
-    }
+    },
+    "names": [
+      "arcosh",
+      "arccosh"
+    ]
   },
   {
     "key": "arcoth",
     "category": "Area",
-    "names": [
-      "arcoth",
-      "arccoth"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम हाइपरबोलिक कॉट"
       }
-    }
+    },
+    "names": [
+      "arcoth",
+      "arccoth"
+    ]
   },
   {
     "key": "arcsch",
     "category": "Area",
-    "names": [
-      "arcsch",
-      "arccsch"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम हाइपरबोलिक कोसेक"
       }
-    }
+    },
+    "names": [
+      "arcsch",
+      "arccsch"
+    ]
   },
   {
     "key": "arsech",
     "category": "Area",
-    "names": [
-      "arsech",
-      "arcsech"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम हाइपरबोलिक सेक"
       }
-    }
+    },
+    "names": [
+      "arsech",
+      "arcsech"
+    ]
   },
   {
     "key": "arsinh",
     "category": "Area",
-    "names": [
-      "arsinh",
-      "arcsinh"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम हाइपरबोलिक साइन"
       }
-    }
+    },
+    "names": [
+      "arsinh",
+      "arcsinh"
+    ]
   },
   {
     "key": "artanh",
     "category": "Area",
-    "names": [
-      "artanh",
-      "arctanh"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम हाइपरबोलिक टेन"
       }
-    }
+    },
+    "names": [
+      "artanh",
+      "arctanh"
+    ]
   }
 ]

@@ -4,16 +4,16 @@
   },
   {
     "key": "210F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "So",
     "key": "2114",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "L B símbol de barra"
@@ -22,34 +22,34 @@
   },
   {
     "key": "2116",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "signe de nombre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2117",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "drets d'autor de so"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "211E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "recepta"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "211F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "resposta"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2120",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "marca de servei"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2121",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "senyal de telèfon"
@@ -76,16 +76,16 @@
   },
   {
     "key": "2122",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "registrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2123",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "versicle"
@@ -94,52 +94,52 @@
   },
   {
     "key": "2125",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "unça"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2126",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ohm"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2127",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ohm invertit"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "212A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "graus kelvin"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "212B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "angstrom"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "So",
     "key": "212E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "símbol estimat"
@@ -148,16 +148,16 @@
   },
   {
     "key": "2132",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "majúscula F invertida"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Ll",
     "key": "2139",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "font d'informació"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "So",
     "key": "213A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "capital rotat Q"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "So",
     "key": "213B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "signe de fax"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2141",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "convertit sans serif majúscula G"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2142",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "convertit sans serif majúscula L"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2143",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "invertit sans serif majúscula L"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2144",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "convertit sans serif majúscula Y"
