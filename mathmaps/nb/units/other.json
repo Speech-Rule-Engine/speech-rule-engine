@@ -5,16 +5,16 @@
   {
     "key": "doz",
     "category": "other",
+    "mappings": {
+      "default": {
+        "default": "dusin"
+      }
+    },
     "names": [
       "doz",
       "doz.",
       "dz",
       "dz."
-    ],
-    "mappings": {
-      "default": {
-        "default": "dusin"
-      }
-    }
+    ]
   }
 ]

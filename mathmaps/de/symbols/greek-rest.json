@@ -4,12 +4,12 @@
   },
   {
     "key": "0394",
+    "category": "Lu",
     "mappings": {
       "clearspeak": {
         "default": "Dreieck",
         "TriangleSymbol_Delta": "großes Delta"
       }
-    },
-    "category": "Lu"
+    }
   }
 ]

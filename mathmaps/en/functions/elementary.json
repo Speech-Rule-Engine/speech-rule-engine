@@ -1,278 +1,341 @@
-[{"locale": "en"},
-  {"category": "Logarithm",
-   "mappings": {
-     "default": {
-       "default": "log"
-     }
-   },
-   "key": "log",
-   "names": ["log"]
+[
+  {
+    "locale": "en"
   },
-  {"category": "Logarithm",
-   "mappings": {
-     "default": {
-       "default": "natural log"
-     },
-     "mathspeak": {
-       "default": "ln"
-     },
-     "clearspeak": {
-       "default": "l n",
-       "Log_LnAsNaturalLog": "natural log"
-     }
-   },
-   "key": "ln",
-   "names": ["ln"]
+  {
+    "key": "log",
+    "category": "Logarithm",
+    "mappings": {
+      "default": {
+        "default": "log"
+      }
+    },
+    "names": [
+      "log"
+    ]
   },
-  {"category": "Logarithm",
-   "mappings": {
-     "default": {
-       "default": "log base 10"
-     }
-   },
-   "key": "lg",
-   "names": ["lg"]},
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "exponential"
-     },
-     "mathspeak": {
-       "default": "exp"
-     },
-     "clearspeak": {
-       "default": "exp"
-     }
-   },
-   "key": "exp",
-   "names": ["exp", "expt"]
+  {
+    "key": "ln",
+    "category": "Logarithm",
+    "mappings": {
+      "default": {
+        "default": "natural log"
+      },
+      "mathspeak": {
+        "default": "ln"
+      },
+      "clearspeak": {
+        "default": "l n",
+        "Log_LnAsNaturalLog": "natural log"
+      }
+    },
+    "names": [
+      "ln"
+    ]
   },
-
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "greatest common divisor"
-     },
-     "mathspeak": {
-       "default": "gcd"
-     },
-     "clearspeak": {
-       "default": "gcd"
-     }
-   },
-   "key": "gcd",
-   "names": ["gcd"]
+  {
+    "key": "lg",
+    "category": "Logarithm",
+    "mappings": {
+      "default": {
+        "default": "log base 10"
+      }
+    },
+    "names": [
+      "lg"
+    ]
   },
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "least common multiple"
-     },
-     "mathspeak": {
-       "default": "lcm"
-     },
-     "clearspeak": {
-       "default": "lcm"
-     }
-   },
-   "key": "lcm",
-   "names": ["lcm"]
+  {
+    "key": "exp",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "exponential"
+      },
+      "mathspeak": {
+        "default": "exp"
+      },
+      "clearspeak": {
+        "default": "exp"
+      }
+    },
+    "names": [
+      "exp",
+      "expt"
+    ]
   },
-
-  {"category": "Complex",
-   "mappings": {
-     "default": {
-       "default": "argument"
-     },
-     "mathspeak": {
-       "default": "arg"
-     },
-     "clearspeak": {
-       "default": "arg"
-     }
-   },
-   "key": "arg",
-   "names": ["arg"]
+  {
+    "key": "gcd",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "greatest common divisor"
+      },
+      "mathspeak": {
+        "default": "gcd"
+      },
+      "clearspeak": {
+        "default": "gcd"
+      }
+    },
+    "names": [
+      "gcd"
+    ]
   },
-  {"category": "Complex",
-   "mappings": {
-     "default": {
-       "default": "imaginary part"
-     },
-     "mathspeak": {
-       "default": "im"
-     },
-     "clearspeak": {
-       "default": "imaginary"
-     }
-   },
-   "key": "im",
-   "names": ["im"]
+  {
+    "key": "lcm",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "least common multiple"
+      },
+      "mathspeak": {
+        "default": "lcm"
+      },
+      "clearspeak": {
+        "default": "lcm"
+      }
+    },
+    "names": [
+      "lcm"
+    ]
   },
-  {"category": "Complex",
-   "mappings": {
-     "default": {
-       "default": "real part"
-     },
-     "mathspeak": {
-       "default": "re"
-     },
-     "clearspeak": {
-       "default": "real"
-     }
-   },
-   "key": "re",
-   "names": ["re"]
+  {
+    "key": "arg",
+    "category": "Complex",
+    "mappings": {
+      "default": {
+        "default": "argument"
+      },
+      "mathspeak": {
+        "default": "arg"
+      },
+      "clearspeak": {
+        "default": "arg"
+      }
+    },
+    "names": [
+      "arg"
+    ]
   },
-
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "infimum"
-     },
-     "mathspeak": {
-       "default": "inf"
-     },
-     "clearspeak": {
-       "default": "inf"
-     }
-   },
-   "key": "inf",
-   "names": ["inf"]
+  {
+    "key": "im",
+    "category": "Complex",
+    "mappings": {
+      "default": {
+        "default": "imaginary part"
+      },
+      "mathspeak": {
+        "default": "im"
+      },
+      "clearspeak": {
+        "default": "imaginary"
+      }
+    },
+    "names": [
+      "im"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "limit"
-     },
-     "mathspeak": {
-       "default": "limit"
-     },
-     "clearspeak": {
-       "default": "lim"
-     }
-   },
-   "key": "lim",
-   "names": ["lim"]
+  {
+    "key": "re",
+    "category": "Complex",
+    "mappings": {
+      "default": {
+        "default": "real part"
+      },
+      "mathspeak": {
+        "default": "re"
+      },
+      "clearspeak": {
+        "default": "real"
+      }
+    },
+    "names": [
+      "re"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "limit inferior"
-     },
-     "mathspeak": {
-       "default": "liminf"
-     },
-     "clearspeak": {
-       "default": "liminf"
-     }
-   },
-   "key": "liminf",
-   "names": ["lim inf", "liminf"]
+  {
+    "key": "inf",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "infimum"
+      },
+      "mathspeak": {
+        "default": "inf"
+      },
+      "clearspeak": {
+        "default": "inf"
+      }
+    },
+    "names": [
+      "inf"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "limit superior"
-     },
-     "mathspeak": {
-       "default": "limsup"
-     },
-     "clearspeak": {
-       "default": "limsup"
-     }
-   },
-   "key": "limsup",
-   "names": ["lim sup", "limsup"]
+  {
+    "key": "lim",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "limit"
+      },
+      "mathspeak": {
+        "default": "limit"
+      },
+      "clearspeak": {
+        "default": "lim"
+      }
+    },
+    "names": [
+      "lim"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "maximum"
-     },
-     "mathspeak": {
-       "default": "max"
-     },
-     "clearspeak": {
-       "default": "max"
-     }
-   },
-   "key": "max",
-   "names": ["max"]
+  {
+    "key": "liminf",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "limit inferior"
+      },
+      "mathspeak": {
+        "default": "liminf"
+      },
+      "clearspeak": {
+        "default": "liminf"
+      }
+    },
+    "names": [
+      "lim inf",
+      "liminf"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "minimum"
-     },
-     "mathspeak": {
-       "default": "min"
-     },
-     "clearspeak": {
-       "default": "min"
-     }
-   },
-   "key": "min",
-   "names": ["min"]
+  {
+    "key": "limsup",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "limit superior"
+      },
+      "mathspeak": {
+        "default": "limsup"
+      },
+      "clearspeak": {
+        "default": "limsup"
+      }
+    },
+    "names": [
+      "lim sup",
+      "limsup"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "supremum"
-     },
-     "mathspeak": {
-       "default": "sup"
-     },
-     "clearspeak": {
-       "default": "sup"
-     }
-   },
-   "key": "sup",
-   "names": ["sup"]
+  {
+    "key": "max",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "maximum"
+      },
+      "mathspeak": {
+        "default": "max"
+      },
+      "clearspeak": {
+        "default": "max"
+      }
+    },
+    "names": [
+      "max"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "colimit"
-     }
-   },
-   "key": "injlim",
-   "names": ["injlim", "inj lim"]
+  {
+    "key": "min",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "minimum"
+      },
+      "mathspeak": {
+        "default": "min"
+      },
+      "clearspeak": {
+        "default": "min"
+      }
+    },
+    "names": [
+      "min"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "projective limit"
-     }
-   },
-   "key": "projlim",
-   "names": ["projlim", "proj lim"]
+  {
+    "key": "sup",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "supremum"
+      },
+      "mathspeak": {
+        "default": "sup"
+      },
+      "clearspeak": {
+        "default": "sup"
+      }
+    },
+    "names": [
+      "sup"
+    ]
   },
-
-
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "modulo"
-     },
-     "mathspeak": {
-       "default": "mod"
-     },
-     "clearspeak": {
-       "default": "mod"
-     }
-   },
-   "key": "mod",
-   "names": ["mod"]
+  {
+    "key": "injlim",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "colimit"
+      }
+    },
+    "names": [
+      "injlim",
+      "inj lim"
+    ]
   },
-
-  {"category": "Probability",
-   "mappings": {
-     "default": {
-       "default": "probability"
-     }
-   },
-   "key": "Pr",
-   "names": ["Pr"]
+  {
+    "key": "projlim",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "projective limit"
+      }
+    },
+    "names": [
+      "projlim",
+      "proj lim"
+    ]
+  },
+  {
+    "key": "mod",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "modulo"
+      },
+      "mathspeak": {
+        "default": "mod"
+      },
+      "clearspeak": {
+        "default": "mod"
+      }
+    },
+    "names": [
+      "mod"
+    ]
+  },
+  {
+    "key": "Pr",
+    "category": "Probability",
+    "mappings": {
+      "default": {
+        "default": "probability"
+      }
+    },
+    "names": [
+      "Pr"
+    ]
   }
 ]

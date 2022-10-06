@@ -4,6 +4,7 @@
   },
   {
     "key": "00B2",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "kvadrat"
@@ -12,11 +13,11 @@
         "Exponent_Exponent": "exponent två",
         "Exponent_Ordinal": "till andra"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00B3",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "kubik"
@@ -25,39 +26,38 @@
         "Exponent_Exponent": "till exponenten tre",
         "Exponent_Ordinal": "till tredje"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BC",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "rationella talet en fjärdedel"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BD",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "rationella talet en halv"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BE",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "rationella talet tre fjärdedelar"
       }
-    },
-    "category": "No"
+    }
   },
   {
-    "category": "No",
     "key": "2150",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "en sjundedel"
@@ -65,8 +65,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2151",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "en niondel"
@@ -74,8 +74,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2152",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "en tiondel"
@@ -84,115 +84,115 @@
   },
   {
     "key": "2153",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one third"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2154",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction two thirds"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2155",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one fifth"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2156",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction two fifths"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2157",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction three fifths"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2158",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction four fifths"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2159",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one sixth"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215A",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction five sixths"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215B",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one eighth"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215C",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction three eighths"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215D",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction five eighths"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215E",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction seven eighths"
       }
-    },
-    "category": "No"
+    }
   },
   {
-    "category": "No",
     "key": "215F",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "täljare ett"
@@ -200,8 +200,8 @@
     }
   },
   {
-    "category": "No",
     "key": "2189",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "noll tredjedelar"
@@ -209,8 +209,8 @@
     }
   },
   {
-    "category": "No",
     "key": "3248",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "tio inringad på svart kvadrat"
@@ -218,8 +218,8 @@
     }
   },
   {
-    "category": "No",
     "key": "3249",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "tjugo inringad på svart kvadrat"
@@ -227,8 +227,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324A",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "trettio inringad på svart kvadrat"
@@ -236,8 +236,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324B",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "fyrtio inringad på svart kvadrat"
@@ -245,8 +245,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324C",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "femtio inringad på svart kvadrat"
@@ -254,8 +254,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324D",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "sextio inringad på svart kvadrat"
@@ -263,8 +263,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324E",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "sjuttio inringad på svart kvadrat"
@@ -272,8 +272,8 @@
     }
   },
   {
-    "category": "No",
     "key": "324F",
+    "category": "No",
     "mappings": {
       "default": {
         "default": "åttio inringad på svart kvadrat"

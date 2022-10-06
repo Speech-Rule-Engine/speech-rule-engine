@@ -3,8 +3,8 @@
     "locale": "hi"
   },
   {
-    "category": "Lu",
     "key": "00C0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन कैपिटल लेटर"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन कैपिटल लेटर"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन कैपिटल लेटर"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ लैटिन कैपिटल लेटर"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "diaeresis के साथ लैटिन कैपिटल लेटर"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "विथ रिंग एबव"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C7",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ सी"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ ई"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ ई"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ ई"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ ई"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I विद ग्रेव"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ I"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ I"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ I"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ एन"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ ओ"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ ओ"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ ओ"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ ओ"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ ओ"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ यू"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ यू"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ यू"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ यू"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ वाई"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0100",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन कैपिटल लेटर"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0102",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन कैपिटल लेटर"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0104",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ लैटिन कैपिटल लेटर"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0106",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ सी"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0108",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ सी"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सी के साथ डॉट एबव"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ सी"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ डी"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0112",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रोन के साथ ई"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0114",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ ई"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0116",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E के साथ डॉट एबव"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0118",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ ई"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ ई"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ जी"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ जी"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0120",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G के साथ डॉट एबव"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0122",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ जी"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0124",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ एच"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0128",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ I"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ I"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ I"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ I"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0130",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I विद डॉट एबव"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0134",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ जे"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0136",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ के"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0139",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ एल"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "013B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ एल"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "013D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ एल"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "013F",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मध्य डॉट के साथ एल"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0143",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ एन"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0145",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ एन"
@@ -516,8 +516,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0147",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ एन"
@@ -525,8 +525,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "014C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रोन के साथ ओ"
@@ -534,8 +534,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "014E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ ओ"
@@ -543,8 +543,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0150",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल एक्यूट के साथ ओ"
@@ -552,8 +552,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0154",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ आर"
@@ -561,8 +561,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0156",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ आर"
@@ -570,8 +570,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0158",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ आर"
@@ -579,8 +579,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "015A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ एस"
@@ -588,8 +588,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "015C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ एस"
@@ -597,8 +597,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "015E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ एस"
@@ -606,8 +606,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0160",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ एस"
@@ -615,8 +615,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0162",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ टी"
@@ -624,8 +624,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0164",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ टी"
@@ -633,8 +633,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0168",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ यू"
@@ -642,8 +642,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रोन के साथ यू"
@@ -651,8 +651,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ यू"
@@ -660,8 +660,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "रिंग कैप के साथ यू"
@@ -669,8 +669,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0170",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल एक्यूट के साथ यू"
@@ -678,8 +678,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0172",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ यू"
@@ -687,8 +687,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0174",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ डब्ल्यू"
@@ -696,8 +696,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0176",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ वाई"
@@ -705,8 +705,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0178",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायिरसिस के साथ वाई"
@@ -714,8 +714,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0179",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ जेड"
@@ -723,8 +723,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "017B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "जेड, डॉट एबव के साथ"
@@ -732,8 +732,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "017D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ जेड"
@@ -741,8 +741,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन कैपिटल लेटर"
@@ -750,8 +750,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ I"
@@ -759,8 +759,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ ओ"
@@ -768,8 +768,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ यू"
@@ -777,8 +777,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ जी"
@@ -786,8 +786,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ के"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ ओ"
@@ -804,8 +804,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ जी"
@@ -813,8 +813,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ एन"
@@ -822,8 +822,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0200",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ लैटिन कैपिटल लेटर"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0202",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन कैपिटल लेटर"
@@ -840,8 +840,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0204",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ ई"
@@ -849,8 +849,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0206",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ ई"
@@ -858,8 +858,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0208",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I विथ डबल ग्रेव"
@@ -867,8 +867,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ I"
@@ -876,8 +876,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ ओ"
@@ -885,8 +885,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ ओ"
@@ -894,8 +894,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0210",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ आर"
@@ -903,8 +903,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0212",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ आर"
@@ -912,8 +912,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0214",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ यू"
@@ -921,8 +921,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0216",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ यू"
@@ -930,8 +930,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0218",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे कॉमा के साथ एस"
@@ -939,8 +939,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे कॉमा के साथ टी"
@@ -948,8 +948,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन के साथ एच"
@@ -957,8 +957,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0226",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "के साथ डॉट एबव"
@@ -966,8 +966,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0228",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ ई"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओ विथ डॉट एबव"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0232",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रोन के साथ वाई"
@@ -993,8 +993,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E00",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे रिंग के साथ लैटिन कैपिटल लेटर"
@@ -1002,8 +1002,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E02",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "बी, डॉट एबव के साथ"
@@ -1011,8 +1011,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E04",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ बी"
@@ -1020,8 +1020,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E06",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ बी"
@@ -1029,8 +1029,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डी के साथ डॉट एबव"
@@ -1038,8 +1038,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ डी"
@@ -1047,8 +1047,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ डी"
@@ -1056,8 +1056,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E10",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ डी"
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E12",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे Circumflex के साथ डी"
@@ -1074,8 +1074,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E18",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे सर्कुफलेक्स के साथ ई"
@@ -1083,8 +1083,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे Tilde के साथ E"
@@ -1092,8 +1092,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "F के साथ डॉट एबव"
@@ -1101,8 +1101,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E20",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रोन के साथ जी"
@@ -1110,8 +1110,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E22",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एच विद डॉट एबव"
@@ -1119,8 +1119,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E24",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एच"
@@ -1128,8 +1128,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E26",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ एच"
@@ -1137,8 +1137,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E28",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ एच"
@@ -1146,8 +1146,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ एच"
@@ -1155,8 +1155,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे दिए गए टिल्डे के साथ I"
@@ -1164,8 +1164,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E30",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ K"
@@ -1173,8 +1173,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E32",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ K"
@@ -1182,8 +1182,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E34",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ K"
@@ -1191,8 +1191,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E36",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एल"
@@ -1200,8 +1200,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ एल"
@@ -1209,8 +1209,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे सर्कुफलेक्स के साथ एल"
@@ -1218,8 +1218,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ एम"
@@ -1227,8 +1227,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E40",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "M के साथ डॉट एबव"
@@ -1236,8 +1236,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E42",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एम"
@@ -1245,8 +1245,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E44",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एन के साथ डॉट एबव"
@@ -1254,8 +1254,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E46",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एन"
@@ -1263,8 +1263,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E48",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ एन"
@@ -1272,8 +1272,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E4A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे सर्कुफलेक्स के साथ एन"
@@ -1281,8 +1281,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E54",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ P"
@@ -1290,8 +1290,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E56",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "पी के साथ डॉट एबव"
@@ -1299,8 +1299,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E58",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R के साथ डॉट एबव"
@@ -1308,8 +1308,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ आर"
@@ -1317,8 +1317,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ आर"
@@ -1326,8 +1326,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E60",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एस के साथ डॉट एबव"
@@ -1335,8 +1335,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E62",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एस"
@@ -1344,8 +1344,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टी के साथ डॉट एबव"
@@ -1353,8 +1353,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ टी"
@@ -1362,8 +1362,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ टी"
@@ -1371,8 +1371,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E70",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे सर्कुफ्लेक्स के साथ टी"
@@ -1380,8 +1380,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E72",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे डीएरेसिस के साथ यू"
@@ -1389,8 +1389,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E74",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे Tilde के साथ यू"
@@ -1398,8 +1398,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E76",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे Circumflex के साथ यू"
@@ -1407,8 +1407,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ वी"
@@ -1416,8 +1416,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ वी"
@@ -1425,8 +1425,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E80",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ डब्ल्यू"
@@ -1434,8 +1434,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E82",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ डब्ल्यू"
@@ -1443,8 +1443,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E84",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायिरसिस के साथ डब्ल्यू"
@@ -1452,8 +1452,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E86",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डब्ल्यू विद डॉट एबव"
@@ -1461,8 +1461,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E88",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ डब्ल्यू"
@@ -1470,8 +1470,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "X, डॉट एबव के साथ"
@@ -1479,8 +1479,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ एक्स"
@@ -1488,8 +1488,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "वाई के साथ डॉट एबव"
@@ -1497,8 +1497,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E90",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ जेड"
@@ -1506,8 +1506,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E92",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ जेड"
@@ -1515,8 +1515,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E94",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ जेड"
@@ -1524,8 +1524,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन कैपिटल लेटर"
@@ -1533,8 +1533,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हुक कैप के साथ लैटिन कैपिटल लेटर"
@@ -1542,8 +1542,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ ई"
@@ -1551,8 +1551,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हुक कैप के साथ ई"
@@ -1560,8 +1560,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ ई"
@@ -1569,8 +1569,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I विद हुक एबव"
@@ -1578,8 +1578,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "लैटिन राजधानी पत्र I नीचे डॉट के साथ"
@@ -1587,8 +1587,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ ओ"
@@ -1596,8 +1596,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हुक कैप के साथ ओ"
@@ -1605,8 +1605,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ यू"
@@ -1614,8 +1614,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हुक कैप के साथ यू"
@@ -1623,8 +1623,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ वाई"
@@ -1632,8 +1632,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "नीचे के साथ वाई"
@@ -1641,8 +1641,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हुक कैप के साथ वाई"
@@ -1650,8 +1650,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ वाई"

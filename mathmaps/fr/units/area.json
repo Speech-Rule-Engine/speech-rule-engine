@@ -1,80 +1,117 @@
 [
-  {"locale": "fr"},
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "carrée"
-     }
-   },
-   "key": "sq",
-   "names": ["sq", "sq."]
+  {
+    "locale": "fr"
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "pouce carré",
-       "plural": "pouces carré"
-     }
-   },
-   "key": "sq inch",
-   "names": ["sq in", "sq. in.", "sq inch", "sq. inch"]
+  {
+    "key": "sq",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "carrée"
+      }
+    },
+    "names": [
+      "sq",
+      "sq."
+    ]
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "rod carré",
-       "plural": "rods carré"
-     }
-   },
-   "key": "sq rd",
-   "names": ["sq rd", "sq. rd."]
+  {
+    "key": "sq inch",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "pouce carré",
+        "plural": "pouces carré"
+      }
+    },
+    "names": [
+      "sq in",
+      "sq. in.",
+      "sq inch",
+      "sq. inch"
+    ]
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "pied carré",
-       "plural": "pieds carré"
-     }
-   },
-   "key": "sq ft",
-   "names": ["sq ft", "sq. ft."]
+  {
+    "key": "sq rd",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "rod carré",
+        "plural": "rods carré"
+      }
+    },
+    "names": [
+      "sq rd",
+      "sq. rd."
+    ]
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "verge carrée",
-       "plural": "verges carrée"
-     }
-   },
-   "key": "sq yd",
-   "names": ["sq yd", "sq. yd."]
+  {
+    "key": "sq ft",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "pied carré",
+        "plural": "pieds carré"
+      }
+    },
+    "names": [
+      "sq ft",
+      "sq. ft."
+    ]
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "mile carré",
-       "plural": "miles carré"
-     }
-   },
-   "key": "sq mi",
-   "names": ["sq mi", "sq. mi."]
+  {
+    "key": "sq yd",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "verge carrée",
+        "plural": "verges carrée"
+      }
+    },
+    "names": [
+      "sq yd",
+      "sq. yd."
+    ]
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "acre"
-     }
-   },
-   "key": "acr",
-   "names": ["ac", "ac.", "acr", "acr."]
+  {
+    "key": "sq mi",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "mile carré",
+        "plural": "miles carré"
+      }
+    },
+    "names": [
+      "sq mi",
+      "sq. mi."
+    ]
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "hectare"
-     }
-   },
-   "key": "ha",
-   "names": ["ha"]
+  {
+    "key": "acr",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "acre"
+      }
+    },
+    "names": [
+      "ac",
+      "ac.",
+      "acr",
+      "acr."
+    ]
+  },
+  {
+    "key": "ha",
+    "category": "area",
+    "mappings": {
+      "default": {
+        "default": "hectare"
+      }
+    },
+    "names": [
+      "ha"
+    ]
   }
 ]

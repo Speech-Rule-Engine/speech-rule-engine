@@ -3,31 +3,28 @@
     "locale": "da"
   },
   {
-    "locale": "da"
-  },
-  {
     "key": "sq",
     "category": "other",
-    "names": [
-      "sq",
-      "sq."
-    ],
     "mappings": {
       "default": {
         "default": "s",
         "plural": "kvadrat"
       }
-    }
+    },
+    "names": [
+      "sq",
+      "sq."
+    ]
   },
   {
-    "key": "sq in",
+    "key": "sq inch",
+    "category": "area",
     "mappings": {
       "default": {
-        "default": "kvadrat inch",
-        "plural": "kvadrat inches"
+        "default": "kvadrattomme",
+        "plural": "kvadrattommer"
       }
     },
-    "category": "area",
     "names": [
       "sq in",
       "sq. in.",
@@ -38,25 +35,26 @@
   {
     "key": "sq rd",
     "category": "area",
+    "mappings": {
+      "default": {
+        "default": "s",
+        "plural": "kvadratrødder"
+      }
+    },
     "names": [
       "sq rd",
       "sq. rd."
-    ],
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
+    ]
   },
   {
     "key": "sq ft",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrat fod",
-        "plural": "kvadrat fod"
+        "plural": "kvadratfod"
       }
     },
-    "category": "area",
     "names": [
       "sq ft",
       "sq. ft."
@@ -64,13 +62,13 @@
   },
   {
     "key": "sq yd",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrat yard",
-        "plural": "kvadrat yards"
+        "plural": "kvadratyard"
       }
     },
-    "category": "area",
     "names": [
       "sq yd",
       "sq. yd."
@@ -78,27 +76,27 @@
   },
   {
     "key": "sq mi",
+    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadrat mil",
-        "plural": "kvadrat mile"
+        "plural": "kvadratmil"
       }
     },
-    "category": "area",
     "names": [
       "sq mi",
       "sq. mi."
     ]
   },
   {
-    "key": "ac",
+    "key": "acr",
+    "category": "area",
     "mappings": {
       "default": {
-        "default": "ager",
-        "plural": "agre"
+        "default": "acre",
+        "plural": "acres"
       }
     },
-    "category": "area",
     "names": [
       "ac",
       "ac.",
@@ -109,14 +107,14 @@
   {
     "key": "ha",
     "category": "area",
-    "names": [
-      "ha"
-    ],
     "mappings": {
       "default": {
         "default": "s",
         "plural": "hektarer"
       }
-    }
+    },
+    "names": [
+      "ha"
+    ]
   }
 ]

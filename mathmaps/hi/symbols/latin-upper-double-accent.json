@@ -3,8 +3,8 @@
     "locale": "hi"
   },
   {
-    "category": "Lu",
     "key": "01D5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरसिस और मैक्रोन के साथ यू"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D7",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस और एक्यूट के साथ यू"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस और कैरन के साथ यू"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01DB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस और ग्रेव के साथ यू"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01DE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस और मैक्रोन के साथ लैटिन कैपिटल लेटर"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "के साथ डॉट एबव और मैक्रोन"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओगोनक और मैक्रोन के साथ ओ"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01FA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "विथ रिंग एबव और एक्यूट"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डायरिसिस और मैक्रोन के साथ ओ"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे और मैक्रॉन के साथ ओ"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0230",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओ विथ डॉट एबव और मैक्रोन"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E08",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला और एक्यूट के साथ सी"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E14",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रॉन और ग्रेव के साथ ई"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E16",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रॉन और एक्यूट के साथ ई"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सेडिला और ब्रेव के साथ ई"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I विद डायरेसिस एंड एक्यूट"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E38",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "लैटिन राजधानी पत्र एल नीचे डॉट और मैक्रॉन के साथ"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E4C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे और एक्यूट के साथ ओ"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E4E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे और डायरेसिस के साथ ओ"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E50",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रॉन और ग्रेव के साथ ओ"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E52",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रॉन और एक्यूट के साथ ओ"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "लैटिन राजधानी पत्र आर नीचे डॉट और मैक्रॉन के साथ"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E64",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एक्यूट और डॉट एबव के साथ एस"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E66",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "कैरन और डॉट एबव के साथ एस"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E68",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एस के साथ डॉट नीचे और डॉट के ऊपर"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E78",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टिल्डे और एक्यूट के साथ यू"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "मैक्रोन और डायसिस के साथ यू"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और एक्यूट के साथ लैटिन कैपिटल लेटर"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और ग्रेव के साथ लैटिन कैपिटल लेटर"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और हुक एबव के साथ लैटिन कैपिटल लेटर"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EAA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और टिल्डे के साथ लैटिन कैपिटल लेटर"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EAC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और डॉट नीचे के साथ लैटिन कैपिटल लेटर"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EAE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव और एक्यूट के साथ लैटिन कैपिटल लेटर"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव और ग्रेव के साथ लैटिन कैपिटल लेटर"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव और हुक एबव के साथ लैटिन कैपिटल लेटर"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव और टिल्डे के साथ लैटिन कैपिटल लेटर"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ब्रेव और डॉट नीचे के साथ लैटिन कैपिटल लेटर"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और एक्यूट के साथ ई"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और ग्रेव के साथ ई"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और हुक एबव के साथ ई"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और टिल्डे के साथ ई"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और डॉट नीचे के साथ ई"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ED0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और एक्यूट के साथ ओ"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ED2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और ग्रेव के साथ ओ"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ED4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और हुक एबव के साथ ओ"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ED6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और टिल्डे के साथ ओ"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ED8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स और डॉट नीचे के साथ ओ"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EDA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और एक्यूट के साथ ओ"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EDC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और ग्रेव के साथ ओ"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EDE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और हुक के साथ ओ"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और टिल्ड के साथ ओ"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और डॉट नीचे के साथ ओ"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और एक्यूट के साथ यू"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EEA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और ग्रेव के साथ यू"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EEC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और हुक के साथ यू"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EEE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और टिल्ड के साथ यू"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "हॉर्न और डॉट नीचे के साथ यू"

@@ -1,68 +1,80 @@
 [
-  {"locale": "en"},
   {
-    "category": "currency",
+    "locale": "en"
+  },
+  {
     "key": "$",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "dollar"
       }
     },
     "names": [
-      "$", "💲", "＄", "﹩", "USD"
+      "$",
+      "💲",
+      "＄",
+      "﹩",
+      "USD"
     ]
   },
   {
-    "category": "currency",
     "key": "£",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "pound"
       }
     },
     "names": [
-      "£", "￡", "GBP"
+      "£",
+      "￡",
+      "GBP"
     ]
   },
   {
-    "category": "currency",
     "key": "¥",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "yen"
       }
     },
     "names": [
-      "¥", "￥", "JPY"
+      "¥",
+      "￥",
+      "JPY"
     ]
   },
   {
-    "category": "currency",
     "key": "€",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "euro"
       }
     },
     "names": [
-      "€", "EUR"
+      "€",
+      "EUR"
     ]
   },
   {
-    "category": "currency",
     "key": "₡",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "colon"
       }
     },
     "names": [
-      "₡", "CRC"
+      "₡",
+      "CRC"
     ]
   },
   {
-    "category": "currency",
     "key": "₢",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "cruzeiro"
@@ -73,8 +85,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₣",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "franc"
@@ -85,8 +97,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₤",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "lira"
@@ -97,8 +109,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₥",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "mill"
@@ -109,20 +121,21 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₦",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "naira"
       }
     },
     "names": [
-      "₦", "NGN"
+      "₦",
+      "NGN"
     ]
   },
   {
-    "category": "currency",
     "key": "₧",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "peseta"
@@ -133,32 +146,39 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₨",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "rupee"
       }
     },
     "names": [
-      "₨", "₹", "INR", "NPR", "PKR", "LKR"
+      "₨",
+      "₹",
+      "INR",
+      "NPR",
+      "PKR",
+      "LKR"
     ]
   },
   {
-    "category": "currency",
     "key": "₩",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "won"
       }
     },
     "names": [
-      "₩", "￦", "KRW"
+      "₩",
+      "￦",
+      "KRW"
     ]
   },
   {
-    "category": "currency",
     "key": "₪",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "sheqel"
@@ -169,8 +189,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₫",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "dong"
@@ -181,8 +201,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₭",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "kip"
@@ -193,8 +213,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₮",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "tugrik"
@@ -205,8 +225,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₯",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "drachma"
@@ -217,8 +237,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₰",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "Pfennig"
@@ -229,8 +249,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₱",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "peso"
@@ -241,8 +261,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₲",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "guaranis"
@@ -253,8 +273,8 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₳",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "austral"
@@ -265,80 +285,62 @@
     ]
   },
   {
-    "category": "currency",
     "key": "₴",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "hryvnia"
       }
     },
     "names": [
-      "₴", "UAH"
+      "₴",
+      "UAH"
     ]
   },
   {
-    "category": "currency",
     "key": "₵",
+    "category": "currency",
     "mappings": {
       "default": {
-        "default": "cedis"
+        "default": "cedi"
       }
     },
     "names": [
-      "₵", "GHS"
+      "₵",
+      "GHS"
     ]
   },
   {
-    "category": "currency",
-    "key": "₶",
-    "mappings": {
-      "default": {
-        "default": "livre tournois"
-      }
-    },
-    "names": [
-      "₶"
-    ]
-  },
-  {
-    "category": "currency",
-    "key": "₷",
-    "mappings": {
-      "default": {
-        "default": "spesmilo"
-      }
-    },
-    "names": [
-      "₷"
-    ]
-  },
-  {
-    "category": "currency",
     "key": "₸",
+    "category": "currency",
     "mappings": {
       "default": {
-        "default": "tenge"
+        "default": "tenge",
+        "plural": "tenge"
       }
     },
     "names": [
-      "₸", "KZT"
+      "₸",
+      "KZT"
     ]
   },
   {
-    "category": "currency",
     "key": "₺",
+    "category": "currency",
     "mappings": {
       "default": {
-        "default": "turkish lira"
+        "default": "turkish lira",
+        "plural": "turkish lira"
       }
     },
     "names": [
-      "₺", "TRY"
+      "₺",
+      "TRY"
     ]
   },
   {
-    "category": "currency",
     "key": "元",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "yuan"
@@ -349,15 +351,16 @@
     ]
   },
   {
-    "category": "currency",
     "key": "¢",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "cent"
       }
     },
     "names": [
-      "￠", "¢"
+      "￠",
+      "¢"
     ]
   }
 ]

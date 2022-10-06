@@ -4,67 +4,67 @@
   },
   {
     "key": "0028",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis izquierdo",
         "defaultMP": "paréntesis"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "0029",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis derecho",
         "defaultMP": "cierra paréntesis"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "005B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete izquierdo",
         "defaultMP": "abre corchetes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "005D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete derecho",
         "defaultMP": "cierra corchetes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "007B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "llave izquierda",
         "defaultMP": "abre llaves"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "007D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "llaves derecha",
         "defaultMP": "cierra llaves"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2045",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte cuadrado izquierdo con pluma"
@@ -72,8 +72,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2046",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte cuadrado derecho con pluma"
@@ -82,151 +82,151 @@
   },
   {
     "key": "2308",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina superior izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2309",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina superior derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina inferior izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina inferior derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "corte inferior derecho"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "corte inferior izquierdo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "corte superior derecho "
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "corte superior izquierdo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ángulo superior izquierdo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ángulo superior derecho"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ángulo inferior izquierdo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ángulo inferior derecho"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2320",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mitad superior de integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2321",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mitad inferior de integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2329",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis angular izquierdo"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "232A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis angular derecho"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Sm",
     "key": "239B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paréntesis izquierdo gancho superior"
@@ -234,8 +234,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión del paréntesis izquierdo"
@@ -243,8 +243,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paréntesis inferior gancho inferior"
@@ -252,8 +252,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paréntesis derecho gancho superior"
@@ -261,8 +261,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión del paréntesis derecho"
@@ -270,8 +270,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paréntesis inferior gancho inferior"
@@ -279,8 +279,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina cuadrada izquierda esquina superior"
@@ -288,8 +288,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión del soporte cuadrado izquierdo"
@@ -297,8 +297,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina cuadrada izquierda esquina inferior"
@@ -306,8 +306,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina cuadrada derecha esquina superior"
@@ -315,8 +315,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A5",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión de soporte cuadrado derecho"
@@ -324,8 +324,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquina cuadrada derecha esquina inferior"
@@ -333,8 +333,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A7",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gancho superior rizado izquierdo"
@@ -342,8 +342,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A8",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pedazo medio rizado izquierdo"
@@ -351,8 +351,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "soporte izquierdo rizado gancho inferior"
@@ -360,8 +360,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión de soporte rizado"
@@ -369,8 +369,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gancho superior rizado derecho"
@@ -378,8 +378,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pedazo medio de soporte rizado derecho"
@@ -387,8 +387,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "abrazadera inferior derecha rizado"
@@ -396,8 +396,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión integral"
@@ -405,8 +405,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensión de línea horizontal"
@@ -415,25 +415,25 @@
   },
   {
     "key": "23B0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "izquierda arriba o derecho debajo sección llave"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23B1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "derecha arriba o izquierdo debajo sección llave"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "23B2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "suma superior"
@@ -441,8 +441,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23B3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parte inferior de la suma"
@@ -451,25 +451,25 @@
   },
   {
     "key": "23B4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "corchete superior"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "23B5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "corchete inferior"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "23B6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "soporte cuadrado inferior sobre soporte cuadrado superior"
@@ -477,8 +477,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "parte inferior del símbolo radical"
@@ -486,8 +486,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "línea de caja vertical izquierda"
@@ -495,8 +495,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "línea de caja vertical derecha"
@@ -505,61 +505,61 @@
   },
   {
     "key": "23DC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paréntesis superior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paréntesis inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "corchete rizado superior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "corchete rizado inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "corchete superior en tortuga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "corchete inferior en tortuga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ps",
     "key": "2768",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento de paréntesis izquierdo medio"
@@ -567,8 +567,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2769",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "adorno de paréntesis medio derecho"
@@ -576,8 +576,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "adorno paréntesis izquierdo aplanado medio"
@@ -585,8 +585,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "adorno paréntesis derecho medio aplanado"
@@ -594,8 +594,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276C",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "adorno de soporte de ángulo medio apuntando hacia la izquierda"
@@ -603,8 +603,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "adorno de soporte de ángulo medio apuntando hacia la derecha"
@@ -612,8 +612,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento de comillas en el ángulo que apunta hacia la izquierda"
@@ -621,8 +621,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento de comillas en ángulo recto que apunta hacia la derecha"
@@ -630,8 +630,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2770",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento pesado del soporte del ángulo que señala a la izquierda"
@@ -639,8 +639,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2771",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento pesado del soporte del ángulo que señala hacia la derecha"
@@ -648,8 +648,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2772",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento de soporte de concha de tortuga izquierda ligera"
@@ -657,8 +657,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2773",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento de corchete derecho tortuga derecha"
@@ -666,8 +666,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2774",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento de soporte rizado izquierdo medio"
@@ -675,8 +675,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2775",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento de soporte rizado derecho medio"
@@ -685,115 +685,115 @@
   },
   {
     "key": "27C5",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "símbolo delimitador izquierdo de bolsa de s-formó"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27C6",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "símbolo delimitador derecho de bolsa de s-formó"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E6",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete vacío izquierdo"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E7",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete vacío derecho"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E8",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete agudo izquierdo"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E9",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete agudo derecho"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EA",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doble corchete agudo izquierdo"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EB",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "doble corchete agudo derecho"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EC",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete de tortuga vacío izquierdo"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27ED",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete de tortuga vacío derecho "
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EE",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis plano izquierdo"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EF",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis plano derecho"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2983",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte rizado blanco izquierdo"
@@ -801,8 +801,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2984",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "derecha rizado blanco soporte"
@@ -811,25 +811,25 @@
   },
   {
     "key": "2985",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white paren"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2986",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white paren"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2987",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "notación Z izquierda soporte de imagen"
@@ -837,8 +837,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2988",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete de imagen derecha de notación Z"
@@ -847,133 +847,133 @@
   },
   {
     "key": "2989",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z notation left binding bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z notation right binding bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with underbar"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with underbar"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with tick in top corner"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with tick in bottom corner"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with tick in bottom corner"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2990",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with tick in top corner"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2991",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left angle bracket with dot"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2992",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right angle bracket with dot"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2993",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left arc less than bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2994",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right arc greater than bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2995",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double left arc greater than bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2996",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double right arc less than bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2997",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte de concha de tortuga negra izquierda"
@@ -981,8 +981,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2998",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "abrazadera de concha de tortuga negra derecha"
@@ -990,8 +990,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "29D8",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "valla izquierda ondulada"
@@ -999,8 +999,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29D9",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "valla derecha ondulada"
@@ -1009,25 +1009,25 @@
   },
   {
     "key": "29DA",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left double wiggly fence"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "29DB",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right double wiggly fence"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "29FC",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "abrazadera de ángulo curvo a la izquierda"
@@ -1035,8 +1035,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29FD",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "abrazadera de ángulo curvo orientada hacia la derecha"
@@ -1044,8 +1044,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E22",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte superior izquierdo superior"
@@ -1053,8 +1053,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E23",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medio soporte superior derecho"
@@ -1062,8 +1062,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E24",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "abrazadera inferior izquierda"
@@ -1071,8 +1071,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E25",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medio soporte inferior derecho"
@@ -1080,8 +1080,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E26",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte U lateral izquierdo"
@@ -1089,8 +1089,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E27",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "lado derecho U soporte"
@@ -1098,8 +1098,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E28",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doble paréntesis izquierdo"
@@ -1107,8 +1107,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E29",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis doble derecho"
@@ -1116,8 +1116,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3008",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte de ángulo izquierdo"
@@ -1125,8 +1125,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3009",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte de ángulo recto"
@@ -1135,26 +1135,26 @@
   },
   {
     "key": "300A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis angular doble"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "300B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis angular doble derecho",
         "defaultMP": "cierra paréntesis angular doble"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "300C",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte de la esquina izquierda"
@@ -1162,8 +1162,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte de esquina derecha"
@@ -1171,8 +1171,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "300E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte de esquina blanco izquierdo"
@@ -1180,8 +1180,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte de esquina blanco derecho"
@@ -1189,8 +1189,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3010",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte Lenticular Izquierdo Negro"
@@ -1198,8 +1198,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3011",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte Lenticular Negro Derecho"
@@ -1208,25 +1208,25 @@
   },
   {
     "key": "3014",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left tortoise shell bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "3015",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right tortoise shell bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "3016",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte lenticular blanco izquierdo"
@@ -1234,8 +1234,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3017",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte lenticular blanco derecho"
@@ -1243,8 +1243,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3018",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte de caparazón de tortuga blanca izquierda"
@@ -1252,8 +1252,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3019",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte de concha de tortuga blanca derecha"
@@ -1262,26 +1262,26 @@
   },
   {
     "key": "301A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete vacío"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "301B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete vacío derecho",
         "defaultMP": "cierra corchete vacío"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "301D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "comilla doble invertida"
@@ -1290,16 +1290,16 @@
   },
   {
     "key": "301E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "segunda"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Pe",
     "key": "301F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "comillas bajas dobles"
@@ -1307,8 +1307,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FD3E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis izquierdo adornado"
@@ -1316,8 +1316,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FD3F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis derecho adornado"
@@ -1325,8 +1325,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE17",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte lenticular blanco izquierdo vertical"
@@ -1334,8 +1334,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE18",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte lenticular blanco vertical derecho"
@@ -1344,43 +1344,43 @@
   },
   {
     "key": "FE35",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE36",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "FE37",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "llave superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE38",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "llave inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE39",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para el soporte vertical de concha de tortuga izquierda"
@@ -1388,8 +1388,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para el soporte vertical de concha de tortuga derecha"
@@ -1397,8 +1397,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para el soporte lenticular negro izquierdo vertical"
@@ -1406,8 +1406,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para el soporte lenticular negro derecho vertical"
@@ -1415,8 +1415,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte vertical doble ángulo izquierdo"
@@ -1424,8 +1424,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para el soporte de ángulo recto doble vertical"
@@ -1434,25 +1434,25 @@
   },
   {
     "key": "FE3F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis angular superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE40",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis angular inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE41",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte de esquina vertical izquierda"
@@ -1460,8 +1460,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE42",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte de esquina vertical derecha"
@@ -1469,8 +1469,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE43",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte de esquina blanco vertical izquierdo"
@@ -1478,8 +1478,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE44",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte de esquina vertical derecha blanca"
@@ -1487,8 +1487,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE47",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte cuadrado vertical izquierdo"
@@ -1496,8 +1496,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE48",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulario de presentación para soporte cuadrado vertical derecho"
@@ -1505,8 +1505,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE59",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "pequeño paréntesis izquierdo"
@@ -1514,8 +1514,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis derecho pequeño"
@@ -1523,8 +1523,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete Rizado Izquierdo Pequeño"
@@ -1532,8 +1532,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete derecho rizado pequeño"
@@ -1541,8 +1541,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte de concha pequeña tortuga izquierda"
@@ -1550,8 +1550,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "pequeño corchete derecho de concha de tortuga"
@@ -1559,8 +1559,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF08",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis izquierdo de ancho completo"
@@ -1568,8 +1568,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF09",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis derecho de ancho completo"
@@ -1577,8 +1577,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF3B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "soporte cuadrado izquierdo de ancho completo"
@@ -1586,8 +1586,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF3D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte cuadrado derecho de ancho completo"
@@ -1595,8 +1595,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete rizado izquierdo de ancho completo"
@@ -1604,8 +1604,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF5D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "corchete derecho de ancho completo"
@@ -1613,8 +1613,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "paréntesis blanco izquierdo de ancho completo"
@@ -1622,8 +1622,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF60",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "paréntesis blanco derecho de ancho completo"
@@ -1631,8 +1631,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF62",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "corchete de esquina izquierda de medio ancho"
@@ -1640,8 +1640,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF63",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "soporte de esquina derecha de medio ancho"

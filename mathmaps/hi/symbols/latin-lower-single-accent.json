@@ -3,8 +3,8 @@
     "locale": "hi"
   },
   {
-    "category": "Ll",
     "key": "00E0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन स्माल लेटर"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ लैटिन छोटा पत्र"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ लैटिन स्माल लेटर"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर विथ रिंग एबव"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र सी"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E8",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन छोटा पत्र ई"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00E9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर ई"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00EA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र ई"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00EB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायसिस के साथ लैटिन छोटा पत्र ई"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00EC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लेटिन स्माल लेटर I विद ग्रेव"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00ED",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर I"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00EE",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ I"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00EF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ लैटिन स्माल लेटर I"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ एन"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन स्माल लेटर ओ"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर ओ"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र ओ"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ लैटिन छोटा पत्र ओ"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F6",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायसिस के साथ लैटिन स्माल लेटर ओ"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00F9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन छोटा पत्र यू"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00FA",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर यू"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00FB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र यू"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00FC",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "दो डॉट्स के साथ यू"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00FD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर वाई"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "00FF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायसिस के साथ वाई"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0101",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन स्माल लेटर"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0103",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन स्माल लेटर"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0105",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ लैटिन छोटा पत्र"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0107",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर सी"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0109",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र सी"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "010B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सी के साथ डॉट एबव"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "010D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र सी"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "010F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र डी"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0113",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन छोटा पत्र ई"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0115",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन स्माल लेटर ई"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0117",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन छोटा पत्र ई डॉट के साथ ऊपर"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0119",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ ई"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "011B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र ई"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "011D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र जी"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "011F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन छोटा पत्र जी"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0121",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर G विथ डॉट एबव"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0123",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र जी"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0125",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र एच"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0129",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ I"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "012B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन स्माल लेटर I"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "012D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन स्माल लेटर I"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "012F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ I"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0131",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्माल लेटर डॉटलेस I"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0135",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र जे"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0137",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र के"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "013A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "तीव्र के साथ एल"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "013C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र एल"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "013E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र एल"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0140",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मध्य डॉट के साथ लैटिन छोटा पत्र एल"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0144",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर एन"
@@ -516,8 +516,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0146",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र एन"
@@ -525,8 +525,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0148",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र एन"
@@ -534,8 +534,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "014D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन स्माल लेटर ओ"
@@ -543,8 +543,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "014F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन स्माल लेटर ओ"
@@ -552,8 +552,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0151",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल एक्यूट के साथ लैटिन स्माल लेटर ओ"
@@ -561,8 +561,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0155",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर आर"
@@ -570,8 +570,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0157",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र आर"
@@ -579,8 +579,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0159",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र आर"
@@ -588,8 +588,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "015B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "तीव्र के साथ एस"
@@ -597,8 +597,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "015D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र एस"
@@ -606,8 +606,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "015F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ एस"
@@ -615,8 +615,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0161",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ एस"
@@ -624,8 +624,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0163",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र टी"
@@ -633,8 +633,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0165",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन स्माल लेटर टी"
@@ -642,8 +642,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0169",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ यू"
@@ -651,8 +651,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "016B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन छोटा पत्र यू"
@@ -660,8 +660,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "016D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ब्रेव के साथ लैटिन छोटा पत्र यू"
@@ -669,8 +669,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "016F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर यू विद रिंग एबव"
@@ -678,8 +678,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0171",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल एक्यूट के साथ लैटिन स्माल लेटर यू"
@@ -687,8 +687,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0173",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ यू"
@@ -696,8 +696,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0175",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र डब्ल्यू"
@@ -705,8 +705,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0177",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र वाई"
@@ -714,8 +714,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "017A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर जेड"
@@ -723,8 +723,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "017C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर जेड डॉट एबव के साथ"
@@ -732,8 +732,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "017E",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र जेड"
@@ -741,8 +741,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01CE",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र"
@@ -750,8 +750,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन स्माल लेटर I"
@@ -759,8 +759,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D2",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन स्माल लेटर ओ"
@@ -768,8 +768,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र यू"
@@ -777,8 +777,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र जी"
@@ -786,8 +786,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र के"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01EB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ओगोनक के साथ ओ"
@@ -804,8 +804,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र जे"
@@ -813,8 +813,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "तीव्र के साथ जी"
@@ -822,8 +822,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन स्माल लेटर एन"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0201",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ लैटिन स्माल लेटर"
@@ -840,8 +840,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0203",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन छोटा पत्र"
@@ -849,8 +849,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0205",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ लैटिन स्माल लेटर ई"
@@ -858,8 +858,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0207",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन छोटा पत्र ई"
@@ -867,8 +867,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0209",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लेटिन स्माल लेटर I विथ डबल ग्रेव"
@@ -876,8 +876,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन स्माल लेटर I"
@@ -885,8 +885,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ लैटिन स्माल लेटर ओ"
@@ -894,8 +894,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन स्माल लेटर ओ"
@@ -903,8 +903,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0211",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ लैटिन स्माल लेटर आर"
@@ -912,8 +912,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0213",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन छोटा पत्र आर"
@@ -921,8 +921,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0215",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल ग्रेव के साथ लैटिन छोटा पत्र यू"
@@ -930,8 +930,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0217",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "उल्टे ब्रेव के साथ लैटिन छोटा पत्र यू"
@@ -939,8 +939,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0219",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे कॉमा के साथ एस"
@@ -948,8 +948,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे कॉमा के साथ टी"
@@ -957,8 +957,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "कैरन के साथ लैटिन छोटा पत्र एच"
@@ -966,8 +966,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0227",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन छोटा पत्र डॉट एबव के साथ"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0229",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र ई"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ओ ऊपर डॉट के साथ"
@@ -993,8 +993,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0233",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन छोटा पत्र वाई"
@@ -1002,8 +1002,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0237",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डॉटलेस जे"
@@ -1011,8 +1011,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E01",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे रिंग के साथ लैटिन छोटा पत्र"
@@ -1020,8 +1020,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E03",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर बी डॉट एबव के साथ"
@@ -1029,8 +1029,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E05",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र बी"
@@ -1038,8 +1038,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E07",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र बी"
@@ -1047,8 +1047,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E0B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर डी विथ डॉट एबव"
@@ -1056,8 +1056,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E0D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र डी"
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E0F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र डी"
@@ -1074,8 +1074,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E11",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र डी"
@@ -1083,8 +1083,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E13",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र डी"
@@ -1092,8 +1092,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E19",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र ई"
@@ -1101,8 +1101,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E1B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे टिल्डे के साथ लैटिन छोटा पत्र ई"
@@ -1110,8 +1110,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E1F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एफ ऊपर डॉट के साथ"
@@ -1119,8 +1119,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E21",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "मैक्रॉन के साथ लैटिन छोटा पत्र जी"
@@ -1128,8 +1128,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E23",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर एच विद डॉट एबव"
@@ -1137,8 +1137,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E25",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र एच"
@@ -1146,8 +1146,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E27",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायसिस के साथ एच"
@@ -1155,8 +1155,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E29",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सेडिला के साथ लैटिन छोटा पत्र एच"
@@ -1164,8 +1164,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E2B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे ब्रेव के साथ लैटिन छोटा पत्र एच"
@@ -1173,8 +1173,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E2D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे टिल्डे के साथ लैटिन छोटा पत्र I"
@@ -1182,8 +1182,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E31",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर K"
@@ -1191,8 +1191,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E33",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ K"
@@ -1200,8 +1200,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E35",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र के"
@@ -1209,8 +1209,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E37",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र एल"
@@ -1218,8 +1218,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E3B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र एल"
@@ -1227,8 +1227,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E3D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे दिए गए सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र एल"
@@ -1236,8 +1236,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E3F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "तीव्र के साथ एम"
@@ -1245,8 +1245,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E41",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर एम विद डॉट एबव"
@@ -1254,8 +1254,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E43",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एम"
@@ -1263,8 +1263,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E45",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन छोटे पत्र एन डॉट एबव के साथ"
@@ -1272,8 +1272,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E47",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र एन"
@@ -1281,8 +1281,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E49",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र एन"
@@ -1290,8 +1290,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E4B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र एन"
@@ -1299,8 +1299,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E55",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एक्यूट के साथ लैटिन स्माल लेटर पी"
@@ -1308,8 +1308,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E57",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर P, डॉट एबव के साथ"
@@ -1317,8 +1317,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E59",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "आर ऊपर डॉट के साथ"
@@ -1326,8 +1326,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E5B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र आर"
@@ -1335,8 +1335,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E5F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र आर"
@@ -1344,8 +1344,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E61",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "एस ऊपर डॉट के साथ"
@@ -1353,8 +1353,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E63",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ एस"
@@ -1362,8 +1362,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E6B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन छोटा पत्र टी डॉट ऊपर के साथ"
@@ -1371,8 +1371,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E6D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र टी"
@@ -1380,8 +1380,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E6F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र टी"
@@ -1389,8 +1389,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E71",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र टी"
@@ -1398,8 +1398,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E73",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे दीएसिस के साथ लैटिन छोटा पत्र यू"
@@ -1407,8 +1407,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E75",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे टिल्डे के साथ लैटिन छोटा पत्र यू"
@@ -1416,8 +1416,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E77",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र यू"
@@ -1425,8 +1425,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E7D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ वी"
@@ -1434,8 +1434,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E7F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ वी"
@@ -1443,8 +1443,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E81",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन स्माल लेटर डब्ल्यू"
@@ -1452,8 +1452,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E83",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "तीव्र के साथ डब्ल्यू"
@@ -1461,8 +1461,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E85",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायसिस के साथ लैटिन स्मॉल लेटर डब्ल्यू"
@@ -1470,8 +1470,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E87",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर डब्ल्यू विद डॉट एबव"
@@ -1479,8 +1479,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E89",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ डब्ल्यू"
@@ -1488,8 +1488,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E8B",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्मॉल लेटर X, डॉट एबव के साथ"
@@ -1497,8 +1497,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E8D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायरिसिस के साथ लैटिन स्माल लेटर एक्स"
@@ -1506,8 +1506,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E8F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन छोटा पत्र वाई डॉट एबव के साथ"
@@ -1515,8 +1515,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E91",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "सर्कमफ्लेक्स के साथ लैटिन छोटा पत्र जेड"
@@ -1524,8 +1524,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E93",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र जेड"
@@ -1533,8 +1533,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E95",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र जेड"
@@ -1542,8 +1542,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E96",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे लाइन के साथ लैटिन छोटा पत्र एच"
@@ -1551,8 +1551,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E97",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डायसिस के साथ टी"
@@ -1560,8 +1560,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E98",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "रिंग के ऊपर लैटिन छोटा पत्र डब्ल्यू"
@@ -1569,8 +1569,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E99",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "रिंग के ऊपर के साथ लैटिन छोटा पत्र वाई"
@@ -1578,8 +1578,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1E9A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "राइट हाफ रिंग के साथ लैटिन स्माल लेटर"
@@ -1587,8 +1587,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA1",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन लघु पत्र"
@@ -1596,8 +1596,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EA3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "हुक के ऊपर के साथ लैटिन छोटा पत्र"
@@ -1605,8 +1605,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EB9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र ई"
@@ -1614,8 +1614,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EBB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "हुक के ऊपर लैटिन छोटा पत्र ई"
@@ -1623,8 +1623,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EBD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ लैटिन छोटा पत्र ई"
@@ -1632,8 +1632,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EC9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन स्माल लेटर I विद हुक एबव"
@@ -1641,8 +1641,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ECB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "लैटिन छोटा पत्र I नीचे डॉट के साथ"
@@ -1650,8 +1650,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ECD",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ लैटिन छोटा पत्र ओ"
@@ -1659,8 +1659,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1ECF",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "हुक के ऊपर लैटिन छोटा पत्र ओ"
@@ -1668,8 +1668,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ यू"
@@ -1677,8 +1677,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EE7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "हुक के ऊपर लैटिन छोटा पत्र यू"
@@ -1686,8 +1686,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EF3",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ग्रेव के साथ लैटिन स्माल लेटर वाई"
@@ -1695,8 +1695,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EF5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "नीचे के साथ वाई"
@@ -1704,8 +1704,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EF7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "हुक के ऊपर लैटिन छोटा पत्र वाई"
@@ -1713,8 +1713,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1EF9",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "टिल्डे के साथ वाई"

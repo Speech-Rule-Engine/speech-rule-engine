@@ -4,97 +4,97 @@
   },
   {
     "key": "21BC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione sinistro sopra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione sinistro in basso"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione su a destra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione su a sinistra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione destro sopra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione destro in basso"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione giù a destra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione giù a sinistra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione sinistro sopra arpione destro"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "arpione destro sopra arpione sinistro"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "Sm",
     "key": "294A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sinistra Barb Up Right Barb Down Harpoon"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a sinistra Barb giù a destra Barb Up Harpoon"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "up Barb Right Down Barb Left Harpoon"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "up Barb Left Down Barb Right Harpoon"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a sinistra Barb Up Right Barb Up Harpoon"
@@ -139,16 +139,16 @@
   },
   {
     "key": "294F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione su e giù verso destra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2950",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sinistra Barb Down Right Barb Down Harpoon"
@@ -157,16 +157,16 @@
   },
   {
     "key": "2951",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione su e giù verso sinistra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2952",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb Up To Bar"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2953",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giusto arpione con Barb Up To Bar"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2954",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upward Harpoon con Barb Right To Bar"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2955",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downward Harpoon con Barb Right To Bar"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2956",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb Down To Bar"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2957",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giusto arpione con Barb giù al bar"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2958",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upward Harpoon con Barb Left To Bar"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2959",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downward Harpoon con Barb Left To Bar"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb Up from Bar"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giusto Harpoon con Barb Up from Bar"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upward Harpoon with Barb Right from Bar"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downward Harpoon with Barb Right from Bar"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb giù dal bar"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giusto Harpoon con Barb giù da Bar"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2960",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upward Harpoon with Barb Left from Bar"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2961",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downward Harpoon with Barb Left from Bar"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2962",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb in alto a sinistra Arpione con Barb giù"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2963",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upward Harpoon with Barb Left Beside Upward Harpoon with Barb Right"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2964",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a destra Arpione con Barb Up Above Rightward con Barb Down"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2965",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downward Harpoon with Barb Left Beside Downward Harpoon with Barb Right"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2966",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb Up Above Rightward con Barb Up"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2967",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb giù in alto a destra Arpione con Barb giù"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2968",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a destra Arpione con Barb Up in alto a sinistra Harpoon con Barb Up"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2969",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a destra Arpione con Barb giù in alto a sinistra Arpione con Barb giù"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb Up Above Long Dash"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpione a sinistra con Barb giù sotto Long Dash"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giusto arpione con Barb Up Above Long Dash"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a destra Arpione con Barb giù sotto Long Dash"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upward Harpoon with Barb Left Beside Downward Harpoon with Barb Right"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downward Harpoon with Barb Left Beside Upward Harpoon with Barb Right"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coda di pesce sinistra"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coda di pesce giusta"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coda di pesce"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giù coda di pesce"

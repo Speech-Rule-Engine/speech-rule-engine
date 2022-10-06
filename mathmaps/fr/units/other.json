@@ -2,13 +2,21 @@
   {
     "locale": "fr"
   },
-  {"category": "other",
-   "mappings": {
-     "default": {
-       "default": "douzaine"
-    }
-   },
-   "key": "doz",
-   "names": ["douz", "douz.", "dz", "dz.", "doz", "doz."]
+  {
+    "key": "doz",
+    "category": "other",
+    "mappings": {
+      "default": {
+        "default": "douzaine"
+      }
+    },
+    "names": [
+      "douz",
+      "douz.",
+      "dz",
+      "dz.",
+      "doz",
+      "doz."
+    ]
   }
 ]

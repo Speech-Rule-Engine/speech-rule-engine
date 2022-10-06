@@ -4,107 +4,107 @@
   },
   {
     "key": "W",
-   "si": true,
-    "names": [
-      "W",
-      "w"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "vatio"
       }
     },
-    "category": "energy"
+    "si": true,
+    "names": [
+      "W",
+      "w"
+    ]
   },
   {
     "key": "kwh",
-    "names": [
-      "kwh",
-      "kWh"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "kilovatio hora"
       }
     },
-    "category": "energy"
+    "names": [
+      "kwh",
+      "kWh"
+    ]
   },
   {
     "key": "J",
-    "si": true,
-    "names": [
-      "J"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "Joule"
       }
     },
-    "category": "energy"
+    "si": true,
+    "names": [
+      "J"
+    ]
   },
   {
     "key": "N",
-    "si": true,
-    "names": [
-      "N"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "Newton"
       }
     },
-    "category": "energy"
+    "si": true,
+    "names": [
+      "N"
+    ]
   },
   {
     "key": "A",
-    "si": true,
-    "names": [
-      "A"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "Ampere"
       }
     },
-    "category": "energy"
+    "si": true,
+    "names": [
+      "A"
+    ]
   },
   {
     "key": "V",
-    "si": true,
-    "names": [
-      "V"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "Voltio"
       }
     },
-    "category": "energy"
+    "si": true,
+    "names": [
+      "V"
+    ]
   },
   {
-    "key": "Ohm",
+    "key": "ohm",
+    "category": "energy",
+    "mappings": {
+      "default": {
+        "default": "ohmio"
+      }
+    },
     "names": [
       "Ohm",
       "ohm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "ohmio"
-      }
-    },
-    "category": "energy"
+    ]
   },
   {
     "key": "Ω",
-    "si": true,
-    "names": [
-      "Ω"
-    ],
+    "category": "energy",
     "mappings": {
       "default": {
         "default": "ohmio"
       }
     },
-    "category": "energy"
+    "si": true,
+    "names": [
+      "Ω"
+    ]
   }
 ]

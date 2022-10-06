@@ -4,59 +4,62 @@
   },
   {
     "key": "s",
-    "si": true,
+    "category": "time",
     "mappings": {
       "default": {
         "default": "seconde"
       }
     },
-    "category": "time",
+    "si": true,
     "names": [
       "s"
     ]
   },
   {
     "key": "″",
+    "category": "time",
     "mappings": {
       "default": {
         "default": "seconde"
       }
     },
-    "category": "time",
     "names": [
       "″"
     ]
   },
   {
+    "key": "min",
     "category": "time",
     "mappings": {
       "default": {
         "default": "minute"
       }
     },
-    "key": "min",
     "names": [
       "min",
       "′"
     ]
   },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "degré"
-     }
-   },
-   "key": "°",
-   "names": ["°"]
+  {
+    "key": "°",
+    "category": "time",
+    "mappings": {
+      "default": {
+        "default": "degré"
+      }
+    },
+    "names": [
+      "°"
+    ]
   },
   {
+    "key": "h",
     "category": "time",
     "mappings": {
       "default": {
         "default": "heure"
       }
     },
-    "key": "h",
     "names": [
       "h",
       "hr"

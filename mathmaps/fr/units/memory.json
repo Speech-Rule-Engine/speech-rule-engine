@@ -2,32 +2,43 @@
   {
     "locale": "fr"
   },
-  {"category": "memory",
-   "mappings": {
-     "default": {
-       "default": "bit"
-     }
-   },
-   "key": "b",
-   "names": ["b"]
+  {
+    "key": "b",
+    "category": "memory",
+    "mappings": {
+      "default": {
+        "default": "bit"
+      }
+    },
+    "names": [
+      "b"
+    ]
   },
-  {"category": "memory",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "octet"
-     }
-   },
-   "key": "B",
-   "names": ["B", "o"]
+  {
+    "key": "B",
+    "category": "memory",
+    "mappings": {
+      "default": {
+        "default": "octet"
+      }
+    },
+    "si": true,
+    "names": [
+      "B",
+      "o"
+    ]
   },
-  {"category": "memory",
-   "mappings": {
-     "default": {
-       "default": "kilooctet"
-     }
-   },
-   "key": "KB",
-   "names": ["KB", "Ko"]
+  {
+    "key": "KB",
+    "category": "memory",
+    "mappings": {
+      "default": {
+        "default": "kilooctet"
+      }
+    },
+    "names": [
+      "KB",
+      "Ko"
+    ]
   }
 ]

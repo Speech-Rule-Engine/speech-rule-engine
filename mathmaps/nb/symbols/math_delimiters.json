@@ -4,61 +4,61 @@
   },
   {
     "key": "0028",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre parentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "0029",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre parentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "005B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hakeparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "005D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre hakeparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "007B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre krøllparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "007D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre krøllparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2045",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2046",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -76,151 +76,151 @@
   },
   {
     "key": "2308",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre ceiling"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2309",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høyre ceiling"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre floor"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høyre floor"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom høyre crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom venstre crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "top høyre crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "top venstre crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "top venstre hjørne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "top høyre hjørne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom venstre hjørne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom høyre hjørne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2320",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top half integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2321",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom half integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2329",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre-vendt vinkel bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "232A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre-vendt vinkel bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Sm",
     "key": "239B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A5",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A7",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A8",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -409,25 +409,25 @@
   },
   {
     "key": "23B0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upper venstre eller lower høyre brace section"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23B1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upper høyre eller lower venstre brace section"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "23B2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23B3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": ""
@@ -445,25 +445,25 @@
   },
   {
     "key": "23B4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "over square bracket"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "23B5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "under square bracket"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "23B6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": ""
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": ""
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": ""
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": ""
@@ -499,61 +499,61 @@
   },
   {
     "key": "23DC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top parenthesis"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom parenthesis"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top curly bracket"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom curly bracket"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top tortoise sheel bracket"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom tortoise sheel bracket"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ps",
     "key": "2768",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -561,8 +561,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2769",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -570,8 +570,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -579,8 +579,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -588,8 +588,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276C",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -597,8 +597,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -606,8 +606,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -615,8 +615,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -624,8 +624,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2770",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -633,8 +633,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2771",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -642,26 +642,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2772",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "2773",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "2774",
     "mappings": {
       "default": {
         "default": ""
@@ -669,8 +651,26 @@
     }
   },
   {
+    "key": "2773",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "2774",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2775",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -679,115 +679,115 @@
   },
   {
     "key": "27C5",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre s-shaped bag delimiter"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27C6",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre s-shaped bag delimiter"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E6",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hvitt square bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E7",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre hvitt square bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E8",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre vinkel bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E9",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre vinkel bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EA",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre dobbel vinkel bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EB",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre dobbel vinkel bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EC",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hvitt tortoise shell bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27ED",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre hvitt tortoise shell bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EE",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre flattened parenthesis"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EF",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre flattened parenthesis"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2983",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2984",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -805,25 +805,25 @@
   },
   {
     "key": "2985",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hvitt paren"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2986",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre hvitt paren"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2987",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2988",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -841,151 +841,133 @@
   },
   {
     "key": "2989",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z ikkeation venstre binding bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z ikkeation høyre binding bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre bracket med underbar"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre bracket med underbar"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre bracket med tick i top hjørne"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre bracket med tick i bottom hjørne"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre bracket med tick i bottom hjørne"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2990",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre bracket med tick i top hjørne"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2991",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre vinkel bracket med dot"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2992",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre vinkel bracket med dot"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2993",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre arc mindre enn bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2994",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre arc større enn bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2995",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "dobbel venstre arc større enn bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2996",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dobbel høyre arc mindre enn bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2997",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "2998",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "29D8",
     "mappings": {
       "default": {
         "default": ""
@@ -993,8 +975,26 @@
     }
   },
   {
+    "key": "2998",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "29D8",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "29D9",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1003,25 +1003,25 @@
   },
   {
     "key": "29DA",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "reverse most positive; linje below"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "29DB",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "most positive; two linjes below"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "29FC",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1029,8 +1029,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29FD",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1038,8 +1038,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E22",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1047,8 +1047,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E23",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1056,8 +1056,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E24",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E25",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1074,8 +1074,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E26",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1083,8 +1083,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E27",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1092,26 +1092,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E28",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "2E29",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "3008",
     "mappings": {
       "default": {
         "default": ""
@@ -1119,8 +1101,26 @@
     }
   },
   {
+    "key": "2E29",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "3008",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "3009",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1129,25 +1129,25 @@
   },
   {
     "key": "300A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre dobbel vinkel bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "300B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre dobbel vinkel bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "300C",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1155,8 +1155,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1164,26 +1164,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "300E",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "300F",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "3010",
     "mappings": {
       "default": {
         "default": ""
@@ -1191,8 +1173,26 @@
     }
   },
   {
+    "key": "300F",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "3010",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "3011",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1201,43 +1201,25 @@
   },
   {
     "key": "3014",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre tortoise shell bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "3015",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre tortoise shell bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "3016",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "3017",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "3018",
     "mappings": {
       "default": {
         "default": ""
@@ -1245,8 +1227,26 @@
     }
   },
   {
+    "key": "3017",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "3018",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "3019",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1255,25 +1255,25 @@
   },
   {
     "key": "301A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hvitt square bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "301B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høyre hvitt square bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "301D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1282,16 +1282,16 @@
   },
   {
     "key": "301E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dobbel prime quote mark"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Pe",
     "key": "301F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1299,26 +1299,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FD3E",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "FD3F",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "FE17",
     "mappings": {
       "default": {
         "default": ""
@@ -1326,8 +1308,26 @@
     }
   },
   {
+    "key": "FD3F",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "FE17",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "FE18",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1336,43 +1336,43 @@
   },
   {
     "key": "FE35",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over paren"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE36",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under paren"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "FE37",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over curly bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE38",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under curly bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE39",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1380,8 +1380,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1389,26 +1389,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3B",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "FE3C",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "FE3D",
     "mappings": {
       "default": {
         "default": ""
@@ -1416,8 +1398,26 @@
     }
   },
   {
+    "key": "FE3C",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "FE3D",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "FE3E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1426,25 +1426,25 @@
   },
   {
     "key": "FE3F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over vinkel bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE40",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under vinkel bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE41",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1452,8 +1452,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE42",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1461,8 +1461,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE43",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1470,8 +1470,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE44",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1479,8 +1479,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE47",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1488,8 +1488,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE48",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1497,8 +1497,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE59",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1506,8 +1506,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1515,8 +1515,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1524,8 +1524,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1533,8 +1533,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1542,8 +1542,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1551,8 +1551,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF08",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1560,8 +1560,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF09",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1569,8 +1569,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF3B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1578,8 +1578,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF3D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1587,8 +1587,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": ""
@@ -1596,8 +1596,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF5D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""
@@ -1605,26 +1605,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5F",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
-    "category": "Pe",
-    "key": "FF60",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    }
-  },
-  {
     "category": "Ps",
-    "key": "FF62",
     "mappings": {
       "default": {
         "default": ""
@@ -1632,8 +1614,26 @@
     }
   },
   {
+    "key": "FF60",
     "category": "Pe",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "FF62",
+    "category": "Ps",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "FF63",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": ""

@@ -5,44 +5,44 @@
   {
     "key": "F",
     "category": "temperature",
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ],
     "mappings": {
       "default": {
         "default": "grau Fahrenheit",
         "plural": "graus Fahrenheit"
       }
-    }
+    },
+    "names": [
+      "F",
+      "F.",
+      "°F"
+    ]
   },
   {
     "key": "C",
     "category": "temperature",
-    "names": [
-      "C",
-      "°C"
-    ],
     "mappings": {
       "default": {
         "default": "centígrad",
         "plural": "centígrads"
       }
-    }
+    },
+    "names": [
+      "C",
+      "°C"
+    ]
   },
   {
     "key": "K",
     "category": "temperature",
-    "names": [
-      "K",
-      "°K"
-    ],
     "mappings": {
       "default": {
         "default": "kelvin",
         "plural": "kelvins"
       }
-    }
+    },
+    "names": [
+      "K",
+      "°K"
+    ]
   }
 ]

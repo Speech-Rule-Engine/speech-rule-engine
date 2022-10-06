@@ -39,12 +39,12 @@
   },
   {
     "key": "g",
-    "si": true,
     "mappings": {
       "default": {
         "default": "gramme"
       }
     },
+    "si": true,
     "names": [
       "g"
     ]
@@ -61,77 +61,82 @@
       "T"
     ]
   },
-    {
+  {
+    "key": "dram",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "drachme"
       }
     },
-    "key": "dram",
     "names": [
       "dr",
       "dr."
     ]
   },
   {
+    "key": "st",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "stone"
       }
     },
-    "key": "st",
     "names": [
       "st",
       "st."
     ]
   },
   {
+    "key": "qtr",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "quarter"
       }
     },
-    "key": "qtr",
     "names": [
       "qtr",
       "qtr."
     ]
   },
   {
+    "key": "LT",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "long ton"
       }
     },
-    "key": "LT",
     "names": [
       "LT",
       "L.T."
     ]
   },
   {
+    "key": "mcg",
     "category": "weight",
     "mappings": {
       "default": {
         "default": "microgramme"
       }
     },
-    "key": "mcg",
     "names": [
       "mcg"
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "quintal"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt.", "qq"]
+  {
+    "key": "cwt",
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "quintal"
+      }
+    },
+    "names": [
+      "cwt",
+      "cwt.",
+      "qq"
+    ]
   }
 ]

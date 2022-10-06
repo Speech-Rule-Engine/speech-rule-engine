@@ -4,53 +4,53 @@
   },
   {
     "key": "kt",
-    "names": [
-      "kt",
-      "kt."
-    ],
+    "category": "speed",
     "mappings": {
       "default": {
         "default": "nudo"
       }
     },
-    "category": "speed"
+    "names": [
+      "kt",
+      "kt."
+    ]
   },
   {
     "key": "mph",
-    "names": [
-      "mph"
-    ],
+    "category": "speed",
     "mappings": {
       "default": {
         "default": "milla por hora",
         "plural": "millas por hora"
       }
     },
-    "category": "speed"
+    "names": [
+      "mph"
+    ]
   },
   {
     "key": "rpm",
-    "names": [
-      "rpm"
-    ],
+    "category": "speed",
     "mappings": {
       "default": {
         "default": "revoluciones por minuto"
       }
     },
-    "category": "speed"
+    "names": [
+      "rpm"
+    ]
   },
   {
     "key": "kmh",
-    "names": [
-      "kmh"
-    ],
+    "category": "speed",
     "mappings": {
       "default": {
         "plural": "kilómetros por hora",
         "default": "kilómetro por hora"
       }
     },
-    "category": "speed"
+    "names": [
+      "kmh"
+    ]
   }
 ]

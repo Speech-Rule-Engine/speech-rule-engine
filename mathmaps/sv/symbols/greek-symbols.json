@@ -4,34 +4,34 @@
   },
   {
     "key": "03D0",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "grekiskt beta"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "03D7",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "grav accentnt kai"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "03F6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bakvänt epsilon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Lu",
     "key": "1D7CA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "fet versal Digamma"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7CB",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "fet digamma"

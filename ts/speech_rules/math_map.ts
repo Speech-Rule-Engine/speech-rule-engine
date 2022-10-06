@@ -53,7 +53,9 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
   functions: MathCompoundStore.addFunctionRules,
   symbols: MathCompoundStore.addSymbolRules,
   units: MathCompoundStore.addUnitRules,
-  si: MathCompoundStore.setSiPrefixes
+  si: (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
+  messages: completeLocale,
+  rules: SpeechRuleEngine.addStore
 };
 
 let _init = false;
@@ -178,17 +180,11 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
     if (opt_locale && opt_locale !== info[0]) {
       continue;
     }
-    if (info[1] === 'rules') {
-      SpeechRuleEngine.getInstance().addStore(json[key] as RulesJson);
-    } else if (info[1] === 'messages') {
-      completeLocale(json[key]);
-    } else {
-      if (generate) {
-        AlphabetGenerator.generate(info[0]);
-        generate = false;
-      }
-      (json[key] as UnicodeJson[] | [SiJson]).forEach(addSymbols[info[1]]);
+    if (generate && info[1] === 'symbols') {
+      AlphabetGenerator.generate(info[0]);
+      generate = false;
     }
+    addSymbols[info[1]](json[key]);
   }
 }
 

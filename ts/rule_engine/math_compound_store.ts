@@ -120,21 +120,23 @@ export function defineRule(
  *
  * @param json JSON object of the speech rules.
  */
-export function addSymbolRules(json: UnicodeJson) {
-  if (changeLocale_(json)) {
+function addSymbolRule(json: UnicodeJson) {
+  if (changeLocale(json)) {
     return;
   }
   const key = MathSimpleStore.parseUnicode(json['key']);
   defineRules(json['key'], key, json['category'], json['mappings']);
 }
+export const addSymbolRules =
+  (json: UnicodeJson[]) => json.forEach(addSymbolRule);
 
 /**
  * Makes a speech rule for Function names from its JSON representation.
  *
  * @param json JSON object of the speech rules.
  */
-export function addFunctionRules(json: UnicodeJson) {
-  if (changeLocale_(json)) {
+function addFunctionRule(json: UnicodeJson) {
+  if (changeLocale(json)) {
     return;
   }
   const names = json['names'];
@@ -144,22 +146,26 @@ export function addFunctionRules(json: UnicodeJson) {
     defineRules(name, name, category, mappings);
   }
 }
+export const addFunctionRules =
+  (json: UnicodeJson[]) => json.forEach(addFunctionRule);
 
 /**
  * Makes speech rules for Unit descriptors from its JSON representation.
  *
  * @param json JSON object of the speech rules.
  */
-export function addUnitRules(json: UnicodeJson) {
-  if (changeLocale_(json)) {
+function addUnitRule(json: UnicodeJson) {
+  if (changeLocale(json)) {
     return;
   }
   if (json['si']) {
-    addSiUnitRules(json);
+    addSiUnitRule(json);
     return;
   }
-  addUnitRules_(json);
+  addSingleUnitRule(json);
 }
+export const addUnitRules =
+  (json: UnicodeJson[]) => json.forEach(addUnitRule);
 
 /**
  * Makes speech rules for SI units from the JSON representation of the base
@@ -167,7 +173,7 @@ export function addUnitRules(json: UnicodeJson) {
  *
  * @param json JSON object of the base speech rules.
  */
-export function addSiUnitRules(json: UnicodeJson) {
+function addSiUnitRule(json: UnicodeJson) {
   for (const key of Object.keys(siPrefixes)) {
     const newJson = Object.assign({}, json);
     newJson.mappings = {} as MappingsJson;
@@ -186,9 +192,25 @@ export function addSiUnitRules(json: UnicodeJson) {
         );
       }
     }
-    addUnitRules_(newJson);
+    addSingleUnitRule(newJson);
   }
-  addUnitRules_(json);
+  addSingleUnitRule(json);
+}
+
+/**
+ * Adds a single speech rule for Unit descriptors from its JSON
+ * representation.
+ *
+ * @param json JSON object of the speech rules.
+ */
+function addSingleUnitRule(json: UnicodeJson) {
+  const names = json['names'];
+  if (names) {
+    json['names'] = names.map(function (name) {
+      return name + ':' + 'unit';
+    });
+  }
+  addFunctionRule(json);
 }
 
 /**
@@ -272,29 +294,13 @@ function enumerate_(
 }
 
 /**
- * Adds a single speech rule for Unit descriptors from its JSON
- * representation.
- *
- * @param json JSON object of the speech rules.
- */
-function addUnitRules_(json: UnicodeJson) {
-  const names = json['names'];
-  if (names) {
-    json['names'] = names.map(function (name) {
-      return name + ':' + 'unit';
-    });
-  }
-  addFunctionRules(json);
-}
-
-/**
  * Changes the internal locale for the rule definitions if the given JSON
  * element is a locale instruction.
  *
  * @param json JSON object of a speech rules.
  * @returns True if the locale was changed.
  */
-function changeLocale_(json: UnicodeJson): boolean {
+export function changeLocale(json: UnicodeJson): boolean {
   if (!json['locale'] && !json['modality']) {
     return false;
   }

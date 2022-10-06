@@ -4,25 +4,25 @@
   },
   {
     "key": "2113",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "skript l"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2118",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "weierstrass p"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ll",
     "key": "213C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pi med dubbelstreck"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "213D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "gamma med dubbelstreck"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "213E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Gamma med dubbelstreck"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "213F",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Pi med dubbelstreck"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2140",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "summatecken med dubbelstreck"
@@ -67,43 +67,43 @@
   },
   {
     "key": "2145",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort d"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2146",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2147",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2148",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "2149",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "kursivt j med dubbelstreck"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6A4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "kursivt i utan prick"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D6A5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "kursivt j utan prick"

@@ -4,13 +4,13 @@
   },
   {
     "key": "F",
+    "category": "temperature",
     "mappings": {
       "default": {
-        "default": "farad",
-        "plural": "farader"
+        "default": "Fahrenheit",
+        "plural": "Fahrenheit"
       }
     },
-    "category": "temperature",
     "names": [
       "F",
       "F.",
@@ -19,13 +19,13 @@
   },
   {
     "key": "C",
+    "category": "temperature",
     "mappings": {
       "default": {
-        "default": "celsius",
-        "plural": "celsius"
+        "default": "Celsius",
+        "plural": "Celsius"
       }
     },
-    "category": "temperature",
     "names": [
       "C",
       "°C"
@@ -33,13 +33,13 @@
   },
   {
     "key": "K",
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "kelvin",
         "plural": "kelvin"
       }
     },
-    "category": "temperature",
     "names": [
       "K",
       "°K"

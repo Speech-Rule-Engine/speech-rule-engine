@@ -4,12 +4,12 @@
   },
   {
     "key": "$",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "dólar"
       }
     },
-    "category": "currency",
     "names": [
       "$",
       "💲",
@@ -20,12 +20,12 @@
   },
   {
     "key": "£",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "penique"
       }
     },
-    "category": "currency",
     "names": [
       "£",
       "￡",
@@ -34,12 +34,12 @@
   },
   {
     "key": "¥",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "yen"
       }
     },
-    "category": "currency",
     "names": [
       "¥",
       "￥",
@@ -48,12 +48,12 @@
   },
   {
     "key": "€",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "euro"
       }
     },
-    "category": "currency",
     "names": [
       "€",
       "EUR"
@@ -61,12 +61,12 @@
   },
   {
     "key": "₡",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "colón"
       }
     },
-    "category": "currency",
     "names": [
       "₡",
       "CRC"
@@ -74,60 +74,60 @@
   },
   {
     "key": "₢",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "cruzeiro"
       }
     },
-    "category": "currency",
     "names": [
       "₢"
     ]
   },
   {
     "key": "₣",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "franco"
       }
     },
-    "category": "currency",
     "names": [
       "₣"
     ]
   },
   {
     "key": "₤",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "lira"
       }
     },
-    "category": "currency",
     "names": [
       "₤"
     ]
   },
   {
     "key": "₥",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "mills"
       }
     },
-    "category": "currency",
     "names": [
       "₥"
     ]
   },
   {
     "key": "₦",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "naira"
       }
     },
-    "category": "currency",
     "names": [
       "₦",
       "NGN"
@@ -135,24 +135,24 @@
   },
   {
     "key": "₧",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "peseta"
       }
     },
-    "category": "currency",
     "names": [
       "₧"
     ]
   },
   {
     "key": "₨",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "rupia"
       }
     },
-    "category": "currency",
     "names": [
       "₨",
       "₹",
@@ -164,12 +164,12 @@
   },
   {
     "key": "₩",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "won"
       }
     },
-    "category": "currency",
     "names": [
       "₩",
       "￦",
@@ -178,123 +178,123 @@
   },
   {
     "key": "₪",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "siclo"
       }
     },
-    "category": "currency",
     "names": [
       "₪"
     ]
   },
   {
     "key": "₫",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "dong"
       }
     },
-    "category": "currency",
     "names": [
       "₫"
     ]
   },
   {
     "key": "₭",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "kip"
       }
     },
-    "category": "currency",
     "names": [
       "₭"
     ]
   },
   {
     "key": "₮",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "tugrik"
       }
     },
-    "category": "currency",
     "names": [
       "₮"
     ]
   },
   {
     "key": "₯",
+    "category": "currency",
     "mappings": {
       "default": {
         "plural": "dracmas",
         "default": "dracma"
       }
     },
-    "category": "currency",
     "names": [
       "₯"
     ]
   },
   {
     "key": "₰",
+    "category": "currency",
     "mappings": {
       "default": {
         "plural": "peniques alemanes",
         "default": "penique alemán"
       }
     },
-    "category": "currency",
     "names": [
       "₰"
     ]
   },
   {
     "key": "₱",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "peso"
       }
     },
-    "category": "currency",
     "names": [
       "₱"
     ]
   },
   {
     "key": "₲",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "guaraní",
         "plural": "guaraníes"
       }
     },
-    "category": "currency",
     "names": [
       "₲"
     ]
   },
   {
     "key": "₳",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "austral"
       }
     },
-    "category": "currency",
     "names": [
       "₳"
     ]
   },
   {
     "key": "₴",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "hryvnias"
       }
     },
-    "category": "currency",
     "names": [
       "₴",
       "UAH"
@@ -302,39 +302,68 @@
   },
   {
     "key": "₵",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "cedis"
       }
     },
-    "category": "currency",
     "names": [
       "₵",
       "GHS"
     ]
   },
   {
+    "key": "₸",
+    "category": "currency",
+    "mappings": {
+      "default": {
+        "default": "tenge",
+        "plural": "tenge"
+      }
+    },
+    "names": [
+      "₸",
+      "KZT"
+    ]
+  },
+  {
+    "key": "₺",
+    "category": "currency",
+    "mappings": {
+      "default": {
+        "default": "lira turca",
+        "plural": "liras turca"
+      }
+    },
+    "names": [
+      "₺",
+      "TRY"
+    ]
+  },
+  {
     "key": "元",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "yuan"
       }
     },
-    "category": "currency",
     "names": [
       "元"
     ]
   },
   {
-    "category": "currency",
     "key": "¢",
+    "category": "currency",
     "mappings": {
       "default": {
         "default": "centésimo"
       }
     },
     "names": [
-      "￠", "¢"
+      "￠",
+      "¢"
     ]
   }
 ]

@@ -3,113 +3,110 @@
     "locale": "nn"
   },
   {
-    "locale": "nn"
-  },
-  {
     "key": "sq",
     "category": "other",
-    "names": [
-      "sq",
-      "sq."
-    ],
     "mappings": {
       "default": {
         "default": "kvadrat"
       }
-    }
+    },
+    "names": [
+      "sq",
+      "sq."
+    ]
   },
   {
     "key": "sq inch",
     "category": "area",
+    "mappings": {
+      "default": {
+        "default": "kvadratcentimeter"
+      }
+    },
     "names": [
       "sq in",
       "sq. in.",
       "sq inch",
       "sq. inch"
-    ],
-    "mappings": {
-      "default": {
-        "default": "kvadratcentimeter"
-      }
-    }
+    ]
   },
   {
     "key": "sq rd",
     "category": "area",
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "sq rd",
+      "sq. rd."
+    ]
   },
   {
     "key": "sq ft",
     "category": "area",
-    "names": [
-      "sq ft",
-      "sq. ft."
-    ],
     "mappings": {
       "default": {
         "default": ""
       }
-    }
+    },
+    "names": [
+      "sq ft",
+      "sq. ft."
+    ]
   },
   {
     "key": "sq yd",
     "category": "area",
-    "names": [
-      "sq yd",
-      "sq. yd."
-    ],
     "mappings": {
       "default": {
         "default": "kvadratmeter"
       }
-    }
+    },
+    "names": [
+      "sq yd",
+      "sq. yd."
+    ]
   },
   {
     "key": "sq mi",
     "category": "area",
-    "names": [
-      "sq mi",
-      "sq. mi."
-    ],
     "mappings": {
       "default": {
         "default": "kvadratkilometer"
       }
-    }
+    },
+    "names": [
+      "sq mi",
+      "sq. mi."
+    ]
   },
   {
     "key": "acr",
     "category": "area",
+    "mappings": {
+      "default": {
+        "default": "mål"
+      }
+    },
     "names": [
       "ac",
       "ac.",
       "acr",
       "acr."
-    ],
-    "mappings": {
-      "default": {
-        "default": "mål"
-      }
-    }
+    ]
   },
   {
     "key": "ha",
     "category": "area",
-    "names": [
-      "ha"
-    ],
     "mappings": {
       "default": {
         "default": "hektar"
       }
-    }
+    },
+    "names": [
+      "ha"
+    ]
   }
 ]

@@ -4,72 +4,72 @@
   },
   {
     "key": "cosh",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "cosinus hyperbolicus"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "cosh"
     ]
   },
   {
     "key": "coth",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "hyperbolisk kotangent"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "coth"
     ]
   },
   {
     "key": "csch",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "hyperbolisk kosekant"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "csch"
     ]
   },
   {
     "key": "sech",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "hyperbolisk sekant"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "sech"
     ]
   },
   {
     "key": "sinh",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "sinus hyperbolicus"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "sinh"
     ]
   },
   {
     "key": "tanh",
+    "category": "Hyperbolic",
     "mappings": {
       "default": {
         "default": "hyperbolisk tangent"
       }
     },
-    "category": "Hyperbolic",
     "names": [
       "tanh"
     ]
@@ -77,79 +77,79 @@
   {
     "key": "arcosh",
     "category": "Area",
-    "names": [
-      "arcosh",
-      "arccosh"
-    ],
     "mappings": {
       "default": {
         "default": "areacosinus hyperbolicus"
       }
-    }
+    },
+    "names": [
+      "arcosh",
+      "arccosh"
+    ]
   },
   {
     "key": "arcoth",
     "category": "Area",
-    "names": [
-      "arcoth",
-      "arccoth"
-    ],
     "mappings": {
       "default": {
         "default": "areacotangens hyperbolicus"
       }
-    }
+    },
+    "names": [
+      "arcoth",
+      "arccoth"
+    ]
   },
   {
     "key": "arcsch",
     "category": "Area",
-    "names": [
-      "arcsch",
-      "arccsch"
-    ],
     "mappings": {
       "default": {
         "default": "areakosekant hyperbolicus"
       }
-    }
+    },
+    "names": [
+      "arcsch",
+      "arccsch"
+    ]
   },
   {
     "key": "arsech",
     "category": "Area",
-    "names": [
-      "arsech",
-      "arcsech"
-    ],
     "mappings": {
       "default": {
         "default": "areasekant hyperbolicus"
       }
-    }
+    },
+    "names": [
+      "arsech",
+      "arcsech"
+    ]
   },
   {
     "key": "arsinh",
     "category": "Area",
-    "names": [
-      "arsinh",
-      "arcsinh"
-    ],
     "mappings": {
       "default": {
         "default": "areasinus hyperbolicus"
       }
-    }
+    },
+    "names": [
+      "arsinh",
+      "arcsinh"
+    ]
   },
   {
     "key": "artanh",
     "category": "Area",
-    "names": [
-      "artanh",
-      "arctanh"
-    ],
     "mappings": {
       "default": {
         "default": "areatangens hyperbolicus"
       }
-    }
+    },
+    "names": [
+      "artanh",
+      "arctanh"
+    ]
   }
 ]

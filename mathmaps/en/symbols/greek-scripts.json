@@ -1,7 +1,10 @@
-[{"locale": "en"},
- {
-    "category": "Ll",
+[
+  {
+    "locale": "en"
+  },
+  {
     "key": "1D26",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Gamma"
@@ -12,8 +15,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D27",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Lamda"
@@ -24,8 +27,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D28",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Pi"
@@ -36,8 +39,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D29",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Rho"
@@ -48,8 +51,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D2A",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Psi"
@@ -60,8 +63,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D5E",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superscript gamma"
@@ -69,8 +72,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D60",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superscript phi"
@@ -78,8 +81,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D66",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript beta"
@@ -87,8 +90,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D67",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript gamma"
@@ -96,8 +99,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D68",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript rho"
@@ -105,8 +108,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D69",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript phi"
@@ -114,8 +117,8 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D6A",
+    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript chi"

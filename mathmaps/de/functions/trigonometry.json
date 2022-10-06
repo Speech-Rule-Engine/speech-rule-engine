@@ -4,12 +4,12 @@
   },
   {
     "key": "cos",
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "Kosinus"
       }
     },
-    "category": "Trigonometric",
     "names": [
       "cos",
       "cosine"
@@ -17,48 +17,48 @@
   },
   {
     "key": "cot",
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "Kotangens"
       }
     },
-    "category": "Trigonometric",
     "names": [
       "cot"
     ]
   },
   {
     "key": "csc",
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "Kosekans"
       }
     },
-    "category": "Trigonometric",
     "names": [
       "csc"
     ]
   },
   {
     "key": "sec",
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "Sekans"
       }
     },
-    "category": "Trigonometric",
     "names": [
       "sec"
     ]
   },
   {
     "key": "sin",
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "Sinus"
       }
     },
-    "category": "Trigonometric",
     "names": [
       "sin",
       "sine"
@@ -66,102 +66,102 @@
   },
   {
     "key": "tan",
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "Tangens"
       }
     },
-    "category": "Trigonometric",
     "names": [
       "tan"
     ]
   },
   {
     "key": "arccos",
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "Arkuskosinus"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "inverser Kosinus"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "inverser Kosinus"
+      }
     },
-    "category": "Cyclometric",
     "names": [
       "arccos"
     ]
   },
   {
     "key": "arccot",
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "Arkuskotangens"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "inverser Kotangens"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "inverser Kotangens"
+      }
     },
-    "category": "Cyclometric",
     "names": [
       "arccot"
     ]
   },
   {
     "key": "arccsc",
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "Arkuskosekans"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "inverser Kosekans"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "inverser Kosekans"
+      }
     },
-    "category": "Cyclometric",
     "names": [
       "arccsc"
     ]
   },
   {
     "key": "arcsec",
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "Arkussekans"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "inverser Sekans"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "inverser Sekans"
+      }
     },
-    "category": "Cyclometric",
     "names": [
       "arcsec"
     ]
   },
   {
     "key": "arcsin",
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "Arkussinus"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "inverser Sinus"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "inverser Sinus"
+      }
     },
-    "category": "Cyclometric",
     "names": [
       "arcsin"
     ]
   },
   {
     "key": "arctan",
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "Arkustangens"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "inverser Tangens"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "inverser Tangens"
+      }
     },
-    "category": "Cyclometric",
     "names": [
       "arctan"
     ]

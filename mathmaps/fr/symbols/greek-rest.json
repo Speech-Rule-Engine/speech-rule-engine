@@ -3,8 +3,8 @@
     "locale": "fr"
   },
   {
-    "category": "Lu",
     "key": "0394",
+    "category": "Lu",
     "mappings": {
       "clearspeak": {
         "default": "triangle",

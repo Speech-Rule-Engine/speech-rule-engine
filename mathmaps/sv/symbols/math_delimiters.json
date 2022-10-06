@@ -4,61 +4,61 @@
   },
   {
     "key": "0028",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "öppna"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "0029",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "stäng"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "005B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster parentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "005D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger parentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "007B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster klammer"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "007D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger klammer"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2045",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster hakparentes med fjäder"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2046",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger hakparentes med fjäder"
@@ -76,151 +76,151 @@
   },
   {
     "key": "2308",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster tak"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2309",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger tak"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster golv"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger golv"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom höger crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom vänster crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "top höger crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "top vänster crop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "övre vänster hörn"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "övre höger hörn"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre vänster hörn"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre vänster hörn"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2320",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "övre halvans integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2321",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre halvans integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2329",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster vinkelparantes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "232A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger vinkelparantes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Sm",
     "key": "239B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster parentes med övre krok"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "förlängning av vänster parentes"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster parentes med nedre krok"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger parentes med övre krok"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "förlängning av höger parentes"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger parentes med nedre krok"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster hakparentes med övre hörn"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "förlängning av vänster hakparentes"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster hakparentes med nedre hörn"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A4",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger hakparentes med övre hörn"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A5",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "förlängning av höger hakparentes"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A6",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger hakparentes med undre hörn"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A7",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster klammer med övre krok"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A8",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mittstycke av vänsterklammer"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A9",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vänster klammer med nedre krok"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AA",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "förlängning av klammer"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AB",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger klammer med övre krok"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mittstycke av högerklammer"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "högerklammer med nedre krok"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integralförlängning"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "förlängning av horisontell linje"
@@ -409,25 +409,25 @@
   },
   {
     "key": "23B0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "övre vänstra eller nedre högra brace section"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23B1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "övre högra eller nedre vänstra brace section"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "23B2",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "övre del av summatecken"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23B3",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre del av summatecken"
@@ -445,25 +445,25 @@
   },
   {
     "key": "23B4",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "over square bracket"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "23B5",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "under square bracket"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "23B6",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "undre del av hakparentes ovanför övre del av hakparentes"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B7",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "undre del av kvadratrotstecken"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vänster vertikal ram"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "So",
     "key": "23B9",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "höger vertikal ram"
@@ -499,61 +499,61 @@
   },
   {
     "key": "23DC",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "övre parantes"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DD",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre parentes"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DE",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "övre klammerparantes"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DF",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre klammerparantes"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E0",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top tortoise sheel bracket"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E1",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom tortoise sheel bracket"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ps",
     "key": "2768",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medelstor vänster parentesdekoration"
@@ -561,8 +561,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2769",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medelstor höger parentesdekoration"
@@ -570,8 +570,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medelstor tillplattad parentesdekoration åt vänster"
@@ -579,8 +579,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medelstor tillplattad parentesdekoration åt höger"
@@ -588,8 +588,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276C",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medelstor vinklad hakparentesdekoration åt vänster"
@@ -597,8 +597,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medelstor vinklad hakparentesdekoration åt höger"
@@ -606,8 +606,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "fetmarkerad vinklad hakparentesdekoration åt vänster"
@@ -615,8 +615,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "fetmarkerad vinklad hakparentesdekoration åt höger"
@@ -624,8 +624,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2770",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "fetmarkerad vinklad hakparentesdekoration åt vänster"
@@ -633,8 +633,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2771",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "fetmarkerad vinklad hakparentesdekoration åt höger"
@@ -642,8 +642,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2772",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "tunn sköldpaddskalformad hakparentesdekoration åt vänster"
@@ -651,8 +651,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2773",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "tunn sköldpaddskalformad hakparentesdekoration åt höger"
@@ -660,8 +660,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2774",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medelstor klammerdekoration åt vänster"
@@ -669,8 +669,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2775",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medelstor klammerdekoration åt höger"
@@ -679,115 +679,115 @@
   },
   {
     "key": "27C5",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster s-formad bag delimiter"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27C6",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger s-formad bag delimiter"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E6",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vit kvadratparentes vänster"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E7",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vit kvadratparentes höger"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E8",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster vinkelparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E9",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger vinkelparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EA",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster dubbel vinkelparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EB",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger dubbel vinkelparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EC",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster white tortoise shell bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27ED",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger white tortoise shell bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EE",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster utslätad parentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EF",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger utslätad parentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2983",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster vit klammer"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2984",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger vit klammer"
@@ -805,25 +805,25 @@
   },
   {
     "key": "2985",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vit vänsterparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2986",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vit högerparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2987",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster halvmåneparentes med streck"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2988",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger halvmåneparentes med streck"
@@ -841,133 +841,133 @@
   },
   {
     "key": "2989",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z notation vänster binding bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z notation höger binding bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "hakparentes vänster med streck under"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "hakparentes höger med streck under"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "hakparentes vänster med streck i övre hörnet"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "hakparentes höger med streck i nedre hörnet"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "hakparentes vänster med streck i nedre hörnet"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2990",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "hakparentes höger med streck i övre hörnet"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2991",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vinkelparentes vänster med punkt"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2992",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vinkelparentes höger med punkt"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2993",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "mindre än parentes vänster"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2994",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "större än parentes höger"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2995",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "dubbel större än parentes vänster"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2996",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dubbel mindre än parentes höger"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2997",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster svart sköldpaddskalformad hakparentes"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2998",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger svart sköldpaddskalformad hakparentes"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "29D8",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster slingrande staket"
@@ -993,8 +993,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29D9",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "slingrande staket åt höger"
@@ -1003,25 +1003,25 @@
   },
   {
     "key": "29DA",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "dubbelt slingrande staket åt vänster"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "29DB",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dubbelt slingrande staket åt höger"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "29FC",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster böjd vinkelparentes"
@@ -1029,8 +1029,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29FD",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger böjd vinkelparentes"
@@ -1038,8 +1038,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E22",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "övre del av vänster hakparentes"
@@ -1047,8 +1047,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E23",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "övre del av höger hakparentes"
@@ -1056,8 +1056,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E24",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "undre del av vänster hakparentes"
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E25",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "undre del av höger hakparentes"
@@ -1074,8 +1074,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E26",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "delmängdstecken åt vänster"
@@ -1083,8 +1083,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E27",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "delmängdstecken åt höger"
@@ -1092,8 +1092,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E28",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "dubbel vänsterparentes"
@@ -1101,8 +1101,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E29",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dubbel högerparentes"
@@ -1110,8 +1110,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3008",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster vinkelparentes"
@@ -1119,8 +1119,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3009",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger vinkelparentes"
@@ -1129,25 +1129,25 @@
   },
   {
     "key": "300A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster dubbel vinkelparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "300B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger dubbel vinkelparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "300C",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster hörnparentes"
@@ -1155,8 +1155,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger hörnparentes"
@@ -1164,8 +1164,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "300E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vit hörnparentes åt vänster"
@@ -1173,8 +1173,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vit hörnparentes åt höger"
@@ -1182,8 +1182,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3010",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "svart linsformad hakparentes åt vänster"
@@ -1191,8 +1191,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3011",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "svart linsformad hakparentes åt höger"
@@ -1201,25 +1201,25 @@
   },
   {
     "key": "3014",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster tortoise shell bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "3015",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger tortoise shell bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "3016",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vit linsformad hakparentes åt vänster"
@@ -1227,8 +1227,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3017",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vit linsformad hakparentes åt höger"
@@ -1236,8 +1236,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3018",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vit sköldpaddskalformad hakparentes åt vänster"
@@ -1245,8 +1245,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3019",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vit sköldpaddskalformad hakparentes åt höger"
@@ -1255,25 +1255,25 @@
   },
   {
     "key": "301A",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster vit hakparentes"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "301B",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger vit hakparentes"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "301D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "omvänt dubbelt prim"
@@ -1282,16 +1282,16 @@
   },
   {
     "key": "301E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dubbelt prim citationstecken"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Pe",
     "key": "301F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "lågt dubbelt prim"
@@ -1299,8 +1299,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FD3E",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster dekorationsparentes"
@@ -1308,8 +1308,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FD3F",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger dekorationsparentes"
@@ -1317,8 +1317,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE17",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vertikal linsformad hakparentes åt vänster"
@@ -1326,8 +1326,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE18",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vertikal linsformad hakparentes åt höger"
@@ -1336,43 +1336,43 @@
   },
   {
     "key": "FE35",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over paren"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE36",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under paren"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "FE37",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over curly bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE38",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under curly bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE39",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal sköldpaddskalformad hakparentes åt vänster"
@@ -1380,8 +1380,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal sköldpaddskalformad hakparentes åt höger"
@@ -1389,8 +1389,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal svart linsformad hakparentes åt vänster"
@@ -1398,8 +1398,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal svart linsformad hakparentes åt höger"
@@ -1407,8 +1407,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal dubbel vinkelparentes åt vänster"
@@ -1416,8 +1416,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal dubbel vinkelparentes åt höger"
@@ -1426,25 +1426,25 @@
   },
   {
     "key": "FE3F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over angle bracket"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE40",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under angle bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE41",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal hörnparentes åt vänster"
@@ -1452,8 +1452,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE42",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal hörnparentes åt höger"
@@ -1461,8 +1461,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE43",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal vit hörnparentes åt vänster"
@@ -1470,8 +1470,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE44",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal vit hörnparentes åt höger"
@@ -1479,8 +1479,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE47",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal hakparentes åt vänster"
@@ -1488,8 +1488,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE48",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentationsform för vertikal hakparentes åt höger"
@@ -1497,8 +1497,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE59",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "liten vänsterparentes"
@@ -1506,8 +1506,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5A",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "liten högerparentes"
@@ -1515,8 +1515,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "liten vänsterklammer"
@@ -1524,8 +1524,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5C",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "liten högerklammer"
@@ -1533,8 +1533,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5D",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "liten sköldpaddskalformad hakparentes åt vänster"
@@ -1542,8 +1542,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5E",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "liten sköldpaddskalformad hakparentes åt höger"
@@ -1551,8 +1551,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF08",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänsterparentes med full bredd"
@@ -1560,8 +1560,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF09",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "högerparentes med full bredd"
@@ -1569,8 +1569,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF3B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "hakparentes åt vänster med full bredd"
@@ -1578,8 +1578,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF3D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "hakparentes åt höger med full bredd"
@@ -1587,8 +1587,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5B",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänsterklammer med full bredd"
@@ -1596,8 +1596,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF5D",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "högerklammer med full bredd"
@@ -1605,8 +1605,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5F",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vit vänsterparentes med full bredd"
@@ -1614,8 +1614,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF60",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "vit högerparentes med full bredd"
@@ -1623,8 +1623,8 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF62",
+    "category": "Ps",
     "mappings": {
       "default": {
         "default": "vänster hörnparentes med halv bredd"
@@ -1632,8 +1632,8 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF63",
+    "category": "Pe",
     "mappings": {
       "default": {
         "default": "höger hörnparentes med halv bredd"

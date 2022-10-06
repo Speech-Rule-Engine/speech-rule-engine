@@ -4,150 +4,150 @@
   },
   {
     "key": "cos",
-    "names": [
-      "cos",
-      "cosine"
-    ],
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "coseno"
       }
     },
-    "category": "Trigonometric"
+    "names": [
+      "cos",
+      "cosine"
+    ]
   },
   {
     "key": "cot",
-    "names": [
-      "cot"
-    ],
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cotangente"
       }
     },
-    "category": "Trigonometric"
+    "names": [
+      "cot"
+    ]
   },
   {
     "key": "csc",
-    "names": [
-      "csc"
-    ],
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cosecante"
       }
     },
-    "category": "Trigonometric"
+    "names": [
+      "csc"
+    ]
   },
   {
     "key": "sec",
-    "names": [
-      "sec"
-    ],
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "secant"
       }
     },
-    "category": "Trigonometric"
+    "names": [
+      "sec"
+    ]
   },
   {
     "key": "sin",
-    "names": [
-      "sin",
-      "sine",
-      "sen"
-    ],
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "seno"
       }
     },
-    "category": "Trigonometric"
+    "names": [
+      "sin",
+      "sine",
+      "sen"
+    ]
   },
   {
     "key": "tan",
-    "names": [
-      "tan"
-    ],
+    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "tangente"
       }
     },
-    "category": "Trigonometric"
+    "names": [
+      "tan"
+    ]
   },
   {
     "key": "arccos",
-    "names": [
-      "arccos"
-    ],
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco coseno"
       }
     },
-    "category": "Cyclometric"
+    "names": [
+      "arccos"
+    ]
   },
   {
     "key": "arccot",
-    "names": [
-      "arccot"
-    ],
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco cotangente"
       }
     },
-    "category": "Cyclometric"
+    "names": [
+      "arccot"
+    ]
   },
   {
     "key": "arccsc",
-    "names": [
-      "arccsc"
-    ],
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco cosecante"
       }
     },
-    "category": "Cyclometric"
+    "names": [
+      "arccsc"
+    ]
   },
   {
     "key": "arcsec",
-    "names": [
-      "arcsec"
-    ],
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco secante"
       }
     },
-    "category": "Cyclometric"
+    "names": [
+      "arcsec"
+    ]
   },
   {
     "key": "arcsin",
-    "names": [
-      "arcsin",
-      "arcsen"
-    ],
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco seno"
       }
     },
-    "category": "Cyclometric"
+    "names": [
+      "arcsin",
+      "arcsen"
+    ]
   },
   {
     "key": "arctan",
-    "names": [
-      "arctan"
-    ],
+    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco tangente"
       }
     },
-    "category": "Cyclometric"
+    "names": [
+      "arctan"
+    ]
   }
 ]

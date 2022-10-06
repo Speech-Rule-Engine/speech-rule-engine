@@ -4,25 +4,25 @@
   },
   {
     "key": "2113",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l minuscule en script"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2118",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fonction elliptique de weierstrass"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ll",
     "key": "213C",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pi ajouré"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "Ll",
     "key": "213D",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "gamma ajouré"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "213E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Gamma majuscule ajouré"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "213F",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Pi majuscule ajouré"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2140",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sommation de la famille ajouré"
@@ -67,43 +67,43 @@
   },
   {
     "key": "2145",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2146",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d ajouré en italique"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2147",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e ajouré en italique"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2148",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i ajouré en italique"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "2149",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j ajouré en italique"
@@ -112,20 +112,20 @@
   },
   {
     "key": "1D6A4",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dotless i"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1D6A5",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dotless j"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

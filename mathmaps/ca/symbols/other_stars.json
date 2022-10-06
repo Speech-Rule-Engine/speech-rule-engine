@@ -3,8 +3,8 @@
     "locale": "ca"
   },
   {
-    "category": "So",
     "key": "23E8",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "símbol exponent decimal"
@@ -13,25 +13,25 @@
   },
   {
     "key": "2605",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella farcida"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2606",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella buida"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "26AA",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle blanc mitjà"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "So",
     "key": "26AB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle negre mitjà"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2705",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vist pesant blanca"
@@ -58,16 +58,16 @@
   },
   {
     "key": "2713",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vist"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2714",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vist pesant"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2715",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "multiplicació x"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2716",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "multiplicació pesant X"
@@ -94,16 +94,16 @@
   },
   {
     "key": "2717",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ballot x"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2718",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "boleta pesant X"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "So",
     "key": "271B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centre obert de la creu"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "So",
     "key": "271C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centre obert creu pesant"
@@ -130,16 +130,16 @@
   },
   {
     "key": "2720",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "creu de Malta"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2721",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella de David"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2722",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "quatre asterisc de llàgrima"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2723",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "quatre asterisc de globus"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2724",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "quatre asterisc impulsat per globus pesant"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2725",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "quatre asterisc de club-spoked"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2726",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella de quatre puntes negra"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2727",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella blanca de quatre puntes"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2728",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centelleigs"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2729",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrès subratllat estrella blanca"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "So",
     "key": "272A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella blanca circulada"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "So",
     "key": "272B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centre obert estrella negra"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "So",
     "key": "272C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centre negre estrella blanca"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "So",
     "key": "272D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "contornejat estrella negra"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "So",
     "key": "272E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella negra contornejada pesant"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "So",
     "key": "272F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella de molinet"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2730",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella blanca ombrejada"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2731",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisc pesant"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2732",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centre obert d'asterisc"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2733",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vuit asterisc parlat"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2734",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vuit esterelles negres punxegudes"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2735",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vuit estrelles de molinet en punta"
@@ -328,16 +328,16 @@
   },
   {
     "key": "2736",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "estrella farcida de sis puntes"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2739",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "dotze estrelles negres punxegudes"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "So",
     "key": "273A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "setze asteriscs en punta"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "So",
     "key": "273B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisc amb efecte de llàgrima"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "So",
     "key": "273C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "centre obert amb asterisc amb forma de llàgrima"
@@ -373,16 +373,16 @@
   },
   {
     "key": "273D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisc de llàgrima pesant"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "273E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "sis pètals d floreta en blanc i negre"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "So",
     "key": "273F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "floreta negra"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2740",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "floreta blanca"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2741",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vuit pètals contornejats floreta negra"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2742",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle obert centre vuit estrelles senyalades"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2743",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisc pesant de molinet de vent"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2744",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "floc de neu"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2745",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "floc de neu trifoli atapeït"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2746",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "floc de neu pesant de Chevron"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2747",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "brillar"
@@ -471,8 +471,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2748",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "espurna pesant"
@@ -480,8 +480,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2749",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisc de globus"
@@ -489,8 +489,8 @@
     }
   },
   {
-    "category": "So",
     "key": "274A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vuit asterisc d'hèlix amb efecte de llàgrima"
@@ -498,8 +498,8 @@
     }
   },
   {
-    "category": "So",
     "key": "274B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "vuit asterisc d'hèlix en forma de llàgrima"
@@ -507,8 +507,8 @@
     }
   },
   {
-    "category": "So",
     "key": "274C",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "marca de la creu"
@@ -516,8 +516,8 @@
     }
   },
   {
-    "category": "So",
     "key": "274D",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle blanc ombrejat"

@@ -4,322 +4,322 @@
   },
   {
     "key": "00C0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento un anellino sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C7",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "c maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con diaeresis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0100",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscolo con barra sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0102",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con segno di vocale corta"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0104",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0106",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "c maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0108",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "c maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "c maiuscola con un punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "c maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "d maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0112",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con barra sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0114",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera E con Breve"
@@ -328,97 +328,97 @@
   },
   {
     "key": "0116",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0118",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "g maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "g maiuscola con segno di vocale corta"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0120",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "g maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0122",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "g maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0124",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "h maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0128",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "012A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con barra sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "012C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina I con breve"
@@ -427,115 +427,115 @@
   },
   {
     "key": "012E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0130",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0134",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "gei maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0136",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "k maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0139",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013F",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con un punto nel mezzo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0143",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0145",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0147",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "014C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con barra sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "014E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina O con Breve"
@@ -544,205 +544,205 @@
   },
   {
     "key": "0150",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con doppio accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0154",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0156",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0158",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola s con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola s con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0160",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0162",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "t maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0164",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "t maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0168",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con barra sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con segno di vocale corta"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con anello sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0170",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con doppio accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0172",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0174",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "w maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0176",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0178",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola with diaeresis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0179",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "z maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "z maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "z maiuscola con caron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "01CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina a con Caron"
@@ -750,8 +750,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina I con Caron"
@@ -759,8 +759,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina O con Caron"
@@ -768,8 +768,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "carattere latino:  lettera U con Caron"
@@ -777,8 +777,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina G con Caron"
@@ -786,8 +786,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "carattere latino:  lettera K con Caron"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina O con Ogonek"
@@ -804,8 +804,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "latin Capital Letter G with Acute"
@@ -813,8 +813,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina con tomba"
@@ -822,8 +822,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0200",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina a con doppia tomba"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0202",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina a con breve invertito"
@@ -840,8 +840,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0204",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera E con doppia tomba"
@@ -849,8 +849,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0206",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera E con breve invertito"
@@ -858,8 +858,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0208",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera I con doppia tomba"
@@ -867,8 +867,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera I con Inverted Breve"
@@ -876,8 +876,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera O con doppia tomba"
@@ -885,8 +885,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina O con breve invertito"
@@ -894,8 +894,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0210",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "latin Capital Letter R with Double Grave"
@@ -903,8 +903,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0212",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina R con breve invertito"
@@ -912,8 +912,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0214",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "latin Capital Lettera U con Double Grave"
@@ -921,8 +921,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0216",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina U con breve invertito"
@@ -930,8 +930,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0218",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S maiuscola con comma sotto"
@@ -939,8 +939,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina T con la virgola sotto"
@@ -948,8 +948,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera H con Caron"
@@ -957,8 +957,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0226",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina a con Punto Sopra"
@@ -966,8 +966,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0228",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera E con Cedilla"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "lettera maiuscola latina O con Punto Sopra"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0232",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "capitale latina Lettera Y con Macron"
@@ -994,668 +994,668 @@
   },
   {
     "key": "1E00",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con anello sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E02",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "b maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E04",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "b maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E06",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "b maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "d maiuscolacon punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "d maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "d maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E10",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "d maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E12",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "d maiuscola con accento circonflesso sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E18",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con tilde sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "f maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E20",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "g maiuscola con barra sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E22",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "h maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E24",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "h maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E26",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "h maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E28",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "h maiuscola con cediglia"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "h maiuscola con segno di vocale corta sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con tilde sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E30",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "k maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E32",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "k maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E34",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "k maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E36",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con accento circonflesso sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "m maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E40",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "m maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E42",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "m maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E44",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E46",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E48",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E4A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "n maiuscola con accento circonflesso sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E54",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "p maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E56",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "p maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E58",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E60",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E62",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "t maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "t maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "t maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E70",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "t maiuscola con accento circonflesso sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E72",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con dieresi sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E74",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con tilde sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E76",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con accento circonflesso sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "v maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "v maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E80",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "w maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E82",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "w maiuscola con accento acuto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E84",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "w maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E86",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "w maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E88",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "w maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "x maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "x maiuscola con dieresi"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con punto sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E90",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "z maiuscola con accento circonflesso"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E92",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "z maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E94",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "z maiuscola con linea sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con gancio sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con gancio sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con gancio sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con gancio sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con gancio sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con accento grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con punto sotto"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con gancio sopra"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "y maiuscola con tilde"
       }
-    },
-    "category": "Lu"
+    }
   }
 ]

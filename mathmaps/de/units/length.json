@@ -4,25 +4,25 @@
   },
   {
     "key": "m",
-    "si": true,
+    "category": "length",
     "mappings": {
       "default": {
         "default": "Meter"
       }
     },
-    "category": "length",
+    "si": true,
     "names": [
       "m"
     ]
   },
   {
     "key": "ft",
+    "category": "length",
     "mappings": {
       "default": {
         "default": "Fuß"
       }
     },
-    "category": "length",
     "names": [
       "ft",
       "ft."
@@ -30,12 +30,12 @@
   },
   {
     "key": "in",
+    "category": "length",
     "mappings": {
       "default": {
         "default": "Zoll"
       }
     },
-    "category": "length",
     "names": [
       "in",
       "in."
@@ -43,13 +43,13 @@
   },
   {
     "key": "mi",
+    "category": "length",
     "mappings": {
       "default": {
         "plural": "Meilen",
         "default": "Meile"
       }
     },
-    "category": "length",
     "names": [
       "mi",
       "mi."
@@ -57,13 +57,13 @@
   },
   {
     "key": "yd",
+    "category": "length",
     "mappings": {
       "default": {
         "plural": "Yards",
         "default": "Yard"
       }
     },
-    "category": "length",
     "names": [
       "yd",
       "yd."
@@ -71,18 +71,19 @@
   },
   {
     "key": "n.m.",
-    "names": [
-      "n.m."
-    ],
+    "category": "length",
     "mappings": {
       "default": {
         "default": "nautische Meile",
         "plural": "nautische Meilen"
       }
     },
-    "category": "length"
+    "names": [
+      "n.m."
+    ]
   },
-    {
+  {
+    "key": "link",
     "category": "length",
     "mappings": {
       "default": {
@@ -90,13 +91,13 @@
         "plural": "Kettenglieder"
       }
     },
-    "key": "link",
     "names": [
       "li",
       "li."
     ]
   },
   {
+    "key": "rod",
     "category": "length",
     "mappings": {
       "default": {
@@ -104,13 +105,13 @@
         "plural": "Ruten"
       }
     },
-    "key": "rod",
     "names": [
       "rd",
       "rd."
     ]
   },
   {
+    "key": "chain",
     "category": "length",
     "mappings": {
       "default": {
@@ -118,13 +119,13 @@
         "plural": "Ketten"
       }
     },
-    "key": "chain",
     "names": [
       "ch",
       "ch."
     ]
   },
   {
+    "key": "furlong",
     "category": "length",
     "mappings": {
       "default": {
@@ -132,7 +133,6 @@
         "plural": "Furchenlängen"
       }
     },
-    "key": "furlong",
     "names": [
       "fur",
       "fur."

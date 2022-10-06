@@ -1,65 +1,88 @@
-[{"locale": "en"},
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "degree"
-     }
-   },
-   "key": "deg",
-   "names": ["deg"]
+[
+  {
+    "locale": "en"
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "determinant"
-     },
-     "mathspeak": {
-       "default": "det"
-     }
-   },
-   "key": "det",
-   "names": ["det"]
+  {
+    "key": "deg",
+    "category": "Algebra",
+    "mappings": {
+      "default": {
+        "default": "degree"
+      }
+    },
+    "names": [
+      "deg"
+    ]
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "dimension"
-     }
-   },
-   "key": "dim",
-   "names": ["dim"]
+  {
+    "key": "det",
+    "category": "Algebra",
+    "mappings": {
+      "default": {
+        "default": "determinant"
+      },
+      "mathspeak": {
+        "default": "det"
+      }
+    },
+    "names": [
+      "det"
+    ]
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "homomorphism"
-     },
-     "mathspeak": {
-       "default": "hom"
-     },
-     "clearspeak": {
-       "default": "hom"
-     }
-   },
-   "key": "hom",
-   "names": ["hom", "Hom"]
+  {
+    "key": "dim",
+    "category": "Algebra",
+    "mappings": {
+      "default": {
+        "default": "dimension"
+      }
+    },
+    "names": [
+      "dim"
+    ]
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "kernel"
-     }
-   },
-   "key": "ker",
-   "names": ["ker"]
+  {
+    "key": "hom",
+    "category": "Algebra",
+    "mappings": {
+      "default": {
+        "default": "homomorphism"
+      },
+      "mathspeak": {
+        "default": "hom"
+      },
+      "clearspeak": {
+        "default": "hom"
+      }
+    },
+    "names": [
+      "hom",
+      "Hom"
+    ]
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "trace"
-     }
-   },
-   "key": "Tr",
-   "names": ["Tr", "tr"]
+  {
+    "key": "ker",
+    "category": "Algebra",
+    "mappings": {
+      "default": {
+        "default": "kernel"
+      }
+    },
+    "names": [
+      "ker"
+    ]
+  },
+  {
+    "key": "Tr",
+    "category": "Algebra",
+    "mappings": {
+      "default": {
+        "default": "trace"
+      }
+    },
+    "names": [
+      "Tr",
+      "tr"
+    ]
   }
 ]

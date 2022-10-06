@@ -4,221 +4,273 @@
   },
   {
     "key": "log",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "Logarithmus"
       }
     },
-    "category": "Logarithm",
     "names": [
       "log"
     ]
   },
   {
     "key": "ln",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "natürlicher Logarithmus"
       },
-     "clearspeak": {
-       "default": "l n",
-       "Log_LnAsNaturalLog": "natürlicher Logarithmus"
-     }
+      "clearspeak": {
+        "default": "l n",
+        "Log_LnAsNaturalLog": "natürlicher Logarithmus"
+      }
     },
-    "category": "Logarithm",
     "names": [
       "ln"
     ]
   },
-  {"category": "Logarithm",
-   "mappings": {
-     "default": {
-       "default": "Logarithmus zur Basis 10"
-     }
-   },
-   "key": "lg",
-   "names": ["lg"]},
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "Exponent"
-     },
-     "mathspeak": {
-       "default": "exp"
-     },
-     "clearspeak": {
-       "default": "exp"
-     }
-   },
-   "key": "exp",
-   "names": ["exp", "expt"]
+  {
+    "key": "lg",
+    "category": "Logarithm",
+    "mappings": {
+      "default": {
+        "default": "Logarithmus zur Basis 10"
+      }
+    },
+    "names": [
+      "lg"
+    ]
   },
-
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "größter gemeinsamer Teiler"
-     },
-     "mathspeak": {
-       "default": "ggt"
-     },
-     "clearspeak": {
-       "default": "ggt"
-     }
-   },
-   "key": "gcd",
-   "names": ["gcd", "ggt", "ggT"]
+  {
+    "key": "exp",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "Exponent"
+      },
+      "mathspeak": {
+        "default": "exp"
+      },
+      "clearspeak": {
+        "default": "exp"
+      }
+    },
+    "names": [
+      "exp",
+      "expt"
+    ]
   },
-  {"category": "Elementary",
-   "mappings": {
-     "default": {
-       "default": "kleinstes gemeinsames Vielfaches"
-     },
-     "mathspeak": {
-       "default": "kgv"
-     },
-     "clearspeak": {
-       "default": "kgv"
-     }
-   },
-   "key": "lcm",
-   "names": ["lcm", "kgv", "kgV"]
+  {
+    "key": "gcd",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "größter gemeinsamer Teiler"
+      },
+      "mathspeak": {
+        "default": "ggt"
+      },
+      "clearspeak": {
+        "default": "ggt"
+      }
+    },
+    "names": [
+      "gcd",
+      "ggt",
+      "ggT"
+    ]
   },
-  {"category": "Complex",
-   "mappings": {
-     "default": {
-       "default": "Argument"
-     }
-   },
-   "key": "arg",
-   "names": ["arg"]
+  {
+    "key": "lcm",
+    "category": "Elementary",
+    "mappings": {
+      "default": {
+        "default": "kleinstes gemeinsames Vielfaches"
+      },
+      "mathspeak": {
+        "default": "kgv"
+      },
+      "clearspeak": {
+        "default": "kgv"
+      }
+    },
+    "names": [
+      "lcm",
+      "kgv",
+      "kgV"
+    ]
+  },
+  {
+    "key": "arg",
+    "category": "Complex",
+    "mappings": {
+      "default": {
+        "default": "Argument"
+      }
+    },
+    "names": [
+      "arg"
+    ]
   },
   {
     "key": "im",
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "der Imaginärteil der komplexen Zahl"
       }
     },
-    "category": "Complex",
     "names": [
       "im"
     ]
   },
   {
     "key": "re",
+    "category": "Complex",
     "mappings": {
       "default": {
         "default": "der Realteil der komplexen Zahl"
       }
     },
-    "category": "Complex",
     "names": [
       "re"
     ]
   },
   {
     "key": "mod",
+    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "modulo"
       }
     },
-    "category": "Elementary",
     "names": [
       "mod"
     ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Infimum"
-     }
-   },
-   "key": "inf",
-   "names": ["inf"]
+  {
+    "key": "inf",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Infimum"
+      }
+    },
+    "names": [
+      "inf"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Limes"
-     }
-   },
-   "key": "lim",
-   "names": ["lim"]
+  {
+    "key": "lim",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Limes"
+      }
+    },
+    "names": [
+      "lim"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Limes inferior"
-     }
-   },
-   "key": "liminf",
-   "names": ["lim inf", "liminf"]
+  {
+    "key": "liminf",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Limes inferior"
+      }
+    },
+    "names": [
+      "lim inf",
+      "liminf"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Limes superior"
-     }
-   },
-   "key": "limsup",
-   "names": ["lim sup", "limsup"]
+  {
+    "key": "limsup",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Limes superior"
+      }
+    },
+    "names": [
+      "lim sup",
+      "limsup"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Maximum"
-     }
-   },
-   "key": "max",
-   "names": ["max"]
+  {
+    "key": "max",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Maximum"
+      }
+    },
+    "names": [
+      "max"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Minimum"
-     }
-   },
-   "key": "min",
-   "names": ["min"]
+  {
+    "key": "min",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Minimum"
+      }
+    },
+    "names": [
+      "min"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Supremum"
-     }
-   },
-   "key": "sup",
-   "names": ["sup"]
+  {
+    "key": "sup",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Supremum"
+      }
+    },
+    "names": [
+      "sup"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "Colimes"
-     }
-   },
-   "key": "injlim",
-   "names": ["injlim", "inj lim"]
+  {
+    "key": "injlim",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "Colimes"
+      }
+    },
+    "names": [
+      "injlim",
+      "inj lim"
+    ]
   },
-  {"category": "Limits",
-   "mappings": {
-     "default": {
-       "default": "projektiver Limes"
-     }
-   },
-   "key": "projlim",
-   "names": ["projlim", "proj lim"]
+  {
+    "key": "projlim",
+    "category": "Limits",
+    "mappings": {
+      "default": {
+        "default": "projektiver Limes"
+      }
+    },
+    "names": [
+      "projlim",
+      "proj lim"
+    ]
   },
-
-
-  {"category": "Probability",
-   "mappings": {
-     "default": {
-       "default": "Wahrscheinlichkeit"
-     }
-   },
-   "key": "Pr",
-   "names": ["Pr"]
+  {
+    "key": "Pr",
+    "category": "Probability",
+    "mappings": {
+      "default": {
+        "default": "Wahrscheinlichkeit"
+      }
+    },
+    "names": [
+      "Pr"
+    ]
   }
 ]

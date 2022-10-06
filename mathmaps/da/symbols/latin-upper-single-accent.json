@@ -4,322 +4,322 @@
   },
   {
     "key": "00C0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med bolle ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C7",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort C med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort stort n med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort stort o med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort stort u hat"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0100",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med macron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0102",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med brevis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0104",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0106",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort C med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0108",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort C med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort C med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort C med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0112",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med macron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0114",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med brevis"
@@ -328,97 +328,97 @@
   },
   {
     "key": "0116",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0118",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med brevis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0120",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0122",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0124",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0128",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "012A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med macron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "012C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med brevis"
@@ -427,115 +427,115 @@
   },
   {
     "key": "012E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0130",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0134",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort J med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0136",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort K med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0139",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013F",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med prik i midten"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0143",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0145",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0147",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "014C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med macron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "014E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med brevis"
@@ -544,205 +544,205 @@
   },
   {
     "key": "0150",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med dobbelt accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0154",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0156",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0158",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0160",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0162",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0164",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0168",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med macron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med brevis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med bolle ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0170",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med dobbelt accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0172",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med ogonek"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0174",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort W med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0176",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0178",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0179",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Z med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Z med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Z med háček"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "01CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med háček"
@@ -750,8 +750,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med háček"
@@ -759,8 +759,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med háček"
@@ -768,8 +768,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med háček"
@@ -777,8 +777,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med háček"
@@ -786,8 +786,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort K med háček"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med ogonek"
@@ -804,8 +804,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med accent aigu"
@@ -813,8 +813,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med accent grave"
@@ -822,8 +822,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0200",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med dobbelt accent grave"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0202",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med omvendt brevis"
@@ -840,8 +840,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0204",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med dobbelt accent grave"
@@ -849,8 +849,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0206",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med omvendt brevis"
@@ -858,8 +858,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0208",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med dobbelt accent grave"
@@ -867,8 +867,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med omvendt brevis"
@@ -876,8 +876,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med dobbelt accent grave"
@@ -885,8 +885,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med omvendt brevis"
@@ -894,8 +894,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0210",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med dobbelt accent grave"
@@ -903,8 +903,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0212",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med omvendt brevis"
@@ -912,8 +912,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0214",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med dobbelt accent grave"
@@ -921,8 +921,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0216",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med omvendt brevis"
@@ -930,8 +930,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0218",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med komma nedenunder"
@@ -939,8 +939,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med komma nedenunder"
@@ -948,8 +948,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med háček"
@@ -957,8 +957,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0226",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med prik ovenover"
@@ -966,8 +966,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0228",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med cedille"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med prik ovenover"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0232",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med macron"
@@ -994,668 +994,668 @@
   },
   {
     "key": "1E00",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med bolle nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E02",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort B med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E04",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort B med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E06",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort B med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E10",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E12",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med cirkumfleks nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E18",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med cirkumfleks nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med tilde nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort F med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E20",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort G med macron"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E22",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E24",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E26",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E28",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort H med brevis nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med tilde nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E30",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort K med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E32",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort K med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E34",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort K med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E36",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort L med cirkumfleks nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort M med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E40",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort M med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E42",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort M med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E44",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E46",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E48",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E4A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort N med cirkumfleks nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E54",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort P med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E56",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort P med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E58",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort R med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E60",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E62",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort S med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E70",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort T med cirkumfleks nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E72",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med to prikker nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E74",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med tilde nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E76",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med cirkumfleks nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort V med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort V med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E80",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort W med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E82",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort W med accent aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E84",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort W med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E86",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort W med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E88",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort W med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort X med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort X med tréma"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med prik ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E90",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Z med cirkumfleks"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E92",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Z med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E94",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Z med streg nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort A med krog ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med krog ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort E med tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med krog ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort I med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort O med krog ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort U med krog ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med accent grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med prik nedenunder"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med krog ovenover"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort Y med tilde"
       }
-    },
-    "category": "Lu"
+    }
   }
 ]

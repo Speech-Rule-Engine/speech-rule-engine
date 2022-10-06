@@ -5,140 +5,140 @@
   {
     "key": "ft",
     "category": "length",
-    "names": [
-      "ft",
-      "ft."
-    ],
     "mappings": {
       "default": {
         "default": "peu",
         "plural": "peus"
       }
-    }
+    },
+    "names": [
+      "ft",
+      "ft."
+    ]
   },
   {
     "key": "in",
     "category": "length",
-    "names": [
-      "in",
-      "in."
-    ],
     "mappings": {
       "default": {
         "default": "polzada",
         "plural": "polzades"
       }
-    }
+    },
+    "names": [
+      "in",
+      "in."
+    ]
   },
   {
     "key": "mi",
     "category": "length",
-    "names": [
-      "mi",
-      "mi."
-    ],
     "mappings": {
       "default": {
         "default": "milla",
         "plural": "milles"
       }
-    }
+    },
+    "names": [
+      "mi",
+      "mi."
+    ]
   },
   {
     "key": "yd",
     "category": "length",
-    "names": [
-      "yd",
-      "yd."
-    ],
     "mappings": {
       "default": {
         "default": "iarda",
         "plural": "iardes"
       }
-    }
+    },
+    "names": [
+      "yd",
+      "yd."
+    ]
   },
   {
     "key": "link",
     "category": "length",
-    "names": [
-      "li",
-      "li."
-    ],
     "mappings": {
       "default": {
         "default": "link",
         "plural": "links"
       }
-    }
+    },
+    "names": [
+      "li",
+      "li."
+    ]
   },
   {
     "key": "rod",
     "category": "length",
-    "names": [
-      "rd",
-      "rd."
-    ],
     "mappings": {
       "default": {
         "default": "rod",
         "plural": "rods"
       }
-    }
+    },
+    "names": [
+      "rd",
+      "rd."
+    ]
   },
   {
     "key": "chain",
     "category": "length",
-    "names": [
-      "ch",
-      "ch."
-    ],
     "mappings": {
       "default": {
         "default": "cadena",
         "plural": "cadenes"
       }
-    }
+    },
+    "names": [
+      "ch",
+      "ch."
+    ]
   },
   {
     "key": "furlong",
     "category": "length",
-    "names": [
-      "fur",
-      "fur."
-    ],
     "mappings": {
       "default": {
         "default": "furlong",
         "plural": "furlongs"
       }
-    }
+    },
+    "names": [
+      "fur",
+      "fur."
+    ]
   },
   {
     "key": "n.m.",
     "category": "length",
-    "names": [
-      "n.m."
-    ],
     "mappings": {
       "default": {
         "default": "milla nàutica",
         "plural": "milles nàutiques"
       }
-    }
+    },
+    "names": [
+      "n.m."
+    ]
   },
   {
     "key": "m",
     "category": "length",
-    "names": [
-      "m"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "metre",
         "plural": "metres"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "m"
+    ]
   }
 ]

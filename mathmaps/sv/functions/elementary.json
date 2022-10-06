@@ -4,18 +4,19 @@
   },
   {
     "key": "log",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmen"
       }
     },
-    "category": "Logarithm",
     "names": [
       "log"
     ]
   },
   {
     "key": "ln",
+    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "naturliga logaritmen"
@@ -25,7 +26,6 @@
         "Log_LnAsNaturalLog": "naturliga logaritmen"
       }
     },
-    "category": "Logarithm",
     "names": [
       "ln"
     ]
@@ -33,108 +33,108 @@
   {
     "key": "lg",
     "category": "Logarithm",
-    "names": [
-      "lg"
-    ],
     "mappings": {
       "default": {
         "default": "tiologaritmen"
       }
-    }
+    },
+    "names": [
+      "lg"
+    ]
   },
   {
     "key": "exp",
     "category": "Elementary",
-    "names": [
-      "exp",
-      "expt"
-    ],
     "mappings": {
       "default": {
         "default": "exponentiell"
       }
-    }
+    },
+    "names": [
+      "exp",
+      "expt"
+    ]
   },
   {
     "key": "gcd",
     "category": "Elementary",
-    "names": [
-      "gcd"
-    ],
     "mappings": {
       "default": {
         "default": "största gemensamma nämnare"
       }
-    }
+    },
+    "names": [
+      "gcd"
+    ]
   },
   {
     "key": "lcm",
     "category": "Elementary",
-    "names": [
-      "lcm"
-    ],
     "mappings": {
       "default": {
         "default": "minsta gemensamma multipel"
       }
-    }
+    },
+    "names": [
+      "lcm"
+    ]
   },
   {
     "key": "arg",
     "category": "Complex",
-    "names": [
-      "arg"
-    ],
     "mappings": {
       "default": {
         "default": "argument"
       }
-    }
+    },
+    "names": [
+      "arg"
+    ]
   },
   {
     "key": "im",
     "category": "Complex",
-    "names": [
-      "im"
-    ],
     "mappings": {
       "default": {
         "default": "imaginär del"
       }
-    }
+    },
+    "names": [
+      "im"
+    ]
   },
   {
     "key": "re",
     "category": "Complex",
-    "names": [
-      "re"
-    ],
     "mappings": {
       "default": {
         "default": "reell del"
       }
-    }
+    },
+    "names": [
+      "re"
+    ]
   },
   {
     "key": "inf",
     "category": "Limits",
-    "names": [
-      "inf"
-    ],
     "mappings": {
       "default": {
         "default": "infimum"
       }
-    }
+    },
+    "names": [
+      "inf"
+    ]
   },
   {
     "key": "lim",
+    "category": "Limits",
     "mappings": {
       "default": {
         "default": "gränsvärde"
       }
     },
-    "category": "Limits",
     "names": [
       "lim"
     ]
@@ -142,113 +142,113 @@
   {
     "key": "liminf",
     "category": "Limits",
-    "names": [
-      "lim inf",
-      "liminf"
-    ],
     "mappings": {
       "default": {
         "default": "nedre gränsvärde"
       }
-    }
+    },
+    "names": [
+      "lim inf",
+      "liminf"
+    ]
   },
   {
     "key": "limsup",
     "category": "Limits",
-    "names": [
-      "lim sup",
-      "limsup"
-    ],
     "mappings": {
       "default": {
         "default": "övre gränsvärde"
       }
-    }
+    },
+    "names": [
+      "lim sup",
+      "limsup"
+    ]
   },
   {
     "key": "max",
     "category": "Limits",
-    "names": [
-      "max"
-    ],
     "mappings": {
       "default": {
         "default": "maximum"
       }
-    }
+    },
+    "names": [
+      "max"
+    ]
   },
   {
     "key": "min",
     "category": "Limits",
-    "names": [
-      "min"
-    ],
     "mappings": {
       "default": {
         "default": "minimum"
       }
-    }
+    },
+    "names": [
+      "min"
+    ]
   },
   {
     "key": "sup",
     "category": "Limits",
-    "names": [
-      "sup"
-    ],
     "mappings": {
       "default": {
         "default": "supremum"
       }
-    }
+    },
+    "names": [
+      "sup"
+    ]
   },
   {
     "key": "injlim",
     "category": "Limits",
-    "names": [
-      "injlim",
-      "inj lim"
-    ],
     "mappings": {
       "default": {
         "default": "kolimes"
       }
-    }
+    },
+    "names": [
+      "injlim",
+      "inj lim"
+    ]
   },
   {
     "key": "projlim",
     "category": "Limits",
-    "names": [
-      "projlim",
-      "proj lim"
-    ],
     "mappings": {
       "default": {
         "default": "inverterat gränsvärde"
       }
-    }
+    },
+    "names": [
+      "projlim",
+      "proj lim"
+    ]
   },
   {
     "key": "mod",
     "category": "Elementary",
-    "names": [
-      "mod"
-    ],
     "mappings": {
       "default": {
         "default": "modulo"
       }
-    }
+    },
+    "names": [
+      "mod"
+    ]
   },
   {
     "key": "Pr",
     "category": "Probability",
-    "names": [
-      "Pr"
-    ],
     "mappings": {
       "default": {
         "default": "sannolikhet"
       }
-    }
+    },
+    "names": [
+      "Pr"
+    ]
   }
 ]

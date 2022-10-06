@@ -4,115 +4,115 @@
   },
   {
     "key": "21BC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre harpun op"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre harpun ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "op harpun højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "op harpun venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "højre harpun op"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "højre harpun ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ned harpun højre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ned harpun venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre harpun over højre harpun"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "højre harpun over venstre harpun"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "294A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dobbelt harpun med spids op ti lvenstre og spids ned til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dobbelt harpun med spids ned til venstre og spids op til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "294C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "opadvendt spids højre- og nedadvendt spids venstrevendt harpun"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "opadvendt spids venstre- og nedadvendt spids højrevendt harpun"
@@ -130,344 +130,344 @@
   },
   {
     "key": "294E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dobbelt harpun med spids up til venstre og spids op til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "op ned harpun med spids mod højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2950",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dobbelt harpun med spids ned til venstre og spids ned til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2951",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op med spids mod venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2952",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun mod bar spids op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2953",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun mod bar spids op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2954",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op mod bar med spids til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2955",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun ned mod bar med spids til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2956",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun mod bar spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2957",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun mod bar spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2958",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op mod bar med spids til venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2959",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun ned mod bar med spids til venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun fra bar med spids op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun fra bar med spids op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op fra bar med spids mod højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun ned fra bar med spids mod højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun fra bar med spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun fra bar med spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2960",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op fra bar med spids mod venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2961",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun ned fra bar med spids mod venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2962",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun med spids op over venstre harpun med spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2963",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op med spids til venstre ved siden af harpun op med spids til højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2964",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun med spids op over højre harpun med spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2965",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op med spids mod venstre ved siden af harpun ned med spids mod højre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2966",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun med spids op over højre harpun med spids op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2967",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun med spids ned over højre harpun med spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2968",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre haarpun med spids op over venstre harpun med spids op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2969",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun med spids ned over venstre harpun med spids ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun over bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre harpun under bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun over bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre harpun under bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun op harpun ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpun ned harpun op"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre fiskekrog"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "højre fiskekrog"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lodret linie med dobbelt krog"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fiskekrog ned"
       }
-    },
-    "category": "Sm"
+    }
   }
 ]

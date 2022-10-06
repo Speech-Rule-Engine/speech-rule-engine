@@ -4,44 +4,44 @@
   },
   {
     "key": "F",
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ],
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "grado Fahrenheit",
         "plural": "grados Fahrenheit"
       }
     },
-    "category": "temperature"
+    "names": [
+      "F",
+      "F.",
+      "°F"
+    ]
   },
   {
     "key": "C",
-    "names": [
-      "C",
-      "°C"
-    ],
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "centígrado"
       }
     },
-    "category": "temperature"
+    "names": [
+      "C",
+      "°C"
+    ]
   },
   {
     "key": "K",
-    "names": [
-      "K",
-      "°K"
-    ],
+    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Kelvin",
         "plural": "Kelvin"
       }
     },
-    "category": "temperature"
+    "names": [
+      "K",
+      "°K"
+    ]
   }
 ]

@@ -3,19 +3,20 @@
     "locale": "fr"
   },
   {
+    "key": "kt",
     "category": "speed",
     "mappings": {
       "default": {
         "default": "nœud marin"
       }
     },
-    "key": "kt",
     "names": [
       "kt",
       "kt."
     ]
   },
   {
+    "key": "rpm",
     "category": "speed",
     "mappings": {
       "default": {
@@ -23,12 +24,13 @@
         "default": "tour par minute"
       }
     },
-    "key": "rpm",
     "names": [
-      "rpm", "tpm"
+      "rpm",
+      "tpm"
     ]
   },
   {
+    "key": "kmh",
     "category": "speed",
     "mappings": {
       "default": {
@@ -36,7 +38,6 @@
         "default": "kilomètre par heure"
       }
     },
-    "key": "kmh",
     "names": [
       "kmh"
     ]

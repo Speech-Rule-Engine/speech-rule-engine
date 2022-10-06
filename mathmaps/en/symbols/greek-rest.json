@@ -1,7 +1,10 @@
-[{"locale": "en"},
+[
   {
-    "category": "Lu",
+    "locale": "en"
+  },
+  {
     "key": "0394",
+    "category": "Lu",
     "mappings": {
       "clearspeak": {
         "default": "triangle",

@@ -3,8 +3,8 @@
     "locale": "it"
   },
   {
-    "category": "Ll",
     "key": "210F",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "planck Constant Over Two Pi"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2114",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "l B Bar Symbol"
@@ -22,16 +22,16 @@
   },
   {
     "key": "2116",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "simbolo di numero"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2117",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "copyright della registrazione del suono"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "So",
     "key": "211E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "presa di prescrizione"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "So",
     "key": "211F",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "risposta"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2120",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di servizio"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "So",
     "key": "2121",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "segno del telefono"
@@ -76,16 +76,16 @@
   },
   {
     "key": "2122",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di treid mark"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2123",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "versicle"
@@ -94,34 +94,34 @@
   },
   {
     "key": "2125",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di oncia"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2126",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "simbolo dell'ohm"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2127",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "ohm invertito"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "Lu",
     "key": "212A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "segno Kelvin"
@@ -130,16 +130,16 @@
   },
   {
     "key": "212B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "angstrom"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "So",
     "key": "212E",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "simbolo stimato"
@@ -148,16 +148,16 @@
   },
   {
     "key": "2132",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "turned f maiuscola"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Ll",
     "key": "2139",
+    "category": "Ll",
     "mappings": {
       "default": {
         "default": "fonte di informazione"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "So",
     "key": "213A",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "capitale ruotato Q"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "So",
     "key": "213B",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di facsimile"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2141",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "trasformato Sans-Serif Capitale G"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2142",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "trasformato Sans-Serif Capital L"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2143",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "capitale Sans-Serif inversa L"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2144",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "svolta Sans-Serif Capital Y"

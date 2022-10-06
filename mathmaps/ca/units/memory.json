@@ -5,41 +5,41 @@
   {
     "key": "b",
     "category": "memory",
-    "names": [
-      "b"
-    ],
     "mappings": {
       "default": {
         "default": "bit",
         "plural": "bits"
       }
-    }
+    },
+    "names": [
+      "b"
+    ]
   },
   {
     "key": "B",
     "category": "memory",
-    "names": [
-      "B"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "byte",
         "plural": "bytes"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "B"
+    ]
   },
   {
     "key": "KB",
     "category": "memory",
-    "names": [
-      "KB"
-    ],
     "mappings": {
       "default": {
         "default": "kilobyte",
         "plural": "kilobytes"
       }
-    }
+    },
+    "names": [
+      "KB"
+    ]
   }
 ]

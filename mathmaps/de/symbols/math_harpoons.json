@@ -3,8 +3,8 @@
     "locale": "de"
   },
   {
-    "category": "So",
     "key": "21BC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb nach oben"
@@ -12,8 +12,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21BD",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach links mit Barb nach unten"
@@ -21,8 +21,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21BE",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb nach rechts"
@@ -30,8 +30,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21BF",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb nach links"
@@ -39,8 +39,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21C0",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb nach oben"
@@ -48,8 +48,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21C1",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb nach unten"
@@ -57,8 +57,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21C2",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb nach rechts"
@@ -66,8 +66,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21C3",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb nach links"
@@ -75,8 +75,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21CB",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach links über Harpune nach rechts"
@@ -84,8 +84,8 @@
     }
   },
   {
-    "category": "So",
     "key": "21CC",
+    "category": "So",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts über Harpune nach links"
@@ -93,8 +93,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Barb Up Rechte Barb Down Harpoon"
@@ -102,8 +102,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Barb Down Rechte Barb Up Harpoon"
@@ -111,8 +111,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Nach oben Barb Rechts Nach links Barb Harpoon"
@@ -120,8 +120,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Up Barb Left Abwärts Barb Right Harpoon"
@@ -129,8 +129,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Barb Up Rechte Barb Up Harpoon"
@@ -138,8 +138,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Barb nach rechts Barb nach rechts Harpoon"
@@ -147,8 +147,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2950",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Barb Down Rechte Barb Down Harpoon"
@@ -156,8 +156,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2951",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Up Barb Left Abwärts Barb Left Harpoon"
@@ -165,8 +165,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2952",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb Up To Bar"
@@ -174,8 +174,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2953",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb bis zur Bar"
@@ -183,8 +183,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2954",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Widerhaken rechts"
@@ -192,8 +192,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2955",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb Right to Bar"
@@ -201,8 +201,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2956",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Widerhaken nach unten"
@@ -210,8 +210,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2957",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Widerhaken nach unten"
@@ -219,8 +219,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2958",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb nach links"
@@ -228,8 +228,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2959",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb nach links"
@@ -237,8 +237,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb Up von der Bar"
@@ -246,8 +246,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb Up von der Bar"
@@ -255,8 +255,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb rechts von der Bar"
@@ -264,8 +264,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb rechts von der Bar"
@@ -273,8 +273,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb Down von der Bar"
@@ -282,8 +282,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "295F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Rechts Harpoon mit Barb Down von der Bar"
@@ -291,8 +291,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2960",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb links von der Bar"
@@ -300,8 +300,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2961",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb links von der Bar"
@@ -309,8 +309,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2962",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach links mit Barb nach oben Harpune nach links mit Barb nach unten"
@@ -318,8 +318,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2963",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb links neben Harpune nach oben mit Barb rechts"
@@ -327,8 +327,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2964",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb nach oben Harpoon nach rechts mit Barb nach unten"
@@ -336,8 +336,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2965",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb nach unten Harpune nach unten mit Barb nach rechts"
@@ -345,8 +345,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2966",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb Up Oben Rechts Harpoon mit Barb Up"
@@ -354,8 +354,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2967",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Widerhaken nach unten Rechts Harpune mit Widerhaken nach unten"
@@ -363,8 +363,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2968",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb nach oben Harpune nach links mit Barb nach oben"
@@ -372,8 +372,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2969",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb nach unten Harpune nach links mit Barb nach unten"
@@ -381,8 +381,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296A",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb Up Above Long Dash"
@@ -390,8 +390,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296B",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Harpune mit Barb Down Under Long Dash"
@@ -399,8 +399,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Barb Up Long Long Dash"
@@ -408,8 +408,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach rechts mit Widerhaken nach unten"
@@ -417,8 +417,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach oben mit Barb links neben Harpune nach unten mit Barb rechts"
@@ -426,8 +426,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "296F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Harpune nach unten mit Barb links neben Harpune nach oben mit Barb rechts"
@@ -435,8 +435,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297C",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "linker Fischschwanz"
@@ -444,8 +444,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297D",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rechter Fischschwanz"
@@ -453,8 +453,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297E",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Fischschwanz"
@@ -462,8 +462,8 @@
     }
   },
   {
-    "category": "Sm",
     "key": "297F",
+    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Fischschwanz"

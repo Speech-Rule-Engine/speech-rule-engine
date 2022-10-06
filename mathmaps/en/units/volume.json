@@ -1,143 +1,205 @@
 [
-  {"locale": "en"},
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic"
-     }
-   },
-   "key": "cu",
-   "names": ["cu", "cu."]
+  {
+    "locale": "en"
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic inch",
-       "plural": "cubic inches"
-     }
-   },
-   "key": "cu inch",
-   "names": ["cu in", "cu. in."]
+  {
+    "key": "cu",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "cubic",
+        "plural": "cubic"
+      }
+    },
+    "names": [
+      "cu",
+      "cu."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic foot",
-       "plural": "cubic feet"
-     }
-   },
-   "key": "cu ft",
-   "names": ["cu ft", "cu. ft."]
+  {
+    "key": "cu inch",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "cubic inch",
+        "plural": "cubic inches"
+      }
+    },
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic yard"
-     }
-   },
-   "key": "cu yd",
-   "names": ["cu yd", "cu. yd."]
+  {
+    "key": "cu ft",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "cubic foot",
+        "plural": "cubic feet"
+      }
+    },
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "barrel"
-     }
-   },
-   "key": "bbl",
-   "names": ["bbl.", "bbl"]
+  {
+    "key": "cu yd",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "cubic yard"
+      }
+    },
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "fluid ounce"
-     }
-   },
-   "key": "fl. oz.",
-   "names": ["fl. oz.", "fl oz"]
+  {
+    "key": "bbl",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "barrel"
+      }
+    },
+    "names": [
+      "bbl.",
+      "bbl"
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "gallon"
-     }
-   },
-   "key": "gal",
-   "names": ["gal", "gal."]
+  {
+    "key": "fl. oz.",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "fluid ounce"
+      }
+    },
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "pint"
-     }
-   },
-   "key": "pt",
-   "names": ["pt", "pt."]
+  {
+    "key": "gal",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "gallon"
+      }
+    },
+    "names": [
+      "gal",
+      "gal."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "quart"
-     }
-   },
-   "key": "qt",
-   "names": ["qt", "qt."]
+  {
+    "key": "pt",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "pint"
+      }
+    },
+    "names": [
+      "pt",
+      "pt."
+    ]
   },
- 
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "fluid dram"
-     }
-   },
-   "key": "fluid dram",
-   "names": ["fl dr", "fl. dr."]
+  {
+    "key": "qt",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "quart"
+      }
+    },
+    "names": [
+      "qt",
+      "qt."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "tablespoon"
-     }
-   },
-   "key": "tbsp",
-   "names": ["tbsp", "tbsp.", "Tbsp", "Tbsp."]
+  {
+    "key": "fluid dram",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "fluid dram"
+      }
+    },
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "teaspoon"
-     }
-   },
-   "key": "tsp",
-   "names": ["tsp", "tsp."]
+  {
+    "key": "tbsp",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "tablespoon"
+      }
+    },
+    "names": [
+      "tbsp",
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
+    ]
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cup"
-     }
-   },
-   "key": "cup",
-   "names": ["cp", "cp."]
+  {
+    "key": "tsp",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "teaspoon"
+      }
+    },
+    "names": [
+      "tsp",
+      "tsp."
+    ]
   },
-
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic centimeter"
-     }
-   },
-   "key": "cc",
-   "names": ["cc", "ccm"]
+  {
+    "key": "cup",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "cup"
+      }
+    },
+    "names": [
+      "cp",
+      "cp."
+    ]
   },
-  {"category": "volume",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "liter"
-     }
-   },
-   "key": "l",
-   "names": ["l"]
+  {
+    "key": "cc",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "cubic centimeter"
+      }
+    },
+    "names": [
+      "cc",
+      "ccm"
+    ]
+  },
+  {
+    "key": "l",
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "liter"
+      }
+    },
+    "si": true,
+    "names": [
+      "l"
+    ]
   }
 ]

@@ -5,131 +5,131 @@
   {
     "key": "ft",
     "category": "length",
-    "names": [
-      "ft",
-      "ft."
-    ],
     "mappings": {
       "default": {
         "default": "फुट",
         "plural": "फिट"
       }
-    }
+    },
+    "names": [
+      "ft",
+      "ft."
+    ]
   },
   {
     "key": "in",
     "category": "length",
-    "names": [
-      "in",
-      "in."
-    ],
     "mappings": {
       "default": {
         "default": "इंच"
       }
-    }
+    },
+    "names": [
+      "in",
+      "in."
+    ]
   },
   {
     "key": "mi",
     "category": "length",
-    "names": [
-      "mi",
-      "mi."
-    ],
     "mappings": {
       "default": {
         "default": "मील"
       }
-    }
+    },
+    "names": [
+      "mi",
+      "mi."
+    ]
   },
   {
     "key": "yd",
     "category": "length",
-    "names": [
-      "yd",
-      "yd."
-    ],
     "mappings": {
       "default": {
         "default": "गज"
       }
-    }
+    },
+    "names": [
+      "yd",
+      "yd."
+    ]
   },
   {
     "key": "link",
     "category": "length",
-    "names": [
-      "li",
-      "li."
-    ],
     "mappings": {
       "default": {
         "default": "लिंक"
       }
-    }
+    },
+    "names": [
+      "li",
+      "li."
+    ]
   },
   {
     "key": "rod",
     "category": "length",
-    "names": [
-      "rd",
-      "rd."
-    ],
     "mappings": {
       "default": {
         "default": "रॉड"
       }
-    }
+    },
+    "names": [
+      "rd",
+      "rd."
+    ]
   },
   {
     "key": "chain",
     "category": "length",
-    "names": [
-      "ch",
-      "ch."
-    ],
     "mappings": {
       "default": {
         "default": "चेन"
       }
-    }
+    },
+    "names": [
+      "ch",
+      "ch."
+    ]
   },
   {
     "key": "furlong",
     "category": "length",
-    "names": [
-      "fur",
-      "fur."
-    ],
     "mappings": {
       "default": {
         "default": "फ़र्लांग"
       }
-    }
+    },
+    "names": [
+      "fur",
+      "fur."
+    ]
   },
   {
     "key": "n.m.",
     "category": "length",
-    "names": [
-      "n.m."
-    ],
     "mappings": {
       "default": {
         "default": "समुद्री मील"
       }
-    }
+    },
+    "names": [
+      "n.m."
+    ]
   },
   {
     "key": "m",
     "category": "length",
-    "names": [
-      "m"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "मीटर"
       }
-    }
+    },
+    "si": true,
+    "names": [
+      "m"
+    ]
   }
 ]

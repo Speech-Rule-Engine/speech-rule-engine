@@ -5,147 +5,147 @@
   {
     "key": "cos",
     "category": "Trigonometric",
-    "names": [
-      "cos",
-      "cosine"
-    ],
     "mappings": {
       "default": {
         "default": "कोस"
       }
-    }
+    },
+    "names": [
+      "cos",
+      "cosine"
+    ]
   },
   {
     "key": "cot",
     "category": "Trigonometric",
-    "names": [
-      "cot"
-    ],
     "mappings": {
       "default": {
         "default": "कॉट"
       }
-    }
+    },
+    "names": [
+      "cot"
+    ]
   },
   {
     "key": "csc",
     "category": "Trigonometric",
-    "names": [
-      "csc"
-    ],
     "mappings": {
       "default": {
         "default": "कोसेक"
       }
-    }
+    },
+    "names": [
+      "csc"
+    ]
   },
   {
     "key": "sec",
     "category": "Trigonometric",
-    "names": [
-      "sec"
-    ],
     "mappings": {
       "default": {
         "default": "सेक"
       }
-    }
+    },
+    "names": [
+      "sec"
+    ]
   },
   {
     "key": "sin",
     "category": "Trigonometric",
-    "names": [
-      "sin",
-      "sine"
-    ],
     "mappings": {
       "default": {
         "default": "साइन"
       }
-    }
+    },
+    "names": [
+      "sin",
+      "sine"
+    ]
   },
   {
     "key": "tan",
     "category": "Trigonometric",
-    "names": [
-      "tan"
-    ],
     "mappings": {
       "default": {
         "default": "टेन"
       }
-    }
+    },
+    "names": [
+      "tan"
+    ]
   },
   {
     "key": "arccos",
     "category": "Cyclometric",
-    "names": [
-      "arccos"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम कोस"
       }
-    }
+    },
+    "names": [
+      "arccos"
+    ]
   },
   {
     "key": "arccot",
     "category": "Cyclometric",
-    "names": [
-      "arccot"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम कॉट"
       }
-    }
+    },
+    "names": [
+      "arccot"
+    ]
   },
   {
     "key": "arccsc",
     "category": "Cyclometric",
-    "names": [
-      "arccsc"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम कोसेक"
       }
-    }
+    },
+    "names": [
+      "arccsc"
+    ]
   },
   {
     "key": "arcsec",
     "category": "Cyclometric",
-    "names": [
-      "arcsec"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम सेक"
       }
-    }
+    },
+    "names": [
+      "arcsec"
+    ]
   },
   {
     "key": "arcsin",
     "category": "Cyclometric",
-    "names": [
-      "arcsin"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम साइन"
       }
-    }
+    },
+    "names": [
+      "arcsin"
+    ]
   },
   {
     "key": "arctan",
     "category": "Cyclometric",
-    "names": [
-      "arctan"
-    ],
     "mappings": {
       "default": {
         "default": "प्रतिलोम टेन"
       }
-    }
+    },
+    "names": [
+      "arctan"
+    ]
   }
 ]

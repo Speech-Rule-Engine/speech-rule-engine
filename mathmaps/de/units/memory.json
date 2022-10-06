@@ -4,40 +4,40 @@
   },
   {
     "key": "b",
+    "category": "memory",
     "mappings": {
       "default": {
         "plural": "Bits",
         "default": "Bit"
       }
     },
-    "category": "memory",
     "names": [
       "b"
     ]
   },
   {
     "key": "B",
-    "si": true,
+    "category": "memory",
     "mappings": {
       "default": {
         "plural": "Bytes",
         "default": "Byte"
       }
     },
-    "category": "memory",
+    "si": true,
     "names": [
       "B"
     ]
   },
   {
     "key": "KB",
+    "category": "memory",
     "mappings": {
       "default": {
         "plural": "Kilobytes",
         "default": "Kilobyte"
       }
     },
-    "category": "memory",
     "names": [
       "KB"
     ]

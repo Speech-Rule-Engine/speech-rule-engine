@@ -1,11 +1,21 @@
-[{"locale": "en"},
- {"category": "other",
-  "mappings": {
-    "default": {
-      "default": "dozen"
-    }
+[
+  {
+    "locale": "en"
   },
-  "key": "doz",
-  "names": ["doz", "doz.", "dz", "dz."]
- }
+  {
+    "key": "doz",
+    "category": "other",
+    "mappings": {
+      "default": {
+        "default": "dozen",
+        "plural": "dozen"
+      }
+    },
+    "names": [
+      "doz",
+      "doz.",
+      "dz",
+      "dz."
+    ]
+  }
 ]

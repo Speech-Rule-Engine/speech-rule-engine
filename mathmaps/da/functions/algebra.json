@@ -3,80 +3,77 @@
     "locale": "da"
   },
   {
-    "locale": "da"
-  },
-  {
     "key": "deg",
     "category": "Algebra",
-    "names": [
-      "deg"
-    ],
     "mappings": {
       "default": {
         "default": "grad"
       }
-    }
+    },
+    "names": [
+      "deg"
+    ]
   },
   {
     "key": "det",
     "category": "Algebra",
-    "names": [
-      "det"
-    ],
     "mappings": {
       "default": {
         "default": "determinant"
       }
-    }
+    },
+    "names": [
+      "det"
+    ]
   },
   {
     "key": "dim",
     "category": "Algebra",
-    "names": [
-      "dim"
-    ],
     "mappings": {
       "default": {
         "default": "dimension"
       }
-    }
+    },
+    "names": [
+      "dim"
+    ]
   },
   {
     "key": "hom",
     "category": "Algebra",
-    "names": [
-      "hom",
-      "Hom"
-    ],
     "mappings": {
       "default": {
         "default": "homomorfi"
       }
-    }
+    },
+    "names": [
+      "hom",
+      "Hom"
+    ]
   },
   {
     "key": "ker",
     "category": "Algebra",
-    "names": [
-      "ker"
-    ],
     "mappings": {
       "default": {
         "default": "kerne"
       }
-    }
+    },
+    "names": [
+      "ker"
+    ]
   },
   {
     "key": "Tr",
     "category": "Algebra",
-    "names": [
-      "Tr",
-      "tr"
-    ],
     "mappings": {
       "default": {
         "default": "spor"
       }
-    }
+    },
+    "names": [
+      "Tr",
+      "tr"
+    ]
   }
 ]

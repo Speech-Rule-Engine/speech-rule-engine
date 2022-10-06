@@ -4,322 +4,322 @@
   },
   {
     "key": "00C0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "angstrom"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C7",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "C cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D5",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D9",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DB",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0100",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A macron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0102",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A brève majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0104",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A ogonek majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0106",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "C accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0108",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "C accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "C point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "C caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0112",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E macron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0114",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E brève majuscule"
@@ -328,97 +328,97 @@
   },
   {
     "key": "0116",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0118",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E ogonek majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "011E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G brève majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0120",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0122",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0124",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0128",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "012A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I macron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "012C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I brève majuscule"
@@ -427,115 +427,115 @@
   },
   {
     "key": "012E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I ogonek majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0130",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0134",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "J accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0136",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "K cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0139",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013F",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L point médian majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0143",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0145",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0147",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "014C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O macron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "014E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O brève majuscule"
@@ -544,205 +544,205 @@
   },
   {
     "key": "0150",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O avec double accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0154",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0156",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0158",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0160",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0162",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0164",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0168",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U macron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U brève majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "016E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U rond en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0170",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U avec double accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0172",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U ogonek majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0174",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "W accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0176",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0178",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0179",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Z accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017B",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Z point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017D",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Z caron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "01CD",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A caron majuscule"
@@ -750,8 +750,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CF",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I caron majuscule"
@@ -759,8 +759,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D1",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O caron majuscule"
@@ -768,8 +768,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D3",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U caron majuscule"
@@ -777,8 +777,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G caron majuscule"
@@ -786,8 +786,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "K caron majuscule"
@@ -795,8 +795,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O ogonek majuscule"
@@ -804,8 +804,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G accent aigu majuscule"
@@ -813,8 +813,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N grave majuscule"
@@ -822,8 +822,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0200",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A double accent grave majuscule"
@@ -831,8 +831,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0202",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A brève renversée majuscule"
@@ -840,8 +840,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0204",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E double accent grave majuscule"
@@ -849,8 +849,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0206",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E brève renversée majuscule"
@@ -858,8 +858,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0208",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I double accent grave majuscule"
@@ -867,8 +867,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I brève renversée majuscule"
@@ -876,8 +876,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O double accent grave majuscule"
@@ -885,8 +885,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O brève renversée majuscule"
@@ -894,8 +894,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0210",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R double accent grave majuscule"
@@ -903,8 +903,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0212",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R brève renversée majuscule"
@@ -912,8 +912,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0214",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U double accent grave majuscule"
@@ -921,8 +921,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0216",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U brève renversée majuscule"
@@ -930,8 +930,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0218",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S virgule souscrite * majuscule"
@@ -939,8 +939,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T virgule souscrite * majuscule"
@@ -948,8 +948,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H caron majuscule"
@@ -957,8 +957,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0226",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A point en chef majuscule"
@@ -966,8 +966,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0228",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E cédille majuscule"
@@ -975,8 +975,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O point en chef majuscule"
@@ -984,8 +984,8 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0232",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y macron majuscule"
@@ -994,668 +994,668 @@
   },
   {
     "key": "1E00",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A à rond souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E02",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "B point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E04",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "B point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E06",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "B ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E0E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E10",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E12",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D accent circonflexe souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E18",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E accent circonflexe souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E tilde souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "F point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E20",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "G macron majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E22",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E24",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E26",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E28",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H cédille majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "H brève souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I tilde souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E30",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "K accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E32",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "K point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E34",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "K ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E36",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "L accent circonflexe souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E3E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "M accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E40",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "M point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E42",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "M point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E44",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E46",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E48",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E4A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "N accent circonflexe souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E54",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "P accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E56",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "P point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E58",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "R ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E60",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E62",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "S point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E6E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E70",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "T accent circonflexe souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E72",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U tréma souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E74",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U tilde souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E76",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U accent circonflexe souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "V tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "V point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E80",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "W accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E82",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "W accent aigu majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E84",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "W tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E86",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "W point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E88",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "W point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8A",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "X point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8C",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "X tréma majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E8E",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y point en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E90",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Z accent circonflexe majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E92",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Z point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E94",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Z ligne souscrite majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA0",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "A crochet en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E crochet en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "E tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I crochet en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECA",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "I point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECC",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ECE",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "O crochet en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "U crochet en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF2",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y accent grave majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF4",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y point souscrit majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF6",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y crochet en chef majuscule"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF8",
+    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Y tilde majuscule"
       }
-    },
-    "category": "Lu"
+    }
   }
 ]

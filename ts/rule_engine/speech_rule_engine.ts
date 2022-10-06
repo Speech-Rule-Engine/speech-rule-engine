@@ -190,14 +190,15 @@ export class SpeechRuleEngine {
    *
    * @param set The definition of a speech rule set.
    */
-  public addStore(set: RulesJson) {
+  public static addStore(set: RulesJson) {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
     const store = storeFactory(set);
     if (store.kind !== 'abstract') {
-      store.getSpeechRules().forEach((x) => this.trie.addRule(x));
+      store.getSpeechRules().forEach(
+        (x) => SpeechRuleEngine.getInstance().trie.addRule(x));
     }
-    this.addEvaluator(store);
+    SpeechRuleEngine.getInstance().addEvaluator(store);
   }
 
   /**
