@@ -131,6 +131,22 @@ export const addSymbolRules =
   (json: UnicodeJson[]) => json.forEach(addSymbolRule);
 
 /**
+ * Makes a speech rule for Unicode characters from its JSON representation.
+ *
+ * @param json JSON object of the speech rules.
+ */
+function addCharacterRule(json: UnicodeJson) {
+  if (changeLocale(json)) {
+    return;
+  }
+  for (let [key, value] of Object.entries(json)) {
+    defineRule(key, 'default', 'default', 'cat', key, value);
+  }
+}
+export const addCharacterRules =
+  (json: UnicodeJson[]) => json.forEach(addCharacterRule);
+
+/**
  * Makes a speech rule for Function names from its JSON representation.
  *
  * @param json JSON object of the speech rules.
@@ -315,7 +331,7 @@ export function changeLocale(json: UnicodeJson): boolean {
  * @param key The key for the store.
  * @returns The rule store.
  */
-function getSubStore_(key: string): MathSimpleStore {
+export function getSubStore_(key: string): MathSimpleStore {
   let store = subStores_[key];
   if (store) {
     Debugger.getInstance().output('Store exists! ' + key);
@@ -336,4 +352,9 @@ function setupStore_(store: MathSimpleStore, opt_cat?: string) {
   if (opt_cat) {
     store.category = opt_cat;
   }
+}
+
+export function reset() {
+  locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+  modality = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
 }

@@ -1,0 +1,21 @@
+{
+  "locale": "euro",
+  "modality": "braille",
+  "domain": "default",
+  "rules": [
+    [
+      "Rule",
+      "stree",
+      "default",
+      "[n] ./*[1]",
+      "self::stree"
+    ],
+    [
+      "Rule",
+      "latex",
+      "default",
+      "[n] @latex",
+      "self::*[@latex]"
+    ]
+  ]
+}

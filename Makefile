@@ -14,7 +14,7 @@ TARGET = $(LIB_DIR)/sre.js
 
 JSON_SRC = $(abspath ./mathmaps)
 JSON_DST = $(LIB_DIR)/mathmaps
-MAPS = messages si functions symbols units rules
+MAPS = messages si characters functions symbols units rules
 IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.json
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .json,$(LOCALES)))
