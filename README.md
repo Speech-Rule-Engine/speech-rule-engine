@@ -71,13 +71,13 @@ Current API functions are divided into three categories.
 
 #### Methods that take a string containing a MathML expression:
 
-| Method | Return Value |
-| ---- | ---- |
-| `toSpeech(mathml)` | Speech string for the MathML. |
-| `toSemantic(mathml)` | XML representation of the semantic tree for the MathML. |
-| `toJson(mathml)` | The semantic tree in JSON. |
+| Method                  | Return Value                                                        |
+|-------------------------|---------------------------------------------------------------------|
+| `toSpeech(mathml)`      | Speech string for the MathML.                                       |
+| `toSemantic(mathml)`    | XML representation of the semantic tree for the MathML.             |
+| `toJson(mathml)`        | The semantic tree in JSON.                                          |
 | `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
-| `toEnriched(mathml)` | The semantically enriched MathML expression. |
+| `toEnriched(mathml)`    | The semantically enriched MathML expression.                        |
 
 **Note that in asynchronous operation mode for these methods to work correctly,
 it is necessary to ensure that the Engine is ready for processing. In other
@@ -119,13 +119,18 @@ numbers, e.g., `"1/2"`.
 
 #### Methods for querying and controlling the engine behaviour:
 
-| Method | Return Value |
-| ---- | ---- |
-| `version` | Returns SRE's version number. |
-| `engineReady()` | Returns a promise that resolves as soon as the engine is ready for processing (i.e., all necessary rule files have been loaded and the engine is done updating). **This is important in asynchronous settings.** |
-| `setupEngine(options)` | Takes an [options feature vector](#options) to parameterise the Speech Rule Engine. Returns a promise that resolves as soon as the engine is ready for processing. |
-| `engineSetup()` | Returns the current setup of the engine as an  [options feature vector](#options). |
-| `localeLoader()` | SRE's standard method for loading locales, depending on SRE's mode. For more detail see [discussion on locale loading](#locale-loading). |
+| Method                 | Return Value                                                                        |
+|------------------------|-------------------------------------------------------------------------------------|
+| `version`              | Returns SRE's version number.                                                       |
+| `engineReady()`        | Returns a promise that resolves as soon as the engine is ready for processing.      |
+|                        | I.e., all necessary rule files have been loaded and the engine is done updating.    |
+|                        | **This is important in asynchronous settings.**                                     |
+| `setupEngine(options)` | Takes an [options feature vector](#options) to parameterise the Speech Rule Engine. |
+|                        | Returns a promise that resolves as soon as the engine is ready for processing.      |
+| `engineSetup()`        | Returns the current setup of the engine as an [options feature vector](#options).   |
+| `localeLoader()`       | SRE's standard method for loading locales, depending on SRE's mode.                 |
+|                        | For more detail see [discussion on locale loading](#locale-loading).                |
+|                        |                                                                                     |
 
 #### Methods for navigating math expressions:
 
@@ -176,15 +181,15 @@ the `setupEngine` method or the `SREfeature` variable.
 
 #### Options to control speech output
 
-| Option | Value |
-| ---- | ---- |
-| *domain* | Domain or subject area of speech rules (e.g., mathspeak, clearspeak).|
-| *style* | Style or preference setting of speech rules (e.g., brief).|
-| | In case of clearspeak, multiple preferences can be chosen using `:` as separator.|
-| *locale* | Language locale in 639-1. |
-| *subiso* | More fine grained specification of locale. E.g., for French fr, be, or ch |
-| *markup*| Set output markup for speech: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss```, ```ssml_step``` |
-| *modality* | Set the modality SRE returns. E.g., ```speech```, ```braille```, ```prefix```, ```summary``` |
+| Option     | Value                                                                                                          |
+|------------|----------------------------------------------------------------------------------------------------------------|
+| *domain*   | Domain or subject area of speech rules (e.g., mathspeak, clearspeak).                                          |
+| *style*    | Style or preference setting of speech rules (e.g., brief).                                                     |
+|            | In case of clearspeak, multiple preferences can be chosen using `:` as separator.                              |
+| *locale*   | Language locale in 639-1.                                                                                      |
+| *subiso*   | More fine grained specification of locale. E.g., for French fr, be, or ch                                      |
+| *markup*   | Set output markup for speech: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss```, ```ssml_step``` |
+| *modality* | Set the modality SRE returns. E.g., ```speech```, ```braille```, ```prefix```, ```summary```                   |
 
 Observe that not every _domain_ (i.e., speech rule set) implements every
 style. Similarly, not every speech rule set is implemneted in every locale. For
@@ -198,11 +203,14 @@ uses into a modified representation of the original MathML. To get an idea of
 the semantic tree, take a look at [its
 visualisation](https://zorkow.github.io/semantic-tree-visualiser/visualise.html).
 
-| Option | Value |
-| ---- | ---- |
-| *speech* | Depth to which generated speech is stored in attributes during semantic enrichment. Values are ```none```, ```shallow```, ```deep```. Default is ```none```. |
-| *pprint* | Boolean flag to switch on pretty printing of output. This works on any XML style output. Default is ```true```. |
-| *structure* | If set, includes a `structure` attribute in the enriched MathML that summarises the structure of the semantic tree in form of an sexpression. |
+| Option      | Value                                                                                                           |
+|-------------|-----------------------------------------------------------------------------------------------------------------|
+| *speech*    | Depth to which generated speech is stored in attributes during semantic enrichment.                             |
+|             | Values are ```none```, ```shallow```, ```deep```. Default is ```none```.                                        |
+| *pprint*    | Boolean flag to switch on pretty printing of output. This works on any XML style output. Default is ```true```. |
+| *structure* | Boolean flag to include attributes for aria tree view structure in enriched MathML.                             |
+|             | Also includes a `structure` attribute that summarises the semantic tree structure in form of an sexpression.    |
+|             |                                                                                                                 |
 
 #### Options for internal control of the engine
 
@@ -210,19 +218,21 @@ These other options give more fine grained control of SRE. They can be useful
 during development and when integrating SRE into a larger project. They are
 given in decreasing order of interestingness.
 
-| Option | Value |
-| ---- | ---- |
-| *json* | URL from where to pull the locale files, i.e., json files containing speech rule definitions. |
-| *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or former versions of Edge. |
-| *rate* | Base value for speech rate in ```ssml_step``` markup |
-| *strict* | Boolean flag indicating if only a directly matching rule should be used. I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. Default is ```false```. |
-| *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
-| | By default SRE in node is in `async`, in browser in `http`, and on CLI in `sync` mode. |
-| *custom* | Provide a custom method for locale loading. See below for more informaton. |
-| *defaultLocale* | Allows customisation for default locale. Default is ```en``` for English. |
-| | This option is not available in the CLI. See below for more informaton.  |
-| *delay* | Delays loading of base locales and automatic setup of engine. Default is ```false```. | 
-| | Option should be used only at startup. See below for more information. |
+| Option          | Value                                                                                                |
+|-----------------|------------------------------------------------------------------------------------------------------|
+| *json*          | URL from where to pull the locale files, i.e., json files containing speech rule definitions.        |
+| *xpath*         | URL where to pull an xpath library from.                                                             |
+|                 | This is important for environments not supporting xpath, e.g., IE or former versions of Edge.        |
+| *rate*          | Base value for speech rate in ```ssml_step``` markup                                                 |
+| *strict*        | Boolean flag indicating if only a directly matching rule should be used (default is ```false```).    |
+|                 | I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. |
+| *mode*          | The running mode for SRE: ```sync```, ```async```, ```http```                                        |
+|                 | By default SRE in node is in `async`, in browser in `http`, and on CLI in `sync` mode.               |
+| *custom*        | Provide a custom method for locale loading. See below for more informaton.                           |
+| *defaultLocale* | Allows customisation for default locale. Default is ```en``` for English.                            |
+|                 | This option is not available in the CLI. See below for more informaton.                              |
+| *delay*         | Delays loading of base locales and automatic setup of engine. Default is ```false```.                |
+|                 | Option should be used only at startup. See below for more information.                               |
 
 Standalone Tool
 ---------------
@@ -276,53 +286,54 @@ processing via pipes or command line input all output is saved.
 
 The following is a list of command line options for the speech rule engine.
 
-| Short | Long | Meaning |
-| ----- | ---- | :------- |
-| -o | --output [name] | Output file [name].
-||| If not given output is printed to stdout. |
-| | |
-| | |
-| | |
-| -d | --domain [name] | Domain or subject area [name]. |
-||| This refers to a particular subject type of speech rules or subject area rules are defined for (e.g., mathspeak, clearspeak). |
-||| If no domain parameter is provided, default is used. |
-| -t | --style [name]  | Speech style [name]. |
-||| Selects a particular speech style (e.g., brief). |
-||| If no style parameter is provided, style default is used. |
-| -c | --locale | Language locale in ISO 639-1. |
-| -k | --markup [name] | Generate speech output with markup tags. Currently supported SSML, VoiceXML, Sable, ACSS (as sexpressions for Emacsspeak) |
-| | |
-| | |
-| | |
-| -p | --speech  | Generate speech output (default). |
-| -a | --audit | Generate auditory descriptions (JSON format). |
-| -j | --json  | Generate JSON of semantic tree. |
-| -x | --xml  | Generate XML of semantic tree. |
-| -P | --pprint  | When given, output is pretty printed if possible. |
-| | |
-| | |
-| | |
-| -m | --mathml  | Generate enriched MathML. |
-| -g | --generate [depth] | Include generated speech in enriched MathML. Supported values: none, shallow, deep  (default: none) |
-| -w | --structure | Include structure attribute in enriched MathML. |
-| | |
-| | |
-| | |
-| -N | --number | Translate number to words. |
-| -O | --ordinal | Translate number to word ordinal. |
-| -S | --numeric | Translate number to numeric ordinal. |
-| -F | --vulgar | Translate vulgar fraction to words. Provide vulgar fraction as slash seperated numbers. |
-| -C | --subiso | Subcategory of the locale given with -c. |
-| | |
-| | |
-| | |
-| -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
-| -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
-||| If not given verbose output is printed to stdout. |
-| -h | --help   | Enumerates all command line options. |
-|    | --opt    | Enumerates available options for current locale and modality. Output as markdown with -P option.|
-|    | --opt    | List engine setup options for all available locales. Output as markdown with -P option. |
-| -V | --version  |  Outputs the version number |
+| Short | Long               | Meaning                                                                                                                       |
+|-------|--------------------|:------------------------------------------------------------------------------------------------------------------------------|
+| `-o`  | --output [name]    | Output file [name].                                                                                                           |
+|       |                    | If not given output is printed to stdout.                                                                                     |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+| `-d`  | --domain [name]    | Domain or subject area [name].                                                                                                |
+|       |                    | This refers to a particular subject type of speech rules or subject area rules are defined for (e.g., mathspeak, clearspeak). |
+|       |                    | If no domain parameter is provided, default is used.                                                                          |
+| `-s`  | --style [name]     | Speech style [name].                                                                                                          |
+|       |                    | Selects a particular speech style (e.g., brief).                                                                              |
+|       |                    | If no style parameter is provided, style default is used.                                                                     |
+| `-c`  | --locale           | Language locale in ISO 639-1.                                                                                                 |
+| `-k`  | --markup [name]    | Generate speech output with markup tags. Currently supported SSML, VoiceXML, Sable, ACSS (as sexpressions for Emacsspeak)     |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+| `-p`  | --speech           | Generate speech output (default).                                                                                             |
+| `-a`  | --audit            | Generate auditory descriptions (JSON format).                                                                                 |
+| `-j`  | --json             | Generate JSON of semantic tree.                                                                                               |
+| `-x`  | --xml              | Generate XML of semantic tree.                                                                                                |
+| `-P`  | --pprint           | When given, output is pretty printed if possible.                                                                             |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+| `-t`  | --latex            | Accept LaTeX input directly for certain locale/modality combinations.                                                         |
+| `-m`  | --mathml           | Generate enriched MathML.                                                                                                     |
+| `-g`  | --generate [depth] | Include generated speech in enriched MathML. Supported values: none, shallow, deep  (default: none)                           |
+| `-w`  | --structure        | Include aria tree view and structure attribute in enriched MathML.                                                            |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+| `-N`  | --number           | Translate number to words.                                                                                                    |
+| `-O`  | --ordinal          | Translate number to word ordinal.                                                                                             |
+| `-S`  | --numeric          | Translate number to numeric ordinal.                                                                                          |
+| `-F`  | --vulgar           | Translate vulgar fraction to words. Provide vulgar fraction as slash seperated numbers.                                       |
+| `-C`  | --subiso           | Subcategory of the locale given with -c.                                                                                      |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+|       |                    |                                                                                                                               |
+| `-v`  | --verbose          | Verbose mode. Print additional information, useful for debugging.                                                             |
+| `-l`  | --log [name]       | Log file [name]. Verbose output is redirected to this file.                                                                   |
+|       |                    | If not given verbose output is printed to stdout.                                                                             |
+| `-h`  | --help             | Enumerates all command line options.                                                                                          |
+|       | --opt              | Enumerates available options for current locale and modality. Output as markdown with -P option.                              |
+|       | --opt              | List engine setup options for all available locales. Output as markdown with -P option.                                       |
+| `-V`  | --version          | Outputs the version number                                                                                                    |
 
 
 Building from Source 
@@ -873,12 +884,14 @@ the feature vector for `setupEngine` should not throw an exception but will have
 no effect.
 
 
-| Option      | Value                                                                                                                                                                                                                           | Release                   | Comments                                                                                                                         |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| *cache*     | Boolean flag to switch expression caching during speech generation. Default is ```true```.                                                                                                                                      | *Removed in v3.2.0*       | Expression caching has been removed and the option has no longer any effect.                                                     |
-| *rules*     | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | *Deprecated in v4.0.0*    | Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes. |
-| *walker*    | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table```                                                                                                                              | *Deprecated since v4.0.0* | Defaults to Table walker. Other walkers are no longer maintained!                                                                |
-| *semantics* | Boolean flag to switch **OFF** semantic interpretation.                                                                                                                                                                         | *Removed in v3.0*         | Non-semantic rule sets have been removed since v3.0.                                                                             |
+| Option      | Value                                                                                                                     | Release                   | Comments                                                                                                                         |
+|-------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| *cache*     | Boolean flag to switch expression caching during speech generation. Default is ```true```.                                | *Removed in v3.2.0*       | Expression caching has been removed and the option has no longer any effect.                                                     |
+| *rules*     | A list of rulesets to use by SRE.                                                                                         |                           |                                                                                                                                  |
+|             | This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. |                           |                                                                                                                                  |
+|             | ***Always expects a list, even if only one rule set is supplied!***                                                       | *Deprecated in v4.0.0*    | Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes. |
+| *walker*    | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table```                        | *Deprecated since v4.0.0* | Defaults to Table walker. Other walkers are no longer maintained!                                                                |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation.                                                                   | *Removed in v3.0*         | Non-semantic rule sets have been removed since v3.0.                                                                             |
 
 
 #### Removed API functions #########
@@ -891,11 +904,13 @@ no effect.
 #### Removed Command Line Options #########
 
 
-| Short | Long | Meaning | Release | Comments |
-| ----- | ---- | :------- | :------- | :------- |
-| -i | --input [name]  | Input file [name]. | *Deprecated since v3.0. Removed in v4.0!* | Use standard input file handling or stdio piping instead |
-| -s | --semantics     | Switch **OFF** semantics interpretation. | *Removed in v3.0* | There is no longer support for non-semantic rule sets. |
-
+| Short | Long           | Meaning                                  | Release                                   | Comments                                                  |
+|-------|----------------|:-----------------------------------------|:------------------------------------------|:----------------------------------------------------------|
+| `-i`  | --input [name] | Input file [name].                       | *Deprecated since v3.0. Removed in v4.0!* | Use standard input file handling or stdio piping instead. |
+| `-s`  | --semantics    | Switch **OFF** semantics interpretation. | *Removed in v3.0*                         | There is no longer support for non-semantic rule sets.    |
+|       |                |                                          | *New meaning in v4.1*                     | `-s` is now used to set `styles` on the command line.     |
+| `-t`  |                |                                          | *Changed meaning in v4.1*                 | Now refers to direct LaTeX input.                         |
+    
 
 ## Breaking Change
 
