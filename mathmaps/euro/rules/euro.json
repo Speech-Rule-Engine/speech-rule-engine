@@ -16,6 +16,20 @@
       "default",
       "[n] @latex",
       "self::*[@latex]"
+    ],
+    [
+      "Rule",
+      "nolatex",
+      "default",
+      "[m] children/* (separator:\"⠀\")",
+      "self::*[not(@latex)]", "name(.)!='stree'"
+    ],
+    [
+      "Rule",
+      "row",
+      "default",
+      "[m] children/* (separator:\"⠀⠯⠀\")",
+      "self::row[not(@latex)]"
     ]
   ]
 }

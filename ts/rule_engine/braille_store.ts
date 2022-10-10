@@ -88,9 +88,10 @@ export class EuroStore extends BrailleStore {
    * @override
    */
   public evaluateString(str: string) {
-    const regexp = /(\\([a-z]+)?)/i;
+    const regexp = /(\\[a-z]+)/i;
     let split = str.split(regexp);
-    return super.evaluateString(this.cleanup(split).join('').trim());
+    console.log(split);
+    return super.evaluateString(this.cleanup(split).join(''));
   }
 
   protected cleanup(commands: string[]): string[] {
@@ -99,10 +100,7 @@ export class EuroStore extends BrailleStore {
       if (command.match(/^\\/)) {
         let custom = this.customCommands[command];
         result.push(custom ? custom : command);
-        continue
-      }
-      if (command.match(/^ *[a-z]/i)) {
-        command = command.replace(/^ */, ' ');
+        continue;
       }
       let chars = command.split('').map(x => {
         let meaning = lookupMeaning(x);
