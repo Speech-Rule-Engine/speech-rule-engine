@@ -212,23 +212,17 @@
       "Precondition",
       "set-prefix-operators-masculine",
       "default",
-      "self::*",
+      "self::*[@grammar]",
       "contains(@grammar,\"prefix\")",
-      "descendant-or-self::*/text()=\"∩\"",
-      "self::*",
-      "self::*",
-      "self::*"
+      "descendant-or-self::*/text()=\"∩\""
     ],
     [
       "Precondition",
       "set-prefix-operators-feminine",
       "default",
-      "self::*",
+      "self::*[@grammar]",
       "contains(@grammar,\"prefix\")",
-      "descendant-or-self::*/text()=\"∪\"",
-      "self::*",
-      "self::*",
-      "self::*"
+      "descendant-or-self::*/text()=\"∪\""
     ]
   ]
 }

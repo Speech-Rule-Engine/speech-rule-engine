@@ -439,7 +439,7 @@ export class Precondition {
    * 4. Specific self with condition
    */
   private static queryPriorities: RegExp[] = [
-    // /^self::\*$/, /^self::[\w-]+$/,
+    /^self::\*$/, /^self::[\w-]+$/,
     /^self::\*\[.+\]$/,
     /^self::[\w-]+\[.+\]$/
   ];
@@ -529,11 +529,15 @@ export class Precondition {
     if (!query) {
       return 0;
     }
-    const inner = this.query.match(/^self::.+\[(.+)\]/)[1];
-    const attr = Precondition.constraintValue(
-      inner,
-      Precondition.attributePriorities
-    );
+    const match = this.query.match(/^self::.+\[(.+)\]/);
+    let attr = 0;
+    if (match?.length && match[1]) {
+      const inner = match[1];
+      attr = Precondition.constraintValue(
+        inner,
+        Precondition.attributePriorities
+      );
+    }
     return query * 100 + attr * 10;
   }
 
