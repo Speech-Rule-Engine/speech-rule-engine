@@ -22,7 +22,8 @@
       "nolatex",
       "default",
       "[m] children/* (separator:\"⠀\")",
-      "self::*[not(@latex)]", "name(.)!='stree'"
+      "self::*",
+      "not(@latex)"
     ],
     [
       "Rule",
