@@ -207,8 +207,8 @@ export class Trie {
   /**
    * @returns Set of speech rules in the trie.
    */
-  public collectRules(): SpeechRule[] {
-    return Trie.collectRules_(this.root);
+  public collectRules(root: TrieNode = this.root): SpeechRule[] {
+    return Trie.collectRules_(root);
   }
 
   /**

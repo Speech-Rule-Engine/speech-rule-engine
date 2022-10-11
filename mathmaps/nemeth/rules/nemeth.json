@@ -20,8 +20,7 @@
       "Precondition",
       "protected",
       "default",
-      "self::*",
-      "@role=\"protected\""
+      "self::*[@role=\"protected\"]"
     ],
     [
       "Precondition",
@@ -41,8 +40,7 @@
       "Precondition",
       "font",
       "default",
-      "self::*",
-      "@font",
+      "self::*[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\"",
       "@font!=\"fullwidth\"",
@@ -52,46 +50,43 @@
       "Precondition",
       "font-identifier-short",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
+      "self::identifier[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
+      "@role!=\"unit\"",
+      "string-length(text())=1",
       "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
-      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
-      "@role!=\"unit\""
+      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")"
     ],
     [
       "Precondition",
       "font-identifier-english",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
+      "self::identifier[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "string-length(text())=1",
+      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")"
     ],
     [
       "Precondition",
       "multi-caps-english",
       "default",
-      "self::identifier",
+      "self::identifier[@font]",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "@role!=\"unit\"",
       "string-length(text())>1",
       "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
-      "@role!=\"unit\""
+      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")"
     ],
     [
       "Precondition",
       "font-identifier",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
+      "self::identifier[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "string-length(text())=1",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\""
     ],
     [
       "Precondition",
