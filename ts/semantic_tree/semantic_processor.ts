@@ -566,6 +566,9 @@ export default class SemanticProcessor {
    * @param node The table node.
    */
   private static binomialForm_(node: SemanticNode) {
+    if (!SemanticPred.isRole(node, SemanticRole.UNKNOWN)) {
+      return;
+    }
     if (SemanticPred.isBinomial(node)) {
       node.role = SemanticRole.BINOMIAL;
       node.childNodes[0].role = SemanticRole.BINOMIAL;
@@ -603,6 +606,9 @@ export default class SemanticProcessor {
    */
   private static tableToSquare_(node: SemanticNode) {
     const matrix = node.childNodes[0];
+    if (!SemanticPred.isRole(matrix, SemanticRole.UNKNOWN)) {
+      return;
+    }
     if (SemanticPred.isNeutralFence(node)) {
       matrix.role = SemanticRole.DETERMINANT;
       return;
@@ -943,7 +949,7 @@ export default class SemanticProcessor {
    * @param table The table node.
    * @param columns The columns.
    * @param relation The main relation to classify.
-   * @param _alternatives Alternative relations that are
+   * @param alternatives Alternative relations that are
    *     permitted in addition to the main relation.
    * @returns True if classification was successful.
    */
@@ -951,18 +957,19 @@ export default class SemanticProcessor {
     table: SemanticNode,
     columns: SemanticNode[][],
     relation: SemanticRole,
-    _alternatives?: SemanticRole[]
+    alternatives: SemanticRole[] = []
   ): boolean {
     // TODO: For more complex systems, work with permutations/alternations of
     // column indices.
+    const relations = [relation].concat(alternatives);
     const test1 = (x: SemanticNode) =>
-      SemanticProcessor.isPureRelation_(x, relation);
+      SemanticProcessor.isPureRelation_(x, relations);
     const test2 = (x: SemanticNode) =>
-      SemanticProcessor.isEndRelation_(x, relation) ||
-      SemanticProcessor.isPureRelation_(x, relation);
+      SemanticProcessor.isEndRelation_(x, relations) ||
+      SemanticProcessor.isPureRelation_(x, relations);
     const test3 = (x: SemanticNode) =>
-      SemanticProcessor.isEndRelation_(x, relation, true) ||
-      SemanticProcessor.isPureRelation_(x, relation);
+      SemanticProcessor.isEndRelation_(x, relations, true) ||
+      SemanticProcessor.isPureRelation_(x, relations);
 
     if (
       (columns.length === 3 &&
@@ -988,17 +995,23 @@ export default class SemanticProcessor {
    */
   private static isEndRelation_(
     node: SemanticNode,
-    relation: SemanticRole,
+    relations: SemanticRole[],
     opt_right?: boolean
   ): boolean {
     const position = opt_right ? node.childNodes.length - 1 : 0;
     return (
       SemanticPred.isType(node, SemanticType.RELSEQ) &&
-      SemanticPred.isRole(node, relation) &&
-      SemanticPred.isType(node.childNodes[position], SemanticType.EMPTY)
+        relations.some(relation => SemanticPred.isRole(node, relation)) &&
+        SemanticPred.isType(node.childNodes[position], SemanticType.EMPTY)
     );
   }
 
+  // private static isFromRelation_(
+  //   node: SemanticNode, relations: SemanticRole[]
+  // ) {
+  //   relations.some(relation => SemanticPred.isRole(node, relation));
+  // }
+  
   /**
    * Check for a particular relations.
    *
@@ -1008,11 +1021,11 @@ export default class SemanticProcessor {
    */
   private static isPureRelation_(
     node: SemanticNode,
-    relation: SemanticRole
+    relations: SemanticRole[]
   ): boolean {
     return (
       SemanticPred.isType(node, SemanticType.RELATION) &&
-      SemanticPred.isRole(node, relation)
+        relations.some(relation => SemanticPred.isRole(node, relation))
     );
   }
 
