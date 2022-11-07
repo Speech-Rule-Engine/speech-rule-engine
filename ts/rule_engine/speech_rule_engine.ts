@@ -345,8 +345,10 @@ export class SpeechRuleEngine {
       // Retooling the engine
       if (attributes.engine) {
         saveEngine = Engine.getInstance().dynamicCstr.getComponents();
-        const features = Grammar.parseInput(attributes.engine);
+        const features = Object.assign(
+          {}, saveEngine, Grammar.parseInput(attributes.engine));
         Engine.getInstance().setDynamicCstr(features as AxisMap);
+        this.updateConstraint_();
       }
       switch (component.type) {
         case ActionType.NODE:
@@ -421,6 +423,7 @@ export class SpeechRuleEngine {
       );
       if (saveEngine) {
         Engine.getInstance().setDynamicCstr(saveEngine);
+        this.updateConstraint_();
       }
     }
     return result;
