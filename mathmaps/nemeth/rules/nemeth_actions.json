@@ -416,6 +416,11 @@
     ],
     [
       "Action",
+      "empty-table-cell",
+      "[t] \"⠀\" (pause: 300, layout:cell)"
+    ],
+    [
+      "Action",
       "cayley",
       "[m] children/* (separator:\"⠀\", join:\"\", layout:cayley)"
     ],

@@ -764,6 +764,12 @@
       "@role=\"binomial\""
     ],
     [
+      "Alias",
+      "vector-line",
+      "self::line",
+      "@role=\"cases\""
+    ],
+    [
       "Precondition",
       "empty-row",
       "default",
@@ -782,6 +788,14 @@
       "default",
       "self::cell",
       "count(children/*)=0"
+    ],
+    [
+      "Precondition",
+      "empty-table-cell",
+      "default",
+      "self::cell",
+      "count(children/*)=0",
+      "parent::*/parent::*/parent::*/parent::table[@role=\"cayley\"]"
     ],
     [
       "Precondition",
