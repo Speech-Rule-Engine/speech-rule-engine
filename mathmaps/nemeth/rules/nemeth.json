@@ -99,6 +99,13 @@
       "\"\"!=translate(text(), \"αβγδεζηθικλμνξοπρςστυφχψωΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")"
     ],
     [
+      "Rule",
+      "setup-number",
+      "default",
+      "[n] . (grammar:isnumber,engine:style=number)",
+      "self::number[not(contains(@grammar, \"isnumber\"))]"
+    ],
+    [
       "Precondition",
       "number-indicator",
       "default",
@@ -960,7 +967,8 @@
       "default",
       "self::punctuation",
       "@role=\"fullstop\"",
-      "contains(@annotation, \"nemeth:number\")"
+      "contains(@annotation, \"nemeth:number\")",
+      "following::*"
     ],
     [
       "Precondition",
