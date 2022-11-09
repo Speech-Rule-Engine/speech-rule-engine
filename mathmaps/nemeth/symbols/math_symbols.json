@@ -97,8 +97,8 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠨",
-        "other": "⠲"
+        "number": "⠨",
+        "default": "⠲"
       }
     },
     "key": "002E"
@@ -422,7 +422,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠈⠌"
+        "default": "⠨⠌"
       }
     },
     "key": "00F7"
