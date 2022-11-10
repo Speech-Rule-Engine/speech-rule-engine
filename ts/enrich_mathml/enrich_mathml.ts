@@ -95,18 +95,27 @@ export function walkTree(semantic: SemanticNode): Element {
   }
   if (semantic.mathml.length === 1) {
     Debugger.getInstance().output('Walktree Case 0');
-    newNode = semantic.mathml[0] as Element;
-    EnrichAttr.setAttributes(newNode, semantic);
-    if (semantic.childNodes.length) {
-      // These children should all be empty.
+    if (!semantic.childNodes.length) {
       Debugger.getInstance().output('Walktree Case 0.1');
-      semantic.childNodes.forEach(function (child) {
-        if (child.type === SemanticType.EMPTY) {
-          newNode.appendChild(walkTree(child));
-        }
-      });
+      newNode = semantic.mathml[0] as Element;
+      EnrichAttr.setAttributes(newNode, semantic);
+      return ascendNewNode(newNode);
     }
-    return ascendNewNode(newNode);
+    let fchild = semantic.childNodes[0];
+    if (semantic.childNodes.length === 1 &&
+      fchild.type === SemanticType.EMPTY) {
+      Debugger.getInstance().output('Walktree Case 0.2');
+      newNode = semantic.mathml[0] as Element;
+      EnrichAttr.setAttributes(newNode, semantic);
+      newNode.appendChild(walkTree(fchild));
+      return ascendNewNode(newNode);
+    }
+    // Children should not all be empty.
+    semantic.childNodes.forEach(child => {
+      if (!child.mathml.length) {
+        child.mathml = [createInvisibleOperator_(child)];
+      }
+    });
   }
 
   const newContent = semantic.contentNodes.map(cloneContentNode);
