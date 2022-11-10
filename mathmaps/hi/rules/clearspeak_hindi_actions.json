@@ -557,22 +557,22 @@
     [
       "Action",
       "sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"मूल समाप्त\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"मूल समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"मूल समाप्त\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"मूल समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"मूल समाप्त\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"मूल समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"मूल समाप्त\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"मूल समाप्त\" (pause:short)"
     ],
     [
       "Action",
@@ -597,12 +597,12 @@
     [
       "Action",
       "root-endroot",
-      "[n] . (grammar:EndRoot); [t] \"मूल समाप्त\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"मूल समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "root-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"मूल समाप्त\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"मूल समाप्त\" (pause:short)"
     ],
     [
       "Action",

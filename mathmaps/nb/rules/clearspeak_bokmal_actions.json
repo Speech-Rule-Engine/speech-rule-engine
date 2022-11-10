@@ -552,92 +552,92 @@
     [
       "Action",
       "sqrt",
-      "[t] \"kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "cubic",
-      "[t] \"kubikkroten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"kubikkroten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"kubikkroten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"kubikkroten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root",
-      "[n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-endroot",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "root-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",

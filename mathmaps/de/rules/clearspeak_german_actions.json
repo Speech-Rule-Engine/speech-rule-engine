@@ -527,92 +527,92 @@
     [
       "Action",
       "sqrt",
-      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "cubic",
-      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root",
-      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-endroot",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "root-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
