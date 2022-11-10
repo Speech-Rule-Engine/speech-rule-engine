@@ -330,6 +330,7 @@ export class SpeechRuleEngine {
       rule.dynamicCstr.toString(),
       (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
     ]);
+    Grammar.getInstance().processSingles();
     const context = rule.context;
     const components = rule.action.components;
     result = [];
@@ -423,6 +424,7 @@ export class SpeechRuleEngine {
         Engine.getInstance().setDynamicCstr(saveEngine);
       }
     }
+    Grammar.getInstance().popState();
     return result;
   }
 

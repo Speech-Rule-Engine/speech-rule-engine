@@ -40,7 +40,7 @@
       "Rule",
       "caley-table",
       "default",
-      "[p] (pause:short); [t] \"cayley table with\"; [t] count(children/*)-1; [t] \"elements\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] \"cayley table with\"; [t] count(children/*)-1; [t] \"elements\";  [n] . (grammar:?layoutSummary)",
       "self::table[@role=\"cayley\"]",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -48,7 +48,7 @@
       "Rule",
       "caley-table-operator",
       "default",
-      "[p] (pause:short); [t] \"cayley table for\"; [n] children/*[1]/children/*[1]/children/*[1]; [t] \"with\"; [t] count(children/*)-1; [t] \"elements\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] \"cayley table for\"; [n] children/*[1]/children/*[1]/children/*[1]; [t] \"with\"; [t] count(children/*)-1; [t] \"elements\";  [n] . (grammar:?layoutSummary)",
       "self::table[@role=\"cayley\"]",
       "name(children/*[1]/children/*[1]/children/*[1])=\"operator\"",
       "not(contains(@grammar, \"layoutSummary\"))"
