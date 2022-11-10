@@ -352,12 +352,12 @@
     [
       "Action",
       "lines-summary-none",
-      "[n] . (grammar:layoutSummary)"
+      "[n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
       "cases-summary-none",
-      "[n] . (grammar:layoutSummary)"
+      "[n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",

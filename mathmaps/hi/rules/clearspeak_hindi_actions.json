@@ -622,7 +622,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[n] . (grammar:!prefix); [t] \"का फलन\""
+      "[n] . ; [t] \"का फलन\""
     ],
     [
       "Action",
@@ -777,17 +777,17 @@
     [
       "Action",
       "matrix-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"आव्यूह समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"आव्यूह समाप्त\""
     ],
     [
       "Action",
       "matrix-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"आव्यूह समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"आव्यूह समाप्त\""
     ],
     [
       "Action",
       "matrix-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"सारणिक समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"सारणिक समाप्त\""
     ],
     [
       "Action",
@@ -812,22 +812,22 @@
     [
       "Action",
       "vector-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"आव्यूह समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"आव्यूह समाप्त\""
     ],
     [
       "Action",
       "vector-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"सदिश समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"सदिश समाप्त\""
     ],
     [
       "Action",
       "vector-end-vector-endvector",
-      "[n] . (grammar:EndMatrix); [t] \"सदिश समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"सदिश समाप्त\""
     ],
     [
       "Action",
       "vector-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"सारणिक समाप्त\""
+      "[n] . (grammar:?EndMatrix); [t] \"सारणिक समाप्त\""
     ],
     [
       "Action",
@@ -837,12 +837,12 @@
     [
       "Action",
       "lines-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"रेखाएं\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"रेखाएं\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
       "cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"फलन उपशर्त\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"फलन उपशर्त\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -877,7 +877,7 @@
     [
       "Action",
       "lines-cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"फलन उपशर्त\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"फलन उपशर्त\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -887,7 +887,7 @@
     [
       "Action",
       "lines-equations-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"समीकरण\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"समीकरण\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -897,7 +897,7 @@
     [
       "Action",
       "lines-steps-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"चरण\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"चरण\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -907,7 +907,7 @@
     [
       "Action",
       "lines-rows-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"पंक्तियाँ\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"पंक्तियाँ\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -917,7 +917,7 @@
     [
       "Action",
       "lines-constraints-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"व्यवरोध\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"व्यवरोध\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
