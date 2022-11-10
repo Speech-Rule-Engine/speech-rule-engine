@@ -72,6 +72,8 @@ export class Grammar {
 
   private stateStack_: State[] = [];
 
+  private singles: string[] = [];
+
   /**
    * @returns The Grammar object.
    */
@@ -279,14 +281,31 @@ export class Grammar {
   }
 
   /**
+   * Processes all the grammar elements that are only propagated once.
+   */
+  public processSingles() {
+    let assignment: State = {};
+    for (let single of this.singles) {
+      assignment[single] = false;
+    }
+    this.singles = [];
+    this.pushState(assignment);
+  }
+
+  /**
    * Saves the current state of the grammar object.
    *
    * @param assignment A list of key value
    *     pairs.
    */
   public pushState(assignment: { [key: string]: Value }) {
-    for (const key in assignment) {
-      assignment[key] = this.setParameter(key, assignment[key]);
+    for (let [key, value] of Object.entries(assignment)) {
+      if (key.match(/^\?/)) {
+        delete assignment[key];
+        key = key.slice(1);
+        this.singles.push(key);
+      }
+      assignment[key] = this.setParameter(key, value);
     }
     this.stateStack_.push(assignment);
   }
