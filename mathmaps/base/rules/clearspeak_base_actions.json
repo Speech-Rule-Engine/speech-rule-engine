@@ -227,7 +227,7 @@
     [
       "Action",
       "prefix",
-      "[m] content/* (grammar:prefix); [n] children/*[1]"
+      "[m] content/* (grammar:?prefix); [n] children/*[1]"
     ],
     [
       "Action",
