@@ -335,6 +335,11 @@
       "@role=\"leftright\""
     ],
     [
+      "Alias",
+      "fences-open-close",
+      "self::fenced"
+    ],
+    [
       "Precondition",
       "fences-neutral",
       "default",
