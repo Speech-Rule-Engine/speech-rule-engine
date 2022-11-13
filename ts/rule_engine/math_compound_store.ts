@@ -66,7 +66,6 @@ const subStores_: { [key: string]: MathSimpleStore } = {};
  * Function creates a rule store in the compound store for a particular
  * string, and populates it with a set of rules.
  *
- * @param name Name of the rule.
  * @param str String used as key to refer to the rule store
  * precondition and constr
  * @param cat The category if it exists.
@@ -74,14 +73,13 @@ const subStores_: { [key: string]: MathSimpleStore } = {};
  *     domains to strings, from which the speech rules will be computed.
  */
 export function defineRules(
-  name: string,
   str: string,
   cat: string,
   mappings: MappingsJson
 ) {
   const store = getSubStore_(str);
   setupStore_(store, cat);
-  store.defineRulesFromMappings(name, locale, modality, str, mappings);
+  store.defineRulesFromMappings(locale, modality, mappings);
 }
 
 /**
@@ -95,7 +93,6 @@ export function defineRules(
  * @param content The content for the postcondition.
  */
 export function defineRule(
-  name: string,
   domain: string,
   style: string,
   cat: string,
@@ -105,12 +102,10 @@ export function defineRule(
   const store = getSubStore_(str);
   setupStore_(store, cat);
   store.defineRuleFromStrings(
-    name,
     locale,
     modality,
     domain,
     style,
-    str,
     content
   );
 }
@@ -125,7 +120,7 @@ function addSymbolRule(json: UnicodeJson) {
     return;
   }
   const key = MathSimpleStore.parseUnicode(json['key']);
-  defineRules(json['key'], key, json['category'], json['mappings']);
+  defineRules(key, json['category'], json['mappings']);
 }
 export const addSymbolRules =
   (json: UnicodeJson[]) => json.forEach(addSymbolRule);
@@ -143,7 +138,7 @@ function addFunctionRule(json: UnicodeJson) {
   const mappings = json['mappings'];
   const category = json['category'];
   for (let j = 0, name; (name = names[j]); j++) {
-    defineRules(name, name, category, mappings);
+    defineRules(name, category, mappings);
   }
 }
 export const addFunctionRules =

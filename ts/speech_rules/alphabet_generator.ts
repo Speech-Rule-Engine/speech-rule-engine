@@ -73,11 +73,10 @@ export function generate(locale: string) {
       return String.fromCodePoint(parseInt(x, 16));
     });
     if ('offset' in int) {
-      numberRules(keys, letters, int.font, int.category, int.offset || 0);
+      numberRules(letters, int.font, int.category, int.offset || 0);
     } else {
       const alphabet = (LOCALE.ALPHABETS as any)[int.base];
       alphabetRules(
-        keys,
         letters,
         alphabet,
         int.font,
@@ -117,7 +116,6 @@ export function getFont(font: string): { font: string; combiner: Combiner } {
  * @param cap True if it is an alphabet of capitals.
  */
 export function alphabetRules(
-  keys: string[],
   unicodes: string[],
   letters: string[],
   font: string,
@@ -126,8 +124,8 @@ export function alphabetRules(
 ) {
   const realFont = getFont(font);
   for (
-    let i = 0, key, unicode, letter;
-    (key = keys[i]), (unicode = unicodes[i]), (letter = letters[i]);
+    let i = 0, unicode, letter;
+    (unicode = unicodes[i]), (letter = letters[i]);
     i++
   ) {
     const prefixes = cap
@@ -136,7 +134,6 @@ export function alphabetRules(
     const domains = cap ? Domains_.capital : Domains_.small;
     makeLetter(
       realFont.combiner,
-      key,
       unicode,
       letter,
       realFont.font,
@@ -159,19 +156,17 @@ export function alphabetRules(
  * @param offset The offset value for the initial number.
  */
 export function numberRules(
-  keys: string[],
   unicodes: string[],
   font: string,
   category: string,
   offset: number
 ) {
   const realFont = getFont(font);
-  for (let i = 0, key, unicode; (key = keys[i]), (unicode = unicodes[i]); i++) {
+  for (let i = 0, unicode; (unicode = unicodes[i]); i++) {
     const prefixes = LOCALE.ALPHABETS.digitPrefix;
     const num = i + offset;
     makeLetter(
       realFont.combiner,
-      key,
       unicode,
       num,
       realFont.font,
@@ -203,7 +198,6 @@ export function numberRules(
  */
 export function makeLetter(
   combiner: Combiner,
-  key: string,
   unicode: string,
   letter: string | number,
   font: string,
@@ -217,7 +211,6 @@ export function makeLetter(
       domain in transformers ? transformers[domain] : transformers['default'];
     const prefix = domain in prefixes ? prefixes[domain] : prefixes['default'];
     MathCompoundStore.defineRule(
-      key.toString(),
       domain,
       'default',
       category,

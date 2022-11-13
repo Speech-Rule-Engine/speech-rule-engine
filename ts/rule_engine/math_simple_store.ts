@@ -104,30 +104,24 @@ export class MathSimpleStore {
    * Turns a domain mapping from its JSON representation containing simple
    * strings only into a list of speech rules.
    *
-   * @param name Name for the rules.
    * @param locale The locale of the rule.
    * @param modality The modality of the rule.
-   * @param str String for precondition and constraints.
    * @param mapping Simple string
    *     mapping.
    */
   public defineRulesFromMappings(
-    name: string,
     locale: string,
     modality: string,
-    str: string,
     mapping: MappingsJson
   ) {
     for (const domain in mapping) {
       for (const style in mapping[domain]) {
         const content = mapping[domain][style];
         this.defineRuleFromStrings(
-          name,
           locale,
           modality,
           domain,
           style,
-          str,
           content
         );
       }
@@ -152,21 +146,17 @@ export class MathSimpleStore {
   /**
    * Creates a single rule from strings.
    *
-   * @param _name Name of the rule.
    * @param locale The locale of the rule.
    * @param modality The modality of the rule.
    * @param domain The domain axis.
    * @param style The style axis.
-   * @param _str String for precondition and constraints.
    * @param content The content for the postcondition.
    */
   public defineRuleFromStrings(
-    _name: string,
     locale: string,
     modality: string,
     domain: string,
     style: string,
-    _str: string,
     content: string
   ) {
     let store = this.getRules(locale);
