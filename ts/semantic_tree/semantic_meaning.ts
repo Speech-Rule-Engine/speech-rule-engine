@@ -18,6 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as Alphabet from '../speech_rules/alphabet';
+
 export interface SemanticMeaning {
   type: SemanticType;
   role: SemanticRole;
@@ -269,25 +271,14 @@ export const enum SemanticRole {
  * Mapping for font annotations. (Taken from MathML2 section 3.2.2, with the
  * exception of double-struck-italic.)
  */
-export const enum SemanticFont {
-  BOLD = 'bold',
-  BOLDFRAKTUR = 'bold-fraktur',
-  BOLDITALIC = 'bold-italic',
-  BOLDSCRIPT = 'bold-script',
+enum ExtraFont {
   CALIGRAPHIC = 'caligraphic',
   CALIGRAPHICBOLD = 'caligraphic-bold',
-  DOUBLESTRUCK = 'double-struck',
-  DOUBLESTRUCKITALIC = 'double-struck-italic',
-  FRAKTUR = 'fraktur',
-  ITALIC = 'italic',
-  MONOSPACE = 'monospace',
-  NORMAL = 'normal',
   OLDSTYLE = 'oldstyle',
   OLDSTYLEBOLD = 'oldstyle-bold',
-  SCRIPT = 'script',
-  SANSSERIF = 'sans-serif',
-  SANSSERIFITALIC = 'sans-serif-italic',
-  SANSSERIFBOLD = 'sans-serif-bold',
-  SANSSERIFBOLDITALIC = 'sans-serif-bold-italic',
   UNKNOWN = 'unknown'
 }
+
+export type SemanticFont = Alphabet.Font | ExtraFont;
+export const SemanticFont = { ...Alphabet.Font, ...ExtraFont };
+

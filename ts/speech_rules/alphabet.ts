@@ -26,7 +26,7 @@ export enum Font {
   BOLDITALIC = 'bold-italic',
   BOLDSCRIPT = 'bold-script',
   DOUBLESTRUCK = 'double-struck',
-  // DOUBLESTRUCKITALIC: 'double-struck-italic', // probably not needed.
+  DOUBLESTRUCKITALIC = 'double-struck-italic', // probably not needed.
   FULLWIDTH = 'fullwidth',
   FRAKTUR = 'fraktur',
   ITALIC = 'italic',
