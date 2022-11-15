@@ -22,9 +22,11 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
+import { MathStore } from './math_store';
 import { AuditoryDescription } from '../audio/auditory_description';
 import { activate } from '../semantic_tree/semantic_annotations';
-import { MathStore } from './math_store';
+import { lookupMeaning } from '../semantic_tree/semantic_attr';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
 
 /**
  * Braille rule store.
@@ -38,7 +40,9 @@ export class BrailleStore extends MathStore {
   /**
    * @override
    */
-  public customTranscriptions = { '\u22ca': '⠈⠡⠳' };
+  public customTranscriptions: {[key: string]: string} = {
+    '\u22ca': '⠈⠡⠳'
+  };
 
   /**
    * @override
@@ -60,4 +64,52 @@ export class BrailleStore extends MathStore {
       activate(this.locale, annotator);
     }
   }
+}
+
+/**
+ * Euro Braille rule store.
+ */
+export class EuroStore extends BrailleStore {
+  /**
+   * @override
+   */
+  public locale = 'euro';
+
+  /**
+   * @override
+   */
+  public customTranscriptions = { };
+
+  public customCommands: {[key: string]: string} = {
+    '\\cdot': '*'
+  }
+
+  /**
+   * @override
+   */
+  public evaluateString(str: string) {
+    const regexp = /(\\[a-z]+)/i;
+    let split = str.split(regexp);
+    console.log(split);
+    return super.evaluateString(this.cleanup(split).join(''));
+  }
+
+  protected cleanup(commands: string[]): string[] {
+    let result: string[] = [];
+    for (let command of commands) {
+      if (command.match(/^\\/)) {
+        let custom = this.customCommands[command];
+        result.push(custom ? custom : command);
+        continue;
+      }
+      let chars = command.split('').map(x => {
+        let meaning = lookupMeaning(x);
+        return (meaning.type === SemanticType.OPERATOR ||
+          meaning.type === SemanticType.RELATION) ? ' ' + x : x;
+      });
+      result = result.concat(chars);
+    }
+    return result;
+  }
+
 }

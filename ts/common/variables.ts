@@ -33,6 +33,7 @@ export class Variables {
     ['de', 'German'],
     ['en', 'English'],
     ['es', 'Spanish'],
+    ['euro', 'Euro'],
     ['fr', 'French'],
     ['hi', 'Hindi'],
     ['it', 'Italian'],
