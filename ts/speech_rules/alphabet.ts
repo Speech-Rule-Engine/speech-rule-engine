@@ -111,7 +111,7 @@ export function makeInterval(
   return result;
 }
 
-export declare type Alphabet = {
+export declare interface ProtoAlphabet {
   interval: [string, string];
   base: Base;
   subst: { [key: string]: string | boolean };
@@ -121,10 +121,14 @@ export declare type Alphabet = {
   offset?: number;
 };
 
+export declare interface Alphabet extends ProtoAlphabet {
+  unicode: string[];
+};
+
 /**
  * Alphabet definitions by intervals and exceptions
  */
-export const INTERVALS: Alphabet[] = [
+export const PROTO_INTERVALS: ProtoAlphabet[] = [
   // Latin
   {
     interval: ['1D400', '1D419'],
@@ -717,3 +721,27 @@ export const INTERVALS: Alphabet[] = [
     font: Embellish.NEGATIVECIRCLED
   }
 ];
+
+export const INTERVALS: Map<string, Alphabet> = new Map();
+
+export function alphabetName(base: string, font: string) {
+  const capFont = font.
+    split('-').
+    map(x => x[0].toUpperCase() + x.slice(1)).
+    join('');
+  return base + capFont;
+}
+
+for (let proto of PROTO_INTERVALS) {
+  const key = alphabetName(proto.base, proto.font);
+  const interval = makeInterval(proto.interval, proto.subst).
+    map(x => String.fromCodePoint(parseInt(x, 16)));
+  let alphabet = INTERVALS.get(key);
+  if (alphabet) {
+    alphabet.unicode = alphabet.unicode.concat(interval);
+    continue;
+  }
+  alphabet = proto as Alphabet;
+  alphabet.unicode = interval;
+  INTERVALS.set(key, alphabet);
+}

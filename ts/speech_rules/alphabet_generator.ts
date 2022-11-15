@@ -66,12 +66,8 @@ export function generate(locale: string) {
   L10n.setLocale();
   MathCompoundStore.changeLocale({ locale: locale } as UnicodeJson);
   makeDomains_();
-  const intervals = Alphabet.INTERVALS;
-  for (let i = 0, int; (int = intervals[i]); i++) {
-    const keys = Alphabet.makeInterval(int.interval, int.subst);
-    const letters = keys.map(function (x) {
-      return String.fromCodePoint(parseInt(x, 16));
-    });
+  for (const int of Alphabet.INTERVALS.values()) {
+    const letters = int.unicode;
     if ('offset' in int) {
       numberRules(letters, int.font, int.category, int.offset || 0);
     } else {
@@ -107,7 +103,6 @@ export function getFont(font: string): { font: string; combiner: Combiner } {
 /**
  * Generates rules for letters.
  *
- * @param keys The unicode values to add.
  * @param unicodes The actual unicode characters corrsponding
  *     to the values in keys.
  * @param letters The letters of the corresponding alphabet.
@@ -148,7 +143,6 @@ export function alphabetRules(
 /**
  * Generates rules for numbers.
  *
- * @param keys The unicode values to add.
  * @param unicodes The actual unicode characters corrsponding
  *     to the values in keys.
  * @param font The font name.
@@ -183,7 +177,6 @@ export function numberRules(
  *
  * @param combiner The combining
  *     function for generating the rule action.
- * @param key The unicode value of the character.
  * @param unicode The actual unicode character.
  * @param letter The letter of the corresponding alphabet or
  *     number.
@@ -219,3 +212,4 @@ export function makeLetter(
     );
   }
 }
+

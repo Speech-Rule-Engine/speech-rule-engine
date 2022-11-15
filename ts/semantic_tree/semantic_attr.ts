@@ -53,6 +53,7 @@ import {
   SemanticType,
   SemanticFont
 } from './semantic_meaning';
+import * as Alphabet from '../speech_rules/alphabet';
 
 /**
  * Contains the basic mappings of characters/symbols and functions to semantic
@@ -312,857 +313,6 @@ const metricFences: string[] = ['‖', '∥', '⦀', '⫴'];
 //   leftFences, rightFences, topFences, bottomFences);
 
 // Identifiers.
-// Latin Alphabets.
-const capitalLatin: string[] = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z'
-];
-const smallLatin: string[] = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-  // dotless i and j.
-  'ı',
-  'ȷ'
-];
-const capitalLatinFullWidth: string[] = [
-  'Ａ',
-  'Ｂ',
-  'Ｃ',
-  'Ｄ',
-  'Ｅ',
-  'Ｆ',
-  'Ｇ',
-  'Ｈ',
-  'Ｉ',
-  'Ｊ',
-  'Ｋ',
-  'Ｌ',
-  'Ｍ',
-  'Ｎ',
-  'Ｏ',
-  'Ｐ',
-  'Ｑ',
-  'Ｒ',
-  'Ｓ',
-  'Ｔ',
-  'Ｕ',
-  'Ｖ',
-  'Ｗ',
-  'Ｘ',
-  'Ｙ',
-  'Ｚ'
-];
-const smallLatinFullWidth: string[] = [
-  'ａ',
-  'ｂ',
-  'ｃ',
-  'ｄ',
-  'ｅ',
-  'ｆ',
-  'ｇ',
-  'ｈ',
-  'ｉ',
-  'ｊ',
-  'ｋ',
-  'ｌ',
-  'ｍ',
-  'ｎ',
-  'ｏ',
-  'ｐ',
-  'ｑ',
-  'ｒ',
-  'ｓ',
-  'ｔ',
-  'ｕ',
-  'ｖ',
-  'ｗ',
-  'ｘ',
-  'ｙ',
-  'ｚ'
-];
-const capitalLatinBold: string[] = [
-  '𝐀',
-  '𝐁',
-  '𝐂',
-  '𝐃',
-  '𝐄',
-  '𝐅',
-  '𝐆',
-  '𝐇',
-  '𝐈',
-  '𝐉',
-  '𝐊',
-  '𝐋',
-  '𝐌',
-  '𝐍',
-  '𝐎',
-  '𝐏',
-  '𝐐',
-  '𝐑',
-  '𝐒',
-  '𝐓',
-  '𝐔',
-  '𝐕',
-  '𝐖',
-  '𝐗',
-  '𝐘',
-  '𝐙'
-];
-const smallLatinBold: string[] = [
-  '𝐚',
-  '𝐛',
-  '𝐜',
-  '𝐝',
-  '𝐞',
-  '𝐟',
-  '𝐠',
-  '𝐡',
-  '𝐢',
-  '𝐣',
-  '𝐤',
-  '𝐥',
-  '𝐦',
-  '𝐧',
-  '𝐨',
-  '𝐩',
-  '𝐪',
-  '𝐫',
-  '𝐬',
-  '𝐭',
-  '𝐮',
-  '𝐯',
-  '𝐰',
-  '𝐱',
-  '𝐲',
-  '𝐳'
-];
-const capitalLatinItalic: string[] = [
-  '𝐴',
-  '𝐵',
-  '𝐶',
-  '𝐷',
-  '𝐸',
-  '𝐹',
-  '𝐺',
-  '𝐻',
-  '𝐼',
-  '𝐽',
-  '𝐾',
-  '𝐿',
-  '𝑀',
-  '𝑁',
-  '𝑂',
-  '𝑃',
-  '𝑄',
-  '𝑅',
-  '𝑆',
-  '𝑇',
-  '𝑈',
-  '𝑉',
-  '𝑊',
-  '𝑋',
-  '𝑌',
-  '𝑍'
-];
-const smallLatinItalic: string[] = [
-  '𝑎',
-  '𝑏',
-  '𝑐',
-  '𝑑',
-  '𝑒',
-  '𝑓',
-  '𝑔',
-  'ℎ',
-  '𝑖',
-  '𝑗',
-  '𝑘',
-  '𝑙',
-  '𝑚',
-  '𝑛',
-  '𝑜',
-  '𝑝',
-  '𝑞',
-  '𝑟',
-  '𝑠',
-  '𝑡',
-  '𝑢',
-  '𝑣',
-  '𝑤',
-  '𝑥',
-  '𝑦',
-  '𝑧',
-  // dotless i and j.
-  '𝚤',
-  '𝚥'
-];
-const capitalLatinBoldItalic: string[] = [
-  '𝑨',
-  '𝑩',
-  '𝑪',
-  '𝑫',
-  '𝑬',
-  '𝑭',
-  '𝑮',
-  '𝑯',
-  '𝑰',
-  '𝑱',
-  '𝑲',
-  '𝑳',
-  '𝑴',
-  '𝑵',
-  '𝑶',
-  '𝑷',
-  '𝑸',
-  '𝑹',
-  '𝑺',
-  '𝑻',
-  '𝑼',
-  '𝑽',
-  '𝑾',
-  '𝑿',
-  '𝒀',
-  '𝒁'
-];
-const smallLatinBoldItalic: string[] = [
-  '𝒂',
-  '𝒃',
-  '𝒄',
-  '𝒅',
-  '𝒆',
-  '𝒇',
-  '𝒈',
-  '𝒉',
-  '𝒊',
-  '𝒋',
-  '𝒌',
-  '𝒍',
-  '𝒎',
-  '𝒏',
-  '𝒐',
-  '𝒑',
-  '𝒒',
-  '𝒓',
-  '𝒔',
-  '𝒕',
-  '𝒖',
-  '𝒗',
-  '𝒘',
-  '𝒙',
-  '𝒚',
-  '𝒛'
-];
-const capitalLatinScript: string[] = [
-  '𝒜',
-  'ℬ',
-  '𝒞',
-  '𝒟',
-  'ℰ',
-  'ℱ',
-  '𝒢',
-  'ℋ',
-  'ℐ',
-  '𝒥',
-  '𝒦',
-  'ℒ',
-  'ℳ',
-  '𝒩',
-  '𝒪',
-  '𝒫',
-  '𝒬',
-  'ℛ',
-  '𝒮',
-  '𝒯',
-  '𝒰',
-  '𝒱',
-  '𝒲',
-  '𝒳',
-  '𝒴',
-  '𝒵',
-  // Powerset Cap P.
-  '℘'
-];
-const smallLatinScript: string[] = [
-  '𝒶',
-  '𝒷',
-  '𝒸',
-  '𝒹',
-  'ℯ',
-  '𝒻',
-  'ℊ',
-  '𝒽',
-  '𝒾',
-  '𝒿',
-  '𝓀',
-  '𝓁',
-  '𝓂',
-  '𝓃',
-  'ℴ',
-  '𝓅',
-  '𝓆',
-  '𝓇',
-  '𝓈',
-  '𝓉',
-  '𝓊',
-  '𝓋',
-  '𝓌',
-  '𝓍',
-  '𝓎',
-  '𝓏',
-  // script small l
-  'ℓ'
-];
-const capitalLatinBoldScript: string[] = [
-  '𝓐',
-  '𝓑',
-  '𝓒',
-  '𝓓',
-  '𝓔',
-  '𝓕',
-  '𝓖',
-  '𝓗',
-  '𝓘',
-  '𝓙',
-  '𝓚',
-  '𝓛',
-  '𝓜',
-  '𝓝',
-  '𝓞',
-  '𝓟',
-  '𝓠',
-  '𝓡',
-  '𝓢',
-  '𝓣',
-  '𝓤',
-  '𝓥',
-  '𝓦',
-  '𝓧',
-  '𝓨',
-  '𝓩'
-];
-const smallLatinBoldScript: string[] = [
-  '𝓪',
-  '𝓫',
-  '𝓬',
-  '𝓭',
-  '𝓮',
-  '𝓯',
-  '𝓰',
-  '𝓱',
-  '𝓲',
-  '𝓳',
-  '𝓴',
-  '𝓵',
-  '𝓶',
-  '𝓷',
-  '𝓸',
-  '𝓹',
-  '𝓺',
-  '𝓻',
-  '𝓼',
-  '𝓽',
-  '𝓾',
-  '𝓿',
-  '𝔀',
-  '𝔁',
-  '𝔂',
-  '𝔃'
-];
-const capitalLatinFraktur: string[] = [
-  '𝔄',
-  '𝔅',
-  'ℭ',
-  '𝔇',
-  '𝔈',
-  '𝔉',
-  '𝔊',
-  'ℌ',
-  'ℑ',
-  '𝔍',
-  '𝔎',
-  '𝔏',
-  '𝔐',
-  '𝔑',
-  '𝔒',
-  '𝔓',
-  '𝔔',
-  'ℜ',
-  '𝔖',
-  '𝔗',
-  '𝔘',
-  '𝔙',
-  '𝔚',
-  '𝔛',
-  '𝔜',
-  'ℨ'
-];
-const smallLatinFraktur: string[] = [
-  '𝔞',
-  '𝔟',
-  '𝔠',
-  '𝔡',
-  '𝔢',
-  '𝔣',
-  '𝔤',
-  '𝔥',
-  '𝔦',
-  '𝔧',
-  '𝔨',
-  '𝔩',
-  '𝔪',
-  '𝔫',
-  '𝔬',
-  '𝔭',
-  '𝔮',
-  '𝔯',
-  '𝔰',
-  '𝔱',
-  '𝔲',
-  '𝔳',
-  '𝔴',
-  '𝔵',
-  '𝔶',
-  '𝔷'
-];
-const capitalLatinDoubleStruck: string[] = [
-  '𝔸',
-  '𝔹',
-  'ℂ',
-  '𝔻',
-  '𝔼',
-  '𝔽',
-  '𝔾',
-  'ℍ',
-  '𝕀',
-  '𝕁',
-  '𝕂',
-  '𝕃',
-  '𝕄',
-  'ℕ',
-  '𝕆',
-  'ℙ',
-  'ℚ',
-  'ℝ',
-  '𝕊',
-  '𝕋',
-  '𝕌',
-  '𝕍',
-  '𝕎',
-  '𝕏',
-  '𝕐',
-  'ℤ'
-];
-const smallLatinDoubleStruck: string[] = [
-  '𝕒',
-  '𝕓',
-  '𝕔',
-  '𝕕',
-  '𝕖',
-  '𝕗',
-  '𝕘',
-  '𝕙',
-  '𝕚',
-  '𝕛',
-  '𝕜',
-  '𝕝',
-  '𝕞',
-  '𝕟',
-  '𝕠',
-  '𝕡',
-  '𝕢',
-  '𝕣',
-  '𝕤',
-  '𝕥',
-  '𝕦',
-  '𝕧',
-  '𝕨',
-  '𝕩',
-  '𝕪',
-  '𝕫'
-];
-const capitalLatinBoldFraktur: string[] = [
-  '𝕬',
-  '𝕭',
-  '𝕮',
-  '𝕯',
-  '𝕰',
-  '𝕱',
-  '𝕲',
-  '𝕳',
-  '𝕴',
-  '𝕵',
-  '𝕶',
-  '𝕷',
-  '𝕸',
-  '𝕹',
-  '𝕺',
-  '𝕻',
-  '𝕼',
-  '𝕽',
-  '𝕾',
-  '𝕿',
-  '𝖀',
-  '𝖁',
-  '𝖂',
-  '𝖃',
-  '𝖄',
-  '𝖅'
-];
-const smallLatinBoldFraktur: string[] = [
-  '𝖆',
-  '𝖇',
-  '𝖈',
-  '𝖉',
-  '𝖊',
-  '𝖋',
-  '𝖌',
-  '𝖍',
-  '𝖎',
-  '𝖏',
-  '𝖐',
-  '𝖑',
-  '𝖒',
-  '𝖓',
-  '𝖔',
-  '𝖕',
-  '𝖖',
-  '𝖗',
-  '𝖘',
-  '𝖙',
-  '𝖚',
-  '𝖛',
-  '𝖜',
-  '𝖝',
-  '𝖞',
-  '𝖟'
-];
-const capitalLatinSansSerif: string[] = [
-  '𝖠',
-  '𝖡',
-  '𝖢',
-  '𝖣',
-  '𝖤',
-  '𝖥',
-  '𝖦',
-  '𝖧',
-  '𝖨',
-  '𝖩',
-  '𝖪',
-  '𝖫',
-  '𝖬',
-  '𝖭',
-  '𝖮',
-  '𝖯',
-  '𝖰',
-  '𝖱',
-  '𝖲',
-  '𝖳',
-  '𝖴',
-  '𝖵',
-  '𝖶',
-  '𝖷',
-  '𝖸',
-  '𝖹'
-];
-const smallLatinSansSerif: string[] = [
-  '𝖺',
-  '𝖻',
-  '𝖼',
-  '𝖽',
-  '𝖾',
-  '𝖿',
-  '𝗀',
-  '𝗁',
-  '𝗂',
-  '𝗃',
-  '𝗄',
-  '𝗅',
-  '𝗆',
-  '𝗇',
-  '𝗈',
-  '𝗉',
-  '𝗊',
-  '𝗋',
-  '𝗌',
-  '𝗍',
-  '𝗎',
-  '𝗏',
-  '𝗐',
-  '𝗑',
-  '𝗒',
-  '𝗓'
-];
-const capitalLatinSansSerifBold: string[] = [
-  '𝗔',
-  '𝗕',
-  '𝗖',
-  '𝗗',
-  '𝗘',
-  '𝗙',
-  '𝗚',
-  '𝗛',
-  '𝗜',
-  '𝗝',
-  '𝗞',
-  '𝗟',
-  '𝗠',
-  '𝗡',
-  '𝗢',
-  '𝗣',
-  '𝗤',
-  '𝗥',
-  '𝗦',
-  '𝗧',
-  '𝗨',
-  '𝗩',
-  '𝗪',
-  '𝗫',
-  '𝗬',
-  '𝗭'
-];
-const smallLatinSansSerifBold: string[] = [
-  '𝗮',
-  '𝗯',
-  '𝗰',
-  '𝗱',
-  '𝗲',
-  '𝗳',
-  '𝗴',
-  '𝗵',
-  '𝗶',
-  '𝗷',
-  '𝗸',
-  '𝗹',
-  '𝗺',
-  '𝗻',
-  '𝗼',
-  '𝗽',
-  '𝗾',
-  '𝗿',
-  '𝘀',
-  '𝘁',
-  '𝘂',
-  '𝘃',
-  '𝘄',
-  '𝘅',
-  '𝘆',
-  '𝘇'
-];
-const capitalLatinSansSerifItalic: string[] = [
-  '𝘈',
-  '𝘉',
-  '𝘊',
-  '𝘋',
-  '𝘌',
-  '𝘍',
-  '𝘎',
-  '𝘏',
-  '𝘐',
-  '𝘑',
-  '𝘒',
-  '𝘓',
-  '𝘔',
-  '𝘕',
-  '𝘖',
-  '𝘗',
-  '𝘘',
-  '𝘙',
-  '𝘚',
-  '𝘛',
-  '𝘜',
-  '𝘝',
-  '𝘞',
-  '𝘟',
-  '𝘠',
-  '𝘡'
-];
-const smallLatinSansSerifItalic: string[] = [
-  '𝘢',
-  '𝘣',
-  '𝘤',
-  '𝘥',
-  '𝘦',
-  '𝘧',
-  '𝘨',
-  '𝘩',
-  '𝘪',
-  '𝘫',
-  '𝘬',
-  '𝘭',
-  '𝘮',
-  '𝘯',
-  '𝘰',
-  '𝘱',
-  '𝘲',
-  '𝘳',
-  '𝘴',
-  '𝘵',
-  '𝘶',
-  '𝘷',
-  '𝘸',
-  '𝘹',
-  '𝘺',
-  '𝘻'
-];
-const capitalLatinSansSerifBoldItalic: string[] = [
-  '𝘼',
-  '𝘽',
-  '𝘾',
-  '𝘿',
-  '𝙀',
-  '𝙁',
-  '𝙂',
-  '𝙃',
-  '𝙄',
-  '𝙅',
-  '𝙆',
-  '𝙇',
-  '𝙈',
-  '𝙉',
-  '𝙊',
-  '𝙋',
-  '𝙌',
-  '𝙍',
-  '𝙎',
-  '𝙏',
-  '𝙐',
-  '𝙑',
-  '𝙒',
-  '𝙓',
-  '𝙔',
-  '𝙕'
-];
-const smallLatinSansSerifBoldItalic: string[] = [
-  '𝙖',
-  '𝙗',
-  '𝙘',
-  '𝙙',
-  '𝙚',
-  '𝙛',
-  '𝙜',
-  '𝙝',
-  '𝙞',
-  '𝙟',
-  '𝙠',
-  '𝙡',
-  '𝙢',
-  '𝙣',
-  '𝙤',
-  '𝙥',
-  '𝙦',
-  '𝙧',
-  '𝙨',
-  '𝙩',
-  '𝙪',
-  '𝙫',
-  '𝙬',
-  '𝙭',
-  '𝙮',
-  '𝙯'
-];
-const capitalLatinMonospace: string[] = [
-  '𝙰',
-  '𝙱',
-  '𝙲',
-  '𝙳',
-  '𝙴',
-  '𝙵',
-  '𝙶',
-  '𝙷',
-  '𝙸',
-  '𝙹',
-  '𝙺',
-  '𝙻',
-  '𝙼',
-  '𝙽',
-  '𝙾',
-  '𝙿',
-  '𝚀',
-  '𝚁',
-  '𝚂',
-  '𝚃',
-  '𝚄',
-  '𝚅',
-  '𝚆',
-  '𝚇',
-  '𝚈',
-  '𝚉'
-];
-const smallLatinMonospace: string[] = [
-  '𝚊',
-  '𝚋',
-  '𝚌',
-  '𝚍',
-  '𝚎',
-  '𝚏',
-  '𝚐',
-  '𝚑',
-  '𝚒',
-  '𝚓',
-  '𝚔',
-  '𝚕',
-  '𝚖',
-  '𝚗',
-  '𝚘',
-  '𝚙',
-  '𝚚',
-  '𝚛',
-  '𝚜',
-  '𝚝',
-  '𝚞',
-  '𝚟',
-  '𝚠',
-  '𝚡',
-  '𝚢',
-  '𝚣'
-];
 const latinDoubleStruckItalic: string[] = ['ⅅ', 'ⅆ', 'ⅇ', 'ⅈ', 'ⅉ'];
 
 // Greek Alphabets
@@ -1504,36 +654,7 @@ const greekSpecialSansSerifBold: string[] = ['𝞊', '𝞋', '𝞌', '𝞍', '�
 // Other alphabets.
 const hebrewLetters: string[] = ['ℵ', 'ℶ', 'ℷ', 'ℸ'];
 
-const allLetters: string[] = capitalLatin.concat(
-  smallLatin,
-  capitalLatinFullWidth,
-  smallLatinFullWidth,
-  capitalLatinBold,
-  smallLatinBold,
-  capitalLatinItalic,
-  capitalLatinBoldItalic,
-  smallLatinBoldItalic,
-  smallLatinItalic,
-  capitalLatinScript,
-  smallLatinScript,
-  capitalLatinBoldScript,
-  smallLatinBoldScript,
-  capitalLatinFraktur,
-  smallLatinFraktur,
-  capitalLatinDoubleStruck,
-  smallLatinDoubleStruck,
-  capitalLatinBoldFraktur,
-  smallLatinBoldFraktur,
-  capitalLatinSansSerif,
-  smallLatinSansSerif,
-  capitalLatinSansSerifBold,
-  smallLatinSansSerifBold,
-  capitalLatinSansSerifItalic,
-  smallLatinSansSerifItalic,
-  capitalLatinSansSerifBoldItalic,
-  smallLatinSansSerifBoldItalic,
-  capitalLatinMonospace,
-  smallLatinMonospace,
+let allLetters: string[] = [].concat(
   latinDoubleStruckItalic,
   capitalGreek,
   smallGreek,
@@ -1554,8 +675,6 @@ const allLetters: string[] = capitalLatin.concat(
   greekSpecialSansSerifBold,
   hebrewLetters
 );
-
-export const allLettersRegExp = new RegExp(allLetters.join('|'));
 
 // Operator symbols
 const additions: string[] = [
@@ -2384,7 +1503,7 @@ const geometryOps: string[] = [
   '▽',
   '◁'
 ];
-const prefixOps: string[] = ['∀', '∃', '∆', '∇', '∂', '∁', '∄'];
+const prefixOps: string[] = ['∀', '∃', '∆', '∁', '∄'];
 const prefixOpsBold: string[] = ['𝛁', '𝛛', '𝟊', '𝟋'];
 const prefixOpsItalic: string[] = ['𝛻', '𝜕'];
 const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
@@ -2895,186 +2014,174 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   // Single characters.
   // Latin alphabets.
-  {
-    set: smallLatin,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: capitalLatin,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: smallLatinFullWidth,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: capitalLatinFullWidth,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: smallLatinBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: capitalLatinBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: smallLatinItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: capitalLatinItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: smallLatinBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDITALIC
-  },
-  {
-    set: capitalLatinBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDITALIC
-  },
-  {
-    set: smallLatinScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SCRIPT
-  },
-  {
-    set: capitalLatinScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SCRIPT
-  },
-  {
-    set: smallLatinBoldScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDSCRIPT
-  },
-  {
-    set: capitalLatinBoldScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDSCRIPT
-  },
-  {
-    set: smallLatinFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.FRAKTUR
-  },
-  {
-    set: capitalLatinFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.FRAKTUR
-  },
-  {
-    set: smallLatinDoubleStruck,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: capitalLatinDoubleStruck,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: smallLatinBoldFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDFRAKTUR
-  },
-  {
-    set: capitalLatinBoldFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDFRAKTUR
-  },
-  {
-    set: smallLatinSansSerif,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIF
-  },
-  {
-    set: capitalLatinSansSerif,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIF
-  },
-  {
-    set: smallLatinSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: capitalLatinSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: smallLatinSansSerifItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFITALIC
-  },
-  {
-    set: capitalLatinSansSerifItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFITALIC
-  },
-  {
-    set: smallLatinSansSerifBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLDITALIC
-  },
-  {
-    set: capitalLatinSansSerifBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLDITALIC
-  },
-  {
-    set: smallLatinMonospace,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.MONOSPACE
-  },
-  {
-    set: capitalLatinMonospace,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.MONOSPACE
-  },
+  // {
+  //   set: smallLatinFullWidth,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.NORMAL
+  // },
+  // {
+  //   set: capitalLatinFullWidth,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.NORMAL
+  // },
+  // {
+  //   set: smallLatinBold,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLD
+  // },
+  // {
+  //   set: capitalLatinBold,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLD
+  // },
+  // {
+  //   set: smallLatinItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.ITALIC
+  // },
+  // {
+  //   set: capitalLatinItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.ITALIC
+  // },
+  // {
+  //   set: smallLatinBoldItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLDITALIC
+  // },
+  // {
+  //   set: capitalLatinBoldItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLDITALIC
+  // },
+  // {
+  //   set: smallLatinScript,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SCRIPT
+  // },
+  // {
+  //   set: capitalLatinScript,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SCRIPT
+  // },
+  // {
+  //   set: smallLatinBoldScript,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLDSCRIPT
+  // },
+  // {
+  //   set: capitalLatinBoldScript,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLDSCRIPT
+  // },
+  // {
+  //   set: smallLatinFraktur,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.FRAKTUR
+  // },
+  // {
+  //   set: capitalLatinFraktur,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.FRAKTUR
+  // },
+  // {
+  //   set: smallLatinDoubleStruck,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.DOUBLESTRUCK
+  // },
+  // {
+  //   set: capitalLatinDoubleStruck,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.DOUBLESTRUCK
+  // },
+  // {
+  //   set: smallLatinBoldFraktur,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLDFRAKTUR
+  // },
+  // {
+  //   set: capitalLatinBoldFraktur,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.BOLDFRAKTUR
+  // },
+  // {
+  //   set: smallLatinSansSerif,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIF
+  // },
+  // {
+  //   set: capitalLatinSansSerif,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIF
+  // },
+  // {
+  //   set: smallLatinSansSerifBold,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIFBOLD
+  // },
+  // {
+  //   set: capitalLatinSansSerifBold,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIFBOLD
+  // },
+  // {
+  //   set: smallLatinSansSerifItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIFITALIC
+  // },
+  // {
+  //   set: capitalLatinSansSerifItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIFITALIC
+  // },
+  // {
+  //   set: smallLatinSansSerifBoldItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIFBOLDITALIC
+  // },
+  // {
+  //   set: capitalLatinSansSerifBoldItalic,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.SANSSERIFBOLDITALIC
+  // },
+  // {
+  //   set: smallLatinMonospace,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.MONOSPACE
+  // },
+  // {
+  //   set: capitalLatinMonospace,
+  //   type: SemanticType.IDENTIFIER,
+  //   role: SemanticRole.LATINLETTER,
+  //   font: SemanticFont.MONOSPACE
+  // },
   {
     set: latinDoubleStruckItalic,
     type: SemanticType.IDENTIFIER,
@@ -3366,28 +2473,31 @@ const symbolSetToSemantic_: MeaningSet[] = [
     set: infixFunctions,
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXFUNC
+  },
+  // TODO: Move these elsewhere.
+  // dotless i and j.
+  {
+    set: ['ı', 'ȷ'],
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.LATINLETTER,
+    font: SemanticFont.NORMAL
+  },
+  // dotless i and j.
+  {
+    set: ['𝚤', '𝚥'],
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.LATINLETTER,
+    font: SemanticFont.ITALIC
+  },
+  // script small l
+  // Powerset Cap P.
+  {
+    set: ['ℓ', '℘'],
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.LATINLETTER,
+    font: SemanticFont.SCRIPT
   }
 ];
-
-/**
- * Initializes the dictionary mapping strings to meaning.
- *
- * @returns The dictionary mapping strings to
- *     semantic attributes.
- */
-const meaning_: { [key: string]: SemanticMeaning } = (function () {
-  const result: { [key: string]: SemanticMeaning } = {};
-  for (let i = 0, st: MeaningSet; (st = symbolSetToSemantic_[i]); i++) {
-    st.set.forEach(function (symbol) {
-      result[symbol] = {
-        role: st.role || SemanticRole.UNKNOWN,
-        type: st.type || SemanticType.UNKNOWN,
-        font: st.font || SemanticFont.UNKNOWN
-      };
-    });
-  }
-  return result;
-})();
 
 /**
  * Equality on meaning objects.
@@ -3605,3 +2715,77 @@ addSecondary_('tilde', tildes);
 export function lookupSecondary(kind: string, char: string) {
   return secondary_.get(secKey(kind, char));
 }
+
+
+/**
+ * Initializes the dictionary mapping strings to meaning.
+ *
+ * @returns The dictionary mapping strings to
+ *     semantic attributes.
+ */
+const meaning_: { [key: string]: SemanticMeaning } = (function () {
+  const result: { [key: string]: SemanticMeaning } = {};
+  for (let i = 0, st: MeaningSet; (st = symbolSetToSemantic_[i]); i++) {
+    st.set.forEach(function (symbol) {
+      result[symbol] = {
+        role: st.role || SemanticRole.UNKNOWN,
+        type: st.type || SemanticType.UNKNOWN,
+        font: st.font || SemanticFont.UNKNOWN
+      };
+    });
+  }
+  return result;
+})();
+
+/**
+ * ORDERING:
+ * * Create alphabets/numerals
+ * * Add other semantics for single letters: position, meaning
+ * * Add to regexp (e.g. all letters)
+ * * Add secondary meaning: secondary string, position
+ */
+
+function changeSemantics(alphabet: string[], change: {[position: number]: SemanticMeaning}) {
+  for (let [pos, meaning] of Object.entries(change)) {
+    meaning_[alphabet[pos as unknown as number]] = meaning;
+  }
+}
+
+function singleAlphabet(alphabet: Alphabet.Base, role: SemanticRole, font: SemanticFont, semfont: SemanticFont,
+                        change: {[position: number]: SemanticMeaning} = {}) {
+  let interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
+  if (interval) {
+    interval.unicode.forEach(x => {
+      meaning_[x] = {
+        type: SemanticType.IDENTIFIER,
+        role: role,
+        font: semfont
+      }
+    });
+    changeSemantics(interval.unicode, change);
+    allLetters = allLetters.concat(interval.unicode);
+  }
+}
+
+function alphabets() {
+  for (let font of Object.values(SemanticFont)) {
+    let semfont = font === SemanticFont.FULLWIDTH ? SemanticFont.NORMAL : font;
+    singleAlphabet(Alphabet.Base.LATINCAP, SemanticRole.LATINLETTER, font, semfont);
+    singleAlphabet(Alphabet.Base.LATINSMALL, SemanticRole.LATINLETTER, font, semfont);
+    singleAlphabet(Alphabet.Base.GREEKCAP, SemanticRole.GREEKLETTER, font, semfont);
+    singleAlphabet(Alphabet.Base.GREEKSMALL, SemanticRole.GREEKLETTER, font, semfont,
+                   {0: {type: SemanticType.OPERATOR,
+                        role: SemanticRole.PREFIXOP,
+                        font: semfont},
+                    26: {type: SemanticType.OPERATOR,
+                        role: SemanticRole.PREFIXOP,
+                        font: semfont} 
+                   });
+  }
+  // const capitalLatin: string[] = Alphabet.INTERVALS.get(Alphabet.alphabetName(Alphabet.Base.LATINCAP, Alphabet.Font.NORMAL)).unicode;
+  // const smallLatin: string[] = Alphabet.INTERVALS.get(Alphabet.alphabetName(Alphabet.Base.LATINSMALL, Alphabet.Font.NORMAL)).unicode;
+}
+alphabets();
+
+export const allLettersRegExp = new RegExp(allLetters.join('|'));
+
