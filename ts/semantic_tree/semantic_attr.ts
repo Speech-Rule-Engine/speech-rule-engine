@@ -2073,30 +2073,12 @@ function secKey(kind: string, char: string) {
  * @param chars The characters to look up.
  * @param annotation Optionally an annotation value. Default is `kind`.
  */
-function addSecondary_(kind: string, chars: string[], annotation = '') {
-  for (const char of chars) {
+function addSecondary_(kind: string, char: string, annotation = '') {
     secondary_.set(secKey(kind, char), annotation || kind);
-  }
 }
 
-addSecondary_('d', [
-  'd',
-  'ⅆ',
-  'ｄ',
-  '𝐝',
-  '𝑑',
-  '𝒹',
-  '𝓭',
-  '𝔡',
-  '𝕕',
-  '𝖉',
-  '𝖽',
-  '𝗱',
-  '𝘥',
-  '𝚍'
-]);
-addSecondary_('bar', dashes);
-addSecondary_('tilde', tildes);
+dashes.forEach(x => addSecondary_('bar', x));
+tildes.forEach(x => addSecondary_('tilde', x));
 
 /**
  * Lookup of secondary annotation.
@@ -2140,12 +2122,25 @@ const meaning_: { [key: string]: SemanticMeaning } = (function () {
 
 function changeSemantics(alphabet: string[], change: {[position: number]: SemanticMeaning}) {
   for (let [pos, meaning] of Object.entries(change)) {
-    meaning_[alphabet[pos as unknown as number]] = meaning;
+    let character = alphabet[pos as unknown as number];
+    if (character !== undefined) {
+      meaning_[character] = meaning;
+    }
+  }
+}
+
+function addSecondaries(alphabet: string[], change: {[position: number]: string}) {
+  for (let [pos, meaning] of Object.entries(change)) {
+    let character = alphabet[pos as unknown as number];
+    if (character !== undefined) {
+      addSecondary_(meaning, character)
+    }
   }
 }
 
 function singleAlphabet(alphabet: Alphabet.Base, role: SemanticRole, font: SemanticFont, semfont: SemanticFont,
-                        change: {[position: number]: SemanticMeaning} = {}) {
+                        change: {[position: number]: SemanticMeaning} = {},
+                        secondary: {[position: number]: string} = {}) {
   let interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
   if (interval) {
     interval.unicode.forEach(x => {
@@ -2156,6 +2151,7 @@ function singleAlphabet(alphabet: Alphabet.Base, role: SemanticRole, font: Seman
       }
     });
     changeSemantics(interval.unicode, change);
+    addSecondaries(interval.unicode, secondary)
     allLetters = allLetters.concat(interval.unicode);
   }
 }
@@ -2164,7 +2160,8 @@ function alphabets() {
   for (let font of Object.values(SemanticFont)) {
     let semfont = font === SemanticFont.FULLWIDTH ? SemanticFont.NORMAL : font;
     singleAlphabet(Alphabet.Base.LATINCAP, SemanticRole.LATINLETTER, font, semfont);
-    singleAlphabet(Alphabet.Base.LATINSMALL, SemanticRole.LATINLETTER, font, semfont);
+    singleAlphabet(Alphabet.Base.LATINSMALL, SemanticRole.LATINLETTER, font, semfont, {},
+                   {3: 'd'});
     singleAlphabet(Alphabet.Base.GREEKCAP, SemanticRole.GREEKLETTER, font, semfont);
     singleAlphabet(Alphabet.Base.GREEKSMALL, SemanticRole.GREEKLETTER, font, semfont,
                    {0: {type: SemanticType.OPERATOR,
@@ -2175,10 +2172,7 @@ function alphabets() {
                         font: semfont} 
                    });
   }
-  // const capitalLatin: string[] = Alphabet.INTERVALS.get(Alphabet.alphabetName(Alphabet.Base.LATINCAP, Alphabet.Font.NORMAL)).unicode;
-  // const smallLatin: string[] = Alphabet.INTERVALS.get(Alphabet.alphabetName(Alphabet.Base.LATINSMALL, Alphabet.Font.NORMAL)).unicode;
 }
 alphabets();
 
 export const allLettersRegExp = new RegExp(allLetters.join('|'));
-
