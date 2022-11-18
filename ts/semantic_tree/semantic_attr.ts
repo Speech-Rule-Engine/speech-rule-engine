@@ -51,7 +51,8 @@ import {
   SemanticMeaning,
   SemanticRole,
   SemanticType,
-  SemanticFont
+  SemanticFont,
+  SemanticSecondary
 } from './semantic_meaning';
 import * as Alphabet from '../speech_rules/alphabet';
 
@@ -320,13 +321,6 @@ const greekSpecial: string[] = ['ϐ', 'ϗ', '϶'];
 
 // Other alphabets.
 const hebrewLetters: string[] = ['ℵ', 'ℶ', 'ℷ', 'ℸ'];
-
-let allLetters: string[] = [].concat(
-  latinDoubleStruckItalic,
-  greekDoubleStruck,
-  greekSpecial,
-  hebrewLetters
-);
 
 // Operator symbols
 const additions: string[] = [
@@ -1170,79 +1164,6 @@ const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
 
 // Numbers.
 // Digits.
-const digitsNormal: string[] = [
-  '0',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9'
-];
-const digitsFullWidth: string[] = [
-  '０',
-  '１',
-  '２',
-  '３',
-  '４',
-  '５',
-  '６',
-  '７',
-  '８',
-  '９'
-];
-const digitsBold: string[] = ['𝟎', '𝟏', '𝟐', '𝟑', '𝟒', '𝟓', '𝟔', '𝟕', '𝟖', '𝟗'];
-const digitsDoubleStruck: string[] = [
-  '𝟘',
-  '𝟙',
-  '𝟚',
-  '𝟛',
-  '𝟜',
-  '𝟝',
-  '𝟞',
-  '𝟟',
-  '𝟠',
-  '𝟡'
-];
-const digitsSansSerif: string[] = [
-  '𝟢',
-  '𝟣',
-  '𝟤',
-  '𝟥',
-  '𝟦',
-  '𝟧',
-  '𝟨',
-  '𝟩',
-  '𝟪',
-  '𝟫'
-];
-const digitsSansSerifBold: string[] = [
-  '𝟬',
-  '𝟭',
-  '𝟮',
-  '𝟯',
-  '𝟰',
-  '𝟱',
-  '𝟲',
-  '𝟳',
-  '𝟴',
-  '𝟵'
-];
-const digitsMonospace: string[] = [
-  '𝟶',
-  '𝟷',
-  '𝟸',
-  '𝟹',
-  '𝟺',
-  '𝟻',
-  '𝟼',
-  '𝟽',
-  '𝟾',
-  '𝟿'
-];
 const digitsSuperscript: string[] = [
   '²',
   '³',
@@ -1580,6 +1501,7 @@ interface MeaningSet {
   role: SemanticRole;
   type: SemanticType;
   font?: SemanticFont;
+  secondary?: SemanticSecondary;
 }
 
 /**
@@ -1669,71 +1591,33 @@ const symbolSetToSemantic_: MeaningSet[] = [
     set: latinDoubleStruckItalic,
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.LATINLETTER,
-    font: SemanticFont.DOUBLESTRUCKITALIC
+    font: SemanticFont.DOUBLESTRUCKITALIC,
+    secondary: SemanticSecondary.ALLLETTERS
   },
   // Greek rest characters.
   {
     set: greekDoubleStruck,
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.DOUBLESTRUCK
+    font: SemanticFont.DOUBLESTRUCK,
+    secondary: SemanticSecondary.ALLLETTERS
   },
   {
     set: greekSpecial,
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.NORMAL
+    font: SemanticFont.NORMAL,
+    secondary: SemanticSecondary.ALLLETTERS
   },
   // Other alphabets.
   {
     set: hebrewLetters,
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.OTHERLETTER,
-    font: SemanticFont.NORMAL
+    font: SemanticFont.NORMAL,
+    secondary: SemanticSecondary.ALLLETTERS
   },
   // Numbers.
-  {
-    set: digitsNormal,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: digitsFullWidth,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: digitsBold,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: digitsDoubleStruck,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: digitsSansSerif,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.SANSSERIF
-  },
-  {
-    set: digitsSansSerifBold,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: digitsMonospace,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.MONOSPACE
-  },
   {
     set: numbers,
     type: SemanticType.NUMBER,
@@ -2070,15 +1954,15 @@ function secKey(kind: string, char: string) {
  * Builds the secondary annotation structure.
  *
  * @param kind The kind of annotation.
- * @param chars The characters to look up.
+ * @param char The character to define a secondary meaning on.
  * @param annotation Optionally an annotation value. Default is `kind`.
  */
-function addSecondary_(kind: string, char: string, annotation = '') {
+function addSecondary(kind: string, char: string, annotation = '') {
     secondary_.set(secKey(kind, char), annotation || kind);
 }
 
-dashes.forEach(x => addSecondary_('bar', x));
-tildes.forEach(x => addSecondary_('tilde', x));
+dashes.forEach(x => addSecondary('bar', x));
+tildes.forEach(x => addSecondary('tilde', x));
 
 /**
  * Lookup of secondary annotation.
@@ -2107,6 +1991,9 @@ const meaning_: { [key: string]: SemanticMeaning } = (function () {
         type: st.type || SemanticType.UNKNOWN,
         font: st.font || SemanticFont.UNKNOWN
       };
+      if (st.secondary) {
+        addSecondary(st.secondary, symbol);
+      }
     });
   }
   return result;
@@ -2133,37 +2020,39 @@ function addSecondaries(alphabet: string[], change: {[position: number]: string}
   for (let [pos, meaning] of Object.entries(change)) {
     let character = alphabet[pos as unknown as number];
     if (character !== undefined) {
-      addSecondary_(meaning, character)
+      addSecondary(meaning, character)
     }
   }
 }
 
-function singleAlphabet(alphabet: Alphabet.Base, role: SemanticRole, font: SemanticFont, semfont: SemanticFont,
+function singleAlphabet(alphabet: Alphabet.Base, type: SemanticType,
+                        role: SemanticRole, font: SemanticFont, semfont: SemanticFont,
+                        secondaries: SemanticSecondary[] = [],
                         change: {[position: number]: SemanticMeaning} = {},
                         secondary: {[position: number]: string} = {}) {
   let interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
   if (interval) {
     interval.unicode.forEach(x => {
       meaning_[x] = {
-        type: SemanticType.IDENTIFIER,
+        type: type,
         role: role,
         font: semfont
       }
+      secondaries.forEach(sec => addSecondary(sec, x));
     });
     changeSemantics(interval.unicode, change);
-    addSecondaries(interval.unicode, secondary)
-    allLetters = allLetters.concat(interval.unicode);
+    addSecondaries(interval.unicode, secondary);
   }
 }
 
 function alphabets() {
   for (let font of Object.values(SemanticFont)) {
     let semfont = font === SemanticFont.FULLWIDTH ? SemanticFont.NORMAL : font;
-    singleAlphabet(Alphabet.Base.LATINCAP, SemanticRole.LATINLETTER, font, semfont);
-    singleAlphabet(Alphabet.Base.LATINSMALL, SemanticRole.LATINLETTER, font, semfont, {},
+    singleAlphabet(Alphabet.Base.LATINCAP, SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, font, semfont, [SemanticSecondary.ALLLETTERS]);
+    singleAlphabet(Alphabet.Base.LATINSMALL, SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, font, semfont, [SemanticSecondary.ALLLETTERS], {},
                    {3: 'd'});
-    singleAlphabet(Alphabet.Base.GREEKCAP, SemanticRole.GREEKLETTER, font, semfont);
-    singleAlphabet(Alphabet.Base.GREEKSMALL, SemanticRole.GREEKLETTER, font, semfont,
+    singleAlphabet(Alphabet.Base.GREEKCAP, SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER, font, semfont, [SemanticSecondary.ALLLETTERS]);
+    singleAlphabet(Alphabet.Base.GREEKSMALL, SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER, font, semfont, [SemanticSecondary.ALLLETTERS],
                    {0: {type: SemanticType.OPERATOR,
                         role: SemanticRole.PREFIXOP,
                         font: semfont},
@@ -2171,8 +2060,7 @@ function alphabets() {
                         role: SemanticRole.PREFIXOP,
                         font: semfont} 
                    });
+    singleAlphabet(Alphabet.Base.DIGIT, SemanticType.NUMBER, SemanticRole.INTEGER, font, semfont);
   }
 }
 alphabets();
-
-export const allLettersRegExp = new RegExp(allLetters.join('|'));

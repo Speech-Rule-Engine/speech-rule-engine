@@ -20,7 +20,7 @@
  */
 
 import * as SemanticAttr from './semantic_attr';
-import { SemanticRole, SemanticType } from './semantic_meaning';
+import { SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { getEmbellishedInner } from './semantic_util';
 
@@ -68,6 +68,8 @@ export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
  */
 export function isAccent(node: SemanticNode): boolean {
   const inftyReg = new RegExp('∞|᪲');
+  // TODO (sorge) Simplify this once meaning of all characters is fully
+    // defined. Improve dealing with Infinity.
   return (
     isType(node, SemanticType.FENCE) ||
     isType(node, SemanticType.PUNCTUATION) ||
@@ -78,7 +80,8 @@ export function isAccent(node: SemanticNode): boolean {
     isType(node, SemanticType.RELATION) ||
     (isType(node, SemanticType.IDENTIFIER) &&
       isRole(node, SemanticRole.UNKNOWN) &&
-      !node.textContent.match(SemanticAttr.allLettersRegExp) &&
+      !SemanticAttr.lookupSecondary(SemanticSecondary.ALLLETTERS,
+                                    node.textContent) &&
       !node.textContent.match(inftyReg))
   );
 }

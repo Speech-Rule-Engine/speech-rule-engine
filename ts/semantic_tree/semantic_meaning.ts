@@ -24,6 +24,7 @@ export interface SemanticMeaning {
   type: SemanticType;
   role: SemanticRole;
   font: SemanticFont;
+  secondary?: SemanticSecondary;
 }
 
 /**
@@ -281,4 +282,11 @@ enum ExtraFont {
 
 export type SemanticFont = Alphabet.Font | ExtraFont;
 export const SemanticFont = { ...Alphabet.Font, ...ExtraFont };
+
+enum SecondaryEnum {
+  ALLLETTERS = 'allLetters'
+}
+
+export type SemanticSecondary = Alphabet.Base | SecondaryEnum;
+export const SemanticSecondary = { ...Alphabet.Base, ...SecondaryEnum };
 
