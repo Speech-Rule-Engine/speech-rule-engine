@@ -1163,31 +1163,6 @@ const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
 // TODO (sorge) Add accented characters.
 
 // Numbers.
-// Digits.
-const digitsSuperscript: string[] = [
-  '²',
-  '³',
-  '¹',
-  '⁰',
-  '⁴',
-  '⁵',
-  '⁶',
-  '⁷',
-  '⁸',
-  '⁹'
-];
-const digitsSubscript: string[] = [
-  '₀',
-  '₁',
-  '₂',
-  '₃',
-  '₄',
-  '₅',
-  '₆',
-  '₇',
-  '₈',
-  '₉'
-];
 const fractions: string[] = [
   '¼',
   '½',
@@ -1211,80 +1186,7 @@ const fractions: string[] = [
   '↉'
 ];
 const enclosedNumbers: string[] =
-  // Encircled numbers.
   [
-    '①',
-    '②',
-    '③',
-    '④',
-    '⑤',
-    '⑥',
-    '⑦',
-    '⑧',
-    '⑨',
-    '⑩',
-    '⑪',
-    '⑫',
-    '⑬',
-    '⑭',
-    '⑮',
-    '⑯',
-    '⑰',
-    '⑱',
-    '⑲',
-    '⑳',
-    '⓪',
-    '⓫',
-    '⓬',
-    '⓭',
-    '⓮',
-    '⓯',
-    '⓰',
-    '⓱',
-    '⓲',
-    '⓳',
-    '⓴',
-    '⓵',
-    '⓶',
-    '⓷',
-    '⓸',
-    '⓹',
-    '⓺',
-    '⓻',
-    '⓼',
-    '⓽',
-    '⓾',
-    '⓿',
-    '❶',
-    '❷',
-    '❸',
-    '❹',
-    '❺',
-    '❻',
-    '❼',
-    '❽',
-    '❾',
-    '❿',
-    '➀',
-    '➁',
-    '➂',
-    '➃',
-    '➄',
-    '➅',
-    '➆',
-    '➇',
-    '➈',
-    '➉',
-    '➊',
-    '➋',
-    '➌',
-    '➍',
-    '➎',
-    '➏',
-    '➐',
-    '➑',
-    '➒',
-    '➓',
     '㉈',
     '㉉',
     '㉊',
@@ -1293,112 +1195,7 @@ const enclosedNumbers: string[] =
     '㉍',
     '㉎',
     '㉏',
-    '㉑',
-    '㉒',
-    '㉓',
-    '㉔',
-    '㉕',
-    '㉖',
-    '㉗',
-    '㉘',
-    '㉙',
-    '㉚',
-    '㉛',
-    '㉜',
-    '㉝',
-    '㉞',
-    '㉟',
-    '㊱',
-    '㊲',
-    '㊳',
-    '㊴',
-    '㊵',
-    '㊶',
-    '㊷',
-    '㊸',
-    '㊹',
-    '㊺',
-    '㊻',
-    '㊼',
-    '㊽',
-    '㊾',
-    '㊿'
   ];
-const fencedNumbers: string[] =
-  // Numbers in Parenthesis.
-  [
-    '⑴',
-    '⑵',
-    '⑶',
-    '⑷',
-    '⑸',
-    '⑹',
-    '⑺',
-    '⑻',
-    '⑼',
-    '⑽',
-    '⑾',
-    '⑿',
-    '⒀',
-    '⒁',
-    '⒂',
-    '⒃',
-    '⒄',
-    '⒅',
-    '⒆',
-    '⒇'
-  ];
-const punctuatedNumbers: string[] =
-  // Numbers with other punctuation.
-  [
-    '⒈',
-    '⒉',
-    '⒊',
-    '⒋',
-    '⒌',
-    '⒍',
-    '⒎',
-    '⒏',
-    '⒐',
-    '⒑',
-    '⒒',
-    '⒓',
-    '⒔',
-    '⒕',
-    '⒖',
-    '⒗',
-    '⒘',
-    '⒙',
-    '⒚',
-    '⒛', // full stop.
-    '🄀',
-    '🄁',
-    '🄂',
-    '🄃',
-    '🄄',
-    '🄅',
-    '🄆',
-    '🄇',
-    '🄈',
-    '🄉',
-    '🄊' // comma.
-  ];
-/**
- * Array of all single digits.
- */
-// const digits: string[] = digitsNormal.concat(
-//       digitsFullWidth, digitsBold, digitsDoubleStruck,
-//       digitsSansSerif, digitsSansSerifBold, digitsMonospace);
-/**
- * Array of all non-digit number symbols.
- */
-const numbers: string[] = fractions;
-const otherNumbers: string[] = digitsSuperscript.concat(
-  digitsSubscript,
-  enclosedNumbers,
-  fencedNumbers,
-  punctuatedNumbers
-);
 
 /**
  * Array of all number symbols.
@@ -1619,14 +1416,14 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   // Numbers.
   {
-    set: numbers,
+    set: fractions,
     type: SemanticType.NUMBER,
     role: SemanticRole.FLOAT
   },
   {
-    set: otherNumbers,
+    set: enclosedNumbers,
     type: SemanticType.NUMBER,
-    role: SemanticRole.OTHERNUMBER
+    role: SemanticRole.INTEGER
   },
   // Operators.
   {
@@ -2037,7 +1834,7 @@ function singleAlphabet(alphabet: Alphabet.Base, type: SemanticType,
         type: type,
         role: role,
         font: semfont
-      }
+      };
       secondaries.forEach(sec => addSecondary(sec, x));
     });
     changeSemantics(interval.unicode, change);
@@ -2046,8 +1843,9 @@ function singleAlphabet(alphabet: Alphabet.Base, type: SemanticType,
 }
 
 function alphabets() {
-  for (let font of Object.values(SemanticFont)) {
-    let semfont = font === SemanticFont.FULLWIDTH ? SemanticFont.NORMAL : font;
+  for (let [name, font] of Object.entries(SemanticFont)) {
+    let emb = !!(Alphabet as any).Embellish[name];
+    let semfont = emb ? SemanticFont.UNKNOWN : (font === SemanticFont.FULLWIDTH ? SemanticFont.NORMAL : font);
     singleAlphabet(Alphabet.Base.LATINCAP, SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, font, semfont, [SemanticSecondary.ALLLETTERS]);
     singleAlphabet(Alphabet.Base.LATINSMALL, SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, font, semfont, [SemanticSecondary.ALLLETTERS], {},
                    {3: 'd'});

@@ -280,8 +280,8 @@ enum ExtraFont {
   UNKNOWN = 'unknown'
 }
 
-export type SemanticFont = Alphabet.Font | ExtraFont;
-export const SemanticFont = { ...Alphabet.Font, ...ExtraFont };
+export type SemanticFont = Alphabet.Font | ExtraFont | Alphabet.Embellish;
+export const SemanticFont = { ...Alphabet.Font, ...ExtraFont, ...Alphabet.Embellish };
 
 enum SecondaryEnum {
   ALLLETTERS = 'allLetters'
