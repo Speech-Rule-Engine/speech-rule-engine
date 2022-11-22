@@ -615,7 +615,10 @@ const inequalities: string[] = [
   '﹤',
   '﹥',
   '＜',
-  '＞'
+  '＞',
+  '⥶',
+  '⥷',
+  '⥸'
 ];
 const setRelations: string[] = [
   '⋢',
@@ -673,7 +676,10 @@ const setRelations: string[] = [
   '⊲',
   '⊳',
   '⊴',
-  '⊵'
+  '⊵',
+  '⥹',
+  '⥺',
+  '⥻'
 ];
 const elementRelations: string[] = [
   '∈',
@@ -688,6 +694,7 @@ const elementRelations: string[] = [
   '⋹',
   '⋿'
 ];
+const setEmpty: string[] = ['∅', '⦰', '⦳', '⦱', '⦲', '⦴'];
 const nonelementRelations: string[] = ['∉'];
 const reelementRelations: string[] = ['∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾'];
 const renonelementRelations: string[] = ['∌'];
@@ -964,19 +971,6 @@ const arrows: string[] = [
   '⥳',
   '⥴',
   '⥵',
-  '⥶',
-  '⥷',
-  '⥸',
-  '⥹',
-  '⥺',
-  '⥻',
-  '⦳',
-  '⦴',
-  '⦽',
-  '⧪',
-  '⧬',
-  '⧭',
-  '⨗',
   '⬀',
   '⬁',
   '⬂',
@@ -1122,6 +1116,7 @@ const intOps: string[] = [
   '⨍',
   '⨎',
   '⨏',
+  '⨗',
   '⨐',
   '⨑',
   '⨒',
@@ -1144,6 +1139,10 @@ const geometryOps: string[] = [
   '⊾',
   '⊿',
   // TODO: Add the entire geometric shape set programmatically.
+  '⦽',
+  '⧪',
+  '⧬',
+  '⧭',
   '△',
   '▷',
   '▽',
@@ -1486,9 +1485,14 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.SET
   },
   {
+    set: setEmpty,
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.SETEMPTY
+  },
+  {
     set: relations,
     type: SemanticType.RELATION,
-    role: SemanticRole.UNKNOWN
+    role: SemanticRole.LOGIC
   },
   {
     set: arrows,
@@ -1823,7 +1827,8 @@ function addSecondaries(alphabet: string[], change: {[position: number]: string}
 }
 
 function singleAlphabet(alphabet: Alphabet.Base, type: SemanticType,
-                        role: SemanticRole, font: SemanticFont, semfont: SemanticFont,
+                        role: SemanticRole, font: SemanticFont,
+                        semfont: SemanticFont,
                         secondaries: SemanticSecondary[] = [],
                         change: {[position: number]: SemanticMeaning} = {},
                         secondary: {[position: number]: string} = {}) {

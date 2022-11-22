@@ -81,7 +81,7 @@ function num2str(num: number): string {
 }
 
 /**
- * Creates a list of unicode charactars from an interval specification.
+ * Creates a list of unicode character codes from an interval specification.
  *
  * @param int Pair of strings that represent the Unicode value
  *      of the start and end character in the interval.
@@ -89,9 +89,9 @@ function num2str(num: number): string {
  * @param int."1" End of range.
  * @param subst Substitutions of characters in the
  *      above interval.
- * @returns The generated interval of Unicode characters.
+ * @returns The generated interval of Unicode character codes.
  */
-export function makeInterval(
+function makeInterval(
   [a, b]: [string, string],
   subst: { [key: string]: string | boolean }
 ): string[] {
@@ -107,6 +107,42 @@ export function makeInterval(
     }
     key = (subst[key] as any) || key;
     result.push(key);
+  }
+  return result;
+}
+
+/**
+ * Creates an interval of unicode characters.
+ * @param int Pair of strings that represent the Unicode value
+ *      of the start and end character in the interval.
+ * @param int."0" Start of range.
+ * @param int."1" End of range.
+ * @param subst Substitutions of characters in the
+ *      above interval.
+ * @returns The generated interval of Unicode characters.
+*/
+function makeCharInterval(
+  int: [string, string],
+  subst: { [key: string]: string | boolean }
+) {
+  return makeInterval(int, subst).
+    map(x => String.fromCodePoint(parseInt(x, 16)));
+}
+
+/**
+ * Creates a list of unicode characters from mix interval specification.
+ *
+ * @param ints A list of hex code strings or hex code intervals.
+ * @return The list of unicode characters.
+ */
+export function makeMultiInterval(ints: (string | [string, string])[]) {
+  let result: string[] = [];
+  for (let int of ints) {
+    if (Array.isArray(int)) {
+      result = result.concat(makeCharInterval(int, {}));
+      continue;
+    }
+    result.push(String.fromCodePoint(parseInt(int, 16)));
   }
   return result;
 }
@@ -734,8 +770,7 @@ export function alphabetName(base: string, font: string) {
 
 for (let proto of PROTO_INTERVALS) {
   const key = alphabetName(proto.base, proto.font);
-  const interval = makeInterval(proto.interval, proto.subst).
-    map(x => String.fromCodePoint(parseInt(x, 16)));
+  const interval = makeCharInterval(proto.interval, proto.subst);
   let alphabet = INTERVALS.get(key);
   if (alphabet) {
     alphabet.unicode = alphabet.unicode.concat(interval);

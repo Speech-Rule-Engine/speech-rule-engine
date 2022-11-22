@@ -262,6 +262,8 @@ export const enum SemanticRole {
   HYP = 'hyp',
 
   AXIOM = 'axiom',
+  LOGIC = 'logic',
+
   // General
   UNKNOWN = 'unknown',
 
