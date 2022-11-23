@@ -313,15 +313,6 @@ const metricFences: string[] = ['‖', '∥', '⦀', '⫴'];
 // const allFences: string[] = neutralFences.concat(
 //   leftFences, rightFences, topFences, bottomFences);
 
-// Identifiers.
-const latinDoubleStruckItalic: string[] = ['ⅅ', 'ⅆ', 'ⅇ', 'ⅈ', 'ⅉ'];
-
-const greekDoubleStruck: string[] = ['ℼ', 'ℽ', 'ℾ', 'ℿ'];
-const greekSpecial: string[] = ['ϐ', 'ϗ', '϶'];
-
-// Other alphabets.
-const hebrewLetters: string[] = ['ℵ', 'ℶ', 'ℷ', 'ℸ'];
-
 // Operator symbols
 const additions: string[] = [
   '+',
@@ -1132,6 +1123,7 @@ const intOps: string[] = [
   '⨜'
 ];
 const geometryOps: string[] = [
+  // Angles!
   '∟',
   '∠',
   '∡',
@@ -1142,17 +1134,8 @@ const geometryOps: string[] = [
   '⦽',
   '⧪',
   '⧬',
-  '⧭',
-  '△',
-  '▷',
-  '▽',
-  '◁'
+  '⧭'
 ];
-const prefixOps: string[] = ['∀', '∃', '∆', '∁', '∄'];
-const prefixOpsBold: string[] = ['𝛁', '𝛛', '𝟊', '𝟋'];
-const prefixOpsItalic: string[] = ['𝛻', '𝜕'];
-const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
-// TODO (sorge) Insert nabla, differential operators sans serif bold italic
 
 // const operatorBits: string[] =
 //     // TODO (sorge) What to do if single glyphs of big ops occur on their own.
@@ -1160,41 +1143,6 @@ const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
 
 // Accents.
 // TODO (sorge) Add accented characters.
-
-// Numbers.
-const fractions: string[] = [
-  '¼',
-  '½',
-  '¾',
-  '⅐',
-  '⅑',
-  '⅒',
-  '⅓',
-  '⅔',
-  '⅕',
-  '⅖',
-  '⅗',
-  '⅘',
-  '⅙',
-  '⅚',
-  '⅛',
-  '⅜',
-  '⅝',
-  '⅞',
-  '⅟',
-  '↉'
-];
-const enclosedNumbers: string[] =
-  [
-    '㉈',
-    '㉉',
-    '㉊',
-    '㉋',
-    '㉌',
-    '㉍',
-    '㉎',
-    '㉏',
-  ];
 
 /**
  * Array of all number symbols.
@@ -1384,7 +1332,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   // Latin rest characters
   {
-    set: latinDoubleStruckItalic,
+    set: Alphabet.makeMultiInterval([ [ '2145', '2149' ] ]),
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.LATINLETTER,
     font: SemanticFont.DOUBLESTRUCKITALIC,
@@ -1392,14 +1340,14 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   // Greek rest characters.
   {
-    set: greekDoubleStruck,
+    set: Alphabet.makeMultiInterval([ [ '213c', '213f' ] ]),
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.GREEKLETTER,
     font: SemanticFont.DOUBLESTRUCK,
     secondary: SemanticSecondary.ALLLETTERS
   },
   {
-    set: greekSpecial,
+    set: ['ϐ', 'ϗ', '϶'],
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.GREEKLETTER,
     font: SemanticFont.NORMAL,
@@ -1407,7 +1355,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   // Other alphabets.
   {
-    set: hebrewLetters,
+    set: Alphabet.makeMultiInterval([ [ '2135', '2138' ] ]),
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.OTHERLETTER,
     font: SemanticFont.NORMAL,
@@ -1415,12 +1363,12 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   // Numbers.
   {
-    set: fractions,
+    set: Alphabet.makeMultiInterval([ [ '00bc', '00be' ], [ '2150', '215f' ], '2189' ]),
     type: SemanticType.NUMBER,
     role: SemanticRole.FLOAT
   },
   {
-    set: enclosedNumbers,
+    set: Alphabet.makeMultiInterval([ [ '3248', '324f' ] ]),
     type: SemanticType.NUMBER,
     role: SemanticRole.INTEGER
   },
@@ -1446,27 +1394,15 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.DIVISION
   },
   {
-    set: prefixOps,
+    set: ['∀', '∃', '∆', '∁', '∄'],
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXOP
   },
   {
-    set: prefixOpsBold,
+    set: ['𝟊', '𝟋'],
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXOP,
     font: SemanticFont.BOLD
-  },
-  {
-    set: prefixOpsItalic,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXOP,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: prefixOpsSansSerifBold,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXOP,
-    font: SemanticFont.SANSSERIFBOLD
   },
   // Relations
   {
@@ -1532,6 +1468,21 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.INTEGRAL
   },
   {
+    set: Alphabet.makeMultiInterval([['2500', '257F']]),
+    type: SemanticType.RELATION,
+    role: SemanticRole.BOX
+  },
+  {
+    set: Alphabet.makeMultiInterval([['2580', '259F']]),
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.BLOCK
+  },
+  {
+    set: Alphabet.makeMultiInterval([['25A0', '25FF'], ['2B12', '2B2F'], ['2B50', '2B59']]),
+    type: SemanticType.RELATION,
+    role: SemanticRole.GEOMETRY
+  },
+  {
     set: geometryOps, // TODO: Change that after speech rule work?
     type: SemanticType.OPERATOR,
     role: SemanticRole.GEOMETRY
@@ -1574,6 +1525,14 @@ const symbolSetToSemantic_: MeaningSet[] = [
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.LATINLETTER,
     font: SemanticFont.SCRIPT
+  },
+  {
+    set: Alphabet.makeMultiInterval(
+      [['c0', 'd6'], ['d8', 'f6'], ['f8', '1bf'],
+       ['1c4', '2af'], ['1e00', '1ef9']]),
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.LATINLETTER,
+    font: SemanticFont.NORMAL
   }
 ];
 

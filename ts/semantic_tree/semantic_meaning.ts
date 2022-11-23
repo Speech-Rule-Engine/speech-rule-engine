@@ -210,6 +210,8 @@ export const enum SemanticRole {
   INTEGRAL = 'integral',
 
   GEOMETRY = 'geometry',
+  BOX = 'box',
+  BLOCK = 'block',
   // Binary operations.
   ADDITION = 'addition',
   MULTIPLICATION = 'multiplication',

@@ -91,7 +91,7 @@ function num2str(num: number): string {
  *      above interval.
  * @returns The generated interval of Unicode character codes.
  */
-function makeInterval(
+export function makeInterval(
   [a, b]: [string, string],
   subst: { [key: string]: string | boolean }
 ): string[] {
