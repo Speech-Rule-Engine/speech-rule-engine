@@ -67,7 +67,6 @@ import * as Alphabet from '../speech_rules/alphabet';
 // Punctuation Characters.
 const generalPunctuations: string[] = [
   '!',
-  '"',
   '#',
   '%',
   '&',
@@ -80,8 +79,6 @@ const generalPunctuations: string[] = [
   '¶',
   '¿',
   '‗',
-  '†',
-  '‡',
   '•',
   '‣',
   '․',
@@ -117,11 +114,9 @@ const generalPunctuations: string[] = [
   '⁜',
   '⁝',
   '⁞',
-  '︐',
   '︔',
   '︕',
   '︖',
-  '︰',
   '﹅',
   '﹆',
   '﹉',
@@ -138,19 +133,42 @@ const generalPunctuations: string[] = [
   '﹪',
   '﹫',
   '！',
-  '＂',
   '＃',
   '％',
   '＆',
-  '＇',
   '＊',
   '／',
   '；',
   '？',
   '＠',
-  '＼'
+  '＼',
+  '∴',
+'∵',
+'∶',
+'⨾',
+'⨟',
 ];
-const colons: string[] = ['︓', ':', '：', '﹕'];
+
+const quotes: string[] = [
+  '"',
+  '︐',
+  '＂',
+  '＇',
+'˝',
+'‘',
+'’',
+'‚',
+'‛',
+'“',
+'”',
+'„',
+'‟',
+'‹',
+'›',
+'»',
+'«',
+];
+const colons: string[] = ['︓', ':', '：', '﹕', '︰', '⦂'];
 const invisibleComma_: string = String.fromCodePoint(0x2063);
 const commas: string[] = ['，', '﹐', ',', invisibleComma_];
 const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
@@ -172,11 +190,44 @@ const dashes: string[] = [
   '‐',
   '‑',
   '‾',
-  '_'
+  '_',
+  '﹍',
+  '﹎',
+  '﹏',
+'＿',
+'￣',
+
 ];
-const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰'];
+const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰', '〜', '～'];
 const primes: string[] = ["'", '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
 const degrees: string[] = ['°'];
+const overaccents: string[] = [
+  '^',
+  'ˇ',
+  '`',
+  '¨',
+  'ª',
+  '´',
+'º',
+'˘',
+'˙',
+'˚',
+'⁀',
+'⁺',
+'⁽',
+'⁾',
+'＾',
+'｀',
+];
+const underaccents: string[] = [
+  '¸',
+'˛',
+'‿',
+'⁔',
+'₊',
+'₍',
+'₎',
+]
 
 // Fences.
 // Fences are treated slightly differently from other symbols as we want to
@@ -304,7 +355,10 @@ const neutralFences: string[] = [
   '｜',
   '￤',
   '︱',
-  '︲'
+  '︲',
+'︳',
+'︴',
+'￨',
 ];
 const metricFences: string[] = ['‖', '∥', '⦀', '⫴'];
 /**
@@ -319,30 +373,60 @@ const additions: string[] = [
   '±',
   '∓',
   '∔',
-  '∧',
   '∨',
-  '∩',
   '∪',
   '⊌',
   '⊍',
   '⊎',
-  '⊓',
   '⊔',
   '⊝',
   '⊞',
-  '⊤',
-  '⊥',
-  '⊺',
   '⊻',
-  '⊼',
   '⋄',
   '⋎',
-  '⋏',
-  '⋒',
   '⋓',
-  '⩞',
   '⊕',
-  '⋔'
+  '✛',
+  '✜',
+  '➕',
+  '﹢',
+  '＋',
+  '⨹',
+  '⨢',
+  '⨣',
+  '⨤',
+  '⨥',
+  '⨦',
+  '⨧',
+  '⨨',
+  '⨭',
+  '⨮',
+'⫝̸',
+'⫝',
+'⧺',
+'⧻',
+'⧾',
+'⊽',
+'⟏',
+'⩂',
+'⩅',
+'⩆',
+'⩈',
+'⩊',
+'⩌',
+'⩏',
+'⩐',
+'⩒',
+'⩔',
+'⩖',
+'⩗',
+'⩙',
+'⩛',
+'⩝',
+'⩡',
+'⩢',
+'⩣',
+  '⌄',
 ];
 
 /**
@@ -352,9 +436,11 @@ const invisiblePlus_: string = String.fromCodePoint(0x2064);
 additions.push(invisiblePlus_);
 
 const multiplications: string[] = [
+  // conjugate operators (e.g., Hermitian)
+  '⊹',
   '†',
   '‡',
-  '∐',
+  
   '∗',
   '∘',
   '∙',
@@ -375,7 +461,63 @@ const multiplications: string[] = [
   '·',
   '*',
   '⊗',
-  '⊙'
+  '⊙',
+  '✕',
+  '✖',
+  '×',
+  '⨯',
+  '⨰',
+  '⨱',
+  '⨲',
+  '⨳',
+  '⨴',
+  '⨵',
+  '⨶',
+  '⨷',
+  '⨻',
+  '⨼',
+  '⨽',
+'⨝',
+'⧑',
+'⧒',
+'⧓',
+'⧔',
+'⧕',
+'⧖',
+'⧗',
+'⧢',
+  '⋔',
+'⫚',
+'⫛',
+
+  '∧',
+  '∩',
+  '⊓',
+  '⊼',
+  '⋏',
+  '⋒',
+  '⩞',
+'⌅',
+'⌆',
+'⟎',
+'⟑',
+'⩀',
+'⩃',
+'⩄',
+'⩇',
+'⩉',
+'⩋',
+'⩍',
+'⩎',
+'⩑',
+'⩓',
+'⩕',
+'⩘',
+'⩚',
+'⩜',
+'⩟',
+'⩠',
+  '⌃',
 ];
 /**
  * Invisible operator for multiplication.
@@ -405,9 +547,13 @@ const subtractions: string[] = [
   '﹣',
   '－',
   '‐',
-  '‑'
+  '‑',
+  '⧿',
 ];
-const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸'];
+const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸', '➗',
+                             '⧵', '⧶', '⧷', '⧸', '⧹',
+
+];
 /**
  * Invisible operator for function application.
  */
@@ -468,7 +614,14 @@ const equalities: string[] = [
   '＝',
   '⩬',
   '⊜',
-  '∷'
+  '∷',
+  '∺',
+'∻',
+'∾',
+'∿',
+'⋍',
+'⩧',
+'⧦',
 ];
 const inequalities: string[] = [
   '<',
@@ -609,8 +762,12 @@ const inequalities: string[] = [
   '＞',
   '⥶',
   '⥷',
-  '⥸'
-];
+  '⥸',
+'⊰',
+'⊱',
+'⧣',
+'⧥',
+'⧡',];
 const setRelations: string[] = [
   '⋢',
   '⋣',
@@ -670,7 +827,20 @@ const setRelations: string[] = [
   '⊵',
   '⥹',
   '⥺',
-  '⥻'
+  '⥻',
+'⟃',
+'⟄',
+'⟇',
+'⟈',
+'⟉',
+'⊶',
+'⊷',
+'⊸',
+'⟕',
+'⟖',
+'⟗',
+'⟜',
+'⧟',
 ];
 const elementRelations: string[] = [
   '∈',
@@ -683,13 +853,39 @@ const elementRelations: string[] = [
   '⋷',
   '⋸',
   '⋹',
-  '⋿'
+  '⋿',
+  '⫙',
+'⟒',
 ];
-const setEmpty: string[] = ['∅', '⦰', '⦳', '⦱', '⦲', '⦴'];
 const nonelementRelations: string[] = ['∉'];
 const reelementRelations: string[] = ['∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾'];
 const renonelementRelations: string[] = ['∌'];
-const relations: string[] = [
+const setEmpty: string[] = ['∅', '⦰', '⦳', '⦱', '⦲', '⦴'];
+const infty: string[] = [
+  '⧜',
+  '⧝',
+  '⧞',
+  '∝',
+  '∞',
+  '᪲'
+]
+const logicIdentifier: string[] = [
+  '⫟',
+  '⫠',
+  '⫧',
+  '⫨',
+  '⫩',
+  '⫪',
+  '⫫',
+'⟘',
+'⟙',
+'⟟',
+'⫱',
+  '⊤',
+  '⊥',
+  '⊺',
+];
+const logicRelations: string[] = [
   // TODO (sorge): Add all the other relations. Currently mainly tacks and
   // turnstyles.
   '⊢',
@@ -705,21 +901,17 @@ const relations: string[] = [
   '⊮',
   '⊯',
   '⫞',
-  '⫟',
-  '⫠',
-  '⫡',
   '⫢',
   '⫣',
   '⫤',
   '⫥',
   '⫦',
-  '⫧',
-  '⫨',
-  '⫩',
-  '⫪',
-  '⫫',
   '⫬',
-  '⫭'
+  '⫭',
+'⟚',
+'⟛',
+'⟝',
+'⟞',
 ];
 const arrows: string[] = [
   '←',
@@ -825,8 +1017,6 @@ const arrows: string[] = [
   '⇾',
   '⇿',
   '⌁',
-  '⌃',
-  '⌄',
   '⌤',
   '⎋',
   '➔',
@@ -1067,6 +1257,75 @@ const arrows: string[] = [
   '⥾',
   '⥿'
 ];
+const relations: string[] = [
+  '⟠',
+'⟡',
+'⟢',
+'⟣',
+'⟤',
+'⟥',
+'⤫',
+'⤬',
+'⦵',
+'⦶',
+'⦷',
+'⦸',
+'⦹',
+'⦺',
+'⦻',
+'⦾',
+'⦿',
+'⧂',
+'⧃',
+'⧄',
+'⧅',
+'⧆',
+'⧇',
+'⧈',
+'⧉',
+'⧊',
+'⧋',
+'⧌',
+'⧍',
+'⧎',
+'⧏',
+'⧐',
+'∤',
+'∦',
+'∹',
+'➰',
+'➿',
+'⟂',
+'⟊',
+  '⫡',
+'⟋',
+'⟍',
+'⩤',
+'⩥',
+'⩨',
+'⩩',
+'⫮',
+'⫯',
+'⫰',
+'⫲',
+'⫳',
+'⫵',
+'⫶',
+'⫻',
+'⫽',
+'⌇',
+'⟁',
+'⟐',
+'⟓',
+'⟔',
+'⦁',
+'⦙',
+'⦚',
+'⧧',
+'⧴',
+'⨠',
+'⨡',
+]
 
 // Big operation symbols
 const sumOps: string[] = [
@@ -1091,7 +1350,8 @@ const sumOps: string[] = [
   '⨊',
   '⨋',
   '⫼',
-  '⫿'
+  '⫿',
+  '⨿'
 ];
 const intOps: string[] = [
   '∫',
@@ -1122,27 +1382,123 @@ const intOps: string[] = [
   '⨛',
   '⨜'
 ];
-const geometryOps: string[] = [
-  // Angles!
+// Angles!
+const angles: string[] = [
   '∟',
   '∠',
   '∡',
   '∢',
   '⊾',
   '⊿',
+  '⍼',
+'⟀',
+'⦛',
+'⦜',
+'⦝',
+'⦞',
+'⦟',
+'⦠',
+'⦡',
+'⦢',
+'⦣',
+'⦤',
+'⦥',
+'⦦',
+'⦧',
+'⦨',
+'⦩',
+'⦪',
+'⦫',
+'⦬',
+'⦭',
+'⦮',
+  '⦯',
+'⌒',
+'⌓',
+  '⌔',
+
+];
+
+const geometryOps = [
   // TODO: Add the entire geometric shape set programmatically.
   '⦽',
   '⧪',
   '⧬',
-  '⧭'
+  '⧭',
+'⧨',
+'⧩',
+'⧫',
+'⧮',
+'⧯',
+'⧰',
+'⧱',
+'⧲',
+'⧳',
+'∎',
+'⌀',
+'⌂',
+'⧠',
+'⨞',
+'⫾',
+'￭',
+'￮',
+'⌑',
 ];
 
-// const operatorBits: string[] =
-//     // TODO (sorge) What to do if single glyphs of big ops occur on their own.
-//     ['⌠', '⌡', '⎶', '⎪', '⎮', '⎯', '⎲', '⎳', '⎷'];
+const operatorBits: string[] =
+  // TODO (sorge) What to do if single glyphs of big ops occur on their own.
+  //  Maybe distribute them into integral/largeop/roots.
+  ['⌠', '⌡', '⎶', '⎪', '⎮', '⎯', '⎲', '⎳', '⎷'];
 
-// Accents.
-// TODO (sorge) Add accented characters.
+const arbitraryChars = [
+  '🄪',
+  '🄫',
+  '🄬',
+  '🆊',
+  'ℏ',
+  '℔',
+  '№',
+  '℗',
+  '℞',
+  '℟',
+  '℠',
+  '℡',
+  '™',
+  '℮',
+  'Ⅎ',
+  'ℹ',
+  '℺',
+  '℻',
+  '⅁',
+  '⅂',
+  '⅃',
+  '⅄',
+  '©',
+  '®',
+  '⅍',
+  'ⅎ'
+];
+
+const units = [
+  '℣',
+  '℥',
+  'Ω',
+  '℧',
+  'K',
+  'Å',
+  '$',
+  '¢',
+  '£',
+  '¤',
+  '¥',
+  'µ',
+  '﹩',
+  '＄',
+  '￠',
+  '￡',
+  '￥',
+  '￦',
+]
 
 /**
  * Array of all number symbols.
@@ -1260,6 +1616,21 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.UNKNOWN
   },
   {
+    set: quotes,
+    type: SemanticType.PUNCTUATION,
+    role: SemanticRole.UNKNOWN
+  },
+  {
+    set: overaccents,
+    type: SemanticType.PUNCTUATION,
+    role: SemanticRole.OVERACCENT
+  },
+  {
+    set: underaccents,
+    type: SemanticType.PUNCTUATION,
+    role: SemanticRole.UNDERACCENT
+  },
+  {
     set: colons,
     type: SemanticType.PUNCTUATION,
     role: SemanticRole.COLON
@@ -1347,7 +1718,9 @@ const symbolSetToSemantic_: MeaningSet[] = [
     secondary: SemanticSecondary.ALLLETTERS
   },
   {
-    set: ['ϐ', 'ϗ', '϶'],
+    set: Alphabet.makeMultiInterval(
+      ['3d0', '3d7', '3f6', [ '1d26', '1d2a' ], '1d5e',
+       '1d60', [ '1d66', '1d6a' ]]),
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.GREEKLETTER,
     font: SemanticFont.NORMAL,
@@ -1368,7 +1741,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.FLOAT
   },
   {
-    set: Alphabet.makeMultiInterval([ [ '3248', '324f' ] ]),
+    set: Alphabet.makeMultiInterval([ '23E8', [ '3248', '324f' ] ]),
     type: SemanticType.NUMBER,
     role: SemanticRole.INTEGER
   },
@@ -1394,7 +1767,16 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.DIVISION
   },
   {
-    set: ['∀', '∃', '∆', '∁', '∄'],
+    set: ['∀', '∃', '∆', '∁', '∄', '√', '∛', '∜',
+'¬',
+'￢',
+'⌐',
+         ],
+    type: SemanticType.OPERATOR,
+    role: SemanticRole.PREFIXOP
+  },
+  {
+    set: operatorBits,
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXOP
   },
@@ -1421,13 +1803,28 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.SET
   },
   {
+    set: relations,
+    type: SemanticType.RELATION,
+    role: SemanticRole.UNKNOWN
+  },
+  {
     set: setEmpty,
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.SETEMPTY
   },
   {
-    set: relations,
+    set: infty,
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.INFTY
+  },
+  {
+    set: logicRelations,
     type: SemanticType.RELATION,
+    role: SemanticRole.LOGIC
+  },
+  {
+    set: logicIdentifier,
+    type: SemanticType.IDENTIFIER,
     role: SemanticRole.LOGIC
   },
   {
@@ -1487,6 +1884,23 @@ const symbolSetToSemantic_: MeaningSet[] = [
     type: SemanticType.OPERATOR,
     role: SemanticRole.GEOMETRY
   },
+  {
+    set: angles, // TODO: Change that after speech rule work?
+    type: SemanticType.OPERATOR,
+    role: SemanticRole.GEOMETRY
+  },
+  // Extra letter symbols (other letters)
+  {
+    set: arbitraryChars,
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.OTHERLETTER
+  },
+  // Units
+  {
+    set: units,
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.UNIT
+  },  
   // Functions
   {
     set: limitFunctions,
@@ -1503,6 +1917,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXFUNC
   },
+  // Remaining Latin Characters
   // TODO: Move these elsewhere.
   // dotless i and j.
   {
@@ -1528,11 +1943,46 @@ const symbolSetToSemantic_: MeaningSet[] = [
   },
   {
     set: Alphabet.makeMultiInterval(
-      [['c0', 'd6'], ['d8', 'f6'], ['f8', '1bf'],
-       ['1c4', '2af'], ['1e00', '1ef9']]),
+      [
+        // Extended Latin with accents
+        ['c0', 'd6'], ['d8', 'f6'], ['f8', '1bf'], ['1c4', '2af'],
+        // Latin phonetic alphabets
+        ['1d00', '1d25'], ['1d6b', '1d9a'], ['1e00', '1ef9'],
+        // Latin combining superscripts
+        [ '363', '36f' ], [ '1dd3', '1de6' ],
+        // Latin combining subscripts
+        [ '1d62', '1d65' ], '1dca',
+        // Latin superscripts
+        '2071', '207f',
+        // Latin subscripts
+        [ '2090', '209c'], '2c7c'
+      ]),
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.LATINLETTER,
     font: SemanticFont.NORMAL
+  },
+  // Remaining Symbols
+  {
+    set: Alphabet.makeMultiInterval(
+      ['2605', '2606', '26aa', '26ab',
+       ['2720', '274d']]),
+    type: SemanticType.OPERATOR,
+    role: SemanticRole.UNKNOWN
+  },
+  // TODO: Checkmarks. Might need their own role. 
+  {
+    set: Alphabet.makeMultiInterval([['214A', '214C'], '2705', '2713', '2714', '2717', '2718']),
+    type: SemanticType.IDENTIFIER,
+    role: SemanticRole.UNKNOWN
+  },
+  // Spaces
+  {
+    set: Alphabet.makeMultiInterval(
+      ['20', 'a0', 'ad', [ '2000', '200f' ], [ '2028', '202f' ],
+       [ '205f', '2060' ], '206a', '206b', '206e', '206f', 'feff',
+       [ 'fff9', 'fffb' ]]),
+    type: SemanticType.TEXT,
+    role: SemanticRole.SPACE
   }
 ];
 

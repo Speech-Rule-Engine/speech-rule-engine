@@ -154,12 +154,12 @@ export const enum SemanticRole {
   INTEGER = 'integer',
   FLOAT = 'float',
   OTHERNUMBER = 'othernumber',
+  INFTY = 'infty',
 
   MIXED = 'mixed',
   // Accents.
   MULTIACCENT = 'multiaccent',
   OVERACCENT = 'overaccent',
-
   UNDERACCENT = 'underaccent',
   // Index and tensor roles.
   UNDEROVER = 'underover',
