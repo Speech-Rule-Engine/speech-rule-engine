@@ -1896,10 +1896,13 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.OTHERLETTER
   },
   // Units
+  //
+  // (Can't give role unit as otherwise string notation like $a4f would not
+  // work)
   {
     set: units,
     type: SemanticType.IDENTIFIER,
-    role: SemanticRole.UNIT
+    role: SemanticRole.UNKNOWN
   },  
   // Functions
   {
