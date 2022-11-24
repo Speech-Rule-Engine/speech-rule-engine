@@ -621,7 +621,8 @@ const equalities: string[] = [
 '∿',
 '⋍',
 '⩧',
-'⧦',
+  '⧦',
+  '∝'
 ];
 const inequalities: string[] = [
   '<',
@@ -865,7 +866,6 @@ const infty: string[] = [
   '⧜',
   '⧝',
   '⧞',
-  '∝',
   '∞',
   '᪲'
 ]
