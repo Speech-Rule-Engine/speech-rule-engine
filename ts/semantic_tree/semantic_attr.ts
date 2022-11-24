@@ -1289,7 +1289,10 @@ const relations: string[] = [
 '⧍',
 '⧎',
 '⧏',
-'⧐',
+  '⧐'
+];
+
+const operators: string[] = [
 '∤',
 '∦',
 '∹',
@@ -1965,6 +1968,11 @@ const symbolSetToSemantic_: MeaningSet[] = [
     font: SemanticFont.NORMAL
   },
   // Remaining Symbols
+  {
+    set: operators,
+    type: SemanticType.OPERATOR,
+    role: SemanticRole.UNKNOWN
+  },
   {
     set: Alphabet.makeMultiInterval(
       ['2605', '2606', '26aa', '26ab',
