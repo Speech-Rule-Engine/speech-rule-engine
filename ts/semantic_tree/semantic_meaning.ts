@@ -288,7 +288,10 @@ export type SemanticFont = Alphabet.Font | ExtraFont | Alphabet.Embellish;
 export const SemanticFont = { ...Alphabet.Font, ...ExtraFont, ...Alphabet.Embellish };
 
 enum SecondaryEnum {
-  ALLLETTERS = 'allLetters'
+  ALLLETTERS = 'allLetters',
+  D = 'd',
+  BAR = 'bar',
+  TILDE = 'tilde'
 }
 
 export type SemanticSecondary = Alphabet.Base | SecondaryEnum;

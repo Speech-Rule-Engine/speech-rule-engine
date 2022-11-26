@@ -67,23 +67,10 @@ export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
  * @returns True if the node is a punctuation, fence or operator.
  */
 export function isAccent(node: SemanticNode): boolean {
-  const inftyReg = new RegExp('∞|᪲');
-  // TODO (sorge) Simplify this once meaning of all characters is fully
-    // defined. Improve dealing with Infinity.
-  return (
-    isType(node, SemanticType.FENCE) ||
+  return isType(node, SemanticType.FENCE) ||
     isType(node, SemanticType.PUNCTUATION) ||
-    // TODO (sorge) Simplify this once meaning of all characters is fully
-    // defined. Improve dealing with Infinity.
-    (isType(node, SemanticType.OPERATOR) &&
-      !node.textContent.match(inftyReg)) ||
-    isType(node, SemanticType.RELATION) ||
-    (isType(node, SemanticType.IDENTIFIER) &&
-      isRole(node, SemanticRole.UNKNOWN) &&
-      !SemanticAttr.lookupSecondary(SemanticSecondary.ALLLETTERS,
-                                    node.textContent) &&
-      !node.textContent.match(inftyReg))
-  );
+    isType(node, SemanticType.OPERATOR) ||
+    isType(node, SemanticType.RELATION);
 }
 
 /**
@@ -161,7 +148,7 @@ export function isIntegralDxBoundary(
   return (
     !!secondNode &&
     isType(secondNode, SemanticType.IDENTIFIER) &&
-    SemanticAttr.lookupSecondary('d', firstNode.textContent)
+    SemanticAttr.lookupSecondary(SemanticSecondary.D, firstNode.textContent)
   );
 }
 
@@ -178,7 +165,7 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
     return (
       firstChar &&
       node.textContent[1] &&
-      SemanticAttr.lookupSecondary('d', firstChar)
+      SemanticAttr.lookupSecondary(SemanticSecondary.D, firstChar)
     );
   }
   return false;

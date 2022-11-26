@@ -23,7 +23,7 @@
 
 import * as DomUtil from '../common/dom_util';
 import * as SemanticAttr from './semantic_attr';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
+import { SemanticFont, SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
 import { SemanticNode } from './semantic_node';
 import { SemanticNodeFactory } from './semantic_node_factory';
@@ -3103,8 +3103,8 @@ export default class SemanticProcessor {
     // We save the original role of the node as accent annotation.
     const content = node.textContent;
     const role =
-      SemanticAttr.lookupSecondary('bar', content) ||
-      SemanticAttr.lookupSecondary('tilde', content) ||
+      SemanticAttr.lookupSecondary(SemanticSecondary.BAR, content) ||
+      SemanticAttr.lookupSecondary(SemanticSecondary.TILDE, content) ||
       node.role;
     node.role =
       type === SemanticType.UNDERSCORE
