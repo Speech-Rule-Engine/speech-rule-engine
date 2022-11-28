@@ -66,18 +66,13 @@ import * as Alphabet from '../speech_rules/alphabet';
  */
 // Punctuation Characters.
 const generalPunctuations: string[] = [
-  '!',
   '#',
   '%',
   '&',
-  ';',
-  '?',
   '@',
   '\\',
-  '¡',
   '§',
   '¶',
-  '¿',
   '‗',
   '•',
   '‣',
@@ -86,25 +81,16 @@ const generalPunctuations: string[] = [
   '‧',
   '‰',
   '‱',
-  '‸',
   '※',
-  '‼',
-  '‽',
-  '‾',
   '⁁',
   '⁂',
   '⁃',
-  '⁇',
-  '⁈',
-  '⁉',
   '⁋',
   '⁌',
   '⁍',
   '⁎',
-  '⁏',
   '⁐',
   '⁑',
-  '⁓',
   '⁕',
   '⁖',
   '⁘',
@@ -114,39 +100,28 @@ const generalPunctuations: string[] = [
   '⁜',
   '⁝',
   '⁞',
-  '︔',
-  '︕',
-  '︖',
   '﹅',
   '﹆',
-  '﹉',
-  '﹊',
-  '﹋',
-  '﹌',
-  '﹔',
-  '﹖',
-  '﹗',
   '﹟',
   '﹠',
   '﹡',
   '﹨',
   '﹪',
   '﹫',
-  '！',
   '＃',
   '％',
   '＆',
   '＊',
   '／',
-  '；',
-  '？',
   '＠',
   '＼',
   '∴',
-'∵',
-'∶',
-'⨾',
-'⨟',
+  '∵',
+  '⁉',
+  '‼',
+  '¿',
+  '⁇',
+  '⁈',
 ];
 
 const quotes: string[] = [
@@ -154,19 +129,42 @@ const quotes: string[] = [
   '︐',
   '＂',
   '＇',
-'˝',
-'‘',
-'’',
-'‚',
-'‛',
-'“',
-'”',
-'„',
-'‟',
-'‹',
-'›',
-'»',
-'«',
+  '˝',
+  '‘',
+  '’',
+  '‚',
+  '‛',
+  '“',
+  '”',
+  '„',
+  '‟',
+  '‹',
+  '›',
+  '»',
+  '«',
+  '¡',
+];
+const semicolons: string[] = [
+  ';',
+  '⁏',
+  '︔',
+  '﹔',
+  '；',
+  '⨾',
+  '⨟'
+];
+const questionmarks: string[] = [
+    '?',
+  '‽',
+  '︖',
+  '﹖',
+  '？'
+]
+const exclamationmarks: string[] = [
+  '!',
+  '︕',
+  '﹗',
+  '！',
 ];
 const colons: string[] = ['︓', ':', '：', '﹕', '︰', '⦂'];
 const invisibleComma_: string = String.fromCodePoint(0x2063);
@@ -175,6 +173,7 @@ const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
 const fullStops: string[] = ['.', '﹒', '．'];
 const dashes: string[] = [
   '¯',
+  '‾',
   '‒',
   '–',
   '—',
@@ -194,11 +193,14 @@ const dashes: string[] = [
   '﹍',
   '﹎',
   '﹏',
-'＿',
-'￣',
-
+  '＿',
+  '￣',
+  '﹉',
+  '﹊',
+  '﹋',
+  '﹌',
 ];
-const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰', '〜', '～'];
+const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰', '〜', '～', '⁓'];
 const primes: string[] = ["'", '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
 const degrees: string[] = ['°'];
 const overaccents: string[] = [
@@ -227,6 +229,7 @@ const underaccents: string[] = [
 '₊',
 '₍',
 '₎',
+  '‸',
 ]
 
 // Fences.
@@ -1258,6 +1261,7 @@ const arrows: string[] = [
   '⥿'
 ];
 const relations: string[] = [
+  '∶',
   '⟠',
 '⟡',
 '⟢',
@@ -1621,7 +1625,22 @@ const symbolSetToSemantic_: MeaningSet[] = [
   {
     set: quotes,
     type: SemanticType.PUNCTUATION,
-    role: SemanticRole.UNKNOWN
+    role: SemanticRole.QUOTES
+  },
+  {
+    set: semicolons,
+    type: SemanticType.PUNCTUATION,
+    role: SemanticRole.SEMICOLON
+  },
+  {
+    set: questionmarks,
+    type: SemanticType.PUNCTUATION,
+    role: SemanticRole.QUESTION
+  },
+  {
+    set: exclamationmarks,
+    type: SemanticType.PUNCTUATION,
+    role: SemanticRole.EXCLAMATION
   },
   {
     set: overaccents,
@@ -1656,12 +1675,14 @@ const symbolSetToSemantic_: MeaningSet[] = [
   {
     set: dashes,
     type: SemanticType.OPERATOR,
-    role: SemanticRole.DASH
+    role: SemanticRole.DASH,
+    secondary: SemanticSecondary.BAR
   },
   {
     set: tildes,
     type: SemanticType.OPERATOR,
-    role: SemanticRole.TILDE
+    role: SemanticRole.TILDE,
+    secondary: SemanticSecondary.TILDE
   },
   {
     set: primes,
@@ -2182,9 +2203,6 @@ function addSecondary(kind: string, char: string, annotation = '') {
     secondary_.set(secKey(kind, char), annotation || kind);
 }
 
-dashes.forEach(x => addSecondary('bar', x));
-tildes.forEach(x => addSecondary('tilde', x));
-
 /**
  * Lookup of secondary annotation.
  *
@@ -2192,7 +2210,7 @@ tildes.forEach(x => addSecondary('tilde', x));
  * @param char The character to look up.
  * @returns The annotation if it exists.
  */
-export function lookupSecondary(kind: string, char: string) {
+export function lookupSecondary(kind: SemanticSecondary, char: string) {
   return secondary_.get(secKey(kind, char));
 }
 
@@ -2273,7 +2291,7 @@ function alphabets() {
     let semfont = emb ? SemanticFont.UNKNOWN : (font === SemanticFont.FULLWIDTH ? SemanticFont.NORMAL : font);
     singleAlphabet(Alphabet.Base.LATINCAP, SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, font, semfont, [SemanticSecondary.ALLLETTERS]);
     singleAlphabet(Alphabet.Base.LATINSMALL, SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, font, semfont, [SemanticSecondary.ALLLETTERS], {},
-                   {3: 'd'});
+                   {3: SemanticSecondary.D});
     singleAlphabet(Alphabet.Base.GREEKCAP, SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER, font, semfont, [SemanticSecondary.ALLLETTERS]);
     singleAlphabet(Alphabet.Base.GREEKSMALL, SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER, font, semfont, [SemanticSecondary.ALLLETTERS],
                    {0: {type: SemanticType.OPERATOR,

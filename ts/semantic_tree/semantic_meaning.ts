@@ -117,8 +117,12 @@ export const enum SemanticType {
 export const enum SemanticRole {
   // Punctuation.
   COMMA = 'comma',
+  SEMICOLON = 'semicolon',
   ELLIPSIS = 'ellipsis',
   FULLSTOP = 'fullstop',
+  QUESTION = 'question',
+  EXCLAMATION = 'exclamation',
+  QUOTES = 'quotes',
   DASH = 'dash',
   TILDE = 'tilde',
   PRIME = 'prime', // Superscript.
