@@ -65,7 +65,7 @@ import * as Alphabet from '../speech_rules/alphabet';
  * character.
  */
 // Punctuation Characters.
-const generalPunctuations: string[] = [
+export const generalPunctuations: string[] = [
   '#',
   '%',
   '&',
@@ -122,9 +122,10 @@ const generalPunctuations: string[] = [
   '¿',
   '⁇',
   '⁈',
+  '¡',
 ];
 
-const quotes: string[] = [
+export const quotes: string[] = [
   '"',
   '︐',
   '＂',
@@ -142,9 +143,8 @@ const quotes: string[] = [
   '›',
   '»',
   '«',
-  '¡',
 ];
-const semicolons: string[] = [
+export const semicolons: string[] = [
   ';',
   '⁏',
   '︔',
@@ -153,25 +153,25 @@ const semicolons: string[] = [
   '⨾',
   '⨟'
 ];
-const questionmarks: string[] = [
+export const questionmarks: string[] = [
     '?',
   '‽',
   '︖',
   '﹖',
   '？'
 ]
-const exclamationmarks: string[] = [
+export const exclamationmarks: string[] = [
   '!',
   '︕',
   '﹗',
   '！',
 ];
-const colons: string[] = ['︓', ':', '：', '﹕', '︰', '⦂'];
-const invisibleComma_: string = String.fromCodePoint(0x2063);
-const commas: string[] = ['，', '﹐', ',', invisibleComma_];
-const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
-const fullStops: string[] = ['.', '﹒', '．'];
-const dashes: string[] = [
+export const colons: string[] = ['︓', ':', '：', '﹕', '︰', '⦂'];
+export const invisibleComma_: string = String.fromCodePoint(0x2063);
+export const commas: string[] = ['，', '﹐', ',', invisibleComma_];
+export const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
+export const fullStops: string[] = ['.', '﹒', '．'];
+export const dashes: string[] = [
   '¯',
   '‾',
   '‒',
@@ -200,10 +200,10 @@ const dashes: string[] = [
   '﹋',
   '﹌',
 ];
-const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰', '〜', '～', '⁓'];
-const primes: string[] = ["'", '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
-const degrees: string[] = ['°'];
-const overaccents: string[] = [
+export const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰', '〜', '～', '⁓'];
+export const primes: string[] = ["'", '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
+export const degrees: string[] = ['°'];
+export const overaccents: string[] = [
   '^',
   'ˇ',
   '`',
@@ -221,7 +221,7 @@ const overaccents: string[] = [
 '＾',
 '｀',
 ];
-const underaccents: string[] = [
+export const underaccents: string[] = [
   '¸',
 '˛',
 '‿',
@@ -238,7 +238,7 @@ const underaccents: string[] = [
 /**
  * Mapping opening to closing fences.
  */
-const openClosePairs: { [key: string]: string } = {
+export const openClosePairs: { [key: string]: string } = {
   // Unicode categories Ps and Pe.
   // Observe that left quotation 301D could also be matched to 301F,
   // but is currently matched to 301E.
@@ -325,7 +325,7 @@ const openClosePairs: { [key: string]: string } = {
 /**
  * Mapping top to bottom fences.
  */
-const topBottomPairs: { [key: string]: string } = {
+export const topBottomPairs: { [key: string]: string } = {
   '\u23b4': '⎵',
   '\u23dc': '⏝',
   '\u23de': '⏟',
@@ -341,13 +341,13 @@ const topBottomPairs: { [key: string]: string } = {
   '\ufe47': '﹈'
 };
 
-const leftFences: string[] = Object.keys(openClosePairs);
-const rightFences: string[] = Object.values(openClosePairs);
+export const leftFences: string[] = Object.keys(openClosePairs);
+export const rightFences: string[] = Object.values(openClosePairs);
 rightFences.push('〟');
-const topFences: string[] = Object.keys(topBottomPairs);
-const bottomFences: string[] = Object.values(topBottomPairs);
+export const topFences: string[] = Object.keys(topBottomPairs);
+export const bottomFences: string[] = Object.values(topBottomPairs);
 
-const neutralFences: string[] = [
+export const neutralFences: string[] = [
   '|',
   '¦',
   '∣',
@@ -363,15 +363,15 @@ const neutralFences: string[] = [
 '︴',
 '￨',
 ];
-const metricFences: string[] = ['‖', '∥', '⦀', '⫴'];
+export const metricFences: string[] = ['‖', '∥', '⦀', '⫴'];
 /**
  * Array of all fences.
  */
-// const allFences: string[] = neutralFences.concat(
+// export const allFences: string[] = neutralFences.concat(
 //   leftFences, rightFences, topFences, bottomFences);
 
 // Operator symbols
-const additions: string[] = [
+export const additions: string[] = [
   '+',
   '±',
   '∓',
@@ -435,10 +435,10 @@ const additions: string[] = [
 /**
  * Invisible operator for plus.
  */
-const invisiblePlus_: string = String.fromCodePoint(0x2064);
+export const invisiblePlus_: string = String.fromCodePoint(0x2064);
 additions.push(invisiblePlus_);
 
-const multiplications: string[] = [
+export const multiplications: string[] = [
   // conjugate operators (e.g., Hermitian)
   '⊹',
   '†',
@@ -525,10 +525,10 @@ const multiplications: string[] = [
 /**
  * Invisible operator for multiplication.
  */
-const invisibleTimes_: string = String.fromCodePoint(0x2062);
+export const invisibleTimes_: string = String.fromCodePoint(0x2062);
 multiplications.push(invisibleTimes_);
 
-const subtractions: string[] = [
+export const subtractions: string[] = [
   '¯',
   '-',
   '⁒',
@@ -553,17 +553,17 @@ const subtractions: string[] = [
   '‑',
   '⧿',
 ];
-const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸', '➗',
+export const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸', '➗',
                              '⧵', '⧶', '⧷', '⧸', '⧹',
 
 ];
 /**
  * Invisible operator for function application.
  */
-const functionApplication_: string = String.fromCodePoint(0x2061);
+export const functionApplication_: string = String.fromCodePoint(0x2061);
 
 // Relation symbols
-const equalities: string[] = [
+export const equalities: string[] = [
   '=',
   '~',
   '⁼',
@@ -627,7 +627,7 @@ const equalities: string[] = [
   '⧦',
   '∝'
 ];
-const inequalities: string[] = [
+export const inequalities: string[] = [
   '<',
   '>',
   '≁',
@@ -772,7 +772,7 @@ const inequalities: string[] = [
 '⧣',
 '⧥',
 '⧡',];
-const setRelations: string[] = [
+export const setRelations: string[] = [
   '⋢',
   '⋣',
   '⋤',
@@ -846,7 +846,7 @@ const setRelations: string[] = [
 '⟜',
 '⧟',
 ];
-const elementRelations: string[] = [
+export const elementRelations: string[] = [
   '∈',
   '∊',
   '⋲',
@@ -861,18 +861,18 @@ const elementRelations: string[] = [
   '⫙',
 '⟒',
 ];
-const nonelementRelations: string[] = ['∉'];
-const reelementRelations: string[] = ['∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾'];
-const renonelementRelations: string[] = ['∌'];
-const setEmpty: string[] = ['∅', '⦰', '⦳', '⦱', '⦲', '⦴'];
-const infty: string[] = [
+export const nonelementRelations: string[] = ['∉'];
+export const reelementRelations: string[] = ['∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾'];
+export const renonelementRelations: string[] = ['∌'];
+export const setEmpty: string[] = ['∅', '⦰', '⦳', '⦱', '⦲', '⦴'];
+export const infty: string[] = [
   '⧜',
   '⧝',
   '⧞',
   '∞',
   '᪲'
 ]
-const logicIdentifier: string[] = [
+export const logicIdentifier: string[] = [
   '⫟',
   '⫠',
   '⫧',
@@ -888,7 +888,7 @@ const logicIdentifier: string[] = [
   '⊥',
   '⊺',
 ];
-const logicRelations: string[] = [
+export const logicRelations: string[] = [
   // TODO (sorge): Add all the other relations. Currently mainly tacks and
   // turnstyles.
   '⊢',
@@ -916,7 +916,7 @@ const logicRelations: string[] = [
 '⟝',
 '⟞',
 ];
-const arrows: string[] = [
+export const arrows: string[] = [
   '←',
   '↑',
   '→',
@@ -1260,7 +1260,7 @@ const arrows: string[] = [
   '⥾',
   '⥿'
 ];
-const relations: string[] = [
+export const relations: string[] = [
   '∶',
   '⟠',
 '⟡',
@@ -1296,7 +1296,7 @@ const relations: string[] = [
   '⧐'
 ];
 
-const operators: string[] = [
+export const operators: string[] = [
 '∤',
 '∦',
 '∹',
@@ -1335,7 +1335,7 @@ const operators: string[] = [
 ]
 
 // Big operation symbols
-const sumOps: string[] = [
+export const sumOps: string[] = [
   '⅀', // double struck
   '∏',
   '∐',
@@ -1360,7 +1360,7 @@ const sumOps: string[] = [
   '⫿',
   '⨿'
 ];
-const intOps: string[] = [
+export const intOps: string[] = [
   '∫',
   '∬',
   '∭',
@@ -1390,7 +1390,7 @@ const intOps: string[] = [
   '⨜'
 ];
 // Angles!
-const angles: string[] = [
+export const angles: string[] = [
   '∟',
   '∠',
   '∡',
@@ -1426,7 +1426,7 @@ const angles: string[] = [
 
 ];
 
-const geometryOps = [
+export const geometryOps = [
   // TODO: Add the entire geometric shape set programmatically.
   '⦽',
   '⧪',
@@ -1452,12 +1452,12 @@ const geometryOps = [
 '⌑',
 ];
 
-const operatorBits: string[] =
+export const operatorBits: string[] =
   // TODO (sorge) What to do if single glyphs of big ops occur on their own.
   //  Maybe distribute them into integral/largeop/roots.
   ['⌠', '⌡', '⎶', '⎪', '⎮', '⎯', '⎲', '⎳', '⎷'];
 
-const arbitraryChars = [
+export const arbitraryChars = [
   '🄪',
   '🄫',
   '🄬',
@@ -1486,7 +1486,7 @@ const arbitraryChars = [
   'ⅎ'
 ];
 
-const units = [
+export const units = [
   '℣',
   '℥',
   'Ω',
@@ -1510,10 +1510,10 @@ const units = [
 /**
  * Array of all number symbols.
  */
-// const allNumbers: string[] = digits.concat(numbers, otherNumbers);
+// export const allNumbers: string[] = digits.concat(numbers, otherNumbers);
 
 // Functions.
-const trigonometricFunctions: string[] = [
+export const trigonometricFunctions: string[] = [
   'cos',
   'cot',
   'csc',
@@ -1533,7 +1533,7 @@ const trigonometricFunctions: string[] = [
   'arc sin',
   'arc tan'
 ];
-const hyperbolicFunctions: string[] = [
+export const hyperbolicFunctions: string[] = [
   'cosh',
   'coth',
   'csch',
@@ -1553,7 +1553,7 @@ const hyperbolicFunctions: string[] = [
   'arcsinh',
   'arctanh'
 ];
-const algebraicFunctions: string[] = [
+export const algebraicFunctions: string[] = [
   'deg',
   'det',
   'dim',
@@ -1562,7 +1562,7 @@ const algebraicFunctions: string[] = [
   'Tr',
   'tr'
 ];
-const elementaryFunctions: string[] = [
+export const elementaryFunctions: string[] = [
   'log',
   'ln',
   'lg',
@@ -1578,7 +1578,7 @@ const elementaryFunctions: string[] = [
 /**
  * All predefined prefix functions.
  */
-const prefixFunctions: string[] = trigonometricFunctions.concat(
+export const prefixFunctions: string[] = trigonometricFunctions.concat(
   hyperbolicFunctions,
   algebraicFunctions,
   elementaryFunctions
