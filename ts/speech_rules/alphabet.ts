@@ -123,7 +123,7 @@ export function makeInterval(
 */
 function makeCharInterval(
   int: [string, string],
-  subst: { [key: string]: string | boolean }
+  subst: { [key: string]: string | boolean } = {}
 ) {
   return makeInterval(int, subst).
     map(x => String.fromCodePoint(parseInt(x, 16)));
@@ -139,7 +139,7 @@ export function makeMultiInterval(ints: (string | [string, string])[]) {
   let result: string[] = [];
   for (let int of ints) {
     if (Array.isArray(int)) {
-      result = result.concat(makeCharInterval(int, {}));
+      result = result.concat(makeCharInterval(int));
       continue;
     }
     result.push(String.fromCodePoint(parseInt(int, 16)));

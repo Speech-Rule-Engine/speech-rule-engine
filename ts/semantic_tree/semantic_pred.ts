@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as SemanticAttr from './semantic_attr';
+import { NamedSymbol, SemanticMap } from './semantic_attr';
 import { SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { getEmbellishedInner } from './semantic_util';
@@ -148,7 +148,7 @@ export function isIntegralDxBoundary(
   return (
     !!secondNode &&
     isType(secondNode, SemanticType.IDENTIFIER) &&
-    SemanticAttr.lookupSecondary(SemanticSecondary.D, firstNode.textContent)
+    SemanticMap.Secondary.has(SemanticSecondary.D, firstNode.textContent)
   );
 }
 
@@ -165,7 +165,7 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
     return (
       firstChar &&
       node.textContent[1] &&
-      SemanticAttr.lookupSecondary(SemanticSecondary.D, firstChar)
+      SemanticMap.Secondary.has(SemanticSecondary.D, firstChar)
     );
   }
   return false;
@@ -193,10 +193,26 @@ export function isEmbellished(node: SemanticNode): SemanticType | null {
   if (node.embellished) {
     return node.embellished;
   }
-  if (SemanticAttr.isEmbellishedType(node.type)) {
+  if (isEmbellishedType(node.type)) {
     return node.type;
   }
   return null;
+}
+
+/**
+ * Determines if a symbol type can be embellished. Primitives that can be
+ * embellished are operators, punctuations, relations, and fences.
+ *
+ * @param type The type.
+ * @returns True if the type can be embellished.
+ */
+function isEmbellishedType(type: SemanticType): boolean {
+  return (
+    type === SemanticType.OPERATOR ||
+    type === SemanticType.RELATION ||
+    type === SemanticType.FENCE ||
+    type === SemanticType.PUNCTUATION
+  );
 }
 
 /**
@@ -644,8 +660,8 @@ export function isImplicit(node: SemanticNode): boolean {
     node.role === SemanticRole.IMPLICIT ||
     (node.role === SemanticRole.UNIT &&
       !!node.contentNodes.length &&
-      node.contentNodes[0].textContent === SemanticAttr.invisibleTimes())
-  );
+      node.contentNodes[0].textContent === NamedSymbol.invisibleTimes
+    ));
 }
 
 /**

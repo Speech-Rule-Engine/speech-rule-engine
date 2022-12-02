@@ -56,6 +56,96 @@ import {
 } from './semantic_meaning';
 import * as Alphabet from '../speech_rules/alphabet';
 
+
+export namespace NamedSymbol {
+
+  /**
+   * Invisible operator for function application.
+   */
+  export const functionApplication = String.fromCodePoint(0x2061);
+
+  /**
+   * Invisible operator for multiplication.
+   */
+  export const invisibleTimes: string = String.fromCodePoint(0x2062);
+
+  /**
+   * The invisible comma character.
+   */
+  export const invisibleComma: string = String.fromCodePoint(0x2063);
+
+  /**
+   * Invisible operator for plus.
+   */
+  export const invisiblePlus: string = String.fromCodePoint(0x2064);
+
+}
+
+
+// Map extensions for semantic maps.
+
+
+const meaning_: Map<string, SemanticMeaning> = new Map();
+
+/**
+ * Secondary annotation facility. This allows to compute a special annotation,
+ * if desired.
+ */
+class secondaryMap extends Map<string, string> {
+
+  /**
+   * @override
+   *
+   * Builds the secondary annotation structure.
+   *
+   * @param kind The kind of annotation.
+   * @param char The character to define a secondary meaning on.
+   * @param annotation Optionally an annotation value. Default is `kind`.
+   */
+  public set(kind: SemanticSecondary, char: string, annotation = '') {
+    super.set(this.secKey(kind, char), annotation || kind);
+    return this;
+  }
+
+  /**
+   * @override
+   *
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   */
+  public has(kind: SemanticSecondary, char: string = '') {
+    return super.has(this.secKey(kind, char));
+  }
+
+  /**
+   * @override
+   *
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   */
+  public get(kind: SemanticSecondary, char: string = '') {
+    return super.get(this.secKey(kind, char));
+  }
+
+  /**
+   * The key generator for secondary annotations.
+   *
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   * @returns The generated key.
+   */
+  private secKey(kind: SemanticSecondary, char: string) {
+    return char ? `${kind} ${char}` : `${kind}`;
+  }
+
+}
+
+export namespace SemanticMap {
+
+  export const Secondary = new secondaryMap();
+
+};
+
 /**
  * Contains the basic mappings of characters/symbols and functions to semantic
  * attributes.
@@ -88,9 +178,7 @@ export const generalPunctuations: string[] = [
   '⁋',
   '⁌',
   '⁍',
-  '⁎',
   '⁐',
-  '⁑',
   '⁕',
   '⁖',
   '⁘',
@@ -104,14 +192,12 @@ export const generalPunctuations: string[] = [
   '﹆',
   '﹟',
   '﹠',
-  '﹡',
   '﹨',
   '﹪',
   '﹫',
   '＃',
   '％',
   '＆',
-  '＊',
   '／',
   '＠',
   '＼',
@@ -167,8 +253,7 @@ export const exclamationmarks: string[] = [
   '！',
 ];
 export const colons: string[] = ['︓', ':', '：', '﹕', '︰', '⦂'];
-export const invisibleComma_: string = String.fromCodePoint(0x2063);
-export const commas: string[] = ['，', '﹐', ',', invisibleComma_];
+export const commas: string[] = ['，', '﹐', ',', NamedSymbol.invisibleComma];
 export const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
 export const fullStops: string[] = ['.', '﹒', '．'];
 export const dashes: string[] = [
@@ -432,18 +517,14 @@ export const additions: string[] = [
   '⌄',
 ];
 
-/**
- * Invisible operator for plus.
- */
-export const invisiblePlus_: string = String.fromCodePoint(0x2064);
-additions.push(invisiblePlus_);
+additions.push(NamedSymbol.invisiblePlus);
 
 export const multiplications: string[] = [
   // conjugate operators (e.g., Hermitian)
   '⊹',
   '†',
   '‡',
-  
+
   '∗',
   '∘',
   '∙',
@@ -463,6 +544,10 @@ export const multiplications: string[] = [
   '○',
   '·',
   '*',
+  '⁎',
+  '⁑',
+  '﹡',
+  '＊',
   '⊗',
   '⊙',
   '✕',
@@ -522,11 +607,7 @@ export const multiplications: string[] = [
 '⩠',
   '⌃',
 ];
-/**
- * Invisible operator for multiplication.
- */
-export const invisibleTimes_: string = String.fromCodePoint(0x2062);
-multiplications.push(invisibleTimes_);
+multiplications.push(NamedSymbol.invisibleTimes);
 
 export const subtractions: string[] = [
   '¯',
@@ -557,10 +638,6 @@ export const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼'
                              '⧵', '⧶', '⧷', '⧸', '⧹',
 
 ];
-/**
- * Invisible operator for function application.
- */
-export const functionApplication_: string = String.fromCodePoint(0x2061);
 
 // Relation symbols
 export const equalities: string[] = [
@@ -1927,7 +2004,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
     set: units,
     type: SemanticType.IDENTIFIER,
     role: SemanticRole.UNKNOWN
-  },  
+  },
   // Functions
   {
     set: limitFunctions,
@@ -2001,7 +2078,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
     type: SemanticType.OPERATOR,
     role: SemanticRole.UNKNOWN
   },
-  // TODO: Checkmarks. Might need their own role. 
+  // TODO: Checkmarks. Might need their own role.
   {
     set: Alphabet.makeMultiInterval([['214A', '214C'], '2705', '2713', '2714', '2717', '2718']),
     type: SemanticType.IDENTIFIER,
@@ -2036,25 +2113,25 @@ export function equal(
   );
 }
 
-/**
- * Lookup the semantic type of a symbol.
- *
- * @param symbol The symbol to which we want to determine the type.
- * @returns The semantic type of the symbol.
- */
-export function lookupType(symbol: string): SemanticType {
-  return meaning_[symbol]?.type || SemanticType.UNKNOWN;
-}
+// /**
+//  * Lookup the semantic type of a symbol.
+//  *
+//  * @param symbol The symbol to which we want to determine the type.
+//  * @returns The semantic type of the symbol.
+//  */
+// export function lookupType(symbol: string): SemanticType {
+//   return meaning_[symbol]?.type || SemanticType.UNKNOWN;
+// }
 
-/**
- * Lookup the semantic role of a symbol.
- *
- * @param symbol The symbol to which we want to determine the role.
- * @returns The semantic role of the symbol.
- */
-export function lookupRole(symbol: string): SemanticRole {
-  return meaning_[symbol]?.role || SemanticRole.UNKNOWN;
-}
+// /**
+//  * Lookup the semantic role of a symbol.
+//  *
+//  * @param symbol The symbol to which we want to determine the role.
+//  * @returns The semantic role of the symbol.
+//  */
+// export function lookupRole(symbol: string): SemanticRole {
+//   return meaning_[symbol]?.role || SemanticRole.UNKNOWN;
+// }
 
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
@@ -2064,63 +2141,13 @@ export function lookupRole(symbol: string): SemanticRole {
  */
 export function lookupMeaning(symbol: string): SemanticMeaning {
   return (
-    meaning_[symbol] || {
+    meaning_.get(symbol) || {
       role: SemanticRole.UNKNOWN,
       type: SemanticType.UNKNOWN,
       font: SemanticFont.UNKNOWN
     }
   );
 }
-
-/**
- * String representation of the invisible times unicode character.
- *
- * @returns The invisible times character.
- */
-export function invisibleTimes(): string {
-  return invisibleTimes_;
-}
-
-/**
- * String representation of the invisible plus unicode character.
- *
- * @returns The invisible plus character.
- */
-export function invisiblePlus(): string {
-  return invisiblePlus_;
-}
-
-/**
- * String representation of the invisible comma unicode character.
- *
- * @returns The invisible comma character.
- */
-export function invisibleComma(): string {
-  return invisibleComma_;
-}
-
-/**
- * String representation of the function application character.
- *
- * @returns The invisible function application character.
- */
-export function functionApplication(): string {
-  return functionApplication_;
-}
-
-// /**
-//  * Decide when two fences match. Currently we match any right to left
-//  * or bottom to top fence and neutral to neutral.
-//  * @param open Opening fence.
-//  * @param close Closing fence.
-//  * @return True if the fences are matching.
-//  */
-// export function isMatchingFenceRole(open: string, close: string): boolean {
-//   return open === SemanticRole.OPEN &&
-//     close === SemanticRole.CLOSE ||
-//     isNeutralFence(open) && isNeutralFence(close) ||
-//     open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
-// }
 
 /**
  * Decide when opening and closing fences match. For neutral fences they have
@@ -2137,106 +2164,27 @@ export function isMatchingFence(open: string, close: string): boolean {
   return openClosePairs[open] === close || topBottomPairs[open] === close;
 }
 
-// /**
-//  * Determines if a fence is an opening fence.
-//  * @param fence Opening fence.
-//  * @return True if the fence is open or neutral.
-//  */
-// export function isOpeningFence(fence: SemanticRole): boolean {
-//   return fence === SemanticRole.OPEN || isNeutralFence(fence);
-// }
-
-// /**
-//  * Determines if a fence is a closing fence.
-//  * @param fence Closing fence.
-//  * @return True if the fence is close or neutral.
-//  */
-// export function isClosingFence(fence: SemanticRole): boolean {
-//   return fence === SemanticRole.CLOSE || isNeutralFence(fence);
-// }
-
-/**
- * Determines if a symbol type can be embellished. Primitives that can be
- * embellished are operators, punctuations, relations, and fences.
- *
- * @param type The type.
- * @returns True if the type can be embellished.
- */
-export function isEmbellishedType(type: SemanticType): boolean {
-  return (
-    type === SemanticType.OPERATOR ||
-    type === SemanticType.RELATION ||
-    type === SemanticType.FENCE ||
-    type === SemanticType.PUNCTUATION
-  );
-}
-
-/**
- * Secondary annotation facility. This allows to compute a special annotation,
- * if desired.
- */
-
-/**
- * The mapping for secondary annotations.
- */
-const secondary_ = new Map();
-
-/**
- * The key generator for secondary annotations.
- *
- * @param kind The kind of annotation.
- * @param char The character to look up.
- * @returns The generated key.
- */
-function secKey(kind: string, char: string) {
-  return `${kind} ${char}`;
-}
-
-/**
- * Builds the secondary annotation structure.
- *
- * @param kind The kind of annotation.
- * @param char The character to define a secondary meaning on.
- * @param annotation Optionally an annotation value. Default is `kind`.
- */
-function addSecondary(kind: string, char: string, annotation = '') {
-    secondary_.set(secKey(kind, char), annotation || kind);
-}
-
-/**
- * Lookup of secondary annotation.
- *
- * @param kind The kind of annotation.
- * @param char The character to look up.
- * @returns The annotation if it exists.
- */
-export function lookupSecondary(kind: SemanticSecondary, char: string) {
-  return secondary_.get(secKey(kind, char));
-}
-
-
 /**
  * Initializes the dictionary mapping strings to meaning.
  *
  * @returns The dictionary mapping strings to
  *     semantic attributes.
  */
-const meaning_: { [key: string]: SemanticMeaning } = (function () {
-  const result: { [key: string]: SemanticMeaning } = {};
+function initMeaning() {
   for (let i = 0, st: MeaningSet; (st = symbolSetToSemantic_[i]); i++) {
     st.set.forEach(function (symbol) {
-      result[symbol] = {
+      meaning_.set(symbol, {
         role: st.role || SemanticRole.UNKNOWN,
         type: st.type || SemanticType.UNKNOWN,
         font: st.font || SemanticFont.UNKNOWN
-      };
+      });
       if (st.secondary) {
-        addSecondary(st.secondary, symbol);
+        SemanticMap.Secondary.set(st.secondary, symbol);
       }
     });
   }
-  return result;
-})();
+};
+initMeaning();
 
 /**
  * ORDERING:
@@ -2250,16 +2198,16 @@ function changeSemantics(alphabet: string[], change: {[position: number]: Semant
   for (let [pos, meaning] of Object.entries(change)) {
     let character = alphabet[pos as unknown as number];
     if (character !== undefined) {
-      meaning_[character] = meaning;
+      meaning_.set(character, meaning);
     }
   }
 }
 
-function addSecondaries(alphabet: string[], change: {[position: number]: string}) {
+function addSecondaries(alphabet: string[], change: {[position: number]: SemanticSecondary}) {
   for (let [pos, meaning] of Object.entries(change)) {
     let character = alphabet[pos as unknown as number];
     if (character !== undefined) {
-      addSecondary(meaning, character)
+      SemanticMap.Secondary.set(meaning, character)
     }
   }
 }
@@ -2269,16 +2217,16 @@ function singleAlphabet(alphabet: Alphabet.Base, type: SemanticType,
                         semfont: SemanticFont,
                         secondaries: SemanticSecondary[] = [],
                         change: {[position: number]: SemanticMeaning} = {},
-                        secondary: {[position: number]: string} = {}) {
+                        secondary: {[position: number]: SemanticSecondary} = {}) {
   let interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
   if (interval) {
     interval.unicode.forEach(x => {
-      meaning_[x] = {
+      meaning_.set(x, {
         type: type,
         role: role,
         font: semfont
-      };
-      secondaries.forEach(sec => addSecondary(sec, x));
+      });
+      secondaries.forEach(sec => SemanticMap.Secondary.set(sec, x));
     });
     changeSemantics(interval.unicode, change);
     addSecondaries(interval.unicode, secondary);
@@ -2299,7 +2247,7 @@ function alphabets() {
                         font: semfont},
                     26: {type: SemanticType.OPERATOR,
                         role: SemanticRole.PREFIXOP,
-                        font: semfont} 
+                        font: semfont}
                    });
     singleAlphabet(Alphabet.Base.DIGIT, SemanticType.NUMBER, SemanticRole.INTEGER, font, semfont);
   }

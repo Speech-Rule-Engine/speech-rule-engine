@@ -24,7 +24,6 @@ export interface SemanticMeaning {
   type: SemanticType;
   role: SemanticRole;
   font: SemanticFont;
-  secondary?: SemanticSecondary;
 }
 
 /**

@@ -21,7 +21,7 @@
  */
 
 import { Attribute } from '../enrich_mathml/enrich_attr';
-import { invisibleComma } from '../semantic_tree/semantic_attr';
+import { NamedSymbol } from '../semantic_tree/semantic_attr';
 import {
   SemanticFont,
   SemanticRole,
@@ -195,7 +195,7 @@ export class RebuildStree {
    */
   public makePunctuation(id: number): SemanticNode {
     const node = this.createNode(id);
-    node.updateContent(invisibleComma());
+    node.updateContent(NamedSymbol.invisibleComma);
     node.role = SemanticRole.DUMMY;
     return node;
   }
