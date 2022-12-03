@@ -22,8 +22,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { NamedSymbol, lookupMeaning } from './semantic_attr';
-import { SemanticMap } from './semantic_attr';
+import { NamedSymbol, SemanticMap } from './semantic_attr';
 import { SemanticFont, SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
 import { SemanticNode } from './semantic_node';
@@ -764,7 +763,7 @@ export default class SemanticProcessor {
       return;
     }
     const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
-    const meaning = content.map(lookupMeaning);
+    const meaning = content.map(x => SemanticMap.Meaning.get(x));
     if (
       meaning.every(function (x) {
         return (
@@ -803,7 +802,7 @@ export default class SemanticProcessor {
       return;
     }
     const content = [...node.textContent];
-    const meaning = content.map(lookupMeaning);
+    const meaning = content.map(x => SemanticMap.Meaning.get(x));
     const singleFont = meaning.reduce(function (prev, curr) {
       if (
         !prev ||
@@ -3104,8 +3103,8 @@ export default class SemanticProcessor {
     // We save the original role of the node as accent annotation.
     const content = node.textContent;
     const role =
-      SemanticMap.Secondary.get(SemanticSecondary.BAR, content) ||
-      SemanticMap.Secondary.get(SemanticSecondary.TILDE, content) ||
+      SemanticMap.Secondary.get(content, SemanticSecondary.BAR) ||
+      SemanticMap.Secondary.get(content, SemanticSecondary.TILDE) ||
       node.role;
     node.role =
       type === SemanticType.UNDERSCORE

@@ -148,7 +148,7 @@ export function isIntegralDxBoundary(
   return (
     !!secondNode &&
     isType(secondNode, SemanticType.IDENTIFIER) &&
-    SemanticMap.Secondary.has(SemanticSecondary.D, firstNode.textContent)
+      SemanticMap.Secondary.has(firstNode.textContent, SemanticSecondary.D)
   );
 }
 
@@ -164,8 +164,8 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
     const firstChar = node.textContent[0];
     return (
       firstChar &&
-      node.textContent[1] &&
-      SemanticMap.Secondary.has(SemanticSecondary.D, firstChar)
+        node.textContent[1] &&
+        SemanticMap.Secondary.has(firstChar, SemanticSecondary.D)
     );
   }
   return false;

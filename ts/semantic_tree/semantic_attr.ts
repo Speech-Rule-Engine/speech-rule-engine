@@ -84,8 +84,22 @@ export namespace NamedSymbol {
 
 // Map extensions for semantic maps.
 
+class meaningMap extends Map<string, SemanticMeaning> {
 
-const meaning_: Map<string, SemanticMeaning> = new Map();
+  /**
+   * Lookup the semantic meaning of a symbol in terms of type and role. If symbol
+   * has no predefined meaning, returns unknown.
+   */
+  public get(symbol: string) {
+    return (
+      super.get(symbol) || {
+        role: SemanticRole.UNKNOWN,
+        type: SemanticType.UNKNOWN,
+        font: SemanticFont.UNKNOWN
+      }
+    );
+  }
+}
 
 /**
  * Secondary annotation facility. This allows to compute a special annotation,
@@ -98,11 +112,11 @@ class secondaryMap extends Map<string, string> {
    *
    * Builds the secondary annotation structure.
    *
-   * @param kind The kind of annotation.
    * @param char The character to define a secondary meaning on.
+   * @param kind The kind of annotation.
    * @param annotation Optionally an annotation value. Default is `kind`.
    */
-  public set(kind: SemanticSecondary, char: string, annotation = '') {
+  public set(char: string, kind: SemanticSecondary, annotation = '') {
     super.set(this.secKey(kind, char), annotation || kind);
     return this;
   }
@@ -113,7 +127,7 @@ class secondaryMap extends Map<string, string> {
    * @param kind The kind of annotation.
    * @param char The character to look up.
    */
-  public has(kind: SemanticSecondary, char: string = '') {
+  public has(char: string, kind?: SemanticSecondary) {
     return super.has(this.secKey(kind, char));
   }
 
@@ -123,7 +137,7 @@ class secondaryMap extends Map<string, string> {
    * @param kind The kind of annotation.
    * @param char The character to look up.
    */
-  public get(kind: SemanticSecondary, char: string = '') {
+  public get(char: string, kind?: SemanticSecondary) {
     return super.get(this.secKey(kind, char));
   }
 
@@ -142,7 +156,115 @@ class secondaryMap extends Map<string, string> {
 
 export namespace SemanticMap {
 
+  /**
+   * Mapping primary meaning of symbols.
+   */
+  export const Meaning = new meaningMap();
+  
+  /**
+   * Secondary meaning.
+   */
   export const Secondary = new secondaryMap();
+
+  // Fences.
+  // Fences are treated slightly differently from other symbols as we want to
+  // record pairs of opening/closing and top/bottom fences.
+  /**
+   * Mapping opening to closing fences.
+   */
+  export const FencesHoriz = new Map([
+    ['(', ')'],
+    ['[', ']'],
+    ['{', '}'],
+    ['⁅', '⁆'],
+    ['〈', '〉'],
+    ['❨', '❩'],
+    ['❪', '❫'],
+    ['❬', '❭'],
+    ['❮', '❯'],
+    ['❰', '❱'],
+    ['❲', '❳'],
+    ['❴', '❵'],
+    ['⟅', '⟆'],
+    ['⟦', '⟧'],
+    ['⟨', '⟩'],
+    ['⟪', '⟫'],
+    ['⟬', '⟭'],
+    ['⟮', '⟯'],
+    ['⦃', '⦄'],
+    ['⦅', '⦆'],
+    ['⦇', '⦈'],
+    ['⦉', '⦊'],
+    ['⦋', '⦌'],
+    ['⦍', '⦎'],
+    ['⦏', '⦐'],
+    ['⦑', '⦒'],
+    ['⦓', '⦔'],
+    ['⦕', '⦖'],
+    ['⦗', '⦘'],
+    ['⧘', '⧙'],
+    ['⧚', '⧛'],
+    ['⧼', '⧽'],
+    ['⸢', '⸣'],
+    ['⸤', '⸥'],
+    ['⸦', '⸧'],
+    ['⸨', '⸩'],
+    ['〈', '〉'],
+    ['《', '》'],
+    ['「', '」'],
+    ['『', '』'],
+    ['【', '】'],
+    ['〔', '〕'],
+    ['〖', '〗'],
+    ['〘', '〙'],
+    ['〚', '〛'],
+    ['﴾', '﴿'],
+    ['︗', '︘'],
+    ['﹙', '﹚'],
+    ['﹛', '﹜'],
+    ['﹝', '﹞'],
+    ['（', '）'],
+    ['［', '］'],
+    ['｛', '｝'],
+    ['｟', '｠'],
+    ['｢', '｣'],
+    ['⌈', '⌉'],
+    ['⌊', '⌋'],
+    ['⌌', '⌍'],
+    ['⌎', '⌏'],
+    ['⌜', '⌝'],
+    ['⌞', '⌟'],
+    ['⎛', '⎞'],
+    ['⎜', '⎟'],
+    ['⎝', '⎠'],
+    ['⎡', '⎤'],
+    ['⎢', '⎥'],
+    ['⎣', '⎦'],
+    ['⎧', '⎫'],
+    ['⎨', '⎬'],
+    ['⎩', '⎭'],
+    ['⎰', '⎱'],
+    ['⎸', '⎹']    
+  ]);
+
+  /**
+   * Mapping top to bottom fences.
+   */
+  export const FencesVert = new Map([
+    ['⎴', '⎵'],
+    ['⏜', '⏝'],
+    ['⏞', '⏟'],
+    ['⏠', '⏡'],
+    ['︵', '︶'],
+    ['︷', '︸'],
+    ['︹', '︺'],
+    ['︻', '︼'],
+    ['︽', '︾'],
+    ['︿', '﹀'],
+    ['﹁', '﹂'],
+    ['﹃', '﹄'],
+    ['﹇', '﹈']
+  ]);
 
 };
 
@@ -229,6 +351,9 @@ export const quotes: string[] = [
   '›',
   '»',
   '«',
+  '〝',
+  '〞',
+  '〟'
 ];
 export const semicolons: string[] = [
   ';',
@@ -317,120 +442,10 @@ export const underaccents: string[] = [
   '‸',
 ]
 
-// Fences.
-// Fences are treated slightly differently from other symbols as we want to
-// record pairs of opening/closing and top/bottom fences.
-/**
- * Mapping opening to closing fences.
- */
-export const openClosePairs: { [key: string]: string } = {
-  // Unicode categories Ps and Pe.
-  // Observe that left quotation 301D could also be matched to 301F,
-  // but is currently matched to 301E.
-  '(': ')',
-  '[': ']',
-  '{': '}',
-  '\u2045': '⁆',
-  '\u2329': '〉',
-  '\u2768': '❩',
-  '\u276a': '❫',
-  '\u276c': '❭',
-  '\u276e': '❯',
-  '\u2770': '❱',
-  '\u2772': '❳',
-  '\u2774': '❵',
-  '\u27c5': '⟆',
-  '\u27e6': '⟧',
-  '\u27e8': '⟩',
-  '\u27ea': '⟫',
-  '\u27ec': '⟭',
-  '\u27ee': '⟯',
-  '\u2983': '⦄',
-  '\u2985': '⦆',
-  '\u2987': '⦈',
-  '\u2989': '⦊',
-  '\u298b': '⦌',
-  '\u298d': '⦎',
-  '\u298f': '⦐',
-  '\u2991': '⦒',
-  '\u2993': '⦔',
-  '\u2995': '⦖',
-  '\u2997': '⦘',
-  '\u29d8': '⧙',
-  '\u29da': '⧛',
-  '\u29fc': '⧽',
-  '\u2e22': '⸣',
-  '\u2e24': '⸥',
-  '\u2e26': '⸧',
-  '\u2e28': '⸩',
-  '\u3008': '〉',
-  '\u300a': '》',
-  '\u300c': '」',
-  '\u300e': '』',
-  '\u3010': '】',
-  '\u3014': '〕',
-  '\u3016': '〗',
-  '\u3018': '〙',
-  '\u301a': '〛',
-  '\u301d': '〞',
-  '\ufd3e': '﴿',
-  '\ufe17': '︘',
-  '\ufe59': '﹚',
-  '\ufe5b': '﹜',
-  '\ufe5d': '﹞',
-  '\uff08': '）',
-  '\uff3b': '］',
-  '\uff5b': '｝',
-  '\uff5f': '｠',
-  '\uff62': '｣',
-  // Unicode categories Sm and So.
-  '\u2308': '⌉',
-  '\u230a': '⌋',
-  '\u230c': '⌍',
-  '\u230e': '⌏',
-  '\u231c': '⌝',
-  '\u231e': '⌟',
-  // Extender fences.
-  // Parenthesis.
-  '\u239b': '⎞',
-  '\u239c': '⎟',
-  '\u239d': '⎠',
-  // Square bracket.
-  '\u23a1': '⎤',
-  '\u23a2': '⎥',
-  '\u23a3': '⎦',
-  // Curly bracket.
-  '\u23a7': '⎫',
-  '\u23a8': '⎬',
-  '\u23a9': '⎭',
-  '\u23b0': '⎱',
-  '\u23b8': '⎹'
-};
-
-/**
- * Mapping top to bottom fences.
- */
-export const topBottomPairs: { [key: string]: string } = {
-  '\u23b4': '⎵',
-  '\u23dc': '⏝',
-  '\u23de': '⏟',
-  '\u23e0': '⏡',
-  '\ufe35': '︶',
-  '\ufe37': '︸',
-  '\ufe39': '︺',
-  '\ufe3b': '︼',
-  '\ufe3d': '︾',
-  '\ufe3f': '﹀',
-  '\ufe41': '﹂',
-  '\ufe43': '﹄',
-  '\ufe47': '﹈'
-};
-
-export const leftFences: string[] = Object.keys(openClosePairs);
-export const rightFences: string[] = Object.values(openClosePairs);
-rightFences.push('〟');
-export const topFences: string[] = Object.keys(topBottomPairs);
-export const bottomFences: string[] = Object.values(topBottomPairs);
+export const leftFences: string[] = [...SemanticMap.FencesHoriz.keys()];
+export const rightFences: string[] = [...SemanticMap.FencesHoriz.values()];
+export const topFences: string[] = [...SemanticMap.FencesVert.keys()];
+export const bottomFences: string[] = [...SemanticMap.FencesVert.values()];
 
 export const neutralFences: string[] = [
   '|',
@@ -1868,11 +1883,7 @@ const symbolSetToSemantic_: MeaningSet[] = [
     role: SemanticRole.DIVISION
   },
   {
-    set: ['∀', '∃', '∆', '∁', '∄', '√', '∛', '∜',
-'¬',
-'￢',
-'⌐',
-         ],
+    set: ['∀', '∃', '∆', '∁', '∄', '√', '∛', '∜', '¬', '￢', '⌐'],
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXOP
   },
@@ -2113,42 +2124,6 @@ export function equal(
   );
 }
 
-// /**
-//  * Lookup the semantic type of a symbol.
-//  *
-//  * @param symbol The symbol to which we want to determine the type.
-//  * @returns The semantic type of the symbol.
-//  */
-// export function lookupType(symbol: string): SemanticType {
-//   return meaning_[symbol]?.type || SemanticType.UNKNOWN;
-// }
-
-// /**
-//  * Lookup the semantic role of a symbol.
-//  *
-//  * @param symbol The symbol to which we want to determine the role.
-//  * @returns The semantic role of the symbol.
-//  */
-// export function lookupRole(symbol: string): SemanticRole {
-//   return meaning_[symbol]?.role || SemanticRole.UNKNOWN;
-// }
-
-/**
- * Lookup the semantic meaning of a symbol in terms of type and role.
- *
- * @param symbol The symbol to which we want to determine the meaning.
- * @returns The semantic meaning of the symbol.
- */
-export function lookupMeaning(symbol: string): SemanticMeaning {
-  return (
-    meaning_.get(symbol) || {
-      role: SemanticRole.UNKNOWN,
-      type: SemanticType.UNKNOWN,
-      font: SemanticFont.UNKNOWN
-    }
-  );
-}
-
 /**
  * Decide when opening and closing fences match. For neutral fences they have
  * to be the same.
@@ -2161,7 +2136,8 @@ export function isMatchingFence(open: string, close: string): boolean {
   if (neutralFences.indexOf(open) !== -1 || metricFences.indexOf(open) !== -1) {
     return open === close;
   }
-  return openClosePairs[open] === close || topBottomPairs[open] === close;
+  return SemanticMap.FencesHoriz.get(open) === close ||
+    SemanticMap.FencesVert.get(open) === close;
 }
 
 /**
@@ -2173,13 +2149,13 @@ export function isMatchingFence(open: string, close: string): boolean {
 function initMeaning() {
   for (let i = 0, st: MeaningSet; (st = symbolSetToSemantic_[i]); i++) {
     st.set.forEach(function (symbol) {
-      meaning_.set(symbol, {
+      SemanticMap.Meaning.set(symbol, {
         role: st.role || SemanticRole.UNKNOWN,
         type: st.type || SemanticType.UNKNOWN,
         font: st.font || SemanticFont.UNKNOWN
       });
       if (st.secondary) {
-        SemanticMap.Secondary.set(st.secondary, symbol);
+        SemanticMap.Secondary.set(symbol, st.secondary);
       }
     });
   }
@@ -2198,7 +2174,7 @@ function changeSemantics(alphabet: string[], change: {[position: number]: Semant
   for (let [pos, meaning] of Object.entries(change)) {
     let character = alphabet[pos as unknown as number];
     if (character !== undefined) {
-      meaning_.set(character, meaning);
+      SemanticMap.Meaning.set(character, meaning);
     }
   }
 }
@@ -2207,7 +2183,7 @@ function addSecondaries(alphabet: string[], change: {[position: number]: Semanti
   for (let [pos, meaning] of Object.entries(change)) {
     let character = alphabet[pos as unknown as number];
     if (character !== undefined) {
-      SemanticMap.Secondary.set(meaning, character)
+      SemanticMap.Secondary.set(character, meaning)
     }
   }
 }
@@ -2221,12 +2197,12 @@ function singleAlphabet(alphabet: Alphabet.Base, type: SemanticType,
   let interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
   if (interval) {
     interval.unicode.forEach(x => {
-      meaning_.set(x, {
+      SemanticMap.Meaning.set(x, {
         type: type,
         role: role,
         font: semfont
       });
-      secondaries.forEach(sec => SemanticMap.Secondary.set(sec, x));
+      secondaries.forEach(sec => SemanticMap.Secondary.set(x, sec));
     });
     changeSemantics(interval.unicode, change);
     addSecondaries(interval.unicode, secondary);

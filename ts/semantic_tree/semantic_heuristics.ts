@@ -22,7 +22,7 @@
 
 import { Debugger } from '../common/debugger';
 import Engine from '../common/engine';
-import { NamedSymbol, lookupMeaning } from './semantic_attr';
+import { NamedSymbol, SemanticMap } from './semantic_attr';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
 import {
   SemanticTreeHeuristic,
@@ -145,7 +145,7 @@ SemanticHeuristics.add(
     }
     // TODO: Combine with lines in numberRole_/exprFont_?
     const content = [...node.textContent];
-    const meaning = content.map(lookupMeaning);
+    const meaning = content.map(x => SemanticMap.Meaning.get(x));
     const singleRole = meaning.reduce(function (prev, curr) {
       if (
         !prev ||
