@@ -130,7 +130,7 @@ function makeCharInterval(
 }
 
 /**
- * Creates a list of unicode characters from mix interval specification.
+ * Creates a list of unicode characters from a mixed interval specification.
  *
  * @param ints A list of hex code strings or hex code intervals.
  * @return The list of unicode characters.
@@ -143,6 +143,24 @@ export function makeMultiInterval(ints: (string | [string, string])[]) {
       continue;
     }
     result.push(String.fromCodePoint(parseInt(int, 16)));
+  }
+  return result;
+}
+
+/**
+ * Creates a list of code points from a mixed interval specification.
+ *
+ * @param ints A list of hex code strings or hex code intervals.
+ * @return The list of numeric codes for the list elements.
+ */
+export function makeCodeInterval(ints: (string | [string, string])[]) {
+  let result: number[] = [];
+  for (let int of ints) {
+    if (Array.isArray(int)) {
+      result = result.concat(makeInterval(int, {}).map(x => parseInt(x, 16)));
+      continue;
+    }
+    result.push(parseInt(int, 16));
   }
   return result;
 }

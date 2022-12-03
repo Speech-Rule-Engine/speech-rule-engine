@@ -164,98 +164,12 @@ export namespace SemanticMap {
   /**
    * Mapping opening to closing fences.
    */
-  export const FencesHoriz = new Map([
-    ['(', ')'],
-    ['[', ']'],
-    ['{', '}'],
-    ['⁅', '⁆'],
-    ['〈', '〉'],
-    ['❨', '❩'],
-    ['❪', '❫'],
-    ['❬', '❭'],
-    ['❮', '❯'],
-    ['❰', '❱'],
-    ['❲', '❳'],
-    ['❴', '❵'],
-    ['⟅', '⟆'],
-    ['⟦', '⟧'],
-    ['⟨', '⟩'],
-    ['⟪', '⟫'],
-    ['⟬', '⟭'],
-    ['⟮', '⟯'],
-    ['⦃', '⦄'],
-    ['⦅', '⦆'],
-    ['⦇', '⦈'],
-    ['⦉', '⦊'],
-    ['⦋', '⦌'],
-    ['⦍', '⦎'],
-    ['⦏', '⦐'],
-    ['⦑', '⦒'],
-    ['⦓', '⦔'],
-    ['⦕', '⦖'],
-    ['⦗', '⦘'],
-    ['⧘', '⧙'],
-    ['⧚', '⧛'],
-    ['⧼', '⧽'],
-    ['⸢', '⸣'],
-    ['⸤', '⸥'],
-    ['⸦', '⸧'],
-    ['⸨', '⸩'],
-    ['〈', '〉'],
-    ['《', '》'],
-    ['「', '」'],
-    ['『', '』'],
-    ['【', '】'],
-    ['〔', '〕'],
-    ['〖', '〗'],
-    ['〘', '〙'],
-    ['〚', '〛'],
-    ['﴾', '﴿'],
-    ['︗', '︘'],
-    ['﹙', '﹚'],
-    ['﹛', '﹜'],
-    ['﹝', '﹞'],
-    ['（', '）'],
-    ['［', '］'],
-    ['｛', '｝'],
-    ['｟', '｠'],
-    ['｢', '｣'],
-    ['⌈', '⌉'],
-    ['⌊', '⌋'],
-    ['⌌', '⌍'],
-    ['⌎', '⌏'],
-    ['⌜', '⌝'],
-    ['⌞', '⌟'],
-    ['⎛', '⎞'],
-    ['⎜', '⎟'],
-    ['⎝', '⎠'],
-    ['⎡', '⎤'],
-    ['⎢', '⎥'],
-    ['⎣', '⎦'],
-    ['⎧', '⎫'],
-    ['⎨', '⎬'],
-    ['⎩', '⎭'],
-    ['⎰', '⎱']
-  ]);
+  export const FencesHoriz = new Map();
 
   /**
    * Mapping top to bottom fences.
    */
-  export const FencesVert = new Map([
-    ['⎴', '⎵'],
-    ['⏜', '⏝'],
-    ['⏞', '⏟'],
-    ['⏠', '⏡'],
-    ['︵', '︶'],
-    ['︷', '︸'],
-    ['︹', '︺'],
-    ['︻', '︼'],
-    ['︽', '︾'],
-    ['︿', '﹀'],
-    ['﹁', '﹂'],
-    ['﹃', '﹄'],
-    ['﹇', '﹈']
-  ]);
+  export const FencesVert = new Map();
 }
 
 function addMeaning(symbols: string[], meaning: MeaningSet) {
@@ -1257,7 +1171,56 @@ function initMeaning() {
 }
 
 // Fences
+function addFences(
+  map: Map<string, string>,
+  ints: (string | [string, string])[],
+  sep: number = 1
+) {
+  const used: { [key: number]: boolean } = {};
+  const codes = Alphabet.makeCodeInterval(ints);
+  for (let code of codes) {
+    if (used[code]) continue;
+    map.set(String.fromCodePoint(code), String.fromCodePoint(code + sep));
+    used[code] = true;
+    used[code + sep] = true;
+  }
+}
+
 function initFences() {
+  // The intervals are manually minimised.
+  addFences(SemanticMap.FencesVert, [
+    '23b4',
+    ['23dc', '23e1'],
+    ['fe35', 'fe44'],
+    'fe47'
+  ]);
+  addFences(SemanticMap.FencesHoriz, [
+    '28',
+    '2045',
+    ['2308', '230f'],
+    ['231c', '231f'],
+    '2329',
+    '23b0',
+    ['2768', '2775'],
+    '27c5',
+    ['27e6', '27ef'],
+    ['2983', '2998'],
+    ['29d8', '29db'],
+    '29fc',
+    ['2e22', '2e29'],
+    ['3008', '3011'],
+    ['3014', '301b'],
+    'fd3e',
+    'fe17',
+    ['fe59', 'fe5e'],
+    'ff08',
+    'ff5f',
+    'ff62'
+  ]);
+  addFences(SemanticMap.FencesHoriz, ['5b', '7b', 'ff3b', 'ff5b'], 2);
+  addFences(SemanticMap.FencesHoriz, [['239b', '23a6']], 3);
+  addFences(SemanticMap.FencesHoriz, [['23a7', '23a9']], 4);
+
   // leftFences
   addMeaning([...SemanticMap.FencesHoriz.keys()], {
     type: SemanticType.FENCE,
