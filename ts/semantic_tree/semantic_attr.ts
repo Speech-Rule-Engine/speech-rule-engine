@@ -1259,13 +1259,7 @@ export const trigonometricFunctions: string[] = [
   'arccsc',
   'arcsec',
   'arcsin',
-  'arctan',
-  'arc cos',
-  'arc cot',
-  'arc csc',
-  'arc sec',
-  'arc sin',
-  'arc tan'
+  'arctan'
 ];
 export const hyperbolicFunctions: string[] = [
   'cosh',
@@ -1279,13 +1273,7 @@ export const hyperbolicFunctions: string[] = [
   'arcsch',
   'arsech',
   'arsinh',
-  'artanh',
-  'arccosh',
-  'arccoth',
-  'arccsch',
-  'arcsech',
-  'arcsinh',
-  'arctanh'
+  'artanh'
 ];
 export const algebraicFunctions: string[] = [
   'deg',
@@ -1293,17 +1281,15 @@ export const algebraicFunctions: string[] = [
   'dim',
   'hom',
   'ker',
-  'Tr',
-  'tr'
+  'Tr'
 ];
 export const elementaryFunctions: string[] = [
   'log',
   'ln',
   'lg',
   'exp',
-  'expt',
   'gcd',
-  'gcd',
+  'lcm',
   'arg',
   'im',
   're',
@@ -1332,9 +1318,7 @@ function initFunctions() {
       'min',
       'sup',
       'injlim',
-      'projlim',
-      'inj lim',
-      'proj lim'
+      'projlim'
     ],
     {
       type: SemanticType.FUNCTION,
@@ -1354,6 +1338,20 @@ function initFunctions() {
     type: SemanticType.OPERATOR,
     role: SemanticRole.PREFIXFUNC
   });
+}
+
+/**
+ * Adds semantic for alternative function names.
+ *
+ * @param base The base function.
+ * @param names The alt names of the function.
+ */
+export function addFunctionSemantic(base: string, names: string[]) {
+  const meaning = SemanticMap.Meaning.get(base) || {
+    type: SemanticType.FUNCTION,
+    role: SemanticRole.PREFIXFUNC
+  };
+  addMeaning(names, meaning);
 }
 
 /**

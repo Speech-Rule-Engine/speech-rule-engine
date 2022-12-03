@@ -24,6 +24,7 @@
 import { Debugger } from '../common/debugger';
 import Engine from '../common/engine';
 import { locales } from '../l10n/l10n';
+import { addFunctionSemantic } from '../semantic_tree/semantic_attr';
 import {
   MathSimpleStore,
   SiJson,
@@ -131,9 +132,6 @@ export const addSymbolRules =
  * @param json JSON object of the speech rules.
  */
 function addFunctionRule(json: UnicodeJson) {
-  if (changeLocale(json)) {
-    return;
-  }
   const names = json['names'];
   const mappings = json['mappings'];
   const category = json['category'];
@@ -142,7 +140,13 @@ function addFunctionRule(json: UnicodeJson) {
   }
 }
 export const addFunctionRules =
-  (json: UnicodeJson[]) => json.forEach(addFunctionRule);
+  (json: UnicodeJson[]) => json.forEach((x) => {
+    if (changeLocale(x)) {
+      return;
+    }
+    addFunctionSemantic(x.key, x.names);
+    addFunctionRule(x);
+  });
 
 /**
  * Makes speech rules for Unit descriptors from its JSON representation.
