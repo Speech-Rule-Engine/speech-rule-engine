@@ -138,8 +138,6 @@ function addFunctionRule(json: UnicodeJson) {
   const category = json['category'];
   for (let j = 0, name; (name = names[j]); j++) {
     defineRules(name, category, mappings);
-    // console.log(name);
-    // console.log(getSubStore_(name));
   }
 }
 
@@ -177,17 +175,27 @@ export function completeWithBase(json: UnicodeJson) {
  * @param json JSON object of the speech rules.
  */
 function addUnitRule(json: UnicodeJson) {
-  if (changeLocale(json)) {
-    return;
-  }
   if (json['si']) {
     addSiUnitRule(json);
     return;
   }
   addSingleUnitRule(json);
 }
-export const addUnitRules =
-  (json: UnicodeJson[]) => json.forEach(addUnitRule);
+
+export function addUnitRules(json: UnicodeJson[]) {
+  json.forEach((x) => {
+    if (changeLocale(x)) {
+      return;
+    }
+    x.key += ':unit';
+    if (locale === 'base') {
+      baseStores_[x.key] = x;
+      return;
+    }
+    completeWithBase(x);
+    addUnitRule(x);
+  });
+}
 
 /**
  * Makes speech rules for SI units from the JSON representation of the base
@@ -229,7 +237,7 @@ function addSingleUnitRule(json: UnicodeJson) {
   const names = json['names'];
   if (names) {
     json['names'] = names.map(function (name) {
-      return name + ':' + 'unit';
+      return name + ':unit';
     });
   }
   addFunctionRule(json);

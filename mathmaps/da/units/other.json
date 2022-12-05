@@ -4,18 +4,11 @@
   },
   {
     "key": "doz",
-    "category": "other",
     "mappings": {
       "default": {
         "default": "dusin",
         "plural": "dusin"
       }
-    },
-    "names": [
-      "doz",
-      "doz.",
-      "dz",
-      "dz."
-    ]
+    }
   }
 ]

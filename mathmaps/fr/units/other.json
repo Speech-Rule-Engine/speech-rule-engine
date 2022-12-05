@@ -4,7 +4,6 @@
   },
   {
     "key": "doz",
-    "category": "other",
     "mappings": {
       "default": {
         "default": "douzaine"
@@ -12,11 +11,7 @@
     },
     "names": [
       "douz",
-      "douz.",
-      "dz",
-      "dz.",
-      "doz",
-      "doz."
+      "douz."
     ]
   }
 ]

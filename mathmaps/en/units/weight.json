@@ -4,143 +4,90 @@
   },
   {
     "key": "dram",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "dram"
       }
-    },
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "oz",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "ounce"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "lb",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "pound"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "stone"
       }
-    },
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
     "key": "qtr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "quarter"
       }
-    },
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
     "key": "cwt",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "hundredweight"
       }
-    },
-    "names": [
-      "cwt",
-      "cwt."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "long ton"
       }
-    },
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
     "key": "gr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "gram"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "gram"
       }
-    },
-    "si": true,
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "microgram"
       }
-    },
-    "names": [
-      "mcg"
-    ]
+    }
   },
   {
     "key": "t",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "ton"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   }
 ]

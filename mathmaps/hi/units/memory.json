@@ -4,39 +4,26 @@
   },
   {
     "key": "b",
-    "category": "memory",
     "mappings": {
       "default": {
         "default": "बिट"
       }
-    },
-    "names": [
-      "b"
-    ]
+    }
   },
   {
     "key": "B",
-    "category": "memory",
     "mappings": {
       "default": {
         "default": "बाईट"
       }
-    },
-    "si": true,
-    "names": [
-      "B"
-    ]
+    }
   },
   {
     "key": "KB",
-    "category": "memory",
     "mappings": {
       "default": {
         "default": "किलोबाईट"
       }
-    },
-    "names": [
-      "KB"
-    ]
+    }
   }
 ]

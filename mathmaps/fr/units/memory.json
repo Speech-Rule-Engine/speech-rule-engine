@@ -4,40 +4,31 @@
   },
   {
     "key": "b",
-    "category": "memory",
     "mappings": {
       "default": {
         "default": "bit"
       }
-    },
-    "names": [
-      "b"
-    ]
+    }
   },
   {
     "key": "B",
-    "category": "memory",
     "mappings": {
       "default": {
         "default": "octet"
       }
     },
-    "si": true,
     "names": [
-      "B",
       "o"
     ]
   },
   {
     "key": "KB",
-    "category": "memory",
     "mappings": {
       "default": {
         "default": "kilooctet"
       }
     },
     "names": [
-      "KB",
       "Ko"
     ]
   }

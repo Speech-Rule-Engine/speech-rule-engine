@@ -8,11 +8,7 @@
       "default": {
         "default": "livre"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "oz",
@@ -20,11 +16,7 @@
       "default": {
         "default": "once"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "gr",
@@ -32,10 +24,7 @@
       "default": {
         "default": "gramme"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
@@ -43,11 +32,7 @@
       "default": {
         "default": "gramme"
       }
-    },
-    "si": true,
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "t",
@@ -55,87 +40,56 @@
       "default": {
         "default": "tonne"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   },
   {
     "key": "dram",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "drachme"
       }
-    },
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "stone"
       }
-    },
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
     "key": "qtr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "quarter"
       }
-    },
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "long ton"
       }
-    },
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "microgramme"
       }
-    },
-    "names": [
-      "mcg"
-    ]
+    }
   },
   {
     "key": "cwt",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "quintal"
       }
     },
     "names": [
-      "cwt",
-      "cwt.",
       "qq"
     ]
   }

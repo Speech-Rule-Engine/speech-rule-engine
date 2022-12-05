@@ -4,55 +4,38 @@
   },
   {
     "key": "kt",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "nus",
         "plural": "nusos"
       }
-    },
-    "names": [
-      "kt",
-      "kt."
-    ]
+    }
   },
   {
     "key": "mph",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "milla per hora",
         "plural": "milles per hora"
       }
-    },
-    "names": [
-      "mph"
-    ]
+    }
   },
   {
     "key": "rpm",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "revolució per minut",
         "plural": "revolucions per minut"
       }
-    },
-    "names": [
-      "rpm"
-    ]
+    }
   },
   {
     "key": "kmh",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "quilòmetre per hora",
         "plural": "quilòmetres per hora"
       }
-    },
-    "names": [
-      "kmh"
-    ]
+    }
   }
 ]
