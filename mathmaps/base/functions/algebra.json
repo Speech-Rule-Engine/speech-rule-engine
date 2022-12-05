@@ -1,0 +1,49 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "deg",
+    "category": "Algebra",
+    "names": [
+      "deg"
+    ]
+  },
+  {
+    "key": "det",
+    "category": "Algebra",
+    "names": [
+      "det"
+    ]
+  },
+  {
+    "key": "dim",
+    "category": "Algebra",
+    "names": [
+      "dim"
+    ]
+  },
+  {
+    "key": "hom",
+    "category": "Algebra",
+    "names": [
+      "hom",
+      "Hom"
+    ]
+  },
+  {
+    "key": "ker",
+    "category": "Algebra",
+    "names": [
+      "ker"
+    ]
+  },
+  {
+    "key": "Tr",
+    "category": "Algebra",
+    "names": [
+      "Tr",
+      "tr"
+    ]
+  }
+]

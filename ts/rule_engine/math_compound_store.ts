@@ -63,6 +63,8 @@ export function setSiPrefixes(prefixes: SiJson) {
  */
 const subStores_: { [key: string]: MathSimpleStore } = {};
 
+const baseStores_: { [key: string]: UnicodeJson} = {};
+
 /**
  * Function creates a rule store in the compound store for a particular
  * string, and populates it with a set of rules.
@@ -86,7 +88,6 @@ export function defineRules(
 /**
  * Creates a single rule from strings.
  *
- * @param name Name of the rule.
  * @param domain The domain axis.
  * @param style The style axis.
  * @param cat The category if it exists.
@@ -137,16 +138,38 @@ function addFunctionRule(json: UnicodeJson) {
   const category = json['category'];
   for (let j = 0, name; (name = names[j]); j++) {
     defineRules(name, category, mappings);
+    // console.log(name);
+    // console.log(getSubStore_(name));
   }
 }
-export const addFunctionRules =
-  (json: UnicodeJson[]) => json.forEach((x) => {
+
+export function addFunctionRules(json: UnicodeJson[]) {
+  json.forEach((x) => {
     if (changeLocale(x)) {
       return;
     }
-    addFunctionSemantic(x.key, x.names);
+    if (locale === 'base') {
+      baseStores_[x.key] = x;
+      addFunctionSemantic(x.key, x.names);
+      return;
+    }
+    addFunctionSemantic(x.key, x.names || []);
+    completeWithBase(x);
     addFunctionRule(x);
   });
+}
+
+export function completeWithBase(json: UnicodeJson) {
+  let base = baseStores_[json.key];
+  if (!base) {
+    return;
+  }
+  let names = json.names;
+  Object.assign(json, base);
+  if (names && base.names) {
+    json.names = json.names.concat(names);
+  }
+}
 
 /**
  * Makes speech rules for Unit descriptors from its JSON representation.

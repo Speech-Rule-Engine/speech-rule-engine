@@ -1,0 +1,150 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "log",
+    "category": "Logarithm",
+    "names": [
+      "log"
+    ]
+  },
+  {
+    "key": "ln",
+    "category": "Logarithm",
+    "names": [
+      "ln"
+    ]
+  },
+  {
+    "key": "lg",
+    "category": "Logarithm",
+    "names": [
+      "lg"
+    ]
+  },
+  {
+    "key": "exp",
+    "category": "Elementary",
+    "names": [
+      "exp",
+      "expt"
+    ]
+  },
+  {
+    "key": "gcd",
+    "category": "Elementary",
+    "names": [
+      "gcd"
+    ]
+  },
+  {
+    "key": "lcm",
+    "category": "Elementary",
+    "names": [
+      "lcm"
+    ]
+  },
+  {
+    "key": "arg",
+    "category": "Complex",
+    "names": [
+      "arg"
+    ]
+  },
+  {
+    "key": "im",
+    "category": "Complex",
+    "names": [
+      "im"
+    ]
+  },
+  {
+    "key": "re",
+    "category": "Complex",
+    "names": [
+      "re"
+    ]
+  },
+  {
+    "key": "inf",
+    "category": "Limits",
+    "names": [
+      "inf"
+    ]
+  },
+  {
+    "key": "lim",
+    "category": "Limits",
+    "names": [
+      "lim"
+    ]
+  },
+  {
+    "key": "liminf",
+    "category": "Limits",
+    "names": [
+      "lim inf",
+      "liminf"
+    ]
+  },
+  {
+    "key": "limsup",
+    "category": "Limits",
+    "names": [
+      "lim sup",
+      "limsup"
+    ]
+  },
+  {
+    "key": "max",
+    "category": "Limits",
+    "names": [
+      "max"
+    ]
+  },
+  {
+    "key": "min",
+    "category": "Limits",
+    "names": [
+      "min"
+    ]
+  },
+  {
+    "key": "sup",
+    "category": "Limits",
+    "names": [
+      "sup"
+    ]
+  },
+  {
+    "key": "injlim",
+    "category": "Limits",
+    "names": [
+      "injlim",
+      "inj lim"
+    ]
+  },
+  {
+    "key": "projlim",
+    "category": "Limits",
+    "names": [
+      "projlim",
+      "proj lim"
+    ]
+  },
+  {
+    "key": "mod",
+    "category": "Elementary",
+    "names": [
+      "mod"
+    ]
+  },
+  {
+    "key": "Pr",
+    "category": "Probability",
+    "names": [
+      "Pr"
+    ]
+  }
+]
