@@ -4,7 +4,6 @@
   },
   {
     "key": "2500",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett horisontal"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2501",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet horisontal"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2502",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett vertikal"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2503",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet vertikal"
@@ -40,7 +36,6 @@
   },
   {
     "key": "2504",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett trippelstrek horisontal"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2505",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet trippelstrek horisontal"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2506",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett trippelstrek vertikal"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2507",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet trippelstrek vertikal"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2508",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett kvadruppelstrek horisontal"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2509",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet kvadruppelstrek horisontal"
@@ -94,7 +84,6 @@
   },
   {
     "key": "250A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett kvadruppelstrek vertikal"
@@ -103,7 +92,6 @@
   },
   {
     "key": "250B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet kvadruppelstrek vertikal"
@@ -112,7 +100,6 @@
   },
   {
     "key": "250C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett ned og høyre"
@@ -121,7 +108,6 @@
   },
   {
     "key": "250D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned lett og høyre fet"
@@ -130,7 +116,6 @@
   },
   {
     "key": "250E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned fet og høyre lett"
@@ -139,7 +124,6 @@
   },
   {
     "key": "250F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet ned og høyre"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2510",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett ned og venstre"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2511",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned lett og venstre fet"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2512",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned fet og venstre lett"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2513",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet ned og venstre"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2514",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett opp og høyre"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2515",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp lett og høyre fet"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2516",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp fet og høyre lett"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2517",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet opp og høyre"
@@ -220,7 +196,6 @@
   },
   {
     "key": "2518",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett opp og venstre"
@@ -229,7 +204,6 @@
   },
   {
     "key": "2519",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp lett og venstre fet"
@@ -238,7 +212,6 @@
   },
   {
     "key": "251A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp fet og venstre lett"
@@ -247,7 +220,6 @@
   },
   {
     "key": "251B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet opp og venstre"
@@ -256,7 +228,6 @@
   },
   {
     "key": "251C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett vertikal og høyre"
@@ -265,7 +236,6 @@
   },
   {
     "key": "251D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal lett og høyre fet"
@@ -274,7 +244,6 @@
   },
   {
     "key": "251E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp fet og høyre ned lett"
@@ -283,7 +252,6 @@
   },
   {
     "key": "251F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned fet og høyre opp lett"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2520",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal fet og høyre lett"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2521",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned lett og høyre opp fet"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2522",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp lett og høyre ned fet"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2523",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet vertikal og høyre"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2524",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett vertikal og venstre"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2525",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal lett og venstre fet"
@@ -346,7 +308,6 @@
   },
   {
     "key": "2526",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp fet og venstre ned lett"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2527",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned fet og venstre opp lett"
@@ -364,7 +324,6 @@
   },
   {
     "key": "2528",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal fet og venstre lett"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2529",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned lett og venstre opp fet"
@@ -382,7 +340,6 @@
   },
   {
     "key": "252A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp lett og venstre ned fet"
@@ -391,7 +348,6 @@
   },
   {
     "key": "252B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet vertikal og venstre"
@@ -400,7 +356,6 @@
   },
   {
     "key": "252C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett ned og horisontal"
@@ -409,7 +364,6 @@
   },
   {
     "key": "252D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre fet og høyre ned lett"
@@ -418,7 +372,6 @@
   },
   {
     "key": "252E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre fet og venstre ned lett"
@@ -427,7 +380,6 @@
   },
   {
     "key": "252F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned lett og horisontal fet"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2530",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned fet og horisontal lett"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2531",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre lett og venstre ned fet"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2532",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre lett og høyre ned fet"
@@ -463,7 +412,6 @@
   },
   {
     "key": "2533",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet ned og horisontal"
@@ -472,7 +420,6 @@
   },
   {
     "key": "2534",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett opp og horisontal"
@@ -481,7 +428,6 @@
   },
   {
     "key": "2535",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre fet og høyre opp lett"
@@ -490,7 +436,6 @@
   },
   {
     "key": "2536",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre fet og venstre opp lett"
@@ -499,7 +444,6 @@
   },
   {
     "key": "2537",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp lett og horisontal fet"
@@ -508,7 +452,6 @@
   },
   {
     "key": "2538",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp fet og horisontal lett"
@@ -517,7 +460,6 @@
   },
   {
     "key": "2539",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre lett og venstre opp fet"
@@ -526,7 +468,6 @@
   },
   {
     "key": "253A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre lett og høyre opp fet"
@@ -535,7 +476,6 @@
   },
   {
     "key": "253B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet opp og horisontal"
@@ -544,7 +484,6 @@
   },
   {
     "key": "253C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett vertikal og horisontal"
@@ -553,7 +492,6 @@
   },
   {
     "key": "253D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre fet og høyre vertikal lett"
@@ -562,7 +500,6 @@
   },
   {
     "key": "253E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre fet og venstre vertikal lett"
@@ -571,7 +508,6 @@
   },
   {
     "key": "253F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal lett og horisontal fet"
@@ -580,7 +516,6 @@
   },
   {
     "key": "2540",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp fet og ned horisontal lett"
@@ -589,7 +524,6 @@
   },
   {
     "key": "2541",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned fet og opp horisontal lett"
@@ -598,7 +532,6 @@
   },
   {
     "key": "2542",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal fet og horisontal lett"
@@ -607,7 +540,6 @@
   },
   {
     "key": "2543",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre opp fet og høyre ned lett"
@@ -616,7 +548,6 @@
   },
   {
     "key": "2544",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre opp fet og venstre ned lett"
@@ -625,7 +556,6 @@
   },
   {
     "key": "2545",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre ned fet og høyre opp lett"
@@ -634,7 +564,6 @@
   },
   {
     "key": "2546",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre ned fet og venstre opp lett"
@@ -643,7 +572,6 @@
   },
   {
     "key": "2547",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned lett og opp horisontal fet"
@@ -652,7 +580,6 @@
   },
   {
     "key": "2548",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp lett og ned horisontal fet"
@@ -661,7 +588,6 @@
   },
   {
     "key": "2549",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger høyre lett og venstre vertikal fet"
@@ -670,7 +596,6 @@
   },
   {
     "key": "254A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger venstre lett og høyre vertikal fet"
@@ -679,7 +604,6 @@
   },
   {
     "key": "254B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet vertikal og horisontal"
@@ -688,7 +612,6 @@
   },
   {
     "key": "254C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett dobbelstrek horisontal"
@@ -697,7 +620,6 @@
   },
   {
     "key": "254D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet dobbelstrek horisontal"
@@ -706,7 +628,6 @@
   },
   {
     "key": "254E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett dobbelstrek vertikal"
@@ -715,7 +636,6 @@
   },
   {
     "key": "254F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet dobbelstrek vertikal"
@@ -724,7 +644,6 @@
   },
   {
     "key": "2550",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel horisontal"
@@ -733,7 +652,6 @@
   },
   {
     "key": "2551",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel vertikal"
@@ -742,7 +660,6 @@
   },
   {
     "key": "2552",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned singel og høyre dobbel"
@@ -751,7 +668,6 @@
   },
   {
     "key": "2553",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned dobbel og høyre singel"
@@ -760,7 +676,6 @@
   },
   {
     "key": "2554",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel ned og høyre"
@@ -769,7 +684,6 @@
   },
   {
     "key": "2555",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned singel og venstre dobbel"
@@ -778,7 +692,6 @@
   },
   {
     "key": "2556",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned dobbel og venstre singel"
@@ -787,7 +700,6 @@
   },
   {
     "key": "2557",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel ned og venstre"
@@ -796,7 +708,6 @@
   },
   {
     "key": "2558",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp singel og høyre dobbel"
@@ -805,7 +716,6 @@
   },
   {
     "key": "2559",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp dobbel og høyre singel"
@@ -814,7 +724,6 @@
   },
   {
     "key": "255A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel opp og høyre"
@@ -823,7 +732,6 @@
   },
   {
     "key": "255B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp singel og venstre dobbel"
@@ -832,7 +740,6 @@
   },
   {
     "key": "255C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp dobbel og venstre singel"
@@ -841,7 +748,6 @@
   },
   {
     "key": "255D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel opp og venstre"
@@ -850,7 +756,6 @@
   },
   {
     "key": "255E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal singel og høyre dobbel"
@@ -859,7 +764,6 @@
   },
   {
     "key": "255F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal dobbel og høyre singel"
@@ -868,7 +772,6 @@
   },
   {
     "key": "2560",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel vertikal og høyre"
@@ -877,7 +780,6 @@
   },
   {
     "key": "2561",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal singel og venstre dobbel"
@@ -886,7 +788,6 @@
   },
   {
     "key": "2562",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal dobbel og venstre singel"
@@ -895,7 +796,6 @@
   },
   {
     "key": "2563",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel vertikal og venstre"
@@ -904,7 +804,6 @@
   },
   {
     "key": "2564",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned singel og horisontal dobbel"
@@ -913,7 +812,6 @@
   },
   {
     "key": "2565",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger ned dobbel og horisontal singel"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2566",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel ned og horisontal"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2567",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp singel og horisontal dobbel"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2568",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger opp dobbel og horisontal singel"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2569",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel opp og horisontal"
@@ -958,7 +852,6 @@
   },
   {
     "key": "256A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal singel og horisontal dobbel"
@@ -967,7 +860,6 @@
   },
   {
     "key": "256B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger vertikal dobbel og horisontal singel"
@@ -976,7 +868,6 @@
   },
   {
     "key": "256C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger dobbel vertikal og horisontal"
@@ -985,7 +876,6 @@
   },
   {
     "key": "256D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett bue ned og høyre"
@@ -994,7 +884,6 @@
   },
   {
     "key": "256E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett bue ned og venstre"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "256F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett bue opp og venstre"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "2570",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett bue opp og høyre"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "2571",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett diagonal øvre høyre til nedre venstre"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "2572",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett diagonal øvre venstre til nedre høyre"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "2573",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett diagonal cross"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "2574",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett venstre"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "2575",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett opp"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "2576",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett høyre"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "2577",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett ned"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "2578",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet venstre"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "2579",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet opp"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "257A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet høyre"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "257B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet ned"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "257C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett venstre og fet høyre"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "257D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger lett opp og fet ned"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "257E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet venstre og lett høyre"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "257F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bokstegninger fet opp og lett ned"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "2580",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre halv blokk"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "2581",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre en åttendedels blokk"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "2582",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre en fjerdedels blokk"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "2583",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre tre åttendedels blokk"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "2584",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre halv blokk"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "2585",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre fem åttendedels blokk"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "2586",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre tre fjerdedels blokk"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "2587",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre sju åttendedels blokk"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "2588",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "full blokk"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "2589",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre sju åttendedels blokk"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "258A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre tre fjerdedels blokk"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "258B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre fem åttendedels blokk"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "258C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre halv blokk"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "258D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre tre åttendedels blokk"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "258E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre en fjerdedels blokk"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "258F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre en åttendedels blokk"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "2590",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "høyre halv blokk"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "2591",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "lett skygge"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "2592",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "medium skygge"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "2593",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "mørk skygge"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "2594",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre en åttendedels blokk"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "2595",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "høyre en åttendedels blokk"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "2596",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant nedre venstre"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "2597",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant nedre høyre"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "2598",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre venstre"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "2599",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre venstre og nedre venstre og nedre høyre"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "259A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre venstre og nedre høyre"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "259B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre venstre og øvre høyre og nedre venstre"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "259C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre venstre og øvre høyre og nedre høyre"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "259D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre høyre"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "259E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre høyre og nedre venstre"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "259F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrant øvre høyre og nedre venstre og nedre høyre"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "25A0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart kvadrat"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "25A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "25A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med avrunda hjørner"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "25A3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med svart lite kvadrat"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "25A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med horisontalt fyll"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "25A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med vertikalt fyll"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "25A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med ortogonal kryssmønster fill"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "25A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med øvre venstre til nedre høyre fill"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "25A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med øvre høyre til nedre venstre fill"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "25A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med diagonal kryssmønster fill"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "25AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart lite kvadrat"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "25AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit lite kvadrat"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "25AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart rektangel"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "25AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit rektangel"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "25AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart vertikal rektangel"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "25AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit vertikal rektangel"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "25B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart parallelogram"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "25B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt parallelogram"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "25B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart oppover-vendt triangel"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "25B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt oppover-vendt triangel"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "25B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart oppover-vendt triangel"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "25B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt oppover-vendt triangel"
@@ -1642,7 +1460,6 @@
   },
   {
     "key": "25B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart høyre-vendt triangel"
@@ -1651,7 +1468,6 @@
   },
   {
     "key": "25B7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvitt høyre-vendt triangel"
@@ -1660,7 +1476,6 @@
   },
   {
     "key": "25B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart høyre-vendt triangel"
@@ -1669,7 +1484,6 @@
   },
   {
     "key": "25B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "høyre-vendt triangel"
@@ -1678,7 +1492,6 @@
   },
   {
     "key": "25BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart høyre-vendt peker"
@@ -1687,7 +1500,6 @@
   },
   {
     "key": "25BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit høyre-vendt peker"
@@ -1696,7 +1508,6 @@
   },
   {
     "key": "25BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart nedover-vendt triangel"
@@ -1705,7 +1516,6 @@
   },
   {
     "key": "25BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit nedover-vendt triangel"
@@ -1714,7 +1524,6 @@
   },
   {
     "key": "25BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart nedover-vendt lite triangel"
@@ -1723,7 +1532,6 @@
   },
   {
     "key": "25BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit nedover-vendt lite triangel"
@@ -1732,7 +1540,6 @@
   },
   {
     "key": "25C0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart venstre pointing triangel"
@@ -1741,7 +1548,6 @@
   },
   {
     "key": "25C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvit venstre pointing triangel"
@@ -1750,7 +1556,6 @@
   },
   {
     "key": "25C2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart venstre pointing lite triangel"
@@ -1759,7 +1564,6 @@
   },
   {
     "key": "25C3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit venstre pointing lite triangel"
@@ -1768,7 +1572,6 @@
   },
   {
     "key": "25C4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart venstre pointing pointer"
@@ -1777,7 +1580,6 @@
   },
   {
     "key": "25C5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit venstre pointing pointer"
@@ -1786,7 +1588,6 @@
   },
   {
     "key": "25C6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart diamant"
@@ -1795,7 +1596,6 @@
   },
   {
     "key": "25C7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit diamant"
@@ -1804,7 +1604,6 @@
   },
   {
     "key": "25C8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit diamant med svart liten diamant"
@@ -1813,7 +1612,6 @@
   },
   {
     "key": "25C9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fiskeøye"
@@ -1822,7 +1620,6 @@
   },
   {
     "key": "25CA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ruter"
@@ -1831,7 +1628,6 @@
   },
   {
     "key": "25CB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit sirkel"
@@ -1840,7 +1636,6 @@
   },
   {
     "key": "25CC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med prikker"
@@ -1849,7 +1644,6 @@
   },
   {
     "key": "25CD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med vertikalt fyll"
@@ -1858,7 +1652,6 @@
   },
   {
     "key": "25CE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "blink"
@@ -1867,7 +1660,6 @@
   },
   {
     "key": "25CF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart sirkel"
@@ -1876,7 +1668,6 @@
   },
   {
     "key": "25D0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med venstre halvdel svart"
@@ -1885,7 +1676,6 @@
   },
   {
     "key": "25D1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med høyre halvdel svart"
@@ -1894,7 +1684,6 @@
   },
   {
     "key": "25D2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med nedre halvdel svart"
@@ -1903,7 +1692,6 @@
   },
   {
     "key": "25D3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med øvre halvdel svart"
@@ -1912,7 +1700,6 @@
   },
   {
     "key": "25D4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med øvre høyre kvadrant svart"
@@ -1921,7 +1708,6 @@
   },
   {
     "key": "25D5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sirkel med all but øvre venstre kvadrant svart"
@@ -1930,7 +1716,6 @@
   },
   {
     "key": "25D6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre halvdel svart sirkel"
@@ -1939,7 +1724,6 @@
   },
   {
     "key": "25D7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "høyre halvdel svart sirkel"
@@ -1948,7 +1732,6 @@
   },
   {
     "key": "25D8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "omvendt prikk"
@@ -1957,7 +1740,6 @@
   },
   {
     "key": "25D9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "omvendt hvit sirkel"
@@ -1966,7 +1748,6 @@
   },
   {
     "key": "25DA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre halvdel omvendt hvit sirkel"
@@ -1975,7 +1756,6 @@
   },
   {
     "key": "25DB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre halvdel omvendt hvit sirkel"
@@ -1984,7 +1764,6 @@
   },
   {
     "key": "25DC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre venstre kvadrant sirkulær bue"
@@ -1993,7 +1772,6 @@
   },
   {
     "key": "25DD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre høyre kvadrant sirkulær bue"
@@ -2002,7 +1780,6 @@
   },
   {
     "key": "25DE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre høyre kvadrant sirkulær bue"
@@ -2011,7 +1788,6 @@
   },
   {
     "key": "25DF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre venstre kvadrant sirkulær bue"
@@ -2020,7 +1796,6 @@
   },
   {
     "key": "25E0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre halvdel sirkel"
@@ -2029,7 +1804,6 @@
   },
   {
     "key": "25E1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre halvdel sirkel"
@@ -2038,7 +1812,6 @@
   },
   {
     "key": "25E2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart nedre høyre triangel"
@@ -2047,7 +1820,6 @@
   },
   {
     "key": "25E3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart nedre venstre triangel"
@@ -2056,7 +1828,6 @@
   },
   {
     "key": "25E4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart øvre venstre triangel"
@@ -2065,7 +1836,6 @@
   },
   {
     "key": "25E5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart øvre høyre triangel"
@@ -2074,7 +1844,6 @@
   },
   {
     "key": "25E6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt prikk"
@@ -2083,7 +1852,6 @@
   },
   {
     "key": "25E7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med venstre halvdel svart"
@@ -2092,7 +1860,6 @@
   },
   {
     "key": "25E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med høyre halvdel svart"
@@ -2101,7 +1868,6 @@
   },
   {
     "key": "25E9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med øvre venstre diagonal halv svart"
@@ -2110,7 +1876,6 @@
   },
   {
     "key": "25EA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med nedre høyre diagonal halv svart"
@@ -2119,7 +1884,6 @@
   },
   {
     "key": "25EB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med vertikal linje som deler i to"
@@ -2128,7 +1892,6 @@
   },
   {
     "key": "25EC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit oppover-vendt triangel med prikk"
@@ -2137,7 +1900,6 @@
   },
   {
     "key": "25ED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "oppover-vendt triangel med venstre halvdel svart"
@@ -2146,7 +1908,6 @@
   },
   {
     "key": "25EE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "oppover-vendt triangel med høyre halvdel svart"
@@ -2155,7 +1916,6 @@
   },
   {
     "key": "25EF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stor sirkel"
@@ -2164,7 +1924,6 @@
   },
   {
     "key": "25F0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med øvre venstre kvadrant"
@@ -2173,7 +1932,6 @@
   },
   {
     "key": "25F1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med nedre venstre kvadrant"
@@ -2182,7 +1940,6 @@
   },
   {
     "key": "25F2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med nedre høyre kvadrant"
@@ -2191,7 +1948,6 @@
   },
   {
     "key": "25F3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvitt kvadrat med øvre høyre kvadrant"
@@ -2200,7 +1956,6 @@
   },
   {
     "key": "25F4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit sirkel med øvre venstre kvadrant"
@@ -2209,7 +1964,6 @@
   },
   {
     "key": "25F5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit sirkel med nedre venstre kvadrant"
@@ -2218,7 +1972,6 @@
   },
   {
     "key": "25F6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit sirkel med nedre høyre kvadrant"
@@ -2227,7 +1980,6 @@
   },
   {
     "key": "25F7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit sirkel med øvre høyre kvadrant"
@@ -2236,7 +1988,6 @@
   },
   {
     "key": "25F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre venstre triangel"
@@ -2245,7 +1996,6 @@
   },
   {
     "key": "25F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre høyre triangel"
@@ -2254,7 +2004,6 @@
   },
   {
     "key": "25FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre venstre triangel"
@@ -2263,7 +2012,6 @@
   },
   {
     "key": "25FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvit medium kvadrat"
@@ -2272,7 +2020,6 @@
   },
   {
     "key": "25FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "svart medium kvadrat"
@@ -2281,7 +2028,6 @@
   },
   {
     "key": "25FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "hvit medium lite kvadrat"
@@ -2290,7 +2036,6 @@
   },
   {
     "key": "25FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "svart medium lite kvadrat"
@@ -2299,7 +2044,6 @@
   },
   {
     "key": "25FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre høyre triangel"
@@ -2308,7 +2052,6 @@
   },
   {
     "key": "2B12",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med top halv svart"
@@ -2317,7 +2060,6 @@
   },
   {
     "key": "2B13",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med bunn halv svart"
@@ -2326,7 +2068,6 @@
   },
   {
     "key": "2B14",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med øvre høyre diagonal halv svart"
@@ -2335,7 +2076,6 @@
   },
   {
     "key": "2B15",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadrat med nedre venstre diagonal halv svart"
@@ -2344,7 +2084,6 @@
   },
   {
     "key": "2B16",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "diamant med venstre halvdel svart"
@@ -2353,7 +2092,6 @@
   },
   {
     "key": "2B17",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "diamant med høyre halvdel svart"
@@ -2362,7 +2100,6 @@
   },
   {
     "key": "2B18",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "diamant med top halv svart"
@@ -2371,7 +2108,6 @@
   },
   {
     "key": "2B19",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "diamant med bunn halv svart"
@@ -2380,7 +2116,6 @@
   },
   {
     "key": "2B1A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "prikkted kvadrat"
@@ -2389,7 +2124,6 @@
   },
   {
     "key": "2B1B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart stor kvadrat"
@@ -2398,7 +2132,6 @@
   },
   {
     "key": "2B1C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit stor kvadrat"
@@ -2407,7 +2140,6 @@
   },
   {
     "key": "2B1D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart veldig lite kvadrat"
@@ -2416,7 +2148,6 @@
   },
   {
     "key": "2B1E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit veldig lite kvadrat"
@@ -2425,7 +2156,6 @@
   },
   {
     "key": "2B1F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart pentagon"
@@ -2434,7 +2164,6 @@
   },
   {
     "key": "2B20",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit pentagon"
@@ -2443,7 +2172,6 @@
   },
   {
     "key": "2B21",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit heksagon"
@@ -2452,7 +2180,6 @@
   },
   {
     "key": "2B22",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart heksagon"
@@ -2461,7 +2188,6 @@
   },
   {
     "key": "2B23",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "horisontal svart heksagon"
@@ -2470,7 +2196,6 @@
   },
   {
     "key": "2B24",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart stor sirkel"
@@ -2479,7 +2204,6 @@
   },
   {
     "key": "2B25",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart medium diamant"
@@ -2488,7 +2212,6 @@
   },
   {
     "key": "2B26",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit medium diamant"
@@ -2497,7 +2220,6 @@
   },
   {
     "key": "2B27",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart medium ruter"
@@ -2506,7 +2228,6 @@
   },
   {
     "key": "2B28",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit medium ruter"
@@ -2515,7 +2236,6 @@
   },
   {
     "key": "2B29",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart liten diamant"
@@ -2524,7 +2244,6 @@
   },
   {
     "key": "2B2A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart liten ruter"
@@ -2533,7 +2252,6 @@
   },
   {
     "key": "2B2B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit liten ruter"
@@ -2542,7 +2260,6 @@
   },
   {
     "key": "2B2C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart horisontal ellipse"
@@ -2551,7 +2268,6 @@
   },
   {
     "key": "2B2D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit horisontal ellipse"
@@ -2560,7 +2276,6 @@
   },
   {
     "key": "2B2E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart vertikal ellipse"
@@ -2569,7 +2284,6 @@
   },
   {
     "key": "2B2F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit vertikal ellipse"
@@ -2578,7 +2292,6 @@
   },
   {
     "key": "2B50",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit medium stjerne"
@@ -2587,7 +2300,6 @@
   },
   {
     "key": "2B51",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart liten stjerne"
@@ -2596,7 +2308,6 @@
   },
   {
     "key": "2B52",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit liten stjerne"
@@ -2605,7 +2316,6 @@
   },
   {
     "key": "2B53",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "svart høyre-vendt pentagon"
@@ -2614,7 +2324,6 @@
   },
   {
     "key": "2B54",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvit høyre-vendt pentagon"
@@ -2623,7 +2332,6 @@
   },
   {
     "key": "2B55",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fet stor sirkel"
@@ -2632,7 +2340,6 @@
   },
   {
     "key": "2B56",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fet oval med oval inside"
@@ -2641,7 +2348,6 @@
   },
   {
     "key": "2B57",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fet sirkel med sirkel inside"
@@ -2650,7 +2356,6 @@
   },
   {
     "key": "2B58",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fet sirkel"
@@ -2659,7 +2364,6 @@
   },
   {
     "key": "2B59",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fet innsirkla saltire"

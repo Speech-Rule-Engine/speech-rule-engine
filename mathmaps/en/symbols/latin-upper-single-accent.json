@@ -4,7 +4,6 @@
   },
   {
     "key": "00C0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A grave"
@@ -18,7 +17,6 @@
   },
   {
     "key": "00C1",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A acute"
@@ -32,7 +30,6 @@
   },
   {
     "key": "00C2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hat"
@@ -46,7 +43,6 @@
   },
   {
     "key": "00C3",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A tilde"
@@ -60,7 +56,6 @@
   },
   {
     "key": "00C4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A double overdot"
@@ -74,7 +69,6 @@
   },
   {
     "key": "00C5",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A ring"
@@ -88,7 +82,6 @@
   },
   {
     "key": "00C7",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap C cedilla"
@@ -102,7 +95,6 @@
   },
   {
     "key": "00C8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E grave"
@@ -116,7 +108,6 @@
   },
   {
     "key": "00C9",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E acute"
@@ -130,7 +121,6 @@
   },
   {
     "key": "00CA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hat"
@@ -144,7 +134,6 @@
   },
   {
     "key": "00CB",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E double overdot"
@@ -158,7 +147,6 @@
   },
   {
     "key": "00CC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I grave"
@@ -172,7 +160,6 @@
   },
   {
     "key": "00CD",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I acute"
@@ -186,7 +173,6 @@
   },
   {
     "key": "00CE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I hat"
@@ -200,7 +186,6 @@
   },
   {
     "key": "00CF",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I double overdot"
@@ -214,7 +199,6 @@
   },
   {
     "key": "00D1",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N tilde"
@@ -228,7 +212,6 @@
   },
   {
     "key": "00D2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O grave"
@@ -242,7 +225,6 @@
   },
   {
     "key": "00D3",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O acute"
@@ -256,7 +238,6 @@
   },
   {
     "key": "00D4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hat"
@@ -270,7 +251,6 @@
   },
   {
     "key": "00D5",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O tilde"
@@ -284,7 +264,6 @@
   },
   {
     "key": "00D6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O double overdot"
@@ -298,7 +277,6 @@
   },
   {
     "key": "00D9",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U grave"
@@ -312,7 +290,6 @@
   },
   {
     "key": "00DA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U acute"
@@ -326,7 +303,6 @@
   },
   {
     "key": "00DB",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U hat"
@@ -340,7 +316,6 @@
   },
   {
     "key": "00DC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double overdot"
@@ -354,7 +329,6 @@
   },
   {
     "key": "00DD",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y acute"
@@ -368,7 +342,6 @@
   },
   {
     "key": "0100",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A overbar"
@@ -382,7 +355,6 @@
   },
   {
     "key": "0102",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A breve"
@@ -396,7 +368,6 @@
   },
   {
     "key": "0104",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A ogonek"
@@ -410,7 +381,6 @@
   },
   {
     "key": "0106",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap C acute"
@@ -424,7 +394,6 @@
   },
   {
     "key": "0108",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap C hat"
@@ -438,7 +407,6 @@
   },
   {
     "key": "010A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap C overdot"
@@ -452,7 +420,6 @@
   },
   {
     "key": "010C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap C caron"
@@ -466,7 +433,6 @@
   },
   {
     "key": "010E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap D caron"
@@ -480,7 +446,6 @@
   },
   {
     "key": "0112",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E overbar"
@@ -494,7 +459,6 @@
   },
   {
     "key": "0114",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E breve"
@@ -508,7 +472,6 @@
   },
   {
     "key": "0116",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E overdot"
@@ -522,7 +485,6 @@
   },
   {
     "key": "0118",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E ogonek"
@@ -536,7 +498,6 @@
   },
   {
     "key": "011A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E caron"
@@ -550,7 +511,6 @@
   },
   {
     "key": "011C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G hat"
@@ -564,7 +524,6 @@
   },
   {
     "key": "011E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G breve"
@@ -578,7 +537,6 @@
   },
   {
     "key": "0120",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G overdot"
@@ -592,7 +550,6 @@
   },
   {
     "key": "0122",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G cedilla"
@@ -606,7 +563,6 @@
   },
   {
     "key": "0124",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H hat"
@@ -620,7 +576,6 @@
   },
   {
     "key": "0128",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I tilde"
@@ -634,7 +589,6 @@
   },
   {
     "key": "012A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I overbar"
@@ -648,7 +602,6 @@
   },
   {
     "key": "012C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I breve"
@@ -662,7 +615,6 @@
   },
   {
     "key": "012E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I ogonek"
@@ -676,7 +628,6 @@
   },
   {
     "key": "0130",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I overdot"
@@ -690,7 +641,6 @@
   },
   {
     "key": "0134",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap J hat"
@@ -704,7 +654,6 @@
   },
   {
     "key": "0136",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap K cedilla"
@@ -718,7 +667,6 @@
   },
   {
     "key": "0139",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L acute"
@@ -732,7 +680,6 @@
   },
   {
     "key": "013B",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L cedilla"
@@ -746,7 +693,6 @@
   },
   {
     "key": "013D",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L caron"
@@ -760,7 +706,6 @@
   },
   {
     "key": "013F",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L middle dot"
@@ -774,7 +719,6 @@
   },
   {
     "key": "0143",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N acute"
@@ -788,7 +732,6 @@
   },
   {
     "key": "0145",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N cedilla"
@@ -802,7 +745,6 @@
   },
   {
     "key": "0147",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N caron"
@@ -816,7 +758,6 @@
   },
   {
     "key": "014C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O overbar"
@@ -830,7 +771,6 @@
   },
   {
     "key": "014E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O breve"
@@ -844,7 +784,6 @@
   },
   {
     "key": "0150",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O double acute"
@@ -858,7 +797,6 @@
   },
   {
     "key": "0154",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R acute"
@@ -872,7 +810,6 @@
   },
   {
     "key": "0156",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R cedilla"
@@ -886,7 +823,6 @@
   },
   {
     "key": "0158",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R caron"
@@ -900,7 +836,6 @@
   },
   {
     "key": "015A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S acute"
@@ -914,7 +849,6 @@
   },
   {
     "key": "015C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S hat"
@@ -928,7 +862,6 @@
   },
   {
     "key": "015E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S cedilla"
@@ -942,7 +875,6 @@
   },
   {
     "key": "0160",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S caron"
@@ -956,7 +888,6 @@
   },
   {
     "key": "0162",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T cedilla"
@@ -970,7 +901,6 @@
   },
   {
     "key": "0164",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T caron"
@@ -984,7 +914,6 @@
   },
   {
     "key": "0168",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U tilde"
@@ -998,7 +927,6 @@
   },
   {
     "key": "016A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U overbar"
@@ -1012,7 +940,6 @@
   },
   {
     "key": "016C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U breve"
@@ -1026,7 +953,6 @@
   },
   {
     "key": "016E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U ring"
@@ -1040,7 +966,6 @@
   },
   {
     "key": "0170",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double acute"
@@ -1054,7 +979,6 @@
   },
   {
     "key": "0172",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U ogonek"
@@ -1068,7 +992,6 @@
   },
   {
     "key": "0174",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap W hat"
@@ -1082,7 +1005,6 @@
   },
   {
     "key": "0176",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y hat"
@@ -1096,7 +1018,6 @@
   },
   {
     "key": "0178",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y double overdot"
@@ -1110,7 +1031,6 @@
   },
   {
     "key": "0179",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Z acute"
@@ -1124,7 +1044,6 @@
   },
   {
     "key": "017B",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Z overdot"
@@ -1138,7 +1057,6 @@
   },
   {
     "key": "017D",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Z caron"
@@ -1152,7 +1070,6 @@
   },
   {
     "key": "01CD",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A caron"
@@ -1166,7 +1083,6 @@
   },
   {
     "key": "01CF",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I caron"
@@ -1180,7 +1096,6 @@
   },
   {
     "key": "01D1",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O caron"
@@ -1194,7 +1109,6 @@
   },
   {
     "key": "01D3",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U caron"
@@ -1208,7 +1122,6 @@
   },
   {
     "key": "01E6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G caron"
@@ -1222,7 +1135,6 @@
   },
   {
     "key": "01E8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap K caron"
@@ -1236,7 +1148,6 @@
   },
   {
     "key": "01EA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O ogonek"
@@ -1250,7 +1161,6 @@
   },
   {
     "key": "01F4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G acute"
@@ -1264,7 +1174,6 @@
   },
   {
     "key": "01F8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N grave"
@@ -1278,7 +1187,6 @@
   },
   {
     "key": "0200",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A double grave"
@@ -1292,7 +1200,6 @@
   },
   {
     "key": "0202",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A inverted breve"
@@ -1306,7 +1213,6 @@
   },
   {
     "key": "0204",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E double grave"
@@ -1320,7 +1226,6 @@
   },
   {
     "key": "0206",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E inverted breve"
@@ -1334,7 +1239,6 @@
   },
   {
     "key": "0208",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I double grave"
@@ -1348,7 +1252,6 @@
   },
   {
     "key": "020A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I inverted breve"
@@ -1362,7 +1265,6 @@
   },
   {
     "key": "020C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O double grave"
@@ -1376,7 +1278,6 @@
   },
   {
     "key": "020E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O inverted breve"
@@ -1390,7 +1291,6 @@
   },
   {
     "key": "0210",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R double grave"
@@ -1404,7 +1304,6 @@
   },
   {
     "key": "0212",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R inverted breve"
@@ -1418,7 +1317,6 @@
   },
   {
     "key": "0214",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double grave"
@@ -1432,7 +1330,6 @@
   },
   {
     "key": "0216",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U inverted breve"
@@ -1446,7 +1343,6 @@
   },
   {
     "key": "0218",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S comma below"
@@ -1460,7 +1356,6 @@
   },
   {
     "key": "021A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T comma below"
@@ -1474,7 +1369,6 @@
   },
   {
     "key": "021E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H caron"
@@ -1488,7 +1382,6 @@
   },
   {
     "key": "0226",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A overdot"
@@ -1502,7 +1395,6 @@
   },
   {
     "key": "0228",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E cedilla"
@@ -1516,7 +1408,6 @@
   },
   {
     "key": "022E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O overdot"
@@ -1530,7 +1421,6 @@
   },
   {
     "key": "0232",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y overbar"
@@ -1544,7 +1434,6 @@
   },
   {
     "key": "1E00",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A ring below"
@@ -1558,7 +1447,6 @@
   },
   {
     "key": "1E02",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap B overdot"
@@ -1572,7 +1460,6 @@
   },
   {
     "key": "1E04",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap B underdot"
@@ -1586,7 +1473,6 @@
   },
   {
     "key": "1E06",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap B underbar"
@@ -1600,7 +1486,6 @@
   },
   {
     "key": "1E0A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap D overdot"
@@ -1614,7 +1499,6 @@
   },
   {
     "key": "1E0C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap D underdot"
@@ -1628,7 +1512,6 @@
   },
   {
     "key": "1E0E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap D underbar"
@@ -1642,7 +1525,6 @@
   },
   {
     "key": "1E10",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap D cedilla"
@@ -1656,7 +1538,6 @@
   },
   {
     "key": "1E12",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap D underhat"
@@ -1670,7 +1551,6 @@
   },
   {
     "key": "1E18",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E underhat"
@@ -1684,7 +1564,6 @@
   },
   {
     "key": "1E1A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E tilde below"
@@ -1698,7 +1577,6 @@
   },
   {
     "key": "1E1E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap F overdot"
@@ -1712,7 +1590,6 @@
   },
   {
     "key": "1E20",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap G overbar"
@@ -1726,7 +1603,6 @@
   },
   {
     "key": "1E22",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H overdot"
@@ -1740,7 +1616,6 @@
   },
   {
     "key": "1E24",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H underdot"
@@ -1754,7 +1629,6 @@
   },
   {
     "key": "1E26",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H double overdot"
@@ -1768,7 +1642,6 @@
   },
   {
     "key": "1E28",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H cedilla"
@@ -1782,7 +1655,6 @@
   },
   {
     "key": "1E2A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap H breve below"
@@ -1796,7 +1668,6 @@
   },
   {
     "key": "1E2C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I tilde below"
@@ -1810,7 +1681,6 @@
   },
   {
     "key": "1E30",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap K acute"
@@ -1824,7 +1694,6 @@
   },
   {
     "key": "1E32",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap K underdot"
@@ -1838,7 +1707,6 @@
   },
   {
     "key": "1E34",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap K underbar"
@@ -1852,7 +1720,6 @@
   },
   {
     "key": "1E36",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L underdot"
@@ -1866,7 +1733,6 @@
   },
   {
     "key": "1E3A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L underbar"
@@ -1880,7 +1746,6 @@
   },
   {
     "key": "1E3C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L underhat"
@@ -1894,7 +1759,6 @@
   },
   {
     "key": "1E3E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap M acute"
@@ -1908,7 +1772,6 @@
   },
   {
     "key": "1E40",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap M overdot"
@@ -1922,7 +1785,6 @@
   },
   {
     "key": "1E42",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap M underdot"
@@ -1936,7 +1798,6 @@
   },
   {
     "key": "1E44",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N overdot"
@@ -1950,7 +1811,6 @@
   },
   {
     "key": "1E46",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N underdot"
@@ -1964,7 +1824,6 @@
   },
   {
     "key": "1E48",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N underbar"
@@ -1978,7 +1837,6 @@
   },
   {
     "key": "1E4A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap N underhat"
@@ -1992,7 +1850,6 @@
   },
   {
     "key": "1E54",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap P acute"
@@ -2006,7 +1863,6 @@
   },
   {
     "key": "1E56",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap P overdot"
@@ -2020,7 +1876,6 @@
   },
   {
     "key": "1E58",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R overdot"
@@ -2034,7 +1889,6 @@
   },
   {
     "key": "1E5A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R underdot"
@@ -2048,7 +1902,6 @@
   },
   {
     "key": "1E5E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R underbar"
@@ -2062,7 +1915,6 @@
   },
   {
     "key": "1E60",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S overdot"
@@ -2076,7 +1928,6 @@
   },
   {
     "key": "1E62",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S underdot"
@@ -2090,7 +1941,6 @@
   },
   {
     "key": "1E6A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T overdot"
@@ -2104,7 +1954,6 @@
   },
   {
     "key": "1E6C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T underdot"
@@ -2118,7 +1967,6 @@
   },
   {
     "key": "1E6E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T underbar"
@@ -2132,7 +1980,6 @@
   },
   {
     "key": "1E70",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap T underhat"
@@ -2146,7 +1993,6 @@
   },
   {
     "key": "1E72",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double underdot"
@@ -2160,7 +2006,6 @@
   },
   {
     "key": "1E74",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U tilde below"
@@ -2174,7 +2019,6 @@
   },
   {
     "key": "1E76",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U underhat"
@@ -2188,7 +2032,6 @@
   },
   {
     "key": "1E7C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap V tilde"
@@ -2202,7 +2045,6 @@
   },
   {
     "key": "1E7E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap V underdot"
@@ -2216,7 +2058,6 @@
   },
   {
     "key": "1E80",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap W grave"
@@ -2230,7 +2071,6 @@
   },
   {
     "key": "1E82",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap W acute"
@@ -2244,7 +2084,6 @@
   },
   {
     "key": "1E84",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap W double overdot"
@@ -2258,7 +2097,6 @@
   },
   {
     "key": "1E86",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap W overdot"
@@ -2272,7 +2110,6 @@
   },
   {
     "key": "1E88",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap W underdot"
@@ -2286,7 +2123,6 @@
   },
   {
     "key": "1E8A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap X overdot"
@@ -2300,7 +2136,6 @@
   },
   {
     "key": "1E8C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap X double overdot"
@@ -2314,7 +2149,6 @@
   },
   {
     "key": "1E8E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y overdot"
@@ -2328,7 +2162,6 @@
   },
   {
     "key": "1E90",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Z circumflex"
@@ -2342,7 +2175,6 @@
   },
   {
     "key": "1E92",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Z underdot"
@@ -2356,7 +2188,6 @@
   },
   {
     "key": "1E94",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Z underbar"
@@ -2370,7 +2201,6 @@
   },
   {
     "key": "1EA0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A underdot"
@@ -2384,7 +2214,6 @@
   },
   {
     "key": "1EA2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hook"
@@ -2398,7 +2227,6 @@
   },
   {
     "key": "1EB8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E underdot"
@@ -2412,7 +2240,6 @@
   },
   {
     "key": "1EBA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hook"
@@ -2426,7 +2253,6 @@
   },
   {
     "key": "1EBC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E tilde"
@@ -2440,7 +2266,6 @@
   },
   {
     "key": "1EC8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I hook"
@@ -2454,7 +2279,6 @@
   },
   {
     "key": "1ECA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I underdot"
@@ -2468,7 +2292,6 @@
   },
   {
     "key": "1ECC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O underdot"
@@ -2482,7 +2305,6 @@
   },
   {
     "key": "1ECE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hook"
@@ -2496,7 +2318,6 @@
   },
   {
     "key": "1EE4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U underdot"
@@ -2510,7 +2331,6 @@
   },
   {
     "key": "1EE6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U hook"
@@ -2524,7 +2344,6 @@
   },
   {
     "key": "1EF2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y grave"
@@ -2538,7 +2357,6 @@
   },
   {
     "key": "1EF4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y underdot"
@@ -2552,7 +2370,6 @@
   },
   {
     "key": "1EF6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y hook"
@@ -2566,7 +2383,6 @@
   },
   {
     "key": "1EF8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap Y tilde"

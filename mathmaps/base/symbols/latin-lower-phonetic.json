@@ -1,0 +1,845 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "00F8",
+    "category": "Ll"
+  },
+  {
+    "key": "0111",
+    "category": "Ll"
+  },
+  {
+    "key": "0127",
+    "category": "Ll"
+  },
+  {
+    "key": "0142",
+    "category": "Ll"
+  },
+  {
+    "key": "0167",
+    "category": "Ll"
+  },
+  {
+    "key": "0180",
+    "category": "Ll"
+  },
+  {
+    "key": "019B",
+    "category": "Ll"
+  },
+  {
+    "key": "01B6",
+    "category": "Ll"
+  },
+  {
+    "key": "01BE",
+    "category": "Ll"
+  },
+  {
+    "key": "01E5",
+    "category": "Ll"
+  },
+  {
+    "key": "01FF",
+    "category": "Ll"
+  },
+  {
+    "key": "023C",
+    "category": "Ll"
+  },
+  {
+    "key": "0247",
+    "category": "Ll"
+  },
+  {
+    "key": "0249",
+    "category": "Ll"
+  },
+  {
+    "key": "024D",
+    "category": "Ll"
+  },
+  {
+    "key": "024F",
+    "category": "Ll"
+  },
+  {
+    "key": "025F",
+    "category": "Ll"
+  },
+  {
+    "key": "0268",
+    "category": "Ll"
+  },
+  {
+    "key": "0284",
+    "category": "Ll"
+  },
+  {
+    "key": "02A1",
+    "category": "Ll"
+  },
+  {
+    "key": "02A2",
+    "category": "Ll"
+  },
+  {
+    "key": "1D13",
+    "category": "Ll"
+  },
+  {
+    "key": "1D7C",
+    "category": "Ll"
+  },
+  {
+    "key": "1D7D",
+    "category": "Ll"
+  },
+  {
+    "key": "1D7F",
+    "category": "Ll"
+  },
+  {
+    "key": "1E9C",
+    "category": "Ll"
+  },
+  {
+    "key": "1E9D",
+    "category": "Ll"
+  },
+  {
+    "key": "018D",
+    "category": "Ll"
+  },
+  {
+    "key": "1E9B",
+    "category": "Ll"
+  },
+  {
+    "key": "1E9F",
+    "category": "Ll"
+  },
+  {
+    "key": "0138",
+    "category": "Ll"
+  },
+  {
+    "key": "017F",
+    "category": "Ll"
+  },
+  {
+    "key": "0183",
+    "category": "Ll"
+  },
+  {
+    "key": "0185",
+    "category": "Ll"
+  },
+  {
+    "key": "0188",
+    "category": "Ll"
+  },
+  {
+    "key": "018C",
+    "category": "Ll"
+  },
+  {
+    "key": "0192",
+    "category": "Ll"
+  },
+  {
+    "key": "0195",
+    "category": "Ll"
+  },
+  {
+    "key": "0199",
+    "category": "Ll"
+  },
+  {
+    "key": "019A",
+    "category": "Ll"
+  },
+  {
+    "key": "019E",
+    "category": "Ll"
+  },
+  {
+    "key": "01A1",
+    "category": "Ll"
+  },
+  {
+    "key": "01A3",
+    "category": "Ll"
+  },
+  {
+    "key": "01A5",
+    "category": "Ll"
+  },
+  {
+    "key": "01A8",
+    "category": "Ll"
+  },
+  {
+    "key": "01AA",
+    "category": "Ll"
+  },
+  {
+    "key": "01AB",
+    "category": "Ll"
+  },
+  {
+    "key": "01AD",
+    "category": "Ll"
+  },
+  {
+    "key": "01B0",
+    "category": "Ll"
+  },
+  {
+    "key": "01B4",
+    "category": "Ll"
+  },
+  {
+    "key": "01B9",
+    "category": "Ll"
+  },
+  {
+    "key": "01BA",
+    "category": "Ll"
+  },
+  {
+    "key": "01BD",
+    "category": "Ll"
+  },
+  {
+    "key": "01BF",
+    "category": "Ll"
+  },
+  {
+    "key": "01C6",
+    "category": "Ll"
+  },
+  {
+    "key": "01C9",
+    "category": "Ll"
+  },
+  {
+    "key": "01CC",
+    "category": "Ll"
+  },
+  {
+    "key": "01E3",
+    "category": "Ll"
+  },
+  {
+    "key": "01EF",
+    "category": "Ll"
+  },
+  {
+    "key": "01F3",
+    "category": "Ll"
+  },
+  {
+    "key": "021D",
+    "category": "Ll"
+  },
+  {
+    "key": "026E",
+    "category": "Ll"
+  },
+  {
+    "key": "0292",
+    "category": "Ll"
+  },
+  {
+    "key": "0293",
+    "category": "Ll"
+  },
+  {
+    "key": "02A4",
+    "category": "Ll"
+  },
+  {
+    "key": "01DD",
+    "category": "Ll"
+  },
+  {
+    "key": "01FD",
+    "category": "Ll"
+  },
+  {
+    "key": "0221",
+    "category": "Ll"
+  },
+  {
+    "key": "0223",
+    "category": "Ll"
+  },
+  {
+    "key": "0225",
+    "category": "Ll"
+  },
+  {
+    "key": "0234",
+    "category": "Ll"
+  },
+  {
+    "key": "0235",
+    "category": "Ll"
+  },
+  {
+    "key": "0236",
+    "category": "Ll"
+  },
+  {
+    "key": "0238",
+    "category": "Ll"
+  },
+  {
+    "key": "0239",
+    "category": "Ll"
+  },
+  {
+    "key": "023F",
+    "category": "Ll"
+  },
+  {
+    "key": "0240",
+    "category": "Ll"
+  },
+  {
+    "key": "0242",
+    "category": "Ll"
+  },
+  {
+    "key": "024B",
+    "category": "Ll"
+  },
+  {
+    "key": "0250",
+    "category": "Ll"
+  },
+  {
+    "key": "0251",
+    "category": "Ll"
+  },
+  {
+    "key": "0252",
+    "category": "Ll"
+  },
+  {
+    "key": "0253",
+    "category": "Ll"
+  },
+  {
+    "key": "0254",
+    "category": "Ll"
+  },
+  {
+    "key": "0255",
+    "category": "Ll"
+  },
+  {
+    "key": "0256",
+    "category": "Ll"
+  },
+  {
+    "key": "0257",
+    "category": "Ll"
+  },
+  {
+    "key": "0258",
+    "category": "Ll"
+  },
+  {
+    "key": "0259",
+    "category": "Ll"
+  },
+  {
+    "key": "025A",
+    "category": "Ll"
+  },
+  {
+    "key": "025B",
+    "category": "Ll"
+  },
+  {
+    "key": "025C",
+    "category": "Ll"
+  },
+  {
+    "key": "025D",
+    "category": "Ll"
+  },
+  {
+    "key": "025E",
+    "category": "Ll"
+  },
+  {
+    "key": "0260",
+    "category": "Ll"
+  },
+  {
+    "key": "0261",
+    "category": "Ll"
+  },
+  {
+    "key": "0263",
+    "category": "Ll"
+  },
+  {
+    "key": "0264",
+    "category": "Ll"
+  },
+  {
+    "key": "0265",
+    "category": "Ll"
+  },
+  {
+    "key": "0266",
+    "category": "Ll"
+  },
+  {
+    "key": "0267",
+    "category": "Ll"
+  },
+  {
+    "key": "0269",
+    "category": "Ll"
+  },
+  {
+    "key": "026B",
+    "category": "Ll"
+  },
+  {
+    "key": "026C",
+    "category": "Ll"
+  },
+  {
+    "key": "026D",
+    "category": "Ll"
+  },
+  {
+    "key": "026F",
+    "category": "Ll"
+  },
+  {
+    "key": "0270",
+    "category": "Ll"
+  },
+  {
+    "key": "0271",
+    "category": "Ll"
+  },
+  {
+    "key": "0272",
+    "category": "Ll"
+  },
+  {
+    "key": "0273",
+    "category": "Ll"
+  },
+  {
+    "key": "0275",
+    "category": "Ll"
+  },
+  {
+    "key": "0277",
+    "category": "Ll"
+  },
+  {
+    "key": "0278",
+    "category": "Ll"
+  },
+  {
+    "key": "0279",
+    "category": "Ll"
+  },
+  {
+    "key": "027A",
+    "category": "Ll"
+  },
+  {
+    "key": "027B",
+    "category": "Ll"
+  },
+  {
+    "key": "027C",
+    "category": "Ll"
+  },
+  {
+    "key": "027D",
+    "category": "Ll"
+  },
+  {
+    "key": "027E",
+    "category": "Ll"
+  },
+  {
+    "key": "027F",
+    "category": "Ll"
+  },
+  {
+    "key": "0282",
+    "category": "Ll"
+  },
+  {
+    "key": "0283",
+    "category": "Ll"
+  },
+  {
+    "key": "0285",
+    "category": "Ll"
+  },
+  {
+    "key": "0286",
+    "category": "Ll"
+  },
+  {
+    "key": "0287",
+    "category": "Ll"
+  },
+  {
+    "key": "0288",
+    "category": "Ll"
+  },
+  {
+    "key": "0289",
+    "category": "Ll"
+  },
+  {
+    "key": "028A",
+    "category": "Ll"
+  },
+  {
+    "key": "028B",
+    "category": "Ll"
+  },
+  {
+    "key": "028C",
+    "category": "Ll"
+  },
+  {
+    "key": "028D",
+    "category": "Ll"
+  },
+  {
+    "key": "028E",
+    "category": "Ll"
+  },
+  {
+    "key": "0290",
+    "category": "Ll"
+  },
+  {
+    "key": "0291",
+    "category": "Ll"
+  },
+  {
+    "key": "0295",
+    "category": "Ll"
+  },
+  {
+    "key": "0296",
+    "category": "Ll"
+  },
+  {
+    "key": "0297",
+    "category": "Ll"
+  },
+  {
+    "key": "0298",
+    "category": "Ll"
+  },
+  {
+    "key": "029A",
+    "category": "Ll"
+  },
+  {
+    "key": "029E",
+    "category": "Ll"
+  },
+  {
+    "key": "02A0",
+    "category": "Ll"
+  },
+  {
+    "key": "02A3",
+    "category": "Ll"
+  },
+  {
+    "key": "02A5",
+    "category": "Ll"
+  },
+  {
+    "key": "02A6",
+    "category": "Ll"
+  },
+  {
+    "key": "02A7",
+    "category": "Ll"
+  },
+  {
+    "key": "02A8",
+    "category": "Ll"
+  },
+  {
+    "key": "02A9",
+    "category": "Ll"
+  },
+  {
+    "key": "02AA",
+    "category": "Ll"
+  },
+  {
+    "key": "02AB",
+    "category": "Ll"
+  },
+  {
+    "key": "02AC",
+    "category": "Ll"
+  },
+  {
+    "key": "02AD",
+    "category": "Ll"
+  },
+  {
+    "key": "02AE",
+    "category": "Ll"
+  },
+  {
+    "key": "02AF",
+    "category": "Ll"
+  },
+  {
+    "key": "1D02",
+    "category": "Ll"
+  },
+  {
+    "key": "1D08",
+    "category": "Ll"
+  },
+  {
+    "key": "1D09",
+    "category": "Ll"
+  },
+  {
+    "key": "1D11",
+    "category": "Ll"
+  },
+  {
+    "key": "1D12",
+    "category": "Ll"
+  },
+  {
+    "key": "1D14",
+    "category": "Ll"
+  },
+  {
+    "key": "1D16",
+    "category": "Ll"
+  },
+  {
+    "key": "1D17",
+    "category": "Ll"
+  },
+  {
+    "key": "1D1D",
+    "category": "Ll"
+  },
+  {
+    "key": "1D1E",
+    "category": "Ll"
+  },
+  {
+    "key": "1D1F",
+    "category": "Ll"
+  },
+  {
+    "key": "1D24",
+    "category": "Ll"
+  },
+  {
+    "key": "1D25",
+    "category": "Ll"
+  },
+  {
+    "key": "1D6B",
+    "category": "Ll"
+  },
+  {
+    "key": "1D6C",
+    "category": "Ll"
+  },
+  {
+    "key": "1D6D",
+    "category": "Ll"
+  },
+  {
+    "key": "1D6E",
+    "category": "Ll"
+  },
+  {
+    "key": "1D6F",
+    "category": "Ll"
+  },
+  {
+    "key": "1D70",
+    "category": "Ll"
+  },
+  {
+    "key": "1D71",
+    "category": "Ll"
+  },
+  {
+    "key": "1D72",
+    "category": "Ll"
+  },
+  {
+    "key": "1D73",
+    "category": "Ll"
+  },
+  {
+    "key": "1D74",
+    "category": "Ll"
+  },
+  {
+    "key": "1D75",
+    "category": "Ll"
+  },
+  {
+    "key": "1D76",
+    "category": "Ll"
+  },
+  {
+    "key": "1D77",
+    "category": "Ll"
+  },
+  {
+    "key": "1D79",
+    "category": "Ll"
+  },
+  {
+    "key": "1D7A",
+    "category": "Ll"
+  },
+  {
+    "key": "1D80",
+    "category": "Ll"
+  },
+  {
+    "key": "1D81",
+    "category": "Ll"
+  },
+  {
+    "key": "1D82",
+    "category": "Ll"
+  },
+  {
+    "key": "1D83",
+    "category": "Ll"
+  },
+  {
+    "key": "1D84",
+    "category": "Ll"
+  },
+  {
+    "key": "1D85",
+    "category": "Ll"
+  },
+  {
+    "key": "1D86",
+    "category": "Ll"
+  },
+  {
+    "key": "1D87",
+    "category": "Ll"
+  },
+  {
+    "key": "1D88",
+    "category": "Ll"
+  },
+  {
+    "key": "1D89",
+    "category": "Ll"
+  },
+  {
+    "key": "1D8A",
+    "category": "Ll"
+  },
+  {
+    "key": "1D8B",
+    "category": "Ll"
+  },
+  {
+    "key": "1D8C",
+    "category": "Ll"
+  },
+  {
+    "key": "1D8D",
+    "category": "Ll"
+  },
+  {
+    "key": "1D8E",
+    "category": "Ll"
+  },
+  {
+    "key": "1D8F",
+    "category": "Ll"
+  },
+  {
+    "key": "1D90",
+    "category": "Ll"
+  },
+  {
+    "key": "1D91",
+    "category": "Ll"
+  },
+  {
+    "key": "1D92",
+    "category": "Ll"
+  },
+  {
+    "key": "1D93",
+    "category": "Ll"
+  },
+  {
+    "key": "1D94",
+    "category": "Ll"
+  },
+  {
+    "key": "1D95",
+    "category": "Ll"
+  },
+  {
+    "key": "1D96",
+    "category": "Ll"
+  },
+  {
+    "key": "1D97",
+    "category": "Ll"
+  },
+  {
+    "key": "1D98",
+    "category": "Ll"
+  },
+  {
+    "key": "1D99",
+    "category": "Ll"
+  },
+  {
+    "key": "1D9A",
+    "category": "Ll"
+  },
+  {
+    "key": "0149",
+    "category": "Ll"
+  },
+  {
+    "key": "014B",
+    "category": "Ll"
+  }
+]

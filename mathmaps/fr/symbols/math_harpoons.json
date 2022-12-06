@@ -4,7 +4,6 @@
   },
   {
     "key": "21BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon gauche avec dent dressée"
@@ -13,7 +12,6 @@
   },
   {
     "key": "21BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon gauche avec dent baissée"
@@ -22,7 +20,6 @@
   },
   {
     "key": "21BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon vers le haut avec dent droite"
@@ -31,7 +28,6 @@
   },
   {
     "key": "21BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon vers le haut avec dent gauche"
@@ -40,7 +36,6 @@
   },
   {
     "key": "21C0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon droit avec dent dressée"
@@ -49,7 +44,6 @@
   },
   {
     "key": "21C1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon droit avec dent baissée"
@@ -58,7 +52,6 @@
   },
   {
     "key": "21C2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon vers le bas avec dent droite"
@@ -67,7 +60,6 @@
   },
   {
     "key": "21C3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon vers le bas avec dent gauche"
@@ -76,7 +68,6 @@
   },
   {
     "key": "21CB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon gauche par dessus harpon droit"
@@ -85,7 +76,6 @@
   },
   {
     "key": "21CC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "harpon droit par dessus harpon gauche"
@@ -94,7 +84,6 @@
   },
   {
     "key": "294A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "javelot à dents gauche dressée et droite baissée"
@@ -103,7 +92,6 @@
   },
   {
     "key": "294B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "javelot à dents gauche baissée et droite dressée"
@@ -112,7 +100,6 @@
   },
   {
     "key": "294C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "crampon à dents supérieure droite et inférieure gauche"
@@ -121,7 +108,6 @@
   },
   {
     "key": "294D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "crampon à dents supérieure gauche et inférieure droite"
@@ -130,7 +116,6 @@
   },
   {
     "key": "294E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "javelot à dents droite et gauche dressées"
@@ -139,7 +124,6 @@
   },
   {
     "key": "294F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "javelot à dents supérieure et inférieure droites"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2950",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "javelot à dents droite et gauche baissées"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2951",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "javelot à dents supérieure et inférieure gauches"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2952",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon gauche à dent dressée contre taquet"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2953",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon droit à dent dressée contre taquet"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2954",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le haut à dent droite contre taquet"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2955",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le bas à dent droite contre taquet"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2956",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon gauche à dent baissée contre taquet"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2957",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon droit à dent baissée contre taquet"
@@ -220,7 +196,6 @@
   },
   {
     "key": "2958",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le haut à dent gauche contre taquet"
@@ -229,7 +204,6 @@
   },
   {
     "key": "2959",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le bas à dent gauche contre taquet"
@@ -238,7 +212,6 @@
   },
   {
     "key": "295A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon gauche à dent dressée depuis taquet"
@@ -247,7 +220,6 @@
   },
   {
     "key": "295B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon droit à dent dressée depuis taquet"
@@ -256,7 +228,6 @@
   },
   {
     "key": "295C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le haut à dent droite depuis taquet"
@@ -265,7 +236,6 @@
   },
   {
     "key": "295D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le bas à dent droite depuis taquet"
@@ -274,7 +244,6 @@
   },
   {
     "key": "295E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon gauche à dent baissée depuis taquet"
@@ -283,7 +252,6 @@
   },
   {
     "key": "295F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon droit à dent baissée depuis taquet"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2960",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le haut à dent gauche depuis taquet"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2961",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le bas à dent gauche depuis taquet"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2962",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon gauche à dent dressée sur harpon gauche à dent baissée"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2963",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le haut à dent gauche à côté de harpon vers le haut à dent droite"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2964",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon droit à dent dressée par dessus harpon droit à dent baissée"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2965",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le bas à dent gauche à côté de harpon vers le bas à dent droite"
@@ -346,7 +308,6 @@
   },
   {
     "key": "2966",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon à dent gauche dressée par dessus harpon à dent droite dressée"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2967",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon à dent gauche baissée par dessus harpon à dent droite baissée"
@@ -364,7 +324,6 @@
   },
   {
     "key": "2968",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon à dent droite dressée par dessus harpon à dent gauche dressée"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2969",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon à dent droite baissée par dessus harpon à dent gauche baissée"
@@ -382,7 +340,6 @@
   },
   {
     "key": "296A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon à dent gauche dressée par dessus long trait"
@@ -391,7 +348,6 @@
   },
   {
     "key": "296B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "long trait par dessus harpon à dent gauche baissée"
@@ -400,7 +356,6 @@
   },
   {
     "key": "296C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon à dent droite dressée par dessus long trait"
@@ -409,7 +364,6 @@
   },
   {
     "key": "296D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "long trait par dessus harpon à dent droite baissée"
@@ -418,7 +372,6 @@
   },
   {
     "key": "296E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le haut à dent gauche à côté de harpon vers le bas à dent droite"
@@ -427,7 +380,6 @@
   },
   {
     "key": "296F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "harpon vers le bas à dent gauche à côté de harpon vers le haut à dent droite"
@@ -436,7 +388,6 @@
   },
   {
     "key": "297C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ancre gauche"
@@ -445,7 +396,6 @@
   },
   {
     "key": "297D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ancre droite"
@@ -454,7 +404,6 @@
   },
   {
     "key": "297E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ancre vers le haut"
@@ -463,7 +412,6 @@
   },
   {
     "key": "297F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ancre vers le bas"

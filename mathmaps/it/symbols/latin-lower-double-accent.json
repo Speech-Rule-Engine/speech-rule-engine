@@ -4,7 +4,6 @@
   },
   {
     "key": "01D6",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con diaeresi e macron"
@@ -13,7 +12,6 @@
   },
   {
     "key": "01D8",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con diaeresi e acuto"
@@ -22,7 +20,6 @@
   },
   {
     "key": "01DA",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con diaeresi e caronte"
@@ -31,7 +28,6 @@
   },
   {
     "key": "01DC",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con diaeresi e tomba"
@@ -40,7 +36,6 @@
   },
   {
     "key": "01DF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con diaeresis e macron"
@@ -49,7 +44,6 @@
   },
   {
     "key": "01E1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con punto e macron"
@@ -58,7 +52,6 @@
   },
   {
     "key": "01ED",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con Ogonek e macron"
@@ -67,7 +60,6 @@
   },
   {
     "key": "01FB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con anello sopra e accento acuto"
@@ -76,7 +68,6 @@
   },
   {
     "key": "022B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con diaeresi e macron"
@@ -85,7 +76,6 @@
   },
   {
     "key": "022D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con tilde e macron"
@@ -94,7 +84,6 @@
   },
   {
     "key": "0231",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con punto sopra e macron"
@@ -103,7 +92,6 @@
   },
   {
     "key": "1E09",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c con cediglia e accento acuto"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1E15",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con barra sopra e accento grave"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1E17",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con barra sopra e accento acuto"
@@ -130,7 +116,6 @@
   },
   {
     "key": "1E1D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con cediglia e con segno di vocale corta"
@@ -139,7 +124,6 @@
   },
   {
     "key": "1E2F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i con dieresi ed accento acuto"
@@ -148,7 +132,6 @@
   },
   {
     "key": "1E39",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l con punto sotto e con barra sopra"
@@ -157,7 +140,6 @@
   },
   {
     "key": "1E4D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con tilde ed accento acuto"
@@ -166,7 +148,6 @@
   },
   {
     "key": "1E4F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con tilde e dieresi"
@@ -175,7 +156,6 @@
   },
   {
     "key": "1E51",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con barra sopra ed accento grave"
@@ -184,7 +164,6 @@
   },
   {
     "key": "1E53",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con barra sopra ed accento acuto"
@@ -193,7 +172,6 @@
   },
   {
     "key": "1E5D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r con punto sotto e con barra sopra"
@@ -202,7 +180,6 @@
   },
   {
     "key": "1E65",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con accento acuto e punto sopra"
@@ -211,7 +188,6 @@
   },
   {
     "key": "1E67",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con caron e punto sopra"
@@ -220,7 +196,6 @@
   },
   {
     "key": "1E69",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s con punto sotto e punto sopra"
@@ -229,7 +204,6 @@
   },
   {
     "key": "1E79",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con tilde ed accento acuto"
@@ -238,7 +212,6 @@
   },
   {
     "key": "1E7B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con barra sopra e dieresi"
@@ -247,7 +220,6 @@
   },
   {
     "key": "1EA5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con accento circonflesso ed accento acuto"
@@ -256,7 +228,6 @@
   },
   {
     "key": "1EA7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con accento circonflesso ed accento grave"
@@ -265,7 +236,6 @@
   },
   {
     "key": "1EA9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con accento circonflesso e gancio sopra"
@@ -274,7 +244,6 @@
   },
   {
     "key": "1EAB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con accento circonflesso e tilde"
@@ -283,7 +252,6 @@
   },
   {
     "key": "1EAD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con accento circonflesso e punto sotto"
@@ -292,7 +260,6 @@
   },
   {
     "key": "1EAF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con segno di vocale corta ed accento acuto"
@@ -301,7 +268,6 @@
   },
   {
     "key": "1EB1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con segno di vocale corta ed accento grave"
@@ -310,7 +276,6 @@
   },
   {
     "key": "1EB3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con segno di vocale corta e gancio sopra"
@@ -319,7 +284,6 @@
   },
   {
     "key": "1EB5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con segno di vocale corta e tilde"
@@ -328,7 +292,6 @@
   },
   {
     "key": "1EB7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a con segno di vocale corta e punto sotto"
@@ -337,7 +300,6 @@
   },
   {
     "key": "1EBF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con accento circonflesso ed acuto"
@@ -346,7 +308,6 @@
   },
   {
     "key": "1EC1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con accento circonflesso e grave"
@@ -355,7 +316,6 @@
   },
   {
     "key": "1EC3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con accento circonflesso e gancio sopra"
@@ -364,7 +324,6 @@
   },
   {
     "key": "1EC5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con accento circonflesso e tilde"
@@ -373,7 +332,6 @@
   },
   {
     "key": "1EC7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e con accento circonflesso e punto sotto"
@@ -382,7 +340,6 @@
   },
   {
     "key": "1ED1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con accento circonflesso e accento acuto"
@@ -391,7 +348,6 @@
   },
   {
     "key": "1ED3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con accento circonflesso e accento grave"
@@ -400,7 +356,6 @@
   },
   {
     "key": "1ED5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con accento circonflesso e gancio sopra"
@@ -409,7 +364,6 @@
   },
   {
     "key": "1ED7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con accento circonflesso e tilde"
@@ -418,7 +372,6 @@
   },
   {
     "key": "1ED9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con accento circonflesso e punto sotto"
@@ -427,7 +380,6 @@
   },
   {
     "key": "1EDB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con corno e accento acuto"
@@ -436,7 +388,6 @@
   },
   {
     "key": "1EDD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con corno e accento grave"
@@ -445,7 +396,6 @@
   },
   {
     "key": "1EDF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con corno e gancio sopra"
@@ -454,7 +404,6 @@
   },
   {
     "key": "1EE1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con corno e tilde"
@@ -463,7 +412,6 @@
   },
   {
     "key": "1EE3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o con corno e punto sotto"
@@ -472,7 +420,6 @@
   },
   {
     "key": "1EE9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con corno e accento acuto"
@@ -481,7 +428,6 @@
   },
   {
     "key": "1EEB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con corno e accento grave"
@@ -490,7 +436,6 @@
   },
   {
     "key": "1EED",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con corno e gancio sopra"
@@ -499,7 +444,6 @@
   },
   {
     "key": "1EEF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con corno e tilde"
@@ -508,7 +452,6 @@
   },
   {
     "key": "1EF1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u con corno e punto sotto"

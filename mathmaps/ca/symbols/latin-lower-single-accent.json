@@ -4,7 +4,6 @@
   },
   {
     "key": "00E0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a greu"
@@ -13,7 +12,6 @@
   },
   {
     "key": "00E1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a aguda"
@@ -22,7 +20,6 @@
   },
   {
     "key": "00E2",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a accent circumflex"
@@ -31,7 +28,6 @@
   },
   {
     "key": "00E3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "amb amb titlla"
@@ -40,7 +36,6 @@
   },
   {
     "key": "00E4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a dièresi"
@@ -49,7 +44,6 @@
   },
   {
     "key": "00E5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "amb anell"
@@ -58,7 +52,6 @@
   },
   {
     "key": "00E7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "ce trencada"
@@ -67,7 +60,6 @@
   },
   {
     "key": "00E8",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e greu"
@@ -76,7 +68,6 @@
   },
   {
     "key": "00E9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e aguda"
@@ -85,7 +76,6 @@
   },
   {
     "key": "00EA",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb accent circumflex"
@@ -94,7 +84,6 @@
   },
   {
     "key": "00EB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e dièresi"
@@ -103,7 +92,6 @@
   },
   {
     "key": "00EC",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i greu"
@@ -112,7 +100,6 @@
   },
   {
     "key": "00ED",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i aguda"
@@ -121,7 +108,6 @@
   },
   {
     "key": "00EE",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb accent circumflex"
@@ -130,7 +116,6 @@
   },
   {
     "key": "00EF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i dièresi"
@@ -139,7 +124,6 @@
   },
   {
     "key": "00F1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "enya"
@@ -148,7 +132,6 @@
   },
   {
     "key": "00F2",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o greu"
@@ -157,7 +140,6 @@
   },
   {
     "key": "00F3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o aguda"
@@ -166,7 +148,6 @@
   },
   {
     "key": "00F4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb accent circumflex"
@@ -175,7 +156,6 @@
   },
   {
     "key": "00F5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb titlla"
@@ -184,7 +164,6 @@
   },
   {
     "key": "00F6",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o dièresi"
@@ -193,7 +172,6 @@
   },
   {
     "key": "00F9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u greu"
@@ -202,7 +180,6 @@
   },
   {
     "key": "00FA",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u aguda"
@@ -211,7 +188,6 @@
   },
   {
     "key": "00FB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb accent circumflex"
@@ -220,7 +196,6 @@
   },
   {
     "key": "00FC",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u dièresi"
@@ -229,7 +204,6 @@
   },
   {
     "key": "00FD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y aguda",
@@ -239,7 +213,6 @@
   },
   {
     "key": "00FF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y dièresi",
@@ -249,7 +222,6 @@
   },
   {
     "key": "0101",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a barra"
@@ -258,7 +230,6 @@
   },
   {
     "key": "0103",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb breu"
@@ -267,7 +238,6 @@
   },
   {
     "key": "0105",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb ogonek"
@@ -276,7 +246,6 @@
   },
   {
     "key": "0107",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c amb agut"
@@ -285,7 +254,6 @@
   },
   {
     "key": "0109",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c amb accent circumflex"
@@ -294,7 +262,6 @@
   },
   {
     "key": "010B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c amb punt a dalt"
@@ -303,7 +270,6 @@
   },
   {
     "key": "010D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c amb hàtxek"
@@ -312,7 +278,6 @@
   },
   {
     "key": "010F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d amb hàtxek"
@@ -321,7 +286,6 @@
   },
   {
     "key": "0113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e barra"
@@ -330,7 +294,6 @@
   },
   {
     "key": "0115",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb breu"
@@ -339,7 +302,6 @@
   },
   {
     "key": "0117",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb punt a dalt"
@@ -348,7 +310,6 @@
   },
   {
     "key": "0119",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb ogonek"
@@ -357,7 +318,6 @@
   },
   {
     "key": "011B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb hàtxek"
@@ -366,7 +326,6 @@
   },
   {
     "key": "011D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb accent circumflex"
@@ -375,7 +334,6 @@
   },
   {
     "key": "011F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb breu"
@@ -384,7 +342,6 @@
   },
   {
     "key": "0121",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb punt a dalt"
@@ -393,7 +350,6 @@
   },
   {
     "key": "0123",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb diacrític"
@@ -402,7 +358,6 @@
   },
   {
     "key": "0125",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb accent circumflex"
@@ -411,7 +366,6 @@
   },
   {
     "key": "0129",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb titlla"
@@ -420,7 +374,6 @@
   },
   {
     "key": "012B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i barra"
@@ -429,7 +382,6 @@
   },
   {
     "key": "012D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb breu"
@@ -438,7 +390,6 @@
   },
   {
     "key": "012F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb ogonek"
@@ -447,7 +398,6 @@
   },
   {
     "key": "0131",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i sense punt"
@@ -456,7 +406,6 @@
   },
   {
     "key": "0135",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j amb accent circumflex"
@@ -465,7 +414,6 @@
   },
   {
     "key": "0137",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k amb diacrític"
@@ -474,7 +422,6 @@
   },
   {
     "key": "013A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb agut"
@@ -483,7 +430,6 @@
   },
   {
     "key": "013C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb diacrític"
@@ -492,7 +438,6 @@
   },
   {
     "key": "013E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb hàtxek"
@@ -501,7 +446,6 @@
   },
   {
     "key": "0140",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb punt mitjà"
@@ -510,7 +454,6 @@
   },
   {
     "key": "0144",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb agut"
@@ -519,7 +462,6 @@
   },
   {
     "key": "0146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb diacrític"
@@ -528,7 +470,6 @@
   },
   {
     "key": "0148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb hàtxek"
@@ -537,7 +478,6 @@
   },
   {
     "key": "014D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o barra"
@@ -546,7 +486,6 @@
   },
   {
     "key": "014F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb breu"
@@ -555,7 +494,6 @@
   },
   {
     "key": "0151",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb doble accent agut"
@@ -564,7 +502,6 @@
   },
   {
     "key": "0155",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb agut"
@@ -573,7 +510,6 @@
   },
   {
     "key": "0157",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb diacrític"
@@ -582,7 +518,6 @@
   },
   {
     "key": "0159",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb hàtxek"
@@ -591,7 +526,6 @@
   },
   {
     "key": "015B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb agut"
@@ -600,7 +534,6 @@
   },
   {
     "key": "015D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb accent circumflex"
@@ -609,7 +542,6 @@
   },
   {
     "key": "015F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb diacrític"
@@ -618,7 +550,6 @@
   },
   {
     "key": "0161",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb hàtxek"
@@ -627,7 +558,6 @@
   },
   {
     "key": "0163",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb diacrític"
@@ -636,7 +566,6 @@
   },
   {
     "key": "0165",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb hàtxek"
@@ -645,7 +574,6 @@
   },
   {
     "key": "0169",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb titlla"
@@ -654,7 +582,6 @@
   },
   {
     "key": "016B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u barra"
@@ -663,7 +590,6 @@
   },
   {
     "key": "016D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb breu"
@@ -672,7 +598,6 @@
   },
   {
     "key": "016F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb anell a dalt"
@@ -681,7 +606,6 @@
   },
   {
     "key": "0171",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb doble accent agut"
@@ -690,7 +614,6 @@
   },
   {
     "key": "0173",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb ogonek"
@@ -699,7 +622,6 @@
   },
   {
     "key": "0175",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb circumflex"
@@ -708,7 +630,6 @@
   },
   {
     "key": "0177",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb circumflex"
@@ -717,7 +638,6 @@
   },
   {
     "key": "017A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z amb agut"
@@ -726,7 +646,6 @@
   },
   {
     "key": "017C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z amb punt"
@@ -735,7 +654,6 @@
   },
   {
     "key": "017E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb hàtxek"
@@ -744,7 +662,6 @@
   },
   {
     "key": "01CE",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb accent"
@@ -753,7 +670,6 @@
   },
   {
     "key": "01D0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb accent"
@@ -762,7 +678,6 @@
   },
   {
     "key": "01D2",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb accent"
@@ -771,7 +686,6 @@
   },
   {
     "key": "01D4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb accent"
@@ -780,7 +694,6 @@
   },
   {
     "key": "01E7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb accent"
@@ -789,7 +702,6 @@
   },
   {
     "key": "01E9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k amb accent"
@@ -798,7 +710,6 @@
   },
   {
     "key": "01EB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb pecíol"
@@ -807,7 +718,6 @@
   },
   {
     "key": "01F0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j amb accent"
@@ -816,7 +726,6 @@
   },
   {
     "key": "01F5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb agut"
@@ -825,7 +734,6 @@
   },
   {
     "key": "01F9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb greu"
@@ -834,7 +742,6 @@
   },
   {
     "key": "0201",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb accent greu doble"
@@ -843,7 +750,6 @@
   },
   {
     "key": "0203",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb lletres invertides"
@@ -852,7 +758,6 @@
   },
   {
     "key": "0205",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb accent greu doble"
@@ -861,7 +766,6 @@
   },
   {
     "key": "0207",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb lletres invertides"
@@ -870,7 +774,6 @@
   },
   {
     "key": "0209",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb accent greu doble"
@@ -879,7 +782,6 @@
   },
   {
     "key": "020B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb breu invertida"
@@ -888,7 +790,6 @@
   },
   {
     "key": "020D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb accent greu doble"
@@ -897,7 +798,6 @@
   },
   {
     "key": "020F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb lletres invertides"
@@ -906,7 +806,6 @@
   },
   {
     "key": "0211",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb accent greu doble"
@@ -915,7 +814,6 @@
   },
   {
     "key": "0213",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb lletres invertides"
@@ -924,7 +822,6 @@
   },
   {
     "key": "0215",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb accent greu doble"
@@ -933,7 +830,6 @@
   },
   {
     "key": "0217",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb lletres invertides"
@@ -942,7 +838,6 @@
   },
   {
     "key": "0219",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb coma a sota"
@@ -951,7 +846,6 @@
   },
   {
     "key": "021B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb coma a sota"
@@ -960,7 +854,6 @@
   },
   {
     "key": "021F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb hàtxek"
@@ -969,7 +862,6 @@
   },
   {
     "key": "0227",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb un punt a dalt"
@@ -978,7 +870,6 @@
   },
   {
     "key": "0229",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb diacrític"
@@ -987,7 +878,6 @@
   },
   {
     "key": "022F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb punt a dalt"
@@ -996,7 +886,6 @@
   },
   {
     "key": "0233",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb màcron"
@@ -1005,7 +894,6 @@
   },
   {
     "key": "0237",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j sense punt"
@@ -1014,7 +902,6 @@
   },
   {
     "key": "1E01",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb anell a sota"
@@ -1023,7 +910,6 @@
   },
   {
     "key": "1E03",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b amb punt a dalt"
@@ -1032,7 +918,6 @@
   },
   {
     "key": "1E05",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b amb punt a sota"
@@ -1041,7 +926,6 @@
   },
   {
     "key": "1E07",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b amb línia a sota"
@@ -1050,7 +934,6 @@
   },
   {
     "key": "1E0B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d amb punt a dalt"
@@ -1059,7 +942,6 @@
   },
   {
     "key": "1E0D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d amb punt a sota"
@@ -1068,7 +950,6 @@
   },
   {
     "key": "1E0F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d amb línia a sota"
@@ -1077,7 +958,6 @@
   },
   {
     "key": "1E11",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d amb diacrític"
@@ -1086,7 +966,6 @@
   },
   {
     "key": "1E13",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d amb accent circumflex a sota"
@@ -1095,7 +974,6 @@
   },
   {
     "key": "1E19",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb accent circumflex a sota"
@@ -1104,7 +982,6 @@
   },
   {
     "key": "1E1B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb titlla a sota"
@@ -1113,7 +990,6 @@
   },
   {
     "key": "1E1F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "f amb punt a dalt"
@@ -1122,7 +998,6 @@
   },
   {
     "key": "1E21",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g amb màcron"
@@ -1131,7 +1006,6 @@
   },
   {
     "key": "1E23",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb punt a dalt"
@@ -1140,7 +1014,6 @@
   },
   {
     "key": "1E25",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb punt a sota"
@@ -1149,7 +1022,6 @@
   },
   {
     "key": "1E27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb dièresi"
@@ -1158,7 +1030,6 @@
   },
   {
     "key": "1E29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb diacrític"
@@ -1167,7 +1038,6 @@
   },
   {
     "key": "1E2B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb breu a sota"
@@ -1176,7 +1046,6 @@
   },
   {
     "key": "1E2D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb titlla a sota"
@@ -1185,7 +1054,6 @@
   },
   {
     "key": "1E31",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k amb agut"
@@ -1194,7 +1062,6 @@
   },
   {
     "key": "1E33",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k amb punt a sota"
@@ -1203,7 +1070,6 @@
   },
   {
     "key": "1E35",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k amb línia a sota"
@@ -1212,7 +1078,6 @@
   },
   {
     "key": "1E37",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb punt a sota"
@@ -1221,7 +1086,6 @@
   },
   {
     "key": "1E3B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb línia a sota"
@@ -1230,7 +1094,6 @@
   },
   {
     "key": "1E3D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l amb accent circumflex a sota"
@@ -1239,7 +1102,6 @@
   },
   {
     "key": "1E3F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m amb agut"
@@ -1248,7 +1110,6 @@
   },
   {
     "key": "1E41",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m amb punt a dalt"
@@ -1257,7 +1118,6 @@
   },
   {
     "key": "1E43",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m amb punt a sota"
@@ -1266,7 +1126,6 @@
   },
   {
     "key": "1E45",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb punt a dalt"
@@ -1275,7 +1134,6 @@
   },
   {
     "key": "1E47",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb punt a sota"
@@ -1284,7 +1142,6 @@
   },
   {
     "key": "1E49",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb línia a sota"
@@ -1293,7 +1150,6 @@
   },
   {
     "key": "1E4B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n amb accent circumflex a sota"
@@ -1302,7 +1158,6 @@
   },
   {
     "key": "1E55",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p amb agut"
@@ -1311,7 +1166,6 @@
   },
   {
     "key": "1E57",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p amb punt a dalt"
@@ -1320,7 +1174,6 @@
   },
   {
     "key": "1E59",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb punt a dalt"
@@ -1329,7 +1182,6 @@
   },
   {
     "key": "1E5B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb punt a sota"
@@ -1338,7 +1190,6 @@
   },
   {
     "key": "1E5F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r amb línia a sota"
@@ -1347,7 +1198,6 @@
   },
   {
     "key": "1E61",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb punt a dalt"
@@ -1356,7 +1206,6 @@
   },
   {
     "key": "1E63",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s amb punt a sota"
@@ -1365,7 +1214,6 @@
   },
   {
     "key": "1E6B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb punt a dalt"
@@ -1374,7 +1222,6 @@
   },
   {
     "key": "1E6D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb punt a sota"
@@ -1383,7 +1230,6 @@
   },
   {
     "key": "1E6F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb línia a sota"
@@ -1392,7 +1238,6 @@
   },
   {
     "key": "1E71",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb accent circumflex a sota"
@@ -1401,7 +1246,6 @@
   },
   {
     "key": "1E73",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb dièresi a sota"
@@ -1410,7 +1254,6 @@
   },
   {
     "key": "1E75",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb titlla a sota"
@@ -1419,7 +1262,6 @@
   },
   {
     "key": "1E77",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb accent circumflex a sota"
@@ -1428,7 +1270,6 @@
   },
   {
     "key": "1E7D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "v amb titlla"
@@ -1437,7 +1278,6 @@
   },
   {
     "key": "1E7F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "v amb punt a sota"
@@ -1446,7 +1286,6 @@
   },
   {
     "key": "1E81",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb greu"
@@ -1455,7 +1294,6 @@
   },
   {
     "key": "1E83",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb agut"
@@ -1464,7 +1302,6 @@
   },
   {
     "key": "1E85",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb dièresi"
@@ -1473,7 +1310,6 @@
   },
   {
     "key": "1E87",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb punt a dalt"
@@ -1482,7 +1318,6 @@
   },
   {
     "key": "1E89",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb punt a sota"
@@ -1491,7 +1326,6 @@
   },
   {
     "key": "1E8B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "x amb punt a dalt"
@@ -1500,7 +1334,6 @@
   },
   {
     "key": "1E8D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "x amb dièresi"
@@ -1509,7 +1342,6 @@
   },
   {
     "key": "1E8F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb punt a dalt"
@@ -1518,7 +1350,6 @@
   },
   {
     "key": "1E91",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z amb accent circumflex"
@@ -1527,7 +1358,6 @@
   },
   {
     "key": "1E93",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z amb punt a sota"
@@ -1536,7 +1366,6 @@
   },
   {
     "key": "1E95",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z amb línia a sota"
@@ -1545,7 +1374,6 @@
   },
   {
     "key": "1E96",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h amb línia a sota"
@@ -1554,7 +1382,6 @@
   },
   {
     "key": "1E97",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t amb dièresi"
@@ -1563,7 +1390,6 @@
   },
   {
     "key": "1E98",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w amb anell a dalt"
@@ -1572,7 +1398,6 @@
   },
   {
     "key": "1E99",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb anell a dalt"
@@ -1581,7 +1406,6 @@
   },
   {
     "key": "1E9A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb anell mitjà dret"
@@ -1590,7 +1414,6 @@
   },
   {
     "key": "1EA1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb punt a sota"
@@ -1599,7 +1422,6 @@
   },
   {
     "key": "1EA3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a amb ganxo a dalt"
@@ -1608,7 +1430,6 @@
   },
   {
     "key": "1EB9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb punt a sota"
@@ -1617,7 +1438,6 @@
   },
   {
     "key": "1EBB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb ganxo a dalt"
@@ -1626,7 +1446,6 @@
   },
   {
     "key": "1EBD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e amb titlla"
@@ -1635,7 +1454,6 @@
   },
   {
     "key": "1EC9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb ganxo a dalt"
@@ -1644,7 +1462,6 @@
   },
   {
     "key": "1ECB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i amb punt a sota"
@@ -1653,7 +1470,6 @@
   },
   {
     "key": "1ECD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb punt a sota"
@@ -1662,7 +1478,6 @@
   },
   {
     "key": "1ECF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o amb ganxo a dalt"
@@ -1671,7 +1486,6 @@
   },
   {
     "key": "1EE5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb punt a sota"
@@ -1680,7 +1494,6 @@
   },
   {
     "key": "1EE7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u amb ganxo a dalt"
@@ -1689,7 +1502,6 @@
   },
   {
     "key": "1EF3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb greu"
@@ -1698,7 +1510,6 @@
   },
   {
     "key": "1EF5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb punt a sota"
@@ -1707,7 +1518,6 @@
   },
   {
     "key": "1EF7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb ganxo a dalt"
@@ -1716,7 +1526,6 @@
   },
   {
     "key": "1EF9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y amb titlla"

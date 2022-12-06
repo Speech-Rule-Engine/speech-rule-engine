@@ -4,7 +4,6 @@
   },
   {
     "key": "22BE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo retto con arco"
@@ -13,7 +12,6 @@
   },
   {
     "key": "237C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo retto con freccia a zigzag verso il basso"
@@ -22,7 +20,6 @@
   },
   {
     "key": "27C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo tridimensionale"
@@ -31,7 +28,6 @@
   },
   {
     "key": "299B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato aperto a sinistra"
@@ -40,7 +36,6 @@
   },
   {
     "key": "299C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "variante ad angolo retto con quadrato"
@@ -49,7 +44,6 @@
   },
   {
     "key": "299D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo retto misurato con punto"
@@ -58,7 +52,6 @@
   },
   {
     "key": "299E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo con S Inside"
@@ -67,7 +60,6 @@
   },
   {
     "key": "299F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo acuto"
@@ -76,7 +68,6 @@
   },
   {
     "key": "29A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo sferico aperto a sinistra"
@@ -85,7 +76,6 @@
   },
   {
     "key": "29A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "apertura dell'angolo sferico"
@@ -94,7 +84,6 @@
   },
   {
     "key": "29A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo girato"
@@ -103,7 +92,6 @@
   },
   {
     "key": "29A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo invertito"
@@ -112,7 +100,6 @@
   },
   {
     "key": "29A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo con barra inferiore"
@@ -121,7 +108,6 @@
   },
   {
     "key": "29A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo inverso con barra inferiore"
@@ -130,7 +116,6 @@
   },
   {
     "key": "29A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "apertura obliqua"
@@ -139,7 +124,6 @@
   },
   {
     "key": "29A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo obliquo aperto"
@@ -148,7 +132,6 @@
   },
   {
     "key": "29A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso l'alto e verso destra"
@@ -157,7 +140,6 @@
   },
   {
     "key": "29A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso l'alto e verso sinistra"
@@ -166,7 +148,6 @@
   },
   {
     "key": "29AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso il basso e verso destra"
@@ -175,7 +156,6 @@
   },
   {
     "key": "29AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso il basso e verso sinistra"
@@ -184,7 +164,6 @@
   },
   {
     "key": "29AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso destra e verso l'alto"
@@ -193,7 +172,6 @@
   },
   {
     "key": "29AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso sinistra e verso l'alto"
@@ -202,7 +180,6 @@
   },
   {
     "key": "29AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso destra e verso il basso"
@@ -211,7 +188,6 @@
   },
   {
     "key": "29AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo misurato con il braccio aperto che termina con la freccia rivolta verso sinistra e verso il basso"

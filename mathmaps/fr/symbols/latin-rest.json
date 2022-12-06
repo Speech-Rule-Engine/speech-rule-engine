@@ -4,7 +4,6 @@
   },
   {
     "key": "210E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "constante de planck"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0363",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique a"
@@ -22,7 +20,6 @@
   },
   {
     "key": "0364",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique e"
@@ -31,7 +28,6 @@
   },
   {
     "key": "0365",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique i"
@@ -40,7 +36,6 @@
   },
   {
     "key": "0366",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique o"
@@ -49,7 +44,6 @@
   },
   {
     "key": "0367",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique u"
@@ -58,7 +52,6 @@
   },
   {
     "key": "0368",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique c"
@@ -67,7 +60,6 @@
   },
   {
     "key": "0369",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique d"
@@ -76,7 +68,6 @@
   },
   {
     "key": "036A",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique h"
@@ -85,7 +76,6 @@
   },
   {
     "key": "036B",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique m"
@@ -94,7 +84,6 @@
   },
   {
     "key": "036C",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique r"
@@ -103,7 +92,6 @@
   },
   {
     "key": "036D",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique t"
@@ -112,7 +100,6 @@
   },
   {
     "key": "036E",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique v"
@@ -121,7 +108,6 @@
   },
   {
     "key": "036F",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique x"
@@ -130,7 +116,6 @@
   },
   {
     "key": "1D62",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "i souscrit"
@@ -139,7 +124,6 @@
   },
   {
     "key": "1D63",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "r souscrit"
@@ -148,7 +132,6 @@
   },
   {
     "key": "1D64",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "u souscrit"
@@ -157,7 +140,6 @@
   },
   {
     "key": "1D65",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "v souscrit"
@@ -166,7 +148,6 @@
   },
   {
     "key": "1DCA",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique r souscrite"
@@ -175,7 +156,6 @@
   },
   {
     "key": "1DD3",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique a ouvert aplati suscrit"
@@ -184,7 +164,6 @@
   },
   {
     "key": "1DD4",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique ae"
@@ -193,7 +172,6 @@
   },
   {
     "key": "1DD5",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique ao"
@@ -202,7 +180,6 @@
   },
   {
     "key": "1DD6",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique av"
@@ -211,7 +188,6 @@
   },
   {
     "key": "1DD7",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique c cédille"
@@ -220,7 +196,6 @@
   },
   {
     "key": "1DD8",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique d insulaire"
@@ -229,7 +204,6 @@
   },
   {
     "key": "1DD9",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique eth"
@@ -238,7 +212,6 @@
   },
   {
     "key": "1DDA",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique g"
@@ -247,7 +220,6 @@
   },
   {
     "key": "1DDB",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique petite g majuscule"
@@ -256,7 +228,6 @@
   },
   {
     "key": "1DDC",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique k"
@@ -265,7 +236,6 @@
   },
   {
     "key": "1DDD",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique l"
@@ -274,7 +244,6 @@
   },
   {
     "key": "1DDE",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique petite l majuscule"
@@ -283,7 +252,6 @@
   },
   {
     "key": "1DDF",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique petite m majuscule"
@@ -292,7 +260,6 @@
   },
   {
     "key": "1DE0",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique n"
@@ -301,7 +268,6 @@
   },
   {
     "key": "1DE1",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique petite n majuscule"
@@ -310,7 +276,6 @@
   },
   {
     "key": "1DE2",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique petite r majuscule"
@@ -319,7 +284,6 @@
   },
   {
     "key": "1DE3",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique r rotunda"
@@ -328,7 +292,6 @@
   },
   {
     "key": "1DE4",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique s"
@@ -337,7 +300,6 @@
   },
   {
     "key": "1DE5",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique s long"
@@ -346,7 +308,6 @@
   },
   {
     "key": "1DE6",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "diacritique z"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2071",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "exposant i"
@@ -364,7 +324,6 @@
   },
   {
     "key": "207F",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "exposant n"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2090",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "indice a"
@@ -382,7 +340,6 @@
   },
   {
     "key": "2091",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "indice e"
@@ -391,7 +348,6 @@
   },
   {
     "key": "2092",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "indice o"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2093",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "indice x"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2094",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "indice schwa"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2095",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite h"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2096",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite k"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2097",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite l"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2098",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite m"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2099",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite n"
@@ -463,7 +412,6 @@
   },
   {
     "key": "209A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite p"
@@ -472,7 +420,6 @@
   },
   {
     "key": "209B",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite s"
@@ -481,7 +428,6 @@
   },
   {
     "key": "209C",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "souscrite t"
@@ -490,7 +436,6 @@
   },
   {
     "key": "2C7C",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "j souscrite"
@@ -499,7 +444,6 @@
   },
   {
     "key": "1F12A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "s majuscule en écaille crochetée"
@@ -508,7 +452,6 @@
   },
   {
     "key": "1F12B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "c majuscule en italique cerclée"
@@ -517,7 +460,6 @@
   },
   {
     "key": "1F12C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "r majuscule en italique cerclée"
@@ -526,7 +468,6 @@
   },
   {
     "key": "1F18A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "P majuscule encadrée et en inversion avec croix"

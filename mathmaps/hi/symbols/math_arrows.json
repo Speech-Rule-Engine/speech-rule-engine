@@ -4,7 +4,6 @@
   },
   {
     "key": "2190",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बांयी और तीर"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2191",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर तीर"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2192",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दाईं ओर तीर"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2193",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर तीर"
@@ -40,7 +36,6 @@
   },
   {
     "key": "2194",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दांयी बांयी दोनों और तीर"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2195",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर नीचे दोनों और तीर"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2196",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उत्तर पश्चिम तीर"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2197",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उत्तर पूर्व तीर"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2198",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दक्षिण पूर्व तीर"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2199",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दक्षिण पश्चिम तीर"
@@ -94,7 +84,6 @@
   },
   {
     "key": "219A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्ट्रोक के साथ बायाँ तीर"
@@ -103,7 +92,6 @@
   },
   {
     "key": "219B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्ट्रोक के साथ दाईं ओर तीर"
@@ -112,7 +100,6 @@
   },
   {
     "key": "219C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड वेव एरो"
@@ -121,7 +108,6 @@
   },
   {
     "key": "219D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "राइट वेव एरो"
@@ -130,7 +116,6 @@
   },
   {
     "key": "219E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बाईं ओर दो सिर वाला तीर"
@@ -139,7 +124,6 @@
   },
   {
     "key": "219F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर दो सिर वाला तीर"
@@ -148,7 +132,6 @@
   },
   {
     "key": "21A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायीं ओर दो सिर वाला तीर"
@@ -157,7 +140,6 @@
   },
   {
     "key": "21A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर दो सिर वाला तीर"
@@ -166,7 +148,6 @@
   },
   {
     "key": "21A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टेल के साथ बायाँ तीर"
@@ -175,7 +156,6 @@
   },
   {
     "key": "21A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टेल के साथ दाईं ओर तीर"
@@ -184,7 +164,6 @@
   },
   {
     "key": "21A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बार से बायाँ तीर"
@@ -193,7 +172,6 @@
   },
   {
     "key": "21A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बार से ऊपर की ओर तीर"
@@ -202,7 +180,6 @@
   },
   {
     "key": "21A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से दाहिना तीर"
@@ -211,7 +188,6 @@
   },
   {
     "key": "21A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बार से नीचे की ओर तीर"
@@ -220,7 +196,6 @@
   },
   {
     "key": "21A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बेस के साथ डाउन एरो"
@@ -229,7 +204,6 @@
   },
   {
     "key": "21A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हुक के साथ बायां तीर"
@@ -238,7 +212,6 @@
   },
   {
     "key": "21AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हुक के साथ दाईं ओर तीर"
@@ -247,7 +220,6 @@
   },
   {
     "key": "21AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लूप के साथ बायां तीर"
@@ -256,7 +228,6 @@
   },
   {
     "key": "21AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लूप के साथ दाईं ओर तीर"
@@ -265,7 +236,6 @@
   },
   {
     "key": "21AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लेफ्ट राइट वेव एरो"
@@ -274,7 +244,6 @@
   },
   {
     "key": "21AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्ट्रोके साथ लेफ्ट राइट एरो"
@@ -283,7 +252,6 @@
   },
   {
     "key": "21AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर ज़िगज़ैग एरो"
@@ -292,7 +260,6 @@
   },
   {
     "key": "21B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर तीर बाएं ओर की ओर"
@@ -301,7 +268,6 @@
   },
   {
     "key": "21B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर तीर ठीक से टिप के साथ"
@@ -310,7 +276,6 @@
   },
   {
     "key": "21B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर तीर के साथ टिप बाईं ओर"
@@ -319,7 +284,6 @@
   },
   {
     "key": "21B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर एरो टिप के साथ"
@@ -328,7 +292,6 @@
   },
   {
     "key": "21B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "कॉर्नर डाउन के साथ एरोवर्ड"
@@ -337,7 +300,6 @@
   },
   {
     "key": "21B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "कॉर्नर के साथ नीचे की तरफ एरो"
@@ -346,7 +308,6 @@
   },
   {
     "key": "21B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "एंटीक्लॉकवाइज शीर्ष अर्धवृत्त तीर"
@@ -355,7 +316,6 @@
   },
   {
     "key": "21B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दक्षिणावर्त शीर्ष अर्धवृत्त तीर"
@@ -364,7 +324,6 @@
   },
   {
     "key": "21B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नॉर्थ वेस्ट एरो टू लॉन्ग बार"
@@ -373,7 +332,6 @@
   },
   {
     "key": "21B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बाईं ओर की ओर तीर की ओर बार की ओर दाईं ओर की ओर तीर"
@@ -382,7 +340,6 @@
   },
   {
     "key": "21BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "एंटीलॉकवाइज ओपन सर्कल एरो"
@@ -391,7 +348,6 @@
   },
   {
     "key": "21BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "क्लॉकवाइज ओपन सर्कल एरो"
@@ -400,7 +356,6 @@
   },
   {
     "key": "21C4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दायीं ओर का तीर, बाएं ओर का तीर"
@@ -409,7 +364,6 @@
   },
   {
     "key": "21C5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर तीर नीचे की ओर तीर की ओर"
@@ -418,7 +372,6 @@
   },
   {
     "key": "21C6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बायाँ तीर आगे की ओर तीर"
@@ -427,7 +380,6 @@
   },
   {
     "key": "21C7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बाईं ओर जोड़ीदार तीर"
@@ -436,7 +388,6 @@
   },
   {
     "key": "21C8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर तीर चलाया"
@@ -445,7 +396,6 @@
   },
   {
     "key": "21C9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दाईं ओर बाँध दिया तीर"
@@ -454,7 +404,6 @@
   },
   {
     "key": "21CA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर पेयरेड एरो"
@@ -463,7 +412,6 @@
   },
   {
     "key": "21CD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "स्ट्रॉक के साथ लेफ्टवर्ड डबल एरो"
@@ -472,7 +420,6 @@
   },
   {
     "key": "21CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्ट्रोके साथ लेफ्ट राइट डबल एरो"
@@ -481,7 +428,6 @@
   },
   {
     "key": "21CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्ट्रॉक के साथ राइट डबल एरो"
@@ -490,7 +436,6 @@
   },
   {
     "key": "21D0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बायाँ डबल तीर"
@@ -499,7 +444,6 @@
   },
   {
     "key": "21D1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर डबल ऐरो"
@@ -508,7 +452,6 @@
   },
   {
     "key": "21D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायीं ओर डबल ऐरो"
@@ -517,7 +460,6 @@
   },
   {
     "key": "21D3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर डबल ऐरो"
@@ -526,7 +468,6 @@
   },
   {
     "key": "21D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट राइट डबल एरो"
@@ -535,7 +476,6 @@
   },
   {
     "key": "21D5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर डबल तीर"
@@ -544,7 +484,6 @@
   },
   {
     "key": "21D6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नॉर्थ वेस्ट डबल एरो"
@@ -553,7 +492,6 @@
   },
   {
     "key": "21D7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नॉर्थ ईस्ट डबल एरो"
@@ -562,7 +500,6 @@
   },
   {
     "key": "21D8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "साउथ ईस्ट डबल एरो"
@@ -571,7 +508,6 @@
   },
   {
     "key": "21D9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "साउथ वेस्ट डबल एरो"
@@ -580,7 +516,6 @@
   },
   {
     "key": "21DA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बायाँ ट्रिपल तीर"
@@ -589,7 +524,6 @@
   },
   {
     "key": "21DB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दायीं ओर ट्रिपल ऐरो"
@@ -598,7 +532,6 @@
   },
   {
     "key": "21DC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बाईं ओर स्क्विगल एरो"
@@ -607,7 +540,6 @@
   },
   {
     "key": "21DD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दाहिना ओर स्क्विगल एरो"
@@ -616,7 +548,6 @@
   },
   {
     "key": "21DE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "डबल स्ट्रोक के साथ ऊपर की ओर तीर"
@@ -625,7 +556,6 @@
   },
   {
     "key": "21DF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "डबल स्ट्रोक के साथ नीचे की ओर तीर"
@@ -634,7 +564,6 @@
   },
   {
     "key": "21E0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बायाँ धराशायी तीर"
@@ -643,7 +572,6 @@
   },
   {
     "key": "21E1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर धंसा हुआ तीर"
@@ -652,7 +580,6 @@
   },
   {
     "key": "21E2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दायीं ओर का तीर"
@@ -661,7 +588,6 @@
   },
   {
     "key": "21E3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर धंसा हुआ तीर"
@@ -670,7 +596,6 @@
   },
   {
     "key": "21E4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बायाँ बाण बार"
@@ -679,7 +604,6 @@
   },
   {
     "key": "21E5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दाईं ओर का तीर"
@@ -688,7 +612,6 @@
   },
   {
     "key": "21E6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बाईं ओर सफेद तीर"
@@ -697,7 +620,6 @@
   },
   {
     "key": "21E7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर सफेद तीर"
@@ -706,7 +628,6 @@
   },
   {
     "key": "21E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दाईं ओर सफेद तीर"
@@ -715,7 +636,6 @@
   },
   {
     "key": "21E9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर सफेद तीर"
@@ -724,7 +644,6 @@
   },
   {
     "key": "21EA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर से सफेद तीर"
@@ -733,7 +652,6 @@
   },
   {
     "key": "21EB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर सफेद तीर पेडस्टल पर"
@@ -742,7 +660,6 @@
   },
   {
     "key": "21EC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "क्षैतिज पट्टी के साथ पैदल की ओर सफेद तीर"
@@ -751,7 +668,6 @@
   },
   {
     "key": "21ED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर सफेद तीर ऊर्ध्वाधर पट्टी के साथ पेडस्टल पर"
@@ -760,7 +676,6 @@
   },
   {
     "key": "21EE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर सफेद डबल ऐरो"
@@ -769,7 +684,6 @@
   },
   {
     "key": "21EF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "पेडस्टल पर ऊपर की ओर सफेद डबल ऐरो"
@@ -778,7 +692,6 @@
   },
   {
     "key": "21F0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दीवार से दाईं ओर सफेद तीर"
@@ -787,7 +700,6 @@
   },
   {
     "key": "21F1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "कॉर्नर पर नॉर्थ वेस्ट एरो"
@@ -796,7 +708,6 @@
   },
   {
     "key": "21F2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "कॉर्नर को साउथ ईस्ट एरो"
@@ -805,7 +716,6 @@
   },
   {
     "key": "21F3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर नीचे सफेद तीर"
@@ -814,7 +724,6 @@
   },
   {
     "key": "21F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटे सर्कल के साथ राइट एरो"
@@ -823,7 +732,6 @@
   },
   {
     "key": "21F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर तीर ऊपर की ओर तीर की ओर"
@@ -832,7 +740,6 @@
   },
   {
     "key": "21F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "थ्री राइटवर्ड एरो"
@@ -841,7 +748,6 @@
   },
   {
     "key": "21F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊर्ध्वाधर स्ट्रोक के साथ बायाँ तीर"
@@ -850,7 +756,6 @@
   },
   {
     "key": "21F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ राइट एरो"
@@ -859,7 +764,6 @@
   },
   {
     "key": "21F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ लेफ्ट राइट एरो"
@@ -868,7 +772,6 @@
   },
   {
     "key": "21FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड एरो डबल वर्टिकल स्ट्रोक के साथ"
@@ -877,7 +780,6 @@
   },
   {
     "key": "21FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ राइट एरो"
@@ -886,7 +788,6 @@
   },
   {
     "key": "21FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ लेफ्ट राइट एरो"
@@ -895,7 +796,6 @@
   },
   {
     "key": "21FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बायाँ ओपन-हेडेड एरो"
@@ -904,7 +804,6 @@
   },
   {
     "key": "21FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट-ओपन-हेडेड एरो"
@@ -913,7 +812,6 @@
   },
   {
     "key": "21FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट राइट ओपन हेडेड ऐरो"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2301",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "विद्युत चिह्न"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2303",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर तीर"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2304",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे तीर"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2324",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दो क्षैतिज सलाखों के बीच ऊपर तीर"
@@ -958,7 +852,6 @@
   },
   {
     "key": "238B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नॉर्थवेस्ट एरो के साथ टूटा हुआ सर्कल"
@@ -967,7 +860,6 @@
   },
   {
     "key": "2794",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी वाइड-हेडेड राइट एरो"
@@ -976,7 +868,6 @@
   },
   {
     "key": "2798",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी दक्षिण पूर्व तीर"
@@ -985,7 +876,6 @@
   },
   {
     "key": "2799",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी दायाँ तीर"
@@ -994,7 +884,6 @@
   },
   {
     "key": "279A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी नार्थ ईस्ट एरो"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "279B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ड्राफ्टिंग प्वाइंट राइट एरो"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "279C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी राउंड-टिप्ड राइट एरो"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "279D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "त्रिभुज-हेडेड राइट एरो"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "279E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी ट्राइएंगल-हेडेड राइट एरो"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "279F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "धराशायी त्रिभुज-सिर दाहिना तीर"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "27A0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी डैश वाला ट्राइएंगल हेडेड राइट एरो"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "27A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक राइट एरो"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "27A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "थ्री-डी टॉप-लाइटेड राइट एरोहेड"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "27A3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "थ्री-डी बॉटम-लाइटेड राईटवर्ड्स एरोहेड"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "27A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक राइटवर्ड एरोहेड"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "27A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी ब्लैक कर्व्ड डाउन और राइट एरो"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "27A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी काले घुमावदार ऊपर की ओर और दाहिनी ओर तीर"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "27A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "स्क्वाट ब्लैक राइट एरो"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "27A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी कॉनक्लेव-पॉइंटेड ब्लैक राइट एरो"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "27A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "राइट-शेडेड व्हाइट राइट एरो"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "27AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लेफ्ट-शेडेड व्हाइट राइट एरो"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "27AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बैक-टिल्टेड शैडो व्हाइट राइट एरो"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "27AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "फ्रंट-टिल्डेड शैडो वाइट राइट एरो"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "27AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी लोअर राइट-शैडेड व्हाइट राइट एरो"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "27AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी अपर राइट-शैड वाइट राइट एरो"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "27AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नोकदार निचला दायाँ-छायादार सफेद दायाँ तीर"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "27B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नोकदार ऊपरी दाएं-छाया वाले सफेद दाएं तीर"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "27B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी व्हाइट राइट एरो परिक्रमा की"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "27B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "श्वेत-पंखयुक्त दाहिना तीर"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "27B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक-फेदर साउथ ईस्ट एरो"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "27B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक-फ़ेदरेड राइट एरो"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "27B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक-फेदर नॉर्थ ईस्ट एरो"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "27B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी काले पंख वाले दक्षिण पूर्व तीर"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "27B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी ब्लैक-फेदरेड राइट एरो"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "27B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी ब्लैक-फेदर नॉर्थ ईस्ट एरो"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "27BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टियरड्रॉप-कांटेदार दाएं तीर"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "27BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी अश्रु-शंख दाहिनी ओर तीर"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "27BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "वेज-टेल्ड राइट एरो"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "27BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हेवी वेज-टेल्ड राइट एरो"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "27BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ओपन-आउटवर्ड राइट एरो"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "27F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर चौगुनी तीर"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "27F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर चौगुनी तीर"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "27F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एंटीलॉकवाइज गैप्ड सर्कल एरो"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "27F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्लॉकवाइज गैप सर्कल एरो"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "27F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल प्लस के साथ राइट एरो"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "27F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबी बाईं ओर तीर"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "27F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉन्ग राइट एरो"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "27F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबी बाईं दाईं ओर तीर"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "27F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबी बाईं ओर डबल तीर"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "27F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉन्ग राइटवर्ड डबल एरो"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "27FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉन्ग लेफ्ट राइट डबल एरो"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "27FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से लंबी बाईं ओर तीर"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "27FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से लॉन्ग राइट एरो"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "27FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से लंबी बाईं ओर डबल एरो"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "27FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से लॉन्ग राइट डबल तीर"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "27FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉन्ग राइट साइड स्क्विगल एरो"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "2900",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ राइट-टू-हेडेड एरो"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "2901",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ राइट टू हैड एरो"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "2902",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ लेफ्टवर्ड डबल एरो"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "2903",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ राइट डबल एरो"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "2904",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ लेफ्ट राइट डबल एरो"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "2905",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार की ओर से दो-सिर वाला तीर"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "2906",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से लेफ्ट डबल एरो"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "2907",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से दाहिना डबल तीर"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "2908",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के साथ नीचे की ओर तीर"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "2909",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के साथ ऊपर की ओर तीर"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "290A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर ट्रिपल ऐरो"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "290B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर ट्रिपल एरो"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "290C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड डबल डैश एरो"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "290D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायाँ डबल डैश तीर"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "290E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड ट्रिपल डैश एरो"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "290F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायीं ओर ट्रिपल डैश एरो"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "2910",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायीं ओर दो-सिर वाला ट्रिपल डैश एरो"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "2911",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉटेड स्टेम के साथ राइट एरो"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "2912",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर तीर बार"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "2913",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर एरो टू बार"
@@ -1642,7 +1460,6 @@
   },
   {
     "key": "2914",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ टेल के साथ राइट एरो"
@@ -1651,7 +1468,6 @@
   },
   {
     "key": "2915",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ टेल के साथ राइट एरो"
@@ -1660,7 +1476,6 @@
   },
   {
     "key": "2916",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टेल के साथ राइट टू हेड-हेडेड एरो"
@@ -1669,7 +1484,6 @@
   },
   {
     "key": "2917",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल स्ट्रोक के साथ टेल के साथ राइट-हेडेड एरो"
@@ -1678,7 +1492,6 @@
   },
   {
     "key": "2918",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ टेल के साथ राइट-हेडेड एरो"
@@ -1687,7 +1500,6 @@
   },
   {
     "key": "2919",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बायाँ तीर-पूँछ"
@@ -1696,7 +1508,6 @@
   },
   {
     "key": "291A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरोवर्ड-एरो-टेल"
@@ -1705,7 +1516,6 @@
   },
   {
     "key": "291B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड डबल एरो-टेल"
@@ -1714,7 +1524,6 @@
   },
   {
     "key": "291C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दाईं ओर डबल एरो-टेल"
@@ -1723,7 +1532,6 @@
   },
   {
     "key": "291D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "काले हीरे को बायां तीर"
@@ -1732,7 +1540,6 @@
   },
   {
     "key": "291E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ब्लैक डायमंड को सही तीर"
@@ -1741,7 +1548,6 @@
   },
   {
     "key": "291F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार टू ब्लैक डायमंड से लेफ्ट एरो"
@@ -1750,7 +1556,6 @@
   },
   {
     "key": "2920",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से ब्लैक डायमंड तक एरोवर्ड"
@@ -1759,7 +1564,6 @@
   },
   {
     "key": "2921",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उत्तर पश्चिम और दक्षिण पूर्व तीर"
@@ -1768,7 +1572,6 @@
   },
   {
     "key": "2922",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नॉर्थ ईस्ट और साउथ वेस्ट एरो"
@@ -1777,7 +1580,6 @@
   },
   {
     "key": "2923",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हुक के साथ उत्तर पश्चिम तीर"
@@ -1786,7 +1588,6 @@
   },
   {
     "key": "2924",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हुक के साथ नॉर्थ ईस्ट एरो"
@@ -1795,7 +1596,6 @@
   },
   {
     "key": "2925",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हुक के साथ दक्षिण पूर्व तीर"
@@ -1804,7 +1604,6 @@
   },
   {
     "key": "2926",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हुक के साथ दक्षिण पश्चिम तीर"
@@ -1813,7 +1612,6 @@
   },
   {
     "key": "2927",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नॉर्थ वेस्ट एरो और नॉर्थ ईस्ट एरो"
@@ -1822,7 +1620,6 @@
   },
   {
     "key": "2928",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नॉर्थ ईस्ट एरो और साउथ ईस्ट एरो"
@@ -1831,7 +1628,6 @@
   },
   {
     "key": "2929",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दक्षिण पूर्व तीर और दक्षिण पश्चिम तीर"
@@ -1840,7 +1636,6 @@
   },
   {
     "key": "292A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दक्षिण पश्चिम तीर और उत्तर पश्चिम तीर"
@@ -1849,7 +1644,6 @@
   },
   {
     "key": "292D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "साउथ ईस्ट एरो क्रॉसिंग नॉर्थ ईस्ट एरो"
@@ -1858,7 +1652,6 @@
   },
   {
     "key": "292E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नॉर्थ ईस्ट एरो क्रॉसिंग साउथ ईस्ट एरो"
@@ -1867,7 +1660,6 @@
   },
   {
     "key": "292F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गिरते हुए विकर्ण उत्तर पूर्व तीर को पार करते हुए"
@@ -1876,7 +1668,6 @@
   },
   {
     "key": "2930",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइजिंग डायगोनल क्रॉसिंग साउथ ईस्ट एरो"
@@ -1885,7 +1676,6 @@
   },
   {
     "key": "2931",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नॉर्थ ईस्ट एरो क्रॉसिंग नॉर्थ वेस्ट एरो"
@@ -1894,7 +1684,6 @@
   },
   {
     "key": "2932",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नॉर्थ वेस्ट एरो क्रॉसिंग नॉर्थ ईस्ट एरो"
@@ -1903,7 +1692,6 @@
   },
   {
     "key": "2933",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वेव एरो पाइंटिंग डायरेक्टली राइट"
@@ -1912,7 +1700,6 @@
   },
   {
     "key": "2934",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तीर को ठीक से ऊपर की ओर इंगित करना और फिर ऊपर की ओर झुकना"
@@ -1921,7 +1708,6 @@
   },
   {
     "key": "2935",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरो पाइंटिंग राइट साइड फिर कर्विंग डाउनवर्ड"
@@ -1930,7 +1716,6 @@
   },
   {
     "key": "2936",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तीर नीचे की ओर इशारा करते हुए फिर बाईं ओर घुमावदार"
@@ -1939,7 +1724,6 @@
   },
   {
     "key": "2937",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर इशारा करते हुए एरो पॉइंटिंग करें"
@@ -1948,7 +1732,6 @@
   },
   {
     "key": "2938",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट-साइड आर्क क्लॉकवाइज एरो"
@@ -1957,7 +1740,6 @@
   },
   {
     "key": "2939",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट-साइड आर्क एंटीक्लॉकवाइज एरो"
@@ -1966,7 +1748,6 @@
   },
   {
     "key": "293A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शीर्ष आर्क एंटिक्लवाइज एरो"
@@ -1975,7 +1756,6 @@
   },
   {
     "key": "293B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला आर्क एंटिक्लवाइज एरो"
@@ -1984,7 +1764,6 @@
   },
   {
     "key": "293C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "माइनस के साथ शीर्ष आर्क दक्षिणावर्त तीर"
@@ -1993,7 +1772,6 @@
   },
   {
     "key": "293D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस के साथ शीर्ष आर्क एंटिक्लवाइज एरो"
@@ -2002,7 +1780,6 @@
   },
   {
     "key": "293E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला दाया अर्धवृत्ताकार दक्षिणावर्त तीर"
@@ -2011,7 +1788,6 @@
   },
   {
     "key": "293F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला बायाँ अर्धवृत्ताकार एंटीलॉकवाइज एरो"
@@ -2020,7 +1796,6 @@
   },
   {
     "key": "2940",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एंटीक्लॉकवाइज क्लोज्ड सर्कल एरो"
@@ -2029,7 +1804,6 @@
   },
   {
     "key": "2941",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्लॉकवाइज क्लोज्ड सर्कल एरो"
@@ -2038,7 +1812,6 @@
   },
   {
     "key": "2942",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायीं ओर एरो एबव शार्ट लेफ्टवर्ड एरो"
@@ -2047,7 +1820,6 @@
   },
   {
     "key": "2943",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड एरो एबव शॉर्ट शॉर्टवर्ड एरो"
@@ -2056,7 +1828,6 @@
   },
   {
     "key": "2944",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शॉर्ट राइट एरो एरोव एबव लेफ्टवर्ड एरो"
@@ -2065,7 +1836,6 @@
   },
   {
     "key": "2945",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसके ठीक नीचे प्लस के साथ एरो है"
@@ -2074,7 +1844,6 @@
   },
   {
     "key": "2946",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस नीचे के साथ बायाँ तीर"
@@ -2083,7 +1852,6 @@
   },
   {
     "key": "2947",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एक्स के माध्यम से राइट एरो"
@@ -2092,7 +1860,6 @@
   },
   {
     "key": "2948",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट राइट एरो स्मॉल सर्कल के जरिए"
@@ -2101,7 +1868,6 @@
   },
   {
     "key": "2949",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्मॉल सर्कल से ऊपर की ओर दो सिर वाला तीर"
@@ -2110,7 +1876,6 @@
   },
   {
     "key": "2970",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राउंडेड हेड के साथ राइट डबल एरो"
@@ -2119,7 +1884,6 @@
   },
   {
     "key": "2971",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समतुल्य तीर के ऊपर साइन इन करें"
@@ -2128,7 +1892,6 @@
   },
   {
     "key": "2972",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट साइड एरो के ऊपर टिल्ड ऑपरेटर"
@@ -2137,7 +1900,6 @@
   },
   {
     "key": "2973",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्डे ऑपरेटर से ऊपर की ओर तीर"
@@ -2146,7 +1908,6 @@
   },
   {
     "key": "2974",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्डे ऑपरेटर के ठीक ऊपर तीर"
@@ -2155,7 +1916,6 @@
   },
   {
     "key": "2975",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट एरो एबव से ऊपर लगभग बराबर"
@@ -2164,7 +1924,6 @@
   },
   {
     "key": "2976",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट-एरो के ऊपर से कम"
@@ -2173,7 +1932,6 @@
   },
   {
     "key": "2977",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-कम के माध्यम से वामावर्त तीर"
@@ -2182,7 +1940,6 @@
   },
   {
     "key": "2978",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान के ठीक ऊपर तीर"
@@ -2191,7 +1948,6 @@
   },
   {
     "key": "2979",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट साइड एरो के ऊपर सबसेट"
@@ -2200,7 +1956,6 @@
   },
   {
     "key": "297A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाएं ओर तीर सबसेट के माध्यम से"
@@ -2209,7 +1964,6 @@
   },
   {
     "key": "297B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट एबव लेफ्टवर्ड एरो"
@@ -2218,7 +1972,6 @@
   },
   {
     "key": "29B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट एरो एबव के साथ खाली सेट"
@@ -2227,7 +1980,6 @@
   },
   {
     "key": "29B4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट एरो एबव के साथ खाली सेट"
@@ -2236,7 +1988,6 @@
   },
   {
     "key": "29BD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्कल के माध्यम से ऊपर तीर"
@@ -2245,7 +1996,6 @@
   },
   {
     "key": "29EA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ब्लैक डायमंड विथ डाउन एरो"
@@ -2254,7 +2004,6 @@
   },
   {
     "key": "29EC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डाउन एरो के साथ व्हाइट सर्कल"
@@ -2263,7 +2012,6 @@
   },
   {
     "key": "29ED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डाउन एरो के साथ ब्लैक सर्कल"
@@ -2272,7 +2020,6 @@
   },
   {
     "key": "2A17",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हुक के साथ लेफ्टवर्ड एरो के साथ इंटीग्रल"
@@ -2281,7 +2028,6 @@
   },
   {
     "key": "2B00",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उत्तर पूर्व सफेद तीर"
@@ -2290,7 +2036,6 @@
   },
   {
     "key": "2B01",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उत्तर पश्चिम सफेद तीर"
@@ -2299,7 +2044,6 @@
   },
   {
     "key": "2B02",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दक्षिण पूर्व सफेद तीर"
@@ -2308,7 +2052,6 @@
   },
   {
     "key": "2B03",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दक्षिण पश्चिम सफेद तीर"
@@ -2317,7 +2060,6 @@
   },
   {
     "key": "2B04",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लेफ्ट राइट वाइट एरो"
@@ -2326,7 +2068,6 @@
   },
   {
     "key": "2B05",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "काले तीर छोड़ दिया"
@@ -2335,7 +2076,6 @@
   },
   {
     "key": "2B06",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर काला तीर"
@@ -2344,7 +2084,6 @@
   },
   {
     "key": "2B07",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर काले तीर"
@@ -2353,7 +2092,6 @@
   },
   {
     "key": "2B08",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नॉर्थ ईस्ट ब्लैक ऐरो"
@@ -2362,7 +2100,6 @@
   },
   {
     "key": "2B09",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नॉर्थ वेस्ट ब्लैक ऐरो"
@@ -2371,7 +2108,6 @@
   },
   {
     "key": "2B0A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दक्षिण पूर्व काली तीर"
@@ -2380,7 +2116,6 @@
   },
   {
     "key": "2B0B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "साउथ वेस्ट ब्लैक ऐरो"
@@ -2389,7 +2124,6 @@
   },
   {
     "key": "2B0C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लेफ्ट राइट ब्लैक ऐरो"
@@ -2398,7 +2132,6 @@
   },
   {
     "key": "2B0D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "अप डाउन ब्लैक ऐरो"
@@ -2407,7 +2140,6 @@
   },
   {
     "key": "2B0E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर टिप के साथ सही एरो"
@@ -2416,7 +2148,6 @@
   },
   {
     "key": "2B0F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टिप अपवर्ड के साथ राइट एरो"
@@ -2425,7 +2156,6 @@
   },
   {
     "key": "2B10",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर टिप के साथ बायाँ तीर"
@@ -2434,7 +2164,6 @@
   },
   {
     "key": "2B11",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टिप अपवर्ड के साथ लेफ्ट एरो"
@@ -2443,7 +2172,6 @@
   },
   {
     "key": "2B30",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटे वृत्त के साथ बायां तीर"
@@ -2452,7 +2180,6 @@
   },
   {
     "key": "2B31",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तीन वामपंथी तीर"
@@ -2461,7 +2188,6 @@
   },
   {
     "key": "2B32",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल प्लस के साथ लेफ्ट एरो"
@@ -2470,7 +2196,6 @@
   },
   {
     "key": "2B33",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबे समय तक बाईं ओर स्क्विगल एरो"
@@ -2479,7 +2204,6 @@
   },
   {
     "key": "2B34",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड टू-हेडेड एरो विथ वर्टिकल स्ट्रोक"
@@ -2488,7 +2212,6 @@
   },
   {
     "key": "2B35",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड टू-हेडेड एरो विथ डबल वर्टिकल स्ट्रोक"
@@ -2497,7 +2220,6 @@
   },
   {
     "key": "2B36",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से बाईं ओर दो-सिर वाला तीर"
@@ -2506,7 +2228,6 @@
   },
   {
     "key": "2B37",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड टू-हेडेड ट्रिपल डैश एरो"
@@ -2515,7 +2236,6 @@
   },
   {
     "key": "2B38",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉटेड स्टेम के साथ लेफ्टवर्ड एरो"
@@ -2524,7 +2244,6 @@
   },
   {
     "key": "2B39",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड एरो विथ टेल विथ वर्टिकल स्ट्रोक"
@@ -2533,7 +2252,6 @@
   },
   {
     "key": "2B3A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ टेल के साथ लेफ्टवर्ड एरो"
@@ -2542,7 +2260,6 @@
   },
   {
     "key": "2B3B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टेल के साथ लेफ्टवर्ड टू-हेडेड एरो"
@@ -2551,7 +2268,6 @@
   },
   {
     "key": "2B3C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड टू-हेडेड एरो विथ टेल विथ वर्टिकल स्ट्रोक"
@@ -2560,7 +2276,6 @@
   },
   {
     "key": "2B3D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ टेल के साथ लेफ्टवर्ड टू-हेडेड एरो"
@@ -2569,7 +2284,6 @@
   },
   {
     "key": "2B3E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एक्स के माध्यम से बाईं ओर तीर"
@@ -2578,7 +2292,6 @@
   },
   {
     "key": "2B3F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वेव एरो पॉइंटिंग सीधे लेफ्ट"
@@ -2587,7 +2300,6 @@
   },
   {
     "key": "2B40",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बायीं ओर तीर के बराबर चिह्न"
@@ -2596,7 +2308,6 @@
   },
   {
     "key": "2B41",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिवर्स टिल्डे ऑपरेटर ऊपर की ओर बाईं ओर तीर"
@@ -2605,7 +2316,6 @@
   },
   {
     "key": "2B42",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड एरो ऊपर उल्टा लगभग बराबर"
@@ -2614,7 +2324,6 @@
   },
   {
     "key": "2B43",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान के माध्यम से राइट एरो"
@@ -2623,7 +2332,6 @@
   },
   {
     "key": "2B44",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट के माध्यम से सही एरो"
@@ -2632,7 +2340,6 @@
   },
   {
     "key": "2B45",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बायाँ चौगुना तीर"
@@ -2641,7 +2348,6 @@
   },
   {
     "key": "2B46",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दाहिनी ओर चौगुना तीर"
@@ -2650,7 +2356,6 @@
   },
   {
     "key": "2B47",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट टिलर के ऊपर उल्टा टिल्ड ऑपरेटर"
@@ -2659,7 +2364,6 @@
   },
   {
     "key": "2B48",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट एरो एबव उलटा लगभग बराबर"
@@ -2668,7 +2372,6 @@
   },
   {
     "key": "2B49",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्डे ऑपरेटर ऊपर की ओर लेफ्ट एरो"
@@ -2677,7 +2380,6 @@
   },
   {
     "key": "2B4A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड एरो एबव एबव लगभग बराबर"
@@ -2686,7 +2388,6 @@
   },
   {
     "key": "2B4B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड एरो से ऊपर रिवर्स टिल्ड ऑपरेटर"
@@ -2695,7 +2396,6 @@
   },
   {
     "key": "2B4C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उल्टा तीर उल्टा टिल्ड ऑपरेटर"
@@ -2704,7 +2404,6 @@
   },
   {
     "key": "FFE9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आधी-अधूरी बाण"
@@ -2713,7 +2412,6 @@
   },
   {
     "key": "FFEA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अर्धव्यास ऊपर की ओर तीर"
@@ -2722,7 +2420,6 @@
   },
   {
     "key": "FFEB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आधी अधूरी तीर"
@@ -2731,7 +2428,6 @@
   },
   {
     "key": "FFEC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आधा नीचे तीर"

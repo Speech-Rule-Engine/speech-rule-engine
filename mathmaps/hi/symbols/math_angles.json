@@ -4,7 +4,6 @@
   },
   {
     "key": "22BE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आर्क के साथ राइट एंगल"
@@ -13,7 +12,6 @@
   },
   {
     "key": "237C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट एंगल विथ डाउनवर्ड जिगजैग एरो"
@@ -22,7 +20,6 @@
   },
   {
     "key": "27C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तीन आयामी कोण"
@@ -31,7 +28,6 @@
   },
   {
     "key": "299B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मापा कोण खुलने वाला बायाँ"
@@ -40,7 +36,6 @@
   },
   {
     "key": "299C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर के साथ राइट एंगल वेरिएंट"
@@ -49,7 +44,6 @@
   },
   {
     "key": "299D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ सही कोण मापा जाता है"
@@ -58,7 +52,6 @@
   },
   {
     "key": "299E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एस अंदर के साथ कोण"
@@ -67,7 +60,6 @@
   },
   {
     "key": "299F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न्यून कोण"
@@ -76,7 +68,6 @@
   },
   {
     "key": "29A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गोलाकार कोण खोलना वाम"
@@ -85,7 +76,6 @@
   },
   {
     "key": "29A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गोलाकार कोण खोलना"
@@ -94,7 +84,6 @@
   },
   {
     "key": "29A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बदल गया कोण"
@@ -103,7 +92,6 @@
   },
   {
     "key": "29A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उलटा कोण"
@@ -112,7 +100,6 @@
   },
   {
     "key": "29A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ कोण"
@@ -121,7 +108,6 @@
   },
   {
     "key": "29A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंबर के साथ उलटा कोण"
@@ -130,7 +116,6 @@
   },
   {
     "key": "29A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओब्लिक एंगल ओपनिंग"
@@ -139,7 +124,6 @@
   },
   {
     "key": "29A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओब्लिक एंगल ओपनिंग डाउन"
@@ -148,7 +132,6 @@
   },
   {
     "key": "29A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरो पोज़िंग अप और राइट में ओपन आर्म एंडिंग के साथ मापा गया एंगल"
@@ -157,7 +140,6 @@
   },
   {
     "key": "29A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरो पोज़िंग अप और लेफ्ट में ओपन आर्म एंडिंग के साथ मापा गया एंगल"
@@ -166,7 +148,6 @@
   },
   {
     "key": "29AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरो पाइंटिंग डाउन एंड राइट में ओपन आर्म एंडिंग के साथ एंगल मापा गया"
@@ -175,7 +156,6 @@
   },
   {
     "key": "29AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तीर और नीचे और बाएं ओर इशारा करते हुए ओपन आर्म एंडिंग के साथ मापा गया कोण"
@@ -184,7 +164,6 @@
   },
   {
     "key": "29AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरो पाइंटिंग राइट एंड अप में ओपन आर्म एंडिंग के साथ एंगल मापा गया"
@@ -193,7 +172,6 @@
   },
   {
     "key": "29AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बायाँ और ऊपर की ओर इशारा करते हुए खुले हाथ की छोर के साथ मापा गया कोण"
@@ -202,7 +180,6 @@
   },
   {
     "key": "29AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एरो पाइंटिंग राइट एंड डाउन में ओपन आर्म एंडिंग के साथ एंगल मापा गया"
@@ -211,7 +188,6 @@
   },
   {
     "key": "29AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बायां और नीचे की ओर इशारा करते हुए तीर में ओपन आर्म एंडिंग के साथ मापा गया कोण"

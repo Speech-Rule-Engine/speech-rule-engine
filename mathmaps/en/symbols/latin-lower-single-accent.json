@@ -4,7 +4,6 @@
   },
   {
     "key": "00E0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a grave"
@@ -18,7 +17,6 @@
   },
   {
     "key": "00E1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a acute"
@@ -32,7 +30,6 @@
   },
   {
     "key": "00E2",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hat"
@@ -46,7 +43,6 @@
   },
   {
     "key": "00E3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a tilde"
@@ -60,7 +56,6 @@
   },
   {
     "key": "00E4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a double overdot"
@@ -74,7 +69,6 @@
   },
   {
     "key": "00E5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a ring"
@@ -88,7 +82,6 @@
   },
   {
     "key": "00E7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c cedilla"
@@ -102,7 +95,6 @@
   },
   {
     "key": "00E8",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e grave"
@@ -116,7 +108,6 @@
   },
   {
     "key": "00E9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e acute"
@@ -130,7 +121,6 @@
   },
   {
     "key": "00EA",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hat"
@@ -144,7 +134,6 @@
   },
   {
     "key": "00EB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e double overdot"
@@ -158,7 +147,6 @@
   },
   {
     "key": "00EC",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i grave"
@@ -172,7 +160,6 @@
   },
   {
     "key": "00ED",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i acute"
@@ -186,7 +173,6 @@
   },
   {
     "key": "00EE",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i hat"
@@ -200,7 +186,6 @@
   },
   {
     "key": "00EF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i double overdot"
@@ -214,7 +199,6 @@
   },
   {
     "key": "00F1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n tilde"
@@ -228,7 +212,6 @@
   },
   {
     "key": "00F2",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o grave"
@@ -242,7 +225,6 @@
   },
   {
     "key": "00F3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o acute"
@@ -256,7 +238,6 @@
   },
   {
     "key": "00F4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hat"
@@ -270,7 +251,6 @@
   },
   {
     "key": "00F5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o tilde"
@@ -284,7 +264,6 @@
   },
   {
     "key": "00F6",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o double overdot"
@@ -298,7 +277,6 @@
   },
   {
     "key": "00F9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u grave"
@@ -312,7 +290,6 @@
   },
   {
     "key": "00FA",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u acute"
@@ -326,7 +303,6 @@
   },
   {
     "key": "00FB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u hat"
@@ -340,7 +316,6 @@
   },
   {
     "key": "00FC",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double overdot"
@@ -354,7 +329,6 @@
   },
   {
     "key": "00FD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y acute"
@@ -368,7 +342,6 @@
   },
   {
     "key": "00FF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y double overdot"
@@ -382,7 +355,6 @@
   },
   {
     "key": "0101",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a overbar"
@@ -396,7 +368,6 @@
   },
   {
     "key": "0103",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a breve"
@@ -410,7 +381,6 @@
   },
   {
     "key": "0105",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a ogonek"
@@ -424,7 +394,6 @@
   },
   {
     "key": "0107",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c acute"
@@ -438,7 +407,6 @@
   },
   {
     "key": "0109",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c hat"
@@ -452,7 +420,6 @@
   },
   {
     "key": "010B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c overdot"
@@ -466,7 +433,6 @@
   },
   {
     "key": "010D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c caron"
@@ -480,7 +446,6 @@
   },
   {
     "key": "010F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d caron"
@@ -494,7 +459,6 @@
   },
   {
     "key": "0113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e overbar"
@@ -508,7 +472,6 @@
   },
   {
     "key": "0115",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e breve"
@@ -522,7 +485,6 @@
   },
   {
     "key": "0117",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e overdot"
@@ -536,7 +498,6 @@
   },
   {
     "key": "0119",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e ogonek"
@@ -550,7 +511,6 @@
   },
   {
     "key": "011B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e caron"
@@ -564,7 +524,6 @@
   },
   {
     "key": "011D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g hat"
@@ -578,7 +537,6 @@
   },
   {
     "key": "011F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g breve"
@@ -592,7 +550,6 @@
   },
   {
     "key": "0121",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g overdot"
@@ -606,7 +563,6 @@
   },
   {
     "key": "0123",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g cedilla"
@@ -620,7 +576,6 @@
   },
   {
     "key": "0125",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h hat"
@@ -634,7 +589,6 @@
   },
   {
     "key": "0129",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i tilde"
@@ -648,7 +602,6 @@
   },
   {
     "key": "012B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i overbar"
@@ -662,7 +615,6 @@
   },
   {
     "key": "012D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i breve"
@@ -676,7 +628,6 @@
   },
   {
     "key": "012F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i ogonek"
@@ -690,7 +641,6 @@
   },
   {
     "key": "0131",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dotless i"
@@ -704,7 +654,6 @@
   },
   {
     "key": "0135",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j hat"
@@ -718,7 +667,6 @@
   },
   {
     "key": "0137",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k cedilla"
@@ -732,7 +680,6 @@
   },
   {
     "key": "013A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l acute"
@@ -746,7 +693,6 @@
   },
   {
     "key": "013C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l cedilla"
@@ -760,7 +706,6 @@
   },
   {
     "key": "013E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l caron"
@@ -774,7 +719,6 @@
   },
   {
     "key": "0140",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l middle dot"
@@ -788,7 +732,6 @@
   },
   {
     "key": "0144",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n acute"
@@ -802,7 +745,6 @@
   },
   {
     "key": "0146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n cedilla"
@@ -816,7 +758,6 @@
   },
   {
     "key": "0148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n caron"
@@ -830,7 +771,6 @@
   },
   {
     "key": "014D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o overbar"
@@ -844,7 +784,6 @@
   },
   {
     "key": "014F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o breve"
@@ -858,7 +797,6 @@
   },
   {
     "key": "0151",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o double acute"
@@ -872,7 +810,6 @@
   },
   {
     "key": "0155",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r acute"
@@ -886,7 +823,6 @@
   },
   {
     "key": "0157",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r cedilla"
@@ -900,7 +836,6 @@
   },
   {
     "key": "0159",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r caron"
@@ -914,7 +849,6 @@
   },
   {
     "key": "015B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s acute"
@@ -928,7 +862,6 @@
   },
   {
     "key": "015D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s hat"
@@ -942,7 +875,6 @@
   },
   {
     "key": "015F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s cedilla"
@@ -956,7 +888,6 @@
   },
   {
     "key": "0161",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s caron"
@@ -970,7 +901,6 @@
   },
   {
     "key": "0163",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t cedilla"
@@ -984,7 +914,6 @@
   },
   {
     "key": "0165",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t caron"
@@ -998,7 +927,6 @@
   },
   {
     "key": "0169",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u tilde"
@@ -1012,7 +940,6 @@
   },
   {
     "key": "016B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u overbar"
@@ -1026,7 +953,6 @@
   },
   {
     "key": "016D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u breve"
@@ -1040,7 +966,6 @@
   },
   {
     "key": "016F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u ring"
@@ -1054,7 +979,6 @@
   },
   {
     "key": "0171",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double acute"
@@ -1068,7 +992,6 @@
   },
   {
     "key": "0173",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u ogonek"
@@ -1082,7 +1005,6 @@
   },
   {
     "key": "0175",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w hat"
@@ -1096,7 +1018,6 @@
   },
   {
     "key": "0177",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y hat"
@@ -1110,7 +1031,6 @@
   },
   {
     "key": "017A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z acute"
@@ -1124,7 +1044,6 @@
   },
   {
     "key": "017C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z overdot"
@@ -1138,7 +1057,6 @@
   },
   {
     "key": "017E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z caron"
@@ -1152,7 +1070,6 @@
   },
   {
     "key": "01CE",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a caron"
@@ -1166,7 +1083,6 @@
   },
   {
     "key": "01D0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i caron"
@@ -1180,7 +1096,6 @@
   },
   {
     "key": "01D2",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o caron"
@@ -1194,7 +1109,6 @@
   },
   {
     "key": "01D4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u caron"
@@ -1208,7 +1122,6 @@
   },
   {
     "key": "01E7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g caron"
@@ -1222,7 +1135,6 @@
   },
   {
     "key": "01E9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k caron"
@@ -1236,7 +1148,6 @@
   },
   {
     "key": "01EB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o ogonek"
@@ -1250,7 +1161,6 @@
   },
   {
     "key": "01F0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j caron"
@@ -1264,7 +1174,6 @@
   },
   {
     "key": "01F5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g acute"
@@ -1278,7 +1187,6 @@
   },
   {
     "key": "01F9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n grave"
@@ -1292,7 +1200,6 @@
   },
   {
     "key": "0201",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a double grave"
@@ -1306,7 +1213,6 @@
   },
   {
     "key": "0203",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a inverted breve"
@@ -1320,7 +1226,6 @@
   },
   {
     "key": "0205",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e double grave"
@@ -1334,7 +1239,6 @@
   },
   {
     "key": "0207",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e inverted breve"
@@ -1348,7 +1252,6 @@
   },
   {
     "key": "0209",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i double grave"
@@ -1362,7 +1265,6 @@
   },
   {
     "key": "020B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i inverted breve"
@@ -1376,7 +1278,6 @@
   },
   {
     "key": "020D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o double grave"
@@ -1390,7 +1291,6 @@
   },
   {
     "key": "020F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o inverted breve"
@@ -1404,7 +1304,6 @@
   },
   {
     "key": "0211",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r double grave"
@@ -1418,7 +1317,6 @@
   },
   {
     "key": "0213",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r inverted breve"
@@ -1432,7 +1330,6 @@
   },
   {
     "key": "0215",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double grave"
@@ -1446,7 +1343,6 @@
   },
   {
     "key": "0217",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u inverted breve"
@@ -1460,7 +1356,6 @@
   },
   {
     "key": "0219",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s comma below"
@@ -1474,7 +1369,6 @@
   },
   {
     "key": "021B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t comma below"
@@ -1488,7 +1382,6 @@
   },
   {
     "key": "021F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h caron"
@@ -1502,7 +1395,6 @@
   },
   {
     "key": "0227",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a overdot"
@@ -1516,7 +1408,6 @@
   },
   {
     "key": "0229",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e cedilla"
@@ -1530,7 +1421,6 @@
   },
   {
     "key": "022F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o overdot"
@@ -1544,7 +1434,6 @@
   },
   {
     "key": "0233",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y overbar"
@@ -1558,7 +1447,6 @@
   },
   {
     "key": "0237",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dotless j"
@@ -1572,7 +1460,6 @@
   },
   {
     "key": "1E01",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a ring below"
@@ -1586,7 +1473,6 @@
   },
   {
     "key": "1E03",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b overdot"
@@ -1600,7 +1486,6 @@
   },
   {
     "key": "1E05",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b underdot"
@@ -1614,7 +1499,6 @@
   },
   {
     "key": "1E07",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "b underbar"
@@ -1628,7 +1512,6 @@
   },
   {
     "key": "1E0B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d overdot"
@@ -1642,7 +1525,6 @@
   },
   {
     "key": "1E0D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d underdot"
@@ -1656,7 +1538,6 @@
   },
   {
     "key": "1E0F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d underbar"
@@ -1670,7 +1551,6 @@
   },
   {
     "key": "1E11",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d cedilla"
@@ -1684,7 +1564,6 @@
   },
   {
     "key": "1E13",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d underhat"
@@ -1698,7 +1577,6 @@
   },
   {
     "key": "1E19",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e underhat"
@@ -1712,7 +1590,6 @@
   },
   {
     "key": "1E1B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e tilde below"
@@ -1726,7 +1603,6 @@
   },
   {
     "key": "1E1F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "f overdot"
@@ -1740,7 +1616,6 @@
   },
   {
     "key": "1E21",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "g overbar"
@@ -1754,7 +1629,6 @@
   },
   {
     "key": "1E23",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h overdot"
@@ -1768,7 +1642,6 @@
   },
   {
     "key": "1E25",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h underdot"
@@ -1782,7 +1655,6 @@
   },
   {
     "key": "1E27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h double overdot"
@@ -1796,7 +1668,6 @@
   },
   {
     "key": "1E29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h cedilla"
@@ -1810,7 +1681,6 @@
   },
   {
     "key": "1E2B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h breve below"
@@ -1824,7 +1694,6 @@
   },
   {
     "key": "1E2D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i tilde below"
@@ -1838,7 +1707,6 @@
   },
   {
     "key": "1E31",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k acute"
@@ -1852,7 +1720,6 @@
   },
   {
     "key": "1E33",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k underdot"
@@ -1866,7 +1733,6 @@
   },
   {
     "key": "1E35",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "k underbar"
@@ -1880,7 +1746,6 @@
   },
   {
     "key": "1E37",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l underdot"
@@ -1894,7 +1759,6 @@
   },
   {
     "key": "1E3B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l underbar"
@@ -1908,7 +1772,6 @@
   },
   {
     "key": "1E3D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l underhat"
@@ -1922,7 +1785,6 @@
   },
   {
     "key": "1E3F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m acute"
@@ -1936,7 +1798,6 @@
   },
   {
     "key": "1E41",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m overdot"
@@ -1950,7 +1811,6 @@
   },
   {
     "key": "1E43",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "m underdot"
@@ -1964,7 +1824,6 @@
   },
   {
     "key": "1E45",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n overdot"
@@ -1978,7 +1837,6 @@
   },
   {
     "key": "1E47",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n underdot"
@@ -1992,7 +1850,6 @@
   },
   {
     "key": "1E49",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n underbar"
@@ -2006,7 +1863,6 @@
   },
   {
     "key": "1E4B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "n underhat"
@@ -2020,7 +1876,6 @@
   },
   {
     "key": "1E55",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p acute"
@@ -2034,7 +1889,6 @@
   },
   {
     "key": "1E57",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "p overdot"
@@ -2048,7 +1902,6 @@
   },
   {
     "key": "1E59",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r overdot"
@@ -2062,7 +1915,6 @@
   },
   {
     "key": "1E5B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r underdot"
@@ -2076,7 +1928,6 @@
   },
   {
     "key": "1E5F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r underbar"
@@ -2090,7 +1941,6 @@
   },
   {
     "key": "1E61",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s overdot"
@@ -2104,7 +1954,6 @@
   },
   {
     "key": "1E63",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s underdot"
@@ -2118,7 +1967,6 @@
   },
   {
     "key": "1E6B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t overdot"
@@ -2132,7 +1980,6 @@
   },
   {
     "key": "1E6D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t underdot"
@@ -2146,7 +1993,6 @@
   },
   {
     "key": "1E6F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t underbar"
@@ -2160,7 +2006,6 @@
   },
   {
     "key": "1E71",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t underhat"
@@ -2174,7 +2019,6 @@
   },
   {
     "key": "1E73",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u double underdot"
@@ -2188,7 +2032,6 @@
   },
   {
     "key": "1E75",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u tilde below"
@@ -2202,7 +2045,6 @@
   },
   {
     "key": "1E77",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u underhat"
@@ -2216,7 +2058,6 @@
   },
   {
     "key": "1E7D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "v tilde"
@@ -2230,7 +2071,6 @@
   },
   {
     "key": "1E7F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "v underdot"
@@ -2244,7 +2084,6 @@
   },
   {
     "key": "1E81",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w grave"
@@ -2258,7 +2097,6 @@
   },
   {
     "key": "1E83",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w acute"
@@ -2272,7 +2110,6 @@
   },
   {
     "key": "1E85",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w double overdot"
@@ -2286,7 +2123,6 @@
   },
   {
     "key": "1E87",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w overdot"
@@ -2300,7 +2136,6 @@
   },
   {
     "key": "1E89",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w underdot"
@@ -2314,7 +2149,6 @@
   },
   {
     "key": "1E8B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "x overdot"
@@ -2328,7 +2162,6 @@
   },
   {
     "key": "1E8D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "x double overdot"
@@ -2342,7 +2175,6 @@
   },
   {
     "key": "1E8F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y overdot"
@@ -2356,7 +2188,6 @@
   },
   {
     "key": "1E91",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z hat"
@@ -2370,7 +2201,6 @@
   },
   {
     "key": "1E93",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z underdot"
@@ -2384,7 +2214,6 @@
   },
   {
     "key": "1E95",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "z underbar"
@@ -2398,7 +2227,6 @@
   },
   {
     "key": "1E96",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "h underbar"
@@ -2412,7 +2240,6 @@
   },
   {
     "key": "1E97",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "t double overdot"
@@ -2426,7 +2253,6 @@
   },
   {
     "key": "1E98",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "w ring"
@@ -2440,7 +2266,6 @@
   },
   {
     "key": "1E99",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y ring"
@@ -2454,7 +2279,6 @@
   },
   {
     "key": "1E9A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a right half ring"
@@ -2468,7 +2292,6 @@
   },
   {
     "key": "1EA1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a underdot"
@@ -2482,7 +2305,6 @@
   },
   {
     "key": "1EA3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a hook"
@@ -2496,7 +2318,6 @@
   },
   {
     "key": "1EB9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e underdot"
@@ -2510,7 +2331,6 @@
   },
   {
     "key": "1EBB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e hook"
@@ -2524,7 +2344,6 @@
   },
   {
     "key": "1EBD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e tilde"
@@ -2538,7 +2357,6 @@
   },
   {
     "key": "1EC9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i hook"
@@ -2552,7 +2370,6 @@
   },
   {
     "key": "1ECB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i underdot"
@@ -2566,7 +2383,6 @@
   },
   {
     "key": "1ECD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o underdot"
@@ -2580,7 +2396,6 @@
   },
   {
     "key": "1ECF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o hook"
@@ -2594,7 +2409,6 @@
   },
   {
     "key": "1EE5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u underdot"
@@ -2608,7 +2422,6 @@
   },
   {
     "key": "1EE7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u hook"
@@ -2622,7 +2435,6 @@
   },
   {
     "key": "1EF3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y grave"
@@ -2636,7 +2448,6 @@
   },
   {
     "key": "1EF5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y underdot"
@@ -2650,7 +2461,6 @@
   },
   {
     "key": "1EF7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y hook"
@@ -2664,7 +2474,6 @@
   },
   {
     "key": "1EF9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "y tilde"

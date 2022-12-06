@@ -4,7 +4,6 @@
   },
   {
     "key": "210E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "प्लांक कॉन्स्टेंट"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0363",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "ए का संयोजन"
@@ -22,7 +20,6 @@
   },
   {
     "key": "0364",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "ई का संयोजन"
@@ -31,7 +28,6 @@
   },
   {
     "key": "0365",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन लैटिन लेटर I का संयोजन"
@@ -40,7 +36,6 @@
   },
   {
     "key": "0366",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "O का संयोजन"
@@ -49,7 +44,6 @@
   },
   {
     "key": "0367",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "यू का संयोजन"
@@ -58,7 +52,6 @@
   },
   {
     "key": "0368",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "सी का संयोजन"
@@ -67,7 +60,6 @@
   },
   {
     "key": "0369",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "डी का संयोजन"
@@ -76,7 +68,6 @@
   },
   {
     "key": "036A",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एच का संयोजन"
@@ -85,7 +76,6 @@
   },
   {
     "key": "036B",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एम का संयोजन"
@@ -94,7 +84,6 @@
   },
   {
     "key": "036C",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "आर का संयोजन"
@@ -103,7 +92,6 @@
   },
   {
     "key": "036D",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "टी का संयोजन"
@@ -112,7 +100,6 @@
   },
   {
     "key": "036E",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "वी का संयोजन"
@@ -121,7 +108,6 @@
   },
   {
     "key": "036F",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एक्स का संयोजन"
@@ -130,7 +116,6 @@
   },
   {
     "key": "1D62",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटी पत्र I"
@@ -139,7 +124,6 @@
   },
   {
     "key": "1D63",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटी पत्र आर"
@@ -148,7 +132,6 @@
   },
   {
     "key": "1D64",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटी पत्र यू"
@@ -157,7 +140,6 @@
   },
   {
     "key": "1D65",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटी पत्र वी"
@@ -166,7 +148,6 @@
   },
   {
     "key": "1DCA",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "नीचे लैटिन छोटे पत्र आर का संयोजन"
@@ -175,7 +156,6 @@
   },
   {
     "key": "1DD3",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन छोटे पत्र को मिलाकर चपटा खुला एक ऊपर"
@@ -184,7 +164,6 @@
   },
   {
     "key": "1DD4",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एई का संयोजन"
@@ -193,7 +172,6 @@
   },
   {
     "key": "1DD5",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एओ का संयोजन"
@@ -202,7 +180,6 @@
   },
   {
     "key": "1DD6",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एव का संयोजन"
@@ -211,7 +188,6 @@
   },
   {
     "key": "1DD7",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन लैटिन लेटर सी सेडिला का संयोजन"
@@ -220,7 +196,6 @@
   },
   {
     "key": "1DD8",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "इंसुलर डी का संयोजन"
@@ -229,7 +204,6 @@
   },
   {
     "key": "1DD9",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन लैटिन लेटर एथ का संयोजन"
@@ -238,7 +212,6 @@
   },
   {
     "key": "1DDA",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन छोटे पत्र जी का संयोजन"
@@ -247,7 +220,6 @@
   },
   {
     "key": "1DDB",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लेटिन लेटर स्मॉल कैपिटल जी को मिलाकर"
@@ -256,7 +228,6 @@
   },
   {
     "key": "1DDC",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "K का संयोजन"
@@ -265,7 +236,6 @@
   },
   {
     "key": "1DDD",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एल का संयोजन"
@@ -274,7 +244,6 @@
   },
   {
     "key": "1DDE",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन लेटर का संयोजन स्मॉल कैपिटल एल"
@@ -283,7 +252,6 @@
   },
   {
     "key": "1DDF",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लेटिन लेटर स्माल कैपिटल एम"
@@ -292,7 +260,6 @@
   },
   {
     "key": "1DE0",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एन का संयोजन"
@@ -301,7 +268,6 @@
   },
   {
     "key": "1DE1",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन लेटर का मेल स्मॉल कैपिटल एन"
@@ -310,7 +276,6 @@
   },
   {
     "key": "1DE2",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन लेटर का मेल स्मॉल कैपिटल आर"
@@ -319,7 +284,6 @@
   },
   {
     "key": "1DE3",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन छोटे पत्र आर रोटुंडा का संयोजन"
@@ -328,7 +292,6 @@
   },
   {
     "key": "1DE4",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "एस का संयोजन"
@@ -337,7 +300,6 @@
   },
   {
     "key": "1DE5",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "लैटिन छोटे पत्र लंबे एस का संयोजन"
@@ -346,7 +308,6 @@
   },
   {
     "key": "1DE6",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "जेड का संयोजन"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2071",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट लैटिन लैटिन पत्र I"
@@ -364,7 +324,6 @@
   },
   {
     "key": "207F",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट एन"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2090",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र ए"
@@ -382,7 +340,6 @@
   },
   {
     "key": "2091",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र ई"
@@ -391,7 +348,6 @@
   },
   {
     "key": "2092",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र हे"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2093",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र एक्स"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2094",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र Schwa"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2095",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र एच"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2096",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र K"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2097",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र एल"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2098",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र एम"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2099",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटी पत्र एन"
@@ -463,7 +412,6 @@
   },
   {
     "key": "209A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र पी"
@@ -472,7 +420,6 @@
   },
   {
     "key": "209B",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र एस"
@@ -481,7 +428,6 @@
   },
   {
     "key": "209C",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र टी"
@@ -490,7 +436,6 @@
   },
   {
     "key": "2C7C",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "लैटिन सदस्यता छोटे पत्र जे"
@@ -499,7 +444,6 @@
   },
   {
     "key": "1F12A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "कछुआ शैल ब्रैकेटेड एस"
@@ -508,7 +452,6 @@
   },
   {
     "key": "1F12B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सर्किल इटैलिक सी"
@@ -517,7 +460,6 @@
   },
   {
     "key": "1F12C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सर्किल इटैलिक आर"
@@ -526,7 +468,6 @@
   },
   {
     "key": "1F18A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "पार किए गए नकारात्मक वर्ग लैटिन पूंजी पत्र P"

@@ -4,7 +4,6 @@
   },
   {
     "key": "23E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दशमलव प्रतिपादक प्रतीक"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2605",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "काला तारा"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2606",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सफेद सितारा"
@@ -31,7 +28,6 @@
   },
   {
     "key": "26AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "मध्यम सफेद वृत्त"
@@ -40,7 +36,6 @@
   },
   {
     "key": "26AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "मीडियम ब्लैक सर्कल"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2705",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सफेद हैवी चेक मार्क"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2713",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सही का निशान"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2714",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी चेक मार्क"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2715",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "गुणन X"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2716",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी गुणा X"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2717",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बैलट एक्स"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2718",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी मतवाला एक्स"
@@ -112,7 +100,6 @@
   },
   {
     "key": "271B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ओपन सेंटर क्रॉस"
@@ -121,7 +108,6 @@
   },
   {
     "key": "271C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी खुला केंद्र क्रॉस"
@@ -130,7 +116,6 @@
   },
   {
     "key": "2720",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "माल्टीज़ क्रॉस"
@@ -139,7 +124,6 @@
   },
   {
     "key": "2721",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "डेविड का सितारा"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2722",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "फोर टियरड्रॉप-स्पोक्ड एस्टरिस्क"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2723",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "फोर बैलून-स्पोक्ड एस्टरिस्क"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2724",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी फोर बलून-स्पोक्ड एस्टरिस्क"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2725",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "फोर क्लब-स्पोक्ड एस्टरिस्क"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2726",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक फोर पॉइंटेड स्टार"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2727",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "व्हाइट फोर पॉइंटेड स्टार"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2728",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "निखर उठती"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2729",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "तनाव की रूपरेखा सफेद सितारा"
@@ -220,7 +196,6 @@
   },
   {
     "key": "272A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सफेद स्टार की परिक्रमा की"
@@ -229,7 +204,6 @@
   },
   {
     "key": "272B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ओपन सेंटर ब्लैक स्टार"
@@ -238,7 +212,6 @@
   },
   {
     "key": "272C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक सेंटर व्हाइट स्टार"
@@ -247,7 +220,6 @@
   },
   {
     "key": "272D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उल्लिखित ब्लैक स्टार"
@@ -256,7 +228,6 @@
   },
   {
     "key": "272E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी आउटलाइन्ड ब्लैक स्टार"
@@ -265,7 +236,6 @@
   },
   {
     "key": "272F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "पिनव्हील स्टार"
@@ -274,7 +244,6 @@
   },
   {
     "key": "2730",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "छायांकित श्वेत तारा"
@@ -283,7 +252,6 @@
   },
   {
     "key": "2731",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी तारांकन"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2732",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "खुला केंद्र तारांकन चिह्न"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2733",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आठ प्रवक्ता ने तारांकित किया"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2734",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आठ प्वाइंट ब्लैक स्टार"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2735",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आठ पॉइंट पिनव्हील स्टार"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2736",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सिक्स पॉइंटेड ब्लैक स्टार"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2739",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बारह अंक ब्लैक स्टार"
@@ -346,7 +308,6 @@
   },
   {
     "key": "273A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सोलह पॉइंट वाला तारांकन चिह्न"
@@ -355,7 +316,6 @@
   },
   {
     "key": "273B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टियरड्रॉप-स्पोक्ड एस्टरिस्क"
@@ -364,7 +324,6 @@
   },
   {
     "key": "273C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ओपन सेंटर टियरड्रॉप-स्पोक्ड एस्टरिस्क"
@@ -373,7 +332,6 @@
   },
   {
     "key": "273D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हेवी टियरड्रॉप-स्पोक्ड एस्टरिस्क"
@@ -382,7 +340,6 @@
   },
   {
     "key": "273E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "छह पेटेड ब्लैक एंड व्हाइट फ्लोरेट"
@@ -391,7 +348,6 @@
   },
   {
     "key": "273F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ब्लैक फ्लोरेट"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2740",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "श्वेत पुष्प"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2741",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आठ पेटेल्ड आउटलाइन्ड ब्लैक फ्लोरेट"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2742",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सर्किल ओपन सेंटर आठ पॉइंटेड स्टार"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2743",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी टियरड्रॉप-स्पोकन पिनव्हील एस्टरिस्क"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2744",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हिमपात का एक खंड"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2745",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "तंग त्रिफोलिएट स्नोफ्लेक"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2746",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी शेवरॉन स्नोफ्लेक"
@@ -463,7 +412,6 @@
   },
   {
     "key": "2747",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "चमक"
@@ -472,7 +420,6 @@
   },
   {
     "key": "2748",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी स्पार्कल"
@@ -481,7 +428,6 @@
   },
   {
     "key": "2749",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बैलून-स्पोक्ड एस्टरिस्क"
@@ -490,7 +436,6 @@
   },
   {
     "key": "274A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आठ टियरड्रॉप-स्पोक प्रोपेलर एस्टरिस्क"
@@ -499,7 +444,6 @@
   },
   {
     "key": "274B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी आठ टियरड्रॉप-स्पोक्ड प्रोपेलर एस्टरिस्क"
@@ -508,7 +452,6 @@
   },
   {
     "key": "274C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "क्रॉस चिह्न"
@@ -517,7 +460,6 @@
   },
   {
     "key": "274D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "छायांकित सफेद वृत्त"

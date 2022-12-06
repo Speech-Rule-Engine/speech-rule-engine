@@ -4,7 +4,6 @@
   },
   {
     "key": "00B2",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "kvadrat"
@@ -17,7 +16,6 @@
   },
   {
     "key": "00B3",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "kubik"
@@ -30,7 +28,6 @@
   },
   {
     "key": "00BC",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "rationella talet en fjärdedel"
@@ -39,7 +36,6 @@
   },
   {
     "key": "00BD",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "rationella talet en halv"
@@ -48,7 +44,6 @@
   },
   {
     "key": "00BE",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "rationella talet tre fjärdedelar"
@@ -57,7 +52,6 @@
   },
   {
     "key": "2150",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en sjundedel"
@@ -66,7 +60,6 @@
   },
   {
     "key": "2151",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en niondel"
@@ -75,7 +68,6 @@
   },
   {
     "key": "2152",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en tiondel"
@@ -84,7 +76,6 @@
   },
   {
     "key": "2153",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one third"
@@ -93,7 +84,6 @@
   },
   {
     "key": "2154",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction two thirds"
@@ -102,7 +92,6 @@
   },
   {
     "key": "2155",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one fifth"
@@ -111,7 +100,6 @@
   },
   {
     "key": "2156",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction two fifths"
@@ -120,7 +108,6 @@
   },
   {
     "key": "2157",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction three fifths"
@@ -129,7 +116,6 @@
   },
   {
     "key": "2158",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction four fifths"
@@ -138,7 +124,6 @@
   },
   {
     "key": "2159",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one sixth"
@@ -147,7 +132,6 @@
   },
   {
     "key": "215A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction five sixths"
@@ -156,7 +140,6 @@
   },
   {
     "key": "215B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction one eighth"
@@ -165,7 +148,6 @@
   },
   {
     "key": "215C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction three eighths"
@@ -174,7 +156,6 @@
   },
   {
     "key": "215D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction five eighths"
@@ -183,7 +164,6 @@
   },
   {
     "key": "215E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vulgar fraction seven eighths"
@@ -192,7 +172,6 @@
   },
   {
     "key": "215F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "täljare ett"
@@ -201,7 +180,6 @@
   },
   {
     "key": "2189",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "noll tredjedelar"
@@ -210,7 +188,6 @@
   },
   {
     "key": "3248",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "tio inringad på svart kvadrat"
@@ -219,7 +196,6 @@
   },
   {
     "key": "3249",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "tjugo inringad på svart kvadrat"
@@ -228,7 +204,6 @@
   },
   {
     "key": "324A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "trettio inringad på svart kvadrat"
@@ -237,7 +212,6 @@
   },
   {
     "key": "324B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "fyrtio inringad på svart kvadrat"
@@ -246,7 +220,6 @@
   },
   {
     "key": "324C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "femtio inringad på svart kvadrat"
@@ -255,7 +228,6 @@
   },
   {
     "key": "324D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sextio inringad på svart kvadrat"
@@ -264,7 +236,6 @@
   },
   {
     "key": "324E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sjuttio inringad på svart kvadrat"
@@ -273,7 +244,6 @@
   },
   {
     "key": "324F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "åttio inringad på svart kvadrat"

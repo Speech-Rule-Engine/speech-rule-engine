@@ -4,7 +4,6 @@
   },
   {
     "key": "01D5",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Latin Capital Lettera U con Diaeresis e Macron"
@@ -13,7 +12,6 @@
   },
   {
     "key": "01D7",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Capitale latina Lettera U con diaeresi e acuta"
@@ -22,7 +20,6 @@
   },
   {
     "key": "01D9",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Latin Capital Lettera U con Diaeresis e Caron"
@@ -31,7 +28,6 @@
   },
   {
     "key": "01DB",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Capitale latina Lettera U con diaeresi e tomba"
@@ -40,7 +36,6 @@
   },
   {
     "key": "01DE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Lettera maiuscola latina a con Diaeresis e Macron"
@@ -49,7 +44,6 @@
   },
   {
     "key": "01E0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Lettera maiuscola latina a con Punto Sopra e Macron"
@@ -58,7 +52,6 @@
   },
   {
     "key": "01EC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Lettera maiuscola latina O con Ogonek e Macron"
@@ -67,7 +60,6 @@
   },
   {
     "key": "01FA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Lettera maiuscola latina a con anello sopra e acuto"
@@ -76,7 +68,6 @@
   },
   {
     "key": "022A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Capitale latina Lettera O con Diaeresis e Macron"
@@ -85,7 +76,6 @@
   },
   {
     "key": "022C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Capitale latina Lettera O con Tilde e Macron"
@@ -94,7 +84,6 @@
   },
   {
     "key": "0230",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Capitale latina Lettera O con Punto Sopra e Macron"
@@ -103,7 +92,6 @@
   },
   {
     "key": "1E08",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "c maiuscola con cediglia and acute"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1E14",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con barra sopra e accento grave"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1E16",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con barra sopra e accento acuto"
@@ -130,7 +116,6 @@
   },
   {
     "key": "1E1C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con cediglia e con segno di vocale corta"
@@ -139,7 +124,6 @@
   },
   {
     "key": "1E2E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "i maiuscola con dieresi ed accento acuto"
@@ -148,7 +132,6 @@
   },
   {
     "key": "1E38",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "l maiuscola con punto sotto e con barra sopra"
@@ -157,7 +140,6 @@
   },
   {
     "key": "1E4C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con tilde ed accento acuto"
@@ -166,7 +148,6 @@
   },
   {
     "key": "1E4E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con tilde e dieresi"
@@ -175,7 +156,6 @@
   },
   {
     "key": "1E50",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con barra sopra ed accento grave"
@@ -184,7 +164,6 @@
   },
   {
     "key": "1E52",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con barra sopra ed accento acuto"
@@ -193,7 +172,6 @@
   },
   {
     "key": "1E5C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "r maiuscola con punto sotto e con barra sopra"
@@ -202,7 +180,6 @@
   },
   {
     "key": "1E64",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con accento acuto e punto sopra"
@@ -211,7 +188,6 @@
   },
   {
     "key": "1E66",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con caron e punto sopra"
@@ -220,7 +196,6 @@
   },
   {
     "key": "1E68",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "s maiuscola con punto sotto e punto sopra"
@@ -229,7 +204,6 @@
   },
   {
     "key": "1E78",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con tilde ed accento acuto"
@@ -238,7 +212,6 @@
   },
   {
     "key": "1E7A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con barra sopra e dieresi"
@@ -247,7 +220,6 @@
   },
   {
     "key": "1EA4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento circonflesso ed accento acuto"
@@ -256,7 +228,6 @@
   },
   {
     "key": "1EA6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento circonflesso ed accento grave"
@@ -265,7 +236,6 @@
   },
   {
     "key": "1EA8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento circonflesso e gancio sopra"
@@ -274,7 +244,6 @@
   },
   {
     "key": "1EAA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento circonflesso e tilde"
@@ -283,7 +252,6 @@
   },
   {
     "key": "1EAC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con accento circonflesso e punto sotto"
@@ -292,7 +260,6 @@
   },
   {
     "key": "1EAE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con segno di vocale corta ed accento acuto"
@@ -301,7 +268,6 @@
   },
   {
     "key": "1EB0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con segno di vocale corta ed accento grave"
@@ -310,7 +276,6 @@
   },
   {
     "key": "1EB2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con segno di vocale corta e gancio sopra"
@@ -319,7 +284,6 @@
   },
   {
     "key": "1EB4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con segno di vocale corta e tilde"
@@ -328,7 +292,6 @@
   },
   {
     "key": "1EB6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "a maiuscola con segno di vocale corta e punto sotto"
@@ -337,7 +300,6 @@
   },
   {
     "key": "1EBE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso ed acuto"
@@ -346,7 +308,6 @@
   },
   {
     "key": "1EC0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso e grave"
@@ -355,7 +316,6 @@
   },
   {
     "key": "1EC2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso e gancio sopra"
@@ -364,7 +324,6 @@
   },
   {
     "key": "1EC4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso e tilde"
@@ -373,7 +332,6 @@
   },
   {
     "key": "1EC6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "e maiuscola con accento circonflesso e punto sotto"
@@ -382,7 +340,6 @@
   },
   {
     "key": "1ED0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento circonflesso e accento acuto"
@@ -391,7 +348,6 @@
   },
   {
     "key": "1ED2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento circonflesso e accento grave"
@@ -400,7 +356,6 @@
   },
   {
     "key": "1ED4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento circonflesso e gancio sopra"
@@ -409,7 +364,6 @@
   },
   {
     "key": "1ED6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento circonflesso e tilde"
@@ -418,7 +372,6 @@
   },
   {
     "key": "1ED8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con accento circonflesso e punto sotto"
@@ -427,7 +380,6 @@
   },
   {
     "key": "1EDA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con corno e accento acuto"
@@ -436,7 +388,6 @@
   },
   {
     "key": "1EDC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con corno e accento grave"
@@ -445,7 +396,6 @@
   },
   {
     "key": "1EDE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con corno e gancio sopra"
@@ -454,7 +404,6 @@
   },
   {
     "key": "1EE0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con corno e tilde"
@@ -463,7 +412,6 @@
   },
   {
     "key": "1EE2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "o maiuscola con corno e punto sotto"
@@ -472,7 +420,6 @@
   },
   {
     "key": "1EE8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con corno e accento acuto"
@@ -481,7 +428,6 @@
   },
   {
     "key": "1EEA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con corno e accento grave"
@@ -490,7 +436,6 @@
   },
   {
     "key": "1EEC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con corno e gancio sopra"
@@ -499,7 +444,6 @@
   },
   {
     "key": "1EEE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con corno e tilde"
@@ -508,7 +452,6 @@
   },
   {
     "key": "1EF0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "u maiuscola con corno e punto sotto"

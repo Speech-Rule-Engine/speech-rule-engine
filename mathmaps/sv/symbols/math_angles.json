@@ -4,7 +4,6 @@
   },
   {
     "key": "22BE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger vinkel med båge"
@@ -13,7 +12,6 @@
   },
   {
     "key": "237C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "höger vinkel med sicksackpil neråt"
@@ -22,7 +20,6 @@
   },
   {
     "key": "27C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tredimensionell vinkel"
@@ -31,7 +28,6 @@
   },
   {
     "key": "299B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "uppmätt vinkel med öppning åt vänster"
@@ -40,7 +36,6 @@
   },
   {
     "key": "299C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rät vinkel med fyrkant"
@@ -49,7 +44,6 @@
   },
   {
     "key": "299D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel åt höger med punkt"
@@ -58,7 +52,6 @@
   },
   {
     "key": "299E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vinkel med s inuti"
@@ -67,7 +60,6 @@
   },
   {
     "key": "299F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "spetsig vinkel"
@@ -76,7 +68,6 @@
   },
   {
     "key": "29A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sfärisk vinkel med öppning åt vänster"
@@ -85,7 +76,6 @@
   },
   {
     "key": "29A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sfärisk vinkel med öppning uppåt"
@@ -94,7 +84,6 @@
   },
   {
     "key": "29A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vriden vinkel"
@@ -103,7 +92,6 @@
   },
   {
     "key": "29A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "omvänd vinkel"
@@ -112,7 +100,6 @@
   },
   {
     "key": "29A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vinkel med streck under"
@@ -121,7 +108,6 @@
   },
   {
     "key": "29A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "omvänd vinkel med streck under"
@@ -130,7 +116,6 @@
   },
   {
     "key": "29A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vid vinkel med öppning uppåt"
@@ -139,7 +124,6 @@
   },
   {
     "key": "29A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vid vinkel med öppning neråt"
@@ -148,7 +132,6 @@
   },
   {
     "key": "29A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil uppåt höger i slutet av övre armen"
@@ -157,7 +140,6 @@
   },
   {
     "key": "29A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil uppåt vänster i slutet av övre armen"
@@ -166,7 +148,6 @@
   },
   {
     "key": "29AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil neråt höger i slutet av undre armen"
@@ -175,7 +156,6 @@
   },
   {
     "key": "29AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil neråt vänster i slutet av undre armen"
@@ -184,7 +164,6 @@
   },
   {
     "key": "29AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil uppåt höger i slutet av högra armen"
@@ -193,7 +172,6 @@
   },
   {
     "key": "29AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil uppåt vänster i slutet av vänstra armen"
@@ -202,7 +180,6 @@
   },
   {
     "key": "29AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil neråt höger i slutet av högra armen"
@@ -211,7 +188,6 @@
   },
   {
     "key": "29AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mätt vinkel med pil neråt vänster i slutet av vänstra armen"
