@@ -61,9 +61,12 @@ export function setSiPrefixes(prefixes: SiJson) {
 /**
  * A set of efficient substores.
  */
-const subStores_: { [key: string]: MathSimpleStore } = {};
+const subStores: Map<string, MathSimpleStore> = new Map();
 
-const baseStores_: { [key: string]: UnicodeJson} = {};
+/**
+ * A map to hold elements symbols have in common across the locales.
+ */
+const baseStores: Map<string, UnicodeJson> = new Map();
 
 /**
  * Function creates a rule store in the compound store for a particular
@@ -147,7 +150,7 @@ export function addFunctionRules(json: UnicodeJson[]) {
       return;
     }
     if (locale === 'base') {
-      baseStores_[x.key] = x;
+      baseStores.set(x.key, x);
       addFunctionSemantic(x.key, x.names);
       return;
     }
@@ -158,7 +161,7 @@ export function addFunctionRules(json: UnicodeJson[]) {
 }
 
 export function completeWithBase(json: UnicodeJson) {
-  let base = baseStores_[json.key];
+  let base = baseStores.get(json.key);
   if (!base) {
     return;
   }
@@ -189,7 +192,7 @@ export function addUnitRules(json: UnicodeJson[]) {
     }
     x.key += ':unit';
     if (locale === 'base') {
-      baseStores_[x.key] = x;
+      baseStores.set(x.key, x);
       return;
     }
     completeWithBase(x);
@@ -252,7 +255,7 @@ function addSingleUnitRule(json: UnicodeJson) {
  * @returns The speech rule if it exists.
  */
 export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
-  const store = subStores_[node];
+  const store = subStores.get(node);
   return store ? store.lookupRule(null, dynamic) : null;
 }
 
@@ -263,7 +266,7 @@ export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
  * @returns The category if it exists.
  */
 export function lookupCategory(character: string): string {
-  const store = subStores_[character];
+  const store = subStores.get(character);
   return store ? store.category : '';
 }
 
@@ -294,7 +297,7 @@ Engine.getInstance().evaluator = lookupString;
 export function enumerate(info: { [key: string]: any } = {}): {
   [key: string]: any;
 } {
-  for (const store of Object.values(subStores_)) {
+  for (const store of subStores.values()) {
     for (const [, rules] of store.rules.entries()) {
       for (const { cstr: dynamic } of rules) {
         info = enumerate_(dynamic.getValues(), info);
@@ -346,13 +349,13 @@ export function changeLocale(json: UnicodeJson): boolean {
  * @returns The rule store.
  */
 function getSubStore_(key: string): MathSimpleStore {
-  let store = subStores_[key];
+  let store = subStores.get(key);
   if (store) {
     Debugger.getInstance().output('Store exists! ' + key);
     return store;
   }
   store = new MathSimpleStore();
-  subStores_[key] = store;
+  subStores.set(key, store);
   return store;
 }
 
