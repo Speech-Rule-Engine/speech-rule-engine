@@ -21,11 +21,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
 import Engine from '../common/engine';
 import { locales } from '../l10n/l10n';
 import { addFunctionSemantic } from '../semantic_tree/semantic_attr';
 import {
+  BaseJson,
   MathSimpleStore,
   SiJson,
   MappingsJson,
@@ -66,7 +66,7 @@ const subStores: Map<string, MathSimpleStore> = new Map();
 /**
  * A map to hold elements symbols have in common across the locales.
  */
-const baseStores: Map<string, UnicodeJson> = new Map();
+export const baseStores: Map<string, BaseJson> = new Map();
 
 /**
  * Function creates a rule store in the compound store for a particular
@@ -74,17 +74,15 @@ const baseStores: Map<string, UnicodeJson> = new Map();
  *
  * @param str String used as key to refer to the rule store
  * precondition and constr
- * @param cat The category if it exists.
  * @param mappings JSON representation of mappings from styles and
  *     domains to strings, from which the speech rules will be computed.
  */
 export function defineRules(
+  base: string,
   str: string,
-  cat: string,
   mappings: MappingsJson
 ) {
-  const store = getSubStore_(str);
-  setupStore_(store, cat);
+  const store = getSubStore_(base, str);
   store.defineRulesFromMappings(locale, modality, mappings);
 }
 
@@ -93,19 +91,16 @@ export function defineRules(
  *
  * @param domain The domain axis.
  * @param style The style axis.
- * @param cat The category if it exists.
  * @param str String for precondition and constraints.
  * @param content The content for the postcondition.
  */
 export function defineRule(
   domain: string,
   style: string,
-  cat: string,
   str: string,
   content: string
 ) {
-  const store = getSubStore_(str);
-  setupStore_(store, cat);
+  const store = getSubStore_(str, str);
   store.defineRuleFromStrings(
     locale,
     modality,
@@ -125,7 +120,11 @@ function addSymbolRule(json: UnicodeJson) {
     return;
   }
   const key = MathSimpleStore.parseUnicode(json['key']);
-  defineRules(key, json['category'], json['mappings']);
+  if (locale === 'base') {
+    baseStores.set(key, json);
+    return;
+  }
+  defineRules(key, key, json['mappings']);
 }
 export const addSymbolRules =
   (json: UnicodeJson[]) => json.forEach(addSymbolRule);
@@ -138,9 +137,9 @@ export const addSymbolRules =
 function addFunctionRule(json: UnicodeJson) {
   const names = json['names'];
   const mappings = json['mappings'];
-  const category = json['category'];
+  const key = json['key'];
   for (let j = 0, name; (name = names[j]); j++) {
-    defineRules(name, category, mappings);
+    defineRules(key, name, mappings);
   }
 }
 
@@ -149,18 +148,17 @@ export function addFunctionRules(json: UnicodeJson[]) {
     if (changeLocale(x)) {
       return;
     }
+    addFunctionSemantic(x.key, x.names || []);
     if (locale === 'base') {
       baseStores.set(x.key, x);
-      addFunctionSemantic(x.key, x.names);
       return;
     }
-    addFunctionSemantic(x.key, x.names || []);
     completeWithBase(x);
     addFunctionRule(x);
   });
 }
 
-export function completeWithBase(json: UnicodeJson) {
+function completeWithBase(json: UnicodeJson) {
   let base = baseStores.get(json.key);
   if (!base) {
     return;
@@ -267,7 +265,7 @@ export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
  */
 export function lookupCategory(character: string): string {
   const store = subStores.get(character);
-  return store ? store.category : '';
+  return store?.base ? store.base.category : '';
 }
 
 /**
@@ -348,25 +346,13 @@ export function changeLocale(json: UnicodeJson): boolean {
  * @param key The key for the store.
  * @returns The rule store.
  */
-function getSubStore_(key: string): MathSimpleStore {
+function getSubStore_(base: string, key: string): MathSimpleStore {
   let store = subStores.get(key);
   if (store) {
-    Debugger.getInstance().output('Store exists! ' + key);
     return store;
   }
   store = new MathSimpleStore();
+  store.base = baseStores.get(base);
   subStores.set(key, store);
   return store;
-}
-
-/**
- * Transfers parameters of the compound store to a substore.
- *
- * @param store A simple math store.
- * @param opt_cat The category if it exists.
- */
-function setupStore_(store: MathSimpleStore, opt_cat?: string) {
-  if (opt_cat) {
-    store.category = opt_cat;
-  }
 }

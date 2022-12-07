@@ -56,6 +56,19 @@ export function makeDomains_() {
 }
 
 /**
+ * Generates alphabet information in the base locale.
+ */
+export function generateBase() {
+  for (const int of Alphabet.INTERVALS.values()) {
+    const letters = int.unicode;
+    for (let letter of letters) {
+      MathCompoundStore.baseStores.set(
+        letter, {key: letter, category: int.category});
+    }
+  }
+}
+
+/**
  * Generates alphabet rules for the locale and adds them to the given store.
  *
  * @param locale The current locale.
@@ -69,14 +82,13 @@ export function generate(locale: string) {
   for (const int of Alphabet.INTERVALS.values()) {
     const letters = int.unicode;
     if ('offset' in int) {
-      numberRules(letters, int.font, int.category, int.offset || 0);
+      numberRules(letters, int.font, int.offset || 0);
     } else {
       const alphabet = (LOCALE.ALPHABETS as any)[int.base];
       alphabetRules(
         letters,
         alphabet,
         int.font,
-        int.category,
         !!int.capital
       );
     }
@@ -107,14 +119,12 @@ export function getFont(font: string): { font: string; combiner: Combiner } {
  *     to the values in keys.
  * @param letters The letters of the corresponding alphabet.
  * @param font The font name.
- * @param category The category name.
  * @param cap True if it is an alphabet of capitals.
  */
 export function alphabetRules(
   unicodes: string[],
   letters: string[],
   font: string,
-  category: string,
   cap: boolean
 ) {
   const realFont = getFont(font);
@@ -133,7 +143,6 @@ export function alphabetRules(
       letter,
       realFont.font,
       prefixes,
-      category,
       LOCALE.ALPHABETS.letterTrans,
       domains
     );
@@ -146,13 +155,11 @@ export function alphabetRules(
  * @param unicodes The actual unicode characters corrsponding
  *     to the values in keys.
  * @param font The font name.
- * @param category The category name.
  * @param offset The offset value for the initial number.
  */
 export function numberRules(
   unicodes: string[],
   font: string,
-  category: string,
   offset: number
 ) {
   const realFont = getFont(font);
@@ -165,7 +172,6 @@ export function numberRules(
       num,
       realFont.font,
       prefixes,
-      category,
       LOCALE.ALPHABETS.digitTrans,
       Domains_.digit
     );
@@ -182,7 +188,6 @@ export function numberRules(
  *     number.
  * @param font The font name.
  * @param prefixes The prefixes for caps, small, or number.
- * @param category The category name.
  * @param transformers The transformer method
  *      for the particular type of character.
  * @param domains The list of domains in which to create
@@ -195,7 +200,6 @@ export function makeLetter(
   letter: string | number,
   font: string,
   prefixes: { [key: string]: string },
-  category: string,
   transformers: { [key: string]: Transformer },
   domains: string[]
 ) {
@@ -206,7 +210,6 @@ export function makeLetter(
     MathCompoundStore.defineRule(
       domain,
       'default',
-      category,
       unicode,
       combiner(transformer(letter), font, prefix)
     );

@@ -70,6 +70,8 @@ let _init = false;
  */
 export async function loadLocale(locale = Engine.getInstance().locale) {
   if (!_init) {
+    // Generate base alphabet information.
+    AlphabetGenerator.generateBase();
     _loadLocale(DynamicCstr.BASE_LOCALE);
     _init = true;
   }
@@ -180,7 +182,7 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
     if (opt_locale && opt_locale !== info[0]) {
       continue;
     }
-    if (generate && info[1] === 'symbols') {
+    if (generate && info[1] === 'symbols' && info[0] !== 'base') {
       AlphabetGenerator.generate(info[0]);
       generate = false;
     }

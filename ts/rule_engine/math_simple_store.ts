@@ -32,11 +32,14 @@ export interface MappingsJson {
   [domainName: string]: { [key: string]: string };
 }
 
-export interface UnicodeJson {
+export interface BaseJson {
   key: string;
   category: string;
   names?: string[];
   si?: boolean;
+}
+
+export interface UnicodeJson extends BaseJson {
   mappings: MappingsJson;
   // TODO (TS): It would be nice to handle these in CtrlJson type. But that
   //      leads to a lot of casting at the moment. Maybe have a special ctrl
@@ -59,10 +62,11 @@ export interface SimpleRule {
  * A base store for simple Math objects.
  */
 export class MathSimpleStore {
+
   /**
-   * The category of the character/function/unit.
+   * The information common to all rules in this store.
    */
-  public category = '';
+  public base: BaseJson;
 
   /**
    * Maps locales to lists of simple rules.
