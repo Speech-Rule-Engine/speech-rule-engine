@@ -45,6 +45,22 @@ let locale: string = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
 let modality: string = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
 
 /**
+ * Changes the internal locale for the rule definitions if the given JSON
+ * element is a locale instruction.
+ *
+ * @param json JSON object of a speech rules.
+ * @returns True if the locale was changed.
+ */
+export function changeLocale(json: UnicodeJson): boolean {
+  if (!json['locale'] && !json['modality']) {
+    return false;
+  }
+  locale = json['locale'] || locale;
+  modality = json['modality'] || modality;
+  return true;
+}
+
+/**
  * An association list of SI prefixes.
  */
 let siPrefixes: SiJson = {};
@@ -59,14 +75,49 @@ export function setSiPrefixes(prefixes: SiJson) {
 }
 
 /**
- * A set of efficient substores.
+ * A map of efficient substores.
  */
 const subStores: Map<string, MathSimpleStore> = new Map();
 
 /**
- * A map to hold elements symbols have in common across the locales.
+ * A map to hold elements symbols have in common across all locales.
  */
 export const baseStores: Map<string, BaseJson> = new Map();
+
+/**
+ * Retrieves a substore for a key. Creates a new one if it does not exist.
+ *
+ * @param key The key for the store.
+ * @returns The rule store.
+ */
+function getSubStore(base: string, key: string): MathSimpleStore {
+  let store = subStores.get(key);
+  if (store) {
+    return store;
+  }
+  store = new MathSimpleStore();
+  store.base = baseStores.get(base);
+  subStores.set(key, store);
+  return store;
+}
+
+/**
+ * Completes a JSON representation of a rule with the information held in its
+ * corresponding base structure.
+ *
+ * @param json
+ */
+function completeWithBase(json: UnicodeJson) {
+  let base = baseStores.get(json.key);
+  if (!base) {
+    return;
+  }
+  let names = json.names;
+  Object.assign(json, base);
+  if (names && base.names) {
+    json.names = json.names.concat(names);
+  }
+}
 
 /**
  * Function creates a rule store in the compound store for a particular
@@ -82,7 +133,7 @@ export function defineRules(
   str: string,
   mappings: MappingsJson
 ) {
-  const store = getSubStore_(base, str);
+  const store = getSubStore(base, str);
   store.defineRulesFromMappings(locale, modality, mappings);
 }
 
@@ -100,7 +151,7 @@ export function defineRule(
   str: string,
   content: string
 ) {
-  const store = getSubStore_(str, str);
+  const store = getSubStore(str, str);
   store.defineRuleFromStrings(
     locale,
     modality,
@@ -111,91 +162,81 @@ export function defineRule(
 }
 
 /**
- * Makes a speech rule for Unicode characters from its JSON representation.
+ * Makes speech rules for Unicode characters from their JSON representation.
  *
  * @param json JSON object of the speech rules.
  */
-function addSymbolRule(json: UnicodeJson) {
-  if (changeLocale(json)) {
-    return;
+export function addSymbolRules(json: UnicodeJson[]) {
+  for (let rule of json) {
+    if (changeLocale(rule)) {
+      continue;
+    }
+    const key = MathSimpleStore.parseUnicode(rule['key']);
+    if (locale === 'base') {
+      baseStores.set(key, rule);
+      continue;
+    }
+    defineRules(key, key, rule['mappings']);
   }
-  const key = MathSimpleStore.parseUnicode(json['key']);
-  if (locale === 'base') {
-    baseStores.set(key, json);
-    return;
-  }
-  defineRules(key, key, json['mappings']);
 }
-export const addSymbolRules =
-  (json: UnicodeJson[]) => json.forEach(addSymbolRule);
 
 /**
  * Makes a speech rule for Function names from its JSON representation.
  *
- * @param json JSON object of the speech rules.
+ * @param json JSON object of a speech rule.
  */
 function addFunctionRule(json: UnicodeJson) {
-  const names = json['names'];
-  const mappings = json['mappings'];
-  const key = json['key'];
-  for (let j = 0, name; (name = names[j]); j++) {
-    defineRules(key, name, mappings);
+  for (let j = 0, name; (name = json.names[j]); j++) {
+    defineRules(json.key, name, json.mappings);
   }
 }
 
+/**
+ * Makes speech rule for a list of functions from their JSON representation.
+ *
+ * @param json JSON object of the speech rules.
+ */
 export function addFunctionRules(json: UnicodeJson[]) {
-  json.forEach((x) => {
-    if (changeLocale(x)) {
-      return;
+  for (let rule of json) {
+    if (changeLocale(rule)) {
+      continue;
     }
-    addFunctionSemantic(x.key, x.names || []);
+    addFunctionSemantic(rule.key, rule.names || []);
     if (locale === 'base') {
-      baseStores.set(x.key, x);
-      return;
+      baseStores.set(rule.key, rule);
+      continue;
     }
-    completeWithBase(x);
-    addFunctionRule(x);
-  });
-}
-
-function completeWithBase(json: UnicodeJson) {
-  let base = baseStores.get(json.key);
-  if (!base) {
-    return;
-  }
-  let names = json.names;
-  Object.assign(json, base);
-  if (names && base.names) {
-    json.names = json.names.concat(names);
+    completeWithBase(rule);
+    addFunctionRule(rule);
   }
 }
 
 /**
  * Makes speech rules for Unit descriptors from its JSON representation.
  *
- * @param json JSON object of the speech rules.
+ * @param json List of JSON objects of the speech rules.
  */
-function addUnitRule(json: UnicodeJson) {
-  if (json['si']) {
-    addSiUnitRule(json);
-    return;
-  }
-  addSingleUnitRule(json);
-}
-
 export function addUnitRules(json: UnicodeJson[]) {
-  json.forEach((x) => {
-    if (changeLocale(x)) {
-      return;
+  for (let rule of json) {
+    if (changeLocale(rule)) {
+      continue;
     }
-    x.key += ':unit';
+    rule.key += ':unit';
     if (locale === 'base') {
-      baseStores.set(x.key, x);
-      return;
+      baseStores.set(rule.key, rule);
+      continue;
     }
-    completeWithBase(x);
-    addUnitRule(x);
-  });
+    completeWithBase(rule);
+    if (rule.names) {
+      rule.names = rule.names.map(function (name) {
+        return name + ':unit';
+      });
+    }
+    if (rule.si) {
+      addSiUnitRule(rule);
+    }
+    addFunctionRule(rule);
+  }
 }
 
 /**
@@ -209,39 +250,20 @@ function addSiUnitRule(json: UnicodeJson) {
     const newJson = Object.assign({}, json);
     newJson.mappings = {} as MappingsJson;
     const prefix = siPrefixes[key];
-    newJson['key'] = key + newJson['key'];
     newJson['names'] = newJson['names'].map(function (name) {
       return key + name;
     });
     for (const domain of Object.keys(json['mappings'])) {
       newJson.mappings[domain] = {};
       for (const style of Object.keys(json['mappings'][domain])) {
-        // TODO: This should not really call the locale method.
         newJson['mappings'][domain][style] = locales[locale]().FUNCTIONS.si(
           prefix,
           json['mappings'][domain][style]
         );
       }
     }
-    addSingleUnitRule(newJson);
+    addFunctionRule(newJson);
   }
-  addSingleUnitRule(json);
-}
-
-/**
- * Adds a single speech rule for Unit descriptors from its JSON
- * representation.
- *
- * @param json JSON object of the speech rules.
- */
-function addSingleUnitRule(json: UnicodeJson) {
-  const names = json['names'];
-  if (names) {
-    json['names'] = names.map(function (name) {
-      return name + ':unit';
-    });
-  }
-  addFunctionRule(json);
 }
 
 /**
@@ -322,37 +344,4 @@ function enumerate_(
   }
   info[dynamic[0]] = enumerate_(dynamic.slice(1), info[dynamic[0]]);
   return info;
-}
-
-/**
- * Changes the internal locale for the rule definitions if the given JSON
- * element is a locale instruction.
- *
- * @param json JSON object of a speech rules.
- * @returns True if the locale was changed.
- */
-export function changeLocale(json: UnicodeJson): boolean {
-  if (!json['locale'] && !json['modality']) {
-    return false;
-  }
-  locale = json['locale'] || locale;
-  modality = json['modality'] || modality;
-  return true;
-}
-
-/**
- * Retrieves a substore for a key. Creates a new one if it does not exist.
- *
- * @param key The key for the store.
- * @returns The rule store.
- */
-function getSubStore_(base: string, key: string): MathSimpleStore {
-  let store = subStores.get(key);
-  if (store) {
-    return store;
-  }
-  store = new MathSimpleStore();
-  store.base = baseStores.get(base);
-  subStores.set(key, store);
-  return store;
 }
