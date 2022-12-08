@@ -4,7 +4,6 @@
   },
   {
     "key": "2113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "स्क्रिप्ट छोटा एल"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2118",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्रिप्ट कैपिटल पी"
@@ -22,7 +20,6 @@
   },
   {
     "key": "213C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक स्मॉल पाई"
@@ -31,7 +28,6 @@
   },
   {
     "key": "213D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक स्माल गामा"
@@ -40,7 +36,6 @@
   },
   {
     "key": "213E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक कैपिटल गामा"
@@ -49,7 +44,6 @@
   },
   {
     "key": "213F",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक कैपिटल पाई"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2140",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक एन-आर्य सारांश"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2145",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक इटैलिक कैपिटल डी"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक इटैलिक स्मॉल डी"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2147",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक इटैलिक स्मॉल ई"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक इटैलिक स्मॉल आई"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2149",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "डबल-स्ट्रक इटैलिक स्मॉल जे"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1D6A4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "गणितीय इटैलिक स्मॉल डॉटलेस I"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1D6A5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "गणितीय इटैलिक स्मॉल डॉटलेस जे"

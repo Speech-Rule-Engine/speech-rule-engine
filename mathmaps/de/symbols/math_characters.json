@@ -4,7 +4,6 @@
   },
   {
     "key": "2113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Schreibschrift l"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2118",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "großes Schreibschrift P"
@@ -22,7 +20,6 @@
   },
   {
     "key": "213C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pi mit Doppelstrich"
@@ -31,7 +28,6 @@
   },
   {
     "key": "213D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "gamma mit Doppelstrich"
@@ -40,7 +36,6 @@
   },
   {
     "key": "213E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "großes Gamma mit Doppelstrich"
@@ -49,7 +44,6 @@
   },
   {
     "key": "213F",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "großes Pi mit Doppelstrich"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2140",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Summenzeichen mit Doppelstrich"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2145",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "großes D kursiv mit Doppelstrich"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d kursiv mit Doppelstrich"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2147",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e kursiv mit Doppelstrich"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i kursiv mit Doppelstrich"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2149",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j kursiv mit Doppelstrich"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1D6A4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "punktloses i kursiv"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1D6A5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "punktloses j kursiv"

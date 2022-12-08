@@ -55,7 +55,8 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
   units: MathCompoundStore.addUnitRules,
   si: (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
   messages: completeLocale,
-  rules: SpeechRuleEngine.addStore
+  rules: SpeechRuleEngine.addStore,
+  characters: MathCompoundStore.addCharacterRules
 };
 
 let _init = false;
@@ -70,6 +71,8 @@ let _init = false;
  */
 export async function loadLocale(locale = Engine.getInstance().locale) {
   if (!_init) {
+    // Generate base alphabet information.
+    AlphabetGenerator.generateBase();
     _loadLocale(DynamicCstr.BASE_LOCALE);
     _init = true;
   }
@@ -96,6 +99,7 @@ export async function loadLocale(locale = Engine.getInstance().locale) {
 function _loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
+    MathCompoundStore.reset();
     retrieveMaps(locale);
   }
 }
@@ -180,7 +184,7 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
     if (opt_locale && opt_locale !== info[0]) {
       continue;
     }
-    if (generate && info[1] === 'symbols') {
+    if (generate && info[1] === 'symbols' && info[0] !== 'base') {
       AlphabetGenerator.generate(info[0]);
       generate = false;
     }

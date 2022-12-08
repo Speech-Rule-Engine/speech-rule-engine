@@ -239,6 +239,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
       }
+      if (key === 'latex') {
+        to.attributes['latex'] = attrs[i].value;
+      }
       if (key === 'href') {
         to.attributes['href'] = attrs[i].value;
         to.nobreaking = true;

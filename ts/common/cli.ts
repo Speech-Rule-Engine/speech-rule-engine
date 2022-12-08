@@ -237,7 +237,7 @@ export class Cli {
         DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]
       )
       .option(
-        '-t, --style [name]',
+        '-s, --style [name]',
         'Speech style [name]. See --options' + ' for details.',
         set(Axis.STYLE),
         DynamicCstr.DEFAULT_VALUES[Axis.STYLE]
@@ -287,6 +287,11 @@ export class Cli {
       )
       .option('-m, --mathml', 'Generate enriched MathML.', () =>
         processor('enriched')
+      )
+      .option(
+        '-t, --latex',
+        'Accepts LaTeX input for certain locale/modality combinations.',
+        () => processor('latex')
       )
       .option(
         '-g, --generate <depth>',

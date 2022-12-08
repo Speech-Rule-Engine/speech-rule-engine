@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left parenthesis"
@@ -20,7 +19,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right parenthesis"
@@ -36,7 +34,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket"
@@ -52,7 +49,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket"
@@ -68,7 +64,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left brace"
@@ -83,7 +78,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right brace"
@@ -98,7 +92,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with quill"
@@ -111,7 +104,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with quill"
@@ -124,7 +116,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left ceiling"
@@ -133,7 +124,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right ceiling"
@@ -142,7 +132,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left floor"
@@ -151,7 +140,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right floor"
@@ -160,7 +148,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom right crop"
@@ -169,7 +156,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom left crop"
@@ -178,7 +164,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "top right crop"
@@ -187,7 +172,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "top left crop"
@@ -196,7 +180,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "top left corner"
@@ -205,7 +188,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "top right corner"
@@ -214,7 +196,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom left corner"
@@ -223,7 +204,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom right corner"
@@ -232,7 +212,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top half integral"
@@ -241,7 +220,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom half integral"
@@ -250,7 +228,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left pointing angle bracket",
@@ -260,7 +237,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right pointing angle bracket",
@@ -270,7 +246,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left parenthesis upper hook"
@@ -283,7 +258,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left parenthesis extension"
@@ -296,7 +270,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left parenthesis lower hook"
@@ -309,7 +282,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right parenthesis upper hook"
@@ -322,7 +294,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right parenthesis extension"
@@ -335,7 +306,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right parenthesis lower hook"
@@ -348,7 +318,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left bracket upper corner"
@@ -361,7 +330,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left bracket extension"
@@ -374,7 +342,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left bracket lower corner"
@@ -387,7 +354,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right bracket upper corner"
@@ -400,7 +366,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right bracket extension"
@@ -413,7 +378,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right bracket lower corner"
@@ -426,7 +390,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left brace upper hook"
@@ -438,7 +401,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left brace middle piece"
@@ -450,7 +412,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "left brace lower hook"
@@ -462,7 +423,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "brace extension"
@@ -471,7 +431,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right brace upper hook"
@@ -483,7 +442,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right brace middle piece"
@@ -495,7 +453,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "right brace lower hook"
@@ -507,7 +464,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral extension"
@@ -516,7 +472,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "horizontal line extension"
@@ -525,7 +480,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upper left or lower right brace section"
@@ -534,7 +488,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upper right or lower left brace section"
@@ -543,7 +496,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "summation top"
@@ -552,7 +504,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "summation bottom"
@@ -561,7 +512,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "top bracket"
@@ -574,7 +524,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom bracket"
@@ -587,7 +536,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bottom bracket over top bracket"
@@ -600,7 +548,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "radical symbol bottom"
@@ -609,7 +556,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "left vertical box line"
@@ -618,7 +564,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "right vertical box line"
@@ -627,7 +572,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top parenthesis"
@@ -640,7 +584,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom parenthesis"
@@ -653,7 +596,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top brace"
@@ -665,7 +607,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom brace"
@@ -677,7 +618,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "top tortoise shell bracket"
@@ -686,7 +626,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bottom tortoise shell bracket"
@@ -695,7 +634,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium left parenthesis ornament"
@@ -708,7 +646,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium right parenthesis ornament"
@@ -721,7 +658,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium flattened left parenthesis ornament"
@@ -734,7 +670,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium flattened right parenthesis ornament"
@@ -747,7 +682,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium left pointing angle bracket ornament"
@@ -756,7 +690,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium right pointing angle bracket ornament"
@@ -765,7 +698,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "heavy left pointing angle quotation mark ornament"
@@ -774,7 +706,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "heavy right pointing angle quotation mark ornament"
@@ -783,7 +714,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "heavy left pointing angle bracket ornament"
@@ -792,7 +722,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "heavy right pointing angle bracket ornament"
@@ -801,7 +730,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "light left tortoise shell bracket ornament"
@@ -810,7 +738,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "light right tortoise shell bracket ornament"
@@ -819,7 +746,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium left brace ornament"
@@ -831,7 +757,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium right brace ornament"
@@ -843,7 +768,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left s shaped bag delimiter"
@@ -852,7 +776,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right s shaped bag delimiter"
@@ -861,7 +784,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white bracket"
@@ -870,7 +792,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white bracket"
@@ -879,7 +800,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left angle bracket"
@@ -891,7 +811,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right angle bracket"
@@ -903,7 +822,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left double angle bracket"
@@ -912,7 +830,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right double angle bracket"
@@ -921,7 +838,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white tortoise shell bracket"
@@ -930,7 +846,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white tortoise shell bracket"
@@ -939,7 +854,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "flattened left parenthesis"
@@ -952,7 +866,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "flattened right parenthesis"
@@ -965,7 +878,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white brace"
@@ -974,7 +886,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white brace"
@@ -983,7 +894,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "white left parenthesis"
@@ -996,7 +906,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "white right parenthesis"
@@ -1009,7 +918,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z notation left image bracket"
@@ -1018,7 +926,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z notation right image bracket"
@@ -1027,7 +934,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z notation left binding bracket"
@@ -1036,7 +942,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z notation right binding bracket"
@@ -1045,7 +950,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with underbar"
@@ -1058,7 +962,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with underbar"
@@ -1071,7 +974,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with tick in top corner"
@@ -1084,7 +986,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with tick in bottom corner"
@@ -1097,7 +998,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left bracket with tick in bottom corner"
@@ -1110,7 +1010,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right bracket with tick in top corner"
@@ -1123,7 +1022,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left angle bracket with dot"
@@ -1135,7 +1033,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right angle bracket with dot"
@@ -1147,7 +1044,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left arc less than bracket"
@@ -1156,7 +1052,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right arc greater than bracket"
@@ -1165,7 +1060,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double left arc greater than bracket"
@@ -1174,7 +1068,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double right arc less than bracket"
@@ -1183,7 +1076,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left black tortoise shell bracket"
@@ -1192,7 +1084,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right black tortoise shell bracket"
@@ -1201,7 +1092,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left wiggly fence"
@@ -1210,7 +1100,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right wiggly fence"
@@ -1219,7 +1108,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left double wiggly fence"
@@ -1228,7 +1116,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right double wiggly fence"
@@ -1237,7 +1124,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left pointing curved angle bracket"
@@ -1246,7 +1132,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right pointing curved angle bracket"
@@ -1255,7 +1140,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "top half left bracket"
@@ -1268,7 +1152,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "top half right bracket"
@@ -1281,7 +1164,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "bottom half left bracket"
@@ -1294,7 +1176,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "bottom half right bracket"
@@ -1307,7 +1188,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left sideways U bracket"
@@ -1316,7 +1196,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right sideways U bracket"
@@ -1325,7 +1204,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double left parenthesis"
@@ -1338,7 +1216,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double right parenthesis"
@@ -1351,7 +1228,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left angle bracket"
@@ -1363,7 +1239,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right angle bracket"
@@ -1375,7 +1250,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left double angle bracket"
@@ -1384,7 +1258,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right double angle bracket"
@@ -1393,7 +1266,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left corner bracket"
@@ -1402,7 +1274,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right corner bracket"
@@ -1411,7 +1282,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white corner bracket"
@@ -1420,7 +1290,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white corner bracket"
@@ -1429,7 +1298,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left black lenticular bracket"
@@ -1438,7 +1306,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right black lenticular bracket"
@@ -1447,7 +1314,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left tortoise shell bracket"
@@ -1456,7 +1322,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right tortoise shell bracket"
@@ -1465,7 +1330,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white lenticular bracket"
@@ -1474,7 +1338,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white lenticular bracket"
@@ -1483,7 +1346,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white tortoise shell bracket"
@@ -1492,7 +1354,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white tortoise shell bracket"
@@ -1501,7 +1362,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "left white bracket"
@@ -1510,7 +1370,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right white bracket"
@@ -1519,7 +1378,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "reversed double prime quotation mark"
@@ -1528,7 +1386,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double prime quotation mark"
@@ -1537,7 +1394,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "low double prime quotation mark"
@@ -1546,7 +1402,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornate left parenthesis"
@@ -1559,7 +1414,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornate right parenthesis"
@@ -1572,7 +1426,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left white lenticular bracket"
@@ -1581,7 +1434,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right white lenticular bracket"
@@ -1590,7 +1442,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left parenthesis"
@@ -1603,7 +1454,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right parenthesis"
@@ -1616,7 +1466,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left brace"
@@ -1628,7 +1477,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right brace"
@@ -1640,7 +1488,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left tortoise shell bracket"
@@ -1649,7 +1496,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right tortoise shell bracket"
@@ -1658,7 +1504,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left black lenticular bracket"
@@ -1667,7 +1512,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right black lenticular bracket"
@@ -1676,7 +1520,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left double angle bracket"
@@ -1685,7 +1528,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right double angle bracket"
@@ -1694,7 +1536,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left angle bracket"
@@ -1706,7 +1547,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right angle bracket"
@@ -1718,7 +1558,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left corner bracket"
@@ -1727,7 +1566,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right corner bracket"
@@ -1736,7 +1574,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left white corner bracket"
@@ -1745,7 +1582,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right white corner bracket"
@@ -1754,7 +1590,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentation form for vertical left bracket"
@@ -1767,7 +1602,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentation form for vertical right bracket"
@@ -1780,7 +1614,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "small left parenthesis"
@@ -1793,7 +1626,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "small right parenthesis"
@@ -1806,7 +1638,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "small left brace"
@@ -1818,7 +1649,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "small right brace"
@@ -1830,7 +1660,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "small left tortoise shell bracket"
@@ -1839,7 +1668,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "small right tortoise shell bracket"
@@ -1848,7 +1676,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "fullwidth left parenthesis"
@@ -1861,7 +1688,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "fullwidth right parenthesis"
@@ -1874,7 +1700,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "fullwidth left bracket"
@@ -1887,7 +1712,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "fullwidth right bracket"
@@ -1900,7 +1724,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "fullwidth left brace"
@@ -1912,7 +1735,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "fullwidth right brace"
@@ -1924,7 +1746,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "fullwidth white left parenthesis"
@@ -1937,7 +1758,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "fullwidth white right parenthesis"
@@ -1950,7 +1770,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "halfwidth left corner bracket"
@@ -1959,7 +1778,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "halfwidth right corner bracket"

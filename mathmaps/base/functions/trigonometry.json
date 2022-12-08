@@ -1,0 +1,91 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "cos",
+    "category": "Trigonometric",
+    "names": [
+      "cos",
+      "cosine"
+    ]
+  },
+  {
+    "key": "cot",
+    "category": "Trigonometric",
+    "names": [
+      "cot"
+    ]
+  },
+  {
+    "key": "csc",
+    "category": "Trigonometric",
+    "names": [
+      "csc"
+    ]
+  },
+  {
+    "key": "sec",
+    "category": "Trigonometric",
+    "names": [
+      "sec"
+    ]
+  },
+  {
+    "key": "sin",
+    "category": "Trigonometric",
+    "names": [
+      "sin",
+      "sine"
+    ]
+  },
+  {
+    "key": "tan",
+    "category": "Trigonometric",
+    "names": [
+      "tan"
+    ]
+  },
+  {
+    "key": "arccos",
+    "category": "Cyclometric",
+    "names": [
+      "arccos"
+    ]
+  },
+  {
+    "key": "arccot",
+    "category": "Cyclometric",
+    "names": [
+      "arccot"
+    ]
+  },
+  {
+    "key": "arccsc",
+    "category": "Cyclometric",
+    "names": [
+      "arccsc"
+    ]
+  },
+  {
+    "key": "arcsec",
+    "category": "Cyclometric",
+    "names": [
+      "arcsec"
+    ]
+  },
+  {
+    "key": "arcsin",
+    "category": "Cyclometric",
+    "names": [
+      "arcsin"
+    ]
+  },
+  {
+    "key": "arctan",
+    "category": "Cyclometric",
+    "names": [
+      "arctan"
+    ]
+  }
+]

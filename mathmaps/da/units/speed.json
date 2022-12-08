@@ -4,55 +4,38 @@
   },
   {
     "key": "kt",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "knob",
         "plural": "knob"
       }
-    },
-    "names": [
-      "kt",
-      "kt."
-    ]
+    }
   },
   {
     "key": "mph",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "mil i timen",
         "plural": "mil i timen"
       }
-    },
-    "names": [
-      "mph"
-    ]
+    }
   },
   {
     "key": "rpm",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "omdrejninger pr. minut",
         "plural": "omdrejning pr. minut"
       }
-    },
-    "names": [
-      "rpm"
-    ]
+    }
   },
   {
     "key": "kmh",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "kilometer i timen",
         "plural": "kilometer i timen"
       }
-    },
-    "names": [
-      "kmh"
-    ]
+    }
   }
 ]

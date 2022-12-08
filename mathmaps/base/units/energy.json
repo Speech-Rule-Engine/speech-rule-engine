@@ -1,0 +1,86 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "W",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "W",
+      "w"
+    ]
+  },
+  {
+    "key": "kwh",
+    "category": "energy",
+    "names": [
+      "kwh",
+      "kWh"
+    ]
+  },
+  {
+    "key": "J",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "J"
+    ]
+  },
+  {
+    "key": "N",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "N"
+    ]
+  },
+  {
+    "key": "A",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "A"
+    ]
+  },
+  {
+    "key": "V",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "V"
+    ]
+  },
+  {
+    "key": "ohm",
+    "category": "energy",
+    "names": [
+      "Ohm",
+      "ohm"
+    ]
+  },
+  {
+    "key": "Ω",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "Ω"
+    ]
+  },
+  {
+    "key": "MΩ",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "MΩ"
+    ]
+  },
+  {
+    "key": "kΩ",
+    "category": "energy",
+    "si": true,
+    "names": [
+      "kΩ"
+    ]
+  }
+]

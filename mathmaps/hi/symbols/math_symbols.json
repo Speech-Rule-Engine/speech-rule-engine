@@ -4,7 +4,6 @@
   },
   {
     "key": "0021",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "विस्मयादिबोधक चिह्न"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0022",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उद्धरण चिन्ह"
@@ -22,7 +20,6 @@
   },
   {
     "key": "0023",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "हैश"
@@ -31,7 +28,6 @@
   },
   {
     "key": "0024",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "डॉलर चिह्न"
@@ -40,7 +36,6 @@
   },
   {
     "key": "0025",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्रतिशत"
@@ -49,7 +44,6 @@
   },
   {
     "key": "0026",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "एन्ड चिह्न"
@@ -58,7 +52,6 @@
   },
   {
     "key": "0027",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्राईम चिह्न"
@@ -67,7 +60,6 @@
   },
   {
     "key": "002A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "तारांकन"
@@ -76,7 +68,6 @@
   },
   {
     "key": "002B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "धन चिह्न"
@@ -85,7 +76,6 @@
   },
   {
     "key": "002C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "अल्पविराम"
@@ -94,7 +84,6 @@
   },
   {
     "key": "002D",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "ऋण चिह्न"
@@ -106,7 +95,6 @@
   },
   {
     "key": "002E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्ण विराम"
@@ -115,7 +103,6 @@
   },
   {
     "key": "002F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "विभाजन (For division.)"
@@ -124,7 +111,6 @@
   },
   {
     "key": "003A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "विसर्ग"
@@ -133,7 +119,6 @@
   },
   {
     "key": "003B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "अर्ध विराम"
@@ -142,7 +127,6 @@
   },
   {
     "key": "003C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम है"
@@ -151,7 +135,6 @@
   },
   {
     "key": "003D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर का चिह्न"
@@ -160,7 +143,6 @@
   },
   {
     "key": "003E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अधिक है"
@@ -169,7 +151,6 @@
   },
   {
     "key": "003F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्रश्न चिन्ह"
@@ -178,7 +159,6 @@
   },
   {
     "key": "0040",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "एट ध रेट"
@@ -187,7 +167,6 @@
   },
   {
     "key": "005C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "बैकस्लेश"
@@ -196,7 +175,6 @@
   },
   {
     "key": "005E",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "कैरट चिह्न"
@@ -205,7 +183,6 @@
   },
   {
     "key": "005F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "निम्न रेखा"
@@ -214,7 +191,6 @@
   },
   {
     "key": "0060",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ग्रेव चिह्न"
@@ -223,7 +199,6 @@
   },
   {
     "key": "007C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सीधी खड़ी रेखा"
@@ -232,7 +207,6 @@
   },
   {
     "key": "007E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्ड चिह्न"
@@ -241,7 +215,6 @@
   },
   {
     "key": "00A1",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उलटा विस्मयबोधक चिह्न"
@@ -250,7 +223,6 @@
   },
   {
     "key": "00A2",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "सेन्ट चिह्न"
@@ -259,7 +231,6 @@
   },
   {
     "key": "00A3",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "पाउंड स्टर्लिंग"
@@ -268,7 +239,6 @@
   },
   {
     "key": "00A4",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "मुद्रा चिन्ह"
@@ -277,7 +247,6 @@
   },
   {
     "key": "00A5",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "येन चिन्ह"
@@ -286,7 +255,6 @@
   },
   {
     "key": "00A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टूटी हुई ऊर्ध्वाधर पट्टी"
@@ -295,7 +263,6 @@
   },
   {
     "key": "00A7",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "अनुभाग चिह्न"
@@ -304,7 +271,6 @@
   },
   {
     "key": "00A8",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ऊपर बिंदुयुग्म"
@@ -313,7 +279,6 @@
   },
   {
     "key": "00A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "कॉपीराइट"
@@ -322,7 +287,6 @@
   },
   {
     "key": "00AA",
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "मादावाची क्रमसूचक चिह्न"
@@ -331,7 +295,6 @@
   },
   {
     "key": "00AB",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "बांया द्विकोणीय उद्धरण चिह्न"
@@ -340,7 +303,6 @@
   },
   {
     "key": "00AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नकार चिह्न"
@@ -349,7 +311,6 @@
   },
   {
     "key": "00AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "रजिस्टर्ड ट्रेडमार्क चिह्न"
@@ -358,7 +319,6 @@
   },
   {
     "key": "00AF",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "के ऊपर क्षैतिज रेखा"
@@ -367,7 +327,6 @@
   },
   {
     "key": "00B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "अंश चिह्न"
@@ -376,7 +335,6 @@
   },
   {
     "key": "00B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "योगवियोग"
@@ -385,7 +343,6 @@
   },
   {
     "key": "00B4",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "एक्यूट एक्सेंट"
@@ -394,7 +351,6 @@
   },
   {
     "key": "00B5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "माइक्रो"
@@ -403,7 +359,6 @@
   },
   {
     "key": "00B6",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "परिच्छेद चिह्न"
@@ -412,7 +367,6 @@
   },
   {
     "key": "00B7",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "गुणन चिह्न"
@@ -421,7 +375,6 @@
   },
   {
     "key": "00B8",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "सिडिला"
@@ -430,7 +383,6 @@
   },
   {
     "key": "00BA",
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "नरवाची क्रमसूचक चिह्न"
@@ -439,7 +391,6 @@
   },
   {
     "key": "00BB",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "दांया द्विकोणीय उद्धरण चिह्न"
@@ -448,7 +399,6 @@
   },
   {
     "key": "00BF",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उलटा प्रश्न चिह्न"
@@ -457,7 +407,6 @@
   },
   {
     "key": "00D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गुणन चिह्न"
@@ -466,7 +415,6 @@
   },
   {
     "key": "00F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "विभाजन चिह्न"
@@ -475,7 +423,6 @@
   },
   {
     "key": "02D8",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ऊपर ब्रिव चिह्न"
@@ -484,7 +431,6 @@
   },
   {
     "key": "02B9",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "प्राइम"
@@ -493,7 +439,6 @@
   },
   {
     "key": "02BA",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "डबल प्राइम"
@@ -502,7 +447,6 @@
   },
   {
     "key": "02D9",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ऊपर बिंदु"
@@ -511,7 +455,6 @@
   },
   {
     "key": "02DA",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ऊपर छोटा वर्तुल"
@@ -520,7 +463,6 @@
   },
   {
     "key": "02DB",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ओगोनेक चिह्न"
@@ -529,7 +471,6 @@
   },
   {
     "key": "02DC",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "छोटा टिल्ड"
@@ -538,7 +479,6 @@
   },
   {
     "key": "02DD",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "डबल एक्यूट एक्सेंट"
@@ -547,7 +487,6 @@
   },
   {
     "key": "2010",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "समास चिह्न"
@@ -556,7 +495,6 @@
   },
   {
     "key": "2011",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "समास चिह्न"
@@ -565,7 +503,6 @@
   },
   {
     "key": "2012",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "समास चिह्न"
@@ -574,7 +511,6 @@
   },
   {
     "key": "2013",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "समास चिह्न"
@@ -583,7 +519,6 @@
   },
   {
     "key": "2014",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "समास चिह्न"
@@ -592,7 +527,6 @@
   },
   {
     "key": "2015",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "उद्धरण रेखा"
@@ -601,7 +535,6 @@
   },
   {
     "key": "2016",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "समान्तर रेखा चिह्न"
@@ -610,7 +543,6 @@
   },
   {
     "key": "2017",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "अधो द्विरेखा"
@@ -619,7 +551,6 @@
   },
   {
     "key": "2018",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "एकल उद्धरण चिह्न आरंभ"
@@ -628,7 +559,6 @@
   },
   {
     "key": "2019",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "एकल उद्धरण चिह्न अंत"
@@ -637,7 +567,6 @@
   },
   {
     "key": "201A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "एकल अल्पविराम उद्धरण चिह्न"
@@ -646,7 +575,6 @@
   },
   {
     "key": "201B",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "उल्टा एकल उद्धरण चिह्न आरंभ"
@@ -655,7 +583,6 @@
   },
   {
     "key": "201C",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "उद्धरण चिह्न आरंभ"
@@ -664,7 +591,6 @@
   },
   {
     "key": "201D",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "उद्धरण चिह्न अंत"
@@ -673,7 +599,6 @@
   },
   {
     "key": "201E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "दुगना अल्पविराम उद्धरण चिह्न"
@@ -682,7 +607,6 @@
   },
   {
     "key": "201F",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "उल्टा उद्धरण चिह्न आरंभ"
@@ -691,7 +615,6 @@
   },
   {
     "key": "2020",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "लंबा क्रॉस"
@@ -700,7 +623,6 @@
   },
   {
     "key": "2021",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दो क्रॉस वाली ऊर्ध्वाधर रेखा"
@@ -709,7 +631,6 @@
   },
   {
     "key": "2022",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटी काली बिंदी"
@@ -718,7 +639,6 @@
   },
   {
     "key": "2023",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "त्रिकोणीय बुलेट"
@@ -727,7 +647,6 @@
   },
   {
     "key": "2024",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "एक बिंदु"
@@ -736,7 +655,6 @@
   },
   {
     "key": "2025",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दो बिंदु"
@@ -745,7 +663,6 @@
   },
   {
     "key": "2026",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "आदि आदि आदि"
@@ -754,7 +671,6 @@
   },
   {
     "key": "2027",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "समासवाची बिंदु"
@@ -763,7 +679,6 @@
   },
   {
     "key": "2030",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्रति सहस्र"
@@ -772,7 +687,6 @@
   },
   {
     "key": "2031",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्रति दस सहस्त्र"
@@ -781,7 +695,6 @@
   },
   {
     "key": "2032",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्राइम"
@@ -790,7 +703,6 @@
   },
   {
     "key": "2033",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "डबल प्राइम"
@@ -799,7 +711,6 @@
   },
   {
     "key": "2034",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "तिगुना प्राइम"
@@ -808,7 +719,6 @@
   },
   {
     "key": "2035",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उल्टा प्राइम"
@@ -817,7 +727,6 @@
   },
   {
     "key": "2036",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उल्टा डबल प्राइम"
@@ -826,7 +735,6 @@
   },
   {
     "key": "2037",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उल्टा तिगुना प्राइम"
@@ -835,7 +743,6 @@
   },
   {
     "key": "2038",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "कैरट"
@@ -844,7 +751,6 @@
   },
   {
     "key": "2039",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ आरंभ"
@@ -853,7 +759,6 @@
   },
   {
     "key": "203A",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ अंत"
@@ -862,7 +767,6 @@
   },
   {
     "key": "203B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "संदर्भ चिह्न"
@@ -871,7 +775,6 @@
   },
   {
     "key": "203C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दोहरा विस्मयादिबोधक चिह्न"
@@ -880,7 +783,6 @@
   },
   {
     "key": "203D",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "विस्मयादिबोधक प्रश्न चिह्न"
@@ -889,7 +791,6 @@
   },
   {
     "key": "203E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "शिरोरेखा"
@@ -898,7 +799,6 @@
   },
   {
     "key": "203F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "निचला कोष्ठ"
@@ -907,7 +807,6 @@
   },
   {
     "key": "2040",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "शीर्ष कोष्ठ"
@@ -916,7 +815,6 @@
   },
   {
     "key": "2041",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्रविष्टि सूचक कैरेट"
@@ -925,7 +823,6 @@
   },
   {
     "key": "2042",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "नक्षत्र"
@@ -934,7 +831,6 @@
   },
   {
     "key": "2043",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "समास चिह्न जैसी बुलेट"
@@ -943,7 +839,6 @@
   },
   {
     "key": "2044",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अपूर्णांक सूचक उर्ध्वगामी विकर्ण रेखा"
@@ -952,7 +847,6 @@
   },
   {
     "key": "2047",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दोहरा प्रश्न चिह्न"
@@ -961,7 +855,6 @@
   },
   {
     "key": "2048",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "प्रश्न विस्मयादिबोधक चिह्न"
@@ -970,7 +863,6 @@
   },
   {
     "key": "2049",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "विस्मयादिबोधक प्रश्न चिह्न"
@@ -979,7 +871,6 @@
   },
   {
     "key": "204B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उल्टा परिच्छेद सूचक चिह्न"
@@ -988,7 +879,6 @@
   },
   {
     "key": "204C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "बांयी और की बुलेट"
@@ -997,7 +887,6 @@
   },
   {
     "key": "204D",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दांयी और की बुलेट"
@@ -1006,7 +895,6 @@
   },
   {
     "key": "204E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "तारांकन"
@@ -1015,7 +903,6 @@
   },
   {
     "key": "204F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "उल्टा सेमीकोलन"
@@ -1024,7 +911,6 @@
   },
   {
     "key": "2050",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "क्लोज़ अप"
@@ -1033,7 +919,6 @@
   },
   {
     "key": "2051",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दो लंबवत तारांकन"
@@ -1042,7 +927,6 @@
   },
   {
     "key": "2052",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वाणिज्यिक माइनस साइन"
@@ -1051,7 +935,6 @@
   },
   {
     "key": "2053",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "स्वांग डैश"
@@ -1060,7 +943,6 @@
   },
   {
     "key": "2054",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "अंडरटेरी का उलटा"
@@ -1069,7 +951,6 @@
   },
   {
     "key": "2055",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पुष्प विराम चिह्न"
@@ -1078,7 +959,6 @@
   },
   {
     "key": "2056",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "तीन डॉट पंचर"
@@ -1087,7 +967,6 @@
   },
   {
     "key": "2057",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "चौगुना प्राइम"
@@ -1096,7 +975,6 @@
   },
   {
     "key": "2058",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "चार डॉट विराम चिह्न"
@@ -1105,7 +983,6 @@
   },
   {
     "key": "2059",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पांच डॉट पंचर"
@@ -1114,7 +991,6 @@
   },
   {
     "key": "205A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "दो डॉट पंचर"
@@ -1123,7 +999,6 @@
   },
   {
     "key": "205B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "फोर डॉट मार्क"
@@ -1132,7 +1007,6 @@
   },
   {
     "key": "205C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "बिंदीदार क्रॉस"
@@ -1141,7 +1015,6 @@
   },
   {
     "key": "205D",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "tricolon"
@@ -1150,7 +1023,6 @@
   },
   {
     "key": "205E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "ऊर्ध्वाधर चार डॉट्स"
@@ -1159,7 +1031,6 @@
   },
   {
     "key": "207A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट प्लस चिन्ह"
@@ -1168,7 +1039,6 @@
   },
   {
     "key": "207B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट मिनेस"
@@ -1177,7 +1047,6 @@
   },
   {
     "key": "207C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट समान साइन"
@@ -1186,7 +1055,6 @@
   },
   {
     "key": "207D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट वाम कोष्ठक"
@@ -1195,7 +1063,6 @@
   },
   {
     "key": "207E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "सुपरस्क्रिप्ट राइट कोष्ठक"
@@ -1204,7 +1071,6 @@
   },
   {
     "key": "208A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सबस्क्रिप्ट प्लस साइन"
@@ -1213,7 +1079,6 @@
   },
   {
     "key": "208B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सबस्क्राइब माइनस"
@@ -1222,7 +1087,6 @@
   },
   {
     "key": "208C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सदस्यता बराबर संकेत"
@@ -1231,7 +1095,6 @@
   },
   {
     "key": "208D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "सदस्यता लेफ्ट कोष्ठक"
@@ -1240,7 +1103,6 @@
   },
   {
     "key": "208E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "सबस्क्रिप्ट राइट कोष्ठक"
@@ -1249,7 +1111,6 @@
   },
   {
     "key": "214A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "संपत्ति रेखा"
@@ -1258,7 +1119,6 @@
   },
   {
     "key": "214B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अमपर्संड बदल गया"
@@ -1267,7 +1127,6 @@
   },
   {
     "key": "214C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "प्रति संकेत"
@@ -1276,7 +1135,6 @@
   },
   {
     "key": "214D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "aKTIESELSKAB"
@@ -1285,7 +1143,6 @@
   },
   {
     "key": "214E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "स्मॉल एफ"
@@ -1294,7 +1151,6 @@
   },
   {
     "key": "2200",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सबके लिए"
@@ -1303,7 +1159,6 @@
   },
   {
     "key": "2201",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूरक हैं"
@@ -1312,7 +1167,6 @@
   },
   {
     "key": "2203",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वहां मौजूद"
@@ -1321,7 +1175,6 @@
   },
   {
     "key": "2204",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वहाँ मौजूद नहीं है"
@@ -1330,7 +1183,6 @@
   },
   {
     "key": "2205",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "खाली सेट"
@@ -1339,7 +1191,6 @@
   },
   {
     "key": "2206",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वेतन वृद्धि"
@@ -1348,7 +1199,6 @@
   },
   {
     "key": "2208",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का तत्व"
@@ -1357,7 +1207,6 @@
   },
   {
     "key": "2209",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का तत्व नहीं"
@@ -1366,7 +1215,6 @@
   },
   {
     "key": "220A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का छोटा तत्व"
@@ -1375,7 +1223,6 @@
   },
   {
     "key": "220B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का तत्व"
@@ -1384,7 +1231,6 @@
   },
   {
     "key": "220C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का तत्व नहीं"
@@ -1393,7 +1239,6 @@
   },
   {
     "key": "220D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटे सदस्य के रूप में शामिल हैं"
@@ -1402,7 +1247,6 @@
   },
   {
     "key": "220E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सबूत का अंत"
@@ -1411,7 +1255,6 @@
   },
   {
     "key": "220F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समूहगुणन चिह्न"
@@ -1420,7 +1263,6 @@
   },
   {
     "key": "2210",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य कपट"
@@ -1429,7 +1271,6 @@
   },
   {
     "key": "2211",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "योग चिह्न"
@@ -1438,7 +1279,6 @@
   },
   {
     "key": "2212",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "घटाव का चिन्ह"
@@ -1447,7 +1287,6 @@
   },
   {
     "key": "2213",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वियोगयोग अथवा माइनस प्लस चिह्न"
@@ -1456,7 +1295,6 @@
   },
   {
     "key": "2214",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट प्लस"
@@ -1465,7 +1303,6 @@
   },
   {
     "key": "2215",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डिवीजन स्लैश"
@@ -1474,7 +1311,6 @@
   },
   {
     "key": "2216",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "माइनस सेट करें"
@@ -1483,7 +1319,6 @@
   },
   {
     "key": "2217",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तारक संचालक"
@@ -1492,7 +1327,6 @@
   },
   {
     "key": "2218",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिंग"
@@ -1504,7 +1338,6 @@
   },
   {
     "key": "2219",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बुलेट"
@@ -1513,7 +1346,6 @@
   },
   {
     "key": "221A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्गमूल"
@@ -1522,7 +1354,6 @@
   },
   {
     "key": "221B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "घनमूल"
@@ -1531,7 +1362,6 @@
   },
   {
     "key": "221C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चौथा मूल"
@@ -1540,7 +1370,6 @@
   },
   {
     "key": "221D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आनुपातिक"
@@ -1549,7 +1378,6 @@
   },
   {
     "key": "221E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अनन्तता"
@@ -1558,7 +1386,6 @@
   },
   {
     "key": "221F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समकोण"
@@ -1567,7 +1394,6 @@
   },
   {
     "key": "2220",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कोण"
@@ -1576,7 +1402,6 @@
   },
   {
     "key": "2221",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मापा कोण"
@@ -1585,7 +1410,6 @@
   },
   {
     "key": "2222",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गोलाकार कोण"
@@ -1594,7 +1418,6 @@
   },
   {
     "key": "2223",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "विभाजित"
@@ -1603,7 +1426,6 @@
   },
   {
     "key": "2224",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बंटता नहीं है"
@@ -1612,7 +1434,6 @@
   },
   {
     "key": "2225",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समानांतर"
@@ -1621,7 +1442,6 @@
   },
   {
     "key": "2226",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समानांतर नहीं"
@@ -1630,7 +1450,6 @@
   },
   {
     "key": "2227",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक और"
@@ -1639,7 +1458,6 @@
   },
   {
     "key": "2228",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक या"
@@ -1648,7 +1466,6 @@
   },
   {
     "key": "2229",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रतिच्छेदन चिह्न"
@@ -1657,7 +1474,6 @@
   },
   {
     "key": "222A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संयोग चिह्न"
@@ -1666,7 +1482,6 @@
   },
   {
     "key": "222B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समाकल"
@@ -1675,7 +1490,6 @@
   },
   {
     "key": "222C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दुगना समाकल"
@@ -1684,7 +1498,6 @@
   },
   {
     "key": "222D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तिगुना समाकल"
@@ -1693,7 +1506,6 @@
   },
   {
     "key": "222E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कॉन्टूर समाकल"
@@ -1702,7 +1514,6 @@
   },
   {
     "key": "222F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सतह समाकल"
@@ -1711,7 +1522,6 @@
   },
   {
     "key": "2230",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कद समाकल"
@@ -1720,7 +1530,6 @@
   },
   {
     "key": "2231",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दक्षिणावर्त समाकल"
@@ -1729,7 +1538,6 @@
   },
   {
     "key": "2232",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दक्षिणावर्त कॉन्टूर समाकल"
@@ -1738,7 +1546,6 @@
   },
   {
     "key": "2233",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वामावर्त कॉन्टूर समाकल"
@@ -1747,7 +1554,6 @@
   },
   {
     "key": "2234",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसलिये"
@@ -1756,7 +1562,6 @@
   },
   {
     "key": "2235",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसलिये"
@@ -1765,7 +1570,6 @@
   },
   {
     "key": "2236",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अनुपात"
@@ -1774,7 +1578,6 @@
   },
   {
     "key": "2237",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अनुपात"
@@ -1783,7 +1586,6 @@
   },
   {
     "key": "2238",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट माइनस"
@@ -1792,7 +1594,6 @@
   },
   {
     "key": "2239",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अधिक"
@@ -1801,7 +1602,6 @@
   },
   {
     "key": "223A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ज्यामितीय अनुपात"
@@ -1810,7 +1610,6 @@
   },
   {
     "key": "223B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "homothetic"
@@ -1819,7 +1618,6 @@
   },
   {
     "key": "223C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्ड संचालक"
@@ -1828,7 +1626,6 @@
   },
   {
     "key": "223D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उलटा टिल्डे"
@@ -1837,7 +1634,6 @@
   },
   {
     "key": "223E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उलटे आलसी एस"
@@ -1846,7 +1642,6 @@
   },
   {
     "key": "223F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "साइन तरंग"
@@ -1855,7 +1650,6 @@
   },
   {
     "key": "2240",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "माल्यार्पण उत्पाद"
@@ -1864,7 +1658,6 @@
   },
   {
     "key": "2241",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्डे नहीं"
@@ -1873,7 +1666,6 @@
   },
   {
     "key": "2242",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "माइनस टिल्डे"
@@ -1882,7 +1674,6 @@
   },
   {
     "key": "2243",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समान रूप से समान"
@@ -1891,7 +1682,6 @@
   },
   {
     "key": "2244",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नहीं समान रूप से समान"
@@ -1900,7 +1690,6 @@
   },
   {
     "key": "2245",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर"
@@ -1909,7 +1698,6 @@
   },
   {
     "key": "2246",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग लेकिन वास्तव में समान नहीं है"
@@ -1918,7 +1706,6 @@
   },
   {
     "key": "2247",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो लगभग और न ही वास्तव में बराबर"
@@ -1927,7 +1714,6 @@
   },
   {
     "key": "2248",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर"
@@ -1936,7 +1722,6 @@
   },
   {
     "key": "2249",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग नहीं के बराबर"
@@ -1945,7 +1730,6 @@
   },
   {
     "key": "224A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर या बराबर"
@@ -1954,7 +1738,6 @@
   },
   {
     "key": "224B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल टिल्ड"
@@ -1963,7 +1746,6 @@
   },
   {
     "key": "224C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सभी को समान"
@@ -1972,7 +1754,6 @@
   },
   {
     "key": "224D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के बराबर"
@@ -1981,7 +1762,6 @@
   },
   {
     "key": "224E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ज्यामितीय समान रूप से"
@@ -1990,7 +1770,6 @@
   },
   {
     "key": "224F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के बीच अंतर"
@@ -1999,7 +1778,6 @@
   },
   {
     "key": "2250",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सीमा का अनुमोदन करता है"
@@ -2008,7 +1786,6 @@
   },
   {
     "key": "2251",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ज्यामितीय रूप से समान"
@@ -2017,7 +1794,6 @@
   },
   {
     "key": "2252",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर या की छवि"
@@ -2026,7 +1802,6 @@
   },
   {
     "key": "2253",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "या लगभग बराबर की छवि"
@@ -2035,7 +1810,6 @@
   },
   {
     "key": "2254",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कोलोन बराबर"
@@ -2044,7 +1818,6 @@
   },
   {
     "key": "2255",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कोलोन के बराबर"
@@ -2053,7 +1826,6 @@
   },
   {
     "key": "2256",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर में अँगूठी"
@@ -2062,7 +1834,6 @@
   },
   {
     "key": "2257",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिंग के बराबर"
@@ -2071,7 +1842,6 @@
   },
   {
     "key": "2258",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से मेल खाती है"
@@ -2080,7 +1850,6 @@
   },
   {
     "key": "2259",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अनुमान"
@@ -2089,7 +1858,6 @@
   },
   {
     "key": "225A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समबाहु को"
@@ -2098,7 +1866,6 @@
   },
   {
     "key": "225B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्टार बराबर"
@@ -2107,7 +1874,6 @@
   },
   {
     "key": "225C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डेल्टा बराबर"
@@ -2116,7 +1882,6 @@
   },
   {
     "key": "225D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परिभाषा के अनुसार समान"
@@ -2125,7 +1890,6 @@
   },
   {
     "key": "225E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "द्वारा मापा"
@@ -2134,7 +1898,6 @@
   },
   {
     "key": "225F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के बराबर सवाल किया"
@@ -2143,7 +1906,6 @@
   },
   {
     "key": "2260",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर नही है"
@@ -2152,7 +1914,6 @@
   },
   {
     "key": "2261",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के समान"
@@ -2161,7 +1922,6 @@
   },
   {
     "key": "2262",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पहचान नहीं है"
@@ -2170,7 +1930,6 @@
   },
   {
     "key": "2263",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कड़ाई से बराबर"
@@ -2179,7 +1938,6 @@
   },
   {
     "key": "2264",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से कम या बराबर"
@@ -2188,7 +1946,6 @@
   },
   {
     "key": "2265",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अधिक या समान है"
@@ -2197,7 +1954,6 @@
   },
   {
     "key": "2266",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम या समान है"
@@ -2206,7 +1962,6 @@
   },
   {
     "key": "2267",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान बराबरी पर"
@@ -2215,7 +1970,6 @@
   },
   {
     "key": "2268",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-कम लेकिन बराबर नहीं"
@@ -2224,7 +1978,6 @@
   },
   {
     "key": "2269",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान लेकिन न के बराबर"
@@ -2233,7 +1986,6 @@
   },
   {
     "key": "226A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "की तुलना में बहुत कम"
@@ -2242,7 +1994,6 @@
   },
   {
     "key": "226B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बहुत ग्रेटर-थान"
@@ -2251,7 +2002,6 @@
   },
   {
     "key": "226C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के बीच"
@@ -2260,7 +2010,6 @@
   },
   {
     "key": "226D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नहीं के बराबर"
@@ -2269,7 +2018,6 @@
   },
   {
     "key": "226E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से कम नहीं"
@@ -2278,7 +2026,6 @@
   },
   {
     "key": "226F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान नहीं"
@@ -2287,7 +2034,6 @@
   },
   {
     "key": "2270",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो इससे कम और न ही बराबर"
@@ -2296,7 +2042,6 @@
   },
   {
     "key": "2271",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो ग्रेटर-थान और न ही बराबर"
@@ -2305,7 +2050,6 @@
   },
   {
     "key": "2272",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-अधिक या समकक्ष"
@@ -2314,7 +2058,6 @@
   },
   {
     "key": "2273",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या समकक्ष"
@@ -2323,7 +2066,6 @@
   },
   {
     "key": "2274",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो इससे कम और न ही बराबर"
@@ -2332,7 +2074,6 @@
   },
   {
     "key": "2275",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो ग्रेटर-थान और न ही समकक्ष"
@@ -2341,7 +2082,6 @@
   },
   {
     "key": "2276",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-थान या ग्रेटर-थान"
@@ -2350,7 +2090,6 @@
   },
   {
     "key": "2277",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या कम-थान"
@@ -2359,7 +2098,6 @@
   },
   {
     "key": "2278",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो लेस-थन और न ही ग्रेटर-थान"
@@ -2368,7 +2106,6 @@
   },
   {
     "key": "2279",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो ग्रेटर-थान और न ही कम-थान"
@@ -2377,7 +2114,6 @@
   },
   {
     "key": "227A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पहले आता है"
@@ -2386,7 +2122,6 @@
   },
   {
     "key": "227B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफल होता है"
@@ -2395,7 +2130,6 @@
   },
   {
     "key": "227C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रतिमान या बराबर"
@@ -2404,7 +2138,6 @@
   },
   {
     "key": "227D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफलता या बराबर"
@@ -2413,7 +2146,6 @@
   },
   {
     "key": "227E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रतिसाद या समकक्ष"
@@ -2422,7 +2154,6 @@
   },
   {
     "key": "227F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफलता या समकक्ष"
@@ -2431,7 +2162,6 @@
   },
   {
     "key": "2280",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रीडेसी नहीं है"
@@ -2440,7 +2170,6 @@
   },
   {
     "key": "2281",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफल नहीं होता"
@@ -2449,7 +2178,6 @@
   },
   {
     "key": "2282",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का भाग"
@@ -2458,7 +2186,6 @@
   },
   {
     "key": "2283",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का सुपरसेट"
@@ -2467,7 +2194,6 @@
   },
   {
     "key": "2284",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का सबसेट नहीं है"
@@ -2476,7 +2202,6 @@
   },
   {
     "key": "2285",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का सुपरसेट नहीं"
@@ -2485,7 +2210,6 @@
   },
   {
     "key": "2286",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के बराबर या के बराबर"
@@ -2494,7 +2218,6 @@
   },
   {
     "key": "2287",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट ऑफ़ या इक्वल टू"
@@ -2503,7 +2226,6 @@
   },
   {
     "key": "2288",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो सबसेट का और न ही बराबर का"
@@ -2512,7 +2234,6 @@
   },
   {
     "key": "2289",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न तो सुपरसेट का और न ही बराबर का"
@@ -2521,7 +2242,6 @@
   },
   {
     "key": "228A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न के बराबर के साथ सबसेट"
@@ -2530,7 +2250,6 @@
   },
   {
     "key": "228B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नहीं के बराबर के साथ सुपरसेट"
@@ -2539,7 +2258,6 @@
   },
   {
     "key": "228C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मल्टीसेट"
@@ -2548,7 +2266,6 @@
   },
   {
     "key": "228D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मल्टीसेट गुणा"
@@ -2557,7 +2274,6 @@
   },
   {
     "key": "228E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मल्टीसेट यूनियन"
@@ -2566,7 +2282,6 @@
   },
   {
     "key": "228F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्ग छवि"
@@ -2575,7 +2290,6 @@
   },
   {
     "key": "2290",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का वर्ग मूल"
@@ -2584,7 +2298,6 @@
   },
   {
     "key": "2291",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "या के बराबर छवि"
@@ -2593,7 +2306,6 @@
   },
   {
     "key": "2292",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर ओरिजिनल ऑफ़ या इक्वल टू"
@@ -2602,7 +2314,6 @@
   },
   {
     "key": "2293",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर कैप"
@@ -2611,7 +2322,6 @@
   },
   {
     "key": "2294",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर कप"
@@ -2620,7 +2330,6 @@
   },
   {
     "key": "2295",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल प्लस"
@@ -2629,7 +2338,6 @@
   },
   {
     "key": "2296",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परिक्रमा माइनस"
@@ -2638,7 +2346,6 @@
   },
   {
     "key": "2297",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल टाइम्स"
@@ -2647,7 +2354,6 @@
   },
   {
     "key": "2298",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मंडल स्लैश"
@@ -2656,7 +2362,6 @@
   },
   {
     "key": "2299",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल डॉट"
@@ -2665,7 +2370,6 @@
   },
   {
     "key": "229A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परिचालित रिंग संचालक"
@@ -2674,7 +2378,6 @@
   },
   {
     "key": "229B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल का तारांकन"
@@ -2683,7 +2386,6 @@
   },
   {
     "key": "229C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परिक्रमा के बराबर"
@@ -2692,7 +2394,6 @@
   },
   {
     "key": "229D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चक्कर लगाया डैश"
@@ -2701,7 +2402,6 @@
   },
   {
     "key": "229E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता प्लस"
@@ -2710,7 +2410,6 @@
   },
   {
     "key": "229F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता माइनस"
@@ -2719,7 +2418,6 @@
   },
   {
     "key": "22A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता समय"
@@ -2728,7 +2426,6 @@
   },
   {
     "key": "22A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता डॉट"
@@ -2737,7 +2434,6 @@
   },
   {
     "key": "22A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट टैक"
@@ -2746,7 +2442,6 @@
   },
   {
     "key": "22A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट टैक"
@@ -2755,7 +2450,6 @@
   },
   {
     "key": "22A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डाउन टैक"
@@ -2764,7 +2458,6 @@
   },
   {
     "key": "22A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अप टाक"
@@ -2773,7 +2466,6 @@
   },
   {
     "key": "22A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अभिकथन"
@@ -2782,7 +2474,6 @@
   },
   {
     "key": "22A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मॉडल के"
@@ -2791,7 +2482,6 @@
   },
   {
     "key": "22A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सच"
@@ -2800,7 +2490,6 @@
   },
   {
     "key": "22A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ताकतों"
@@ -2809,7 +2498,6 @@
   },
   {
     "key": "22AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल वर्टिकल बार राइट टर्नस्टाइल"
@@ -2818,7 +2506,6 @@
   },
   {
     "key": "22AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल बार डबल राइट टर्नस्टाइल"
@@ -2827,7 +2514,6 @@
   },
   {
     "key": "22AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सिद्ध नहीं होता है"
@@ -2836,7 +2522,6 @@
   },
   {
     "key": "22AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सच नहीं"
@@ -2845,7 +2530,6 @@
   },
   {
     "key": "22AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "फोर्स नहीं है"
@@ -2854,7 +2538,6 @@
   },
   {
     "key": "22AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नेगेटिव डबल वर्टिकल बार डबल राइट टर्नस्टाइल"
@@ -2863,7 +2546,6 @@
   },
   {
     "key": "22B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिलेशन के तहत प्रीयर करें"
@@ -2872,7 +2554,6 @@
   },
   {
     "key": "22B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संबंध के तहत सफलता"
@@ -2881,7 +2562,6 @@
   },
   {
     "key": "22B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का सामान्य उपसमूह"
@@ -2890,7 +2570,6 @@
   },
   {
     "key": "22B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सामान्य उपसमूह के रूप में शामिल है"
@@ -2899,7 +2578,6 @@
   },
   {
     "key": "22B4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "या के बराबर सामान्य उपसमूह"
@@ -2908,7 +2586,6 @@
   },
   {
     "key": "22B5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सामान्य उपसमूह या समान के समान है"
@@ -2917,7 +2594,6 @@
   },
   {
     "key": "22B6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "का मूल"
@@ -2926,7 +2602,6 @@
   },
   {
     "key": "22B7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "की छवि"
@@ -2935,7 +2610,6 @@
   },
   {
     "key": "22B8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मल्टीमैप"
@@ -2944,7 +2618,6 @@
   },
   {
     "key": "22B9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हर्मिटियन कॉन्जुगेट मैट्रिक्स"
@@ -2953,7 +2626,6 @@
   },
   {
     "key": "22BA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intercalate"
@@ -2962,7 +2634,6 @@
   },
   {
     "key": "22BB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "xor"
@@ -2971,7 +2642,6 @@
   },
   {
     "key": "22BC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नंद"
@@ -2980,7 +2650,6 @@
   },
   {
     "key": "22BD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न"
@@ -2989,7 +2658,6 @@
   },
   {
     "key": "22BF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सही त्रिकोण"
@@ -2998,7 +2666,6 @@
   },
   {
     "key": "22C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य तार्किक और"
@@ -3007,7 +2674,6 @@
   },
   {
     "key": "22C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य तार्किक या"
@@ -3016,7 +2682,6 @@
   },
   {
     "key": "22C2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य अंतःकरण"
@@ -3025,7 +2690,6 @@
   },
   {
     "key": "22C3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य संघ"
@@ -3034,7 +2698,6 @@
   },
   {
     "key": "22C4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "हीरा संचालक"
@@ -3043,7 +2706,6 @@
   },
   {
     "key": "22C5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गुणन चिह्न"
@@ -3055,7 +2717,6 @@
   },
   {
     "key": "22C6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्टार संचालक"
@@ -3064,7 +2725,6 @@
   },
   {
     "key": "22C7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डिवीजन टाइम्स"
@@ -3073,7 +2733,6 @@
   },
   {
     "key": "22C8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बो टाई"
@@ -3082,7 +2741,6 @@
   },
   {
     "key": "22C9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वाम सामान्य कारक सेमीडायरेक्ट उत्पाद"
@@ -3091,7 +2749,6 @@
   },
   {
     "key": "22CA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट नॉर्मल फैक्टर सेमीडायरेक्ट प्रोडक्ट"
@@ -3100,7 +2757,6 @@
   },
   {
     "key": "22CB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वाम सेमीडायरेक्ट उत्पाद"
@@ -3109,7 +2765,6 @@
   },
   {
     "key": "22CC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट सेमीडायरेक्ट प्रोडक्ट"
@@ -3118,7 +2773,6 @@
   },
   {
     "key": "22CD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उल्टे टिल्ड बराबर"
@@ -3127,7 +2781,6 @@
   },
   {
     "key": "22CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "घुंघराले तार्किक या"
@@ -3136,7 +2789,6 @@
   },
   {
     "key": "22CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "घुंघराले तार्किक और"
@@ -3145,7 +2797,6 @@
   },
   {
     "key": "22D0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल सबसेट"
@@ -3154,7 +2805,6 @@
   },
   {
     "key": "22D1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल सुपरसेट"
@@ -3163,7 +2813,6 @@
   },
   {
     "key": "22D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दोहरा अंतर"
@@ -3172,7 +2821,6 @@
   },
   {
     "key": "22D3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल यूनियन"
@@ -3181,7 +2829,6 @@
   },
   {
     "key": "22D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सूखी घास इत्यादि की टाल लगाने का नोकदार डंडा"
@@ -3190,7 +2837,6 @@
   },
   {
     "key": "22D5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर और समानांतर"
@@ -3199,7 +2845,6 @@
   },
   {
     "key": "22D6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ कम-थान"
@@ -3208,7 +2853,6 @@
   },
   {
     "key": "22D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ ग्रेटर-थान"
@@ -3217,7 +2861,6 @@
   },
   {
     "key": "22D8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बहुत कम-से-कम"
@@ -3226,7 +2869,6 @@
   },
   {
     "key": "22D9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बहुत ज्यादा ग्रेटर-थान"
@@ -3235,7 +2877,6 @@
   },
   {
     "key": "22DA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-बराबर बराबर या ग्रेटर-थान से"
@@ -3244,7 +2885,6 @@
   },
   {
     "key": "22DB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान बराबर या उससे कम"
@@ -3253,7 +2893,6 @@
   },
   {
     "key": "22DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर या उससे कम"
@@ -3262,7 +2901,6 @@
   },
   {
     "key": "22DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर या ग्रेटर-थान"
@@ -3271,7 +2909,6 @@
   },
   {
     "key": "22DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर या पूर्ववत"
@@ -3280,7 +2917,6 @@
   },
   {
     "key": "22DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर या सफल होना"
@@ -3289,7 +2925,6 @@
   },
   {
     "key": "22E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रीडेसी या समान नहीं है"
@@ -3298,7 +2933,6 @@
   },
   {
     "key": "22E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफल या बराबर नहीं है"
@@ -3307,7 +2941,6 @@
   },
   {
     "key": "22E2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्ग छवि या समान नहीं"
@@ -3316,7 +2949,6 @@
   },
   {
     "key": "22E3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर स्क्वायर ओरिजिनल ऑफ़ या इक्वल टू नहीं"
@@ -3325,7 +2957,6 @@
   },
   {
     "key": "22E4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "या नहीं के बराबर छवि"
@@ -3334,7 +2965,6 @@
   },
   {
     "key": "22E5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर ओरिजिनल ऑफ़ या न के बराबर"
@@ -3343,7 +2973,6 @@
   },
   {
     "key": "22E6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-कम लेकिन बराबर नहीं"
@@ -3352,7 +2981,6 @@
   },
   {
     "key": "22E7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान लेकिन न के बराबर"
@@ -3361,7 +2989,6 @@
   },
   {
     "key": "22E8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रतिसाद लेकिन नहीं के बराबर"
@@ -3370,7 +2997,6 @@
   },
   {
     "key": "22E9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफल लेकिन नहीं के बराबर"
@@ -3379,7 +3005,6 @@
   },
   {
     "key": "22EA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सामान्य उपसमूह नहीं"
@@ -3388,7 +3013,6 @@
   },
   {
     "key": "22EB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सामान्य उपसमूह के रूप में कंटेनर नहीं है"
@@ -3397,7 +3021,6 @@
   },
   {
     "key": "22EC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "न के बराबर उपसमूह या बराबर"
@@ -3406,7 +3029,6 @@
   },
   {
     "key": "22ED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सामान्य उपसमूह या समान के रूप में कंटेनर नहीं है"
@@ -3415,7 +3037,6 @@
   },
   {
     "key": "22EE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊर्ध्वाधर एलिप्सिस"
@@ -3424,7 +3045,6 @@
   },
   {
     "key": "22EF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आदि आदि आदि"
@@ -3433,7 +3053,6 @@
   },
   {
     "key": "22F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर राइट विकर्ण एलिप्सिस"
@@ -3442,7 +3061,6 @@
   },
   {
     "key": "22F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डाउन राइट विकर्ण एलिप्सिस"
@@ -3451,7 +3069,6 @@
   },
   {
     "key": "22F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबे क्षैतिज स्ट्रोक के साथ तत्व"
@@ -3460,7 +3077,6 @@
   },
   {
     "key": "22F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के अंत में ऊर्ध्वाधर बार के साथ तत्व"
@@ -3469,7 +3085,6 @@
   },
   {
     "key": "22F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के अंत में ऊर्ध्वाधर बार के साथ छोटे तत्व"
@@ -3478,7 +3093,6 @@
   },
   {
     "key": "22F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट ऊपर के साथ तत्व"
@@ -3487,7 +3101,6 @@
   },
   {
     "key": "22F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ तत्व"
@@ -3496,7 +3109,6 @@
   },
   {
     "key": "22F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ छोटे तत्व"
@@ -3505,7 +3117,6 @@
   },
   {
     "key": "22F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ तत्व"
@@ -3514,7 +3125,6 @@
   },
   {
     "key": "22F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो क्षैतिज स्ट्रोक के साथ तत्व"
@@ -3523,7 +3133,6 @@
   },
   {
     "key": "22FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबे क्षैतिज स्ट्रोक के साथ सम्‍मिलित है"
@@ -3532,7 +3141,6 @@
   },
   {
     "key": "22FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के अंत में वर्टिकल बार के साथ होता है"
@@ -3541,7 +3149,6 @@
   },
   {
     "key": "22FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के अंत में वर्टिकल बार के साथ छोटे शामिल हैं"
@@ -3550,7 +3157,6 @@
   },
   {
     "key": "22FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ सम्‍मिलित है"
@@ -3559,7 +3165,6 @@
   },
   {
     "key": "22FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ छोटे कंटीन्यू"
@@ -3568,7 +3173,6 @@
   },
   {
     "key": "22FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन बैग सदस्यता"
@@ -3577,7 +3181,6 @@
   },
   {
     "key": "2300",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "व्यास का चिन्ह"
@@ -3586,7 +3189,6 @@
   },
   {
     "key": "2302",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "मकान"
@@ -3595,7 +3197,6 @@
   },
   {
     "key": "2305",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "प्रक्षेपीय"
@@ -3604,7 +3205,6 @@
   },
   {
     "key": "2306",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "परिप्रेक्ष्य"
@@ -3613,7 +3213,6 @@
   },
   {
     "key": "2307",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "लहराती रेखा"
@@ -3622,7 +3221,6 @@
   },
   {
     "key": "2310",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उल्टे हस्ताक्षर नहीं"
@@ -3631,7 +3229,6 @@
   },
   {
     "key": "2311",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "स्क्वायर लोजेंज"
@@ -3640,7 +3237,6 @@
   },
   {
     "key": "2312",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आर्क"
@@ -3649,7 +3245,6 @@
   },
   {
     "key": "2313",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "खंड"
@@ -3658,7 +3253,6 @@
   },
   {
     "key": "2314",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "क्षेत्र"
@@ -3667,7 +3261,6 @@
   },
   {
     "key": "2795",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी प्लस साइन"
@@ -3676,7 +3269,6 @@
   },
   {
     "key": "2796",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "भारी माइनस साइन"
@@ -3685,7 +3277,6 @@
   },
   {
     "key": "2797",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हैवी डिवीजन साइन"
@@ -3694,7 +3285,6 @@
   },
   {
     "key": "27B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "घुंघराले पाश"
@@ -3703,7 +3293,6 @@
   },
   {
     "key": "27BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "डबल कर्ली लूप"
@@ -3712,7 +3301,6 @@
   },
   {
     "key": "27C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "व्हाइट ट्रायंगल जिसमें व्हाइट व्हाइट ट्रायंगल होता है"
@@ -3721,7 +3309,6 @@
   },
   {
     "key": "27C2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सीधा"
@@ -3730,7 +3317,6 @@
   },
   {
     "key": "27C3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सबसेट खोलें"
@@ -3739,7 +3325,6 @@
   },
   {
     "key": "27C4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट खोलें"
@@ -3748,7 +3333,6 @@
   },
   {
     "key": "27C7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "या डॉट इन के साथ"
@@ -3757,7 +3341,6 @@
   },
   {
     "key": "27C8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिवर्स सॉलिडस पूर्ववर्ती सबसेट"
@@ -3766,7 +3349,6 @@
   },
   {
     "key": "27C9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसैट पूर्ववर्ती सॉलिडस"
@@ -3775,7 +3357,6 @@
   },
   {
     "key": "27CA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के साथ लंबवत पट्टी"
@@ -3784,7 +3365,6 @@
   },
   {
     "key": "27CB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गणितीय बढ़ती विकर्ण"
@@ -3793,7 +3373,6 @@
   },
   {
     "key": "27CC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लम्बा विभाजन"
@@ -3802,7 +3381,6 @@
   },
   {
     "key": "27CD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गणितीय पतनशील विकर्ण"
@@ -3811,7 +3389,6 @@
   },
   {
     "key": "27CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता तार्किक और"
@@ -3820,7 +3397,6 @@
   },
   {
     "key": "27CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता तार्किक या"
@@ -3829,7 +3405,6 @@
   },
   {
     "key": "27D0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफेद हीरे के साथ केंद्रित डॉट"
@@ -3838,7 +3413,6 @@
   },
   {
     "key": "27D1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "और डॉट के साथ"
@@ -3847,7 +3421,6 @@
   },
   {
     "key": "27D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर खुलने का तत्व"
@@ -3856,7 +3429,6 @@
   },
   {
     "key": "27D3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ लोअर राइट कॉर्नर"
@@ -3865,7 +3437,6 @@
   },
   {
     "key": "27D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ ऊपरी बाएं कोने"
@@ -3874,7 +3445,6 @@
   },
   {
     "key": "27D5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाईं ओर का बाहरी जोड़"
@@ -3883,7 +3453,6 @@
   },
   {
     "key": "27D6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट आउटर जॉइन"
@@ -3892,7 +3461,6 @@
   },
   {
     "key": "27D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्ण बाहरी सम्मिलित हों"
@@ -3901,7 +3469,6 @@
   },
   {
     "key": "27D8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बड़े अप टैक"
@@ -3910,7 +3477,6 @@
   },
   {
     "key": "27D9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बड़े डाउन टैक"
@@ -3919,7 +3485,6 @@
   },
   {
     "key": "27DA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट और राइट डबल टर्नस्टाइल"
@@ -3928,7 +3493,6 @@
   },
   {
     "key": "27DB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट और राइट टैक"
@@ -3937,7 +3501,6 @@
   },
   {
     "key": "27DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वाम मुल्तिप"
@@ -3946,7 +3509,6 @@
   },
   {
     "key": "27DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लम्बी दाहिनी टाकी"
@@ -3955,7 +3517,6 @@
   },
   {
     "key": "27DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबे समय तक लेफ्ट टैक"
@@ -3964,7 +3525,6 @@
   },
   {
     "key": "27DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर के सर्कल के साथ अप टैक"
@@ -3973,7 +3533,6 @@
   },
   {
     "key": "27E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लोजेंज क्षैतिज नियम द्वारा विभाजित"
@@ -3982,7 +3541,6 @@
   },
   {
     "key": "27E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफेद अवतल-पक्षीय हीरा"
@@ -3991,7 +3549,6 @@
   },
   {
     "key": "27E2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "व्हाइट कॉनक्वेव-साइडेड डायमंड विद लेफ्टवर्ड्स टिक"
@@ -4000,7 +3557,6 @@
   },
   {
     "key": "27E3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "व्हाइट कॉनक्लेव-साइडेड डायमंड विथ राइट्स टिक"
@@ -4009,7 +3565,6 @@
   },
   {
     "key": "27E4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "व्हाइट स्क्वायर बायीं ओर टिक के साथ"
@@ -4018,7 +3573,6 @@
   },
   {
     "key": "27E5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट स्क्वायर टिक के साथ व्हाइट स्क्वायर"
@@ -4027,7 +3581,6 @@
   },
   {
     "key": "292B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बढ़ती विकर्ण पार विकर्ण"
@@ -4036,7 +3589,6 @@
   },
   {
     "key": "292C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गिरते हुए विकर्ण"
@@ -4045,7 +3597,6 @@
   },
   {
     "key": "2980",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल वर्टिकल बार डेलिमिटर"
@@ -4054,7 +3605,6 @@
   },
   {
     "key": "2981",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन स्पॉट"
@@ -4063,7 +3613,6 @@
   },
   {
     "key": "2982",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन प्रकार कोलोन"
@@ -4072,7 +3621,6 @@
   },
   {
     "key": "2999",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बिंदीदार बाड़"
@@ -4081,7 +3629,6 @@
   },
   {
     "key": "299A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कार्यक्षेत्र Zigzag रेखा"
@@ -4090,7 +3637,6 @@
   },
   {
     "key": "29B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उल्टा खाली सेट"
@@ -4099,7 +3645,6 @@
   },
   {
     "key": "29B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ खाली सेट"
@@ -4108,7 +3653,6 @@
   },
   {
     "key": "29B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर छोटे सर्कल के साथ खाली सेट"
@@ -4117,7 +3661,6 @@
   },
   {
     "key": "29B5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज पट्टी के साथ सर्कल"
@@ -4126,7 +3669,6 @@
   },
   {
     "key": "29B6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चक्करदार बार"
@@ -4135,7 +3677,6 @@
   },
   {
     "key": "29B7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परलोक की परिक्रमा की"
@@ -4144,7 +3685,6 @@
   },
   {
     "key": "29B8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उलटा सॉलिडस सर्किल"
@@ -4153,7 +3693,6 @@
   },
   {
     "key": "29B9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चक्कर लगाया"
@@ -4162,7 +3701,6 @@
   },
   {
     "key": "29BA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्कल को क्षैतिज पट्टी से विभाजित किया गया और शीर्ष आधा को ऊर्ध्वाधर बार से विभाजित किया गया"
@@ -4171,7 +3709,6 @@
   },
   {
     "key": "29BB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरिंपोज्ड एक्स के साथ सर्कल"
@@ -4180,7 +3717,6 @@
   },
   {
     "key": "29BC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल एंटिक्लॉकवाइज-रोटेटेड डिवीजन साइन"
@@ -4189,7 +3725,6 @@
   },
   {
     "key": "29BE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफ़ेद गोली का गोला"
@@ -4198,7 +3733,6 @@
   },
   {
     "key": "29BF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गोल घेरा"
@@ -4207,7 +3741,6 @@
   },
   {
     "key": "29C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम से कम की परिक्रमा की"
@@ -4216,7 +3749,6 @@
   },
   {
     "key": "29C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान परिक्रमा की"
@@ -4225,7 +3757,6 @@
   },
   {
     "key": "29C2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्कल को छोटे सर्कल के साथ दाईं ओर"
@@ -4234,7 +3765,6 @@
   },
   {
     "key": "29C3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सही करने के लिए दो क्षैतिज स्ट्रोक के साथ सर्कल"
@@ -4243,7 +3773,6 @@
   },
   {
     "key": "29C4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वार्ड राइजिंग विकर्ण स्लैश"
@@ -4252,7 +3781,6 @@
   },
   {
     "key": "29C5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वॉयर फ़ॉलिंग डायगोनल स्लैश"
@@ -4261,7 +3789,6 @@
   },
   {
     "key": "29C6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चुकता किया हुआ तारक"
@@ -4270,7 +3797,6 @@
   },
   {
     "key": "29C7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटे वृत्त का वर्ग"
@@ -4279,7 +3805,6 @@
   },
   {
     "key": "29C8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चौकोर वर्ग"
@@ -4288,7 +3813,6 @@
   },
   {
     "key": "29C9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो वर्गों में शामिल हो गए"
@@ -4297,7 +3821,6 @@
   },
   {
     "key": "29CA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट ऊपर के साथ त्रिभुज"
@@ -4306,7 +3829,6 @@
   },
   {
     "key": "29CB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ त्रिकोण"
@@ -4315,7 +3837,6 @@
   },
   {
     "key": "29CC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रिभुज में एस"
@@ -4324,7 +3845,6 @@
   },
   {
     "key": "29CD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे में सेरिफ़ के साथ त्रिभुज"
@@ -4333,7 +3853,6 @@
   },
   {
     "key": "29CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दाएँ त्रिभुज ऊपर बाएँ त्रिभुज"
@@ -4342,7 +3861,6 @@
   },
   {
     "key": "29CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वाम त्रिभुज बगल में खड़ी बार"
@@ -4351,7 +3869,6 @@
   },
   {
     "key": "29D0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल बार बिसाइड राइट ट्राएंगल"
@@ -4360,7 +3877,6 @@
   },
   {
     "key": "29D1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट हाफ ब्लैक के साथ बोवी"
@@ -4369,7 +3885,6 @@
   },
   {
     "key": "29D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सही हाफ ब्लैक के साथ बोवी"
@@ -4378,7 +3893,6 @@
   },
   {
     "key": "29D3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "काली कटोरी"
@@ -4387,7 +3901,6 @@
   },
   {
     "key": "29D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट हाफ ब्लैक के साथ टाइम्स"
@@ -4396,7 +3909,6 @@
   },
   {
     "key": "29D5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट हाफ ब्लैक के साथ टाइम्स"
@@ -4405,7 +3917,6 @@
   },
   {
     "key": "29D6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफेद घंटा"
@@ -4414,7 +3925,6 @@
   },
   {
     "key": "29D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "काला घंटा"
@@ -4423,7 +3933,6 @@
   },
   {
     "key": "29DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अधूरा इन्फिनिटी"
@@ -4432,7 +3941,6 @@
   },
   {
     "key": "29DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इन्फिनिटी पर टाई"
@@ -4441,7 +3949,6 @@
   },
   {
     "key": "29DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अनंत बार ऊर्ध्वाधर के साथ उपेक्षित"
@@ -4450,7 +3957,6 @@
   },
   {
     "key": "29DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-एंडेड मल्टीमैप"
@@ -4459,7 +3965,6 @@
   },
   {
     "key": "29E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कंटूरेड आउटलाइन के साथ स्क्वायर"
@@ -4468,7 +3973,6 @@
   },
   {
     "key": "29E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "के रूप में बढ़ता है"
@@ -4477,7 +3981,6 @@
   },
   {
     "key": "29E2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शफल उत्पाद"
@@ -4486,7 +3989,6 @@
   },
   {
     "key": "29E3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर और धीमी गति से समानांतर"
@@ -4495,7 +3997,6 @@
   },
   {
     "key": "29E4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्डे अबव के साथ साइन और स्लेन्डेड पैरेलल"
@@ -4504,7 +4005,6 @@
   },
   {
     "key": "29E5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आइडेंटिकल टू एंड स्लोड पैरेलल"
@@ -4513,7 +4013,6 @@
   },
   {
     "key": "29E6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्लीच स्टार्क"
@@ -4522,7 +4021,6 @@
   },
   {
     "key": "29E7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "thermodynamic"
@@ -4531,7 +4029,6 @@
   },
   {
     "key": "29E8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डाउन-पॉइंटिंग ट्राइएंगल विथ लेफ्ट हाफ ब्लैक"
@@ -4540,7 +4037,6 @@
   },
   {
     "key": "29E9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डाउन-पाइंटिंग ट्रायंगल के साथ राइट हाफ ब्लैक"
@@ -4549,7 +4045,6 @@
   },
   {
     "key": "29EB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "काला लोजेंज"
@@ -4558,7 +4053,6 @@
   },
   {
     "key": "29EE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रुटि-वर्जित श्वेत वर्ग"
@@ -4567,7 +4061,6 @@
   },
   {
     "key": "29EF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रुटि-वर्जित ब्लैक स्क्वायर"
@@ -4576,7 +4069,6 @@
   },
   {
     "key": "29F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रुटि-वर्जित सफेद हीरा"
@@ -4585,7 +4077,6 @@
   },
   {
     "key": "29F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रुटि-वर्जित ब्लैक डायमंड"
@@ -4594,7 +4085,6 @@
   },
   {
     "key": "29F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रुटि-वर्जित श्वेत वृत्त"
@@ -4603,7 +4093,6 @@
   },
   {
     "key": "29F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रुटि-वर्जित ब्लैक सर्कल"
@@ -4612,7 +4101,6 @@
   },
   {
     "key": "29F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नियम विलंबित"
@@ -4621,7 +4109,6 @@
   },
   {
     "key": "29F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिवर्स सॉलिडस"
@@ -4630,7 +4117,6 @@
   },
   {
     "key": "29F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ सॉलिडस"
@@ -4639,7 +4125,6 @@
   },
   {
     "key": "29F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के साथ सॉलिडस को उल्टा करें"
@@ -4648,7 +4133,6 @@
   },
   {
     "key": "29F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बड़ा सॉलिडस"
@@ -4657,7 +4141,6 @@
   },
   {
     "key": "29F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बिग रिवर्स सॉलिडस"
@@ -4666,7 +4149,6 @@
   },
   {
     "key": "29FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल प्लस"
@@ -4675,7 +4157,6 @@
   },
   {
     "key": "29FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल प्लस"
@@ -4684,7 +4165,6 @@
   },
   {
     "key": "29FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिनी"
@@ -4693,7 +4173,6 @@
   },
   {
     "key": "29FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "miny"
@@ -4702,7 +4181,6 @@
   },
   {
     "key": "2A00",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-ऐरी सर्किल डॉट"
@@ -4711,7 +4189,6 @@
   },
   {
     "key": "2A01",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-ऐरी सर्किल प्लस"
@@ -4720,7 +4197,6 @@
   },
   {
     "key": "2A02",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-ऐरी सर्किल टाइम्स"
@@ -4729,7 +4205,6 @@
   },
   {
     "key": "2A03",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ एन-आर्य संघ संचालक"
@@ -4738,7 +4213,6 @@
   },
   {
     "key": "2A04",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस के साथ एन-आर्य संघ संचालक"
@@ -4747,7 +4221,6 @@
   },
   {
     "key": "2A05",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य स्क्वायर इंटरसेक्शन"
@@ -4756,7 +4229,6 @@
   },
   {
     "key": "2A06",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य स्क्वायर यूनियन"
@@ -4765,7 +4237,6 @@
   },
   {
     "key": "2A07",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो तार्किक और संचालक"
@@ -4774,7 +4245,6 @@
   },
   {
     "key": "2A08",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो तार्किक या संचालक"
@@ -4783,7 +4253,6 @@
   },
   {
     "key": "2A09",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य टाइम्स"
@@ -4792,7 +4261,6 @@
   },
   {
     "key": "2A0A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मोदुलो दो सम"
@@ -4801,7 +4269,6 @@
   },
   {
     "key": "2A0B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इंटीग्रल के साथ योग"
@@ -4810,7 +4277,6 @@
   },
   {
     "key": "2A0C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चौगुना इंटीग्रल"
@@ -4819,7 +4285,6 @@
   },
   {
     "key": "2A0D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परिमित भाग अभिन्न"
@@ -4828,7 +4293,6 @@
   },
   {
     "key": "2A0E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल स्ट्रोक के साथ अभिन्न"
@@ -4837,7 +4301,6 @@
   },
   {
     "key": "2A0F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्लैश के साथ इंटीग्रल औसत"
@@ -4846,7 +4309,6 @@
   },
   {
     "key": "2A10",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "परिसंचरण समारोह"
@@ -4855,7 +4317,6 @@
   },
   {
     "key": "2A11",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एंटिक्लॉकवाइज इंटीग्रेशन"
@@ -4864,7 +4325,6 @@
   },
   {
     "key": "2A12",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ध्रुव के चारों ओर आयताकार पथ के साथ लाइन एकीकरण"
@@ -4873,7 +4333,6 @@
   },
   {
     "key": "2A13",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ध्रुव के चारों ओर अर्धवृत्ताकार पथ के साथ लाइन एकीकरण"
@@ -4882,7 +4341,6 @@
   },
   {
     "key": "2A14",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ध्रुव को शामिल करते हुए लाइन इंटीग्रेशन नहीं"
@@ -4891,7 +4349,6 @@
   },
   {
     "key": "2A15",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एक बिंदु के आसपास इंटीग्रल"
@@ -4900,7 +4357,6 @@
   },
   {
     "key": "2A16",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चतुर्भुज इंटीग्रल"
@@ -4909,7 +4365,6 @@
   },
   {
     "key": "2A18",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टाइम्स साइन के साथ अभिन्न"
@@ -4918,7 +4373,6 @@
   },
   {
     "key": "2A19",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अभिन्नता के साथ अभिन्न"
@@ -4927,7 +4381,6 @@
   },
   {
     "key": "2A1A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संघ के साथ अभिन्न"
@@ -4936,7 +4389,6 @@
   },
   {
     "key": "2A1B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ अभिन्न"
@@ -4945,7 +4397,6 @@
   },
   {
     "key": "2A1C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ अभिन्न"
@@ -4954,7 +4405,6 @@
   },
   {
     "key": "2A1D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शामिल हों"
@@ -4963,7 +4413,6 @@
   },
   {
     "key": "2A1E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बड़े वाम त्रिभुज संचालक"
@@ -4972,7 +4421,6 @@
   },
   {
     "key": "2A1F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन स्कीमा संरचना"
@@ -4981,7 +4429,6 @@
   },
   {
     "key": "2A20",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन स्कीम पाइपिंग"
@@ -4990,7 +4437,6 @@
   },
   {
     "key": "2A21",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन स्कीमा प्रोजेक्शन"
@@ -4999,7 +4445,6 @@
   },
   {
     "key": "2A22",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस ऊपर छोटे सर्कल के साथ साइन इन करें"
@@ -5008,7 +4453,6 @@
   },
   {
     "key": "2A23",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसके अलावा ऊपर सर्कमफ्लेक्स एक्सेंट के साथ साइन इन करें"
@@ -5017,7 +4461,6 @@
   },
   {
     "key": "2A24",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसके अलावा Tilde ऊपर के साथ साइन इन करें"
@@ -5026,7 +4469,6 @@
   },
   {
     "key": "2A25",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस नीचे के साथ साइन इन करें"
@@ -5035,7 +4477,6 @@
   },
   {
     "key": "2A26",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे Tilde के साथ साइन इन करें"
@@ -5044,7 +4485,6 @@
   },
   {
     "key": "2A27",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "साथ ही सब्स्क्रिप्‍ट टू के साथ साइन करें"
@@ -5053,7 +4493,6 @@
   },
   {
     "key": "2A28",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "काले त्रिकोण के साथ प्लस साइन"
@@ -5062,7 +4501,6 @@
   },
   {
     "key": "2A29",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "माइनस साइन इन कॉमा ऊपर"
@@ -5071,7 +4509,6 @@
   },
   {
     "key": "2A2A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे के साथ माइनस साइन"
@@ -5080,7 +4517,6 @@
   },
   {
     "key": "2A2B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गिरते डॉट्स के साथ माइनस साइन"
@@ -5089,7 +4525,6 @@
   },
   {
     "key": "2A2C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइजिंग डॉट्स के साथ माइनस साइन"
@@ -5098,7 +4533,6 @@
   },
   {
     "key": "2A2D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस साइन इन लेफ्ट हाफ सर्कल"
@@ -5107,7 +4541,6 @@
   },
   {
     "key": "2A2E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस साइन इन राइट हाफ सर्कल"
@@ -5116,7 +4549,6 @@
   },
   {
     "key": "2A2F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वेक्टर या क्रॉस उत्पाद"
@@ -5125,7 +4557,6 @@
   },
   {
     "key": "2A30",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गुणन चिह्न ऊपर दिए गए डॉट के साथ"
@@ -5134,7 +4565,6 @@
   },
   {
     "key": "2A31",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ गुणन चिह्न"
@@ -5143,7 +4573,6 @@
   },
   {
     "key": "2A32",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे बंद के साथ सेमीडायरेक्ट प्रोडक्ट"
@@ -5152,7 +4581,6 @@
   },
   {
     "key": "2A33",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लूट उत्पाद"
@@ -5161,7 +4589,6 @@
   },
   {
     "key": "2A34",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाएं आधे घेरे में गुणन चिह्न"
@@ -5170,7 +4597,6 @@
   },
   {
     "key": "2A35",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गुणन चिह्न सही आधे घेरे में"
@@ -5179,7 +4605,6 @@
   },
   {
     "key": "2A36",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्कुलमफ्लेक्स एक्सेंट के साथ सर्किल गुणा गुणा"
@@ -5188,7 +4613,6 @@
   },
   {
     "key": "2A37",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गुणन चिह्न डबल सर्कल में"
@@ -5197,7 +4621,6 @@
   },
   {
     "key": "2A38",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चक्रित चिह्न"
@@ -5206,7 +4629,6 @@
   },
   {
     "key": "2A39",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस साइन इन ट्रायंगल"
@@ -5215,7 +4637,6 @@
   },
   {
     "key": "2A3A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रिभुज में माइनस साइन"
@@ -5224,7 +4645,6 @@
   },
   {
     "key": "2A3B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "त्रिभुज में गुणन चिह्न"
@@ -5233,7 +4653,6 @@
   },
   {
     "key": "2A3C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "आंतरिक उत्पाद"
@@ -5242,7 +4661,6 @@
   },
   {
     "key": "2A3D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइटहैंड आंतरिक उत्पाद"
@@ -5251,7 +4669,6 @@
   },
   {
     "key": "2A3E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "z अंकन संबंधपरक रचना"
@@ -5260,7 +4677,6 @@
   },
   {
     "key": "2A3F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समामेलन या कॉप्टर"
@@ -5269,7 +4685,6 @@
   },
   {
     "key": "2A40",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ अंतरंगता"
@@ -5278,7 +4693,6 @@
   },
   {
     "key": "2A41",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "माइनस साइन के साथ संघ"
@@ -5287,7 +4701,6 @@
   },
   {
     "key": "2A42",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ संघ"
@@ -5296,7 +4709,6 @@
   },
   {
     "key": "2A43",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ अंतरंगता"
@@ -5305,7 +4717,6 @@
   },
   {
     "key": "2A44",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक और के साथ अंतःक्रिया"
@@ -5314,7 +4725,6 @@
   },
   {
     "key": "2A45",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉजिकल या के साथ संघ"
@@ -5323,7 +4733,6 @@
   },
   {
     "key": "2A46",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संघ इन्टॉलरेंस"
@@ -5332,7 +4741,6 @@
   },
   {
     "key": "2A47",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संघ से ऊपर का अंतर"
@@ -5341,7 +4749,6 @@
   },
   {
     "key": "2A48",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संघ इन्टर् बार बार इन्टरसेक्शन"
@@ -5350,7 +4757,6 @@
   },
   {
     "key": "2A49",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संघ के ऊपर बार से ऊपर का अंतर"
@@ -5359,7 +4765,6 @@
   },
   {
     "key": "2A4A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संघ के पास और संघ के साथ जुड़ गया"
@@ -5368,7 +4773,6 @@
   },
   {
     "key": "2A4B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इंटरसैक्शन बेसाइड और इंटरसेक्शन के साथ जुड़ गया"
@@ -5377,7 +4781,6 @@
   },
   {
     "key": "2A4C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सेरिफ के साथ बंद संघ"
@@ -5386,7 +4789,6 @@
   },
   {
     "key": "2A4D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सेरिफ़ के साथ बंद अंतर्ज्ञान"
@@ -5395,7 +4797,6 @@
   },
   {
     "key": "2A4E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल स्क्वायर इंटरसेक्शन"
@@ -5404,7 +4805,6 @@
   },
   {
     "key": "2A4F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल स्क्वायर यूनियन"
@@ -5413,7 +4813,6 @@
   },
   {
     "key": "2A50",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "serifs और लूट उत्पाद के साथ बंद संघ"
@@ -5422,7 +4821,6 @@
   },
   {
     "key": "2A51",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉजिकल और डॉट एबव के साथ"
@@ -5431,7 +4829,6 @@
   },
   {
     "key": "2A52",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉजिकल या डॉट एबव के साथ"
@@ -5440,7 +4837,6 @@
   },
   {
     "key": "2A53",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल तार्किक और"
@@ -5449,7 +4845,6 @@
   },
   {
     "key": "2A54",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल तार्किक या"
@@ -5458,7 +4853,6 @@
   },
   {
     "key": "2A55",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो गहन तार्किक और"
@@ -5467,7 +4861,6 @@
   },
   {
     "key": "2A56",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो गहन तार्किक या"
@@ -5476,7 +4869,6 @@
   },
   {
     "key": "2A57",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "झुका हुआ बड़ा या"
@@ -5485,7 +4877,6 @@
   },
   {
     "key": "2A58",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "झुका हुआ बड़ा और"
@@ -5494,7 +4885,6 @@
   },
   {
     "key": "2A59",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉजिकल या ओवरलैपिंग लॉजिकल एंड"
@@ -5503,7 +4893,6 @@
   },
   {
     "key": "2A5A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक और मध्य स्टेम के साथ"
@@ -5512,7 +4901,6 @@
   },
   {
     "key": "2A5B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक या मध्य स्टेम के साथ"
@@ -5521,7 +4909,6 @@
   },
   {
     "key": "2A5C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक और क्षैतिज डैश के साथ"
@@ -5530,7 +4917,6 @@
   },
   {
     "key": "2A5D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक या क्षैतिज डैश के साथ"
@@ -5539,7 +4925,6 @@
   },
   {
     "key": "2A5E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक और डबल ओवरबार के साथ"
@@ -5548,7 +4933,6 @@
   },
   {
     "key": "2A5F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक और अंडरबार के साथ"
@@ -5557,7 +4941,6 @@
   },
   {
     "key": "2A60",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लॉजिकल और डबल अंडरबार के साथ"
@@ -5566,7 +4949,6 @@
   },
   {
     "key": "2A61",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ छोटा वी"
@@ -5575,7 +4957,6 @@
   },
   {
     "key": "2A62",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक या डबल ओवरबार के साथ"
@@ -5584,7 +4965,6 @@
   },
   {
     "key": "2A63",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तार्किक या डबल अंडरबार के साथ"
@@ -5593,7 +4973,6 @@
   },
   {
     "key": "2A64",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन डोमेन एंटीरेस्ट्रिशन"
@@ -5602,7 +4981,6 @@
   },
   {
     "key": "2A65",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन रेंज एंटीएस्ट्रिक्शन"
@@ -5611,7 +4989,6 @@
   },
   {
     "key": "2A66",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे दिए गए डॉट के साथ साइन इन करें"
@@ -5620,7 +4997,6 @@
   },
   {
     "key": "2A67",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट एबव के साथ पहचान"
@@ -5629,7 +5005,6 @@
   },
   {
     "key": "2A68",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल स्ट्रोक के साथ ट्रिपल हॉरिजॉन्टल बार"
@@ -5638,7 +5013,6 @@
   },
   {
     "key": "2A69",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल वर्टिकल स्ट्रोक के साथ ट्रिपल हॉरिजॉन्टल बार"
@@ -5647,7 +5021,6 @@
   },
   {
     "key": "2A6A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट ऊपर के साथ टिल्ड"
@@ -5656,7 +5029,6 @@
   },
   {
     "key": "2A6B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइजिंग डॉट्स के साथ टिल्ड"
@@ -5665,7 +5037,6 @@
   },
   {
     "key": "2A6C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समान माइनस समान"
@@ -5674,7 +5045,6 @@
   },
   {
     "key": "2A6D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट ऊपर के साथ बधाई"
@@ -5683,7 +5053,6 @@
   },
   {
     "key": "2A6E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तारांकन के साथ बराबर"
@@ -5692,7 +5061,6 @@
   },
   {
     "key": "2A6F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग सर्कुलफ्लेक्स एक्सेंट के बराबर"
@@ -5701,7 +5069,6 @@
   },
   {
     "key": "2A70",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर या बराबर"
@@ -5710,7 +5077,6 @@
   },
   {
     "key": "2A71",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर साइन ऊपर प्लस साइन"
@@ -5719,7 +5085,6 @@
   },
   {
     "key": "2A72",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "साथ ही साइन इन करें ऊपर बराबर साइन"
@@ -5728,7 +5093,6 @@
   },
   {
     "key": "2A73",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर टिल्ड के बराबर साइन"
@@ -5737,7 +5101,6 @@
   },
   {
     "key": "2A74",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल कोलोन बराबर"
@@ -5746,7 +5109,6 @@
   },
   {
     "key": "2A75",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दो लगातार बराबर संकेत"
@@ -5755,7 +5117,6 @@
   },
   {
     "key": "2A76",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "तीन लगातार बराबर संकेत"
@@ -5764,7 +5125,6 @@
   },
   {
     "key": "2A77",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर दो डॉट्स ऊपर और दो डॉट्स नीचे के साथ साइन इन करें"
@@ -5773,7 +5133,6 @@
   },
   {
     "key": "2A78",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "चार डॉट्स ऊपर के साथ बराबर"
@@ -5782,7 +5141,6 @@
   },
   {
     "key": "2A79",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्कल के अंदर कम-से-कम"
@@ -5791,7 +5149,6 @@
   },
   {
     "key": "2A7A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्किल के अंदर ग्रेटर-थान"
@@ -5800,7 +5157,6 @@
   },
   {
     "key": "2A7B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्रश्न-चिह्न से ऊपर से कम"
@@ -5809,7 +5165,6 @@
   },
   {
     "key": "2A7C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान विथ प्रश्न मार्क एबव"
@@ -5818,7 +5173,6 @@
   },
   {
     "key": "2A7D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-कम या slanted बराबर"
@@ -5827,7 +5181,6 @@
   },
   {
     "key": "2A7E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या Slanted बराबर"
@@ -5836,7 +5189,6 @@
   },
   {
     "key": "2A7F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-थान या slanted बराबर अंदर डॉट के साथ"
@@ -5845,7 +5197,6 @@
   },
   {
     "key": "2A80",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या स्लोटेड इक्वल टू डॉट इन इनसाइड"
@@ -5854,7 +5205,6 @@
   },
   {
     "key": "2A81",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-थन या स्लोड इक्वल को डॉट एबव के साथ"
@@ -5863,7 +5213,6 @@
   },
   {
     "key": "2A82",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या स्लोड इक्वल टू डॉट डॉट एबव"
@@ -5872,7 +5221,6 @@
   },
   {
     "key": "2A83",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट-थॉट या स्लोटेड इक्वल को डॉट एबट राइट के साथ"
@@ -5881,7 +5229,6 @@
   },
   {
     "key": "2A84",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या स्लोटेड इक्वल टू डॉट एबव लेफ्ट"
@@ -5890,7 +5237,6 @@
   },
   {
     "key": "2A85",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-थान या अनुमानित"
@@ -5899,7 +5245,6 @@
   },
   {
     "key": "2A86",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान या अनुमानित"
@@ -5908,7 +5253,6 @@
   },
   {
     "key": "2A87",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-थान और एकल-रेखा समान नहीं"
@@ -5917,7 +5261,6 @@
   },
   {
     "key": "2A88",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान और सिंगल-लाइन न के बराबर"
@@ -5926,7 +5269,6 @@
   },
   {
     "key": "2A89",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-अधिक और अनुमानित नहीं"
@@ -5935,7 +5277,6 @@
   },
   {
     "key": "2A8A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान और अनुमानित नहीं"
@@ -5944,7 +5285,6 @@
   },
   {
     "key": "2A8B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान के ऊपर डबल-लाइन के बराबर कम-से-कम"
@@ -5953,7 +5293,6 @@
   },
   {
     "key": "2A8C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान डबल-लाइन के ऊपर, कम-से-कम के बराबर"
@@ -5962,7 +5301,6 @@
   },
   {
     "key": "2A8D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समान या समान से कम"
@@ -5971,7 +5309,6 @@
   },
   {
     "key": "2A8E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान ऊपर समान या समान"
@@ -5980,7 +5317,6 @@
   },
   {
     "key": "2A8F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान से कम समान"
@@ -5989,7 +5325,6 @@
   },
   {
     "key": "2A90",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान ऊपर समान कम-से-ऊपर"
@@ -5998,7 +5333,6 @@
   },
   {
     "key": "2A91",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान के ऊपर डबल-लाइन बराबर से कम"
@@ -6007,7 +5341,6 @@
   },
   {
     "key": "2A92",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान से कम से कम डबल-लाइन बराबर"
@@ -6016,7 +5349,6 @@
   },
   {
     "key": "2A93",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान से कम के बराबर स्लैटल से कम से कम से कम के बराबर"
@@ -6025,7 +5357,6 @@
   },
   {
     "key": "2A94",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान से ऊपर स्लैन्ड इक्वेल से कम से कम-से-ऊपर स्लैन्ड इक्वेल"
@@ -6034,7 +5365,6 @@
   },
   {
     "key": "2A95",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "slanted बराबर या उससे कम"
@@ -6043,7 +5373,6 @@
   },
   {
     "key": "2A96",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "slanted बराबर या अधिक से अधिक"
@@ -6052,7 +5381,6 @@
   },
   {
     "key": "2A97",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट इनसाइड के साथ Slanted बराबर या उससे कम"
@@ -6061,7 +5389,6 @@
   },
   {
     "key": "2A98",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉटल इनसाइड के साथ Slanted बराबर या ग्रेटर-थान"
@@ -6070,7 +5397,6 @@
   },
   {
     "key": "2A99",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-लाइन समान या उससे कम"
@@ -6079,7 +5405,6 @@
   },
   {
     "key": "2A9A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-लाइन के बराबर या ग्रेटर-थान"
@@ -6088,7 +5413,6 @@
   },
   {
     "key": "2A9B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-लाइन slanted बराबर या उससे कम"
@@ -6097,7 +5421,6 @@
   },
   {
     "key": "2A9C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-लाइन Slanted बराबर या अधिक से अधिक-थान"
@@ -6106,7 +5429,6 @@
   },
   {
     "key": "2A9D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समान या कम-से-अधिक"
@@ -6115,7 +5437,6 @@
   },
   {
     "key": "2A9E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसी तरह या ग्रेटर-थान"
@@ -6124,7 +5445,6 @@
   },
   {
     "key": "2A9F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "समान-से ऊपर समान कम-से-अधिक समान चिह्न"
@@ -6133,7 +5453,6 @@
   },
   {
     "key": "2AA0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान से ऊपर समान समान संकेत"
@@ -6142,7 +5461,6 @@
   },
   {
     "key": "2AA1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल नेस्टेड कम-थान"
@@ -6151,7 +5469,6 @@
   },
   {
     "key": "2AA2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल नेस्टेड ग्रेटर-थान"
@@ -6160,7 +5477,6 @@
   },
   {
     "key": "2AA3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ डबल नेस्टेड लेस-थैन"
@@ -6169,7 +5485,6 @@
   },
   {
     "key": "2AA4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान कम-से-अधिक ओवरलैपिंग"
@@ -6178,7 +5493,6 @@
   },
   {
     "key": "2AA5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान बगल में कम-से-कम"
@@ -6187,7 +5501,6 @@
   },
   {
     "key": "2AA6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-कम बंद वक्र द्वारा"
@@ -6196,7 +5509,6 @@
   },
   {
     "key": "2AA7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान क्लोज्ड बाई कर्व"
@@ -6205,7 +5517,6 @@
   },
   {
     "key": "2AA8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "कम-से-कम बंद वक्र के ऊपर बंद बराबर के बराबर"
@@ -6214,7 +5525,6 @@
   },
   {
     "key": "2AA9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ग्रेटर-थान को बंद करके कर्व से ऊपर स्लोटेड समान"
@@ -6223,7 +5533,6 @@
   },
   {
     "key": "2AAA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से छोटा"
@@ -6232,7 +5541,6 @@
   },
   {
     "key": "2AAB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से भी बड़ा"
@@ -6241,7 +5549,6 @@
   },
   {
     "key": "2AAC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से छोटा या बराबर"
@@ -6250,7 +5557,6 @@
   },
   {
     "key": "2AAD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "से बड़ा या बराबर"
@@ -6259,7 +5565,6 @@
   },
   {
     "key": "2AAE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बम्पी ऊपर के साथ साइन इन करें"
@@ -6268,7 +5573,6 @@
   },
   {
     "key": "2AAF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सिंगल-लाइन बराबर साइन से ऊपर"
@@ -6277,7 +5581,6 @@
   },
   {
     "key": "2AB0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सिंगल-लाइन के बराबर साइन के ऊपर सफलता"
@@ -6286,7 +5589,6 @@
   },
   {
     "key": "2AB1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सिंगल-लाइन न के बराबर प्रीवर"
@@ -6295,7 +5597,6 @@
   },
   {
     "key": "2AB2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एकल-पंक्ति से ऊपर की सफलता नहीं के बराबर"
@@ -6304,7 +5605,6 @@
   },
   {
     "key": "2AB3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबरी से ऊपर के हस्ताक्षर"
@@ -6313,7 +5613,6 @@
   },
   {
     "key": "2AB4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बराबर के ऊपर हस्ताक्षर"
@@ -6322,7 +5621,6 @@
   },
   {
     "key": "2AB5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसके बाद के संस्करण के बराबर नहीं है"
@@ -6331,7 +5629,6 @@
   },
   {
     "key": "2AB6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसके बाद के संस्करण के बराबर नहीं है"
@@ -6340,7 +5637,6 @@
   },
   {
     "key": "2AB7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर के बराबर"
@@ -6349,7 +5645,6 @@
   },
   {
     "key": "2AB8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर के ऊपर सफलता"
@@ -6358,7 +5653,6 @@
   },
   {
     "key": "2AB9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर नहीं के ऊपर से पहले"
@@ -6367,7 +5661,6 @@
   },
   {
     "key": "2ABA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर नहीं के ऊपर सफलता"
@@ -6376,7 +5669,6 @@
   },
   {
     "key": "2ABB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल प्राथमिकताएं"
@@ -6385,7 +5677,6 @@
   },
   {
     "key": "2ABC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल सफलता"
@@ -6394,7 +5685,6 @@
   },
   {
     "key": "2ABD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ सबसेट"
@@ -6403,7 +5693,6 @@
   },
   {
     "key": "2ABE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डॉट के साथ सुपरसेट"
@@ -6412,7 +5701,6 @@
   },
   {
     "key": "2ABF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस साइन डाउन के साथ सबसेट"
@@ -6421,7 +5709,6 @@
   },
   {
     "key": "2AC0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "प्लस साइन डाउन के साथ सुपरसेट"
@@ -6430,7 +5717,6 @@
   },
   {
     "key": "2AC1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे गुणन चिह्न के साथ सबसेट"
@@ -6439,7 +5725,6 @@
   },
   {
     "key": "2AC2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "गुणन के साथ सुपरसेट नीचे साइन इन करें"
@@ -6448,7 +5733,6 @@
   },
   {
     "key": "2AC3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उपर्युक्त या बराबर के साथ डॉट के ऊपर"
@@ -6457,7 +5741,6 @@
   },
   {
     "key": "2AC4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "या इसके बाद के संस्करण का डॉट के ऊपर के साथ समतुल्य"
@@ -6466,7 +5749,6 @@
   },
   {
     "key": "2AC5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर के बराबर के संकेत पर हस्ताक्षर"
@@ -6475,7 +5757,6 @@
   },
   {
     "key": "2AC6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर के साइन का सुपरसेट"
@@ -6484,7 +5765,6 @@
   },
   {
     "key": "2AC7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सब से ऊपर टिल्ड का सबसेट"
@@ -6493,7 +5773,6 @@
   },
   {
     "key": "2AC8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर टिल्डे का सुपरसेट"
@@ -6502,7 +5781,6 @@
   },
   {
     "key": "2AC9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर के ऊपर का सबसेट"
@@ -6511,7 +5789,6 @@
   },
   {
     "key": "2ACA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लगभग बराबर के ऊपर का सुपरसेट"
@@ -6520,7 +5797,6 @@
   },
   {
     "key": "2ACB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "इसके बाद के संस्करण की तुलना बराबर नहीं"
@@ -6529,7 +5805,6 @@
   },
   {
     "key": "2ACC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर का सुपरसेट न के बराबर"
@@ -6538,7 +5813,6 @@
   },
   {
     "key": "2ACD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर लेफ्ट ओपन बॉक्स"
@@ -6547,7 +5821,6 @@
   },
   {
     "key": "2ACE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "स्क्वायर राइट ओपन बॉक्स"
@@ -6556,7 +5829,6 @@
   },
   {
     "key": "2ACF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बंद सबसेट"
@@ -6565,7 +5837,6 @@
   },
   {
     "key": "2AD0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बंद सुपरसेट"
@@ -6574,7 +5845,6 @@
   },
   {
     "key": "2AD1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बंद सबसेट या बराबर"
@@ -6583,7 +5853,6 @@
   },
   {
     "key": "2AD2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बंद सुपरसेट या समान करने के लिए"
@@ -6592,7 +5861,6 @@
   },
   {
     "key": "2AD3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट के ऊपर सबसेट"
@@ -6601,7 +5869,6 @@
   },
   {
     "key": "2AD4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उपरसेट उपरसेट"
@@ -6610,7 +5877,6 @@
   },
   {
     "key": "2AD5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सबसेट के ऊपर सबसेट"
@@ -6619,7 +5885,6 @@
   },
   {
     "key": "2AD6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट से ऊपर सुपरसेट"
@@ -6628,7 +5893,6 @@
   },
   {
     "key": "2AD7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट बगल में सबसेट"
@@ -6637,7 +5901,6 @@
   },
   {
     "key": "2AD8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सुपरसेट बिसाइड एंड ज्वाइन बाई डैश विद सबसेट"
@@ -6646,7 +5909,6 @@
   },
   {
     "key": "2AD9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर खुलने का तत्व"
@@ -6655,7 +5917,6 @@
   },
   {
     "key": "2ADA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टी टॉप के साथ पिचफोर्क"
@@ -6664,7 +5925,6 @@
   },
   {
     "key": "2ADB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रांसवर्सल इंटरसेक्शन"
@@ -6673,7 +5933,6 @@
   },
   {
     "key": "2ADC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "forking"
@@ -6682,7 +5941,6 @@
   },
   {
     "key": "2ADD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nonforking"
@@ -6691,7 +5949,6 @@
   },
   {
     "key": "2ADE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शॉर्ट लेफ्ट टैक"
@@ -6700,7 +5957,6 @@
   },
   {
     "key": "2ADF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शॉर्ट डाउन टैक"
@@ -6709,7 +5965,6 @@
   },
   {
     "key": "2AE0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शॉर्ट अप टैक"
@@ -6718,7 +5973,6 @@
   },
   {
     "key": "2AE1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एस के साथ लंबवत"
@@ -6727,7 +5981,6 @@
   },
   {
     "key": "2AE2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल बार ट्रिपल राइट टर्नस्टाइल"
@@ -6736,7 +5989,6 @@
   },
   {
     "key": "2AE3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल बार लेफ्ट टर्नस्टाइल"
@@ -6745,7 +5997,6 @@
   },
   {
     "key": "2AE4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "वर्टिकल बार डबल लेफ्ट टर्नस्टाइल"
@@ -6754,7 +6005,6 @@
   },
   {
     "key": "2AE5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल बार डबल लेफ्ट टर्नस्टाइल"
@@ -6763,7 +6013,6 @@
   },
   {
     "key": "2AE6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल वर्टिकल के लेफ्ट मेंबर से लॉन्ग डैश"
@@ -6772,7 +6021,6 @@
   },
   {
     "key": "2AE7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ओवरबार के साथ शॉर्ट डाउन टैक"
@@ -6781,7 +6029,6 @@
   },
   {
     "key": "2AE8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ शॉर्ट अप टैक"
@@ -6790,7 +6037,6 @@
   },
   {
     "key": "2AE9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शॉर्ट अप टैक ऊपर शॉर्ट डाउन टैक"
@@ -6799,7 +6045,6 @@
   },
   {
     "key": "2AEA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल डाउन टैक"
@@ -6808,7 +6053,6 @@
   },
   {
     "key": "2AEB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल अप टैक"
@@ -6817,7 +6061,6 @@
   },
   {
     "key": "2AEC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल स्ट्रोक साइन नहीं"
@@ -6826,7 +6069,6 @@
   },
   {
     "key": "2AED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उल्टा डबल स्ट्रोक नहीं साइन"
@@ -6835,7 +6077,6 @@
   },
   {
     "key": "2AEE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "रिवर्सेड नेगेशन स्लैश के साथ विभाजन नहीं करता है"
@@ -6844,7 +6085,6 @@
   },
   {
     "key": "2AEF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सर्कल के ऊपर के साथ लंबवत रेखा"
@@ -6853,7 +6093,6 @@
   },
   {
     "key": "2AF0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे सर्कल के साथ खड़ी रेखा"
@@ -6862,7 +6101,6 @@
   },
   {
     "key": "2AF1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे सर्कल के साथ नीचे कील"
@@ -6871,7 +6109,6 @@
   },
   {
     "key": "2AF2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के साथ समानांतर"
@@ -6880,7 +6117,6 @@
   },
   {
     "key": "2AF3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "टिल्ड के साथ समानांतर"
@@ -6889,7 +6125,6 @@
   },
   {
     "key": "2AF4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल वर्टिकल बार बाइनरी रिलेशन"
@@ -6898,7 +6133,6 @@
   },
   {
     "key": "2AF5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज स्ट्रोक के साथ ट्रिपल वर्टिकल बार"
@@ -6907,7 +6141,6 @@
   },
   {
     "key": "2AF6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल कर्नल"
@@ -6916,7 +6149,6 @@
   },
   {
     "key": "2AF7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल नेस्ट कम-थान"
@@ -6925,7 +6157,6 @@
   },
   {
     "key": "2AF8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल नेस्टेड ग्रेटर-थान"
@@ -6934,7 +6165,6 @@
   },
   {
     "key": "2AF9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-लाइन कम-से-कम या बराबर होना चाहिए"
@@ -6943,7 +6173,6 @@
   },
   {
     "key": "2AFA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल-लाइन Slanted ग्रेटर-थान या समान टू"
@@ -6952,7 +6181,6 @@
   },
   {
     "key": "2AFB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ट्रिपल सॉलिडस बाइनरी रिलेशन"
@@ -6961,7 +6189,6 @@
   },
   {
     "key": "2AFC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बड़े ट्रिपल वर्टिकल बार"
@@ -6970,7 +6197,6 @@
   },
   {
     "key": "2AFD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "डबल सॉलिडस"
@@ -6979,7 +6205,6 @@
   },
   {
     "key": "2AFE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सफेद खड़ी पट्टी"
@@ -6988,7 +6213,6 @@
   },
   {
     "key": "2AFF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एन-आर्य व्हाइट वर्टिकल बार"
@@ -6997,7 +6221,6 @@
   },
   {
     "key": "301C",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "वेव डैश"
@@ -7006,7 +6229,6 @@
   },
   {
     "key": "FE10",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "वर्टिकल कॉमा के लिए प्रस्तुति फॉर्म"
@@ -7015,7 +6237,6 @@
   },
   {
     "key": "FE13",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "कार्यक्षेत्र बृहदान्त्र के लिए प्रस्तुति प्रपत्र"
@@ -7024,7 +6245,6 @@
   },
   {
     "key": "FE14",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "कार्यक्षेत्र अर्धविराम के लिए प्रस्तुति प्रपत्र"
@@ -7033,7 +6253,6 @@
   },
   {
     "key": "FE15",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "कार्यक्षेत्र विस्मयादिबोधक मार्क के लिए प्रस्तुति फॉर्म"
@@ -7042,7 +6261,6 @@
   },
   {
     "key": "FE16",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "वर्टिकल क्वेश्चन मार्क के लिए प्रस्तुति फॉर्म"
@@ -7051,7 +6269,6 @@
   },
   {
     "key": "FE19",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "वर्टिकल हॉरिजॉन्टल एलिप्सिस के लिए प्रस्तुति फॉर्म"
@@ -7060,7 +6277,6 @@
   },
   {
     "key": "FE30",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "वर्टिकल टू डॉट लीडर के लिए प्रस्तुति फॉर्म"
@@ -7069,7 +6285,6 @@
   },
   {
     "key": "FE31",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "वर्टिकल एम डैश के लिए प्रस्तुति फॉर्म"
@@ -7078,7 +6293,6 @@
   },
   {
     "key": "FE32",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "वर्टिकल एन डैश के लिए प्रस्तुति फॉर्म"
@@ -7087,7 +6301,6 @@
   },
   {
     "key": "FE33",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "वर्टिकल लो लाइन के लिए प्रस्तुति फॉर्म"
@@ -7096,7 +6309,6 @@
   },
   {
     "key": "FE34",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "वर्टिकल वेवी लो लाइन के लिए प्रस्तुति फॉर्म"
@@ -7105,7 +6317,6 @@
   },
   {
     "key": "FE45",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "तिल डॉट"
@@ -7114,7 +6325,6 @@
   },
   {
     "key": "FE46",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "सफेद तिल डॉट"
@@ -7123,7 +6333,6 @@
   },
   {
     "key": "FE49",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पानी का छींटा"
@@ -7132,7 +6341,6 @@
   },
   {
     "key": "FE4A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "centreline Overline"
@@ -7141,7 +6349,6 @@
   },
   {
     "key": "FE4B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "लहराती ओवरलाइन"
@@ -7150,7 +6357,6 @@
   },
   {
     "key": "FE4C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "डबल लहराती ओवरलाइन"
@@ -7159,7 +6365,6 @@
   },
   {
     "key": "FE4D",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "कम लाइन का धब्बा"
@@ -7168,7 +6373,6 @@
   },
   {
     "key": "FE4E",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "सेंट्रलाइन लो लाइन"
@@ -7177,7 +6381,6 @@
   },
   {
     "key": "FE4F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "लहराती कम लाइन"
@@ -7186,7 +6389,6 @@
   },
   {
     "key": "FE50",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा कोमा"
@@ -7195,7 +6397,6 @@
   },
   {
     "key": "FE52",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा पूर्ण विराम"
@@ -7204,7 +6405,6 @@
   },
   {
     "key": "FE54",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा अर्धविराम"
@@ -7213,7 +6413,6 @@
   },
   {
     "key": "FE55",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा कोलोन"
@@ -7222,7 +6421,6 @@
   },
   {
     "key": "FE56",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "लघु प्रश्न चिह्न"
@@ -7231,7 +6429,6 @@
   },
   {
     "key": "FE57",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा विस्मयादिबोधक चिह्न"
@@ -7240,7 +6437,6 @@
   },
   {
     "key": "FE58",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "छोटा एम डैश"
@@ -7249,7 +6445,6 @@
   },
   {
     "key": "FE5F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटी संख्या का चिन्ह"
@@ -7258,7 +6453,6 @@
   },
   {
     "key": "FE60",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा आम्रपांड"
@@ -7267,7 +6461,6 @@
   },
   {
     "key": "FE61",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा सरक"
@@ -7276,7 +6469,6 @@
   },
   {
     "key": "FE62",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटा प्लस साइन"
@@ -7285,7 +6477,6 @@
   },
   {
     "key": "FE63",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "छोटा हाइफ़न-माइनस"
@@ -7294,7 +6485,6 @@
   },
   {
     "key": "FE64",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटा कम-थान साइन"
@@ -7303,7 +6493,6 @@
   },
   {
     "key": "FE65",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटा ग्रेटर-थान साइन"
@@ -7312,7 +6501,6 @@
   },
   {
     "key": "FE66",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छोटे बराबर का चिन्ह"
@@ -7321,7 +6509,6 @@
   },
   {
     "key": "FE68",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा रिवर्स सॉलिडस"
@@ -7330,7 +6517,6 @@
   },
   {
     "key": "FE69",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "छोटा डॉलर चिन्ह"
@@ -7339,7 +6525,6 @@
   },
   {
     "key": "FE6A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटा सा प्रतिशत चिन्ह"
@@ -7348,7 +6533,6 @@
   },
   {
     "key": "FE6B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "छोटे वाणिज्यिक पर"
@@ -7357,7 +6541,6 @@
   },
   {
     "key": "FF01",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्ण विस्मयादिबोधक चिह्न"
@@ -7366,7 +6549,6 @@
   },
   {
     "key": "FF02",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "फुल विमोचन कोटेशन मार्क"
@@ -7375,7 +6557,6 @@
   },
   {
     "key": "FF03",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम नंबर साइन"
@@ -7384,7 +6565,6 @@
   },
   {
     "key": "FF04",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "फुलबॉर्न डॉलर साइन"
@@ -7393,7 +6573,6 @@
   },
   {
     "key": "FF05",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णता प्रतिशतता संकेत"
@@ -7402,7 +6581,6 @@
   },
   {
     "key": "FF06",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम एम्परसेंड"
@@ -7411,7 +6589,6 @@
   },
   {
     "key": "FF07",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्ण विराम एपोस्ट्रोफ"
@@ -7420,7 +6597,6 @@
   },
   {
     "key": "FF0A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "फ़ुल विस्‍तार Asterisk"
@@ -7429,7 +6605,6 @@
   },
   {
     "key": "FF0B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "फुलप्रूफ प्लस साइन"
@@ -7438,7 +6613,6 @@
   },
   {
     "key": "FF0C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम कोमा"
@@ -7447,7 +6621,6 @@
   },
   {
     "key": "FF0D",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "फुल एक्सपोर्टर हैफेन-माइनस"
@@ -7456,7 +6629,6 @@
   },
   {
     "key": "FF0E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम पूर्ण विराम"
@@ -7465,7 +6637,6 @@
   },
   {
     "key": "FF0F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "फुलफॉरमेंस सॉलिडस"
@@ -7474,7 +6645,6 @@
   },
   {
     "key": "FF1A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम बृहदान्त्र"
@@ -7483,7 +6653,6 @@
   },
   {
     "key": "FF1B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम अर्धविराम"
@@ -7492,7 +6661,6 @@
   },
   {
     "key": "FF1C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्ण विचलन कम-थान साइन"
@@ -7501,7 +6669,6 @@
   },
   {
     "key": "FF1D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्णविराम बराबर होता है"
@@ -7510,7 +6677,6 @@
   },
   {
     "key": "FF1E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्णता ग्रेटर-थन साइन"
@@ -7519,7 +6685,6 @@
   },
   {
     "key": "FF1F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्णविराम प्रश्न मार्क"
@@ -7528,7 +6693,6 @@
   },
   {
     "key": "FF20",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "पूर्ण विचलन वाणिज्यिक पर"
@@ -7537,7 +6701,6 @@
   },
   {
     "key": "FF3C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "फुलवॉर्शन रिवर्स सॉलिडस"
@@ -7546,7 +6709,6 @@
   },
   {
     "key": "FF3E",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "पूर्णविराम सर्कुफ्लेक्स एक्सेंट"
@@ -7555,7 +6717,6 @@
   },
   {
     "key": "FF3F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "पूर्णविराम निम्न रेखा"
@@ -7564,7 +6725,6 @@
   },
   {
     "key": "FF40",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "फुल विवर ग्रेव एक्सेंट"
@@ -7573,7 +6733,6 @@
   },
   {
     "key": "FF5C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्णविराम ऊर्ध्वाधर रेखा"
@@ -7582,7 +6741,6 @@
   },
   {
     "key": "FF5E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्णविराम टिल्डे"
@@ -7591,7 +6749,6 @@
   },
   {
     "key": "FFE0",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "फुल एक्सपेंशन सेंट साइन"
@@ -7600,7 +6757,6 @@
   },
   {
     "key": "FFE1",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "पूर्णविराम पाउंड साइन"
@@ -7609,7 +6765,6 @@
   },
   {
     "key": "FFE2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "पूर्णविराम नहीं हस्ताक्षर"
@@ -7618,7 +6773,6 @@
   },
   {
     "key": "FFE3",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "फुलवार्ड मैक्रॉन"
@@ -7627,7 +6781,6 @@
   },
   {
     "key": "FFE4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "पूर्ण विराम ब्रोकन बार"
@@ -7636,7 +6789,6 @@
   },
   {
     "key": "FFE5",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "पूर्णविराम येन चिन्ह"
@@ -7645,7 +6797,6 @@
   },
   {
     "key": "FFE6",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "फुल विओक साइन"
@@ -7654,7 +6805,6 @@
   },
   {
     "key": "FFE8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "आधीर्फ़ॉर्म फॉर्म लाइट वर्टिकल"
@@ -7663,7 +6813,6 @@
   },
   {
     "key": "FFED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "हाफ मूवमेंट ब्लैक स्क्वायर"
@@ -7672,7 +6821,6 @@
   },
   {
     "key": "FFEE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "अर्धवार्षिक व्हाइट सर्कल"

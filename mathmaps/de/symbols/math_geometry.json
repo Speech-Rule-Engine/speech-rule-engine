@@ -4,7 +4,6 @@
   },
   {
     "key": "2500",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Horizontal"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2501",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Schwere Horizontale"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2502",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Vertical"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2503",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Schwere Vertikale"
@@ -40,7 +36,6 @@
   },
   {
     "key": "2504",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen Licht Triple Dash Horizontal"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2505",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Triple Dash Horizontal"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2506",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Triple Dash Vertical"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2507",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Triple Dash Vertical"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2508",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Quadruple Dash Horizontal"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2509",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Quadruple Dash Horizontal"
@@ -94,7 +84,6 @@
   },
   {
     "key": "250A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Quadruple Dash Vertical"
@@ -103,7 +92,6 @@
   },
   {
     "key": "250B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Quadruple Dash Vertical"
@@ -112,7 +100,6 @@
   },
   {
     "key": "250C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Down und Right"
@@ -121,7 +108,6 @@
   },
   {
     "key": "250D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Light und Right Heavy"
@@ -130,7 +116,6 @@
   },
   {
     "key": "250E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Heavy und Right Light"
@@ -139,7 +124,6 @@
   },
   {
     "key": "250F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Down und Right"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2510",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Down und Links"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2511",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Light und Left Heavy"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2512",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Heavy und Left Light"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2513",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Down und Left"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2514",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen leuchten auf und richtig"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2515",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Light und Right Heavy"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2516",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Heavy und Right Light"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2517",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Up und Right"
@@ -220,7 +196,6 @@
   },
   {
     "key": "2518",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen leuchten und links"
@@ -229,7 +204,6 @@
   },
   {
     "key": "2519",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Light und Left Heavy"
@@ -238,7 +212,6 @@
   },
   {
     "key": "251A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Heavy und Left Light"
@@ -247,7 +220,6 @@
   },
   {
     "key": "251B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Up und Links"
@@ -256,7 +228,6 @@
   },
   {
     "key": "251C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Vertical und Right"
@@ -265,7 +236,6 @@
   },
   {
     "key": "251D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Light und Right Heavy"
@@ -274,7 +244,6 @@
   },
   {
     "key": "251E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Heavy und Right Down Light"
@@ -283,7 +252,6 @@
   },
   {
     "key": "251F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Heavy und Right Up Light"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2520",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Heavy und Right Light"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2521",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Light und Right Up Heavy"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2522",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Light und Right Down Heavy"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2523",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Vertical und Right"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2524",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Vertical und Left"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2525",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Light und Left Heavy"
@@ -346,7 +308,6 @@
   },
   {
     "key": "2526",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Heavy und Left Down Light"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2527",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Heavy und Left Up Light"
@@ -364,7 +324,6 @@
   },
   {
     "key": "2528",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Heavy und Left Light"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2529",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Light und Left Up Heavy"
@@ -382,7 +340,6 @@
   },
   {
     "key": "252A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Light und Left Down Heavy"
@@ -391,7 +348,6 @@
   },
   {
     "key": "252B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Vertical und Left"
@@ -400,7 +356,6 @@
   },
   {
     "key": "252C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen leicht und horizontal"
@@ -409,7 +364,6 @@
   },
   {
     "key": "252D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Heavy und Right Down Light"
@@ -418,7 +372,6 @@
   },
   {
     "key": "252E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Heavy und Left Down Light"
@@ -427,7 +380,6 @@
   },
   {
     "key": "252F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Light und Horizontal Heavy"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2530",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen für schweres und horizontales Licht"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2531",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Light und Left Down Heavy"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2532",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Light und Right Down Heavy"
@@ -463,7 +412,6 @@
   },
   {
     "key": "2533",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen nach unten und horizontal"
@@ -472,7 +420,6 @@
   },
   {
     "key": "2534",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen leuchten und horizontal"
@@ -481,7 +428,6 @@
   },
   {
     "key": "2535",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Heavy und Right Up Light"
@@ -490,7 +436,6 @@
   },
   {
     "key": "2536",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Heavy und Left Up Light"
@@ -499,7 +444,6 @@
   },
   {
     "key": "2537",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Light und Horizontal Heavy"
@@ -508,7 +452,6 @@
   },
   {
     "key": "2538",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen für schweres und horizontales Licht"
@@ -517,7 +460,6 @@
   },
   {
     "key": "2539",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Light und Left Up Heavy"
@@ -526,7 +468,6 @@
   },
   {
     "key": "253A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Light und Right Up Heavy"
@@ -535,7 +476,6 @@
   },
   {
     "key": "253B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen schwer und horizontal"
@@ -544,7 +484,6 @@
   },
   {
     "key": "253C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light vertikal und horizontal"
@@ -553,7 +492,6 @@
   },
   {
     "key": "253D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kastenzeichnungen links schweres und rechtes vertikales Licht"
@@ -562,7 +500,6 @@
   },
   {
     "key": "253E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Heavy und Left Vertical Light"
@@ -571,7 +508,6 @@
   },
   {
     "key": "253F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Light und Horizontal Heavy"
@@ -580,7 +516,6 @@
   },
   {
     "key": "2540",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Heavy und Down Horizontal Light"
@@ -589,7 +524,6 @@
   },
   {
     "key": "2541",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Heavy und Up Horizontal Light"
@@ -598,7 +532,6 @@
   },
   {
     "key": "2542",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kastenzeichnungen Vertikales schweres und horizontales Licht"
@@ -607,7 +540,6 @@
   },
   {
     "key": "2543",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Up Heavy und Right Down Light"
@@ -616,7 +548,6 @@
   },
   {
     "key": "2544",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Up Heavy und Left Down Light"
@@ -625,7 +556,6 @@
   },
   {
     "key": "2545",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Down Heavy und Right Up Light"
@@ -634,7 +564,6 @@
   },
   {
     "key": "2546",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Down Heavy und Left Up Light"
@@ -643,7 +572,6 @@
   },
   {
     "key": "2547",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Light und Up Horizontal Heavy"
@@ -652,7 +580,6 @@
   },
   {
     "key": "2548",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Light und Down Horizontal Heavy"
@@ -661,7 +588,6 @@
   },
   {
     "key": "2549",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Right Light und Left Vertical Heavy"
@@ -670,7 +596,6 @@
   },
   {
     "key": "254A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Left Light und Right Vertical Heavy"
@@ -679,7 +604,6 @@
   },
   {
     "key": "254B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy vertikal und horizontal"
@@ -688,7 +612,6 @@
   },
   {
     "key": "254C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Double Dash Horizontal"
@@ -697,7 +620,6 @@
   },
   {
     "key": "254D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Double Dash Horizontal"
@@ -706,7 +628,6 @@
   },
   {
     "key": "254E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Double Dash Vertical"
@@ -715,7 +636,6 @@
   },
   {
     "key": "254F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Double Dash Vertical"
@@ -724,7 +644,6 @@
   },
   {
     "key": "2550",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen doppelt horizontal"
@@ -733,7 +652,6 @@
   },
   {
     "key": "2551",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Double Vertical"
@@ -742,7 +660,6 @@
   },
   {
     "key": "2552",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Single und Right Double"
@@ -751,7 +668,6 @@
   },
   {
     "key": "2553",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Double und Right Single"
@@ -760,7 +676,6 @@
   },
   {
     "key": "2554",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Double Down und Right"
@@ -769,7 +684,6 @@
   },
   {
     "key": "2555",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Single und Left Double"
@@ -778,7 +692,6 @@
   },
   {
     "key": "2556",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Double und Left Single"
@@ -787,7 +700,6 @@
   },
   {
     "key": "2557",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Double Down und Links"
@@ -796,7 +708,6 @@
   },
   {
     "key": "2558",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Single und Right Double"
@@ -805,7 +716,6 @@
   },
   {
     "key": "2559",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Double und Right Single"
@@ -814,7 +724,6 @@
   },
   {
     "key": "255A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen verdoppeln und rechts"
@@ -823,7 +732,6 @@
   },
   {
     "key": "255B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Single und Left Double"
@@ -832,7 +740,6 @@
   },
   {
     "key": "255C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Double und Left Single"
@@ -841,7 +748,6 @@
   },
   {
     "key": "255D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen verdoppeln und links"
@@ -850,7 +756,6 @@
   },
   {
     "key": "255E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Single und Right Double"
@@ -859,7 +764,6 @@
   },
   {
     "key": "255F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Double und Right Single"
@@ -868,7 +772,6 @@
   },
   {
     "key": "2560",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Double Vertical und Right"
@@ -877,7 +780,6 @@
   },
   {
     "key": "2561",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Single und Left Double"
@@ -886,7 +788,6 @@
   },
   {
     "key": "2562",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Double und Left Single"
@@ -895,7 +796,6 @@
   },
   {
     "key": "2563",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Double Vertical und Left"
@@ -904,7 +804,6 @@
   },
   {
     "key": "2564",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Single und Horizontal Double"
@@ -913,7 +812,6 @@
   },
   {
     "key": "2565",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Down Double und Horizontal Single"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2566",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Double Down und Horizontal"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2567",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Single und Horizontal Double"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2568",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Up Double und Horizontal Single"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2569",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen verdoppeln und horizontal"
@@ -958,7 +852,6 @@
   },
   {
     "key": "256A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Single und Horizontal Double"
@@ -967,7 +860,6 @@
   },
   {
     "key": "256B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Vertical Double und Horizontal Single"
@@ -976,7 +868,6 @@
   },
   {
     "key": "256C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen doppelt vertikal und horizontal"
@@ -985,7 +876,6 @@
   },
   {
     "key": "256D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Arc Down und Right"
@@ -994,7 +884,6 @@
   },
   {
     "key": "256E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Arc Down und Links"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "256F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Arc Up und links"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "2570",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Arc Up und rechts"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "2571",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Diagonal Oben Rechts Nach Unten Links"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "2572",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Diagonal von oben links nach rechts unten"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "2573",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Zeichnungen Light Diagonal Cross"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "2574",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen Light Left"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "2575",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen leuchten auf"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "2576",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box-Zeichnungen Light Right"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "2577",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Down"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "2578",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Left"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "2579",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Up"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "257A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Right"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "257B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Down"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "257C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Left und Heavy Right"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "257D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Light Up und Heavy Down"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "257E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Left und Light Right"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "257F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Box Drawings Heavy Up und Light Down"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "2580",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Block der oberen Hälfte"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "2581",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer achter Block"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "2582",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer Viertelblock"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "2583",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Drei Achtel-Block senken"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "2584",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Block der unteren Hälfte"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "2585",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Fünf Achtel Block"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "2586",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer Dreiviertelblock"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "2587",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer Sieben Achtel-Block"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "2588",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Voller Block"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "2589",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linker Sieben Achtel Block"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "258A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linker Dreiviertelblock"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "258B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linker Block mit fünf Achteln"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "258C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linke halbe Block"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "258D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Block drei Achtel"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "258E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linke einen Viertelblock"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "258F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linker achter Block"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "2590",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Rechte halbe Block"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "2591",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Lichtschatten"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "2592",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Mittlere Schatten"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "2593",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Dunkler Schatten"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "2594",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Oberer achter Block"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "2595",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "rechter achter Block"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "2596",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant unten links"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "2597",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant rechts unten"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "2598",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben links"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "2599",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben links und unten links und rechts unten"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "259A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben links und rechts unten"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "259B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben links und oben rechts und unten links"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "259C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben links und oben rechts und unten rechts"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "259D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben rechts"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "259E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben rechts und unten links"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "259F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrant oben rechts und unten links und unten rechts"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "25A0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes Quadrat"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "25A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "25A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat mit abgerundeten Ecken"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "25A3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat, das schwarzes kleines Quadrat enthält"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "25A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit horizontaler Füllung"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "25A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit vertikaler Füllung"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "25A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit orthogonaler Schraffurfüllung"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "25A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit Oben links nach rechts unten füllen"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "25A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit oberer rechter bis unterer linker Füllung"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "25A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit diagonaler Schraffurfüllung"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "25AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes kleines Quadrat"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "25AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes kleines Quadrat"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "25AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes Rechteck"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "25AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Rechteck"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "25AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes vertikales Rechteck"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "25AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes vertikales Rechteck"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "25B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes Parallelogramm"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "25B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Parallelogramm"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "25B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes nach oben zeigendes Dreieck"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "25B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach oben zeigendes Dreieck"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "25B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes nach oben zeigendes kleines Dreieck"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "25B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach oben zeigendes kleines Dreieck"
@@ -1642,7 +1460,6 @@
   },
   {
     "key": "25B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes rechtwinkliges Dreieck"
@@ -1651,7 +1468,6 @@
   },
   {
     "key": "25B7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Weißes rechtwinkliges Dreieck"
@@ -1660,7 +1476,6 @@
   },
   {
     "key": "25B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes nach rechts zeigendes kleines Dreieck"
@@ -1669,7 +1484,6 @@
   },
   {
     "key": "25B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach rechts zeigendes kleines Dreieck"
@@ -1678,7 +1492,6 @@
   },
   {
     "key": "25BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer nach rechts zeigender Zeiger"
@@ -1687,7 +1500,6 @@
   },
   {
     "key": "25BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer nach rechts zeigender Zeiger"
@@ -1696,7 +1508,6 @@
   },
   {
     "key": "25BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes Abwärtsdreieck"
@@ -1705,7 +1516,6 @@
   },
   {
     "key": "25BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach unten zeigendes Dreieck"
@@ -1714,7 +1524,6 @@
   },
   {
     "key": "25BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes, nach unten zeigendes kleines Dreieck"
@@ -1723,7 +1532,6 @@
   },
   {
     "key": "25BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes kleines Dreieck"
@@ -1732,7 +1540,6 @@
   },
   {
     "key": "25C0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes nach links zeigendes Dreieck"
@@ -1741,7 +1548,6 @@
   },
   {
     "key": "25C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Weißes nach links zeigendes Dreieck"
@@ -1750,7 +1556,6 @@
   },
   {
     "key": "25C2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes nach links zeigendes kleines Dreieck"
@@ -1759,7 +1564,6 @@
   },
   {
     "key": "25C3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach links zeigendes kleines Dreieck"
@@ -1768,7 +1572,6 @@
   },
   {
     "key": "25C4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer nach links zeigender Zeiger"
@@ -1777,7 +1580,6 @@
   },
   {
     "key": "25C5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer nach links zeigender Zeiger"
@@ -1786,7 +1588,6 @@
   },
   {
     "key": "25C6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer Diamant"
@@ -1795,7 +1596,6 @@
   },
   {
     "key": "25C7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Diamant"
@@ -1804,7 +1604,6 @@
   },
   {
     "key": "25C8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Diamant mit schwarzem kleinem Diamant"
@@ -1813,7 +1612,6 @@
   },
   {
     "key": "25C9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Fischauge"
@@ -1822,7 +1620,6 @@
   },
   {
     "key": "25CA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Raute"
@@ -1831,7 +1628,6 @@
   },
   {
     "key": "25CB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Kreis"
@@ -1840,7 +1636,6 @@
   },
   {
     "key": "25CC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Gepunkteter Kreis"
@@ -1849,7 +1644,6 @@
   },
   {
     "key": "25CD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit vertikaler Füllung"
@@ -1858,7 +1652,6 @@
   },
   {
     "key": "25CE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Bullseye"
@@ -1867,7 +1660,6 @@
   },
   {
     "key": "25CF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer Kreis"
@@ -1876,7 +1668,6 @@
   },
   {
     "key": "25D0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit linker Hälfte schwarz"
@@ -1885,7 +1676,6 @@
   },
   {
     "key": "25D1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit rechter Hälfte schwarz"
@@ -1894,7 +1684,6 @@
   },
   {
     "key": "25D2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit unterer Hälfte Schwarz"
@@ -1903,7 +1692,6 @@
   },
   {
     "key": "25D3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit oberer Hälfte schwarz"
@@ -1912,7 +1700,6 @@
   },
   {
     "key": "25D4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit oberem rechten Quadranten schwarz"
@@ -1921,7 +1708,6 @@
   },
   {
     "key": "25D5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreis mit ganzem oberen linken Quadranten schwarz"
@@ -1930,7 +1716,6 @@
   },
   {
     "key": "25D6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linker halber schwarzer Kreis"
@@ -1939,7 +1724,6 @@
   },
   {
     "key": "25D7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "rechter halber schwarzer Kreis"
@@ -1948,7 +1732,6 @@
   },
   {
     "key": "25D8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Inverse Kugel"
@@ -1957,7 +1740,6 @@
   },
   {
     "key": "25D9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Inverse weißer Kreis"
@@ -1966,7 +1748,6 @@
   },
   {
     "key": "25DA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Umgekehrter weißer Kreis der oberen Hälfte"
@@ -1975,7 +1756,6 @@
   },
   {
     "key": "25DB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Inverser weißer Kreis der unteren Hälfte"
@@ -1984,7 +1764,6 @@
   },
   {
     "key": "25DC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreisbogen des oberen linken Quadranten"
@@ -1993,7 +1772,6 @@
   },
   {
     "key": "25DD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreisbogen im oberen rechten Quadranten"
@@ -2002,7 +1780,6 @@
   },
   {
     "key": "25DE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreisbogen des rechten unteren Quadranten"
@@ -2011,7 +1788,6 @@
   },
   {
     "key": "25DF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Kreisbogen des unteren linken Quadranten"
@@ -2020,7 +1796,6 @@
   },
   {
     "key": "25E0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Oberer Halbkreis"
@@ -2029,7 +1804,6 @@
   },
   {
     "key": "25E1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer Halbkreis"
@@ -2038,7 +1812,6 @@
   },
   {
     "key": "25E2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes rechtes Dreieck"
@@ -2047,7 +1820,6 @@
   },
   {
     "key": "25E3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes unteres linkes Dreieck"
@@ -2056,7 +1828,6 @@
   },
   {
     "key": "25E4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes oberes linkes Dreieck"
@@ -2065,7 +1836,6 @@
   },
   {
     "key": "25E5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes rechtes Dreieck"
@@ -2074,7 +1844,6 @@
   },
   {
     "key": "25E6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weiße Kugel"
@@ -2083,7 +1852,6 @@
   },
   {
     "key": "25E7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit linker Hälfte schwarz"
@@ -2092,7 +1860,6 @@
   },
   {
     "key": "25E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit rechter Hälfte schwarz"
@@ -2101,7 +1868,6 @@
   },
   {
     "key": "25E9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit der oberen linken Diagonalenhälfte schwarz"
@@ -2110,7 +1876,6 @@
   },
   {
     "key": "25EA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit unterer rechter diagonaler Hälfte schwarz"
@@ -2119,7 +1884,6 @@
   },
   {
     "key": "25EB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat mit senkrechter Linie"
@@ -2128,7 +1892,6 @@
   },
   {
     "key": "25EC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach oben zeigendes Dreieck mit Punkt"
@@ -2137,7 +1900,6 @@
   },
   {
     "key": "25ED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Aufwärtszeigendes Dreieck mit linker Hälfte schwarz"
@@ -2146,7 +1908,6 @@
   },
   {
     "key": "25EE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Aufwärtszeigendes Dreieck mit rechter Hälfte schwarz"
@@ -2155,7 +1916,6 @@
   },
   {
     "key": "25EF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Großer Kreis"
@@ -2164,7 +1924,6 @@
   },
   {
     "key": "25F0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat mit oberem linken Quadranten"
@@ -2173,7 +1932,6 @@
   },
   {
     "key": "25F1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat mit unterem linken Quadranten"
@@ -2182,7 +1940,6 @@
   },
   {
     "key": "25F2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat mit unterem rechten Quadranten"
@@ -2191,7 +1948,6 @@
   },
   {
     "key": "25F3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Quadrat mit rechtem oberen Quadranten"
@@ -2200,7 +1956,6 @@
   },
   {
     "key": "25F4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Kreis mit oberem linkem Quadranten"
@@ -2209,7 +1964,6 @@
   },
   {
     "key": "25F5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Kreis mit unterem linken Quadranten"
@@ -2218,7 +1972,6 @@
   },
   {
     "key": "25F6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Kreis mit unterem rechten Quadranten"
@@ -2227,7 +1980,6 @@
   },
   {
     "key": "25F7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer Kreis mit rechtem oberen Quadranten"
@@ -2236,7 +1988,6 @@
   },
   {
     "key": "25F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberes linkes Dreieck"
@@ -2245,7 +1996,6 @@
   },
   {
     "key": "25F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberes rechtes Dreieck"
@@ -2254,7 +2004,6 @@
   },
   {
     "key": "25FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Unteres linkes Dreieck"
@@ -2263,7 +2012,6 @@
   },
   {
     "key": "25FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Weißes mittleres Quadrat"
@@ -2272,7 +2020,6 @@
   },
   {
     "key": "25FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Schwarzes mittleres Quadrat"
@@ -2281,7 +2028,6 @@
   },
   {
     "key": "25FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Weißes mittleres kleines Quadrat"
@@ -2290,7 +2036,6 @@
   },
   {
     "key": "25FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Schwarzes mittleres kleines Quadrat"
@@ -2299,7 +2044,6 @@
   },
   {
     "key": "25FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Unteres rechtes Dreieck"
@@ -2308,7 +2052,6 @@
   },
   {
     "key": "2B12",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit oberer Hälfte schwarz"
@@ -2317,7 +2060,6 @@
   },
   {
     "key": "2B13",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit unterer Hälfte schwarz"
@@ -2326,7 +2068,6 @@
   },
   {
     "key": "2B14",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit oberer rechter diagonaler Hälfte schwarz"
@@ -2335,7 +2076,6 @@
   },
   {
     "key": "2B15",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Quadrat mit unterer linker diagonaler Hälfte schwarz"
@@ -2344,7 +2084,6 @@
   },
   {
     "key": "2B16",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Diamant mit linker Hälfte schwarz"
@@ -2353,7 +2092,6 @@
   },
   {
     "key": "2B17",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Diamant mit rechter Hälfte schwarz"
@@ -2362,7 +2100,6 @@
   },
   {
     "key": "2B18",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Diamant mit oberer Hälfte schwarz"
@@ -2371,7 +2108,6 @@
   },
   {
     "key": "2B19",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Diamant mit unterer Hälfte schwarz"
@@ -2380,7 +2116,6 @@
   },
   {
     "key": "2B1A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Gepunktetes Quadrat"
@@ -2389,7 +2124,6 @@
   },
   {
     "key": "2B1B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes großes Quadrat"
@@ -2398,7 +2132,6 @@
   },
   {
     "key": "2B1C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes großes Quadrat"
@@ -2407,7 +2140,6 @@
   },
   {
     "key": "2B1D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes sehr kleines Quadrat"
@@ -2416,7 +2148,6 @@
   },
   {
     "key": "2B1E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes sehr kleines Quadrat"
@@ -2425,7 +2156,6 @@
   },
   {
     "key": "2B1F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes Pentagon"
@@ -2434,7 +2164,6 @@
   },
   {
     "key": "2B20",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Pentagon"
@@ -2443,7 +2172,6 @@
   },
   {
     "key": "2B21",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes Sechseck"
@@ -2452,7 +2180,6 @@
   },
   {
     "key": "2B22",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes Sechseck"
@@ -2461,7 +2188,6 @@
   },
   {
     "key": "2B23",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Horizontales schwarzes Sechseck"
@@ -2470,7 +2196,6 @@
   },
   {
     "key": "2B24",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer großer Kreis"
@@ -2479,7 +2204,6 @@
   },
   {
     "key": "2B25",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer mittlerer Diamant"
@@ -2488,7 +2212,6 @@
   },
   {
     "key": "2B26",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer mittlerer Diamant"
@@ -2497,7 +2220,6 @@
   },
   {
     "key": "2B27",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarze mittlere Raute"
@@ -2506,7 +2228,6 @@
   },
   {
     "key": "2B28",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weiße mittlere Raute"
@@ -2515,7 +2236,6 @@
   },
   {
     "key": "2B29",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer kleiner Diamant"
@@ -2524,7 +2244,6 @@
   },
   {
     "key": "2B2A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarze kleine Raute"
@@ -2533,7 +2252,6 @@
   },
   {
     "key": "2B2B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weiße kleine Raute"
@@ -2542,7 +2260,6 @@
   },
   {
     "key": "2B2C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarze horizontale Ellipse"
@@ -2551,7 +2268,6 @@
   },
   {
     "key": "2B2D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weiße horizontale Ellipse"
@@ -2560,7 +2276,6 @@
   },
   {
     "key": "2B2E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarze vertikale Ellipse"
@@ -2569,7 +2284,6 @@
   },
   {
     "key": "2B2F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weiße vertikale Ellipse"
@@ -2578,7 +2292,6 @@
   },
   {
     "key": "2B50",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer mittlerer Stern"
@@ -2587,7 +2300,6 @@
   },
   {
     "key": "2B51",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer kleiner Stern"
@@ -2596,7 +2308,6 @@
   },
   {
     "key": "2B52",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer kleiner Stern"
@@ -2605,7 +2316,6 @@
   },
   {
     "key": "2B53",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzes nach rechts zeigendes Pentagon"
@@ -2614,7 +2324,6 @@
   },
   {
     "key": "2B54",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes nach rechts zeigendes Pentagon"
@@ -2623,7 +2332,6 @@
   },
   {
     "key": "2B55",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer großer Kreis"
@@ -2632,7 +2340,6 @@
   },
   {
     "key": "2B56",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schweres Oval mit innenliegendem Oval"
@@ -2641,7 +2348,6 @@
   },
   {
     "key": "2B57",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer Kreis mit Kreis nach innen"
@@ -2650,7 +2356,6 @@
   },
   {
     "key": "2B58",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer Kreis"
@@ -2659,7 +2364,6 @@
   },
   {
     "key": "2B59",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer eingekreister Saltire"

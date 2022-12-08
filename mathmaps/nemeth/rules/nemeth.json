@@ -110,7 +110,7 @@
       "number-indicator",
       "default",
       "self::number",
-      "not(@font) or @font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
       "contains(@annotation, \"nemeth:number\")",
       "not(ancestor::sqrt)",
       "not(ancestor::root)",

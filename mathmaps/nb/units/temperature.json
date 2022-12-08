@@ -4,42 +4,26 @@
   },
   {
     "key": "F",
-    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Fahrenheit"
       }
-    },
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ]
+    }
   },
   {
     "key": "C",
-    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Celsius"
       }
-    },
-    "names": [
-      "C",
-      "°C"
-    ]
+    }
   },
   {
     "key": "K",
-    "category": "temperature",
     "mappings": {
       "default": {
         "default": "Kelvin"
       }
-    },
-    "names": [
-      "K",
-      "°K"
-    ]
+    }
   }
 ]

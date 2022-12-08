@@ -33,11 +33,23 @@ import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 
 /**
- * Count list of nodes and concatenate this with the context string, adding a
- * colon at the end. Returns a closure with a local state.
+ * Count list of nodes and combine this according to the formatted context
+ * string. Formatting can consist of up to three, dash separated parts:
+ *
+ * Part 1 is the regular context string that is passed to the context
+ * function. For example context:"Column" returns `Column 1`, `Column 2`, ...
+ *
+ * Part 2 is a separator that is concatenated at the end of the computed
+ * context. For example context:"Column-:" returns `Column 1:`, `Column 2:`, ...
+ *
+ * Part 3 is a initial string that is prefixed only to the very first context
+ * string. For example context: "Column-:-Start " returns `Start Column 1:`,
+ * `Column 2:`, ...
+ *
+ * Returns a closure with a local state.
  *
  * @param nodes A node array.
- * @param context A context string.
+ * @param context The formatted context string.
  * @returns A function returning a string.
  */
 export function nodeCounter(

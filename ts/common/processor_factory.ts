@@ -357,3 +357,19 @@ set(
     }
   })
 );
+
+set(
+  new Processor('latex', {
+    processor: function (ltx: string) {
+      if (Engine.getInstance().modality !== 'braille' ||
+        Engine.getInstance().locale !== 'euro') {
+        console.info(
+          'LaTeX input currently only works for Euro Braille output.' +
+            ' Please use the latex-to-speech package from npm for general' +
+            ' LaTeX input to SRE.'
+        );
+      }
+      return process('speech', `<math latex="${ltx}"></math>`);
+    }
+  })
+);

@@ -4,19 +4,14 @@
   },
   {
     "key": "log",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "log"
       }
-    },
-    "names": [
-      "log"
-    ]
+    }
   },
   {
     "key": "ln",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logarithme népérien"
@@ -25,39 +20,26 @@
         "default": "l n",
         "Log_LnAsNaturalLog": "logarithme népérien"
       }
-    },
-    "names": [
-      "ln"
-    ]
+    }
   },
   {
     "key": "lg",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logarithme décimal"
       }
-    },
-    "names": [
-      "lg"
-    ]
+    }
   },
   {
     "key": "exp",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "exponentielle"
       }
-    },
-    "names": [
-      "exp",
-      "expt"
-    ]
+    }
   },
   {
     "key": "gcd",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "plus grand commun diviseur"
@@ -70,14 +52,12 @@
       }
     },
     "names": [
-      "gcd",
       "PGCD",
       "pgcd"
     ]
   },
   {
     "key": "lcm",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "plus petit commun multiple"
@@ -90,7 +70,6 @@
       }
     },
     "names": [
-      "lcm",
       "ppcm",
       "PPCM",
       "PPMC",
@@ -99,174 +78,114 @@
   },
   {
     "key": "arg",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "argument"
       }
-    },
-    "names": [
-      "arg"
-    ]
+    }
   },
   {
     "key": "im",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "partie imaginaire"
       }
-    },
-    "names": [
-      "im"
-    ]
+    }
   },
   {
     "key": "re",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "partie réelle"
       }
-    },
-    "names": [
-      "re"
-    ]
+    }
   },
   {
     "key": "inf",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "borne inférieure"
       }
-    },
-    "names": [
-      "inf"
-    ]
+    }
   },
   {
     "key": "lim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite"
       }
-    },
-    "names": [
-      "lim"
-    ]
+    }
   },
   {
     "key": "max",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "maximum"
       }
-    },
-    "names": [
-      "max"
-    ]
+    }
   },
   {
     "key": "min",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "minimum"
       }
-    },
-    "names": [
-      "min"
-    ]
+    }
   },
   {
     "key": "sup",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "borne supérieure"
       }
-    },
-    "names": [
-      "sup"
-    ]
+    }
   },
   {
     "key": "liminf",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite inferior"
       }
-    },
-    "names": [
-      "lim inf",
-      "liminf"
-    ]
+    }
   },
   {
     "key": "limsup",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite superior"
       }
-    },
-    "names": [
-      "lim sup",
-      "limsup"
-    ]
+    }
   },
   {
     "key": "injlim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite inductive"
       }
-    },
-    "names": [
-      "injlim",
-      "inj lim"
-    ]
+    }
   },
   {
     "key": "projlim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite projective"
       }
-    },
-    "names": [
-      "projlim",
-      "proj lim"
-    ]
+    }
   },
   {
     "key": "mod",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "modulo"
       }
-    },
-    "names": [
-      "mod"
-    ]
+    }
   },
   {
     "key": "Pr",
-    "category": "Probability",
     "mappings": {
       "default": {
         "default": "probabilité"
       }
-    },
-    "names": [
-      "Pr"
-    ]
+    }
   }
 ]

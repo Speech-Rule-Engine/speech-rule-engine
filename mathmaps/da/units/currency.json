@@ -4,389 +4,254 @@
   },
   {
     "key": "$",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "dollar",
         "plural": "dollars"
       }
-    },
-    "names": [
-      "$",
-      "💲",
-      "＄",
-      "﹩",
-      "USD"
-    ]
+    }
   },
   {
     "key": "£",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "pund",
         "plural": "pund"
       }
-    },
-    "names": [
-      "£",
-      "￡",
-      "GBP"
-    ]
+    }
   },
   {
     "key": "¥",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "yen",
         "plural": "yen"
       }
-    },
-    "names": [
-      "¥",
-      "￥",
-      "JPY"
-    ]
+    }
   },
   {
     "key": "€",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "euro",
         "plural": "euro"
       }
-    },
-    "names": [
-      "€",
-      "EUR"
-    ]
+    }
   },
   {
     "key": "₡",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "colons",
         "plural": "colonss"
       }
-    },
-    "names": [
-      "₡",
-      "CRC"
-    ]
+    }
   },
   {
     "key": "₢",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "cruzeiro",
         "plural": "cruzeiro"
       }
-    },
-    "names": [
-      "₢"
-    ]
+    }
   },
   {
     "key": "₣",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "franc",
         "plural": "franc"
       }
-    },
-    "names": [
-      "₣"
-    ]
+    }
   },
   {
     "key": "₤",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "lire",
         "plural": "lire"
       }
-    },
-    "names": [
-      "₤"
-    ]
+    }
   },
   {
     "key": "₥",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "mills",
         "plural": "millss"
       }
-    },
-    "names": [
-      "₥"
-    ]
+    }
   },
   {
     "key": "₦",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "naira",
         "plural": "naira"
       }
-    },
-    "names": [
-      "₦",
-      "NGN"
-    ]
+    }
   },
   {
     "key": "₧",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "peseta",
         "plural": "peseta"
       }
-    },
-    "names": [
-      "₧"
-    ]
+    }
   },
   {
     "key": "₨",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "rupees",
         "plural": "rupeess"
       }
-    },
-    "names": [
-      "₨",
-      "₹",
-      "INR",
-      "NPR",
-      "PKR",
-      "LKR"
-    ]
+    }
   },
   {
     "key": "₩",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "won",
         "plural": "won"
       }
-    },
-    "names": [
-      "₩",
-      "￦",
-      "KRW"
-    ]
+    }
   },
   {
     "key": "₪",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "shekel",
         "plural": "shekel"
       }
-    },
-    "names": [
-      "₪"
-    ]
+    }
   },
   {
     "key": "₫",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "dong",
         "plural": "dong"
       }
-    },
-    "names": [
-      "₫"
-    ]
+    }
   },
   {
     "key": "₭",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "kip",
         "plural": "kip"
       }
-    },
-    "names": [
-      "₭"
-    ]
+    }
   },
   {
     "key": "₮",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "tugrik",
         "plural": "tugrik"
       }
-    },
-    "names": [
-      "₮"
-    ]
+    }
   },
   {
     "key": "₯",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "drakme",
         "plural": "drakmer"
       }
-    },
-    "names": [
-      "₯"
-    ]
+    }
   },
   {
     "key": "₰",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "tyske pennies",
         "plural": "tyske pennies"
       }
-    },
-    "names": [
-      "₰"
-    ]
+    }
   },
   {
     "key": "₱",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "pesos",
         "plural": "pesoss"
       }
-    },
-    "names": [
-      "₱"
-    ]
+    }
   },
   {
     "key": "₲",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "guaranis",
         "plural": "guaranis"
       }
-    },
-    "names": [
-      "₲"
-    ]
+    }
   },
   {
     "key": "₳",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "australs",
         "plural": "australss"
       }
-    },
-    "names": [
-      "₳"
-    ]
+    }
   },
   {
     "key": "₴",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "hryvnias",
         "plural": "hryvniass"
       }
-    },
-    "names": [
-      "₴",
-      "UAH"
-    ]
+    }
   },
   {
     "key": "₵",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "cedi",
         "plural": "cedi"
       }
-    },
-    "names": [
-      "₵",
-      "GHS"
-    ]
+    }
   },
   {
     "key": "₸",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "tenge",
         "plural": "tenge"
       }
-    },
-    "names": [
-      "₸",
-      "KZT"
-    ]
+    }
   },
   {
     "key": "₺",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "tyrkisk lira",
         "plural": "tyrkiske lira"
       }
-    },
-    "names": [
-      "₺",
-      "TRY"
-    ]
+    }
   },
   {
     "key": "元",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "yuan",
         "plural": "yuan"
       }
-    },
-    "names": [
-      "元"
-    ]
+    }
   },
   {
     "key": "¢",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "cent",
         "plural": "cent"
       }
-    },
-    "names": [
-      "￠",
-      "¢"
-    ]
+    }
   }
 ]

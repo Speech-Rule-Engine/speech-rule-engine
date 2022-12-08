@@ -18,6 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as Alphabet from '../speech_rules/alphabet';
+
 export interface SemanticMeaning {
   type: SemanticType;
   role: SemanticRole;
@@ -114,8 +116,12 @@ export const enum SemanticType {
 export const enum SemanticRole {
   // Punctuation.
   COMMA = 'comma',
+  SEMICOLON = 'semicolon',
   ELLIPSIS = 'ellipsis',
   FULLSTOP = 'fullstop',
+  QUESTION = 'question',
+  EXCLAMATION = 'exclamation',
+  QUOTES = 'quotes',
   DASH = 'dash',
   TILDE = 'tilde',
   PRIME = 'prime', // Superscript.
@@ -151,12 +157,12 @@ export const enum SemanticRole {
   INTEGER = 'integer',
   FLOAT = 'float',
   OTHERNUMBER = 'othernumber',
+  INFTY = 'infty',
 
   MIXED = 'mixed',
   // Accents.
   MULTIACCENT = 'multiaccent',
   OVERACCENT = 'overaccent',
-
   UNDERACCENT = 'underaccent',
   // Index and tensor roles.
   UNDEROVER = 'underover',
@@ -207,6 +213,8 @@ export const enum SemanticRole {
   INTEGRAL = 'integral',
 
   GEOMETRY = 'geometry',
+  BOX = 'box',
+  BLOCK = 'block',
   // Binary operations.
   ADDITION = 'addition',
   MULTIPLICATION = 'multiplication',
@@ -259,6 +267,8 @@ export const enum SemanticRole {
   HYP = 'hyp',
 
   AXIOM = 'axiom',
+  LOGIC = 'logic',
+
   // General
   UNKNOWN = 'unknown',
 
@@ -269,25 +279,24 @@ export const enum SemanticRole {
  * Mapping for font annotations. (Taken from MathML2 section 3.2.2, with the
  * exception of double-struck-italic.)
  */
-export const enum SemanticFont {
-  BOLD = 'bold',
-  BOLDFRAKTUR = 'bold-fraktur',
-  BOLDITALIC = 'bold-italic',
-  BOLDSCRIPT = 'bold-script',
+enum ExtraFont {
   CALIGRAPHIC = 'caligraphic',
   CALIGRAPHICBOLD = 'caligraphic-bold',
-  DOUBLESTRUCK = 'double-struck',
-  DOUBLESTRUCKITALIC = 'double-struck-italic',
-  FRAKTUR = 'fraktur',
-  ITALIC = 'italic',
-  MONOSPACE = 'monospace',
-  NORMAL = 'normal',
   OLDSTYLE = 'oldstyle',
   OLDSTYLEBOLD = 'oldstyle-bold',
-  SCRIPT = 'script',
-  SANSSERIF = 'sans-serif',
-  SANSSERIFITALIC = 'sans-serif-italic',
-  SANSSERIFBOLD = 'sans-serif-bold',
-  SANSSERIFBOLDITALIC = 'sans-serif-bold-italic',
   UNKNOWN = 'unknown'
 }
+
+export type SemanticFont = Alphabet.Font | ExtraFont | Alphabet.Embellish;
+export const SemanticFont = { ...Alphabet.Font, ...ExtraFont, ...Alphabet.Embellish };
+
+enum SecondaryEnum {
+  ALLLETTERS = 'allLetters',
+  D = 'd',
+  BAR = 'bar',
+  TILDE = 'tilde'
+}
+
+export type SemanticSecondary = Alphabet.Base | SecondaryEnum;
+export const SemanticSecondary = { ...Alphabet.Base, ...SecondaryEnum };
+

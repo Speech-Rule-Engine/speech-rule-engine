@@ -4,66 +4,43 @@
   },
   {
     "key": "s",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "सेकंड"
       }
-    },
-    "si": true,
-    "names": [
-      "s"
-    ]
+    }
   },
   {
     "key": "″",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "सेकंड"
       }
-    },
-    "names": [
-      "″"
-    ]
+    }
   },
   {
     "key": "min",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "मिनट"
       }
-    },
-    "names": [
-      "min",
-      "′"
-    ]
+    }
   },
   {
     "key": "°",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "अंश"
       }
-    },
-    "names": [
-      "°"
-    ]
+    }
   },
   {
     "key": "h",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "घंटे",
         "plural": "घंटा"
       }
-    },
-    "names": [
-      "h",
-      "hr"
-    ]
+    }
   }
 ]

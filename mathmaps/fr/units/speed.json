@@ -4,20 +4,14 @@
   },
   {
     "key": "kt",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "nœud marin"
       }
-    },
-    "names": [
-      "kt",
-      "kt."
-    ]
+    }
   },
   {
     "key": "rpm",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "tours par minute",
@@ -25,22 +19,17 @@
       }
     },
     "names": [
-      "rpm",
       "tpm"
     ]
   },
   {
     "key": "kmh",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "kilomètres par heure",
         "default": "kilomètre par heure"
       }
-    },
-    "names": [
-      "kmh"
-    ]
+    }
   },
   {
     "key": "mph",
@@ -49,9 +38,6 @@
         "plural": "miles par heure",
         "default": "mile par heure"
       }
-    },
-    "names": [
-      "mph"
-    ]
+    }
   }
 ]

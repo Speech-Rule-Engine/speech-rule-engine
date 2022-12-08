@@ -4,7 +4,6 @@
   },
   {
     "key": "00B2",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "चुकता"
@@ -19,7 +18,6 @@
   },
   {
     "key": "00B3",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "घन"
@@ -34,7 +32,6 @@
   },
   {
     "key": "00BC",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक चतुर्थांश"
@@ -43,7 +40,6 @@
   },
   {
     "key": "00BD",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक द्वितीयांश"
@@ -52,7 +48,6 @@
   },
   {
     "key": "00BE",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "तीन चतुर्थांश"
@@ -61,7 +56,6 @@
   },
   {
     "key": "2150",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक सप्तमांश"
@@ -70,7 +64,6 @@
   },
   {
     "key": "2151",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक नवमांश"
@@ -79,7 +72,6 @@
   },
   {
     "key": "2152",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक दशांश"
@@ -88,7 +80,6 @@
   },
   {
     "key": "2153",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक तृतीयांश"
@@ -97,7 +88,6 @@
   },
   {
     "key": "2154",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "दो तृतीयांश"
@@ -106,7 +96,6 @@
   },
   {
     "key": "2155",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक पंचमांश"
@@ -115,7 +104,6 @@
   },
   {
     "key": "2156",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "दो पंचमांश"
@@ -124,7 +112,6 @@
   },
   {
     "key": "2157",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "तीन पंचमांश"
@@ -133,7 +120,6 @@
   },
   {
     "key": "2158",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "चार पंचमांश"
@@ -142,7 +128,6 @@
   },
   {
     "key": "2159",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक षष्टांश"
@@ -151,7 +136,6 @@
   },
   {
     "key": "215A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "पांच षष्टांश"
@@ -160,7 +144,6 @@
   },
   {
     "key": "215B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "एक अष्टांश"
@@ -169,7 +152,6 @@
   },
   {
     "key": "215C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "तीन अष्टांश"
@@ -178,7 +160,6 @@
   },
   {
     "key": "215D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "पांच अष्टांश"
@@ -187,7 +168,6 @@
   },
   {
     "key": "215E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "सात अष्टांश"
@@ -196,7 +176,6 @@
   },
   {
     "key": "215F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "अंश में एक और हर में"
@@ -205,7 +184,6 @@
   },
   {
     "key": "2189",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "शून्य तृतीयांश"
@@ -214,7 +192,6 @@
   },
   {
     "key": "3248",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में दस"
@@ -223,7 +200,6 @@
   },
   {
     "key": "3249",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में बीस"
@@ -232,7 +208,6 @@
   },
   {
     "key": "324A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में तिस"
@@ -241,7 +216,6 @@
   },
   {
     "key": "324B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में चालीस"
@@ -250,7 +224,6 @@
   },
   {
     "key": "324C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में पचास"
@@ -259,7 +232,6 @@
   },
   {
     "key": "324D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में साठ"
@@ -268,7 +240,6 @@
   },
   {
     "key": "324E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में सत्तर"
@@ -277,7 +248,6 @@
   },
   {
     "key": "324F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "काले वर्ग पर श्वेत वर्तुल में अस्सी"

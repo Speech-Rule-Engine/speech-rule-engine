@@ -4,132 +4,83 @@
   },
   {
     "key": "ft",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "फुट",
         "plural": "फिट"
       }
-    },
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "इंच"
       }
-    },
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "मील"
       }
-    },
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "गज"
       }
-    },
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
   {
     "key": "link",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "लिंक"
       }
-    },
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
     "key": "rod",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "रॉड"
       }
-    },
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
     "key": "chain",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "चेन"
       }
-    },
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
     "key": "furlong",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "फ़र्लांग"
       }
-    },
-    "names": [
-      "fur",
-      "fur."
-    ]
+    }
   },
   {
     "key": "n.m.",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "समुद्री मील"
       }
-    },
-    "names": [
-      "n.m."
-    ]
+    }
   },
   {
     "key": "m",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "मीटर"
       }
-    },
-    "si": true,
-    "names": [
-      "m"
-    ]
+    }
   }
 ]

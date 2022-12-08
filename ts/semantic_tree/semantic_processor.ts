@@ -22,8 +22,8 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import * as SemanticAttr from './semantic_attr';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
+import { NamedSymbol, SemanticMap } from './semantic_attr';
+import { SemanticFont, SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
 import { SemanticNode } from './semantic_node';
 import { SemanticNodeFactory } from './semantic_node_factory';
@@ -447,7 +447,7 @@ export default class SemanticProcessor {
     // content is.
     if (
       restNodes[0] &&
-      restNodes[0].textContent === SemanticAttr.functionApplication()
+      restNodes[0].textContent === NamedSymbol.functionApplication
     ) {
       // Store explicit function application to be reused later.
       SemanticProcessor.getInstance().funcAppls[funcNode.id] =
@@ -769,7 +769,7 @@ export default class SemanticProcessor {
       return;
     }
     const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
-    const meaning = content.map(SemanticAttr.lookupMeaning);
+    const meaning = content.map(x => SemanticMap.Meaning.get(x));
     if (
       meaning.every(function (x) {
         return (
@@ -808,7 +808,7 @@ export default class SemanticProcessor {
       return;
     }
     const content = [...node.textContent];
-    const meaning = content.map(SemanticAttr.lookupMeaning);
+    const meaning = content.map(x => SemanticMap.Meaning.get(x));
     const singleFont = meaning.reduce(function (prev, curr) {
       if (
         !prev ||
@@ -1808,7 +1808,7 @@ export default class SemanticProcessor {
     const operators =
       SemanticProcessor.getInstance().factory_.makeMultipleContentNodes(
         nodes.length - 1,
-        SemanticAttr.invisibleTimes()
+        NamedSymbol.invisibleTimes
       );
     SemanticProcessor.matchSpaces_(nodes, operators);
     // For now we assume this is a multiplication using invisible times.
@@ -1856,7 +1856,7 @@ export default class SemanticProcessor {
    */
   private explicitMixed_(nodes: SemanticNode[]): SemanticNode[] {
     const partition = SemanticUtil.partitionNodes(nodes, function (x) {
-      return x.textContent === SemanticAttr.invisiblePlus();
+      return x.textContent === NamedSymbol.invisiblePlus;
     });
     if (!partition.rel.length) {
       return nodes;
@@ -3093,7 +3093,7 @@ export default class SemanticProcessor {
     const commata =
       SemanticProcessor.getInstance().factory_.makeMultipleContentNodes(
         children.length - 1,
-        SemanticAttr.invisibleComma()
+        NamedSymbol.invisibleComma
       );
     commata.forEach(function (comma) {
       comma.role = SemanticRole.DUMMY;
@@ -3116,8 +3116,8 @@ export default class SemanticProcessor {
     // We save the original role of the node as accent annotation.
     const content = node.textContent;
     const role =
-      SemanticAttr.lookupSecondary('bar', content) ||
-      SemanticAttr.lookupSecondary('tilde', content) ||
+      SemanticMap.Secondary.get(content, SemanticSecondary.BAR) ||
+      SemanticMap.Secondary.get(content, SemanticSecondary.TILDE) ||
       node.role;
     node.role =
       type === SemanticType.UNDERSCORE
@@ -3484,7 +3484,7 @@ export default class SemanticProcessor {
    */
   private functionNode_(func: SemanticNode, arg: SemanticNode): SemanticNode {
     const applNode = SemanticProcessor.getInstance().factory_.makeContentNode(
-      SemanticAttr.functionApplication()
+      NamedSymbol.functionApplication
     );
     const appl = SemanticProcessor.getInstance().funcAppls[func.id];
     if (appl) {

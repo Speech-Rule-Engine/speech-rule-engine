@@ -118,66 +118,16 @@ export class ClearspeakPreferences extends DynamicCstr {
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
   }
 
-  // TODO: The following should be done in MathJax in the future!
-  // TODO (TS): Import the mathjax types, get rid of any.
-  // static getSpeechExplorer(item: MathItem): Explorer {
   /**
-   * Computes a selection of clearspeak preferences for the MathJax context menu
-   * wrt. currently focused subexpression.
-   *
-   * @param item A Math Item.
-   * @param locale The current locale.
-   * @returns The menu settings for a new radio button
-   *    sub menu.
+   * Returns the current clearspeak styles selection, if any is set.
    */
-  // TODO (TS): item should get MathJax type MathItem
-  public static smartPreferences(item: any, locale: string): AxisMap[] {
-    const prefs = ClearspeakPreferences.getLocalePreferences();
-    const loc = prefs[locale];
-    const explorer = item?.explorers?.explorers?.speech;
-    if (!loc || !explorer) {
-      return [];
-    }
-    const smart = ClearspeakPreferences.relevantPreferences(
-      explorer.walker.getFocus().getSemanticPrimary()
-    );
-    // var smart = 'Bar'; // TODO: Lookup the right preference.
-    const previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
-    const items = [
-      {
-        type: 'radio',
-        content: 'No Preferences',
-        id: 'clearspeak-default',
-        variable: 'speechRules'
-      },
-      {
-        type: 'radio',
-        content: 'Current Preferences',
-        id: 'clearspeak-' + previous,
-        variable: 'speechRules'
-      },
-      { type: 'rule' },
-      { type: 'label', content: 'Preferences for ' + smart },
-      { type: 'rule' }
-    ];
-    return items.concat(
-      loc[smart].map(function (x) {
-        const pair = x.split('_');
-        return {
-          type: 'radio',
-          content: pair[1],
-          id:
-            'clearspeak-' +
-            ClearspeakPreferences.addPreference(previous, pair[0], pair[1]),
-          variable: 'speechRules'
-        };
-      })
-    );
+  public static currentPreference() {
+    return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
   }
 
   /**
-   * Computes a clearspeak preference that should be changed given the type of
-   * the node.
+   * Computes a relevant selection of clearspeak preferences for a given
+   * semantic node.
    *
    * @param node A semantic node.
    * @returns The preference that fits the node's type and role.
@@ -191,7 +141,7 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * Look up the setting of a preference in a preference settings sting.
+   * Look up the setting of a preference in a preference settings string.
    *
    * @param prefs Preference settings.
    * @param kind The preference to look up.
@@ -207,7 +157,9 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * Adds or updates a value in a preference settings.
+   * Takes the string representation of a clearspeak preference setting and adds
+   * a new preference setting via a preference name and value pair. The updated
+   * setting is then returned again as a string.
    *
    * @param prefs Preference settings.
    * @param kind New preference name.

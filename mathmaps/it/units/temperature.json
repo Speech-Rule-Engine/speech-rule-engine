@@ -4,45 +4,29 @@
   },
   {
     "key": "F",
-    "category": "temperature",
     "mappings": {
       "default": {
         "plural": "gradi fahrenheit",
         "default": "grado fahrenheit"
       }
-    },
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ]
+    }
   },
   {
     "key": "C",
-    "category": "temperature",
     "mappings": {
       "default": {
         "plural": "gradi celsius",
         "default": "grado celsius"
       }
-    },
-    "names": [
-      "C",
-      "°C"
-    ]
+    }
   },
   {
     "key": "K",
-    "category": "temperature",
     "mappings": {
       "default": {
         "plural": "kelvin",
         "default": "kelvin"
       }
-    },
-    "names": [
-      "K",
-      "°K"
-    ]
+    }
   }
 ]

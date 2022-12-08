@@ -4,7 +4,6 @@
   },
   {
     "key": "23E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Dezimalexponentensymbol"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2605",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer Stern"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2606",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "weißer Stern"
@@ -31,7 +28,6 @@
   },
   {
     "key": "26AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Mittlerer weißer Kreis"
@@ -40,7 +36,6 @@
   },
   {
     "key": "26AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Mittlerer schwarzer Kreis"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2705",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißes schweres Häkchen"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2713",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Häkchen"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2714",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schweres Häkchen"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2715",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Multiplikation X"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2716",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwere Multiplikation X"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2717",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Stimmzettel X"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2718",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer Stimmzettel X"
@@ -112,7 +100,6 @@
   },
   {
     "key": "271B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Center Cross öffnen"
@@ -121,7 +108,6 @@
   },
   {
     "key": "271C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schweres offenes Mittelkreuz"
@@ -130,7 +116,6 @@
   },
   {
     "key": "2720",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Malteserkreuz"
@@ -139,7 +124,6 @@
   },
   {
     "key": "2721",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Davidstern"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2722",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Vier Teardrop-Spoked Asterisk"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2723",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Vier Ballon-Speichen-Sternchen"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2724",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwere Vier-Ballon-Speichen-Sternchen"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2725",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Vier Club-Spoked Asterisk"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2726",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer vierzackiger Stern"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2727",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weißer vierzackiger Stern"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2728",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Funkelt"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2729",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Stress umrissener weißer Stern"
@@ -220,7 +196,6 @@
   },
   {
     "key": "272A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Eingekreister weißer Stern"
@@ -229,7 +204,6 @@
   },
   {
     "key": "272B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Open Center Black Star"
@@ -238,7 +212,6 @@
   },
   {
     "key": "272C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer Center White Star"
@@ -247,7 +220,6 @@
   },
   {
     "key": "272D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarzer Stern umrissen"
@@ -256,7 +228,6 @@
   },
   {
     "key": "272E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer umrissener schwarzer Stern"
@@ -265,7 +236,6 @@
   },
   {
     "key": "272F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Sternrad Stern"
@@ -274,7 +244,6 @@
   },
   {
     "key": "2730",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Beschatteter weißer Stern"
@@ -283,7 +252,6 @@
   },
   {
     "key": "2731",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer Stern"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2732",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Öffnen Sie Center Asterisk"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2733",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Acht Speichen-Sternchen"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2734",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Achtzackiger schwarzer Stern"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2735",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Achtzackiger Sternradstern"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2736",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Sechszackiger schwarzer Stern"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2739",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Zwölf schwarzer Stern"
@@ -346,7 +308,6 @@
   },
   {
     "key": "273A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Sechzehn Spitzen Sternchen"
@@ -355,7 +316,6 @@
   },
   {
     "key": "273B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Teardrop-Spoked Sternchen"
@@ -364,7 +324,6 @@
   },
   {
     "key": "273C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Open Center Teardrop-Spoked Sternchen"
@@ -373,7 +332,6 @@
   },
   {
     "key": "273D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwerer Tropfen-Speichen-Sternchen"
@@ -382,7 +340,6 @@
   },
   {
     "key": "273E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Sechs Petalled Schwarzweiss-Florette"
@@ -391,7 +348,6 @@
   },
   {
     "key": "273F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwarze Florette"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2740",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Weiße Florette"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2741",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Acht Petalled umrissene schwarze Florette"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2742",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Eingekreistes offenes Zentrum Achtstern"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2743",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schweres, tropfenbesetztes Nadelrad-Sternchen"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2744",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schneeflocke"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2745",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Feste Trifoliate-Schneeflocke"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2746",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwere Chevron-Schneeflocke"
@@ -463,7 +412,6 @@
   },
   {
     "key": "2747",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Funkeln"
@@ -472,7 +420,6 @@
   },
   {
     "key": "2748",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schweres Funkeln"
@@ -481,7 +428,6 @@
   },
   {
     "key": "2749",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Ballon-Speichen-Sternchen"
@@ -490,7 +436,6 @@
   },
   {
     "key": "274A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Acht Teardrop-Spoked Propeller Sternchen"
@@ -499,7 +444,6 @@
   },
   {
     "key": "274B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Schwere Acht Teardrop-Spoked Propeller Sternchen"
@@ -508,7 +452,6 @@
   },
   {
     "key": "274C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Cross Mark"
@@ -517,7 +460,6 @@
   },
   {
     "key": "274D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Beschatteter weißer Kreis"

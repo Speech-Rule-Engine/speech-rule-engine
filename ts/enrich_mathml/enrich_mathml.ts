@@ -24,7 +24,7 @@
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import Engine from '../common/engine';
-import * as SemanticAttr from '../semantic_tree/semantic_attr';
+import { NamedSymbol } from '../semantic_tree/semantic_attr';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory';
 import { SemanticNode } from '../semantic_tree/semantic_node';
@@ -511,7 +511,7 @@ export function functionApplication_(
   oldNode: Element,
   newNode: Element
 ): boolean {
-  const appl = SemanticAttr.functionApplication();
+  const appl = NamedSymbol.functionApplication;
   if (
     oldNode &&
     newNode &&

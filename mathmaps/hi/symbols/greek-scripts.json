@@ -4,7 +4,6 @@
   },
   {
     "key": "1D26",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "छोटा केपिटल गामा"
@@ -13,7 +12,6 @@
   },
   {
     "key": "1D27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "छोटा केपिटल लैम्ब्डा"
@@ -22,7 +20,6 @@
   },
   {
     "key": "1D28",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "छोटा केपिटल पाई"
@@ -31,7 +28,6 @@
   },
   {
     "key": "1D29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "छोटा केपिटल रो"
@@ -40,7 +36,6 @@
   },
   {
     "key": "1D2A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "छोटा केपिटल साई"
@@ -49,7 +44,6 @@
   },
   {
     "key": "1D5E",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "उर्ध्वाक्षर गामा"
@@ -58,7 +52,6 @@
   },
   {
     "key": "1D60",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "उर्ध्वाक्षर फाई"
@@ -67,7 +60,6 @@
   },
   {
     "key": "1D66",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "पादाक्षर बीटा"
@@ -76,7 +68,6 @@
   },
   {
     "key": "1D67",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "पादाक्षर गामा"
@@ -85,7 +76,6 @@
   },
   {
     "key": "1D68",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "पादाक्षर रो"
@@ -94,7 +84,6 @@
   },
   {
     "key": "1D69",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "पादाक्षर फाई"
@@ -103,7 +92,6 @@
   },
   {
     "key": "1D6A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "पादाक्षर काई"

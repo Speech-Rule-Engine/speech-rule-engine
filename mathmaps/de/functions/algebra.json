@@ -4,43 +4,30 @@
   },
   {
     "key": "deg",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Grad"
       }
-    },
-    "names": [
-      "deg"
-    ]
+    }
   },
   {
     "key": "det",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Determinante"
       }
-    },
-    "names": [
-      "det"
-    ]
+    }
   },
   {
     "key": "dim",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Dimension"
       }
-    },
-    "names": [
-      "dim"
-    ]
+    }
   },
   {
     "key": "hom",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Homomorphismus"
@@ -51,35 +38,22 @@
       "clearspeak": {
         "default": "hom"
       }
-    },
-    "names": [
-      "hom",
-      "Hom"
-    ]
+    }
   },
   {
     "key": "ker",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Kern"
       }
-    },
-    "names": [
-      "ker"
-    ]
+    }
   },
   {
     "key": "Tr",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "Spur"
       }
-    },
-    "names": [
-      "Tr",
-      "tr"
-    ]
+    }
   }
 ]

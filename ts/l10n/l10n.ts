@@ -27,6 +27,7 @@ import { da } from './locales/locale_da';
 import { de } from './locales/locale_de';
 import { en } from './locales/locale_en';
 import { es } from './locales/locale_es';
+import { euro } from './locales/locale_euro';
 import { fr } from './locales/locale_fr';
 import { hi } from './locales/locale_hi';
 import { it } from './locales/locale_it';
@@ -42,6 +43,7 @@ export const locales: { [key: string]: () => Locale } = {
   de: de,
   en: en,
   es: es,
+  euro: euro,
   fr: fr,
   hi: hi,
   it: it,

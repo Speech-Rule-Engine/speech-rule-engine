@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi tonda aperta"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi tonda chiusa"
@@ -22,7 +20,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadra aperta"
@@ -31,7 +28,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadra chiusa"
@@ -40,7 +36,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi graffa aperta"
@@ -49,7 +44,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi graffa chiusa"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadrata sinistra con penna"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadrata destra con penna"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi sinistra di arrotondamento per eccesso"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi destra di arrotondamento per eccesso"
@@ -94,7 +84,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi sinistra di arrotondamento per difetto"
@@ -103,7 +92,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi destra di arrotondamento per difetto"
@@ -112,7 +100,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crop in basso a destra"
@@ -121,7 +108,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crop in basso a sinistra"
@@ -130,7 +116,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crop in alto a destra"
@@ -139,7 +124,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crop in alto a sinistra"
@@ -148,7 +132,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angolo in alto a sinistra"
@@ -157,7 +140,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angolo in alto a destra"
@@ -166,7 +148,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angolo in basso a sinistra"
@@ -175,7 +156,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angolo in basso a destra"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mezzo integrale alto"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mezzo intgrale basso"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolare sinistra"
@@ -211,7 +188,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolare a destra"
@@ -220,7 +196,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi a gancio superiore sinistro"
@@ -229,7 +204,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione di parentesi sinistra"
@@ -238,7 +212,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi a gancio inferiore sinistro"
@@ -247,7 +220,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi a gancio superiore destro"
@@ -256,7 +228,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione parentesi destra"
@@ -265,7 +236,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi a gancio inferiore destro"
@@ -274,7 +244,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo superiore di parentesi quadra sinistra"
@@ -283,7 +252,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione per parentesi quadra sinistra"
@@ -292,7 +260,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo inferiore di parentesi quadra sinistra"
@@ -301,7 +268,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo superiore di parentesi quadra destra"
@@ -310,7 +276,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione per parentesi quadra destra"
@@ -319,7 +284,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angolo inferiore di parentesi quadra destra"
@@ -328,7 +292,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gancio superiore di parentesi sinistra"
@@ -337,7 +300,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parte centrale della parentesi graffa sinistra"
@@ -346,7 +308,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gancio inferiore di parentesi sinistra"
@@ -355,7 +316,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione di parentesi graffa"
@@ -364,7 +324,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gancio superiore di parentesi destra"
@@ -373,7 +332,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parte centrale della parentesi graffa destra"
@@ -382,7 +340,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gancio inferiore di parentesi destra"
@@ -391,7 +348,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione integrale"
@@ -400,7 +356,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estensione della linea orizzontale"
@@ -409,7 +364,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sezione di parentesi graffa superiore sinistra e destra inferiore"
@@ -418,7 +372,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sezione di parentesi graffa superiore destra e sinistra inferiore"
@@ -427,7 +380,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sommatoria superiore"
@@ -436,7 +388,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sommatoria inferiore"
@@ -445,7 +396,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "parentesi quadra superiore"
@@ -454,7 +404,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "parentesi quadra inferiore"
@@ -463,7 +412,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "parentesi quadra inferiore su parentesi quadrata superiore"
@@ -472,7 +420,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "simbolo radicale in basso"
@@ -481,7 +428,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "riga verticale sinistra"
@@ -490,7 +436,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "riga verticale destra"
@@ -499,7 +444,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi superiore"
@@ -508,7 +452,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi inferiore"
@@ -517,7 +460,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi graffa superiore"
@@ -526,7 +468,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi graffa inferiore"
@@ -535,7 +476,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia superiore"
@@ -544,7 +484,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia inferiore"
@@ -553,7 +492,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi tonda sinistra medio"
@@ -562,7 +500,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi tonda destra medio"
@@ -571,7 +508,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi sinistra media appiattita"
@@ -580,7 +516,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi destra media appiattita"
@@ -589,7 +524,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi angolare sinistra media"
@@ -598,7 +532,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi angolare destra media"
@@ -607,7 +540,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi angolare sinistra grossa"
@@ -616,7 +548,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi angolare destra grossa"
@@ -625,7 +556,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi angolare sinistra grosso"
@@ -634,7 +564,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi angolare destra grosso"
@@ -643,7 +572,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi a conchiglia sinistro sottile"
@@ -652,7 +580,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi a conchiglia destro sottile"
@@ -661,7 +588,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi graffa sinistra medio"
@@ -670,7 +596,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornamento di parentesi graffa destra medio"
@@ -679,7 +604,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "delimitatore bag sinistro a forma di S"
@@ -688,7 +612,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "delimitatore bag destro a forma di S"
@@ -697,7 +620,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadra sinistra bianca"
@@ -706,7 +628,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadra destra bianca"
@@ -715,7 +636,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolata sinistra"
@@ -724,7 +644,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolata destra"
@@ -733,7 +652,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolata sinistra doppia"
@@ -742,7 +660,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolata destra doppia"
@@ -751,7 +668,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia sinistra bianca"
@@ -760,7 +676,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia destra bianca"
@@ -769,7 +684,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra appiattita"
@@ -778,7 +692,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra appiattita"
@@ -787,7 +700,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi graffa bianca sinistra"
@@ -796,7 +708,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi graffa bianca destra"
@@ -805,7 +716,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi tonda bianca sinistra"
@@ -814,7 +724,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi tonda bianca destra"
@@ -823,7 +732,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi immagine sinistra notazione Z"
@@ -832,7 +740,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi immagine destra di notazione Z"
@@ -841,7 +748,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi di rilegatura sinistra con notazione Z"
@@ -850,7 +756,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi di rilegatura destra a notazione Z"
@@ -859,7 +764,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadrata sinistra con sottobarra"
@@ -868,7 +772,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadra destra con sottobarra"
@@ -877,7 +780,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadrata sinistra con segno di spunta nell'angolo superiore"
@@ -886,7 +788,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadrata destra con segno di spunta nell'angolo inferiore"
@@ -895,7 +796,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadrata sinistra con segno di spunta nell'angolo inferiore"
@@ -904,7 +804,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadrata destra con segno di spunta nell'angolo superiore"
@@ -913,7 +812,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolata sinistra con punto"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolata destra con punto"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra ad arco con segno di minore"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra ad arco con segno di maggiore"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra a doppio arco con segno di minore"
@@ -958,7 +852,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra a doppio arco con segno di maggiore"
@@ -967,7 +860,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia nera sinistra"
@@ -976,7 +868,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia nera destra"
@@ -985,7 +876,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "delimitatore a zig-zag sinistro"
@@ -994,7 +884,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "delimitatore a zig-zag destro"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "delimitatore doppio a zig-zag sinistro"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "delimitatore doppio a zig-zag destro"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolare curva a sinistra"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolare curva a destra"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "mezza parentesi superiore sinistra"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "mezza parentesi superiore destra"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "mezza parentesi inferiore sinistra"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "mezza parentesi inferiore destra"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a U sdraiata sinistra"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a U sdraiata destra"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doppia parentesi aperta"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "doppia parentesi chiusa"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolata sinistra"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolata destra "
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a doppio angolo sinistra"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a doppio angolo destra"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolo superiore sinistro"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolo superiore destro"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolo superiore sinistro bianca"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolo superiore destro bianca"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare nera sinistra"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare nera destra"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra a conchiglia"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra a conchiglia"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare bianca sinistra"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare bianca destra"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra a conchiglia bianca"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra a conchiglia bianca "
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadrata sinistra bianca"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadrata destra bianca"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "virgolette doppie a due punte invertite"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "doppie virgolette"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "doppie virgolette basse"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra ornata"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra ornata"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare verticale sopra bianca"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare verticale sotto bianca"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sopra"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi sotto"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi graffa sopra"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi graffa sotto"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia sopra"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia sotto"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare verticale sopra nera"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi lenticolare verticale sotto nera"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a doppio angolo sopra"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a doppio angolo sotto"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolata sopra"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolata sotto"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi verticale ad angolo retto destro"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi verticale ad angolo retto sinistro"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi verticale ad angolo retto destro bianca"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi verticale ad angolo retto sinistro bianca"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadra sopra"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadra sotto"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra piccola"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra piccola"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi graffa sinistra piccola"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi graffa destra piccola"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia sinistra piccola"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi a conchiglia destra piccola"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi sinistra a larghezza intera"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi destra a larghezza intera"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi quadrata sinistra a larghezza intera"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi quadrata destra a larghezza intera"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi graffa sinistra a larghezza intera"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi graffa destra a larghezza intera"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi bianca sinistra a larghezza intera"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi bianca destra a larghezza intera"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parentesi angolo superiore sinistro a mezza larghezza"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parentesi angolo superiore destro a mezza larghezza"

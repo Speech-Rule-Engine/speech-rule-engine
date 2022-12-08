@@ -20,7 +20,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { lookupMeaning } from './semantic_attr';
+import { SemanticMap } from './semantic_attr';
 import {
   SemanticMeaning,
   SemanticFont,
@@ -369,7 +369,7 @@ export class SemanticNode {
     if (this.textContent === content) {
       return;
     }
-    const meaning = lookupMeaning(content);
+    const meaning = SemanticMap.Meaning.get(content);
     this.textContent = content;
     this.role = meaning.role;
     this.type = meaning.type;

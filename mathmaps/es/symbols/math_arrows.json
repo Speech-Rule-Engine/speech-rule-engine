@@ -4,7 +4,6 @@
   },
   {
     "key": "2190",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2191",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha arriba"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2192",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha derecha",
@@ -32,7 +29,6 @@
   },
   {
     "key": "2193",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha abajo"
@@ -41,7 +37,6 @@
   },
   {
     "key": "2194",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda y derecha"
@@ -50,7 +45,6 @@
   },
   {
     "key": "2195",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba y abajo"
@@ -59,7 +53,6 @@
   },
   {
     "key": "2196",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha a noroeste"
@@ -68,7 +61,6 @@
   },
   {
     "key": "2197",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha a nordeste"
@@ -77,7 +69,6 @@
   },
   {
     "key": "2198",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha a sureste"
@@ -86,7 +77,6 @@
   },
   {
     "key": "2199",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha a suroeste"
@@ -95,7 +85,6 @@
   },
   {
     "key": "219A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda tachada"
@@ -104,7 +93,6 @@
   },
   {
     "key": "219B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha tachada"
@@ -113,7 +101,6 @@
   },
   {
     "key": "219C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha ondulada izquierda"
@@ -122,7 +109,6 @@
   },
   {
     "key": "219D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha ondulada"
@@ -131,7 +117,6 @@
   },
   {
     "key": "219E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda con doble punta"
@@ -140,7 +125,6 @@
   },
   {
     "key": "219F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha con doble punta hacia arriba"
@@ -149,7 +133,6 @@
   },
   {
     "key": "21A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha derechaa con doble punta"
@@ -158,7 +141,6 @@
   },
   {
     "key": "21A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha con doble punta hacia abajo"
@@ -167,7 +149,6 @@
   },
   {
     "key": "21A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda con cola"
@@ -176,7 +157,6 @@
   },
   {
     "key": "21A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha derecha con cola"
@@ -185,7 +165,6 @@
   },
   {
     "key": "21A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda de barra"
@@ -194,7 +173,6 @@
   },
   {
     "key": "21A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "barra con flecha"
@@ -203,7 +181,6 @@
   },
   {
     "key": "21A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha derecha de barra"
@@ -212,7 +189,6 @@
   },
   {
     "key": "21A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha con barra"
@@ -221,7 +197,6 @@
   },
   {
     "key": "21A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba y abajo con base"
@@ -230,7 +205,6 @@
   },
   {
     "key": "21A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda con gancho"
@@ -239,7 +213,6 @@
   },
   {
     "key": "21AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha con gancho"
@@ -248,7 +221,6 @@
   },
   {
     "key": "21AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda con lazo"
@@ -257,7 +229,6 @@
   },
   {
     "key": "21AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha con lazo"
@@ -266,7 +237,6 @@
   },
   {
     "key": "21AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha ondulada izquierda y derecha"
@@ -275,7 +245,6 @@
   },
   {
     "key": "21AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda y derecha tachada"
@@ -284,7 +253,6 @@
   },
   {
     "key": "21AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha zigzag abajo"
@@ -293,7 +261,6 @@
   },
   {
     "key": "21B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba con punta izquierda"
@@ -302,7 +269,6 @@
   },
   {
     "key": "21B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba con punta derecha"
@@ -311,7 +277,6 @@
   },
   {
     "key": "21B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha abajo con punta izquierda"
@@ -320,7 +285,6 @@
   },
   {
     "key": "21B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha abajo con punta derecha"
@@ -329,7 +293,6 @@
   },
   {
     "key": "21B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha derecha desde esquina inferior"
@@ -338,7 +301,6 @@
   },
   {
     "key": "21B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo desde esquina izquierda"
@@ -347,7 +309,6 @@
   },
   {
     "key": "21B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha semicircular superior en sentido antihorario"
@@ -356,7 +317,6 @@
   },
   {
     "key": "21B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha semicircular superior en sentido horario"
@@ -365,7 +325,6 @@
   },
   {
     "key": "21B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha noroeste a barra larga"
@@ -374,7 +333,6 @@
   },
   {
     "key": "21B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda a barra arriba de flecha derecha a barra"
@@ -383,7 +341,6 @@
   },
   {
     "key": "21BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha circular abierta en sentido antihorario"
@@ -392,7 +349,6 @@
   },
   {
     "key": "21BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha circular abierta en sentido horario"
@@ -401,7 +357,6 @@
   },
   {
     "key": "21C4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha derecha arriba de flecha izquierda"
@@ -410,7 +365,6 @@
   },
   {
     "key": "21C5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba a la izquierda de flecha abajo"
@@ -419,7 +373,6 @@
   },
   {
     "key": "21C6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda arriba de flecha derecha"
@@ -428,7 +381,6 @@
   },
   {
     "key": "21C7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dos flechas hacia la izquierda"
@@ -437,7 +389,6 @@
   },
   {
     "key": "21C8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dos flechas hacia arriba"
@@ -446,7 +397,6 @@
   },
   {
     "key": "21C9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dos flechas"
@@ -455,7 +405,6 @@
   },
   {
     "key": "21CA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dos flechas hacia abajo"
@@ -464,7 +413,6 @@
   },
   {
     "key": "21CD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble izquierda tachada"
@@ -473,7 +421,6 @@
   },
   {
     "key": "21CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha doble izquierda y derecha tachada"
@@ -482,7 +429,6 @@
   },
   {
     "key": "21CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha doble tachada"
@@ -491,7 +437,6 @@
   },
   {
     "key": "21D0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia la izquierda"
@@ -500,7 +445,6 @@
   },
   {
     "key": "21D1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia arriba"
@@ -509,7 +453,6 @@
   },
   {
     "key": "21D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha doble"
@@ -518,7 +461,6 @@
   },
   {
     "key": "21D3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia abajo"
@@ -527,7 +469,6 @@
   },
   {
     "key": "21D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha doble izquierda-derecha"
@@ -536,7 +477,6 @@
   },
   {
     "key": "21D5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble vertical"
@@ -545,7 +485,6 @@
   },
   {
     "key": "21D6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia noroeste"
@@ -554,7 +493,6 @@
   },
   {
     "key": "21D7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia nordeste"
@@ -563,7 +501,6 @@
   },
   {
     "key": "21D8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia sudeste"
@@ -572,7 +509,6 @@
   },
   {
     "key": "21D9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia sudoeste"
@@ -581,7 +517,6 @@
   },
   {
     "key": "21DA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha triple izquierda"
@@ -590,7 +525,6 @@
   },
   {
     "key": "21DB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha triple"
@@ -599,7 +533,6 @@
   },
   {
     "key": "21DC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha ondulada izquierda"
@@ -608,7 +541,6 @@
   },
   {
     "key": "21DD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha ondulada"
@@ -617,7 +549,6 @@
   },
   {
     "key": "21DE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia arriba con doble tachado"
@@ -626,7 +557,6 @@
   },
   {
     "key": "21DF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo con doble tachado"
@@ -635,7 +565,6 @@
   },
   {
     "key": "21E0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha de puntos hacia la izquierda"
@@ -644,7 +573,6 @@
   },
   {
     "key": "21E1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha de puntos hacia arriba"
@@ -653,7 +581,6 @@
   },
   {
     "key": "21E2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha de puntos"
@@ -662,7 +589,6 @@
   },
   {
     "key": "21E3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha de puntos hacia abajo"
@@ -671,7 +597,6 @@
   },
   {
     "key": "21E4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha izquierda a barra"
@@ -680,7 +605,6 @@
   },
   {
     "key": "21E5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha derecha a barra"
@@ -689,7 +613,6 @@
   },
   {
     "key": "21E6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha vacía hacia la izquierda"
@@ -698,7 +621,6 @@
   },
   {
     "key": "21E7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha vacía hacia arriba"
@@ -707,7 +629,6 @@
   },
   {
     "key": "21E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha vacía"
@@ -716,7 +637,6 @@
   },
   {
     "key": "21E9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha vacía hacia abajo"
@@ -725,7 +645,6 @@
   },
   {
     "key": "21EA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha vacía hacia arriba desde barra"
@@ -734,7 +653,6 @@
   },
   {
     "key": "21EB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca hacia arriba en el pedestal"
@@ -743,7 +661,6 @@
   },
   {
     "key": "21EC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca hacia arriba sobre pedestal con barra horizontal"
@@ -752,7 +669,6 @@
   },
   {
     "key": "21ED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca hacia arriba sobre pedestal con barra vertical"
@@ -761,7 +677,6 @@
   },
   {
     "key": "21EE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia arriba blanca"
@@ -770,7 +685,6 @@
   },
   {
     "key": "21EF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha doble hacia arriba blanca en pedestal"
@@ -779,7 +693,6 @@
   },
   {
     "key": "21F0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca hacia la derecha de la pared"
@@ -788,7 +701,6 @@
   },
   {
     "key": "21F1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha del noroeste a la esquina"
@@ -797,7 +709,6 @@
   },
   {
     "key": "21F2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha del sudeste a la esquina"
@@ -806,7 +717,6 @@
   },
   {
     "key": "21F3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "arriba abajo flecha blanca"
@@ -815,7 +725,6 @@
   },
   {
     "key": "21F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha derecha con círculo pequeño"
@@ -824,7 +733,6 @@
   },
   {
     "key": "21F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upwards arrow to the right of downwards arrow"
@@ -833,7 +741,6 @@
   },
   {
     "key": "21F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tres flechas a la derecha"
@@ -842,7 +749,6 @@
   },
   {
     "key": "21F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con trazo vertical"
@@ -851,7 +757,6 @@
   },
   {
     "key": "21F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con trazo vertical"
@@ -860,7 +765,6 @@
   },
   {
     "key": "21F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda derecha con trazo vertical"
@@ -869,7 +773,6 @@
   },
   {
     "key": "21FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con doble trazo vertical"
@@ -878,7 +781,6 @@
   },
   {
     "key": "21FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con doble trazo vertical"
@@ -887,7 +789,6 @@
   },
   {
     "key": "21FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda derecha con doble trazo vertical"
@@ -896,7 +797,6 @@
   },
   {
     "key": "21FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda con punta vacía"
@@ -905,7 +805,6 @@
   },
   {
     "key": "21FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda con punta vacía"
@@ -914,7 +813,6 @@
   },
   {
     "key": "21FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda derecha con punta vacía"
@@ -923,7 +821,6 @@
   },
   {
     "key": "2301",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha electrica"
@@ -932,7 +829,6 @@
   },
   {
     "key": "2303",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba"
@@ -941,7 +837,6 @@
   },
   {
     "key": "2304",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo"
@@ -950,7 +845,6 @@
   },
   {
     "key": "2324",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha arriba entre dos barras horizontales"
@@ -959,7 +853,6 @@
   },
   {
     "key": "238B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "círculo roto con la flecha del noroeste"
@@ -968,7 +861,6 @@
   },
   {
     "key": "2794",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con cabeza ancha"
@@ -977,7 +869,6 @@
   },
   {
     "key": "2798",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha Sureste pesada"
@@ -986,7 +877,6 @@
   },
   {
     "key": "2799",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha pesada"
@@ -995,7 +885,6 @@
   },
   {
     "key": "279A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha pesada del noreste"
@@ -1004,7 +893,6 @@
   },
   {
     "key": "279B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "punto de dibujo Flecha hacia la derecha"
@@ -1013,7 +901,6 @@
   },
   {
     "key": "279C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con punta redonda redonda"
@@ -1022,7 +909,6 @@
   },
   {
     "key": "279D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con forma de triángulo"
@@ -1031,7 +917,6 @@
   },
   {
     "key": "279E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con forma de triángulo pesado"
@@ -1040,7 +925,6 @@
   },
   {
     "key": "279F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "triángulo punteado hacia la flecha hacia la derecha"
@@ -1049,7 +933,6 @@
   },
   {
     "key": "27A0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con forma de triángulo de trazo pesado"
@@ -1058,7 +941,6 @@
   },
   {
     "key": "27A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha negra"
@@ -1067,7 +949,6 @@
   },
   {
     "key": "27A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "punta de flecha tridimensional hacia la derecha hacia arriba"
@@ -1076,7 +957,6 @@
   },
   {
     "key": "27A3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "punta de flecha hacia la derecha con iluminación inferior en tres dimensiones"
@@ -1085,7 +965,6 @@
   },
   {
     "key": "27A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "punta de flecha negra hacia la derecha"
@@ -1094,7 +973,6 @@
   },
   {
     "key": "27A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "pesado negro curvado hacia abajo y hacia la derecha flecha"
@@ -1103,7 +981,6 @@
   },
   {
     "key": "27A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "pesado negro curvado hacia arriba y hacia la derecha flecha"
@@ -1112,7 +989,6 @@
   },
   {
     "key": "27A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "squat Black Arrow hacia la derecha"
@@ -1121,7 +997,6 @@
   },
   {
     "key": "27A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha de color negro cóncava puntiaguda pesada"
@@ -1130,7 +1005,6 @@
   },
   {
     "key": "27A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sombra derecha flecha blanca hacia la derecha"
@@ -1139,7 +1013,6 @@
   },
   {
     "key": "27AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sombra hacia la izquierda blanca a la izquierda"
@@ -1148,7 +1021,6 @@
   },
   {
     "key": "27AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "back-Tilted Shadowed White Right Arrow"
@@ -1157,7 +1029,6 @@
   },
   {
     "key": "27AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha blanca sombreada inclinada hacia delante"
@@ -1166,7 +1037,6 @@
   },
   {
     "key": "27AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha pesada inferior, sombreada a la derecha, blanca"
@@ -1175,7 +1045,6 @@
   },
   {
     "key": "27AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha blanca superior derecha sombreada pesada"
@@ -1184,7 +1053,6 @@
   },
   {
     "key": "27AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "con muesca, flecha derecha hacia abajo, a la derecha, hacia la derecha"
@@ -1193,7 +1061,6 @@
   },
   {
     "key": "27B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "con muescas, flecha derecha hacia arriba, a la derecha, hacia la derecha"
@@ -1202,7 +1069,6 @@
   },
   {
     "key": "27B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "círculo pesado blanco flecha hacia la derecha"
@@ -1211,7 +1077,6 @@
   },
   {
     "key": "27B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con plumas blancas"
@@ -1220,7 +1085,6 @@
   },
   {
     "key": "27B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha suroriental de plumas negras"
@@ -1229,7 +1093,6 @@
   },
   {
     "key": "27B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con plumas negras"
@@ -1238,7 +1101,6 @@
   },
   {
     "key": "27B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha del noreste con plumas negras"
@@ -1247,7 +1109,6 @@
   },
   {
     "key": "27B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha suroriental con plumas negras pesadas"
@@ -1256,7 +1117,6 @@
   },
   {
     "key": "27B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha derecha pesada con plumas negras"
@@ -1265,7 +1125,6 @@
   },
   {
     "key": "27B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha del noreste con plumas negras pesadas"
@@ -1274,7 +1133,6 @@
   },
   {
     "key": "27BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "lágrima-flecha de flecha hacia la derecha"
@@ -1283,7 +1141,6 @@
   },
   {
     "key": "27BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con forma de lágrima pesada"
@@ -1292,7 +1149,6 @@
   },
   {
     "key": "27BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha de cola de cuña"
@@ -1301,7 +1157,6 @@
   },
   {
     "key": "27BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha de cola de cuña pesada"
@@ -1310,7 +1165,6 @@
   },
   {
     "key": "27BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "open-Outlined Outward Arrow"
@@ -1319,7 +1173,6 @@
   },
   {
     "key": "27F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha cuádruple hacia arriba"
@@ -1328,7 +1181,6 @@
   },
   {
     "key": "27F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha cuádruple hacia abajo"
@@ -1337,7 +1189,6 @@
   },
   {
     "key": "27F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda desde círculo"
@@ -1346,7 +1197,6 @@
   },
   {
     "key": "27F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha desde círculo"
@@ -1355,7 +1205,6 @@
   },
   {
     "key": "27F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha con más en círculo"
@@ -1364,7 +1213,6 @@
   },
   {
     "key": "27F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha larga hacia la izquierda"
@@ -1373,7 +1221,6 @@
   },
   {
     "key": "27F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha larga"
@@ -1382,7 +1229,6 @@
   },
   {
     "key": "27F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha larga hacia izquierda y derecha"
@@ -1391,7 +1237,6 @@
   },
   {
     "key": "27F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha larga hacia la izquierda"
@@ -1400,7 +1245,6 @@
   },
   {
     "key": "27F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha larga"
@@ -1409,7 +1253,6 @@
   },
   {
     "key": "27FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha larga hacia izquierda y derecha"
@@ -1418,7 +1261,6 @@
   },
   {
     "key": "27FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha larga hacia la izquierda, desde barra"
@@ -1427,7 +1269,6 @@
   },
   {
     "key": "27FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha larga desde barra"
@@ -1436,7 +1277,6 @@
   },
   {
     "key": "27FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha larga hacia la izquierda desde barra"
@@ -1445,7 +1285,6 @@
   },
   {
     "key": "27FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha larga desde barra"
@@ -1454,7 +1293,6 @@
   },
   {
     "key": "27FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha larga en zigzag"
@@ -1463,7 +1301,6 @@
   },
   {
     "key": "2900",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la derecha con trazo vertical"
@@ -1472,7 +1309,6 @@
   },
   {
     "key": "2901",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la derecha con doble movimiento vertical"
@@ -1481,7 +1317,6 @@
   },
   {
     "key": "2902",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha hacia la izquierda con trazo vertical"
@@ -1490,7 +1325,6 @@
   },
   {
     "key": "2903",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha hacia la derecha con trazo vertical"
@@ -1499,7 +1333,6 @@
   },
   {
     "key": "2904",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "izquierda Derecha Doble Flecha con Trazo Vertical"
@@ -1508,7 +1341,6 @@
   },
   {
     "key": "2905",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rightwards two headed arrow from bar"
@@ -1517,7 +1349,6 @@
   },
   {
     "key": "2906",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble flecha hacia la izquierda de la barra"
@@ -1526,7 +1357,6 @@
   },
   {
     "key": "2907",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha doble hacia la derecha de la barra"
@@ -1535,7 +1365,6 @@
   },
   {
     "key": "2908",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo con trazo horizontal"
@@ -1544,7 +1373,6 @@
   },
   {
     "key": "2909",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia arriba con trazo horizontal"
@@ -1553,7 +1381,6 @@
   },
   {
     "key": "290A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha triple hacia arriba"
@@ -1562,7 +1389,6 @@
   },
   {
     "key": "290B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple flecha hacia abajo"
@@ -1571,7 +1397,6 @@
   },
   {
     "key": "290C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "leftwards double dash arrow"
@@ -1580,7 +1405,6 @@
   },
   {
     "key": "290D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rightwards double dash arrow"
@@ -1589,7 +1413,6 @@
   },
   {
     "key": "290E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "leftwards triple dash arrow"
@@ -1598,7 +1421,6 @@
   },
   {
     "key": "290F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rightwards triple dash arrow"
@@ -1607,7 +1429,6 @@
   },
   {
     "key": "2910",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rightwards two headed triple dash arrow"
@@ -1616,7 +1437,6 @@
   },
   {
     "key": "2911",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rightwards arrow with dotted stem"
@@ -1625,7 +1445,6 @@
   },
   {
     "key": "2912",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "upwards arrow to bar"
@@ -1634,7 +1453,6 @@
   },
   {
     "key": "2913",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "downwards arrow to bar"
@@ -1643,7 +1461,6 @@
   },
   {
     "key": "2914",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con cola con trazo vertical"
@@ -1652,7 +1469,6 @@
   },
   {
     "key": "2915",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con la cola con doble trazo vertical"
@@ -1661,7 +1477,6 @@
   },
   {
     "key": "2916",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rightwards two headed arrow with tail"
@@ -1670,7 +1485,6 @@
   },
   {
     "key": "2917",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la derecha con cola con trazo vertical"
@@ -1679,7 +1493,6 @@
   },
   {
     "key": "2918",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la derecha con cola con doble movimiento vertical"
@@ -1688,7 +1501,6 @@
   },
   {
     "key": "2919",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cola de flecha hacia la izquierda"
@@ -1697,7 +1509,6 @@
   },
   {
     "key": "291A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha"
@@ -1706,7 +1517,6 @@
   },
   {
     "key": "291B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cola de doble flecha hacia la izquierda"
@@ -1715,7 +1525,6 @@
   },
   {
     "key": "291C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cola de doble flecha hacia la derecha"
@@ -1724,7 +1533,6 @@
   },
   {
     "key": "291D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia diamante relleno a la izquierda"
@@ -1733,7 +1541,6 @@
   },
   {
     "key": "291E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia diamante a la derecha"
@@ -1742,7 +1549,6 @@
   },
   {
     "key": "291F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha desde barra hacia diamante a la izquierda"
@@ -1751,7 +1557,6 @@
   },
   {
     "key": "2920",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha desde barra hacia diamante a la derecha"
@@ -1760,7 +1565,6 @@
   },
   {
     "key": "2921",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flechas del noroeste y sureste"
@@ -1769,7 +1573,6 @@
   },
   {
     "key": "2922",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha noreste y sudoeste"
@@ -1778,7 +1581,6 @@
   },
   {
     "key": "2923",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha a noroeste con garfio"
@@ -1787,7 +1589,6 @@
   },
   {
     "key": "2924",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha a nordeste con garfio"
@@ -1796,7 +1597,6 @@
   },
   {
     "key": "2925",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha a sureste con garfio"
@@ -1805,7 +1605,6 @@
   },
   {
     "key": "2926",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha a suroeste con garfio"
@@ -1814,7 +1613,6 @@
   },
   {
     "key": "2927",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flechas a noroeste y nordeste"
@@ -1823,7 +1621,6 @@
   },
   {
     "key": "2928",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flechas a nordeste y sudeste"
@@ -1832,7 +1629,6 @@
   },
   {
     "key": "2929",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flechas a suddeste y sudoeste"
@@ -1841,7 +1637,6 @@
   },
   {
     "key": "292A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flechas a sudoeste y noroeste"
@@ -1850,7 +1645,6 @@
   },
   {
     "key": "292D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha Sureste Cruzando Flecha Noreste"
@@ -1859,7 +1653,6 @@
   },
   {
     "key": "292E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "north East Arrow Crossing South East Arrow"
@@ -1868,7 +1661,6 @@
   },
   {
     "key": "292F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "caída en diagonal que cruza la flecha noreste"
@@ -1877,7 +1669,6 @@
   },
   {
     "key": "2930",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "creciente Cruce de la Cruz del Sureste de la Flecha"
@@ -1886,7 +1677,6 @@
   },
   {
     "key": "2931",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "north East Arrow Crossing North West Arrow"
@@ -1895,7 +1685,6 @@
   },
   {
     "key": "2932",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "north West Arrow Crossing North East Arrow"
@@ -1904,7 +1693,6 @@
   },
   {
     "key": "2933",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha ondulada"
@@ -1913,7 +1701,6 @@
   },
   {
     "key": "2934",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha que apunta hacia la derecha y luego curva hacia arriba"
@@ -1922,7 +1709,6 @@
   },
   {
     "key": "2935",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha que gira hacia abajo"
@@ -1931,7 +1717,6 @@
   },
   {
     "key": "2936",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo que gira hacia la izquierda"
@@ -1940,7 +1725,6 @@
   },
   {
     "key": "2937",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo que gira hacia la derecha"
@@ -1949,7 +1733,6 @@
   },
   {
     "key": "2938",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha semicircular a la derecha en sentido horario"
@@ -1958,7 +1741,6 @@
   },
   {
     "key": "2939",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha semicircular a la izquierda en sentido antihorario"
@@ -1967,7 +1749,6 @@
   },
   {
     "key": "293A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arco superior flecha hacia la izquierda"
@@ -1976,7 +1757,6 @@
   },
   {
     "key": "293B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arco inferior flecha hacia la izquierda"
@@ -1985,7 +1765,6 @@
   },
   {
     "key": "293C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giro negativo"
@@ -1994,7 +1773,6 @@
   },
   {
     "key": "293D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "giro positivo"
@@ -2003,7 +1781,6 @@
   },
   {
     "key": "293E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha semicircular inferior derecha"
@@ -2012,7 +1789,6 @@
   },
   {
     "key": "293F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha inferior izquierda semicircular en sentido antihorario"
@@ -2021,7 +1797,6 @@
   },
   {
     "key": "2940",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "círculo cerrado en sentido contrario a las agujas del reloj"
@@ -2030,7 +1805,6 @@
   },
   {
     "key": "2941",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "círculo cerrado en el sentido de las agujas del reloj"
@@ -2039,7 +1813,6 @@
   },
   {
     "key": "2942",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha sobre la flecha corta hacia la izquierda"
@@ -2048,7 +1821,6 @@
   },
   {
     "key": "2943",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda sobre la flecha corta hacia la derecha"
@@ -2057,7 +1829,6 @@
   },
   {
     "key": "2944",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha corta hacia la derecha arriba flecha hacia la izquierda"
@@ -2066,7 +1837,6 @@
   },
   {
     "key": "2945",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha con más suscrito"
@@ -2075,7 +1845,6 @@
   },
   {
     "key": "2946",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con más abajo"
@@ -2084,7 +1853,6 @@
   },
   {
     "key": "2947",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha a través de X"
@@ -2093,7 +1861,6 @@
   },
   {
     "key": "2948",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda a través de círculo"
@@ -2102,7 +1869,6 @@
   },
   {
     "key": "2949",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dos cabezas de flecha hacia arriba desde círculo"
@@ -2111,7 +1877,6 @@
   },
   {
     "key": "2970",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "round implies"
@@ -2120,7 +1885,6 @@
   },
   {
     "key": "2971",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha con igual"
@@ -2129,7 +1893,6 @@
   },
   {
     "key": "2972",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha con tilde"
@@ -2138,7 +1901,6 @@
   },
   {
     "key": "2973",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tilde con flecha hacia la izquierda"
@@ -2147,7 +1909,6 @@
   },
   {
     "key": "2974",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tilde con flecha"
@@ -2156,7 +1917,6 @@
   },
   {
     "key": "2975",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha con casi igual a"
@@ -2165,7 +1925,6 @@
   },
   {
     "key": "2976",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con menor que"
@@ -2174,7 +1933,6 @@
   },
   {
     "key": "2977",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda a través de menos de"
@@ -2183,7 +1941,6 @@
   },
   {
     "key": "2978",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha con mayor que"
@@ -2192,7 +1949,6 @@
   },
   {
     "key": "2979",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con incluido"
@@ -2201,7 +1957,6 @@
   },
   {
     "key": "297A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda a través del subconjunto"
@@ -2210,7 +1965,6 @@
   },
   {
     "key": "297B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con contiene"
@@ -2219,7 +1973,6 @@
   },
   {
     "key": "29B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunto vacío con flecha"
@@ -2228,7 +1981,6 @@
   },
   {
     "key": "29B4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunto vacío con flecha inversa"
@@ -2237,7 +1989,6 @@
   },
   {
     "key": "29BD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha arriba a través del círculo"
@@ -2246,7 +1997,6 @@
   },
   {
     "key": "29EA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamante negro con flecha hacia abajo"
@@ -2255,7 +2005,6 @@
   },
   {
     "key": "29EC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "círculo blanco con flecha hacia abajo"
@@ -2264,7 +2013,6 @@
   },
   {
     "key": "29ED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "círculo negro con flecha hacia abajo"
@@ -2273,7 +2021,6 @@
   },
   {
     "key": "2A17",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral con flecha hacia la izquierda con garfio"
@@ -2282,7 +2029,6 @@
   },
   {
     "key": "2B00",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca del noreste"
@@ -2291,7 +2037,6 @@
   },
   {
     "key": "2B01",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca del noroeste"
@@ -2300,7 +2045,6 @@
   },
   {
     "key": "2B02",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha blanca del sureste"
@@ -2309,7 +2053,6 @@
   },
   {
     "key": "2B03",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sudoeste flecha blanca"
@@ -2318,7 +2061,6 @@
   },
   {
     "key": "2B04",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "izquierda derecha flecha blanca"
@@ -2327,7 +2069,6 @@
   },
   {
     "key": "2B05",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha negra hacia la izquierda"
@@ -2336,7 +2077,6 @@
   },
   {
     "key": "2B06",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha negra hacia arriba"
@@ -2345,7 +2085,6 @@
   },
   {
     "key": "2B07",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha negra hacia abajo"
@@ -2354,7 +2093,6 @@
   },
   {
     "key": "2B08",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha negra del noreste"
@@ -2363,7 +2101,6 @@
   },
   {
     "key": "2B09",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha negra del noroeste"
@@ -2372,7 +2109,6 @@
   },
   {
     "key": "2B0A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha negra sur este"
@@ -2381,7 +2117,6 @@
   },
   {
     "key": "2B0B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sudoeste flecha negra"
@@ -2390,7 +2125,6 @@
   },
   {
     "key": "2B0C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "izquierda derecha flecha negra"
@@ -2399,7 +2133,6 @@
   },
   {
     "key": "2B0D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "arriba abajo flecha negra"
@@ -2408,7 +2141,6 @@
   },
   {
     "key": "2B0E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con la punta hacia abajo"
@@ -2417,7 +2149,6 @@
   },
   {
     "key": "2B0F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha con la punta hacia arriba"
@@ -2426,7 +2157,6 @@
   },
   {
     "key": "2B10",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con la punta hacia abajo"
@@ -2435,7 +2165,6 @@
   },
   {
     "key": "2B11",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con la punta hacia arriba"
@@ -2444,7 +2173,6 @@
   },
   {
     "key": "2B30",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda con círculo pequeño"
@@ -2453,7 +2181,6 @@
   },
   {
     "key": "2B31",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tres flechas a la izquierda"
@@ -2462,7 +2189,6 @@
   },
   {
     "key": "2B32",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha izquierda con un círculo más"
@@ -2471,7 +2197,6 @@
   },
   {
     "key": "2B33",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de flecha larga hacia la izquierda"
@@ -2480,7 +2205,6 @@
   },
   {
     "key": "2B34",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la izquierda con trazo vertical"
@@ -2489,7 +2213,6 @@
   },
   {
     "key": "2B35",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la izquierda con doble movimiento vertical"
@@ -2498,7 +2221,6 @@
   },
   {
     "key": "2B36",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la izquierda de la barra"
@@ -2507,7 +2229,6 @@
   },
   {
     "key": "2B37",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha triple de dos cabezas hacia la izquierda"
@@ -2516,7 +2237,6 @@
   },
   {
     "key": "2B38",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con tallo punteado"
@@ -2525,7 +2245,6 @@
   },
   {
     "key": "2B39",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con cola con trazo vertical"
@@ -2534,7 +2253,6 @@
   },
   {
     "key": "2B3A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda con cola con doble trazo vertical"
@@ -2543,7 +2261,6 @@
   },
   {
     "key": "2B3B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la izquierda con cola"
@@ -2552,7 +2269,6 @@
   },
   {
     "key": "2B3C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la izquierda con cola con trazo vertical"
@@ -2561,7 +2277,6 @@
   },
   {
     "key": "2B3D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de dos cabezas hacia la izquierda con cola con doble movimiento vertical"
@@ -2570,7 +2285,6 @@
   },
   {
     "key": "2B3E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda a través de X"
@@ -2579,7 +2293,6 @@
   },
   {
     "key": "2B3F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ola flecha apuntando directamente a la izquierda"
@@ -2588,7 +2301,6 @@
   },
   {
     "key": "2B40",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signo de igual flecha arriba a la izquierda"
@@ -2597,7 +2309,6 @@
   },
   {
     "key": "2B41",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de tilde inverso sobre la flecha hacia la izquierda"
@@ -2606,7 +2317,6 @@
   },
   {
     "key": "2B42",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda sobre el reverso casi igual a"
@@ -2615,7 +2325,6 @@
   },
   {
     "key": "2B43",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha a través de mayor-que"
@@ -2624,7 +2333,6 @@
   },
   {
     "key": "2B44",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha a través de Superset"
@@ -2633,7 +2341,6 @@
   },
   {
     "key": "2B45",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha cuádruple hacia la izquierda"
@@ -2642,7 +2349,6 @@
   },
   {
     "key": "2B46",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flecha cuádruple hacia la derecha"
@@ -2651,7 +2357,6 @@
   },
   {
     "key": "2B47",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de tilde inverso sobre la flecha hacia la derecha"
@@ -2660,7 +2365,6 @@
   },
   {
     "key": "2B48",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha sobre el reverso casi igual a"
@@ -2669,7 +2373,6 @@
   },
   {
     "key": "2B49",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de tilde sobre la flecha hacia la izquierda"
@@ -2678,7 +2381,6 @@
   },
   {
     "key": "2B4A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda por encima de casi igual a"
@@ -2687,7 +2389,6 @@
   },
   {
     "key": "2B4B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda sobre el operador de tilde inverso"
@@ -2696,7 +2397,6 @@
   },
   {
     "key": "2B4C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la derecha sobre el operador de tilde inverso"
@@ -2705,7 +2405,6 @@
   },
   {
     "key": "FFE9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia la izquierda de medio ancho"
@@ -2714,7 +2413,6 @@
   },
   {
     "key": "FFEA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha ascendente de medio ancho"
@@ -2723,7 +2421,6 @@
   },
   {
     "key": "FFEB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha de medio ancho hacia la derecha"
@@ -2732,7 +2429,6 @@
   },
   {
     "key": "FFEC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "flecha hacia abajo de medio ancho"

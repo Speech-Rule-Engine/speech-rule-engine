@@ -4,110 +4,67 @@
   },
   {
     "key": "sq",
-    "category": "other",
     "mappings": {
       "default": {
         "default": "वर्ग"
       }
-    },
-    "names": [
-      "sq",
-      "sq."
-    ]
+    }
   },
   {
     "key": "sq inch",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "वर्ग इंच"
       }
-    },
-    "names": [
-      "sq in",
-      "sq. in.",
-      "sq inch",
-      "sq. inch"
-    ]
+    }
   },
   {
     "key": "sq rd",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "वर्ग रॉड"
       }
-    },
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ]
+    }
   },
   {
     "key": "sq ft",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "वर्ग फुट",
         "plural": "वर्ग फिट"
       }
-    },
-    "names": [
-      "sq ft",
-      "sq. ft."
-    ]
+    }
   },
   {
     "key": "sq yd",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "वर्ग गज"
       }
-    },
-    "names": [
-      "sq yd",
-      "sq. yd."
-    ]
+    }
   },
   {
     "key": "sq mi",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "वर्ग मील"
       }
-    },
-    "names": [
-      "sq mi",
-      "sq. mi."
-    ]
+    }
   },
   {
     "key": "acr",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "एकर"
       }
-    },
-    "names": [
-      "ac",
-      "ac.",
-      "acr",
-      "acr."
-    ]
+    }
   },
   {
     "key": "ha",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "हेक्टर"
       }
-    },
-    "names": [
-      "ha"
-    ]
+    }
   }
 ]

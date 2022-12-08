@@ -4,7 +4,6 @@
   },
   {
     "key": "0020",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Leerzeichen"
@@ -13,7 +12,6 @@
   },
   {
     "key": "00A0",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": " "
@@ -22,7 +20,6 @@
   },
   {
     "key": "00AD",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "weicher Trennstrich"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2000",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "En Quad"
@@ -40,7 +36,6 @@
   },
   {
     "key": "2001",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Em Quad"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2002",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "En Space"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2003",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -67,7 +60,6 @@
   },
   {
     "key": "2004",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Raum für drei Per-Em"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2005",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Raum für vier pro Em"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2006",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Six-Per-Em Space"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2007",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Raum darstellen"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2008",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Interpunktionsraum"
@@ -112,7 +100,6 @@
   },
   {
     "key": "2009",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -121,7 +108,6 @@
   },
   {
     "key": "200A",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -130,7 +116,6 @@
   },
   {
     "key": "200B",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
@@ -139,7 +124,6 @@
   },
   {
     "key": "200C",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Nullbreite ohne Joiner"
@@ -148,7 +132,6 @@
   },
   {
     "key": "200D",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Zero Width Joiner"
@@ -157,7 +140,6 @@
   },
   {
     "key": "200E",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Markierung von links nach rechts"
@@ -166,7 +148,6 @@
   },
   {
     "key": "200F",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Markierung von rechts nach links"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2028",
-    "category": "Zl",
     "mappings": {
       "default": {
         "default": "Trennzeichen"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2029",
-    "category": "Zp",
     "mappings": {
       "default": {
         "default": "Absatztrennzeichen"
@@ -193,7 +172,6 @@
   },
   {
     "key": "202A",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Einbetten von links nach rechts"
@@ -202,7 +180,6 @@
   },
   {
     "key": "202B",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Einbetten von rechts nach links"
@@ -211,7 +188,6 @@
   },
   {
     "key": "202C",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Pop Richtungsformatierung"
@@ -220,7 +196,6 @@
   },
   {
     "key": "202D",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Von links nach rechts überschreiben"
@@ -229,7 +204,6 @@
   },
   {
     "key": "202E",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Von rechts nach links überschreiben"
@@ -238,7 +212,6 @@
   },
   {
     "key": "202F",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "Schmaler No-Break-Bereich"
@@ -247,7 +220,6 @@
   },
   {
     "key": "205F",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -256,7 +228,6 @@
   },
   {
     "key": "2060",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Wortverbinding"
@@ -265,7 +236,6 @@
   },
   {
     "key": "2061",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "von"
@@ -274,7 +244,6 @@
   },
   {
     "key": "2062",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "mal"
@@ -283,7 +252,6 @@
   },
   {
     "key": "2063",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Komma"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2064",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "plus"
@@ -301,7 +268,6 @@
   },
   {
     "key": "206A",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Symmetrisches Austauschen verhindern"
@@ -310,7 +276,6 @@
   },
   {
     "key": "206B",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Aktivieren Sie das symmetrische Austauschen"
@@ -319,7 +284,6 @@
   },
   {
     "key": "206E",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Nationale Ziffernformen"
@@ -328,7 +292,6 @@
   },
   {
     "key": "206F",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Nominale Ziffernformen"
@@ -337,7 +300,6 @@
   },
   {
     "key": "FEFF",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Nullbreite Leerzeichen"
@@ -346,7 +308,6 @@
   },
   {
     "key": "FFF9",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Interlinearer Anmerkungsanker"
@@ -355,7 +316,6 @@
   },
   {
     "key": "FFFA",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Separator für interlineare Anmerkungen"
@@ -364,7 +324,6 @@
   },
   {
     "key": "FFFB",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "Interlinear Annotation Terminator"
