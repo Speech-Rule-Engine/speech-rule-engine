@@ -35,42 +35,48 @@
     "key": "gcd",
     "category": "Elementary",
     "names": [
-      "gcd"
+      "gcd",
+      "GCD"
     ]
   },
   {
     "key": "lcm",
     "category": "Elementary",
     "names": [
-      "lcm"
+      "lcm",
+      "LCM"
     ]
   },
   {
     "key": "arg",
     "category": "Complex",
     "names": [
-      "arg"
+      "arg",
+      "Arg"
     ]
   },
   {
     "key": "im",
     "category": "Complex",
     "names": [
-      "im"
+      "im",
+      "Im"
     ]
   },
   {
     "key": "re",
     "category": "Complex",
     "names": [
-      "re"
+      "re",
+      "Re"
     ]
   },
   {
     "key": "inf",
     "category": "Limits",
     "names": [
-      "inf"
+      "inf",
+      "Inf"
     ]
   },
   {
@@ -100,21 +106,24 @@
     "key": "max",
     "category": "Limits",
     "names": [
-      "max"
+      "max",
+      "Max"
     ]
   },
   {
     "key": "min",
     "category": "Limits",
     "names": [
-      "min"
+      "min",
+      "Min"
     ]
   },
   {
     "key": "sup",
     "category": "Limits",
     "names": [
-      "sup"
+      "sup",
+      "Sup"
     ]
   },
   {

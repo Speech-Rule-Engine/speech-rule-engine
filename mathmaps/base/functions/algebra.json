@@ -6,21 +6,24 @@
     "key": "deg",
     "category": "Algebra",
     "names": [
-      "deg"
+      "deg",
+      "Deg"
     ]
   },
   {
     "key": "det",
     "category": "Algebra",
     "names": [
-      "det"
+      "det",
+      "Det"
     ]
   },
   {
     "key": "dim",
     "category": "Algebra",
     "names": [
-      "dim"
+      "dim",
+      "Dim"
     ]
   },
   {
@@ -28,14 +31,16 @@
     "category": "Algebra",
     "names": [
       "hom",
-      "Hom"
+      "Hom",
+      "HOM"
     ]
   },
   {
     "key": "ker",
     "category": "Algebra",
     "names": [
-      "ker"
+      "ker",
+      "Ker"
     ]
   },
   {
