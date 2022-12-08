@@ -4,81 +4,54 @@
   },
   {
     "key": "cos",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cosine"
       }
-    },
-    "names": [
-      "cos",
-      "cosine"
-    ]
+    }
   },
   {
     "key": "cot",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cotangent"
       }
-    },
-    "names": [
-      "cot"
-    ]
+    }
   },
   {
     "key": "csc",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cosecant"
       }
-    },
-    "names": [
-      "csc"
-    ]
+    }
   },
   {
     "key": "sec",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "secant"
       }
-    },
-    "names": [
-      "sec"
-    ]
+    }
   },
   {
     "key": "sin",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "sine"
       }
-    },
-    "names": [
-      "sin",
-      "sine"
-    ]
+    }
   },
   {
     "key": "tan",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "tangent"
       }
-    },
-    "names": [
-      "tan"
-    ]
+    }
   },
   {
     "key": "arccos",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arc cosine"
@@ -86,14 +59,10 @@
       "clearspeak": {
         "Trig_TrigInverse": "cosine inverse"
       }
-    },
-    "names": [
-      "arccos"
-    ]
+    }
   },
   {
     "key": "arccot",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arc cotangent"
@@ -101,14 +70,10 @@
       "clearspeak": {
         "Trig_TrigInverse": "cotangent inverse"
       }
-    },
-    "names": [
-      "arccot"
-    ]
+    }
   },
   {
     "key": "arccsc",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arc cosecant"
@@ -116,14 +81,10 @@
       "clearspeak": {
         "Trig_TrigInverse": "cosecant inverse"
       }
-    },
-    "names": [
-      "arccsc"
-    ]
+    }
   },
   {
     "key": "arcsec",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arc secant"
@@ -131,14 +92,10 @@
       "clearspeak": {
         "Trig_TrigInverse": "secant inverse"
       }
-    },
-    "names": [
-      "arcsec"
-    ]
+    }
   },
   {
     "key": "arcsin",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arc sine"
@@ -146,14 +103,10 @@
       "clearspeak": {
         "Trig_TrigInverse": "sine inverse"
       }
-    },
-    "names": [
-      "arcsin"
-    ]
+    }
   },
   {
     "key": "arctan",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arc tangent"
@@ -161,9 +114,6 @@
       "clearspeak": {
         "Trig_TrigInverse": "tangent inverse"
       }
-    },
-    "names": [
-      "arctan"
-    ]
+    }
   }
 ]

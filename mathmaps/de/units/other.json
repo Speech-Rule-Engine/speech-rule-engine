@@ -4,17 +4,10 @@
   },
   {
     "key": "doz",
-    "category": "other",
     "mappings": {
       "default": {
         "default": "Dutzend"
       }
-    },
-    "names": [
-      "doz",
-      "doz.",
-      "dz",
-      "dz."
-    ]
+    }
   }
 ]

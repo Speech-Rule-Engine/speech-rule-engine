@@ -4,7 +4,6 @@
   },
   {
     "key": "0020",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "spazio"
@@ -13,7 +12,6 @@
   },
   {
     "key": "00A0",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": " "
@@ -22,7 +20,6 @@
   },
   {
     "key": "00AD",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "trattino discrezionale"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2000",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "in quad"
@@ -40,7 +36,6 @@
   },
   {
     "key": "2001",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "montone quad"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2002",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -58,7 +52,6 @@
   },
   {
     "key": "2003",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -67,7 +60,6 @@
   },
   {
     "key": "2004",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -76,7 +68,6 @@
   },
   {
     "key": "2005",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -85,7 +76,6 @@
   },
   {
     "key": "2006",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "spazio per sei persone"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2007",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -103,7 +92,6 @@
   },
   {
     "key": "2008",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -112,7 +100,6 @@
   },
   {
     "key": "2009",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -121,7 +108,6 @@
   },
   {
     "key": "200A",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -130,7 +116,6 @@
   },
   {
     "key": "200B",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
@@ -139,7 +124,6 @@
   },
   {
     "key": "200C",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "zero Width Non-Joiner"
@@ -148,7 +132,6 @@
   },
   {
     "key": "200D",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "zero Width Joiner"
@@ -157,7 +140,6 @@
   },
   {
     "key": "200E",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "marchio da sinistra a destra"
@@ -166,7 +148,6 @@
   },
   {
     "key": "200F",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "marchio da destra a sinistra"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2028",
-    "category": "Zl",
     "mappings": {
       "default": {
         "default": "separatore di righe"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2029",
-    "category": "Zp",
     "mappings": {
       "default": {
         "default": "separatore di paragrafi"
@@ -193,7 +172,6 @@
   },
   {
     "key": "202A",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "incorporamento da sinistra a destra"
@@ -202,7 +180,6 @@
   },
   {
     "key": "202B",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "incorporamento da destra a sinistra"
@@ -211,7 +188,6 @@
   },
   {
     "key": "202C",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "pop formattazione direzionale"
@@ -220,7 +196,6 @@
   },
   {
     "key": "202D",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "override da sinistra a destra"
@@ -229,7 +204,6 @@
   },
   {
     "key": "202E",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "override da destra a sinistra"
@@ -238,7 +212,6 @@
   },
   {
     "key": "202F",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": "spazio indivisibile piccolo"
@@ -247,7 +220,6 @@
   },
   {
     "key": "205F",
-    "category": "Zs",
     "mappings": {
       "default": {
         "default": ""
@@ -256,7 +228,6 @@
   },
   {
     "key": "2060",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
@@ -265,7 +236,6 @@
   },
   {
     "key": "2061",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "di"
@@ -274,7 +244,6 @@
   },
   {
     "key": "2062",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "per"
@@ -283,7 +252,6 @@
   },
   {
     "key": "2063",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "virgola"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2064",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "più"
@@ -301,7 +268,6 @@
   },
   {
     "key": "206A",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "inibire lo scambio simmetrico"
@@ -310,7 +276,6 @@
   },
   {
     "key": "206B",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "attiva lo scambio simmetrico"
@@ -319,7 +284,6 @@
   },
   {
     "key": "206E",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "forme di cifre nazionali"
@@ -328,7 +292,6 @@
   },
   {
     "key": "206F",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "forme di cifre nominali"
@@ -337,7 +300,6 @@
   },
   {
     "key": "FEFF",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": ""
@@ -346,7 +308,6 @@
   },
   {
     "key": "FFF9",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "ancora di annotazione interlineare"
@@ -355,7 +316,6 @@
   },
   {
     "key": "FFFA",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "separatore di annotazioni interlineari"
@@ -364,7 +324,6 @@
   },
   {
     "key": "FFFB",
-    "category": "Cf",
     "mappings": {
       "default": {
         "default": "terminatore di annotazione interlineare"

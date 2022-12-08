@@ -4,131 +4,82 @@
   },
   {
     "key": "m",
-    "category": "Length",
     "mappings": {
       "default": {
         "default": "mètre"
       }
-    },
-    "si": true,
-    "names": [
-      "m"
-    ]
+    }
   },
   {
     "key": "ft",
-    "category": "Length",
     "mappings": {
       "default": {
         "default": "pied"
       }
-    },
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
-    "category": "Length",
     "mappings": {
       "default": {
         "default": "pouce"
       }
-    },
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
-    "category": "Length",
     "mappings": {
       "default": {
         "default": "mile"
       }
-    },
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
-    "category": "Length",
     "mappings": {
       "default": {
         "default": "yard"
       }
-    },
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
   {
     "key": "link",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "chaînon"
       }
-    },
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
     "key": "rod",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "rod"
       }
-    },
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
     "key": "chain",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "chaîne"
       }
-    },
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
     "key": "furlong",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "furlong"
       }
-    },
-    "names": [
-      "fur",
-      "fur."
-    ]
+    }
   },
   {
     "key": "n.m.",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "mille marin"
       }
-    },
-    "names": [
-      "n.m."
-    ]
+    }
   }
 ]

@@ -4,7 +4,6 @@
   },
   {
     "key": "kt",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "nodi",
@@ -12,48 +11,34 @@
       }
     },
     "names": [
-      "kt",
-      "kt.",
       "nd"
     ]
   },
   {
     "key": "mph",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "miglia orarie",
         "default": "miglio orario"
       }
-    },
-    "names": [
-      "mph"
-    ]
+    }
   },
   {
     "key": "rpm",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "giri al minuto",
         "default": "giro al minuto"
       }
-    },
-    "names": [
-      "rpm"
-    ]
+    }
   },
   {
     "key": "kmh",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "chilometri orari",
         "default": "chilometro orario"
       }
-    },
-    "names": [
-      "kmh"
-    ]
+    }
   }
 ]

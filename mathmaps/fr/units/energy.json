@@ -4,107 +4,66 @@
   },
   {
     "key": "W",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "watt"
       }
-    },
-    "si": true,
-    "names": [
-      "W",
-      "w"
-    ]
+    }
   },
   {
     "key": "kwh",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "kilowattheure"
       }
-    },
-    "names": [
-      "kwh",
-      "kWh"
-    ]
+    }
   },
   {
     "key": "J",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "joule"
       }
-    },
-    "si": true,
-    "names": [
-      "J"
-    ]
+    }
   },
   {
     "key": "N",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "newton"
       }
-    },
-    "si": true,
-    "names": [
-      "N"
-    ]
+    }
   },
   {
     "key": "A",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "ampère"
       }
-    },
-    "si": true,
-    "names": [
-      "A"
-    ]
+    }
   },
   {
     "key": "V",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "volt"
       }
-    },
-    "si": true,
-    "names": [
-      "V"
-    ]
+    }
   },
   {
     "key": "ohm",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "ohm"
       }
-    },
-    "names": [
-      "Ohm",
-      "ohm"
-    ]
+    }
   },
   {
     "key": "Ω",
-    "category": "energy",
     "mappings": {
       "default": {
         "default": "ohm"
       }
-    },
-    "si": true,
-    "names": [
-      "Ω"
-    ]
+    }
   }
 ]

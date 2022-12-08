@@ -4,7 +4,6 @@
   },
   {
     "key": "01D6",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u trema med streck ovanför"
@@ -13,7 +12,6 @@
   },
   {
     "key": "01D8",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u trema med akut accent"
@@ -22,7 +20,6 @@
   },
   {
     "key": "01DA",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u trema med hake"
@@ -31,7 +28,6 @@
   },
   {
     "key": "01DC",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u trema med grav accent"
@@ -40,7 +36,6 @@
   },
   {
     "key": "01DF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u trema med streck ovanför"
@@ -49,7 +44,6 @@
   },
   {
     "key": "01E1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a punkt med streck ovanför"
@@ -58,7 +52,6 @@
   },
   {
     "key": "01ED",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med hake och streck ovanför"
@@ -67,7 +60,6 @@
   },
   {
     "key": "01FB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a ring med akut accent ovanför"
@@ -76,7 +68,6 @@
   },
   {
     "key": "022B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o trema med streck ovanför"
@@ -85,7 +76,6 @@
   },
   {
     "key": "022D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o tilde med streck ovanför"
@@ -94,7 +84,6 @@
   },
   {
     "key": "0231",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o punkt med streck ovanför"
@@ -103,7 +92,6 @@
   },
   {
     "key": "1E09",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "c med cedilj och akut"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1E15",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med streck och grav"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1E17",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med streck och akut"
@@ -130,7 +116,6 @@
   },
   {
     "key": "1E1D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cedilj och brevis"
@@ -139,7 +124,6 @@
   },
   {
     "key": "1E2F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i med dieresis och akut"
@@ -148,7 +132,6 @@
   },
   {
     "key": "1E39",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l med punkt under och streck"
@@ -157,7 +140,6 @@
   },
   {
     "key": "1E4D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tilde och akut"
@@ -166,7 +148,6 @@
   },
   {
     "key": "1E4F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med tilde och dieresis"
@@ -175,7 +156,6 @@
   },
   {
     "key": "1E51",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med streck och grav"
@@ -184,7 +164,6 @@
   },
   {
     "key": "1E53",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med streck och akut"
@@ -193,7 +172,6 @@
   },
   {
     "key": "1E5D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "r med punkt under och streck"
@@ -202,7 +180,6 @@
   },
   {
     "key": "1E65",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s med akut och punkt över"
@@ -211,7 +188,6 @@
   },
   {
     "key": "1E67",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s med hake och punkt över"
@@ -220,7 +196,6 @@
   },
   {
     "key": "1E69",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "s med punkt under och punkt över"
@@ -229,7 +204,6 @@
   },
   {
     "key": "1E79",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med tilde och akut"
@@ -238,7 +212,6 @@
   },
   {
     "key": "1E7B",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med streck och dieresis"
@@ -247,7 +220,6 @@
   },
   {
     "key": "1EA5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumflex och akut"
@@ -256,7 +228,6 @@
   },
   {
     "key": "1EA7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumflex och grav"
@@ -265,7 +236,6 @@
   },
   {
     "key": "1EA9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumflex och krok över"
@@ -274,7 +244,6 @@
   },
   {
     "key": "1EAB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumflex och tilde"
@@ -283,7 +252,6 @@
   },
   {
     "key": "1EAD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med cirkumflex och punkt under"
@@ -292,7 +260,6 @@
   },
   {
     "key": "1EAF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis och akut"
@@ -301,7 +268,6 @@
   },
   {
     "key": "1EB1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis och grav"
@@ -310,7 +276,6 @@
   },
   {
     "key": "1EB3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis och krok över"
@@ -319,7 +284,6 @@
   },
   {
     "key": "1EB5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis och tilde"
@@ -328,7 +292,6 @@
   },
   {
     "key": "1EB7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "a med brevis och punkt under"
@@ -337,7 +300,6 @@
   },
   {
     "key": "1EBF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumflex och akut"
@@ -346,7 +308,6 @@
   },
   {
     "key": "1EC1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumflex och grav"
@@ -355,7 +316,6 @@
   },
   {
     "key": "1EC3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumflex och krok över"
@@ -364,7 +324,6 @@
   },
   {
     "key": "1EC5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumflex och tilde"
@@ -373,7 +332,6 @@
   },
   {
     "key": "1EC7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med cirkumflex och punkt under"
@@ -382,7 +340,6 @@
   },
   {
     "key": "1ED1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumflex och akut"
@@ -391,7 +348,6 @@
   },
   {
     "key": "1ED3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumflex och grav"
@@ -400,7 +356,6 @@
   },
   {
     "key": "1ED5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumflex och krok över"
@@ -409,7 +364,6 @@
   },
   {
     "key": "1ED7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumflex och tilde"
@@ -418,7 +372,6 @@
   },
   {
     "key": "1ED9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med cirkumflex och punkt under"
@@ -427,7 +380,6 @@
   },
   {
     "key": "1EDB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med horn och akut"
@@ -436,7 +388,6 @@
   },
   {
     "key": "1EDD",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med horn och grav"
@@ -445,7 +396,6 @@
   },
   {
     "key": "1EDF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med horn och krok över"
@@ -454,7 +404,6 @@
   },
   {
     "key": "1EE1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med horn och tilde"
@@ -463,7 +412,6 @@
   },
   {
     "key": "1EE3",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "o med horn och punkt under"
@@ -472,7 +420,6 @@
   },
   {
     "key": "1EE9",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med horn och akut"
@@ -481,7 +428,6 @@
   },
   {
     "key": "1EEB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med horn och grav"
@@ -490,7 +436,6 @@
   },
   {
     "key": "1EED",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med horn och krok över"
@@ -499,7 +444,6 @@
   },
   {
     "key": "1EEF",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med horn och tilde"
@@ -508,7 +452,6 @@
   },
   {
     "key": "1EF1",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "u med horn och punkt under"

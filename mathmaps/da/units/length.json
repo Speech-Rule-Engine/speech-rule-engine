@@ -4,141 +4,92 @@
   },
   {
     "key": "ft",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "fod",
         "plural": "fod"
       }
-    },
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "tomme",
         "plural": "tommer"
       }
-    },
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "mil",
         "plural": "mil"
       }
-    },
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "yard",
         "plural": "yards"
       }
-    },
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
   {
     "key": "link",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "link",
         "plural": "links"
       }
-    },
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
     "key": "rod",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "stang",
         "plural": "stænger"
       }
-    },
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
     "key": "chain",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "kæde",
         "plural": "kæder"
       }
-    },
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
     "key": "furlong",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "furlong",
         "plural": "furlong"
       }
-    },
-    "names": [
-      "fur",
-      "fur."
-    ]
+    }
   },
   {
     "key": "n.m.",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "sømil",
         "plural": "sømil"
       }
-    },
-    "names": [
-      "n.m."
-    ]
+    }
   },
   {
     "key": "m",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "meter",
         "plural": "meter"
       }
-    },
-    "si": true,
-    "names": [
-      "m"
-    ]
+    }
   }
 ]

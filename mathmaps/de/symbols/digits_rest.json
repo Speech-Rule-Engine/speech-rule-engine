@@ -4,7 +4,6 @@
   },
   {
     "key": "00B2",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "Quadrat"
@@ -17,7 +16,6 @@
   },
   {
     "key": "00B3",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "Kubik"
@@ -30,7 +28,6 @@
   },
   {
     "key": "00BC",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein Viertel"
@@ -39,7 +36,6 @@
   },
   {
     "key": "00BD",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein Halb"
@@ -48,7 +44,6 @@
   },
   {
     "key": "00BE",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "drei Viertel"
@@ -57,7 +52,6 @@
   },
   {
     "key": "2150",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein siebtel"
@@ -66,7 +60,6 @@
   },
   {
     "key": "2151",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein neuntel"
@@ -75,7 +68,6 @@
   },
   {
     "key": "2152",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein zehntel"
@@ -84,7 +76,6 @@
   },
   {
     "key": "2153",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein drittel"
@@ -93,7 +84,6 @@
   },
   {
     "key": "2154",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "zwei drittel"
@@ -102,7 +92,6 @@
   },
   {
     "key": "2155",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein fünftel"
@@ -111,7 +100,6 @@
   },
   {
     "key": "2156",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "zwei fünftel"
@@ -120,7 +108,6 @@
   },
   {
     "key": "2157",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "drei fünftel"
@@ -129,7 +116,6 @@
   },
   {
     "key": "2158",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "vier fünftel"
@@ -138,7 +124,6 @@
   },
   {
     "key": "2159",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein sechstel"
@@ -147,7 +132,6 @@
   },
   {
     "key": "215A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "fünf sechstel"
@@ -156,7 +140,6 @@
   },
   {
     "key": "215B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "ein achtel"
@@ -165,7 +148,6 @@
   },
   {
     "key": "215C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "drei achtel"
@@ -174,7 +156,6 @@
   },
   {
     "key": "215D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "fünf achtel"
@@ -183,7 +164,6 @@
   },
   {
     "key": "215E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sieben achtel"
@@ -192,7 +172,6 @@
   },
   {
     "key": "215F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "Bruchzähler eins"
@@ -201,7 +180,6 @@
   },
   {
     "key": "2189",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "null drittel"
@@ -210,7 +188,6 @@
   },
   {
     "key": "3248",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Zehn auf schwarzem Quadrat"
@@ -219,7 +196,6 @@
   },
   {
     "key": "3249",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Zwanzig auf schwarzem Quadrat"
@@ -228,7 +204,6 @@
   },
   {
     "key": "324A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Dreißig auf schwarzem Quadrat"
@@ -237,7 +212,6 @@
   },
   {
     "key": "324B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Vierzig auf schwarzem Quadrat"
@@ -246,7 +220,6 @@
   },
   {
     "key": "324C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Fünfzig auf schwarzem Quadrat"
@@ -255,7 +228,6 @@
   },
   {
     "key": "324D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Sechzig auf schwarzem Quadrat"
@@ -264,7 +236,6 @@
   },
   {
     "key": "324E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Siebzig auf schwarzem Quadrat"
@@ -273,7 +244,6 @@
   },
   {
     "key": "324F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "eingekreiste Achtzig auf schwarzem Quadrat"

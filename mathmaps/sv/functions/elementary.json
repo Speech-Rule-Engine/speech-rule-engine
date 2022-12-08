@@ -4,19 +4,14 @@
   },
   {
     "key": "log",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmen"
       }
-    },
-    "names": [
-      "log"
-    ]
+    }
   },
   {
     "key": "ln",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "naturliga logaritmen"
@@ -25,230 +20,150 @@
         "default": "l n",
         "Log_LnAsNaturalLog": "naturliga logaritmen"
       }
-    },
-    "names": [
-      "ln"
-    ]
+    }
   },
   {
     "key": "lg",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "tiologaritmen"
       }
-    },
-    "names": [
-      "lg"
-    ]
+    }
   },
   {
     "key": "exp",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "exponentiell"
       }
-    },
-    "names": [
-      "exp",
-      "expt"
-    ]
+    }
   },
   {
     "key": "gcd",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "största gemensamma nämnare"
       }
-    },
-    "names": [
-      "gcd"
-    ]
+    }
   },
   {
     "key": "lcm",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "minsta gemensamma multipel"
       }
-    },
-    "names": [
-      "lcm"
-    ]
+    }
   },
   {
     "key": "arg",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "argument"
       }
-    },
-    "names": [
-      "arg"
-    ]
+    }
   },
   {
     "key": "im",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "imaginär del"
       }
-    },
-    "names": [
-      "im"
-    ]
+    }
   },
   {
     "key": "re",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "reell del"
       }
-    },
-    "names": [
-      "re"
-    ]
+    }
   },
   {
     "key": "inf",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "infimum"
       }
-    },
-    "names": [
-      "inf"
-    ]
+    }
   },
   {
     "key": "lim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "gränsvärde"
       }
-    },
-    "names": [
-      "lim"
-    ]
+    }
   },
   {
     "key": "liminf",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "nedre gränsvärde"
       }
-    },
-    "names": [
-      "lim inf",
-      "liminf"
-    ]
+    }
   },
   {
     "key": "limsup",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "övre gränsvärde"
       }
-    },
-    "names": [
-      "lim sup",
-      "limsup"
-    ]
+    }
   },
   {
     "key": "max",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "maximum"
       }
-    },
-    "names": [
-      "max"
-    ]
+    }
   },
   {
     "key": "min",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "minimum"
       }
-    },
-    "names": [
-      "min"
-    ]
+    }
   },
   {
     "key": "sup",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "supremum"
       }
-    },
-    "names": [
-      "sup"
-    ]
+    }
   },
   {
     "key": "injlim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "kolimes"
       }
-    },
-    "names": [
-      "injlim",
-      "inj lim"
-    ]
+    }
   },
   {
     "key": "projlim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "inverterat gränsvärde"
       }
-    },
-    "names": [
-      "projlim",
-      "proj lim"
-    ]
+    }
   },
   {
     "key": "mod",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "modulo"
       }
-    },
-    "names": [
-      "mod"
-    ]
+    }
   },
   {
     "key": "Pr",
-    "category": "Probability",
     "mappings": {
       "default": {
         "default": "sannolikhet"
       }
-    },
-    "names": [
-      "Pr"
-    ]
+    }
   }
 ]

@@ -4,7 +4,6 @@
   },
   {
     "key": "2113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "håndskrevet l"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2118",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "håndskrevet stort P"
@@ -22,7 +20,6 @@
   },
   {
     "key": "213C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pi med dobbelt streg"
@@ -31,7 +28,6 @@
   },
   {
     "key": "213D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "gamma med dobbelt streg"
@@ -40,7 +36,6 @@
   },
   {
     "key": "213E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Gamma med stort bogstav og dobbelt streg"
@@ -49,7 +44,6 @@
   },
   {
     "key": "213F",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Pi med stort bogstav og dobbelt streg"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2140",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sum med dobbelt streg"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2145",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "stort D med dobbelt streg og kursiv"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d med dobbelt streg og kursiv"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2147",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e med dobbelt streg og kursiv"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i med dobbelt streg og kursiv"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2149",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j med kursiv og dobbelt streg"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1D6A4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "prikløst i med kursiv"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1D6A5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "prikløst j med kursiv"

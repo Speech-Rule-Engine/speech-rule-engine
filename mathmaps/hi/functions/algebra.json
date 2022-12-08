@@ -4,76 +4,50 @@
   },
   {
     "key": "deg",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "अंश"
       }
-    },
-    "names": [
-      "deg"
-    ]
+    }
   },
   {
     "key": "det",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "सारणिक"
       }
-    },
-    "names": [
-      "det"
-    ]
+    }
   },
   {
     "key": "dim",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "आयाम"
       }
-    },
-    "names": [
-      "dim"
-    ]
+    }
   },
   {
     "key": "hom",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "समरूपी"
       }
-    },
-    "names": [
-      "hom",
-      "Hom"
-    ]
+    }
   },
   {
     "key": "ker",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "बीज"
       }
-    },
-    "names": [
-      "ker"
-    ]
+    }
   },
   {
     "key": "Tr",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "अनुरेख"
       }
-    },
-    "names": [
-      "Tr",
-      "tr"
-    ]
+    }
   }
 ]

@@ -32,11 +32,14 @@ export interface MappingsJson {
   [domainName: string]: { [key: string]: string };
 }
 
-export interface UnicodeJson {
+export interface BaseJson {
   key: string;
   category: string;
   names?: string[];
   si?: boolean;
+}
+
+export interface UnicodeJson extends BaseJson {
   mappings: MappingsJson;
   // TODO (TS): It would be nice to handle these in CtrlJson type. But that
   //      leads to a lot of casting at the moment. Maybe have a special ctrl
@@ -59,10 +62,11 @@ export interface SimpleRule {
  * A base store for simple Math objects.
  */
 export class MathSimpleStore {
+
   /**
-   * The category of the character/function/unit.
+   * The information common to all rules in this store.
    */
-  public category = '';
+  public base: BaseJson;
 
   /**
    * Maps locales to lists of simple rules.
@@ -104,30 +108,24 @@ export class MathSimpleStore {
    * Turns a domain mapping from its JSON representation containing simple
    * strings only into a list of speech rules.
    *
-   * @param name Name for the rules.
    * @param locale The locale of the rule.
    * @param modality The modality of the rule.
-   * @param str String for precondition and constraints.
    * @param mapping Simple string
    *     mapping.
    */
   public defineRulesFromMappings(
-    name: string,
     locale: string,
     modality: string,
-    str: string,
     mapping: MappingsJson
   ) {
     for (const domain in mapping) {
       for (const style in mapping[domain]) {
         const content = mapping[domain][style];
         this.defineRuleFromStrings(
-          name,
           locale,
           modality,
           domain,
           style,
-          str,
           content
         );
       }
@@ -152,21 +150,17 @@ export class MathSimpleStore {
   /**
    * Creates a single rule from strings.
    *
-   * @param _name Name of the rule.
    * @param locale The locale of the rule.
    * @param modality The modality of the rule.
    * @param domain The domain axis.
    * @param style The style axis.
-   * @param _str String for precondition and constraints.
    * @param content The content for the postcondition.
    */
   public defineRuleFromStrings(
-    _name: string,
     locale: string,
     modality: string,
     domain: string,
     style: string,
-    _str: string,
     content: string
   ) {
     let store = this.getRules(locale);

@@ -4,145 +4,92 @@
   },
   {
     "key": "lb",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "libra"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "libra imperiale",
         "plural": "libras imperiales"
       }
-    },
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
     "key": "oz",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "onza"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "microgramo"
       }
-    },
-    "names": [
-      "mcg"
-    ]
+    }
   },
   {
     "key": "gr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "gramo"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "gramo"
       }
-    },
-    "si": true,
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "t",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "tonelada"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   },
   {
     "key": "dram",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "dracma"
       }
-    },
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "stone",
         "plural": "stones"
       }
-    },
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
     "key": "qtr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "cuarto corto"
       }
-    },
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
     "key": "cwt",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "centena"
       }
-    },
-    "names": [
-      "cwt",
-      "cwt."
-    ]
+    }
   }
 ]

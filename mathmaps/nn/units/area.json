@@ -4,109 +4,66 @@
   },
   {
     "key": "sq",
-    "category": "other",
     "mappings": {
       "default": {
         "default": "kvadrat"
       }
-    },
-    "names": [
-      "sq",
-      "sq."
-    ]
+    }
   },
   {
     "key": "sq inch",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadratcentimeter"
       }
-    },
-    "names": [
-      "sq in",
-      "sq. in.",
-      "sq inch",
-      "sq. inch"
-    ]
+    }
   },
   {
     "key": "sq rd",
-    "category": "area",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ]
+    }
   },
   {
     "key": "sq ft",
-    "category": "area",
     "mappings": {
       "default": {
         "default": ""
       }
-    },
-    "names": [
-      "sq ft",
-      "sq. ft."
-    ]
+    }
   },
   {
     "key": "sq yd",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadratmeter"
       }
-    },
-    "names": [
-      "sq yd",
-      "sq. yd."
-    ]
+    }
   },
   {
     "key": "sq mi",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "kvadratkilometer"
       }
-    },
-    "names": [
-      "sq mi",
-      "sq. mi."
-    ]
+    }
   },
   {
     "key": "acr",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "mål"
       }
-    },
-    "names": [
-      "ac",
-      "ac.",
-      "acr",
-      "acr."
-    ]
+    }
   },
   {
     "key": "ha",
-    "category": "area",
     "mappings": {
       "default": {
         "default": "hektar"
       }
-    },
-    "names": [
-      "ha"
-    ]
+    }
   }
 ]

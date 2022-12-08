@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre",
@@ -14,7 +13,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi dret",
@@ -24,7 +22,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor esquerre",
@@ -34,7 +31,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor dret",
@@ -44,7 +40,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "clau esquerra",
@@ -54,7 +49,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "clau dreta",
@@ -64,7 +58,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport quadrat esquerre amb ploma"
@@ -73,7 +66,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport quadrat dret amb ploma"
@@ -82,7 +74,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada superior esquerra"
@@ -91,7 +82,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada superior dreta"
@@ -100,7 +90,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada inferior esquerra"
@@ -109,7 +98,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada inferior dreta"
@@ -118,7 +106,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tall inferior dret"
@@ -127,7 +114,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tall inferior esquerre"
@@ -136,7 +122,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tall superior dret"
@@ -145,7 +130,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tall superior esquerre"
@@ -154,7 +138,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angle superior esquerre"
@@ -163,7 +146,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angle superior dret"
@@ -172,7 +154,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angle inferior esquerre"
@@ -181,7 +162,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "angle inferior dret"
@@ -190,7 +170,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "meitat superior d'integral"
@@ -199,7 +178,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "meitat inferior d'integral"
@@ -208,7 +186,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi angular esquerre"
@@ -217,7 +194,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi angular dret"
@@ -226,7 +202,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre ganxo superior"
@@ -235,7 +210,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió del parèntesi esquerre"
@@ -244,7 +218,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parèntesi inferior ganxo inferior"
@@ -253,7 +226,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parèntesi dret ganxo superior"
@@ -262,7 +234,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió del parèntesi dret"
@@ -271,7 +242,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parèntesi inferior ganxo inferior"
@@ -280,7 +250,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada quadrada esquerra cantonada superior"
@@ -289,7 +258,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió del suport quadrat esquerre"
@@ -298,7 +266,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada quadrada esquerra cantonada inferior"
@@ -307,7 +274,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada quadrada dreta cantonada superior"
@@ -316,7 +282,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió de suport quadrat dret"
@@ -325,7 +290,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cantonada quadrada dreta cantonada inferior"
@@ -334,7 +298,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ganxo superior arrissat esquerre"
@@ -343,7 +306,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tros mig arrissat esquerre"
@@ -352,7 +314,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "suport esquerre arrissat ganxo inferior"
@@ -361,7 +322,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió de suport arrissat"
@@ -370,7 +330,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ganxo superior arrissat dret"
@@ -379,7 +338,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tros mitjà de suport arrissat dret"
@@ -388,7 +346,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "brida inferior dreta arrissada"
@@ -397,7 +354,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió integral"
@@ -406,7 +362,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "extensió de línia horitzontal"
@@ -415,7 +370,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquerra amunt o dret sota secció clau"
@@ -424,7 +378,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dreta amunt o esquerre sota secció clau"
@@ -433,7 +386,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "suma superior"
@@ -442,7 +394,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "part inferior de la suma"
@@ -451,7 +402,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "claudàtor superior"
@@ -460,7 +410,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "claudàtor inferior"
@@ -469,7 +418,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "suport quadrat inferior sobre suport quadrat superior"
@@ -478,7 +426,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "part inferior del símbol radical"
@@ -487,7 +434,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "línia de caixa vertical esquerra"
@@ -496,7 +442,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "línia de caixa vertical dreta"
@@ -505,7 +450,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parèntesi superior"
@@ -514,7 +458,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parèntesi inferior"
@@ -523,7 +466,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "claudàtor arrissat superior"
@@ -532,7 +474,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "claudàtor arrissat inferior"
@@ -541,7 +482,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "claudàtor superior en tortuga"
@@ -550,7 +490,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "claudàtor inferior en tortuga"
@@ -559,7 +498,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornament de parèntesi esquerre mig"
@@ -568,7 +506,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "adorn de parèntesi mig dret"
@@ -577,7 +514,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "adorn parèntesi esquerre aplanat mitjà"
@@ -586,7 +522,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "adorn parèntesi dret mitjà aplanat"
@@ -595,7 +530,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "adorn de suport d'angle mig apuntant cap a l'esquerra"
@@ -604,7 +538,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "adorn de suport d'angle mig apuntant cap a la dreta"
@@ -613,7 +546,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornament de cometes en l'angle que apunta cap a l'esquerra"
@@ -622,7 +554,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornament de cometes en angle recte que apunta cap a la dreta"
@@ -631,7 +562,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornament pesant de el suport de l'angle que assenyala a l'esquerra"
@@ -640,7 +570,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornament pesant de el suport de l'angle que assenyala cap a la dreta"
@@ -649,7 +578,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornament de suport de petxina de tortuga esquerra lleugera"
@@ -658,7 +586,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornament de claudàtor dret tortuga dreta"
@@ -667,7 +594,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "ornament de suport arrissat esquerre mitjà"
@@ -676,7 +602,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "ornament de suport arrissat dret mitjà"
@@ -685,7 +610,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "símbol delimitador esquerre de bossa en forma de s"
@@ -694,7 +618,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "símbol delimitador dret de bossa en forma de s"
@@ -703,7 +626,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor buit esquerre"
@@ -712,7 +634,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor buit dret"
@@ -721,7 +642,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor agut esquerre"
@@ -730,7 +650,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor agut dret"
@@ -739,7 +658,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doble claudàtor agut esquerre"
@@ -748,7 +666,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "doble claudàtor agut dret"
@@ -757,7 +674,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor de tortuga buit esquerre"
@@ -766,7 +682,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor de tortuga buit dret"
@@ -775,7 +690,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi pla esquerre"
@@ -784,7 +698,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi pla dret"
@@ -793,7 +706,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport arrissat blanc esquerre"
@@ -802,7 +714,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dreta arrissat blanc suport"
@@ -811,7 +722,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre blanc"
@@ -820,7 +730,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi dret blanc"
@@ -829,7 +738,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "notació Z esquerra suport d'imatge"
@@ -838,7 +746,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor d'imatge dreta de notació Z"
@@ -847,7 +754,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "notació z claudàtor d’unió esquerre"
@@ -856,7 +762,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z notation right binding bracket"
@@ -865,7 +770,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor esquerre amb barra inferior"
@@ -874,7 +778,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor dret amb barra inferior"
@@ -883,7 +786,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor esquerre amb la marca a l'extrem superior"
@@ -892,7 +794,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor dret amb la marca a l'extrem inferior"
@@ -901,7 +802,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor esquerre amb la marca a l'extrem inferior"
@@ -910,7 +810,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor dret amb una marca a l'extrem superior"
@@ -919,7 +818,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor esquerra amb punt"
@@ -928,7 +826,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor angular amb punt"
@@ -937,7 +834,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "arc esquerre inferior al claudàtor"
@@ -946,7 +842,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "arc dret superior al claudàtor"
@@ -955,7 +850,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "arc doble esquerre superior al claudàtor"
@@ -964,7 +858,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "arc doble dret inferior al claudàtor"
@@ -973,7 +866,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport de petxina de tortuga negra esquerra"
@@ -982,7 +874,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "brida de petxina de tortuga negra dreta"
@@ -991,7 +882,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "tanca esquerra ondulada"
@@ -1000,7 +890,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "tanca dreta ondulada"
@@ -1009,7 +898,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doble tanca esquerra ondulada"
@@ -1018,7 +906,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "doble tanca dreta ondulada"
@@ -1027,7 +914,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "brida d'angle corb a l'esquerra"
@@ -1036,7 +922,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "brida d'angle corb orientada cap a la dreta"
@@ -1045,7 +930,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport superior esquerre superior"
@@ -1054,7 +938,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "mitjà suport superior dret"
@@ -1063,7 +946,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "brida inferior esquerra"
@@ -1072,7 +954,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "mitjà suport inferior dret"
@@ -1081,7 +962,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport U lateral esquerre"
@@ -1090,7 +970,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport U lateral dret"
@@ -1099,7 +978,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doble parèntesi esquerre"
@@ -1108,7 +986,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi doble dret"
@@ -1117,7 +994,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport d'angle esquerre"
@@ -1126,7 +1002,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport d'angle recte"
@@ -1135,7 +1010,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi angular doble"
@@ -1144,7 +1018,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi angular doble dret",
@@ -1154,7 +1027,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport de la cantonada esquerra"
@@ -1163,7 +1035,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport de cantonada dreta"
@@ -1172,7 +1043,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport de cantonada blanc esquerre"
@@ -1181,7 +1051,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport de cantonada blanc dret"
@@ -1190,7 +1059,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport lenticular esquerre negre"
@@ -1199,7 +1067,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport lenticular negre dret"
@@ -1208,7 +1075,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "mènsula esquerra de closca de tortuga"
@@ -1217,7 +1083,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "mènsula de closca de tortuga dreta"
@@ -1226,7 +1091,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport lenticular blanc esquerre"
@@ -1235,7 +1099,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport lenticular blanc dret"
@@ -1244,7 +1107,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport de closca de tortuga blanca esquerra"
@@ -1253,7 +1115,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport de petxina de tortuga blanca dreta"
@@ -1262,7 +1123,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor buit"
@@ -1271,7 +1131,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor buit dret",
@@ -1281,7 +1140,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "cometa doble invertida"
@@ -1290,7 +1148,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "segona"
@@ -1299,7 +1156,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "cometes baixes dobles"
@@ -1308,7 +1164,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre adornat"
@@ -1317,7 +1172,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi dret adornat"
@@ -1326,7 +1180,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per a suport lenticular blanc esquerre vertical"
@@ -1335,7 +1188,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per a suport lenticular blanc vertical dret"
@@ -1344,7 +1196,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi superior"
@@ -1353,7 +1204,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi inferior"
@@ -1362,7 +1212,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "clau superior"
@@ -1371,7 +1220,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "clau inferior"
@@ -1380,7 +1228,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport vertical de petxina de tortuga esquerra"
@@ -1389,7 +1236,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport vertical de petxina de tortuga dreta"
@@ -1398,7 +1244,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport lenticular negre esquerre vertical"
@@ -1407,7 +1252,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport lenticular negre dret vertical"
@@ -1416,7 +1260,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport vertical doble angle esquerre"
@@ -1425,7 +1268,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport d'angle recte doble vertical"
@@ -1434,7 +1276,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi angular superior"
@@ -1443,7 +1284,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi angular inferior"
@@ -1452,7 +1292,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport de cantonada vertical esquerra"
@@ -1461,7 +1300,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport de cantonada vertical dreta"
@@ -1470,7 +1308,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport de cantonada blanc vertical esquerre"
@@ -1479,7 +1316,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport de cantonada vertical dreta blanca"
@@ -1488,7 +1324,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport quadrat vertical esquerre"
@@ -1497,7 +1332,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al suport quadrat vertical dret"
@@ -1506,7 +1340,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre petit"
@@ -1515,7 +1348,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi dret petit"
@@ -1524,7 +1356,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor arrissat esquerre petit"
@@ -1533,7 +1364,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor dret arrissat petit"
@@ -1542,7 +1372,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "petit suport esquerre de closca de tortuga"
@@ -1551,7 +1380,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "petit suport dret de closca de tortuga"
@@ -1560,7 +1388,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre d'amplada completa"
@@ -1569,7 +1396,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi dret d'amplada completa"
@@ -1578,7 +1404,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "suport quadrat esquerre d'amplada completa"
@@ -1587,7 +1412,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport quadrat dret d'amplada completa"
@@ -1596,7 +1420,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor arrissat esquerre d'amplada completa"
@@ -1605,7 +1428,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "claudàtor dret d'amplada completa"
@@ -1614,7 +1436,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi blanc esquerre d'amplada completa"
@@ -1623,7 +1444,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi blanc dret d'amplada completa"
@@ -1632,7 +1452,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "claudàtor de cantonada esquerra de mig ample"
@@ -1641,7 +1460,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "suport de cantonada dreta de mig ample"

@@ -4,150 +4,104 @@
   },
   {
     "key": "cos",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "coseno"
       }
-    },
-    "names": [
-      "cos",
-      "cosine"
-    ]
+    }
   },
   {
     "key": "cot",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cotangente"
       }
-    },
-    "names": [
-      "cot"
-    ]
+    }
   },
   {
     "key": "csc",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "cosecante"
       }
-    },
-    "names": [
-      "csc"
-    ]
+    }
   },
   {
     "key": "sec",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "secant"
       }
-    },
-    "names": [
-      "sec"
-    ]
+    }
   },
   {
     "key": "sin",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "seno"
       }
     },
     "names": [
-      "sin",
-      "sine",
       "sen"
     ]
   },
   {
     "key": "tan",
-    "category": "Trigonometric",
     "mappings": {
       "default": {
         "default": "tangente"
       }
-    },
-    "names": [
-      "tan"
-    ]
+    }
   },
   {
     "key": "arccos",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco coseno"
       }
-    },
-    "names": [
-      "arccos"
-    ]
+    }
   },
   {
     "key": "arccot",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco cotangente"
       }
-    },
-    "names": [
-      "arccot"
-    ]
+    }
   },
   {
     "key": "arccsc",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco cosecante"
       }
-    },
-    "names": [
-      "arccsc"
-    ]
+    }
   },
   {
     "key": "arcsec",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco secante"
       }
-    },
-    "names": [
-      "arcsec"
-    ]
+    }
   },
   {
     "key": "arcsin",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco seno"
       }
     },
     "names": [
-      "arcsin",
       "arcsen"
     ]
   },
   {
     "key": "arctan",
-    "category": "Cyclometric",
     "mappings": {
       "default": {
         "default": "arco tangente"
       }
-    },
-    "names": [
-      "arctan"
-    ]
+    }
   }
 ]

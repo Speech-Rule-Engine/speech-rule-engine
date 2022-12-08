@@ -4,19 +4,14 @@
   },
   {
     "key": "log",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmo"
       }
-    },
-    "names": [
-      "log"
-    ]
+    }
   },
   {
     "key": "ln",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmo naturale"
@@ -25,234 +20,158 @@
         "default": "l n",
         "Log_LnAsNaturalLog": "logaritmo naturale"
       }
-    },
-    "names": [
-      "ln"
-    ]
+    }
   },
   {
     "key": "lg",
-    "category": "Logarithm",
     "mappings": {
       "default": {
         "default": "logaritmo in basi 10"
       }
-    },
-    "names": [
-      "lg"
-    ]
+    }
   },
   {
     "key": "exp",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "esponenziale"
       }
-    },
-    "names": [
-      "exp",
-      "expt"
-    ]
+    }
   },
   {
     "key": "gcd",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "massimo comun divisore"
       }
     },
     "names": [
-      "gcd",
       "mcd",
       "MCD"
     ]
   },
   {
     "key": "lcm",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "minimo comune multiplo"
       }
     },
     "names": [
-      "lcm",
       "mcm",
       "MCM"
     ]
   },
   {
     "key": "arg",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "argomento"
       }
-    },
-    "names": [
-      "arg"
-    ]
+    }
   },
   {
     "key": "im",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "la parte immaginaria del numero complesso"
       }
-    },
-    "names": [
-      "im"
-    ]
+    }
   },
   {
     "key": "re",
-    "category": "Complex",
     "mappings": {
       "default": {
         "default": "la parte reale del numero complesso"
       }
-    },
-    "names": [
-      "re"
-    ]
+    }
   },
   {
     "key": "inf",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "estremo inferiore"
       }
-    },
-    "names": [
-      "inf"
-    ]
+    }
   },
   {
     "key": "lim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite"
       }
-    },
-    "names": [
-      "lim"
-    ]
+    }
   },
   {
     "key": "liminf",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite inferiore"
       }
-    },
-    "names": [
-      "lim inf",
-      "liminf"
-    ]
+    }
   },
   {
     "key": "limsup",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite superiore"
       }
-    },
-    "names": [
-      "lim sup",
-      "limsup"
-    ]
+    }
   },
   {
     "key": "max",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "massimo"
       }
-    },
-    "names": [
-      "max"
-    ]
+    }
   },
   {
     "key": "min",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "minimo"
       }
-    },
-    "names": [
-      "min"
-    ]
+    }
   },
   {
     "key": "sup",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "estremo superiore"
       }
-    },
-    "names": [
-      "sup"
-    ]
+    }
   },
   {
     "key": "injlim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "colimiti"
       }
-    },
-    "names": [
-      "injlim",
-      "inj lim"
-    ]
+    }
   },
   {
     "key": "projlim",
-    "category": "Limits",
     "mappings": {
       "default": {
         "default": "limite proiettivo"
       }
-    },
-    "names": [
-      "projlim",
-      "proj lim"
-    ]
+    }
   },
   {
     "key": "mod",
-    "category": "Elementary",
     "mappings": {
       "default": {
         "default": "modulo"
       }
-    },
-    "names": [
-      "mod"
-    ]
+    }
   },
   {
     "key": "Pr",
-    "category": "Probability",
     "mappings": {
       "default": {
         "default": "probabilità"
       }
-    },
-    "names": [
-      "Pr"
-    ]
+    }
   }
 ]

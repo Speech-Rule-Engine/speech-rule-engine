@@ -4,7 +4,6 @@
   },
   {
     "key": "23E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "decimal eksponentsymbol"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2605",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort stjerne"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2606",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid stjerne"
@@ -31,7 +28,6 @@
   },
   {
     "key": "26AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel"
@@ -40,7 +36,6 @@
   },
   {
     "key": "26AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort cirkel"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2705",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvidt flueben"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2713",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "flueben"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2714",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kraftigt flueben"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2715",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "multiplikations-x"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2716",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kraftigt multiplikations-x"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2717",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "afkrysnings x"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2718",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt afstemningskryds"
@@ -112,7 +100,6 @@
   },
   {
     "key": "271B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "åbent midterkryds"
@@ -121,7 +108,6 @@
   },
   {
     "key": "271C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt åbent midterkryds"
@@ -130,7 +116,6 @@
   },
   {
     "key": "2720",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "malteser kors"
@@ -139,7 +124,6 @@
   },
   {
     "key": "2721",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "davidsstjerne"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2722",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dråbeformet stjerne med fire takker"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2723",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ballonstjerne med fire takker"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2724",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tyk ballonstjerne med fire takker"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2725",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stjerne med fire klørformede takker"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2726",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort firetakket stjerne"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2727",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid firetakket stjerne"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2728",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "gnister"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2729",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid stjerne med kontur"
@@ -220,7 +196,6 @@
   },
   {
     "key": "272A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid stjerne i cirkel"
@@ -229,7 +204,6 @@
   },
   {
     "key": "272B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort stjerne med åben midte"
@@ -238,7 +212,6 @@
   },
   {
     "key": "272C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid stjerne med sort midte"
@@ -247,7 +220,6 @@
   },
   {
     "key": "272D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kontur af sort stjerne"
@@ -256,7 +228,6 @@
   },
   {
     "key": "272E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tyk kontur af sort stjerne"
@@ -265,7 +236,6 @@
   },
   {
     "key": "272F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "møllestjerne"
@@ -274,7 +244,6 @@
   },
   {
     "key": "2730",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid stjerne med skyggevirkning"
@@ -283,7 +252,6 @@
   },
   {
     "key": "2731",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tung stjerne"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2732",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisk med åben midte"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2733",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stjerne med otte takker"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2734",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort stjerne med otte takker"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2735",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "møllestjerne med otte takker"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2736",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "seks takket sort stjerne"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2739",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort stjerne med tolv takker"
@@ -346,7 +308,6 @@
   },
   {
     "key": "273A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stjerne med seksten takker"
@@ -355,7 +316,6 @@
   },
   {
     "key": "273B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dråbeformet stjerne"
@@ -364,7 +324,6 @@
   },
   {
     "key": "273C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dråbeformet stjerne med takker og åben midte"
@@ -373,7 +332,6 @@
   },
   {
     "key": "273D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tåreformet asterix eller blomst"
@@ -382,7 +340,6 @@
   },
   {
     "key": "273E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort-hvid blomst med seks kronblade"
@@ -391,7 +348,6 @@
   },
   {
     "key": "273F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort blomst"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2740",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid blomst"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2741",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sort blomsteromrids med otte kronblade"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2742",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cirkel med stjerne med otte spidser og åben midte"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2743",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tyk dråbeformet møllestjerne"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2744",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "snefnug"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2745",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tæt trebladet snefnug"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2746",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tykt sildebenssnefnug"
@@ -463,7 +412,6 @@
   },
   {
     "key": "2747",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "gnist"
@@ -472,7 +420,6 @@
   },
   {
     "key": "2748",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tyk gnist"
@@ -481,7 +428,6 @@
   },
   {
     "key": "2749",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ballonstjerne"
@@ -490,7 +436,6 @@
   },
   {
     "key": "274A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "dråbeformet stjerne med otte propeller"
@@ -499,7 +444,6 @@
   },
   {
     "key": "274B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tyk dråbeformet stjerne med otte propeller"
@@ -508,7 +452,6 @@
   },
   {
     "key": "274C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kryds"
@@ -517,7 +460,6 @@
   },
   {
     "key": "274D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "hvid cirkel med skyggevirkning"

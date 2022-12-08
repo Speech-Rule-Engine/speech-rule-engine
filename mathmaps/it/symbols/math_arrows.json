@@ -4,7 +4,6 @@
   },
   {
     "key": "2190",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2191",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2192",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2193",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso il basso"
@@ -40,7 +36,6 @@
   },
   {
     "key": "2194",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra e destra"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2195",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia alto e basso"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2196",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a nord ovest"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2197",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a nord est"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2198",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a sud est"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2199",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a sud ovest"
@@ -94,7 +84,6 @@
   },
   {
     "key": "219A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra con tratto diagonale"
@@ -103,7 +92,6 @@
   },
   {
     "key": "219B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra con tratto diagonale"
@@ -112,7 +100,6 @@
   },
   {
     "key": "219C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia d'onda a sinistra"
@@ -121,7 +108,6 @@
   },
   {
     "key": "219D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia d'onda verso destra"
@@ -130,7 +116,6 @@
   },
   {
     "key": "219E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sinistra con doppia testa"
@@ -139,7 +124,6 @@
   },
   {
     "key": "219F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia su con doppia testa"
@@ -148,7 +132,6 @@
   },
   {
     "key": "21A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra con doppia testa"
@@ -157,7 +140,6 @@
   },
   {
     "key": "21A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia giù con doppia testa"
@@ -166,7 +148,6 @@
   },
   {
     "key": "21A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sinistra con coda"
@@ -175,7 +156,6 @@
   },
   {
     "key": "21A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra con coda :  iniezione totale di notazione z"
@@ -184,7 +164,6 @@
   },
   {
     "key": "21A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sinistra dalla barra"
@@ -193,7 +172,6 @@
   },
   {
     "key": "21A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto dalla barra"
@@ -202,7 +180,6 @@
   },
   {
     "key": "21A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra dalla barra :  Mappa della notazione z"
@@ -211,7 +188,6 @@
   },
   {
     "key": "21A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso dalla barra :  simbolo di profondità"
@@ -220,7 +196,6 @@
   },
   {
     "key": "21A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia giù con base"
@@ -229,7 +204,6 @@
   },
   {
     "key": "21A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a sinistra con gancio"
@@ -238,7 +212,6 @@
   },
   {
     "key": "21AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con gancio"
@@ -247,7 +220,6 @@
   },
   {
     "key": "21AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sinistra con anello"
@@ -256,7 +228,6 @@
   },
   {
     "key": "21AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con anello"
@@ -265,7 +236,6 @@
   },
   {
     "key": "21AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia dell'onda sinistra destra"
@@ -274,7 +244,6 @@
   },
   {
     "key": "21AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra sinistra con tratto"
@@ -283,7 +252,6 @@
   },
   {
     "key": "21AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia zigzag giù"
@@ -292,7 +260,6 @@
   },
   {
     "key": "21B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto con punta verso sinistra"
@@ -301,7 +268,6 @@
   },
   {
     "key": "21B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto con punta verso destra"
@@ -310,7 +276,6 @@
   },
   {
     "key": "21B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con punta verso sinistra"
@@ -319,7 +284,6 @@
   },
   {
     "key": "21B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con punta verso destra"
@@ -328,7 +292,6 @@
   },
   {
     "key": "21B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con angolo verso il basso :  line feed"
@@ -337,7 +300,6 @@
   },
   {
     "key": "21B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con angolo verso sinistra"
@@ -346,7 +308,6 @@
   },
   {
     "key": "21B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia semicircolare superiore in senso antiorario"
@@ -355,7 +316,6 @@
   },
   {
     "key": "21B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a semicerchio superiore in senso orario"
@@ -364,7 +324,6 @@
   },
   {
     "key": "21B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nord ovest alla barra lunga"
@@ -373,7 +332,6 @@
   },
   {
     "key": "21B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra per barrare la freccia verso destra"
@@ -382,7 +340,6 @@
   },
   {
     "key": "21BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia circolare aperta in senso antiorario"
@@ -391,7 +348,6 @@
   },
   {
     "key": "21BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a cerchio aperto in senso orario"
@@ -400,7 +356,6 @@
   },
   {
     "key": "21C4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra sopra freccia verso sinistra"
@@ -409,7 +364,6 @@
   },
   {
     "key": "21C5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto a sinistra di freccia verso il basso"
@@ -418,7 +372,6 @@
   },
   {
     "key": "21C6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra sopra freccia verso destra"
@@ -427,7 +380,6 @@
   },
   {
     "key": "21C7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coppia di frecce verso sinistra"
@@ -436,7 +388,6 @@
   },
   {
     "key": "21C8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coppia di frecce verso l'alto"
@@ -445,7 +396,6 @@
   },
   {
     "key": "21C9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coppia di frecce verso destra"
@@ -454,7 +404,6 @@
   },
   {
     "key": "21CA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coppia di frecce verso il basso"
@@ -463,7 +412,6 @@
   },
   {
     "key": "21CD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia doppia verso sinistra con tratto diagonale"
@@ -472,7 +420,6 @@
   },
   {
     "key": "21CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia doppia sinistra destra con tratto diagonale"
@@ -481,7 +428,6 @@
   },
   {
     "key": "21CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia doppia verso destra con tratto diagonale"
@@ -490,7 +436,6 @@
   },
   {
     "key": "21D0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia doppia sinistra"
@@ -499,7 +444,6 @@
   },
   {
     "key": "21D1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia doppia verso l'alto"
@@ -508,7 +452,6 @@
   },
   {
     "key": "21D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia doppia verso destra"
@@ -517,7 +460,6 @@
   },
   {
     "key": "21D3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia doppia verso il basso"
@@ -526,7 +468,6 @@
   },
   {
     "key": "21D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia doppia sinistra destra"
@@ -535,7 +476,6 @@
   },
   {
     "key": "21D5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia doppia su e giù"
@@ -544,7 +484,6 @@
   },
   {
     "key": "21D6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "doppia freccia nord ovest"
@@ -553,7 +492,6 @@
   },
   {
     "key": "21D7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "doppia freccia nord est"
@@ -562,7 +500,6 @@
   },
   {
     "key": "21D8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "doppia freccia sud est"
@@ -571,7 +508,6 @@
   },
   {
     "key": "21D9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "doppia freccia sud ovest"
@@ -580,7 +516,6 @@
   },
   {
     "key": "21DA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia triple verso sinistra"
@@ -589,7 +524,6 @@
   },
   {
     "key": "21DB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia triple verso destra"
@@ -598,7 +532,6 @@
   },
   {
     "key": "21DC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia ondulata verso sinistra"
@@ -607,7 +540,6 @@
   },
   {
     "key": "21DD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra"
@@ -616,7 +548,6 @@
   },
   {
     "key": "21DE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto con doppio tratto"
@@ -625,7 +556,6 @@
   },
   {
     "key": "21DF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con doppio tratto"
@@ -634,7 +564,6 @@
   },
   {
     "key": "21E0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia tratteggiata a sinistra"
@@ -643,7 +572,6 @@
   },
   {
     "key": "21E1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia tratteggiata verso l'alto"
@@ -652,7 +580,6 @@
   },
   {
     "key": "21E2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia tratteggiata a destra"
@@ -661,7 +588,6 @@
   },
   {
     "key": "21E3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia tratteggiata verso il basso"
@@ -670,7 +596,6 @@
   },
   {
     "key": "21E4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "tab a sinistra"
@@ -679,7 +604,6 @@
   },
   {
     "key": "21E5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra verso il basso"
@@ -688,7 +612,6 @@
   },
   {
     "key": "21E6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca verso sinistra"
@@ -697,7 +620,6 @@
   },
   {
     "key": "21E7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca verso l'alto"
@@ -706,7 +628,6 @@
   },
   {
     "key": "21E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca rivolta verso destra"
@@ -715,7 +636,6 @@
   },
   {
     "key": "21E9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca verso il basso"
@@ -724,7 +644,6 @@
   },
   {
     "key": "21EA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto bianca da Bar"
@@ -733,7 +652,6 @@
   },
   {
     "key": "21EB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto bianca sul piedistallo"
@@ -742,7 +660,6 @@
   },
   {
     "key": "21EC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto bianca sul piedistallo con barra orizzontale"
@@ -751,7 +668,6 @@
   },
   {
     "key": "21ED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto bianca sul piedistallo con barra verticale"
@@ -760,7 +676,6 @@
   },
   {
     "key": "21EE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia doppia bianca verso l'alto"
@@ -769,7 +684,6 @@
   },
   {
     "key": "21EF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto bianca doppia sul piedistallo"
@@ -778,7 +692,6 @@
   },
   {
     "key": "21F0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca rivolta verso destra"
@@ -787,7 +700,6 @@
   },
   {
     "key": "21F1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nord ovest all'angolo"
@@ -796,7 +708,6 @@
   },
   {
     "key": "21F2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sud est all'angolo"
@@ -805,7 +716,6 @@
   },
   {
     "key": "21F3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca in su"
@@ -814,7 +724,6 @@
   },
   {
     "key": "21F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra con piccolo cerchio"
@@ -823,7 +732,6 @@
   },
   {
     "key": "21F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso il basso freccia verso il basso"
@@ -832,7 +740,6 @@
   },
   {
     "key": "21F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tre frecce a destra"
@@ -841,7 +748,6 @@
   },
   {
     "key": "21F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra con tratto verticale"
@@ -850,7 +756,6 @@
   },
   {
     "key": "21F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra con tratto verticale"
@@ -859,7 +764,6 @@
   },
   {
     "key": "21F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra sinistra con tratto verticale"
@@ -868,7 +772,6 @@
   },
   {
     "key": "21FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra con doppio tratto verticale"
@@ -877,7 +780,6 @@
   },
   {
     "key": "21FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra con doppio tratto verticale"
@@ -886,7 +788,6 @@
   },
   {
     "key": "21FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra sinistra con doppio tratto verticale"
@@ -895,7 +796,6 @@
   },
   {
     "key": "21FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a testa aperta rivolta a sinistra"
@@ -904,7 +804,6 @@
   },
   {
     "key": "21FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a testa aperta rivolta verso destra"
@@ -913,7 +812,6 @@
   },
   {
     "key": "21FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a freccia aperta sinistra destra"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2301",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia elettrica"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2303",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia in su"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2304",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia giù"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2324",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia su tra due barre orizzontali"
@@ -958,7 +852,6 @@
   },
   {
     "key": "238B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cerchio spezzato con freccia nord ovest"
@@ -967,7 +860,6 @@
   },
   {
     "key": "2794",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con ampia freccia larga"
@@ -976,7 +868,6 @@
   },
   {
     "key": "2798",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "pesante freccia del sud est"
@@ -985,7 +876,6 @@
   },
   {
     "key": "2799",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra pesante"
@@ -994,7 +884,6 @@
   },
   {
     "key": "279A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nord est pesante"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "279B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra del punto di disegno"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "279C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra con punta arrotondata pesante"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "279D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con la freccia a triangolo"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "279E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con freccia triangolare pesante"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "279F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con freccia a triangolo tratteggiata"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "27A0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso il basso a punta triangolare con tratteggio pesante"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "27A1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra nera"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "27A2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso destra a tre punte superiore tridimensionale"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "27A3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso destra a tre punte inferiore"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "27A4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra nera"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "27A5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera pesante rivolta verso il basso e verso destra"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "27A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera curva verso l'alto e verso destra"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "27A7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera tozzo verso destra"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "27A8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra nera con punta concava pesante"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "27A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra rivolta verso destra bianca"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "27AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra rivolta verso sinistra bianca"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "27AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso il basso bianca inclinata all'indietro"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "27AC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso destra bianca con ombra inclinata nella parte anteriore"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "27AD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra bianca in basso a destra in ombra"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "27AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia in alto a destra in alto a destra bianca in ombra"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "27AF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso destra, in basso a destra, con ombra bianca"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "27B1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia in alto a destra in alto a destra in bianco"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "27B2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra bianca con cerchio pesante"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "27B3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con piume bianche"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "27B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sud orientale con piume nere"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "27B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con piume nere"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "27B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nord orientale con piume nere"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "27B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia sud orientale con grandi piume nere"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "27B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con piume nere pesanti"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "27B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nord est con piume nere pesanti"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "27BA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia rivolta verso il basso a goccia a goccia"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "27BB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia destra con punta a goccia pesante"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "27BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con coda a cuneo"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "27BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con coda a cuneo"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "27BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra delineata aperta"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "27F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia quadrupla verso l'alto"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "27F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia quadrupla verso il basso"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "27F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia Cerchio Gapped in senso antiorario"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "27F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia circolare con gapping in senso orario"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "27F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra con cerchiata più"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "27F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra verso sinistra"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "27F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra lunga"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "27F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra sinistra lunga"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "27F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doppia freccia a sinistra lungo"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "27F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doppia freccia lunga destra"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "27FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doppia freccia destra sinistra lunga"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "27FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra verso sinistra dalla barra"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "27FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra verso destra dalla barra"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "27FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra lunga doppia da barra"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "27FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra lunga doppia da barra"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "27FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia ondulata lunga destra"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "2900",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a destra con tratto verticale"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "2901",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte rivolta verso destra con doppio tratto verticale"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "2902",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra a sinistra con tratto verticale"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "2903",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doppia freccia a destra con tratto verticale"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "2904",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra sinistra doppia con tratto verticale"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "2905",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte destra dalla barra"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "2906",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra a sinistra di Bar"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "2907",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "a destra doppia freccia da bar"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "2908",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso il basso con tratto orizzontale"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "2909",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto con tratto orizzontale"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "290A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tripla freccia verso l'alto"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "290B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia tripla verso il basso"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "290C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia Double Dash sinistra"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "290D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia Double Dash rivolta verso destra"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "290E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia tripla a sinistra"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "290F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia Triple Dash rivolta verso destra"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "2910",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia tripla a due punte a destra"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "2911",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra con stelo tratteggiato"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "2912",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto da barrare"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "2913",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso il basso verso il basso"
@@ -1642,7 +1460,6 @@
   },
   {
     "key": "2914",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra con coda con tratto verticale"
@@ -1651,7 +1468,6 @@
   },
   {
     "key": "2915",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra con coda con doppio tratto verticale"
@@ -1660,7 +1476,6 @@
   },
   {
     "key": "2916",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte destra con coda"
@@ -1669,7 +1484,6 @@
   },
   {
     "key": "2917",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a destra con coda con tratto verticale"
@@ -1678,7 +1492,6 @@
   },
   {
     "key": "2918",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte destra con coda con doppio tratto verticale"
@@ -1687,7 +1500,6 @@
   },
   {
     "key": "2919",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra"
@@ -1696,7 +1508,6 @@
   },
   {
     "key": "291A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a destra"
@@ -1705,7 +1516,6 @@
   },
   {
     "key": "291B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra a doppia freccia"
@@ -1714,7 +1524,6 @@
   },
   {
     "key": "291C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doppia freccia a destra"
@@ -1723,7 +1532,6 @@
   },
   {
     "key": "291D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra al diamante nero"
@@ -1732,7 +1540,6 @@
   },
   {
     "key": "291E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra per Black Diamond"
@@ -1741,7 +1548,6 @@
   },
   {
     "key": "291F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra da Bar a diamante nero"
@@ -1750,7 +1556,6 @@
   },
   {
     "key": "2920",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra da Bar a Black Diamond"
@@ -1759,7 +1564,6 @@
   },
   {
     "key": "2921",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord occidentale e sud orientale"
@@ -1768,7 +1572,6 @@
   },
   {
     "key": "2922",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord est e sud ovest"
@@ -1777,7 +1580,6 @@
   },
   {
     "key": "2923",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord ovest con gancio"
@@ -1786,7 +1588,6 @@
   },
   {
     "key": "2924",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord est con gancio"
@@ -1795,7 +1596,6 @@
   },
   {
     "key": "2925",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sud orientale con gancio"
@@ -1804,7 +1604,6 @@
   },
   {
     "key": "2926",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sud ovest con gancio"
@@ -1813,7 +1612,6 @@
   },
   {
     "key": "2927",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord occidentale e freccia nord orientale"
@@ -1822,7 +1620,6 @@
   },
   {
     "key": "2928",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord orientale e freccia sud orientale"
@@ -1831,7 +1628,6 @@
   },
   {
     "key": "2929",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sud orientale e freccia sud occidentale"
@@ -1840,7 +1636,6 @@
   },
   {
     "key": "292A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sud occidentale e freccia nord occidentale"
@@ -1849,7 +1644,6 @@
   },
   {
     "key": "292D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sud orientale che attraversa la freccia nord est"
@@ -1858,7 +1652,6 @@
   },
   {
     "key": "292E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord orientale che attraversa la freccia sud orientale"
@@ -1867,7 +1660,6 @@
   },
   {
     "key": "292F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "caduta diagonale che attraversa la freccia di nord est"
@@ -1876,7 +1668,6 @@
   },
   {
     "key": "2930",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "aumento diagonale che attraversa la freccia sud orientale"
@@ -1885,7 +1676,6 @@
   },
   {
     "key": "2931",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord orientale che attraversa la freccia nord occidentale"
@@ -1894,7 +1684,6 @@
   },
   {
     "key": "2932",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia nord ovest freccia nord est"
@@ -1903,7 +1692,6 @@
   },
   {
     "key": "2933",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia d'onda che punta direttamente a destra"
@@ -1912,7 +1700,6 @@
   },
   {
     "key": "2934",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia che punta verso destra e poi verso l'alto"
@@ -1921,7 +1708,6 @@
   },
   {
     "key": "2935",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia che punta verso destra e poi curva verso il basso"
@@ -1930,7 +1716,6 @@
   },
   {
     "key": "2936",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia che punta verso il basso e poi curva verso sinistra"
@@ -1939,7 +1724,6 @@
   },
   {
     "key": "2937",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia che punta verso il basso e poi curva verso destra"
@@ -1948,7 +1732,6 @@
   },
   {
     "key": "2938",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra dell'arco destro"
@@ -1957,7 +1740,6 @@
   },
   {
     "key": "2939",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra dell'arco sinistro"
@@ -1966,7 +1748,6 @@
   },
   {
     "key": "293A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia in senso antiorario superiore"
@@ -1975,7 +1756,6 @@
   },
   {
     "key": "293B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia in basso. freccia in senso antiorario"
@@ -1984,7 +1764,6 @@
   },
   {
     "key": "293C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia in senso orario con meno"
@@ -1993,7 +1772,6 @@
   },
   {
     "key": "293D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia in senso antiorario superiore con più"
@@ -2002,7 +1780,6 @@
   },
   {
     "key": "293E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia semicircolare in senso orario in basso a destra"
@@ -2011,7 +1788,6 @@
   },
   {
     "key": "293F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra in senso antiorario semicircolare in basso a sinistra"
@@ -2020,7 +1796,6 @@
   },
   {
     "key": "2940",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia circolare chiusa in senso antiorario"
@@ -2029,7 +1804,6 @@
   },
   {
     "key": "2941",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia circolare chiusa in senso orario"
@@ -2038,7 +1812,6 @@
   },
   {
     "key": "2942",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra sopra freccia corta sinistra"
@@ -2047,7 +1820,6 @@
   },
   {
     "key": "2943",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra verso destra freccia verso destra corta"
@@ -2056,7 +1828,6 @@
   },
   {
     "key": "2944",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra corta sopra la freccia verso sinistra"
@@ -2065,7 +1836,6 @@
   },
   {
     "key": "2945",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra con più sotto"
@@ -2074,7 +1844,6 @@
   },
   {
     "key": "2946",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra con più sotto"
@@ -2083,7 +1852,6 @@
   },
   {
     "key": "2947",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra attraverso X"
@@ -2092,7 +1860,6 @@
   },
   {
     "key": "2948",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia destra sinistra attraverso il piccolo cerchio"
@@ -2101,7 +1868,6 @@
   },
   {
     "key": "2949",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte verso l'alto del piccolo cerchio"
@@ -2110,7 +1876,6 @@
   },
   {
     "key": "2970",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "round implies"
@@ -2119,7 +1884,6 @@
   },
   {
     "key": "2971",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "uguale segno sopra la freccia verso destra"
@@ -2128,7 +1892,6 @@
   },
   {
     "key": "2972",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operatore di tilde sopra la freccia verso destra"
@@ -2137,7 +1900,6 @@
   },
   {
     "key": "2973",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra sopra l'operatore Tilde"
@@ -2146,7 +1908,6 @@
   },
   {
     "key": "2974",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra sopra l'operatore Tilde"
@@ -2155,7 +1916,6 @@
   },
   {
     "key": "2975",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a destra sopra a uguale circa a"
@@ -2164,7 +1924,6 @@
   },
   {
     "key": "2976",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia inferiore a sinistra"
@@ -2173,7 +1932,6 @@
   },
   {
     "key": "2977",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra verso il basso"
@@ -2182,7 +1940,6 @@
   },
   {
     "key": "2978",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia maggiore a quella sopra a destra"
@@ -2191,7 +1948,6 @@
   },
   {
     "key": "2979",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sottoinsieme sopra la freccia verso destra"
@@ -2200,7 +1956,6 @@
   },
   {
     "key": "297A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra attraverso il sottoinsieme"
@@ -2209,7 +1964,6 @@
   },
   {
     "key": "297B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superset sopra la freccia sinistra"
@@ -2218,7 +1972,6 @@
   },
   {
     "key": "29B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "insieme vuoto con la freccia destra qui sopra"
@@ -2227,7 +1980,6 @@
   },
   {
     "key": "29B4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "set vuoto con freccia sinistra qui sopra"
@@ -2236,7 +1988,6 @@
   },
   {
     "key": "29BD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia su cerchio"
@@ -2245,7 +1996,6 @@
   },
   {
     "key": "29EA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "black Diamond con freccia giù"
@@ -2254,7 +2004,6 @@
   },
   {
     "key": "29EC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cerchio bianco con freccia giù"
@@ -2263,7 +2012,6 @@
   },
   {
     "key": "29ED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cerchio nero con freccia giù"
@@ -2272,7 +2020,6 @@
   },
   {
     "key": "2A17",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integrale con freccia sinistra con gancio"
@@ -2281,7 +2028,6 @@
   },
   {
     "key": "2B00",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca nord orientale"
@@ -2290,7 +2036,6 @@
   },
   {
     "key": "2B01",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca del nord ovest"
@@ -2299,7 +2044,6 @@
   },
   {
     "key": "2B02",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca sud orientale"
@@ -2308,7 +2052,6 @@
   },
   {
     "key": "2B03",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca sud occidentale"
@@ -2317,7 +2060,6 @@
   },
   {
     "key": "2B04",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia bianca sinistra destra"
@@ -2326,7 +2068,6 @@
   },
   {
     "key": "2B05",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera verso sinistra"
@@ -2335,7 +2076,6 @@
   },
   {
     "key": "2B06",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera verso l'alto"
@@ -2344,7 +2084,6 @@
   },
   {
     "key": "2B07",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera verso il basso"
@@ -2353,7 +2092,6 @@
   },
   {
     "key": "2B08",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera nord orientale"
@@ -2362,7 +2100,6 @@
   },
   {
     "key": "2B09",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera del nord ovest"
@@ -2371,7 +2108,6 @@
   },
   {
     "key": "2B0A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera a sud est"
@@ -2380,7 +2116,6 @@
   },
   {
     "key": "2B0B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera sud occidentale"
@@ -2389,7 +2124,6 @@
   },
   {
     "key": "2B0C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera sinistra destra"
@@ -2398,7 +2132,6 @@
   },
   {
     "key": "2B0D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia nera in su"
@@ -2407,7 +2140,6 @@
   },
   {
     "key": "2B0E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con punta verso il basso"
@@ -2416,7 +2148,6 @@
   },
   {
     "key": "2B0F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso destra con la punta verso l'alto"
@@ -2425,7 +2156,6 @@
   },
   {
     "key": "2B10",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia a sinistra con punta verso il basso"
@@ -2434,7 +2164,6 @@
   },
   {
     "key": "2B11",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra con punta verso l'alto"
@@ -2443,7 +2172,6 @@
   },
   {
     "key": "2B30",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra con piccolo cerchio"
@@ -2452,7 +2180,6 @@
   },
   {
     "key": "2B31",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tre frecce a sinistra"
@@ -2461,7 +2188,6 @@
   },
   {
     "key": "2B32",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra con cerchiata più"
@@ -2470,7 +2196,6 @@
   },
   {
     "key": "2B33",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia ondulata lunga sinistra"
@@ -2479,7 +2204,6 @@
   },
   {
     "key": "2B34",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a sinistra con tratto verticale"
@@ -2488,7 +2212,6 @@
   },
   {
     "key": "2B35",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a sinistra con doppio tratto verticale"
@@ -2497,7 +2220,6 @@
   },
   {
     "key": "2B36",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a sinistra da barra"
@@ -2506,7 +2228,6 @@
   },
   {
     "key": "2B37",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a triplo tratteggio a sinistra a due punte"
@@ -2515,7 +2236,6 @@
   },
   {
     "key": "2B38",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra con stelo tratteggiato"
@@ -2524,7 +2244,6 @@
   },
   {
     "key": "2B39",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra con coda con tratto verticale"
@@ -2533,7 +2252,6 @@
   },
   {
     "key": "2B3A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra con coda con doppio tratto verticale"
@@ -2542,7 +2260,6 @@
   },
   {
     "key": "2B3B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a sinistra con coda"
@@ -2551,7 +2268,6 @@
   },
   {
     "key": "2B3C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a sinistra con coda con tratto verticale"
@@ -2560,7 +2276,6 @@
   },
   {
     "key": "2B3D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a due punte a sinistra con coda con doppio tratto verticale"
@@ -2569,7 +2284,6 @@
   },
   {
     "key": "2B3E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso sinistra attraverso X"
@@ -2578,7 +2292,6 @@
   },
   {
     "key": "2B3F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia d'onda che punta direttamente a sinistra"
@@ -2587,7 +2300,6 @@
   },
   {
     "key": "2B40",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segno uguale sopra freccia sinistra"
@@ -2596,7 +2308,6 @@
   },
   {
     "key": "2B41",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operatore Tilde inverso sopra la freccia sinistra"
@@ -2605,7 +2316,6 @@
   },
   {
     "key": "2B42",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra verso sinistra al contrario quasi uguale a"
@@ -2614,7 +2324,6 @@
   },
   {
     "key": "2B43",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra per maggiore di"
@@ -2623,7 +2332,6 @@
   },
   {
     "key": "2B44",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra attraverso il Superset"
@@ -2632,7 +2340,6 @@
   },
   {
     "key": "2B45",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia quadrupla a sinistra"
@@ -2641,7 +2348,6 @@
   },
   {
     "key": "2B46",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "freccia quadrupla rivolta verso destra"
@@ -2650,7 +2356,6 @@
   },
   {
     "key": "2B47",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tilde inverso sopra freccia verso destra"
@@ -2659,7 +2364,6 @@
   },
   {
     "key": "2B48",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra sopra il retromarcia quasi uguale a"
@@ -2668,7 +2372,6 @@
   },
   {
     "key": "2B49",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operatore Tilde sopra freccia sinistra"
@@ -2677,7 +2380,6 @@
   },
   {
     "key": "2B4A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia sinistra verso sinistra quasi uguale a"
@@ -2686,7 +2388,6 @@
   },
   {
     "key": "2B4B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra sopra l'operatore Tilde inverso"
@@ -2695,7 +2396,6 @@
   },
   {
     "key": "2B4C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso destra sopra l'operatore Tilde inverso"
@@ -2704,7 +2404,6 @@
   },
   {
     "key": "FFE9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia a sinistra a metà campo"
@@ -2713,7 +2412,6 @@
   },
   {
     "key": "FFEA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso l'alto a metà larghezza"
@@ -2722,7 +2420,6 @@
   },
   {
     "key": "FFEB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso la metà a destra"
@@ -2731,7 +2428,6 @@
   },
   {
     "key": "FFEC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "freccia verso il basso a metà larghezza"

@@ -4,362 +4,227 @@
   },
   {
     "key": "$",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "डॉलर"
       }
-    },
-    "names": [
-      "$",
-      "💲",
-      "＄",
-      "﹩",
-      "USD"
-    ]
+    }
   },
   {
     "key": "£",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "पाउंड"
       }
-    },
-    "names": [
-      "£",
-      "￡",
-      "GBP"
-    ]
+    }
   },
   {
     "key": "¥",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "येन"
       }
-    },
-    "names": [
-      "¥",
-      "￥",
-      "JPY"
-    ]
+    }
   },
   {
     "key": "€",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "यूरो"
       }
-    },
-    "names": [
-      "€",
-      "EUR"
-    ]
+    }
   },
   {
     "key": "₡",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "कोलोन"
       }
-    },
-    "names": [
-      "₡",
-      "CRC"
-    ]
+    }
   },
   {
     "key": "₢",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "क्रुज़ीरू"
       }
-    },
-    "names": [
-      "₢"
-    ]
+    }
   },
   {
     "key": "₣",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "फ्रांक"
       }
-    },
-    "names": [
-      "₣"
-    ]
+    }
   },
   {
     "key": "₤",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "लीरा"
       }
-    },
-    "names": [
-      "₤"
-    ]
+    }
   },
   {
     "key": "₥",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "मिल"
       }
-    },
-    "names": [
-      "₥"
-    ]
+    }
   },
   {
     "key": "₦",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "नाइरा"
       }
-    },
-    "names": [
-      "₦",
-      "NGN"
-    ]
+    }
   },
   {
     "key": "₧",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "पेसेता"
       }
-    },
-    "names": [
-      "₧"
-    ]
+    }
   },
   {
     "key": "₨",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "रूपया",
         "plural": "रूपए"
       }
-    },
-    "names": [
-      "₨",
-      "₹",
-      "INR",
-      "NPR",
-      "PKR",
-      "LKR"
-    ]
+    }
   },
   {
     "key": "₩",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "वॉन"
       }
-    },
-    "names": [
-      "₩",
-      "￦",
-      "KRW"
-    ]
+    }
   },
   {
     "key": "₪",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "शेकेल"
       }
-    },
-    "names": [
-      "₪"
-    ]
+    }
   },
   {
     "key": "₫",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "दोंग"
       }
-    },
-    "names": [
-      "₫"
-    ]
+    }
   },
   {
     "key": "₭",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "किप"
       }
-    },
-    "names": [
-      "₭"
-    ]
+    }
   },
   {
     "key": "₮",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "तुग्रिक"
       }
-    },
-    "names": [
-      "₮"
-    ]
+    }
   },
   {
     "key": "₯",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "द्राख़्मा"
       }
-    },
-    "names": [
-      "₯"
-    ]
+    }
   },
   {
     "key": "₰",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "फेनीग"
       }
-    },
-    "names": [
-      "₰"
-    ]
+    }
   },
   {
     "key": "₱",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "पेसो"
       }
-    },
-    "names": [
-      "₱"
-    ]
+    }
   },
   {
     "key": "₲",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "ग्वारानी"
       }
-    },
-    "names": [
-      "₲"
-    ]
+    }
   },
   {
     "key": "₳",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "ऑस्ट्राल"
       }
-    },
-    "names": [
-      "₳"
-    ]
+    }
   },
   {
     "key": "₴",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "ह्रीविन्या"
       }
-    },
-    "names": [
-      "₴",
-      "UAH"
-    ]
+    }
   },
   {
     "key": "₵",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "सीडी"
       }
-    },
-    "names": [
-      "₵",
-      "GHS"
-    ]
+    }
   },
   {
     "key": "₸",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "तेंगे"
       }
-    },
-    "names": [
-      "₸",
-      "KZT"
-    ]
+    }
   },
   {
     "key": "₺",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "तुर्की लीरा"
       }
-    },
-    "names": [
-      "₺",
-      "TRY"
-    ]
+    }
   },
   {
     "key": "元",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "युआन"
       }
-    },
-    "names": [
-      "元"
-    ]
+    }
   },
   {
     "key": "¢",
-    "category": "currency",
     "mappings": {
       "default": {
         "default": "सेंट"
       }
-    },
-    "names": [
-      "￠",
-      "¢"
-    ]
+    }
   }
 ]

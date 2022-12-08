@@ -4,76 +4,50 @@
   },
   {
     "key": "deg",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "grad"
       }
-    },
-    "names": [
-      "deg"
-    ]
+    }
   },
   {
     "key": "det",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "determinant"
       }
-    },
-    "names": [
-      "det"
-    ]
+    }
   },
   {
     "key": "dim",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "dimension"
       }
-    },
-    "names": [
-      "dim"
-    ]
+    }
   },
   {
     "key": "hom",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "homomorfism"
       }
-    },
-    "names": [
-      "hom",
-      "Hom"
-    ]
+    }
   },
   {
     "key": "ker",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "kärna"
       }
-    },
-    "names": [
-      "ker"
-    ]
+    }
   },
   {
     "key": "Tr",
-    "category": "Algebra",
     "mappings": {
       "default": {
         "default": "spår"
       }
-    },
-    "names": [
-      "Tr",
-      "tr"
-    ]
+    }
   }
 ]

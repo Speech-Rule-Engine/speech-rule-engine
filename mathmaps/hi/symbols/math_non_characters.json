@@ -4,7 +4,6 @@
   },
   {
     "key": "210F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "प्लैंक कॉन्स्टेंट ओवर दो पाई"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2114",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "पौंड"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2116",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "न्यूमेरो साइन"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2117",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ध्वनि रिकॉर्डिंग कॉपीराइट"
@@ -40,7 +36,6 @@
   },
   {
     "key": "211E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "पर्चे लेना"
@@ -49,7 +44,6 @@
   },
   {
     "key": "211F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "प्रतिक्रिया"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2120",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "सेवा चिन्ह"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2121",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "टेलीफोन साइन"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2122",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ट्रेड मार्क साइन"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2123",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "छोटा पद्य"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2125",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊँ संकेत"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2126",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ओम का चिन्ह"
@@ -112,7 +100,6 @@
   },
   {
     "key": "2127",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "उलटा ओम का चिन्ह"
@@ -121,7 +108,6 @@
   },
   {
     "key": "212A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "केल्विन साइन"
@@ -130,7 +116,6 @@
   },
   {
     "key": "212B",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "एंगस्ट्रॉम साइन"
@@ -139,7 +124,6 @@
   },
   {
     "key": "212E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "अनुमानित प्रतीक"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2132",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "टर्नड कैपिटल एफ"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2139",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "जानकारी का श्रोत"
@@ -166,7 +148,6 @@
   },
   {
     "key": "213A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "घुमाई गई पूंजी Q"
@@ -175,7 +156,6 @@
   },
   {
     "key": "213B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "फेशियल साइन"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2141",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सन्स-सेरिफ़ कैपिटल जी"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2142",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सन्स-सेरिफ़ कैपिटल एल"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2143",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "उलटा सैंस-सेरिफ़ कैपिटल एल"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2144",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सन्स-सेरिफ़ कैपिटल वाई"

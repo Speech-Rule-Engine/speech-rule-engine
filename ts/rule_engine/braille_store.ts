@@ -25,7 +25,7 @@
 import { MathStore } from './math_store';
 import { AuditoryDescription } from '../audio/auditory_description';
 import { activate } from '../semantic_tree/semantic_annotations';
-import { lookupMeaning } from '../semantic_tree/semantic_attr';
+import { SemanticMap } from '../semantic_tree/semantic_attr';
 import { SemanticType } from '../semantic_tree/semantic_meaning';
 
 /**
@@ -103,7 +103,7 @@ export class EuroStore extends BrailleStore {
         continue;
       }
       let chars = command.split('').map(x => {
-        let meaning = lookupMeaning(x);
+        let meaning = SemanticMap.Meaning.get(x);
         return (meaning.type === SemanticType.OPERATOR ||
           meaning.type === SemanticType.RELATION) ? ' ' + x : x;
       });

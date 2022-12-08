@@ -4,138 +4,89 @@
   },
   {
     "key": "m",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Meter"
       }
-    },
-    "si": true,
-    "names": [
-      "m"
-    ]
+    }
   },
   {
     "key": "ft",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Fuß"
       }
-    },
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Zoll"
       }
-    },
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
-    "category": "length",
     "mappings": {
       "default": {
         "plural": "Meilen",
         "default": "Meile"
       }
-    },
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
-    "category": "length",
     "mappings": {
       "default": {
         "plural": "Yards",
         "default": "Yard"
       }
-    },
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
   {
     "key": "n.m.",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "nautische Meile",
         "plural": "nautische Meilen"
       }
-    },
-    "names": [
-      "n.m."
-    ]
+    }
   },
   {
     "key": "link",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Kettenglied",
         "plural": "Kettenglieder"
       }
-    },
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
     "key": "rod",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Rute",
         "plural": "Ruten"
       }
-    },
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
     "key": "chain",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Kette",
         "plural": "Ketten"
       }
-    },
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
     "key": "furlong",
-    "category": "length",
     "mappings": {
       "default": {
         "default": "Furchenlänge",
         "plural": "Furchenlängen"
       }
-    },
-    "names": [
-      "fur",
-      "fur."
-    ]
+    }
   }
 ]

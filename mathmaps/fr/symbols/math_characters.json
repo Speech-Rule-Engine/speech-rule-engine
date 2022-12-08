@@ -4,7 +4,6 @@
   },
   {
     "key": "2113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "l minuscule en script"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2118",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fonction elliptique de weierstrass"
@@ -22,7 +20,6 @@
   },
   {
     "key": "213C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pi ajouré"
@@ -31,7 +28,6 @@
   },
   {
     "key": "213D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "gamma ajouré"
@@ -40,7 +36,6 @@
   },
   {
     "key": "213E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Gamma majuscule ajouré"
@@ -49,7 +44,6 @@
   },
   {
     "key": "213F",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "Pi majuscule ajouré"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2140",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sommation de la famille ajouré"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2145",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "D majuscule"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d ajouré en italique"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2147",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e ajouré en italique"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i ajouré en italique"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2149",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "j ajouré en italique"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1D6A4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dotless i"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1D6A5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "dotless j"

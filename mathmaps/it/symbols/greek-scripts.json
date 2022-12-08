@@ -4,7 +4,6 @@
   },
   {
     "key": "1D26",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Gamma maiuscola piccola"
@@ -13,7 +12,6 @@
   },
   {
     "key": "1D27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Lamda maiuscola piccola"
@@ -22,7 +20,6 @@
   },
   {
     "key": "1D28",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Pi greca maiuscola piccola"
@@ -31,7 +28,6 @@
   },
   {
     "key": "1D29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Rho maiuscola piccola"
@@ -40,7 +36,6 @@
   },
   {
     "key": "1D2A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "Psi maiuscola piccola"
@@ -49,7 +44,6 @@
   },
   {
     "key": "1D5E",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "gamma apice"
@@ -58,7 +52,6 @@
   },
   {
     "key": "1D60",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "phi apice"
@@ -67,7 +60,6 @@
   },
   {
     "key": "1D66",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "beta apice"
@@ -76,7 +68,6 @@
   },
   {
     "key": "1D67",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "gamma pedice"
@@ -85,7 +76,6 @@
   },
   {
     "key": "1D68",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "rho pedice"
@@ -94,7 +84,6 @@
   },
   {
     "key": "1D69",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "phi pedice"
@@ -103,7 +92,6 @@
   },
   {
     "key": "1D6A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "chi pedice"

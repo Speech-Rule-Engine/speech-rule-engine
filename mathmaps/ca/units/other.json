@@ -4,18 +4,11 @@
   },
   {
     "key": "doz",
-    "category": "other",
     "mappings": {
       "default": {
         "default": "dotzena",
         "plural": "dotzenes"
       }
-    },
-    "names": [
-      "doz",
-      "doz.",
-      "dz",
-      "dz."
-    ]
+    }
   }
 ]

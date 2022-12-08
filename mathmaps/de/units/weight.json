@@ -4,146 +4,95 @@
   },
   {
     "key": "lb",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Pfund"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "oz",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "Unzen",
         "default": "Unze"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Long ton"
       }
-    },
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
     "key": "gr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Gramm"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Gramm"
       }
-    },
-    "si": true,
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Mikrogramm"
       }
-    },
-    "names": [
-      "mcg"
-    ]
+    }
   },
   {
     "key": "t",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "Tonnen",
         "default": "Tonne"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   },
   {
     "key": "dram",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "Drachmen",
         "default": "Drachme"
       }
-    },
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Stone"
       }
-    },
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
     "key": "qtr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Viertelzentner"
       }
-    },
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
     "key": "cwt",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "Zentner"
       }
     },
     "names": [
-      "cwt",
-      "cwt.",
       "Ztr.",
       "Ctr."
     ]

@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Klammer auf"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Klammer zu"
@@ -22,7 +20,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "eckige Klammer auf"
@@ -31,7 +28,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "eckige Klammer zu"
@@ -40,7 +36,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "geschwungene Klammer auf"
@@ -49,7 +44,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "geschwungene Klammer zu"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke eckige Klammer mit Stachel"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte eckige Klammer mit Stachel"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "linke Aufrundungsklammer"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rechte Aufrundungsklammer"
@@ -94,7 +84,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "linke Abrundungsklammer"
@@ -103,7 +92,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rechter Abrundungsklammer"
@@ -112,7 +100,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "unterer rechter Abschnitt"
@@ -121,7 +108,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer linker Abschnitt"
@@ -130,7 +116,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Oberer rechter Abschnitt"
@@ -139,7 +124,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Oberer linker Abschnitt"
@@ -148,7 +132,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Obere linke Ecke"
@@ -157,7 +140,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Obere rechte Ecke"
@@ -166,7 +148,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Untere linke Ecke"
@@ -175,7 +156,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Rechte untere Ecke"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Obere Hälfte eines Integrals"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Untere Hälfte eines Integrals"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke spitze Klammer"
@@ -211,7 +188,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte spitze Klammer"
@@ -220,7 +196,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberer Teil der linken Klammer"
@@ -229,7 +204,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke Klammerverlängerung"
@@ -238,7 +212,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Unterer Teil der linken Klammer"
@@ -247,7 +220,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberer Teil der rechten Klammer"
@@ -256,7 +228,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Rechte Klammerverlängerung"
@@ -265,7 +236,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Unterer Teil der rechten Klammer"
@@ -274,7 +244,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberer Teil der linken eckigen Klammer"
@@ -283,7 +252,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Linke eckige Klammerverlängerung"
@@ -292,7 +260,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unterer Teil der linken eckigen Klammer"
@@ -301,7 +268,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberer Teil der rechten eckigen Klammer"
@@ -310,7 +276,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Rechte eckige Klammerverlängerung"
@@ -319,7 +284,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unterer Teil der rechten eckigen Klammer"
@@ -328,7 +292,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "oberer Teil der linken geschweiften Klammer"
@@ -337,7 +300,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Mittelstück der linken geschweiften Klammer"
@@ -346,7 +308,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unterer Teil der linken geschweiften Klammer"
@@ -355,7 +316,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Zwischenteil einer geschweiften Klammer"
@@ -364,7 +324,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "oberer Teil der rechten geschweiften Klammer"
@@ -373,7 +332,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Mittelstück der rechten geschweiften Klammer"
@@ -382,7 +340,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unterer Teil der rechten geschweiften Klammer"
@@ -391,7 +348,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Mittelteil eines Integrals"
@@ -400,7 +356,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Erweiterung einer Querlinie"
@@ -409,7 +364,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Geschweiftes Klammerteil oben links oder rechts unten"
@@ -418,7 +372,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Geschweiftes Klammerteil oben rechts oder unten links"
@@ -427,7 +380,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Oberer Teil einer Summe"
@@ -436,7 +388,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Unterer Teil einer Summe"
@@ -445,7 +396,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Obere eckige Klammer"
@@ -454,7 +404,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Untere eckige Klammer"
@@ -463,7 +412,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Untere eckige Klammer auf oberer eckiger Klammer"
@@ -472,7 +420,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Unterer Teil des Radikalsymbols"
@@ -481,7 +428,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Linke vertikale Boxlinie"
@@ -490,7 +436,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Rechte vertikale Boxlinie"
@@ -499,7 +444,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Obere Klammer"
@@ -508,7 +452,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Untere Klammer"
@@ -517,7 +460,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Obere geschweifte Klammer"
@@ -526,7 +468,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Untere geschweifte Klammer"
@@ -535,7 +476,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Obere eckige Klammer"
@@ -544,7 +484,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Untere eckige Klammer"
@@ -553,7 +492,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mittlere linke Klammerverzierung"
@@ -562,7 +500,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mittlere rechte Klammerverzierung"
@@ -571,7 +508,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mittlere abgeflachte linke Klammerverzierung"
@@ -580,7 +516,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mittlere abgeflachte rechte Klammerverzierung"
@@ -589,7 +524,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mittlere nach links weisende Winkelhalterung"
@@ -598,7 +532,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mittlere, rechtwinklige Winkelhalterung"
@@ -607,7 +540,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Schwere nach links weisende Anführungszeichen-Verzierung"
@@ -616,7 +548,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Schwere nach rechts zeigenden Winkel-Anführungszeichen-Verzierung"
@@ -625,7 +556,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Schwere nach links weisende Winkelhalterung"
@@ -634,7 +564,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Schwere, nach rechts weisende Winkelhalterung"
@@ -643,7 +572,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Leichte linke Schildpatt Bracket Ornament"
@@ -652,7 +580,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Leichte rechte Schildpatt-Klammerverzierung"
@@ -661,7 +588,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mittlere linke geschweifte Klammerverzierung"
@@ -670,7 +596,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mittlere rechte geschweifte Klammerverzierung"
@@ -679,7 +604,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linker S-förmiger Taschenbegrenzer"
@@ -688,7 +612,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "rechter S-förmiger Taschenbegrenzer"
@@ -697,7 +620,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mathematische linke weiße eckige Klammer"
@@ -706,7 +628,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mathematische rechte weiße eckige Klammer"
@@ -715,7 +636,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mathematische linke Winkelklammer"
@@ -724,7 +644,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mathematische rechtwinklige Klammer"
@@ -733,7 +652,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mathematische linke doppelte Winkelklammer"
@@ -742,7 +660,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mathematische rechtwinklige eckige Klammer"
@@ -751,7 +668,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mathematische linke Schildkrötenpanzerhalterung"
@@ -760,7 +676,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mathematische rechte weiße Schildpatt-Klammer"
@@ -769,7 +684,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Mathematische linke abgeflachte Klammer"
@@ -778,7 +692,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Mathematische rechte abgeflachte Klammer"
@@ -787,7 +700,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße geschweifte Klammer"
@@ -796,7 +708,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte weiße geschweifte Klammer"
@@ -805,7 +716,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße Klammer"
@@ -814,7 +724,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte weiße Klammer"
@@ -823,7 +732,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Z-Notation Linke Bildklammer"
@@ -832,7 +740,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Z-Notation rechte Bildklammer"
@@ -841,7 +748,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Z-Notation Linke Klammer"
@@ -850,7 +756,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Z Notation Right Binding Bracket"
@@ -859,7 +764,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke eckige Klammer mit Unterlenker"
@@ -868,7 +772,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte eckige Klammer mit Unterlenker"
@@ -877,7 +780,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke eckige Klammer mit Häkchen in der oberen Ecke"
@@ -886,7 +788,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte eckige Klammer mit Tick in der unteren Ecke"
@@ -895,7 +796,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke eckige Klammer mit Tick in der unteren Ecke"
@@ -904,7 +804,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte eckige Klammer mit Tick in der oberen Ecke"
@@ -913,7 +812,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke Winkelklammer mit Punkt"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechtwinklige Klammer mit Punkt"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linker Bogen weniger als Halterung"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "rechter Bogen größer als Halterung"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Doppelter linker Bogen größer als Halterung"
@@ -958,7 +852,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Doppelter rechter Bogen weniger als Halterung"
@@ -967,7 +860,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke schwarze Schildkrötenhalterung"
@@ -976,7 +868,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte schwarze Schildpatt-Klammer"
@@ -985,7 +876,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linker wackeliger Zaun"
@@ -994,7 +884,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "rechter wackeliger Zaun"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linker doppelter wackeliger Zaun"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "rechter doppelter wackeliger Zaun"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Nach links zeigender gebogener Winkelhalter"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Nach rechts zeigender gebogener Winkelhalter"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Obere linke halbe Halterung"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Obere rechte halbe Klammer"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke halbe halterung unten"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Untere rechte halbe Halterung"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "U-Halterung links seitlich"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "U-Halterung rechts seitlich"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke doppelte Klammer"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte doppelte Klammer"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke Winkelklammer"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechtwinklige Halterung"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke Doppelwinkelhalterung"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte Doppelwinkelhalterung"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke Eckklammer"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte Eckhalterung"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße Eckhalterung"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte weiße Eckhalterung"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke schwarze linsenförmige Halterung"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte schwarze linsenförmige Halterung"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke Schildpatt-Klammer"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte Schildpattlasche"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße linsenförmige Halterung"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte weiße linsenförmige Halterung"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße Schildpatt-Klammer"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte weiße Schildpatt-Klammer"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße eckige Klammer"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte weiße eckige Klammer"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Doppelte Anführungszeichen in umgekehrter Reihenfolge"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Doppelte Anführungszeichen"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Niedriges doppeltes Prime-Anführungszeichen"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Verzierte linke Klammer"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Verzierte rechte Klammer"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke weiße linsenförmige Halterung"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechtwinklige linsenförmige Halterung"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke Klammer"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechte Klammer"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke geschweifte Klammer"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale, recht geschweifte Klammer"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke Schildpattklammer"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechte Schildpatt-Klammer"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke schwarze linsenförmige Halterung"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechtwinklige schwarze linsenförmige Halterung"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke Doppelwinkelhalterung"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechtwinklige, rechtwinklige Halterung"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke Winkelhalterung"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechtwinklige Halterung"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke Eckhalterung"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechte Eckhalterung"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke weiße Eckhalterung"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale rechte weiße Eckhalterung"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale linke eckige Klammer"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Präsentationsformular für vertikale eckige Klammer"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Kleine linke Klammer"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Kleine rechte Klammer"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Kleine linke geschweifte Klammer"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Kleine rechte geschweifte Klammer"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Kleine linke Schildpatt-Klammer"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Kleine rechte Schildpatt-Klammer"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke Klammer in voller Breite"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte Klammer mit voller Breite"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke eckige Klammer mit voller Breite"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechteckige Klammer mit voller Breite"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke geschweifte Klammer mit voller Breite"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechtwinklige Klammer mit voller Breite"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Linke weiße Klammer mit voller Breite"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Rechte breite weiße Klammer"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Halbe breite linke eckklammer"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Halbe breite rechte eckklammer"

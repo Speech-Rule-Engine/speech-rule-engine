@@ -4,7 +4,6 @@
   },
   {
     "key": "21BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb arpó a dalt"
@@ -13,7 +12,6 @@
   },
   {
     "key": "21BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa esquerra amb arpó a sota"
@@ -22,7 +20,6 @@
   },
   {
     "key": "21BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt amb arpó dret"
@@ -31,7 +28,6 @@
   },
   {
     "key": "21BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa amunt amb arpó esquerre"
@@ -40,7 +36,6 @@
   },
   {
     "key": "21C0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa dreta amb arpó a dalt"
@@ -49,7 +44,6 @@
   },
   {
     "key": "21C1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa dreta amb arpó a sota"
@@ -58,7 +52,6 @@
   },
   {
     "key": "21C2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa avall amb arpó dret"
@@ -67,7 +60,6 @@
   },
   {
     "key": "21C3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fletxa avall amb arpó esquerre"
@@ -76,7 +68,6 @@
   },
   {
     "key": "21CB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "arpó esquerre dalt d'arpó dret"
@@ -85,7 +76,6 @@
   },
   {
     "key": "21CC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "arpó dret dalt d'arpó esquerre"
@@ -94,7 +84,6 @@
   },
   {
     "key": "294A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra esquerra dalt barra dreta a baix arpó"
@@ -103,7 +92,6 @@
   },
   {
     "key": "294B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra esquerra a baix barra dreta dalt arpó"
@@ -112,7 +100,6 @@
   },
   {
     "key": "294C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó amunt a la dreta arpó avall esquerre"
@@ -121,7 +108,6 @@
   },
   {
     "key": "294D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó dalt esquerra arpó baix dreta"
@@ -130,7 +116,6 @@
   },
   {
     "key": "294E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra esquerra dalt barra dreta dalt arpó"
@@ -139,7 +124,6 @@
   },
   {
     "key": "294F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amunt i avall"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2950",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra esquerra a baix barra dreta a baix arpó"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2951",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra cap amunt i avall"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2952",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua fins a la barra"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2953",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua fins a la barra"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2954",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó ascendent amb pua dreta a barra"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2955",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap avall amb pua dreta a barra"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2956",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua a baix a la barra"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2957",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua a baix a la barra"
@@ -220,7 +196,6 @@
   },
   {
     "key": "2958",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó ascendent amb pua esquerra a barra"
@@ -229,7 +204,6 @@
   },
   {
     "key": "2959",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap avall amb la barra esquerra a la barra"
@@ -238,7 +212,6 @@
   },
   {
     "key": "295A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua a dalt de la barra"
@@ -247,7 +220,6 @@
   },
   {
     "key": "295B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua dalt de barra"
@@ -256,7 +228,6 @@
   },
   {
     "key": "295C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó ascendent amb pua dreta de barra"
@@ -265,7 +236,6 @@
   },
   {
     "key": "295D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap avall amb pua dreta de barra"
@@ -274,7 +244,6 @@
   },
   {
     "key": "295E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua a baix de barra"
@@ -283,7 +252,6 @@
   },
   {
     "key": "295F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua a baix de barra"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2960",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó ascendent amb pua esquerra de barra"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2961",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap avall amb barra esquerra de barra"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2962",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua a dalt arpó a l'esquerra amb pua a baix"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2963",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó ascendent amb pua esquerra a la banda arpó ascendent amb pua dreta"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2964",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua a dalt dalt arpó a la dreta amb pua a baix"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2965",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap avall amb llengüeta a l'esquerra a la banda arpó cap avall amb llengüeta a la dreta"
@@ -346,7 +308,6 @@
   },
   {
     "key": "2966",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua amunt arpó a la dreta amb pua a dalt"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2967",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a l'esquerra amb pua a baix a dalt arpó a la dreta amb pua a baix"
@@ -364,7 +324,6 @@
   },
   {
     "key": "2968",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua a dalt arpó a l'esquerra amb pua a dalt"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2969",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó a la dreta amb pua a baix arpó a l'esquerra amb pua a baix"
@@ -382,7 +340,6 @@
   },
   {
     "key": "296A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra amb arpó cap a l'esquerra"
@@ -391,7 +348,6 @@
   },
   {
     "key": "296B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap a l'esquerra amb barra"
@@ -400,7 +356,6 @@
   },
   {
     "key": "296C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra amb arpó cap a la dreta"
@@ -409,7 +364,6 @@
   },
   {
     "key": "296D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap a la dreta amb barra"
@@ -418,7 +372,6 @@
   },
   {
     "key": "296E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó ascendent amb pua esquerra a la banda arpó cap avall amb pua dreta"
@@ -427,7 +380,6 @@
   },
   {
     "key": "296F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arpó cap avall amb llengüeta a l'esquerra a la banda arpó cap amunt amb pica a la dreta"
@@ -436,7 +388,6 @@
   },
   {
     "key": "297C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cua de peix esquerra"
@@ -445,7 +396,6 @@
   },
   {
     "key": "297D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cua de peix dreta"
@@ -454,7 +404,6 @@
   },
   {
     "key": "297E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra amb doble ganxo"
@@ -463,7 +412,6 @@
   },
   {
     "key": "297F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cua de peix avall"

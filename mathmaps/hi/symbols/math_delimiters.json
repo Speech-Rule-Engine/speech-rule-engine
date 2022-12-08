@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोष्ठ आरंभ"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोष्ठ अंत"
@@ -22,7 +20,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "चौकोर कोष्ठ आरंभ"
@@ -31,7 +28,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "चौकोर कोष्ठ अंत"
@@ -40,7 +36,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "धनुः कोष्ठ आरंभ"
@@ -49,7 +44,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "धनुः कोष्ठ अंत"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कंटक कोष्ठ आरंभ"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कंटक कोष्ठ अंत"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छत कोष्ठ आरंभ"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "छत कोष्ठ अंत"
@@ -94,7 +84,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "भूतल कोष्ठ आरंभ"
@@ -103,7 +92,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "भूतल कोष्ठ अंत"
@@ -112,7 +100,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे दांयी और स्थित काट"
@@ -121,7 +108,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे बांयी और स्थित काट"
@@ -130,7 +116,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर दांयी और स्थित काट"
@@ -139,7 +124,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर बांयी और स्थित काट"
@@ -148,7 +132,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपरी बायां कोना"
@@ -157,7 +140,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपरी दायां कोना"
@@ -166,7 +148,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "निचला बायां कोना"
@@ -175,7 +156,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "निचला दांया कोना"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शीर्ष आधा अभिन्न"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला आधा अभिन्न"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वाम-संकेत कोण ब्रैकेट"
@@ -211,7 +188,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट-पॉइंटिंग एंगल ब्रैकेट"
@@ -220,7 +196,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाएं कोष्ठक ऊपरी हुक"
@@ -229,7 +204,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाएं कोष्ठक का विस्तार"
@@ -238,7 +212,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाएं कोष्ठक निचला हुक"
@@ -247,7 +220,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायाँ कोष्ठक ऊपरी हुक"
@@ -256,7 +228,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सही कोष्ठक विस्तार"
@@ -265,7 +236,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दायाँ कोष्ठक निचला हुक"
@@ -274,7 +244,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट स्क्वायर ब्रैकेट अपर कॉर्नर"
@@ -283,7 +252,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बायां वर्ग ब्रैकेट एक्सटेंशन"
@@ -292,7 +260,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट स्क्वायर ब्रैकेट लोअर कॉर्नर"
@@ -301,7 +268,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट स्क्वायर ब्रैकेट अपर कॉर्नर"
@@ -310,7 +276,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट स्क्वायर ब्रैकेट एक्सटेंशन"
@@ -319,7 +284,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट स्क्वायर ब्रैकेट लोअर कॉर्नर"
@@ -328,7 +292,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट कर्ली ब्रैकेट अपर हुक"
@@ -337,7 +300,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट कर्ली ब्रैकेट मध्य टुकड़ा"
@@ -346,7 +308,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट कर्ली ब्रैकेट लोअर हुक"
@@ -355,7 +316,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "घुंघराले ब्रैकेट एक्सटेंशन"
@@ -364,7 +324,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट कर्ली ब्रैकेट अपर हुक"
@@ -373,7 +332,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट कर्ली ब्रैकेट मध्य टुकड़ा"
@@ -382,7 +340,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "राइट कर्ली ब्रैकेट लोअर हुक"
@@ -391,7 +348,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "एकात्म विस्तार"
@@ -400,7 +356,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "क्षैतिज रेखा विस्तार"
@@ -409,7 +364,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अपर लेफ्ट या लोअर राइट कर्ली ब्रैकेट सेक्शन"
@@ -418,7 +372,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "अपर राइट या लोअर लेफ्ट कर्ली ब्रैकेट सेक्शन"
@@ -427,7 +380,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संक्षेप शीर्ष"
@@ -436,7 +388,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "संक्षेप नीचे"
@@ -445,7 +396,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "शीर्ष चौकोर कोष्ठ"
@@ -454,7 +404,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "निचला चौकोर कोष्ठ"
@@ -463,7 +412,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "शीर्ष चौकोर कोष्ठ के ऊपर निचला चौकोर कोष्ठ"
@@ -472,7 +420,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "मूलांक चिह्न"
@@ -481,7 +428,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बांयी ऊर्ध्वाधर रेखा"
@@ -490,7 +436,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दांयी ऊर्ध्वाधर रेखा"
@@ -499,7 +444,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शीर्ष कोष्ठ"
@@ -508,7 +452,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला कोष्ठ"
@@ -517,7 +460,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शीर्ष धनुः कोष्ठ"
@@ -526,7 +468,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला धनुः कोष्ठ"
@@ -535,7 +476,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "शीर्ष कछुआ कोष्ठ"
@@ -544,7 +484,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "निचला कछुआ कोष्ठ"
@@ -553,7 +492,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोष्ठ आरंभ"
@@ -562,7 +500,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोष्ठ अंत"
@@ -571,7 +508,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "चपटा कोष्ठ आरंभ"
@@ -580,7 +516,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "चपटा कोष्ठ अंत"
@@ -589,7 +524,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ आरंभ"
@@ -598,7 +532,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ अंत"
@@ -607,7 +540,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "स्थूल कोण कोष्ठ आरंभ"
@@ -616,7 +548,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "स्थूल कोण कोष्ठ अंत"
@@ -625,7 +556,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "स्थूल कोण कोष्ठ आरंभ"
@@ -634,7 +564,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "स्थूल कोण कोष्ठ अंत"
@@ -643,7 +572,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "चपटा कोष्ठ आरंभ"
@@ -652,7 +580,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "चपटा कोष्ठ अंत"
@@ -661,7 +588,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "धनुः कोष्ठ आरंभ"
@@ -670,7 +596,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "धनुः कोष्ठ अंत"
@@ -679,7 +604,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट एस-शेप्ड बैग डिलिमिटर"
@@ -688,7 +612,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट एस-शेप्ड बैग डेलिमिटर"
@@ -697,7 +620,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "चौकोर द्विकोष्ठ आरंभ"
@@ -706,7 +628,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "चौकोर द्विकोष्ठ अंत"
@@ -715,7 +636,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ आरंभ"
@@ -724,7 +644,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ अंत"
@@ -733,7 +652,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोण द्विकोष्ठ आरंभ"
@@ -742,7 +660,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोण द्विकोष्ठ अंत"
@@ -751,7 +668,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कछुआ द्विकोष्ठ आरंभ"
@@ -760,7 +676,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कछुआ द्विकोष्ठ अंत"
@@ -769,7 +684,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "चपटा कोष्ठ आरंभ"
@@ -778,7 +692,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "चपटा कोष्ठ अंत"
@@ -787,7 +700,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "पोला धनुः कोष्ठ आरंभ"
@@ -796,7 +708,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "पोला धनुः कोष्ठ अंत"
@@ -805,7 +716,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "पोला कोष्ठ आरंभ"
@@ -814,7 +724,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "पोला कोष्ठ अंत"
@@ -823,7 +732,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वृत्तखंडाकर कोष्ठ आरंभ"
@@ -832,7 +740,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन राइट इमेज ब्रैकेट"
@@ -841,7 +748,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन लेफ्ट बाइंडिंग ब्रैकेट"
@@ -850,7 +756,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "जेड नोटेशन राइट बाइंडिंग ब्रैकेट"
@@ -859,7 +764,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ लेफ्ट स्क्वायर ब्रैकेट"
@@ -868,7 +772,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "अंडरबार के साथ राइट स्क्वायर ब्रैकेट"
@@ -877,7 +780,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "टॉप कॉर्नर में टिक के साथ लेफ्ट स्क्वायर ब्रैकेट"
@@ -886,7 +788,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "नीचे कोने में टिक के साथ राइट स्क्वायर ब्रैकेट"
@@ -895,7 +796,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "निचले कोने में टिक के साथ लेफ्ट स्क्वायर ब्रैकेट"
@@ -904,7 +804,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "टॉप कॉर्नर में टिक के साथ राइट स्क्वायर ब्रैकेट"
@@ -913,7 +812,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "डॉट के साथ लेफ्ट एंगल ब्रैकेट"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "डॉट के साथ राइट एंगल ब्रैकेट"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "बाएं चाप कम-से-कम ब्रैकेट"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "सही आर्क ग्रेटर-थ्रैड ब्रैकेट"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "डबल लेफ्ट आर्क ग्रेटर-थान ब्रैकेट"
@@ -958,7 +852,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "डबल सही आर्क कम-से-कम ब्रैकेट"
@@ -967,7 +860,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वाम काले कछुए खोल ब्रैकेट"
@@ -976,7 +868,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट ब्लैक कछुआ खोल ब्रैकेट"
@@ -985,7 +876,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वाम विगली बाड़"
@@ -994,7 +884,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट विगली फेंस"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वाम डबल विगेंस बाड़"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट डबल विगली फेंस"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "बाईं ओर की ओर घुमावदार एंगल ब्रैकेट"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट-पॉइंटिंग कर्व्ड एंगल ब्रैकेट"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "टॉप लेफ्ट हाफ ब्रैकेट"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "टॉप राइट हाफ ब्रैकेट"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "बॉटम लेफ्ट हाफ ब्रैकेट"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "बॉटम राइट हाफ ब्रैकेट"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट सिड्यूज यू ब्रैकेट"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट सिड्यूज यू ब्रैकेट"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "द्विकोष्ठ आरंभ"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "द्विकोष्ठ अंत"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ आरंभ"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोण कोष्ठ अंत"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "कोण द्विकोष्ठ आरंभ"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "कोण द्विकोष्ठ अंत"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट कार्नर ब्रैकेट"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट कॉर्नर ब्रैकेट"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट व्हाइट कॉर्नर ब्रैकेट"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट व्हाइट कॉर्नर ब्रैकेट"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट ब्लैक लेंटिकुलर ब्रैकेट"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट ब्लैक लेंटिकुलर ब्रैकेट"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वाम कछुआ खोल ब्रैकेट"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "सही कछुआ खोल ब्रैकेट"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट व्हाइट लेंटिकुलर ब्रैकेट"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "राइट व्हाइट लेंटिकुलर ब्रैकेट"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वाम व्हाइट कछुआ खोल ब्रैकेट"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "सही सफेद कछुआ खोल ब्रैकेट"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लेफ्ट व्हाइट स्क्वायर ब्रैकेट"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "सही सफेद वर्ग ब्रैकेट"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "उलटा डबल प्राइम कोटेशन मार्क"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "डबल प्राइम कोटेशन मार्क"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "लो डबल प्राइम कोटेशन मार्क"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "अलंकृत वाम कोष्ठक"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "अलंकृत सही कोष्ठक"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट व्हाइट लेंटिकुलर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट व्हाइट लेंटिकुलर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट पेरेंटेसिस के लिए प्रस्तुति फॉर्म"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट कोष्ठक के लिए प्रस्तुति प्रपत्र"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट कर्ली ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट कर्ली ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट कछुआ शेल ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट कछुआ शेल ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट ब्लैक लेंटिकुलर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट ब्लैक लेंटिकुलर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट डबल एंगल ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट डबल एंगल ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट एंगल ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट एंगल ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट कॉर्नर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट कॉर्नर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट व्हाइट कॉर्नर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट व्हाइट कॉर्नर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "वर्टिकल लेफ्ट स्क्वायर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "वर्टिकल राइट स्क्वायर ब्रैकेट के लिए प्रस्तुति फॉर्म"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लघु वाम कोष्ठक"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "लघु दाहिनी कोष्ठक"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "छोटा लेफ्ट कर्ली ब्रैकेट"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "छोटी सी सही घुंघराले ब्रैकेट"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "लघु वाम कछुआ खोल ब्रैकेट"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "छोटे सही कछुआ खोल ब्रैकेट"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "पूर्ण विराम वाम कोष्ठक"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "पूर्ण विचलन सही कोष्ठक"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "फुल एक्सपोर्मेंट लेफ्ट स्क्वायर ब्रैकेट"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "पूर्णविराम राइट स्क्वायर ब्रैकेट"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "फुल एक्सपोर्मेंट लेफ्ट कर्ली ब्रैकेट"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "फ़ुल विड्थ राइट कर्ली ब्रैकेट"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "फुल विदाउट लेफ्ट व्हाइट पेरेंटेसिस"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "फ़ुल विसरोफ़ राइट व्हाइट कोष्ठक"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "हाफ साइड लेफ्ट कॉर्नर ब्रैकेट"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "हाफ एक्सपोजर राइट कॉर्नर ब्रैकेट"

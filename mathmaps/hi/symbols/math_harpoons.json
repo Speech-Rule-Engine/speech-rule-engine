@@ -4,7 +4,6 @@
   },
   {
     "key": "21BC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बारबेक उपर की तरफ लेफ्ट हार्पून"
@@ -13,7 +12,6 @@
   },
   {
     "key": "21BD",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बार्बड डाउनवर्ड के साथ बायीं ओर हार्पून"
@@ -22,7 +20,6 @@
   },
   {
     "key": "21BE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर बारब के साथ हार्पून"
@@ -31,7 +28,6 @@
   },
   {
     "key": "21BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ऊपर की तरफ बारब लेफ्ट के साथ हार्पून"
@@ -40,7 +36,6 @@
   },
   {
     "key": "21C0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बार्ब अपवर्ड के साथ राइट हर्पून"
@@ -49,7 +44,6 @@
   },
   {
     "key": "21C1",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बारब के साथ हर्पून"
@@ -58,7 +52,6 @@
   },
   {
     "key": "21C2",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बारब के साथ हार्पून"
@@ -67,7 +60,6 @@
   },
   {
     "key": "21C3",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बार्ब के साथ हार्पून"
@@ -76,7 +68,6 @@
   },
   {
     "key": "21CB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "बाएं ओर हार्पून ओवर राइट हार्पून"
@@ -85,7 +76,6 @@
   },
   {
     "key": "21CC",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "दायीं ओर हार्पून ओवर लेफ्टवर्ड हार्पून"
@@ -94,7 +84,6 @@
   },
   {
     "key": "294A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बाएं बार्ब अप राईट बार्ब डाउन हार्पून"
@@ -103,7 +92,6 @@
   },
   {
     "key": "294B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट बार्ब डाउन राइट बारब अप हारपून"
@@ -112,7 +100,6 @@
   },
   {
     "key": "294C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर कंटिया राइट डाउन बारब लेफ्ट हार्पून"
@@ -121,7 +108,6 @@
   },
   {
     "key": "294D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर बारब लेफ्ट डाउन बारब राइट हार्पून"
@@ -130,7 +116,6 @@
   },
   {
     "key": "294E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट बार्ब अप अप राइट बार अप हार्पून"
@@ -139,7 +124,6 @@
   },
   {
     "key": "294F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर कंटिया राइट डाउन बारब राइट हार्पून"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2950",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट बार्ब डाउन राइट बार बार डाउन हार्पून"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2951",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर बार्ब लेफ्ट डाउन बारब लेफ्ट हार्पून"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2952",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबड अप टू बार के साथ लेफ्टवर्ड हार्पून"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2953",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबेक अप टू बार के साथ सही हर्पून"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2954",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर बारब के साथ हार्पून बार"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2955",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बारप बार के साथ हार्पून"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2956",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबड डाउन टू बार के साथ लेफ्टवर्ड हार्पून"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2957",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबड डाउन टू बार के साथ दाहिना हार्पून"
@@ -220,7 +196,6 @@
   },
   {
     "key": "2958",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर बारप लेफ्ट बार के साथ हार्पून"
@@ -229,7 +204,6 @@
   },
   {
     "key": "2959",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बारप लेफ्ट बार के साथ हार्पून"
@@ -238,7 +212,6 @@
   },
   {
     "key": "295A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारवर्ड से बारप के साथ लेफ्ट हार्पून"
@@ -247,7 +220,6 @@
   },
   {
     "key": "295B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से बारब अप के साथ दाहिने हार्पून"
@@ -256,7 +228,6 @@
   },
   {
     "key": "295C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की तरफ बार से राइट हार्पून"
@@ -265,7 +236,6 @@
   },
   {
     "key": "295D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार की तरफ बार के साथ नीचे की ओर हार्पून"
@@ -274,7 +244,6 @@
   },
   {
     "key": "295E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारवर्ड से बारप के साथ लेफ्टवर्ड हार्पून"
@@ -283,7 +252,6 @@
   },
   {
     "key": "295F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार से बारब डाउन के साथ दाहिनी ओर हार्पून"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2960",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर से हार्पून बार से बारब लेफ्ट के साथ"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2961",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर हार्पून बार से बारब लेफ्ट के साथ"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2962",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की तरफ बारबेक के साथ लेफ्ट हार्पून ऊपर की ओर बारबेक के साथ बाईं ओर हार्पून"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2963",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की तरफ बारब लेफ्ट के साथ हार्पून ऊपर की तरफ बारब राइट के साथ हार्पून"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2964",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबेक के साथ ऊपर की तरफ बारबेक के साथ राइटप हार्पून"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2965",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बारब लेफ्ट के साथ हार्पून नीचे की तरफ बारब के साथ हार्पून"
@@ -346,7 +308,6 @@
   },
   {
     "key": "2966",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार्ब अप के साथ बार्ब अप के साथ लेफ्टवर्ड हार्पून। बारब अप के साथ हार्पून"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2967",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बार्ब डाउन के साथ बार्ब डाउन के साथ लेफ्टवर्ड हार्पून। बारब डाउन के साथ हार्पून"
@@ -364,7 +324,6 @@
   },
   {
     "key": "2968",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबेक अप के साथ बारबेक अप के साथ दाहिना हार्पून"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2969",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "बारबेक के साथ नीचे की ओर बारबेक के साथ दाईं ओर वाली हार्पून, बारब की नीचे वाली हार्पून के साथ"
@@ -382,7 +340,6 @@
   },
   {
     "key": "296A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्टवर्ड हार्पून बारबग अप अप लॉन्ग डैश के साथ"
@@ -391,7 +348,6 @@
   },
   {
     "key": "296B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लंबे डैश के नीचे बारब के साथ बायीं ओर हरपून"
@@ -400,7 +356,6 @@
   },
   {
     "key": "296C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ठीक है हार्पून बारबस अप एबव लॉन्ग डैश के साथ"
@@ -409,7 +364,6 @@
   },
   {
     "key": "296D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "दाहिने ओर हार्पून बारबस के साथ लॉन्ग डैश के नीचे"
@@ -418,7 +372,6 @@
   },
   {
     "key": "296E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर की ओर बारब लेफ्ट के साथ हार्पून नीचे की तरफ बारब की ओर हार्पून"
@@ -427,7 +380,6 @@
   },
   {
     "key": "296F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "नीचे की ओर बारब लेफ्ट के साथ हार्पून बारब राइट के साथ हार्पून"
@@ -436,7 +388,6 @@
   },
   {
     "key": "297C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "लेफ्ट फिश टेल"
@@ -445,7 +396,6 @@
   },
   {
     "key": "297D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "सही मछली की पूंछ"
@@ -454,7 +404,6 @@
   },
   {
     "key": "297E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ऊपर मछली की पूंछ"
@@ -463,7 +412,6 @@
   },
   {
     "key": "297F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "मछली की पूंछ नीचे"

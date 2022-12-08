@@ -4,154 +4,101 @@
   },
   {
     "key": "dram",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "dramme",
         "default": "dramma"
       }
-    },
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "oz",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "once",
         "default": "oncia"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "lb",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "libbre",
         "default": "libbra"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "stone",
         "default": "stone"
       }
-    },
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
     "key": "qtr",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "quarti",
         "default": "quarto"
       }
-    },
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
     "key": "cwt",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "hundredweight",
         "default": "hundredweight"
       }
-    },
-    "names": [
-      "cwt",
-      "cwt."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "long ton",
         "default": "long ton"
       }
-    },
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
     "key": "gr",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "grani",
         "default": "grano"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "grammi",
         "default": "grammo"
       }
-    },
-    "si": true,
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "microgrammi",
         "default": "microgrammo"
       }
-    },
-    "names": [
-      "mcg"
-    ]
+    }
   },
   {
     "key": "t",
-    "category": "weight",
     "mappings": {
       "default": {
         "plural": "tonnellate",
         "default": "tonnellata"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   }
 ]

@@ -4,7 +4,6 @@
   },
   {
     "key": "23E8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "simbolo decimale degli esponenti"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2605",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2606",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella bianca"
@@ -31,7 +28,6 @@
   },
   {
     "key": "26AA",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cerchio bianco medio"
@@ -40,7 +36,6 @@
   },
   {
     "key": "26AB",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cerchio nero medio"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2705",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bianco pesante segno di spunta"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2713",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di spunta"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2714",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di spunta pesante"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2715",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "moltiplicazione X"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2716",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "moltiplicazione pesante X"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2717",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ballot X"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2718",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ballot X pesante"
@@ -112,7 +100,6 @@
   },
   {
     "key": "271B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "croce centrale aperta"
@@ -121,7 +108,6 @@
   },
   {
     "key": "271C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "croce centrale aperta grassetto"
@@ -130,7 +116,6 @@
   },
   {
     "key": "2720",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "croce maltese"
@@ -139,7 +124,6 @@
   },
   {
     "key": "2721",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella di Davide"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2722",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "quattro asteroidi a lacrima"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2723",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "quattro asterischi con palloncino"
@@ -166,7 +148,6 @@
   },
   {
     "key": "2724",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "pesante quattro asterischi con palloncino"
@@ -175,7 +156,6 @@
   },
   {
     "key": "2725",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "quattro asteroidi randelli"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2726",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera a quattro punte"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2727",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella bianca a quattro punte"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2728",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bagliore"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2729",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sottolineato stella bianca"
@@ -220,7 +196,6 @@
   },
   {
     "key": "272A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella bianca cerchiata"
@@ -229,7 +204,6 @@
   },
   {
     "key": "272B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella bianca centrale aperta"
@@ -238,7 +212,6 @@
   },
   {
     "key": "272C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella bianca centrale nero"
@@ -247,7 +220,6 @@
   },
   {
     "key": "272D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera delineato"
@@ -256,7 +228,6 @@
   },
   {
     "key": "272E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera profilata pesante"
@@ -265,7 +236,6 @@
   },
   {
     "key": "272F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella girandola"
@@ -274,7 +244,6 @@
   },
   {
     "key": "2730",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella bianca ombreggiata"
@@ -283,7 +252,6 @@
   },
   {
     "key": "2731",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco pesante"
@@ -292,7 +260,6 @@
   },
   {
     "key": "2732",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco centrale aperta"
@@ -301,7 +268,6 @@
   },
   {
     "key": "2733",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco a otto punte"
@@ -310,7 +276,6 @@
   },
   {
     "key": "2734",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera a otto punte"
@@ -319,7 +284,6 @@
   },
   {
     "key": "2735",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella a girandola a otto punte"
@@ -328,7 +292,6 @@
   },
   {
     "key": "2736",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera a sei punte"
@@ -337,7 +300,6 @@
   },
   {
     "key": "2739",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella nera a dodici punte"
@@ -346,7 +308,6 @@
   },
   {
     "key": "273A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco a sedici punte"
@@ -355,7 +316,6 @@
   },
   {
     "key": "273B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco a lacrima"
@@ -364,7 +324,6 @@
   },
   {
     "key": "273C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco a forma di lacrima del centro aperto"
@@ -373,7 +332,6 @@
   },
   {
     "key": "273D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco pesante a forma di lacrima"
@@ -382,7 +340,6 @@
   },
   {
     "key": "273E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sei petali in bianco e nero Florette"
@@ -391,7 +348,6 @@
   },
   {
     "key": "273F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "black Florette"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2740",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "florette bianco"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2741",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "florette nera a otto petali profilata"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2742",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "stella a otto punte con centro aperto cerchiato"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2743",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco a forma di girandola pesante a goccia"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2744",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fiocco di neve"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2745",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fiocco di neve Trifoliate stretto"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2746",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "fiocco di neve con chevron"
@@ -463,7 +412,6 @@
   },
   {
     "key": "2747",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "scintillare"
@@ -472,7 +420,6 @@
   },
   {
     "key": "2748",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sparkle pesante"
@@ -481,7 +428,6 @@
   },
   {
     "key": "2749",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco con palloncino"
@@ -490,7 +436,6 @@
   },
   {
     "key": "274A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "otto asterisco a elica a forma di lacrima"
@@ -499,7 +444,6 @@
   },
   {
     "key": "274B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "asterisco a elica a otto squarcia a forma di lacrima"
@@ -508,7 +452,6 @@
   },
   {
     "key": "274C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "segno di croce"
@@ -517,7 +460,6 @@
   },
   {
     "key": "274D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cerchio bianco ombreggiato"

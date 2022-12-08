@@ -4,154 +4,101 @@
   },
   {
     "key": "dram",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "dram",
         "plural": "dram"
       }
-    },
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "oz",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "uns",
         "plural": "uns"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "lb",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "skålpund",
         "plural": "skålpund"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "stone",
         "plural": "stones"
       }
-    },
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
     "key": "qtr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "quarter",
         "plural": "quarters"
       }
-    },
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
     "key": "cwt",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "centner",
         "plural": "centner"
       }
-    },
-    "names": [
-      "cwt",
-      "cwt."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "engelskt ton",
         "plural": "engelska ton"
       }
-    },
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
     "key": "gr",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "grain",
         "plural": "grains"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "gram",
         "plural": "gram"
       }
-    },
-    "si": true,
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "mikrogram",
         "plural": "mikrogram"
       }
-    },
-    "names": [
-      "mcg"
-    ]
+    }
   },
   {
     "key": "t",
-    "category": "weight",
     "mappings": {
       "default": {
         "default": "ton",
         "plural": "ton"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   }
 ]

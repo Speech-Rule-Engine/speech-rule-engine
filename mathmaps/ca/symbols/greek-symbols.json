@@ -4,7 +4,6 @@
   },
   {
     "key": "03D0",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "símbol beta"
@@ -13,7 +12,6 @@
   },
   {
     "key": "03D7",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "símbol kai grec"
@@ -22,7 +20,6 @@
   },
   {
     "key": "03F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "èpsilon invertit"
@@ -31,7 +28,6 @@
   },
   {
     "key": "1D7CA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "matemàtica bold capital digamma"
@@ -40,7 +36,6 @@
   },
   {
     "key": "1D7CB",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "matemàtica negreta petita digamma"

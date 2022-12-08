@@ -4,70 +4,47 @@
   },
   {
     "key": "s",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "sekund",
         "plural": "sekunder"
       }
-    },
-    "si": true,
-    "names": [
-      "s"
-    ]
+    }
   },
   {
     "key": "″",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "sekund",
         "plural": "sekunder"
       }
-    },
-    "names": [
-      "″"
-    ]
+    }
   },
   {
     "key": "min",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "minut",
         "plural": "minuter"
       }
-    },
-    "names": [
-      "min",
-      "′"
-    ]
+    }
   },
   {
     "key": "°",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "grad",
         "plural": "grader"
       }
-    },
-    "names": [
-      "°"
-    ]
+    }
   },
   {
     "key": "h",
-    "category": "time",
     "mappings": {
       "default": {
         "default": "timme",
         "plural": "timmar"
       }
-    },
-    "names": [
-      "h",
-      "hr"
-    ]
+    }
   }
 ]

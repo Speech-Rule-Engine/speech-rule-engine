@@ -4,7 +4,6 @@
   },
   {
     "key": "210F",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "constante de planck sur deux pi"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2114",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole l b barré"
@@ -22,7 +20,6 @@
   },
   {
     "key": "2116",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole numéro"
@@ -31,7 +28,6 @@
   },
   {
     "key": "2117",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "copyright de programme sonore"
@@ -40,7 +36,6 @@
   },
   {
     "key": "211E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ordonnances"
@@ -49,7 +44,6 @@
   },
   {
     "key": "211F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "répons"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2120",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole anglais marque de service"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2121",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "signe de téléphone"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2122",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole anglais marque de commerce"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2123",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "versicule"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2125",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole once"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2126",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "ohm"
@@ -112,7 +100,6 @@
   },
   {
     "key": "2127",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "ohm culbuté"
@@ -121,7 +108,6 @@
   },
   {
     "key": "212A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "degré kelvin"
@@ -130,7 +116,6 @@
   },
   {
     "key": "212B",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "angstroms"
@@ -139,7 +124,6 @@
   },
   {
     "key": "212E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole estimé"
@@ -148,7 +132,6 @@
   },
   {
     "key": "2132",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "f culbuté majuscule"
@@ -157,7 +140,6 @@
   },
   {
     "key": "2139",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "bureau d'information"
@@ -166,7 +148,6 @@
   },
   {
     "key": "213A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "Q majuscule couché"
@@ -175,7 +156,6 @@
   },
   {
     "key": "213B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "symbole télécopie"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2141",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "G culbuté majuscule sans empattement"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2142",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "L culbuté majuscule sans empattement"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2143",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "L réfléchi majuscule sans empattement"
@@ -211,7 +188,6 @@
   },
   {
     "key": "2144",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "Y culbuté majuscule sans empattement"

@@ -1,0 +1,127 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "cu",
+    "category": "volume",
+    "names": [
+      "cu",
+      "cu."
+    ]
+  },
+  {
+    "key": "cu inch",
+    "category": "volume",
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
+  },
+  {
+    "key": "cu ft",
+    "category": "volume",
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ]
+  },
+  {
+    "key": "cu yd",
+    "category": "volume",
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ]
+  },
+  {
+    "key": "bbl",
+    "category": "volume",
+    "names": [
+      "bbl.",
+      "bbl"
+    ]
+  },
+  {
+    "key": "fl. oz.",
+    "category": "volume",
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ]
+  },
+  {
+    "key": "gal",
+    "category": "volume",
+    "names": [
+      "gal",
+      "gal."
+    ]
+  },
+  {
+    "key": "pt",
+    "category": "volume",
+    "names": [
+      "pt",
+      "pt."
+    ]
+  },
+  {
+    "key": "qt",
+    "category": "volume",
+    "names": [
+      "qt",
+      "qt."
+    ]
+  },
+  {
+    "key": "fluid dram",
+    "category": "volume",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "key": "tbsp",
+    "category": "volume",
+    "names": [
+      "tbsp",
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
+    ]
+  },
+  {
+    "key": "tsp",
+    "category": "volume",
+    "names": [
+      "tsp",
+      "tsp."
+    ]
+  },
+  {
+    "key": "cup",
+    "category": "volume",
+    "names": [
+      "cp",
+      "cp."
+    ]
+  },
+  {
+    "key": "cc",
+    "category": "volume",
+    "names": [
+      "cc",
+      "ccm"
+    ]
+  },
+  {
+    "key": "l",
+    "category": "volume",
+    "si": true,
+    "names": [
+      "l"
+    ]
+  }
+]

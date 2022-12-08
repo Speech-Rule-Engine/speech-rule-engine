@@ -4,7 +4,6 @@
   },
   {
     "key": "1D26",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Gamma"
@@ -16,7 +15,6 @@
   },
   {
     "key": "1D27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Lamda"
@@ -28,7 +26,6 @@
   },
   {
     "key": "1D28",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Pi"
@@ -40,7 +37,6 @@
   },
   {
     "key": "1D29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Rho"
@@ -52,7 +48,6 @@
   },
   {
     "key": "1D2A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "small cap Psi"
@@ -64,7 +59,6 @@
   },
   {
     "key": "1D5E",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superscript gamma"
@@ -73,7 +67,6 @@
   },
   {
     "key": "1D60",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superscript phi"
@@ -82,7 +75,6 @@
   },
   {
     "key": "1D66",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript beta"
@@ -91,7 +83,6 @@
   },
   {
     "key": "1D67",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript gamma"
@@ -100,7 +91,6 @@
   },
   {
     "key": "1D68",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript rho"
@@ -109,7 +99,6 @@
   },
   {
     "key": "1D69",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript phi"
@@ -118,7 +107,6 @@
   },
   {
     "key": "1D6A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscript chi"

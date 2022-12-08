@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche",
@@ -14,7 +13,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite",
@@ -24,7 +22,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche",
@@ -34,7 +31,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit",
@@ -44,7 +40,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "accolade gauche",
@@ -54,7 +49,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "accolade droite",
@@ -64,7 +58,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche avec pique"
@@ -73,7 +66,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit avec pique"
@@ -82,7 +74,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "plafond à gauche"
@@ -91,7 +82,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "plafond à droite"
@@ -100,7 +90,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "plancher à gauche"
@@ -109,7 +98,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "plancher à droite"
@@ -118,7 +106,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "repère sud est"
@@ -127,7 +114,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "repère sud ouest"
@@ -136,7 +122,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "repère nord est"
@@ -145,7 +130,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "repère nord ouest"
@@ -154,7 +138,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coin nord ouest"
@@ -163,7 +146,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coin nord est"
@@ -172,7 +154,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coin sud ouest"
@@ -181,7 +162,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "coin sud est"
@@ -190,7 +170,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "moitié supérieure d'intégrale"
@@ -199,7 +178,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "moitié inférieure d'intégrale"
@@ -208,7 +186,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "chevron gauche"
@@ -217,7 +194,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "chevron droite"
@@ -226,7 +202,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc supérieur de parenthèse gauche"
@@ -235,7 +210,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge de parenthèse gauche"
@@ -244,7 +218,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc inférieur de parenthèse gauche"
@@ -253,7 +226,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc supérieur de parenthèse droite"
@@ -262,7 +234,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge de parenthèse droite"
@@ -271,7 +242,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc inférieur de parenthèse droite"
@@ -280,7 +250,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coin supérieur de crochet gauche"
@@ -289,7 +258,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge de crochet gauche"
@@ -298,7 +266,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coin inférieur de crochet gauche"
@@ -307,7 +274,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coin supérieur de crochet droit"
@@ -316,7 +282,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge de crochet droit"
@@ -325,7 +290,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coin inférieur de crochet droit"
@@ -334,7 +298,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc supérieur d'accolade gauche"
@@ -343,7 +306,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "milieu d'accolade gauche"
@@ -352,7 +314,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc inférieur d'accolade gauche"
@@ -361,7 +322,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge d'accolade"
@@ -370,7 +330,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc supérieur d'accolade droite"
@@ -379,7 +338,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "milieu d'accolade droite"
@@ -388,7 +346,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arc inférieur d'accolade droite"
@@ -397,7 +354,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge d'intégrale"
@@ -406,7 +362,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rallonge de ligne horizontale"
@@ -415,7 +370,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "moitié supérieure gauche ou inférieure droite d'accolade"
@@ -424,7 +378,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "moitié supérieure droite ou inférieure gauche d'accolade"
@@ -433,7 +386,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "haut du signe de somme"
@@ -442,7 +394,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bas du signe de somme"
@@ -451,7 +402,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crochet vertical supérieur"
@@ -460,7 +410,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crochet vertical inférieur"
@@ -469,7 +418,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "crochet verticaux en défilé"
@@ -478,7 +426,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bas du radical"
@@ -487,7 +434,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "filet vertical gauche"
@@ -496,7 +442,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "filet vertical droit"
@@ -505,7 +450,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parenthèse supérieure"
@@ -514,7 +458,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "parenthèse inférieure"
@@ -523,7 +466,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "accolade supérieure"
@@ -532,7 +474,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "accolade inférieure"
@@ -541,7 +482,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "crochet en écaille supérieur"
@@ -550,7 +490,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "crochet en écaille inférieur"
@@ -559,7 +498,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse de fantaisie gauche demi grasse"
@@ -568,7 +506,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse de fantaisie droite demi grasse"
@@ -577,7 +514,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse de fantaisie gauche demi grasse aplatie"
@@ -586,7 +522,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse de fantaisie droite demi grasse aplatie"
@@ -595,7 +530,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "chevron de fantaisie vers la gauche demi gras"
@@ -604,7 +538,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "chevron de fantaisie vers la droite demi gras"
@@ -613,7 +546,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "guillemet de fantaisie vers la gauche gras"
@@ -622,7 +554,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "guillemet de fantaisie vers la droite gras"
@@ -631,7 +562,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet de fantaisie vers la gauche gras"
@@ -640,7 +570,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet de fantaisie vers la droite gras"
@@ -649,7 +578,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet de fantaisie gauche maigre en écaille"
@@ -658,7 +586,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet de fantaisie droit maigre en écaille"
@@ -667,7 +594,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "accolade de fantaisie gauche moyenne"
@@ -676,7 +602,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "accolade de fantaisie droite moyenne"
@@ -685,7 +610,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "délimiteur de sac en s gauche"
@@ -694,7 +618,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "délimiteur de sac en s droite"
@@ -703,7 +626,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet blanc gauche"
@@ -712,7 +634,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet blanc droit"
@@ -721,7 +642,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "chevron mathématique gauche"
@@ -730,7 +650,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "chevron droit"
@@ -739,7 +658,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double chevron gauche"
@@ -748,7 +666,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double chevron droit"
@@ -757,7 +674,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche en écaille blanche"
@@ -766,7 +682,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit en écaille blanche"
@@ -775,7 +690,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche aplatie"
@@ -784,7 +698,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite aplatie"
@@ -793,7 +706,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "accolade gauche ajourée"
@@ -802,7 +714,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "accolade droite ajourée"
@@ -811,7 +722,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche ajourée"
@@ -820,7 +730,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite ajourée"
@@ -829,7 +738,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse image de gauche en notation z"
@@ -838,7 +746,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse image de droite en notation z"
@@ -847,7 +754,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z notation left binding bracket"
@@ -856,7 +762,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z notation right binding bracket"
@@ -865,7 +770,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche avec barre souscrite"
@@ -874,7 +778,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit avec barre souscrite"
@@ -883,7 +786,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche avec trait dans le coin supérieur"
@@ -892,7 +794,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit avec trait dans le coin inférieur"
@@ -901,7 +802,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche avec trait dans le coin inférieur"
@@ -910,7 +810,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit avec trait dans le coin supérieur"
@@ -919,7 +818,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "chevron gauche pointé"
@@ -928,7 +826,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "chevron droit pointé"
@@ -937,7 +834,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse arc gauche et inférieur à"
@@ -946,7 +842,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse arc droite et supérieur à"
@@ -955,7 +850,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse double arc droite et supérieur à"
@@ -964,7 +858,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse double arc gauche et inférieur à"
@@ -973,7 +866,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet noir gauche en écaille"
@@ -982,7 +874,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet noir droite en écaille"
@@ -991,7 +882,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "clôture dentelée gauche"
@@ -1000,7 +890,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "clôture dentelée droite"
@@ -1009,7 +898,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double clôture dentelée gauche"
@@ -1018,7 +906,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "right double wiggly fence"
@@ -1027,7 +914,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "chevron vers la gauche courbé"
@@ -1036,7 +922,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "chevron vers la droite courbé"
@@ -1045,7 +930,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "anglet supérieur gauche"
@@ -1054,7 +938,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "anglet supérieur droit"
@@ -1063,7 +946,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "anglet inférieur gauche"
@@ -1072,7 +954,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "anglet inférieur droit"
@@ -1081,7 +962,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crampillon couché gauche"
@@ -1090,7 +970,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crampillon couché droit"
@@ -1099,7 +978,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double parenthèse gauche"
@@ -1108,7 +986,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double parenthèse droite"
@@ -1117,7 +994,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "chevron gauche"
@@ -1126,7 +1002,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "chevron droit"
@@ -1135,7 +1010,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "double chevron gauche"
@@ -1144,7 +1018,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "double chevron droit"
@@ -1153,7 +1026,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "anglet gauche"
@@ -1162,7 +1034,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "anglet droit"
@@ -1171,7 +1042,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "anglet ajouré gauche"
@@ -1180,7 +1050,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "anglet ajouré droit"
@@ -1189,7 +1058,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet noir lenticulaire gauche"
@@ -1198,7 +1066,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet noir lenticulaire droit"
@@ -1207,7 +1074,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche en écaille"
@@ -1216,7 +1082,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit en écaille"
@@ -1225,7 +1090,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet blanc lenticulaire gauche"
@@ -1234,7 +1098,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet blanc lenticulaire droit"
@@ -1243,7 +1106,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet blanc gauche en écaille"
@@ -1252,7 +1114,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet blanc droit en écaille"
@@ -1261,7 +1122,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet blanc gauche"
@@ -1270,7 +1130,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet blanc droit"
@@ -1279,7 +1138,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "guillemet double prime réfléchi"
@@ -1288,7 +1146,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "guillemet double prime"
@@ -1297,7 +1154,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "guillemet double prime inférieur"
@@ -1306,7 +1162,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche ornée"
@@ -1315,7 +1170,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite ornée"
@@ -1324,7 +1178,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet blanc lenticulaire gauche vertical"
@@ -1333,7 +1186,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet blanc lenticulaire droit vertical"
@@ -1342,7 +1194,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de parenthèse gauche verticale"
@@ -1351,7 +1202,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de parenthèse droite verticale"
@@ -1360,7 +1210,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation d'accolade gauche verticale"
@@ -1369,7 +1218,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation d'accolade droite verticale"
@@ -1378,7 +1226,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet gauche vertical en écaille"
@@ -1387,7 +1234,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet droit vertical en écaille"
@@ -1396,7 +1242,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet gauche lenticulaire noir vertical"
@@ -1405,7 +1250,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet droit lenticulaire noir vertical"
@@ -1414,7 +1258,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet double gauche vertical"
@@ -1423,7 +1266,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet double droit vertical"
@@ -1432,7 +1274,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "over angle bracket"
@@ -1441,7 +1282,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "under angle bracket"
@@ -1450,7 +1290,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet vertical gauche en coin"
@@ -1459,7 +1298,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet vertical droit en coin"
@@ -1468,7 +1306,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet blanc vertical gauche en coin"
@@ -1477,7 +1314,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet blanc vertical droit en coin"
@@ -1486,7 +1322,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet gauche vertical"
@@ -1495,7 +1330,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "forme de présentation de crochet droit vertical"
@@ -1504,7 +1338,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche minuscule"
@@ -1513,7 +1346,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite minuscule"
@@ -1522,7 +1354,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "accolade gauche minuscule"
@@ -1531,7 +1362,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "accolade droite minuscule"
@@ -1540,7 +1370,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche en écaille minuscule"
@@ -1549,7 +1378,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit en écaille minuscule"
@@ -1558,7 +1386,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche pleine chasse"
@@ -1567,7 +1394,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite pleine chasse"
@@ -1576,7 +1402,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche pleine chasse"
@@ -1585,7 +1410,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit pleine chasse"
@@ -1594,7 +1418,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "accolade gauche pleine chasse"
@@ -1603,7 +1426,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "accolade droite pleine chasse"
@@ -1612,7 +1434,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parenthèse gauche ajourée pleine chasse *"
@@ -1621,7 +1442,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parenthèse droite ajourée pleine chasse *"
@@ -1630,7 +1450,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "crochet gauche en coin demi chasse"
@@ -1639,7 +1458,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "crochet droit en coin demi chasse"

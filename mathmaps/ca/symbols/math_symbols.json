@@ -4,7 +4,6 @@
   },
   {
     "key": "0021",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "factorial"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0022",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "cometes"
@@ -22,7 +20,6 @@
   },
   {
     "key": "0023",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "coixinet",
@@ -32,7 +29,6 @@
   },
   {
     "key": "0024",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "dòlar"
@@ -41,7 +37,6 @@
   },
   {
     "key": "0025",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "per cent"
@@ -50,7 +45,6 @@
   },
   {
     "key": "0026",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "ampersand"
@@ -59,7 +53,6 @@
   },
   {
     "key": "0027",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "prima",
@@ -69,7 +62,6 @@
   },
   {
     "key": "002A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "per"
@@ -78,7 +70,6 @@
   },
   {
     "key": "002B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més"
@@ -87,7 +78,6 @@
   },
   {
     "key": "002C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "coma"
@@ -96,7 +86,6 @@
   },
   {
     "key": "002D",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "menys"
@@ -105,7 +94,6 @@
   },
   {
     "key": "002E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt"
@@ -114,7 +102,6 @@
   },
   {
     "key": "002F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "barra obliqua"
@@ -123,7 +110,6 @@
   },
   {
     "key": "003A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "dos punts"
@@ -132,7 +118,6 @@
   },
   {
     "key": "003B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt i coma"
@@ -141,7 +126,6 @@
   },
   {
     "key": "003C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que"
@@ -150,7 +134,6 @@
   },
   {
     "key": "003D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual"
@@ -159,7 +142,6 @@
   },
   {
     "key": "003E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ajor que"
@@ -168,7 +150,6 @@
   },
   {
     "key": "003F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "interrogació dreta",
@@ -178,7 +159,6 @@
   },
   {
     "key": "0040",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "arrova"
@@ -187,7 +167,6 @@
   },
   {
     "key": "005C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "contrabarra"
@@ -196,7 +175,6 @@
   },
   {
     "key": "005E",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "circumflex"
@@ -205,7 +183,6 @@
   },
   {
     "key": "005F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "subratllat"
@@ -214,7 +191,6 @@
   },
   {
     "key": "0060",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "accent greu"
@@ -223,7 +199,6 @@
   },
   {
     "key": "007C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical"
@@ -232,7 +207,6 @@
   },
   {
     "key": "007E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla"
@@ -241,7 +215,6 @@
   },
   {
     "key": "00A1",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "admiració esquerra",
@@ -251,7 +224,6 @@
   },
   {
     "key": "00A2",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "cèntim"
@@ -260,7 +232,6 @@
   },
   {
     "key": "00A3",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "lliura esterlina"
@@ -269,7 +240,6 @@
   },
   {
     "key": "00A4",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "moneda"
@@ -278,7 +248,6 @@
   },
   {
     "key": "00A5",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "ien"
@@ -287,7 +256,6 @@
   },
   {
     "key": "00A6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "barra vertical partida"
@@ -296,7 +264,6 @@
   },
   {
     "key": "00A7",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "secció"
@@ -305,7 +272,6 @@
   },
   {
     "key": "00A8",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "dièresi"
@@ -314,7 +280,6 @@
   },
   {
     "key": "00A9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "copyright"
@@ -323,7 +288,6 @@
   },
   {
     "key": "00AA",
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "ordinal femení"
@@ -332,7 +296,6 @@
   },
   {
     "key": "00AB",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "cometes angulars esquerra",
@@ -342,7 +305,6 @@
   },
   {
     "key": "00AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "negació"
@@ -351,7 +313,6 @@
   },
   {
     "key": "00AE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "registrat"
@@ -360,7 +321,6 @@
   },
   {
     "key": "00AF",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "barra"
@@ -369,7 +329,6 @@
   },
   {
     "key": "00B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "grau"
@@ -378,7 +337,6 @@
   },
   {
     "key": "00B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més menys"
@@ -387,7 +345,6 @@
   },
   {
     "key": "00B4",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "accent agut"
@@ -396,7 +353,6 @@
   },
   {
     "key": "00B5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "micro"
@@ -405,7 +361,6 @@
   },
   {
     "key": "00B6",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "paràgraf"
@@ -414,7 +369,6 @@
   },
   {
     "key": "00B7",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt mitjà"
@@ -423,7 +377,6 @@
   },
   {
     "key": "00B8",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ce trencada"
@@ -432,7 +385,6 @@
   },
   {
     "key": "00BA",
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "ordinal masculí"
@@ -441,7 +393,6 @@
   },
   {
     "key": "00BB",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "cometes angulars dreta",
@@ -451,7 +402,6 @@
   },
   {
     "key": "00BF",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "interrogació esquerra",
@@ -461,7 +411,6 @@
   },
   {
     "key": "00D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per"
@@ -470,7 +419,6 @@
   },
   {
     "key": "00F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dividit"
@@ -479,7 +427,6 @@
   },
   {
     "key": "02B9",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "prima"
@@ -488,7 +435,6 @@
   },
   {
     "key": "02BA",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "dos prima"
@@ -497,7 +443,6 @@
   },
   {
     "key": "02D8",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "breu"
@@ -506,7 +451,6 @@
   },
   {
     "key": "02D9",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "punt en superescrit"
@@ -515,7 +459,6 @@
   },
   {
     "key": "02DA",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "anell en superescrit"
@@ -524,7 +467,6 @@
   },
   {
     "key": "02DB",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "ogonek"
@@ -533,7 +475,6 @@
   },
   {
     "key": "02DC",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "titlla"
@@ -542,7 +483,6 @@
   },
   {
     "key": "02DD",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "doble accent agut"
@@ -551,7 +491,6 @@
   },
   {
     "key": "2010",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "menys"
@@ -560,7 +499,6 @@
   },
   {
     "key": "2011",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "guió no rompible"
@@ -569,7 +507,6 @@
   },
   {
     "key": "2012",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "figura guió"
@@ -578,7 +515,6 @@
   },
   {
     "key": "2013",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "en ratlla"
@@ -587,7 +523,6 @@
   },
   {
     "key": "2014",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "en ratlla"
@@ -596,7 +531,6 @@
   },
   {
     "key": "2015",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "barra horitzontal"
@@ -605,7 +539,6 @@
   },
   {
     "key": "2016",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble barra vertical"
@@ -614,7 +547,6 @@
   },
   {
     "key": "2017",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "línia baixa doble"
@@ -623,7 +555,6 @@
   },
   {
     "key": "2018",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "cometa esquerra"
@@ -632,7 +563,6 @@
   },
   {
     "key": "2019",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "cometa dreta"
@@ -641,7 +571,6 @@
   },
   {
     "key": "201A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "cometa sota 9"
@@ -650,7 +579,6 @@
   },
   {
     "key": "201B",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "marca de cometes simple amb inversió alta-9"
@@ -659,7 +587,6 @@
   },
   {
     "key": "201C",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "doble cometa"
@@ -668,7 +595,6 @@
   },
   {
     "key": "201D",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "doble cometa dreta"
@@ -677,7 +603,6 @@
   },
   {
     "key": "201E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "doble cometa sota 9"
@@ -686,7 +611,6 @@
   },
   {
     "key": "201F",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "doble alt-invertit-9 cometes"
@@ -695,7 +619,6 @@
   },
   {
     "key": "2020",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "daga"
@@ -704,7 +627,6 @@
   },
   {
     "key": "2021",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble daga"
@@ -713,7 +635,6 @@
   },
   {
     "key": "2022",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "bala"
@@ -722,7 +643,6 @@
   },
   {
     "key": "2023",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "bala triangular"
@@ -731,7 +651,6 @@
   },
   {
     "key": "2024",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "líder d'un punt"
@@ -740,7 +659,6 @@
   },
   {
     "key": "2025",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "dos punts líder"
@@ -749,7 +667,6 @@
   },
   {
     "key": "2026",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punts suspensius"
@@ -758,7 +675,6 @@
   },
   {
     "key": "2027",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt de separació"
@@ -767,7 +683,6 @@
   },
   {
     "key": "2030",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "tant per miler"
@@ -776,7 +691,6 @@
   },
   {
     "key": "2031",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "tant per deu mil"
@@ -785,7 +699,6 @@
   },
   {
     "key": "2032",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "prima"
@@ -794,7 +707,6 @@
   },
   {
     "key": "2033",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "dos prima"
@@ -803,7 +715,6 @@
   },
   {
     "key": "2034",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "tres prima"
@@ -812,7 +723,6 @@
   },
   {
     "key": "2035",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "accent greu"
@@ -821,7 +731,6 @@
   },
   {
     "key": "2036",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble accent greu"
@@ -830,7 +739,6 @@
   },
   {
     "key": "2037",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "prima invertit"
@@ -839,7 +747,6 @@
   },
   {
     "key": "2038",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe d'intercalació"
@@ -848,7 +755,6 @@
   },
   {
     "key": "2039",
-    "category": "Pi",
     "mappings": {
       "default": {
         "default": "cometes esquerra",
@@ -858,7 +764,6 @@
   },
   {
     "key": "203A",
-    "category": "Pf",
     "mappings": {
       "default": {
         "default": "cometes dreta",
@@ -868,7 +773,6 @@
   },
   {
     "key": "203B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "marca de referència"
@@ -877,7 +781,6 @@
   },
   {
     "key": "203C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble signe d'exclamació"
@@ -886,7 +789,6 @@
   },
   {
     "key": "203D",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "interrobang"
@@ -895,7 +797,6 @@
   },
   {
     "key": "203E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "barra superior"
@@ -904,7 +805,6 @@
   },
   {
     "key": "203F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "undertie"
@@ -913,7 +813,6 @@
   },
   {
     "key": "2040",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "lligadura"
@@ -922,7 +821,6 @@
   },
   {
     "key": "2041",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt d'inserció"
@@ -931,7 +829,6 @@
   },
   {
     "key": "2042",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "asterisme"
@@ -940,7 +837,6 @@
   },
   {
     "key": "2043",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "guió bala"
@@ -949,7 +845,6 @@
   },
   {
     "key": "2044",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra de fracció"
@@ -958,7 +853,6 @@
   },
   {
     "key": "2047",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble signe d'interrogació"
@@ -967,7 +861,6 @@
   },
   {
     "key": "2048",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signes d'interrogació i exclamació"
@@ -976,7 +869,6 @@
   },
   {
     "key": "2049",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signes d'exclamació i interrogació"
@@ -985,7 +877,6 @@
   },
   {
     "key": "204B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe de Pilcrow invertit"
@@ -994,7 +885,6 @@
   },
   {
     "key": "204C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "bala negra cap a l'esquerra"
@@ -1003,7 +893,6 @@
   },
   {
     "key": "204D",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "bala negra cap a la dreta"
@@ -1012,7 +901,6 @@
   },
   {
     "key": "204E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "sota asterisc"
@@ -1021,7 +909,6 @@
   },
   {
     "key": "204F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt i coma invertit"
@@ -1030,7 +917,6 @@
   },
   {
     "key": "2050",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "tancament superior"
@@ -1039,7 +925,6 @@
   },
   {
     "key": "2051",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "dos asteriscs alineats verticalment"
@@ -1048,7 +933,6 @@
   },
   {
     "key": "2052",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe de menys comercial"
@@ -1057,7 +941,6 @@
   },
   {
     "key": "2053",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "guió swung"
@@ -1066,7 +949,6 @@
   },
   {
     "key": "2054",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "roba interior invertida"
@@ -1075,7 +957,6 @@
   },
   {
     "key": "2055",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe de puntuació de la flor"
@@ -1084,7 +965,6 @@
   },
   {
     "key": "2056",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "puntuació de tres punts"
@@ -1093,7 +973,6 @@
   },
   {
     "key": "2057",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "quatre prima"
@@ -1102,7 +981,6 @@
   },
   {
     "key": "2058",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "puntuació de quatre punts"
@@ -1111,7 +989,6 @@
   },
   {
     "key": "2059",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "puntuació de cinc punts"
@@ -1120,7 +997,6 @@
   },
   {
     "key": "205A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "puntuació de dos punts"
@@ -1129,7 +1005,6 @@
   },
   {
     "key": "205B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "marca de quatre punts"
@@ -1138,7 +1013,6 @@
   },
   {
     "key": "205C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "creu puntejada"
@@ -1147,7 +1021,6 @@
   },
   {
     "key": "205D",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "triple punt"
@@ -1156,7 +1029,6 @@
   },
   {
     "key": "205E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "quatre punts verticals"
@@ -1165,7 +1037,6 @@
   },
   {
     "key": "207A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superíndex més"
@@ -1174,7 +1045,6 @@
   },
   {
     "key": "207B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superíndex menys"
@@ -1183,7 +1053,6 @@
   },
   {
     "key": "207C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superíndex signe igual"
@@ -1192,7 +1061,6 @@
   },
   {
     "key": "207D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "parèntesi esquerre superíndex"
@@ -1201,7 +1069,6 @@
   },
   {
     "key": "207E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "parèntesi dret superíndex"
@@ -1210,7 +1077,6 @@
   },
   {
     "key": "208A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe de subíndex més"
@@ -1219,7 +1085,6 @@
   },
   {
     "key": "208B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subíndex menys"
@@ -1228,7 +1093,6 @@
   },
   {
     "key": "208C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe de subíndex igual"
@@ -1237,7 +1101,6 @@
   },
   {
     "key": "208D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "subíndex parèntesi esquerre"
@@ -1246,7 +1109,6 @@
   },
   {
     "key": "208E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "subíndex de parèntesi dret"
@@ -1255,7 +1117,6 @@
   },
   {
     "key": "214A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "línia de propietat"
@@ -1264,7 +1125,6 @@
   },
   {
     "key": "214B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ampersand convertit"
@@ -1273,7 +1133,6 @@
   },
   {
     "key": "214C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "per signe"
@@ -1282,7 +1141,6 @@
   },
   {
     "key": "214D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "aktieselskab"
@@ -1291,7 +1149,6 @@
   },
   {
     "key": "214E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "tornejat petit f"
@@ -1300,7 +1157,6 @@
   },
   {
     "key": "2200",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per a tot"
@@ -1309,7 +1165,6 @@
   },
   {
     "key": "2201",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "complementari"
@@ -1318,7 +1173,6 @@
   },
   {
     "key": "2203",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "existeix"
@@ -1327,7 +1181,6 @@
   },
   {
     "key": "2204",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no existeix"
@@ -1336,7 +1189,6 @@
   },
   {
     "key": "2205",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunt buit"
@@ -1345,7 +1197,6 @@
   },
   {
     "key": "2206",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "increment"
@@ -1354,7 +1205,6 @@
   },
   {
     "key": "2208",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertanyent a"
@@ -1363,7 +1213,6 @@
   },
   {
     "key": "2209",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no pertanyent a"
@@ -1372,7 +1221,6 @@
   },
   {
     "key": "220A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertanyent a"
@@ -1381,7 +1229,6 @@
   },
   {
     "key": "220B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "comprèn"
@@ -1390,7 +1237,6 @@
   },
   {
     "key": "220C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no comprèn"
@@ -1399,7 +1245,6 @@
   },
   {
     "key": "220D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "comprèn"
@@ -1408,7 +1253,6 @@
   },
   {
     "key": "220E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "fi de demostració"
@@ -1417,7 +1261,6 @@
   },
   {
     "key": "220F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte"
@@ -1426,7 +1269,6 @@
   },
   {
     "key": "2210",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coproducte"
@@ -1435,7 +1277,6 @@
   },
   {
     "key": "2211",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sumatori"
@@ -1444,7 +1285,6 @@
   },
   {
     "key": "2212",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys"
@@ -1453,7 +1293,6 @@
   },
   {
     "key": "2213",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys més"
@@ -1462,7 +1301,6 @@
   },
   {
     "key": "2214",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt més"
@@ -1471,7 +1309,6 @@
   },
   {
     "key": "2215",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra de divisió"
@@ -1480,7 +1317,6 @@
   },
   {
     "key": "2216",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys"
@@ -1489,7 +1325,6 @@
   },
   {
     "key": "2217",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "asterisc"
@@ -1498,7 +1333,6 @@
   },
   {
     "key": "2218",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "composició"
@@ -1507,7 +1341,6 @@
   },
   {
     "key": "2219",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bala"
@@ -1516,7 +1349,6 @@
   },
   {
     "key": "221A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrel"
@@ -1525,7 +1357,6 @@
   },
   {
     "key": "221B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrel cúbica"
@@ -1534,7 +1365,6 @@
   },
   {
     "key": "221C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "arrel quarta"
@@ -1543,7 +1373,6 @@
   },
   {
     "key": "221D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "proporcional a"
@@ -1552,7 +1381,6 @@
   },
   {
     "key": "221E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "infinit"
@@ -1561,7 +1389,6 @@
   },
   {
     "key": "221F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angle recte"
@@ -1570,7 +1397,6 @@
   },
   {
     "key": "2220",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angle"
@@ -1579,7 +1405,6 @@
   },
   {
     "key": "2221",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angle mesurat"
@@ -1588,7 +1413,6 @@
   },
   {
     "key": "2222",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angle esfèric"
@@ -1597,7 +1421,6 @@
   },
   {
     "key": "2223",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "divideix"
@@ -1606,7 +1429,6 @@
   },
   {
     "key": "2224",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no divideix"
@@ -1615,7 +1437,6 @@
   },
   {
     "key": "2225",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paral·lela a"
@@ -1624,7 +1445,6 @@
   },
   {
     "key": "2226",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no paral·lela a"
@@ -1633,7 +1453,6 @@
   },
   {
     "key": "2227",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "i"
@@ -1642,7 +1461,6 @@
   },
   {
     "key": "2228",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "o"
@@ -1651,7 +1469,6 @@
   },
   {
     "key": "2229",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció"
@@ -1660,7 +1477,6 @@
   },
   {
     "key": "222A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió"
@@ -1669,7 +1485,6 @@
   },
   {
     "key": "222B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral"
@@ -1678,7 +1493,6 @@
   },
   {
     "key": "222C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral doble"
@@ -1687,7 +1501,6 @@
   },
   {
     "key": "222D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral triple"
@@ -1696,7 +1509,6 @@
   },
   {
     "key": "222E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral de contorn"
@@ -1705,7 +1517,6 @@
   },
   {
     "key": "222F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral de superfície"
@@ -1714,7 +1525,6 @@
   },
   {
     "key": "2230",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral de volum"
@@ -1723,7 +1533,6 @@
   },
   {
     "key": "2231",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral de contorn en sentit horari"
@@ -1732,7 +1541,6 @@
   },
   {
     "key": "2232",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral de contorn en sentit horari"
@@ -1741,7 +1549,6 @@
   },
   {
     "key": "2233",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral de contorn en sentit antihorari"
@@ -1750,7 +1557,6 @@
   },
   {
     "key": "2234",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per tant"
@@ -1759,7 +1565,6 @@
   },
   {
     "key": "2235",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perquè"
@@ -1768,7 +1573,6 @@
   },
   {
     "key": "2236",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "raó"
@@ -1777,7 +1581,6 @@
   },
   {
     "key": "2237",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "proporció"
@@ -1786,7 +1589,6 @@
   },
   {
     "key": "2238",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt menys"
@@ -1795,7 +1597,6 @@
   },
   {
     "key": "2239",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "excés"
@@ -1804,7 +1605,6 @@
   },
   {
     "key": "223A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "proporció geomètrica"
@@ -1813,7 +1613,6 @@
   },
   {
     "key": "223B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "homotècia"
@@ -1822,7 +1621,6 @@
   },
   {
     "key": "223C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla"
@@ -1831,7 +1629,6 @@
   },
   {
     "key": "223D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla invertida"
@@ -1840,7 +1637,6 @@
   },
   {
     "key": "223E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "s horitzontal invertida"
@@ -1849,7 +1645,6 @@
   },
   {
     "key": "223F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sinusoide"
@@ -1858,7 +1653,6 @@
   },
   {
     "key": "2240",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte de garlanda"
@@ -1867,7 +1661,6 @@
   },
   {
     "key": "2241",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no titlla"
@@ -1876,7 +1669,6 @@
   },
   {
     "key": "2242",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys accent"
@@ -1885,7 +1677,6 @@
   },
   {
     "key": "2243",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "asimptòticament igual a"
@@ -1894,7 +1685,6 @@
   },
   {
     "key": "2244",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no asimptòticament igual a"
@@ -1903,7 +1693,6 @@
   },
   {
     "key": "2245",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "aproximadament igual a"
@@ -1912,7 +1701,6 @@
   },
   {
     "key": "2246",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "aproximat però no igual a"
@@ -1921,7 +1709,6 @@
   },
   {
     "key": "2247",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no aproximat a"
@@ -1930,7 +1717,6 @@
   },
   {
     "key": "2248",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "aproximat",
@@ -1940,7 +1726,6 @@
   },
   {
     "key": "2249",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no és gairebé igual a"
@@ -1949,7 +1734,6 @@
   },
   {
     "key": "224A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual o gairebé igual a"
@@ -1958,7 +1742,6 @@
   },
   {
     "key": "224B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple titlla"
@@ -1967,7 +1750,6 @@
   },
   {
     "key": "224C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tot igual a"
@@ -1976,7 +1758,6 @@
   },
   {
     "key": "224D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "equivalent a"
@@ -1985,7 +1766,6 @@
   },
   {
     "key": "224E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "geomètricament equivalent a"
@@ -1994,7 +1774,6 @@
   },
   {
     "key": "224F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diferència entre"
@@ -2003,7 +1782,6 @@
   },
   {
     "key": "2250",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "s'acosta al límit"
@@ -2012,7 +1790,6 @@
   },
   {
     "key": "2251",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "geomètricament igual a"
@@ -2021,7 +1798,6 @@
   },
   {
     "key": "2252",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "aproximadament igual a o imatge de"
@@ -2030,7 +1806,6 @@
   },
   {
     "key": "2253",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "imatge d'o aproximadament igual a"
@@ -2039,7 +1814,6 @@
   },
   {
     "key": "2254",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dos punts igual"
@@ -2048,7 +1822,6 @@
   },
   {
     "key": "2255",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual dos punts"
@@ -2057,7 +1830,6 @@
   },
   {
     "key": "2256",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual incloent-hi anell"
@@ -2066,7 +1838,6 @@
   },
   {
     "key": "2257",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual anell a"
@@ -2075,7 +1846,6 @@
   },
   {
     "key": "2258",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "correspon a"
@@ -2084,7 +1854,6 @@
   },
   {
     "key": "2259",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estima a"
@@ -2093,7 +1862,6 @@
   },
   {
     "key": "225A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "equiangular amb"
@@ -2102,7 +1870,6 @@
   },
   {
     "key": "225B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb estrella"
@@ -2111,7 +1878,6 @@
   },
   {
     "key": "225C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb delta"
@@ -2120,7 +1886,6 @@
   },
   {
     "key": "225D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual per definició a"
@@ -2129,7 +1894,6 @@
   },
   {
     "key": "225E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mesurat per"
@@ -2138,7 +1902,6 @@
   },
   {
     "key": "225F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb interrogant"
@@ -2147,7 +1910,6 @@
   },
   {
     "key": "2260",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no és igual a",
@@ -2157,7 +1919,6 @@
   },
   {
     "key": "2261",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "idèntic a"
@@ -2166,7 +1927,6 @@
   },
   {
     "key": "2262",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no és idèntic a"
@@ -2175,7 +1935,6 @@
   },
   {
     "key": "2263",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament equivalent a"
@@ -2184,7 +1943,6 @@
   },
   {
     "key": "2264",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor o igual que"
@@ -2193,7 +1951,6 @@
   },
   {
     "key": "2265",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o igual que"
@@ -2202,7 +1959,6 @@
   },
   {
     "key": "2266",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor o igual que"
@@ -2211,7 +1967,6 @@
   },
   {
     "key": "2267",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o igual que"
@@ -2220,7 +1975,6 @@
   },
   {
     "key": "2268",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que"
@@ -2229,7 +1983,6 @@
   },
   {
     "key": "2269",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que"
@@ -2238,7 +1991,6 @@
   },
   {
     "key": "226A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "molt menor que"
@@ -2247,7 +1999,6 @@
   },
   {
     "key": "226B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "molt més gran que"
@@ -2256,7 +2007,6 @@
   },
   {
     "key": "226C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "entre"
@@ -2265,7 +2015,6 @@
   },
   {
     "key": "226D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no equivalent a"
@@ -2274,7 +2023,6 @@
   },
   {
     "key": "226E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no menor que"
@@ -2283,7 +2031,6 @@
   },
   {
     "key": "226F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no més gran que"
@@ -2292,7 +2039,6 @@
   },
   {
     "key": "2270",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no menor ni igual a"
@@ -2301,7 +2047,6 @@
   },
   {
     "key": "2271",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no major ni igual a"
@@ -2310,7 +2055,6 @@
   },
   {
     "key": "2272",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor o equivalent a"
@@ -2319,7 +2063,6 @@
   },
   {
     "key": "2273",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o equivalent a"
@@ -2328,7 +2071,6 @@
   },
   {
     "key": "2274",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no menor ni equivalent a"
@@ -2337,7 +2079,6 @@
   },
   {
     "key": "2275",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no major ni equivalent a"
@@ -2346,7 +2087,6 @@
   },
   {
     "key": "2276",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor o major que"
@@ -2355,7 +2095,6 @@
   },
   {
     "key": "2277",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o menor que"
@@ -2364,7 +2103,6 @@
   },
   {
     "key": "2278",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no menor ni més gran que"
@@ -2373,7 +2111,6 @@
   },
   {
     "key": "2279",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no major ni menor que"
@@ -2382,7 +2119,6 @@
   },
   {
     "key": "227A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix"
@@ -2391,7 +2127,6 @@
   },
   {
     "key": "227B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix"
@@ -2400,7 +2135,6 @@
   },
   {
     "key": "227C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix o és igual a"
@@ -2409,7 +2143,6 @@
   },
   {
     "key": "227D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix o és igual a"
@@ -2418,7 +2151,6 @@
   },
   {
     "key": "227E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix o és equivalent a"
@@ -2427,7 +2159,6 @@
   },
   {
     "key": "227F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix o és equivalent a"
@@ -2436,7 +2167,6 @@
   },
   {
     "key": "2280",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no precedeix"
@@ -2445,7 +2175,6 @@
   },
   {
     "key": "2281",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no segueix"
@@ -2454,7 +2183,6 @@
   },
   {
     "key": "2282",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs a"
@@ -2463,7 +2191,6 @@
   },
   {
     "key": "2283",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté"
@@ -2472,7 +2199,6 @@
   },
   {
     "key": "2284",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no inclòs en"
@@ -2481,7 +2207,6 @@
   },
   {
     "key": "2285",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no conté"
@@ -2490,7 +2215,6 @@
   },
   {
     "key": "2286",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs o igual a"
@@ -2499,7 +2223,6 @@
   },
   {
     "key": "2287",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté o és igual a"
@@ -2508,7 +2231,6 @@
   },
   {
     "key": "2288",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no inclòs ni igual a"
@@ -2517,7 +2239,6 @@
   },
   {
     "key": "2289",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no conté ni és igual a"
@@ -2526,7 +2247,6 @@
   },
   {
     "key": "228A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs estrictament en"
@@ -2535,7 +2255,6 @@
   },
   {
     "key": "228B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté estrictament"
@@ -2544,7 +2263,6 @@
   },
   {
     "key": "228C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "família de conjunts"
@@ -2553,7 +2271,6 @@
   },
   {
     "key": "228D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte de família de conjunts"
@@ -2562,7 +2279,6 @@
   },
   {
     "key": "228E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió de família de conjunts"
@@ -2571,7 +2287,6 @@
   },
   {
     "key": "228F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "imatge quadrada de"
@@ -2580,7 +2295,6 @@
   },
   {
     "key": "2290",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "original quadrat de"
@@ -2589,7 +2303,6 @@
   },
   {
     "key": "2291",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "imatge quadrada d'o igual a"
@@ -2598,7 +2311,6 @@
   },
   {
     "key": "2292",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "original quadrat d'o igual a"
@@ -2607,7 +2319,6 @@
   },
   {
     "key": "2293",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció quadrada"
@@ -2616,7 +2327,6 @@
   },
   {
     "key": "2294",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió quadrada"
@@ -2625,7 +2335,6 @@
   },
   {
     "key": "2295",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més en cercle"
@@ -2634,7 +2343,6 @@
   },
   {
     "key": "2296",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys en cercle"
@@ -2643,7 +2351,6 @@
   },
   {
     "key": "2297",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per en cercle"
@@ -2652,7 +2359,6 @@
   },
   {
     "key": "2298",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra en cercle"
@@ -2661,7 +2367,6 @@
   },
   {
     "key": "2299",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt en cercle"
@@ -2670,7 +2375,6 @@
   },
   {
     "key": "229A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "anell en cercle"
@@ -2679,7 +2383,6 @@
   },
   {
     "key": "229B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "asterisc en cercle"
@@ -2688,7 +2391,6 @@
   },
   {
     "key": "229C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual en cercle"
@@ -2697,7 +2399,6 @@
   },
   {
     "key": "229D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys en cercle"
@@ -2706,7 +2407,6 @@
   },
   {
     "key": "229E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més en quadrat"
@@ -2715,7 +2415,6 @@
   },
   {
     "key": "229F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys en quadrat"
@@ -2724,7 +2423,6 @@
   },
   {
     "key": "22A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "vegades en quadrat"
@@ -2733,7 +2431,6 @@
   },
   {
     "key": "22A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt en quadrat"
@@ -2742,7 +2439,6 @@
   },
   {
     "key": "22A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "t horitzontal cap a l'esquerra"
@@ -2751,7 +2447,6 @@
   },
   {
     "key": "22A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "t horitzontal cap a la dreta"
@@ -2760,7 +2455,6 @@
   },
   {
     "key": "22A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular"
@@ -2769,7 +2463,6 @@
   },
   {
     "key": "22A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular invertida"
@@ -2778,7 +2471,6 @@
   },
   {
     "key": "22A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "afirmació"
@@ -2787,7 +2479,6 @@
   },
   {
     "key": "22A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "modela"
@@ -2796,7 +2487,6 @@
   },
   {
     "key": "22A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "veritable"
@@ -2805,7 +2495,6 @@
   },
   {
     "key": "22A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "obliga"
@@ -2814,7 +2503,6 @@
   },
   {
     "key": "22AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple barra vertical torniquet dret"
@@ -2823,7 +2511,6 @@
   },
   {
     "key": "22AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble barra vertical doble torniquet dret"
@@ -2832,7 +2519,6 @@
   },
   {
     "key": "22AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no prova"
@@ -2841,7 +2527,6 @@
   },
   {
     "key": "22AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "0"
@@ -2850,7 +2535,6 @@
   },
   {
     "key": "22AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no obliga"
@@ -2859,7 +2543,6 @@
   },
   {
     "key": "22AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble barra vertical doble torniquet dret negada"
@@ -2868,7 +2551,6 @@
   },
   {
     "key": "22B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix respecte de"
@@ -2877,7 +2559,6 @@
   },
   {
     "key": "22B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix respecte de"
@@ -2886,7 +2567,6 @@
   },
   {
     "key": "22B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subgrup normal de"
@@ -2895,7 +2575,6 @@
   },
   {
     "key": "22B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté com a subgrup normal"
@@ -2904,7 +2583,6 @@
   },
   {
     "key": "22B4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subgrup normal o és igual a"
@@ -2913,7 +2591,6 @@
   },
   {
     "key": "22B5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté com a subgrup normal o és igual a"
@@ -2922,7 +2599,6 @@
   },
   {
     "key": "22B6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "original de"
@@ -2931,7 +2607,6 @@
   },
   {
     "key": "22B7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "imatge de"
@@ -2940,7 +2615,6 @@
   },
   {
     "key": "22B8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "multifunció"
@@ -2949,7 +2623,6 @@
   },
   {
     "key": "22B9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "matriu hermitiana conjugada"
@@ -2958,7 +2631,6 @@
   },
   {
     "key": "22BA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "interpola"
@@ -2967,7 +2639,6 @@
   },
   {
     "key": "22BB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "o excloent"
@@ -2976,7 +2647,6 @@
   },
   {
     "key": "22BC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no i"
@@ -2985,7 +2655,6 @@
   },
   {
     "key": "22BD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no o"
@@ -2994,7 +2663,6 @@
   },
   {
     "key": "22BF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle rectangle"
@@ -3003,7 +2671,6 @@
   },
   {
     "key": "22C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "i"
@@ -3012,7 +2679,6 @@
   },
   {
     "key": "22C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "o"
@@ -3021,7 +2687,6 @@
   },
   {
     "key": "22C2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció"
@@ -3030,7 +2695,6 @@
   },
   {
     "key": "22C3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió"
@@ -3039,7 +2703,6 @@
   },
   {
     "key": "22C4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador diamant"
@@ -3048,7 +2711,6 @@
   },
   {
     "key": "22C5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt"
@@ -3057,7 +2719,6 @@
   },
   {
     "key": "22C6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrella"
@@ -3066,7 +2727,6 @@
   },
   {
     "key": "22C7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dividit per"
@@ -3075,7 +2735,6 @@
   },
   {
     "key": "22C8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "monyo"
@@ -3084,7 +2743,6 @@
   },
   {
     "key": "22C9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "factor normal esquerre producte semidirecte"
@@ -3093,7 +2751,6 @@
   },
   {
     "key": "22CA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "factor normal dret producte semidirecte"
@@ -3102,7 +2759,6 @@
   },
   {
     "key": "22CB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte semidirecte esquerre"
@@ -3111,7 +2767,6 @@
   },
   {
     "key": "22CC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte semidirecte dret"
@@ -3120,7 +2775,6 @@
   },
   {
     "key": "22CD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla invertida igual a"
@@ -3129,7 +2783,6 @@
   },
   {
     "key": "22CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "o arrissada"
@@ -3138,7 +2791,6 @@
   },
   {
     "key": "22CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "i arrissada"
@@ -3147,7 +2799,6 @@
   },
   {
     "key": "22D0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble inclòs"
@@ -3156,7 +2807,6 @@
   },
   {
     "key": "22D1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble conté"
@@ -3165,7 +2815,6 @@
   },
   {
     "key": "22D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble intersecció"
@@ -3174,7 +2823,6 @@
   },
   {
     "key": "22D3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble unió"
@@ -3183,7 +2831,6 @@
   },
   {
     "key": "22D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "forca"
@@ -3192,7 +2839,6 @@
   },
   {
     "key": "22D5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paral·lela o igual a"
@@ -3201,7 +2847,6 @@
   },
   {
     "key": "22D6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que amb punt"
@@ -3210,7 +2855,6 @@
   },
   {
     "key": "22D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major que amb punt"
@@ -3219,7 +2863,6 @@
   },
   {
     "key": "22D8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "molt menor que"
@@ -3228,7 +2871,6 @@
   },
   {
     "key": "22D9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "molt més gran que"
@@ -3237,7 +2879,6 @@
   },
   {
     "key": "22DA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor igual o major que"
@@ -3246,7 +2887,6 @@
   },
   {
     "key": "22DB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major igual o inferior que"
@@ -3255,7 +2895,6 @@
   },
   {
     "key": "22DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor o igual que"
@@ -3264,7 +2903,6 @@
   },
   {
     "key": "22DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o igual que"
@@ -3273,7 +2911,6 @@
   },
   {
     "key": "22DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix o és igual a"
@@ -3282,7 +2919,6 @@
   },
   {
     "key": "22DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix o és igual a"
@@ -3291,7 +2927,6 @@
   },
   {
     "key": "22E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no precedeix ni és igual a"
@@ -3300,7 +2935,6 @@
   },
   {
     "key": "22E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no segueix ni és igual a"
@@ -3309,7 +2943,6 @@
   },
   {
     "key": "22E2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no és imatge quadrada ni igual a"
@@ -3318,7 +2951,6 @@
   },
   {
     "key": "22E3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no és original quadrada ni igual a"
@@ -3327,7 +2959,6 @@
   },
   {
     "key": "22E4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "imatge quadrada estricta"
@@ -3336,7 +2967,6 @@
   },
   {
     "key": "22E5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "original quadrada estricta"
@@ -3345,7 +2975,6 @@
   },
   {
     "key": "22E6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que no equivalent a"
@@ -3354,7 +2983,6 @@
   },
   {
     "key": "22E7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més gran que no equivalent a"
@@ -3363,7 +2991,6 @@
   },
   {
     "key": "22E8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix no equivalent a"
@@ -3372,7 +2999,6 @@
   },
   {
     "key": "22E9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix no equivalent a"
@@ -3381,7 +3007,6 @@
   },
   {
     "key": "22EA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no subgrup normal de"
@@ -3390,7 +3015,6 @@
   },
   {
     "key": "22EB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no conté com a subgrup normal"
@@ -3399,7 +3023,6 @@
   },
   {
     "key": "22EC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no és subgrup normal ni igual a"
@@ -3408,7 +3031,6 @@
   },
   {
     "key": "22ED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no conté com a subgrup normal ni és igual a"
@@ -3417,7 +3039,6 @@
   },
   {
     "key": "22EE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punts suspensius verticals"
@@ -3426,7 +3047,6 @@
   },
   {
     "key": "22EF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punts suspensius alts"
@@ -3435,7 +3055,6 @@
   },
   {
     "key": "22F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punts suspensius diagonals pujant"
@@ -3444,7 +3063,6 @@
   },
   {
     "key": "22F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punts suspensius diagonals baixant"
@@ -3453,7 +3071,6 @@
   },
   {
     "key": "22F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertany amb traç horitzontal"
@@ -3462,7 +3079,6 @@
   },
   {
     "key": "22F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertany amb barra vertical a la fi de ratlla horitzontal"
@@ -3471,7 +3087,6 @@
   },
   {
     "key": "22F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertany en petit amb traç vertical"
@@ -3480,7 +3095,6 @@
   },
   {
     "key": "22F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertany amb punt amunt"
@@ -3489,7 +3103,6 @@
   },
   {
     "key": "22F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertany amb barra dalt"
@@ -3498,7 +3111,6 @@
   },
   {
     "key": "22F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertanyent subratllat"
@@ -3507,7 +3119,6 @@
   },
   {
     "key": "22F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertanyent subratllat"
@@ -3516,7 +3127,6 @@
   },
   {
     "key": "22F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertany amb dos traços horitzontals"
@@ -3525,7 +3135,6 @@
   },
   {
     "key": "22FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté o és igual a"
@@ -3534,7 +3143,6 @@
   },
   {
     "key": "22FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté amb marca"
@@ -3543,7 +3151,6 @@
   },
   {
     "key": "22FC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté amb marca"
@@ -3552,7 +3159,6 @@
   },
   {
     "key": "22FD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté amb barra"
@@ -3561,7 +3167,6 @@
   },
   {
     "key": "22FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertanyent amb barra"
@@ -3570,7 +3175,6 @@
   },
   {
     "key": "22FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "z anotació associació de bossa"
@@ -3579,7 +3183,6 @@
   },
   {
     "key": "2300",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "diàmetre"
@@ -3588,7 +3191,6 @@
   },
   {
     "key": "2302",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "casa"
@@ -3597,7 +3199,6 @@
   },
   {
     "key": "2305",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "en projectivitat amb"
@@ -3606,7 +3207,6 @@
   },
   {
     "key": "2306",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "en perspectivitat amb"
@@ -3615,7 +3215,6 @@
   },
   {
     "key": "2307",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "línia ondulada"
@@ -3624,7 +3223,6 @@
   },
   {
     "key": "2310",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "no invertit"
@@ -3633,7 +3231,6 @@
   },
   {
     "key": "2311",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "pastilles quadrades"
@@ -3642,7 +3239,6 @@
   },
   {
     "key": "2312",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "arc"
@@ -3651,7 +3247,6 @@
   },
   {
     "key": "2313",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "segment"
@@ -3660,7 +3255,6 @@
   },
   {
     "key": "2314",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "sector"
@@ -3669,7 +3263,6 @@
   },
   {
     "key": "2795",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "signe més pesant"
@@ -3678,7 +3271,6 @@
   },
   {
     "key": "2796",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "signe menys pesant"
@@ -3687,7 +3279,6 @@
   },
   {
     "key": "2797",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "signe de la divisió pesant"
@@ -3696,7 +3287,6 @@
   },
   {
     "key": "27B0",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "bucle arrissat"
@@ -3705,7 +3295,6 @@
   },
   {
     "key": "27BF",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "doble bucle arrissat"
@@ -3714,7 +3303,6 @@
   },
   {
     "key": "27C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle tancant triangle"
@@ -3723,7 +3311,6 @@
   },
   {
     "key": "27C2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular"
@@ -3732,7 +3319,6 @@
   },
   {
     "key": "27C3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs a"
@@ -3741,7 +3327,6 @@
   },
   {
     "key": "27C4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté"
@@ -3750,7 +3335,6 @@
   },
   {
     "key": "27C7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt en cercle"
@@ -3759,7 +3343,6 @@
   },
   {
     "key": "27C8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "enrere tall abans de subconjunt"
@@ -3768,7 +3351,6 @@
   },
   {
     "key": "27C9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sobreconjunt abans de tall"
@@ -3777,7 +3359,6 @@
   },
   {
     "key": "27CA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical amb cop horitzontal"
@@ -3786,7 +3367,6 @@
   },
   {
     "key": "27CB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diagonal matemàtic d'aixecament"
@@ -3795,7 +3375,6 @@
   },
   {
     "key": "27CC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "divisió llarga"
@@ -3804,7 +3383,6 @@
   },
   {
     "key": "27CD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diagonal descendent matemàtica"
@@ -3813,7 +3391,6 @@
   },
   {
     "key": "27CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat lògic Y"
@@ -3822,7 +3399,6 @@
   },
   {
     "key": "27CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat lògic O"
@@ -3831,7 +3407,6 @@
   },
   {
     "key": "27D0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamant blanc amb punt centrat"
@@ -3840,7 +3415,6 @@
   },
   {
     "key": "27D1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "y amb punt interior"
@@ -3849,7 +3423,6 @@
   },
   {
     "key": "27D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "element d'obertura cap amunt"
@@ -3858,7 +3431,6 @@
   },
   {
     "key": "27D3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angle inferior dret amb punt"
@@ -3867,7 +3439,6 @@
   },
   {
     "key": "27D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "angle inferior esquerre amb punt"
@@ -3876,7 +3447,6 @@
   },
   {
     "key": "27D5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquerre exterior uneix"
@@ -3885,7 +3455,6 @@
   },
   {
     "key": "27D6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dret exterior uneix"
@@ -3894,7 +3463,6 @@
   },
   {
     "key": "27D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ple exterior uneix"
@@ -3903,7 +3471,6 @@
   },
   {
     "key": "27D8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular inversa"
@@ -3912,7 +3479,6 @@
   },
   {
     "key": "27D9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular"
@@ -3921,7 +3487,6 @@
   },
   {
     "key": "27DA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquerre i dret doble torniquet"
@@ -3930,7 +3495,6 @@
   },
   {
     "key": "27DB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble T horitzontal"
@@ -3939,7 +3503,6 @@
   },
   {
     "key": "27DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "multifunció per l'esquerra"
@@ -3948,7 +3511,6 @@
   },
   {
     "key": "27DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "t horitzontal dreta llarga"
@@ -3957,7 +3519,6 @@
   },
   {
     "key": "27DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "t horitzontal esquerra llarga"
@@ -3966,7 +3527,6 @@
   },
   {
     "key": "27DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular inversa amb cercle a dalt"
@@ -3975,7 +3535,6 @@
   },
   {
     "key": "27E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pastilla dividida per regla horitzontal"
@@ -3984,7 +3543,6 @@
   },
   {
     "key": "27E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamant còncau buit"
@@ -3993,7 +3551,6 @@
   },
   {
     "key": "27E2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamant còncau amb tic-tac cap a esquerra"
@@ -4002,7 +3559,6 @@
   },
   {
     "key": "27E3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamant còncau amb tic-tac cap a dreta"
@@ -4011,7 +3567,6 @@
   },
   {
     "key": "27E4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat amb tic-tac cap esquerra"
@@ -4020,7 +3575,6 @@
   },
   {
     "key": "27E5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat amb tic-tac cap a dreta"
@@ -4029,7 +3583,6 @@
   },
   {
     "key": "292B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "encreuament en diagonal cruïlla en diagonal caiguda en diagonal"
@@ -4038,7 +3591,6 @@
   },
   {
     "key": "292C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diagonal descendent cruïlla diagonal ascendent"
@@ -4047,7 +3599,6 @@
   },
   {
     "key": "2980",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "delimitador de barra vertical triple"
@@ -4056,7 +3607,6 @@
   },
   {
     "key": "2981",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "punt de notació Z"
@@ -4065,7 +3615,6 @@
   },
   {
     "key": "2982",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tipus de notació Z doble punt"
@@ -4074,7 +3623,6 @@
   },
   {
     "key": "2999",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tanca puntejada"
@@ -4083,7 +3631,6 @@
   },
   {
     "key": "299A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ziga-zaga en vertical"
@@ -4092,7 +3639,6 @@
   },
   {
     "key": "29B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunt buit invertit"
@@ -4101,7 +3647,6 @@
   },
   {
     "key": "29B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunt buit amb barra"
@@ -4110,7 +3655,6 @@
   },
   {
     "key": "29B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conjunt buit amb cercle"
@@ -4119,7 +3663,6 @@
   },
   {
     "key": "29B5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle amb barra"
@@ -4128,7 +3671,6 @@
   },
   {
     "key": "29B6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra en cercle"
@@ -4137,7 +3679,6 @@
   },
   {
     "key": "29B7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paral·leles en cercle"
@@ -4146,7 +3687,6 @@
   },
   {
     "key": "29B8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle invers solidus"
@@ -4155,7 +3695,6 @@
   },
   {
     "key": "29B9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular en cercle"
@@ -4164,7 +3703,6 @@
   },
   {
     "key": "29BA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle dividit per barra horitzontal i meitat superior dividit per barra vertical"
@@ -4173,7 +3711,6 @@
   },
   {
     "key": "29BB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "x superimpresa en cercle"
@@ -4182,7 +3719,6 @@
   },
   {
     "key": "29BC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "divisió girada en sentit antihorari en un cercle"
@@ -4191,7 +3727,6 @@
   },
   {
     "key": "29BE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bala buida en cercle"
@@ -4200,7 +3735,6 @@
   },
   {
     "key": "29BF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bala en cercle"
@@ -4209,7 +3743,6 @@
   },
   {
     "key": "29C0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que en cercle"
@@ -4218,7 +3751,6 @@
   },
   {
     "key": "29C1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major que en cercle"
@@ -4227,7 +3759,6 @@
   },
   {
     "key": "29C2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle amb cercle a la dreta"
@@ -4236,7 +3767,6 @@
   },
   {
     "key": "29C3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle amb dos traços horitzontals a la dreta"
@@ -4245,7 +3775,6 @@
   },
   {
     "key": "29C4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat amb diagonal ascendent"
@@ -4254,7 +3783,6 @@
   },
   {
     "key": "29C5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat amb diagonal descendent"
@@ -4263,7 +3791,6 @@
   },
   {
     "key": "29C6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "asterisc quadrat"
@@ -4272,7 +3799,6 @@
   },
   {
     "key": "29C7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "petit cercle quadrat"
@@ -4281,7 +3807,6 @@
   },
   {
     "key": "29C8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat quadrat"
@@ -4290,7 +3815,6 @@
   },
   {
     "key": "29C9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dos quadrats units"
@@ -4299,7 +3823,6 @@
   },
   {
     "key": "29CA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle amb punt amunt"
@@ -4308,7 +3831,6 @@
   },
   {
     "key": "29CB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle amb barra inferior"
@@ -4317,7 +3839,6 @@
   },
   {
     "key": "29CC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "s en triangle"
@@ -4326,7 +3847,6 @@
   },
   {
     "key": "29CD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle amb serifs a la part inferior"
@@ -4335,7 +3855,6 @@
   },
   {
     "key": "29CE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle cap a la dreta sobre triangle cap a l'esquerra"
@@ -4344,7 +3863,6 @@
   },
   {
     "key": "29CF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subgrup normal o igual a"
@@ -4353,7 +3871,6 @@
   },
   {
     "key": "29D0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté com a subgrup normal o és igual a"
@@ -4362,7 +3879,6 @@
   },
   {
     "key": "29D1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "llacet amb meitat esquerra negra"
@@ -4371,7 +3887,6 @@
   },
   {
     "key": "29D2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "llacet amb meitat dreta negra"
@@ -4380,7 +3895,6 @@
   },
   {
     "key": "29D3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "llacet negre"
@@ -4389,7 +3903,6 @@
   },
   {
     "key": "29D4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "temps amb meitat esquerra negra"
@@ -4398,7 +3911,6 @@
   },
   {
     "key": "29D5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "temps amb la meitat dreta negra"
@@ -4407,7 +3919,6 @@
   },
   {
     "key": "29D6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rellotge de sorra blanc"
@@ -4416,7 +3927,6 @@
   },
   {
     "key": "29D7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rellotge de sorra negre"
@@ -4425,7 +3935,6 @@
   },
   {
     "key": "29DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "infinit incomplet"
@@ -4434,7 +3943,6 @@
   },
   {
     "key": "29DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "empat sobre l'infinit"
@@ -4443,7 +3951,6 @@
   },
   {
     "key": "29DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no infinit"
@@ -4452,7 +3959,6 @@
   },
   {
     "key": "29DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "multimapa de doble extrem"
@@ -4461,7 +3967,6 @@
   },
   {
     "key": "29E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "quadrat amb contorn contornejat"
@@ -4470,7 +3975,6 @@
   },
   {
     "key": "29E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "augmenta com"
@@ -4479,7 +3983,6 @@
   },
   {
     "key": "29E2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "shuffle product"
@@ -4488,7 +3991,6 @@
   },
   {
     "key": "29E3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual ratllat doble"
@@ -4497,7 +3999,6 @@
   },
   {
     "key": "29E4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb accent, amb doble ratllat"
@@ -4506,7 +4007,6 @@
   },
   {
     "key": "29E5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "idèntic a amb doble ratllat"
@@ -4515,7 +4015,6 @@
   },
   {
     "key": "29E6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gleich Stark"
@@ -4524,7 +4023,6 @@
   },
   {
     "key": "29E7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "termodinamica"
@@ -4533,7 +4031,6 @@
   },
   {
     "key": "29E8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle que apunta cap avall amb la meitat esquerra negra"
@@ -4542,7 +4039,6 @@
   },
   {
     "key": "29E9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triangle que apunta cap avall amb la meitat dreta negra"
@@ -4551,7 +4047,6 @@
   },
   {
     "key": "29EB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rombe farcit"
@@ -4560,7 +4055,6 @@
   },
   {
     "key": "29EE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "plaça blanca amb error"
@@ -4569,7 +4063,6 @@
   },
   {
     "key": "29EF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "plaça negra amb error"
@@ -4578,7 +4071,6 @@
   },
   {
     "key": "29F0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diamant barrat blanc amb error"
@@ -4587,7 +4079,6 @@
   },
   {
     "key": "29F1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dimanant barrat negre amb error"
@@ -4596,7 +4087,6 @@
   },
   {
     "key": "29F2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle blanc amb error"
@@ -4605,7 +4095,6 @@
   },
   {
     "key": "29F3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "cercle negre amb barres d'error"
@@ -4614,7 +4103,6 @@
   },
   {
     "key": "29F4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rule delayed"
@@ -4623,7 +4111,6 @@
   },
   {
     "key": "29F5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de sòlid invers"
@@ -4632,7 +4119,6 @@
   },
   {
     "key": "29F6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sòlid amb barra superior"
@@ -4641,7 +4127,6 @@
   },
   {
     "key": "29F7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sòlid invers amb traç horitzontal"
@@ -4650,7 +4135,6 @@
   },
   {
     "key": "29F8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sòlid gran"
@@ -4659,7 +4143,6 @@
   },
   {
     "key": "29F9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sòlid invers gran"
@@ -4668,7 +4151,6 @@
   },
   {
     "key": "29FA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble plus"
@@ -4677,7 +4159,6 @@
   },
   {
     "key": "29FB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple plus"
@@ -4686,7 +4167,6 @@
   },
   {
     "key": "29FE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "minúscul"
@@ -4695,7 +4175,6 @@
   },
   {
     "key": "29FF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "miny"
@@ -4704,7 +4183,6 @@
   },
   {
     "key": "2A00",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de punts circulars N-Ary"
@@ -4713,7 +4191,6 @@
   },
   {
     "key": "2A01",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador N-Ary més encerclat"
@@ -4722,7 +4199,6 @@
   },
   {
     "key": "2A02",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador dels temps en cercle de N-Ary"
@@ -4731,7 +4207,6 @@
   },
   {
     "key": "2A03",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de la unió N-Ary amb punt"
@@ -4740,7 +4215,6 @@
   },
   {
     "key": "2A04",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de la unió N-Ary amb més"
@@ -4749,7 +4223,6 @@
   },
   {
     "key": "2A05",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador d'interseccions quadrades N-Ary"
@@ -4758,7 +4231,6 @@
   },
   {
     "key": "2A06",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador n-Ary square union"
@@ -4767,7 +4239,6 @@
   },
   {
     "key": "2A07",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dos lògic i operador"
@@ -4776,7 +4247,6 @@
   },
   {
     "key": "2A08",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "dos lògic o operador"
@@ -4785,7 +4255,6 @@
   },
   {
     "key": "2A09",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de N-Ary times"
@@ -4794,7 +4263,6 @@
   },
   {
     "key": "2A0A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mòdul dues sumes"
@@ -4803,7 +4271,6 @@
   },
   {
     "key": "2A0B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "suma amb Integral"
@@ -4812,7 +4279,6 @@
   },
   {
     "key": "2A0C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador integral quàdruple"
@@ -4821,7 +4287,6 @@
   },
   {
     "key": "2A0D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "finit part integral"
@@ -4830,7 +4295,6 @@
   },
   {
     "key": "2A0E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb doble traç"
@@ -4839,7 +4303,6 @@
   },
   {
     "key": "2A0F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "mitjana Integral amb slash"
@@ -4848,7 +4311,6 @@
   },
   {
     "key": "2A10",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "funció de circulació"
@@ -4857,7 +4319,6 @@
   },
   {
     "key": "2A11",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral en sentit antihorari"
@@ -4866,7 +4327,6 @@
   },
   {
     "key": "2A12",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral lineal per rectangle en pol"
@@ -4875,7 +4335,6 @@
   },
   {
     "key": "2A13",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral lineal per semicercle en pol"
@@ -4884,7 +4343,6 @@
   },
   {
     "key": "2A14",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral lineal excloent el pol"
@@ -4893,7 +4351,6 @@
   },
   {
     "key": "2A15",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral al voltant d'un punt operador"
@@ -4902,7 +4359,6 @@
   },
   {
     "key": "2A16",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador integral per quaternions"
@@ -4911,7 +4367,6 @@
   },
   {
     "key": "2A18",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb signe de temps"
@@ -4920,7 +4375,6 @@
   },
   {
     "key": "2A19",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb intersecció"
@@ -4929,7 +4383,6 @@
   },
   {
     "key": "2A1A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb unió"
@@ -4938,7 +4391,6 @@
   },
   {
     "key": "2A1B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb barra superior"
@@ -4947,7 +4399,6 @@
   },
   {
     "key": "2A1C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral amb barra inferior"
@@ -4956,7 +4407,6 @@
   },
   {
     "key": "2A1D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unir-se"
@@ -4965,7 +4415,6 @@
   },
   {
     "key": "2A1E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de triangle esquerre gran"
@@ -4974,7 +4423,6 @@
   },
   {
     "key": "2A1F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "composició d'esquemes de notació Z"
@@ -4983,7 +4431,6 @@
   },
   {
     "key": "2A20",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "esquema de notació Z"
@@ -4992,7 +4439,6 @@
   },
   {
     "key": "2A21",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "projecció de l'esquema de notació Z"
@@ -5001,7 +4447,6 @@
   },
   {
     "key": "2A22",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més amb cercle"
@@ -5010,7 +4455,6 @@
   },
   {
     "key": "2A23",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més amb angle"
@@ -5019,7 +4463,6 @@
   },
   {
     "key": "2A24",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla amb més subscrit"
@@ -5028,7 +4471,6 @@
   },
   {
     "key": "2A25",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més amb punt inferior"
@@ -5037,7 +4479,6 @@
   },
   {
     "key": "2A26",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla amb més"
@@ -5046,7 +4487,6 @@
   },
   {
     "key": "2A27",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més amb 2 subscrit"
@@ -5055,7 +4495,6 @@
   },
   {
     "key": "2A28",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe més amb triangle negre"
@@ -5064,7 +4503,6 @@
   },
   {
     "key": "2A29",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys amb coma"
@@ -5073,7 +4511,6 @@
   },
   {
     "key": "2A2A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys amb punt inferior"
@@ -5082,7 +4519,6 @@
   },
   {
     "key": "2A2B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe menys amb punts que cauen"
@@ -5091,7 +4527,6 @@
   },
   {
     "key": "2A2C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe menys amb punts creixents"
@@ -5100,7 +4535,6 @@
   },
   {
     "key": "2A2D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més en semicercle esquerre"
@@ -5109,7 +4543,6 @@
   },
   {
     "key": "2A2E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més en semicercle dret"
@@ -5118,7 +4551,6 @@
   },
   {
     "key": "2A2F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte vectorial"
@@ -5127,7 +4559,6 @@
   },
   {
     "key": "2A30",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per amb punt"
@@ -5136,7 +4567,6 @@
   },
   {
     "key": "2A31",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per amb subratllat"
@@ -5145,7 +4575,6 @@
   },
   {
     "key": "2A32",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte semidirecte amb fons tancat"
@@ -5154,7 +4583,6 @@
   },
   {
     "key": "2A33",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "smash product"
@@ -5163,7 +4591,6 @@
   },
   {
     "key": "2A34",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per en semicercle esquerre"
@@ -5172,7 +4599,6 @@
   },
   {
     "key": "2A35",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per en semicercle dret"
@@ -5181,7 +4607,6 @@
   },
   {
     "key": "2A36",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per en cercle amb angle"
@@ -5190,7 +4615,6 @@
   },
   {
     "key": "2A37",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per en anell"
@@ -5199,7 +4623,6 @@
   },
   {
     "key": "2A38",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "divisió en cercle"
@@ -5208,7 +4631,6 @@
   },
   {
     "key": "2A39",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més en triangle"
@@ -5217,7 +4639,6 @@
   },
   {
     "key": "2A3A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys en triangle"
@@ -5226,7 +4647,6 @@
   },
   {
     "key": "2A3B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "per en triangle"
@@ -5235,7 +4655,6 @@
   },
   {
     "key": "2A3C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte interior"
@@ -5244,7 +4663,6 @@
   },
   {
     "key": "2A3D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "producte interior dret"
@@ -5253,7 +4671,6 @@
   },
   {
     "key": "2A3E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "notació Z composició relacional"
@@ -5262,7 +4679,6 @@
   },
   {
     "key": "2A3F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "coproducte"
@@ -5271,7 +4687,6 @@
   },
   {
     "key": "2A40",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció amb punt"
@@ -5280,7 +4695,6 @@
   },
   {
     "key": "2A41",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió amb signe de menys"
@@ -5289,7 +4703,6 @@
   },
   {
     "key": "2A42",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió amb barra"
@@ -5298,7 +4711,6 @@
   },
   {
     "key": "2A43",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció amb barra"
@@ -5307,7 +4719,6 @@
   },
   {
     "key": "2A44",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció amb and"
@@ -5316,7 +4727,6 @@
   },
   {
     "key": "2A45",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió amb or"
@@ -5325,7 +4735,6 @@
   },
   {
     "key": "2A46",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió sobre intersecció"
@@ -5334,7 +4743,6 @@
   },
   {
     "key": "2A47",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció sobre unió"
@@ -5343,7 +4751,6 @@
   },
   {
     "key": "2A48",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió sobre barra, sobre intersecció"
@@ -5352,7 +4759,6 @@
   },
   {
     "key": "2A49",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció sobre barra, sobre unió"
@@ -5361,7 +4767,6 @@
   },
   {
     "key": "2A4A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió i unió"
@@ -5370,7 +4775,6 @@
   },
   {
     "key": "2A4B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció i intersecció"
@@ -5379,7 +4783,6 @@
   },
   {
     "key": "2A4C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió tancada"
@@ -5388,7 +4791,6 @@
   },
   {
     "key": "2A4D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció tancada"
@@ -5397,7 +4799,6 @@
   },
   {
     "key": "2A4E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció quadrada doble"
@@ -5406,7 +4807,6 @@
   },
   {
     "key": "2A4F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió quadrada doble"
@@ -5415,7 +4815,6 @@
   },
   {
     "key": "2A50",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "unió tancada amb per"
@@ -5424,7 +4823,6 @@
   },
   {
     "key": "2A51",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic i amb punt amunt"
@@ -5433,7 +4831,6 @@
   },
   {
     "key": "2A52",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic o amb punt amunt"
@@ -5442,7 +4839,6 @@
   },
   {
     "key": "2A53",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "i"
@@ -5451,7 +4847,6 @@
   },
   {
     "key": "2A54",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "o"
@@ -5460,7 +4855,6 @@
   },
   {
     "key": "2A55",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble interesecció lògica i"
@@ -5469,7 +4863,6 @@
   },
   {
     "key": "2A56",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble interesecció lògica o"
@@ -5478,7 +4871,6 @@
   },
   {
     "key": "2A57",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclinació gran o"
@@ -5487,7 +4879,6 @@
   },
   {
     "key": "2A58",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclinació gran i"
@@ -5496,7 +4887,6 @@
   },
   {
     "key": "2A59",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògica o superposada, lògica i"
@@ -5505,7 +4895,6 @@
   },
   {
     "key": "2A5A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic i amb tija mitjana"
@@ -5514,7 +4903,6 @@
   },
   {
     "key": "2A5B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic o amb tija mitjana"
@@ -5523,7 +4911,6 @@
   },
   {
     "key": "2A5C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic i amb guió horitzontal"
@@ -5532,7 +4919,6 @@
   },
   {
     "key": "2A5D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic o amb guió horitzontal"
@@ -5541,7 +4927,6 @@
   },
   {
     "key": "2A5E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic i amb doble barra superior"
@@ -5550,7 +4935,6 @@
   },
   {
     "key": "2A5F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "logic i amb barra inferior"
@@ -5559,7 +4943,6 @@
   },
   {
     "key": "2A60",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic i amb doble barra inferior."
@@ -5568,7 +4951,6 @@
   },
   {
     "key": "2A61",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "ve petita amb barra inferior"
@@ -5577,7 +4959,6 @@
   },
   {
     "key": "2A62",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic o amb doble barra."
@@ -5586,7 +4967,6 @@
   },
   {
     "key": "2A63",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "lògic o amb doble barra inferior"
@@ -5595,7 +4975,6 @@
   },
   {
     "key": "2A64",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "notació Z domini antirestricció"
@@ -5604,7 +4983,6 @@
   },
   {
     "key": "2A65",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "rang de notació Z antirestricció"
@@ -5613,7 +4991,6 @@
   },
   {
     "key": "2A66",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb punt subscrit"
@@ -5622,7 +4999,6 @@
   },
   {
     "key": "2A67",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "idèntic amb punt amunt"
@@ -5631,7 +5007,6 @@
   },
   {
     "key": "2A68",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple barra horitzontal amb doble moviment vertical"
@@ -5640,7 +5015,6 @@
   },
   {
     "key": "2A69",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple barra horitzontal amb triple moviment vertical"
@@ -5649,7 +5023,6 @@
   },
   {
     "key": "2A6A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla amb punt"
@@ -5658,7 +5031,6 @@
   },
   {
     "key": "2A6B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de titlla amb punts creixents"
@@ -5667,7 +5039,6 @@
   },
   {
     "key": "2A6C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "similars menys similars"
@@ -5676,7 +5047,6 @@
   },
   {
     "key": "2A6D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "congruent amb punt"
@@ -5685,7 +5055,6 @@
   },
   {
     "key": "2A6E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual a asterisc"
@@ -5694,7 +5063,6 @@
   },
   {
     "key": "2A6F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "gairebé igual amb angle"
@@ -5703,7 +5071,6 @@
   },
   {
     "key": "2A70",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "aproximadament igual o igual a"
@@ -5712,7 +5079,6 @@
   },
   {
     "key": "2A71",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb més subscrit"
@@ -5721,7 +5087,6 @@
   },
   {
     "key": "2A72",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb més"
@@ -5730,7 +5095,6 @@
   },
   {
     "key": "2A73",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb operador accent"
@@ -5739,7 +5103,6 @@
   },
   {
     "key": "2A74",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual amb dos punts"
@@ -5748,7 +5111,6 @@
   },
   {
     "key": "2A75",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual doble"
@@ -5757,7 +5119,6 @@
   },
   {
     "key": "2A76",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tres signes d'igualtat consecutius"
@@ -5766,7 +5127,6 @@
   },
   {
     "key": "2A77",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "igual entre quatre punts"
@@ -5775,7 +5135,6 @@
   },
   {
     "key": "2A78",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "equivalent amb quatre punts"
@@ -5784,7 +5143,6 @@
   },
   {
     "key": "2A79",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que amb cercle interior"
@@ -5793,7 +5151,6 @@
   },
   {
     "key": "2A7A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més gran que amb cercle interior"
@@ -5802,7 +5159,6 @@
   },
   {
     "key": "2A7B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que amb interrogant"
@@ -5811,7 +5167,6 @@
   },
   {
     "key": "2A7C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més gran que amb interrogant"
@@ -5820,7 +5175,6 @@
   },
   {
     "key": "2A7D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que"
@@ -5829,7 +5183,6 @@
   },
   {
     "key": "2A7E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que"
@@ -5838,7 +5191,6 @@
   },
   {
     "key": "2A7F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que amb punt interior"
@@ -5847,7 +5199,6 @@
   },
   {
     "key": "2A80",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que amb punt interior"
@@ -5856,7 +5207,6 @@
   },
   {
     "key": "2A81",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que amb punt"
@@ -5865,7 +5215,6 @@
   },
   {
     "key": "2A82",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que amb punt"
@@ -5874,7 +5223,6 @@
   },
   {
     "key": "2A83",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que amb punt"
@@ -5883,7 +5231,6 @@
   },
   {
     "key": "2A84",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que amb punt"
@@ -5892,7 +5239,6 @@
   },
   {
     "key": "2A85",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que o aproximat"
@@ -5901,7 +5247,6 @@
   },
   {
     "key": "2A86",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més gran que o aproximat"
@@ -5910,7 +5255,6 @@
   },
   {
     "key": "2A87",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que una línia no és igual a"
@@ -5919,7 +5263,6 @@
   },
   {
     "key": "2A88",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "majors i una sola línia no són iguals a"
@@ -5928,7 +5271,6 @@
   },
   {
     "key": "2A89",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que, però no aproximat a"
@@ -5937,7 +5279,6 @@
   },
   {
     "key": "2A8A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més gran que, però no aproximat a"
@@ -5946,7 +5287,6 @@
   },
   {
     "key": "2A8B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menys que a dalt de la doble línia igual per sobre de major que"
@@ -5955,7 +5295,6 @@
   },
   {
     "key": "2A8C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més que a dalt de la línia doble igual sobre menys que"
@@ -5964,7 +5303,6 @@
   },
   {
     "key": "2A8D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor, similar o igual a"
@@ -5973,7 +5311,6 @@
   },
   {
     "key": "2A8E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major, similar o igual a"
@@ -5982,7 +5319,6 @@
   },
   {
     "key": "2A8F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor, similar o més gran que"
@@ -5991,7 +5327,6 @@
   },
   {
     "key": "2A90",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major, similar o menor que"
@@ -6000,7 +5335,6 @@
   },
   {
     "key": "2A91",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor, major o igual a"
@@ -6009,7 +5343,6 @@
   },
   {
     "key": "2A92",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major, menor o igual a"
@@ -6018,7 +5351,6 @@
   },
   {
     "key": "2A93",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor o major que"
@@ -6027,7 +5359,6 @@
   },
   {
     "key": "2A94",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament major o menor que"
@@ -6036,7 +5367,6 @@
   },
   {
     "key": "2A95",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclinat igual o inferior a"
@@ -6045,7 +5375,6 @@
   },
   {
     "key": "2A96",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclinat igual o més gran que"
@@ -6054,7 +5383,6 @@
   },
   {
     "key": "2A97",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que amb punt interior"
@@ -6063,7 +5391,6 @@
   },
   {
     "key": "2A98",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que amb punt interior"
@@ -6072,7 +5399,6 @@
   },
   {
     "key": "2A99",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor o igual a"
@@ -6081,7 +5407,6 @@
   },
   {
     "key": "2A9A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o igual a"
@@ -6090,7 +5415,6 @@
   },
   {
     "key": "2A9B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble línia inclinada igual o inferior a"
@@ -6099,7 +5423,6 @@
   },
   {
     "key": "2A9C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble línia inclinada igual o més gran que"
@@ -6108,7 +5431,6 @@
   },
   {
     "key": "2A9D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "equivalent o menor que"
@@ -6117,7 +5439,6 @@
   },
   {
     "key": "2A9E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o semblant a"
@@ -6126,7 +5447,6 @@
   },
   {
     "key": "2A9F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "similar, menor o igual a"
@@ -6135,7 +5455,6 @@
   },
   {
     "key": "2AA0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "similar, major o igual a"
@@ -6144,7 +5463,6 @@
   },
   {
     "key": "2AA1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "molt menor que"
@@ -6153,7 +5471,6 @@
   },
   {
     "key": "2AA2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "molt més gran que"
@@ -6162,7 +5479,6 @@
   },
   {
     "key": "2AA3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble imbricat menor que amb barra inferior"
@@ -6171,7 +5487,6 @@
   },
   {
     "key": "2AA4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que, major que"
@@ -6180,7 +5495,6 @@
   },
   {
     "key": "2AA5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "major o menor que"
@@ -6189,7 +5503,6 @@
   },
   {
     "key": "2AA6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "menor que tancat amb corba"
@@ -6198,7 +5511,6 @@
   },
   {
     "key": "2AA7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més gran que tancat amb corba"
@@ -6207,7 +5519,6 @@
   },
   {
     "key": "2AA8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament menor que tancat amb corba"
@@ -6216,7 +5527,6 @@
   },
   {
     "key": "2AA9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "estrictament més gran que tancat amb corba"
@@ -6225,7 +5535,6 @@
   },
   {
     "key": "2AAA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més reduït que"
@@ -6234,7 +5543,6 @@
   },
   {
     "key": "2AAB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més ampli que"
@@ -6243,7 +5551,6 @@
   },
   {
     "key": "2AAC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més reduït o igual a"
@@ -6252,7 +5559,6 @@
   },
   {
     "key": "2AAD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "més ampli o igual a"
@@ -6261,7 +5567,6 @@
   },
   {
     "key": "2AAE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "diferència entre"
@@ -6270,7 +5575,6 @@
   },
   {
     "key": "2AAF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix o és igual a"
@@ -6279,7 +5583,6 @@
   },
   {
     "key": "2AB0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix per sobre de la línia d'igual signe"
@@ -6288,7 +5591,6 @@
   },
   {
     "key": "2AB1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix per sobre d'una línia no és igual a"
@@ -6297,7 +5599,6 @@
   },
   {
     "key": "2AB2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix per sobre d'una línia no és igual a"
@@ -6306,7 +5607,6 @@
   },
   {
     "key": "2AB3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix a dalt de el signe igual"
@@ -6315,7 +5615,6 @@
   },
   {
     "key": "2AB4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix per sobre del signe igual"
@@ -6324,7 +5623,6 @@
   },
   {
     "key": "2AB5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix estrictament a"
@@ -6333,7 +5631,6 @@
   },
   {
     "key": "2AB6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix estrictament a"
@@ -6342,7 +5639,6 @@
   },
   {
     "key": "2AB7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix per sobre de gairebé igual a"
@@ -6351,7 +5647,6 @@
   },
   {
     "key": "2AB8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix per sobre de gairebé igual a"
@@ -6360,7 +5655,6 @@
   },
   {
     "key": "2AB9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix dalt no és igual a"
@@ -6369,7 +5663,6 @@
   },
   {
     "key": "2ABA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix per sobre de no gairebé igual a"
@@ -6378,7 +5671,6 @@
   },
   {
     "key": "2ABB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "precedeix molt abans"
@@ -6387,7 +5679,6 @@
   },
   {
     "key": "2ABC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "segueix molt després"
@@ -6396,7 +5687,6 @@
   },
   {
     "key": "2ABD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subrelació de"
@@ -6405,7 +5695,6 @@
   },
   {
     "key": "2ABE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté com a subrelació a"
@@ -6414,7 +5703,6 @@
   },
   {
     "key": "2ABF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs amb més subscrit"
@@ -6423,7 +5711,6 @@
   },
   {
     "key": "2AC0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté amb més subscrit"
@@ -6432,7 +5719,6 @@
   },
   {
     "key": "2AC1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs amb per subscrit"
@@ -6441,7 +5727,6 @@
   },
   {
     "key": "2AC2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté amb per subscrit"
@@ -6450,7 +5735,6 @@
   },
   {
     "key": "2AC3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs amb punt o és igual a"
@@ -6459,7 +5743,6 @@
   },
   {
     "key": "2AC4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté amb punt o és igual a"
@@ -6468,7 +5751,6 @@
   },
   {
     "key": "2AC5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subconjunt de signe igual a dalt"
@@ -6477,7 +5759,6 @@
   },
   {
     "key": "2AC6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superconjunt de signe igual a dalt"
@@ -6486,7 +5767,6 @@
   },
   {
     "key": "2AC7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs aproximadament en"
@@ -6495,7 +5775,6 @@
   },
   {
     "key": "2AC8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté aproximadament a"
@@ -6504,7 +5783,6 @@
   },
   {
     "key": "2AC9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subconjunt de dalt gairebé igual a"
@@ -6513,7 +5791,6 @@
   },
   {
     "key": "2ACA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superconjunt de dalt gairebé igual a"
@@ -6522,7 +5799,6 @@
   },
   {
     "key": "2ACB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "subconjunt de l'anterior no és igual a"
@@ -6531,7 +5807,6 @@
   },
   {
     "key": "2ACC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "superconjunt de dalt no és igual a"
@@ -6540,7 +5815,6 @@
   },
   {
     "key": "2ACD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de caixa oberta a l'esquerra quadrada"
@@ -6549,7 +5823,6 @@
   },
   {
     "key": "2ACE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de caixa oberta a la dreta quadrada"
@@ -6558,7 +5831,6 @@
   },
   {
     "key": "2ACF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs amb tancament en"
@@ -6567,7 +5839,6 @@
   },
   {
     "key": "2AD0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté al tancament del subconjunt"
@@ -6576,7 +5847,6 @@
   },
   {
     "key": "2AD1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs el tancament o és igual a"
@@ -6585,7 +5855,6 @@
   },
   {
     "key": "2AD2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté al tancament del subconjunt o és igual a"
@@ -6594,7 +5863,6 @@
   },
   {
     "key": "2AD3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "està inclòs o conté a"
@@ -6603,7 +5871,6 @@
   },
   {
     "key": "2AD4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté o està inclòs a"
@@ -6612,7 +5879,6 @@
   },
   {
     "key": "2AD5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "inclòs doblement en"
@@ -6621,7 +5887,6 @@
   },
   {
     "key": "2AD6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté doblement a"
@@ -6630,7 +5895,6 @@
   },
   {
     "key": "2AD7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté o està inclòs en"
@@ -6639,7 +5903,6 @@
   },
   {
     "key": "2AD8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "conté o està inclòs en"
@@ -6648,7 +5911,6 @@
   },
   {
     "key": "2AD9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pertanyent dirigit cap avall"
@@ -6657,7 +5919,6 @@
   },
   {
     "key": "2ADA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "pitchfork with tee top"
@@ -6666,7 +5927,6 @@
   },
   {
     "key": "2ADB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "intersecció transversal"
@@ -6675,7 +5935,6 @@
   },
   {
     "key": "2ADC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "bifurcació"
@@ -6684,7 +5943,6 @@
   },
   {
     "key": "2ADD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nonforking"
@@ -6693,7 +5951,6 @@
   },
   {
     "key": "2ADE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tatxa esquerra curta"
@@ -6702,7 +5959,6 @@
   },
   {
     "key": "2ADF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tatxa curta cap avall"
@@ -6711,7 +5967,6 @@
   },
   {
     "key": "2AE0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "short up tack"
@@ -6720,7 +5975,6 @@
   },
   {
     "key": "2AE1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "perpendicular amb s"
@@ -6729,7 +5983,6 @@
   },
   {
     "key": "2AE2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical torniquet a la dreta"
@@ -6738,7 +5991,6 @@
   },
   {
     "key": "2AE3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical doble torniquet esquerre"
@@ -6747,7 +5999,6 @@
   },
   {
     "key": "2AE4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical de torniquet doble esquerra"
@@ -6756,7 +6007,6 @@
   },
   {
     "key": "2AE5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble barra vertical doble torniquet esquerre"
@@ -6765,7 +6015,6 @@
   },
   {
     "key": "2AE6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "guió llarg des del membre esquerre de doble vertical"
@@ -6774,7 +6023,6 @@
   },
   {
     "key": "2AE7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "taca curta cap avall amb barra superior"
@@ -6783,7 +6031,6 @@
   },
   {
     "key": "2AE8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra amb perpendicular"
@@ -6792,7 +6039,6 @@
   },
   {
     "key": "2AE9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "short up tack above short down tack"
@@ -6801,7 +6047,6 @@
   },
   {
     "key": "2AEA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tatxa doble amunt"
@@ -6810,7 +6055,6 @@
   },
   {
     "key": "2AEB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tatxa doble avall"
@@ -6819,7 +6063,6 @@
   },
   {
     "key": "2AEC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble traç sense signe"
@@ -6828,7 +6071,6 @@
   },
   {
     "key": "2AED",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble traç invertit sense signe"
@@ -6837,7 +6079,6 @@
   },
   {
     "key": "2AEE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "no es divideix amb la barra de negació invertida"
@@ -6846,7 +6087,6 @@
   },
   {
     "key": "2AEF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical amb cercle"
@@ -6855,7 +6095,6 @@
   },
   {
     "key": "2AF0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra amb cercle inferior"
@@ -6864,7 +6103,6 @@
   },
   {
     "key": "2AF1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "tatxa avall amb cercle a sota"
@@ -6873,7 +6111,6 @@
   },
   {
     "key": "2AF2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paral·lela amb marca"
@@ -6882,7 +6119,6 @@
   },
   {
     "key": "2AF3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "paral·lela amb accent"
@@ -6891,7 +6127,6 @@
   },
   {
     "key": "2AF4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "relació binària de barra vertical triple"
@@ -6900,7 +6135,6 @@
   },
   {
     "key": "2AF5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical triple amb traç horitzontal"
@@ -6909,7 +6143,6 @@
   },
   {
     "key": "2AF6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador triple punt"
@@ -6918,7 +6151,6 @@
   },
   {
     "key": "2AF7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple imbricat menys que"
@@ -6927,7 +6159,6 @@
   },
   {
     "key": "2AF8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "triple imbricat més gran que"
@@ -6936,7 +6167,6 @@
   },
   {
     "key": "2AF9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble línia inclinada menor o igual a"
@@ -6945,7 +6175,6 @@
   },
   {
     "key": "2AFA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "doble línia inclinada major o igual a"
@@ -6954,7 +6183,6 @@
   },
   {
     "key": "2AFB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "relació binària triple sòlida"
@@ -6963,7 +6191,6 @@
   },
   {
     "key": "2AFC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador de barra vertical triple gran"
@@ -6972,7 +6199,6 @@
   },
   {
     "key": "2AFD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "operador doble sòlid"
@@ -6981,7 +6207,6 @@
   },
   {
     "key": "2AFE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical blanca"
@@ -6990,7 +6215,6 @@
   },
   {
     "key": "2AFF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical blanca N-Ary"
@@ -6999,7 +6223,6 @@
   },
   {
     "key": "301C",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "guió ondulat"
@@ -7008,7 +6231,6 @@
   },
   {
     "key": "FE10",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per coma vertical"
@@ -7017,7 +6239,6 @@
   },
   {
     "key": "FE13",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per a dos punts vertical"
@@ -7026,7 +6247,6 @@
   },
   {
     "key": "FE14",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per a punt i coma vertical"
@@ -7035,7 +6255,6 @@
   },
   {
     "key": "FE15",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al signe d'exclamació vertical"
@@ -7044,7 +6263,6 @@
   },
   {
     "key": "FE16",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per al signe d'interrogació vertical"
@@ -7053,7 +6271,6 @@
   },
   {
     "key": "FE19",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per a el·lipsis horitzontal vertical"
@@ -7062,7 +6279,6 @@
   },
   {
     "key": "FE30",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "formulari de presentació per a líder vertical de dos punts"
@@ -7071,7 +6287,6 @@
   },
   {
     "key": "FE31",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "glif de guió vertical em"
@@ -7080,7 +6295,6 @@
   },
   {
     "key": "FE32",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "glif de guió vertical en"
@@ -7089,7 +6303,6 @@
   },
   {
     "key": "FE33",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "glif de línia vertical baixa"
@@ -7098,7 +6311,6 @@
   },
   {
     "key": "FE34",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "glif de línia baixa ondulada vertical"
@@ -7107,7 +6319,6 @@
   },
   {
     "key": "FE45",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt de sèsam"
@@ -7116,7 +6327,6 @@
   },
   {
     "key": "FE46",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt de sèsam blanc"
@@ -7125,7 +6335,6 @@
   },
   {
     "key": "FE49",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "línia discontínua"
@@ -7134,7 +6343,6 @@
   },
   {
     "key": "FE4A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "sentinellasubratllat"
@@ -7143,7 +6351,6 @@
   },
   {
     "key": "FE4B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "ondulat subratllat"
@@ -7152,7 +6359,6 @@
   },
   {
     "key": "FE4C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble ondulat"
@@ -7161,7 +6367,6 @@
   },
   {
     "key": "FE4D",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "línia baixa discontínua"
@@ -7170,7 +6375,6 @@
   },
   {
     "key": "FE4E",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "línia baixa de línia central"
@@ -7179,7 +6383,6 @@
   },
   {
     "key": "FE4F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "línia baixa ondulada"
@@ -7188,7 +6391,6 @@
   },
   {
     "key": "FE50",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "comes petites"
@@ -7197,7 +6399,6 @@
   },
   {
     "key": "FE52",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "parada completa petita"
@@ -7206,7 +6407,6 @@
   },
   {
     "key": "FE54",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "petit punt i coma"
@@ -7215,7 +6415,6 @@
   },
   {
     "key": "FE55",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble punt petit"
@@ -7224,7 +6423,6 @@
   },
   {
     "key": "FE56",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe d'interrogació petit"
@@ -7233,7 +6431,6 @@
   },
   {
     "key": "FE57",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe d'exclamació petit"
@@ -7242,7 +6439,6 @@
   },
   {
     "key": "FE58",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "guió petit em"
@@ -7251,7 +6447,6 @@
   },
   {
     "key": "FE5F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe de nombre petit"
@@ -7260,7 +6455,6 @@
   },
   {
     "key": "FE60",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "ampersand petit"
@@ -7269,7 +6463,6 @@
   },
   {
     "key": "FE61",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "petit asterisc"
@@ -7278,7 +6471,6 @@
   },
   {
     "key": "FE62",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe més petit"
@@ -7287,7 +6479,6 @@
   },
   {
     "key": "FE63",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "guió petit menys"
@@ -7296,7 +6487,6 @@
   },
   {
     "key": "FE64",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe menor que petit"
@@ -7305,7 +6495,6 @@
   },
   {
     "key": "FE65",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe més gran que petit"
@@ -7314,7 +6503,6 @@
   },
   {
     "key": "FE66",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe petit igual"
@@ -7323,7 +6511,6 @@
   },
   {
     "key": "FE68",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "divisió entera"
@@ -7332,7 +6519,6 @@
   },
   {
     "key": "FE69",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "signe de dòlar petit"
@@ -7341,7 +6527,6 @@
   },
   {
     "key": "FE6A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe de percentatge petit"
@@ -7350,7 +6535,6 @@
   },
   {
     "key": "FE6B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "petit comercial en"
@@ -7359,7 +6543,6 @@
   },
   {
     "key": "FF01",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe d'exclamació d'amplada completa"
@@ -7368,7 +6551,6 @@
   },
   {
     "key": "FF02",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "cometes d'amplada completa"
@@ -7377,7 +6559,6 @@
   },
   {
     "key": "FF03",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "nombre de signe d'amplada completa"
@@ -7386,7 +6567,6 @@
   },
   {
     "key": "FF04",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "signe de dòlar d'amplada completa"
@@ -7395,7 +6575,6 @@
   },
   {
     "key": "FF05",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe de percentatge d'amplada completa"
@@ -7404,7 +6583,6 @@
   },
   {
     "key": "FF06",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "ampersand d'amplada completa"
@@ -7413,7 +6591,6 @@
   },
   {
     "key": "FF07",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "apòstrof d'amplada completa"
@@ -7422,7 +6599,6 @@
   },
   {
     "key": "FF0A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "asterisc d'amplada completa"
@@ -7431,7 +6607,6 @@
   },
   {
     "key": "FF0B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe d'amplada completa"
@@ -7440,7 +6615,6 @@
   },
   {
     "key": "FF0C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "coma d'amplada completa"
@@ -7449,7 +6623,6 @@
   },
   {
     "key": "FF0D",
-    "category": "Pd",
     "mappings": {
       "default": {
         "default": "ample d'amplada completa"
@@ -7458,7 +6631,6 @@
   },
   {
     "key": "FF0E",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt d'amplada completa"
@@ -7467,7 +6639,6 @@
   },
   {
     "key": "FF0F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "sòlid d'amplada completa"
@@ -7476,7 +6647,6 @@
   },
   {
     "key": "FF1A",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "doble punt d'amplada completa"
@@ -7485,7 +6655,6 @@
   },
   {
     "key": "FF1B",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "punt i coma d'amplada completa"
@@ -7494,7 +6663,6 @@
   },
   {
     "key": "FF1C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe menys d'amplada completa"
@@ -7503,7 +6671,6 @@
   },
   {
     "key": "FF1D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe igual d'amplada completa"
@@ -7512,7 +6679,6 @@
   },
   {
     "key": "FF1E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "signe mé gran que d'amplada completa"
@@ -7521,7 +6687,6 @@
   },
   {
     "key": "FF1F",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "signe d'interrogació d'amplada completa"
@@ -7530,7 +6695,6 @@
   },
   {
     "key": "FF20",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "comercial d'amplada complet en"
@@ -7539,7 +6703,6 @@
   },
   {
     "key": "FF3C",
-    "category": "Po",
     "mappings": {
       "default": {
         "default": "sòlid invers d'amplada completa"
@@ -7548,7 +6711,6 @@
   },
   {
     "key": "FF3E",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "accent circumflex d'amplada completa"
@@ -7557,7 +6719,6 @@
   },
   {
     "key": "FF3F",
-    "category": "Pc",
     "mappings": {
       "default": {
         "default": "línia baixa d'amplada completa"
@@ -7566,7 +6727,6 @@
   },
   {
     "key": "FF40",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "accent greu d'amplada completa"
@@ -7575,7 +6735,6 @@
   },
   {
     "key": "FF5C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "barra vertical"
@@ -7584,7 +6743,6 @@
   },
   {
     "key": "FF5E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "titlla d'amplada completa"
@@ -7593,7 +6751,6 @@
   },
   {
     "key": "FFE0",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "signe de cèntim d'amplada completa"
@@ -7602,7 +6759,6 @@
   },
   {
     "key": "FFE1",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "signe de lliura d'amplada completa"
@@ -7611,7 +6767,6 @@
   },
   {
     "key": "FFE2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "amplada completa sense signar"
@@ -7620,7 +6775,6 @@
   },
   {
     "key": "FFE3",
-    "category": "Sk",
     "mappings": {
       "default": {
         "default": "màcron d'amplada completa"
@@ -7629,7 +6783,6 @@
   },
   {
     "key": "FFE4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "barra trencada d'amplada completa"
@@ -7638,7 +6791,6 @@
   },
   {
     "key": "FFE5",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "signe ien d'amplada completa"
@@ -7647,7 +6799,6 @@
   },
   {
     "key": "FFE6",
-    "category": "Sc",
     "mappings": {
       "default": {
         "default": "signe guanyat d'amplada completa"
@@ -7656,7 +6807,6 @@
   },
   {
     "key": "FFE8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "formes de mitja amplada llum vertical"
@@ -7665,7 +6815,6 @@
   },
   {
     "key": "FFED",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "mig ample quadrat negre"
@@ -7674,7 +6823,6 @@
   },
   {
     "key": "FFEE",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cercle blanc de mig ample"

@@ -4,53 +4,36 @@
   },
   {
     "key": "kt",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "Knoten"
       }
-    },
-    "names": [
-      "kt",
-      "kt."
-    ]
+    }
   },
   {
     "key": "mph",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "Meilen pro Stunde",
         "default": "Meile pro Stunde"
       }
-    },
-    "names": [
-      "mph"
-    ]
+    }
   },
   {
     "key": "kmh",
-    "category": "speed",
     "mappings": {
       "default": {
         "default": "Kilometer pro Stunde"
       }
-    },
-    "names": [
-      "kmh"
-    ]
+    }
   },
   {
     "key": "rpm",
-    "category": "speed",
     "mappings": {
       "default": {
         "plural": "Umdrehungen pro Minute",
         "default": "Umdrehung pro Minute"
       }
-    },
-    "names": [
-      "rpm"
-    ]
+    }
   }
 ]

@@ -4,7 +4,6 @@
   },
   {
     "key": "2113",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "script l"
@@ -13,7 +12,6 @@
   },
   {
     "key": "2118",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "p de weierstrass"
@@ -22,7 +20,6 @@
   },
   {
     "key": "213C",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "negrita de pizarra pi"
@@ -31,7 +28,6 @@
   },
   {
     "key": "213D",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "negrita de pizarra gamma"
@@ -40,7 +36,6 @@
   },
   {
     "key": "213E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "negrita de pizarra mayúscula Gamma"
@@ -49,7 +44,6 @@
   },
   {
     "key": "213F",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "negrita de pizarra mayúscula Pi"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2140",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "negrita de pizarra suma de n-ary"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2145",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "mayúscula D"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2146",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "d"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2147",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "e"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2148",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "i"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2149",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "negrita de pizarra cursiva j"
@@ -112,7 +100,6 @@
   },
   {
     "key": "1D6A4",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "cursiva sin punto i"
@@ -121,7 +108,6 @@
   },
   {
     "key": "1D6A5",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "cursiva sin punto j"

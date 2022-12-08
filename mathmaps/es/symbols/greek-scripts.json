@@ -4,7 +4,6 @@
   },
   {
     "key": "1D26",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeño mayúscula gamma"
@@ -13,7 +12,6 @@
   },
   {
     "key": "1D27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña mayúscula lamda"
@@ -22,7 +20,6 @@
   },
   {
     "key": "1D28",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña mayúscula Pi"
@@ -31,7 +28,6 @@
   },
   {
     "key": "1D29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña mayúscula Rho"
@@ -40,7 +36,6 @@
   },
   {
     "key": "1D2A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "pequeña mayúscula Psi"
@@ -49,7 +44,6 @@
   },
   {
     "key": "1D5E",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "modificador de pequeño gamma"
@@ -58,7 +52,6 @@
   },
   {
     "key": "1D60",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "modificador de pequeño phi"
@@ -67,7 +60,6 @@
   },
   {
     "key": "1D66",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscripción pequeña beta"
@@ -76,7 +68,6 @@
   },
   {
     "key": "1D67",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice pequeña gamma"
@@ -85,7 +76,6 @@
   },
   {
     "key": "1D68",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice rho"
@@ -94,7 +84,6 @@
   },
   {
     "key": "1D69",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice phi"
@@ -103,7 +92,6 @@
   },
   {
     "key": "1D6A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subscripción chi"

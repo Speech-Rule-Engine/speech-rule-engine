@@ -4,7 +4,6 @@
   },
   {
     "key": "01D5",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double overdot overbar"
@@ -16,7 +15,6 @@
   },
   {
     "key": "01D7",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double overdot acute"
@@ -28,7 +26,6 @@
   },
   {
     "key": "01D9",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double overdot caron"
@@ -40,7 +37,6 @@
   },
   {
     "key": "01DB",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U double overdot grave"
@@ -52,7 +48,6 @@
   },
   {
     "key": "01DE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A double overdot overbar"
@@ -64,7 +59,6 @@
   },
   {
     "key": "01E0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A overdot overbar"
@@ -76,7 +70,6 @@
   },
   {
     "key": "01EC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O ogonek overbar"
@@ -88,7 +81,6 @@
   },
   {
     "key": "01FA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A ring acute"
@@ -100,7 +92,6 @@
   },
   {
     "key": "022A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O double overdot overbar"
@@ -112,7 +103,6 @@
   },
   {
     "key": "022C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O tilde overbar"
@@ -124,7 +114,6 @@
   },
   {
     "key": "0230",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O overdot overbar"
@@ -136,7 +125,6 @@
   },
   {
     "key": "1E08",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap C cedilla acute"
@@ -148,7 +136,6 @@
   },
   {
     "key": "1E14",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E overbar grave"
@@ -160,7 +147,6 @@
   },
   {
     "key": "1E16",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E overbar acute"
@@ -172,7 +158,6 @@
   },
   {
     "key": "1E1C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E cedilla breve"
@@ -184,7 +169,6 @@
   },
   {
     "key": "1E2E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap I double overdot acute"
@@ -196,7 +180,6 @@
   },
   {
     "key": "1E38",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap L underdot overbar"
@@ -208,7 +191,6 @@
   },
   {
     "key": "1E4C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O tilde acute"
@@ -220,7 +202,6 @@
   },
   {
     "key": "1E4E",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O tilde double overdot"
@@ -232,7 +213,6 @@
   },
   {
     "key": "1E50",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O overbar grave"
@@ -244,7 +224,6 @@
   },
   {
     "key": "1E52",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O overbar acute"
@@ -256,7 +235,6 @@
   },
   {
     "key": "1E5C",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap R overbar underdot"
@@ -268,7 +246,6 @@
   },
   {
     "key": "1E64",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S acute overdot"
@@ -280,7 +257,6 @@
   },
   {
     "key": "1E66",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S caron overdot"
@@ -292,7 +268,6 @@
   },
   {
     "key": "1E68",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap S underdot overdot"
@@ -304,7 +279,6 @@
   },
   {
     "key": "1E78",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U tilde acute"
@@ -316,7 +290,6 @@
   },
   {
     "key": "1E7A",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U overbar double overdot"
@@ -328,7 +301,6 @@
   },
   {
     "key": "1EA4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hat acute"
@@ -340,7 +312,6 @@
   },
   {
     "key": "1EA6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hat grave"
@@ -352,7 +323,6 @@
   },
   {
     "key": "1EA8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hat hook"
@@ -364,7 +334,6 @@
   },
   {
     "key": "1EAA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hat tilde"
@@ -376,7 +345,6 @@
   },
   {
     "key": "1EAC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A hat underdot"
@@ -388,7 +356,6 @@
   },
   {
     "key": "1EAE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A breve acute"
@@ -400,7 +367,6 @@
   },
   {
     "key": "1EB0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A breve grave"
@@ -412,7 +378,6 @@
   },
   {
     "key": "1EB2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A breve hook"
@@ -424,7 +389,6 @@
   },
   {
     "key": "1EB4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A breve tilde"
@@ -436,7 +400,6 @@
   },
   {
     "key": "1EB6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap A breve underdot"
@@ -448,7 +411,6 @@
   },
   {
     "key": "1EBE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hat acute"
@@ -460,7 +422,6 @@
   },
   {
     "key": "1EC0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hat grave"
@@ -472,7 +433,6 @@
   },
   {
     "key": "1EC2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hat hook"
@@ -484,7 +444,6 @@
   },
   {
     "key": "1EC4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hat tilde"
@@ -496,7 +455,6 @@
   },
   {
     "key": "1EC6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap E hat underdot"
@@ -508,7 +466,6 @@
   },
   {
     "key": "1ED0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hat acute"
@@ -520,7 +477,6 @@
   },
   {
     "key": "1ED2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hat grave"
@@ -532,7 +488,6 @@
   },
   {
     "key": "1ED4",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hat hook"
@@ -544,7 +499,6 @@
   },
   {
     "key": "1ED6",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hat tilde"
@@ -556,7 +510,6 @@
   },
   {
     "key": "1ED8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hat underdot"
@@ -568,7 +521,6 @@
   },
   {
     "key": "1EDA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O acute prime"
@@ -580,7 +532,6 @@
   },
   {
     "key": "1EDC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O grave prime"
@@ -592,7 +543,6 @@
   },
   {
     "key": "1EDE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O hook prime"
@@ -604,7 +554,6 @@
   },
   {
     "key": "1EE0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O tilde prime"
@@ -616,7 +565,6 @@
   },
   {
     "key": "1EE2",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap O underdot prime"
@@ -628,7 +576,6 @@
   },
   {
     "key": "1EE8",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U acute prime"
@@ -640,7 +587,6 @@
   },
   {
     "key": "1EEA",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U grave prime"
@@ -652,7 +598,6 @@
   },
   {
     "key": "1EEC",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U hook prime"
@@ -664,7 +609,6 @@
   },
   {
     "key": "1EEE",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U tilde prime"
@@ -676,7 +620,6 @@
   },
   {
     "key": "1EF0",
-    "category": "Lu",
     "mappings": {
       "default": {
         "default": "cap U underdot prime"

@@ -4,7 +4,6 @@
   },
   {
     "key": "00B2",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "andre potens"
@@ -13,7 +12,6 @@
   },
   {
     "key": "00B3",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "tredje potens"
@@ -22,7 +20,6 @@
   },
   {
     "key": "00BC",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en fjerdedel"
@@ -31,7 +28,6 @@
   },
   {
     "key": "00BD",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en halv"
@@ -40,7 +36,6 @@
   },
   {
     "key": "00BE",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "tre fjerdedeler"
@@ -49,7 +44,6 @@
   },
   {
     "key": "2150",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en sjuendedel"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2151",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en niendedel"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2152",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en tiendedel"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2153",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en tredjedel"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2154",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "to tredjedeler"
@@ -94,7 +84,6 @@
   },
   {
     "key": "2155",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en femtedel"
@@ -103,7 +92,6 @@
   },
   {
     "key": "2156",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "to femtedeler"
@@ -112,7 +100,6 @@
   },
   {
     "key": "2157",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "tre femtedeler"
@@ -121,7 +108,6 @@
   },
   {
     "key": "2158",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "fire femtedeler"
@@ -130,7 +116,6 @@
   },
   {
     "key": "2159",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en sjettedel"
@@ -139,7 +124,6 @@
   },
   {
     "key": "215A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "fem sjettedeler"
@@ -148,7 +132,6 @@
   },
   {
     "key": "215B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en åttendedel"
@@ -157,7 +140,6 @@
   },
   {
     "key": "215C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "tre åttendedeler"
@@ -166,7 +148,6 @@
   },
   {
     "key": "215D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "fem åttendedeler"
@@ -175,7 +156,6 @@
   },
   {
     "key": "215E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sju åttendedeler"
@@ -184,7 +164,6 @@
   },
   {
     "key": "215F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "en del"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2189",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "null trejdedeler"
@@ -202,7 +180,6 @@
   },
   {
     "key": "3248",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med ti på svart kvadrat"
@@ -211,7 +188,6 @@
   },
   {
     "key": "3249",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med tjue på svart kvadrat"
@@ -220,7 +196,6 @@
   },
   {
     "key": "324A",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med tretti på svart kvadrat"
@@ -229,7 +204,6 @@
   },
   {
     "key": "324B",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med førti på svart kvadrat"
@@ -238,7 +212,6 @@
   },
   {
     "key": "324C",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med femti på svart kvadrat"
@@ -247,7 +220,6 @@
   },
   {
     "key": "324D",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med seksti på svart kvadrat"
@@ -256,7 +228,6 @@
   },
   {
     "key": "324E",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med søtti på svart kvadrat"
@@ -265,7 +236,6 @@
   },
   {
     "key": "324F",
-    "category": "No",
     "mappings": {
       "default": {
         "default": "sirkel med åtti på svart kvadrat"

@@ -19,8 +19,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as SemanticAttr from './semantic_attr';
-import { SemanticRole, SemanticType } from './semantic_meaning';
+import { NamedSymbol, SemanticMap } from './semantic_attr';
+import { SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { getEmbellishedInner } from './semantic_util';
 
@@ -67,20 +67,10 @@ export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
  * @returns True if the node is a punctuation, fence or operator.
  */
 export function isAccent(node: SemanticNode): boolean {
-  const inftyReg = new RegExp('∞|᪲');
-  return (
-    isType(node, SemanticType.FENCE) ||
+  return isType(node, SemanticType.FENCE) ||
     isType(node, SemanticType.PUNCTUATION) ||
-    // TODO (sorge) Simplify this once meaning of all characters is fully
-    // defined. Improve dealing with Infinity.
-    (isType(node, SemanticType.OPERATOR) &&
-      !node.textContent.match(inftyReg)) ||
-    isType(node, SemanticType.RELATION) ||
-    (isType(node, SemanticType.IDENTIFIER) &&
-      isRole(node, SemanticRole.UNKNOWN) &&
-      !node.textContent.match(SemanticAttr.allLettersRegExp) &&
-      !node.textContent.match(inftyReg))
-  );
+    isType(node, SemanticType.OPERATOR) ||
+    isType(node, SemanticType.RELATION);
 }
 
 /**
@@ -158,7 +148,7 @@ export function isIntegralDxBoundary(
   return (
     !!secondNode &&
     isType(secondNode, SemanticType.IDENTIFIER) &&
-    SemanticAttr.lookupSecondary('d', firstNode.textContent)
+      SemanticMap.Secondary.has(firstNode.textContent, SemanticSecondary.D)
   );
 }
 
@@ -174,8 +164,8 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
     const firstChar = node.textContent[0];
     return (
       firstChar &&
-      node.textContent[1] &&
-      SemanticAttr.lookupSecondary('d', firstChar)
+        node.textContent[1] &&
+        SemanticMap.Secondary.has(firstChar, SemanticSecondary.D)
     );
   }
   return false;
@@ -203,10 +193,26 @@ export function isEmbellished(node: SemanticNode): SemanticType | null {
   if (node.embellished) {
     return node.embellished;
   }
-  if (SemanticAttr.isEmbellishedType(node.type)) {
+  if (isEmbellishedType(node.type)) {
     return node.type;
   }
   return null;
+}
+
+/**
+ * Determines if a symbol type can be embellished. Primitives that can be
+ * embellished are operators, punctuations, relations, and fences.
+ *
+ * @param type The type.
+ * @returns True if the type can be embellished.
+ */
+function isEmbellishedType(type: SemanticType): boolean {
+  return (
+    type === SemanticType.OPERATOR ||
+    type === SemanticType.RELATION ||
+    type === SemanticType.FENCE ||
+    type === SemanticType.PUNCTUATION
+  );
 }
 
 /**
@@ -654,8 +660,8 @@ export function isImplicit(node: SemanticNode): boolean {
     node.role === SemanticRole.IMPLICIT ||
     (node.role === SemanticRole.UNIT &&
       !!node.contentNodes.length &&
-      node.contentNodes[0].textContent === SemanticAttr.invisibleTimes())
-  );
+      node.contentNodes[0].textContent === NamedSymbol.invisibleTimes
+    ));
 }
 
 /**

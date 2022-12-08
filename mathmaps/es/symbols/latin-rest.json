@@ -4,7 +4,6 @@
   },
   {
     "key": "210E",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "constante de planck"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0363",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando a"
@@ -22,7 +20,6 @@
   },
   {
     "key": "0364",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando e"
@@ -31,7 +28,6 @@
   },
   {
     "key": "0365",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando i"
@@ -40,7 +36,6 @@
   },
   {
     "key": "0366",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando o"
@@ -49,7 +44,6 @@
   },
   {
     "key": "0367",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando u"
@@ -58,7 +52,6 @@
   },
   {
     "key": "0368",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando c"
@@ -67,7 +60,6 @@
   },
   {
     "key": "0369",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando d"
@@ -76,7 +68,6 @@
   },
   {
     "key": "036A",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando h"
@@ -85,7 +76,6 @@
   },
   {
     "key": "036B",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando m"
@@ -94,7 +84,6 @@
   },
   {
     "key": "036C",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando r"
@@ -103,7 +92,6 @@
   },
   {
     "key": "036D",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando t"
@@ -112,7 +100,6 @@
   },
   {
     "key": "036E",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando v"
@@ -121,7 +108,6 @@
   },
   {
     "key": "036F",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando x"
@@ -130,7 +116,6 @@
   },
   {
     "key": "1D62",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice i"
@@ -139,7 +124,6 @@
   },
   {
     "key": "1D63",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice r"
@@ -148,7 +132,6 @@
   },
   {
     "key": "1D64",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice u"
@@ -157,7 +140,6 @@
   },
   {
     "key": "1D65",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice latino letra pequeña V"
@@ -166,7 +148,6 @@
   },
   {
     "key": "1DCA",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando r abajo"
@@ -175,7 +156,6 @@
   },
   {
     "key": "1DD3",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando letra minúscula en latín, aplanado, abierto arriba"
@@ -184,7 +164,6 @@
   },
   {
     "key": "1DD4",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando ae"
@@ -193,7 +172,6 @@
   },
   {
     "key": "1DD5",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando ao"
@@ -202,7 +180,6 @@
   },
   {
     "key": "1DD6",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando av"
@@ -211,7 +188,6 @@
   },
   {
     "key": "1DD7",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando Letra Pequeña Latina C Cedilla"
@@ -220,7 +196,6 @@
   },
   {
     "key": "1DD8",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando insular d"
@@ -229,7 +204,6 @@
   },
   {
     "key": "1DD9",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando la eth"
@@ -238,7 +212,6 @@
   },
   {
     "key": "1DDA",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando g"
@@ -247,7 +220,6 @@
   },
   {
     "key": "1DDB",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando pequeña mayúscula G"
@@ -256,7 +228,6 @@
   },
   {
     "key": "1DDC",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando k"
@@ -265,7 +236,6 @@
   },
   {
     "key": "1DDD",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando l"
@@ -274,7 +244,6 @@
   },
   {
     "key": "1DDE",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando pequeña mayúscula L"
@@ -283,7 +252,6 @@
   },
   {
     "key": "1DDF",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando pequeña mayúscula M"
@@ -292,7 +260,6 @@
   },
   {
     "key": "1DE0",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando n"
@@ -301,7 +268,6 @@
   },
   {
     "key": "1DE1",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando pequeña mayúscula N"
@@ -310,7 +276,6 @@
   },
   {
     "key": "1DE2",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando pequeña mayúscula R"
@@ -319,7 +284,6 @@
   },
   {
     "key": "1DE3",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando pequeña r rotunda"
@@ -328,7 +292,6 @@
   },
   {
     "key": "1DE4",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando s"
@@ -337,7 +300,6 @@
   },
   {
     "key": "1DE5",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando larga s"
@@ -346,7 +308,6 @@
   },
   {
     "key": "1DE6",
-    "category": "Mn",
     "mappings": {
       "default": {
         "default": "combinando z"
@@ -355,7 +316,6 @@
   },
   {
     "key": "2071",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superíndice i"
@@ -364,7 +324,6 @@
   },
   {
     "key": "207F",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superíndice n"
@@ -373,7 +332,6 @@
   },
   {
     "key": "2090",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice a"
@@ -382,7 +340,6 @@
   },
   {
     "key": "2091",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice e"
@@ -391,7 +348,6 @@
   },
   {
     "key": "2092",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice o"
@@ -400,7 +356,6 @@
   },
   {
     "key": "2093",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice x"
@@ -409,7 +364,6 @@
   },
   {
     "key": "2094",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice schwa"
@@ -418,7 +372,6 @@
   },
   {
     "key": "2095",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice h"
@@ -427,7 +380,6 @@
   },
   {
     "key": "2096",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice k"
@@ -436,7 +388,6 @@
   },
   {
     "key": "2097",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice l"
@@ -445,7 +396,6 @@
   },
   {
     "key": "2098",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice m"
@@ -454,7 +404,6 @@
   },
   {
     "key": "2099",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice n"
@@ -463,7 +412,6 @@
   },
   {
     "key": "209A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice p"
@@ -472,7 +420,6 @@
   },
   {
     "key": "209B",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice s"
@@ -481,7 +428,6 @@
   },
   {
     "key": "209C",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice t"
@@ -490,7 +436,6 @@
   },
   {
     "key": "2C7C",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subíndice j"
@@ -499,7 +444,6 @@
   },
   {
     "key": "1F12A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "concha de tortuga con corchetes mayúscula S"
@@ -508,7 +452,6 @@
   },
   {
     "key": "1F12B",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "círculo itálico mayúscula C"
@@ -517,7 +460,6 @@
   },
   {
     "key": "1F12C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "círculo itálico mayúscula R"
@@ -526,7 +468,6 @@
   },
   {
     "key": "1F18A",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "cruzada negativa cuadrada Mayúscula P"
