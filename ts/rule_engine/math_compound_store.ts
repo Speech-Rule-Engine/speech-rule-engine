@@ -181,6 +181,22 @@ export function addSymbolRules(json: UnicodeJson[]) {
 }
 
 /**
+ * Makes a speech rule for Unicode characters from its JSON representation.
+ *
+ * @param json JSON object of the speech rules.
+ */
+function addCharacterRule(json: UnicodeJson) {
+  if (changeLocale(json)) {
+    return;
+  }
+  for (let [key, value] of Object.entries(json)) {
+    defineRule('default', 'default', key, value);
+  }
+}
+export const addCharacterRules =
+  (json: UnicodeJson[]) => json.forEach(addCharacterRule);
+
+/**
  * Makes a speech rule for Function names from its JSON representation.
  *
  * @param json JSON object of a speech rule.
@@ -344,4 +360,9 @@ function enumerate_(
   }
   info[dynamic[0]] = enumerate_(dynamic.slice(1), info[dynamic[0]]);
   return info;
+}
+
+export function reset() {
+  locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+  modality = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
 }

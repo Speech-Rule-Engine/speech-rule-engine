@@ -41,7 +41,7 @@ import * as SpeechRules from '../speech_rules/speech_rules';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
 import { BaseRuleStore } from './base_rule_store';
 import { RulesJson } from './base_rule_store';
-import { BrailleStore } from './braille_store';
+import { BrailleStore, EuroStore } from './braille_store';
 import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr';
 import { Grammar, State as GrammarState } from './grammar';
 import { MathStore } from './math_store';
@@ -794,10 +794,13 @@ const stores: Map<string, BaseRuleStore> = new Map();
  * @param modality The modality.
  * @returns The generated rule store.
  */
-function getStore(modality: string): BaseRuleStore {
+function getStore(locale: string, modality: string): BaseRuleStore {
   // TODO (TS): Not sure how to get the constructors directly
   // let constructors = {braille: BrailleStore, speech: MathStore};
   // return new (constructors[modality] || MathStore)();
+  if (modality === 'braille' && locale === 'euro') {
+    return new EuroStore();
+  }
   if (modality === 'braille') {
     return new BrailleStore();
   }
@@ -821,7 +824,7 @@ export function storeFactory(set: RulesJson) {
   if (set && !set.functions) {
     set.functions = SpeechRules.getStore(set.locale, set.modality, set.domain);
   }
-  const store = getStore(set.modality);
+  const store = getStore(set.locale, set.modality);
   stores.set(name, store);
   if (set.inherits) {
     store.inherits = stores.get(

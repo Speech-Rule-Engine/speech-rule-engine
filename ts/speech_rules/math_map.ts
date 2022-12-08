@@ -55,7 +55,8 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
   units: MathCompoundStore.addUnitRules,
   si: (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
   messages: completeLocale,
-  rules: SpeechRuleEngine.addStore
+  rules: SpeechRuleEngine.addStore,
+  characters: MathCompoundStore.addCharacterRules
 };
 
 let _init = false;
@@ -98,6 +99,7 @@ export async function loadLocale(locale = Engine.getInstance().locale) {
 function _loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
+    MathCompoundStore.reset();
     retrieveMaps(locale);
   }
 }
