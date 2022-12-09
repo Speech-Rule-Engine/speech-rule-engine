@@ -26,6 +26,11 @@ import { AuditoryDescription } from './auditory_description';
 import { XmlRenderer } from './xml_renderer';
 
 export class LayoutRenderer extends XmlRenderer {
+
+  public static options = {
+    shortLine: true
+  }
+
   /**
    * @override
    */
@@ -450,6 +455,9 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
+  if (LayoutRenderer.options.shortLine && mat[0].cells[0] === '⠀') {
+    bar.cells[0] = '⠀';
+  }
   mat.splice(1, 0, bar);
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);
