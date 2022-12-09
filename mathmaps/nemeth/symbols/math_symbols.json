@@ -97,8 +97,8 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "number": "⠨",
-        "default": "⠲"
+        "default": "⠨",
+        "literary": "⠲"
       }
     },
     "key": "002E"

@@ -99,13 +99,6 @@
       "\"\"!=translate(text(), \"αβγδεζηθικλμνξοπρςστυφχψωΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")"
     ],
     [
-      "Rule",
-      "setup-number",
-      "default",
-      "[n] . (grammar:isnumber,engine:style=number)",
-      "self::number[not(contains(@grammar, \"isnumber\"))]"
-    ],
-    [
       "Precondition",
       "number-indicator",
       "default",
@@ -506,6 +499,17 @@
       "subscript-simple",
       "default",
       "self::subscript[@role!=\"unknown\"]",
+      "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
+      "name(./children/*[2])=\"number\"",
+      "./children/*[2][@role!=\"mixed\"]",
+      "./children/*[2][@role!=\"othernumber\"]"
+    ],
+    [
+      "Precondition",
+      "subscript-simple-baseline",
+      "default",
+      "self::subscript[@role!=\"unknown\"]",
+      "following-sibling::*",
       "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
       "name(./children/*[2])=\"number\"",
       "./children/*[2][@role!=\"mixed\"]",

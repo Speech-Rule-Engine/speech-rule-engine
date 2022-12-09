@@ -306,6 +306,11 @@
     ],
     [
       "Action",
+      "subscript-simple-baseline",
+      "[n] children/*[1]; [n] children/*[2]; [t] CSFbaseline"
+    ],
+    [
+      "Action",
       "subscript-baseline",
       "[n] children/*[1]; [t] CSFsubscript; [n] children/*[2]; [t] CSFbaseline"
     ],
@@ -507,7 +512,7 @@
     [
       "Action",
       "end-punct",
-      "[m] children/*"
+      "[n] children/*[1]; [n] children/*[2] (engine:style=literary)"
     ],
     [
       "Action",
