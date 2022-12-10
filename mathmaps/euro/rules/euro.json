@@ -31,6 +31,34 @@
       "default",
       "[m] children/* (separator:\"⠀⠯⠀\")",
       "self::row[not(@latex)]"
+    ],
+    [
+      "Precondition",
+      "binary-operation",
+      "default",
+      "self::infixop"
+    ],
+    [
+      "Alias",
+      "binary-operation",
+      "self::relseq"
+    ],
+    [
+      "Alias",
+      "binary-operation",
+      "self::multirel"
+    ],
+    [
+      "Action",
+      "binary-operation",
+      "[m] children/* (sepFunc:CTFcontentIterator);"
+    ],
+    [
+      "Rule",
+      "fences-open-close",
+      "default",
+      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
+      "self::fenced"
     ]
   ]
 }
