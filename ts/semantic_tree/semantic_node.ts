@@ -301,10 +301,8 @@ export class SemanticNode {
    */
   private annotationXml(): string {
     const result: string[] = [];
-    for (const key in this.annotation) {
-      this.annotation[key].forEach(function (mean) {
-        result.push(key + ':' + mean);
-      });
+    for (const [key, val] of Object.entries(this.annotation)) {
+      val.forEach((mean) => result.push(key + ':' + mean));
     }
     return result.join(';');
   }

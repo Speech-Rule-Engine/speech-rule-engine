@@ -107,26 +107,27 @@ export class Cli {
         dynamic = MathCompoundStore.enumerate(dynamic);
         const table = [];
         maxLength(dynamic, 0);
-        for (const ax1 in dynamic) {
+        for (const [ax1, dyna1] of Object.entries(dynamic)) {
           let clear1 = true;
-          const dyna1 = dynamic[ax1];
           maxLength(dyna1, 1);
-          for (const ax2 in dyna1) {
+          for (const [ax2, dyna2] of Object.entries(dyna1)) {
             let clear2 = true;
-            const dyna2 = dyna1[ax2];
             maxLength(dyna2, 2);
-            for (const ax3 in dyna2) {
-              const styles = Object.keys(dyna2[ax3]).sort();
+            for (const [ax3, dyna3] of Object.entries(dyna2)) {
+              const styles = Object.keys(dyna3).sort();
               if (ax3 === 'clearspeak') {
                 let clear3 = true;
                 const prefs =
                   ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
-                for (const ax4 in prefs) {
+                if (!prefs) {
+                  continue;
+                }
+                for (const dyna4 of Object.values(prefs)) {
                   table.push([
                     compStr(clear1 ? ax1 : '', length[0]),
                     compStr(clear2 ? ax2 : '', length[1]),
                     compStr(clear3 ? ax3 : '', length[2]),
-                    prefs[ax4].join(', ')
+                    dyna4.join(', ')
                   ]);
                   clear1 = false;
                   clear2 = false;

@@ -91,8 +91,8 @@ export class Grammar {
   public static parseInput(grammar: string): State {
     const attributes: State = {};
     const components = grammar.split(':');
-    for (let i = 0, l = components.length; i < l; i++) {
-      const comp = components[i].split('=');
+    for (const component of components) {
+      const comp = component.split('=');
       const key = comp[0].trim();
       if (comp[1]) {
         attributes[key] = comp[1].trim();
@@ -114,8 +114,8 @@ export class Grammar {
   public static parseState(stateStr: string): State {
     const state: State = {};
     const corrections = stateStr.split(' ');
-    for (let i = 0, l = corrections.length; i < l; i++) {
-      const corr = corrections[i].split(':');
+    for (const correction of corrections) {
+      const corr = correction.split(':');
       const key = corr[0];
       const value = corr[1];
       state[key] = value ? value : true;
@@ -273,9 +273,8 @@ export class Grammar {
    */
   public getState(): string {
     const pairs = [];
-    for (const key in this.parameters_) {
-      const value = this.parameters_[key];
-      pairs.push(typeof value === 'string' ? key + ':' + value : key);
+    for (const [key, val] of Object.entries(this.parameters_)) {
+      pairs.push(typeof val === 'string' ? key + ':' + val : key);
     }
     return pairs.join(' ');
   }
@@ -315,8 +314,8 @@ export class Grammar {
    */
   public popState() {
     const assignment = this.stateStack_.pop();
-    for (const key in assignment) {
-      this.setParameter(key, assignment[key]);
+    for (const [key, val] of Object.entries(assignment)) {
+      this.setParameter(key, val);
     }
   }
 
@@ -395,13 +394,12 @@ export class Grammar {
     text: string,
     funcs: { [key: string]: Correction }
   ): string {
-    for (const key in this.parameters_) {
+    for (const [key, val] of Object.entries(this.parameters_)) {
       const func = funcs[key];
       if (!func) {
         continue;
       }
-      const value = this.parameters_[key];
-      text = value === true ? func(text) : func(text, value);
+      text = val === true ? func(text) : func(text, val);
     }
     return text;
   }
