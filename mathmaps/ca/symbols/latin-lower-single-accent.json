@@ -206,8 +206,7 @@
     "key": "00FD",
     "mappings": {
       "default": {
-        "default": "y aguda",
-        "defaultMP": "ye aguda"
+        "default": "y aguda"
       }
     }
   },
@@ -215,8 +214,7 @@
     "key": "00FF",
     "mappings": {
       "default": {
-        "default": "y dièresi",
-        "defaultMP": "ye diéresis"
+        "default": "y dièresi"
       }
     }
   },
