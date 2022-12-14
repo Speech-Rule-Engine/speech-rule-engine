@@ -35,9 +35,9 @@ export class SsmlRenderer extends XmlRenderer {
       '<prosody rate="' +
       Engine.getInstance().getRate() +
       '%">' +
-      this.getSeparator() +
+      this.separator +
       str +
-      this.getSeparator() +
+      this.separator +
       '</prosody></speak>'
     );
   }

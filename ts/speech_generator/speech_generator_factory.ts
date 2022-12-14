@@ -35,11 +35,11 @@ import { TreeSpeechGenerator } from './tree_speech_generator';
  * @returns The newly generated speech generator.
  */
 export function generator(type: string): SpeechGenerator {
-  const constructor = generatorMapping_[type] || generatorMapping_.Direct;
+  const constructor = generatorMapping[type] || generatorMapping.Direct;
   return constructor();
 }
 
-export const generatorMapping_: { [key: string]: () => SpeechGenerator } = {
+const generatorMapping: { [key: string]: () => SpeechGenerator } = {
   Adhoc: () => new AdhocSpeechGenerator(),
   Color: () => new ColorGenerator(),
   Direct: () => new DirectSpeechGenerator(),

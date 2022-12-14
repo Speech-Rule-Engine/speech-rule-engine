@@ -591,7 +591,7 @@ export abstract class BaseRuleStore
 
 // Conditions are clusters of preconditions that are used to define rules via
 // actions.
-export class Condition {
+class Condition {
   private _conditions: [DynamicCstr, Precondition][] = [];
 
   private constraints: DynamicCstr[] = [];

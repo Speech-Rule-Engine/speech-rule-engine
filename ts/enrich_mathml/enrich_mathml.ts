@@ -38,7 +38,7 @@ import { getCase } from './enrich_case';
 /**
  * Object containing settings for the semantic enrichment.
  */
-export const SETTINGS: {
+const SETTINGS: {
   collapsed: boolean;
   implicit: boolean;
   wiki: boolean;
@@ -532,7 +532,7 @@ function functionApplication(
   return false;
 }
 
-export enum lcaType {
+enum lcaType {
   VALID = 'valid',
   INVALID = 'invalid',
   PRUNED = 'pruned'

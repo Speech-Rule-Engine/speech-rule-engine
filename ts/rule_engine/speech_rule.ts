@@ -126,7 +126,7 @@ function actionToString(speechType: ActionType): string {
 /**
  *  The type of single components.
  */
-export interface ComponentType {
+interface ComponentType {
   type: ActionType;
   content?: string;
   attributes?: Attributes;

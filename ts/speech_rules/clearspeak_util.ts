@@ -96,7 +96,7 @@ export function nodeCounter(
  * @param node The semantic node.
  * @returns True if the node is a simple expression.
  */
-export function isSimpleExpression(node: SemanticNode): boolean {
+function isSimpleExpression(node: SemanticNode): boolean {
   return (
     isSimpleNumber_(node) ||
     isSimpleLetters_(node) ||
@@ -287,7 +287,7 @@ function isSimpleFraction_(node: SemanticNode): boolean {
  * @param pref The preference.
  * @returns True of the given preference is set.
  */
-export function hasPreference(pref: string): boolean {
+function hasPreference(pref: string): boolean {
   return Engine.getInstance().style === pref;
 }
 
@@ -303,7 +303,7 @@ register(
  * @param node The node in question.
  * @returns True if the node has a annotation entry of simple.
  */
-export function simpleNode(node: Element): boolean {
+function simpleNode(node: Element): boolean {
   if (!node.hasAttribute('annotation')) {
     return false;
   }
@@ -400,7 +400,7 @@ export function isSmallVulgarFraction(node: Element): Element[] {
  * @param node The semantic node in question.
  * @returns True if the node is a unit expression.
  */
-export function isUnitExpression(node: SemanticNode): boolean {
+function isUnitExpression(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.TEXT ||
     (node.type === SemanticType.PUNCTUATED &&
@@ -451,7 +451,7 @@ export function ordinalExponent(node: Element): Span[] {
         : LOCALE.NUMBERS.wordOrdinal(num)))];
 }
 
-export let NESTING_DEPTH: string | null = null;
+let NESTING_DEPTH: string | null = null;
 
 /**
  * Computes the nesting depth of a fenced expressions.
@@ -508,7 +508,7 @@ export function matchingFences(node: Element): Element[] {
  * @param correction The nesting depth as correction text.
  * @returns The corrected text. E.g., open second paren.
  */
-export function insertNesting(text: string, correction: string): string {
+function insertNesting(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }

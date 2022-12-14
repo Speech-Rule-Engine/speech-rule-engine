@@ -26,12 +26,12 @@ import { SemanticNode } from './semantic_node';
 /**
  * List of MathML Tags that are considered to be leafs.
  */
-export const LEAFTAGS: string[] = ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSPACE'];
+const LEAFTAGS: string[] = ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSPACE'];
 
 /**
  * List of MathML Tags that are to be ignored.
  */
-export const IGNORETAGS: string[] = [
+const IGNORETAGS: string[] = [
   'MERROR',
   'MPHANTOM',
   'MALIGNGROUP',
@@ -44,7 +44,7 @@ export const IGNORETAGS: string[] = [
 /**
  * List of MathML Tags to be ignore if they have no children.
  */
-export const EMPTYTAGS: string[] = [
+const EMPTYTAGS: string[] = [
   'MATH',
   'MROW',
   'MPADDED',
@@ -58,12 +58,12 @@ export const EMPTYTAGS: string[] = [
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-export const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
+const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
 
 /**
  * List of potential attributes that should be used as speech directly.
  */
-export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
+const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
 
 /**
  * Checks if an element is a node with a math tag.
@@ -81,7 +81,7 @@ export function hasMathTag(node: Element): boolean {
  * @param node The node to check.
  * @returns True if element is an leaf node.
  */
-export function hasLeafTag(node: Element): boolean {
+function hasLeafTag(node: Element): boolean {
   return !!node && LEAFTAGS.indexOf(DomUtil.tagName(node)) !== -1;
 }
 
@@ -234,7 +234,7 @@ export function getEmbellishedInner(node: SemanticNode): SemanticNode {
   return node;
 }
 
-export interface Slice {
+interface Slice {
   head: SemanticNode[];
   div: SemanticNode;
   tail: SemanticNode[];

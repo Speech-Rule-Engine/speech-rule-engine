@@ -327,7 +327,8 @@ const PREFERENCES = new DynamicProperties({
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
-export class Comparator extends DefaultComparator {
+class Comparator extends DefaultComparator {
+
   /**
    * @override
    */
@@ -391,7 +392,7 @@ export class Comparator extends DefaultComparator {
   }
 }
 
-export class Parser extends DynamicCstrParser {
+class Parser extends DynamicCstrParser {
   /**
    * @override
    */

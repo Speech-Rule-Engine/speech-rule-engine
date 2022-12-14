@@ -41,7 +41,7 @@ interface Flags {
   translate?: boolean;
 }
 
-export type Correction = (text: string, parameter?: Value) => string;
+type Correction = (text: string, parameter?: Value) => string;
 
 export const ATTRIBUTE = 'grammar';
 
@@ -129,9 +129,9 @@ export class Grammar {
    * @param text Text representing a math expression.
    * @returns The string with a spoken version of the math expression.
    */
-  private static translateString_(text: string): string {
+  private static translateString(text: string): string {
     if (text.match(/:unit$/)) {
-      return Grammar.translateUnit_(text);
+      return Grammar.translateUnit(text);
     }
     const engine = Engine.getInstance();
     let result = engine.evaluator(text, engine.dynamicCstr);
@@ -149,8 +149,8 @@ export class Grammar {
    * @param text The text to translate.
    * @returns The translated result.
    */
-  private static translateUnit_(text: string): string {
-    text = Grammar.prepareUnit_(text);
+  private static translateUnit(text: string): string {
+    text = Grammar.prepareUnit(text);
     const engine = Engine.getInstance();
     const plural = Grammar.getInstance().getParameter('plural');
     const strict = engine.strict;
@@ -170,7 +170,7 @@ export class Grammar {
     result = engine.evaluator(text, cstr);
     engine.strict = strict;
     if (!result) {
-      return Grammar.cleanUnit_(text);
+      return Grammar.cleanUnit(text);
     }
     if (plural) {
       result = LOCALE.FUNCTIONS.plural(result);
@@ -184,7 +184,7 @@ export class Grammar {
    * @param text The text to test.
    * @returns The cleaned string.
    */
-  private static prepareUnit_(text: string): string {
+  private static prepareUnit(text: string): string {
     const match = text.match(/:unit$/);
     return match
       ? text.slice(0, match.index).replace(/\s+/g, ' ') +
@@ -198,7 +198,7 @@ export class Grammar {
    * @param text The text.
    * @returns The cleaned text in case it contained the :unit suffix.
    */
-  private static cleanUnit_(text: string): string {
+  private static cleanUnit(text: string): string {
     if (text.match(/:unit$/)) {
       return text.replace(/:unit$/, '');
     }
@@ -340,7 +340,7 @@ export class Grammar {
    * @returns The grammatically corrected string.
    */
   public preprocess(text: string): string {
-    return this.runProcessors_(text, this.preprocessors_);
+    return this.runProcessors(text, this.preprocessors_);
   }
 
   /**
@@ -350,7 +350,7 @@ export class Grammar {
    * @returns The grammatically corrected string.
    */
   public correct(text: string): string {
-    return this.runProcessors_(text, this.corrections_);
+    return this.runProcessors(text, this.corrections_);
   }
 
   /**
@@ -373,7 +373,7 @@ export class Grammar {
         ? Grammar.getInstance().preprocess(text)
         : text;
     if (this.parameters_['translate'] || this.currentFlags.translate) {
-      text = Grammar.translateString_(text);
+      text = Grammar.translateString(text);
     }
     text =
       this.currentFlags.adjust || this.currentFlags.correct
@@ -390,7 +390,7 @@ export class Grammar {
    * @param funcs Dictionary of processor functions.
    * @returns The grammatically corrected string.
    */
-  private runProcessors_(
+  private runProcessors(
     text: string,
     funcs: { [key: string]: Correction }
   ): string {
@@ -418,7 +418,7 @@ export class Grammar {
  * @param correction The correction string to be applied.
  * @returns The cleaned up string.
  */
-function correctFont_(text: string, correction: string): string {
+function correctFont(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
@@ -432,12 +432,12 @@ function correctFont_(text: string, correction: string): string {
  * @param text The original description text.
  * @returns The cleaned up string.
  */
-function correctCaps_(text: string): string {
+function correctCaps(text: string): string {
   let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().domain];
   if (typeof cap === 'undefined') {
     cap = LOCALE.ALPHABETS.capPrefix['default'];
   }
-  return correctFont_(text, cap);
+  return correctFont(text, cap);
 }
 
 /**
@@ -447,7 +447,7 @@ function correctCaps_(text: string): string {
  * @param annotation The annotation string to be applied.
  * @returns The cleaned up string.
  */
-function addAnnotation_(text: string, annotation: string): string {
+function addAnnotation(text: string, annotation: string): string {
   return text + ':' + annotation;
 }
 
@@ -457,7 +457,7 @@ function addAnnotation_(text: string, annotation: string): string {
  * @param text The text to translate.
  * @returns The translated text.
  */
-export function numbersToAlpha(text: string): string {
+function numbersToAlpha(text: string): string {
   return text.match(/\d+/)
     ? LOCALE.NUMBERS.numberToWords(parseInt(text, 10))
     : text;
@@ -471,7 +471,7 @@ export function numbersToAlpha(text: string): string {
  * @param text The text.
  * @returns The untranslated text.
  */
-function noTranslateText_(text: string): string {
+function noTranslateText(text: string): string {
   if (text.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))) {
     Grammar.getInstance().currentFlags['translate'] = false;
   }
@@ -482,8 +482,8 @@ Grammar.getInstance().setCorrection('localFont', LocaleUtil.localFont);
 Grammar.getInstance().setCorrection('localRole', LocaleUtil.localRole);
 Grammar.getInstance().setCorrection('localEnclose', LocaleUtil.localEnclose);
 
-Grammar.getInstance().setCorrection('ignoreFont', correctFont_);
-Grammar.getInstance().setPreprocessor('annotation', addAnnotation_);
-Grammar.getInstance().setPreprocessor('noTranslateText', noTranslateText_);
-Grammar.getInstance().setCorrection('ignoreCaps', correctCaps_);
+Grammar.getInstance().setCorrection('ignoreFont', correctFont);
+Grammar.getInstance().setPreprocessor('annotation', addAnnotation);
+Grammar.getInstance().setPreprocessor('noTranslateText', noTranslateText);
+Grammar.getInstance().setCorrection('ignoreCaps', correctCaps);
 Grammar.getInstance().setPreprocessor('numbers2alpha', numbersToAlpha);

@@ -63,7 +63,7 @@ export function spaceoutText(node: Element): Span[] {
  *     to the newly created semantic node with single characters.
  * @returns List of single nodes.
  */
-export function spaceoutNodes(
+function spaceoutNodes(
   node: Element,
   correction: (p1: SemanticNode) => any
 ): Element[] {
@@ -112,7 +112,7 @@ export function spaceoutIdentifier(node: Element): Element[] {
 /**
  * Tags that serve as a nesting barrier by default.
  */
-export const nestingBarriers: SemanticType[] = [
+const nestingBarriers: SemanticType[] = [
   SemanticType.CASES,
   SemanticType.CELL,
   SemanticType.INTEGRAL,

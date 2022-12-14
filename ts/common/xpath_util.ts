@@ -159,15 +159,6 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
 }
 
 /**
- * Given a rootNode, it returns an array of all its leaf nodes.
- *
- * @param rootNode The node to get the leaf nodes from.
- * @returns The array of leaf nodes for the given rootNode.
- */
-export function getLeafNodes(rootNode: Node): Node[] {
-  return evalXPath('.//*[count(*)=0]', rootNode);
-}
-/**
  * Given an XPath expression and rootNode, it evaluates the XPath expression
  * as a boolean type and returns the result.
  *

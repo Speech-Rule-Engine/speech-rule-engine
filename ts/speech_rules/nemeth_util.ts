@@ -103,7 +103,7 @@ export function hyperFractionBoundary(node: Element): Element[] {
  * @param postfix A postfix string.
  * @returns The opening string.
  */
-export function nestedRadical(node: Element, postfix: string): Span[] {
+function nestedRadical(node: Element, postfix: string): Span[] {
   const depth = radicalNestingDepth(node);
   return Span.singleton(depth === 1 ? postfix :
     new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix);
@@ -116,7 +116,7 @@ export function nestedRadical(node: Element, postfix: string): Span[] {
  * @param opt_depth The optional depth.
  * @returns The nesting depth. 0 if the node is not a radical.
  */
-export function radicalNestingDepth(node: Element, opt_depth?: number): number {
+function radicalNestingDepth(node: Element, opt_depth?: number): number {
   const depth = opt_depth || 0;
   if (!node.parentNode) {
     return depth;
@@ -183,7 +183,7 @@ function enlargeFence(text: string): string {
 
 Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
 
-export const NUMBER_PROPAGATORS_: SemanticType[] = [
+const NUMBER_PROPAGATORS: SemanticType[] = [
   SemanticType.MULTIREL,
   SemanticType.RELSEQ,
   SemanticType.APPL,
@@ -191,7 +191,7 @@ export const NUMBER_PROPAGATORS_: SemanticType[] = [
   SemanticType.LINE
 ];
 
-export const NUMBER_INHIBITORS_: SemanticType[] = [
+const NUMBER_INHIBITORS: SemanticType[] = [
   SemanticType.SUBSCRIPT,
   SemanticType.SUPERSCRIPT,
   SemanticType.OVERSCORE,
@@ -207,7 +207,7 @@ export const NUMBER_INHIBITORS_: SemanticType[] = [
  * @returns True if parent is a relation, punctuation or application or
  *     a negative sign.
  */
-function checkParent_(
+function checkParent(
   node: SemanticNode,
   info: { [key: string]: boolean }
 ): boolean {
@@ -217,7 +217,7 @@ function checkParent_(
   }
   const type = parent.type;
   if (
-    NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
+    NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
     (type === SemanticType.PREFIXOP &&
       parent.role === SemanticRole.NEGATIVE &&
       !info.script) ||
@@ -251,7 +251,7 @@ function propagateNumber(
   // TODO: Font indicator followed by number.
   // TODO: Check for enclosed list
   if (!node.childNodes.length) {
-    if (checkParent_(node, info)) {
+    if (checkParent(node, info)) {
       info.number = true;
       info.script = false;
       info.enclosed = false;
@@ -261,7 +261,7 @@ function propagateNumber(
       { number: false, enclosed: info.enclosed, script: info.script }
     ];
   }
-  if (NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
+  if (NUMBER_INHIBITORS.indexOf(node.type) !== -1) {
     info.script = true;
   }
   if (node.type === SemanticType.FENCED) {
@@ -269,7 +269,7 @@ function propagateNumber(
     info.enclosed = true;
     return ['', info];
   }
-  if (checkParent_(node, info)) {
+  if (checkParent(node, info)) {
     info.number = true;
     info.enclosed = false;
   }

@@ -49,11 +49,11 @@ export function walker(
   xml: string
 ): Walker {
   const constructor =
-    walkerMapping_[type.toLowerCase()] || walkerMapping_['dummy'];
+    walkerMapping[type.toLowerCase()] || walkerMapping['dummy'];
   return constructor(node, generator, highlighter, xml);
 }
 
-export const walkerMapping_: {
+const walkerMapping: {
   [key: string]: (
     p1: Element,
     p2: SpeechGenerator,

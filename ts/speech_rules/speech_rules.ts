@@ -25,8 +25,7 @@ import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions';
  * Mapping for context functions: The store maps constraint strings to
  * dictionaries of context functions.
  */
-export const funcStore: Map<string, { [key: string]: SpeechRuleFunction }> =
-  new Map();
+const funcStore: Map<string, { [key: string]: SpeechRuleFunction }> = new Map();
 
 /**
  * Adds functions to the store potentially inheriting from another store.

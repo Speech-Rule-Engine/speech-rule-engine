@@ -812,7 +812,7 @@ function getStore(locale: string, modality: string): BaseRuleStore {
  * @param set The JSON structure of the rule set.
  * @returns The newly create store.
  */
-export function storeFactory(set: RulesJson) {
+function storeFactory(set: RulesJson) {
   const name = `${set.locale}.${set.modality}.${set.domain}`;
   if (set.kind === 'actions') {
     const store = stores.get(name);

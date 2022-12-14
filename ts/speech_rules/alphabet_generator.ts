@@ -30,7 +30,7 @@ import { UnicodeJson } from '../rule_engine/math_simple_store';
 /**
  * Structure to hold domain combinations for a locale during rule generation.
  */
-export const Domains_: { [key: string]: string[] } = {
+const Domains: { [key: string]: string[] } = {
   small: ['default'],
   capital: ['default'],
   digit: ['default']
@@ -39,7 +39,7 @@ export const Domains_: { [key: string]: string[] } = {
 /**
  * Generates the domain combinations for the given locale.
  */
-export function makeDomains_() {
+function makeDomains() {
   const alph = LOCALE.ALPHABETS;
   const combineKeys = (
     obj1: { [key: string]: any },
@@ -50,9 +50,9 @@ export function makeDomains_() {
     Object.keys(obj2).forEach((k) => (result[k] = true));
     return Object.keys(result);
   };
-  Domains_.small = combineKeys(alph.smallPrefix, alph.letterTrans);
-  Domains_.capital = combineKeys(alph.capPrefix, alph.letterTrans);
-  Domains_.digit = combineKeys(alph.digitPrefix, alph.digitTrans);
+  Domains.small = combineKeys(alph.smallPrefix, alph.letterTrans);
+  Domains.capital = combineKeys(alph.capPrefix, alph.letterTrans);
+  Domains.digit = combineKeys(alph.digitPrefix, alph.digitTrans);
 }
 
 /**
@@ -78,7 +78,7 @@ export function generate(locale: string) {
   Engine.getInstance().locale = locale;
   L10n.setLocale();
   MathCompoundStore.changeLocale({ locale: locale } as UnicodeJson);
-  makeDomains_();
+  makeDomains();
   for (const int of Alphabet.INTERVALS.values()) {
     const letters = int.unicode;
     if ('offset' in int) {
@@ -103,7 +103,7 @@ export function generate(locale: string) {
  * @param font The font of an alphabet.
  * @returns The localised font value plus a combiner.
  */
-export function getFont(font: string): { font: string; combiner: Combiner } {
+function getFont(font: string): { font: string; combiner: Combiner } {
   const realFont =
     font === 'normal' || font === 'fullwidth'
       ? ''
@@ -121,7 +121,7 @@ export function getFont(font: string): { font: string; combiner: Combiner } {
  * @param font The font name.
  * @param cap True if it is an alphabet of capitals.
  */
-export function alphabetRules(
+function alphabetRules(
   unicodes: string[],
   letters: string[],
   font: string,
@@ -136,7 +136,7 @@ export function alphabetRules(
     const prefixes = cap
       ? LOCALE.ALPHABETS.capPrefix
       : LOCALE.ALPHABETS.smallPrefix;
-    const domains = cap ? Domains_.capital : Domains_.small;
+    const domains = cap ? Domains.capital : Domains.small;
     makeLetter(
       realFont.combiner,
       unicode,
@@ -157,7 +157,7 @@ export function alphabetRules(
  * @param font The font name.
  * @param offset The offset value for the initial number.
  */
-export function numberRules(
+function numberRules(
   unicodes: string[],
   font: string,
   offset: number
@@ -173,7 +173,7 @@ export function numberRules(
       realFont.font,
       prefixes,
       LOCALE.ALPHABETS.digitTrans,
-      Domains_.digit
+      Domains.digit
     );
   }
 }
@@ -194,7 +194,7 @@ export function numberRules(
  *     rules. They correspond to the union of the domains for prefixes and
  *     transformers.
  */
-export function makeLetter(
+function makeLetter(
   combiner: Combiner,
   unicode: string,
   letter: string | number,

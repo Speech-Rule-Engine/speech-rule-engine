@@ -24,18 +24,9 @@ import { Span } from './span';
 
 export interface AudioRenderer {
   /**
-   * Sets the separator for merging markup description strings.
-   *
-   * @param sep The separator string.
+   * The separator for merging markup description strings.
    */
-  setSeparator(sep: string): void;
-
-  /**
-   * Gets the separator for merging markup description strings.
-   *
-   * @returns The separator string.
-   */
-  getSeparator(): string;
+  separator: string;
 
   /**
    * Turns a set of auditory descriptions into a markup string.
