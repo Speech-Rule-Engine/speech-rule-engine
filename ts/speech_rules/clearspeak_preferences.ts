@@ -190,7 +190,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     [key: string]: AxisProperties;
   } {
     const result: { [key: string]: AxisProperties } = {};
-    for (const locale in dynamic) {
+    for (const locale of Object.keys(dynamic)) {
       if (
         !dynamic[locale]['speech'] ||
         !dynamic[locale]['speech']['clearspeak']

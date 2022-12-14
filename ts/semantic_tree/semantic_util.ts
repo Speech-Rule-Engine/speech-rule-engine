@@ -65,35 +65,6 @@ export const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
  */
 export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
 
-// /**
-//  * Merges keys of objects into an array.
-//  *
-//  * @param args Optional objects.
-//  * @returns Array of all keys of the objects.
-//  */
-// export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
-//   const keys: string[] = [];
-//   return keys.concat(...args.map(Object.keys));
-// }
-
-// /**
-//  * Merges values of objects into an array.
-//  *
-//  * @param args Optional objects.
-//  * @returns Array of all values of the objects.
-//  */
-// export function objectsToValues(
-//   ...args: { [key: string]: string }[]
-// ): string[] {
-//   const result: string[] = [];
-//   args.forEach((obj: { [key: string]: string }) => {
-//     for (const key in obj) {
-//       result.push(obj[key]);
-//     }
-//   });
-//   return result;
-// }
-
 /**
  * Checks if an element is a node with a math tag.
  *

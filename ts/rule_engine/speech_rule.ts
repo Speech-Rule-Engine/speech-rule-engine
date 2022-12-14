@@ -270,8 +270,8 @@ export class Component {
   constructor({ type, content, attributes, grammar }: ComponentType) {
     this.type = type;
     this.content = content;
-    this.attributes = attributes || {};
-    this.grammar = grammar || {};
+    this.attributes = attributes;
+    this.grammar = grammar;
   }
 
   /**
@@ -299,6 +299,9 @@ export class Component {
    * @returns List of translated attribute:value strings.
    */
   public getGrammar(): string[] {
+    if (!this.grammar) {
+      return [];
+    }
     const attribs = [];
     for (const [key, val] of Object.entries(this.grammar)) {
       attribs.push((val === true) ? key :
@@ -325,6 +328,9 @@ export class Component {
    * @returns List of translated attribute:value strings.
    */
   public getAttributes(): string[] {
+    if (!this.attributes) {
+      return [];
+    }
     const attribs = [];
     for (const [key, val] of Object.entries(this.attributes)) {
       attribs.push(val === 'true' ? key : `${key}:${val}`);

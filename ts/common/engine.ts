@@ -376,9 +376,9 @@ function configBlocks(feature: { [key: string]: boolean | string }) {
     let inner;
     try {
       inner = scripts[i].innerHTML;
-      const config = JSON.parse(inner);
-      for (const f in config) {
-        feature[f] = config[f];
+      const config: { [key: string]: boolean | string } = JSON.parse(inner);
+      for (const [key, val] of Object.entries(config)) {
+        feature[key] = val;
       }
     } catch (err) {
       Debugger.getInstance().output('Illegal configuration ', inner);

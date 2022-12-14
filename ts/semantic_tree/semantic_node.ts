@@ -579,8 +579,8 @@ export class SemanticNode {
    * @param node The XML node.
    */
   private addExternalAttributes(node: Element) {
-    for (const attr in this.attributes) {
-      node.setAttribute(attr, this.attributes[attr]);
+    for (const [attr, val] of Object.entries(this.attributes)) {
+      node.setAttribute(attr, val);
     }
   }
 
