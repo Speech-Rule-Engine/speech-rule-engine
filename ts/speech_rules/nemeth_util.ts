@@ -164,7 +164,7 @@ export function indexRadical(node: Element): Span[] {
  * @param text The text representing the fence.
  * @returns The fence with the enlargment indicator.
  */
-export function enlargeFence(text: string): string {
+function enlargeFence(text: string): string {
   const start = '⠠';
   if (text.length === 1) {
     return start + text;
@@ -207,7 +207,7 @@ export const NUMBER_INHIBITORS_: SemanticType[] = [
  * @returns True if parent is a relation, punctuation or application or
  *     a negative sign.
  */
-export function checkParent_(
+function checkParent_(
   node: SemanticNode,
   info: { [key: string]: boolean }
 ): boolean {
@@ -244,7 +244,7 @@ export function checkParent_(
  * @returns Info pair consisting of a string and the updated
  *     information object.
  */
-export function propagateNumber(
+function propagateNumber(
   node: SemanticNode,
   info: { [key: string]: any }
 ): any[] {

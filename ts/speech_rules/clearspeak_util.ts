@@ -115,7 +115,7 @@ export function isSimpleExpression(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is a simple function.
  */
-export function isSimpleFunction_(node: SemanticNode): boolean {
+function isSimpleFunction_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.APPL &&
     // The types are there for distinguishing non-embellished
@@ -141,7 +141,7 @@ export function isSimpleFunction_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is negated simple expression.
  */
-export function isSimpleNegative_(node: SemanticNode): boolean {
+function isSimpleNegative_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.PREFIXOP &&
     node.role === SemanticRole.NEGATIVE &&
@@ -161,7 +161,7 @@ export function isSimpleNegative_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is simple degree expression.
  */
-export function isSimpleDegree_(node: SemanticNode): boolean {
+function isSimpleDegree_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.PUNCTUATED &&
     node.role === SemanticRole.ENDPUNCT &&
@@ -186,7 +186,7 @@ export function isSimpleDegree_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is simple non-negative letter expression.
  */
-export function isSimpleLetters_(node: SemanticNode): boolean {
+function isSimpleLetters_(node: SemanticNode): boolean {
   return (
     isLetter_(node) ||
     (node.type === SemanticType.INFIXOP &&
@@ -208,7 +208,7 @@ export function isSimpleLetters_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is already annotated as simple.
  */
-export function isSimple_(node: SemanticNode): boolean {
+function isSimple_(node: SemanticNode): boolean {
   return node.hasAnnotation('clearspeak', 'simple');
 }
 
@@ -218,7 +218,7 @@ export function isSimple_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is a single letter from any alphabet.
  */
-export function isLetter_(node: SemanticNode): boolean {
+function isLetter_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.IDENTIFIER &&
     (node.role === SemanticRole.LATINLETTER ||
@@ -236,7 +236,7 @@ export function isLetter_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the number is an integer or a decimal.
  */
-export function isNumber_(node: SemanticNode): boolean {
+function isNumber_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.NUMBER &&
     (node.role === SemanticRole.INTEGER || node.role === SemanticRole.FLOAT)
@@ -250,7 +250,7 @@ export function isNumber_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if node is number or a vulgar fraction.
  */
-export function isSimpleNumber_(node: SemanticNode): boolean {
+function isSimpleNumber_(node: SemanticNode): boolean {
   return isNumber_(node) || isSimpleFraction_(node);
 }
 
@@ -261,7 +261,7 @@ export function isSimpleNumber_(node: SemanticNode): boolean {
  * @returns True if node is a vulgar fraction that would be spoken as
  *   ordinal for the current preference settings.
  */
-export function isSimpleFraction_(node: SemanticNode): boolean {
+function isSimpleFraction_(node: SemanticNode): boolean {
   if (hasPreference('Fraction_Over') || hasPreference('Fraction_FracOver')) {
     return false;
   }
@@ -317,7 +317,7 @@ export function simpleNode(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is a simple cell.
  */
-export function simpleCell_(node: Element): boolean {
+function simpleCell_(node: Element): boolean {
   if (simpleNode(node)) {
     return true;
   }
@@ -346,7 +346,7 @@ export function simpleCell_(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is an integer.
  */
-export function isInteger_(node: Element): boolean {
+function isInteger_(node: Element): boolean {
   return (
     node.tagName === SemanticType.NUMBER &&
     node.hasAttribute('role') &&
@@ -360,7 +360,7 @@ export function isInteger_(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is an index.
  */
-export function allIndices_(node: Element): boolean {
+function allIndices_(node: Element): boolean {
   const nodes = XpathUtil.evalXPath('children/*', node);
   return nodes.every(
     (x: Element) => isInteger_(x) || x.tagName === SemanticType.IDENTIFIER
@@ -421,7 +421,7 @@ export function isUnitExpression(node: SemanticNode): boolean {
  * @param nodes A list of semantic nodes.
  * @returns True if condition holds.
  */
-export function allTextLastContent_(nodes: SemanticNode[]): boolean {
+function allTextLastContent_(nodes: SemanticNode[]): boolean {
   for (let i = 0; i < nodes.length - 1; i++) {
     if (!(nodes[i].type === SemanticType.TEXT && nodes[i].textContent === '')) {
       return false;
@@ -570,7 +570,7 @@ export function simpleArguments(node: Element): Element[] {
  * @returns True if the node is a number, identifier, function or
  *     applicatio or a fraction.
  */
-export function simpleFactor_(node: Element): boolean {
+function simpleFactor_(node: Element): boolean {
   return (
     !!node &&
     (node.tagName === SemanticType.NUMBER ||
@@ -590,7 +590,7 @@ export function simpleFactor_(node: Element): boolean {
  * @returns True if the node is a fenced on both sides or a matrix or
  *     vector.
  */
-export function fencedFactor_(node: Element): boolean {
+function fencedFactor_(node: Element): boolean {
   return (
     node &&
     (node.tagName === SemanticType.FENCED ||
@@ -606,7 +606,7 @@ export function fencedFactor_(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is a matrix or vector.
  */
-export function layoutFactor_(node: Element): boolean {
+function layoutFactor_(node: Element): boolean {
   return (
     !!node &&
     (node.tagName === SemanticType.MATRIX ||
