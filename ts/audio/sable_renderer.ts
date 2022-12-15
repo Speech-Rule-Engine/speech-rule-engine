@@ -31,9 +31,9 @@ export class SableRenderer extends XmlRenderer {
       '<?xml version="1.0"?>' +
       '<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN"' +
       ' "Sable.v0_2.dtd" []><SABLE>' +
-      this.getSeparator() +
+      this.separator +
       str +
-      this.getSeparator() +
+      this.separator +
       '</SABLE>'
     );
   }

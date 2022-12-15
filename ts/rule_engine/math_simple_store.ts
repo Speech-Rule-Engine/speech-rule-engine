@@ -118,9 +118,8 @@ export class MathSimpleStore {
     modality: string,
     mapping: MappingsJson
   ) {
-    for (const domain in mapping) {
-      for (const style in mapping[domain]) {
-        const content = mapping[domain][style];
+    for (const [domain, styles] of Object.entries(mapping)) {
+      for (const [style, content] of Object.entries(styles)) {
         this.defineRuleFromStrings(
           locale,
           modality,

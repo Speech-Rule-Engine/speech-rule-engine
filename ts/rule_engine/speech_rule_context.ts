@@ -174,7 +174,7 @@ export class SpeechRuleContext {
     const functs = Array.isArray(functions)
       ? functions
       : Object.entries(functions);
-    for (let i = 0, func; (func = functs[i]); i++) {
+    for (const func of functs) {
       const kind = func[0].slice(0, 3);
       switch (kind) {
         case 'CQF':

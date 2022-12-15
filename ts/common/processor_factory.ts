@@ -41,7 +41,7 @@ const PROCESSORS = new Map();
  *
  * @param processor The processor object.
  */
-export function set<T>(processor: Processor<T>) {
+function set<T>(processor: Processor<T>) {
   PROCESSORS.set(processor.name, processor);
 }
 
@@ -51,7 +51,7 @@ export function set<T>(processor: Processor<T>) {
  * @param name The name of the processor.
  * @returns The processor.
  */
-function get_<T>(name: string): Processor<T> {
+function get<T>(name: string): Processor<T> {
   const processor = PROCESSORS.get(name);
   if (!processor) {
     throw new SREError('Unknown processor ' + name);
@@ -67,7 +67,7 @@ function get_<T>(name: string): Processor<T> {
  * @returns The data structure resulting from the processing the expression.
  */
 export function process<T>(name: string, expr: string): T {
-  const processor = get_(name);
+  const processor = get(name);
   try {
     return processor.processor(expr) as T;
   } catch (_e) {
@@ -82,8 +82,8 @@ export function process<T>(name: string, expr: string): T {
  * @param data The data structure that's the result of this processor.
  * @returns A string representation of the result.
  */
-export function print<T>(name: string, data: T): string {
-  const processor = get_(name);
+function print<T>(name: string, data: T): string {
+  const processor = get(name);
   return Engine.getInstance().pprint
     ? processor.pprint(data)
     : processor.print(data);
@@ -97,7 +97,7 @@ export function print<T>(name: string, data: T): string {
  * @returns A string representation of the result.
  */
 export function output(name: string, expr: string): string {
-  const processor = get_(name);
+  const processor = get(name);
   try {
     const data = processor.processor(expr);
     return Engine.getInstance().pprint
@@ -117,7 +117,7 @@ export function output(name: string, expr: string): string {
  * @returns A string representation of the result.
  */
 export function keypress(name: string, expr: KeyCode | string): string {
-  const processor = get_(name);
+  const processor = get(name);
   const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
   const data = processor.processor(key as string);
   return Engine.getInstance().pprint

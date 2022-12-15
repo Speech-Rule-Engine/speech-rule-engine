@@ -190,7 +190,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     [key: string]: AxisProperties;
   } {
     const result: { [key: string]: AxisProperties } = {};
-    for (const locale in dynamic) {
+    for (const locale of Object.keys(dynamic)) {
       if (
         !dynamic[locale]['speech'] ||
         !dynamic[locale]['speech']['clearspeak']
@@ -327,7 +327,8 @@ const PREFERENCES = new DynamicProperties({
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
-export class Comparator extends DefaultComparator {
+class Comparator extends DefaultComparator {
+
   /**
    * @override
    */
@@ -391,7 +392,7 @@ export class Comparator extends DefaultComparator {
   }
 }
 
-export class Parser extends DynamicCstrParser {
+class Parser extends DynamicCstrParser {
   /**
    * @override
    */

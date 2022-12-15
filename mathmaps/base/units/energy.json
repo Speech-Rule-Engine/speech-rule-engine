@@ -66,21 +66,5 @@
     "names": [
       "Ω"
     ]
-  },
-  {
-    "key": "MΩ",
-    "category": "energy",
-    "si": true,
-    "names": [
-      "MΩ"
-    ]
-  },
-  {
-    "key": "kΩ",
-    "category": "energy",
-    "si": true,
-    "names": [
-      "kΩ"
-    ]
   }
 ]

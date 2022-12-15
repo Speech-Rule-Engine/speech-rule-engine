@@ -1247,7 +1247,7 @@ function initFences() {
 }
 
 // Functions.
-export const trigonometricFunctions: string[] = [
+const trigonometricFunctions: string[] = [
   'cos',
   'cot',
   'csc',
@@ -1261,7 +1261,7 @@ export const trigonometricFunctions: string[] = [
   'arcsin',
   'arctan'
 ];
-export const hyperbolicFunctions: string[] = [
+const hyperbolicFunctions: string[] = [
   'cosh',
   'coth',
   'csch',
@@ -1275,7 +1275,7 @@ export const hyperbolicFunctions: string[] = [
   'arsinh',
   'artanh'
 ];
-export const algebraicFunctions: string[] = [
+const algebraicFunctions: string[] = [
   'deg',
   'det',
   'dim',
@@ -1283,7 +1283,7 @@ export const algebraicFunctions: string[] = [
   'ker',
   'Tr'
 ];
-export const elementaryFunctions: string[] = [
+const elementaryFunctions: string[] = [
   'log',
   'ln',
   'lg',
@@ -1298,7 +1298,7 @@ export const elementaryFunctions: string[] = [
 /**
  * All predefined prefix functions.
  */
-export const prefixFunctions: string[] = trigonometricFunctions.concat(
+const prefixFunctions: string[] = trigonometricFunctions.concat(
   hyperbolicFunctions,
   algebraicFunctions,
   elementaryFunctions

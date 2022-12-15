@@ -182,7 +182,7 @@ export declare interface Alphabet extends ProtoAlphabet {
 /**
  * Alphabet definitions by intervals and exceptions
  */
-export const PROTO_INTERVALS: ProtoAlphabet[] = [
+const PROTO_INTERVALS: ProtoAlphabet[] = [
   // Latin
   {
     interval: ['1D400', '1D419'],

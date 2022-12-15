@@ -535,7 +535,7 @@ Install the required packages:
 npm install --no-save rollup
 npm install --no-save @rollup/plugin-commonjs
 npm install --no-save @rollup/plugin-node-resolve
-npm install --no-save rollup-plugin-terser
+npm install --no-save @rollup/plugin-terser
 ```
 
 Add a `rollup.config.js` file of the form:
@@ -543,7 +543,7 @@ Add a `rollup.config.js` file of the form:
 ``` javascript
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { terser } from "rollup-plugin-terser";
+import { terser } from "@rollup/plugin-terser";
 import pkg from './package.json';
 
 export default [
@@ -596,7 +596,7 @@ npx esbuild ./ts/index.ts --bundle --outfile=lib/sre.js --format=esm --minify
 To run in node you need ES6 modules enabled.
 
 ``` shell
-npx install --no-save esm
+npm install --no-save esm
 ```
 
 Then start node with `node -r esm`. If you want to use the CLI interface, adapt

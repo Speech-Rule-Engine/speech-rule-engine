@@ -60,7 +60,7 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
         str += this.pause(pause[EngineConst.personalityProps.PAUSE]);
         pause = null;
       }
-      str += (span ? this.getSeparator() : '') + this.merge(descr.span);
+      str += (span ? this.separator : '') + this.merge(descr.span);
       span = true;
     }
     return str;

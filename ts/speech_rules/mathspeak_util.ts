@@ -63,7 +63,7 @@ export function spaceoutText(node: Element): Span[] {
  *     to the newly created semantic node with single characters.
  * @returns List of single nodes.
  */
-export function spaceoutNodes(
+function spaceoutNodes(
   node: Element,
   correction: (p1: SemanticNode) => any
 ): Element[] {
@@ -112,7 +112,7 @@ export function spaceoutIdentifier(node: Element): Element[] {
 /**
  * Tags that serve as a nesting barrier by default.
  */
-export const nestingBarriers: SemanticType[] = [
+const nestingBarriers: SemanticType[] = [
   SemanticType.CASES,
   SemanticType.CELL,
   SemanticType.INTEGRAL,
@@ -158,7 +158,7 @@ export function resetNestingDepth(node: Element): Element[] {
  *     considered as barrier, otherwise tags and attributes will be considered.
  * @returns The nesting depth.
  */
-export function getNestingDepth(
+function getNestingDepth(
   type: string,
   node: Element,
   tags: string[],
@@ -203,7 +203,7 @@ export function getNestingDepth(
  * @returns True if all attributes are contained and have the given
  *     values.
  */
-export function containsAttr(
+function containsAttr(
   node: Element,
   attrs: { [key: string]: string }
 ): boolean {
@@ -234,7 +234,7 @@ export function containsAttr(
  * @param depth Accumulator for the nesting depth that is computed.
  * @returns The nesting depth.
  */
-export function computeNestingDepth_(
+function computeNestingDepth_(
   node: Element,
   tags: string[],
   barriers: string[],
@@ -291,7 +291,7 @@ export function fractionNestingDepth(node: Element): number {
  * @param opt_end Optional end expression.
  * @returns The disambiguating string.
  */
-export function nestedFraction(
+function nestedFraction(
   node: Element,
   expr: string,
   opt_end?: string
@@ -582,7 +582,7 @@ export function baselineBrief(node: Element): Span[] {
  * @param node The radical node.
  * @returns The nesting depth. 0 if the node is not a radical.
  */
-export function radicalNestingDepth(node: Element): number {
+function radicalNestingDepth(node: Element): number {
   return getNestingDepth(
     'radical',
     node,
@@ -601,7 +601,7 @@ export function radicalNestingDepth(node: Element): number {
  * @param postfix A postfix string.
  * @returns The opening string.
  */
-export function nestedRadical(
+function nestedRadical(
   node: Element,
   prefix: string,
   postfix: string
@@ -624,7 +624,7 @@ export function nestedRadical(
  * @param node The radical node.
  * @returns The localised indexing string if it exists.
  */
-export function getRootIndex(node: Element): string {
+function getRootIndex(node: Element): string {
   const content =
     node.tagName === 'sqrt'
       ? '2'
@@ -758,7 +758,7 @@ export function indexRadicalSbrief(node: Element): Span[] {
  * @param node The underscore node.
  * @returns The nesting depth. 0 if the node is not an underscore.
  */
-export function underscoreNestingDepth(node: Element): number {
+function underscoreNestingDepth(node: Element): number {
   return getNestingDepth(
     'underscore',
     node,
@@ -795,7 +795,7 @@ export function nestedUnderscript(node: Element): Span[] {
  * @param node The overscore node.
  * @returns The nesting depth. 0 if the node is not an overscore.
  */
-export function overscoreNestingDepth(node: Element): number {
+function overscoreNestingDepth(node: Element): number {
   return getNestingDepth(
     'overscore',
     node,

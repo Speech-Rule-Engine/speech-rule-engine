@@ -121,7 +121,7 @@ export class SemanticNodeFactory {
     const node = this.makeContentNode(content);
     node.font = font || node.font;
     // Lookup alternative meaning here!
-    const meaning = this.defaultMap.retrieveNode(node);
+    const meaning = this.defaultMap.getNode(node);
     if (meaning) {
       node.type = meaning.type;
       node.role = meaning.role;

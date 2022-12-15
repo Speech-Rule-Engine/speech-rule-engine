@@ -115,7 +115,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       'ℝ',
       'ℤ'
     ].forEach(
-      ((x: string) => this.getFactory().defaultMap.add(x, meaning)).bind(this)
+      ((x: string) => this.getFactory().defaultMap.set(x, meaning)).bind(this)
     );
   }
 
