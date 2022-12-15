@@ -81,6 +81,6 @@ export class SsmlStepRenderer extends SsmlRenderer {
         result.push(span.speech);
       }
     }
-    return result.join(this.getSeparator());
+    return result.join(this.separator);
   }
 }

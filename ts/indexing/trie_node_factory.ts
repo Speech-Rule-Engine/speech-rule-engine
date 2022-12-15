@@ -58,7 +58,7 @@ export function getNode(
   }
 }
 
-export class RootTrieNode extends AbstractTrieNode<Node> {
+class RootTrieNode extends AbstractTrieNode<Node> {
   /**
    * Creates the root node for the trie.
    */
@@ -68,7 +68,7 @@ export class RootTrieNode extends AbstractTrieNode<Node> {
   }
 }
 
-export class DynamicTrieNode extends AbstractTrieNode<string> {
+class DynamicTrieNode extends AbstractTrieNode<string> {
   /**
    * @param constraint The constraint the node represents.
    */
@@ -95,7 +95,7 @@ const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
  *    xpath expression.
  */
 // TODO (TS): Improve methods by testing for Element type.
-export function constraintTest_(
+function constraintTest(
   constraint: string
 ): ((p1: Node) => boolean) | null {
   // @self::*
@@ -221,13 +221,13 @@ export function constraintTest_(
   return null;
 }
 
-export class QueryTrieNode extends StaticTrieNode {
+class QueryTrieNode extends StaticTrieNode {
   /**
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
   constructor(constraint: string, private context: SpeechRuleContext) {
-    super(constraint, constraintTest_(constraint));
+    super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.QUERY;
   }
 
@@ -241,13 +241,13 @@ export class QueryTrieNode extends StaticTrieNode {
   }
 }
 
-export class BooleanTrieNode extends StaticTrieNode {
+class BooleanTrieNode extends StaticTrieNode {
   /**
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
   constructor(constraint: string, private context: SpeechRuleContext) {
-    super(constraint, constraintTest_(constraint));
+    super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.BOOLEAN;
   }
 

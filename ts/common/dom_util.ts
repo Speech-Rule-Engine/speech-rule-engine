@@ -47,21 +47,10 @@ export function toArray(nodeList: NodeList | NamedNodeMap): any[] {
  * @param input The XML input string.
  * @returns The string with whitespace removed between tags.
  */
-export function trimInput_(input: string): string {
+function trimInput(input: string): string {
   input = input.replace(/&nbsp;/g, ' ');
   return input.replace(/>[ \f\n\r\t\v\u200b]+</g, '><').trim();
 }
-
-/**
- * Set of XML entities.
- */
-export const XML_ENTITIES: { [key: string]: boolean } = {
-  '&lt;': true,
-  '&gt;': true,
-  '&amp;': true,
-  '&quot;': true,
-  '&apos;': true
-};
 
 /**
  * Parses the XML input string into an XML structure.
@@ -71,7 +60,7 @@ export const XML_ENTITIES: { [key: string]: boolean } = {
  */
 export function parseInput(input: string): Element {
   const dp = new SystemExternal.xmldom.DOMParser();
-  const clean_input = trimInput_(input);
+  const clean_input = trimInput(input);
   const allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
   const html = !!allValues;
   if (!clean_input) {

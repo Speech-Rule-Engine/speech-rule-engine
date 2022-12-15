@@ -28,8 +28,6 @@ export type SiCombiner = (p1: string, p2: string) => string;
 
 export type GrammarCase = (p1: number, p2: boolean) => string;
 
-export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
-
 /**
  * A trivial translator of numbers with plural.
  *

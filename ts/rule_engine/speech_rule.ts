@@ -126,7 +126,7 @@ function actionToString(speechType: ActionType): string {
 /**
  *  The type of single components.
  */
-export interface ComponentType {
+interface ComponentType {
   type: ActionType;
   content?: string;
   attributes?: Attributes;
@@ -242,8 +242,7 @@ export class Component {
     }
     const attributes: { [key: string]: string | Grammar.State } = {};
     const attribs = splitString(attrs.slice(1, -1), ',');
-    for (let i = 0, m = attribs.length; i < m; i++) {
-      const attr = attribs[i];
+    for (const attr of attribs) {
       const colon = attr.indexOf(':');
       if (colon === -1) {
         attributes[attr.trim()] = 'true';
@@ -300,15 +299,13 @@ export class Component {
    * @returns List of translated attribute:value strings.
    */
   public getGrammar(): string[] {
+    if (!this.grammar) {
+      return [];
+    }
     const attribs = [];
-    for (const key in this.grammar) {
-      if (this.grammar[key] === true) {
-        attribs.push(key);
-      } else if (this.grammar[key] === false) {
-        attribs.push('!' + key);
-      } else {
-        attribs.push(key + '=' + this.grammar[key]);
-      }
+    for (const [key, val] of Object.entries(this.grammar)) {
+      attribs.push((val === true) ? key :
+        ((val === false) ? `!${key}` : `${key}=${val}`));
     }
     return attribs;
   }
@@ -331,10 +328,12 @@ export class Component {
    * @returns List of translated attribute:value strings.
    */
   public getAttributes(): string[] {
+    if (!this.attributes) {
+      return [];
+    }
     const attribs = [];
-    for (const key in this.attributes) {
-      const value = this.attributes[key];
-      value === 'true' ? attribs.push(key) : attribs.push(key + ':' + value);
+    for (const [key, val] of Object.entries(this.attributes)) {
+      attribs.push(val === 'true' ? key : `${key}:${val}`);
     }
     return attribs;
   }

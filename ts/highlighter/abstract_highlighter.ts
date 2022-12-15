@@ -148,8 +148,8 @@ export abstract class AbstractHighlighter implements Highlighter {
   ) {
     const mactions = this.getMactionNodes(node);
     for (let i = 0, maction; (maction = mactions[i]); i++) {
-      for (const event in events) {
-        maction.addEventListener(event, events[event]);
+      for (const [key, event] of Object.entries(events)) {
+        maction.addEventListener(key, event);
       }
     }
   }

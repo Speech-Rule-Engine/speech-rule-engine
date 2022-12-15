@@ -44,7 +44,7 @@ interface MathMapJson {
 /**
  * The compund store for symbol and function mappings.
  */
-export const store = MathCompoundStore;
+// const store = MathCompoundStore;
 
 /**
  * Methods for parsing json structures.
@@ -139,7 +139,7 @@ export function standardLoader() {
  *
  * @param locale The target locale.
  */
-export function retrieveFiles(locale: string) {
+function retrieveFiles(locale: string) {
   const loader = loadMethod();
   const promise = new Promise<string>((res) => {
     const inner = loader(locale);
@@ -165,7 +165,7 @@ export function retrieveFiles(locale: string) {
  *
  * @param json The json mappings string.
  */
-export function parseMaps(json: string) {
+function parseMaps(json: string) {
   const js = JSON.parse(json) as { [key: string]: any[] };
   addMaps(js);
 }
@@ -231,7 +231,7 @@ function getJsonIE_(locale: string, opt_count?: number) {
  * @param locale The locale to be loaded.
  * @returns A promise the resolves to the JSON string.
  */
-export function loadFile(locale: string): Promise<string> {
+function loadFile(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
   return new Promise((res, rej) => {
     SystemExternal.fs.readFile(file, 'utf8', (err: Error, json: string) => {
@@ -249,7 +249,7 @@ export function loadFile(locale: string): Promise<string> {
  * @param locale The locale to retrieve.
  * @returns A string representing a JSON array.
  */
-export function loadFileSync(locale: string): Promise<string> {
+function loadFileSync(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
   return new Promise((res, rej) => {
     let str = '{}';
@@ -268,7 +268,7 @@ export function loadFileSync(locale: string): Promise<string> {
  * @param locale The locale to retrieve.
  * @returns A promise the resolves to the JSON string.
  */
-export function loadAjax(locale: string): Promise<string> {
+function loadAjax(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
   const httpRequest = new XMLHttpRequest();
   return new Promise((res, rej) => {
