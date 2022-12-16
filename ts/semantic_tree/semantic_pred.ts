@@ -656,7 +656,7 @@ export function isUnitProduct(node: SemanticNode): boolean {
  * @returns True if the node is considered an implicit node.
  */
 export function isImplicit(node: SemanticNode): boolean {
-  return (
+  return node.type === SemanticType.INFIXOP && (
     node.role === SemanticRole.IMPLICIT ||
     (node.role === SemanticRole.UNIT &&
       !!node.contentNodes.length &&
