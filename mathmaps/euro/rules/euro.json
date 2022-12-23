@@ -59,6 +59,20 @@
       "default",
       "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
       "self::fenced"
+    ],
+    [
+      "Rule",
+      "prefix-operation",
+      "default",
+      "[n] content/*[1]; [n] children/*[1]",
+      "self::prefixop"
+    ],
+    [
+      "Rule",
+      "postfix-operation",
+      "default",
+      "[n] children/*[1]; [n] content/*[1]",
+      "self::postfixop"
     ]
   ]
 }
