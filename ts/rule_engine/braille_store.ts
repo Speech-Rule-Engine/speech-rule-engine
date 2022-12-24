@@ -90,7 +90,6 @@ export class EuroStore extends BrailleStore {
   public evaluateString(str: string) {
     const regexp = /(\\[a-z]+)/i;
     let split = str.split(regexp);
-    console.log(split);
     return super.evaluateString(this.cleanup(split).join(''));
   }
 
@@ -104,6 +103,8 @@ export class EuroStore extends BrailleStore {
       }
       let chars = command.split('').map(x => {
         let meaning = SemanticMap.Meaning.get(x);
+        // TODO: Only add space if the preceding element does not end in a
+        //       space!
         return (meaning.type === SemanticType.OPERATOR ||
           meaning.type === SemanticType.RELATION) ? ' ' + x : x;
       });

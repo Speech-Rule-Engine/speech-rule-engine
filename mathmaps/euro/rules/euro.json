@@ -64,14 +64,14 @@
       "Rule",
       "prefix-operation",
       "default",
-      "[n] content/*[1]; [n] children/*[1]",
+      "[m] content/*; [n] children/*[1]",
       "self::prefixop"
     ],
     [
       "Rule",
       "postfix-operation",
       "default",
-      "[n] children/*[1]; [n] content/*[1]",
+      "[n] children/*[1]; [m] content/*",
       "self::postfixop"
     ]
   ]
