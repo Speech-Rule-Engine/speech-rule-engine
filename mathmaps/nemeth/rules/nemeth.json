@@ -1054,6 +1054,13 @@
     [
       "Generator",
       "CGFtensorRules"
+    ],
+    [
+      "Rule",
+      "unit",
+      "default",
+      "[n] text() (engine:style=literary)",
+      "self::identifier[@role=\"unit\"]"
     ]
   ],
   "annotators": [
