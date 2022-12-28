@@ -42,7 +42,7 @@ export function isType(node: SemanticNode, attr: SemanticType): boolean {
  * @param attr The embellished attribute.
  * @returns True if node has that embellished type.
  */
-export function embellishedType(
+function embellishedType(
   node: SemanticNode,
   attr: SemanticType
 ): boolean {
@@ -506,7 +506,7 @@ export function isSimpleFunction(node: SemanticNode): boolean {
  * @param node The node.
  * @returns True if the node is a left brace.
  */
-export function isLeftBrace(node: SemanticNode): boolean {
+function isLeftBrace(node: SemanticNode): boolean {
   const leftBrace = ['{', '﹛', '｛'];
   // ['0x007B', '0xFE5B', '0xFF5B'];
   return !!node && leftBrace.indexOf(node.textContent) !== -1;
@@ -518,7 +518,7 @@ export function isLeftBrace(node: SemanticNode): boolean {
  * @param node The node.
  * @returns True if the node is a right brace.
  */
-export function isRightBrace(node: SemanticNode): boolean {
+function isRightBrace(node: SemanticNode): boolean {
   const rightBrace = ['}', '﹜', '｝'];
   // ['0x007D', '0xFE5C', '0xFF5D'];
   return !!node && rightBrace.indexOf(node.textContent) !== -1;
@@ -537,7 +537,7 @@ export function isSetNode(node: SemanticNode): boolean {
 }
 
 // TODO: Rewrite as dictionary or map!
-export const illegalSingleton_: SemanticType[] = [
+const illegalSingleton: SemanticType[] = [
   SemanticType.PUNCTUATION,
   SemanticType.PUNCTUATED,
   SemanticType.RELSEQ,
@@ -548,7 +548,7 @@ export const illegalSingleton_: SemanticType[] = [
   SemanticType.INFERENCE
 ];
 
-export const scriptedElement_: SemanticType[] = [
+const scriptedElement: SemanticType[] = [
   SemanticType.LIMUPPER,
   SemanticType.LIMLOWER,
   SemanticType.LIMBOTH,
@@ -568,7 +568,7 @@ export const scriptedElement_: SemanticType[] = [
 export function isSingletonSetContent(node: SemanticNode): boolean {
   const type = node.type;
   if (
-    illegalSingleton_.indexOf(type) !== -1 ||
+    illegalSingleton.indexOf(type) !== -1 ||
     (type === SemanticType.INFIXOP && node.role !== SemanticRole.IMPLICIT)
   ) {
     return false;
@@ -578,7 +578,7 @@ export function isSingletonSetContent(node: SemanticNode): boolean {
       ? isSingletonSetContent(node.childNodes[0])
       : true;
   }
-  if (scriptedElement_.indexOf(type) !== -1) {
+  if (scriptedElement.indexOf(type) !== -1) {
     return isSingletonSetContent(node.childNodes[0]);
   }
   return true;
@@ -590,7 +590,7 @@ export function isSingletonSetContent(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the number is an integer or a decimal.
  */
-export function isNumber(node: SemanticNode): boolean {
+function isNumber(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.NUMBER &&
     (node.role === SemanticRole.INTEGER || node.role === SemanticRole.FLOAT)

@@ -145,15 +145,15 @@ export class AuditoryDescription {
     let personality: { [key: string]: string };
     if (this.personality) {
       personality = {};
-      for (const key in this.personality) {
-        personality[key] = this.personality[key];
+      for (const [key, val] of Object.entries(this.personality)) {
+        personality[key] = val;
       }
     }
     let attributes: { [key: string]: string };
     if (this.attributes) {
       attributes = {};
-      for (const key in this.attributes) {
-        attributes[key] = this.attributes[key];
+      for (const [key, val] of Object.entries(this.attributes)) {
+        attributes[key] = val;
       }
     }
     return new AuditoryDescription({

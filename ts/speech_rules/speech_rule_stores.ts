@@ -22,13 +22,13 @@ import { ClearspeakRules } from './clearspeak_rules';
 import { MathspeakRules } from './mathspeak_rules';
 import { BrailleRules, OtherRules, PrefixRules } from './other_rules';
 
-export let INIT_ = false;
+let INIT = false;
 
 /**
  * Initializes the context function mappings for speech rule stores.
  */
 export function init() {
-  if (INIT_) {
+  if (INIT) {
     return;
   }
   MathspeakRules();
@@ -36,5 +36,5 @@ export function init() {
   PrefixRules();
   OtherRules();
   BrailleRules();
-  INIT_ = true;
+  INIT = true;
 }

@@ -301,10 +301,8 @@ export class SemanticNode {
    */
   private annotationXml(): string {
     const result: string[] = [];
-    for (const key in this.annotation) {
-      this.annotation[key].forEach(function (mean) {
-        result.push(key + ':' + mean);
-      });
+    for (const [key, val] of Object.entries(this.annotation)) {
+      val.forEach((mean) => result.push(key + ':' + mean));
     }
     return result.join(';');
   }
@@ -581,8 +579,8 @@ export class SemanticNode {
    * @param node The XML node.
    */
   private addExternalAttributes(node: Element) {
-    for (const attr in this.attributes) {
-      node.setAttribute(attr, this.attributes[attr]);
+    for (const [attr, val] of Object.entries(this.attributes)) {
+      node.setAttribute(attr, val);
     }
   }
 

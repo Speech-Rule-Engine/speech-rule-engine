@@ -35,7 +35,7 @@ const comparators: SemanticComparator[] = [];
 /**
  * @param comparator Adds the comparator
  */
-export function add(comparator: SemanticComparator) {
+function add(comparator: SemanticComparator) {
   comparators.push(comparator);
 }
 
@@ -46,7 +46,7 @@ export function add(comparator: SemanticComparator) {
  * @param meaning2 The second meaning.
  * @returns 0, 1, -1 depending on the partial order.
  */
-export function apply(
+function apply(
   meaning1: SemanticMeaning,
   meaning2: SemanticMeaning
 ): number {
@@ -64,7 +64,7 @@ export function apply(
  *
  * @param meanings List of meaning elements.
  */
-export function sort(meanings: SemanticMeaning[]) {
+function sort(meanings: SemanticMeaning[]) {
   meanings.sort(apply);
 }
 
@@ -89,7 +89,7 @@ export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
   return result;
 }
 
-export class SemanticComparator {
+class SemanticComparator {
   /**
    * @param comparator The actual comparator function.
    * @param type Type restriction for a comparator to work on. If not given it works on any type.

@@ -52,12 +52,20 @@ export function highlighter(
       : rendererInfo.renderer === 'SVG' && rendererInfo.browser === 'v3'
       ? 'SVG-V3'
       : rendererInfo.renderer;
-  const highlighter = new (highlighterMapping_[renderer] ||
-    highlighterMapping_['NativeMML'])();
+  const highlighter = new (highlighterMapping[renderer] ||
+    highlighterMapping['NativeMML'])();
   highlighter.setColor(colorPicker);
   return highlighter;
 }
 
+/**
+ * Updates the color setting for the given highlighter using named colors.
+ * Note, this is only used outside SRE, hence exported!
+ *
+ * @param back Background color as a named color.
+ * @param fore Foreground color as a named color.
+ * @param highlighter The highlighter to update.
+*/
 export function update(
   back: Color,
   fore: Color,
@@ -69,6 +77,7 @@ export function update(
 
 /**
  * Adds highlighter specific events depending on the current Mathjax renderer.
+ * This is used up to MathJax 2.7!
  *
  * @param node  The base node for highlighting.
  * @param events The events to attach given as event
@@ -83,13 +92,13 @@ export function addEvents(
   events: { [key: string]: EventListener },
   rendererInfo: { renderer: string; browser?: string }
 ) {
-  const highlight = highlighterMapping_[rendererInfo.renderer];
+  const highlight = highlighterMapping[rendererInfo.renderer];
   if (highlight) {
     new highlight().addEvents(node, events);
   }
 }
 
-export const highlighterMapping_: { [key: string]: new () => Highlighter } = {
+const highlighterMapping: { [key: string]: new () => Highlighter } = {
   SVG: SvgHighlighter,
   'SVG-V3': SvgV3Highlighter,
   NativeMML: MmlHighlighter,

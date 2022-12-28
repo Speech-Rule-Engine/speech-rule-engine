@@ -22,8 +22,7 @@
     "key": "0023",
     "mappings": {
       "default": {
-        "default": "coixinet",
-        "defaultMP": "signo de número"
+        "default": "coixinet"
       }
     }
   },
@@ -55,8 +54,7 @@
     "key": "0027",
     "mappings": {
       "default": {
-        "default": "prima",
-        "defaultMP": "apóstrofo"
+        "default": "prima"
       }
     }
   },
@@ -152,8 +150,7 @@
     "key": "003F",
     "mappings": {
       "default": {
-        "default": "interrogació dreta",
-        "defaultMP": "cierra interrogación"
+        "default": "interrogació dreta"
       }
     }
   },
@@ -217,8 +214,7 @@
     "key": "00A1",
     "mappings": {
       "default": {
-        "default": "admiració esquerra",
-        "defaultMP": "abre admiración"
+        "default": "admiració esquerra"
       }
     }
   },
@@ -298,8 +294,7 @@
     "key": "00AB",
     "mappings": {
       "default": {
-        "default": "cometes angulars esquerra",
-        "defaultMP": "abre comillas angulares"
+        "default": "cometes angulars esquerra"
       }
     }
   },
@@ -395,8 +390,7 @@
     "key": "00BB",
     "mappings": {
       "default": {
-        "default": "cometes angulars dreta",
-        "defaultMP": "cierra comillas angulares"
+        "default": "cometes angulars dreta"
       }
     }
   },
@@ -404,8 +398,7 @@
     "key": "00BF",
     "mappings": {
       "default": {
-        "default": "interrogació esquerra",
-        "defaultMP": "abre interrogación"
+        "default": "interrogació esquerra"
       }
     }
   },
@@ -757,8 +750,7 @@
     "key": "2039",
     "mappings": {
       "default": {
-        "default": "cometes esquerra",
-        "defaultMP": "abre comillas"
+        "default": "cometes esquerra"
       }
     }
   },
@@ -766,8 +758,7 @@
     "key": "203A",
     "mappings": {
       "default": {
-        "default": "cometes dreta",
-        "defaultMP": "cierra comillas"
+        "default": "cometes dreta"
       }
     }
   },
@@ -1719,8 +1710,7 @@
     "key": "2248",
     "mappings": {
       "default": {
-        "default": "aproximat",
-        "defaultMP": "casi igual a"
+        "default": "aproximat"
       }
     }
   },
@@ -1912,8 +1902,7 @@
     "key": "2260",
     "mappings": {
       "default": {
-        "default": "no és igual a",
-        "defaultMP": "distinto de"
+        "default": "no és igual a"
       }
     }
   },

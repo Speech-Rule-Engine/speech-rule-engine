@@ -42,7 +42,7 @@ export class StringRenderer extends AbstractAudioRenderer {
         continue;
       }
       const join = descr.join;
-      str += typeof join === 'undefined' ? this.getSeparator() : join;
+      str += typeof join === 'undefined' ? this.separator : join;
     }
     return str;
   }

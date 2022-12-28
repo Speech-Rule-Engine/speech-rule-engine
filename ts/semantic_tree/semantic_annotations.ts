@@ -21,6 +21,7 @@
 import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
 import { SemanticNode } from './semantic_node';
 
+// Exported for Tests
 export const annotators: Map<string, SemanticAnnotator> = new Map();
 
 export const visitors: Map<string, SemanticVisitor> = new Map();

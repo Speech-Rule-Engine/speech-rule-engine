@@ -27,7 +27,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 /**
  * Prefix for semantic attributes.
  */
-export const Prefix = 'data-semantic-';
+const Prefix = 'data-semantic-';
 
 // TODO (TS): Do something about the prefix computation.
 /**
@@ -129,7 +129,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  */
-export function setPostfix(mml: Element, semantic: SemanticNode) {
+function setPostfix(mml: Element, semantic: SemanticNode) {
   const postfix = [];
   if (semantic.role === SemanticRole.MGLYPH) {
     postfix.push('image');

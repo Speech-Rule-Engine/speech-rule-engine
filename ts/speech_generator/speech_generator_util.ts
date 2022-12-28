@@ -47,7 +47,7 @@ export function computeSpeech(xml: Element): AuditoryDescription[] {
  * @returns A list of auditory descriptions
  *     for the node.
  */
-export function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
+function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
   const tree = SemanticTree.fromNode(semantic);
   return computeSpeech(tree.xml());
 }
@@ -134,7 +134,7 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
  * @returns The prefix speech string.
  */
 export function retrievePrefix(semantic: SemanticNode): string {
-  const descrs = computePrefix_(semantic);
+  const descrs = computePrefix(semantic);
   return AuralRendering.markup(descrs);
 }
 
@@ -145,7 +145,7 @@ export function retrievePrefix(semantic: SemanticNode): string {
  * @returns A list of auditory descriptions
  *     for the prefix.
  */
-export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
+function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
   const tree = SemanticTree.fromRoot(semantic);
   const nodes = XpathUtil.evalXPath(
     './/*[@id="' + semantic.id + '"]',
@@ -157,7 +157,7 @@ export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
     // tree is actually a DAG: While elements can appear as children only once,
     // they can appear in multiple content nodes. XML serialization can
     // therefore not create unique ids.
-    node = nodeAtPosition_(semantic, nodes) || node;
+    node = nodeAtPosition(semantic, nodes) || node;
   }
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
@@ -182,7 +182,7 @@ export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
  * @param nodes The XML nodes.
  * @returns The node at the exact tree position of the semantic node.
  */
-export function nodeAtPosition_(
+function nodeAtPosition(
   semantic: SemanticNode,
   nodes: Element[]
 ): Element {
@@ -288,7 +288,7 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * @returns The summary speech string.
  */
 export function retrieveSummary(node: Element): string {
-  const descrs = computeSummary_(node);
+  const descrs = computeSummary(node);
   return AuralRendering.markup(descrs);
 }
 
@@ -299,7 +299,7 @@ export function retrieveSummary(node: Element): string {
  * @returns A list of auditory descriptions
  *     for the summary.
  */
-export function computeSummary_(node: Element): AuditoryDescription[] {
+function computeSummary(node: Element): AuditoryDescription[] {
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
         { modality: 'summary', strict: false, speech: true },

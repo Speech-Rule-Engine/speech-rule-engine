@@ -6,8 +6,7 @@
     "key": "0028",
     "mappings": {
       "default": {
-        "default": "parèntesi esquerre",
-        "defaultMP": "paréntesis"
+        "default": "parèntesi esquerre"
       }
     }
   },
@@ -15,8 +14,7 @@
     "key": "0029",
     "mappings": {
       "default": {
-        "default": "parèntesi dret",
-        "defaultMP": "cierra paréntesis"
+        "default": "parèntesi dret"
       }
     }
   },
@@ -24,8 +22,7 @@
     "key": "005B",
     "mappings": {
       "default": {
-        "default": "claudàtor esquerre",
-        "defaultMP": "abre corchetes"
+        "default": "claudàtor esquerre"
       }
     }
   },
@@ -33,8 +30,7 @@
     "key": "005D",
     "mappings": {
       "default": {
-        "default": "claudàtor dret",
-        "defaultMP": "cierra corchetes"
+        "default": "claudàtor dret"
       }
     }
   },
@@ -42,8 +38,7 @@
     "key": "007B",
     "mappings": {
       "default": {
-        "default": "clau esquerra",
-        "defaultMP": "abre llaves"
+        "default": "clau esquerra"
       }
     }
   },
@@ -51,8 +46,7 @@
     "key": "007D",
     "mappings": {
       "default": {
-        "default": "clau dreta",
-        "defaultMP": "cierra llaves"
+        "default": "clau dreta"
       }
     }
   },
@@ -1020,8 +1014,7 @@
     "key": "300B",
     "mappings": {
       "default": {
-        "default": "parèntesi angular doble dret",
-        "defaultMP": "cierra paréntesis angular doble"
+        "default": "parèntesi angular doble dret"
       }
     }
   },
@@ -1133,8 +1126,7 @@
     "key": "301B",
     "mappings": {
       "default": {
-        "default": "claudàtor buit dret",
-        "defaultMP": "cierra corchete vacío"
+        "default": "claudàtor buit dret"
       }
     }
   },

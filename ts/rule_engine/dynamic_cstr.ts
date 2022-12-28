@@ -37,8 +37,6 @@ export type AxisProperties = { [key: string]: string[] };
 
 export type AxisOrder = Axis[];
 
-export type AxisValues = { [key: string]: boolean };
-
 export type AxisMap = { [key: string]: string };
 
 export class DynamicProperties {

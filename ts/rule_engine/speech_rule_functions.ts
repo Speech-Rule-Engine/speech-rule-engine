@@ -145,12 +145,6 @@ export class CustomGenerators extends FunctionsStore<CustomGenerator> {
   }
 }
 
-export type SpeechRuleStore =
-  | CustomQueries
-  | CustomStrings
-  | ContextFunctions
-  | CustomGenerators;
-
 export type SpeechRuleFunction =
   | CustomQuery
   | CustomString

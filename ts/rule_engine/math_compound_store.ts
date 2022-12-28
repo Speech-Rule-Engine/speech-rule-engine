@@ -77,7 +77,7 @@ export function setSiPrefixes(prefixes: SiJson) {
 /**
  * A map of efficient substores.
  */
-const subStores: Map<string, MathSimpleStore> = new Map();
+export const subStores: Map<string, MathSimpleStore> = new Map();
 
 /**
  * A map to hold elements symbols have in common across all locales.

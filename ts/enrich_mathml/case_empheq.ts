@@ -108,7 +108,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
         }
         return newNode;
       });
-      EnrichMathml.setOperatorAttribute_(node, newContent);
+      EnrichMathml.setOperatorAttribute(node, newContent);
       return;
     }
     node.contentNodes.forEach(this.recurseToTable.bind(this));

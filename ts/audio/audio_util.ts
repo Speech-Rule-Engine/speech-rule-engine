@@ -336,7 +336,7 @@ export function isPauseElement(element: Markup): boolean {
  * @param element An element of the markup list.
  * @returns True if this is a span element.
  */
-export function isSpanElement(element: Markup): boolean {
+function isSpanElement(element: Markup): boolean {
   const keys = Object.keys(element);
   return (
     typeof element === 'object' &&

@@ -51,7 +51,7 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
 export function setSeparator(sep: string) {
   const renderer = renderers.get(Engine.getInstance().markup);
   if (renderer) {
-    renderer.setSeparator(sep);
+    renderer.separator = sep;
   }
 }
 
@@ -60,7 +60,7 @@ export function setSeparator(sep: string) {
  */
 export function getSeparator() {
   const renderer = renderers.get(Engine.getInstance().markup);
-  return renderer ? renderer.getSeparator() : '';
+  return renderer ? renderer.separator : '';
 }
 
 /**

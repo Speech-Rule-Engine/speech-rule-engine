@@ -69,7 +69,7 @@ const SCRIPT_ELEMENTS: string[] = [
  * @param node The node to test.
  * @returns True if it is the right most unit in that subtree.
  */
-export function rightMostUnit(node: Element): boolean {
+function rightMostUnit(node: Element): boolean {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
       return true;
@@ -90,7 +90,7 @@ export function rightMostUnit(node: Element): boolean {
  * @param node The node to test.
  * @returns True if it is the left most unit in that subtree.
  */
-export function leftMostUnit(node: Element): boolean {
+function leftMostUnit(node: Element): boolean {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
       return true;

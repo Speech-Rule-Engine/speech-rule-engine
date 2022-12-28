@@ -171,14 +171,14 @@ export class SpeechRuleEngine {
   ): AuditoryDescription[] {
     const engine = Engine.getInstance() as any;
     const save: { [feature: string]: string | boolean } = {};
-    for (const key in settings) {
+    for (const [key, val] of Object.entries(settings)) {
       save[key] = engine[key];
-      engine[key] = settings[key];
+      engine[key] = val;
     }
     engine.setDynamicCstr();
     const result = callback();
-    for (const key in save) {
-      engine[key] = save[key];
+    for (const [key, val] of Object.entries(save)) {
+      engine[key] = val;
     }
     engine.setDynamicCstr();
     return result;
@@ -215,12 +215,11 @@ export class SpeechRuleEngine {
     grammar: GrammarState
   ) {
     const assignment: GrammarState = {};
-    for (const key in grammar) {
-      const value = grammar[key];
+    for (const [key, val] of Object.entries(grammar)) {
       assignment[key] =
-        typeof value === 'string'
-        ? context.constructString(node, value)
-        : value;
+        typeof val === 'string'
+        ? context.constructString(node, val)
+        : val;
     }
     Grammar.getInstance().pushState(assignment);
   }
@@ -628,16 +627,16 @@ export class SpeechRuleEngine {
       return descr;
     }
     const descrPersonality = descr['personality'];
-    for (const p in personality) {
+    for (const [key, val] of Object.entries(personality)) {
       // This could be capped by some upper and lower bound.
       if (
-        descrPersonality[p] &&
-        typeof descrPersonality[p] == 'number' &&
-        typeof personality[p] == 'number'
+        descrPersonality[key] &&
+        typeof descrPersonality[key] == 'number' &&
+        typeof val == 'number'
       ) {
-        descrPersonality[p] = descrPersonality[p] + personality[p];
-      } else if (!descrPersonality[p]) {
-        descrPersonality[p] = personality[p];
+        descrPersonality[key] = descrPersonality[key] + val;
+      } else if (!descrPersonality[key]) {
+        descrPersonality[key] = val;
       }
     }
     return descr;
@@ -816,7 +815,7 @@ function getStore(locale: string, modality: string): BaseRuleStore {
  * @param set The JSON structure of the rule set.
  * @returns The newly create store.
  */
-export function storeFactory(set: RulesJson) {
+function storeFactory(set: RulesJson) {
   const name = `${set.locale}.${set.modality}.${set.domain}`;
   if (set.kind === 'actions') {
     const store = stores.get(name);
