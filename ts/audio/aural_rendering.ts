@@ -30,12 +30,13 @@ import { SableRenderer } from './sable_renderer';
 import { Span } from './span';
 import { SsmlRenderer } from './ssml_renderer';
 import { SsmlStepRenderer } from './ssml_step_renderer';
-import { StringRenderer } from './string_renderer';
+import { CountingRenderer, StringRenderer } from './string_renderer';
 import { XmlRenderer } from './xml_renderer';
 
 const xmlInstance = new SsmlRenderer();
 const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
   [EngineConst.Markup.NONE, new StringRenderer()],
+  [EngineConst.Markup.COUNTING, new CountingRenderer()],
   [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
   [EngineConst.Markup.LAYOUT, new LayoutRenderer()],
   [EngineConst.Markup.ACSS, new AcssRenderer()],

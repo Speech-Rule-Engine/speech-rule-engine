@@ -65,6 +65,7 @@ export enum Speech {
 export enum Markup {
   NONE = 'none',
   LAYOUT = 'layout',
+  COUNTING = 'counting',
   PUNCTUATION = 'punctuation',
   SSML = 'ssml',
   SSML_STEP = 'ssml_step',
