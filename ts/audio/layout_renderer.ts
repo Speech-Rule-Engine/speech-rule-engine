@@ -35,6 +35,7 @@ export class LayoutRenderer extends XmlRenderer {
    * @override
    */
   public finalize(str: string) {
+    setRelValues(this.values.get('rel'));
     return setTwoDim(str);
   }
 
@@ -64,6 +65,7 @@ export class LayoutRenderer extends XmlRenderer {
    */
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
+    this.values.clear();
     const result = [];
     let content: AuditoryDescription[] = [];
     for (const descr of descrs) {
@@ -73,16 +75,17 @@ export class LayoutRenderer extends XmlRenderer {
       }
       result.push(this.processContent(content));
       content = [];
-      const value = descr.layout;
-      if (value.match(/^begin/)) {
-        result.push('<' + value.replace(/^begin/, '') + '>');
+      const [pref, layout, value] = this.layoutValue(descr.layout);
+      if (pref === 'begin') {
+        result.push('<' + layout +
+          (value ? ` value="${value}"` : '') +  '>');
         continue;
       }
-      if (value.match(/^end/)) {
-        result.push('</' + value.replace(/^end/, '') + '>');
+      if (pref === 'end') {
+        result.push('</' + layout + '>');
         continue;
       }
-      console.warn('Something went wrong with layout markup: ' + value);
+      console.warn('Something went wrong with layout markup: ' + layout);
     }
     result.push(this.processContent(content));
     return result.join('');
@@ -102,6 +105,23 @@ export class LayoutRenderer extends XmlRenderer {
     }
     return result.join(''); // this.merge(result);
   }
+
+  private values: Map<string, {[key: string]: boolean}> = new Map();
+
+  private layoutValue(layout: string) {
+    const match = layout.match(/^(begin|end|)(.*\D)(\d*)$/);
+    const value = match[3];
+    if (!value) {
+      return [match[1], match[2], ''];
+    }
+    layout = match[2];
+    if (!this.values.has(layout)) {
+      this.values.set(layout, {});
+    }
+    this.values.get(layout)[value] = true;
+    return [match[1], layout, value];
+  }
+
 }
 
 // Postprocessing
@@ -117,7 +137,10 @@ const handlers: { [key: string]: (node: Element) => string } = {
   ROW: recurseTree,
   FRACTION: handleFraction,
   NUMERATOR: handleFractionPart,
-  DENOMINATOR: handleFractionPart
+  DENOMINATOR: handleFractionPart,
+  // Processing for linebreaking
+  REL: handleRelation,
+  OP: handleRelation
 };
 
 /**
@@ -128,8 +151,20 @@ const handlers: { [key: string]: (node: Element) => string } = {
  */
 function applyHandler(element: Element): string {
   const tag = DomUtil.tagName(element as Element);
+  // Numerical?
   const handler = handlers[tag];
   return handler ? handler(element) : element.textContent;
+}
+
+
+const relValues = new Map();
+
+function setRelValues(values: {[key: string]: boolean}) {
+  relValues.clear();
+  const keys = Object.keys(values).map(x => parseInt(x)).sort();
+  for (let i = 0, key; key = keys[i]; i++) {
+    relValues.set(key, i + 1);
+  }
 }
 
 /**
@@ -565,4 +600,10 @@ function handleFractionPart(prt: Element): string {
     }
   }
   return content;
+}
+
+// This implements line breaking for concepts of 14.12.1 Priority List.
+function handleRelation(rel: Element): string {
+  let value = relValues.get(parseInt(rel.getAttribute('value')));
+  return  (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
 }
