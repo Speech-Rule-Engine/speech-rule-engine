@@ -101,14 +101,19 @@ export class EuroStore extends BrailleStore {
         result.push(custom ? custom : command);
         continue;
       }
-      let chars = command.split('').map(x => {
+      command.split('').forEach(x => {
         let meaning = SemanticMap.Meaning.get(x);
-        // TODO: Only add space if the preceding element does not end in a
-        //       space!
-        return (meaning.type === SemanticType.OPERATOR ||
-          meaning.type === SemanticType.RELATION) ? ' ' + x : x;
+        if (meaning.type === SemanticType.OPERATOR ||
+          meaning.type === SemanticType.RELATION) {
+          let last = result.pop();
+          if (last) {
+            // Makes sure we only have one space before relations/operators.
+            result.push(last.trimEnd());
+            result.push('⠀');
+          }
+        }
+        result.push(x);
       });
-      result = result.concat(chars);
     }
     return result;
   }
