@@ -197,7 +197,6 @@ function initMeaning() {
     {
       set: [
         '23',
-        '25',
         '26',
         '40',
         '5c',
@@ -208,8 +207,6 @@ function initMeaning() {
         '2017',
         ['2022', '2025'],
         '2027',
-        '2030',
-        '2031',
         '203b',
         '203c',
         ['2041', '2043'],
@@ -226,10 +223,8 @@ function initMeaning() {
         'fe5f',
         'fe60',
         'fe68',
-        'fe6a',
         'fe6b',
         'ff03',
-        'ff05',
         'ff06',
         'ff0f',
         'ff20',
@@ -562,6 +557,19 @@ function initMeaning() {
       ],
       type: SemanticType.OPERATOR,
       role: SemanticRole.DIVISION
+    },
+
+    // postfix operators
+    {
+      set: [
+        '25',
+        '2030',
+        '2031',
+        'ff05',
+        'fe6a'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.POSTFIXOP
     },
 
     // prefix operators

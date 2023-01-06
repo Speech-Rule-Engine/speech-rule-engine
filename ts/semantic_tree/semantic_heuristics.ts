@@ -386,7 +386,8 @@ function recurseJuxtaposition(
   const left = acc.pop();
   const op = ops.shift();
   const first = elements.shift();
-  if (SemanticPred.isImplicitOp(op)) {
+  if (op.type === SemanticType.INFIXOP &&
+    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)) {
     Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
     const right = (left ? [left, op] : [op]).concat(first);
@@ -502,7 +503,7 @@ SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'intvar_from_fraction',
     integralFractionArg,
-    (node: SemanticNode) => {
+   (node: SemanticNode) => {
       if (node.type !== SemanticType.INTEGRAL) return false;
       let [, integrand, intvar] = node.childNodes;
       return intvar.type === SemanticType.EMPTY &&

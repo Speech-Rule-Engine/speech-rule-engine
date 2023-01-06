@@ -269,6 +269,12 @@ function propagateNumber(
     info.enclosed = true;
     return ['', info];
   }
+  if (node.type === SemanticType.PREFIXOP &&
+    node.role !== SemanticRole.GEOMETRY &&
+    node.role !== SemanticRole.NEGATIVE) {
+    info.number = false;
+    return ['', info];
+  }
   if (checkParent(node, info)) {
     info.number = true;
     info.enclosed = false;

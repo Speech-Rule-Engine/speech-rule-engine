@@ -1011,7 +1011,7 @@ export default class SemanticProcessor {
   // ) {
   //   relations.some(relation => SemanticPred.isRole(node, relation));
   // }
-  
+
   /**
    * Check for a particular relations.
    *
@@ -1967,7 +1967,7 @@ export default class SemanticProcessor {
   /**
    * Splits a list of prefix operations into partitions that can be combined,
    * and those that are treated special as singletons.
-   * 
+   *
    * @param prefixes The list of prefix operations.
    * @return The partitioned list.
    */
@@ -2230,15 +2230,49 @@ export default class SemanticProcessor {
       'convert_juxtaposition',
       nodes
     ) as SemanticNode[];
-
+    
     const split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
     // At this point, we know that split.head is not empty!
-    const node = SemanticProcessor.getInstance().prefixNode_(
-      SemanticProcessor.getInstance().implicitNode(
-        split.head as SemanticNode[]
-      ),
+    const node = SemanticProcessor.getInstance().wrapFactor(prefix, split);
+    return SemanticProcessor.getInstance().addFactor(node, split);
+  }
+
+  private wrapPostfix(split: SemanticUtil.Slice) {
+    // Dealing with explicit postfix operators.
+    //
+    // TODO: Currently this wraps into separate operators. We could collect them first.
+    if (split.div?.role === SemanticRole.POSTFIXOP) {
+      if (!split.tail.length || split.tail[0].type === SemanticType.OPERATOR) {
+        split.head = [SemanticProcessor.getInstance().postfixNode_(
+          SemanticProcessor.getInstance().implicitNode(
+            split.head as SemanticNode[]
+          ),
+          [split.div]
+        )];
+        split.div = split.tail.shift();
+        SemanticProcessor.getInstance().wrapPostfix(split);
+      } else {
+        split.div.role = SemanticRole.DIVISION;
+      }
+    }
+  }
+
+  /**
+   * Adds a factor to the current operator tree. First deals with postfix and
+   * prefix nodes as well as rewriting of unit products.
+   *
+   * @param prefix A list of prefix nodes.
+   * @param split The split structure containing head, operator, and tail.
+   */
+  private wrapFactor(prefix: SemanticNode[], split: SemanticUtil.Slice) {
+    SemanticProcessor.getInstance().wrapPostfix(split);
+    return SemanticProcessor.getInstance().prefixNode_(
+      SemanticProcessor.getInstance().implicitNode(split.head),
       prefix
     );
+  }
+
+  private addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
     if (!split.div) {
       // Propagate unit over multiplications.
       if (SemanticPred.isUnitProduct(node)) {
@@ -2270,57 +2304,44 @@ export default class SemanticProcessor {
     nodes: SemanticNode[],
     root: SemanticNode,
     lastop: SemanticNode,
-    opt_prefixes?: SemanticNode[]
+    prefix: SemanticNode[] = []
   ): SemanticNode {
-    const prefixes = opt_prefixes || [];
-
     if (nodes.length === 0) {
       // Left over prefixes become postfixes.
-      prefixes.unshift(lastop);
+      prefix.unshift(lastop);
       if (root.type === SemanticType.INFIXOP) {
         // We assume prefixes bind stronger than postfixes.
         const node = SemanticProcessor.getInstance().postfixNode_(
           // Here we know that the childNodes are not empty!
-          root.childNodes.pop() as SemanticNode,
-          prefixes
+          root.childNodes.pop(),
+          prefix
         );
         root.appendChild(node);
         return root;
       }
-      return SemanticProcessor.getInstance().postfixNode_(root, prefixes);
+      return SemanticProcessor.getInstance().postfixNode_(root, prefix);
     }
 
     const split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
 
     if (split.head.length === 0) {
-      prefixes.push(split.div);
+      prefix.push(split.div);
       return SemanticProcessor.getInstance().operationsTree_(
         split.tail,
         root,
         lastop,
-        prefixes
+        prefix
       );
     }
 
-    const node = SemanticProcessor.getInstance().prefixNode_(
-      SemanticProcessor.getInstance().implicitNode(split.head),
-      prefixes
-    );
+    // Dealing with explicit postfix operators.
+    const node = SemanticProcessor.getInstance().wrapFactor(prefix, split);
     const newNode = SemanticProcessor.getInstance().appendOperand_(
       root,
       lastop,
       node
     );
-    if (!split.div) {
-      return newNode;
-    }
-
-    return SemanticProcessor.getInstance().operationsTree_(
-      split.tail,
-      newNode,
-      split.div,
-      []
-    );
+    return SemanticProcessor.getInstance().addFactor(newNode, split);
   }
 
   // TODO (sorge) The following four functions could be combined into
