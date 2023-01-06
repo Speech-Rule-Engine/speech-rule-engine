@@ -587,7 +587,8 @@
       "name(following::*[1]/../..)!=\"relseq\"",
       "name(following::*[1]/../..)!=\"multirel\"",
       "name(following::*[1])!=\"punctuation\"",
-      "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
+      "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])",
+      "not(children/*[2][@role=\"prime\"])"
     ],
     [
       "Alias",
@@ -984,13 +985,9 @@
       "Precondition",
       "punctuation-comma",
       "default",
-      "self::punctuation",
+      "self::punctuation[@role=\"comma\" or @role=\"semicolon\"]",
       "parent::*/parent::punctuated",
-      "following-sibling::*",
-      "@role!=\"fullstop\"",
-      "@role!=\"vbar\"",
-      "@role!=\"colon\"",
-      "@role!=\"ellipsis\""
+      "following-sibling::*"
     ],
     [
       "Precondition",
@@ -1024,6 +1021,7 @@
       "punctuation-ellipses-left",
       "default",
       "self::punctuation[@role=\"ellipsis\"]",
+      "preceding-sibling::*",
       "name(preceding-sibling::*[1])!=\"punctuation\""
     ],
     [
@@ -1052,6 +1050,13 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
+      "Rule",
+      "space",
+      "default",
+      "[t] \"⠀\"",
+      "self::text[@role=\"space\"]"
+    ],
+    [
       "Generator",
       "CGFtensorRules"
     ],
@@ -1061,7 +1066,23 @@
       "default",
       "[n] text() (engine:style=literary)",
       "self::identifier[@role=\"unit\"]"
+    ],
+    [
+      "Rule",
+      "question-underscore",
+      "default",
+      "[t] \"⠿\"",
+      "self::underscore[@role=\"question\"]"
+    ],
+    [
+      "Rule",
+      "question-rel",
+      "default",
+      "[t] \"⠀⠿⠀\"",
+      "self::punctuation[@role=\"question\"]",
+      "following-sibling::infixop or preceding-sibling::infixop"
     ]
+
   ],
   "annotators": [
     "number"
