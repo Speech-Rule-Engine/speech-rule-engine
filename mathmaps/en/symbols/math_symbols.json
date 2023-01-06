@@ -92,9 +92,6 @@
     "mappings": {
       "default": {
         "default": "minus"
-      },
-      "mathspeak": {
-        "default": "hyphen"
       }
     }
   },
