@@ -145,7 +145,7 @@ export default class SemanticProcessor {
   public static number(node: SemanticNode) {
     if (
       node.type === SemanticType.UNKNOWN ||
-      // In case of latin numbers etc.
+      // In case of Roman numerals etc.
       node.type === SemanticType.IDENTIFIER
     ) {
       node.type = SemanticType.NUMBER;
@@ -807,24 +807,36 @@ export default class SemanticProcessor {
     if (node.font !== SemanticFont.UNKNOWN) {
       return;
     }
+    SemanticProcessor.compSemantics(node, 'font', SemanticFont);
+  }
+
+  /**
+   * Computes semantics entries for expression composed of multiple elements.
+   *
+   * @param node The semantic node to update.
+   * @param field The field as in type, role, font.
+   * @param sem The Semantics enum element to use, as in SemanticType,
+   *     SemanticRole, SemanticFont
+   */
+  public static compSemantics(node: SemanticNode, field: string, sem: any) {
     const content = [...node.textContent];
     const meaning = content.map(x => SemanticMap.Meaning.get(x));
-    const singleFont = meaning.reduce(function (prev, curr) {
+    const single = meaning.reduce(function (prev, curr: any) {
       if (
         !prev ||
-        !curr.font ||
-        curr.font === SemanticFont.UNKNOWN ||
-        curr.font === prev
+        !curr[field] ||
+        curr[field] === sem.UNKNOWN ||
+        curr[field] === prev
       ) {
         return prev;
       }
-      if (prev === SemanticFont.UNKNOWN) {
-        return curr.font;
+      if (prev === sem.UNKNOWN) {
+        return curr[field];
       }
       return null;
-    }, SemanticFont.UNKNOWN);
-    if (singleFont) {
-      node.font = singleFont;
+    }, sem.UNKNOWN);
+    if (single) {
+      (node as any)[field] = single;
     }
   }
 

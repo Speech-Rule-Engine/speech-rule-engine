@@ -22,7 +22,7 @@
 
 import { Debugger } from '../common/debugger';
 import Engine from '../common/engine';
-import { NamedSymbol, SemanticMap } from './semantic_attr';
+import { NamedSymbol } from './semantic_attr';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
 import {
   SemanticTreeHeuristic,
@@ -143,26 +143,8 @@ SemanticHeuristics.add(
     if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
       return;
     }
-    // TODO: Combine with lines in numberRole_/exprFont_?
-    const content = [...node.textContent];
-    const meaning = content.map(x => SemanticMap.Meaning.get(x));
-    const singleRole = meaning.reduce(function (prev, curr) {
-      if (
-        !prev ||
-        !curr.role ||
-        curr.role === SemanticRole.UNKNOWN ||
-        curr.role === prev
-      ) {
-        return prev;
-      }
-      if (prev === SemanticRole.UNKNOWN) {
-        return curr.role;
-      }
-      return null;
-    }, SemanticRole.UNKNOWN);
-    if (singleRole) {
-      node.role = singleRole;
-    }
+    SemanticProcessor.compSemantics(node, 'role', SemanticRole);
+    SemanticProcessor.compSemantics(node, 'type', SemanticType);
   })
 );
 
