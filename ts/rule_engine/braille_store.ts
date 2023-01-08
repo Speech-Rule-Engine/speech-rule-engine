@@ -90,32 +90,74 @@ export class EuroStore extends BrailleStore {
   public evaluateString(str: string) {
     const regexp = /(\\[a-z]+)/i;
     let split = str.split(regexp);
-    return super.evaluateString(this.cleanup(split).join(''));
+    let cleaned = this.cleanup(split);
+    return super.evaluateString(cleaned);
   }
 
-  protected cleanup(commands: string[]): string[] {
-    let result: string[] = [];
+
+  /**
+   * Cleaning up the command sequence:
+   * * Remove unnecessary spaces.
+   * * Replace commands if necessary.
+   * * Add spaces before relations and operators.
+   *
+   * @param commands The list of commands and intermediate strings.
+   * @return A string with the cleanedup latex expression.
+   */
+  protected cleanup(commands: string[]): string {
+    let cleaned: string[] = [];
+    let intext = false;
+    let lastcom = false;
     for (let command of commands) {
       if (command.match(/^\\/)) {
-        let custom = this.customCommands[command];
-        result.push(custom ? custom : command);
+        if (command === '\\text') {
+          intext = true;
+        }
+        if (this.addSpace(SemanticMap.LatexCommands.get(command))) {
+          cleaned.push(' ');
+        }
+        command = this.customCommands[command] || command;
+        lastcom = !!command.match(/^\\/);
+        cleaned.push(command);
         continue;
       }
-      command.split('').forEach(x => {
-        let meaning = SemanticMap.Meaning.get(x);
-        if (meaning.type === SemanticType.OPERATOR ||
-          meaning.type === SemanticType.RELATION) {
-          let last = result.pop();
-          if (last) {
-            // Makes sure we only have one space before relations/operators.
-            result.push(last.trimEnd());
-            result.push('⠀');
-          }
+      let rest = command.split('');
+      for (let char of rest) {
+        // TODO (Euro): This is still rather naive.
+        if (intext) {
+          cleaned.push(char);
+          intext = char !== '}';
+          lastcom = false;
+          continue;
         }
-        result.push(x);
-      });
+        if (char.match(/[a-z]/i) && lastcom) {
+          lastcom = false;
+          cleaned.push(' ');
+          cleaned.push(char);
+          continue;
+        }
+        if (char.match(/\s/)) continue;
+        if (this.addSpace(char)) {
+          cleaned.push(' ');
+        }
+        cleaned.push(char);
+        lastcom = false;
+      }
     }
-    return result;
+    return cleaned.join('');
+  }
+
+  /**
+   * Determines if spaces should be added.
+   *
+   * @param char The character.
+   * @return True if a space should be added before the character.
+   */
+  private addSpace(char: string): boolean {
+    if (!char) return false;
+    let meaning = SemanticMap.Meaning.get(char);
+    return meaning.type === SemanticType.OPERATOR ||
+      meaning.type === SemanticType.RELATION;
   }
 
 }
