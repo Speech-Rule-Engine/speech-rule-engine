@@ -19,7 +19,7 @@
     ],
     [
       "Rule",
-      "nolatex",
+      "nolatex-fallback",
       "default",
       "[m] children/* (separator:\"⠀\")",
       "self::*",

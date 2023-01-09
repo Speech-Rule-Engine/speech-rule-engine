@@ -315,7 +315,7 @@ export class SemanticNode {
   public attributesXml(): string {
     const result: string[] = [];
     for (const [key, value] of Object.entries(this.attributes)) {
-      result.push(key + ':' + value);
+      result.push(key + ':' + SemanticNode.escapeValue(value));
     }
     return result.join(';');
   }
@@ -584,6 +584,10 @@ export class SemanticNode {
     }
   }
 
+  private static escapeValue(value: string): string {
+    return value.replace(/;/g, '\\0003B');
+  }
+
   /**
    * Parses a attributes string as given, for example, in an attribute.
    *
@@ -593,9 +597,9 @@ export class SemanticNode {
     if (!stateStr) return;
     const attributes = stateStr.split(';');
     for (let i = 0, l = attributes.length; i < l; i++) {
-      const [key, value] = attributes[i].split(':');
+      const [key, ...values] = attributes[i].split(':');
       if (key) {
-        this.attributes[key] = value;
+        this.attributes[key] = values.join('').replace(/\\0003B/g, ';');
       }
     }
   }
