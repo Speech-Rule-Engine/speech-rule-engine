@@ -22,7 +22,7 @@ import { AuditoryDescription } from '../audio/auditory_description';
 import { Span } from '../audio/span';
 import * as DomUtil from '../common/dom_util';
 import * as XpathUtil from '../common/xpath_util';
-import { Grammar } from '../rule_engine/grammar';
+import { Grammar, correctFont } from '../rule_engine/grammar';
 import Engine from '../common/engine';
 import { register } from '../semantic_tree/semantic_annotations';
 import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
@@ -389,3 +389,9 @@ export function implicitIterator(
     );
   };
 }
+
+function ignoreEnglish(text: string) {
+  return correctFont(text, LOCALE.ALPHABETS.languagePrefix.english);
+}
+
+Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);

@@ -102,7 +102,7 @@
     [
       "Action",
       "english-letter",
-      "[n] text() (layout:english)"
+      "[n] text() (layout:english, grammar:ignoreEnglish)"
     ],
     [
       "Action",
@@ -303,11 +303,6 @@
       "Action",
       "subscript-simple",
       "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "subscript-simple-baseline",
-      "[n] children/*[1]; [n] children/*[2]; [t] CSFbaseline"
     ],
     [
       "Action",

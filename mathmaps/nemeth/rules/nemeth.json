@@ -174,7 +174,8 @@
       "english-letter",
       "default",
       "self::identifier",
-      "@role=\"latinletter\""
+      "@role=\"latinletter\"",
+      "@font=\"italic\" or @font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\""
     ],
     [
       "Precondition",
@@ -499,17 +500,6 @@
       "subscript-simple",
       "default",
       "self::subscript[@role!=\"unknown\"]",
-      "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
-      "name(./children/*[2])=\"number\"",
-      "./children/*[2][@role!=\"mixed\"]",
-      "./children/*[2][@role!=\"othernumber\"]"
-    ],
-    [
-      "Precondition",
-      "subscript-simple-baseline",
-      "default",
-      "self::subscript[@role!=\"unknown\"]",
-      "following-sibling::*",
       "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
       "name(./children/*[2])=\"number\"",
       "./children/*[2][@role!=\"mixed\"]",
@@ -1081,8 +1071,23 @@
       "[t] \"⠀⠿⠀\"",
       "self::punctuation[@role=\"question\"]",
       "following-sibling::infixop or preceding-sibling::infixop"
+    ],
+    [
+      "Rule",
+      "relation",
+      "default",
+      "[m] CQFspaceoutNumber (separator:\"⠐\")",
+      "self::relation",
+      "string-length(text())>1"
+    ],
+    [
+      "Rule",
+      "operator",
+      "default",
+      "[m] CQFspaceoutNumber (separator:\"⠐\")",
+      "self::operator",
+      "string-length(text())>1"
     ]
-
   ],
   "annotators": [
     "number"

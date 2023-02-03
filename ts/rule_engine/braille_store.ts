@@ -90,7 +90,6 @@ export class EuroStore extends BrailleStore {
   public evaluateString(str: string) {
     const regexp = /(\\[a-z]+)/i;
     let split = str.split(regexp);
-    console.log(split);
     return super.evaluateString(this.cleanup(split).join(''));
   }
 

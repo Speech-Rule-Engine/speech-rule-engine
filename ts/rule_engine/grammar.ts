@@ -418,7 +418,7 @@ export class Grammar {
  * @param correction The correction string to be applied.
  * @returns The cleaned up string.
  */
-function correctFont(text: string, correction: string): string {
+export function correctFont(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
