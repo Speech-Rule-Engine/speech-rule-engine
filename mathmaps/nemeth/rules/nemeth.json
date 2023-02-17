@@ -277,14 +277,14 @@
       "Precondition",
       "factorial-space",
       "default",
-      "self::punctuation[text()=\"!\"]",
+      "self::punctuation[@role=\"exclamation\"]",
       "name(preceding-sibling::*[1])!=\"text\""
     ],
     [
       "Precondition",
       "factorial",
       "default",
-      "self::punctuation[text()=\"!\"]",
+      "self::punctuation[@role=\"exclamation\"]",
       "name(preceding-sibling::*[1])!=\"text\"",
       "not(following::*) or name(following::*)=\"punctuation\""
     ],
