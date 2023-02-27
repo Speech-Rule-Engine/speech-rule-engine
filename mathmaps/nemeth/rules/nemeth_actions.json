@@ -522,7 +522,7 @@
     [
       "Action",
       "punctuated",
-      "[m] children/*"
+      "[m] children/* (grammar:punctuated)"
     ],
     [
       "Action",

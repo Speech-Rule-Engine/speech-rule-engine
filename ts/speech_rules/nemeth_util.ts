@@ -395,3 +395,5 @@ function ignoreEnglish(text: string) {
 }
 
 Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
+
+Grammar.getInstance().setPreprocessor('punctuation', (x: string) => {console.log('hhh: ' + x); return x})

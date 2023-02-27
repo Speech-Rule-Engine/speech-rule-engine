@@ -1924,7 +1924,7 @@ export default class SemanticProcessor {
       .map(function (x) {
         return SemanticUtil.getEmbellishedInner(x).textContent;
       })
-      .join(' ');
+      .join('');
     const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       type,
       [inner],
@@ -1932,7 +1932,7 @@ export default class SemanticProcessor {
       content
     );
     if (nodeList.length > 1) {
-      newNode.role = SemanticRole.MULTIOP;
+        newNode.role = SemanticRole.MULTIOP;
     }
     return newNode;
   }
@@ -2225,6 +2225,8 @@ export default class SemanticProcessor {
       return nodes[0];
     }
 
+    // TODO (nemeth): Here we could convert dashes to identifiers.
+    
     const prefix = [];
     while (nodes.length > 0 && SemanticPred.isOperator(nodes[0])) {
       prefix.push(nodes.shift());
