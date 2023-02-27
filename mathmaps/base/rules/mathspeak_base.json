@@ -1067,7 +1067,7 @@
     [
       "Alias",
       "double-prime",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())=2"
     ],
@@ -1082,7 +1082,7 @@
     [
       "Alias",
       "triple-prime",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())=3"
     ],
@@ -1097,7 +1097,7 @@
     [
       "Alias",
       "quadruple-prime",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())=4"
     ],
@@ -1112,9 +1112,17 @@
       "Precondition",
       "counted-prime-multichar",
       "default",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())>4"
+    ],
+    [
+      "Precondition",
+      "prime-multilength",
+      "default",
+      "self::punctuated",
+      "@role=\"prime\"",
+      "children/*[string-length(text())>1]"
     ],
     [
       "Precondition",
