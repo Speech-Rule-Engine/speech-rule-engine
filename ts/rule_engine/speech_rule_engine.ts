@@ -118,8 +118,6 @@ export class SpeechRuleEngine {
     }
   }
 
-  private result: AuditoryDescription[];
-
   // Dispatch functionality.
   // The timing function is temporary until the MOSS deliverable is done.
   /**
@@ -133,15 +131,16 @@ export class SpeechRuleEngine {
   public evaluateNode(node: Element): AuditoryDescription[] {
     updateEvaluator(node);
     const timeIn = new Date().getTime();
+    let result: AuditoryDescription[] = [];
     try {
-      this.evaluateNode_(node);
+      result = this.evaluateNode_(node);
     } catch (err) {
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
     const timeOut = new Date().getTime();
     Debugger.getInstance().output('Time:', timeOut - timeIn);
-    return this.result;
+    return result;
   }
 
   /**
@@ -282,7 +281,7 @@ export class SpeechRuleEngine {
      */
     this.trie = new Trie();
   }
-  
+
   /**
    * Computes a speech object for a given node. Returns the empty list if
    * no node is given.
@@ -291,14 +290,13 @@ export class SpeechRuleEngine {
    * @returns A list of auditory descriptions
    *   for that node.
    */
-  private evaluateNode_(node: Element) {
-    this.result = [];
+  private evaluateNode_(node: Element): AuditoryDescription[] {
     if (!node) {
-      return;
+      return [];
     }
     // Update the preferences of the dynamic constraint.
     this.updateConstraint_();
-    this.evaluateTree_(node);
+    return this.evaluateTree_(node);
   }
 
   /**
@@ -307,8 +305,9 @@ export class SpeechRuleEngine {
    * @param node Node to apply the speech rule to.
    * @returns A list of Auditory descriptions.
    */
-  private evaluateTree_(node: Element) {
+  private evaluateTree_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
+    let result: AuditoryDescription[];
     Debugger.getInstance().output(
       engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
     );
@@ -318,11 +317,10 @@ export class SpeechRuleEngine {
       if (engine.strict) {
         return [];
       }
-      let result = this.getEvaluator(engine.locale, engine.modality)(node);
+      result = this.getEvaluator(engine.locale, engine.modality)(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
-      this.result = this.result.concat(result)
       return result;
     }
     Debugger.getInstance().generateOutput(() => [
