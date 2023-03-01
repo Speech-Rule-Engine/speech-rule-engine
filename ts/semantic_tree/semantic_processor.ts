@@ -1924,7 +1924,7 @@ export default class SemanticProcessor {
       .map(function (x) {
         return SemanticUtil.getEmbellishedInner(x).textContent;
       })
-      .join('');
+      .join(' ');
     const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       type,
       [inner],
