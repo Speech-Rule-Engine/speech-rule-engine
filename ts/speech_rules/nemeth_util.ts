@@ -220,7 +220,7 @@ function checkParent(
     NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
     (type === SemanticType.PREFIXOP &&
       parent.role === SemanticRole.NEGATIVE &&
-      !info.script) ||
+      !info.script && !info.enclosed) ||
     (type === SemanticType.PREFIXOP &&
       // TODO: This needs to be rewritten once there is a better treatment
       // of prefixop.
