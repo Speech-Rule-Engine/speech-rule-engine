@@ -516,23 +516,23 @@
     ],
     [
       "Action",
-      "punctuation",
-      "[n] text(); [t] \"⠐\""
+      "punctuation-point",
+      "[n] text() (annotation:punctuation); [t] \"⠐\""
     ],
     [
       "Action",
       "punctuated",
-      "[m] children/* (grammar:punctuated)"
+      "[m] children/*"
     ],
     [
       "Action",
       "punctuation-comma",
-      "[n] text(); [t] \"⠀\""
+      "[n] text() (annotation:punctuation); [t] \"⠀\""
     ],
     [
       "Action",
       "punctuation-colon-mapping",
-      "[n] text(); [t] \"⠀\""
+      "[n] text() (annotation:punctuation); [t] \"⠀\""
     ],
     [
       "Action",

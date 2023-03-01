@@ -958,14 +958,14 @@
     ],
     [
       "Rule",
-      "punctuation-new",
+      "punctuation",
       "default",
-      "[n] text() (grammar:punctuation)",
+      "[n] text() (annotation:punctuation, engine:style=literary)",
       "self::punctuation"
     ],
     [
       "Precondition",
-      "punctuation",
+      "punctuation-point",
       "default",
       "self::punctuation",
       "@role=\"fullstop\"",

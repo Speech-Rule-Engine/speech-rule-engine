@@ -29,7 +29,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
+import { AuditoryDescription, AuditoryList } from '../audio/auditory_description';
 import { Span } from '../audio/span';
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
@@ -144,7 +144,6 @@ export class SpeechRuleEngine {
   }
 
   /**
-   * Prints the list of all current rules in ChromeVox to the console.
    *
    * @returns A textual representation of all rules in the speech rule
    *     engine.
@@ -296,7 +295,9 @@ export class SpeechRuleEngine {
     }
     // Update the preferences of the dynamic constraint.
     this.updateConstraint_();
-    return this.evaluateTree_(node);
+    let result = this.evaluateTree_(node);
+    result = processAnnotations(result);
+    return result;
   }
 
   /**
@@ -841,3 +842,23 @@ function storeFactory(set: RulesJson) {
 Engine.nodeEvaluator = SpeechRuleEngine.getInstance().evaluateNode.bind(
   SpeechRuleEngine.getInstance()
 );
+
+
+let punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
+
+function processAnnotations(descrs: AuditoryDescription[]): AuditoryDescription[] {
+  let alist = new AuditoryList(descrs);
+  for (let item of alist.annotations) {
+    let descr = item.data;
+    if (descr.annotation === 'punctuation') {
+      let prev = alist.prevText(item);
+      if (!prev) continue;
+      let last = prev.data;
+      if (last.annotation !== 'punctuation' && last.text !== '⠀' &&
+        descr.text.length === 1 && punctuationMarks.indexOf(descr.text) !== -1) {
+        descr.text = '⠸' + descr.text
+      }
+    }
+  }
+  return alist.toList();
+}
