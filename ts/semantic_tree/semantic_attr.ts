@@ -331,26 +331,36 @@ function initMeaning() {
       role: SemanticRole.FULLSTOP
     },
 
-    // dashes
+    // dashes as operators
     {
       set: [
         '2d',
-        '5f',
-        'af',
-        ['2010', '2015'],
-        '203e',
         '207b',
         '208b',
         '2212',
         '2796',
+        'fe63',
+        'ff0d'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.DASH,
+      secondary: SemanticSecondary.BAR
+    },
+
+    // dashes as punctuation
+    {
+      set: [
+        '5f',
+        'af',
+        ['2010', '2015'],
+        '203e',
+        '208b',
         ['fe49', 'fe4f'],
         'fe58',
-        'fe63',
-        'ff0d',
         'ff3f',
         'ffe3'
       ],
-      type: SemanticType.OPERATOR,
+      type: SemanticType.PUNCTUATION,
       role: SemanticRole.DASH,
       secondary: SemanticSecondary.BAR
     },
