@@ -540,28 +540,24 @@
       "[t] \"⠀⠐⠂⠀\""
     ],
     [
-      "Rule",
+      "Action",
       "punctuation-ellipsis-cell",
-      "default",
-      "[t] \"⠄⠄⠄\"",
-      "self::punctuation[@role=\"ellipsis\"]",
-      "count(../*)=1",
-      "name(../..)=\"cell\" or name(../..)=\"line\""
+      "[t] \"⠄⠄⠄\""
     ],
     [
       "Action",
       "punctuation-ellipses-both",
-      "[t] \"⠀\"; [n] text(); [t] \"⠀\";"
+      "[t] \"⠀\"; [n] . (grammar:?noellipsis); [t] \"⠀\";"
     ],
     [
       "Action",
       "punctuation-ellipses-left",
-      "[t] \"⠀\"; [n] text();"
+      "[t] \"⠀\"; [n] . (grammar:?noellipsis);"
     ],
     [
       "Action",
       "punctuation-ellipses-right",
-      "[n] text(); [t] \"⠀\";"
+      "[n] . (grammar:?noellipsis); [t] \"⠀\";"
     ],
     [
       "Action",

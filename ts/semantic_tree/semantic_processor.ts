@@ -3048,15 +3048,22 @@ export default class SemanticProcessor {
     if (partition.rel.length === 0) {
       return nodes;
     }
-    const newNodes = [];
+    let newNodes = [];
     let firstComp = partition.comp.shift();
     if (firstComp.length > 0) {
       newNodes.push(SemanticProcessor.getInstance().row(firstComp));
     }
     let relCounter = 0;
     while (partition.comp.length > 0) {
-      newNodes.push(partition.rel[relCounter++]);
-      firstComp = partition.comp.shift();
+      let puncts = [];
+      let saveCount = relCounter;
+      do {
+        puncts.push(partition.rel[relCounter++]);
+        firstComp = partition.comp.shift();
+      } while (partition.rel[relCounter] && firstComp.length === 0)
+      puncts = SemanticHeuristics.run('ellipses', puncts) as SemanticNode[];
+      partition.rel.splice(saveCount, relCounter - saveCount, ...puncts);
+      newNodes = newNodes.concat(puncts);
       if (firstComp.length > 0) {
         newNodes.push(SemanticProcessor.getInstance().row(firstComp));
       }
@@ -3097,12 +3104,17 @@ export default class SemanticProcessor {
         return newNode;
       }
     }
+    let fpunct = punctuations[0];
     if (SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
-      newNode.role = SemanticRole.STARTPUNCT;
+      newNode.role = (fpunct.childNodes.length &&
+        !SemanticPred.isEmbellished(fpunct)) ?
+        fpunct.role : SemanticRole.STARTPUNCT;
     } else if (
       SemanticPred.singlePunctAtPosition(nodes, punctuations, nodes.length - 1)
     ) {
-      newNode.role = SemanticRole.ENDPUNCT;
+      newNode.role = (fpunct.childNodes.length &&
+        !SemanticPred.isEmbellished(fpunct)) ?
+        fpunct.role : SemanticRole.ENDPUNCT;
     } else if (
       punctuations.every((x) => SemanticPred.isRole(x, SemanticRole.DUMMY))
     ) {

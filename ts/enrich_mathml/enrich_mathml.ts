@@ -87,10 +87,12 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  * @returns The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
+  Debugger.getInstance().output('WALKING START: ' + semantic.toString());
   const specialCase = getCase(semantic);
   let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();
+    Debugger.getInstance().output('WALKING END: ' + semantic.toString());
     return ascendNewNode(newNode);
   }
   if (semantic.mathml.length === 1) {
@@ -99,6 +101,7 @@ export function walkTree(semantic: SemanticNode): Element {
       Debugger.getInstance().output('Walktree Case 0.1');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
+      Debugger.getInstance().output('WALKING END: ' + semantic.toString());
       return ascendNewNode(newNode);
     }
     let fchild = semantic.childNodes[0];
@@ -108,6 +111,7 @@ export function walkTree(semantic: SemanticNode): Element {
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
       newNode.appendChild(walkTree(fchild));
+      Debugger.getInstance().output('WALKING END: ' + semantic.toString());
       return ascendNewNode(newNode);
     }
     // Children should not all be empty.
@@ -144,6 +148,7 @@ export function walkTree(semantic: SemanticNode): Element {
   newNode = rewriteMfenced(newNode);
   mergeChildren(newNode, childrenList, semantic);
   EnrichAttr.setAttributes(newNode, semantic);
+  Debugger.getInstance().output('WALKING END: ' + semantic.toString());
   return ascendNewNode(newNode);
 }
 
@@ -177,7 +182,9 @@ export function introduceNewLayer(
   const lca = mathmlLca(children);
   let newNode = lca.node;
   const info = lca.type;
-  if (info !== lcaType.VALID || !SemanticUtil.hasEmptyTag(newNode)) {
+  if (info !== lcaType.VALID || !SemanticUtil.hasEmptyTag(newNode)
+    || (!newNode.parentNode && semantic.parent)
+     ) {
     Debugger.getInstance().output('Walktree Case 1.1');
     newNode = DomUtil.createElement('mrow');
     if (info === lcaType.PRUNED) {
@@ -186,11 +193,16 @@ export function introduceNewLayer(
     } else if (children[0]) {
       Debugger.getInstance().output('Walktree Case 1.1.1');
       const node = attachedElement(children);
-      const oldChildren = childrenSubset(parentNode(node), children);
-      DomUtil.replaceNode(node, newNode);
-      oldChildren.forEach(function (x) {
-        newNode.appendChild(x);
-      });
+      if (node) {
+        const oldChildren = childrenSubset(parentNode(node), children);
+        DomUtil.replaceNode(node, newNode);
+        oldChildren.forEach(function (x) {
+          newNode.appendChild(x);
+        });
+      } else {
+        moveSemanticAttributes(newNode, children[0]);
+        newNode = children[0];
+      }
     }
   }
   if (!semantic.mathmlTree) {
@@ -378,6 +390,7 @@ function mergeChildren(
   semantic: SemanticNode
 ) {
   if (!newChildren.length) return;
+  if (newChildren.length === 1 && node === newChildren[0]) return;
   const oldChildren =
     semantic.role === SemanticRole.IMPLICIT &&
     SemanticHeuristics.flags.combine_juxtaposition
@@ -857,7 +870,10 @@ export function getInnerNode(node: Element): Element {
   });
   const result = [];
   for (let i = 0, remain; (remain = remainder[i]); i++) {
-    if (SemanticUtil.hasEmptyTag(remain)) {
+    if (SemanticUtil.hasEmptyTag(remain) &&
+      // Special case for punctuation?
+      remain.getAttribute(EnrichAttr.Attribute.TYPE) !== SemanticType.PUNCTUATION
+       ) {
       const nextInner = getInnerNode(remain);
       if (nextInner && nextInner !== remain) {
         result.push(nextInner);

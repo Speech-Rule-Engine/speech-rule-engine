@@ -850,6 +850,7 @@ function processAnnotations(descrs: AuditoryDescription[]): AuditoryDescription[
   let alist = new AuditoryList(descrs);
   for (let item of alist.annotations) {
     let descr = item.data;
+    // Annotation processor
     if (descr.annotation === 'punctuation') {
       let prev = alist.prevText(item);
       if (!prev) continue;

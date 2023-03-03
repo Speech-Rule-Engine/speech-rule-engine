@@ -671,3 +671,57 @@ function rewriteFence(fence: SemanticNode): boolean {
   fence.addAnnotation('Emph', 'fence');
   return true;
 }
+
+
+/**
+ *  Tries to group ellipses and long bars.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'ellipses',
+    (nodes: SemanticNode[]) => {
+      // TODO: Test for simple elements?
+      let newNodes = [];
+      let current = nodes.shift();
+      while (current) {
+        [current, nodes] = combineNodes(current, nodes, SemanticRole.FULLSTOP, SemanticRole.ELLIPSIS);
+        [current, nodes] = combineNodes(current, nodes, SemanticRole.DASH);
+        newNodes.push(current);
+        current = nodes.shift();
+      }
+      return newNodes;
+    },
+    (nodes: SemanticNode[]) => nodes.length > 1
+  )
+);
+
+function combineNodes(
+  current: SemanticNode,
+  nodes: SemanticNode[],
+  src: SemanticRole,
+  target: SemanticRole = src
+):
+[SemanticNode, SemanticNode[]] {
+  let collect = [];
+  while (current && current.role === src) {
+    collect.push(current);
+    current = nodes.shift();
+  }
+  if (!collect.length) {
+    return [current, nodes];
+  }
+  if (current) {
+    nodes.unshift(current);
+  }
+  return [(collect.length === 1) ? collect[0] : combinedNodes(collect, target), nodes];
+}
+
+function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
+  let node = SemanticHeuristics.factory.makeBranchNode(
+    SemanticType.PUNCTUATION,
+    nodes,
+    []
+  );
+  node.role = role;
+  return node;
+}
