@@ -981,12 +981,6 @@
     ],
     [
       "Precondition",
-      "punctuated",
-      "default",
-      "self::punctuated"
-    ],
-    [
-      "Precondition",
       "punctuation-comma",
       "default",
       "self::punctuation[@role=\"comma\" or @role=\"semicolon\"]",
@@ -1052,6 +1046,14 @@
       "not(contains(@grammar, \"noellipsis\"))",
       "following-sibling::*",
       "name(following-sibling::*[1])!=\"punctuation\""
+    ],
+    [
+      "Rule",
+      "long-bar",
+      "default",
+      "[t] \"⠤⠤⠤⠤\"",
+      "self::punctuation[@role=\"dash\"]",
+      "children/*"
     ],
     [
       "Precondition",

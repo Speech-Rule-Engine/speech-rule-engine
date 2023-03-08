@@ -3060,11 +3060,12 @@ export default class SemanticProcessor {
       do {
         puncts.push(partition.rel[relCounter++]);
         firstComp = partition.comp.shift();
-      } while (partition.rel[relCounter] && firstComp.length === 0)
+      } while (partition.rel[relCounter] && firstComp && firstComp.length === 0)
       puncts = SemanticHeuristics.run('ellipses', puncts) as SemanticNode[];
       partition.rel.splice(saveCount, relCounter - saveCount, ...puncts);
+      relCounter = saveCount + puncts.length;
       newNodes = newNodes.concat(puncts);
-      if (firstComp.length > 0) {
+      if (firstComp && firstComp.length > 0) {
         newNodes.push(SemanticProcessor.getInstance().row(firstComp));
       }
     }
@@ -3106,14 +3107,12 @@ export default class SemanticProcessor {
     }
     let fpunct = punctuations[0];
     if (SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
-      newNode.role = (fpunct.childNodes.length &&
-        !SemanticPred.isEmbellished(fpunct)) ?
+      newNode.role = (fpunct.childNodes.length && !fpunct.embellished) ?
         fpunct.role : SemanticRole.STARTPUNCT;
     } else if (
       SemanticPred.singlePunctAtPosition(nodes, punctuations, nodes.length - 1)
     ) {
-      newNode.role = (fpunct.childNodes.length &&
-        !SemanticPred.isEmbellished(fpunct)) ?
+      newNode.role = (fpunct.childNodes.length && !fpunct.embellished) ?
         fpunct.role : SemanticRole.ENDPUNCT;
     } else if (
       punctuations.every((x) => SemanticPred.isRole(x, SemanticRole.DUMMY))
