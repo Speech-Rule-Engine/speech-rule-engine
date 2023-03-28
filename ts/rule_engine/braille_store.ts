@@ -26,7 +26,7 @@ import { MathStore } from './math_store';
 import { AuditoryDescription } from '../audio/auditory_description';
 import { activate } from '../semantic_tree/semantic_annotations';
 import { SemanticMap } from '../semantic_tree/semantic_attr';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticType, SemanticRole } from '../semantic_tree/semantic_meaning';
 
 /**
  * Braille rule store.
@@ -81,14 +81,16 @@ export class EuroStore extends BrailleStore {
   public customTranscriptions = { };
 
   public customCommands: {[key: string]: string} = {
-    '\\cdot': '*'
+    '\\cdot': '*',
+    '\\lt': '<',
+    '\\gt': '>'
   }
 
   /**
    * @override
    */
   public evaluateString(str: string) {
-    const regexp = /(\\[a-z]+)/i;
+    const regexp = /(\\[a-z]+|\\{|\\}|\\\\)/i;
     let split = str.split(regexp);
     let cleaned = this.cleanup(split);
     return super.evaluateString(cleaned);
@@ -100,6 +102,7 @@ export class EuroStore extends BrailleStore {
    * * Remove unnecessary spaces.
    * * Replace commands if necessary.
    * * Add spaces before relations and operators.
+   * * Add spaces between two consecutive commands.
    *
    * @param commands The list of commands and intermediate strings.
    * @return A string with the cleanedup latex expression.
@@ -107,7 +110,7 @@ export class EuroStore extends BrailleStore {
   protected cleanup(commands: string[]): string {
     let cleaned: string[] = [];
     let intext = false;
-    let lastcom = false;
+    let lastcom = null;
     for (let command of commands) {
       if (command.match(/^\\/)) {
         if (command === '\\text') {
@@ -117,7 +120,11 @@ export class EuroStore extends BrailleStore {
           cleaned.push(' ');
         }
         command = this.customCommands[command] || command;
-        lastcom = !!command.match(/^\\/);
+        let newcom = command.match(/^\\/);
+        if (newcom && command.match(/^\\[a-zA-Z]+$/) && lastcom) {
+          cleaned.push(' ');
+        }
+        lastcom = newcom ? command : null;
         cleaned.push(command);
         continue;
       }
@@ -127,11 +134,11 @@ export class EuroStore extends BrailleStore {
         if (intext) {
           cleaned.push(char);
           intext = char !== '}';
-          lastcom = false;
+          lastcom = null;
           continue;
         }
         if (char.match(/[a-z]/i) && lastcom) {
-          lastcom = false;
+          lastcom = null;
           cleaned.push(' ');
           cleaned.push(char);
           continue;
@@ -141,11 +148,14 @@ export class EuroStore extends BrailleStore {
           cleaned.push(' ');
         }
         cleaned.push(char);
-        lastcom = false;
+        lastcom = null;
       }
     }
     return cleaned.join('');
   }
+
+  private lastSpecial = false;
+  private specialChars = ['^', '_', '{', '}'];
 
   /**
    * Determines if spaces should be added.
@@ -155,9 +165,19 @@ export class EuroStore extends BrailleStore {
    */
   private addSpace(char: string): boolean {
     if (!char) return false;
+    if (this.specialChars.indexOf(char) !== -1) {
+      this.lastSpecial = true;
+      return false;
+    }
+    if (this.lastSpecial) {
+      this.lastSpecial = false;
+      return false;
+    }
     let meaning = SemanticMap.Meaning.get(char);
     return meaning.type === SemanticType.OPERATOR ||
-      meaning.type === SemanticType.RELATION;
+      meaning.type === SemanticType.RELATION ||
+      (meaning.type === SemanticType.PUNCTUATION &&
+        meaning.role === SemanticRole.COLON);
   }
 
 }

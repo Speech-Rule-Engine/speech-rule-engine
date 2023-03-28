@@ -73,6 +73,13 @@
       "default",
       "[n] children/*[1]; [m] content/*",
       "self::postfixop"
+    ],
+    [
+      "Rule",
+      "colon",
+      "default",
+      "[t] \"⠀\"; [t] text()",
+      "self::punctuation[@role=\"colon\"]"
     ]
   ]
 }
