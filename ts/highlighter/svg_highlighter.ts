@@ -122,6 +122,9 @@ export class SvgHighlighter extends AbstractHighlighter {
    */
   public isMactionNode(node: HTMLElement) {
     let className = node.className || node.getAttribute('class');
+    if (!className) {
+      return false;
+    }
     className =
       (className as any).baseVal !== undefined
         ? (className as any).baseVal
