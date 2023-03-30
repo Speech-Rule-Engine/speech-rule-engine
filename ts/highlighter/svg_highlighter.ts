@@ -83,7 +83,7 @@ export class SvgHighlighter extends AbstractHighlighter {
       rect.setAttribute('transform', transform);
     }
     rect.setAttribute('fill', this.colorString().background);
-    rect.setAttribute(AbstractHighlighter.ATTR, 'true');
+    rect.setAttribute(this.ATTR, 'true');
     node.parentNode.insertBefore(rect, node);
     info = { node: rect as HTMLElement, foreground: node.getAttribute('fill') };
     node.setAttribute('fill', this.colorString().foreground);
