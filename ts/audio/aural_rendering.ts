@@ -29,7 +29,6 @@ import { PunctuationRenderer } from './punctuation_renderer';
 import { SableRenderer } from './sable_renderer';
 import { Span } from './span';
 import { SsmlRenderer } from './ssml_renderer';
-import { SsmlStepRenderer } from './ssml_step_renderer';
 import { StringRenderer } from './string_renderer';
 import { XmlRenderer } from './xml_renderer';
 
@@ -41,8 +40,7 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
   [EngineConst.Markup.ACSS, new AcssRenderer()],
   [EngineConst.Markup.SABLE, new SableRenderer()],
   [EngineConst.Markup.VOICEXML, xmlInstance],
-  [EngineConst.Markup.SSML, xmlInstance],
-  [EngineConst.Markup.SSML_STEP, new SsmlStepRenderer()]
+  [EngineConst.Markup.SSML, xmlInstance]
 ]);
 
 /**

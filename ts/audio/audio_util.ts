@@ -20,6 +20,7 @@
 
 import { setdifference } from '../common/base_util';
 import * as EngineConst from '../common/engine_const';
+import Engine from '../common/engine';
 import { AuditoryDescription } from './auditory_description';
 import { Span } from './span';
 
@@ -180,7 +181,18 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   }
   result = result.concat(finaliseMarkup_());
   result = simplifyMarkup_(result);
+  result = Engine.getInstance().cleanpause ? cleanPause(result) : result;
   return result;
+}
+
+function cleanPause(markup: Markup[]) {
+  while (isPauseElement(markup[0])) {
+    markup.shift();
+  }
+  while (isPauseElement(markup[markup.length - 1])) {
+    markup.pop();
+  }
+  return markup;
 }
 
 /**
