@@ -21,8 +21,12 @@
 import Engine from '../common/engine';
 import * as EngineConst from '../common/engine_const';
 import { Pause } from './audio_util';
+import { AuditoryDescription } from './auditory_description';
+import { Span } from './span';
 import { XmlRenderer } from './xml_renderer';
 
+// New options:
+// Marking, automarking, character marking, pausing auto removed start/end
 export class SsmlRenderer extends XmlRenderer {
   /**
    * @override
@@ -75,4 +79,71 @@ export class SsmlRenderer extends XmlRenderer {
   public closeTag(_tag: string) {
     return '</prosody>';
   }
+
+  // Marks have to be unique. That is we cannot mark/highlight a node twice.
+  public static MARK_ONCE = false;
+
+  // Output of kind in the mark tag.
+  public static MARK_KIND = true;
+
+  private static CHARACTER_ATTR = 'character';
+
+  /**
+   * Record for remembering mark ids.
+   */
+  private static MARKS: { [key: string]: boolean } = {};
+
+  /**
+   * @override
+   */
+  public markup(descrs: AuditoryDescription[]) {
+    SsmlRenderer.MARKS = {};
+    return super.markup(descrs);
+  }
+
+  /**
+   * @override
+   */
+  public merge(spans: Span[]): string {
+    const result = [];
+    // Keeping the last mark is necessary to combine consecutive marks.
+    let lastMark = '';
+    for (let i = 0; i < spans.length; i++) {
+      const span = spans[i];
+      if (this.isEmptySpan(span)) continue;
+      const kind = SsmlRenderer.MARK_KIND ? span.attributes['kind'] : '';
+      const id = Engine.getInstance().automark ?
+        span.attributes['id'] :
+        (Engine.getInstance().mark ? span.attributes['extid'] : '');
+      // TODO:
+      //   * combine say as character
+      //   * mark again with kind?
+      if (id && id !== lastMark &&
+        !(SsmlRenderer.MARK_ONCE && SsmlRenderer.MARKS[id])) {
+        result.push(kind ?
+          `<mark name="${id}" kind="${kind}"/>` : `<mark name="${id}"/>`);
+        lastMark = id;
+        SsmlRenderer.MARKS[id] = true;
+      }
+      if (Engine.getInstance().character &&
+        span.speech.length === 1 && span.speech.match(/[a-zA-Z]/)) {
+        result.push(
+          '<say-as interpret-as="' +
+            SsmlRenderer.CHARACTER_ATTR +
+            '">' +
+            span.speech +
+            '</say-as>'
+        );
+      } else {
+        result.push(span.speech);
+      }
+    }
+    return result.join(this.separator);
+  }
+
+  private isEmptySpan(span: Span) {
+    let sep = span.attributes['separator'];
+    return span.speech.match(/^\s*$/) && (!sep || sep.match(/^\s*$/));
+  }
+
 }
