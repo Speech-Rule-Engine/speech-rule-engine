@@ -47,8 +47,7 @@ export interface AudioRenderer {
   /**
    * Merges markup strings.
    *
-   * @param strs The
-   *     single markup strings.
+   * @param strs The single markup strings.
    * @returns A single string.
    */
   merge(strs: Span[]): string;

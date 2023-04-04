@@ -47,13 +47,7 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
-        if (span) {
-          pause = AudioUtil.mergePause(
-            pause,
-            descr as { pause: number },
-            Math.max
-          );
-        }
+        pause = descr;
         continue;
       }
       if (pause) {

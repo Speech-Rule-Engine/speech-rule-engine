@@ -57,6 +57,9 @@ export default class Engine {
    */
   public static BINARY_FEATURES: string[] = [
     'automark',
+    'mark',
+    'character',
+    'cleanpause',
     'strict',
     'structure',
     'pprint'
@@ -169,6 +172,21 @@ export default class Engine {
    */
   public markup: EngineConst.Markup = EngineConst.Markup.NONE;
 
+  // Markup options
+  public mark = true;
+  /**
+   * Automatic marking of elements for spans.
+   */
+  public automark = false;
+  public character = true;
+  public cleanpause = true;
+
+  /**
+   * Percentage of default rate used by external TTS. This can be used to scale
+   * pauses.
+   */
+  public rate = '100';
+
   /**
    * Current walker mode.
    */
@@ -198,17 +216,6 @@ export default class Engine {
    * Current browser is MS Edge.
    */
   public isEdge = false;
-
-  /**
-   * Automatic marking of elements for spans.
-   */
-  public automark = false;
-
-  /**
-   * Percentage of default rate used by external TTS. This can be used to scale
-   * pauses.
-   */
-  public rate = '100';
 
   /**
    * Pretty Print mode.
