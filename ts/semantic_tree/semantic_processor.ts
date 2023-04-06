@@ -3494,7 +3494,6 @@ export default class SemanticProcessor {
     if (nodes.length === 0) {
       // Here we have no intvar. Now we can move back wrt. bigop boundary.
       let partition = SemanticUtil.sliceNodes(args, SemanticPred.isBigOpBoundary);
-      // return { integrand: args, intvar: null, rest: nodes };
       if (partition.div) {
         partition.tail.unshift(partition.div);
       }
@@ -3503,7 +3502,10 @@ export default class SemanticProcessor {
     SemanticHeuristics.run('intvar_from_implicit', nodes);
     const firstNode = nodes[0];
     if (SemanticPred.isGeneralFunctionBoundary(firstNode)) {
-      return { integrand: args, intvar: null, rest: nodes };
+      // No intvar, test for the next big operator boundary instead.
+      let {integrand: args2, rest: rest2} =
+        SemanticProcessor.getInstance().getIntegralArgs_(args);
+      return { integrand: args2, intvar: null, rest: rest2.concat(nodes)};
     }
     if (SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
       firstNode.role = SemanticRole.INTEGRAL;
