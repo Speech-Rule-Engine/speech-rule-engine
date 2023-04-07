@@ -62,6 +62,7 @@ export default class Engine {
     'cleanpause',
     'strict',
     'structure',
+    'aria',
     'pprint'
   ];
 
@@ -196,6 +197,7 @@ export default class Engine {
    * Indicates if skeleton structure attributes are added to enriched elements
    */
   public structure = false;
+  public aria = false;
 
   /**
    * List of rule sets given as the constructor functions.

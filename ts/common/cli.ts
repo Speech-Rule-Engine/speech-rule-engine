@@ -308,6 +308,12 @@ export class Cli {
         set('structure')
       )
       .option(
+        '-A, --aria',
+        'Include aria tree annotations' +
+          ' MathML (with -m and -w option only).',
+        set('aria')
+      )
+      .option(
         '-P, --pprint',
         'Pretty print output whenever possible.',
         set('pprint')

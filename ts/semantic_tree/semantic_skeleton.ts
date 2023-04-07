@@ -20,6 +20,7 @@
  */
 
 import * as BaseUtil from '../common/base_util';
+import Engine from '../common/engine';
 
 import * as XpathUtil from '../common/xpath_util';
 import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr';
@@ -273,7 +274,7 @@ export class SemanticSkeleton {
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
     )[0] as Element;
-    if (mmlChild) {
+    if (Engine.getInstance().aria && mmlChild) {
       SemanticSkeleton.addAria(mmlChild, level, posinset, setsize);
     }
     if (!node.childNodes.length) {
