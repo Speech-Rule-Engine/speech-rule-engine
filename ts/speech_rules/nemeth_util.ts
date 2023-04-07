@@ -24,13 +24,14 @@ import * as DomUtil from '../common/dom_util';
 import * as XpathUtil from '../common/xpath_util';
 import { Grammar, correctFont } from '../rule_engine/grammar';
 import Engine from '../common/engine';
-import { register } from '../semantic_tree/semantic_annotations';
+import { register, activate } from '../semantic_tree/semantic_annotations';
 import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { LOCALE } from '../l10n/locale';
 import * as MathspeakUtil from './mathspeak_util';
+import { contentIterator as suCI } from '../rule_engine/store_util';
 
 /**
  * Opening string for fractions in linear Nemeth.
@@ -286,6 +287,22 @@ register(
   new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
 );
 
+function annotateDepth(
+  node: SemanticNode
+): any[] {
+  if (!node.parent) {
+    return [1];
+  }
+  let depth = parseInt(node.parent.annotation['depth'][0]);
+  return [depth + 1];
+}
+
+register(
+  new SemanticVisitor('depth', 'depth', annotateDepth)
+);
+activate('depth', 'depth');
+
+
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if
  * necessary.
@@ -302,11 +319,14 @@ export function relationIterator(
 ): () => AuditoryDescription[] {
   const childNodes = nodes.slice(0);
   let first = true;
+  let parentNode = nodes[0].parentNode.parentNode as Element;
+  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let depth = match ? match[1] : '';
   let contentNodes: Element[];
   if (nodes.length > 0) {
     contentNodes = XpathUtil.evalXPath(
-      '../../content/*',
-      nodes[0]
+      './content/*',
+      parentNode
     ) as Element[];
   } else {
     contentNodes = [];
@@ -330,19 +350,25 @@ export function relationIterator(
     const left =
       (leftChild && DomUtil.tagName(leftChild) !== 'EMPTY') ||
       (first &&
-        content.parentNode.parentNode &&
-        content.parentNode.parentNode.previousSibling)
+        parentNode &&
+        parentNode.previousSibling)
         ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE + base }, {})]
         : [];
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
-        content.parentNode.parentNode &&
-        content.parentNode.parentNode.nextSibling)
+        parentNode &&
+        parentNode.nextSibling)
         ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
         : [];
     const descrs = Engine.evaluateNode(content);
+    // TODO: Combine with similar code in speech_rule_engine.
+    descrs.unshift(
+      new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
+    );
+    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
     first = false;
+    // TODO: Check with the context!
     return contextDescr.concat(left, descrs, right);
   };
 }
@@ -395,3 +421,21 @@ function ignoreEnglish(text: string) {
 }
 
 Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
+
+export function contentIterator(
+  nodes: Element[],
+  context: string
+) {
+  let func = suCI(nodes, context);
+  let parentNode = nodes[0].parentNode.parentNode as Element;
+  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let depth = match ? match[1] : '';
+  return function() {
+    const descrs = func();
+    descrs.unshift(
+      new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
+    );
+    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
+    return descrs;
+  }
+}

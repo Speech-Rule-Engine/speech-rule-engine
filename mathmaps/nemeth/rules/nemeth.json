@@ -1123,6 +1123,7 @@
     ]
   ],
   "annotators": [
-    "number"
+    "number",
+    "depth"
   ]
 }
