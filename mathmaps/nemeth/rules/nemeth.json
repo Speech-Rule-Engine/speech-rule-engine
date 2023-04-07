@@ -747,6 +747,13 @@
       "self::vector"
     ],
     [
+      "Rule",
+      "binomial",
+      "default",
+      "[n] content/*[1]; [n] children/*[1]; [t] \"⠩\"; [n] children/*[2]; [n] content/*[2]",
+      "self::vector[@role=\"binomial\"]"
+    ],
+    [
       "Precondition",
       "matrix-row",
       "default",
@@ -758,18 +765,6 @@
       "default",
       "self::line",
       "@role=\"vector\""
-    ],
-    [
-      "Alias",
-      "vector-line",
-      "self::line",
-      "@role=\"binomial\""
-    ],
-    [
-      "Alias",
-      "vector-line",
-      "self::line",
-      "@role=\"cases\""
     ],
     [
       "Precondition",
