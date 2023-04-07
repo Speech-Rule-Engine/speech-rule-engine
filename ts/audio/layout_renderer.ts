@@ -21,6 +21,7 @@
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import * as EngineConst from '../common/engine_const';
+import Engine from '../common/engine';
 import * as AudioUtil from './audio_util';
 import { AuditoryDescription } from './auditory_description';
 import { XmlRenderer } from './xml_renderer';
@@ -28,7 +29,8 @@ import { XmlRenderer } from './xml_renderer';
 export class LayoutRenderer extends XmlRenderer {
 
   public static options = {
-    shortLine: true
+    cayleyshort: Engine.getInstance().cayleyshort,
+    linebreaks: Engine.getInstance().linebreaks
   }
 
   /**
@@ -161,6 +163,7 @@ const relValues = new Map();
 
 function setRelValues(values: {[key: string]: boolean}) {
   relValues.clear();
+  if (!values) return;
   const keys = Object.keys(values).map(x => parseInt(x)).sort();
   for (let i = 0, key; key = keys[i]; i++) {
     relValues.set(key, i + 1);
@@ -490,7 +493,7 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
-  if (LayoutRenderer.options.shortLine && mat[0].cells[0] === '⠀') {
+  if (Engine.getInstance().cayleyshort && mat[0].cells[0] === '⠀') {
     bar.cells[0] = '⠀';
   }
   mat.splice(1, 0, bar);
@@ -604,6 +607,9 @@ function handleFractionPart(prt: Element): string {
 
 // This implements line breaking for concepts of 14.12.1 Priority List.
 function handleRelation(rel: Element): string {
+  if (!Engine.getInstance().linebreaks) {
+    return recurseTree(rel);
+  }
   let value = relValues.get(parseInt(rel.getAttribute('value')));
   return  (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
 }

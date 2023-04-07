@@ -62,7 +62,9 @@ export default class Engine {
     'cleanpause',
     'strict',
     'structure',
-    'pprint'
+    'pprint',
+    'cayleyshort',
+    'linebreaks'
   ];
 
   /**
@@ -180,6 +182,12 @@ export default class Engine {
   public automark = false;
   public character = true;
   public cleanpause = true;
+
+  /**
+   * Nemeth layout options
+   */
+  public cayleyshort = true;
+  public linebreaks = false;
 
   /**
    * Percentage of default rate used by external TTS. This can be used to scale

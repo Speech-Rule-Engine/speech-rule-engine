@@ -267,6 +267,11 @@ export class Cli {
         set('automark')
       )
       .option(
+        '-L, --linebreaks',
+        'Linebreak marking in 2D output.',
+        set('linebreaks')
+      )
+      .option(
         '-r, --rate [value]',
         'Base rate [value] for tagged speech' + ' output.',
         set('rate'),
