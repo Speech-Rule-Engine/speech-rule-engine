@@ -53,8 +53,8 @@ import {
   SemanticType,
   SemanticFont,
   SemanticSecondary
-} from './semantic_meaning';
-import * as Alphabet from '../speech_rules/alphabet';
+} from './semantic_meaning.js';
+import * as Alphabet from '../speech_rules/alphabet.js';
 
 export namespace NamedSymbol {
   /**

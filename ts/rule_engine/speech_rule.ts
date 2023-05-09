@@ -28,10 +28,10 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { SREError } from '../common/engine';
-import { DynamicCstr } from './dynamic_cstr';
-import * as Grammar from './grammar';
-import { SpeechRuleContext } from './speech_rule_context';
+import { SREError } from '../common/engine.js';
+import { DynamicCstr } from './dynamic_cstr.js';
+import * as Grammar from './grammar.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
 export class SpeechRule {
   /**

@@ -22,11 +22,11 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { MathStore } from './math_store';
-import { AuditoryDescription } from '../audio/auditory_description';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { SemanticMap } from '../semantic_tree/semantic_attr';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { MathStore } from './math_store.js';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { SemanticMap } from '../semantic_tree/semantic_attr.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.

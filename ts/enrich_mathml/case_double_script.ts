@@ -18,13 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-import { makeIdList, setAttributes, Attribute } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { makeIdList, setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseDoubleScript extends AbstractEnrichCase {
   /**

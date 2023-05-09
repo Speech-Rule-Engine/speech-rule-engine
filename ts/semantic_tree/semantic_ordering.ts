@@ -24,7 +24,7 @@ import {
   SemanticMeaning,
   SemanticRole,
   SemanticType
-} from './semantic_meaning';
+} from './semantic_meaning.js';
 
 // TODO: Have some better ordering mechanism than array order.
 /**

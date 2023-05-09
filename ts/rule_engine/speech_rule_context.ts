@@ -18,9 +18,9 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { Span, SpanAttrs } from '../audio/span';
-import * as XpathUtil from '../common/xpath_util';
-import * as srf from './speech_rule_functions';
+import { Span, SpanAttrs } from '../audio/span.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import * as srf from './speech_rule_functions.js';
 
 export class SpeechRuleContext {
   /**

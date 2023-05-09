@@ -18,16 +18,16 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import { CaseDoubleScript } from './case_double_script';
-import { CaseMultiscripts } from './case_multiscripts';
-import { CaseTensor } from './case_tensor';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import { CaseDoubleScript } from './case_double_script.js';
+import { CaseMultiscripts } from './case_multiscripts.js';
+import { CaseTensor } from './case_tensor.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseEmbellished extends AbstractEnrichCase {
   /**

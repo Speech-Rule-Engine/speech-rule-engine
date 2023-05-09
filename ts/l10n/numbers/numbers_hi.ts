@@ -22,8 +22,8 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import { Grammar } from '../../rule_engine/grammar';
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.

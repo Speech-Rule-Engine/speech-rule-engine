@@ -18,17 +18,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import { Debugger } from './debugger';
-import { EnginePromise, SREError } from './engine';
-import * as EngineConst from './engine_const';
-import * as ProcessorFactory from './processor_factory';
-import * as System from './system';
-import SystemExternal from './system_external';
-import { Variables } from './variables';
+import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import { Debugger } from './debugger.js';
+import { EnginePromise, SREError } from './engine.js';
+import * as EngineConst from './engine_const.js';
+import * as ProcessorFactory from './processor_factory.js';
+import * as System from './system.js';
+import SystemExternal from './system_external.js';
+import { Variables } from './variables.js';
 
 export class Cli {
   public process = SystemExternal.extRequire('process');

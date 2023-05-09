@@ -21,14 +21,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { NamedSymbol, SemanticMap } from './semantic_attr';
-import { SemanticFont, SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
-import * as SemanticHeuristics from './semantic_heuristic_factory';
-import { SemanticNode } from './semantic_node';
-import { SemanticNodeFactory } from './semantic_node_factory';
-import * as SemanticPred from './semantic_pred';
-import * as SemanticUtil from './semantic_util';
+import * as DomUtil from '../common/dom_util.js';
+import { NamedSymbol, SemanticMap } from './semantic_attr.js';
+import { SemanticFont, SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning.js';
+import * as SemanticHeuristics from './semantic_heuristic_factory.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticNodeFactory } from './semantic_node_factory.js';
+import * as SemanticPred from './semantic_pred.js';
+import * as SemanticUtil from './semantic_util.js';
 
 interface BoundsType {
   type: SemanticType;

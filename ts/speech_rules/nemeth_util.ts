@@ -18,19 +18,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { Span } from '../audio/span';
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { Grammar } from '../rule_engine/grammar';
-import Engine from '../common/engine';
-import { register } from '../semantic_tree/semantic_annotations';
-import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import Engine from '../common/engine.js';
+import { register } from '../semantic_tree/semantic_annotations.js';
+import { SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
-import { LOCALE } from '../l10n/locale';
-import * as MathspeakUtil from './mathspeak_util';
+import { LOCALE } from '../l10n/locale.js';
+import * as MathspeakUtil from './mathspeak_util.js';
 
 /**
  * Opening string for fractions in linear Nemeth.

@@ -22,8 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
-import { Span } from '../audio/span';
-import * as MathspeakUtil from './mathspeak_util';
+import { Span } from '../audio/span.js';
+import * as MathspeakUtil from './mathspeak_util.js';
 
 /**
  * Computes baseline prefix in verbose mode.

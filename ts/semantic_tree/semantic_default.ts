@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as SemanticAttr from './semantic_attr';
-import { SemanticFont, SemanticMeaning } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { reduce } from './semantic_ordering';
+import * as SemanticAttr from './semantic_attr.js';
+import { SemanticFont, SemanticMeaning } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { reduce } from './semantic_ordering.js';
 
 /**
  * Generates the key from symbol and font.

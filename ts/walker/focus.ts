@@ -19,9 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { RebuildStree } from './rebuild_stree';
-import * as WalkerUtil from './walker_util';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { RebuildStree } from './rebuild_stree.js';
+import * as WalkerUtil from './walker_util.js';
 
 export class Focus {
   /**

@@ -18,11 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import { KeyCode } from '../common/event_util';
-import { AudioRenderer } from './audio_renderer';
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
+import Engine from '../common/engine.js';
+import { KeyCode } from '../common/event_util.js';
+import { AudioRenderer } from './audio_renderer.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
 
 export abstract class AbstractAudioRenderer implements AudioRenderer {
   private separator_ = ' ';

@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { LOCALE } from './locale';
-import { Combiner, Combiners } from './transformers';
+import { LOCALE } from './locale.js';
+import { Combiner, Combiners } from './transformers.js';
 
 /**
  * Translation for count word in superbrief nesting description.

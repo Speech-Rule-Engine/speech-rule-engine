@@ -18,11 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes } from './enrich_attr';
-import * as DomUtil from '../common/dom_util';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes } from './enrich_attr.js';
+import * as DomUtil from '../common/dom_util.js';
 
 export class CaseEmpheq extends AbstractEnrichCase {
   /**

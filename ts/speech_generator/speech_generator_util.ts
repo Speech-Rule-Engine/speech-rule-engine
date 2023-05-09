@@ -19,15 +19,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as AuralRendering from '../audio/aural_rendering';
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticTree } from '../semantic_tree/semantic_tree';
-import * as WalkerUtil from '../walker/walker_util';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as AuralRendering from '../audio/aural_rendering.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticTree } from '../semantic_tree/semantic_tree.js';
+import * as WalkerUtil from '../walker/walker_util.js';
 
 /**
  * Compute speech string for the xml version of the semantic tree.

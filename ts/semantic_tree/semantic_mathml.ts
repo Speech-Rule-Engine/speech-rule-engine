@@ -18,13 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { SemanticAbstractParser } from './semantic_parser';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticAbstractParser } from './semantic_parser.js';
+import * as SemanticPred from './semantic_pred.js';
+import SemanticProcessor from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
   private parseMap_: {

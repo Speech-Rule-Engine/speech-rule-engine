@@ -21,9 +21,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import { locales } from '../l10n/l10n';
-import { addFunctionSemantic } from '../semantic_tree/semantic_attr';
+import Engine from '../common/engine.js';
+import { locales } from '../l10n/l10n.js';
+import { addFunctionSemantic } from '../semantic_tree/semantic_attr.js';
 import {
   BaseJson,
   MathSimpleStore,
@@ -31,8 +31,8 @@ import {
   MappingsJson,
   SimpleRule,
   UnicodeJson
-} from './math_simple_store';
-import { Axis, DynamicCstr } from './dynamic_cstr';
+} from './math_simple_store.js';
+import { Axis, DynamicCstr } from './dynamic_cstr.js';
 
 /**
  * The locale for the store.

@@ -18,19 +18,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Span } from '../audio/span';
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import * as XpathUtil from '../common/xpath_util';
-import { LOCALE } from '../l10n/locale';
-import { vulgarFractionSmall } from '../l10n/transformers';
-import { Grammar } from '../rule_engine/grammar';
-import * as StoreUtil from '../rule_engine/store_util';
-import { register } from '../semantic_tree/semantic_annotations';
-import { SemanticAnnotator } from '../semantic_tree/semantic_annotator';
-import { isMatchingFence } from '../semantic_tree/semantic_attr';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import Engine from '../common/engine.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { vulgarFractionSmall } from '../l10n/transformers.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import * as StoreUtil from '../rule_engine/store_util.js';
+import { register } from '../semantic_tree/semantic_annotations.js';
+import { SemanticAnnotator } from '../semantic_tree/semantic_annotator.js';
+import { isMatchingFence } from '../semantic_tree/semantic_attr.js';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 /**
  * Count list of nodes and combine this according to the formatted context

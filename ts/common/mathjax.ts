@@ -19,9 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { EnginePromise } from './engine';
-import * as EngineConst from '../common/engine_const';
-import * as System from './system';
+import { EnginePromise } from './engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import * as System from './system.js';
 
 declare let MathJax: any;
 

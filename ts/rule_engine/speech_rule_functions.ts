@@ -19,8 +19,8 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { Span } from '../audio/span';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { Span } from '../audio/span.js';
 
 abstract class FunctionsStore<S> {
   /**

@@ -19,7 +19,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { createLocale, Locale } from '../locale';
+import { createLocale, Locale } from '../locale.js';
 
 let locale: Locale = null;
 

@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { ClearspeakRules } from './clearspeak_rules';
-import { MathspeakRules } from './mathspeak_rules';
-import { BrailleRules, OtherRules, PrefixRules } from './other_rules';
+import { ClearspeakRules } from './clearspeak_rules.js';
+import { MathspeakRules } from './mathspeak_rules.js';
+import { BrailleRules, OtherRules, PrefixRules } from './other_rules.js';
 
 let INIT = false;
 

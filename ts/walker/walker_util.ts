@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { Attribute } from '../enrich_mathml/enrich_attr';
+import * as DomUtil from '../common/dom_util.js';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
 
 /**
  * A comma separated list of attribute values.

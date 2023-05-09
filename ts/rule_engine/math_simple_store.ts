@@ -24,8 +24,8 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import { Axis, DynamicCstr } from './dynamic_cstr';
+import Engine from '../common/engine.js';
+import { Axis, DynamicCstr } from './dynamic_cstr.js';
 
 export interface MappingsJson {
   default: { [key: string]: string };
