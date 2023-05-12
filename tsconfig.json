@@ -2,7 +2,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "ES6",
-    "module": "commonjs",
+    "module": "es6",
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,

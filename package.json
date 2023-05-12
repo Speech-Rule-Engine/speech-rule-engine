@@ -15,6 +15,10 @@
     "lint-fix": "eslint ts/ --ext .ts,.tsx --fix",
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
     "docs": "npx typedoc --entryPointStrategy ts/",
+    "es5": "npx tsc --module commonjs --outDir cjs",
+    "postes5": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
+    "es6": "npm run compile",
+    "postes5": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
     "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "npx tsc",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest --silent ",
@@ -71,5 +75,6 @@
     "js/"
   ],
   "source": "ts/index.ts",
-  "browser": "lib/sre.js"
+  "browser": "lib/sre.js",
+  "type": "module"
 }
