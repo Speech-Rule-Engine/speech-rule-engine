@@ -16,7 +16,6 @@
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
     "docs": "npx typedoc --entryPointStrategy ts/",
     "es5": "npx tsc --module commonjs --outDir js",
-    "postes5": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
     "es6": "npx tsc --target es6 --module es2022 --outDir mjs --moduleResolution nodenext",
     "postes6": "node -e 'require(\"fs\").writeFileSync(\"mjs/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
     "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
