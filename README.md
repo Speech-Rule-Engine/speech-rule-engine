@@ -61,9 +61,37 @@ Or add it with yarn:
 
      yarn add speech-rule-engine
 
+#### Package structure
+
+#### Running in node
+
+
+``` javascript
+let SRE = require('./node_modules/speech-rule-engine/lib/sre.js');
+let SRE = require('speech-rule-engine');
+```
+
+
+``` javascript
+let SRE; import('speech-rule-engine').then((m) => SRE = m.default);
+let SRE; import('./node_modules/speech-rule-engine/lib/sre.js').then((m) => SRE = m.default);
+```
+
+``` javascript
+let SREfeature = {json: './node_modules/speech-rule-engine/lib/mathmaps/'};
+let SRE = require('./node_modules/speech-rule-engine/cjs/index.js');
+```
+
+``` javascript
+let SREfeature = {json: './node_modules/speech-rule-engine/lib/mathmaps/'};
+let SRE; import('./node_modules/speech-rule-engine/js/index.js').then((m) => SRE = m);
+```
+
+
+
 Then import into a running node or a source file using require:
 
-     require('speech-rule-engine');
+     
 
 ### API #######
 

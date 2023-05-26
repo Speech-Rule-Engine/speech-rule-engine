@@ -15,15 +15,16 @@
     "lint-fix": "eslint ts/ --ext .ts,.tsx --fix",
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
     "docs": "npx typedoc --entryPointStrategy ts/",
-    "es5": "npx tsc --module commonjs --outDir js",
-    "postes5": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
-    "es6": "npx tsc --target es6 --module es2022 --outDir mjs --moduleResolution nodenext",
-    "postes6": "node -e 'require(\"fs\").writeFileSync(\"mjs/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
+    "commonjs": "npx tsc --module commonjs --outDir cjs",
+    "postecommonjs": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
+    "module": "npx tsc --module es2022 --outDir js --moduleResolution nodenext",
+    "postmodule": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
     "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
-    "compile": "npx tsc",
+    "compile": "npm run module",
+    "clean": "rimraf js lib cjs",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest --silent ",
-    "prepublish": "make clean; make -j 12 publish; npm run es5; npm run es6; npx webpack",
-    "build": "make -j 12 all"
+    "prepublish": "make clean; make clean_min; npm run build",
+    "build": "make -j 12 all; npm run commonjs; npm run module; npx webpack"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
@@ -73,7 +74,7 @@
     "lib/",
     "bin/",
     "js/",
-    "mjs/"
+    "cjs/"
   ],
   "source": "ts/index.ts",
   "browser": "lib/sre.js"
