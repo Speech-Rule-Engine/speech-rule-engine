@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "es2022",
+    "moduleResolution": "nodenext",
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,

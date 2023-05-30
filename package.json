@@ -15,7 +15,7 @@
     "lint-fix": "eslint ts/ --ext .ts,.tsx --fix",
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
     "docs": "npx typedoc --entryPointStrategy ts/",
-    "commonjs": "npx tsc --module commonjs --outDir cjs",
+    "commonjs": "npx tsc --module commonjs --outDir cjs --moduleResolution node",
     "postecommonjs": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
     "module": "npx tsc --module es2022 --outDir js --moduleResolution nodenext",
     "postmodule": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
