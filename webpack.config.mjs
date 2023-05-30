@@ -1,10 +1,9 @@
 import * as path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
-import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let config = {
   module: {

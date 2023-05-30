@@ -1000,7 +1000,7 @@ export function generateTensorRules(store: SpeechRuleStore, brief = true) {
     '01101',
     '01100'
   ];
-  for (let i = 0, constel; (constel = constellations[i]); i++) {
+  for (let constel of constellations) {
     let name = 'tensor' + constel;
     let [components, verbStr, briefStr] = generateTensorRuleStrings_(constel);
     // Rules without neighbour.
