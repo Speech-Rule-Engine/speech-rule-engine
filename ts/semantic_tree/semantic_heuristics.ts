@@ -145,7 +145,7 @@ SemanticHeuristics.add(
     }
     // TODO: Combine with lines in numberRole_/exprFont_?
     const content = [...node.textContent];
-    const meaning = content.map(x => SemanticMap.Meaning.get(x));
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     const singleRole = meaning.reduce(function (prev, curr) {
       if (
         !prev ||
@@ -469,7 +469,6 @@ function recurseJuxtaposition(
   return recurseJuxtaposition(acc.concat(first), ops, elements);
 }
 
-
 // New Integral Heuristics
 /**
  * Heuristic to extract integral variables from elements that are considered to be
@@ -490,8 +489,8 @@ SemanticHeuristics.add(
  * @param nodes The list of nodes.
  */
 function implicitUnpack(nodes: SemanticNode[]) {
-  let children = nodes[0].childNodes;
-  nodes.splice(0, 1, ...children)
+  const children = nodes[0].childNodes;
+  nodes.splice(0, 1, ...children);
 }
 
 /**
@@ -504,16 +503,19 @@ SemanticHeuristics.add(
     integralFractionArg,
     (node: SemanticNode) => {
       if (node.type !== SemanticType.INTEGRAL) return false;
-      let [, integrand, intvar] = node.childNodes;
-      return intvar.type === SemanticType.EMPTY &&
+      const [, integrand, intvar] = node.childNodes;
+      return (
+        intvar.type === SemanticType.EMPTY &&
         integrand.type === SemanticType.FRACTION
+      );
     }
-  ));
+  )
+);
 
 /**
  * If the integrand is a fraction and the integral variable is the enumerator it
  * adjusts its role to integral an possibly rewrites it into a prefix operator.
- * 
+ *
  * @param node The integral node.
  */
 function integralFractionArg(node: SemanticNode): void {
@@ -532,8 +534,9 @@ function integralFractionArg(node: SemanticNode): void {
     return;
   }
   if (SemanticPred.isIntegralDxBoundary(first, second)) {
-    const prefix = SemanticProcessor.getInstance()['prefixNode_'](
-      second, [first]);
+    const prefix = SemanticProcessor.getInstance()['prefixNode_'](second, [
+      first
+    ]);
     prefix.role = SemanticRole.INTEGRAL;
     if (length === 2) {
       integrand.childNodes[0] = prefix;
@@ -556,7 +559,7 @@ SemanticHeuristics.add(
       // column is empty we will rewrite.
       let left = true;
       let right = true;
-      let topLeft = table.childNodes[0].childNodes[0];
+      const topLeft = table.childNodes[0].childNodes[0];
       if (!eligibleNode(topLeft.mathmlTree)) {
         left = false;
       } else {
@@ -570,11 +573,14 @@ SemanticHeuristics.add(
       if (left) {
         table.addAnnotation('Emph', 'left');
       }
-      let topRight = table.childNodes[0].childNodes[table.childNodes[0].childNodes.length - 1];
+      const topRight =
+        table.childNodes[0].childNodes[
+          table.childNodes[0].childNodes.length - 1
+        ];
       if (!eligibleNode(topRight.mathmlTree)) {
         right = false;
       } else {
-        let firstRow = table.childNodes[0].childNodes.length;
+        const firstRow = table.childNodes[0].childNodes.length;
         for (let i = 1, row; (row = table.childNodes[i]); i++) {
           if (row.childNodes.length >= firstRow) {
             right = false;
@@ -588,13 +594,25 @@ SemanticHeuristics.add(
       return left || right;
     }
   )
-)
+);
 
+/**
+ *
+ * @param node
+ */
 function eligibleNode(node: Element) {
-  return node.childNodes[0] && node.childNodes[0].childNodes[0] &&
+  return (
+    node.childNodes[0] &&
+    node.childNodes[0].childNodes[0] &&
     DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
-    DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) === 'MPADDED' &&
-    DomUtil.tagName(node.childNodes[0].childNodes[node.childNodes[0].childNodes.length - 1] as Element) === 'MPHANTOM'
+    DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) ===
+      'MPADDED' &&
+    DomUtil.tagName(
+      node.childNodes[0].childNodes[
+        node.childNodes[0].childNodes.length - 1
+      ] as Element
+    ) === 'MPHANTOM'
+  );
 }
 
 const rewritable: SemanticType[] = [
@@ -606,13 +624,17 @@ const rewritable: SemanticType[] = [
   SemanticType.POSTFIXOP
 ];
 
+/**
+ *
+ * @param table
+ */
 function rewriteSubcasesTable(table: SemanticNode) {
   table.addAnnotation('Emph', 'top');
   let row: SemanticNode[] = [];
   if (table.hasAnnotation('Emph', 'left')) {
-    let topLeft = table.childNodes[0].childNodes[0].childNodes[0];
-    let cells = rewriteCell(topLeft, true);
-    cells.forEach(x => x.addAnnotation('Emph', 'left'));
+    const topLeft = table.childNodes[0].childNodes[0].childNodes[0];
+    const cells = rewriteCell(topLeft, true);
+    cells.forEach((x) => x.addAnnotation('Emph', 'left'));
     row = row.concat(cells);
     for (let i = 0, line: SemanticNode; (line = table.childNodes[i]); i++) {
       line.childNodes.shift();
@@ -620,41 +642,53 @@ function rewriteSubcasesTable(table: SemanticNode) {
   }
   row.push(table);
   if (table.hasAnnotation('Emph', 'right')) {
-    let topRight = table.childNodes[0].childNodes[
-      table.childNodes[0].childNodes.length - 1   
-    ].childNodes[0];
-    let cells = rewriteCell(topRight);
-    cells.forEach(x => x.addAnnotation('Emph', 'left'));
+    const topRight =
+      table.childNodes[0].childNodes[table.childNodes[0].childNodes.length - 1]
+        .childNodes[0];
+    const cells = rewriteCell(topRight);
+    cells.forEach((x) => x.addAnnotation('Emph', 'left'));
     row = row.concat(cells);
     table.childNodes[0].childNodes.pop();
   }
   SemanticProcessor.tableToMultiline(table);
-  let newNode = SemanticProcessor.getInstance().row(row);
-  let annotation = table.annotation['Emph'];
+  const newNode = SemanticProcessor.getInstance().row(row);
+  const annotation = table.annotation['Emph'];
   table.annotation['Emph'] = ['table'];
-  annotation.forEach(x => newNode.addAnnotation('Emph', x));
+  annotation.forEach((x) => newNode.addAnnotation('Emph', x));
   return newNode;
 }
 
+/**
+ *
+ * @param cell
+ * @param left
+ */
 function rewriteCell(cell: SemanticNode, left?: boolean) {
   if (!cell.childNodes.length) {
     rewriteFence(cell);
     return [cell];
   }
   let fence = null;
-  if (cell.type === SemanticType.PUNCTUATED &&
-    (left ? cell.role === SemanticRole.ENDPUNCT : cell.role === SemanticRole.STARTPUNCT)) {
-    let children = cell.childNodes;
-    if (rewriteFence(children[left ? children.length - 1 : 0]))  {
+  if (
+    cell.type === SemanticType.PUNCTUATED &&
+    (left
+      ? cell.role === SemanticRole.ENDPUNCT
+      : cell.role === SemanticRole.STARTPUNCT)
+  ) {
+    const children = cell.childNodes;
+    if (rewriteFence(children[left ? children.length - 1 : 0])) {
       cell = children[left ? 0 : children.length - 1];
       fence = children[left ? children.length - 1 : 0];
     }
   }
   if (rewritable.indexOf(cell.type) !== -1) {
-    let children = cell.childNodes;
+    const children = cell.childNodes;
     rewriteFence(children[left ? children.length - 1 : 0]);
-    let newNodes = SemanticSkeleton.combineContentChildren<SemanticNode>(
-      cell, cell.contentNodes, cell.childNodes);
+    const newNodes = SemanticSkeleton.combineContentChildren<SemanticNode>(
+      cell,
+      cell.contentNodes,
+      cell.childNodes
+    );
     if (fence) {
       if (left) {
         newNodes.push(fence);
@@ -668,18 +702,21 @@ function rewriteCell(cell: SemanticNode, left?: boolean) {
 }
 
 const PUNCT_TO_FENCE_: { [key: string]: SemanticRole } = {
-    [SemanticRole.METRIC]: SemanticRole.METRIC,
-    [SemanticRole.VBAR]: SemanticRole.NEUTRAL,
-    [SemanticRole.OPENFENCE]: SemanticRole.OPEN,
-    [SemanticRole.CLOSEFENCE]: SemanticRole.CLOSE
-  };
+  [SemanticRole.METRIC]: SemanticRole.METRIC,
+  [SemanticRole.VBAR]: SemanticRole.NEUTRAL,
+  [SemanticRole.OPENFENCE]: SemanticRole.OPEN,
+  [SemanticRole.CLOSEFENCE]: SemanticRole.CLOSE
+};
 
-
+/**
+ *
+ * @param fence
+ */
 function rewriteFence(fence: SemanticNode): boolean {
   if (fence.type !== SemanticType.PUNCTUATION) {
     return false;
   }
-  let role = PUNCT_TO_FENCE_[fence.role];
+  const role = PUNCT_TO_FENCE_[fence.role];
   if (!role) {
     return false;
   }

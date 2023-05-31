@@ -62,7 +62,6 @@ export interface SimpleRule {
  * A base store for simple Math objects.
  */
 export class MathSimpleStore {
-
   /**
    * The information common to all rules in this store.
    */
@@ -120,13 +119,7 @@ export class MathSimpleStore {
   ) {
     for (const [domain, styles] of Object.entries(mapping)) {
       for (const [style, content] of Object.entries(styles)) {
-        this.defineRuleFromStrings(
-          locale,
-          modality,
-          domain,
-          style,
-          content
-        );
+        this.defineRuleFromStrings(locale, modality, domain, style, content);
       }
     }
   }

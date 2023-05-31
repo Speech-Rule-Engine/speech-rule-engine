@@ -65,12 +65,8 @@ export function highlighter(
  * @param back Background color as a named color.
  * @param fore Foreground color as a named color.
  * @param highlighter The highlighter to update.
-*/
-export function update(
-  back: Color,
-  fore: Color,
-  highlighter: Highlighter
-) {
+ */
+export function update(back: Color, fore: Color, highlighter: Highlighter) {
   const colorPicker = new ColorPicker(back, fore);
   highlighter.setColor(colorPicker);
 }

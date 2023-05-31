@@ -39,7 +39,6 @@ export interface Highlight {
 let counter = 0;
 
 export abstract class AbstractHighlighter implements Highlighter {
-
   public counter = counter++;
 
   /**

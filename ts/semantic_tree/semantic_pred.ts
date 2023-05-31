@@ -20,7 +20,11 @@
  */
 
 import { NamedSymbol, SemanticMap } from './semantic_attr.js';
-import { SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning.js';
+import {
+  SemanticRole,
+  SemanticType,
+  SemanticSecondary
+} from './semantic_meaning.js';
 import { SemanticNode } from './semantic_node.js';
 import { getEmbellishedInner } from './semantic_util.js';
 
@@ -42,10 +46,7 @@ export function isType(node: SemanticNode, attr: SemanticType): boolean {
  * @param attr The embellished attribute.
  * @returns True if node has that embellished type.
  */
-function embellishedType(
-  node: SemanticNode,
-  attr: SemanticType
-): boolean {
+function embellishedType(node: SemanticNode, attr: SemanticType): boolean {
   return node.embellished === attr;
 }
 
@@ -67,10 +68,12 @@ export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
  * @returns True if the node is a punctuation, fence or operator.
  */
 export function isAccent(node: SemanticNode): boolean {
-  return isType(node, SemanticType.FENCE) ||
+  return (
+    isType(node, SemanticType.FENCE) ||
     isType(node, SemanticType.PUNCTUATION) ||
     isType(node, SemanticType.OPERATOR) ||
-    isType(node, SemanticType.RELATION);
+    isType(node, SemanticType.RELATION)
+  );
 }
 
 /**
@@ -148,7 +151,7 @@ export function isIntegralDxBoundary(
   return (
     !!secondNode &&
     isType(secondNode, SemanticType.IDENTIFIER) &&
-      SemanticMap.Secondary.has(firstNode.textContent, SemanticSecondary.D)
+    SemanticMap.Secondary.has(firstNode.textContent, SemanticSecondary.D)
   );
 }
 
@@ -164,8 +167,8 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
     const firstChar = node.textContent[0];
     return (
       firstChar &&
-        node.textContent[1] &&
-        SemanticMap.Secondary.has(firstChar, SemanticSecondary.D)
+      node.textContent[1] &&
+      SemanticMap.Secondary.has(firstChar, SemanticSecondary.D)
     );
   }
   return false;
@@ -633,19 +636,19 @@ export function isPureUnit(node: SemanticNode): boolean {
  * Checks if a given node represents a product of units.
  *
  * @param node The node.
- *
- * @return True if it is a multiplication/implicit node and all children are
+ * @returns True if it is a multiplication/implicit node and all children are
  *     pure units or only the first is a unit counter.
  */
 export function isUnitProduct(node: SemanticNode): boolean {
   const children = node.childNodes;
-  return node.type === SemanticType.INFIXOP &&
+  return (
+    node.type === SemanticType.INFIXOP &&
     (node.role === SemanticRole.MULTIPLICATION ||
       node.role === SemanticRole.IMPLICIT) &&
     children.length &&
-    (isPureUnit(children[0]) ||
-     isUnitCounter(children[0])) &&
-    node.childNodes.slice(1).every(isPureUnit);
+    (isPureUnit(children[0]) || isUnitCounter(children[0])) &&
+    node.childNodes.slice(1).every(isPureUnit)
+  );
 }
 
 /**
@@ -656,12 +659,13 @@ export function isUnitProduct(node: SemanticNode): boolean {
  * @returns True if the node is considered an implicit node.
  */
 export function isImplicit(node: SemanticNode): boolean {
-  return node.type === SemanticType.INFIXOP && (
-    node.role === SemanticRole.IMPLICIT ||
-    (node.role === SemanticRole.UNIT &&
-      !!node.contentNodes.length &&
-      node.contentNodes[0].textContent === NamedSymbol.invisibleTimes
-    ));
+  return (
+    node.type === SemanticType.INFIXOP &&
+    (node.role === SemanticRole.IMPLICIT ||
+      (node.role === SemanticRole.UNIT &&
+        !!node.contentNodes.length &&
+        node.contentNodes[0].textContent === NamedSymbol.invisibleTimes))
+  );
 }
 
 /**

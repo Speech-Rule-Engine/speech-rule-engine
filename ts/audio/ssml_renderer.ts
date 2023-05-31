@@ -35,7 +35,7 @@ export class SsmlRenderer extends XmlRenderer {
     return (
       '<?xml version="1.0"?><speak version="1.1"' +
       ' xmlns="http://www.w3.org/2001/10/synthesis"' +
-        ` xml:lang="${Engine.getInstance().locale}">` +
+      ` xml:lang="${Engine.getInstance().locale}">` +
       '<prosody rate="' +
       Engine.getInstance().getRate() +
       '%">' +
@@ -112,21 +112,30 @@ export class SsmlRenderer extends XmlRenderer {
       const span = spans[i];
       if (this.isEmptySpan(span)) continue;
       const kind = SsmlRenderer.MARK_KIND ? span.attributes['kind'] : '';
-      const id = Engine.getInstance().automark ?
-        span.attributes['id'] :
-        (Engine.getInstance().mark ? span.attributes['extid'] : '');
+      const id = Engine.getInstance().automark
+        ? span.attributes['id']
+        : Engine.getInstance().mark
+        ? span.attributes['extid']
+        : '';
       // TODO:
       //   * combine say as character
       //   * mark again with kind?
-      if (id && id !== lastMark &&
-        !(SsmlRenderer.MARK_ONCE && SsmlRenderer.MARKS[id])) {
-        result.push(kind ?
-          `<mark name="${id}" kind="${kind}"/>` : `<mark name="${id}"/>`);
+      if (
+        id &&
+        id !== lastMark &&
+        !(SsmlRenderer.MARK_ONCE && SsmlRenderer.MARKS[id])
+      ) {
+        result.push(
+          kind ? `<mark name="${id}" kind="${kind}"/>` : `<mark name="${id}"/>`
+        );
         lastMark = id;
         SsmlRenderer.MARKS[id] = true;
       }
-      if (Engine.getInstance().character &&
-        span.speech.length === 1 && span.speech.match(/[a-zA-Z]/)) {
+      if (
+        Engine.getInstance().character &&
+        span.speech.length === 1 &&
+        span.speech.match(/[a-zA-Z]/)
+      ) {
         result.push(
           '<say-as interpret-as="' +
             SsmlRenderer.CHARACTER_ATTR +
@@ -142,8 +151,7 @@ export class SsmlRenderer extends XmlRenderer {
   }
 
   private isEmptySpan(span: Span) {
-    let sep = span.attributes['separator'];
+    const sep = span.attributes['separator'];
     return span.speech.match(/^\s*$/) && (!sep || sep.match(/^\s*$/));
   }
-
 }

@@ -218,7 +218,7 @@ export class SemanticTree {
  */
 const unitVisitor = new SemanticVisitor('general', 'unit', (node, _info) => {
   if (SemanticPred.isUnitProduct(node)) {
-      node.role = SemanticRole.UNIT;
-    }
+    node.role = SemanticRole.UNIT;
+  }
   return false;
 });

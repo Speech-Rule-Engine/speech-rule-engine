@@ -182,10 +182,7 @@ function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
  * @param nodes The XML nodes.
  * @returns The node at the exact tree position of the semantic node.
  */
-function nodeAtPosition(
-  semantic: SemanticNode,
-  nodes: Element[]
-): Element {
+function nodeAtPosition(semantic: SemanticNode, nodes: Element[]): Element {
   const node = nodes[0];
   if (!semantic.parent) {
     return node;

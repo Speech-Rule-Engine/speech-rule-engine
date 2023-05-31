@@ -260,11 +260,18 @@ export class SemanticSkeleton {
    *
    * @param mml A mml node to add a structure to.
    * @param node A semantic node.
+   * @param level
+   * @param posinset
+   * @param setsize
    * @returns The sexp structure.
    */
-  private static tree_(mml: Element, node: SemanticNode,
-                       level: number = 0, posinset: number = 1,
-                       setsize: number = 1): Sexp {
+  private static tree_(
+    mml: Element,
+    node: SemanticNode,
+    level = 0,
+    posinset = 1,
+    setsize = 1
+  ): Sexp {
     if (!node) {
       return [];
     }
@@ -292,15 +299,24 @@ export class SemanticSkeleton {
     if (mmlChild) {
       SemanticSkeleton.addOwns_(mmlChild, children);
     }
-    for (let i = 0, l = children.length, child: SemanticNode;
-         (child = children[i]); i++) {
-      skeleton.push(SemanticSkeleton.tree_
-                    (mml, child, level + 1, i + 1, l) as any);
+    for (
+      let i = 0, l = children.length, child: SemanticNode;
+      (child = children[i]);
+      i++
+    ) {
+      skeleton.push(
+        SemanticSkeleton.tree_(mml, child, level + 1, i + 1, l) as any
+      );
     }
     return skeleton;
   }
 
-  private static addAria(node: Element, level: number, posinset: number, setsize: number) {
+  private static addAria(
+    node: Element,
+    level: number,
+    posinset: number,
+    setsize: number
+  ) {
     // Aria elements
     if (!level) {
       node.setAttribute('role', 'tree');

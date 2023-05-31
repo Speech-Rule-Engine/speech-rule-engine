@@ -288,7 +288,11 @@ enum ExtraFont {
 }
 
 export type SemanticFont = Alphabet.Font | ExtraFont | Alphabet.Embellish;
-export const SemanticFont = { ...Alphabet.Font, ...ExtraFont, ...Alphabet.Embellish };
+export const SemanticFont = {
+  ...Alphabet.Font,
+  ...ExtraFont,
+  ...Alphabet.Embellish
+};
 
 enum SecondaryEnum {
   ALLLETTERS = 'allLetters',
@@ -299,4 +303,3 @@ enum SecondaryEnum {
 
 export type SemanticSecondary = Alphabet.Base | SecondaryEnum;
 export const SemanticSecondary = { ...Alphabet.Base, ...SecondaryEnum };
-

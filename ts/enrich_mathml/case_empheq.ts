@@ -31,7 +31,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
   public mml: Element;
 
   private mrows: Element[] = [];
-  
+
   /**
    * Applicability test of the case.
    *
@@ -39,10 +39,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
    * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return (
-      !!semantic.mathmlTree &&
-        semantic.hasAnnotation('Emph', 'top')
-    );
+    return !!semantic.mathmlTree && semantic.hasAnnotation('Emph', 'top');
   }
 
   /**
@@ -65,10 +62,10 @@ export class CaseEmpheq extends AbstractEnrichCase {
     // Only insert new mrows without children.
     this.recurseToTable(this.semantic);
     if (this.mrows.length) {
-      let newRow = DomUtil.createElement('mrow');
-      let parent = this.mml.parentNode;
+      const newRow = DomUtil.createElement('mrow');
+      const parent = this.mml.parentNode;
       parent.insertBefore(newRow, this.mml);
-      for (let mrow of this.mrows) {
+      for (const mrow of this.mrows) {
         newRow.appendChild(mrow);
       }
       newRow.appendChild(this.mml);
@@ -77,21 +74,32 @@ export class CaseEmpheq extends AbstractEnrichCase {
   }
 
   private recurseToTable(node: SemanticNode) {
-    if (!(node.hasAnnotation('Emph', 'top') || node.hasAnnotation('Emph', 'fence')) &&
-      (node.hasAnnotation('Emph', 'left') || node.hasAnnotation('Emph', 'right'))) {
+    if (
+      !(
+        node.hasAnnotation('Emph', 'top') || node.hasAnnotation('Emph', 'fence')
+      ) &&
+      (node.hasAnnotation('Emph', 'left') ||
+        node.hasAnnotation('Emph', 'right'))
+    ) {
       EnrichMathml.walkTree(node);
       return;
     }
-    if (!node.mathmlTree ||
-      (DomUtil.tagName(node.mathmlTree) === 'MTABLE' && node.annotation['Emph']?.length &&
-        node.annotation['Emph'][0] !== 'table')) {
+    if (
+      !node.mathmlTree ||
+      (DomUtil.tagName(node.mathmlTree) === 'MTABLE' &&
+        node.annotation['Emph']?.length &&
+        node.annotation['Emph'][0] !== 'table')
+    ) {
       // Add an empty mrow.
-      let newNode = DomUtil.createElement('mrow');
+      const newNode = DomUtil.createElement('mrow');
       setAttributes(newNode, node);
       this.mrows.unshift(newNode);
     } else {
-      if (DomUtil.tagName(node.mathmlTree) === 'MTABLE' && node.annotation['Emph']?.length &&
-        node.annotation['Emph'][0] === 'table') {
+      if (
+        DomUtil.tagName(node.mathmlTree) === 'MTABLE' &&
+        node.annotation['Emph']?.length &&
+        node.annotation['Emph'][0] === 'table'
+      ) {
         this.finalizeTable(node);
         return;
       }
@@ -99,8 +107,8 @@ export class CaseEmpheq extends AbstractEnrichCase {
     }
     node.childNodes.forEach(this.recurseToTable.bind(this));
     if (node.textContent || node.type === 'punctuated') {
-      const newContent = node.contentNodes.map(x => {
-        let newNode = EnrichMathml.cloneContentNode(x);
+      const newContent = node.contentNodes.map((x) => {
+        const newNode = EnrichMathml.cloneContentNode(x);
         if (newNode.hasAttribute('data-semantic-added')) {
           this.mrows.unshift(newNode);
         } else {
@@ -123,5 +131,4 @@ export class CaseEmpheq extends AbstractEnrichCase {
       EnrichMathml.walkTree(x);
     });
   }
-  
 }

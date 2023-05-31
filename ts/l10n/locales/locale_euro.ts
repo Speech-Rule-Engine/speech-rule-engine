@@ -15,7 +15,6 @@
 
 /**
  * @file Euro Braille message file.
- *
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
@@ -33,4 +32,3 @@ export function euro(): Locale {
   // TODO: Initialise the grammar methods here?
   return locale;
 }
-

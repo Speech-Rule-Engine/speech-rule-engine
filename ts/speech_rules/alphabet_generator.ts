@@ -61,9 +61,11 @@ function makeDomains() {
 export function generateBase() {
   for (const int of Alphabet.INTERVALS.values()) {
     const letters = int.unicode;
-    for (let letter of letters) {
-      MathCompoundStore.baseStores.set(
-        letter, {key: letter, category: int.category});
+    for (const letter of letters) {
+      MathCompoundStore.baseStores.set(letter, {
+        key: letter,
+        category: int.category
+      });
     }
   }
 }
@@ -85,12 +87,7 @@ export function generate(locale: string) {
       numberRules(letters, int.font, int.offset || 0);
     } else {
       const alphabet = (LOCALE.ALPHABETS as any)[int.base];
-      alphabetRules(
-        letters,
-        alphabet,
-        int.font,
-        !!int.capital
-      );
+      alphabetRules(letters, alphabet, int.font, !!int.capital);
     }
   }
   Engine.getInstance().locale = oldLocale;
@@ -157,11 +154,7 @@ function alphabetRules(
  * @param font The font name.
  * @param offset The offset value for the initial number.
  */
-function numberRules(
-  unicodes: string[],
-  font: string,
-  offset: number
-) {
+function numberRules(unicodes: string[], font: string, offset: number) {
   const realFont = getFont(font);
   for (let i = 0, unicode; (unicode = unicodes[i]); i++) {
     const prefixes = LOCALE.ALPHABETS.digitPrefix;
@@ -215,4 +208,3 @@ function makeLetter(
     );
   }
 }
-

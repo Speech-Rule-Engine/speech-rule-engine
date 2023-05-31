@@ -195,8 +195,9 @@ export class SpeechRuleEngine {
     // It has to run __before__ the first speech rule store is added.
     const store = storeFactory(set);
     if (store.kind !== 'abstract') {
-      store.getSpeechRules().forEach(
-        (x) => SpeechRuleEngine.getInstance().trie.addRule(x));
+      store
+        .getSpeechRules()
+        .forEach((x) => SpeechRuleEngine.getInstance().trie.addRule(x));
     }
     SpeechRuleEngine.getInstance().addEvaluator(store);
   }
@@ -217,9 +218,7 @@ export class SpeechRuleEngine {
     const assignment: GrammarState = {};
     for (const [key, val] of Object.entries(grammar)) {
       assignment[key] =
-        typeof val === 'string'
-        ? context.constructString(node, val)
-        : val;
+        typeof val === 'string' ? context.constructString(node, val) : val;
     }
     Grammar.getInstance().pushState(assignment);
   }
@@ -375,7 +374,7 @@ export class SpeechRuleEngine {
           break;
         case ActionType.TEXT:
           {
-            let xpath = attributes['span'];
+            const xpath = attributes['span'];
             let attrs: { [key: string]: string } = {};
             // Span Custom: Here we compute a customized node for then span.
             if (xpath) {
@@ -384,14 +383,15 @@ export class SpeechRuleEngine {
               //       We need the right xpath expression and combine their
               //       attributes.
               //       Generalise the following via kind?
-              attrs = nodes.length ?
-                Span.getAttributes(nodes[0] as Element) : {kind: xpath};
+              attrs = nodes.length
+                ? Span.getAttributes(nodes[0] as Element)
+                : { kind: xpath };
             }
             const str = context.constructSpan(node, content, attrs);
             descrs = str.map(function (span: Span) {
               return AuditoryDescription.create(
-                    { text: span.speech, attributes: span.attributes },
-                    { adjust: true }
+                { text: span.speech, attributes: span.attributes },
+                { adjust: true }
               );
             });
           }
@@ -790,6 +790,7 @@ const stores: Map<string, BaseRuleStore> = new Map();
 /**
  * Factory method for generating rule stores by modality.
  *
+ * @param locale
  * @param modality The modality.
  * @returns The generated rule store.
  */

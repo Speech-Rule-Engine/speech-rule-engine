@@ -283,8 +283,8 @@ export class Grammar {
    * Processes all the grammar elements that are only propagated once.
    */
   public processSingles() {
-    let assignment: State = {};
-    for (let single of this.singles) {
+    const assignment: State = {};
+    for (const single of this.singles) {
       assignment[single] = false;
     }
     this.singles = [];

@@ -21,7 +21,10 @@
 import * as DomUtil from '../common/dom_util.js';
 import { KeyCode } from '../common/event_util.js';
 import { Highlighter } from '../highlighter/highlighter.js';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SpeechGenerator } from '../speech_generator/speech_generator.js';
 

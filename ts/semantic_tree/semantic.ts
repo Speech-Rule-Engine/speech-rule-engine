@@ -19,7 +19,11 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning.js';
+import {
+  SemanticFont,
+  SemanticRole,
+  SemanticType
+} from './semantic_meaning.js';
 import { SemanticTree } from './semantic_tree.js';
 
 /**

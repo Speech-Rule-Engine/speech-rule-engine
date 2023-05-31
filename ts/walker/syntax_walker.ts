@@ -20,7 +20,10 @@
 
 import { interleaveLists } from '../common/base_util.js';
 import { Highlighter } from '../highlighter/highlighter.js';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 import { SpeechGenerator } from '../speech_generator/speech_generator.js';
 import { AbstractWalker } from './abstract_walker.js';
 import { Levels } from './levels.js';

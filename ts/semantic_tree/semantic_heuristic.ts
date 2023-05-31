@@ -38,9 +38,8 @@ export interface SemanticHeuristic<T> {
   applicable: (node: T) => boolean;
 }
 
-abstract class SemanticAbstractHeuristic<
-  T extends SemanticHeuristicTypes
-> implements SemanticHeuristic<T>
+abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes>
+  implements SemanticHeuristic<T>
 {
   public apply: (node: T) => void;
 

@@ -29,7 +29,10 @@ import { Highlighter } from '../highlighter/highlighter.js';
 import { LOCALE } from '../l10n/locale.js';
 import { AxisMap } from '../rule_engine/dynamic_cstr.js';
 import { Grammar } from '../rule_engine/grammar.js';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
 import { SpeechGenerator } from '../speech_generator/speech_generator.js';

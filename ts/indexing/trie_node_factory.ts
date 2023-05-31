@@ -95,9 +95,7 @@ const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
  *    xpath expression.
  */
 // TODO (TS): Improve methods by testing for Element type.
-function constraintTest(
-  constraint: string
-): ((p1: Node) => boolean) | null {
+function constraintTest(constraint: string): ((p1: Node) => boolean) | null {
   // @self::*
   if (constraint.match(/^self::\*$/)) {
     return (_node) => true;

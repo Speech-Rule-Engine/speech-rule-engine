@@ -205,6 +205,7 @@ export class Trie {
   }
 
   /**
+   * @param root
    * @returns Set of speech rules in the trie.
    */
   public collectRules(root: TrieNode = this.root): SpeechRule[] {

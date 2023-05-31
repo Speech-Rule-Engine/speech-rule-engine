@@ -185,6 +185,12 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   return result;
 }
 
+/**
+ * Removes pause elements from start and end of auditory markup.
+ *
+ * @param markup The auditory markup.
+ * @returns The markup with leading and trailing pauses removed.
+ */
 function cleanPause(markup: Markup[]) {
   while (isPauseElement(markup[0])) {
     markup.shift();

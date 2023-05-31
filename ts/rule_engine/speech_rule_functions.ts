@@ -110,7 +110,6 @@ export class CustomStrings extends FunctionsStore<CustomString> {
   }
 }
 
-
 /**
  * Context functions return a string that is attached to the first description
  * element computed by a rule.

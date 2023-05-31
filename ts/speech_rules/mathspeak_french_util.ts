@@ -57,7 +57,10 @@ export function baselineBrief(node: Element): Span[] {
  */
 export function leftSuperscriptVerbose(node: Element): Span[] {
   const leftIndex = MathspeakUtil.superscriptVerbose(node);
-  leftIndex[0].speech = leftIndex[0].speech.replace(/^exposant/, 'exposant gauche');
+  leftIndex[0].speech = leftIndex[0].speech.replace(
+    /^exposant/,
+    'exposant gauche'
+  );
   return leftIndex;
 }
 

@@ -31,14 +31,13 @@ import { reduce } from './semantic_ordering.js';
  * @returns A uniform key for the default mapping.
  */
 function key(symbol: string, font: SemanticFont): string {
-  return (symbol.match(/^.+:.+$/) || !font) ? symbol : symbol + ':' + font;
+  return symbol.match(/^.+:.+$/) || !font ? symbol : symbol + ':' + font;
 }
 
 /**
  * Map to collect meaning of elements occurring in the current expression.
  */
 export class SemanticDefault extends Map<string, SemanticMeaning> {
-
   /**
    * @override
    */
@@ -73,11 +72,9 @@ export class SemanticDefault extends Map<string, SemanticMeaning> {
   public getNode(node: SemanticNode): SemanticMeaning {
     return this.get(node.textContent, node.font);
   }
-
 }
 
 abstract class SemanticCollator<T> extends Map<string, T[]> {
-
   /**
    * Adds a semantic node to the structure by appending it to the already
    * existing one for a particular symbol.
@@ -145,11 +142,9 @@ abstract class SemanticCollator<T> extends Map<string, T[]> {
     }
     return false;
   }
-
 }
 
 export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
-
   /**
    * @override
    */
@@ -171,7 +166,7 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
     const outer = [];
     for (const [key, nodes] of this) {
       const length = Array(key.length + 3).join(' ');
-      const inner = nodes.map(node => node.toString()).join('\n' + length);
+      const inner = nodes.map((node) => node.toString()).join('\n' + length);
       outer.push(key + ': ' + inner);
     }
     return outer.join('\n');
@@ -183,15 +178,16 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
   public collateMeaning(): SemanticMeaningCollator {
     const collator = new SemanticMeaningCollator();
     for (const [key, val] of this) {
-      collator.set(key, val.map((node) => node.meaning()));
+      collator.set(
+        key,
+        val.map((node) => node.meaning())
+      );
     }
     return collator;
   }
-  
 }
 
 export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
-
   /**
    * @override
    */
@@ -221,10 +217,12 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
     const outer = [];
     for (const [key, nodes] of this) {
       const length = Array(key.length + 3).join(' ');
-      const inner = nodes.
-        map(node =>
-          `{type: ${node.type}, role: ${node.role}, font: ${node.font}}`).
-        join('\n' + length);
+      const inner = nodes
+        .map(
+          (node) =>
+            `{type: ${node.type}, role: ${node.role}, font: ${node.font}}`
+        )
+        .join('\n' + length);
       outer.push(key + ': ' + inner);
     }
     return outer.join('\n');

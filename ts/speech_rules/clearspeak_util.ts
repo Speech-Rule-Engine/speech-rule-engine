@@ -29,7 +29,10 @@ import * as StoreUtil from '../rule_engine/store_util.js';
 import { register } from '../semantic_tree/semantic_annotations.js';
 import { SemanticAnnotator } from '../semantic_tree/semantic_annotator.js';
 import { isMatchingFence } from '../semantic_tree/semantic_attr.js';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 /**
@@ -444,11 +447,15 @@ register(
  */
 export function ordinalExponent(node: Element): Span[] {
   const num = parseInt(node.textContent, 10);
-  return [Span.stringEmpty(
-    isNaN(num) ? node.textContent :
-      (num > 10
+  return [
+    Span.stringEmpty(
+      isNaN(num)
+        ? node.textContent
+        : num > 10
         ? LOCALE.NUMBERS.numericOrdinal(num)
-        : LOCALE.NUMBERS.wordOrdinal(num)))];
+        : LOCALE.NUMBERS.wordOrdinal(num)
+    )
+  ];
 }
 
 let NESTING_DEPTH: string | null = null;
@@ -623,7 +630,6 @@ function layoutFactor_(node: Element): boolean {
  */
 export function wordOrdinal(node: Element): Span[] {
   return [
-    Span.stringEmpty(
-      LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10)))
+    Span.stringEmpty(LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10)))
   ];
 }

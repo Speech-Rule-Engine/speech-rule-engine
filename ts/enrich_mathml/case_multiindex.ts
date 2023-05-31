@@ -19,7 +19,10 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { Sexp } from '../semantic_tree/semantic_skeleton.js';
 

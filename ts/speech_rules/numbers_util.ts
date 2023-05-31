@@ -68,21 +68,22 @@ export function vulgarFraction(node: Element): Span[] {
     conversion.denominator
   ) {
     return [
-      Span.node(LOCALE.NUMBERS.numberToWords(conversion.enumerator),
-                node.childNodes[0].childNodes[0] as Element,
-                {separator: ''}),
-      Span.stringAttr(LOCALE.NUMBERS.vulgarSep, {separator: ''}),
+      Span.node(
+        LOCALE.NUMBERS.numberToWords(conversion.enumerator),
+        node.childNodes[0].childNodes[0] as Element,
+        { separator: '' }
+      ),
+      Span.stringAttr(LOCALE.NUMBERS.vulgarSep, { separator: '' }),
       Span.node(
         LOCALE.NUMBERS.numberToOrdinal(
           conversion.denominator,
           conversion.enumerator !== 1
         ),
-        node.childNodes[0].childNodes[1] as Element)
+        node.childNodes[0].childNodes[1] as Element
+      )
     ];
   }
-  return [
-    Span.node(conversion.content || '', node)
-  ];
+  return [Span.node(conversion.content || '', node)];
 }
 
 /**
@@ -95,5 +96,6 @@ export function vulgarFraction(node: Element): Span[] {
 export function ordinalPosition(node: Node): Span[] {
   const children = DomUtil.toArray(node.parentNode.childNodes);
   return Span.singleton(
-    LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString());
+    LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString()
+  );
 }

@@ -90,10 +90,7 @@ export function localEnclose(enclose: string): string {
  * @param fallback The fallback if no string can be extracted.
  * @returns The name.
  */
-function extractString(
-  combiner: string | [string, string],
-  fallback: string
-) {
+function extractString(combiner: string | [string, string], fallback: string) {
   if (combiner === undefined) {
     return fallback;
   }
