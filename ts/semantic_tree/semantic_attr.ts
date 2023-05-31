@@ -53,8 +53,8 @@ import {
   SemanticType,
   SemanticFont,
   SemanticSecondary
-} from './semantic_meaning';
-import * as Alphabet from '../speech_rules/alphabet';
+} from './semantic_meaning.js';
+import * as Alphabet from '../speech_rules/alphabet.js';
 
 export namespace NamedSymbol {
   /**
@@ -84,6 +84,8 @@ class meaningMap extends Map<string, SemanticMeaning> {
   /**
    * Lookup the semantic meaning of a symbol in terms of type and role. If symbol
    * has no predefined meaning, returns unknown.
+   *
+   * @param symbol
    */
   public get(symbol: string) {
     return (
@@ -117,7 +119,6 @@ class secondaryMap extends Map<string, string> {
 
   /**
    * @override
-   *
    * @param kind The kind of annotation.
    * @param char The character to look up.
    */
@@ -127,7 +128,6 @@ class secondaryMap extends Map<string, string> {
 
   /**
    * @override
-   *
    * @param kind The kind of annotation.
    * @param char The character to look up.
    */
@@ -172,6 +172,11 @@ export namespace SemanticMap {
   export const FencesVert = new Map();
 }
 
+/**
+ *
+ * @param symbols
+ * @param meaning
+ */
 function addMeaning(symbols: string[], meaning: MeaningSet) {
   for (const symbol of symbols) {
     SemanticMap.Meaning.set(symbol, {
@@ -1171,14 +1176,20 @@ function initMeaning() {
 }
 
 // Fences
+/**
+ *
+ * @param map
+ * @param ints
+ * @param sep
+ */
 function addFences(
   map: Map<string, string>,
   ints: (string | [string, string])[],
-  sep: number = 1
+  sep = 1
 ) {
   const used: { [key: number]: boolean } = {};
   const codes = Alphabet.makeCodeInterval(ints);
-  for (let code of codes) {
+  for (const code of codes) {
     if (used[code]) continue;
     map.set(String.fromCodePoint(code), String.fromCodePoint(code + sep));
     used[code] = true;
@@ -1186,6 +1197,9 @@ function addFences(
   }
 }
 
+/**
+ *
+ */
 function initFences() {
   // The intervals are manually minimised.
   addFences(SemanticMap.FencesVert, [
@@ -1275,14 +1289,7 @@ const hyperbolicFunctions: string[] = [
   'arsinh',
   'artanh'
 ];
-const algebraicFunctions: string[] = [
-  'deg',
-  'det',
-  'dim',
-  'hom',
-  'ker',
-  'Tr'
-];
+const algebraicFunctions: string[] = ['deg', 'det', 'dim', 'hom', 'ker', 'Tr'];
 const elementaryFunctions: string[] = [
   'log',
   'ln',
@@ -1304,6 +1311,9 @@ const prefixFunctions: string[] = trigonometricFunctions.concat(
   elementaryFunctions
 );
 
+/**
+ *
+ */
 function initFunctions() {
   // Functions
 
@@ -1393,7 +1403,7 @@ export function equal(
  * @returns True if the fences are matching.
  */
 export function isMatchingFence(open: string, close: string): boolean {
-  let meaning = SemanticMap.Meaning.get(open);
+  const meaning = SemanticMap.Meaning.get(open);
   if (meaning.type !== SemanticType.FENCE) {
     return false;
   }
@@ -1411,36 +1421,53 @@ export function isMatchingFence(open: string, close: string): boolean {
 
 /**
  * ORDERING:
- * * Create alphabets/numerals
- * * Add other semantics for single letters: position, meaning
- * * Add to regexp (e.g. all letters)
- * * Add secondary meaning: secondary string, position
+ * Create alphabets/numerals
+ * Add other semantics for single letters: position, meaning
+ * Add to regexp (e.g. all letters)
+ * Add secondary meaning: secondary string, position
  */
 
+/**
+ *
+ * @param alphabet
+ */
 function changeSemantics(
   alphabet: string[],
   change: { [position: number]: SemanticMeaning }
 ) {
-  for (let [pos, meaning] of Object.entries(change)) {
-    let character = alphabet[pos as unknown as number];
+  for (const [pos, meaning] of Object.entries(change)) {
+    const character = alphabet[pos as unknown as number];
     if (character !== undefined) {
       SemanticMap.Meaning.set(character, meaning);
     }
   }
 }
 
+/**
+ *
+ * @param alphabet
+ */
 function addSecondaries(
   alphabet: string[],
   change: { [position: number]: SemanticSecondary }
 ) {
-  for (let [pos, meaning] of Object.entries(change)) {
-    let character = alphabet[pos as unknown as number];
+  for (const [pos, meaning] of Object.entries(change)) {
+    const character = alphabet[pos as unknown as number];
     if (character !== undefined) {
       SemanticMap.Secondary.set(character, meaning);
     }
   }
 }
 
+/**
+ *
+ * @param alphabet
+ * @param type
+ * @param role
+ * @param font
+ * @param semfont
+ * @param secondaries
+ */
 function singleAlphabet(
   alphabet: Alphabet.Base,
   type: SemanticType,
@@ -1451,7 +1478,7 @@ function singleAlphabet(
   change: { [position: number]: SemanticMeaning } = {},
   secondary: { [position: number]: SemanticSecondary } = {}
 ) {
-  let interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
+  const interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
   if (interval) {
     interval.unicode.forEach((x) => {
       SemanticMap.Meaning.set(x, {
@@ -1466,10 +1493,13 @@ function singleAlphabet(
   }
 }
 
+/**
+ *
+ */
 function alphabets() {
-  for (let [name, font] of Object.entries(SemanticFont)) {
-    let emb = !!(Alphabet as any).Embellish[name];
-    let semfont = emb
+  for (const [name, font] of Object.entries(SemanticFont)) {
+    const emb = !!(Alphabet as any).Embellish[name];
+    const semfont = emb
       ? SemanticFont.UNKNOWN
       : font === SemanticFont.FULLWIDTH
       ? SemanticFont.NORMAL

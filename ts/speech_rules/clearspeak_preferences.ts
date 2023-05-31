@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import { DynamicCstr } from '../rule_engine/dynamic_cstr';
+import Engine from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import {
   Axis,
   AxisMap,
@@ -28,11 +28,14 @@ import {
   DefaultComparator,
   DynamicCstrParser,
   DynamicProperties
-} from '../rule_engine/dynamic_cstr';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+} from '../rule_engine/dynamic_cstr.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 export class ClearspeakPreferences extends DynamicCstr {
   private static AUTO = 'Auto';
@@ -328,7 +331,6 @@ const PREFERENCES = new DynamicProperties({
 });
 
 class Comparator extends DefaultComparator {
-
   /**
    * @override
    */

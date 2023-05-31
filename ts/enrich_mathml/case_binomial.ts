@@ -18,12 +18,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import { walkTree } from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import { walkTree } from './enrich_mathml.js';
+import { setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseBinomial extends AbstractEnrichCase {
   /**

@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
-import { RebuildStree } from '../walker/rebuild_stree';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
 
 export interface SpeechGenerator {
   /**

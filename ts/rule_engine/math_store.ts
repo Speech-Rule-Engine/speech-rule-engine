@@ -19,12 +19,12 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as BaseUtil from '../common/base_util';
-import { LOCALE } from '../l10n/locale';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { BaseRuleStore, RulesJson } from './base_rule_store';
-import { Action, OutputError, SpeechRule } from './speech_rule';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as BaseUtil from '../common/base_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { BaseRuleStore, RulesJson } from './base_rule_store.js';
+import { Action, OutputError, SpeechRule } from './speech_rule.js';
 
 export class MathStore extends BaseRuleStore {
   /**

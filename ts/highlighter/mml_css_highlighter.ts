@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { CssHighlighter } from './css_highlighter';
+import { CssHighlighter } from './css_highlighter.js';
 
 export class MmlCssHighlighter extends CssHighlighter {
   /**

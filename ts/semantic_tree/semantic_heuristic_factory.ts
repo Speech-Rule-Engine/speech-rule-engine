@@ -22,8 +22,8 @@
 import {
   SemanticHeuristic,
   SemanticHeuristicTypes
-} from './semantic_heuristic';
-import { SemanticNodeFactory } from './semantic_node_factory';
+} from './semantic_heuristic.js';
+import { SemanticNodeFactory } from './semantic_node_factory.js';
 
 export let factory: SemanticNodeFactory = null;
 

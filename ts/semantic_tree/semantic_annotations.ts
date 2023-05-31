@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
-import { SemanticNode } from './semantic_node';
+import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator.js';
+import { SemanticNode } from './semantic_node.js';
 
 // Exported for Tests
 export const annotators: Map<string, SemanticAnnotator> = new Map();

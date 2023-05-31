@@ -20,9 +20,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as WalkerUtil from '../walker/walker_util';
+import * as WalkerUtil from '../walker/walker_util.js';
 
-import { TreeSpeechGenerator } from './tree_speech_generator';
+import { TreeSpeechGenerator } from './tree_speech_generator.js';
 
 export class NodeSpeechGenerator extends TreeSpeechGenerator {
   /**

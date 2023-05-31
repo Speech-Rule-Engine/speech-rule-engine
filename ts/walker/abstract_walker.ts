@@ -18,31 +18,34 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as AuralRendering from '../audio/aural_rendering';
-import * as DomUtil from '../common/dom_util';
-import * as EngineConst from '../common/engine_const';
-import { setup as EngineSetup } from '../common/engine_setup';
-import { KeyCode } from '../common/event_util';
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { Highlighter } from '../highlighter/highlighter';
-import { LOCALE } from '../l10n/locale';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
-import { Grammar } from '../rule_engine/grammar';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
-import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
-import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import { Focus } from './focus';
-import { Levels } from './levels';
-import { RebuildStree } from './rebuild_stree';
-import { Walker, WalkerMoves, WalkerState } from './walker';
-import * as WalkerUtil from './walker_util';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as AuralRendering from '../audio/aural_rendering.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { setup as EngineSetup } from '../common/engine_setup.js';
+import { KeyCode } from '../common/event_util.js';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { Highlighter } from '../highlighter/highlighter.js';
+import { LOCALE } from '../l10n/locale.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import { Focus } from './focus.js';
+import { Levels } from './levels.js';
+import { RebuildStree } from './rebuild_stree.js';
+import { Walker, WalkerMoves, WalkerState } from './walker.js';
+import * as WalkerUtil from './walker_util.js';
 
-import * as XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util.js';
 
 /**
  * The abstract walker class.

@@ -20,11 +20,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import * as WalkerUtil from '../walker/walker_util';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import * as WalkerUtil from '../walker/walker_util.js';
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
-import * as SpeechGeneratorUtil from './speech_generator_util';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
+import * as SpeechGeneratorUtil from './speech_generator_util.js';
 
 export class TreeSpeechGenerator extends AbstractSpeechGenerator {
   /**
@@ -37,9 +37,10 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
       // TODO: Refactor with setting the base semantic tree in the enrich mathml
       //      object.
       const innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
-      const innerNode = WalkerUtil.getBySemanticId(node, key) as Element ||
+      const innerNode =
+        (WalkerUtil.getBySemanticId(node, key) as Element) ||
         // This takes care of broken elements due to linebreaks.
-        (root && WalkerUtil.getBySemanticId(root, key)) as Element;
+        ((root && WalkerUtil.getBySemanticId(root, key)) as Element);
       if (!innerMml || !innerNode) {
         continue;
       }

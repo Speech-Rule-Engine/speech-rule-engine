@@ -18,14 +18,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { Sexp } from '../semantic_tree/semantic_skeleton';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { Sexp } from '../semantic_tree/semantic_skeleton.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes, Attribute } from './enrich_attr.js';
 
 export abstract class CaseMultiindex extends AbstractEnrichCase {
   /**
