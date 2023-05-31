@@ -1009,6 +1009,9 @@ export function generateTensorRules(store: SpeechRuleStore, brief = true) {
       store.defineRule(name, 'brief', briefStr, 'self::tensor', ...components);
       store.defineRule(name, 'sbrief', briefStr, 'self::tensor', ...components);
     }
+    if (!(parseInt(constel, 2) & 3)) {
+      continue;
+    }
     // Rules with baseline.
     const baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
