@@ -20,8 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Grammar } from '../rule_engine/grammar';
-import { Span } from './span';
+import { Grammar } from '../rule_engine/grammar.js';
+import { Span } from './span.js';
 
 interface AudioDescr {
   context?: string;

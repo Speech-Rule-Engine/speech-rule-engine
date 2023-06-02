@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from './semantic_node';
+import { SemanticNode } from './semantic_node.js';
 
 export declare type SemanticHeuristicTypes = SemanticNode | SemanticNode[];
 
@@ -38,9 +38,8 @@ export interface SemanticHeuristic<T> {
   applicable: (node: T) => boolean;
 }
 
-abstract class SemanticAbstractHeuristic<
-  T extends SemanticHeuristicTypes
-> implements SemanticHeuristic<T>
+abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes>
+  implements SemanticHeuristic<T>
 {
   public apply: (node: T) => void;
 

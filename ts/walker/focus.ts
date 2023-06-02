@@ -19,9 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { RebuildStree } from './rebuild_stree';
-import * as WalkerUtil from './walker_util';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { RebuildStree } from './rebuild_stree.js';
+import * as WalkerUtil from './walker_util.js';
 
 export class Focus {
   /**
@@ -88,7 +88,7 @@ export class Focus {
     let result: Element[] = [];
     for (let i = 0, l = ids.length; i < l; i++) {
       if (nodes[i]) {
-        let allNodes = Focus.getAllVisibleNodes([ids[i]], domNode);
+        const allNodes = Focus.getAllVisibleNodes([ids[i]], domNode);
         if (allNodes.length) {
           result = result.concat(allNodes);
         } else {
@@ -100,7 +100,7 @@ export class Focus {
       if (!virtual) {
         continue;
       }
-      const childIds = virtual.childNodes.map(x => x.id.toString());
+      const childIds = virtual.childNodes.map((x) => x.id.toString());
       const children = Focus.getAllVisibleNodes(childIds, domNode);
       result = result.concat(
         Focus.generateAllVisibleNodes_(childIds, children, dict, domNode)
@@ -116,10 +116,11 @@ export class Focus {
    *
    * @param {string[]} ids The ids.
    * @param {Element} domNode The root node in the dom.
+   * @returns A list of nodes with the given ids.
    */
   private static getAllVisibleNodes(ids: string[], domNode: Element) {
     let result: Element[] = [];
-    for (let id of ids) {
+    for (const id of ids) {
       result = result.concat(WalkerUtil.getAllBySemanticId(domNode, id));
     }
     return result;

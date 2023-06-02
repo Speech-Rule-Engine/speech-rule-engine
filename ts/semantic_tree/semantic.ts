@@ -18,9 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticTree } from './semantic_tree';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticFont,
+  SemanticRole,
+  SemanticType
+} from './semantic_meaning.js';
+import { SemanticTree } from './semantic_tree.js';
 
 /**
  * Exports font attributes.

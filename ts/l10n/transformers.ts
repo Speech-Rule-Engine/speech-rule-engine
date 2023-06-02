@@ -18,7 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 
 export type Transformer = (p1: string | number) => string;
 

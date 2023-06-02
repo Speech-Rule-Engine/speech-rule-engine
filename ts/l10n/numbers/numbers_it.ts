@@ -22,8 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
-import { Grammar } from '../../rule_engine/grammar';
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.

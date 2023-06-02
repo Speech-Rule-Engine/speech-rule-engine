@@ -18,15 +18,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { ChtmlHighlighter } from './chtml_highlighter';
-import { Color, ColorPicker } from './color_picker';
-import { CssHighlighter } from './css_highlighter';
-import { Highlighter } from './highlighter';
-import { HtmlHighlighter } from './html_highlighter';
-import { MmlCssHighlighter } from './mml_css_highlighter';
-import { MmlHighlighter } from './mml_highlighter';
-import { SvgHighlighter } from './svg_highlighter';
-import { SvgV3Highlighter } from './svg_v3_highlighter';
+import { ChtmlHighlighter } from './chtml_highlighter.js';
+import { Color, ColorPicker } from './color_picker.js';
+import { CssHighlighter } from './css_highlighter.js';
+import { Highlighter } from './highlighter.js';
+import { HtmlHighlighter } from './html_highlighter.js';
+import { MmlCssHighlighter } from './mml_css_highlighter.js';
+import { MmlHighlighter } from './mml_highlighter.js';
+import { SvgHighlighter } from './svg_highlighter.js';
+import { SvgV3Highlighter } from './svg_v3_highlighter.js';
 
 /**
  * Produces a highlighter that goes with the current Mathjax renderer if
@@ -65,12 +65,8 @@ export function highlighter(
  * @param back Background color as a named color.
  * @param fore Foreground color as a named color.
  * @param highlighter The highlighter to update.
-*/
-export function update(
-  back: Color,
-  fore: Color,
-  highlighter: Highlighter
-) {
+ */
+export function update(back: Color, fore: Color, highlighter: Highlighter) {
   const colorPicker = new ColorPicker(back, fore);
   highlighter.setColor(colorPicker);
 }

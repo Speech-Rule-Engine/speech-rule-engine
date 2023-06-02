@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as Alphabet from '../speech_rules/alphabet';
+import * as Alphabet from '../speech_rules/alphabet.js';
 
 export interface SemanticMeaning {
   type: SemanticType;
@@ -294,7 +294,11 @@ enum ExtraFont {
 }
 
 export type SemanticFont = Alphabet.Font | ExtraFont | Alphabet.Embellish;
-export const SemanticFont = { ...Alphabet.Font, ...ExtraFont, ...Alphabet.Embellish };
+export const SemanticFont = {
+  ...Alphabet.Font,
+  ...ExtraFont,
+  ...Alphabet.Embellish
+};
 
 enum SecondaryEnum {
   ALLLETTERS = 'allLetters',

@@ -34,8 +34,6 @@ MINI_DST = $(patsubst %.json, %.min, $(JSON_FILES))
 
 all: directories maps
 
-publish: all
-
 clean: clean_json clean_iemaps
 	rm -f $(TARGET)
 

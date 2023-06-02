@@ -28,10 +28,10 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { SREError } from '../common/engine';
-import { DynamicCstr } from './dynamic_cstr';
-import * as Grammar from './grammar';
-import { SpeechRuleContext } from './speech_rule_context';
+import { SREError } from '../common/engine.js';
+import { DynamicCstr } from './dynamic_cstr.js';
+import * as Grammar from './grammar.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
 export class SpeechRule {
   /**
@@ -304,8 +304,9 @@ export class Component {
     }
     const attribs = [];
     for (const [key, val] of Object.entries(this.grammar)) {
-      attribs.push((val === true) ? key :
-        ((val === false) ? `!${key}` : `${key}=${val}`));
+      attribs.push(
+        val === true ? key : val === false ? `!${key}` : `${key}=${val}`
+      );
     }
     return attribs;
   }
@@ -379,26 +380,29 @@ export class Action {
    *
    * IDEAS NOT YET IMPLEMENTED:
    *
-   * * if text element is last (or only followed by personality) it gets the overall
+   * if text element is last (or only followed by personality) it gets the overall
    *   element as a span.
-   * * if next element is multinode it gets the overall element as span?
+   * if next element is multinode it gets the overall element as span?
    *
    *
    * @param comps A list of components.
    */
   private static naiveSpan(comps: Component[]) {
     let first = false;
-    for (let i = 0, comp; comp = comps[i]; i++) {
-      if (first &&
+    for (let i = 0, comp; (comp = comps[i]); i++) {
+      if (
+        first &&
         (comp.type !== ActionType.TEXT ||
-          (comp.content[0] !== '"' && !comp.content.match(/^CSF/)))) continue;
-      if (!first && comp.type === ActionType.PERSONALITY)  continue;
+          (comp.content[0] !== '"' && !comp.content.match(/^CSF/)))
+      )
+        continue;
+      if (!first && comp.type === ActionType.PERSONALITY) continue;
       if (!first) {
         first = true;
         continue;
       }
       if (comp.attributes?.span) continue;
-      let next = comps[i + 1];
+      const next = comps[i + 1];
       if (next && next.type !== ActionType.NODE) continue;
       Action.addNaiveSpan(comp, next ? next.content : 'LAST');
     }
@@ -438,7 +442,8 @@ export class Precondition {
    * 4. Specific self with condition
    */
   private static queryPriorities: RegExp[] = [
-    /^self::\*$/, /^self::[\w-]+$/,
+    /^self::\*$/,
+    /^self::[\w-]+$/,
     /^self::\*\[.+\]$/,
     /^self::[\w-]+\[.+\]$/
   ];

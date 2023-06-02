@@ -22,10 +22,10 @@
 // This work was sponsored by
 //
 
-import { createLocale, Locale } from '../locale';
-import { combinePostfixIndex } from '../locale_util';
-import NUMBERS from '../numbers/numbers_ca';
-import { Combiners } from '../transformers';
+import { createLocale, Locale } from '../locale.js';
+import { combinePostfixIndex } from '../locale_util.js';
+import NUMBERS from '../numbers/numbers_ca.js';
+import { Combiners } from '../transformers.js';
 
 const sansserifCombiner = function (letter: string, font: string, cap: string) {
   letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);

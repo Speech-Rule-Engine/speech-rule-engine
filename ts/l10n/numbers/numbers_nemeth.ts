@@ -22,7 +22,7 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of into a Braille string representation.

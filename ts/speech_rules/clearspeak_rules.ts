@@ -18,13 +18,13 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { DynamicCstr } from '../rule_engine/dynamic_cstr';
-import * as StoreUtil from '../rule_engine/store_util';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import * as StoreUtil from '../rule_engine/store_util.js';
 
-import * as ClearspeakUtil from './clearspeak_util';
-import * as MathspeakUtil from './mathspeak_util';
-import * as NumbersUtil from './numbers_util';
-import * as SpeechRules from './speech_rules';
+import * as ClearspeakUtil from './clearspeak_util.js';
+import * as MathspeakUtil from './mathspeak_util.js';
+import * as NumbersUtil from './numbers_util.js';
+import * as SpeechRules from './speech_rules.js';
 
 /**
  * Adds the custom functions for the clearspeak rules.

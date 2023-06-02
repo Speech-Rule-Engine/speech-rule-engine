@@ -22,11 +22,11 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { MathStore } from './math_store';
-import { AuditoryDescription } from '../audio/auditory_description';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { SemanticMap } from '../semantic_tree/semantic_attr';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { MathStore } from './math_store.js';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { SemanticMap } from '../semantic_tree/semantic_attr.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.
@@ -40,7 +40,7 @@ export class BrailleStore extends MathStore {
   /**
    * @override
    */
-  public customTranscriptions: {[key: string]: string} = {
+  public customTranscriptions: { [key: string]: string } = {
     '\u22ca': '⠈⠡⠳'
   };
 
@@ -78,37 +78,38 @@ export class EuroStore extends BrailleStore {
   /**
    * @override
    */
-  public customTranscriptions = { };
+  public customTranscriptions = {};
 
-  public customCommands: {[key: string]: string} = {
+  public customCommands: { [key: string]: string } = {
     '\\cdot': '*'
-  }
+  };
 
   /**
    * @override
    */
   public evaluateString(str: string) {
     const regexp = /(\\[a-z]+)/i;
-    let split = str.split(regexp);
+    const split = str.split(regexp);
     return super.evaluateString(this.cleanup(split).join(''));
   }
 
   protected cleanup(commands: string[]): string[] {
     let result: string[] = [];
-    for (let command of commands) {
+    for (const command of commands) {
       if (command.match(/^\\/)) {
-        let custom = this.customCommands[command];
+        const custom = this.customCommands[command];
         result.push(custom ? custom : command);
         continue;
       }
-      let chars = command.split('').map(x => {
-        let meaning = SemanticMap.Meaning.get(x);
-        return (meaning.type === SemanticType.OPERATOR ||
-          meaning.type === SemanticType.RELATION) ? ' ' + x : x;
+      const chars = command.split('').map((x) => {
+        const meaning = SemanticMap.Meaning.get(x);
+        return meaning.type === SemanticType.OPERATOR ||
+          meaning.type === SemanticType.RELATION
+          ? ' ' + x
+          : x;
       });
       result = result.concat(chars);
     }
     return result;
   }
-
 }

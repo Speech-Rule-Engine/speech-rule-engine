@@ -21,9 +21,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import { locales } from '../l10n/l10n';
-import { addFunctionSemantic } from '../semantic_tree/semantic_attr';
+import Engine from '../common/engine.js';
+import { locales } from '../l10n/l10n.js';
+import { addFunctionSemantic } from '../semantic_tree/semantic_attr.js';
 import {
   BaseJson,
   MathSimpleStore,
@@ -31,8 +31,8 @@ import {
   MappingsJson,
   SimpleRule,
   UnicodeJson
-} from './math_simple_store';
-import { Axis, DynamicCstr } from './dynamic_cstr';
+} from './math_simple_store.js';
+import { Axis, DynamicCstr } from './dynamic_cstr.js';
 
 /**
  * The locale for the store.
@@ -87,6 +87,7 @@ export const baseStores: Map<string, BaseJson> = new Map();
 /**
  * Retrieves a substore for a key. Creates a new one if it does not exist.
  *
+ * @param base
  * @param key The key for the store.
  * @returns The rule store.
  */
@@ -108,11 +109,11 @@ function getSubStore(base: string, key: string): MathSimpleStore {
  * @param json
  */
 function completeWithBase(json: UnicodeJson) {
-  let base = baseStores.get(json.key);
+  const base = baseStores.get(json.key);
   if (!base) {
     return;
   }
-  let names = json.names;
+  const names = json.names;
   Object.assign(json, base);
   if (names && base.names) {
     json.names = json.names.concat(names);
@@ -123,16 +124,13 @@ function completeWithBase(json: UnicodeJson) {
  * Function creates a rule store in the compound store for a particular
  * string, and populates it with a set of rules.
  *
+ * @param base
  * @param str String used as key to refer to the rule store
  * precondition and constr
  * @param mappings JSON representation of mappings from styles and
  *     domains to strings, from which the speech rules will be computed.
  */
-export function defineRules(
-  base: string,
-  str: string,
-  mappings: MappingsJson
-) {
+export function defineRules(base: string, str: string, mappings: MappingsJson) {
   const store = getSubStore(base, str);
   store.defineRulesFromMappings(locale, modality, mappings);
 }
@@ -152,13 +150,7 @@ export function defineRule(
   content: string
 ) {
   const store = getSubStore(str, str);
-  store.defineRuleFromStrings(
-    locale,
-    modality,
-    domain,
-    style,
-    content
-  );
+  store.defineRuleFromStrings(locale, modality, domain, style, content);
 }
 
 /**
@@ -167,7 +159,7 @@ export function defineRule(
  * @param json JSON object of the speech rules.
  */
 export function addSymbolRules(json: UnicodeJson[]) {
-  for (let rule of json) {
+  for (const rule of json) {
     if (changeLocale(rule)) {
       continue;
     }
@@ -189,12 +181,12 @@ function addCharacterRule(json: UnicodeJson) {
   if (changeLocale(json)) {
     return;
   }
-  for (let [key, value] of Object.entries(json)) {
+  for (const [key, value] of Object.entries(json)) {
     defineRule('default', 'default', key, value);
   }
 }
-export const addCharacterRules =
-  (json: UnicodeJson[]) => json.forEach(addCharacterRule);
+export const addCharacterRules = (json: UnicodeJson[]) =>
+  json.forEach(addCharacterRule);
 
 /**
  * Makes a speech rule for Function names from its JSON representation.
@@ -213,7 +205,7 @@ function addFunctionRule(json: UnicodeJson) {
  * @param json JSON object of the speech rules.
  */
 export function addFunctionRules(json: UnicodeJson[]) {
-  for (let rule of json) {
+  for (const rule of json) {
     if (changeLocale(rule)) {
       continue;
     }
@@ -233,7 +225,7 @@ export function addFunctionRules(json: UnicodeJson[]) {
  * @param json List of JSON objects of the speech rules.
  */
 export function addUnitRules(json: UnicodeJson[]) {
-  for (let rule of json) {
+  for (const rule of json) {
     if (changeLocale(rule)) {
       continue;
     }
@@ -362,6 +354,9 @@ function enumerate_(
   return info;
 }
 
+/**
+ *
+ */
 export function reset() {
   locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
   modality = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];

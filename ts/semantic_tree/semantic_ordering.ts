@@ -24,7 +24,7 @@ import {
   SemanticMeaning,
   SemanticRole,
   SemanticType
-} from './semantic_meaning';
+} from './semantic_meaning.js';
 
 // TODO: Have some better ordering mechanism than array order.
 /**
@@ -46,10 +46,7 @@ function add(comparator: SemanticComparator) {
  * @param meaning2 The second meaning.
  * @returns 0, 1, -1 depending on the partial order.
  */
-function apply(
-  meaning1: SemanticMeaning,
-  meaning2: SemanticMeaning
-): number {
+function apply(meaning1: SemanticMeaning, meaning2: SemanticMeaning): number {
   for (let i = 0, comparator; (comparator = comparators[i]); i++) {
     const result = comparator.compare(meaning1, meaning2);
     if (result !== 0) {

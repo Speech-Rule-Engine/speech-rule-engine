@@ -18,11 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { KeyCode } from '../common/event_util';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
+import { KeyCode } from '../common/event_util.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
 
-import { Focus } from './focus';
-import { RebuildStree } from './rebuild_stree';
+import { Focus } from './focus.js';
+import { RebuildStree } from './rebuild_stree.js';
 
 export interface Walker {
   modifier: boolean;

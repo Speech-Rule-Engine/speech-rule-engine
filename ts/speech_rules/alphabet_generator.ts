@@ -18,14 +18,14 @@
  *     Unicode mappings.
  */
 
-import * as Alphabet from './alphabet';
-import Engine from '../common/engine';
-import * as L10n from '../l10n/l10n';
-import { LOCALE } from '../l10n/locale';
-import { localeFontCombiner } from '../l10n/locale_util';
-import { Combiner, Transformer } from '../l10n/transformers';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { UnicodeJson } from '../rule_engine/math_simple_store';
+import * as Alphabet from './alphabet.js';
+import Engine from '../common/engine.js';
+import * as L10n from '../l10n/l10n.js';
+import { LOCALE } from '../l10n/locale.js';
+import { localeFontCombiner } from '../l10n/locale_util.js';
+import { Combiner, Transformer } from '../l10n/transformers.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { UnicodeJson } from '../rule_engine/math_simple_store.js';
 
 /**
  * Structure to hold domain combinations for a locale during rule generation.
@@ -61,9 +61,11 @@ function makeDomains() {
 export function generateBase() {
   for (const int of Alphabet.INTERVALS.values()) {
     const letters = int.unicode;
-    for (let letter of letters) {
-      MathCompoundStore.baseStores.set(
-        letter, {key: letter, category: int.category});
+    for (const letter of letters) {
+      MathCompoundStore.baseStores.set(letter, {
+        key: letter,
+        category: int.category
+      });
     }
   }
 }
@@ -85,12 +87,7 @@ export function generate(locale: string) {
       numberRules(letters, int.font, int.offset || 0);
     } else {
       const alphabet = (LOCALE.ALPHABETS as any)[int.base];
-      alphabetRules(
-        letters,
-        alphabet,
-        int.font,
-        !!int.capital
-      );
+      alphabetRules(letters, alphabet, int.font, !!int.capital);
     }
   }
   Engine.getInstance().locale = oldLocale;
@@ -157,11 +154,7 @@ function alphabetRules(
  * @param font The font name.
  * @param offset The offset value for the initial number.
  */
-function numberRules(
-  unicodes: string[],
-  font: string,
-  offset: number
-) {
+function numberRules(unicodes: string[], font: string, offset: number) {
   const realFont = getFont(font);
   for (let i = 0, unicode; (unicode = unicodes[i]); i++) {
     const prefixes = LOCALE.ALPHABETS.digitPrefix;
@@ -215,4 +208,3 @@ function makeLetter(
     );
   }
 }
-
