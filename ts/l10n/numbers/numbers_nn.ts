@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../../common/engine';
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import Engine from '../../common/engine.js';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.

@@ -19,9 +19,9 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
+import * as DomUtil from '../common/dom_util.js';
 
-import { SemanticNode } from './semantic_node';
+import { SemanticNode } from './semantic_node.js';
 
 /**
  * List of MathML Tags that are considered to be leafs.

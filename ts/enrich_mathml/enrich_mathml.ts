@@ -21,19 +21,22 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import { NamedSymbol } from '../semantic_tree/semantic_attr';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
-import { SemanticTree } from '../semantic_tree/semantic_tree';
-import * as SemanticUtil from '../semantic_tree/semantic_util';
+import { Debugger } from '../common/debugger.js';
+import * as DomUtil from '../common/dom_util.js';
+import Engine from '../common/engine.js';
+import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
+import { SemanticTree } from '../semantic_tree/semantic_tree.js';
+import * as SemanticUtil from '../semantic_tree/semantic_util.js';
 
-import * as EnrichAttr from './enrich_attr';
-import { getCase } from './enrich_case';
+import * as EnrichAttr from './enrich_attr.js';
+import { getCase } from './enrich_case.js';
 
 /**
  * Object containing settings for the semantic enrichment.
@@ -101,9 +104,11 @@ export function walkTree(semantic: SemanticNode): Element {
       EnrichAttr.setAttributes(newNode, semantic);
       return ascendNewNode(newNode);
     }
-    let fchild = semantic.childNodes[0];
-    if (semantic.childNodes.length === 1 &&
-      fchild.type === SemanticType.EMPTY) {
+    const fchild = semantic.childNodes[0];
+    if (
+      semantic.childNodes.length === 1 &&
+      fchild.type === SemanticType.EMPTY
+    ) {
       Debugger.getInstance().output('Walktree Case 0.2');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
@@ -111,7 +116,7 @@ export function walkTree(semantic: SemanticNode): Element {
       return ascendNewNode(newNode);
     }
     // Children should not all be empty.
-    semantic.childNodes.forEach(child => {
+    semantic.childNodes.forEach((child) => {
       if (!child.mathml.length) {
         child.mathml = [createInvisibleOperator(child)];
       }
@@ -260,10 +265,7 @@ function moveSemanticAttributes(oldNode: Element, newNode: Element) {
  * @param newChildren The list of new children.
  * @returns The minimal subset.
  */
-function childrenSubset(
-  node: Element,
-  newChildren: Element[]
-): Element[] {
+function childrenSubset(node: Element, newChildren: Element[]): Element[] {
   const oldChildren = DomUtil.toArray(node.childNodes);
   let leftIndex = +Infinity;
   let rightIndex = -Infinity;
@@ -354,8 +356,10 @@ function collectChildNodes(node: Element, children: Element[]): Element[] {
     if (child.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
-    if (child.hasAttribute(EnrichAttr.Attribute.TYPE) ||
-      children.indexOf(child) !== -1) {
+    if (
+      child.hasAttribute(EnrichAttr.Attribute.TYPE) ||
+      children.indexOf(child) !== -1
+    ) {
       collect.push(child);
       continue;
     }
@@ -415,7 +419,7 @@ function mergeChildren(
       newChildren.shift();
       continue;
     }
-    let oldChild = oldChildren[oldCounter];
+    const oldChild = oldChildren[oldCounter];
     if (!oldChild) {
       // Every new child is now either really new or a child of a different
       // parent.
@@ -456,11 +460,7 @@ function mergeChildren(
  * @param oldChild The reference where newChild is inserted.
  * @param newChild The new child to be inserted.
  */
-function insertNewChild(
-  node: Element,
-  oldChild: Element,
-  newChild: Element
-) {
+function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   let parent = oldChild;
   let next = parentNode(parent);
   while (
@@ -507,10 +507,7 @@ function isDescendant(child: Element, node: Element): boolean {
  * @param newNode The new, possibly added node.
  * @returns True if condition holds.
  */
-function functionApplication(
-  oldNode: Element,
-  newNode: Element
-): boolean {
+function functionApplication(oldNode: Element, newNode: Element): boolean {
   const appl = NamedSymbol.functionApplication;
   if (
     oldNode &&

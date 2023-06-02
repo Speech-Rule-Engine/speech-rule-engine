@@ -113,6 +113,7 @@ export function makeInterval(
 
 /**
  * Creates an interval of unicode characters.
+ *
  * @param int Pair of strings that represent the Unicode value
  *      of the start and end character in the interval.
  * @param int."0" Start of range.
@@ -120,24 +121,25 @@ export function makeInterval(
  * @param subst Substitutions of characters in the
  *      above interval.
  * @returns The generated interval of Unicode characters.
-*/
+ */
 function makeCharInterval(
   int: [string, string],
   subst: { [key: string]: string | boolean } = {}
 ) {
-  return makeInterval(int, subst).
-    map(x => String.fromCodePoint(parseInt(x, 16)));
+  return makeInterval(int, subst).map((x) =>
+    String.fromCodePoint(parseInt(x, 16))
+  );
 }
 
 /**
  * Creates a list of unicode characters from a mixed interval specification.
  *
  * @param ints A list of hex code strings or hex code intervals.
- * @return The list of unicode characters.
+ * @returns The list of unicode characters.
  */
 export function makeMultiInterval(ints: (string | [string, string])[]) {
   let result: string[] = [];
-  for (let int of ints) {
+  for (const int of ints) {
     if (Array.isArray(int)) {
       result = result.concat(makeCharInterval(int));
       continue;
@@ -151,13 +153,13 @@ export function makeMultiInterval(ints: (string | [string, string])[]) {
  * Creates a list of code points from a mixed interval specification.
  *
  * @param ints A list of hex code strings or hex code intervals.
- * @return The list of numeric codes for the list elements.
+ * @returns The list of numeric codes for the list elements.
  */
 export function makeCodeInterval(ints: (string | [string, string])[]) {
   let result: number[] = [];
-  for (let int of ints) {
+  for (const int of ints) {
     if (Array.isArray(int)) {
-      result = result.concat(makeInterval(int, {}).map(x => parseInt(x, 16)));
+      result = result.concat(makeInterval(int, {}).map((x) => parseInt(x, 16)));
       continue;
     }
     result.push(parseInt(int, 16));
@@ -173,11 +175,11 @@ export declare interface ProtoAlphabet {
   font: Font | Embellish;
   capital?: boolean;
   offset?: number;
-};
+}
 
 export declare interface Alphabet extends ProtoAlphabet {
   unicode: string[];
-};
+}
 
 /**
  * Alphabet definitions by intervals and exceptions
@@ -778,15 +780,20 @@ const PROTO_INTERVALS: ProtoAlphabet[] = [
 
 export const INTERVALS: Map<string, Alphabet> = new Map();
 
+/**
+ *
+ * @param base
+ * @param font
+ */
 export function alphabetName(base: string, font: string) {
-  const capFont = font.
-    split('-').
-    map(x => x[0].toUpperCase() + x.slice(1)).
-    join('');
+  const capFont = font
+    .split('-')
+    .map((x) => x[0].toUpperCase() + x.slice(1))
+    .join('');
   return base + capFont;
 }
 
-for (let proto of PROTO_INTERVALS) {
+for (const proto of PROTO_INTERVALS) {
   const key = alphabetName(proto.base, proto.font);
   const interval = makeCharInterval(proto.interval, proto.subst);
   let alphabet = INTERVALS.get(key);

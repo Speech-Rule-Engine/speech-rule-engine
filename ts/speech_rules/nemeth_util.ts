@@ -18,19 +18,22 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { Span } from '../audio/span';
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { Grammar } from '../rule_engine/grammar';
-import Engine from '../common/engine';
-import { register } from '../semantic_tree/semantic_annotations';
-import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import Engine from '../common/engine.js';
+import { register } from '../semantic_tree/semantic_annotations.js';
+import { SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
-import { LOCALE } from '../l10n/locale';
-import * as MathspeakUtil from './mathspeak_util';
+import { LOCALE } from '../l10n/locale.js';
+import * as MathspeakUtil from './mathspeak_util.js';
 
 /**
  * Opening string for fractions in linear Nemeth.
@@ -42,7 +45,7 @@ export function openingFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    LOCALE.MESSAGES.MS.FRACTION_START
+      LOCALE.MESSAGES.MS.FRACTION_START
   );
 }
 
@@ -56,7 +59,7 @@ export function closingFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    LOCALE.MESSAGES.MS.FRACTION_END
+      LOCALE.MESSAGES.MS.FRACTION_END
   );
 }
 
@@ -70,7 +73,7 @@ export function overFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    LOCALE.MESSAGES.MS.FRACTION_OVER
+      LOCALE.MESSAGES.MS.FRACTION_OVER
   );
 }
 
@@ -84,16 +87,21 @@ export function overBevelledFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    '⠸' +
-    LOCALE.MESSAGES.MS.FRACTION_OVER
+      '⠸' +
+      LOCALE.MESSAGES.MS.FRACTION_OVER
   );
 }
 
+/**
+ *
+ * @param node
+ */
 export function hyperFractionBoundary(node: Element): Element[] {
   return LOCALE.MESSAGES.regexp.HYPER ===
-    MathspeakUtil.fractionNestingDepth(node).toString() ? [node] : [];
+    MathspeakUtil.fractionNestingDepth(node).toString()
+    ? [node]
+    : [];
 }
-
 
 /**
  * Nested Braille radicals in Nemeth putting together the nesting counter with
@@ -105,8 +113,11 @@ export function hyperFractionBoundary(node: Element): Element[] {
  */
 function nestedRadical(node: Element, postfix: string): Span[] {
   const depth = radicalNestingDepth(node);
-  return Span.singleton(depth === 1 ? postfix :
-    new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix);
+  return Span.singleton(
+    depth === 1
+      ? postfix
+      : new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix
+  );
 }
 
 /**
@@ -326,14 +337,24 @@ export function relationIterator(
       (first &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.previousSibling)
-        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE + base }, {})]
+        ? [
+            AuditoryDescription.create(
+              { text: LOCALE.MESSAGES.regexp.SPACE + base },
+              {}
+            )
+          ]
         : [];
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.nextSibling)
-        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
+        ? [
+            AuditoryDescription.create(
+              { text: LOCALE.MESSAGES.regexp.SPACE },
+              {}
+            )
+          ]
         : [];
     const descrs = Engine.evaluateNode(content);
     first = false;
@@ -378,7 +399,12 @@ export function implicitIterator(
     const right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
       left && right && content.getAttribute('role') === SemanticRole.SPACE
-        ? [AuditoryDescription.create({ text: LOCALE.MESSAGES.regexp.SPACE }, {})]
+        ? [
+            AuditoryDescription.create(
+              { text: LOCALE.MESSAGES.regexp.SPACE },
+              {}
+            )
+          ]
         : []
     );
   };

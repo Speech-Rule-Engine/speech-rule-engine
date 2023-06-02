@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { KeyCode } from '../common/event_util';
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
+import { KeyCode } from '../common/event_util.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
 
 export interface AudioRenderer {
   /**
@@ -47,8 +47,7 @@ export interface AudioRenderer {
   /**
    * Merges markup strings.
    *
-   * @param strs The
-   *     single markup strings.
+   * @param strs The single markup strings.
    * @returns A single string.
    */
   merge(strs: Span[]): string;

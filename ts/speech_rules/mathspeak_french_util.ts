@@ -22,8 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
-import { Span } from '../audio/span';
-import * as MathspeakUtil from './mathspeak_util';
+import { Span } from '../audio/span.js';
+import * as MathspeakUtil from './mathspeak_util.js';
 
 /**
  * Computes baseline prefix in verbose mode.
@@ -57,7 +57,10 @@ export function baselineBrief(node: Element): Span[] {
  */
 export function leftSuperscriptVerbose(node: Element): Span[] {
   const leftIndex = MathspeakUtil.superscriptVerbose(node);
-  leftIndex[0].speech = leftIndex[0].speech.replace(/^exposant/, 'exposant gauche');
+  leftIndex[0].speech = leftIndex[0].speech.replace(
+    /^exposant/,
+    'exposant gauche'
+  );
   return leftIndex;
 }
 

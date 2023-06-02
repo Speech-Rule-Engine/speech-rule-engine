@@ -18,14 +18,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticFont,
+  SemanticRole,
+  SemanticType
+} from './semantic_meaning.js';
 import { SemanticMap } from './semantic_attr';
-import { SemanticNode } from './semantic_node';
-import { SemanticAbstractParser } from './semantic_parser';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticAbstractParser } from './semantic_parser.js';
+import * as SemanticPred from './semantic_pred.js';
+import SemanticProcessor from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
   private parseMap_: {
@@ -131,7 +135,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
     SemanticUtil.addAttributes(newNode, mml);
     if (
-      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS', 'MACTION'].indexOf(tag) !== -1
+      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS', 'MACTION'].indexOf(
+        tag
+      ) !== -1
     ) {
       return newNode;
     }
@@ -567,11 +573,13 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private action_(node: Element, children: Element[]): SemanticNode {
-    let selection = children[
-      node.hasAttribute('selection') ?
-        parseInt(node.getAttribute('selection'), 10) - 1 :
-        0];
-    let stree = this.parse(selection);
+    const selection =
+      children[
+        node.hasAttribute('selection')
+          ? parseInt(node.getAttribute('selection'), 10) - 1
+          : 0
+      ];
+    const stree = this.parse(selection);
     stree.mathmlTree = selection;
     return stree;
   }

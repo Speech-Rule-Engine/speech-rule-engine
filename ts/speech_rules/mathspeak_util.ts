@@ -18,23 +18,23 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Span } from '../audio/span';
-import * as BaseUtil from '../common/base_util';
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { LOCALE } from '../l10n/locale';
+import { Span } from '../audio/span.js';
+import * as BaseUtil from '../common/base_util.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { LOCALE } from '../l10n/locale.js';
 
-import { SpeechRuleStore } from '../rule_engine/speech_rule_store';
-import * as Semantic from '../semantic_tree/semantic';
+import { SpeechRuleStore } from '../rule_engine/speech_rule_store.js';
+import * as Semantic from '../semantic_tree/semantic.js';
 import {
   SemanticFont,
   SemanticRole,
   SemanticType
-} from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import SemanticProcessor from '../semantic_tree/semantic_processor';
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import SemanticProcessor from '../semantic_tree/semantic_processor.js';
 
-// import * as NumbersUtil from './numbers_util';
+// import * as NumbersUtil from './numbers_util.js';
 
 /**
  * Dictionary to store the nesting depth of each node.
@@ -291,11 +291,7 @@ export function fractionNestingDepth(node: Element): number {
  * @param opt_end Optional end expression.
  * @returns The disambiguating string.
  */
-function nestedFraction(
-  node: Element,
-  expr: string,
-  opt_end?: string
-): string {
+function nestedFraction(node: Element, expr: string, opt_end?: string): string {
   const depth = fractionNestingDepth(node);
   const annotation = Array(depth).fill(expr);
   if (opt_end) {
@@ -311,11 +307,9 @@ function nestedFraction(
  * @returns The opening string.
  */
 export function openingFractionVerbose(node: Element): Span[] {
-  return Span.singleton(nestedFraction(
-    node,
-    LOCALE.MESSAGES.MS.START,
-    LOCALE.MESSAGES.MS.FRAC_V
-  ));
+  return Span.singleton(
+    nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V)
+  );
 }
 
 /**
@@ -325,11 +319,10 @@ export function openingFractionVerbose(node: Element): Span[] {
  * @returns The closing string.
  */
 export function closingFractionVerbose(node: Element): Span[] {
-  return Span.singleton(nestedFraction(
-    node,
-    LOCALE.MESSAGES.MS.END,
-    LOCALE.MESSAGES.MS.FRAC_V
-  ), {kind: 'LAST'});
+  return Span.singleton(
+    nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V),
+    { kind: 'LAST' }
+  );
 }
 
 /**
@@ -339,8 +332,7 @@ export function closingFractionVerbose(node: Element): Span[] {
  * @returns The middle string.
  */
 export function overFractionVerbose(node: Element): Span[] {
-  return Span.singleton(nestedFraction(
-    node, LOCALE.MESSAGES.MS.FRAC_OVER), {});
+  return Span.singleton(nestedFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER), {});
 }
 
 /**
@@ -350,11 +342,9 @@ export function overFractionVerbose(node: Element): Span[] {
  * @returns The opening string.
  */
 export function openingFractionBrief(node: Element): Span[] {
-  return Span.singleton(nestedFraction(
-    node,
-    LOCALE.MESSAGES.MS.START,
-    LOCALE.MESSAGES.MS.FRAC_B
-  ));
+  return Span.singleton(
+    nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B)
+  );
 }
 
 /**
@@ -364,11 +354,10 @@ export function openingFractionBrief(node: Element): Span[] {
  * @returns The closing string.
  */
 export function closingFractionBrief(node: Element): Span[] {
-  return Span.singleton(nestedFraction(
-    node,
-    LOCALE.MESSAGES.MS.END,
-    LOCALE.MESSAGES.MS.FRAC_B
-  ), {kind: 'LAST'});
+  return Span.singleton(
+    nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B),
+    { kind: 'LAST' }
+  );
 }
 
 /**
@@ -379,13 +368,15 @@ export function closingFractionBrief(node: Element): Span[] {
  */
 export function openingFractionSbrief(node: Element): Span[] {
   const depth = fractionNestingDepth(node);
-  return Span.singleton((depth === 1) ?
-    LOCALE.MESSAGES.MS.FRAC_S :
-    LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-      LOCALE.MESSAGES.MS.FRAC_S
-    ));
+  return Span.singleton(
+    depth === 1
+      ? LOCALE.MESSAGES.MS.FRAC_S
+      : LOCALE.FUNCTIONS.combineNestedFraction(
+          LOCALE.MESSAGES.MS.NEST_FRAC,
+          LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+          LOCALE.MESSAGES.MS.FRAC_S
+        )
+  );
 }
 
 /**
@@ -396,13 +387,16 @@ export function openingFractionSbrief(node: Element): Span[] {
  */
 export function closingFractionSbrief(node: Element): Span[] {
   const depth = fractionNestingDepth(node);
-  return Span.singleton((depth === 1) ?
-    LOCALE.MESSAGES.MS.ENDFRAC :
-    LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-      LOCALE.MESSAGES.MS.ENDFRAC
-    ), {kind: 'LAST'});
+  return Span.singleton(
+    depth === 1
+      ? LOCALE.MESSAGES.MS.ENDFRAC
+      : LOCALE.FUNCTIONS.combineNestedFraction(
+          LOCALE.MESSAGES.MS.NEST_FRAC,
+          LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+          LOCALE.MESSAGES.MS.ENDFRAC
+        ),
+    { kind: 'LAST' }
+  );
 }
 
 /**
@@ -413,13 +407,15 @@ export function closingFractionSbrief(node: Element): Span[] {
  */
 export function overFractionSbrief(node: Element): Span[] {
   const depth = fractionNestingDepth(node);
-  return Span.singleton((depth === 1) ?
-    LOCALE.MESSAGES.MS.FRAC_OVER :
-    LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-      LOCALE.MESSAGES.MS.FRAC_OVER
-    ));
+  return Span.singleton(
+    depth === 1
+      ? LOCALE.MESSAGES.MS.FRAC_OVER
+      : LOCALE.FUNCTIONS.combineNestedFraction(
+          LOCALE.MESSAGES.MS.NEST_FRAC,
+          LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+          LOCALE.MESSAGES.MS.FRAC_OVER
+        )
+  );
 }
 
 /**
@@ -492,7 +488,8 @@ export function subscriptVerbose(node: Element): Span[] {
     nestedSubSuper(node, LOCALE.MESSAGES.MS.SUBSCRIPT, {
       sup: LOCALE.MESSAGES.MS.SUPER,
       sub: LOCALE.MESSAGES.MS.SUB
-    }));
+    })
+  );
 }
 
 /**
@@ -506,7 +503,8 @@ export function subscriptBrief(node: Element): Span[] {
     nestedSubSuper(node, LOCALE.MESSAGES.MS.SUB, {
       sup: LOCALE.MESSAGES.MS.SUP,
       sub: LOCALE.MESSAGES.MS.SUB
-    }));
+    })
+  );
 }
 
 /**
@@ -520,7 +518,8 @@ export function superscriptVerbose(node: Element): Span[] {
     nestedSubSuper(node, LOCALE.MESSAGES.MS.SUPERSCRIPT, {
       sup: LOCALE.MESSAGES.MS.SUPER,
       sub: LOCALE.MESSAGES.MS.SUB
-    }));
+    })
+  );
 }
 
 /**
@@ -534,7 +533,8 @@ export function superscriptBrief(node: Element): Span[] {
     nestedSubSuper(node, LOCALE.MESSAGES.MS.SUP, {
       sup: LOCALE.MESSAGES.MS.SUP,
       sub: LOCALE.MESSAGES.MS.SUB
-    }));
+    })
+  );
 }
 
 /**
@@ -548,17 +548,19 @@ export function baselineVerbose(node: Element): Span[] {
     sup: LOCALE.MESSAGES.MS.SUPER,
     sub: LOCALE.MESSAGES.MS.SUB
   });
-  return Span.singleton((!baseline) ?
-    LOCALE.MESSAGES.MS.BASELINE :
-    baseline
-      .replace(
-        new RegExp(LOCALE.MESSAGES.MS.SUB + '$'),
-        LOCALE.MESSAGES.MS.SUBSCRIPT
-      )
-      .replace(
-        new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'),
-        LOCALE.MESSAGES.MS.SUPERSCRIPT
-      ));
+  return Span.singleton(
+    !baseline
+      ? LOCALE.MESSAGES.MS.BASELINE
+      : baseline
+          .replace(
+            new RegExp(LOCALE.MESSAGES.MS.SUB + '$'),
+            LOCALE.MESSAGES.MS.SUBSCRIPT
+          )
+          .replace(
+            new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'),
+            LOCALE.MESSAGES.MS.SUPERSCRIPT
+          )
+  );
 }
 
 /**
@@ -601,21 +603,17 @@ function radicalNestingDepth(node: Element): number {
  * @param postfix A postfix string.
  * @returns The opening string.
  */
-function nestedRadical(
-  node: Element,
-  prefix: string,
-  postfix: string
-): string {
+function nestedRadical(node: Element, prefix: string, postfix: string): string {
   const depth = radicalNestingDepth(node);
   const index = getRootIndex(node);
   postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(postfix, index) : postfix;
-  return depth === 1 ?
-    postfix :
-    LOCALE.FUNCTIONS.combineNestedRadical(
-      prefix,
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
-      postfix
-    );
+  return depth === 1
+    ? postfix
+    : LOCALE.FUNCTIONS.combineNestedRadical(
+        prefix,
+        LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+        postfix
+      );
 }
 
 /**
@@ -640,11 +638,8 @@ function getRootIndex(node: Element): string {
  */
 export function openingRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(
-      node,
-      LOCALE.MESSAGES.MS.NESTED,
-      LOCALE.MESSAGES.MS.STARTROOT
-    ));
+    nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT)
+  );
 }
 
 /**
@@ -655,11 +650,8 @@ export function openingRadicalVerbose(node: Element): Span[] {
  */
 export function closingRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(
-      node,
-      LOCALE.MESSAGES.MS.NESTED,
-      LOCALE.MESSAGES.MS.ENDROOT
-    ));
+    nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT)
+  );
 }
 
 /**
@@ -670,11 +662,8 @@ export function closingRadicalVerbose(node: Element): Span[] {
  */
 export function indexRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(
-      node,
-      LOCALE.MESSAGES.MS.NESTED,
-      LOCALE.MESSAGES.MS.ROOTINDEX
-    ));
+    nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX)
+  );
 }
 
 /**
@@ -689,7 +678,8 @@ export function openingRadicalBrief(node: Element): Span[] {
       node,
       LOCALE.MESSAGES.MS.NEST_ROOT,
       LOCALE.MESSAGES.MS.STARTROOT
-    ));
+    )
+  );
 }
 
 /**
@@ -704,7 +694,8 @@ export function closingRadicalBrief(node: Element): Span[] {
       node,
       LOCALE.MESSAGES.MS.NEST_ROOT,
       LOCALE.MESSAGES.MS.ENDROOT
-    ));
+    )
+  );
 }
 
 /**
@@ -719,7 +710,8 @@ export function indexRadicalBrief(node: Element): Span[] {
       node,
       LOCALE.MESSAGES.MS.NEST_ROOT,
       LOCALE.MESSAGES.MS.ROOTINDEX
-    ));
+    )
+  );
 }
 
 /**
@@ -730,11 +722,8 @@ export function indexRadicalBrief(node: Element): Span[] {
  */
 export function openingRadicalSbrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(
-      node,
-      LOCALE.MESSAGES.MS.NEST_ROOT,
-      LOCALE.MESSAGES.MS.ROOT
-    ));
+    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT)
+  );
 }
 
 /**
@@ -745,11 +734,8 @@ export function openingRadicalSbrief(node: Element): Span[] {
  */
 export function indexRadicalSbrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(
-      node,
-      LOCALE.MESSAGES.MS.NEST_ROOT,
-      LOCALE.MESSAGES.MS.INDEX
-    ));
+    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX)
+  );
 }
 
 /**
@@ -784,9 +770,9 @@ function underscoreNestingDepth(node: Element): number {
  */
 export function nestedUnderscript(node: Element): Span[] {
   const depth = underscoreNestingDepth(node);
-  return Span.singleton((
+  return Span.singleton(
     Array(depth).join(LOCALE.MESSAGES.MS.UNDER) + LOCALE.MESSAGES.MS.UNDERSCRIPT
-  ));
+  );
 }
 
 /**
@@ -829,9 +815,9 @@ export function endscripts(_node: Element) {
  */
 export function nestedOverscript(node: Element): Span[] {
   const depth = overscoreNestingDepth(node);
-  return Span.singleton((
+  return Span.singleton(
     Array(depth).join(LOCALE.MESSAGES.MS.OVER) + LOCALE.MESSAGES.MS.OVERSCRIPT
-  ));
+  );
 }
 
 /**
@@ -918,7 +904,8 @@ export function removeParens(node: Element): Span[] {
   }
   const content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
   return Span.singleton(
-    content.match(/^\(.+\)$/) ? content.slice(1, -1) : content);
+    content.match(/^\(.+\)$/) ? content.slice(1, -1) : content
+  );
 }
 
 // Generating rules for tensors.
@@ -1000,7 +987,7 @@ export function generateTensorRules(store: SpeechRuleStore, brief = true) {
     '01101',
     '01100'
   ];
-  for (let i = 0, constel; (constel = constellations[i]); i++) {
+  for (const constel of constellations) {
     let name = 'tensor' + constel;
     let [components, verbStr, briefStr] = generateTensorRuleStrings_(constel);
     // Rules without neighbour.
@@ -1008,6 +995,9 @@ export function generateTensorRules(store: SpeechRuleStore, brief = true) {
     if (brief) {
       store.defineRule(name, 'brief', briefStr, 'self::tensor', ...components);
       store.defineRule(name, 'sbrief', briefStr, 'self::tensor', ...components);
+    }
+    if (!(parseInt(constel, 2) & 3)) {
+      continue;
     }
     // Rules with baseline.
     const baselineStr = componentString.get(2);

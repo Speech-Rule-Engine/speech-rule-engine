@@ -22,11 +22,11 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { MathStore } from './math_store';
-import { AuditoryDescription } from '../audio/auditory_description';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { SemanticMap } from '../semantic_tree/semantic_attr';
-import { SemanticType, SemanticRole } from '../semantic_tree/semantic_meaning';
+import { MathStore } from './math_store.js';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { SemanticMap } from '../semantic_tree/semantic_attr.js';
+import { SemanticType, SemanticRole } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.
@@ -40,7 +40,7 @@ export class BrailleStore extends MathStore {
   /**
    * @override
    */
-  public customTranscriptions: {[key: string]: string} = {
+  public customTranscriptions: { [key: string]: string } = {
     '\u22ca': '⠈⠡⠳'
   };
 
@@ -78,7 +78,7 @@ export class EuroStore extends BrailleStore {
   /**
    * @override
    */
-  public customTranscriptions = { };
+  public customTranscriptions = {};
 
   public customCommands: {[key: string]: string} = {
     '\\cdot': '*',
@@ -179,5 +179,4 @@ export class EuroStore extends BrailleStore {
       (meaning.type === SemanticType.PUNCTUATION &&
         meaning.role === SemanticRole.COLON);
   }
-
 }

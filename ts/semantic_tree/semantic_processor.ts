@@ -21,14 +21,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { NamedSymbol, SemanticMap } from './semantic_attr';
-import { SemanticFont, SemanticRole, SemanticType, SemanticSecondary } from './semantic_meaning';
-import * as SemanticHeuristics from './semantic_heuristic_factory';
-import { SemanticNode } from './semantic_node';
-import { SemanticNodeFactory } from './semantic_node_factory';
-import * as SemanticPred from './semantic_pred';
-import * as SemanticUtil from './semantic_util';
+import * as DomUtil from '../common/dom_util.js';
+import { NamedSymbol, SemanticMap } from './semantic_attr.js';
+import {
+  SemanticFont,
+  SemanticRole,
+  SemanticType,
+  SemanticSecondary
+} from './semantic_meaning.js';
+import * as SemanticHeuristics from './semantic_heuristic_factory.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticNodeFactory } from './semantic_node_factory.js';
+import * as SemanticPred from './semantic_pred.js';
+import * as SemanticUtil from './semantic_util.js';
 
 interface BoundsType {
   type: SemanticType;
@@ -117,7 +122,10 @@ export default class SemanticProcessor {
   public static tableToMultiline(table: SemanticNode): SemanticNode {
     if (!SemanticPred.tableIsMultiline(table)) {
       return SemanticHeuristics.run(
-        'rewrite_subcases', table, SemanticProcessor.classifyTable) as SemanticNode;
+        'rewrite_subcases',
+        table,
+        SemanticProcessor.classifyTable
+      ) as SemanticNode;
     }
     table.type = SemanticType.MULTILINE;
     for (let i = 0, row; (row = table.childNodes[i]); i++) {
@@ -763,7 +771,7 @@ export default class SemanticProcessor {
       return;
     }
     const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
-    const meaning = content.map(x => SemanticMap.Meaning.get(x));
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     if (
       meaning.every(function (x) {
         return (
@@ -802,7 +810,7 @@ export default class SemanticProcessor {
       return;
     }
     const content = [...node.textContent];
-    const meaning = content.map(x => SemanticMap.Meaning.get(x));
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     const singleFont = meaning.reduce(function (prev, curr) {
       if (
         !prev ||
@@ -1928,14 +1936,14 @@ export default class SemanticProcessor {
     const newPrefixes = this.splitSingles(prefixes);
     let newNode = node;
     while (newPrefixes.length > 0) {
-      let op = newPrefixes.pop();
+      const op = newPrefixes.pop();
       newNode = SemanticProcessor.getInstance().concatNode_(
         newNode,
         op,
         SemanticType.PREFIXOP
       );
       if (op.length === 1 && this.splitOps.indexOf(op[0].textContent) !== -1) {
-        newNode.role = this.splitRoles.get(op[0].role)
+        newNode.role = this.splitRoles.get(op[0].role);
       }
     }
     return newNode;
@@ -1954,20 +1962,22 @@ export default class SemanticProcessor {
   /**
    * Splits a list of prefix operations into partitions that can be combined,
    * and those that are treated special as singletons.
-   * 
+   *
    * @param prefixes The list of prefix operations.
-   * @return The partitioned list.
+   * @returns The partitioned list.
    */
   private splitSingles(prefixes: SemanticNode[]) {
     let lastOp = 0;
-    let result = [];
+    const result = [];
     let i = 0;
     while (i < prefixes.length) {
-      let op = prefixes[i];
-      if (this.splitRoles.has(op.role) &&
+      const op = prefixes[i];
+      if (
+        this.splitRoles.has(op.role) &&
         (!prefixes[i - 1] || prefixes[i - 1].role !== op.role) &&
         (!prefixes[i + 1] || prefixes[i + 1].role !== op.role) &&
-        this.splitOps.indexOf(op.textContent) !== -1) {
+        this.splitOps.indexOf(op.textContent) !== -1
+      ) {
         result.push(prefixes.slice(lastOp, i));
         result.push(prefixes.slice(i, i + 1));
         lastOp = i + 1;
@@ -3434,12 +3444,15 @@ export default class SemanticProcessor {
   ): { integrand: SemanticNode[]; intvar: SemanticNode; rest: SemanticNode[] } {
     if (nodes.length === 0) {
       // Here we have no intvar. Now we can move back wrt. bigop boundary.
-      let partition = SemanticUtil.sliceNodes(args, SemanticPred.isBigOpBoundary);
+      const partition = SemanticUtil.sliceNodes(
+        args,
+        SemanticPred.isBigOpBoundary
+      );
       // return { integrand: args, intvar: null, rest: nodes };
       if (partition.div) {
         partition.tail.unshift(partition.div);
       }
-      return {integrand: partition.head, intvar: null, rest: partition.tail};
+      return { integrand: partition.head, intvar: null, rest: partition.tail };
     }
     SemanticHeuristics.run('intvar_from_implicit', nodes);
     const firstNode = nodes[0];

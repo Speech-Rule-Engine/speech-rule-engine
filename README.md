@@ -61,9 +61,37 @@ Or add it with yarn:
 
      yarn add speech-rule-engine
 
+#### Package structure
+
+#### Running in node
+
+
+``` javascript
+let SRE = require('./node_modules/speech-rule-engine/lib/sre.js');
+let SRE = require('speech-rule-engine');
+```
+
+
+``` javascript
+let SRE; import('speech-rule-engine').then((m) => SRE = m.default);
+let SRE; import('./node_modules/speech-rule-engine/lib/sre.js').then((m) => SRE = m.default);
+```
+
+``` javascript
+let SREfeature = {json: './node_modules/speech-rule-engine/lib/mathmaps/'};
+let SRE = require('./node_modules/speech-rule-engine/cjs/index.js');
+```
+
+``` javascript
+let SREfeature = {json: './node_modules/speech-rule-engine/lib/mathmaps/'};
+let SRE; import('./node_modules/speech-rule-engine/js/index.js').then((m) => SRE = m);
+```
+
+
+
 Then import into a running node or a source file using require:
 
-     require('speech-rule-engine');
+     
 
 ### API #######
 
@@ -188,7 +216,7 @@ the `setupEngine` method or the `SREfeature` variable.
 |            | In case of clearspeak, multiple preferences can be chosen using `:` as separator.                              |
 | *locale*   | Language locale in 639-1.                                                                                      |
 | *subiso*   | More fine grained specification of locale. E.g., for French fr, be, or ch                                      |
-| *markup*   | Set output markup for speech: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss```, ```ssml_step``` |
+| *markup*   | Set output markup for speech: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss``` |
 | *modality* | Set the modality SRE returns. E.g., ```speech```, ```braille```, ```prefix```, ```summary```                   |
 
 Observe that not every _domain_ (i.e., speech rule set) implements every
@@ -223,7 +251,7 @@ given in decreasing order of interestingness.
 | *json*          | URL from where to pull the locale files, i.e., json files containing speech rule definitions.        |
 | *xpath*         | URL where to pull an xpath library from.                                                             |
 |                 | This is important for environments not supporting xpath, e.g., IE or former versions of Edge.        |
-| *rate*          | Base value for speech rate in ```ssml_step``` markup                                                 |
+| *rate*          | Base value for speech rate in ```ssml``` markup                                                 |
 | *strict*        | Boolean flag indicating if only a directly matching rule should be used (default is ```false```).    |
 |                 | I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. |
 | *mode*          | The running mode for SRE: ```sync```, ```async```, ```http```                                        |

@@ -19,14 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Highlighter } from '../highlighter/highlighter';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
+import { Highlighter } from '../highlighter/highlighter.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
 
-import { DummyWalker } from './dummy_walker';
-import { SemanticWalker } from './semantic_walker';
-import { SyntaxWalker } from './syntax_walker';
-import { TableWalker } from './table_walker';
-import { Walker } from './walker';
+import { DummyWalker } from './dummy_walker.js';
+import { SemanticWalker } from './semantic_walker.js';
+import { SyntaxWalker } from './syntax_walker.js';
+import { TableWalker } from './table_walker.js';
+import { Walker } from './walker.js';
 
 /**
  * Produces a walker that corresponds to the given type.

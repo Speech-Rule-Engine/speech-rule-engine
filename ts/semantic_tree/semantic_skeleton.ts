@@ -19,13 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as BaseUtil from '../common/base_util';
+import * as BaseUtil from '../common/base_util.js';
+import Engine from '../common/engine.js';
 
-import * as XpathUtil from '../common/xpath_util';
-import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr';
-import { SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { SemanticTree } from './semantic_tree';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr.js';
+import { SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticTree } from './semantic_tree.js';
 
 export type Sexp = number | Sexp[];
 
@@ -259,11 +260,18 @@ export class SemanticSkeleton {
    *
    * @param mml A mml node to add a structure to.
    * @param node A semantic node.
+   * @param level
+   * @param posinset
+   * @param setsize
    * @returns The sexp structure.
    */
-  private static tree_(mml: Element, node: SemanticNode,
-                       level: number = 0, posinset: number = 1,
-                       setsize: number = 1): Sexp {
+  private static tree_(
+    mml: Element,
+    node: SemanticNode,
+    level = 0,
+    posinset = 1,
+    setsize = 1
+  ): Sexp {
     if (!node) {
       return [];
     }
@@ -273,7 +281,7 @@ export class SemanticSkeleton {
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
     )[0] as Element;
-    if (mmlChild) {
+    if (Engine.getInstance().aria && mmlChild) {
       SemanticSkeleton.addAria(mmlChild, level, posinset, setsize);
     }
     if (!node.childNodes.length) {
@@ -291,15 +299,24 @@ export class SemanticSkeleton {
     if (mmlChild) {
       SemanticSkeleton.addOwns_(mmlChild, children);
     }
-    for (let i = 0, l = children.length, child: SemanticNode;
-         (child = children[i]); i++) {
-      skeleton.push(SemanticSkeleton.tree_
-                    (mml, child, level + 1, i + 1, l) as any);
+    for (
+      let i = 0, l = children.length, child: SemanticNode;
+      (child = children[i]);
+      i++
+    ) {
+      skeleton.push(
+        SemanticSkeleton.tree_(mml, child, level + 1, i + 1, l) as any
+      );
     }
     return skeleton;
   }
 
-  private static addAria(node: Element, level: number, posinset: number, setsize: number) {
+  private static addAria(
+    node: Element,
+    level: number,
+    posinset: number,
+    setsize: number
+  ) {
     // Aria elements
     if (!level) {
       node.setAttribute('role', 'tree');

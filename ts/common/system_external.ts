@@ -21,7 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Variables } from './variables';
+import { Variables } from './variables.js';
 
 declare let global: any;
 declare let require: (name: string) => any;

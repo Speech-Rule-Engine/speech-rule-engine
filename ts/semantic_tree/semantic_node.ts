@@ -19,15 +19,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticMap } from './semantic_attr';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticMap } from './semantic_attr.js';
 import {
   SemanticMeaning,
   SemanticFont,
   SemanticRole,
   SemanticType
-} from './semantic_meaning';
-import * as SemanticUtil from './semantic_util';
+} from './semantic_meaning.js';
+import * as SemanticUtil from './semantic_util.js';
 
 /**
  * The attributes of a semantic node.

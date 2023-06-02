@@ -21,8 +21,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticRole } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 /**
  * Prefix for semantic attributes.

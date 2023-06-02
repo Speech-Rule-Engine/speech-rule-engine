@@ -1,7 +1,9 @@
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
-const CircularDependencyPlugin = require('circular-dependency-plugin');
+import * as path from 'path';
+import TerserPlugin from 'terser-webpack-plugin';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
+import { fileURLToPath } from 'url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let config = {
   module: {
@@ -18,7 +20,7 @@ let config = {
     maxAssetSize: 350000
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: [ '.tsx', '.ts', '.js'],
   },
   node: {
     __dirname: false
@@ -50,9 +52,7 @@ let config = {
 };
 
 let sreConfig = Object.assign({}, config, {
-  entry: path.resolve(__dirname, 'ts/index.ts'),
-  // devtool: false,
-  // target: 'web',
+  entry: path.resolve(__dirname, 'js/index.js'),
   output: {
     filename: 'sre.js',
     library: 'SRE',
@@ -64,7 +64,6 @@ let sreConfig = Object.assign({}, config, {
 
 let mjConfig = Object.assign({}, config, {
   entry: path.resolve(__dirname, 'ts/common/mathjax.ts'),
-  // devtool: false,
   target: 'web',
   output: {
     filename: 'mathjax-sre.js',
@@ -75,4 +74,4 @@ let mjConfig = Object.assign({}, config, {
   }
 });
 
-module.exports = [sreConfig]; 
+export default [sreConfig];
