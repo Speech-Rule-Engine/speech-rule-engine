@@ -21,7 +21,7 @@
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import * as EnrichMathml from './enrich_mathml.js';
-import { setAttributes } from './enrich_attr.js';
+import { addMrow, setAttributes } from './enrich_attr.js';
 import * as DomUtil from '../common/dom_util.js';
 
 export class CaseEmpheq extends AbstractEnrichCase {
@@ -62,7 +62,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
     // Only insert new mrows without children.
     this.recurseToTable(this.semantic);
     if (this.mrows.length) {
-      const newRow = DomUtil.createElement('mrow');
+      const newRow = addMrow();
       const parent = this.mml.parentNode;
       parent.insertBefore(newRow, this.mml);
       for (const mrow of this.mrows) {
@@ -91,7 +91,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
         node.annotation['Emph'][0] !== 'table')
     ) {
       // Add an empty mrow.
-      const newNode = DomUtil.createElement('mrow');
+      const newNode = addMrow();
       setAttributes(newNode, node);
       this.mrows.unshift(newNode);
     } else {
