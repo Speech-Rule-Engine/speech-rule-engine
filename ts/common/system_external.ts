@@ -59,7 +59,7 @@ export default class SystemExternal {
    */
   public static xmldom = SystemExternal.documentSupported
     ? window
-    : SystemExternal.extRequire('xmldom-sre');
+    : SystemExternal.extRequire('@xmldom/xmldom');
 
   /**
    * DOM document implementation.
