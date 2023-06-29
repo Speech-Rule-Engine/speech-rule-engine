@@ -25,6 +25,7 @@ import * as DomUtil from '../common/dom_util.js';
 import { NamedSymbol, SemanticMap } from './semantic_attr.js';
 import {
   SemanticFont,
+  SemanticMeaning,
   SemanticRole,
   SemanticType,
   SemanticSecondary
@@ -158,7 +159,7 @@ export default class SemanticProcessor {
     ) {
       node.type = SemanticType.NUMBER;
     }
-    SemanticProcessor.numberRole_(node);
+    SemanticProcessor.meaningFromContent(node, SemanticProcessor.numberRole_);
     SemanticProcessor.exprFont_(node);
   }
 
@@ -760,18 +761,27 @@ export default class SemanticProcessor {
     };
   }
 
+  private static meaningFromContent(
+    node: SemanticNode,
+    func: (n: SemanticNode, c: string[], m: SemanticMeaning[]) => void) {
+    const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
+    func(node, content, meaning);
+  }
+
   // TODO: Make this a postprocessor, once locales are loaded.
   /**
    * Compute the role of a number if it does not have one already.
    *
    * @param node The semantic tree node.
    */
-  private static numberRole_(node: SemanticNode) {
+  private static numberRole_(
+    node: SemanticNode,
+    content: string[],
+    meaning: SemanticMeaning[]) {
     if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
-    const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
-    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     if (
       meaning.every(function (x) {
         return (
@@ -1163,10 +1173,12 @@ export default class SemanticProcessor {
    * @returns The new semantic text node.
    */
   public text(leaf: SemanticNode, type: string): SemanticNode {
-    // TODO (simons): Here check if there is already a type or if we can compute
-    // an interesting number role. Than use this.
     SemanticProcessor.exprFont_(leaf);
     leaf.type = SemanticType.TEXT;
+    if (type === 'ANNOTATION-XML') {
+      leaf.role = SemanticRole.ANNOTATION;
+      return leaf;
+    }
     if (type === 'MS') {
       leaf.role = SemanticRole.STRING;
       return leaf;
@@ -1175,8 +1187,37 @@ export default class SemanticProcessor {
       leaf.role = SemanticRole.SPACE;
       return leaf;
     }
-    // TODO (simons): Process single element in text. E.g., check if a text
-    //      element represents a function or a single letter, number, etc.
+    if (/\s/.exec(leaf.textContent)) {
+      leaf.role = SemanticRole.TEXT;
+      return leaf;
+    }
+    // if ([...leaf.textContent].length === 1) {
+    //   const meaning = SemanticMap.Meaning.get(leaf.textContent);
+    //   leaf.type = meaning.type;
+    //   leaf.role = meaning.role;
+    //   leaf.font = meaning.font;
+    //   return leaf;
+    // }
+    // SemanticProcessor.meaningFromContent(
+    //   leaf,
+    //   (n: SemanticNode, c: string[], m: SemanticMeaning[]) => {
+    //     if (n.role !== SemanticRole.UNKNOWN) {
+    //       return;
+    //     }
+    //     SemanticProcessor.numberRole_(n, c, m);
+    //     // Type casting due to annoying overlap error.
+    //     if ((n as SemanticNode).role !== SemanticRole.OTHERNUMBER) {
+    //       return;
+    //     }
+    //     if (m.some((x) => x.type !== SemanticType.NUMBER &&
+    //       x.type !== SemanticType.IDENTIFIER)) {
+    //       n.type = SemanticType.TEXT;
+    //       n.role = SemanticRole.UNKNOWN; // Make this annotation
+    //       return;
+    //     }
+    //     n.type = SemanticType.FUNCTION
+    //     n.role = SemanticRole.PREFIXFUNC
+    //   });
     return leaf;
   }
 
