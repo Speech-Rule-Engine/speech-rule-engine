@@ -1191,33 +1191,38 @@ export default class SemanticProcessor {
       leaf.role = SemanticRole.TEXT;
       return leaf;
     }
-    // if ([...leaf.textContent].length === 1) {
-    //   const meaning = SemanticMap.Meaning.get(leaf.textContent);
-    //   leaf.type = meaning.type;
-    //   leaf.role = meaning.role;
-    //   leaf.font = meaning.font;
-    //   return leaf;
-    // }
-    // SemanticProcessor.meaningFromContent(
-    //   leaf,
-    //   (n: SemanticNode, c: string[], m: SemanticMeaning[]) => {
-    //     if (n.role !== SemanticRole.UNKNOWN) {
-    //       return;
-    //     }
-    //     SemanticProcessor.numberRole_(n, c, m);
-    //     // Type casting due to annoying overlap error.
-    //     if ((n as SemanticNode).role !== SemanticRole.OTHERNUMBER) {
-    //       return;
-    //     }
-    //     if (m.some((x) => x.type !== SemanticType.NUMBER &&
-    //       x.type !== SemanticType.IDENTIFIER)) {
-    //       n.type = SemanticType.TEXT;
-    //       n.role = SemanticRole.UNKNOWN; // Make this annotation
-    //       return;
-    //     }
-    //     n.type = SemanticType.FUNCTION
-    //     n.role = SemanticRole.PREFIXFUNC
-    //   });
+    if ([...leaf.textContent].length === 1) {
+      const meaning = SemanticMap.Meaning.get(leaf.textContent);
+      if (meaning.type === SemanticType.NUMBER ||
+        meaning.type === SemanticType.IDENTIFIER) {
+        leaf.type = meaning.type;
+        leaf.role = meaning.role;
+        leaf.font = meaning.font;
+        return leaf;
+      }
+      leaf.role = SemanticRole.UNKNOWN;
+      return leaf;
+    }
+    SemanticProcessor.meaningFromContent(
+      leaf,
+      (n: SemanticNode, c: string[], m: SemanticMeaning[]) => {
+        if (n.role !== SemanticRole.UNKNOWN) {
+          return;
+        }
+        SemanticProcessor.numberRole_(n, c, m);
+        // Type casting due to annoying overlap error.
+        if ((n as SemanticNode).role !== SemanticRole.OTHERNUMBER) {
+          n.type = SemanticType.NUMBER;
+          return;
+        }
+        if (m.some((x) => x.type !== SemanticType.NUMBER &&
+          x.type !== SemanticType.IDENTIFIER)) {
+          n.type = SemanticType.TEXT;
+          n.role = SemanticRole.ANNOTATION;
+          return;
+        }
+        n.role = SemanticRole.UNKNOWN;
+      });
     return leaf;
   }
 
