@@ -2158,7 +2158,16 @@ export default class SemanticProcessor {
    * @returns The new list of nodes.
    */
   private getTextInRow_(nodes: SemanticNode[]): SemanticNode[] {
-    if (nodes.length <= 1) {
+    if (nodes.length === 0) {
+      return nodes;
+    }
+    if (nodes.length === 1) {
+      // TODO: This could be reclassified as TEXT once we know it is not a
+      //       label?
+      if (nodes[0].type === SemanticType.TEXT &&
+        nodes[0].role === SemanticRole.UNKNOWN) {
+        nodes[0].role = SemanticRole.ANNOTATION;
+      }
       return nodes;
     }
     const partition = SemanticUtil.partitionNodes(nodes, (x) =>
