@@ -1191,38 +1191,7 @@ export default class SemanticProcessor {
       leaf.role = SemanticRole.TEXT;
       return leaf;
     }
-    if ([...leaf.textContent].length === 1) {
-      const meaning = SemanticMap.Meaning.get(leaf.textContent);
-      if (meaning.type === SemanticType.NUMBER ||
-        meaning.type === SemanticType.IDENTIFIER) {
-        leaf.type = meaning.type;
-        leaf.role = meaning.role;
-        leaf.font = meaning.font;
-        return leaf;
-      }
-      leaf.role = SemanticRole.UNKNOWN;
-      return leaf;
-    }
-    SemanticProcessor.meaningFromContent(
-      leaf,
-      (n: SemanticNode, c: string[], m: SemanticMeaning[]) => {
-        if (n.role !== SemanticRole.UNKNOWN) {
-          return;
-        }
-        SemanticProcessor.numberRole_(n, c, m);
-        // Type casting due to annoying overlap error.
-        if ((n as SemanticNode).role !== SemanticRole.OTHERNUMBER) {
-          n.type = SemanticType.NUMBER;
-          return;
-        }
-        if (m.some((x) => x.type !== SemanticType.NUMBER &&
-          x.type !== SemanticType.IDENTIFIER)) {
-          n.type = SemanticType.TEXT;
-          n.role = SemanticRole.ANNOTATION;
-          return;
-        }
-        n.role = SemanticRole.UNKNOWN;
-      });
+    leaf.role = SemanticRole.UNKNOWN;
     return leaf;
   }
 
@@ -2170,29 +2139,100 @@ export default class SemanticProcessor {
       }
       return nodes;
     }
-    const partition = SemanticUtil.partitionNodes(nodes, (x) =>
+    const {rel: rel, comp: comp} = SemanticUtil.partitionNodes(nodes, (x) =>
       SemanticPred.isType(x, SemanticType.TEXT)
     );
-    if (partition.rel.length === 0) {
+    if (rel.length === 0) {
       return nodes;
     }
     const result = [];
-    let nextComp = partition.comp[0];
-    // TODO: Properly collate punctuation: Add start and end punctuation to
-    // become
-    //       the punctuation content of the punctuated node. Consider spaces
-    //       separately.  This currently introduces too many invisible commas.
-    if (nextComp.length > 0) {
-      result.push(SemanticProcessor.getInstance().row(nextComp));
-    }
-    for (let i = 0, text; (text = partition.rel[i]); i++) {
-      result.push(text);
-      nextComp = partition.comp[i + 1];
-      if (nextComp.length > 0) {
-        result.push(SemanticProcessor.getInstance().row(nextComp));
+    let prevComp = comp.shift();
+    while (rel.length > 0) {
+      let currentRel = rel.shift();
+      let nextComp = comp.shift();
+      const text = [];
+      while (!nextComp.length && rel.length) {
+        text.push(currentRel);
+        currentRel = rel.shift();
+        nextComp = comp.shift();
       }
+      if (text.length) {
+        // Combine multiple text elements into one.
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        text.push(currentRel);
+        let dummy = SemanticProcessor.getInstance().dummyNode_(text);
+        // TODO: See if it already has a majority vote role.
+        // dummy.role = SemanticRole.ANNOTATION;
+        result.push(dummy);
+        prevComp = nextComp;
+        continue;
+      }
+      if (currentRel.role !== SemanticRole.UNKNOWN) {
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
+      }
+      const meaning = SemanticMap.Meaning.get(currentRel.textContent);
+      if (meaning.type !== SemanticType.UNKNOWN) {
+        currentRel.type = meaning.type;
+        currentRel.role = meaning.role;
+        currentRel.font = meaning.font;
+        prevComp.push(currentRel);
+        prevComp = prevComp.concat(nextComp);
+        continue;
+      }
+      SemanticProcessor.meaningFromContent(
+        currentRel,
+        (n: SemanticNode, c: string[], m: SemanticMeaning[]) => {
+          if (n.role !== SemanticRole.UNKNOWN) {
+            return;
+          }
+          SemanticProcessor.numberRole_(n, c, m);
+          // Type casting due to annoying overlap error.
+          if ((n as SemanticNode).role !== SemanticRole.OTHERNUMBER) {
+            n.type = SemanticType.NUMBER;
+            return;
+          }
+          if (m.some((x) => x.type !== SemanticType.NUMBER &&
+            x.type !== SemanticType.IDENTIFIER)) {
+            n.type = SemanticType.TEXT;
+            n.role = SemanticRole.ANNOTATION;
+            return;
+          }
+          n.role = SemanticRole.UNKNOWN;
+        });
+      if (currentRel.type === SemanticType.TEXT &&
+        currentRel.role !== SemanticRole.UNKNOWN) {
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
+      }
+      if (currentRel.role === SemanticRole.UNKNOWN) {
+        if (rel.length || nextComp.length) {
+          currentRel.type = SemanticType.FUNCTION;
+          currentRel.role = SemanticRole.PREFIXFUNC;
+        } else {
+          currentRel.type = SemanticType.IDENTIFIER;
+          currentRel.role = SemanticRole.UNIT;
+        }
+      }
+      prevComp.push(currentRel);
+      prevComp = prevComp.concat(nextComp);
     }
-    return [SemanticProcessor.getInstance().dummyNode_(result)];
+    if (prevComp.length > 0) {
+      result.push(SemanticProcessor.getInstance().row(prevComp));
+    }
+    return result.length > 1 ?
+      [SemanticProcessor.getInstance().dummyNode_(result)] :
+      result;
   }
 
   /**
