@@ -24,7 +24,7 @@ import {
   SemanticRole,
   SemanticType
 } from './semantic_meaning.js';
-import { SemanticMap } from './semantic_attr';
+import { SemanticMap } from './semantic_attr.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
