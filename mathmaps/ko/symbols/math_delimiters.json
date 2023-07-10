@@ -1,6 +1,5 @@
 [{"locale": "ko"},
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "괄호 열고"
@@ -16,7 +15,6 @@
     "key": "0028"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "괄호 닫고"
@@ -32,7 +30,6 @@
     "key": "0029"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "대괄호 열고"
@@ -48,7 +45,6 @@
     "key": "005B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "대괄호 닫고"
@@ -64,7 +60,6 @@
     "key": "005D"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "중괄호 열고"
@@ -79,7 +74,6 @@
     "key": "007B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "중괄호 닫고"
@@ -94,7 +88,6 @@
     "key": "007D"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "꺾쇠 괄호 열고"
@@ -107,7 +100,6 @@
     "key": "2045"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "꺾쇠 괄호 닫고"
@@ -120,7 +112,6 @@
     "key": "2046"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 천장"
@@ -129,7 +120,6 @@
     "key": "2308"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "오른쪽 천장"
@@ -138,7 +128,6 @@
     "key": "2309"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 층"
@@ -147,7 +136,6 @@
     "key": "230A"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "오른쪽 층"
@@ -156,7 +144,6 @@
     "key": "230B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 아래 크랍"
@@ -165,7 +152,6 @@
     "key": "230C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 아래 크랍"
@@ -174,7 +160,6 @@
     "key": "230D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 위 크랍"
@@ -183,7 +168,6 @@
     "key": "230E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 위 크랍"
@@ -192,7 +176,6 @@
     "key": "230F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 상단 모서리"
@@ -201,7 +184,6 @@
     "key": "231C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 상단 모서리"
@@ -210,7 +192,6 @@
     "key": "231D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 하단 모서리"
@@ -219,7 +200,6 @@
     "key": "231E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 하단 모서리"
@@ -228,7 +208,6 @@
     "key": "231F"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "상단 절반 적분"
@@ -237,7 +216,6 @@
     "key": "2320"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "하단 절반 적분"
@@ -246,7 +224,6 @@
     "key": "2321"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "꺾쇠 괄호 열고",
@@ -256,7 +233,6 @@
     "key": "2329"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "꺾쇠 괄호 닫고",
@@ -266,7 +242,6 @@
     "key": "232A"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽이 구부러진 괄호 열고"
@@ -279,7 +254,6 @@
     "key": "239B"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "괄호 열고 확장"
@@ -292,7 +266,6 @@
     "key": "239C"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽이 구부러진 괄호 열고"
@@ -305,7 +278,6 @@
     "key": "239D"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽이 구부러진 괄호 닫고"
@@ -318,7 +290,6 @@
     "key": "239E"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "괄호 닫고 확장"
@@ -331,7 +302,6 @@
     "key": "239F"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽이 구부러진 괄호 닫고"
@@ -344,7 +314,6 @@
     "key": "23A0"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽만 구부러진 대괄호 열고"
@@ -357,7 +326,6 @@
     "key": "23A1"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "확장 대괄호 열고"
@@ -370,7 +338,6 @@
     "key": "23A2"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽만 구부러진 대괄호 열고"
@@ -383,7 +350,6 @@
     "key": "23A3"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽만 구부러진 대괄호 닫고"
@@ -396,7 +362,6 @@
     "key": "23A4"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "확장 대괄호 닫고"
@@ -409,7 +374,6 @@
     "key": "23A5"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽만 구부러진 대괄호 닫고"
@@ -422,7 +386,6 @@
     "key": "23A6"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽만 구부러진 중괄호 열고"
@@ -434,7 +397,6 @@
     "key": "23A7"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위아래 열려진 중괄호 열고"
@@ -446,7 +408,6 @@
     "key": "23A8"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽만 구부러진 중괄호 열고"
@@ -458,7 +419,6 @@
     "key": "23A9"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "확장 중괄호"
@@ -467,7 +427,6 @@
     "key": "23AA"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽만 구부러진 중괄호 닫고"
@@ -479,7 +438,6 @@
     "key": "23AB"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽만 구부러진 중괄호 닫고"
@@ -491,7 +449,6 @@
     "key": "23AC"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위아래 열려진 중괄호 닫고"
@@ -503,7 +460,6 @@
     "key": "23AD"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "확장된 인테그랄"
@@ -512,7 +468,6 @@
     "key": "23AE"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "확장된 수평선"
@@ -521,7 +476,6 @@
     "key": "23AF"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "상단 왼쪽 하단 오른쪽으로 굽혀진 중괄호"
@@ -530,7 +484,6 @@
     "key": "23B0"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "상단 오른쪽 하단 쪽으로 굽혀진 중괄호"
@@ -539,7 +492,6 @@
     "key": "23B1"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "상단 절반 시그마"
@@ -548,7 +500,6 @@
     "key": "23B2"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "하단 절반 시그마"
@@ -557,7 +508,6 @@
     "key": "23B3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "시계방향으로 90도 돌린 중괄호"
@@ -570,7 +520,6 @@
     "key": "23B4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "반시계방향으로 90도 돌린 중괄호"
@@ -583,7 +532,6 @@
     "key": "23B5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "반시계방향으로 90도 돌린 중괄호 위에 시계방향으로 90도 돌린 중괄호"
@@ -596,7 +544,6 @@
     "key": "23B6"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "눈금 기호 하단"
@@ -605,7 +552,6 @@
     "key": "23B7"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 세로선"
@@ -614,7 +560,6 @@
     "key": "23B8"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 세로선"
@@ -623,7 +568,6 @@
     "key": "23B9"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 괄호"
@@ -636,7 +580,6 @@
     "key": "23DC"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽 괄호"
@@ -649,7 +592,6 @@
     "key": "23DD"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 중괄호"
@@ -661,7 +603,6 @@
     "key": "23DE"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽 중괄호"
@@ -673,7 +614,6 @@
     "key": "23DF"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "상단 거북이 모양 중괄호"
@@ -682,7 +622,6 @@
     "key": "23E0"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "하단 거북이 모양 중괄호"
@@ -691,7 +630,6 @@
     "key": "23E1"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "중간 괄호 열고"
@@ -704,7 +642,6 @@
     "key": "2768"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "중간 괄호 닫고"
@@ -717,7 +654,6 @@
     "key": "2769"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "중간 평평한 괄호 열고"
@@ -730,7 +666,6 @@
     "key": "276A"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "중간 평평한 괄호 닫고"
@@ -743,7 +678,6 @@
     "key": "276B"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "중간 포인팅 각도 중괄호 열고"
@@ -752,7 +686,6 @@
     "key": "276C"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "중간 포인팅 각도 중괄호 닫고"
@@ -761,7 +694,6 @@
     "key": "276D"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두꺼운 왼쪽 포인팅 앵글 따옴표"
@@ -770,7 +702,6 @@
     "key": "276E"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두꺼운 오른쪽 각도 마크"
@@ -779,7 +710,6 @@
     "key": "276F"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두꺼운 포인팅 앵글 중괄호 열고"
@@ -788,7 +718,6 @@
     "key": "2770"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두꺼운 포인팅 앵글 중괄호 닫고"
@@ -797,7 +726,6 @@
     "key": "2771"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "얇은 거북이 모양 중괄호 열고"
@@ -806,7 +734,6 @@
     "key": "2772"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "얇은 쪽 거북이 모양 중괄호"
@@ -815,7 +742,6 @@
     "key": "2773"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "중간 중괄호 열고"
@@ -827,7 +753,6 @@
     "key": "2774"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "중간 중괄호 닫고"
@@ -839,7 +764,6 @@
     "key": "2775"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "왼쪽 S 자형 가방모양 구분 기호"
@@ -848,7 +772,6 @@
     "key": "27C5"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "오른쪽 S 자형 가방모양 구분 기호"
@@ -857,7 +780,6 @@
     "key": "27C6"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두겹 대괄호 열고"
@@ -866,7 +788,6 @@
     "key": "27E6"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두겹 대괄호 닫고"
@@ -875,7 +796,6 @@
     "key": "27E7"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "구부러진 대괄호 열고"
@@ -887,7 +807,6 @@
     "key": "27E8"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "구부러진 대괄호 닫고"
@@ -899,7 +818,6 @@
     "key": "27E9"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두겹 구부러진 대괄호 열고"
@@ -908,7 +826,6 @@
     "key": "27EA"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두겹 구부러진 대괄호 닫고"
@@ -917,7 +834,6 @@
     "key": "27EB"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두겹 구부러진 거북이 모양 대괄호 열고"
@@ -926,7 +842,6 @@
     "key": "27EC"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두겹 구부러진 거북이 모양 대괄호 닫고"
@@ -935,7 +850,6 @@
     "key": "27ED"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "수학적 편평한 괄호 열고"
@@ -948,7 +862,6 @@
     "key": "27EE"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "수학적 편평한 괄호 닫고"
@@ -961,7 +874,6 @@
     "key": "27EF"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두겹 흰색 중괄호 열고"
@@ -970,7 +882,6 @@
     "key": "2983"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두겹 흰색 중괄호 닫고"
@@ -979,7 +890,6 @@
     "key": "2984"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "두겹 괄호 열고"
@@ -992,7 +902,6 @@
     "key": "2985"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "두겹 괄호 닫고"
@@ -1005,7 +914,6 @@
     "key": "2986"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Z 표기법 두겹 대괄호 열고"
@@ -1014,7 +922,6 @@
     "key": "2987"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Z 표기법 두겹 대괄호 닫고"
@@ -1023,7 +930,6 @@
     "key": "2988"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "Z 표기법 삼각형 괄호 열고"
@@ -1032,7 +938,6 @@
     "key": "2989"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "Z 표기법 삼각형 괄호 닫고"
@@ -1041,7 +946,6 @@
     "key": "298A"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "밑줄이 있는 대괄호 열고"
@@ -1054,7 +958,6 @@
     "key": "298B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "밑줄이 있는 대괄호 닫고"
@@ -1067,7 +970,6 @@
     "key": "298C"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "상단 모서리에 대각선이 있는 대괄호 열고"
@@ -1080,7 +982,6 @@
     "key": "298D"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "상단 모서리에 대각선이 있는 대괄호 닫고"
@@ -1093,7 +994,6 @@
     "key": "298E"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "하단 모서리에 대각선이 있는 대괄호 열고"
@@ -1106,7 +1006,6 @@
     "key": "298F"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "하단 모서리에 대각선이 있는 대괄호 닫고"
@@ -1119,7 +1018,6 @@
     "key": "2990"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "점이 있는 대괄호 열고"
@@ -1131,7 +1029,6 @@
     "key": "2991"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "점이 있는 대괄호 닫고"
@@ -1143,7 +1040,6 @@
     "key": "2992"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "아치보다 작은 대괄호 열고"
@@ -1152,7 +1048,6 @@
     "key": "2993"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "아치보다 큰 대괄호 닫고"
@@ -1161,7 +1056,6 @@
     "key": "2994"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "대괄호보다 큰 두개 왼쪽 방향 호"
@@ -1170,7 +1064,6 @@
     "key": "2995"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "대괄호보다 작은 두개 왼쪽 방향 호"
@@ -1179,7 +1072,6 @@
     "key": "2996"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "검은 거북이 모양 대괄호 열고"
@@ -1188,7 +1080,6 @@
     "key": "2997"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "검은 거북이 모양 대괄호 닫고"
@@ -1197,7 +1088,6 @@
     "key": "2998"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "왼쪽 방향 흔들리는 모양"
@@ -1206,7 +1096,6 @@
     "key": "29D8"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "오른쪽 방향 흔들리는 모양"
@@ -1215,7 +1104,6 @@
     "key": "29D9"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "왼쪽 방향 이중 흔들는 모양"
@@ -1224,7 +1112,6 @@
     "key": "29DA"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "오른쪽 방향 이중 흔들는 모양"
@@ -1233,7 +1120,6 @@
     "key": "29DB"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "포인팅 휘어진 각도 중괄호 열고"
@@ -1242,7 +1128,6 @@
     "key": "29FC"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "포인팅 휘어진 각도 중괄호 닫고"
@@ -1251,7 +1136,6 @@
     "key": "29FD"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "상단 절반 대괄호 열고"
@@ -1264,7 +1148,6 @@
     "key": "2E22"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "상단 절반 대괄호 닫고"
@@ -1277,7 +1160,6 @@
     "key": "2E23"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "하단 절반 대괄호 열고"
@@ -1290,7 +1172,6 @@
     "key": "2E24"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "하단 절반 대괄호 닫고"
@@ -1303,7 +1184,6 @@
     "key": "2E25"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 90도 회전한 U 모양 괄호"
@@ -1312,7 +1192,6 @@
     "key": "2E26"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "반시계 방향으로 90도 회전한 U 모양 괄호"
@@ -1321,7 +1200,6 @@
     "key": "2E27"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "이중 괄호 열고"
@@ -1334,7 +1212,6 @@
     "key": "2E28"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "이중 괄호 닫고"
@@ -1347,7 +1224,6 @@
     "key": "2E29"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "꺾쇠 괄호 열고"
@@ -1359,7 +1235,6 @@
     "key": "3008"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "꺾쇠 괄호 닫고"
@@ -1371,7 +1246,6 @@
     "key": "3009"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "이중 꺾쇠 괄호 열고"
@@ -1380,7 +1254,6 @@
     "key": "300A"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "이중 꺾쇠 괄호 닫고"
@@ -1389,7 +1262,6 @@
     "key": "300B"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "절반 대괄호 열고"
@@ -1398,7 +1270,6 @@
     "key": "300C"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "절반 대괄호 닫고"
@@ -1407,7 +1278,6 @@
     "key": "300D"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "속이 빈 절반 대괄호 열고"
@@ -1416,7 +1286,6 @@
     "key": "300E"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "속이 빈 절반 대괄호 닫고"
@@ -1425,7 +1294,6 @@
     "key": "300F"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "속이 차있는 절반 대괄호 열고"
@@ -1434,7 +1302,6 @@
     "key": "3010"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "속이 차있는 절반 대괄호 열고"
@@ -1443,7 +1310,6 @@
     "key": "3011"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "거북이 모양 대괄호 열고"
@@ -1452,7 +1318,6 @@
     "key": "3014"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "거북이 모양 대괄호 닫고"
@@ -1461,7 +1326,6 @@
     "key": "3015"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "속이 빈 오목렌즈 모양 괄호 열고"
@@ -1470,7 +1334,6 @@
     "key": "3016"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "속이 빈 오목렌즈 모양 괄호 닫고"
@@ -1479,7 +1342,6 @@
     "key": "3017"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "속이 빈 거북이 모양 대괄호 열고"
@@ -1488,7 +1350,6 @@
     "key": "3018"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "속이 빈 거북이 모양 대괄호 닫고"
@@ -1497,7 +1358,6 @@
     "key": "3019"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "속이 빈 대괄호 열고"
@@ -1506,7 +1366,6 @@
     "key": "301A"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "속이 빈 대괄호 닫고"
@@ -1515,7 +1374,6 @@
     "key": "301B"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "반전된 이중 프라임 따옴표"
@@ -1524,7 +1382,6 @@
     "key": "301D"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "이중 프라임 따옴표"
@@ -1533,7 +1390,6 @@
     "key": "301E"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "하단 이중 프라임 따옴표"
@@ -1542,7 +1398,6 @@
     "key": "301F"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "가운데 꽃무늬가 있는 괄호 열고"
@@ -1555,7 +1410,6 @@
     "key": "FD3E"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "가운데 꽃무늬가 있는 괄호 닫고"
@@ -1568,7 +1422,6 @@
     "key": "FD3F"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 속이 빈 오목렌즈 모양의 괄호의 발표 형식"
@@ -1577,7 +1430,6 @@
     "key": "FE17"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "반시계 방향으로 회전한 속이 빈 오목렌즈 모양의 괄호의 발표 형식"
@@ -1586,7 +1438,6 @@
     "key": "FE18"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 열린 괄호의 발표 형식"
@@ -1599,7 +1450,6 @@
     "key": "FE35"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 열린 괄호의 발표 형식"
@@ -1612,7 +1462,6 @@
     "key": "FE36"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 열린 중괄호의 발표 형식"
@@ -1624,7 +1473,6 @@
     "key": "FE37"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 닫힌 중괄호의 발표 형식"
@@ -1636,7 +1484,6 @@
     "key": "FE38"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 거북이 모양 열린 괄호의 발표 형식"
@@ -1645,7 +1492,6 @@
     "key": "FE39"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 거북이 모양 닫힌 괄호의 발표 형식"
@@ -1654,7 +1500,6 @@
     "key": "FE3A"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 속이 찬 오목렌즈 모양 열린 괄호의 발표 형식"
@@ -1663,7 +1508,6 @@
     "key": "FE3B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 속이 찬 오목렌즈 모양 닫힌 괄호의 발표 형식"
@@ -1672,7 +1516,6 @@
     "key": "FE3C"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 이중 각진 모양 열린 괄호의 발표 형식"
@@ -1681,7 +1524,6 @@
     "key": "FE3D"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 이중 각진 모양 닫힌 괄호의 발표 형식"
@@ -1690,7 +1532,6 @@
     "key": "FE3E"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 각진 모양 열린 괄호의 발표 형식"
@@ -1702,7 +1543,6 @@
     "key": "FE3F"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 각진 모양 닫힌 괄호의 발표 형식"
@@ -1714,7 +1554,6 @@
     "key": "FE40"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 상단 절반 열린 대괄호의 발표 형식"
@@ -1723,7 +1562,6 @@
     "key": "FE41"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 상단 절반 닫힌 대괄호의 발표 형식"
@@ -1732,7 +1570,6 @@
     "key": "FE42"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 속이 비어 있는 상단 절반 열린 대괄호의 발표 형식"
@@ -1741,7 +1578,6 @@
     "key": "FE43"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 속이 비어 있는 상단 절반 닫힌 대괄호의 발표 형식"
@@ -1750,7 +1586,6 @@
     "key": "FE44"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 열린 대괄호의 발표 형식"
@@ -1763,7 +1598,6 @@
     "key": "FE47"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "시계 방향으로 회전한 닫힌 대괄호의 발표 형식"
@@ -1776,7 +1610,6 @@
     "key": "FE48"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "작은 괄호 열고"
@@ -1789,7 +1622,6 @@
     "key": "FE59"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "작은 괄호 닫고"
@@ -1802,7 +1634,6 @@
     "key": "FE5A"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "작은 중괄호 열고"
@@ -1814,7 +1645,6 @@
     "key": "FE5B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "작은 중괄호 닫고"
@@ -1826,7 +1656,6 @@
     "key": "FE5C"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "작은 거북이 모양 괄호 열고"
@@ -1835,7 +1664,6 @@
     "key": "FE5D"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "작은 거북이 모양 괄호 닫고"
@@ -1844,7 +1672,6 @@
     "key": "FE5E"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "전각 괄호 열고"
@@ -1857,7 +1684,6 @@
     "key": "FF08"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "전각 괄호 닫고"
@@ -1870,7 +1696,6 @@
     "key": "FF09"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "전각 대괄호 열고"
@@ -1883,7 +1708,6 @@
     "key": "FF3B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "전각 대괄호 닫고"
@@ -1896,7 +1720,6 @@
     "key": "FF3D"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "전각 중괄호 열고"
@@ -1908,7 +1731,6 @@
     "key": "FF5B"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "전각 중괄호 닫고"
@@ -1920,7 +1742,6 @@
     "key": "FF5D"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "전각 속이 빈 괄호 열고"
@@ -1933,7 +1754,6 @@
     "key": "FF5F"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "전각 속이 빈 괄호 닫고"
@@ -1946,7 +1766,6 @@
     "key": "FF60"
   },
   {
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "반각 왼쪽 상단 절반 대괄호"
@@ -1955,7 +1774,6 @@
     "key": "FF62"
   },
   {
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "반각 오른쪽 상단 절반 대괄호"

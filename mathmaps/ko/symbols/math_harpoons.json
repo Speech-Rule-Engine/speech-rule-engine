@@ -1,6 +1,5 @@
 [{"locale": "ko"},
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브가 위쪽인 왼쪽 작살"
@@ -9,7 +8,6 @@
     "key": "21BC"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브가 아래쪽인 왼쪽 작살"
@@ -18,7 +16,6 @@
     "key": "21BD"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브가 오른쪽인 위쪽 작살"
@@ -27,7 +24,6 @@
     "key": "21BE"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브가 왼쪽인 위쪽 작살"
@@ -36,7 +32,6 @@
     "key": "21BF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브 위쪽인 오른쪽 작살"
@@ -45,7 +40,6 @@
     "key": "21C0"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브 아래쪽인 오른쪽 작살"
@@ -54,7 +48,6 @@
     "key": "21C1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브가 오른쪽인 아래쪽 작살"
@@ -63,7 +56,6 @@
     "key": "21C2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "바브가 왼쪽인 아래쪽 작살"
@@ -72,7 +64,6 @@
     "key": "21C3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 작살 위 왼쪽 작살"
@@ -81,7 +72,6 @@
     "key": "21CB"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 작살 위 오른쪽 작살"
@@ -90,7 +80,6 @@
     "key": "21CC"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 바브는 위쪽, 오른쪽 바브는 아래쪽인 작살"
@@ -99,7 +88,6 @@
     "key": "294A"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 바브는 아래쪽, 오른쪽 바브는 위쪽인 작살"
@@ -108,7 +96,6 @@
     "key": "294B"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 바브는 오른쪽, 아래쪽 바브는 왼쪽인 작살"
@@ -117,7 +104,6 @@
     "key": "294C"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 바브는 왼쪽, 아래쪽 바브는 오른쪽인 작살"
@@ -126,7 +112,6 @@
     "key": "294D"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 바브는 위쪽, 오른쪽 바브도 위쪽인 하푼"
@@ -135,7 +120,6 @@
     "key": "294E"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 바브는 오른쪽, 아래쪽 바브도 오른쪽인 작살"
@@ -144,7 +128,6 @@
     "key": "294F"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 바브는 아래쪽, 오른쪽 바브도 아래쪽인 작살"
@@ -153,7 +136,6 @@
     "key": "2950"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 바브는 왼쪽, 아래쪽 바브도 왼쪽인 작살"
@@ -162,7 +144,6 @@
     "key": "2951"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 위쪽인 왼쪽 작살"
@@ -171,7 +152,6 @@
     "key": "2952"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 위쪽인 오른쪽 작살"
@@ -180,7 +160,6 @@
     "key": "2953"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 오른쪽인 위쪽 작살"
@@ -189,7 +168,6 @@
     "key": "2954"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 오른쪽인 아래쪽 작살"
@@ -198,7 +176,6 @@
     "key": "2955"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 아래쪽인 왼쪽 작살"
@@ -207,7 +184,6 @@
     "key": "2956"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 아래쪽인 오른쪽 작살"
@@ -216,7 +192,6 @@
     "key": "2957"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 왼쪽인 위쪽 작살"
@@ -225,7 +200,6 @@
     "key": "2958"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 왼쪽인 아래쪽 작살"
@@ -234,7 +208,6 @@
     "key": "2959"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 위쪽인 왼쪽 작살"
@@ -243,7 +216,6 @@
     "key": "295A"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 위쪽인 오른쪽 작살"
@@ -252,7 +224,6 @@
     "key": "295B"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 오른쪽인 위쪽 작살"
@@ -261,7 +232,6 @@
     "key": "295C"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 오른쪽인 아래쪽 작살"
@@ -270,7 +240,6 @@
     "key": "295D"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 아래쪽인 왼쪽 작살"
@@ -279,7 +248,6 @@
     "key": "295E"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 아래쪽인 오른쪽 작살"
@@ -288,7 +256,6 @@
     "key": "295F"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 왼쪽인 위쪽 작살"
@@ -297,7 +264,6 @@
     "key": "2960"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바로 향하는 바브가 왼쪽인 아래쪽 작살"
@@ -306,7 +272,6 @@
     "key": "2961"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 아래쪽인 왼쪽 작살 위에 바브가 위쪽인 왼쪽 작살"
@@ -315,7 +280,6 @@
     "key": "2962"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 왼쪽인 위쪽 작살 옆에 바브가 오른쪽인 위쪽 작살"
@@ -324,7 +288,6 @@
     "key": "2963"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 아래쪽인 오른쪽 작살 위에 바브가 위쪽인 오른쪽 작살"
@@ -333,7 +296,6 @@
     "key": "2964"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 왼쪽인 아래쪽 작살 옆에 바브가 오른쪽인 아래쪽 작살"
@@ -342,7 +304,6 @@
     "key": "2965"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 위쪽인 오른쪽 작살 위에 바브가 위쪽인 왼쪽 작살"
@@ -351,7 +312,6 @@
     "key": "2966"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 아래쪽인 오른쪽 작살 위에 바브가 아래쪽인 왼쪽 작살"
@@ -360,7 +320,6 @@
     "key": "2967"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 위쪽인 왼쪽 작살 위에 바브가 위쪽인 오른쪽 작살"
@@ -369,7 +328,6 @@
     "key": "2968"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 아래쪽인 왼쪽 작살 위에 바브가 아래쪽인 오른쪽 작살"
@@ -378,7 +336,6 @@
     "key": "2969"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "긴 직선 위에 바브가 위쪽인 왼쪽 작살"
@@ -387,7 +344,6 @@
     "key": "296A"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "긴 직선 위에 바브가 아래쪽인 왼쪽 작살"
@@ -396,7 +352,6 @@
     "key": "296B"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "긴 직선 위에 바브가 위쪽인 오른쪽 작살"
@@ -405,7 +360,6 @@
     "key": "296C"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "긴 직선 위에 바브가 아래쪽인 오른쪽 작살"
@@ -414,7 +368,6 @@
     "key": "296D"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 왼쪽인 위쪽 작살 옆에 바브가 오른쪽인 아래쪽 작살"
@@ -423,7 +376,6 @@
     "key": "296E"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "바브가 왼쪽인 아래쪽 작살 옆에 바브가 오른쪽인 위쪽 작살"
@@ -432,7 +384,6 @@
     "key": "296F"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼쪽 물고기 꼬리"
@@ -441,7 +392,6 @@
     "key": "297C"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "오른쪽 물고기 꼬리"
@@ -450,7 +400,6 @@
     "key": "297D"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "위쪽 물고기 꼬리"
@@ -459,7 +408,6 @@
     "key": "297E"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "아래쪽 물고기 꼬리"

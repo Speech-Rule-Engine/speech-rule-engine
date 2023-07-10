@@ -1,6 +1,5 @@
 [{"locale": "ko"},
   {
-    "category": "Lu",
     "key": "00C0",
     "mappings": {
       "default": {
@@ -14,7 +13,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C1",
     "mappings": {
       "default": {
@@ -28,7 +26,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C2",
     "mappings": {
       "default": {
@@ -42,7 +39,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C3",
     "mappings": {
       "default": {
@@ -56,7 +52,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C4",
     "mappings": {
       "default": {
@@ -70,7 +65,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C5",
     "mappings": {
       "default": {
@@ -84,7 +78,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C7",
     "mappings": {
       "default": {
@@ -98,7 +91,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C8",
     "mappings": {
       "default": {
@@ -112,7 +104,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00C9",
     "mappings": {
       "default": {
@@ -126,7 +117,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CA",
     "mappings": {
       "default": {
@@ -140,7 +130,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CB",
     "mappings": {
       "default": {
@@ -154,7 +143,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CC",
     "mappings": {
       "default": {
@@ -168,7 +156,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CD",
     "mappings": {
       "default": {
@@ -182,7 +169,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CE",
     "mappings": {
       "default": {
@@ -196,7 +182,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00CF",
     "mappings": {
       "default": {
@@ -210,7 +195,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D1",
     "mappings": {
       "default": {
@@ -224,7 +208,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D2",
     "mappings": {
       "default": {
@@ -238,7 +221,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D3",
     "mappings": {
       "default": {
@@ -252,7 +234,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D4",
     "mappings": {
       "default": {
@@ -266,7 +247,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D5",
     "mappings": {
       "default": {
@@ -280,7 +260,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D6",
     "mappings": {
       "default": {
@@ -294,7 +273,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00D9",
     "mappings": {
       "default": {
@@ -308,7 +286,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DA",
     "mappings": {
       "default": {
@@ -322,7 +299,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DB",
     "mappings": {
       "default": {
@@ -336,7 +312,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DC",
     "mappings": {
       "default": {
@@ -350,7 +325,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "00DD",
     "mappings": {
       "default": {
@@ -364,7 +338,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0100",
     "mappings": {
       "default": {
@@ -378,7 +351,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0102",
     "mappings": {
       "default": {
@@ -392,7 +364,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0104",
     "mappings": {
       "default": {
@@ -406,7 +377,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0106",
     "mappings": {
       "default": {
@@ -420,7 +390,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0108",
     "mappings": {
       "default": {
@@ -434,7 +403,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010A",
     "mappings": {
       "default": {
@@ -448,7 +416,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010C",
     "mappings": {
       "default": {
@@ -462,7 +429,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010E",
     "mappings": {
       "default": {
@@ -476,7 +442,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0112",
     "mappings": {
       "default": {
@@ -490,7 +455,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0114",
     "mappings": {
       "default": {
@@ -504,7 +468,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0116",
     "mappings": {
       "default": {
@@ -518,7 +481,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0118",
     "mappings": {
       "default": {
@@ -532,7 +494,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011A",
     "mappings": {
       "default": {
@@ -546,7 +507,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011C",
     "mappings": {
       "default": {
@@ -560,7 +520,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011E",
     "mappings": {
       "default": {
@@ -574,7 +533,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0120",
     "mappings": {
       "default": {
@@ -588,7 +546,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0122",
     "mappings": {
       "default": {
@@ -602,7 +559,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0124",
     "mappings": {
       "default": {
@@ -616,7 +572,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0128",
     "mappings": {
       "default": {
@@ -630,7 +585,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012A",
     "mappings": {
       "default": {
@@ -644,7 +598,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012C",
     "mappings": {
       "default": {
@@ -658,7 +611,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012E",
     "mappings": {
       "default": {
@@ -672,7 +624,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0130",
     "mappings": {
       "default": {
@@ -686,7 +637,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0134",
     "mappings": {
       "default": {
@@ -700,7 +650,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0136",
     "mappings": {
       "default": {
@@ -714,7 +663,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0139",
     "mappings": {
       "default": {
@@ -728,7 +676,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "013B",
     "mappings": {
       "default": {
@@ -742,7 +689,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "013D",
     "mappings": {
       "default": {
@@ -756,7 +702,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "013F",
     "mappings": {
       "default": {
@@ -770,7 +715,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0143",
     "mappings": {
       "default": {
@@ -784,7 +728,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0145",
     "mappings": {
       "default": {
@@ -798,7 +741,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0147",
     "mappings": {
       "default": {
@@ -812,7 +754,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "014C",
     "mappings": {
       "default": {
@@ -826,7 +767,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "014E",
     "mappings": {
       "default": {
@@ -840,7 +780,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0150",
     "mappings": {
       "default": {
@@ -854,7 +793,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0154",
     "mappings": {
       "default": {
@@ -868,7 +806,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0156",
     "mappings": {
       "default": {
@@ -882,7 +819,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0158",
     "mappings": {
       "default": {
@@ -896,7 +832,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "015A",
     "mappings": {
       "default": {
@@ -910,7 +845,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "015C",
     "mappings": {
       "default": {
@@ -924,7 +858,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "015E",
     "mappings": {
       "default": {
@@ -938,7 +871,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0160",
     "mappings": {
       "default": {
@@ -952,7 +884,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0162",
     "mappings": {
       "default": {
@@ -966,7 +897,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0164",
     "mappings": {
       "default": {
@@ -980,7 +910,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0168",
     "mappings": {
       "default": {
@@ -994,7 +923,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016A",
     "mappings": {
       "default": {
@@ -1008,7 +936,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016C",
     "mappings": {
       "default": {
@@ -1022,7 +949,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016E",
     "mappings": {
       "default": {
@@ -1036,7 +962,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0170",
     "mappings": {
       "default": {
@@ -1050,7 +975,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0172",
     "mappings": {
       "default": {
@@ -1064,7 +988,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0174",
     "mappings": {
       "default": {
@@ -1078,7 +1001,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0176",
     "mappings": {
       "default": {
@@ -1092,7 +1014,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0178",
     "mappings": {
       "default": {
@@ -1106,7 +1027,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0179",
     "mappings": {
       "default": {
@@ -1120,7 +1040,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "017B",
     "mappings": {
       "default": {
@@ -1134,7 +1053,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "017D",
     "mappings": {
       "default": {
@@ -1148,7 +1066,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CD",
     "mappings": {
       "default": {
@@ -1162,7 +1079,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CF",
     "mappings": {
       "default": {
@@ -1176,7 +1092,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D1",
     "mappings": {
       "default": {
@@ -1190,7 +1105,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D3",
     "mappings": {
       "default": {
@@ -1204,7 +1118,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E6",
     "mappings": {
       "default": {
@@ -1218,7 +1131,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E8",
     "mappings": {
       "default": {
@@ -1232,7 +1144,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EA",
     "mappings": {
       "default": {
@@ -1246,7 +1157,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F4",
     "mappings": {
       "default": {
@@ -1260,7 +1170,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F8",
     "mappings": {
       "default": {
@@ -1274,7 +1183,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0200",
     "mappings": {
       "default": {
@@ -1288,7 +1196,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0202",
     "mappings": {
       "default": {
@@ -1302,7 +1209,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0204",
     "mappings": {
       "default": {
@@ -1316,7 +1222,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0206",
     "mappings": {
       "default": {
@@ -1330,7 +1235,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0208",
     "mappings": {
       "default": {
@@ -1344,7 +1248,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020A",
     "mappings": {
       "default": {
@@ -1358,7 +1261,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020C",
     "mappings": {
       "default": {
@@ -1372,7 +1274,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020E",
     "mappings": {
       "default": {
@@ -1386,7 +1287,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0210",
     "mappings": {
       "default": {
@@ -1400,7 +1300,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0212",
     "mappings": {
       "default": {
@@ -1414,7 +1313,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0214",
     "mappings": {
       "default": {
@@ -1428,7 +1326,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0216",
     "mappings": {
       "default": {
@@ -1442,7 +1339,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0218",
     "mappings": {
       "default": {
@@ -1456,7 +1352,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021A",
     "mappings": {
       "default": {
@@ -1470,7 +1365,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021E",
     "mappings": {
       "default": {
@@ -1484,7 +1378,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0226",
     "mappings": {
       "default": {
@@ -1498,7 +1391,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0228",
     "mappings": {
       "default": {
@@ -1512,7 +1404,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022E",
     "mappings": {
       "default": {
@@ -1526,7 +1417,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0232",
     "mappings": {
       "default": {
@@ -1540,7 +1430,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E00",
     "mappings": {
       "default": {
@@ -1554,7 +1443,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E02",
     "mappings": {
       "default": {
@@ -1568,7 +1456,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E04",
     "mappings": {
       "default": {
@@ -1582,7 +1469,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E06",
     "mappings": {
       "default": {
@@ -1596,7 +1482,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0A",
     "mappings": {
       "default": {
@@ -1610,7 +1495,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0C",
     "mappings": {
       "default": {
@@ -1624,7 +1508,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0E",
     "mappings": {
       "default": {
@@ -1638,7 +1521,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E10",
     "mappings": {
       "default": {
@@ -1652,7 +1534,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E12",
     "mappings": {
       "default": {
@@ -1666,7 +1547,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E18",
     "mappings": {
       "default": {
@@ -1680,7 +1560,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1A",
     "mappings": {
       "default": {
@@ -1694,7 +1573,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1E",
     "mappings": {
       "default": {
@@ -1708,7 +1586,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E20",
     "mappings": {
       "default": {
@@ -1722,7 +1599,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E22",
     "mappings": {
       "default": {
@@ -1736,7 +1612,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E24",
     "mappings": {
       "default": {
@@ -1750,7 +1625,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E26",
     "mappings": {
       "default": {
@@ -1764,7 +1638,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E28",
     "mappings": {
       "default": {
@@ -1778,7 +1651,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2A",
     "mappings": {
       "default": {
@@ -1792,7 +1664,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2C",
     "mappings": {
       "default": {
@@ -1806,7 +1677,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E30",
     "mappings": {
       "default": {
@@ -1820,7 +1690,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E32",
     "mappings": {
       "default": {
@@ -1834,7 +1703,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E34",
     "mappings": {
       "default": {
@@ -1848,7 +1716,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E36",
     "mappings": {
       "default": {
@@ -1862,7 +1729,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3A",
     "mappings": {
       "default": {
@@ -1876,7 +1742,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3C",
     "mappings": {
       "default": {
@@ -1890,7 +1755,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3E",
     "mappings": {
       "default": {
@@ -1904,7 +1768,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E40",
     "mappings": {
       "default": {
@@ -1918,7 +1781,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E42",
     "mappings": {
       "default": {
@@ -1932,7 +1794,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E44",
     "mappings": {
       "default": {
@@ -1946,7 +1807,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E46",
     "mappings": {
       "default": {
@@ -1960,7 +1820,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E48",
     "mappings": {
       "default": {
@@ -1974,7 +1833,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E4A",
     "mappings": {
       "default": {
@@ -1988,7 +1846,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E54",
     "mappings": {
       "default": {
@@ -2002,7 +1859,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E56",
     "mappings": {
       "default": {
@@ -2016,7 +1872,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E58",
     "mappings": {
       "default": {
@@ -2030,7 +1885,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5A",
     "mappings": {
       "default": {
@@ -2044,7 +1898,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5E",
     "mappings": {
       "default": {
@@ -2058,7 +1911,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E60",
     "mappings": {
       "default": {
@@ -2072,7 +1924,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E62",
     "mappings": {
       "default": {
@@ -2086,7 +1937,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6A",
     "mappings": {
       "default": {
@@ -2100,7 +1950,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6C",
     "mappings": {
       "default": {
@@ -2114,7 +1963,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6E",
     "mappings": {
       "default": {
@@ -2128,7 +1976,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E70",
     "mappings": {
       "default": {
@@ -2142,7 +1989,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E72",
     "mappings": {
       "default": {
@@ -2156,7 +2002,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E74",
     "mappings": {
       "default": {
@@ -2170,7 +2015,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E76",
     "mappings": {
       "default": {
@@ -2184,7 +2028,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7C",
     "mappings": {
       "default": {
@@ -2198,7 +2041,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7E",
     "mappings": {
       "default": {
@@ -2212,7 +2054,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E80",
     "mappings": {
       "default": {
@@ -2226,7 +2067,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E82",
     "mappings": {
       "default": {
@@ -2240,7 +2080,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E84",
     "mappings": {
       "default": {
@@ -2254,7 +2093,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E86",
     "mappings": {
       "default": {
@@ -2268,7 +2106,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E88",
     "mappings": {
       "default": {
@@ -2282,7 +2119,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8A",
     "mappings": {
       "default": {
@@ -2296,7 +2132,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8C",
     "mappings": {
       "default": {
@@ -2310,7 +2145,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8E",
     "mappings": {
       "default": {
@@ -2324,7 +2158,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E90",
     "mappings": {
       "default": {
@@ -2338,7 +2171,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E92",
     "mappings": {
       "default": {
@@ -2352,7 +2184,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E94",
     "mappings": {
       "default": {
@@ -2366,7 +2197,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA0",
     "mappings": {
       "default": {
@@ -2380,7 +2210,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA2",
     "mappings": {
       "default": {
@@ -2394,7 +2223,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB8",
     "mappings": {
       "default": {
@@ -2408,7 +2236,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBA",
     "mappings": {
       "default": {
@@ -2422,7 +2249,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBC",
     "mappings": {
       "default": {
@@ -2436,7 +2262,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC8",
     "mappings": {
       "default": {
@@ -2450,7 +2275,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECA",
     "mappings": {
       "default": {
@@ -2464,7 +2288,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECC",
     "mappings": {
       "default": {
@@ -2478,7 +2301,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECE",
     "mappings": {
       "default": {
@@ -2492,7 +2314,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE4",
     "mappings": {
       "default": {
@@ -2506,7 +2327,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE6",
     "mappings": {
       "default": {
@@ -2520,7 +2340,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF2",
     "mappings": {
       "default": {
@@ -2534,7 +2353,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF4",
     "mappings": {
       "default": {
@@ -2548,7 +2366,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF6",
     "mappings": {
       "default": {
@@ -2562,7 +2379,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF8",
     "mappings": {
       "default": {

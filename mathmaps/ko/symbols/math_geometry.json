@@ -1,6 +1,5 @@
 [{"locale": "ko"},
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 가로 상자 그림"
@@ -9,7 +8,6 @@
     "key": "2500"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 가로 상자 그림"
@@ -18,7 +16,6 @@
     "key": "2501"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 세로 상자 그림"
@@ -27,7 +24,6 @@
     "key": "2502"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 상자 그림"
@@ -36,7 +32,6 @@
     "key": "2503"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 트리플 대시 수평 상자 그림"
@@ -45,7 +40,6 @@
     "key": "2504"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 트리플 대시 수평 상자 그림"
@@ -54,7 +48,6 @@
     "key": "2505"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 트리플 대시 수직 상자 그림"
@@ -63,7 +56,6 @@
     "key": "2506"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 트리플 대시 수직 상자 그림"
@@ -72,7 +64,6 @@
     "key": "2507"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 쿼드러플 대시 수평 상자 그림"
@@ -81,7 +72,6 @@
     "key": "2508"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 쿼드러플 대시 수평 상자 그림"
@@ -90,7 +80,6 @@
     "key": "2509"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 쿼드러플 대쉬 수직 상자 그림"
@@ -99,7 +88,6 @@
     "key": "250A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 쿼드러플 대쉬 수직 상자 그림"
@@ -108,7 +96,6 @@
     "key": "250B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "아래 오른쪽 상자 그림"
@@ -117,7 +104,6 @@
     "key": "250C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 진한 오른쪽 상자 그림"
@@ -126,7 +112,6 @@
     "key": "250D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 얇은 오른쪽 상자 그림"
@@ -135,7 +120,6 @@
     "key": "250E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래와 오른쪽 상자 그림"
@@ -144,7 +128,6 @@
     "key": "250F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 및 왼쪽 상자 그림"
@@ -153,7 +136,6 @@
     "key": "2510"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 진한 왼쪽 상자 그림"
@@ -162,7 +144,6 @@
     "key": "2511"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 얇은 왼쪽 상자 그림"
@@ -171,7 +152,6 @@
     "key": "2512"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 및 왼쪽 상자 그림"
@@ -180,7 +160,6 @@
     "key": "2513"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 및 오른쪽 상자 그림"
@@ -189,7 +168,6 @@
     "key": "2514"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 진한 오른쪽 상자 그림"
@@ -198,7 +176,6 @@
     "key": "2515"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 오른쪽 상자 그림"
@@ -207,7 +184,6 @@
     "key": "2516"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 및 오른쪽 상자 그림"
@@ -216,7 +192,6 @@
     "key": "2517"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 및 왼쪽 상자 그림"
@@ -225,7 +200,6 @@
     "key": "2518"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 진한 왼쪽 상자 그림"
@@ -234,7 +208,6 @@
     "key": "2519"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 왼쪽 상자 그림"
@@ -243,7 +216,6 @@
     "key": "251A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 및 왼쪽 상자 그림"
@@ -252,7 +224,6 @@
     "key": "251B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 및 오른쪽 상자 그림"
@@ -261,7 +232,6 @@
     "key": "251C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 진한 오른쪽 상자 그림"
@@ -270,7 +240,6 @@
     "key": "251D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 오른쪽 및 아래 상자 그림"
@@ -279,7 +248,6 @@
     "key": "251E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 얇은 오른쪽 및 위 상자 그림"
@@ -288,7 +256,6 @@
     "key": "251F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 얇은 오른쪽 상자 그림"
@@ -297,7 +264,6 @@
     "key": "2520"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 진한 오른쪽 및 위 상자 그림"
@@ -306,7 +272,6 @@
     "key": "2521"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위, 진한 오른쪽 및 아래 상자 그림"
@@ -315,7 +280,6 @@
     "key": "2522"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 및 오른쪽 상자 그림"
@@ -324,7 +288,6 @@
     "key": "2523"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 및 왼쪽 상자 그림"
@@ -333,7 +296,6 @@
     "key": "2524"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 진한 왼쪽 상자 그림"
@@ -342,7 +304,6 @@
     "key": "2525"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 왼쪽 및 아래 상자 그림"
@@ -351,7 +312,6 @@
     "key": "2526"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 얇은 왼쪽 및 위 상자 그림"
@@ -360,7 +320,6 @@
     "key": "2527"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 얇은 왼쪽 상자 그림"
@@ -369,7 +328,6 @@
     "key": "2528"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 진한 왼쪽 및 위 상자 그림"
@@ -378,7 +336,6 @@
     "key": "2529"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 진한 왼쪽 및 아래 상자 그림"
@@ -387,7 +344,6 @@
     "key": "252A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 및 왼쪽 상자 그림"
@@ -396,7 +352,6 @@
     "key": "252B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 및 수평 상자 그림"
@@ -405,7 +360,6 @@
     "key": "252C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 왼쪽 얇은 오른쪽 아래 상자 그림"
@@ -414,7 +368,6 @@
     "key": "252D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 얇은 왼쪽 아래 상자 그림"
@@ -423,7 +376,6 @@
     "key": "252E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 진한 수평 상자 그림"
@@ -432,7 +384,6 @@
     "key": "252F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 얇은 수평 상자 그림"
@@ -441,7 +392,6 @@
     "key": "2530"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 오른쪽 진한 왼쪽 아래 상자 그림"
@@ -450,7 +400,6 @@
     "key": "2531"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 왼쪽 진한 오른쪽 아래 상자 그림"
@@ -459,7 +408,6 @@
     "key": "2532"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 수평 상자 그림"
@@ -468,7 +416,6 @@
     "key": "2533"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 수평 상자 그림"
@@ -477,7 +424,6 @@
     "key": "2534"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 왼쪽 얇은 오른쪽 위 상자 그림"
@@ -486,7 +432,6 @@
     "key": "2535"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 얇은 왼쪽 위 상자 그림"
@@ -495,7 +440,6 @@
     "key": "2536"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 진한 수평 상자 그림"
@@ -504,7 +448,6 @@
     "key": "2537"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 수평 상자 그림"
@@ -513,7 +456,6 @@
     "key": "2538"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 오른쪽 진한 왼쪽 위 상자 그림"
@@ -522,7 +464,6 @@
     "key": "2539"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 왼쪽 진한 오른쪽 위 상자 그림"
@@ -531,7 +472,6 @@
     "key": "253A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 수평 상자 그림"
@@ -540,7 +480,6 @@
     "key": "253B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 수평 상자 그림"
@@ -549,7 +488,6 @@
     "key": "253C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 왼쪽 얇은 오른쪽 수직 상자 그림"
@@ -558,7 +496,6 @@
     "key": "253D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 얇은 왼쪽 수직 상자 그림"
@@ -567,7 +504,6 @@
     "key": "253E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 진한 수평 상자 그림"
@@ -576,7 +512,6 @@
     "key": "253F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 아래 수평 상자 그림"
@@ -585,7 +520,6 @@
     "key": "2540"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 얇은 위 수평 상자 그림"
@@ -594,7 +528,6 @@
     "key": "2541"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 얇은 수평 상자 그림"
@@ -603,7 +536,6 @@
     "key": "2542"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 위 얇은 왼쪽 아래 상자 그림"
@@ -612,7 +544,6 @@
     "key": "2543"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 위 얇은 왼쪽 아래 상자 그림"
@@ -621,7 +552,6 @@
     "key": "2544"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 왼쪽 아래 얇은 오른쪽 위 상자 그림"
@@ -630,7 +560,6 @@
     "key": "2545"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 아래, 얇은 왼쪽 위 상자 그림"
@@ -639,7 +568,6 @@
     "key": "2546"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래, 진한 위 수평 상자 그림"
@@ -648,7 +576,6 @@
     "key": "2547"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위, 진한 아래 수평 상자 그림"
@@ -657,7 +584,6 @@
     "key": "2548"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 오른쪽, 진한 왼쪽 수직 상자 그림"
@@ -666,7 +592,6 @@
     "key": "2549"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 왼쪽, 진한 오른쪽 수직 상자 그림"
@@ -675,7 +600,6 @@
     "key": "254A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수직 수평 상자 그림"
@@ -684,7 +608,6 @@
     "key": "254B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수평 더블 대시 상자 그림"
@@ -693,7 +616,6 @@
     "key": "254C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수평 더블 대시 상자 그림"
@@ -702,7 +624,6 @@
     "key": "254D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 수직 더블 대시 상자 그림"
@@ -711,7 +632,6 @@
     "key": "254E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 수평 더블 대시 상자 그림"
@@ -720,7 +640,6 @@
     "key": "254F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수평 상자 그림"
@@ -729,7 +648,6 @@
     "key": "2550"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수직 상자 그림"
@@ -738,7 +656,6 @@
     "key": "2551"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "하나 아래, 오른쪽 이중 상자 그림"
@@ -747,7 +664,6 @@
     "key": "2552"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 아래 오른쪽 하나 상자 그리기"
@@ -756,7 +672,6 @@
     "key": "2553"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 아래 이중 오른쪽 상자 그리기"
@@ -765,7 +680,6 @@
     "key": "2554"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 아래 이중 왼쪽 상자 그림"
@@ -774,7 +688,6 @@
     "key": "2555"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 아래 단일 왼쪽 상자 그림"
@@ -783,7 +696,6 @@
     "key": "2556"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 아래 왼쪽 상자 그림"
@@ -792,7 +704,6 @@
     "key": "2557"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 위 이중 오른쪽 상자 그림"
@@ -801,7 +712,6 @@
     "key": "2558"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 위 단일 왼쪽 상자 그림"
@@ -810,7 +720,6 @@
     "key": "2559"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 위 오른쪽 상자 그림"
@@ -819,7 +728,6 @@
     "key": "255A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 위 이중 왼쪽 상자 그림"
@@ -828,7 +736,6 @@
     "key": "255B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 위 단일 왼쪽 상자 그림"
@@ -837,7 +744,6 @@
     "key": "255C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 위 왼쪽 상자 그림"
@@ -846,7 +752,6 @@
     "key": "255D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 수직 이중 오른쪽 상자 그림"
@@ -855,7 +760,6 @@
     "key": "255E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수직 단일 오른쪽 상자 그림"
@@ -864,7 +768,6 @@
     "key": "255F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수직 오른쪽 상자 그림"
@@ -873,7 +776,6 @@
     "key": "2560"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 수직 이중 왼쪽 상자 그림"
@@ -882,7 +784,6 @@
     "key": "2561"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수직 단일 왼쪽 상자 그림"
@@ -891,7 +792,6 @@
     "key": "2562"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수직 및 왼쪽 상자 그림"
@@ -900,7 +800,6 @@
     "key": "2563"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 아래 이중 수평 상자 그림"
@@ -909,7 +808,6 @@
     "key": "2564"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 아래 단일 수평 상자 그림"
@@ -918,7 +816,6 @@
     "key": "2565"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 아래 및 수평 상자 그림"
@@ -927,7 +824,6 @@
     "key": "2566"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 위 이중 수평 상자 그림"
@@ -936,7 +832,6 @@
     "key": "2567"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 위 단일 수평 상자 그림"
@@ -945,7 +840,6 @@
     "key": "2568"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 위 및 수평 상자 그림"
@@ -954,7 +848,6 @@
     "key": "2569"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "단일 수직 이중 수평 상자 그림"
@@ -963,7 +856,6 @@
     "key": "256A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수직 단일 수평 상자 그림"
@@ -972,7 +864,6 @@
     "key": "256B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "이중 수평 및 수직 상자 그림"
@@ -981,7 +872,6 @@
     "key": "256C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 오른쪽 아래 호 상자 그림"
@@ -990,7 +880,6 @@
     "key": "256D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 왼쪽 호 상자 그림"
@@ -999,7 +888,6 @@
     "key": "256E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 왼쪽 호 상자 그림"
@@ -1008,7 +896,6 @@
     "key": "256F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 오른쪽 호 상자 그림"
@@ -1017,7 +904,6 @@
     "key": "2570"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 오른위 왼아래 대각선 상자 그림"
@@ -1026,7 +912,6 @@
     "key": "2571"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 왼위 오른아래 대각선 상자 그림"
@@ -1035,7 +920,6 @@
     "key": "2572"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 대각선 십자형 상자 그림"
@@ -1044,7 +928,6 @@
     "key": "2573"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 왼쪽 상자 그림"
@@ -1053,7 +936,6 @@
     "key": "2574"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 상자 그림"
@@ -1062,7 +944,6 @@
     "key": "2575"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 오른쪽 상자 그림"
@@ -1071,7 +952,6 @@
     "key": "2576"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 아래 상자 그림"
@@ -1080,7 +960,6 @@
     "key": "2577"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 왼쪽 상자 그림"
@@ -1089,7 +968,6 @@
     "key": "2578"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 상자 그림"
@@ -1098,7 +976,6 @@
     "key": "2579"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 오른쪽 상자 그림"
@@ -1107,7 +984,6 @@
     "key": "257A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 아래 상자 그림"
@@ -1116,7 +992,6 @@
     "key": "257B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 왼쪽 진한 오른쪽 상자 그림"
@@ -1125,7 +1000,6 @@
     "key": "257C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "얇은 위 진한 아래 상자 그림"
@@ -1134,7 +1008,6 @@
     "key": "257D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 왼쪽 얇은 오른쪽 상자 그림"
@@ -1143,7 +1016,6 @@
     "key": "257E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 위 얇은 아래 상자 그림"
@@ -1152,7 +1024,6 @@
     "key": "257F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 이등분 중 맨 아래 블록"
@@ -1161,7 +1032,6 @@
     "key": "2580"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 팔등분 중 맨 아래 블록"
@@ -1170,7 +1040,6 @@
     "key": "2581"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 사등분 중 아래 한 블록"
@@ -1179,7 +1048,6 @@
     "key": "2582"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 팔등분 중 아래 세 블록"
@@ -1188,7 +1056,6 @@
     "key": "2583"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 이등분 중 아래 블록"
@@ -1197,7 +1064,6 @@
     "key": "2584"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 팔등분 중 아래 다섯 블록"
@@ -1206,7 +1072,6 @@
     "key": "2585"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 사등분 중 아래 세 블록"
@@ -1215,7 +1080,6 @@
     "key": "2586"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 팔등분 중 아래 일곱 블록"
@@ -1224,7 +1088,6 @@
     "key": "2587"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "온전한 블록"
@@ -1233,7 +1096,6 @@
     "key": "2588"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 팔등분 중 왼쪽 일곱 블록"
@@ -1242,7 +1104,6 @@
     "key": "2589"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 사등분 중 왼쪽 세 블록"
@@ -1251,7 +1112,6 @@
     "key": "258A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 팔등분 중 왼쪽 다섯 블록"
@@ -1260,7 +1120,6 @@
     "key": "258B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 이등분 중 왼쪽 블록"
@@ -1269,7 +1128,6 @@
     "key": "258C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 팔등분 중 왼쪽 세 블록"
@@ -1278,7 +1136,6 @@
     "key": "258D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 사등분 중 맨 왼쪽 블록"
@@ -1287,7 +1144,6 @@
     "key": "258E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 팔등분 중 맨 왼쪽 블록"
@@ -1296,7 +1152,6 @@
     "key": "258F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 이등분 중 오른쪽 블록"
@@ -1305,7 +1160,6 @@
     "key": "2590"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "밝은 그림자"
@@ -1314,7 +1168,6 @@
     "key": "2591"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "중간 그림자"
@@ -1323,7 +1176,6 @@
     "key": "2592"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "어두운 그림자"
@@ -1332,7 +1184,6 @@
     "key": "2593"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평 팔등분 중 맨 위 블록"
@@ -1341,7 +1192,6 @@
     "key": "2594"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직 팔등분 중 맨 오른쪽 블록"
@@ -1350,7 +1200,6 @@
     "key": "2595"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 아래 사분면"
@@ -1359,7 +1208,6 @@
     "key": "2596"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 아래 사분면"
@@ -1368,7 +1216,6 @@
     "key": "2597"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 위 사분면"
@@ -1377,7 +1224,6 @@
     "key": "2598"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 및 왼아래 및 오른아래 사분면"
@@ -1386,7 +1232,6 @@
     "key": "2599"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 및 오른아래 사분면"
@@ -1395,7 +1240,6 @@
     "key": "259A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 및 오른위 및 왼아래 사분면"
@@ -1404,7 +1248,6 @@
     "key": "259B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 및 오른위 및 오른아래 사분면"
@@ -1413,7 +1256,6 @@
     "key": "259C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 사분면"
@@ -1422,7 +1264,6 @@
     "key": "259D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 및 왼아래 사분면"
@@ -1431,7 +1272,6 @@
     "key": "259E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 및 왼아래 및 오른아래 사분면"
@@ -1440,7 +1280,6 @@
     "key": "259F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 정사각형"
@@ -1449,7 +1288,6 @@
     "key": "25A0"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 정사각형"
@@ -1458,7 +1296,6 @@
     "key": "25A1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "둥근 모서리의 흰색 정사각형"
@@ -1467,7 +1304,6 @@
     "key": "25A2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 색 작은 정사각형을 포함하는 흰색 정사각형"
@@ -1476,7 +1312,6 @@
     "key": "25A3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수평으로 채워진 정사각형"
@@ -1485,7 +1320,6 @@
     "key": "25A4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직으로 채워진 정사각형"
@@ -1494,7 +1328,6 @@
     "key": "25A5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "직교로 채워진 정사각형"
@@ -1503,7 +1336,6 @@
     "key": "25A6"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 오른아래 사선으로 채워진 정사각형"
@@ -1512,7 +1344,6 @@
     "key": "25A7"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 왼아래 사선으로 채워진 정사각형"
@@ -1521,7 +1352,6 @@
     "key": "25A8"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "대각선 직교로 채워진 정사각형"
@@ -1530,7 +1360,6 @@
     "key": "25A9"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 작은 정사각형"
@@ -1539,7 +1368,6 @@
     "key": "25AA"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 작은 정사각형"
@@ -1548,7 +1376,6 @@
     "key": "25AB"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 직사각형"
@@ -1557,7 +1384,6 @@
     "key": "25AC"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "힌 직사각형"
@@ -1566,7 +1392,6 @@
     "key": "25AD"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 수직 직사각형"
@@ -1575,7 +1400,6 @@
     "key": "25AE"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "하얀 수직 직사각형"
@@ -1584,7 +1408,6 @@
     "key": "25AF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 평행사변형"
@@ -1593,7 +1416,6 @@
     "key": "25B0"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 평행사변형"
@@ -1602,7 +1424,6 @@
     "key": "25B1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 상향 삼각형"
@@ -1611,7 +1432,6 @@
     "key": "25B2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 상향 삼각형"
@@ -1620,7 +1440,6 @@
     "key": "25B3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 검은 상향 삼각형"
@@ -1629,7 +1448,6 @@
     "key": "25B4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 흰색 상향 삼각형"
@@ -1638,7 +1456,6 @@
     "key": "25B5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 우향 삼각형"
@@ -1647,7 +1464,6 @@
     "key": "25B6"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "흰색 우향 삼각형"
@@ -1656,7 +1472,6 @@
     "key": "25B7"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 검은 우향 삼각형"
@@ -1665,7 +1480,6 @@
     "key": "25B8"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 흰색 우향 삼각형"
@@ -1674,7 +1488,6 @@
     "key": "25B9"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 오른쪽 포인터"
@@ -1683,7 +1496,6 @@
     "key": "25BA"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 오른쪽 포인터"
@@ -1692,7 +1504,6 @@
     "key": "25BB"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 하향 삼각형"
@@ -1701,7 +1512,6 @@
     "key": "25BC"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 하향 삼각형"
@@ -1710,7 +1520,6 @@
     "key": "25BD"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 검은색 하향 삼각형"
@@ -1719,7 +1528,6 @@
     "key": "25BE"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 흰색 하향 삼각형"
@@ -1728,7 +1536,6 @@
     "key": "25BF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 좌향 삼각형"
@@ -1737,7 +1544,6 @@
     "key": "25C0"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "흰색 좌향 삼각형"
@@ -1746,7 +1552,6 @@
     "key": "25C1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 검은색 좌향 포인팅 삼각형"
@@ -1755,7 +1560,6 @@
     "key": "25C2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "작은 흰색 좌향 포인팅 삼각형"
@@ -1764,7 +1568,6 @@
     "key": "25C3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 좌향 포인팅 포인터"
@@ -1773,7 +1576,6 @@
     "key": "25C4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 좌향 포인팅 포인터"
@@ -1782,7 +1584,6 @@
     "key": "25C5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 다이아몬드"
@@ -1791,7 +1592,6 @@
     "key": "25C6"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 다이아몬드"
@@ -1800,7 +1600,6 @@
     "key": "25C7"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 다이아몬드가 들어있는 흰 다이아몬드"
@@ -1809,7 +1608,6 @@
     "key": "25C8"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 원를 포함한 흰 원"
@@ -1818,7 +1616,6 @@
     "key": "25C9"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "마름모꼴"
@@ -1827,7 +1624,6 @@
     "key": "25CA"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 원"
@@ -1836,7 +1632,6 @@
     "key": "25CB"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "점선 원"
@@ -1845,7 +1640,6 @@
     "key": "25CC"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "수직으로 채워진 원"
@@ -1854,7 +1648,6 @@
     "key": "25CD"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 원를 포함한 흰 원"
@@ -1863,7 +1656,6 @@
     "key": "25CE"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 원"
@@ -1872,7 +1664,6 @@
     "key": "25CF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 절반 검은 원"
@@ -1881,7 +1672,6 @@
     "key": "25D0"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 절반 검은 원"
@@ -1890,7 +1680,6 @@
     "key": "25D1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "아래 절반이 검은 원"
@@ -1899,7 +1688,6 @@
     "key": "25D2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "위 절반이 검은 원"
@@ -1908,7 +1696,6 @@
     "key": "25D3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 사분면이 검은 원"
@@ -1917,7 +1704,6 @@
     "key": "25D4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 사분면 제외 검은 원"
@@ -1926,7 +1712,6 @@
     "key": "25D5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 절반 검정 원"
@@ -1935,7 +1720,6 @@
     "key": "25D6"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 절반 검정 원"
@@ -1944,7 +1728,6 @@
     "key": "25D7"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "역 탄환"
@@ -1953,7 +1736,6 @@
     "key": "25D8"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "반전된 흰색 원"
@@ -1962,7 +1744,6 @@
     "key": "25D9"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "상반 반전된 흰색 원"
@@ -1971,7 +1752,6 @@
     "key": "25DA"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "하반 반전된 흰색 원"
@@ -1980,7 +1760,6 @@
     "key": "25DB"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 사분면 원호"
@@ -1989,7 +1768,6 @@
     "key": "25DC"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 사분면 원호"
@@ -1998,7 +1776,6 @@
     "key": "25DD"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른아래 사분면 원호"
@@ -2007,7 +1784,6 @@
     "key": "25DE"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼아래 사분면 원호"
@@ -2016,7 +1792,6 @@
     "key": "25DF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "원의 상반"
@@ -2025,7 +1800,6 @@
     "key": "25E0"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "원의 하반"
@@ -2034,7 +1808,6 @@
     "key": "25E1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 오른아래 삼각형"
@@ -2043,7 +1816,6 @@
     "key": "25E2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 왼아래 삼각형"
@@ -2052,7 +1824,6 @@
     "key": "25E3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 왼위 삼각형"
@@ -2061,7 +1832,6 @@
     "key": "25E4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 오른위 삼각형"
@@ -2070,7 +1840,6 @@
     "key": "25E5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 총알"
@@ -2079,7 +1848,6 @@
     "key": "25E6"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 절반이 검은 사각형"
@@ -2088,7 +1856,6 @@
     "key": "25E7"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 절반이 검은 사각형"
@@ -2097,7 +1864,6 @@
     "key": "25E8"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "대각선 왼위 절반이 검은 사각형"
@@ -2106,7 +1872,6 @@
     "key": "25E9"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "대각선 오른아래 절반이 검은 사각형"
@@ -2115,7 +1880,6 @@
     "key": "25EA"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 절반이 검은 사각형"
@@ -2124,7 +1888,6 @@
     "key": "25EB"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "점을 포함한 흰색 상향 삼각형"
@@ -2133,7 +1896,6 @@
     "key": "25EC"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽이 검은 상향 삼각형"
@@ -2142,7 +1904,6 @@
     "key": "25ED"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 절반이 검은 상향 삼각형"
@@ -2151,7 +1912,6 @@
     "key": "25EE"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "큰 원"
@@ -2160,7 +1920,6 @@
     "key": "25EF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 사분면이 있는 흰색 사각형"
@@ -2169,7 +1928,6 @@
     "key": "25F0"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼아래 사분면이 있는 흰색 사각형"
@@ -2178,7 +1936,6 @@
     "key": "25F1"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른아래 사분면이 있는 흰색 사각형"
@@ -2187,7 +1944,6 @@
     "key": "25F2"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 사분면이 있는 흰색 사각형"
@@ -2196,7 +1952,6 @@
     "key": "25F3"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼위 사분면이 있는 흰색 원"
@@ -2205,7 +1960,6 @@
     "key": "25F4"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼아래 사분면이 있는 흰색 원"
@@ -2214,7 +1968,6 @@
     "key": "25F5"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른아래 사분면이 있는 흰색 원"
@@ -2223,7 +1976,6 @@
     "key": "25F6"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른위 사분면이 있는 흰색 원"
@@ -2232,7 +1984,6 @@
     "key": "25F7"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼위 삼각형"
@@ -2241,7 +1992,6 @@
     "key": "25F8"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "오른위 삼각형"
@@ -2250,7 +2000,6 @@
     "key": "25F9"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "왼아래 삼각형"
@@ -2259,7 +2008,6 @@
     "key": "25FA"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "흰색 중간 정사각형"
@@ -2268,7 +2016,6 @@
     "key": "25FB"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "검은색 중간 정사각형"
@@ -2277,7 +2024,6 @@
     "key": "25FC"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "흰색 중형 작은 사각형"
@@ -2286,7 +2032,6 @@
     "key": "25FD"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "검은색 중형 작은 사각형"
@@ -2295,7 +2040,6 @@
     "key": "25FE"
   },
   {
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "오른아래 삼각형"
@@ -2304,7 +2048,6 @@
     "key": "25FF"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "상반이 검은 정사각형"
@@ -2313,7 +2056,6 @@
     "key": "2B12"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "하반이 검은 정사각형"
@@ -2322,7 +2064,6 @@
     "key": "2B13"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "대각선 오른위가 검은 정사각형"
@@ -2331,7 +2072,6 @@
     "key": "2B14"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "대각선 왼아래가 검은 정사각형"
@@ -2340,7 +2080,6 @@
     "key": "2B15"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "왼쪽 절반이 검은 다이아몬드"
@@ -2349,7 +2088,6 @@
     "key": "2B16"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "오른쪽 절반이 검은 다이아몬드"
@@ -2358,7 +2096,6 @@
     "key": "2B17"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "위쪽 절반이 검은 다이아몬드"
@@ -2367,7 +2104,6 @@
     "key": "2B18"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "아래쪽 절반이 검은 다이아몬드"
@@ -2376,7 +2112,6 @@
     "key": "2B19"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "점선으로된 정사각형"
@@ -2385,7 +2120,6 @@
     "key": "2B1A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 큰 정사각형"
@@ -2394,7 +2128,6 @@
     "key": "2B1B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 큰 정사각형"
@@ -2403,7 +2136,6 @@
     "key": "2B1C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "아주 작은 검정색 정사각형"
@@ -2412,7 +2144,6 @@
     "key": "2B1D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "아주 작은 흰색 정사각형"
@@ -2421,7 +2152,6 @@
     "key": "2B1E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 오각형"
@@ -2430,7 +2160,6 @@
     "key": "2B1F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 오각형"
@@ -2439,7 +2168,6 @@
     "key": "2B20"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰색 육각형"
@@ -2448,7 +2176,6 @@
     "key": "2B21"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 육각형"
@@ -2457,7 +2184,6 @@
     "key": "2B22"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 수평 육각형"
@@ -2466,7 +2192,6 @@
     "key": "2B23"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은색 큰 원"
@@ -2475,7 +2200,6 @@
     "key": "2B24"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 중형 다이아몬드"
@@ -2484,7 +2208,6 @@
     "key": "2B25"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 중형 다이아몬드"
@@ -2493,7 +2216,6 @@
     "key": "2B26"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 중형 로젠지"
@@ -2502,7 +2224,6 @@
     "key": "2B27"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 중형 로젠지"
@@ -2511,7 +2232,6 @@
     "key": "2B28"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 작은 다이아몬드"
@@ -2520,7 +2240,6 @@
     "key": "2B29"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 작은 로젠지"
@@ -2529,7 +2248,6 @@
     "key": "2B2A"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 작은 로젠지"
@@ -2538,7 +2256,6 @@
     "key": "2B2B"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 수평 타원"
@@ -2547,7 +2264,6 @@
     "key": "2B2C"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 수평 타원"
@@ -2556,7 +2272,6 @@
     "key": "2B2D"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 수직 타원"
@@ -2565,7 +2280,6 @@
     "key": "2B2E"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 수직 타원"
@@ -2574,7 +2288,6 @@
     "key": "2B2F"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 중형 별"
@@ -2583,7 +2296,6 @@
     "key": "2B50"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 작은 별"
@@ -2592,7 +2304,6 @@
     "key": "2B51"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 작은 별"
@@ -2601,7 +2312,6 @@
     "key": "2B52"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "검은 우향 오각형"
@@ -2610,7 +2320,6 @@
     "key": "2B53"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "흰 우향 오각형"
@@ -2619,7 +2328,6 @@
     "key": "2B54"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "큰 진한 원"
@@ -2628,7 +2336,6 @@
     "key": "2B55"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "타원을 포함하는 진한 타원"
@@ -2637,7 +2344,6 @@
     "key": "2B56"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "원을 포함하는 진한 원"
@@ -2646,7 +2352,6 @@
     "key": "2B57"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "진한 원"
@@ -2655,7 +2360,6 @@
     "key": "2B58"
   },
   {
-    "category": "So",
     "mappings": {
       "default": {
         "default": "saltire 있는 진한 원"

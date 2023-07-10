@@ -1,6 +1,5 @@
 [{"locale": "ko"},
  {
-    "category": "Ll",
     "key": "1D26",
     "mappings": {
       "default": {
@@ -12,7 +11,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D27",
     "mappings": {
       "default": {
@@ -24,7 +22,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D28",
     "mappings": {
       "default": {
@@ -36,7 +33,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D29",
     "mappings": {
       "default": {
@@ -48,7 +44,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D2A",
     "mappings": {
       "default": {
@@ -60,7 +55,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D5E",
     "mappings": {
       "default": {
@@ -69,7 +63,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D60",
     "mappings": {
       "default": {
@@ -78,7 +71,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D66",
     "mappings": {
       "default": {
@@ -87,7 +79,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D67",
     "mappings": {
       "default": {
@@ -96,7 +87,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D68",
     "mappings": {
       "default": {
@@ -105,7 +95,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D69",
     "mappings": {
       "default": {
@@ -114,7 +103,6 @@
     }
   },
   {
-    "category": "Lm",
     "key": "1D6A",
     "mappings": {
       "default": {

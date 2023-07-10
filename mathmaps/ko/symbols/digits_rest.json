@@ -1,6 +1,5 @@
 [{"locale": "ko"},
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "제곱"
@@ -15,7 +14,6 @@
     "key": "00B2"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "세제곱"
@@ -30,7 +28,6 @@
     "key": "00B3"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "4 분의 1"
@@ -39,7 +36,6 @@
     "key": "00BC"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "2 분의 1"
@@ -48,7 +44,6 @@
     "key": "00BD"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "4 분의 3"
@@ -57,7 +52,6 @@
     "key": "00BE"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "7 분의 1"
@@ -66,7 +60,6 @@
     "key": "2150"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "9 분의 1"
@@ -75,7 +68,6 @@
     "key": "2151"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "10 분의 1"
@@ -84,7 +76,6 @@
     "key": "2152"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "3 분의 1"
@@ -93,7 +84,6 @@
     "key": "2153"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "3 분의 2"
@@ -102,7 +92,6 @@
     "key": "2154"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "5 분의 1"
@@ -111,7 +100,6 @@
     "key": "2155"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "5 분의 2"
@@ -120,7 +108,6 @@
     "key": "2156"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "5 분의 3"
@@ -129,7 +116,6 @@
     "key": "2157"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "5 분의 4"
@@ -138,7 +124,6 @@
     "key": "2158"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "6 분의 1"
@@ -147,7 +132,6 @@
     "key": "2159"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "6 분의 5"
@@ -156,7 +140,6 @@
     "key": "215A"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "8 분의 1"
@@ -165,7 +148,6 @@
     "key": "215B"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "8 분의 3"
@@ -174,7 +156,6 @@
     "key": "215C"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "8 분의 5"
@@ -183,7 +164,6 @@
     "key": "215D"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "8 분의 7"
@@ -192,7 +172,6 @@
     "key": "215E"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "분자 1"
@@ -201,7 +180,6 @@
     "key": "215F"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "3 분의 0"
@@ -210,7 +188,6 @@
     "key": "2189"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 10"
@@ -219,7 +196,6 @@
     "key": "3248"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 20"
@@ -228,7 +204,6 @@
     "key": "3249"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 30"
@@ -237,7 +212,6 @@
     "key": "324A"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 40"
@@ -246,7 +220,6 @@
     "key": "324B"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 50"
@@ -255,7 +228,6 @@
     "key": "324C"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 60"
@@ -264,7 +236,6 @@
     "key": "324D"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 70"
@@ -273,7 +244,6 @@
     "key": "324E"
   },
   {
-    "category": "No",
     "mappings": {
       "default": {
         "default": "검은 테두리 상자 원문자 80"

@@ -1,6 +1,5 @@
 [{"locale": "ko"},
   {
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "알레프",
@@ -10,7 +9,6 @@
     "key": "2135"
   },
   {
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "벳",
@@ -20,7 +18,6 @@
     "key": "2136"
   },
   {
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "기멜",
@@ -30,7 +27,6 @@
     "key": "2137"
   },
   {
-    "category": "Lo",
     "mappings": {
       "default": {
         "default": "달렛",
