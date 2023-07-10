@@ -2151,7 +2151,9 @@ export default class SemanticProcessor {
       let currentRel = rel.shift();
       let nextComp = comp.shift();
       const text = [];
-      while (!nextComp.length && rel.length) {
+      while (!nextComp.length && rel.length &&
+        // Don't destroy space separations.
+        rel[0].role !== SemanticRole.SPACE) {
         text.push(currentRel);
         currentRel = rel.shift();
         nextComp = comp.shift();
@@ -2218,8 +2220,12 @@ export default class SemanticProcessor {
       }
       if (currentRel.role === SemanticRole.UNKNOWN) {
         if (rel.length || nextComp.length) {
-          currentRel.type = SemanticType.FUNCTION;
-          currentRel.role = SemanticRole.PREFIXFUNC;
+          if (nextComp.length && nextComp[0].type === SemanticType.FENCED) {
+            currentRel.type = SemanticType.FUNCTION;
+            currentRel.role = SemanticRole.PREFIXFUNC;
+          } else {
+            currentRel.role = SemanticRole.TEXT;
+          }
         } else {
           currentRel.type = SemanticType.IDENTIFIER;
           currentRel.role = SemanticRole.UNIT;
