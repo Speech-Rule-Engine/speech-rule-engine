@@ -1,0 +1,84 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "ft",
+    "category": "length",
+    "names": [
+      "ft",
+      "ft."
+    ]
+  },
+  {
+    "key": "in",
+    "category": "length",
+    "names": [
+      "in",
+      "in."
+    ]
+  },
+  {
+    "key": "mi",
+    "category": "length",
+    "names": [
+      "mi",
+      "mi."
+    ]
+  },
+  {
+    "key": "yd",
+    "category": "length",
+    "names": [
+      "yd",
+      "yd."
+    ]
+  },
+  {
+    "key": "link",
+    "category": "length",
+    "names": [
+      "li",
+      "li."
+    ]
+  },
+  {
+    "key": "rod",
+    "category": "length",
+    "names": [
+      "rd",
+      "rd."
+    ]
+  },
+  {
+    "key": "chain",
+    "category": "length",
+    "names": [
+      "ch",
+      "ch."
+    ]
+  },
+  {
+    "key": "furlong",
+    "category": "length",
+    "names": [
+      "fur",
+      "fur."
+    ]
+  },
+  {
+    "key": "n.m.",
+    "category": "length",
+    "names": [
+      "n.m."
+    ]
+  },
+  {
+    "key": "m",
+    "category": "length",
+    "si": true,
+    "names": [
+      "m"
+    ]
+  }
+]

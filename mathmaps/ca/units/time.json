@@ -4,11 +4,6 @@
   },
   {
     "key": "s",
-    "category": "time",
-    "names": [
-      "s"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "segon",
@@ -18,10 +13,6 @@
   },
   {
     "key": "″",
-    "category": "time",
-    "names": [
-      "″"
-    ],
     "mappings": {
       "default": {
         "default": "segon",
@@ -31,11 +22,6 @@
   },
   {
     "key": "min",
-    "category": "time",
-    "names": [
-      "min",
-      "′"
-    ],
     "mappings": {
       "default": {
         "default": "minut",
@@ -45,10 +31,6 @@
   },
   {
     "key": "°",
-    "category": "time",
-    "names": [
-      "°"
-    ],
     "mappings": {
       "default": {
         "default": "grau",
@@ -58,11 +40,6 @@
   },
   {
     "key": "h",
-    "category": "time",
-    "names": [
-      "h",
-      "hr"
-    ],
     "mappings": {
       "default": {
         "default": "hora",

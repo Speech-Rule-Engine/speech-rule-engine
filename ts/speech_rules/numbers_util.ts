@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Span } from '../audio/span';
-import * as DomUtil from '../common/dom_util';
-import { LOCALE } from '../l10n/locale';
-import { convertVulgarFraction } from '../l10n/transformers';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { convertVulgarFraction } from '../l10n/transformers.js';
 
 // Number transformation
 /**
@@ -60,7 +60,7 @@ export function wordCounter(_node: Element, context: string): () => string {
  * @returns The string representation if it is a valid
  *     vulgar fraction.
  */
-export function vulgarFraction(node: Element): string | Span[] {
+export function vulgarFraction(node: Element): Span[] {
   const conversion = convertVulgarFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
   if (
     conversion.convertible &&
@@ -68,29 +68,22 @@ export function vulgarFraction(node: Element): string | Span[] {
     conversion.denominator
   ) {
     return [
-      new Span(LOCALE.NUMBERS.numberToWords(conversion.enumerator), {
-        extid: (node.childNodes[0].childNodes[0] as Element).getAttribute(
-          'extid'
-        ),
-        separator: ''
-      }),
-      new Span(LOCALE.NUMBERS.vulgarSep, { separator: '' }),
-      new Span(
+      Span.node(
+        LOCALE.NUMBERS.numberToWords(conversion.enumerator),
+        node.childNodes[0].childNodes[0] as Element,
+        { separator: '' }
+      ),
+      Span.stringAttr(LOCALE.NUMBERS.vulgarSep, { separator: '' }),
+      Span.node(
         LOCALE.NUMBERS.numberToOrdinal(
           conversion.denominator,
           conversion.enumerator !== 1
         ),
-        {
-          extid: (node.childNodes[0].childNodes[1] as Element).getAttribute(
-            'extid'
-          )
-        }
+        node.childNodes[0].childNodes[1] as Element
       )
     ];
   }
-  return [
-    new Span(conversion.content || '', { extid: node.getAttribute('extid') })
-  ];
+  return [Span.node(conversion.content || '', node)];
 }
 
 /**
@@ -100,7 +93,9 @@ export function vulgarFraction(node: Element): string | Span[] {
  * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
-export function ordinalPosition(node: Node): string {
+export function ordinalPosition(node: Node): Span[] {
   const children = DomUtil.toArray(node.parentNode.childNodes);
-  return LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString();
+  return Span.singleton(
+    LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString()
+  );
 }

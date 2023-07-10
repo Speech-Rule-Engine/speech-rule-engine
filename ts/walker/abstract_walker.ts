@@ -18,28 +18,34 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as AuralRendering from '../audio/aural_rendering';
-import * as DomUtil from '../common/dom_util';
-import * as EngineConst from '../common/engine_const';
-import { setup as EngineSetup } from '../common/engine_setup';
-import { KeyCode } from '../common/event_util';
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { Highlighter } from '../highlighter/highlighter';
-import { LOCALE } from '../l10n/locale';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
-import { Grammar } from '../rule_engine/grammar';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
-import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
-import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import { Focus } from './focus';
-import { Levels } from './levels';
-import { RebuildStree } from './rebuild_stree';
-import { Walker, WalkerMoves, WalkerState } from './walker';
-import * as WalkerUtil from './walker_util';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as AuralRendering from '../audio/aural_rendering.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { setup as EngineSetup } from '../common/engine_setup.js';
+import { KeyCode } from '../common/event_util.js';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { Highlighter } from '../highlighter/highlighter.js';
+import { LOCALE } from '../l10n/locale.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import { Focus } from './focus.js';
+import { Levels } from './levels.js';
+import { RebuildStree } from './rebuild_stree.js';
+import { Walker, WalkerMoves, WalkerState } from './walker.js';
+import * as WalkerUtil from './walker_util.js';
+
+import * as XpathUtil from '../common/xpath_util.js';
 
 /**
  * The abstract walker class.
@@ -66,6 +72,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   public rootId: string;
   // End of uninitialized fields.
+
+  public skeleton: SemanticSkeleton;
 
   public keyMapping: Map<KeyCode, () => any> = new Map([
     [KeyCode.UP, this.up.bind(this)],
@@ -203,7 +211,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public getRebuilt() {
     if (!this.rebuilt_) {
-      this.rebuilt_ = this.rebuildStree();
+      this.rebuildStree();
     }
     return this.rebuilt_;
   }
@@ -242,18 +250,16 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public getFocus(update = false) {
+    if (this.rootId === null) {
+      this.getRebuilt();
+    }
     if (!this.focus_) {
-      this.focus_ = Focus.factory(
-        this.rootId,
-        [this.rootId],
-        this.getRebuilt(),
-        this.node
-      );
+      this.focus_ = this.singletonFocus(this.rootId);
     }
     if (update) {
       this.updateFocus();
     }
-    return this.focus_ as Focus;
+    return this.focus_;
   }
 
   /**
@@ -277,11 +283,19 @@ export abstract class AbstractWalker<T> implements Walker {
     return this.generator.modality === Attribute.SPEECH;
   }
 
+  public focusDomNodes() {
+    return this.getFocus().getDomNodes();
+  }
+
+  public focusSemanticNodes() {
+    return this.getFocus().getSemanticNodes();
+  }
+
   /**
    * @override
    */
   public speech() {
-    const nodes = this.getFocus().getDomNodes();
+    const nodes = this.focusDomNodes();
     if (!nodes.length) {
       return '';
     }
@@ -298,13 +312,13 @@ export abstract class AbstractWalker<T> implements Walker {
         return this.detail_();
       default: {
         const speech = [];
-        const snodes = this.getFocus().getSemanticNodes();
+        const snodes = this.focusSemanticNodes();
         for (let i = 0, l = nodes.length; i < l; i++) {
           const node = nodes[i];
           const snode = snodes[i] as SemanticNode;
           speech.push(
             node
-              ? this.generator.getSpeech(node, this.getXml())
+              ? this.generator.getSpeech(node, this.getXml(), this.node)
               : SpeechGeneratorUtil.recomputeMarkup(snode)
           );
         }
@@ -399,12 +413,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   protected home(): Focus | null {
     this.moved = WalkerMoves.HOME;
-    const focus = Focus.factory(
-      this.rootId,
-      [this.rootId],
-      this.getRebuilt(),
-      this.node
-    );
+    const focus = this.singletonFocus(this.rootId);
     return focus;
   }
 
@@ -512,17 +521,20 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Rebuilds the semantic tree given in the input xml element fully connected
    * with maction elements.
-   *
-   * @returns The reconstructed semantic tree.
    */
-  protected rebuildStree(): RebuildStree {
-    const rebuilt = new RebuildStree(this.getXml());
-    this.rootId = rebuilt.stree.root.id.toString();
-    this.generator.setRebuilt(rebuilt);
-    this.focus_ = Focus.factory(this.rootId, [this.rootId], rebuilt, this.node);
+  protected rebuildStree() {
+    this.rebuilt_ = new RebuildStree(this.getXml());
+    this.rootId = this.rebuilt_.stree.root.id.toString();
+    this.generator.setRebuilt(this.rebuilt_);
+    this.skeleton = SemanticSkeleton.fromTree(this.rebuilt_.stree);
+    this.skeleton.populate();
+    this.focus_ = this.singletonFocus(this.rootId);
     this.levels = this.initLevels();
-    SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), rebuilt.xml);
-    return rebuilt;
+    SpeechGeneratorUtil.connectMactions(
+      this.node,
+      this.getXml(),
+      this.rebuilt_.xml
+    );
   }
 
   /**
@@ -585,7 +597,54 @@ export abstract class AbstractWalker<T> implements Walker {
    *     properties of the old focus.
    */
   public singletonFocus(id: string): Focus {
-    return this.focusFromId(id, [id]);
+    this.getRebuilt();
+    const ids = this.retrieveVisuals(id);
+    return this.focusFromId(id, ids);
+  }
+
+  /**
+   * Retrieves all root nodes of the visual subtrees.
+   *
+   * @param id The id of the root node.
+   * @returns The list of ids.
+   */
+  private retrieveVisuals(id: string): string[] {
+    if (!this.skeleton) {
+      return [id];
+    }
+    const num = parseInt(id, 10);
+    const semStree = this.skeleton.subtreeNodes(num);
+    if (!semStree.length) {
+      return [id];
+    }
+    semStree.unshift(num);
+    const mmlStree: { [num: number]: boolean } = {};
+    const result = [];
+    XpathUtil.updateEvaluator(this.getXml());
+    for (const child of semStree) {
+      if (mmlStree[child]) {
+        continue;
+      }
+      result.push(child.toString());
+      mmlStree[child] = true;
+      this.subtreeIds(child, mmlStree);
+    }
+    return result;
+  }
+
+  /**
+   * Find all ids in the subtree spanned at a node and register them.
+   *
+   * @param id The root id of the subtree.
+   * @param nodes The accumulator collecting the nodes.
+   */
+  private subtreeIds(id: number, nodes: { [num: number]: boolean }) {
+    const xmlRoot = XpathUtil.evalXPath(
+      `//*[@data-semantic-id="${id}"]`,
+      this.getXml()
+    );
+    const xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
+    xpath.forEach((x) => (nodes[parseInt(x.textContent, 10)] = true));
   }
 
   /**

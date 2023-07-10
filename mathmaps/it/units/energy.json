@@ -9,21 +9,10 @@
         "plural": "watt",
         "default": "watt"
       }
-    },
-    "category": "energy",
-    "names": [
-      "W",
-      "w"
-    ],
-    "si": true
+    }
   },
   {
     "key": "kwh",
-    "category": "energy",
-    "names": [
-      "kwh",
-      "kWh"
-    ],
     "mappings": {
       "default": {
         "plural": "kilowattore",
@@ -38,12 +27,7 @@
         "plural": "joule",
         "default": "joule"
       }
-    },
-    "category": "energy",
-    "names": [
-      "J"
-    ],
-    "si": true
+    }
   },
   {
     "key": "N",
@@ -52,12 +36,7 @@
         "plural": "newton",
         "default": "newton"
       }
-    },
-    "category": "energy",
-    "names": [
-      "N"
-    ],
-    "si": true
+    }
   },
   {
     "key": "A",
@@ -66,12 +45,7 @@
         "plural": "ampere",
         "default": "ampere"
       }
-    },
-    "category": "energy",
-    "names": [
-      "A"
-    ],
-    "si": true
+    }
   },
   {
     "key": "V",
@@ -80,20 +54,10 @@
         "plural": "volt",
         "default": "volt"
       }
-    },
-    "category": "energy",
-    "names": [
-      "V"
-    ],
-    "si": true
+    }
   },
   {
     "key": "ohm",
-    "category": "energy",
-    "names": [
-      "Ohm",
-      "ohm"
-    ],
     "mappings": {
       "default": {
         "plural": "ohm",
@@ -108,11 +72,6 @@
         "plural": "ohm",
         "default": "ohm"
       }
-    },
-    "category": "energy",
-    "names": [
-      "Ω"
-    ],
-    "si": true
+    }
   }
 ]

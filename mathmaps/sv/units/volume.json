@@ -4,31 +4,21 @@
   },
   {
     "key": "cu",
-    "category": "volume",
-    "names": [
-      "cu",
-      "cu."
-    ],
     "mappings": {
       "default": {
-        "default": "cubic",
-        "plural": "cubic"
+        "default": "kubik",
+        "plural": "kubik"
       }
     }
   },
   {
-    "key": "cu in",
+    "key": "cu inch",
     "mappings": {
       "default": {
-        "default": "kubik tum",
-        "plural": "kubik tum"
+        "default": "kubiktum",
+        "plural": "kubiktum"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu in",
-      "cu. in."
-    ]
+    }
   },
   {
     "key": "cu ft",
@@ -37,12 +27,7 @@
         "default": "kubik fot",
         "plural": "kubik fot"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu ft",
-      "cu. ft."
-    ]
+    }
   },
   {
     "key": "cu yd",
@@ -51,12 +36,7 @@
         "default": "kubik yard",
         "plural": "kubik yards"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu yd",
-      "cu. yd."
-    ]
+    }
   },
   {
     "key": "bbl",
@@ -65,26 +45,16 @@
         "default": "fat",
         "plural": "fat"
       }
-    },
-    "category": "volume",
-    "names": [
-      "bbl.",
-      "bbl"
-    ]
+    }
   },
   {
-    "key": "fl oz",
+    "key": "fl. oz.",
     "mappings": {
       "default": {
-        "default": "fluid ounce",
-        "plural": "fluid ounces"
+        "default": "flytande uns",
+        "plural": "flytande uns"
       }
-    },
-    "category": "volume",
-    "names": [
-      "fl. oz.",
-      "fl oz"
-    ]
+    }
   },
   {
     "key": "gal",
@@ -93,12 +63,7 @@
         "default": "gallon",
         "plural": "gallons"
       }
-    },
-    "category": "volume",
-    "names": [
-      "gal",
-      "gal."
-    ]
+    }
   },
   {
     "key": "pt",
@@ -107,12 +72,7 @@
         "default": "pint",
         "plural": "pints"
       }
-    },
-    "category": "volume",
-    "names": [
-      "pt",
-      "pt."
-    ]
+    }
   },
   {
     "key": "qt",
@@ -121,26 +81,16 @@
         "default": "quart",
         "plural": "quarts"
       }
-    },
-    "category": "volume",
-    "names": [
-      "qt",
-      "qt."
-    ]
+    }
   },
   {
-    "key": "fl dr",
+    "key": "fluid dram",
     "mappings": {
       "default": {
-        "default": "fluid dram",
-        "plural": "fluid drams"
+        "default": "flytande drakma",
+        "plural": "flytande drakmer"
       }
-    },
-    "category": "volume",
-    "names": [
-      "fl dr",
-      "fl. dr."
-    ]
+    }
   },
   {
     "key": "tbsp",
@@ -149,14 +99,7 @@
         "default": "matsked",
         "plural": "matskedar"
       }
-    },
-    "category": "volume",
-    "names": [
-      "tbsp",
-      "tbsp.",
-      "Tbsp",
-      "Tbsp."
-    ]
+    }
   },
   {
     "key": "tsp",
@@ -165,38 +108,23 @@
         "default": "tesked",
         "plural": "teskedar"
       }
-    },
-    "category": "volume",
-    "names": [
-      "tsp",
-      "tsp."
-    ]
+    }
   },
   {
-    "key": "cp",
+    "key": "cup",
     "mappings": {
       "default": {
         "default": "kopp",
         "plural": "koppar"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cp",
-      "cp."
-    ]
+    }
   },
   {
     "key": "cc",
-    "category": "volume",
-    "names": [
-      "cc",
-      "ccm"
-    ],
     "mappings": {
       "default": {
-        "default": "cubic centimeter",
-        "plural": "cubic centimeters"
+        "default": "kubikcentimeter",
+        "plural": "kubikcentimeter"
       }
     }
   },
@@ -207,11 +135,6 @@
         "default": "liter",
         "plural": "liter"
       }
-    },
-    "category": "volume",
-    "names": [
-      "l"
-    ],
-    "si": true
+    }
   }
 ]

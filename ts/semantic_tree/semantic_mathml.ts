@@ -18,13 +18,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { SemanticAbstractParser } from './semantic_parser';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticFont,
+  SemanticRole,
+  SemanticType
+} from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticAbstractParser } from './semantic_parser.js';
+import * as SemanticPred from './semantic_pred.js';
+import SemanticProcessor from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
   private parseMap_: {
@@ -115,7 +119,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       'ℝ',
       'ℤ'
     ].forEach(
-      ((x: string) => this.getFactory().defaultMap.add(x, meaning)).bind(this)
+      ((x: string) => this.getFactory().defaultMap.set(x, meaning)).bind(this)
     );
   }
 
@@ -130,7 +134,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
     SemanticUtil.addAttributes(newNode, mml);
     if (
-      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1
+      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS', 'MACTION'].indexOf(
+        tag
+      ) !== -1
     ) {
       return newNode;
     }
@@ -281,8 +287,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       []
     );
     newNode.mathmlTree = node;
-    SemanticProcessor.tableToMultiline(newNode);
-    return newNode;
+    return SemanticProcessor.tableToMultiline(newNode);
   }
 
   /**
@@ -567,10 +572,15 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private action_(node: Element, children: Element[]): SemanticNode {
-    // This here is currently geared towards our collapse actions!
-    return children.length > 1
-      ? this.parse(children[1])
-      : this.getFactory().makeUnprocessed(node);
+    const selection =
+      children[
+        node.hasAttribute('selection')
+          ? parseInt(node.getAttribute('selection'), 10) - 1
+          : 0
+      ];
+    const stree = this.parse(selection);
+    stree.mathmlTree = selection;
+    return stree;
   }
 
   /**

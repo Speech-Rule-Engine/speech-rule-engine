@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
-import { RebuildStree } from '../walker/rebuild_stree';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
 
 export interface SpeechGenerator {
   /**
@@ -35,7 +35,7 @@ export interface SpeechGenerator {
    * @param xml The base xml element belonging to node.
    * @returns The speech string computed for this element.
    */
-  getSpeech(node: Element, xml: Element): string;
+  getSpeech(node: Element, xml: Element, root?: Element): string;
 
   /**
    * Generates speech string for a sub tree of the xml element.
@@ -44,7 +44,7 @@ export interface SpeechGenerator {
    * @param xml The base xml element belonging to node.
    * @returns The generated speech string.
    */
-  generateSpeech(_node: Node, xml: Element): string;
+  generateSpeech(node: Node, xml: Element): string;
 
   /**
    * Returns the semantic tree rebuilt from the base xml element.

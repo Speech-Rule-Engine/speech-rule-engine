@@ -18,16 +18,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description.js';
 
-import Engine, { EnginePromise, SREError } from './engine';
-import { setup } from './engine_setup';
-import * as EngineConst from './engine_const';
-import { KeyCode } from './event_util';
-import * as FileUtil from './file_util';
-import * as ProcessorFactory from './processor_factory';
-import SystemExternal from './system_external';
-import { Variables } from './variables';
+import Engine, { EnginePromise, SREError } from './engine.js';
+import { setup } from './engine_setup.js';
+import * as EngineConst from './engine_const.js';
+import { KeyCode } from './event_util.js';
+import * as FileUtil from './file_util.js';
+import * as ProcessorFactory from './processor_factory.js';
+import SystemExternal from './system_external.js';
+import { Variables } from './variables.js';
+import { standardLoader } from '../speech_rules/math_map.js';
 
 /**
  * Version number.
@@ -78,9 +79,14 @@ export function engineSetup(): { [key: string]: boolean | string } {
  * @returns True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */
-export function engineReady(): Promise<any> {
-  return EnginePromise.getall();
+export async function engineReady(): Promise<any> {
+  return setupEngine({}).then(() => EnginePromise.getall());
 }
+
+/**
+ * Export of the standard locale loader for use in client functions.
+ */
+export const localeLoader = standardLoader;
 
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
@@ -399,9 +405,8 @@ export function exit(opt_value?: number) {
  */
 export const localePath = FileUtil.localePath;
 
-// Check here for custom method!
 if (SystemExternal.documentSupported) {
-  setupEngine({ mode: EngineConst.Mode.HTTP });
+  setupEngine({ mode: EngineConst.Mode.HTTP }).then(() => setupEngine({}));
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
     setupEngine({ mode: EngineConst.Mode.ASYNC })

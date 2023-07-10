@@ -18,31 +18,34 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import { Debugger } from './debugger';
-import { EnginePromise, SREError } from './engine';
-import * as EngineConst from './engine_const';
-import * as ProcessorFactory from './processor_factory';
-import * as System from './system';
-import SystemExternal from './system_external';
-import { Variables } from './variables';
+import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import { Debugger } from './debugger.js';
+import { EnginePromise, SREError } from './engine.js';
+import * as EngineConst from './engine_const.js';
+import * as ProcessorFactory from './processor_factory.js';
+import * as System from './system.js';
+import SystemExternal from './system_external.js';
+import { Variables } from './variables.js';
 
 export class Cli {
   public process = SystemExternal.extRequire('process');
 
-  public setup: { [key: string]: string | boolean };
+  public setup: { [key: string]: string | boolean } = {
+    mode: EngineConst.Mode.SYNC
+  };
 
   public processors: string[] = [];
 
   public dp: DOMParser;
+
+  private output: any = this.process.stdout;
+
   constructor() {
-    this.setup = { mode: EngineConst.Mode.SYNC };
-    System.setupEngine(this.setup);
     this.dp = new SystemExternal.xmldom.DOMParser({
-      errorHandler: function (_key: string, _msg: string) {
+      errorHandler: (_key: string, _msg: string) => {
         throw new SREError('XML DOM error!');
       }
     });
@@ -72,7 +75,7 @@ export class Cli {
    * Loads all possible locales asynchronously.
    */
   private async loadLocales() {
-    for (const loc of Variables.LOCALES) {
+    for (const loc of Variables.LOCALES.keys()) {
       await System.setupEngine({ locale: loc });
     }
   }
@@ -85,16 +88,15 @@ export class Cli {
    */
   public async enumerate(all = false) {
     const promise = System.setupEngine(this.setup);
+    const order = DynamicCstr.DEFAULT_ORDER.slice(0, -1); // No topics yet.
     return (all ? this.loadLocales() : promise).then(() =>
       EnginePromise.getall().then(() => {
-        const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
+        const length = order.map((x) => x.length);
         const maxLength = (obj: any, index: number) => {
           length[index] = Math.max.apply(
             null,
             Object.keys(obj)
-              .map(function (x) {
-                return x.length;
-              })
+              .map((x) => x.length)
               .concat(length[index])
           );
         };
@@ -105,26 +107,27 @@ export class Cli {
         dynamic = MathCompoundStore.enumerate(dynamic);
         const table = [];
         maxLength(dynamic, 0);
-        for (const ax1 in dynamic) {
+        for (const [ax1, dyna1] of Object.entries(dynamic)) {
           let clear1 = true;
-          const dyna1 = dynamic[ax1];
           maxLength(dyna1, 1);
-          for (const ax2 in dyna1) {
+          for (const [ax2, dyna2] of Object.entries(dyna1)) {
             let clear2 = true;
-            const dyna2 = dyna1[ax2];
             maxLength(dyna2, 2);
-            for (const ax3 in dyna2) {
-              const styles = Object.keys(dyna2[ax3]).sort();
+            for (const [ax3, dyna3] of Object.entries(dyna2)) {
+              const styles = Object.keys(dyna3).sort();
               if (ax3 === 'clearspeak') {
                 let clear3 = true;
                 const prefs =
                   ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
-                for (const ax4 in prefs) {
+                if (!prefs) {
+                  continue;
+                }
+                for (const dyna4 of Object.values(prefs)) {
                   table.push([
                     compStr(clear1 ? ax1 : '', length[0]),
                     compStr(clear2 ? ax2 : '', length[1]),
                     compStr(clear3 ? ax3 : '', length[2]),
-                    prefs[ax4].join(', ')
+                    dyna4.join(', ')
                   ]);
                   clear1 = false;
                   clear2 = false;
@@ -144,18 +147,22 @@ export class Cli {
           }
         }
         let i = 0;
-        let output = '';
-        output += DynamicCstr.DEFAULT_ORDER.slice(
-          0, // No topics yet.
-          -1
-        )
-          .map((x: string) => compStr(x, length[i++]))
-          .join(' | ');
-        output += '\n';
-        length.forEach((x: number) => (output += new Array(x + 3).join('=')));
-        output += '========================\n';
-        output += table.map((x) => x.join(' | ')).join('\n');
-        console.info(output);
+        const header = order.map((x: string) => compStr(x, length[i++]));
+        const markdown = SystemExternal.commander.opts().pprint;
+        const separator = length.map((x: number) =>
+          new Array(x + 1).join(markdown ? '-' : '=')
+        );
+        if (!markdown) {
+          separator[i - 1] = separator[i - 1] + '========================';
+        }
+        table.unshift(separator);
+        table.unshift(header);
+        let output = table.map((x) => x.join(' | '));
+        if (markdown) {
+          output = output.map((x) => `| ${x} |`);
+          output.unshift(`# Options SRE v${System.version}\n`);
+        }
+        console.info(output.join('\n'));
       })
     );
   }
@@ -166,11 +173,12 @@ export class Cli {
    * @param input The name of the input file.
    */
   public execute(input: string) {
-    const options = SystemExternal.commander.opts();
     EnginePromise.getall().then(() => {
-      this.runProcessors_((proc, file) => {
-        console.info(System.processFile(proc, file, options.output));
-      }, input);
+      this.runProcessors_(
+        (proc, file) =>
+          this.output.write(System.processFile(proc, file) + '\n'),
+        input
+      );
     });
   }
 
@@ -180,13 +188,10 @@ export class Cli {
    * to the given output file.
    */
   public readline() {
-    const options = SystemExternal.commander.opts();
     this.process.stdin.setEncoding('utf8');
     const inter = SystemExternal.extRequire('readline').createInterface({
       input: this.process.stdin,
-      output: options.output
-        ? SystemExternal.fs.createWriteStream(options.output)
-        : this.process.stdout
+      output: this.output
     });
     let input = '';
     inter.on(
@@ -204,6 +209,9 @@ export class Cli {
         this.runProcessors_((proc, expr) => {
           inter.output.write(ProcessorFactory.output(proc, expr) + '\n');
         }, input);
+        System.engineReady().then(() =>
+          Debugger.getInstance().exit(() => System.exit(0))
+        );
       }).bind(this)
     );
   }
@@ -211,7 +219,7 @@ export class Cli {
   /**
    * Method for the command line interface of the Speech Rule Engine
    */
-  public commandLine() {
+  public async commandLine() {
     const commander = SystemExternal.commander;
     const system = System;
     const set = ((key: string) => {
@@ -231,7 +239,7 @@ export class Cli {
         DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]
       )
       .option(
-        '-t, --style [name]',
+        '-s, --style [name]',
         'Speech style [name]. See --options' + ' for details.',
         set(Axis.STYLE),
         DynamicCstr.DEFAULT_VALUES[Axis.STYLE]
@@ -253,6 +261,11 @@ export class Cli {
         'Generate speech output with markup tags.',
         set('markup'),
         'none'
+      )
+      .option(
+        '-e, --automark',
+        'Automatically set marks for external reference.',
+        set('automark')
       )
       .option(
         '-r, --rate [value]',
@@ -278,6 +291,11 @@ export class Cli {
         processor('enriched')
       )
       .option(
+        '-t, --latex',
+        'Accepts LaTeX input for certain locale/modality combinations.',
+        () => processor('latex')
+      )
+      .option(
         '-g, --generate <depth>',
         'Include generated speech in enriched' +
           ' MathML (with -m option only).',
@@ -289,6 +307,12 @@ export class Cli {
         'Include structure attribute in enriched' +
           ' MathML (with -m option only).',
         set('structure')
+      )
+      .option(
+        '-A, --aria',
+        'Include aria tree annotations' +
+          ' MathML (with -m and -w option only).',
+        set('aria')
       )
       .option(
         '-P, --pprint',
@@ -324,10 +348,13 @@ export class Cli {
       )
       .option('-v, --verbose', 'Verbose mode.')
       .option('-l, --log [name]', 'Log file [name].')
-      .option('--opt', 'List engine setup options.')
+      .option(
+        '--opt',
+        'List engine setup options. Output as markdown with -P option.'
+      )
       .option(
         '--opt-all',
-        'List engine setup options for all available locales.'
+        'List engine setup options for all available locales. Output as markdown with -P option.'
       )
       .on('option:opt', () => {
         this.enumerate().then(() => System.exit(0));
@@ -336,22 +363,25 @@ export class Cli {
         this.enumerate(true).then(() => System.exit(0));
       })
       .parse(this.process.argv);
-    System.setupEngine(this.setup);
+    await System.engineReady().then(() => System.setupEngine(this.setup));
     const options = commander.opts();
+    if (options.output) {
+      this.output = SystemExternal.fs.createWriteStream(options.output);
+    }
     if (options.verbose) {
-      Debugger.getInstance().init(options.log);
+      await Debugger.getInstance().init(options.log);
     }
     if (options.input) {
       this.execute(options.input);
     }
     if (commander.args.length) {
       commander.args.forEach(this.execute.bind(this));
+      System.engineReady().then(() =>
+        Debugger.getInstance().exit(() => System.exit(0))
+      );
     } else {
       this.readline();
     }
-    Debugger.getInstance().exit(function () {
-      System.exit(0);
-    });
   }
 
   /**
@@ -369,15 +399,11 @@ export class Cli {
         this.processors.push('speech');
       }
       if (input) {
-        this.processors.forEach(function (proc) {
-          processor(proc, input);
-        });
+        this.processors.forEach((proc) => processor(proc, input));
       }
     } catch (err) {
       console.error(err.name + ': ' + err.message);
-      Debugger.getInstance().exit(function () {
-        this.process.exit(1);
-      });
+      Debugger.getInstance().exit(() => this.process.exit(1));
     }
   }
 

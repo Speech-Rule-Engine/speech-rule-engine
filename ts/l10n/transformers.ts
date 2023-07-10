@@ -18,7 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
 
 export type Transformer = (p1: string | number) => string;
 
@@ -27,8 +30,6 @@ export type Combiner = (p1: string, p2: string, p3: string) => string;
 export type SiCombiner = (p1: string, p2: string) => string;
 
 export type GrammarCase = (p1: number, p2: boolean) => string;
-
-export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
 
 /**
  * A trivial translator of numbers with plural.

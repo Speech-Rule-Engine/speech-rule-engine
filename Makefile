@@ -1,33 +1,20 @@
 #
 # Makefile for Speech Rule Engine
-# Copyright 2014-2021, Volker Sorge <Volker.Sorge@gmail.com>
+# Copyright 2014-2022, Volker Sorge <Volker.Sorge@gmail.com>
 #
 # This has been reduced to take care maps of only.
-
-MODULE_NAME = node_modules
-ifneq ($(wildcard ./$(MODULE_NAME)/.*),)
-PREFIX = $(abspath .)
-else
-PREFIX =$(HOME)
-endif
-
-# Nodejs location.
-NODEJS = node
-NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 
 IEMAPS_PKG = $(abspath ../sre-mathmaps-ie)
 
 # Ideally, no changes necessary beyond this point!
 SRC_DIR = $(abspath ./ts)
-BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
 SRC = $(SRC_DIR)/**/*.ts
 TARGET = $(LIB_DIR)/sre.js
-MATHJAX = $(LIB_DIR)/mathjax-sre.js
 
 JSON_SRC = $(abspath ./mathmaps)
 JSON_DST = $(LIB_DIR)/mathmaps
-MAPS = messages si functions symbols units rules
+MAPS = messages si characters functions symbols units rules
 IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.json
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .json,$(LOCALES)))
@@ -38,32 +25,29 @@ JSON_MINIFY = npx json-minify
 MINI_DIR = $(abspath ./minimaps)
 JSON_FILES = $(wildcard $(foreach fd, $(LOCALES), $(foreach gd, $(MAPS), $(JSON_SRC)/$(fd)/$(gd)/*.json)))
 MINI_SRC = $(foreach file, $(JSON_FILES), $(subst $(JSON_SRC)/, , $(file)))
-# MINI_DST = $(foreach file, $(MINI_SRC), $(patsubst %.json, %.min, $(addprefix $(MINI_DIR)/, $(subst $(JSON_SRC)/, , $(file)))))
 MINI_DST = $(patsubst %.json, %.min, $(JSON_FILES))
 
 
 
 #######################################################################3
+# Main Targets
 
 all: directories maps
 
-directories: $(BIN_DIR) $(LIB_DIR)
+clean: clean_json clean_iemaps
+	rm -f $(TARGET)
 
-$(BIN_DIR):
-	mkdir -p $(BIN_DIR)
+#######################################################################3
+
+directories: $(LIB_DIR)
 
 $(LIB_DIR):
 	mkdir -p $(LIB_DIR)
-
-clean: clean_json clean_mathjax
-	rm -f $(TARGET)
 
 
 ##################################################################
 # Building the maps and publish the API via npm.
 ##################################################################
-
-publish: maps
 
 $(JSON_DST):
 	@echo "Creating JSON destination."
@@ -76,9 +60,6 @@ clean_loc:
 		echo "Deleting $(LOC).json"; \
 		rm -f $(JSON_DST)/$(LOC).json; \
 	fi
-
-clean_mini:
-	rm -f $(MINI_DST)
 
 %.min: %.json
 	@echo "Minifying " $@
@@ -111,7 +92,7 @@ $(IEMAPS_FILE): $(MINI_DST)
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			echo $(JSON_SRC)/$$j/$$dir;\
+echo $(JSON_SRC)/$$j/$$dir;\
 			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
 				for i in $(JSON_SRC)/$$j/$$dir/*.min; do\
 					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
@@ -135,9 +116,6 @@ emacs: publish
 ##################################################################
 # Other cleanup targets.
 ##################################################################
-
-clean_mathjax:
-	rm -f $(MATHJAX)
 
 clean_iemaps:
 	rm -f $(IEMAPS_FILE)

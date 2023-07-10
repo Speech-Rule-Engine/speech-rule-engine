@@ -1,33 +1,33 @@
-[{"locale": "en"},
+[
   {
-    "category": "Ll",
+    "locale": "en"
+  },
+  {
+    "key": "03D0",
     "mappings": {
       "default": {
         "default": "beta"
       }
-    },
-    "key": "03D0"
+    }
   },
   {
-    "category": "Ll",
+    "key": "03D7",
     "mappings": {
       "default": {
         "default": "kai"
       }
-    },
-    "key": "03D7"
+    }
   },
   {
-    "category": "Sm",
+    "key": "03F6",
     "mappings": {
       "default": {
         "default": "reversed epsilon"
       }
-    },
-    "key": "03F6"
+    }
   },
   {
-    "category": "Lu",
+    "key": "1D7CA",
     "mappings": {
       "default": {
         "default": "bold cap Digamma"
@@ -35,16 +35,14 @@
       "mathspeak": {
         "default": "bold upper Digamma"
       }
-    },
-    "key": "1D7CA"
+    }
   },
   {
-    "category": "Ll",
+    "key": "1D7CB",
     "mappings": {
       "default": {
         "default": "bold digamma"
       }
-    },
-    "key": "1D7CB"
+    }
   }
 ]

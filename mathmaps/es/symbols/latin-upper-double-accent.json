@@ -3,7 +3,6 @@
     "locale": "es"
   },
   {
-    "category": "Lu",
     "key": "01D5",
     "mappings": {
       "default": {
@@ -12,7 +11,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D7",
     "mappings": {
       "default": {
@@ -21,7 +19,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D9",
     "mappings": {
       "default": {
@@ -30,7 +27,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01DB",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01DE",
     "mappings": {
       "default": {
@@ -48,7 +43,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E0",
     "mappings": {
       "default": {
@@ -57,7 +51,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EC",
     "mappings": {
       "default": {
@@ -66,7 +59,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01FA",
     "mappings": {
       "default": {
@@ -75,7 +67,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022A",
     "mappings": {
       "default": {
@@ -84,7 +75,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022C",
     "mappings": {
       "default": {
@@ -93,7 +83,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0230",
     "mappings": {
       "default": {
@@ -107,8 +96,7 @@
       "default": {
         "default": "mayúscula C con cedilla y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E14",
@@ -116,8 +104,7 @@
       "default": {
         "default": "mayúscula E con macrón y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E16",
@@ -125,8 +112,7 @@
       "default": {
         "default": "mayúscula E con macrón y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E1C",
@@ -134,8 +120,7 @@
       "default": {
         "default": "mayúscula E with cedilla and breve"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E2E",
@@ -143,8 +128,7 @@
       "default": {
         "default": "mayúscula I con diéresis y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E38",
@@ -152,8 +136,7 @@
       "default": {
         "default": "mayúscula L con punto debajo y macrón"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E4C",
@@ -161,8 +144,7 @@
       "default": {
         "default": "mayúscula O con tilde y acute"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E4E",
@@ -170,8 +152,7 @@
       "default": {
         "default": "mayúscula O con tilde y diéresis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E50",
@@ -179,8 +160,7 @@
       "default": {
         "default": "mayúscula O con macrón y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E52",
@@ -188,8 +168,7 @@
       "default": {
         "default": "mayúscula O con macrón y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E5C",
@@ -197,8 +176,7 @@
       "default": {
         "default": "mayúscula R con punto debajo y macrón"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E64",
@@ -206,8 +184,7 @@
       "default": {
         "default": "mayúscula S con agudo y punto arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E66",
@@ -215,8 +192,7 @@
       "default": {
         "default": "mayúscula S con carón y punto arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E68",
@@ -224,8 +200,7 @@
       "default": {
         "default": "mayúscula S con punto debajo y punto arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E78",
@@ -233,8 +208,7 @@
       "default": {
         "default": "mayúscula U con tilde y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1E7A",
@@ -242,8 +216,7 @@
       "default": {
         "default": "mayúscula U con macrón y diéresis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA4",
@@ -251,8 +224,7 @@
       "default": {
         "default": "mayúscula A con acento circunflejo y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA6",
@@ -260,8 +232,7 @@
       "default": {
         "default": "mayúscula A con acento circunflejo y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EA8",
@@ -269,8 +240,7 @@
       "default": {
         "default": "mayúscula A con acento circunflejo y gancho arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EAA",
@@ -278,8 +248,7 @@
       "default": {
         "default": "mayúscula A con acento circunflejo y tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EAC",
@@ -287,8 +256,7 @@
       "default": {
         "default": "mayúscula A con acento circunflejo y punto debajo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EAE",
@@ -296,8 +264,7 @@
       "default": {
         "default": "mayúscula A con breve y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB0",
@@ -305,8 +272,7 @@
       "default": {
         "default": "mayúscula A con breve y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB2",
@@ -314,8 +280,7 @@
       "default": {
         "default": "mayúscula A con breve y gancho arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB4",
@@ -323,8 +288,7 @@
       "default": {
         "default": "mayúscula A con breve y tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EB6",
@@ -332,8 +296,7 @@
       "default": {
         "default": "mayúscula A con breve y punto debajo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EBE",
@@ -341,8 +304,7 @@
       "default": {
         "default": "mayúscula E con acento circunflejo y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC0",
@@ -350,8 +312,7 @@
       "default": {
         "default": "mayúscula E con acento circunflejo y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC2",
@@ -359,8 +320,7 @@
       "default": {
         "default": "mayúscula E con acento circunflejo y gancho arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC4",
@@ -368,8 +328,7 @@
       "default": {
         "default": "mayúscula E con acento circunflejo y tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EC6",
@@ -377,8 +336,7 @@
       "default": {
         "default": "mayúscula E con acento circunflejo y punto debajo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ED0",
@@ -386,8 +344,7 @@
       "default": {
         "default": "mayúscula O con acento circunflejo y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ED2",
@@ -395,8 +352,7 @@
       "default": {
         "default": "mayúscula O con acento circunflejo y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ED4",
@@ -404,8 +360,7 @@
       "default": {
         "default": "mayúscula O con acento circunflejo y gancho arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ED6",
@@ -413,8 +368,7 @@
       "default": {
         "default": "mayúscula O con acento circunflejo y tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1ED8",
@@ -422,8 +376,7 @@
       "default": {
         "default": "mayúscula O con acento circunflejo y punto debajo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EDA",
@@ -431,8 +384,7 @@
       "default": {
         "default": "mayúscula O with horn and acute"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EDC",
@@ -440,8 +392,7 @@
       "default": {
         "default": "mayúscula O with horn and grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EDE",
@@ -449,8 +400,7 @@
       "default": {
         "default": "mayúscula O with horn and hook above"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE0",
@@ -458,8 +408,7 @@
       "default": {
         "default": "mayúscula O with horn and tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE2",
@@ -467,8 +416,7 @@
       "default": {
         "default": "mayúscula O con cuerno y punto debajo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EE8",
@@ -476,8 +424,7 @@
       "default": {
         "default": "mayúscula U con cuerno y agudo"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EEA",
@@ -485,8 +432,7 @@
       "default": {
         "default": "mayúscula U con cuerno y grave"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EEC",
@@ -494,8 +440,7 @@
       "default": {
         "default": "mayúscula U con cuerno y gancho arriba"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EEE",
@@ -503,8 +448,7 @@
       "default": {
         "default": "mayúscula U con cuerno y tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "1EF0",
@@ -512,7 +456,6 @@
       "default": {
         "default": "mayúscula U con cuerno y punto debajo"
       }
-    },
-    "category": "Lu"
+    }
   }
 ]

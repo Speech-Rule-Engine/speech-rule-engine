@@ -8,11 +8,9 @@
       "default": {
         "default": "delimitador horizontal"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2501",
     "mappings": {
       "default": {
@@ -26,11 +24,9 @@
       "default": {
         "default": "delimitador vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2503",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2504",
     "mappings": {
       "default": {
@@ -48,7 +43,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2505",
     "mappings": {
       "default": {
@@ -57,7 +51,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2506",
     "mappings": {
       "default": {
@@ -66,7 +59,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2507",
     "mappings": {
       "default": {
@@ -75,7 +67,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2508",
     "mappings": {
       "default": {
@@ -84,7 +75,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2509",
     "mappings": {
       "default": {
@@ -93,7 +83,6 @@
     }
   },
   {
-    "category": "So",
     "key": "250A",
     "mappings": {
       "default": {
@@ -102,7 +91,6 @@
     }
   },
   {
-    "category": "So",
     "key": "250B",
     "mappings": {
       "default": {
@@ -116,11 +104,9 @@
       "default": {
         "default": "esquina inferior derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "250D",
     "mappings": {
       "default": {
@@ -129,7 +115,6 @@
     }
   },
   {
-    "category": "So",
     "key": "250E",
     "mappings": {
       "default": {
@@ -138,7 +123,6 @@
     }
   },
   {
-    "category": "So",
     "key": "250F",
     "mappings": {
       "default": {
@@ -152,11 +136,9 @@
       "default": {
         "default": "esquina inferior izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2511",
     "mappings": {
       "default": {
@@ -165,7 +147,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2512",
     "mappings": {
       "default": {
@@ -174,7 +155,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2513",
     "mappings": {
       "default": {
@@ -188,11 +168,9 @@
       "default": {
         "default": "esquina superior derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2515",
     "mappings": {
       "default": {
@@ -201,7 +179,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2516",
     "mappings": {
       "default": {
@@ -210,7 +187,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2517",
     "mappings": {
       "default": {
@@ -224,11 +200,9 @@
       "default": {
         "default": "esquina superior izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2519",
     "mappings": {
       "default": {
@@ -237,7 +211,6 @@
     }
   },
   {
-    "category": "So",
     "key": "251A",
     "mappings": {
       "default": {
@@ -246,7 +219,6 @@
     }
   },
   {
-    "category": "So",
     "key": "251B",
     "mappings": {
       "default": {
@@ -260,11 +232,9 @@
       "default": {
         "default": "delimitador izquierdo y separador horizontal"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "251D",
     "mappings": {
       "default": {
@@ -273,7 +243,6 @@
     }
   },
   {
-    "category": "So",
     "key": "251E",
     "mappings": {
       "default": {
@@ -282,7 +251,6 @@
     }
   },
   {
-    "category": "So",
     "key": "251F",
     "mappings": {
       "default": {
@@ -291,7 +259,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2520",
     "mappings": {
       "default": {
@@ -300,7 +267,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2521",
     "mappings": {
       "default": {
@@ -309,7 +275,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2522",
     "mappings": {
       "default": {
@@ -318,7 +283,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2523",
     "mappings": {
       "default": {
@@ -332,11 +296,9 @@
       "default": {
         "default": "delimitador derecho y separador horizontal"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2525",
     "mappings": {
       "default": {
@@ -345,7 +307,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2526",
     "mappings": {
       "default": {
@@ -354,7 +315,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2527",
     "mappings": {
       "default": {
@@ -363,7 +323,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2528",
     "mappings": {
       "default": {
@@ -372,7 +331,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2529",
     "mappings": {
       "default": {
@@ -381,7 +339,6 @@
     }
   },
   {
-    "category": "So",
     "key": "252A",
     "mappings": {
       "default": {
@@ -390,7 +347,6 @@
     }
   },
   {
-    "category": "So",
     "key": "252B",
     "mappings": {
       "default": {
@@ -404,11 +360,9 @@
       "default": {
         "default": "delimitador superior y separador vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "252D",
     "mappings": {
       "default": {
@@ -417,7 +371,6 @@
     }
   },
   {
-    "category": "So",
     "key": "252E",
     "mappings": {
       "default": {
@@ -426,7 +379,6 @@
     }
   },
   {
-    "category": "So",
     "key": "252F",
     "mappings": {
       "default": {
@@ -435,7 +387,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2530",
     "mappings": {
       "default": {
@@ -444,7 +395,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2531",
     "mappings": {
       "default": {
@@ -453,7 +403,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2532",
     "mappings": {
       "default": {
@@ -462,7 +411,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2533",
     "mappings": {
       "default": {
@@ -476,11 +424,9 @@
       "default": {
         "default": "delimitador inferior y separador vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2535",
     "mappings": {
       "default": {
@@ -489,7 +435,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2536",
     "mappings": {
       "default": {
@@ -498,7 +443,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2537",
     "mappings": {
       "default": {
@@ -507,7 +451,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2538",
     "mappings": {
       "default": {
@@ -516,7 +459,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2539",
     "mappings": {
       "default": {
@@ -525,7 +467,6 @@
     }
   },
   {
-    "category": "So",
     "key": "253A",
     "mappings": {
       "default": {
@@ -534,7 +475,6 @@
     }
   },
   {
-    "category": "So",
     "key": "253B",
     "mappings": {
       "default": {
@@ -548,11 +488,9 @@
       "default": {
         "default": "cruce de separadores sencillos"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "253D",
     "mappings": {
       "default": {
@@ -561,7 +499,6 @@
     }
   },
   {
-    "category": "So",
     "key": "253E",
     "mappings": {
       "default": {
@@ -570,7 +507,6 @@
     }
   },
   {
-    "category": "So",
     "key": "253F",
     "mappings": {
       "default": {
@@ -579,7 +515,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2540",
     "mappings": {
       "default": {
@@ -588,7 +523,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2541",
     "mappings": {
       "default": {
@@ -597,7 +531,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2542",
     "mappings": {
       "default": {
@@ -606,7 +539,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2543",
     "mappings": {
       "default": {
@@ -615,7 +547,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2544",
     "mappings": {
       "default": {
@@ -624,7 +555,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2545",
     "mappings": {
       "default": {
@@ -633,7 +563,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2546",
     "mappings": {
       "default": {
@@ -642,7 +571,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2547",
     "mappings": {
       "default": {
@@ -651,7 +579,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2548",
     "mappings": {
       "default": {
@@ -660,7 +587,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2549",
     "mappings": {
       "default": {
@@ -669,7 +595,6 @@
     }
   },
   {
-    "category": "So",
     "key": "254A",
     "mappings": {
       "default": {
@@ -678,7 +603,6 @@
     }
   },
   {
-    "category": "So",
     "key": "254B",
     "mappings": {
       "default": {
@@ -687,7 +611,6 @@
     }
   },
   {
-    "category": "So",
     "key": "254C",
     "mappings": {
       "default": {
@@ -696,7 +619,6 @@
     }
   },
   {
-    "category": "So",
     "key": "254D",
     "mappings": {
       "default": {
@@ -705,7 +627,6 @@
     }
   },
   {
-    "category": "So",
     "key": "254E",
     "mappings": {
       "default": {
@@ -714,7 +635,6 @@
     }
   },
   {
-    "category": "So",
     "key": "254F",
     "mappings": {
       "default": {
@@ -728,8 +648,7 @@
       "default": {
         "default": "delimitador horizontal doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2551",
@@ -737,8 +656,7 @@
       "default": {
         "default": "delimitador vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2552",
@@ -746,8 +664,7 @@
       "default": {
         "default": "esquina inferior derecha, vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2553",
@@ -755,8 +672,7 @@
       "default": {
         "default": "esquina inferior derecha, horizontal doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2554",
@@ -764,8 +680,7 @@
       "default": {
         "default": "esquina inferior derecha doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2555",
@@ -773,8 +688,7 @@
       "default": {
         "default": "esquina inferior izquierda, vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2556",
@@ -782,8 +696,7 @@
       "default": {
         "default": "esquina inferior izquierda, horizontal doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2557",
@@ -791,8 +704,7 @@
       "default": {
         "default": "esquina inferior izquierda doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2558",
@@ -800,8 +712,7 @@
       "default": {
         "default": "esquina superior derecha, vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2559",
@@ -809,8 +720,7 @@
       "default": {
         "default": "esquina superior derecha, horizontal doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255A",
@@ -818,8 +728,7 @@
       "default": {
         "default": "esquina superior derecha doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255B",
@@ -827,8 +736,7 @@
       "default": {
         "default": "esquina superior izquierda, vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255C",
@@ -836,8 +744,7 @@
       "default": {
         "default": "esquina superior izquierda, horizontal doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255D",
@@ -845,8 +752,7 @@
       "default": {
         "default": "esquina superior izquierda doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255E",
@@ -854,8 +760,7 @@
       "default": {
         "default": "delimitador izquierdo con separador doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "255F",
@@ -863,8 +768,7 @@
       "default": {
         "default": "delimitador izquierdo doble con separador horizontal"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2560",
@@ -872,8 +776,7 @@
       "default": {
         "default": "delimitador izquierdo y separador horizontal dobles"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2561",
@@ -881,8 +784,7 @@
       "default": {
         "default": "delimitador derecho con separador doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2562",
@@ -890,8 +792,7 @@
       "default": {
         "default": "delimitador derecho doble con separador horizontal"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2563",
@@ -899,8 +800,7 @@
       "default": {
         "default": "delimitador derecho y separador horizontal dobles"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2564",
@@ -908,8 +808,7 @@
       "default": {
         "default": "delimitador superior doble con separador vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2565",
@@ -917,8 +816,7 @@
       "default": {
         "default": "delimitador superior con separador vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2566",
@@ -926,8 +824,7 @@
       "default": {
         "default": "delimitador superior y separador vertical dobles"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2567",
@@ -935,8 +832,7 @@
       "default": {
         "default": "delimitador inferior doble con separador vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2568",
@@ -944,8 +840,7 @@
       "default": {
         "default": "delimitador inferior con separador vertical doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2569",
@@ -953,8 +848,7 @@
       "default": {
         "default": "delimitador inferior y separador vertical dobles"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "256A",
@@ -962,8 +856,7 @@
       "default": {
         "default": "cruce de separadores, vertical sencillo y horizontal doble"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "256B",
@@ -971,8 +864,7 @@
       "default": {
         "default": "cruce de separadores, vertical doble y horizontal sencillo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "256C",
@@ -980,11 +872,9 @@
       "default": {
         "default": "cruce de separadores dobles"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "256D",
     "mappings": {
       "default": {
@@ -993,7 +883,6 @@
     }
   },
   {
-    "category": "So",
     "key": "256E",
     "mappings": {
       "default": {
@@ -1002,7 +891,6 @@
     }
   },
   {
-    "category": "So",
     "key": "256F",
     "mappings": {
       "default": {
@@ -1011,7 +899,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2570",
     "mappings": {
       "default": {
@@ -1020,7 +907,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2571",
     "mappings": {
       "default": {
@@ -1029,7 +915,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2572",
     "mappings": {
       "default": {
@@ -1038,7 +923,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2573",
     "mappings": {
       "default": {
@@ -1047,7 +931,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2574",
     "mappings": {
       "default": {
@@ -1056,7 +939,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2575",
     "mappings": {
       "default": {
@@ -1065,7 +947,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2576",
     "mappings": {
       "default": {
@@ -1074,7 +955,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2577",
     "mappings": {
       "default": {
@@ -1083,7 +963,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2578",
     "mappings": {
       "default": {
@@ -1092,7 +971,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2579",
     "mappings": {
       "default": {
@@ -1101,7 +979,6 @@
     }
   },
   {
-    "category": "So",
     "key": "257A",
     "mappings": {
       "default": {
@@ -1110,7 +987,6 @@
     }
   },
   {
-    "category": "So",
     "key": "257B",
     "mappings": {
       "default": {
@@ -1119,7 +995,6 @@
     }
   },
   {
-    "category": "So",
     "key": "257C",
     "mappings": {
       "default": {
@@ -1128,7 +1003,6 @@
     }
   },
   {
-    "category": "So",
     "key": "257D",
     "mappings": {
       "default": {
@@ -1137,7 +1011,6 @@
     }
   },
   {
-    "category": "So",
     "key": "257E",
     "mappings": {
       "default": {
@@ -1146,7 +1019,6 @@
     }
   },
   {
-    "category": "So",
     "key": "257F",
     "mappings": {
       "default": {
@@ -1160,11 +1032,9 @@
       "default": {
         "default": "bloque mitad superior"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2581",
     "mappings": {
       "default": {
@@ -1173,7 +1043,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2582",
     "mappings": {
       "default": {
@@ -1182,7 +1051,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2583",
     "mappings": {
       "default": {
@@ -1196,11 +1064,9 @@
       "default": {
         "default": "bloque mitad inferior"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2585",
     "mappings": {
       "default": {
@@ -1209,7 +1075,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2586",
     "mappings": {
       "default": {
@@ -1218,7 +1083,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2587",
     "mappings": {
       "default": {
@@ -1232,11 +1096,9 @@
       "default": {
         "default": "bloque"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2589",
     "mappings": {
       "default": {
@@ -1245,7 +1107,6 @@
     }
   },
   {
-    "category": "So",
     "key": "258A",
     "mappings": {
       "default": {
@@ -1254,7 +1115,6 @@
     }
   },
   {
-    "category": "So",
     "key": "258B",
     "mappings": {
       "default": {
@@ -1263,7 +1123,6 @@
     }
   },
   {
-    "category": "So",
     "key": "258C",
     "mappings": {
       "default": {
@@ -1272,7 +1131,6 @@
     }
   },
   {
-    "category": "So",
     "key": "258D",
     "mappings": {
       "default": {
@@ -1281,7 +1139,6 @@
     }
   },
   {
-    "category": "So",
     "key": "258E",
     "mappings": {
       "default": {
@@ -1290,7 +1147,6 @@
     }
   },
   {
-    "category": "So",
     "key": "258F",
     "mappings": {
       "default": {
@@ -1299,7 +1155,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2590",
     "mappings": {
       "default": {
@@ -1313,8 +1168,7 @@
       "default": {
         "default": "sombra ligera"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2592",
@@ -1322,8 +1176,7 @@
       "default": {
         "default": "sombra media"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2593",
@@ -1331,11 +1184,9 @@
       "default": {
         "default": "sombra intensa"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2594",
     "mappings": {
       "default": {
@@ -1344,7 +1195,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2595",
     "mappings": {
       "default": {
@@ -1353,7 +1203,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2596",
     "mappings": {
       "default": {
@@ -1362,7 +1211,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2597",
     "mappings": {
       "default": {
@@ -1371,7 +1219,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2598",
     "mappings": {
       "default": {
@@ -1380,7 +1227,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2599",
     "mappings": {
       "default": {
@@ -1389,7 +1235,6 @@
     }
   },
   {
-    "category": "So",
     "key": "259A",
     "mappings": {
       "default": {
@@ -1398,7 +1243,6 @@
     }
   },
   {
-    "category": "So",
     "key": "259B",
     "mappings": {
       "default": {
@@ -1407,7 +1251,6 @@
     }
   },
   {
-    "category": "So",
     "key": "259C",
     "mappings": {
       "default": {
@@ -1416,7 +1259,6 @@
     }
   },
   {
-    "category": "So",
     "key": "259D",
     "mappings": {
       "default": {
@@ -1425,7 +1267,6 @@
     }
   },
   {
-    "category": "So",
     "key": "259E",
     "mappings": {
       "default": {
@@ -1434,7 +1275,6 @@
     }
   },
   {
-    "category": "So",
     "key": "259F",
     "mappings": {
       "default": {
@@ -1448,8 +1288,7 @@
       "default": {
         "default": "cuadrado relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25A1",
@@ -1457,11 +1296,9 @@
       "default": {
         "default": "cuadrado"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25A2",
     "mappings": {
       "default": {
@@ -1470,7 +1307,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A3",
     "mappings": {
       "default": {
@@ -1479,7 +1315,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A4",
     "mappings": {
       "default": {
@@ -1488,7 +1323,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A5",
     "mappings": {
       "default": {
@@ -1497,7 +1331,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A6",
     "mappings": {
       "default": {
@@ -1506,7 +1339,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A7",
     "mappings": {
       "default": {
@@ -1515,7 +1347,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A8",
     "mappings": {
       "default": {
@@ -1524,7 +1355,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25A9",
     "mappings": {
       "default": {
@@ -1538,8 +1368,7 @@
       "default": {
         "default": "cuadrado relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25AB",
@@ -1547,11 +1376,9 @@
       "default": {
         "default": "cuadrado"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25AC",
     "mappings": {
       "default": {
@@ -1565,8 +1392,7 @@
       "default": {
         "default": "rectángulo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25AE",
@@ -1574,8 +1400,7 @@
       "default": {
         "default": "rectángulo relleno vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25AF",
@@ -1583,11 +1408,9 @@
       "default": {
         "default": "rectángulo vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25B0",
     "mappings": {
       "default": {
@@ -1601,8 +1424,7 @@
       "default": {
         "default": "paralelogramo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B2",
@@ -1610,8 +1432,7 @@
       "default": {
         "default": "triángulo relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B3",
@@ -1619,8 +1440,7 @@
       "default": {
         "default": "triángulo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B4",
@@ -1628,8 +1448,7 @@
       "default": {
         "default": "triángulo relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B5",
@@ -1637,8 +1456,7 @@
       "default": {
         "default": "triángulo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B6",
@@ -1646,8 +1464,7 @@
       "default": {
         "default": "triángulo relleno señala derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B7",
@@ -1655,8 +1472,7 @@
       "default": {
         "default": "triángulo señala derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25B8",
@@ -1664,8 +1480,7 @@
       "default": {
         "default": "triángulo relleno señala derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25B9",
@@ -1673,11 +1488,9 @@
       "default": {
         "default": "triángulo señala derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25BA",
     "mappings": {
       "default": {
@@ -1686,7 +1499,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25BB",
     "mappings": {
       "default": {
@@ -1700,8 +1512,7 @@
       "default": {
         "default": "triángulo relleno señala abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25BD",
@@ -1709,8 +1520,7 @@
       "default": {
         "default": "triángulo señala abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25BE",
@@ -1718,8 +1528,7 @@
       "default": {
         "default": "triángulo relleno señala abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25BF",
@@ -1727,8 +1536,7 @@
       "default": {
         "default": "triángulo señala abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C0",
@@ -1736,8 +1544,7 @@
       "default": {
         "default": "triángulo relleno señala izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C1",
@@ -1745,8 +1552,7 @@
       "default": {
         "default": "triángulo señala izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25C2",
@@ -1754,8 +1560,7 @@
       "default": {
         "default": "triángulo relleno señala izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C3",
@@ -1763,8 +1568,7 @@
       "default": {
         "default": "triángulo señala izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C4",
@@ -1772,8 +1576,7 @@
       "default": {
         "default": "puntero relleno señala izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C5",
@@ -1781,8 +1584,7 @@
       "default": {
         "default": "puntero señala izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C6",
@@ -1790,8 +1592,7 @@
       "default": {
         "default": "diamante relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C7",
@@ -1799,8 +1600,7 @@
       "default": {
         "default": "diamante"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C8",
@@ -1808,8 +1608,7 @@
       "default": {
         "default": "diamante vacío contiene diamante relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25C9",
@@ -1817,8 +1616,7 @@
       "default": {
         "default": "ojo de pez"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CA",
@@ -1826,8 +1624,7 @@
       "default": {
         "default": "rombo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CB",
@@ -1835,8 +1632,7 @@
       "default": {
         "default": "círculo vacío"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CC",
@@ -1844,8 +1640,7 @@
       "default": {
         "default": "círculo punteado"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CD",
@@ -1853,8 +1648,7 @@
       "default": {
         "default": "círculo con relleno vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CE",
@@ -1862,8 +1656,7 @@
       "default": {
         "default": "blanco"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25CF",
@@ -1871,8 +1664,7 @@
       "default": {
         "default": "círculo relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D0",
@@ -1880,8 +1672,7 @@
       "default": {
         "default": "círculo con mitad izquierda rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D1",
@@ -1889,8 +1680,7 @@
       "default": {
         "default": "círculo con mitad derecha rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D2",
@@ -1898,8 +1688,7 @@
       "default": {
         "default": "círculo con mitad inferior rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D3",
@@ -1907,8 +1696,7 @@
       "default": {
         "default": "círculo con mitad superior rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D4",
@@ -1916,8 +1704,7 @@
       "default": {
         "default": "círculo con cuadrante superior derecho relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D5",
@@ -1925,8 +1712,7 @@
       "default": {
         "default": "círculo con cuadrante superior izquierdo relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D6",
@@ -1934,8 +1720,7 @@
       "default": {
         "default": "semicírculo izquierdo relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D7",
@@ -1943,8 +1728,7 @@
       "default": {
         "default": "semicírculo derecho relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D8",
@@ -1952,8 +1736,7 @@
       "default": {
         "default": "bullet inversa"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25D9",
@@ -1961,8 +1744,7 @@
       "default": {
         "default": "círculo vacío inverso"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DA",
@@ -1970,8 +1752,7 @@
       "default": {
         "default": "semicírculo superior vacío inverso"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DB",
@@ -1979,8 +1760,7 @@
       "default": {
         "default": "semicírculo superior vacío inverso"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DC",
@@ -1988,8 +1768,7 @@
       "default": {
         "default": "arco superior izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DD",
@@ -1997,8 +1776,7 @@
       "default": {
         "default": "arco superior derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DE",
@@ -2006,8 +1784,7 @@
       "default": {
         "default": "arco inferior derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25DF",
@@ -2015,8 +1792,7 @@
       "default": {
         "default": "arco inferior izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E0",
@@ -2024,8 +1800,7 @@
       "default": {
         "default": "semicírculo superior"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E1",
@@ -2033,8 +1808,7 @@
       "default": {
         "default": "semicírculo inferior"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E2",
@@ -2042,8 +1816,7 @@
       "default": {
         "default": "triángulo inferior derecha relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E3",
@@ -2051,8 +1824,7 @@
       "default": {
         "default": "triángulo inferior izquierda relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E4",
@@ -2060,8 +1832,7 @@
       "default": {
         "default": "triángulo superior izquierda relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E5",
@@ -2069,8 +1840,7 @@
       "default": {
         "default": "triángulo superior derecha relleno"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E6",
@@ -2078,8 +1848,7 @@
       "default": {
         "default": "composición"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E7",
@@ -2087,8 +1856,7 @@
       "default": {
         "default": "cuadrado con mitad izquierda rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E8",
@@ -2096,8 +1864,7 @@
       "default": {
         "default": "cuadrado con mitad derecha rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25E9",
@@ -2105,8 +1872,7 @@
       "default": {
         "default": "cuadrado con mitad superior izquierda rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EA",
@@ -2114,8 +1880,7 @@
       "default": {
         "default": "cuadrado con mitad inferior derecha rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EB",
@@ -2123,8 +1888,7 @@
       "default": {
         "default": "cuadrado con bisectriz"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EC",
@@ -2132,8 +1896,7 @@
       "default": {
         "default": "triángulo vacío con punto"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25ED",
@@ -2141,8 +1904,7 @@
       "default": {
         "default": "triángulo apuntando arriba con mitad izquierda rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EE",
@@ -2150,8 +1912,7 @@
       "default": {
         "default": "triángulo apuntando arriba con mitad derecha rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "25EF",
@@ -2159,11 +1920,9 @@
       "default": {
         "default": "círculo grande"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "25F0",
     "mappings": {
       "default": {
@@ -2172,7 +1931,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F1",
     "mappings": {
       "default": {
@@ -2181,7 +1939,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F2",
     "mappings": {
       "default": {
@@ -2190,7 +1947,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F3",
     "mappings": {
       "default": {
@@ -2199,7 +1955,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F4",
     "mappings": {
       "default": {
@@ -2208,7 +1963,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F5",
     "mappings": {
       "default": {
@@ -2217,7 +1971,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F6",
     "mappings": {
       "default": {
@@ -2226,7 +1979,6 @@
     }
   },
   {
-    "category": "So",
     "key": "25F7",
     "mappings": {
       "default": {
@@ -2240,8 +1992,7 @@
       "default": {
         "default": "triángulo superior izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25F9",
@@ -2249,8 +2000,7 @@
       "default": {
         "default": "triángulo superior derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FA",
@@ -2258,8 +2008,7 @@
       "default": {
         "default": "triángulo inferior izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FB",
@@ -2267,8 +2016,7 @@
       "default": {
         "default": "cuadrado mediano vacío"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FC",
@@ -2276,8 +2024,7 @@
       "default": {
         "default": "cuadrado mediano relleno"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FD",
@@ -2285,8 +2032,7 @@
       "default": {
         "default": "cuadrado mediano vacío"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FE",
@@ -2294,8 +2040,7 @@
       "default": {
         "default": "cuadrado mediano relleno"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "25FF",
@@ -2303,11 +2048,9 @@
       "default": {
         "default": "triángulo inferior derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2B12",
     "mappings": {
       "default": {
@@ -2316,7 +2059,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B13",
     "mappings": {
       "default": {
@@ -2325,7 +2067,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B14",
     "mappings": {
       "default": {
@@ -2334,7 +2075,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B15",
     "mappings": {
       "default": {
@@ -2343,7 +2083,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B16",
     "mappings": {
       "default": {
@@ -2352,7 +2091,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B17",
     "mappings": {
       "default": {
@@ -2361,7 +2099,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B18",
     "mappings": {
       "default": {
@@ -2370,7 +2107,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B19",
     "mappings": {
       "default": {
@@ -2379,7 +2115,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1A",
     "mappings": {
       "default": {
@@ -2388,7 +2123,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1B",
     "mappings": {
       "default": {
@@ -2397,7 +2131,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1C",
     "mappings": {
       "default": {
@@ -2406,7 +2139,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1D",
     "mappings": {
       "default": {
@@ -2415,7 +2147,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1E",
     "mappings": {
       "default": {
@@ -2424,7 +2155,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B1F",
     "mappings": {
       "default": {
@@ -2433,7 +2163,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B20",
     "mappings": {
       "default": {
@@ -2442,7 +2171,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B21",
     "mappings": {
       "default": {
@@ -2451,7 +2179,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B22",
     "mappings": {
       "default": {
@@ -2460,7 +2187,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B23",
     "mappings": {
       "default": {
@@ -2469,7 +2195,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B24",
     "mappings": {
       "default": {
@@ -2478,7 +2203,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B25",
     "mappings": {
       "default": {
@@ -2487,7 +2211,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B26",
     "mappings": {
       "default": {
@@ -2496,7 +2219,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B27",
     "mappings": {
       "default": {
@@ -2505,7 +2227,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B28",
     "mappings": {
       "default": {
@@ -2514,7 +2235,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B29",
     "mappings": {
       "default": {
@@ -2523,7 +2243,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2A",
     "mappings": {
       "default": {
@@ -2532,7 +2251,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2B",
     "mappings": {
       "default": {
@@ -2541,7 +2259,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2C",
     "mappings": {
       "default": {
@@ -2550,7 +2267,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2D",
     "mappings": {
       "default": {
@@ -2559,7 +2275,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2E",
     "mappings": {
       "default": {
@@ -2568,7 +2283,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B2F",
     "mappings": {
       "default": {
@@ -2582,8 +2296,7 @@
       "default": {
         "default": "estrella media vacía"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2B51",
@@ -2591,8 +2304,7 @@
       "default": {
         "default": "estrella pequeña rellena"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2B52",
@@ -2600,11 +2312,9 @@
       "default": {
         "default": "estrella pequeña vacía"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2B53",
     "mappings": {
       "default": {
@@ -2613,7 +2323,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B54",
     "mappings": {
       "default": {
@@ -2622,7 +2331,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B55",
     "mappings": {
       "default": {
@@ -2631,7 +2339,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B56",
     "mappings": {
       "default": {
@@ -2640,7 +2347,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B57",
     "mappings": {
       "default": {
@@ -2649,7 +2355,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B58",
     "mappings": {
       "default": {
@@ -2658,7 +2363,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B59",
     "mappings": {
       "default": {

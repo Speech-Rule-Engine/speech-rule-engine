@@ -4,18 +4,15 @@
   },
   {
     "key": "kt",
-    "category": "speed",
-    "names": [
-      "kt",
-      "kt.",
-      "nd"
-    ],
     "mappings": {
       "default": {
         "plural": "nodi",
         "default": "nodo"
       }
-    }
+    },
+    "names": [
+      "nd"
+    ]
   },
   {
     "key": "mph",
@@ -24,11 +21,7 @@
         "plural": "miglia orarie",
         "default": "miglio orario"
       }
-    },
-    "category": "speed",
-    "names": [
-      "mph"
-    ]
+    }
   },
   {
     "key": "rpm",
@@ -37,18 +30,10 @@
         "plural": "giri al minuto",
         "default": "giro al minuto"
       }
-    },
-    "category": "speed",
-    "names": [
-      "rpm"
-    ]
+    }
   },
   {
     "key": "kmh",
-    "category": "speed",
-    "names": [
-      "kmh"
-    ],
     "mappings": {
       "default": {
         "plural": "chilometri orari",

@@ -527,92 +527,92 @@
     [
       "Action",
       "sqrt",
-      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "cubic",
-      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root",
-      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-endroot",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
       "root-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"Wurzel Ende\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"Wurzel Ende\" (pause:short)"
     ],
     [
       "Action",
@@ -632,12 +632,12 @@
     [
       "Action",
       "set-prefix-operators-masculine",
-      "[t] \"der\" (grammar:article); [n] . (grammar:!prefix); [t] \"von\""
+      "[t] \"der\" (grammar:article); [n] . ; [t] \"von\""
     ],
     [
       "Action",
       "set-prefix-operators-feminine",
-      "[t] \"die\" (grammar:article); [n] . (grammar:!prefix); [t] \"von\""
+      "[t] \"die\" (grammar:article); [n] . ; [t] \"von\""
     ],
     [
       "Action",
@@ -787,17 +787,17 @@
     [
       "Action",
       "matrix-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Matrize\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Matrize\""
     ],
     [
       "Action",
       "matrix-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Matrize\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Matrize\""
     ],
     [
       "Action",
       "matrix-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Determinante\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Determinante\""
     ],
     [
       "Action",
@@ -822,22 +822,22 @@
     [
       "Action",
       "vector-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Matrize\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Matrize\""
     ],
     [
       "Action",
       "vector-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Vektor\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Vektor\""
     ],
     [
       "Action",
       "vector-end-vector-endvector",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Vektor\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Vektor\""
     ],
     [
       "Action",
       "vector-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"Ende Determinante\""
+      "[n] . (grammar:?EndMatrix); [t] \"Ende Determinante\""
     ],
     [
       "Action",
@@ -847,12 +847,12 @@
     [
       "Action",
       "lines-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
       "cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -887,7 +887,7 @@
     [
       "Action",
       "lines-cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -897,7 +897,7 @@
     [
       "Action",
       "lines-equations-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Gleichungen\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Gleichungen\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -907,7 +907,7 @@
     [
       "Action",
       "lines-steps-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Rechenschritte\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Rechenschritte\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -917,7 +917,7 @@
     [
       "Action",
       "lines-rows-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -927,7 +927,7 @@
     [
       "Action",
       "lines-constraints-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Bedingungen\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Bedingungen\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -957,6 +957,11 @@
     [
       "Action",
       "integral",
+      "[t] \"das\"; [n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short); [n] children/*[3] (pause:short)"
+    ],
+    [
+      "Action",
+      "integral-novar",
       "[t] \"das\"; [n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short)"
     ],
     [

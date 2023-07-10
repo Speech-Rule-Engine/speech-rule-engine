@@ -1,377 +1,339 @@
-[{"locale": "en"},
+[
   {
-    "category": "Zs",
+    "locale": "en"
+  },
+  {
+    "key": "0020",
     "mappings": {
       "default": {
         "default": "space"
       }
-    },
-    "key": "0020"
+    }
   },
   {
-    "category": "Zs",
+    "key": "00A0",
     "mappings": {
       "default": {
         "default": "no break space",
         "alternative": "non breaking space"
       }
-    },
-    "key": "00A0"
+    }
   },
   {
-    "category": "Cf",
+    "key": "00AD",
     "mappings": {
       "default": {
         "default": "soft hyphen"
       }
-    },
-    "key": "00AD"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2000",
     "mappings": {
       "default": {
         "default": "en quad"
       }
-    },
-    "key": "2000"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2001",
     "mappings": {
       "default": {
         "default": "em quad"
       }
-    },
-    "key": "2001"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2002",
     "mappings": {
       "default": {
         "default": "en space"
       }
-    },
-    "key": "2002"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2003",
     "mappings": {
       "default": {
         "default": "em space"
       }
-    },
-    "key": "2003"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2004",
     "mappings": {
       "default": {
         "default": "three per em space"
       }
-    },
-    "key": "2004"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2005",
     "mappings": {
       "default": {
         "default": "four per em space"
       }
-    },
-    "key": "2005"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2006",
     "mappings": {
       "default": {
         "default": "six per em space"
       }
-    },
-    "key": "2006"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2007",
     "mappings": {
       "default": {
         "default": "figure space"
       }
-    },
-    "key": "2007"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2008",
     "mappings": {
       "default": {
         "default": "punctuation space"
       }
-    },
-    "key": "2008"
+    }
   },
   {
-    "category": "Zs",
+    "key": "2009",
     "mappings": {
       "default": {
         "default": "thin space"
       }
-    },
-    "key": "2009"
+    }
   },
   {
-    "category": "Zs",
+    "key": "200A",
     "mappings": {
       "default": {
         "default": "hair space"
       }
-    },
-    "key": "200A"
+    }
   },
   {
-    "category": "Cf",
+    "key": "200B",
     "mappings": {
       "default": {
         "default": "zero width space"
       }
-    },
-    "key": "200B"
+    }
   },
   {
-    "category": "Cf",
+    "key": "200C",
     "mappings": {
       "default": {
         "default": "zero width non joiner"
       }
-    },
-    "key": "200C"
+    }
   },
   {
-    "category": "Cf",
+    "key": "200D",
     "mappings": {
       "default": {
         "default": "zero width joiner"
       }
-    },
-    "key": "200D"
+    }
   },
   {
-    "category": "Cf",
+    "key": "200E",
     "mappings": {
       "default": {
         "default": "left to right mark"
       }
-    },
-    "key": "200E"
+    }
   },
   {
-    "category": "Cf",
+    "key": "200F",
     "mappings": {
       "default": {
         "default": "right to left mark"
       }
-    },
-    "key": "200F"
+    }
   },
   {
-    "category": "Zl",
+    "key": "2028",
     "mappings": {
       "default": {
         "default": "line separator"
       }
-    },
-    "key": "2028"
+    }
   },
   {
-    "category": "Zp",
+    "key": "2029",
     "mappings": {
       "default": {
         "default": "paragraph separator"
       }
-    },
-    "key": "2029"
+    }
   },
   {
-    "category": "Cf",
+    "key": "202A",
     "mappings": {
       "default": {
         "default": "left to right embedding"
       }
-    },
-    "key": "202A"
+    }
   },
   {
-    "category": "Cf",
+    "key": "202B",
     "mappings": {
       "default": {
         "default": "right to left embedding"
       }
-    },
-    "key": "202B"
+    }
   },
   {
-    "category": "Cf",
+    "key": "202C",
     "mappings": {
       "default": {
         "default": "pop directional formatting"
       }
-    },
-    "key": "202C"
+    }
   },
   {
-    "category": "Cf",
+    "key": "202D",
     "mappings": {
       "default": {
         "default": "left to right override"
       }
-    },
-    "key": "202D"
+    }
   },
   {
-    "category": "Cf",
+    "key": "202E",
     "mappings": {
       "default": {
         "default": "right to left override"
       }
-    },
-    "key": "202E"
+    }
   },
   {
-    "category": "Zs",
+    "key": "202F",
     "mappings": {
       "default": {
         "default": "narrow no break space"
       }
-    },
-    "key": "202F"
+    }
   },
   {
-    "category": "Zs",
+    "key": "205F",
     "mappings": {
       "default": {
         "default": "medium mathematical space"
       }
-    },
-    "key": "205F"
+    }
   },
   {
-    "category": "Cf",
+    "key": "2060",
     "mappings": {
       "default": {
         "default": "word joiner"
       }
-    },
-    "key": "2060"
+    }
   },
   {
-    "category": "Cf",
+    "key": "2061",
     "mappings": {
       "default": {
         "default": "of",
         "alternative": "function application"
       }
-    },
-    "key": "2061"
+    }
   },
   {
-    "category": "Cf",
+    "key": "2062",
     "mappings": {
       "default": {
         "default": "times",
         "alternative": "invisible times"
       }
-    },
-    "key": "2062"
+    }
   },
   {
-    "category": "Cf",
+    "key": "2063",
     "mappings": {
       "default": {
         "default": "comma",
         "alternative": "invisible separator"
       }
-    },
-    "key": "2063"
+    }
   },
   {
-    "category": "Cf",
+    "key": "2064",
     "mappings": {
       "default": {
         "default": "plus",
         "alternative": "invisible plus"
       }
-    },
-    "key": "2064"
+    }
   },
   {
-    "category": "Cf",
+    "key": "206A",
     "mappings": {
       "default": {
         "default": "inhibit symmetric swapping"
       }
-    },
-    "key": "206A"
+    }
   },
   {
-    "category": "Cf",
+    "key": "206B",
     "mappings": {
       "default": {
         "default": "activate symmetric swapping"
       }
-    },
-    "key": "206B"
+    }
   },
   {
-    "category": "Cf",
+    "key": "206E",
     "mappings": {
       "default": {
         "default": "national digit shapes"
       }
-    },
-    "key": "206E"
+    }
   },
   {
-    "category": "Cf",
+    "key": "206F",
     "mappings": {
       "default": {
         "default": "nominal digit shapes"
       }
-    },
-    "key": "206F"
+    }
   },
   {
-    "category": "Cf",
+    "key": "FEFF",
     "mappings": {
       "default": {
         "default": "zero width no break space",
         "alternative": "byte order mark"
       }
-    },
-    "key": "FEFF"
+    }
   },
   {
-    "category": "Cf",
+    "key": "FFF9",
     "mappings": {
       "default": {
         "default": "interlinear annotation anchor"
       }
-    },
-    "key": "FFF9"
+    }
   },
   {
-    "category": "Cf",
+    "key": "FFFA",
     "mappings": {
       "default": {
         "default": "interlinear annotation separator"
       }
-    },
-    "key": "FFFA"
+    }
   },
   {
-    "category": "Cf",
+    "key": "FFFB",
     "mappings": {
       "default": {
         "default": "interlinear annotation terminator"
       }
-    },
-    "key": "FFFB"
+    }
   }
 ]

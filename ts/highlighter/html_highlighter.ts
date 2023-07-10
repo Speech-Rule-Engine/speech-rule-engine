@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
+import * as DomUtil from '../common/dom_util.js';
 
-import { AbstractHighlighter, Highlight } from './abstract_highlighter';
+import { AbstractHighlighter, Highlight } from './abstract_highlighter.js';
 
 export class HtmlHighlighter extends AbstractHighlighter {
   /**

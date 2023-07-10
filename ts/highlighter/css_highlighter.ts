@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AbstractHighlighter, Highlight } from './abstract_highlighter';
+import { AbstractHighlighter, Highlight } from './abstract_highlighter.js';
 
 export class CssHighlighter extends AbstractHighlighter {
   /**
@@ -38,9 +38,11 @@ export class CssHighlighter extends AbstractHighlighter {
       background: node.style.backgroundColor,
       foreground: node.style.color
     };
-    const color = this.colorString();
-    node.style.backgroundColor = color.background;
-    node.style.color = color.foreground;
+    if (!this.isHighlighted(node)) {
+      const color = this.colorString();
+      node.style.backgroundColor = color.background;
+      node.style.color = color.foreground;
+    }
     return info;
   }
 

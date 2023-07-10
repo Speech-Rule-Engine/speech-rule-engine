@@ -21,7 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Variables } from './variables';
+import { Variables } from './variables.js';
 
 declare let global: any;
 declare let require: (name: string) => any;
@@ -59,7 +59,7 @@ export default class SystemExternal {
    */
   public static xmldom = SystemExternal.documentSupported
     ? window
-    : SystemExternal.extRequire('xmldom-sre');
+    : SystemExternal.extRequire('@xmldom/xmldom');
 
   /**
    * DOM document implementation.

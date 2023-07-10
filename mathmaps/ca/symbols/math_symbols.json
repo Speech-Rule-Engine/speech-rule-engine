@@ -8,8 +8,7 @@
       "default": {
         "default": "factorial"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "0022",
@@ -17,18 +16,15 @@
       "default": {
         "default": "cometes"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "0023",
     "mappings": {
       "default": {
-        "default": "coixinet",
-        "defaultMP": "signo de número"
+        "default": "coixinet"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "0024",
@@ -36,8 +32,7 @@
       "default": {
         "default": "dòlar"
       }
-    },
-    "category": "Sc"
+    }
   },
   {
     "key": "0025",
@@ -45,8 +40,7 @@
       "default": {
         "default": "per cent"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "0026",
@@ -54,18 +48,15 @@
       "default": {
         "default": "ampersand"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "0027",
     "mappings": {
       "default": {
-        "default": "prima",
-        "defaultMP": "apóstrofo"
+        "default": "prima"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "002A",
@@ -73,8 +64,7 @@
       "default": {
         "default": "per"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "002B",
@@ -82,8 +72,7 @@
       "default": {
         "default": "més"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "002C",
@@ -91,8 +80,7 @@
       "default": {
         "default": "coma"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "002D",
@@ -100,8 +88,7 @@
       "default": {
         "default": "menys"
       }
-    },
-    "category": "Pd"
+    }
   },
   {
     "key": "002E",
@@ -109,8 +96,7 @@
       "default": {
         "default": "punt"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "002F",
@@ -118,8 +104,7 @@
       "default": {
         "default": "barra obliqua"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "003A",
@@ -127,8 +112,7 @@
       "default": {
         "default": "dos punts"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "003B",
@@ -136,8 +120,7 @@
       "default": {
         "default": "punt i coma"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "003C",
@@ -145,8 +128,7 @@
       "default": {
         "default": "menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "003D",
@@ -154,8 +136,7 @@
       "default": {
         "default": "igual"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "003E",
@@ -163,18 +144,15 @@
       "default": {
         "default": "ajor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "003F",
     "mappings": {
       "default": {
-        "default": "interrogació dreta",
-        "defaultMP": "cierra interrogación"
+        "default": "interrogació dreta"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "0040",
@@ -182,8 +160,7 @@
       "default": {
         "default": "arrova"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "005C",
@@ -191,8 +168,7 @@
       "default": {
         "default": "contrabarra"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "005E",
@@ -200,8 +176,7 @@
       "default": {
         "default": "circumflex"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "005F",
@@ -209,8 +184,7 @@
       "default": {
         "default": "subratllat"
       }
-    },
-    "category": "Pc"
+    }
   },
   {
     "key": "0060",
@@ -218,8 +192,7 @@
       "default": {
         "default": "accent greu"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "007C",
@@ -227,8 +200,7 @@
       "default": {
         "default": "barra vertical"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "007E",
@@ -236,18 +208,15 @@
       "default": {
         "default": "titlla"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "00A1",
     "mappings": {
       "default": {
-        "default": "admiració esquerra",
-        "defaultMP": "abre admiración"
+        "default": "admiració esquerra"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "00A2",
@@ -255,8 +224,7 @@
       "default": {
         "default": "cèntim"
       }
-    },
-    "category": "Sc"
+    }
   },
   {
     "key": "00A3",
@@ -264,8 +232,7 @@
       "default": {
         "default": "lliura esterlina"
       }
-    },
-    "category": "Sc"
+    }
   },
   {
     "key": "00A4",
@@ -273,8 +240,7 @@
       "default": {
         "default": "moneda"
       }
-    },
-    "category": "Sc"
+    }
   },
   {
     "key": "00A5",
@@ -282,8 +248,7 @@
       "default": {
         "default": "ien"
       }
-    },
-    "category": "Sc"
+    }
   },
   {
     "key": "00A6",
@@ -291,8 +256,7 @@
       "default": {
         "default": "barra vertical partida"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "00A7",
@@ -300,8 +264,7 @@
       "default": {
         "default": "secció"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "00A8",
@@ -309,8 +272,7 @@
       "default": {
         "default": "dièresi"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "00A9",
@@ -318,8 +280,7 @@
       "default": {
         "default": "copyright"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "00AA",
@@ -327,18 +288,15 @@
       "default": {
         "default": "ordinal femení"
       }
-    },
-    "category": "Lo"
+    }
   },
   {
     "key": "00AB",
     "mappings": {
       "default": {
-        "default": "cometes angulars esquerra",
-        "defaultMP": "abre comillas angulares"
+        "default": "cometes angulars esquerra"
       }
-    },
-    "category": "Pi"
+    }
   },
   {
     "key": "00AC",
@@ -346,8 +304,7 @@
       "default": {
         "default": "negació"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "00AE",
@@ -355,8 +312,7 @@
       "default": {
         "default": "registrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "00AF",
@@ -364,8 +320,7 @@
       "default": {
         "default": "barra"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "00B0",
@@ -373,8 +328,7 @@
       "default": {
         "default": "grau"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "00B1",
@@ -382,8 +336,7 @@
       "default": {
         "default": "més menys"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "00B4",
@@ -391,8 +344,7 @@
       "default": {
         "default": "accent agut"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "00B5",
@@ -400,8 +352,7 @@
       "default": {
         "default": "micro"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00B6",
@@ -409,8 +360,7 @@
       "default": {
         "default": "paràgraf"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "00B7",
@@ -418,8 +368,7 @@
       "default": {
         "default": "punt mitjà"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "00B8",
@@ -427,8 +376,7 @@
       "default": {
         "default": "ce trencada"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "00BA",
@@ -436,28 +384,23 @@
       "default": {
         "default": "ordinal masculí"
       }
-    },
-    "category": "Lo"
+    }
   },
   {
     "key": "00BB",
     "mappings": {
       "default": {
-        "default": "cometes angulars dreta",
-        "defaultMP": "cierra comillas angulares"
+        "default": "cometes angulars dreta"
       }
-    },
-    "category": "Pf"
+    }
   },
   {
     "key": "00BF",
     "mappings": {
       "default": {
-        "default": "interrogació esquerra",
-        "defaultMP": "abre interrogación"
+        "default": "interrogació esquerra"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "00D7",
@@ -465,8 +408,7 @@
       "default": {
         "default": "per"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "00F7",
@@ -474,8 +416,7 @@
       "default": {
         "default": "dividit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "02B9",
@@ -483,8 +424,7 @@
       "default": {
         "default": "prima"
       }
-    },
-    "category": "Lm"
+    }
   },
   {
     "key": "02BA",
@@ -492,8 +432,7 @@
       "default": {
         "default": "dos prima"
       }
-    },
-    "category": "Lm"
+    }
   },
   {
     "key": "02D8",
@@ -501,8 +440,7 @@
       "default": {
         "default": "breu"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "02D9",
@@ -510,8 +448,7 @@
       "default": {
         "default": "punt en superescrit"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "02DA",
@@ -519,8 +456,7 @@
       "default": {
         "default": "anell en superescrit"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "02DB",
@@ -528,8 +464,7 @@
       "default": {
         "default": "ogonek"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "02DC",
@@ -537,8 +472,7 @@
       "default": {
         "default": "titlla"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "02DD",
@@ -546,8 +480,7 @@
       "default": {
         "default": "doble accent agut"
       }
-    },
-    "category": "Sk"
+    }
   },
   {
     "key": "2010",
@@ -555,11 +488,9 @@
       "default": {
         "default": "menys"
       }
-    },
-    "category": "Pd"
+    }
   },
   {
-    "category": "Pd",
     "key": "2011",
     "mappings": {
       "default": {
@@ -568,7 +499,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "2012",
     "mappings": {
       "default": {
@@ -582,8 +512,7 @@
       "default": {
         "default": "en ratlla"
       }
-    },
-    "category": "Pd"
+    }
   },
   {
     "key": "2014",
@@ -591,8 +520,7 @@
       "default": {
         "default": "en ratlla"
       }
-    },
-    "category": "Pd"
+    }
   },
   {
     "key": "2015",
@@ -600,8 +528,7 @@
       "default": {
         "default": "barra horitzontal"
       }
-    },
-    "category": "Pd"
+    }
   },
   {
     "key": "2016",
@@ -609,11 +536,9 @@
       "default": {
         "default": "doble barra vertical"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2017",
     "mappings": {
       "default": {
@@ -627,8 +552,7 @@
       "default": {
         "default": "cometa esquerra"
       }
-    },
-    "category": "Pi"
+    }
   },
   {
     "key": "2019",
@@ -636,8 +560,7 @@
       "default": {
         "default": "cometa dreta"
       }
-    },
-    "category": "Pf"
+    }
   },
   {
     "key": "201A",
@@ -645,11 +568,9 @@
       "default": {
         "default": "cometa sota 9"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
-    "category": "Pi",
     "key": "201B",
     "mappings": {
       "default": {
@@ -663,8 +584,7 @@
       "default": {
         "default": "doble cometa"
       }
-    },
-    "category": "Pi"
+    }
   },
   {
     "key": "201D",
@@ -672,8 +592,7 @@
       "default": {
         "default": "doble cometa dreta"
       }
-    },
-    "category": "Pf"
+    }
   },
   {
     "key": "201E",
@@ -681,11 +600,9 @@
       "default": {
         "default": "doble cometa sota 9"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
-    "category": "Pi",
     "key": "201F",
     "mappings": {
       "default": {
@@ -699,8 +616,7 @@
       "default": {
         "default": "daga"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2021",
@@ -708,8 +624,7 @@
       "default": {
         "default": "doble daga"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2022",
@@ -717,11 +632,9 @@
       "default": {
         "default": "bala"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2023",
     "mappings": {
       "default": {
@@ -730,7 +643,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2024",
     "mappings": {
       "default": {
@@ -744,8 +656,7 @@
       "default": {
         "default": "dos punts líder"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2026",
@@ -753,11 +664,9 @@
       "default": {
         "default": "punts suspensius"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2027",
     "mappings": {
       "default": {
@@ -771,8 +680,7 @@
       "default": {
         "default": "tant per miler"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2031",
@@ -780,8 +688,7 @@
       "default": {
         "default": "tant per deu mil"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2032",
@@ -789,8 +696,7 @@
       "default": {
         "default": "prima"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2033",
@@ -798,8 +704,7 @@
       "default": {
         "default": "dos prima"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2034",
@@ -807,8 +712,7 @@
       "default": {
         "default": "tres prima"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2035",
@@ -816,8 +720,7 @@
       "default": {
         "default": "accent greu"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2036",
@@ -825,11 +728,9 @@
       "default": {
         "default": "doble accent greu"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2037",
     "mappings": {
       "default": {
@@ -838,7 +739,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2038",
     "mappings": {
       "default": {
@@ -850,24 +750,19 @@
     "key": "2039",
     "mappings": {
       "default": {
-        "default": "cometes esquerra",
-        "defaultMP": "abre comillas"
+        "default": "cometes esquerra"
       }
-    },
-    "category": "Pi"
+    }
   },
   {
     "key": "203A",
     "mappings": {
       "default": {
-        "default": "cometes dreta",
-        "defaultMP": "cierra comillas"
+        "default": "cometes dreta"
       }
-    },
-    "category": "Pf"
+    }
   },
   {
-    "category": "Po",
     "key": "203B",
     "mappings": {
       "default": {
@@ -876,7 +771,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "203C",
     "mappings": {
       "default": {
@@ -885,7 +779,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "203D",
     "mappings": {
       "default": {
@@ -899,11 +792,9 @@
       "default": {
         "default": "barra superior"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Pc",
     "key": "203F",
     "mappings": {
       "default": {
@@ -917,8 +808,7 @@
       "default": {
         "default": "lligadura"
       }
-    },
-    "category": "Pc"
+    }
   },
   {
     "key": "2041",
@@ -926,11 +816,9 @@
       "default": {
         "default": "punt d'inserció"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2042",
     "mappings": {
       "default": {
@@ -944,8 +832,7 @@
       "default": {
         "default": "guió bala"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2044",
@@ -953,11 +840,9 @@
       "default": {
         "default": "barra de fracció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Po",
     "key": "2047",
     "mappings": {
       "default": {
@@ -966,7 +851,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2048",
     "mappings": {
       "default": {
@@ -975,7 +859,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2049",
     "mappings": {
       "default": {
@@ -984,7 +867,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "204B",
     "mappings": {
       "default": {
@@ -993,7 +875,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "204C",
     "mappings": {
       "default": {
@@ -1002,7 +883,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "204D",
     "mappings": {
       "default": {
@@ -1011,7 +891,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "204E",
     "mappings": {
       "default": {
@@ -1025,8 +904,7 @@
       "default": {
         "default": "punt i coma invertit"
       }
-    },
-    "category": "Po"
+    }
   },
   {
     "key": "2050",
@@ -1034,11 +912,9 @@
       "default": {
         "default": "tancament superior"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2051",
     "mappings": {
       "default": {
@@ -1047,7 +923,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2052",
     "mappings": {
       "default": {
@@ -1056,7 +931,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2053",
     "mappings": {
       "default": {
@@ -1065,7 +939,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "2054",
     "mappings": {
       "default": {
@@ -1074,7 +947,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2055",
     "mappings": {
       "default": {
@@ -1083,7 +955,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2056",
     "mappings": {
       "default": {
@@ -1097,11 +968,9 @@
       "default": {
         "default": "quatre prima"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Po",
     "key": "2058",
     "mappings": {
       "default": {
@@ -1110,7 +979,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "2059",
     "mappings": {
       "default": {
@@ -1119,7 +987,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "205A",
     "mappings": {
       "default": {
@@ -1128,7 +995,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "205B",
     "mappings": {
       "default": {
@@ -1137,7 +1003,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "205C",
     "mappings": {
       "default": {
@@ -1146,7 +1011,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "205D",
     "mappings": {
       "default": {
@@ -1155,7 +1019,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "205E",
     "mappings": {
       "default": {
@@ -1164,7 +1027,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "207A",
     "mappings": {
       "default": {
@@ -1173,7 +1035,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "207B",
     "mappings": {
       "default": {
@@ -1182,7 +1043,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "207C",
     "mappings": {
       "default": {
@@ -1191,7 +1051,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "207D",
     "mappings": {
       "default": {
@@ -1200,7 +1059,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "207E",
     "mappings": {
       "default": {
@@ -1209,7 +1067,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "208A",
     "mappings": {
       "default": {
@@ -1218,7 +1075,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "208B",
     "mappings": {
       "default": {
@@ -1227,7 +1083,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "208C",
     "mappings": {
       "default": {
@@ -1236,7 +1091,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "208D",
     "mappings": {
       "default": {
@@ -1245,7 +1099,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "208E",
     "mappings": {
       "default": {
@@ -1254,7 +1107,6 @@
     }
   },
   {
-    "category": "So",
     "key": "214A",
     "mappings": {
       "default": {
@@ -1263,7 +1115,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "214B",
     "mappings": {
       "default": {
@@ -1272,7 +1123,6 @@
     }
   },
   {
-    "category": "So",
     "key": "214C",
     "mappings": {
       "default": {
@@ -1281,7 +1131,6 @@
     }
   },
   {
-    "category": "So",
     "key": "214D",
     "mappings": {
       "default": {
@@ -1290,7 +1139,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "214E",
     "mappings": {
       "default": {
@@ -1304,8 +1152,7 @@
       "default": {
         "default": "per a tot"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2201",
@@ -1313,8 +1160,7 @@
       "default": {
         "default": "complementari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2203",
@@ -1322,8 +1168,7 @@
       "default": {
         "default": "existeix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2204",
@@ -1331,8 +1176,7 @@
       "default": {
         "default": "no existeix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2205",
@@ -1340,8 +1184,7 @@
       "default": {
         "default": "conjunt buit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2206",
@@ -1349,8 +1192,7 @@
       "default": {
         "default": "increment"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2208",
@@ -1358,8 +1200,7 @@
       "default": {
         "default": "pertanyent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2209",
@@ -1367,8 +1208,7 @@
       "default": {
         "default": "no pertanyent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "220A",
@@ -1376,8 +1216,7 @@
       "default": {
         "default": "pertanyent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "220B",
@@ -1385,8 +1224,7 @@
       "default": {
         "default": "comprèn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "220C",
@@ -1394,8 +1232,7 @@
       "default": {
         "default": "no comprèn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "220D",
@@ -1403,8 +1240,7 @@
       "default": {
         "default": "comprèn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "220E",
@@ -1412,8 +1248,7 @@
       "default": {
         "default": "fi de demostració"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "220F",
@@ -1421,8 +1256,7 @@
       "default": {
         "default": "producte"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2210",
@@ -1430,8 +1264,7 @@
       "default": {
         "default": "coproducte"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2211",
@@ -1439,8 +1272,7 @@
       "default": {
         "default": "sumatori"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2212",
@@ -1448,8 +1280,7 @@
       "default": {
         "default": "menys"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2213",
@@ -1457,8 +1288,7 @@
       "default": {
         "default": "menys més"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2214",
@@ -1466,8 +1296,7 @@
       "default": {
         "default": "punt més"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2215",
@@ -1475,8 +1304,7 @@
       "default": {
         "default": "barra de divisió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2216",
@@ -1484,8 +1312,7 @@
       "default": {
         "default": "menys"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2217",
@@ -1493,8 +1320,7 @@
       "default": {
         "default": "asterisc"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2218",
@@ -1502,8 +1328,7 @@
       "default": {
         "default": "composició"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2219",
@@ -1511,8 +1336,7 @@
       "default": {
         "default": "bala"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "221A",
@@ -1520,8 +1344,7 @@
       "default": {
         "default": "arrel"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "221B",
@@ -1529,8 +1352,7 @@
       "default": {
         "default": "arrel cúbica"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "221C",
@@ -1538,8 +1360,7 @@
       "default": {
         "default": "arrel quarta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "221D",
@@ -1547,8 +1368,7 @@
       "default": {
         "default": "proporcional a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "221E",
@@ -1556,8 +1376,7 @@
       "default": {
         "default": "infinit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "221F",
@@ -1565,8 +1384,7 @@
       "default": {
         "default": "angle recte"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2220",
@@ -1574,8 +1392,7 @@
       "default": {
         "default": "angle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2221",
@@ -1583,8 +1400,7 @@
       "default": {
         "default": "angle mesurat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2222",
@@ -1592,8 +1408,7 @@
       "default": {
         "default": "angle esfèric"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2223",
@@ -1601,8 +1416,7 @@
       "default": {
         "default": "divideix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2224",
@@ -1610,8 +1424,7 @@
       "default": {
         "default": "no divideix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2225",
@@ -1619,8 +1432,7 @@
       "default": {
         "default": "paral·lela a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2226",
@@ -1628,8 +1440,7 @@
       "default": {
         "default": "no paral·lela a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2227",
@@ -1637,8 +1448,7 @@
       "default": {
         "default": "i"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2228",
@@ -1646,8 +1456,7 @@
       "default": {
         "default": "o"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2229",
@@ -1655,8 +1464,7 @@
       "default": {
         "default": "intersecció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "222A",
@@ -1664,8 +1472,7 @@
       "default": {
         "default": "unió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "222B",
@@ -1673,8 +1480,7 @@
       "default": {
         "default": "integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "222C",
@@ -1682,8 +1488,7 @@
       "default": {
         "default": "integral doble"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "222D",
@@ -1691,8 +1496,7 @@
       "default": {
         "default": "integral triple"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "222E",
@@ -1700,8 +1504,7 @@
       "default": {
         "default": "integral de contorn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "222F",
@@ -1709,8 +1512,7 @@
       "default": {
         "default": "integral de superfície"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2230",
@@ -1718,8 +1520,7 @@
       "default": {
         "default": "integral de volum"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2231",
@@ -1727,8 +1528,7 @@
       "default": {
         "default": "integral de contorn en sentit horari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2232",
@@ -1736,8 +1536,7 @@
       "default": {
         "default": "integral de contorn en sentit horari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2233",
@@ -1745,8 +1544,7 @@
       "default": {
         "default": "integral de contorn en sentit antihorari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2234",
@@ -1754,8 +1552,7 @@
       "default": {
         "default": "per tant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2235",
@@ -1763,8 +1560,7 @@
       "default": {
         "default": "perquè"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2236",
@@ -1772,8 +1568,7 @@
       "default": {
         "default": "raó"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2237",
@@ -1781,8 +1576,7 @@
       "default": {
         "default": "proporció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2238",
@@ -1790,8 +1584,7 @@
       "default": {
         "default": "punt menys"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2239",
@@ -1799,8 +1592,7 @@
       "default": {
         "default": "excés"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "223A",
@@ -1808,8 +1600,7 @@
       "default": {
         "default": "proporció geomètrica"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "223B",
@@ -1817,8 +1608,7 @@
       "default": {
         "default": "homotècia"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "223C",
@@ -1826,8 +1616,7 @@
       "default": {
         "default": "titlla"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "223D",
@@ -1835,8 +1624,7 @@
       "default": {
         "default": "titlla invertida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "223E",
@@ -1844,8 +1632,7 @@
       "default": {
         "default": "s horitzontal invertida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "223F",
@@ -1853,8 +1640,7 @@
       "default": {
         "default": "sinusoide"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2240",
@@ -1862,8 +1648,7 @@
       "default": {
         "default": "producte de garlanda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2241",
@@ -1871,8 +1656,7 @@
       "default": {
         "default": "no titlla"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2242",
@@ -1880,8 +1664,7 @@
       "default": {
         "default": "menys accent"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2243",
@@ -1889,8 +1672,7 @@
       "default": {
         "default": "asimptòticament igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2244",
@@ -1898,8 +1680,7 @@
       "default": {
         "default": "no asimptòticament igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2245",
@@ -1907,8 +1688,7 @@
       "default": {
         "default": "aproximadament igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2246",
@@ -1916,8 +1696,7 @@
       "default": {
         "default": "aproximat però no igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2247",
@@ -1925,18 +1704,15 @@
       "default": {
         "default": "no aproximat a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2248",
     "mappings": {
       "default": {
-        "default": "aproximat",
-        "defaultMP": "casi igual a"
+        "default": "aproximat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2249",
@@ -1944,8 +1720,7 @@
       "default": {
         "default": "no és gairebé igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "224A",
@@ -1953,8 +1728,7 @@
       "default": {
         "default": "igual o gairebé igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "224B",
@@ -1962,8 +1736,7 @@
       "default": {
         "default": "triple titlla"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "224C",
@@ -1971,8 +1744,7 @@
       "default": {
         "default": "tot igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "224D",
@@ -1980,8 +1752,7 @@
       "default": {
         "default": "equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "224E",
@@ -1989,8 +1760,7 @@
       "default": {
         "default": "geomètricament equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "224F",
@@ -1998,8 +1768,7 @@
       "default": {
         "default": "diferència entre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2250",
@@ -2007,8 +1776,7 @@
       "default": {
         "default": "s'acosta al límit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2251",
@@ -2016,8 +1784,7 @@
       "default": {
         "default": "geomètricament igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2252",
@@ -2025,8 +1792,7 @@
       "default": {
         "default": "aproximadament igual a o imatge de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2253",
@@ -2034,8 +1800,7 @@
       "default": {
         "default": "imatge d'o aproximadament igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2254",
@@ -2043,8 +1808,7 @@
       "default": {
         "default": "dos punts igual"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2255",
@@ -2052,8 +1816,7 @@
       "default": {
         "default": "igual dos punts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2256",
@@ -2061,8 +1824,7 @@
       "default": {
         "default": "igual incloent-hi anell"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2257",
@@ -2070,8 +1832,7 @@
       "default": {
         "default": "igual anell a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2258",
@@ -2079,8 +1840,7 @@
       "default": {
         "default": "correspon a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2259",
@@ -2088,8 +1848,7 @@
       "default": {
         "default": "estima a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "225A",
@@ -2097,8 +1856,7 @@
       "default": {
         "default": "equiangular amb"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "225B",
@@ -2106,8 +1864,7 @@
       "default": {
         "default": "igual amb estrella"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "225C",
@@ -2115,8 +1872,7 @@
       "default": {
         "default": "igual amb delta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "225D",
@@ -2124,8 +1880,7 @@
       "default": {
         "default": "igual per definició a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "225E",
@@ -2133,8 +1888,7 @@
       "default": {
         "default": "mesurat per"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "225F",
@@ -2142,18 +1896,15 @@
       "default": {
         "default": "igual amb interrogant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2260",
     "mappings": {
       "default": {
-        "default": "no és igual a",
-        "defaultMP": "distinto de"
+        "default": "no és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2261",
@@ -2161,8 +1912,7 @@
       "default": {
         "default": "idèntic a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2262",
@@ -2170,8 +1920,7 @@
       "default": {
         "default": "no és idèntic a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2263",
@@ -2179,8 +1928,7 @@
       "default": {
         "default": "estrictament equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2264",
@@ -2188,8 +1936,7 @@
       "default": {
         "default": "menor o igual que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2265",
@@ -2197,8 +1944,7 @@
       "default": {
         "default": "major o igual que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2266",
@@ -2206,8 +1952,7 @@
       "default": {
         "default": "menor o igual que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2267",
@@ -2215,8 +1960,7 @@
       "default": {
         "default": "major o igual que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2268",
@@ -2224,8 +1968,7 @@
       "default": {
         "default": "estrictament menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2269",
@@ -2233,8 +1976,7 @@
       "default": {
         "default": "estrictament més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "226A",
@@ -2242,8 +1984,7 @@
       "default": {
         "default": "molt menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "226B",
@@ -2251,8 +1992,7 @@
       "default": {
         "default": "molt més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "226C",
@@ -2260,8 +2000,7 @@
       "default": {
         "default": "entre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "226D",
@@ -2269,8 +2008,7 @@
       "default": {
         "default": "no equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "226E",
@@ -2278,8 +2016,7 @@
       "default": {
         "default": "no menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "226F",
@@ -2287,8 +2024,7 @@
       "default": {
         "default": "no més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2270",
@@ -2296,8 +2032,7 @@
       "default": {
         "default": "no menor ni igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2271",
@@ -2305,8 +2040,7 @@
       "default": {
         "default": "no major ni igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2272",
@@ -2314,8 +2048,7 @@
       "default": {
         "default": "menor o equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2273",
@@ -2323,8 +2056,7 @@
       "default": {
         "default": "major o equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2274",
@@ -2332,8 +2064,7 @@
       "default": {
         "default": "no menor ni equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2275",
@@ -2341,8 +2072,7 @@
       "default": {
         "default": "no major ni equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2276",
@@ -2350,8 +2080,7 @@
       "default": {
         "default": "menor o major que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2277",
@@ -2359,8 +2088,7 @@
       "default": {
         "default": "major o menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2278",
@@ -2368,8 +2096,7 @@
       "default": {
         "default": "no menor ni més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2279",
@@ -2377,8 +2104,7 @@
       "default": {
         "default": "no major ni menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "227A",
@@ -2386,8 +2112,7 @@
       "default": {
         "default": "precedeix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "227B",
@@ -2395,8 +2120,7 @@
       "default": {
         "default": "segueix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "227C",
@@ -2404,8 +2128,7 @@
       "default": {
         "default": "precedeix o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "227D",
@@ -2413,8 +2136,7 @@
       "default": {
         "default": "segueix o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "227E",
@@ -2422,8 +2144,7 @@
       "default": {
         "default": "precedeix o és equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "227F",
@@ -2431,8 +2152,7 @@
       "default": {
         "default": "segueix o és equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2280",
@@ -2440,8 +2160,7 @@
       "default": {
         "default": "no precedeix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2281",
@@ -2449,8 +2168,7 @@
       "default": {
         "default": "no segueix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2282",
@@ -2458,8 +2176,7 @@
       "default": {
         "default": "inclòs a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2283",
@@ -2467,8 +2184,7 @@
       "default": {
         "default": "conté"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2284",
@@ -2476,8 +2192,7 @@
       "default": {
         "default": "no inclòs en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2285",
@@ -2485,8 +2200,7 @@
       "default": {
         "default": "no conté"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2286",
@@ -2494,8 +2208,7 @@
       "default": {
         "default": "inclòs o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2287",
@@ -2503,8 +2216,7 @@
       "default": {
         "default": "conté o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2288",
@@ -2512,8 +2224,7 @@
       "default": {
         "default": "no inclòs ni igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2289",
@@ -2521,8 +2232,7 @@
       "default": {
         "default": "no conté ni és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "228A",
@@ -2530,8 +2240,7 @@
       "default": {
         "default": "inclòs estrictament en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "228B",
@@ -2539,8 +2248,7 @@
       "default": {
         "default": "conté estrictament"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "228C",
@@ -2548,8 +2256,7 @@
       "default": {
         "default": "família de conjunts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "228D",
@@ -2557,8 +2264,7 @@
       "default": {
         "default": "producte de família de conjunts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "228E",
@@ -2566,8 +2272,7 @@
       "default": {
         "default": "unió de família de conjunts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "228F",
@@ -2575,8 +2280,7 @@
       "default": {
         "default": "imatge quadrada de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2290",
@@ -2584,8 +2288,7 @@
       "default": {
         "default": "original quadrat de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2291",
@@ -2593,8 +2296,7 @@
       "default": {
         "default": "imatge quadrada d'o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2292",
@@ -2602,8 +2304,7 @@
       "default": {
         "default": "original quadrat d'o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2293",
@@ -2611,8 +2312,7 @@
       "default": {
         "default": "intersecció quadrada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2294",
@@ -2620,8 +2320,7 @@
       "default": {
         "default": "unió quadrada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2295",
@@ -2629,8 +2328,7 @@
       "default": {
         "default": "més en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2296",
@@ -2638,8 +2336,7 @@
       "default": {
         "default": "menys en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2297",
@@ -2647,8 +2344,7 @@
       "default": {
         "default": "per en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2298",
@@ -2656,8 +2352,7 @@
       "default": {
         "default": "barra en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2299",
@@ -2665,8 +2360,7 @@
       "default": {
         "default": "punt en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "229A",
@@ -2674,8 +2368,7 @@
       "default": {
         "default": "anell en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "229B",
@@ -2683,8 +2376,7 @@
       "default": {
         "default": "asterisc en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "229C",
@@ -2692,8 +2384,7 @@
       "default": {
         "default": "igual en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "229D",
@@ -2701,8 +2392,7 @@
       "default": {
         "default": "menys en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "229E",
@@ -2710,8 +2400,7 @@
       "default": {
         "default": "més en quadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "229F",
@@ -2719,8 +2408,7 @@
       "default": {
         "default": "menys en quadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A0",
@@ -2728,8 +2416,7 @@
       "default": {
         "default": "vegades en quadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A1",
@@ -2737,8 +2424,7 @@
       "default": {
         "default": "punt en quadrat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A2",
@@ -2746,8 +2432,7 @@
       "default": {
         "default": "t horitzontal cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A3",
@@ -2755,8 +2440,7 @@
       "default": {
         "default": "t horitzontal cap a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A4",
@@ -2764,8 +2448,7 @@
       "default": {
         "default": "perpendicular"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A5",
@@ -2773,8 +2456,7 @@
       "default": {
         "default": "perpendicular invertida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A6",
@@ -2782,8 +2464,7 @@
       "default": {
         "default": "afirmació"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A7",
@@ -2791,8 +2472,7 @@
       "default": {
         "default": "modela"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A8",
@@ -2800,8 +2480,7 @@
       "default": {
         "default": "veritable"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22A9",
@@ -2809,8 +2488,7 @@
       "default": {
         "default": "obliga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22AA",
@@ -2818,8 +2496,7 @@
       "default": {
         "default": "triple barra vertical torniquet dret"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22AB",
@@ -2827,8 +2504,7 @@
       "default": {
         "default": "doble barra vertical doble torniquet dret"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22AC",
@@ -2836,8 +2512,7 @@
       "default": {
         "default": "no prova"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22AD",
@@ -2845,8 +2520,7 @@
       "default": {
         "default": "0"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22AE",
@@ -2854,8 +2528,7 @@
       "default": {
         "default": "no obliga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22AF",
@@ -2863,8 +2536,7 @@
       "default": {
         "default": "doble barra vertical doble torniquet dret negada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B0",
@@ -2872,8 +2544,7 @@
       "default": {
         "default": "precedeix respecte de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B1",
@@ -2881,8 +2552,7 @@
       "default": {
         "default": "segueix respecte de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B2",
@@ -2890,8 +2560,7 @@
       "default": {
         "default": "subgrup normal de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B3",
@@ -2899,8 +2568,7 @@
       "default": {
         "default": "conté com a subgrup normal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B4",
@@ -2908,8 +2576,7 @@
       "default": {
         "default": "subgrup normal o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B5",
@@ -2917,8 +2584,7 @@
       "default": {
         "default": "conté com a subgrup normal o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B6",
@@ -2926,8 +2592,7 @@
       "default": {
         "default": "original de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B7",
@@ -2935,8 +2600,7 @@
       "default": {
         "default": "imatge de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B8",
@@ -2944,8 +2608,7 @@
       "default": {
         "default": "multifunció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22B9",
@@ -2953,8 +2616,7 @@
       "default": {
         "default": "matriu hermitiana conjugada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22BA",
@@ -2962,8 +2624,7 @@
       "default": {
         "default": "interpola"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22BB",
@@ -2971,8 +2632,7 @@
       "default": {
         "default": "o excloent"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22BC",
@@ -2980,8 +2640,7 @@
       "default": {
         "default": "no i"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22BD",
@@ -2989,8 +2648,7 @@
       "default": {
         "default": "no o"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22BF",
@@ -2998,8 +2656,7 @@
       "default": {
         "default": "triangle rectangle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C0",
@@ -3007,8 +2664,7 @@
       "default": {
         "default": "i"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C1",
@@ -3016,8 +2672,7 @@
       "default": {
         "default": "o"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C2",
@@ -3025,8 +2680,7 @@
       "default": {
         "default": "intersecció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C3",
@@ -3034,8 +2688,7 @@
       "default": {
         "default": "unió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C4",
@@ -3043,8 +2696,7 @@
       "default": {
         "default": "operador diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C5",
@@ -3052,8 +2704,7 @@
       "default": {
         "default": "punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C6",
@@ -3061,8 +2712,7 @@
       "default": {
         "default": "estrella"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C7",
@@ -3070,8 +2720,7 @@
       "default": {
         "default": "dividit per"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C8",
@@ -3079,8 +2728,7 @@
       "default": {
         "default": "monyo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22C9",
@@ -3088,8 +2736,7 @@
       "default": {
         "default": "factor normal esquerre producte semidirecte"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22CA",
@@ -3097,8 +2744,7 @@
       "default": {
         "default": "factor normal dret producte semidirecte"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22CB",
@@ -3106,8 +2752,7 @@
       "default": {
         "default": "producte semidirecte esquerre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22CC",
@@ -3115,8 +2760,7 @@
       "default": {
         "default": "producte semidirecte dret"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22CD",
@@ -3124,8 +2768,7 @@
       "default": {
         "default": "titlla invertida igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22CE",
@@ -3133,8 +2776,7 @@
       "default": {
         "default": "o arrissada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22CF",
@@ -3142,8 +2784,7 @@
       "default": {
         "default": "i arrissada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D0",
@@ -3151,8 +2792,7 @@
       "default": {
         "default": "doble inclòs"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D1",
@@ -3160,8 +2800,7 @@
       "default": {
         "default": "doble conté"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D2",
@@ -3169,8 +2808,7 @@
       "default": {
         "default": "doble intersecció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D3",
@@ -3178,8 +2816,7 @@
       "default": {
         "default": "doble unió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D4",
@@ -3187,8 +2824,7 @@
       "default": {
         "default": "forca"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D5",
@@ -3196,8 +2832,7 @@
       "default": {
         "default": "paral·lela o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D6",
@@ -3205,8 +2840,7 @@
       "default": {
         "default": "menor que amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D7",
@@ -3214,8 +2848,7 @@
       "default": {
         "default": "major que amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D8",
@@ -3223,8 +2856,7 @@
       "default": {
         "default": "molt menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22D9",
@@ -3232,8 +2864,7 @@
       "default": {
         "default": "molt més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22DA",
@@ -3241,8 +2872,7 @@
       "default": {
         "default": "menor igual o major que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22DB",
@@ -3250,8 +2880,7 @@
       "default": {
         "default": "major igual o inferior que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22DC",
@@ -3259,8 +2888,7 @@
       "default": {
         "default": "menor o igual que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22DD",
@@ -3268,8 +2896,7 @@
       "default": {
         "default": "major o igual que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22DE",
@@ -3277,8 +2904,7 @@
       "default": {
         "default": "precedeix o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22DF",
@@ -3286,8 +2912,7 @@
       "default": {
         "default": "segueix o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E0",
@@ -3295,8 +2920,7 @@
       "default": {
         "default": "no precedeix ni és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E1",
@@ -3304,8 +2928,7 @@
       "default": {
         "default": "no segueix ni és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E2",
@@ -3313,8 +2936,7 @@
       "default": {
         "default": "no és imatge quadrada ni igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E3",
@@ -3322,8 +2944,7 @@
       "default": {
         "default": "no és original quadrada ni igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E4",
@@ -3331,8 +2952,7 @@
       "default": {
         "default": "imatge quadrada estricta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E5",
@@ -3340,8 +2960,7 @@
       "default": {
         "default": "original quadrada estricta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E6",
@@ -3349,8 +2968,7 @@
       "default": {
         "default": "menor que no equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E7",
@@ -3358,8 +2976,7 @@
       "default": {
         "default": "més gran que no equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E8",
@@ -3367,8 +2984,7 @@
       "default": {
         "default": "precedeix no equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22E9",
@@ -3376,8 +2992,7 @@
       "default": {
         "default": "segueix no equivalent a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22EA",
@@ -3385,8 +3000,7 @@
       "default": {
         "default": "no subgrup normal de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22EB",
@@ -3394,8 +3008,7 @@
       "default": {
         "default": "no conté com a subgrup normal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22EC",
@@ -3403,8 +3016,7 @@
       "default": {
         "default": "no és subgrup normal ni igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22ED",
@@ -3412,8 +3024,7 @@
       "default": {
         "default": "no conté com a subgrup normal ni és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22EE",
@@ -3421,8 +3032,7 @@
       "default": {
         "default": "punts suspensius verticals"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22EF",
@@ -3430,8 +3040,7 @@
       "default": {
         "default": "punts suspensius alts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F0",
@@ -3439,8 +3048,7 @@
       "default": {
         "default": "punts suspensius diagonals pujant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F1",
@@ -3448,8 +3056,7 @@
       "default": {
         "default": "punts suspensius diagonals baixant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F2",
@@ -3457,8 +3064,7 @@
       "default": {
         "default": "pertany amb traç horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F3",
@@ -3466,8 +3072,7 @@
       "default": {
         "default": "pertany amb barra vertical a la fi de ratlla horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F4",
@@ -3475,8 +3080,7 @@
       "default": {
         "default": "pertany en petit amb traç vertical"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F5",
@@ -3484,8 +3088,7 @@
       "default": {
         "default": "pertany amb punt amunt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F6",
@@ -3493,8 +3096,7 @@
       "default": {
         "default": "pertany amb barra dalt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F7",
@@ -3502,8 +3104,7 @@
       "default": {
         "default": "pertanyent subratllat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F8",
@@ -3511,8 +3112,7 @@
       "default": {
         "default": "pertanyent subratllat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22F9",
@@ -3520,8 +3120,7 @@
       "default": {
         "default": "pertany amb dos traços horitzontals"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22FA",
@@ -3529,8 +3128,7 @@
       "default": {
         "default": "conté o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22FB",
@@ -3538,8 +3136,7 @@
       "default": {
         "default": "conté amb marca"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22FC",
@@ -3547,8 +3144,7 @@
       "default": {
         "default": "conté amb marca"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22FD",
@@ -3556,8 +3152,7 @@
       "default": {
         "default": "conté amb barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22FE",
@@ -3565,8 +3160,7 @@
       "default": {
         "default": "pertanyent amb barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "22FF",
@@ -3574,8 +3168,7 @@
       "default": {
         "default": "z anotació associació de bossa"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2300",
@@ -3583,8 +3176,7 @@
       "default": {
         "default": "diàmetre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2302",
@@ -3592,8 +3184,7 @@
       "default": {
         "default": "casa"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2305",
@@ -3601,8 +3192,7 @@
       "default": {
         "default": "en projectivitat amb"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2306",
@@ -3610,11 +3200,9 @@
       "default": {
         "default": "en perspectivitat amb"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2307",
     "mappings": {
       "default": {
@@ -3628,11 +3216,9 @@
       "default": {
         "default": "no invertit"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2311",
     "mappings": {
       "default": {
@@ -3646,8 +3232,7 @@
       "default": {
         "default": "arc"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2313",
@@ -3655,11 +3240,9 @@
       "default": {
         "default": "segment"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2314",
     "mappings": {
       "default": {
@@ -3668,7 +3251,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2795",
     "mappings": {
       "default": {
@@ -3677,7 +3259,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2796",
     "mappings": {
       "default": {
@@ -3686,7 +3267,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2797",
     "mappings": {
       "default": {
@@ -3695,7 +3275,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B0",
     "mappings": {
       "default": {
@@ -3704,7 +3283,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BF",
     "mappings": {
       "default": {
@@ -3718,8 +3296,7 @@
       "default": {
         "default": "triangle tancant triangle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27C2",
@@ -3727,8 +3304,7 @@
       "default": {
         "default": "perpendicular"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27C3",
@@ -3736,8 +3312,7 @@
       "default": {
         "default": "inclòs a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27C4",
@@ -3745,8 +3320,7 @@
       "default": {
         "default": "conté"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27C7",
@@ -3754,8 +3328,7 @@
       "default": {
         "default": "punt en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27C8",
@@ -3763,8 +3336,7 @@
       "default": {
         "default": "enrere tall abans de subconjunt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27C9",
@@ -3772,8 +3344,7 @@
       "default": {
         "default": "sobreconjunt abans de tall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27CA",
@@ -3781,11 +3352,9 @@
       "default": {
         "default": "barra vertical amb cop horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "27CB",
     "mappings": {
       "default": {
@@ -3799,11 +3368,9 @@
       "default": {
         "default": "divisió llarga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "27CD",
     "mappings": {
       "default": {
@@ -3812,7 +3379,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27CE",
     "mappings": {
       "default": {
@@ -3821,7 +3387,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27CF",
     "mappings": {
       "default": {
@@ -3830,7 +3395,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27D0",
     "mappings": {
       "default": {
@@ -3844,8 +3408,7 @@
       "default": {
         "default": "y amb punt interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D2",
@@ -3853,8 +3416,7 @@
       "default": {
         "default": "element d'obertura cap amunt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D3",
@@ -3862,8 +3424,7 @@
       "default": {
         "default": "angle inferior dret amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D4",
@@ -3871,8 +3432,7 @@
       "default": {
         "default": "angle inferior esquerre amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D5",
@@ -3880,8 +3440,7 @@
       "default": {
         "default": "esquerre exterior uneix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D6",
@@ -3889,8 +3448,7 @@
       "default": {
         "default": "dret exterior uneix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D7",
@@ -3898,8 +3456,7 @@
       "default": {
         "default": "ple exterior uneix"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D8",
@@ -3907,8 +3464,7 @@
       "default": {
         "default": "perpendicular inversa"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27D9",
@@ -3916,8 +3472,7 @@
       "default": {
         "default": "perpendicular"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27DA",
@@ -3925,8 +3480,7 @@
       "default": {
         "default": "esquerre i dret doble torniquet"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27DB",
@@ -3934,8 +3488,7 @@
       "default": {
         "default": "doble T horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27DC",
@@ -3943,8 +3496,7 @@
       "default": {
         "default": "multifunció per l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27DD",
@@ -3952,8 +3504,7 @@
       "default": {
         "default": "t horitzontal dreta llarga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27DE",
@@ -3961,8 +3512,7 @@
       "default": {
         "default": "t horitzontal esquerra llarga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27DF",
@@ -3970,8 +3520,7 @@
       "default": {
         "default": "perpendicular inversa amb cercle a dalt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27E0",
@@ -3979,8 +3528,7 @@
       "default": {
         "default": "pastilla dividida per regla horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27E1",
@@ -3988,8 +3536,7 @@
       "default": {
         "default": "diamant còncau buit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27E2",
@@ -3997,8 +3544,7 @@
       "default": {
         "default": "diamant còncau amb tic-tac cap a esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27E3",
@@ -4006,8 +3552,7 @@
       "default": {
         "default": "diamant còncau amb tic-tac cap a dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27E4",
@@ -4015,8 +3560,7 @@
       "default": {
         "default": "quadrat amb tic-tac cap esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27E5",
@@ -4024,11 +3568,9 @@
       "default": {
         "default": "quadrat amb tic-tac cap a dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "292B",
     "mappings": {
       "default": {
@@ -4037,7 +3579,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292C",
     "mappings": {
       "default": {
@@ -4046,7 +3587,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2980",
     "mappings": {
       "default": {
@@ -4055,7 +3595,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2981",
     "mappings": {
       "default": {
@@ -4064,7 +3603,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2982",
     "mappings": {
       "default": {
@@ -4073,7 +3611,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2999",
     "mappings": {
       "default": {
@@ -4087,8 +3624,7 @@
       "default": {
         "default": "ziga-zaga en vertical"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B0",
@@ -4096,8 +3632,7 @@
       "default": {
         "default": "conjunt buit invertit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B1",
@@ -4105,8 +3640,7 @@
       "default": {
         "default": "conjunt buit amb barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B2",
@@ -4114,8 +3648,7 @@
       "default": {
         "default": "conjunt buit amb cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B5",
@@ -4123,8 +3656,7 @@
       "default": {
         "default": "cercle amb barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B6",
@@ -4132,8 +3664,7 @@
       "default": {
         "default": "barra en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B7",
@@ -4141,11 +3672,9 @@
       "default": {
         "default": "paral·leles en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29B8",
     "mappings": {
       "default": {
@@ -4159,11 +3688,9 @@
       "default": {
         "default": "perpendicular en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29BA",
     "mappings": {
       "default": {
@@ -4177,8 +3704,7 @@
       "default": {
         "default": "x superimpresa en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29BC",
@@ -4186,8 +3712,7 @@
       "default": {
         "default": "divisió girada en sentit antihorari en un cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29BE",
@@ -4195,8 +3720,7 @@
       "default": {
         "default": "bala buida en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29BF",
@@ -4204,8 +3728,7 @@
       "default": {
         "default": "bala en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29C0",
@@ -4213,8 +3736,7 @@
       "default": {
         "default": "menor que en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29C1",
@@ -4222,8 +3744,7 @@
       "default": {
         "default": "major que en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29C2",
@@ -4231,8 +3752,7 @@
       "default": {
         "default": "cercle amb cercle a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29C3",
@@ -4240,8 +3760,7 @@
       "default": {
         "default": "cercle amb dos traços horitzontals a la dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29C4",
@@ -4249,8 +3768,7 @@
       "default": {
         "default": "quadrat amb diagonal ascendent"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29C5",
@@ -4258,11 +3776,9 @@
       "default": {
         "default": "quadrat amb diagonal descendent"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29C6",
     "mappings": {
       "default": {
@@ -4271,7 +3787,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29C7",
     "mappings": {
       "default": {
@@ -4280,7 +3795,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29C8",
     "mappings": {
       "default": {
@@ -4294,11 +3808,9 @@
       "default": {
         "default": "dos quadrats units"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29CA",
     "mappings": {
       "default": {
@@ -4307,7 +3819,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29CB",
     "mappings": {
       "default": {
@@ -4316,7 +3827,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29CC",
     "mappings": {
       "default": {
@@ -4330,8 +3840,7 @@
       "default": {
         "default": "triangle amb serifs a la part inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29CE",
@@ -4339,8 +3848,7 @@
       "default": {
         "default": "triangle cap a la dreta sobre triangle cap a l'esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29CF",
@@ -4348,8 +3856,7 @@
       "default": {
         "default": "subgrup normal o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29D0",
@@ -4357,11 +3864,9 @@
       "default": {
         "default": "conté com a subgrup normal o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29D1",
     "mappings": {
       "default": {
@@ -4370,7 +3875,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29D2",
     "mappings": {
       "default": {
@@ -4379,7 +3883,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29D3",
     "mappings": {
       "default": {
@@ -4388,7 +3891,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29D4",
     "mappings": {
       "default": {
@@ -4397,7 +3899,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29D5",
     "mappings": {
       "default": {
@@ -4406,7 +3907,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29D6",
     "mappings": {
       "default": {
@@ -4415,7 +3915,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29D7",
     "mappings": {
       "default": {
@@ -4429,11 +3928,9 @@
       "default": {
         "default": "infinit incomplet"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29DD",
     "mappings": {
       "default": {
@@ -4447,11 +3944,9 @@
       "default": {
         "default": "no infinit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29DF",
     "mappings": {
       "default": {
@@ -4460,7 +3955,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29E0",
     "mappings": {
       "default": {
@@ -4469,7 +3963,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29E1",
     "mappings": {
       "default": {
@@ -4478,7 +3971,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29E2",
     "mappings": {
       "default": {
@@ -4492,8 +3984,7 @@
       "default": {
         "default": "igual ratllat doble"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29E4",
@@ -4501,8 +3992,7 @@
       "default": {
         "default": "igual amb accent, amb doble ratllat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29E5",
@@ -4510,11 +4000,9 @@
       "default": {
         "default": "idèntic a amb doble ratllat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29E6",
     "mappings": {
       "default": {
@@ -4523,7 +4011,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29E7",
     "mappings": {
       "default": {
@@ -4532,7 +4019,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29E8",
     "mappings": {
       "default": {
@@ -4541,7 +4027,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29E9",
     "mappings": {
       "default": {
@@ -4555,11 +4040,9 @@
       "default": {
         "default": "rombe farcit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29EE",
     "mappings": {
       "default": {
@@ -4568,7 +4051,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EF",
     "mappings": {
       "default": {
@@ -4577,7 +4059,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29F0",
     "mappings": {
       "default": {
@@ -4586,7 +4067,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29F1",
     "mappings": {
       "default": {
@@ -4595,7 +4075,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29F2",
     "mappings": {
       "default": {
@@ -4604,7 +4083,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29F3",
     "mappings": {
       "default": {
@@ -4618,11 +4096,9 @@
       "default": {
         "default": "rule delayed"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29F5",
     "mappings": {
       "default": {
@@ -4636,11 +4112,9 @@
       "default": {
         "default": "sòlid amb barra superior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29F7",
     "mappings": {
       "default": {
@@ -4649,7 +4123,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29F8",
     "mappings": {
       "default": {
@@ -4658,7 +4131,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29F9",
     "mappings": {
       "default": {
@@ -4667,7 +4139,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29FA",
     "mappings": {
       "default": {
@@ -4676,7 +4147,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29FB",
     "mappings": {
       "default": {
@@ -4685,7 +4155,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29FE",
     "mappings": {
       "default": {
@@ -4694,7 +4163,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29FF",
     "mappings": {
       "default": {
@@ -4703,7 +4171,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A00",
     "mappings": {
       "default": {
@@ -4712,7 +4179,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A01",
     "mappings": {
       "default": {
@@ -4721,7 +4187,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A02",
     "mappings": {
       "default": {
@@ -4730,7 +4195,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A03",
     "mappings": {
       "default": {
@@ -4739,7 +4203,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A04",
     "mappings": {
       "default": {
@@ -4748,7 +4211,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A05",
     "mappings": {
       "default": {
@@ -4757,7 +4219,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A06",
     "mappings": {
       "default": {
@@ -4766,7 +4227,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A07",
     "mappings": {
       "default": {
@@ -4775,7 +4235,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A08",
     "mappings": {
       "default": {
@@ -4784,7 +4243,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A09",
     "mappings": {
       "default": {
@@ -4793,7 +4251,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A0A",
     "mappings": {
       "default": {
@@ -4802,7 +4259,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A0B",
     "mappings": {
       "default": {
@@ -4816,8 +4272,7 @@
       "default": {
         "default": "operador integral quàdruple"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A0D",
@@ -4825,11 +4280,9 @@
       "default": {
         "default": "finit part integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A0E",
     "mappings": {
       "default": {
@@ -4838,7 +4291,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A0F",
     "mappings": {
       "default": {
@@ -4852,8 +4304,7 @@
       "default": {
         "default": "funció de circulació"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A11",
@@ -4861,8 +4312,7 @@
       "default": {
         "default": "integral en sentit antihorari"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A12",
@@ -4870,8 +4320,7 @@
       "default": {
         "default": "integral lineal per rectangle en pol"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A13",
@@ -4879,8 +4328,7 @@
       "default": {
         "default": "integral lineal per semicercle en pol"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A14",
@@ -4888,8 +4336,7 @@
       "default": {
         "default": "integral lineal excloent el pol"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A15",
@@ -4897,8 +4344,7 @@
       "default": {
         "default": "integral al voltant d'un punt operador"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A16",
@@ -4906,11 +4352,9 @@
       "default": {
         "default": "operador integral per quaternions"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A18",
     "mappings": {
       "default": {
@@ -4919,7 +4363,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A19",
     "mappings": {
       "default": {
@@ -4928,7 +4371,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A1A",
     "mappings": {
       "default": {
@@ -4937,7 +4379,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A1B",
     "mappings": {
       "default": {
@@ -4946,7 +4387,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A1C",
     "mappings": {
       "default": {
@@ -4955,7 +4395,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A1D",
     "mappings": {
       "default": {
@@ -4964,7 +4403,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A1E",
     "mappings": {
       "default": {
@@ -4973,7 +4411,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A1F",
     "mappings": {
       "default": {
@@ -4982,7 +4419,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A20",
     "mappings": {
       "default": {
@@ -4991,7 +4427,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A21",
     "mappings": {
       "default": {
@@ -5005,8 +4440,7 @@
       "default": {
         "default": "més amb cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A23",
@@ -5014,8 +4448,7 @@
       "default": {
         "default": "més amb angle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A24",
@@ -5023,8 +4456,7 @@
       "default": {
         "default": "titlla amb més subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A25",
@@ -5032,8 +4464,7 @@
       "default": {
         "default": "més amb punt inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A26",
@@ -5041,8 +4472,7 @@
       "default": {
         "default": "titlla amb més"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A27",
@@ -5050,11 +4480,9 @@
       "default": {
         "default": "més amb 2 subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A28",
     "mappings": {
       "default": {
@@ -5068,8 +4496,7 @@
       "default": {
         "default": "menys amb coma"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A2A",
@@ -5077,11 +4504,9 @@
       "default": {
         "default": "menys amb punt inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A2B",
     "mappings": {
       "default": {
@@ -5090,7 +4515,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A2C",
     "mappings": {
       "default": {
@@ -5104,8 +4528,7 @@
       "default": {
         "default": "més en semicercle esquerre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A2E",
@@ -5113,8 +4536,7 @@
       "default": {
         "default": "més en semicercle dret"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A2F",
@@ -5122,8 +4544,7 @@
       "default": {
         "default": "producte vectorial"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A30",
@@ -5131,8 +4552,7 @@
       "default": {
         "default": "per amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A31",
@@ -5140,11 +4560,9 @@
       "default": {
         "default": "per amb subratllat"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A32",
     "mappings": {
       "default": {
@@ -5158,8 +4576,7 @@
       "default": {
         "default": "smash product"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A34",
@@ -5167,8 +4584,7 @@
       "default": {
         "default": "per en semicercle esquerre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A35",
@@ -5176,8 +4592,7 @@
       "default": {
         "default": "per en semicercle dret"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A36",
@@ -5185,8 +4600,7 @@
       "default": {
         "default": "per en cercle amb angle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A37",
@@ -5194,8 +4608,7 @@
       "default": {
         "default": "per en anell"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A38",
@@ -5203,8 +4616,7 @@
       "default": {
         "default": "divisió en cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A39",
@@ -5212,8 +4624,7 @@
       "default": {
         "default": "més en triangle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A3A",
@@ -5221,8 +4632,7 @@
       "default": {
         "default": "menys en triangle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A3B",
@@ -5230,8 +4640,7 @@
       "default": {
         "default": "per en triangle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A3C",
@@ -5239,11 +4648,9 @@
       "default": {
         "default": "producte interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A3D",
     "mappings": {
       "default": {
@@ -5252,7 +4659,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A3E",
     "mappings": {
       "default": {
@@ -5266,8 +4672,7 @@
       "default": {
         "default": "coproducte"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A40",
@@ -5275,11 +4680,9 @@
       "default": {
         "default": "intersecció amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A41",
     "mappings": {
       "default": {
@@ -5293,8 +4696,7 @@
       "default": {
         "default": "unió amb barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A43",
@@ -5302,8 +4704,7 @@
       "default": {
         "default": "intersecció amb barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A44",
@@ -5311,8 +4712,7 @@
       "default": {
         "default": "intersecció amb and"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A45",
@@ -5320,8 +4720,7 @@
       "default": {
         "default": "unió amb or"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A46",
@@ -5329,8 +4728,7 @@
       "default": {
         "default": "unió sobre intersecció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A47",
@@ -5338,8 +4736,7 @@
       "default": {
         "default": "intersecció sobre unió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A48",
@@ -5347,8 +4744,7 @@
       "default": {
         "default": "unió sobre barra, sobre intersecció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A49",
@@ -5356,8 +4752,7 @@
       "default": {
         "default": "intersecció sobre barra, sobre unió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A4A",
@@ -5365,8 +4760,7 @@
       "default": {
         "default": "unió i unió"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A4B",
@@ -5374,8 +4768,7 @@
       "default": {
         "default": "intersecció i intersecció"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A4C",
@@ -5383,8 +4776,7 @@
       "default": {
         "default": "unió tancada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A4D",
@@ -5392,11 +4784,9 @@
       "default": {
         "default": "intersecció tancada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A4E",
     "mappings": {
       "default": {
@@ -5405,7 +4795,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A4F",
     "mappings": {
       "default": {
@@ -5419,11 +4808,9 @@
       "default": {
         "default": "unió tancada amb per"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A51",
     "mappings": {
       "default": {
@@ -5432,7 +4819,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A52",
     "mappings": {
       "default": {
@@ -5446,8 +4832,7 @@
       "default": {
         "default": "i"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A54",
@@ -5455,8 +4840,7 @@
       "default": {
         "default": "o"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A55",
@@ -5464,8 +4848,7 @@
       "default": {
         "default": "doble interesecció lògica i"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A56",
@@ -5473,8 +4856,7 @@
       "default": {
         "default": "doble interesecció lògica o"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A57",
@@ -5482,8 +4864,7 @@
       "default": {
         "default": "inclinació gran o"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A58",
@@ -5491,11 +4872,9 @@
       "default": {
         "default": "inclinació gran i"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A59",
     "mappings": {
       "default": {
@@ -5509,8 +4888,7 @@
       "default": {
         "default": "lògic i amb tija mitjana"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A5B",
@@ -5518,8 +4896,7 @@
       "default": {
         "default": "lògic o amb tija mitjana"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A5C",
@@ -5527,8 +4904,7 @@
       "default": {
         "default": "lògic i amb guió horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A5D",
@@ -5536,11 +4912,9 @@
       "default": {
         "default": "lògic o amb guió horitzontal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A5E",
     "mappings": {
       "default": {
@@ -5554,11 +4928,9 @@
       "default": {
         "default": "logic i amb barra inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A60",
     "mappings": {
       "default": {
@@ -5567,7 +4939,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A61",
     "mappings": {
       "default": {
@@ -5576,7 +4947,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A62",
     "mappings": {
       "default": {
@@ -5585,7 +4955,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A63",
     "mappings": {
       "default": {
@@ -5594,7 +4963,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A64",
     "mappings": {
       "default": {
@@ -5603,7 +4971,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A65",
     "mappings": {
       "default": {
@@ -5617,11 +4984,9 @@
       "default": {
         "default": "igual amb punt subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A67",
     "mappings": {
       "default": {
@@ -5630,7 +4995,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A68",
     "mappings": {
       "default": {
@@ -5639,7 +5003,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A69",
     "mappings": {
       "default": {
@@ -5653,11 +5016,9 @@
       "default": {
         "default": "titlla amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A6B",
     "mappings": {
       "default": {
@@ -5666,7 +5027,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A6C",
     "mappings": {
       "default": {
@@ -5680,11 +5040,9 @@
       "default": {
         "default": "congruent amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A6E",
     "mappings": {
       "default": {
@@ -5698,11 +5056,9 @@
       "default": {
         "default": "gairebé igual amb angle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A70",
     "mappings": {
       "default": {
@@ -5716,8 +5072,7 @@
       "default": {
         "default": "igual amb més subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A72",
@@ -5725,8 +5080,7 @@
       "default": {
         "default": "igual amb més"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A73",
@@ -5734,8 +5088,7 @@
       "default": {
         "default": "igual amb operador accent"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A74",
@@ -5743,8 +5096,7 @@
       "default": {
         "default": "igual amb dos punts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A75",
@@ -5752,11 +5104,9 @@
       "default": {
         "default": "igual doble"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A76",
     "mappings": {
       "default": {
@@ -5770,8 +5120,7 @@
       "default": {
         "default": "igual entre quatre punts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A78",
@@ -5779,8 +5128,7 @@
       "default": {
         "default": "equivalent amb quatre punts"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A79",
@@ -5788,8 +5136,7 @@
       "default": {
         "default": "menor que amb cercle interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A7A",
@@ -5797,8 +5144,7 @@
       "default": {
         "default": "més gran que amb cercle interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A7B",
@@ -5806,8 +5152,7 @@
       "default": {
         "default": "menor que amb interrogant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A7C",
@@ -5815,8 +5160,7 @@
       "default": {
         "default": "més gran que amb interrogant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A7D",
@@ -5824,8 +5168,7 @@
       "default": {
         "default": "estrictament menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A7E",
@@ -5833,8 +5176,7 @@
       "default": {
         "default": "estrictament més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A7F",
@@ -5842,8 +5184,7 @@
       "default": {
         "default": "estrictament menor que amb punt interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A80",
@@ -5851,8 +5192,7 @@
       "default": {
         "default": "estrictament més gran que amb punt interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A81",
@@ -5860,8 +5200,7 @@
       "default": {
         "default": "estrictament menor que amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A82",
@@ -5869,8 +5208,7 @@
       "default": {
         "default": "estrictament més gran que amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A83",
@@ -5878,8 +5216,7 @@
       "default": {
         "default": "estrictament menor que amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A84",
@@ -5887,11 +5224,9 @@
       "default": {
         "default": "estrictament més gran que amb punt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A85",
     "mappings": {
       "default": {
@@ -5900,7 +5235,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A86",
     "mappings": {
       "default": {
@@ -5909,7 +5243,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A87",
     "mappings": {
       "default": {
@@ -5918,7 +5251,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A88",
     "mappings": {
       "default": {
@@ -5932,8 +5264,7 @@
       "default": {
         "default": "menor que, però no aproximat a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A8A",
@@ -5941,11 +5272,9 @@
       "default": {
         "default": "més gran que, però no aproximat a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A8B",
     "mappings": {
       "default": {
@@ -5954,7 +5283,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A8C",
     "mappings": {
       "default": {
@@ -5968,8 +5296,7 @@
       "default": {
         "default": "menor, similar o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A8E",
@@ -5977,8 +5304,7 @@
       "default": {
         "default": "major, similar o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A8F",
@@ -5986,8 +5312,7 @@
       "default": {
         "default": "menor, similar o més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A90",
@@ -5995,8 +5320,7 @@
       "default": {
         "default": "major, similar o menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A91",
@@ -6004,8 +5328,7 @@
       "default": {
         "default": "menor, major o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A92",
@@ -6013,8 +5336,7 @@
       "default": {
         "default": "major, menor o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A93",
@@ -6022,8 +5344,7 @@
       "default": {
         "default": "estrictament menor o major que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A94",
@@ -6031,11 +5352,9 @@
       "default": {
         "default": "estrictament major o menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A95",
     "mappings": {
       "default": {
@@ -6044,7 +5363,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A96",
     "mappings": {
       "default": {
@@ -6058,8 +5376,7 @@
       "default": {
         "default": "estrictament menor que amb punt interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A98",
@@ -6067,8 +5384,7 @@
       "default": {
         "default": "estrictament més gran que amb punt interior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A99",
@@ -6076,8 +5392,7 @@
       "default": {
         "default": "menor o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A9A",
@@ -6085,11 +5400,9 @@
       "default": {
         "default": "major o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2A9B",
     "mappings": {
       "default": {
@@ -6098,7 +5411,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2A9C",
     "mappings": {
       "default": {
@@ -6112,8 +5424,7 @@
       "default": {
         "default": "equivalent o menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A9E",
@@ -6121,8 +5432,7 @@
       "default": {
         "default": "major o semblant a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2A9F",
@@ -6130,8 +5440,7 @@
       "default": {
         "default": "similar, menor o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA0",
@@ -6139,8 +5448,7 @@
       "default": {
         "default": "similar, major o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA1",
@@ -6148,8 +5456,7 @@
       "default": {
         "default": "molt menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA2",
@@ -6157,11 +5464,9 @@
       "default": {
         "default": "molt més gran que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AA3",
     "mappings": {
       "default": {
@@ -6175,8 +5480,7 @@
       "default": {
         "default": "menor que, major que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA5",
@@ -6184,8 +5488,7 @@
       "default": {
         "default": "major o menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA6",
@@ -6193,8 +5496,7 @@
       "default": {
         "default": "menor que tancat amb corba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA7",
@@ -6202,8 +5504,7 @@
       "default": {
         "default": "més gran que tancat amb corba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA8",
@@ -6211,8 +5512,7 @@
       "default": {
         "default": "estrictament menor que tancat amb corba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AA9",
@@ -6220,8 +5520,7 @@
       "default": {
         "default": "estrictament més gran que tancat amb corba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AAA",
@@ -6229,8 +5528,7 @@
       "default": {
         "default": "més reduït que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AAB",
@@ -6238,8 +5536,7 @@
       "default": {
         "default": "més ampli que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AAC",
@@ -6247,8 +5544,7 @@
       "default": {
         "default": "més reduït o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AAD",
@@ -6256,8 +5552,7 @@
       "default": {
         "default": "més ampli o igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AAE",
@@ -6265,8 +5560,7 @@
       "default": {
         "default": "diferència entre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AAF",
@@ -6274,11 +5568,9 @@
       "default": {
         "default": "precedeix o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AB0",
     "mappings": {
       "default": {
@@ -6287,7 +5579,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AB1",
     "mappings": {
       "default": {
@@ -6296,7 +5587,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AB2",
     "mappings": {
       "default": {
@@ -6305,7 +5595,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AB3",
     "mappings": {
       "default": {
@@ -6314,7 +5603,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AB4",
     "mappings": {
       "default": {
@@ -6328,8 +5616,7 @@
       "default": {
         "default": "precedeix estrictament a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AB6",
@@ -6337,11 +5624,9 @@
       "default": {
         "default": "segueix estrictament a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AB7",
     "mappings": {
       "default": {
@@ -6350,7 +5635,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AB8",
     "mappings": {
       "default": {
@@ -6359,7 +5643,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AB9",
     "mappings": {
       "default": {
@@ -6368,7 +5651,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ABA",
     "mappings": {
       "default": {
@@ -6382,8 +5664,7 @@
       "default": {
         "default": "precedeix molt abans"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2ABC",
@@ -6391,8 +5672,7 @@
       "default": {
         "default": "segueix molt després"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2ABD",
@@ -6400,8 +5680,7 @@
       "default": {
         "default": "subrelació de"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2ABE",
@@ -6409,8 +5688,7 @@
       "default": {
         "default": "conté com a subrelació a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2ABF",
@@ -6418,8 +5696,7 @@
       "default": {
         "default": "inclòs amb més subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AC0",
@@ -6427,8 +5704,7 @@
       "default": {
         "default": "conté amb més subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AC1",
@@ -6436,8 +5712,7 @@
       "default": {
         "default": "inclòs amb per subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AC2",
@@ -6445,8 +5720,7 @@
       "default": {
         "default": "conté amb per subscrit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AC3",
@@ -6454,8 +5728,7 @@
       "default": {
         "default": "inclòs amb punt o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AC4",
@@ -6463,11 +5736,9 @@
       "default": {
         "default": "conté amb punt o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AC5",
     "mappings": {
       "default": {
@@ -6476,7 +5747,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AC6",
     "mappings": {
       "default": {
@@ -6490,8 +5760,7 @@
       "default": {
         "default": "inclòs aproximadament en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AC8",
@@ -6499,11 +5768,9 @@
       "default": {
         "default": "conté aproximadament a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AC9",
     "mappings": {
       "default": {
@@ -6512,7 +5779,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ACA",
     "mappings": {
       "default": {
@@ -6521,7 +5787,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ACB",
     "mappings": {
       "default": {
@@ -6530,7 +5795,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ACC",
     "mappings": {
       "default": {
@@ -6539,7 +5803,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ACD",
     "mappings": {
       "default": {
@@ -6548,7 +5811,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ACE",
     "mappings": {
       "default": {
@@ -6562,8 +5824,7 @@
       "default": {
         "default": "inclòs amb tancament en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD0",
@@ -6571,8 +5832,7 @@
       "default": {
         "default": "conté al tancament del subconjunt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD1",
@@ -6580,8 +5840,7 @@
       "default": {
         "default": "inclòs el tancament o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD2",
@@ -6589,8 +5848,7 @@
       "default": {
         "default": "conté al tancament del subconjunt o és igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD3",
@@ -6598,8 +5856,7 @@
       "default": {
         "default": "està inclòs o conté a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD4",
@@ -6607,8 +5864,7 @@
       "default": {
         "default": "conté o està inclòs a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD5",
@@ -6616,8 +5872,7 @@
       "default": {
         "default": "inclòs doblement en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD6",
@@ -6625,8 +5880,7 @@
       "default": {
         "default": "conté doblement a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD7",
@@ -6634,8 +5888,7 @@
       "default": {
         "default": "conté o està inclòs en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD8",
@@ -6643,8 +5896,7 @@
       "default": {
         "default": "conté o està inclòs en"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AD9",
@@ -6652,8 +5904,7 @@
       "default": {
         "default": "pertanyent dirigit cap avall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2ADA",
@@ -6661,8 +5912,7 @@
       "default": {
         "default": "pitchfork with tee top"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2ADB",
@@ -6670,11 +5920,9 @@
       "default": {
         "default": "intersecció transversal"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2ADC",
     "mappings": {
       "default": {
@@ -6683,7 +5931,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ADD",
     "mappings": {
       "default": {
@@ -6692,7 +5939,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ADE",
     "mappings": {
       "default": {
@@ -6701,7 +5947,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2ADF",
     "mappings": {
       "default": {
@@ -6710,7 +5955,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AE0",
     "mappings": {
       "default": {
@@ -6719,7 +5963,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AE1",
     "mappings": {
       "default": {
@@ -6728,7 +5971,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AE2",
     "mappings": {
       "default": {
@@ -6737,7 +5979,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AE3",
     "mappings": {
       "default": {
@@ -6751,11 +5992,9 @@
       "default": {
         "default": "barra vertical de torniquet doble esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AE5",
     "mappings": {
       "default": {
@@ -6769,8 +6008,7 @@
       "default": {
         "default": "guió llarg des del membre esquerre de doble vertical"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AE7",
@@ -6778,8 +6016,7 @@
       "default": {
         "default": "taca curta cap avall amb barra superior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AE8",
@@ -6787,8 +6024,7 @@
       "default": {
         "default": "barra amb perpendicular"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AE9",
@@ -6796,11 +6032,9 @@
       "default": {
         "default": "short up tack above short down tack"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AEA",
     "mappings": {
       "default": {
@@ -6814,8 +6048,7 @@
       "default": {
         "default": "tatxa doble avall"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AEC",
@@ -6823,8 +6056,7 @@
       "default": {
         "default": "doble traç sense signe"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AED",
@@ -6832,8 +6064,7 @@
       "default": {
         "default": "doble traç invertit sense signe"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AEE",
@@ -6841,8 +6072,7 @@
       "default": {
         "default": "no es divideix amb la barra de negació invertida"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AEF",
@@ -6850,8 +6080,7 @@
       "default": {
         "default": "barra vertical amb cercle"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AF0",
@@ -6859,8 +6088,7 @@
       "default": {
         "default": "barra amb cercle inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AF1",
@@ -6868,8 +6096,7 @@
       "default": {
         "default": "tatxa avall amb cercle a sota"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AF2",
@@ -6877,8 +6104,7 @@
       "default": {
         "default": "paral·lela amb marca"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2AF3",
@@ -6886,11 +6112,9 @@
       "default": {
         "default": "paral·lela amb accent"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2AF4",
     "mappings": {
       "default": {
@@ -6899,7 +6123,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AF5",
     "mappings": {
       "default": {
@@ -6908,7 +6131,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AF6",
     "mappings": {
       "default": {
@@ -6917,7 +6139,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AF7",
     "mappings": {
       "default": {
@@ -6926,7 +6147,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AF8",
     "mappings": {
       "default": {
@@ -6935,7 +6155,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AF9",
     "mappings": {
       "default": {
@@ -6944,7 +6163,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AFA",
     "mappings": {
       "default": {
@@ -6953,7 +6171,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AFB",
     "mappings": {
       "default": {
@@ -6962,7 +6179,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AFC",
     "mappings": {
       "default": {
@@ -6971,7 +6187,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AFD",
     "mappings": {
       "default": {
@@ -6980,7 +6195,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AFE",
     "mappings": {
       "default": {
@@ -6989,7 +6203,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2AFF",
     "mappings": {
       "default": {
@@ -6998,7 +6211,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "301C",
     "mappings": {
       "default": {
@@ -7007,7 +6219,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE10",
     "mappings": {
       "default": {
@@ -7016,7 +6227,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE13",
     "mappings": {
       "default": {
@@ -7025,7 +6235,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE14",
     "mappings": {
       "default": {
@@ -7034,7 +6243,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE15",
     "mappings": {
       "default": {
@@ -7043,7 +6251,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE16",
     "mappings": {
       "default": {
@@ -7052,7 +6259,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE19",
     "mappings": {
       "default": {
@@ -7061,7 +6267,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE30",
     "mappings": {
       "default": {
@@ -7070,7 +6275,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "FE31",
     "mappings": {
       "default": {
@@ -7079,7 +6283,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "FE32",
     "mappings": {
       "default": {
@@ -7088,7 +6291,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "FE33",
     "mappings": {
       "default": {
@@ -7097,7 +6299,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "FE34",
     "mappings": {
       "default": {
@@ -7106,7 +6307,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE45",
     "mappings": {
       "default": {
@@ -7115,7 +6315,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE46",
     "mappings": {
       "default": {
@@ -7124,7 +6323,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE49",
     "mappings": {
       "default": {
@@ -7133,7 +6331,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE4A",
     "mappings": {
       "default": {
@@ -7142,7 +6339,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE4B",
     "mappings": {
       "default": {
@@ -7151,7 +6347,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE4C",
     "mappings": {
       "default": {
@@ -7160,7 +6355,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "FE4D",
     "mappings": {
       "default": {
@@ -7169,7 +6363,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "FE4E",
     "mappings": {
       "default": {
@@ -7178,7 +6371,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "FE4F",
     "mappings": {
       "default": {
@@ -7187,7 +6379,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE50",
     "mappings": {
       "default": {
@@ -7196,7 +6387,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE52",
     "mappings": {
       "default": {
@@ -7205,7 +6395,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE54",
     "mappings": {
       "default": {
@@ -7214,7 +6403,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE55",
     "mappings": {
       "default": {
@@ -7223,7 +6411,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE56",
     "mappings": {
       "default": {
@@ -7232,7 +6419,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE57",
     "mappings": {
       "default": {
@@ -7241,7 +6427,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "FE58",
     "mappings": {
       "default": {
@@ -7250,7 +6435,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE5F",
     "mappings": {
       "default": {
@@ -7259,7 +6443,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE60",
     "mappings": {
       "default": {
@@ -7268,7 +6451,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE61",
     "mappings": {
       "default": {
@@ -7277,7 +6459,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FE62",
     "mappings": {
       "default": {
@@ -7286,7 +6467,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "FE63",
     "mappings": {
       "default": {
@@ -7295,7 +6475,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FE64",
     "mappings": {
       "default": {
@@ -7304,7 +6483,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FE65",
     "mappings": {
       "default": {
@@ -7313,7 +6491,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FE66",
     "mappings": {
       "default": {
@@ -7327,11 +6504,9 @@
       "default": {
         "default": "divisió entera"
       }
-    },
-    "category": "Po"
+    }
   },
   {
-    "category": "Sc",
     "key": "FE69",
     "mappings": {
       "default": {
@@ -7340,7 +6515,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE6A",
     "mappings": {
       "default": {
@@ -7349,7 +6523,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FE6B",
     "mappings": {
       "default": {
@@ -7358,7 +6531,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF01",
     "mappings": {
       "default": {
@@ -7367,7 +6539,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF02",
     "mappings": {
       "default": {
@@ -7376,7 +6547,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF03",
     "mappings": {
       "default": {
@@ -7385,7 +6555,6 @@
     }
   },
   {
-    "category": "Sc",
     "key": "FF04",
     "mappings": {
       "default": {
@@ -7394,7 +6563,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF05",
     "mappings": {
       "default": {
@@ -7403,7 +6571,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF06",
     "mappings": {
       "default": {
@@ -7412,7 +6579,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF07",
     "mappings": {
       "default": {
@@ -7421,7 +6587,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF0A",
     "mappings": {
       "default": {
@@ -7430,7 +6595,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FF0B",
     "mappings": {
       "default": {
@@ -7439,7 +6603,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF0C",
     "mappings": {
       "default": {
@@ -7448,7 +6611,6 @@
     }
   },
   {
-    "category": "Pd",
     "key": "FF0D",
     "mappings": {
       "default": {
@@ -7457,7 +6619,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF0E",
     "mappings": {
       "default": {
@@ -7466,7 +6627,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF0F",
     "mappings": {
       "default": {
@@ -7475,7 +6635,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF1A",
     "mappings": {
       "default": {
@@ -7484,7 +6643,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF1B",
     "mappings": {
       "default": {
@@ -7493,7 +6651,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FF1C",
     "mappings": {
       "default": {
@@ -7502,7 +6659,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FF1D",
     "mappings": {
       "default": {
@@ -7511,7 +6667,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FF1E",
     "mappings": {
       "default": {
@@ -7520,7 +6675,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF1F",
     "mappings": {
       "default": {
@@ -7529,7 +6683,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF20",
     "mappings": {
       "default": {
@@ -7538,7 +6691,6 @@
     }
   },
   {
-    "category": "Po",
     "key": "FF3C",
     "mappings": {
       "default": {
@@ -7547,7 +6699,6 @@
     }
   },
   {
-    "category": "Sk",
     "key": "FF3E",
     "mappings": {
       "default": {
@@ -7556,7 +6707,6 @@
     }
   },
   {
-    "category": "Pc",
     "key": "FF3F",
     "mappings": {
       "default": {
@@ -7565,7 +6715,6 @@
     }
   },
   {
-    "category": "Sk",
     "key": "FF40",
     "mappings": {
       "default": {
@@ -7579,11 +6728,9 @@
       "default": {
         "default": "barra vertical"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "FF5E",
     "mappings": {
       "default": {
@@ -7592,7 +6739,6 @@
     }
   },
   {
-    "category": "Sc",
     "key": "FFE0",
     "mappings": {
       "default": {
@@ -7601,7 +6747,6 @@
     }
   },
   {
-    "category": "Sc",
     "key": "FFE1",
     "mappings": {
       "default": {
@@ -7610,7 +6755,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFE2",
     "mappings": {
       "default": {
@@ -7619,7 +6763,6 @@
     }
   },
   {
-    "category": "Sk",
     "key": "FFE3",
     "mappings": {
       "default": {
@@ -7628,7 +6771,6 @@
     }
   },
   {
-    "category": "So",
     "key": "FFE4",
     "mappings": {
       "default": {
@@ -7637,7 +6779,6 @@
     }
   },
   {
-    "category": "Sc",
     "key": "FFE5",
     "mappings": {
       "default": {
@@ -7646,7 +6787,6 @@
     }
   },
   {
-    "category": "Sc",
     "key": "FFE6",
     "mappings": {
       "default": {
@@ -7655,7 +6795,6 @@
     }
   },
   {
-    "category": "So",
     "key": "FFE8",
     "mappings": {
       "default": {
@@ -7664,7 +6803,6 @@
     }
   },
   {
-    "category": "So",
     "key": "FFED",
     "mappings": {
       "default": {
@@ -7673,7 +6811,6 @@
     }
   },
   {
-    "category": "So",
     "key": "FFEE",
     "mappings": {
       "default": {

@@ -22,31 +22,53 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '4.0.0';
+  public static readonly VERSION: string = '4.1.0-beta.5';
 
   /**
-   * List of locales to load.
+   * Locale mapping to language names.
    */
-  public static readonly LOCALES: string[] = [
-    'en',
-    'ca',
-    'de',
-    'fr',
-    'es',
-    'hi',
-    'it',
-    'ko',
-    'nb',
-    'nn',
-    'sv',
-    'nemeth'
-  ];
+  public static readonly LOCALES: Map<string, string> = new Map([
+    ['ca', 'Catalan'],
+    ['da', 'Danish'],
+    ['de', 'German'],
+    ['en', 'English'],
+    ['es', 'Spanish'],
+    ['euro', 'Euro'],
+    ['fr', 'French'],
+    ['hi', 'Hindi'],
+    ['it', 'Italian'],
+    ['ko', 'Korean'],
+    ['nb', 'Bokmål'],
+    ['nn', 'Nynorsk'],
+    ['sv', 'Swedish'],
+    ['nemeth', 'Nemeth']
+  ]);
 
   /**
-   * MathJax version. This is useful for paths depending on MathJax
-   * distribution.
+   * Ensures a locale exists. If the given locale does not exist, it returns the
+   * default instead.
+   *
+   * @param loc The locale in question.
+   * @param def A default locale.
+   * @returns The existing locale. The default is returned if `loc` does not
+   *      exist. There is no further check on `def`, however!
    */
-  public static readonly mathjaxVersion: string = '3.0.0';
+  public static ensureLocale(loc: string, def: string): string {
+    if (!Variables.LOCALES.get(loc)) {
+      console.error(
+        `Locale ${loc} does not exist! Using` +
+          ` ${Variables.LOCALES.get(def)} instead.`
+      );
+      return def;
+    }
+    return loc;
+  }
+
+  /**
+   * MathJax version. This indicates the lowest MathJax version this version of
+   * SRE is compatible with.
+   */
+  public static readonly mathjaxVersion: string = '3.2.1';
 
   /**
    * The URL for SRE resources.

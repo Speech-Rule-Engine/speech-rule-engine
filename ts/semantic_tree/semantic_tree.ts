@@ -24,18 +24,17 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
+import * as DomUtil from '../common/dom_util.js';
 
-import { annotate } from './semantic_annotations';
-import { SemanticVisitor } from './semantic_annotator';
-import { SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticMeaningCollator } from './semantic_default';
-import { SemanticMathml } from './semantic_mathml';
-import { SemanticNode } from './semantic_node';
-import { SemanticParser } from './semantic_parser';
-import * as SemanticPred from './semantic_pred';
-import './semantic_heuristics';
+import { annotate } from './semantic_annotations.js';
+import { SemanticVisitor } from './semantic_annotator.js';
+import { SemanticRole } from './semantic_meaning.js';
+import { SemanticMeaningCollator } from './semantic_default.js';
+import { SemanticMathml } from './semantic_mathml.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticParser } from './semantic_parser.js';
+import * as SemanticPred from './semantic_pred.js';
+import './semantic_heuristics.js';
 
 export class SemanticTree {
   /**
@@ -165,8 +164,7 @@ export class SemanticTree {
    * @returns Serialized string.
    */
   public toString(opt_brief?: boolean): string {
-    const xmls = new SystemExternal.xmldom.XMLSerializer();
-    return xmls.serializeToString(this.xml(opt_brief));
+    return DomUtil.serializeXml(this.xml(opt_brief));
   }
 
   /**
@@ -219,20 +217,8 @@ export class SemanticTree {
  * Visitor to propagate unit expressions if possible.
  */
 const unitVisitor = new SemanticVisitor('general', 'unit', (node, _info) => {
-  if (
-    node.type === SemanticType.INFIXOP &&
-    (node.role === SemanticRole.MULTIPLICATION ||
-      node.role === SemanticRole.IMPLICIT)
-  ) {
-    const children = node.childNodes;
-    if (
-      children.length &&
-      (SemanticPred.isPureUnit(children[0]) ||
-        SemanticPred.isUnitCounter(children[0])) &&
-      node.childNodes.slice(1).every(SemanticPred.isPureUnit)
-    ) {
-      node.role = SemanticRole.UNIT;
-    }
+  if (SemanticPred.isUnitProduct(node)) {
+    node.role = SemanticRole.UNIT;
   }
   return false;
 });

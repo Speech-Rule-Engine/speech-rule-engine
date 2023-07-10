@@ -21,13 +21,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticRole } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 /**
  * Prefix for semantic attributes.
  */
-export const Prefix = 'data-semantic-';
+const Prefix = 'data-semantic-';
 
 // TODO (TS): Do something about the prefix computation.
 /**
@@ -44,6 +45,7 @@ export enum Attribute {
   FONT = 'data-semantic-font',
   ID = 'data-semantic-id',
   ANNOTATION = 'data-semantic-annotation',
+  ATTRIBUTES = 'data-semantic-attributes',
   OPERATOR = 'data-semantic-operator',
   OWNS = 'data-semantic-owns',
   PARENT = 'data-semantic-parent',
@@ -66,6 +68,7 @@ export const EnrichAttributes: string[] = [
   Attribute.FONT,
   Attribute.ID,
   Attribute.ANNOTATION,
+  Attribute.ATTRIBUTES,
   Attribute.OPERATOR,
   Attribute.OWNS,
   Attribute.PARENT,
@@ -112,6 +115,11 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
   if (semantic.parent) {
     mml.setAttribute(Attribute.PARENT, semantic.parent.id.toString());
   }
+  // Dealing with external attributes here.
+  const external = semantic.attributesXml();
+  if (external) {
+    mml.setAttribute(Attribute.ATTRIBUTES, external);
+  }
   setPostfix(mml, semantic);
 }
 
@@ -122,7 +130,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  */
-export function setPostfix(mml: Element, semantic: SemanticNode) {
+function setPostfix(mml: Element, semantic: SemanticNode) {
   const postfix = [];
   if (semantic.role === SemanticRole.MGLYPH) {
     postfix.push('image');
@@ -162,4 +170,14 @@ export function removeAttributePrefix(mml: string): string {
 // TODO (TS): Again this should have been return time Attribute
 export function addPrefix(attr: string): Attribute {
   return (Prefix + attr) as Attribute;
+}
+
+
+/**
+ * @return A newly created mrow with an added attribute.
+ */
+export function addMrow(): Element {
+  const mrow = DomUtil.createElement('mrow');
+  mrow.setAttribute(Attribute.ADDED, 'true');
+  return mrow;
 }

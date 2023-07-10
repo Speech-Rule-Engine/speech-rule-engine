@@ -23,9 +23,9 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { createLocale, Locale } from '../locale';
-import NUMBERS from '../numbers/numbers_nemeth';
-import { identityTransformer } from '../transformers';
+import { createLocale, Locale } from '../locale.js';
+import NUMBERS from '../numbers/numbers_nemeth.js';
+import { identityTransformer } from '../transformers.js';
 
 /**
  * Removes English indicator from a simple letter.

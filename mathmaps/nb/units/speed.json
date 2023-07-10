@@ -4,11 +4,6 @@
   },
   {
     "key": "kt",
-    "category": "speed",
-    "names": [
-      "kt",
-      "kt."
-    ],
     "mappings": {
       "default": {
         "default": "knop"
@@ -21,18 +16,10 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "speed",
-    "names": [
-      "mph"
-    ]
+    }
   },
   {
     "key": "rpm",
-    "category": "speed",
-    "names": [
-      "rpm"
-    ],
     "mappings": {
       "default": {
         "default": "omdreining per minutt"
@@ -41,10 +28,6 @@
   },
   {
     "key": "kmh",
-    "category": "speed",
-    "names": [
-      "kmh"
-    ],
     "mappings": {
       "default": {
         "default": "kilometer per time"

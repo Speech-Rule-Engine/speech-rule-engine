@@ -22,7 +22,7 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description.js';
 
 export interface SpeechRuleEvaluator {
   /**

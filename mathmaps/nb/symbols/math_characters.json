@@ -8,8 +8,7 @@
       "default": {
         "default": "skript-l"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2118",
@@ -17,11 +16,9 @@
       "default": {
         "default": "skript-P"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ll",
     "key": "213C",
     "mappings": {
       "default": {
@@ -30,7 +27,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "213D",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "213E",
     "mappings": {
       "default": {
@@ -48,7 +43,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "213F",
     "mappings": {
       "default": {
@@ -57,7 +51,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2140",
     "mappings": {
       "default": {
@@ -71,8 +64,7 @@
       "default": {
         "default": "dobbelstrek stor kursiv D"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2146",
@@ -80,8 +72,7 @@
       "default": {
         "default": "dobbelstrek kursiv d"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2147",
@@ -89,8 +80,7 @@
       "default": {
         "default": "dobbelstrek kursiv e"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2148",
@@ -98,11 +88,9 @@
       "default": {
         "default": "dobbelstrek kursiv i"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "2149",
     "mappings": {
       "default": {
@@ -116,8 +104,7 @@
       "default": {
         "default": "kursiv i uten prikk"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1D6A5",
@@ -125,7 +112,6 @@
       "default": {
         "default": "kursiv j uten prikk"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

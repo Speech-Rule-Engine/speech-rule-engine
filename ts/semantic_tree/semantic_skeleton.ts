@@ -19,13 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as BaseUtil from '../common/base_util';
+import * as BaseUtil from '../common/base_util.js';
+import Engine from '../common/engine.js';
 
-import * as XpathUtil from '../common/xpath_util';
-import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr';
-import { SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { SemanticTree } from './semantic_tree';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr.js';
+import { SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticTree } from './semantic_tree.js';
 
 export type Sexp = number | Sexp[];
 
@@ -37,7 +38,7 @@ export class SemanticSkeleton {
 
   public parents: { [key: number]: number[] } = null;
 
-  public levelsMap: { [key: number]: Sexp } = null;
+  public levelsMap: { [key: number]: Sexp[] } = null;
 
   /**
    * Compute a skeleton structure for a semantic tree.
@@ -259,21 +260,33 @@ export class SemanticSkeleton {
    *
    * @param mml A mml node to add a structure to.
    * @param node A semantic node.
+   * @param level
+   * @param posinset
+   * @param setsize
    * @returns The sexp structure.
    */
-  private static tree_(mml: Element, node: SemanticNode): Sexp {
+  private static tree_(
+    mml: Element,
+    node: SemanticNode,
+    level = 0,
+    posinset = 1,
+    setsize = 1
+  ): Sexp {
     if (!node) {
       return [];
-    }
-    if (!node.childNodes.length) {
-      return node.id;
     }
     const id = node.id;
     const skeleton = [id];
     const mmlChild = XpathUtil.evalXPath(
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
-    )[0];
+    )[0] as Element;
+    if (Engine.getInstance().aria && mmlChild) {
+      SemanticSkeleton.addAria(mmlChild, level, posinset, setsize);
+    }
+    if (!node.childNodes.length) {
+      return node.id;
+    }
     const children = SemanticSkeleton.combineContentChildren<SemanticNode>(
       node,
       node.contentNodes.map(function (x) {
@@ -284,12 +297,35 @@ export class SemanticSkeleton {
       })
     );
     if (mmlChild) {
-      SemanticSkeleton.addOwns_(mmlChild as Element, children);
+      SemanticSkeleton.addOwns_(mmlChild, children);
     }
-    for (let i = 0, child; (child = children[i]); i++) {
-      skeleton.push(SemanticSkeleton.tree_(mml, child) as any);
+    for (
+      let i = 0, l = children.length, child: SemanticNode;
+      (child = children[i]);
+      i++
+    ) {
+      skeleton.push(
+        SemanticSkeleton.tree_(mml, child, level + 1, i + 1, l) as any
+      );
     }
     return skeleton;
+  }
+
+  private static addAria(
+    node: Element,
+    level: number,
+    posinset: number,
+    setsize: number
+  ) {
+    // Aria elements
+    if (!level) {
+      node.setAttribute('role', 'tree');
+      return;
+    }
+    node.setAttribute('aria-level', level.toString());
+    node.setAttribute('aria-posinset', posinset.toString());
+    node.setAttribute('aria-setsize', setsize.toString());
+    node.setAttribute('role', 'treeitem');
   }
 
   /**
@@ -366,7 +402,7 @@ export class SemanticSkeleton {
   private populate_(element: Sexp, layer: Sexp, parents: number[]) {
     if (SemanticSkeleton.simpleCollapseStructure(element)) {
       element = element as number;
-      this.levelsMap[element] = layer;
+      this.levelsMap[element] = layer as Sexp[];
       this.parents[element] =
         element === parents[0] ? parents.slice(1) : parents;
       return;
@@ -380,5 +416,53 @@ export class SemanticSkeleton {
       const current = newElement[i];
       this.populate_(current, element, newParents);
     }
+  }
+
+  /**
+   * Checks if a node is a root of a subtree.
+   *
+   * @param id The id number to check.
+   * @returns True if the id is the root of the skeleton.
+   */
+  public isRoot(id: number): boolean {
+    const level = this.levelsMap[id];
+    return id === level[0];
+  }
+
+  public directChildren(id: number): number[] {
+    if (!this.isRoot(id)) {
+      return [];
+    }
+    const level = this.levelsMap[id];
+    return level.slice(1).map((child) => {
+      if (SemanticSkeleton.simpleCollapseStructure(child)) {
+        return child;
+      }
+      if (SemanticSkeleton.contentCollapseStructure(child)) {
+        return (child as Sexp[])[1];
+      }
+      return (child as Sexp[])[0];
+    }) as number[];
+  }
+
+  public subtreeNodes(id: number): number[] {
+    if (!this.isRoot(id)) {
+      return [];
+    }
+    const subtreeNodes_ = (tree: Sexp, nodes: number[]) => {
+      if (SemanticSkeleton.simpleCollapseStructure(tree)) {
+        nodes.push(tree as number);
+        return;
+      }
+      tree = tree as Sexp[];
+      if (SemanticSkeleton.contentCollapseStructure(tree)) {
+        tree = tree.slice(1);
+      }
+      tree.forEach((x) => subtreeNodes_(x, nodes));
+    };
+    const level = this.levelsMap[id];
+    const subtree: number[] = [];
+    subtreeNodes_(level.slice(1), subtree);
+    return subtree;
   }
 }

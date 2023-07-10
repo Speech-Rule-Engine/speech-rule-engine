@@ -8,8 +8,7 @@
       "default": {
         "default": "alef"
       }
-    },
-    "category": "Lo"
+    }
   },
   {
     "key": "2136",
@@ -17,8 +16,7 @@
       "default": {
         "default": "bet"
       }
-    },
-    "category": "Lo"
+    }
   },
   {
     "key": "2137",
@@ -26,8 +24,7 @@
       "default": {
         "default": "gimel"
       }
-    },
-    "category": "Lo"
+    }
   },
   {
     "key": "2138",
@@ -35,7 +32,6 @@
       "default": {
         "default": "dalet"
       }
-    },
-    "category": "Lo"
+    }
   }
 ]

@@ -1,100 +1,87 @@
-[{"locale": "en"},
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "watt"
-     }
-   },
-   "key": "W",
-   "names": ["W", "w"]
+[
+  {
+    "locale": "en"
   },
-  {"category": "energy",
-   "mappings": {
-     "default": {
-       "default": "kilowatt hour"
-     }
-   },
-   "key": "kwh",
-   "names": ["kwh", "kWh"]
+  {
+    "key": "W",
+    "mappings": {
+      "default": {
+        "default": "watt"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "joule"
-     }
-   },
-   "key": "J",
-   "names": ["J"]
+  {
+    "key": "kwh",
+    "mappings": {
+      "default": {
+        "default": "kilowatt hour"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "Newton"
-     }
-   },
-   "key": "N",
-   "names": ["N"]
+  {
+    "key": "J",
+    "mappings": {
+      "default": {
+        "default": "joule"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "ampere"
-     }
-   },
-   "key": "A",
-   "names": ["A"]
+  {
+    "key": "N",
+    "mappings": {
+      "default": {
+        "default": "Newton"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "volt"
-     }
-   },
-   "key": "V",
-   "names": ["V"]
+  {
+    "key": "A",
+    "mappings": {
+      "default": {
+        "default": "ampere"
+      }
+    }
   },
-  {"category": "energy",
-   "mappings": {
-     "default": {
-       "default": "ohm"
-     }
-   },
-   "key": "ohm",
-   "names": ["Ohm", "ohm"]
+  {
+    "key": "V",
+    "mappings": {
+      "default": {
+        "default": "volt"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "ohm"
-     }
-   },
-   "key": "\u03A9",
-   "names": ["\u03A9"]
+  {
+    "key": "ohm",
+    "mappings": {
+      "default": {
+        "default": "ohm"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "megohm"
-     }
-   },
-   "key": "M\u03A9",
-   "names": ["M\u03A9"]
+  {
+    "key": "Ω",
+    "mappings": {
+      "default": {
+        "default": "ohm"
+      }
+    }
   },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "kilohm"
-     }
-   },
-   "key": "k\u03A9",
-   "names": ["k\u03A9"]
+  {
+    "key": "MΩ",
+    "mappings": {
+      "default": {
+        "default": "megohm"
+      }
+    },
+    "names": ["MΩ"]
+  },
+  {
+    "key": "kΩ",
+    "mappings": {
+      "default": {
+        "default": "kilohm"
+      }
+    },
+    "names": ["kΩ"]
   }
 ]

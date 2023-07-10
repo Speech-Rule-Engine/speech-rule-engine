@@ -19,16 +19,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
-import { lookupMeaning } from './semantic_attr';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticMap } from './semantic_attr.js';
 import {
   SemanticMeaning,
   SemanticFont,
   SemanticRole,
   SemanticType
-} from './semantic_meaning';
-import * as SemanticUtil from './semantic_util';
+} from './semantic_meaning.js';
+import * as SemanticUtil from './semantic_util.js';
 
 /**
  * The attributes of a semantic node.
@@ -226,7 +225,7 @@ export class SemanticNode {
    * @param brief If set attributes are omitted.
    * @returns The XML representation of the node.
    */
-  public xml(xml: Document, brief?: boolean): Node {
+  public xml(xml: Document, brief?: boolean): Element {
     /**
      * Translates a list of nodes into XML representation.
      *
@@ -265,17 +264,16 @@ export class SemanticNode {
    * @returns Serialized string.
    */
   public toString(brief = false): string {
-    const xmls = new SystemExternal.xmldom.XMLSerializer();
-    const dp = new SystemExternal.xmldom.DOMParser();
-    const xml = dp.parseFromString('<snode/>', 'text/xml');
-    return xmls.serializeToString(this.xml(xml, brief));
+    const xml = DomUtil.parseInput('<snode/>') as unknown as Document;
+    return DomUtil.serializeXml(this.xml(xml.ownerDocument, brief));
   }
 
   /**
-   * Computes a list of attributes of the semantic node.
+   * Computes a list of (internal) attributes of the semantic node. Note, that
+   * this does not include any external attributes that are retained from the
+   * original structure.
    *
-   * @returns A list of
-   *     pairs.
+   * @returns A list of pairs.
    */
   public allAttributes(): [Attribute, string][] {
     const attributes: [Attribute, string][] = [];
@@ -284,7 +282,7 @@ export class SemanticNode {
       attributes.push([Attribute.FONT, this.font]);
     }
     if (Object.keys(this.annotation).length) {
-      attributes.push([Attribute.ANNOTATION, this.xmlAnnotation()]);
+      attributes.push([Attribute.ANNOTATION, this.annotationXml()]);
     }
     if (this.embellished) {
       attributes.push([Attribute.EMBELLISHED, this.embellished]);
@@ -301,12 +299,23 @@ export class SemanticNode {
    *
    * @returns XML string for annotation.
    */
-  public xmlAnnotation(): string {
+  private annotationXml(): string {
     const result: string[] = [];
-    for (const key in this.annotation) {
-      this.annotation[key].forEach(function (mean) {
-        result.push(key + ':' + mean);
-      });
+    for (const [key, val] of Object.entries(this.annotation)) {
+      val.forEach((mean) => result.push(key + ':' + mean));
+    }
+    return result.join(';');
+  }
+
+  /**
+   * Turns attributes structure into an attribute.
+   *
+   * @returns XML string for annotation.
+   */
+  public attributesXml(): string {
+    const result: string[] = [];
+    for (const [key, value] of Object.entries(this.attributes)) {
+      result.push(key + ':' + value);
     }
     return result.join(';');
   }
@@ -358,7 +367,7 @@ export class SemanticNode {
     if (this.textContent === content) {
       return;
     }
-    const meaning = lookupMeaning(content);
+    const meaning = SemanticMap.Meaning.get(content);
     this.textContent = content;
     this.role = meaning.role;
     this.type = meaning.type;
@@ -570,8 +579,24 @@ export class SemanticNode {
    * @param node The XML node.
    */
   private addExternalAttributes(node: Element) {
-    for (const attr in this.attributes) {
-      node.setAttribute(attr, this.attributes[attr]);
+    for (const [attr, val] of Object.entries(this.attributes)) {
+      node.setAttribute(attr, val);
+    }
+  }
+
+  /**
+   * Parses a attributes string as given, for example, in an attribute.
+   *
+   * @param stateStr The state string for the attributes.
+   */
+  public parseAttributes(stateStr: string) {
+    if (!stateStr) return;
+    const attributes = stateStr.split(';');
+    for (let i = 0, l = attributes.length; i < l; i++) {
+      const [key, value] = attributes[i].split(':');
+      if (key) {
+        this.attributes[key] = value;
+      }
     }
   }
 

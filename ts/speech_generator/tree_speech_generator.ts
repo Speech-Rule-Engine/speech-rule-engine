@@ -20,26 +20,27 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import * as WalkerUtil from '../walker/walker_util';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import * as WalkerUtil from '../walker/walker_util.js';
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
-import * as SpeechGeneratorUtil from './speech_generator_util';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
+import * as SpeechGeneratorUtil from './speech_generator_util.js';
 
 export class TreeSpeechGenerator extends AbstractSpeechGenerator {
   /**
    * @override
    */
-  public getSpeech(node: Element, xml: Element) {
+  public getSpeech(node: Element, xml: Element, root: Element = null) {
     const speech = this.generateSpeech(node, xml);
-    node.setAttribute(this.modality, speech);
     const nodes = this.getRebuilt().nodeDict;
-    for (const key in nodes) {
+    for (const [key, snode] of Object.entries(nodes)) {
       // TODO: Refactor with setting the base semantic tree in the enrich mathml
       //      object.
-      const snode = nodes[key];
       const innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
-      const innerNode = WalkerUtil.getBySemanticId(node, key) as Element;
+      const innerNode =
+        (WalkerUtil.getBySemanticId(node, key) as Element) ||
+        // This takes care of broken elements due to linebreaks.
+        ((root && WalkerUtil.getBySemanticId(root, key)) as Element);
       if (!innerMml || !innerNode) {
         continue;
       }

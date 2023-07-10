@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as tr from './transformers';
+import * as tr from './transformers.js';
 
 /**
  * General messages for Mathspek, fonts, etc.

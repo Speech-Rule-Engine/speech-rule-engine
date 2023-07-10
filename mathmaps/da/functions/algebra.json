@@ -1,0 +1,53 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "deg",
+    "mappings": {
+      "default": {
+        "default": "grad"
+      }
+    }
+  },
+  {
+    "key": "det",
+    "mappings": {
+      "default": {
+        "default": "determinant"
+      }
+    }
+  },
+  {
+    "key": "dim",
+    "mappings": {
+      "default": {
+        "default": "dimension"
+      }
+    }
+  },
+  {
+    "key": "hom",
+    "mappings": {
+      "default": {
+        "default": "homomorfi"
+      }
+    }
+  },
+  {
+    "key": "ker",
+    "mappings": {
+      "default": {
+        "default": "kerne"
+      }
+    }
+  },
+  {
+    "key": "Tr",
+    "mappings": {
+      "default": {
+        "default": "spor"
+      }
+    }
+  }
+]

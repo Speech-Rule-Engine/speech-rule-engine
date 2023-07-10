@@ -8,11 +8,7 @@
       "default": {
         "default": "cosinus hyperbolique"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "cosh"
-    ]
+    }
   },
   {
     "key": "coth",
@@ -20,11 +16,7 @@
       "default": {
         "default": "cotangente hyperbolique"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "coth"
-    ]
+    }
   },
   {
     "key": "csch",
@@ -32,11 +24,7 @@
       "default": {
         "default": "cosécante hyperbolique"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "csch"
-    ]
+    }
   },
   {
     "key": "sech",
@@ -44,11 +32,7 @@
       "default": {
         "default": "sécante hyperbolique"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "sech"
-    ]
+    }
   },
   {
     "key": "sinh",
@@ -56,11 +40,7 @@
       "default": {
         "default": "sinus hyperbolique"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "sinh"
-    ]
+    }
   },
   {
     "key": "tanh",
@@ -68,59 +48,72 @@
       "default": {
         "default": "tangente hyperbolique"
       }
+    }
+  },
+  {
+    "key": "arcosh",
+    "mappings": {
+      "default": {
+        "default": "argument cosinus hyperbolique"
+      }
     },
-    "category": "Hyperbolic",
     "names": [
-      "tanh"
+      "argch"
     ]
   },
-
-  {"category": "Area",
-   "mappings": {
-     "default": {
-       "default": "argument cosinus hyperbolique"
-     } },
-   "key": "arcosh",
-   "names": ["arcosh", "arccosh", "argch"]
+  {
+    "key": "arcoth",
+    "mappings": {
+      "default": {
+        "default": "argument cotangente hyperbolique"
+      }
+    },
+    "names": [
+      "argcoth"
+    ]
   },
-  {"category": "Area",
-   "mappings": {
-     "default": {
-       "default": "argument cotangente hyperbolique"
-     } },
-   "key": "arcoth",
-   "names": ["arcoth", "arccoth", "argcoth"]
+  {
+    "key": "arcsch",
+    "mappings": {
+      "default": {
+        "default": "argument cosécante hyperbolique"
+      }
+    },
+    "names": [
+      "argcsch"
+    ]
   },
-  {"category": "Area",
-   "mappings": {
-     "default": {
-       "default": "argument cosécante hyperbolique"
-     } },
-   "key": "arcsch",
-   "names": ["arcsch", "arccsch", "argcsch"]
+  {
+    "key": "arsech",
+    "mappings": {
+      "default": {
+        "default": "argument sécante hyperbolique"
+      }
+    },
+    "names": [
+      "argsech"
+    ]
   },
-  {"category": "Area",
-   "mappings": {
-     "default": {
-       "default": "argument sécante hyperbolique"
-     } },
-   "key": "arsech",
-   "names": ["arsech", "arcsech", "argsech"]
+  {
+    "key": "arsinh",
+    "mappings": {
+      "default": {
+        "default": "argument sinus hyperbolique"
+      }
+    },
+    "names": [
+      "argsh"
+    ]
   },
-  {"category": "Area",
-   "mappings": {
-     "default": {
-       "default": "argument sinus hyperbolique"
-     } },
-   "key": "arsinh",
-   "names": ["arsinh", "arcsinh", "argsh"]
-  },
-  {"category": "Area",
-   "mappings": {
-     "default": {
-       "default": "argument tangente hyperbolique"
-     } },
-   "key": "artanh",
-   "names": ["artanh", "arctanh", "argth"]
+  {
+    "key": "artanh",
+    "mappings": {
+      "default": {
+        "default": "argument tangente hyperbolique"
+      }
+    },
+    "names": [
+      "argth"
+    ]
   }
 ]

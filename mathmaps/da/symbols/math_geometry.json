@@ -1,0 +1,2373 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "2500",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys vandret"
+      }
+    }
+  },
+  {
+    "key": "2501",
+    "mappings": {
+      "default": {
+        "default": "tykt, vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2502",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys lodret"
+      }
+    }
+  },
+  {
+    "key": "2503",
+    "mappings": {
+      "default": {
+        "default": "tykt, lodret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2504",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med tre korte vandrette streger"
+      }
+    }
+  },
+  {
+    "key": "2505",
+    "mappings": {
+      "default": {
+        "default": "kraftigt indramningstegn med tre korte vandrette streger"
+      }
+    }
+  },
+  {
+    "key": "2506",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med tre korte lodrette streger"
+      }
+    }
+  },
+  {
+    "key": "2507",
+    "mappings": {
+      "default": {
+        "default": "tykt indramningstegn med tre korte lodrette streger"
+      }
+    }
+  },
+  {
+    "key": "2508",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med fire korte vandrette streger"
+      }
+    }
+  },
+  {
+    "key": "2509",
+    "mappings": {
+      "default": {
+        "default": "tykt indramningstegn med fire korte vandrette streger"
+      }
+    }
+  },
+  {
+    "key": "250A",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med fire korte lodrette streger"
+      }
+    }
+  },
+  {
+    "key": "250B",
+    "mappings": {
+      "default": {
+        "default": "tykt indramningstegn med fire korte lodrette streger"
+      }
+    }
+  },
+  {
+    "key": "250C",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys ned og højre"
+      }
+    }
+  },
+  {
+    "key": "250D",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt og kraftigt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "250E",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og tyndt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "250F",
+    "mappings": {
+      "default": {
+        "default": "tykt nedad- og højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2510",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys ned og venstre"
+      }
+    }
+  },
+  {
+    "key": "2511",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt og kraftigt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2512",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og tyndt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2513",
+    "mappings": {
+      "default": {
+        "default": "tykt nedad- og venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2514",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys op og højre"
+      }
+    }
+  },
+  {
+    "key": "2515",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt ig kraftigt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2516",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2517",
+    "mappings": {
+      "default": {
+        "default": "tykt opad- og højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2518",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys op og venstre"
+      }
+    }
+  },
+  {
+    "key": "2519",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt og kraftigt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "251A",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "251B",
+    "mappings": {
+      "default": {
+        "default": "tykt opad- og venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "251C",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys lodret og højre"
+      }
+    }
+  },
+  {
+    "key": "251D",
+    "mappings": {
+      "default": {
+        "default": "tyndt lodret og kraftigt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "251E",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt højre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "251F",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og tyndt højre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2520",
+    "mappings": {
+      "default": {
+        "default": "tykt lodret og tyndt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2521",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt og kraftigt højre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2522",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt og kraftigt højre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2523",
+    "mappings": {
+      "default": {
+        "default": "tykt lodret og højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2524",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys lodret og venstre"
+      }
+    }
+  },
+  {
+    "key": "2525",
+    "mappings": {
+      "default": {
+        "default": "tyndt lodret og tykt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2526",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt venstre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2527",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og tyndt venstre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2528",
+    "mappings": {
+      "default": {
+        "default": "tykt lodret og tyndt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2529",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt og tykt venstre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "252A",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt og tykt venstre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "252B",
+    "mappings": {
+      "default": {
+        "default": "tykt lodret og venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "252C",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys ned og vandret"
+      }
+    }
+  },
+  {
+    "key": "252D",
+    "mappings": {
+      "default": {
+        "default": "tykt venstrevendt og tyndt højre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "252E",
+    "mappings": {
+      "default": {
+        "default": "tykt højrevendt og tyndt venstre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "252F",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt og tykt vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2530",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og tyndt vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2531",
+    "mappings": {
+      "default": {
+        "default": "tyndt højrevendt og tykt venstre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2532",
+    "mappings": {
+      "default": {
+        "default": "tyndt venstrevendt og tykt højre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2533",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2534",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys op og vandret"
+      }
+    }
+  },
+  {
+    "key": "2535",
+    "mappings": {
+      "default": {
+        "default": "tykt venstrevendt og tyndt højre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2536",
+    "mappings": {
+      "default": {
+        "default": "tykt højrevendt og tyndt venstre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2537",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt og tykt vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2538",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2539",
+    "mappings": {
+      "default": {
+        "default": "tyndt højrevendt og tykt venstre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "253A",
+    "mappings": {
+      "default": {
+        "default": "tyndt venstrevendt og tykt højre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "253B",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "253C",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lys lodret og vandret"
+      }
+    }
+  },
+  {
+    "key": "253D",
+    "mappings": {
+      "default": {
+        "default": "tykt venstrevendt og tyndt lodret højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "253E",
+    "mappings": {
+      "default": {
+        "default": "tykt højrevendt og tyndt lodret venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "253F",
+    "mappings": {
+      "default": {
+        "default": "tyndt lodret og tykt vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2540",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt vandret nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2541",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt og tyndt vandret opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2542",
+    "mappings": {
+      "default": {
+        "default": "tykt lodret og tyndt vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2543",
+    "mappings": {
+      "default": {
+        "default": "tykt venstre- og opadvendt og tyndt højre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2544",
+    "mappings": {
+      "default": {
+        "default": "tykt højre- og opadvendt og tyndt venstre- og nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2545",
+    "mappings": {
+      "default": {
+        "default": "tykt venstre- og nedadvendt og tyndt højre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2546",
+    "mappings": {
+      "default": {
+        "default": "tykt højre- og nedadvendt og tyndt venstre- og opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2547",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt og tykt vandret opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2548",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt og tykt vandret nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2549",
+    "mappings": {
+      "default": {
+        "default": "tyndt højrevendt og tykt lodret venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "254A",
+    "mappings": {
+      "default": {
+        "default": "tyndt venstrevendt og tykt lodret højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "254B",
+    "mappings": {
+      "default": {
+        "default": "tykt lodret og vandret indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "254C",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med to korte vandrette streger"
+      }
+    }
+  },
+  {
+    "key": "254D",
+    "mappings": {
+      "default": {
+        "default": "tykt indramningstegn med to korte vandrette streger"
+      }
+    }
+  },
+  {
+    "key": "254E",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med to korte lodrette streger"
+      }
+    }
+  },
+  {
+    "key": "254F",
+    "mappings": {
+      "default": {
+        "default": "tykt indramningstegn med to korte lodrette streger"
+      }
+    }
+  },
+  {
+    "key": "2550",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt vandret"
+      }
+    }
+  },
+  {
+    "key": "2551",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt lodret"
+      }
+    }
+  },
+  {
+    "key": "2552",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg ned single og højre dobbelt"
+      }
+    }
+  },
+  {
+    "key": "2553",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg ned dobbelt og højre single"
+      }
+    }
+  },
+  {
+    "key": "2554",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt ned og højre"
+      }
+    }
+  },
+  {
+    "key": "2555",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg ned single og venstre dobbelt"
+      }
+    }
+  },
+  {
+    "key": "2556",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg ned dobbelt og venstre single"
+      }
+    }
+  },
+  {
+    "key": "2557",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt ned og venstre"
+      }
+    }
+  },
+  {
+    "key": "2558",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg op single og højre dobbelt"
+      }
+    }
+  },
+  {
+    "key": "2559",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg op dobbelt og højre single"
+      }
+    }
+  },
+  {
+    "key": "255A",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt op og højre"
+      }
+    }
+  },
+  {
+    "key": "255B",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg op single og venstre dobbelt"
+      }
+    }
+  },
+  {
+    "key": "255C",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg op dobbelt og venstre single"
+      }
+    }
+  },
+  {
+    "key": "255D",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt op og venstre"
+      }
+    }
+  },
+  {
+    "key": "255E",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lodret single og højre dobbelt"
+      }
+    }
+  },
+  {
+    "key": "255F",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lodret dobbelt og højre single"
+      }
+    }
+  },
+  {
+    "key": "2560",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt lodret og højre"
+      }
+    }
+  },
+  {
+    "key": "2561",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lodret single og venstre dobbelt"
+      }
+    }
+  },
+  {
+    "key": "2562",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lodret dobbelt og venstre single"
+      }
+    }
+  },
+  {
+    "key": "2563",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt lodret og venstre"
+      }
+    }
+  },
+  {
+    "key": "2564",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg ned single og vandret dobbelt"
+      }
+    }
+  },
+  {
+    "key": "2565",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg ned dobbelt og vandret single"
+      }
+    }
+  },
+  {
+    "key": "2566",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt ned og vandret"
+      }
+    }
+  },
+  {
+    "key": "2567",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg op single og vandret dobbelt"
+      }
+    }
+  },
+  {
+    "key": "2568",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg op dobbelt og vandret single"
+      }
+    }
+  },
+  {
+    "key": "2569",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt op and vandret"
+      }
+    }
+  },
+  {
+    "key": "256A",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lodret single og vandret dobbelt"
+      }
+    }
+  },
+  {
+    "key": "256B",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg lodret dobbelt og vandret single"
+      }
+    }
+  },
+  {
+    "key": "256C",
+    "mappings": {
+      "default": {
+        "default": "indramnings streg dobbelt lodret og vandret"
+      }
+    }
+  },
+  {
+    "key": "256D",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med nedad- og højrevendt bue"
+      }
+    }
+  },
+  {
+    "key": "256E",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med nedad- og venstrevendt bue"
+      }
+    }
+  },
+  {
+    "key": "256F",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med opad- og venstrevendt bue"
+      }
+    }
+  },
+  {
+    "key": "2570",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med opad- og højrevendt bue"
+      }
+    }
+  },
+  {
+    "key": "2571",
+    "mappings": {
+      "default": {
+        "default": "tyndt diagonalt indramningstegn fra øverst til højre til nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "2572",
+    "mappings": {
+      "default": {
+        "default": "tyndt diagonalt indramningstegn fra øverst til venstre til nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "2573",
+    "mappings": {
+      "default": {
+        "default": "tyndt indramningstegn med diagonalt kryds"
+      }
+    }
+  },
+  {
+    "key": "2574",
+    "mappings": {
+      "default": {
+        "default": "tyndt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2575",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2576",
+    "mappings": {
+      "default": {
+        "default": "tyndt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2577",
+    "mappings": {
+      "default": {
+        "default": "tyndt nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2578",
+    "mappings": {
+      "default": {
+        "default": "tykt venstrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2579",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "257A",
+    "mappings": {
+      "default": {
+        "default": "tykt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "257B",
+    "mappings": {
+      "default": {
+        "default": "tykt nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "257C",
+    "mappings": {
+      "default": {
+        "default": "tyndt venstrevendt og tykt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "257D",
+    "mappings": {
+      "default": {
+        "default": "tyndt opadvendt og tykt nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "257E",
+    "mappings": {
+      "default": {
+        "default": "tykt venstrevendt og tyndt højrevendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "257F",
+    "mappings": {
+      "default": {
+        "default": "tykt opadvendt og tyndt nedadvendt indramningstegn"
+      }
+    }
+  },
+  {
+    "key": "2580",
+    "mappings": {
+      "default": {
+        "default": "øvre sort kasse"
+      }
+    }
+  },
+  {
+    "key": "2581",
+    "mappings": {
+      "default": {
+        "default": "en ottende blok nederst"
+      }
+    }
+  },
+  {
+    "key": "2582",
+    "mappings": {
+      "default": {
+        "default": "en kvart blok nederst"
+      }
+    }
+  },
+  {
+    "key": "2583",
+    "mappings": {
+      "default": {
+        "default": "tre ottende blok nederst"
+      }
+    }
+  },
+  {
+    "key": "2584",
+    "mappings": {
+      "default": {
+        "default": "nedre sort kasse"
+      }
+    }
+  },
+  {
+    "key": "2585",
+    "mappings": {
+      "default": {
+        "default": "fem ottende blok nederst"
+      }
+    }
+  },
+  {
+    "key": "2586",
+    "mappings": {
+      "default": {
+        "default": "trekvart blok nederst"
+      }
+    }
+  },
+  {
+    "key": "2587",
+    "mappings": {
+      "default": {
+        "default": "syv ottende blok nederst"
+      }
+    }
+  },
+  {
+    "key": "2588",
+    "mappings": {
+      "default": {
+        "default": "sort kasse"
+      }
+    }
+  },
+  {
+    "key": "2589",
+    "mappings": {
+      "default": {
+        "default": "syv ottende blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "258A",
+    "mappings": {
+      "default": {
+        "default": "trekvart blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "258B",
+    "mappings": {
+      "default": {
+        "default": "fem ottende blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "258C",
+    "mappings": {
+      "default": {
+        "default": "halv blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "258D",
+    "mappings": {
+      "default": {
+        "default": "tre ottende blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "258E",
+    "mappings": {
+      "default": {
+        "default": "en kvart blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "258F",
+    "mappings": {
+      "default": {
+        "default": "en ottende blok til venstre"
+      }
+    }
+  },
+  {
+    "key": "2590",
+    "mappings": {
+      "default": {
+        "default": "halv blok til højre"
+      }
+    }
+  },
+  {
+    "key": "2591",
+    "mappings": {
+      "default": {
+        "default": "lys skygge"
+      }
+    }
+  },
+  {
+    "key": "2592",
+    "mappings": {
+      "default": {
+        "default": "medium skygge"
+      }
+    }
+  },
+  {
+    "key": "2593",
+    "mappings": {
+      "default": {
+        "default": "mørk skygge"
+      }
+    }
+  },
+  {
+    "key": "2594",
+    "mappings": {
+      "default": {
+        "default": "en ottende blok øverst"
+      }
+    }
+  },
+  {
+    "key": "2595",
+    "mappings": {
+      "default": {
+        "default": "en ottende blok til højre"
+      }
+    }
+  },
+  {
+    "key": "2596",
+    "mappings": {
+      "default": {
+        "default": "kvadrant nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "2597",
+    "mappings": {
+      "default": {
+        "default": "kvadrant nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "2598",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til venstre"
+      }
+    }
+  },
+  {
+    "key": "2599",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til venstre og nederst til venstre og nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "259A",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til venstre og nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "259B",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til venstre og øverst til højre og nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "259C",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til venstre og øverst til højre og nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "259D",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til højre"
+      }
+    }
+  },
+  {
+    "key": "259E",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til højre og nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "259F",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øverst til højre og nederst til venstre og nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "25A0",
+    "mappings": {
+      "default": {
+        "default": "sort kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25A1",
+    "mappings": {
+      "default": {
+        "default": "hvidt kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25A2",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant med afrundede hjørner"
+      }
+    }
+  },
+  {
+    "key": "25A3",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant, der indeholder en lille sort firkant"
+      }
+    }
+  },
+  {
+    "key": "25A4",
+    "mappings": {
+      "default": {
+        "default": "firkant med vandret fyld"
+      }
+    }
+  },
+  {
+    "key": "25A5",
+    "mappings": {
+      "default": {
+        "default": "firkant med lodret fyld"
+      }
+    }
+  },
+  {
+    "key": "25A6",
+    "mappings": {
+      "default": {
+        "default": "firkant med ortogonalt krydsskraveret fyld"
+      }
+    }
+  },
+  {
+    "key": "25A7",
+    "mappings": {
+      "default": {
+        "default": "firkant med fyld fra øverst til venstre til nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "25A8",
+    "mappings": {
+      "default": {
+        "default": "firkant med fyld fra øverst til højre til nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "25A9",
+    "mappings": {
+      "default": {
+        "default": "firkant med diagonalt krydsskraveret fyld"
+      }
+    }
+  },
+  {
+    "key": "25AA",
+    "mappings": {
+      "default": {
+        "default": "sort kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25AB",
+    "mappings": {
+      "default": {
+        "default": "hvidt kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25AC",
+    "mappings": {
+      "default": {
+        "default": "sort rektangel"
+      }
+    }
+  },
+  {
+    "key": "25AD",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant"
+      }
+    }
+  },
+  {
+    "key": "25AE",
+    "mappings": {
+      "default": {
+        "default": "sort lodret rektangel"
+      }
+    }
+  },
+  {
+    "key": "25AF",
+    "mappings": {
+      "default": {
+        "default": "hvid lodret rektangel"
+      }
+    }
+  },
+  {
+    "key": "25B0",
+    "mappings": {
+      "default": {
+        "default": "sort parallelogram"
+      }
+    }
+  },
+  {
+    "key": "25B1",
+    "mappings": {
+      "default": {
+        "default": "hvidt parallellogram"
+      }
+    }
+  },
+  {
+    "key": "25B2",
+    "mappings": {
+      "default": {
+        "default": "sort trekant pegende op"
+      }
+    }
+  },
+  {
+    "key": "25B3",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende op"
+      }
+    }
+  },
+  {
+    "key": "25B4",
+    "mappings": {
+      "default": {
+        "default": "sort trekant pegende op"
+      }
+    }
+  },
+  {
+    "key": "25B5",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende op"
+      }
+    }
+  },
+  {
+    "key": "25B6",
+    "mappings": {
+      "default": {
+        "default": "sort trekant pegende mod højre"
+      }
+    }
+  },
+  {
+    "key": "25B7",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende mod højre"
+      }
+    }
+  },
+  {
+    "key": "25B8",
+    "mappings": {
+      "default": {
+        "default": "sort trekant pegende mod højre"
+      }
+    }
+  },
+  {
+    "key": "25B9",
+    "mappings": {
+      "default": {
+        "default": "trekant pegende mod højre"
+      }
+    }
+  },
+  {
+    "key": "25BA",
+    "mappings": {
+      "default": {
+        "default": "sort pilemarkør, der peger mod højre"
+      }
+    }
+  },
+  {
+    "key": "25BB",
+    "mappings": {
+      "default": {
+        "default": "hvid markør, der peger mod højre"
+      }
+    }
+  },
+  {
+    "key": "25BC",
+    "mappings": {
+      "default": {
+        "default": "sort trekant pegende ned"
+      }
+    }
+  },
+  {
+    "key": "25BD",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende ned"
+      }
+    }
+  },
+  {
+    "key": "25BE",
+    "mappings": {
+      "default": {
+        "default": "sort trekant pegende ned"
+      }
+    }
+  },
+  {
+    "key": "25BF",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende ned"
+      }
+    }
+  },
+  {
+    "key": "25C0",
+    "mappings": {
+      "default": {
+        "default": "sort treknt pegende mod venstre"
+      }
+    }
+  },
+  {
+    "key": "25C1",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende mod venstre"
+      }
+    }
+  },
+  {
+    "key": "25C2",
+    "mappings": {
+      "default": {
+        "default": "sort treknt pegende mod venstre"
+      }
+    }
+  },
+  {
+    "key": "25C3",
+    "mappings": {
+      "default": {
+        "default": "hvid tekant pegende mod venstre"
+      }
+    }
+  },
+  {
+    "key": "25C4",
+    "mappings": {
+      "default": {
+        "default": "sort trekant med spids mod venstre"
+      }
+    }
+  },
+  {
+    "key": "25C5",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant med spids mod venstre"
+      }
+    }
+  },
+  {
+    "key": "25C6",
+    "mappings": {
+      "default": {
+        "default": "sort diamant"
+      }
+    }
+  },
+  {
+    "key": "25C7",
+    "mappings": {
+      "default": {
+        "default": "hvid diamant"
+      }
+    }
+  },
+  {
+    "key": "25C8",
+    "mappings": {
+      "default": {
+        "default": "hvid diamant med sort diamant"
+      }
+    }
+  },
+  {
+    "key": "25C9",
+    "mappings": {
+      "default": {
+        "default": "fiskeøje"
+      }
+    }
+  },
+  {
+    "key": "25CA",
+    "mappings": {
+      "default": {
+        "default": "rombe"
+      }
+    }
+  },
+  {
+    "key": "25CB",
+    "mappings": {
+      "default": {
+        "default": "hvid cirkel"
+      }
+    }
+  },
+  {
+    "key": "25CC",
+    "mappings": {
+      "default": {
+        "default": "prikket cirkel"
+      }
+    }
+  },
+  {
+    "key": "25CD",
+    "mappings": {
+      "default": {
+        "default": "cirkel med lodret fyld"
+      }
+    }
+  },
+  {
+    "key": "25CE",
+    "mappings": {
+      "default": {
+        "default": "bullseye"
+      }
+    }
+  },
+  {
+    "key": "25CF",
+    "mappings": {
+      "default": {
+        "default": "sort cirkel"
+      }
+    }
+  },
+  {
+    "key": "25D0",
+    "mappings": {
+      "default": {
+        "default": "cirkel med venstre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25D1",
+    "mappings": {
+      "default": {
+        "default": "cirkel med højre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25D2",
+    "mappings": {
+      "default": {
+        "default": "cirkel med nedre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25D3",
+    "mappings": {
+      "default": {
+        "default": "cirkel med øvre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25D4",
+    "mappings": {
+      "default": {
+        "default": "cirkel med øverste højre  sort"
+      }
+    }
+  },
+  {
+    "key": "25D5",
+    "mappings": {
+      "default": {
+        "default": "sort cirkel med øverste venstre kvadrant hvid"
+      }
+    }
+  },
+  {
+    "key": "25D6",
+    "mappings": {
+      "default": {
+        "default": "sort venstre halvdel af cirkel"
+      }
+    }
+  },
+  {
+    "key": "25D7",
+    "mappings": {
+      "default": {
+        "default": "sort højre havdel af cirkel"
+      }
+    }
+  },
+  {
+    "key": "25D8",
+    "mappings": {
+      "default": {
+        "default": "stor hvid prik på sort baggrund"
+      }
+    }
+  },
+  {
+    "key": "25D9",
+    "mappings": {
+      "default": {
+        "default": "hvid cirkel på sort baggrund"
+      }
+    }
+  },
+  {
+    "key": "25DA",
+    "mappings": {
+      "default": {
+        "default": "øvre halvdel af hvid cirkel på sort baggrund"
+      }
+    }
+  },
+  {
+    "key": "25DB",
+    "mappings": {
+      "default": {
+        "default": "nedre halvdel af hvid cirkel på sort baggrund"
+      }
+    }
+  },
+  {
+    "key": "25DC",
+    "mappings": {
+      "default": {
+        "default": "øvre venstre kvadrant cirkulær bue"
+      }
+    }
+  },
+  {
+    "key": "25DD",
+    "mappings": {
+      "default": {
+        "default": "øvre højre kvadrant cirkulær bue"
+      }
+    }
+  },
+  {
+    "key": "25DE",
+    "mappings": {
+      "default": {
+        "default": "nedre højre kvadrant cirkulær bue"
+      }
+    }
+  },
+  {
+    "key": "25DF",
+    "mappings": {
+      "default": {
+        "default": "nedre venstre kvadrant cirkulær bue"
+      }
+    }
+  },
+  {
+    "key": "25E0",
+    "mappings": {
+      "default": {
+        "default": "øvre halvcirkel"
+      }
+    }
+  },
+  {
+    "key": "25E1",
+    "mappings": {
+      "default": {
+        "default": "nedre halvcirkel"
+      }
+    }
+  },
+  {
+    "key": "25E2",
+    "mappings": {
+      "default": {
+        "default": "sort nedre højre trekant"
+      }
+    }
+  },
+  {
+    "key": "25E3",
+    "mappings": {
+      "default": {
+        "default": "sort nedre venstre trekant"
+      }
+    }
+  },
+  {
+    "key": "25E4",
+    "mappings": {
+      "default": {
+        "default": "sort øvre venstre trekant"
+      }
+    }
+  },
+  {
+    "key": "25E5",
+    "mappings": {
+      "default": {
+        "default": "sort øvre højre trekant"
+      }
+    }
+  },
+  {
+    "key": "25E6",
+    "mappings": {
+      "default": {
+        "default": "komposition"
+      }
+    }
+  },
+  {
+    "key": "25E7",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med venstre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25E8",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med højre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25E9",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med øvre venstre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25EA",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med nedre højre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25EB",
+    "mappings": {
+      "default": {
+        "default": "hvidt kvadrat med skærende linie"
+      }
+    }
+  },
+  {
+    "key": "25EC",
+    "mappings": {
+      "default": {
+        "default": "hvid trekant pegende op med prik"
+      }
+    }
+  },
+  {
+    "key": "25ED",
+    "mappings": {
+      "default": {
+        "default": "trekant pegende op med venstre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25EE",
+    "mappings": {
+      "default": {
+        "default": "trekant pegende op med højre halvdel sort"
+      }
+    }
+  },
+  {
+    "key": "25EF",
+    "mappings": {
+      "default": {
+        "default": "stor cirkel"
+      }
+    }
+  },
+  {
+    "key": "25F0",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant med kvadrant øverst til venstre"
+      }
+    }
+  },
+  {
+    "key": "25F1",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant med kvadrant nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "25F2",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant med kvadrant nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "25F3",
+    "mappings": {
+      "default": {
+        "default": "hvid firkant med kvadrant øverst til højre"
+      }
+    }
+  },
+  {
+    "key": "25F4",
+    "mappings": {
+      "default": {
+        "default": "hvid cirkel med kvadrant øverst til venstre"
+      }
+    }
+  },
+  {
+    "key": "25F5",
+    "mappings": {
+      "default": {
+        "default": "hvid cirkel med kvadrant nederst til venstre"
+      }
+    }
+  },
+  {
+    "key": "25F6",
+    "mappings": {
+      "default": {
+        "default": "hvid cirkel med kvadrant nederst til højre"
+      }
+    }
+  },
+  {
+    "key": "25F7",
+    "mappings": {
+      "default": {
+        "default": "hvid cirkel med kvadrant øverst til højre"
+      }
+    }
+  },
+  {
+    "key": "25F8",
+    "mappings": {
+      "default": {
+        "default": "øvre venstre trekant"
+      }
+    }
+  },
+  {
+    "key": "25F9",
+    "mappings": {
+      "default": {
+        "default": "øvre højre trekant"
+      }
+    }
+  },
+  {
+    "key": "25FA",
+    "mappings": {
+      "default": {
+        "default": "nedre venstre trekant"
+      }
+    }
+  },
+  {
+    "key": "25FB",
+    "mappings": {
+      "default": {
+        "default": "hvidt medium kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25FC",
+    "mappings": {
+      "default": {
+        "default": "sort medium kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25FD",
+    "mappings": {
+      "default": {
+        "default": "hvidt medium kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25FE",
+    "mappings": {
+      "default": {
+        "default": "sort medium kvadrat"
+      }
+    }
+  },
+  {
+    "key": "25FF",
+    "mappings": {
+      "default": {
+        "default": "nedre højre trekant"
+      }
+    }
+  },
+  {
+    "key": "2B12",
+    "mappings": {
+      "default": {
+        "default": "firkant, hvor den øverste halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B13",
+    "mappings": {
+      "default": {
+        "default": "firkant, hvor den nederste halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B14",
+    "mappings": {
+      "default": {
+        "default": "firkant, hvor den øverste højre diagonale halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B15",
+    "mappings": {
+      "default": {
+        "default": "firkant, hvor den nederste venstre diagonale halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B16",
+    "mappings": {
+      "default": {
+        "default": "rombe, hvor venstre halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B17",
+    "mappings": {
+      "default": {
+        "default": "rombe, hvor højre halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B18",
+    "mappings": {
+      "default": {
+        "default": "rombe, hvor den øverste halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B19",
+    "mappings": {
+      "default": {
+        "default": "rombe, hvor den nederste halvdel er sort"
+      }
+    }
+  },
+  {
+    "key": "2B1A",
+    "mappings": {
+      "default": {
+        "default": "stiplet firkant"
+      }
+    }
+  },
+  {
+    "key": "2B1B",
+    "mappings": {
+      "default": {
+        "default": "stor sort firkant"
+      }
+    }
+  },
+  {
+    "key": "2B1C",
+    "mappings": {
+      "default": {
+        "default": "stor hvid firkant"
+      }
+    }
+  },
+  {
+    "key": "2B1D",
+    "mappings": {
+      "default": {
+        "default": "meget lille sort firkant"
+      }
+    }
+  },
+  {
+    "key": "2B1E",
+    "mappings": {
+      "default": {
+        "default": "meget lille hvid firkant"
+      }
+    }
+  },
+  {
+    "key": "2B1F",
+    "mappings": {
+      "default": {
+        "default": "sort femkant"
+      }
+    }
+  },
+  {
+    "key": "2B20",
+    "mappings": {
+      "default": {
+        "default": "hvid femkant"
+      }
+    }
+  },
+  {
+    "key": "2B21",
+    "mappings": {
+      "default": {
+        "default": "hvid sekskant"
+      }
+    }
+  },
+  {
+    "key": "2B22",
+    "mappings": {
+      "default": {
+        "default": "sort sekskant"
+      }
+    }
+  },
+  {
+    "key": "2B23",
+    "mappings": {
+      "default": {
+        "default": "vandret sort sekskant"
+      }
+    }
+  },
+  {
+    "key": "2B24",
+    "mappings": {
+      "default": {
+        "default": "stor sort cirkel"
+      }
+    }
+  },
+  {
+    "key": "2B25",
+    "mappings": {
+      "default": {
+        "default": "mellemstor sort rombe"
+      }
+    }
+  },
+  {
+    "key": "2B26",
+    "mappings": {
+      "default": {
+        "default": "mellemstor hvid rombe"
+      }
+    }
+  },
+  {
+    "key": "2B27",
+    "mappings": {
+      "default": {
+        "default": "mellemstor sort rombe"
+      }
+    }
+  },
+  {
+    "key": "2B28",
+    "mappings": {
+      "default": {
+        "default": "mellemstor hvid rombe"
+      }
+    }
+  },
+  {
+    "key": "2B29",
+    "mappings": {
+      "default": {
+        "default": "lille sort rombe"
+      }
+    }
+  },
+  {
+    "key": "2B2A",
+    "mappings": {
+      "default": {
+        "default": "lille sort rombe"
+      }
+    }
+  },
+  {
+    "key": "2B2B",
+    "mappings": {
+      "default": {
+        "default": "lille hvid rombe"
+      }
+    }
+  },
+  {
+    "key": "2B2C",
+    "mappings": {
+      "default": {
+        "default": "vandret sort ellipse"
+      }
+    }
+  },
+  {
+    "key": "2B2D",
+    "mappings": {
+      "default": {
+        "default": "vandret hvid ellipse"
+      }
+    }
+  },
+  {
+    "key": "2B2E",
+    "mappings": {
+      "default": {
+        "default": "sort lodret ellipse"
+      }
+    }
+  },
+  {
+    "key": "2B2F",
+    "mappings": {
+      "default": {
+        "default": "hvid lodret ellipse"
+      }
+    }
+  },
+  {
+    "key": "2B50",
+    "mappings": {
+      "default": {
+        "default": "hvid medium stjerne"
+      }
+    }
+  },
+  {
+    "key": "2B51",
+    "mappings": {
+      "default": {
+        "default": "lille sort stjerne"
+      }
+    }
+  },
+  {
+    "key": "2B52",
+    "mappings": {
+      "default": {
+        "default": "lille hvid stjerne"
+      }
+    }
+  },
+  {
+    "key": "2B53",
+    "mappings": {
+      "default": {
+        "default": "sort femkant, der peger mod højre"
+      }
+    }
+  },
+  {
+    "key": "2B54",
+    "mappings": {
+      "default": {
+        "default": "hvid femkant, der peger mod højre"
+      }
+    }
+  },
+  {
+    "key": "2B55",
+    "mappings": {
+      "default": {
+        "default": "stor kraftig cirkel"
+      }
+    }
+  },
+  {
+    "key": "2B56",
+    "mappings": {
+      "default": {
+        "default": "kraftig oval med oval indeni"
+      }
+    }
+  },
+  {
+    "key": "2B57",
+    "mappings": {
+      "default": {
+        "default": "kraftig cirkel med cirkel indeni"
+      }
+    }
+  },
+  {
+    "key": "2B58",
+    "mappings": {
+      "default": {
+        "default": "kraftig cirkel"
+      }
+    }
+  },
+  {
+    "key": "2B59",
+    "mappings": {
+      "default": {
+        "default": "andreaskors i en kraftig cirkel"
+      }
+    }
+  }
+]

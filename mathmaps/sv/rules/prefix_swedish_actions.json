@@ -102,12 +102,12 @@
     [
       "Action",
       "row",
-      "[t] CSFordinalPosition; [t] \"Rad\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Raden\" (pause:200)"
     ],
     [
       "Action",
       "cell",
-      "[n] ../..; [t] CSFordinalPosition; [t] \"Kolumn\" (pause:200)"
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Kolumnen\" (pause:200)"
     ],
     [
       "Action",

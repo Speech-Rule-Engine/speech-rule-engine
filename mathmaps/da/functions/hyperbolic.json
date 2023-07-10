@@ -1,0 +1,101 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "cosh",
+    "mappings": {
+      "default": {
+        "default": "hyperbolsk cosinus"
+      }
+    }
+  },
+  {
+    "key": "coth",
+    "mappings": {
+      "default": {
+        "default": "hyperbolsk cotangens"
+      }
+    }
+  },
+  {
+    "key": "csch",
+    "mappings": {
+      "default": {
+        "default": "hyperbolsk cosecans"
+      }
+    }
+  },
+  {
+    "key": "sech",
+    "mappings": {
+      "default": {
+        "default": "hyperbolsk sekans"
+      }
+    }
+  },
+  {
+    "key": "sinh",
+    "mappings": {
+      "default": {
+        "default": "sinus hyperbolsk"
+      }
+    }
+  },
+  {
+    "key": "tanh",
+    "mappings": {
+      "default": {
+        "default": "hyperbolsk tangens"
+      }
+    }
+  },
+  {
+    "key": "arcosh",
+    "mappings": {
+      "default": {
+        "default": "area cosinus hyperbolsk"
+      }
+    }
+  },
+  {
+    "key": "arcoth",
+    "mappings": {
+      "default": {
+        "default": "area cotangens hyperbolsk"
+      }
+    }
+  },
+  {
+    "key": "arcsch",
+    "mappings": {
+      "default": {
+        "default": "area cosecans hyperbolsk"
+      }
+    }
+  },
+  {
+    "key": "arsech",
+    "mappings": {
+      "default": {
+        "default": "area secans hyperbolsk"
+      }
+    }
+  },
+  {
+    "key": "arsinh",
+    "mappings": {
+      "default": {
+        "default": "area sinus hyperbolsk"
+      }
+    }
+  },
+  {
+    "key": "artanh",
+    "mappings": {
+      "default": {
+        "default": "area tangens hyperbolsk"
+      }
+    }
+  }
+]

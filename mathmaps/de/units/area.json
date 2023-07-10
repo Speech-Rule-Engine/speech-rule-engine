@@ -1,70 +1,65 @@
 [
-  {"locale": "de"},
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Quadrat"
-     }
-   },
-   "key": "sq",
-   "names": ["sq", "sq."]
+  {
+    "locale": "de"
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Quadratzoll"
-     }
-   },
-   "key": "sq inch",
-   "names": ["sq in", "sq. in.", "sq inch", "sq. inch"]
+  {
+    "key": "sq",
+    "mappings": {
+      "default": {
+        "default": "Quadrat"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Quadratrute",
-       "plural": "Quadratruten"
-     }
-   },
-   "key": "sq rd",
-   "names": ["sq rd", "sq. rd."]
+  {
+    "key": "sq inch",
+    "mappings": {
+      "default": {
+        "default": "Quadratzoll"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Quadratfuß"
-     }
-   },
-   "key": "sq ft",
-   "names": ["sq ft", "sq. ft."]
+  {
+    "key": "sq rd",
+    "mappings": {
+      "default": {
+        "default": "Quadratrute",
+        "plural": "Quadratruten"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Quadratyard",
-       "plural": "Quadratyards"
-     }
-   },
-   "key": "sq yd",
-   "names": ["sq yd", "sq. yd."]
+  {
+    "key": "sq ft",
+    "mappings": {
+      "default": {
+        "default": "Quadratfuß"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Quadratmeile",
-       "plural": "Quadratmeilen"
-     }
-   },
-   "key": "sq mi",
-   "names": ["sq mi", "sq. mi."]
+  {
+    "key": "sq yd",
+    "mappings": {
+      "default": {
+        "default": "Quadratyard",
+        "plural": "Quadratyards"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "Morgen"
-     }
-   },
-   "key": "acr",
-   "names": ["ac", "ac.", "acr", "acr."]
+  {
+    "key": "sq mi",
+    "mappings": {
+      "default": {
+        "default": "Quadratmeile",
+        "plural": "Quadratmeilen"
+      }
+    }
+  },
+  {
+    "key": "acr",
+    "mappings": {
+      "default": {
+        "default": "Morgen"
+      }
+    }
   },
   {
     "key": "ha",
@@ -72,10 +67,6 @@
       "default": {
         "default": "Hektar"
       }
-    },
-    "category": "area",
-    "names": [
-      "ha"
-    ]
+    }
   }
 ]

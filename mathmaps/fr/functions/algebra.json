@@ -2,58 +2,52 @@
   {
     "locale": "fr"
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "degré"
-     }
-   },
-   "key": "deg",
-   "names": ["deg"]
+  {
+    "key": "deg",
+    "mappings": {
+      "default": {
+        "default": "degré"
+      }
+    }
   },
-    {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "déterminant"
-     }
-   },
-   "key": "det",
-   "names": ["det"]
+  {
+    "key": "det",
+    "mappings": {
+      "default": {
+        "default": "déterminant"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "dimension"
-     }
-   },
-   "key": "dim",
-   "names": ["dim"]
+  {
+    "key": "dim",
+    "mappings": {
+      "default": {
+        "default": "dimension"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "homomorphisme"
-     }
-   },
-   "key": "hom",
-   "names": ["hom", "Hom"]
+  {
+    "key": "hom",
+    "mappings": {
+      "default": {
+        "default": "homomorphisme"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "noyau"
-     }
-   },
-   "key": "ker",
-   "names": ["ker"]
+  {
+    "key": "ker",
+    "mappings": {
+      "default": {
+        "default": "noyau"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "trace"
-     }
-   },
-   "key": "Tr",
-   "names": ["Tr", "tr"]
+  {
+    "key": "Tr",
+    "mappings": {
+      "default": {
+        "default": "trace"
+      }
+    }
   }
 ]

@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { createLocale, Locale } from '../locale';
-import { nestingToString } from '../locale_util';
-import NUMBERS from '../numbers/numbers_sv';
-import * as tr from '../transformers';
+import { createLocale, Locale } from '../locale.js';
+import { nestingToString } from '../locale_util.js';
+import NUMBERS from '../numbers/numbers_sv.js';
+import * as tr from '../transformers.js';
 
 let locale: Locale = null;
 
@@ -43,7 +43,11 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.radicalNestDepth = nestingToString;
+  loc.FUNCTIONS.fontRegexp = function (font: string) {
+    return new RegExp('((^' + font + ' )|( ' + font + '$))');
+  };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+  loc.CORRECTIONS.correctOne = (num: string) => num.replace(/^ett$/, 'en');
   return loc;
 }

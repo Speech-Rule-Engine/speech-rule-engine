@@ -26,6 +26,11 @@
     ],
     [
       "Action",
+      "font-double-struck",
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
+    ],
+    [
+      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"och\"; [n] children/*[2]"
     ],
@@ -42,7 +47,7 @@
     [
       "Action",
       "number-as-upper-word",
-      "[t] \"Ord stort\"; [t] CSFspaceoutText"
+      "[t] \"StortOrd\"; [t] CSFspaceoutText"
     ],
     [
       "Action",
@@ -97,12 +102,12 @@
     [
       "Action",
       "fences-metric",
-      "[t] \"StartMetrisk\"; [n] children/*[1]; [t] \"SlutMetrisk\""
+      "[t] \"StartBelopp\"; [n] children/*[1]; [t] \"SlutBelopp\""
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"Metrisk\"; [n] children/*[1]; [t] \"SlutMetrisk\""
+      "[t] \"Belopp\"; [n] children/*[1]; [t] \"SlutBelopp\""
     ],
     [
       "Action",
@@ -128,6 +133,11 @@
       "Action",
       "minus",
       "[t] \"minus\""
+    ],
+    [
+      "Action",
+      "vulgar-fraction",
+      "[t] CSFvulgarFraction (grammar:correctOne)"
     ],
     [
       "Action",

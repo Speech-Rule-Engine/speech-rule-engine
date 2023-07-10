@@ -8,8 +8,7 @@
       "default": {
         "default": "venstre-harpun opp"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BD",
@@ -17,8 +16,7 @@
       "default": {
         "default": "venstre-harpun ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BE",
@@ -26,8 +24,7 @@
       "default": {
         "default": "opp-harpun høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BF",
@@ -35,8 +32,7 @@
       "default": {
         "default": "opp-harpun venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C0",
@@ -44,8 +40,7 @@
       "default": {
         "default": "høyre-harpun opp"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C1",
@@ -53,8 +48,7 @@
       "default": {
         "default": "høyre-harpun ned"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C2",
@@ -62,8 +56,7 @@
       "default": {
         "default": "ned-harpun høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C3",
@@ -71,8 +64,7 @@
       "default": {
         "default": "ned-harpun venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CB",
@@ -80,8 +72,7 @@
       "default": {
         "default": "venstre-harpun over høyre-harpun"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CC",
@@ -89,8 +80,7 @@
       "default": {
         "default": "høyre-harpun over venstre-harpun"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "294A",
@@ -98,8 +88,7 @@
       "default": {
         "default": "venstre pigg opp høyre pigg ned-harpun"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294B",
@@ -107,11 +96,9 @@
       "default": {
         "default": "venstre pigg ned høyre pigg opp-harpun"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "294C",
     "mappings": {
       "default": {
@@ -120,7 +107,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "294D",
     "mappings": {
       "default": {
@@ -134,8 +120,7 @@
       "default": {
         "default": "venstre pigg opp høyre pigg opp-harpun"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294F",
@@ -143,8 +128,7 @@
       "default": {
         "default": "opp ned-harpun høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2950",
@@ -152,8 +136,7 @@
       "default": {
         "default": "venstre pigg ned høyre pigg ned-harpun"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2951",
@@ -161,8 +144,7 @@
       "default": {
         "default": "opp ned-harpun venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2952",
@@ -170,8 +152,7 @@
       "default": {
         "default": "venstre-harpun til strek med pigg oppover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2953",
@@ -179,8 +160,7 @@
       "default": {
         "default": "høyre-harpun til strek med pigg oppover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2954",
@@ -188,8 +168,7 @@
       "default": {
         "default": "oppover-harpun til strek med pigg høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2955",
@@ -197,8 +176,7 @@
       "default": {
         "default": "nedover-harpun til strek med pigg høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2956",
@@ -206,8 +184,7 @@
       "default": {
         "default": "venstre-harpun til strek med pigg nedover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2957",
@@ -215,8 +192,7 @@
       "default": {
         "default": "høyre-harpun til strek med pigg nedover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2958",
@@ -224,8 +200,7 @@
       "default": {
         "default": "oppover-harpun til strek med pigg venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2959",
@@ -233,8 +208,7 @@
       "default": {
         "default": "nedover-harpun til strek med pigg venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295A",
@@ -242,8 +216,7 @@
       "default": {
         "default": "venstre-harpun from strek med pigg oppover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295B",
@@ -251,8 +224,7 @@
       "default": {
         "default": "høyre-harpun from strek med pigg oppover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295C",
@@ -260,8 +232,7 @@
       "default": {
         "default": "oppover-harpun from strek med pigg høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295D",
@@ -269,8 +240,7 @@
       "default": {
         "default": "nedover-harpun from strek med pigg høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295E",
@@ -278,8 +248,7 @@
       "default": {
         "default": "venstre-harpun from strek med pigg nedover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295F",
@@ -287,8 +256,7 @@
       "default": {
         "default": "høyre-harpun from strek med pigg nedover"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2960",
@@ -296,8 +264,7 @@
       "default": {
         "default": "oppover-harpun from strek med pigg venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2961",
@@ -305,8 +272,7 @@
       "default": {
         "default": "nedover-harpun from strek med pigg venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2962",
@@ -314,8 +280,7 @@
       "default": {
         "default": "venstre-harpun med pigg opp above venstre-harpun med pigg ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2963",
@@ -323,8 +288,7 @@
       "default": {
         "default": "oppover-harpun med pigg venstre beside oppover-harpun med pigg høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2964",
@@ -332,8 +296,7 @@
       "default": {
         "default": "høyre-harpun med pigg opp above høyre-harpun med pigg ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2965",
@@ -341,8 +304,7 @@
       "default": {
         "default": "nedover-harpun med pigg venstre beside nedover-harpun med pigg høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2966",
@@ -350,8 +312,7 @@
       "default": {
         "default": "venstre-harpun med pigg opp above høyre-harpun med pigg opp"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2967",
@@ -359,8 +320,7 @@
       "default": {
         "default": "venstre-harpun med pigg ned above høyre-harpun med pigg ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2968",
@@ -368,8 +328,7 @@
       "default": {
         "default": "høyre-harpun med pigg opp above venstre-harpun med pigg opp"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2969",
@@ -377,8 +336,7 @@
       "default": {
         "default": "høyre-harpun med pigg ned above venstre-harpun med pigg ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296A",
@@ -386,8 +344,7 @@
       "default": {
         "default": "venstre-harpun over strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296B",
@@ -395,8 +352,7 @@
       "default": {
         "default": "venstre-harpun under strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296C",
@@ -404,8 +360,7 @@
       "default": {
         "default": "høyre-harpun over strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296D",
@@ -413,8 +368,7 @@
       "default": {
         "default": "høyre-harpun under strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296E",
@@ -422,8 +376,7 @@
       "default": {
         "default": "oppover-harpun til the venstre av nedover-harpun"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296F",
@@ -431,8 +384,7 @@
       "default": {
         "default": "oppover-harpun til the høyre av nedover-harpun"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297C",
@@ -440,8 +392,7 @@
       "default": {
         "default": "venstre fiskehale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297D",
@@ -449,8 +400,7 @@
       "default": {
         "default": "høyre fiskehale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297E",
@@ -458,8 +408,7 @@
       "default": {
         "default": "opp-fiskehale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297F",
@@ -467,7 +416,6 @@
       "default": {
         "default": "ned-fiskehale"
       }
-    },
-    "category": "Sm"
+    }
   }
 ]

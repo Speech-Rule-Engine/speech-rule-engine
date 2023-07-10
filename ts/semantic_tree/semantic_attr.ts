@@ -51,2667 +51,1214 @@ import {
   SemanticMeaning,
   SemanticRole,
   SemanticType,
-  SemanticFont
-} from './semantic_meaning';
+  SemanticFont,
+  SemanticSecondary
+} from './semantic_meaning.js';
+import * as Alphabet from '../speech_rules/alphabet.js';
+
+export namespace NamedSymbol {
+  /**
+   * Invisible operator for function application.
+   */
+  export const functionApplication = String.fromCodePoint(0x2061);
+
+  /**
+   * Invisible operator for multiplication.
+   */
+  export const invisibleTimes: string = String.fromCodePoint(0x2062);
+
+  /**
+   * The invisible comma character.
+   */
+  export const invisibleComma: string = String.fromCodePoint(0x2063);
+
+  /**
+   * Invisible operator for plus.
+   */
+  export const invisiblePlus: string = String.fromCodePoint(0x2064);
+}
+
+// Map extensions for semantic maps.
+
+class meaningMap extends Map<string, SemanticMeaning> {
+  /**
+   * Lookup the semantic meaning of a symbol in terms of type and role. If symbol
+   * has no predefined meaning, returns unknown.
+   *
+   * @param symbol
+   */
+  public get(symbol: string) {
+    return (
+      super.get(symbol) || {
+        role: SemanticRole.UNKNOWN,
+        type: SemanticType.UNKNOWN,
+        font: SemanticFont.UNKNOWN
+      }
+    );
+  }
+}
 
 /**
- * Contains the basic mappings of characters/symbols and functions to semantic
- * attributes.
+ * Secondary annotation facility. This allows to compute a special annotation,
+ * if desired.
+ */
+class secondaryMap extends Map<string, string> {
+  /**
+   * @override
+   *
+   * Builds the secondary annotation structure.
+   *
+   * @param char The character to define a secondary meaning on.
+   * @param kind The kind of annotation.
+   * @param annotation Optionally an annotation value. Default is `kind`.
+   */
+  public set(char: string, kind: SemanticSecondary, annotation = '') {
+    super.set(this.secKey(kind, char), annotation || kind);
+    return this;
+  }
+
+  /**
+   * @override
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   */
+  public has(char: string, kind?: SemanticSecondary) {
+    return super.has(this.secKey(kind, char));
+  }
+
+  /**
+   * @override
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   */
+  public get(char: string, kind?: SemanticSecondary) {
+    return super.get(this.secKey(kind, char));
+  }
+
+  /**
+   * The key generator for secondary annotations.
+   *
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   * @returns The generated key.
+   */
+  private secKey(kind: SemanticSecondary, char: string) {
+    return char ? `${kind} ${char}` : `${kind}`;
+  }
+}
+
+export namespace SemanticMap {
+  /**
+   * Mapping primary meaning of symbols.
+   */
+  export const Meaning = new meaningMap();
+
+  /**
+   * Secondary meaning.
+   */
+  export const Secondary = new secondaryMap();
+
+  // Fences.
+  // Fences are treated slightly differently from other symbols as we want to
+  // record pairs of opening/closing and top/bottom fences.
+  /**
+   * Mapping opening to closing fences.
+   */
+  export const FencesHoriz = new Map();
+
+  /**
+   * Mapping top to bottom fences.
+   */
+  export const FencesVert = new Map();
+}
+
+/**
  *
- * Observe that all characters are given as hex code number in order to ease the
- * comparison with those in the JSON files that define speech rules per
- * character.
+ * @param symbols
+ * @param meaning
  */
-// Punctuation Characters.
-const generalPunctuations: string[] = [
-  '!',
-  '"',
-  '#',
-  '%',
-  '&',
-  ';',
-  '?',
-  '@',
-  '\\',
-  '¡',
-  '§',
-  '¶',
-  '¿',
-  '‗',
-  '†',
-  '‡',
-  '•',
-  '‣',
-  '․',
-  '‥',
-  '‧',
-  '‰',
-  '‱',
-  '‸',
-  '※',
-  '‼',
-  '‽',
-  '‾',
-  '⁁',
-  '⁂',
-  '⁃',
-  '⁇',
-  '⁈',
-  '⁉',
-  '⁋',
-  '⁌',
-  '⁍',
-  '⁎',
-  '⁏',
-  '⁐',
-  '⁑',
-  '⁓',
-  '⁕',
-  '⁖',
-  '⁘',
-  '⁙',
-  '⁚',
-  '⁛',
-  '⁜',
-  '⁝',
-  '⁞',
-  '︐',
-  '︔',
-  '︕',
-  '︖',
-  '︰',
-  '﹅',
-  '﹆',
-  '﹉',
-  '﹊',
-  '﹋',
-  '﹌',
-  '﹔',
-  '﹖',
-  '﹗',
-  '﹟',
-  '﹠',
-  '﹡',
-  '﹨',
-  '﹪',
-  '﹫',
-  '！',
-  '＂',
-  '＃',
-  '％',
-  '＆',
-  '＇',
-  '＊',
-  '／',
-  '；',
-  '？',
-  '＠',
-  '＼'
-];
-const colons: string[] = ['︓', ':', '：', '﹕'];
-const invisibleComma_: string = String.fromCodePoint(0x2063);
-const commas: string[] = ['，', '﹐', ',', invisibleComma_];
-const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
-const fullStops: string[] = ['.', '﹒', '．'];
-const dashes: string[] = [
-  '¯',
-  '‒',
-  '–',
-  '—',
-  '―',
-  '﹘',
-  '-',
-  '⁻',
-  '₋',
-  '−',
-  '➖',
-  '﹣',
-  '－',
-  '‐',
-  '‑',
-  '‾',
-  '_'
-];
-const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰'];
-const primes: string[] = ["'", '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
-const degrees: string[] = ['°'];
-
-// Fences.
-// Fences are treated slightly differently from other symbols as we want to
-// record pairs of opening/closing and top/bottom fences.
-/**
- * Mapping opening to closing fences.
- */
-const openClosePairs: { [key: string]: string } = {
-  // Unicode categories Ps and Pe.
-  // Observe that left quotation 301D could also be matched to 301F,
-  // but is currently matched to 301E.
-  '(': ')',
-  '[': ']',
-  '{': '}',
-  '\u2045': '⁆',
-  '\u2329': '〉',
-  '\u2768': '❩',
-  '\u276a': '❫',
-  '\u276c': '❭',
-  '\u276e': '❯',
-  '\u2770': '❱',
-  '\u2772': '❳',
-  '\u2774': '❵',
-  '\u27c5': '⟆',
-  '\u27e6': '⟧',
-  '\u27e8': '⟩',
-  '\u27ea': '⟫',
-  '\u27ec': '⟭',
-  '\u27ee': '⟯',
-  '\u2983': '⦄',
-  '\u2985': '⦆',
-  '\u2987': '⦈',
-  '\u2989': '⦊',
-  '\u298b': '⦌',
-  '\u298d': '⦎',
-  '\u298f': '⦐',
-  '\u2991': '⦒',
-  '\u2993': '⦔',
-  '\u2995': '⦖',
-  '\u2997': '⦘',
-  '\u29d8': '⧙',
-  '\u29da': '⧛',
-  '\u29fc': '⧽',
-  '\u2e22': '⸣',
-  '\u2e24': '⸥',
-  '\u2e26': '⸧',
-  '\u2e28': '⸩',
-  '\u3008': '〉',
-  '\u300a': '》',
-  '\u300c': '」',
-  '\u300e': '』',
-  '\u3010': '】',
-  '\u3014': '〕',
-  '\u3016': '〗',
-  '\u3018': '〙',
-  '\u301a': '〛',
-  '\u301d': '〞',
-  '\ufd3e': '﴿',
-  '\ufe17': '︘',
-  '\ufe59': '﹚',
-  '\ufe5b': '﹜',
-  '\ufe5d': '﹞',
-  '\uff08': '）',
-  '\uff3b': '］',
-  '\uff5b': '｝',
-  '\uff5f': '｠',
-  '\uff62': '｣',
-  // Unicode categories Sm and So.
-  '\u2308': '⌉',
-  '\u230a': '⌋',
-  '\u230c': '⌍',
-  '\u230e': '⌏',
-  '\u231c': '⌝',
-  '\u231e': '⌟',
-  // Extender fences.
-  // Parenthesis.
-  '\u239b': '⎞',
-  '\u239c': '⎟',
-  '\u239d': '⎠',
-  // Square bracket.
-  '\u23a1': '⎤',
-  '\u23a2': '⎥',
-  '\u23a3': '⎦',
-  // Curly bracket.
-  '\u23a7': '⎫',
-  '\u23a8': '⎬',
-  '\u23a9': '⎭',
-  '\u23b0': '⎱',
-  '\u23b8': '⎹'
-};
+function addMeaning(symbols: string[], meaning: MeaningSet) {
+  for (const symbol of symbols) {
+    SemanticMap.Meaning.set(symbol, {
+      role: meaning.role || SemanticRole.UNKNOWN,
+      type: meaning.type || SemanticType.UNKNOWN,
+      font: meaning.font || SemanticFont.UNKNOWN
+    });
+    if (meaning.secondary) {
+      SemanticMap.Secondary.set(symbol, meaning.secondary);
+    }
+  }
+}
 
 /**
- * Mapping top to bottom fences.
+ * Initializes the dictionary mapping symbols to meaning.
+ *
+ * @returns The dictionary mapping strings to semantic attributes.
  */
-const topBottomPairs: { [key: string]: string } = {
-  '\u23b4': '⎵',
-  '\u23dc': '⏝',
-  '\u23de': '⏟',
-  '\u23e0': '⏡',
-  '\ufe35': '︶',
-  '\ufe37': '︸',
-  '\ufe39': '︺',
-  '\ufe3b': '︼',
-  '\ufe3d': '︾',
-  '\ufe3f': '﹀',
-  '\ufe41': '﹂',
-  '\ufe43': '﹄',
-  '\ufe47': '﹈'
-};
+function initMeaning() {
+  // Punctuation Characters.
+  // generalPunctuations
+  const sets: MeaningSet[] = [
+    {
+      set: [
+        '23',
+        '25',
+        '26',
+        '40',
+        '5c',
+        'a1',
+        'a7',
+        'b6',
+        'bf',
+        '2017',
+        ['2022', '2025'],
+        '2027',
+        '2030',
+        '2031',
+        '203b',
+        '203c',
+        ['2041', '2043'],
+        ['2047', '2049'],
+        ['204b', '204d'],
+        '2050',
+        '2055',
+        '2056',
+        ['2058', '205e'],
+        '2234',
+        '2235',
+        'fe45',
+        'fe46',
+        'fe5f',
+        'fe60',
+        'fe68',
+        'fe6a',
+        'fe6b',
+        'ff03',
+        'ff05',
+        'ff06',
+        'ff0f',
+        'ff20',
+        'ff3c'
+      ],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.UNKNOWN
+    },
 
-const leftFences: string[] = Object.keys(openClosePairs);
-const rightFences: string[] = Object.values(openClosePairs);
-rightFences.push('〟');
-const topFences: string[] = Object.keys(topBottomPairs);
-const bottomFences: string[] = Object.values(topBottomPairs);
+    // quotes
+    {
+      set: [
+        '22',
+        'ab',
+        'bb',
+        '2dd',
+        ['2018', '201f'],
+        '2039',
+        '203a',
+        ['301d', '301f'],
+        'fe10',
+        'ff02',
+        'ff07'
+      ],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.QUOTES
+    },
 
-const neutralFences: string[] = [
-  '|',
-  '¦',
-  '∣',
-  '⏐',
-  '⎸',
-  '⎹',
-  '❘',
-  '｜',
-  '￤',
-  '︱',
-  '︲'
-];
-const metricFences: string[] = ['‖', '∥', '⦀', '⫴'];
-/**
- * Array of all fences.
- */
-// const allFences: string[] = neutralFences.concat(
-//   leftFences, rightFences, topFences, bottomFences);
+    // semicolons
+    {
+      set: ['3b', '204f', '2a1f', '2a3e', 'fe14', 'fe54', 'ff1b'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.SEMICOLON
+    },
 
-// Identifiers.
-// Latin Alphabets.
-const capitalLatin: string[] = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z'
-];
-const smallLatin: string[] = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-  // dotless i and j.
-  'ı',
-  'ȷ'
-];
-const capitalLatinFullWidth: string[] = [
-  'Ａ',
-  'Ｂ',
-  'Ｃ',
-  'Ｄ',
-  'Ｅ',
-  'Ｆ',
-  'Ｇ',
-  'Ｈ',
-  'Ｉ',
-  'Ｊ',
-  'Ｋ',
-  'Ｌ',
-  'Ｍ',
-  'Ｎ',
-  'Ｏ',
-  'Ｐ',
-  'Ｑ',
-  'Ｒ',
-  'Ｓ',
-  'Ｔ',
-  'Ｕ',
-  'Ｖ',
-  'Ｗ',
-  'Ｘ',
-  'Ｙ',
-  'Ｚ'
-];
-const smallLatinFullWidth: string[] = [
-  'ａ',
-  'ｂ',
-  'ｃ',
-  'ｄ',
-  'ｅ',
-  'ｆ',
-  'ｇ',
-  'ｈ',
-  'ｉ',
-  'ｊ',
-  'ｋ',
-  'ｌ',
-  'ｍ',
-  'ｎ',
-  'ｏ',
-  'ｐ',
-  'ｑ',
-  'ｒ',
-  'ｓ',
-  'ｔ',
-  'ｕ',
-  'ｖ',
-  'ｗ',
-  'ｘ',
-  'ｙ',
-  'ｚ'
-];
-const capitalLatinBold: string[] = [
-  '𝐀',
-  '𝐁',
-  '𝐂',
-  '𝐃',
-  '𝐄',
-  '𝐅',
-  '𝐆',
-  '𝐇',
-  '𝐈',
-  '𝐉',
-  '𝐊',
-  '𝐋',
-  '𝐌',
-  '𝐍',
-  '𝐎',
-  '𝐏',
-  '𝐐',
-  '𝐑',
-  '𝐒',
-  '𝐓',
-  '𝐔',
-  '𝐕',
-  '𝐖',
-  '𝐗',
-  '𝐘',
-  '𝐙'
-];
-const smallLatinBold: string[] = [
-  '𝐚',
-  '𝐛',
-  '𝐜',
-  '𝐝',
-  '𝐞',
-  '𝐟',
-  '𝐠',
-  '𝐡',
-  '𝐢',
-  '𝐣',
-  '𝐤',
-  '𝐥',
-  '𝐦',
-  '𝐧',
-  '𝐨',
-  '𝐩',
-  '𝐪',
-  '𝐫',
-  '𝐬',
-  '𝐭',
-  '𝐮',
-  '𝐯',
-  '𝐰',
-  '𝐱',
-  '𝐲',
-  '𝐳'
-];
-const capitalLatinItalic: string[] = [
-  '𝐴',
-  '𝐵',
-  '𝐶',
-  '𝐷',
-  '𝐸',
-  '𝐹',
-  '𝐺',
-  '𝐻',
-  '𝐼',
-  '𝐽',
-  '𝐾',
-  '𝐿',
-  '𝑀',
-  '𝑁',
-  '𝑂',
-  '𝑃',
-  '𝑄',
-  '𝑅',
-  '𝑆',
-  '𝑇',
-  '𝑈',
-  '𝑉',
-  '𝑊',
-  '𝑋',
-  '𝑌',
-  '𝑍'
-];
-const smallLatinItalic: string[] = [
-  '𝑎',
-  '𝑏',
-  '𝑐',
-  '𝑑',
-  '𝑒',
-  '𝑓',
-  '𝑔',
-  'ℎ',
-  '𝑖',
-  '𝑗',
-  '𝑘',
-  '𝑙',
-  '𝑚',
-  '𝑛',
-  '𝑜',
-  '𝑝',
-  '𝑞',
-  '𝑟',
-  '𝑠',
-  '𝑡',
-  '𝑢',
-  '𝑣',
-  '𝑤',
-  '𝑥',
-  '𝑦',
-  '𝑧',
-  // dotless i and j.
-  '𝚤',
-  '𝚥'
-];
-const capitalLatinBoldItalic: string[] = [
-  '𝑨',
-  '𝑩',
-  '𝑪',
-  '𝑫',
-  '𝑬',
-  '𝑭',
-  '𝑮',
-  '𝑯',
-  '𝑰',
-  '𝑱',
-  '𝑲',
-  '𝑳',
-  '𝑴',
-  '𝑵',
-  '𝑶',
-  '𝑷',
-  '𝑸',
-  '𝑹',
-  '𝑺',
-  '𝑻',
-  '𝑼',
-  '𝑽',
-  '𝑾',
-  '𝑿',
-  '𝒀',
-  '𝒁'
-];
-const smallLatinBoldItalic: string[] = [
-  '𝒂',
-  '𝒃',
-  '𝒄',
-  '𝒅',
-  '𝒆',
-  '𝒇',
-  '𝒈',
-  '𝒉',
-  '𝒊',
-  '𝒋',
-  '𝒌',
-  '𝒍',
-  '𝒎',
-  '𝒏',
-  '𝒐',
-  '𝒑',
-  '𝒒',
-  '𝒓',
-  '𝒔',
-  '𝒕',
-  '𝒖',
-  '𝒗',
-  '𝒘',
-  '𝒙',
-  '𝒚',
-  '𝒛'
-];
-const capitalLatinScript: string[] = [
-  '𝒜',
-  'ℬ',
-  '𝒞',
-  '𝒟',
-  'ℰ',
-  'ℱ',
-  '𝒢',
-  'ℋ',
-  'ℐ',
-  '𝒥',
-  '𝒦',
-  'ℒ',
-  'ℳ',
-  '𝒩',
-  '𝒪',
-  '𝒫',
-  '𝒬',
-  'ℛ',
-  '𝒮',
-  '𝒯',
-  '𝒰',
-  '𝒱',
-  '𝒲',
-  '𝒳',
-  '𝒴',
-  '𝒵',
-  // Powerset Cap P.
-  '℘'
-];
-const smallLatinScript: string[] = [
-  '𝒶',
-  '𝒷',
-  '𝒸',
-  '𝒹',
-  'ℯ',
-  '𝒻',
-  'ℊ',
-  '𝒽',
-  '𝒾',
-  '𝒿',
-  '𝓀',
-  '𝓁',
-  '𝓂',
-  '𝓃',
-  'ℴ',
-  '𝓅',
-  '𝓆',
-  '𝓇',
-  '𝓈',
-  '𝓉',
-  '𝓊',
-  '𝓋',
-  '𝓌',
-  '𝓍',
-  '𝓎',
-  '𝓏',
-  // script small l
-  'ℓ'
-];
-const capitalLatinBoldScript: string[] = [
-  '𝓐',
-  '𝓑',
-  '𝓒',
-  '𝓓',
-  '𝓔',
-  '𝓕',
-  '𝓖',
-  '𝓗',
-  '𝓘',
-  '𝓙',
-  '𝓚',
-  '𝓛',
-  '𝓜',
-  '𝓝',
-  '𝓞',
-  '𝓟',
-  '𝓠',
-  '𝓡',
-  '𝓢',
-  '𝓣',
-  '𝓤',
-  '𝓥',
-  '𝓦',
-  '𝓧',
-  '𝓨',
-  '𝓩'
-];
-const smallLatinBoldScript: string[] = [
-  '𝓪',
-  '𝓫',
-  '𝓬',
-  '𝓭',
-  '𝓮',
-  '𝓯',
-  '𝓰',
-  '𝓱',
-  '𝓲',
-  '𝓳',
-  '𝓴',
-  '𝓵',
-  '𝓶',
-  '𝓷',
-  '𝓸',
-  '𝓹',
-  '𝓺',
-  '𝓻',
-  '𝓼',
-  '𝓽',
-  '𝓾',
-  '𝓿',
-  '𝔀',
-  '𝔁',
-  '𝔂',
-  '𝔃'
-];
-const capitalLatinFraktur: string[] = [
-  '𝔄',
-  '𝔅',
-  'ℭ',
-  '𝔇',
-  '𝔈',
-  '𝔉',
-  '𝔊',
-  'ℌ',
-  'ℑ',
-  '𝔍',
-  '𝔎',
-  '𝔏',
-  '𝔐',
-  '𝔑',
-  '𝔒',
-  '𝔓',
-  '𝔔',
-  'ℜ',
-  '𝔖',
-  '𝔗',
-  '𝔘',
-  '𝔙',
-  '𝔚',
-  '𝔛',
-  '𝔜',
-  'ℨ'
-];
-const smallLatinFraktur: string[] = [
-  '𝔞',
-  '𝔟',
-  '𝔠',
-  '𝔡',
-  '𝔢',
-  '𝔣',
-  '𝔤',
-  '𝔥',
-  '𝔦',
-  '𝔧',
-  '𝔨',
-  '𝔩',
-  '𝔪',
-  '𝔫',
-  '𝔬',
-  '𝔭',
-  '𝔮',
-  '𝔯',
-  '𝔰',
-  '𝔱',
-  '𝔲',
-  '𝔳',
-  '𝔴',
-  '𝔵',
-  '𝔶',
-  '𝔷'
-];
-const capitalLatinDoubleStruck: string[] = [
-  '𝔸',
-  '𝔹',
-  'ℂ',
-  '𝔻',
-  '𝔼',
-  '𝔽',
-  '𝔾',
-  'ℍ',
-  '𝕀',
-  '𝕁',
-  '𝕂',
-  '𝕃',
-  '𝕄',
-  'ℕ',
-  '𝕆',
-  'ℙ',
-  'ℚ',
-  'ℝ',
-  '𝕊',
-  '𝕋',
-  '𝕌',
-  '𝕍',
-  '𝕎',
-  '𝕏',
-  '𝕐',
-  'ℤ'
-];
-const smallLatinDoubleStruck: string[] = [
-  '𝕒',
-  '𝕓',
-  '𝕔',
-  '𝕕',
-  '𝕖',
-  '𝕗',
-  '𝕘',
-  '𝕙',
-  '𝕚',
-  '𝕛',
-  '𝕜',
-  '𝕝',
-  '𝕞',
-  '𝕟',
-  '𝕠',
-  '𝕡',
-  '𝕢',
-  '𝕣',
-  '𝕤',
-  '𝕥',
-  '𝕦',
-  '𝕧',
-  '𝕨',
-  '𝕩',
-  '𝕪',
-  '𝕫'
-];
-const capitalLatinBoldFraktur: string[] = [
-  '𝕬',
-  '𝕭',
-  '𝕮',
-  '𝕯',
-  '𝕰',
-  '𝕱',
-  '𝕲',
-  '𝕳',
-  '𝕴',
-  '𝕵',
-  '𝕶',
-  '𝕷',
-  '𝕸',
-  '𝕹',
-  '𝕺',
-  '𝕻',
-  '𝕼',
-  '𝕽',
-  '𝕾',
-  '𝕿',
-  '𝖀',
-  '𝖁',
-  '𝖂',
-  '𝖃',
-  '𝖄',
-  '𝖅'
-];
-const smallLatinBoldFraktur: string[] = [
-  '𝖆',
-  '𝖇',
-  '𝖈',
-  '𝖉',
-  '𝖊',
-  '𝖋',
-  '𝖌',
-  '𝖍',
-  '𝖎',
-  '𝖏',
-  '𝖐',
-  '𝖑',
-  '𝖒',
-  '𝖓',
-  '𝖔',
-  '𝖕',
-  '𝖖',
-  '𝖗',
-  '𝖘',
-  '𝖙',
-  '𝖚',
-  '𝖛',
-  '𝖜',
-  '𝖝',
-  '𝖞',
-  '𝖟'
-];
-const capitalLatinSansSerif: string[] = [
-  '𝖠',
-  '𝖡',
-  '𝖢',
-  '𝖣',
-  '𝖤',
-  '𝖥',
-  '𝖦',
-  '𝖧',
-  '𝖨',
-  '𝖩',
-  '𝖪',
-  '𝖫',
-  '𝖬',
-  '𝖭',
-  '𝖮',
-  '𝖯',
-  '𝖰',
-  '𝖱',
-  '𝖲',
-  '𝖳',
-  '𝖴',
-  '𝖵',
-  '𝖶',
-  '𝖷',
-  '𝖸',
-  '𝖹'
-];
-const smallLatinSansSerif: string[] = [
-  '𝖺',
-  '𝖻',
-  '𝖼',
-  '𝖽',
-  '𝖾',
-  '𝖿',
-  '𝗀',
-  '𝗁',
-  '𝗂',
-  '𝗃',
-  '𝗄',
-  '𝗅',
-  '𝗆',
-  '𝗇',
-  '𝗈',
-  '𝗉',
-  '𝗊',
-  '𝗋',
-  '𝗌',
-  '𝗍',
-  '𝗎',
-  '𝗏',
-  '𝗐',
-  '𝗑',
-  '𝗒',
-  '𝗓'
-];
-const capitalLatinSansSerifBold: string[] = [
-  '𝗔',
-  '𝗕',
-  '𝗖',
-  '𝗗',
-  '𝗘',
-  '𝗙',
-  '𝗚',
-  '𝗛',
-  '𝗜',
-  '𝗝',
-  '𝗞',
-  '𝗟',
-  '𝗠',
-  '𝗡',
-  '𝗢',
-  '𝗣',
-  '𝗤',
-  '𝗥',
-  '𝗦',
-  '𝗧',
-  '𝗨',
-  '𝗩',
-  '𝗪',
-  '𝗫',
-  '𝗬',
-  '𝗭'
-];
-const smallLatinSansSerifBold: string[] = [
-  '𝗮',
-  '𝗯',
-  '𝗰',
-  '𝗱',
-  '𝗲',
-  '𝗳',
-  '𝗴',
-  '𝗵',
-  '𝗶',
-  '𝗷',
-  '𝗸',
-  '𝗹',
-  '𝗺',
-  '𝗻',
-  '𝗼',
-  '𝗽',
-  '𝗾',
-  '𝗿',
-  '𝘀',
-  '𝘁',
-  '𝘂',
-  '𝘃',
-  '𝘄',
-  '𝘅',
-  '𝘆',
-  '𝘇'
-];
-const capitalLatinSansSerifItalic: string[] = [
-  '𝘈',
-  '𝘉',
-  '𝘊',
-  '𝘋',
-  '𝘌',
-  '𝘍',
-  '𝘎',
-  '𝘏',
-  '𝘐',
-  '𝘑',
-  '𝘒',
-  '𝘓',
-  '𝘔',
-  '𝘕',
-  '𝘖',
-  '𝘗',
-  '𝘘',
-  '𝘙',
-  '𝘚',
-  '𝘛',
-  '𝘜',
-  '𝘝',
-  '𝘞',
-  '𝘟',
-  '𝘠',
-  '𝘡'
-];
-const smallLatinSansSerifItalic: string[] = [
-  '𝘢',
-  '𝘣',
-  '𝘤',
-  '𝘥',
-  '𝘦',
-  '𝘧',
-  '𝘨',
-  '𝘩',
-  '𝘪',
-  '𝘫',
-  '𝘬',
-  '𝘭',
-  '𝘮',
-  '𝘯',
-  '𝘰',
-  '𝘱',
-  '𝘲',
-  '𝘳',
-  '𝘴',
-  '𝘵',
-  '𝘶',
-  '𝘷',
-  '𝘸',
-  '𝘹',
-  '𝘺',
-  '𝘻'
-];
-const capitalLatinSansSerifBoldItalic: string[] = [
-  '𝘼',
-  '𝘽',
-  '𝘾',
-  '𝘿',
-  '𝙀',
-  '𝙁',
-  '𝙂',
-  '𝙃',
-  '𝙄',
-  '𝙅',
-  '𝙆',
-  '𝙇',
-  '𝙈',
-  '𝙉',
-  '𝙊',
-  '𝙋',
-  '𝙌',
-  '𝙍',
-  '𝙎',
-  '𝙏',
-  '𝙐',
-  '𝙑',
-  '𝙒',
-  '𝙓',
-  '𝙔',
-  '𝙕'
-];
-const smallLatinSansSerifBoldItalic: string[] = [
-  '𝙖',
-  '𝙗',
-  '𝙘',
-  '𝙙',
-  '𝙚',
-  '𝙛',
-  '𝙜',
-  '𝙝',
-  '𝙞',
-  '𝙟',
-  '𝙠',
-  '𝙡',
-  '𝙢',
-  '𝙣',
-  '𝙤',
-  '𝙥',
-  '𝙦',
-  '𝙧',
-  '𝙨',
-  '𝙩',
-  '𝙪',
-  '𝙫',
-  '𝙬',
-  '𝙭',
-  '𝙮',
-  '𝙯'
-];
-const capitalLatinMonospace: string[] = [
-  '𝙰',
-  '𝙱',
-  '𝙲',
-  '𝙳',
-  '𝙴',
-  '𝙵',
-  '𝙶',
-  '𝙷',
-  '𝙸',
-  '𝙹',
-  '𝙺',
-  '𝙻',
-  '𝙼',
-  '𝙽',
-  '𝙾',
-  '𝙿',
-  '𝚀',
-  '𝚁',
-  '𝚂',
-  '𝚃',
-  '𝚄',
-  '𝚅',
-  '𝚆',
-  '𝚇',
-  '𝚈',
-  '𝚉'
-];
-const smallLatinMonospace: string[] = [
-  '𝚊',
-  '𝚋',
-  '𝚌',
-  '𝚍',
-  '𝚎',
-  '𝚏',
-  '𝚐',
-  '𝚑',
-  '𝚒',
-  '𝚓',
-  '𝚔',
-  '𝚕',
-  '𝚖',
-  '𝚗',
-  '𝚘',
-  '𝚙',
-  '𝚚',
-  '𝚛',
-  '𝚜',
-  '𝚝',
-  '𝚞',
-  '𝚟',
-  '𝚠',
-  '𝚡',
-  '𝚢',
-  '𝚣'
-];
-const latinDoubleStruckItalic: string[] = ['ⅅ', 'ⅆ', 'ⅇ', 'ⅈ', 'ⅉ'];
+    // questionmarks
+    {
+      set: ['3f', '203d', 'fe16', 'fe56', 'ff1f'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.QUESTION
+    },
 
-// Greek Alphabets
-const capitalGreek: string[] = [
-  'Α',
-  'Β',
-  'Γ',
-  'Δ',
-  'Ε',
-  'Ζ',
-  'Η',
-  'Θ',
-  'Ι',
-  'Κ',
-  'Λ',
-  'Μ',
-  'Ν',
-  'Ξ',
-  'Ο',
-  'Π',
-  'Ρ',
-  'Σ',
-  'Τ',
-  'Υ',
-  'Φ',
-  'Χ',
-  'Ψ',
-  'Ω'
-];
-const smallGreek: string[] = [
-  'α',
-  'β',
-  'γ',
-  'δ',
-  'ε',
-  'ζ',
-  'η',
-  'θ',
-  'ι',
-  'κ',
-  'λ',
-  'μ',
-  'ν',
-  'ξ',
-  'ο',
-  'π',
-  'ρ',
-  'ς',
-  'σ',
-  'τ',
-  'υ',
-  'φ',
-  'χ',
-  'ψ',
-  'ω'
-];
-const capitalGreekBold: string[] = [
-  '𝚨',
-  '𝚩',
-  '𝚪',
-  '𝚫',
-  '𝚬',
-  '𝚭',
-  '𝚮',
-  '𝚯',
-  '𝚰',
-  '𝚱',
-  '𝚲',
-  '𝚳',
-  '𝚴',
-  '𝚵',
-  '𝚶',
-  '𝚷',
-  '𝚸',
-  '𝚺',
-  '𝚻',
-  '𝚼',
-  '𝚽',
-  '𝚾',
-  '𝚿',
-  '𝛀'
-];
-const smallGreekBold: string[] = [
-  '𝛂',
-  '𝛃',
-  '𝛄',
-  '𝛅',
-  '𝛆',
-  '𝛇',
-  '𝛈',
-  '𝛉',
-  '𝛊',
-  '𝛋',
-  '𝛌',
-  '𝛍',
-  '𝛎',
-  '𝛏',
-  '𝛐',
-  '𝛑',
-  '𝛒',
-  '𝛓',
-  '𝛔',
-  '𝛕',
-  '𝛖',
-  '𝛗',
-  '𝛘',
-  '𝛙',
-  '𝛚'
-];
-const capitalGreekItalic: string[] = [
-  '𝛢',
-  '𝛣',
-  '𝛤',
-  '𝛥',
-  '𝛦',
-  '𝛧',
-  '𝛨',
-  '𝛩',
-  '𝛪',
-  '𝛫',
-  '𝛬',
-  '𝛭',
-  '𝛮',
-  '𝛯',
-  '𝛰',
-  '𝛱',
-  '𝛲',
-  '𝛴',
-  '𝛵',
-  '𝛶',
-  '𝛷',
-  '𝛸',
-  '𝛹',
-  '𝛺'
-];
-const smallGreekItalic: string[] = [
-  '𝛼',
-  '𝛽',
-  '𝛾',
-  '𝛿',
-  '𝜀',
-  '𝜁',
-  '𝜂',
-  '𝜃',
-  '𝜄',
-  '𝜅',
-  '𝜆',
-  '𝜇',
-  '𝜈',
-  '𝜉',
-  '𝜊',
-  '𝜋',
-  '𝜌',
-  '𝜍',
-  '𝜎',
-  '𝜏',
-  '𝜐',
-  '𝜑',
-  '𝜒',
-  '𝜓',
-  '𝜔'
-];
-const capitalGreekBoldItalic: string[] = [
-  '𝜜',
-  '𝜝',
-  '𝜞',
-  '𝜟',
-  '𝜠',
-  '𝜡',
-  '𝜢',
-  '𝜣',
-  '𝜤',
-  '𝜥',
-  '𝜦',
-  '𝜧',
-  '𝜨',
-  '𝜩',
-  '𝜪',
-  '𝜫',
-  '𝜬',
-  '𝜮',
-  '𝜯',
-  '𝜰',
-  '𝜱',
-  '𝜲',
-  '𝜳',
-  '𝜴'
-];
-const smallGreekBoldItalic: string[] = [
-  '𝜶',
-  '𝜷',
-  '𝜸',
-  '𝜹',
-  '𝜺',
-  '𝜻',
-  '𝜼',
-  '𝜽',
-  '𝜾',
-  '𝜿',
-  '𝝀',
-  '𝝁',
-  '𝝂',
-  '𝝃',
-  '𝝄',
-  '𝝅',
-  '𝝆',
-  '𝝇',
-  '𝝈',
-  '𝝉',
-  '𝝊',
-  '𝝋',
-  '𝝌',
-  '𝝍',
-  '𝝎'
-];
-const capitalGreekSansSerifBold: string[] = [
-  '𝝖',
-  '𝝗',
-  '𝝘',
-  '𝝙',
-  '𝝚',
-  '𝝛',
-  '𝝜',
-  '𝝝',
-  '𝝞',
-  '𝝟',
-  '𝝠',
-  '𝝡',
-  '𝝢',
-  '𝝣',
-  '𝝤',
-  '𝝥',
-  '𝝦',
-  '𝝨',
-  '𝝩',
-  '𝝪',
-  '𝝫',
-  '𝝬',
-  '𝝭',
-  '𝝮'
-];
-const smallGreekSansSerifBold: string[] = [
-  '𝝰',
-  '𝝱',
-  '𝝲',
-  '𝝳',
-  '𝝴',
-  '𝝵',
-  '𝝶',
-  '𝝷',
-  '𝝸',
-  '𝝹',
-  '𝝺',
-  '𝝻',
-  '𝝼',
-  '𝝽',
-  '𝝾',
-  '𝝿',
-  '𝞀',
-  '𝞁',
-  '𝞂',
-  '𝞃',
-  '𝞄',
-  '𝞅',
-  '𝞆',
-  '𝞇',
-  '𝞈'
-];
-const capitalGreekSansSerifBoldItalic: string[] = [
-  '𝞐',
-  '𝞑',
-  '𝞒',
-  '𝞓',
-  '𝞔',
-  '𝞕',
-  '𝞖',
-  '𝞗',
-  '𝞘',
-  '𝞙',
-  '𝞚',
-  '𝞛',
-  '𝞜',
-  '𝞝',
-  '𝞞',
-  '𝞟',
-  '𝞠',
-  '𝞢',
-  '𝞣',
-  '𝞤',
-  '𝞥',
-  '𝞦',
-  '𝞧',
-  '𝞨'
-];
-const smallGreekSansSerifBoldItalic: string[] = [
-  '𝞪',
-  '𝞫',
-  '𝞬',
-  '𝞭',
-  '𝞮',
-  '𝞯',
-  '𝞰',
-  '𝞱',
-  '𝞲',
-  '𝞳',
-  '𝞴',
-  '𝞵',
-  '𝞶',
-  '𝞷',
-  '𝞸',
-  '𝞹',
-  '𝞺',
-  '𝞻',
-  '𝞼',
-  '𝞽',
-  '𝞾',
-  '𝞿',
-  '𝟀',
-  '𝟁',
-  '𝟂'
-];
-const greekDoubleStruck: string[] = ['ℼ', 'ℽ', 'ℾ', 'ℿ'];
-const greekSpecial: string[] = [
-  'ϐ',
-  'ϑ',
-  'ϕ',
-  'ϖ',
-  'ϗ',
-  'ϰ',
-  'ϱ',
-  'ϵ',
-  '϶',
-  'ϴ'
-];
-const greekSpecialBold: string[] = ['𝛜', '𝛝', '𝛞', '𝛟', '𝛠', '𝛡'];
-const greekSpecialItalic: string[] = ['𝜖', '𝜗', '𝜘', '𝜙', '𝜚', '𝜛'];
-const greekSpecialSansSerifBold: string[] = ['𝞊', '𝞋', '𝞌', '𝞍', '𝞎', '𝞏'];
+    // exclamationmarks
+    {
+      set: ['21', 'fe15', 'fe57', 'ff01'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.EXCLAMATION
+    },
 
-// Other alphabets.
-const hebrewLetters: string[] = ['ℵ', 'ℶ', 'ℷ', 'ℸ'];
+    // overaccents
+    {
+      set: [
+        '5e',
+        '60',
+        'a8',
+        'aa',
+        'b4',
+        'ba',
+        '2c7',
+        ['2d8', '2da'],
+        '2040',
+        '207a',
+        '207d',
+        '207e',
+        'ff3e',
+        'ff40'
+      ],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.OVERACCENT
+    },
 
-const allLetters: string[] = capitalLatin.concat(
-  smallLatin,
-  capitalLatinFullWidth,
-  smallLatinFullWidth,
-  capitalLatinBold,
-  smallLatinBold,
-  capitalLatinItalic,
-  capitalLatinBoldItalic,
-  smallLatinBoldItalic,
-  smallLatinItalic,
-  capitalLatinScript,
-  smallLatinScript,
-  capitalLatinBoldScript,
-  smallLatinBoldScript,
-  capitalLatinFraktur,
-  smallLatinFraktur,
-  capitalLatinDoubleStruck,
-  smallLatinDoubleStruck,
-  capitalLatinBoldFraktur,
-  smallLatinBoldFraktur,
-  capitalLatinSansSerif,
-  smallLatinSansSerif,
-  capitalLatinSansSerifBold,
-  smallLatinSansSerifBold,
-  capitalLatinSansSerifItalic,
-  smallLatinSansSerifItalic,
-  capitalLatinSansSerifBoldItalic,
-  smallLatinSansSerifBoldItalic,
-  capitalLatinMonospace,
-  smallLatinMonospace,
-  latinDoubleStruckItalic,
-  capitalGreek,
-  smallGreek,
-  capitalGreekBold,
-  smallGreekBold,
-  capitalGreekItalic,
-  smallGreekItalic,
-  capitalGreekBoldItalic,
-  smallGreekBoldItalic,
-  capitalGreekSansSerifBold,
-  smallGreekSansSerifBold,
-  greekDoubleStruck,
-  greekSpecial,
-  capitalGreekSansSerifBoldItalic,
-  smallGreekSansSerifBoldItalic,
-  greekSpecialBold,
-  greekSpecialItalic,
-  greekSpecialSansSerifBold,
-  hebrewLetters
-);
+    // underaccents
+    {
+      set: ['b8', '2db', '2038', '203f', '2054', '208a', '208d', '208e'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.UNDERACCENT
+    },
 
-export const allLettersRegExp = new RegExp(allLetters.join('|'));
+    // colons
+    {
+      set: ['3a', '2982', 'fe13', 'fe30', 'fe55', 'ff1a'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.COLON
+    },
 
-// Operator symbols
-const additions: string[] = [
-  '+',
-  '±',
-  '∓',
-  '∔',
-  '∧',
-  '∨',
-  '∩',
-  '∪',
-  '⊌',
-  '⊍',
-  '⊎',
-  '⊓',
-  '⊔',
-  '⊝',
-  '⊞',
-  '⊤',
-  '⊥',
-  '⊺',
-  '⊻',
-  '⊼',
-  '⋄',
-  '⋎',
-  '⋏',
-  '⋒',
-  '⋓',
-  '⩞',
-  '⊕',
-  '⋔'
-];
+    // commas
+    {
+      set: ['2c', '2063', 'fe50', 'ff0c'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.COMMA
+    },
 
-/**
- * Invisible operator for plus.
- */
-const invisiblePlus_: string = String.fromCodePoint(0x2064);
-additions.push(invisiblePlus_);
+    // ellipses
+    {
+      set: ['2026', ['22ee', '22f1'], 'fe19'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.ELLIPSIS
+    },
 
-const multiplications: string[] = [
-  '†',
-  '‡',
-  '∐',
-  '∗',
-  '∘',
-  '∙',
-  '≀',
-  '⊚',
-  '⊛',
-  '⊠',
-  '⊡',
-  '⋅',
-  '⋆',
-  '⋇',
-  '⋈',
-  '⋉',
-  '⋊',
-  '⋋',
-  '⋌',
-  '○',
-  '·',
-  '*',
-  '⊗',
-  '⊙'
-];
-/**
- * Invisible operator for multiplication.
- */
-const invisibleTimes_: string = String.fromCodePoint(0x2062);
-multiplications.push(invisibleTimes_);
+    // fullStops
+    {
+      set: ['2e', 'fe52', 'ff0e'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.FULLSTOP
+    },
 
-const subtractions: string[] = [
-  '¯',
-  '-',
-  '⁒',
-  '⁻',
-  '₋',
-  '−',
-  '∖',
-  '∸',
-  '≂',
-  '⊖',
-  '⊟',
-  '➖',
-  '⨩',
-  '⨪',
-  '⨫',
-  '⨬',
-  '⨺',
-  '⩁',
-  '﹣',
-  '－',
-  '‐',
-  '‑'
-];
-const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸'];
-/**
- * Invisible operator for function application.
- */
-const functionApplication_: string = String.fromCodePoint(0x2061);
+    // dashes
+    {
+      set: [
+        '2d',
+        '5f',
+        'af',
+        ['2010', '2015'],
+        '203e',
+        '203e',
+        '207b',
+        '208b',
+        '2212',
+        '2796',
+        ['fe49', 'fe4f'],
+        'fe58',
+        'fe63',
+        'ff0d',
+        'ff3f',
+        'ffe3'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.DASH,
+      secondary: SemanticSecondary.BAR
+    },
 
-// Relation symbols
-const equalities: string[] = [
-  '=',
-  '~',
-  '⁼',
-  '₌',
-  '∼',
-  '∽',
-  '≃',
-  '≅',
-  '≈',
-  '≊',
-  '≋',
-  '≌',
-  '≍',
-  '≎',
-  '≑',
-  '≒',
-  '≓',
-  '≔',
-  '≕',
-  '≖',
-  '≗',
-  '≘',
-  '≙',
-  '≚',
-  '≛',
-  '≜',
-  '≝',
-  '≞',
-  '≟',
-  '≡',
-  '≣',
-  '⧤',
-  '⩦',
-  '⩮',
-  '⩯',
-  '⩰',
-  '⩱',
-  '⩲',
-  '⩳',
-  '⩴',
-  '⩵',
-  '⩶',
-  '⩷',
-  '⩸',
-  '⋕',
-  '⩭',
-  '⩪',
-  '⩫',
-  '⩬',
-  '﹦',
-  '＝',
-  '⩬',
-  '⊜',
-  '∷'
-];
-const inequalities: string[] = [
-  '<',
-  '>',
-  '≁',
-  '≂',
-  '≄',
-  '≆',
-  '≇',
-  '≉',
-  '≏',
-  '≐',
-  '≠',
-  '≢',
-  '≤',
-  '≥',
-  '≦',
-  '≧',
-  '≨',
-  '≩',
-  '≪',
-  '≫',
-  '≬',
-  '≭',
-  '≮',
-  '≯',
-  '≰',
-  '≱',
-  '≲',
-  '≳',
-  '≴',
-  '≵',
-  '≶',
-  '≷',
-  '≸',
-  '≹',
-  '≺',
-  '≻',
-  '≼',
-  '≽',
-  '≾',
-  '≿',
-  '⊀',
-  '⊁',
-  '⋖',
-  '⋗',
-  '⋘',
-  '⋙',
-  '⋚',
-  '⋛',
-  '⋜',
-  '⋝',
-  '⋞',
-  '⋟',
-  '⋠',
-  '⋡',
-  '⋦',
-  '⋧',
-  '⋨',
-  '⋩',
-  '⩹',
-  '⩺',
-  '⩻',
-  '⩼',
-  '⩽',
-  '⩾',
-  '⩿',
-  '⪀',
-  '⪁',
-  '⪂',
-  '⪃',
-  '⪄',
-  '⪅',
-  '⪆',
-  '⪇',
-  '⪈',
-  '⪉',
-  '⪊',
-  '⪋',
-  '⪌',
-  '⪍',
-  '⪎',
-  '⪏',
-  '⪐',
-  '⪑',
-  '⪒',
-  '⪓',
-  '⪔',
-  '⪕',
-  '⪖',
-  '⪗',
-  '⪘',
-  '⪙',
-  '⪚',
-  '⪛',
-  '⪜',
-  '⪝',
-  '⪞',
-  '⪟',
-  '⪠',
-  '⪡',
-  '⪢',
-  '⪣',
-  '⪤',
-  '⪥',
-  '⪦',
-  '⪧',
-  '⪨',
-  '⪩',
-  '⪪',
-  '⪫',
-  '⪬',
-  '⪭',
-  '⪮',
-  '⪯',
-  '⪰',
-  '⪱',
-  '⪲',
-  '⪳',
-  '⪴',
-  '⪵',
-  '⪶',
-  '⪷',
-  '⪸',
-  '⪹',
-  '⪺',
-  '⪻',
-  '⪼',
-  '⫷',
-  '⫸',
-  '⫹',
-  '⫺',
-  '⧀',
-  '⧁',
-  '﹤',
-  '﹥',
-  '＜',
-  '＞'
-];
-const setRelations: string[] = [
-  '⋢',
-  '⋣',
-  '⋤',
-  '⋥',
-  '⊂',
-  '⊃',
-  '⊄',
-  '⊅',
-  '⊆',
-  '⊇',
-  '⊈',
-  '⊉',
-  '⊊',
-  '⊋',
-  '⊏',
-  '⊐',
-  '⊑',
-  '⊒',
-  '⪽',
-  '⪾',
-  '⪿',
-  '⫀',
-  '⫁',
-  '⫂',
-  '⫃',
-  '⫄',
-  '⫅',
-  '⫆',
-  '⫇',
-  '⫈',
-  '⫉',
-  '⫊',
-  '⫋',
-  '⫌',
-  '⫍',
-  '⫎',
-  '⫏',
-  '⫐',
-  '⫑',
-  '⫒',
-  '⫓',
-  '⫔',
-  '⫕',
-  '⫖',
-  '⫗',
-  '⫘',
-  '⋐',
-  '⋑',
-  '⋪',
-  '⋫',
-  '⋬',
-  '⋭',
-  '⊲',
-  '⊳',
-  '⊴',
-  '⊵'
-];
-const elementRelations: string[] = [
-  '∈',
-  '∊',
-  '⋲',
-  '⋳',
-  '⋴',
-  '⋵',
-  '⋶',
-  '⋷',
-  '⋸',
-  '⋹',
-  '⋿'
-];
-const nonelementRelations: string[] = ['∉'];
-const reelementRelations: string[] = ['∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾'];
-const renonelementRelations: string[] = ['∌'];
-const relations: string[] = [
-  // TODO (sorge): Add all the other relations. Currently mainly tacks and
-  // turnstyles.
-  '⊢',
-  '⊣',
-  '⊦',
-  '⊧',
-  '⊨',
-  '⊩',
-  '⊪',
-  '⊫',
-  '⊬',
-  '⊭',
-  '⊮',
-  '⊯',
-  '⫞',
-  '⫟',
-  '⫠',
-  '⫡',
-  '⫢',
-  '⫣',
-  '⫤',
-  '⫥',
-  '⫦',
-  '⫧',
-  '⫨',
-  '⫩',
-  '⫪',
-  '⫫',
-  '⫬',
-  '⫭'
-];
-const arrows: string[] = [
-  '←',
-  '↑',
-  '→',
-  '↓',
-  '↔',
-  '↕',
-  '↖',
-  '↗',
-  '↘',
-  '↙',
-  '↚',
-  '↛',
-  '↜',
-  '↝',
-  '↞',
-  '↟',
-  '↠',
-  '↡',
-  '↢',
-  '↣',
-  '↤',
-  '↥',
-  '↦',
-  '↧',
-  '↨',
-  '↩',
-  '↪',
-  '↫',
-  '↬',
-  '↭',
-  '↮',
-  '↯',
-  '↰',
-  '↱',
-  '↲',
-  '↳',
-  '↴',
-  '↵',
-  '↶',
-  '↷',
-  '↸',
-  '↹',
-  '↺',
-  '↻',
-  '⇄',
-  '⇅',
-  '⇆',
-  '⇇',
-  '⇈',
-  '⇉',
-  '⇊',
-  '⇍',
-  '⇎',
-  '⇏',
-  '⇐',
-  '⇑',
-  '⇒',
-  '⇓',
-  '⇔',
-  '⇕',
-  '⇖',
-  '⇗',
-  '⇘',
-  '⇙',
-  '⇚',
-  '⇛',
-  '⇜',
-  '⇝',
-  '⇞',
-  '⇟',
-  '⇠',
-  '⇡',
-  '⇢',
-  '⇣',
-  '⇤',
-  '⇥',
-  '⇦',
-  '⇧',
-  '⇨',
-  '⇩',
-  '⇪',
-  '⇫',
-  '⇬',
-  '⇭',
-  '⇮',
-  '⇯',
-  '⇰',
-  '⇱',
-  '⇲',
-  '⇳',
-  '⇴',
-  '⇵',
-  '⇶',
-  '⇷',
-  '⇸',
-  '⇹',
-  '⇺',
-  '⇻',
-  '⇼',
-  '⇽',
-  '⇾',
-  '⇿',
-  '⌁',
-  '⌃',
-  '⌄',
-  '⌤',
-  '⎋',
-  '➔',
-  '➘',
-  '➙',
-  '➚',
-  '➛',
-  '➜',
-  '➝',
-  '➞',
-  '➟',
-  '➠',
-  '➡',
-  '➢',
-  '➣',
-  '➤',
-  '➥',
-  '➦',
-  '➧',
-  '➨',
-  '➩',
-  '➪',
-  '➫',
-  '➬',
-  '➭',
-  '➮',
-  '➯',
-  '➱',
-  '➲',
-  '➳',
-  '➴',
-  '➵',
-  '➶',
-  '➷',
-  '➸',
-  '➹',
-  '➺',
-  '➻',
-  '➼',
-  '➽',
-  '➾',
-  '⟰',
-  '⟱',
-  '⟲',
-  '⟳',
-  '⟴',
-  '⟵',
-  '⟶',
-  '⟷',
-  '⟸',
-  '⟹',
-  '⟺',
-  '⟻',
-  '⟼',
-  '⟽',
-  '⟾',
-  '⟿',
-  '⤀',
-  '⤁',
-  '⤂',
-  '⤃',
-  '⤄',
-  '⤅',
-  '⤆',
-  '⤇',
-  '⤈',
-  '⤉',
-  '⤊',
-  '⤋',
-  '⤌',
-  '⤍',
-  '⤎',
-  '⤏',
-  '⤐',
-  '⤑',
-  '⤒',
-  '⤓',
-  '⤔',
-  '⤕',
-  '⤖',
-  '⤗',
-  '⤘',
-  '⤙',
-  '⤚',
-  '⤛',
-  '⤜',
-  '⤝',
-  '⤞',
-  '⤟',
-  '⤠',
-  '⤡',
-  '⤢',
-  '⤣',
-  '⤤',
-  '⤥',
-  '⤦',
-  '⤧',
-  '⤨',
-  '⤩',
-  '⤪',
-  '⤭',
-  '⤮',
-  '⤯',
-  '⤰',
-  '⤱',
-  '⤲',
-  '⤳',
-  '⤴',
-  '⤵',
-  '⤶',
-  '⤷',
-  '⤸',
-  '⤹',
-  '⤺',
-  '⤻',
-  '⤼',
-  '⤽',
-  '⤾',
-  '⤿',
-  '⥀',
-  '⥁',
-  '⥂',
-  '⥃',
-  '⥄',
-  '⥅',
-  '⥆',
-  '⥇',
-  '⥈',
-  '⥉',
-  '⥰',
-  '⥱',
-  '⥲',
-  '⥳',
-  '⥴',
-  '⥵',
-  '⥶',
-  '⥷',
-  '⥸',
-  '⥹',
-  '⥺',
-  '⥻',
-  '⦳',
-  '⦴',
-  '⦽',
-  '⧪',
-  '⧬',
-  '⧭',
-  '⨗',
-  '⬀',
-  '⬁',
-  '⬂',
-  '⬃',
-  '⬄',
-  '⬅',
-  '⬆',
-  '⬇',
-  '⬈',
-  '⬉',
-  '⬊',
-  '⬋',
-  '⬌',
-  '⬍',
-  '⬎',
-  '⬏',
-  '⬐',
-  '⬑',
-  '⬰',
-  '⬱',
-  '⬲',
-  '⬳',
-  '⬴',
-  '⬵',
-  '⬶',
-  '⬷',
-  '⬸',
-  '⬹',
-  '⬺',
-  '⬻',
-  '⬼',
-  '⬽',
-  '⬾',
-  '⬿',
-  '⭀',
-  '⭁',
-  '⭂',
-  '⭃',
-  '⭄',
-  '⭅',
-  '⭆',
-  '⭇',
-  '⭈',
-  '⭉',
-  '⭊',
-  '⭋',
-  '⭌',
-  '￩',
-  '￪',
-  '￫',
-  '￬',
-  // Harpoons
-  '↼',
-  '↽',
-  '↾',
-  '↿',
-  '⇀',
-  '⇁',
-  '⇂',
-  '⇃',
-  '⇋',
-  '⇌',
-  '⥊',
-  '⥋',
-  '⥌',
-  '⥍',
-  '⥎',
-  '⥏',
-  '⥐',
-  '⥑',
-  '⥒',
-  '⥓',
-  '⥔',
-  '⥕',
-  '⥖',
-  '⥗',
-  '⥘',
-  '⥙',
-  '⥚',
-  '⥛',
-  '⥜',
-  '⥝',
-  '⥞',
-  '⥟',
-  '⥠',
-  '⥡',
-  '⥢',
-  '⥣',
-  '⥤',
-  '⥥',
-  '⥦',
-  '⥧',
-  '⥨',
-  '⥩',
-  '⥪',
-  '⥫',
-  '⥬',
-  '⥭',
-  '⥮',
-  '⥯',
-  '⥼',
-  '⥽',
-  '⥾',
-  '⥿'
-];
+    // tildes
+    {
+      set: [
+        '7e',
+        '2dc',
+        '2f7',
+        '303',
+        '330',
+        '334',
+        '2053',
+        '223c',
+        '223d',
+        '301c',
+        'ff5e'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.TILDE,
+      secondary: SemanticSecondary.TILDE
+    },
 
-// Big operation symbols
-const sumOps: string[] = [
-  '⅀', // double struck
-  '∏',
-  '∐',
-  '∑',
-  '⋀',
-  '⋁',
-  '⋂',
-  '⋃',
-  '⨀',
-  '⨁',
-  '⨂',
-  '⨃',
-  '⨄',
-  '⨅',
-  '⨆',
-  '⨇',
-  '⨈',
-  '⨉',
-  '⨊',
-  '⨋',
-  '⫼',
-  '⫿'
-];
-const intOps: string[] = [
-  '∫',
-  '∬',
-  '∭',
-  '∮',
-  '∯',
-  '∰',
-  '∱',
-  '∲',
-  '∳',
-  '⨌',
-  '⨍',
-  '⨎',
-  '⨏',
-  '⨐',
-  '⨑',
-  '⨒',
-  '⨓',
-  '⨔',
-  '⨕',
-  '⨖',
-  '⨗',
-  '⨘',
-  '⨙',
-  '⨚',
-  '⨛',
-  '⨜'
-];
-const geometryOps: string[] = [
-  '∟',
-  '∠',
-  '∡',
-  '∢',
-  '⊾',
-  '⊿',
-  // TODO: Add the entire geometric shape set programmatically.
-  '△',
-  '▷',
-  '▽',
-  '◁'
-];
-const prefixOps: string[] = ['∀', '∃', '∆', '∇', '∂', '∁', '∄'];
-const prefixOpsBold: string[] = ['𝛁', '𝛛', '𝟊', '𝟋'];
-const prefixOpsItalic: string[] = ['𝛻', '𝜕'];
-const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
-// TODO (sorge) Insert nabla, differential operators sans serif bold italic
+    // primes
+    {
+      set: ['27', '2b9', '2ba', ['2032', '2037'], '2057'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.PRIME
+    },
 
-// const operatorBits: string[] =
-//     // TODO (sorge) What to do if single glyphs of big ops occur on their own.
-//     ['⌠', '⌡', '⎶', '⎪', '⎮', '⎯', '⎲', '⎳', '⎷'];
+    // degrees
+    {
+      set: ['b0'],
+      type: SemanticType.PUNCTUATION,
+      role: SemanticRole.DEGREE
+    },
 
-// Accents.
-// TODO (sorge) Add accented characters.
+    // Operators.
 
-// Numbers.
-// Digits.
-const digitsNormal: string[] = [
-  '0',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9'
-];
-const digitsFullWidth: string[] = [
-  '０',
-  '１',
-  '２',
-  '３',
-  '４',
-  '５',
-  '６',
-  '７',
-  '８',
-  '９'
-];
-const digitsBold: string[] = ['𝟎', '𝟏', '𝟐', '𝟑', '𝟒', '𝟓', '𝟔', '𝟕', '𝟖', '𝟗'];
-const digitsDoubleStruck: string[] = [
-  '𝟘',
-  '𝟙',
-  '𝟚',
-  '𝟛',
-  '𝟜',
-  '𝟝',
-  '𝟞',
-  '𝟟',
-  '𝟠',
-  '𝟡'
-];
-const digitsSansSerif: string[] = [
-  '𝟢',
-  '𝟣',
-  '𝟤',
-  '𝟥',
-  '𝟦',
-  '𝟧',
-  '𝟨',
-  '𝟩',
-  '𝟪',
-  '𝟫'
-];
-const digitsSansSerifBold: string[] = [
-  '𝟬',
-  '𝟭',
-  '𝟮',
-  '𝟯',
-  '𝟰',
-  '𝟱',
-  '𝟲',
-  '𝟳',
-  '𝟴',
-  '𝟵'
-];
-const digitsMonospace: string[] = [
-  '𝟶',
-  '𝟷',
-  '𝟸',
-  '𝟹',
-  '𝟺',
-  '𝟻',
-  '𝟼',
-  '𝟽',
-  '𝟾',
-  '𝟿'
-];
-const digitsSuperscript: string[] = [
-  '²',
-  '³',
-  '¹',
-  '⁰',
-  '⁴',
-  '⁵',
-  '⁶',
-  '⁷',
-  '⁸',
-  '⁹'
-];
-const digitsSubscript: string[] = [
-  '₀',
-  '₁',
-  '₂',
-  '₃',
-  '₄',
-  '₅',
-  '₆',
-  '₇',
-  '₈',
-  '₉'
-];
-const fractions: string[] = [
-  '¼',
-  '½',
-  '¾',
-  '⅐',
-  '⅑',
-  '⅒',
-  '⅓',
-  '⅔',
-  '⅕',
-  '⅖',
-  '⅗',
-  '⅘',
-  '⅙',
-  '⅚',
-  '⅛',
-  '⅜',
-  '⅝',
-  '⅞',
-  '⅟',
-  '↉'
-];
-const enclosedNumbers: string[] =
-  // Encircled numbers.
-  [
-    '①',
-    '②',
-    '③',
-    '④',
-    '⑤',
-    '⑥',
-    '⑦',
-    '⑧',
-    '⑨',
-    '⑩',
-    '⑪',
-    '⑫',
-    '⑬',
-    '⑭',
-    '⑮',
-    '⑯',
-    '⑰',
-    '⑱',
-    '⑲',
-    '⑳',
-    '⓪',
-    '⓫',
-    '⓬',
-    '⓭',
-    '⓮',
-    '⓯',
-    '⓰',
-    '⓱',
-    '⓲',
-    '⓳',
-    '⓴',
-    '⓵',
-    '⓶',
-    '⓷',
-    '⓸',
-    '⓹',
-    '⓺',
-    '⓻',
-    '⓼',
-    '⓽',
-    '⓾',
-    '⓿',
-    '❶',
-    '❷',
-    '❸',
-    '❹',
-    '❺',
-    '❻',
-    '❼',
-    '❽',
-    '❾',
-    '❿',
-    '➀',
-    '➁',
-    '➂',
-    '➃',
-    '➄',
-    '➅',
-    '➆',
-    '➇',
-    '➈',
-    '➉',
-    '➊',
-    '➋',
-    '➌',
-    '➍',
-    '➎',
-    '➏',
-    '➐',
-    '➑',
-    '➒',
-    '➓',
-    '㉈',
-    '㉉',
-    '㉊',
-    '㉋',
-    '㉌',
-    '㉍',
-    '㉎',
-    '㉏',
-    '㉑',
-    '㉒',
-    '㉓',
-    '㉔',
-    '㉕',
-    '㉖',
-    '㉗',
-    '㉘',
-    '㉙',
-    '㉚',
-    '㉛',
-    '㉜',
-    '㉝',
-    '㉞',
-    '㉟',
-    '㊱',
-    '㊲',
-    '㊳',
-    '㊴',
-    '㊵',
-    '㊶',
-    '㊷',
-    '㊸',
-    '㊹',
-    '㊺',
-    '㊻',
-    '㊼',
-    '㊽',
-    '㊾',
-    '㊿'
+    // additions
+    {
+      set: [
+        '2b',
+        'b1',
+        '2064',
+        '2213',
+        '2214',
+        '2228',
+        '222a',
+        ['228c', '228e'],
+        '2294',
+        '2295',
+        '229d',
+        '229e',
+        '22bb',
+        '22bd',
+        '22c4',
+        '22ce',
+        '22d3',
+        '2304',
+        '271b',
+        '271c',
+        '2795',
+        '27cf',
+        '29fa',
+        '29fb',
+        '29fe',
+        ['2a22', '2a28'],
+        '2a2d',
+        '2a2e',
+        '2a39',
+        '2a42',
+        '2a45',
+        '2a46',
+        '2a48',
+        '2a4a',
+        '2a4c',
+        '2a4f',
+        '2a50',
+        '2a52',
+        '2a54',
+        '2a56',
+        '2a57',
+        '2a59',
+        '2a5b',
+        '2a5d',
+        ['2a61', '2a63'],
+        '2adc',
+        '2add',
+        'fe62',
+        'ff0b'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.ADDITION
+    },
+
+    // multiplications
+    // conjugate operators (e.g., Hermitian) '⊹', '†', '‡',
+    {
+      set: [
+        '2a',
+        'b7',
+        'd7',
+        '2020',
+        '2021',
+        '204e',
+        '2051',
+        '2062',
+        ['2217', '2219'],
+        '2227',
+        '2229',
+        '2240',
+        '2293',
+        '2297',
+        ['2299', '229b'],
+        '22a0',
+        '22a1',
+        '22b9',
+        '22bc',
+        ['22c5', '22cc'],
+        '22cf',
+        '22d2',
+        '22d4',
+        '2303',
+        '2305',
+        '2306',
+        '25cb',
+        '2715',
+        '2716',
+        '27ce',
+        '27d1',
+        ['29d1', '29d7'],
+        '29e2',
+        '2a1d',
+        ['2a2f', '2a37'],
+        ['2a3b', '2a3d'],
+        '2a40',
+        '2a43',
+        '2a44',
+        '2a47',
+        '2a49',
+        '2a4b',
+        '2a4d',
+        '2a4e',
+        '2a51',
+        '2a53',
+        '2a55',
+        '2a58',
+        '2a5a',
+        '2a5c',
+        ['2a5e', '2a60'],
+        '2ada',
+        '2adb',
+        'fe61',
+        'ff0a'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.MULTIPLICATION
+    },
+
+    // subtractions
+    {
+      set: [
+        '2d',
+        'af',
+        '2010',
+        '2011',
+        '2052',
+        '207b',
+        '208b',
+        '2212',
+        '2216',
+        '2238',
+        '2242',
+        '2296',
+        '229f',
+        '2796',
+        '29ff',
+        ['2a29', '2a2c'],
+        '2a3a',
+        '2a41',
+        'fe63',
+        'ff0d'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.SUBTRACTION
+    },
+
+    // divisions
+    {
+      set: [
+        '2f',
+        'f7',
+        '2044',
+        '2215',
+        '2298',
+        '2797',
+        '27cc',
+        '29bc',
+        ['29f5', '29f9'],
+        '2a38'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.DIVISION
+    },
+
+    // prefix operators
+    {
+      set: [
+        'ac',
+        '2200',
+        '2201',
+        '2203',
+        '2204',
+        '2206',
+        ['221a', '221c'],
+        '2310',
+        'ffe2'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.PREFIXOP
+    },
+
+    // operatorBits
+    // TODO (sorge) What to do if single glyphs of big ops occur on their own.
+    //  Maybe distribute them into integral/largeop/roots.
+    {
+      set: [
+        '2320',
+        '2321',
+        '23aa',
+        '23ae',
+        '23af',
+        '23b2',
+        '23b3',
+        '23b6',
+        '23b7'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.PREFIXOP
+    },
+    // digammas
+    {
+      set: ['1d7ca', '1d7cb'],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.PREFIXOP,
+      font: SemanticFont.BOLD
+    },
+
+    // Relations
+
+    // equalities
+    {
+      set: [
+        '3d',
+        '7e',
+        '207c',
+        '208c',
+        '221d',
+        '2237',
+        ['223a', '223f'],
+        '2243',
+        '2245',
+        '2248',
+        ['224a', '224e'],
+        ['2251', '225f'],
+        '2261',
+        '2263',
+        '229c',
+        '22cd',
+        '22d5',
+        '29e4',
+        '29e6',
+        '2a66',
+        '2a67',
+        ['2a6a', '2a6c'],
+        ['2a6c', '2a78'],
+        'fe66',
+        'ff1d'
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.EQUALITY
+    },
+
+    // inequalities
+    {
+      set: [
+        '3c',
+        '3e',
+        '2241',
+        '2242',
+        '2244',
+        '2246',
+        '2247',
+        '2249',
+        '224f',
+        '2250',
+        '2260',
+        '2262',
+        ['2264', '2281'],
+        '22b0',
+        '22b1',
+        ['22d6', '22e1'],
+        ['22e6', '22e9'],
+        ['2976', '2978'],
+        '29c0',
+        '29c1',
+        '29e1',
+        '29e3',
+        '29e5',
+        ['2a79', '2abc'],
+        ['2af7', '2afa'],
+        'fe64',
+        'fe65',
+        'ff1c',
+        'ff1e'
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.INEQUALITY
+    },
+
+    // setRelations
+    {
+      set: [
+        ['2282', '228b'],
+        ['228f', '2292'],
+        ['22b2', '22b8'],
+        '22d0',
+        '22d1',
+        ['22e2', '22e5'],
+        ['22ea', '22ed'],
+        '27c3',
+        '27c4',
+        ['27c7', '27c9'],
+        ['27d5', '27d7'],
+        '27dc',
+        ['2979', '297b'],
+        '29df',
+        ['2abd', '2ad8']
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.SET
+    },
+
+    // relations
+    {
+      set: [
+        '2236',
+        ['27e0', '27e5'],
+        '292b',
+        '292c',
+        ['29b5', '29bb'],
+        '29be',
+        '29bf',
+        ['29c2', '29d0']
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.UNKNOWN
+    },
+
+    // setEmpty
+    {
+      set: ['2205', ['29b0', '29b4']],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.SETEMPTY
+    },
+
+    // infty
+    {
+      set: ['1ab2', '221e', ['29dc', '29de']],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.INFTY
+    },
+
+    // logicRelations
+    // TODO (sorge): Add all the other relations? Currently mainly tacks and
+    // turnstyles.
+    {
+      set: [
+        '22a2',
+        '22a3',
+        ['22a6', '22af'],
+        '27da',
+        '27db',
+        '27dd',
+        '27de',
+        '2ade',
+        ['2ae2', '2ae6'],
+        '2aec',
+        '2aed'
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.LOGIC
+    },
+
+    // logicIdentifier
+    {
+      set: [
+        '22a4',
+        '22a5',
+        '22ba',
+        '27d8',
+        '27d9',
+        '27df',
+        '2adf',
+        '2ae0',
+        ['2ae7', '2aeb'],
+        '2af1'
+      ],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.LOGIC
+    },
+
+    // arrows
+    {
+      set: [
+        ['2190', '21ff'],
+        '2301',
+        '2324',
+        '238b',
+        '2794',
+        ['2798', '27af'],
+        ['27b1', '27be'],
+        ['27f0', '27ff'],
+        ['2900', '292a'],
+        ['292d', '2975'],
+        ['297c', '297f'],
+        ['2b00', '2b11'],
+        ['2b30', '2b4c'],
+        ['ffe9', 'ffec']
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.ARROW
+    },
+
+    // Membership. Currently treated as operator.
+
+    // elementRelations
+    {
+      set: ['2208', '220a', ['22f2', '22f9'], '22ff', '27d2', '2ad9'],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.ELEMENT
+    },
+
+    // nonelementRelations
+    {
+      set: ['2209'],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.NONELEMENT
+    },
+
+    // reelementRelations
+    {
+      set: ['220b', '220d', ['22fa', '22fe']],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.REELEMENT
+    },
+
+    // renonelementRelations
+    {
+      set: ['220c'],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.RENONELEMENT
+    },
+
+    // Large operation symbols
+    // sumOps
+    {
+      set: [
+        ['220f', '2211'],
+        ['22c0', '22c3'],
+        ['2a00', '2a0b'],
+        '2a3f',
+        '2afc',
+        '2aff'
+      ],
+      type: SemanticType.LARGEOP,
+      role: SemanticRole.SUM
+    },
+    // double struck
+    {
+      set: ['2140'],
+      type: SemanticType.LARGEOP,
+      role: SemanticRole.SUM,
+      font: SemanticFont.DOUBLESTRUCK
+    },
+    // intOps
+    {
+      set: [
+        ['222b', '2233'],
+        ['2a0c', '2a17'],
+        ['2a17', '2a1c']
+      ],
+      type: SemanticType.LARGEOP,
+      role: SemanticRole.INTEGRAL
+    },
+
+    // Geometric symbols
+    {
+      set: [['2500', '257F']],
+      type: SemanticType.RELATION,
+      role: SemanticRole.BOX
+    },
+    {
+      set: [['2580', '259F']],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.BLOCK
+    },
+    {
+      set: [
+        ['25A0', '25FF'],
+        ['2B12', '2B2F'],
+        ['2B50', '2B59']
+      ],
+      type: SemanticType.RELATION,
+      role: SemanticRole.GEOMETRY
+    },
+
+    // geometryOps
+    {
+      set: [
+        '220e',
+        '2300',
+        '2302',
+        '2311',
+        '29bd',
+        '29e0',
+        ['29e8', '29f3'],
+        '2a1e',
+        '2afe',
+        'ffed',
+        'ffee'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.GEOMETRY
+    },
+
+    // angles
+    {
+      set: [
+        ['221f', '2222'],
+        '22be',
+        '22bf',
+        ['2312', '2314'],
+        '237c',
+        '27c0',
+        ['299b', '29af']
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.GEOMETRY
+    },
+
+    // Units
+    //
+    // (Can't give role unit as otherwise string notation like $a4f would not
+    // work)
+
+    // units
+    {
+      set: [
+        '24',
+        ['a2', 'a5'],
+        'b5',
+        '2123',
+        ['2125', '2127'],
+        '212a',
+        '212b',
+        'fe69',
+        'ff04',
+        'ffe0',
+        'ffe1',
+        'ffe5',
+        'ffe6'
+      ],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.UNKNOWN
+    },
+
+    // Extra letter symbols (other letters)
+
+    // arbitraryChars
+    {
+      set: [
+        'a9',
+        'ae',
+        '210f',
+        '2114',
+        '2116',
+        '2117',
+        ['211e', '2122'],
+        '212e',
+        '2132',
+        ['2139', '213b'],
+        ['2141', '2144'],
+        '214d',
+        '214e',
+        ['1f12a', '1f12c'],
+        '1f18a'
+      ],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.OTHERLETTER
+    },
+
+    // Remaining Symbols
+
+    // operators
+    {
+      set: [
+        '2224',
+        '2226',
+        '2239',
+        '2307',
+        '27b0',
+        '27bf',
+        '27c1',
+        '27c2',
+        '27ca',
+        '27cb',
+        '27cd',
+        '27d0',
+        '27d3',
+        '27d4',
+        '2981',
+        '2999',
+        '299a',
+        '29e7',
+        '29f4',
+        '2a20',
+        '2a21',
+        '2a64',
+        '2a65',
+        '2a68',
+        '2a69',
+        '2ae1',
+        ['2aee', '2af0'],
+        '2af2',
+        '2af3',
+        '2af5',
+        '2af6',
+        '2afb',
+        '2afd'
+      ],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.UNKNOWN
+    },
+
+    {
+      set: ['2605', '2606', '26aa', '26ab', ['2720', '274d']],
+      type: SemanticType.OPERATOR,
+      role: SemanticRole.UNKNOWN
+    },
+
+    // Characters other than alphabets
+    // Latin rest characters
+    {
+      set: [['2145', '2149']],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.LATINLETTER,
+      font: SemanticFont.DOUBLESTRUCKITALIC,
+      secondary: SemanticSecondary.ALLLETTERS
+    },
+    // Greek rest characters.
+    {
+      set: [['213c', '213f']],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.GREEKLETTER,
+      font: SemanticFont.DOUBLESTRUCK,
+      secondary: SemanticSecondary.ALLLETTERS
+    },
+    {
+      set: [
+        '3d0',
+        '3d7',
+        '3f6',
+        ['1d26', '1d2a'],
+        '1d5e',
+        '1d60',
+        ['1d66', '1d6a']
+      ],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.GREEKLETTER,
+      font: SemanticFont.NORMAL,
+      secondary: SemanticSecondary.ALLLETTERS
+    },
+    // Other alphabets.
+    {
+      set: [['2135', '2138']],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.OTHERLETTER,
+      font: SemanticFont.NORMAL,
+      secondary: SemanticSecondary.ALLLETTERS
+    },
+    // Remaining Latin Characters
+    // TODO: Move these elsewhere.
+    // dotless i and j.
+    {
+      set: ['131', '237'],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.LATINLETTER,
+      font: SemanticFont.NORMAL
+    },
+    // dotless i and j.
+    {
+      set: ['1d6a4', '1d6a5'],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.LATINLETTER,
+      font: SemanticFont.ITALIC
+    },
+    // script small l
+    // Powerset Cap P.
+    {
+      set: ['2113', '2118'],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.LATINLETTER,
+      font: SemanticFont.SCRIPT
+    },
+    {
+      set: [
+        // Extended Latin with accents
+        ['c0', 'd6'],
+        ['d8', 'f6'],
+        ['f8', '1bf'],
+        ['1c4', '2af'],
+        // Latin phonetic alphabets
+        ['1d00', '1d25'],
+        ['1d6b', '1d9a'],
+        ['1e00', '1ef9'],
+        // Latin combining superscripts
+        ['363', '36f'],
+        ['1dd3', '1de6'],
+        // Latin combining subscripts
+        ['1d62', '1d65'],
+        '1dca',
+        // Latin superscripts
+        '2071',
+        '207f',
+        // Latin subscripts
+        ['2090', '209c'],
+        '2c7c'
+      ],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.LATINLETTER,
+      font: SemanticFont.NORMAL
+    },
+    // Numbers.
+    {
+      set: [['00bc', '00be'], ['2150', '215f'], '2189'],
+      type: SemanticType.NUMBER,
+      role: SemanticRole.FLOAT
+    },
+    {
+      set: ['23E8', ['3248', '324f']],
+      type: SemanticType.NUMBER,
+      role: SemanticRole.INTEGER
+    },
+
+    // TODO: Checkmarks. Might need their own role.
+    {
+      set: [['214A', '214C'], '2705', '2713', '2714', '2717', '2718'],
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.UNKNOWN
+    },
+    // Spaces
+    {
+      set: [
+        '20',
+        'a0',
+        'ad',
+        ['2000', '200f'],
+        ['2028', '202f'],
+        ['205f', '2060'],
+        '206a',
+        '206b',
+        '206e',
+        '206f',
+        'feff',
+        ['fff9', 'fffb']
+      ],
+      type: SemanticType.TEXT,
+      role: SemanticRole.SPACE
+    },
+    // Fences
+    // neutralFences
+    {
+      set: [
+        '7c',
+        'a6',
+        '2223',
+        '23b8',
+        '23b9',
+        '23d0',
+        '2758',
+        ['fe31', 'fe34'],
+        'ff5c',
+        'ffe4',
+        'ffe8'
+      ],
+      type: SemanticType.FENCE,
+      role: SemanticRole.NEUTRAL
+    },
+    // metricFences
+    {
+      set: ['2016', '2225', '2980', '2af4'],
+      type: SemanticType.FENCE,
+      role: SemanticRole.METRIC
+    }
   ];
-const fencedNumbers: string[] =
-  // Numbers in Parenthesis.
-  [
-    '⑴',
-    '⑵',
-    '⑶',
-    '⑷',
-    '⑸',
-    '⑹',
-    '⑺',
-    '⑻',
-    '⑼',
-    '⑽',
-    '⑾',
-    '⑿',
-    '⒀',
-    '⒁',
-    '⒂',
-    '⒃',
-    '⒄',
-    '⒅',
-    '⒆',
-    '⒇'
-  ];
-const punctuatedNumbers: string[] =
-  // Numbers with other punctuation.
-  [
-    '⒈',
-    '⒉',
-    '⒊',
-    '⒋',
-    '⒌',
-    '⒍',
-    '⒎',
-    '⒏',
-    '⒐',
-    '⒑',
-    '⒒',
-    '⒓',
-    '⒔',
-    '⒕',
-    '⒖',
-    '⒗',
-    '⒘',
-    '⒙',
-    '⒚',
-    '⒛', // full stop.
-    '🄀',
-    '🄁',
-    '🄂',
-    '🄃',
-    '🄄',
-    '🄅',
-    '🄆',
-    '🄇',
-    '🄈',
-    '🄉',
-    '🄊' // comma.
-  ];
+  sets.forEach(({ set: s, ...m }) =>
+    addMeaning(Alphabet.makeMultiInterval(s), m)
+  );
+}
+
+// Fences
 /**
- * Array of all single digits.
+ *
+ * @param map
+ * @param ints
+ * @param sep
  */
-// const digits: string[] = digitsNormal.concat(
-//       digitsFullWidth, digitsBold, digitsDoubleStruck,
-//       digitsSansSerif, digitsSansSerifBold, digitsMonospace);
-/**
- * Array of all non-digit number symbols.
- */
-const numbers: string[] = fractions;
-const otherNumbers: string[] = digitsSuperscript.concat(
-  digitsSubscript,
-  enclosedNumbers,
-  fencedNumbers,
-  punctuatedNumbers
-);
+function addFences(
+  map: Map<string, string>,
+  ints: (string | [string, string])[],
+  sep = 1
+) {
+  const used: { [key: number]: boolean } = {};
+  const codes = Alphabet.makeCodeInterval(ints);
+  for (const code of codes) {
+    if (used[code]) continue;
+    map.set(String.fromCodePoint(code), String.fromCodePoint(code + sep));
+    used[code] = true;
+    used[code + sep] = true;
+  }
+}
 
 /**
- * Array of all number symbols.
+ *
  */
-// const allNumbers: string[] = digits.concat(numbers, otherNumbers);
+function initFences() {
+  // The intervals are manually minimised.
+  addFences(SemanticMap.FencesVert, [
+    '23b4',
+    ['23dc', '23e1'],
+    ['fe35', 'fe44'],
+    'fe47'
+  ]);
+  addFences(SemanticMap.FencesHoriz, [
+    '28',
+    '2045',
+    ['2308', '230f'],
+    ['231c', '231f'],
+    '2329',
+    '23b0',
+    ['2768', '2775'],
+    '27c5',
+    ['27e6', '27ef'],
+    ['2983', '2998'],
+    ['29d8', '29db'],
+    '29fc',
+    ['2e22', '2e29'],
+    ['3008', '3011'],
+    ['3014', '301b'],
+    'fd3e',
+    'fe17',
+    ['fe59', 'fe5e'],
+    'ff08',
+    'ff5f',
+    'ff62'
+  ]);
+  addFences(SemanticMap.FencesHoriz, ['5b', '7b', 'ff3b', 'ff5b'], 2);
+  addFences(SemanticMap.FencesHoriz, [['239b', '23a6']], 3);
+  addFences(SemanticMap.FencesHoriz, [['23a7', '23a9']], 4);
+
+  // leftFences
+  addMeaning([...SemanticMap.FencesHoriz.keys()], {
+    type: SemanticType.FENCE,
+    role: SemanticRole.OPEN
+  });
+
+  // rightFences
+  addMeaning([...SemanticMap.FencesHoriz.values()], {
+    type: SemanticType.FENCE,
+    role: SemanticRole.CLOSE
+  });
+
+  // topFences
+  addMeaning([...SemanticMap.FencesVert.keys()], {
+    type: SemanticType.FENCE,
+    role: SemanticRole.TOP
+  });
+
+  // bottomFences
+  addMeaning([...SemanticMap.FencesVert.values()], {
+    type: SemanticType.FENCE,
+    role: SemanticRole.BOTTOM
+  });
+}
 
 // Functions.
 const trigonometricFunctions: string[] = [
@@ -2726,13 +1273,7 @@ const trigonometricFunctions: string[] = [
   'arccsc',
   'arcsec',
   'arcsin',
-  'arctan',
-  'arc cos',
-  'arc cot',
-  'arc csc',
-  'arc sec',
-  'arc sin',
-  'arc tan'
+  'arctan'
 ];
 const hyperbolicFunctions: string[] = [
   'cosh',
@@ -2746,31 +1287,16 @@ const hyperbolicFunctions: string[] = [
   'arcsch',
   'arsech',
   'arsinh',
-  'artanh',
-  'arccosh',
-  'arccoth',
-  'arccsch',
-  'arcsech',
-  'arcsinh',
-  'arctanh'
+  'artanh'
 ];
-const algebraicFunctions: string[] = [
-  'deg',
-  'det',
-  'dim',
-  'hom',
-  'ker',
-  'Tr',
-  'tr'
-];
+const algebraicFunctions: string[] = ['deg', 'det', 'dim', 'hom', 'ker', 'Tr'];
 const elementaryFunctions: string[] = [
   'log',
   'ln',
   'lg',
   'exp',
-  'expt',
   'gcd',
-  'gcd',
+  'lcm',
   'arg',
   'im',
   're',
@@ -2786,608 +1312,69 @@ const prefixFunctions: string[] = trigonometricFunctions.concat(
 );
 
 /**
- * Limit functions are handled separately as they can have lower (and upper)
- * limiting expressions.
+ *
  */
-const limitFunctions: string[] = [
-  'inf',
-  'lim',
-  'liminf',
-  'limsup',
-  'max',
-  'min',
-  'sup',
-  'injlim',
-  'projlim',
-  'inj lim',
-  'proj lim'
-];
-const infixFunctions: string[] = ['mod', 'rem'];
+function initFunctions() {
+  // Functions
 
-interface MeaningSet {
-  set: string[];
-  role: SemanticRole;
-  type: SemanticType;
-  font?: SemanticFont;
+  // limitFunctions
+  addMeaning(
+    [
+      'inf',
+      'lim',
+      'liminf',
+      'limsup',
+      'max',
+      'min',
+      'sup',
+      'injlim',
+      'projlim'
+    ],
+    {
+      type: SemanticType.FUNCTION,
+      role: SemanticRole.LIMFUNC
+    }
+  );
+
+  // prefixFunctions
+  // TODO: Do this cleaner
+  addMeaning(prefixFunctions, {
+    type: SemanticType.FUNCTION,
+    role: SemanticRole.PREFIXFUNC
+  });
+
+  // infixFunctions
+  addMeaning(['mod', 'rem'], {
+    type: SemanticType.OPERATOR,
+    role: SemanticRole.PREFIXFUNC
+  });
+}
+
+/**
+ * Adds semantic for alternative function names.
+ *
+ * @param base The base function.
+ * @param names The alt names of the function.
+ */
+export function addFunctionSemantic(base: string, names: string[]) {
+  const meaning = SemanticMap.Meaning.get(base) || {
+    type: SemanticType.FUNCTION,
+    role: SemanticRole.PREFIXFUNC
+  };
+  addMeaning(names, meaning);
 }
 
 /**
  * Default assignments of semantic attributes.
  * Assigns sets of symbols to meaning.
  */
-const symbolSetToSemantic_: MeaningSet[] = [
-  // Punctuation
-  {
-    set: generalPunctuations,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.UNKNOWN
-  },
-  {
-    set: colons,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.COLON
-  },
-  {
-    set: commas,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.COMMA
-  },
-  {
-    set: ellipses,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.ELLIPSIS
-  },
-  {
-    set: fullStops,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.FULLSTOP
-  },
-  {
-    set: dashes,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.DASH
-  },
-  {
-    set: tildes,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.TILDE
-  },
-  {
-    set: primes,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.PRIME
-  },
-  {
-    set: degrees,
-    type: SemanticType.PUNCTUATION,
-    role: SemanticRole.DEGREE
-  },
-  // Fences
-  {
-    set: leftFences,
-    type: SemanticType.FENCE,
-    role: SemanticRole.OPEN
-  },
-  {
-    set: rightFences,
-    type: SemanticType.FENCE,
-    role: SemanticRole.CLOSE
-  },
-  {
-    set: topFences,
-    type: SemanticType.FENCE,
-    role: SemanticRole.TOP
-  },
-  {
-    set: bottomFences,
-    type: SemanticType.FENCE,
-    role: SemanticRole.BOTTOM
-  },
-  {
-    set: neutralFences,
-    type: SemanticType.FENCE,
-    role: SemanticRole.NEUTRAL
-  },
-  {
-    set: metricFences,
-    type: SemanticType.FENCE,
-    role: SemanticRole.METRIC
-  },
-  // Single characters.
-  // Latin alphabets.
-  {
-    set: smallLatin,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: capitalLatin,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: smallLatinFullWidth,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: capitalLatinFullWidth,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: smallLatinBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: capitalLatinBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: smallLatinItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: capitalLatinItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: smallLatinBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDITALIC
-  },
-  {
-    set: capitalLatinBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDITALIC
-  },
-  {
-    set: smallLatinScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SCRIPT
-  },
-  {
-    set: capitalLatinScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SCRIPT
-  },
-  {
-    set: smallLatinBoldScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDSCRIPT
-  },
-  {
-    set: capitalLatinBoldScript,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDSCRIPT
-  },
-  {
-    set: smallLatinFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.FRAKTUR
-  },
-  {
-    set: capitalLatinFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.FRAKTUR
-  },
-  {
-    set: smallLatinDoubleStruck,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: capitalLatinDoubleStruck,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: smallLatinBoldFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDFRAKTUR
-  },
-  {
-    set: capitalLatinBoldFraktur,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.BOLDFRAKTUR
-  },
-  {
-    set: smallLatinSansSerif,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIF
-  },
-  {
-    set: capitalLatinSansSerif,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIF
-  },
-  {
-    set: smallLatinSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: capitalLatinSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: smallLatinSansSerifItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFITALIC
-  },
-  {
-    set: capitalLatinSansSerifItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFITALIC
-  },
-  {
-    set: smallLatinSansSerifBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLDITALIC
-  },
-  {
-    set: capitalLatinSansSerifBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.SANSSERIFBOLDITALIC
-  },
-  {
-    set: smallLatinMonospace,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.MONOSPACE
-  },
-  {
-    set: capitalLatinMonospace,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.MONOSPACE
-  },
-  {
-    set: latinDoubleStruckItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.LATINLETTER,
-    font: SemanticFont.DOUBLESTRUCKITALIC
-  },
-  // Greek alphabets.
-  {
-    set: smallGreek,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: capitalGreek,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: smallGreekBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: capitalGreekBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: smallGreekItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: capitalGreekItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: smallGreekBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.BOLDITALIC
-  },
-  {
-    set: capitalGreekBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.BOLDITALIC
-  },
-  {
-    set: smallGreekSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: capitalGreekSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: capitalGreekSansSerifBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.SANSSERIFBOLDITALIC
-  },
-  {
-    set: smallGreekSansSerifBoldItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.SANSSERIFBOLDITALIC
-  },
-  {
-    set: greekDoubleStruck,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: greekSpecial,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: greekSpecialBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: greekSpecialItalic,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: greekSpecialSansSerifBold,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.GREEKLETTER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  // Other alphabets.
-  {
-    set: hebrewLetters,
-    type: SemanticType.IDENTIFIER,
-    role: SemanticRole.OTHERLETTER,
-    font: SemanticFont.NORMAL
-  },
-  // Numbers.
-  {
-    set: digitsNormal,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: digitsFullWidth,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.NORMAL
-  },
-  {
-    set: digitsBold,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: digitsDoubleStruck,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.DOUBLESTRUCK
-  },
-  {
-    set: digitsSansSerif,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.SANSSERIF
-  },
-  {
-    set: digitsSansSerifBold,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  {
-    set: digitsMonospace,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.INTEGER,
-    font: SemanticFont.MONOSPACE
-  },
-  {
-    set: numbers,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.FLOAT
-  },
-  {
-    set: otherNumbers,
-    type: SemanticType.NUMBER,
-    role: SemanticRole.OTHERNUMBER
-  },
-  // Operators.
-  {
-    set: additions,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.ADDITION
-  },
-  {
-    set: multiplications,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.MULTIPLICATION
-  },
-  {
-    set: subtractions,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.SUBTRACTION
-  },
-  {
-    set: divisions,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.DIVISION
-  },
-  {
-    set: prefixOps,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXOP
-  },
-  {
-    set: prefixOpsBold,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXOP,
-    font: SemanticFont.BOLD
-  },
-  {
-    set: prefixOpsItalic,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXOP,
-    font: SemanticFont.ITALIC
-  },
-  {
-    set: prefixOpsSansSerifBold,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXOP,
-    font: SemanticFont.SANSSERIFBOLD
-  },
-  // Relations
-  {
-    set: equalities,
-    type: SemanticType.RELATION,
-    role: SemanticRole.EQUALITY
-  },
-  {
-    set: inequalities,
-    type: SemanticType.RELATION,
-    role: SemanticRole.INEQUALITY
-  },
-  {
-    set: setRelations,
-    type: SemanticType.RELATION,
-    role: SemanticRole.SET
-  },
-  {
-    set: relations,
-    type: SemanticType.RELATION,
-    role: SemanticRole.UNKNOWN
-  },
-  {
-    set: arrows,
-    type: SemanticType.RELATION,
-    role: SemanticRole.ARROW
-  },
-  // Membership. Currently treated as operator.
-  {
-    set: elementRelations,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.ELEMENT
-  },
-  {
-    set: nonelementRelations,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.NONELEMENT
-  },
-  {
-    set: reelementRelations,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.REELEMENT
-  },
-  {
-    set: renonelementRelations,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.RENONELEMENT
-  },
-  // Large operators
-  {
-    set: sumOps,
-    type: SemanticType.LARGEOP,
-    role: SemanticRole.SUM
-  },
-  {
-    set: intOps,
-    type: SemanticType.LARGEOP,
-    role: SemanticRole.INTEGRAL
-  },
-  {
-    set: geometryOps, // TODO: Change that after speech rule work?
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.GEOMETRY
-  },
-  // Functions
-  {
-    set: limitFunctions,
-    type: SemanticType.FUNCTION,
-    role: SemanticRole.LIMFUNC
-  },
-  {
-    set: prefixFunctions,
-    type: SemanticType.FUNCTION,
-    role: SemanticRole.PREFIXFUNC
-  },
-  {
-    set: infixFunctions,
-    type: SemanticType.OPERATOR,
-    role: SemanticRole.PREFIXFUNC
-  }
-];
-
-/**
- * Initializes the dictionary mapping strings to meaning.
- *
- * @returns The dictionary mapping strings to
- *     semantic attributes.
- */
-const meaning_: { [key: string]: SemanticMeaning } = (function () {
-  const result: { [key: string]: SemanticMeaning } = {};
-  for (let i = 0, st: MeaningSet; (st = symbolSetToSemantic_[i]); i++) {
-    st.set.forEach(function (symbol) {
-      result[symbol] = {
-        role: st.role || SemanticRole.UNKNOWN,
-        type: st.type || SemanticType.UNKNOWN,
-        font: st.font || SemanticFont.UNKNOWN
-      };
-    });
-  }
-  return result;
-})();
+interface MeaningSet {
+  set?: (string | [string, string])[];
+  role: SemanticRole;
+  type: SemanticType;
+  font?: SemanticFont;
+  secondary?: SemanticSecondary;
+}
 
 /**
  * Equality on meaning objects.
@@ -3408,200 +1395,172 @@ export function equal(
 }
 
 /**
- * Lookup the semantic type of a symbol.
- *
- * @param symbol The symbol to which we want to determine the type.
- * @returns The semantic type of the symbol.
- */
-export function lookupType(symbol: string): SemanticType {
-  return meaning_[symbol]?.type || SemanticType.UNKNOWN;
-}
-
-/**
- * Lookup the semantic role of a symbol.
- *
- * @param symbol The symbol to which we want to determine the role.
- * @returns The semantic role of the symbol.
- */
-export function lookupRole(symbol: string): SemanticRole {
-  return meaning_[symbol]?.role || SemanticRole.UNKNOWN;
-}
-
-/**
- * Lookup the semantic meaning of a symbol in terms of type and role.
- *
- * @param symbol The symbol to which we want to determine the meaning.
- * @returns The semantic meaning of the symbol.
- */
-export function lookupMeaning(symbol: string): SemanticMeaning {
-  return (
-    meaning_[symbol] || {
-      role: SemanticRole.UNKNOWN,
-      type: SemanticType.UNKNOWN,
-      font: SemanticFont.UNKNOWN
-    }
-  );
-}
-
-/**
- * String representation of the invisible times unicode character.
- *
- * @returns The invisible times character.
- */
-export function invisibleTimes(): string {
-  return invisibleTimes_;
-}
-
-/**
- * String representation of the invisible plus unicode character.
- *
- * @returns The invisible plus character.
- */
-export function invisiblePlus(): string {
-  return invisiblePlus_;
-}
-
-/**
- * String representation of the invisible comma unicode character.
- *
- * @returns The invisible comma character.
- */
-export function invisibleComma(): string {
-  return invisibleComma_;
-}
-
-/**
- * String representation of the function application character.
- *
- * @returns The invisible function application character.
- */
-export function functionApplication(): string {
-  return functionApplication_;
-}
-
-// /**
-//  * Decide when two fences match. Currently we match any right to left
-//  * or bottom to top fence and neutral to neutral.
-//  * @param open Opening fence.
-//  * @param close Closing fence.
-//  * @returns True if the fences are matching.
-//  */
-// export function isMatchingFenceRole(open: string, close: string): boolean {
-//   return open === SemanticRole.OPEN &&
-//     close === SemanticRole.CLOSE ||
-//     isNeutralFence(open) && isNeutralFence(close) ||
-//     open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
-// }
-
-/**
  * Decide when opening and closing fences match. For neutral fences they have
  * to be the same.
  *
- * @param {string} open Opening fence.
- * @param {string} close Closing fence.
- * @returns {boolean} True if the fences are matching.
+ * @param open Opening fence.
+ * @param close Closing fence.
+ * @returns True if the fences are matching.
  */
 export function isMatchingFence(open: string, close: string): boolean {
-  if (neutralFences.indexOf(open) !== -1 || metricFences.indexOf(open) !== -1) {
+  const meaning = SemanticMap.Meaning.get(open);
+  if (meaning.type !== SemanticType.FENCE) {
+    return false;
+  }
+  if (
+    meaning.role === SemanticRole.NEUTRAL ||
+    meaning.role === SemanticRole.METRIC
+  ) {
     return open === close;
   }
-  return openClosePairs[open] === close || topBottomPairs[open] === close;
-}
-
-// /**
-//  * Determines if a fence is an opening fence.
-//  * @param fence Opening fence.
-//  * @returns True if the fence is open or neutral.
-//  */
-// export function isOpeningFence(fence: SemanticRole): boolean {
-//   return fence === SemanticRole.OPEN || isNeutralFence(fence);
-// }
-
-// /**
-//  * Determines if a fence is a closing fence.
-//  * @param fence Closing fence.
-//  * @returns True if the fence is close or neutral.
-//  */
-// export function isClosingFence(fence: SemanticRole): boolean {
-//   return fence === SemanticRole.CLOSE || isNeutralFence(fence);
-// }
-
-/**
- * Determines if a symbol type can be embellished. Primitives that can be
- * embellished are operators, punctuations, relations, and fences.
- *
- * @param type The type.
- * @returns True if the type can be embellished.
- */
-export function isEmbellishedType(type: SemanticType): boolean {
   return (
-    type === SemanticType.OPERATOR ||
-    type === SemanticType.RELATION ||
-    type === SemanticType.FENCE ||
-    type === SemanticType.PUNCTUATION
+    SemanticMap.FencesHoriz.get(open) === close ||
+    SemanticMap.FencesVert.get(open) === close
   );
 }
 
 /**
- * Secondary annotation facility. This allows to compute a special annotation,
- * if desired.
+ * ORDERING:
+ * Create alphabets/numerals
+ * Add other semantics for single letters: position, meaning
+ * Add to regexp (e.g. all letters)
+ * Add secondary meaning: secondary string, position
  */
 
 /**
- * The mapping for secondary annotations.
- */
-const secondary_ = new Map();
-
-/**
- * The key generator for secondary annotations.
  *
- * @param kind The kind of annotation.
- * @param char The character to look up.
- * @returns The generated key.
+ * @param alphabet
  */
-function secKey(kind: string, char: string) {
-  return `${kind} ${char}`;
-}
-
-/**
- * Builds the secondary annotation structure.
- *
- * @param kind The kind of annotation.
- * @param chars The characters to look up.
- * @param annotation Optionally an annotation value. Default is `kind`.
- */
-function addSecondary_(kind: string, chars: string[], annotation = '') {
-  for (const char of chars) {
-    secondary_.set(secKey(kind, char), annotation || kind);
+function changeSemantics(
+  alphabet: string[],
+  change: { [position: number]: SemanticMeaning }
+) {
+  for (const [pos, meaning] of Object.entries(change)) {
+    const character = alphabet[pos as unknown as number];
+    if (character !== undefined) {
+      SemanticMap.Meaning.set(character, meaning);
+    }
   }
 }
 
-addSecondary_('d', [
-  'd',
-  'ⅆ',
-  'ｄ',
-  '𝐝',
-  '𝑑',
-  '𝒹',
-  '𝓭',
-  '𝔡',
-  '𝕕',
-  '𝖉',
-  '𝖽',
-  '𝗱',
-  '𝘥',
-  '𝚍'
-]);
-addSecondary_('bar', dashes);
-addSecondary_('tilde', tildes);
+/**
+ *
+ * @param alphabet
+ */
+function addSecondaries(
+  alphabet: string[],
+  change: { [position: number]: SemanticSecondary }
+) {
+  for (const [pos, meaning] of Object.entries(change)) {
+    const character = alphabet[pos as unknown as number];
+    if (character !== undefined) {
+      SemanticMap.Secondary.set(character, meaning);
+    }
+  }
+}
 
 /**
- * Lookup of secondary annotation.
  *
- * @param kind The kind of annotation.
- * @param char The character to look up.
- * @returns The annotation if it exists.
+ * @param alphabet
+ * @param type
+ * @param role
+ * @param font
+ * @param semfont
+ * @param secondaries
  */
-export function lookupSecondary(kind: string, char: string) {
-  return secondary_.get(secKey(kind, char));
+function singleAlphabet(
+  alphabet: Alphabet.Base,
+  type: SemanticType,
+  role: SemanticRole,
+  font: SemanticFont,
+  semfont: SemanticFont,
+  secondaries: SemanticSecondary[] = [],
+  change: { [position: number]: SemanticMeaning } = {},
+  secondary: { [position: number]: SemanticSecondary } = {}
+) {
+  const interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
+  if (interval) {
+    interval.unicode.forEach((x) => {
+      SemanticMap.Meaning.set(x, {
+        type: type,
+        role: role,
+        font: semfont
+      });
+      secondaries.forEach((sec) => SemanticMap.Secondary.set(x, sec));
+    });
+    changeSemantics(interval.unicode, change);
+    addSecondaries(interval.unicode, secondary);
+  }
 }
+
+/**
+ *
+ */
+function alphabets() {
+  for (const [name, font] of Object.entries(SemanticFont)) {
+    const emb = !!(Alphabet as any).Embellish[name];
+    const semfont = emb
+      ? SemanticFont.UNKNOWN
+      : font === SemanticFont.FULLWIDTH
+      ? SemanticFont.NORMAL
+      : font;
+    singleAlphabet(
+      Alphabet.Base.LATINCAP,
+      SemanticType.IDENTIFIER,
+      SemanticRole.LATINLETTER,
+      font,
+      semfont,
+      [SemanticSecondary.ALLLETTERS]
+    );
+    singleAlphabet(
+      Alphabet.Base.LATINSMALL,
+      SemanticType.IDENTIFIER,
+      SemanticRole.LATINLETTER,
+      font,
+      semfont,
+      [SemanticSecondary.ALLLETTERS],
+      {},
+      { 3: SemanticSecondary.D }
+    );
+    singleAlphabet(
+      Alphabet.Base.GREEKCAP,
+      SemanticType.IDENTIFIER,
+      SemanticRole.GREEKLETTER,
+      font,
+      semfont,
+      [SemanticSecondary.ALLLETTERS]
+    );
+    singleAlphabet(
+      Alphabet.Base.GREEKSMALL,
+      SemanticType.IDENTIFIER,
+      SemanticRole.GREEKLETTER,
+      font,
+      semfont,
+      [SemanticSecondary.ALLLETTERS],
+      {
+        0: {
+          type: SemanticType.OPERATOR,
+          role: SemanticRole.PREFIXOP,
+          font: semfont
+        },
+        26: {
+          type: SemanticType.OPERATOR,
+          role: SemanticRole.PREFIXOP,
+          font: semfont
+        }
+      }
+    );
+    singleAlphabet(
+      Alphabet.Base.DIGIT,
+      SemanticType.NUMBER,
+      SemanticRole.INTEGER,
+      font,
+      semfont
+    );
+  }
+}
+
+initMeaning();
+initFences();
+alphabets();
+initFunctions();

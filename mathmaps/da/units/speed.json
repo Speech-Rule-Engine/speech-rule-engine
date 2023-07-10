@@ -1,0 +1,41 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "kt",
+    "mappings": {
+      "default": {
+        "default": "knob",
+        "plural": "knob"
+      }
+    }
+  },
+  {
+    "key": "mph",
+    "mappings": {
+      "default": {
+        "default": "mil i timen",
+        "plural": "mil i timen"
+      }
+    }
+  },
+  {
+    "key": "rpm",
+    "mappings": {
+      "default": {
+        "default": "omdrejninger pr. minut",
+        "plural": "omdrejning pr. minut"
+      }
+    }
+  },
+  {
+    "key": "kmh",
+    "mappings": {
+      "default": {
+        "default": "kilometer i timen",
+        "plural": "kilometer i timen"
+      }
+    }
+  }
+]

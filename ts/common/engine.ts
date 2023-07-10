@@ -19,11 +19,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as Dcstr from '../rule_engine/dynamic_cstr';
-import * as EngineConst from './engine_const';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as Dcstr from '../rule_engine/dynamic_cstr.js';
+import * as EngineConst from './engine_const.js';
 
-import { Debugger } from './debugger';
+import { Debugger } from './debugger.js';
+import { Variables } from './variables.js';
 
 declare const SREfeature: { [key: string]: any };
 
@@ -54,7 +55,16 @@ export default class Engine {
   /**
    * Binary feature vector.
    */
-  public static BINARY_FEATURES: string[] = ['strict', 'structure', 'pprint'];
+  public static BINARY_FEATURES: string[] = [
+    'automark',
+    'mark',
+    'character',
+    'cleanpause',
+    'strict',
+    'structure',
+    'aria',
+    'pprint'
+  ];
 
   /**
    * String feature vector.
@@ -65,7 +75,9 @@ export default class Engine {
     'domain',
     'speech',
     'walker',
+    'defaultLocale',
     'locale',
+    'delay',
     'modality',
     'rate',
     'rules',
@@ -98,6 +110,16 @@ export default class Engine {
   public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
   /**
+   * Init flag, initially set true. Set to false after first setup.
+   */
+  public init = true;
+
+  /**
+   * Delay flag, to avoid auto setup of engine.
+   */
+  public delay = false;
+
+  /**
    * Maps domains to comparators.
    */
   public comparators: { [key: string]: () => Dcstr.Comparator } = {};
@@ -113,9 +135,22 @@ export default class Engine {
   public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
 
   /**
+   * The default locale.
+   */
+  public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  public set defaultLocale(loc: string) {
+    this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
+  }
+
+  public get defaultLocale() {
+    return this._defaultLocale;
+  }
+
+  /**
    * Current locale.
    */
-  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+  public locale = this.defaultLocale;
 
   /**
    * Current subiso for the locale.
@@ -138,6 +173,21 @@ export default class Engine {
    */
   public markup: EngineConst.Markup = EngineConst.Markup.NONE;
 
+  // Markup options
+  public mark = true;
+  /**
+   * Automatic marking of elements for spans.
+   */
+  public automark = false;
+  public character = true;
+  public cleanpause = true;
+
+  /**
+   * Percentage of default rate used by external TTS. This can be used to scale
+   * pauses.
+   */
+  public rate = '100';
+
   /**
    * Current walker mode.
    */
@@ -147,6 +197,7 @@ export default class Engine {
    * Indicates if skeleton structure attributes are added to enriched elements
    */
   public structure = false;
+  public aria = false;
 
   /**
    * List of rule sets given as the constructor functions.
@@ -167,12 +218,6 @@ export default class Engine {
    * Current browser is MS Edge.
    */
   public isEdge = false;
-
-  /**
-   * Percentage of default rate used by external TTS. This can be used to scale
-   * pauses.
-   */
-  public rate = '100';
 
   /**
    * Pretty Print mode.
@@ -242,6 +287,9 @@ export default class Engine {
    *    parameters.
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
+    if (this.defaultLocale) {
+      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] = this.defaultLocale;
+    }
     if (opt_dynamic) {
       const keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {
@@ -337,9 +385,9 @@ function configBlocks(feature: { [key: string]: boolean | string }) {
     let inner;
     try {
       inner = scripts[i].innerHTML;
-      const config = JSON.parse(inner);
-      for (const f in config) {
-        feature[f] = config[f];
+      const config: { [key: string]: boolean | string } = JSON.parse(inner);
+      for (const [key, val] of Object.entries(config)) {
+        feature[key] = val;
       }
     } catch (err) {
       Debugger.getInstance().output('Illegal configuration ', inner);
@@ -376,6 +424,6 @@ export class EnginePromise {
    * @returns All promises combined into one.
    */
   public static getall() {
-    return Promise.allSettled(Object.values(EnginePromise.promises));
+    return Promise.all(Object.values(EnginePromise.promises));
   }
 }

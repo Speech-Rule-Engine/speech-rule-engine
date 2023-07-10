@@ -3,7 +3,6 @@
     "locale": "de"
   },
   {
-    "category": "Ll",
     "key": "03D0",
     "mappings": {
       "default": {
@@ -12,7 +11,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "03D7",
     "mappings": {
       "default": {
@@ -21,7 +19,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "03F6",
     "mappings": {
       "default": {
@@ -30,7 +27,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1D7CA",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7CB",
     "mappings": {
       "default": {

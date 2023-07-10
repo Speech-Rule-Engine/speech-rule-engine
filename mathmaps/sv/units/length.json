@@ -9,12 +9,7 @@
         "default": "fot",
         "plural": "fot"
       }
-    },
-    "category": "length",
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
@@ -23,12 +18,7 @@
         "default": "tum",
         "plural": "tum"
       }
-    },
-    "category": "length",
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
@@ -37,12 +27,7 @@
         "default": "mile",
         "plural": "miles"
       }
-    },
-    "category": "length",
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
@@ -51,62 +36,37 @@
         "default": "yard",
         "plural": "yards"
       }
-    },
-    "category": "length",
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
   {
-    "key": "li",
+    "key": "link",
     "mappings": {
       "default": {
-        "default": "link",
-        "plural": "links"
+        "default": "länk",
+        "plural": "länkar"
       }
-    },
-    "category": "length",
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
-    "key": "rd",
+    "key": "rod",
     "mappings": {
       "default": {
         "default": "rod",
         "plural": "rods"
       }
-    },
-    "category": "length",
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
-    "key": "ch",
+    "key": "chain",
     "mappings": {
       "default": {
-        "default": "chain",
-        "plural": "chains"
+        "default": "kedja",
+        "plural": "kejdor"
       }
-    },
-    "category": "length",
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
     "key": "furlong",
-    "category": "length",
-    "names": [
-      "fur",
-      "fur."
-    ],
     "mappings": {
       "default": {
         "default": "furlong",
@@ -116,14 +76,10 @@
   },
   {
     "key": "n.m.",
-    "category": "length",
-    "names": [
-      "n.m."
-    ],
     "mappings": {
       "default": {
-        "default": "nautical mile",
-        "plural": "nautical miles"
+        "default": "nautisk mil",
+        "plural": "nautiska mil"
       }
     }
   },
@@ -134,11 +90,6 @@
         "default": "meter",
         "plural": "meter"
       }
-    },
-    "category": "length",
-    "names": [
-      "m"
-    ],
-    "si": true
+    }
   }
 ]

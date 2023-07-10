@@ -19,9 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as WalkerUtil from '../walker/walker_util';
+import * as WalkerUtil from '../walker/walker_util.js';
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
 
 export class DirectSpeechGenerator extends AbstractSpeechGenerator {
   /**

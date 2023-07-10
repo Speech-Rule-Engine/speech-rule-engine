@@ -20,19 +20,22 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import Engine from '../common/engine';
-import * as SemanticAttr from './semantic_attr';
-import * as SemanticHeuristics from './semantic_heuristic_factory';
+import { Debugger } from '../common/debugger.js';
+import Engine from '../common/engine.js';
+import { NamedSymbol, SemanticMap } from './semantic_attr.js';
+import * as SemanticHeuristics from './semantic_heuristic_factory.js';
 import {
   SemanticTreeHeuristic,
   SemanticMultiHeuristic
-} from './semantic_heuristic';
-import { SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+} from './semantic_heuristic.js';
+import { SemanticRole, SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import * as SemanticPred from './semantic_pred.js';
+import SemanticProcessor from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
+import { SemanticSkeleton } from './semantic_skeleton.js';
+
+import * as DomUtil from '../common/dom_util.js';
 
 /**
  * Recursively combines implicit nodes as much as possible for the given root
@@ -142,7 +145,7 @@ SemanticHeuristics.add(
     }
     // TODO: Combine with lines in numberRole_/exprFont_?
     const content = [...node.textContent];
-    const meaning = content.map(SemanticAttr.lookupMeaning);
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     const singleRole = meaning.reduce(function (prev, curr) {
       if (
         !prev ||
@@ -170,7 +173,7 @@ SemanticHeuristics.add(
   new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
     let partition = SemanticUtil.partitionNodes(nodes, function (x) {
       return (
-        x.textContent === SemanticAttr.invisibleTimes() &&
+        x.textContent === NamedSymbol.invisibleTimes &&
         x.type === SemanticType.OPERATOR
       );
     });
@@ -190,7 +193,7 @@ SemanticHeuristics.add(
     }
     partition = SemanticUtil.partitionNodes(nodes, function (x) {
       return (
-        x.textContent === SemanticAttr.invisibleTimes() &&
+        x.textContent === NamedSymbol.invisibleTimes &&
         (x.type === SemanticType.OPERATOR || x.type === SemanticType.INFIXOP)
       );
     });
@@ -464,4 +467,261 @@ function recurseJuxtaposition(
   }
   acc.push(result);
   return recurseJuxtaposition(acc.concat(first), ops, elements);
+}
+
+// New Integral Heuristics
+/**
+ * Heuristic to extract integral variables from elements that are considered to be
+ * in elided products. This implies we ignore any invisible grouping.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'intvar_from_implicit',
+    implicitUnpack,
+    (nodes: SemanticNode[]) => nodes[0] && SemanticPred.isImplicit(nodes[0])
+  )
+);
+
+/**
+ * Unpacks implicit nodes and pushes them to the front of the node list. Assumes
+ * that the first node of the given list is an implicit multiplication.
+ *
+ * @param nodes The list of nodes.
+ */
+function implicitUnpack(nodes: SemanticNode[]) {
+  const children = nodes[0].childNodes;
+  nodes.splice(0, 1, ...children);
+}
+
+/**
+ * Heuristic to extract find an integral variable as enumerator a fraction.
+ * Just changes the role to integral.
+ */
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'intvar_from_fraction',
+    integralFractionArg,
+    (node: SemanticNode) => {
+      if (node.type !== SemanticType.INTEGRAL) return false;
+      const [, integrand, intvar] = node.childNodes;
+      return (
+        intvar.type === SemanticType.EMPTY &&
+        integrand.type === SemanticType.FRACTION
+      );
+    }
+  )
+);
+
+/**
+ * If the integrand is a fraction and the integral variable is the enumerator it
+ * adjusts its role to integral an possibly rewrites it into a prefix operator.
+ *
+ * @param node The integral node.
+ */
+function integralFractionArg(node: SemanticNode): void {
+  const integrand = node.childNodes[1];
+  const enumerator = integrand.childNodes[0];
+  if (SemanticPred.isIntegralDxBoundarySingle(enumerator)) {
+    enumerator.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (!SemanticPred.isImplicit(enumerator)) return;
+  const length = enumerator.childNodes.length;
+  const first = enumerator.childNodes[length - 2];
+  const second = enumerator.childNodes[length - 1];
+  if (SemanticPred.isIntegralDxBoundarySingle(second)) {
+    second.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (SemanticPred.isIntegralDxBoundary(first, second)) {
+    const prefix = SemanticProcessor.getInstance()['prefixNode_'](second, [
+      first
+    ]);
+    prefix.role = SemanticRole.INTEGRAL;
+    if (length === 2) {
+      integrand.childNodes[0] = prefix;
+    } else {
+      enumerator.childNodes.pop();
+      enumerator.contentNodes.pop();
+      enumerator.childNodes[length - 2] = prefix;
+      prefix.parent = enumerator;
+    }
+  }
+}
+
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'rewrite_subcases',
+    rewriteSubcasesTable,
+    (table: SemanticNode) => {
+      // Here semantics would work best. But we do previews into top left and
+      // top right element. If they appear to be created by empheq and the rest
+      // column is empty we will rewrite.
+      let left = true;
+      let right = true;
+      const topLeft = table.childNodes[0].childNodes[0];
+      if (!eligibleNode(topLeft.mathmlTree)) {
+        left = false;
+      } else {
+        for (let i = 1, row; (row = table.childNodes[i]); i++) {
+          if (row.childNodes[0].childNodes.length) {
+            left = false;
+            break;
+          }
+        }
+      }
+      if (left) {
+        table.addAnnotation('Emph', 'left');
+      }
+      const topRight =
+        table.childNodes[0].childNodes[
+          table.childNodes[0].childNodes.length - 1
+        ];
+      if (!eligibleNode(topRight.mathmlTree)) {
+        right = false;
+      } else {
+        const firstRow = table.childNodes[0].childNodes.length;
+        for (let i = 1, row; (row = table.childNodes[i]); i++) {
+          if (row.childNodes.length >= firstRow) {
+            right = false;
+            break;
+          }
+        }
+      }
+      if (right) {
+        table.addAnnotation('Emph', 'right');
+      }
+      return left || right;
+    }
+  )
+);
+
+/**
+ *
+ * @param node
+ */
+function eligibleNode(node: Element) {
+  return (
+    node.childNodes[0] &&
+    node.childNodes[0].childNodes[0] &&
+    DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
+    DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) ===
+      'MPADDED' &&
+    DomUtil.tagName(
+      node.childNodes[0].childNodes[
+        node.childNodes[0].childNodes.length - 1
+      ] as Element
+    ) === 'MPHANTOM'
+  );
+}
+
+const rewritable: SemanticType[] = [
+  SemanticType.PUNCTUATED,
+  SemanticType.RELSEQ,
+  SemanticType.MULTIREL,
+  SemanticType.INFIXOP,
+  SemanticType.PREFIXOP,
+  SemanticType.POSTFIXOP
+];
+
+/**
+ *
+ * @param table
+ */
+function rewriteSubcasesTable(table: SemanticNode) {
+  table.addAnnotation('Emph', 'top');
+  let row: SemanticNode[] = [];
+  if (table.hasAnnotation('Emph', 'left')) {
+    const topLeft = table.childNodes[0].childNodes[0].childNodes[0];
+    const cells = rewriteCell(topLeft, true);
+    cells.forEach((x) => x.addAnnotation('Emph', 'left'));
+    row = row.concat(cells);
+    for (let i = 0, line: SemanticNode; (line = table.childNodes[i]); i++) {
+      line.childNodes.shift();
+    }
+  }
+  row.push(table);
+  if (table.hasAnnotation('Emph', 'right')) {
+    const topRight =
+      table.childNodes[0].childNodes[table.childNodes[0].childNodes.length - 1]
+        .childNodes[0];
+    const cells = rewriteCell(topRight);
+    cells.forEach((x) => x.addAnnotation('Emph', 'left'));
+    row = row.concat(cells);
+    table.childNodes[0].childNodes.pop();
+  }
+  SemanticProcessor.tableToMultiline(table);
+  const newNode = SemanticProcessor.getInstance().row(row);
+  const annotation = table.annotation['Emph'];
+  table.annotation['Emph'] = ['table'];
+  annotation.forEach((x) => newNode.addAnnotation('Emph', x));
+  return newNode;
+}
+
+/**
+ *
+ * @param cell
+ * @param left
+ */
+function rewriteCell(cell: SemanticNode, left?: boolean) {
+  if (!cell.childNodes.length) {
+    rewriteFence(cell);
+    return [cell];
+  }
+  let fence = null;
+  if (
+    cell.type === SemanticType.PUNCTUATED &&
+    (left
+      ? cell.role === SemanticRole.ENDPUNCT
+      : cell.role === SemanticRole.STARTPUNCT)
+  ) {
+    const children = cell.childNodes;
+    if (rewriteFence(children[left ? children.length - 1 : 0])) {
+      cell = children[left ? 0 : children.length - 1];
+      fence = children[left ? children.length - 1 : 0];
+    }
+  }
+  if (rewritable.indexOf(cell.type) !== -1) {
+    const children = cell.childNodes;
+    rewriteFence(children[left ? children.length - 1 : 0]);
+    const newNodes = SemanticSkeleton.combineContentChildren<SemanticNode>(
+      cell,
+      cell.contentNodes,
+      cell.childNodes
+    );
+    if (fence) {
+      if (left) {
+        newNodes.push(fence);
+      } else {
+        newNodes.unshift(fence);
+      }
+    }
+    return newNodes;
+  }
+  return fence ? (left ? [cell, fence] : [fence, cell]) : [cell];
+}
+
+const PUNCT_TO_FENCE_: { [key: string]: SemanticRole } = {
+  [SemanticRole.METRIC]: SemanticRole.METRIC,
+  [SemanticRole.VBAR]: SemanticRole.NEUTRAL,
+  [SemanticRole.OPENFENCE]: SemanticRole.OPEN,
+  [SemanticRole.CLOSEFENCE]: SemanticRole.CLOSE
+};
+
+/**
+ *
+ * @param fence
+ */
+function rewriteFence(fence: SemanticNode): boolean {
+  if (fence.type !== SemanticType.PUNCTUATION) {
+    return false;
+  }
+  const role = PUNCT_TO_FENCE_[fence.role];
+  if (!role) {
+    return false;
+  }
+  fence.role = role;
+  fence.type = SemanticType.FENCE;
+  fence.addAnnotation('Emph', 'fence');
+  return true;
 }

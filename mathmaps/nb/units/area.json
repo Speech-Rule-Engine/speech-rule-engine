@@ -3,15 +3,7 @@
     "locale": "nb"
   },
   {
-    "locale": "nb"
-  },
-  {
     "key": "sq",
-    "category": "other",
-    "names": [
-      "sq",
-      "sq."
-    ],
     "mappings": {
       "default": {
         "default": "kvadrat"
@@ -19,28 +11,16 @@
     }
   },
   {
-    "key": "sq in",
+    "key": "sq inch",
     "mappings": {
       "default": {
         "default": "square inch",
         "plural": "square inches"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq in",
-      "sq. in.",
-      "sq inch",
-      "sq. inch"
-    ]
+    }
   },
   {
     "key": "sq rd",
-    "category": "area",
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -53,12 +33,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "area",
-    "names": [
-      "sq ft",
-      "sq. ft."
-    ]
+    }
   },
   {
     "key": "sq yd",
@@ -66,12 +41,7 @@
       "default": {
         "default": "kvadratmeter"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq yd",
-      "sq. yd."
-    ]
+    }
   },
   {
     "key": "sq mi",
@@ -79,35 +49,19 @@
       "default": {
         "default": "kvadratkilometer"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq mi",
-      "sq. mi."
-    ]
+    }
   },
   {
-    "key": "ac",
+    "key": "acr",
     "mappings": {
       "default": {
         "default": "acre",
         "plural": "acres"
       }
-    },
-    "category": "area",
-    "names": [
-      "ac",
-      "ac.",
-      "acr",
-      "acr."
-    ]
+    }
   },
   {
     "key": "ha",
-    "category": "area",
-    "names": [
-      "ha"
-    ],
     "mappings": {
       "default": {
         "default": "hektar"

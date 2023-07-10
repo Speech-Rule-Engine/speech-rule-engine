@@ -1,0 +1,1533 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "00E0",
+    "mappings": {
+      "default": {
+        "default": "a med accent grave"
+      }
+    }
+  },
+  {
+    "key": "00E1",
+    "mappings": {
+      "default": {
+        "default": "a med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "00E2",
+    "mappings": {
+      "default": {
+        "default": "a med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00E3",
+    "mappings": {
+      "default": {
+        "default": "a med tilde"
+      }
+    }
+  },
+  {
+    "key": "00E4",
+    "mappings": {
+      "default": {
+        "default": "a med tréma"
+      }
+    }
+  },
+  {
+    "key": "00E5",
+    "mappings": {
+      "default": {
+        "default": "a med bolle ovenover"
+      }
+    }
+  },
+  {
+    "key": "00E7",
+    "mappings": {
+      "default": {
+        "default": "c med cedille"
+      }
+    }
+  },
+  {
+    "key": "00E8",
+    "mappings": {
+      "default": {
+        "default": "e med accent grave"
+      }
+    }
+  },
+  {
+    "key": "00E9",
+    "mappings": {
+      "default": {
+        "default": "e med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "00EA",
+    "mappings": {
+      "default": {
+        "default": "e med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00EB",
+    "mappings": {
+      "default": {
+        "default": "e med tréma"
+      }
+    }
+  },
+  {
+    "key": "00EC",
+    "mappings": {
+      "default": {
+        "default": "i med accent grave"
+      }
+    }
+  },
+  {
+    "key": "00ED",
+    "mappings": {
+      "default": {
+        "default": "i med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "00EE",
+    "mappings": {
+      "default": {
+        "default": "i med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00EF",
+    "mappings": {
+      "default": {
+        "default": "i med tréma"
+      }
+    }
+  },
+  {
+    "key": "00F1",
+    "mappings": {
+      "default": {
+        "default": "n med tilde"
+      }
+    }
+  },
+  {
+    "key": "00F2",
+    "mappings": {
+      "default": {
+        "default": "o med accent grave"
+      }
+    }
+  },
+  {
+    "key": "00F3",
+    "mappings": {
+      "default": {
+        "default": "o med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "00F4",
+    "mappings": {
+      "default": {
+        "default": "o med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00F5",
+    "mappings": {
+      "default": {
+        "default": "o med tilde"
+      }
+    }
+  },
+  {
+    "key": "00F6",
+    "mappings": {
+      "default": {
+        "default": "o med tréma"
+      }
+    }
+  },
+  {
+    "key": "00F9",
+    "mappings": {
+      "default": {
+        "default": "u med accent grave"
+      }
+    }
+  },
+  {
+    "key": "00FA",
+    "mappings": {
+      "default": {
+        "default": "u med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "00FB",
+    "mappings": {
+      "default": {
+        "default": "u med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00FC",
+    "mappings": {
+      "default": {
+        "default": "u med tréma"
+      }
+    }
+  },
+  {
+    "key": "00FD",
+    "mappings": {
+      "default": {
+        "default": "y med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "00FF",
+    "mappings": {
+      "default": {
+        "default": "y med tréma"
+      }
+    }
+  },
+  {
+    "key": "0101",
+    "mappings": {
+      "default": {
+        "default": "a med macron"
+      }
+    }
+  },
+  {
+    "key": "0103",
+    "mappings": {
+      "default": {
+        "default": "a med brevis"
+      }
+    }
+  },
+  {
+    "key": "0105",
+    "mappings": {
+      "default": {
+        "default": "a med ogonek"
+      }
+    }
+  },
+  {
+    "key": "0107",
+    "mappings": {
+      "default": {
+        "default": "c med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "0109",
+    "mappings": {
+      "default": {
+        "default": "c med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "010B",
+    "mappings": {
+      "default": {
+        "default": "c med prik over"
+      }
+    }
+  },
+  {
+    "key": "010D",
+    "mappings": {
+      "default": {
+        "default": "c med hacek"
+      }
+    }
+  },
+  {
+    "key": "010F",
+    "mappings": {
+      "default": {
+        "default": "d med hacek"
+      }
+    }
+  },
+  {
+    "key": "0113",
+    "mappings": {
+      "default": {
+        "default": "e med macron"
+      }
+    }
+  },
+  {
+    "key": "0115",
+    "mappings": {
+      "default": {
+        "default": "e med brevis"
+      }
+    }
+  },
+  {
+    "key": "0117",
+    "mappings": {
+      "default": {
+        "default": "e med prik over"
+      }
+    }
+  },
+  {
+    "key": "0119",
+    "mappings": {
+      "default": {
+        "default": "e med ogonek"
+      }
+    }
+  },
+  {
+    "key": "011B",
+    "mappings": {
+      "default": {
+        "default": "e med hacek"
+      }
+    }
+  },
+  {
+    "key": "011D",
+    "mappings": {
+      "default": {
+        "default": "g med hat"
+      }
+    }
+  },
+  {
+    "key": "011F",
+    "mappings": {
+      "default": {
+        "default": "g med breve"
+      }
+    }
+  },
+  {
+    "key": "0121",
+    "mappings": {
+      "default": {
+        "default": "g med prik over"
+      }
+    }
+  },
+  {
+    "key": "0123",
+    "mappings": {
+      "default": {
+        "default": "g med cedille"
+      }
+    }
+  },
+  {
+    "key": "0125",
+    "mappings": {
+      "default": {
+        "default": "h med hat"
+      }
+    }
+  },
+  {
+    "key": "0129",
+    "mappings": {
+      "default": {
+        "default": "i med tilde"
+      }
+    }
+  },
+  {
+    "key": "012B",
+    "mappings": {
+      "default": {
+        "default": "i med macron"
+      }
+    }
+  },
+  {
+    "key": "012D",
+    "mappings": {
+      "default": {
+        "default": "i med brevis"
+      }
+    }
+  },
+  {
+    "key": "012F",
+    "mappings": {
+      "default": {
+        "default": "i med ogonek"
+      }
+    }
+  },
+  {
+    "key": "0131",
+    "mappings": {
+      "default": {
+        "default": "i uden prik"
+      }
+    }
+  },
+  {
+    "key": "0135",
+    "mappings": {
+      "default": {
+        "default": "j med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "0137",
+    "mappings": {
+      "default": {
+        "default": "k med cedille"
+      }
+    }
+  },
+  {
+    "key": "013A",
+    "mappings": {
+      "default": {
+        "default": "l med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "013C",
+    "mappings": {
+      "default": {
+        "default": "l med cedille"
+      }
+    }
+  },
+  {
+    "key": "013E",
+    "mappings": {
+      "default": {
+        "default": "l med háček"
+      }
+    }
+  },
+  {
+    "key": "0140",
+    "mappings": {
+      "default": {
+        "default": "l med midterprik"
+      }
+    }
+  },
+  {
+    "key": "0144",
+    "mappings": {
+      "default": {
+        "default": "n med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "0146",
+    "mappings": {
+      "default": {
+        "default": "n med cedille"
+      }
+    }
+  },
+  {
+    "key": "0148",
+    "mappings": {
+      "default": {
+        "default": "n med hacek"
+      }
+    }
+  },
+  {
+    "key": "014D",
+    "mappings": {
+      "default": {
+        "default": "o med macron"
+      }
+    }
+  },
+  {
+    "key": "014F",
+    "mappings": {
+      "default": {
+        "default": "o med brevis"
+      }
+    }
+  },
+  {
+    "key": "0151",
+    "mappings": {
+      "default": {
+        "default": "o med dobbelt accent aigu"
+      }
+    }
+  },
+  {
+    "key": "0155",
+    "mappings": {
+      "default": {
+        "default": "r med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "0157",
+    "mappings": {
+      "default": {
+        "default": "r med cedille"
+      }
+    }
+  },
+  {
+    "key": "0159",
+    "mappings": {
+      "default": {
+        "default": "r med hacek"
+      }
+    }
+  },
+  {
+    "key": "015B",
+    "mappings": {
+      "default": {
+        "default": "s med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "015D",
+    "mappings": {
+      "default": {
+        "default": "s med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "015F",
+    "mappings": {
+      "default": {
+        "default": "s med cedille"
+      }
+    }
+  },
+  {
+    "key": "0161",
+    "mappings": {
+      "default": {
+        "default": "s med hacek"
+      }
+    }
+  },
+  {
+    "key": "0163",
+    "mappings": {
+      "default": {
+        "default": "t med cedille"
+      }
+    }
+  },
+  {
+    "key": "0165",
+    "mappings": {
+      "default": {
+        "default": "t med háček"
+      }
+    }
+  },
+  {
+    "key": "0169",
+    "mappings": {
+      "default": {
+        "default": "u med tilde"
+      }
+    }
+  },
+  {
+    "key": "016B",
+    "mappings": {
+      "default": {
+        "default": "u med macron"
+      }
+    }
+  },
+  {
+    "key": "016D",
+    "mappings": {
+      "default": {
+        "default": "u med brevis"
+      }
+    }
+  },
+  {
+    "key": "016F",
+    "mappings": {
+      "default": {
+        "default": "u med bolle ovenover"
+      }
+    }
+  },
+  {
+    "key": "0171",
+    "mappings": {
+      "default": {
+        "default": "u med dobbelt accent aigu"
+      }
+    }
+  },
+  {
+    "key": "0173",
+    "mappings": {
+      "default": {
+        "default": "u med ogonek"
+      }
+    }
+  },
+  {
+    "key": "0175",
+    "mappings": {
+      "default": {
+        "default": "w med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "0177",
+    "mappings": {
+      "default": {
+        "default": "y med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "017A",
+    "mappings": {
+      "default": {
+        "default": "z med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "017C",
+    "mappings": {
+      "default": {
+        "default": "z med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "017E",
+    "mappings": {
+      "default": {
+        "default": "z med háček"
+      }
+    }
+  },
+  {
+    "key": "01CE",
+    "mappings": {
+      "default": {
+        "default": "a med háček"
+      }
+    }
+  },
+  {
+    "key": "01D0",
+    "mappings": {
+      "default": {
+        "default": "i med háček"
+      }
+    }
+  },
+  {
+    "key": "01D2",
+    "mappings": {
+      "default": {
+        "default": "o med háček"
+      }
+    }
+  },
+  {
+    "key": "01D4",
+    "mappings": {
+      "default": {
+        "default": "u med háček"
+      }
+    }
+  },
+  {
+    "key": "01E7",
+    "mappings": {
+      "default": {
+        "default": "g med háček"
+      }
+    }
+  },
+  {
+    "key": "01E9",
+    "mappings": {
+      "default": {
+        "default": "k med háček"
+      }
+    }
+  },
+  {
+    "key": "01EB",
+    "mappings": {
+      "default": {
+        "default": "o med ogonek"
+      }
+    }
+  },
+  {
+    "key": "01F0",
+    "mappings": {
+      "default": {
+        "default": "j med háček"
+      }
+    }
+  },
+  {
+    "key": "01F5",
+    "mappings": {
+      "default": {
+        "default": "g med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "01F9",
+    "mappings": {
+      "default": {
+        "default": "n med accent grave"
+      }
+    }
+  },
+  {
+    "key": "0201",
+    "mappings": {
+      "default": {
+        "default": "a med dobbelt accent grave"
+      }
+    }
+  },
+  {
+    "key": "0203",
+    "mappings": {
+      "default": {
+        "default": "a med omvendt brevis"
+      }
+    }
+  },
+  {
+    "key": "0205",
+    "mappings": {
+      "default": {
+        "default": "e med dobbelt accent grave"
+      }
+    }
+  },
+  {
+    "key": "0207",
+    "mappings": {
+      "default": {
+        "default": "e med omvendt brevis"
+      }
+    }
+  },
+  {
+    "key": "0209",
+    "mappings": {
+      "default": {
+        "default": "i med dobbelt accent grave"
+      }
+    }
+  },
+  {
+    "key": "020B",
+    "mappings": {
+      "default": {
+        "default": "i med omvendt brevis"
+      }
+    }
+  },
+  {
+    "key": "020D",
+    "mappings": {
+      "default": {
+        "default": "o med dobbelt accent grave"
+      }
+    }
+  },
+  {
+    "key": "020F",
+    "mappings": {
+      "default": {
+        "default": "o med omvendt brevis"
+      }
+    }
+  },
+  {
+    "key": "0211",
+    "mappings": {
+      "default": {
+        "default": "r med dobbelt accent grave"
+      }
+    }
+  },
+  {
+    "key": "0213",
+    "mappings": {
+      "default": {
+        "default": "r med omvendt brevis"
+      }
+    }
+  },
+  {
+    "key": "0215",
+    "mappings": {
+      "default": {
+        "default": "u med dobbelt accent grave"
+      }
+    }
+  },
+  {
+    "key": "0217",
+    "mappings": {
+      "default": {
+        "default": "u med omvendt brevis"
+      }
+    }
+  },
+  {
+    "key": "0219",
+    "mappings": {
+      "default": {
+        "default": "s med komma nedenunder"
+      }
+    }
+  },
+  {
+    "key": "021B",
+    "mappings": {
+      "default": {
+        "default": "t med komma nedenunder"
+      }
+    }
+  },
+  {
+    "key": "021F",
+    "mappings": {
+      "default": {
+        "default": "h med háček"
+      }
+    }
+  },
+  {
+    "key": "0227",
+    "mappings": {
+      "default": {
+        "default": "a med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "0229",
+    "mappings": {
+      "default": {
+        "default": "e med cedille"
+      }
+    }
+  },
+  {
+    "key": "022F",
+    "mappings": {
+      "default": {
+        "default": "o med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "0233",
+    "mappings": {
+      "default": {
+        "default": "y med macron"
+      }
+    }
+  },
+  {
+    "key": "0237",
+    "mappings": {
+      "default": {
+        "default": "prikløst j"
+      }
+    }
+  },
+  {
+    "key": "1E01",
+    "mappings": {
+      "default": {
+        "default": "a med bolle nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E03",
+    "mappings": {
+      "default": {
+        "default": "b med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E05",
+    "mappings": {
+      "default": {
+        "default": "b med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E07",
+    "mappings": {
+      "default": {
+        "default": "b med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E0B",
+    "mappings": {
+      "default": {
+        "default": "d med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E0D",
+    "mappings": {
+      "default": {
+        "default": "d med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E0F",
+    "mappings": {
+      "default": {
+        "default": "d med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E11",
+    "mappings": {
+      "default": {
+        "default": "d med cedille"
+      }
+    }
+  },
+  {
+    "key": "1E13",
+    "mappings": {
+      "default": {
+        "default": "d med cirkumfleks nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E19",
+    "mappings": {
+      "default": {
+        "default": "e med cirkumfleks nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E1B",
+    "mappings": {
+      "default": {
+        "default": "e med tilde nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E1F",
+    "mappings": {
+      "default": {
+        "default": "f med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E21",
+    "mappings": {
+      "default": {
+        "default": "g med macron"
+      }
+    }
+  },
+  {
+    "key": "1E23",
+    "mappings": {
+      "default": {
+        "default": "h med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E25",
+    "mappings": {
+      "default": {
+        "default": "h med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E27",
+    "mappings": {
+      "default": {
+        "default": "h med tréma"
+      }
+    }
+  },
+  {
+    "key": "1E29",
+    "mappings": {
+      "default": {
+        "default": "h med cedille"
+      }
+    }
+  },
+  {
+    "key": "1E2B",
+    "mappings": {
+      "default": {
+        "default": "h med brevis nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E2D",
+    "mappings": {
+      "default": {
+        "default": "i med tilde nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E31",
+    "mappings": {
+      "default": {
+        "default": "k med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "1E33",
+    "mappings": {
+      "default": {
+        "default": "k med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E35",
+    "mappings": {
+      "default": {
+        "default": "k med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E37",
+    "mappings": {
+      "default": {
+        "default": "l med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E3B",
+    "mappings": {
+      "default": {
+        "default": "l med linie under"
+      }
+    }
+  },
+  {
+    "key": "1E3D",
+    "mappings": {
+      "default": {
+        "default": "l med hat under"
+      }
+    }
+  },
+  {
+    "key": "1E3F",
+    "mappings": {
+      "default": {
+        "default": "m med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "1E41",
+    "mappings": {
+      "default": {
+        "default": "m med prik over"
+      }
+    }
+  },
+  {
+    "key": "1E43",
+    "mappings": {
+      "default": {
+        "default": "m med prik under"
+      }
+    }
+  },
+  {
+    "key": "1E45",
+    "mappings": {
+      "default": {
+        "default": "n med prik over"
+      }
+    }
+  },
+  {
+    "key": "1E47",
+    "mappings": {
+      "default": {
+        "default": "n med prik under"
+      }
+    }
+  },
+  {
+    "key": "1E49",
+    "mappings": {
+      "default": {
+        "default": "n med linie under"
+      }
+    }
+  },
+  {
+    "key": "1E4B",
+    "mappings": {
+      "default": {
+        "default": "n med hat under"
+      }
+    }
+  },
+  {
+    "key": "1E55",
+    "mappings": {
+      "default": {
+        "default": "p med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "1E57",
+    "mappings": {
+      "default": {
+        "default": "p med prik over"
+      }
+    }
+  },
+  {
+    "key": "1E59",
+    "mappings": {
+      "default": {
+        "default": "r med prik over"
+      }
+    }
+  },
+  {
+    "key": "1E5B",
+    "mappings": {
+      "default": {
+        "default": "r med prik under"
+      }
+    }
+  },
+  {
+    "key": "1E5F",
+    "mappings": {
+      "default": {
+        "default": "r med linie under"
+      }
+    }
+  },
+  {
+    "key": "1E61",
+    "mappings": {
+      "default": {
+        "default": "s med prik over"
+      }
+    }
+  },
+  {
+    "key": "1E63",
+    "mappings": {
+      "default": {
+        "default": "s med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E6B",
+    "mappings": {
+      "default": {
+        "default": "t med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E6D",
+    "mappings": {
+      "default": {
+        "default": "t med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E6F",
+    "mappings": {
+      "default": {
+        "default": "t med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E71",
+    "mappings": {
+      "default": {
+        "default": "t med cirkumfleks nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E73",
+    "mappings": {
+      "default": {
+        "default": "u med to prikker nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E75",
+    "mappings": {
+      "default": {
+        "default": "u med tilde nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E77",
+    "mappings": {
+      "default": {
+        "default": "u med cirkumfleks nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E7D",
+    "mappings": {
+      "default": {
+        "default": "v med tilde"
+      }
+    }
+  },
+  {
+    "key": "1E7F",
+    "mappings": {
+      "default": {
+        "default": "v med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E81",
+    "mappings": {
+      "default": {
+        "default": "w med accent grave"
+      }
+    }
+  },
+  {
+    "key": "1E83",
+    "mappings": {
+      "default": {
+        "default": "w med accent aigu"
+      }
+    }
+  },
+  {
+    "key": "1E85",
+    "mappings": {
+      "default": {
+        "default": "w med tréma"
+      }
+    }
+  },
+  {
+    "key": "1E87",
+    "mappings": {
+      "default": {
+        "default": "w med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E89",
+    "mappings": {
+      "default": {
+        "default": "w med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E8B",
+    "mappings": {
+      "default": {
+        "default": "x med prik ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E8D",
+    "mappings": {
+      "default": {
+        "default": "x med tréma"
+      }
+    }
+  },
+  {
+    "key": "1E8F",
+    "mappings": {
+      "default": {
+        "default": "y med tréma"
+      }
+    }
+  },
+  {
+    "key": "1E91",
+    "mappings": {
+      "default": {
+        "default": "z med cirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "1E93",
+    "mappings": {
+      "default": {
+        "default": "z med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E95",
+    "mappings": {
+      "default": {
+        "default": "z med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E96",
+    "mappings": {
+      "default": {
+        "default": "h med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1E97",
+    "mappings": {
+      "default": {
+        "default": "t med tréma"
+      }
+    }
+  },
+  {
+    "key": "1E98",
+    "mappings": {
+      "default": {
+        "default": "w med bolle ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E99",
+    "mappings": {
+      "default": {
+        "default": "y med bolle ovenover"
+      }
+    }
+  },
+  {
+    "key": "1E9A",
+    "mappings": {
+      "default": {
+        "default": "a med højre halvdel af en ring"
+      }
+    }
+  },
+  {
+    "key": "1EA1",
+    "mappings": {
+      "default": {
+        "default": "a med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1EA3",
+    "mappings": {
+      "default": {
+        "default": "a med krog ovenover"
+      }
+    }
+  },
+  {
+    "key": "1EB9",
+    "mappings": {
+      "default": {
+        "default": "e med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1EBB",
+    "mappings": {
+      "default": {
+        "default": "e med krog ovenover"
+      }
+    }
+  },
+  {
+    "key": "1EBD",
+    "mappings": {
+      "default": {
+        "default": "e med tilde"
+      }
+    }
+  },
+  {
+    "key": "1EC9",
+    "mappings": {
+      "default": {
+        "default": "i med krog ovenover"
+      }
+    }
+  },
+  {
+    "key": "1ECB",
+    "mappings": {
+      "default": {
+        "default": "i med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1ECD",
+    "mappings": {
+      "default": {
+        "default": "o med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1ECF",
+    "mappings": {
+      "default": {
+        "default": "o med krog ovenover"
+      }
+    }
+  },
+  {
+    "key": "1EE5",
+    "mappings": {
+      "default": {
+        "default": "u med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1EE7",
+    "mappings": {
+      "default": {
+        "default": "u med krog ovenover"
+      }
+    }
+  },
+  {
+    "key": "1EF3",
+    "mappings": {
+      "default": {
+        "default": "y med accent grave"
+      }
+    }
+  },
+  {
+    "key": "1EF5",
+    "mappings": {
+      "default": {
+        "default": "y med prik nedenunder"
+      }
+    }
+  },
+  {
+    "key": "1EF7",
+    "mappings": {
+      "default": {
+        "default": "y med krog ovenover"
+      }
+    }
+  },
+  {
+    "key": "1EF9",
+    "mappings": {
+      "default": {
+        "default": "y med tilde"
+      }
+    }
+  }
+]

@@ -18,59 +18,48 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as SemanticAttr from './semantic_attr';
-import { SemanticFont, SemanticMeaning } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { reduce } from './semantic_ordering';
+import * as SemanticAttr from './semantic_attr.js';
+import { SemanticFont, SemanticMeaning } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { reduce } from './semantic_ordering.js';
 
-// TODO: Combine default and collator with a common superclass mapping.
-export class SemanticDefault {
-  /**
-   * Mapping for default meaning.
-   */
-  public map: { [key: string]: SemanticMeaning } = {};
+/**
+ * Generates the key from symbol and font.
+ *
+ * @param symbol The symbol or text content of a node.
+ * @param font The name of its font if it exists.
+ * @returns A uniform key for the default mapping.
+ */
+function key(symbol: string, font: SemanticFont): string {
+  return symbol.match(/^.+:.+$/) || !font ? symbol : symbol + ':' + font;
+}
 
+/**
+ * Map to collect meaning of elements occurring in the current expression.
+ */
+export class SemanticDefault extends Map<string, SemanticMeaning> {
   /**
-   * Generates the key from symbol and font.
-   *
-   * @param symbol The symbol or text content of a node.
-   * @param font The name of its font if it exists.
-   * @returns A uniform key for the default mapping.
+   * @override
    */
-  public static key(symbol: string, font: SemanticFont): string {
-    return font ? symbol + ':' + font : symbol;
+  public set(symbol: string, meaning: SemanticMeaning) {
+    super.set(key(symbol, meaning.font), meaning);
+    return this;
   }
 
   /**
-   * Adds a semantic meaning to the structure. It will overwrite existing
-   * content.
-   *
-   * @param symbol A symbol.
-   * @param meaning It's semantic meaning.
-   */
-  public add(symbol: string, meaning: SemanticMeaning) {
-    this.map[SemanticDefault.key(symbol, meaning.font)] = meaning;
-  }
-
-  /**
-   * Adds a semantic node to the default structure.
+   * Adds a semantic node to the semantic default map.
    *
    * @param node A semantic node.
    */
-  public addNode(node: SemanticNode) {
-    this.add(node.textContent, node.meaning());
+  public setNode(node: SemanticNode) {
+    this.set(node.textContent, node.meaning());
   }
 
   /**
-   * Retrieves a semantic meaning for a symbol and its font.
-   *
-   * @param symbol A symbol.
-   * @param font The font of the symbol.
-   * @returns The semantic meaning of the symbol if it is in
-   *     the structure.
+   * @override
    */
-  public retrieve(symbol: string, font: SemanticFont): SemanticMeaning {
-    return this.map[SemanticDefault.key(symbol, font)];
+  public get(symbol: string, font: SemanticFont = null): SemanticMeaning {
+    return super.get(key(symbol, font));
   }
 
   /**
@@ -80,29 +69,12 @@ export class SemanticDefault {
    * @returns The semantic meaning of the symbol if it is in
    *     the structure.
    */
-  public retrieveNode(node: SemanticNode): SemanticMeaning {
-    return this.retrieve(node.textContent, node.font);
-  }
-
-  /**
-   * @returns Size of the default mapping.
-   */
-  public size(): number {
-    return Object.keys(this.map).length;
+  public getNode(node: SemanticNode): SemanticMeaning {
+    return this.get(node.textContent, node.font);
   }
 }
 
-abstract class SemanticCollator<T> {
-  /**
-   * Mapping to collate meaning.
-   */
-  public map: { [key: string]: T[] } = {};
-
-  /**
-   * @returns An empty copy of the collator.
-   */
-  public abstract copyCollator(): SemanticCollator<T>;
-
+abstract class SemanticCollator<T> extends Map<string, T[]> {
   /**
    * Adds a semantic node to the structure by appending it to the already
    * existing one for a particular symbol.
@@ -111,11 +83,11 @@ abstract class SemanticCollator<T> {
    * @param entry A semantic entry.
    */
   public add(symbol: string, entry: T) {
-    const list = this.map[symbol];
+    const list = this.get(symbol);
     if (list) {
       list.push(entry);
     } else {
-      this.map[symbol] = [entry];
+      super.set(symbol, [entry]);
     }
   }
 
@@ -133,8 +105,8 @@ abstract class SemanticCollator<T> {
    * @param font The font of the symbol.
    * @returns A list of semantic nodes.
    */
-  public retrieve(symbol: string, font: SemanticFont): T[] {
-    return this.map[SemanticDefault.key(symbol, font)];
+  public get(symbol: string, font: SemanticFont = null): T[] {
+    return super.get(key(symbol, font));
   }
 
   /**
@@ -144,66 +116,31 @@ abstract class SemanticCollator<T> {
    * @returns The semantic meaning of the symbol if it is in
    *     the structure.
    */
-  public retrieveNode(node: SemanticNode): T[] {
-    return this.retrieve(node.textContent, node.font);
-  }
-
-  /**
-   * @returns A copy of the collator. Note, this is NOT a
-   *     deep copy!
-   */
-  public copy(): SemanticCollator<T> {
-    const collator = this.copyCollator();
-    for (const key in this.map) {
-      collator.map[key] = this.map[key];
-    }
-    return collator;
+  public getNode(node: SemanticNode): T[] {
+    return this.get(node.textContent, node.font);
   }
 
   /**
    * Minimizes a semantic collator, removing every non-ambiguous entry.
    */
   public minimize() {
-    for (const key in this.map) {
-      if (this.map[key].length === 1) {
-        delete this.map[key];
+    for (const [key, entry] of this) {
+      if (entry.length === 1) {
+        this.delete(key);
       }
     }
-  }
-
-  /**
-   * Minimizes a semantic collator, removing every non-ambiguous entry.
-   * As opposed to minimize this is non-destructive.
-   *
-   * @returns The new collator.
-   */
-  public minimalCollator(): SemanticCollator<T> {
-    const collator = this.copy();
-    for (const key in collator.map) {
-      if (collator.map[key].length === 1) {
-        delete collator.map[key];
-      }
-    }
-    return collator;
   }
 
   /**
    * @returns True if the collator is multi-valued.
    */
   public isMultiValued(): boolean {
-    for (const key in this.map) {
-      if (this.map[key].length > 1) {
+    for (const value of this.values()) {
+      if (value.length > 1) {
         return true;
       }
     }
     return false;
-  }
-
-  /**
-   * @returns True if the collator is empty.
-   */
-  public isEmpty(): boolean {
-    return !Object.keys(this.map).length;
   }
 }
 
@@ -211,17 +148,8 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
   /**
    * @override
    */
-  public copyCollator() {
-    return new SemanticNodeCollator();
-  }
-
-  /**
-   * @override
-   */
   public add(symbol: string, entry: SemanticNode) {
-    /// TODO:  Handle the font better?
-    const key = SemanticDefault.key(symbol, entry.font);
-    super.add(key, entry);
+    super.add(key(symbol, entry.font), entry);
   }
 
   /**
@@ -236,14 +164,10 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
    */
   public toString() {
     const outer = [];
-    for (const key in this.map) {
+    for (const [key, nodes] of this) {
       const length = Array(key.length + 3).join(' ');
-      const nodes = this.map[key];
-      const inner = [];
-      for (let i = 0, node; (node = nodes[i]); i++) {
-        inner.push(node.toString());
-      }
-      outer.push(key + ': ' + inner.join('\n' + length));
+      const inner = nodes.map((node) => node.toString()).join('\n' + length);
+      outer.push(key + ': ' + inner);
     }
     return outer.join('\n');
   }
@@ -253,10 +177,11 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
    */
   public collateMeaning(): SemanticMeaningCollator {
     const collator = new SemanticMeaningCollator();
-    for (const key in this.map) {
-      collator.map[key] = this.map[key].map(function (node) {
-        return node.meaning();
-      });
+    for (const [key, val] of this) {
+      collator.set(
+        key,
+        val.map((node) => node.meaning())
+      );
     }
     return collator;
   }
@@ -266,23 +191,15 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
   /**
    * @override
    */
-  public copyCollator() {
-    return new SemanticMeaningCollator();
-  }
-
-  /**
-   * @override
-   */
   public add(symbol: string, entry: SemanticMeaning) {
-    const list = this.retrieve(symbol, entry.font);
+    const list = this.get(symbol, entry.font);
     if (
       !list ||
       !list.find(function (x) {
         return SemanticAttr.equal(x, entry);
       })
     ) {
-      const key = SemanticDefault.key(symbol, entry.font);
-      super.add(key, entry);
+      super.add(key(symbol, entry.font), entry);
     }
   }
 
@@ -298,22 +215,15 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
    */
   public toString() {
     const outer = [];
-    for (const key in this.map) {
+    for (const [key, nodes] of this) {
       const length = Array(key.length + 3).join(' ');
-      const nodes = this.map[key];
-      const inner = [];
-      for (let i = 0, node; (node = nodes[i]); i++) {
-        inner.push(
-          '{type: ' +
-            node.type +
-            ', role: ' +
-            node.role +
-            ', font: ' +
-            node.font +
-            '}'
-        );
-      }
-      outer.push(key + ': ' + inner.join('\n' + length));
+      const inner = nodes
+        .map(
+          (node) =>
+            `{type: ${node.type}, role: ${node.role}, font: ${node.font}}`
+        )
+        .join('\n' + length);
+      outer.push(key + ': ' + inner);
     }
     return outer.join('\n');
   }
@@ -322,9 +232,9 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
    * Reduces a semantic collator to one meaning per entry.
    */
   public reduce() {
-    for (const key in this.map) {
-      if (this.map[key].length !== 1) {
-        this.map[key] = reduce(this.map[key]);
+    for (const [key, val] of this) {
+      if (val.length !== 1) {
+        this.set(key, reduce(val));
       }
     }
   }
@@ -336,9 +246,9 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
    */
   public default(): SemanticDefault {
     const def = new SemanticDefault();
-    for (const key in this.map) {
-      if (this.map[key].length === 1) {
-        def.map[key] = this.map[key][0];
+    for (const [key, val] of this) {
+      if (val.length === 1) {
+        def.set(key, val[0]);
       }
     }
     return def;
@@ -355,6 +265,6 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
     const oldDefault = this.default();
     this.reduce();
     const newDefault = this.default();
-    return oldDefault.size() !== newDefault.size() ? newDefault : null;
+    return oldDefault.size !== newDefault.size ? newDefault : null;
   }
 }

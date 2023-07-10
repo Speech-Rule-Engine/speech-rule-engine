@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Compile SRE with locales
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup Speech Rule Engine
         run: npm ci
       - name: Upload build
@@ -25,17 +25,17 @@ jobs:
                 lib
                 js
                 package.json
-          
+
   test:
 
     strategy:
       matrix:
-        block: [base, walker, semantic, en, ca, de, fr, es, it, hi, ko, nb, nn, nemeth, sv]
+        block: [base, walker, semantic, en, en-ssml, ca, de, da, fr, es, it, hi, nb, nn, nemeth, sv]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Downloading the build
         uses: actions/download-artifact@v2
         with:
@@ -47,4 +47,42 @@ jobs:
           npm ci --ignore-scripts
           cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
       - name: Run tests for ${{ matrix.block }}
-        run: npm run actionTest js/json/${{ matrix.block }}
+        run: npm run actionTest js/actions/${{ matrix.block }}.test.js
+
+  deploy:
+    needs: setup
+    runs-on: ubuntu-latest
+    name: deploy dev version
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: deploy
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Moving old files
+        run: |
+          mv lib lib-old
+      - name: Downloading the build
+        uses: actions/download-artifact@v2
+        with:
+          name: sre-library
+      - name: Get Time
+        id: time
+        uses: nanzm/get-time-action@v1.1
+        with:
+          timeZone: 8
+          format: 'YYYY-MM-DD-HH-mm-ss'
+      - name: Commit Deploy
+        env:
+          TIME: "${{ steps.time.outputs.time }}"
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add lib/sre.js lib/mathmaps/*
+          git commit --allow-empty -m 'Deployment at $TIME' -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: deploy
+

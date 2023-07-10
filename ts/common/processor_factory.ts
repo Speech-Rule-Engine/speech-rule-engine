@@ -18,21 +18,21 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as AuralRendering from '../audio/aural_rendering';
-import * as Enrich from '../enrich_mathml/enrich';
-import * as HighlighterFactory from '../highlighter/highlighter_factory';
-import { LOCALE } from '../l10n/locale';
-import * as Semantic from '../semantic_tree/semantic';
-import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
-import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
-import * as WalkerFactory from '../walker/walker_factory';
-import * as WalkerUtil from '../walker/walker_util';
-import * as DomUtil from './dom_util';
-import Engine, { SREError } from './engine';
-import * as EngineConst from '../common/engine_const';
-import { KeyCode } from './event_util';
-import { Processor, KeyProcessor } from './processor';
-import * as XpathUtil from './xpath_util';
+import * as AuralRendering from '../audio/aural_rendering.js';
+import * as Enrich from '../enrich_mathml/enrich.js';
+import * as HighlighterFactory from '../highlighter/highlighter_factory.js';
+import { LOCALE } from '../l10n/locale.js';
+import * as Semantic from '../semantic_tree/semantic.js';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import * as WalkerFactory from '../walker/walker_factory.js';
+import * as WalkerUtil from '../walker/walker_util.js';
+import * as DomUtil from './dom_util.js';
+import Engine, { SREError } from './engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { KeyCode } from './event_util.js';
+import { Processor, KeyProcessor } from './processor.js';
+import * as XpathUtil from './xpath_util.js';
 
 const PROCESSORS = new Map();
 
@@ -41,7 +41,7 @@ const PROCESSORS = new Map();
  *
  * @param processor The processor object.
  */
-export function set<T>(processor: Processor<T>) {
+function set<T>(processor: Processor<T>) {
   PROCESSORS.set(processor.name, processor);
 }
 
@@ -51,7 +51,7 @@ export function set<T>(processor: Processor<T>) {
  * @param name The name of the processor.
  * @returns The processor.
  */
-function get_<T>(name: string): Processor<T> {
+function get<T>(name: string): Processor<T> {
   const processor = PROCESSORS.get(name);
   if (!processor) {
     throw new SREError('Unknown processor ' + name);
@@ -67,7 +67,7 @@ function get_<T>(name: string): Processor<T> {
  * @returns The data structure resulting from the processing the expression.
  */
 export function process<T>(name: string, expr: string): T {
-  const processor = get_(name);
+  const processor = get(name);
   try {
     return processor.processor(expr) as T;
   } catch (_e) {
@@ -82,8 +82,8 @@ export function process<T>(name: string, expr: string): T {
  * @param data The data structure that's the result of this processor.
  * @returns A string representation of the result.
  */
-export function print<T>(name: string, data: T): string {
-  const processor = get_(name);
+function print<T>(name: string, data: T): string {
+  const processor = get(name);
   return Engine.getInstance().pprint
     ? processor.pprint(data)
     : processor.print(data);
@@ -97,13 +97,14 @@ export function print<T>(name: string, data: T): string {
  * @returns A string representation of the result.
  */
 export function output(name: string, expr: string): string {
-  const processor = get_(name);
+  const processor = get(name);
   try {
     const data = processor.processor(expr);
     return Engine.getInstance().pprint
       ? processor.pprint(data)
       : processor.print(data);
   } catch (_e) {
+    console.log(_e);
     throw new SREError('Processing error for expression ' + expr);
   }
 }
@@ -116,7 +117,7 @@ export function output(name: string, expr: string): string {
  * @returns A string representation of the result.
  */
 export function keypress(name: string, expr: KeyCode | string): string {
-  const processor = get_(name);
+  const processor = get(name);
   const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
   const data = processor.processor(key as string);
   return Engine.getInstance().pprint
@@ -138,7 +139,7 @@ set(
       }
       // This avoids temporary attributes (e.g., for grammar) to bleed into
       // the tree.
-      const clone = xml.cloneNode(true) as Element;
+      const clone = DomUtil.cloneNode(xml);
       let speech = SpeechGeneratorUtil.computeMarkup(clone);
       if (setting === EngineConst.Speech.SHALLOW) {
         xml.setAttribute('speech', AuralRendering.finalize(speech));
@@ -258,7 +259,7 @@ set(
           break;
         case EngineConst.Speech.DEEP:
           generator = SpeechGeneratorFactory.generator('Tree');
-          generator.getSpeech(root, enr);
+          generator.getSpeech(enr, enr);
           break;
         default:
           break;
@@ -353,6 +354,24 @@ set(
       return isNaN(en) || isNaN(den)
         ? ''
         : process('speech', `<mfrac><mn>${en}</mn><mn>${den}</mn></mfrac>`);
+    }
+  })
+);
+
+set(
+  new Processor('latex', {
+    processor: function (ltx: string) {
+      if (
+        Engine.getInstance().modality !== 'braille' ||
+        Engine.getInstance().locale !== 'euro'
+      ) {
+        console.info(
+          'LaTeX input currently only works for Euro Braille output.' +
+            ' Please use the latex-to-speech package from npm for general' +
+            ' LaTeX input to SRE.'
+        );
+      }
+      return process('speech', `<math latex="${ltx}"></math>`);
     }
   })
 );

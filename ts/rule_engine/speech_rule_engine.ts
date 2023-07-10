@@ -29,26 +29,26 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { Span } from '../audio/span';
-import { Debugger } from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import { xpath, evalXPath } from '../common/xpath_util';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import * as SpeechRules from '../speech_rules/speech_rules';
-import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
-import { BaseRuleStore } from './base_rule_store';
-import { RulesJson } from './base_rule_store';
-import { BrailleStore } from './braille_store';
-import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr';
-import { Grammar, State as GrammarState } from './grammar';
-import { MathStore } from './math_store';
-import { ActionType, SpeechRule } from './speech_rule';
-import { SpeechRuleContext } from './speech_rule_context';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { Span } from '../audio/span.js';
+import { Debugger } from '../common/debugger.js';
+import * as DomUtil from '../common/dom_util.js';
+import Engine from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import * as SpeechRules from '../speech_rules/speech_rules.js';
+import * as SpeechRuleStores from '../speech_rules/speech_rule_stores.js';
+import { BaseRuleStore } from './base_rule_store.js';
+import { RulesJson } from './base_rule_store.js';
+import { BrailleStore, EuroStore } from './braille_store.js';
+import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr.js';
+import { Grammar, State as GrammarState } from './grammar.js';
+import { MathStore } from './math_store.js';
+import { ActionType, SpeechRule } from './speech_rule.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
-import { Trie } from '../indexing/trie';
+import { Trie } from '../indexing/trie.js';
 
 export class SpeechRuleEngine {
   // TODO (TS): Keeping this as a singleton for the time being.
@@ -118,23 +118,6 @@ export class SpeechRuleEngine {
     }
   }
 
-  /**
-   * Updates the evaluator method for the document of the given node. This is
-   * particular important for XML documents in Firefox that generates a novel
-   * object (plus evaluate method) for every document.
-   *
-   * @param node The target node that is to be evaluated.
-   */
-  private static updateEvaluator(node: Element) {
-    let parent = node as any as Document;
-    while (parent && !parent.evaluate) {
-      parent = parent.parentNode as Document;
-    }
-    if (parent.evaluate) {
-      xpath.currentDocument = parent;
-    }
-  }
-
   // Dispatch functionality.
   // The timing function is temporary until the MOSS deliverable is done.
   /**
@@ -146,9 +129,7 @@ export class SpeechRuleEngine {
    *   for that node.
    */
   public evaluateNode(node: Element): AuditoryDescription[] {
-    if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
-      SpeechRuleEngine.updateEvaluator(node);
-    }
+    updateEvaluator(node);
     const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
     try {
@@ -190,14 +171,14 @@ export class SpeechRuleEngine {
   ): AuditoryDescription[] {
     const engine = Engine.getInstance() as any;
     const save: { [feature: string]: string | boolean } = {};
-    for (const key in settings) {
+    for (const [key, val] of Object.entries(settings)) {
       save[key] = engine[key];
-      engine[key] = settings[key];
+      engine[key] = val;
     }
     engine.setDynamicCstr();
     const result = callback();
-    for (const key in save) {
-      engine[key] = save[key];
+    for (const [key, val] of Object.entries(save)) {
+      engine[key] = val;
     }
     engine.setDynamicCstr();
     return result;
@@ -209,14 +190,16 @@ export class SpeechRuleEngine {
    *
    * @param set The definition of a speech rule set.
    */
-  public addStore(set: RulesJson) {
+  public static addStore(set: RulesJson) {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
     const store = storeFactory(set);
     if (store.kind !== 'abstract') {
-      store.getSpeechRules().forEach((x) => this.trie.addRule(x));
+      store
+        .getSpeechRules()
+        .forEach((x) => SpeechRuleEngine.getInstance().trie.addRule(x));
     }
-    this.addEvaluator(store);
+    SpeechRuleEngine.getInstance().addEvaluator(store);
   }
 
   /**
@@ -233,13 +216,9 @@ export class SpeechRuleEngine {
     grammar: GrammarState
   ) {
     const assignment: GrammarState = {};
-    for (const key in grammar) {
-      const value = grammar[key];
+    for (const [key, val] of Object.entries(grammar)) {
       assignment[key] =
-        typeof value === 'string'
-          ? // TODO (TS): This could be a span!
-            (context.constructString(node, value) as string)
-          : value;
+        typeof val === 'string' ? context.constructString(node, val) : val;
     }
     Grammar.getInstance().pushState(assignment);
   }
@@ -349,6 +328,7 @@ export class SpeechRuleEngine {
       rule.dynamicCstr.toString(),
       (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
     ]);
+    Grammar.getInstance().processSingles();
     const context = rule.context;
     const components = rule.action.components;
     result = [];
@@ -385,53 +365,35 @@ export class SpeechRuleEngine {
                 context,
                 selects,
                 attributes['sepFunc'],
-                // TODO (span): Sort out those types better.
-                context.constructString(
-                  node,
-                  attributes['separator']
-                ) as string,
+                context.constructString(node, attributes['separator']),
                 attributes['ctxtFunc'],
-                context.constructString(node, attributes['context']) as string
+                context.constructString(node, attributes['context'])
               );
             }
           }
           break;
         case ActionType.TEXT:
           {
-            // TODO (span): We need the span concept here as a parameter with
-            // xpath.
             const xpath = attributes['span'];
-            const attrs: { [key: string]: string } = {};
+            let attrs: { [key: string]: string } = {};
+            // Span Custom: Here we compute a customized node for then span.
             if (xpath) {
               const nodes = evalXPath(xpath, node);
               // TODO: Those could be multiple nodes!
               //       We need the right xpath expression and combine their
               //       attributes.
-              // Generalise the following:
-              if (nodes.length) {
-                attrs.extid = (nodes[0] as Element).getAttribute('extid');
-              }
+              //       Generalise the following via kind?
+              attrs = nodes.length
+                ? Span.getAttributes(nodes[0] as Element)
+                : { kind: xpath };
             }
-            const str = context.constructString(node, content) as
-              | string
-              | Span[];
-            if (str) {
-              if (Array.isArray(str)) {
-                descrs = str.map(function (span) {
-                  return AuditoryDescription.create(
-                    { text: span.speech, attributes: span.attributes },
-                    { adjust: true }
-                  );
-                });
-              } else {
-                descrs = [
-                  AuditoryDescription.create(
-                    { text: str, attributes: attrs },
-                    { adjust: true }
-                  )
-                ];
-              }
-            }
+            const str = context.constructSpan(node, content, attrs);
+            descrs = str.map(function (span: Span) {
+              return AuditoryDescription.create(
+                { text: span.speech, attributes: span.attributes },
+                { adjust: true }
+              );
+            });
           }
           break;
         case ActionType.PERSONALITY:
@@ -461,6 +423,7 @@ export class SpeechRuleEngine {
         Engine.getInstance().setDynamicCstr(saveEngine);
       }
     }
+    Grammar.getInstance().popState();
     return result;
   }
 
@@ -629,6 +592,10 @@ export class SpeechRuleEngine {
    * @param node The XML node.
    */
   private addExternalAttributes_(descr: AuditoryDescription, node: Element) {
+    // Span Default:  Here we add the default node id for later marking.
+    if (descr.attributes['id'] === undefined) {
+      descr.attributes['id'] = node.getAttribute('id');
+    }
     if (node.hasAttributes()) {
       const attrs = node.attributes;
       for (let i = attrs.length - 1; i >= 0; i--) {
@@ -657,16 +624,16 @@ export class SpeechRuleEngine {
       return descr;
     }
     const descrPersonality = descr['personality'];
-    for (const p in personality) {
+    for (const [key, val] of Object.entries(personality)) {
       // This could be capped by some upper and lower bound.
       if (
-        descrPersonality[p] &&
-        typeof descrPersonality[p] == 'number' &&
-        typeof personality[p] == 'number'
+        descrPersonality[key] &&
+        typeof descrPersonality[key] == 'number' &&
+        typeof val == 'number'
       ) {
-        descrPersonality[p] = descrPersonality[p] + personality[p];
-      } else if (!descrPersonality[p]) {
-        descrPersonality[p] = personality[p];
+        descrPersonality[key] = descrPersonality[key] + val;
+      } else if (!descrPersonality[key]) {
+        descrPersonality[key] = val;
       }
     }
     return descr;
@@ -823,13 +790,17 @@ const stores: Map<string, BaseRuleStore> = new Map();
 /**
  * Factory method for generating rule stores by modality.
  *
+ * @param locale
  * @param modality The modality.
  * @returns The generated rule store.
  */
-function getStore(modality: string): BaseRuleStore {
+function getStore(locale: string, modality: string): BaseRuleStore {
   // TODO (TS): Not sure how to get the constructors directly
   // let constructors = {braille: BrailleStore, speech: MathStore};
   // return new (constructors[modality] || MathStore)();
+  if (modality === 'braille' && locale === 'euro') {
+    return new EuroStore();
+  }
   if (modality === 'braille') {
     return new BrailleStore();
   }
@@ -842,7 +813,7 @@ function getStore(modality: string): BaseRuleStore {
  * @param set The JSON structure of the rule set.
  * @returns The newly create store.
  */
-export function storeFactory(set: RulesJson) {
+function storeFactory(set: RulesJson) {
   const name = `${set.locale}.${set.modality}.${set.domain}`;
   if (set.kind === 'actions') {
     const store = stores.get(name);
@@ -853,7 +824,7 @@ export function storeFactory(set: RulesJson) {
   if (set && !set.functions) {
     set.functions = SpeechRules.getStore(set.locale, set.modality, set.domain);
   }
-  const store = getStore(set.modality);
+  const store = getStore(set.locale, set.modality);
   stores.set(name, store);
   if (set.inherits) {
     store.inherits = stores.get(

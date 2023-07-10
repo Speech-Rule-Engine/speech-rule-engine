@@ -9,7 +9,8 @@
       "direct-speech",
       "default",
       "[t] @ext-speech",
-      "self::*[@ext-speech]"
+      "self::*[@ext-speech]",
+      "priority=Infinity"
     ],
     [
       "Rule",
@@ -46,11 +47,9 @@
       "omit-font",
       "default",
       "[n] . (grammar:ignoreFont=@font)",
-      "self::identifier",
+      "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Precondition",
@@ -91,8 +90,7 @@
       "Precondition",
       "font",
       "default",
-      "self::*",
-      "@font",
+      "self::*[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\""
     ],
@@ -101,9 +99,8 @@
       "font",
       "self::identifier",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
       "@font=\"normal\"",
+      "not(contains(@grammar, \"ignoreFont\"))",
       "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
       "@role!=\"unit\""
     ],
@@ -112,7 +109,6 @@
       "font",
       "self::identifier",
       "string-length(text())=1",
-      "@font",
       "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@role!=\"unit\""
@@ -337,6 +333,11 @@
       "default",
       "self::fenced",
       "@role=\"leftright\""
+    ],
+    [
+      "Alias",
+      "fences-open-close",
+      "self::fenced"
     ],
     [
       "Precondition",

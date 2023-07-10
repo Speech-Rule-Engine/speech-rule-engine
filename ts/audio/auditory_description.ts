@@ -20,8 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Grammar } from '../rule_engine/grammar';
-import { Span } from './span';
+import { Grammar } from '../rule_engine/grammar.js';
+import { Span } from './span.js';
 
 interface AudioDescr {
   context?: string;
@@ -145,15 +145,15 @@ export class AuditoryDescription {
     let personality: { [key: string]: string };
     if (this.personality) {
       personality = {};
-      for (const key in this.personality) {
-        personality[key] = this.personality[key];
+      for (const [key, val] of Object.entries(this.personality)) {
+        personality[key] = val;
       }
     }
     let attributes: { [key: string]: string };
     if (this.attributes) {
       attributes = {};
-      for (const key in this.attributes) {
-        attributes[key] = this.attributes[key];
+      for (const [key, val] of Object.entries(this.attributes)) {
+        attributes[key] = val;
       }
     }
     return new AuditoryDescription({
@@ -201,7 +201,7 @@ export class AuditoryDescription {
    *     of this object.
    */
   public descriptionSpan(): Span {
-    return new Span(this.descriptionString(), this.attributes);
+    return Span.stringAttr(this.descriptionString(), this.attributes);
   }
 
   /**

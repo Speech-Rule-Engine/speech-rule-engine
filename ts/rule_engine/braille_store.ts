@@ -22,9 +22,11 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { MathStore } from './math_store';
+import { MathStore } from './math_store.js';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { SemanticMap } from '../semantic_tree/semantic_attr.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.
@@ -38,7 +40,9 @@ export class BrailleStore extends MathStore {
   /**
    * @override
    */
-  public customTranscriptions = { '\u22ca': '⠈⠡⠳' };
+  public customTranscriptions: { [key: string]: string } = {
+    '\u22ca': '⠈⠡⠳'
+  };
 
   /**
    * @override
@@ -59,5 +63,54 @@ export class BrailleStore extends MathStore {
     for (let i = 0, annotator; (annotator = this.annotators[i]); i++) {
       activate(this.locale, annotator);
     }
+  }
+}
+
+/**
+ * Euro Braille rule store.
+ */
+export class EuroStore extends BrailleStore {
+  /**
+   * @override
+   */
+  public locale = 'euro';
+
+  /**
+   * @override
+   */
+  public customTranscriptions = {};
+
+  public customCommands: { [key: string]: string } = {
+    '\\cdot': '*'
+  };
+
+  /**
+   * @override
+   */
+  public evaluateString(str: string) {
+    const regexp = /(\\[a-z]+)/i;
+    const split = str.split(regexp);
+    console.log(split);
+    return super.evaluateString(this.cleanup(split).join(''));
+  }
+
+  protected cleanup(commands: string[]): string[] {
+    let result: string[] = [];
+    for (const command of commands) {
+      if (command.match(/^\\/)) {
+        const custom = this.customCommands[command];
+        result.push(custom ? custom : command);
+        continue;
+      }
+      const chars = command.split('').map((x) => {
+        const meaning = SemanticMap.Meaning.get(x);
+        return meaning.type === SemanticType.OPERATOR ||
+          meaning.type === SemanticType.RELATION
+          ? ' ' + x
+          : x;
+      });
+      result = result.concat(chars);
+    }
+    return result;
   }
 }

@@ -22,8 +22,8 @@
 import {
   SemanticHeuristic,
   SemanticHeuristicTypes
-} from './semantic_heuristic';
-import { SemanticNodeFactory } from './semantic_node_factory';
+} from './semantic_heuristic.js';
+import { SemanticNodeFactory } from './semantic_node_factory.js';
 
 export let factory: SemanticNodeFactory = null;
 
@@ -53,7 +53,7 @@ export const flags: { [key: string]: boolean } = {
 /**
  * Heuristics that are permanently switched off.
  */
-export const blacklist: { [key: string]: boolean } = {};
+const blacklist: { [key: string]: boolean } = {};
 
 /**
  * Register a heuristic with the handler.
@@ -83,7 +83,7 @@ export function run(
   root: SemanticHeuristicTypes,
   opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
 ): SemanticHeuristicTypes | void {
-  const heuristic = lookup(name);
+  const heuristic = heuristics.get(name);
   return heuristic &&
     !blacklist[name] &&
     (flags[name] || heuristic.applicable(root))
@@ -91,16 +91,4 @@ export function run(
     : opt_alternative
     ? opt_alternative(root)
     : root;
-}
-
-/**
- * Looks up the named heuristic.
- *
- * @param name The name of the heuristic.
- * @returns The heuristic.
- */
-export function lookup(
-  name: string
-): SemanticHeuristic<SemanticHeuristicTypes> {
-  return heuristics.get(name);
 }
