@@ -584,7 +584,7 @@ export function baselineBrief(node: Element): Span[] {
  * @param node The radical node.
  * @returns The nesting depth. 0 if the node is not a radical.
  */
-function radicalNestingDepth(node: Element): number {
+export function radicalNestingDepth(node: Element): number {
   return getNestingDepth(
     'radical',
     node,
