@@ -19,11 +19,11 @@
  */
 
 
-import { Grammar } from '../../rule_engine/grammar';
-import { createLocale, Locale } from '../locale';
-import { nestingToString } from '../locale_util';
-import NUMBERS from '../numbers/numbers_ko';
-import * as tr from '../transformers';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { createLocale, Locale } from '../locale.js';
+import { nestingToString } from '../locale_util.js';
+import NUMBERS from '../numbers/numbers_ko.js';
+import * as tr from '../transformers.js';
 
 
 let locale: Locale = null;

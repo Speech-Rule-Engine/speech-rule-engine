@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 
 /**

@@ -21,7 +21,7 @@
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import { SpeechRuleStore } from '../rule_engine/speech_rule_store.js';
 import * as StoreUtil from '../rule_engine/store_util.js';
-import * as MathspeakKoreanUtil from './mathspeak_korean_util';
+import * as MathspeakKoreanUtil from './mathspeak_korean_util.js';
 import * as MathspeakUtil from './mathspeak_util.js';
 import * as NemethUtil from './nemeth_util.js';
 import * as NumbersUtil from './numbers_util.js';

@@ -30,7 +30,7 @@ import { es } from './locales/locale_es.js';
 import { euro } from './locales/locale_euro.js';
 import { fr } from './locales/locale_fr.js';
 import { hi } from './locales/locale_hi.js';
-import { ko } from './locales/locale_ko';
+import { ko } from './locales/locale_ko.js';
 import { it } from './locales/locale_it.js';
 import { nb } from './locales/locale_nb.js';
 import { nemeth } from './locales/locale_nemeth.js';
