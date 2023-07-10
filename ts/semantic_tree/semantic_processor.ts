@@ -2182,6 +2182,7 @@ export default class SemanticProcessor {
         currentRel.type = meaning.type;
         currentRel.role = meaning.role;
         currentRel.font = meaning.font;
+        currentRel.addAnnotation('general', 'text');
         prevComp.push(currentRel);
         prevComp = prevComp.concat(nextComp);
         continue;
