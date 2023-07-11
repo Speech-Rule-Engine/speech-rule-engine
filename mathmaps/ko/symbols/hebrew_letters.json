@@ -1,0 +1,38 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "알레프",
+        "alternative": "알레프"
+      }
+    },
+    "key": "2135"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "벳",
+        "alternative": "벳"
+      }
+    },
+    "key": "2136"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "기멜",
+        "alternative": "기멜"
+      }
+    },
+    "key": "2137"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "달렛",
+        "alternative": "달렛"
+      }
+    },
+    "key": "2138"
+  }
+]

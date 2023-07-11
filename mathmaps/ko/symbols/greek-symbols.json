@@ -1,0 +1,45 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "베타"
+      }
+    },
+    "key": "03D0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "카이"
+      }
+    },
+    "key": "03D7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 입실론"
+      }
+    },
+    "key": "03F6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 대문자 디감마"
+      },
+      "mathspeak": {
+        "default": "진한 대문자 디감마"
+      }
+    },
+    "key": "1D7CA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 디감마"
+      }
+    },
+    "key": "1D7CB"
+  }
+]

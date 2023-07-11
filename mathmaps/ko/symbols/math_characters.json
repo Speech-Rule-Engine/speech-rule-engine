@@ -1,0 +1,129 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "필기체 l"
+      }
+    },
+    "key": "2113"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "필기체 대문자 P"
+      },
+      "mathspeak": {
+        "default": "필기체 대문자 P"
+      }
+    },
+    "key": "2118"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드체 파이"
+      }
+    },
+    "key": "213C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드체 감마"
+      }
+    },
+    "key": "213D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드체 대문자 감마"
+      },
+      "mathspeak": {
+        "default": "칠판 볼드체 대문자 감마"
+      }
+    },
+    "key": "213E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드체 대문자 파이"
+      },
+      "mathspeak": {
+        "default": "칠판 볼드체 대문자 파이"
+      }
+    },
+    "key": "213F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드체 시그마"
+      },
+      "mathspeak": {
+        "default": "칠판 볼드체 시그마"
+      }
+    },
+    "key": "2140"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드 이텔릭체 대문자 D"
+      },
+      "mathspeak": {
+        "default": "칠판 볼드 이텔릭체 대문자 D"
+      }
+    },
+    "key": "2145"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드 이텔릭체 e"
+      }
+    },
+    "key": "2146"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드 이텔릭체 e"
+      }
+    },
+    "key": "2147"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드 이텔릭체 i"
+      }
+    },
+    "key": "2148"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "칠판 볼드 이텔릭체 j"
+      }
+    },
+    "key": "2149"
+  },
+   {
+    "mappings": {
+      "default": {
+        "default": "점 없는 이텔릭체 i"
+      }
+    },
+    "key": "1D6A4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "점 없는 이텔릭체 j"
+      }
+    },
+    "key": "1D6A5"
+  }
+]
