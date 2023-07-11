@@ -13,3 +13,4 @@ src/closure-library
 node_modules/
 js/
 *.min
+*.sh

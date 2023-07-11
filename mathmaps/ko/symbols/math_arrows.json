@@ -1,0 +1,3206 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 화살표"
+      }
+    },
+    "key": "2190"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 화살표"
+      }
+    },
+    "key": "2191"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 화살표"
+      }
+    },
+    "key": "2192"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 화살표"
+      }
+    },
+    "key": "2193"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌우 화살표"
+      }
+    },
+    "key": "2194"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상하 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "상하 화살표"
+      }
+    },
+    "key": "2195"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌상향 화살표"
+      }
+    },
+    "key": "2196"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "우상향 화살표"
+      }
+    },
+    "key": "2197"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우하향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "우하향 화살표"
+      }
+    },
+    "key": "2198"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌하향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌하향 화살표"
+      }
+    },
+    "key": "2199"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "사선이 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "사선이 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "219A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "사선이 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "사선이 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "219B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 물결 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 물결 화살표"
+      }
+    },
+    "key": "219C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 물결 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 물결 화살표"
+      }
+    },
+    "key": "219D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 쌍화살표"
+      }
+    },
+    "key": "219E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 쌍화살표"
+      }
+    },
+    "key": "219F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 쌍화살표"
+      }
+    },
+    "key": "21A0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 쌍화살표"
+      }
+    },
+    "key": "21A1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "21A2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "21A3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "21A4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가로선이 붙은 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "가로선이 붙은 위쪽 화살표"
+      }
+    },
+    "key": "21A5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "21A6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가로선이 붙은 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "가로선이 붙은 아래쪽 화살표"
+      }
+    },
+    "key": "21A7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑줄이 있는 상하 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑줄이 있는 상하 화살표"
+      }
+    },
+    "key": "21A8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "후크가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "후크가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "21A9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "후크가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "후크가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "21AA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "루프가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "루프가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "21AB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "루프가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "루프가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "21AC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌우 물결 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌우 물결 화살표"
+      }
+    },
+    "key": "21AD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "사선이 그어진 좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "사선이 그어진 좌우 화살표"
+      }
+    },
+    "key": "21AE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 지그재그 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 지그재그 화살표"
+      }
+    },
+    "key": "21AF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 왼쪽으로 꺾인 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 왼쪽으로 꺾인 위쪽 화살표"
+      }
+    },
+    "key": "21B0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 오른쪽으로 꺾인 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 오른쪽으로 꺾인 위쪽 화살표"
+      }
+    },
+    "key": "21B1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 왼쪽으로 꺾인 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 왼쪽으로 꺾인 아래쪽 화살표"
+      }
+    },
+    "key": "21B2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 오른쪽으로 꺾인 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 오른쪽으로 꺾인 아래쪽 화살표"
+      }
+    },
+    "key": "21B3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 코너가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 코너가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "21B4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 코너가 있는 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 코너가 있는 아래쪽 화살표"
+      }
+    },
+    "key": "21B5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 반원 화살표"
+      }
+    },
+    "key": "21B6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향 반원 화살표"
+      }
+    },
+    "key": "21B7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "윗줄이 있는 좌상향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "윗줄이 있는 좌상향 화살표"
+      }
+    },
+    "key": "21B8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 화살표 바와 그 위의 오른쪽 화살표 바"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 화살표 바와 그 위의 오른쪽 화살표 바"
+      }
+    },
+    "key": "21B9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 원 화살표"
+      }
+    },
+    "key": "21BA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향 원 화살표"
+      }
+    },
+    "key": "21BB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 화살표와 그 위의 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 화살표와 그 위의 오른쪽 화살표"
+      }
+    },
+    "key": "21C4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 화살표와 그 옆의 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 화살표와 그 옆의 아래쪽 화살표"
+      }
+    },
+    "key": "21C5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 화살표와 그 위의 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 화살표와 그 위의 왼쪽 화살표"
+      }
+    },
+    "key": "21C6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 왼쪽 화살표"
+      }
+    },
+    "key": "21C7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 위쪽 화살표"
+      }
+    },
+    "key": "21C8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 오른쪽 화살표"
+      }
+    },
+    "key": "21C9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 아래쪽 화살표"
+      }
+    },
+    "key": "21CA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "사선이 그어진 왼쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "사선이 그어진 왼쪽 이중 화살표"
+      }
+    },
+    "key": "21CD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "사선이 그어진 좌우 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "사선이 그어진 좌우 이중 화살표"
+      }
+    },
+    "key": "21CE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "사선이 그어진 오른쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "사선이 그어진 오른쪽 이중 화살표"
+      }
+    },
+    "key": "21CF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 이중 화살표"
+      }
+    },
+    "key": "21D0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 이중 화살표"
+      }
+    },
+    "key": "21D1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 이중 화살표"
+      },
+      "clearspeak": {
+        "sbrief": "충분조건"
+      }
+    },
+    "key": "21D2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 이중 화살표"
+      },
+      "clearspeak": {
+        "sbrief": "필요조건"
+      }
+    },
+    "key": "21D3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌우 이중 화살표"
+      },
+      "clearspeak": {
+        "sbrief": "필요충분조건"
+      }
+    },
+    "key": "21D4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상하 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "상하 이중 화살표"
+      }
+    },
+    "key": "21D5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌상향 이중 화살표"
+      }
+    },
+    "key": "21D6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "우상향 이중 화살표"
+      }
+    },
+    "key": "21D7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우하향 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "우하향 이중 화살표"
+      }
+    },
+    "key": "21D8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌하향 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌하향 이중 화살표"
+      }
+    },
+    "key": "21D9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 삼중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 삼중 화살표"
+      }
+    },
+    "key": "21DA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 삼중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 삼중 화살표"
+      }
+    },
+    "key": "21DB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 흔들리는 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 흔들리는 화살표"
+      }
+    },
+    "key": "21DC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 흔들리는 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 흔들리는 화살표"
+      }
+    },
+    "key": "21DD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 줄이 그어진 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 줄이 그어진 위쪽 화살표"
+      }
+    },
+    "key": "21DE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 줄이 그어진 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 줄이 그어진 아래쪽 화살표"
+      }
+    },
+    "key": "21DF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 점선 화살표"
+      }
+    },
+    "key": "21E0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 점선 화살표"
+      }
+    },
+    "key": "21E1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 점선 화살표"
+      }
+    },
+    "key": "21E2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 점선 화살표"
+      }
+    },
+    "key": "21E3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선을 가리키는 왼쪽 화샇표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선을 가리키는 왼쪽 화샇표"
+      }
+    },
+    "key": "21E4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선을 가리키는 오른쪽 화샇표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선을 가리키는 오른쪽 화샇표"
+      }
+    },
+    "key": "21E5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 흰색 화살표"
+      }
+    },
+    "key": "21E6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 흰색 화살표"
+      }
+    },
+    "key": "21E7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 흰색 화살표"
+      }
+    },
+    "key": "21E8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 흰색 화살표"
+      }
+    },
+    "key": "21E9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 막대와 위쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "흰색 막대와 위쪽 흰색 화살표"
+      }
+    },
+    "key": "21EA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "받침대가 있는 위쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "받침대가 있는 위쪽 흰색 화살표"
+      }
+    },
+    "key": "21EB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "받침대가 있고 화살촉에 가로선이 추가된 위쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "받침대가 있고 화살촉에 가로선이 추가된 위쪽 흰색 화살표"
+      }
+    },
+    "key": "21EC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "받침대가 있고 안에 세로줄이 그어진 위쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "받침대가 있고 안에 세로줄이 그어진 위쪽 흰색 화살표"
+      }
+    },
+    "key": "21ED"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 흰색 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 흰색 쌍화살표"
+      }
+    },
+    "key": "21EE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "받침대가 있는 위쪽 흰색 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "받침대가 있는 위쪽 흰색 쌍화살표"
+      }
+    },
+    "key": "21EF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "받침대가 있는 오른쪽 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "받침대가 있는 오른쪽 흰색 화살표"
+      }
+    },
+    "key": "21F0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "모서리를 가리키는 좌상향 화살표"
+      }
+    },
+    "key": "21F1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "모서리를 가리키는 우하향 화살표"
+      }
+    },
+    "key": "21F2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상하 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "상하 흰색 화살표"
+      }
+    },
+    "key": "21F3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 원이 겹쳐진 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "작은 원이 겹쳐진 오른쪽 화살표"
+      }
+    },
+    "key": "21F4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 화살표와 그 옆에 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 화살표와 그 옆에 위쪽 화살표"
+      }
+    },
+    "key": "21F5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세 개의 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세 개의 오른쪽 화살표"
+      }
+    },
+    "key": "21F6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 왼쪽 화살표"
+      }
+    },
+    "key": "21F7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 오른쪽 화살표"
+      }
+    },
+    "key": "21F8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 좌우 화살표"
+      }
+    },
+    "key": "21F9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어진 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어진 왼쪽 화살표"
+      }
+    },
+    "key": "21FA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어진 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어진 오른쪽 화살표"
+      }
+    },
+    "key": "21FB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어진 좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어진 좌우 화살표"
+      }
+    },
+    "key": "21FC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "촉이 빈 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "촉이 빈 왼쪽 화살표"
+      }
+    },
+    "key": "21FD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "촉이 빈 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "촉이 빈 오른쪽 화살표"
+      }
+    },
+    "key": "21FE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "촉이 빈 좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "촉이 빈 좌우 화살표"
+      }
+    },
+    "key": "21FF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전기 화살표"
+      }
+    },
+    "key": "2301"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 화살촉"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 화살촉"
+      }
+    },
+    "key": "2303"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 화살촉"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 화살촉"
+      }
+    },
+    "key": "2304"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 가로선 사이의 위쪽 화살촉",
+        "alternative": "엔터 키"
+      },
+      "mathspeak": {
+        "sbrief": "두 가로선 사이의 위쪽 화살촉"
+      }
+    },
+    "key": "2324"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 화살표가 있는 깨진 원"
+      }
+    },
+    "key": "238B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "굵고 넓은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "굵고 넓은 오른쪽 화살표"
+      }
+    },
+    "key": "2794"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 우하향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 우하향 화살표"
+      }
+    },
+    "key": "2798"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 오른쪽 화살표"
+      }
+    },
+    "key": "2799"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 우상향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 우상향 화살표"
+      }
+    },
+    "key": "279A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살촉이 큰 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살촉이 큰 오른쪽 화살표"
+      }
+    },
+    "key": "279B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "굵은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "굵은 오른쪽 화살표"
+      }
+    },
+    "key": "279C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "삼각형 화살촉을 가진 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "삼각형 화살촉을 가진 오른쪽 화살표"
+      }
+    },
+    "key": "279D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "삼각형 화살촉을 가진 진한 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "삼각형 화살촉을 가진 진한 오른쪽 화살표"
+      }
+    },
+    "key": "279E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "삼각형 화살촉을 가진 오른쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "삼각형 화살촉을 가진 오른쪽 점선 화살표"
+      }
+    },
+    "key": "279F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "삼각형 화살촉을 가진 진한 오른쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "삼각형 화살촉을 가진 진한 오른쪽 점선 화살표"
+      }
+    },
+    "key": "27A0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "검은 오른쪽 화살표"
+      }
+    },
+    "key": "27A1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "삼차원 오른쪽 화살촉"
+      },
+      "mathspeak": {
+        "sbrief": "삼차원 오른쪽 화살촉"
+      }
+    },
+    "key": "27A2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽에 그림자가 있는 삼차원 오른쪽 화살촉"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽에 그림자가 있는 삼차원 오른쪽 화살촉"
+      }
+    },
+    "key": "27A3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 오른쪽 화살촉"
+      },
+      "mathspeak": {
+        "sbrief": "검은 오른쪽 화살촉"
+      }
+    },
+    "key": "27A4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에서 오른쪽으로 휘어지는 진한 검은 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에서 오른쪽으로 휘어지는 진한 검은 화살표"
+      }
+    },
+    "key": "27A5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에서 오른쪽으로 휘어지는 진한 검은 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에서 오른쪽으로 휘어지는 진한 검은 화살표"
+      }
+    },
+    "key": "27A6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 오른쪽 스쿼트 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "검은 오른쪽 스쿼트 화살표"
+      }
+    },
+    "key": "27A7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살대가 굵은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살대가 굵은 오른쪽 화살표"
+      }
+    },
+    "key": "27A8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "음영 처리된 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "음영 처리된 오른쪽 화살표"
+      }
+    },
+    "key": "27A9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우측으로 음영 처리된 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "우측으로 음영 처리된 오른쪽 화살표"
+      }
+    },
+    "key": "27AA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "기울어진 흰색 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "기울어진 흰색 오른쪽 화살표"
+      }
+    },
+    "key": "27AB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "앞쪽으로 기울어진 흰색 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "앞쪽으로 기울어진 흰색 오른쪽 화살표"
+      }
+    },
+    "key": "27AC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "짦은 흰색 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "짦은 흰색 오른쪽 화살표"
+      }
+    },
+    "key": "27AD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽으로 음영 처리된 짦은 흰색 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽으로 음영 처리된 짦은 흰색 오른쪽 화살표"
+      }
+    },
+    "key": "27AE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 파인 흰색 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 파인 흰색 오른쪽 화살표"
+      }
+    },
+    "key": "27AF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 파였고 흰색 위쪽으로 음영 처리된 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 파였고 흰색 위쪽으로 음영 처리된 오른쪽 화살표"
+      }
+    },
+    "key": "27B1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 원 안의 흰색 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 원 안의 흰색 오른쪽 화살표"
+      }
+    },
+    "key": "27B2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 있는 오른쪽 화살표"
+      }
+    },
+    "key": "27B3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 있는 우하향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 있는 우하향 화살표"
+      }
+    },
+    "key": "27B4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 있는 오른쪽 화살표"
+      }
+    },
+    "key": "27B5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 있는 우상향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 있는 우상향 화살표"
+      }
+    },
+    "key": "27B6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 화살깃이 있는 우하향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 화살깃이 있는 우하향 화살표"
+      }
+    },
+    "key": "27B7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 화살깃이 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 화살깃이 있는 오른쪽 화살표"
+      }
+    },
+    "key": "27B8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 화살깃이 있는 우상향 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "진한 화살깃이 있는 우상향 화살표"
+      }
+    },
+    "key": "27B9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "눈물 방울 모양의 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "눈물 방울 모양의 오른쪽 화살표"
+      }
+    },
+    "key": "27BA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 두꺼운 눈물 모양의 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 두꺼운 눈물 모양의 오른쪽 화살표"
+      }
+    },
+    "key": "27BB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "27BC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리가 있는 굵은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리가 있는 굵은 오른쪽 화살표"
+      }
+    },
+    "key": "27BD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "열린 윤곽선의 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "열린 윤곽선의 오른쪽 화살표"
+      }
+    },
+    "key": "27BE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 쿼드러플 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 쿼드러플 화살표"
+      }
+    },
+    "key": "27F0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 쿼드러플 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 쿼드러플 화살표"
+      }
+    },
+    "key": "27F1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향의 원 화살표"
+      }
+    },
+    "key": "27F2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향의 원 화살표"
+      }
+    },
+    "key": "27F3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "원과 플러스 부호 안에 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "원과 플러스 부호 안에 있는 오른쪽 화살표"
+      }
+    },
+    "key": "27F4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "긴 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "긴 왼쪽 화살표"
+      }
+    },
+    "key": "27F5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "긴 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "긴 오른쪽 화살표"
+      }
+    },
+    "key": "27F6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "긴 좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "긴 좌우 화살표"
+      }
+    },
+    "key": "27F7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "긴 왼쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "긴 왼쪽 이중 화살표"
+      }
+    },
+    "key": "27F8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "긴 오른쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "긴 오른쪽 이중 화살표"
+      }
+    },
+    "key": "27F9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "긴 좌우 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "긴 좌우 이중 화살표"
+      }
+    },
+    "key": "27FA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 긴 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 긴 왼쪽 화살표"
+      }
+    },
+    "key": "27FB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 긴 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 긴 오른쪽 화살표"
+      }
+    },
+    "key": "27FC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 긴 왼쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 긴 왼쪽 이중 화살표"
+      }
+    },
+    "key": "27FD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 긴 오른쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 긴 오른쪽 이중 화살표"
+      }
+    },
+    "key": "27FE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흔들리는 긴 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "흔들리는 긴 오른쪽 화살표"
+      }
+    },
+    "key": "27FF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2900"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어진 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어진 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2901"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 왼쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 왼쪽 이중 화살표"
+      }
+    },
+    "key": "2902"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 오른쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 오른쪽 이중 화살표"
+      }
+    },
+    "key": "2903"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어진 좌우 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어진 좌우 이중 화살표"
+      }
+    },
+    "key": "2904"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2905"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 왼쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 왼쪽 이중 화살표"
+      }
+    },
+    "key": "2906"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 오른쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 오른쪽 이중 화살표"
+      }
+    },
+    "key": "2907"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가로선이 그어진 아래쪽 화살표"
+      }
+    },
+    "key": "2908"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가로선이 그어진 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "가로선이 그어진 위쪽 화살표"
+      }
+    },
+    "key": "2909"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 삼중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 삼중 화살표"
+      }
+    },
+    "key": "290A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 삼중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 삼중 화살표"
+      }
+    },
+    "key": "290B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 더블 대시 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 더블 대시 화살표"
+      }
+    },
+    "key": "290C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 더블 대시 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 더블 대시 화살표"
+      }
+    },
+    "key": "290D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 트리플 대시 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 트리플 대시 화살표"
+      }
+    },
+    "key": "290E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 트리플 대시 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 트리플 대시 화살표"
+      }
+    },
+    "key": "290F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 있는 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 있는 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2910"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 점선 화살표"
+      }
+    },
+    "key": "2911"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가로선을 가리키는 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "가로선을 가리키는 위쪽 화살표"
+      }
+    },
+    "key": "2912"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가로선을 가리키는 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "가로선을 가리키는 아래쪽 화살표"
+      }
+    },
+    "key": "2913"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
+      }
+    },
+    "key": "2914"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
+      }
+    },
+    "key": "2915"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "화살깃이 있는 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "화살깃이 있는 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2916"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2917"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
+      }
+    },
+    "key": "2918"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리만 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리만 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2919"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리만 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리만 있는 오른쪽 화살표"
+      }
+    },
+    "key": "291A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 꼬리만 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 꼬리만 있는 왼쪽 화살표"
+      }
+    },
+    "key": "291B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 꼬리만 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 꼬리만 있는 오른쪽 화살표"
+      }
+    },
+    "key": "291C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 다이아몬드를 가리키고 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "검은 다이아몬드를 가리키고 있는 왼쪽 화살표"
+      }
+    },
+    "key": "291D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 다이아몬드를 가리키고 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "검은 다이아몬드를 가리키고 있는 오른쪽 화살표"
+      }
+    },
+    "key": "291E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선부터 검은 다이아몬드까지 가리키고 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선부터 검은 다이아몬드까지 가리키고 있는 왼쪽 화살표"
+      }
+    },
+    "key": "291F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선부터 검은 다이아몬드까지 가리키는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선부터 검은 다이아몬드까지 가리키는 오른쪽 화살표"
+      }
+    },
+    "key": "2920"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향과 우하향이 결합된 화살표"
+      }
+    },
+    "key": "2921"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌하향과 우상향이 결합된 화살표"
+      }
+    },
+    "key": "2922"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "후크가 있는 좌상향 화살표"
+      }
+    },
+    "key": "2923"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "후크가 있는 우상향 화살표"
+      }
+    },
+    "key": "2924"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "후크가 있는 우하향 화살표"
+      }
+    },
+    "key": "2925"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "후크가 있는 좌하향 화살표"
+      }
+    },
+    "key": "2926"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 화살표와 우상향 화살표의 교차"
+      }
+    },
+    "key": "2927"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 화살표와 우하향 화살표의 교차"
+      }
+    },
+    "key": "2928"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌하향 화살표와 우하향 화살표의 교차"
+      }
+    },
+    "key": "2929"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 화살표와 좌하향 화살표의 교차"
+      }
+    },
+    "key": "292A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 화살표가 위에 있는 우하향 화살표와의 교차"
+      }
+    },
+    "key": "292D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우하향 화살표가 위에 있는 우상향 화살표와의 교차"
+      }
+    },
+    "key": "292E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선이 위에 있는 우상향 화살표와의 교차"
+      }
+    },
+    "key": "292F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선이 위에 있는 우하향 화살표와의 교차"
+      }
+    },
+    "key": "2930"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 화살표가 위에 있는 좌상향 화살표와의 교차"
+      }
+    },
+    "key": "2931"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 화살표가 위에 있는 우상향 화살표와의 교차"
+      }
+    },
+    "key": "2932"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 웨이브 화살표"
+      }
+    },
+    "key": "2933"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 위로 휘어지는 화살표"
+      }
+    },
+    "key": "2934"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 아래로 휘어지는 화살표"
+      }
+    },
+    "key": "2935"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽에서 왼쪽으로 휘아지는 화살표"
+      }
+    },
+    "key": "2936"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽에서 오른쪽으로 휘아지는 화살표"
+      }
+    },
+    "key": "2937"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향 원호 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "시계 방향 원호 화살표"
+      }
+    },
+    "key": "2938"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 원호 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "반시계 방향 원호 화살표"
+      }
+    },
+    "key": "2939"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 윗 원호 화살표"
+      }
+    },
+    "key": "293A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 아랫 원호 화살표"
+      }
+    },
+    "key": "293B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향 윗 원호 화살표와 마이너스 부호"
+      }
+    },
+    "key": "293C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 윗 원호 화살표와 플러스 부호"
+      }
+    },
+    "key": "293D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향 반원 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "시계 방향 반원 화살표"
+      }
+    },
+    "key": "293E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 반원 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "반시계 방향 반원 화살표"
+      }
+    },
+    "key": "293F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향 닫힌 원 화살표"
+      }
+    },
+    "key": "2940"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향 닫힌 원 화살표"
+      }
+    },
+    "key": "2941"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "짦은 왼쪽 화살표와 그 위에 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "짦은 왼쪽 화살표와 그 위에 오른쪽 화살표"
+      }
+    },
+    "key": "2942"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "짦은 오른쪽 화살표와 그 위에 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "짦은 오른쪽 화살표와 그 위에 왼쪽 화살표"
+      }
+    },
+    "key": "2943"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 화살표와 그 위에 짦은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 화살표와 그 위에 짦은 오른쪽 화살표"
+      }
+    },
+    "key": "2944"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 화살표와 그 아래에 플러스 기호"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 화살표와 그 아래에 플러스 기호"
+      }
+    },
+    "key": "2945"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 화살표와 그 아래에 플러스 기호"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 화살표와 그 아래에 플러스 기호"
+      }
+    },
+    "key": "2946"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "엑스 자를 통과하는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "엑스 자를 통과하는 오른쪽 화살표"
+      }
+    },
+    "key": "2947"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 원이 붙은 좌우 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "작은 원이 붙은 좌우 화살표"
+      }
+    },
+    "key": "2948"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 원에서 시작하는 위쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "작은 원에서 시작하는 위쪽 쌍화살표"
+      }
+    },
+    "key": "2949"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "끝이 뭉툭한 오른쪽 이중 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "끝이 뭉툭한 오른쪽 이중 화살표"
+      }
+    },
+    "key": "2970"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 등호가 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 등호가 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2971"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 물결표가 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 물결표가 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2972"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 물결표가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 물결표가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2973"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 물결표가 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 물결표가 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2974"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 근사 등호가 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 근사 등호가 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2975"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 미만 부등호가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 미만 부등호가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2976"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "미만 부등호가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "미만 부등호가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2977"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 초과 부등호가 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 초과 부등호가 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2978"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 부분 집합이 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 부분 집합이 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2979"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "부분 집합이 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "부분 집합이 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "297A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 상위 집합이 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 상위 집합이 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "297B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 오른쪽 화살표가 붙은 공집합"
+      },
+      "mathspeak": {
+        "sbrief": "위에 오른쪽 화살표가 붙은 공집합"
+      }
+    },
+    "key": "29B3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 왼쪽 화살표가 붙은 공집합"
+      },
+      "mathspeak": {
+        "sbrief": "위에 왼쪽 화살표가 붙은 공집합"
+      }
+    },
+    "key": "29B4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "공집합이 겹쳐진 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "공집합이 겹쳐진 화살표"
+      }
+    },
+    "key": "29BD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 다이아몬드가 겹쳐진 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "검은 다이아몬드가 겹쳐진 아래쪽 화살표"
+      }
+    },
+    "key": "29EA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 원이 겹쳐진 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "흰 원이 겹쳐진 아래쪽 화살표"
+      }
+    },
+    "key": "29EC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 원이 겹쳐진 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "검은 원이 겹쳐진 아래쪽 화살표"
+      }
+    },
+    "key": "29ED"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "인테그럴이 겹쳐진 후크가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "인테그럴이 겹쳐진 후크가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2A17"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 흰색 화살표"
+      }
+    },
+    "key": "2B00"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 흰색 화살표"
+      }
+    },
+    "key": "2B01"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우하향 흰색 화살표"
+      }
+    },
+    "key": "2B02"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌하향 흰색 화살표"
+      }
+    },
+    "key": "2B03"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌우 흰색 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌우 흰색 화살표"
+      }
+    },
+    "key": "2B04"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 진한 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 진한 화살표"
+      }
+    },
+    "key": "2B05"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 진한 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 진한 화살표"
+      }
+    },
+    "key": "2B06"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 진한 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 진한 화살표"
+      }
+    },
+    "key": "2B07"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우상향 진한 화살표"
+      }
+    },
+    "key": "2B08"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌상향 진한 화살표"
+      }
+    },
+    "key": "2B09"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "우하향 진한 화살표"
+      }
+    },
+    "key": "2B0A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌하향 진한 화살표"
+      }
+    },
+    "key": "2B0B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좌우 진한 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "좌우 진한 화살표"
+      }
+    },
+    "key": "2B0C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상하 진한 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "상하 진한 화살표"
+      }
+    },
+    "key": "2B0D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽으로 꺾인 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽으로 꺾인 오른쪽 화살표"
+      }
+    },
+    "key": "2B0E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽으로 꺾인 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽으로 꺾인 오른쪽 화살표"
+      }
+    },
+    "key": "2B0F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽으로 꺾인 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽으로 꺾인 왼쪽 화살표"
+      }
+    },
+    "key": "2B10"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽으로 꺾인 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽으로 꺾인 왼쪽 화살표"
+      }
+    },
+    "key": "2B11"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 원이 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "작은 원이 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2B30"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세 개의 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세 개의 왼쪽 화살표"
+      }
+    },
+    "key": "2B31"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "원과 플러스 부호 안의 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "원과 플러스 부호 안의 왼쪽 화살표"
+      }
+    },
+    "key": "2B32"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흔들리는 긴 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "흔들리는 긴 왼쪽 화살표"
+      }
+    },
+    "key": "2B33"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어진 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어진 왼쪽 화살표"
+      }
+    },
+    "key": "2B34"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어진 왼쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어진 왼쪽 쌍화살표"
+      }
+    },
+    "key": "2B35"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선에서 시작하는 왼쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선에서 시작하는 왼쪽 쌍화살표"
+      }
+    },
+    "key": "2B36"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 트리플 대시 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 트리플 대시 쌍화살표"
+      }
+    },
+    "key": "2B37"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 점선 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 점선 화살표"
+      }
+    },
+    "key": "2B38"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2B39"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2B3A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꼬리가 있는 왼쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "꼬리가 있는 왼쪽 쌍화살표"
+      }
+    },
+    "key": "2B3B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
+      }
+    },
+    "key": "2B3C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
+      },
+      "mathspeak": {
+        "sbrief": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
+      }
+    },
+    "key": "2B3D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "엑스 자가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "엑스 자가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2B3E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 웨이브 화살표"
+      }
+    },
+    "key": "2B3F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 등호가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 등호가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2B40"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 물결표가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 물결표가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2B41"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 근사 등호가 붙은 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 근사 등호가 붙은 왼쪽 화살표"
+      }
+    },
+    "key": "2B42"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 부등호가 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 부등호가 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2B43"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상위 집합이 붙은 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "상위 집합이 붙은 오른쪽 화살표"
+      }
+    },
+    "key": "2B44"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 쿼드러플 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "왼쪽 쿼드러플 화살표"
+      }
+    },
+    "key": "2B45"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 쿼드러플 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "오른쪽 쿼드러플 화살표"
+      }
+    },
+    "key": "2B46"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 물결표가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 물결표가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "2B47"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 근사 등호가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 근사 등호가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "2B48"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위에 물결표가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "위에 물결표가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2B49"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 근사 등호가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 근사 등호가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2B4A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 물결표가 있는 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 물결표가 있는 왼쪽 화살표"
+      }
+    },
+    "key": "2B4B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑에 물결표가 있는 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "밑에 물결표가 있는 오른쪽 화살표"
+      }
+    },
+    "key": "2B4C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반쪽짜리 왼쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "반쪽짜리 왼쪽 화살표"
+      }
+    },
+    "key": "FFE9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반쪽짜리 위쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "반쪽짜리 위쪽 화살표"
+      }
+    },
+    "key": "FFEA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반쪽짜리 오른쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "반쪽짜리 오른쪽 화살표"
+      }
+    },
+    "key": "FFEB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반쪽짜리 아래쪽 화살표"
+      },
+      "mathspeak": {
+        "sbrief": "반쪽짜리 아래쪽 화살표"
+      }
+    },
+    "key": "FFEC"
+  }
+]

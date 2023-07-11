@@ -1,0 +1,7 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "ko",
+  "inherits": "base",
+  "rules": []
+}

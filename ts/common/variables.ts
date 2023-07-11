@@ -37,6 +37,7 @@ export class Variables {
     ['fr', 'French'],
     ['hi', 'Hindi'],
     ['it', 'Italian'],
+    ['ko', 'Korean'],
     ['nb', 'Bokmål'],
     ['nn', 'Nynorsk'],
     ['sv', 'Swedish'],

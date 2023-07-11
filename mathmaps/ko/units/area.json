@@ -1,0 +1,78 @@
+[
+  {"locale": "ko"},
+  {"category": "other",
+   "mappings": {
+     "default": {
+       "default": "제곱미터"
+     }
+   },
+   "key": "sq",
+   "names": ["sq", "sq."]
+  },
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "제곱인치",
+       "plural": "제곱인치"
+     }
+   },
+   "key": "sq inch",
+   "names": ["sq in", "sq. in.", "sq inch", "sq. inch", "square inch", "square inches"]
+  },
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "제곱로드"
+     }
+   },
+   "key": "sq rd",
+   "names": ["sq rd", "sq. rd.", "square rod", "square rods"]
+  },
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "제곱피트",
+       "plural": "제곱피트"
+     }
+   },
+   "key": "sq ft",
+   "names": ["sq ft", "sq. ft.", "square foot", "square feet"]
+  },
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "제곱야드"
+     }
+   },
+   "key": "sq yd",
+   "names": ["sq yd", "sq. yd.", "square yard", "square yards"]
+  },
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "제곱마일"
+     }
+   },
+   "key": "sq mi",
+   "names": ["sq mi", "sq. mi.", "square mile", "square miles"]
+  },
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "에이커"
+     }
+   },
+   "key": "acr",
+   "names": ["ac", "ac.", "acr", "acr.", "acre", "acres"]
+  },
+
+  {"category": "area",
+   "mappings": {
+     "default": {
+       "default": "헥타르"
+     }
+   },
+   "key": "ha",
+   "names": ["ha", "hectare", "hectares"]
+  }
+]
