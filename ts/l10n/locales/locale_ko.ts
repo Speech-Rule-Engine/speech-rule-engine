@@ -74,6 +74,7 @@ function create(): Locale {
   }
   loc.CORRECTIONS.article = (name: string) => {
     const final = Grammar.getInstance().getParameter('final');
+    if (final) Grammar.getInstance().setParameter('final', false);
     
     if (name === '같다') name = '는';
     const temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
