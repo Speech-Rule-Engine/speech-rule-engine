@@ -281,10 +281,8 @@ export class SemanticSkeleton {
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
     )[0] as Element;
-    if (Engine.getInstance().aria && mmlChild) {
-      SemanticSkeleton.addAria(mmlChild, level, posinset, setsize);
-    }
     if (!node.childNodes.length) {
+      SemanticSkeleton.addAria(mmlChild, level, posinset, setsize);
       return node.id;
     }
     const children = SemanticSkeleton.combineContentChildren<SemanticNode>(
@@ -308,6 +306,7 @@ export class SemanticSkeleton {
         SemanticSkeleton.tree_(mml, child, level + 1, i + 1, l) as any
       );
     }
+    SemanticSkeleton.addAria(mmlChild, level, posinset, setsize, level ? 'group' : 'tree');
     return skeleton;
   }
 
@@ -315,17 +314,20 @@ export class SemanticSkeleton {
     node: Element,
     level: number,
     posinset: number,
-    setsize: number
+    setsize: number,
+    role: string = level ? 'treeitem' : 'tree'
   ) {
-    // Aria elements
-    if (!level) {
-      node.setAttribute('role', 'tree');
+    if (!Engine.getInstance().aria || !node) {
       return;
     }
+    // Aria elements
     node.setAttribute('aria-level', level.toString());
     node.setAttribute('aria-posinset', posinset.toString());
     node.setAttribute('aria-setsize', setsize.toString());
-    node.setAttribute('role', 'treeitem');
+    node.setAttribute('role', role);
+    if (node.hasAttribute(EnrichAttribute.OWNS)) {
+      node.setAttribute('aria-owns', node.getAttribute(EnrichAttribute.OWNS));
+    }
   }
 
   /**
