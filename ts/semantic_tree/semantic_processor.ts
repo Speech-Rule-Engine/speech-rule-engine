@@ -2153,6 +2153,7 @@ export default class SemanticProcessor {
       const text = [];
       while (!nextComp.length && rel.length &&
         // Don't destroy space separations.
+        currentRel.role !== SemanticRole.SPACE &&
         rel[0].role !== SemanticRole.SPACE) {
         text.push(currentRel);
         currentRel = rel.shift();
@@ -2180,6 +2181,17 @@ export default class SemanticProcessor {
         continue;
       }
       const meaning = SemanticMap.Meaning.get(currentRel.textContent);
+      // Punctuation is considered to be regular text.
+      if (meaning.type === SemanticType.PUNCTUATION) {
+        currentRel.role = meaning.role;
+        currentRel.font = meaning.font;
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
+      }
       if (meaning.type !== SemanticType.UNKNOWN) {
         currentRel.type = meaning.type;
         currentRel.role = meaning.role;
