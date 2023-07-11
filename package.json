@@ -23,8 +23,8 @@
     "compile": "npm run module",
     "clean": "rimraf js lib cjs",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest --silent ",
-    "prepublishOnly": "make clean; make clean_min",
-    "prepublish": "npm run build",
+    "cleanAll": "make clean; make clean_min",
+    "prepublish": "npm run cleanAll; npm run build",
     "build": "make -j 12 all; npm run commonjs; npm run module; npx webpack"
   },
   "maintainers": [
