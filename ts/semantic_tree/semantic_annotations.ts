@@ -53,6 +53,20 @@ export function activate(domain: string, name: string) {
 }
 
 /**
+ * Deactivates a particular annotator.
+ *
+ * @param domain The domain.
+ * @param name The name of the annotator.
+ */
+export function deactivate(domain: string, name: string) {
+  const key = domain + ':' + name;
+  const annotator = annotators.get(key) || visitors.get(key);
+  if (annotator) {
+    annotator.active = false;
+  }
+}
+
+/**
  * Annotates the given semantic node recursively.
  *
  * @param node The semantic node to annotate.
