@@ -52,6 +52,16 @@
       "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
+      "Rule",
+      "omit-font-text",
+      "default",
+      "[n] . (grammar:ignoreFont=@font)",
+      "self::identifier[@font=\"normal\"]",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "contains(@annotation, \"general:text\")"
+    ],
+    [
       "Precondition",
       "collapsed",
       "default",

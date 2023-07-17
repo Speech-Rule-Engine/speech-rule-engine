@@ -30,7 +30,7 @@ import { CaseDoubleScript } from './case_double_script.js';
 import { CaseMultiscripts } from './case_multiscripts.js';
 import { CaseTensor } from './case_tensor.js';
 import * as EnrichMathml from './enrich_mathml.js';
-import { setAttributes, Attribute } from './enrich_attr.js';
+import { addMrow, setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseEmbellished extends AbstractEnrichCase {
   /**
@@ -108,7 +108,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
    * @returns The new empty node.
    */
   private static makeEmptyNode_(id: number): SemanticNode {
-    const mrow = DomUtil.createElement('mrow');
+    const mrow = addMrow();
     const empty = new SemanticNode(id);
     empty.type = SemanticType.EMPTY;
     empty.mathmlTree = mrow;
@@ -343,14 +343,14 @@ export class CaseEmbellished extends AbstractEnrichCase {
     const fullOfence = this.fullFence(this.ofenceMml);
     const fullCfence = this.fullFence(this.cfenceMml);
     // Introduce a definite new layer.
-    let newNode = DomUtil.createElement('mrow');
+    let newNode = addMrow();
     DomUtil.replaceNode(this.fencedMml as Element, newNode);
     this.fencedMmlNodes.forEach((node) => newNode.appendChild(node));
     newNode.insertBefore(fullOfence, this.fencedMml);
     newNode.appendChild(fullCfence);
     // The case of top element math.
     if (!newNode.parentNode) {
-      const mrow = DomUtil.createElement('mrow');
+      const mrow = addMrow();
       while (newNode.childNodes.length > 0) {
         mrow.appendChild(newNode.childNodes[0]);
       }

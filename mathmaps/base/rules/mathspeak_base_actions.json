@@ -62,7 +62,7 @@
     [
       "Action",
       "matrix-cell",
-      "[n] children/*[1] (pause: 300)"
+      "[n] children/*[1] (pause:300)"
     ],
     [
       "Action",

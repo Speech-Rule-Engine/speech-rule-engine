@@ -21,6 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util.js';
 import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
@@ -169,4 +170,14 @@ export function removeAttributePrefix(mml: string): string {
 // TODO (TS): Again this should have been return time Attribute
 export function addPrefix(attr: string): Attribute {
   return (Prefix + attr) as Attribute;
+}
+
+
+/**
+ * @return A newly created mrow with an added attribute.
+ */
+export function addMrow(): Element {
+  const mrow = DomUtil.createElement('mrow');
+  mrow.setAttribute(Attribute.ADDED, 'true');
+  return mrow;
 }

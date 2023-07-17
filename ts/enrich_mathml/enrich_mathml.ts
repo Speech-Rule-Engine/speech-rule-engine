@@ -191,7 +191,7 @@ export function introduceNewLayer(
     || (!newNode.parentNode && semantic.parent)
      ) {
     Debugger.getInstance().output('Walktree Case 1.1');
-    newNode = DomUtil.createElement('mrow');
+    newNode = EnrichAttr.addMrow();
     if (info === lcaType.PRUNED) {
       Debugger.getInstance().output('Walktree Case 1.1.0');
       newNode = introduceLayerAboveLca(newNode, lca.node as Element, children);
@@ -786,7 +786,7 @@ export function cloneContentNode(content: SemanticNode): Element {
   }
   const clone = SETTINGS.implicit
     ? createInvisibleOperator(content)
-    : DomUtil.createElement('mrow');
+    : EnrichAttr.addMrow();
   content.mathml = [clone];
   return clone;
 }
@@ -801,7 +801,7 @@ export function rewriteMfenced(mml: Element): Element {
   if (DomUtil.tagName(mml) !== 'MFENCED') {
     return mml;
   }
-  const newNode = DomUtil.createElement('mrow');
+  const newNode = EnrichAttr.addMrow();
   for (let i = 0, attr; (attr = mml.attributes[i]); i++) {
     if (['open', 'close', 'separators'].indexOf(attr.name) === -1) {
       newNode.setAttribute(attr.name, attr.value);

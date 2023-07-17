@@ -25,6 +25,7 @@ import * as DomUtil from '../common/dom_util.js';
 import { NamedSymbol, SemanticMap } from './semantic_attr.js';
 import {
   SemanticFont,
+  SemanticMeaning,
   SemanticRole,
   SemanticType,
   SemanticSecondary
@@ -158,7 +159,7 @@ export default class SemanticProcessor {
     ) {
       node.type = SemanticType.NUMBER;
     }
-    SemanticProcessor.numberRole_(node);
+    SemanticProcessor.meaningFromContent(node, SemanticProcessor.numberRole_);
     SemanticProcessor.exprFont_(node);
   }
 
@@ -766,18 +767,27 @@ export default class SemanticProcessor {
     };
   }
 
+  private static meaningFromContent(
+    node: SemanticNode,
+    func: (n: SemanticNode, c: string[], m: SemanticMeaning[]) => void) {
+    const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
+    func(node, content, meaning);
+  }
+
   // TODO: Make this a postprocessor, once locales are loaded.
   /**
    * Compute the role of a number if it does not have one already.
    *
    * @param node The semantic tree node.
    */
-  private static numberRole_(node: SemanticNode) {
+  private static numberRole_(
+    node: SemanticNode,
+    content: string[],
+    meaning: SemanticMeaning[]) {
     if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
-    const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
-    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     if (
       meaning.every(function (x) {
         return (
@@ -1188,10 +1198,12 @@ export default class SemanticProcessor {
    * @returns The new semantic text node.
    */
   public text(leaf: SemanticNode, type: string): SemanticNode {
-    // TODO (simons): Here check if there is already a type or if we can compute
-    // an interesting number role. Than use this.
     SemanticProcessor.exprFont_(leaf);
     leaf.type = SemanticType.TEXT;
+    if (type === 'ANNOTATION-XML') {
+      leaf.role = SemanticRole.ANNOTATION;
+      return leaf;
+    }
     if (type === 'MS') {
       leaf.role = SemanticRole.STRING;
       return leaf;
@@ -1200,8 +1212,11 @@ export default class SemanticProcessor {
       leaf.role = SemanticRole.SPACE;
       return leaf;
     }
-    // TODO (simons): Process single element in text. E.g., check if a text
-    //      element represents a function or a single letter, number, etc.
+    if (/\s/.exec(leaf.textContent)) {
+      leaf.role = SemanticRole.TEXT;
+      return leaf;
+    }
+    leaf.role = SemanticRole.UNKNOWN;
     return leaf;
   }
 
@@ -2137,32 +2152,131 @@ export default class SemanticProcessor {
    * @returns The new list of nodes.
    */
   private getTextInRow_(nodes: SemanticNode[]): SemanticNode[] {
-    if (nodes.length <= 1) {
+    if (nodes.length === 0) {
       return nodes;
     }
-    const partition = SemanticUtil.partitionNodes(nodes, (x) =>
+    if (nodes.length === 1) {
+      // TODO: This could be reclassified as TEXT once we know it is not a
+      //       label?
+      if (nodes[0].type === SemanticType.TEXT &&
+        nodes[0].role === SemanticRole.UNKNOWN) {
+        nodes[0].role = SemanticRole.ANNOTATION;
+      }
+      return nodes;
+    }
+    const {rel: rel, comp: comp} = SemanticUtil.partitionNodes(nodes, (x) =>
       SemanticPred.isType(x, SemanticType.TEXT)
     );
-    if (partition.rel.length === 0) {
+    if (rel.length === 0) {
       return nodes;
     }
     const result = [];
-    let nextComp = partition.comp[0];
-    // TODO: Properly collate punctuation: Add start and end punctuation to
-    // become
-    //       the punctuation content of the punctuated node. Consider spaces
-    //       separately.  This currently introduces too many invisible commas.
-    if (nextComp.length > 0) {
-      result.push(SemanticProcessor.getInstance().row(nextComp));
-    }
-    for (let i = 0, text; (text = partition.rel[i]); i++) {
-      result.push(text);
-      nextComp = partition.comp[i + 1];
-      if (nextComp.length > 0) {
-        result.push(SemanticProcessor.getInstance().row(nextComp));
+    let prevComp = comp.shift();
+    while (rel.length > 0) {
+      let currentRel = rel.shift();
+      let nextComp = comp.shift();
+      const text = [];
+      while (!nextComp.length && rel.length &&
+        // Don't destroy space separations.
+        currentRel.role !== SemanticRole.SPACE &&
+        rel[0].role !== SemanticRole.SPACE) {
+        text.push(currentRel);
+        currentRel = rel.shift();
+        nextComp = comp.shift();
       }
+      if (text.length) {
+        // Combine multiple text elements into one.
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        text.push(currentRel);
+        let dummy = SemanticProcessor.getInstance().dummyNode_(text);
+        // TODO: See if it already has a majority vote role.
+        // dummy.role = SemanticRole.ANNOTATION;
+        result.push(dummy);
+        prevComp = nextComp;
+        continue;
+      }
+      if (currentRel.role !== SemanticRole.UNKNOWN) {
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
+      }
+      const meaning = SemanticMap.Meaning.get(currentRel.textContent);
+      // Punctuation is considered to be regular text.
+      if (meaning.type === SemanticType.PUNCTUATION) {
+        currentRel.role = meaning.role;
+        currentRel.font = meaning.font;
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
+      }
+      if (meaning.type !== SemanticType.UNKNOWN) {
+        currentRel.type = meaning.type;
+        currentRel.role = meaning.role;
+        currentRel.font = meaning.font;
+        currentRel.addAnnotation('general', 'text');
+        prevComp.push(currentRel);
+        prevComp = prevComp.concat(nextComp);
+        continue;
+      }
+      SemanticProcessor.meaningFromContent(
+        currentRel,
+        (n: SemanticNode, c: string[], m: SemanticMeaning[]) => {
+          if (n.role !== SemanticRole.UNKNOWN) {
+            return;
+          }
+          SemanticProcessor.numberRole_(n, c, m);
+          // Type casting due to annoying overlap error.
+          if ((n as SemanticNode).role !== SemanticRole.OTHERNUMBER) {
+            n.type = SemanticType.NUMBER;
+            return;
+          }
+          if (m.some((x) => x.type !== SemanticType.NUMBER &&
+            x.type !== SemanticType.IDENTIFIER)) {
+            n.type = SemanticType.TEXT;
+            n.role = SemanticRole.ANNOTATION;
+            return;
+          }
+          n.role = SemanticRole.UNKNOWN;
+        });
+      if (currentRel.type === SemanticType.TEXT &&
+        currentRel.role !== SemanticRole.UNKNOWN) {
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
+      }
+      if (currentRel.role === SemanticRole.UNKNOWN) {
+        if (rel.length || nextComp.length) {
+          if (nextComp.length && nextComp[0].type === SemanticType.FENCED) {
+            currentRel.type = SemanticType.FUNCTION;
+            currentRel.role = SemanticRole.PREFIXFUNC;
+          } else {
+            currentRel.role = SemanticRole.TEXT;
+          }
+        } else {
+          currentRel.type = SemanticType.IDENTIFIER;
+          currentRel.role = SemanticRole.UNIT;
+        }
+      }
+      prevComp.push(currentRel);
+      prevComp = prevComp.concat(nextComp);
     }
-    return [SemanticProcessor.getInstance().dummyNode_(result)];
+    if (prevComp.length > 0) {
+      result.push(SemanticProcessor.getInstance().row(prevComp));
+    }
+    return result.length > 1 ?
+      [SemanticProcessor.getInstance().dummyNode_(result)] :
+      result;
   }
 
   /**

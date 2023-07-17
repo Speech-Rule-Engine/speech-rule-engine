@@ -1,0 +1,113 @@
+[{"locale": "ko"},
+ {
+    "key": "1D26",
+    "mappings": {
+      "default": {
+        "default": "작은 대문자 감마"
+      },
+      "mathspeak": {
+        "default": "작은 대문자 감마"
+      }
+    }
+  },
+  {
+    "key": "1D27",
+    "mappings": {
+      "default": {
+        "default": "작은 대문자 람다"
+      },
+      "mathspeak": {
+        "default": "작은 대문자 람다"
+      }
+    }
+  },
+  {
+    "key": "1D28",
+    "mappings": {
+      "default": {
+        "default": "작은 대문자 파이"
+      },
+      "mathspeak": {
+        "default": "작은 대문자 파이"
+      }
+    }
+  },
+  {
+    "key": "1D29",
+    "mappings": {
+      "default": {
+        "default": "작은 대문자 로"
+      },
+      "mathspeak": {
+        "default": "작은 대문자 로"
+      }
+    }
+  },
+  {
+    "key": "1D2A",
+    "mappings": {
+      "default": {
+        "default": "작은 대문자 프사이"
+      },
+      "mathspeak": {
+        "default": "작은 대문자 프사이"
+      }
+    }
+  },
+  {
+    "key": "1D5E",
+    "mappings": {
+      "default": {
+        "default": "위첨자 감마"
+      }
+    }
+  },
+  {
+    "key": "1D60",
+    "mappings": {
+      "default": {
+        "default": "위첨자 파이"
+      }
+    }
+  },
+  {
+    "key": "1D66",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 베타"
+      }
+    }
+  },
+  {
+    "key": "1D67",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 감마"
+      }
+    }
+  },
+  {
+    "key": "1D68",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 로"
+      }
+    }
+  },
+  {
+    "key": "1D69",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 파이"
+      }
+    }
+  },
+  {
+    "key": "1D6A",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 키"
+      }
+    }
+  }
+]
