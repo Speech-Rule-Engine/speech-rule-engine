@@ -21,6 +21,7 @@
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import * as StoreUtil from '../rule_engine/store_util.js';
 import * as MathspeakFrenchUtil from './mathspeak_french_util.js';
+import * as MathspeakKoreanUtil from './mathspeak_korean_util.js';
 import * as MathspeakUtil from './mathspeak_util.js';
 import * as NumbersUtil from './numbers_util.js';
 import * as SpeechRules from './speech_rules.js';
@@ -31,7 +32,8 @@ import * as UnitUtil from './unit_util.js';
  */
 export function MathspeakRules() {
   // Basic English
-  SpeechRules.addStore(DynamicCstr.BASE_LOCALE + '.speech.mathspeak', '', {
+  SpeechRules.addStore(
+    DynamicCstr.BASE_LOCALE + '.speech.mathspeak', '', {
     CQFspaceoutNumber: MathspeakUtil.spaceoutNumber,
 
     CQFspaceoutIdentifier: MathspeakUtil.spaceoutIdentifier,
@@ -100,26 +102,44 @@ export function MathspeakRules() {
 
   // Spanish
   SpeechRules.addStore(
-    'es.speech.mathspeak',
-    DynamicCstr.BASE_LOCALE + '.speech.mathspeak',
-    {
-      CTFunitMultipliers: UnitUtil.unitMultipliers,
-      CQFoneLeft: UnitUtil.oneLeft
-    }
-  );
+    'es.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
+    CTFunitMultipliers: UnitUtil.unitMultipliers,
+    CQFoneLeft: UnitUtil.oneLeft
+  });
 
   // French
   SpeechRules.addStore(
-    'fr.speech.mathspeak',
-    DynamicCstr.BASE_LOCALE + '.speech.mathspeak',
-    {
-      CSFbaselineVerbose: MathspeakFrenchUtil.baselineVerbose,
-      CSFbaselineBrief: MathspeakFrenchUtil.baselineBrief,
-      // Tensor specific:
-      CSFleftsuperscriptVerbose: MathspeakFrenchUtil.leftSuperscriptVerbose,
-      CSFleftsubscriptVerbose: MathspeakFrenchUtil.leftSubscriptVerbose,
-      CSFleftsuperscriptBrief: MathspeakFrenchUtil.leftSuperscriptBrief,
-      CSFleftsubscriptBrief: MathspeakFrenchUtil.leftSubscriptBrief
-    }
-  );
+    'fr.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
+    CSFbaselineVerbose: MathspeakFrenchUtil.baselineVerbose,
+    CSFbaselineBrief: MathspeakFrenchUtil.baselineBrief,
+    // Tensor specific:
+    CSFleftsuperscriptVerbose: MathspeakFrenchUtil.leftSuperscriptVerbose,
+    CSFleftsubscriptVerbose: MathspeakFrenchUtil.leftSubscriptVerbose,
+    CSFleftsuperscriptBrief: MathspeakFrenchUtil.leftSuperscriptBrief,
+    CSFleftsubscriptBrief: MathspeakFrenchUtil.leftSubscriptBrief
+  });
+
+  // Korean
+  SpeechRules.addStore(
+    'ko.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
+    CSFopenFracVerbose: MathspeakKoreanUtil.openingFractionVerbose,
+    CSFcloseFracVerbose: MathspeakKoreanUtil.closingFractionVerbose,
+    CSFopenFracBrief: MathspeakKoreanUtil.openingFractionBrief,
+    CSFcloseFracBrief: MathspeakKoreanUtil.closingFractionBrief,
+    CSFopenFracSbrief: MathspeakKoreanUtil.openingFractionSbrief,
+    CSFoverFracSbrief: MathspeakKoreanUtil.overFractionSbrief,
+    CSFcloseFracSbrief: MathspeakKoreanUtil.closingFractionSbrief,
+
+    CQFisSimpleIndex: MathspeakKoreanUtil.isSimpleIndex,
+    CSFindexRadicalVerbose: MathspeakKoreanUtil.indexRadicalVerbose,
+    CSFindexRadicalBrief: MathspeakKoreanUtil.indexRadicalBrief,
+    CSFindexRadicalSbrief: MathspeakKoreanUtil.indexRadicalSbrief,
+    
+    CSFopenRadicalVerbose: MathspeakKoreanUtil.openingRadicalVerbose,
+    CSFcloseRadicalVerbose: MathspeakKoreanUtil.closingRadicalVerbose,
+    CSFopenRadicalBrief: MathspeakKoreanUtil.openingRadicalBrief,
+    CSFcloseRadicalBrief: MathspeakKoreanUtil.closingRadicalBrief,
+    CSFopenRadicalSbrief: MathspeakKoreanUtil.openingRadicalSbrief
+  });
+
 }

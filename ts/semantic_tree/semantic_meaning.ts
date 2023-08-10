@@ -186,12 +186,13 @@ export const enum SemanticRole {
   STRING = 'string',
 
   SPACE = 'space',
+  ANNOTATION = 'annotation',
+  TEXT = 'text',
   // Punctuated elements.
   SEQUENCE = 'sequence',
   ENDPUNCT = 'endpunct',
   STARTPUNCT = 'startpunct',
 
-  TEXT = 'text',
   // Operators.
   NEGATIVE = 'negative',
   POSITIVE = 'positive',
