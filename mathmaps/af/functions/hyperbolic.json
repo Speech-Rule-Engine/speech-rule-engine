@@ -1,0 +1,101 @@
+[
+  {
+    "locale": "en"
+  },
+  {
+    "key": "cosh",
+    "mappings": {
+      "default": {
+        "default": "hyperbolic cosine"
+      }
+    }
+  },
+  {
+    "key": "coth",
+    "mappings": {
+      "default": {
+        "default": "hyperbolic cotangent"
+      }
+    }
+  },
+  {
+    "key": "csch",
+    "mappings": {
+      "default": {
+        "default": "hyperbolic cosecant"
+      }
+    }
+  },
+  {
+    "key": "sech",
+    "mappings": {
+      "default": {
+        "default": "hyperbolic secant"
+      }
+    }
+  },
+  {
+    "key": "sinh",
+    "mappings": {
+      "default": {
+        "default": "hyperbolic sine"
+      }
+    }
+  },
+  {
+    "key": "tanh",
+    "mappings": {
+      "default": {
+        "default": "hyperbolic tangent"
+      }
+    }
+  },
+  {
+    "key": "arcosh",
+    "mappings": {
+      "default": {
+        "default": "area hyperbolic cosine"
+      }
+    }
+  },
+  {
+    "key": "arcoth",
+    "mappings": {
+      "default": {
+        "default": "area hyperbolic cotangent"
+      }
+    }
+  },
+  {
+    "key": "arcsch",
+    "mappings": {
+      "default": {
+        "default": "area hyperbolic cosecant"
+      }
+    }
+  },
+  {
+    "key": "arsech",
+    "mappings": {
+      "default": {
+        "default": "area hyperbolic secant"
+      }
+    }
+  },
+  {
+    "key": "arsinh",
+    "mappings": {
+      "default": {
+        "default": "area hyperbolic sine"
+      }
+    }
+  },
+  {
+    "key": "artanh",
+    "mappings": {
+      "default": {
+        "default": "area hyperbolic tangent"
+      }
+    }
+  }
+]

@@ -1,0 +1,461 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "01D6",
+    "mappings": {
+      "default": {
+        "default": "u double overdot overbar"
+      }
+    }
+  },
+  {
+    "key": "01D8",
+    "mappings": {
+      "default": {
+        "default": "u double overdot acute"
+      }
+    }
+  },
+  {
+    "key": "01DA",
+    "mappings": {
+      "default": {
+        "default": "u double overdot caron"
+      }
+    }
+  },
+  {
+    "key": "01DC",
+    "mappings": {
+      "default": {
+        "default": "u double overdot grave"
+      }
+    }
+  },
+  {
+    "key": "01DF",
+    "mappings": {
+      "default": {
+        "default": "a double overdot overbar"
+      }
+    }
+  },
+  {
+    "key": "01E1",
+    "mappings": {
+      "default": {
+        "default": "a overdot overbar"
+      }
+    }
+  },
+  {
+    "key": "01ED",
+    "mappings": {
+      "default": {
+        "default": "o ogonek overbar"
+      }
+    }
+  },
+  {
+    "key": "01FB",
+    "mappings": {
+      "default": {
+        "default": "a ring above acute"
+      }
+    }
+  },
+  {
+    "key": "022B",
+    "mappings": {
+      "default": {
+        "default": "o double overdot overbar"
+      }
+    }
+  },
+  {
+    "key": "022D",
+    "mappings": {
+      "default": {
+        "default": "o tilde overbar"
+      }
+    }
+  },
+  {
+    "key": "0231",
+    "mappings": {
+      "default": {
+        "default": "o overdot overbar"
+      }
+    }
+  },
+  {
+    "key": "1E09",
+    "mappings": {
+      "default": {
+        "default": "c cedilla acute"
+      }
+    }
+  },
+  {
+    "key": "1E15",
+    "mappings": {
+      "default": {
+        "default": "e overbar grave"
+      }
+    }
+  },
+  {
+    "key": "1E17",
+    "mappings": {
+      "default": {
+        "default": "e overbar acute"
+      }
+    }
+  },
+  {
+    "key": "1E1D",
+    "mappings": {
+      "default": {
+        "default": "e cedilla breve"
+      }
+    }
+  },
+  {
+    "key": "1E2F",
+    "mappings": {
+      "default": {
+        "default": "i double overdot acute"
+      }
+    }
+  },
+  {
+    "key": "1E39",
+    "mappings": {
+      "default": {
+        "default": "l underdot overbar"
+      }
+    }
+  },
+  {
+    "key": "1E4D",
+    "mappings": {
+      "default": {
+        "default": "o tilde acute"
+      }
+    }
+  },
+  {
+    "key": "1E4F",
+    "mappings": {
+      "default": {
+        "default": "o tilde double overdot"
+      }
+    }
+  },
+  {
+    "key": "1E51",
+    "mappings": {
+      "default": {
+        "default": "o overbar grave"
+      }
+    }
+  },
+  {
+    "key": "1E53",
+    "mappings": {
+      "default": {
+        "default": "o overbar acute"
+      }
+    }
+  },
+  {
+    "key": "1E5D",
+    "mappings": {
+      "default": {
+        "default": "r underdot overbar"
+      }
+    }
+  },
+  {
+    "key": "1E65",
+    "mappings": {
+      "default": {
+        "default": "s acute overdot"
+      }
+    }
+  },
+  {
+    "key": "1E67",
+    "mappings": {
+      "default": {
+        "default": "s caron overdot"
+      }
+    }
+  },
+  {
+    "key": "1E69",
+    "mappings": {
+      "default": {
+        "default": "s underdot overdot"
+      }
+    }
+  },
+  {
+    "key": "1E79",
+    "mappings": {
+      "default": {
+        "default": "u tilde acute"
+      }
+    }
+  },
+  {
+    "key": "1E7B",
+    "mappings": {
+      "default": {
+        "default": "u overbar double overdot"
+      }
+    }
+  },
+  {
+    "key": "1EA5",
+    "mappings": {
+      "default": {
+        "default": "a hat acute"
+      }
+    }
+  },
+  {
+    "key": "1EA7",
+    "mappings": {
+      "default": {
+        "default": "a hat grave"
+      }
+    }
+  },
+  {
+    "key": "1EA9",
+    "mappings": {
+      "default": {
+        "default": "a hat hook above"
+      }
+    }
+  },
+  {
+    "key": "1EAB",
+    "mappings": {
+      "default": {
+        "default": "a hat tilde"
+      }
+    }
+  },
+  {
+    "key": "1EAD",
+    "mappings": {
+      "default": {
+        "default": "a hat underdot"
+      }
+    }
+  },
+  {
+    "key": "1EAF",
+    "mappings": {
+      "default": {
+        "default": "a breve acute"
+      }
+    }
+  },
+  {
+    "key": "1EB1",
+    "mappings": {
+      "default": {
+        "default": "a breve grave"
+      }
+    }
+  },
+  {
+    "key": "1EB3",
+    "mappings": {
+      "default": {
+        "default": "a breve hook above"
+      }
+    }
+  },
+  {
+    "key": "1EB5",
+    "mappings": {
+      "default": {
+        "default": "a breve tilde"
+      }
+    }
+  },
+  {
+    "key": "1EB7",
+    "mappings": {
+      "default": {
+        "default": "a breve underdot"
+      }
+    }
+  },
+  {
+    "key": "1EBF",
+    "mappings": {
+      "default": {
+        "default": "e hat acute"
+      }
+    }
+  },
+  {
+    "key": "1EC1",
+    "mappings": {
+      "default": {
+        "default": "e hat grave"
+      }
+    }
+  },
+  {
+    "key": "1EC3",
+    "mappings": {
+      "default": {
+        "default": "e hat hook above"
+      }
+    }
+  },
+  {
+    "key": "1EC5",
+    "mappings": {
+      "default": {
+        "default": "e hat tilde"
+      }
+    }
+  },
+  {
+    "key": "1EC7",
+    "mappings": {
+      "default": {
+        "default": "e hat underdot"
+      }
+    }
+  },
+  {
+    "key": "1ED1",
+    "mappings": {
+      "default": {
+        "default": "o hat acute"
+      }
+    }
+  },
+  {
+    "key": "1ED3",
+    "mappings": {
+      "default": {
+        "default": "o hat grave"
+      }
+    }
+  },
+  {
+    "key": "1ED5",
+    "mappings": {
+      "default": {
+        "default": "o hat hook above"
+      }
+    }
+  },
+  {
+    "key": "1ED7",
+    "mappings": {
+      "default": {
+        "default": "o hat tilde"
+      }
+    }
+  },
+  {
+    "key": "1ED9",
+    "mappings": {
+      "default": {
+        "default": "o hat underdot"
+      }
+    }
+  },
+  {
+    "key": "1EDB",
+    "mappings": {
+      "default": {
+        "default": "o acute prime"
+      }
+    }
+  },
+  {
+    "key": "1EDD",
+    "mappings": {
+      "default": {
+        "default": "o grave prime"
+      }
+    }
+  },
+  {
+    "key": "1EDF",
+    "mappings": {
+      "default": {
+        "default": "o hook above prime"
+      }
+    }
+  },
+  {
+    "key": "1EE1",
+    "mappings": {
+      "default": {
+        "default": "o tilde prime"
+      }
+    }
+  },
+  {
+    "key": "1EE3",
+    "mappings": {
+      "default": {
+        "default": "o underdot prime"
+      }
+    }
+  },
+  {
+    "key": "1EE9",
+    "mappings": {
+      "default": {
+        "default": "u acute prime"
+      }
+    }
+  },
+  {
+    "key": "1EEB",
+    "mappings": {
+      "default": {
+        "default": "u grave prime"
+      }
+    }
+  },
+  {
+    "key": "1EED",
+    "mappings": {
+      "default": {
+        "default": "u hook above prime"
+      }
+    }
+  },
+  {
+    "key": "1EEF",
+    "mappings": {
+      "default": {
+        "default": "u tilde prime"
+      }
+    }
+  },
+  {
+    "key": "1EF1",
+    "mappings": {
+      "default": {
+        "default": "u underdot prime"
+      }
+    }
+  }
+]

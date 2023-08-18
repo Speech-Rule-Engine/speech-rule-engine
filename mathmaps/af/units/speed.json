@@ -1,0 +1,41 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "kt",
+    "mappings": {
+      "default": {
+        "default": "knoop",
+        "plural": "knope"
+      }
+    }
+  },
+  {
+    "key": "mph",
+    "mappings": {
+      "default": {
+        "default": "myl per uur",
+        "plural": "miles per hour"
+      }
+    }
+  },
+  {
+    "key": "rpm",
+    "mappings": {
+      "default": {
+        "default": "revolusie per minuut",
+        "plural": "revolusies per minuut"
+      }
+    }
+  },
+  {
+    "key": "kmh",
+    "mappings": {
+      "default": {
+        "default": "kilometer per uur",
+        "plural": "kilometers per hour"
+      }
+    }
+  }
+]

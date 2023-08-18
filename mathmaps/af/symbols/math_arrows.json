@@ -1,0 +1,3209 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "2190",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow"
+      }
+    }
+  },
+  {
+    "key": "2191",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow"
+      }
+    }
+  },
+  {
+    "key": "2192",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow"
+      }
+    }
+  },
+  {
+    "key": "2193",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow"
+      }
+    }
+  },
+  {
+    "key": "2194",
+    "mappings": {
+      "default": {
+        "default": "links regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L R arrow"
+      }
+    }
+  },
+  {
+    "key": "2195",
+    "mappings": {
+      "default": {
+        "default": "op af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U D arrow"
+      }
+    }
+  },
+  {
+    "key": "2196",
+    "mappings": {
+      "default": {
+        "default": "op links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U L arrow"
+      }
+    }
+  },
+  {
+    "key": "2197",
+    "mappings": {
+      "default": {
+        "default": "op regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U R arrow"
+      }
+    }
+  },
+  {
+    "key": "2198",
+    "mappings": {
+      "default": {
+        "default": "af regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D R arrow"
+      }
+    }
+  },
+  {
+    "key": "2199",
+    "mappings": {
+      "default": {
+        "default": "af links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D L arrow"
+      }
+    }
+  },
+  {
+    "key": "219A",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met streep"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with stroke"
+      }
+    }
+  },
+  {
+    "key": "219B",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met streep"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with stroke"
+      }
+    }
+  },
+  {
+    "key": "219C",
+    "mappings": {
+      "default": {
+        "default": "links golfpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L wave arrow"
+      }
+    }
+  },
+  {
+    "key": "219D",
+    "mappings": {
+      "default": {
+        "default": "regs golfpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R wave arrow"
+      }
+    }
+  },
+  {
+    "key": "219E",
+    "mappings": {
+      "default": {
+        "default": "tweekop links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "two headed L arrow"
+      }
+    }
+  },
+  {
+    "key": "219F",
+    "mappings": {
+      "default": {
+        "default": "tweekop op pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "two headed U arrow"
+      }
+    }
+  },
+  {
+    "key": "21A0",
+    "mappings": {
+      "default": {
+        "default": "tweekop regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "two headed R arrow"
+      }
+    }
+  },
+  {
+    "key": "21A1",
+    "mappings": {
+      "default": {
+        "default": "tweekop af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "two headed D arrow"
+      }
+    }
+  },
+  {
+    "key": "21A2",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met stert"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with tail"
+      }
+    }
+  },
+  {
+    "key": "21A3",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met stert"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with tail"
+      }
+    }
+  },
+  {
+    "key": "21A4",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "21A5",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "21A6",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "21A7",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "21A8",
+    "mappings": {
+      "default": {
+        "default": "op af pyltjie met basis"
+      },
+      "mathspeak": {
+        "sbrief": "U D arrow with base"
+      }
+    }
+  },
+  {
+    "key": "21A9",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met haak"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with hook"
+      }
+    }
+  },
+  {
+    "key": "21AA",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met haak"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with hook"
+      }
+    }
+  },
+  {
+    "key": "21AB",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met lus"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with loop"
+      }
+    }
+  },
+  {
+    "key": "21AC",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met lus"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with loop"
+      }
+    }
+  },
+  {
+    "key": "21AD",
+    "mappings": {
+      "default": {
+        "default": "links regs golfpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L R wave arrow"
+      }
+    }
+  },
+  {
+    "key": "21AE",
+    "mappings": {
+      "default": {
+        "default": "links regs pyltjie met streep"
+      },
+      "mathspeak": {
+        "sbrief": "L R arrow with stroke"
+      }
+    }
+  },
+  {
+    "key": "21AF",
+    "mappings": {
+      "default": {
+        "default": "af heen en weer pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D zigzag arrow"
+      }
+    }
+  },
+  {
+    "key": "21B0",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie met punt links"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow with tip left"
+      }
+    }
+  },
+  {
+    "key": "21B1",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie met punt regs"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow with tip right"
+      }
+    }
+  },
+  {
+    "key": "21B2",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie met punt links"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow with tip left"
+      }
+    }
+  },
+  {
+    "key": "21B3",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie met punt regs"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow with tip right"
+      }
+    }
+  },
+  {
+    "key": "21B4",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met hoek ondertoe"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with corner down"
+      }
+    }
+  },
+  {
+    "key": "21B5",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie met hoek links"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow with corner left"
+      }
+    }
+  },
+  {
+    "key": "21B6",
+    "mappings": {
+      "default": {
+        "default": "antikloksgewyse boontoe halfsirkel pyltjie"
+      }
+    }
+  },
+  {
+    "key": "21B7",
+    "mappings": {
+      "default": {
+        "default": "kloksgewyse boontoe halfsirkel pyltjie"
+      }
+    }
+  },
+  {
+    "key": "21B8",
+    "mappings": {
+      "default": {
+        "default": "op links pyltjie na lang staaf"
+      },
+      "mathspeak": {
+        "sbrief": "U L arrow to long bar"
+      }
+    }
+  },
+  {
+    "key": "21B9",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie na staaf oor regs pyltjie na staaf"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow to bar over R arrow to bar"
+      }
+    }
+  },
+  {
+    "key": "21BA",
+    "mappings": {
+      "default": {
+        "default": "antikloksgewyse oop sirkel pyltjie"
+      }
+    }
+  },
+  {
+    "key": "21BB",
+    "mappings": {
+      "default": {
+        "default": "kloksgewyse oop sirkel pyltjie"
+      }
+    }
+  },
+  {
+    "key": "21C4",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie oor links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow over L arrow"
+      }
+    }
+  },
+  {
+    "key": "21C5",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie links van af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow L of D arrow"
+      }
+    }
+  },
+  {
+    "key": "21C6",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie oor regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow over R arrow"
+      }
+    }
+  },
+  {
+    "key": "21C7",
+    "mappings": {
+      "default": {
+        "default": "links gepaarde pyltjies"
+      },
+      "mathspeak": {
+        "sbrief": "L paired arrows"
+      }
+    }
+  },
+  {
+    "key": "21C8",
+    "mappings": {
+      "default": {
+        "default": "op gepaarde pyltjies"
+      },
+      "mathspeak": {
+        "sbrief": "U paired arrows"
+      }
+    }
+  },
+  {
+    "key": "21C9",
+    "mappings": {
+      "default": {
+        "default": "regs gepaarde pyltjies"
+      },
+      "mathspeak": {
+        "sbrief": "R paired arrows"
+      }
+    }
+  },
+  {
+    "key": "21CA",
+    "mappings": {
+      "default": {
+        "default": "af gepaarde pyltjies"
+      },
+      "mathspeak": {
+        "sbrief": "D paired arrows"
+      }
+    }
+  },
+  {
+    "key": "21CD",
+    "mappings": {
+      "default": {
+        "default": "links dubbelpyltjie met streep"
+      },
+      "mathspeak": {
+        "sbrief": "L double arrow with stroke"
+      }
+    }
+  },
+  {
+    "key": "21CE",
+    "mappings": {
+      "default": {
+        "default": "links regs dubbelpyltjie met streep"
+      },
+      "mathspeak": {
+        "sbrief": "L R double arrow with stroke"
+      }
+    }
+  },
+  {
+    "key": "21CF",
+    "mappings": {
+      "default": {
+        "default": "regs dubbelpyltjie met streep"
+      },
+      "mathspeak": {
+        "sbrief": "R double arrow with stroke"
+      }
+    }
+  },
+  {
+    "key": "21D0",
+    "mappings": {
+      "default": {
+        "default": "links dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D1",
+    "mappings": {
+      "default": {
+        "default": "op dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D2",
+    "mappings": {
+      "default": {
+        "default": "regs dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D3",
+    "mappings": {
+      "default": {
+        "default": "af dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D4",
+    "mappings": {
+      "default": {
+        "default": "links regs dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L R double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D5",
+    "mappings": {
+      "default": {
+        "default": "op af dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U D double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D6",
+    "mappings": {
+      "default": {
+        "default": "op links dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U L double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D7",
+    "mappings": {
+      "default": {
+        "default": "op regs dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U R double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D8",
+    "mappings": {
+      "default": {
+        "default": "af regs dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D R double arrow"
+      }
+    }
+  },
+  {
+    "key": "21D9",
+    "mappings": {
+      "default": {
+        "default": "af links dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D L double arrow"
+      }
+    }
+  },
+  {
+    "key": "21DA",
+    "mappings": {
+      "default": {
+        "default": "links trippelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L triple arrow"
+      }
+    }
+  },
+  {
+    "key": "21DB",
+    "mappings": {
+      "default": {
+        "default": "regs trippelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R triple arrow"
+      }
+    }
+  },
+  {
+    "key": "21DC",
+    "mappings": {
+      "default": {
+        "default": "links kronkelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L squiggle arrow"
+      }
+    }
+  },
+  {
+    "key": "21DD",
+    "mappings": {
+      "default": {
+        "default": "regs kronkelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R squiggle arrow"
+      }
+    }
+  },
+  {
+    "key": "21DE",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie met dubbelstreep"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow with double stroke"
+      }
+    }
+  },
+  {
+    "key": "21DF",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie met dubbelstreep"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow with double stroke"
+      }
+    }
+  },
+  {
+    "key": "21E0",
+    "mappings": {
+      "default": {
+        "default": "links koppeltekenpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L dashed arrow"
+      }
+    }
+  },
+  {
+    "key": "21E1",
+    "mappings": {
+      "default": {
+        "default": "op koppeltekenpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U dashed arrow"
+      }
+    }
+  },
+  {
+    "key": "21E2",
+    "mappings": {
+      "default": {
+        "default": "regs koppeltekenpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R dashed arrow"
+      }
+    }
+  },
+  {
+    "key": "21E3",
+    "mappings": {
+      "default": {
+        "default": "af koppeltekenpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D dashed arrow"
+      }
+    }
+  },
+  {
+    "key": "21E4",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie na staaf"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow to bar"
+      }
+    }
+  },
+  {
+    "key": "21E5",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie na staaf"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow to bar"
+      }
+    }
+  },
+  {
+    "key": "21E6",
+    "mappings": {
+      "default": {
+        "default": "wit links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white L arrow"
+      }
+    }
+  },
+  {
+    "key": "21E7",
+    "mappings": {
+      "default": {
+        "default": "wit op pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white U arrow"
+      }
+    }
+  },
+  {
+    "key": "21E8",
+    "mappings": {
+      "default": {
+        "default": "wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white R arrow"
+      }
+    }
+  },
+  {
+    "key": "21E9",
+    "mappings": {
+      "default": {
+        "default": "wit af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white D arrow"
+      }
+    }
+  },
+  {
+    "key": "21EA",
+    "mappings": {
+      "default": {
+        "default": "wit op pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "white U arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "21EB",
+    "mappings": {
+      "default": {
+        "default": "wit op pyltjie op staander"
+      },
+      "mathspeak": {
+        "sbrief": "white U arrow on pedestal"
+      }
+    }
+  },
+  {
+    "key": "21EC",
+    "mappings": {
+      "default": {
+        "default": "wit op pyltjie op staander met horisontale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "white U arrow on pedestal with horizontal bar"
+      }
+    }
+  },
+  {
+    "key": "21ED",
+    "mappings": {
+      "default": {
+        "default": "wit op pyltjie op staander met vertikale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "white U arrow on pedestal with vertical bar"
+      }
+    }
+  },
+  {
+    "key": "21EE",
+    "mappings": {
+      "default": {
+        "default": "wit dubbel op pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white double U arrow"
+      }
+    }
+  },
+  {
+    "key": "21EF",
+    "mappings": {
+      "default": {
+        "default": "wit dubbel op pyltjie op staander"
+      },
+      "mathspeak": {
+        "sbrief": "white double U arrow on pedestal"
+      }
+    }
+  },
+  {
+    "key": "21F0",
+    "mappings": {
+      "default": {
+        "default": "wit regs pyltjie vanaf muur"
+      },
+      "mathspeak": {
+        "sbrief": "white R arrow from wall"
+      }
+    }
+  },
+  {
+    "key": "21F1",
+    "mappings": {
+      "default": {
+        "default": "noordwes pyltjie na hoek"
+      }
+    }
+  },
+  {
+    "key": "21F2",
+    "mappings": {
+      "default": {
+        "default": "suidoos pyltjie na hoek"
+      }
+    }
+  },
+  {
+    "key": "21F3",
+    "mappings": {
+      "default": {
+        "default": "op af wit pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U D white arrow"
+      }
+    }
+  },
+  {
+    "key": "21F4",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met klein sirkel"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with small circle"
+      }
+    }
+  },
+  {
+    "key": "21F5",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie links van op pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow L of U arrow"
+      }
+    }
+  },
+  {
+    "key": "21F6",
+    "mappings": {
+      "default": {
+        "default": "drie regs pyltjies"
+      },
+      "mathspeak": {
+        "sbrief": "three R arrows"
+      }
+    }
+  },
+  {
+    "key": "21F7",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met vertikale  lyn"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "21F8",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met vertikale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "21F9",
+    "mappings": {
+      "default": {
+        "default": "links regs pyltjie met vertikale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "L R arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "21FA",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met dubbel vertikale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "21FB",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met dubbel vertikale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "21FC",
+    "mappings": {
+      "default": {
+        "default": "links regs pyltjie met dubbel vertikale lyn"
+      },
+      "mathspeak": {
+        "sbrief": "L R arrow with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "21FD",
+    "mappings": {
+      "default": {
+        "default": "links oopkop pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L open headed arrow"
+      }
+    }
+  },
+  {
+    "key": "21FE",
+    "mappings": {
+      "default": {
+        "default": "regs oopkop pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "r open headed arrow"
+      }
+    }
+  },
+  {
+    "key": "21FF",
+    "mappings": {
+      "default": {
+        "default": "links regs oopkop pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L R open headed arrow"
+      }
+    }
+  },
+  {
+    "key": "2301",
+    "mappings": {
+      "default": {
+        "default": "elektrisiteit pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2303",
+    "mappings": {
+      "default": {
+        "default": "op pylkop"
+      },
+      "mathspeak": {
+        "sbrief": "U arrowhead"
+      }
+    }
+  },
+  {
+    "key": "2304",
+    "mappings": {
+      "default": {
+        "default": "af pylkop"
+      },
+      "mathspeak": {
+        "sbrief": "D arrowhead"
+      }
+    }
+  },
+  {
+    "key": "2324",
+    "mappings": {
+      "default": {
+        "default": "op pylkop tussen twee horisontale lyne",
+        "alternative": "enter key"
+      },
+      "mathspeak": {
+        "sbrief": "U arrowhead between two horizontal bars"
+      }
+    }
+  },
+  {
+    "key": "238B",
+    "mappings": {
+      "default": {
+        "default": "gebroke sirkel met noordwes pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2794",
+    "mappings": {
+      "default": {
+        "default": "swaar wye regs pyltjie met kop"
+      },
+      "mathspeak": {
+        "sbrief": "heavy wide headed R arrow"
+      }
+    }
+  },
+  {
+    "key": "2798",
+    "mappings": {
+      "default": {
+        "default": "swaar af regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy D R arrow"
+      }
+    }
+  },
+  {
+    "key": "2799",
+    "mappings": {
+      "default": {
+        "default": "swaar regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy R arrow"
+      }
+    }
+  },
+  {
+    "key": "279A",
+    "mappings": {
+      "default": {
+        "default": "swaar op regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy U R arrow"
+      }
+    }
+  },
+  {
+    "key": "279B",
+    "mappings": {
+      "default": {
+        "default": "tekenpunt regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "drafting point R arrow"
+      }
+    }
+  },
+  {
+    "key": "279C",
+    "mappings": {
+      "default": {
+        "default": "swaar rondepunt regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy round tipped R arrow"
+      }
+    }
+  },
+  {
+    "key": "279D",
+    "mappings": {
+      "default": {
+        "default": "driehoek regs pyltjie met kop"
+      },
+      "mathspeak": {
+        "sbrief": "triangle headed R arrow"
+      }
+    }
+  },
+  {
+    "key": "279E",
+    "mappings": {
+      "default": {
+        "default": "swaar driehoek regs pyltjie met kop"
+      },
+      "mathspeak": {
+        "sbrief": "heavy triangle headed R arrow"
+      }
+    }
+  },
+  {
+    "key": "279F",
+    "mappings": {
+      "default": {
+        "default": "koppelteken driehoek regs pyltjie met kop"
+      },
+      "mathspeak": {
+        "sbrief": "dashed triangle headed R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A0",
+    "mappings": {
+      "default": {
+        "default": "swaar koppelteken driehoek regs pyltjie met kop"
+      },
+      "mathspeak": {
+        "sbrief": "heavy dashed triangle headed R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A1",
+    "mappings": {
+      "default": {
+        "default": "swart regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "black R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A2",
+    "mappings": {
+      "default": {
+        "default": "drie d bo verligte pylkop"
+      },
+      "mathspeak": {
+        "sbrief": "three d top lighted R arrowhead"
+      }
+    }
+  },
+  {
+    "key": "27A3",
+    "mappings": {
+      "default": {
+        "default": "drie d onderverligte regs pylkop"
+      },
+      "mathspeak": {
+        "sbrief": "three d bottom lighted R arrowhead"
+      }
+    }
+  },
+  {
+    "key": "27A4",
+    "mappings": {
+      "default": {
+        "default": "swart regs pylkop"
+      },
+      "mathspeak": {
+        "sbrief": "black R arrowhead"
+      }
+    }
+  },
+  {
+    "key": "27A5",
+    "mappings": {
+      "default": {
+        "default": "swaar swart gekurwde af en regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy black curved D and R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A6",
+    "mappings": {
+      "default": {
+        "default": "swaar gekurwde op en regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy black curved U and R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A7",
+    "mappings": {
+      "default": {
+        "default": "saamgedrukte swart regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "squat black R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A8",
+    "mappings": {
+      "default": {
+        "default": "swaar konkaafgepunte regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy concave pointed black R arrow"
+      }
+    }
+  },
+  {
+    "key": "27A9",
+    "mappings": {
+      "default": {
+        "default": "regs geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "right shaded white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27AA",
+    "mappings": {
+      "default": {
+        "default": "links geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "left shaded white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27AB",
+    "mappings": {
+      "default": {
+        "default": "terugleunende geskakeerde wit  regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "back tilted shadowed white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27AC",
+    "mappings": {
+      "default": {
+        "default": "vooroor leunende geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "front tilted shadowed white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27AD",
+    "mappings": {
+      "default": {
+        "default": "swaar laer regs geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy lower right shadowed white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27AE",
+    "mappings": {
+      "default": {
+        "default": "swaar boonste regs geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy upper right shadowed white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27AF",
+    "mappings": {
+      "default": {
+        "default": "getande laer regs geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "notched lower right shadowed white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B1",
+    "mappings": {
+      "default": {
+        "default": "getande boonste regs geskakeerde wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "notched upper right shadowed white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B2",
+    "mappings": {
+      "default": {
+        "default": "omkringde swaar wit regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "circled heavy white R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B3",
+    "mappings": {
+      "default": {
+        "default": "wit geveerde regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white feathered R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B4",
+    "mappings": {
+      "default": {
+        "default": "swart geveerde af regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "black feathered D R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B5",
+    "mappings": {
+      "default": {
+        "default": "swart geveerde regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "black feathered R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B6",
+    "mappings": {
+      "default": {
+        "default": "swart geveerde op regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "black feathered U R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B7",
+    "mappings": {
+      "default": {
+        "default": "swaar swart geveerde af regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy black feathered D R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B8",
+    "mappings": {
+      "default": {
+        "default": "swaar swart geveerde regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy black feathered R arrow"
+      }
+    }
+  },
+  {
+    "key": "27B9",
+    "mappings": {
+      "default": {
+        "default": "swaar swart geveerde op regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy black feathered U R arrow"
+      }
+    }
+  },
+  {
+    "key": "27BA",
+    "mappings": {
+      "default": {
+        "default": "traandruppel stekelrige regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "teardrop barbed R arrow"
+      }
+    }
+  },
+  {
+    "key": "27BB",
+    "mappings": {
+      "default": {
+        "default": "swaar traandruppel geskenkelde regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy teardrop shanked R arrow"
+      }
+    }
+  },
+  {
+    "key": "27BC",
+    "mappings": {
+      "default": {
+        "default": "wigstert regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "wedge tailed R arrow"
+      }
+    }
+  },
+  {
+    "key": "27BD",
+    "mappings": {
+      "default": {
+        "default": "swaar wigstert regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "heavy wedge tailed R arrow"
+      }
+    }
+  },
+  {
+    "key": "27BE",
+    "mappings": {
+      "default": {
+        "default": "oop buitelyn regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "open outlined R arrow"
+      }
+    }
+  },
+  {
+    "key": "27F0",
+    "mappings": {
+      "default": {
+        "default": "op vierdubbelle pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U quadruple arrow"
+      }
+    }
+  },
+  {
+    "key": "27F1",
+    "mappings": {
+      "default": {
+        "default": "af vierdubbele pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D quadrule arrow"
+      }
+    }
+  },
+  {
+    "key": "27F2",
+    "mappings": {
+      "default": {
+        "default": "antikloksgewyse sirkel pyltjie met gapings"
+      }
+    }
+  },
+  {
+    "key": "27F3",
+    "mappings": {
+      "default": {
+        "default": "kloksgewyse sirkel pyltjie met gapings"
+      }
+    }
+  },
+  {
+    "key": "27F4",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met omkringde plus"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with circled plus"
+      }
+    }
+  },
+  {
+    "key": "27F5",
+    "mappings": {
+      "default": {
+        "default": "lang links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long L arrow"
+      }
+    }
+  },
+  {
+    "key": "27F6",
+    "mappings": {
+      "default": {
+        "default": "lang regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long R arrow"
+      }
+    }
+  },
+  {
+    "key": "27F7",
+    "mappings": {
+      "default": {
+        "default": "lang links regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long L R arrow"
+      }
+    }
+  },
+  {
+    "key": "27F8",
+    "mappings": {
+      "default": {
+        "default": "lang links dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long l double arrow"
+      }
+    }
+  },
+  {
+    "key": "27F9",
+    "mappings": {
+      "default": {
+        "default": "lang regs dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long R double arrow"
+      }
+    }
+  },
+  {
+    "key": "27FA",
+    "mappings": {
+      "default": {
+        "default": "lang links regs dubbelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long L R double arrow"
+      }
+    }
+  },
+  {
+    "key": "27FB",
+    "mappings": {
+      "default": {
+        "default": "lang links pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "long L arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "27FC",
+    "mappings": {
+      "default": {
+        "default": "lang regs pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "long R arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "27FD",
+    "mappings": {
+      "default": {
+        "default": "lang links pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "long l double arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "27FE",
+    "mappings": {
+      "default": {
+        "default": "lang regs dubbelpyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "long R double arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "27FF",
+    "mappings": {
+      "default": {
+        "default": "lang regs kronkelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long r squiggle arrow"
+      }
+    }
+  },
+  {
+    "key": "2900",
+    "mappings": {
+      "default": {
+        "default": "tweekoppige regs pyltjie met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "two headed R arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2901",
+    "mappings": {
+      "default": {
+        "default": "tweekoppige regs pyltjie met dubbel vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "two headed R arrow with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2902",
+    "mappings": {
+      "default": {
+        "default": "dubbel links pyltjie met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "double L arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2903",
+    "mappings": {
+      "default": {
+        "default": "dubbel regs pyltjie met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "double R arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2904",
+    "mappings": {
+      "default": {
+        "default": "dubbel links regs pyltjie met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "double L R arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2905",
+    "mappings": {
+      "default": {
+        "default": "tweekoppige regs pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "two headed R arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "2906",
+    "mappings": {
+      "default": {
+        "default": "dubbel links pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "double L arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "2907",
+    "mappings": {
+      "default": {
+        "default": "dubbel regs pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "double R arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "2908",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie met horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "2909",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie met horisontale streep"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow with horizontal stroke"
+      }
+    }
+  },
+  {
+    "key": "290A",
+    "mappings": {
+      "default": {
+        "default": "op trippelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U triple arrow"
+      }
+    }
+  },
+  {
+    "key": "290B",
+    "mappings": {
+      "default": {
+        "default": "af trippelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D triple arrow"
+      }
+    }
+  },
+  {
+    "key": "290C",
+    "mappings": {
+      "default": {
+        "default": "links dubbelkoppelteken pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L double dash arrow"
+      }
+    }
+  },
+  {
+    "key": "290D",
+    "mappings": {
+      "default": {
+        "default": "regs dubbelkoppelteken pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R double dash arrow"
+      }
+    }
+  },
+  {
+    "key": "290E",
+    "mappings": {
+      "default": {
+        "default": "links trippelkoppelteken pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L triple dash arrow"
+      }
+    }
+  },
+  {
+    "key": "290F",
+    "mappings": {
+      "default": {
+        "default": "regs trippelkoppelteken pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "r triple dash arrow"
+      }
+    }
+  },
+  {
+    "key": "2910",
+    "mappings": {
+      "default": {
+        "default": "regs tweekoppige trippelkoppelteken pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "r two headed triple dash arrow"
+      }
+    }
+  },
+  {
+    "key": "2911",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met kolletjie steel"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with dotted stem"
+      }
+    }
+  },
+  {
+    "key": "2912",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie na staaf"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow to bar"
+      }
+    }
+  },
+  {
+    "key": "2913",
+    "mappings": {
+      "default": {
+        "default": "af pyltjie na staaf"
+      },
+      "mathspeak": {
+        "sbrief": "D arrow to bar"
+      }
+    }
+  },
+  {
+    "key": "2914",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met stert met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with tail with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2915",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met stert met dubbelvertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with tail with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2916",
+    "mappings": {
+      "default": {
+        "default": "regs tweekoppige pyltjie met stert"
+      },
+      "mathspeak": {
+        "sbrief": "R two headed arrow with tail"
+      }
+    }
+  },
+  {
+    "key": "2917",
+    "mappings": {
+      "default": {
+        "default": "regs tweekoppige pyltjie met stert met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "R two headed arrow with tail with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2918",
+    "mappings": {
+      "default": {
+        "default": "regs tweekoppige pyltjie met stert met dubbelvertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "R two headed arrow with tail with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2919",
+    "mappings": {
+      "default": {
+        "default": "links pylstert"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow tail"
+      }
+    }
+  },
+  {
+    "key": "291A",
+    "mappings": {
+      "default": {
+        "default": "regs pylstert"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow tail"
+      }
+    }
+  },
+  {
+    "key": "291B",
+    "mappings": {
+      "default": {
+        "default": "links dubbel pylstert"
+      },
+      "mathspeak": {
+        "sbrief": "L double arrow tail"
+      }
+    }
+  },
+  {
+    "key": "291C",
+    "mappings": {
+      "default": {
+        "default": "regs dubbel pylstert"
+      },
+      "mathspeak": {
+        "sbrief": "R double arrow tail"
+      }
+    }
+  },
+  {
+    "key": "291D",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie na swart diamand"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow to black diamond"
+      }
+    }
+  },
+  {
+    "key": "291E",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie na swart diamand"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow to black diamond"
+      }
+    }
+  },
+  {
+    "key": "291F",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie vanaf staaf na swart diamand"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow from bar to black diamond"
+      }
+    }
+  },
+  {
+    "key": "2920",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie vanaf staaf na swart diamand"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow from bar to black diamond"
+      }
+    }
+  },
+  {
+    "key": "2921",
+    "mappings": {
+      "default": {
+        "default": "noordwes en suidoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2922",
+    "mappings": {
+      "default": {
+        "default": "noordoos en suidwes pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2923",
+    "mappings": {
+      "default": {
+        "default": "noordwes pyltjie met haak"
+      }
+    }
+  },
+  {
+    "key": "2924",
+    "mappings": {
+      "default": {
+        "default": "noordoos pyltjie met haak"
+      }
+    }
+  },
+  {
+    "key": "2925",
+    "mappings": {
+      "default": {
+        "default": "suidoos pyltjie met haak"
+      }
+    }
+  },
+  {
+    "key": "2926",
+    "mappings": {
+      "default": {
+        "default": "suidwes pyltjie met haak"
+      }
+    }
+  },
+  {
+    "key": "2927",
+    "mappings": {
+      "default": {
+        "default": "noordwes pyltjie en noordoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2928",
+    "mappings": {
+      "default": {
+        "default": "noordoos pyltjie en suidoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2929",
+    "mappings": {
+      "default": {
+        "default": "suidoos pyltjie en suidwes pyltjie"
+      }
+    }
+  },
+  {
+    "key": "292A",
+    "mappings": {
+      "default": {
+        "default": "suidwes pyltjie en noordwes pyltjie"
+      }
+    }
+  },
+  {
+    "key": "292D",
+    "mappings": {
+      "default": {
+        "default": "suidoos pyltjie kruis noordoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "292E",
+    "mappings": {
+      "default": {
+        "default": "noordoos pyltjie kruis suidoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "292F",
+    "mappings": {
+      "default": {
+        "default": "afwaartse diagonaal kruis noordoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2930",
+    "mappings": {
+      "default": {
+        "default": "opwaartse diagonaal kruis suidoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2931",
+    "mappings": {
+      "default": {
+        "default": "noordoos pyltjie kruis noordwes pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2932",
+    "mappings": {
+      "default": {
+        "default": "noordwes pyltjie kruis noordoos pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2933",
+    "mappings": {
+      "default": {
+        "default": "golfpyltjie direk na regs"
+      }
+    }
+  },
+  {
+    "key": "2934",
+    "mappings": {
+      "default": {
+        "default": "pyltjie na regs en buig opwaarts"
+      }
+    }
+  },
+  {
+    "key": "2935",
+    "mappings": {
+      "default": {
+        "default": "pyltjie na regs en buig af"
+      }
+    }
+  },
+  {
+    "key": "2936",
+    "mappings": {
+      "default": {
+        "default": "pyltjie af en buig links"
+      }
+    }
+  },
+  {
+    "key": "2937",
+    "mappings": {
+      "default": {
+        "default": "pyltjie af en buig regs"
+      }
+    }
+  },
+  {
+    "key": "2938",
+    "mappings": {
+      "default": {
+        "default": "regsom boog kloksgewyse pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R side arc clockwise arrow"
+      }
+    }
+  },
+  {
+    "key": "2939",
+    "mappings": {
+      "default": {
+        "default": "linksom boog antikloksgewyse pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L side arc anticlockwise arrow"
+      }
+    }
+  },
+  {
+    "key": "293A",
+    "mappings": {
+      "default": {
+        "default": "boonste boog antikloksgewyse pyltjie"
+      }
+    }
+  },
+  {
+    "key": "293B",
+    "mappings": {
+      "default": {
+        "default": "onderste boog antikloksgewyse pyltjie"
+      }
+    }
+  },
+  {
+    "key": "293C",
+    "mappings": {
+      "default": {
+        "default": "boonste boog antikloksgewyse pyltjie met minus"
+      }
+    }
+  },
+  {
+    "key": "293D",
+    "mappings": {
+      "default": {
+        "default": "boonste boog antikloksgewyse pyltjie met plus"
+      }
+    }
+  },
+  {
+    "key": "293E",
+    "mappings": {
+      "default": {
+        "default": "af regs semisirkel kloksgewyse pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D R semicircular clockwise arrow"
+      }
+    }
+  },
+  {
+    "key": "293F",
+    "mappings": {
+      "default": {
+        "default": "af links semisirkel antikloksgewyse pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D L semicircular anticlockwise arrow"
+      }
+    }
+  },
+  {
+    "key": "2940",
+    "mappings": {
+      "default": {
+        "default": "antikloksgewyse toe sirkel pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2941",
+    "mappings": {
+      "default": {
+        "default": "kloksgewyse toe sirkel pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2942",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie bokant kort links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow above short L arrow"
+      }
+    }
+  },
+  {
+    "key": "2943",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie bokant kort regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow above short R arrow"
+      }
+    }
+  },
+  {
+    "key": "2944",
+    "mappings": {
+      "default": {
+        "default": "kort regs pyltjie bokant links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "short R arrow above L arrow"
+      }
+    }
+  },
+  {
+    "key": "2945",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met plus onder"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with plus below"
+      }
+    }
+  },
+  {
+    "key": "2946",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met plus onder"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with plus below"
+      }
+    }
+  },
+  {
+    "key": "2947",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie deur x"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow through x"
+      }
+    }
+  },
+  {
+    "key": "2948",
+    "mappings": {
+      "default": {
+        "default": "links regs pyltjie deur klein sirkel"
+      },
+      "mathspeak": {
+        "sbrief": "L R arrow through small circle"
+      }
+    }
+  },
+  {
+    "key": "2949",
+    "mappings": {
+      "default": {
+        "default": "op tweekoppige pyltjie vanaf klein sirkel"
+      },
+      "mathspeak": {
+        "sbrief": "U two headed arrow from small circle"
+      }
+    }
+  },
+  {
+    "key": "2970",
+    "mappings": {
+      "default": {
+        "default": "regs dubbelpyltjie met geronde kop"
+      },
+      "mathspeak": {
+        "sbrief": "R double arrow with rounded head"
+      }
+    }
+  },
+  {
+    "key": "2971",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan bokant regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "equals sign above R arrow"
+      }
+    }
+  },
+  {
+    "key": "2972",
+    "mappings": {
+      "default": {
+        "default": "tilde bokant regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "tilde operator above R arrow"
+      }
+    }
+  },
+  {
+    "key": "2973",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie bokant tilde"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow above tilde operator"
+      }
+    }
+  },
+  {
+    "key": "2974",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie bokant tilde"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow above tilde operator"
+      }
+    }
+  },
+  {
+    "key": "2975",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie bokant is amper gelyk aan"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow above almost equals"
+      }
+    }
+  },
+  {
+    "key": "2976",
+    "mappings": {
+      "default": {
+        "default": "kleiner as bokant links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "less than above L arrow"
+      }
+    }
+  },
+  {
+    "key": "2977",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie deur kleiner as"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow through less than"
+      }
+    }
+  },
+  {
+    "key": "2978",
+    "mappings": {
+      "default": {
+        "default": "groter as bokant regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "greater than above R arrow"
+      }
+    }
+  },
+  {
+    "key": "2979",
+    "mappings": {
+      "default": {
+        "default": "deelversameling bokant regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "subset above R arrow"
+      }
+    }
+  },
+  {
+    "key": "297A",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie deur deelversameling"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow through subset"
+      }
+    }
+  },
+  {
+    "key": "297B",
+    "mappings": {
+      "default": {
+        "default": "superversameling bokant links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "suerset above L arrow"
+      }
+    }
+  },
+  {
+    "key": "29B3",
+    "mappings": {
+      "default": {
+        "default": "leë versameling met regs pyltjie bo"
+      },
+      "mathspeak": {
+        "sbrief": "empty set with R arrow above"
+      }
+    }
+  },
+  {
+    "key": "29B4",
+    "mappings": {
+      "default": {
+        "default": "leë versameling met links pyltjie bo"
+      },
+      "mathspeak": {
+        "sbrief": "empty set with L arrow above"
+      }
+    }
+  },
+  {
+    "key": "29BD",
+    "mappings": {
+      "default": {
+        "default": "op pyltjie deur sirkel"
+      },
+      "mathspeak": {
+        "sbrief": "U arrow through circle"
+      }
+    }
+  },
+  {
+    "key": "29EA",
+    "mappings": {
+      "default": {
+        "default": "swart diamand met af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "black diamond with D arrow"
+      }
+    }
+  },
+  {
+    "key": "29EC",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel met af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "white circle with D arrow"
+      }
+    }
+  },
+  {
+    "key": "29ED",
+    "mappings": {
+      "default": {
+        "default": "swart sirkel met af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "black circle with D arrow"
+      }
+    }
+  },
+  {
+    "key": "2A17",
+    "mappings": {
+      "default": {
+        "default": "integraal met links pyltjie met haak"
+      },
+      "mathspeak": {
+        "sbrief": "integral with L arrow with hook"
+      }
+    }
+  },
+  {
+    "key": "2B00",
+    "mappings": {
+      "default": {
+        "default": "noordoos wit pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B01",
+    "mappings": {
+      "default": {
+        "default": "noordwes wit pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B02",
+    "mappings": {
+      "default": {
+        "default": "suidoos wit pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B03",
+    "mappings": {
+      "default": {
+        "default": "suidwes wit pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B04",
+    "mappings": {
+      "default": {
+        "default": "links regs wit pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L R white arrow"
+      }
+    }
+  },
+  {
+    "key": "2B05",
+    "mappings": {
+      "default": {
+        "default": "links swart pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L black arrow"
+      }
+    }
+  },
+  {
+    "key": "2B06",
+    "mappings": {
+      "default": {
+        "default": "op swart pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U black arrow"
+      }
+    }
+  },
+  {
+    "key": "2B07",
+    "mappings": {
+      "default": {
+        "default": "af swart pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "D black arrow"
+      }
+    }
+  },
+  {
+    "key": "2B08",
+    "mappings": {
+      "default": {
+        "default": "noordoos swart pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B09",
+    "mappings": {
+      "default": {
+        "default": "noordwes swart pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B0A",
+    "mappings": {
+      "default": {
+        "default": "suidoos swart pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B0B",
+    "mappings": {
+      "default": {
+        "default": "suidwes swart pyltjie"
+      }
+    }
+  },
+  {
+    "key": "2B0C",
+    "mappings": {
+      "default": {
+        "default": "links regs swart pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L R black arrow"
+      }
+    }
+  },
+  {
+    "key": "2B0D",
+    "mappings": {
+      "default": {
+        "default": "op af swart pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "U D black arrow"
+      }
+    }
+  },
+  {
+    "key": "2B0E",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met punt ondertoe"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with tip down"
+      }
+    }
+  },
+  {
+    "key": "2B0F",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie met punt boontoe"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow with tip up"
+      }
+    }
+  },
+  {
+    "key": "2B10",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met punt ondertoe"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with tip down"
+      }
+    }
+  },
+  {
+    "key": "2B11",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met punt boontoe"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with tip up"
+      }
+    }
+  },
+  {
+    "key": "2B30",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met klein sirkel"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with small circle"
+      }
+    }
+  },
+  {
+    "key": "2B31",
+    "mappings": {
+      "default": {
+        "default": "drie links pyltjies"
+      },
+      "mathspeak": {
+        "sbrief": "three L arrows"
+      }
+    }
+  },
+  {
+    "key": "2B32",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met omkringde plus"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with circled plus"
+      }
+    }
+  },
+  {
+    "key": "2B33",
+    "mappings": {
+      "default": {
+        "default": "lang links kronkelpyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "long l squiggle arrow"
+      }
+    }
+  },
+  {
+    "key": "2B34",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige pyltjie met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed arrow with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2B35",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige pyltjie met dubbel vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed arrow with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2B36",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige pyltjie vanaf staaf"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed arrow from bar"
+      }
+    }
+  },
+  {
+    "key": "2B37",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige trippel koppelteken pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed triple dash arrow"
+      }
+    }
+  },
+  {
+    "key": "2B38",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met kolletjie steel"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with dotted stem"
+      }
+    }
+  },
+  {
+    "key": "2B39",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met stert met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with tail with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2B3A",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie met stert met dubbel vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow with tail with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2B3B",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige pyltjie met stert"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed arrow with tail"
+      }
+    }
+  },
+  {
+    "key": "2B3C",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige pyltjie met stert met vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed arrow with tail with vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2B3D",
+    "mappings": {
+      "default": {
+        "default": "links tweekoppige pyltjie met stert met dubbel vertikale streep"
+      },
+      "mathspeak": {
+        "sbrief": "L two headed arrow with tail with double vertical stroke"
+      }
+    }
+  },
+  {
+    "key": "2B3E",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie deur x"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow through x"
+      }
+    }
+  },
+  {
+    "key": "2B3F",
+    "mappings": {
+      "default": {
+        "default": "golfpyltjie direk na links"
+      }
+    }
+  },
+  {
+    "key": "2B40",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan bokant links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "equals sign above L arrow"
+      }
+    }
+  },
+  {
+    "key": "2B41",
+    "mappings": {
+      "default": {
+        "default": "tru tilde bokant links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "reverse tilde operator above L arrow"
+      }
+    }
+  },
+  {
+    "key": "2B42",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie bokant tru is amper gelyk aan"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow above reverse almost equals"
+      }
+    }
+  },
+  {
+    "key": "2B43",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie deur groter as"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow through greater than"
+      }
+    }
+  },
+  {
+    "key": "2B44",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie deur superversameling"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow through superset"
+      }
+    }
+  },
+  {
+    "key": "2B45",
+    "mappings": {
+      "default": {
+        "default": "links vierdubbele pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "L quadrule arrow"
+      }
+    }
+  },
+  {
+    "key": "2B46",
+    "mappings": {
+      "default": {
+        "default": "regs vierdubbele pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "R quadrule arrow"
+      }
+    }
+  },
+  {
+    "key": "2B47",
+    "mappings": {
+      "default": {
+        "default": "tru tilde bokant regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "reverse tilde operator above R arrow"
+      }
+    }
+  },
+  {
+    "key": "2B48",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie bokant tru is amper gelyk aan"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow above reverse almost equals"
+      }
+    }
+  },
+  {
+    "key": "2B49",
+    "mappings": {
+      "default": {
+        "default": "tilde bokant links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "tilde operator above L arrow"
+      }
+    }
+  },
+  {
+    "key": "2B4A",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie bokant is amper gelyk aan"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow above almost equals"
+      }
+    }
+  },
+  {
+    "key": "2B4B",
+    "mappings": {
+      "default": {
+        "default": "links pyltjie bokant tru tilde"
+      },
+      "mathspeak": {
+        "sbrief": "L arrow above reverse tilde operator"
+      }
+    }
+  },
+  {
+    "key": "2B4C",
+    "mappings": {
+      "default": {
+        "default": "regs pyltjie bokant tru tilde"
+      },
+      "mathspeak": {
+        "sbrief": "R arrow above reverse tilde operator"
+      }
+    }
+  },
+  {
+    "key": "FFE9",
+    "mappings": {
+      "default": {
+        "default": "half wyte links pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "halfwidth L arrow"
+      }
+    }
+  },
+  {
+    "key": "FFEA",
+    "mappings": {
+      "default": {
+        "default": "half wyte op pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "halfwidth U arrow"
+      }
+    }
+  },
+  {
+    "key": "FFEB",
+    "mappings": {
+      "default": {
+        "default": "half wyte regs pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "halfwidth R arrow"
+      }
+    }
+  },
+  {
+    "key": "FFEC",
+    "mappings": {
+      "default": {
+        "default": "half wyte af pyltjie"
+      },
+      "mathspeak": {
+        "sbrief": "halfwidth D arrow"
+      }
+    }
+  }
+]

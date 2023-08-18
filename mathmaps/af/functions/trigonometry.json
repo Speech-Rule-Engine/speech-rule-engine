@@ -1,0 +1,119 @@
+[
+  {
+    "locale": "en"
+  },
+  {
+    "key": "cos",
+    "mappings": {
+      "default": {
+        "default": "cosine"
+      }
+    }
+  },
+  {
+    "key": "cot",
+    "mappings": {
+      "default": {
+        "default": "cotangent"
+      }
+    }
+  },
+  {
+    "key": "csc",
+    "mappings": {
+      "default": {
+        "default": "cosecant"
+      }
+    }
+  },
+  {
+    "key": "sec",
+    "mappings": {
+      "default": {
+        "default": "secant"
+      }
+    }
+  },
+  {
+    "key": "sin",
+    "mappings": {
+      "default": {
+        "default": "sine"
+      }
+    }
+  },
+  {
+    "key": "tan",
+    "mappings": {
+      "default": {
+        "default": "tangent"
+      }
+    }
+  },
+  {
+    "key": "arccos",
+    "mappings": {
+      "default": {
+        "default": "arc cosine"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cosine inverse"
+      }
+    }
+  },
+  {
+    "key": "arccot",
+    "mappings": {
+      "default": {
+        "default": "arc cotangent"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cotangent inverse"
+      }
+    }
+  },
+  {
+    "key": "arccsc",
+    "mappings": {
+      "default": {
+        "default": "arc cosecant"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cosecant inverse"
+      }
+    }
+  },
+  {
+    "key": "arcsec",
+    "mappings": {
+      "default": {
+        "default": "arc secant"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "secant inverse"
+      }
+    }
+  },
+  {
+    "key": "arcsin",
+    "mappings": {
+      "default": {
+        "default": "arc sine"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "sine inverse"
+      }
+    }
+  },
+  {
+    "key": "arctan",
+    "mappings": {
+      "default": {
+        "default": "arc tangent"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "tangent inverse"
+      }
+    }
+  }
+]

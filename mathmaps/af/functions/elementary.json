@@ -1,0 +1,256 @@
+[
+  {
+    "locale": "en"
+  },
+  {
+    "key": "log",
+    "mappings": {
+      "default": {
+        "default": "log"
+      }
+    }
+  },
+  {
+    "key": "ln",
+    "mappings": {
+      "default": {
+        "default": "natural log"
+      },
+      "mathspeak": {
+        "default": "ln"
+      },
+      "clearspeak": {
+        "default": "l n",
+        "Log_LnAsNaturalLog": "natural log"
+      }
+    }
+  },
+  {
+    "key": "lg",
+    "mappings": {
+      "default": {
+        "default": "log base 10"
+      }
+    }
+  },
+  {
+    "key": "exp",
+    "mappings": {
+      "default": {
+        "default": "exponential"
+      },
+      "mathspeak": {
+        "default": "exp"
+      },
+      "clearspeak": {
+        "default": "exp"
+      }
+    }
+  },
+  {
+    "key": "gcd",
+    "mappings": {
+      "default": {
+        "default": "greatest common divisor"
+      },
+      "mathspeak": {
+        "default": "gcd"
+      },
+      "clearspeak": {
+        "default": "gcd"
+      }
+    }
+  },
+  {
+    "key": "lcm",
+    "mappings": {
+      "default": {
+        "default": "least common multiple"
+      },
+      "mathspeak": {
+        "default": "lcm"
+      },
+      "clearspeak": {
+        "default": "lcm"
+      }
+    }
+  },
+  {
+    "key": "arg",
+    "mappings": {
+      "default": {
+        "default": "argument"
+      },
+      "mathspeak": {
+        "default": "arg"
+      },
+      "clearspeak": {
+        "default": "arg"
+      }
+    }
+  },
+  {
+    "key": "im",
+    "mappings": {
+      "default": {
+        "default": "imaginary part"
+      },
+      "mathspeak": {
+        "default": "im"
+      },
+      "clearspeak": {
+        "default": "imaginary"
+      }
+    }
+  },
+  {
+    "key": "re",
+    "mappings": {
+      "default": {
+        "default": "real part"
+      },
+      "mathspeak": {
+        "default": "re"
+      },
+      "clearspeak": {
+        "default": "real"
+      }
+    }
+  },
+  {
+    "key": "inf",
+    "mappings": {
+      "default": {
+        "default": "infimum"
+      },
+      "mathspeak": {
+        "default": "inf"
+      },
+      "clearspeak": {
+        "default": "inf"
+      }
+    }
+  },
+  {
+    "key": "lim",
+    "mappings": {
+      "default": {
+        "default": "limit"
+      },
+      "mathspeak": {
+        "default": "limit"
+      },
+      "clearspeak": {
+        "default": "lim"
+      }
+    }
+  },
+  {
+    "key": "liminf",
+    "mappings": {
+      "default": {
+        "default": "limit inferior"
+      },
+      "mathspeak": {
+        "default": "liminf"
+      },
+      "clearspeak": {
+        "default": "liminf"
+      }
+    }
+  },
+  {
+    "key": "limsup",
+    "mappings": {
+      "default": {
+        "default": "limit superior"
+      },
+      "mathspeak": {
+        "default": "limsup"
+      },
+      "clearspeak": {
+        "default": "limsup"
+      }
+    }
+  },
+  {
+    "key": "max",
+    "mappings": {
+      "default": {
+        "default": "maximum"
+      },
+      "mathspeak": {
+        "default": "max"
+      },
+      "clearspeak": {
+        "default": "max"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "mappings": {
+      "default": {
+        "default": "minimum"
+      },
+      "mathspeak": {
+        "default": "min"
+      },
+      "clearspeak": {
+        "default": "min"
+      }
+    }
+  },
+  {
+    "key": "sup",
+    "mappings": {
+      "default": {
+        "default": "supremum"
+      },
+      "mathspeak": {
+        "default": "sup"
+      },
+      "clearspeak": {
+        "default": "sup"
+      }
+    }
+  },
+  {
+    "key": "injlim",
+    "mappings": {
+      "default": {
+        "default": "colimit"
+      }
+    }
+  },
+  {
+    "key": "projlim",
+    "mappings": {
+      "default": {
+        "default": "projective limit"
+      }
+    }
+  },
+  {
+    "key": "mod",
+    "mappings": {
+      "default": {
+        "default": "modulo"
+      },
+      "mathspeak": {
+        "default": "mod"
+      },
+      "clearspeak": {
+        "default": "mod"
+      }
+    }
+  },
+  {
+    "key": "Pr",
+    "mappings": {
+      "default": {
+        "default": "probability"
+      }
+    }
+  }
+]

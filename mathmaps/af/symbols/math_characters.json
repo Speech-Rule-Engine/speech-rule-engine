@@ -1,0 +1,132 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "2113",
+    "mappings": {
+      "default": {
+        "default": "skript l"
+      }
+    }
+  },
+  {
+    "key": "2118",
+    "mappings": {
+      "default": {
+        "default": "skript hoofletter p"
+      },
+      "mathspeak": {
+        "default": "script upper P"
+      }
+    }
+  },
+  {
+    "key": "213C",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande pi"
+      }
+    }
+  },
+  {
+    "key": "213D",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande gamma"
+      }
+    }
+  },
+  {
+    "key": "213E",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande hoofletter gamma"
+      },
+      "mathspeak": {
+        "default": "double struck upper Gamma"
+      }
+    }
+  },
+  {
+    "key": "213F",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande hoofletter Pi"
+      },
+      "mathspeak": {
+        "default": "double struck upper Pi"
+      }
+    }
+  },
+  {
+    "key": "2140",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande sommeer"
+      },
+      "mathspeak": {
+        "default": "double struck sigma summation"
+      }
+    }
+  },
+  {
+    "key": "2145",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande  kursief hoofletter d"
+      },
+      "mathspeak": {
+        "default": "double struck italic upper D"
+      }
+    }
+  },
+  {
+    "key": "2146",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande kursief d"
+      }
+    }
+  },
+  {
+    "key": "2147",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande  kursief e"
+      }
+    }
+  },
+  {
+    "key": "2148",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande kursief i"
+      }
+    }
+  },
+  {
+    "key": "2149",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeslaande kursief j"
+      }
+    }
+  },
+  {
+    "key": "1D6A4",
+    "mappings": {
+      "default": {
+        "default": "kursief puntlose i"
+      }
+    }
+  },
+  {
+    "key": "1D6A5",
+    "mappings": {
+      "default": {
+        "default": "kursief puntlose j"
+      }
+    }
+  }
+]

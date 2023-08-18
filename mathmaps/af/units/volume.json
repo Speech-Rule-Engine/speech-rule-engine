@@ -1,0 +1,138 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "cu",
+    "mappings": {
+      "default": {
+        "default": "kubiek",
+        "plural": "cubic"
+      }
+    }
+  },
+  {
+    "key": "cu inch",
+    "mappings": {
+      "default": {
+        "default": "kubieke duim",
+        "plural": "cubic inches"
+      }
+    }
+  },
+  {
+    "key": "cu ft",
+    "mappings": {
+      "default": {
+        "default": "kubieke voet",
+        "plural": "cubic feet"
+      }
+    }
+  },
+  {
+    "key": "cu yd",
+    "mappings": {
+      "default": {
+        "default": "kubieke jaart"
+      }
+    }
+  },
+  {
+    "key": "bbl",
+    "mappings": {
+      "default": {
+        "default": "vat",
+        "plural": "vate"
+      }
+    }
+  },
+  {
+    "key": "fl. oz.",
+    "mappings": {
+      "default": {
+        "default": "vloeibare ons",
+        "plural": "vloeibare onse"
+      }
+    }
+  },
+  {
+    "key": "gal",
+    "mappings": {
+      "default": {
+        "default": "galon"
+      }
+    }
+  },
+  {
+    "key": "pt",
+    "mappings": {
+      "default": {
+        "default": "pint",
+        "plural": "pinte"
+      }
+    }
+  },
+  {
+    "key": "qt",
+    "mappings": {
+      "default": {
+        "default": "kwart",
+        "plural": "kwarte"
+      }
+    }
+  },
+  {
+    "key": "fluid dram",
+    "mappings": {
+      "default": {
+        "default": "vloeibare dragme",
+        "plural": "vloeibare dragmes"
+      }
+    }
+  },
+  {
+    "key": "tbsp",
+    "mappings": {
+      "default": {
+        "default": "eetlepel",
+        "plural": "eetlepels"
+      }
+    }
+  },
+  {
+    "key": "tsp",
+    "mappings": {
+      "default": {
+        "default": "teelepel",
+        "plural": "teelepels"
+      }
+    }
+  },
+  {
+    "key": "cup",
+    "mappings": {
+      "default": {
+        "default": "koppie",
+        "plural": "koppies"
+      }
+    }
+  },
+  {
+    "key": "cc",
+    "mappings": {
+      "default": {
+        "default": "kubieke sentimeter",
+        "plural": "kubieke sentimeters"
+      }
+    }
+  },
+  {
+    "key": "l",
+    "mappings": {
+      "default": {
+        "default": "lieter",
+        "plural": "lieters"
+      }
+    }
+  }
+]

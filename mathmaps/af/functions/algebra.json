@@ -1,0 +1,62 @@
+[
+  {
+    "locale": "en"
+  },
+  {
+    "key": "deg",
+    "mappings": {
+      "default": {
+        "default": "degree"
+      }
+    }
+  },
+  {
+    "key": "det",
+    "mappings": {
+      "default": {
+        "default": "determinant"
+      },
+      "mathspeak": {
+        "default": "det"
+      }
+    }
+  },
+  {
+    "key": "dim",
+    "mappings": {
+      "default": {
+        "default": "dimension"
+      }
+    }
+  },
+  {
+    "key": "hom",
+    "mappings": {
+      "default": {
+        "default": "homomorphism"
+      },
+      "mathspeak": {
+        "default": "hom"
+      },
+      "clearspeak": {
+        "default": "hom"
+      }
+    }
+  },
+  {
+    "key": "ker",
+    "mappings": {
+      "default": {
+        "default": "kernel"
+      }
+    }
+  },
+  {
+    "key": "Tr",
+    "mappings": {
+      "default": {
+        "default": "trace"
+      }
+    }
+  }
+]

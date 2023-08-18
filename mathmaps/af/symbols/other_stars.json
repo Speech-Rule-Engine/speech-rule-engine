@@ -1,0 +1,472 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "23E8",
+    "mappings": {
+      "default": {
+        "default": "desimale eksponent"
+      }
+    }
+  },
+  {
+    "key": "2605",
+    "mappings": {
+      "default": {
+        "default": "swart ster"
+      }
+    }
+  },
+  {
+    "key": "2606",
+    "mappings": {
+      "default": {
+        "default": "wit ster"
+      }
+    }
+  },
+  {
+    "key": "26AA",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel",
+        "alternative": "medium white circle"
+      }
+    }
+  },
+  {
+    "key": "26AB",
+    "mappings": {
+      "default": {
+        "default": "swart sirkel",
+        "alternative": "medium black circle"
+      }
+    }
+  },
+  {
+    "key": "2705",
+    "mappings": {
+      "default": {
+        "default": "wit reg merk",
+        "alternative": "white heavy check mark"
+      }
+    }
+  },
+  {
+    "key": "2713",
+    "mappings": {
+      "default": {
+        "default": "reg merk"
+      }
+    }
+  },
+  {
+    "key": "2714",
+    "mappings": {
+      "default": {
+        "default": "swaar reg merk"
+      }
+    }
+  },
+  {
+    "key": "2715",
+    "mappings": {
+      "default": {
+        "default": "maal x"
+      }
+    }
+  },
+  {
+    "key": "2716",
+    "mappings": {
+      "default": {
+        "default": "swaar maal x"
+      }
+    }
+  },
+  {
+    "key": "2717",
+    "mappings": {
+      "default": {
+        "default": "ballot x"
+      }
+    }
+  },
+  {
+    "key": "2718",
+    "mappings": {
+      "default": {
+        "default": "heavy ballot x"
+      }
+    }
+  },
+  {
+    "key": "271B",
+    "mappings": {
+      "default": {
+        "default": "oop middelkruis"
+      }
+    }
+  },
+  {
+    "key": "271C",
+    "mappings": {
+      "default": {
+        "default": "swaar oop middelkruis"
+      }
+    }
+  },
+  {
+    "key": "2720",
+    "mappings": {
+      "default": {
+        "default": "maltese kruis"
+      }
+    }
+  },
+  {
+    "key": "2721",
+    "mappings": {
+      "default": {
+        "default": "ster van Dawid"
+      }
+    }
+  },
+  {
+    "key": "2722",
+    "mappings": {
+      "default": {
+        "default": "vier traandruppel gespeekte asterisk"
+      }
+    }
+  },
+  {
+    "key": "2723",
+    "mappings": {
+      "default": {
+        "default": "vier ballon gespeekte asterisk"
+      }
+    }
+  },
+  {
+    "key": "2724",
+    "mappings": {
+      "default": {
+        "default": "swaar vier ballon gespeekte asterisk"
+      }
+    }
+  },
+  {
+    "key": "2725",
+    "mappings": {
+      "default": {
+        "default": "vier klawer gespeekte asterisk"
+      }
+    }
+  },
+  {
+    "key": "2726",
+    "mappings": {
+      "default": {
+        "default": "swart vierpuntige ster"
+      }
+    }
+  },
+  {
+    "key": "2727",
+    "mappings": {
+      "default": {
+        "default": "wit vierpuntige ster"
+      }
+    }
+  },
+  {
+    "key": "2728",
+    "mappings": {
+      "default": {
+        "default": "vonkels"
+      }
+    }
+  },
+  {
+    "key": "2729",
+    "mappings": {
+      "default": {
+        "default": "stres buitelyn wit ster"
+      }
+    }
+  },
+  {
+    "key": "272A",
+    "mappings": {
+      "default": {
+        "default": "omkringde wit ster"
+      }
+    }
+  },
+  {
+    "key": "272B",
+    "mappings": {
+      "default": {
+        "default": "oop middel swart ster"
+      }
+    }
+  },
+  {
+    "key": "272C",
+    "mappings": {
+      "default": {
+        "default": "swart middel, wit ster"
+      }
+    }
+  },
+  {
+    "key": "272D",
+    "mappings": {
+      "default": {
+        "default": "buitelyn swart ster"
+      }
+    }
+  },
+  {
+    "key": "272E",
+    "mappings": {
+      "default": {
+        "default": "swaar buitelyn swart ster"
+      }
+    }
+  },
+  {
+    "key": "272F",
+    "mappings": {
+      "default": {
+        "default": "bolletjie ster"
+      }
+    }
+  },
+  {
+    "key": "2730",
+    "mappings": {
+      "default": {
+        "default": "geskakeerde wit ster"
+      }
+    }
+  },
+  {
+    "key": "2731",
+    "mappings": {
+      "default": {
+        "default": "swaar asterisk"
+      }
+    }
+  },
+  {
+    "key": "2732",
+    "mappings": {
+      "default": {
+        "default": "oop middel asterisk"
+      }
+    }
+  },
+  {
+    "key": "2733",
+    "mappings": {
+      "default": {
+        "default": "agtspekige asterisk"
+      }
+    }
+  },
+  {
+    "key": "2734",
+    "mappings": {
+      "default": {
+        "default": "agtpuntige swart ster"
+      }
+    }
+  },
+  {
+    "key": "2735",
+    "mappings": {
+      "default": {
+        "default": "agtpuntige bolletjie ster"
+      }
+    }
+  },
+  {
+    "key": "2736",
+    "mappings": {
+      "default": {
+        "default": "sespuntige swart ster"
+      }
+    }
+  },
+  {
+    "key": "2739",
+    "mappings": {
+      "default": {
+        "default": "twaalfpuntige swart ster"
+      }
+    }
+  },
+  {
+    "key": "273A",
+    "mappings": {
+      "default": {
+        "default": "sestienpuntige asterisk"
+      }
+    }
+  },
+  {
+    "key": "273B",
+    "mappings": {
+      "default": {
+        "default": "traandruppel gespeekte ster"
+      }
+    }
+  },
+  {
+    "key": "273C",
+    "mappings": {
+      "default": {
+        "default": "oop middel traandruppel gespeekte ster"
+      }
+    }
+  },
+  {
+    "key": "273D",
+    "mappings": {
+      "default": {
+        "default": "swaar traandruppel gespeekte ster"
+      }
+    }
+  },
+  {
+    "key": "273E",
+    "mappings": {
+      "default": {
+        "default": "sesblarige swart en wit floret"
+      }
+    }
+  },
+  {
+    "key": "273F",
+    "mappings": {
+      "default": {
+        "default": "swart floret"
+      }
+    }
+  },
+  {
+    "key": "2740",
+    "mappings": {
+      "default": {
+        "default": "wit floret"
+      }
+    }
+  },
+  {
+    "key": "2741",
+    "mappings": {
+      "default": {
+        "default": "agtblarige buitelyn swart floret"
+      }
+    }
+  },
+  {
+    "key": "2742",
+    "mappings": {
+      "default": {
+        "default": "omkringde agtpuntige ster met lee middel"
+      }
+    }
+  },
+  {
+    "key": "2743",
+    "mappings": {
+      "default": {
+        "default": "swaar traandruppel gespeekte bolletjiester"
+      }
+    }
+  },
+  {
+    "key": "2744",
+    "mappings": {
+      "default": {
+        "default": "sneeuflokkie"
+      }
+    }
+  },
+  {
+    "key": "2745",
+    "mappings": {
+      "default": {
+        "default": "kompakte drieblarige sneeuflokkie"
+      }
+    }
+  },
+  {
+    "key": "2746",
+    "mappings": {
+      "default": {
+        "default": "swaar chevron sneeuflokkie"
+      }
+    }
+  },
+  {
+    "key": "2747",
+    "mappings": {
+      "default": {
+        "default": "vonkel"
+      }
+    }
+  },
+  {
+    "key": "2748",
+    "mappings": {
+      "default": {
+        "default": "swaar vonkel"
+      }
+    }
+  },
+  {
+    "key": "2749",
+    "mappings": {
+      "default": {
+        "default": "ballon gespeekte ster"
+      }
+    }
+  },
+  {
+    "key": "274A",
+    "mappings": {
+      "default": {
+        "default": "agt traandruppel gespeekte propeller ster"
+      }
+    }
+  },
+  {
+    "key": "274B",
+    "mappings": {
+      "default": {
+        "default": "swaar agt traandruppel gespeekte propeller ster"
+      }
+    }
+  },
+  {
+    "key": "274C",
+    "mappings": {
+      "default": {
+        "default": "kruismerk"
+      }
+    }
+  },
+  {
+    "key": "274D",
+    "mappings": {
+      "default": {
+        "default": "geskakeerde wit sirkel"
+      }
+    }
+  }
+]

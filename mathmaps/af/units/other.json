@@ -1,0 +1,14 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "doz",
+    "mappings": {
+      "default": {
+        "default": "dosyn",
+        "plural": "dozen"
+      }
+    }
+  }
+]

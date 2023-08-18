@@ -1,0 +1,7103 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "0021",
+    "mappings": {
+      "default": {
+        "default": "uitroep"
+      }
+    }
+  },
+  {
+    "key": "0022",
+    "mappings": {
+      "default": {
+        "default": "haal aan"
+      }
+    }
+  },
+  {
+    "key": "0023",
+    "mappings": {
+      "default": {
+        "default": "huts",
+        "alternative": "hash"
+      },
+      "mathspeak": {
+        "brief": "num sign",
+        "sbrief": "num sign"
+      }
+    }
+  },
+  {
+    "key": "0024",
+    "mappings": {
+      "default": {
+        "default": "dollar"
+      }
+    }
+  },
+  {
+    "key": "0025",
+    "mappings": {
+      "default": {
+        "default": "persent"
+      }
+    }
+  },
+  {
+    "key": "0026",
+    "mappings": {
+      "default": {
+        "default": "ampersand"
+      }
+    }
+  },
+  {
+    "key": "0027",
+    "mappings": {
+      "default": {
+        "default": "priem"
+      }
+    }
+  },
+  {
+    "key": "002A",
+    "mappings": {
+      "default": {
+        "default": "ster"
+      }
+    }
+  },
+  {
+    "key": "002B",
+    "mappings": {
+      "default": {
+        "default": "plus"
+      }
+    }
+  },
+  {
+    "key": "002C",
+    "mappings": {
+      "default": {
+        "default": "komma"
+      }
+    }
+  },
+  {
+    "key": "002D",
+    "mappings": {
+      "default": {
+        "default": "minus"
+      },
+      "mathspeak": {
+        "default": "hyphen"
+      }
+    }
+  },
+  {
+    "key": "002E",
+    "mappings": {
+      "default": {
+        "default": "punt"
+      }
+    }
+  },
+  {
+    "key": "002F",
+    "mappings": {
+      "default": {
+        "default": "skuinsstreep",
+        "alternative": "solidus"
+      },
+      "emacspeak": {
+        "default": "slash"
+      }
+    }
+  },
+  {
+    "key": "003A",
+    "mappings": {
+      "default": {
+        "default": "dubbelpunt"
+      }
+    }
+  },
+  {
+    "key": "003B",
+    "mappings": {
+      "default": {
+        "default": "kommapunt"
+      }
+    }
+  },
+  {
+    "key": "003C",
+    "mappings": {
+      "default": {
+        "default": "kleiner as"
+      },
+      "clearspeak": {
+        "default": "is less than"
+      }
+    }
+  },
+  {
+    "key": "003D",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "003E",
+    "mappings": {
+      "default": {
+        "default": "groter as"
+      },
+      "clearspeak": {
+        "default": "is greater than"
+      }
+    }
+  },
+  {
+    "key": "003F",
+    "mappings": {
+      "default": {
+        "default": "vraagteken"
+      }
+    }
+  },
+  {
+    "key": "0040",
+    "mappings": {
+      "default": {
+        "default": "by"
+      }
+    }
+  },
+  {
+    "key": "005C",
+    "mappings": {
+      "default": {
+        "default": "tru streep"
+      }
+    }
+  },
+  {
+    "key": "005E",
+    "mappings": {
+      "default": {
+        "default": "hoed"
+      },
+      "mathspeak": {
+        "default": "caret"
+      }
+    }
+  },
+  {
+    "key": "005F",
+    "mappings": {
+      "default": {
+        "default": "lyn",
+        "alternative": "underline"
+      }
+    }
+  },
+  {
+    "key": "0060",
+    "mappings": {
+      "default": {
+        "default": "aksent"
+      },
+      "mathspeak": {
+        "default": "grave"
+      }
+    }
+  },
+  {
+    "key": "007C",
+    "mappings": {
+      "default": {
+        "default": "afstreep"
+      }
+    }
+  },
+  {
+    "key": "007E",
+    "mappings": {
+      "default": {
+        "default": "tilde"
+      }
+    }
+  },
+  {
+    "key": "00A1",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde uitroepteken"
+      }
+    }
+  },
+  {
+    "key": "00A2",
+    "mappings": {
+      "default": {
+        "default": "sent teken"
+      }
+    }
+  },
+  {
+    "key": "00A3",
+    "mappings": {
+      "default": {
+        "default": "pond"
+      }
+    }
+  },
+  {
+    "key": "00A4",
+    "mappings": {
+      "default": {
+        "default": "geldeenheid teken"
+      }
+    }
+  },
+  {
+    "key": "00A5",
+    "mappings": {
+      "default": {
+        "default": "jen"
+      }
+    }
+  },
+  {
+    "key": "00A6",
+    "mappings": {
+      "default": {
+        "default": "gebroke afstreep"
+      }
+    }
+  },
+  {
+    "key": "00A7",
+    "mappings": {
+      "default": {
+        "default": "seksie teken"
+      }
+    }
+  },
+  {
+    "key": "00A8",
+    "mappings": {
+      "default": {
+        "default": "twee punte"
+      }
+    }
+  },
+  {
+    "key": "00A9",
+    "mappings": {
+      "default": {
+        "default": "kopieregteken"
+      }
+    }
+  },
+  {
+    "key": "00AA",
+    "mappings": {
+      "default": {
+        "default": "vroulike ordinaal aanwyser"
+      }
+    }
+  },
+  {
+    "key": "00AB",
+    "mappings": {
+      "default": {
+        "default": "links wysende guillemet"
+      }
+    }
+  },
+  {
+    "key": "00AC",
+    "mappings": {
+      "default": {
+        "default": "nie teken"
+      }
+    }
+  },
+  {
+    "key": "00AE",
+    "mappings": {
+      "default": {
+        "default": "geregistreer teken"
+      },
+      "mathspeak": {
+        "default": "registered trade mark sign"
+      },
+      "clearspeak": {
+        "default": "trade mark sign"
+      }
+    }
+  },
+  {
+    "key": "00AF",
+    "mappings": {
+      "default": {
+        "default": "makron"
+      }
+    }
+  },
+  {
+    "key": "00B0",
+    "mappings": {
+      "default": {
+        "default": "graad"
+      },
+      "clearspeak": {
+        "default": "degrees"
+      }
+    }
+  },
+  {
+    "key": "00B1",
+    "mappings": {
+      "default": {
+        "default": "plus of minus"
+      }
+    }
+  },
+  {
+    "key": "00B4",
+    "mappings": {
+      "default": {
+        "default": "akuut"
+      }
+    }
+  },
+  {
+    "key": "00B5",
+    "mappings": {
+      "default": {
+        "default": "mikro"
+      }
+    }
+  },
+  {
+    "key": "00B6",
+    "mappings": {
+      "default": {
+        "default": "paragraafteken"
+      }
+    }
+  },
+  {
+    "key": "00B7",
+    "mappings": {
+      "default": {
+        "default": "dot"
+      },
+      "clearspeak": {
+        "default": "times"
+      }
+    }
+  },
+  {
+    "key": "00B8",
+    "mappings": {
+      "default": {
+        "default": "sedilla"
+      }
+    }
+  },
+  {
+    "key": "00BA",
+    "mappings": {
+      "default": {
+        "default": "manlike ordinaal aanwyser"
+      }
+    }
+  },
+  {
+    "key": "00BB",
+    "mappings": {
+      "default": {
+        "default": "regswysende guillemet"
+      }
+    }
+  },
+  {
+    "key": "00BF",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde vraagteken"
+      }
+    }
+  },
+  {
+    "key": "00D7",
+    "mappings": {
+      "default": {
+        "default": "maal"
+      },
+      "clearspeak": {
+        "MultsymbolX_By": "by",
+        "MultsymbolX_Cross": "cross"
+      }
+    }
+  },
+  {
+    "key": "00F7",
+    "mappings": {
+      "default": {
+        "default": "gedeel deur"
+      }
+    }
+  },
+  {
+    "key": "02D8",
+    "mappings": {
+      "default": {
+        "default": "haal asem"
+      }
+    }
+  },
+  {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "priem"
+      }
+    }
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "dubbelpriem"
+      }
+    }
+  },
+  {
+    "key": "02D9",
+    "mappings": {
+      "default": {
+        "default": "punt bokant"
+      },
+      "mathspeak": {
+        "default": "dot"
+      }
+    }
+  },
+  {
+    "key": "02DA",
+    "mappings": {
+      "default": {
+        "default": "ring bokant"
+      }
+    }
+  },
+  {
+    "key": "02DB",
+    "mappings": {
+      "default": {
+        "default": "ogonek"
+      }
+    }
+  },
+  {
+    "key": "02DC",
+    "mappings": {
+      "default": {
+        "default": "tilde"
+      }
+    }
+  },
+  {
+    "key": "02DD",
+    "mappings": {
+      "default": {
+        "default": "dubbel akuut"
+      }
+    }
+  },
+  {
+    "key": "2010",
+    "mappings": {
+      "default": {
+        "default": "koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2011",
+    "mappings": {
+      "default": {
+        "default": "nie breek koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2012",
+    "mappings": {
+      "default": {
+        "default": "figuurkoppelteken"
+      }
+    }
+  },
+  {
+    "key": "2013",
+    "mappings": {
+      "default": {
+        "default": "en koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2014",
+    "mappings": {
+      "default": {
+        "default": "em koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2015",
+    "mappings": {
+      "default": {
+        "default": "horisontale streep"
+      },
+      "mathspeak": {
+        "default": "quotation dash"
+      }
+    }
+  },
+  {
+    "key": "2016",
+    "mappings": {
+      "default": {
+        "default": "dubbel vertikale streep"
+      }
+    }
+  },
+  {
+    "key": "2017",
+    "mappings": {
+      "default": {
+        "default": "dubbel onderlyn"
+      }
+    }
+  },
+  {
+    "key": "2018",
+    "mappings": {
+      "default": {
+        "default": "linker enkel aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "2019",
+    "mappings": {
+      "default": {
+        "default": "regter enkel aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "201A",
+    "mappings": {
+      "default": {
+        "default": "lae regter enkel aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "201B",
+    "mappings": {
+      "default": {
+        "default": "linker tru enkel aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "201C",
+    "mappings": {
+      "default": {
+        "default": "linker aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "201D",
+    "mappings": {
+      "default": {
+        "default": "regter aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "201E",
+    "mappings": {
+      "default": {
+        "default": "lae regter aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "201F",
+    "mappings": {
+      "default": {
+        "default": "linker tru aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "2020",
+    "mappings": {
+      "default": {
+        "default": "mes"
+      }
+    }
+  },
+  {
+    "key": "2021",
+    "mappings": {
+      "default": {
+        "default": "dubbel mes"
+      }
+    }
+  },
+  {
+    "key": "2022",
+    "mappings": {
+      "default": {
+        "default": "koeël"
+      }
+    }
+  },
+  {
+    "key": "2023",
+    "mappings": {
+      "default": {
+        "default": "driehoek koeël"
+      }
+    }
+  },
+  {
+    "key": "2024",
+    "mappings": {
+      "default": {
+        "default": "een punt leier"
+      }
+    }
+  },
+  {
+    "key": "2025",
+    "mappings": {
+      "default": {
+        "default": "twee punt leier"
+      }
+    }
+  },
+  {
+    "key": "2026",
+    "mappings": {
+      "default": {
+        "default": "ellipsis"
+      },
+      "clearspeak": {
+        "default": "dot dot dot"
+      }
+    }
+  },
+  {
+    "key": "2027",
+    "mappings": {
+      "default": {
+        "default": "koppelteken punt"
+      }
+    }
+  },
+  {
+    "key": "2030",
+    "mappings": {
+      "default": {
+        "default": "per myl"
+      }
+    }
+  },
+  {
+    "key": "2031",
+    "mappings": {
+      "default": {
+        "default": "per tienduisend"
+      }
+    }
+  },
+  {
+    "key": "2032",
+    "mappings": {
+      "default": {
+        "default": "priem"
+      }
+    }
+  },
+  {
+    "key": "2033",
+    "mappings": {
+      "default": {
+        "default": "dubbelpriem"
+      }
+    }
+  },
+  {
+    "key": "2034",
+    "mappings": {
+      "default": {
+        "default": "trippelpriem"
+      }
+    }
+  },
+  {
+    "key": "2035",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde priem"
+      }
+    }
+  },
+  {
+    "key": "2036",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde dubbelpriem"
+      }
+    }
+  },
+  {
+    "key": "2037",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde trippelpriem"
+      }
+    }
+  },
+  {
+    "key": "2038",
+    "mappings": {
+      "default": {
+        "default": "karret"
+      }
+    }
+  },
+  {
+    "key": "2039",
+    "mappings": {
+      "default": {
+        "default": "linkswysende enkel guillemet"
+      }
+    }
+  },
+  {
+    "key": "203A",
+    "mappings": {
+      "default": {
+        "default": "regswysende enkel guillemet"
+      }
+    }
+  },
+  {
+    "key": "203B",
+    "mappings": {
+      "default": {
+        "default": "verwysingsmerk"
+      }
+    }
+  },
+  {
+    "key": "203C",
+    "mappings": {
+      "default": {
+        "default": "dubbel uitroepteken"
+      }
+    }
+  },
+  {
+    "key": "203D",
+    "mappings": {
+      "default": {
+        "default": "interrobang"
+      }
+    }
+  },
+  {
+    "key": "203E",
+    "mappings": {
+      "default": {
+        "default": "oorlyn"
+      },
+      "mathspeak": {
+        "default": "bar"
+      }
+    }
+  },
+  {
+    "key": "203F",
+    "mappings": {
+      "default": {
+        "default": "onderbind"
+      }
+    }
+  },
+  {
+    "key": "2040",
+    "mappings": {
+      "default": {
+        "default": "karakter bind"
+      }
+    }
+  },
+  {
+    "key": "2041",
+    "mappings": {
+      "default": {
+        "default": "karret invoegingspunt"
+      }
+    }
+  },
+  {
+    "key": "2042",
+    "mappings": {
+      "default": {
+        "default": "asterisme"
+      }
+    }
+  },
+  {
+    "key": "2043",
+    "mappings": {
+      "default": {
+        "default": "koppelkoeël"
+      }
+    }
+  },
+  {
+    "key": "2044",
+    "mappings": {
+      "default": {
+        "default": "breuk skuinsstreep"
+      }
+    }
+  },
+  {
+    "key": "2047",
+    "mappings": {
+      "default": {
+        "default": "dubbel vraagteken"
+      }
+    }
+  },
+  {
+    "key": "2048",
+    "mappings": {
+      "default": {
+        "default": "vraag en uitroepteken"
+      }
+    }
+  },
+  {
+    "key": "2049",
+    "mappings": {
+      "default": {
+        "default": "uitroep en vraagteken"
+      }
+    }
+  },
+  {
+    "key": "204B",
+    "mappings": {
+      "default": {
+        "default": "tru pilkro"
+      }
+    }
+  },
+  {
+    "key": "204C",
+    "mappings": {
+      "default": {
+        "default": "swart linkswaartse koeël"
+      }
+    }
+  },
+  {
+    "key": "204D",
+    "mappings": {
+      "default": {
+        "default": "swart regswaartse koeël"
+      }
+    }
+  },
+  {
+    "key": "204E",
+    "mappings": {
+      "default": {
+        "default": "lae ster"
+      }
+    }
+  },
+  {
+    "key": "204F",
+    "mappings": {
+      "default": {
+        "default": "tru kommapunt"
+      }
+    }
+  },
+  {
+    "key": "2050",
+    "mappings": {
+      "default": {
+        "default": "van naby"
+      }
+    }
+  },
+  {
+    "key": "2051",
+    "mappings": {
+      "default": {
+        "default": "twee sterre vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2052",
+    "mappings": {
+      "default": {
+        "default": "kommersiële minus"
+      }
+    }
+  },
+  {
+    "key": "2053",
+    "mappings": {
+      "default": {
+        "default": "gedraaide koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2054",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde onder verbinding"
+      }
+    }
+  },
+  {
+    "key": "2055",
+    "mappings": {
+      "default": {
+        "default": "blom leesteken"
+      }
+    }
+  },
+  {
+    "key": "2056",
+    "mappings": {
+      "default": {
+        "default": "drie punt leesteken"
+      }
+    }
+  },
+  {
+    "key": "2057",
+    "mappings": {
+      "default": {
+        "default": "vierdubbele priem"
+      }
+    }
+  },
+  {
+    "key": "2058",
+    "mappings": {
+      "default": {
+        "default": "vier punt leesteken"
+      }
+    }
+  },
+  {
+    "key": "2059",
+    "mappings": {
+      "default": {
+        "default": "vyf punt leesteken"
+      }
+    }
+  },
+  {
+    "key": "205A",
+    "mappings": {
+      "default": {
+        "default": "twee punt leesteken"
+      }
+    }
+  },
+  {
+    "key": "205B",
+    "mappings": {
+      "default": {
+        "default": "vier punt merk"
+      }
+    }
+  },
+  {
+    "key": "205C",
+    "mappings": {
+      "default": {
+        "default": "kruis met kolletjies"
+      }
+    }
+  },
+  {
+    "key": "205D",
+    "mappings": {
+      "default": {
+        "default": "trikolon"
+      }
+    }
+  },
+  {
+    "key": "205E",
+    "mappings": {
+      "default": {
+        "default": "vier punte vertikaal"
+      }
+    }
+  },
+  {
+    "key": "207A",
+    "mappings": {
+      "default": {
+        "default": "boskrif plus"
+      }
+    }
+  },
+  {
+    "key": "207B",
+    "mappings": {
+      "default": {
+        "default": "boskrif minus"
+      }
+    }
+  },
+  {
+    "key": "207C",
+    "mappings": {
+      "default": {
+        "default": "boskrif is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "207D",
+    "mappings": {
+      "default": {
+        "default": "boskrif links hakkie"
+      }
+    }
+  },
+  {
+    "key": "207E",
+    "mappings": {
+      "default": {
+        "default": "boskrif regs hakkie"
+      }
+    }
+  },
+  {
+    "key": "208A",
+    "mappings": {
+      "default": {
+        "default": "onderskrif plus"
+      }
+    }
+  },
+  {
+    "key": "208B",
+    "mappings": {
+      "default": {
+        "default": "onderskrif minus"
+      }
+    }
+  },
+  {
+    "key": "208C",
+    "mappings": {
+      "default": {
+        "default": "onderskrif is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "208D",
+    "mappings": {
+      "default": {
+        "default": "onderskrif links hakkie"
+      }
+    }
+  },
+  {
+    "key": "208E",
+    "mappings": {
+      "default": {
+        "default": "onderskrif regs hakkie"
+      }
+    }
+  },
+  {
+    "key": "214A",
+    "mappings": {
+      "default": {
+        "default": "eienskaplyn "
+      }
+    }
+  },
+  {
+    "key": "214B",
+    "mappings": {
+      "default": {
+        "default": "gedraaide ampersand"
+      }
+    }
+  },
+  {
+    "key": "214C",
+    "mappings": {
+      "default": {
+        "default": "per"
+      }
+    }
+  },
+  {
+    "key": "214D",
+    "mappings": {
+      "default": {
+        "default": "aktieselskab"
+      }
+    }
+  },
+  {
+    "key": "214E",
+    "mappings": {
+      "default": {
+        "default": "gedraaide klein f"
+      }
+    }
+  },
+  {
+    "key": "2200",
+    "mappings": {
+      "default": {
+        "default": "vir alle"
+      }
+    }
+  },
+  {
+    "key": "2201",
+    "mappings": {
+      "default": {
+        "default": "kompliment"
+      }
+    }
+  },
+  {
+    "key": "2203",
+    "mappings": {
+      "default": {
+        "default": "daar bestaan"
+      }
+    }
+  },
+  {
+    "key": "2204",
+    "mappings": {
+      "default": {
+        "default": "daar bestaan nie"
+      }
+    }
+  },
+  {
+    "key": "2205",
+    "mappings": {
+      "default": {
+        "default": "leë versameling"
+      }
+    }
+  },
+  {
+    "key": "2206",
+    "mappings": {
+      "default": {
+        "default": "inkriment"
+      }
+    }
+  },
+  {
+    "key": "2208",
+    "mappings": {
+      "default": {
+        "default": "element van"
+      },
+      "clearspeak": {
+        "default": "is a member of"
+      }
+    }
+  },
+  {
+    "key": "2209",
+    "mappings": {
+      "default": {
+        "default": "nie 'n element van"
+      },
+      "clearspeak": {
+        "default": "is not a member of"
+      }
+    }
+  },
+  {
+    "key": "220A",
+    "mappings": {
+      "default": {
+        "default": "element van"
+      },
+      "clearspeak": {
+        "default": "is a member of"
+      }
+    }
+  },
+  {
+    "key": "220B",
+    "mappings": {
+      "default": {
+        "default": "bevat as lid"
+      }
+    }
+  },
+  {
+    "key": "220C",
+    "mappings": {
+      "default": {
+        "default": "bevat nie as lid"
+      }
+    }
+  },
+  {
+    "key": "220D",
+    "mappings": {
+      "default": {
+        "default": "bevat as lid"
+      }
+    }
+  },
+  {
+    "key": "220E",
+    "mappings": {
+      "default": {
+        "default": "einde van bewys"
+      }
+    }
+  },
+  {
+    "key": "220F",
+    "mappings": {
+      "default": {
+        "default": "produk"
+      }
+    }
+  },
+  {
+    "key": "2210",
+    "mappings": {
+      "default": {
+        "default": "ko-produk"
+      }
+    }
+  },
+  {
+    "key": "2211",
+    "mappings": {
+      "default": {
+        "default": "som"
+      },
+      "mathspeak": {
+        "default": "sigma summation"
+      }
+    }
+  },
+  {
+    "key": "2212",
+    "mappings": {
+      "default": {
+        "default": "minus"
+      }
+    }
+  },
+  {
+    "key": "2213",
+    "mappings": {
+      "default": {
+        "default": "minus of plus"
+      }
+    }
+  },
+  {
+    "key": "2214",
+    "mappings": {
+      "default": {
+        "default": "dot plus"
+      }
+    }
+  },
+  {
+    "key": "2215",
+    "mappings": {
+      "default": {
+        "default": "gedeel deur skuinsstreep"
+      }
+    }
+  },
+  {
+    "key": "2216",
+    "mappings": {
+      "default": {
+        "default": "versameling minus"
+      }
+    }
+  },
+  {
+    "key": "2217",
+    "mappings": {
+      "default": {
+        "default": "asterisk"
+      }
+    }
+  },
+  {
+    "key": "2218",
+    "mappings": {
+      "default": {
+        "default": "ring"
+      },
+      "clearspeak": {
+        "default": "composed with"
+      }
+    }
+  },
+  {
+    "key": "2219",
+    "mappings": {
+      "default": {
+        "default": "koeël"
+      }
+    }
+  },
+  {
+    "key": "221A",
+    "mappings": {
+      "default": {
+        "default": "vierkantswortel"
+      }
+    }
+  },
+  {
+    "key": "221B",
+    "mappings": {
+      "default": {
+        "default": "derdemagswortel"
+      }
+    }
+  },
+  {
+    "key": "221C",
+    "mappings": {
+      "default": {
+        "default": "vierdemagswortel"
+      }
+    }
+  },
+  {
+    "key": "221D",
+    "mappings": {
+      "default": {
+        "default": "eweredig aan"
+      }
+    }
+  },
+  {
+    "key": "221E",
+    "mappings": {
+      "default": {
+        "default": "oneindigheid"
+      }
+    }
+  },
+  {
+    "key": "221F",
+    "mappings": {
+      "default": {
+        "default": "regs hoek"
+      }
+    }
+  },
+  {
+    "key": "2220",
+    "mappings": {
+      "default": {
+        "default": "hoek"
+      }
+    }
+  },
+  {
+    "key": "2221",
+    "mappings": {
+      "default": {
+        "default": "gemeete hoek"
+      }
+    }
+  },
+  {
+    "key": "2222",
+    "mappings": {
+      "default": {
+        "default": "sweriese hoek"
+      }
+    }
+  },
+  {
+    "key": "2223",
+    "mappings": {
+      "default": {
+        "default": "afstreep",
+        "alternative": "divides"
+      }
+    }
+  },
+  {
+    "key": "2224",
+    "mappings": {
+      "default": {
+        "default": "deel nie"
+      }
+    }
+  },
+  {
+    "key": "2225",
+    "mappings": {
+      "default": {
+        "default": "paralel aan"
+      }
+    }
+  },
+  {
+    "key": "2226",
+    "mappings": {
+      "default": {
+        "default": "nie paralel aan"
+      }
+    }
+  },
+  {
+    "key": "2227",
+    "mappings": {
+      "default": {
+        "default": "en"
+      }
+    }
+  },
+  {
+    "key": "2228",
+    "mappings": {
+      "default": {
+        "default": "of"
+      }
+    }
+  },
+  {
+    "key": "2229",
+    "mappings": {
+      "default": {
+        "default": "interseksie"
+      }
+    }
+  },
+  {
+    "key": "222A",
+    "mappings": {
+      "default": {
+        "default": "eenheid"
+      }
+    }
+  },
+  {
+    "key": "222B",
+    "mappings": {
+      "default": {
+        "default": "integraal"
+      }
+    }
+  },
+  {
+    "key": "222C",
+    "mappings": {
+      "default": {
+        "default": "dubbel integraal"
+      }
+    }
+  },
+  {
+    "key": "222D",
+    "mappings": {
+      "default": {
+        "default": "trippel integraal"
+      }
+    }
+  },
+  {
+    "key": "222E",
+    "mappings": {
+      "default": {
+        "default": "kontoer integraal"
+      }
+    }
+  },
+  {
+    "key": "222F",
+    "mappings": {
+      "default": {
+        "default": "oppervlak integraal"
+      }
+    }
+  },
+  {
+    "key": "2230",
+    "mappings": {
+      "default": {
+        "default": "volume integraal"
+      }
+    }
+  },
+  {
+    "key": "2231",
+    "mappings": {
+      "default": {
+        "default": "kloksgewyse integraal"
+      }
+    }
+  },
+  {
+    "key": "2232",
+    "mappings": {
+      "default": {
+        "default": "kloksgewyse kontoer integraal"
+      }
+    }
+  },
+  {
+    "key": "2233",
+    "mappings": {
+      "default": {
+        "default": "antikloksgewyse kontoer integraal"
+      }
+    }
+  },
+  {
+    "key": "2234",
+    "mappings": {
+      "default": {
+        "default": "dus"
+      }
+    }
+  },
+  {
+    "key": "2235",
+    "mappings": {
+      "default": {
+        "default": "omdat"
+      }
+    }
+  },
+  {
+    "key": "2236",
+    "mappings": {
+      "default": {
+        "default": "verhouding"
+      }
+    }
+  },
+  {
+    "key": "2237",
+    "mappings": {
+      "default": {
+        "default": "proporsie"
+      }
+    }
+  },
+  {
+    "key": "2238",
+    "mappings": {
+      "default": {
+        "default": "punt minus"
+      }
+    }
+  },
+  {
+    "key": "2239",
+    "mappings": {
+      "default": {
+        "default": "ekstra"
+      }
+    }
+  },
+  {
+    "key": "223A",
+    "mappings": {
+      "default": {
+        "default": "giometriese verhouding"
+      }
+    }
+  },
+  {
+    "key": "223B",
+    "mappings": {
+      "default": {
+        "default": "homoteties"
+      }
+    }
+  },
+  {
+    "key": "223C",
+    "mappings": {
+      "default": {
+        "default": "tilde"
+      }
+    }
+  },
+  {
+    "key": "223D",
+    "mappings": {
+      "default": {
+        "default": "tru tilde"
+      }
+    }
+  },
+  {
+    "key": "223E",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde lui s"
+      }
+    }
+  },
+  {
+    "key": "223F",
+    "mappings": {
+      "default": {
+        "default": "sinusgolf"
+      }
+    }
+  },
+  {
+    "key": "2240",
+    "mappings": {
+      "default": {
+        "default": "kransproduk"
+      }
+    }
+  },
+  {
+    "key": "2241",
+    "mappings": {
+      "default": {
+        "default": "nie tilde"
+      }
+    }
+  },
+  {
+    "key": "2242",
+    "mappings": {
+      "default": {
+        "default": "minus tilde"
+      }
+    }
+  },
+  {
+    "key": "2243",
+    "mappings": {
+      "default": {
+        "default": "assimtoties gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2244",
+    "mappings": {
+      "default": {
+        "default": "nie asimtoties gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2245",
+    "mappings": {
+      "default": {
+        "default": "ongeveer gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2246",
+    "mappings": {
+      "default": {
+        "default": "ongeveer, maar nie werklik gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2247",
+    "mappings": {
+      "default": {
+        "default": "nie ongeveer of werklik gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2248",
+    "mappings": {
+      "default": {
+        "default": "is amper gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2249",
+    "mappings": {
+      "default": {
+        "default": "is nie amper gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "224A",
+    "mappings": {
+      "default": {
+        "default": "amper gelyk aan of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "224B",
+    "mappings": {
+      "default": {
+        "default": "trippel tilde"
+      }
+    }
+  },
+  {
+    "key": "224C",
+    "mappings": {
+      "default": {
+        "default": "almal gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "224D",
+    "mappings": {
+      "default": {
+        "default": "soortgelyk aan"
+      }
+    }
+  },
+  {
+    "key": "224E",
+    "mappings": {
+      "default": {
+        "default": "giometries soortgelyk aan"
+      }
+    }
+  },
+  {
+    "key": "224F",
+    "mappings": {
+      "default": {
+        "default": "verskil tussen"
+      }
+    }
+  },
+  {
+    "key": "2250",
+    "mappings": {
+      "default": {
+        "default": "nader die limiet"
+      }
+    }
+  },
+  {
+    "key": "2251",
+    "mappings": {
+      "default": {
+        "default": "giometries gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2252",
+    "mappings": {
+      "default": {
+        "default": "ongeveer gelyk aan of die beeld van"
+      }
+    }
+  },
+  {
+    "key": "2253",
+    "mappings": {
+      "default": {
+        "default": "die beeld van of ongeveer gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2254",
+    "mappings": {
+      "default": {
+        "default": "dubbelpunt is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2255",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan dubbelpunt"
+      }
+    }
+  },
+  {
+    "key": "2256",
+    "mappings": {
+      "default": {
+        "default": "ring in is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2257",
+    "mappings": {
+      "default": {
+        "default": "ring is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2258",
+    "mappings": {
+      "default": {
+        "default": "stem ooreen met"
+      }
+    }
+  },
+  {
+    "key": "2259",
+    "mappings": {
+      "default": {
+        "default": "skattings"
+      }
+    }
+  },
+  {
+    "key": "225A",
+    "mappings": {
+      "default": {
+        "default": "ewehoekig aan"
+      },
+      "clearspeak": {
+        "default": "is equiangular to"
+      }
+    }
+  },
+  {
+    "key": "225B",
+    "mappings": {
+      "default": {
+        "default": "ster is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "225C",
+    "mappings": {
+      "default": {
+        "default": "delta is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "225D",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan volgens definisie"
+      },
+      "clearspeak": {
+        "default": "is defined to be"
+      }
+    }
+  },
+  {
+    "key": "225E",
+    "mappings": {
+      "default": {
+        "default": "gemeet by"
+      },
+      "clearspeak": {
+        "default": "is measured by"
+      }
+    }
+  },
+  {
+    "key": "225F",
+    "mappings": {
+      "default": {
+        "default": "bevraagtekend gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2260",
+    "mappings": {
+      "default": {
+        "default": "is nie gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is not equal to"
+      }
+    }
+  },
+  {
+    "key": "2261",
+    "mappings": {
+      "default": {
+        "default": "identies aan"
+      },
+      "clearspeak": {
+        "default": "is identical to"
+      }
+    }
+  },
+  {
+    "key": "2262",
+    "mappings": {
+      "default": {
+        "default": "nie identies aan"
+      },
+      "clearspeak": {
+        "default": "is not identical to"
+      }
+    }
+  },
+  {
+    "key": "2263",
+    "mappings": {
+      "default": {
+        "default": "streng ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is strictly equivalent to"
+      }
+    }
+  },
+  {
+    "key": "2264",
+    "mappings": {
+      "default": {
+        "default": "kleiner of gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is less than or equal to"
+      }
+    }
+  },
+  {
+    "key": "2265",
+    "mappings": {
+      "default": {
+        "default": "groter of gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is greater than or equal to"
+      }
+    }
+  },
+  {
+    "key": "2266",
+    "mappings": {
+      "default": {
+        "default": "kleiner as oor is gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is less than over equals"
+      }
+    }
+  },
+  {
+    "key": "2267",
+    "mappings": {
+      "default": {
+        "default": "groter as oor is gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is greater than over equals"
+      }
+    }
+  },
+  {
+    "key": "2268",
+    "mappings": {
+      "default": {
+        "default": "kleiner maar nie gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is less than but not equal to"
+      }
+    }
+  },
+  {
+    "key": "2269",
+    "mappings": {
+      "default": {
+        "default": "groter as, maar nie gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is greater than but not equal to"
+      }
+    }
+  },
+  {
+    "key": "226A",
+    "mappings": {
+      "default": {
+        "default": "baie kleiner as"
+      },
+      "clearspeak": {
+        "default": "is much less than"
+      }
+    }
+  },
+  {
+    "key": "226B",
+    "mappings": {
+      "default": {
+        "default": "baie groter as"
+      },
+      "clearspeak": {
+        "default": "is much greater than"
+      }
+    }
+  },
+  {
+    "key": "226C",
+    "mappings": {
+      "default": {
+        "default": "tussen"
+      }
+    }
+  },
+  {
+    "key": "226D",
+    "mappings": {
+      "default": {
+        "default": "nie ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is not equivalent to"
+      }
+    }
+  },
+  {
+    "key": "226E",
+    "mappings": {
+      "default": {
+        "default": "nie kleiner as"
+      },
+      "clearspeak": {
+        "default": "is not less than"
+      }
+    }
+  },
+  {
+    "key": "226F",
+    "mappings": {
+      "default": {
+        "default": "nie groter as"
+      },
+      "clearspeak": {
+        "default": "is not greater than"
+      }
+    }
+  },
+  {
+    "key": "2270",
+    "mappings": {
+      "default": {
+        "default": "nie kleiner as, ook nie gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is neither less than nor equal to"
+      }
+    }
+  },
+  {
+    "key": "2271",
+    "mappings": {
+      "default": {
+        "default": "nie groter as, ook nie gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is neither greater than nor equal to"
+      }
+    }
+  },
+  {
+    "key": "2272",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is less than or equivalent to"
+      }
+    }
+  },
+  {
+    "key": "2273",
+    "mappings": {
+      "default": {
+        "default": "groter as of ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is greater than or equivalent to"
+      }
+    }
+  },
+  {
+    "key": "2274",
+    "mappings": {
+      "default": {
+        "default": "nie kleiner as, ook nie ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is neither less than nor equivalent to"
+      }
+    }
+  },
+  {
+    "key": "2275",
+    "mappings": {
+      "default": {
+        "default": "nie groter as, ook nie ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is neither greater than nor equivalent to"
+      }
+    }
+  },
+  {
+    "key": "2276",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of groter as"
+      },
+      "clearspeak": {
+        "default": "is less than or greater than"
+      }
+    }
+  },
+  {
+    "key": "2277",
+    "mappings": {
+      "default": {
+        "default": "groter as of kleiner as"
+      },
+      "clearspeak": {
+        "default": "is greater than or less than"
+      }
+    }
+  },
+  {
+    "key": "2278",
+    "mappings": {
+      "default": {
+        "default": "nie kleiner as, ook nie groter as"
+      },
+      "clearspeak": {
+        "default": "is neither less than nor greater than"
+      }
+    }
+  },
+  {
+    "key": "2279",
+    "mappings": {
+      "default": {
+        "default": "nie groter as, ook nie kleiner as"
+      },
+      "clearspeak": {
+        "default": "is neither greater than nor less than"
+      }
+    }
+  },
+  {
+    "key": "227A",
+    "mappings": {
+      "default": {
+        "default": "kom voor"
+      }
+    }
+  },
+  {
+    "key": "227B",
+    "mappings": {
+      "default": {
+        "default": "kom na"
+      }
+    }
+  },
+  {
+    "key": "227C",
+    "mappings": {
+      "default": {
+        "default": "kom voor of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "227D",
+    "mappings": {
+      "default": {
+        "default": "kom na of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "227E",
+    "mappings": {
+      "default": {
+        "default": "kom voor of is ekwivalent aan"
+      }
+    }
+  },
+  {
+    "key": "227F",
+    "mappings": {
+      "default": {
+        "default": "kom na of is ekwivalent aan"
+      }
+    }
+  },
+  {
+    "key": "2280",
+    "mappings": {
+      "default": {
+        "default": "kom nie voor"
+      }
+    }
+  },
+  {
+    "key": "2281",
+    "mappings": {
+      "default": {
+        "default": "kom nie na"
+      }
+    }
+  },
+  {
+    "key": "2282",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van"
+      }
+    }
+  },
+  {
+    "key": "2283",
+    "mappings": {
+      "default": {
+        "default": "superversameling van"
+      }
+    }
+  },
+  {
+    "key": "2284",
+    "mappings": {
+      "default": {
+        "default": "nie 'n deelversameling van"
+      }
+    }
+  },
+  {
+    "key": "2285",
+    "mappings": {
+      "default": {
+        "default": "nie 'n superversameling van"
+      }
+    }
+  },
+  {
+    "key": "2286",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van, of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2287",
+    "mappings": {
+      "default": {
+        "default": "superversameling van, of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2288",
+    "mappings": {
+      "default": {
+        "default": "nie 'n deelversameling van, ook nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2289",
+    "mappings": {
+      "default": {
+        "default": "nie 'n superversameling van, ook nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "228A",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van, of nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "228B",
+    "mappings": {
+      "default": {
+        "default": "superversameling van, of nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "228C",
+    "mappings": {
+      "default": {
+        "default": "multiversameling"
+      }
+    }
+  },
+  {
+    "key": "228D",
+    "mappings": {
+      "default": {
+        "default": "multiversameling vermenigvuldiging"
+      }
+    }
+  },
+  {
+    "key": "228E",
+    "mappings": {
+      "default": {
+        "default": "multiversameling eenheid"
+      }
+    }
+  },
+  {
+    "key": "228F",
+    "mappings": {
+      "default": {
+        "default": "kwadraat beeld van"
+      }
+    }
+  },
+  {
+    "key": "2290",
+    "mappings": {
+      "default": {
+        "default": "kwadraat oorspronklike van"
+      }
+    }
+  },
+  {
+    "key": "2291",
+    "mappings": {
+      "default": {
+        "default": "kwadraat beeld van of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2292",
+    "mappings": {
+      "default": {
+        "default": "kwadraat oorspronklike van, of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2293",
+    "mappings": {
+      "default": {
+        "default": "square cap"
+      }
+    }
+  },
+  {
+    "key": "2294",
+    "mappings": {
+      "default": {
+        "default": "square cup"
+      }
+    }
+  },
+  {
+    "key": "2295",
+    "mappings": {
+      "default": {
+        "default": "omkringde plus"
+      }
+    }
+  },
+  {
+    "key": "2296",
+    "mappings": {
+      "default": {
+        "default": "omkringde minus"
+      }
+    }
+  },
+  {
+    "key": "2297",
+    "mappings": {
+      "default": {
+        "default": "omkringde maal"
+      }
+    }
+  },
+  {
+    "key": "2298",
+    "mappings": {
+      "default": {
+        "default": "omkringde gedeel deur skuinsstreep"
+      }
+    }
+  },
+  {
+    "key": "2299",
+    "mappings": {
+      "default": {
+        "default": "omkringde punt"
+      }
+    }
+  },
+  {
+    "key": "229A",
+    "mappings": {
+      "default": {
+        "default": "omkringde ring"
+      }
+    }
+  },
+  {
+    "key": "229B",
+    "mappings": {
+      "default": {
+        "default": "omkringde ster"
+      }
+    }
+  },
+  {
+    "key": "229C",
+    "mappings": {
+      "default": {
+        "default": "omkringde is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "229D",
+    "mappings": {
+      "default": {
+        "default": "omkringde koppelteken"
+      }
+    }
+  },
+  {
+    "key": "229E",
+    "mappings": {
+      "default": {
+        "default": "plus in 'n vierkant"
+      }
+    }
+  },
+  {
+    "key": "229F",
+    "mappings": {
+      "default": {
+        "default": "minus in 'n vierkant"
+      }
+    }
+  },
+  {
+    "key": "22A0",
+    "mappings": {
+      "default": {
+        "default": "maal in 'n vierkant"
+      }
+    }
+  },
+  {
+    "key": "22A1",
+    "mappings": {
+      "default": {
+        "default": "punt in 'n vierkant"
+      }
+    }
+  },
+  {
+    "key": "22A2",
+    "mappings": {
+      "default": {
+        "default": "regter spyker"
+      }
+    }
+  },
+  {
+    "key": "22A3",
+    "mappings": {
+      "default": {
+        "default": "linker spyker"
+      }
+    }
+  },
+  {
+    "key": "22A4",
+    "mappings": {
+      "default": {
+        "default": "af spyker"
+      }
+    }
+  },
+  {
+    "key": "22A5",
+    "mappings": {
+      "default": {
+        "default": "op spyker"
+      }
+    }
+  },
+  {
+    "key": "22A6",
+    "mappings": {
+      "default": {
+        "default": "bewering"
+      }
+    }
+  },
+  {
+    "key": "22A7",
+    "mappings": {
+      "default": {
+        "default": "modelle"
+      }
+    }
+  },
+  {
+    "key": "22A8",
+    "mappings": {
+      "default": {
+        "default": "waar"
+      }
+    }
+  },
+  {
+    "key": "22A9",
+    "mappings": {
+      "default": {
+        "default": "vorseer"
+      }
+    }
+  },
+  {
+    "key": "22AA",
+    "mappings": {
+      "default": {
+        "default": "trippel afstreep regs draaihek"
+      }
+    }
+  },
+  {
+    "key": "22AB",
+    "mappings": {
+      "default": {
+        "default": "dubbel afstreep dubbel regter draaihek"
+      }
+    }
+  },
+  {
+    "key": "22AC",
+    "mappings": {
+      "default": {
+        "default": "bewys nie dat"
+      }
+    }
+  },
+  {
+    "key": "22AD",
+    "mappings": {
+      "default": {
+        "default": "nie waar nie"
+      }
+    }
+  },
+  {
+    "key": "22AE",
+    "mappings": {
+      "default": {
+        "default": "vorseer nie"
+      }
+    }
+  },
+  {
+    "key": "22AF",
+    "mappings": {
+      "default": {
+        "default": "genegeerde dubbel afstreep dubbel regter draaihek"
+      }
+    }
+  },
+  {
+    "key": "22B0",
+    "mappings": {
+      "default": {
+        "default": "vooraf gegaan  onder verhouding"
+      }
+    }
+  },
+  {
+    "key": "22B1",
+    "mappings": {
+      "default": {
+        "default": "gevolg onder verhouding"
+      }
+    }
+  },
+  {
+    "key": "22B2",
+    "mappings": {
+      "default": {
+        "default": "normale subgroep van"
+      }
+    }
+  },
+  {
+    "key": "22B3",
+    "mappings": {
+      "default": {
+        "default": "bevat as normale subgroep"
+      }
+    }
+  },
+  {
+    "key": "22B4",
+    "mappings": {
+      "default": {
+        "default": "normale subgroep van of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "22B5",
+    "mappings": {
+      "default": {
+        "default": "bevat as normale subgroep of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "22B6",
+    "mappings": {
+      "default": {
+        "default": "oorspronklike van"
+      }
+    }
+  },
+  {
+    "key": "22B7",
+    "mappings": {
+      "default": {
+        "default": "beeld van"
+      }
+    }
+  },
+  {
+    "key": "22B8",
+    "mappings": {
+      "default": {
+        "default": "multikaart"
+      }
+    }
+  },
+  {
+    "key": "22B9",
+    "mappings": {
+      "default": {
+        "default": "hermitian conjugate matrix"
+      }
+    }
+  },
+  {
+    "key": "22BA",
+    "mappings": {
+      "default": {
+        "default": "invoeg"
+      }
+    }
+  },
+  {
+    "key": "22BB",
+    "mappings": {
+      "default": {
+        "default": "xof"
+      }
+    }
+  },
+  {
+    "key": "22BC",
+    "mappings": {
+      "default": {
+        "default": "nen"
+      }
+    }
+  },
+  {
+    "key": "22BD",
+    "mappings": {
+      "default": {
+        "default": "nof"
+      }
+    }
+  },
+  {
+    "key": "22BF",
+    "mappings": {
+      "default": {
+        "default": "regs driehoek"
+      }
+    }
+  },
+  {
+    "key": "22C0",
+    "mappings": {
+      "default": {
+        "default": "n ary and"
+      },
+      "mathspeak": {
+        "default": "and"
+      }
+    }
+  },
+  {
+    "key": "22C1",
+    "mappings": {
+      "default": {
+        "default": "n ary or"
+      },
+      "mathspeak": {
+        "default": "or"
+      }
+    }
+  },
+  {
+    "key": "22C2",
+    "mappings": {
+      "default": {
+        "default": "n ary intersection"
+      },
+      "mathspeak": {
+        "default": "intersection"
+      }
+    }
+  },
+  {
+    "key": "22C3",
+    "mappings": {
+      "default": {
+        "default": "n ary union"
+      },
+      "mathspeak": {
+        "default": "union"
+      }
+    }
+  },
+  {
+    "key": "22C4",
+    "mappings": {
+      "default": {
+        "default": "diamand"
+      }
+    }
+  },
+  {
+    "key": "22C5",
+    "mappings": {
+      "default": {
+        "default": "punt"
+      },
+      "clearspeak": {
+        "default": "times",
+        "MultsymbolDot_Dot": "dot"
+      }
+    }
+  },
+  {
+    "key": "22C6",
+    "mappings": {
+      "default": {
+        "default": "ster"
+      }
+    }
+  },
+  {
+    "key": "22C7",
+    "mappings": {
+      "default": {
+        "default": "gedeel deur maal"
+      }
+    }
+  },
+  {
+    "key": "22C8",
+    "mappings": {
+      "default": {
+        "default": "strikdas"
+      }
+    }
+  },
+  {
+    "key": "22C9",
+    "mappings": {
+      "default": {
+        "default": "linker normaal faktor semidirekte produk"
+      }
+    }
+  },
+  {
+    "key": "22CA",
+    "mappings": {
+      "default": {
+        "default": "regter normaal faktor semidirekte produk"
+      }
+    }
+  },
+  {
+    "key": "22CB",
+    "mappings": {
+      "default": {
+        "default": "linker semidirekte produk"
+      }
+    }
+  },
+  {
+    "key": "22CC",
+    "mappings": {
+      "default": {
+        "default": "regter semidirekte produk"
+      }
+    }
+  },
+  {
+    "key": "22CD",
+    "mappings": {
+      "default": {
+        "default": "tru tilde is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "22CE",
+    "mappings": {
+      "default": {
+        "default": "gekrulde of"
+      }
+    }
+  },
+  {
+    "key": "22CF",
+    "mappings": {
+      "default": {
+        "default": "gekrulde en"
+      }
+    }
+  },
+  {
+    "key": "22D0",
+    "mappings": {
+      "default": {
+        "default": "dubbel deelversameling"
+      }
+    }
+  },
+  {
+    "key": "22D1",
+    "mappings": {
+      "default": {
+        "default": "dubbel superversameling"
+      }
+    }
+  },
+  {
+    "key": "22D2",
+    "mappings": {
+      "default": {
+        "default": "dubel interseksie"
+      }
+    }
+  },
+  {
+    "key": "22D3",
+    "mappings": {
+      "default": {
+        "default": "dubbel eenheid"
+      }
+    }
+  },
+  {
+    "key": "22D4",
+    "mappings": {
+      "default": {
+        "default": "tuinvurk"
+      }
+    }
+  },
+  {
+    "key": "22D5",
+    "mappings": {
+      "default": {
+        "default": "gelyk aan en paralel aan"
+      },
+      "clearspeak": {
+        "default": "is equal and parallel to"
+      }
+    }
+  },
+  {
+    "key": "22D6",
+    "mappings": {
+      "default": {
+        "default": "kleiner as punt"
+      },
+      "clearspeak": {
+        "default": "is less than dot"
+      }
+    }
+  },
+  {
+    "key": "22D7",
+    "mappings": {
+      "default": {
+        "default": "groter as punt"
+      },
+      "clearspeak": {
+        "default": "is greater than dot"
+      }
+    }
+  },
+  {
+    "key": "22D8",
+    "mappings": {
+      "default": {
+        "default": "baie kleiner as"
+      },
+      "clearspeak": {
+        "default": "is very much less than"
+      }
+    }
+  },
+  {
+    "key": "22D9",
+    "mappings": {
+      "default": {
+        "default": "baie groter as"
+      },
+      "clearspeak": {
+        "default": "is very much greater than"
+      }
+    }
+  },
+  {
+    "key": "22DA",
+    "mappings": {
+      "default": {
+        "default": "kleiner gelyk aan of groter as"
+      },
+      "clearspeak": {
+        "default": "is less than equal to or greater than"
+      }
+    }
+  },
+  {
+    "key": "22DB",
+    "mappings": {
+      "default": {
+        "default": "groter gelyk aan of kleiner as"
+      },
+      "clearspeak": {
+        "default": "is greater than equal to or less than"
+      }
+    }
+  },
+  {
+    "key": "22DC",
+    "mappings": {
+      "default": {
+        "default": "gelyk aan of kleiner as"
+      },
+      "clearspeak": {
+        "default": "is equal to or less than"
+      }
+    }
+  },
+  {
+    "key": "22DD",
+    "mappings": {
+      "default": {
+        "default": "gelyk aan of groter as"
+      },
+      "clearspeak": {
+        "default": "is equal to or greater than"
+      }
+    }
+  },
+  {
+    "key": "22DE",
+    "mappings": {
+      "default": {
+        "default": "gelyk aan of gaan vooraf"
+      },
+      "clearspeak": {
+        "default": "is equal to or precedes"
+      }
+    }
+  },
+  {
+    "key": "22DF",
+    "mappings": {
+      "default": {
+        "default": "gelyk aan of volg op"
+      },
+      "clearspeak": {
+        "default": "is equal to or succeeds"
+      }
+    }
+  },
+  {
+    "key": "22E0",
+    "mappings": {
+      "default": {
+        "default": "gaan nie vooraf of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "22E1",
+    "mappings": {
+      "default": {
+        "default": "volg nie op of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "22E2",
+    "mappings": {
+      "default": {
+        "default": "not square image of or equals"
+      },
+      "clearspeak": {
+        "default": "is not square image of or equal to"
+      }
+    }
+  },
+  {
+    "key": "22E3",
+    "mappings": {
+      "default": {
+        "default": "not square original of or equals"
+      },
+      "clearspeak": {
+        "default": "is not square original of or equal to"
+      }
+    }
+  },
+  {
+    "key": "22E4",
+    "mappings": {
+      "default": {
+        "default": "square image of or not equals"
+      },
+      "clearspeak": {
+        "default": "is square image of or not equal to"
+      }
+    }
+  },
+  {
+    "key": "22E5",
+    "mappings": {
+      "default": {
+        "default": "square original of or not equals"
+      },
+      "clearspeak": {
+        "default": "is square original of or not equal to"
+      }
+    }
+  },
+  {
+    "key": "22E6",
+    "mappings": {
+      "default": {
+        "default": "kleiner as, maar nie ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is less than but not equivalent to"
+      }
+    }
+  },
+  {
+    "key": "22E7",
+    "mappings": {
+      "default": {
+        "default": "groter as, maar nie ekwivalent aan"
+      },
+      "clearspeak": {
+        "default": "is greater than but not equivalent to"
+      }
+    }
+  },
+  {
+    "key": "22E8",
+    "mappings": {
+      "default": {
+        "default": "gaan vooraf, maar nie ekwivalent aan"
+      }
+    }
+  },
+  {
+    "key": "22E9",
+    "mappings": {
+      "default": {
+        "default": "volg op, maar nie ekwivalent aan"
+      }
+    }
+  },
+  {
+    "key": "22EA",
+    "mappings": {
+      "default": {
+        "default": "nie normale subgroep van"
+      },
+      "clearspeak": {
+        "default": "is not normal subgroup of"
+      }
+    }
+  },
+  {
+    "key": "22EB",
+    "mappings": {
+      "default": {
+        "default": "bevat nie as normale subgroep"
+      }
+    }
+  },
+  {
+    "key": "22EC",
+    "mappings": {
+      "default": {
+        "default": "nie normale subgroep van of gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is not normal subgroup of or equal to"
+      }
+    }
+  },
+  {
+    "key": "22ED",
+    "mappings": {
+      "default": {
+        "default": "bevat nie as normale subgroep of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "22EE",
+    "mappings": {
+      "default": {
+        "default": "vertikale elipses"
+      }
+    }
+  },
+  {
+    "key": "22EF",
+    "mappings": {
+      "default": {
+        "default": "middellyn horisontale elipses"
+      },
+      "clearspeak": {
+        "default": "dot dot dot"
+      }
+    }
+  },
+  {
+    "key": "22F0",
+    "mappings": {
+      "default": {
+        "default": "op regs diagonale elipses"
+      }
+    }
+  },
+  {
+    "key": "22F1",
+    "mappings": {
+      "default": {
+        "default": "af regs diagonale elipses"
+      }
+    }
+  },
+  {
+    "key": "22F2",
+    "mappings": {
+      "default": {
+        "default": "element van met lang horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "22F3",
+    "mappings": {
+      "default": {
+        "default": "element van met vertikale streep aan die einde van horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "22F4",
+    "mappings": {
+      "default": {
+        "default": "element van met vertikale streep aan die einde van horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "22F5",
+    "mappings": {
+      "default": {
+        "default": "element van met punt bokant"
+      }
+    }
+  },
+  {
+    "key": "22F6",
+    "mappings": {
+      "default": {
+        "default": "element of with overbar"
+      }
+    }
+  },
+  {
+    "key": "22F7",
+    "mappings": {
+      "default": {
+        "default": "element of with overbar"
+      }
+    }
+  },
+  {
+    "key": "22F8",
+    "mappings": {
+      "default": {
+        "default": "element of with underbar"
+      }
+    }
+  },
+  {
+    "key": "22F9",
+    "mappings": {
+      "default": {
+        "default": "element van met twee horisontale strepe"
+      }
+    }
+  },
+  {
+    "key": "22FA",
+    "mappings": {
+      "default": {
+        "default": "bevat met lang horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "22FB",
+    "mappings": {
+      "default": {
+        "default": "bevat met vertikale streep aan die einde van horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "22FC",
+    "mappings": {
+      "default": {
+        "default": "bevat met vertikale streep aan die einde van horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "22FD",
+    "mappings": {
+      "default": {
+        "default": "contains with overbar"
+      }
+    }
+  },
+  {
+    "key": "22FE",
+    "mappings": {
+      "default": {
+        "default": "contains with overbar"
+      }
+    }
+  },
+  {
+    "key": "22FF",
+    "mappings": {
+      "default": {
+        "default": "z notation bag membership"
+      }
+    }
+  },
+  {
+    "key": "2300",
+    "mappings": {
+      "default": {
+        "default": "deursneeteken"
+      }
+    }
+  },
+  {
+    "key": "2302",
+    "mappings": {
+      "default": {
+        "default": "huis"
+      }
+    }
+  },
+  {
+    "key": "2305",
+    "mappings": {
+      "default": {
+        "default": "projektief"
+      }
+    }
+  },
+  {
+    "key": "2306",
+    "mappings": {
+      "default": {
+        "default": "perspektief"
+      }
+    }
+  },
+  {
+    "key": "2307",
+    "mappings": {
+      "default": {
+        "default": "golwende lyn"
+      }
+    }
+  },
+  {
+    "key": "2310",
+    "mappings": {
+      "default": {
+        "default": "tru nie"
+      }
+    }
+  },
+  {
+    "key": "2311",
+    "mappings": {
+      "default": {
+        "default": "square lozenge"
+      }
+    }
+  },
+  {
+    "key": "2312",
+    "mappings": {
+      "default": {
+        "default": "boog"
+      }
+    }
+  },
+  {
+    "key": "2313",
+    "mappings": {
+      "default": {
+        "default": "segment"
+      }
+    }
+  },
+  {
+    "key": "2314",
+    "mappings": {
+      "default": {
+        "default": "sektor"
+      }
+    }
+  },
+  {
+    "key": "2795",
+    "mappings": {
+      "default": {
+        "default": "vetgedrukte plus"
+      }
+    }
+  },
+  {
+    "key": "2796",
+    "mappings": {
+      "default": {
+        "default": "vetgedrukte minus"
+      }
+    }
+  },
+  {
+    "key": "2797",
+    "mappings": {
+      "default": {
+        "default": "vetgedrukte gedeel deur"
+      }
+    }
+  },
+  {
+    "key": "27B0",
+    "mappings": {
+      "default": {
+        "default": "krullerige lus"
+      }
+    }
+  },
+  {
+    "key": "27BF",
+    "mappings": {
+      "default": {
+        "default": "dubbel krullerige lus"
+      }
+    }
+  },
+  {
+    "key": "27C1",
+    "mappings": {
+      "default": {
+        "default": "wit driehoek wat klein wit driehoek bevat"
+      }
+    }
+  },
+  {
+    "key": "27C2",
+    "mappings": {
+      "default": {
+        "default": "loodreg"
+      }
+    }
+  },
+  {
+    "key": "27C3",
+    "mappings": {
+      "default": {
+        "default": "oop deelversameling"
+      }
+    }
+  },
+  {
+    "key": "27C4",
+    "mappings": {
+      "default": {
+        "default": "oop superversameling"
+      }
+    }
+  },
+  {
+    "key": "27C7",
+    "mappings": {
+      "default": {
+        "default": "of met punt binne in"
+      }
+    }
+  },
+  {
+    "key": "27C8",
+    "mappings": {
+      "default": {
+        "default": "trustreep wat deelversameling vooraf gaan"
+      }
+    }
+  },
+  {
+    "key": "27C9",
+    "mappings": {
+      "default": {
+        "default": "superset preceding solidus"
+      }
+    }
+  },
+  {
+    "key": "27CA",
+    "mappings": {
+      "default": {
+        "default": "vertikale lyn met horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "27CB",
+    "mappings": {
+      "default": {
+        "default": "stygende diagonaal"
+      }
+    }
+  },
+  {
+    "key": "27CC",
+    "mappings": {
+      "default": {
+        "default": "lang deel"
+      }
+    }
+  },
+  {
+    "key": "27CD",
+    "mappings": {
+      "default": {
+        "default": "dalende diagonaal"
+      }
+    }
+  },
+  {
+    "key": "27CE",
+    "mappings": {
+      "default": {
+        "default": "squared and"
+      }
+    }
+  },
+  {
+    "key": "27CF",
+    "mappings": {
+      "default": {
+        "default": "squared or"
+      }
+    }
+  },
+  {
+    "key": "27D0",
+    "mappings": {
+      "default": {
+        "default": "wit diamand met gesentreerde punt"
+      }
+    }
+  },
+  {
+    "key": "27D1",
+    "mappings": {
+      "default": {
+        "default": "en met punt"
+      }
+    }
+  },
+  {
+    "key": "27D2",
+    "mappings": {
+      "default": {
+        "default": "element van opening boontoe"
+      }
+    }
+  },
+  {
+    "key": "27D3",
+    "mappings": {
+      "default": {
+        "default": "onderste regter hoek met punt"
+      }
+    }
+  },
+  {
+    "key": "27D4",
+    "mappings": {
+      "default": {
+        "default": "boonste linker hoek met punt"
+      }
+    }
+  },
+  {
+    "key": "27D5",
+    "mappings": {
+      "default": {
+        "default": "left outer join"
+      }
+    }
+  },
+  {
+    "key": "27D6",
+    "mappings": {
+      "default": {
+        "default": "right outer join"
+      }
+    }
+  },
+  {
+    "key": "27D7",
+    "mappings": {
+      "default": {
+        "default": "full outer join"
+      }
+    }
+  },
+  {
+    "key": "27D8",
+    "mappings": {
+      "default": {
+        "default": "groot op spyker"
+      }
+    }
+  },
+  {
+    "key": "27D9",
+    "mappings": {
+      "default": {
+        "default": "groot af spyker"
+      }
+    }
+  },
+  {
+    "key": "27DA",
+    "mappings": {
+      "default": {
+        "default": "links en regs dubbel draaihek"
+      }
+    }
+  },
+  {
+    "key": "27DB",
+    "mappings": {
+      "default": {
+        "default": "links en regs spyker"
+      }
+    }
+  },
+  {
+    "key": "27DC",
+    "mappings": {
+      "default": {
+        "default": "linker multikaart"
+      }
+    }
+  },
+  {
+    "key": "27DD",
+    "mappings": {
+      "default": {
+        "default": "lang regs spyker"
+      }
+    }
+  },
+  {
+    "key": "27DE",
+    "mappings": {
+      "default": {
+        "default": "lang links spyker"
+      }
+    }
+  },
+  {
+    "key": "27DF",
+    "mappings": {
+      "default": {
+        "default": "op spyker met sirkel bokant"
+      }
+    }
+  },
+  {
+    "key": "27E0",
+    "mappings": {
+      "default": {
+        "default": "lozenge divided by horizontal rule"
+      }
+    }
+  },
+  {
+    "key": "27E1",
+    "mappings": {
+      "default": {
+        "default": "wit konkawe dwars diamand"
+      }
+    }
+  },
+  {
+    "key": "27E2",
+    "mappings": {
+      "default": {
+        "default": "wit konkawe dwars diamand met linkswaartse merk"
+      }
+    }
+  },
+  {
+    "key": "27E3",
+    "mappings": {
+      "default": {
+        "default": "wit konkawe dwars diamand met regswaartse merk"
+      }
+    }
+  },
+  {
+    "key": "27E4",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met linkswaartse merk"
+      }
+    }
+  },
+  {
+    "key": "27E5",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met regswaartse merk"
+      }
+    }
+  },
+  {
+    "key": "292B",
+    "mappings": {
+      "default": {
+        "default": "stygende diagonaal wat dalende diagonaal kruis"
+      }
+    }
+  },
+  {
+    "key": "292C",
+    "mappings": {
+      "default": {
+        "default": "dalende diagonaal wat stygende diagonaal kruis"
+      }
+    }
+  },
+  {
+    "key": "2980",
+    "mappings": {
+      "default": {
+        "default": "trippel afstreep"
+      }
+    }
+  },
+  {
+    "key": "2981",
+    "mappings": {
+      "default": {
+        "default": "z notation spot"
+      }
+    }
+  },
+  {
+    "key": "2982",
+    "mappings": {
+      "default": {
+        "default": "z notation type colon"
+      }
+    }
+  },
+  {
+    "key": "2999",
+    "mappings": {
+      "default": {
+        "default": "kolletjies heining"
+      }
+    }
+  },
+  {
+    "key": "299A",
+    "mappings": {
+      "default": {
+        "default": "vertikale heen en weer lyn"
+      }
+    }
+  },
+  {
+    "key": "29B0",
+    "mappings": {
+      "default": {
+        "default": "tru leë versameling"
+      }
+    }
+  },
+  {
+    "key": "29B1",
+    "mappings": {
+      "default": {
+        "default": "leë versameling met bostaaf"
+      }
+    }
+  },
+  {
+    "key": "29B2",
+    "mappings": {
+      "default": {
+        "default": "leë versameling met klein sirkel bokant"
+      }
+    }
+  },
+  {
+    "key": "29B5",
+    "mappings": {
+      "default": {
+        "default": "sirkel met horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "29B6",
+    "mappings": {
+      "default": {
+        "default": "omkringde afstreep"
+      }
+    }
+  },
+  {
+    "key": "29B7",
+    "mappings": {
+      "default": {
+        "default": "omkringde paralel"
+      }
+    }
+  },
+  {
+    "key": "29B8",
+    "mappings": {
+      "default": {
+        "default": "omkringde trustreep"
+      }
+    }
+  },
+  {
+    "key": "29B9",
+    "mappings": {
+      "default": {
+        "default": "omkringde loodreg"
+      }
+    }
+  },
+  {
+    "key": "29BA",
+    "mappings": {
+      "default": {
+        "default": "sirkel gedeel deur horisontale lyn en boonste helfte gedeel deur vertikale streep"
+      }
+    }
+  },
+  {
+    "key": "29BB",
+    "mappings": {
+      "default": {
+        "default": "sirkel met x bo op"
+      }
+    }
+  },
+  {
+    "key": "29BC",
+    "mappings": {
+      "default": {
+        "default": "omkringde antikloksgewyse geroeteerde gedeel deur teken"
+      }
+    }
+  },
+  {
+    "key": "29BE",
+    "mappings": {
+      "default": {
+        "default": "omkringde wit koeël"
+      }
+    }
+  },
+  {
+    "key": "29BF",
+    "mappings": {
+      "default": {
+        "default": "omkringde koeël"
+      }
+    }
+  },
+  {
+    "key": "29C0",
+    "mappings": {
+      "default": {
+        "default": "omkringde kleiner as"
+      }
+    }
+  },
+  {
+    "key": "29C1",
+    "mappings": {
+      "default": {
+        "default": "omkringde groter as"
+      }
+    }
+  },
+  {
+    "key": "29C2",
+    "mappings": {
+      "default": {
+        "default": "sirkel met klein sirkel na regs"
+      }
+    }
+  },
+  {
+    "key": "29C3",
+    "mappings": {
+      "default": {
+        "default": "sirkel met twee horisontale strepe aan die regter kant"
+      }
+    }
+  },
+  {
+    "key": "29C4",
+    "mappings": {
+      "default": {
+        "default": "squared rising diagonal slash"
+      }
+    }
+  },
+  {
+    "key": "29C5",
+    "mappings": {
+      "default": {
+        "default": "squared falling diagonal slash"
+      }
+    }
+  },
+  {
+    "key": "29C6",
+    "mappings": {
+      "default": {
+        "default": "squared asterisk"
+      }
+    }
+  },
+  {
+    "key": "29C7",
+    "mappings": {
+      "default": {
+        "default": "squared small circle"
+      }
+    }
+  },
+  {
+    "key": "29C8",
+    "mappings": {
+      "default": {
+        "default": "squared square"
+      }
+    }
+  },
+  {
+    "key": "29C9",
+    "mappings": {
+      "default": {
+        "default": "twee saamgevoegde vierkante"
+      }
+    }
+  },
+  {
+    "key": "29CA",
+    "mappings": {
+      "default": {
+        "default": "driehoek met punt bo"
+      }
+    }
+  },
+  {
+    "key": "29CB",
+    "mappings": {
+      "default": {
+        "default": "driehoek met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "29CC",
+    "mappings": {
+      "default": {
+        "default": "s in driehoek"
+      }
+    }
+  },
+  {
+    "key": "29CD",
+    "mappings": {
+      "default": {
+        "default": "driehoek met serifs onder aan"
+      }
+    }
+  },
+  {
+    "key": "29CE",
+    "mappings": {
+      "default": {
+        "default": "regs driehoek bokant links driehoek"
+      }
+    }
+  },
+  {
+    "key": "29CF",
+    "mappings": {
+      "default": {
+        "default": "links driehoek langsaan afstreep"
+      }
+    }
+  },
+  {
+    "key": "29D0",
+    "mappings": {
+      "default": {
+        "default": "afstreep langsaan regs driehoek"
+      }
+    }
+  },
+  {
+    "key": "29D1",
+    "mappings": {
+      "default": {
+        "default": "strikdas met linker helfde swart"
+      }
+    }
+  },
+  {
+    "key": "29D2",
+    "mappings": {
+      "default": {
+        "default": "strikdas met regter helfde swart"
+      }
+    }
+  },
+  {
+    "key": "29D3",
+    "mappings": {
+      "default": {
+        "default": "swart strikdas"
+      }
+    }
+  },
+  {
+    "key": "29D4",
+    "mappings": {
+      "default": {
+        "default": "maalteken met linker helfde swart"
+      }
+    }
+  },
+  {
+    "key": "29D5",
+    "mappings": {
+      "default": {
+        "default": "maalteken met regter helfde swart"
+      }
+    }
+  },
+  {
+    "key": "29D6",
+    "mappings": {
+      "default": {
+        "default": "wit uurglas"
+      }
+    }
+  },
+  {
+    "key": "29D7",
+    "mappings": {
+      "default": {
+        "default": "swart uurglas"
+      }
+    }
+  },
+  {
+    "key": "29DC",
+    "mappings": {
+      "default": {
+        "default": "onvolledige oneindig"
+      }
+    }
+  },
+  {
+    "key": "29DD",
+    "mappings": {
+      "default": {
+        "default": "das oor oneindig"
+      }
+    }
+  },
+  {
+    "key": "29DE",
+    "mappings": {
+      "default": {
+        "default": "oneindig genegeer met afstreep"
+      }
+    }
+  },
+  {
+    "key": "29DF",
+    "mappings": {
+      "default": {
+        "default": "dubbelend multikaart"
+      }
+    }
+  },
+  {
+    "key": "29E0",
+    "mappings": {
+      "default": {
+        "default": "vierkant met gekontoerde buitelyn"
+      }
+    }
+  },
+  {
+    "key": "29E1",
+    "mappings": {
+      "default": {
+        "default": "vermeerder as"
+      }
+    }
+  },
+  {
+    "key": "29E2",
+    "mappings": {
+      "default": {
+        "default": "gemengde produk"
+      }
+    }
+  },
+  {
+    "key": "29E3",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan en skuins paralel"
+      }
+    }
+  },
+  {
+    "key": "29E4",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan en skuins paralel met tilde bokant"
+      }
+    }
+  },
+  {
+    "key": "29E5",
+    "mappings": {
+      "default": {
+        "default": "identies aan en skuins paralel"
+      }
+    }
+  },
+  {
+    "key": "29E6",
+    "mappings": {
+      "default": {
+        "default": "ewe sterk"
+      }
+    }
+  },
+  {
+    "key": "29E7",
+    "mappings": {
+      "default": {
+        "default": "termodinamies"
+      }
+    }
+  },
+  {
+    "key": "29E8",
+    "mappings": {
+      "default": {
+        "default": "driehoek wat ondertoe wys met linker helfde swart"
+      }
+    }
+  },
+  {
+    "key": "29E9",
+    "mappings": {
+      "default": {
+        "default": "driehoek wat ondertoe wys met regter helfde swart"
+      }
+    }
+  },
+  {
+    "key": "29EB",
+    "mappings": {
+      "default": {
+        "default": "black lozenge"
+      }
+    }
+  },
+  {
+    "key": "29EE",
+    "mappings": {
+      "default": {
+        "default": "error barred white square"
+      }
+    }
+  },
+  {
+    "key": "29EF",
+    "mappings": {
+      "default": {
+        "default": "error barred black square"
+      }
+    }
+  },
+  {
+    "key": "29F0",
+    "mappings": {
+      "default": {
+        "default": "error barred white diamond"
+      }
+    }
+  },
+  {
+    "key": "29F1",
+    "mappings": {
+      "default": {
+        "default": "error barred black diamond"
+      }
+    }
+  },
+  {
+    "key": "29F2",
+    "mappings": {
+      "default": {
+        "default": "error barred white circle"
+      }
+    }
+  },
+  {
+    "key": "29F3",
+    "mappings": {
+      "default": {
+        "default": "error barred black circle"
+      }
+    }
+  },
+  {
+    "key": "29F4",
+    "mappings": {
+      "default": {
+        "default": "reel uitgestel"
+      }
+    }
+  },
+  {
+    "key": "29F5",
+    "mappings": {
+      "default": {
+        "default": "trustreep"
+      }
+    }
+  },
+  {
+    "key": "29F6",
+    "mappings": {
+      "default": {
+        "default": "solidus with overbar"
+      }
+    }
+  },
+  {
+    "key": "29F7",
+    "mappings": {
+      "default": {
+        "default": "trustreep met horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "29F8",
+    "mappings": {
+      "default": {
+        "default": "big solidus"
+      },
+      "mathspeak": {
+        "default": "solidus"
+      }
+    }
+  },
+  {
+    "key": "29F9",
+    "mappings": {
+      "default": {
+        "default": "groot trustreep"
+      },
+      "mathspeak": {
+        "default": "backslash"
+      }
+    }
+  },
+  {
+    "key": "29FA",
+    "mappings": {
+      "default": {
+        "default": "dubbelplus"
+      }
+    }
+  },
+  {
+    "key": "29FB",
+    "mappings": {
+      "default": {
+        "default": "trippelplus"
+      }
+    }
+  },
+  {
+    "key": "29FE",
+    "mappings": {
+      "default": {
+        "default": "klein"
+      }
+    }
+  },
+  {
+    "key": "29FF",
+    "mappings": {
+      "default": {
+        "default": "miny"
+      }
+    }
+  },
+  {
+    "key": "2A00",
+    "mappings": {
+      "default": {
+        "default": "n ary circled dot"
+      },
+      "mathspeak": {
+        "default": "circled dot"
+      }
+    }
+  },
+  {
+    "key": "2A01",
+    "mappings": {
+      "default": {
+        "default": "n ary circled plus"
+      },
+      "mathspeak": {
+        "default": "circled plus"
+      }
+    }
+  },
+  {
+    "key": "2A02",
+    "mappings": {
+      "default": {
+        "default": "n ary circled times"
+      },
+      "mathspeak": {
+        "default": "circled times"
+      }
+    }
+  },
+  {
+    "key": "2A03",
+    "mappings": {
+      "default": {
+        "default": "n ary union with dot"
+      },
+      "mathspeak": {
+        "default": "union with dot"
+      }
+    }
+  },
+  {
+    "key": "2A04",
+    "mappings": {
+      "default": {
+        "default": "n ary union operator with plus"
+      },
+      "mathspeak": {
+        "default": "union with plus"
+      }
+    }
+  },
+  {
+    "key": "2A05",
+    "mappings": {
+      "default": {
+        "default": "n ary square intersection"
+      },
+      "mathspeak": {
+        "default": "square intersection"
+      }
+    }
+  },
+  {
+    "key": "2A06",
+    "mappings": {
+      "default": {
+        "default": "n ary square union"
+      },
+      "mathspeak": {
+        "default": "square union"
+      }
+    }
+  },
+  {
+    "key": "2A07",
+    "mappings": {
+      "default": {
+        "default": "twee en"
+      }
+    }
+  },
+  {
+    "key": "2A08",
+    "mappings": {
+      "default": {
+        "default": "twee of"
+      }
+    }
+  },
+  {
+    "key": "2A09",
+    "mappings": {
+      "default": {
+        "default": "n ary times"
+      },
+      "mathspeak": {
+        "default": "times"
+      }
+    }
+  },
+  {
+    "key": "2A0A",
+    "mappings": {
+      "default": {
+        "default": "modules twee som"
+      }
+    }
+  },
+  {
+    "key": "2A0B",
+    "mappings": {
+      "default": {
+        "default": "sommering met integraal"
+      }
+    }
+  },
+  {
+    "key": "2A0C",
+    "mappings": {
+      "default": {
+        "default": "vierdubbele integraal"
+      }
+    }
+  },
+  {
+    "key": "2A0D",
+    "mappings": {
+      "default": {
+        "default": "finite part integral"
+      }
+    }
+  },
+  {
+    "key": "2A0E",
+    "mappings": {
+      "default": {
+        "default": "integraal met dubbelstreep"
+      }
+    }
+  },
+  {
+    "key": "2A0F",
+    "mappings": {
+      "default": {
+        "default": "integraal gemiddelde met skuinsstreep"
+      }
+    }
+  },
+  {
+    "key": "2A10",
+    "mappings": {
+      "default": {
+        "default": "sirkulasie funksie"
+      }
+    }
+  },
+  {
+    "key": "2A11",
+    "mappings": {
+      "default": {
+        "default": "antikloksgewyse integrasie"
+      }
+    }
+  },
+  {
+    "key": "2A12",
+    "mappings": {
+      "default": {
+        "default": "lyn integrasie met reghoekige pad rondom paal"
+      }
+    }
+  },
+  {
+    "key": "2A13",
+    "mappings": {
+      "default": {
+        "default": "lyn integrasie met semisirkulêre pad rondom paal"
+      }
+    }
+  },
+  {
+    "key": "2A14",
+    "mappings": {
+      "default": {
+        "default": "lyn integrasie wat nie die paal insluit nie"
+      }
+    }
+  },
+  {
+    "key": "2A15",
+    "mappings": {
+      "default": {
+        "default": "integraal om 'n punt"
+      }
+    }
+  },
+  {
+    "key": "2A16",
+    "mappings": {
+      "default": {
+        "default": "quaternion integral"
+      }
+    }
+  },
+  {
+    "key": "2A18",
+    "mappings": {
+      "default": {
+        "default": "integraal met maalteken"
+      }
+    }
+  },
+  {
+    "key": "2A19",
+    "mappings": {
+      "default": {
+        "default": "integraal met interseksie"
+      }
+    }
+  },
+  {
+    "key": "2A1A",
+    "mappings": {
+      "default": {
+        "default": "integraal met einheid"
+      }
+    }
+  },
+  {
+    "key": "2A1B",
+    "mappings": {
+      "default": {
+        "default": "integraal met bostaaf"
+      }
+    }
+  },
+  {
+    "key": "2A1C",
+    "mappings": {
+      "default": {
+        "default": "integraal met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2A1D",
+    "mappings": {
+      "default": {
+        "default": "verenig"
+      }
+    }
+  },
+  {
+    "key": "2A1E",
+    "mappings": {
+      "default": {
+        "default": "groot links driehoek"
+      }
+    }
+  },
+  {
+    "key": "2A1F",
+    "mappings": {
+      "default": {
+        "default": "z notation schema composition"
+      }
+    }
+  },
+  {
+    "key": "2A20",
+    "mappings": {
+      "default": {
+        "default": "z notation schema piping"
+      }
+    }
+  },
+  {
+    "key": "2A21",
+    "mappings": {
+      "default": {
+        "default": "z notation schema projection"
+      }
+    }
+  },
+  {
+    "key": "2A22",
+    "mappings": {
+      "default": {
+        "default": "plus met sirkel bokant"
+      }
+    }
+  },
+  {
+    "key": "2A23",
+    "mappings": {
+      "default": {
+        "default": "plus hoed"
+      }
+    }
+  },
+  {
+    "key": "2A24",
+    "mappings": {
+      "default": {
+        "default": "plus tilde"
+      }
+    }
+  },
+  {
+    "key": "2A25",
+    "mappings": {
+      "default": {
+        "default": "plus onder punt"
+      }
+    }
+  },
+  {
+    "key": "2A26",
+    "mappings": {
+      "default": {
+        "default": "plus met tilde onder"
+      }
+    }
+  },
+  {
+    "key": "2A27",
+    "mappings": {
+      "default": {
+        "default": "plus met onderskrif twee"
+      }
+    }
+  },
+  {
+    "key": "2A28",
+    "mappings": {
+      "default": {
+        "default": "plus met swart driehoek"
+      }
+    }
+  },
+  {
+    "key": "2A29",
+    "mappings": {
+      "default": {
+        "default": "minus met komma bokant"
+      }
+    }
+  },
+  {
+    "key": "2A2A",
+    "mappings": {
+      "default": {
+        "default": "minus met punt onder"
+      }
+    }
+  },
+  {
+    "key": "2A2B",
+    "mappings": {
+      "default": {
+        "default": "minus met dalende punte"
+      }
+    }
+  },
+  {
+    "key": "2A2C",
+    "mappings": {
+      "default": {
+        "default": "minus met stygende punte"
+      }
+    }
+  },
+  {
+    "key": "2A2D",
+    "mappings": {
+      "default": {
+        "default": "plus in linker half sirkel"
+      }
+    }
+  },
+  {
+    "key": "2A2E",
+    "mappings": {
+      "default": {
+        "default": "plus in regs half sirkel"
+      }
+    }
+  },
+  {
+    "key": "2A2F",
+    "mappings": {
+      "default": {
+        "default": "vektor of kruisproduk"
+      }
+    }
+  },
+  {
+    "key": "2A30",
+    "mappings": {
+      "default": {
+        "default": "maalteken met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2A31",
+    "mappings": {
+      "default": {
+        "default": "maalteken met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2A32",
+    "mappings": {
+      "default": {
+        "default": "semidirekte produk met toe onderkant"
+      }
+    }
+  },
+  {
+    "key": "2A33",
+    "mappings": {
+      "default": {
+        "default": "smash product"
+      }
+    }
+  },
+  {
+    "key": "2A34",
+    "mappings": {
+      "default": {
+        "default": "maalteken in links half sirkel"
+      }
+    }
+  },
+  {
+    "key": "2A35",
+    "mappings": {
+      "default": {
+        "default": "maalteken in regs half sirkel"
+      }
+    }
+  },
+  {
+    "key": "2A36",
+    "mappings": {
+      "default": {
+        "default": "omkringde maalteken met kappie aksent"
+      }
+    }
+  },
+  {
+    "key": "2A37",
+    "mappings": {
+      "default": {
+        "default": "maalteken in dubbelsirkel"
+      }
+    }
+  },
+  {
+    "key": "2A38",
+    "mappings": {
+      "default": {
+        "default": "omkringde gedeel deur teken"
+      }
+    }
+  },
+  {
+    "key": "2A39",
+    "mappings": {
+      "default": {
+        "default": "plus in driehoek"
+      }
+    }
+  },
+  {
+    "key": "2A3A",
+    "mappings": {
+      "default": {
+        "default": "minus in driehoek"
+      }
+    }
+  },
+  {
+    "key": "2A3B",
+    "mappings": {
+      "default": {
+        "default": "maalteken in driehoek"
+      }
+    }
+  },
+  {
+    "key": "2A3C",
+    "mappings": {
+      "default": {
+        "default": "binneste produk"
+      }
+    }
+  },
+  {
+    "key": "2A3D",
+    "mappings": {
+      "default": {
+        "default": "regter binneste produk"
+      }
+    }
+  },
+  {
+    "key": "2A3E",
+    "mappings": {
+      "default": {
+        "default": "z notation relational composition"
+      }
+    }
+  },
+  {
+    "key": "2A3F",
+    "mappings": {
+      "default": {
+        "default": "amalgimering of ko-produk"
+      }
+    }
+  },
+  {
+    "key": "2A40",
+    "mappings": {
+      "default": {
+        "default": "interseksie met punt"
+      }
+    }
+  },
+  {
+    "key": "2A41",
+    "mappings": {
+      "default": {
+        "default": "einheid met minus"
+      }
+    }
+  },
+  {
+    "key": "2A42",
+    "mappings": {
+      "default": {
+        "default": "eenheid met bostaaf"
+      }
+    }
+  },
+  {
+    "key": "2A43",
+    "mappings": {
+      "default": {
+        "default": "interseksie met bostaaf"
+      }
+    }
+  },
+  {
+    "key": "2A44",
+    "mappings": {
+      "default": {
+        "default": "interseksie met en"
+      }
+    }
+  },
+  {
+    "key": "2A45",
+    "mappings": {
+      "default": {
+        "default": "einheid met of"
+      }
+    }
+  },
+  {
+    "key": "2A46",
+    "mappings": {
+      "default": {
+        "default": "eenheid bokant interseksie"
+      }
+    }
+  },
+  {
+    "key": "2A47",
+    "mappings": {
+      "default": {
+        "default": "interseksie bokant eenheid"
+      }
+    }
+  },
+  {
+    "key": "2A48",
+    "mappings": {
+      "default": {
+        "default": "eenheid bokant staaf bokant interseksie"
+      }
+    }
+  },
+  {
+    "key": "2A49",
+    "mappings": {
+      "default": {
+        "default": "interseksie bokant staaf bokant eenheid"
+      }
+    }
+  },
+  {
+    "key": "2A4A",
+    "mappings": {
+      "default": {
+        "default": "eenheid langsaan en verenig met eenheid"
+      }
+    }
+  },
+  {
+    "key": "2A4B",
+    "mappings": {
+      "default": {
+        "default": "interseksie langsaan en verenig met interseksie"
+      }
+    }
+  },
+  {
+    "key": "2A4C",
+    "mappings": {
+      "default": {
+        "default": "geslote eenheid met serifs"
+      }
+    }
+  },
+  {
+    "key": "2A4D",
+    "mappings": {
+      "default": {
+        "default": "geslote interseksie met serifs"
+      }
+    }
+  },
+  {
+    "key": "2A4E",
+    "mappings": {
+      "default": {
+        "default": "double square intersection"
+      }
+    }
+  },
+  {
+    "key": "2A4F",
+    "mappings": {
+      "default": {
+        "default": "double square union"
+      }
+    }
+  },
+  {
+    "key": "2A50",
+    "mappings": {
+      "default": {
+        "default": "closed union with serifs and smash product"
+      }
+    }
+  },
+  {
+    "key": "2A51",
+    "mappings": {
+      "default": {
+        "default": "en met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2A52",
+    "mappings": {
+      "default": {
+        "default": "of met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2A53",
+    "mappings": {
+      "default": {
+        "default": "dubbel en"
+      }
+    }
+  },
+  {
+    "key": "2A54",
+    "mappings": {
+      "default": {
+        "default": "dubbel of"
+      }
+    }
+  },
+  {
+    "key": "2A55",
+    "mappings": {
+      "default": {
+        "default": "twee oorvleuelende en tekens"
+      }
+    }
+  },
+  {
+    "key": "2A56",
+    "mappings": {
+      "default": {
+        "default": "twee oorvleuelende of tekens"
+      }
+    }
+  },
+  {
+    "key": "2A57",
+    "mappings": {
+      "default": {
+        "default": "skuins groot of"
+      }
+    }
+  },
+  {
+    "key": "2A58",
+    "mappings": {
+      "default": {
+        "default": "skuins groot en"
+      }
+    }
+  },
+  {
+    "key": "2A59",
+    "mappings": {
+      "default": {
+        "default": "of wat met en oorvleuel"
+      }
+    }
+  },
+  {
+    "key": "2A5A",
+    "mappings": {
+      "default": {
+        "default": "en met middelsteel"
+      }
+    }
+  },
+  {
+    "key": "2A5B",
+    "mappings": {
+      "default": {
+        "default": "of met middelsteel"
+      }
+    }
+  },
+  {
+    "key": "2A5C",
+    "mappings": {
+      "default": {
+        "default": "en met horisontale koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2A5D",
+    "mappings": {
+      "default": {
+        "default": "of met horisontale koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2A5E",
+    "mappings": {
+      "default": {
+        "default": "en met dubbel bostaaf"
+      }
+    }
+  },
+  {
+    "key": "2A5F",
+    "mappings": {
+      "default": {
+        "default": "en met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2A60",
+    "mappings": {
+      "default": {
+        "default": "en met dubbel onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2A61",
+    "mappings": {
+      "default": {
+        "default": "klein v met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2A62",
+    "mappings": {
+      "default": {
+        "default": "of met dubbel bostaaf"
+      }
+    }
+  },
+  {
+    "key": "2A63",
+    "mappings": {
+      "default": {
+        "default": "of met dubbel onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2A64",
+    "mappings": {
+      "default": {
+        "default": "z notation domain antirestriction"
+      }
+    }
+  },
+  {
+    "key": "2A65",
+    "mappings": {
+      "default": {
+        "default": "z notation range antirestriction"
+      }
+    }
+  },
+  {
+    "key": "2A66",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan met punt onder"
+      }
+    }
+  },
+  {
+    "key": "2A67",
+    "mappings": {
+      "default": {
+        "default": "identies met punt bokant"
+      }
+    }
+  },
+  {
+    "key": "2A68",
+    "mappings": {
+      "default": {
+        "default": "trippel horisontale streep met dubbel afstreep"
+      }
+    }
+  },
+  {
+    "key": "2A69",
+    "mappings": {
+      "default": {
+        "default": "trippel horisontale streep met trippel afstreep"
+      }
+    }
+  },
+  {
+    "key": "2A6A",
+    "mappings": {
+      "default": {
+        "default": "tilde met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2A6B",
+    "mappings": {
+      "default": {
+        "default": "tilde met stygende punte"
+      }
+    }
+  },
+  {
+    "key": "2A6C",
+    "mappings": {
+      "default": {
+        "default": "eenders minus eenders"
+      }
+    }
+  },
+  {
+    "key": "2A6D",
+    "mappings": {
+      "default": {
+        "default": "congruent with dot above"
+      }
+    }
+  },
+  {
+    "key": "2A6E",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan met ster"
+      }
+    }
+  },
+  {
+    "key": "2A6F",
+    "mappings": {
+      "default": {
+        "default": "amper gelyk aan hoed"
+      }
+    }
+  },
+  {
+    "key": "2A70",
+    "mappings": {
+      "default": {
+        "default": "ongeveer gelyk aan of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A71",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan bokant plus"
+      }
+    }
+  },
+  {
+    "key": "2A72",
+    "mappings": {
+      "default": {
+        "default": "plus bokant is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A73",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan bokant tilde"
+      }
+    }
+  },
+  {
+    "key": "2A74",
+    "mappings": {
+      "default": {
+        "default": "dubbel dubbelpunt is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A75",
+    "mappings": {
+      "default": {
+        "default": "twee opeenvolgende is gelyk aans"
+      }
+    }
+  },
+  {
+    "key": "2A76",
+    "mappings": {
+      "default": {
+        "default": "drie opeenvolgende is gelyk aans"
+      }
+    }
+  },
+  {
+    "key": "2A77",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan met twee punte bo en twee punte onder"
+      }
+    }
+  },
+  {
+    "key": "2A78",
+    "mappings": {
+      "default": {
+        "default": "ekwivalent met vier punte bo"
+      }
+    }
+  },
+  {
+    "key": "2A79",
+    "mappings": {
+      "default": {
+        "default": "kleiner as met sirkel binne in"
+      }
+    }
+  },
+  {
+    "key": "2A7A",
+    "mappings": {
+      "default": {
+        "default": "groter as met sirkel binne in"
+      }
+    }
+  },
+  {
+    "key": "2A7B",
+    "mappings": {
+      "default": {
+        "default": "kleiner as met vraagteken bokant"
+      }
+    }
+  },
+  {
+    "key": "2A7C",
+    "mappings": {
+      "default": {
+        "default": "groter as met vraagteken bokant"
+      }
+    }
+  },
+  {
+    "key": "2A7D",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of skuins is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A7E",
+    "mappings": {
+      "default": {
+        "default": "groter as of skuins is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A7F",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of skuins is gelyk aan met punt binne in"
+      }
+    }
+  },
+  {
+    "key": "2A80",
+    "mappings": {
+      "default": {
+        "default": "groter as of skuins is gelyk aan met punt binne in"
+      }
+    }
+  },
+  {
+    "key": "2A81",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of skuins is gelyk aan met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2A82",
+    "mappings": {
+      "default": {
+        "default": "groter as of skuins is gelyk aan met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2A83",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of skuins is gelyk aan met punt bokant regs"
+      }
+    }
+  },
+  {
+    "key": "2A84",
+    "mappings": {
+      "default": {
+        "default": "groter as of skuins is gelyk aan met punt bo regs"
+      }
+    }
+  },
+  {
+    "key": "2A85",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of ongeveer"
+      }
+    }
+  },
+  {
+    "key": "2A86",
+    "mappings": {
+      "default": {
+        "default": "groter as of ongeveer"
+      }
+    }
+  },
+  {
+    "key": "2A87",
+    "mappings": {
+      "default": {
+        "default": "kleiner as en enkel lyn nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A88",
+    "mappings": {
+      "default": {
+        "default": "groter as en enkel lyn nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A89",
+    "mappings": {
+      "default": {
+        "default": "kleiner as en nie ongeveer"
+      }
+    }
+  },
+  {
+    "key": "2A8A",
+    "mappings": {
+      "default": {
+        "default": "groter as en nie ongeveer"
+      }
+    }
+  },
+  {
+    "key": "2A8B",
+    "mappings": {
+      "default": {
+        "default": "kleiner as bokant dubbellyn is gelyk aan bokant groter as"
+      }
+    }
+  },
+  {
+    "key": "2A8C",
+    "mappings": {
+      "default": {
+        "default": "groter as bokant dubbellyn is gelyk aan bokant kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2A8D",
+    "mappings": {
+      "default": {
+        "default": "kleiner as bokant eenders of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A8E",
+    "mappings": {
+      "default": {
+        "default": "groter as bokant eenders of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A8F",
+    "mappings": {
+      "default": {
+        "default": "kleiner as bokant eenders bokant groter as"
+      }
+    }
+  },
+  {
+    "key": "2A90",
+    "mappings": {
+      "default": {
+        "default": "groter as bokant eenders bokant kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2A91",
+    "mappings": {
+      "default": {
+        "default": "kleiner as bokant groter as bokant dubbellyn is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A92",
+    "mappings": {
+      "default": {
+        "default": "groter as bokant kleiner as bokant dubbellyn is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A93",
+    "mappings": {
+      "default": {
+        "default": "kleiner as bokant skuins is gelyk aan bokant groter as bokant skuins is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A94",
+    "mappings": {
+      "default": {
+        "default": "groter as bokant skuins is gelyk aan bokant kleiner as bokant skuins is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2A95",
+    "mappings": {
+      "default": {
+        "default": "skuins is gelyk aan of kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2A96",
+    "mappings": {
+      "default": {
+        "default": "skuins is gelyk aan of groter as"
+      }
+    }
+  },
+  {
+    "key": "2A97",
+    "mappings": {
+      "default": {
+        "default": "skuins is gelyk aan of kleiner as met punt binne in"
+      }
+    }
+  },
+  {
+    "key": "2A98",
+    "mappings": {
+      "default": {
+        "default": "skuins is gelyk aan of groter as met punt binne in"
+      }
+    }
+  },
+  {
+    "key": "2A99",
+    "mappings": {
+      "default": {
+        "default": "dubbellyn is gelyk aan of kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2A9A",
+    "mappings": {
+      "default": {
+        "default": "dubbellyn is gelyk aan of groter as"
+      }
+    }
+  },
+  {
+    "key": "2A9B",
+    "mappings": {
+      "default": {
+        "default": "dubbellyn skuins is gelyk aan of kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2A9C",
+    "mappings": {
+      "default": {
+        "default": "dubbellyn skuins is gelyk aan of groter as"
+      }
+    }
+  },
+  {
+    "key": "2A9D",
+    "mappings": {
+      "default": {
+        "default": "eenders of kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2A9E",
+    "mappings": {
+      "default": {
+        "default": "eenders of groter as"
+      }
+    }
+  },
+  {
+    "key": "2A9F",
+    "mappings": {
+      "default": {
+        "default": "eenders bokant kleiner as bokant is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AA0",
+    "mappings": {
+      "default": {
+        "default": "eenders bokant groter as bokant is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AA1",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeneste kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2AA2",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeneste groter as"
+      }
+    }
+  },
+  {
+    "key": "2AA3",
+    "mappings": {
+      "default": {
+        "default": "dubbelgeneste kleiner as met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2AA4",
+    "mappings": {
+      "default": {
+        "default": "groter as oorvleuel met kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2AA5",
+    "mappings": {
+      "default": {
+        "default": "groter as langsaan kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2AA6",
+    "mappings": {
+      "default": {
+        "default": "kleiner as toegemaak met kurwe"
+      }
+    }
+  },
+  {
+    "key": "2AA7",
+    "mappings": {
+      "default": {
+        "default": "groter as toegemaak met kurwe"
+      }
+    }
+  },
+  {
+    "key": "2AA8",
+    "mappings": {
+      "default": {
+        "default": "kleiner as toegemaak met kurwe bokant skuins is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AA9",
+    "mappings": {
+      "default": {
+        "default": "groter as toegemaak met kurwe bokant skuins is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AAA",
+    "mappings": {
+      "default": {
+        "default": "kleiner as"
+      },
+      "clearspeak": {
+        "default": "is smaller than"
+      }
+    }
+  },
+  {
+    "key": "2AAB",
+    "mappings": {
+      "default": {
+        "default": "groter as"
+      },
+      "clearspeak": {
+        "default": "is larger than"
+      }
+    }
+  },
+  {
+    "key": "2AAC",
+    "mappings": {
+      "default": {
+        "default": "kleiner as of gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is smaller than or equal to"
+      }
+    }
+  },
+  {
+    "key": "2AAD",
+    "mappings": {
+      "default": {
+        "default": "groter as of gelyk aan"
+      },
+      "clearspeak": {
+        "default": "is larger than or equal to"
+      }
+    }
+  },
+  {
+    "key": "2AAE",
+    "mappings": {
+      "default": {
+        "default": "equals with bumpy above"
+      }
+    }
+  },
+  {
+    "key": "2AAF",
+    "mappings": {
+      "default": {
+        "default": "precedes above single line equals sign"
+      }
+    }
+  },
+  {
+    "key": "2AB0",
+    "mappings": {
+      "default": {
+        "default": "succeeds above single line equals sign"
+      }
+    }
+  },
+  {
+    "key": "2AB1",
+    "mappings": {
+      "default": {
+        "default": "precedes above single line not equals"
+      }
+    }
+  },
+  {
+    "key": "2AB2",
+    "mappings": {
+      "default": {
+        "default": "succeeds above single line not equals"
+      }
+    }
+  },
+  {
+    "key": "2AB3",
+    "mappings": {
+      "default": {
+        "default": "precedes above equals"
+      }
+    }
+  },
+  {
+    "key": "2AB4",
+    "mappings": {
+      "default": {
+        "default": "succeeds above equals"
+      }
+    }
+  },
+  {
+    "key": "2AB5",
+    "mappings": {
+      "default": {
+        "default": "precedes above not equals"
+      }
+    }
+  },
+  {
+    "key": "2AB6",
+    "mappings": {
+      "default": {
+        "default": "succeeds above not equals"
+      }
+    }
+  },
+  {
+    "key": "2AB7",
+    "mappings": {
+      "default": {
+        "default": "precedes above almost equals"
+      }
+    }
+  },
+  {
+    "key": "2AB8",
+    "mappings": {
+      "default": {
+        "default": "succeeds above almost equals"
+      }
+    }
+  },
+  {
+    "key": "2AB9",
+    "mappings": {
+      "default": {
+        "default": "precedes above not almost equals"
+      }
+    }
+  },
+  {
+    "key": "2ABA",
+    "mappings": {
+      "default": {
+        "default": "succeeds above not almost equals"
+      }
+    }
+  },
+  {
+    "key": "2ABB",
+    "mappings": {
+      "default": {
+        "default": "double precedes"
+      }
+    }
+  },
+  {
+    "key": "2ABC",
+    "mappings": {
+      "default": {
+        "default": "double succeeds"
+      }
+    }
+  },
+  {
+    "key": "2ABD",
+    "mappings": {
+      "default": {
+        "default": "deelversameling met punt"
+      }
+    }
+  },
+  {
+    "key": "2ABE",
+    "mappings": {
+      "default": {
+        "default": "superversameling met punt"
+      }
+    }
+  },
+  {
+    "key": "2ABF",
+    "mappings": {
+      "default": {
+        "default": "deelversameling met plus onder"
+      }
+    }
+  },
+  {
+    "key": "2AC0",
+    "mappings": {
+      "default": {
+        "default": "superversameling met plus onder"
+      }
+    }
+  },
+  {
+    "key": "2AC1",
+    "mappings": {
+      "default": {
+        "default": "deelversameling met maalteken onder"
+      }
+    }
+  },
+  {
+    "key": "2AC2",
+    "mappings": {
+      "default": {
+        "default": "superversameling met maalteken onder"
+      }
+    }
+  },
+  {
+    "key": "2AC3",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van of is gelyk aan met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2AC4",
+    "mappings": {
+      "default": {
+        "default": "superversameling van of is gelyk aan met punt bo"
+      }
+    }
+  },
+  {
+    "key": "2AC5",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van bokant is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AC6",
+    "mappings": {
+      "default": {
+        "default": "superversameling van bokant is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AC7",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van bokant tilde"
+      }
+    }
+  },
+  {
+    "key": "2AC8",
+    "mappings": {
+      "default": {
+        "default": "superversameling van bokant tilde"
+      }
+    }
+  },
+  {
+    "key": "2AC9",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van bokant amper gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2ACA",
+    "mappings": {
+      "default": {
+        "default": "superversameling van bokant amper gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2ACB",
+    "mappings": {
+      "default": {
+        "default": "deelversameling van bokant nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2ACC",
+    "mappings": {
+      "default": {
+        "default": "superversameling van bokant nie gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2ACD",
+    "mappings": {
+      "default": {
+        "default": "vierkantige linker oop boks"
+      }
+    }
+  },
+  {
+    "key": "2ACE",
+    "mappings": {
+      "default": {
+        "default": "vierkantige regter oop boks"
+      }
+    }
+  },
+  {
+    "key": "2ACF",
+    "mappings": {
+      "default": {
+        "default": "geslote deelversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD0",
+    "mappings": {
+      "default": {
+        "default": "geslote superversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD1",
+    "mappings": {
+      "default": {
+        "default": "geslote deelversameling of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AD2",
+    "mappings": {
+      "default": {
+        "default": "geslote superversameling of is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AD3",
+    "mappings": {
+      "default": {
+        "default": "deelversameling bokant superversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD4",
+    "mappings": {
+      "default": {
+        "default": "superversameling bokant deelversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD5",
+    "mappings": {
+      "default": {
+        "default": "deelversameling bokant deelversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD6",
+    "mappings": {
+      "default": {
+        "default": "superversameling bokant superversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD7",
+    "mappings": {
+      "default": {
+        "default": "superversameling langsaan deelversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD8",
+    "mappings": {
+      "default": {
+        "default": "superversameling langsaan en verenig met koppelteken met deelversameling"
+      }
+    }
+  },
+  {
+    "key": "2AD9",
+    "mappings": {
+      "default": {
+        "default": "element van, opening ondertoe"
+      }
+    }
+  },
+  {
+    "key": "2ADA",
+    "mappings": {
+      "default": {
+        "default": "tuinvurk met t bokant"
+      }
+    }
+  },
+  {
+    "key": "2ADB",
+    "mappings": {
+      "default": {
+        "default": "transversale interseksie"
+      }
+    }
+  },
+  {
+    "key": "2ADC",
+    "mappings": {
+      "default": {
+        "default": "wat vurk"
+      }
+    }
+  },
+  {
+    "key": "2ADD",
+    "mappings": {
+      "default": {
+        "default": "wat nie vurk nie"
+      }
+    }
+  },
+  {
+    "key": "2ADE",
+    "mappings": {
+      "default": {
+        "default": "kort links spyker"
+      }
+    }
+  },
+  {
+    "key": "2ADF",
+    "mappings": {
+      "default": {
+        "default": "kort af spyker"
+      }
+    }
+  },
+  {
+    "key": "2AE0",
+    "mappings": {
+      "default": {
+        "default": "kort op spyker"
+      }
+    }
+  },
+  {
+    "key": "2AE1",
+    "mappings": {
+      "default": {
+        "default": "loodreg met s"
+      }
+    }
+  },
+  {
+    "key": "2AE2",
+    "mappings": {
+      "default": {
+        "default": "afstreep trippel regs draaihek"
+      }
+    }
+  },
+  {
+    "key": "2AE3",
+    "mappings": {
+      "default": {
+        "default": "dubbel afstreep linker draaihek"
+      }
+    }
+  },
+  {
+    "key": "2AE4",
+    "mappings": {
+      "default": {
+        "default": "afstreep dubbel linker draaihek"
+      }
+    }
+  },
+  {
+    "key": "2AE5",
+    "mappings": {
+      "default": {
+        "default": "dubbel afstreep dubbel linker draaihek"
+      }
+    }
+  },
+  {
+    "key": "2AE6",
+    "mappings": {
+      "default": {
+        "default": "lang koppelteken vanaf linker been van dubbel afstreep"
+      }
+    }
+  },
+  {
+    "key": "2AE7",
+    "mappings": {
+      "default": {
+        "default": "kort af spyker met bostaaf"
+      }
+    }
+  },
+  {
+    "key": "2AE8",
+    "mappings": {
+      "default": {
+        "default": "kort op spyker met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "2AE9",
+    "mappings": {
+      "default": {
+        "default": "kort op spyker bokant kort af spyker"
+      }
+    }
+  },
+  {
+    "key": "2AEA",
+    "mappings": {
+      "default": {
+        "default": "dubbel af spyker"
+      }
+    }
+  },
+  {
+    "key": "2AEB",
+    "mappings": {
+      "default": {
+        "default": "dubbel op spyker"
+      }
+    }
+  },
+  {
+    "key": "2AEC",
+    "mappings": {
+      "default": {
+        "default": "dubbelslag nie teken"
+      }
+    }
+  },
+  {
+    "key": "2AED",
+    "mappings": {
+      "default": {
+        "default": "tru dubbelslag nie teken"
+      }
+    }
+  },
+  {
+    "key": "2AEE",
+    "mappings": {
+      "default": {
+        "default": "deel nie deur, met tru negering"
+      }
+    }
+  },
+  {
+    "key": "2AEF",
+    "mappings": {
+      "default": {
+        "default": "afstreep met sirkel bokant"
+      }
+    }
+  },
+  {
+    "key": "2AF0",
+    "mappings": {
+      "default": {
+        "default": "afstreep met sirkel onder aan"
+      }
+    }
+  },
+  {
+    "key": "2AF1",
+    "mappings": {
+      "default": {
+        "default": "af spyker met sirkel onderaan"
+      }
+    }
+  },
+  {
+    "key": "2AF2",
+    "mappings": {
+      "default": {
+        "default": "paralel met horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "2AF3",
+    "mappings": {
+      "default": {
+        "default": "paralel met tilde"
+      }
+    }
+  },
+  {
+    "key": "2AF4",
+    "mappings": {
+      "default": {
+        "default": "trippel afstreep"
+      }
+    }
+  },
+  {
+    "key": "2AF5",
+    "mappings": {
+      "default": {
+        "default": "trippel afstreep met horisontale streep"
+      }
+    }
+  },
+  {
+    "key": "2AF6",
+    "mappings": {
+      "default": {
+        "default": "trippel dubbelpunt"
+      }
+    }
+  },
+  {
+    "key": "2AF7",
+    "mappings": {
+      "default": {
+        "default": "trippel geneste kleiner as"
+      }
+    }
+  },
+  {
+    "key": "2AF8",
+    "mappings": {
+      "default": {
+        "default": "trippel geneste groter as"
+      }
+    }
+  },
+  {
+    "key": "2AF9",
+    "mappings": {
+      "default": {
+        "default": "dubbellyn skuins kleiner of gelykaan"
+      }
+    }
+  },
+  {
+    "key": "2AFA",
+    "mappings": {
+      "default": {
+        "default": "dubbellyn skuins groter of gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "2AFB",
+    "mappings": {
+      "default": {
+        "default": "triple solidus"
+      }
+    }
+  },
+  {
+    "key": "2AFC",
+    "mappings": {
+      "default": {
+        "default": "groot trippel afstreep"
+      }
+    }
+  },
+  {
+    "key": "2AFD",
+    "mappings": {
+      "default": {
+        "default": "dubbel solidus"
+      }
+    }
+  },
+  {
+    "key": "2AFE",
+    "mappings": {
+      "default": {
+        "default": "wit afstreep"
+      }
+    }
+  },
+  {
+    "key": "2AFF",
+    "mappings": {
+      "default": {
+        "default": "n ary white vertical bar"
+      },
+      "mathspeak": {
+        "default": "white vertical bar"
+      }
+    }
+  },
+  {
+    "key": "301C",
+    "mappings": {
+      "default": {
+        "default": "golfkoppelteken"
+      }
+    }
+  },
+  {
+    "key": "FE10",
+    "mappings": {
+      "default": {
+        "default": "voorstellingsvorm vir vertikale komma"
+      }
+    }
+  },
+  {
+    "key": "FE13",
+    "mappings": {
+      "default": {
+        "default": "voorstellingsvorm vir vertikale dubbelpunt"
+      }
+    }
+  },
+  {
+    "key": "FE14",
+    "mappings": {
+      "default": {
+        "default": "voorstellingsvorm vir vertikale kommapunt"
+      }
+    }
+  },
+  {
+    "key": "FE15",
+    "mappings": {
+      "default": {
+        "default": "voorstellingsvorm vir vertikale uitroepteken"
+      }
+    }
+  },
+  {
+    "key": "FE16",
+    "mappings": {
+      "default": {
+        "default": "voorstellingsvorm vir vertikale vraagteken"
+      }
+    }
+  },
+  {
+    "key": "FE19",
+    "mappings": {
+      "default": {
+        "default": "voorstellingsvorm vir vertikale horisontale elipses"
+      }
+    }
+  },
+  {
+    "key": "FE30",
+    "mappings": {
+      "default": {
+        "default": "glyf vir vertikale tweepunt leier"
+      }
+    }
+  },
+  {
+    "key": "FE31",
+    "mappings": {
+      "default": {
+        "default": "glyf vir vertikale m koppelteken"
+      }
+    }
+  },
+  {
+    "key": "FE32",
+    "mappings": {
+      "default": {
+        "default": "glyf vir vertikale n koppelteken"
+      }
+    }
+  },
+  {
+    "key": "FE33",
+    "mappings": {
+      "default": {
+        "default": "glyf vir vertikale onderstreep"
+      }
+    }
+  },
+  {
+    "key": "FE34",
+    "mappings": {
+      "default": {
+        "default": "glyf vir vertikale golwende onderstreep"
+      }
+    }
+  },
+  {
+    "key": "FE45",
+    "mappings": {
+      "default": {
+        "default": "sesame dot"
+      }
+    }
+  },
+  {
+    "key": "FE46",
+    "mappings": {
+      "default": {
+        "default": "wit sesame dot"
+      }
+    }
+  },
+  {
+    "key": "FE49",
+    "mappings": {
+      "default": {
+        "default": "dashed overline"
+      }
+    }
+  },
+  {
+    "key": "FE4A",
+    "mappings": {
+      "default": {
+        "default": "dash dot overline"
+      }
+    }
+  },
+  {
+    "key": "FE4B",
+    "mappings": {
+      "default": {
+        "default": "golwende oorstreep"
+      }
+    }
+  },
+  {
+    "key": "FE4C",
+    "mappings": {
+      "default": {
+        "default": "dubbel golwende oorstreep"
+      }
+    }
+  },
+  {
+    "key": "FE4D",
+    "mappings": {
+      "default": {
+        "default": "dashed underline"
+      }
+    }
+  },
+  {
+    "key": "FE4E",
+    "mappings": {
+      "default": {
+        "default": "dash dot underline"
+      }
+    }
+  },
+  {
+    "key": "FE4F",
+    "mappings": {
+      "default": {
+        "default": "golwende onderstreep"
+      }
+    }
+  },
+  {
+    "key": "FE50",
+    "mappings": {
+      "default": {
+        "default": "klein komma"
+      }
+    }
+  },
+  {
+    "key": "FE52",
+    "mappings": {
+      "default": {
+        "default": "klein punt"
+      }
+    }
+  },
+  {
+    "key": "FE54",
+    "mappings": {
+      "default": {
+        "default": "klein kommapunt"
+      }
+    }
+  },
+  {
+    "key": "FE55",
+    "mappings": {
+      "default": {
+        "default": "klein dubbelpunt"
+      }
+    }
+  },
+  {
+    "key": "FE56",
+    "mappings": {
+      "default": {
+        "default": "klein vraagteken"
+      }
+    }
+  },
+  {
+    "key": "FE57",
+    "mappings": {
+      "default": {
+        "default": "klein uitroepteken"
+      }
+    }
+  },
+  {
+    "key": "FE58",
+    "mappings": {
+      "default": {
+        "default": "klein m koppelteken"
+      }
+    }
+  },
+  {
+    "key": "FE5F",
+    "mappings": {
+      "default": {
+        "default": "klein huts"
+      }
+    }
+  },
+  {
+    "key": "FE60",
+    "mappings": {
+      "default": {
+        "default": "klein ampersand"
+      }
+    }
+  },
+  {
+    "key": "FE61",
+    "mappings": {
+      "default": {
+        "default": "klein ster"
+      }
+    }
+  },
+  {
+    "key": "FE62",
+    "mappings": {
+      "default": {
+        "default": "klein plus"
+      }
+    }
+  },
+  {
+    "key": "FE63",
+    "mappings": {
+      "default": {
+        "default": "klein koppelteken minus"
+      }
+    }
+  },
+  {
+    "key": "FE64",
+    "mappings": {
+      "default": {
+        "default": "klein kleiner as"
+      }
+    }
+  },
+  {
+    "key": "FE65",
+    "mappings": {
+      "default": {
+        "default": "klein groter as"
+      }
+    }
+  },
+  {
+    "key": "FE66",
+    "mappings": {
+      "default": {
+        "default": "klein is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "FE68",
+    "mappings": {
+      "default": {
+        "default": "klein trustreep",
+        "alternative": "small reverse solidus"
+      }
+    }
+  },
+  {
+    "key": "FE69",
+    "mappings": {
+      "default": {
+        "default": "klein doller"
+      }
+    }
+  },
+  {
+    "key": "FE6A",
+    "mappings": {
+      "default": {
+        "default": "klein persent"
+      }
+    }
+  },
+  {
+    "key": "FE6B",
+    "mappings": {
+      "default": {
+        "default": "klein komersiele teen"
+      }
+    }
+  },
+  {
+    "key": "FF01",
+    "mappings": {
+      "default": {
+        "default": "uitroepteken"
+      }
+    }
+  },
+  {
+    "key": "FF02",
+    "mappings": {
+      "default": {
+        "default": "aanhalingsteken"
+      }
+    }
+  },
+  {
+    "key": "FF03",
+    "mappings": {
+      "default": {
+        "default": "huts"
+      }
+    }
+  },
+  {
+    "key": "FF04",
+    "mappings": {
+      "default": {
+        "default": "doller"
+      }
+    }
+  },
+  {
+    "key": "FF05",
+    "mappings": {
+      "default": {
+        "default": "persent"
+      }
+    }
+  },
+  {
+    "key": "FF06",
+    "mappings": {
+      "default": {
+        "default": "ampersand"
+      }
+    }
+  },
+  {
+    "key": "FF07",
+    "mappings": {
+      "default": {
+        "default": "afkappingsteken"
+      }
+    }
+  },
+  {
+    "key": "FF0A",
+    "mappings": {
+      "default": {
+        "default": "asterisk"
+      }
+    }
+  },
+  {
+    "key": "FF0B",
+    "mappings": {
+      "default": {
+        "default": "plusteken"
+      }
+    }
+  },
+  {
+    "key": "FF0C",
+    "mappings": {
+      "default": {
+        "default": "komma"
+      }
+    }
+  },
+  {
+    "key": "FF0D",
+    "mappings": {
+      "default": {
+        "default": "koppelteken minus"
+      }
+    }
+  },
+  {
+    "key": "FF0E",
+    "mappings": {
+      "default": {
+        "default": "punt"
+      }
+    }
+  },
+  {
+    "key": "FF0F",
+    "mappings": {
+      "default": {
+        "default": "skuinsstreep",
+        "alternative": "solidus"
+      }
+    }
+  },
+  {
+    "key": "FF1A",
+    "mappings": {
+      "default": {
+        "default": "dubbelpunt"
+      }
+    }
+  },
+  {
+    "key": "FF1B",
+    "mappings": {
+      "default": {
+        "default": "kommapunt"
+      }
+    }
+  },
+  {
+    "key": "FF1C",
+    "mappings": {
+      "default": {
+        "default": "kleiner as"
+      }
+    }
+  },
+  {
+    "key": "FF1D",
+    "mappings": {
+      "default": {
+        "default": "is gelyk aan"
+      }
+    }
+  },
+  {
+    "key": "FF1E",
+    "mappings": {
+      "default": {
+        "default": "groter as"
+      }
+    }
+  },
+  {
+    "key": "FF1F",
+    "mappings": {
+      "default": {
+        "default": "vraagteken"
+      }
+    }
+  },
+  {
+    "key": "FF20",
+    "mappings": {
+      "default": {
+        "default": "komersiele teen"
+      }
+    }
+  },
+  {
+    "key": "FF3C",
+    "mappings": {
+      "default": {
+        "default": "trustreep",
+        "alternative": "reverse solidus"
+      }
+    }
+  },
+  {
+    "key": "FF3E",
+    "mappings": {
+      "default": {
+        "default": "karret",
+        "alternative": "circumflex"
+      }
+    }
+  },
+  {
+    "key": "FF3F",
+    "mappings": {
+      "default": {
+        "default": "staaf",
+        "alternative": "underline"
+      }
+    }
+  },
+  {
+    "key": "FF40",
+    "mappings": {
+      "default": {
+        "default": "gravis"
+      }
+    }
+  },
+  {
+    "key": "FF5C",
+    "mappings": {
+      "default": {
+        "default": "afstreep"
+      }
+    }
+  },
+  {
+    "key": "FF5E",
+    "mappings": {
+      "default": {
+        "default": "tilde"
+      }
+    }
+  },
+  {
+    "key": "FFE0",
+    "mappings": {
+      "default": {
+        "default": "sent teken"
+      }
+    }
+  },
+  {
+    "key": "FFE1",
+    "mappings": {
+      "default": {
+        "default": "pond teken"
+      }
+    }
+  },
+  {
+    "key": "FFE2",
+    "mappings": {
+      "default": {
+        "default": "nie teken"
+      }
+    }
+  },
+  {
+    "key": "FFE3",
+    "mappings": {
+      "default": {
+        "default": "macron"
+      },
+      "mathspeak": {
+        "default": "bar"
+      }
+    }
+  },
+  {
+    "key": "FFE4",
+    "mappings": {
+      "default": {
+        "default": "gebroke afstreep"
+      }
+    }
+  },
+  {
+    "key": "FFE5",
+    "mappings": {
+      "default": {
+        "default": "jen teken"
+      }
+    }
+  },
+  {
+    "key": "FFE6",
+    "mappings": {
+      "default": {
+        "default": "won teken"
+      }
+    }
+  },
+  {
+    "key": "FFE8",
+    "mappings": {
+      "default": {
+        "default": "halfwidth forms light vertical"
+      }
+    }
+  },
+  {
+    "key": "FFED",
+    "mappings": {
+      "default": {
+        "default": "half wydte swart vierkant"
+      }
+    }
+  },
+  {
+    "key": "FFEE",
+    "mappings": {
+      "default": {
+        "default": "half wydte wit sirkel"
+      }
+    }
+  }
+]
