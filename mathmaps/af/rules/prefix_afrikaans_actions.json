@@ -2,5 +2,116 @@
   "locale": "af",
   "modality": "prefix",
   "kind": "actions",
-  "rules": []
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"teller\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"noemer\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"Basis\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"Eksponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"indeks\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"boskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"Onderskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"Radicand\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"Indeks\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"Linker Onderskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition; [t] \"Linker Onderskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"Linker Boskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition; [t] \"Linker Boskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"Regter Onderskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition; [t] \"Regter Onderskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"Regter Boskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition; [t] \"Regter Boskrif\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"Choice Quantity\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"Selection Quantity\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition; [t] \"Ry\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"kolom\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition; [t] \"Kolom\" (pause:200)"
+    ]
+  ]
 }
