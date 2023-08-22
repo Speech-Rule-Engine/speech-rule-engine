@@ -40,7 +40,7 @@ function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
   let ones = NUMBERS.ones[Math.floor(n / 100)];
-  str += ones ? onePrefix_(ones) + 'hundert' : '';
+  str += ones ? onePrefix_(ones) + 'honderd' : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
@@ -50,7 +50,7 @@ function hundredsToWords_(num: number): string {
     } else {
       const tens = NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
-      str += ones ? onePrefix_(ones) + 'und' + tens : tens;
+      str += ones ? onePrefix_(ones) + 'en' + tens : tens;
     }
   }
   return str;
