@@ -26,6 +26,16 @@
     ],
     [
       "Action",
+      "german-font",
+      "[t] \"German\"; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "german-font-bold",
+      "[t] \"bold German\"; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"and\"; [n] children/*[2]"
     ],
