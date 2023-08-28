@@ -3,5 +3,20 @@
   "modality": "speech",
   "domain": "clearspeak",
   "inherits": "base",
-  "rules": []
+  "rules": [
+    [
+      "Precondition",
+      "german-font",
+      "default",
+      "self::*[@font=\"fraktur\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "german-font-bold",
+      "default",
+      "self::*[@font=\"bold-fraktur\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ]
+  ]
 }
