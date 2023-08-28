@@ -16,7 +16,7 @@
     "mappings": {
       "default": {
         "default": "myl per uur",
-        "plural": "miles per hour"
+        "plural": "myl per uur"
       }
     }
   },
@@ -34,7 +34,7 @@
     "mappings": {
       "default": {
         "default": "kilometer per uur",
-        "plural": "kilometers per hour"
+        "plural": "kilometer per uur"
       }
     }
   }

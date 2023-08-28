@@ -24,7 +24,8 @@
     "key": "lb",
     "mappings": {
       "default": {
-        "default": "pond"
+        "default": "pond",
+        "plural": "pond"
       }
     }
   },
@@ -59,7 +60,8 @@
     "key": "LT",
     "mappings": {
       "default": {
-        "default": "lang ton"
+        "default": "lang ton",
+        "plural": "lang ton"
       }
     }
   },
@@ -67,7 +69,8 @@
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "gram"
+        "default": "gram",
+        "plural": "gram"
       }
     }
   },
@@ -75,7 +78,8 @@
     "key": "g",
     "mappings": {
       "default": {
-        "default": "gram"
+        "default": "gram",
+        "plural": "gram"
       }
     }
   },
@@ -83,7 +87,8 @@
     "key": "mcg",
     "mappings": {
       "default": {
-        "default": "mikrogram"
+        "default": "mikrogram",
+        "plural": "mikrogram"
       }
     }
   },
@@ -91,7 +96,8 @@
     "key": "t",
     "mappings": {
       "default": {
-        "default": "ton"
+        "default": "ton",
+        "plural": "ton"
       }
     }
   }

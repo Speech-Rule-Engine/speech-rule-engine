@@ -1,12 +1,12 @@
 [
   {
-    "locale": "en"
+    "locale": "af"
   },
   {
     "key": "cosh",
     "mappings": {
       "default": {
-        "default": "hyperbolic cosine"
+        "default": "hiperboliese kosinus"
       }
     }
   },
@@ -14,7 +14,7 @@
     "key": "coth",
     "mappings": {
       "default": {
-        "default": "hyperbolic cotangent"
+        "default": "hiperboliese kotangens"
       }
     }
   },
@@ -22,7 +22,7 @@
     "key": "csch",
     "mappings": {
       "default": {
-        "default": "hyperbolic cosecant"
+        "default": "hiperboliese kosekans"
       }
     }
   },
@@ -30,7 +30,7 @@
     "key": "sech",
     "mappings": {
       "default": {
-        "default": "hyperbolic secant"
+        "default": "hiperboliese sekans"
       }
     }
   },
@@ -38,7 +38,7 @@
     "key": "sinh",
     "mappings": {
       "default": {
-        "default": "hyperbolic sine"
+        "default": "hiperboliese sinus"
       }
     }
   },
@@ -46,7 +46,7 @@
     "key": "tanh",
     "mappings": {
       "default": {
-        "default": "hyperbolic tangent"
+        "default": "hiperboliese tangens"
       }
     }
   },
@@ -54,7 +54,7 @@
     "key": "arcosh",
     "mappings": {
       "default": {
-        "default": "area hyperbolic cosine"
+        "default": "booh hiperboliese kosinus"
       }
     }
   },
@@ -62,7 +62,7 @@
     "key": "arcoth",
     "mappings": {
       "default": {
-        "default": "area hyperbolic cotangent"
+        "default": "boog hiperboliese kotangens"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "arcsch",
     "mappings": {
       "default": {
-        "default": "area hyperbolic cosecant"
+        "default": "boog hiperboliese kosekans"
       }
     }
   },
@@ -78,7 +78,7 @@
     "key": "arsech",
     "mappings": {
       "default": {
-        "default": "area hyperbolic secant"
+        "default": "boog hiperboliese sekans"
       }
     }
   },
@@ -86,7 +86,7 @@
     "key": "arsinh",
     "mappings": {
       "default": {
-        "default": "area hyperbolic sine"
+        "default": "boog hiperboliese sinus"
       }
     }
   },
@@ -94,7 +94,7 @@
     "key": "artanh",
     "mappings": {
       "default": {
-        "default": "area hyperbolic tangent"
+        "default": "boog hiperboliese tangens"
       }
     }
   }

@@ -6,7 +6,7 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "italic h",
+        "default": "kursief h",
         "physics": "planck constant"
       }
     }
@@ -15,7 +15,7 @@
     "key": "0363",
     "mappings": {
       "default": {
-        "default": "combining a"
+        "default": "gekombineerde a"
       }
     }
   },
@@ -23,7 +23,7 @@
     "key": "0364",
     "mappings": {
       "default": {
-        "default": "combining e"
+        "default": "gekombineerde e"
       }
     }
   },
@@ -31,7 +31,7 @@
     "key": "0365",
     "mappings": {
       "default": {
-        "default": "combining i"
+        "default": "gekombineerde i"
       }
     }
   },
@@ -39,7 +39,7 @@
     "key": "0366",
     "mappings": {
       "default": {
-        "default": "combining o"
+        "default": "gekombineerde o"
       }
     }
   },
@@ -47,7 +47,7 @@
     "key": "0367",
     "mappings": {
       "default": {
-        "default": "combining u"
+        "default": "gekombineerde u"
       }
     }
   },
@@ -55,7 +55,7 @@
     "key": "0368",
     "mappings": {
       "default": {
-        "default": "combining c"
+        "default": "gekombineerde c"
       }
     }
   },
@@ -63,7 +63,7 @@
     "key": "0369",
     "mappings": {
       "default": {
-        "default": "combining d"
+        "default": "gekombineerde d"
       }
     }
   },
@@ -71,7 +71,7 @@
     "key": "036A",
     "mappings": {
       "default": {
-        "default": "combining h"
+        "default": "gekombineerde h"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "036B",
     "mappings": {
       "default": {
-        "default": "combining m"
+        "default": "gekombineerde m"
       }
     }
   },
@@ -87,7 +87,7 @@
     "key": "036C",
     "mappings": {
       "default": {
-        "default": "combining r"
+        "default": "gekombineerde r"
       }
     }
   },
@@ -95,7 +95,7 @@
     "key": "036D",
     "mappings": {
       "default": {
-        "default": "combining t"
+        "default": "gekombineerde t"
       }
     }
   },
@@ -103,7 +103,7 @@
     "key": "036E",
     "mappings": {
       "default": {
-        "default": "combining v"
+        "default": "gekombineerde v"
       }
     }
   },
@@ -111,7 +111,7 @@
     "key": "036F",
     "mappings": {
       "default": {
-        "default": "combining x"
+        "default": "gekombineerde x"
       }
     }
   },
@@ -119,7 +119,7 @@
     "key": "1D62",
     "mappings": {
       "default": {
-        "default": "subscript i"
+        "default": "onderskrif i"
       }
     }
   },
@@ -127,7 +127,7 @@
     "key": "1D63",
     "mappings": {
       "default": {
-        "default": "subscript r"
+        "default": "onderskrif r"
       }
     }
   },
@@ -135,7 +135,7 @@
     "key": "1D64",
     "mappings": {
       "default": {
-        "default": "subscript u"
+        "default": "onderskrif u"
       }
     }
   },
@@ -143,7 +143,7 @@
     "key": "1D65",
     "mappings": {
       "default": {
-        "default": "subscript v"
+        "default": "onderskrif v"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "1DCA",
     "mappings": {
       "default": {
-        "default": "combining r below"
+        "default": "gekombineerde r onder"
       }
     }
   },
@@ -159,7 +159,7 @@
     "key": "1DD3",
     "mappings": {
       "default": {
-        "default": "combining flattened open a above"
+        "default": "gekombineerde platgedrukte oop a bo"
       }
     }
   },
@@ -167,7 +167,7 @@
     "key": "1DD4",
     "mappings": {
       "default": {
-        "default": "combining ae"
+        "default": "gekombineerde ae"
       }
     }
   },
@@ -175,7 +175,7 @@
     "key": "1DD5",
     "mappings": {
       "default": {
-        "default": "combining ao"
+        "default": "gekombineerde ao"
       }
     }
   },
@@ -183,7 +183,7 @@
     "key": "1DD6",
     "mappings": {
       "default": {
-        "default": "combining av"
+        "default": "gekombineerde av"
       }
     }
   },
@@ -191,7 +191,7 @@
     "key": "1DD7",
     "mappings": {
       "default": {
-        "default": "combining c cedilla"
+        "default": "gekombineerde c sedilla"
       }
     }
   },
@@ -199,7 +199,7 @@
     "key": "1DD8",
     "mappings": {
       "default": {
-        "default": "combining insular d"
+        "default": "gekombineerde insulêr d"
       }
     }
   },
@@ -207,7 +207,7 @@
     "key": "1DD9",
     "mappings": {
       "default": {
-        "default": "combining eth"
+        "default": "gekombineerde eth"
       }
     }
   },
@@ -215,7 +215,7 @@
     "key": "1DDA",
     "mappings": {
       "default": {
-        "default": "combining g"
+        "default": "gekombineerde g"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "1DDB",
     "mappings": {
       "default": {
-        "default": "combining small cap G"
+        "default": "gekombineerde klein hoofletter G"
       },
       "mathspeak": {
         "default": "combining small upper G"
@@ -234,7 +234,7 @@
     "key": "1DDC",
     "mappings": {
       "default": {
-        "default": "combining k"
+        "default": "gekombineerde k"
       }
     }
   },
@@ -242,7 +242,7 @@
     "key": "1DDD",
     "mappings": {
       "default": {
-        "default": "combining l"
+        "default": "gekombineerde l"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "1DDE",
     "mappings": {
       "default": {
-        "default": "combining small cap L"
+        "default": "gekombineerde klein hoofletter L"
       },
       "mathspeak": {
         "default": "combining small upper L"
@@ -261,7 +261,7 @@
     "key": "1DDF",
     "mappings": {
       "default": {
-        "default": "combining small cap M"
+        "default": "gekombineerde klein hoofletter M"
       },
       "mathspeak": {
         "default": "combining small upper M"
@@ -272,7 +272,7 @@
     "key": "1DE0",
     "mappings": {
       "default": {
-        "default": "combining n"
+        "default": "gekombineerde n"
       }
     }
   },
@@ -280,7 +280,7 @@
     "key": "1DE1",
     "mappings": {
       "default": {
-        "default": "combining small cap N"
+        "default": "gekombineerde klein hoofletter N"
       },
       "mathspeak": {
         "default": "combining small upper N"
@@ -291,7 +291,7 @@
     "key": "1DE2",
     "mappings": {
       "default": {
-        "default": "combining small cap R"
+        "default": "gekombineerde klein hoofletter R"
       },
       "mathspeak": {
         "default": "combining small upper R"
@@ -302,7 +302,7 @@
     "key": "1DE3",
     "mappings": {
       "default": {
-        "default": "combining r rotunda"
+        "default": "gekombineerde r rotunda"
       }
     }
   },
@@ -310,7 +310,7 @@
     "key": "1DE4",
     "mappings": {
       "default": {
-        "default": "combining s"
+        "default": "gekombineerde s"
       }
     }
   },
@@ -318,7 +318,7 @@
     "key": "1DE5",
     "mappings": {
       "default": {
-        "default": "combining long s"
+        "default": "gekombineerde lang s"
       }
     }
   },
@@ -326,7 +326,7 @@
     "key": "1DE6",
     "mappings": {
       "default": {
-        "default": "combining z"
+        "default": "gekombineerde z"
       }
     }
   },
@@ -334,7 +334,7 @@
     "key": "2071",
     "mappings": {
       "default": {
-        "default": "superscript i"
+        "default": "boskrif i"
       }
     }
   },
@@ -342,7 +342,7 @@
     "key": "207F",
     "mappings": {
       "default": {
-        "default": "superscript n"
+        "default": "boskrif n"
       }
     }
   },
@@ -350,7 +350,7 @@
     "key": "2090",
     "mappings": {
       "default": {
-        "default": "subscript a"
+        "default": "onderskrif a"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "2091",
     "mappings": {
       "default": {
-        "default": "subscript e"
+        "default": "onderskrif e"
       }
     }
   },
@@ -366,7 +366,7 @@
     "key": "2092",
     "mappings": {
       "default": {
-        "default": "subscript o"
+        "default": "onderskrif o"
       }
     }
   },
@@ -374,7 +374,7 @@
     "key": "2093",
     "mappings": {
       "default": {
-        "default": "subscript x"
+        "default": "onderskrif x"
       }
     }
   },
@@ -382,7 +382,7 @@
     "key": "2094",
     "mappings": {
       "default": {
-        "default": "subscript schwa"
+        "default": "onderskrif schwa"
       }
     }
   },
@@ -390,7 +390,7 @@
     "key": "2095",
     "mappings": {
       "default": {
-        "default": "subscript h"
+        "default": "onderskrif h"
       }
     }
   },
@@ -398,7 +398,7 @@
     "key": "2096",
     "mappings": {
       "default": {
-        "default": "subscript k"
+        "default": "onderskrif k"
       }
     }
   },
@@ -406,7 +406,7 @@
     "key": "2097",
     "mappings": {
       "default": {
-        "default": "subscript l"
+        "default": "onderskrif l"
       }
     }
   },
@@ -414,7 +414,7 @@
     "key": "2098",
     "mappings": {
       "default": {
-        "default": "subscript m"
+        "default": "onderskrif m"
       }
     }
   },
@@ -422,7 +422,7 @@
     "key": "2099",
     "mappings": {
       "default": {
-        "default": "subscript n"
+        "default": "onderskrif n"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "209A",
     "mappings": {
       "default": {
-        "default": "subscript p"
+        "default": "onderskrif p"
       }
     }
   },
@@ -438,7 +438,7 @@
     "key": "209B",
     "mappings": {
       "default": {
-        "default": "subscript s"
+        "default": "onderskrif s"
       }
     }
   },
@@ -446,7 +446,7 @@
     "key": "209C",
     "mappings": {
       "default": {
-        "default": "subscript t"
+        "default": "onderskrif t"
       }
     }
   },
@@ -454,7 +454,7 @@
     "key": "2C7C",
     "mappings": {
       "default": {
-        "default": "subscript j"
+        "default": "onderskrif j"
       }
     }
   },
@@ -462,7 +462,7 @@
     "key": "1F12A",
     "mappings": {
       "default": {
-        "default": "tortoise shell bracketed cap S"
+        "default": "skilpaddop hoofletter S in hakkies"
       },
       "mathspeak": {
         "default": "tortoise shell bracketed upper S"
@@ -473,7 +473,7 @@
     "key": "1F12B",
     "mappings": {
       "default": {
-        "default": "circled italic cap C"
+        "default": "omkringde kursief hoofletter C"
       },
       "mathspeak": {
         "default": "circled italic upper C"
@@ -484,7 +484,7 @@
     "key": "1F12C",
     "mappings": {
       "default": {
-        "default": "circled italic cap R"
+        "default": "omkringde kursief hoofletter R"
       },
       "mathspeak": {
         "default": "circled italic upper R"
@@ -495,7 +495,7 @@
     "key": "1F18A",
     "mappings": {
       "default": {
-        "default": "crossed negative squared cap P"
+        "default": "gekruisde negatiewe kwadraat hoofletter P"
       },
       "mathspeak": {
         "default": "crossed negative squared upper P"

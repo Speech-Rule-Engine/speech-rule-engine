@@ -6,7 +6,7 @@
     "key": "00E0",
     "mappings": {
       "default": {
-        "default": "a grave"
+        "default": "a gravis"
       },
       "mathspeak": {
         "default": "modifying above a with grave",
@@ -19,7 +19,7 @@
     "key": "00E1",
     "mappings": {
       "default": {
-        "default": "a acute"
+        "default": "a akkuut"
       },
       "mathspeak": {
         "default": "modifying above a with acute",
@@ -32,7 +32,7 @@
     "key": "00E2",
     "mappings": {
       "default": {
-        "default": "a hat"
+        "default": "a hoed"
       },
       "mathspeak": {
         "default": "modifying above a with caret",
@@ -58,7 +58,7 @@
     "key": "00E4",
     "mappings": {
       "default": {
-        "default": "a double overdot"
+        "default": "a dubbel bopunt"
       },
       "mathspeak": {
         "default": "modifying above a with double dot",
@@ -84,7 +84,7 @@
     "key": "00E7",
     "mappings": {
       "default": {
-        "default": "c cedilla"
+        "default": "c sidilla"
       },
       "mathspeak": {
         "default": "modifying above c with cedilla",
@@ -97,7 +97,7 @@
     "key": "00E8",
     "mappings": {
       "default": {
-        "default": "e grave"
+        "default": "e gravis"
       },
       "mathspeak": {
         "default": "modifying above e with grave",
@@ -110,7 +110,7 @@
     "key": "00E9",
     "mappings": {
       "default": {
-        "default": "e acute"
+        "default": "e akkuut"
       },
       "mathspeak": {
         "default": "modifying above e with acute",
@@ -123,7 +123,7 @@
     "key": "00EA",
     "mappings": {
       "default": {
-        "default": "e hat"
+        "default": "kappie e e hoed"
       },
       "mathspeak": {
         "default": "modifying above e with caret",
@@ -136,7 +136,7 @@
     "key": "00EB",
     "mappings": {
       "default": {
-        "default": "e double overdot"
+        "default": "e dubbel bopunt"
       },
       "mathspeak": {
         "default": "modifying above e with double dot",
@@ -149,7 +149,7 @@
     "key": "00EC",
     "mappings": {
       "default": {
-        "default": "i grave"
+        "default": "i gravis"
       },
       "mathspeak": {
         "default": "modifying above i with grave",
@@ -162,7 +162,7 @@
     "key": "00ED",
     "mappings": {
       "default": {
-        "default": "i acute"
+        "default": "i akkuut"
       },
       "mathspeak": {
         "default": "modifying above i with acute",
@@ -175,7 +175,7 @@
     "key": "00EE",
     "mappings": {
       "default": {
-        "default": "i hat"
+        "default": "i hoed"
       },
       "mathspeak": {
         "default": "modifying above i with caret",
@@ -188,7 +188,7 @@
     "key": "00EF",
     "mappings": {
       "default": {
-        "default": "i double overdot"
+        "default": "deelteken i"
       },
       "mathspeak": {
         "default": "modifying above i with double dot",
@@ -214,7 +214,7 @@
     "key": "00F2",
     "mappings": {
       "default": {
-        "default": "o grave"
+        "default": "o gravis"
       },
       "mathspeak": {
         "default": "modifying above o with grave",
@@ -227,7 +227,7 @@
     "key": "00F3",
     "mappings": {
       "default": {
-        "default": "o acute"
+        "default": "o akkuut"
       },
       "mathspeak": {
         "default": "modifying above o with acute",
@@ -240,7 +240,7 @@
     "key": "00F4",
     "mappings": {
       "default": {
-        "default": "o hat"
+        "default": "kappie o"
       },
       "mathspeak": {
         "default": "modifying above o with caret",
@@ -266,7 +266,7 @@
     "key": "00F6",
     "mappings": {
       "default": {
-        "default": "o double overdot"
+        "default": "deelteken o"
       },
       "mathspeak": {
         "default": "modifying above o with double dot",
@@ -279,7 +279,7 @@
     "key": "00F9",
     "mappings": {
       "default": {
-        "default": "u grave"
+        "default": "u gravis"
       },
       "mathspeak": {
         "default": "modifying above u with grave",
@@ -292,7 +292,7 @@
     "key": "00FA",
     "mappings": {
       "default": {
-        "default": "u acute"
+        "default": "akkuut u"
       },
       "mathspeak": {
         "default": "modifying above u with acute",
@@ -305,7 +305,7 @@
     "key": "00FB",
     "mappings": {
       "default": {
-        "default": "u hat"
+        "default": "kappie u"
       },
       "mathspeak": {
         "default": "modifying above u with caret",
@@ -318,7 +318,7 @@
     "key": "00FC",
     "mappings": {
       "default": {
-        "default": "u double overdot"
+        "default": "deelteken u"
       },
       "mathspeak": {
         "default": "modifying above u with double dot",
@@ -331,7 +331,7 @@
     "key": "00FD",
     "mappings": {
       "default": {
-        "default": "y acute"
+        "default": "akkuut y"
       },
       "mathspeak": {
         "default": "modifying above y with acute",
@@ -344,7 +344,7 @@
     "key": "00FF",
     "mappings": {
       "default": {
-        "default": "y double overdot"
+        "default": "deelteken y"
       },
       "mathspeak": {
         "default": "modifying above y with double dot",
@@ -357,7 +357,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "a overbar"
+        "default": "a bostaaf"
       },
       "mathspeak": {
         "default": "a overbar",
@@ -370,7 +370,7 @@
     "key": "0103",
     "mappings": {
       "default": {
-        "default": "a breve"
+        "default": "a brevis"
       },
       "mathspeak": {
         "default": "modifying above a with breve",
@@ -396,7 +396,7 @@
     "key": "0107",
     "mappings": {
       "default": {
-        "default": "c acute"
+        "default": "akkuut c"
       },
       "mathspeak": {
         "default": "modifying above c with acute",
@@ -409,7 +409,7 @@
     "key": "0109",
     "mappings": {
       "default": {
-        "default": "c hat"
+        "default": "c hoed"
       },
       "mathspeak": {
         "default": "modifying above c with caret",
@@ -422,7 +422,7 @@
     "key": "010B",
     "mappings": {
       "default": {
-        "default": "c overdot"
+        "default": "c bopunt"
       },
       "mathspeak": {
         "default": "modifying above c with dot",
@@ -435,7 +435,7 @@
     "key": "010D",
     "mappings": {
       "default": {
-        "default": "c caron"
+        "default": "c karon"
       },
       "mathspeak": {
         "default": "modifying above c with caron",
@@ -448,7 +448,7 @@
     "key": "010F",
     "mappings": {
       "default": {
-        "default": "d caron"
+        "default": "d karon"
       },
       "mathspeak": {
         "default": "modifying above d with caron",
@@ -461,7 +461,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "e overbar"
+        "default": "e bostaaf"
       },
       "mathspeak": {
         "default": "e overbar",
@@ -474,7 +474,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "e breve"
+        "default": "e brevis"
       },
       "mathspeak": {
         "default": "modifying above e with breve",
@@ -487,7 +487,7 @@
     "key": "0117",
     "mappings": {
       "default": {
-        "default": "e overdot"
+        "default": "e bopunt"
       },
       "mathspeak": {
         "default": "modifying above e with dot",
@@ -513,7 +513,7 @@
     "key": "011B",
     "mappings": {
       "default": {
-        "default": "e caron"
+        "default": "e karon"
       },
       "mathspeak": {
         "default": "modifying above e with caron",
@@ -526,7 +526,7 @@
     "key": "011D",
     "mappings": {
       "default": {
-        "default": "g hat"
+        "default": "g hoed"
       },
       "mathspeak": {
         "default": "modifying above g with caret",
@@ -539,7 +539,7 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "g breve"
+        "default": "g brevis"
       },
       "mathspeak": {
         "default": "modifying above g with breve",
@@ -552,7 +552,7 @@
     "key": "0121",
     "mappings": {
       "default": {
-        "default": "g overdot"
+        "default": "g bopunt"
       },
       "mathspeak": {
         "default": "modifying above g with dot",
@@ -565,7 +565,7 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": "g cedilla"
+        "default": "g sidilla"
       },
       "mathspeak": {
         "default": "modifying above g with cedilla",
@@ -578,7 +578,7 @@
     "key": "0125",
     "mappings": {
       "default": {
-        "default": "h hat"
+        "default": "h hoed"
       },
       "mathspeak": {
         "default": "modifying above h with caret",
@@ -604,7 +604,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "i overbar"
+        "default": "i bostaaf"
       },
       "mathspeak": {
         "default": "i overbar",
@@ -617,7 +617,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "i breve"
+        "default": "i brevis"
       },
       "mathspeak": {
         "default": "modifying above i with breve",
@@ -643,7 +643,7 @@
     "key": "0131",
     "mappings": {
       "default": {
-        "default": "dotless i"
+        "default": "puntlose i"
       },
       "mathspeak": {
         "default": "modifying above dotless i",
@@ -656,7 +656,7 @@
     "key": "0135",
     "mappings": {
       "default": {
-        "default": "j hat"
+        "default": "j hoed"
       },
       "mathspeak": {
         "default": "modifying above j with caret",
@@ -669,7 +669,7 @@
     "key": "0137",
     "mappings": {
       "default": {
-        "default": "k cedilla"
+        "default": "k sidilla"
       },
       "mathspeak": {
         "default": "modifying above k with cedilla",
@@ -682,7 +682,7 @@
     "key": "013A",
     "mappings": {
       "default": {
-        "default": "l acute"
+        "default": "l akkuut"
       },
       "mathspeak": {
         "default": "modifying above l with acute",
@@ -695,7 +695,7 @@
     "key": "013C",
     "mappings": {
       "default": {
-        "default": "l cedilla"
+        "default": "l sidilla"
       },
       "mathspeak": {
         "default": "modifying above l with cedilla",
@@ -708,7 +708,7 @@
     "key": "013E",
     "mappings": {
       "default": {
-        "default": "l caron"
+        "default": "l karon"
       },
       "mathspeak": {
         "default": "modifying above l with caron",
@@ -721,7 +721,7 @@
     "key": "0140",
     "mappings": {
       "default": {
-        "default": "l middle dot"
+        "default": "l middel punt"
       },
       "mathspeak": {
         "default": "modifying above l with middle dot",
@@ -734,7 +734,7 @@
     "key": "0144",
     "mappings": {
       "default": {
-        "default": "n acute"
+        "default": "n akkuut"
       },
       "mathspeak": {
         "default": "modifying above n with acute",
@@ -747,7 +747,7 @@
     "key": "0146",
     "mappings": {
       "default": {
-        "default": "n cedilla"
+        "default": "n sidilla"
       },
       "mathspeak": {
         "default": "modifying above n with cedilla",
@@ -760,7 +760,7 @@
     "key": "0148",
     "mappings": {
       "default": {
-        "default": "n caron"
+        "default": "n karon"
       },
       "mathspeak": {
         "default": "modifying above n with caron",
@@ -773,7 +773,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "o overbar"
+        "default": "o bostaaf"
       },
       "mathspeak": {
         "default": "o overbar",
@@ -786,7 +786,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "o breve"
+        "default": "o brevis"
       },
       "mathspeak": {
         "default": "modifying above o with breve",
@@ -799,7 +799,7 @@
     "key": "0151",
     "mappings": {
       "default": {
-        "default": "o double acute"
+        "default": "o dubbel akkuut"
       },
       "mathspeak": {
         "default": "modifying above o with double acute",
@@ -812,7 +812,7 @@
     "key": "0155",
     "mappings": {
       "default": {
-        "default": "r acute"
+        "default": "r akkuut"
       },
       "mathspeak": {
         "default": "modifying above r with acute",
@@ -825,7 +825,7 @@
     "key": "0157",
     "mappings": {
       "default": {
-        "default": "r cedilla"
+        "default": "r sidilla"
       },
       "mathspeak": {
         "default": "modifying above r with cedilla",
@@ -838,7 +838,7 @@
     "key": "0159",
     "mappings": {
       "default": {
-        "default": "r caron"
+        "default": "r karon"
       },
       "mathspeak": {
         "default": "modifying above r with caron",
@@ -851,7 +851,7 @@
     "key": "015B",
     "mappings": {
       "default": {
-        "default": "s acute"
+        "default": "s akkuut"
       },
       "mathspeak": {
         "default": "modifying above s with acute",
@@ -864,7 +864,7 @@
     "key": "015D",
     "mappings": {
       "default": {
-        "default": "s hat"
+        "default": "s hoed"
       },
       "mathspeak": {
         "default": "modifying above s with caret",
@@ -877,7 +877,7 @@
     "key": "015F",
     "mappings": {
       "default": {
-        "default": "s cedilla"
+        "default": "s sidilla"
       },
       "mathspeak": {
         "default": "modifying above s with cedilla",
@@ -890,7 +890,7 @@
     "key": "0161",
     "mappings": {
       "default": {
-        "default": "s caron"
+        "default": "s karon"
       },
       "mathspeak": {
         "default": "modifying above s with caron",
@@ -903,7 +903,7 @@
     "key": "0163",
     "mappings": {
       "default": {
-        "default": "t cedilla"
+        "default": "t sidilla"
       },
       "mathspeak": {
         "default": "modifying above t with cedilla",
@@ -916,7 +916,7 @@
     "key": "0165",
     "mappings": {
       "default": {
-        "default": "t caron"
+        "default": "t karon"
       },
       "mathspeak": {
         "default": "modifying above t with caron",
@@ -942,7 +942,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "u overbar"
+        "default": "u bostaaf"
       },
       "mathspeak": {
         "default": "u overbar",
@@ -955,7 +955,7 @@
     "key": "016D",
     "mappings": {
       "default": {
-        "default": "u breve"
+        "default": "u brevis"
       },
       "mathspeak": {
         "default": "modifying above u with breve",
@@ -981,7 +981,7 @@
     "key": "0171",
     "mappings": {
       "default": {
-        "default": "u double acute"
+        "default": "u dubbel akkuut"
       },
       "mathspeak": {
         "default": "modifying above u with double acute",
@@ -1007,7 +1007,7 @@
     "key": "0175",
     "mappings": {
       "default": {
-        "default": "w hat"
+        "default": "w hoed"
       },
       "mathspeak": {
         "default": "modifying above w with caret",
@@ -1020,7 +1020,7 @@
     "key": "0177",
     "mappings": {
       "default": {
-        "default": "y hat"
+        "default": "y hoed"
       },
       "mathspeak": {
         "default": "modifying above y with caret",
@@ -1033,7 +1033,7 @@
     "key": "017A",
     "mappings": {
       "default": {
-        "default": "z acute"
+        "default": "z akkuut"
       },
       "mathspeak": {
         "default": "modifying above z with acute",
@@ -1046,7 +1046,7 @@
     "key": "017C",
     "mappings": {
       "default": {
-        "default": "z overdot"
+        "default": "z bopunt"
       },
       "mathspeak": {
         "default": "modifying above z with dot",
@@ -1059,7 +1059,7 @@
     "key": "017E",
     "mappings": {
       "default": {
-        "default": "z caron"
+        "default": "z karon"
       },
       "mathspeak": {
         "default": "modifying above z with caron",
@@ -1072,7 +1072,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "a caron"
+        "default": "a karon"
       },
       "mathspeak": {
         "default": "modifying above a with caron",
@@ -1085,7 +1085,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "i caron"
+        "default": "i karon"
       },
       "mathspeak": {
         "default": "modifying above i with caron",
@@ -1098,7 +1098,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "o caron"
+        "default": "o karon"
       },
       "mathspeak": {
         "default": "modifying above o with caron",
@@ -1111,7 +1111,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "u caron"
+        "default": "u karon"
       },
       "mathspeak": {
         "default": "modifying above u with caron",
@@ -1124,7 +1124,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "g caron"
+        "default": "g karon"
       },
       "mathspeak": {
         "default": "modifying above g with caron",
@@ -1137,7 +1137,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "k caron"
+        "default": "k karon"
       },
       "mathspeak": {
         "default": "modifying above k with caron",
@@ -1163,7 +1163,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "j caron"
+        "default": "j karon"
       },
       "mathspeak": {
         "default": "modifying above j with caron",
@@ -1176,7 +1176,7 @@
     "key": "01F5",
     "mappings": {
       "default": {
-        "default": "g acute"
+        "default": "g akkuut"
       },
       "mathspeak": {
         "default": "modifying above g with acute",
@@ -1189,7 +1189,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "n grave"
+        "default": "n gravis"
       },
       "mathspeak": {
         "default": "modifying above n with grave",
@@ -1202,7 +1202,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "a double grave"
+        "default": "a dubbel gravis"
       },
       "mathspeak": {
         "default": "modifying above a with double grave",
@@ -1215,7 +1215,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "a inverted breve"
+        "default": "a tru brevis"
       },
       "mathspeak": {
         "default": "modifying above a with inverted breve",
@@ -1228,7 +1228,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "e double grave"
+        "default": "e dubbel gravis"
       },
       "mathspeak": {
         "default": "modifying above e with double grave",
@@ -1241,7 +1241,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "e inverted breve"
+        "default": "e tru brevis"
       },
       "mathspeak": {
         "default": "modifying above e with inverted breve",
@@ -1254,7 +1254,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "i double grave"
+        "default": "i dubbel gravis"
       },
       "mathspeak": {
         "default": "modifying above i with double grave",
@@ -1267,7 +1267,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "i inverted breve"
+        "default": "i tru brevis"
       },
       "mathspeak": {
         "default": "modifying above i with inverted breve",
@@ -1280,7 +1280,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "o double grave"
+        "default": "o dubbel gravis"
       },
       "mathspeak": {
         "default": "modifying above o with double grave",
@@ -1293,7 +1293,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "o inverted breve"
+        "default": "o tru brevis"
       },
       "mathspeak": {
         "default": "modifying above o with inverted breve",
@@ -1306,7 +1306,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "r double grave"
+        "default": "r dubbel gravis"
       },
       "mathspeak": {
         "default": "modifying above r with double grave",
@@ -1319,7 +1319,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "r inverted breve"
+        "default": "r tru brevis"
       },
       "mathspeak": {
         "default": "modifying above r with inverted breve",
@@ -1332,7 +1332,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "u double grave"
+        "default": "u dubbel gravis"
       },
       "mathspeak": {
         "default": "modifying above u with double grave",
@@ -1345,7 +1345,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "u inverted breve"
+        "default": "u tru brevis"
       },
       "mathspeak": {
         "default": "modifying above u with inverted breve",
@@ -1358,7 +1358,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "s comma below"
+        "default": "s komma onder"
       },
       "mathspeak": {
         "default": "modifying below s with comma below",
@@ -1371,7 +1371,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "t comma below"
+        "default": "t komma onder"
       },
       "mathspeak": {
         "default": "modifying below t with comma below",
@@ -1384,7 +1384,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "h caron"
+        "default": "h karon"
       },
       "mathspeak": {
         "default": "modifying above h with caron",
@@ -1397,7 +1397,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "a overdot"
+        "default": "a bopunt"
       },
       "mathspeak": {
         "default": "modifying above a with dot",
@@ -1410,7 +1410,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "e cedilla"
+        "default": "e sidilla"
       },
       "mathspeak": {
         "default": "modifying above e with cedilla",
@@ -1423,7 +1423,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "o overdot"
+        "default": "o bopunt"
       },
       "mathspeak": {
         "default": "modifying above o with dot",
@@ -1436,7 +1436,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "y overbar"
+        "default": "y bostaaf"
       },
       "mathspeak": {
         "default": "y overbar",
@@ -1449,7 +1449,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "dotless j"
+        "default": "puntlose j"
       },
       "mathspeak": {
         "default": "modifying above dotless j",
@@ -1462,7 +1462,7 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "a ring below"
+        "default": "a ring onder"
       },
       "mathspeak": {
         "default": "modifying below a with ring below",
@@ -1475,7 +1475,7 @@
     "key": "1E03",
     "mappings": {
       "default": {
-        "default": "b overdot"
+        "default": "b bopunt"
       },
       "mathspeak": {
         "default": "modifying above b with dot",
@@ -1488,7 +1488,7 @@
     "key": "1E05",
     "mappings": {
       "default": {
-        "default": "b underdot"
+        "default": "b onderpunt"
       },
       "mathspeak": {
         "default": "modifying below b with dot",
@@ -1501,7 +1501,7 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "b underbar"
+        "default": "b onderstaaf"
       },
       "mathspeak": {
         "default": "b underbar",
@@ -1514,7 +1514,7 @@
     "key": "1E0B",
     "mappings": {
       "default": {
-        "default": "d overdot"
+        "default": "d bopunt"
       },
       "mathspeak": {
         "default": "modifying above d with dot",
@@ -1527,7 +1527,7 @@
     "key": "1E0D",
     "mappings": {
       "default": {
-        "default": "d underdot"
+        "default": "d onderpunt"
       },
       "mathspeak": {
         "default": "modifying below d with dot",
@@ -1540,7 +1540,7 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "d underbar"
+        "default": "d onderstaaf"
       },
       "mathspeak": {
         "default": "d underbar",
@@ -1553,7 +1553,7 @@
     "key": "1E11",
     "mappings": {
       "default": {
-        "default": "d cedilla"
+        "default": "d sidilla"
       },
       "mathspeak": {
         "default": "modifying above d with cedilla",
@@ -1566,7 +1566,7 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "d underhat"
+        "default": "d onderhoed"
       },
       "mathspeak": {
         "default": "modifying below d with caret",
@@ -1579,7 +1579,7 @@
     "key": "1E19",
     "mappings": {
       "default": {
-        "default": "e underhat"
+        "default": "e onderhoed"
       },
       "mathspeak": {
         "default": "modifying below e with caret",
@@ -1592,7 +1592,7 @@
     "key": "1E1B",
     "mappings": {
       "default": {
-        "default": "e tilde below"
+        "default": "e tilde onder"
       },
       "mathspeak": {
         "default": "e undertilde",
@@ -1605,7 +1605,7 @@
     "key": "1E1F",
     "mappings": {
       "default": {
-        "default": "f overdot"
+        "default": "f bopunt"
       },
       "mathspeak": {
         "default": "modifying above f with dot",
@@ -1618,7 +1618,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "g overbar"
+        "default": "g bostaaf"
       },
       "mathspeak": {
         "default": "g overbar",
@@ -1631,7 +1631,7 @@
     "key": "1E23",
     "mappings": {
       "default": {
-        "default": "h overdot"
+        "default": "h bopunt"
       },
       "mathspeak": {
         "default": "modifying above h with dot",
@@ -1644,7 +1644,7 @@
     "key": "1E25",
     "mappings": {
       "default": {
-        "default": "h underdot"
+        "default": "h onderpunt"
       },
       "mathspeak": {
         "default": "modifying below h with dot",
@@ -1657,7 +1657,7 @@
     "key": "1E27",
     "mappings": {
       "default": {
-        "default": "h double overdot"
+        "default": "h dubbel bopunt"
       },
       "mathspeak": {
         "default": "modifying above h with double dot",
@@ -1670,7 +1670,7 @@
     "key": "1E29",
     "mappings": {
       "default": {
-        "default": "h cedilla"
+        "default": "h sidilla"
       },
       "mathspeak": {
         "default": "modifying above h with cedilla",
@@ -1683,7 +1683,7 @@
     "key": "1E2B",
     "mappings": {
       "default": {
-        "default": "h breve below"
+        "default": "h brevis onder"
       },
       "mathspeak": {
         "default": "modifying below h with breve below",
@@ -1696,7 +1696,7 @@
     "key": "1E2D",
     "mappings": {
       "default": {
-        "default": "i tilde below"
+        "default": "i tilde onder"
       },
       "mathspeak": {
         "default": "i undertilde",
@@ -1709,7 +1709,7 @@
     "key": "1E31",
     "mappings": {
       "default": {
-        "default": "k acute"
+        "default": "k akkuut"
       },
       "mathspeak": {
         "default": "modifying above k with acute",
@@ -1722,7 +1722,7 @@
     "key": "1E33",
     "mappings": {
       "default": {
-        "default": "k underdot"
+        "default": "k onderpunt"
       },
       "mathspeak": {
         "default": "modifying below k with dot",
@@ -1735,7 +1735,7 @@
     "key": "1E35",
     "mappings": {
       "default": {
-        "default": "k underbar"
+        "default": "k onderstaaf"
       },
       "mathspeak": {
         "default": "k underbar",
@@ -1748,7 +1748,7 @@
     "key": "1E37",
     "mappings": {
       "default": {
-        "default": "l underdot"
+        "default": "l onderpunt"
       },
       "mathspeak": {
         "default": "modifying below l with dot",
@@ -1761,7 +1761,7 @@
     "key": "1E3B",
     "mappings": {
       "default": {
-        "default": "l underbar"
+        "default": "l onderstaaf"
       },
       "mathspeak": {
         "default": "l underbar",
@@ -1774,7 +1774,7 @@
     "key": "1E3D",
     "mappings": {
       "default": {
-        "default": "l underhat"
+        "default": "l onderhoed"
       },
       "mathspeak": {
         "default": "modifying below l with caret",
@@ -1787,7 +1787,7 @@
     "key": "1E3F",
     "mappings": {
       "default": {
-        "default": "m acute"
+        "default": "m akkuut"
       },
       "mathspeak": {
         "default": "modifying above m with acute",
@@ -1800,7 +1800,7 @@
     "key": "1E41",
     "mappings": {
       "default": {
-        "default": "m overdot"
+        "default": "m bopunt"
       },
       "mathspeak": {
         "default": "modifying above m with dot",
@@ -1813,7 +1813,7 @@
     "key": "1E43",
     "mappings": {
       "default": {
-        "default": "m underdot"
+        "default": "m onderpunt"
       },
       "mathspeak": {
         "default": "modifying below m with dot",
@@ -1826,7 +1826,7 @@
     "key": "1E45",
     "mappings": {
       "default": {
-        "default": "n overdot"
+        "default": "n bopunt"
       },
       "mathspeak": {
         "default": "modifying above n with dot",
@@ -1839,7 +1839,7 @@
     "key": "1E47",
     "mappings": {
       "default": {
-        "default": "n underdot"
+        "default": "n onderpunt"
       },
       "mathspeak": {
         "default": "modifying below n with dot",
@@ -1852,7 +1852,7 @@
     "key": "1E49",
     "mappings": {
       "default": {
-        "default": "n underbar"
+        "default": "n onderstaaf"
       },
       "mathspeak": {
         "default": "n underbar",
@@ -1865,7 +1865,7 @@
     "key": "1E4B",
     "mappings": {
       "default": {
-        "default": "n underhat"
+        "default": "n onderhoed"
       },
       "mathspeak": {
         "default": "modifying below n with caret",
@@ -1878,7 +1878,7 @@
     "key": "1E55",
     "mappings": {
       "default": {
-        "default": "p acute"
+        "default": "p akkuut"
       },
       "mathspeak": {
         "default": "modifying above p with acute",
@@ -1891,7 +1891,7 @@
     "key": "1E57",
     "mappings": {
       "default": {
-        "default": "p overdot"
+        "default": "p bopunt"
       },
       "mathspeak": {
         "default": "modifying above p with dot",
@@ -1904,7 +1904,7 @@
     "key": "1E59",
     "mappings": {
       "default": {
-        "default": "r overdot"
+        "default": "r bopunt"
       },
       "mathspeak": {
         "default": "modifying above r with dot",
@@ -1917,7 +1917,7 @@
     "key": "1E5B",
     "mappings": {
       "default": {
-        "default": "r underdot"
+        "default": "r onderpunt"
       },
       "mathspeak": {
         "default": "modifying below r with dot",
@@ -1930,7 +1930,7 @@
     "key": "1E5F",
     "mappings": {
       "default": {
-        "default": "r underbar"
+        "default": "r onderstaaf"
       },
       "mathspeak": {
         "default": "r underbar",
@@ -1943,7 +1943,7 @@
     "key": "1E61",
     "mappings": {
       "default": {
-        "default": "s overdot"
+        "default": "s bopunt"
       },
       "mathspeak": {
         "default": "modifying above s with dot",
@@ -1956,7 +1956,7 @@
     "key": "1E63",
     "mappings": {
       "default": {
-        "default": "s underdot"
+        "default": "s onderpunt"
       },
       "mathspeak": {
         "default": "modifying below s with dot",
@@ -1969,7 +1969,7 @@
     "key": "1E6B",
     "mappings": {
       "default": {
-        "default": "t overdot"
+        "default": "t bopunt"
       },
       "mathspeak": {
         "default": "modifying above t with dot",
@@ -1982,7 +1982,7 @@
     "key": "1E6D",
     "mappings": {
       "default": {
-        "default": "t underdot"
+        "default": "t onderpunt"
       },
       "mathspeak": {
         "default": "modifying below t with dot",
@@ -1995,7 +1995,7 @@
     "key": "1E6F",
     "mappings": {
       "default": {
-        "default": "t underbar"
+        "default": "t onderstaaf"
       },
       "mathspeak": {
         "default": "t underbar",
@@ -2008,7 +2008,7 @@
     "key": "1E71",
     "mappings": {
       "default": {
-        "default": "t underhat"
+        "default": "t onderhoed"
       },
       "mathspeak": {
         "default": "modifying below t with caret",
@@ -2021,7 +2021,7 @@
     "key": "1E73",
     "mappings": {
       "default": {
-        "default": "u double underdot"
+        "default": "u dubbel onderpunt"
       },
       "mathspeak": {
         "default": "modifying below u with double dot",
@@ -2034,7 +2034,7 @@
     "key": "1E75",
     "mappings": {
       "default": {
-        "default": "u tilde below"
+        "default": "u tilde onder"
       },
       "mathspeak": {
         "default": "u undertilde",
@@ -2047,7 +2047,7 @@
     "key": "1E77",
     "mappings": {
       "default": {
-        "default": "u underhat"
+        "default": "u onderhoed"
       },
       "mathspeak": {
         "default": "modifying below u with caret",
@@ -2073,7 +2073,7 @@
     "key": "1E7F",
     "mappings": {
       "default": {
-        "default": "v underdot"
+        "default": "v onderpunt"
       },
       "mathspeak": {
         "default": "modifying below v with dot",
@@ -2086,7 +2086,7 @@
     "key": "1E81",
     "mappings": {
       "default": {
-        "default": "w grave"
+        "default": "w gravis"
       },
       "mathspeak": {
         "default": "modifying above w with grave",
@@ -2099,7 +2099,7 @@
     "key": "1E83",
     "mappings": {
       "default": {
-        "default": "w acute"
+        "default": "w akkuut"
       },
       "mathspeak": {
         "default": "modifying above w with acute",
@@ -2112,7 +2112,7 @@
     "key": "1E85",
     "mappings": {
       "default": {
-        "default": "w double overdot"
+        "default": "w dubbel bopunt"
       },
       "mathspeak": {
         "default": "modifying above w with double dot",
@@ -2125,7 +2125,7 @@
     "key": "1E87",
     "mappings": {
       "default": {
-        "default": "w overdot"
+        "default": "w bopunt"
       },
       "mathspeak": {
         "default": "modifying above w with dot",
@@ -2138,7 +2138,7 @@
     "key": "1E89",
     "mappings": {
       "default": {
-        "default": "w underdot"
+        "default": "w onderpunt"
       },
       "mathspeak": {
         "default": "modifying below w with dot",
@@ -2151,7 +2151,7 @@
     "key": "1E8B",
     "mappings": {
       "default": {
-        "default": "x overdot"
+        "default": "x bopunt"
       },
       "mathspeak": {
         "default": "modifying above x with dot",
@@ -2164,7 +2164,7 @@
     "key": "1E8D",
     "mappings": {
       "default": {
-        "default": "x double overdot"
+        "default": "x dubbel bopunt"
       },
       "mathspeak": {
         "default": "modifying above x with double dot",
@@ -2177,7 +2177,7 @@
     "key": "1E8F",
     "mappings": {
       "default": {
-        "default": "y overdot"
+        "default": "y bopunt"
       },
       "mathspeak": {
         "default": "modifying above y with dot",
@@ -2190,7 +2190,7 @@
     "key": "1E91",
     "mappings": {
       "default": {
-        "default": "z hat"
+        "default": "z hoed"
       },
       "mathspeak": {
         "default": "modifying above z with caret",
@@ -2203,7 +2203,7 @@
     "key": "1E93",
     "mappings": {
       "default": {
-        "default": "z underdot"
+        "default": "z onderpunt"
       },
       "mathspeak": {
         "default": "modifying below z with dot",
@@ -2216,7 +2216,7 @@
     "key": "1E95",
     "mappings": {
       "default": {
-        "default": "z underbar"
+        "default": "z onderstaaf"
       },
       "mathspeak": {
         "default": "z underbar",
@@ -2229,7 +2229,7 @@
     "key": "1E96",
     "mappings": {
       "default": {
-        "default": "h underbar"
+        "default": "h onderstaaf"
       },
       "mathspeak": {
         "default": "h underbar",
@@ -2242,7 +2242,7 @@
     "key": "1E97",
     "mappings": {
       "default": {
-        "default": "t double overdot"
+        "default": "t dubbel bopunt"
       },
       "mathspeak": {
         "default": "modifying above t with double dot",
@@ -2281,7 +2281,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "a right half ring"
+        "default": "a regs half ring"
       },
       "mathspeak": {
         "default": "modifying above a with right half ring",
@@ -2294,7 +2294,7 @@
     "key": "1EA1",
     "mappings": {
       "default": {
-        "default": "a underdot"
+        "default": "a onderpunt"
       },
       "mathspeak": {
         "default": "modifying below a with dot",
@@ -2307,7 +2307,7 @@
     "key": "1EA3",
     "mappings": {
       "default": {
-        "default": "a hook"
+        "default": "a haak"
       },
       "mathspeak": {
         "default": "modifying above a with hook",
@@ -2320,7 +2320,7 @@
     "key": "1EB9",
     "mappings": {
       "default": {
-        "default": "e underdot"
+        "default": "e onderpunt"
       },
       "mathspeak": {
         "default": "modifying below e with dot",
@@ -2333,7 +2333,7 @@
     "key": "1EBB",
     "mappings": {
       "default": {
-        "default": "e hook"
+        "default": "e haak"
       },
       "mathspeak": {
         "default": "modifying above e with hook",
@@ -2359,7 +2359,7 @@
     "key": "1EC9",
     "mappings": {
       "default": {
-        "default": "i hook"
+        "default": "i haak"
       },
       "mathspeak": {
         "default": "modifying above i with hook",
@@ -2372,7 +2372,7 @@
     "key": "1ECB",
     "mappings": {
       "default": {
-        "default": "i underdot"
+        "default": "i onderpunt"
       },
       "mathspeak": {
         "default": "modifying below i with dot",
@@ -2385,7 +2385,7 @@
     "key": "1ECD",
     "mappings": {
       "default": {
-        "default": "o underdot"
+        "default": "o onderpunt"
       },
       "mathspeak": {
         "default": "modifying below o with dot",
@@ -2398,7 +2398,7 @@
     "key": "1ECF",
     "mappings": {
       "default": {
-        "default": "o hook"
+        "default": "o haak"
       },
       "mathspeak": {
         "default": "modifying above o with hook",
@@ -2411,7 +2411,7 @@
     "key": "1EE5",
     "mappings": {
       "default": {
-        "default": "u underdot"
+        "default": "u onderpunt"
       },
       "mathspeak": {
         "default": "modifying below u with dot",
@@ -2424,7 +2424,7 @@
     "key": "1EE7",
     "mappings": {
       "default": {
-        "default": "u hook"
+        "default": "u haak"
       },
       "mathspeak": {
         "default": "modifying above u with hook",
@@ -2437,7 +2437,7 @@
     "key": "1EF3",
     "mappings": {
       "default": {
-        "default": "y grave"
+        "default": "y gravis"
       },
       "mathspeak": {
         "default": "modifying above y with grave",
@@ -2450,7 +2450,7 @@
     "key": "1EF5",
     "mappings": {
       "default": {
-        "default": "y underdot"
+        "default": "y onderpunt"
       },
       "mathspeak": {
         "default": "modifying below y with dot",
@@ -2463,7 +2463,7 @@
     "key": "1EF7",
     "mappings": {
       "default": {
-        "default": "y hook"
+        "default": "y haak"
       },
       "mathspeak": {
         "default": "modifying above y with hook",

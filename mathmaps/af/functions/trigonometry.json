@@ -1,12 +1,12 @@
 [
   {
-    "locale": "en"
+    "locale": "af"
   },
   {
     "key": "cos",
     "mappings": {
       "default": {
-        "default": "cosine"
+        "default": "kosinus"
       }
     }
   },
@@ -14,7 +14,7 @@
     "key": "cot",
     "mappings": {
       "default": {
-        "default": "cotangent"
+        "default": "kotangens"
       }
     }
   },
@@ -22,7 +22,7 @@
     "key": "csc",
     "mappings": {
       "default": {
-        "default": "cosecant"
+        "default": "kosekans"
       }
     }
   },
@@ -30,7 +30,7 @@
     "key": "sec",
     "mappings": {
       "default": {
-        "default": "secant"
+        "default": "sekans"
       }
     }
   },
@@ -38,7 +38,7 @@
     "key": "sin",
     "mappings": {
       "default": {
-        "default": "sine"
+        "default": "sinus"
       }
     }
   },
@@ -46,7 +46,7 @@
     "key": "tan",
     "mappings": {
       "default": {
-        "default": "tangent"
+        "default": "tangens"
       }
     }
   },
@@ -54,7 +54,7 @@
     "key": "arccos",
     "mappings": {
       "default": {
-        "default": "arc cosine"
+        "default": "boog kosinus"
       },
       "clearspeak": {
         "Trig_TrigInverse": "cosine inverse"
@@ -65,7 +65,7 @@
     "key": "arccot",
     "mappings": {
       "default": {
-        "default": "arc cotangent"
+        "default": "boog kotangens"
       },
       "clearspeak": {
         "Trig_TrigInverse": "cotangent inverse"
@@ -76,7 +76,7 @@
     "key": "arccsc",
     "mappings": {
       "default": {
-        "default": "arc cosecant"
+        "default": "boog kosekans"
       },
       "clearspeak": {
         "Trig_TrigInverse": "cosecant inverse"
@@ -87,7 +87,7 @@
     "key": "arcsec",
     "mappings": {
       "default": {
-        "default": "arc secant"
+        "default": "boog sekans"
       },
       "clearspeak": {
         "Trig_TrigInverse": "secant inverse"
@@ -98,7 +98,7 @@
     "key": "arcsin",
     "mappings": {
       "default": {
-        "default": "arc sine"
+        "default": "boog sinus"
       },
       "clearspeak": {
         "Trig_TrigInverse": "sine inverse"
@@ -109,7 +109,7 @@
     "key": "arctan",
     "mappings": {
       "default": {
-        "default": "arc tangent"
+        "default": "boog tangens"
       },
       "clearspeak": {
         "Trig_TrigInverse": "tangent inverse"

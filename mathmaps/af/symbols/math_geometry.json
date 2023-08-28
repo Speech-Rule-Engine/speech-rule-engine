@@ -1030,7 +1030,7 @@
     "key": "2580",
     "mappings": {
       "default": {
-        "default": "upper half block"
+        "default": "boonste half blok"
       }
     }
   },
@@ -1038,7 +1038,7 @@
     "key": "2581",
     "mappings": {
       "default": {
-        "default": "lower one eighth block"
+        "default": "onderste een agtste blok"
       }
     }
   },
@@ -1046,7 +1046,7 @@
     "key": "2582",
     "mappings": {
       "default": {
-        "default": "lower one quarter block"
+        "default": "onderste een kwart blok"
       }
     }
   },
@@ -1054,7 +1054,7 @@
     "key": "2583",
     "mappings": {
       "default": {
-        "default": "lower three eighths block"
+        "default": "onderste drie agtstes blok"
       }
     }
   },
@@ -1062,7 +1062,7 @@
     "key": "2584",
     "mappings": {
       "default": {
-        "default": "lower half block"
+        "default": "onderste half blok"
       }
     }
   },
@@ -1070,7 +1070,7 @@
     "key": "2585",
     "mappings": {
       "default": {
-        "default": "lower five eighths block"
+        "default": "onderste vyf agtstes blok"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "2586",
     "mappings": {
       "default": {
-        "default": "lower three quarters block"
+        "default": "onderste driekwart blok"
       }
     }
   },
@@ -1086,7 +1086,7 @@
     "key": "2587",
     "mappings": {
       "default": {
-        "default": "lower seven eighths block"
+        "default": "onderste sewe agtstes blok"
       }
     }
   },
@@ -1094,7 +1094,7 @@
     "key": "2588",
     "mappings": {
       "default": {
-        "default": "full block"
+        "default": "vol blok"
       }
     }
   },
@@ -1102,7 +1102,7 @@
     "key": "2589",
     "mappings": {
       "default": {
-        "default": "left seven eighths block"
+        "default": "linker sewe agtstes blok"
       }
     }
   },
@@ -1110,7 +1110,7 @@
     "key": "258A",
     "mappings": {
       "default": {
-        "default": "left three quarters block"
+        "default": "linker driekwart blok"
       }
     }
   },
@@ -1118,7 +1118,7 @@
     "key": "258B",
     "mappings": {
       "default": {
-        "default": "left five eighths block"
+        "default": "linker vyf agtstes blok"
       }
     }
   },
@@ -1126,7 +1126,7 @@
     "key": "258C",
     "mappings": {
       "default": {
-        "default": "left half block"
+        "default": "linker half blok"
       }
     }
   },
@@ -1134,7 +1134,7 @@
     "key": "258D",
     "mappings": {
       "default": {
-        "default": "left three eighths block"
+        "default": "linker drie agtstes blok"
       }
     }
   },
@@ -1142,7 +1142,7 @@
     "key": "258E",
     "mappings": {
       "default": {
-        "default": "left one quarter block"
+        "default": "linker een kwart blok"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "258F",
     "mappings": {
       "default": {
-        "default": "left one eighth block"
+        "default": "linker een agtste blok"
       }
     }
   },
@@ -1158,7 +1158,7 @@
     "key": "2590",
     "mappings": {
       "default": {
-        "default": "right half block"
+        "default": "regter half blok"
       }
     }
   },
@@ -1166,7 +1166,7 @@
     "key": "2591",
     "mappings": {
       "default": {
-        "default": "light shade"
+        "default": "ligte skakering"
       }
     }
   },
@@ -1174,7 +1174,7 @@
     "key": "2592",
     "mappings": {
       "default": {
-        "default": "medium shade"
+        "default": "medium skakering"
       }
     }
   },
@@ -1182,7 +1182,7 @@
     "key": "2593",
     "mappings": {
       "default": {
-        "default": "dark shade"
+        "default": "donker skakering"
       }
     }
   },
@@ -1190,7 +1190,7 @@
     "key": "2594",
     "mappings": {
       "default": {
-        "default": "upper one eighth block"
+        "default": "boonste een agtste blok"
       }
     }
   },
@@ -1198,7 +1198,7 @@
     "key": "2595",
     "mappings": {
       "default": {
-        "default": "right one eighth block"
+        "default": "regter een agtste blok"
       }
     }
   },
@@ -1206,7 +1206,7 @@
     "key": "2596",
     "mappings": {
       "default": {
-        "default": "quadrant lower left"
+        "default": "kwadrant onder links"
       }
     }
   },
@@ -1214,7 +1214,7 @@
     "key": "2597",
     "mappings": {
       "default": {
-        "default": "quadrant lower right"
+        "default": "kwadrant onder regs"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "2598",
     "mappings": {
       "default": {
-        "default": "quadrant upper left"
+        "default": "kwadrant bo links"
       }
     }
   },
@@ -1230,7 +1230,7 @@
     "key": "2599",
     "mappings": {
       "default": {
-        "default": "quadrant upper left and lower left and lower right"
+        "default": "kwadrant bo links en onder links en onder regs"
       }
     }
   },
@@ -1238,7 +1238,7 @@
     "key": "259A",
     "mappings": {
       "default": {
-        "default": "quadrant upper left and lower right"
+        "default": "kwadrant bo links en onder regs"
       }
     }
   },
@@ -1246,7 +1246,7 @@
     "key": "259B",
     "mappings": {
       "default": {
-        "default": "quadrant upper left and upper right and lower left"
+        "default": "kwadrant bo links en bo regs en onder links"
       }
     }
   },
@@ -1254,7 +1254,7 @@
     "key": "259C",
     "mappings": {
       "default": {
-        "default": "quadrant upper left and upper right and lower right"
+        "default": "kwadrant bo links en bo regs en onder regs"
       }
     }
   },
@@ -1262,7 +1262,7 @@
     "key": "259D",
     "mappings": {
       "default": {
-        "default": "quadrant upper right"
+        "default": "kwadrant bo regs"
       }
     }
   },
@@ -1270,7 +1270,7 @@
     "key": "259E",
     "mappings": {
       "default": {
-        "default": "quadrant upper right and lower left"
+        "default": "kwadrant bo regs en onder links"
       }
     }
   },
@@ -1278,7 +1278,7 @@
     "key": "259F",
     "mappings": {
       "default": {
-        "default": "quadrant upper right and lower left and lower right"
+        "default": "kwadrant bo regs en onder links en onder regs"
       }
     }
   },
@@ -1286,7 +1286,7 @@
     "key": "25A0",
     "mappings": {
       "default": {
-        "default": "black square"
+        "default": "swart vierkant"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "25A1",
     "mappings": {
       "default": {
-        "default": "white square"
+        "default": "wit vierkant"
       }
     }
   },
@@ -1302,7 +1302,7 @@
     "key": "25A2",
     "mappings": {
       "default": {
-        "default": "white square with rounded corners"
+        "default": "wit vierkant met geronde hoeke"
       }
     }
   },
@@ -1310,7 +1310,7 @@
     "key": "25A3",
     "mappings": {
       "default": {
-        "default": "white square containing black small square"
+        "default": "wit vierkant wat klein swart vierkant bevat"
       }
     }
   },
@@ -1318,7 +1318,7 @@
     "key": "25A4",
     "mappings": {
       "default": {
-        "default": "square with horizontal fill"
+        "default": "vierkant met horisontale vul"
       }
     }
   },
@@ -1326,7 +1326,7 @@
     "key": "25A5",
     "mappings": {
       "default": {
-        "default": "square with vertical fill"
+        "default": "vierkant met vertikale vul"
       }
     }
   },
@@ -1334,7 +1334,7 @@
     "key": "25A6",
     "mappings": {
       "default": {
-        "default": "square with orthogonal crosshatch fill"
+        "default": "vierkant met ortogonale kruisarsie vul"
       }
     }
   },
@@ -1342,7 +1342,7 @@
     "key": "25A7",
     "mappings": {
       "default": {
-        "default": "square with upper left to lower right fill"
+        "default": "vierkant met bo links na onder regs vul"
       }
     }
   },
@@ -1350,7 +1350,7 @@
     "key": "25A8",
     "mappings": {
       "default": {
-        "default": "square with upper right to lower left fill"
+        "default": "vierkant met bo regs na onder links vul"
       }
     }
   },
@@ -1358,7 +1358,7 @@
     "key": "25A9",
     "mappings": {
       "default": {
-        "default": "square with diagonal crosshatch fill"
+        "default": "vierkant met diagonale kruisarsie vul"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "25AA",
     "mappings": {
       "default": {
-        "default": "black small square"
+        "default": "swart klein vierkant"
       }
     }
   },
@@ -1374,7 +1374,7 @@
     "key": "25AB",
     "mappings": {
       "default": {
-        "default": "white small square"
+        "default": "wit klein vierkant"
       }
     }
   },
@@ -1382,7 +1382,7 @@
     "key": "25AC",
     "mappings": {
       "default": {
-        "default": "black rectangle"
+        "default": "swart reghoek"
       }
     }
   },
@@ -1390,7 +1390,7 @@
     "key": "25AD",
     "mappings": {
       "default": {
-        "default": "white rectangle"
+        "default": "wit reghoek"
       }
     }
   },
@@ -1398,7 +1398,7 @@
     "key": "25AE",
     "mappings": {
       "default": {
-        "default": "black vertical rectangle"
+        "default": "swart vertikale reghoek"
       }
     }
   },
@@ -1406,7 +1406,7 @@
     "key": "25AF",
     "mappings": {
       "default": {
-        "default": "white vertical rectangle"
+        "default": "wit vertikale reghoek"
       }
     }
   },
@@ -1414,7 +1414,7 @@
     "key": "25B0",
     "mappings": {
       "default": {
-        "default": "black parallelogram"
+        "default": "swart paralelogram"
       }
     }
   },
@@ -1422,7 +1422,7 @@
     "key": "25B1",
     "mappings": {
       "default": {
-        "default": "white parallelogram"
+        "default": "wit paralelogram"
       }
     }
   },
@@ -1430,7 +1430,7 @@
     "key": "25B2",
     "mappings": {
       "default": {
-        "default": "black up pointing triangle"
+        "default": "swart driehoek wat boontoe wys"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "25B3",
     "mappings": {
       "default": {
-        "default": "white up pointing triangle"
+        "default": "wit driehoek wat boontoe wys"
       }
     }
   },
@@ -1446,7 +1446,7 @@
     "key": "25B4",
     "mappings": {
       "default": {
-        "default": "black up pointing small triangle"
+        "default": "swart klein driehoek wat boontoe wys"
       }
     }
   },
@@ -1454,7 +1454,7 @@
     "key": "25B5",
     "mappings": {
       "default": {
-        "default": "white up pointing small triangle"
+        "default": "wit klein driehoek wat boontoe wys"
       }
     }
   },
@@ -1462,7 +1462,7 @@
     "key": "25B6",
     "mappings": {
       "default": {
-        "default": "black right pointing triangle"
+        "default": "swart driehoek wat regs wys"
       }
     }
   },
@@ -1470,7 +1470,7 @@
     "key": "25B7",
     "mappings": {
       "default": {
-        "default": "white right pointing triangle"
+        "default": "wit driehoek wat regs wys"
       }
     }
   },
@@ -1478,7 +1478,7 @@
     "key": "25B8",
     "mappings": {
       "default": {
-        "default": "black right pointing small triangle"
+        "default": "swart klein driehoek wat regs wys"
       }
     }
   },
@@ -1486,7 +1486,7 @@
     "key": "25B9",
     "mappings": {
       "default": {
-        "default": "white right pointing small triangle"
+        "default": "wit klein driehoek wat regs wys"
       }
     }
   },
@@ -1494,7 +1494,7 @@
     "key": "25BA",
     "mappings": {
       "default": {
-        "default": "black right pointing pointer"
+        "default": "swart wyser na regs"
       }
     }
   },
@@ -1502,7 +1502,7 @@
     "key": "25BB",
     "mappings": {
       "default": {
-        "default": "white right pointing pointer"
+        "default": "wit wyser na regs"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "25BC",
     "mappings": {
       "default": {
-        "default": "black down pointing triangle"
+        "default": "swart driehoek wat ondertoe wys"
       }
     }
   },
@@ -1518,7 +1518,7 @@
     "key": "25BD",
     "mappings": {
       "default": {
-        "default": "white down pointing triangle"
+        "default": "wit driehoek wat ondertoe wys"
       }
     }
   },
@@ -1526,7 +1526,7 @@
     "key": "25BE",
     "mappings": {
       "default": {
-        "default": "black down pointing small triangle"
+        "default": "swart klein driehoek wat ondertoe wys"
       }
     }
   },
@@ -1534,7 +1534,7 @@
     "key": "25BF",
     "mappings": {
       "default": {
-        "default": "white down pointing small triangle"
+        "default": "wit klein driehoek wat ondertoe wys"
       }
     }
   },
@@ -1542,7 +1542,7 @@
     "key": "25C0",
     "mappings": {
       "default": {
-        "default": "black left pointing triangle"
+        "default": "swart driehoek wat links wys"
       }
     }
   },
@@ -1550,7 +1550,7 @@
     "key": "25C1",
     "mappings": {
       "default": {
-        "default": "white left pointing triangle"
+        "default": "wit driehoek wat links wys"
       }
     }
   },
@@ -1558,7 +1558,7 @@
     "key": "25C2",
     "mappings": {
       "default": {
-        "default": "black left pointing small triangle"
+        "default": "swart klein driehoek wat links wys"
       }
     }
   },
@@ -1566,7 +1566,7 @@
     "key": "25C3",
     "mappings": {
       "default": {
-        "default": "white left pointing small triangle"
+        "default": "wit klein driehoek wat links wys"
       }
     }
   },
@@ -1574,7 +1574,7 @@
     "key": "25C4",
     "mappings": {
       "default": {
-        "default": "black left pointing pointer"
+        "default": "swart wyser na links"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "25C5",
     "mappings": {
       "default": {
-        "default": "white left pointing pointer"
+        "default": "wit wyser na links"
       }
     }
   },
@@ -1590,7 +1590,7 @@
     "key": "25C6",
     "mappings": {
       "default": {
-        "default": "black diamond"
+        "default": "swart diamant"
       }
     }
   },
@@ -1598,7 +1598,7 @@
     "key": "25C7",
     "mappings": {
       "default": {
-        "default": "white diamond"
+        "default": "wit diamant"
       }
     }
   },
@@ -1606,7 +1606,7 @@
     "key": "25C8",
     "mappings": {
       "default": {
-        "default": "white diamond containing black small diamond"
+        "default": "wit diamant met klein swart diamant in"
       }
     }
   },
@@ -1614,7 +1614,7 @@
     "key": "25C9",
     "mappings": {
       "default": {
-        "default": "fisheye"
+        "default": "visoog"
       }
     }
   },
@@ -1630,7 +1630,7 @@
     "key": "25CB",
     "mappings": {
       "default": {
-        "default": "white circle"
+        "default": "wit sirkel"
       }
     }
   },
@@ -1638,7 +1638,7 @@
     "key": "25CC",
     "mappings": {
       "default": {
-        "default": "dotted circle"
+        "default": "kolletjies sirkel"
       }
     }
   },
@@ -1646,7 +1646,7 @@
     "key": "25CD",
     "mappings": {
       "default": {
-        "default": "circle with vertical fill"
+        "default": "sirkel met vertikale vul"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "25CE",
     "mappings": {
       "default": {
-        "default": "bullseye"
+        "default": "kol"
       }
     }
   },
@@ -1662,7 +1662,7 @@
     "key": "25CF",
     "mappings": {
       "default": {
-        "default": "black circle"
+        "default": "swart sirkel"
       }
     }
   },
@@ -1670,7 +1670,7 @@
     "key": "25D0",
     "mappings": {
       "default": {
-        "default": "circle with left half black"
+        "default": "sirkel met linker helfte swart"
       }
     }
   },
@@ -1678,7 +1678,7 @@
     "key": "25D1",
     "mappings": {
       "default": {
-        "default": "circle with right half black"
+        "default": "sirkel met regter helfte swart"
       }
     }
   },
@@ -1686,7 +1686,7 @@
     "key": "25D2",
     "mappings": {
       "default": {
-        "default": "circle with lower half black"
+        "default": "sirkel met onderste helfte swart"
       }
     }
   },
@@ -1694,7 +1694,7 @@
     "key": "25D3",
     "mappings": {
       "default": {
-        "default": "circle with upper half black"
+        "default": "sirkel met boonste helfte swart"
       }
     }
   },
@@ -1702,7 +1702,7 @@
     "key": "25D4",
     "mappings": {
       "default": {
-        "default": "circle with upper right quadrant black"
+        "default": "sirkel met boonste regter kwadrant swart"
       }
     }
   },
@@ -1710,7 +1710,7 @@
     "key": "25D5",
     "mappings": {
       "default": {
-        "default": "circle with all but upper left quadrant black"
+        "default": "sirkel met almal behalwe boonste linker kwadrant swart"
       }
     }
   },
@@ -1718,7 +1718,7 @@
     "key": "25D6",
     "mappings": {
       "default": {
-        "default": "left half black circle"
+        "default": "linker half swart sirkel"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "key": "25D7",
     "mappings": {
       "default": {
-        "default": "right half black circle"
+        "default": "regter half swart sirkel"
       }
     }
   },
@@ -1734,7 +1734,7 @@
     "key": "25D8",
     "mappings": {
       "default": {
-        "default": "inverse bullet"
+        "default": "omgekeerde koeël"
       }
     }
   },
@@ -1742,7 +1742,7 @@
     "key": "25D9",
     "mappings": {
       "default": {
-        "default": "inverse white circle"
+        "default": "omgekeerde wit sirkel"
       }
     }
   },
@@ -1750,7 +1750,7 @@
     "key": "25DA",
     "mappings": {
       "default": {
-        "default": "upper half inverse white circle"
+        "default": "boonste helfte omgekeerde wit sirkel"
       }
     }
   },
@@ -1758,7 +1758,7 @@
     "key": "25DB",
     "mappings": {
       "default": {
-        "default": "lower half inverse white circle"
+        "default": "onderste helfte omgekeerde wit sirkel"
       }
     }
   },
@@ -1766,7 +1766,7 @@
     "key": "25DC",
     "mappings": {
       "default": {
-        "default": "upper left quadrant circular arc"
+        "default": "boonste linker kwadrant sirkelvormige boog"
       }
     }
   },
@@ -1774,7 +1774,7 @@
     "key": "25DD",
     "mappings": {
       "default": {
-        "default": "upper right quadrant circular arc"
+        "default": "boonste regter kwadrant sirkelvormige boog"
       }
     }
   },
@@ -1782,7 +1782,7 @@
     "key": "25DE",
     "mappings": {
       "default": {
-        "default": "lower right quadrant circular arc"
+        "default": "onderste regter kwadrant sirkelvormige boog"
       }
     }
   },
@@ -1790,7 +1790,7 @@
     "key": "25DF",
     "mappings": {
       "default": {
-        "default": "lower left quadrant circular arc"
+        "default": "onderste linker kwadrant sirkelvormige boog"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "key": "25E0",
     "mappings": {
       "default": {
-        "default": "upper half circle"
+        "default": "boonste half sirkel"
       }
     }
   },
@@ -1806,7 +1806,7 @@
     "key": "25E1",
     "mappings": {
       "default": {
-        "default": "lower half circle"
+        "default": "onderste half sirkel"
       }
     }
   },
@@ -1814,7 +1814,7 @@
     "key": "25E2",
     "mappings": {
       "default": {
-        "default": "black lower right triangle"
+        "default": "swart onderste regs driehoek"
       }
     }
   },
@@ -1822,7 +1822,7 @@
     "key": "25E3",
     "mappings": {
       "default": {
-        "default": "black lower left triangle"
+        "default": "swart onderste links driehoek"
       }
     }
   },
@@ -1830,7 +1830,7 @@
     "key": "25E4",
     "mappings": {
       "default": {
-        "default": "black upper left triangle"
+        "default": "swart boonste links driehoek"
       }
     }
   },
@@ -1838,7 +1838,7 @@
     "key": "25E5",
     "mappings": {
       "default": {
-        "default": "black upper right triangle"
+        "default": "swart boonste regs driehoek"
       }
     }
   },
@@ -1846,7 +1846,7 @@
     "key": "25E6",
     "mappings": {
       "default": {
-        "default": "white bullet"
+        "default": "wit koeël"
       }
     }
   },
@@ -1854,7 +1854,7 @@
     "key": "25E7",
     "mappings": {
       "default": {
-        "default": "square with left half black"
+        "default": "vierkant met linker helfte swart"
       }
     }
   },
@@ -1862,7 +1862,7 @@
     "key": "25E8",
     "mappings": {
       "default": {
-        "default": "square with right half black"
+        "default": "vierkant met regter helfte swart"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "25E9",
     "mappings": {
       "default": {
-        "default": "square with upper left diagonal half black"
+        "default": "vierkant met boonste linker diagonaal helfte swart"
       }
     }
   },
@@ -1878,7 +1878,7 @@
     "key": "25EA",
     "mappings": {
       "default": {
-        "default": "square with lower right diagonal half black"
+        "default": "vierkant met onderste regter diagonaal helfte swart"
       }
     }
   },
@@ -1886,7 +1886,7 @@
     "key": "25EB",
     "mappings": {
       "default": {
-        "default": "white square with vertical bisecting line"
+        "default": "wit vierkant met vertikale halveer lyn"
       }
     }
   },
@@ -1894,7 +1894,7 @@
     "key": "25EC",
     "mappings": {
       "default": {
-        "default": "white up pointing triangle with dot"
+        "default": "wit driehoek wat boontoe wys met punt"
       }
     }
   },
@@ -1902,7 +1902,7 @@
     "key": "25ED",
     "mappings": {
       "default": {
-        "default": "up pointing triangle with left half black"
+        "default": "driehoek wat boontoe wys met linker helfte swart"
       }
     }
   },
@@ -1910,7 +1910,7 @@
     "key": "25EE",
     "mappings": {
       "default": {
-        "default": "up pointing triangle with right half black"
+        "default": "driehoek wat boontoe wys met regter helfte swart"
       }
     }
   },
@@ -1918,7 +1918,7 @@
     "key": "25EF",
     "mappings": {
       "default": {
-        "default": "large circle"
+        "default": "groot sirkel"
       }
     }
   },
@@ -1926,7 +1926,7 @@
     "key": "25F0",
     "mappings": {
       "default": {
-        "default": "white square with upper left quadrant"
+        "default": "wit vierkant met linker boonste kwadrant"
       }
     }
   },
@@ -1934,7 +1934,7 @@
     "key": "25F1",
     "mappings": {
       "default": {
-        "default": "white square with lower left quadrant"
+        "default": "wit vierkant met linker onderste kwadrant"
       }
     }
   },
@@ -1942,7 +1942,7 @@
     "key": "25F2",
     "mappings": {
       "default": {
-        "default": "white square with lower right quadrant"
+        "default": "wit vierkant met regter onderste kwadrant"
       }
     }
   },
@@ -1950,7 +1950,7 @@
     "key": "25F3",
     "mappings": {
       "default": {
-        "default": "white square with upper right quadrant"
+        "default": "wit vierkant met regter boonste kwadrant"
       }
     }
   },
@@ -1958,7 +1958,7 @@
     "key": "25F4",
     "mappings": {
       "default": {
-        "default": "white circle with upper left quadrant"
+        "default": "wit sirkel met boonste linker kwadrant"
       }
     }
   },
@@ -1966,7 +1966,7 @@
     "key": "25F5",
     "mappings": {
       "default": {
-        "default": "white circle with lower left quadrant"
+        "default": "wit sirkel met onderste linker kwadrant"
       }
     }
   },
@@ -1974,7 +1974,7 @@
     "key": "25F6",
     "mappings": {
       "default": {
-        "default": "white circle with lower right quadrant"
+        "default": "wit sirkel met onderste regter kwadrant"
       }
     }
   },
@@ -1982,7 +1982,7 @@
     "key": "25F7",
     "mappings": {
       "default": {
-        "default": "white circle with upper right quadrant"
+        "default": "wit sirkel met boonste regter kwadrant"
       }
     }
   },
@@ -1990,7 +1990,7 @@
     "key": "25F8",
     "mappings": {
       "default": {
-        "default": "upper left triangle"
+        "default": "boonste linker driehoek"
       }
     }
   },
@@ -1998,7 +1998,7 @@
     "key": "25F9",
     "mappings": {
       "default": {
-        "default": "upper right triangle"
+        "default": "boonste regter driehoek"
       }
     }
   },
@@ -2006,7 +2006,7 @@
     "key": "25FA",
     "mappings": {
       "default": {
-        "default": "lower left triangle"
+        "default": "onderste links driehoek"
       }
     }
   },
@@ -2014,7 +2014,7 @@
     "key": "25FB",
     "mappings": {
       "default": {
-        "default": "white medium square"
+        "default": "wit medium vierkant"
       }
     }
   },
@@ -2022,7 +2022,7 @@
     "key": "25FC",
     "mappings": {
       "default": {
-        "default": "black medium square"
+        "default": "swart medium vierkant"
       }
     }
   },
@@ -2030,7 +2030,7 @@
     "key": "25FD",
     "mappings": {
       "default": {
-        "default": "white medium small square"
+        "default": "wit medium klein vierkant"
       }
     }
   },
@@ -2038,7 +2038,7 @@
     "key": "25FE",
     "mappings": {
       "default": {
-        "default": "black medium small square"
+        "default": "swart medium klein vierkant"
       }
     }
   },
@@ -2046,7 +2046,7 @@
     "key": "25FF",
     "mappings": {
       "default": {
-        "default": "lower right triangle"
+        "default": "onderste regs driehoek"
       }
     }
   },
@@ -2054,7 +2054,7 @@
     "key": "2B12",
     "mappings": {
       "default": {
-        "default": "square with top half black"
+        "default": "vierkant met boonste helfte swart"
       }
     }
   },
@@ -2062,7 +2062,7 @@
     "key": "2B13",
     "mappings": {
       "default": {
-        "default": "square with bottom half black"
+        "default": "vierkant met onderste helfte swart"
       }
     }
   },
@@ -2070,7 +2070,7 @@
     "key": "2B14",
     "mappings": {
       "default": {
-        "default": "square with upper right diagonal half black"
+        "default": "vierkant met boonste regter diagonaal helfte swart"
       }
     }
   },
@@ -2078,7 +2078,7 @@
     "key": "2B15",
     "mappings": {
       "default": {
-        "default": "square with lower left diagonal half black"
+        "default": "vierkant met onderste linker diagonaal helfte swart"
       }
     }
   },
@@ -2086,7 +2086,7 @@
     "key": "2B16",
     "mappings": {
       "default": {
-        "default": "diamond with left half black"
+        "default": "diamant met linker helfte swart"
       }
     }
   },
@@ -2094,7 +2094,7 @@
     "key": "2B17",
     "mappings": {
       "default": {
-        "default": "diamond with right half black"
+        "default": "diamant met regter helfte swart"
       }
     }
   },
@@ -2102,7 +2102,7 @@
     "key": "2B18",
     "mappings": {
       "default": {
-        "default": "diamond with top half black"
+        "default": "diamant met boonste helfte swart"
       }
     }
   },
@@ -2110,7 +2110,7 @@
     "key": "2B19",
     "mappings": {
       "default": {
-        "default": "diamond with bottom half black"
+        "default": "diamant met onderste helfte swart"
       }
     }
   },
@@ -2118,7 +2118,7 @@
     "key": "2B1A",
     "mappings": {
       "default": {
-        "default": "dotted square"
+        "default": "kolletjies vierkant"
       }
     }
   },
@@ -2126,7 +2126,7 @@
     "key": "2B1B",
     "mappings": {
       "default": {
-        "default": "black large square"
+        "default": "swart groot vierkant"
       }
     }
   },
@@ -2134,7 +2134,7 @@
     "key": "2B1C",
     "mappings": {
       "default": {
-        "default": "white large square"
+        "default": "wit groot vierkant"
       }
     }
   },
@@ -2142,7 +2142,7 @@
     "key": "2B1D",
     "mappings": {
       "default": {
-        "default": "black very small square"
+        "default": "swart baie klein vierkant"
       }
     }
   },
@@ -2150,7 +2150,7 @@
     "key": "2B1E",
     "mappings": {
       "default": {
-        "default": "white very small square"
+        "default": "wit baie klein vierkant"
       }
     }
   },
@@ -2158,7 +2158,7 @@
     "key": "2B1F",
     "mappings": {
       "default": {
-        "default": "black pentagon"
+        "default": "swart pentagon"
       }
     }
   },
@@ -2166,7 +2166,7 @@
     "key": "2B20",
     "mappings": {
       "default": {
-        "default": "white pentagon"
+        "default": "wit pentagon"
       }
     }
   },
@@ -2174,7 +2174,7 @@
     "key": "2B21",
     "mappings": {
       "default": {
-        "default": "white hexagon"
+        "default": "wit heksagon"
       }
     }
   },
@@ -2182,7 +2182,7 @@
     "key": "2B22",
     "mappings": {
       "default": {
-        "default": "black hexagon"
+        "default": "swart heksagon"
       }
     }
   },
@@ -2190,7 +2190,7 @@
     "key": "2B23",
     "mappings": {
       "default": {
-        "default": "horizontal black hexagon"
+        "default": "horisontale swart heksagon"
       }
     }
   },
@@ -2198,7 +2198,7 @@
     "key": "2B24",
     "mappings": {
       "default": {
-        "default": "black large circle"
+        "default": "swart groot sirkel"
       }
     }
   },
@@ -2206,7 +2206,7 @@
     "key": "2B25",
     "mappings": {
       "default": {
-        "default": "black medium diamond"
+        "default": "swart medium diamant"
       }
     }
   },
@@ -2214,7 +2214,7 @@
     "key": "2B26",
     "mappings": {
       "default": {
-        "default": "white medium diamond"
+        "default": "wit medium diamant"
       }
     }
   },
@@ -2222,7 +2222,7 @@
     "key": "2B27",
     "mappings": {
       "default": {
-        "default": "black medium lozenge"
+        "default": "swart medium lozenge"
       }
     }
   },
@@ -2230,7 +2230,7 @@
     "key": "2B28",
     "mappings": {
       "default": {
-        "default": "white medium lozenge"
+        "default": "wit medium lozenge"
       }
     }
   },
@@ -2238,7 +2238,7 @@
     "key": "2B29",
     "mappings": {
       "default": {
-        "default": "black small diamond"
+        "default": "swart klein diamant"
       }
     }
   },
@@ -2246,7 +2246,7 @@
     "key": "2B2A",
     "mappings": {
       "default": {
-        "default": "black small lozenge"
+        "default": "swart klein lozenge"
       }
     }
   },
@@ -2254,7 +2254,7 @@
     "key": "2B2B",
     "mappings": {
       "default": {
-        "default": "white small lozenge"
+        "default": "wit klein lozenge"
       }
     }
   },
@@ -2262,7 +2262,7 @@
     "key": "2B2C",
     "mappings": {
       "default": {
-        "default": "black horizontal ellipse"
+        "default": "swart horisontale elips"
       }
     }
   },
@@ -2270,7 +2270,7 @@
     "key": "2B2D",
     "mappings": {
       "default": {
-        "default": "white horizontal ellipse"
+        "default": "wit horisontale elips"
       }
     }
   },
@@ -2278,7 +2278,7 @@
     "key": "2B2E",
     "mappings": {
       "default": {
-        "default": "black vertical ellipse"
+        "default": "swart vertikale elips"
       }
     }
   },
@@ -2286,7 +2286,7 @@
     "key": "2B2F",
     "mappings": {
       "default": {
-        "default": "white vertical ellipse"
+        "default": "wit vertikale elips"
       }
     }
   },
@@ -2294,7 +2294,7 @@
     "key": "2B50",
     "mappings": {
       "default": {
-        "default": "white medium star"
+        "default": "wit medium ster"
       }
     }
   },
@@ -2302,7 +2302,7 @@
     "key": "2B51",
     "mappings": {
       "default": {
-        "default": "black small star"
+        "default": "swart klein ster"
       }
     }
   },
@@ -2310,7 +2310,7 @@
     "key": "2B52",
     "mappings": {
       "default": {
-        "default": "white small star"
+        "default": "wit klein ster"
       }
     }
   },
@@ -2318,7 +2318,7 @@
     "key": "2B53",
     "mappings": {
       "default": {
-        "default": "black right pointing pentagon"
+        "default": "swart pentagon na regs"
       }
     }
   },
@@ -2326,7 +2326,7 @@
     "key": "2B54",
     "mappings": {
       "default": {
-        "default": "white right pointing pentagon"
+        "default": "wit pentagon na regs"
       }
     }
   },
@@ -2334,7 +2334,7 @@
     "key": "2B55",
     "mappings": {
       "default": {
-        "default": "heavy large circle"
+        "default": "swaar groot sirkel"
       }
     }
   },
@@ -2342,7 +2342,7 @@
     "key": "2B56",
     "mappings": {
       "default": {
-        "default": "heavy oval with oval inside"
+        "default": "swaar ovaal met ovaal binne in"
       }
     }
   },
@@ -2350,7 +2350,7 @@
     "key": "2B57",
     "mappings": {
       "default": {
-        "default": "heavy circle with circle inside"
+        "default": "swaar sirkel met sirkel binne in"
       }
     }
   },
@@ -2358,7 +2358,7 @@
     "key": "2B58",
     "mappings": {
       "default": {
-        "default": "heavy circle"
+        "default": "swaar sirkel"
       }
     }
   },
@@ -2366,7 +2366,7 @@
     "key": "2B59",
     "mappings": {
       "default": {
-        "default": "heavy circled saltire"
+        "default": "swaar omkringde X kruis"
       }
     }
   }

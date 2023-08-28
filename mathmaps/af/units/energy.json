@@ -6,7 +6,8 @@
     "key": "W",
     "mappings": {
       "default": {
-        "default": "watt"
+        "default": "watt",
+        "plural": "watt"
       }
     }
   },
@@ -14,7 +15,8 @@
     "key": "kwh",
     "mappings": {
       "default": {
-        "default": "kilowatt uur"
+        "default": "kilowatt uur",
+        "plural": "kilowatt uur"
       }
     }
   },
@@ -22,7 +24,8 @@
     "key": "J",
     "mappings": {
       "default": {
-        "default": "joule"
+        "default": "joule",
+        "plural": "joule"
       }
     }
   },
@@ -30,7 +33,8 @@
     "key": "N",
     "mappings": {
       "default": {
-        "default": "Newton"
+        "default": "Newton",
+        "plural": "Newton"
       }
     }
   },
@@ -38,7 +42,8 @@
     "key": "A",
     "mappings": {
       "default": {
-        "default": "ampere"
+        "default": "ampere",
+        "plural": "ampere"
       }
     }
   },
@@ -46,7 +51,8 @@
     "key": "V",
     "mappings": {
       "default": {
-        "default": "volt"
+        "default": "volt",
+        "plural": "volt"
       }
     }
   },
@@ -54,7 +60,8 @@
     "key": "ohm",
     "mappings": {
       "default": {
-        "default": "ohm"
+        "default": "ohm",
+        "plural": "ohm"
       }
     }
   },
@@ -62,7 +69,8 @@
     "key": "Ω",
     "mappings": {
       "default": {
-        "default": "ohm"
+        "default": "ohm",
+        "plural": "ohm"
       }
     }
   },
@@ -70,7 +78,8 @@
     "key": "MΩ",
     "mappings": {
       "default": {
-        "default": "megohm"
+        "default": "megohm",
+        "plural": "megohm"
       }
     },
     "names": [
@@ -81,7 +90,8 @@
     "key": "kΩ",
     "mappings": {
       "default": {
-        "default": "kilohm"
+        "default": "kilohm",
+        "plural": "kilohm"
       }
     },
     "names": [

@@ -6,7 +6,7 @@
     "key": "01D6",
     "mappings": {
       "default": {
-        "default": "u double overdot overbar"
+        "default": "u dubbel bopunt bostaaf"
       }
     }
   },
@@ -14,7 +14,7 @@
     "key": "01D8",
     "mappings": {
       "default": {
-        "default": "u double overdot acute"
+        "default": "u dubbel bopunt akkuut"
       }
     }
   },
@@ -22,7 +22,7 @@
     "key": "01DA",
     "mappings": {
       "default": {
-        "default": "u double overdot caron"
+        "default": "u dubbel bopunt karon"
       }
     }
   },
@@ -30,7 +30,7 @@
     "key": "01DC",
     "mappings": {
       "default": {
-        "default": "u double overdot grave"
+        "default": "u dubbel bopunt gravis"
       }
     }
   },
@@ -38,7 +38,7 @@
     "key": "01DF",
     "mappings": {
       "default": {
-        "default": "a double overdot overbar"
+        "default": "a dubbel bopunt bostaaf"
       }
     }
   },
@@ -46,7 +46,7 @@
     "key": "01E1",
     "mappings": {
       "default": {
-        "default": "a overdot overbar"
+        "default": "a bopunt bostaaf"
       }
     }
   },
@@ -54,7 +54,7 @@
     "key": "01ED",
     "mappings": {
       "default": {
-        "default": "o ogonek overbar"
+        "default": "o ogonek bostaaf"
       }
     }
   },
@@ -62,7 +62,7 @@
     "key": "01FB",
     "mappings": {
       "default": {
-        "default": "a ring above acute"
+        "default": "a ring bokant akkuut"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "022B",
     "mappings": {
       "default": {
-        "default": "o double overdot overbar"
+        "default": "o dubbel bopunt bostaaf"
       }
     }
   },
@@ -78,7 +78,7 @@
     "key": "022D",
     "mappings": {
       "default": {
-        "default": "o tilde overbar"
+        "default": "o tilde bostaaf"
       }
     }
   },
@@ -86,7 +86,7 @@
     "key": "0231",
     "mappings": {
       "default": {
-        "default": "o overdot overbar"
+        "default": "o bopunt bostaaf"
       }
     }
   },
@@ -94,7 +94,7 @@
     "key": "1E09",
     "mappings": {
       "default": {
-        "default": "c cedilla acute"
+        "default": "c sidilla akkuut"
       }
     }
   },
@@ -102,7 +102,7 @@
     "key": "1E15",
     "mappings": {
       "default": {
-        "default": "e overbar grave"
+        "default": "e bostaaf gravis"
       }
     }
   },
@@ -110,7 +110,7 @@
     "key": "1E17",
     "mappings": {
       "default": {
-        "default": "e overbar acute"
+        "default": "e bostaaf akkuut"
       }
     }
   },
@@ -118,7 +118,7 @@
     "key": "1E1D",
     "mappings": {
       "default": {
-        "default": "e cedilla breve"
+        "default": "e sidilla asem"
       }
     }
   },
@@ -126,7 +126,7 @@
     "key": "1E2F",
     "mappings": {
       "default": {
-        "default": "i double overdot acute"
+        "default": "i dubbel bopunt akkuut"
       }
     }
   },
@@ -134,7 +134,7 @@
     "key": "1E39",
     "mappings": {
       "default": {
-        "default": "l underdot overbar"
+        "default": "l onderpunt bostaaf"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "1E4D",
     "mappings": {
       "default": {
-        "default": "o tilde acute"
+        "default": "o tilde akkuut"
       }
     }
   },
@@ -150,7 +150,7 @@
     "key": "1E4F",
     "mappings": {
       "default": {
-        "default": "o tilde double overdot"
+        "default": "o tilde dubbel bopunt"
       }
     }
   },
@@ -158,7 +158,7 @@
     "key": "1E51",
     "mappings": {
       "default": {
-        "default": "o overbar grave"
+        "default": "o bostaaf gravis"
       }
     }
   },
@@ -166,7 +166,7 @@
     "key": "1E53",
     "mappings": {
       "default": {
-        "default": "o overbar acute"
+        "default": "o bostaaf akkuut"
       }
     }
   },
@@ -174,7 +174,7 @@
     "key": "1E5D",
     "mappings": {
       "default": {
-        "default": "r underdot overbar"
+        "default": "r onderpunt bostaaf"
       }
     }
   },
@@ -182,7 +182,7 @@
     "key": "1E65",
     "mappings": {
       "default": {
-        "default": "s acute overdot"
+        "default": "s akkuut bopunt"
       }
     }
   },
@@ -190,7 +190,7 @@
     "key": "1E67",
     "mappings": {
       "default": {
-        "default": "s caron overdot"
+        "default": "s karon bopunt"
       }
     }
   },
@@ -198,7 +198,7 @@
     "key": "1E69",
     "mappings": {
       "default": {
-        "default": "s underdot overdot"
+        "default": "s onderpunt bopunt"
       }
     }
   },
@@ -206,7 +206,7 @@
     "key": "1E79",
     "mappings": {
       "default": {
-        "default": "u tilde acute"
+        "default": "u tilde akkuut"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "1E7B",
     "mappings": {
       "default": {
-        "default": "u overbar double overdot"
+        "default": "u bostaaf dubbel bopunt"
       }
     }
   },
@@ -222,7 +222,7 @@
     "key": "1EA5",
     "mappings": {
       "default": {
-        "default": "a hat acute"
+        "default": "a hoed akkuut"
       }
     }
   },
@@ -230,7 +230,7 @@
     "key": "1EA7",
     "mappings": {
       "default": {
-        "default": "a hat grave"
+        "default": "a hoed gravis"
       }
     }
   },
@@ -238,7 +238,7 @@
     "key": "1EA9",
     "mappings": {
       "default": {
-        "default": "a hat hook above"
+        "default": "a hoed haak bokant"
       }
     }
   },
@@ -246,7 +246,7 @@
     "key": "1EAB",
     "mappings": {
       "default": {
-        "default": "a hat tilde"
+        "default": "a hoed tilde"
       }
     }
   },
@@ -254,7 +254,7 @@
     "key": "1EAD",
     "mappings": {
       "default": {
-        "default": "a hat underdot"
+        "default": "a hoed onderpunt"
       }
     }
   },
@@ -262,7 +262,7 @@
     "key": "1EAF",
     "mappings": {
       "default": {
-        "default": "a breve acute"
+        "default": "a brevis akkuut"
       }
     }
   },
@@ -270,7 +270,7 @@
     "key": "1EB1",
     "mappings": {
       "default": {
-        "default": "a breve grave"
+        "default": "a brevis gravis"
       }
     }
   },
@@ -278,7 +278,7 @@
     "key": "1EB3",
     "mappings": {
       "default": {
-        "default": "a breve hook above"
+        "default": "a brevis haak bokant"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "1EB5",
     "mappings": {
       "default": {
-        "default": "a breve tilde"
+        "default": "a brevis tilde"
       }
     }
   },
@@ -294,7 +294,7 @@
     "key": "1EB7",
     "mappings": {
       "default": {
-        "default": "a breve underdot"
+        "default": "a brevis onderpunt"
       }
     }
   },
@@ -302,7 +302,7 @@
     "key": "1EBF",
     "mappings": {
       "default": {
-        "default": "e hat acute"
+        "default": "e hoed akkuut"
       }
     }
   },
@@ -310,7 +310,7 @@
     "key": "1EC1",
     "mappings": {
       "default": {
-        "default": "e hat grave"
+        "default": "e hoed gravis"
       }
     }
   },
@@ -318,7 +318,7 @@
     "key": "1EC3",
     "mappings": {
       "default": {
-        "default": "e hat hook above"
+        "default": "e hoed haak bokant"
       }
     }
   },
@@ -326,7 +326,7 @@
     "key": "1EC5",
     "mappings": {
       "default": {
-        "default": "e hat tilde"
+        "default": "e hoed tilde"
       }
     }
   },
@@ -334,7 +334,7 @@
     "key": "1EC7",
     "mappings": {
       "default": {
-        "default": "e hat underdot"
+        "default": "e hoed onderpunt"
       }
     }
   },
@@ -342,7 +342,7 @@
     "key": "1ED1",
     "mappings": {
       "default": {
-        "default": "o hat acute"
+        "default": "o hoed akkuut"
       }
     }
   },
@@ -350,7 +350,7 @@
     "key": "1ED3",
     "mappings": {
       "default": {
-        "default": "o hat grave"
+        "default": "o hoed gravis"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "1ED5",
     "mappings": {
       "default": {
-        "default": "o hat hook above"
+        "default": "o hoed haak bokant"
       }
     }
   },
@@ -366,7 +366,7 @@
     "key": "1ED7",
     "mappings": {
       "default": {
-        "default": "o hat tilde"
+        "default": "o hoed tilde"
       }
     }
   },
@@ -374,7 +374,7 @@
     "key": "1ED9",
     "mappings": {
       "default": {
-        "default": "o hat underdot"
+        "default": "o hoed onderpunt"
       }
     }
   },
@@ -382,7 +382,7 @@
     "key": "1EDB",
     "mappings": {
       "default": {
-        "default": "o acute prime"
+        "default": "o akkuut priem"
       }
     }
   },
@@ -390,7 +390,7 @@
     "key": "1EDD",
     "mappings": {
       "default": {
-        "default": "o grave prime"
+        "default": "o gravis priem"
       }
     }
   },
@@ -398,7 +398,7 @@
     "key": "1EDF",
     "mappings": {
       "default": {
-        "default": "o hook above prime"
+        "default": "o haak bokant priem"
       }
     }
   },
@@ -406,7 +406,7 @@
     "key": "1EE1",
     "mappings": {
       "default": {
-        "default": "o tilde prime"
+        "default": "o tilde priem"
       }
     }
   },
@@ -414,7 +414,7 @@
     "key": "1EE3",
     "mappings": {
       "default": {
-        "default": "o underdot prime"
+        "default": "o onderpunt priem"
       }
     }
   },
@@ -422,7 +422,7 @@
     "key": "1EE9",
     "mappings": {
       "default": {
-        "default": "u acute prime"
+        "default": "u akkuut priem"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "1EEB",
     "mappings": {
       "default": {
-        "default": "u grave prime"
+        "default": "u gravis priem"
       }
     }
   },
@@ -438,7 +438,7 @@
     "key": "1EED",
     "mappings": {
       "default": {
-        "default": "u hook above prime"
+        "default": "u haak bokant priem"
       }
     }
   },
@@ -446,7 +446,7 @@
     "key": "1EEF",
     "mappings": {
       "default": {
-        "default": "u tilde prime"
+        "default": "u tilde priem"
       }
     }
   },
@@ -454,7 +454,7 @@
     "key": "1EF1",
     "mappings": {
       "default": {
-        "default": "u underdot prime"
+        "default": "u onderpunt priem"
       }
     }
   }

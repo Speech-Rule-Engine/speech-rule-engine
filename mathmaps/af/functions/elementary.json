@@ -1,12 +1,12 @@
 [
   {
-    "locale": "en"
+    "locale": "af"
   },
   {
     "key": "log",
     "mappings": {
       "default": {
-        "default": "log"
+        "default": "logaritme"
       }
     }
   },
@@ -14,7 +14,7 @@
     "key": "ln",
     "mappings": {
       "default": {
-        "default": "natural log"
+        "default": "natuurlike logaritme"
       },
       "mathspeak": {
         "default": "ln"
@@ -29,7 +29,7 @@
     "key": "lg",
     "mappings": {
       "default": {
-        "default": "log base 10"
+        "default": "logaritme met grondtal 10"
       }
     }
   },
@@ -37,7 +37,7 @@
     "key": "exp",
     "mappings": {
       "default": {
-        "default": "exponential"
+        "default": "exponensiaal"
       },
       "mathspeak": {
         "default": "exp"
@@ -51,7 +51,7 @@
     "key": "gcd",
     "mappings": {
       "default": {
-        "default": "greatest common divisor"
+        "default": "grootste gemene deler"
       },
       "mathspeak": {
         "default": "gcd"
@@ -65,7 +65,7 @@
     "key": "lcm",
     "mappings": {
       "default": {
-        "default": "least common multiple"
+        "default": "kleinste gemene veelvoud"
       },
       "mathspeak": {
         "default": "lcm"
@@ -93,7 +93,7 @@
     "key": "im",
     "mappings": {
       "default": {
-        "default": "imaginary part"
+        "default": "imaginere gedeelte"
       },
       "mathspeak": {
         "default": "im"
@@ -107,7 +107,7 @@
     "key": "re",
     "mappings": {
       "default": {
-        "default": "real part"
+        "default": "reele gedeelte"
       },
       "mathspeak": {
         "default": "re"
@@ -135,7 +135,7 @@
     "key": "lim",
     "mappings": {
       "default": {
-        "default": "limit"
+        "default": "limiet"
       },
       "mathspeak": {
         "default": "limit"
@@ -149,7 +149,7 @@
     "key": "liminf",
     "mappings": {
       "default": {
-        "default": "limit inferior"
+        "default": "grootste ondergrens"
       },
       "mathspeak": {
         "default": "liminf"
@@ -163,7 +163,7 @@
     "key": "limsup",
     "mappings": {
       "default": {
-        "default": "limit superior"
+        "default": "kleinste bogrens"
       },
       "mathspeak": {
         "default": "limsup"
@@ -177,7 +177,7 @@
     "key": "max",
     "mappings": {
       "default": {
-        "default": "maximum"
+        "default": "maksimum"
       },
       "mathspeak": {
         "default": "max"
@@ -219,7 +219,7 @@
     "key": "injlim",
     "mappings": {
       "default": {
-        "default": "colimit"
+        "default": "direkte limiet"
       }
     }
   },
@@ -227,7 +227,7 @@
     "key": "projlim",
     "mappings": {
       "default": {
-        "default": "projective limit"
+        "default": "inverse limiet"
       }
     }
   },
@@ -249,7 +249,7 @@
     "key": "Pr",
     "mappings": {
       "default": {
-        "default": "probability"
+        "default": "waarskynlikheid"
       }
     }
   }

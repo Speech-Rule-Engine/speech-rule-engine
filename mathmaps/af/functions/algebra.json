@@ -1,12 +1,12 @@
 [
   {
-    "locale": "en"
+    "locale": "af"
   },
   {
     "key": "deg",
     "mappings": {
       "default": {
-        "default": "degree"
+        "default": "graad"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "dim",
     "mappings": {
       "default": {
-        "default": "dimension"
+        "default": "dimensie"
       }
     }
   },
@@ -33,7 +33,7 @@
     "key": "hom",
     "mappings": {
       "default": {
-        "default": "homomorphism"
+        "default": "homomorfisme"
       },
       "mathspeak": {
         "default": "hom"
@@ -47,7 +47,7 @@
     "key": "ker",
     "mappings": {
       "default": {
-        "default": "kernel"
+        "default": "kern"
       }
     }
   },
@@ -55,7 +55,7 @@
     "key": "Tr",
     "mappings": {
       "default": {
-        "default": "trace"
+        "default": "spoor"
       }
     }
   }

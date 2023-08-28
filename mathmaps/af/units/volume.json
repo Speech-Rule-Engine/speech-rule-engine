@@ -7,7 +7,7 @@
     "mappings": {
       "default": {
         "default": "kubiek",
-        "plural": "cubic"
+        "plural": "kubiek"
       }
     }
   },
@@ -16,7 +16,7 @@
     "mappings": {
       "default": {
         "default": "kubieke duim",
-        "plural": "cubic inches"
+        "plural": "kubieke duim"
       }
     }
   },
@@ -25,7 +25,7 @@
     "mappings": {
       "default": {
         "default": "kubieke voet",
-        "plural": "cubic feet"
+        "plural": "kubieke voet"
       }
     }
   },
@@ -33,7 +33,8 @@
     "key": "cu yd",
     "mappings": {
       "default": {
-        "default": "kubieke jaart"
+        "default": "kubieke jaart",
+        "plural": "kubieke jaart"
       }
     }
   },
@@ -59,7 +60,8 @@
     "key": "gal",
     "mappings": {
       "default": {
-        "default": "galon"
+        "default": "galon",
+        "plural": "galon"
       }
     }
   },

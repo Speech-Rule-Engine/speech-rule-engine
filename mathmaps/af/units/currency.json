@@ -24,7 +24,8 @@
     "key": "¥",
     "mappings": {
       "default": {
-        "default": "jen"
+        "default": "jen",
+        "plural": "jen"
       }
     }
   },
