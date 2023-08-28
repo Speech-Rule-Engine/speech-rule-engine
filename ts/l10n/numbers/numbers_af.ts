@@ -20,17 +20,6 @@
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
- * Changes number one 'eins' into a prefix.
- *
- * @param num Number string.
- * @param mill Flag indicating if this million or above.
- * @returns If it is a one, it is made into prefix.
- */
-function onePrefix_(num: string, mill = false): string {
-  return num === NUMBERS.ones[1] ? (mill ? 'eine' : 'ein') : num;
-}
-
-/**
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
@@ -40,7 +29,7 @@ function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
   let ones = NUMBERS.ones[Math.floor(n / 100)];
-  str += ones ? onePrefix_(ones) + 'honderd' : '';
+  str += ones ? ones + NUMBERS.numSep  + 'honderd' : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
@@ -50,7 +39,7 @@ function hundredsToWords_(num: number): string {
     } else {
       const tens = NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
-      str += ones ? onePrefix_(ones) + 'en' + tens : tens;
+      str += ones ? ones + '-en-' + tens : tens;
     }
   }
   return str;
@@ -77,18 +66,16 @@ function numberToWords(num: number): string {
       const hund = hundredsToWords_(num % 1000);
       if (pos) {
         const large = NUMBERS.large[pos];
-        // If this is million or above take care oaf the plural.
-        const plural =
-          pos > 1 && hundreds > 1 ? (large.match(/e$/) ? 'n' : 'en') : '';
-        str = onePrefix_(hund, pos > 1) + large + plural + str;
+        // If this is million or above take care of the plural.
+        str = hund + NUMBERS.numSep + large + NUMBERS.numSep + str;
       } else {
-        str = onePrefix_(hund, pos > 1) + str;
+        str = hund + NUMBERS.numSep + str;
       }
     }
     num = Math.floor(num / 1000);
     pos++;
   }
-  return str.replace(/ein$/, 'eins');
+  return str;
 }
 
 /**
@@ -101,12 +88,15 @@ function numberToWords(num: number): string {
  */
 function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 1) {
-    return 'eintel';
+    return 'enkel';
   }
   if (num === 2) {
-    return plural ? 'halbe' : 'halb';
+    return plural ? 'helftes' : 'helfte';
   }
-  return wordOrdinal(num) + 'l';
+  if (num === 4) {
+    return plural ? 'kwarts' : 'kwart';
+  }
+  return wordOrdinal(num) + (plural ? 's' : '');
 }
 
 /**
@@ -117,19 +107,19 @@ function numberToOrdinal(num: number, plural: boolean): string {
  */
 function wordOrdinal(num: number): string {
   if (num === 1) {
-    return 'erste';
+    return 'eerste';
   }
   if (num === 3) {
-    return 'dritte';
-  }
-  if (num === 7) {
-    return 'siebte';
+    return 'derde';
   }
   if (num === 8) {
-    return 'achte';
+    return 'agste';
+  }
+  if (num === 9) {
+    return 'negende';
   }
   const ordinal = numberToWords(num);
-  return ordinal + (num < 19 ? 'te' : 'ste');
+  return ordinal + (num < 19 ? 'de' : 'ste');
 }
 
 /**

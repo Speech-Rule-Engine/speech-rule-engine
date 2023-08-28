@@ -1,6 +1,6 @@
 {
   "kind": "numbers",
-  "locale": "de",
+  "locale": "af",
   "messages": {
     "zero": "nul",
     "ones": [
@@ -54,6 +54,6 @@
       "sextiljard"
     ],
     "vulgarSep": " ",
-    "numSep": "-"
+    "numSep": " "
   }
 }

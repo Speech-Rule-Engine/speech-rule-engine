@@ -1,6 +1,7 @@
 {
   "locale": "af",
   "modality": "prefix",
+  "domain": "default",
   "kind": "actions",
   "rules": [
     [
