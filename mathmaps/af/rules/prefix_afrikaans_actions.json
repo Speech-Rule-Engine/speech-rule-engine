@@ -42,7 +42,7 @@
     [
       "Action",
       "radicand",
-      "[t] \"Radicand\" (pause:200)"
+      "[t] \"Radikant\" (pause:200)"
     ],
     [
       "Action",
@@ -92,12 +92,12 @@
     [
       "Action",
       "choice",
-      "[t] \"Choice Quantity\" (pause:200)"
+      "[t] \"Beskikbare Hoeveelheid\" (pause:200)"
     ],
     [
       "Action",
       "select",
-      "[t] \"Selection Quantity\" (pause:200)"
+      "[t] \"Gekose Hoeveelheid\" (pause:200)"
     ],
     [
       "Action",
