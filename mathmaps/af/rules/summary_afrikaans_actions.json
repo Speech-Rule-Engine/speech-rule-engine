@@ -51,12 +51,12 @@
     [
       "Action",
       "abstr-lim",
-      "[t] \"limit function\""
+      "[t] \"limiet funksie\""
     ],
     [
       "Action",
       "abstr-lim-brief",
-      "[t] \"lim\""
+      "[t] \"limïet\""
     ],
     [
       "Action",
@@ -151,7 +151,7 @@
     [
       "Action",
       "abstr-addition",
-      "[t] \"som met\"; [t] count(./children/*); [t] \"summands\""
+      "[t] \"som met\"; [t] count(./children/*); [t] \"terme\""
     ],
     [
       "Action",
@@ -161,7 +161,7 @@
     [
       "Action",
       "abstr-addition-var",
-      "[t] \"sum with variable number of summands\""
+      "[t] \"som met wisselende aantal terme\""
     ],
     [
       "Action",
@@ -196,12 +196,12 @@
     [
       "Action",
       "abstr-binomial",
-      "[t] \"binomial\""
+      "[t] \"binomiaal\""
     ],
     [
       "Action",
       "abstr-determinant",
-      "[t] count(./children/*); [t] \"dimensional determinant\""
+      "[t] count(./children/*); [t] \"dimensionele determinant\""
     ],
     [
       "Action",
@@ -301,32 +301,32 @@
     [
       "Action",
       "abstr-relation-seq",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
+      "[t] @role (grammar:localRole); [t] \"ketting\"; [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
     ],
     [
       "Action",
       "abstr-relation-seq-brief",
-      "[t] @role (grammar:localRole); [t] \"sequence\""
+      "[t] @role (grammar:localRole); [t] \"ketting\""
     ],
     [
       "Action",
       "abstr-relation-var",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"met wisselende hoeveelheid elemente\""
+      "[t] @role (grammar:localRole); [t] \"ketting\"; [t] \"met wisselende hoeveelheid elemente\""
     ],
     [
       "Action",
       "abstr-multirel",
-      "[t] \"relation sequence\"; [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
+      "[t] \"verwantskapsketting\"; [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
     ],
     [
       "Action",
       "abstr-multirel-brief",
-      "[t] \"relation sequence\""
+      "[t] \"verwantskapsketting\""
     ],
     [
       "Action",
       "abstr-multirel-var",
-      "[t] \"relation sequence with variable number of elements\""
+      "[t] \"verwantskapsketting met 'n wisselende aantal elemente\""
     ],
     [
       "Action",

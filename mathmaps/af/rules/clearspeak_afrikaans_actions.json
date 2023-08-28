@@ -16,6 +16,16 @@
     ],
     [
       "Action",
+      "german-font",
+      "[t] \"Duits\"; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "german-font-bold",
+      "[t] \"kursief Duits\"; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
       "ellipsis",
       "[t] \"en so voorts\""
     ],
@@ -657,7 +667,7 @@
     [
       "Action",
       "angle-measure",
-      "[t] \"the measure of\"; [n] content/*[1]; [n] children/*[2] (grammar:angle)"
+      "[t] \"die hoekmaat\"; [n] content/*[1]; [n] children/*[2] (grammar:angle)"
     ],
     [
       "Action",
@@ -742,17 +752,17 @@
     [
       "Action",
       "fences-neutral-determinant",
-      "[p] (pause:short); [t] \"the determinant of\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die determinant van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"the metric of\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die norm van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"the metric of\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end metric\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"die norm van\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end metric\" (span:content/*[1], pause:short)"
     ],
     [
       "Action",
@@ -772,12 +782,12 @@
     [
       "Action",
       "determinant",
-      "[t] \"the determinant of the\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die determinant van die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"the determinant of the\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long)"
+      "[t] \"die determinant van die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long)"
     ],
     [
       "Action",
@@ -827,7 +837,7 @@
     [
       "Action",
       "matrix-end-determinant",
-      "[n] . (grammar:?EndMatrix); [t] \"end determinant\""
+      "[n] . (grammar:?EndMatrix); [t] \"sluit determinant\""
     ],
     [
       "Action",
@@ -867,7 +877,7 @@
     [
       "Action",
       "vector-end-determinant",
-      "[n] . (grammar:?EndMatrix); [t] \"end determinant\""
+      "[n] . (grammar:?EndMatrix); [t] \"sluit determinant\""
     ],
     [
       "Action",
@@ -1057,7 +1067,7 @@
     [
       "Action",
       "conjugate",
-      "[t] \"the complex conjugate of\"; [n] children/*[1]"
+      "[t] \"die komplekse toegevoegde van\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -1117,12 +1127,12 @@
     [
       "Action",
       "choose",
-      "[n] children/*[2] (grammar:combinatorics); [t] \"kies\"; [n] children/*[4] (grammar:combinatorics)"
+      "[n] children/*[2] (grammar:combinatorics); [t] \"kombinasie\"; [n] children/*[4] (grammar:combinatorics)"
     ],
     [
       "Action",
       "permute",
-      "[n] children/*[2] (grammar:combinatorics); [t] \"permute\"; [n] children/*[4] (grammar:combinatorics)"
+      "[n] children/*[2] (grammar:combinatorics); [t] \"permutasie\"; [n] children/*[4] (grammar:combinatorics)"
     ],
     [
       "Action",
@@ -1137,7 +1147,7 @@
     [
       "Action",
       "unit-reciprocal",
-      "[t] \"reciprocal\"; [n] children/*[1]"
+      "[t] \"resiprook\"; [n] children/*[1]"
     ],
     [
       "Action",
