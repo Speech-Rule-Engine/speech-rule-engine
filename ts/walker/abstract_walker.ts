@@ -21,7 +21,6 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as AuralRendering from '../audio/aural_rendering.js';
 import * as DomUtil from '../common/dom_util.js';
-import * as EngineConst from '../common/engine_const.js';
 import { setup as EngineSetup } from '../common/engine_setup.js';
 import { KeyCode } from '../common/event_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
@@ -230,7 +229,6 @@ export abstract class AbstractWalker<T> implements Walker {
     if (this.isActive()) {
       return;
     }
-    this.generator.start();
     this.toggleActive_();
   }
 
@@ -242,7 +240,6 @@ export abstract class AbstractWalker<T> implements Walker {
       return;
     }
     WalkerState.setState(this.id, this.primaryId());
-    this.generator.end();
     this.toggleActive_();
   }
 
@@ -739,7 +736,6 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public update(options: AxisMap) {
-    this.generator.setOptions(options);
     EngineSetup(options).then(() =>
       SpeechGeneratorFactory.generator('Tree').getSpeech(
         this.node,
@@ -749,7 +745,6 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   // Facilities for keyboard driven rules cycling.
-  // TODO: Refactor this into the speech generators.
   /**
    * Cycles to next speech rule set if possible.
    *
@@ -757,15 +752,11 @@ export abstract class AbstractWalker<T> implements Walker {
    *     possible a cloned focus.
    */
   public nextRules(): Focus {
+    this.generator.nextRules();
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
     }
-    // TODO: Check if domains exist for the current locale.
-    EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
-    options.domain =
-      options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-    options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
     this.update(options);
     this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();
@@ -821,11 +812,11 @@ export abstract class AbstractWalker<T> implements Walker {
    *     possible a cloned focus.
    */
   public previousRules(): Focus {
+    this.generator.nextStyle();
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
     }
-    options.style = this.nextStyle(options.domain, options.style);
     this.update(options);
     this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();

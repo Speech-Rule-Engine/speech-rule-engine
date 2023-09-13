@@ -68,17 +68,26 @@ export interface SpeechGenerator {
   setOptions(options: AxisMap): void;
 
   /**
+   * Sets a single dynamic constraint option for the speech engine.
+   *
+   * @param key The key.
+   * @param value The value of the constraint.
+   */
+  setOption(key: string, value: string): void;
+
+  /**
    * @returns Dynamic constraint options of the generator.
    */
   getOptions(): AxisMap;
 
   /**
-   * Sets up or resets the speech generator.
+   * Cycles to next speech rule set if possible.
    */
-  start(): void;
+  nextRules(): void;
 
   /**
-   * Cleans up after ending speech generation.
+   * Cycles to next style or preference of the speech rule set if possible.
    */
-  end(): void;
+  nextStyle(): void;
+
 }

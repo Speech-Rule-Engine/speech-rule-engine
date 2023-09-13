@@ -135,6 +135,7 @@ export class SpeechRuleEngine {
     try {
       result = this.evaluateNode_(node);
     } catch (err) {
+      console.log(err);
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }

@@ -25,6 +25,9 @@ import { AxisMap } from '../rule_engine/dynamic_cstr.js';
 import { RebuildStree } from '../walker/rebuild_stree.js';
 import { SpeechGenerator } from './speech_generator.js';
 import * as SpeechGeneratorUtil from './speech_generator_util.js';
+import * as EngineConst from '../common/engine_const.js';
+
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
@@ -70,19 +73,18 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  public getOptions() {
-    return this.options_;
+  public setOption(key: string, value: string) {
+    const options = this.getOptions();
+    options[key] = value;
+    this.setOptions(options);
   }
 
   /**
    * @override
    */
-  public start() {}
-
-  /**
-   * @override
-   */
-  public end() {}
+  public getOptions() {
+    return this.options_;
+  }
 
   /**
    * @override
@@ -94,4 +96,30 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     EngineSetup(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
+
+  /**
+   * @override
+   */
+  public nextRules() {
+    const options = this.getOptions();
+    // Rule cycling only makes sense for speech modality.
+    if (options.modality !== 'speech') {
+      return;
+    }
+    const prefs = ClearspeakPreferences.getLocalePreferences();
+    if (!prefs[options.locale]) {
+      return;
+    }
+    EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
+    options.domain =
+      options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
+    options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+    this.setOptions(options);
+  }
+
+  /**
+   * @override
+   */
+  public nextStyle() { }
+
 }
