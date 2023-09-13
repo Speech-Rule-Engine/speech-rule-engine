@@ -37,7 +37,6 @@ import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
 import { SpeechGenerator } from '../speech_generator/speech_generator.js';
 import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory.js';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 import { Focus } from './focus.js';
 import { Levels } from './levels.js';
 import { RebuildStree } from './rebuild_stree.js';
@@ -763,56 +762,14 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * Cycles to next style or preference of the speech rule set if possible.
-   *
-   * @param domain The current speech rule set name.
-   * @param style The current style name.
-   * @returns The new style name.
-   */
-  public nextStyle(domain: string, style: string): string {
-    if (domain === 'mathspeak') {
-      const styles = ['default', 'brief', 'sbrief'];
-      const index = styles.indexOf(style);
-      if (index === -1) {
-        return style;
-      }
-      return index >= styles.length - 1 ? styles[0] : styles[index + 1];
-    }
-    if (domain === 'clearspeak') {
-      const prefs = ClearspeakPreferences.getLocalePreferences();
-      const loc = prefs['en'];
-      // TODO: use correct locale.
-      if (!loc) {
-        return 'default';
-      }
-      // TODO: return the previous one?
-      const smart = ClearspeakPreferences.relevantPreferences(
-        this.getFocus().getSemanticPrimary()
-      );
-      const current = ClearspeakPreferences.findPreference(style, smart);
-      const options = loc[smart].map(function (x) {
-        return x.split('_')[1];
-      });
-      const index = options.indexOf(current);
-      if (index === -1) {
-        return style;
-      }
-      const next =
-        index >= options.length - 1 ? options[0] : options[index + 1];
-      const result = ClearspeakPreferences.addPreference(style, smart, next);
-      return result;
-    }
-    return style;
-  }
-
-  /**
    * Cycles to previous speech rule set if possible.
    *
    * @returns The current focus. Either the old one or if cycling was
    *     possible a cloned focus.
    */
   public previousRules(): Focus {
-    this.generator.nextStyle();
+    this.generator.nextStyle(
+      this.getFocus().getSemanticPrimary()?.id.toString());
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();

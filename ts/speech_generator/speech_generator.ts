@@ -87,7 +87,9 @@ export interface SpeechGenerator {
 
   /**
    * Cycles to next style or preference of the speech rule set if possible.
+   *
+   * @param id Semantic Id of the currently focused node.
    */
-  nextStyle(): void;
+  nextStyle(id: string): void;
 
 }
