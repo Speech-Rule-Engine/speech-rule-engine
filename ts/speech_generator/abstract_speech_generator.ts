@@ -171,4 +171,12 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     return style;
   }
 
+  public summary(node: Element) {
+    let id = node.getAttribute('data-semantic-id');
+    let snode = this.getRebuilt().nodeDict[id].xml(document);
+    console.log(snode);
+    const summary = SpeechGeneratorUtil.retrieveSummary(snode);
+    console.log(summary);
+    console.log(SpeechGeneratorUtil.retrieveSummary(node));
+  }
 }
