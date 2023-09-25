@@ -624,8 +624,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     );
     // TODO (Euro): This should be safed earlier together with other attributes,
     //     before processing is even called!
-    if (mml.hasAttribute('latex')) {
-      SemanticMap.LatexCommands.set(mml.getAttribute('latex'), mml.textContent);
+    if (mml.hasAttribute('data-latex')) {
+      SemanticMap.LatexCommands.set(mml.getAttribute('data-latex'), mml.textContent);
     }
     return node;
   }

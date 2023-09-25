@@ -210,7 +210,7 @@ export function addAttributes(to: SemanticNode, from: Element) {
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
       }
-      if (key.toLowerCase() === 'latex') {
+      if (key.toLowerCase() === 'data-latex') {
         to.attributes['latex'] = attrs[i].value;
       }
       if (key === 'href') {
