@@ -26,7 +26,7 @@ import { MathStore } from './math_store.js';
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import { activate } from '../semantic_tree/semantic_annotations.js';
 import { SemanticMap } from '../semantic_tree/semantic_attr.js';
-import { SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticType, SemanticRole } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.
@@ -80,36 +80,103 @@ export class EuroStore extends BrailleStore {
    */
   public customTranscriptions = {};
 
-  public customCommands: { [key: string]: string } = {
-    '\\cdot': '*'
-  };
+  public customCommands: {[key: string]: string} = {
+    '\\cdot': '*',
+    '\\lt': '<',
+    '\\gt': '>'
+  }
 
   /**
    * @override
    */
   public evaluateString(str: string) {
-    const regexp = /(\\[a-z]+)/i;
-    const split = str.split(regexp);
-    return super.evaluateString(this.cleanup(split).join(''));
+    const regexp = /(\\[a-z]+|\\{|\\}|\\\\)/i;
+    let split = str.split(regexp);
+    let cleaned = this.cleanup(split);
+    return super.evaluateString(cleaned);
   }
 
-  protected cleanup(commands: string[]): string[] {
-    let result: string[] = [];
-    for (const command of commands) {
+
+  /**
+   * Cleaning up the command sequence:
+   * * Remove unnecessary spaces.
+   * * Replace commands if necessary.
+   * * Add spaces before relations and operators.
+   * * Add spaces between two consecutive commands.
+   *
+   * @param commands The list of commands and intermediate strings.
+   * @return A string with the cleanedup latex expression.
+   */
+  protected cleanup(commands: string[]): string {
+    let cleaned: string[] = [];
+    let intext = false;
+    let lastcom = null;
+    for (let command of commands) {
       if (command.match(/^\\/)) {
-        const custom = this.customCommands[command];
-        result.push(custom ? custom : command);
+        if (command === '\\text') {
+          intext = true;
+        }
+        if (this.addSpace(SemanticMap.LatexCommands.get(command))) {
+          cleaned.push(' ');
+        }
+        command = this.customCommands[command] || command;
+        let newcom = command.match(/^\\/);
+        if (newcom && command.match(/^\\[a-zA-Z]+$/) && lastcom) {
+          cleaned.push(' ');
+        }
+        lastcom = newcom ? command : null;
+        cleaned.push(command);
         continue;
       }
-      const chars = command.split('').map((x) => {
-        const meaning = SemanticMap.Meaning.get(x);
-        return meaning.type === SemanticType.OPERATOR ||
-          meaning.type === SemanticType.RELATION
-          ? ' ' + x
-          : x;
-      });
-      result = result.concat(chars);
+      let rest = command.split('');
+      for (let char of rest) {
+        // TODO (Euro): This is still rather naive.
+        if (intext) {
+          cleaned.push(char);
+          intext = char !== '}';
+          lastcom = null;
+          continue;
+        }
+        if (char.match(/[a-z]/i) && lastcom) {
+          lastcom = null;
+          cleaned.push(' ');
+          cleaned.push(char);
+          continue;
+        }
+        if (char.match(/\s/)) continue;
+        if (this.addSpace(char)) {
+          cleaned.push(' ');
+        }
+        cleaned.push(char);
+        lastcom = null;
+      }
     }
-    return result;
+    return cleaned.join('');
+  }
+
+  private lastSpecial = false;
+  private specialChars = ['^', '_', '{', '}'];
+
+  /**
+   * Determines if spaces should be added.
+   *
+   * @param char The character.
+   * @return True if a space should be added before the character.
+   */
+  private addSpace(char: string): boolean {
+    if (!char) return false;
+    if (this.specialChars.indexOf(char) !== -1) {
+      this.lastSpecial = true;
+      return false;
+    }
+    if (this.lastSpecial) {
+      this.lastSpecial = false;
+      return false;
+    }
+    let meaning = SemanticMap.Meaning.get(char);
+    return meaning.type === SemanticType.OPERATOR ||
+      meaning.type === SemanticType.RELATION ||
+      (meaning.type === SemanticType.PUNCTUATION &&
+        meaning.role === SemanticRole.COLON);
   }
 }
