@@ -234,7 +234,7 @@ export function getEmbellishedInner(node: SemanticNode): SemanticNode {
   return node;
 }
 
-interface Slice {
+export interface Slice {
   head: SemanticNode[];
   div: SemanticNode;
   tail: SemanticNode[];

@@ -33,7 +33,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠳"
       }
     },
     "key": "2503"
@@ -42,7 +42,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠒⠀⠒"
       }
     },
     "key": "2504"
@@ -114,7 +114,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠘⠷"
       }
     },
     "key": "250C"
@@ -123,7 +123,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠘⠷"
       }
     },
     "key": "250D"
@@ -132,7 +132,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠘⠷"
       }
     },
     "key": "250E"
@@ -141,7 +141,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠸⠈⠘⠷"
       }
     },
     "key": "250F"
@@ -150,7 +150,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠘⠾"
       }
     },
     "key": "2510"
@@ -159,7 +159,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠘⠾"
       }
     },
     "key": "2511"
@@ -168,7 +168,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠘⠾"
       }
     },
     "key": "2512"
@@ -177,7 +177,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠸⠈⠘⠾"
       }
     },
     "key": "2513"
@@ -186,7 +186,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠳"
       }
     },
     "key": "2514"
@@ -195,7 +195,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠳"
       }
     },
     "key": "2515"
@@ -204,7 +204,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠳"
       }
     },
     "key": "2516"
@@ -213,7 +213,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠸⠈⠳"
       }
     },
     "key": "2517"
@@ -222,7 +222,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠳"
       }
     },
     "key": "2518"
@@ -231,7 +231,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠳"
       }
     },
     "key": "2519"
@@ -240,7 +240,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠳"
       }
     },
     "key": "251A"
@@ -249,7 +249,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠸⠈⠳"
       }
     },
     "key": "251B"
@@ -1536,7 +1536,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠲"
       }
     },
     "key": "25AA"
@@ -1545,7 +1545,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠸⠗"
+        "default": "⠫⠲"
       }
     },
     "key": "25AB"
@@ -1554,7 +1554,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠗"
+        "default": "⠫⠸⠗"
       }
     },
     "key": "25AC"
@@ -1563,7 +1563,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠗"
       }
     },
     "key": "25AD"
@@ -2265,7 +2265,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠲"
       }
     },
     "key": "25FB"
@@ -2274,7 +2274,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠲"
       }
     },
     "key": "25FC"
@@ -2283,7 +2283,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠲"
       }
     },
     "key": "25FD"
@@ -2292,7 +2292,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠲"
       }
     },
     "key": "25FE"
@@ -2490,7 +2490,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠙"
       }
     },
     "key": "2B26"
@@ -2499,7 +2499,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠙"
       }
     },
     "key": "2B27"
@@ -2508,7 +2508,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠙"
       }
     },
     "key": "2B28"
@@ -2517,7 +2517,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠙"
       }
     },
     "key": "2B29"
@@ -2526,7 +2526,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠙"
       }
     },
     "key": "2B2A"
@@ -2535,7 +2535,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠙"
       }
     },
     "key": "2B2B"

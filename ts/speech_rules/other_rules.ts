@@ -85,6 +85,7 @@ export function BrailleRules() {
 
       CGFtensorRules: (st: SpeechRuleStore) =>
         MathspeakUtil.generateTensorRules(st, false),
+      CTFcontentIterator: NemethUtil.contentIterator,
       CTFrelationIterator: NemethUtil.relationIterator,
       CTFimplicitIterator: NemethUtil.implicitIterator
     }

@@ -29,7 +29,7 @@ export interface SemanticMeaning {
 /**
  * Mapping for types of elements.
  */
-export const enum SemanticType {
+enum Types {
   // Leafs.
   // Punctuation like comma, dot, ellipses.
   PUNCTUATION = 'punctuation',
@@ -109,11 +109,14 @@ export const enum SemanticType {
   EMPTY = 'empty'
 }
 
+export type SemanticType = Types;
+export const SemanticType = { ...Types };
+
 /**
  * Mapping for roles of nodes.
  * Roles are more specific than types.
  */
-export const enum SemanticRole {
+enum Roles {
   // Punctuation.
   COMMA = 'comma',
   SEMICOLON = 'semicolon',
@@ -275,6 +278,9 @@ export const enum SemanticRole {
 
   MGLYPH = 'mglyph'
 }
+
+export type SemanticRole = Roles;
+export const SemanticRole = { ...Roles };
 
 /**
  * Mapping for font annotations. (Taken from MathML2 section 3.2.2, with the

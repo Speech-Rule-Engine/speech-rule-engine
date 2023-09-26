@@ -29,12 +29,13 @@ import { PunctuationRenderer } from './punctuation_renderer.js';
 import { SableRenderer } from './sable_renderer.js';
 import { Span } from './span.js';
 import { SsmlRenderer } from './ssml_renderer.js';
-import { StringRenderer } from './string_renderer.js';
+import { CountingRenderer, StringRenderer } from './string_renderer.js';
 import { XmlRenderer } from './xml_renderer.js';
 
 const xmlInstance = new SsmlRenderer();
 const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
   [EngineConst.Markup.NONE, new StringRenderer()],
+  [EngineConst.Markup.COUNTING, new CountingRenderer()],
   [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
   [EngineConst.Markup.LAYOUT, new LayoutRenderer()],
   [EngineConst.Markup.ACSS, new AcssRenderer()],
