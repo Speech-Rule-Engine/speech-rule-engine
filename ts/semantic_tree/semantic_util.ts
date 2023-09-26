@@ -210,7 +210,7 @@ export function addAttributes(to: SemanticNode, from: Element) {
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
       }
-      if (key === 'latex') {
+      if (key.toLowerCase() === 'data-latex') {
         to.attributes['latex'] = attrs[i].value;
       }
       if (key === 'href') {
@@ -234,7 +234,7 @@ export function getEmbellishedInner(node: SemanticNode): SemanticNode {
   return node;
 }
 
-interface Slice {
+export interface Slice {
   head: SemanticNode[];
   div: SemanticNode;
   tail: SemanticNode[];

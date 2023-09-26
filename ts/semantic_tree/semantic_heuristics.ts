@@ -22,7 +22,7 @@
 
 import { Debugger } from '../common/debugger.js';
 import Engine from '../common/engine.js';
-import { NamedSymbol, SemanticMap } from './semantic_attr.js';
+import { NamedSymbol } from './semantic_attr.js';
 import * as SemanticHeuristics from './semantic_heuristic_factory.js';
 import {
   SemanticTreeHeuristic,
@@ -143,26 +143,8 @@ SemanticHeuristics.add(
     if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
       return;
     }
-    // TODO: Combine with lines in numberRole_/exprFont_?
-    const content = [...node.textContent];
-    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
-    const singleRole = meaning.reduce(function (prev, curr) {
-      if (
-        !prev ||
-        !curr.role ||
-        curr.role === SemanticRole.UNKNOWN ||
-        curr.role === prev
-      ) {
-        return prev;
-      }
-      if (prev === SemanticRole.UNKNOWN) {
-        return curr.role;
-      }
-      return null;
-    }, SemanticRole.UNKNOWN);
-    if (singleRole) {
-      node.role = singleRole;
-    }
+    SemanticProcessor.compSemantics(node, 'role', SemanticRole);
+    SemanticProcessor.compSemantics(node, 'type', SemanticType);
   })
 );
 
@@ -386,7 +368,8 @@ function recurseJuxtaposition(
   const left = acc.pop();
   const op = ops.shift();
   const first = elements.shift();
-  if (SemanticPred.isImplicitOp(op)) {
+  if (op.type === SemanticType.INFIXOP &&
+    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)) {
     Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
     const right = (left ? [left, op] : [op]).concat(first);
@@ -501,7 +484,7 @@ SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'intvar_from_fraction',
     integralFractionArg,
-    (node: SemanticNode) => {
+   (node: SemanticNode) => {
       if (node.type !== SemanticType.INTEGRAL) return false;
       const [, integrand, intvar] = node.childNodes;
       return (
@@ -724,4 +707,58 @@ function rewriteFence(fence: SemanticNode): boolean {
   fence.type = SemanticType.FENCE;
   fence.addAnnotation('Emph', 'fence');
   return true;
+}
+
+
+/**
+ *  Tries to group ellipses and long bars.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'ellipses',
+    (nodes: SemanticNode[]) => {
+      // TODO: Test for simple elements?
+      let newNodes = [];
+      let current = nodes.shift();
+      while (current) {
+        [current, nodes] = combineNodes(current, nodes, SemanticRole.FULLSTOP, SemanticRole.ELLIPSIS);
+        [current, nodes] = combineNodes(current, nodes, SemanticRole.DASH);
+        newNodes.push(current);
+        current = nodes.shift();
+      }
+      return newNodes;
+    },
+    (nodes: SemanticNode[]) => nodes.length > 1
+  )
+);
+
+function combineNodes(
+  current: SemanticNode,
+  nodes: SemanticNode[],
+  src: SemanticRole,
+  target: SemanticRole = src
+):
+[SemanticNode, SemanticNode[]] {
+  let collect = [];
+  while (current && current.role === src) {
+    collect.push(current);
+    current = nodes.shift();
+  }
+  if (!collect.length) {
+    return [current, nodes];
+  }
+  if (current) {
+    nodes.unshift(current);
+  }
+  return [(collect.length === 1) ? collect[0] : combinedNodes(collect, target), nodes];
+}
+
+function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
+  let node = SemanticHeuristics.factory.makeBranchNode(
+    SemanticType.PUNCTUATION,
+    nodes,
+    []
+  );
+  node.role = role;
+  return node;
 }

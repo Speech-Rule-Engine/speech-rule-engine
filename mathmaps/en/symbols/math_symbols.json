@@ -91,10 +91,8 @@
     "key": "002D",
     "mappings": {
       "default": {
-        "default": "minus"
-      },
-      "mathspeak": {
-        "default": "hyphen"
+        "default": "minus",
+        "literary": "hyphen"
       }
     }
   },
