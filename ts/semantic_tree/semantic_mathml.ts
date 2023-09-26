@@ -24,6 +24,7 @@ import {
   SemanticRole,
   SemanticType
 } from './semantic_meaning.js';
+import { SemanticMap } from './semantic_attr.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
@@ -609,20 +610,25 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       children.length === 1 &&
       children[0].nodeType !== DomUtil.NodeType.TEXT_NODE
     ) {
+      // Case of a leaf that contains another node. Only in the case of text (or
+      // string) nodes we process this further.
       const node = this.getFactory().makeUnprocessed(mml);
       node.role = children[0].tagName as SemanticRole;
       SemanticUtil.addAttributes(node, children[0]);
       return node;
     }
-    return this.getFactory().makeLeafNode(
+    // Save latex here if possible
+    const node = this.getFactory().makeLeafNode(
       mml.textContent,
       SemanticProcessor.getInstance().font(mml.getAttribute('mathvariant'))
     );
+    // TODO (Euro): This should be safed earlier together with other attributes,
+    //     before processing is even called!
+    if (mml.hasAttribute('latex')) {
+      SemanticMap.LatexCommands.set(mml.getAttribute('latex'), mml.textContent);
+    }
+    return node;
   }
 }
 
-// TODO (sorge) Role and font of multi-character and digits unicode strings.
-// TODO (sorge) Reclassify wrongly tagged numbers or identifiers more
-//              systematically.
-// TODO (sorge) Put this all in a single clean reclassification method.
 // TODO (sorge) Do something useful with error and phantom symbols.

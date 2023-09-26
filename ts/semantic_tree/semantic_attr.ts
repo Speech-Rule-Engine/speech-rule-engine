@@ -170,6 +170,9 @@ export namespace SemanticMap {
    * Mapping top to bottom fences.
    */
   export const FencesVert = new Map();
+
+  export const LatexCommands = new Map();
+
 }
 
 /**

@@ -19,7 +19,7 @@
     ],
     [
       "Rule",
-      "nolatex",
+      "nolatex-fallback",
       "default",
       "[m] children/* (separator:\"⠀\")",
       "self::*",
@@ -31,6 +31,55 @@
       "default",
       "[m] children/* (separator:\"⠀⠯⠀\")",
       "self::row[not(@latex)]"
+    ],
+    [
+      "Precondition",
+      "binary-operation",
+      "default",
+      "self::infixop"
+    ],
+    [
+      "Alias",
+      "binary-operation",
+      "self::relseq"
+    ],
+    [
+      "Alias",
+      "binary-operation",
+      "self::multirel"
+    ],
+    [
+      "Action",
+      "binary-operation",
+      "[m] children/* (sepFunc:CTFcontentIterator);"
+    ],
+    [
+      "Rule",
+      "fences-open-close",
+      "default",
+      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
+      "self::fenced"
+    ],
+    [
+      "Rule",
+      "prefix-operation",
+      "default",
+      "[m] content/*; [n] children/*[1]",
+      "self::prefixop"
+    ],
+    [
+      "Rule",
+      "postfix-operation",
+      "default",
+      "[n] children/*[1]; [m] content/*",
+      "self::postfixop"
+    ],
+    [
+      "Rule",
+      "colon",
+      "default",
+      "[t] \"⠀\"; [t] text()",
+      "self::punctuation[@role=\"colon\"]"
     ]
   ]
 }

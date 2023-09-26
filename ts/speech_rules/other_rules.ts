@@ -89,4 +89,10 @@ export function BrailleRules() {
       CTFimplicitIterator: NemethUtil.implicitIterator
     }
   );
+
+  SpeechRules.addStore(
+    'euro.braille.default',
+    'nemeth.braille.default',
+    {}
+  );
 }
