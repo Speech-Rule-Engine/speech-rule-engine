@@ -8,11 +8,9 @@
       "default": {
         "default": "kwadraat"
       },
-      "mathspeak": {
-        "default": "kwadraat"
-      },
       "clearspeak": {
-        "default": "kwadraat"
+        "Exponent_Exponent": "met eksponent 2",
+        "Exponent_OrdinalPower": "tweede mag"
       }
     }
   },
@@ -22,11 +20,9 @@
       "default": {
         "default": "kubiek"
       },
-      "mathspeak": {
-        "default": "kubiek"
-      },
       "clearspeak": {
-        "default": "kubiek"
+        "Exponent_Exponent": "met eksponent 3",
+        "Exponent_OrdinalPower": "derde mag"
       }
     }
   },

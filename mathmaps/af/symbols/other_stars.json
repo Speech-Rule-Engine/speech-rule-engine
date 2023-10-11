@@ -30,8 +30,7 @@
     "key": "26AA",
     "mappings": {
       "default": {
-        "default": "wit sirkel",
-        "alternative": "medium white circle"
+        "default": "wit sirkel"
       }
     }
   },
@@ -39,8 +38,7 @@
     "key": "26AB",
     "mappings": {
       "default": {
-        "default": "swart sirkel",
-        "alternative": "medium black circle"
+        "default": "swart sirkel"
       }
     }
   },
@@ -48,8 +46,7 @@
     "key": "2705",
     "mappings": {
       "default": {
-        "default": "wit reg merk",
-        "alternative": "white heavy check mark"
+        "default": "wit reg merk"
       }
     }
   },

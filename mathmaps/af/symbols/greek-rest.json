@@ -7,7 +7,7 @@
     "mappings": {
       "clearspeak": {
         "default": "driehoek",
-        "TriangleSymbol_Delta": "cap Delta"
+        "TriangleSymbol_Delta": "groot delta"
       }
     }
   }

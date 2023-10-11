@@ -24,10 +24,6 @@
       "default": {
         "default": "huts",
         "alternative": "hash"
-      },
-      "mathspeak": {
-        "brief": "num sign",
-        "sbrief": "num sign"
       }
     }
   },
@@ -92,9 +88,6 @@
     "mappings": {
       "default": {
         "default": "minus"
-      },
-      "mathspeak": {
-        "default": "hyphen"
       }
     }
   },
@@ -187,9 +180,6 @@
     "mappings": {
       "default": {
         "default": "hoed"
-      },
-      "mathspeak": {
-        "default": "caret"
       }
     }
   },
@@ -207,9 +197,6 @@
     "mappings": {
       "default": {
         "default": "aksent"
-      },
-      "mathspeak": {
-        "default": "grave"
       }
     }
   },
@@ -330,9 +317,6 @@
     "mappings": {
       "default": {
         "default": "geregistreer teken"
-      },
-      "mathspeak": {
-        "default": "registered trade mark sign"
       }
     }
   },
@@ -469,9 +453,6 @@
     "mappings": {
       "default": {
         "default": "punt bokant"
-      },
-      "mathspeak": {
-        "default": "dot"
       }
     }
   },
@@ -552,9 +533,6 @@
     "mappings": {
       "default": {
         "default": "horisontale streep"
-      },
-      "mathspeak": {
-        "default": "quotation dash"
       }
     }
   },
@@ -819,9 +797,6 @@
     "mappings": {
       "default": {
         "default": "oorlyn"
-      },
-      "mathspeak": {
-        "default": "bar"
       }
     }
   },
@@ -1302,9 +1277,6 @@
     "mappings": {
       "default": {
         "default": "som"
-      },
-      "mathspeak": {
-        "default": "sigma summation"
       }
     }
   },
@@ -2698,9 +2670,6 @@
     "mappings": {
       "default": {
         "default": "n ary and"
-      },
-      "mathspeak": {
-        "default": "and"
       }
     }
   },
@@ -2709,9 +2678,6 @@
     "mappings": {
       "default": {
         "default": "n ary or"
-      },
-      "mathspeak": {
-        "default": "or"
       }
     }
   },
@@ -2720,9 +2686,6 @@
     "mappings": {
       "default": {
         "default": "n ary intersection"
-      },
-      "mathspeak": {
-        "default": "intersection"
       }
     }
   },
@@ -2731,9 +2694,6 @@
     "mappings": {
       "default": {
         "default": "n ary union"
-      },
-      "mathspeak": {
-        "default": "union"
       }
     }
   },
@@ -4174,9 +4134,6 @@
     "mappings": {
       "default": {
         "default": "big solidus"
-      },
-      "mathspeak": {
-        "default": "solidus"
       }
     }
   },
@@ -4185,9 +4142,6 @@
     "mappings": {
       "default": {
         "default": "groot trustreep"
-      },
-      "mathspeak": {
-        "default": "backslash"
       }
     }
   },
@@ -4228,9 +4182,6 @@
     "mappings": {
       "default": {
         "default": "n ary circled dot"
-      },
-      "mathspeak": {
-        "default": "circled dot"
       }
     }
   },
@@ -4239,9 +4190,6 @@
     "mappings": {
       "default": {
         "default": "n ary circled plus"
-      },
-      "mathspeak": {
-        "default": "circled plus"
       }
     }
   },
@@ -4250,9 +4198,6 @@
     "mappings": {
       "default": {
         "default": "n ary circled times"
-      },
-      "mathspeak": {
-        "default": "circled times"
       }
     }
   },
@@ -4261,9 +4206,6 @@
     "mappings": {
       "default": {
         "default": "n ary union with dot"
-      },
-      "mathspeak": {
-        "default": "union with dot"
       }
     }
   },
@@ -4272,9 +4214,6 @@
     "mappings": {
       "default": {
         "default": "n ary union operator with plus"
-      },
-      "mathspeak": {
-        "default": "union with plus"
       }
     }
   },
@@ -4283,9 +4222,6 @@
     "mappings": {
       "default": {
         "default": "n ary square intersection"
-      },
-      "mathspeak": {
-        "default": "square intersection"
       }
     }
   },
@@ -4294,9 +4230,6 @@
     "mappings": {
       "default": {
         "default": "n ary square union"
-      },
-      "mathspeak": {
-        "default": "square union"
       }
     }
   },
@@ -4321,9 +4254,6 @@
     "mappings": {
       "default": {
         "default": "n ary times"
-      },
-      "mathspeak": {
-        "default": "times"
       }
     }
   },
@@ -6284,9 +6214,6 @@
     "mappings": {
       "default": {
         "default": "n ary white vertical bar"
-      },
-      "mathspeak": {
-        "default": "white vertical bar"
       }
     }
   },
@@ -6852,9 +6779,6 @@
     "mappings": {
       "default": {
         "default": "macron"
-      },
-      "mathspeak": {
-        "default": "bar"
       }
     }
   },

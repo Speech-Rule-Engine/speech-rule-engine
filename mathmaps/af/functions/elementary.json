@@ -21,7 +21,7 @@
       },
       "clearspeak": {
         "default": "l n",
-        "Log_LnAsNaturalLog": "natural log"
+        "Log_LnAsNaturalLog": "natuurlike logaritme"
       }
     }
   },
