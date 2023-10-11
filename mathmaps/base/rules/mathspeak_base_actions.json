@@ -256,6 +256,11 @@
     ],
     [
       "Action",
+      "prime-multilength",
+      "[m] children/*"
+    ],
+    [
+      "Action",
       "prime-subscript",
       "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]"
     ],

@@ -22,9 +22,9 @@ import { AuditoryDescription } from '../audio/auditory_description.js';
 import { Span } from '../audio/span.js';
 import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
-import { Grammar } from '../rule_engine/grammar.js';
+import { Grammar, correctFont } from '../rule_engine/grammar.js';
 import Engine from '../common/engine.js';
-import { register } from '../semantic_tree/semantic_annotations.js';
+import { register, activate } from '../semantic_tree/semantic_annotations.js';
 import { SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
 import {
   SemanticRole,
@@ -34,6 +34,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 import { LOCALE } from '../l10n/locale.js';
 import * as MathspeakUtil from './mathspeak_util.js';
+import { contentIterator as suCI } from '../rule_engine/store_util.js';
 
 /**
  * Opening string for fractions in linear Nemeth.
@@ -231,7 +232,7 @@ function checkParent(
     NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
     (type === SemanticType.PREFIXOP &&
       parent.role === SemanticRole.NEGATIVE &&
-      !info.script) ||
+      !info.script && !info.enclosed) ||
     (type === SemanticType.PREFIXOP &&
       // TODO: This needs to be rewritten once there is a better treatment
       // of prefixop.
@@ -280,6 +281,12 @@ function propagateNumber(
     info.enclosed = true;
     return ['', info];
   }
+  if (node.type === SemanticType.PREFIXOP &&
+    node.role !== SemanticRole.GEOMETRY &&
+    node.role !== SemanticRole.NEGATIVE) {
+    info.number = false;
+    return ['', info];
+  }
   if (checkParent(node, info)) {
     info.number = true;
     info.enclosed = false;
@@ -290,6 +297,22 @@ function propagateNumber(
 register(
   new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
 );
+
+function annotateDepth(
+  node: SemanticNode
+): any[] {
+  if (!node.parent) {
+    return [1];
+  }
+  let depth = parseInt(node.parent.annotation['depth'][0]);
+  return [depth + 1];
+}
+
+register(
+  new SemanticVisitor('depth', 'depth', annotateDepth)
+);
+activate('depth', 'depth');
+
 
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if
@@ -307,11 +330,14 @@ export function relationIterator(
 ): () => AuditoryDescription[] {
   const childNodes = nodes.slice(0);
   let first = true;
+  let parentNode = nodes[0].parentNode.parentNode as Element;
+  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let depth = match ? match[1] : '';
   let contentNodes: Element[];
   if (nodes.length > 0) {
     contentNodes = XpathUtil.evalXPath(
-      '../../content/*',
-      nodes[0]
+      './content/*',
+      parentNode
     ) as Element[];
   } else {
     contentNodes = [];
@@ -335,8 +361,8 @@ export function relationIterator(
     const left =
       (leftChild && DomUtil.tagName(leftChild) !== 'EMPTY') ||
       (first &&
-        content.parentNode.parentNode &&
-        content.parentNode.parentNode.previousSibling)
+        parentNode &&
+        parentNode.previousSibling)
         ? [
             AuditoryDescription.create(
               { text: LOCALE.MESSAGES.regexp.SPACE + base },
@@ -347,8 +373,8 @@ export function relationIterator(
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
-        content.parentNode.parentNode &&
-        content.parentNode.parentNode.nextSibling)
+        parentNode &&
+        parentNode.nextSibling)
         ? [
             AuditoryDescription.create(
               { text: LOCALE.MESSAGES.regexp.SPACE },
@@ -357,7 +383,13 @@ export function relationIterator(
           ]
         : [];
     const descrs = Engine.evaluateNode(content);
+    // TODO: Combine with similar code in speech_rule_engine.
+    descrs.unshift(
+      new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
+    );
+    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
     first = false;
+    // TODO: Check with the context!
     return contextDescr.concat(left, descrs, right);
   };
 }
@@ -408,4 +440,28 @@ export function implicitIterator(
         : []
     );
   };
+}
+
+function ignoreEnglish(text: string) {
+  return correctFont(text, LOCALE.ALPHABETS.languagePrefix.english);
+}
+
+Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
+
+export function contentIterator(
+  nodes: Element[],
+  context: string
+) {
+  let func = suCI(nodes, context);
+  let parentNode = nodes[0].parentNode.parentNode as Element;
+  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let depth = match ? match[1] : '';
+  return function() {
+    const descrs = func();
+    descrs.unshift(
+      new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
+    );
+    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
+    return descrs;
+  }
 }

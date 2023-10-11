@@ -40,7 +40,135 @@ interface AudioFlags {
   translate?: boolean;
 }
 
+export class AuditoryItem {
+
+  public prev: AuditoryItem = null;
+  public next: AuditoryItem = null;
+
+  constructor(public data: AuditoryDescription = null) {}
+
+}
+
+export class AuditoryList extends Set<AuditoryItem> {
+
+  public annotations: AuditoryItem[] = [];
+
+  private anchor: AuditoryItem;
+
+  constructor(descrs: AuditoryDescription[]) {
+    super();
+    this.anchor = new AuditoryItem();
+    this.anchor.next = this.anchor;
+    this.anchor.prev = this.anchor;
+    descrs.forEach(
+      d => {
+        let item = new AuditoryItem(d);
+        if (d.annotation) {
+          this.annotations.push(item);
+        }
+        this.push(item);
+      }
+    );
+  }
+
+  public first() {
+    return this.empty ? null : this.anchor.next;
+  }
+
+  public last() {
+    return this.empty ? null : this.anchor.prev;
+  }
+
+  public push(item: AuditoryItem) {
+    item.next = this.anchor;
+    item.prev = this.anchor.prev;
+    item.prev.next = item;
+    this.anchor.prev = item;
+    super.add(item);
+  }
+
+  public pop() {
+    let item = this.last();
+    if (!item) {
+      return null;
+    }
+    this.delete(item);
+    return item
+  }
+
+  public delete(item: AuditoryItem) {
+    if (!this.has(item)) {
+      return false;
+    }
+    super.delete(item);
+    item.prev.next = item.next;
+    item.next = item.prev;
+    return true;
+  }
+
+  public insertAfter(descr: AuditoryDescription, item: AuditoryItem) {
+    this.insertBefore(descr, item.next);
+  }
+
+  public insertBefore(descr: AuditoryDescription, item: AuditoryItem) {
+    let nitem = new AuditoryItem(descr);
+    if (!item || !this.has(item)) {
+      this.push(nitem);
+      return;
+    }
+    item.prev.next = nitem;
+    nitem.prev = item.prev;
+    nitem.next = item;
+    item.prev = nitem;
+  }
+
+  public prevText(item: AuditoryItem) {
+    do {
+      item = item.prev;
+    } while (item !== this.anchor && !item.data.text)
+    return item === this.anchor ? null : item;
+  }
+
+  public *[Symbol.iterator](): IterableIterator<AuditoryItem> {
+    let current = this.anchor.next;
+    while (current !== this.anchor) {
+      yield current;
+      current = current.next;
+    }
+  }
+
+  public nextText(item: AuditoryItem) {
+    while (item !== this.anchor && !item.data.text) {
+      item = item.next;
+    }
+    return item;
+  }
+
+  public clear() {
+    this.anchor.next = this.anchor;
+    this.anchor.prev = this.anchor;
+    super.clear();
+  }
+
+  public empty() {
+    return this.anchor.prev === this.anchor &&
+      this.anchor === this.anchor.next;
+  }
+
+  public toList(): AuditoryDescription[] {
+    let result = [];
+    let item = this.anchor.next;
+    while (item !== this.anchor) {
+      result.push(item.data);
+      item = item.next;
+    }
+    return result;
+  }
+
+}
+
 export class AuditoryDescription {
+
   /**
    * context The context. This is all spoken with an annotation voice.
    */

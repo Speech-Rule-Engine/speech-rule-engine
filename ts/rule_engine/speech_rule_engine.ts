@@ -29,7 +29,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description.js';
+import { AuditoryDescription, AuditoryList } from '../audio/auditory_description.js';
 import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
@@ -144,7 +144,6 @@ export class SpeechRuleEngine {
   }
 
   /**
-   * Prints the list of all current rules in ChromeVox to the console.
    *
    * @returns A textual representation of all rules in the speech rule
    *     engine.
@@ -295,7 +294,9 @@ export class SpeechRuleEngine {
     }
     // Update the preferences of the dynamic constraint.
     this.updateConstraint_();
-    return this.evaluateTree_(node);
+    let result = this.evaluateTree_(node);
+    result = processAnnotations(result);
+    return result;
   }
 
   /**
@@ -344,8 +345,10 @@ export class SpeechRuleEngine {
       // Retooling the engine
       if (attributes.engine) {
         saveEngine = Engine.getInstance().dynamicCstr.getComponents();
-        const features = Grammar.parseInput(attributes.engine);
+        const features = Object.assign(
+          {}, saveEngine, Grammar.parseInput(attributes.engine));
         Engine.getInstance().setDynamicCstr(features as AxisMap);
+        this.updateConstraint_();
       }
       switch (component.type) {
         case ActionType.NODE:
@@ -421,6 +424,7 @@ export class SpeechRuleEngine {
       );
       if (saveEngine) {
         Engine.getInstance().setDynamicCstr(saveEngine);
+        this.updateConstraint_();
       }
     }
     Grammar.getInstance().popState();
@@ -839,3 +843,24 @@ function storeFactory(set: RulesJson) {
 Engine.nodeEvaluator = SpeechRuleEngine.getInstance().evaluateNode.bind(
   SpeechRuleEngine.getInstance()
 );
+
+
+let punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
+
+function processAnnotations(descrs: AuditoryDescription[]): AuditoryDescription[] {
+  let alist = new AuditoryList(descrs);
+  for (let item of alist.annotations) {
+    let descr = item.data;
+    // Annotation processor
+    if (descr.annotation === 'punctuation') {
+      let prev = alist.prevText(item);
+      if (!prev) continue;
+      let last = prev.data;
+      if (last.annotation !== 'punctuation' && last.text !== '⠀' &&
+        descr.text.length === 1 && punctuationMarks.indexOf(descr.text) !== -1) {
+        descr.text = '⠸' + descr.text
+      }
+    }
+  }
+  return alist.toList();
+}
