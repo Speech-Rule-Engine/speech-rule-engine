@@ -767,12 +767,12 @@
     [
       "Action",
       "matrix",
-      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long)"
+      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", pause:long)"
     ],
     [
       "Action",
       "matrix-simple",
-      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -782,17 +782,17 @@
     [
       "Action",
       "determinant",
-      "[t] \"die determinant van die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die determinant van die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"die determinant van die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long)"
+      "[t] \"die determinant van die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", pause:long)"
     ],
     [
       "Action",
       "matrix-vector",
-      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"kolom matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"kolom matriks\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -807,7 +807,7 @@
     [
       "Action",
       "matrix-row-vector",
-      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"ry matriks\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Column-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"ry matriks\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"kolom-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -822,7 +822,7 @@
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Column-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\", pause:long)"
+      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Kolom-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\", pause:long)"
     ],
     [
       "Action",
@@ -842,7 +842,7 @@
     [
       "Action",
       "vector",
-      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"kolom vektor\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"kolom vektor\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -852,7 +852,7 @@
     [
       "Action",
       "row-vector",
-      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"ry vektor\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Column-:\", pause:long, grammar:simpleDet)"
+      "[t] \"die\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"ry vektor\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Kolom-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -897,7 +897,7 @@
     [
       "Action",
       "lines",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Line-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Lyn-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -922,7 +922,7 @@
     [
       "Action",
       "cases",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Case-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Geval-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -932,7 +932,7 @@
     [
       "Action",
       "lines-cases",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Case-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Geval-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -942,7 +942,7 @@
     [
       "Action",
       "lines-equations",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Equation-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Vergelyking-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -952,7 +952,7 @@
     [
       "Action",
       "lines-steps",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Step-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Stap-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -962,7 +962,7 @@
     [
       "Action",
       "lines-rows",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ry-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -972,7 +972,7 @@
     [
       "Action",
       "lines-constraints",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Constraint-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"beperking-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
