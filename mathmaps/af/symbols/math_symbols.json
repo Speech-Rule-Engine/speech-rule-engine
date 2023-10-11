@@ -139,9 +139,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as"
-      },
-      "clearspeak": {
-        "default": "is less than"
       }
     }
   },
@@ -158,9 +155,6 @@
     "mappings": {
       "default": {
         "default": "groter as"
-      },
-      "clearspeak": {
-        "default": "is greater than"
       }
     }
   },
@@ -339,9 +333,6 @@
       },
       "mathspeak": {
         "default": "registered trade mark sign"
-      },
-      "clearspeak": {
-        "default": "trade mark sign"
       }
     }
   },
@@ -358,9 +349,6 @@
     "mappings": {
       "default": {
         "default": "graad"
-      },
-      "clearspeak": {
-        "default": "degrees"
       }
     }
   },
@@ -401,9 +389,6 @@
     "mappings": {
       "default": {
         "default": "dot"
-      },
-      "clearspeak": {
-        "default": "times"
       }
     }
   },
@@ -444,10 +429,6 @@
     "mappings": {
       "default": {
         "default": "maal"
-      },
-      "clearspeak": {
-        "MultsymbolX_By": "by",
-        "MultsymbolX_Cross": "cross"
       }
     }
   },
@@ -710,9 +691,6 @@
     "mappings": {
       "default": {
         "default": "ellipsis"
-      },
-      "clearspeak": {
-        "default": "dot dot dot"
       }
     }
   },
@@ -1252,9 +1230,6 @@
     "mappings": {
       "default": {
         "default": "element van"
-      },
-      "clearspeak": {
-        "default": "is a member of"
       }
     }
   },
@@ -1263,9 +1238,6 @@
     "mappings": {
       "default": {
         "default": "nie 'n element van"
-      },
-      "clearspeak": {
-        "default": "is not a member of"
       }
     }
   },
@@ -1274,9 +1246,6 @@
     "mappings": {
       "default": {
         "default": "element van"
-      },
-      "clearspeak": {
-        "default": "is a member of"
       }
     }
   },
@@ -1392,9 +1361,6 @@
     "mappings": {
       "default": {
         "default": "ring"
-      },
-      "clearspeak": {
-        "default": "composed with"
       }
     }
   },
@@ -1924,9 +1890,6 @@
     "mappings": {
       "default": {
         "default": "ewehoekig aan"
-      },
-      "clearspeak": {
-        "default": "is equiangular to"
       }
     }
   },
@@ -1951,9 +1914,6 @@
     "mappings": {
       "default": {
         "default": "is gelyk aan volgens definisie"
-      },
-      "clearspeak": {
-        "default": "is defined to be"
       }
     }
   },
@@ -1962,9 +1922,6 @@
     "mappings": {
       "default": {
         "default": "gemeet by"
-      },
-      "clearspeak": {
-        "default": "is measured by"
       }
     }
   },
@@ -1981,9 +1938,6 @@
     "mappings": {
       "default": {
         "default": "is nie gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is not equal to"
       }
     }
   },
@@ -1992,9 +1946,6 @@
     "mappings": {
       "default": {
         "default": "identies aan"
-      },
-      "clearspeak": {
-        "default": "is identical to"
       }
     }
   },
@@ -2003,9 +1954,6 @@
     "mappings": {
       "default": {
         "default": "nie identies aan"
-      },
-      "clearspeak": {
-        "default": "is not identical to"
       }
     }
   },
@@ -2014,9 +1962,6 @@
     "mappings": {
       "default": {
         "default": "streng ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is strictly equivalent to"
       }
     }
   },
@@ -2025,9 +1970,6 @@
     "mappings": {
       "default": {
         "default": "kleiner of gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is less than or equal to"
       }
     }
   },
@@ -2036,9 +1978,6 @@
     "mappings": {
       "default": {
         "default": "groter of gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is greater than or equal to"
       }
     }
   },
@@ -2047,9 +1986,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as oor is gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is less than over equals"
       }
     }
   },
@@ -2058,9 +1994,6 @@
     "mappings": {
       "default": {
         "default": "groter as oor is gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is greater than over equals"
       }
     }
   },
@@ -2069,9 +2002,6 @@
     "mappings": {
       "default": {
         "default": "kleiner maar nie gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is less than but not equal to"
       }
     }
   },
@@ -2080,9 +2010,6 @@
     "mappings": {
       "default": {
         "default": "groter as, maar nie gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is greater than but not equal to"
       }
     }
   },
@@ -2091,9 +2018,6 @@
     "mappings": {
       "default": {
         "default": "baie kleiner as"
-      },
-      "clearspeak": {
-        "default": "is much less than"
       }
     }
   },
@@ -2102,9 +2026,6 @@
     "mappings": {
       "default": {
         "default": "baie groter as"
-      },
-      "clearspeak": {
-        "default": "is much greater than"
       }
     }
   },
@@ -2121,9 +2042,6 @@
     "mappings": {
       "default": {
         "default": "nie ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is not equivalent to"
       }
     }
   },
@@ -2132,9 +2050,6 @@
     "mappings": {
       "default": {
         "default": "nie kleiner as"
-      },
-      "clearspeak": {
-        "default": "is not less than"
       }
     }
   },
@@ -2143,9 +2058,6 @@
     "mappings": {
       "default": {
         "default": "nie groter as"
-      },
-      "clearspeak": {
-        "default": "is not greater than"
       }
     }
   },
@@ -2154,9 +2066,6 @@
     "mappings": {
       "default": {
         "default": "nie kleiner as, ook nie gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is neither less than nor equal to"
       }
     }
   },
@@ -2165,9 +2074,6 @@
     "mappings": {
       "default": {
         "default": "nie groter as, ook nie gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is neither greater than nor equal to"
       }
     }
   },
@@ -2176,9 +2082,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as of ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is less than or equivalent to"
       }
     }
   },
@@ -2187,9 +2090,6 @@
     "mappings": {
       "default": {
         "default": "groter as of ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is greater than or equivalent to"
       }
     }
   },
@@ -2198,9 +2098,6 @@
     "mappings": {
       "default": {
         "default": "nie kleiner as, ook nie ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is neither less than nor equivalent to"
       }
     }
   },
@@ -2209,9 +2106,6 @@
     "mappings": {
       "default": {
         "default": "nie groter as, ook nie ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is neither greater than nor equivalent to"
       }
     }
   },
@@ -2220,9 +2114,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as of groter as"
-      },
-      "clearspeak": {
-        "default": "is less than or greater than"
       }
     }
   },
@@ -2231,9 +2122,6 @@
     "mappings": {
       "default": {
         "default": "groter as of kleiner as"
-      },
-      "clearspeak": {
-        "default": "is greater than or less than"
       }
     }
   },
@@ -2242,9 +2130,6 @@
     "mappings": {
       "default": {
         "default": "nie kleiner as, ook nie groter as"
-      },
-      "clearspeak": {
-        "default": "is neither less than nor greater than"
       }
     }
   },
@@ -2253,9 +2138,6 @@
     "mappings": {
       "default": {
         "default": "nie groter as, ook nie kleiner as"
-      },
-      "clearspeak": {
-        "default": "is neither greater than nor less than"
       }
     }
   },
@@ -2868,10 +2750,6 @@
     "mappings": {
       "default": {
         "default": "punt"
-      },
-      "clearspeak": {
-        "default": "times",
-        "MultsymbolDot_Dot": "dot"
       }
     }
   },
@@ -3000,9 +2878,6 @@
     "mappings": {
       "default": {
         "default": "gelyk aan en paralel aan"
-      },
-      "clearspeak": {
-        "default": "is equal and parallel to"
       }
     }
   },
@@ -3011,9 +2886,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as punt"
-      },
-      "clearspeak": {
-        "default": "is less than dot"
       }
     }
   },
@@ -3022,9 +2894,6 @@
     "mappings": {
       "default": {
         "default": "groter as punt"
-      },
-      "clearspeak": {
-        "default": "is greater than dot"
       }
     }
   },
@@ -3033,9 +2902,6 @@
     "mappings": {
       "default": {
         "default": "baie kleiner as"
-      },
-      "clearspeak": {
-        "default": "is very much less than"
       }
     }
   },
@@ -3044,9 +2910,6 @@
     "mappings": {
       "default": {
         "default": "baie groter as"
-      },
-      "clearspeak": {
-        "default": "is very much greater than"
       }
     }
   },
@@ -3055,9 +2918,6 @@
     "mappings": {
       "default": {
         "default": "kleiner gelyk aan of groter as"
-      },
-      "clearspeak": {
-        "default": "is less than equal to or greater than"
       }
     }
   },
@@ -3066,9 +2926,6 @@
     "mappings": {
       "default": {
         "default": "groter gelyk aan of kleiner as"
-      },
-      "clearspeak": {
-        "default": "is greater than equal to or less than"
       }
     }
   },
@@ -3077,9 +2934,6 @@
     "mappings": {
       "default": {
         "default": "gelyk aan of kleiner as"
-      },
-      "clearspeak": {
-        "default": "is equal to or less than"
       }
     }
   },
@@ -3088,9 +2942,6 @@
     "mappings": {
       "default": {
         "default": "gelyk aan of groter as"
-      },
-      "clearspeak": {
-        "default": "is equal to or greater than"
       }
     }
   },
@@ -3099,9 +2950,6 @@
     "mappings": {
       "default": {
         "default": "gelyk aan of gaan vooraf"
-      },
-      "clearspeak": {
-        "default": "is equal to or precedes"
       }
     }
   },
@@ -3110,9 +2958,6 @@
     "mappings": {
       "default": {
         "default": "gelyk aan of volg op"
-      },
-      "clearspeak": {
-        "default": "is equal to or succeeds"
       }
     }
   },
@@ -3137,9 +2982,6 @@
     "mappings": {
       "default": {
         "default": "not square image of or equals"
-      },
-      "clearspeak": {
-        "default": "is not square image of or equal to"
       }
     }
   },
@@ -3148,9 +2990,6 @@
     "mappings": {
       "default": {
         "default": "not square original of or equals"
-      },
-      "clearspeak": {
-        "default": "is not square original of or equal to"
       }
     }
   },
@@ -3159,9 +2998,6 @@
     "mappings": {
       "default": {
         "default": "square image of or not equals"
-      },
-      "clearspeak": {
-        "default": "is square image of or not equal to"
       }
     }
   },
@@ -3170,9 +3006,6 @@
     "mappings": {
       "default": {
         "default": "square original of or not equals"
-      },
-      "clearspeak": {
-        "default": "is square original of or not equal to"
       }
     }
   },
@@ -3181,9 +3014,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as, maar nie ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is less than but not equivalent to"
       }
     }
   },
@@ -3192,9 +3022,6 @@
     "mappings": {
       "default": {
         "default": "groter as, maar nie ekwivalent aan"
-      },
-      "clearspeak": {
-        "default": "is greater than but not equivalent to"
       }
     }
   },
@@ -3219,9 +3046,6 @@
     "mappings": {
       "default": {
         "default": "nie normale subgroep van"
-      },
-      "clearspeak": {
-        "default": "is not normal subgroup of"
       }
     }
   },
@@ -3238,9 +3062,6 @@
     "mappings": {
       "default": {
         "default": "nie normale subgroep van of gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is not normal subgroup of or equal to"
       }
     }
   },
@@ -3265,9 +3086,6 @@
     "mappings": {
       "default": {
         "default": "middellyn horisontale elipses"
-      },
-      "clearspeak": {
-        "default": "dot dot dot"
       }
     }
   },
@@ -5786,9 +5604,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as"
-      },
-      "clearspeak": {
-        "default": "is smaller than"
       }
     }
   },
@@ -5797,9 +5612,6 @@
     "mappings": {
       "default": {
         "default": "groter as"
-      },
-      "clearspeak": {
-        "default": "is larger than"
       }
     }
   },
@@ -5808,9 +5620,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as of gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is smaller than or equal to"
       }
     }
   },
@@ -5819,9 +5628,6 @@
     "mappings": {
       "default": {
         "default": "groter as of gelyk aan"
-      },
-      "clearspeak": {
-        "default": "is larger than or equal to"
       }
     }
   },
