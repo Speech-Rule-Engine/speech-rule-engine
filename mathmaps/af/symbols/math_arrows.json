@@ -7,9 +7,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow"
       }
     }
   },
@@ -18,9 +15,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow"
       }
     }
   },
@@ -29,9 +23,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow"
       }
     }
   },
@@ -40,9 +31,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow"
       }
     }
   },
@@ -51,9 +39,6 @@
     "mappings": {
       "default": {
         "default": "links regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L R arrow"
       }
     }
   },
@@ -62,9 +47,6 @@
     "mappings": {
       "default": {
         "default": "op af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U D arrow"
       }
     }
   },
@@ -73,9 +55,6 @@
     "mappings": {
       "default": {
         "default": "op links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U L arrow"
       }
     }
   },
@@ -84,9 +63,6 @@
     "mappings": {
       "default": {
         "default": "op regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U R arrow"
       }
     }
   },
@@ -95,9 +71,6 @@
     "mappings": {
       "default": {
         "default": "af regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D R arrow"
       }
     }
   },
@@ -106,9 +79,6 @@
     "mappings": {
       "default": {
         "default": "af links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D L arrow"
       }
     }
   },
@@ -117,9 +87,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met streep"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with stroke"
       }
     }
   },
@@ -128,9 +95,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met streep"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with stroke"
       }
     }
   },
@@ -139,9 +103,6 @@
     "mappings": {
       "default": {
         "default": "links golfpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L wave arrow"
       }
     }
   },
@@ -150,9 +111,6 @@
     "mappings": {
       "default": {
         "default": "regs golfpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R wave arrow"
       }
     }
   },
@@ -161,9 +119,6 @@
     "mappings": {
       "default": {
         "default": "tweekop links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "two headed L arrow"
       }
     }
   },
@@ -172,9 +127,6 @@
     "mappings": {
       "default": {
         "default": "tweekop op pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "two headed U arrow"
       }
     }
   },
@@ -183,9 +135,6 @@
     "mappings": {
       "default": {
         "default": "tweekop regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "two headed R arrow"
       }
     }
   },
@@ -194,9 +143,6 @@
     "mappings": {
       "default": {
         "default": "tweekop af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "two headed D arrow"
       }
     }
   },
@@ -205,9 +151,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met stert"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with tail"
       }
     }
   },
@@ -216,9 +159,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met stert"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with tail"
       }
     }
   },
@@ -227,9 +167,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow from bar"
       }
     }
   },
@@ -238,9 +175,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow from bar"
       }
     }
   },
@@ -249,9 +183,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow from bar"
       }
     }
   },
@@ -260,9 +191,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow from bar"
       }
     }
   },
@@ -271,9 +199,6 @@
     "mappings": {
       "default": {
         "default": "op af pyltjie met basis"
-      },
-      "mathspeak": {
-        "sbrief": "U D arrow with base"
       }
     }
   },
@@ -282,9 +207,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met haak"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with hook"
       }
     }
   },
@@ -293,9 +215,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met haak"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with hook"
       }
     }
   },
@@ -304,9 +223,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met lus"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with loop"
       }
     }
   },
@@ -315,9 +231,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met lus"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with loop"
       }
     }
   },
@@ -326,9 +239,6 @@
     "mappings": {
       "default": {
         "default": "links regs golfpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L R wave arrow"
       }
     }
   },
@@ -337,9 +247,6 @@
     "mappings": {
       "default": {
         "default": "links regs pyltjie met streep"
-      },
-      "mathspeak": {
-        "sbrief": "L R arrow with stroke"
       }
     }
   },
@@ -348,9 +255,6 @@
     "mappings": {
       "default": {
         "default": "af heen en weer pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D zigzag arrow"
       }
     }
   },
@@ -359,9 +263,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie met punt links"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow with tip left"
       }
     }
   },
@@ -370,9 +271,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie met punt regs"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow with tip right"
       }
     }
   },
@@ -381,9 +279,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie met punt links"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow with tip left"
       }
     }
   },
@@ -392,9 +287,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie met punt regs"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow with tip right"
       }
     }
   },
@@ -403,9 +295,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met hoek ondertoe"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with corner down"
       }
     }
   },
@@ -414,9 +303,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie met hoek links"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow with corner left"
       }
     }
   },
@@ -441,9 +327,6 @@
     "mappings": {
       "default": {
         "default": "op links pyltjie na lang staaf"
-      },
-      "mathspeak": {
-        "sbrief": "U L arrow to long bar"
       }
     }
   },
@@ -452,9 +335,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie na staaf oor regs pyltjie na staaf"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow to bar over R arrow to bar"
       }
     }
   },
@@ -479,9 +359,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie oor links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow over L arrow"
       }
     }
   },
@@ -490,9 +367,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie links van af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow L of D arrow"
       }
     }
   },
@@ -501,9 +375,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie oor regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow over R arrow"
       }
     }
   },
@@ -512,9 +383,6 @@
     "mappings": {
       "default": {
         "default": "links gepaarde pyltjies"
-      },
-      "mathspeak": {
-        "sbrief": "L paired arrows"
       }
     }
   },
@@ -523,9 +391,6 @@
     "mappings": {
       "default": {
         "default": "op gepaarde pyltjies"
-      },
-      "mathspeak": {
-        "sbrief": "U paired arrows"
       }
     }
   },
@@ -534,9 +399,6 @@
     "mappings": {
       "default": {
         "default": "regs gepaarde pyltjies"
-      },
-      "mathspeak": {
-        "sbrief": "R paired arrows"
       }
     }
   },
@@ -545,9 +407,6 @@
     "mappings": {
       "default": {
         "default": "af gepaarde pyltjies"
-      },
-      "mathspeak": {
-        "sbrief": "D paired arrows"
       }
     }
   },
@@ -556,9 +415,6 @@
     "mappings": {
       "default": {
         "default": "links dubbelpyltjie met streep"
-      },
-      "mathspeak": {
-        "sbrief": "L double arrow with stroke"
       }
     }
   },
@@ -567,9 +423,6 @@
     "mappings": {
       "default": {
         "default": "links regs dubbelpyltjie met streep"
-      },
-      "mathspeak": {
-        "sbrief": "L R double arrow with stroke"
       }
     }
   },
@@ -578,9 +431,6 @@
     "mappings": {
       "default": {
         "default": "regs dubbelpyltjie met streep"
-      },
-      "mathspeak": {
-        "sbrief": "R double arrow with stroke"
       }
     }
   },
@@ -589,9 +439,6 @@
     "mappings": {
       "default": {
         "default": "links dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L double arrow"
       }
     }
   },
@@ -600,9 +447,6 @@
     "mappings": {
       "default": {
         "default": "op dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U double arrow"
       }
     }
   },
@@ -611,9 +455,6 @@
     "mappings": {
       "default": {
         "default": "regs dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R double arrow"
       }
     }
   },
@@ -622,9 +463,6 @@
     "mappings": {
       "default": {
         "default": "af dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D double arrow"
       }
     }
   },
@@ -633,9 +471,6 @@
     "mappings": {
       "default": {
         "default": "links regs dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L R double arrow"
       }
     }
   },
@@ -644,9 +479,6 @@
     "mappings": {
       "default": {
         "default": "op af dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U D double arrow"
       }
     }
   },
@@ -655,9 +487,6 @@
     "mappings": {
       "default": {
         "default": "op links dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U L double arrow"
       }
     }
   },
@@ -666,9 +495,6 @@
     "mappings": {
       "default": {
         "default": "op regs dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U R double arrow"
       }
     }
   },
@@ -677,9 +503,6 @@
     "mappings": {
       "default": {
         "default": "af regs dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D R double arrow"
       }
     }
   },
@@ -688,9 +511,6 @@
     "mappings": {
       "default": {
         "default": "af links dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D L double arrow"
       }
     }
   },
@@ -699,9 +519,6 @@
     "mappings": {
       "default": {
         "default": "links trippelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L triple arrow"
       }
     }
   },
@@ -710,9 +527,6 @@
     "mappings": {
       "default": {
         "default": "regs trippelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R triple arrow"
       }
     }
   },
@@ -721,9 +535,6 @@
     "mappings": {
       "default": {
         "default": "links kronkelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L squiggle arrow"
       }
     }
   },
@@ -732,9 +543,6 @@
     "mappings": {
       "default": {
         "default": "regs kronkelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R squiggle arrow"
       }
     }
   },
@@ -743,9 +551,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie met dubbelstreep"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow with double stroke"
       }
     }
   },
@@ -754,9 +559,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie met dubbelstreep"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow with double stroke"
       }
     }
   },
@@ -765,9 +567,6 @@
     "mappings": {
       "default": {
         "default": "links koppeltekenpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L dashed arrow"
       }
     }
   },
@@ -776,9 +575,6 @@
     "mappings": {
       "default": {
         "default": "op koppeltekenpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U dashed arrow"
       }
     }
   },
@@ -787,9 +583,6 @@
     "mappings": {
       "default": {
         "default": "regs koppeltekenpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R dashed arrow"
       }
     }
   },
@@ -798,9 +591,6 @@
     "mappings": {
       "default": {
         "default": "af koppeltekenpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D dashed arrow"
       }
     }
   },
@@ -809,9 +599,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie na staaf"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow to bar"
       }
     }
   },
@@ -820,9 +607,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie na staaf"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow to bar"
       }
     }
   },
@@ -831,9 +615,6 @@
     "mappings": {
       "default": {
         "default": "wit links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white L arrow"
       }
     }
   },
@@ -842,9 +623,6 @@
     "mappings": {
       "default": {
         "default": "wit op pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white U arrow"
       }
     }
   },
@@ -853,9 +631,6 @@
     "mappings": {
       "default": {
         "default": "wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white R arrow"
       }
     }
   },
@@ -864,9 +639,6 @@
     "mappings": {
       "default": {
         "default": "wit af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white D arrow"
       }
     }
   },
@@ -875,9 +647,6 @@
     "mappings": {
       "default": {
         "default": "wit op pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "white U arrow from bar"
       }
     }
   },
@@ -886,9 +655,6 @@
     "mappings": {
       "default": {
         "default": "wit op pyltjie op staander"
-      },
-      "mathspeak": {
-        "sbrief": "white U arrow on pedestal"
       }
     }
   },
@@ -897,9 +663,6 @@
     "mappings": {
       "default": {
         "default": "wit op pyltjie op staander met horisontale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "white U arrow on pedestal with horizontal bar"
       }
     }
   },
@@ -908,9 +671,6 @@
     "mappings": {
       "default": {
         "default": "wit op pyltjie op staander met vertikale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "white U arrow on pedestal with vertical bar"
       }
     }
   },
@@ -919,9 +679,6 @@
     "mappings": {
       "default": {
         "default": "wit dubbel op pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white double U arrow"
       }
     }
   },
@@ -930,9 +687,6 @@
     "mappings": {
       "default": {
         "default": "wit dubbel op pyltjie op staander"
-      },
-      "mathspeak": {
-        "sbrief": "white double U arrow on pedestal"
       }
     }
   },
@@ -941,9 +695,6 @@
     "mappings": {
       "default": {
         "default": "wit regs pyltjie vanaf muur"
-      },
-      "mathspeak": {
-        "sbrief": "white R arrow from wall"
       }
     }
   },
@@ -968,9 +719,6 @@
     "mappings": {
       "default": {
         "default": "op af wit pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U D white arrow"
       }
     }
   },
@@ -979,9 +727,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met klein sirkel"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with small circle"
       }
     }
   },
@@ -990,9 +735,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie links van op pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow L of U arrow"
       }
     }
   },
@@ -1001,9 +743,6 @@
     "mappings": {
       "default": {
         "default": "drie regs pyltjies"
-      },
-      "mathspeak": {
-        "sbrief": "three R arrows"
       }
     }
   },
@@ -1012,9 +751,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met vertikale  lyn"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with vertical stroke"
       }
     }
   },
@@ -1023,9 +759,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met vertikale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with vertical stroke"
       }
     }
   },
@@ -1034,9 +767,6 @@
     "mappings": {
       "default": {
         "default": "links regs pyltjie met vertikale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "L R arrow with vertical stroke"
       }
     }
   },
@@ -1045,9 +775,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met dubbel vertikale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with double vertical stroke"
       }
     }
   },
@@ -1056,9 +783,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met dubbel vertikale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with double vertical stroke"
       }
     }
   },
@@ -1067,9 +791,6 @@
     "mappings": {
       "default": {
         "default": "links regs pyltjie met dubbel vertikale lyn"
-      },
-      "mathspeak": {
-        "sbrief": "L R arrow with double vertical stroke"
       }
     }
   },
@@ -1078,9 +799,6 @@
     "mappings": {
       "default": {
         "default": "links oopkop pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L open headed arrow"
       }
     }
   },
@@ -1089,9 +807,6 @@
     "mappings": {
       "default": {
         "default": "regs oopkop pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "r open headed arrow"
       }
     }
   },
@@ -1100,9 +815,6 @@
     "mappings": {
       "default": {
         "default": "links regs oopkop pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L R open headed arrow"
       }
     }
   },
@@ -1119,9 +831,6 @@
     "mappings": {
       "default": {
         "default": "op pylkop"
-      },
-      "mathspeak": {
-        "sbrief": "U arrowhead"
       }
     }
   },
@@ -1130,9 +839,6 @@
     "mappings": {
       "default": {
         "default": "af pylkop"
-      },
-      "mathspeak": {
-        "sbrief": "D arrowhead"
       }
     }
   },
@@ -1142,9 +848,6 @@
       "default": {
         "default": "op pylkop tussen twee horisontale lyne",
         "alternative": "enter key"
-      },
-      "mathspeak": {
-        "sbrief": "U arrowhead between two horizontal bars"
       }
     }
   },
@@ -1161,9 +864,6 @@
     "mappings": {
       "default": {
         "default": "swaar wye regs pyltjie met kop"
-      },
-      "mathspeak": {
-        "sbrief": "heavy wide headed R arrow"
       }
     }
   },
@@ -1172,9 +872,6 @@
     "mappings": {
       "default": {
         "default": "swaar af regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy D R arrow"
       }
     }
   },
@@ -1183,9 +880,6 @@
     "mappings": {
       "default": {
         "default": "swaar regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy R arrow"
       }
     }
   },
@@ -1194,9 +888,6 @@
     "mappings": {
       "default": {
         "default": "swaar op regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy U R arrow"
       }
     }
   },
@@ -1205,9 +896,6 @@
     "mappings": {
       "default": {
         "default": "tekenpunt regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "drafting point R arrow"
       }
     }
   },
@@ -1216,9 +904,6 @@
     "mappings": {
       "default": {
         "default": "swaar rondepunt regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy round tipped R arrow"
       }
     }
   },
@@ -1227,9 +912,6 @@
     "mappings": {
       "default": {
         "default": "driehoek regs pyltjie met kop"
-      },
-      "mathspeak": {
-        "sbrief": "triangle headed R arrow"
       }
     }
   },
@@ -1238,9 +920,6 @@
     "mappings": {
       "default": {
         "default": "swaar driehoek regs pyltjie met kop"
-      },
-      "mathspeak": {
-        "sbrief": "heavy triangle headed R arrow"
       }
     }
   },
@@ -1249,9 +928,6 @@
     "mappings": {
       "default": {
         "default": "koppelteken driehoek regs pyltjie met kop"
-      },
-      "mathspeak": {
-        "sbrief": "dashed triangle headed R arrow"
       }
     }
   },
@@ -1260,9 +936,6 @@
     "mappings": {
       "default": {
         "default": "swaar koppelteken driehoek regs pyltjie met kop"
-      },
-      "mathspeak": {
-        "sbrief": "heavy dashed triangle headed R arrow"
       }
     }
   },
@@ -1271,9 +944,6 @@
     "mappings": {
       "default": {
         "default": "swart regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "black R arrow"
       }
     }
   },
@@ -1282,9 +952,6 @@
     "mappings": {
       "default": {
         "default": "drie d bo verligte pylkop"
-      },
-      "mathspeak": {
-        "sbrief": "three d top lighted R arrowhead"
       }
     }
   },
@@ -1293,9 +960,6 @@
     "mappings": {
       "default": {
         "default": "drie d onderverligte regs pylkop"
-      },
-      "mathspeak": {
-        "sbrief": "three d bottom lighted R arrowhead"
       }
     }
   },
@@ -1304,9 +968,6 @@
     "mappings": {
       "default": {
         "default": "swart regs pylkop"
-      },
-      "mathspeak": {
-        "sbrief": "black R arrowhead"
       }
     }
   },
@@ -1315,9 +976,6 @@
     "mappings": {
       "default": {
         "default": "swaar swart gekurwde af en regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy black curved D and R arrow"
       }
     }
   },
@@ -1326,9 +984,6 @@
     "mappings": {
       "default": {
         "default": "swaar gekurwde op en regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy black curved U and R arrow"
       }
     }
   },
@@ -1337,9 +992,6 @@
     "mappings": {
       "default": {
         "default": "saamgedrukte swart regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "squat black R arrow"
       }
     }
   },
@@ -1348,9 +1000,6 @@
     "mappings": {
       "default": {
         "default": "swaar konkaafgepunte regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy concave pointed black R arrow"
       }
     }
   },
@@ -1359,9 +1008,6 @@
     "mappings": {
       "default": {
         "default": "regs geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "right shaded white R arrow"
       }
     }
   },
@@ -1370,9 +1016,6 @@
     "mappings": {
       "default": {
         "default": "links geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "left shaded white R arrow"
       }
     }
   },
@@ -1381,9 +1024,6 @@
     "mappings": {
       "default": {
         "default": "terugleunende geskakeerde wit  regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "back tilted shadowed white R arrow"
       }
     }
   },
@@ -1392,9 +1032,6 @@
     "mappings": {
       "default": {
         "default": "vooroor leunende geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "front tilted shadowed white R arrow"
       }
     }
   },
@@ -1403,9 +1040,6 @@
     "mappings": {
       "default": {
         "default": "swaar laer regs geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy lower right shadowed white R arrow"
       }
     }
   },
@@ -1414,9 +1048,6 @@
     "mappings": {
       "default": {
         "default": "swaar boonste regs geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy upper right shadowed white R arrow"
       }
     }
   },
@@ -1425,9 +1056,6 @@
     "mappings": {
       "default": {
         "default": "getande laer regs geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "notched lower right shadowed white R arrow"
       }
     }
   },
@@ -1436,9 +1064,6 @@
     "mappings": {
       "default": {
         "default": "getande boonste regs geskakeerde wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "notched upper right shadowed white R arrow"
       }
     }
   },
@@ -1447,9 +1072,6 @@
     "mappings": {
       "default": {
         "default": "omkringde swaar wit regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "circled heavy white R arrow"
       }
     }
   },
@@ -1458,9 +1080,6 @@
     "mappings": {
       "default": {
         "default": "wit geveerde regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white feathered R arrow"
       }
     }
   },
@@ -1469,9 +1088,6 @@
     "mappings": {
       "default": {
         "default": "swart geveerde af regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "black feathered D R arrow"
       }
     }
   },
@@ -1480,9 +1096,6 @@
     "mappings": {
       "default": {
         "default": "swart geveerde regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "black feathered R arrow"
       }
     }
   },
@@ -1491,9 +1104,6 @@
     "mappings": {
       "default": {
         "default": "swart geveerde op regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "black feathered U R arrow"
       }
     }
   },
@@ -1502,9 +1112,6 @@
     "mappings": {
       "default": {
         "default": "swaar swart geveerde af regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy black feathered D R arrow"
       }
     }
   },
@@ -1513,9 +1120,6 @@
     "mappings": {
       "default": {
         "default": "swaar swart geveerde regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy black feathered R arrow"
       }
     }
   },
@@ -1524,9 +1128,6 @@
     "mappings": {
       "default": {
         "default": "swaar swart geveerde op regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy black feathered U R arrow"
       }
     }
   },
@@ -1535,9 +1136,6 @@
     "mappings": {
       "default": {
         "default": "traandruppel stekelrige regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "teardrop barbed R arrow"
       }
     }
   },
@@ -1546,9 +1144,6 @@
     "mappings": {
       "default": {
         "default": "swaar traandruppel geskenkelde regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy teardrop shanked R arrow"
       }
     }
   },
@@ -1557,9 +1152,6 @@
     "mappings": {
       "default": {
         "default": "wigstert regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "wedge tailed R arrow"
       }
     }
   },
@@ -1568,9 +1160,6 @@
     "mappings": {
       "default": {
         "default": "swaar wigstert regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "heavy wedge tailed R arrow"
       }
     }
   },
@@ -1579,9 +1168,6 @@
     "mappings": {
       "default": {
         "default": "oop buitelyn regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "open outlined R arrow"
       }
     }
   },
@@ -1590,9 +1176,6 @@
     "mappings": {
       "default": {
         "default": "op vierdubbelle pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U quadruple arrow"
       }
     }
   },
@@ -1601,9 +1184,6 @@
     "mappings": {
       "default": {
         "default": "af vierdubbele pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D quadrule arrow"
       }
     }
   },
@@ -1628,9 +1208,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met omkringde plus"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with circled plus"
       }
     }
   },
@@ -1639,9 +1216,6 @@
     "mappings": {
       "default": {
         "default": "lang links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long L arrow"
       }
     }
   },
@@ -1650,9 +1224,6 @@
     "mappings": {
       "default": {
         "default": "lang regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long R arrow"
       }
     }
   },
@@ -1661,9 +1232,6 @@
     "mappings": {
       "default": {
         "default": "lang links regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long L R arrow"
       }
     }
   },
@@ -1672,9 +1240,6 @@
     "mappings": {
       "default": {
         "default": "lang links dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long l double arrow"
       }
     }
   },
@@ -1683,9 +1248,6 @@
     "mappings": {
       "default": {
         "default": "lang regs dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long R double arrow"
       }
     }
   },
@@ -1694,9 +1256,6 @@
     "mappings": {
       "default": {
         "default": "lang links regs dubbelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long L R double arrow"
       }
     }
   },
@@ -1705,9 +1264,6 @@
     "mappings": {
       "default": {
         "default": "lang links pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "long L arrow from bar"
       }
     }
   },
@@ -1716,9 +1272,6 @@
     "mappings": {
       "default": {
         "default": "lang regs pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "long R arrow from bar"
       }
     }
   },
@@ -1727,9 +1280,6 @@
     "mappings": {
       "default": {
         "default": "lang links pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "long l double arrow from bar"
       }
     }
   },
@@ -1738,9 +1288,6 @@
     "mappings": {
       "default": {
         "default": "lang regs dubbelpyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "long R double arrow from bar"
       }
     }
   },
@@ -1749,9 +1296,6 @@
     "mappings": {
       "default": {
         "default": "lang regs kronkelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long r squiggle arrow"
       }
     }
   },
@@ -1760,9 +1304,6 @@
     "mappings": {
       "default": {
         "default": "tweekoppige regs pyltjie met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "two headed R arrow with vertical stroke"
       }
     }
   },
@@ -1771,9 +1312,6 @@
     "mappings": {
       "default": {
         "default": "tweekoppige regs pyltjie met dubbel vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "two headed R arrow with double vertical stroke"
       }
     }
   },
@@ -1782,9 +1320,6 @@
     "mappings": {
       "default": {
         "default": "dubbel links pyltjie met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "double L arrow with vertical stroke"
       }
     }
   },
@@ -1793,9 +1328,6 @@
     "mappings": {
       "default": {
         "default": "dubbel regs pyltjie met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "double R arrow with vertical stroke"
       }
     }
   },
@@ -1804,9 +1336,6 @@
     "mappings": {
       "default": {
         "default": "dubbel links regs pyltjie met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "double L R arrow with vertical stroke"
       }
     }
   },
@@ -1815,9 +1344,6 @@
     "mappings": {
       "default": {
         "default": "tweekoppige regs pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "two headed R arrow from bar"
       }
     }
   },
@@ -1826,9 +1352,6 @@
     "mappings": {
       "default": {
         "default": "dubbel links pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "double L arrow from bar"
       }
     }
   },
@@ -1837,9 +1360,6 @@
     "mappings": {
       "default": {
         "default": "dubbel regs pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "double R arrow from bar"
       }
     }
   },
@@ -1856,9 +1376,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie met horisontale streep"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow with horizontal stroke"
       }
     }
   },
@@ -1867,9 +1384,6 @@
     "mappings": {
       "default": {
         "default": "op trippelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U triple arrow"
       }
     }
   },
@@ -1878,9 +1392,6 @@
     "mappings": {
       "default": {
         "default": "af trippelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D triple arrow"
       }
     }
   },
@@ -1889,9 +1400,6 @@
     "mappings": {
       "default": {
         "default": "links dubbelkoppelteken pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L double dash arrow"
       }
     }
   },
@@ -1900,9 +1408,6 @@
     "mappings": {
       "default": {
         "default": "regs dubbelkoppelteken pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R double dash arrow"
       }
     }
   },
@@ -1911,9 +1416,6 @@
     "mappings": {
       "default": {
         "default": "links trippelkoppelteken pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L triple dash arrow"
       }
     }
   },
@@ -1922,9 +1424,6 @@
     "mappings": {
       "default": {
         "default": "regs trippelkoppelteken pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "r triple dash arrow"
       }
     }
   },
@@ -1933,9 +1432,6 @@
     "mappings": {
       "default": {
         "default": "regs tweekoppige trippelkoppelteken pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "r two headed triple dash arrow"
       }
     }
   },
@@ -1944,9 +1440,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met kolletjie steel"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with dotted stem"
       }
     }
   },
@@ -1955,9 +1448,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie na staaf"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow to bar"
       }
     }
   },
@@ -1966,9 +1456,6 @@
     "mappings": {
       "default": {
         "default": "af pyltjie na staaf"
-      },
-      "mathspeak": {
-        "sbrief": "D arrow to bar"
       }
     }
   },
@@ -1977,9 +1464,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met stert met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with tail with vertical stroke"
       }
     }
   },
@@ -1988,9 +1472,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met stert met dubbelvertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with tail with double vertical stroke"
       }
     }
   },
@@ -1999,9 +1480,6 @@
     "mappings": {
       "default": {
         "default": "regs tweekoppige pyltjie met stert"
-      },
-      "mathspeak": {
-        "sbrief": "R two headed arrow with tail"
       }
     }
   },
@@ -2010,9 +1488,6 @@
     "mappings": {
       "default": {
         "default": "regs tweekoppige pyltjie met stert met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "R two headed arrow with tail with vertical stroke"
       }
     }
   },
@@ -2021,9 +1496,6 @@
     "mappings": {
       "default": {
         "default": "regs tweekoppige pyltjie met stert met dubbelvertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "R two headed arrow with tail with double vertical stroke"
       }
     }
   },
@@ -2032,9 +1504,6 @@
     "mappings": {
       "default": {
         "default": "links pylstert"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow tail"
       }
     }
   },
@@ -2043,9 +1512,6 @@
     "mappings": {
       "default": {
         "default": "regs pylstert"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow tail"
       }
     }
   },
@@ -2054,9 +1520,6 @@
     "mappings": {
       "default": {
         "default": "links dubbel pylstert"
-      },
-      "mathspeak": {
-        "sbrief": "L double arrow tail"
       }
     }
   },
@@ -2065,9 +1528,6 @@
     "mappings": {
       "default": {
         "default": "regs dubbel pylstert"
-      },
-      "mathspeak": {
-        "sbrief": "R double arrow tail"
       }
     }
   },
@@ -2076,9 +1536,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie na swart diamand"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow to black diamond"
       }
     }
   },
@@ -2087,9 +1544,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie na swart diamand"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow to black diamond"
       }
     }
   },
@@ -2098,9 +1552,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie vanaf staaf na swart diamand"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow from bar to black diamond"
       }
     }
   },
@@ -2109,9 +1560,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie vanaf staaf na swart diamand"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow from bar to black diamond"
       }
     }
   },
@@ -2288,9 +1736,6 @@
     "mappings": {
       "default": {
         "default": "regsom boog kloksgewyse pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R side arc clockwise arrow"
       }
     }
   },
@@ -2299,9 +1744,6 @@
     "mappings": {
       "default": {
         "default": "linksom boog antikloksgewyse pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L side arc anticlockwise arrow"
       }
     }
   },
@@ -2342,9 +1784,6 @@
     "mappings": {
       "default": {
         "default": "af regs semisirkel kloksgewyse pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D R semicircular clockwise arrow"
       }
     }
   },
@@ -2353,9 +1792,6 @@
     "mappings": {
       "default": {
         "default": "af links semisirkel antikloksgewyse pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D L semicircular anticlockwise arrow"
       }
     }
   },
@@ -2380,9 +1816,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie bokant kort links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow above short L arrow"
       }
     }
   },
@@ -2391,9 +1824,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie bokant kort regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow above short R arrow"
       }
     }
   },
@@ -2402,9 +1832,6 @@
     "mappings": {
       "default": {
         "default": "kort regs pyltjie bokant links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "short R arrow above L arrow"
       }
     }
   },
@@ -2413,9 +1840,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met plus onder"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with plus below"
       }
     }
   },
@@ -2424,9 +1848,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met plus onder"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with plus below"
       }
     }
   },
@@ -2435,9 +1856,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie deur x"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow through x"
       }
     }
   },
@@ -2446,9 +1864,6 @@
     "mappings": {
       "default": {
         "default": "links regs pyltjie deur klein sirkel"
-      },
-      "mathspeak": {
-        "sbrief": "L R arrow through small circle"
       }
     }
   },
@@ -2457,9 +1872,6 @@
     "mappings": {
       "default": {
         "default": "op tweekoppige pyltjie vanaf klein sirkel"
-      },
-      "mathspeak": {
-        "sbrief": "U two headed arrow from small circle"
       }
     }
   },
@@ -2468,9 +1880,6 @@
     "mappings": {
       "default": {
         "default": "regs dubbelpyltjie met geronde kop"
-      },
-      "mathspeak": {
-        "sbrief": "R double arrow with rounded head"
       }
     }
   },
@@ -2479,9 +1888,6 @@
     "mappings": {
       "default": {
         "default": "is gelyk aan bokant regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "equals sign above R arrow"
       }
     }
   },
@@ -2490,9 +1896,6 @@
     "mappings": {
       "default": {
         "default": "tilde bokant regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "tilde operator above R arrow"
       }
     }
   },
@@ -2501,9 +1904,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie bokant tilde"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow above tilde operator"
       }
     }
   },
@@ -2512,9 +1912,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie bokant tilde"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow above tilde operator"
       }
     }
   },
@@ -2523,9 +1920,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie bokant is amper gelyk aan"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow above almost equals"
       }
     }
   },
@@ -2534,9 +1928,6 @@
     "mappings": {
       "default": {
         "default": "kleiner as bokant links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "less than above L arrow"
       }
     }
   },
@@ -2545,9 +1936,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie deur kleiner as"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow through less than"
       }
     }
   },
@@ -2556,9 +1944,6 @@
     "mappings": {
       "default": {
         "default": "groter as bokant regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "greater than above R arrow"
       }
     }
   },
@@ -2567,9 +1952,6 @@
     "mappings": {
       "default": {
         "default": "deelversameling bokant regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "subset above R arrow"
       }
     }
   },
@@ -2578,9 +1960,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie deur deelversameling"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow through subset"
       }
     }
   },
@@ -2589,9 +1968,6 @@
     "mappings": {
       "default": {
         "default": "superversameling bokant links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "suerset above L arrow"
       }
     }
   },
@@ -2600,9 +1976,6 @@
     "mappings": {
       "default": {
         "default": "leë versameling met regs pyltjie bo"
-      },
-      "mathspeak": {
-        "sbrief": "empty set with R arrow above"
       }
     }
   },
@@ -2611,9 +1984,6 @@
     "mappings": {
       "default": {
         "default": "leë versameling met links pyltjie bo"
-      },
-      "mathspeak": {
-        "sbrief": "empty set with L arrow above"
       }
     }
   },
@@ -2622,9 +1992,6 @@
     "mappings": {
       "default": {
         "default": "op pyltjie deur sirkel"
-      },
-      "mathspeak": {
-        "sbrief": "U arrow through circle"
       }
     }
   },
@@ -2633,9 +2000,6 @@
     "mappings": {
       "default": {
         "default": "swart diamand met af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "black diamond with D arrow"
       }
     }
   },
@@ -2644,9 +2008,6 @@
     "mappings": {
       "default": {
         "default": "wit sirkel met af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "white circle with D arrow"
       }
     }
   },
@@ -2655,9 +2016,6 @@
     "mappings": {
       "default": {
         "default": "swart sirkel met af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "black circle with D arrow"
       }
     }
   },
@@ -2666,9 +2024,6 @@
     "mappings": {
       "default": {
         "default": "integraal met links pyltjie met haak"
-      },
-      "mathspeak": {
-        "sbrief": "integral with L arrow with hook"
       }
     }
   },
@@ -2709,9 +2064,6 @@
     "mappings": {
       "default": {
         "default": "links regs wit pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L R white arrow"
       }
     }
   },
@@ -2720,9 +2072,6 @@
     "mappings": {
       "default": {
         "default": "links swart pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L black arrow"
       }
     }
   },
@@ -2731,9 +2080,6 @@
     "mappings": {
       "default": {
         "default": "op swart pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U black arrow"
       }
     }
   },
@@ -2742,9 +2088,6 @@
     "mappings": {
       "default": {
         "default": "af swart pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "D black arrow"
       }
     }
   },
@@ -2785,9 +2128,6 @@
     "mappings": {
       "default": {
         "default": "links regs swart pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L R black arrow"
       }
     }
   },
@@ -2796,9 +2136,6 @@
     "mappings": {
       "default": {
         "default": "op af swart pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "U D black arrow"
       }
     }
   },
@@ -2807,9 +2144,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met punt ondertoe"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with tip down"
       }
     }
   },
@@ -2818,9 +2152,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie met punt boontoe"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow with tip up"
       }
     }
   },
@@ -2829,9 +2160,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met punt ondertoe"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with tip down"
       }
     }
   },
@@ -2840,9 +2168,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met punt boontoe"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with tip up"
       }
     }
   },
@@ -2851,9 +2176,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met klein sirkel"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with small circle"
       }
     }
   },
@@ -2862,9 +2184,6 @@
     "mappings": {
       "default": {
         "default": "drie links pyltjies"
-      },
-      "mathspeak": {
-        "sbrief": "three L arrows"
       }
     }
   },
@@ -2873,9 +2192,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met omkringde plus"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with circled plus"
       }
     }
   },
@@ -2884,9 +2200,6 @@
     "mappings": {
       "default": {
         "default": "lang links kronkelpyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "long l squiggle arrow"
       }
     }
   },
@@ -2895,9 +2208,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige pyltjie met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed arrow with vertical stroke"
       }
     }
   },
@@ -2906,9 +2216,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige pyltjie met dubbel vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed arrow with double vertical stroke"
       }
     }
   },
@@ -2917,9 +2224,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige pyltjie vanaf staaf"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed arrow from bar"
       }
     }
   },
@@ -2928,9 +2232,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige trippel koppelteken pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed triple dash arrow"
       }
     }
   },
@@ -2939,9 +2240,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met kolletjie steel"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with dotted stem"
       }
     }
   },
@@ -2950,9 +2248,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met stert met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with tail with vertical stroke"
       }
     }
   },
@@ -2961,9 +2256,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie met stert met dubbel vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow with tail with double vertical stroke"
       }
     }
   },
@@ -2972,9 +2264,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige pyltjie met stert"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed arrow with tail"
       }
     }
   },
@@ -2983,9 +2272,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige pyltjie met stert met vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed arrow with tail with vertical stroke"
       }
     }
   },
@@ -2994,9 +2280,6 @@
     "mappings": {
       "default": {
         "default": "links tweekoppige pyltjie met stert met dubbel vertikale streep"
-      },
-      "mathspeak": {
-        "sbrief": "L two headed arrow with tail with double vertical stroke"
       }
     }
   },
@@ -3005,9 +2288,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie deur x"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow through x"
       }
     }
   },
@@ -3024,9 +2304,6 @@
     "mappings": {
       "default": {
         "default": "is gelyk aan bokant links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "equals sign above L arrow"
       }
     }
   },
@@ -3035,9 +2312,6 @@
     "mappings": {
       "default": {
         "default": "tru tilde bokant links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "reverse tilde operator above L arrow"
       }
     }
   },
@@ -3046,9 +2320,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie bokant tru is amper gelyk aan"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow above reverse almost equals"
       }
     }
   },
@@ -3057,9 +2328,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie deur groter as"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow through greater than"
       }
     }
   },
@@ -3068,9 +2336,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie deur superversameling"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow through superset"
       }
     }
   },
@@ -3079,9 +2344,6 @@
     "mappings": {
       "default": {
         "default": "links vierdubbele pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "L quadrule arrow"
       }
     }
   },
@@ -3090,9 +2352,6 @@
     "mappings": {
       "default": {
         "default": "regs vierdubbele pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "R quadrule arrow"
       }
     }
   },
@@ -3101,9 +2360,6 @@
     "mappings": {
       "default": {
         "default": "tru tilde bokant regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "reverse tilde operator above R arrow"
       }
     }
   },
@@ -3112,9 +2368,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie bokant tru is amper gelyk aan"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow above reverse almost equals"
       }
     }
   },
@@ -3123,9 +2376,6 @@
     "mappings": {
       "default": {
         "default": "tilde bokant links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "tilde operator above L arrow"
       }
     }
   },
@@ -3134,9 +2384,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie bokant is amper gelyk aan"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow above almost equals"
       }
     }
   },
@@ -3145,9 +2392,6 @@
     "mappings": {
       "default": {
         "default": "links pyltjie bokant tru tilde"
-      },
-      "mathspeak": {
-        "sbrief": "L arrow above reverse tilde operator"
       }
     }
   },
@@ -3156,9 +2400,6 @@
     "mappings": {
       "default": {
         "default": "regs pyltjie bokant tru tilde"
-      },
-      "mathspeak": {
-        "sbrief": "R arrow above reverse tilde operator"
       }
     }
   },
@@ -3167,9 +2408,6 @@
     "mappings": {
       "default": {
         "default": "half wyte links pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "halfwidth L arrow"
       }
     }
   },
@@ -3178,9 +2416,6 @@
     "mappings": {
       "default": {
         "default": "half wyte op pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "halfwidth U arrow"
       }
     }
   },
@@ -3189,9 +2424,6 @@
     "mappings": {
       "default": {
         "default": "half wyte regs pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "halfwidth R arrow"
       }
     }
   },
@@ -3200,9 +2432,6 @@
     "mappings": {
       "default": {
         "default": "half wyte af pyltjie"
-      },
-      "mathspeak": {
-        "sbrief": "halfwidth D arrow"
       }
     }
   }

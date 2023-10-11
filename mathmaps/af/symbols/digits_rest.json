@@ -9,10 +9,10 @@
         "default": "kwadraat"
       },
       "mathspeak": {
-        "default": "squared"
+        "default": "kwadraat"
       },
       "clearspeak": {
-        "default": "squared"
+        "default": "kwadraat"
       }
     }
   },
@@ -23,10 +23,10 @@
         "default": "kubiek"
       },
       "mathspeak": {
-        "default": "cubed"
+        "default": "kubiek"
       },
       "clearspeak": {
-        "default": "cubed"
+        "default": "kubiek"
       }
     }
   },

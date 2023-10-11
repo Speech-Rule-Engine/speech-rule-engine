@@ -15,9 +15,6 @@
     "mappings": {
       "default": {
         "default": "skript hoofletter p"
-      },
-      "mathspeak": {
-        "default": "script upper P"
       }
     }
   },
@@ -42,9 +39,6 @@
     "mappings": {
       "default": {
         "default": "dubbelgeslaande hoofletter gamma"
-      },
-      "mathspeak": {
-        "default": "double struck upper Gamma"
       }
     }
   },
@@ -53,9 +47,6 @@
     "mappings": {
       "default": {
         "default": "dubbelgeslaande hoofletter Pi"
-      },
-      "mathspeak": {
-        "default": "double struck upper Pi"
       }
     }
   },
@@ -64,9 +55,6 @@
     "mappings": {
       "default": {
         "default": "dubbelgeslaande sommeer"
-      },
-      "mathspeak": {
-        "default": "double struck sigma summation"
       }
     }
   },
@@ -75,9 +63,6 @@
     "mappings": {
       "default": {
         "default": "dubbelgeslaande  kursief hoofletter d"
-      },
-      "mathspeak": {
-        "default": "double struck italic upper D"
       }
     }
   },

@@ -7,11 +7,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with grave",
-        "brief": "mod above upper A with grave",
-        "sbrief": "mod above upper A with grave"
       }
     }
   },
@@ -20,11 +15,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with acute",
-        "brief": "mod above upper A with acute",
-        "sbrief": "mod above upper A with acute"
       }
     }
   },
@@ -33,11 +23,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with caret",
-        "brief": "mod above upper A with caret",
-        "sbrief": "mod above upper A with caret"
       }
     }
   },
@@ -46,11 +31,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A tilde"
-      },
-      "mathspeak": {
-        "default": "upper A overtilde",
-        "brief": "upper A overtilde",
-        "sbrief": "upper A overtilde"
       }
     }
   },
@@ -59,11 +39,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with double dot",
-        "brief": "mod above upper A with double dot",
-        "sbrief": "mod above upper A with double dot"
       }
     }
   },
@@ -72,11 +47,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A ring"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with ring",
-        "brief": "mod above upper A with ring",
-        "sbrief": "mod above upper A with ring"
       }
     }
   },
@@ -85,11 +55,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter C sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper C with cedilla",
-        "brief": "mod above upper C with cedilla",
-        "sbrief": "mod above upper C with cedilla"
       }
     }
   },
@@ -98,11 +63,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with grave",
-        "brief": "mod above upper E with grave",
-        "sbrief": "mod above upper E with grave"
       }
     }
   },
@@ -111,11 +71,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with acute",
-        "brief": "mod above upper E with acute",
-        "sbrief": "mod above upper E with acute"
       }
     }
   },
@@ -124,11 +79,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with caret",
-        "brief": "mod above upper E with caret",
-        "sbrief": "mod above upper E with caret"
       }
     }
   },
@@ -137,11 +87,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter deelteken e"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with double dot",
-        "brief": "mod above upper E with double dot",
-        "sbrief": "mod above upper E with double dot"
       }
     }
   },
@@ -150,11 +95,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with grave",
-        "brief": "mod above upper I with grave",
-        "sbrief": "mod above upper I with grave"
       }
     }
   },
@@ -163,11 +103,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with acute",
-        "brief": "mod above upper I with acute",
-        "sbrief": "mod above upper I with acute"
       }
     }
   },
@@ -176,11 +111,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with caret",
-        "brief": "mod above upper I with caret",
-        "sbrief": "mod above upper I with caret"
       }
     }
   },
@@ -189,11 +119,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter deelteken i"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with double dot",
-        "brief": "mod above upper I with double dot",
-        "sbrief": "mod above upper I with double dot"
       }
     }
   },
@@ -202,11 +127,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N tilde"
-      },
-      "mathspeak": {
-        "default": "upper N overtilde",
-        "brief": "upper N overtilde",
-        "sbrief": "upper N overtilde"
       }
     }
   },
@@ -215,11 +135,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with grave",
-        "brief": "mod above upper O with grave",
-        "sbrief": "mod above upper O with grave"
       }
     }
   },
@@ -228,11 +143,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with acute",
-        "brief": "mod above upper O with acute",
-        "sbrief": "mod above upper O with acute"
       }
     }
   },
@@ -241,11 +151,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter kappie o"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with caret",
-        "brief": "mod above upper O with caret",
-        "sbrief": "mod above upper O with caret"
       }
     }
   },
@@ -254,11 +159,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O tilde"
-      },
-      "mathspeak": {
-        "default": "upper O overtilde",
-        "brief": "upper O overtilde",
-        "sbrief": "upper O overtilde"
       }
     }
   },
@@ -267,11 +167,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter deelteken o"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with double dot",
-        "brief": "mod above upper O with double dot",
-        "sbrief": "mod above upper O with double dot"
       }
     }
   },
@@ -280,11 +175,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with grave",
-        "brief": "mod above upper U with grave",
-        "sbrief": "mod above upper U with grave"
       }
     }
   },
@@ -293,11 +183,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with acute",
-        "brief": "mod above upper U with acute",
-        "sbrief": "mod above upper U with acute"
       }
     }
   },
@@ -306,11 +191,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter kappie u"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with caret",
-        "brief": "mod above upper U with caret",
-        "sbrief": "mod above upper U with caret"
       }
     }
   },
@@ -319,11 +199,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter deelteken u"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with double dot",
-        "brief": "mod above upper U with double dot",
-        "sbrief": "mod above upper U with double dot"
       }
     }
   },
@@ -332,11 +207,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Y with acute",
-        "brief": "mod above upper Y with acute",
-        "sbrief": "mod above upper Y with acute"
       }
     }
   },
@@ -345,11 +215,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper A overbar",
-        "brief": "upper A overbar",
-        "sbrief": "upper A overbar"
       }
     }
   },
@@ -358,11 +223,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with breve",
-        "brief": "mod above upper A with breve",
-        "sbrief": "mod above upper A with breve"
       }
     }
   },
@@ -371,11 +231,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A ogonek"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with ogonek",
-        "brief": "mod above upper A with ogonek",
-        "sbrief": "mod above upper A with ogonek"
       }
     }
   },
@@ -384,11 +239,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter C akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper C with acute",
-        "brief": "mod above upper C with acute",
-        "sbrief": "mod above upper C with acute"
       }
     }
   },
@@ -397,11 +247,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter C hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper C with caret",
-        "brief": "mod above upper C with caret",
-        "sbrief": "mod above upper C with caret"
       }
     }
   },
@@ -410,11 +255,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter C bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper C with dot",
-        "brief": "mod above upper C with dot",
-        "sbrief": "mod above upper C with dot"
       }
     }
   },
@@ -423,11 +263,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter C karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper C with caron",
-        "brief": "mod above upper C with caron",
-        "sbrief": "mod above upper C with caron"
       }
     }
   },
@@ -436,11 +271,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter D karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper D with caron",
-        "brief": "mod above upper D with caron",
-        "sbrief": "mod above upper D with caron"
       }
     }
   },
@@ -449,11 +279,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper E overbar",
-        "brief": "upper E overbar",
-        "sbrief": "upper E overbar"
       }
     }
   },
@@ -462,11 +287,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with breve",
-        "brief": "mod above upper E with breve",
-        "sbrief": "mod above upper E with breve"
       }
     }
   },
@@ -475,11 +295,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with dot",
-        "brief": "mod above upper E with dot",
-        "sbrief": "mod above upper E with dot"
       }
     }
   },
@@ -488,11 +303,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E ogonek"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with ogonek",
-        "brief": "mod above upper E with ogonek",
-        "sbrief": "mod above upper E with ogonek"
       }
     }
   },
@@ -501,11 +311,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with caron",
-        "brief": "mod above upper E with caron",
-        "sbrief": "mod above upper E with caron"
       }
     }
   },
@@ -514,11 +319,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper G with caret",
-        "brief": "mod above upper G with caret",
-        "sbrief": "mod above upper G with caret"
       }
     }
   },
@@ -527,11 +327,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper G with breve",
-        "brief": "mod above upper G with breve",
-        "sbrief": "mod above upper G with breve"
       }
     }
   },
@@ -540,11 +335,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper G with dot",
-        "brief": "mod above upper G with dot",
-        "sbrief": "mod above upper G with dot"
       }
     }
   },
@@ -553,11 +343,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper G with cedilla",
-        "brief": "mod above upper G with cedilla",
-        "sbrief": "mod above upper G with cedilla"
       }
     }
   },
@@ -566,11 +351,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper H with caret",
-        "brief": "mod above upper H with caret",
-        "sbrief": "mod above upper H with caret"
       }
     }
   },
@@ -579,11 +359,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I tilde"
-      },
-      "mathspeak": {
-        "default": "upper I overtilde",
-        "brief": "upper I overtilde",
-        "sbrief": "upper I overtilde"
       }
     }
   },
@@ -592,11 +367,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper I overbar",
-        "brief": "upper I overbar",
-        "sbrief": "upper I overbar"
       }
     }
   },
@@ -605,11 +375,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with breve",
-        "brief": "mod above upper I with breve",
-        "sbrief": "mod above upper I with breve"
       }
     }
   },
@@ -618,11 +383,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I ogonek"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with ogonek",
-        "brief": "mod above upper I with ogonek",
-        "sbrief": "mod above upper I with ogonek"
       }
     }
   },
@@ -631,11 +391,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with dot",
-        "brief": "mod above upper I with dot",
-        "sbrief": "mod above upper I with dot"
       }
     }
   },
@@ -644,11 +399,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter J hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper J with caret",
-        "brief": "mod above upper J with caret",
-        "sbrief": "mod above upper J with caret"
       }
     }
   },
@@ -657,11 +407,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter K sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper K with cedilla",
-        "brief": "mod above upper K with cedilla",
-        "sbrief": "mod above upper K with cedilla"
       }
     }
   },
@@ -670,11 +415,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper L with acute",
-        "brief": "mod above upper L with acute",
-        "sbrief": "mod above upper L with acute"
       }
     }
   },
@@ -683,11 +423,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper L with cedilla",
-        "brief": "mod above upper L with cedilla",
-        "sbrief": "mod above upper L with cedilla"
       }
     }
   },
@@ -696,11 +431,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper L with caron",
-        "brief": "mod above upper L with caron",
-        "sbrief": "mod above upper L with caron"
       }
     }
   },
@@ -709,11 +439,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L middel punt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper L with middle dot",
-        "brief": "mod above upper L with middle dot",
-        "sbrief": "mod above upper L with middle dot"
       }
     }
   },
@@ -722,11 +447,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper N with acute",
-        "brief": "mod above upper N with acute",
-        "sbrief": "mod above upper N with acute"
       }
     }
   },
@@ -735,11 +455,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper N with cedilla",
-        "brief": "mod above upper N with cedilla",
-        "sbrief": "mod above upper N with cedilla"
       }
     }
   },
@@ -748,11 +463,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper N with caron",
-        "brief": "mod above upper N with caron",
-        "sbrief": "mod above upper N with caron"
       }
     }
   },
@@ -761,11 +471,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper O overbar",
-        "brief": "upper O overbar",
-        "sbrief": "upper O overbar"
       }
     }
   },
@@ -774,11 +479,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with breve",
-        "brief": "mod above upper O with breve",
-        "sbrief": "mod above upper O with breve"
       }
     }
   },
@@ -787,11 +487,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O dubbel akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with double acute",
-        "brief": "mod above upper O with double acute",
-        "sbrief": "mod above upper O with double acute"
       }
     }
   },
@@ -800,11 +495,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper R with acute",
-        "brief": "mod above upper R with acute",
-        "sbrief": "mod above upper R with acute"
       }
     }
   },
@@ -813,11 +503,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper R with cedilla",
-        "brief": "mod above upper R with cedilla",
-        "sbrief": "mod above upper R with cedilla"
       }
     }
   },
@@ -826,11 +511,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper R with caron",
-        "brief": "mod above upper R with caron",
-        "sbrief": "mod above upper R with caron"
       }
     }
   },
@@ -839,11 +519,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter S akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper S with acute",
-        "brief": "mod above upper S with acute",
-        "sbrief": "mod above upper S with acute"
       }
     }
   },
@@ -852,11 +527,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter S hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper S with caret",
-        "brief": "mod above upper S with caret",
-        "sbrief": "mod above upper S with caret"
       }
     }
   },
@@ -865,11 +535,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter S sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper S with cedilla",
-        "brief": "mod above upper S with cedilla",
-        "sbrief": "mod above upper S with cedilla"
       }
     }
   },
@@ -878,11 +543,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter S karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper S with caron",
-        "brief": "mod above upper S with caron",
-        "sbrief": "mod above upper S with caron"
       }
     }
   },
@@ -891,11 +551,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter T sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper T with cedilla",
-        "brief": "mod above upper T with cedilla",
-        "sbrief": "mod above upper T with cedilla"
       }
     }
   },
@@ -904,11 +559,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter T karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper T with caron",
-        "brief": "mod above upper T with caron",
-        "sbrief": "mod above upper T with caron"
       }
     }
   },
@@ -917,11 +567,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U tilde"
-      },
-      "mathspeak": {
-        "default": "upper U overtilde",
-        "brief": "upper U overtilde",
-        "sbrief": "upper U overtilde"
       }
     }
   },
@@ -930,11 +575,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper U overbar",
-        "brief": "upper U overbar",
-        "sbrief": "upper U overbar"
       }
     }
   },
@@ -943,11 +583,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with breve",
-        "brief": "mod above upper U with breve",
-        "sbrief": "mod above upper U with breve"
       }
     }
   },
@@ -956,11 +591,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U ring"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with ring",
-        "brief": "mod above upper U with ring",
-        "sbrief": "mod above upper U with ring"
       }
     }
   },
@@ -969,11 +599,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U dubbel akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with double acute",
-        "brief": "mod above upper U with double acute",
-        "sbrief": "mod above upper U with double acute"
       }
     }
   },
@@ -982,11 +607,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U ogonek"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with ogonek",
-        "brief": "mod above upper U with ogonek",
-        "sbrief": "mod above upper U with ogonek"
       }
     }
   },
@@ -995,11 +615,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter W hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper W with caret",
-        "brief": "mod above upper W with caret",
-        "sbrief": "mod above upper W with caret"
       }
     }
   },
@@ -1008,11 +623,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y hoed"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Y with caret",
-        "brief": "mod above upper Y with caret",
-        "sbrief": "mod above upper Y with caret"
       }
     }
   },
@@ -1021,11 +631,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Y with double dot",
-        "brief": "mod above upper Y with double dot",
-        "sbrief": "mod above upper Y with double dot"
       }
     }
   },
@@ -1034,11 +639,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Z akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Z with acute",
-        "brief": "mod above upper Z with acute",
-        "sbrief": "mod above upper Z with acute"
       }
     }
   },
@@ -1047,11 +647,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Z bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Z with dot",
-        "brief": "mod above upper Z with dot",
-        "sbrief": "mod above upper Z with dot"
       }
     }
   },
@@ -1060,11 +655,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Z karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Z with caron",
-        "brief": "mod above upper Z with caron",
-        "sbrief": "mod above upper Z with caron"
       }
     }
   },
@@ -1073,11 +663,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with caron",
-        "brief": "mod above upper A with caron",
-        "sbrief": "mod above upper A with caron"
       }
     }
   },
@@ -1086,11 +671,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with caron",
-        "brief": "mod above upper I with caron",
-        "sbrief": "mod above upper I with caron"
       }
     }
   },
@@ -1099,11 +679,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with caron",
-        "brief": "mod above upper O with caron",
-        "sbrief": "mod above upper O with caron"
       }
     }
   },
@@ -1112,11 +687,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with caron",
-        "brief": "mod above upper U with caron",
-        "sbrief": "mod above upper U with caron"
       }
     }
   },
@@ -1125,11 +695,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper G with caron",
-        "brief": "mod above upper G with caron",
-        "sbrief": "mod above upper G with caron"
       }
     }
   },
@@ -1138,11 +703,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter K karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper K with caron",
-        "brief": "mod above upper K with caron",
-        "sbrief": "mod above upper K with caron"
       }
     }
   },
@@ -1151,11 +711,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O ogonek"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with ogonek",
-        "brief": "mod above upper O with ogonek",
-        "sbrief": "mod above upper O with ogonek"
       }
     }
   },
@@ -1164,11 +719,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper G with acute",
-        "brief": "mod above upper G with acute",
-        "sbrief": "mod above upper G with acute"
       }
     }
   },
@@ -1177,11 +727,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper N with grave",
-        "brief": "mod above upper N with grave",
-        "sbrief": "mod above upper N with grave"
       }
     }
   },
@@ -1190,11 +735,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A dubbel gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with double grave",
-        "brief": "mod above upper A with double grave",
-        "sbrief": "mod above upper A with double grave"
       }
     }
   },
@@ -1203,11 +743,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A tru brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with inverted breve",
-        "brief": "mod above upper A with inverted breve",
-        "sbrief": "mod above upper A with inverted breve"
       }
     }
   },
@@ -1216,11 +751,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E dubbel gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with double grave",
-        "brief": "mod above upper E with double grave",
-        "sbrief": "mod above upper E with double grave"
       }
     }
   },
@@ -1229,11 +759,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E tru brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with inverted breve",
-        "brief": "mod above upper E with inverted breve",
-        "sbrief": "mod above upper E with inverted breve"
       }
     }
   },
@@ -1242,11 +767,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I dubbel gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with double grave",
-        "brief": "mod above upper I with double grave",
-        "sbrief": "mod above upper I with double grave"
       }
     }
   },
@@ -1255,11 +775,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I tru brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with inverted breve",
-        "brief": "mod above upper I with inverted breve",
-        "sbrief": "mod above upper I with inverted breve"
       }
     }
   },
@@ -1268,11 +783,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O dubbel gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with double grave",
-        "brief": "mod above upper O with double grave",
-        "sbrief": "mod above upper O with double grave"
       }
     }
   },
@@ -1281,11 +791,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O tru brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with inverted breve",
-        "brief": "mod above upper O with inverted breve",
-        "sbrief": "mod above upper O with inverted breve"
       }
     }
   },
@@ -1294,11 +799,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R dubbel gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper R with double grave",
-        "brief": "mod above upper R with double grave",
-        "sbrief": "mod above upper R with double grave"
       }
     }
   },
@@ -1307,11 +807,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R tru brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper R with inverted breve",
-        "brief": "mod above upper R with inverted breve",
-        "sbrief": "mod above upper R with inverted breve"
       }
     }
   },
@@ -1320,11 +815,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U dubbel gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with double grave",
-        "brief": "mod above upper U with double grave",
-        "sbrief": "mod above upper U with double grave"
       }
     }
   },
@@ -1333,11 +823,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U tru brevis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with inverted breve",
-        "brief": "mod above upper U with inverted breve",
-        "sbrief": "mod above upper U with inverted breve"
       }
     }
   },
@@ -1346,11 +831,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter s komma onder"
-      },
-      "mathspeak": {
-        "default": "modifying below upper S with comma below",
-        "brief": "mod below upper S with comma below",
-        "sbrief": "mod below upper S with comma below"
       }
     }
   },
@@ -1359,11 +839,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter t komma onder"
-      },
-      "mathspeak": {
-        "default": "modifying below upper T with comma below",
-        "brief": "mod below upper T with comma below",
-        "sbrief": "mod below upper T with comma below"
       }
     }
   },
@@ -1372,11 +847,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H karon"
-      },
-      "mathspeak": {
-        "default": "modifying above upper H with caron",
-        "brief": "mod above upper H with caron",
-        "sbrief": "mod above upper H with caron"
       }
     }
   },
@@ -1385,11 +855,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with dot",
-        "brief": "mod above upper A with dot",
-        "sbrief": "mod above upper A with dot"
       }
     }
   },
@@ -1398,11 +863,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with cedilla",
-        "brief": "mod above upper E with cedilla",
-        "sbrief": "mod above upper E with cedilla"
       }
     }
   },
@@ -1411,11 +871,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with dot",
-        "brief": "mod above upper O with dot",
-        "sbrief": "mod above upper O with dot"
       }
     }
   },
@@ -1424,11 +879,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper Y overbar",
-        "brief": "upper Y overbar",
-        "sbrief": "upper Y overbar"
       }
     }
   },
@@ -1437,11 +887,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a ring onder"
-      },
-      "mathspeak": {
-        "default": "modifying below upper A with ring below",
-        "brief": "mod below upper A with ring below",
-        "sbrief": "mod below upper A with ring below"
       }
     }
   },
@@ -1450,11 +895,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter B bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper B with dot",
-        "brief": "mod above upper B with dot",
-        "sbrief": "mod above upper B with dot"
       }
     }
   },
@@ -1463,11 +903,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter B onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper B with dot",
-        "brief": "mod below upper B with dot",
-        "sbrief": "mod below upper B with dot"
       }
     }
   },
@@ -1476,11 +911,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter B onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper B underbar",
-        "brief": "upper B underbar",
-        "sbrief": "upper B underbar"
       }
     }
   },
@@ -1489,11 +919,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter D bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper D with dot",
-        "brief": "mod above upper D with dot",
-        "sbrief": "mod above upper D with dot"
       }
     }
   },
@@ -1502,11 +927,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter D onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper D with dot",
-        "brief": "mod below upper D with dot",
-        "sbrief": "mod below upper D with dot"
       }
     }
   },
@@ -1515,11 +935,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter D onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper D underbar",
-        "brief": "upper D underbar",
-        "sbrief": "upper D underbar"
       }
     }
   },
@@ -1528,11 +943,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter D sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper D with cedilla",
-        "brief": "mod above upper D with cedilla",
-        "sbrief": "mod above upper D with cedilla"
       }
     }
   },
@@ -1541,11 +951,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter D onderhoed"
-      },
-      "mathspeak": {
-        "default": "modifying below upper D with caret",
-        "brief": "mod below upper D with caret",
-        "sbrief": "mod below upper D with caret"
       }
     }
   },
@@ -1554,11 +959,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E onderhoed"
-      },
-      "mathspeak": {
-        "default": "modifying below upper E with caret",
-        "brief": "mod below upper E with caret",
-        "sbrief": "mod below upper E with caret"
       }
     }
   },
@@ -1567,11 +967,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e tilde onder"
-      },
-      "mathspeak": {
-        "default": "upper E undertilde",
-        "brief": "upper E undertilde",
-        "sbrief": "upper E undertilde"
       }
     }
   },
@@ -1580,11 +975,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter F bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper F with dot",
-        "brief": "mod above upper F with dot",
-        "sbrief": "mod above upper F with dot"
       }
     }
   },
@@ -1593,11 +983,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter G bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper G overbar",
-        "brief": "upper G overbar",
-        "sbrief": "upper G overbar"
       }
     }
   },
@@ -1606,11 +991,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper H with dot",
-        "brief": "mod above upper H with dot",
-        "sbrief": "mod above upper H with dot"
       }
     }
   },
@@ -1619,11 +999,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper H with dot",
-        "brief": "mod below upper H with dot",
-        "sbrief": "mod below upper H with dot"
       }
     }
   },
@@ -1632,11 +1007,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper H with double dot",
-        "brief": "mod above upper H with double dot",
-        "sbrief": "mod above upper H with double dot"
       }
     }
   },
@@ -1645,11 +1015,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H sidilla"
-      },
-      "mathspeak": {
-        "default": "modifying above upper H with cedilla",
-        "brief": "mod above upper H with cedilla",
-        "sbrief": "mod above upper H with cedilla"
       }
     }
   },
@@ -1658,11 +1023,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter H brevis onder"
-      },
-      "mathspeak": {
-        "default": "modifying below upper H with breve below",
-        "brief": "mod below upper H with breve below",
-        "sbrief": "mod below upper H with breve below"
       }
     }
   },
@@ -1671,11 +1031,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I tilde onder"
-      },
-      "mathspeak": {
-        "default": "upper I undertilde",
-        "brief": "upper I undertilde",
-        "sbrief": "upper I undertilde"
       }
     }
   },
@@ -1684,11 +1039,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter K akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper K with acute",
-        "brief": "mod above upper K with acute",
-        "sbrief": "mod above upper K with acute"
       }
     }
   },
@@ -1697,11 +1047,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter K onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper K with dot",
-        "brief": "mod below upper K with dot",
-        "sbrief": "mod below upper K with dot"
       }
     }
   },
@@ -1710,11 +1055,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter K onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper K underbar",
-        "brief": "upper K underbar",
-        "sbrief": "upper K underbar"
       }
     }
   },
@@ -1723,11 +1063,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper L with dot",
-        "brief": "mod below upper L with dot",
-        "sbrief": "mod below upper L with dot"
       }
     }
   },
@@ -1736,11 +1071,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper L underbar",
-        "brief": "upper L underbar",
-        "sbrief": "upper L underbar"
       }
     }
   },
@@ -1749,11 +1079,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter L onderhoed"
-      },
-      "mathspeak": {
-        "default": "modifying below upper L with caret",
-        "brief": "mod below upper L with caret",
-        "sbrief": "mod below upper L with caret"
       }
     }
   },
@@ -1762,11 +1087,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter M akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper M with acute",
-        "brief": "mod above upper M with acute",
-        "sbrief": "mod above upper M with acute"
       }
     }
   },
@@ -1775,11 +1095,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter M bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper M with dot",
-        "brief": "mod above upper M with dot",
-        "sbrief": "mod above upper M with dot"
       }
     }
   },
@@ -1788,11 +1103,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter M onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper M with dot",
-        "brief": "mod below upper M with dot",
-        "sbrief": "mod below upper M with dot"
       }
     }
   },
@@ -1801,11 +1111,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper N with dot",
-        "brief": "mod above upper N with dot",
-        "sbrief": "mod above upper N with dot"
       }
     }
   },
@@ -1814,11 +1119,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper N with dot",
-        "brief": "mod below upper N with dot",
-        "sbrief": "mod below upper N with dot"
       }
     }
   },
@@ -1827,11 +1127,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper N underbar",
-        "brief": "upper N underbar",
-        "sbrief": "upper N underbar"
       }
     }
   },
@@ -1840,11 +1135,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter N onderhoed"
-      },
-      "mathspeak": {
-        "default": "modifying below upper N with caret",
-        "brief": "mod below upper N with caret",
-        "sbrief": "mod below upper N with caret"
       }
     }
   },
@@ -1853,11 +1143,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter P akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper P with acute",
-        "brief": "mod above upper P with acute",
-        "sbrief": "mod above upper P with acute"
       }
     }
   },
@@ -1866,11 +1151,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter P bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper P with dot",
-        "brief": "mod above upper P with dot",
-        "sbrief": "mod above upper P with dot"
       }
     }
   },
@@ -1879,11 +1159,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper R with dot",
-        "brief": "mod above upper R with dot",
-        "sbrief": "mod above upper R with dot"
       }
     }
   },
@@ -1892,11 +1167,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper R with dot",
-        "brief": "mod below upper R with dot",
-        "sbrief": "mod below upper R with dot"
       }
     }
   },
@@ -1905,11 +1175,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter R onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper R underbar",
-        "brief": "upper R underbar",
-        "sbrief": "upper R underbar"
       }
     }
   },
@@ -1918,11 +1183,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter S bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper S with dot",
-        "brief": "mod above upper S with dot",
-        "sbrief": "mod above upper S with dot"
       }
     }
   },
@@ -1931,11 +1191,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter S onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper S with dot",
-        "brief": "mod below upper S with dot",
-        "sbrief": "mod below upper S with dot"
       }
     }
   },
@@ -1944,11 +1199,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter T bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper T with dot",
-        "brief": "mod above upper T with dot",
-        "sbrief": "mod above upper T with dot"
       }
     }
   },
@@ -1957,11 +1207,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter T onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper T with dot",
-        "brief": "mod below upper T with dot",
-        "sbrief": "mod below upper T with dot"
       }
     }
   },
@@ -1970,11 +1215,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter T onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper T underbar",
-        "brief": "upper T underbar",
-        "sbrief": "upper T underbar"
       }
     }
   },
@@ -1983,11 +1223,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter T onderhoed"
-      },
-      "mathspeak": {
-        "default": "modifying below upper T with caret",
-        "brief": "mod below upper T with caret",
-        "sbrief": "mod below upper T with caret"
       }
     }
   },
@@ -1996,11 +1231,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U dubbel onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper U with double dot",
-        "brief": "mod below upper U with double dot",
-        "sbrief": "mod below upper U with double dot"
       }
     }
   },
@@ -2009,11 +1239,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U tilde onder"
-      },
-      "mathspeak": {
-        "default": "upper U undertilde",
-        "brief": "upper U undertilde",
-        "sbrief": "upper U undertilde"
       }
     }
   },
@@ -2022,11 +1247,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U onderhoed"
-      },
-      "mathspeak": {
-        "default": "modifying below upper U with caret",
-        "brief": "mod below upper U with caret",
-        "sbrief": "mod below upper U with caret"
       }
     }
   },
@@ -2035,11 +1255,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter V tilde"
-      },
-      "mathspeak": {
-        "default": "upper V overtilde",
-        "brief": "upper V overtilde",
-        "sbrief": "upper V overtilde"
       }
     }
   },
@@ -2048,11 +1263,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter V onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper V with dot",
-        "brief": "mod below upper V with dot",
-        "sbrief": "mod below upper V with dot"
       }
     }
   },
@@ -2061,11 +1271,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter W gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper W with grave",
-        "brief": "mod above upper W with grave",
-        "sbrief": "mod above upper W with grave"
       }
     }
   },
@@ -2074,11 +1279,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter W akkuut"
-      },
-      "mathspeak": {
-        "default": "modifying above upper W with acute",
-        "brief": "mod above upper W with acute",
-        "sbrief": "mod above upper W with acute"
       }
     }
   },
@@ -2087,11 +1287,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter W dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper W with double dot",
-        "brief": "mod above upper W with double dot",
-        "sbrief": "mod above upper W with double dot"
       }
     }
   },
@@ -2100,11 +1295,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter W bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper W with dot",
-        "brief": "mod above upper W with dot",
-        "sbrief": "mod above upper W with dot"
       }
     }
   },
@@ -2113,11 +1303,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter W onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper W with dot",
-        "brief": "mod below upper W with dot",
-        "sbrief": "mod below upper W with dot"
       }
     }
   },
@@ -2126,11 +1311,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter X bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper X with dot",
-        "brief": "mod above upper X with dot",
-        "sbrief": "mod above upper X with dot"
       }
     }
   },
@@ -2139,11 +1319,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter X dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper X with double dot",
-        "brief": "mod above upper X with double dot",
-        "sbrief": "mod above upper X with double dot"
       }
     }
   },
@@ -2152,11 +1327,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y bopunt"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Y with dot",
-        "brief": "mod above upper Y with dot",
-        "sbrief": "mod above upper Y with dot"
       }
     }
   },
@@ -2165,11 +1335,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter kappie z"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Z with circumflex",
-        "brief": "mod above upper Z with circumflex",
-        "sbrief": "mod above upper Z with circumflex"
       }
     }
   },
@@ -2178,11 +1343,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Z onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper Z with dot",
-        "brief": "mod below upper Z with dot",
-        "sbrief": "mod below upper Z with dot"
       }
     }
   },
@@ -2191,11 +1351,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Z onderstaaf"
-      },
-      "mathspeak": {
-        "default": "upper Z underbar",
-        "brief": "upper Z underbar",
-        "sbrief": "upper Z underbar"
       }
     }
   },
@@ -2204,11 +1359,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper A with dot",
-        "brief": "mod below upper A with dot",
-        "sbrief": "mod below upper A with dot"
       }
     }
   },
@@ -2217,11 +1367,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter A haak"
-      },
-      "mathspeak": {
-        "default": "modifying above upper A with hook",
-        "brief": "mod above upper A with hook",
-        "sbrief": "mod above upper A with hook"
       }
     }
   },
@@ -2230,11 +1375,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper E with dot",
-        "brief": "mod below upper E with dot",
-        "sbrief": "mod below upper E with dot"
       }
     }
   },
@@ -2243,11 +1383,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E haak"
-      },
-      "mathspeak": {
-        "default": "modifying above upper E with hook",
-        "brief": "mod above upper E with hook",
-        "sbrief": "mod above upper E with hook"
       }
     }
   },
@@ -2256,11 +1391,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter E tilde"
-      },
-      "mathspeak": {
-        "default": "upper E overtilde",
-        "brief": "upper E overtilde",
-        "sbrief": "upper E overtilde"
       }
     }
   },
@@ -2269,11 +1399,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I haak"
-      },
-      "mathspeak": {
-        "default": "modifying above upper I with hook",
-        "brief": "mod above upper I with hook",
-        "sbrief": "mod above upper I with hook"
       }
     }
   },
@@ -2282,11 +1407,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter I onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper I with dot",
-        "brief": "mod below upper I with dot",
-        "sbrief": "mod below upper I with dot"
       }
     }
   },
@@ -2295,11 +1415,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper O with dot",
-        "brief": "mod below upper O with dot",
-        "sbrief": "mod below upper O with dot"
       }
     }
   },
@@ -2308,11 +1423,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter O haak"
-      },
-      "mathspeak": {
-        "default": "modifying above upper O with hook",
-        "brief": "mod above upper O with hook",
-        "sbrief": "mod above upper O with hook"
       }
     }
   },
@@ -2321,11 +1431,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper U with dot",
-        "brief": "mod below upper U with dot",
-        "sbrief": "mod below upper U with dot"
       }
     }
   },
@@ -2334,11 +1439,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter U haak"
-      },
-      "mathspeak": {
-        "default": "modifying above upper U with hook",
-        "brief": "mod above upper U with hook",
-        "sbrief": "mod above upper U with hook"
       }
     }
   },
@@ -2347,11 +1447,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y gravis"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Y with grave",
-        "brief": "mod above upper Y with grave",
-        "sbrief": "mod above upper Y with grave"
       }
     }
   },
@@ -2360,11 +1455,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y onderpunt"
-      },
-      "mathspeak": {
-        "default": "modifying below upper Y with dot",
-        "brief": "mod below upper Y with dot",
-        "sbrief": "mod below upper Y with dot"
       }
     }
   },
@@ -2373,11 +1463,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y haak"
-      },
-      "mathspeak": {
-        "default": "modifying above upper Y with hook",
-        "brief": "mod above upper Y with hook",
-        "sbrief": "mod above upper Y with hook"
       }
     }
   },
@@ -2386,11 +1471,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter Y tilde"
-      },
-      "mathspeak": {
-        "default": "upper Y overtilde",
-        "brief": "upper Y overtilde",
-        "sbrief": "upper Y overtilde"
       }
     }
   }

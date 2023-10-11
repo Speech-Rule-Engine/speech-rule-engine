@@ -31,9 +31,6 @@
     "mappings": {
       "default": {
         "default": "vetgedrukte hoofletter Digamma"
-      },
-      "mathspeak": {
-        "default": "bold upper Digamma"
       }
     }
   },

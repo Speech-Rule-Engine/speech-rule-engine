@@ -137,9 +137,6 @@
     "mappings": {
       "default": {
         "default": "dwars hoofletter f"
-      },
-      "mathspeak": {
-        "default": "turned upper F"
       }
     }
   },
@@ -156,9 +153,6 @@
     "mappings": {
       "default": {
         "default": "roeteerde hoofletter q"
-      },
-      "mathspeak": {
-        "default": "rotated upper Q"
       }
     }
   },
@@ -175,9 +169,6 @@
     "mappings": {
       "default": {
         "default": "dwars sansskrif hoofletter g"
-      },
-      "mathspeak": {
-        "default": "turned sans serif upper G"
       }
     }
   },
@@ -186,9 +177,6 @@
     "mappings": {
       "default": {
         "default": "dwars sansskrif hoofletter l"
-      },
-      "mathspeak": {
-        "default": "turned sans serif upper L"
       }
     }
   },
@@ -197,9 +185,6 @@
     "mappings": {
       "default": {
         "default": "agterstevoor sanskrif hoofletter l"
-      },
-      "mathspeak": {
-        "default": "reversed sans serif upper L"
       }
     }
   },
@@ -208,9 +193,6 @@
     "mappings": {
       "default": {
         "default": "dwars sansskrif hoofletter y"
-      },
-      "mathspeak": {
-        "default": "turned sans serif upper Y"
       }
     }
   }
