@@ -16,13 +16,8 @@
     ],
     [
       "Action",
-      "german-font",
-      "[t] \"Duits\"; [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
-      "german-font-bold",
-      "[t] \"kursief Duits\"; [n] . (grammar:ignoreFont=@font)"
+      "font-double-struck",
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],
     [
       "Action",

@@ -7,13 +7,6 @@
     "mappings": {
       "default": {
         "default": "links hakkie"
-      },
-      "mathspeak": {
-        "brief": "left p'ren",
-        "sbrief": "L p'ren"
-      },
-      "clearspeak": {
-        "default": "open paren"
       }
     }
   },
@@ -22,13 +15,6 @@
     "mappings": {
       "default": {
         "default": "regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "right p'ren",
-        "sbrief": "R p'ren"
-      },
-      "clearspeak": {
-        "default": "close paren"
       }
     }
   },
@@ -37,13 +23,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "left brack",
-        "sbrief": "L brack"
-      },
-      "clearspeak": {
-        "default": "open bracket"
       }
     }
   },
@@ -52,13 +31,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "right brack",
-        "sbrief": "R brack"
-      },
-      "clearspeak": {
-        "default": "close bracket"
       }
     }
   },
@@ -67,12 +39,6 @@
     "mappings": {
       "default": {
         "default": "links krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "L brace"
-      },
-      "clearspeak": {
-        "default": "open brace"
       }
     }
   },
@@ -81,12 +47,6 @@
     "mappings": {
       "default": {
         "default": "regs krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "R brace"
-      },
-      "clearspeak": {
-        "default": "close brace"
       }
     }
   },
@@ -95,10 +55,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie met veer"
-      },
-      "mathspeak": {
-        "brief": "left brack with quill",
-        "sbrief": "L brack with quill"
       }
     }
   },
@@ -107,10 +63,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie met veer"
-      },
-      "mathspeak": {
-        "brief": "right brack with quill",
-        "sbrief": "R brack with quill"
       }
     }
   },
@@ -249,10 +201,6 @@
     "mappings": {
       "default": {
         "default": "links hakkie boonste haak"
-      },
-      "mathspeak": {
-        "brief": "left p'ren upper hook",
-        "sbrief": "L p'ren upper hook"
       }
     }
   },
@@ -261,10 +209,6 @@
     "mappings": {
       "default": {
         "default": "links hakkie uitbreiding"
-      },
-      "mathspeak": {
-        "brief": "left p'ren extension",
-        "sbrief": "L p'ren extension"
       }
     }
   },
@@ -273,10 +217,6 @@
     "mappings": {
       "default": {
         "default": "links hakkie onderste haak"
-      },
-      "mathspeak": {
-        "brief": "left p'ren lower hook",
-        "sbrief": "L p'ren lower hook"
       }
     }
   },
@@ -285,10 +225,6 @@
     "mappings": {
       "default": {
         "default": "regs hakkie boonste haak"
-      },
-      "mathspeak": {
-        "brief": "right p'ren upper hook",
-        "sbrief": "R p'ren upper hook"
       }
     }
   },
@@ -297,10 +233,6 @@
     "mappings": {
       "default": {
         "default": "regs hakkie uitbreiding"
-      },
-      "mathspeak": {
-        "brief": "right p'ren extension",
-        "sbrief": "R p'ren extension"
       }
     }
   },
@@ -309,10 +241,6 @@
     "mappings": {
       "default": {
         "default": "regs hakkie onderste haak"
-      },
-      "mathspeak": {
-        "brief": "right p'ren lower hook",
-        "sbrief": "R p'ren lower hook"
       }
     }
   },
@@ -321,10 +249,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie boonste hoek"
-      },
-      "mathspeak": {
-        "brief": "left brack upper corner",
-        "sbrief": "L brack upper corner"
       }
     }
   },
@@ -333,10 +257,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie uitbreiding"
-      },
-      "mathspeak": {
-        "brief": "left brack extension",
-        "sbrief": "L brack extension"
       }
     }
   },
@@ -345,10 +265,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie onderste hoek"
-      },
-      "mathspeak": {
-        "brief": "left brack lower corner",
-        "sbrief": "L brack lower corner"
       }
     }
   },
@@ -357,10 +273,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie boonste hoek"
-      },
-      "mathspeak": {
-        "brief": "right brack upper corner",
-        "sbrief": "R brack upper corner"
       }
     }
   },
@@ -369,10 +281,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie uitbreiding"
-      },
-      "mathspeak": {
-        "brief": "right brack extension",
-        "sbrief": "R brack extension"
       }
     }
   },
@@ -381,10 +289,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie onderste hoek"
-      },
-      "mathspeak": {
-        "brief": "right brack lower corner",
-        "sbrief": "R brack lower corner"
       }
     }
   },
@@ -393,9 +297,6 @@
     "mappings": {
       "default": {
         "default": "links kru lhakkie boonste haak"
-      },
-      "mathspeak": {
-        "sbrief": "L brace upper hook"
       }
     }
   },
@@ -404,9 +305,6 @@
     "mappings": {
       "default": {
         "default": "links krulhakkie middeldeel"
-      },
-      "mathspeak": {
-        "sbrief": "L brace middle piece"
       }
     }
   },
@@ -415,9 +313,6 @@
     "mappings": {
       "default": {
         "default": "links krulhakkie onderste haak"
-      },
-      "mathspeak": {
-        "sbrief": "L brace lower hook"
       }
     }
   },
@@ -434,9 +329,6 @@
     "mappings": {
       "default": {
         "default": "regs krulhakkie boonste haak"
-      },
-      "mathspeak": {
-        "sbrief": "R brace upper hook"
       }
     }
   },
@@ -445,9 +337,6 @@
     "mappings": {
       "default": {
         "default": "regs krulhakkie middeldeel"
-      },
-      "mathspeak": {
-        "sbrief": "R brace middle piece"
       }
     }
   },
@@ -456,9 +345,6 @@
     "mappings": {
       "default": {
         "default": "regs krulhakkie onderste haak"
-      },
-      "mathspeak": {
-        "sbrief": "R brace lower hook"
       }
     }
   },
@@ -515,10 +401,6 @@
     "mappings": {
       "default": {
         "default": "top blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "top brack",
-        "sbrief": "T brack"
       }
     }
   },
@@ -527,10 +409,6 @@
     "mappings": {
       "default": {
         "default": "onder blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "bottom brack",
-        "sbrief": "B brack"
       }
     }
   },
@@ -539,10 +417,6 @@
     "mappings": {
       "default": {
         "default": "onder hakkie oor top hakkie"
-      },
-      "mathspeak": {
-        "brief": "bottom brack over top brack",
-        "sbrief": "B brack over T brack"
       }
     }
   },
@@ -575,10 +449,6 @@
     "mappings": {
       "default": {
         "default": "bo hakkie"
-      },
-      "mathspeak": {
-        "brief": "top p'ren",
-        "sbrief": "t p'ren"
       }
     }
   },
@@ -587,10 +457,6 @@
     "mappings": {
       "default": {
         "default": "onder hakkie "
-      },
-      "mathspeak": {
-        "brief": "bottom p'ren",
-        "sbrief": "b p'ren"
       }
     }
   },
@@ -599,9 +465,6 @@
     "mappings": {
       "default": {
         "default": "bo krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "T brace"
       }
     }
   },
@@ -610,9 +473,6 @@
     "mappings": {
       "default": {
         "default": "onder krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "B brace"
       }
     }
   },
@@ -637,10 +497,6 @@
     "mappings": {
       "default": {
         "default": "medium links hakkie ornament"
-      },
-      "mathspeak": {
-        "brief": "medium left p'ren ornament",
-        "sbrief": "medium L p'ren ornament"
       }
     }
   },
@@ -649,10 +505,6 @@
     "mappings": {
       "default": {
         "default": "medium regs hakkie ornament"
-      },
-      "mathspeak": {
-        "brief": "medium right p'ren ornament",
-        "sbrief": "medium R p'ren ornament"
       }
     }
   },
@@ -661,10 +513,6 @@
     "mappings": {
       "default": {
         "default": "medium afgeplatte links hakkie ornament"
-      },
-      "mathspeak": {
-        "brief": "medium flattened left p'ren ornament",
-        "sbrief": "medium flattened L p'ren ornament"
       }
     }
   },
@@ -673,10 +521,6 @@
     "mappings": {
       "default": {
         "default": "medium afgeplatte regs hakkie ornament"
-      },
-      "mathspeak": {
-        "brief": "medium flattened right p'ren ornament",
-        "sbrief": "medium flattened R p'ren ornament"
       }
     }
   },
@@ -749,9 +593,6 @@
     "mappings": {
       "default": {
         "default": "medium links krulhakkie ornament"
-      },
-      "mathspeak": {
-        "sbrief": "medium L brace ornament"
       }
     }
   },
@@ -760,9 +601,6 @@
     "mappings": {
       "default": {
         "default": "medium regs krulhakkie ornament"
-      },
-      "mathspeak": {
-        "sbrief": "medium R brace ornament"
       }
     }
   },
@@ -803,9 +641,6 @@
     "mappings": {
       "default": {
         "default": "links hoekhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "l angle bracket"
       }
     }
   },
@@ -814,9 +649,6 @@
     "mappings": {
       "default": {
         "default": "regs hoekhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "r angle bracket"
       }
     }
   },
@@ -857,10 +689,6 @@
     "mappings": {
       "default": {
         "default": "afgeplatte links hakkie"
-      },
-      "mathspeak": {
-        "brief": "flattened left p'ren",
-        "sbrief": "flattened L p'ren"
       }
     }
   },
@@ -869,10 +697,6 @@
     "mappings": {
       "default": {
         "default": "afgeplatte regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "flattened right p'ren",
-        "sbrief": "flattened R p'ren"
       }
     }
   },
@@ -897,10 +721,6 @@
     "mappings": {
       "default": {
         "default": "wit links hakkie"
-      },
-      "mathspeak": {
-        "brief": "white left p'ren",
-        "sbrief": "white L p'ren"
       }
     }
   },
@@ -909,10 +729,6 @@
     "mappings": {
       "default": {
         "default": "wit regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "white right p'ren",
-        "sbrief": "white R p'ren"
       }
     }
   },
@@ -953,10 +769,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie met onderstaaf"
-      },
-      "mathspeak": {
-        "brief": "left brack with underbar",
-        "sbrief": "L brack with underbar"
       }
     }
   },
@@ -965,10 +777,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie met onderstaaf"
-      },
-      "mathspeak": {
-        "brief": "right brack with underbar",
-        "sbrief": "R brack with underbar"
       }
     }
   },
@@ -977,10 +785,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie met merk in boonste hoek"
-      },
-      "mathspeak": {
-        "brief": "left brack with tick in top corner",
-        "sbrief": "L brack with tick in top corner"
       }
     }
   },
@@ -989,10 +793,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie met merk in onderste hoek"
-      },
-      "mathspeak": {
-        "brief": "right brack with tick in bottom corner",
-        "sbrief": "R brack with tick in bottom corner"
       }
     }
   },
@@ -1001,10 +801,6 @@
     "mappings": {
       "default": {
         "default": "links blokhakkie met merk in onderste hoek"
-      },
-      "mathspeak": {
-        "brief": "left brack with tick in bottom corner",
-        "sbrief": "L brack with tick in bottom corner"
       }
     }
   },
@@ -1013,10 +809,6 @@
     "mappings": {
       "default": {
         "default": "regs blokhakkie met merk in boonste hoek"
-      },
-      "mathspeak": {
-        "brief": "right brack with tick in top corner",
-        "sbrief": "R brack with tick in top corner"
       }
     }
   },
@@ -1025,9 +817,6 @@
     "mappings": {
       "default": {
         "default": "links hoekhakkie met punt"
-      },
-      "mathspeak": {
-        "sbrief": "l angle bracket with dot"
       }
     }
   },
@@ -1036,9 +825,6 @@
     "mappings": {
       "default": {
         "default": "regs hoekhakkie met punt"
-      },
-      "mathspeak": {
-        "sbrief": "r angle bracket with dot"
       }
     }
   },
@@ -1143,10 +929,6 @@
     "mappings": {
       "default": {
         "default": "bo half links blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "top half left brack",
-        "sbrief": "top half L brack"
       }
     }
   },
@@ -1155,10 +937,6 @@
     "mappings": {
       "default": {
         "default": "bo half regs blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "top half right brack",
-        "sbrief": "top half R brack"
       }
     }
   },
@@ -1167,10 +945,6 @@
     "mappings": {
       "default": {
         "default": "onder half links blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "bottom half left brack",
-        "sbrief": "bottom half L brack"
       }
     }
   },
@@ -1179,10 +953,6 @@
     "mappings": {
       "default": {
         "default": "onder half regs blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "bottom half right brack",
-        "sbrief": "bottom half R brack"
       }
     }
   },
@@ -1207,10 +977,6 @@
     "mappings": {
       "default": {
         "default": "dubbel links hakkie"
-      },
-      "mathspeak": {
-        "brief": "double left p'ren",
-        "sbrief": "double L p'ren"
       }
     }
   },
@@ -1219,10 +985,6 @@
     "mappings": {
       "default": {
         "default": "dubbel regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "double right p'ren",
-        "sbrief": "double R p'ren"
       }
     }
   },
@@ -1231,9 +993,6 @@
     "mappings": {
       "default": {
         "default": "links hoekhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "l angle bracket"
       }
     }
   },
@@ -1242,9 +1001,6 @@
     "mappings": {
       "default": {
         "default": "regs hoekhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "r angle bracket"
       }
     }
   },
@@ -1405,10 +1161,6 @@
     "mappings": {
       "default": {
         "default": "versierde links hakkie"
-      },
-      "mathspeak": {
-        "brief": "ornate left p'ren",
-        "sbrief": "ornate L p'ren"
       }
     }
   },
@@ -1417,10 +1169,6 @@
     "mappings": {
       "default": {
         "default": "versierde regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "ornate right p'ren",
-        "sbrief": "ornate R p'ren"
       }
     }
   },
@@ -1445,10 +1193,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical left parenthesis"
-      },
-      "mathspeak": {
-        "brief": "presentation form for vertical left p'ren",
-        "sbrief": "presentation form for vertical L p'ren"
       }
     }
   },
@@ -1457,10 +1201,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical right parenthesis"
-      },
-      "mathspeak": {
-        "brief": "presentation form for vertical right p'ren",
-        "sbrief": "presentation form for vertical R p'ren"
       }
     }
   },
@@ -1469,9 +1209,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical left brace"
-      },
-      "mathspeak": {
-        "sbrief": "presentation form for vertical L brace"
       }
     }
   },
@@ -1480,9 +1217,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical right brace"
-      },
-      "mathspeak": {
-        "sbrief": "presentation form for vertical R brace"
       }
     }
   },
@@ -1539,9 +1273,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical left angle bracket"
-      },
-      "mathspeak": {
-        "sbrief": "presentation form for vertical L angle bracket"
       }
     }
   },
@@ -1550,9 +1281,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical right angle bracket"
-      },
-      "mathspeak": {
-        "sbrief": "presentation form for vertical R angle bracket"
       }
     }
   },
@@ -1593,10 +1321,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical left bracket"
-      },
-      "mathspeak": {
-        "brief": "presentation form for vertical left brack",
-        "sbrief": "presentation form for vertical L brack"
       }
     }
   },
@@ -1605,10 +1329,6 @@
     "mappings": {
       "default": {
         "default": "presentation form for vertical right bracket"
-      },
-      "mathspeak": {
-        "brief": "presentation form for vertical right brack",
-        "sbrief": "presentation form for vertical R brack"
       }
     }
   },
@@ -1617,10 +1337,6 @@
     "mappings": {
       "default": {
         "default": "klein links hakkie"
-      },
-      "mathspeak": {
-        "brief": "small left p'ren",
-        "sbrief": "small L p'ren"
       }
     }
   },
@@ -1629,10 +1345,6 @@
     "mappings": {
       "default": {
         "default": "klein regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "small right p'ren",
-        "sbrief": "small R p'ren"
       }
     }
   },
@@ -1641,9 +1353,6 @@
     "mappings": {
       "default": {
         "default": "klein links krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "small L brace"
       }
     }
   },
@@ -1652,9 +1361,6 @@
     "mappings": {
       "default": {
         "default": "klein regs krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "small R brace"
       }
     }
   },
@@ -1679,10 +1385,6 @@
     "mappings": {
       "default": {
         "default": "volwyte links hakkie"
-      },
-      "mathspeak": {
-        "brief": "fullwidth left p'ren",
-        "sbrief": "fullwidth L p'ren"
       }
     }
   },
@@ -1691,10 +1393,6 @@
     "mappings": {
       "default": {
         "default": "volwyte regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "fullwidth right p'ren",
-        "sbrief": "fullwidth R p'ren"
       }
     }
   },
@@ -1703,10 +1401,6 @@
     "mappings": {
       "default": {
         "default": "volwyte links blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "fullwidth left brack",
-        "sbrief": "fullwidth L brack"
       }
     }
   },
@@ -1715,10 +1409,6 @@
     "mappings": {
       "default": {
         "default": "volwyte regs blokhakkie"
-      },
-      "mathspeak": {
-        "brief": "fullwidth right brack",
-        "sbrief": "fullwidth R brack"
       }
     }
   },
@@ -1727,9 +1417,6 @@
     "mappings": {
       "default": {
         "default": "volwyte links krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "fullwidth L brace"
       }
     }
   },
@@ -1738,9 +1425,6 @@
     "mappings": {
       "default": {
         "default": "volwyte regs krulhakkie"
-      },
-      "mathspeak": {
-        "sbrief": "fullwidth R brace"
       }
     }
   },
@@ -1749,10 +1433,6 @@
     "mappings": {
       "default": {
         "default": "volwyte wit links hakkie"
-      },
-      "mathspeak": {
-        "brief": "fullwidth white left p'ren",
-        "sbrief": "fullwidth white L p'ren"
       }
     }
   },
@@ -1761,10 +1441,6 @@
     "mappings": {
       "default": {
         "default": "volwyte wit regs hakkie"
-      },
-      "mathspeak": {
-        "brief": "fullwidth white right p'ren",
-        "sbrief": "fullwidth white R p'ren"
       }
     }
   },

@@ -22,7 +22,7 @@
     "key": "213C",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande pi"
+        "default": "pi dubbelgeslaan"
       }
     }
   },
@@ -30,7 +30,7 @@
     "key": "213D",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande gamma"
+        "default": "gamma dubbelgeslaan"
       }
     }
   },
@@ -38,7 +38,7 @@
     "key": "213E",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande hoofletter gamma"
+        "default": "hoofletter gamma dubbelgeslaan"
       }
     }
   },
@@ -46,7 +46,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande hoofletter Pi"
+        "default": "hoofletter Pi dubbelgeslaan"
       }
     }
   },
@@ -54,7 +54,7 @@
     "key": "2140",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande sommeer"
+        "default": "sommeer dubbelgeslaan"
       }
     }
   },
@@ -62,7 +62,7 @@
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande  kursief hoofletter d"
+        "default": "dubbelgeslaande kursief hoofletter d"
       }
     }
   },
@@ -78,7 +78,7 @@
     "key": "2147",
     "mappings": {
       "default": {
-        "default": "dubbelgeslaande  kursief e"
+        "default": "dubbelgeslaande kursief e"
       }
     }
   },

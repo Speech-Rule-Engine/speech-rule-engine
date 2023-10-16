@@ -24,6 +24,15 @@ import { createLocale, Locale } from '../locale.js';
 import NUMBERS from '../numbers/numbers_af.js';
 import * as tr from '../transformers.js';
 
+const germanPostfixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+) {
+  letter = !cap ? letter : cap + ' ' + letter;
+  return font ? letter + ' ' + font : letter;
+};
+
 let locale: Locale = null;
 
 /**
@@ -43,9 +52,13 @@ export function af(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
+  loc.COMBINERS['germanPostfix'] = germanPostfixCombiner;
   loc.FUNCTIONS.radicalNestDepth = nestingToString;
   loc.FUNCTIONS.plural = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
+  };
+  loc.FUNCTIONS.fontRegexp = function (font: string) {
+    return new RegExp('((^' + font + ' )|( ' + font + '$))');
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;

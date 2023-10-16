@@ -7,9 +7,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u dubbel bopunt bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper U double overdot overbar"
       }
     }
   },
@@ -18,9 +15,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u dubbel bopunt akkuut"
-      },
-      "mathspeak": {
-        "default": "upper U double overdot acute"
       }
     }
   },
@@ -29,9 +23,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u dubbel bopunt karon"
-      },
-      "mathspeak": {
-        "default": "upper U double overdot caron"
       }
     }
   },
@@ -40,9 +31,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u dubbel bopunt gravis"
-      },
-      "mathspeak": {
-        "default": "upper U double overdot grave"
       }
     }
   },
@@ -51,9 +39,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a dubbel bopunt bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper A double overdot overbar"
       }
     }
   },
@@ -62,9 +47,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a bopunt bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper A overdot overbar"
       }
     }
   },
@@ -73,9 +55,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o ogonek bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper O ogonek overbar"
       }
     }
   },
@@ -84,9 +63,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a ring akkuut"
-      },
-      "mathspeak": {
-        "default": "upper A ring acute"
       }
     }
   },
@@ -95,9 +71,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o dubbel bopunt bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper O double overdot overbar"
       }
     }
   },
@@ -106,9 +79,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o tilde bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper O tilde overbar"
       }
     }
   },
@@ -117,9 +87,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o bopunt bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper O overdot overbar"
       }
     }
   },
@@ -128,9 +95,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter c sidila akkuut"
-      },
-      "mathspeak": {
-        "default": "upper C cedilla acute"
       }
     }
   },
@@ -139,9 +103,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e bostaaf gravis"
-      },
-      "mathspeak": {
-        "default": "upper E overbar grave"
       }
     }
   },
@@ -150,9 +111,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e bostaaf akkuut"
-      },
-      "mathspeak": {
-        "default": "upper E overbar acute"
       }
     }
   },
@@ -161,9 +119,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e sidilla brevis"
-      },
-      "mathspeak": {
-        "default": "upper E cedilla breve"
       }
     }
   },
@@ -172,9 +127,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter i dubbel bopunt akkuut"
-      },
-      "mathspeak": {
-        "default": "upper I double overdot acute"
       }
     }
   },
@@ -183,9 +135,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter l onderpunt bostaaf"
-      },
-      "mathspeak": {
-        "default": "upper L underdot overbar"
       }
     }
   },
@@ -194,9 +143,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o tilde akkuut"
-      },
-      "mathspeak": {
-        "default": "upper O tilde acute"
       }
     }
   },
@@ -205,9 +151,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o tilde dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "upper O tilde double overdot"
       }
     }
   },
@@ -216,9 +159,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o bostaaf gravis"
-      },
-      "mathspeak": {
-        "default": "upper O overbar grave"
       }
     }
   },
@@ -227,9 +167,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o bostaaf akkuut"
-      },
-      "mathspeak": {
-        "default": "upper O overbar acute"
       }
     }
   },
@@ -238,9 +175,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter r bostaaf onderpunt"
-      },
-      "mathspeak": {
-        "default": "upper R overbar underdot"
       }
     }
   },
@@ -249,9 +183,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter s akkuut bopunt"
-      },
-      "mathspeak": {
-        "default": "upper S acute overdot"
       }
     }
   },
@@ -260,9 +191,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter s karon bopunt"
-      },
-      "mathspeak": {
-        "default": "upper S caron overdot"
       }
     }
   },
@@ -271,9 +199,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter s onderpunt bopunt"
-      },
-      "mathspeak": {
-        "default": "upper S underdot overdot"
       }
     }
   },
@@ -282,9 +207,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u tilde akkuut"
-      },
-      "mathspeak": {
-        "default": "upper U tilde acute"
       }
     }
   },
@@ -293,9 +215,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u bostaaf dubbel bopunt"
-      },
-      "mathspeak": {
-        "default": "upper U overbar double overdot"
       }
     }
   },
@@ -304,9 +223,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a hoed akkuut"
-      },
-      "mathspeak": {
-        "default": "upper A hat acute"
       }
     }
   },
@@ -315,9 +231,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a hoed gravis"
-      },
-      "mathspeak": {
-        "default": "upper A hat grave"
       }
     }
   },
@@ -326,9 +239,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a hoed haak"
-      },
-      "mathspeak": {
-        "default": "upper A hat hook"
       }
     }
   },
@@ -337,9 +247,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a hoed tilde"
-      },
-      "mathspeak": {
-        "default": "upper A hat tilde"
       }
     }
   },
@@ -348,9 +255,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a hoed onderpunt"
-      },
-      "mathspeak": {
-        "default": "upper A hat underdot"
       }
     }
   },
@@ -359,9 +263,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a brevis akkuut"
-      },
-      "mathspeak": {
-        "default": "upper A breve acute"
       }
     }
   },
@@ -370,9 +271,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a brevis gravis"
-      },
-      "mathspeak": {
-        "default": "upper A breve grave"
       }
     }
   },
@@ -381,9 +279,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a brevis haak"
-      },
-      "mathspeak": {
-        "default": "upper A breve hook"
       }
     }
   },
@@ -392,9 +287,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a brevis tilde"
-      },
-      "mathspeak": {
-        "default": "upper A breve tilde"
       }
     }
   },
@@ -403,9 +295,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter a brevis onderpunt"
-      },
-      "mathspeak": {
-        "default": "upper A breve underdot"
       }
     }
   },
@@ -414,9 +303,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e hoed akkuut"
-      },
-      "mathspeak": {
-        "default": "upper E hat acute"
       }
     }
   },
@@ -425,9 +311,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e hoed gravis"
-      },
-      "mathspeak": {
-        "default": "upper E hat grave"
       }
     }
   },
@@ -436,9 +319,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e hoed haak"
-      },
-      "mathspeak": {
-        "default": "upper E hat hook"
       }
     }
   },
@@ -447,9 +327,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e hoed tilde"
-      },
-      "mathspeak": {
-        "default": "upper E hat tilde"
       }
     }
   },
@@ -458,9 +335,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter e hoed onderpunt"
-      },
-      "mathspeak": {
-        "default": "upper E hat underdot"
       }
     }
   },
@@ -469,9 +343,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o hoed akkuut"
-      },
-      "mathspeak": {
-        "default": "upper O hat acute"
       }
     }
   },
@@ -480,9 +351,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o hoed gravis"
-      },
-      "mathspeak": {
-        "default": "upper O hat grave"
       }
     }
   },
@@ -491,9 +359,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o hoed haak"
-      },
-      "mathspeak": {
-        "default": "upper O hat hook"
       }
     }
   },
@@ -502,9 +367,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o hoed tilde"
-      },
-      "mathspeak": {
-        "default": "upper O hat tilde"
       }
     }
   },
@@ -513,9 +375,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o hoed onderpunt"
-      },
-      "mathspeak": {
-        "default": "upper O hat underdot"
       }
     }
   },
@@ -524,9 +383,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o akkuut priem"
-      },
-      "mathspeak": {
-        "default": "upper O acute prime"
       }
     }
   },
@@ -535,9 +391,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o gravis priem"
-      },
-      "mathspeak": {
-        "default": "upper O grave prime"
       }
     }
   },
@@ -546,9 +399,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o haak priem"
-      },
-      "mathspeak": {
-        "default": "upper O hook prime"
       }
     }
   },
@@ -557,9 +407,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o tilde priem"
-      },
-      "mathspeak": {
-        "default": "upper O tilde prime"
       }
     }
   },
@@ -568,9 +415,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter o onderpunt priem"
-      },
-      "mathspeak": {
-        "default": "upper O underdot prime"
       }
     }
   },
@@ -579,9 +423,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u akkuut priem"
-      },
-      "mathspeak": {
-        "default": "upper U acute prime"
       }
     }
   },
@@ -590,9 +431,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u gravis priem"
-      },
-      "mathspeak": {
-        "default": "upper U grave prime"
       }
     }
   },
@@ -601,9 +439,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u haak priem"
-      },
-      "mathspeak": {
-        "default": "upper U hook prime"
       }
     }
   },
@@ -612,9 +447,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u tilde priem"
-      },
-      "mathspeak": {
-        "default": "upper U tilde prime"
       }
     }
   },
@@ -623,9 +455,6 @@
     "mappings": {
       "default": {
         "default": "hoofletter u onderpunt priem"
-      },
-      "mathspeak": {
-        "default": "upper U underdot prime"
       }
     }
   }

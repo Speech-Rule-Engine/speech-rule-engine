@@ -224,9 +224,6 @@
     "mappings": {
       "default": {
         "default": "gekombineerde klein hoofletter G"
-      },
-      "mathspeak": {
-        "default": "combining small upper G"
       }
     }
   },
@@ -251,9 +248,6 @@
     "mappings": {
       "default": {
         "default": "gekombineerde klein hoofletter L"
-      },
-      "mathspeak": {
-        "default": "combining small upper L"
       }
     }
   },
@@ -262,9 +256,6 @@
     "mappings": {
       "default": {
         "default": "gekombineerde klein hoofletter M"
-      },
-      "mathspeak": {
-        "default": "combining small upper M"
       }
     }
   },
@@ -281,9 +272,6 @@
     "mappings": {
       "default": {
         "default": "gekombineerde klein hoofletter N"
-      },
-      "mathspeak": {
-        "default": "combining small upper N"
       }
     }
   },
@@ -292,9 +280,6 @@
     "mappings": {
       "default": {
         "default": "gekombineerde klein hoofletter R"
-      },
-      "mathspeak": {
-        "default": "combining small upper R"
       }
     }
   },
@@ -463,9 +448,6 @@
     "mappings": {
       "default": {
         "default": "skilpaddop hoofletter S in hakkies"
-      },
-      "mathspeak": {
-        "default": "tortoise shell bracketed upper S"
       }
     }
   },
@@ -474,9 +456,6 @@
     "mappings": {
       "default": {
         "default": "omkringde kursief hoofletter C"
-      },
-      "mathspeak": {
-        "default": "circled italic upper C"
       }
     }
   },
@@ -485,9 +464,6 @@
     "mappings": {
       "default": {
         "default": "omkringde kursief hoofletter R"
-      },
-      "mathspeak": {
-        "default": "circled italic upper R"
       }
     }
   },
@@ -496,9 +472,6 @@
     "mappings": {
       "default": {
         "default": "gekruisde negatiewe kwadraat hoofletter P"
-      },
-      "mathspeak": {
-        "default": "crossed negative squared upper P"
       }
     }
   }

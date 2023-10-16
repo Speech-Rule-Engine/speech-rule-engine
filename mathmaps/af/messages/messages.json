@@ -40,8 +40,11 @@
       "bold-script": "vetgedruk skrif",
       "caligraphic": "kalligrafies",
       "caligraphic-bold": "kalligrafies vetgedruk",
-      "double-struck": "dubbelgeslaan",
-      "double-struck-italic": "dubbelgeslaan kursief",
+      "double-struck": [
+        "dubbelgeslaan",
+        "germanPostfix"
+        ],
+      "double-struck-italic": "dubbelgeslaande kursief",
       "fraktur": "fraktur",
       "fullwidth": "volwyte",
       "italic": "kursief",

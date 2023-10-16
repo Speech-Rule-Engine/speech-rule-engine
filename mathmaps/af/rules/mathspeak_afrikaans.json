@@ -6,16 +6,10 @@
   "rules": [
     [
       "Precondition",
-      "german-font",
+      "font-double-struck",
       "default",
-      "self::*[@font=\"fraktur\"]",
-      "not(contains(@grammar, \"ignoreFont\"))"
-    ],
-    [
-      "Precondition",
-      "german-font-bold",
-      "default",
-      "self::*[@font=\"bold-fraktur\"]",
+      "self::*[@font=\"double-struck\"]",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
     ]
   ]

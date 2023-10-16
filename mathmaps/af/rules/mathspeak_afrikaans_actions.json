@@ -26,13 +26,8 @@
     ],
     [
       "Action",
-      "german-font",
-      "[t] \"German\"; [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
-      "german-font-bold",
-      "[t] \"bold German\"; [n] . (grammar:ignoreFont=@font)"
+      "font-double-struck",
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],
     [
       "Action",
