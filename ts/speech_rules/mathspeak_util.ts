@@ -1067,3 +1067,12 @@ export function smallRoot(node: Element): Element[] {
   const num = parseInt(index, 10);
   return num > 1 && num <= max ? [node] : [];
 }
+
+
+/// Will move to HTML utils
+
+export function headerPrefix(node: Element): Span[] {
+  const position = XpathUtil.evaluateString('count(./preceding-sibling::*)+1', node);
+  const header = XpathUtil.evaluateString(`ancestor::table/thead/tr/*[${position}]/text()`, node);
+  return [Span.node(header, node)];
+};

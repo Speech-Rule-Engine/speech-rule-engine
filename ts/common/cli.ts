@@ -320,6 +320,11 @@ export class Cli {
         set('aria')
       )
       .option(
+        '-H, --html',
+        'Input is to be interpreted as HTML.',
+        set('html')
+      )
+      .option(
         '-P, --pprint',
         'Pretty print output whenever possible.',
         set('pprint')

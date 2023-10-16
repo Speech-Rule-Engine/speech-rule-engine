@@ -65,7 +65,8 @@ export default class Engine {
     'aria',
     'pprint',
     'cayleyshort',
-    'linebreaks'
+    'linebreaks',
+    'html'
   ];
 
   /**
@@ -236,6 +237,11 @@ export default class Engine {
    * True if configuration block has been applied in HTTP mode.
    */
   public config = false;
+
+  /**
+   * True if working on HTML elements.
+   */
+  public html = false;
 
   /**
    * Rules file to load.

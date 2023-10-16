@@ -1,0 +1,50 @@
+{
+  "domain": "html",
+  "locale": "en",
+  "modality": "speech",
+  "rules": [
+    [
+      "Rule",
+      "table",
+      "default",
+      "[p] (pause:short); [t] \"table with\"; [t] count(thead/*)+count(tbody/*); [t] \"rows\"; [t] \"and\"; [t] count(thead/*[1]/*); [t] \"columns\"; [m] ./*",
+      "self::table"
+    ],
+    [
+      "Rule",
+      "table-head",
+      "default",
+      "[t] \"Header\"; [m] ./* (ctxtFunc:CTFnodeCounter, context:\"Row- \", pause:long)",
+      "self::thead"
+    ],
+    [
+      "Rule",
+      "table-body",
+      "default",
+      "[t] \"Body\"; [m] ./* (ctxtFunc:CTFnodeCounter, context:\"Row- \", pause:long)",
+      "self::tbody"
+    ],
+    [
+      "Rule",
+      "table-row",
+      "default",
+      "[m] ./* (ctxtFunc:CTFnodeCounter, context:\"Column\", sepFunc:CTFpauseSeparator, separator:\"medium\", pause:long)",
+      "self::tr"
+    ],
+    [
+      "Rule",
+      "table-element",
+      "default",
+      "[n] text()",
+      "self::th"
+    ],
+    [
+      "Rule",
+      "table-element",
+      "default",
+      "[t] CSFheaderPrefix; [n] text()",
+      "self::td"
+    ]
+
+  ]
+}

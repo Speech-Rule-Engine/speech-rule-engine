@@ -168,7 +168,7 @@ set(
   new Processor('speech', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
+      const xml = Engine.getInstance().html ? mml : Semantic.xmlTree(mml);
       const descrs = SpeechGeneratorUtil.computeSpeech(xml);
       return AuralRendering.finalize(AuralRendering.markup(descrs));
     },
@@ -228,7 +228,7 @@ set(
   new Processor('description', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
+      const xml = Engine.getInstance().html ? mml : Semantic.xmlTree(mml);
       const descrs = SpeechGeneratorUtil.computeSpeech(xml);
       return descrs;
     },

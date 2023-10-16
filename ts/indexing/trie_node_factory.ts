@@ -209,10 +209,6 @@ function constraintTest(constraint: string): ((p1: Node) => boolean) | null {
       if (!xpath) {
         return false;
       }
-      // console.log(constraint);
-      // console.log(node.textContent);
-      // console.log(Array.from(xpath.textContent).length);
-      // console.log(func(Array.from(xpath.textContent).length, numb));
       return func(Array.from(xpath.textContent).length, numb);
     };
   }

@@ -23,9 +23,11 @@ import { SpeechRuleStore } from '../rule_engine/speech_rule_store.js';
 import * as StoreUtil from '../rule_engine/store_util.js';
 import * as MathspeakKoreanUtil from './mathspeak_korean_util.js';
 import * as MathspeakUtil from './mathspeak_util.js';
+import * as ClearspeakUtil from './clearspeak_util.js';
 import * as NemethUtil from './nemeth_util.js';
 import * as NumbersUtil from './numbers_util.js';
 import * as SpeechRules from './speech_rules.js';
+
 
 /**
  * Adds the custom functions for the prefix rules.
@@ -44,6 +46,13 @@ export function OtherRules() {
   SpeechRules.addStore('en.speech.chromevox', '', {
     CTFnodeCounter: StoreUtil.nodeCounter,
     CTFcontentIterator: StoreUtil.contentIterator
+  });
+
+  SpeechRules.addStore('en.speech.html', '', {
+    CTFpauseSeparator: StoreUtil.pauseSeparator,
+    CTFnodeCounter: ClearspeakUtil.nodeCounter,
+    CTFcontentIterator: StoreUtil.contentIterator,
+    CSFheaderPrefix: MathspeakUtil.headerPrefix
   });
 
   SpeechRules.addStore('en.speech.emacspeak', 'en.speech.chromevox', {
