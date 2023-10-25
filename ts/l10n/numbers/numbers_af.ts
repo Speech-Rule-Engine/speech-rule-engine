@@ -67,9 +67,9 @@ function numberToWords(num: number): string {
       if (pos) {
         const large = NUMBERS.large[pos];
         // If this is million or above take care of the plural.
-        str = hund + NUMBERS.numSep + large + NUMBERS.numSep + str;
+        str = hund + NUMBERS.numSep + large + (str ? NUMBERS.numSep + str : '');
       } else {
-        str = hund + NUMBERS.numSep + str;
+        str = hund + (str ? NUMBERS.numSep + str : '');
       }
     }
     num = Math.floor(num / 1000);
@@ -94,7 +94,7 @@ function numberToOrdinal(num: number, plural: boolean): string {
     return plural ? 'helftes' : 'helfte';
   }
   if (num === 4) {
-    return plural ? 'kwarts' : 'kwart';
+    return plural ? 'kwarte' : 'kwart';
   }
   return wordOrdinal(num) + (plural ? 's' : '');
 }
