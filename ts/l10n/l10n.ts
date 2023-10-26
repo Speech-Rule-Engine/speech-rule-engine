@@ -22,6 +22,7 @@ import Engine from '../common/engine.js';
 import { Variables } from '../common/variables.js';
 import { Grammar } from '../rule_engine/grammar.js';
 
+import { af } from './locales/locale_af.js';
 import { ca } from './locales/locale_ca.js';
 import { da } from './locales/locale_da.js';
 import { de } from './locales/locale_de.js';
@@ -39,6 +40,7 @@ import { sv } from './locales/locale_sv.js';
 import { Locale, LOCALE } from './locale.js';
 
 export const locales: { [key: string]: () => Locale } = {
+  af: af,
   ca: ca,
   da: da,
   de: de,

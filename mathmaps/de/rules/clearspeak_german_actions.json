@@ -632,12 +632,12 @@
     [
       "Action",
       "set-prefix-operators-masculine",
-      "[t] \"der\" (grammar:article); [n] . ; [t] \"von\""
+      "[t] \"der\" (grammar:article); [n] .; [t] \"von\""
     ],
     [
       "Action",
       "set-prefix-operators-feminine",
-      "[t] \"die\" (grammar:article); [n] . ; [t] \"von\""
+      "[t] \"die\" (grammar:article); [n] .; [t] \"von\""
     ],
     [
       "Action",

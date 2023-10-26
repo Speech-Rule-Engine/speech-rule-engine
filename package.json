@@ -51,7 +51,6 @@
     "@xmldom/xmldom": "0.9.0-beta.8"
   },
   "devDependencies": {
-    "@types/estree": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "circular-dependency-plugin": "^5.2.2",

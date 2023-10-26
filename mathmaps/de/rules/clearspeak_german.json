@@ -15,7 +15,7 @@
       "Precondition",
       "font-double-struck",
       "default",
-      "self::*[@font=\"double-struck\"]",
+      "self::*[@font=\"double-struck\" or @font=\"double-struck-italic\"]",
       "name(self::*)!=\"number\"",
       "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
@@ -30,7 +30,7 @@
       "Precondition",
       "font-number-double-struck",
       "default",
-      "self::number[@font=\"double-struck\"]",
+      "self::number[@font=\"double-struck\" or @font=\"double-struck-italic\"]",
       "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
     ],

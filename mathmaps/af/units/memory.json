@@ -1,0 +1,32 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "b",
+    "mappings": {
+      "default": {
+        "default": "bis",
+        "plural": "bisse"
+      }
+    }
+  },
+  {
+    "key": "B",
+    "mappings": {
+      "default": {
+        "default": "greep",
+        "plural": "grepe"
+      }
+    }
+  },
+  {
+    "key": "KB",
+    "mappings": {
+      "default": {
+        "default": "kilogreep",
+        "plural": "kilogrepe"
+      }
+    }
+  }
+]

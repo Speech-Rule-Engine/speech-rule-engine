@@ -1,0 +1,77 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "sq",
+    "mappings": {
+      "default": {
+        "default": "vierkant 'n",
+        "plural": "vierkant 'n"
+      }
+    }
+  },
+  {
+    "key": "sq inch",
+    "mappings": {
+      "default": {
+        "default": "vierkant 'n duim",
+        "plural": "vierkant 'n duim"
+      }
+    }
+  },
+  {
+    "key": "sq rd",
+    "mappings": {
+      "default": {
+        "default": "vierkant 'n staaf",
+        "plural": "vierkant 'n staaf"
+      }
+    }
+  },
+  {
+    "key": "sq ft",
+    "mappings": {
+      "default": {
+        "default": "vierkant 'n voet",
+        "plural": "vierkant 'n voet"
+      }
+    }
+  },
+  {
+    "key": "sq yd",
+    "mappings": {
+      "default": {
+        "default": "vierkant 'n jaart",
+        "plural": "vierkant 'n jaart"
+      }
+    }
+  },
+  {
+    "key": "sq mi",
+    "mappings": {
+      "default": {
+        "default": "vierkant 'n myl",
+        "plural": "vierkant 'n myl"
+      }
+    }
+  },
+  {
+    "key": "acr",
+    "mappings": {
+      "default": {
+        "default": "akker",
+        "plural": "akker"
+      }
+    }
+  },
+  {
+    "key": "ha",
+    "mappings": {
+      "default": {
+        "default": "hektaar",
+        "plural": "hektaar"
+      }
+    }
+  }
+]
