@@ -24,7 +24,7 @@ jobs:
           run_install: false
 
       - name: Setup Speech Rule Engine
-        run: pnpm i
+        run: pnpm i; pnpm build
 
       - name: Upload build
         uses: actions/upload-artifact@v2
