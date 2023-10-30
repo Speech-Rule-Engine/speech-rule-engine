@@ -2,7 +2,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "ES6",
-    "module": "es2022",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "declaration": true,
     "noImplicitAny": true,
@@ -13,9 +13,10 @@
     "downlevelIteration": true,
     "noLib": false,
     "alwaysStrict": true,
-    "lib": ["es6", "dom"],
+    "lib": ["es2017", "dom"],
     "typeRoots": [
-      "./node_modules/@types"
+      "./node_modules/@types",
+      "./node_modules/@node"
     ],
     "outDir": "js"
   },
