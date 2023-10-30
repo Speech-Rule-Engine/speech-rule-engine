@@ -24,7 +24,7 @@ jobs:
           run_install: false
 
       - name: Setup Speech Rule Engine
-        run: pnpm ci
+        run: pnpm i --frozen-lockfile
 
       - name: Upload build
         uses: actions/upload-artifact@v2
@@ -62,8 +62,8 @@ jobs:
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
-          pnpm ci --ignore-scripts
-          cd sre-tests; ln -s .. speech-rule-engine; pnpm ci; sudo chmod -R 777 .;
+          pnpm i --frozen-lockfile --ignore-scripts
+          cd sre-tests; ln -s .. speech-rule-engine; pnpm i --frozen-lockfile; sudo chmod -R 777 .;
 
       - name: Run tests for ${{ matrix.block }}
         run: pnpm run actionTest js/actions/${{ matrix.block }}.test.js
