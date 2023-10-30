@@ -59,6 +59,7 @@
     "eslint-plugin-jsdoc": "^46.8.2",
     "json-minify": "1.0.0",
     "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
     "terser-webpack-plugin": "5.3.9",
     "ts-loader": "9.5.0",
     "ts-prune": "^0.10.3",
