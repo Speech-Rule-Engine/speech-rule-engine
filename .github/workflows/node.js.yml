@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Speech Rule Engine
-        run: npm ci
+        run: pnpm ci
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
@@ -44,10 +44,10 @@ jobs:
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
-          npm ci --ignore-scripts
-          cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
+          pnpm ci --ignore-scripts
+          cd sre-tests; ln -s .. speech-rule-engine; pnpm ci; sudo chmod -R 777 .;
       - name: Run tests for ${{ matrix.block }}
-        run: npm run actionTest js/actions/${{ matrix.block }}.test.js
+        run: pnpm run actionTest js/actions/${{ matrix.block }}.test.js
 
   deploy:
     needs: setup
