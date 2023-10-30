@@ -21,7 +21,7 @@
     "pretest": "git submodule update --remote --merge; pnpm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "pnpm run module",
     "clean": "rimraf js lib cjs",
-    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest --silent ",
+    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; pnpm jest --silent ",
     "cleanAll": "make clean; make clean_min",
     "prepublish": "pnpm run cleanAll; pnpm run build",
     "build": "make -j 12 all; pnpm run commonjs; pnpm run module; pnpm webpack"
