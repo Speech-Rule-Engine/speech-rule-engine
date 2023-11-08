@@ -131,7 +131,8 @@ export function walkTree(semantic: SemanticNode): Element {
   setOperatorAttribute(semantic, newContent);
   const newChildren = semantic.childNodes.map(walkTree);
   const childrenList = SemanticSkeleton.combineContentChildren<Element>(
-    semantic,
+    semantic.type,
+    semantic.role,
     newContent,
     newChildren
   );

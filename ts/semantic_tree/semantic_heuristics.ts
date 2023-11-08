@@ -668,7 +668,8 @@ function rewriteCell(cell: SemanticNode, left?: boolean) {
     const children = cell.childNodes;
     rewriteFence(children[left ? children.length - 1 : 0]);
     const newNodes = SemanticSkeleton.combineContentChildren<SemanticNode>(
-      cell,
+      cell.type,
+      cell.role,
       cell.contentNodes,
       cell.childNodes
     );
