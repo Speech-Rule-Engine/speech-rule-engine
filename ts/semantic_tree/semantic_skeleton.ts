@@ -169,9 +169,14 @@ export class SemanticSkeleton {
         return content.concat(children);
       case SemanticType.POSTFIXOP:
         return children.concat(content);
+      case SemanticType.MATRIX:
+      case SemanticType.VECTOR:
       case SemanticType.FENCED:
         children.unshift(content[0]);
         children.push(content[1]);
+        return children;
+      case SemanticType.CASES:
+        children.unshift(content[0]);
         return children;
       case SemanticType.APPL:
         return [children[0], content[0], children[1]];
@@ -179,6 +184,7 @@ export class SemanticSkeleton {
         return [children[0], children[1]];
       case SemanticType.ROW:
       case SemanticType.LINE:
+        // Adding the labels to the skeleton for explorative access.
         if (content.length) {
           children.unshift(content[0]);
         }
