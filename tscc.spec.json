@@ -1,0 +1,12 @@
+{
+  "modules": {
+    "out": "ts/xplatmath.ts"
+  },
+  "compilerFlags": {
+    "assume_function_wrapper": true,
+    "rewrite_polyfills": true,
+    "language_in": "UNSTABLE",
+    "language_out": "ECMASCRIPT_NEXT",
+    "variable_renaming_report": "out/report.map"
+  }
+}
