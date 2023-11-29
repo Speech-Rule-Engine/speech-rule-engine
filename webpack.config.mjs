@@ -52,7 +52,7 @@ let config = {
 };
 
 let sreConfig = Object.assign({}, config, {
-  entry: path.resolve(__dirname, 'js/index.js'),
+  entry: path.resolve(__dirname, 'js/xplatmath.js'),
   output: {
     filename: 'sre.js',
     library: 'SRE',

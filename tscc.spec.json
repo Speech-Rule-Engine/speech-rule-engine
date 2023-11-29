@@ -7,6 +7,8 @@
     "rewrite_polyfills": true,
     "language_in": "UNSTABLE",
     "language_out": "ECMASCRIPT_NEXT",
-    "variable_renaming_report": "out/report.map"
+    "variable_renaming_report": "lib/report.map",
+    "js_output_file": "lib/app.js",
+    "externs": ["ts/common/externs.js"]
   }
 }
