@@ -29,7 +29,7 @@ import {
   SemanticRole,
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
-import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory.js';
+import { SemanticHeuristics } from '../semantic_tree/semantic_heuristic_factory.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
