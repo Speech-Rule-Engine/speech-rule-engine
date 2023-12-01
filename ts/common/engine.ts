@@ -152,7 +152,7 @@ export default class Engine {
   /**
    * Current locale.
    */
-  public locale = this.defaultLocale;
+  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
 
   /**
    * Current subiso for the locale.
@@ -334,6 +334,7 @@ export default class Engine {
    * Private constructor.
    */
   private constructor() {
+    this.locale = this.defaultLocale;
     this.evaluator = Engine.defaultEvaluator;
     this.defaultParser = new Dcstr.DynamicCstrParser(
       Dcstr.DynamicCstr.DEFAULT_ORDER

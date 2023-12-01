@@ -30,7 +30,7 @@ import {
   SemanticType,
   SemanticSecondary
 } from './semantic_meaning.js';
-import * as SemanticHeuristics from './semantic_heuristic_factory.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
 import * as SemanticPred from './semantic_pred.js';
