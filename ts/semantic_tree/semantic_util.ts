@@ -23,42 +23,93 @@ import * as DomUtil from '../common/dom_util.js';
 
 import { SemanticNode } from './semantic_node.js';
 
+export enum MMLTAGS {
+  ANNOTATION = 'ANNOTATION',
+  ANNOTATIONXML = 'ANNOTATION-XML',
+  MACTION = 'MACTION',
+  MALIGNGROUP = 'MALIGNGROUP',
+  MALIGNMARK = 'MALIGNMARK',
+  MATH = 'MATH',
+  MENCLOSE = 'MENCLOSE',
+  MERROR = 'MERROR',
+  MFENCED = 'MFENCED',
+  MFRAC = 'MFRAC',
+  MGLYPH = 'MGLYPH',
+  MI = 'MI',
+  MLABELEDTR = 'MLABELEDTR',
+  MMULTISCRIPTS = 'MMULTISCRIPTS',
+  MN = 'MN',
+  MO = 'MO',
+  MOVER = 'MOVER',
+  MPADDED = 'MPADDED',
+  MPHANTOM = 'MPHANTOM',
+  MPRESCRIPTS = 'MPRESCRIPTS',
+  MROOT = 'MROOT',
+  MROW = 'MROW',
+  MS = 'MS',
+  MSPACE = 'MSPACE',
+  MSQRT = 'MSQRT',
+  MSTYLE = 'MSTYLE',
+  MSUB = 'MSUB',
+  MSUBSUP = 'MSUBSUP',
+  MSUP = 'MSUP',
+  MTABLE = 'MTABLE',
+  MTD = 'MTD',
+  MTEXT = 'MTEXT',
+  MTR = 'MTR',
+  MUNDER = 'MUNDER',
+  MUNDEROVER = 'MUNDEROVER',
+  NONE = 'NONE',
+  SEMANTICS = 'SEMANTICS',
+}
+
+
 /**
  * List of MathML Tags that are considered to be leafs.
  */
-const LEAFTAGS: string[] = ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSPACE'];
+const LEAFTAGS: string[] = [
+  MMLTAGS.MO,
+  MMLTAGS.MI,
+  MMLTAGS.MN,
+  MMLTAGS.MTEXT,
+  MMLTAGS.MS,
+  MMLTAGS.MSPACE
+];
 
 /**
  * List of MathML Tags that are to be ignored.
  */
 const IGNORETAGS: string[] = [
-  'MERROR',
-  'MPHANTOM',
-  'MALIGNGROUP',
-  'MALIGNMARK',
-  'MPRESCRIPTS',
-  'ANNOTATION',
-  'ANNOTATION-XML'
+  MMLTAGS.MERROR,
+  MMLTAGS.MPHANTOM,
+  MMLTAGS.MALIGNGROUP,
+  MMLTAGS.MALIGNMARK,
+  MMLTAGS.MPRESCRIPTS,
+  MMLTAGS.ANNOTATION,
+  MMLTAGS.ANNOTATIONXML
 ];
 
 /**
  * List of MathML Tags to be ignore if they have no children.
  */
 const EMPTYTAGS: string[] = [
-  'MATH',
-  'MROW',
-  'MPADDED',
-  'MACTION',
-  'NONE',
-  'MSTYLE',
-  'SEMANTICS'
+  MMLTAGS.MATH,
+  MMLTAGS.MROW,
+  MMLTAGS.MPADDED,
+  MMLTAGS.MACTION,
+  MMLTAGS.NONE,
+  MMLTAGS.MSTYLE,
+  MMLTAGS.SEMANTICS
 ];
 
 /**
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
+const DISPLAYTAGS: string[] = [
+  MMLTAGS.MROOT,
+  MMLTAGS.MSQRT
+];
 
 /**
  * List of potential attributes that should be used as speech directly.
@@ -72,7 +123,7 @@ const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
  * @returns True if element is an math node.
  */
 export function hasMathTag(node: Element): boolean {
-  return !!node && DomUtil.tagName(node) === 'MATH';
+  return !!node && DomUtil.tagName(node) === MMLTAGS.MATH;
 }
 
 /**
@@ -124,7 +175,7 @@ export function hasDisplayTag(node: Element): boolean {
 export function isOrphanedGlyph(node: Element): boolean {
   return (
     !!node &&
-    DomUtil.tagName(node) === 'MGLYPH' &&
+      DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
     !hasLeafTag(node.parentNode as Element)
   );
 }

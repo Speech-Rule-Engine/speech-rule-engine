@@ -21,6 +21,7 @@
 import * as DomUtil from '../common/dom_util.js';
 import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import * as EnrichMathml from './enrich_mathml.js';
@@ -45,8 +46,8 @@ export class CaseDoubleScript extends AbstractEnrichCase {
     const mmlTag = DomUtil.tagName(semantic.mathmlTree);
     const role = semantic.childNodes[0].role;
     return (
-      (mmlTag === 'MSUBSUP' && role === SemanticRole.SUBSUP) ||
-      (mmlTag === 'MUNDEROVER' && role === SemanticRole.UNDEROVER)
+      (mmlTag === MMLTAGS.MSUBSUP && role === SemanticRole.SUBSUP) ||
+      (mmlTag === MMLTAGS.MUNDEROVER && role === SemanticRole.UNDEROVER)
     );
   }
 
