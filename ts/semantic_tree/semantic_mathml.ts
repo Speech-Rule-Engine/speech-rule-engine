@@ -33,9 +33,7 @@ import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
-  private parseMap_: {
-    [key: string]: (p1: Element, p2: Element[]) => SemanticNode;
-  };
+  private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
 
   /**
    * Get an attribute from a node and provide a default if it does not exist. It
@@ -66,40 +64,39 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   constructor() {
     super('MathML');
-    this.parseMap_ = {
-      SEMANTICS: this.semantics_.bind(this),
-      MATH: this.rows_.bind(this),
-      MROW: this.rows_.bind(this),
-      MPADDED: this.rows_.bind(this),
-      MSTYLE: this.rows_.bind(this),
-      MFRAC: this.fraction_.bind(this),
-      MSUB: this.limits_.bind(this),
-      MSUP: this.limits_.bind(this),
-      MSUBSUP: this.limits_.bind(this),
-      MOVER: this.limits_.bind(this),
-      MUNDER: this.limits_.bind(this),
-      MUNDEROVER: this.limits_.bind(this),
-      MROOT: this.root_.bind(this),
-      MSQRT: this.sqrt_.bind(this),
-      MTABLE: this.table_.bind(this),
-      MLABELEDTR: this.tableLabeledRow_.bind(this),
-      MTR: this.tableRow_.bind(this),
-      MTD: this.tableCell_.bind(this),
-      MS: this.text_.bind(this),
-      MTEXT: this.text_.bind(this),
-      MSPACE: this.space_.bind(this),
-      'ANNOTATION-XML': this.text_.bind(this),
-      MI: this.identifier_.bind(this),
-      MN: this.number_.bind(this),
-      MO: this.operator_.bind(this),
-      MFENCED: this.fenced_.bind(this),
-      MENCLOSE: this.enclosed_.bind(this),
-      MMULTISCRIPTS: this.multiscripts_.bind(this),
-      ANNOTATION: this.empty_.bind(this),
-      NONE: this.empty_.bind(this),
-      MACTION: this.action_.bind(this)
-    };
-
+    this.parseMap_ = new Map([
+      [MMLTAGS.SEMANTICS, this.semantics_.bind(this)],
+      [MMLTAGS.MATH, this.rows_.bind(this)],
+      [MMLTAGS.MROW, this.rows_.bind(this)],
+      [MMLTAGS.MPADDED, this.rows_.bind(this)],
+      [MMLTAGS.MSTYLE, this.rows_.bind(this)],
+      [MMLTAGS.MFRAC, this.fraction_.bind(this)],
+      [MMLTAGS.MSUB, this.limits_.bind(this)],
+      [MMLTAGS.MSUP, this.limits_.bind(this)],
+      [MMLTAGS.MSUBSUP, this.limits_.bind(this)],
+      [MMLTAGS.MOVER, this.limits_.bind(this)],
+      [MMLTAGS.MUNDER, this.limits_.bind(this)],
+      [MMLTAGS.MUNDEROVER, this.limits_.bind(this)],
+      [MMLTAGS.MROOT, this.root_.bind(this)],
+      [MMLTAGS.MSQRT, this.sqrt_.bind(this)],
+      [MMLTAGS.MTABLE, this.table_.bind(this)],
+      [MMLTAGS.MLABELEDTR, this.tableLabeledRow_.bind(this)],
+      [MMLTAGS.MTR, this.tableRow_.bind(this)],
+      [MMLTAGS.MTD, this.tableCell_.bind(this)],
+      [MMLTAGS.MS, this.text_.bind(this)],
+      [MMLTAGS.MTEXT, this.text_.bind(this)],
+      [MMLTAGS.MSPACE, this.space_.bind(this)],
+      [MMLTAGS.ANNOTATIONXML, this.text_.bind(this)],
+      [MMLTAGS.MI, this.identifier_.bind(this)],
+      [MMLTAGS.MN, this.number_.bind(this)],
+      [MMLTAGS.MO, this.operator_.bind(this)],
+      [MMLTAGS.MFENCED, this.fenced_.bind(this)],
+      [MMLTAGS.MENCLOSE, this.enclosed_.bind(this)],
+      [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
+      [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
+      [MMLTAGS.NONE, this.empty_.bind(this)],
+      [MMLTAGS.MACTION, this.action_.bind(this)],
+    ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
       role: SemanticRole.NUMBERSET,
@@ -131,12 +128,19 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   public parse(mml: Element) {
     SemanticProcessor.getInstance().setNodeFactory(this.getFactory());
     const children = DomUtil.toArray(mml.childNodes);
-    const tag = DomUtil.tagName(mml);
-    const func = this.parseMap_[tag];
+    const tag = DomUtil.tagName(mml) as MMLTAGS;
+    const func = this.parseMap_.get(tag);
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
     SemanticUtil.addAttributes(newNode, mml);
     if (
-      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS', 'MACTION'].indexOf(
+      [
+        MMLTAGS.MATH,
+        MMLTAGS.MROW,
+        MMLTAGS.MPADDED,
+        MMLTAGS.MSTYLE,
+        MMLTAGS.SEMANTICS,
+        MMLTAGS.MACTION
+      ].indexOf(
         tag
       ) !== -1
     ) {

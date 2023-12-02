@@ -52,12 +52,12 @@ export default class SemanticProcessor {
   };
 
   private static readonly MML_TO_LIMIT_: { [key: string]: BoundsType } = {
-    MSUB: { type: SemanticType.LIMLOWER, length: 1 },
-    MUNDER: { type: SemanticType.LIMLOWER, length: 1 },
-    MSUP: { type: SemanticType.LIMUPPER, length: 1 },
-    MOVER: { type: SemanticType.LIMUPPER, length: 1 },
-    MSUBSUP: { type: SemanticType.LIMBOTH, length: 2 },
-    MUNDEROVER: { type: SemanticType.LIMBOTH, length: 2 }
+    [MMLTAGS.MSUB]: { type: SemanticType.LIMLOWER, length: 1 },
+    [MMLTAGS.MUNDER]: { type: SemanticType.LIMLOWER, length: 1 },
+    [MMLTAGS.MSUP]: { type: SemanticType.LIMUPPER, length: 1 },
+    [MMLTAGS.MOVER]: { type: SemanticType.LIMUPPER, length: 1 },
+    [MMLTAGS.MSUBSUP]: { type: SemanticType.LIMBOTH, length: 2 },
+    [MMLTAGS.MUNDEROVER]: { type: SemanticType.LIMBOTH, length: 2 }
   };
 
   /**
@@ -66,12 +66,12 @@ export default class SemanticProcessor {
    *
    */
   private static readonly MML_TO_BOUNDS_: { [key: string]: BoundsType } = {
-    MSUB: { type: SemanticType.SUBSCRIPT, length: 1, accent: false },
-    MSUP: { type: SemanticType.SUPERSCRIPT, length: 1, accent: false },
-    MSUBSUP: { type: SemanticType.SUBSCRIPT, length: 2, accent: false },
-    MUNDER: { type: SemanticType.UNDERSCORE, length: 1, accent: true },
-    MOVER: { type: SemanticType.OVERSCORE, length: 1, accent: true },
-    MUNDEROVER: { type: SemanticType.UNDERSCORE, length: 2, accent: true }
+    [MMLTAGS.MSUB]: { type: SemanticType.SUBSCRIPT, length: 1, accent: false },
+    [MMLTAGS.MSUP]: { type: SemanticType.SUPERSCRIPT, length: 1, accent: false },
+    [MMLTAGS.MSUBSUP]: { type: SemanticType.SUBSCRIPT, length: 2, accent: false },
+    [MMLTAGS.MUNDER]: { type: SemanticType.UNDERSCORE, length: 1, accent: true },
+    [MMLTAGS.MOVER]: { type: SemanticType.OVERSCORE, length: 1, accent: true },
+    [MMLTAGS.MUNDEROVER]: { type: SemanticType.UNDERSCORE, length: 2, accent: true }
   };
 
   private static readonly CLASSIFY_FUNCTION_: { [key: string]: string } = {
