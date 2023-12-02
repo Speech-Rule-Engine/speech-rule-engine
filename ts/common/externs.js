@@ -49,12 +49,3 @@ var wgxpath;
  * @type {function(Object=)}
  */
 wgxpath.install = function(opt_feature) { };
-
-
-/*
- * @externs
- */
-var Sre;
-Sre.xmlTree = function(mml) { };
-Sre.getTree = function(mml) { };
-Sre.getTreeFromString = function(expr) { };

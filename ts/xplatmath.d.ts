@@ -2,8 +2,8 @@
  * @externs
  */
 
-declare namespace zorkow.sre {
+declare namespace Sre {
   function xmlTree(mml: Element): Element;
-  function getTree(mml: Element): SemanticTree;
-  function getTreeFromString(expr: string): SemanticTree;
+  function getTree(mml: Element): any;
+  function getTreeFromString(expr: string): any;
 }

@@ -1,37 +1,10 @@
-import { xmlTree as t1, getTreeFromString as t2 } from './semantic_tree/semantic.js';
+import { xmlTree as t1, getTree as t2, getTreeFromString as t3 } from './semantic_tree/semantic.js';
 
-/*
- * @externs
- */
-declare interface Sre {
-  xmlTree: any,
-  getTreeFromString: any
-}
+declare let Sre: any;
 
-let r: Sre = {
-  xmlTree: t1,
-  getTreeFromString: t2
-};
-export default r;
-console.log('HERE we are!');
-console.log(r.xmlTree);
-console.log(r.getTreeFromString('<math><mo>=</mo></math>').toString());
-// export default Sre;
+Sre ={};
+Sre.xmlTree = t1;
+Sre.getTree = t2;
+Sre.getTreeFromString = t3;
 
-
-// declare namespace Sre {
-//   function xmlTree(mml: Element): Element;
-//   // function getTree(mml: Element): SemanticTree;
-//   function getTreeFromString(expr: string): SemanticTree;
-// }
-
-// Sre.xmlTree = t1;
-// Sre.xmlTree = t2;
-// /*
-//  * @externs
-//  */
-// declare interface Sre {
-//   t1: xmlTree,
-//   t2: getTree;
-//   t3: getTreeFromString;
-// }
+export default Sre;
