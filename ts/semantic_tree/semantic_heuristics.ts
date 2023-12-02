@@ -23,7 +23,7 @@
 import { Debugger } from '../common/debugger.js';
 import Engine from '../common/engine.js';
 import { NamedSymbol } from './semantic_attr.js';
-import * as SemanticHeuristics from './semantic_heuristic_factory.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
   SemanticTreeHeuristic,
   SemanticMultiHeuristic
@@ -34,6 +34,7 @@ import * as SemanticPred from './semantic_pred.js';
 import SemanticProcessor from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { SemanticSkeleton } from './semantic_skeleton.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import * as DomUtil from '../common/dom_util.js';
 
@@ -587,14 +588,14 @@ function eligibleNode(node: Element) {
   return (
     node.childNodes[0] &&
     node.childNodes[0].childNodes[0] &&
-    DomUtil.tagName(node.childNodes[0] as Element) === 'MPADDED' &&
+    DomUtil.tagName(node.childNodes[0] as Element) === MMLTAGS.MPADDED &&
     DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) ===
-      'MPADDED' &&
+      MMLTAGS.MPADDED &&
     DomUtil.tagName(
       node.childNodes[0].childNodes[
         node.childNodes[0].childNodes.length - 1
       ] as Element
-    ) === 'MPHANTOM'
+    ) === MMLTAGS.MPHANTOM
   );
 }
 

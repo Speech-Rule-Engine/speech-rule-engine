@@ -21,6 +21,7 @@
 import * as DomUtil from '../common/dom_util.js';
 import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import * as EnrichMathml from './enrich_mathml.js';
@@ -78,7 +79,7 @@ export class CaseTable extends AbstractEnrichCase {
         [lfence].concat(this.inner, [rfence]),
         this.semantic
       );
-    } else if (DomUtil.tagName(this.mml) === 'MFENCED') {
+    } else if (DomUtil.tagName(this.mml) === MMLTAGS.MFENCED) {
       const children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);
       rfence && this.mml.appendChild(rfence);
