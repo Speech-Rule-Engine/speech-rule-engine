@@ -25,6 +25,7 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { Sexp } from '../semantic_tree/semantic_skeleton.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import * as EnrichMathml from './enrich_mathml.js';
@@ -120,7 +121,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     // mprescripts
     if (
       children[childCounter] &&
-      DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS'
+      DomUtil.tagName(children[childCounter]) !== MMLTAGS.MPRESCRIPTS
     ) {
       this.mml.insertBefore(
         children[childCounter],

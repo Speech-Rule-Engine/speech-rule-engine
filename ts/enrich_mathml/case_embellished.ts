@@ -24,6 +24,7 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import { CaseDoubleScript } from './case_double_script.js';
@@ -300,10 +301,10 @@ export class CaseEmbellished extends AbstractEnrichCase {
     const mmlTag = DomUtil.tagName(mml);
     let parent = null;
     let caller;
-    if (mmlTag === 'MSUBSUP') {
+    if (mmlTag === MMLTAGS.MSUBSUP) {
       parent = semantic.childNodes[0];
       caller = CaseDoubleScript;
-    } else if (mmlTag === 'MMULTISCRIPTS') {
+    } else if (mmlTag === MMLTAGS.MMULTISCRIPTS) {
       if (
         semantic.type === SemanticType.SUPERSCRIPT ||
         semantic.type === SemanticType.SUBSCRIPT

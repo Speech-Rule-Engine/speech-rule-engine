@@ -35,6 +35,7 @@ import { SemanticNode } from './semantic_node.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
 import * as SemanticPred from './semantic_pred.js';
 import * as SemanticUtil from './semantic_util.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 interface BoundsType {
   type: SemanticType;
@@ -391,12 +392,12 @@ export default class SemanticProcessor {
    * @returns The space element if it exists.
    */
   private static getSpacer_(node: Element): Element {
-    if (DomUtil.tagName(node) === 'MSPACE') {
+    if (DomUtil.tagName(node) === MMLTAGS.MSPACE) {
       return node;
     }
     while (SemanticUtil.hasEmptyTag(node) && node.childNodes.length === 1) {
       node = node.childNodes[0] as Element;
-      if (DomUtil.tagName(node) === 'MSPACE') {
+      if (DomUtil.tagName(node) === MMLTAGS.MSPACE) {
         return node;
       }
     }
@@ -1200,15 +1201,15 @@ export default class SemanticProcessor {
   public text(leaf: SemanticNode, type: string): SemanticNode {
     SemanticProcessor.exprFont_(leaf);
     leaf.type = SemanticType.TEXT;
-    if (type === 'ANNOTATION-XML') {
+    if (type === MMLTAGS.ANNOTATIONXML) {
       leaf.role = SemanticRole.ANNOTATION;
       return leaf;
     }
-    if (type === 'MS') {
+    if (type === MMLTAGS.MS) {
       leaf.role = SemanticRole.STRING;
       return leaf;
     }
-    if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
+    if (type === MMLTAGS.MSPACE || leaf.textContent.match(/^\s*$/)) {
       leaf.role = SemanticRole.SPACE;
       return leaf;
     }
@@ -1549,7 +1550,7 @@ export default class SemanticProcessor {
     if (!nonEmptySub && !nonEmptySup) {
       return base;
     }
-    const mmlTag = nonEmptySub ? (nonEmptySup ? 'MSUBSUP' : 'MSUB') : 'MSUP';
+    const mmlTag = nonEmptySub ? (nonEmptySup ? MMLTAGS.MSUBSUP : MMLTAGS.MSUB) : MMLTAGS.MSUP;
     const mmlchild = [base];
     if (nonEmptySub) {
       mmlchild.push(
@@ -3865,8 +3866,8 @@ export default class SemanticProcessor {
     }
     for (let i = 0, node; (node = nodes[i]); i++) {
       const tag = DomUtil.tagName(node);
-      if (tag !== 'MSPACE') {
-        if (tag === 'MROW') {
+      if (tag !== MMLTAGS.MSPACE) {
+        if (tag === MMLTAGS.MROW) {
           return SemanticProcessor.getInstance().findNestedRow_(
             DomUtil.toArray(node.childNodes),
             semantic,

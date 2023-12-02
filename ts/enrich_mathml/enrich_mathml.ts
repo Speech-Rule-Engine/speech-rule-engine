@@ -34,6 +34,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as SemanticUtil from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import * as EnrichAttr from './enrich_attr.js';
 import { getCase } from './enrich_case.js';
@@ -799,7 +800,7 @@ export function cloneContentNode(content: SemanticNode): Element {
  * @returns The rewritten element.
  */
 export function rewriteMfenced(mml: Element): Element {
-  if (DomUtil.tagName(mml) !== 'MFENCED') {
+  if (DomUtil.tagName(mml) !== MMLTAGS.MFENCED) {
     return mml;
   }
   const newNode = EnrichAttr.addMrow();

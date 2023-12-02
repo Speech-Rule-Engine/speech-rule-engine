@@ -30,6 +30,7 @@ import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
 import SemanticProcessor from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
   private parseMap_: {
@@ -517,7 +518,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     let prescripts = false;
     let scriptcount = 0;
     for (let i = 0, child; (child = children[i]); i++) {
-      if (DomUtil.tagName(child) === 'MPRESCRIPTS') {
+      if (DomUtil.tagName(child) === MMLTAGS.MPRESCRIPTS) {
         prescripts = true;
         scriptcount = 0;
         continue;
