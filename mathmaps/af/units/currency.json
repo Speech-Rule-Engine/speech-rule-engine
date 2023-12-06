@@ -1,0 +1,256 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "$",
+    "mappings": {
+      "default": {
+        "default": "doller",
+        "plural": "dollers"
+      }
+    }
+  },
+  {
+    "key": "£",
+    "mappings": {
+      "default": {
+        "default": "pond",
+        "plural": "ponde"
+      }
+    }
+  },
+  {
+    "key": "¥",
+    "mappings": {
+      "default": {
+        "default": "jen",
+        "plural": "jen"
+      }
+    }
+  },
+  {
+    "key": "€",
+    "mappings": {
+      "default": {
+        "default": "euro",
+        "plural": "euros"
+      }
+    }
+  },
+  {
+    "key": "₡",
+    "mappings": {
+      "default": {
+        "default": "dubbelpunt",
+        "plural": "dubbelpunte"
+      }
+    }
+  },
+  {
+    "key": "₢",
+    "mappings": {
+      "default": {
+        "default": "cruzeiro",
+        "plural": "cruzeiros"
+      }
+    }
+  },
+  {
+    "key": "₣",
+    "mappings": {
+      "default": {
+        "default": "frank",
+        "plural": "franke"
+      }
+    }
+  },
+  {
+    "key": "₤",
+    "mappings": {
+      "default": {
+        "default": "lier",
+        "plural": "liere"
+      }
+    }
+  },
+  {
+    "key": "₥",
+    "mappings": {
+      "default": {
+        "default": "mill",
+        "plural": "mills"
+      }
+    }
+  },
+  {
+    "key": "₦",
+    "mappings": {
+      "default": {
+        "default": "naira",
+        "plural": "nairas"
+      }
+    }
+  },
+  {
+    "key": "₧",
+    "mappings": {
+      "default": {
+        "default": "peseta",
+        "plural": "pesetas"
+      }
+    }
+  },
+  {
+    "key": "₨",
+    "mappings": {
+      "default": {
+        "default": "rupee",
+        "plural": "rupees"
+      }
+    }
+  },
+  {
+    "key": "₩",
+    "mappings": {
+      "default": {
+        "default": "won",
+        "plural": "wons"
+      }
+    }
+  },
+  {
+    "key": "₪",
+    "mappings": {
+      "default": {
+        "default": "sheqel",
+        "plural": "sheqels"
+      }
+    }
+  },
+  {
+    "key": "₫",
+    "mappings": {
+      "default": {
+        "default": "dong",
+        "plural": "dongs"
+      }
+    }
+  },
+  {
+    "key": "₭",
+    "mappings": {
+      "default": {
+        "default": "kip",
+        "plural": "kips"
+      }
+    }
+  },
+  {
+    "key": "₮",
+    "mappings": {
+      "default": {
+        "default": "tugrik",
+        "plural": "tugriks"
+      }
+    }
+  },
+  {
+    "key": "₯",
+    "mappings": {
+      "default": {
+        "default": "dragma",
+        "plural": "dragmas"
+      }
+    }
+  },
+  {
+    "key": "₰",
+    "mappings": {
+      "default": {
+        "default": "Pfennig",
+        "plural": "Pfennigs"
+      }
+    }
+  },
+  {
+    "key": "₱",
+    "mappings": {
+      "default": {
+        "default": "peso",
+        "plural": "pesos"
+      }
+    }
+  },
+  {
+    "key": "₲",
+    "mappings": {
+      "default": {
+        "default": "guaranis"
+      }
+    }
+  },
+  {
+    "key": "₳",
+    "mappings": {
+      "default": {
+        "default": "austral",
+        "plural": "australs"
+      }
+    }
+  },
+  {
+    "key": "₴",
+    "mappings": {
+      "default": {
+        "default": "hryvnia",
+        "plural": "hryvnias"
+      }
+    }
+  },
+  {
+    "key": "₵",
+    "mappings": {
+      "default": {
+        "default": "cedi",
+        "plural": "cedis"
+      }
+    }
+  },
+  {
+    "key": "₸",
+    "mappings": {
+      "default": {
+        "default": "tenge",
+        "plural": "tenge"
+      }
+    }
+  },
+  {
+    "key": "₺",
+    "mappings": {
+      "default": {
+        "default": "turkse lier",
+        "plural": "turkse liere"
+      }
+    }
+  },
+  {
+    "key": "元",
+    "mappings": {
+      "default": {
+        "default": "yuan",
+        "plural": "yuans"
+      }
+    }
+  },
+  {
+    "key": "¢",
+    "mappings": {
+      "default": {
+        "default": "sent",
+        "plural": "sente"
+      }
+    }
+  }
+]

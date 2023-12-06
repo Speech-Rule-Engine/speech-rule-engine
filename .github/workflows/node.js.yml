@@ -14,9 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     name: Compile SRE with locales
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
       - name: Setup Speech Rule Engine
-        run: npm ci
+        run: pnpm i; pnpm build
+
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
@@ -35,54 +44,26 @@ jobs:
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
       - name: Downloading the build
         uses: actions/download-artifact@v2
         with:
           name: sre-library
+
       - name: Set up tests
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
-          npm ci --ignore-scripts
-          cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
+          pnpm i --ignore-scripts
+          cd sre-tests; ln -s .. speech-rule-engine; pnpm i; sudo chmod -R 777 .;
+
       - name: Run tests for ${{ matrix.block }}
-        run: npm run actionTest js/actions/${{ matrix.block }}.test.js
-
-  deploy:
-    needs: setup
-    runs-on: ubuntu-latest
-    name: deploy dev version
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: deploy
-          persist-credentials: false
-          fetch-depth: 0
-      - name: Moving old files
-        run: |
-          mv lib lib-old
-      - name: Downloading the build
-        uses: actions/download-artifact@v2
-        with:
-          name: sre-library
-      - name: Get Time
-        id: time
-        uses: nanzm/get-time-action@v1.1
-        with:
-          timeZone: 8
-          format: 'YYYY-MM-DD-HH-mm-ss'
-      - name: Commit Deploy
-        env:
-          TIME: "${{ steps.time.outputs.time }}"
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add lib/sre.js lib/mathmaps/*
-          git commit --allow-empty -m 'Deployment at $TIME' -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: deploy
-
+        run: pnpm run actionTest js/actions/${{ matrix.block }}.test.js

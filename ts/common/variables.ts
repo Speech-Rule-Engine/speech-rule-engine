@@ -28,6 +28,7 @@ export class Variables {
    * Locale mapping to language names.
    */
   public static readonly LOCALES: Map<string, string> = new Map([
+    ['af', 'Africaans'],
     ['ca', 'Catalan'],
     ['da', 'Danish'],
     ['de', 'German'],

@@ -24,7 +24,7 @@ import Engine from '../common/engine.js';
 
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr.js';
-import { SemanticType } from './semantic_meaning.js';
+import { SemanticType, SemanticRole } from './semantic_meaning.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticTree } from './semantic_tree.js';
 
@@ -159,11 +159,12 @@ export class SemanticSkeleton {
    * @returns The combined list.
    */
   public static combineContentChildren<T>(
-    semantic: SemanticNode,
+    type: SemanticType,
+    _role: SemanticRole,
     content: T[],
     children: T[]
   ): T[] {
-    switch (semantic.type) {
+    switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
       case SemanticType.MULTIREL:
@@ -172,16 +173,22 @@ export class SemanticSkeleton {
         return content.concat(children);
       case SemanticType.POSTFIXOP:
         return children.concat(content);
+      case SemanticType.MATRIX:
+      case SemanticType.VECTOR:
       case SemanticType.FENCED:
         children.unshift(content[0]);
         children.push(content[1]);
         return children;
+      case SemanticType.CASES:
+        children.unshift(content[0]);
+        return children;
       case SemanticType.APPL:
         return [children[0], content[0], children[1]];
       case SemanticType.ROOT:
-        return [children[1], children[0]];
+        return [children[0], children[1]];
       case SemanticType.ROW:
       case SemanticType.LINE:
+        // Adding the labels to the skeleton for explorative access.
         if (content.length) {
           children.unshift(content[0]);
         }
@@ -290,7 +297,8 @@ export class SemanticSkeleton {
       return node.id;
     }
     const children = SemanticSkeleton.combineContentChildren<SemanticNode>(
-      node,
+      node.type,
+      node.role,
       node.contentNodes.map(function (x) {
         return x;
       }),

@@ -622,7 +622,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[n] . ; [t] \"का फलन\""
+      "[n] .; [t] \"का फलन\""
     ],
     [
       "Action",

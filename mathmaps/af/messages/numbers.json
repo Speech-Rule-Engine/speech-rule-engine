@@ -1,0 +1,59 @@
+{
+  "kind": "numbers",
+  "locale": "af",
+  "messages": {
+    "zero": "nul",
+    "ones": [
+      "",
+      "een",
+      "twee",
+      "drie",
+      "vier",
+      "vyf",
+      "ses",
+      "sewe",
+      "ag",
+      "nege",
+      "tien",
+      "elf",
+      "twaalf",
+      "dertien",
+      "veertien",
+      "vyftien",
+      "sestien",
+      "sewentien",
+      "agtien",
+      "negentien"
+    ],
+    "tens": [
+      "",
+      "",
+      "twintig",
+      "dertig",
+      "veertig",
+      "vyftig",
+      "sestig",
+      "sewentig",
+      "tagtig",
+      "negentig"
+    ],
+    "large": [
+      "",
+      "duisend",
+      "miljoen",
+      "miljard",
+      "biljoen",
+      "biljard",
+      "triljoen",
+      "triljard",
+      "quadriljoen",
+      "quadriljard",
+      "quintiljoen",
+      "quintiljard",
+      "sextiljoen",
+      "sextiljard"
+    ],
+    "vulgarSep": " ",
+    "numSep": " "
+  }
+}

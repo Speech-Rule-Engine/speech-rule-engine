@@ -1,0 +1,101 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "1D26",
+    "mappings": {
+      "default": {
+        "default": "kleinletter Gamma"
+      }
+    }
+  },
+  {
+    "key": "1D27",
+    "mappings": {
+      "default": {
+        "default": "kleinletter Lamda"
+      }
+    }
+  },
+  {
+    "key": "1D28",
+    "mappings": {
+      "default": {
+        "default": "kleinletter Pi"
+      }
+    }
+  },
+  {
+    "key": "1D29",
+    "mappings": {
+      "default": {
+        "default": "kleinletter Rho"
+      }
+    }
+  },
+  {
+    "key": "1D2A",
+    "mappings": {
+      "default": {
+        "default": "kleinletter Psi"
+      }
+    }
+  },
+  {
+    "key": "1D5E",
+    "mappings": {
+      "default": {
+        "default": "boskrif gamma"
+      }
+    }
+  },
+  {
+    "key": "1D60",
+    "mappings": {
+      "default": {
+        "default": "boskrif phi"
+      }
+    }
+  },
+  {
+    "key": "1D66",
+    "mappings": {
+      "default": {
+        "default": "onderskrif beta"
+      }
+    }
+  },
+  {
+    "key": "1D67",
+    "mappings": {
+      "default": {
+        "default": "onderskrif gamma"
+      }
+    }
+  },
+  {
+    "key": "1D68",
+    "mappings": {
+      "default": {
+        "default": "onderskrif rho"
+      }
+    }
+  },
+  {
+    "key": "1D69",
+    "mappings": {
+      "default": {
+        "default": "onderskrif phi"
+      }
+    }
+  },
+  {
+    "key": "1D6A",
+    "mappings": {
+      "default": {
+        "default": "onderskrif chi"
+      }
+    }
+  }
+]

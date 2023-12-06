@@ -19,6 +19,7 @@
  */
 
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import * as EnrichMathml from './enrich_mathml.js';
 import { addMrow, setAttributes } from './enrich_attr.js';
@@ -86,7 +87,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
     }
     if (
       !node.mathmlTree ||
-      (DomUtil.tagName(node.mathmlTree) === 'MTABLE' &&
+      (DomUtil.tagName(node.mathmlTree) === MMLTAGS.MTABLE &&
         node.annotation['Emph']?.length &&
         node.annotation['Emph'][0] !== 'table')
     ) {
@@ -96,7 +97,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
       this.mrows.unshift(newNode);
     } else {
       if (
-        DomUtil.tagName(node.mathmlTree) === 'MTABLE' &&
+        DomUtil.tagName(node.mathmlTree) === MMLTAGS.MTABLE &&
         node.annotation['Emph']?.length &&
         node.annotation['Emph'][0] === 'table'
       ) {

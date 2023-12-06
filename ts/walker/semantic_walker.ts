@@ -130,8 +130,8 @@ export class SemanticWalker extends AbstractWalker<Focus> {
         ];
       case SemanticType.ROOT:
         return [
-          this.singletonFocus(children[1]),
-          this.singletonFocus(children[0])
+          this.singletonFocus(children[0]),
+          this.singletonFocus(children[1])
         ];
       default:
         return children.map(this.singletonFocus.bind(this));

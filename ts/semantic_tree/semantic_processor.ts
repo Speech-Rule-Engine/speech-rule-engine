@@ -30,11 +30,12 @@ import {
   SemanticType,
   SemanticSecondary
 } from './semantic_meaning.js';
-import * as SemanticHeuristics from './semantic_heuristic_factory.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
 import * as SemanticPred from './semantic_pred.js';
 import * as SemanticUtil from './semantic_util.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 interface BoundsType {
   type: SemanticType;
@@ -51,12 +52,12 @@ export default class SemanticProcessor {
   };
 
   private static readonly MML_TO_LIMIT_: { [key: string]: BoundsType } = {
-    MSUB: { type: SemanticType.LIMLOWER, length: 1 },
-    MUNDER: { type: SemanticType.LIMLOWER, length: 1 },
-    MSUP: { type: SemanticType.LIMUPPER, length: 1 },
-    MOVER: { type: SemanticType.LIMUPPER, length: 1 },
-    MSUBSUP: { type: SemanticType.LIMBOTH, length: 2 },
-    MUNDEROVER: { type: SemanticType.LIMBOTH, length: 2 }
+    [MMLTAGS.MSUB]: { type: SemanticType.LIMLOWER, length: 1 },
+    [MMLTAGS.MUNDER]: { type: SemanticType.LIMLOWER, length: 1 },
+    [MMLTAGS.MSUP]: { type: SemanticType.LIMUPPER, length: 1 },
+    [MMLTAGS.MOVER]: { type: SemanticType.LIMUPPER, length: 1 },
+    [MMLTAGS.MSUBSUP]: { type: SemanticType.LIMBOTH, length: 2 },
+    [MMLTAGS.MUNDEROVER]: { type: SemanticType.LIMBOTH, length: 2 }
   };
 
   /**
@@ -65,12 +66,12 @@ export default class SemanticProcessor {
    *
    */
   private static readonly MML_TO_BOUNDS_: { [key: string]: BoundsType } = {
-    MSUB: { type: SemanticType.SUBSCRIPT, length: 1, accent: false },
-    MSUP: { type: SemanticType.SUPERSCRIPT, length: 1, accent: false },
-    MSUBSUP: { type: SemanticType.SUBSCRIPT, length: 2, accent: false },
-    MUNDER: { type: SemanticType.UNDERSCORE, length: 1, accent: true },
-    MOVER: { type: SemanticType.OVERSCORE, length: 1, accent: true },
-    MUNDEROVER: { type: SemanticType.UNDERSCORE, length: 2, accent: true }
+    [MMLTAGS.MSUB]: { type: SemanticType.SUBSCRIPT, length: 1, accent: false },
+    [MMLTAGS.MSUP]: { type: SemanticType.SUPERSCRIPT, length: 1, accent: false },
+    [MMLTAGS.MSUBSUP]: { type: SemanticType.SUBSCRIPT, length: 2, accent: false },
+    [MMLTAGS.MUNDER]: { type: SemanticType.UNDERSCORE, length: 1, accent: true },
+    [MMLTAGS.MOVER]: { type: SemanticType.OVERSCORE, length: 1, accent: true },
+    [MMLTAGS.MUNDEROVER]: { type: SemanticType.UNDERSCORE, length: 2, accent: true }
   };
 
   private static readonly CLASSIFY_FUNCTION_: { [key: string]: string } = {
@@ -391,12 +392,12 @@ export default class SemanticProcessor {
    * @returns The space element if it exists.
    */
   private static getSpacer_(node: Element): Element {
-    if (DomUtil.tagName(node) === 'MSPACE') {
+    if (DomUtil.tagName(node) === MMLTAGS.MSPACE) {
       return node;
     }
     while (SemanticUtil.hasEmptyTag(node) && node.childNodes.length === 1) {
       node = node.childNodes[0] as Element;
-      if (DomUtil.tagName(node) === 'MSPACE') {
+      if (DomUtil.tagName(node) === MMLTAGS.MSPACE) {
         return node;
       }
     }
@@ -1200,15 +1201,15 @@ export default class SemanticProcessor {
   public text(leaf: SemanticNode, type: string): SemanticNode {
     SemanticProcessor.exprFont_(leaf);
     leaf.type = SemanticType.TEXT;
-    if (type === 'ANNOTATION-XML') {
+    if (type === MMLTAGS.ANNOTATIONXML) {
       leaf.role = SemanticRole.ANNOTATION;
       return leaf;
     }
-    if (type === 'MS') {
+    if (type === MMLTAGS.MS) {
       leaf.role = SemanticRole.STRING;
       return leaf;
     }
-    if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
+    if (type === MMLTAGS.MSPACE || leaf.textContent.match(/^\s*$/)) {
       leaf.role = SemanticRole.SPACE;
       return leaf;
     }
@@ -1549,7 +1550,7 @@ export default class SemanticProcessor {
     if (!nonEmptySub && !nonEmptySup) {
       return base;
     }
-    const mmlTag = nonEmptySub ? (nonEmptySup ? 'MSUBSUP' : 'MSUB') : 'MSUP';
+    const mmlTag = nonEmptySub ? (nonEmptySup ? MMLTAGS.MSUBSUP : MMLTAGS.MSUB) : MMLTAGS.MSUP;
     const mmlchild = [base];
     if (nonEmptySub) {
       mmlchild.push(
@@ -3865,8 +3866,8 @@ export default class SemanticProcessor {
     }
     for (let i = 0, node; (node = nodes[i]); i++) {
       const tag = DomUtil.tagName(node);
-      if (tag !== 'MSPACE') {
-        if (tag === 'MROW') {
+      if (tag !== MMLTAGS.MSPACE) {
+        if (tag === MMLTAGS.MROW) {
           return SemanticProcessor.getInstance().findNestedRow_(
             DomUtil.toArray(node.childNodes),
             semantic,

@@ -1,0 +1,32 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "F",
+    "mappings": {
+      "default": {
+        "default": "Fahrenheit",
+        "plural": "Fahrenheit"
+      }
+    }
+  },
+  {
+    "key": "C",
+    "mappings": {
+      "default": {
+        "default": "Selsius",
+        "alternative": "Centigrade"
+      }
+    }
+  },
+  {
+    "key": "K",
+    "mappings": {
+      "default": {
+        "default": "Kelvin",
+        "plural": "Kelvin"
+      }
+    }
+  }
+]

@@ -56,26 +56,26 @@ import {
 } from './semantic_meaning.js';
 import * as Alphabet from '../speech_rules/alphabet.js';
 
-export namespace NamedSymbol {
+export const NamedSymbol = {
   /**
    * Invisible operator for function application.
    */
-  export const functionApplication = String.fromCodePoint(0x2061);
+  functionApplication: String.fromCodePoint(0x2061),
 
   /**
    * Invisible operator for multiplication.
    */
-  export const invisibleTimes: string = String.fromCodePoint(0x2062);
+  invisibleTimes: String.fromCodePoint(0x2062),
 
   /**
    * The invisible comma character.
    */
-  export const invisibleComma: string = String.fromCodePoint(0x2063);
+  invisibleComma: String.fromCodePoint(0x2063),
 
   /**
    * Invisible operator for plus.
    */
-  export const invisiblePlus: string = String.fromCodePoint(0x2064);
+  invisiblePlus: String.fromCodePoint(0x2064)
 }
 
 // Map extensions for semantic maps.
@@ -147,16 +147,16 @@ class secondaryMap extends Map<string, string> {
   }
 }
 
-export namespace SemanticMap {
+export const SemanticMap = {
   /**
    * Mapping primary meaning of symbols.
    */
-  export const Meaning = new meaningMap();
+  Meaning: new meaningMap(),
 
   /**
    * Secondary meaning.
    */
-  export const Secondary = new secondaryMap();
+  Secondary: new secondaryMap(),
 
   // Fences.
   // Fences are treated slightly differently from other symbols as we want to
@@ -164,14 +164,14 @@ export namespace SemanticMap {
   /**
    * Mapping opening to closing fences.
    */
-  export const FencesHoriz = new Map();
+  FencesHoriz: new Map(),
 
   /**
    * Mapping top to bottom fences.
    */
-  export const FencesVert = new Map();
+  FencesVert: new Map(),
 
-  export const LatexCommands = new Map();
+  LatexCommands: new Map()
 
 }
 

@@ -120,7 +120,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
       case SemanticType.APPL:
         return [children[0], content[0], children[1]];
       case SemanticType.ROOT:
-        return [children[1], children[0]];
+        return [children[0], children[1]];
       default:
         return children;
     }
