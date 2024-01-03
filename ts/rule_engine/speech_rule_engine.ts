@@ -328,7 +328,9 @@ export class SpeechRuleEngine {
       'Apply Rule:',
       rule.name,
       rule.dynamicCstr.toString(),
-      (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
+      engine.mode === EngineConst.Mode.HTTP ?
+        DomUtil.serializeXml(node) :
+        node.toString()
     ]);
     Grammar.getInstance().processSingles();
     const context = rule.context;

@@ -29,6 +29,7 @@ import * as EngineConst from '../common/engine_const.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import * as DomUtil from '../common/dom_util.js';
 
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
@@ -61,6 +62,16 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    */
   public setRebuilt(rebuilt: RebuildStree) {
     this.rebuilt_ = rebuilt;
+  }
+
+  /**
+   * @override
+   */
+  public computeRebuilt(xml: Element) {
+    if (!this.rebuilt_) {
+      this.rebuilt_ = new RebuildStree(xml);
+    }
+    return this.rebuilt_;
   }
 
   /**
@@ -171,12 +182,4 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     return style;
   }
 
-  public summary(node: Element) {
-    let id = node.getAttribute('data-semantic-id');
-    let snode = this.getRebuilt().nodeDict[id].xml(document);
-    console.log(snode);
-    const summary = SpeechGeneratorUtil.retrieveSummary(snode);
-    console.log(summary);
-    console.log(SpeechGeneratorUtil.retrieveSummary(node));
-  }
 }

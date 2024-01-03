@@ -284,8 +284,10 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * @param node The XML node.
  * @returns The summary speech string.
  */
-export function retrieveSummary(node: Element): string {
-  const descrs = computeSummary(node);
+export function retrieveSummary(
+  node: Element,
+  options: { [key: string]: string } = {}): string {
+  const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
 }
 
@@ -296,10 +298,14 @@ export function retrieveSummary(node: Element): string {
  * @returns A list of auditory descriptions
  *     for the summary.
  */
-function computeSummary(node: Element): AuditoryDescription[] {
+function computeSummary(
+  node: Element,
+  options: { [key: string]: string } = {}): AuditoryDescription[] {
+  const preOption = options.locale ? {locale: options.locale} : {};
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
-        { modality: 'summary', strict: false, speech: true },
+      Object.assign(preOption,
+                    { modality: 'summary', strict: false, speech: true }),
         function () {
           return SpeechRuleEngine.getInstance().evaluateNode(node);
         }

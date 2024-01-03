@@ -61,6 +61,14 @@ export interface SpeechGenerator {
   setRebuilt(rebuilt: RebuildStree): void;
 
   /**
+   * Computes and sets the rebuilt element if it does not exist yet.
+   *
+   * @param xml The base xml element belonging to node.
+   * @returns The rebuilt semantic tree object.
+   */
+  computeRebuilt(xml: Element): RebuildStree;
+
+  /**
    * Sets dynamic constraint options for the speech engine.
    *
    * @param options The dynamic constraint.
