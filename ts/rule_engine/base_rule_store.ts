@@ -51,7 +51,7 @@ export abstract class BaseRuleStore
   /**
    * A dynamic constraint parser.
    */
-  public parser: DynamicCstrParser = new DynamicCstrParser(this.parseOrder);
+  public parser: DynamicCstrParser = new DynamicCstrParser(DynamicCstr.DEFAULT_ORDER);
 
   /**
    * Default locale.

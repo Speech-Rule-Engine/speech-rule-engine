@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+require('../lib/app.js');
+let stree = Sre.getTreeFromString('<math><mo>=</mo></math>');
+let result = Sre.EngineInstance().evaluateNode(stree);
+console.log(result);
