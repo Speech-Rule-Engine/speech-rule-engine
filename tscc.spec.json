@@ -2,6 +2,9 @@
   "modules": {
     "out": "ts/xplatmath.ts"
   },
+  "debug": {
+    "persistArtifacts": false
+  },
   "compilerFlags": {
     "assume_function_wrapper": true,
     "rewrite_polyfills": true,
@@ -9,6 +12,6 @@
     "language_out": "ECMASCRIPT_NEXT",
     "variable_renaming_report": "lib/report.map",
     "js_output_file": "lib/app.js",
-    "externs": ["ts/common/externs.js", "ts/externs.js"]
+    "externs": ["ts/common/externs.js", "ts/externs.js", "ts/rule_engine/externs.js"]
   }
 }
