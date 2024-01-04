@@ -50,13 +50,13 @@ interface MathMapJson {
  * Methods for parsing json structures.
  */
 const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
-  functions: MathCompoundStore.addFunctionRules,
-  symbols: MathCompoundStore.addSymbolRules,
-  units: MathCompoundStore.addUnitRules,
-  si: (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
-  messages: completeLocale,
-  rules: SpeechRuleEngine.addStore,
-  characters: MathCompoundStore.addCharacterRules
+  'functions': MathCompoundStore.addFunctionRules,
+  'symbols': MathCompoundStore.addSymbolRules,
+  'units': MathCompoundStore.addUnitRules,
+  'si': (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
+  'messages': completeLocale,
+  'rules': SpeechRuleEngine.addStore,
+  'characters': MathCompoundStore.addCharacterRules
 };
 
 let _init = false;

@@ -40,21 +40,21 @@ import { sv } from './locales/locale_sv.js';
 import { Locale, LOCALE } from './locale.js';
 
 export const locales: { [key: string]: () => Locale } = {
-  af: af,
-  ca: ca,
-  da: da,
-  de: de,
-  en: en,
-  es: es,
-  euro: euro,
-  fr: fr,
-  hi: hi,
-  it: it,
-  ko: ko,
-  nb: nb,
-  nn: nn,
-  sv: sv,
-  nemeth: nemeth
+  'af': af,
+  'ca': ca,
+  'da': da,
+  'de': de,
+  'en': en,
+  'es': es,
+  'euro': euro,
+  'fr': fr,
+  'hi': hi,
+  'it': it,
+  'ko': ko,
+  'nb': nb,
+  'nn': nn,
+  'sv': sv,
+  'nemeth': nemeth
 };
 
 /**

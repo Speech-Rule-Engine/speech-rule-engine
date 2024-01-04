@@ -460,3 +460,7 @@ export class EnginePromise {
     return Promise.all(Object.values(EnginePromise.promises));
   }
 }
+
+export function enginePromise() {
+  return EnginePromise.getall();
+}

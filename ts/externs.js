@@ -20,3 +20,8 @@ Sre.EngineInstance = function() { };
 * @param {Object<string>} feature
 */
 Sre.setupEngine = function(feature) { };
+
+/**
+ * @return {!Promise<void>}
+ */
+Sre.enginePromise = function() { };

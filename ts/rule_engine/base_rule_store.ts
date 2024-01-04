@@ -162,11 +162,11 @@ export abstract class BaseRuleStore
    */
   constructor() {
     this.parseMethods = {
-      Rule: this.defineRule,
-      Generator: this.generateRules,
-      Action: this.defineAction,
-      Precondition: this.definePrecondition,
-      Ignore: this.ignoreRules
+      'Rule': this.defineRule,
+      'Generator': this.generateRules,
+      'Action': this.defineAction,
+      'Precondition': this.definePrecondition,
+      'Ignore': this.ignoreRules
     };
   }
 

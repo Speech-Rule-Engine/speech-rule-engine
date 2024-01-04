@@ -33,7 +33,7 @@ import * as SpeechRules from './speech_rules.js';
 export function PrefixRules() {
   // Basic English
   SpeechRules.addStore('en.prefix.default', '', {
-    CSFordinalPosition: NumbersUtil.ordinalPosition
+    'CSFordinalPosition': NumbersUtil.ordinalPosition
   });
 }
 
@@ -42,19 +42,19 @@ export function PrefixRules() {
  */
 export function OtherRules() {
   SpeechRules.addStore('en.speech.chromevox', '', {
-    CTFnodeCounter: StoreUtil.nodeCounter,
-    CTFcontentIterator: StoreUtil.contentIterator
+    'CTFnodeCounter': StoreUtil.nodeCounter,
+    'CTFcontentIterator': StoreUtil.contentIterator
   });
 
   SpeechRules.addStore('en.speech.emacspeak', 'en.speech.chromevox', {
-    CQFvulgarFractionSmall: MathspeakUtil.isSmallVulgarFraction,
-    CSFvulgarFraction: NumbersUtil.vulgarFraction
+    'CQFvulgarFractionSmall': MathspeakUtil.isSmallVulgarFraction,
+    'CSFvulgarFraction': NumbersUtil.vulgarFraction
   });
 
   SpeechRules.addStore('ko.summary.', 'ko.speech.mathspeak', { 
-    CSFordinalConversion: MathspeakKoreanUtil.ordinalConversion,
-    CSFdecreasedOrdinalConversion: MathspeakKoreanUtil.decreasedOrdinalConversion,
-    CSFlistOrdinalConversion: MathspeakKoreanUtil.listOrdinalConversion
+    'CSFordinalConversion': MathspeakKoreanUtil.ordinalConversion,
+    'CSFdecreasedOrdinalConversion': MathspeakKoreanUtil.decreasedOrdinalConversion,
+    'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion
   });
 }
 
@@ -67,27 +67,27 @@ export function BrailleRules() {
     'nemeth.braille.default',
     DynamicCstr.BASE_LOCALE + '.speech.mathspeak',
     {
-      CSFopenFraction: NemethUtil.openingFraction,
-      CSFcloseFraction: NemethUtil.closingFraction,
-      CSFoverFraction: NemethUtil.overFraction,
+      'CSFopenFraction': NemethUtil.openingFraction,
+      'CSFcloseFraction': NemethUtil.closingFraction,
+      'CSFoverFraction': NemethUtil.overFraction,
 
-      CSFoverBevFraction: NemethUtil.overBevelledFraction,
-      CQFhyperFraction: NemethUtil.hyperFractionBoundary,
+      'CSFoverBevFraction': NemethUtil.overBevelledFraction,
+      'CQFhyperFraction': NemethUtil.hyperFractionBoundary,
       // Radical function.
-      CSFopenRadical: NemethUtil.openingRadical,
-      CSFcloseRadical: NemethUtil.closingRadical,
+      'CSFopenRadical': NemethUtil.openingRadical,
+      'CSFcloseRadical': NemethUtil.closingRadical,
 
-      CSFindexRadical: NemethUtil.indexRadical,
-      CSFsubscript: MathspeakUtil.subscriptVerbose,
-      CSFsuperscript: MathspeakUtil.superscriptVerbose,
+      'CSFindexRadical': NemethUtil.indexRadical,
+      'CSFsubscript': MathspeakUtil.subscriptVerbose,
+      'CSFsuperscript': MathspeakUtil.superscriptVerbose,
 
-      CSFbaseline: MathspeakUtil.baselineVerbose,
+      'CSFbaseline': MathspeakUtil.baselineVerbose,
 
-      CGFtensorRules: (st: SpeechRuleStore) =>
+      'CGFtensorRules': (st: SpeechRuleStore) =>
         MathspeakUtil.generateTensorRules(st, false),
-      CTFcontentIterator: NemethUtil.contentIterator,
-      CTFrelationIterator: NemethUtil.relationIterator,
-      CTFimplicitIterator: NemethUtil.implicitIterator
+      'CTFcontentIterator': NemethUtil.contentIterator,
+      'CTFrelationIterator': NemethUtil.relationIterator,
+      'CTFimplicitIterator': NemethUtil.implicitIterator
     }
   );
 

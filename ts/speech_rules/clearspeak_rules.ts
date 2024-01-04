@@ -32,18 +32,18 @@ import * as SpeechRules from './speech_rules.js';
 export function ClearspeakRules() {
   // Basic English
   SpeechRules.addStore(DynamicCstr.BASE_LOCALE + '.speech.clearspeak', '', {
-    CTFpauseSeparator: StoreUtil.pauseSeparator,
-    CTFnodeCounter: ClearspeakUtil.nodeCounter,
-    CTFcontentIterator: StoreUtil.contentIterator,
-    CSFvulgarFraction: NumbersUtil.vulgarFraction,
-    CQFvulgarFractionSmall: ClearspeakUtil.isSmallVulgarFraction,
-    CQFcellsSimple: ClearspeakUtil.allCellsSimple,
-    CSFordinalExponent: ClearspeakUtil.ordinalExponent,
-    CSFwordOrdinal: ClearspeakUtil.wordOrdinal,
-    CQFmatchingFences: ClearspeakUtil.matchingFences,
-    CSFnestingDepth: ClearspeakUtil.nestingDepth,
-    CQFfencedArguments: ClearspeakUtil.fencedArguments,
-    CQFsimpleArguments: ClearspeakUtil.simpleArguments,
-    CQFspaceoutNumber: MathspeakUtil.spaceoutNumber
+    'CTFpauseSeparator': StoreUtil.pauseSeparator,
+    'CTFnodeCounter': ClearspeakUtil.nodeCounter,
+    'CTFcontentIterator': StoreUtil.contentIterator,
+    'CSFvulgarFraction': NumbersUtil.vulgarFraction,
+    'CQFvulgarFractionSmall': ClearspeakUtil.isSmallVulgarFraction,
+    'CQFcellsSimple': ClearspeakUtil.allCellsSimple,
+    'CSFordinalExponent': ClearspeakUtil.ordinalExponent,
+    'CSFwordOrdinal': ClearspeakUtil.wordOrdinal,
+    'CQFmatchingFences': ClearspeakUtil.matchingFences,
+    'CSFnestingDepth': ClearspeakUtil.nestingDepth,
+    'CQFfencedArguments': ClearspeakUtil.fencedArguments,
+    'CQFsimpleArguments': ClearspeakUtil.simpleArguments,
+    'CQFspaceoutNumber': MathspeakUtil.spaceoutNumber
   });
 }
