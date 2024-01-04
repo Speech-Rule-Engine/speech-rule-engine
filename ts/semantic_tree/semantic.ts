@@ -49,6 +49,17 @@ export { Attr };
  * @param mml The MathML node.
  * @returns Semantic tree for input node as XML node.
  */
+export function xmlTreeFromString(expr: string): Element {
+  const mml = DomUtil.parseInput(expr);
+  return getTree(mml).xml();
+}
+
+/**
+ * Creates the semantic tree for a given MathML node.
+ *
+ * @param mml The MathML node.
+ * @returns Semantic tree for input node as XML node.
+ */
 export function xmlTree(mml: Element): Element {
   return getTree(mml).xml();
 }

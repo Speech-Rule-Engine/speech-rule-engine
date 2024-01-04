@@ -2,6 +2,9 @@
   "modules": {
     "out": "ts/xplatmath.ts"
   },
+  "debug": {
+    "persistArtifacts": false
+  },
   "compilerFlags": {
     "assume_function_wrapper": true,
     "rewrite_polyfills": true,

@@ -1,5 +1,6 @@
 var Sre;
 Sre.xmlTree = function(mml) { };
+Sre.xmlTreeFromString = function(expr) { };
 Sre.getTree = function(mml) { };
 Sre.getTreeFromString = function(expr) { };
 Sre.SpeechRuleEngine = class {
