@@ -153,9 +153,9 @@ export class Grammar {
     text = Grammar.prepareUnit(text);
     const engine = Engine.getInstance();
     const plural = Grammar.getInstance().getParameter('plural');
-    const strict = engine.strict;
-    const baseCstr = `${engine.locale}.${engine.modality}.default`;
-    engine.strict = true;
+    const strict = engine.binaryFeatures.get('strict');
+    const baseCstr = `${engine.stringFeatures.get('locale')}.${engine.stringFeatures.get('modality')}.default`;
+    engine.binaryFeatures.set('strict', true);
     let cstr: DynamicCstr;
     let result: string;
     if (plural) {
@@ -163,12 +163,12 @@ export class Grammar {
       result = engine.evaluator(text, cstr);
     }
     if (result) {
-      engine.strict = strict;
+      engine.binaryFeatures.set('strict', strict);
       return result;
     }
     cstr = engine.defaultParser.parse(baseCstr + '.default');
     result = engine.evaluator(text, cstr);
-    engine.strict = strict;
+    engine.binaryFeatures.set('strict', strict);
     if (!result) {
       return Grammar.cleanUnit(text);
     }
@@ -433,7 +433,7 @@ export function correctFont(text: string, correction: string): string {
  * @returns The cleaned up string.
  */
 function correctCaps(text: string): string {
-  let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().domain];
+  let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().stringFeatures.get('domain')];
   if (typeof cap === 'undefined') {
     cap = LOCALE.ALPHABETS.capPrefix['default'];
   }

@@ -74,9 +74,9 @@ function numberToWords(num: number): string {
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
-  if (NUMBERS.special['tens-' + Engine.getInstance().subiso]) {
+  if (NUMBERS.special['tens-' + Engine.getInstance().stringFeatures.get('subiso')]) {
     NUMBERS.tens = NUMBERS.special[
-      'tens-' + Engine.getInstance().subiso
+      'tens-' + Engine.getInstance().stringFeatures.get('subiso')
     ] as string[];
   }
   let pos = 0;

@@ -26,7 +26,11 @@ import * as EngineConst from './engine_const.js';
 import { Debugger } from './debugger.js';
 import { Variables } from './variables.js';
 
-declare const SREfeature: { [key: string]: any };
+export type SreFeature = {
+  [key: string]: any
+};
+
+declare const SREfeature: SreFeature;
 
 /**
  * The base error class for signaling SRE errors.
@@ -69,6 +73,26 @@ export default class Engine {
   ];
 
   /**
+   * Binary feature vector.
+   */
+  public binaryFeatures: Map<string, boolean> = new Map(
+    [
+      // Markup options
+      ['mark', true],
+      ['automark', false], // Automatic marking of elements for spans.
+      ['character', true],
+      ['cleanpause', true],
+      ['strict', false], // Strict interpretations of rules and constraints.
+      // Enrichment options
+      ['structure', false], // Skeleton structure attributes are added
+      ['aria', false], // Aria attributes are added
+      ['pprint', false], // Pretty Print mode
+      // Nemeth layout options
+      ['cayleyshort', true],
+      ['linebreaks', false],
+    ]);
+
+  /**
    * String feature vector.
    */
   public static STRING_FEATURES: string[] = [
@@ -79,13 +103,100 @@ export default class Engine {
     'walker',
     'defaultLocale',
     'locale',
-    'delay',
     'modality',
     'rate',
     'rules',
     'subiso',
     'prune'
   ];
+
+  // /**
+  //  * The default locale.
+  //  */
+  // public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  // public set defaultLocale(loc: string) {
+  //   this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
+  // }
+
+  // public get defaultLocale() {
+  //   return this._defaultLocale;
+  // }
+
+  // /**
+  //  * Current locale.
+  //  */
+  // public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  // /**
+  //  * Current subiso for the locale.
+  //  */
+  // public subiso = '';
+
+  // /**
+  //  * Current modality.
+  //  */
+  // public modality = ;
+
+  // /**
+  //  */
+  // public speech:  = ;
+
+  // /**
+  //  * Caching during speech generation.
+  //  */
+  // public markup: EngineConst.Markup = EngineConst.Markup.NONE;
+
+  // /**
+  //  */
+  // public rate = '100';
+
+  /**
+   * String feature vector.
+   */
+  public stringFeatures: Map<string, string> = new Map([
+    ['markup', EngineConst.Markup.NONE], // EngineConst.Markup
+    ['style', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]],
+    ['domain', 'mathspeak'],
+    // The level to which speech attributes are added to enriched elements
+    // (none, shallow, deep).
+    ['speech', EngineConst.Speech.NONE], // EngineConst.Speech
+     // Current walker mode.
+    ['walker', 'Table'],
+    ['defaultLocale', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
+    ['locale', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
+    ['modality', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
+    // Percentage of default rate used by external TTS. This can be used to
+    // scale pauses.
+    ['rate', '100'],
+    // Rules file to load.
+    ['rules', ''], 
+    ['subiso', ''],
+    // EngineConstraints to prune given dot separated.
+    ['prune', ''], 
+  ]);
+
+  public getFeature(feature: string): string | boolean {
+    let str = this.stringFeatures.get(feature);
+    if (str !== undefined) {
+      return str;
+    }
+    return this.binaryFeatures.get(feature);
+  }
+
+  public setFeature(feature: string, value: string | boolean) {
+    console.log(feature);
+    console.log(value);
+    if (typeof value === 'string') {
+      if (feature === 'defaultLocale') {
+        value = Variables.ensureLocale(
+          value, this.stringFeatures.get('defaultLocale'));
+      }
+      this.stringFeatures.set(feature, value)
+    } else {
+      this.binaryFeatures.set(feature, value);
+    }
+  }
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
@@ -127,95 +238,9 @@ export default class Engine {
   public comparators: { [key: string]: () => Dcstr.Comparator } = {};
 
   /**
-   * Current domain.
-   */
-  public domain = 'mathspeak';
-
-  /**
-   * Current style.
-   */
-  public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
-
-  /**
-   * The default locale.
-   */
-  public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
-
-  public set defaultLocale(loc: string) {
-    this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
-  }
-
-  public get defaultLocale() {
-    return this._defaultLocale;
-  }
-
-  /**
-   * Current locale.
-   */
-  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
-
-  /**
-   * Current subiso for the locale.
-   */
-  public subiso = '';
-
-  /**
-   * Current modality.
-   */
-  public modality = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY];
-
-  /**
-   * The level to which speech attributes are added to enriched elements
-   * (none, shallow, deep).
-   */
-  public speech: EngineConst.Speech = EngineConst.Speech.NONE;
-
-  /**
-   * Caching during speech generation.
-   */
-  public markup: EngineConst.Markup = EngineConst.Markup.NONE;
-
-  // Markup options
-  public mark = true;
-  /**
-   * Automatic marking of elements for spans.
-   */
-  public automark = false;
-  public character = true;
-  public cleanpause = true;
-
-  /**
-   * Nemeth layout options
-   */
-  public cayleyshort = true;
-  public linebreaks = false;
-
-  /**
-   * Percentage of default rate used by external TTS. This can be used to scale
-   * pauses.
-   */
-  public rate = '100';
-
-  /**
-   * Current walker mode.
-   */
-  public walker = 'Table';
-
-  /**
-   * Indicates if skeleton structure attributes are added to enriched elements
-   */
-  public structure = false;
-  public aria = false;
-
-  /**
    * List of rule sets given as the constructor functions.
    */
   public ruleSets: string[] = [];
-
-  /**
-   * Strict interpretations of rules and constraints.
-   */
-  public strict = false;
 
   /**
    * Current browser is MS Internet Explorer but not Edge.
@@ -228,22 +253,17 @@ export default class Engine {
   public isEdge = false;
 
   /**
-   * Pretty Print mode.
-   */
-  public pprint = false;
-
-  /**
    * True if configuration block has been applied in HTTP mode.
    */
-  public config = false;
+  private config = false;
 
   /**
-   * Rules file to load.
+   * 
    */
   public rules = '';
 
   /**
-   * EngineConstraints to prune given dot separated.
+   * 
    */
   public prune = '';
 
@@ -283,7 +303,7 @@ export default class Engine {
    * @returns The current base rate.
    */
   public getRate(): number {
-    const numeric = parseInt(this.rate, 10);
+    const numeric = parseInt(this.stringFeatures.get('rate'), 10);
     return isNaN(numeric) ? 100 : numeric;
   }
 
@@ -295,8 +315,8 @@ export default class Engine {
    *    parameters.
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
-    if (this.defaultLocale) {
-      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] = this.defaultLocale;
+    if (this.stringFeatures.get('defaultLocale')) {
+      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] = this.stringFeatures.get('defaultLocale');
     }
     if (opt_dynamic) {
       const keys = Object.keys(opt_dynamic);
@@ -306,12 +326,16 @@ export default class Engine {
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
           const value = opt_dynamic[feature];
           // TODO (TS): Make these features cleaner.
-          (this as any)[feature] = value;
+          this.stringFeatures.set(feature, value);
         }
       }
     }
-    EngineConst.DOMAIN_TO_STYLES[this.domain] = this.style;
-    const dynamic = [this.locale, this.modality, this.domain, this.style].join(
+    EngineConst.DOMAIN_TO_STYLES[this.stringFeatures.get('domain')] = this.stringFeatures.get('style');
+    const dynamic = [
+      this.stringFeatures.get('locale'),
+      this.stringFeatures.get('modality'),
+      this.stringFeatures.get('domain'),
+      this.stringFeatures.get('style')].join(
       '.'
     );
     const fallback = Dcstr.DynamicProperties.createProp(
@@ -320,8 +344,8 @@ export default class Engine {
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
     );
-    const comparator = this.comparators[this.domain];
-    const parser = this.parsers[this.domain];
+    const comparator = this.comparators[this.stringFeatures.get('domain')];
+    const parser = this.parsers[this.stringFeatures.get('domain')];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
@@ -334,7 +358,7 @@ export default class Engine {
    * Private constructor.
    */
   private constructor() {
-    this.locale = this.defaultLocale;
+    this.stringFeatures.set('locale', this.stringFeatures.get('defaultLocale'));
     this.evaluator = Engine.defaultEvaluator;
     this.defaultParser = new Dcstr.DynamicCstrParser(
       Dcstr.DynamicCstr.DEFAULT_ORDER
@@ -424,7 +448,7 @@ export class EnginePromise {
    * @returns The promise for a locale.
    */
   public static get(
-    locale: string = Engine.getInstance().locale
+    locale: string = Engine.getInstance().stringFeatures.get('locale')
   ): Promise<string> {
     return EnginePromise.promises[locale] || Promise.resolve('');
   }

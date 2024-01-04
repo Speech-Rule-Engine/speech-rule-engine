@@ -59,6 +59,7 @@ export async function setupEngine(feature: {
  * @returns Object vector with all engine feature
  *     values.
  */
+// TODO: This needs to be changed!
 export function engineSetup(): { [key: string]: boolean | string } {
   const engineFeatures = ['mode'].concat(
     Engine.STRING_FEATURES,

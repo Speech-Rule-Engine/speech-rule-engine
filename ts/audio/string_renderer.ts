@@ -60,7 +60,7 @@ export class CountingRenderer extends StringRenderer {
    */
   public finalize(str: string): string {
     const output = super.finalize(str);
-    const count = (Engine.getInstance().modality === 'braille') ?
+    const count = (Engine.getInstance().stringFeatures.get('modality') === 'braille') ?
       '⣿⠀⣿⠀⣿⠀⣿⠀⣿⠀': '0123456789';
     let second = new Array(Math.trunc(output.length / 10) + 1).join(count);
     second += count.slice(0, output.length % 10);

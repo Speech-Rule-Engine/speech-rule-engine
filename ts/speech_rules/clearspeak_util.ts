@@ -291,7 +291,7 @@ function isSimpleFraction_(node: SemanticNode): boolean {
  * @returns True of the given preference is set.
  */
 function hasPreference(pref: string): boolean {
-  return Engine.getInstance().style === pref;
+  return Engine.getInstance().stringFeatures.get('style') === pref;
 }
 
 register(

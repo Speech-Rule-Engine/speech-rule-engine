@@ -97,7 +97,7 @@ export class MathSimpleStore {
     dynamic: DynamicCstr,
     rule: SimpleRule
   ): boolean {
-    if (Engine.getInstance().strict) {
+    if (Engine.getInstance().binaryFeatures.get('strict')) {
       return rule.cstr.equal(dynamic);
     }
     return Engine.getInstance().comparator.match(rule.cstr);

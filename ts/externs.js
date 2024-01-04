@@ -15,3 +15,8 @@ Sre.SpeechRuleEngine = class {
  * @return {Sre.SpeechRuleEngine}
  */
 Sre.EngineInstance = function() { };
+
+/**
+* @param {Object<string>} feature
+*/
+Sre.setupEngine = function(feature) { };

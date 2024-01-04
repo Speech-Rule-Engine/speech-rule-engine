@@ -84,7 +84,7 @@ export function process<T>(name: string, expr: string): T {
  */
 function print<T>(name: string, data: T): string {
   const processor = get(name);
-  return Engine.getInstance().pprint
+  return Engine.getInstance().binaryFeatures.get('pprint')
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -100,7 +100,7 @@ export function output(name: string, expr: string): string {
   const processor = get(name);
   try {
     const data = processor.processor(expr);
-    return Engine.getInstance().pprint
+    return Engine.getInstance().binaryFeatures.get('pprint')
       ? processor.pprint(data)
       : processor.print(data);
   } catch (_e) {
@@ -120,7 +120,7 @@ export function keypress(name: string, expr: KeyCode | string): string {
   const processor = get(name);
   const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
   const data = processor.processor(key as string);
-  return Engine.getInstance().pprint
+  return Engine.getInstance().binaryFeatures.get('pprint')
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -133,7 +133,7 @@ set(
       return Semantic.xmlTree(mml) as Element;
     },
     postprocessor: function (xml, _expr) {
-      const setting = Engine.getInstance().speech;
+      const setting = Engine.getInstance().stringFeatures.get('speech');
       if (setting === EngineConst.Speech.NONE) {
         return xml;
       }
@@ -189,7 +189,7 @@ set(
       return stree.toJson();
     },
     postprocessor: function (json: any, expr) {
-      const setting = Engine.getInstance().speech;
+      const setting = Engine.getInstance().stringFeatures.get('speech');
       if (setting === EngineConst.Speech.NONE) {
         return json;
       }
@@ -250,7 +250,7 @@ set(
     postprocessor: function (enr, _expr) {
       const root = WalkerUtil.getSemanticRoot(enr);
       let generator;
-      switch (Engine.getInstance().speech) {
+      switch (Engine.getInstance().stringFeatures.get('speech')) {
         case EngineConst.Speech.NONE:
           break;
         case EngineConst.Speech.SHALLOW:
@@ -278,10 +278,10 @@ set(
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
       generator.setOptions({
-        modality: Engine.getInstance().modality,
-        locale: Engine.getInstance().locale,
-        domain: Engine.getInstance().domain,
-        style: Engine.getInstance().style
+        modality: Engine.getInstance().stringFeatures.get('modality'),
+        locale: Engine.getInstance().stringFeatures.get('locale'),
+        domain: Engine.getInstance().stringFeatures.get('domain'),
+        style: Engine.getInstance().stringFeatures.get('style')
       });
       Processor.LocalState.highlighter = HighlighterFactory.highlighter(
         { color: 'black' },
@@ -291,7 +291,7 @@ set(
       const node = process('enriched', expr) as Element;
       const eml = print('enriched', node);
       Processor.LocalState.walker = WalkerFactory.walker(
-        Engine.getInstance().walker,
+        Engine.getInstance().stringFeatures.get('walker'),
         node,
         generator,
         Processor.LocalState.highlighter,
@@ -362,8 +362,8 @@ set(
   new Processor('latex', {
     processor: function (ltx: string) {
       if (
-        Engine.getInstance().modality !== 'braille' ||
-        Engine.getInstance().locale !== 'euro'
+        Engine.getInstance().stringFeatures.get('modality') !== 'braille' ||
+          Engine.getInstance().stringFeatures.get('locale') !== 'euro'
       ) {
         console.info(
           'LaTeX input currently only works for Euro Braille output.' +

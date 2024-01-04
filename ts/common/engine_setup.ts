@@ -45,21 +45,23 @@ export async function setup(feature: { [key: string]: boolean | string }) {
     feature.domain === 'default' &&
     (feature.modality === 'speech' ||
       !feature.modality ||
-      engine.modality === 'speech')
+      engine.stringFeatures.get('modality') === 'speech')
   ) {
     feature.domain = 'mathspeak';
   }
   const setIf = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
-      engine[feat] = !!feature[feat];
+      engine.binaryFeatures.set(feat, !!feature[feat]);
     }
   };
   const setMulti = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
-      engine[feat] = feature[feat];
+      engine.stringFeatures.set(feat, feature[feat]);
     }
   };
-  setMulti('mode');
+  if (feature['mode']) {
+    engine.mode = feature['mode'];
+  }
   engine.configurate(feature);
   Engine.BINARY_FEATURES.forEach(setIf);
   Engine.STRING_FEATURES.forEach(setMulti);

@@ -29,8 +29,8 @@ import { XmlRenderer } from './xml_renderer.js';
 export class LayoutRenderer extends XmlRenderer {
 
   public static options = {
-    cayleyshort: Engine.getInstance().cayleyshort,
-    linebreaks: Engine.getInstance().linebreaks
+    cayleyshort: Engine.getInstance().binaryFeatures.get('cayleyshort'),
+    linebreaks: Engine.getInstance().binaryFeatures.get('linebreaks')
   }
 
   /**
@@ -493,7 +493,7 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
-  if (Engine.getInstance().cayleyshort && mat[0].cells[0] === '⠀') {
+  if (Engine.getInstance().binaryFeatures.get('cayleyshort') && mat[0].cells[0] === '⠀') {
     bar.cells[0] = '⠀';
   }
   mat.splice(1, 0, bar);
@@ -607,7 +607,7 @@ function handleFractionPart(prt: Element): string {
 
 // This implements line breaking for concepts of 14.12.1 Priority List.
 function handleRelation(rel: Element): string {
-  if (!Engine.getInstance().linebreaks) {
+  if (!Engine.getInstance().binaryFeatures.get('linebreaks')) {
     return recurseTree(rel);
   }
   let value = relValues.get(parseInt(rel.getAttribute('value')));

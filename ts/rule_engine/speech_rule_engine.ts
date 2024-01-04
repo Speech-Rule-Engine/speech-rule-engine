@@ -135,6 +135,7 @@ export class SpeechRuleEngine {
     try {
       result = this.evaluateNode_(node);
     } catch (err) {
+      console.log(err);
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
@@ -168,17 +169,23 @@ export class SpeechRuleEngine {
     settings: { [feature: string]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
+    // console.log(13);
     const engine = Engine.getInstance() as any;
     const save: { [feature: string]: string | boolean } = {};
+    // console.log(engine.stringFeatures);
+    // console.log(engine.binaryFeatures);
     for (const [key, val] of Object.entries(settings)) {
-      save[key] = engine[key];
-      engine[key] = val;
+      save[key] = engine.getFeature(key);
+      engine.setFeature(key, val);
     }
+    // console.log(save);
     engine.setDynamicCstr();
     const result = callback();
     for (const [key, val] of Object.entries(save)) {
-      engine[key] = val;
+      engine.setFeature(key, val);
     }
+    // console.log(engine.stringFeatures);
+    // console.log(engine.binaryFeatures);
     engine.setDynamicCstr();
     return result;
   }
@@ -314,10 +321,10 @@ export class SpeechRuleEngine {
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
-      if (engine.strict) {
+      if (engine.binaryFeatures.get('strict')) {
         return [];
       }
-      result = this.getEvaluator(engine.locale, engine.modality)(node);
+      result = this.getEvaluator(engine.stringFeatures.get('locale'), engine.stringFeatures.get('modality'))(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
@@ -654,7 +661,7 @@ export class SpeechRuleEngine {
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
     const dynamic = Engine.getInstance().dynamicCstr;
-    const strict = Engine.getInstance().strict;
+    const strict = Engine.getInstance().binaryFeatures.get('strict');
     const trie = this.trie;
     const props: { [key: string]: string[] } = {};
     let locale = dynamic.getValue(Axis.LOCALE);
@@ -863,4 +870,9 @@ function processAnnotations(descrs: AuditoryDescription[]): AuditoryDescription[
     }
   }
   return alist.toList();
+}
+
+
+export function EngineInstance() {
+  return SpeechRuleEngine.getInstance();
 }
