@@ -39,8 +39,7 @@ import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 import * as SpeechRules from '../speech_rules/speech_rules.js';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores.js';
-import { BaseRuleStore } from './base_rule_store.js';
-import { RulesJson } from './base_rule_store.js';
+import { BaseRuleStore, RulesJson } from './base_rule_store.js';
 import { BrailleStore, EuroStore } from './braille_store.js';
 import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr.js';
 import { Grammar, State as GrammarState } from './grammar.js';
@@ -135,7 +134,6 @@ export class SpeechRuleEngine {
     try {
       result = this.evaluateNode_(node);
     } catch (err) {
-      console.log(err);
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
@@ -169,23 +167,17 @@ export class SpeechRuleEngine {
     settings: { [feature: string]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
-    // console.log(13);
     const engine = Engine.getInstance() as any;
     const save: { [feature: string]: string | boolean } = {};
-    // console.log(engine.stringFeatures);
-    // console.log(engine.binaryFeatures);
     for (const [key, val] of Object.entries(settings)) {
       save[key] = engine.getFeature(key);
       engine.setFeature(key, val);
     }
-    // console.log(save);
     engine.setDynamicCstr();
     const result = callback();
     for (const [key, val] of Object.entries(save)) {
       engine.setFeature(key, val);
     }
-    // console.log(engine.stringFeatures);
-    // console.log(engine.binaryFeatures);
     engine.setDynamicCstr();
     return result;
   }
@@ -732,7 +724,7 @@ export class SpeechRuleEngine {
    *     constraints. These are matched against properties of a rule.
    * @returns The speech rule if an applicable one exists.
    */
-  public lookupRule(node: Node, dynamic: DynamicCstr) {
+  public lookupRule(node: Element, dynamic: DynamicCstr) {
     if (
       !node ||
       (node.nodeType !== DomUtil.NodeType.ELEMENT_NODE &&

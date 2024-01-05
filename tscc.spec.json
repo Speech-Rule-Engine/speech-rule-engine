@@ -12,6 +12,6 @@
     "language_out": "ECMASCRIPT_NEXT",
     "variable_renaming_report": "lib/report.map",
     "js_output_file": "lib/app.js",
-    "externs": ["ts/common/externs.js", "ts/externs.js", "ts/rule_engine/externs.js"]
+    "externs": ["ts/common/externs.js", "ts/externs.js", "ts/rule_engine/externs.js", "ts/l10n/externs.js"]
   }
 }

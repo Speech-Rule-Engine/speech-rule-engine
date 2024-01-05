@@ -1,11 +1,16 @@
 #!/usr/bin/env node
 require('../lib/app.js');
-let promise = Sre.setupEngine({}).then(() => Sre.enginePromise());
-promise.then(async () => {
-  Sre.setupEngine({locale: 'en'});
-  return Sre.enginePromise();
-}).then(() => {
-  let stree = Sre.getTreeFromString('<math><mo>=</mo></math>');
-  let result = Sre.EngineInstance().evaluateNode(stree);
-});
 
+
+async function run2() {
+  await Sre.setupEngine({}).
+    then(() => Sre.enginePromise()).
+    then(() => Sre.setupEngine({locale: 'en'})).
+    then(() => {
+      let stree = Sre.xmlTreeFromString('<math><mo>=</mo></math>');
+      let result = Sre.EngineInstance().evaluateNode(stree);
+      console.log(result);
+    });
+}
+
+run2();
