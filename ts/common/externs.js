@@ -49,3 +49,6 @@ var wgxpath;
  * @type {function(Object=)}
  */
 wgxpath.install = function(opt_feature) { };
+
+var Resolver = {};
+Resolver.lookupNamespaceURI;

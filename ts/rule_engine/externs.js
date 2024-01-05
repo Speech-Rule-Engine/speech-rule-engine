@@ -31,7 +31,6 @@ var SimpleRule = {};
 SimpleRule.cstr;
 SimpleRule.action;
 
-
 var ComponentType = {};
 ComponentType.type;
 ComponentType.content;
