@@ -32,3 +32,8 @@ SimpleRule.cstr;
 SimpleRule.action;
 
 
+var ComponentType = {};
+ComponentType.type;
+ComponentType.content;
+ComponentType.attributes;
+ComponentType.grammar;
