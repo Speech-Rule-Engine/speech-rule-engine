@@ -87,8 +87,8 @@ export interface Numbers {
   // Constructor methods
   wordOrdinal?: tr.Transformer;
   numericOrdinal?: tr.Transformer;
-  numberToWords: tr.Transformer;
-  numberToOrdinal: tr.GrammarCase;
+  numberToWords?: tr.Transformer;
+  numberToOrdinal?: tr.GrammarCase;
 
   vulgarSep?: string;
   numSep?: string;
@@ -97,10 +97,8 @@ export interface Numbers {
 /**
  * @returns A numbers structure.
  */
-export function NUMBERS(numbers?: Numbers): Numbers {
+export function NUMBERS(numbers: Numbers = {}): Numbers {
   return Object.assign(
-    {},
-    numbers,
     {
       zero: 'zero',
       ones: [],
@@ -114,7 +112,9 @@ export function NUMBERS(numbers?: Numbers): Numbers {
       numberToOrdinal: tr.pluralCase,
       vulgarSep: ' ',
       numSep: ' '
-    });
+    },
+    numbers
+  );
 }
 
 /**
