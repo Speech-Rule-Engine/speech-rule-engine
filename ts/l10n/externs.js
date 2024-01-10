@@ -36,15 +36,20 @@ Alphabets.letterTrans;
 Alphabets.combiner;
 
 
-// var Functions = {};
-// Functions.fracNestDepth;
-// Functions.radicalNestDepth;
-// Functions.combineRootIndex;
-// Functions.combineNestedFraction;
-// Functions.combineNestedRadical;
-// Functions.fontRegexp;
-// Functions.si;
-// Functions.plural;
+var Functions = {};
+Functions.fracNestDepth;
+Functions.radicalNestDepth;
+Functions.combineRootIndex;
+Functions.combineNestedFraction;
+Functions.combineNestedRadical;
+Functions.fontRegexp;
+Functions.si;
+Functions.plural;
+
+var SUBISO = {};
+SUBISO.default;
+SUBISO.current;
+SUBISO.all;
 
 var LOCALE = {};
 LOCALE.FUNCTIONS;

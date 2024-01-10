@@ -13,6 +13,9 @@ async function run2() {
       stree = Sre.xmlTreeFromString('<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>&#x2212;</mo><mi>b</mi><mo>&#xB1;</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow></math>');
       result = Sre.EngineInstance().evaluateNode(stree);
       console.log(result);
+      stree = Sre.xmlTreeFromString('<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>x</mi><mo>=</mo><mi>b</mi></math>');
+      result = Sre.EngineInstance().evaluateNode(stree);
+      console.log(result);
     });
 }
 

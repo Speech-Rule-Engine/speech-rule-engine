@@ -269,31 +269,23 @@ export class MathStore extends BaseRuleStore {
    * @returns The number and its length.
    */
   protected matchNumber(str: string): { number: string; length: number } | null {
-    console.log(56);
-    console.log(str);
-    console.log(LOCALE);
-    const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
+    const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp['NUMBER']));
     const enNum = str.match(new RegExp('^' + MathStore.regexp.NUMBER));
     if (!locNum && !enNum) {
       return null;
     }
     const isEn = enNum && enNum[0] === str;
     const isLoc = (locNum && locNum[0] === str) || !isEn;
-    console.log(isEn);
-    console.log(isLoc);
     if (isLoc) {
       return locNum ? { number: locNum[0], length: locNum[0].length } : null;
     }
-    console.log(57);
-    console.log(MathStore.regexp);
     const num = enNum[0]
       .replace(new RegExp(MathStore.regexp.DIGIT_GROUP, 'g'), 'X')
       .replace(
         new RegExp(MathStore.regexp.DECIMAL_MARK, 'g'),
-        LOCALE.MESSAGES.regexp.DECIMAL_MARK
+        LOCALE.MESSAGES.regexp['DECIMAL_MARK']
       )
-      .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));
-    console.log(58);
+      .replace(/X/g, LOCALE.MESSAGES.regexp['DIGIT_GROUP'].replace(/\\/g, ''));
     return { number: num, length: enNum[0].length };
   }
 }

@@ -185,8 +185,6 @@ export class Engine {
   }
 
   public setFeature(feature: string, value: string | boolean) {
-    console.log(feature);
-    console.log(value);
     if (typeof value === 'string') {
       if (feature === 'defaultLocale') {
         value = Variables.ensureLocale(
