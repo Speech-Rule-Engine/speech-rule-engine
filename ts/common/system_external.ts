@@ -27,7 +27,7 @@ declare let global: any;
 declare let require: (name: string) => any;
 declare let process: any;
 
-export default class SystemExternal {
+export class SystemExternal {
   /**
    * The local require function for NodeJS.
    *

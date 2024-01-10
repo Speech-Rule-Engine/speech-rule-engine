@@ -20,13 +20,13 @@
 
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
-import Engine, { EnginePromise, SREError } from './engine.js';
+import { Engine, EnginePromise, SREError } from './engine.js';
 import { setup } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
 import * as FileUtil from './file_util.js';
 import * as ProcessorFactory from './processor_factory.js';
-import SystemExternal from './system_external.js';
+import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 import { standardLoader } from '../speech_rules/math_map.js';
 

@@ -22,7 +22,7 @@
 import { Grammar } from '../../rule_engine/grammar.js';
 import { createLocale, Locale } from '../locale.js';
 import { nestingToString } from '../locale_util.js';
-import NUMBERS from '../numbers/numbers_ko.js';
+import { NUMBERS } from '../numbers/numbers_ko.js';
 import * as tr from '../transformers.js';
 
 

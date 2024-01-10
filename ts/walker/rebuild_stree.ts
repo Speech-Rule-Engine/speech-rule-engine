@@ -29,7 +29,7 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory.js';
-import SemanticProcessor from '../semantic_tree/semantic_processor.js';
+// import SemanticProcessor from '../semantic_tree/semantic_processor.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from './walker_util.js';
@@ -115,7 +115,7 @@ export class RebuildStree {
     this.streeRoot = this.assembleTree(this.mmlRoot);
     this.stree = SemanticTree.fromNode(this.streeRoot, this.mathml);
     this.xml = this.stree.xml();
-    SemanticProcessor.getInstance().setNodeFactory(this.factory);
+    // SemanticProcessor.getInstance().setNodeFactory(this.factory);
   }
 
   /**

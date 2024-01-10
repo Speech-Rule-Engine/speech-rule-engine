@@ -22,7 +22,7 @@
 // This work was sponsored by TextHelp
 //
 
-import Engine from '../../common/engine.js';
+import { Engine } from '../../common/engine.js';
 import { Grammar } from '../../rule_engine/grammar.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
@@ -167,10 +167,11 @@ function numericOrdinal(num: number): string {
     : num.toString() + 'e';
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.numericOrdinal = numericOrdinal;
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToOrdinal;
-
-export default NUMBERS;
+export const NUMBERS: Numbers = NUMB(
+  {
+    'wordOrdinal': wordOrdinal,
+    'numericOrdinal': numericOrdinal,
+    'numberToWords': numberToWords,
+    'numberToOrdinal': numberToOrdinal,
+  }
+);

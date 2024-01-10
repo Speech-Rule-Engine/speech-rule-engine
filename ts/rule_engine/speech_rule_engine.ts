@@ -33,7 +33,7 @@ import { AuditoryDescription, AuditoryList } from '../audio/auditory_description
 import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';

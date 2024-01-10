@@ -28,7 +28,7 @@ import { SemanticMap } from './semantic_attr.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
-import SemanticProcessor from './semantic_processor.js';
+import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 

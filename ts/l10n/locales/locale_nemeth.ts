@@ -24,7 +24,7 @@
 //
 
 import { createLocale, Locale } from '../locale.js';
-import NUMBERS from '../numbers/numbers_nemeth.js';
+import { NUMBERS } from '../numbers/numbers_nemeth.js';
 import { identityTransformer } from '../transformers.js';
 
 /**

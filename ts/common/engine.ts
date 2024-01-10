@@ -51,7 +51,7 @@ export class SREError extends Error {
  * Initializes the basic Speech engine and contains some global context.
  *
  */
-export default class Engine {
+export class Engine {
   /**
    * Binary feature vector.
    */

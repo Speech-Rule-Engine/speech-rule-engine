@@ -161,11 +161,11 @@ function numericOrdinal(num: number): string {
   return str + (str.match(/1$|2$/) ? ':a' : ':e');
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.numericOrdinal = numericOrdinal;
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToOrdinal;
-
-export default NUMBERS;
-// TODO: For simple speech output this should be different.
+export const NUMBERS: Numbers = NUMB(
+  {
+    'wordOrdinal': wordOrdinal,
+    'numericOrdinal': numericOrdinal,
+    'numberToWords': numberToWords,
+    'numberToOrdinal': numberToOrdinal,
+  }
+);
