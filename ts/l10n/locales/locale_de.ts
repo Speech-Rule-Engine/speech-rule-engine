@@ -25,7 +25,7 @@
 import { Grammar } from '../../rule_engine/grammar.js';
 import { localFont } from '../locale_util.js';
 import { createLocale, Locale } from '../locale.js';
-import NUMBERS from '../numbers/numbers_de.js';
+import { NUMBERS } from '../numbers/numbers_de.js';
 
 const germanPrefixCombiner = function (
   letter: string,

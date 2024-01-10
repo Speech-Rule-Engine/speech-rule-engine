@@ -20,7 +20,7 @@
  */
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as XpathUtil from '../common/xpath_util.js';
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 
 /**
  * Count list of nodes and concatenate this with the context string.

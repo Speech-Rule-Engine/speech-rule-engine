@@ -21,7 +21,7 @@
  */
 
 import { Debugger } from '../common/debugger.js';
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import { NamedSymbol } from './semantic_attr.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
@@ -31,7 +31,7 @@ import {
 import { SemanticRole, SemanticType } from './semantic_meaning.js';
 import { SemanticNode } from './semantic_node.js';
 import * as SemanticPred from './semantic_pred.js';
-import SemanticProcessor from './semantic_processor.js';
+import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { SemanticSkeleton } from './semantic_skeleton.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';

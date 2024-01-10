@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
 import { personalityMarkup } from './audio_util.js';
 import { AuditoryDescription } from './auditory_description.js';

@@ -32,7 +32,7 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
-import SemanticProcessor from '../semantic_tree/semantic_processor.js';
+import { SemanticProcessor } from '../semantic_tree/semantic_processor.js';
 
 // import * as NumbersUtil from './numbers_util.js';
 

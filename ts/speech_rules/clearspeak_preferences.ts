@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import {

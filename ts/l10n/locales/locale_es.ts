@@ -24,7 +24,7 @@
 
 import { createLocale, Locale } from '../locale.js';
 import { combinePostfixIndex } from '../locale_util.js';
-import NUMBERS from '../numbers/numbers_es.js';
+import { NUMBERS } from '../numbers/numbers_es.js';
 import { Combiners } from '../transformers.js';
 
 const sansserifCombiner = function (letter: string, font: string, cap: string) {
