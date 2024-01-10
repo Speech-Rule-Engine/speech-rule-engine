@@ -23,7 +23,7 @@
 //
 
 import { createLocale, Locale } from '../locale.js';
-import NUMBERS from '../numbers/numbers_hi.js';
+import { NUMBERS } from '../numbers/numbers_hi.js';
 import { Combiners } from '../transformers.js';
 import { nestingToString } from '../locale_util.js';
 

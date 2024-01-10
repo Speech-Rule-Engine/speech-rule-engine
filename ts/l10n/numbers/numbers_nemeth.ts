@@ -39,8 +39,9 @@ function numberToWords(num: number): string {
     .join('');
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToWords;
-
-export default NUMBERS;
+export const NUMBERS: Numbers = NUMB(
+  {
+    'numberToWords': numberToWords,
+    'numberToOrdinal': numberToWords,
+  }
+);
