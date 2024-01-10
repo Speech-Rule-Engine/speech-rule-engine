@@ -25,7 +25,7 @@ import * as BrowserUtil from '../common/browser_util.js';
 import { Engine, EnginePromise } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import * as FileUtil from '../common/file_util.js';
-import SystemExternal from '../common/system_external.js';
+import { SystemExternal } from '../common/system_external.js';
 import { RulesJson } from '../rule_engine/base_rule_store.js';
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import * as MathCompoundStore from '../rule_engine/math_compound_store.js';

@@ -24,7 +24,7 @@ import * as BrowserUtil from './browser_util.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
 import * as FileUtil from './file_util.js';
-import SystemExternal from './system_external.js';
+import { SystemExternal } from './system_external.js';
 
 // Engine setup method.
 /**

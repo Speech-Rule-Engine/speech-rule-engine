@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import SystemExternal from './system_external.js';
+import { SystemExternal } from './system_external.js';
 
 export class Debugger {
   private static instance: Debugger;

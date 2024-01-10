@@ -24,7 +24,7 @@
 
 import { Engine } from './engine.js';
 import * as EngineConst from '../common/engine_const.js';
-import SystemExternal from './system_external.js';
+import { SystemExternal } from './system_external.js';
 
 /**
  * Returns whether or not xpath is supported.

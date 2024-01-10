@@ -27,7 +27,7 @@ import { EnginePromise, SREError } from './engine.js';
 import * as EngineConst from './engine_const.js';
 import * as ProcessorFactory from './processor_factory.js';
 import * as System from './system.js';
-import SystemExternal from './system_external.js';
+import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 
 export class Cli {
