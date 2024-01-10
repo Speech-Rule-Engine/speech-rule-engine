@@ -100,5 +100,4 @@ export interface SpeechGenerator {
    */
   nextStyle(id: string): void;
 
-  summary(node: Element): void;
 }

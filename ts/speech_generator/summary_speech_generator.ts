@@ -23,11 +23,6 @@
 import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
 import * as SpeechGeneratorUtil from './speech_generator_util.js';
 import { setup as EngineSetup } from '../common/engine_setup.js';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
-import { engineSetup } from '../common/system.js';
-import * as AuralRendering from '../audio/aural_rendering.js';
-import { Debugger } from '../common/debugger.js';
-import * as DomUtil from '../common/dom_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 
 export class SummarySpeechGenerator extends AbstractSpeechGenerator {

@@ -29,7 +29,6 @@ import * as EngineConst from '../common/engine_const.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
-import * as DomUtil from '../common/dom_util.js';
 
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
@@ -135,7 +134,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   public nextStyle(id: string) {
     this.setOption('style', this.nextStyle_(this.getRebuilt().nodeDict[id]));
   }
-  
+
   /**
    * Cycles to next style or preference of the speech rule set if possible.
    *
