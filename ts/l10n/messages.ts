@@ -166,9 +166,9 @@ export function ALPHABETS(): Alphabets {
     digitPrefix: { default: '' },
     languagePrefix: {},
     digitTrans: {
-      default: tr.identityTransformer,
-      mathspeak: tr.identityTransformer,
-      clearspeak: tr.identityTransformer
+      'default': tr.identityTransformer,
+      'mathspeak': tr.identityTransformer,
+      'clearspeak': tr.identityTransformer
     },
     letterTrans: { default: tr.identityTransformer },
     combiner: (letter: string, _font: string, _cap: string) => {
@@ -231,18 +231,18 @@ export interface Functions {
  */
 export function FUNCTIONS(): Functions {
   return {
-    fracNestDepth: (n: Element) => tr.vulgarFractionSmall(n, 10, 100),
-    radicalNestDepth: (_count: number) => '',
-    combineRootIndex: function (postfix: string, _index: string) {
+    'fracNestDepth': (n: Element) => tr.vulgarFractionSmall(n, 10, 100),
+    'radicalNestDepth': (_count: number) => '',
+    'combineRootIndex': function (postfix: string, _index: string) {
       return postfix;
     },
-    combineNestedFraction: tr.Combiners.identityCombiner,
-    combineNestedRadical: tr.Combiners.identityCombiner,
-    fontRegexp: function (font: string) {
+    'combineNestedFraction': tr.Combiners.identityCombiner,
+    'combineNestedRadical': tr.Combiners.identityCombiner,
+    'fontRegexp': function (font: string) {
       return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
     },
-    si: tr.siCombiner,
-    plural: tr.identityTransformer
+    'si': tr.siCombiner,
+    'plural': tr.identityTransformer
   };
 }
 
@@ -260,8 +260,8 @@ export interface SubIso {
  */
 export function SUBISO(): SubIso {
   return {
-    default: '',
-    current: '',
-    all: []
+    'default': '',
+    'current': '',
+    'all': []
   };
 }

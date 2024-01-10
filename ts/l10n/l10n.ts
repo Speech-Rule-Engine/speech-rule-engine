@@ -111,13 +111,13 @@ function getLocale(): Locale {
  * @param json The JSON of the locale map.
  */
 export function completeLocale(json: any) {
-  const locale = locales[json.locale];
+  const locale = locales[json['locale']];
   if (!locale) {
     console.error('Locale ' + json.locale + ' does not exist!');
     return;
   }
   const kind = json.kind.toUpperCase();
-  const messages = json.messages;
+  const messages = json['messages'];
   if (!messages) return;
   const loc = locale() as any;
   for (const [key, value] of Object.entries(messages)) {

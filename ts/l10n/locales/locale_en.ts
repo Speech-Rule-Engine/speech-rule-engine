@@ -43,13 +43,13 @@ export function en(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
-  loc.FUNCTIONS.plural = (unit: string) => {
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
+  loc.FUNCTIONS['plural'] = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
   };
-  loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
-  loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
-  loc.CORRECTIONS.article = (name: string) => {
+  loc.ALPHABETS['combiner'] = tr.Combiners.prefixCombiner;
+  loc.ALPHABETS['digitTrans']['default'] = NUMBERS.numberToWords;
+  loc.CORRECTIONS['article'] = (name: string) => {
     return Grammar.getInstance().getParameter('noArticle') ? '' : name;
   };
   return loc;
