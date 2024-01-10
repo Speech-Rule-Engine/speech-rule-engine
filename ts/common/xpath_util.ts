@@ -22,7 +22,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from './engine.js';
+import { Engine } from './engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import SystemExternal from './system_external.js';
 

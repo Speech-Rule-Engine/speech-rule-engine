@@ -22,7 +22,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine, { SREError } from './engine.js';
+import { Engine, SREError } from './engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import SystemExternal from './system_external.js';
 import * as XpathUtil from './xpath_util.js';

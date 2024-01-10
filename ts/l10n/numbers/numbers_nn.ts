@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../../common/engine.js';
+import { Engine } from '../../common/engine.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**

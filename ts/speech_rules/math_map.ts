@@ -22,7 +22,7 @@
  */
 
 import * as BrowserUtil from '../common/browser_util.js';
-import Engine, { EnginePromise } from '../common/engine.js';
+import { Engine, EnginePromise } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import * as FileUtil from '../common/file_util.js';
 import SystemExternal from '../common/system_external.js';

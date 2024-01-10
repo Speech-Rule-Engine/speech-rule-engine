@@ -20,7 +20,7 @@
 
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
-import Engine, { EnginePromise, SREError } from './engine.js';
+import { Engine, EnginePromise, SREError } from './engine.js';
 import { setup } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';

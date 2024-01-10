@@ -22,7 +22,7 @@
 // This work was sponsored by TextHelp
 //
 
-import Engine from '../../common/engine.js';
+import { Engine } from '../../common/engine.js';
 import { Grammar } from '../../rule_engine/grammar.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
