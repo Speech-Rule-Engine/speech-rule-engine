@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import { KeyCode } from '../common/event_util.js';
 import { AudioRenderer } from './audio_renderer.js';
 import { AuditoryDescription } from './auditory_description.js';

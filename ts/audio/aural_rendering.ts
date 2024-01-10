@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import { AcssRenderer } from './acss_renderer.js';
 import { AudioRenderer } from './audio_renderer.js';

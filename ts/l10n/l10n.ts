@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import { Variables } from '../common/variables.js';
 import { Grammar } from '../rule_engine/grammar.js';
 

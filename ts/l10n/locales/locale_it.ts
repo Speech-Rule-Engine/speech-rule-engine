@@ -24,7 +24,7 @@
 
 import { combinePostfixIndex, nestingToString } from '../locale_util.js';
 import { createLocale, Locale } from '../locale.js';
-import NUMBERS from '../numbers/numbers_it.js';
+import { NUMBERS } from '../numbers/numbers_it.js';
 import { Combiners } from '../transformers.js';
 
 const italianPostfixCombiner = function (

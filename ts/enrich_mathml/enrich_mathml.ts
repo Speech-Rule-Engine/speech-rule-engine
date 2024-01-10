@@ -23,7 +23,7 @@
 
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticRole,

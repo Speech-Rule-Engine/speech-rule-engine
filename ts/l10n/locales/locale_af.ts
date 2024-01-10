@@ -21,7 +21,7 @@
 import { Grammar } from '../../rule_engine/grammar.js';
 import { nestingToString } from '../locale_util.js';
 import { createLocale, Locale } from '../locale.js';
-import NUMBERS from '../numbers/numbers_af.js';
+import { NUMBERS } from '../numbers/numbers_af.js';
 import * as tr from '../transformers.js';
 
 const germanPostfixCombiner = function (

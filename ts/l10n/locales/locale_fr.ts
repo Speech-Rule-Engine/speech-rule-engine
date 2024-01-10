@@ -25,7 +25,7 @@
 import { Grammar } from '../../rule_engine/grammar.js';
 import { createLocale, Locale } from '../locale.js';
 import { combinePostfixIndex, nestingToString } from '../locale_util.js';
-import NUMBERS from '../numbers/numbers_fr.js';
+import { NUMBERS } from '../numbers/numbers_fr.js';
 import { Combiners } from '../transformers.js';
 
 let locale: Locale = null;

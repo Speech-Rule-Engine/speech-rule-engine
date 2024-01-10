@@ -21,7 +21,7 @@
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import * as EngineConst from '../common/engine_const.js';
-import Engine from '../common/engine.js';
+import { Engine } from '../common/engine.js';
 import * as AudioUtil from './audio_util.js';
 import { AuditoryDescription } from './auditory_description.js';
 import { XmlRenderer } from './xml_renderer.js';

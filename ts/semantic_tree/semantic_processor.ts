@@ -43,7 +43,7 @@ interface BoundsType {
   accent?: boolean;
 }
 
-export default class SemanticProcessor {
+export class SemanticProcessor {
   private static readonly FENCE_TO_PUNCT_: { [key: string]: SemanticRole } = {
     [SemanticRole.METRIC]: SemanticRole.METRIC,
     [SemanticRole.NEUTRAL]: SemanticRole.VBAR,
