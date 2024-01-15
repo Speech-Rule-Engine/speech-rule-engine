@@ -66,8 +66,8 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  public computeRebuilt(xml: Element) {
-    if (!this.rebuilt_) {
+  public computeRebuilt(xml: Element, force: boolean = false) {
+    if (!this.rebuilt_ || force) {
       this.rebuilt_ = new RebuildStree(xml);
     }
     return this.rebuilt_;

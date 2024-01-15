@@ -256,6 +256,8 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
     // Set dummy type and id.
     cspan.setAttribute(Attribute.TYPE, 'dummy');
     cspan.setAttribute(Attribute.ID, mid);
+    cspan.setAttribute('role', 'treeitem');
+    cspan.setAttribute('aria-level', lchild.getAttribute('aria-level'));
     // Indicate the alternative in the semantic tree.
     const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
