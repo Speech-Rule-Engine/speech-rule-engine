@@ -18,6 +18,7 @@
     "commonjs": "pnpm tsc --module commonjs --outDir cjs --moduleResolution node",
     "postcommonjs": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
     "module": "pnpm tsc --module nodenext --outDir js --moduleResolution nodenext",
+    "postmodule": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
     "pretest": "git submodule update --remote --merge; pnpm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "pnpm run module",
     "clean": "rimraf js lib cjs",
