@@ -256,6 +256,8 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
     // Set dummy type and id.
     cspan.setAttribute(Attribute.TYPE, 'dummy');
     cspan.setAttribute(Attribute.ID, mid);
+    cspan.setAttribute('role', 'treeitem');
+    cspan.setAttribute('aria-level', lchild.getAttribute('aria-level'));
     // Indicate the alternative in the semantic tree.
     const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
@@ -284,8 +286,10 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * @param node The XML node.
  * @returns The summary speech string.
  */
-export function retrieveSummary(node: Element): string {
-  const descrs = computeSummary(node);
+export function retrieveSummary(
+  node: Element,
+  options: { [key: string]: string } = {}): string {
+  const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
 }
 
@@ -296,10 +300,14 @@ export function retrieveSummary(node: Element): string {
  * @returns A list of auditory descriptions
  *     for the summary.
  */
-function computeSummary(node: Element): AuditoryDescription[] {
+function computeSummary(
+  node: Element,
+  options: { [key: string]: string } = {}): AuditoryDescription[] {
+  const preOption = options.locale ? {locale: options.locale} : {};
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
-        { modality: 'summary', strict: false, speech: true },
+      Object.assign(preOption,
+                    { modality: 'summary', strict: false, speech: true }),
         function () {
           return SpeechRuleEngine.getInstance().evaluateNode(node);
         }

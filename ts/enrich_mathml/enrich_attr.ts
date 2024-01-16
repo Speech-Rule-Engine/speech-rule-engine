@@ -54,6 +54,7 @@ export enum Attribute {
   ROLE = 'data-semantic-role',
   SPEECH = 'data-semantic-speech',
   STRUCTURE = 'data-semantic-structure',
+  SUMMARY = 'data-semantic-summary',
   TYPE = 'data-semantic-type'
 }
 
@@ -77,6 +78,7 @@ export const EnrichAttributes: string[] = [
   Attribute.ROLE,
   Attribute.SPEECH,
   Attribute.STRUCTURE,
+  Attribute.SUMMARY,
   Attribute.TYPE
 ];
 

@@ -31,6 +31,9 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
    * @override
    */
   public getSpeech(node: Element, xml: Element, root: Element = null) {
+    if (this.getRebuilt()) {
+      SpeechGeneratorUtil.connectMactions(node, xml, this.getRebuilt().xml);
+    }
     const speech = this.generateSpeech(node, xml);
     const nodes = this.getRebuilt().nodeDict;
     for (const [key, snode] of Object.entries(nodes)) {

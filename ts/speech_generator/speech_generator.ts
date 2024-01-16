@@ -61,6 +61,15 @@ export interface SpeechGenerator {
   setRebuilt(rebuilt: RebuildStree): void;
 
   /**
+   * Computes and sets the rebuilt element if it does not exist yet.
+   *
+   * @param xml The base xml element belonging to node.
+   * @param force Optional parameter to force recomputation of rebuilt.
+   * @returns The rebuilt semantic tree object.
+   */
+  computeRebuilt(xml: Element, force?: boolean): RebuildStree;
+
+  /**
    * Sets dynamic constraint options for the speech engine.
    *
    * @param options The dynamic constraint.
@@ -68,17 +77,28 @@ export interface SpeechGenerator {
   setOptions(options: AxisMap): void;
 
   /**
+   * Sets a single dynamic constraint option for the speech engine.
+   *
+   * @param key The key.
+   * @param value The value of the constraint.
+   */
+  setOption(key: string, value: string): void;
+
+  /**
    * @returns Dynamic constraint options of the generator.
    */
   getOptions(): AxisMap;
 
   /**
-   * Sets up or resets the speech generator.
+   * Cycles to next speech rule set if possible.
    */
-  start(): void;
+  nextRules(): void;
 
   /**
-   * Cleans up after ending speech generation.
+   * Cycles to next style or preference of the speech rule set if possible.
+   *
+   * @param id Semantic Id of the currently focused node.
    */
-  end(): void;
+  nextStyle(id: string): void;
+
 }
