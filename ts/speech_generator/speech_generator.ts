@@ -101,4 +101,21 @@ export interface SpeechGenerator {
    */
   nextStyle(id: string): void;
 
+  /**
+   * Returns the localised message if an element is actionable.
+   * <1: exandable
+   * >1: collapsible
+   * 0 : empty
+   *
+   * @param {number} actionable The actionable value.
+   */
+  getActionable(actionable: number): string;
+
+  /**
+   * The localised depth message.
+   *
+   * @param {string} depth The nesting level of a node.
+   */
+  getLevel(depth: string): string;
+
 }

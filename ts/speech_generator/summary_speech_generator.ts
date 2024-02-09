@@ -40,4 +40,5 @@ export class SummarySpeechGenerator extends AbstractSpeechGenerator {
     const speech = node.getAttribute(Attribute.SUMMARY);
     return speech;
   }
+
 }

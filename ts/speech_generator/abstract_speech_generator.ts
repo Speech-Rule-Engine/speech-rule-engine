@@ -27,6 +27,7 @@ import { SpeechGenerator } from './speech_generator.js';
 import * as SpeechGeneratorUtil from './speech_generator_util.js';
 import * as EngineConst from '../common/engine_const.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { LOCALE } from '../l10n/locale.js';
 
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 
@@ -179,6 +180,23 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
       return result;
     }
     return style;
+  }
+
+  /**
+   * @override
+   */
+  public getLevel(depth: string) {
+    return LOCALE.MESSAGES.navigate.LEVEL + ' ' + depth;
+  }
+
+  /**
+   * @override
+   */
+  public getActionable(actionable: number) {
+    return actionable ? (
+      actionable < 0 ? LOCALE.MESSAGES.navigate.EXPANDABLE :
+        LOCALE.MESSAGES.navigate.COLLAPSIBLE
+    ) : '';
   }
 
 }
