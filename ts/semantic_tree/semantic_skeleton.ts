@@ -288,6 +288,7 @@ export class SemanticSkeleton {
     }
     const id = node.id;
     const skeleton = [id];
+    XpathUtil.updateEvaluator(mml);
     const mmlChild = XpathUtil.evalXPath(
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
