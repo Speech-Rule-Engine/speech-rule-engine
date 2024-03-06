@@ -32,7 +32,7 @@ export class ChtmlHighlighter extends CssHighlighter {
    * @override
    */
   public isMactionNode(node: HTMLElement) {
-    return node.tagName.toUpperCase() === this.mactionName.toUpperCase();
+    return node.tagName?.toUpperCase() === this.mactionName.toUpperCase();
   }
 
   /**
