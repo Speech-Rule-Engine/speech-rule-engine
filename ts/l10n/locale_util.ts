@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { LOCALE } from './locale';
-import { Combiner, Combiners } from './transformers';
+import { LOCALE } from './locale.js';
+import { Combiner, Combiners } from './transformers.js';
 
 /**
  * Translation for count word in superbrief nesting description.
@@ -90,10 +90,7 @@ export function localEnclose(enclose: string): string {
  * @param fallback The fallback if no string can be extracted.
  * @returns The name.
  */
-export function extractString(
-  combiner: string | [string, string],
-  fallback: string
-) {
+function extractString(combiner: string | [string, string], fallback: string) {
   if (combiner === undefined) {
     return fallback;
   }

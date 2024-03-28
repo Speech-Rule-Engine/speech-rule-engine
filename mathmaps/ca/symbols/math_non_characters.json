@@ -8,11 +8,9 @@
       "default": {
         "default": "h barra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "So",
     "key": "2114",
     "mappings": {
       "default": {
@@ -26,8 +24,7 @@
       "default": {
         "default": "signe de nombre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2117",
@@ -35,8 +32,7 @@
       "default": {
         "default": "drets d'autor de so"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "211E",
@@ -44,11 +40,9 @@
       "default": {
         "default": "recepta"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "211F",
     "mappings": {
       "default": {
@@ -57,7 +51,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2120",
     "mappings": {
       "default": {
@@ -66,7 +59,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2121",
     "mappings": {
       "default": {
@@ -80,11 +72,9 @@
       "default": {
         "default": "registrat"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2123",
     "mappings": {
       "default": {
@@ -98,8 +88,7 @@
       "default": {
         "default": "unça"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2126",
@@ -107,8 +96,7 @@
       "default": {
         "default": "ohm"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2127",
@@ -116,8 +104,7 @@
       "default": {
         "default": "ohm invertit"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "212A",
@@ -125,8 +112,7 @@
       "default": {
         "default": "graus kelvin"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "212B",
@@ -134,11 +120,9 @@
       "default": {
         "default": "angstrom"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "So",
     "key": "212E",
     "mappings": {
       "default": {
@@ -152,11 +136,9 @@
       "default": {
         "default": "majúscula F invertida"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Ll",
     "key": "2139",
     "mappings": {
       "default": {
@@ -165,7 +147,6 @@
     }
   },
   {
-    "category": "So",
     "key": "213A",
     "mappings": {
       "default": {
@@ -174,7 +155,6 @@
     }
   },
   {
-    "category": "So",
     "key": "213B",
     "mappings": {
       "default": {
@@ -183,7 +163,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2141",
     "mappings": {
       "default": {
@@ -192,7 +171,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2142",
     "mappings": {
       "default": {
@@ -201,7 +179,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2143",
     "mappings": {
       "default": {
@@ -210,7 +187,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2144",
     "mappings": {
       "default": {

@@ -18,11 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import { KeyCode } from '../common/event_util';
-import { AudioRenderer } from './audio_renderer';
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
+import { Engine } from '../common/engine.js';
+import { KeyCode } from '../common/event_util.js';
+import { AudioRenderer } from './audio_renderer.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
 
 export abstract class AbstractAudioRenderer implements AudioRenderer {
   private separator_ = ' ';
@@ -35,14 +35,14 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
   /**
    * @override
    */
-  public setSeparator(sep: string) {
+  public set separator(sep: string) {
     this.separator_ = sep;
   }
 
   /**
    * @override
    */
-  public getSeparator() {
+  public get separator() {
     // TODO: (Span) Do this via setSeparator.
     return Engine.getInstance().modality === 'braille' ? '' : this.separator_;
   }
@@ -64,7 +64,7 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
       str += span.speech;
       if (i < len) {
         const sep = span.attributes['separator'];
-        str += sep !== undefined ? sep : this.getSeparator();
+        str += sep !== undefined ? sep : this.separator;
       }
     }
     return str;

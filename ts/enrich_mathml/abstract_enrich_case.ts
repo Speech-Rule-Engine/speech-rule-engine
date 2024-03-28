@@ -19,8 +19,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { EnrichCase } from './enrich_case';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { EnrichCase } from './enrich_case.js';
 
 export abstract class AbstractEnrichCase implements EnrichCase {
   /**

@@ -1,6 +1,9 @@
-[{"locale": "en"},
+[
   {
-    "category": "No",
+    "locale": "en"
+  },
+  {
+    "key": "00B2",
     "mappings": {
       "default": {
         "default": "squared"
@@ -11,11 +14,10 @@
       "clearspeak": {
         "default": "squared"
       }
-    },
-    "key": "00B2"
+    }
   },
   {
-    "category": "No",
+    "key": "00B3",
     "mappings": {
       "default": {
         "default": "cubed"
@@ -26,259 +28,230 @@
       "clearspeak": {
         "default": "cubed"
       }
-    },
-    "key": "00B3"
+    }
   },
   {
-    "category": "No",
+    "key": "00BC",
     "mappings": {
       "default": {
         "default": "one quarter"
       }
-    },
-    "key": "00BC"
+    }
   },
   {
-    "category": "No",
+    "key": "00BD",
     "mappings": {
       "default": {
         "default": "one half"
       }
-    },
-    "key": "00BD"
+    }
   },
   {
-    "category": "No",
+    "key": "00BE",
     "mappings": {
       "default": {
         "default": "three quarters"
       }
-    },
-    "key": "00BE"
+    }
   },
   {
-    "category": "No",
+    "key": "2150",
     "mappings": {
       "default": {
         "default": "one seventh"
       }
-    },
-    "key": "2150"
+    }
   },
   {
-    "category": "No",
+    "key": "2151",
     "mappings": {
       "default": {
         "default": "one ninth"
       }
-    },
-    "key": "2151"
+    }
   },
   {
-    "category": "No",
+    "key": "2152",
     "mappings": {
       "default": {
         "default": "one tenth"
       }
-    },
-    "key": "2152"
+    }
   },
   {
-    "category": "No",
+    "key": "2153",
     "mappings": {
       "default": {
         "default": "one third"
       }
-    },
-    "key": "2153"
+    }
   },
   {
-    "category": "No",
+    "key": "2154",
     "mappings": {
       "default": {
         "default": "two thirds"
       }
-    },
-    "key": "2154"
+    }
   },
   {
-    "category": "No",
+    "key": "2155",
     "mappings": {
       "default": {
         "default": "one fifth"
       }
-    },
-    "key": "2155"
+    }
   },
   {
-    "category": "No",
+    "key": "2156",
     "mappings": {
       "default": {
         "default": "two fifths"
       }
-    },
-    "key": "2156"
+    }
   },
   {
-    "category": "No",
+    "key": "2157",
     "mappings": {
       "default": {
         "default": "three fifths"
       }
-    },
-    "key": "2157"
+    }
   },
   {
-    "category": "No",
+    "key": "2158",
     "mappings": {
       "default": {
         "default": "four fifths"
       }
-    },
-    "key": "2158"
+    }
   },
   {
-    "category": "No",
+    "key": "2159",
     "mappings": {
       "default": {
         "default": "one sixth"
       }
-    },
-    "key": "2159"
+    }
   },
   {
-    "category": "No",
+    "key": "215A",
     "mappings": {
       "default": {
         "default": "five sixths"
       }
-    },
-    "key": "215A"
+    }
   },
   {
-    "category": "No",
+    "key": "215B",
     "mappings": {
       "default": {
         "default": "one eighth"
       }
-    },
-    "key": "215B"
+    }
   },
   {
-    "category": "No",
+    "key": "215C",
     "mappings": {
       "default": {
         "default": "three eighths"
       }
-    },
-    "key": "215C"
+    }
   },
   {
-    "category": "No",
+    "key": "215D",
     "mappings": {
       "default": {
         "default": "five eighths"
       }
-    },
-    "key": "215D"
+    }
   },
   {
-    "category": "No",
+    "key": "215E",
     "mappings": {
       "default": {
         "default": "seven eighths"
       }
-    },
-    "key": "215E"
+    }
   },
   {
-    "category": "No",
+    "key": "215F",
     "mappings": {
       "default": {
         "default": "numerator one"
       }
-    },
-    "key": "215F"
+    }
   },
   {
-    "category": "No",
+    "key": "2189",
     "mappings": {
       "default": {
         "default": "zero thirds"
       }
-    },
-    "key": "2189"
+    }
   },
   {
-    "category": "No",
+    "key": "3248",
     "mappings": {
       "default": {
         "default": "circled ten on black square"
       }
-    },
-    "key": "3248"
+    }
   },
   {
-    "category": "No",
+    "key": "3249",
     "mappings": {
       "default": {
         "default": "circled twenty on black square"
       }
-    },
-    "key": "3249"
+    }
   },
   {
-    "category": "No",
+    "key": "324A",
     "mappings": {
       "default": {
         "default": "circled thirty on black square"
       }
-    },
-    "key": "324A"
+    }
   },
   {
-    "category": "No",
+    "key": "324B",
     "mappings": {
       "default": {
         "default": "circled forty on black square"
       }
-    },
-    "key": "324B"
+    }
   },
   {
-    "category": "No",
+    "key": "324C",
     "mappings": {
       "default": {
         "default": "circled fifty on black square"
       }
-    },
-    "key": "324C"
+    }
   },
   {
-    "category": "No",
+    "key": "324D",
     "mappings": {
       "default": {
         "default": "circled sixty on black square"
       }
-    },
-    "key": "324D"
+    }
   },
   {
-    "category": "No",
+    "key": "324E",
     "mappings": {
       "default": {
         "default": "circled seventy on black square"
       }
-    },
-    "key": "324E"
+    }
   },
   {
-    "category": "No",
+    "key": "324F",
     "mappings": {
       "default": {
         "default": "circled eighty on black square"
       }
-    },
-    "key": "324F"
+    }
   }
 ]

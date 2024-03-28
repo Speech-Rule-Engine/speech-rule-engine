@@ -1,0 +1,421 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "21BC",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel boontoe"
+      }
+    }
+  },
+  {
+    "key": "21BD",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel ondertoe"
+      }
+    }
+  },
+  {
+    "key": "21BE",
+    "mappings": {
+      "default": {
+        "default": "up harpoen met stekel regs"
+      }
+    }
+  },
+  {
+    "key": "21BF",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel links"
+      }
+    }
+  },
+  {
+    "key": "21C0",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel boontoe"
+      }
+    }
+  },
+  {
+    "key": "21C1",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel ondertoe"
+      }
+    }
+  },
+  {
+    "key": "21C2",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel regs"
+      }
+    }
+  },
+  {
+    "key": "21C3",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel links"
+      }
+    }
+  },
+  {
+    "key": "21CB",
+    "mappings": {
+      "default": {
+        "default": "links harpoen oor regs harpoen"
+      }
+    }
+  },
+  {
+    "key": "21CC",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen oor links harpoen"
+      }
+    }
+  },
+  {
+    "key": "294A",
+    "mappings": {
+      "default": {
+        "default": "links stekel up regs stekel af harpoen"
+      }
+    }
+  },
+  {
+    "key": "294B",
+    "mappings": {
+      "default": {
+        "default": "links stekel af regs stekel op harpoen"
+      }
+    }
+  },
+  {
+    "key": "294C",
+    "mappings": {
+      "default": {
+        "default": "op stekel regs af  stekel links harpoen"
+      }
+    }
+  },
+  {
+    "key": "294D",
+    "mappings": {
+      "default": {
+        "default": "op stekel links af stekel regs harpoen"
+      }
+    }
+  },
+  {
+    "key": "294E",
+    "mappings": {
+      "default": {
+        "default": "links stekel op regs stekel op harpoen"
+      }
+    }
+  },
+  {
+    "key": "294F",
+    "mappings": {
+      "default": {
+        "default": "op stekel regs af stekel regs harpoen"
+      }
+    }
+  },
+  {
+    "key": "2950",
+    "mappings": {
+      "default": {
+        "default": "links stekel af regs stekel af harpoen"
+      }
+    }
+  },
+  {
+    "key": "2951",
+    "mappings": {
+      "default": {
+        "default": "op stekel links af stekel links harpoen"
+      }
+    }
+  },
+  {
+    "key": "2952",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel boontoe na staaf"
+      }
+    }
+  },
+  {
+    "key": "2953",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel boontoe na staaf"
+      }
+    }
+  },
+  {
+    "key": "2954",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel regs na staaf"
+      }
+    }
+  },
+  {
+    "key": "2955",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel regs na staaf"
+      }
+    }
+  },
+  {
+    "key": "2956",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel af na staaf"
+      }
+    }
+  },
+  {
+    "key": "2957",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel af na staaf"
+      }
+    }
+  },
+  {
+    "key": "2958",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel links na staaf"
+      }
+    }
+  },
+  {
+    "key": "2959",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel links na staaf"
+      }
+    }
+  },
+  {
+    "key": "295A",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel op vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "295B",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel op vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "295C",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel regs vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "295D",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel regs vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "295E",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel af vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "295F",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel af vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "2960",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel links vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "2961",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel links vanaf staaf"
+      }
+    }
+  },
+  {
+    "key": "2962",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel bokant links harpoen met stekel af"
+      }
+    }
+  },
+  {
+    "key": "2963",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel links langsaan op harpoen met stekel regs"
+      }
+    }
+  },
+  {
+    "key": "2964",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel op bokant regs harpoen met stekel af"
+      }
+    }
+  },
+  {
+    "key": "2965",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel links langsaan af harpoen met stekel regs"
+      }
+    }
+  },
+  {
+    "key": "2966",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel op bokant regs harpoen met stekel op"
+      }
+    }
+  },
+  {
+    "key": "2967",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel af bokant regs harpoen met stekel af"
+      }
+    }
+  },
+  {
+    "key": "2968",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel op bokant links harpoen met stekel op"
+      }
+    }
+  },
+  {
+    "key": "2969",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel af bokant links harpoen met stekel af"
+      }
+    }
+  },
+  {
+    "key": "296A",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel op bokant lang koppelteken"
+      }
+    }
+  },
+  {
+    "key": "296B",
+    "mappings": {
+      "default": {
+        "default": "links harpoen met stekel af onder lang koppelteken"
+      }
+    }
+  },
+  {
+    "key": "296C",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel op bokant lang koppelteken"
+      }
+    }
+  },
+  {
+    "key": "296D",
+    "mappings": {
+      "default": {
+        "default": "regs harpoen met stekel af onder lang koppelteken"
+      }
+    }
+  },
+  {
+    "key": "296E",
+    "mappings": {
+      "default": {
+        "default": "op harpoen met stekel links langsaan af harpoen met stekel regs"
+      }
+    }
+  },
+  {
+    "key": "296F",
+    "mappings": {
+      "default": {
+        "default": "af harpoen met stekel links langsaan op harpoen met stekel regs"
+      }
+    }
+  },
+  {
+    "key": "297C",
+    "mappings": {
+      "default": {
+        "default": "links visstert"
+      }
+    }
+  },
+  {
+    "key": "297D",
+    "mappings": {
+      "default": {
+        "default": "regs visstert"
+      }
+    }
+  },
+  {
+    "key": "297E",
+    "mappings": {
+      "default": {
+        "default": "op visstert"
+      }
+    }
+  },
+  {
+    "key": "297F",
+    "mappings": {
+      "default": {
+        "default": "af visstert"
+      }
+    }
+  }
+]

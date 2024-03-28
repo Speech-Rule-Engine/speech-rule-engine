@@ -1,78 +1,72 @@
 [
-  {"locale": "en"},
-  {"category": "other",
-   "mappings": {
-     "default": {
-       "default": "square"
-     }
-   },
-   "key": "sq",
-   "names": ["sq", "sq."]
+  {
+    "locale": "en"
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "square inch",
-       "plural": "square inches"
-     }
-   },
-   "key": "sq inch",
-   "names": ["sq in", "sq. in.", "sq inch", "sq. inch"]
+  {
+    "key": "sq",
+    "mappings": {
+      "default": {
+        "default": "square",
+        "plural": "square"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "square rod"
-     }
-   },
-   "key": "sq rd",
-   "names": ["sq rd", "sq. rd."]
+  {
+    "key": "sq inch",
+    "mappings": {
+      "default": {
+        "default": "square inch",
+        "plural": "square inches"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "square foot",
-       "plural": "square feet"
-     }
-   },
-   "key": "sq ft",
-   "names": ["sq ft", "sq. ft."]
+  {
+    "key": "sq rd",
+    "mappings": {
+      "default": {
+        "default": "square rod"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "square yard"
-     }
-   },
-   "key": "sq yd",
-   "names": ["sq yd", "sq. yd."]
+  {
+    "key": "sq ft",
+    "mappings": {
+      "default": {
+        "default": "square foot",
+        "plural": "square feet"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "square mile"
-     }
-   },
-   "key": "sq mi",
-   "names": ["sq mi", "sq. mi."]
+  {
+    "key": "sq yd",
+    "mappings": {
+      "default": {
+        "default": "square yard"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "acre"
-     }
-   },
-   "key": "acr",
-   "names": ["ac", "ac.", "acr", "acr."]
+  {
+    "key": "sq mi",
+    "mappings": {
+      "default": {
+        "default": "square mile"
+      }
+    }
   },
-
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "hectare"
-     }
-   },
-   "key": "ha",
-   "names": ["ha"]
+  {
+    "key": "acr",
+    "mappings": {
+      "default": {
+        "default": "acre"
+      }
+    }
+  },
+  {
+    "key": "ha",
+    "mappings": {
+      "default": {
+        "default": "hectare"
+      }
+    }
   }
 ]

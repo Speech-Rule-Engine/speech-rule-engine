@@ -18,9 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
-import { SemanticNode } from './semantic_node';
+import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator.js';
+import { SemanticNode } from './semantic_node.js';
 
+// Exported for Tests
 export const annotators: Map<string, SemanticAnnotator> = new Map();
 
 export const visitors: Map<string, SemanticVisitor> = new Map();
@@ -48,6 +49,20 @@ export function activate(domain: string, name: string) {
   const annotator = annotators.get(key) || visitors.get(key);
   if (annotator) {
     annotator.active = true;
+  }
+}
+
+/**
+ * Deactivates a particular annotator.
+ *
+ * @param domain The domain.
+ * @param name The name of the annotator.
+ */
+export function deactivate(domain: string, name: string) {
+  const key = domain + ':' + name;
+  const annotator = annotators.get(key) || visitors.get(key);
+  if (annotator) {
+    annotator.active = false;
   }
 }
 

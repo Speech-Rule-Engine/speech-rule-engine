@@ -1,0 +1,15 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "doz",
+    "category": "other",
+    "names": [
+      "doz",
+      "doz.",
+      "dz",
+      "dz."
+    ]
+  }
+]

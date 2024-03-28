@@ -19,13 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes } from './enrich_attr.js';
 export class CaseLimit extends AbstractEnrichCase {
   /**
    * The actual mml tree.
@@ -46,12 +47,12 @@ export class CaseLimit extends AbstractEnrichCase {
     const type = semantic.type;
     return (
       ((type === SemanticType.LIMUPPER || type === SemanticType.LIMLOWER) &&
-        (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER')) ||
+        (mmlTag === MMLTAGS.MSUBSUP || mmlTag === MMLTAGS.MUNDEROVER)) ||
       (type === SemanticType.LIMBOTH &&
-        (mmlTag === 'MSUB' ||
-          mmlTag === 'MUNDER' ||
-          mmlTag === 'MSUP' ||
-          mmlTag === 'MOVER'))
+        (mmlTag === MMLTAGS.MSUB ||
+          mmlTag === MMLTAGS.MUNDER ||
+          mmlTag === MMLTAGS.MSUP ||
+          mmlTag === MMLTAGS.MOVER))
     );
   }
 

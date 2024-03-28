@@ -1,0 +1,2373 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "2500",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2501",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2502",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2503",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2504",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig trippel koppelteken horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2505",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar trippel koppelteken horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2506",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig trippel koppelteken vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2507",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar trippel koppelteken vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2508",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig vierdubbel koppelteken horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2509",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar vierdubbel koppelteken horisontaal"
+      }
+    }
+  },
+  {
+    "key": "250A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig vierdubbel koppelteken vertikaal"
+      }
+    }
+  },
+  {
+    "key": "250B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar vierdubbel koppelteken vertikaal"
+      }
+    }
+  },
+  {
+    "key": "250C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig af en regs"
+      }
+    }
+  },
+  {
+    "key": "250D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af lig en regs swaar"
+      }
+    }
+  },
+  {
+    "key": "250E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af swaar en regs lig"
+      }
+    }
+  },
+  {
+    "key": "250F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar af en regs"
+      }
+    }
+  },
+  {
+    "key": "2510",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig af en links"
+      }
+    }
+  },
+  {
+    "key": "2511",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af lig en links swaar"
+      }
+    }
+  },
+  {
+    "key": "2512",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af swaar en links lig"
+      }
+    }
+  },
+  {
+    "key": "2513",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar af en links"
+      }
+    }
+  },
+  {
+    "key": "2514",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig op en regs"
+      }
+    }
+  },
+  {
+    "key": "2515",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op lig en regs swaar"
+      }
+    }
+  },
+  {
+    "key": "2516",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op swaar en regs lig"
+      }
+    }
+  },
+  {
+    "key": "2517",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar op en regs"
+      }
+    }
+  },
+  {
+    "key": "2518",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig op en links"
+      }
+    }
+  },
+  {
+    "key": "2519",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op lig en links swaar"
+      }
+    }
+  },
+  {
+    "key": "251A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op swaar en links lig"
+      }
+    }
+  },
+  {
+    "key": "251B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar op en links"
+      }
+    }
+  },
+  {
+    "key": "251C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig vertikaal en regs"
+      }
+    }
+  },
+  {
+    "key": "251D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal lig en regs swaar"
+      }
+    }
+  },
+  {
+    "key": "251E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op swaar en regs af lig"
+      }
+    }
+  },
+  {
+    "key": "251F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af swaar en regs op lig"
+      }
+    }
+  },
+  {
+    "key": "2520",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal swaar en regs lig"
+      }
+    }
+  },
+  {
+    "key": "2521",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af lig en regs op swaar"
+      }
+    }
+  },
+  {
+    "key": "2522",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op lig en regs af swaar"
+      }
+    }
+  },
+  {
+    "key": "2523",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar vertikaal en regs"
+      }
+    }
+  },
+  {
+    "key": "2524",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig vertikaal en links"
+      }
+    }
+  },
+  {
+    "key": "2525",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal lig en links swaar"
+      }
+    }
+  },
+  {
+    "key": "2526",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op swaar en links af lig"
+      }
+    }
+  },
+  {
+    "key": "2527",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af swaar en links op lig"
+      }
+    }
+  },
+  {
+    "key": "2528",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal swaar en links lig"
+      }
+    }
+  },
+  {
+    "key": "2529",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af lig en links op swaar"
+      }
+    }
+  },
+  {
+    "key": "252A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op lig en links af swaar"
+      }
+    }
+  },
+  {
+    "key": "252B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar vertikaal en links"
+      }
+    }
+  },
+  {
+    "key": "252C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig af en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "252D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links swaar en regs af lig"
+      }
+    }
+  },
+  {
+    "key": "252E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs swaar en links af lig"
+      }
+    }
+  },
+  {
+    "key": "252F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af lig en horisontaal swaar"
+      }
+    }
+  },
+  {
+    "key": "2530",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af swaar en horisontaal lig"
+      }
+    }
+  },
+  {
+    "key": "2531",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs lig en links af swaar"
+      }
+    }
+  },
+  {
+    "key": "2532",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links lig en regs af swaar"
+      }
+    }
+  },
+  {
+    "key": "2533",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar af en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2534",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig op en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2535",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links swaar en regs op lig"
+      }
+    }
+  },
+  {
+    "key": "2536",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs swaar en links op lig"
+      }
+    }
+  },
+  {
+    "key": "2537",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op lig en horisontaal swaar"
+      }
+    }
+  },
+  {
+    "key": "2538",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op swaar en horisontaal lig"
+      }
+    }
+  },
+  {
+    "key": "2539",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs lig en links op swaar"
+      }
+    }
+  },
+  {
+    "key": "253A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links lig en regs op swaar"
+      }
+    }
+  },
+  {
+    "key": "253B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar op en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "253C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig vertikaal en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "253D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links swaar en regs vertikaal lig"
+      }
+    }
+  },
+  {
+    "key": "253E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs swaar en links vertikaal lig"
+      }
+    }
+  },
+  {
+    "key": "253F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal lig en horisontaal swaar"
+      }
+    }
+  },
+  {
+    "key": "2540",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op swaar en af horisontaal lig"
+      }
+    }
+  },
+  {
+    "key": "2541",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af swaar en op horisontaal lig"
+      }
+    }
+  },
+  {
+    "key": "2542",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal swaar en horisontaal lig"
+      }
+    }
+  },
+  {
+    "key": "2543",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links op swaar en regs af lig"
+      }
+    }
+  },
+  {
+    "key": "2544",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs op swaar en links af lig"
+      }
+    }
+  },
+  {
+    "key": "2545",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links af swaar en regs op lig"
+      }
+    }
+  },
+  {
+    "key": "2546",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs af swaar en links op lig"
+      }
+    }
+  },
+  {
+    "key": "2547",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af lig en op horisontaal swaar"
+      }
+    }
+  },
+  {
+    "key": "2548",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op lig en af horisontaal swaar"
+      }
+    }
+  },
+  {
+    "key": "2549",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge regs lig en links vertikaal swaar"
+      }
+    }
+  },
+  {
+    "key": "254A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge links lig en regs vertikaal swaar"
+      }
+    }
+  },
+  {
+    "key": "254B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar vertikaal en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "254C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig dubbel koppelteken horisontaal"
+      }
+    }
+  },
+  {
+    "key": "254D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar dubbel koppelteken horisontaal"
+      }
+    }
+  },
+  {
+    "key": "254E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig dubbel koppelteken vertikaal"
+      }
+    }
+  },
+  {
+    "key": "254F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar dubbel koppelteken vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2550",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2551",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel vertikaal"
+      }
+    }
+  },
+  {
+    "key": "2552",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af enkel en regs dubbel"
+      }
+    }
+  },
+  {
+    "key": "2553",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af dubbel en regs enkel"
+      }
+    }
+  },
+  {
+    "key": "2554",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel af en regs"
+      }
+    }
+  },
+  {
+    "key": "2555",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af enkel en links dubbel"
+      }
+    }
+  },
+  {
+    "key": "2556",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af dubbel en links enkel"
+      }
+    }
+  },
+  {
+    "key": "2557",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel af en links"
+      }
+    }
+  },
+  {
+    "key": "2558",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op enkel en regs dubbel"
+      }
+    }
+  },
+  {
+    "key": "2559",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op dubbel en regs enkel"
+      }
+    }
+  },
+  {
+    "key": "255A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel op en regs"
+      }
+    }
+  },
+  {
+    "key": "255B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op enkel en links dubbel"
+      }
+    }
+  },
+  {
+    "key": "255C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op dubbel en links enkel"
+      }
+    }
+  },
+  {
+    "key": "255D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel op en links"
+      }
+    }
+  },
+  {
+    "key": "255E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal enkel en regs dubbel"
+      }
+    }
+  },
+  {
+    "key": "255F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal dubbel en regs enkel"
+      }
+    }
+  },
+  {
+    "key": "2560",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel vertikaal en regs"
+      }
+    }
+  },
+  {
+    "key": "2561",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal enkel en links dubbel"
+      }
+    }
+  },
+  {
+    "key": "2562",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal dubbel en links enkel"
+      }
+    }
+  },
+  {
+    "key": "2563",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel vertikaal en links"
+      }
+    }
+  },
+  {
+    "key": "2564",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af enkel en horisontaal dubbel"
+      }
+    }
+  },
+  {
+    "key": "2565",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge af dubbel en horisontaal enkel"
+      }
+    }
+  },
+  {
+    "key": "2566",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel af en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "2567",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op enkel en horisontaal dubbel"
+      }
+    }
+  },
+  {
+    "key": "2568",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge op dubbel en horisontaal enkel"
+      }
+    }
+  },
+  {
+    "key": "2569",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel op en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "256A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal enkel en horisontaal dubbel"
+      }
+    }
+  },
+  {
+    "key": "256B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge vertikaal dubbel en horisontaal enkel"
+      }
+    }
+  },
+  {
+    "key": "256C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge dubbel vertikaal en horisontaal"
+      }
+    }
+  },
+  {
+    "key": "256D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig boog  af en regs"
+      }
+    }
+  },
+  {
+    "key": "256E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig boog af en links"
+      }
+    }
+  },
+  {
+    "key": "256F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig boog op en links"
+      }
+    }
+  },
+  {
+    "key": "2570",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig boog op en regs"
+      }
+    }
+  },
+  {
+    "key": "2571",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig diagonaal bo regs na onder links"
+      }
+    }
+  },
+  {
+    "key": "2572",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig diagonaal bo links na onder regs"
+      }
+    }
+  },
+  {
+    "key": "2573",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig diagonale kruis"
+      }
+    }
+  },
+  {
+    "key": "2574",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig links"
+      }
+    }
+  },
+  {
+    "key": "2575",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig op"
+      }
+    }
+  },
+  {
+    "key": "2576",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig regs"
+      }
+    }
+  },
+  {
+    "key": "2577",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig af"
+      }
+    }
+  },
+  {
+    "key": "2578",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar links"
+      }
+    }
+  },
+  {
+    "key": "2579",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar op"
+      }
+    }
+  },
+  {
+    "key": "257A",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar regs"
+      }
+    }
+  },
+  {
+    "key": "257B",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar af"
+      }
+    }
+  },
+  {
+    "key": "257C",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig links en swaar regs"
+      }
+    }
+  },
+  {
+    "key": "257D",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge lig op en swaar af"
+      }
+    }
+  },
+  {
+    "key": "257E",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar links en lig regs"
+      }
+    }
+  },
+  {
+    "key": "257F",
+    "mappings": {
+      "default": {
+        "default": "bokstekeninge swaar op en lig af"
+      }
+    }
+  },
+  {
+    "key": "2580",
+    "mappings": {
+      "default": {
+        "default": "boonste half blok"
+      }
+    }
+  },
+  {
+    "key": "2581",
+    "mappings": {
+      "default": {
+        "default": "onderste een agtste blok"
+      }
+    }
+  },
+  {
+    "key": "2582",
+    "mappings": {
+      "default": {
+        "default": "onderste een kwart blok"
+      }
+    }
+  },
+  {
+    "key": "2583",
+    "mappings": {
+      "default": {
+        "default": "onderste drie agtstes blok"
+      }
+    }
+  },
+  {
+    "key": "2584",
+    "mappings": {
+      "default": {
+        "default": "onderste half blok"
+      }
+    }
+  },
+  {
+    "key": "2585",
+    "mappings": {
+      "default": {
+        "default": "onderste vyf agtstes blok"
+      }
+    }
+  },
+  {
+    "key": "2586",
+    "mappings": {
+      "default": {
+        "default": "onderste driekwart blok"
+      }
+    }
+  },
+  {
+    "key": "2587",
+    "mappings": {
+      "default": {
+        "default": "onderste sewe agtstes blok"
+      }
+    }
+  },
+  {
+    "key": "2588",
+    "mappings": {
+      "default": {
+        "default": "vol blok"
+      }
+    }
+  },
+  {
+    "key": "2589",
+    "mappings": {
+      "default": {
+        "default": "linker sewe agtstes blok"
+      }
+    }
+  },
+  {
+    "key": "258A",
+    "mappings": {
+      "default": {
+        "default": "linker driekwart blok"
+      }
+    }
+  },
+  {
+    "key": "258B",
+    "mappings": {
+      "default": {
+        "default": "linker vyf agtstes blok"
+      }
+    }
+  },
+  {
+    "key": "258C",
+    "mappings": {
+      "default": {
+        "default": "linker half blok"
+      }
+    }
+  },
+  {
+    "key": "258D",
+    "mappings": {
+      "default": {
+        "default": "linker drie agtstes blok"
+      }
+    }
+  },
+  {
+    "key": "258E",
+    "mappings": {
+      "default": {
+        "default": "linker een kwart blok"
+      }
+    }
+  },
+  {
+    "key": "258F",
+    "mappings": {
+      "default": {
+        "default": "linker een agtste blok"
+      }
+    }
+  },
+  {
+    "key": "2590",
+    "mappings": {
+      "default": {
+        "default": "regter half blok"
+      }
+    }
+  },
+  {
+    "key": "2591",
+    "mappings": {
+      "default": {
+        "default": "ligte skakering"
+      }
+    }
+  },
+  {
+    "key": "2592",
+    "mappings": {
+      "default": {
+        "default": "medium skakering"
+      }
+    }
+  },
+  {
+    "key": "2593",
+    "mappings": {
+      "default": {
+        "default": "donker skakering"
+      }
+    }
+  },
+  {
+    "key": "2594",
+    "mappings": {
+      "default": {
+        "default": "boonste een agtste blok"
+      }
+    }
+  },
+  {
+    "key": "2595",
+    "mappings": {
+      "default": {
+        "default": "regter een agtste blok"
+      }
+    }
+  },
+  {
+    "key": "2596",
+    "mappings": {
+      "default": {
+        "default": "kwadrant onder links"
+      }
+    }
+  },
+  {
+    "key": "2597",
+    "mappings": {
+      "default": {
+        "default": "kwadrant onder regs"
+      }
+    }
+  },
+  {
+    "key": "2598",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo links"
+      }
+    }
+  },
+  {
+    "key": "2599",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo links en onder links en onder regs"
+      }
+    }
+  },
+  {
+    "key": "259A",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo links en onder regs"
+      }
+    }
+  },
+  {
+    "key": "259B",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo links en bo regs en onder links"
+      }
+    }
+  },
+  {
+    "key": "259C",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo links en bo regs en onder regs"
+      }
+    }
+  },
+  {
+    "key": "259D",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo regs"
+      }
+    }
+  },
+  {
+    "key": "259E",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo regs en onder links"
+      }
+    }
+  },
+  {
+    "key": "259F",
+    "mappings": {
+      "default": {
+        "default": "kwadrant bo regs en onder links en onder regs"
+      }
+    }
+  },
+  {
+    "key": "25A0",
+    "mappings": {
+      "default": {
+        "default": "swart vierkant"
+      }
+    }
+  },
+  {
+    "key": "25A1",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant"
+      }
+    }
+  },
+  {
+    "key": "25A2",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met geronde hoeke"
+      }
+    }
+  },
+  {
+    "key": "25A3",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant wat klein swart vierkant bevat"
+      }
+    }
+  },
+  {
+    "key": "25A4",
+    "mappings": {
+      "default": {
+        "default": "vierkant met horisontale vul"
+      }
+    }
+  },
+  {
+    "key": "25A5",
+    "mappings": {
+      "default": {
+        "default": "vierkant met vertikale vul"
+      }
+    }
+  },
+  {
+    "key": "25A6",
+    "mappings": {
+      "default": {
+        "default": "vierkant met ortogonale kruisarsie vul"
+      }
+    }
+  },
+  {
+    "key": "25A7",
+    "mappings": {
+      "default": {
+        "default": "vierkant met bo links na onder regs vul"
+      }
+    }
+  },
+  {
+    "key": "25A8",
+    "mappings": {
+      "default": {
+        "default": "vierkant met bo regs na onder links vul"
+      }
+    }
+  },
+  {
+    "key": "25A9",
+    "mappings": {
+      "default": {
+        "default": "vierkant met diagonale kruisarsie vul"
+      }
+    }
+  },
+  {
+    "key": "25AA",
+    "mappings": {
+      "default": {
+        "default": "swart klein vierkant"
+      }
+    }
+  },
+  {
+    "key": "25AB",
+    "mappings": {
+      "default": {
+        "default": "wit klein vierkant"
+      }
+    }
+  },
+  {
+    "key": "25AC",
+    "mappings": {
+      "default": {
+        "default": "swart reghoek"
+      }
+    }
+  },
+  {
+    "key": "25AD",
+    "mappings": {
+      "default": {
+        "default": "wit reghoek"
+      }
+    }
+  },
+  {
+    "key": "25AE",
+    "mappings": {
+      "default": {
+        "default": "swart vertikale reghoek"
+      }
+    }
+  },
+  {
+    "key": "25AF",
+    "mappings": {
+      "default": {
+        "default": "wit vertikale reghoek"
+      }
+    }
+  },
+  {
+    "key": "25B0",
+    "mappings": {
+      "default": {
+        "default": "swart paralelogram"
+      }
+    }
+  },
+  {
+    "key": "25B1",
+    "mappings": {
+      "default": {
+        "default": "wit paralelogram"
+      }
+    }
+  },
+  {
+    "key": "25B2",
+    "mappings": {
+      "default": {
+        "default": "swart driehoek wat boontoe wys"
+      }
+    }
+  },
+  {
+    "key": "25B3",
+    "mappings": {
+      "default": {
+        "default": "wit driehoek wat boontoe wys"
+      }
+    }
+  },
+  {
+    "key": "25B4",
+    "mappings": {
+      "default": {
+        "default": "swart klein driehoek wat boontoe wys"
+      }
+    }
+  },
+  {
+    "key": "25B5",
+    "mappings": {
+      "default": {
+        "default": "wit klein driehoek wat boontoe wys"
+      }
+    }
+  },
+  {
+    "key": "25B6",
+    "mappings": {
+      "default": {
+        "default": "swart driehoek wat regs wys"
+      }
+    }
+  },
+  {
+    "key": "25B7",
+    "mappings": {
+      "default": {
+        "default": "wit driehoek wat regs wys"
+      }
+    }
+  },
+  {
+    "key": "25B8",
+    "mappings": {
+      "default": {
+        "default": "swart klein driehoek wat regs wys"
+      }
+    }
+  },
+  {
+    "key": "25B9",
+    "mappings": {
+      "default": {
+        "default": "wit klein driehoek wat regs wys"
+      }
+    }
+  },
+  {
+    "key": "25BA",
+    "mappings": {
+      "default": {
+        "default": "swart wyser na regs"
+      }
+    }
+  },
+  {
+    "key": "25BB",
+    "mappings": {
+      "default": {
+        "default": "wit wyser na regs"
+      }
+    }
+  },
+  {
+    "key": "25BC",
+    "mappings": {
+      "default": {
+        "default": "swart driehoek wat ondertoe wys"
+      }
+    }
+  },
+  {
+    "key": "25BD",
+    "mappings": {
+      "default": {
+        "default": "wit driehoek wat ondertoe wys"
+      }
+    }
+  },
+  {
+    "key": "25BE",
+    "mappings": {
+      "default": {
+        "default": "swart klein driehoek wat ondertoe wys"
+      }
+    }
+  },
+  {
+    "key": "25BF",
+    "mappings": {
+      "default": {
+        "default": "wit klein driehoek wat ondertoe wys"
+      }
+    }
+  },
+  {
+    "key": "25C0",
+    "mappings": {
+      "default": {
+        "default": "swart driehoek wat links wys"
+      }
+    }
+  },
+  {
+    "key": "25C1",
+    "mappings": {
+      "default": {
+        "default": "wit driehoek wat links wys"
+      }
+    }
+  },
+  {
+    "key": "25C2",
+    "mappings": {
+      "default": {
+        "default": "swart klein driehoek wat links wys"
+      }
+    }
+  },
+  {
+    "key": "25C3",
+    "mappings": {
+      "default": {
+        "default": "wit klein driehoek wat links wys"
+      }
+    }
+  },
+  {
+    "key": "25C4",
+    "mappings": {
+      "default": {
+        "default": "swart wyser na links"
+      }
+    }
+  },
+  {
+    "key": "25C5",
+    "mappings": {
+      "default": {
+        "default": "wit wyser na links"
+      }
+    }
+  },
+  {
+    "key": "25C6",
+    "mappings": {
+      "default": {
+        "default": "swart diamant"
+      }
+    }
+  },
+  {
+    "key": "25C7",
+    "mappings": {
+      "default": {
+        "default": "wit diamant"
+      }
+    }
+  },
+  {
+    "key": "25C8",
+    "mappings": {
+      "default": {
+        "default": "wit diamant met klein swart diamant in"
+      }
+    }
+  },
+  {
+    "key": "25C9",
+    "mappings": {
+      "default": {
+        "default": "visoog"
+      }
+    }
+  },
+  {
+    "key": "25CA",
+    "mappings": {
+      "default": {
+        "default": "lozenge"
+      }
+    }
+  },
+  {
+    "key": "25CB",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel"
+      }
+    }
+  },
+  {
+    "key": "25CC",
+    "mappings": {
+      "default": {
+        "default": "kolletjies sirkel"
+      }
+    }
+  },
+  {
+    "key": "25CD",
+    "mappings": {
+      "default": {
+        "default": "sirkel met vertikale vul"
+      }
+    }
+  },
+  {
+    "key": "25CE",
+    "mappings": {
+      "default": {
+        "default": "kol"
+      }
+    }
+  },
+  {
+    "key": "25CF",
+    "mappings": {
+      "default": {
+        "default": "swart sirkel"
+      }
+    }
+  },
+  {
+    "key": "25D0",
+    "mappings": {
+      "default": {
+        "default": "sirkel met linker helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25D1",
+    "mappings": {
+      "default": {
+        "default": "sirkel met regter helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25D2",
+    "mappings": {
+      "default": {
+        "default": "sirkel met onderste helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25D3",
+    "mappings": {
+      "default": {
+        "default": "sirkel met boonste helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25D4",
+    "mappings": {
+      "default": {
+        "default": "sirkel met boonste regter kwadrant swart"
+      }
+    }
+  },
+  {
+    "key": "25D5",
+    "mappings": {
+      "default": {
+        "default": "sirkel met almal behalwe boonste linker kwadrant swart"
+      }
+    }
+  },
+  {
+    "key": "25D6",
+    "mappings": {
+      "default": {
+        "default": "linker half swart sirkel"
+      }
+    }
+  },
+  {
+    "key": "25D7",
+    "mappings": {
+      "default": {
+        "default": "regter half swart sirkel"
+      }
+    }
+  },
+  {
+    "key": "25D8",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde koeël"
+      }
+    }
+  },
+  {
+    "key": "25D9",
+    "mappings": {
+      "default": {
+        "default": "omgekeerde wit sirkel"
+      }
+    }
+  },
+  {
+    "key": "25DA",
+    "mappings": {
+      "default": {
+        "default": "boonste helfte omgekeerde wit sirkel"
+      }
+    }
+  },
+  {
+    "key": "25DB",
+    "mappings": {
+      "default": {
+        "default": "onderste helfte omgekeerde wit sirkel"
+      }
+    }
+  },
+  {
+    "key": "25DC",
+    "mappings": {
+      "default": {
+        "default": "boonste linker kwadrant sirkelvormige boog"
+      }
+    }
+  },
+  {
+    "key": "25DD",
+    "mappings": {
+      "default": {
+        "default": "boonste regter kwadrant sirkelvormige boog"
+      }
+    }
+  },
+  {
+    "key": "25DE",
+    "mappings": {
+      "default": {
+        "default": "onderste regter kwadrant sirkelvormige boog"
+      }
+    }
+  },
+  {
+    "key": "25DF",
+    "mappings": {
+      "default": {
+        "default": "onderste linker kwadrant sirkelvormige boog"
+      }
+    }
+  },
+  {
+    "key": "25E0",
+    "mappings": {
+      "default": {
+        "default": "boonste half sirkel"
+      }
+    }
+  },
+  {
+    "key": "25E1",
+    "mappings": {
+      "default": {
+        "default": "onderste half sirkel"
+      }
+    }
+  },
+  {
+    "key": "25E2",
+    "mappings": {
+      "default": {
+        "default": "swart onderste regs driehoek"
+      }
+    }
+  },
+  {
+    "key": "25E3",
+    "mappings": {
+      "default": {
+        "default": "swart onderste links driehoek"
+      }
+    }
+  },
+  {
+    "key": "25E4",
+    "mappings": {
+      "default": {
+        "default": "swart boonste links driehoek"
+      }
+    }
+  },
+  {
+    "key": "25E5",
+    "mappings": {
+      "default": {
+        "default": "swart boonste regs driehoek"
+      }
+    }
+  },
+  {
+    "key": "25E6",
+    "mappings": {
+      "default": {
+        "default": "wit koeël"
+      }
+    }
+  },
+  {
+    "key": "25E7",
+    "mappings": {
+      "default": {
+        "default": "vierkant met linker helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25E8",
+    "mappings": {
+      "default": {
+        "default": "vierkant met regter helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25E9",
+    "mappings": {
+      "default": {
+        "default": "vierkant met boonste linker diagonaal helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25EA",
+    "mappings": {
+      "default": {
+        "default": "vierkant met onderste regter diagonaal helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25EB",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met vertikale halveer lyn"
+      }
+    }
+  },
+  {
+    "key": "25EC",
+    "mappings": {
+      "default": {
+        "default": "wit driehoek wat boontoe wys met punt"
+      }
+    }
+  },
+  {
+    "key": "25ED",
+    "mappings": {
+      "default": {
+        "default": "driehoek wat boontoe wys met linker helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25EE",
+    "mappings": {
+      "default": {
+        "default": "driehoek wat boontoe wys met regter helfte swart"
+      }
+    }
+  },
+  {
+    "key": "25EF",
+    "mappings": {
+      "default": {
+        "default": "groot sirkel"
+      }
+    }
+  },
+  {
+    "key": "25F0",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met linker boonste kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F1",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met linker onderste kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F2",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met regter onderste kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F3",
+    "mappings": {
+      "default": {
+        "default": "wit vierkant met regter boonste kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F4",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel met boonste linker kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F5",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel met onderste linker kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F6",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel met onderste regter kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F7",
+    "mappings": {
+      "default": {
+        "default": "wit sirkel met boonste regter kwadrant"
+      }
+    }
+  },
+  {
+    "key": "25F8",
+    "mappings": {
+      "default": {
+        "default": "boonste linker driehoek"
+      }
+    }
+  },
+  {
+    "key": "25F9",
+    "mappings": {
+      "default": {
+        "default": "boonste regter driehoek"
+      }
+    }
+  },
+  {
+    "key": "25FA",
+    "mappings": {
+      "default": {
+        "default": "onderste links driehoek"
+      }
+    }
+  },
+  {
+    "key": "25FB",
+    "mappings": {
+      "default": {
+        "default": "wit medium vierkant"
+      }
+    }
+  },
+  {
+    "key": "25FC",
+    "mappings": {
+      "default": {
+        "default": "swart medium vierkant"
+      }
+    }
+  },
+  {
+    "key": "25FD",
+    "mappings": {
+      "default": {
+        "default": "wit medium klein vierkant"
+      }
+    }
+  },
+  {
+    "key": "25FE",
+    "mappings": {
+      "default": {
+        "default": "swart medium klein vierkant"
+      }
+    }
+  },
+  {
+    "key": "25FF",
+    "mappings": {
+      "default": {
+        "default": "onderste regs driehoek"
+      }
+    }
+  },
+  {
+    "key": "2B12",
+    "mappings": {
+      "default": {
+        "default": "vierkant met boonste helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B13",
+    "mappings": {
+      "default": {
+        "default": "vierkant met onderste helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B14",
+    "mappings": {
+      "default": {
+        "default": "vierkant met boonste regter diagonaal helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B15",
+    "mappings": {
+      "default": {
+        "default": "vierkant met onderste linker diagonaal helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B16",
+    "mappings": {
+      "default": {
+        "default": "diamant met linker helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B17",
+    "mappings": {
+      "default": {
+        "default": "diamant met regter helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B18",
+    "mappings": {
+      "default": {
+        "default": "diamant met boonste helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B19",
+    "mappings": {
+      "default": {
+        "default": "diamant met onderste helfte swart"
+      }
+    }
+  },
+  {
+    "key": "2B1A",
+    "mappings": {
+      "default": {
+        "default": "kolletjies vierkant"
+      }
+    }
+  },
+  {
+    "key": "2B1B",
+    "mappings": {
+      "default": {
+        "default": "swart groot vierkant"
+      }
+    }
+  },
+  {
+    "key": "2B1C",
+    "mappings": {
+      "default": {
+        "default": "wit groot vierkant"
+      }
+    }
+  },
+  {
+    "key": "2B1D",
+    "mappings": {
+      "default": {
+        "default": "swart baie klein vierkant"
+      }
+    }
+  },
+  {
+    "key": "2B1E",
+    "mappings": {
+      "default": {
+        "default": "wit baie klein vierkant"
+      }
+    }
+  },
+  {
+    "key": "2B1F",
+    "mappings": {
+      "default": {
+        "default": "swart pentagon"
+      }
+    }
+  },
+  {
+    "key": "2B20",
+    "mappings": {
+      "default": {
+        "default": "wit pentagon"
+      }
+    }
+  },
+  {
+    "key": "2B21",
+    "mappings": {
+      "default": {
+        "default": "wit heksagon"
+      }
+    }
+  },
+  {
+    "key": "2B22",
+    "mappings": {
+      "default": {
+        "default": "swart heksagon"
+      }
+    }
+  },
+  {
+    "key": "2B23",
+    "mappings": {
+      "default": {
+        "default": "horisontale swart heksagon"
+      }
+    }
+  },
+  {
+    "key": "2B24",
+    "mappings": {
+      "default": {
+        "default": "swart groot sirkel"
+      }
+    }
+  },
+  {
+    "key": "2B25",
+    "mappings": {
+      "default": {
+        "default": "swart medium diamant"
+      }
+    }
+  },
+  {
+    "key": "2B26",
+    "mappings": {
+      "default": {
+        "default": "wit medium diamant"
+      }
+    }
+  },
+  {
+    "key": "2B27",
+    "mappings": {
+      "default": {
+        "default": "swart medium lozenge"
+      }
+    }
+  },
+  {
+    "key": "2B28",
+    "mappings": {
+      "default": {
+        "default": "wit medium lozenge"
+      }
+    }
+  },
+  {
+    "key": "2B29",
+    "mappings": {
+      "default": {
+        "default": "swart klein diamant"
+      }
+    }
+  },
+  {
+    "key": "2B2A",
+    "mappings": {
+      "default": {
+        "default": "swart klein lozenge"
+      }
+    }
+  },
+  {
+    "key": "2B2B",
+    "mappings": {
+      "default": {
+        "default": "wit klein lozenge"
+      }
+    }
+  },
+  {
+    "key": "2B2C",
+    "mappings": {
+      "default": {
+        "default": "swart horisontale elips"
+      }
+    }
+  },
+  {
+    "key": "2B2D",
+    "mappings": {
+      "default": {
+        "default": "wit horisontale elips"
+      }
+    }
+  },
+  {
+    "key": "2B2E",
+    "mappings": {
+      "default": {
+        "default": "swart vertikale elips"
+      }
+    }
+  },
+  {
+    "key": "2B2F",
+    "mappings": {
+      "default": {
+        "default": "wit vertikale elips"
+      }
+    }
+  },
+  {
+    "key": "2B50",
+    "mappings": {
+      "default": {
+        "default": "wit medium ster"
+      }
+    }
+  },
+  {
+    "key": "2B51",
+    "mappings": {
+      "default": {
+        "default": "swart klein ster"
+      }
+    }
+  },
+  {
+    "key": "2B52",
+    "mappings": {
+      "default": {
+        "default": "wit klein ster"
+      }
+    }
+  },
+  {
+    "key": "2B53",
+    "mappings": {
+      "default": {
+        "default": "swart pentagon na regs"
+      }
+    }
+  },
+  {
+    "key": "2B54",
+    "mappings": {
+      "default": {
+        "default": "wit pentagon na regs"
+      }
+    }
+  },
+  {
+    "key": "2B55",
+    "mappings": {
+      "default": {
+        "default": "swaar groot sirkel"
+      }
+    }
+  },
+  {
+    "key": "2B56",
+    "mappings": {
+      "default": {
+        "default": "swaar ovaal met ovaal binne in"
+      }
+    }
+  },
+  {
+    "key": "2B57",
+    "mappings": {
+      "default": {
+        "default": "swaar sirkel met sirkel binne in"
+      }
+    }
+  },
+  {
+    "key": "2B58",
+    "mappings": {
+      "default": {
+        "default": "swaar sirkel"
+      }
+    }
+  },
+  {
+    "key": "2B59",
+    "mappings": {
+      "default": {
+        "default": "swaar omkringde X kruis"
+      }
+    }
+  }
+]

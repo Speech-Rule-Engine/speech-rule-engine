@@ -1,0 +1,50 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "s",
+    "mappings": {
+      "default": {
+        "default": "sekonde",
+        "plural": "sekondes"
+      }
+    }
+  },
+  {
+    "key": "″",
+    "mappings": {
+      "default": {
+        "default": "sekonde",
+        "plural": "sekondes"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "mappings": {
+      "default": {
+        "default": "minuut",
+        "plural": "minute"
+      }
+    }
+  },
+  {
+    "key": "°",
+    "mappings": {
+      "default": {
+        "default": "graad",
+        "plural": "grade"
+      }
+    }
+  },
+  {
+    "key": "h",
+    "mappings": {
+      "default": {
+        "default": "uur",
+        "plural": "ure"
+      }
+    }
+  }
+]

@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
+import * as DomUtil from '../common/dom_util.js';
 
-import { AbstractHighlighter, Highlight } from './abstract_highlighter';
+import { AbstractHighlighter, Highlight } from './abstract_highlighter.js';
 
 export class SvgHighlighter extends AbstractHighlighter {
   /**
@@ -83,7 +83,7 @@ export class SvgHighlighter extends AbstractHighlighter {
       rect.setAttribute('transform', transform);
     }
     rect.setAttribute('fill', this.colorString().background);
-    rect.setAttribute(AbstractHighlighter.ATTR, 'true');
+    rect.setAttribute(this.ATTR, 'true');
     node.parentNode.insertBefore(rect, node);
     info = { node: rect as HTMLElement, foreground: node.getAttribute('fill') };
     node.setAttribute('fill', this.colorString().foreground);
@@ -122,6 +122,9 @@ export class SvgHighlighter extends AbstractHighlighter {
    */
   public isMactionNode(node: HTMLElement) {
     let className = node.className || node.getAttribute('class');
+    if (!className) {
+      return false;
+    }
     className =
       (className as any).baseVal !== undefined
         ? (className as any).baseVal

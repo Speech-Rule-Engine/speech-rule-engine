@@ -6,64 +6,51 @@
     "key": "0028",
     "mappings": {
       "default": {
-        "default": "parèntesi esquerre",
-        "defaultMP": "paréntesis"
+        "default": "parèntesi esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "0029",
     "mappings": {
       "default": {
-        "default": "parèntesi dret",
-        "defaultMP": "cierra paréntesis"
+        "default": "parèntesi dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "005B",
     "mappings": {
       "default": {
-        "default": "claudàtor esquerre",
-        "defaultMP": "abre corchetes"
+        "default": "claudàtor esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "005D",
     "mappings": {
       "default": {
-        "default": "claudàtor dret",
-        "defaultMP": "cierra corchetes"
+        "default": "claudàtor dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "007B",
     "mappings": {
       "default": {
-        "default": "clau esquerra",
-        "defaultMP": "abre llaves"
+        "default": "clau esquerra"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "007D",
     "mappings": {
       "default": {
-        "default": "clau dreta",
-        "defaultMP": "cierra llaves"
+        "default": "clau dreta"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2045",
     "mappings": {
       "default": {
@@ -72,7 +59,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2046",
     "mappings": {
       "default": {
@@ -86,8 +72,7 @@
       "default": {
         "default": "cantonada superior esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2309",
@@ -95,8 +80,7 @@
       "default": {
         "default": "cantonada superior dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230A",
@@ -104,8 +88,7 @@
       "default": {
         "default": "cantonada inferior esquerra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230B",
@@ -113,8 +96,7 @@
       "default": {
         "default": "cantonada inferior dreta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "230C",
@@ -122,8 +104,7 @@
       "default": {
         "default": "tall inferior dret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230D",
@@ -131,8 +112,7 @@
       "default": {
         "default": "tall inferior esquerre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230E",
@@ -140,8 +120,7 @@
       "default": {
         "default": "tall superior dret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "230F",
@@ -149,8 +128,7 @@
       "default": {
         "default": "tall superior esquerre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231C",
@@ -158,8 +136,7 @@
       "default": {
         "default": "angle superior esquerre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231D",
@@ -167,8 +144,7 @@
       "default": {
         "default": "angle superior dret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231E",
@@ -176,8 +152,7 @@
       "default": {
         "default": "angle inferior esquerre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "231F",
@@ -185,8 +160,7 @@
       "default": {
         "default": "angle inferior dret"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2320",
@@ -194,8 +168,7 @@
       "default": {
         "default": "meitat superior d'integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2321",
@@ -203,8 +176,7 @@
       "default": {
         "default": "meitat inferior d'integral"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2329",
@@ -212,8 +184,7 @@
       "default": {
         "default": "parèntesi angular esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "232A",
@@ -221,11 +192,9 @@
       "default": {
         "default": "parèntesi angular dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Sm",
     "key": "239B",
     "mappings": {
       "default": {
@@ -234,7 +203,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239C",
     "mappings": {
       "default": {
@@ -243,7 +211,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239D",
     "mappings": {
       "default": {
@@ -252,7 +219,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239E",
     "mappings": {
       "default": {
@@ -261,7 +227,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "239F",
     "mappings": {
       "default": {
@@ -270,7 +235,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A0",
     "mappings": {
       "default": {
@@ -279,7 +243,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A1",
     "mappings": {
       "default": {
@@ -288,7 +251,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A2",
     "mappings": {
       "default": {
@@ -297,7 +259,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A3",
     "mappings": {
       "default": {
@@ -306,7 +267,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A4",
     "mappings": {
       "default": {
@@ -315,7 +275,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A5",
     "mappings": {
       "default": {
@@ -324,7 +283,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A6",
     "mappings": {
       "default": {
@@ -333,7 +291,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A7",
     "mappings": {
       "default": {
@@ -342,7 +299,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A8",
     "mappings": {
       "default": {
@@ -351,7 +307,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23A9",
     "mappings": {
       "default": {
@@ -360,7 +315,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AA",
     "mappings": {
       "default": {
@@ -369,7 +323,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AB",
     "mappings": {
       "default": {
@@ -378,7 +331,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AC",
     "mappings": {
       "default": {
@@ -387,7 +339,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AD",
     "mappings": {
       "default": {
@@ -396,7 +347,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AE",
     "mappings": {
       "default": {
@@ -405,7 +355,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23AF",
     "mappings": {
       "default": {
@@ -419,8 +368,7 @@
       "default": {
         "default": "esquerra amunt o dret sota secció clau"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23B1",
@@ -428,11 +376,9 @@
       "default": {
         "default": "dreta amunt o esquerre sota secció clau"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "23B2",
     "mappings": {
       "default": {
@@ -441,7 +387,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "23B3",
     "mappings": {
       "default": {
@@ -455,8 +400,7 @@
       "default": {
         "default": "claudàtor superior"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "23B5",
@@ -464,11 +408,9 @@
       "default": {
         "default": "claudàtor inferior"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "23B6",
     "mappings": {
       "default": {
@@ -477,7 +419,6 @@
     }
   },
   {
-    "category": "So",
     "key": "23B7",
     "mappings": {
       "default": {
@@ -486,7 +427,6 @@
     }
   },
   {
-    "category": "So",
     "key": "23B8",
     "mappings": {
       "default": {
@@ -495,7 +435,6 @@
     }
   },
   {
-    "category": "So",
     "key": "23B9",
     "mappings": {
       "default": {
@@ -509,8 +448,7 @@
       "default": {
         "default": "parèntesi superior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DD",
@@ -518,8 +456,7 @@
       "default": {
         "default": "parèntesi inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DE",
@@ -527,8 +464,7 @@
       "default": {
         "default": "claudàtor arrissat superior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23DF",
@@ -536,8 +472,7 @@
       "default": {
         "default": "claudàtor arrissat inferior"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E0",
@@ -545,8 +480,7 @@
       "default": {
         "default": "claudàtor superior en tortuga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "23E1",
@@ -554,11 +488,9 @@
       "default": {
         "default": "claudàtor inferior en tortuga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ps",
     "key": "2768",
     "mappings": {
       "default": {
@@ -567,7 +499,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2769",
     "mappings": {
       "default": {
@@ -576,7 +507,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276A",
     "mappings": {
       "default": {
@@ -585,7 +515,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276B",
     "mappings": {
       "default": {
@@ -594,7 +523,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276C",
     "mappings": {
       "default": {
@@ -603,7 +531,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276D",
     "mappings": {
       "default": {
@@ -612,7 +539,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "276E",
     "mappings": {
       "default": {
@@ -621,7 +547,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "276F",
     "mappings": {
       "default": {
@@ -630,7 +555,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2770",
     "mappings": {
       "default": {
@@ -639,7 +563,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2771",
     "mappings": {
       "default": {
@@ -648,7 +571,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2772",
     "mappings": {
       "default": {
@@ -657,7 +579,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2773",
     "mappings": {
       "default": {
@@ -666,7 +587,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2774",
     "mappings": {
       "default": {
@@ -675,7 +595,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2775",
     "mappings": {
       "default": {
@@ -689,8 +608,7 @@
       "default": {
         "default": "símbol delimitador esquerre de bossa en forma de s"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27C6",
@@ -698,8 +616,7 @@
       "default": {
         "default": "símbol delimitador dret de bossa en forma de s"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E6",
@@ -707,8 +624,7 @@
       "default": {
         "default": "claudàtor buit esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E7",
@@ -716,8 +632,7 @@
       "default": {
         "default": "claudàtor buit dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27E8",
@@ -725,8 +640,7 @@
       "default": {
         "default": "claudàtor agut esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27E9",
@@ -734,8 +648,7 @@
       "default": {
         "default": "claudàtor agut dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EA",
@@ -743,8 +656,7 @@
       "default": {
         "default": "doble claudàtor agut esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EB",
@@ -752,8 +664,7 @@
       "default": {
         "default": "doble claudàtor agut dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EC",
@@ -761,8 +672,7 @@
       "default": {
         "default": "claudàtor de tortuga buit esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27ED",
@@ -770,8 +680,7 @@
       "default": {
         "default": "claudàtor de tortuga buit dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "27EE",
@@ -779,8 +688,7 @@
       "default": {
         "default": "parèntesi pla esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "27EF",
@@ -788,11 +696,9 @@
       "default": {
         "default": "parèntesi pla dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2983",
     "mappings": {
       "default": {
@@ -801,7 +707,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2984",
     "mappings": {
       "default": {
@@ -815,8 +720,7 @@
       "default": {
         "default": "parèntesi esquerre blanc"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2986",
@@ -824,11 +728,9 @@
       "default": {
         "default": "parèntesi dret blanc"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2987",
     "mappings": {
       "default": {
@@ -837,7 +739,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2988",
     "mappings": {
       "default": {
@@ -851,8 +752,7 @@
       "default": {
         "default": "notació z claudàtor d’unió esquerre"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298A",
@@ -860,8 +760,7 @@
       "default": {
         "default": "z notation right binding bracket"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298B",
@@ -869,8 +768,7 @@
       "default": {
         "default": "claudàtor esquerre amb barra inferior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298C",
@@ -878,8 +776,7 @@
       "default": {
         "default": "claudàtor dret amb barra inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298D",
@@ -887,8 +784,7 @@
       "default": {
         "default": "claudàtor esquerre amb la marca a l'extrem superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "298E",
@@ -896,8 +792,7 @@
       "default": {
         "default": "claudàtor dret amb la marca a l'extrem inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "298F",
@@ -905,8 +800,7 @@
       "default": {
         "default": "claudàtor esquerre amb la marca a l'extrem inferior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2990",
@@ -914,8 +808,7 @@
       "default": {
         "default": "claudàtor dret amb una marca a l'extrem superior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2991",
@@ -923,8 +816,7 @@
       "default": {
         "default": "claudàtor esquerra amb punt"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2992",
@@ -932,8 +824,7 @@
       "default": {
         "default": "claudàtor angular amb punt"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2993",
@@ -941,8 +832,7 @@
       "default": {
         "default": "arc esquerre inferior al claudàtor"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2994",
@@ -950,8 +840,7 @@
       "default": {
         "default": "arc dret superior al claudàtor"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "2995",
@@ -959,8 +848,7 @@
       "default": {
         "default": "arc doble esquerre superior al claudàtor"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "2996",
@@ -968,11 +856,9 @@
       "default": {
         "default": "arc doble dret inferior al claudàtor"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "2997",
     "mappings": {
       "default": {
@@ -981,7 +867,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2998",
     "mappings": {
       "default": {
@@ -990,7 +875,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "29D8",
     "mappings": {
       "default": {
@@ -999,7 +883,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29D9",
     "mappings": {
       "default": {
@@ -1013,8 +896,7 @@
       "default": {
         "default": "doble tanca esquerra ondulada"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "29DB",
@@ -1022,11 +904,9 @@
       "default": {
         "default": "doble tanca dreta ondulada"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "29FC",
     "mappings": {
       "default": {
@@ -1035,7 +915,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "29FD",
     "mappings": {
       "default": {
@@ -1044,7 +923,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E22",
     "mappings": {
       "default": {
@@ -1053,7 +931,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E23",
     "mappings": {
       "default": {
@@ -1062,7 +939,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E24",
     "mappings": {
       "default": {
@@ -1071,7 +947,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E25",
     "mappings": {
       "default": {
@@ -1080,7 +955,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E26",
     "mappings": {
       "default": {
@@ -1089,7 +963,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E27",
     "mappings": {
       "default": {
@@ -1098,7 +971,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "2E28",
     "mappings": {
       "default": {
@@ -1107,7 +979,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "2E29",
     "mappings": {
       "default": {
@@ -1116,7 +987,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3008",
     "mappings": {
       "default": {
@@ -1125,7 +995,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3009",
     "mappings": {
       "default": {
@@ -1139,21 +1008,17 @@
       "default": {
         "default": "parèntesi angular doble"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "300B",
     "mappings": {
       "default": {
-        "default": "parèntesi angular doble dret",
-        "defaultMP": "cierra paréntesis angular doble"
+        "default": "parèntesi angular doble dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "300C",
     "mappings": {
       "default": {
@@ -1162,7 +1027,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300D",
     "mappings": {
       "default": {
@@ -1171,7 +1035,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "300E",
     "mappings": {
       "default": {
@@ -1180,7 +1043,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "300F",
     "mappings": {
       "default": {
@@ -1189,7 +1051,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3010",
     "mappings": {
       "default": {
@@ -1198,7 +1059,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3011",
     "mappings": {
       "default": {
@@ -1212,8 +1072,7 @@
       "default": {
         "default": "mènsula esquerra de closca de tortuga"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "3015",
@@ -1221,11 +1080,9 @@
       "default": {
         "default": "mènsula de closca de tortuga dreta"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "3016",
     "mappings": {
       "default": {
@@ -1234,7 +1091,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3017",
     "mappings": {
       "default": {
@@ -1243,7 +1099,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "3018",
     "mappings": {
       "default": {
@@ -1252,7 +1107,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "3019",
     "mappings": {
       "default": {
@@ -1266,21 +1120,17 @@
       "default": {
         "default": "claudàtor buit"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "301B",
     "mappings": {
       "default": {
-        "default": "claudàtor buit dret",
-        "defaultMP": "cierra corchete vacío"
+        "default": "claudàtor buit dret"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "301D",
     "mappings": {
       "default": {
@@ -1294,11 +1144,9 @@
       "default": {
         "default": "segona"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Pe",
     "key": "301F",
     "mappings": {
       "default": {
@@ -1307,7 +1155,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FD3E",
     "mappings": {
       "default": {
@@ -1316,7 +1163,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FD3F",
     "mappings": {
       "default": {
@@ -1325,7 +1171,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE17",
     "mappings": {
       "default": {
@@ -1334,7 +1179,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE18",
     "mappings": {
       "default": {
@@ -1348,8 +1192,7 @@
       "default": {
         "default": "parèntesi superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE36",
@@ -1357,8 +1200,7 @@
       "default": {
         "default": "parèntesi inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
     "key": "FE37",
@@ -1366,8 +1208,7 @@
       "default": {
         "default": "clau superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE38",
@@ -1375,11 +1216,9 @@
       "default": {
         "default": "clau inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE39",
     "mappings": {
       "default": {
@@ -1388,7 +1227,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3A",
     "mappings": {
       "default": {
@@ -1397,7 +1235,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3B",
     "mappings": {
       "default": {
@@ -1406,7 +1243,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3C",
     "mappings": {
       "default": {
@@ -1415,7 +1251,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE3D",
     "mappings": {
       "default": {
@@ -1424,7 +1259,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE3E",
     "mappings": {
       "default": {
@@ -1438,8 +1272,7 @@
       "default": {
         "default": "parèntesi angular superior"
       }
-    },
-    "category": "Ps"
+    }
   },
   {
     "key": "FE40",
@@ -1447,11 +1280,9 @@
       "default": {
         "default": "parèntesi angular inferior"
       }
-    },
-    "category": "Pe"
+    }
   },
   {
-    "category": "Ps",
     "key": "FE41",
     "mappings": {
       "default": {
@@ -1460,7 +1291,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE42",
     "mappings": {
       "default": {
@@ -1469,7 +1299,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE43",
     "mappings": {
       "default": {
@@ -1478,7 +1307,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE44",
     "mappings": {
       "default": {
@@ -1487,7 +1315,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE47",
     "mappings": {
       "default": {
@@ -1496,7 +1323,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE48",
     "mappings": {
       "default": {
@@ -1505,7 +1331,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE59",
     "mappings": {
       "default": {
@@ -1514,7 +1339,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5A",
     "mappings": {
       "default": {
@@ -1523,7 +1347,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5B",
     "mappings": {
       "default": {
@@ -1532,7 +1355,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5C",
     "mappings": {
       "default": {
@@ -1541,7 +1363,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FE5D",
     "mappings": {
       "default": {
@@ -1550,7 +1371,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FE5E",
     "mappings": {
       "default": {
@@ -1559,7 +1379,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF08",
     "mappings": {
       "default": {
@@ -1568,7 +1387,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF09",
     "mappings": {
       "default": {
@@ -1577,7 +1395,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF3B",
     "mappings": {
       "default": {
@@ -1586,7 +1403,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF3D",
     "mappings": {
       "default": {
@@ -1595,7 +1411,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5B",
     "mappings": {
       "default": {
@@ -1604,7 +1419,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF5D",
     "mappings": {
       "default": {
@@ -1613,7 +1427,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF5F",
     "mappings": {
       "default": {
@@ -1622,7 +1435,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF60",
     "mappings": {
       "default": {
@@ -1631,7 +1443,6 @@
     }
   },
   {
-    "category": "Ps",
     "key": "FF62",
     "mappings": {
       "default": {
@@ -1640,7 +1451,6 @@
     }
   },
   {
-    "category": "Pe",
     "key": "FF63",
     "mappings": {
       "default": {

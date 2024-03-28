@@ -1,0 +1,14 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "0394",
+    "mappings": {
+      "clearspeak": {
+        "default": "trekant",
+        "TriangleSymbol_Delta": "stort Delta"
+      }
+    }
+  }
+]

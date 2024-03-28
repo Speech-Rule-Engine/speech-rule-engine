@@ -164,7 +164,9 @@
       "DECIMAL_MARK": ".",
       "DIGIT_GROUP": ",",
       "JOINER_SUBSUPER": "",
-      "JOINER_FRAC": ""
+      "JOINER_FRAC": "",
+      "SPACE": "⠀",
+      "HYPER": "3"
     },
     "unitTimes": ""
   }

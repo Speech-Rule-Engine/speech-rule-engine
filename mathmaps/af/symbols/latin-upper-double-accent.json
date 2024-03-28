@@ -1,0 +1,461 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "01D5",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u dubbel bopunt bostaaf"
+      }
+    }
+  },
+  {
+    "key": "01D7",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u dubbel bopunt akkuut"
+      }
+    }
+  },
+  {
+    "key": "01D9",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u dubbel bopunt karon"
+      }
+    }
+  },
+  {
+    "key": "01DB",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u dubbel bopunt gravis"
+      }
+    }
+  },
+  {
+    "key": "01DE",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a dubbel bopunt bostaaf"
+      }
+    }
+  },
+  {
+    "key": "01E0",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a bopunt bostaaf"
+      }
+    }
+  },
+  {
+    "key": "01EC",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o ogonek bostaaf"
+      }
+    }
+  },
+  {
+    "key": "01FA",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a ring akkuut"
+      }
+    }
+  },
+  {
+    "key": "022A",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o dubbel bopunt bostaaf"
+      }
+    }
+  },
+  {
+    "key": "022C",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o tilde bostaaf"
+      }
+    }
+  },
+  {
+    "key": "0230",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o bopunt bostaaf"
+      }
+    }
+  },
+  {
+    "key": "1E08",
+    "mappings": {
+      "default": {
+        "default": "hoofletter c sidila akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E14",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e bostaaf gravis"
+      }
+    }
+  },
+  {
+    "key": "1E16",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e bostaaf akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E1C",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e sidilla brevis"
+      }
+    }
+  },
+  {
+    "key": "1E2E",
+    "mappings": {
+      "default": {
+        "default": "hoofletter i dubbel bopunt akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E38",
+    "mappings": {
+      "default": {
+        "default": "hoofletter l onderpunt bostaaf"
+      }
+    }
+  },
+  {
+    "key": "1E4C",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o tilde akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E4E",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o tilde dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E50",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o bostaaf gravis"
+      }
+    }
+  },
+  {
+    "key": "1E52",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o bostaaf akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E5C",
+    "mappings": {
+      "default": {
+        "default": "hoofletter r bostaaf onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E64",
+    "mappings": {
+      "default": {
+        "default": "hoofletter s akkuut bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E66",
+    "mappings": {
+      "default": {
+        "default": "hoofletter s karon bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E68",
+    "mappings": {
+      "default": {
+        "default": "hoofletter s onderpunt bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E78",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u tilde akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E7A",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u bostaaf dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "1EA4",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a hoed akkuut"
+      }
+    }
+  },
+  {
+    "key": "1EA6",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a hoed gravis"
+      }
+    }
+  },
+  {
+    "key": "1EA8",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a hoed haak"
+      }
+    }
+  },
+  {
+    "key": "1EAA",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a hoed tilde"
+      }
+    }
+  },
+  {
+    "key": "1EAC",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a hoed onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EAE",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a brevis akkuut"
+      }
+    }
+  },
+  {
+    "key": "1EB0",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a brevis gravis"
+      }
+    }
+  },
+  {
+    "key": "1EB2",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a brevis haak"
+      }
+    }
+  },
+  {
+    "key": "1EB4",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a brevis tilde"
+      }
+    }
+  },
+  {
+    "key": "1EB6",
+    "mappings": {
+      "default": {
+        "default": "hoofletter a brevis onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EBE",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e hoed akkuut"
+      }
+    }
+  },
+  {
+    "key": "1EC0",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e hoed gravis"
+      }
+    }
+  },
+  {
+    "key": "1EC2",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e hoed haak"
+      }
+    }
+  },
+  {
+    "key": "1EC4",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e hoed tilde"
+      }
+    }
+  },
+  {
+    "key": "1EC6",
+    "mappings": {
+      "default": {
+        "default": "hoofletter e hoed onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1ED0",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o hoed akkuut"
+      }
+    }
+  },
+  {
+    "key": "1ED2",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o hoed gravis"
+      }
+    }
+  },
+  {
+    "key": "1ED4",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o hoed haak"
+      }
+    }
+  },
+  {
+    "key": "1ED6",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o hoed tilde"
+      }
+    }
+  },
+  {
+    "key": "1ED8",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o hoed onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EDA",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o akkuut priem"
+      }
+    }
+  },
+  {
+    "key": "1EDC",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o gravis priem"
+      }
+    }
+  },
+  {
+    "key": "1EDE",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o haak priem"
+      }
+    }
+  },
+  {
+    "key": "1EE0",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o tilde priem"
+      }
+    }
+  },
+  {
+    "key": "1EE2",
+    "mappings": {
+      "default": {
+        "default": "hoofletter o onderpunt priem"
+      }
+    }
+  },
+  {
+    "key": "1EE8",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u akkuut priem"
+      }
+    }
+  },
+  {
+    "key": "1EEA",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u gravis priem"
+      }
+    }
+  },
+  {
+    "key": "1EEC",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u haak priem"
+      }
+    }
+  },
+  {
+    "key": "1EEE",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u tilde priem"
+      }
+    }
+  },
+  {
+    "key": "1EF0",
+    "mappings": {
+      "default": {
+        "default": "hoofletter u onderpunt priem"
+      }
+    }
+  }
+]

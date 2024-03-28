@@ -1,0 +1,197 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "22BE",
+    "mappings": {
+      "default": {
+        "default": "ret vinkel med bue"
+      }
+    }
+  },
+  {
+    "key": "237C",
+    "mappings": {
+      "default": {
+        "default": "ret vinkel med nedadgående zigzag-pil"
+      }
+    }
+  },
+  {
+    "key": "27C0",
+    "mappings": {
+      "default": {
+        "default": "tredimensionel vinkel"
+      }
+    }
+  },
+  {
+    "key": "299B",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åbning til venstre"
+      }
+    }
+  },
+  {
+    "key": "299C",
+    "mappings": {
+      "default": {
+        "default": "ret vinkel med firkant"
+      }
+    }
+  },
+  {
+    "key": "299D",
+    "mappings": {
+      "default": {
+        "default": "målt ret vinkel med prik"
+      }
+    }
+  },
+  {
+    "key": "299E",
+    "mappings": {
+      "default": {
+        "default": "vinkel med s indvendigt"
+      }
+    }
+  },
+  {
+    "key": "299F",
+    "mappings": {
+      "default": {
+        "default": "spids vinkel"
+      }
+    }
+  },
+  {
+    "key": "29A0",
+    "mappings": {
+      "default": {
+        "default": "sfærisk vinkel med åbning til venstre"
+      }
+    }
+  },
+  {
+    "key": "29A1",
+    "mappings": {
+      "default": {
+        "default": "sfærisk vinkel med åbning opad"
+      }
+    }
+  },
+  {
+    "key": "29A2",
+    "mappings": {
+      "default": {
+        "default": "vendt vinkel"
+      }
+    }
+  },
+  {
+    "key": "29A3",
+    "mappings": {
+      "default": {
+        "default": "omvendt vinkel"
+      }
+    }
+  },
+  {
+    "key": "29A4",
+    "mappings": {
+      "default": {
+        "default": "vinkel med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "29A5",
+    "mappings": {
+      "default": {
+        "default": "omvendt vinkel med streg nedenunder"
+      }
+    }
+  },
+  {
+    "key": "29A6",
+    "mappings": {
+      "default": {
+        "default": "skæv vinkel med åbningen opad"
+      }
+    }
+  },
+  {
+    "key": "29A7",
+    "mappings": {
+      "default": {
+        "default": "skæv vinkel med åbningen nedad"
+      }
+    }
+  },
+  {
+    "key": "29A8",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger opad mod højre"
+      }
+    }
+  },
+  {
+    "key": "29A9",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger opad mod venstre"
+      }
+    }
+  },
+  {
+    "key": "29AA",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger nedad mod højre"
+      }
+    }
+  },
+  {
+    "key": "29AB",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger nedad mod venstre"
+      }
+    }
+  },
+  {
+    "key": "29AC",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod højre og opad"
+      }
+    }
+  },
+  {
+    "key": "29AD",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod venstre og opad"
+      }
+    }
+  },
+  {
+    "key": "29AE",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod højre og nedad"
+      }
+    }
+  },
+  {
+    "key": "29AF",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod venstre og nedad"
+      }
+    }
+  }
+]

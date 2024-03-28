@@ -2,14 +2,13 @@
   {
     "locale": "de"
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "Grad"
-     }
-   },
-   "key": "deg",
-   "names": ["deg"]
+  {
+    "key": "deg",
+    "mappings": {
+      "default": {
+        "default": "Grad"
+      }
+    }
   },
   {
     "key": "det",
@@ -17,52 +16,44 @@
       "default": {
         "default": "Determinante"
       }
-    },
-    "category": "Algebra",
-    "names": [
-      "det"
-    ]
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "Dimension"
-     }
-   },
-   "key": "dim",
-   "names": ["dim"]
+  {
+    "key": "dim",
+    "mappings": {
+      "default": {
+        "default": "Dimension"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "Homomorphismus"
-     },
-     "mathspeak": {
-       "default": "hom"
-     },
-     "clearspeak": {
-       "default": "hom"
-     }
-   },
-   "key": "hom",
-   "names": ["hom", "Hom"]
+  {
+    "key": "hom",
+    "mappings": {
+      "default": {
+        "default": "Homomorphismus"
+      },
+      "mathspeak": {
+        "default": "hom"
+      },
+      "clearspeak": {
+        "default": "hom"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "Kern"
-     }
-   },
-   "key": "ker",
-   "names": ["ker"]
+  {
+    "key": "ker",
+    "mappings": {
+      "default": {
+        "default": "Kern"
+      }
+    }
   },
-  {"category": "Algebra",
-   "mappings": {
-     "default": {
-       "default": "Spur"
-     }
-   },
-   "key": "Tr",
-   "names": ["Tr", "tr"]
+  {
+    "key": "Tr",
+    "mappings": {
+      "default": {
+        "default": "Spur"
+      }
+    }
   }
 ]

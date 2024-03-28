@@ -18,15 +18,14 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr';
-import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions';
+import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions.js';
 
 /**
  * Mapping for context functions: The store maps constraint strings to
  * dictionaries of context functions.
  */
-export const funcStore: Map<string, { [key: string]: SpeechRuleFunction }> =
-  new Map();
+const funcStore: Map<string, { [key: string]: SpeechRuleFunction }> = new Map();
 
 /**
  * Adds functions to the store potentially inheriting from another store.
@@ -57,7 +56,6 @@ export function addStore(
  * @param domain The rule set or domain.
  * @returns The store for the given constraints.
  */
-// TODO: Make this robust with dynamic constraints and defaults.
 export function getStore(
   locale: string,
   modality: string,
@@ -68,6 +66,7 @@ export function getStore(
     funcStore.get(
       [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
     ) ||
+    funcStore.get([DynamicCstr.BASE_LOCALE, modality, domain].join('.')) ||
     {}
   );
 }

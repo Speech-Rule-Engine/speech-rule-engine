@@ -24,8 +24,8 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { SpeechRule } from './speech_rule';
-import { SpeechRuleContext } from './speech_rule_context';
+import { SpeechRule } from './speech_rule.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
 export interface SpeechRuleStore {
   /**

@@ -1,0 +1,25 @@
+[
+  {
+    "Y": "yotta",
+    "Z": "zetta",
+    "E": "exa",
+    "P": "peta",
+    "T": "tera",
+    "G": "giga",
+    "M": "mega",
+    "k": "kilo",
+    "h": "hekto",
+    "da": "deka",
+    "d": "desi",
+    "c": "senti",
+    "m": "milli",
+    "µ": "mikro",
+    "μ": "mikro",
+    "n": "nano",
+    "p": "piko",
+    "f": "femto",
+    "a": "atto",
+    "z": "zepto",
+    "y": "yokto"
+  }
+]

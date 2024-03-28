@@ -1,0 +1,45 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "03D0",
+    "mappings": {
+      "default": {
+        "default": "beta"
+      }
+    }
+  },
+  {
+    "key": "03D7",
+    "mappings": {
+      "default": {
+        "default": "kai"
+      }
+    }
+  },
+  {
+    "key": "03F6",
+    "mappings": {
+      "default": {
+        "default": "agterstevoor epsilon"
+      }
+    }
+  },
+  {
+    "key": "1D7CA",
+    "mappings": {
+      "default": {
+        "default": "vetgedrukte hoofletter Digamma"
+      }
+    }
+  },
+  {
+    "key": "1D7CB",
+    "mappings": {
+      "default": {
+        "default": "vetgedrukte Digamma"
+      }
+    }
+  }
+]

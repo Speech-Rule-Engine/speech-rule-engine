@@ -1,0 +1,339 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "0020",
+    "mappings": {
+      "default": {
+        "default": "spasie"
+      }
+    }
+  },
+  {
+    "key": "00A0",
+    "mappings": {
+      "default": {
+        "default": "geen breek spasie",
+        "alternative": "non breaking space"
+      }
+    }
+  },
+  {
+    "key": "00AD",
+    "mappings": {
+      "default": {
+        "default": "sagte koppelteken"
+      }
+    }
+  },
+  {
+    "key": "2000",
+    "mappings": {
+      "default": {
+        "default": "en quad"
+      }
+    }
+  },
+  {
+    "key": "2001",
+    "mappings": {
+      "default": {
+        "default": "em quad"
+      }
+    }
+  },
+  {
+    "key": "2002",
+    "mappings": {
+      "default": {
+        "default": "en spasie"
+      }
+    }
+  },
+  {
+    "key": "2003",
+    "mappings": {
+      "default": {
+        "default": "em spasie"
+      }
+    }
+  },
+  {
+    "key": "2004",
+    "mappings": {
+      "default": {
+        "default": "drie per em spasie"
+      }
+    }
+  },
+  {
+    "key": "2005",
+    "mappings": {
+      "default": {
+        "default": "vier per em spasie"
+      }
+    }
+  },
+  {
+    "key": "2006",
+    "mappings": {
+      "default": {
+        "default": "ses per em spasie"
+      }
+    }
+  },
+  {
+    "key": "2007",
+    "mappings": {
+      "default": {
+        "default": "figuurspasie"
+      }
+    }
+  },
+  {
+    "key": "2008",
+    "mappings": {
+      "default": {
+        "default": "leestekenspasie"
+      }
+    }
+  },
+  {
+    "key": "2009",
+    "mappings": {
+      "default": {
+        "default": "dun spasie"
+      }
+    }
+  },
+  {
+    "key": "200A",
+    "mappings": {
+      "default": {
+        "default": "haar spasie"
+      }
+    }
+  },
+  {
+    "key": "200B",
+    "mappings": {
+      "default": {
+        "default": "nul wyt spasie"
+      }
+    }
+  },
+  {
+    "key": "200C",
+    "mappings": {
+      "default": {
+        "default": "nul wyte nie lasser"
+      }
+    }
+  },
+  {
+    "key": "200D",
+    "mappings": {
+      "default": {
+        "default": "nul wyte lasser"
+      }
+    }
+  },
+  {
+    "key": "200E",
+    "mappings": {
+      "default": {
+        "default": "links na regs teken"
+      }
+    }
+  },
+  {
+    "key": "200F",
+    "mappings": {
+      "default": {
+        "default": "regs na links teken"
+      }
+    }
+  },
+  {
+    "key": "2028",
+    "mappings": {
+      "default": {
+        "default": "lynverdeler"
+      }
+    }
+  },
+  {
+    "key": "2029",
+    "mappings": {
+      "default": {
+        "default": "paragraaf verdeler"
+      }
+    }
+  },
+  {
+    "key": "202A",
+    "mappings": {
+      "default": {
+        "default": "links na regs ingebed"
+      }
+    }
+  },
+  {
+    "key": "202B",
+    "mappings": {
+      "default": {
+        "default": "regs na links ingebed"
+      }
+    }
+  },
+  {
+    "key": "202C",
+    "mappings": {
+      "default": {
+        "default": "pop rigtinggewende formatering"
+      }
+    }
+  },
+  {
+    "key": "202D",
+    "mappings": {
+      "default": {
+        "default": "links na regs oorskryf"
+      }
+    }
+  },
+  {
+    "key": "202E",
+    "mappings": {
+      "default": {
+        "default": "regs na links oorskryf"
+      }
+    }
+  },
+  {
+    "key": "202F",
+    "mappings": {
+      "default": {
+        "default": "nou geenbreekspasie"
+      }
+    }
+  },
+  {
+    "key": "205F",
+    "mappings": {
+      "default": {
+        "default": "medium wiskundige spasie"
+      }
+    }
+  },
+  {
+    "key": "2060",
+    "mappings": {
+      "default": {
+        "default": "woordlasser"
+      }
+    }
+  },
+  {
+    "key": "2061",
+    "mappings": {
+      "default": {
+        "default": "van",
+        "alternative": "function application"
+      }
+    }
+  },
+  {
+    "key": "2062",
+    "mappings": {
+      "default": {
+        "default": "maal",
+        "alternative": "invisible times"
+      }
+    }
+  },
+  {
+    "key": "2063",
+    "mappings": {
+      "default": {
+        "default": "verdeler",
+        "alternative": "invisible separator"
+      }
+    }
+  },
+  {
+    "key": "2064",
+    "mappings": {
+      "default": {
+        "default": "plus",
+        "alternative": "invisible plus"
+      }
+    }
+  },
+  {
+    "key": "206A",
+    "mappings": {
+      "default": {
+        "default": "inhibeer simmetriese omruiling"
+      }
+    }
+  },
+  {
+    "key": "206B",
+    "mappings": {
+      "default": {
+        "default": "aktifeer simmetriese omruiling"
+      }
+    }
+  },
+  {
+    "key": "206E",
+    "mappings": {
+      "default": {
+        "default": "nasionale syfervorms"
+      }
+    }
+  },
+  {
+    "key": "206F",
+    "mappings": {
+      "default": {
+        "default": "nominale syfervorms"
+      }
+    }
+  },
+  {
+    "key": "FEFF",
+    "mappings": {
+      "default": {
+        "default": "nul wyte geenbreek spasie",
+        "alternative": "byte order mark"
+      }
+    }
+  },
+  {
+    "key": "FFF9",
+    "mappings": {
+      "default": {
+        "default": "interliniëre nota anker"
+      }
+    }
+  },
+  {
+    "key": "FFFA",
+    "mappings": {
+      "default": {
+        "default": "interliniëre notaverdeler"
+      }
+    }
+  },
+  {
+    "key": "FFFB",
+    "mappings": {
+      "default": {
+        "default": "interliniëre notastop"
+      }
+    }
+  }
+]

@@ -4,7 +4,6 @@
   },
   {
     "key": "0028",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstreparentes"
@@ -13,7 +12,6 @@
   },
   {
     "key": "0029",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgreparentes"
@@ -22,7 +20,6 @@
   },
   {
     "key": "005B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hakeparentes"
@@ -31,7 +28,6 @@
   },
   {
     "key": "005D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre hakeparentes"
@@ -40,7 +36,6 @@
   },
   {
     "key": "007B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre krøllparentes"
@@ -49,7 +44,6 @@
   },
   {
     "key": "007D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre krøllparentes"
@@ -58,7 +52,6 @@
   },
   {
     "key": "2045",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstreklamme med fjær"
@@ -67,7 +60,6 @@
   },
   {
     "key": "2046",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgreklamme med fjær"
@@ -76,7 +68,6 @@
   },
   {
     "key": "2308",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre tak"
@@ -85,7 +76,6 @@
   },
   {
     "key": "2309",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgre tak"
@@ -94,7 +84,6 @@
   },
   {
     "key": "230A",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstre gulv"
@@ -103,7 +92,6 @@
   },
   {
     "key": "230B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgre gulv"
@@ -112,7 +100,6 @@
   },
   {
     "key": "230C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre høgre kutta"
@@ -121,7 +108,6 @@
   },
   {
     "key": "230D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre venstre kutta"
@@ -130,7 +116,6 @@
   },
   {
     "key": "230E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre høgre kutta"
@@ -139,7 +124,6 @@
   },
   {
     "key": "230F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre venstre kutta"
@@ -148,7 +132,6 @@
   },
   {
     "key": "231C",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre venstre hjørne"
@@ -157,7 +140,6 @@
   },
   {
     "key": "231D",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre høgre hjørne"
@@ -166,7 +148,6 @@
   },
   {
     "key": "231E",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre venstre hjørne"
@@ -175,7 +156,6 @@
   },
   {
     "key": "231F",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre høgre hjørne"
@@ -184,7 +164,6 @@
   },
   {
     "key": "2320",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre halv integral"
@@ -193,7 +172,6 @@
   },
   {
     "key": "2321",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre halv integral"
@@ -202,7 +180,6 @@
   },
   {
     "key": "2329",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre-vendt vinkelklamme"
@@ -211,7 +188,6 @@
   },
   {
     "key": "232A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre-vendt vinkelklamme"
@@ -220,7 +196,6 @@
   },
   {
     "key": "239B",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreparentes øvre krok"
@@ -229,7 +204,6 @@
   },
   {
     "key": "239C",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreparentes utviding"
@@ -238,7 +212,6 @@
   },
   {
     "key": "239D",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreparentes nedre krok"
@@ -247,7 +220,6 @@
   },
   {
     "key": "239E",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreparentes øvre krok"
@@ -256,7 +228,6 @@
   },
   {
     "key": "239F",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreparentes utviding"
@@ -265,7 +236,6 @@
   },
   {
     "key": "23A0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreparentes nedre krok"
@@ -274,7 +244,6 @@
   },
   {
     "key": "23A1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreklamme øvre hjørne"
@@ -283,7 +252,6 @@
   },
   {
     "key": "23A2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreklamme utviding"
@@ -292,7 +260,6 @@
   },
   {
     "key": "23A3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreklamme nedre hjørne"
@@ -301,7 +268,6 @@
   },
   {
     "key": "23A4",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreklamme øvre hjørne"
@@ -310,7 +276,6 @@
   },
   {
     "key": "23A5",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreklamme utviding"
@@ -319,7 +284,6 @@
   },
   {
     "key": "23A6",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreklamme nedre hjørne"
@@ -328,7 +292,6 @@
   },
   {
     "key": "23A7",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreklamme øvre krok"
@@ -337,7 +300,6 @@
   },
   {
     "key": "23A8",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreklamme midtdel"
@@ -346,7 +308,6 @@
   },
   {
     "key": "23A9",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "venstreklamme nedre krok"
@@ -355,7 +316,6 @@
   },
   {
     "key": "23AA",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "klamme utviding"
@@ -364,7 +324,6 @@
   },
   {
     "key": "23AB",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreklamme øvre krok"
@@ -373,7 +332,6 @@
   },
   {
     "key": "23AC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreklamme midtdel"
@@ -382,7 +340,6 @@
   },
   {
     "key": "23AD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "høgreklamme nedre krok"
@@ -391,7 +348,6 @@
   },
   {
     "key": "23AE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "integral utviding"
@@ -400,7 +356,6 @@
   },
   {
     "key": "23AF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "horisontal strek utviding"
@@ -409,7 +364,6 @@
   },
   {
     "key": "23B0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre venstre eller nedre høgreklammeseksjon"
@@ -418,7 +372,6 @@
   },
   {
     "key": "23B1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre høgre eller nedre venstreklammeseksjon"
@@ -427,7 +380,6 @@
   },
   {
     "key": "23B2",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sum topp"
@@ -436,7 +388,6 @@
   },
   {
     "key": "23B3",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "sum botn"
@@ -445,7 +396,6 @@
   },
   {
     "key": "23B4",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "øvre klamme"
@@ -454,7 +404,6 @@
   },
   {
     "key": "23B5",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre klamme"
@@ -463,7 +412,6 @@
   },
   {
     "key": "23B6",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "nedre klamme over øvre klamme"
@@ -472,7 +420,6 @@
   },
   {
     "key": "23B7",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "kvadratrot botn"
@@ -481,7 +428,6 @@
   },
   {
     "key": "23B8",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "venstre vertikal bokslinje"
@@ -490,7 +436,6 @@
   },
   {
     "key": "23B9",
-    "category": "So",
     "mappings": {
       "default": {
         "default": "høgre vertikal bokslinje"
@@ -499,7 +444,6 @@
   },
   {
     "key": "23DC",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre parentes"
@@ -508,7 +452,6 @@
   },
   {
     "key": "23DD",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre parentes"
@@ -517,7 +460,6 @@
   },
   {
     "key": "23DE",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre klamme"
@@ -526,7 +468,6 @@
   },
   {
     "key": "23DF",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre klamme"
@@ -535,7 +476,6 @@
   },
   {
     "key": "23E0",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "øvre skilpaddeskallklamme"
@@ -544,7 +484,6 @@
   },
   {
     "key": "23E1",
-    "category": "Sm",
     "mappings": {
       "default": {
         "default": "nedre skilpaddeskallklamme"
@@ -553,7 +492,6 @@
   },
   {
     "key": "2768",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium venstreparentesornament"
@@ -562,7 +500,6 @@
   },
   {
     "key": "2769",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium høgreparentesornament"
@@ -571,7 +508,6 @@
   },
   {
     "key": "276A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium utflata venstreparentesornament"
@@ -580,7 +516,6 @@
   },
   {
     "key": "276B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium utflata høgreparentesornament"
@@ -589,7 +524,6 @@
   },
   {
     "key": "276C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium venstre-vendt vinkelklammeornament"
@@ -598,7 +532,6 @@
   },
   {
     "key": "276D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium høgre-vendt vinkelklammeornament"
@@ -607,7 +540,6 @@
   },
   {
     "key": "276E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "feit venstre-vendt vinkel hermeteiknornament"
@@ -616,7 +548,6 @@
   },
   {
     "key": "276F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "feit høgre-vendt vinkel hermeteiknornament"
@@ -625,7 +556,6 @@
   },
   {
     "key": "2770",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "feit venstre-vendt vinkelklammeornament"
@@ -634,7 +564,6 @@
   },
   {
     "key": "2771",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "feit høgre-vendt vinkelklammeornament"
@@ -643,7 +572,6 @@
   },
   {
     "key": "2772",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "lett venstre skilpaddeskallklammeornament"
@@ -652,7 +580,6 @@
   },
   {
     "key": "2773",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "lett høgre skilpaddeskallklammeornament"
@@ -661,7 +588,6 @@
   },
   {
     "key": "2774",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "medium venstreklammeornament"
@@ -670,7 +596,6 @@
   },
   {
     "key": "2775",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "medium høgreklammeornament"
@@ -679,7 +604,6 @@
   },
   {
     "key": "27C5",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre s-forma sekkeavgrensing"
@@ -688,7 +612,6 @@
   },
   {
     "key": "27C6",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre s-forma sekkeavgrensing"
@@ -697,7 +620,6 @@
   },
   {
     "key": "27E6",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit klamme"
@@ -706,7 +628,6 @@
   },
   {
     "key": "27E7",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit klamme"
@@ -715,7 +636,6 @@
   },
   {
     "key": "27E8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre vinkelklamme"
@@ -724,7 +644,6 @@
   },
   {
     "key": "27E9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre vinkelklamme"
@@ -733,7 +652,6 @@
   },
   {
     "key": "27EA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre dobbel vinkelklamme"
@@ -742,7 +660,6 @@
   },
   {
     "key": "27EB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre dobbel vinkelklamme"
@@ -751,7 +668,6 @@
   },
   {
     "key": "27EC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit skilpaddeskallklamme"
@@ -760,7 +676,6 @@
   },
   {
     "key": "27ED",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit skilpaddeskallklamme"
@@ -769,7 +684,6 @@
   },
   {
     "key": "27EE",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "utflata venstreparentes"
@@ -778,7 +692,6 @@
   },
   {
     "key": "27EF",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "utflata høgreparentes"
@@ -787,7 +700,6 @@
   },
   {
     "key": "2983",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit klamme"
@@ -796,7 +708,6 @@
   },
   {
     "key": "2984",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit klamme"
@@ -805,7 +716,6 @@
   },
   {
     "key": "2985",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "kvit venstreparentes"
@@ -814,7 +724,6 @@
   },
   {
     "key": "2986",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "kvit høgreparentes"
@@ -823,7 +732,6 @@
   },
   {
     "key": "2987",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z-notasjon venstre bildeklamme"
@@ -832,7 +740,6 @@
   },
   {
     "key": "2988",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z-notasjon høgre bildeklamme"
@@ -841,7 +748,6 @@
   },
   {
     "key": "2989",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "z-notasjon venstre bindingsklamme"
@@ -850,7 +756,6 @@
   },
   {
     "key": "298A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "z-notasjon høgre bindingsklamme"
@@ -859,7 +764,6 @@
   },
   {
     "key": "298B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstreklamme med strek under"
@@ -868,7 +772,6 @@
   },
   {
     "key": "298C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgreklamme med strek under"
@@ -877,7 +780,6 @@
   },
   {
     "key": "298D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstreklamme med kryss i øvre hjørne"
@@ -886,7 +788,6 @@
   },
   {
     "key": "298E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgreklamme med kryss i nedre hjørne"
@@ -895,7 +796,6 @@
   },
   {
     "key": "298F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstreklamme med kryss i nedre hjørne"
@@ -904,7 +804,6 @@
   },
   {
     "key": "2990",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgreklamme med kryss i øvre hjørne"
@@ -913,7 +812,6 @@
   },
   {
     "key": "2991",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre vinkelklamme med prikk"
@@ -922,7 +820,6 @@
   },
   {
     "key": "2992",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre vinkelklamme med prikk"
@@ -931,7 +828,6 @@
   },
   {
     "key": "2993",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre bue mindre enn-klamme"
@@ -940,7 +836,6 @@
   },
   {
     "key": "2994",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre bue større enn-klamme"
@@ -949,7 +844,6 @@
   },
   {
     "key": "2995",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "dobbel venstre bue større enn-klamme"
@@ -958,7 +852,6 @@
   },
   {
     "key": "2996",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dobbel høgre bue mindre enn-klamme"
@@ -967,7 +860,6 @@
   },
   {
     "key": "2997",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre svart skilpaddeskallklamme"
@@ -976,7 +868,6 @@
   },
   {
     "key": "2998",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre svart skilpaddeskallklamme"
@@ -985,7 +876,6 @@
   },
   {
     "key": "29D8",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre ustødig gjerde"
@@ -994,7 +884,6 @@
   },
   {
     "key": "29D9",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre ustødig gjerde"
@@ -1003,7 +892,6 @@
   },
   {
     "key": "29DA",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre dobbel ustødig gjerde"
@@ -1012,7 +900,6 @@
   },
   {
     "key": "29DB",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre dobbel ustødig gjerde"
@@ -1021,7 +908,6 @@
   },
   {
     "key": "29FC",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre-vendt bua vinkelklamme"
@@ -1030,7 +916,6 @@
   },
   {
     "key": "29FD",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre-vendt bua vinkelklamme"
@@ -1039,7 +924,6 @@
   },
   {
     "key": "2E22",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "øvre halv venstreklamme"
@@ -1048,7 +932,6 @@
   },
   {
     "key": "2E23",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "øvre halv høgreklamme"
@@ -1057,7 +940,6 @@
   },
   {
     "key": "2E24",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "nedre halv venstreklamme"
@@ -1066,7 +948,6 @@
   },
   {
     "key": "2E25",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "nedre halv høgreklamme"
@@ -1075,7 +956,6 @@
   },
   {
     "key": "2E26",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre-vendt U-klamme"
@@ -1084,7 +964,6 @@
   },
   {
     "key": "2E27",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre-vendt U-klamme"
@@ -1093,7 +972,6 @@
   },
   {
     "key": "2E28",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "dobbel venstreparentes"
@@ -1102,7 +980,6 @@
   },
   {
     "key": "2E29",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dobbel høgreparentes"
@@ -1111,7 +988,6 @@
   },
   {
     "key": "3008",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre vinkelklamme"
@@ -1120,7 +996,6 @@
   },
   {
     "key": "3009",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre vinkelklamme"
@@ -1129,7 +1004,6 @@
   },
   {
     "key": "300A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre dobbel vinkelklamme"
@@ -1138,7 +1012,6 @@
   },
   {
     "key": "300B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre dobbel vinkelklamme"
@@ -1147,7 +1020,6 @@
   },
   {
     "key": "300C",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre hjørne klamme"
@@ -1156,7 +1028,6 @@
   },
   {
     "key": "300D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre hjørne klamme"
@@ -1165,7 +1036,6 @@
   },
   {
     "key": "300E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit hjørne klamme"
@@ -1174,7 +1044,6 @@
   },
   {
     "key": "300F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit hjørne klamme"
@@ -1183,7 +1052,6 @@
   },
   {
     "key": "3010",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre svart linseforma klamme"
@@ -1192,7 +1060,6 @@
   },
   {
     "key": "3011",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre svart linseforma klamme"
@@ -1201,7 +1068,6 @@
   },
   {
     "key": "3014",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre skilpaddeskallklamme"
@@ -1210,7 +1076,6 @@
   },
   {
     "key": "3015",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre skilpaddeskallklamme"
@@ -1219,7 +1084,6 @@
   },
   {
     "key": "3016",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit linseforma klamme"
@@ -1228,7 +1092,6 @@
   },
   {
     "key": "3017",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit linseforma klamme"
@@ -1237,7 +1100,6 @@
   },
   {
     "key": "3018",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit skilpaddeskallklamme"
@@ -1246,7 +1108,6 @@
   },
   {
     "key": "3019",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit skilpaddeskallklamme"
@@ -1255,7 +1116,6 @@
   },
   {
     "key": "301A",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "venstre kvit klamme"
@@ -1264,7 +1124,6 @@
   },
   {
     "key": "301B",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "høgre kvit klamme"
@@ -1273,7 +1132,6 @@
   },
   {
     "key": "301D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "omvendt dobbel prim hermeteikn"
@@ -1282,7 +1140,6 @@
   },
   {
     "key": "301E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "dobbel prim hermeteikn"
@@ -1291,7 +1148,6 @@
   },
   {
     "key": "301F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "lav dobbel prim hermeteikn"
@@ -1300,7 +1156,6 @@
   },
   {
     "key": "FD3E",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "utsmykka venstreparentes"
@@ -1309,7 +1164,6 @@
   },
   {
     "key": "FD3F",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "utsmykka høgreparentes"
@@ -1318,7 +1172,6 @@
   },
   {
     "key": "FE17",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre kvit linseforma klamme"
@@ -1327,7 +1180,6 @@
   },
   {
     "key": "FE18",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre kvit linseforma klamme"
@@ -1336,7 +1188,6 @@
   },
   {
     "key": "FE35",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstreparentes"
@@ -1345,7 +1196,6 @@
   },
   {
     "key": "FE36",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgreparentes"
@@ -1354,7 +1204,6 @@
   },
   {
     "key": "FE37",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstreklamme"
@@ -1363,7 +1212,6 @@
   },
   {
     "key": "FE38",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgreklamme"
@@ -1372,7 +1220,6 @@
   },
   {
     "key": "FE39",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre skilpaddeskallklamme"
@@ -1381,7 +1228,6 @@
   },
   {
     "key": "FE3A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre skilpaddeskallklamme"
@@ -1390,7 +1236,6 @@
   },
   {
     "key": "FE3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre svart linseforma klamme"
@@ -1399,7 +1244,6 @@
   },
   {
     "key": "FE3C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre svart linseforma klamme"
@@ -1408,7 +1252,6 @@
   },
   {
     "key": "FE3D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre dobbel vinkelklamme"
@@ -1417,7 +1260,6 @@
   },
   {
     "key": "FE3E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre dobbel vinkelklamme"
@@ -1426,7 +1268,6 @@
   },
   {
     "key": "FE3F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre vinkelklamme"
@@ -1435,7 +1276,6 @@
   },
   {
     "key": "FE40",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre vinkelklamme"
@@ -1444,7 +1284,6 @@
   },
   {
     "key": "FE41",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre hjørne klamme"
@@ -1453,7 +1292,6 @@
   },
   {
     "key": "FE42",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre hjørne klamme"
@@ -1462,7 +1300,6 @@
   },
   {
     "key": "FE43",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstre kvit hjørne klamme"
@@ -1471,7 +1308,6 @@
   },
   {
     "key": "FE44",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgre kvit hjørne klamme"
@@ -1480,7 +1316,6 @@
   },
   {
     "key": "FE47",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal venstreklamme"
@@ -1489,7 +1324,6 @@
   },
   {
     "key": "FE48",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "presentasjonsform for vertikal høgreklamme"
@@ -1498,7 +1332,6 @@
   },
   {
     "key": "FE59",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "liten venstreparentes"
@@ -1507,7 +1340,6 @@
   },
   {
     "key": "FE5A",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "liten høgreparentes"
@@ -1516,7 +1348,6 @@
   },
   {
     "key": "FE5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "liten venstreklamme"
@@ -1525,7 +1356,6 @@
   },
   {
     "key": "FE5C",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "liten høgreklamme"
@@ -1534,7 +1364,6 @@
   },
   {
     "key": "FE5D",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "liten venstre skilpaddeskallklamme"
@@ -1543,7 +1372,6 @@
   },
   {
     "key": "FE5E",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "liten høgre skilpaddeskallklamme"
@@ -1552,7 +1380,6 @@
   },
   {
     "key": "FF08",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "full vidde venstreparentes"
@@ -1561,7 +1388,6 @@
   },
   {
     "key": "FF09",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "full vidde høgreparentes"
@@ -1570,7 +1396,6 @@
   },
   {
     "key": "FF3B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "full vidde venstreklamme"
@@ -1579,7 +1404,6 @@
   },
   {
     "key": "FF3D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "full vidde høgreklamme"
@@ -1588,7 +1412,6 @@
   },
   {
     "key": "FF5B",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "full vidde venstreklamme"
@@ -1597,7 +1420,6 @@
   },
   {
     "key": "FF5D",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "full vidde høgreklamme"
@@ -1606,7 +1428,6 @@
   },
   {
     "key": "FF5F",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "full vidde kvit venstreparentes"
@@ -1615,7 +1436,6 @@
   },
   {
     "key": "FF60",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "full vidde kvit høgreparentes"
@@ -1624,7 +1444,6 @@
   },
   {
     "key": "FF62",
-    "category": "Ps",
     "mappings": {
       "default": {
         "default": "halv vidde venstre hjørne klamme"
@@ -1633,7 +1452,6 @@
   },
   {
     "key": "FF63",
-    "category": "Pe",
     "mappings": {
       "default": {
         "default": "halv vidde høgre hjørne klamme"

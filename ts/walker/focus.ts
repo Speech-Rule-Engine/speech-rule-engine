@@ -19,9 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { RebuildStree } from './rebuild_stree';
-import * as WalkerUtil from './walker_util';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { RebuildStree } from './rebuild_stree.js';
+import * as WalkerUtil from './walker_util.js';
 
 export class Focus {
   /**
@@ -85,24 +85,43 @@ export class Focus {
     dict: { [key: string]: SemanticNode },
     domNode: Element
   ): Element[] {
-    const idFunc = (id: string) => WalkerUtil.getBySemanticId(domNode, id);
     let result: Element[] = [];
     for (let i = 0, l = ids.length; i < l; i++) {
       if (nodes[i]) {
-        result.push(nodes[i]);
+        const allNodes = Focus.getAllVisibleNodes([ids[i]], domNode);
+        if (allNodes.length) {
+          result = result.concat(allNodes);
+        } else {
+          result.push(nodes[i]);
+        }
         continue;
       }
       const virtual = dict[ids[i]];
       if (!virtual) {
         continue;
       }
-      const childIds = virtual.childNodes.map(function (x) {
-        return x.id.toString();
-      });
-      const children = childIds.map(idFunc) as Element[];
+      const childIds = virtual.childNodes.map((x) => x.id.toString());
+      const children = Focus.getAllVisibleNodes(childIds, domNode);
       result = result.concat(
         Focus.generateAllVisibleNodes_(childIds, children, dict, domNode)
       );
+    }
+    return result;
+  }
+
+  /**
+   * Computes all visible nodes, in particular if there are multiple nodes with
+   * the same semantic id. This can be the case due to linebreaking duplicating
+   * semantic information.
+   *
+   * @param {string[]} ids The ids.
+   * @param {Element} domNode The root node in the dom.
+   * @returns A list of nodes with the given ids.
+   */
+  private static getAllVisibleNodes(ids: string[], domNode: Element) {
+    let result: Element[] = [];
+    for (const id of ids) {
+      result = result.concat(WalkerUtil.getAllBySemanticId(domNode, id));
     }
     return result;
   }

@@ -8,8 +8,7 @@
       "default": {
         "default": "venstrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2191",
@@ -17,8 +16,7 @@
       "default": {
         "default": "oppoverpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2192",
@@ -26,8 +24,7 @@
       "default": {
         "default": "høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2193",
@@ -35,8 +32,7 @@
       "default": {
         "default": "nedoverpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2194",
@@ -44,8 +40,7 @@
       "default": {
         "default": "venstre-høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2195",
@@ -53,8 +48,7 @@
       "default": {
         "default": "opp-nedpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2196",
@@ -62,8 +56,7 @@
       "default": {
         "default": "oppover til venstrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2197",
@@ -71,8 +64,7 @@
       "default": {
         "default": "oppover til høyre-pil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2198",
@@ -80,8 +72,7 @@
       "default": {
         "default": "nedover til høyre-pil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2199",
@@ -89,8 +80,7 @@
       "default": {
         "default": "nedover til venstre-pil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219A",
@@ -98,8 +88,7 @@
       "default": {
         "default": "venstrepil med strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219B",
@@ -107,8 +96,7 @@
       "default": {
         "default": "høyrepil med strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219C",
@@ -116,8 +104,7 @@
       "default": {
         "default": "venstre bølgepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219D",
@@ -125,8 +112,7 @@
       "default": {
         "default": "høyre bølgepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219E",
@@ -134,8 +120,7 @@
       "default": {
         "default": "tohodet venstrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219F",
@@ -143,8 +128,7 @@
       "default": {
         "default": "tohodet oppoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A0",
@@ -152,8 +136,7 @@
       "default": {
         "default": "tohodet høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A1",
@@ -161,8 +144,7 @@
       "default": {
         "default": "tohodet nedoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A2",
@@ -170,8 +152,7 @@
       "default": {
         "default": "venstrepil med hale"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A3",
@@ -179,8 +160,7 @@
       "default": {
         "default": "høyrepil med hale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A4",
@@ -188,8 +168,7 @@
       "default": {
         "default": "venstrepil fra strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A5",
@@ -197,8 +176,7 @@
       "default": {
         "default": "oppoverpil fra strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A6",
@@ -206,8 +184,7 @@
       "default": {
         "default": "høyrepil fra strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A7",
@@ -215,8 +192,7 @@
       "default": {
         "default": "nedoverpil fra strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A8",
@@ -224,8 +200,7 @@
       "default": {
         "default": "opp-nedpil med basis"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A9",
@@ -233,8 +208,7 @@
       "default": {
         "default": "venstrepil med krok"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AA",
@@ -242,8 +216,7 @@
       "default": {
         "default": "høyrepil med krok"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AB",
@@ -251,8 +224,7 @@
       "default": {
         "default": "venstrepil med løkke"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AC",
@@ -260,8 +232,7 @@
       "default": {
         "default": "høyrepil med løkke"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AD",
@@ -269,8 +240,7 @@
       "default": {
         "default": "venstre-høyre bølgepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AE",
@@ -278,8 +248,7 @@
       "default": {
         "default": "venstre-høyrepil med strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21AF",
@@ -287,8 +256,7 @@
       "default": {
         "default": "sikksakk nedoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B0",
@@ -296,8 +264,7 @@
       "default": {
         "default": "oppoverpil som bøyer til venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B1",
@@ -305,8 +272,7 @@
       "default": {
         "default": "oppoverpil som bøyer til høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B2",
@@ -314,8 +280,7 @@
       "default": {
         "default": "nedoverpil som bøyer til venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B3",
@@ -323,8 +288,7 @@
       "default": {
         "default": "nedoverpil som bøyer til høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B4",
@@ -332,8 +296,7 @@
       "default": {
         "default": "høyrepil med hjørne nedover"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B5",
@@ -341,8 +304,7 @@
       "default": {
         "default": "nedoverpil med venstrehjørne"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B6",
@@ -350,8 +312,7 @@
       "default": {
         "default": "topphalvsirkelpil mot klokka"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B7",
@@ -359,8 +320,7 @@
       "default": {
         "default": "topphalvsirkelpil med klokka"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B8",
@@ -368,8 +328,7 @@
       "default": {
         "default": "venstrepil oppver til lang strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B9",
@@ -377,8 +336,7 @@
       "default": {
         "default": "venstepil til strek over høyrepil til strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BA",
@@ -386,8 +344,7 @@
       "default": {
         "default": "åpen sirkelpil mot klokka"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BB",
@@ -395,8 +352,7 @@
       "default": {
         "default": "åpen sirkelpil med klokka"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C4",
@@ -404,8 +360,7 @@
       "default": {
         "default": "høyrepil over venstrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C5",
@@ -413,8 +368,7 @@
       "default": {
         "default": "oppoverpil til venstre for nedoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C6",
@@ -422,8 +376,7 @@
       "default": {
         "default": "venstrepil over høyrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C7",
@@ -431,8 +384,7 @@
       "default": {
         "default": "venstre parpiler"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C8",
@@ -440,8 +392,7 @@
       "default": {
         "default": "parpiler oppover"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C9",
@@ -449,8 +400,7 @@
       "default": {
         "default": "høyre parpiler"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CA",
@@ -458,8 +408,7 @@
       "default": {
         "default": "parpiler nedover"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CD",
@@ -467,8 +416,7 @@
       "default": {
         "default": "venstre dobbelpiler med strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CE",
@@ -476,8 +424,7 @@
       "default": {
         "default": "venstre-høyre dobbeltpil med strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21CF",
@@ -485,8 +432,7 @@
       "default": {
         "default": "høyre dobbeltpil med strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D0",
@@ -494,8 +440,7 @@
       "default": {
         "default": "venstre dobbeltpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D1",
@@ -503,8 +448,7 @@
       "default": {
         "default": "dobbeltpil oppover"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D2",
@@ -512,8 +456,7 @@
       "default": {
         "default": "dobbeltpil mot høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D3",
@@ -521,8 +464,7 @@
       "default": {
         "default": "dobbeltpil nedover"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D4",
@@ -530,8 +472,7 @@
       "default": {
         "default": "venstre-høyre dobbeltpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D5",
@@ -539,8 +480,7 @@
       "default": {
         "default": "opp-ned dobbeltpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D6",
@@ -548,8 +488,7 @@
       "default": {
         "default": "dobbeltpil opp mot venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D7",
@@ -557,8 +496,7 @@
       "default": {
         "default": "dobbeltpil opp mot høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D8",
@@ -566,8 +504,7 @@
       "default": {
         "default": "dobbeltpil ned mot høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D9",
@@ -575,8 +512,7 @@
       "default": {
         "default": "dobbeltpil ned mot venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DA",
@@ -584,8 +520,7 @@
       "default": {
         "default": "trippelpil mot venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DB",
@@ -593,8 +528,7 @@
       "default": {
         "default": "trippelpil mot høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DC",
@@ -602,8 +536,7 @@
       "default": {
         "default": "krusepil mot venstre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DD",
@@ -611,8 +544,7 @@
       "default": {
         "default": "krusepil mot høyre"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DE",
@@ -620,8 +552,7 @@
       "default": {
         "default": "oppoverpil med dobbeltstrek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DF",
@@ -629,8 +560,7 @@
       "default": {
         "default": "nedoverpil med dobbeltstrek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E0",
@@ -638,8 +568,7 @@
       "default": {
         "default": "stiplet venstrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E1",
@@ -647,8 +576,7 @@
       "default": {
         "default": "stiplet oppoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E2",
@@ -656,8 +584,7 @@
       "default": {
         "default": "stiplet høyrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E3",
@@ -665,8 +592,7 @@
       "default": {
         "default": "stiplet nedoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E4",
@@ -674,8 +600,7 @@
       "default": {
         "default": "venstrepil mot strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E5",
@@ -683,8 +608,7 @@
       "default": {
         "default": "høyrepil mot strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E6",
@@ -692,8 +616,7 @@
       "default": {
         "default": "hvit venstrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E7",
@@ -701,8 +624,7 @@
       "default": {
         "default": "hvit oppoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E8",
@@ -710,8 +632,7 @@
       "default": {
         "default": "hvit høyrepil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E9",
@@ -719,8 +640,7 @@
       "default": {
         "default": "hvit nedoverpil"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21EA",
@@ -728,11 +648,9 @@
       "default": {
         "default": "hvit oppoverpil fra strek"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "21EB",
     "mappings": {
       "default": {
@@ -741,7 +659,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21EC",
     "mappings": {
       "default": {
@@ -750,7 +667,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21ED",
     "mappings": {
       "default": {
@@ -759,7 +675,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21EE",
     "mappings": {
       "default": {
@@ -768,7 +683,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21EF",
     "mappings": {
       "default": {
@@ -777,7 +691,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F0",
     "mappings": {
       "default": {
@@ -786,7 +699,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F1",
     "mappings": {
       "default": {
@@ -795,7 +707,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F2",
     "mappings": {
       "default": {
@@ -804,7 +715,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F3",
     "mappings": {
       "default": {
@@ -813,7 +723,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F4",
     "mappings": {
       "default": {
@@ -827,11 +736,9 @@
       "default": {
         "default": "nedoverpil til venstre for oppoverpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "21F6",
     "mappings": {
       "default": {
@@ -840,7 +747,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F7",
     "mappings": {
       "default": {
@@ -849,7 +755,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F8",
     "mappings": {
       "default": {
@@ -858,7 +763,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F9",
     "mappings": {
       "default": {
@@ -867,7 +771,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FA",
     "mappings": {
       "default": {
@@ -876,7 +779,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FB",
     "mappings": {
       "default": {
@@ -885,7 +787,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FC",
     "mappings": {
       "default": {
@@ -899,8 +800,7 @@
       "default": {
         "default": "venstrepil med åpent pilhode"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FE",
@@ -908,8 +808,7 @@
       "default": {
         "default": "høyrepil med åpent pilhode"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FF",
@@ -917,11 +816,9 @@
       "default": {
         "default": "venstre-høyrepil med åpent pilhode"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2301",
     "mappings": {
       "default": {
@@ -930,7 +827,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2303",
     "mappings": {
       "default": {
@@ -939,7 +835,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2304",
     "mappings": {
       "default": {
@@ -948,7 +843,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2324",
     "mappings": {
       "default": {
@@ -957,7 +851,6 @@
     }
   },
   {
-    "category": "So",
     "key": "238B",
     "mappings": {
       "default": {
@@ -966,7 +859,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2794",
     "mappings": {
       "default": {
@@ -975,7 +867,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2798",
     "mappings": {
       "default": {
@@ -984,7 +875,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2799",
     "mappings": {
       "default": {
@@ -993,7 +883,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279A",
     "mappings": {
       "default": {
@@ -1002,7 +891,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279B",
     "mappings": {
       "default": {
@@ -1011,7 +899,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279C",
     "mappings": {
       "default": {
@@ -1020,7 +907,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279D",
     "mappings": {
       "default": {
@@ -1029,7 +915,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279E",
     "mappings": {
       "default": {
@@ -1038,7 +923,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279F",
     "mappings": {
       "default": {
@@ -1047,7 +931,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A0",
     "mappings": {
       "default": {
@@ -1056,7 +939,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A1",
     "mappings": {
       "default": {
@@ -1065,7 +947,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A2",
     "mappings": {
       "default": {
@@ -1074,7 +955,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A3",
     "mappings": {
       "default": {
@@ -1083,7 +963,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A4",
     "mappings": {
       "default": {
@@ -1092,7 +971,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A5",
     "mappings": {
       "default": {
@@ -1101,7 +979,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A6",
     "mappings": {
       "default": {
@@ -1110,7 +987,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A7",
     "mappings": {
       "default": {
@@ -1119,7 +995,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A8",
     "mappings": {
       "default": {
@@ -1128,7 +1003,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A9",
     "mappings": {
       "default": {
@@ -1137,7 +1011,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AA",
     "mappings": {
       "default": {
@@ -1146,7 +1019,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AB",
     "mappings": {
       "default": {
@@ -1155,7 +1027,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AC",
     "mappings": {
       "default": {
@@ -1164,7 +1035,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AD",
     "mappings": {
       "default": {
@@ -1173,7 +1043,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AE",
     "mappings": {
       "default": {
@@ -1182,7 +1051,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AF",
     "mappings": {
       "default": {
@@ -1191,7 +1059,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B1",
     "mappings": {
       "default": {
@@ -1200,7 +1067,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B2",
     "mappings": {
       "default": {
@@ -1209,7 +1075,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B3",
     "mappings": {
       "default": {
@@ -1218,7 +1083,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B4",
     "mappings": {
       "default": {
@@ -1227,7 +1091,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B5",
     "mappings": {
       "default": {
@@ -1236,7 +1099,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B6",
     "mappings": {
       "default": {
@@ -1245,7 +1107,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B7",
     "mappings": {
       "default": {
@@ -1254,7 +1115,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B8",
     "mappings": {
       "default": {
@@ -1263,7 +1123,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B9",
     "mappings": {
       "default": {
@@ -1272,7 +1131,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BA",
     "mappings": {
       "default": {
@@ -1281,7 +1139,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BB",
     "mappings": {
       "default": {
@@ -1290,7 +1147,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BC",
     "mappings": {
       "default": {
@@ -1299,7 +1155,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BD",
     "mappings": {
       "default": {
@@ -1308,7 +1163,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BE",
     "mappings": {
       "default": {
@@ -1317,7 +1171,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27F0",
     "mappings": {
       "default": {
@@ -1326,7 +1179,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27F1",
     "mappings": {
       "default": {
@@ -1335,7 +1187,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27F2",
     "mappings": {
       "default": {
@@ -1344,7 +1195,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27F3",
     "mappings": {
       "default": {
@@ -1353,7 +1203,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27F4",
     "mappings": {
       "default": {
@@ -1367,8 +1216,7 @@
       "default": {
         "default": "lang venstrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F6",
@@ -1376,8 +1224,7 @@
       "default": {
         "default": "lang høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F7",
@@ -1385,8 +1232,7 @@
       "default": {
         "default": "lang venstre-høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F8",
@@ -1394,8 +1240,7 @@
       "default": {
         "default": "lang venstrepil med to strek i halen"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F9",
@@ -1403,8 +1248,7 @@
       "default": {
         "default": "lang høyrepil med to strek i halen"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FA",
@@ -1412,11 +1256,9 @@
       "default": {
         "default": "lang venstre-høyrepil med to strek i halen"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "27FB",
     "mappings": {
       "default": {
@@ -1430,11 +1272,9 @@
       "default": {
         "default": "lang høyrepil fra strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "27FD",
     "mappings": {
       "default": {
@@ -1443,7 +1283,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "27FE",
     "mappings": {
       "default": {
@@ -1457,11 +1296,9 @@
       "default": {
         "default": "lang krusepil mot høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2900",
     "mappings": {
       "default": {
@@ -1470,7 +1307,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2901",
     "mappings": {
       "default": {
@@ -1479,7 +1315,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2902",
     "mappings": {
       "default": {
@@ -1488,7 +1323,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2903",
     "mappings": {
       "default": {
@@ -1497,7 +1331,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2904",
     "mappings": {
       "default": {
@@ -1511,11 +1344,9 @@
       "default": {
         "default": "tohodet høyrepil fra strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2906",
     "mappings": {
       "default": {
@@ -1524,7 +1355,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2907",
     "mappings": {
       "default": {
@@ -1533,7 +1363,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2908",
     "mappings": {
       "default": {
@@ -1542,7 +1371,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2909",
     "mappings": {
       "default": {
@@ -1551,7 +1379,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "290A",
     "mappings": {
       "default": {
@@ -1560,7 +1387,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "290B",
     "mappings": {
       "default": {
@@ -1574,8 +1400,7 @@
       "default": {
         "default": "to-stiplet venstrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290D",
@@ -1583,8 +1408,7 @@
       "default": {
         "default": "to-stiplet høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290E",
@@ -1592,8 +1416,7 @@
       "default": {
         "default": "tre-stiplet venstrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290F",
@@ -1601,8 +1424,7 @@
       "default": {
         "default": "tre-stiplet høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2910",
@@ -1610,8 +1432,7 @@
       "default": {
         "default": "tohodet trepunktspil mot høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2911",
@@ -1619,8 +1440,7 @@
       "default": {
         "default": "høyrepil med punkter"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2912",
@@ -1628,8 +1448,7 @@
       "default": {
         "default": "oppoverpil til strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2913",
@@ -1637,11 +1456,9 @@
       "default": {
         "default": "nedoverpil til strek"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2914",
     "mappings": {
       "default": {
@@ -1650,7 +1467,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2915",
     "mappings": {
       "default": {
@@ -1664,11 +1480,9 @@
       "default": {
         "default": "tohodet høyrepil med hale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2917",
     "mappings": {
       "default": {
@@ -1677,7 +1491,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2918",
     "mappings": {
       "default": {
@@ -1691,11 +1504,9 @@
       "default": {
         "default": "venstrepilhale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "291A",
     "mappings": {
       "default": {
@@ -1709,8 +1520,7 @@
       "default": {
         "default": "dobbel venstrepilhale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291C",
@@ -1718,8 +1528,7 @@
       "default": {
         "default": "dobbel høyrepilhale"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291D",
@@ -1727,8 +1536,7 @@
       "default": {
         "default": "venstrepil mot svart diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291E",
@@ -1736,8 +1544,7 @@
       "default": {
         "default": "høyrepil mot svart diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291F",
@@ -1745,8 +1552,7 @@
       "default": {
         "default": "venstrepil fra strek til svart diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2920",
@@ -1754,11 +1560,9 @@
       "default": {
         "default": "høyrepil fra strek til sort diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2921",
     "mappings": {
       "default": {
@@ -1767,7 +1571,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2922",
     "mappings": {
       "default": {
@@ -1781,8 +1584,7 @@
       "default": {
         "default": "nord-vestpil med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2924",
@@ -1790,8 +1592,7 @@
       "default": {
         "default": "nord-østpil med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2925",
@@ -1799,8 +1600,7 @@
       "default": {
         "default": "sør-østpil med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2926",
@@ -1808,8 +1608,7 @@
       "default": {
         "default": "sør-vestpil med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2927",
@@ -1817,8 +1616,7 @@
       "default": {
         "default": "nord-vestpil og nord-østpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2928",
@@ -1826,8 +1624,7 @@
       "default": {
         "default": "nord-østpil og sør-østpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2929",
@@ -1835,8 +1632,7 @@
       "default": {
         "default": "sør-østpil og sør-vestpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "292A",
@@ -1844,11 +1640,9 @@
       "default": {
         "default": "sør-vestpil og nord-vestpil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "292D",
     "mappings": {
       "default": {
@@ -1857,7 +1651,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292E",
     "mappings": {
       "default": {
@@ -1866,7 +1659,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292F",
     "mappings": {
       "default": {
@@ -1875,7 +1667,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2930",
     "mappings": {
       "default": {
@@ -1884,7 +1675,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2931",
     "mappings": {
       "default": {
@@ -1893,7 +1683,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2932",
     "mappings": {
       "default": {
@@ -1907,11 +1696,9 @@
       "default": {
         "default": "bølgepil som peker rett mot høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2934",
     "mappings": {
       "default": {
@@ -1925,8 +1712,7 @@
       "default": {
         "default": "pil som peker til høyre og deretter svinger ned"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2936",
@@ -1934,8 +1720,7 @@
       "default": {
         "default": "pil som peker nedover og deretter svinger til venstre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2937",
@@ -1943,8 +1728,7 @@
       "default": {
         "default": "pil som peker nedover og deretter svinger til høyre"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2938",
@@ -1952,8 +1736,7 @@
       "default": {
         "default": "buet pil med klokka"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2939",
@@ -1961,11 +1744,9 @@
       "default": {
         "default": "buet pil mot klokka"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293A",
     "mappings": {
       "default": {
@@ -1974,7 +1755,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "293B",
     "mappings": {
       "default": {
@@ -1988,8 +1768,7 @@
       "default": {
         "default": "topp-buet pil med klokka med minustegn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "293D",
@@ -1997,11 +1776,9 @@
       "default": {
         "default": "topp-buet pil mot klokka med plusstegn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293E",
     "mappings": {
       "default": {
@@ -2010,7 +1787,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "293F",
     "mappings": {
       "default": {
@@ -2019,7 +1795,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2940",
     "mappings": {
       "default": {
@@ -2028,7 +1803,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2941",
     "mappings": {
       "default": {
@@ -2037,7 +1811,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2942",
     "mappings": {
       "default": {
@@ -2046,7 +1819,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2943",
     "mappings": {
       "default": {
@@ -2055,7 +1827,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2944",
     "mappings": {
       "default": {
@@ -2069,11 +1840,9 @@
       "default": {
         "default": "høyrepil med plusstegn under"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2946",
     "mappings": {
       "default": {
@@ -2082,7 +1851,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2947",
     "mappings": {
       "default": {
@@ -2096,8 +1864,7 @@
       "default": {
         "default": "venstrepil gjennom liten sirkel"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2949",
@@ -2105,8 +1872,7 @@
       "default": {
         "default": "tohodet oppoverpil fra liten sirkel"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2970",
@@ -2114,8 +1880,7 @@
       "default": {
         "default": "høyre dobbelpil med rundt hode"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2971",
@@ -2123,8 +1888,7 @@
       "default": {
         "default": "er-lik-tegn over høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2972",
@@ -2132,8 +1896,7 @@
       "default": {
         "default": "tilde over høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2973",
@@ -2141,8 +1904,7 @@
       "default": {
         "default": "venstrepil over tilde"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2974",
@@ -2150,8 +1912,7 @@
       "default": {
         "default": "høyrepil over tilde"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2975",
@@ -2159,8 +1920,7 @@
       "default": {
         "default": "høyre pil over omtrent-lik-tegn"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2976",
@@ -2168,11 +1928,9 @@
       "default": {
         "default": "mindre enn over venstrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2977",
     "mappings": {
       "default": {
@@ -2186,8 +1944,7 @@
       "default": {
         "default": "større enn over høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2979",
@@ -2195,11 +1952,9 @@
       "default": {
         "default": "delsett over høyrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "297A",
     "mappings": {
       "default": {
@@ -2213,8 +1968,7 @@
       "default": {
         "default": "supersett over venstrepil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B3",
@@ -2222,8 +1976,7 @@
       "default": {
         "default": "tomt sett med høyrepil over"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B4",
@@ -2231,11 +1984,9 @@
       "default": {
         "default": "tomt sett med venstrepil over"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29BD",
     "mappings": {
       "default": {
@@ -2244,7 +1995,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EA",
     "mappings": {
       "default": {
@@ -2253,7 +2003,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EC",
     "mappings": {
       "default": {
@@ -2262,7 +2011,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29ED",
     "mappings": {
       "default": {
@@ -2276,11 +2024,9 @@
       "default": {
         "default": "integral med venstrepil med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2B00",
     "mappings": {
       "default": {
@@ -2289,7 +2035,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B01",
     "mappings": {
       "default": {
@@ -2298,7 +2043,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B02",
     "mappings": {
       "default": {
@@ -2307,7 +2051,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B03",
     "mappings": {
       "default": {
@@ -2316,7 +2059,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B04",
     "mappings": {
       "default": {
@@ -2325,7 +2067,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B05",
     "mappings": {
       "default": {
@@ -2334,7 +2075,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B06",
     "mappings": {
       "default": {
@@ -2343,7 +2083,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B07",
     "mappings": {
       "default": {
@@ -2352,7 +2091,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B08",
     "mappings": {
       "default": {
@@ -2361,7 +2099,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B09",
     "mappings": {
       "default": {
@@ -2370,7 +2107,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0A",
     "mappings": {
       "default": {
@@ -2379,7 +2115,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0B",
     "mappings": {
       "default": {
@@ -2388,7 +2123,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0C",
     "mappings": {
       "default": {
@@ -2397,7 +2131,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0D",
     "mappings": {
       "default": {
@@ -2406,7 +2139,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0E",
     "mappings": {
       "default": {
@@ -2415,7 +2147,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0F",
     "mappings": {
       "default": {
@@ -2424,7 +2155,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B10",
     "mappings": {
       "default": {
@@ -2433,7 +2163,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B11",
     "mappings": {
       "default": {
@@ -2442,7 +2171,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B30",
     "mappings": {
       "default": {
@@ -2451,7 +2179,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B31",
     "mappings": {
       "default": {
@@ -2460,7 +2187,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B32",
     "mappings": {
       "default": {
@@ -2469,7 +2195,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B33",
     "mappings": {
       "default": {
@@ -2478,7 +2203,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B34",
     "mappings": {
       "default": {
@@ -2487,7 +2211,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B35",
     "mappings": {
       "default": {
@@ -2496,7 +2219,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B36",
     "mappings": {
       "default": {
@@ -2505,7 +2227,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B37",
     "mappings": {
       "default": {
@@ -2514,7 +2235,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B38",
     "mappings": {
       "default": {
@@ -2523,7 +2243,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B39",
     "mappings": {
       "default": {
@@ -2532,7 +2251,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3A",
     "mappings": {
       "default": {
@@ -2541,7 +2259,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3B",
     "mappings": {
       "default": {
@@ -2550,7 +2267,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3C",
     "mappings": {
       "default": {
@@ -2559,7 +2275,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3D",
     "mappings": {
       "default": {
@@ -2568,7 +2283,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3E",
     "mappings": {
       "default": {
@@ -2577,7 +2291,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3F",
     "mappings": {
       "default": {
@@ -2586,7 +2299,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B40",
     "mappings": {
       "default": {
@@ -2595,7 +2307,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B41",
     "mappings": {
       "default": {
@@ -2604,7 +2315,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B42",
     "mappings": {
       "default": {
@@ -2613,7 +2323,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B43",
     "mappings": {
       "default": {
@@ -2622,7 +2331,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B44",
     "mappings": {
       "default": {
@@ -2631,7 +2339,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B45",
     "mappings": {
       "default": {
@@ -2640,7 +2347,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B46",
     "mappings": {
       "default": {
@@ -2649,7 +2355,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B47",
     "mappings": {
       "default": {
@@ -2658,7 +2363,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B48",
     "mappings": {
       "default": {
@@ -2667,7 +2371,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B49",
     "mappings": {
       "default": {
@@ -2676,7 +2379,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4A",
     "mappings": {
       "default": {
@@ -2685,7 +2387,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4B",
     "mappings": {
       "default": {
@@ -2694,7 +2395,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4C",
     "mappings": {
       "default": {
@@ -2703,7 +2403,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFE9",
     "mappings": {
       "default": {
@@ -2712,7 +2411,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEA",
     "mappings": {
       "default": {
@@ -2721,7 +2419,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEB",
     "mappings": {
       "default": {
@@ -2730,7 +2427,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEC",
     "mappings": {
       "default": {

@@ -22,10 +22,10 @@
 // This work was sponsored by ETH Zurich
 //
 
-import { Grammar } from '../../rule_engine/grammar';
-import { localFont } from '../locale_util';
-import { createLocale, Locale } from '../locale';
-import NUMBERS from '../numbers/numbers_de';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { localFont } from '../locale_util.js';
+import { createLocale, Locale } from '../locale.js';
+import { NUMBERS } from '../numbers/numbers_de.js';
 
 const germanPrefixCombiner = function (
   letter: string,

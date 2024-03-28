@@ -1,0 +1,95 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "ft",
+    "mappings": {
+      "default": {
+        "default": "voet",
+        "plural": "voet"
+      }
+    }
+  },
+  {
+    "key": "in",
+    "mappings": {
+      "default": {
+        "default": "duim",
+        "plural": "duim"
+      }
+    }
+  },
+  {
+    "key": "mi",
+    "mappings": {
+      "default": {
+        "default": "myl",
+        "plural": "myl"
+      }
+    }
+  },
+  {
+    "key": "yd",
+    "mappings": {
+      "default": {
+        "default": "jaart",
+        "plural": "jaart"
+      }
+    }
+  },
+  {
+    "key": "link",
+    "mappings": {
+      "default": {
+        "default": "link",
+        "plural": "links"
+      }
+    }
+  },
+  {
+    "key": "rod",
+    "mappings": {
+      "default": {
+        "default": "staaf",
+        "plural": "stawe"
+      }
+    }
+  },
+  {
+    "key": "chain",
+    "mappings": {
+      "default": {
+        "default": "ketting",
+        "plural": "kettings"
+      }
+    }
+  },
+  {
+    "key": "furlong",
+    "mappings": {
+      "default": {
+        "default": "furlong",
+        "plural": "furlong"
+      }
+    }
+  },
+  {
+    "key": "n.m.",
+    "mappings": {
+      "default": {
+        "default": "seemyl",
+        "plural": "seemyl"
+      }
+    }
+  },
+  {
+    "key": "m",
+    "mappings": {
+      "default": {
+        "default": "meter",
+        "plural": "meter"
+      }
+    }
+  }
+]

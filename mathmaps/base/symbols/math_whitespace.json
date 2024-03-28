@@ -1,0 +1,169 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "0020",
+    "category": "Zs"
+  },
+  {
+    "key": "00A0",
+    "category": "Zs"
+  },
+  {
+    "key": "00AD",
+    "category": "Cf"
+  },
+  {
+    "key": "2000",
+    "category": "Zs"
+  },
+  {
+    "key": "2001",
+    "category": "Zs"
+  },
+  {
+    "key": "2002",
+    "category": "Zs"
+  },
+  {
+    "key": "2003",
+    "category": "Zs"
+  },
+  {
+    "key": "2004",
+    "category": "Zs"
+  },
+  {
+    "key": "2005",
+    "category": "Zs"
+  },
+  {
+    "key": "2006",
+    "category": "Zs"
+  },
+  {
+    "key": "2007",
+    "category": "Zs"
+  },
+  {
+    "key": "2008",
+    "category": "Zs"
+  },
+  {
+    "key": "2009",
+    "category": "Zs"
+  },
+  {
+    "key": "200A",
+    "category": "Zs"
+  },
+  {
+    "key": "200B",
+    "category": "Cf"
+  },
+  {
+    "key": "200C",
+    "category": "Cf"
+  },
+  {
+    "key": "200D",
+    "category": "Cf"
+  },
+  {
+    "key": "200E",
+    "category": "Cf"
+  },
+  {
+    "key": "200F",
+    "category": "Cf"
+  },
+  {
+    "key": "2028",
+    "category": "Zl"
+  },
+  {
+    "key": "2029",
+    "category": "Zp"
+  },
+  {
+    "key": "202A",
+    "category": "Cf"
+  },
+  {
+    "key": "202B",
+    "category": "Cf"
+  },
+  {
+    "key": "202C",
+    "category": "Cf"
+  },
+  {
+    "key": "202D",
+    "category": "Cf"
+  },
+  {
+    "key": "202E",
+    "category": "Cf"
+  },
+  {
+    "key": "202F",
+    "category": "Zs"
+  },
+  {
+    "key": "205F",
+    "category": "Zs"
+  },
+  {
+    "key": "2060",
+    "category": "Cf"
+  },
+  {
+    "key": "2061",
+    "category": "Cf"
+  },
+  {
+    "key": "2062",
+    "category": "Cf"
+  },
+  {
+    "key": "2063",
+    "category": "Cf"
+  },
+  {
+    "key": "2064",
+    "category": "Cf"
+  },
+  {
+    "key": "206A",
+    "category": "Cf"
+  },
+  {
+    "key": "206B",
+    "category": "Cf"
+  },
+  {
+    "key": "206E",
+    "category": "Cf"
+  },
+  {
+    "key": "206F",
+    "category": "Cf"
+  },
+  {
+    "key": "FEFF",
+    "category": "Cf"
+  },
+  {
+    "key": "FFF9",
+    "category": "Cf"
+  },
+  {
+    "key": "FFFA",
+    "category": "Cf"
+  },
+  {
+    "key": "FFFB",
+    "category": "Cf"
+  }
+]

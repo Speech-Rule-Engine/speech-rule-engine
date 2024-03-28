@@ -1,0 +1,100 @@
+[{"locale": "ko"},
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "와트"
+     }
+   },
+   "key": "W",
+   "names": ["W", "w", "watt", "watts"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "킬로와트시"
+     }
+   },
+   "key": "kwh",
+   "names": ["kwh", "kWh", "kilowatt hour", "kilowatt hours"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "줄"
+     }
+   },
+   "key": "J",
+   "names": ["J", "joule", "joules"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "뉴턴"
+     }
+   },
+   "key": "N",
+   "names": ["N", "Newton", "Newtons"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "암페어"
+     }
+   },
+   "key": "A",
+   "names": ["A", "ampere", "amperes"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "볼트"
+     }
+   },
+   "key": "V",
+   "names": ["V", "volt", "volts"]
+  },
+  {"category": "energy",
+   "mappings": {
+     "default": {
+       "default": "옴"
+     }
+   },
+   "key": "ohm",
+   "names": ["Ohm", "ohm", "ohms"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "옴"
+     }
+   },
+   "key": "\u03A9",
+   "names": ["\u03A9"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "메가옴"
+     }
+   },
+   "key": "M\u03A9",
+   "names": ["M\u03A9", "megohm", "megohms"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "킬로옴"
+     }
+   },
+   "key": "k\u03A9",
+   "names": ["k\u03A9", "kilohm", "kilohms"]
+  }
+]

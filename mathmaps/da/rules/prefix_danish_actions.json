@@ -1,0 +1,118 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "da",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"Tæller\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"Nævner\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"Grundtal\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"Eksponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"Sænket\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"Overtekst\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"Undertekst\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"Radikand\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"Rodeksponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"Venstre Sænket\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition; [t] \"Venstre Sænket\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"Venstre Hævet\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition; [t] \"Venstre Hævet\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"Højre Sænket\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition; [t] \"Højre Sænket\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"Højre Hævet\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition; [t] \"Højre Sænket\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"Puljemændge\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"Valgmængde\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition; [t] \"Række\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Kolonne\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition; [t] \"Kolonne\" (pause:200)"
+    ]
+  ]
+}

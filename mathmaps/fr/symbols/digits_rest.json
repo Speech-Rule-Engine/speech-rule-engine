@@ -14,8 +14,7 @@
       "clearspeak": {
         "default": "au carré"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00B3",
@@ -29,8 +28,7 @@
       "clearspeak": {
         "default": "cubique"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BC",
@@ -38,8 +36,7 @@
       "default": {
         "default": "un quart"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BD",
@@ -47,8 +44,7 @@
       "default": {
         "default": "un demi"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BE",
@@ -56,8 +52,7 @@
       "default": {
         "default": "trois quarts"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2150",
@@ -65,8 +60,7 @@
       "default": {
         "default": "un septième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2151",
@@ -74,8 +68,7 @@
       "default": {
         "default": "un neuvième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2152",
@@ -83,8 +76,7 @@
       "default": {
         "default": "un dixième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2153",
@@ -92,8 +84,7 @@
       "default": {
         "default": "un tiers"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2154",
@@ -101,8 +92,7 @@
       "default": {
         "default": "deux tiers"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2155",
@@ -110,8 +100,7 @@
       "default": {
         "default": "un cinquième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2156",
@@ -119,8 +108,7 @@
       "default": {
         "default": "deux cinquièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2157",
@@ -128,8 +116,7 @@
       "default": {
         "default": "trois cinquièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2158",
@@ -137,8 +124,7 @@
       "default": {
         "default": "quatre cinquièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2159",
@@ -146,8 +132,7 @@
       "default": {
         "default": "un sixième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215A",
@@ -155,8 +140,7 @@
       "default": {
         "default": "cinq sixièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215B",
@@ -164,8 +148,7 @@
       "default": {
         "default": "un huitième"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215C",
@@ -173,8 +156,7 @@
       "default": {
         "default": "trois huitièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215D",
@@ -182,8 +164,7 @@
       "default": {
         "default": "cinq huitièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215E",
@@ -191,8 +172,7 @@
       "default": {
         "default": "sept huitièmes"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215F",
@@ -200,8 +180,7 @@
       "default": {
         "default": "numérateur un"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2189",
@@ -209,8 +188,7 @@
       "default": {
         "default": "zero tiers"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "3248",
@@ -218,8 +196,7 @@
       "default": {
         "default": "dix cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "3249",
@@ -227,8 +204,7 @@
       "default": {
         "default": "vingt cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324A",
@@ -236,8 +212,7 @@
       "default": {
         "default": "trente cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324B",
@@ -245,8 +220,7 @@
       "default": {
         "default": "quarante cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324C",
@@ -254,8 +228,7 @@
       "default": {
         "default": "cinquante cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324D",
@@ -263,8 +236,7 @@
       "default": {
         "default": "soixante cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324E",
@@ -272,8 +244,7 @@
       "default": {
         "default": "soixante dix cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "324F",
@@ -281,7 +252,6 @@
       "default": {
         "default": "quatre vingts cerclé sur carré noir"
       }
-    },
-    "category": "No"
+    }
   }
 ]

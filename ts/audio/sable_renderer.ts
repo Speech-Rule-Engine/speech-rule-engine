@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const';
-import { Pause } from './audio_util';
-import { XmlRenderer } from './xml_renderer';
+import * as EngineConst from '../common/engine_const.js';
+import { Pause } from './audio_util.js';
+import { XmlRenderer } from './xml_renderer.js';
 
 export class SableRenderer extends XmlRenderer {
   /**
@@ -31,9 +31,9 @@ export class SableRenderer extends XmlRenderer {
       '<?xml version="1.0"?>' +
       '<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN"' +
       ' "Sable.v0_2.dtd" []><SABLE>' +
-      this.getSeparator() +
+      this.separator +
       str +
-      this.getSeparator() +
+      this.separator +
       '</SABLE>'
     );
   }

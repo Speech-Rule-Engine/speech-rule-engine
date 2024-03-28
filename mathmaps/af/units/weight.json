@@ -1,0 +1,104 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "dram",
+    "mappings": {
+      "default": {
+        "default": "dragme",
+        "plural": "dragmes"
+      }
+    }
+  },
+  {
+    "key": "oz",
+    "mappings": {
+      "default": {
+        "default": "ons",
+        "plural": "onse"
+      }
+    }
+  },
+  {
+    "key": "lb",
+    "mappings": {
+      "default": {
+        "default": "pond",
+        "plural": "pond"
+      }
+    }
+  },
+  {
+    "key": "st",
+    "mappings": {
+      "default": {
+        "default": "klip",
+        "plural": "klippe"
+      }
+    }
+  },
+  {
+    "key": "qtr",
+    "mappings": {
+      "default": {
+        "default": "kwart",
+        "plural": "kwarte"
+      }
+    }
+  },
+  {
+    "key": "cwt",
+    "mappings": {
+      "default": {
+        "default": "honderdgewig",
+        "plural": "honderdgewigte"
+      }
+    }
+  },
+  {
+    "key": "LT",
+    "mappings": {
+      "default": {
+        "default": "lang ton",
+        "plural": "lang ton"
+      }
+    }
+  },
+  {
+    "key": "gr",
+    "mappings": {
+      "default": {
+        "default": "gram",
+        "plural": "gram"
+      }
+    }
+  },
+  {
+    "key": "g",
+    "mappings": {
+      "default": {
+        "default": "gram",
+        "plural": "gram"
+      }
+    }
+  },
+  {
+    "key": "mcg",
+    "mappings": {
+      "default": {
+        "default": "mikrogram",
+        "plural": "mikrogram"
+      }
+    }
+  },
+  {
+    "key": "t",
+    "mappings": {
+      "default": {
+        "default": "ton",
+        "plural": "ton"
+      }
+    }
+  }
+]

@@ -9,13 +9,7 @@
         "plural": "gradi fahrenheit",
         "default": "grado fahrenheit"
       }
-    },
-    "category": "temperature",
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ]
+    }
   },
   {
     "key": "C",
@@ -24,12 +18,7 @@
         "plural": "gradi celsius",
         "default": "grado celsius"
       }
-    },
-    "category": "temperature",
-    "names": [
-      "C",
-      "°C"
-    ]
+    }
   },
   {
     "key": "K",
@@ -38,11 +27,6 @@
         "plural": "kelvin",
         "default": "kelvin"
       }
-    },
-    "category": "temperature",
-    "names": [
-      "K",
-      "°K"
-    ]
+    }
   }
 ]

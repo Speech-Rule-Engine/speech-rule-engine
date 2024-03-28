@@ -18,9 +18,9 @@
  * @file General utility functions for rule stores.
  * @author sorge@google.com (Volker Sorge)
  */
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as XpathUtil from '../common/xpath_util';
-import Engine from '../common/engine';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Engine } from '../common/engine.js';
 
 /**
  * Count list of nodes and concatenate this with the context string.

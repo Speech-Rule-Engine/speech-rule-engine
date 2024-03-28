@@ -1,0 +1,256 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "log",
+    "mappings": {
+      "default": {
+        "default": "logaritme"
+      }
+    }
+  },
+  {
+    "key": "ln",
+    "mappings": {
+      "default": {
+        "default": "natuurlike logaritme"
+      },
+      "mathspeak": {
+        "default": "ln"
+      },
+      "clearspeak": {
+        "default": "l n",
+        "Log_LnAsNaturalLog": "natuurlike logaritme"
+      }
+    }
+  },
+  {
+    "key": "lg",
+    "mappings": {
+      "default": {
+        "default": "logaritme met grondtal 10"
+      }
+    }
+  },
+  {
+    "key": "exp",
+    "mappings": {
+      "default": {
+        "default": "exponensiaal"
+      },
+      "mathspeak": {
+        "default": "exp"
+      },
+      "clearspeak": {
+        "default": "exp"
+      }
+    }
+  },
+  {
+    "key": "gcd",
+    "mappings": {
+      "default": {
+        "default": "grootste gemene deler"
+      },
+      "mathspeak": {
+        "default": "gcd"
+      },
+      "clearspeak": {
+        "default": "gcd"
+      }
+    }
+  },
+  {
+    "key": "lcm",
+    "mappings": {
+      "default": {
+        "default": "kleinste gemene veelvoud"
+      },
+      "mathspeak": {
+        "default": "lcm"
+      },
+      "clearspeak": {
+        "default": "lcm"
+      }
+    }
+  },
+  {
+    "key": "arg",
+    "mappings": {
+      "default": {
+        "default": "argument"
+      },
+      "mathspeak": {
+        "default": "arg"
+      },
+      "clearspeak": {
+        "default": "arg"
+      }
+    }
+  },
+  {
+    "key": "im",
+    "mappings": {
+      "default": {
+        "default": "imaginere gedeelte"
+      },
+      "mathspeak": {
+        "default": "im"
+      },
+      "clearspeak": {
+        "default": "imaginary"
+      }
+    }
+  },
+  {
+    "key": "re",
+    "mappings": {
+      "default": {
+        "default": "reele gedeelte"
+      },
+      "mathspeak": {
+        "default": "re"
+      },
+      "clearspeak": {
+        "default": "real"
+      }
+    }
+  },
+  {
+    "key": "inf",
+    "mappings": {
+      "default": {
+        "default": "infimum"
+      },
+      "mathspeak": {
+        "default": "inf"
+      },
+      "clearspeak": {
+        "default": "inf"
+      }
+    }
+  },
+  {
+    "key": "lim",
+    "mappings": {
+      "default": {
+        "default": "limiet"
+      },
+      "mathspeak": {
+        "default": "limit"
+      },
+      "clearspeak": {
+        "default": "lim"
+      }
+    }
+  },
+  {
+    "key": "liminf",
+    "mappings": {
+      "default": {
+        "default": "grootste ondergrens"
+      },
+      "mathspeak": {
+        "default": "liminf"
+      },
+      "clearspeak": {
+        "default": "liminf"
+      }
+    }
+  },
+  {
+    "key": "limsup",
+    "mappings": {
+      "default": {
+        "default": "kleinste bogrens"
+      },
+      "mathspeak": {
+        "default": "limsup"
+      },
+      "clearspeak": {
+        "default": "limsup"
+      }
+    }
+  },
+  {
+    "key": "max",
+    "mappings": {
+      "default": {
+        "default": "maksimum"
+      },
+      "mathspeak": {
+        "default": "max"
+      },
+      "clearspeak": {
+        "default": "max"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "mappings": {
+      "default": {
+        "default": "minimum"
+      },
+      "mathspeak": {
+        "default": "min"
+      },
+      "clearspeak": {
+        "default": "min"
+      }
+    }
+  },
+  {
+    "key": "sup",
+    "mappings": {
+      "default": {
+        "default": "supremum"
+      },
+      "mathspeak": {
+        "default": "sup"
+      },
+      "clearspeak": {
+        "default": "sup"
+      }
+    }
+  },
+  {
+    "key": "injlim",
+    "mappings": {
+      "default": {
+        "default": "direkte limiet"
+      }
+    }
+  },
+  {
+    "key": "projlim",
+    "mappings": {
+      "default": {
+        "default": "inverse limiet"
+      }
+    }
+  },
+  {
+    "key": "mod",
+    "mappings": {
+      "default": {
+        "default": "modulo"
+      },
+      "mathspeak": {
+        "default": "mod"
+      },
+      "clearspeak": {
+        "default": "mod"
+      }
+    }
+  },
+  {
+    "key": "Pr",
+    "mappings": {
+      "default": {
+        "default": "waarskynlikheid"
+      }
+    }
+  }
+]

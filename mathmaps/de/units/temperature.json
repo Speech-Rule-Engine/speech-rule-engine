@@ -8,13 +8,7 @@
       "default": {
         "default": "Grad Fahrenheit"
       }
-    },
-    "category": "temperature",
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ]
+    }
   },
   {
     "key": "C",
@@ -22,12 +16,7 @@
       "default": {
         "default": "Grad Celsius"
       }
-    },
-    "category": "temperature",
-    "names": [
-      "C",
-      "°C"
-    ]
+    }
   },
   {
     "key": "K",
@@ -35,11 +24,6 @@
       "default": {
         "default": "Kelvin"
       }
-    },
-    "category": "temperature",
-    "names": [
-      "K",
-      "°K"
-    ]
+    }
   }
 ]

@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Highlighter } from '../highlighter/highlighter';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
-import { Walker } from '../walker/walker';
-import { KeyCode } from './event_util';
+import { Highlighter } from '../highlighter/highlighter.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
+import { Walker } from '../walker/walker.js';
+import { KeyCode } from './event_util.js';
 
 export class Processor<T> {
   /**

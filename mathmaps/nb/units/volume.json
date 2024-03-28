@@ -4,11 +4,6 @@
   },
   {
     "key": "cu",
-    "category": "volume",
-    "names": [
-      "cu",
-      "cu."
-    ],
     "mappings": {
       "default": {
         "default": "kubikk"
@@ -16,18 +11,13 @@
     }
   },
   {
-    "key": "cu in",
+    "key": "cu inch",
     "mappings": {
       "default": {
         "default": "cubic inch",
         "plural": "cubic inches"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu in",
-      "cu. in."
-    ]
+    }
   },
   {
     "key": "cu ft",
@@ -35,12 +25,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu ft",
-      "cu. ft."
-    ]
+    }
   },
   {
     "key": "cu yd",
@@ -48,12 +33,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu yd",
-      "cu. yd."
-    ]
+    }
   },
   {
     "key": "bbl",
@@ -61,26 +41,16 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "volume",
-    "names": [
-      "bbl.",
-      "bbl"
-    ]
+    }
   },
   {
-    "key": "fl oz",
+    "key": "fl. oz.",
     "mappings": {
       "default": {
         "default": "fluid ounce",
         "plural": "fluid ounces"
       }
-    },
-    "category": "volume",
-    "names": [
-      "fl. oz.",
-      "fl oz"
-    ]
+    }
   },
   {
     "key": "gal",
@@ -88,12 +58,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "volume",
-    "names": [
-      "gal",
-      "gal."
-    ]
+    }
   },
   {
     "key": "pt",
@@ -101,12 +66,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "volume",
-    "names": [
-      "pt",
-      "pt."
-    ]
+    }
   },
   {
     "key": "qt",
@@ -114,26 +74,16 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "volume",
-    "names": [
-      "qt",
-      "qt."
-    ]
+    }
   },
   {
-    "key": "fl dr",
+    "key": "fluid dram",
     "mappings": {
       "default": {
         "default": "fluid dram",
         "plural": "fluid drams"
       }
-    },
-    "category": "volume",
-    "names": [
-      "fl dr",
-      "fl. dr."
-    ]
+    }
   },
   {
     "key": "tbsp",
@@ -141,14 +91,7 @@
       "default": {
         "default": "spiseskje"
       }
-    },
-    "category": "volume",
-    "names": [
-      "tbsp",
-      "tbsp.",
-      "Tbsp",
-      "Tbsp."
-    ]
+    }
   },
   {
     "key": "tsp",
@@ -156,34 +99,19 @@
       "default": {
         "default": "teskje"
       }
-    },
-    "category": "volume",
-    "names": [
-      "tsp",
-      "tsp."
-    ]
+    }
   },
   {
-    "key": "cp",
+    "key": "cup",
     "mappings": {
       "default": {
         "default": "cup",
         "plural": "cups"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cp",
-      "cp."
-    ]
+    }
   },
   {
     "key": "cc",
-    "category": "volume",
-    "names": [
-      "cc",
-      "ccm"
-    ],
     "mappings": {
       "default": {
         "default": "kubikkcentimeter"
@@ -196,11 +124,6 @@
       "default": {
         "default": "liter"
       }
-    },
-    "category": "volume",
-    "names": [
-      "l"
-    ],
-    "si": true
+    }
   }
 ]

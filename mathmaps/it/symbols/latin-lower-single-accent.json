@@ -8,8 +8,7 @@
       "default": {
         "default": "a con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E1",
@@ -17,8 +16,7 @@
       "default": {
         "default": "a con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E2",
@@ -26,8 +24,7 @@
       "default": {
         "default": "a con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E3",
@@ -35,8 +32,7 @@
       "default": {
         "default": "a con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E4",
@@ -44,8 +40,7 @@
       "default": {
         "default": "a con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E5",
@@ -53,8 +48,7 @@
       "default": {
         "default": "a con anello sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E7",
@@ -62,8 +56,7 @@
       "default": {
         "default": "c con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E8",
@@ -71,8 +64,7 @@
       "default": {
         "default": "e con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E9",
@@ -80,8 +72,7 @@
       "default": {
         "default": "e con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EA",
@@ -89,8 +80,7 @@
       "default": {
         "default": "e con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EB",
@@ -98,8 +88,7 @@
       "default": {
         "default": "e con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EC",
@@ -107,8 +96,7 @@
       "default": {
         "default": "i con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00ED",
@@ -116,8 +104,7 @@
       "default": {
         "default": "i con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EE",
@@ -125,8 +112,7 @@
       "default": {
         "default": "i con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EF",
@@ -134,8 +120,7 @@
       "default": {
         "default": "i con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F1",
@@ -143,8 +128,7 @@
       "default": {
         "default": "n con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F2",
@@ -152,8 +136,7 @@
       "default": {
         "default": "o con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F3",
@@ -161,8 +144,7 @@
       "default": {
         "default": "o con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F4",
@@ -170,8 +152,7 @@
       "default": {
         "default": "o con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F5",
@@ -179,8 +160,7 @@
       "default": {
         "default": "o con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F6",
@@ -188,8 +168,7 @@
       "default": {
         "default": "o con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F9",
@@ -197,8 +176,7 @@
       "default": {
         "default": "u con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FA",
@@ -206,8 +184,7 @@
       "default": {
         "default": "u con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FB",
@@ -215,8 +192,7 @@
       "default": {
         "default": "u con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FC",
@@ -224,8 +200,7 @@
       "default": {
         "default": "u con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FD",
@@ -233,8 +208,7 @@
       "default": {
         "default": "y con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FF",
@@ -242,8 +216,7 @@
       "default": {
         "default": "y con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0101",
@@ -251,8 +224,7 @@
       "default": {
         "default": "a con barra sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0103",
@@ -260,8 +232,7 @@
       "default": {
         "default": "a con segno di vocale corta"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0105",
@@ -269,8 +240,7 @@
       "default": {
         "default": "a con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0107",
@@ -278,8 +248,7 @@
       "default": {
         "default": "c con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0109",
@@ -287,8 +256,7 @@
       "default": {
         "default": "c con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010B",
@@ -296,8 +264,7 @@
       "default": {
         "default": "c con un punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010D",
@@ -305,8 +272,7 @@
       "default": {
         "default": "c con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010F",
@@ -314,8 +280,7 @@
       "default": {
         "default": "d con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0113",
@@ -323,11 +288,9 @@
       "default": {
         "default": "e con barra sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0115",
     "mappings": {
       "default": {
@@ -341,8 +304,7 @@
       "default": {
         "default": "e con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0119",
@@ -350,8 +312,7 @@
       "default": {
         "default": "e con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011B",
@@ -359,8 +320,7 @@
       "default": {
         "default": "e con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011D",
@@ -368,8 +328,7 @@
       "default": {
         "default": "g con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011F",
@@ -377,8 +336,7 @@
       "default": {
         "default": "g con segno di vocale corta"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0121",
@@ -386,11 +344,9 @@
       "default": {
         "default": "g con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0123",
     "mappings": {
       "default": {
@@ -404,8 +360,7 @@
       "default": {
         "default": "h con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0129",
@@ -413,8 +368,7 @@
       "default": {
         "default": "i con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "012B",
@@ -422,11 +376,9 @@
       "default": {
         "default": "i con barra sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "012D",
     "mappings": {
       "default": {
@@ -440,8 +392,7 @@
       "default": {
         "default": "i con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0131",
@@ -449,8 +400,7 @@
       "default": {
         "default": "i senza puntino"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0135",
@@ -458,8 +408,7 @@
       "default": {
         "default": "gei con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0137",
@@ -467,8 +416,7 @@
       "default": {
         "default": "k con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013A",
@@ -476,8 +424,7 @@
       "default": {
         "default": "l con accento"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013C",
@@ -485,8 +432,7 @@
       "default": {
         "default": "l con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013E",
@@ -494,8 +440,7 @@
       "default": {
         "default": "l con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0140",
@@ -503,8 +448,7 @@
       "default": {
         "default": "l con punto nel mezzo"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0144",
@@ -512,8 +456,7 @@
       "default": {
         "default": "n con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0146",
@@ -521,8 +464,7 @@
       "default": {
         "default": "n con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0148",
@@ -530,8 +472,7 @@
       "default": {
         "default": "n con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "014D",
@@ -539,11 +480,9 @@
       "default": {
         "default": "o con barra sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "014F",
     "mappings": {
       "default": {
@@ -557,8 +496,7 @@
       "default": {
         "default": "o con doppio accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0155",
@@ -566,8 +504,7 @@
       "default": {
         "default": "r con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0157",
@@ -575,8 +512,7 @@
       "default": {
         "default": "r con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0159",
@@ -584,8 +520,7 @@
       "default": {
         "default": "r con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015B",
@@ -593,8 +528,7 @@
       "default": {
         "default": "s con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015D",
@@ -602,8 +536,7 @@
       "default": {
         "default": "s con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015F",
@@ -611,8 +544,7 @@
       "default": {
         "default": "s con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0161",
@@ -620,8 +552,7 @@
       "default": {
         "default": "s con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0163",
@@ -629,8 +560,7 @@
       "default": {
         "default": "t con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0165",
@@ -638,8 +568,7 @@
       "default": {
         "default": "t con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0169",
@@ -647,8 +576,7 @@
       "default": {
         "default": "u con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016B",
@@ -656,8 +584,7 @@
       "default": {
         "default": "u con barra sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016D",
@@ -665,8 +592,7 @@
       "default": {
         "default": "u con segno di vocale corta"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016F",
@@ -674,8 +600,7 @@
       "default": {
         "default": "u con anello sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0171",
@@ -683,8 +608,7 @@
       "default": {
         "default": "u con doppio accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0173",
@@ -692,8 +616,7 @@
       "default": {
         "default": "u con ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0175",
@@ -701,8 +624,7 @@
       "default": {
         "default": "w con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0177",
@@ -710,8 +632,7 @@
       "default": {
         "default": "y con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017A",
@@ -719,8 +640,7 @@
       "default": {
         "default": "z con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017C",
@@ -728,8 +648,7 @@
       "default": {
         "default": "z con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017E",
@@ -737,11 +656,9 @@
       "default": {
         "default": "z con caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01CE",
     "mappings": {
       "default": {
@@ -750,7 +667,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D0",
     "mappings": {
       "default": {
@@ -759,7 +675,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D2",
     "mappings": {
       "default": {
@@ -768,7 +683,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D4",
     "mappings": {
       "default": {
@@ -777,7 +691,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E7",
     "mappings": {
       "default": {
@@ -786,7 +699,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E9",
     "mappings": {
       "default": {
@@ -795,7 +707,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01EB",
     "mappings": {
       "default": {
@@ -804,7 +715,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F0",
     "mappings": {
       "default": {
@@ -818,11 +728,9 @@
       "default": {
         "default": "g con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01F9",
     "mappings": {
       "default": {
@@ -831,7 +739,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0201",
     "mappings": {
       "default": {
@@ -840,7 +747,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0203",
     "mappings": {
       "default": {
@@ -849,7 +755,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0205",
     "mappings": {
       "default": {
@@ -858,7 +763,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0207",
     "mappings": {
       "default": {
@@ -867,7 +771,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0209",
     "mappings": {
       "default": {
@@ -876,7 +779,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020B",
     "mappings": {
       "default": {
@@ -885,7 +787,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020D",
     "mappings": {
       "default": {
@@ -894,7 +795,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020F",
     "mappings": {
       "default": {
@@ -903,7 +803,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0211",
     "mappings": {
       "default": {
@@ -912,7 +811,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0213",
     "mappings": {
       "default": {
@@ -921,7 +819,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0215",
     "mappings": {
       "default": {
@@ -930,7 +827,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0217",
     "mappings": {
       "default": {
@@ -939,7 +835,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0219",
     "mappings": {
       "default": {
@@ -948,7 +843,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021B",
     "mappings": {
       "default": {
@@ -957,7 +851,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021F",
     "mappings": {
       "default": {
@@ -966,7 +859,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0227",
     "mappings": {
       "default": {
@@ -975,7 +867,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0229",
     "mappings": {
       "default": {
@@ -984,7 +875,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022F",
     "mappings": {
       "default": {
@@ -993,7 +883,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0233",
     "mappings": {
       "default": {
@@ -1002,7 +891,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0237",
     "mappings": {
       "default": {
@@ -1016,8 +904,7 @@
       "default": {
         "default": "a con anello sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E03",
@@ -1025,8 +912,7 @@
       "default": {
         "default": "b con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E05",
@@ -1034,8 +920,7 @@
       "default": {
         "default": "b con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E07",
@@ -1043,8 +928,7 @@
       "default": {
         "default": "b con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0B",
@@ -1052,8 +936,7 @@
       "default": {
         "default": "d con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0D",
@@ -1061,8 +944,7 @@
       "default": {
         "default": "d con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0F",
@@ -1070,8 +952,7 @@
       "default": {
         "default": "d con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E11",
@@ -1079,8 +960,7 @@
       "default": {
         "default": "d con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E13",
@@ -1088,8 +968,7 @@
       "default": {
         "default": "d con accento circonflesso sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E19",
@@ -1097,8 +976,7 @@
       "default": {
         "default": "e con accento circonflesso sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1B",
@@ -1106,8 +984,7 @@
       "default": {
         "default": "e con tilde sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1F",
@@ -1115,8 +992,7 @@
       "default": {
         "default": "f con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E21",
@@ -1124,8 +1000,7 @@
       "default": {
         "default": "g con barra sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E23",
@@ -1133,8 +1008,7 @@
       "default": {
         "default": "h con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E25",
@@ -1142,8 +1016,7 @@
       "default": {
         "default": "h con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E27",
@@ -1151,8 +1024,7 @@
       "default": {
         "default": "h con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E29",
@@ -1160,8 +1032,7 @@
       "default": {
         "default": "h con cediglia"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2B",
@@ -1169,8 +1040,7 @@
       "default": {
         "default": "h con segno di vocale corta sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2D",
@@ -1178,8 +1048,7 @@
       "default": {
         "default": "i con tilde sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E31",
@@ -1187,8 +1056,7 @@
       "default": {
         "default": "k con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E33",
@@ -1196,8 +1064,7 @@
       "default": {
         "default": "k con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E35",
@@ -1205,8 +1072,7 @@
       "default": {
         "default": "k con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E37",
@@ -1214,8 +1080,7 @@
       "default": {
         "default": "l con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3B",
@@ -1223,8 +1088,7 @@
       "default": {
         "default": "l con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3D",
@@ -1232,8 +1096,7 @@
       "default": {
         "default": "l con accento circonflesso sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3F",
@@ -1241,8 +1104,7 @@
       "default": {
         "default": "m con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E41",
@@ -1250,8 +1112,7 @@
       "default": {
         "default": "m con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E43",
@@ -1259,8 +1120,7 @@
       "default": {
         "default": "m con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E45",
@@ -1268,8 +1128,7 @@
       "default": {
         "default": "n con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E47",
@@ -1277,8 +1136,7 @@
       "default": {
         "default": "n con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E49",
@@ -1286,8 +1144,7 @@
       "default": {
         "default": "n con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E4B",
@@ -1295,8 +1152,7 @@
       "default": {
         "default": "n con accento circonflesso sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E55",
@@ -1304,8 +1160,7 @@
       "default": {
         "default": "p con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E57",
@@ -1313,8 +1168,7 @@
       "default": {
         "default": "p con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E59",
@@ -1322,8 +1176,7 @@
       "default": {
         "default": "r con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5B",
@@ -1331,8 +1184,7 @@
       "default": {
         "default": "r con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5F",
@@ -1340,8 +1192,7 @@
       "default": {
         "default": "r con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E61",
@@ -1349,8 +1200,7 @@
       "default": {
         "default": "s con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E63",
@@ -1358,8 +1208,7 @@
       "default": {
         "default": "s con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6B",
@@ -1367,8 +1216,7 @@
       "default": {
         "default": "t con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6D",
@@ -1376,8 +1224,7 @@
       "default": {
         "default": "t con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6F",
@@ -1385,8 +1232,7 @@
       "default": {
         "default": "t con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E71",
@@ -1394,8 +1240,7 @@
       "default": {
         "default": "t con accento circonflesso sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E73",
@@ -1403,8 +1248,7 @@
       "default": {
         "default": "u con dieresi sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E75",
@@ -1412,8 +1256,7 @@
       "default": {
         "default": "u con tilde sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E77",
@@ -1421,8 +1264,7 @@
       "default": {
         "default": "u con accento circonflesso sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7D",
@@ -1430,8 +1272,7 @@
       "default": {
         "default": "v con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7F",
@@ -1439,8 +1280,7 @@
       "default": {
         "default": "v con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E81",
@@ -1448,8 +1288,7 @@
       "default": {
         "default": "w con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E83",
@@ -1457,8 +1296,7 @@
       "default": {
         "default": "w con accento acuto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E85",
@@ -1466,8 +1304,7 @@
       "default": {
         "default": "w con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E87",
@@ -1475,8 +1312,7 @@
       "default": {
         "default": "w con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E89",
@@ -1484,8 +1320,7 @@
       "default": {
         "default": "w con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8B",
@@ -1493,8 +1328,7 @@
       "default": {
         "default": "x con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8D",
@@ -1502,8 +1336,7 @@
       "default": {
         "default": "x con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8F",
@@ -1511,8 +1344,7 @@
       "default": {
         "default": "y con punto sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E91",
@@ -1520,8 +1352,7 @@
       "default": {
         "default": "z con accento circonflesso"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E93",
@@ -1529,8 +1360,7 @@
       "default": {
         "default": "z con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E95",
@@ -1538,8 +1368,7 @@
       "default": {
         "default": "z con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E96",
@@ -1547,8 +1376,7 @@
       "default": {
         "default": "h con linea sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E97",
@@ -1556,8 +1384,7 @@
       "default": {
         "default": "t con dieresi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E98",
@@ -1565,8 +1392,7 @@
       "default": {
         "default": "w con anello sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E99",
@@ -1574,8 +1400,7 @@
       "default": {
         "default": "y con anello sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E9A",
@@ -1583,8 +1408,7 @@
       "default": {
         "default": "a con metà anello destro"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA1",
@@ -1592,8 +1416,7 @@
       "default": {
         "default": "a con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA3",
@@ -1601,8 +1424,7 @@
       "default": {
         "default": "a con gancio sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB9",
@@ -1610,8 +1432,7 @@
       "default": {
         "default": "e con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBB",
@@ -1619,8 +1440,7 @@
       "default": {
         "default": "e con gancio sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBD",
@@ -1628,8 +1448,7 @@
       "default": {
         "default": "e con tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC9",
@@ -1637,8 +1456,7 @@
       "default": {
         "default": "i con gancio sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECB",
@@ -1646,8 +1464,7 @@
       "default": {
         "default": "i con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECD",
@@ -1655,8 +1472,7 @@
       "default": {
         "default": "o con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECF",
@@ -1664,8 +1480,7 @@
       "default": {
         "default": "o con gancio sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE5",
@@ -1673,8 +1488,7 @@
       "default": {
         "default": "u con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE7",
@@ -1682,8 +1496,7 @@
       "default": {
         "default": "u con gancio sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF3",
@@ -1691,8 +1504,7 @@
       "default": {
         "default": "y con accento grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF5",
@@ -1700,8 +1512,7 @@
       "default": {
         "default": "y con punto sotto"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF7",
@@ -1709,8 +1520,7 @@
       "default": {
         "default": "y con gancio sopra"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF9",
@@ -1718,7 +1528,6 @@
       "default": {
         "default": "y con tilde"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

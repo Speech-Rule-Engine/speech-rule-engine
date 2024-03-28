@@ -1,0 +1,214 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "2 파이 분의 기울인 h",
+        "physics": "디랙 상수"
+      }
+    },
+    "key": "210F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "L B 막대기 기호"
+      }
+    },
+    "key": "2114"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "서수 기호"
+      }
+    },
+    "key": "2116"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "소리 녹음 저작권"
+      }
+    },
+    "key": "2117"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "처방전"
+      }
+    },
+    "key": "211E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "응답"
+      }
+    },
+    "key": "211F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "서비스 마크"
+      }
+    },
+    "key": "2120"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전화 사인", 
+        "alternative": "T E L 기호"
+      }
+    },
+    "key": "2121"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상표 표시"
+      }
+    },
+    "key": "2122"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "버시클"
+      }
+    },
+    "key": "2123"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "온스"
+      }
+    },
+    "key": "2125"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "옴"
+      }
+    },
+    "key": "2126"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 옴 기호"
+      }
+    },
+    "key": "2127"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "켈빈"
+      }
+    },
+    "key": "212A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "옹 스트롬"
+      }
+    },
+    "key": "212B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "추정 가호"
+      }
+    },
+    "key": "212E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 대문자 F"
+      },
+      "mathspeak": {
+        "default": "반전된 대문자 F"
+      }
+    },
+    "key": "2132"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "정보 출처"
+      }
+    },
+    "key": "2139"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "회전된 대문자 Q"
+      },
+      "mathspeak": {
+        "default": "회전된 대문자 Q"
+      }
+    },
+    "key": "213A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "팩시밀리 사인"
+      }
+    },
+    "key": "213B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 산세리프 대문자 G"
+      },
+      "mathspeak": {
+        "default": "반전된 산세리프 대문자 G"
+      }
+    },
+    "key": "2141"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 산세리프 대문자 L"
+      },
+      "mathspeak": {
+        "default": "반전된 산세리프 대문자 L"
+      }
+    },
+    "key": "2142"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 산세리프 대문자 L"
+      },
+      "mathspeak": {
+        "default": "반전된 산세리프 대문자 L"
+      }
+    },
+    "key": "2143"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 산세리프 대문자 Y"
+      },
+      "mathspeak": {
+        "default": "반전된 산세리프 대문자 Y"
+      }
+    },
+    "key": "2144"
+  }
+]

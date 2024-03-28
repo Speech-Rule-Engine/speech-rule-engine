@@ -18,17 +18,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { ClearspeakRules } from './clearspeak_rules';
-import { MathspeakRules } from './mathspeak_rules';
-import { BrailleRules, OtherRules, PrefixRules } from './other_rules';
+import { ClearspeakRules } from './clearspeak_rules.js';
+import { MathspeakRules } from './mathspeak_rules.js';
+import { BrailleRules, OtherRules, PrefixRules } from './other_rules.js';
 
-export let INIT_ = false;
+let INIT = false;
 
 /**
  * Initializes the context function mappings for speech rule stores.
  */
 export function init() {
-  if (INIT_) {
+  if (INIT) {
     return;
   }
   MathspeakRules();
@@ -36,5 +36,5 @@ export function init() {
   PrefixRules();
   OtherRules();
   BrailleRules();
-  INIT_ = true;
+  INIT = true;
 }

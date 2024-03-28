@@ -1,0 +1,99 @@
+[
+  {"locale": "ko"},
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "피트",
+       "plural": "피트"
+     }
+   },
+   "key": "ft",
+   "names": ["ft", "ft.", "foot", "feet"]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "인치",
+       "plural": "인치"
+     }
+   },
+   "key": "in",
+   "names": ["in", "in.", "inch", "inches"]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "마일"
+     }
+   },
+   "key": "mi",
+   "names": ["mi", "mi.", "mile", "miles"]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "야드"
+     }
+   },
+   "key": "yd",
+   "names": ["yd", "yd.", "yard", "yards"]
+  },
+
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "링크"
+     }
+   },
+   "key": "link",
+   "names": ["li", "li.", "link", "links"]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "로드"
+     }
+   },
+   "key": "rod",
+   "names": ["rd", "rd.", "rod", "rods"]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "체인"
+     }
+   },
+   "key": "chain",
+   "names": ["ch", "ch.", "chain", "chains"]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "펄롱"
+     }
+   },
+   "key": "furlong",
+   "names": ["fur", "fur.", "furlong", "furlongs"]
+  },
+
+  
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "해리"
+     }
+   },
+   "key": "n.m.",
+   "names": ["n.m.", "nautical mile", "nautical miles"]
+  },
+  {"category": "length",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "미터"
+     }
+   },
+   "key": "m",
+   "names": ["m", "meter", "meters"]
+  }
+]

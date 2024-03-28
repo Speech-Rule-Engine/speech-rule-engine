@@ -18,13 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
 
-import { CaseMultiindex } from './case_multiindex';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import { CaseMultiindex } from './case_multiindex.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseTensor extends CaseMultiindex {
   /**

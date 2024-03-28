@@ -3,18 +3,13 @@
     "locale": "sv"
   },
   {
-    "key": "dr",
+    "key": "dram",
     "mappings": {
       "default": {
         "default": "dram",
-        "plural": "drams"
+        "plural": "dram"
       }
-    },
-    "category": "weight",
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "oz",
@@ -23,12 +18,7 @@
         "default": "uns",
         "plural": "uns"
       }
-    },
-    "category": "weight",
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "lb",
@@ -37,20 +27,10 @@
         "default": "skålpund",
         "plural": "skålpund"
       }
-    },
-    "category": "weight",
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
-    "names": [
-      "st",
-      "st."
-    ],
     "mappings": {
       "default": {
         "default": "stone",
@@ -60,11 +40,6 @@
   },
   {
     "key": "qtr",
-    "category": "weight",
-    "names": [
-      "qtr",
-      "qtr."
-    ],
     "mappings": {
       "default": {
         "default": "quarter",
@@ -79,24 +54,14 @@
         "default": "centner",
         "plural": "centner"
       }
-    },
-    "category": "weight",
-    "names": [
-      "cwt",
-      "cwt."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
-    "names": [
-      "LT",
-      "L.T."
-    ],
     "mappings": {
       "default": {
-        "default": "long ton",
-        "plural": "long tons"
+        "default": "engelskt ton",
+        "plural": "engelska ton"
       }
     }
   },
@@ -107,11 +72,7 @@
         "default": "grain",
         "plural": "grains"
       }
-    },
-    "category": "weight",
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
@@ -120,23 +81,14 @@
         "default": "gram",
         "plural": "gram"
       }
-    },
-    "category": "weight",
-    "names": [
-      "g"
-    ],
-    "si": true
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
-    "names": [
-      "mcg"
-    ],
     "mappings": {
       "default": {
-        "default": "microgram",
-        "plural": "micrograms"
+        "default": "mikrogram",
+        "plural": "mikrogram"
       }
     }
   },
@@ -147,11 +99,6 @@
         "default": "ton",
         "plural": "ton"
       }
-    },
-    "category": "weight",
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   }
 ]

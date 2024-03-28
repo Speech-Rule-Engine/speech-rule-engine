@@ -62,18 +62,3 @@ export function setdifference(a: any[], b: any[]): any[] {
   }
   return a.filter((x) => b.indexOf(x) < 0);
 }
-
-/**
- * Computes the union of two arrays (not in a strictly set theoretical sense
- * as all duplicate elements in either array still remain as duplicates!).
- *
- * @param a An array.
- * @param b Another array.
- * @returns Union of a and b.
- */
-export function union(a: any[], b: any[]): any[] {
-  if (!a || !b) {
-    return a || b || [];
-  }
-  return a.concat(setdifference(b, a));
-}

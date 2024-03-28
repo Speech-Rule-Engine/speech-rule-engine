@@ -1,0 +1,95 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "cosh",
+    "category": "Hyperbolic",
+    "names": [
+      "cosh"
+    ]
+  },
+  {
+    "key": "coth",
+    "category": "Hyperbolic",
+    "names": [
+      "coth"
+    ]
+  },
+  {
+    "key": "csch",
+    "category": "Hyperbolic",
+    "names": [
+      "csch"
+    ]
+  },
+  {
+    "key": "sech",
+    "category": "Hyperbolic",
+    "names": [
+      "sech"
+    ]
+  },
+  {
+    "key": "sinh",
+    "category": "Hyperbolic",
+    "names": [
+      "sinh"
+    ]
+  },
+  {
+    "key": "tanh",
+    "category": "Hyperbolic",
+    "names": [
+      "tanh"
+    ]
+  },
+  {
+    "key": "arcosh",
+    "category": "Area",
+    "names": [
+      "arcosh",
+      "arccosh"
+    ]
+  },
+  {
+    "key": "arcoth",
+    "category": "Area",
+    "names": [
+      "arcoth",
+      "arccoth"
+    ]
+  },
+  {
+    "key": "arcsch",
+    "category": "Area",
+    "names": [
+      "arcsch",
+      "arccsch"
+    ]
+  },
+  {
+    "key": "arsech",
+    "category": "Area",
+    "names": [
+      "arsech",
+      "arcsech"
+    ]
+  },
+  {
+    "key": "arsinh",
+    "category": "Area",
+    "names": [
+      "arsinh",
+      "arcsinh"
+    ]
+  },
+  {
+    "key": "artanh",
+    "category": "Area",
+    "names": [
+      "artanh",
+      "arctanh"
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "F",
+    "category": "temperature",
+    "names": [
+      "F",
+      "F.",
+      "°F"
+    ]
+  },
+  {
+    "key": "C",
+    "category": "temperature",
+    "names": [
+      "C",
+      "°C"
+    ]
+  },
+  {
+    "key": "K",
+    "category": "temperature",
+    "names": [
+      "K",
+      "°K"
+    ]
+  }
+]

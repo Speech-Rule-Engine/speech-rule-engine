@@ -1,0 +1,2370 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 가로 상자 그림"
+      }
+    },
+    "key": "2500"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 가로 상자 그림"
+      }
+    },
+    "key": "2501"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 세로 상자 그림"
+      }
+    },
+    "key": "2502"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 상자 그림"
+      }
+    },
+    "key": "2503"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 트리플 대시 수평 상자 그림"
+      }
+    },
+    "key": "2504"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 트리플 대시 수평 상자 그림"
+      }
+    },
+    "key": "2505"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 트리플 대시 수직 상자 그림"
+      }
+    },
+    "key": "2506"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 트리플 대시 수직 상자 그림"
+      }
+    },
+    "key": "2507"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 쿼드러플 대시 수평 상자 그림"
+      }
+    },
+    "key": "2508"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 쿼드러플 대시 수평 상자 그림"
+      }
+    },
+    "key": "2509"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 쿼드러플 대쉬 수직 상자 그림"
+      }
+    },
+    "key": "250A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 쿼드러플 대쉬 수직 상자 그림"
+      }
+    },
+    "key": "250B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래 오른쪽 상자 그림"
+      }
+    },
+    "key": "250C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 진한 오른쪽 상자 그림"
+      }
+    },
+    "key": "250D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 얇은 오른쪽 상자 그림"
+      }
+    },
+    "key": "250E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래와 오른쪽 상자 그림"
+      }
+    },
+    "key": "250F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "2510"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 진한 왼쪽 상자 그림"
+      }
+    },
+    "key": "2511"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 얇은 왼쪽 상자 그림"
+      }
+    },
+    "key": "2512"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "2513"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 및 오른쪽 상자 그림"
+      }
+    },
+    "key": "2514"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 진한 오른쪽 상자 그림"
+      }
+    },
+    "key": "2515"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 오른쪽 상자 그림"
+      }
+    },
+    "key": "2516"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 및 오른쪽 상자 그림"
+      }
+    },
+    "key": "2517"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "2518"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 진한 왼쪽 상자 그림"
+      }
+    },
+    "key": "2519"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 왼쪽 상자 그림"
+      }
+    },
+    "key": "251A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "251B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 및 오른쪽 상자 그림"
+      }
+    },
+    "key": "251C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 진한 오른쪽 상자 그림"
+      }
+    },
+    "key": "251D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 오른쪽 및 아래 상자 그림"
+      }
+    },
+    "key": "251E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 얇은 오른쪽 및 위 상자 그림"
+      }
+    },
+    "key": "251F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 얇은 오른쪽 상자 그림"
+      }
+    },
+    "key": "2520"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 진한 오른쪽 및 위 상자 그림"
+      }
+    },
+    "key": "2521"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위, 진한 오른쪽 및 아래 상자 그림"
+      }
+    },
+    "key": "2522"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 및 오른쪽 상자 그림"
+      }
+    },
+    "key": "2523"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "2524"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 진한 왼쪽 상자 그림"
+      }
+    },
+    "key": "2525"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 왼쪽 및 아래 상자 그림"
+      }
+    },
+    "key": "2526"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 얇은 왼쪽 및 위 상자 그림"
+      }
+    },
+    "key": "2527"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 얇은 왼쪽 상자 그림"
+      }
+    },
+    "key": "2528"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 진한 왼쪽 및 위 상자 그림"
+      }
+    },
+    "key": "2529"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 진한 왼쪽 및 아래 상자 그림"
+      }
+    },
+    "key": "252A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "252B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 및 수평 상자 그림"
+      }
+    },
+    "key": "252C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 왼쪽 얇은 오른쪽 아래 상자 그림"
+      }
+    },
+    "key": "252D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 얇은 왼쪽 아래 상자 그림"
+      }
+    },
+    "key": "252E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 진한 수평 상자 그림"
+      }
+    },
+    "key": "252F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 얇은 수평 상자 그림"
+      }
+    },
+    "key": "2530"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 오른쪽 진한 왼쪽 아래 상자 그림"
+      }
+    },
+    "key": "2531"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 왼쪽 진한 오른쪽 아래 상자 그림"
+      }
+    },
+    "key": "2532"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 수평 상자 그림"
+      }
+    },
+    "key": "2533"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 수평 상자 그림"
+      }
+    },
+    "key": "2534"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 왼쪽 얇은 오른쪽 위 상자 그림"
+      }
+    },
+    "key": "2535"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 얇은 왼쪽 위 상자 그림"
+      }
+    },
+    "key": "2536"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 진한 수평 상자 그림"
+      }
+    },
+    "key": "2537"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 수평 상자 그림"
+      }
+    },
+    "key": "2538"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 오른쪽 진한 왼쪽 위 상자 그림"
+      }
+    },
+    "key": "2539"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 왼쪽 진한 오른쪽 위 상자 그림"
+      }
+    },
+    "key": "253A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 수평 상자 그림"
+      }
+    },
+    "key": "253B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 수평 상자 그림"
+      }
+    },
+    "key": "253C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 왼쪽 얇은 오른쪽 수직 상자 그림"
+      }
+    },
+    "key": "253D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 얇은 왼쪽 수직 상자 그림"
+      }
+    },
+    "key": "253E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 진한 수평 상자 그림"
+      }
+    },
+    "key": "253F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 아래 수평 상자 그림"
+      }
+    },
+    "key": "2540"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 얇은 위 수평 상자 그림"
+      }
+    },
+    "key": "2541"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 얇은 수평 상자 그림"
+      }
+    },
+    "key": "2542"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 위 얇은 왼쪽 아래 상자 그림"
+      }
+    },
+    "key": "2543"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 위 얇은 왼쪽 아래 상자 그림"
+      }
+    },
+    "key": "2544"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 왼쪽 아래 얇은 오른쪽 위 상자 그림"
+      }
+    },
+    "key": "2545"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 아래, 얇은 왼쪽 위 상자 그림"
+      }
+    },
+    "key": "2546"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래, 진한 위 수평 상자 그림"
+      }
+    },
+    "key": "2547"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위, 진한 아래 수평 상자 그림"
+      }
+    },
+    "key": "2548"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 오른쪽, 진한 왼쪽 수직 상자 그림"
+      }
+    },
+    "key": "2549"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 왼쪽, 진한 오른쪽 수직 상자 그림"
+      }
+    },
+    "key": "254A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수직 수평 상자 그림"
+      }
+    },
+    "key": "254B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수평 더블 대시 상자 그림"
+      }
+    },
+    "key": "254C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수평 더블 대시 상자 그림"
+      }
+    },
+    "key": "254D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 수직 더블 대시 상자 그림"
+      }
+    },
+    "key": "254E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 수평 더블 대시 상자 그림"
+      }
+    },
+    "key": "254F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수평 상자 그림"
+      }
+    },
+    "key": "2550"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수직 상자 그림"
+      }
+    },
+    "key": "2551"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하나 아래, 오른쪽 이중 상자 그림"
+      }
+    },
+    "key": "2552"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 아래 오른쪽 하나 상자 그리기"
+      }
+    },
+    "key": "2553"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 아래 이중 오른쪽 상자 그리기"
+      }
+    },
+    "key": "2554"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 아래 이중 왼쪽 상자 그림"
+      }
+    },
+    "key": "2555"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 아래 단일 왼쪽 상자 그림"
+      }
+    },
+    "key": "2556"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 아래 왼쪽 상자 그림"
+      }
+    },
+    "key": "2557"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 위 이중 오른쪽 상자 그림"
+      }
+    },
+    "key": "2558"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 위 단일 왼쪽 상자 그림"
+      }
+    },
+    "key": "2559"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 위 오른쪽 상자 그림"
+      }
+    },
+    "key": "255A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 위 이중 왼쪽 상자 그림"
+      }
+    },
+    "key": "255B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 위 단일 왼쪽 상자 그림"
+      }
+    },
+    "key": "255C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 위 왼쪽 상자 그림"
+      }
+    },
+    "key": "255D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 수직 이중 오른쪽 상자 그림"
+      }
+    },
+    "key": "255E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수직 단일 오른쪽 상자 그림"
+      }
+    },
+    "key": "255F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수직 오른쪽 상자 그림"
+      }
+    },
+    "key": "2560"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 수직 이중 왼쪽 상자 그림"
+      }
+    },
+    "key": "2561"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수직 단일 왼쪽 상자 그림"
+      }
+    },
+    "key": "2562"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수직 및 왼쪽 상자 그림"
+      }
+    },
+    "key": "2563"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 아래 이중 수평 상자 그림"
+      }
+    },
+    "key": "2564"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 아래 단일 수평 상자 그림"
+      }
+    },
+    "key": "2565"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 아래 및 수평 상자 그림"
+      }
+    },
+    "key": "2566"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 위 이중 수평 상자 그림"
+      }
+    },
+    "key": "2567"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 위 단일 수평 상자 그림"
+      }
+    },
+    "key": "2568"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 위 및 수평 상자 그림"
+      }
+    },
+    "key": "2569"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단일 수직 이중 수평 상자 그림"
+      }
+    },
+    "key": "256A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수직 단일 수평 상자 그림"
+      }
+    },
+    "key": "256B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 수평 및 수직 상자 그림"
+      }
+    },
+    "key": "256C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 오른쪽 아래 호 상자 그림"
+      }
+    },
+    "key": "256D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 왼쪽 호 상자 그림"
+      }
+    },
+    "key": "256E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 왼쪽 호 상자 그림"
+      }
+    },
+    "key": "256F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 오른쪽 호 상자 그림"
+      }
+    },
+    "key": "2570"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 오른위 왼아래 대각선 상자 그림"
+      }
+    },
+    "key": "2571"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 왼위 오른아래 대각선 상자 그림"
+      }
+    },
+    "key": "2572"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 대각선 십자형 상자 그림"
+      }
+    },
+    "key": "2573"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 왼쪽 상자 그림"
+      }
+    },
+    "key": "2574"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 상자 그림"
+      }
+    },
+    "key": "2575"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 오른쪽 상자 그림"
+      }
+    },
+    "key": "2576"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 아래 상자 그림"
+      }
+    },
+    "key": "2577"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 왼쪽 상자 그림"
+      }
+    },
+    "key": "2578"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 상자 그림"
+      }
+    },
+    "key": "2579"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 오른쪽 상자 그림"
+      }
+    },
+    "key": "257A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 아래 상자 그림"
+      }
+    },
+    "key": "257B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 왼쪽 진한 오른쪽 상자 그림"
+      }
+    },
+    "key": "257C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 위 진한 아래 상자 그림"
+      }
+    },
+    "key": "257D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 왼쪽 얇은 오른쪽 상자 그림"
+      }
+    },
+    "key": "257E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 위 얇은 아래 상자 그림"
+      }
+    },
+    "key": "257F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 이등분 중 맨 아래 블록"
+      }
+    },
+    "key": "2580"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 팔등분 중 맨 아래 블록"
+      }
+    },
+    "key": "2581"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 사등분 중 아래 한 블록"
+      }
+    },
+    "key": "2582"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 팔등분 중 아래 세 블록"
+      }
+    },
+    "key": "2583"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 이등분 중 아래 블록"
+      }
+    },
+    "key": "2584"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 팔등분 중 아래 다섯 블록"
+      }
+    },
+    "key": "2585"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 사등분 중 아래 세 블록"
+      }
+    },
+    "key": "2586"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 팔등분 중 아래 일곱 블록"
+      }
+    },
+    "key": "2587"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "온전한 블록"
+      }
+    },
+    "key": "2588"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 팔등분 중 왼쪽 일곱 블록"
+      }
+    },
+    "key": "2589"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 사등분 중 왼쪽 세 블록"
+      }
+    },
+    "key": "258A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 팔등분 중 왼쪽 다섯 블록"
+      }
+    },
+    "key": "258B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 이등분 중 왼쪽 블록"
+      }
+    },
+    "key": "258C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 팔등분 중 왼쪽 세 블록"
+      }
+    },
+    "key": "258D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 사등분 중 맨 왼쪽 블록"
+      }
+    },
+    "key": "258E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 팔등분 중 맨 왼쪽 블록"
+      }
+    },
+    "key": "258F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 이등분 중 오른쪽 블록"
+      }
+    },
+    "key": "2590"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밝은 그림자"
+      }
+    },
+    "key": "2591"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 그림자"
+      }
+    },
+    "key": "2592"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "어두운 그림자"
+      }
+    },
+    "key": "2593"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평 팔등분 중 맨 위 블록"
+      }
+    },
+    "key": "2594"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직 팔등분 중 맨 오른쪽 블록"
+      }
+    },
+    "key": "2595"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 아래 사분면"
+      }
+    },
+    "key": "2596"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 아래 사분면"
+      }
+    },
+    "key": "2597"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 위 사분면"
+      }
+    },
+    "key": "2598"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 및 왼아래 및 오른아래 사분면"
+      }
+    },
+    "key": "2599"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 및 오른아래 사분면"
+      }
+    },
+    "key": "259A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 및 오른위 및 왼아래 사분면"
+      }
+    },
+    "key": "259B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 및 오른위 및 오른아래 사분면"
+      }
+    },
+    "key": "259C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 사분면"
+      }
+    },
+    "key": "259D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 및 왼아래 사분면"
+      }
+    },
+    "key": "259E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 및 왼아래 및 오른아래 사분면"
+      }
+    },
+    "key": "259F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 정사각형"
+      }
+    },
+    "key": "25A0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 정사각형"
+      }
+    },
+    "key": "25A1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "둥근 모서리의 흰색 정사각형"
+      }
+    },
+    "key": "25A2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 색 작은 정사각형을 포함하는 흰색 정사각형"
+      }
+    },
+    "key": "25A3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수평으로 채워진 정사각형"
+      }
+    },
+    "key": "25A4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직으로 채워진 정사각형"
+      }
+    },
+    "key": "25A5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "직교로 채워진 정사각형"
+      }
+    },
+    "key": "25A6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 오른아래 사선으로 채워진 정사각형"
+      }
+    },
+    "key": "25A7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 왼아래 사선으로 채워진 정사각형"
+      }
+    },
+    "key": "25A8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선 직교로 채워진 정사각형"
+      }
+    },
+    "key": "25A9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 작은 정사각형"
+      }
+    },
+    "key": "25AA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 작은 정사각형"
+      }
+    },
+    "key": "25AB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 직사각형"
+      }
+    },
+    "key": "25AC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "힌 직사각형"
+      }
+    },
+    "key": "25AD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 수직 직사각형"
+      }
+    },
+    "key": "25AE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하얀 수직 직사각형"
+      }
+    },
+    "key": "25AF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 평행사변형"
+      }
+    },
+    "key": "25B0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 평행사변형"
+      }
+    },
+    "key": "25B1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 상향 삼각형"
+      }
+    },
+    "key": "25B2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 상향 삼각형"
+      }
+    },
+    "key": "25B3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 검은 상향 삼각형"
+      }
+    },
+    "key": "25B4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 흰색 상향 삼각형"
+      }
+    },
+    "key": "25B5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 우향 삼각형"
+      }
+    },
+    "key": "25B6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 우향 삼각형"
+      }
+    },
+    "key": "25B7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 검은 우향 삼각형"
+      }
+    },
+    "key": "25B8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 흰색 우향 삼각형"
+      }
+    },
+    "key": "25B9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 오른쪽 포인터"
+      }
+    },
+    "key": "25BA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 오른쪽 포인터"
+      }
+    },
+    "key": "25BB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 하향 삼각형"
+      }
+    },
+    "key": "25BC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 하향 삼각형"
+      }
+    },
+    "key": "25BD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 검은색 하향 삼각형"
+      }
+    },
+    "key": "25BE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 흰색 하향 삼각형"
+      }
+    },
+    "key": "25BF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 좌향 삼각형"
+      }
+    },
+    "key": "25C0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 좌향 삼각형"
+      }
+    },
+    "key": "25C1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 검은색 좌향 포인팅 삼각형"
+      }
+    },
+    "key": "25C2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 흰색 좌향 포인팅 삼각형"
+      }
+    },
+    "key": "25C3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 좌향 포인팅 포인터"
+      }
+    },
+    "key": "25C4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 좌향 포인팅 포인터"
+      }
+    },
+    "key": "25C5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 다이아몬드"
+      }
+    },
+    "key": "25C6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 다이아몬드"
+      }
+    },
+    "key": "25C7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 다이아몬드가 들어있는 흰 다이아몬드"
+      }
+    },
+    "key": "25C8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 원를 포함한 흰 원"
+      }
+    },
+    "key": "25C9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "마름모꼴"
+      }
+    },
+    "key": "25CA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 원"
+      }
+    },
+    "key": "25CB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "점선 원"
+      }
+    },
+    "key": "25CC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수직으로 채워진 원"
+      }
+    },
+    "key": "25CD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 원를 포함한 흰 원"
+      }
+    },
+    "key": "25CE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 원"
+      }
+    },
+    "key": "25CF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 절반 검은 원"
+      }
+    },
+    "key": "25D0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 절반 검은 원"
+      }
+    },
+    "key": "25D1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래 절반이 검은 원"
+      }
+    },
+    "key": "25D2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위 절반이 검은 원"
+      }
+    },
+    "key": "25D3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 사분면이 검은 원"
+      }
+    },
+    "key": "25D4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 사분면 제외 검은 원"
+      }
+    },
+    "key": "25D5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 절반 검정 원"
+      }
+    },
+    "key": "25D6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 절반 검정 원"
+      }
+    },
+    "key": "25D7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "역 탄환"
+      }
+    },
+    "key": "25D8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 흰색 원"
+      }
+    },
+    "key": "25D9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상반 반전된 흰색 원"
+      }
+    },
+    "key": "25DA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하반 반전된 흰색 원"
+      }
+    },
+    "key": "25DB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 사분면 원호"
+      }
+    },
+    "key": "25DC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 사분면 원호"
+      }
+    },
+    "key": "25DD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른아래 사분면 원호"
+      }
+    },
+    "key": "25DE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼아래 사분면 원호"
+      }
+    },
+    "key": "25DF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "원의 상반"
+      }
+    },
+    "key": "25E0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "원의 하반"
+      }
+    },
+    "key": "25E1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 오른아래 삼각형"
+      }
+    },
+    "key": "25E2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 왼아래 삼각형"
+      }
+    },
+    "key": "25E3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 왼위 삼각형"
+      }
+    },
+    "key": "25E4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 오른위 삼각형"
+      }
+    },
+    "key": "25E5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 총알"
+      }
+    },
+    "key": "25E6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 절반이 검은 사각형"
+      }
+    },
+    "key": "25E7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 절반이 검은 사각형"
+      }
+    },
+    "key": "25E8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선 왼위 절반이 검은 사각형"
+      }
+    },
+    "key": "25E9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선 오른아래 절반이 검은 사각형"
+      }
+    },
+    "key": "25EA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 절반이 검은 사각형"
+      }
+    },
+    "key": "25EB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "점을 포함한 흰색 상향 삼각형"
+      }
+    },
+    "key": "25EC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽이 검은 상향 삼각형"
+      }
+    },
+    "key": "25ED"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 절반이 검은 상향 삼각형"
+      }
+    },
+    "key": "25EE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "큰 원"
+      }
+    },
+    "key": "25EF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 사분면이 있는 흰색 사각형"
+      }
+    },
+    "key": "25F0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼아래 사분면이 있는 흰색 사각형"
+      }
+    },
+    "key": "25F1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른아래 사분면이 있는 흰색 사각형"
+      }
+    },
+    "key": "25F2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 사분면이 있는 흰색 사각형"
+      }
+    },
+    "key": "25F3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 사분면이 있는 흰색 원"
+      }
+    },
+    "key": "25F4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼아래 사분면이 있는 흰색 원"
+      }
+    },
+    "key": "25F5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른아래 사분면이 있는 흰색 원"
+      }
+    },
+    "key": "25F6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 사분면이 있는 흰색 원"
+      }
+    },
+    "key": "25F7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼위 삼각형"
+      }
+    },
+    "key": "25F8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른위 삼각형"
+      }
+    },
+    "key": "25F9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼아래 삼각형"
+      }
+    },
+    "key": "25FA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 중간 정사각형"
+      }
+    },
+    "key": "25FB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 중간 정사각형"
+      }
+    },
+    "key": "25FC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 중형 작은 사각형"
+      }
+    },
+    "key": "25FD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 중형 작은 사각형"
+      }
+    },
+    "key": "25FE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른아래 삼각형"
+      }
+    },
+    "key": "25FF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상반이 검은 정사각형"
+      }
+    },
+    "key": "2B12"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하반이 검은 정사각형"
+      }
+    },
+    "key": "2B13"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선 오른위가 검은 정사각형"
+      }
+    },
+    "key": "2B14"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대각선 왼아래가 검은 정사각형"
+      }
+    },
+    "key": "2B15"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 절반이 검은 다이아몬드"
+      }
+    },
+    "key": "2B16"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 절반이 검은 다이아몬드"
+      }
+    },
+    "key": "2B17"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 절반이 검은 다이아몬드"
+      }
+    },
+    "key": "2B18"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 절반이 검은 다이아몬드"
+      }
+    },
+    "key": "2B19"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "점선으로된 정사각형"
+      }
+    },
+    "key": "2B1A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 큰 정사각형"
+      }
+    },
+    "key": "2B1B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 큰 정사각형"
+      }
+    },
+    "key": "2B1C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아주 작은 검정색 정사각형"
+      }
+    },
+    "key": "2B1D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아주 작은 흰색 정사각형"
+      }
+    },
+    "key": "2B1E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 오각형"
+      }
+    },
+    "key": "2B1F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 오각형"
+      }
+    },
+    "key": "2B20"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰색 육각형"
+      }
+    },
+    "key": "2B21"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 육각형"
+      }
+    },
+    "key": "2B22"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 수평 육각형"
+      }
+    },
+    "key": "2B23"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은색 큰 원"
+      }
+    },
+    "key": "2B24"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 중형 다이아몬드"
+      }
+    },
+    "key": "2B25"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 중형 다이아몬드"
+      }
+    },
+    "key": "2B26"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 중형 로젠지"
+      }
+    },
+    "key": "2B27"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 중형 로젠지"
+      }
+    },
+    "key": "2B28"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 작은 다이아몬드"
+      }
+    },
+    "key": "2B29"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 작은 로젠지"
+      }
+    },
+    "key": "2B2A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 작은 로젠지"
+      }
+    },
+    "key": "2B2B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 수평 타원"
+      }
+    },
+    "key": "2B2C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 수평 타원"
+      }
+    },
+    "key": "2B2D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 수직 타원"
+      }
+    },
+    "key": "2B2E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 수직 타원"
+      }
+    },
+    "key": "2B2F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 중형 별"
+      }
+    },
+    "key": "2B50"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 작은 별"
+      }
+    },
+    "key": "2B51"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 작은 별"
+      }
+    },
+    "key": "2B52"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 우향 오각형"
+      }
+    },
+    "key": "2B53"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "흰 우향 오각형"
+      }
+    },
+    "key": "2B54"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "큰 진한 원"
+      }
+    },
+    "key": "2B55"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "타원을 포함하는 진한 타원"
+      }
+    },
+    "key": "2B56"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "원을 포함하는 진한 원"
+      }
+    },
+    "key": "2B57"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "진한 원"
+      }
+    },
+    "key": "2B58"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "saltire 있는 진한 원"
+      }
+    },
+    "key": "2B59"
+  }
+]

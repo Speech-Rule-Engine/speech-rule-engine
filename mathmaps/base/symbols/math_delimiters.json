@@ -1,0 +1,733 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "0028",
+    "category": "Ps"
+  },
+  {
+    "key": "0029",
+    "category": "Pe"
+  },
+  {
+    "key": "005B",
+    "category": "Ps"
+  },
+  {
+    "key": "005D",
+    "category": "Pe"
+  },
+  {
+    "key": "007B",
+    "category": "Ps"
+  },
+  {
+    "key": "007D",
+    "category": "Pe"
+  },
+  {
+    "key": "2045",
+    "category": "Ps"
+  },
+  {
+    "key": "2046",
+    "category": "Pe"
+  },
+  {
+    "key": "2308",
+    "category": "Sm"
+  },
+  {
+    "key": "2309",
+    "category": "Sm"
+  },
+  {
+    "key": "230A",
+    "category": "Sm"
+  },
+  {
+    "key": "230B",
+    "category": "Sm"
+  },
+  {
+    "key": "230C",
+    "category": "So"
+  },
+  {
+    "key": "230D",
+    "category": "So"
+  },
+  {
+    "key": "230E",
+    "category": "So"
+  },
+  {
+    "key": "230F",
+    "category": "So"
+  },
+  {
+    "key": "231C",
+    "category": "So"
+  },
+  {
+    "key": "231D",
+    "category": "So"
+  },
+  {
+    "key": "231E",
+    "category": "So"
+  },
+  {
+    "key": "231F",
+    "category": "So"
+  },
+  {
+    "key": "2320",
+    "category": "Sm"
+  },
+  {
+    "key": "2321",
+    "category": "Sm"
+  },
+  {
+    "key": "2329",
+    "category": "Ps"
+  },
+  {
+    "key": "232A",
+    "category": "Pe"
+  },
+  {
+    "key": "239B",
+    "category": "Sm"
+  },
+  {
+    "key": "239C",
+    "category": "Sm"
+  },
+  {
+    "key": "239D",
+    "category": "Sm"
+  },
+  {
+    "key": "239E",
+    "category": "Sm"
+  },
+  {
+    "key": "239F",
+    "category": "Sm"
+  },
+  {
+    "key": "23A0",
+    "category": "Sm"
+  },
+  {
+    "key": "23A1",
+    "category": "Sm"
+  },
+  {
+    "key": "23A2",
+    "category": "Sm"
+  },
+  {
+    "key": "23A3",
+    "category": "Sm"
+  },
+  {
+    "key": "23A4",
+    "category": "Sm"
+  },
+  {
+    "key": "23A5",
+    "category": "Sm"
+  },
+  {
+    "key": "23A6",
+    "category": "Sm"
+  },
+  {
+    "key": "23A7",
+    "category": "Sm"
+  },
+  {
+    "key": "23A8",
+    "category": "Sm"
+  },
+  {
+    "key": "23A9",
+    "category": "Sm"
+  },
+  {
+    "key": "23AA",
+    "category": "Sm"
+  },
+  {
+    "key": "23AB",
+    "category": "Sm"
+  },
+  {
+    "key": "23AC",
+    "category": "Sm"
+  },
+  {
+    "key": "23AD",
+    "category": "Sm"
+  },
+  {
+    "key": "23AE",
+    "category": "Sm"
+  },
+  {
+    "key": "23AF",
+    "category": "Sm"
+  },
+  {
+    "key": "23B0",
+    "category": "Sm"
+  },
+  {
+    "key": "23B1",
+    "category": "Sm"
+  },
+  {
+    "key": "23B2",
+    "category": "Sm"
+  },
+  {
+    "key": "23B3",
+    "category": "Sm"
+  },
+  {
+    "key": "23B4",
+    "category": "So"
+  },
+  {
+    "key": "23B5",
+    "category": "So"
+  },
+  {
+    "key": "23B6",
+    "category": "So"
+  },
+  {
+    "key": "23B7",
+    "category": "So"
+  },
+  {
+    "key": "23B8",
+    "category": "So"
+  },
+  {
+    "key": "23B9",
+    "category": "So"
+  },
+  {
+    "key": "23DC",
+    "category": "Sm"
+  },
+  {
+    "key": "23DD",
+    "category": "Sm"
+  },
+  {
+    "key": "23DE",
+    "category": "Sm"
+  },
+  {
+    "key": "23DF",
+    "category": "Sm"
+  },
+  {
+    "key": "23E0",
+    "category": "Sm"
+  },
+  {
+    "key": "23E1",
+    "category": "Sm"
+  },
+  {
+    "key": "2768",
+    "category": "Ps"
+  },
+  {
+    "key": "2769",
+    "category": "Pe"
+  },
+  {
+    "key": "276A",
+    "category": "Ps"
+  },
+  {
+    "key": "276B",
+    "category": "Pe"
+  },
+  {
+    "key": "276C",
+    "category": "Ps"
+  },
+  {
+    "key": "276D",
+    "category": "Pe"
+  },
+  {
+    "key": "276E",
+    "category": "Ps"
+  },
+  {
+    "key": "276F",
+    "category": "Pe"
+  },
+  {
+    "key": "2770",
+    "category": "Ps"
+  },
+  {
+    "key": "2771",
+    "category": "Pe"
+  },
+  {
+    "key": "2772",
+    "category": "Ps"
+  },
+  {
+    "key": "2773",
+    "category": "Pe"
+  },
+  {
+    "key": "2774",
+    "category": "Ps"
+  },
+  {
+    "key": "2775",
+    "category": "Pe"
+  },
+  {
+    "key": "27C5",
+    "category": "Ps"
+  },
+  {
+    "key": "27C6",
+    "category": "Pe"
+  },
+  {
+    "key": "27E6",
+    "category": "Ps"
+  },
+  {
+    "key": "27E7",
+    "category": "Pe"
+  },
+  {
+    "key": "27E8",
+    "category": "Ps"
+  },
+  {
+    "key": "27E9",
+    "category": "Pe"
+  },
+  {
+    "key": "27EA",
+    "category": "Ps"
+  },
+  {
+    "key": "27EB",
+    "category": "Pe"
+  },
+  {
+    "key": "27EC",
+    "category": "Ps"
+  },
+  {
+    "key": "27ED",
+    "category": "Pe"
+  },
+  {
+    "key": "27EE",
+    "category": "Ps"
+  },
+  {
+    "key": "27EF",
+    "category": "Pe"
+  },
+  {
+    "key": "2983",
+    "category": "Ps"
+  },
+  {
+    "key": "2984",
+    "category": "Pe"
+  },
+  {
+    "key": "2985",
+    "category": "Ps"
+  },
+  {
+    "key": "2986",
+    "category": "Pe"
+  },
+  {
+    "key": "2987",
+    "category": "Ps"
+  },
+  {
+    "key": "2988",
+    "category": "Pe"
+  },
+  {
+    "key": "2989",
+    "category": "Ps"
+  },
+  {
+    "key": "298A",
+    "category": "Pe"
+  },
+  {
+    "key": "298B",
+    "category": "Ps"
+  },
+  {
+    "key": "298C",
+    "category": "Pe"
+  },
+  {
+    "key": "298D",
+    "category": "Ps"
+  },
+  {
+    "key": "298E",
+    "category": "Pe"
+  },
+  {
+    "key": "298F",
+    "category": "Ps"
+  },
+  {
+    "key": "2990",
+    "category": "Pe"
+  },
+  {
+    "key": "2991",
+    "category": "Ps"
+  },
+  {
+    "key": "2992",
+    "category": "Pe"
+  },
+  {
+    "key": "2993",
+    "category": "Ps"
+  },
+  {
+    "key": "2994",
+    "category": "Pe"
+  },
+  {
+    "key": "2995",
+    "category": "Ps"
+  },
+  {
+    "key": "2996",
+    "category": "Pe"
+  },
+  {
+    "key": "2997",
+    "category": "Ps"
+  },
+  {
+    "key": "2998",
+    "category": "Pe"
+  },
+  {
+    "key": "29D8",
+    "category": "Ps"
+  },
+  {
+    "key": "29D9",
+    "category": "Pe"
+  },
+  {
+    "key": "29DA",
+    "category": "Ps"
+  },
+  {
+    "key": "29DB",
+    "category": "Pe"
+  },
+  {
+    "key": "29FC",
+    "category": "Ps"
+  },
+  {
+    "key": "29FD",
+    "category": "Pe"
+  },
+  {
+    "key": "2E22",
+    "category": "Ps"
+  },
+  {
+    "key": "2E23",
+    "category": "Pe"
+  },
+  {
+    "key": "2E24",
+    "category": "Ps"
+  },
+  {
+    "key": "2E25",
+    "category": "Pe"
+  },
+  {
+    "key": "2E26",
+    "category": "Ps"
+  },
+  {
+    "key": "2E27",
+    "category": "Pe"
+  },
+  {
+    "key": "2E28",
+    "category": "Ps"
+  },
+  {
+    "key": "2E29",
+    "category": "Pe"
+  },
+  {
+    "key": "3008",
+    "category": "Ps"
+  },
+  {
+    "key": "3009",
+    "category": "Pe"
+  },
+  {
+    "key": "300A",
+    "category": "Ps"
+  },
+  {
+    "key": "300B",
+    "category": "Pe"
+  },
+  {
+    "key": "300C",
+    "category": "Ps"
+  },
+  {
+    "key": "300D",
+    "category": "Pe"
+  },
+  {
+    "key": "300E",
+    "category": "Ps"
+  },
+  {
+    "key": "300F",
+    "category": "Pe"
+  },
+  {
+    "key": "3010",
+    "category": "Ps"
+  },
+  {
+    "key": "3011",
+    "category": "Pe"
+  },
+  {
+    "key": "3014",
+    "category": "Ps"
+  },
+  {
+    "key": "3015",
+    "category": "Pe"
+  },
+  {
+    "key": "3016",
+    "category": "Ps"
+  },
+  {
+    "key": "3017",
+    "category": "Pe"
+  },
+  {
+    "key": "3018",
+    "category": "Ps"
+  },
+  {
+    "key": "3019",
+    "category": "Pe"
+  },
+  {
+    "key": "301A",
+    "category": "Ps"
+  },
+  {
+    "key": "301B",
+    "category": "Pe"
+  },
+  {
+    "key": "301D",
+    "category": "Ps"
+  },
+  {
+    "key": "301E",
+    "category": "Pe"
+  },
+  {
+    "key": "301F",
+    "category": "Pe"
+  },
+  {
+    "key": "FD3E",
+    "category": "Ps"
+  },
+  {
+    "key": "FD3F",
+    "category": "Pe"
+  },
+  {
+    "key": "FE17",
+    "category": "Ps"
+  },
+  {
+    "key": "FE18",
+    "category": "Pe"
+  },
+  {
+    "key": "FE35",
+    "category": "Ps"
+  },
+  {
+    "key": "FE36",
+    "category": "Pe"
+  },
+  {
+    "key": "FE37",
+    "category": "Ps"
+  },
+  {
+    "key": "FE38",
+    "category": "Pe"
+  },
+  {
+    "key": "FE39",
+    "category": "Ps"
+  },
+  {
+    "key": "FE3A",
+    "category": "Pe"
+  },
+  {
+    "key": "FE3B",
+    "category": "Ps"
+  },
+  {
+    "key": "FE3C",
+    "category": "Pe"
+  },
+  {
+    "key": "FE3D",
+    "category": "Ps"
+  },
+  {
+    "key": "FE3E",
+    "category": "Pe"
+  },
+  {
+    "key": "FE3F",
+    "category": "Ps"
+  },
+  {
+    "key": "FE40",
+    "category": "Pe"
+  },
+  {
+    "key": "FE41",
+    "category": "Ps"
+  },
+  {
+    "key": "FE42",
+    "category": "Pe"
+  },
+  {
+    "key": "FE43",
+    "category": "Ps"
+  },
+  {
+    "key": "FE44",
+    "category": "Pe"
+  },
+  {
+    "key": "FE47",
+    "category": "Ps"
+  },
+  {
+    "key": "FE48",
+    "category": "Pe"
+  },
+  {
+    "key": "FE59",
+    "category": "Ps"
+  },
+  {
+    "key": "FE5A",
+    "category": "Pe"
+  },
+  {
+    "key": "FE5B",
+    "category": "Ps"
+  },
+  {
+    "key": "FE5C",
+    "category": "Pe"
+  },
+  {
+    "key": "FE5D",
+    "category": "Ps"
+  },
+  {
+    "key": "FE5E",
+    "category": "Pe"
+  },
+  {
+    "key": "FF08",
+    "category": "Ps"
+  },
+  {
+    "key": "FF09",
+    "category": "Pe"
+  },
+  {
+    "key": "FF3B",
+    "category": "Ps"
+  },
+  {
+    "key": "FF3D",
+    "category": "Pe"
+  },
+  {
+    "key": "FF5B",
+    "category": "Ps"
+  },
+  {
+    "key": "FF5D",
+    "category": "Pe"
+  },
+  {
+    "key": "FF5F",
+    "category": "Ps"
+  },
+  {
+    "key": "FF60",
+    "category": "Pe"
+  },
+  {
+    "key": "FF62",
+    "category": "Ps"
+  },
+  {
+    "key": "FF63",
+    "category": "Pe"
+  }
+]

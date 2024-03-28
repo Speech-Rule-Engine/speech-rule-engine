@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const';
-import { AbstractAudioRenderer } from './abstract_audio_renderer';
-import { Pause } from './audio_util';
+import * as EngineConst from '../common/engine_const.js';
+import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
+import { Pause } from './audio_util.js';
 
 export abstract class MarkupRenderer extends AbstractAudioRenderer {
   /**

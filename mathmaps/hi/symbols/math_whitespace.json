@@ -3,7 +3,6 @@
     "locale": "hi"
   },
   {
-    "category": "Zs",
     "key": "0020",
     "mappings": {
       "default": {
@@ -12,7 +11,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "00A0",
     "mappings": {
       "default": {
@@ -21,7 +19,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "00AD",
     "mappings": {
       "default": {
@@ -30,7 +27,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2000",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2001",
     "mappings": {
       "default": {
@@ -48,7 +43,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2002",
     "mappings": {
       "default": {
@@ -57,7 +51,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2003",
     "mappings": {
       "default": {
@@ -66,7 +59,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2004",
     "mappings": {
       "default": {
@@ -75,7 +67,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2005",
     "mappings": {
       "default": {
@@ -84,7 +75,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2006",
     "mappings": {
       "default": {
@@ -93,7 +83,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2007",
     "mappings": {
       "default": {
@@ -102,7 +91,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2008",
     "mappings": {
       "default": {
@@ -111,7 +99,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2009",
     "mappings": {
       "default": {
@@ -120,7 +107,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "200A",
     "mappings": {
       "default": {
@@ -129,7 +115,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200B",
     "mappings": {
       "default": {
@@ -138,7 +123,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200C",
     "mappings": {
       "default": {
@@ -147,7 +131,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200D",
     "mappings": {
       "default": {
@@ -156,7 +139,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200E",
     "mappings": {
       "default": {
@@ -165,7 +147,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "200F",
     "mappings": {
       "default": {
@@ -174,7 +155,6 @@
     }
   },
   {
-    "category": "Zl",
     "key": "2028",
     "mappings": {
       "default": {
@@ -183,7 +163,6 @@
     }
   },
   {
-    "category": "Zp",
     "key": "2029",
     "mappings": {
       "default": {
@@ -192,7 +171,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202A",
     "mappings": {
       "default": {
@@ -201,7 +179,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202B",
     "mappings": {
       "default": {
@@ -210,7 +187,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202C",
     "mappings": {
       "default": {
@@ -219,7 +195,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202D",
     "mappings": {
       "default": {
@@ -228,7 +203,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202E",
     "mappings": {
       "default": {
@@ -237,7 +211,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "202F",
     "mappings": {
       "default": {
@@ -246,7 +219,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "205F",
     "mappings": {
       "default": {
@@ -255,7 +227,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "2060",
     "mappings": {
       "default": {
@@ -264,7 +235,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "2061",
     "mappings": {
       "default": {
@@ -273,7 +243,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "2062",
     "mappings": {
       "default": {
@@ -282,7 +251,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "2063",
     "mappings": {
       "default": {
@@ -291,7 +259,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "2064",
     "mappings": {
       "default": {
@@ -300,7 +267,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206A",
     "mappings": {
       "default": {
@@ -309,7 +275,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206B",
     "mappings": {
       "default": {
@@ -318,7 +283,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206E",
     "mappings": {
       "default": {
@@ -327,7 +291,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206F",
     "mappings": {
       "default": {
@@ -336,7 +299,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FEFF",
     "mappings": {
       "default": {
@@ -345,7 +307,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFF9",
     "mappings": {
       "default": {
@@ -354,7 +315,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFFA",
     "mappings": {
       "default": {
@@ -363,7 +323,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFFB",
     "mappings": {
       "default": {

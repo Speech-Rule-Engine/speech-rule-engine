@@ -1,0 +1,37 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "2135",
+    "mappings": {
+      "default": {
+        "default": "første transfinitte kardinaltal"
+      }
+    }
+  },
+  {
+    "key": "2136",
+    "mappings": {
+      "default": {
+        "default": "andet transfinitte kardinaltal"
+      }
+    }
+  },
+  {
+    "key": "2137",
+    "mappings": {
+      "default": {
+        "default": "tredje transfinitte kardinaltal"
+      }
+    }
+  },
+  {
+    "key": "2138",
+    "mappings": {
+      "default": {
+        "default": "fjerde transfinitte kardinaltal"
+      }
+    }
+  }
+]

@@ -22,9 +22,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import { SpeechRule } from '../rule_engine/speech_rule';
-import { TrieNode, TrieNodeKind } from './trie_node';
+import { Debugger } from '../common/debugger.js';
+import { SpeechRule } from '../rule_engine/speech_rule.js';
+import { TrieNode, TrieNodeKind } from './trie_node.js';
 
 export class AbstractTrieNode<T> implements TrieNode {
   /**
@@ -88,8 +88,8 @@ export class AbstractTrieNode<T> implements TrieNode {
    */
   public getChildren() {
     const children = [];
-    for (const key in this.children_) {
-      children.push(this.children_[key]);
+    for (const val of Object.values(this.children_)) {
+      children.push(val);
     }
     return children;
   }
@@ -99,10 +99,9 @@ export class AbstractTrieNode<T> implements TrieNode {
    */
   public findChildren(object: T) {
     const children = [];
-    for (const key in this.children_) {
-      const child = this.children_[key];
-      if (child.applyTest(object)) {
-        children.push(child);
+    for (const val of Object.values(this.children_)) {
+      if (val.applyTest(object)) {
+        children.push(val);
       }
     }
     return children;

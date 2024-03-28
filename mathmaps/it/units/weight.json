@@ -3,18 +3,13 @@
     "locale": "it"
   },
   {
-    "key": "dr",
+    "key": "dram",
     "mappings": {
       "default": {
         "plural": "dramme",
         "default": "dramma"
       }
-    },
-    "category": "weight",
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
     "key": "oz",
@@ -23,12 +18,7 @@
         "plural": "once",
         "default": "oncia"
       }
-    },
-    "category": "weight",
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "lb",
@@ -37,20 +27,10 @@
         "plural": "libbre",
         "default": "libbra"
       }
-    },
-    "category": "weight",
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "st",
-    "category": "weight",
-    "names": [
-      "st",
-      "st."
-    ],
     "mappings": {
       "default": {
         "plural": "stone",
@@ -60,11 +40,6 @@
   },
   {
     "key": "qtr",
-    "category": "weight",
-    "names": [
-      "qtr",
-      "qtr."
-    ],
     "mappings": {
       "default": {
         "plural": "quarti",
@@ -79,20 +54,10 @@
         "plural": "hundredweight",
         "default": "hundredweight"
       }
-    },
-    "category": "weight",
-    "names": [
-      "cwt",
-      "cwt."
-    ]
+    }
   },
   {
     "key": "LT",
-    "category": "weight",
-    "names": [
-      "LT",
-      "L.T."
-    ],
     "mappings": {
       "default": {
         "plural": "long ton",
@@ -107,11 +72,7 @@
         "plural": "grani",
         "default": "grano"
       }
-    },
-    "category": "weight",
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
@@ -120,19 +81,10 @@
         "plural": "grammi",
         "default": "grammo"
       }
-    },
-    "category": "weight",
-    "names": [
-      "g"
-    ],
-    "si": true
+    }
   },
   {
     "key": "mcg",
-    "category": "weight",
-    "names": [
-      "mcg"
-    ],
     "mappings": {
       "default": {
         "plural": "microgrammi",
@@ -147,11 +99,6 @@
         "plural": "tonnellate",
         "default": "tonnellata"
       }
-    },
-    "category": "weight",
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   }
 ]

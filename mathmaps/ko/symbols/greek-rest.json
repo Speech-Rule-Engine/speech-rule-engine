@@ -1,0 +1,11 @@
+[{"locale": "ko"},
+  {
+    "key": "0394",
+    "mappings": {
+      "clearspeak": {
+        "default": "삼각형",
+        "TriangleSymbol_Delta": "델타"
+      }
+    }
+  }
+]

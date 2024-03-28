@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from './semantic_node';
+import { SemanticNode } from './semantic_node.js';
 
-import { SemanticNodeFactory } from './semantic_node_factory';
+import { SemanticNodeFactory } from './semantic_node_factory.js';
 
 export interface SemanticParser<T> {
   /**

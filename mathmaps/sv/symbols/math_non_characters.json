@@ -8,15 +8,13 @@
       "default": {
         "default": "h streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "So",
     "key": "2114",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l b stapel"
       }
     }
   },
@@ -26,8 +24,7 @@
       "default": {
         "default": "numero tecken"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2117",
@@ -35,42 +32,37 @@
       "default": {
         "default": "ljudinspelning copyright"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "211E",
     "mappings": {
       "default": {
-        "default": "prescription take"
+        "default": "dubbelförhållandetecken"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "211F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svar"
       }
     }
   },
   {
-    "category": "So",
     "key": "2120",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tjänstemärke"
       }
     }
   },
   {
-    "category": "So",
     "key": "2121",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "telefonsymbol"
       }
     }
   },
@@ -80,15 +72,13 @@
       "default": {
         "default": "varumärkestecken"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "2123",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "versikel"
       }
     }
   },
@@ -98,8 +88,7 @@
       "default": {
         "default": "ounce sign"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2126",
@@ -107,8 +96,7 @@
       "default": {
         "default": "ohm"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2127",
@@ -116,8 +104,7 @@
       "default": {
         "default": "omvänt ohm"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "212A",
@@ -125,8 +112,7 @@
       "default": {
         "default": "grader kelvin"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "212B",
@@ -134,15 +120,13 @@
       "default": {
         "default": "angstroms"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "So",
     "key": "212E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppskattad"
       }
     }
   },
@@ -152,69 +136,61 @@
       "default": {
         "default": "roterat stort f"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Ll",
     "key": "2139",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "informationskälla"
       }
     }
   },
   {
-    "category": "So",
     "key": "213A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "roterat stort Q"
       }
     }
   },
   {
-    "category": "So",
     "key": "213B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "faxsymbol"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2141",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vridet stort G i sans serif"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2142",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vridet stort L i sans serif"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2143",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvänt stort L i sans serif"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2144",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vridet stort Y i sans serif"
       }
     }
   }

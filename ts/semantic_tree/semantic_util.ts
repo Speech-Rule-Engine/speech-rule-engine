@@ -19,80 +19,102 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
+import * as DomUtil from '../common/dom_util.js';
 
-import { SemanticNode } from './semantic_node';
+import { SemanticNode } from './semantic_node.js';
+
+export enum MMLTAGS {
+  ANNOTATION = 'ANNOTATION',
+  ANNOTATIONXML = 'ANNOTATION-XML',
+  MACTION = 'MACTION',
+  MALIGNGROUP = 'MALIGNGROUP',
+  MALIGNMARK = 'MALIGNMARK',
+  MATH = 'MATH',
+  MENCLOSE = 'MENCLOSE',
+  MERROR = 'MERROR',
+  MFENCED = 'MFENCED',
+  MFRAC = 'MFRAC',
+  MGLYPH = 'MGLYPH',
+  MI = 'MI',
+  MLABELEDTR = 'MLABELEDTR',
+  MMULTISCRIPTS = 'MMULTISCRIPTS',
+  MN = 'MN',
+  MO = 'MO',
+  MOVER = 'MOVER',
+  MPADDED = 'MPADDED',
+  MPHANTOM = 'MPHANTOM',
+  MPRESCRIPTS = 'MPRESCRIPTS',
+  MROOT = 'MROOT',
+  MROW = 'MROW',
+  MS = 'MS',
+  MSPACE = 'MSPACE',
+  MSQRT = 'MSQRT',
+  MSTYLE = 'MSTYLE',
+  MSUB = 'MSUB',
+  MSUBSUP = 'MSUBSUP',
+  MSUP = 'MSUP',
+  MTABLE = 'MTABLE',
+  MTD = 'MTD',
+  MTEXT = 'MTEXT',
+  MTR = 'MTR',
+  MUNDER = 'MUNDER',
+  MUNDEROVER = 'MUNDEROVER',
+  NONE = 'NONE',
+  SEMANTICS = 'SEMANTICS',
+}
+
 
 /**
  * List of MathML Tags that are considered to be leafs.
  */
-export const LEAFTAGS: string[] = ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSPACE'];
+const LEAFTAGS: string[] = [
+  MMLTAGS.MO,
+  MMLTAGS.MI,
+  MMLTAGS.MN,
+  MMLTAGS.MTEXT,
+  MMLTAGS.MS,
+  MMLTAGS.MSPACE
+];
 
 /**
  * List of MathML Tags that are to be ignored.
  */
-export const IGNORETAGS: string[] = [
-  'MERROR',
-  'MPHANTOM',
-  'MALIGNGROUP',
-  'MALIGNMARK',
-  'MPRESCRIPTS',
-  'ANNOTATION',
-  'ANNOTATION-XML'
+const IGNORETAGS: string[] = [
+  MMLTAGS.MERROR,
+  MMLTAGS.MPHANTOM,
+  MMLTAGS.MALIGNGROUP,
+  MMLTAGS.MALIGNMARK,
+  MMLTAGS.MPRESCRIPTS,
+  MMLTAGS.ANNOTATION,
+  MMLTAGS.ANNOTATIONXML
 ];
 
 /**
  * List of MathML Tags to be ignore if they have no children.
  */
-export const EMPTYTAGS: string[] = [
-  'MATH',
-  'MROW',
-  'MPADDED',
-  'MACTION',
-  'NONE',
-  'MSTYLE',
-  'SEMANTICS'
+const EMPTYTAGS: string[] = [
+  MMLTAGS.MATH,
+  MMLTAGS.MROW,
+  MMLTAGS.MPADDED,
+  MMLTAGS.MACTION,
+  MMLTAGS.NONE,
+  MMLTAGS.MSTYLE,
+  MMLTAGS.SEMANTICS
 ];
 
 /**
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-export const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
+const DISPLAYTAGS: string[] = [
+  MMLTAGS.MROOT,
+  MMLTAGS.MSQRT
+];
 
 /**
  * List of potential attributes that should be used as speech directly.
  */
-export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
-
-// /**
-//  * Merges keys of objects into an array.
-//  *
-//  * @param args Optional objects.
-//  * @returns Array of all keys of the objects.
-//  */
-// export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
-//   const keys: string[] = [];
-//   return keys.concat(...args.map(Object.keys));
-// }
-
-// /**
-//  * Merges values of objects into an array.
-//  *
-//  * @param args Optional objects.
-//  * @returns Array of all values of the objects.
-//  */
-// export function objectsToValues(
-//   ...args: { [key: string]: string }[]
-// ): string[] {
-//   const result: string[] = [];
-//   args.forEach((obj: { [key: string]: string }) => {
-//     for (const key in obj) {
-//       result.push(obj[key]);
-//     }
-//   });
-//   return result;
-// }
+const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
 
 /**
  * Checks if an element is a node with a math tag.
@@ -101,7 +123,7 @@ export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
  * @returns True if element is an math node.
  */
 export function hasMathTag(node: Element): boolean {
-  return !!node && DomUtil.tagName(node) === 'MATH';
+  return !!node && DomUtil.tagName(node) === MMLTAGS.MATH;
 }
 
 /**
@@ -110,7 +132,7 @@ export function hasMathTag(node: Element): boolean {
  * @param node The node to check.
  * @returns True if element is an leaf node.
  */
-export function hasLeafTag(node: Element): boolean {
+function hasLeafTag(node: Element): boolean {
   return !!node && LEAFTAGS.indexOf(DomUtil.tagName(node)) !== -1;
 }
 
@@ -153,7 +175,7 @@ export function hasDisplayTag(node: Element): boolean {
 export function isOrphanedGlyph(node: Element): boolean {
   return (
     !!node &&
-    DomUtil.tagName(node) === 'MGLYPH' &&
+      DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
     !hasLeafTag(node.parentNode as Element)
   );
 }
@@ -238,6 +260,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
       }
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
+      }
+      if (key.toLowerCase() === 'data-latex') {
+        to.attributes['latex'] = attrs[i].value;
       }
       if (key === 'href') {
         to.attributes['href'] = attrs[i].value;

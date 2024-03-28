@@ -8,8 +8,7 @@
       "default": {
         "default": "skript l"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2118",
@@ -17,51 +16,45 @@
       "default": {
         "default": "weierstrass p"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Ll",
     "key": "213C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pi med dubbelstreck"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "213D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gamma med dubbelstreck"
       }
     }
   },
   {
-    "category": "Lu",
     "key": "213E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort Gamma med dubbelstreck"
       }
     }
   },
   {
-    "category": "Lu",
     "key": "213F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort Pi med dubbelstreck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2140",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "summatecken med dubbelstreck"
       }
     }
   },
@@ -71,8 +64,7 @@
       "default": {
         "default": "stort d"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "2146",
@@ -80,8 +72,7 @@
       "default": {
         "default": "d"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2147",
@@ -89,8 +80,7 @@
       "default": {
         "default": "e"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "2148",
@@ -98,33 +88,29 @@
       "default": {
         "default": "i"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "2149",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kursivt j med dubbelstreck"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "1D6A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kursivt i utan prick"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "1D6A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kursivt j utan prick"
       }
     }
   }

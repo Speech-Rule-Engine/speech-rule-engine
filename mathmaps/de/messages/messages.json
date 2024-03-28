@@ -42,8 +42,8 @@
       "bold-italic": "fettkursives",
       "bold-script": "fettes Schreibschrift",
       "caligraphic": "kalligrafisches",
-      "caligraphic-bold": "fettes kalligrafisches",
-      "double-struck": [
+      "caligraphic-bold": "fettes kalligrafisches", 
+     "double-struck": [
         "mit Doppelstrich",
         "germanPostfix"
       ],

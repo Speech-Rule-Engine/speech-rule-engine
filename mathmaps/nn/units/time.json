@@ -4,11 +4,6 @@
   },
   {
     "key": "s",
-    "category": "time",
-    "names": [
-      "s"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "sekund",
@@ -18,10 +13,6 @@
   },
   {
     "key": "″",
-    "category": "time",
-    "names": [
-      "″"
-    ],
     "mappings": {
       "default": {
         "default": "sekund",
@@ -31,11 +22,6 @@
   },
   {
     "key": "min",
-    "category": "time",
-    "names": [
-      "min",
-      "′"
-    ],
     "mappings": {
       "default": {
         "default": "minutt",
@@ -45,10 +31,6 @@
   },
   {
     "key": "°",
-    "category": "time",
-    "names": [
-      "°"
-    ],
     "mappings": {
       "default": {
         "default": "grad",
@@ -58,11 +40,6 @@
   },
   {
     "key": "h",
-    "category": "time",
-    "names": [
-      "h",
-      "hr"
-    ],
     "mappings": {
       "default": {
         "default": "time",

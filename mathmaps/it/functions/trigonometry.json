@@ -8,12 +8,7 @@
       "default": {
         "default": "coseno"
       }
-    },
-    "category": "Trigonometric",
-    "names": [
-      "cos",
-      "cosine"
-    ]
+    }
   },
   {
     "key": "cot",
@@ -21,11 +16,7 @@
       "default": {
         "default": "cotangente"
       }
-    },
-    "category": "Trigonometric",
-    "names": [
-      "cot"
-    ]
+    }
   },
   {
     "key": "csc",
@@ -33,11 +24,7 @@
       "default": {
         "default": "cosecante"
       }
-    },
-    "category": "Trigonometric",
-    "names": [
-      "csc"
-    ]
+    }
   },
   {
     "key": "sec",
@@ -45,11 +32,7 @@
       "default": {
         "default": "secante"
       }
-    },
-    "category": "Trigonometric",
-    "names": [
-      "sec"
-    ]
+    }
   },
   {
     "key": "sin",
@@ -58,10 +41,7 @@
         "default": "seno"
       }
     },
-    "category": "Trigonometric",
     "names": [
-      "sin",
-      "sine",
       "sen"
     ]
   },
@@ -71,11 +51,7 @@
       "default": {
         "default": "tangente"
       }
-    },
-    "category": "Trigonometric",
-    "names": [
-      "tan"
-    ]
+    }
   },
   {
     "key": "arccos",
@@ -84,9 +60,7 @@
         "default": "arcocoseno"
       }
     },
-    "category": "Cyclometric",
     "names": [
-      "arccos",
       "acos"
     ]
   },
@@ -97,9 +71,7 @@
         "default": "arcocotangente"
       }
     },
-    "category": "Cyclometric",
     "names": [
-      "arccot",
       "acot"
     ]
   },
@@ -110,9 +82,7 @@
         "default": "arcocosecante"
       }
     },
-    "category": "Cyclometric",
     "names": [
-      "arccsc",
       "acsc"
     ]
   },
@@ -123,9 +93,7 @@
         "default": "arcosecante"
       }
     },
-    "category": "Cyclometric",
     "names": [
-      "arcsec",
       "asec"
     ]
   },
@@ -136,9 +104,7 @@
         "default": "arcoseno"
       }
     },
-    "category": "Cyclometric",
     "names": [
-      "arcsin",
       "arcsen",
       "asin",
       "asen",
@@ -152,9 +118,7 @@
         "default": "arcotangente"
       }
     },
-    "category": "Cyclometric",
     "names": [
-      "arctan",
       "atan"
     ]
   }

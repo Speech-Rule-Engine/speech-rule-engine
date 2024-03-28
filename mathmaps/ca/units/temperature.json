@@ -4,12 +4,6 @@
   },
   {
     "key": "F",
-    "category": "temperature",
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ],
     "mappings": {
       "default": {
         "default": "grau Fahrenheit",
@@ -19,11 +13,6 @@
   },
   {
     "key": "C",
-    "category": "temperature",
-    "names": [
-      "C",
-      "°C"
-    ],
     "mappings": {
       "default": {
         "default": "centígrad",
@@ -33,11 +22,6 @@
   },
   {
     "key": "K",
-    "category": "temperature",
-    "names": [
-      "K",
-      "°K"
-    ],
     "mappings": {
       "default": {
         "default": "kelvin",

@@ -3,11 +3,7 @@
     "locale": "nn"
   },
   {
-    "locale": "nn"
-  },
-  {
     "key": "1D26",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "litein øvre gamma"
@@ -16,7 +12,6 @@
   },
   {
     "key": "1D27",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "litein øvre lambda"
@@ -25,7 +20,6 @@
   },
   {
     "key": "1D28",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "litein øvre pi"
@@ -34,7 +28,6 @@
   },
   {
     "key": "1D29",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "litein øvre rho"
@@ -43,7 +36,6 @@
   },
   {
     "key": "1D2A",
-    "category": "Ll",
     "mappings": {
       "default": {
         "default": "litein øvre psi"
@@ -52,7 +44,6 @@
   },
   {
     "key": "1D5E",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superskript gamma"
@@ -61,7 +52,6 @@
   },
   {
     "key": "1D60",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "superskript pi"
@@ -70,7 +60,6 @@
   },
   {
     "key": "1D66",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subskript beta"
@@ -79,7 +68,6 @@
   },
   {
     "key": "1D67",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subskript gamma"
@@ -88,7 +76,6 @@
   },
   {
     "key": "1D68",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subskript rho"
@@ -97,7 +84,6 @@
   },
   {
     "key": "1D69",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subskript pi"
@@ -106,7 +92,6 @@
   },
   {
     "key": "1D6A",
-    "category": "Lm",
     "mappings": {
       "default": {
         "default": "subskript khi"

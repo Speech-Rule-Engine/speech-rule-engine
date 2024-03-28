@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { ColorPicker, StringColor } from './color_picker';
+import { ColorPicker, StringColor } from './color_picker.js';
 
 export interface Highlighter {
   /**

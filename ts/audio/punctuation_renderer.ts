@@ -19,10 +19,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const';
-import { AbstractAudioRenderer } from './abstract_audio_renderer';
-import * as AudioUtil from './audio_util';
-import { AuditoryDescription } from './auditory_description';
+import * as EngineConst from '../common/engine_const.js';
+import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
+import * as AudioUtil from './audio_util.js';
+import { AuditoryDescription } from './auditory_description.js';
 
 export class PunctuationRenderer extends AbstractAudioRenderer {
   /**
@@ -47,20 +47,14 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
-        if (span) {
-          pause = AudioUtil.mergePause(
-            pause,
-            descr as { pause: number },
-            Math.max
-          );
-        }
+        pause = descr;
         continue;
       }
       if (pause) {
         str += this.pause(pause[EngineConst.personalityProps.PAUSE]);
         pause = null;
       }
-      str += (span ? this.getSeparator() : '') + this.merge(descr.span);
+      str += (span ? this.separator : '') + this.merge(descr.span);
       span = true;
     }
     return str;

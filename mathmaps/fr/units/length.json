@@ -4,16 +4,11 @@
   },
   {
     "key": "m",
-    "si": true,
     "mappings": {
       "default": {
         "default": "mètre"
       }
-    },
-    "category": "Length",
-    "names": [
-      "m"
-    ]
+    }
   },
   {
     "key": "ft",
@@ -21,12 +16,7 @@
       "default": {
         "default": "pied"
       }
-    },
-    "category": "Length",
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
@@ -34,12 +24,7 @@
       "default": {
         "default": "pouce"
       }
-    },
-    "category": "Length",
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
@@ -47,12 +32,7 @@
       "default": {
         "default": "mile"
       }
-    },
-    "category": "Length",
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
@@ -60,75 +40,46 @@
       "default": {
         "default": "yard"
       }
-    },
-    "category": "Length",
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
-    {
-    "category": "length",
+  {
+    "key": "link",
     "mappings": {
       "default": {
         "default": "chaînon"
       }
-    },
-    "key": "link",
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
-    "category": "length",
+    "key": "rod",
     "mappings": {
       "default": {
         "default": "rod"
       }
-    },
-    "key": "rod",
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
-    "category": "length",
+    "key": "chain",
     "mappings": {
       "default": {
         "default": "chaîne"
       }
-    },
-    "key": "chain",
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
-    "category": "length",
+    "key": "furlong",
     "mappings": {
       "default": {
         "default": "furlong"
       }
-    },
-    "key": "furlong",
-    "names": [
-      "fur",
-      "fur."
-    ]
+    }
   },
   {
-    "category": "length",
+    "key": "n.m.",
     "mappings": {
       "default": {
         "default": "mille marin"
       }
-    },
-    "key": "n.m.",
-    "names": [
-      "n.m."
-    ]
+    }
   }
 ]

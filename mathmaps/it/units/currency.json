@@ -9,15 +9,7 @@
         "plural": "dollari",
         "default": "dollaro"
       }
-    },
-    "category": "currency",
-    "names": [
-      "$",
-      "💲",
-      "＄",
-      "﹩",
-      "USD"
-    ]
+    }
   },
   {
     "key": "£",
@@ -26,13 +18,7 @@
         "plural": "sterline",
         "default": "sterlina"
       }
-    },
-    "category": "currency",
-    "names": [
-      "£",
-      "￡",
-      "GBP"
-    ]
+    }
   },
   {
     "key": "¥",
@@ -41,13 +27,7 @@
         "plural": "yen",
         "default": "yen"
       }
-    },
-    "category": "currency",
-    "names": [
-      "¥",
-      "￥",
-      "JPY"
-    ]
+    }
   },
   {
     "key": "€",
@@ -56,12 +36,7 @@
         "plural": "euro",
         "default": "euro"
       }
-    },
-    "category": "currency",
-    "names": [
-      "€",
-      "EUR"
-    ]
+    }
   },
   {
     "key": "₡",
@@ -70,12 +45,7 @@
         "plural": "colons",
         "default": "colón"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₡",
-      "CRC"
-    ]
+    }
   },
   {
     "key": "₢",
@@ -84,11 +54,7 @@
         "plural": "cruzeiro",
         "default": "cruzeiro"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₢"
-    ]
+    }
   },
   {
     "key": "₣",
@@ -97,11 +63,7 @@
         "plural": "franchi",
         "default": "franco"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₣"
-    ]
+    }
   },
   {
     "key": "₤",
@@ -110,11 +72,7 @@
         "plural": "lire",
         "default": "lira"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₤"
-    ]
+    }
   },
   {
     "key": "₥",
@@ -123,11 +81,7 @@
         "plural": "millesimi di dollaro",
         "default": "millesimo di dollaro"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₥"
-    ]
+    }
   },
   {
     "key": "₦",
@@ -136,12 +90,7 @@
         "plural": "naira",
         "default": "naira"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₦",
-      "NGN"
-    ]
+    }
   },
   {
     "key": "₧",
@@ -150,11 +99,7 @@
         "plural": "pesetas",
         "default": "peseta"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₧"
-    ]
+    }
   },
   {
     "key": "₨",
@@ -163,16 +108,7 @@
         "plural": "rupie",
         "default": "rupia"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₨",
-      "₹",
-      "INR",
-      "NPR",
-      "PKR",
-      "LKR"
-    ]
+    }
   },
   {
     "key": "₩",
@@ -181,13 +117,7 @@
         "plural": "won",
         "default": "won"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₩",
-      "￦",
-      "KRW"
-    ]
+    }
   },
   {
     "key": "₪",
@@ -196,11 +126,7 @@
         "plural": "sheqel",
         "default": "sheqel"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₪"
-    ]
+    }
   },
   {
     "key": "₫",
@@ -209,11 +135,7 @@
         "plural": "dong",
         "default": "dong"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₫"
-    ]
+    }
   },
   {
     "key": "₭",
@@ -222,11 +144,7 @@
         "plural": "kip",
         "default": "kip"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₭"
-    ]
+    }
   },
   {
     "key": "₮",
@@ -235,11 +153,7 @@
         "plural": "tugrik",
         "default": "tugrik"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₮"
-    ]
+    }
   },
   {
     "key": "₯",
@@ -248,11 +162,7 @@
         "plural": "dracme",
         "default": "dracma"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₯"
-    ]
+    }
   },
   {
     "key": "₰",
@@ -261,11 +171,7 @@
         "plural": "penny tedeschi",
         "default": "penny tedesco"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₰"
-    ]
+    }
   },
   {
     "key": "₱",
@@ -274,11 +180,7 @@
         "plural": "peso",
         "default": "peso"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₱"
-    ]
+    }
   },
   {
     "key": "₲",
@@ -287,11 +189,7 @@
         "plural": "guaranis",
         "default": "guaranis"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₲"
-    ]
+    }
   },
   {
     "key": "₳",
@@ -300,11 +198,7 @@
         "plural": "austral",
         "default": "austral"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₳"
-    ]
+    }
   },
   {
     "key": "₴",
@@ -313,12 +207,7 @@
         "plural": "hryvnias",
         "default": "hryvnia"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₴",
-      "UAH"
-    ]
+    }
   },
   {
     "key": "₵",
@@ -327,64 +216,25 @@
         "plural": "cedis",
         "default": "cedis"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₵",
-      "GHS"
-    ]
+    }
   },
   {
-    "category": "currency",
-    "key": "₶",
-    "mappings": {
-      "default": {
-        "plural": "livre tournois",
-        "default": "livre tournois"
-      }
-    },
-    "names": [
-      "₶"
-    ]
-  },
-  {
-    "category": "currency",
-    "key": "₷",
-    "mappings": {
-      "default": {
-        "plural": "spesmili",
-        "default": "spesmilo"
-      }
-    },
-    "names": [
-      "₷"
-    ]
-  },
-  {
-    "category": "currency",
     "key": "₸",
     "mappings": {
       "default": {
         "plural": "tenge",
         "default": "tenge"
       }
-    },
-    "names": [
-      "₸", "KZT"
-    ]
+    }
   },
   {
-    "category": "currency",
     "key": "₺",
     "mappings": {
       "default": {
         "plural": "lire turche",
         "default": "lira turca"
       }
-    },
-    "names": [
-      "₺", "TRY"
-    ]
+    }
   },
   {
     "key": "元",
@@ -393,23 +243,15 @@
         "plural": "yuan",
         "default": "yuan"
       }
-    },
-    "category": "currency",
-    "names": [
-      "元"
-    ]
+    }
   },
   {
-    "category": "currency",
     "key": "¢",
     "mappings": {
       "default": {
         "plural": "centesimi",
         "default": "centesimo"
       }
-    },
-    "names": [
-      "￠", "¢"
-    ]
+    }
   }
 ]

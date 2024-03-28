@@ -1,2666 +1,2373 @@
-[{"locale": "en"},
+[
   {
-    "category": "So",
+    "locale": "en"
+  },
+  {
+    "key": "2500",
     "mappings": {
       "default": {
         "default": "box drawings light horizontal"
       }
-    },
-    "key": "2500"
+    }
   },
   {
-    "category": "So",
+    "key": "2501",
     "mappings": {
       "default": {
         "default": "box drawings heavy horizontal"
       }
-    },
-    "key": "2501"
+    }
   },
   {
-    "category": "So",
+    "key": "2502",
     "mappings": {
       "default": {
         "default": "box drawings light vertical"
       }
-    },
-    "key": "2502"
+    }
   },
   {
-    "category": "So",
+    "key": "2503",
     "mappings": {
       "default": {
         "default": "box drawings heavy vertical"
       }
-    },
-    "key": "2503"
+    }
   },
   {
-    "category": "So",
+    "key": "2504",
     "mappings": {
       "default": {
         "default": "box drawings light triple dash horizontal"
       }
-    },
-    "key": "2504"
+    }
   },
   {
-    "category": "So",
+    "key": "2505",
     "mappings": {
       "default": {
         "default": "box drawings heavy triple dash horizontal"
       }
-    },
-    "key": "2505"
+    }
   },
   {
-    "category": "So",
+    "key": "2506",
     "mappings": {
       "default": {
         "default": "box drawings light triple dash vertical"
       }
-    },
-    "key": "2506"
+    }
   },
   {
-    "category": "So",
+    "key": "2507",
     "mappings": {
       "default": {
         "default": "box drawings heavy triple dash vertical"
       }
-    },
-    "key": "2507"
+    }
   },
   {
-    "category": "So",
+    "key": "2508",
     "mappings": {
       "default": {
         "default": "box drawings light quadruple dash horizontal"
       }
-    },
-    "key": "2508"
+    }
   },
   {
-    "category": "So",
+    "key": "2509",
     "mappings": {
       "default": {
         "default": "box drawings heavy quadruple dash horizontal"
       }
-    },
-    "key": "2509"
+    }
   },
   {
-    "category": "So",
+    "key": "250A",
     "mappings": {
       "default": {
         "default": "box drawings light quadruple dash vertical"
       }
-    },
-    "key": "250A"
+    }
   },
   {
-    "category": "So",
+    "key": "250B",
     "mappings": {
       "default": {
         "default": "box drawings heavy quadruple dash vertical"
       }
-    },
-    "key": "250B"
+    }
   },
   {
-    "category": "So",
+    "key": "250C",
     "mappings": {
       "default": {
         "default": "box drawings light down and right"
       }
-    },
-    "key": "250C"
+    }
   },
   {
-    "category": "So",
+    "key": "250D",
     "mappings": {
       "default": {
         "default": "box drawings down light and right heavy"
       }
-    },
-    "key": "250D"
+    }
   },
   {
-    "category": "So",
+    "key": "250E",
     "mappings": {
       "default": {
         "default": "box drawings down heavy and right light"
       }
-    },
-    "key": "250E"
+    }
   },
   {
-    "category": "So",
+    "key": "250F",
     "mappings": {
       "default": {
         "default": "box drawings heavy down and right"
       }
-    },
-    "key": "250F"
+    }
   },
   {
-    "category": "So",
+    "key": "2510",
     "mappings": {
       "default": {
         "default": "box drawings light down and left"
       }
-    },
-    "key": "2510"
+    }
   },
   {
-    "category": "So",
+    "key": "2511",
     "mappings": {
       "default": {
         "default": "box drawings down light and left heavy"
       }
-    },
-    "key": "2511"
+    }
   },
   {
-    "category": "So",
+    "key": "2512",
     "mappings": {
       "default": {
         "default": "box drawings down heavy and left light"
       }
-    },
-    "key": "2512"
+    }
   },
   {
-    "category": "So",
+    "key": "2513",
     "mappings": {
       "default": {
         "default": "box drawings heavy down and left"
       }
-    },
-    "key": "2513"
+    }
   },
   {
-    "category": "So",
+    "key": "2514",
     "mappings": {
       "default": {
         "default": "box drawings light up and right"
       }
-    },
-    "key": "2514"
+    }
   },
   {
-    "category": "So",
+    "key": "2515",
     "mappings": {
       "default": {
         "default": "box drawings up light and right heavy"
       }
-    },
-    "key": "2515"
+    }
   },
   {
-    "category": "So",
+    "key": "2516",
     "mappings": {
       "default": {
         "default": "box drawings up heavy and right light"
       }
-    },
-    "key": "2516"
+    }
   },
   {
-    "category": "So",
+    "key": "2517",
     "mappings": {
       "default": {
         "default": "box drawings heavy up and right"
       }
-    },
-    "key": "2517"
+    }
   },
   {
-    "category": "So",
+    "key": "2518",
     "mappings": {
       "default": {
         "default": "box drawings light up and left"
       }
-    },
-    "key": "2518"
+    }
   },
   {
-    "category": "So",
+    "key": "2519",
     "mappings": {
       "default": {
         "default": "box drawings up light and left heavy"
       }
-    },
-    "key": "2519"
+    }
   },
   {
-    "category": "So",
+    "key": "251A",
     "mappings": {
       "default": {
         "default": "box drawings up heavy and left light"
       }
-    },
-    "key": "251A"
+    }
   },
   {
-    "category": "So",
+    "key": "251B",
     "mappings": {
       "default": {
         "default": "box drawings heavy up and left"
       }
-    },
-    "key": "251B"
+    }
   },
   {
-    "category": "So",
+    "key": "251C",
     "mappings": {
       "default": {
         "default": "box drawings light vertical and right"
       }
-    },
-    "key": "251C"
+    }
   },
   {
-    "category": "So",
+    "key": "251D",
     "mappings": {
       "default": {
         "default": "box drawings vertical light and right heavy"
       }
-    },
-    "key": "251D"
+    }
   },
   {
-    "category": "So",
+    "key": "251E",
     "mappings": {
       "default": {
         "default": "box drawings up heavy and right down light"
       }
-    },
-    "key": "251E"
+    }
   },
   {
-    "category": "So",
+    "key": "251F",
     "mappings": {
       "default": {
         "default": "box drawings down heavy and right up light"
       }
-    },
-    "key": "251F"
+    }
   },
   {
-    "category": "So",
+    "key": "2520",
     "mappings": {
       "default": {
         "default": "box drawings vertical heavy and right light"
       }
-    },
-    "key": "2520"
+    }
   },
   {
-    "category": "So",
+    "key": "2521",
     "mappings": {
       "default": {
         "default": "box drawings down light and right up heavy"
       }
-    },
-    "key": "2521"
+    }
   },
   {
-    "category": "So",
+    "key": "2522",
     "mappings": {
       "default": {
         "default": "box drawings up light and right down heavy"
       }
-    },
-    "key": "2522"
+    }
   },
   {
-    "category": "So",
+    "key": "2523",
     "mappings": {
       "default": {
         "default": "box drawings heavy vertical and right"
       }
-    },
-    "key": "2523"
+    }
   },
   {
-    "category": "So",
+    "key": "2524",
     "mappings": {
       "default": {
         "default": "box drawings light vertical and left"
       }
-    },
-    "key": "2524"
+    }
   },
   {
-    "category": "So",
+    "key": "2525",
     "mappings": {
       "default": {
         "default": "box drawings vertical light and left heavy"
       }
-    },
-    "key": "2525"
+    }
   },
   {
-    "category": "So",
+    "key": "2526",
     "mappings": {
       "default": {
         "default": "box drawings up heavy and left down light"
       }
-    },
-    "key": "2526"
+    }
   },
   {
-    "category": "So",
+    "key": "2527",
     "mappings": {
       "default": {
         "default": "box drawings down heavy and left up light"
       }
-    },
-    "key": "2527"
+    }
   },
   {
-    "category": "So",
+    "key": "2528",
     "mappings": {
       "default": {
         "default": "box drawings vertical heavy and left light"
       }
-    },
-    "key": "2528"
+    }
   },
   {
-    "category": "So",
+    "key": "2529",
     "mappings": {
       "default": {
         "default": "box drawings down light and left up heavy"
       }
-    },
-    "key": "2529"
+    }
   },
   {
-    "category": "So",
+    "key": "252A",
     "mappings": {
       "default": {
         "default": "box drawings up light and left down heavy"
       }
-    },
-    "key": "252A"
+    }
   },
   {
-    "category": "So",
+    "key": "252B",
     "mappings": {
       "default": {
         "default": "box drawings heavy vertical and left"
       }
-    },
-    "key": "252B"
+    }
   },
   {
-    "category": "So",
+    "key": "252C",
     "mappings": {
       "default": {
         "default": "box drawings light down and horizontal"
       }
-    },
-    "key": "252C"
+    }
   },
   {
-    "category": "So",
+    "key": "252D",
     "mappings": {
       "default": {
         "default": "box drawings left heavy and right down light"
       }
-    },
-    "key": "252D"
+    }
   },
   {
-    "category": "So",
+    "key": "252E",
     "mappings": {
       "default": {
         "default": "box drawings right heavy and left down light"
       }
-    },
-    "key": "252E"
+    }
   },
   {
-    "category": "So",
+    "key": "252F",
     "mappings": {
       "default": {
         "default": "box drawings down light and horizontal heavy"
       }
-    },
-    "key": "252F"
+    }
   },
   {
-    "category": "So",
+    "key": "2530",
     "mappings": {
       "default": {
         "default": "box drawings down heavy and horizontal light"
       }
-    },
-    "key": "2530"
+    }
   },
   {
-    "category": "So",
+    "key": "2531",
     "mappings": {
       "default": {
         "default": "box drawings right light and left down heavy"
       }
-    },
-    "key": "2531"
+    }
   },
   {
-    "category": "So",
+    "key": "2532",
     "mappings": {
       "default": {
         "default": "box drawings left light and right down heavy"
       }
-    },
-    "key": "2532"
+    }
   },
   {
-    "category": "So",
+    "key": "2533",
     "mappings": {
       "default": {
         "default": "box drawings heavy down and horizontal"
       }
-    },
-    "key": "2533"
+    }
   },
   {
-    "category": "So",
+    "key": "2534",
     "mappings": {
       "default": {
         "default": "box drawings light up and horizontal"
       }
-    },
-    "key": "2534"
+    }
   },
   {
-    "category": "So",
+    "key": "2535",
     "mappings": {
       "default": {
         "default": "box drawings left heavy and right up light"
       }
-    },
-    "key": "2535"
+    }
   },
   {
-    "category": "So",
+    "key": "2536",
     "mappings": {
       "default": {
         "default": "box drawings right heavy and left up light"
       }
-    },
-    "key": "2536"
+    }
   },
   {
-    "category": "So",
+    "key": "2537",
     "mappings": {
       "default": {
         "default": "box drawings up light and horizontal heavy"
       }
-    },
-    "key": "2537"
+    }
   },
   {
-    "category": "So",
+    "key": "2538",
     "mappings": {
       "default": {
         "default": "box drawings up heavy and horizontal light"
       }
-    },
-    "key": "2538"
+    }
   },
   {
-    "category": "So",
+    "key": "2539",
     "mappings": {
       "default": {
         "default": "box drawings right light and left up heavy"
       }
-    },
-    "key": "2539"
+    }
   },
   {
-    "category": "So",
+    "key": "253A",
     "mappings": {
       "default": {
         "default": "box drawings left light and right up heavy"
       }
-    },
-    "key": "253A"
+    }
   },
   {
-    "category": "So",
+    "key": "253B",
     "mappings": {
       "default": {
         "default": "box drawings heavy up and horizontal"
       }
-    },
-    "key": "253B"
+    }
   },
   {
-    "category": "So",
+    "key": "253C",
     "mappings": {
       "default": {
         "default": "box drawings light vertical and horizontal"
       }
-    },
-    "key": "253C"
+    }
   },
   {
-    "category": "So",
+    "key": "253D",
     "mappings": {
       "default": {
         "default": "box drawings left heavy and right vertical light"
       }
-    },
-    "key": "253D"
+    }
   },
   {
-    "category": "So",
+    "key": "253E",
     "mappings": {
       "default": {
         "default": "box drawings right heavy and left vertical light"
       }
-    },
-    "key": "253E"
+    }
   },
   {
-    "category": "So",
+    "key": "253F",
     "mappings": {
       "default": {
         "default": "box drawings vertical light and horizontal heavy"
       }
-    },
-    "key": "253F"
+    }
   },
   {
-    "category": "So",
+    "key": "2540",
     "mappings": {
       "default": {
         "default": "box drawings up heavy and down horizontal light"
       }
-    },
-    "key": "2540"
+    }
   },
   {
-    "category": "So",
+    "key": "2541",
     "mappings": {
       "default": {
         "default": "box drawings down heavy and up horizontal light"
       }
-    },
-    "key": "2541"
+    }
   },
   {
-    "category": "So",
+    "key": "2542",
     "mappings": {
       "default": {
         "default": "box drawings vertical heavy and horizontal light"
       }
-    },
-    "key": "2542"
+    }
   },
   {
-    "category": "So",
+    "key": "2543",
     "mappings": {
       "default": {
         "default": "box drawings left up heavy and right down light"
       }
-    },
-    "key": "2543"
+    }
   },
   {
-    "category": "So",
+    "key": "2544",
     "mappings": {
       "default": {
         "default": "box drawings right up heavy and left down light"
       }
-    },
-    "key": "2544"
+    }
   },
   {
-    "category": "So",
+    "key": "2545",
     "mappings": {
       "default": {
         "default": "box drawings left down heavy and right up light"
       }
-    },
-    "key": "2545"
+    }
   },
   {
-    "category": "So",
+    "key": "2546",
     "mappings": {
       "default": {
         "default": "box drawings right down heavy and left up light"
       }
-    },
-    "key": "2546"
+    }
   },
   {
-    "category": "So",
+    "key": "2547",
     "mappings": {
       "default": {
         "default": "box drawings down light and up horizontal heavy"
       }
-    },
-    "key": "2547"
+    }
   },
   {
-    "category": "So",
+    "key": "2548",
     "mappings": {
       "default": {
         "default": "box drawings up light and down horizontal heavy"
       }
-    },
-    "key": "2548"
+    }
   },
   {
-    "category": "So",
+    "key": "2549",
     "mappings": {
       "default": {
         "default": "box drawings right light and left vertical heavy"
       }
-    },
-    "key": "2549"
+    }
   },
   {
-    "category": "So",
+    "key": "254A",
     "mappings": {
       "default": {
         "default": "box drawings left light and right vertical heavy"
       }
-    },
-    "key": "254A"
+    }
   },
   {
-    "category": "So",
+    "key": "254B",
     "mappings": {
       "default": {
         "default": "box drawings heavy vertical and horizontal"
       }
-    },
-    "key": "254B"
+    }
   },
   {
-    "category": "So",
+    "key": "254C",
     "mappings": {
       "default": {
         "default": "box drawings light double dash horizontal"
       }
-    },
-    "key": "254C"
+    }
   },
   {
-    "category": "So",
+    "key": "254D",
     "mappings": {
       "default": {
         "default": "box drawings heavy double dash horizontal"
       }
-    },
-    "key": "254D"
+    }
   },
   {
-    "category": "So",
+    "key": "254E",
     "mappings": {
       "default": {
         "default": "box drawings light double dash vertical"
       }
-    },
-    "key": "254E"
+    }
   },
   {
-    "category": "So",
+    "key": "254F",
     "mappings": {
       "default": {
         "default": "box drawings heavy double dash vertical"
       }
-    },
-    "key": "254F"
+    }
   },
   {
-    "category": "So",
+    "key": "2550",
     "mappings": {
       "default": {
         "default": "box drawings double horizontal"
       }
-    },
-    "key": "2550"
+    }
   },
   {
-    "category": "So",
+    "key": "2551",
     "mappings": {
       "default": {
         "default": "box drawings double vertical"
       }
-    },
-    "key": "2551"
+    }
   },
   {
-    "category": "So",
+    "key": "2552",
     "mappings": {
       "default": {
         "default": "box drawings down single and right double"
       }
-    },
-    "key": "2552"
+    }
   },
   {
-    "category": "So",
+    "key": "2553",
     "mappings": {
       "default": {
         "default": "box drawings down double and right single"
       }
-    },
-    "key": "2553"
+    }
   },
   {
-    "category": "So",
+    "key": "2554",
     "mappings": {
       "default": {
         "default": "box drawings double down and right"
       }
-    },
-    "key": "2554"
+    }
   },
   {
-    "category": "So",
+    "key": "2555",
     "mappings": {
       "default": {
         "default": "box drawings down single and left double"
       }
-    },
-    "key": "2555"
+    }
   },
   {
-    "category": "So",
+    "key": "2556",
     "mappings": {
       "default": {
         "default": "box drawings down double and left single"
       }
-    },
-    "key": "2556"
+    }
   },
   {
-    "category": "So",
+    "key": "2557",
     "mappings": {
       "default": {
         "default": "box drawings double down and left"
       }
-    },
-    "key": "2557"
+    }
   },
   {
-    "category": "So",
+    "key": "2558",
     "mappings": {
       "default": {
         "default": "box drawings up single and right double"
       }
-    },
-    "key": "2558"
+    }
   },
   {
-    "category": "So",
+    "key": "2559",
     "mappings": {
       "default": {
         "default": "box drawings up double and right single"
       }
-    },
-    "key": "2559"
+    }
   },
   {
-    "category": "So",
+    "key": "255A",
     "mappings": {
       "default": {
         "default": "box drawings double up and right"
       }
-    },
-    "key": "255A"
+    }
   },
   {
-    "category": "So",
+    "key": "255B",
     "mappings": {
       "default": {
         "default": "box drawings up single and left double"
       }
-    },
-    "key": "255B"
+    }
   },
   {
-    "category": "So",
+    "key": "255C",
     "mappings": {
       "default": {
         "default": "box drawings up double and left single"
       }
-    },
-    "key": "255C"
+    }
   },
   {
-    "category": "So",
+    "key": "255D",
     "mappings": {
       "default": {
         "default": "box drawings double up and left"
       }
-    },
-    "key": "255D"
+    }
   },
   {
-    "category": "So",
+    "key": "255E",
     "mappings": {
       "default": {
         "default": "box drawings vertical single and right double"
       }
-    },
-    "key": "255E"
+    }
   },
   {
-    "category": "So",
+    "key": "255F",
     "mappings": {
       "default": {
         "default": "box drawings vertical double and right single"
       }
-    },
-    "key": "255F"
+    }
   },
   {
-    "category": "So",
+    "key": "2560",
     "mappings": {
       "default": {
         "default": "box drawings double vertical and right"
       }
-    },
-    "key": "2560"
+    }
   },
   {
-    "category": "So",
+    "key": "2561",
     "mappings": {
       "default": {
         "default": "box drawings vertical single and left double"
       }
-    },
-    "key": "2561"
+    }
   },
   {
-    "category": "So",
+    "key": "2562",
     "mappings": {
       "default": {
         "default": "box drawings vertical double and left single"
       }
-    },
-    "key": "2562"
+    }
   },
   {
-    "category": "So",
+    "key": "2563",
     "mappings": {
       "default": {
         "default": "box drawings double vertical and left"
       }
-    },
-    "key": "2563"
+    }
   },
   {
-    "category": "So",
+    "key": "2564",
     "mappings": {
       "default": {
         "default": "box drawings down single and horizontal double"
       }
-    },
-    "key": "2564"
+    }
   },
   {
-    "category": "So",
+    "key": "2565",
     "mappings": {
       "default": {
         "default": "box drawings down double and horizontal single"
       }
-    },
-    "key": "2565"
+    }
   },
   {
-    "category": "So",
+    "key": "2566",
     "mappings": {
       "default": {
         "default": "box drawings double down and horizontal"
       }
-    },
-    "key": "2566"
+    }
   },
   {
-    "category": "So",
+    "key": "2567",
     "mappings": {
       "default": {
         "default": "box drawings up single and horizontal double"
       }
-    },
-    "key": "2567"
+    }
   },
   {
-    "category": "So",
+    "key": "2568",
     "mappings": {
       "default": {
         "default": "box drawings up double and horizontal single"
       }
-    },
-    "key": "2568"
+    }
   },
   {
-    "category": "So",
+    "key": "2569",
     "mappings": {
       "default": {
         "default": "box drawings double up and horizontal"
       }
-    },
-    "key": "2569"
+    }
   },
   {
-    "category": "So",
+    "key": "256A",
     "mappings": {
       "default": {
         "default": "box drawings vertical single and horizontal double"
       }
-    },
-    "key": "256A"
+    }
   },
   {
-    "category": "So",
+    "key": "256B",
     "mappings": {
       "default": {
         "default": "box drawings vertical double and horizontal single"
       }
-    },
-    "key": "256B"
+    }
   },
   {
-    "category": "So",
+    "key": "256C",
     "mappings": {
       "default": {
         "default": "box drawings double vertical and horizontal"
       }
-    },
-    "key": "256C"
+    }
   },
   {
-    "category": "So",
+    "key": "256D",
     "mappings": {
       "default": {
         "default": "box drawings light arc down and right"
       }
-    },
-    "key": "256D"
+    }
   },
   {
-    "category": "So",
+    "key": "256E",
     "mappings": {
       "default": {
         "default": "box drawings light arc down and left"
       }
-    },
-    "key": "256E"
+    }
   },
   {
-    "category": "So",
+    "key": "256F",
     "mappings": {
       "default": {
         "default": "box drawings light arc up and left"
       }
-    },
-    "key": "256F"
+    }
   },
   {
-    "category": "So",
+    "key": "2570",
     "mappings": {
       "default": {
         "default": "box drawings light arc up and right"
       }
-    },
-    "key": "2570"
+    }
   },
   {
-    "category": "So",
+    "key": "2571",
     "mappings": {
       "default": {
         "default": "box drawings light diagonal upper right to lower left"
       }
-    },
-    "key": "2571"
+    }
   },
   {
-    "category": "So",
+    "key": "2572",
     "mappings": {
       "default": {
         "default": "box drawings light diagonal upper left to lower right"
       }
-    },
-    "key": "2572"
+    }
   },
   {
-    "category": "So",
+    "key": "2573",
     "mappings": {
       "default": {
         "default": "box drawings light diagonal cross"
       }
-    },
-    "key": "2573"
+    }
   },
   {
-    "category": "So",
+    "key": "2574",
     "mappings": {
       "default": {
         "default": "box drawings light left"
       }
-    },
-    "key": "2574"
+    }
   },
   {
-    "category": "So",
+    "key": "2575",
     "mappings": {
       "default": {
         "default": "box drawings light up"
       }
-    },
-    "key": "2575"
+    }
   },
   {
-    "category": "So",
+    "key": "2576",
     "mappings": {
       "default": {
         "default": "box drawings light right"
       }
-    },
-    "key": "2576"
+    }
   },
   {
-    "category": "So",
+    "key": "2577",
     "mappings": {
       "default": {
         "default": "box drawings light down"
       }
-    },
-    "key": "2577"
+    }
   },
   {
-    "category": "So",
+    "key": "2578",
     "mappings": {
       "default": {
         "default": "box drawings heavy left"
       }
-    },
-    "key": "2578"
+    }
   },
   {
-    "category": "So",
+    "key": "2579",
     "mappings": {
       "default": {
         "default": "box drawings heavy up"
       }
-    },
-    "key": "2579"
+    }
   },
   {
-    "category": "So",
+    "key": "257A",
     "mappings": {
       "default": {
         "default": "box drawings heavy right"
       }
-    },
-    "key": "257A"
+    }
   },
   {
-    "category": "So",
+    "key": "257B",
     "mappings": {
       "default": {
         "default": "box drawings heavy down"
       }
-    },
-    "key": "257B"
+    }
   },
   {
-    "category": "So",
+    "key": "257C",
     "mappings": {
       "default": {
         "default": "box drawings light left and heavy right"
       }
-    },
-    "key": "257C"
+    }
   },
   {
-    "category": "So",
+    "key": "257D",
     "mappings": {
       "default": {
         "default": "box drawings light up and heavy down"
       }
-    },
-    "key": "257D"
+    }
   },
   {
-    "category": "So",
+    "key": "257E",
     "mappings": {
       "default": {
         "default": "box drawings heavy left and light right"
       }
-    },
-    "key": "257E"
+    }
   },
   {
-    "category": "So",
+    "key": "257F",
     "mappings": {
       "default": {
         "default": "box drawings heavy up and light down"
       }
-    },
-    "key": "257F"
+    }
   },
   {
-    "category": "So",
+    "key": "2580",
     "mappings": {
       "default": {
         "default": "upper half block"
       }
-    },
-    "key": "2580"
+    }
   },
   {
-    "category": "So",
+    "key": "2581",
     "mappings": {
       "default": {
         "default": "lower one eighth block"
       }
-    },
-    "key": "2581"
+    }
   },
   {
-    "category": "So",
+    "key": "2582",
     "mappings": {
       "default": {
         "default": "lower one quarter block"
       }
-    },
-    "key": "2582"
+    }
   },
   {
-    "category": "So",
+    "key": "2583",
     "mappings": {
       "default": {
         "default": "lower three eighths block"
       }
-    },
-    "key": "2583"
+    }
   },
   {
-    "category": "So",
+    "key": "2584",
     "mappings": {
       "default": {
         "default": "lower half block"
       }
-    },
-    "key": "2584"
+    }
   },
   {
-    "category": "So",
+    "key": "2585",
     "mappings": {
       "default": {
         "default": "lower five eighths block"
       }
-    },
-    "key": "2585"
+    }
   },
   {
-    "category": "So",
+    "key": "2586",
     "mappings": {
       "default": {
         "default": "lower three quarters block"
       }
-    },
-    "key": "2586"
+    }
   },
   {
-    "category": "So",
+    "key": "2587",
     "mappings": {
       "default": {
         "default": "lower seven eighths block"
       }
-    },
-    "key": "2587"
+    }
   },
   {
-    "category": "So",
+    "key": "2588",
     "mappings": {
       "default": {
         "default": "full block"
       }
-    },
-    "key": "2588"
+    }
   },
   {
-    "category": "So",
+    "key": "2589",
     "mappings": {
       "default": {
         "default": "left seven eighths block"
       }
-    },
-    "key": "2589"
+    }
   },
   {
-    "category": "So",
+    "key": "258A",
     "mappings": {
       "default": {
         "default": "left three quarters block"
       }
-    },
-    "key": "258A"
+    }
   },
   {
-    "category": "So",
+    "key": "258B",
     "mappings": {
       "default": {
         "default": "left five eighths block"
       }
-    },
-    "key": "258B"
+    }
   },
   {
-    "category": "So",
+    "key": "258C",
     "mappings": {
       "default": {
         "default": "left half block"
       }
-    },
-    "key": "258C"
+    }
   },
   {
-    "category": "So",
+    "key": "258D",
     "mappings": {
       "default": {
         "default": "left three eighths block"
       }
-    },
-    "key": "258D"
+    }
   },
   {
-    "category": "So",
+    "key": "258E",
     "mappings": {
       "default": {
         "default": "left one quarter block"
       }
-    },
-    "key": "258E"
+    }
   },
   {
-    "category": "So",
+    "key": "258F",
     "mappings": {
       "default": {
         "default": "left one eighth block"
       }
-    },
-    "key": "258F"
+    }
   },
   {
-    "category": "So",
+    "key": "2590",
     "mappings": {
       "default": {
         "default": "right half block"
       }
-    },
-    "key": "2590"
+    }
   },
   {
-    "category": "So",
+    "key": "2591",
     "mappings": {
       "default": {
         "default": "light shade"
       }
-    },
-    "key": "2591"
+    }
   },
   {
-    "category": "So",
+    "key": "2592",
     "mappings": {
       "default": {
         "default": "medium shade"
       }
-    },
-    "key": "2592"
+    }
   },
   {
-    "category": "So",
+    "key": "2593",
     "mappings": {
       "default": {
         "default": "dark shade"
       }
-    },
-    "key": "2593"
+    }
   },
   {
-    "category": "So",
+    "key": "2594",
     "mappings": {
       "default": {
         "default": "upper one eighth block"
       }
-    },
-    "key": "2594"
+    }
   },
   {
-    "category": "So",
+    "key": "2595",
     "mappings": {
       "default": {
         "default": "right one eighth block"
       }
-    },
-    "key": "2595"
+    }
   },
   {
-    "category": "So",
+    "key": "2596",
     "mappings": {
       "default": {
         "default": "quadrant lower left"
       }
-    },
-    "key": "2596"
+    }
   },
   {
-    "category": "So",
+    "key": "2597",
     "mappings": {
       "default": {
         "default": "quadrant lower right"
       }
-    },
-    "key": "2597"
+    }
   },
   {
-    "category": "So",
+    "key": "2598",
     "mappings": {
       "default": {
         "default": "quadrant upper left"
       }
-    },
-    "key": "2598"
+    }
   },
   {
-    "category": "So",
+    "key": "2599",
     "mappings": {
       "default": {
         "default": "quadrant upper left and lower left and lower right"
       }
-    },
-    "key": "2599"
+    }
   },
   {
-    "category": "So",
+    "key": "259A",
     "mappings": {
       "default": {
         "default": "quadrant upper left and lower right"
       }
-    },
-    "key": "259A"
+    }
   },
   {
-    "category": "So",
+    "key": "259B",
     "mappings": {
       "default": {
         "default": "quadrant upper left and upper right and lower left"
       }
-    },
-    "key": "259B"
+    }
   },
   {
-    "category": "So",
+    "key": "259C",
     "mappings": {
       "default": {
         "default": "quadrant upper left and upper right and lower right"
       }
-    },
-    "key": "259C"
+    }
   },
   {
-    "category": "So",
+    "key": "259D",
     "mappings": {
       "default": {
         "default": "quadrant upper right"
       }
-    },
-    "key": "259D"
+    }
   },
   {
-    "category": "So",
+    "key": "259E",
     "mappings": {
       "default": {
         "default": "quadrant upper right and lower left"
       }
-    },
-    "key": "259E"
+    }
   },
   {
-    "category": "So",
+    "key": "259F",
     "mappings": {
       "default": {
         "default": "quadrant upper right and lower left and lower right"
       }
-    },
-    "key": "259F"
+    }
   },
   {
-    "category": "So",
+    "key": "25A0",
     "mappings": {
       "default": {
         "default": "black square"
       }
-    },
-    "key": "25A0"
+    }
   },
   {
-    "category": "So",
+    "key": "25A1",
     "mappings": {
       "default": {
         "default": "white square"
       }
-    },
-    "key": "25A1"
+    }
   },
   {
-    "category": "So",
+    "key": "25A2",
     "mappings": {
       "default": {
         "default": "white square with rounded corners"
       }
-    },
-    "key": "25A2"
+    }
   },
   {
-    "category": "So",
+    "key": "25A3",
     "mappings": {
       "default": {
         "default": "white square containing black small square"
       }
-    },
-    "key": "25A3"
+    }
   },
   {
-    "category": "So",
+    "key": "25A4",
     "mappings": {
       "default": {
         "default": "square with horizontal fill"
       }
-    },
-    "key": "25A4"
+    }
   },
   {
-    "category": "So",
+    "key": "25A5",
     "mappings": {
       "default": {
         "default": "square with vertical fill"
       }
-    },
-    "key": "25A5"
+    }
   },
   {
-    "category": "So",
+    "key": "25A6",
     "mappings": {
       "default": {
         "default": "square with orthogonal crosshatch fill"
       }
-    },
-    "key": "25A6"
+    }
   },
   {
-    "category": "So",
+    "key": "25A7",
     "mappings": {
       "default": {
         "default": "square with upper left to lower right fill"
       }
-    },
-    "key": "25A7"
+    }
   },
   {
-    "category": "So",
+    "key": "25A8",
     "mappings": {
       "default": {
         "default": "square with upper right to lower left fill"
       }
-    },
-    "key": "25A8"
+    }
   },
   {
-    "category": "So",
+    "key": "25A9",
     "mappings": {
       "default": {
         "default": "square with diagonal crosshatch fill"
       }
-    },
-    "key": "25A9"
+    }
   },
   {
-    "category": "So",
+    "key": "25AA",
     "mappings": {
       "default": {
         "default": "black small square"
       }
-    },
-    "key": "25AA"
+    }
   },
   {
-    "category": "So",
+    "key": "25AB",
     "mappings": {
       "default": {
         "default": "white small square"
       }
-    },
-    "key": "25AB"
+    }
   },
   {
-    "category": "So",
+    "key": "25AC",
     "mappings": {
       "default": {
         "default": "black rectangle"
       }
-    },
-    "key": "25AC"
+    }
   },
   {
-    "category": "So",
+    "key": "25AD",
     "mappings": {
       "default": {
         "default": "white rectangle"
       }
-    },
-    "key": "25AD"
+    }
   },
   {
-    "category": "So",
+    "key": "25AE",
     "mappings": {
       "default": {
         "default": "black vertical rectangle"
       }
-    },
-    "key": "25AE"
+    }
   },
   {
-    "category": "So",
+    "key": "25AF",
     "mappings": {
       "default": {
         "default": "white vertical rectangle"
       }
-    },
-    "key": "25AF"
+    }
   },
   {
-    "category": "So",
+    "key": "25B0",
     "mappings": {
       "default": {
         "default": "black parallelogram"
       }
-    },
-    "key": "25B0"
+    }
   },
   {
-    "category": "So",
+    "key": "25B1",
     "mappings": {
       "default": {
         "default": "white parallelogram"
       }
-    },
-    "key": "25B1"
+    }
   },
   {
-    "category": "So",
+    "key": "25B2",
     "mappings": {
       "default": {
         "default": "black up pointing triangle"
       }
-    },
-    "key": "25B2"
+    }
   },
   {
-    "category": "So",
+    "key": "25B3",
     "mappings": {
       "default": {
         "default": "white up pointing triangle"
       }
-    },
-    "key": "25B3"
+    }
   },
   {
-    "category": "So",
+    "key": "25B4",
     "mappings": {
       "default": {
         "default": "black up pointing small triangle"
       }
-    },
-    "key": "25B4"
+    }
   },
   {
-    "category": "So",
+    "key": "25B5",
     "mappings": {
       "default": {
         "default": "white up pointing small triangle"
       }
-    },
-    "key": "25B5"
+    }
   },
   {
-    "category": "So",
+    "key": "25B6",
     "mappings": {
       "default": {
         "default": "black right pointing triangle"
       }
-    },
-    "key": "25B6"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25B7",
     "mappings": {
       "default": {
         "default": "white right pointing triangle"
       }
-    },
-    "key": "25B7"
+    }
   },
   {
-    "category": "So",
+    "key": "25B8",
     "mappings": {
       "default": {
         "default": "black right pointing small triangle"
       }
-    },
-    "key": "25B8"
+    }
   },
   {
-    "category": "So",
+    "key": "25B9",
     "mappings": {
       "default": {
         "default": "white right pointing small triangle"
       }
-    },
-    "key": "25B9"
+    }
   },
   {
-    "category": "So",
+    "key": "25BA",
     "mappings": {
       "default": {
         "default": "black right pointing pointer"
       }
-    },
-    "key": "25BA"
+    }
   },
   {
-    "category": "So",
+    "key": "25BB",
     "mappings": {
       "default": {
         "default": "white right pointing pointer"
       }
-    },
-    "key": "25BB"
+    }
   },
   {
-    "category": "So",
+    "key": "25BC",
     "mappings": {
       "default": {
         "default": "black down pointing triangle"
       }
-    },
-    "key": "25BC"
+    }
   },
   {
-    "category": "So",
+    "key": "25BD",
     "mappings": {
       "default": {
         "default": "white down pointing triangle"
       }
-    },
-    "key": "25BD"
+    }
   },
   {
-    "category": "So",
+    "key": "25BE",
     "mappings": {
       "default": {
         "default": "black down pointing small triangle"
       }
-    },
-    "key": "25BE"
+    }
   },
   {
-    "category": "So",
+    "key": "25BF",
     "mappings": {
       "default": {
         "default": "white down pointing small triangle"
       }
-    },
-    "key": "25BF"
+    }
   },
   {
-    "category": "So",
+    "key": "25C0",
     "mappings": {
       "default": {
         "default": "black left pointing triangle"
       }
-    },
-    "key": "25C0"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25C1",
     "mappings": {
       "default": {
         "default": "white left pointing triangle"
       }
-    },
-    "key": "25C1"
+    }
   },
   {
-    "category": "So",
+    "key": "25C2",
     "mappings": {
       "default": {
         "default": "black left pointing small triangle"
       }
-    },
-    "key": "25C2"
+    }
   },
   {
-    "category": "So",
+    "key": "25C3",
     "mappings": {
       "default": {
         "default": "white left pointing small triangle"
       }
-    },
-    "key": "25C3"
+    }
   },
   {
-    "category": "So",
+    "key": "25C4",
     "mappings": {
       "default": {
         "default": "black left pointing pointer"
       }
-    },
-    "key": "25C4"
+    }
   },
   {
-    "category": "So",
+    "key": "25C5",
     "mappings": {
       "default": {
         "default": "white left pointing pointer"
       }
-    },
-    "key": "25C5"
+    }
   },
   {
-    "category": "So",
+    "key": "25C6",
     "mappings": {
       "default": {
         "default": "black diamond"
       }
-    },
-    "key": "25C6"
+    }
   },
   {
-    "category": "So",
+    "key": "25C7",
     "mappings": {
       "default": {
         "default": "white diamond"
       }
-    },
-    "key": "25C7"
+    }
   },
   {
-    "category": "So",
+    "key": "25C8",
     "mappings": {
       "default": {
         "default": "white diamond containing black small diamond"
       }
-    },
-    "key": "25C8"
+    }
   },
   {
-    "category": "So",
+    "key": "25C9",
     "mappings": {
       "default": {
         "default": "fisheye"
       }
-    },
-    "key": "25C9"
+    }
   },
   {
-    "category": "So",
+    "key": "25CA",
     "mappings": {
       "default": {
         "default": "lozenge"
       }
-    },
-    "key": "25CA"
+    }
   },
   {
-    "category": "So",
+    "key": "25CB",
     "mappings": {
       "default": {
         "default": "white circle"
       }
-    },
-    "key": "25CB"
+    }
   },
   {
-    "category": "So",
+    "key": "25CC",
     "mappings": {
       "default": {
         "default": "dotted circle"
       }
-    },
-    "key": "25CC"
+    }
   },
   {
-    "category": "So",
+    "key": "25CD",
     "mappings": {
       "default": {
         "default": "circle with vertical fill"
       }
-    },
-    "key": "25CD"
+    }
   },
   {
-    "category": "So",
+    "key": "25CE",
     "mappings": {
       "default": {
         "default": "bullseye"
       }
-    },
-    "key": "25CE"
+    }
   },
   {
-    "category": "So",
+    "key": "25CF",
     "mappings": {
       "default": {
         "default": "black circle"
       }
-    },
-    "key": "25CF"
+    }
   },
   {
-    "category": "So",
+    "key": "25D0",
     "mappings": {
       "default": {
         "default": "circle with left half black"
       }
-    },
-    "key": "25D0"
+    }
   },
   {
-    "category": "So",
+    "key": "25D1",
     "mappings": {
       "default": {
         "default": "circle with right half black"
       }
-    },
-    "key": "25D1"
+    }
   },
   {
-    "category": "So",
+    "key": "25D2",
     "mappings": {
       "default": {
         "default": "circle with lower half black"
       }
-    },
-    "key": "25D2"
+    }
   },
   {
-    "category": "So",
+    "key": "25D3",
     "mappings": {
       "default": {
         "default": "circle with upper half black"
       }
-    },
-    "key": "25D3"
+    }
   },
   {
-    "category": "So",
+    "key": "25D4",
     "mappings": {
       "default": {
         "default": "circle with upper right quadrant black"
       }
-    },
-    "key": "25D4"
+    }
   },
   {
-    "category": "So",
+    "key": "25D5",
     "mappings": {
       "default": {
         "default": "circle with all but upper left quadrant black"
       }
-    },
-    "key": "25D5"
+    }
   },
   {
-    "category": "So",
+    "key": "25D6",
     "mappings": {
       "default": {
         "default": "left half black circle"
       }
-    },
-    "key": "25D6"
+    }
   },
   {
-    "category": "So",
+    "key": "25D7",
     "mappings": {
       "default": {
         "default": "right half black circle"
       }
-    },
-    "key": "25D7"
+    }
   },
   {
-    "category": "So",
+    "key": "25D8",
     "mappings": {
       "default": {
         "default": "inverse bullet"
       }
-    },
-    "key": "25D8"
+    }
   },
   {
-    "category": "So",
+    "key": "25D9",
     "mappings": {
       "default": {
         "default": "inverse white circle"
       }
-    },
-    "key": "25D9"
+    }
   },
   {
-    "category": "So",
+    "key": "25DA",
     "mappings": {
       "default": {
         "default": "upper half inverse white circle"
       }
-    },
-    "key": "25DA"
+    }
   },
   {
-    "category": "So",
+    "key": "25DB",
     "mappings": {
       "default": {
         "default": "lower half inverse white circle"
       }
-    },
-    "key": "25DB"
+    }
   },
   {
-    "category": "So",
+    "key": "25DC",
     "mappings": {
       "default": {
         "default": "upper left quadrant circular arc"
       }
-    },
-    "key": "25DC"
+    }
   },
   {
-    "category": "So",
+    "key": "25DD",
     "mappings": {
       "default": {
         "default": "upper right quadrant circular arc"
       }
-    },
-    "key": "25DD"
+    }
   },
   {
-    "category": "So",
+    "key": "25DE",
     "mappings": {
       "default": {
         "default": "lower right quadrant circular arc"
       }
-    },
-    "key": "25DE"
+    }
   },
   {
-    "category": "So",
+    "key": "25DF",
     "mappings": {
       "default": {
         "default": "lower left quadrant circular arc"
       }
-    },
-    "key": "25DF"
+    }
   },
   {
-    "category": "So",
+    "key": "25E0",
     "mappings": {
       "default": {
         "default": "upper half circle"
       }
-    },
-    "key": "25E0"
+    }
   },
   {
-    "category": "So",
+    "key": "25E1",
     "mappings": {
       "default": {
         "default": "lower half circle"
       }
-    },
-    "key": "25E1"
+    }
   },
   {
-    "category": "So",
+    "key": "25E2",
     "mappings": {
       "default": {
         "default": "black lower right triangle"
       }
-    },
-    "key": "25E2"
+    }
   },
   {
-    "category": "So",
+    "key": "25E3",
     "mappings": {
       "default": {
         "default": "black lower left triangle"
       }
-    },
-    "key": "25E3"
+    }
   },
   {
-    "category": "So",
+    "key": "25E4",
     "mappings": {
       "default": {
         "default": "black upper left triangle"
       }
-    },
-    "key": "25E4"
+    }
   },
   {
-    "category": "So",
+    "key": "25E5",
     "mappings": {
       "default": {
         "default": "black upper right triangle"
       }
-    },
-    "key": "25E5"
+    }
   },
   {
-    "category": "So",
+    "key": "25E6",
     "mappings": {
       "default": {
         "default": "white bullet"
       }
-    },
-    "key": "25E6"
+    }
   },
   {
-    "category": "So",
+    "key": "25E7",
     "mappings": {
       "default": {
         "default": "square with left half black"
       }
-    },
-    "key": "25E7"
+    }
   },
   {
-    "category": "So",
+    "key": "25E8",
     "mappings": {
       "default": {
         "default": "square with right half black"
       }
-    },
-    "key": "25E8"
+    }
   },
   {
-    "category": "So",
+    "key": "25E9",
     "mappings": {
       "default": {
         "default": "square with upper left diagonal half black"
       }
-    },
-    "key": "25E9"
+    }
   },
   {
-    "category": "So",
+    "key": "25EA",
     "mappings": {
       "default": {
         "default": "square with lower right diagonal half black"
       }
-    },
-    "key": "25EA"
+    }
   },
   {
-    "category": "So",
+    "key": "25EB",
     "mappings": {
       "default": {
         "default": "white square with vertical bisecting line"
       }
-    },
-    "key": "25EB"
+    }
   },
   {
-    "category": "So",
+    "key": "25EC",
     "mappings": {
       "default": {
         "default": "white up pointing triangle with dot"
       }
-    },
-    "key": "25EC"
+    }
   },
   {
-    "category": "So",
+    "key": "25ED",
     "mappings": {
       "default": {
         "default": "up pointing triangle with left half black"
       }
-    },
-    "key": "25ED"
+    }
   },
   {
-    "category": "So",
+    "key": "25EE",
     "mappings": {
       "default": {
         "default": "up pointing triangle with right half black"
       }
-    },
-    "key": "25EE"
+    }
   },
   {
-    "category": "So",
+    "key": "25EF",
     "mappings": {
       "default": {
         "default": "large circle"
       }
-    },
-    "key": "25EF"
+    }
   },
   {
-    "category": "So",
+    "key": "25F0",
     "mappings": {
       "default": {
         "default": "white square with upper left quadrant"
       }
-    },
-    "key": "25F0"
+    }
   },
   {
-    "category": "So",
+    "key": "25F1",
     "mappings": {
       "default": {
         "default": "white square with lower left quadrant"
       }
-    },
-    "key": "25F1"
+    }
   },
   {
-    "category": "So",
+    "key": "25F2",
     "mappings": {
       "default": {
         "default": "white square with lower right quadrant"
       }
-    },
-    "key": "25F2"
+    }
   },
   {
-    "category": "So",
+    "key": "25F3",
     "mappings": {
       "default": {
         "default": "white square with upper right quadrant"
       }
-    },
-    "key": "25F3"
+    }
   },
   {
-    "category": "So",
+    "key": "25F4",
     "mappings": {
       "default": {
         "default": "white circle with upper left quadrant"
       }
-    },
-    "key": "25F4"
+    }
   },
   {
-    "category": "So",
+    "key": "25F5",
     "mappings": {
       "default": {
         "default": "white circle with lower left quadrant"
       }
-    },
-    "key": "25F5"
+    }
   },
   {
-    "category": "So",
+    "key": "25F6",
     "mappings": {
       "default": {
         "default": "white circle with lower right quadrant"
       }
-    },
-    "key": "25F6"
+    }
   },
   {
-    "category": "So",
+    "key": "25F7",
     "mappings": {
       "default": {
         "default": "white circle with upper right quadrant"
       }
-    },
-    "key": "25F7"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25F8",
     "mappings": {
       "default": {
         "default": "upper left triangle"
       }
-    },
-    "key": "25F8"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25F9",
     "mappings": {
       "default": {
         "default": "upper right triangle"
       }
-    },
-    "key": "25F9"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25FA",
     "mappings": {
       "default": {
         "default": "lower left triangle"
       }
-    },
-    "key": "25FA"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25FB",
     "mappings": {
       "default": {
         "default": "white medium square"
       }
-    },
-    "key": "25FB"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25FC",
     "mappings": {
       "default": {
         "default": "black medium square"
       }
-    },
-    "key": "25FC"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25FD",
     "mappings": {
       "default": {
         "default": "white medium small square"
       }
-    },
-    "key": "25FD"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25FE",
     "mappings": {
       "default": {
         "default": "black medium small square"
       }
-    },
-    "key": "25FE"
+    }
   },
   {
-    "category": "Sm",
+    "key": "25FF",
     "mappings": {
       "default": {
         "default": "lower right triangle"
       }
-    },
-    "key": "25FF"
+    }
   },
   {
-    "category": "So",
+    "key": "2B12",
     "mappings": {
       "default": {
         "default": "square with top half black"
       }
-    },
-    "key": "2B12"
+    }
   },
   {
-    "category": "So",
+    "key": "2B13",
     "mappings": {
       "default": {
         "default": "square with bottom half black"
       }
-    },
-    "key": "2B13"
+    }
   },
   {
-    "category": "So",
+    "key": "2B14",
     "mappings": {
       "default": {
         "default": "square with upper right diagonal half black"
       }
-    },
-    "key": "2B14"
+    }
   },
   {
-    "category": "So",
+    "key": "2B15",
     "mappings": {
       "default": {
         "default": "square with lower left diagonal half black"
       }
-    },
-    "key": "2B15"
+    }
   },
   {
-    "category": "So",
+    "key": "2B16",
     "mappings": {
       "default": {
         "default": "diamond with left half black"
       }
-    },
-    "key": "2B16"
+    }
   },
   {
-    "category": "So",
+    "key": "2B17",
     "mappings": {
       "default": {
         "default": "diamond with right half black"
       }
-    },
-    "key": "2B17"
+    }
   },
   {
-    "category": "So",
+    "key": "2B18",
     "mappings": {
       "default": {
         "default": "diamond with top half black"
       }
-    },
-    "key": "2B18"
+    }
   },
   {
-    "category": "So",
+    "key": "2B19",
     "mappings": {
       "default": {
         "default": "diamond with bottom half black"
       }
-    },
-    "key": "2B19"
+    }
   },
   {
-    "category": "So",
+    "key": "2B1A",
     "mappings": {
       "default": {
         "default": "dotted square"
       }
-    },
-    "key": "2B1A"
+    }
   },
   {
-    "category": "So",
+    "key": "2B1B",
     "mappings": {
       "default": {
         "default": "black large square"
       }
-    },
-    "key": "2B1B"
+    }
   },
   {
-    "category": "So",
+    "key": "2B1C",
     "mappings": {
       "default": {
         "default": "white large square"
       }
-    },
-    "key": "2B1C"
+    }
   },
   {
-    "category": "So",
+    "key": "2B1D",
     "mappings": {
       "default": {
         "default": "black very small square"
       }
-    },
-    "key": "2B1D"
+    }
   },
   {
-    "category": "So",
+    "key": "2B1E",
     "mappings": {
       "default": {
         "default": "white very small square"
       }
-    },
-    "key": "2B1E"
+    }
   },
   {
-    "category": "So",
+    "key": "2B1F",
     "mappings": {
       "default": {
         "default": "black pentagon"
       }
-    },
-    "key": "2B1F"
+    }
   },
   {
-    "category": "So",
+    "key": "2B20",
     "mappings": {
       "default": {
         "default": "white pentagon"
       }
-    },
-    "key": "2B20"
+    }
   },
   {
-    "category": "So",
+    "key": "2B21",
     "mappings": {
       "default": {
         "default": "white hexagon"
       }
-    },
-    "key": "2B21"
+    }
   },
   {
-    "category": "So",
+    "key": "2B22",
     "mappings": {
       "default": {
         "default": "black hexagon"
       }
-    },
-    "key": "2B22"
+    }
   },
   {
-    "category": "So",
+    "key": "2B23",
     "mappings": {
       "default": {
         "default": "horizontal black hexagon"
       }
-    },
-    "key": "2B23"
+    }
   },
   {
-    "category": "So",
+    "key": "2B24",
     "mappings": {
       "default": {
         "default": "black large circle"
       }
-    },
-    "key": "2B24"
+    }
   },
   {
-    "category": "So",
+    "key": "2B25",
     "mappings": {
       "default": {
         "default": "black medium diamond"
       }
-    },
-    "key": "2B25"
+    }
   },
   {
-    "category": "So",
+    "key": "2B26",
     "mappings": {
       "default": {
         "default": "white medium diamond"
       }
-    },
-    "key": "2B26"
+    }
   },
   {
-    "category": "So",
+    "key": "2B27",
     "mappings": {
       "default": {
         "default": "black medium lozenge"
       }
-    },
-    "key": "2B27"
+    }
   },
   {
-    "category": "So",
+    "key": "2B28",
     "mappings": {
       "default": {
         "default": "white medium lozenge"
       }
-    },
-    "key": "2B28"
+    }
   },
   {
-    "category": "So",
+    "key": "2B29",
     "mappings": {
       "default": {
         "default": "black small diamond"
       }
-    },
-    "key": "2B29"
+    }
   },
   {
-    "category": "So",
+    "key": "2B2A",
     "mappings": {
       "default": {
         "default": "black small lozenge"
       }
-    },
-    "key": "2B2A"
+    }
   },
   {
-    "category": "So",
+    "key": "2B2B",
     "mappings": {
       "default": {
         "default": "white small lozenge"
       }
-    },
-    "key": "2B2B"
+    }
   },
   {
-    "category": "So",
+    "key": "2B2C",
     "mappings": {
       "default": {
         "default": "black horizontal ellipse"
       }
-    },
-    "key": "2B2C"
+    }
   },
   {
-    "category": "So",
+    "key": "2B2D",
     "mappings": {
       "default": {
         "default": "white horizontal ellipse"
       }
-    },
-    "key": "2B2D"
+    }
   },
   {
-    "category": "So",
+    "key": "2B2E",
     "mappings": {
       "default": {
         "default": "black vertical ellipse"
       }
-    },
-    "key": "2B2E"
+    }
   },
   {
-    "category": "So",
+    "key": "2B2F",
     "mappings": {
       "default": {
         "default": "white vertical ellipse"
       }
-    },
-    "key": "2B2F"
+    }
   },
   {
-    "category": "So",
+    "key": "2B50",
     "mappings": {
       "default": {
         "default": "white medium star"
       }
-    },
-    "key": "2B50"
+    }
   },
   {
-    "category": "So",
+    "key": "2B51",
     "mappings": {
       "default": {
         "default": "black small star"
       }
-    },
-    "key": "2B51"
+    }
   },
   {
-    "category": "So",
+    "key": "2B52",
     "mappings": {
       "default": {
         "default": "white small star"
       }
-    },
-    "key": "2B52"
+    }
   },
   {
-    "category": "So",
+    "key": "2B53",
     "mappings": {
       "default": {
         "default": "black right pointing pentagon"
       }
-    },
-    "key": "2B53"
+    }
   },
   {
-    "category": "So",
+    "key": "2B54",
     "mappings": {
       "default": {
         "default": "white right pointing pentagon"
       }
-    },
-    "key": "2B54"
+    }
   },
   {
-    "category": "So",
+    "key": "2B55",
     "mappings": {
       "default": {
         "default": "heavy large circle"
       }
-    },
-    "key": "2B55"
+    }
   },
   {
-    "category": "So",
+    "key": "2B56",
     "mappings": {
       "default": {
         "default": "heavy oval with oval inside"
       }
-    },
-    "key": "2B56"
+    }
   },
   {
-    "category": "So",
+    "key": "2B57",
     "mappings": {
       "default": {
         "default": "heavy circle with circle inside"
       }
-    },
-    "key": "2B57"
+    }
   },
   {
-    "category": "So",
+    "key": "2B58",
     "mappings": {
       "default": {
         "default": "heavy circle"
       }
-    },
-    "key": "2B58"
+    }
   },
   {
-    "category": "So",
+    "key": "2B59",
     "mappings": {
       "default": {
         "default": "heavy circled saltire"
       }
-    },
-    "key": "2B59"
+    }
   }
 ]

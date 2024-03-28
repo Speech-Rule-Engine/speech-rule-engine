@@ -1,0 +1,38 @@
+[{"locale": "ko"},
+{"category": "speed",
+  "mappings": {
+    "default": {
+      "default": "노트"
+      }
+    },
+  "key": "kt",
+  "names": ["kt", "kt.","knot", "knots"]
+},
+{"category": "speed",
+  "mappings": {
+    "default": {
+      "default": "마일 퍼 아워"
+      }
+    },
+  "key": "mph",
+  "names": ["mph", "mile per hour"]
+},
+{"category": "speed",
+  "mappings": {
+    "default": {
+      "default": "레볼루션 퍼 미닛"
+      }
+    },
+  "key": "rpm",
+  "names": ["rpm", "revolution per minute"]
+},
+{"category": "speed",
+  "mappings": {
+    "default": {
+      "default": "킬로미터 퍼 아워"
+      }
+    },
+  "key": "kmh",
+  "names": ["kmh", "kph", "kilometer per hour"]
+}
+]

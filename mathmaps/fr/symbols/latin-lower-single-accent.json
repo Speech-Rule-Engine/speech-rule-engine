@@ -8,8 +8,7 @@
       "default": {
         "default": "a accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E1",
@@ -17,8 +16,7 @@
       "default": {
         "default": "a accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E2",
@@ -26,8 +24,7 @@
       "default": {
         "default": "a accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E3",
@@ -35,8 +32,7 @@
       "default": {
         "default": "a tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E4",
@@ -44,8 +40,7 @@
       "default": {
         "default": "a tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E5",
@@ -53,8 +48,7 @@
       "default": {
         "default": "a rond en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E7",
@@ -62,8 +56,7 @@
       "default": {
         "default": "c cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E8",
@@ -71,8 +64,7 @@
       "default": {
         "default": "e accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E9",
@@ -80,8 +72,7 @@
       "default": {
         "default": "e accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EA",
@@ -89,8 +80,7 @@
       "default": {
         "default": "e accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EB",
@@ -98,8 +88,7 @@
       "default": {
         "default": "e tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EC",
@@ -107,8 +96,7 @@
       "default": {
         "default": "i accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00ED",
@@ -116,8 +104,7 @@
       "default": {
         "default": "i accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EE",
@@ -125,8 +112,7 @@
       "default": {
         "default": "i accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EF",
@@ -134,8 +120,7 @@
       "default": {
         "default": "i tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F1",
@@ -143,8 +128,7 @@
       "default": {
         "default": "n tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F2",
@@ -152,8 +136,7 @@
       "default": {
         "default": "o accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F3",
@@ -161,8 +144,7 @@
       "default": {
         "default": "o accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F4",
@@ -170,8 +152,7 @@
       "default": {
         "default": "o accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F5",
@@ -179,8 +160,7 @@
       "default": {
         "default": "o tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F6",
@@ -188,8 +168,7 @@
       "default": {
         "default": "o tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F9",
@@ -197,8 +176,7 @@
       "default": {
         "default": "u accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FA",
@@ -206,8 +184,7 @@
       "default": {
         "default": "u accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FB",
@@ -215,8 +192,7 @@
       "default": {
         "default": "u accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FC",
@@ -224,8 +200,7 @@
       "default": {
         "default": "u tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FD",
@@ -233,8 +208,7 @@
       "default": {
         "default": "y accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FF",
@@ -242,8 +216,7 @@
       "default": {
         "default": "y tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0101",
@@ -251,8 +224,7 @@
       "default": {
         "default": "a macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0103",
@@ -260,8 +232,7 @@
       "default": {
         "default": "a brève"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0105",
@@ -269,8 +240,7 @@
       "default": {
         "default": "a ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0107",
@@ -278,8 +248,7 @@
       "default": {
         "default": "c accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0109",
@@ -287,8 +256,7 @@
       "default": {
         "default": "c accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010B",
@@ -296,8 +264,7 @@
       "default": {
         "default": "c point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010D",
@@ -305,8 +272,7 @@
       "default": {
         "default": "c caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010F",
@@ -314,8 +280,7 @@
       "default": {
         "default": "d caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0113",
@@ -323,11 +288,9 @@
       "default": {
         "default": "e macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0115",
     "mappings": {
       "default": {
@@ -341,8 +304,7 @@
       "default": {
         "default": "e point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0119",
@@ -350,8 +312,7 @@
       "default": {
         "default": "e ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011B",
@@ -359,8 +320,7 @@
       "default": {
         "default": "e caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011D",
@@ -368,8 +328,7 @@
       "default": {
         "default": "g accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011F",
@@ -377,8 +336,7 @@
       "default": {
         "default": "g brève"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0121",
@@ -386,11 +344,9 @@
       "default": {
         "default": "g point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0123",
     "mappings": {
       "default": {
@@ -404,8 +360,7 @@
       "default": {
         "default": "h accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0129",
@@ -413,8 +368,7 @@
       "default": {
         "default": "i tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "012B",
@@ -422,11 +376,9 @@
       "default": {
         "default": "i macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "012D",
     "mappings": {
       "default": {
@@ -440,8 +392,7 @@
       "default": {
         "default": "i ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0131",
@@ -449,8 +400,7 @@
       "default": {
         "default": "i sans point"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0135",
@@ -458,8 +408,7 @@
       "default": {
         "default": "j accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0137",
@@ -467,8 +416,7 @@
       "default": {
         "default": "k cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013A",
@@ -476,8 +424,7 @@
       "default": {
         "default": "l accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013C",
@@ -485,8 +432,7 @@
       "default": {
         "default": "l cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013E",
@@ -494,8 +440,7 @@
       "default": {
         "default": "l caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0140",
@@ -503,8 +448,7 @@
       "default": {
         "default": "l point médian"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0144",
@@ -512,8 +456,7 @@
       "default": {
         "default": "n accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0146",
@@ -521,8 +464,7 @@
       "default": {
         "default": "n cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0148",
@@ -530,8 +472,7 @@
       "default": {
         "default": "n caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "014D",
@@ -539,11 +480,9 @@
       "default": {
         "default": "o macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "014F",
     "mappings": {
       "default": {
@@ -557,8 +496,7 @@
       "default": {
         "default": "o avec double accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0155",
@@ -566,8 +504,7 @@
       "default": {
         "default": "r accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0157",
@@ -575,8 +512,7 @@
       "default": {
         "default": "r cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0159",
@@ -584,8 +520,7 @@
       "default": {
         "default": "r caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015B",
@@ -593,8 +528,7 @@
       "default": {
         "default": "s accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015D",
@@ -602,8 +536,7 @@
       "default": {
         "default": "s accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015F",
@@ -611,8 +544,7 @@
       "default": {
         "default": "s cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0161",
@@ -620,8 +552,7 @@
       "default": {
         "default": "s caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0163",
@@ -629,8 +560,7 @@
       "default": {
         "default": "t cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0165",
@@ -638,8 +568,7 @@
       "default": {
         "default": "t caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0169",
@@ -647,8 +576,7 @@
       "default": {
         "default": "u tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016B",
@@ -656,8 +584,7 @@
       "default": {
         "default": "u macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016D",
@@ -665,8 +592,7 @@
       "default": {
         "default": "u brève"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016F",
@@ -674,8 +600,7 @@
       "default": {
         "default": "u rond en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0171",
@@ -683,8 +608,7 @@
       "default": {
         "default": "u avec double accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0173",
@@ -692,8 +616,7 @@
       "default": {
         "default": "u ogonek"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0175",
@@ -701,8 +624,7 @@
       "default": {
         "default": "w accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0177",
@@ -710,8 +632,7 @@
       "default": {
         "default": "y accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017A",
@@ -719,8 +640,7 @@
       "default": {
         "default": "z accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017C",
@@ -728,8 +648,7 @@
       "default": {
         "default": "z point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017E",
@@ -737,11 +656,9 @@
       "default": {
         "default": "z caron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01CE",
     "mappings": {
       "default": {
@@ -750,7 +667,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D0",
     "mappings": {
       "default": {
@@ -759,7 +675,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D2",
     "mappings": {
       "default": {
@@ -768,7 +683,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01D4",
     "mappings": {
       "default": {
@@ -777,7 +691,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E7",
     "mappings": {
       "default": {
@@ -786,7 +699,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01E9",
     "mappings": {
       "default": {
@@ -795,7 +707,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01EB",
     "mappings": {
       "default": {
@@ -804,7 +715,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "01F0",
     "mappings": {
       "default": {
@@ -818,11 +728,9 @@
       "default": {
         "default": "g accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01F9",
     "mappings": {
       "default": {
@@ -831,7 +739,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0201",
     "mappings": {
       "default": {
@@ -840,7 +747,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0203",
     "mappings": {
       "default": {
@@ -849,7 +755,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0205",
     "mappings": {
       "default": {
@@ -858,7 +763,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0207",
     "mappings": {
       "default": {
@@ -867,7 +771,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0209",
     "mappings": {
       "default": {
@@ -876,7 +779,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020B",
     "mappings": {
       "default": {
@@ -885,7 +787,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020D",
     "mappings": {
       "default": {
@@ -894,7 +795,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "020F",
     "mappings": {
       "default": {
@@ -903,7 +803,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0211",
     "mappings": {
       "default": {
@@ -912,7 +811,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0213",
     "mappings": {
       "default": {
@@ -921,7 +819,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0215",
     "mappings": {
       "default": {
@@ -930,7 +827,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0217",
     "mappings": {
       "default": {
@@ -939,7 +835,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0219",
     "mappings": {
       "default": {
@@ -948,7 +843,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021B",
     "mappings": {
       "default": {
@@ -957,7 +851,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "021F",
     "mappings": {
       "default": {
@@ -966,7 +859,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0227",
     "mappings": {
       "default": {
@@ -975,7 +867,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0229",
     "mappings": {
       "default": {
@@ -984,7 +875,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "022F",
     "mappings": {
       "default": {
@@ -993,7 +883,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0233",
     "mappings": {
       "default": {
@@ -1002,7 +891,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "0237",
     "mappings": {
       "default": {
@@ -1016,8 +904,7 @@
       "default": {
         "default": "a à rond souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E03",
@@ -1025,8 +912,7 @@
       "default": {
         "default": "b point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E05",
@@ -1034,8 +920,7 @@
       "default": {
         "default": "b point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E07",
@@ -1043,8 +928,7 @@
       "default": {
         "default": "b ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0B",
@@ -1052,8 +936,7 @@
       "default": {
         "default": "d point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0D",
@@ -1061,8 +944,7 @@
       "default": {
         "default": "d point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0F",
@@ -1070,8 +952,7 @@
       "default": {
         "default": "d ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E11",
@@ -1079,8 +960,7 @@
       "default": {
         "default": "d cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E13",
@@ -1088,8 +968,7 @@
       "default": {
         "default": "d accent circonflexe souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E19",
@@ -1097,8 +976,7 @@
       "default": {
         "default": "e accent circonflexe souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1B",
@@ -1106,8 +984,7 @@
       "default": {
         "default": "e tilde souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1F",
@@ -1115,8 +992,7 @@
       "default": {
         "default": "f point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E21",
@@ -1124,8 +1000,7 @@
       "default": {
         "default": "g macron"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E23",
@@ -1133,8 +1008,7 @@
       "default": {
         "default": "h point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E25",
@@ -1142,8 +1016,7 @@
       "default": {
         "default": "h point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E27",
@@ -1151,8 +1024,7 @@
       "default": {
         "default": "h tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E29",
@@ -1160,8 +1032,7 @@
       "default": {
         "default": "h cédille"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2B",
@@ -1169,8 +1040,7 @@
       "default": {
         "default": "h brève souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2D",
@@ -1178,8 +1048,7 @@
       "default": {
         "default": "i tilde souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E31",
@@ -1187,8 +1056,7 @@
       "default": {
         "default": "k accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E33",
@@ -1196,8 +1064,7 @@
       "default": {
         "default": "k point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E35",
@@ -1205,8 +1072,7 @@
       "default": {
         "default": "k ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E37",
@@ -1214,8 +1080,7 @@
       "default": {
         "default": "l point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3B",
@@ -1223,8 +1088,7 @@
       "default": {
         "default": "l ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3D",
@@ -1232,8 +1096,7 @@
       "default": {
         "default": "l accent circonflexe souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3F",
@@ -1241,8 +1104,7 @@
       "default": {
         "default": "m accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E41",
@@ -1250,8 +1112,7 @@
       "default": {
         "default": "m point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E43",
@@ -1259,8 +1120,7 @@
       "default": {
         "default": "m point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E45",
@@ -1268,8 +1128,7 @@
       "default": {
         "default": "n point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E47",
@@ -1277,8 +1136,7 @@
       "default": {
         "default": "n point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E49",
@@ -1286,8 +1144,7 @@
       "default": {
         "default": "n ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E4B",
@@ -1295,8 +1152,7 @@
       "default": {
         "default": "n accent circonflexe souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E55",
@@ -1304,8 +1160,7 @@
       "default": {
         "default": "p accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E57",
@@ -1313,8 +1168,7 @@
       "default": {
         "default": "p point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E59",
@@ -1322,8 +1176,7 @@
       "default": {
         "default": "r point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5B",
@@ -1331,8 +1184,7 @@
       "default": {
         "default": "r point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5F",
@@ -1340,8 +1192,7 @@
       "default": {
         "default": "r ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E61",
@@ -1349,8 +1200,7 @@
       "default": {
         "default": "s point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E63",
@@ -1358,8 +1208,7 @@
       "default": {
         "default": "s point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6B",
@@ -1367,8 +1216,7 @@
       "default": {
         "default": "t point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6D",
@@ -1376,8 +1224,7 @@
       "default": {
         "default": "t point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6F",
@@ -1385,8 +1232,7 @@
       "default": {
         "default": "t ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E71",
@@ -1394,8 +1240,7 @@
       "default": {
         "default": "t accent circonflexe souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E73",
@@ -1403,8 +1248,7 @@
       "default": {
         "default": "u tréma souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E75",
@@ -1412,8 +1256,7 @@
       "default": {
         "default": "u tilde souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E77",
@@ -1421,8 +1264,7 @@
       "default": {
         "default": "u accent circonflexe souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7D",
@@ -1430,8 +1272,7 @@
       "default": {
         "default": "v tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7F",
@@ -1439,8 +1280,7 @@
       "default": {
         "default": "v point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E81",
@@ -1448,8 +1288,7 @@
       "default": {
         "default": "w accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E83",
@@ -1457,8 +1296,7 @@
       "default": {
         "default": "w accent aigu"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E85",
@@ -1466,8 +1304,7 @@
       "default": {
         "default": "w tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E87",
@@ -1475,8 +1312,7 @@
       "default": {
         "default": "w point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E89",
@@ -1484,8 +1320,7 @@
       "default": {
         "default": "w point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8B",
@@ -1493,8 +1328,7 @@
       "default": {
         "default": "x point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8D",
@@ -1502,8 +1336,7 @@
       "default": {
         "default": "x tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8F",
@@ -1511,8 +1344,7 @@
       "default": {
         "default": "y point en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E91",
@@ -1520,8 +1352,7 @@
       "default": {
         "default": "z accent circonflexe"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E93",
@@ -1529,8 +1360,7 @@
       "default": {
         "default": "z point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E95",
@@ -1538,8 +1368,7 @@
       "default": {
         "default": "z ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E96",
@@ -1547,8 +1376,7 @@
       "default": {
         "default": "h ligne souscrite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E97",
@@ -1556,8 +1384,7 @@
       "default": {
         "default": "t tréma"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E98",
@@ -1565,8 +1392,7 @@
       "default": {
         "default": "w rond en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E99",
@@ -1574,8 +1400,7 @@
       "default": {
         "default": "y rond en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E9A",
@@ -1583,8 +1408,7 @@
       "default": {
         "default": "a demi rond à droite"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA1",
@@ -1592,8 +1416,7 @@
       "default": {
         "default": "a point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA3",
@@ -1601,8 +1424,7 @@
       "default": {
         "default": "a crochet en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB9",
@@ -1610,8 +1432,7 @@
       "default": {
         "default": "e point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBB",
@@ -1619,8 +1440,7 @@
       "default": {
         "default": "e crochet en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBD",
@@ -1628,8 +1448,7 @@
       "default": {
         "default": "e tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC9",
@@ -1637,8 +1456,7 @@
       "default": {
         "default": "i crochet en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECB",
@@ -1646,8 +1464,7 @@
       "default": {
         "default": "i point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECD",
@@ -1655,8 +1472,7 @@
       "default": {
         "default": "o point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECF",
@@ -1664,8 +1480,7 @@
       "default": {
         "default": "o crochet en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE5",
@@ -1673,8 +1488,7 @@
       "default": {
         "default": "u point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE7",
@@ -1682,8 +1496,7 @@
       "default": {
         "default": "u crochet en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF3",
@@ -1691,8 +1504,7 @@
       "default": {
         "default": "y accent grave"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF5",
@@ -1700,8 +1512,7 @@
       "default": {
         "default": "y point souscrit"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF7",
@@ -1709,8 +1520,7 @@
       "default": {
         "default": "y crochet en chef"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF9",
@@ -1718,7 +1528,6 @@
       "default": {
         "default": "y tilde"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

@@ -1,0 +1,41 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "2135",
+    "mappings": {
+      "default": {
+        "default": "first transfinite cardinal",
+        "alternative": "alef"
+      }
+    }
+  },
+  {
+    "key": "2136",
+    "mappings": {
+      "default": {
+        "default": "second transfinite cardinal",
+        "alternative": "bet"
+      }
+    }
+  },
+  {
+    "key": "2137",
+    "mappings": {
+      "default": {
+        "default": "third transfinite cardinal",
+        "alternative": "gimel"
+      }
+    }
+  },
+  {
+    "key": "2138",
+    "mappings": {
+      "default": {
+        "default": "fourth transfinite cardinal",
+        "alternative": "dalet"
+      }
+    }
+  }
+]

@@ -18,18 +18,23 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { Grammar } from '../rule_engine/grammar';
-import Engine from '../common/engine';
-import { register } from '../semantic_tree/semantic_annotations';
-import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Grammar, correctFont } from '../rule_engine/grammar.js';
+import { Engine } from '../common/engine.js';
+import { register, activate } from '../semantic_tree/semantic_annotations.js';
+import { SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
-import { LOCALE } from '../l10n/locale';
-import * as MathspeakUtil from './mathspeak_util';
+import { LOCALE } from '../l10n/locale.js';
+import * as MathspeakUtil from './mathspeak_util.js';
+import { contentIterator as suCI } from '../rule_engine/store_util.js';
 
 /**
  * Opening string for fractions in linear Nemeth.
@@ -37,11 +42,11 @@ import * as MathspeakUtil from './mathspeak_util';
  * @param node The fraction node.
  * @returns The opening string.
  */
-export function openingFraction(node: Element): string {
+export function openingFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    LOCALE.MESSAGES.MS.FRACTION_START
+      LOCALE.MESSAGES.MS.FRACTION_START
   );
 }
 
@@ -51,11 +56,11 @@ export function openingFraction(node: Element): string {
  * @param node The fraction node.
  * @returns The closing string.
  */
-export function closingFraction(node: Element): string {
+export function closingFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    LOCALE.MESSAGES.MS.FRACTION_END
+      LOCALE.MESSAGES.MS.FRACTION_END
   );
 }
 
@@ -65,11 +70,11 @@ export function closingFraction(node: Element): string {
  * @param node The fraction node.
  * @returns The middle string.
  */
-export function overFraction(node: Element): string {
+export function overFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    LOCALE.MESSAGES.MS.FRACTION_OVER
+      LOCALE.MESSAGES.MS.FRACTION_OVER
   );
 }
 
@@ -79,13 +84,24 @@ export function overFraction(node: Element): string {
  * @param node The fraction node.
  * @returns The middle string.
  */
-export function overBevelledFraction(node: Element): string {
+export function overBevelledFraction(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  return (
+  return Span.singleton(
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-    '⠸' +
-    LOCALE.MESSAGES.MS.FRACTION_OVER
+      '⠸' +
+      LOCALE.MESSAGES.MS.FRACTION_OVER
   );
+}
+
+/**
+ *
+ * @param node
+ */
+export function hyperFractionBoundary(node: Element): Element[] {
+  return LOCALE.MESSAGES.regexp.HYPER ===
+    MathspeakUtil.fractionNestingDepth(node).toString()
+    ? [node]
+    : [];
 }
 
 /**
@@ -96,12 +112,13 @@ export function overBevelledFraction(node: Element): string {
  * @param postfix A postfix string.
  * @returns The opening string.
  */
-export function nestedRadical(node: Element, postfix: string): string {
+function nestedRadical(node: Element, postfix: string): Span[] {
   const depth = radicalNestingDepth(node);
-  if (depth === 1) {
-    return postfix;
-  }
-  return new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix;
+  return Span.singleton(
+    depth === 1
+      ? postfix
+      : new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix
+  );
 }
 
 /**
@@ -111,7 +128,7 @@ export function nestedRadical(node: Element, postfix: string): string {
  * @param opt_depth The optional depth.
  * @returns The nesting depth. 0 if the node is not a radical.
  */
-export function radicalNestingDepth(node: Element, opt_depth?: number): number {
+function radicalNestingDepth(node: Element, opt_depth?: number): number {
   const depth = opt_depth || 0;
   if (!node.parentNode) {
     return depth;
@@ -128,7 +145,7 @@ export function radicalNestingDepth(node: Element, opt_depth?: number): number {
  * @param node The radical node.
  * @returns The opening string.
  */
-export function openingRadical(node: Element): string {
+export function openingRadical(node: Element): Span[] {
   return nestedRadical(node, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
@@ -138,7 +155,7 @@ export function openingRadical(node: Element): string {
  * @param node The radical node.
  * @returns The closing string.
  */
-export function closingRadical(node: Element): string {
+export function closingRadical(node: Element): Span[] {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
@@ -148,7 +165,7 @@ export function closingRadical(node: Element): string {
  * @param node The radical node.
  * @returns The middle string.
  */
-export function indexRadical(node: Element): string {
+export function indexRadical(node: Element): Span[] {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
@@ -159,7 +176,7 @@ export function indexRadical(node: Element): string {
  * @param text The text representing the fence.
  * @returns The fence with the enlargment indicator.
  */
-export function enlargeFence(text: string): string {
+function enlargeFence(text: string): string {
   const start = '⠠';
   if (text.length === 1) {
     return start + text;
@@ -178,7 +195,7 @@ export function enlargeFence(text: string): string {
 
 Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
 
-export const NUMBER_PROPAGATORS_: SemanticType[] = [
+const NUMBER_PROPAGATORS: SemanticType[] = [
   SemanticType.MULTIREL,
   SemanticType.RELSEQ,
   SemanticType.APPL,
@@ -186,7 +203,7 @@ export const NUMBER_PROPAGATORS_: SemanticType[] = [
   SemanticType.LINE
 ];
 
-export const NUMBER_INHIBITORS_: SemanticType[] = [
+const NUMBER_INHIBITORS: SemanticType[] = [
   SemanticType.SUBSCRIPT,
   SemanticType.SUPERSCRIPT,
   SemanticType.OVERSCORE,
@@ -202,7 +219,7 @@ export const NUMBER_INHIBITORS_: SemanticType[] = [
  * @returns True if parent is a relation, punctuation or application or
  *     a negative sign.
  */
-export function checkParent_(
+function checkParent(
   node: SemanticNode,
   info: { [key: string]: boolean }
 ): boolean {
@@ -212,10 +229,10 @@ export function checkParent_(
   }
   const type = parent.type;
   if (
-    NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
+    NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
     (type === SemanticType.PREFIXOP &&
       parent.role === SemanticRole.NEGATIVE &&
-      !info.script) ||
+      !info.script && !info.enclosed) ||
     (type === SemanticType.PREFIXOP &&
       // TODO: This needs to be rewritten once there is a better treatment
       // of prefixop.
@@ -239,14 +256,14 @@ export function checkParent_(
  * @returns Info pair consisting of a string and the updated
  *     information object.
  */
-export function propagateNumber(
+function propagateNumber(
   node: SemanticNode,
   info: { [key: string]: any }
 ): any[] {
   // TODO: Font indicator followed by number.
   // TODO: Check for enclosed list
   if (!node.childNodes.length) {
-    if (checkParent_(node, info)) {
+    if (checkParent(node, info)) {
       info.number = true;
       info.script = false;
       info.enclosed = false;
@@ -256,7 +273,7 @@ export function propagateNumber(
       { number: false, enclosed: info.enclosed, script: info.script }
     ];
   }
-  if (NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
+  if (NUMBER_INHIBITORS.indexOf(node.type) !== -1) {
     info.script = true;
   }
   if (node.type === SemanticType.FENCED) {
@@ -264,7 +281,13 @@ export function propagateNumber(
     info.enclosed = true;
     return ['', info];
   }
-  if (checkParent_(node, info)) {
+  if (node.type === SemanticType.PREFIXOP &&
+    node.role !== SemanticRole.GEOMETRY &&
+    node.role !== SemanticRole.NEGATIVE) {
+    info.number = false;
+    return ['', info];
+  }
+  if (checkParent(node, info)) {
     info.number = true;
     info.enclosed = false;
   }
@@ -274,6 +297,22 @@ export function propagateNumber(
 register(
   new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
 );
+
+function annotateDepth(
+  node: SemanticNode
+): any[] {
+  if (!node.parent) {
+    return [1];
+  }
+  let depth = parseInt(node.parent.annotation['depth'][0]);
+  return [depth + 1];
+}
+
+register(
+  new SemanticVisitor('depth', 'depth', annotateDepth)
+);
+activate('depth', 'depth');
+
 
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if
@@ -291,11 +330,14 @@ export function relationIterator(
 ): () => AuditoryDescription[] {
   const childNodes = nodes.slice(0);
   let first = true;
+  let parentNode = nodes[0].parentNode.parentNode as Element;
+  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let depth = match ? match[1] : '';
   let contentNodes: Element[];
   if (nodes.length > 0) {
     contentNodes = XpathUtil.evalXPath(
-      '../../content/*',
-      nodes[0]
+      './content/*',
+      parentNode
     ) as Element[];
   } else {
     contentNodes = [];
@@ -319,19 +361,35 @@ export function relationIterator(
     const left =
       (leftChild && DomUtil.tagName(leftChild) !== 'EMPTY') ||
       (first &&
-        content.parentNode.parentNode &&
-        content.parentNode.parentNode.previousSibling)
-        ? [AuditoryDescription.create({ text: '⠀' + base }, {})]
+        parentNode &&
+        parentNode.previousSibling)
+        ? [
+            AuditoryDescription.create(
+              { text: LOCALE.MESSAGES.regexp.SPACE + base },
+              {}
+            )
+          ]
         : [];
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
-        content.parentNode.parentNode &&
-        content.parentNode.parentNode.nextSibling)
-        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        parentNode &&
+        parentNode.nextSibling)
+        ? [
+            AuditoryDescription.create(
+              { text: LOCALE.MESSAGES.regexp.SPACE },
+              {}
+            )
+          ]
         : [];
     const descrs = Engine.evaluateNode(content);
+    // TODO: Combine with similar code in speech_rule_engine.
+    descrs.unshift(
+      new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
+    );
+    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
     first = false;
+    // TODO: Check with the context!
     return contextDescr.concat(left, descrs, right);
   };
 }
@@ -373,8 +431,37 @@ export function implicitIterator(
     const right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
       left && right && content.getAttribute('role') === SemanticRole.SPACE
-        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        ? [
+            AuditoryDescription.create(
+              { text: LOCALE.MESSAGES.regexp.SPACE },
+              {}
+            )
+          ]
         : []
     );
   };
+}
+
+function ignoreEnglish(text: string) {
+  return correctFont(text, LOCALE.ALPHABETS.languagePrefix.english);
+}
+
+Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
+
+export function contentIterator(
+  nodes: Element[],
+  context: string
+) {
+  let func = suCI(nodes, context);
+  let parentNode = nodes[0].parentNode.parentNode as Element;
+  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let depth = match ? match[1] : '';
+  return function() {
+    const descrs = func();
+    descrs.unshift(
+      new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
+    );
+    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
+    return descrs;
+  }
 }

@@ -22,10 +22,10 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import { createLocale, Locale } from '../locale';
-import NUMBERS from '../numbers/numbers_hi';
-import { Combiners } from '../transformers';
-import { nestingToString } from '../locale_util';
+import { createLocale, Locale } from '../locale.js';
+import { NUMBERS } from '../numbers/numbers_hi.js';
+import { Combiners } from '../transformers.js';
+import { nestingToString } from '../locale_util.js';
 
 let locale: Locale = null;
 

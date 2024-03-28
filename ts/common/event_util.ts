@@ -137,7 +137,7 @@ export const Move = new Map([
 /**
  * Constants for event names.
  */
-export enum EventType {
+enum EventType {
   // Mouse events
   CLICK = 'click',
   DBLCLICK = 'dblclick',

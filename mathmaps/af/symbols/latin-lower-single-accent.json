@@ -1,0 +1,1533 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "00E0",
+    "mappings": {
+      "default": {
+        "default": "a gravis"
+      }
+    }
+  },
+  {
+    "key": "00E1",
+    "mappings": {
+      "default": {
+        "default": "a akkuut"
+      }
+    }
+  },
+  {
+    "key": "00E2",
+    "mappings": {
+      "default": {
+        "default": "a hoed"
+      }
+    }
+  },
+  {
+    "key": "00E3",
+    "mappings": {
+      "default": {
+        "default": "a tilde"
+      }
+    }
+  },
+  {
+    "key": "00E4",
+    "mappings": {
+      "default": {
+        "default": "a dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "00E5",
+    "mappings": {
+      "default": {
+        "default": "a ring"
+      }
+    }
+  },
+  {
+    "key": "00E7",
+    "mappings": {
+      "default": {
+        "default": "c sidilla"
+      }
+    }
+  },
+  {
+    "key": "00E8",
+    "mappings": {
+      "default": {
+        "default": "e gravis"
+      }
+    }
+  },
+  {
+    "key": "00E9",
+    "mappings": {
+      "default": {
+        "default": "e akkuut"
+      }
+    }
+  },
+  {
+    "key": "00EA",
+    "mappings": {
+      "default": {
+        "default": "kappie e e hoed"
+      }
+    }
+  },
+  {
+    "key": "00EB",
+    "mappings": {
+      "default": {
+        "default": "e dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "00EC",
+    "mappings": {
+      "default": {
+        "default": "i gravis"
+      }
+    }
+  },
+  {
+    "key": "00ED",
+    "mappings": {
+      "default": {
+        "default": "i akkuut"
+      }
+    }
+  },
+  {
+    "key": "00EE",
+    "mappings": {
+      "default": {
+        "default": "i hoed"
+      }
+    }
+  },
+  {
+    "key": "00EF",
+    "mappings": {
+      "default": {
+        "default": "deelteken i"
+      }
+    }
+  },
+  {
+    "key": "00F1",
+    "mappings": {
+      "default": {
+        "default": "n tilde"
+      }
+    }
+  },
+  {
+    "key": "00F2",
+    "mappings": {
+      "default": {
+        "default": "o gravis"
+      }
+    }
+  },
+  {
+    "key": "00F3",
+    "mappings": {
+      "default": {
+        "default": "o akkuut"
+      }
+    }
+  },
+  {
+    "key": "00F4",
+    "mappings": {
+      "default": {
+        "default": "kappie o"
+      }
+    }
+  },
+  {
+    "key": "00F5",
+    "mappings": {
+      "default": {
+        "default": "o tilde"
+      }
+    }
+  },
+  {
+    "key": "00F6",
+    "mappings": {
+      "default": {
+        "default": "deelteken o"
+      }
+    }
+  },
+  {
+    "key": "00F9",
+    "mappings": {
+      "default": {
+        "default": "u gravis"
+      }
+    }
+  },
+  {
+    "key": "00FA",
+    "mappings": {
+      "default": {
+        "default": "akkuut u"
+      }
+    }
+  },
+  {
+    "key": "00FB",
+    "mappings": {
+      "default": {
+        "default": "kappie u"
+      }
+    }
+  },
+  {
+    "key": "00FC",
+    "mappings": {
+      "default": {
+        "default": "deelteken u"
+      }
+    }
+  },
+  {
+    "key": "00FD",
+    "mappings": {
+      "default": {
+        "default": "akkuut y"
+      }
+    }
+  },
+  {
+    "key": "00FF",
+    "mappings": {
+      "default": {
+        "default": "deelteken y"
+      }
+    }
+  },
+  {
+    "key": "0101",
+    "mappings": {
+      "default": {
+        "default": "a bostaaf"
+      }
+    }
+  },
+  {
+    "key": "0103",
+    "mappings": {
+      "default": {
+        "default": "a brevis"
+      }
+    }
+  },
+  {
+    "key": "0105",
+    "mappings": {
+      "default": {
+        "default": "a ogonek"
+      }
+    }
+  },
+  {
+    "key": "0107",
+    "mappings": {
+      "default": {
+        "default": "akkuut c"
+      }
+    }
+  },
+  {
+    "key": "0109",
+    "mappings": {
+      "default": {
+        "default": "c hoed"
+      }
+    }
+  },
+  {
+    "key": "010B",
+    "mappings": {
+      "default": {
+        "default": "c bopunt"
+      }
+    }
+  },
+  {
+    "key": "010D",
+    "mappings": {
+      "default": {
+        "default": "c karon"
+      }
+    }
+  },
+  {
+    "key": "010F",
+    "mappings": {
+      "default": {
+        "default": "d karon"
+      }
+    }
+  },
+  {
+    "key": "0113",
+    "mappings": {
+      "default": {
+        "default": "e bostaaf"
+      }
+    }
+  },
+  {
+    "key": "0115",
+    "mappings": {
+      "default": {
+        "default": "e brevis"
+      }
+    }
+  },
+  {
+    "key": "0117",
+    "mappings": {
+      "default": {
+        "default": "e bopunt"
+      }
+    }
+  },
+  {
+    "key": "0119",
+    "mappings": {
+      "default": {
+        "default": "e ogonek"
+      }
+    }
+  },
+  {
+    "key": "011B",
+    "mappings": {
+      "default": {
+        "default": "e karon"
+      }
+    }
+  },
+  {
+    "key": "011D",
+    "mappings": {
+      "default": {
+        "default": "g hoed"
+      }
+    }
+  },
+  {
+    "key": "011F",
+    "mappings": {
+      "default": {
+        "default": "g brevis"
+      }
+    }
+  },
+  {
+    "key": "0121",
+    "mappings": {
+      "default": {
+        "default": "g bopunt"
+      }
+    }
+  },
+  {
+    "key": "0123",
+    "mappings": {
+      "default": {
+        "default": "g sidilla"
+      }
+    }
+  },
+  {
+    "key": "0125",
+    "mappings": {
+      "default": {
+        "default": "h hoed"
+      }
+    }
+  },
+  {
+    "key": "0129",
+    "mappings": {
+      "default": {
+        "default": "i tilde"
+      }
+    }
+  },
+  {
+    "key": "012B",
+    "mappings": {
+      "default": {
+        "default": "i bostaaf"
+      }
+    }
+  },
+  {
+    "key": "012D",
+    "mappings": {
+      "default": {
+        "default": "i brevis"
+      }
+    }
+  },
+  {
+    "key": "012F",
+    "mappings": {
+      "default": {
+        "default": "i ogonek"
+      }
+    }
+  },
+  {
+    "key": "0131",
+    "mappings": {
+      "default": {
+        "default": "puntlose i"
+      }
+    }
+  },
+  {
+    "key": "0135",
+    "mappings": {
+      "default": {
+        "default": "j hoed"
+      }
+    }
+  },
+  {
+    "key": "0137",
+    "mappings": {
+      "default": {
+        "default": "k sidilla"
+      }
+    }
+  },
+  {
+    "key": "013A",
+    "mappings": {
+      "default": {
+        "default": "l akkuut"
+      }
+    }
+  },
+  {
+    "key": "013C",
+    "mappings": {
+      "default": {
+        "default": "l sidilla"
+      }
+    }
+  },
+  {
+    "key": "013E",
+    "mappings": {
+      "default": {
+        "default": "l karon"
+      }
+    }
+  },
+  {
+    "key": "0140",
+    "mappings": {
+      "default": {
+        "default": "l middel punt"
+      }
+    }
+  },
+  {
+    "key": "0144",
+    "mappings": {
+      "default": {
+        "default": "n akkuut"
+      }
+    }
+  },
+  {
+    "key": "0146",
+    "mappings": {
+      "default": {
+        "default": "n sidilla"
+      }
+    }
+  },
+  {
+    "key": "0148",
+    "mappings": {
+      "default": {
+        "default": "n karon"
+      }
+    }
+  },
+  {
+    "key": "014D",
+    "mappings": {
+      "default": {
+        "default": "o bostaaf"
+      }
+    }
+  },
+  {
+    "key": "014F",
+    "mappings": {
+      "default": {
+        "default": "o brevis"
+      }
+    }
+  },
+  {
+    "key": "0151",
+    "mappings": {
+      "default": {
+        "default": "o dubbel akkuut"
+      }
+    }
+  },
+  {
+    "key": "0155",
+    "mappings": {
+      "default": {
+        "default": "r akkuut"
+      }
+    }
+  },
+  {
+    "key": "0157",
+    "mappings": {
+      "default": {
+        "default": "r sidilla"
+      }
+    }
+  },
+  {
+    "key": "0159",
+    "mappings": {
+      "default": {
+        "default": "r karon"
+      }
+    }
+  },
+  {
+    "key": "015B",
+    "mappings": {
+      "default": {
+        "default": "s akkuut"
+      }
+    }
+  },
+  {
+    "key": "015D",
+    "mappings": {
+      "default": {
+        "default": "s hoed"
+      }
+    }
+  },
+  {
+    "key": "015F",
+    "mappings": {
+      "default": {
+        "default": "s sidilla"
+      }
+    }
+  },
+  {
+    "key": "0161",
+    "mappings": {
+      "default": {
+        "default": "s karon"
+      }
+    }
+  },
+  {
+    "key": "0163",
+    "mappings": {
+      "default": {
+        "default": "t sidilla"
+      }
+    }
+  },
+  {
+    "key": "0165",
+    "mappings": {
+      "default": {
+        "default": "t karon"
+      }
+    }
+  },
+  {
+    "key": "0169",
+    "mappings": {
+      "default": {
+        "default": "u tilde"
+      }
+    }
+  },
+  {
+    "key": "016B",
+    "mappings": {
+      "default": {
+        "default": "u bostaaf"
+      }
+    }
+  },
+  {
+    "key": "016D",
+    "mappings": {
+      "default": {
+        "default": "u brevis"
+      }
+    }
+  },
+  {
+    "key": "016F",
+    "mappings": {
+      "default": {
+        "default": "u ring"
+      }
+    }
+  },
+  {
+    "key": "0171",
+    "mappings": {
+      "default": {
+        "default": "u dubbel akkuut"
+      }
+    }
+  },
+  {
+    "key": "0173",
+    "mappings": {
+      "default": {
+        "default": "u ogonek"
+      }
+    }
+  },
+  {
+    "key": "0175",
+    "mappings": {
+      "default": {
+        "default": "w hoed"
+      }
+    }
+  },
+  {
+    "key": "0177",
+    "mappings": {
+      "default": {
+        "default": "y hoed"
+      }
+    }
+  },
+  {
+    "key": "017A",
+    "mappings": {
+      "default": {
+        "default": "z akkuut"
+      }
+    }
+  },
+  {
+    "key": "017C",
+    "mappings": {
+      "default": {
+        "default": "z bopunt"
+      }
+    }
+  },
+  {
+    "key": "017E",
+    "mappings": {
+      "default": {
+        "default": "z karon"
+      }
+    }
+  },
+  {
+    "key": "01CE",
+    "mappings": {
+      "default": {
+        "default": "a karon"
+      }
+    }
+  },
+  {
+    "key": "01D0",
+    "mappings": {
+      "default": {
+        "default": "i karon"
+      }
+    }
+  },
+  {
+    "key": "01D2",
+    "mappings": {
+      "default": {
+        "default": "o karon"
+      }
+    }
+  },
+  {
+    "key": "01D4",
+    "mappings": {
+      "default": {
+        "default": "u karon"
+      }
+    }
+  },
+  {
+    "key": "01E7",
+    "mappings": {
+      "default": {
+        "default": "g karon"
+      }
+    }
+  },
+  {
+    "key": "01E9",
+    "mappings": {
+      "default": {
+        "default": "k karon"
+      }
+    }
+  },
+  {
+    "key": "01EB",
+    "mappings": {
+      "default": {
+        "default": "o ogonek"
+      }
+    }
+  },
+  {
+    "key": "01F0",
+    "mappings": {
+      "default": {
+        "default": "j karon"
+      }
+    }
+  },
+  {
+    "key": "01F5",
+    "mappings": {
+      "default": {
+        "default": "g akkuut"
+      }
+    }
+  },
+  {
+    "key": "01F9",
+    "mappings": {
+      "default": {
+        "default": "n gravis"
+      }
+    }
+  },
+  {
+    "key": "0201",
+    "mappings": {
+      "default": {
+        "default": "a dubbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0203",
+    "mappings": {
+      "default": {
+        "default": "a tru brevis"
+      }
+    }
+  },
+  {
+    "key": "0205",
+    "mappings": {
+      "default": {
+        "default": "e dubbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0207",
+    "mappings": {
+      "default": {
+        "default": "e tru brevis"
+      }
+    }
+  },
+  {
+    "key": "0209",
+    "mappings": {
+      "default": {
+        "default": "i dubbel gravis"
+      }
+    }
+  },
+  {
+    "key": "020B",
+    "mappings": {
+      "default": {
+        "default": "i tru brevis"
+      }
+    }
+  },
+  {
+    "key": "020D",
+    "mappings": {
+      "default": {
+        "default": "o dubbel gravis"
+      }
+    }
+  },
+  {
+    "key": "020F",
+    "mappings": {
+      "default": {
+        "default": "o tru brevis"
+      }
+    }
+  },
+  {
+    "key": "0211",
+    "mappings": {
+      "default": {
+        "default": "r dubbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0213",
+    "mappings": {
+      "default": {
+        "default": "r tru brevis"
+      }
+    }
+  },
+  {
+    "key": "0215",
+    "mappings": {
+      "default": {
+        "default": "u dubbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0217",
+    "mappings": {
+      "default": {
+        "default": "u tru brevis"
+      }
+    }
+  },
+  {
+    "key": "0219",
+    "mappings": {
+      "default": {
+        "default": "s komma onder"
+      }
+    }
+  },
+  {
+    "key": "021B",
+    "mappings": {
+      "default": {
+        "default": "t komma onder"
+      }
+    }
+  },
+  {
+    "key": "021F",
+    "mappings": {
+      "default": {
+        "default": "h karon"
+      }
+    }
+  },
+  {
+    "key": "0227",
+    "mappings": {
+      "default": {
+        "default": "a bopunt"
+      }
+    }
+  },
+  {
+    "key": "0229",
+    "mappings": {
+      "default": {
+        "default": "e sidilla"
+      }
+    }
+  },
+  {
+    "key": "022F",
+    "mappings": {
+      "default": {
+        "default": "o bopunt"
+      }
+    }
+  },
+  {
+    "key": "0233",
+    "mappings": {
+      "default": {
+        "default": "y bostaaf"
+      }
+    }
+  },
+  {
+    "key": "0237",
+    "mappings": {
+      "default": {
+        "default": "puntlose j"
+      }
+    }
+  },
+  {
+    "key": "1E01",
+    "mappings": {
+      "default": {
+        "default": "a ring onder"
+      }
+    }
+  },
+  {
+    "key": "1E03",
+    "mappings": {
+      "default": {
+        "default": "b bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E05",
+    "mappings": {
+      "default": {
+        "default": "b onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E07",
+    "mappings": {
+      "default": {
+        "default": "b onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E0B",
+    "mappings": {
+      "default": {
+        "default": "d bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E0D",
+    "mappings": {
+      "default": {
+        "default": "d onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E0F",
+    "mappings": {
+      "default": {
+        "default": "d onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E11",
+    "mappings": {
+      "default": {
+        "default": "d sidilla"
+      }
+    }
+  },
+  {
+    "key": "1E13",
+    "mappings": {
+      "default": {
+        "default": "d onderhoed"
+      }
+    }
+  },
+  {
+    "key": "1E19",
+    "mappings": {
+      "default": {
+        "default": "e onderhoed"
+      }
+    }
+  },
+  {
+    "key": "1E1B",
+    "mappings": {
+      "default": {
+        "default": "e tilde onder"
+      }
+    }
+  },
+  {
+    "key": "1E1F",
+    "mappings": {
+      "default": {
+        "default": "f bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E21",
+    "mappings": {
+      "default": {
+        "default": "g bostaaf"
+      }
+    }
+  },
+  {
+    "key": "1E23",
+    "mappings": {
+      "default": {
+        "default": "h bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E25",
+    "mappings": {
+      "default": {
+        "default": "h onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E27",
+    "mappings": {
+      "default": {
+        "default": "h dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E29",
+    "mappings": {
+      "default": {
+        "default": "h sidilla"
+      }
+    }
+  },
+  {
+    "key": "1E2B",
+    "mappings": {
+      "default": {
+        "default": "h brevis onder"
+      }
+    }
+  },
+  {
+    "key": "1E2D",
+    "mappings": {
+      "default": {
+        "default": "i tilde onder"
+      }
+    }
+  },
+  {
+    "key": "1E31",
+    "mappings": {
+      "default": {
+        "default": "k akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E33",
+    "mappings": {
+      "default": {
+        "default": "k onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E35",
+    "mappings": {
+      "default": {
+        "default": "k onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E37",
+    "mappings": {
+      "default": {
+        "default": "l onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E3B",
+    "mappings": {
+      "default": {
+        "default": "l onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E3D",
+    "mappings": {
+      "default": {
+        "default": "l onderhoed"
+      }
+    }
+  },
+  {
+    "key": "1E3F",
+    "mappings": {
+      "default": {
+        "default": "m akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E41",
+    "mappings": {
+      "default": {
+        "default": "m bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E43",
+    "mappings": {
+      "default": {
+        "default": "m onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E45",
+    "mappings": {
+      "default": {
+        "default": "n bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E47",
+    "mappings": {
+      "default": {
+        "default": "n onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E49",
+    "mappings": {
+      "default": {
+        "default": "n onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E4B",
+    "mappings": {
+      "default": {
+        "default": "n onderhoed"
+      }
+    }
+  },
+  {
+    "key": "1E55",
+    "mappings": {
+      "default": {
+        "default": "p akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E57",
+    "mappings": {
+      "default": {
+        "default": "p bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E59",
+    "mappings": {
+      "default": {
+        "default": "r bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E5B",
+    "mappings": {
+      "default": {
+        "default": "r onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E5F",
+    "mappings": {
+      "default": {
+        "default": "r onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E61",
+    "mappings": {
+      "default": {
+        "default": "s bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E63",
+    "mappings": {
+      "default": {
+        "default": "s onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E6B",
+    "mappings": {
+      "default": {
+        "default": "t bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E6D",
+    "mappings": {
+      "default": {
+        "default": "t onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E6F",
+    "mappings": {
+      "default": {
+        "default": "t onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E71",
+    "mappings": {
+      "default": {
+        "default": "t onderhoed"
+      }
+    }
+  },
+  {
+    "key": "1E73",
+    "mappings": {
+      "default": {
+        "default": "u dubbel onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E75",
+    "mappings": {
+      "default": {
+        "default": "u tilde onder"
+      }
+    }
+  },
+  {
+    "key": "1E77",
+    "mappings": {
+      "default": {
+        "default": "u onderhoed"
+      }
+    }
+  },
+  {
+    "key": "1E7D",
+    "mappings": {
+      "default": {
+        "default": "v tilde"
+      }
+    }
+  },
+  {
+    "key": "1E7F",
+    "mappings": {
+      "default": {
+        "default": "v onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E81",
+    "mappings": {
+      "default": {
+        "default": "w gravis"
+      }
+    }
+  },
+  {
+    "key": "1E83",
+    "mappings": {
+      "default": {
+        "default": "w akkuut"
+      }
+    }
+  },
+  {
+    "key": "1E85",
+    "mappings": {
+      "default": {
+        "default": "w dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E87",
+    "mappings": {
+      "default": {
+        "default": "w bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E89",
+    "mappings": {
+      "default": {
+        "default": "w onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E8B",
+    "mappings": {
+      "default": {
+        "default": "x bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E8D",
+    "mappings": {
+      "default": {
+        "default": "x dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E8F",
+    "mappings": {
+      "default": {
+        "default": "y bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E91",
+    "mappings": {
+      "default": {
+        "default": "z hoed"
+      }
+    }
+  },
+  {
+    "key": "1E93",
+    "mappings": {
+      "default": {
+        "default": "z onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1E95",
+    "mappings": {
+      "default": {
+        "default": "z onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E96",
+    "mappings": {
+      "default": {
+        "default": "h onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "1E97",
+    "mappings": {
+      "default": {
+        "default": "t dubbel bopunt"
+      }
+    }
+  },
+  {
+    "key": "1E98",
+    "mappings": {
+      "default": {
+        "default": "w ring"
+      }
+    }
+  },
+  {
+    "key": "1E99",
+    "mappings": {
+      "default": {
+        "default": "y ring"
+      }
+    }
+  },
+  {
+    "key": "1E9A",
+    "mappings": {
+      "default": {
+        "default": "a regs half ring"
+      }
+    }
+  },
+  {
+    "key": "1EA1",
+    "mappings": {
+      "default": {
+        "default": "a onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EA3",
+    "mappings": {
+      "default": {
+        "default": "a haak"
+      }
+    }
+  },
+  {
+    "key": "1EB9",
+    "mappings": {
+      "default": {
+        "default": "e onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EBB",
+    "mappings": {
+      "default": {
+        "default": "e haak"
+      }
+    }
+  },
+  {
+    "key": "1EBD",
+    "mappings": {
+      "default": {
+        "default": "e tilde"
+      }
+    }
+  },
+  {
+    "key": "1EC9",
+    "mappings": {
+      "default": {
+        "default": "i haak"
+      }
+    }
+  },
+  {
+    "key": "1ECB",
+    "mappings": {
+      "default": {
+        "default": "i onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1ECD",
+    "mappings": {
+      "default": {
+        "default": "o onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1ECF",
+    "mappings": {
+      "default": {
+        "default": "o haak"
+      }
+    }
+  },
+  {
+    "key": "1EE5",
+    "mappings": {
+      "default": {
+        "default": "u onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EE7",
+    "mappings": {
+      "default": {
+        "default": "u haak"
+      }
+    }
+  },
+  {
+    "key": "1EF3",
+    "mappings": {
+      "default": {
+        "default": "y gravis"
+      }
+    }
+  },
+  {
+    "key": "1EF5",
+    "mappings": {
+      "default": {
+        "default": "y onderpunt"
+      }
+    }
+  },
+  {
+    "key": "1EF7",
+    "mappings": {
+      "default": {
+        "default": "y haak"
+      }
+    }
+  },
+  {
+    "key": "1EF9",
+    "mappings": {
+      "default": {
+        "default": "y tilde"
+      }
+    }
+  }
+]

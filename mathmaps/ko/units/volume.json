@@ -1,0 +1,143 @@
+[
+  {"locale": "ko"},
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "세제곱미터"
+     }
+   },
+   "key": "cu",
+   "names": ["cu", "cu.", "cubic", "cubics"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "세제곱인치",
+       "plural": "세제곱인치"
+     }
+   },
+   "key": "cu inch",
+   "names": ["cu in", "cu. in.", "cubic inch", "cubic inches"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "세제곱피트",
+       "plural": "세제곱피트"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft.", "cubic foot", "cubic feet"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "세제곱야드"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd.", "cubic yard", "cubic yards"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "배럴"
+     }
+   },
+   "key": "bbl",
+   "names": ["bbl.", "bbl", "barrel", "barrels"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "액량 온스"
+     }
+   },
+   "key": "fl. oz.",
+   "names": ["fl. oz.", "fl oz", "fluid ounce", "fluid ounces"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "갤런"
+     }
+   },
+   "key": "gal",
+   "names": ["gal", "gal.", "gallon", "gallons"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "파인트"
+     }
+   },
+   "key": "pt",
+   "names": ["pt", "pt.", "pint", "pints"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "쿼트"
+     }
+   },
+   "key": "qt",
+   "names": ["qt", "qt.", "quart", "quarts"]
+  },
+ 
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "액량 드램"
+     }
+   },
+   "key": "fluid dram",
+   "names": ["fl dr", "fl. dr.", "fluid dram", "fluid drams"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "테이블스푼"
+     }
+   },
+   "key": "tbsp",
+   "names": ["tbsp", "tbsp.", "Tbsp", "Tbsp.", "tablespoon", "tablespoons"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "티스푼"
+     }
+   },
+   "key": "tsp",
+   "names": ["tsp", "tsp.", "teaspoon", "teaspoons"]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "컵"
+     }
+   },
+   "key": "cup",
+   "names": ["cp", "cp.", "cup", "cups"]
+  },
+
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "세제곱센티미터"
+     }
+   },
+   "key": "cc",
+   "names": ["cc", "ccm", "cubic centimeter", "cubic centimeters"]
+  },
+  {"category": "volume",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "리터"
+     }
+   },
+   "key": "l",
+   "names": ["l", "liter", "liters"]
+  }
+]

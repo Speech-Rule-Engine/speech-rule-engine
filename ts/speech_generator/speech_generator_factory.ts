@@ -19,14 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AdhocSpeechGenerator } from './adhoc_speech_generator';
-import { ColorGenerator } from './color_generator';
-import { DirectSpeechGenerator } from './direct_speech_generator';
-import { DummySpeechGenerator } from './dummy_speech_generator';
-import { NodeSpeechGenerator } from './node_speech_generator';
-import { SpeechGenerator } from './speech_generator';
-import { SummarySpeechGenerator } from './summary_speech_generator';
-import { TreeSpeechGenerator } from './tree_speech_generator';
+import { AdhocSpeechGenerator } from './adhoc_speech_generator.js';
+import { ColorGenerator } from './color_generator.js';
+import { DirectSpeechGenerator } from './direct_speech_generator.js';
+import { DummySpeechGenerator } from './dummy_speech_generator.js';
+import { NodeSpeechGenerator } from './node_speech_generator.js';
+import { SpeechGenerator } from './speech_generator.js';
+import { SummarySpeechGenerator } from './summary_speech_generator.js';
+import { TreeSpeechGenerator } from './tree_speech_generator.js';
 
 /**
  * Produces a speech generator that corresponds to the given type.
@@ -35,11 +35,11 @@ import { TreeSpeechGenerator } from './tree_speech_generator';
  * @returns The newly generated speech generator.
  */
 export function generator(type: string): SpeechGenerator {
-  const constructor = generatorMapping_[type] || generatorMapping_.Direct;
+  const constructor = generatorMapping[type] || generatorMapping.Direct;
   return constructor();
 }
 
-export const generatorMapping_: { [key: string]: () => SpeechGenerator } = {
+const generatorMapping: { [key: string]: () => SpeechGenerator } = {
   Adhoc: () => new AdhocSpeechGenerator(),
   Color: () => new ColorGenerator(),
   Direct: () => new DirectSpeechGenerator(),

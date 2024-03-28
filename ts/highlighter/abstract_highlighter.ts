@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as XpathUtil from '../common/xpath_util';
-import { addPrefix, Attribute } from '../enrich_mathml/enrich_attr';
-import { ColorPicker, StringColor } from './color_picker';
-import { Highlighter } from './highlighter';
+import * as XpathUtil from '../common/xpath_util.js';
+import { addPrefix, Attribute } from '../enrich_mathml/enrich_attr.js';
+import { ColorPicker, StringColor } from './color_picker.js';
+import { Highlighter } from './highlighter.js';
 
 /**
  * Highlight information consisting of node, opacity, fore and background color.
@@ -36,11 +36,15 @@ export interface Highlight {
   position?: string;
 }
 
+let counter = 0;
+
 export abstract class AbstractHighlighter implements Highlighter {
+  public counter = counter++;
+
   /**
    * The Attribute for marking highlighted nodes.
    */
-  protected static ATTR = 'sre-highlight';
+  protected ATTR = 'sre-highlight-' + this.counter.toString();
 
   /**
    * The color picker.
@@ -143,8 +147,8 @@ export abstract class AbstractHighlighter implements Highlighter {
   ) {
     const mactions = this.getMactionNodes(node);
     for (let i = 0, maction; (maction = mactions[i]); i++) {
-      for (const event in events) {
-        maction.addEventListener(event, events[event]);
+      for (const [key, event] of Object.entries(events)) {
+        maction.addEventListener(key, event);
       }
     }
   }
@@ -176,7 +180,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @returns True if already highlighted.
    */
   public isHighlighted(node: HTMLElement): boolean {
-    return node.hasAttribute(AbstractHighlighter.ATTR);
+    return node.hasAttribute(this.ATTR);
   }
 
   /**
@@ -185,7 +189,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public setHighlighted(node: HTMLElement) {
-    node.setAttribute(AbstractHighlighter.ATTR, 'true');
+    node.setAttribute(this.ATTR, 'true');
   }
 
   /**
@@ -194,7 +198,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public unsetHighlighted(node: HTMLElement) {
-    node.removeAttribute(AbstractHighlighter.ATTR);
+    node.removeAttribute(this.ATTR);
   }
 
   /**
@@ -203,6 +207,8 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public colorizeAll(node: HTMLElement) {
+    // The following solves the Firefox xpath issue!
+    XpathUtil.updateEvaluator(node);
     const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x: Element) => this.colorize(x as HTMLElement));
   }

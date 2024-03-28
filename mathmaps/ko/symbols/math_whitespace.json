@@ -1,0 +1,339 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "공간"
+      }
+    },
+    "key": "0020"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 없는 공간",
+        "alternative": "중간 없는 공간"
+      }
+    },
+    "key": "00A0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "소프트 하이픈"
+      }
+    },
+    "key": "00AD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "엔 쿼드"
+      }
+    },
+    "key": "2000"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "엠 쿼드"
+      }
+    },
+    "key": "2001"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "엔 스페이스"
+      }
+    },
+    "key": "2002"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "엠 스페이스"
+      }
+    },
+    "key": "2003"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "3PM 공간"
+      }
+    },
+    "key": "2004"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "4PM 공간"
+      }
+    },
+    "key": "2005"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "6MP 공간간"
+      }
+    },
+    "key": "2006"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "그림 공간"
+      }
+    },
+    "key": "2007"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "구두점"
+      }
+    },
+    "key": "2008"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 공간"
+      }
+    },
+    "key": "2009"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "헤어 스페이스"
+      }
+    },
+    "key": "200A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "제로 너비 공간"
+      }
+    },
+    "key": "200B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "제로 폭 비결합자"
+      }
+    },
+    "key": "200C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "제로 너비 결합자"
+      }
+    },
+    "key": "200D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 오른쪽으로 표시"
+      }
+    },
+    "key": "200E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽에서 왼쪽으로 표시"
+      }
+    },
+    "key": "200F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "라인 구분 기호"
+      }
+    },
+    "key": "2028"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단락 구분 기호"
+      }
+    },
+    "key": "2029"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 오른쪽으로 포함"
+      }
+    },
+    "key": "202A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽에서 왼쪽으로 임베딩"
+      }
+    },
+    "key": "202B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "팝 방향 지정"
+      }
+    },
+    "key": "202C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 오른쪽으로 재정의"
+      }
+    },
+    "key": "202D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽에서 왼쪽으로 재정의"
+      }
+    },
+    "key": "202E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "좁은 브레이크 공간 없음"
+      }
+    },
+    "key": "202F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 수학 공간"
+      }
+    },
+    "key": "205F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "단어 결합 자"
+      }
+    },
+    "key": "2060"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "의", 
+        "alternative": "기능 응용"
+      }
+    },
+    "key": "2061"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "곱셈", 
+        "alternative": "보이지 않는 곱셈" 
+      },
+      "clearspeak": {
+        "default": "곱하기" 
+      }
+    },
+    "key": "2062"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "콤마", 
+        "alternative": "보이지 않는 구분 기호"
+      }
+    },
+    "key": "2063"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "플러스",
+        "alternative": "보이지 않는 플러스"
+      }
+    },
+    "key": "2064"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대칭 스와핑 금지"
+      }
+    },
+    "key": "206A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대칭 교환 활성화"
+      }
+    },
+    "key": "206B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "내셔널 디지트 셰이프"
+      }
+    },
+    "key": "206E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "공칭 자리 모양" 
+      }
+    },
+    "key": "206F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "제로 너비 브레이크 공간 없음",
+        "alternative": "byte order mark"
+      }
+    },
+    "key": "FEFF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "선간 주석 앵커"
+      }
+    },
+    "key": "FFF9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "선간 주석 구분 기호"
+      }
+    },
+    "key": "FFFA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "선간 주석 종결 기호"
+      }
+    },
+    "key": "FFFB"
+  }
+]

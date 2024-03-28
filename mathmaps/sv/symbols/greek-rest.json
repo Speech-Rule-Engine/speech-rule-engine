@@ -5,11 +5,10 @@
   {
     "key": "0394",
     "mappings": {
-      "default": {
+      "clearspeak": {
         "default": "triangel",
         "TriangleSymbol_Delta": "stort Delta"
       }
-    },
-    "category": "Lu"
+    }
   }
 ]

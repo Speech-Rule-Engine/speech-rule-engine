@@ -102,12 +102,12 @@
     [
       "Action",
       "english-letter",
-      "[n] text() (layout:english)"
+      "[n] text() (layout:english, grammar:ignoreEnglish)"
     ],
     [
       "Action",
       "prefix",
-      "[n] text(); [n] children/*[1]"
+      "[m] content/*; [n] children/*[1]"
     ],
     [
       "Action",
@@ -117,7 +117,7 @@
     [
       "Action",
       "postfix",
-      "[n] children/*[1]; [n] text()"
+      "[n] children/*[1]; [m] content/*"
     ],
     [
       "Action",
@@ -172,7 +172,7 @@
     [
       "Action",
       "text",
-      "[n] text()"
+      "[n] text() (engine:style=literary)"
     ],
     [
       "Action",
@@ -206,8 +206,13 @@
     ],
     [
       "Action",
+      "hyperfraction",
+      "[p] (layout:beginfraction); [t] CSFopenFraction; [n] children/*[1] (layout:numerator, grammar:hyperfraction); [t] CSFoverFraction; [n] children/*[2] (layout:denominator, grammar:hyperfraction); [t] CSFcloseFraction; [p] (layout:endfraction)"
+    ],
+    [
+      "Action",
       "fraction",
-      "[p] (layout:beginfraction); [t] CSFopenFraction; [n] children/*[1] (layout:numerator); [t] CSFoverFraction; [n] children/*[2] (layout:denominator); [t] CSFcloseFraction; [p] (layout:endfraction)"
+      "[t] CSFopenFraction; [n] children/*[1]; [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFraction"
     ],
     [
       "Action",
@@ -407,7 +412,12 @@
     [
       "Action",
       "empty-cell",
-      "[t] \"⠀\" (pause: 300)"
+      "[t] \"⠀\" (pause:300)"
+    ],
+    [
+      "Action",
+      "empty-table-cell",
+      "[t] \"⠀\" (pause: 300, layout:cell)"
     ],
     [
       "Action",
@@ -497,7 +507,7 @@
     [
       "Action",
       "end-punct",
-      "[m] children/*"
+      "[n] children/*[1]; [n] children/*[2] (engine:style=literary)"
     ],
     [
       "Action",
@@ -506,8 +516,8 @@
     ],
     [
       "Action",
-      "punctuation",
-      "[n] text(); [t] \"⠐\""
+      "punctuation-point",
+      "[n] text() (annotation:punctuation); [t] \"⠐\""
     ],
     [
       "Action",
@@ -517,12 +527,12 @@
     [
       "Action",
       "punctuation-comma",
-      "[n] text(); [t] \"⠀\""
+      "[n] text() (annotation:punctuation); [t] \"⠀\""
     ],
     [
       "Action",
       "punctuation-colon-mapping",
-      "[n] text(); [t] \"⠀\""
+      "[n] text() (annotation:punctuation); [t] \"⠀\""
     ],
     [
       "Action",
@@ -530,28 +540,24 @@
       "[t] \"⠀⠐⠂⠀\""
     ],
     [
-      "Rule",
+      "Action",
       "punctuation-ellipsis-cell",
-      "default",
-      "[t] \"⠄⠄⠄\"",
-      "self::punctuation[@role=\"ellipsis\"]",
-      "count(../*)=1",
-      "name(../..)=\"cell\" or name(../..)=\"line\""
+      "[t] \"⠄⠄⠄\""
     ],
     [
       "Action",
       "punctuation-ellipses-both",
-      "[t] \"⠀\"; [n] text(); [t] \"⠀\";"
+      "[t] \"⠀\"; [n] . (grammar:?noellipsis); [t] \"⠀\";"
     ],
     [
       "Action",
       "punctuation-ellipses-left",
-      "[t] \"⠀\"; [n] text();"
+      "[t] \"⠀\"; [n] . (grammar:?noellipsis);"
     ],
     [
       "Action",
       "punctuation-ellipses-right",
-      "[n] text(); [t] \"⠀\";"
+      "[n] . (grammar:?noellipsis); [t] \"⠀\";"
     ],
     [
       "Action",

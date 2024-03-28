@@ -1,0 +1,43 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "s",
+    "category": "time",
+    "si": true,
+    "names": [
+      "s"
+    ]
+  },
+  {
+    "key": "″",
+    "category": "time",
+    "names": [
+      "″"
+    ]
+  },
+  {
+    "key": "min",
+    "category": "time",
+    "names": [
+      "min",
+      "′"
+    ]
+  },
+  {
+    "key": "°",
+    "category": "time",
+    "names": [
+      "°"
+    ]
+  },
+  {
+    "key": "h",
+    "category": "time",
+    "names": [
+      "h",
+      "hr"
+    ]
+  }
+]

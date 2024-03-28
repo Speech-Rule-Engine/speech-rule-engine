@@ -227,7 +227,7 @@
     [
       "Action",
       "prefix",
-      "[m] content/* (grammar:prefix); [n] children/*[1]"
+      "[m] content/* (grammar:?prefix); [n] children/*[1]"
     ],
     [
       "Action",
@@ -352,12 +352,12 @@
     [
       "Action",
       "lines-summary-none",
-      "[n] . (grammar:layoutSummary)"
+      "[n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
       "cases-summary-none",
-      "[n] . (grammar:layoutSummary)"
+      "[n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",

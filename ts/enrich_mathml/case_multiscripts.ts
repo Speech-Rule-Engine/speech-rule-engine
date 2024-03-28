@@ -18,13 +18,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
-import { CaseMultiindex } from './case_multiindex';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { CaseMultiindex } from './case_multiindex.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseMultiscripts extends CaseMultiindex {
   /**
@@ -39,7 +43,7 @@ export class CaseMultiscripts extends CaseMultiindex {
     }
     const mmlTag = DomUtil.tagName(semantic.mathmlTree);
     return (
-      mmlTag === 'MMULTISCRIPTS' &&
+      mmlTag === MMLTAGS.MMULTISCRIPTS &&
       (semantic.type === SemanticType.SUPERSCRIPT ||
         semantic.type === SemanticType.SUBSCRIPT)
     );

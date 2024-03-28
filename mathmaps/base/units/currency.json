@@ -1,0 +1,224 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "$",
+    "category": "currency",
+    "names": [
+      "$",
+      "💲",
+      "＄",
+      "﹩",
+      "USD"
+    ]
+  },
+  {
+    "key": "£",
+    "category": "currency",
+    "names": [
+      "£",
+      "￡",
+      "GBP"
+    ]
+  },
+  {
+    "key": "¥",
+    "category": "currency",
+    "names": [
+      "¥",
+      "￥",
+      "JPY"
+    ]
+  },
+  {
+    "key": "€",
+    "category": "currency",
+    "names": [
+      "€",
+      "EUR"
+    ]
+  },
+  {
+    "key": "₡",
+    "category": "currency",
+    "names": [
+      "₡",
+      "CRC"
+    ]
+  },
+  {
+    "key": "₢",
+    "category": "currency",
+    "names": [
+      "₢"
+    ]
+  },
+  {
+    "key": "₣",
+    "category": "currency",
+    "names": [
+      "₣"
+    ]
+  },
+  {
+    "key": "₤",
+    "category": "currency",
+    "names": [
+      "₤"
+    ]
+  },
+  {
+    "key": "₥",
+    "category": "currency",
+    "names": [
+      "₥"
+    ]
+  },
+  {
+    "key": "₦",
+    "category": "currency",
+    "names": [
+      "₦",
+      "NGN"
+    ]
+  },
+  {
+    "key": "₧",
+    "category": "currency",
+    "names": [
+      "₧"
+    ]
+  },
+  {
+    "key": "₨",
+    "category": "currency",
+    "names": [
+      "₨",
+      "₹",
+      "INR",
+      "NPR",
+      "PKR",
+      "LKR"
+    ]
+  },
+  {
+    "key": "₩",
+    "category": "currency",
+    "names": [
+      "₩",
+      "￦",
+      "KRW"
+    ]
+  },
+  {
+    "key": "₪",
+    "category": "currency",
+    "names": [
+      "₪"
+    ]
+  },
+  {
+    "key": "₫",
+    "category": "currency",
+    "names": [
+      "₫"
+    ]
+  },
+  {
+    "key": "₭",
+    "category": "currency",
+    "names": [
+      "₭"
+    ]
+  },
+  {
+    "key": "₮",
+    "category": "currency",
+    "names": [
+      "₮"
+    ]
+  },
+  {
+    "key": "₯",
+    "category": "currency",
+    "names": [
+      "₯"
+    ]
+  },
+  {
+    "key": "₰",
+    "category": "currency",
+    "names": [
+      "₰"
+    ]
+  },
+  {
+    "key": "₱",
+    "category": "currency",
+    "names": [
+      "₱"
+    ]
+  },
+  {
+    "key": "₲",
+    "category": "currency",
+    "names": [
+      "₲"
+    ]
+  },
+  {
+    "key": "₳",
+    "category": "currency",
+    "names": [
+      "₳"
+    ]
+  },
+  {
+    "key": "₴",
+    "category": "currency",
+    "names": [
+      "₴",
+      "UAH"
+    ]
+  },
+  {
+    "key": "₵",
+    "category": "currency",
+    "names": [
+      "₵",
+      "GHS"
+    ]
+  },
+  {
+    "key": "₸",
+    "category": "currency",
+    "names": [
+      "₸",
+      "KZT"
+    ]
+  },
+  {
+    "key": "₺",
+    "category": "currency",
+    "names": [
+      "₺",
+      "TRY"
+    ]
+  },
+  {
+    "key": "元",
+    "category": "currency",
+    "names": [
+      "元"
+    ]
+  },
+  {
+    "key": "¢",
+    "category": "currency",
+    "names": [
+      "￠",
+      "¢"
+    ]
+  }
+]

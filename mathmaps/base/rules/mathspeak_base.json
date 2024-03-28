@@ -9,7 +9,8 @@
       "direct-speech",
       "default",
       "[t] @ext-speech",
-      "self::*[@ext-speech]"
+      "self::*[@ext-speech]",
+      "priority=Infinity"
     ],
     [
       "Rule",
@@ -46,11 +47,19 @@
       "omit-font",
       "default",
       "[n] . (grammar:ignoreFont=@font)",
-      "self::identifier",
+      "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
-      "@font",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Rule",
+      "omit-font-text",
+      "default",
+      "[n] . (grammar:ignoreFont=@font)",
+      "self::identifier[@font=\"normal\"]",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "contains(@annotation, \"general:text\")"
     ],
     [
       "Precondition",
@@ -91,8 +100,7 @@
       "Precondition",
       "font",
       "default",
-      "self::*",
-      "@font",
+      "self::*[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\""
     ],
@@ -101,9 +109,8 @@
       "font",
       "self::identifier",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
       "@font=\"normal\"",
+      "not(contains(@grammar, \"ignoreFont\"))",
       "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
       "@role!=\"unit\""
     ],
@@ -112,7 +119,6 @@
       "font",
       "self::identifier",
       "string-length(text())=1",
-      "@font",
       "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@role!=\"unit\""
@@ -337,6 +343,11 @@
       "default",
       "self::fenced",
       "@role=\"leftright\""
+    ],
+    [
+      "Alias",
+      "fences-open-close",
+      "self::fenced"
     ],
     [
       "Precondition",
@@ -1066,7 +1077,7 @@
     [
       "Alias",
       "double-prime",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())=2"
     ],
@@ -1081,7 +1092,7 @@
     [
       "Alias",
       "triple-prime",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())=3"
     ],
@@ -1096,7 +1107,7 @@
     [
       "Alias",
       "quadruple-prime",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())=4"
     ],
@@ -1111,9 +1122,17 @@
       "Precondition",
       "counted-prime-multichar",
       "default",
-      "self::operator",
+      "self::punctuation",
       "@role=\"prime\"",
       "string-length(text())>4"
+    ],
+    [
+      "Precondition",
+      "prime-multilength",
+      "default",
+      "self::punctuated",
+      "@role=\"prime\"",
+      "children/*[string-length(text())>1]"
     ],
     [
       "Precondition",

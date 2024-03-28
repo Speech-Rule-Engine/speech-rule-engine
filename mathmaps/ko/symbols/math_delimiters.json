@@ -1,0 +1,1784 @@
+[{"locale": "ko"},
+  {
+    "mappings": {
+      "default": {
+        "default": "괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "괄열",
+        "sbrief": "괄열"
+      },
+      "clearspeak": {
+        "default": "괄호 열고"
+      }
+    },
+    "key": "0028"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "괄닫",
+        "sbrief": "괄닫"
+      },
+      "clearspeak": {
+        "default": "괄호 닫고"
+      }
+    },
+    "key": "0029"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "대괄열",
+        "sbrief": "대괄열"
+      },
+      "clearspeak": {
+        "default": "대괄호 열고"
+      }
+    },
+    "key": "005B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "대괄닫",
+        "sbrief": "대괄닫"
+      },
+      "clearspeak": {
+        "default": "대괄호 닫고"
+      }
+    },
+    "key": "005D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "중괄열"
+      },
+      "clearspeak": {
+        "default": "중괄호 열고"
+      }
+    },
+    "key": "007B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "중괄닫"
+      },
+      "clearspeak": {
+        "default": "중괄호 닫고"
+      }
+    },
+    "key": "007D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꺾쇠 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "꺾쇠 괄열",
+        "sbrief": "꺾쇠 괄열"
+      }
+    },
+    "key": "2045"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꺾쇠 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "꺾쇠 괄닫",
+        "sbrief": "꺾쇠 괄닫"
+      }
+    },
+    "key": "2046"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 천장"
+      }
+    },
+    "key": "2308"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 천장"
+      }
+    },
+    "key": "2309"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 층"
+      }
+    },
+    "key": "230A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 층"
+      }
+    },
+    "key": "230B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 아래 크랍"
+      }
+    },
+    "key": "230C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 아래 크랍"
+      }
+    },
+    "key": "230D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 위 크랍"
+      }
+    },
+    "key": "230E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 위 크랍"
+      }
+    },
+    "key": "230F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 상단 모서리"
+      }
+    },
+    "key": "231C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 상단 모서리"
+      }
+    },
+    "key": "231D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 하단 모서리"
+      }
+    },
+    "key": "231E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 하단 모서리"
+      }
+    },
+    "key": "231F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 절반 적분"
+      }
+    },
+    "key": "2320"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 절반 적분"
+      }
+    },
+    "key": "2321"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꺾쇠 괄호 열고",
+        "physics": "bra"
+      }
+    },
+    "key": "2329"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꺾쇠 괄호 닫고",
+        "physics": "ket"
+      }
+    },
+    "key": "232A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽이 구부러진 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "위쪽이 구부러진 괄호 열고",
+        "sbrief": "위쪽이 구부러진 괄호 열고"
+      }
+    },
+    "key": "239B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "괄호 열고 확장"
+      },
+      "mathspeak": {
+        "brief": "괄호 열고 확장",
+        "sbrief": "괄호 열고 확장"
+      }
+    },
+    "key": "239C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽이 구부러진 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "아래쪽이 구부러진 괄호 열고",
+        "sbrief": "아래쪽이 구부러진 괄호 열고"
+      }
+    },
+    "key": "239D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽이 구부러진 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "위쪽이 구부러진 괄호 닫고",
+        "sbrief": "위쪽이 구부러진 괄호 닫고"
+      }
+    },
+    "key": "239E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "괄호 닫고 확장"
+      },
+      "mathspeak": {
+        "brief": "괄호 닫고 확장",
+        "sbrief": "괄호 닫고 확장"
+      }
+    },
+    "key": "239F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽이 구부러진 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "아래쪽이 구부러진 괄호 닫고",
+        "sbrief": "아래쪽이 구부러진 괄호 닫고"
+      }
+    },
+    "key": "23A0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽만 구부러진 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "위쪽만 구부러진 대괄호 열고",
+        "sbrief": "위쪽만 구부러진 대괄호 열고"
+      }
+    },
+    "key": "23A1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "확장 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "확장 대괄호 열고",
+        "sbrief": "확장 대괄호 열고"
+      }
+    },
+    "key": "23A2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽만 구부러진 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "아래쪽만 구부러진 대괄호 열고",
+        "sbrief": "아래쪽만 구부러진 대괄호 열고"
+      }
+    },
+    "key": "23A3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽만 구부러진 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "위쪽만 구부러진 대괄호 닫고",
+        "sbrief": "위쪽만 구부러진 대괄호 닫고"
+      }
+    },
+    "key": "23A4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "확장 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "확장 대괄호 닫고",
+        "sbrief": "확장 대괄호 닫고"
+      }
+    },
+    "key": "23A5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽만 구부러진 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "아래쪽만 구부러진 대괄호 닫고",
+        "sbrief": "아래쪽만 구부러진 대괄호 닫고"
+      }
+    },
+    "key": "23A6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽만 구부러진 중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽만 구부러진 중괄호 열고"
+      }
+    },
+    "key": "23A7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위아래 열려진 중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "위아래 열려진 중괄호 열고"
+      }
+    },
+    "key": "23A8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽만 구부러진 중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽만 구부러진 중괄호 열고"
+      }
+    },
+    "key": "23A9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "확장 중괄호"
+      }
+    },
+    "key": "23AA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽만 구부러진 중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽만 구부러진 중괄호 닫고"
+      }
+    },
+    "key": "23AB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽만 구부러진 중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽만 구부러진 중괄호 닫고"
+      }
+    },
+    "key": "23AC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위아래 열려진 중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "위아래 열려진 중괄호 닫고"
+      }
+    },
+    "key": "23AD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "확장된 인테그랄"
+      }
+    },
+    "key": "23AE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "확장된 수평선"
+      }
+    },
+    "key": "23AF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 왼쪽 하단 오른쪽으로 굽혀진 중괄호"
+      }
+    },
+    "key": "23B0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 오른쪽 하단 쪽으로 굽혀진 중괄호"
+      }
+    },
+    "key": "23B1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 절반 시그마"
+      }
+    },
+    "key": "23B2"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 절반 시그마"
+      }
+    },
+    "key": "23B3"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계방향으로 90도 돌린 중괄호"
+      },
+      "mathspeak": {
+        "brief": "시계방향으로 90도 돌린 중괄호",
+        "sbrief": "시계방향으로 90도 돌린 중괄호"
+      }
+    },
+    "key": "23B4"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계방향으로 90도 돌린 중괄호"
+      },
+      "mathspeak": {
+        "brief": "반시계방향으로 90도 돌린 중괄호",
+        "sbrief": "반시계방향으로 90도 돌린 중괄호"
+      }
+    },
+    "key": "23B5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계방향으로 90도 돌린 중괄호 위에 시계방향으로 90도 돌린 중괄호"
+      },
+      "mathspeak": {
+        "brief": "반시계방향으로 90도 돌린 중괄호 위에 시계방향으로 90도 돌린 중괄호",
+        "sbrief": "반시계방향으로 90도 돌린 중괄호 위에 시계방향으로 90도 돌린 중괄호"
+      }
+    },
+    "key": "23B6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "눈금 기호 하단"
+      }
+    },
+    "key": "23B7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 세로선"
+      }
+    },
+    "key": "23B8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 세로선"
+      }
+    },
+    "key": "23B9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 괄호"
+      },
+      "mathspeak": {
+        "brief": "위쪽 괄호",
+        "sbrief": "위쪽 괄호"
+      }
+    },
+    "key": "23DC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 괄호"
+      },
+      "mathspeak": {
+        "brief": "아래쪽 괄호",
+        "sbrief": "아래쪽 괄호"
+      }
+    },
+    "key": "23DD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "위쪽 중괄호"
+      },
+      "mathspeak": {
+        "sbrief": "위쪽 중괄호"
+      }
+    },
+    "key": "23DE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아래쪽 중괄호"
+      },
+      "mathspeak": {
+        "sbrief": "아래쪽 중괄호"
+      }
+    },
+    "key": "23DF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 거북이 모양 중괄호"
+      }
+    },
+    "key": "23E0"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 거북이 모양 중괄호"
+      }
+    },
+    "key": "23E1"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "중간 괄호 열고",
+        "sbrief": "중간 괄호 열고"
+      }
+    },
+    "key": "2768"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "중간 괄호 닫고",
+        "sbrief": "중간 괄호 닫고"
+      }
+    },
+    "key": "2769"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 평평한 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "중간 평평한 괄호 열고",
+        "sbrief": "중간 평평한 괄호 열고"
+      }
+    },
+    "key": "276A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 평평한 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "중간 평평한 괄호 닫고",
+        "sbrief": "중간 평평한 괄호 닫고"
+      }
+    },
+    "key": "276B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 포인팅 각도 중괄호 열고"
+      }
+    },
+    "key": "276C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 포인팅 각도 중괄호 닫고"
+      }
+    },
+    "key": "276D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두꺼운 왼쪽 포인팅 앵글 따옴표"
+      }
+    },
+    "key": "276E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두꺼운 오른쪽 각도 마크"
+      }
+    },
+    "key": "276F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두꺼운 포인팅 앵글 중괄호 열고"
+      }
+    },
+    "key": "2770"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두꺼운 포인팅 앵글 중괄호 닫고"
+      }
+    },
+    "key": "2771"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 거북이 모양 중괄호 열고"
+      }
+    },
+    "key": "2772"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "얇은 쪽 거북이 모양 중괄호"
+      }
+    },
+    "key": "2773"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "중간 중괄호 열고"
+      }
+    },
+    "key": "2774"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "중간 중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "중간 중괄호 닫고"
+      }
+    },
+    "key": "2775"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 S 자형 가방모양 구분 기호"
+      }
+    },
+    "key": "27C5"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 S 자형 가방모양 구분 기호"
+      }
+    },
+    "key": "27C6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 대괄호 열고"
+      }
+    },
+    "key": "27E6"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 대괄호 닫고"
+      }
+    },
+    "key": "27E7"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "구부러진 대괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "구부러진 대괄호 열고"
+      }
+    },
+    "key": "27E8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "구부러진 대괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "구부러진 대괄호 닫고"
+      }
+    },
+    "key": "27E9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 구부러진 대괄호 열고"
+      }
+    },
+    "key": "27EA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 구부러진 대괄호 닫고"
+      }
+    },
+    "key": "27EB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 구부러진 거북이 모양 대괄호 열고"
+      }
+    },
+    "key": "27EC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 구부러진 거북이 모양 대괄호 닫고"
+      }
+    },
+    "key": "27ED"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수학적 편평한 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "수학적 편평한 괄호 열고",
+        "sbrief": "수학적 편평한 괄호 열고"
+      }
+    },
+    "key": "27EE"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "수학적 편평한 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "수학적 편평한 괄호 닫고",
+        "sbrief": "수학적 편평한 괄호 닫고"
+      }
+    },
+    "key": "27EF"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 흰색 중괄호 열고"
+      }
+    },
+    "key": "2983"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 흰색 중괄호 닫고"
+      }
+    },
+    "key": "2984"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "두겹 괄호 열고",
+        "sbrief": "두겹 괄호 열고"
+      }
+    },
+    "key": "2985"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "두겹 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "두겹 괄호 닫고",
+        "sbrief": "두겹 괄호 닫고"
+      }
+    },
+    "key": "2986"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "Z 표기법 두겹 대괄호 열고"
+      }
+    },
+    "key": "2987"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "Z 표기법 두겹 대괄호 닫고"
+      }
+    },
+    "key": "2988"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "Z 표기법 삼각형 괄호 열고"
+      }
+    },
+    "key": "2989"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "Z 표기법 삼각형 괄호 닫고"
+      }
+    },
+    "key": "298A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑줄이 있는 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "밑줄이 있는 대괄호 열고",
+        "sbrief": "밑줄이 있는 대괄호 열고"
+      }
+    },
+    "key": "298B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "밑줄이 있는 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "밑줄이 있는 대괄호 닫고",
+        "sbrief": "밑줄이 있는 대괄호 닫고"
+      }
+    },
+    "key": "298C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 모서리에 대각선이 있는 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "상단 모서리에 대각선이 있는 대괄호 열고",
+        "sbrief": "상단 모서리에 대각선이 있는 대괄호 열고"
+      }
+    },
+    "key": "298D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 모서리에 대각선이 있는 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "상단 모서리에 대각선이 있는 대괄호 닫고",
+        "sbrief": "상단 모서리에 대각선이 있는 대괄호 닫고"
+      }
+    },
+    "key": "298E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 모서리에 대각선이 있는 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "하단 모서리에 대각선이 있는 대괄호 열고",
+        "sbrief": "하단 모서리에 대각선이 있는 대괄호 열고"
+      }
+    },
+    "key": "298F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 모서리에 대각선이 있는 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "하단 모서리에 대각선이 있는 대괄호 닫고",
+        "sbrief": "하단 모서리에 대각선이 있는 대괄호 닫고"
+      }
+    },
+    "key": "2990"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "점이 있는 대괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "점이 있는 대괄호 열고"
+      }
+    },
+    "key": "2991"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "점이 있는 대괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "점이 있는 대괄호 닫고"
+      }
+    },
+    "key": "2992"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아치보다 작은 대괄호 열고"
+      }
+    },
+    "key": "2993"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "아치보다 큰 대괄호 닫고"
+      }
+    },
+    "key": "2994"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대괄호보다 큰 두개 왼쪽 방향 호"
+      }
+    },
+    "key": "2995"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "대괄호보다 작은 두개 왼쪽 방향 호"
+      }
+    },
+    "key": "2996"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 거북이 모양 대괄호 열고"
+      }
+    },
+    "key": "2997"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "검은 거북이 모양 대괄호 닫고"
+      }
+    },
+    "key": "2998"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 방향 흔들리는 모양"
+      }
+    },
+    "key": "29D8"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 방향 흔들리는 모양"
+      }
+    },
+    "key": "29D9"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "왼쪽 방향 이중 흔들는 모양"
+      }
+    },
+    "key": "29DA"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "오른쪽 방향 이중 흔들는 모양"
+      }
+    },
+    "key": "29DB"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "포인팅 휘어진 각도 중괄호 열고"
+      }
+    },
+    "key": "29FC"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "포인팅 휘어진 각도 중괄호 닫고"
+      }
+    },
+    "key": "29FD"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 절반 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "상단 절반 대괄호 열고",
+        "sbrief": "상단 절반 대괄호 열고"
+      }
+    },
+    "key": "2E22"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "상단 절반 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "상단 절반 대괄호 닫고",
+        "sbrief": "상단 절반 대괄호 닫고"
+      }
+    },
+    "key": "2E23"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 절반 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "하단 절반 대괄호 열고",
+        "sbrief": "하단 절반 대괄호 열고"
+      }
+    },
+    "key": "2E24"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 절반 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "하단 절반 대괄호 닫고",
+        "sbrief": "하단 절반 대괄호 닫고"
+      }
+    },
+    "key": "2E25"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 90도 회전한 U 모양 괄호"
+      }
+    },
+    "key": "2E26"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향으로 90도 회전한 U 모양 괄호"
+      }
+    },
+    "key": "2E27"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "이중 괄호 열고",
+        "sbrief": "이중 괄호 열고"
+      }
+    },
+    "key": "2E28"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "이중 괄호 닫고",
+        "sbrief": "이중 괄호 닫고"
+      }
+    },
+    "key": "2E29"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꺾쇠 괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "꺾쇠 괄호 열고"
+      }
+    },
+    "key": "3008"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "꺾쇠 괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "꺾쇠 괄호 닫고"
+      }
+    },
+    "key": "3009"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 꺾쇠 괄호 열고"
+      }
+    },
+    "key": "300A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 꺾쇠 괄호 닫고"
+      }
+    },
+    "key": "300B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "절반 대괄호 열고"
+      }
+    },
+    "key": "300C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "절반 대괄호 닫고"
+      }
+    },
+    "key": "300D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 절반 대괄호 열고"
+      }
+    },
+    "key": "300E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 절반 대괄호 닫고"
+      }
+    },
+    "key": "300F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 차있는 절반 대괄호 열고"
+      }
+    },
+    "key": "3010"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 차있는 절반 대괄호 열고"
+      }
+    },
+    "key": "3011"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "거북이 모양 대괄호 열고"
+      }
+    },
+    "key": "3014"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "거북이 모양 대괄호 닫고"
+      }
+    },
+    "key": "3015"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 오목렌즈 모양 괄호 열고"
+      }
+    },
+    "key": "3016"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 오목렌즈 모양 괄호 닫고"
+      }
+    },
+    "key": "3017"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 거북이 모양 대괄호 열고"
+      }
+    },
+    "key": "3018"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 거북이 모양 대괄호 닫고"
+      }
+    },
+    "key": "3019"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 대괄호 열고"
+      }
+    },
+    "key": "301A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "속이 빈 대괄호 닫고"
+      }
+    },
+    "key": "301B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반전된 이중 프라임 따옴표"
+      }
+    },
+    "key": "301D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "이중 프라임 따옴표"
+      }
+    },
+    "key": "301E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "하단 이중 프라임 따옴표"
+      }
+    },
+    "key": "301F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가운데 꽃무늬가 있는 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "가운데 꽃무늬가 있는 괄호 열고",
+        "sbrief": "가운데 꽃무늬가 있는 괄호 열고"
+      }
+    },
+    "key": "FD3E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "가운데 꽃무늬가 있는 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "o가운데 꽃무늬가 있는 괄호 닫고",
+        "sbrief": "가운데 꽃무늬가 있는 괄호 닫고"
+      }
+    },
+    "key": "FD3F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 속이 빈 오목렌즈 모양의 괄호의 발표 형식"
+      }
+    },
+    "key": "FE17"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반시계 방향으로 회전한 속이 빈 오목렌즈 모양의 괄호의 발표 형식"
+      }
+    },
+    "key": "FE18"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 열린 괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "brief": "시계 방향으로 회전한 열린 괄호의 발표 형식",
+        "sbrief": "시계 방향으로 회전한 열린 괄호의 발표 형식"
+      }
+    },
+    "key": "FE35"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 열린 괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "brief": "시계 방향으로 회전한 열린 괄호의 발표 형식",
+        "sbrief": "시계 방향으로 회전한 열린 괄호의 발표 형식"
+      }
+    },
+    "key": "FE36"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 열린 중괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "sbrief": "시계 방향으로 회전한 열린 중괄호의 발표 형식"
+      }
+    },
+    "key": "FE37"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 닫힌 중괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "sbrief": "시계 방향으로 회전한 닫힌 중괄호의 발표 형식"
+      }
+    },
+    "key": "FE38"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 거북이 모양 열린 괄호의 발표 형식"
+      }
+    },
+    "key": "FE39"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 거북이 모양 닫힌 괄호의 발표 형식"
+      }
+    },
+    "key": "FE3A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 속이 찬 오목렌즈 모양 열린 괄호의 발표 형식"
+      }
+    },
+    "key": "FE3B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 속이 찬 오목렌즈 모양 닫힌 괄호의 발표 형식"
+      }
+    },
+    "key": "FE3C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 이중 각진 모양 열린 괄호의 발표 형식"
+      }
+    },
+    "key": "FE3D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 이중 각진 모양 닫힌 괄호의 발표 형식"
+      }
+    },
+    "key": "FE3E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 각진 모양 열린 괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "sbrief": "시계 방향으로 회전한 각진 모양 열린 괄호의 발표 형식"
+      }
+    },
+    "key": "FE3F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 각진 모양 닫힌 괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "sbrief": "시계 방향으로 회전한 각진 닫힌 모양 괄호의 발표 형식"
+      }
+    },
+    "key": "FE40"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 상단 절반 열린 대괄호의 발표 형식"
+      }
+    },
+    "key": "FE41"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 상단 절반 닫힌 대괄호의 발표 형식"
+      }
+    },
+    "key": "FE42"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 속이 비어 있는 상단 절반 열린 대괄호의 발표 형식"
+      }
+    },
+    "key": "FE43"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 속이 비어 있는 상단 절반 닫힌 대괄호의 발표 형식"
+      }
+    },
+    "key": "FE44"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 열린 대괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "brief": "시계 방향으로 회전한 열린 대괄호의 발표 형식",
+        "sbrief": "시계 방향으로 회전한 열린 대괄호의 발표 형식"
+      }
+    },
+    "key": "FE47"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "시계 방향으로 회전한 닫힌 대괄호의 발표 형식"
+      },
+      "mathspeak": {
+        "brief": "시계 방향으로 회전한 닫힌 대괄호의 발표 형식",
+        "sbrief": "시계 방향으로 회전한 닫힌 대괄호의 발표 형식"
+      }
+    },
+    "key": "FE48"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "작은 괄호 열고",
+        "sbrief": "작은 괄호 열고"
+      }
+    },
+    "key": "FE59"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "작은 괄호 닫고",
+        "sbrief": "작은 괄호 닫고"
+      }
+    },
+    "key": "FE5A"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "작은 중괄호 열고"
+      }
+    },
+    "key": "FE5B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "작은 중괄호 닫고"
+      }
+    },
+    "key": "FE5C"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 거북이 모양 괄호 열고"
+      }
+    },
+    "key": "FE5D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "작은 거북이 모양 괄호 닫고"
+      }
+    },
+    "key": "FE5E"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "전각 괄호 열고",
+        "sbrief": "전각 괄호 열고"
+      }
+    },
+    "key": "FF08"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "전각 괄호 닫고",
+        "sbrief": "전각 괄호 닫고"
+      }
+    },
+    "key": "FF09"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 대괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "전각 대괄호 열고",
+        "sbrief": "전각 대괄호 열고"
+      }
+    },
+    "key": "FF3B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 대괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "전각 대괄호 닫고",
+        "sbrief": "전각 대괄호 닫고"
+      }
+    },
+    "key": "FF3D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 중괄호 열고"
+      },
+      "mathspeak": {
+        "sbrief": "전각 중괄호 열고"
+      }
+    },
+    "key": "FF5B"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 중괄호 닫고"
+      },
+      "mathspeak": {
+        "sbrief": "전각 중괄호 닫고"
+      }
+    },
+    "key": "FF5D"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 속이 빈 괄호 열고"
+      },
+      "mathspeak": {
+        "brief": "전각 속이 빈 괄호 열고",
+        "sbrief": "전각 속이 빈 괄호 열고"
+      }
+    },
+    "key": "FF5F"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "전각 속이 빈 괄호 닫고"
+      },
+      "mathspeak": {
+        "brief": "전각 속이 빈 쪽 괄호",
+        "sbrief": "전각 속이 빈 괄호 닫고"
+      }
+    },
+    "key": "FF60"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반각 왼쪽 상단 절반 대괄호"
+      }
+    },
+    "key": "FF62"
+  },
+  {
+    "mappings": {
+      "default": {
+        "default": "반각 오른쪽 상단 절반 대괄호"
+      }
+    },
+    "key": "FF63"
+  }
+]

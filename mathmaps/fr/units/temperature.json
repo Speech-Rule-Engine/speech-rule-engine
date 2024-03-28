@@ -8,12 +8,7 @@
       "default": {
         "default": "farad"
       }
-    },
-    "names": [
-      "F",
-      "F.",
-      "°F"
-    ]
+    }
   },
   {
     "key": "C",
@@ -21,11 +16,7 @@
       "default": {
         "default": "celcius"
       }
-    },
-    "names": [
-      "C",
-      "°C"
-    ]
+    }
   },
   {
     "key": "K",
@@ -33,10 +24,6 @@
       "default": {
         "default": "kelvin"
       }
-    },
-    "names": [
-      "K",
-      "°K"
-    ]
+    }
   }
 ]

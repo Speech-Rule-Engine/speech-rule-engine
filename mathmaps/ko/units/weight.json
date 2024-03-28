@@ -1,0 +1,103 @@
+[
+  {"locale": "ko"},
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "드램"
+     }
+   },
+   "key": "dram",
+   "names": ["dr", "dr.", "dram", "drams"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "온스"
+     }
+   },
+   "key": "oz",
+   "names": ["oz", "oz.","ounce", "ounces"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "파운드"
+     }
+   },
+   "key": "lb",
+   "names": ["lb", "lb.","pound", "pounds"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "스톤"
+     }
+   },
+   "key": "st",
+   "names": ["st", "st.", "stone", "stones"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "쿼터"
+     }
+   },
+   "key": "qtr",
+   "names": ["qtr", "qtr.", "quarter", "quarters"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "헌드레드웨이트"
+     }
+   },
+   "key": "cwt",
+   "names": ["cwt", "cwt.", "hundredweight", "hundredweights"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "롱톤"
+     }
+   },
+   "key": "LT",
+   "names": ["LT", "L.T.", "long ton", "long tons"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "그램"
+     }
+   },
+   "key": "gr",
+   "names": ["gr", "gram", "grams"]
+  },
+  {"category": "weight",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "그램"
+     }
+   },
+   "key": "g",
+   "names": ["g", "gram", "grams"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "마이크로그램"
+     }
+   },
+   "key": "mcg",
+   "names": ["mcg", "microgram", "micrograms"]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "톤"
+     }
+   },
+   "key": "t",
+   "names": ["t", "T", "ton", "tons"]
+  }
+]

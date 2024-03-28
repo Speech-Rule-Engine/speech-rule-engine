@@ -1,129 +1,119 @@
-[{"locale": "en"},
-  {"category": "Trigonometric",
-   "mappings": {
-     "default": {
-       "default": "cosine"
-     }
-   },
-   "key": "cos",
-   "names": ["cos", "cosine"]
+[
+  {
+    "locale": "en"
   },
-  {"category": "Trigonometric",
-   "mappings": {
-     "default": {
-       "default": "cotangent"
-     }
-   },
-   "key": "cot",
-   "names": ["cot"]
+  {
+    "key": "cos",
+    "mappings": {
+      "default": {
+        "default": "cosine"
+      }
+    }
   },
-  {"category": "Trigonometric",
-   "mappings": {
-     "default": {
-       "default": "cosecant"
-     }
-   },
-   "key": "csc",
-   "names": ["csc"]
+  {
+    "key": "cot",
+    "mappings": {
+      "default": {
+        "default": "cotangent"
+      }
+    }
   },
-  {"category": "Trigonometric",
-   "mappings": {
-     "default": {
-       "default": "secant"
-     }
-   },
-   "key": "sec",
-   "names": ["sec"]
+  {
+    "key": "csc",
+    "mappings": {
+      "default": {
+        "default": "cosecant"
+      }
+    }
   },
-  {"category": "Trigonometric",
-   "mappings": {
-     "default": {
-       "default": "sine"
-     }
-   },
-   "key": "sin",
-   "names": ["sin", "sine"]
+  {
+    "key": "sec",
+    "mappings": {
+      "default": {
+        "default": "secant"
+      }
+    }
   },
-  {"category": "Trigonometric",
-   "mappings": {
-     "default": {
-       "default": "tangent"
-     }
-   },
-   "key": "tan",
-   "names": ["tan"]
+  {
+    "key": "sin",
+    "mappings": {
+      "default": {
+        "default": "sine"
+      }
+    }
   },
-
-  {"category": "Cyclometric",
-   "mappings": {
-     "default": {
-       "default": "arc cosine"
-     },
-     "clearspeak": {
-       "Trig_TrigInverse": "cosine inverse"
-     }
-   },
-   "key": "arccos",
-   "names": ["arccos"]
+  {
+    "key": "tan",
+    "mappings": {
+      "default": {
+        "default": "tangent"
+      }
+    }
   },
-  {"category": "Cyclometric",
-   "mappings": {
-     "default": {
-       "default": "arc cotangent"
-     },
-     "clearspeak": {
-       "Trig_TrigInverse": "cotangent inverse"
-     }
-   },
-   "key": "arccot",
-   "names": ["arccot"]
+  {
+    "key": "arccos",
+    "mappings": {
+      "default": {
+        "default": "arc cosine"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cosine inverse"
+      }
+    }
   },
-  {"category": "Cyclometric",
-   "mappings": {
-     "default": {
-       "default": "arc cosecant"
-     },
-     "clearspeak": {
-       "Trig_TrigInverse": "cosecant inverse"
-     }
-   },
-   "key": "arccsc",
-   "names": ["arccsc"]
+  {
+    "key": "arccot",
+    "mappings": {
+      "default": {
+        "default": "arc cotangent"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cotangent inverse"
+      }
+    }
   },
-  {"category": "Cyclometric",
-   "mappings": {
-     "default": {
-       "default": "arc secant"
-     },
-     "clearspeak": {
-       "Trig_TrigInverse": "secant inverse"
-     }
-   },
-   "key": "arcsec",
-   "names": ["arcsec"]
+  {
+    "key": "arccsc",
+    "mappings": {
+      "default": {
+        "default": "arc cosecant"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cosecant inverse"
+      }
+    }
   },
-  {"category": "Cyclometric",
-   "mappings": {
-     "default": {
-       "default": "arc sine"
-     },
-     "clearspeak": {
-       "Trig_TrigInverse": "sine inverse"
-     }
-   },
-   "key": "arcsin",
-   "names": ["arcsin"]
+  {
+    "key": "arcsec",
+    "mappings": {
+      "default": {
+        "default": "arc secant"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "secant inverse"
+      }
+    }
   },
-  {"category": "Cyclometric",
-   "mappings": {
-     "default": {
-       "default": "arc tangent"
-     },
-     "clearspeak": {
-       "Trig_TrigInverse": "tangent inverse"
-     }
-   },
-   "key": "arctan",
-   "names": ["arctan"]
+  {
+    "key": "arcsin",
+    "mappings": {
+      "default": {
+        "default": "arc sine"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "sine inverse"
+      }
+    }
+  },
+  {
+    "key": "arctan",
+    "mappings": {
+      "default": {
+        "default": "arc tangent"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "tangent inverse"
+      }
+    }
   }
 ]

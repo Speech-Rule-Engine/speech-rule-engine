@@ -1,0 +1,119 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "cos",
+    "mappings": {
+      "default": {
+        "default": "kosinus"
+      }
+    }
+  },
+  {
+    "key": "cot",
+    "mappings": {
+      "default": {
+        "default": "kotangens"
+      }
+    }
+  },
+  {
+    "key": "csc",
+    "mappings": {
+      "default": {
+        "default": "kosekans"
+      }
+    }
+  },
+  {
+    "key": "sec",
+    "mappings": {
+      "default": {
+        "default": "sekans"
+      }
+    }
+  },
+  {
+    "key": "sin",
+    "mappings": {
+      "default": {
+        "default": "sinus"
+      }
+    }
+  },
+  {
+    "key": "tan",
+    "mappings": {
+      "default": {
+        "default": "tangens"
+      }
+    }
+  },
+  {
+    "key": "arccos",
+    "mappings": {
+      "default": {
+        "default": "boog kosinus"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "inverse cosine"
+      }
+    }
+  },
+  {
+    "key": "arccot",
+    "mappings": {
+      "default": {
+        "default": "boog kotangens"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "inverse cotangent"
+      }
+    }
+  },
+  {
+    "key": "arccsc",
+    "mappings": {
+      "default": {
+        "default": "boog kosekans"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "inverse cosecant"
+      }
+    }
+  },
+  {
+    "key": "arcsec",
+    "mappings": {
+      "default": {
+        "default": "boog sekans"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "inverse secant"
+      }
+    }
+  },
+  {
+    "key": "arcsin",
+    "mappings": {
+      "default": {
+        "default": "boog sinus"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "inverse sine"
+      }
+    }
+  },
+  {
+    "key": "arctan",
+    "mappings": {
+      "default": {
+        "default": "boog tangens"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "inverse tangent"
+      }
+    }
+  }
+]

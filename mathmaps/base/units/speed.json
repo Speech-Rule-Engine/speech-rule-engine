@@ -1,0 +1,35 @@
+[
+  {
+    "locale": "base"
+  },
+  {
+    "key": "kt",
+    "category": "speed",
+    "names": [
+      "kt",
+      "kt."
+    ]
+  },
+  {
+    "key": "mph",
+    "category": "speed",
+    "names": [
+      "mph"
+    ]
+  },
+  {
+    "key": "rpm",
+    "category": "speed",
+    "names": [
+      "rpm"
+    ]
+  },
+  {
+    "key": "kmh",
+    "category": "speed",
+    "names": [
+      "kmh",
+      "kph"
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "kind": "numbers",
+  "locale": "da",
+  "messages": {
+    "zero": "nul",
+    "ones": [
+      "",
+      "en",
+      "to",
+      "tre",
+      "fire",
+      "fem",
+      "seks",
+      "syv",
+      "otte",
+      "ni",
+      "ti",
+      "elleve",
+      "tolv",
+      "tretten",
+      "fjorten",
+      "femten",
+      "seksten",
+      "sytten",
+      "atten",
+      "nitten"
+    ],
+    "tens": [
+      "",
+      "",
+      "tyve",
+      "tredve",
+      "fyrre",
+      "halvtreds",
+      "tres",
+      "halvfjerds",
+      "firs",
+      "halvfems"
+    ],
+    "large": [
+      "",
+      "tusind",
+      "million",
+      "milliard",
+      "billion",
+      "billiard",
+      "trillion",
+      "trilliard",
+      "kvadrillion",
+      "kvadrilliard",
+      "kvintillion",
+      "kvintilliard"
+    ],
+    "vulgarSep": " ",
+    "numSep": "",
+    "hundreds": [
+      "et hundrede",
+      "to hundrede",
+      "tre hundrede",
+      "fire hundrede",
+      "fem hundrede",
+      "seks hundrede",
+      "syv hundrede",
+      "otte hundrede",
+      "ni hundrede"
+    ],
+    "twenties": {
+      "21": "enogtyve",
+      "22": "toogtyve"
+    },
+    "thirties": {},
+    "rest": {
+      "0": "nul",
+      "101": "et hundrede og en",
+      "2000": "to tusind",
+      "2000000": "to millioner",
+      "2000000000": "to milliarder",
+      " ": ""
+    },
+    "special": {
+      "smallOrdinals": [
+        "nulte", "første", "anden", "tredje", "fjerde", "femte", "sjette",
+        "syvende", "ottende", "niende", "tiende", "ellevte", "tolvte",
+        "trettende", "fjortende", "femtende", "sekstende", "syttende",
+        "attende", "nittende"
+      ],
+      "tensOrdinals": [
+        "", "", "tyvende", "tredvte", "fyrretyvende", "halvtredsindstyvende", "tresindstyvende", "halvfjerdsende", "firsindstyvende", "halvfemsindstyvende"
+      ],
+      "endOrdinal": "de"
+    }
+  }
+}

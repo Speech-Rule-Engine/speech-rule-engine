@@ -19,13 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { addPrefix } from '../enrich_mathml/enrich_attr';
-import { ContrastPicker } from '../highlighter/color_picker';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { RebuildStree } from '../walker/rebuild_stree';
-import * as WalkerUtil from '../walker/walker_util';
+import * as DomUtil from '../common/dom_util.js';
+import { addPrefix } from '../enrich_mathml/enrich_attr.js';
+import { ContrastPicker } from '../highlighter/color_picker.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
+import * as WalkerUtil from '../walker/walker_util.js';
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
 
 export class ColorGenerator extends AbstractSpeechGenerator {
   /**
@@ -97,9 +98,9 @@ export class ColorGenerator extends AbstractSpeechGenerator {
   /**
    * @override
    */
-  public generateSpeech(node: Element, _xml: Element) {
+  public generateSpeech(node: Element, xml: Element | string) {
     if (!this.getRebuilt()) {
-      this.setRebuilt(new RebuildStree(node as Element));
+      this.setRebuilt(new RebuildStree(DomUtil.parseInput(xml as string)));
     }
     this.colorLeaves_(node);
     return WalkerUtil.getAttribute(node, this.modality);

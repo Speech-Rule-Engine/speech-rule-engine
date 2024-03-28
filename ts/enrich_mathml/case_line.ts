@@ -18,12 +18,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes } from './enrich_attr.js';
 
 export class CaseLine extends AbstractEnrichCase {
   /**

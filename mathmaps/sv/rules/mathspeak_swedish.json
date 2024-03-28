@@ -5,6 +5,18 @@
   "inherits": "base",
   "rules": [
     [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Precondition",
+      "font-double-struck",
+      "default",
+      "self::*[@font=\"double-struck\"]",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
       "Precondition",
       "german-font",
       "default",

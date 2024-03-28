@@ -8,15 +8,7 @@
       "default": {
         "default": "dólar"
       }
-    },
-    "category": "currency",
-    "names": [
-      "$",
-      "💲",
-      "＄",
-      "﹩",
-      "USD"
-    ]
+    }
   },
   {
     "key": "£",
@@ -24,13 +16,7 @@
       "default": {
         "default": "penique"
       }
-    },
-    "category": "currency",
-    "names": [
-      "£",
-      "￡",
-      "GBP"
-    ]
+    }
   },
   {
     "key": "¥",
@@ -38,13 +24,7 @@
       "default": {
         "default": "yen"
       }
-    },
-    "category": "currency",
-    "names": [
-      "¥",
-      "￥",
-      "JPY"
-    ]
+    }
   },
   {
     "key": "€",
@@ -52,12 +32,7 @@
       "default": {
         "default": "euro"
       }
-    },
-    "category": "currency",
-    "names": [
-      "€",
-      "EUR"
-    ]
+    }
   },
   {
     "key": "₡",
@@ -65,12 +40,7 @@
       "default": {
         "default": "colón"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₡",
-      "CRC"
-    ]
+    }
   },
   {
     "key": "₢",
@@ -78,11 +48,7 @@
       "default": {
         "default": "cruzeiro"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₢"
-    ]
+    }
   },
   {
     "key": "₣",
@@ -90,11 +56,7 @@
       "default": {
         "default": "franco"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₣"
-    ]
+    }
   },
   {
     "key": "₤",
@@ -102,11 +64,7 @@
       "default": {
         "default": "lira"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₤"
-    ]
+    }
   },
   {
     "key": "₥",
@@ -114,11 +72,7 @@
       "default": {
         "default": "mills"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₥"
-    ]
+    }
   },
   {
     "key": "₦",
@@ -126,12 +80,7 @@
       "default": {
         "default": "naira"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₦",
-      "NGN"
-    ]
+    }
   },
   {
     "key": "₧",
@@ -139,11 +88,7 @@
       "default": {
         "default": "peseta"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₧"
-    ]
+    }
   },
   {
     "key": "₨",
@@ -151,16 +96,7 @@
       "default": {
         "default": "rupia"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₨",
-      "₹",
-      "INR",
-      "NPR",
-      "PKR",
-      "LKR"
-    ]
+    }
   },
   {
     "key": "₩",
@@ -168,13 +104,7 @@
       "default": {
         "default": "won"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₩",
-      "￦",
-      "KRW"
-    ]
+    }
   },
   {
     "key": "₪",
@@ -182,11 +112,7 @@
       "default": {
         "default": "siclo"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₪"
-    ]
+    }
   },
   {
     "key": "₫",
@@ -194,11 +120,7 @@
       "default": {
         "default": "dong"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₫"
-    ]
+    }
   },
   {
     "key": "₭",
@@ -206,11 +128,7 @@
       "default": {
         "default": "kip"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₭"
-    ]
+    }
   },
   {
     "key": "₮",
@@ -218,11 +136,7 @@
       "default": {
         "default": "tugrik"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₮"
-    ]
+    }
   },
   {
     "key": "₯",
@@ -231,11 +145,7 @@
         "plural": "dracmas",
         "default": "dracma"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₯"
-    ]
+    }
   },
   {
     "key": "₰",
@@ -244,11 +154,7 @@
         "plural": "peniques alemanes",
         "default": "penique alemán"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₰"
-    ]
+    }
   },
   {
     "key": "₱",
@@ -256,11 +162,7 @@
       "default": {
         "default": "peso"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₱"
-    ]
+    }
   },
   {
     "key": "₲",
@@ -269,11 +171,7 @@
         "default": "guaraní",
         "plural": "guaraníes"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₲"
-    ]
+    }
   },
   {
     "key": "₳",
@@ -281,11 +179,7 @@
       "default": {
         "default": "austral"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₳"
-    ]
+    }
   },
   {
     "key": "₴",
@@ -293,12 +187,7 @@
       "default": {
         "default": "hryvnias"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₴",
-      "UAH"
-    ]
+    }
   },
   {
     "key": "₵",
@@ -306,12 +195,25 @@
       "default": {
         "default": "cedis"
       }
-    },
-    "category": "currency",
-    "names": [
-      "₵",
-      "GHS"
-    ]
+    }
+  },
+  {
+    "key": "₸",
+    "mappings": {
+      "default": {
+        "default": "tenge",
+        "plural": "tenge"
+      }
+    }
+  },
+  {
+    "key": "₺",
+    "mappings": {
+      "default": {
+        "default": "lira turca",
+        "plural": "liras turca"
+      }
+    }
   },
   {
     "key": "元",
@@ -319,22 +221,14 @@
       "default": {
         "default": "yuan"
       }
-    },
-    "category": "currency",
-    "names": [
-      "元"
-    ]
+    }
   },
   {
-    "category": "currency",
     "key": "¢",
     "mappings": {
       "default": {
         "default": "centésimo"
       }
-    },
-    "names": [
-      "￠", "¢"
-    ]
+    }
   }
 ]

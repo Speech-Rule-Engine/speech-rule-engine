@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as XpathUtil from '../common/xpath_util';
-import { LOCALE } from '../l10n/locale';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Iterates over the list of content nodes of a multiplication of units and
@@ -69,7 +69,7 @@ const SCRIPT_ELEMENTS: string[] = [
  * @param node The node to test.
  * @returns True if it is the right most unit in that subtree.
  */
-export function rightMostUnit(node: Element): boolean {
+function rightMostUnit(node: Element): boolean {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
       return true;
@@ -90,7 +90,7 @@ export function rightMostUnit(node: Element): boolean {
  * @param node The node to test.
  * @returns True if it is the left most unit in that subtree.
  */
-export function leftMostUnit(node: Element): boolean {
+function leftMostUnit(node: Element): boolean {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
       return true;

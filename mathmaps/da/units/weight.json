@@ -1,0 +1,104 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "dram",
+    "mappings": {
+      "default": {
+        "default": "dram",
+        "plural": "dram"
+      }
+    }
+  },
+  {
+    "key": "oz",
+    "mappings": {
+      "default": {
+        "default": "ounce",
+        "plural": "ounces"
+      }
+    }
+  },
+  {
+    "key": "lb",
+    "mappings": {
+      "default": {
+        "default": "pund",
+        "plural": "pund"
+      }
+    }
+  },
+  {
+    "key": "st",
+    "mappings": {
+      "default": {
+        "default": "stone",
+        "plural": "stone"
+      }
+    }
+  },
+  {
+    "key": "qtr",
+    "mappings": {
+      "default": {
+        "default": "quarter",
+        "plural": "quarters"
+      }
+    }
+  },
+  {
+    "key": "cwt",
+    "mappings": {
+      "default": {
+        "default": "hektokilogram",
+        "plural": "hektokilogram"
+      }
+    }
+  },
+  {
+    "key": "LT",
+    "mappings": {
+      "default": {
+        "default": "long ton",
+        "plural": "long ton"
+      }
+    }
+  },
+  {
+    "key": "gr",
+    "mappings": {
+      "default": {
+        "default": "gram",
+        "plural": "gram"
+      }
+    }
+  },
+  {
+    "key": "g",
+    "mappings": {
+      "default": {
+        "default": "gram",
+        "plural": "gram"
+      }
+    }
+  },
+  {
+    "key": "mcg",
+    "mappings": {
+      "default": {
+        "default": "mikrogram",
+        "plural": "mikrogram"
+      }
+    }
+  },
+  {
+    "key": "t",
+    "mappings": {
+      "default": {
+        "default": "ton",
+        "plural": "ton"
+      }
+    }
+  }
+]

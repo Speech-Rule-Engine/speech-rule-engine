@@ -8,8 +8,7 @@
       "default": {
         "default": "großes A mit Gravis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C1",
@@ -17,8 +16,7 @@
       "default": {
         "default": "großes A mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C2",
@@ -26,8 +24,7 @@
       "default": {
         "default": "großes A mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C3",
@@ -35,8 +32,7 @@
       "default": {
         "default": "großes A mit Tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C4",
@@ -44,8 +40,7 @@
       "default": {
         "default": "großes A mit Diärese"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C5",
@@ -53,8 +48,7 @@
       "default": {
         "default": "großes A mit Ring darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C7",
@@ -62,8 +56,7 @@
       "default": {
         "default": "großes C mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C8",
@@ -71,8 +64,7 @@
       "default": {
         "default": "großes E mit Gravis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00C9",
@@ -80,8 +72,7 @@
       "default": {
         "default": "großes E mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CA",
@@ -89,8 +80,7 @@
       "default": {
         "default": "großes E mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CB",
@@ -98,8 +88,7 @@
       "default": {
         "default": "großes E mit Diärese"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CC",
@@ -107,8 +96,7 @@
       "default": {
         "default": "großes I mit Gravis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CD",
@@ -116,8 +104,7 @@
       "default": {
         "default": "großes I mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CE",
@@ -125,8 +112,7 @@
       "default": {
         "default": "großes I mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00CF",
@@ -134,8 +120,7 @@
       "default": {
         "default": "großes I mit Diärese"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D1",
@@ -143,8 +128,7 @@
       "default": {
         "default": "großes n mit Tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D2",
@@ -152,8 +136,7 @@
       "default": {
         "default": "großes o mit Gravis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D3",
@@ -161,8 +144,7 @@
       "default": {
         "default": "großes O mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D4",
@@ -170,8 +152,7 @@
       "default": {
         "default": "großes O mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D5",
@@ -179,8 +160,7 @@
       "default": {
         "default": "großes O mit Tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D6",
@@ -188,8 +168,7 @@
       "default": {
         "default": "großes O mit Diärese"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00D9",
@@ -197,8 +176,7 @@
       "default": {
         "default": "großes U mit Gravis"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DA",
@@ -206,8 +184,7 @@
       "default": {
         "default": "großes U mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DB",
@@ -215,8 +192,7 @@
       "default": {
         "default": "großes U mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DC",
@@ -224,8 +200,7 @@
       "default": {
         "default": "großes U mit Diärese"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "00DD",
@@ -233,11 +208,9 @@
       "default": {
         "default": "großes Y mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0100",
     "mappings": {
       "default": {
@@ -246,7 +219,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0102",
     "mappings": {
       "default": {
@@ -255,7 +227,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0104",
     "mappings": {
       "default": {
@@ -269,8 +240,7 @@
       "default": {
         "default": "großes C mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0108",
@@ -278,8 +248,7 @@
       "default": {
         "default": "großes C mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "010A",
@@ -287,11 +256,9 @@
       "default": {
         "default": "großes C mit Punkt darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "010C",
     "mappings": {
       "default": {
@@ -300,7 +267,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "010E",
     "mappings": {
       "default": {
@@ -309,7 +275,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0112",
     "mappings": {
       "default": {
@@ -318,7 +283,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0114",
     "mappings": {
       "default": {
@@ -332,11 +296,9 @@
       "default": {
         "default": "großes E mit Punkt darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0118",
     "mappings": {
       "default": {
@@ -345,7 +307,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "011A",
     "mappings": {
       "default": {
@@ -359,11 +320,9 @@
       "default": {
         "default": "großes G mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "011E",
     "mappings": {
       "default": {
@@ -377,8 +336,7 @@
       "default": {
         "default": "großes G mit Punkt darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0122",
@@ -386,8 +344,7 @@
       "default": {
         "default": "großes G mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0124",
@@ -395,8 +352,7 @@
       "default": {
         "default": "großes H mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0128",
@@ -404,11 +360,9 @@
       "default": {
         "default": "großes I mit Tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "012A",
     "mappings": {
       "default": {
@@ -417,7 +371,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012C",
     "mappings": {
       "default": {
@@ -426,7 +379,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "012E",
     "mappings": {
       "default": {
@@ -440,8 +392,7 @@
       "default": {
         "default": "großes I mit Punkt darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0134",
@@ -449,8 +400,7 @@
       "default": {
         "default": "großes J mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0136",
@@ -458,8 +408,7 @@
       "default": {
         "default": "großes K mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0139",
@@ -467,8 +416,7 @@
       "default": {
         "default": "großes L mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "013B",
@@ -476,11 +424,9 @@
       "default": {
         "default": "großes L mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "013D",
     "mappings": {
       "default": {
@@ -494,8 +440,7 @@
       "default": {
         "default": "großes L mit Punkt in der Mitte"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0143",
@@ -503,8 +448,7 @@
       "default": {
         "default": "großes N mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0145",
@@ -512,11 +456,9 @@
       "default": {
         "default": "großes N mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0147",
     "mappings": {
       "default": {
@@ -525,7 +467,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "014C",
     "mappings": {
       "default": {
@@ -534,7 +475,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "014E",
     "mappings": {
       "default": {
@@ -548,8 +488,7 @@
       "default": {
         "default": "großes O mit doppeltem Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0154",
@@ -557,8 +496,7 @@
       "default": {
         "default": "großes R mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0156",
@@ -566,11 +504,9 @@
       "default": {
         "default": "großes R mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0158",
     "mappings": {
       "default": {
@@ -584,8 +520,7 @@
       "default": {
         "default": "großes S mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015C",
@@ -593,8 +528,7 @@
       "default": {
         "default": "großes S mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "015E",
@@ -602,11 +536,9 @@
       "default": {
         "default": "großes S mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0160",
     "mappings": {
       "default": {
@@ -620,11 +552,9 @@
       "default": {
         "default": "großes T mit Cedille"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0164",
     "mappings": {
       "default": {
@@ -638,11 +568,9 @@
       "default": {
         "default": "großes U mit Tilde"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "016A",
     "mappings": {
       "default": {
@@ -651,7 +579,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "016C",
     "mappings": {
       "default": {
@@ -665,8 +592,7 @@
       "default": {
         "default": "großes U mit Ring darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0170",
@@ -674,11 +600,9 @@
       "default": {
         "default": "großes U mit dopppeltem Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "0172",
     "mappings": {
       "default": {
@@ -692,8 +616,7 @@
       "default": {
         "default": "großes W mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0176",
@@ -701,8 +624,7 @@
       "default": {
         "default": "großes Y mit Zirkumflex"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0178",
@@ -710,8 +632,7 @@
       "default": {
         "default": "großes Y mit Diärese"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "0179",
@@ -719,8 +640,7 @@
       "default": {
         "default": "großes Z mit Aigu"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
     "key": "017B",
@@ -728,11 +648,9 @@
       "default": {
         "default": "großes Z mit Punkt darüber"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
-    "category": "Lu",
     "key": "017D",
     "mappings": {
       "default": {
@@ -741,7 +659,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CD",
     "mappings": {
       "default": {
@@ -750,7 +667,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01CF",
     "mappings": {
       "default": {
@@ -759,7 +675,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D1",
     "mappings": {
       "default": {
@@ -768,7 +683,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01D3",
     "mappings": {
       "default": {
@@ -777,7 +691,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E6",
     "mappings": {
       "default": {
@@ -786,7 +699,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01E8",
     "mappings": {
       "default": {
@@ -795,7 +707,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01EA",
     "mappings": {
       "default": {
@@ -804,7 +715,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F4",
     "mappings": {
       "default": {
@@ -813,7 +723,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "01F8",
     "mappings": {
       "default": {
@@ -822,7 +731,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0200",
     "mappings": {
       "default": {
@@ -831,7 +739,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0202",
     "mappings": {
       "default": {
@@ -840,7 +747,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0204",
     "mappings": {
       "default": {
@@ -849,7 +755,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0206",
     "mappings": {
       "default": {
@@ -858,7 +763,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0208",
     "mappings": {
       "default": {
@@ -867,7 +771,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020A",
     "mappings": {
       "default": {
@@ -876,7 +779,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020C",
     "mappings": {
       "default": {
@@ -885,7 +787,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "020E",
     "mappings": {
       "default": {
@@ -894,7 +795,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0210",
     "mappings": {
       "default": {
@@ -903,7 +803,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0212",
     "mappings": {
       "default": {
@@ -912,7 +811,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0214",
     "mappings": {
       "default": {
@@ -921,7 +819,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0216",
     "mappings": {
       "default": {
@@ -930,7 +827,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0218",
     "mappings": {
       "default": {
@@ -939,7 +835,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021A",
     "mappings": {
       "default": {
@@ -948,7 +843,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "021E",
     "mappings": {
       "default": {
@@ -957,7 +851,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0226",
     "mappings": {
       "default": {
@@ -966,7 +859,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0228",
     "mappings": {
       "default": {
@@ -975,7 +867,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "022E",
     "mappings": {
       "default": {
@@ -984,7 +875,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "0232",
     "mappings": {
       "default": {
@@ -993,7 +883,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E00",
     "mappings": {
       "default": {
@@ -1002,7 +891,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E02",
     "mappings": {
       "default": {
@@ -1011,7 +899,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E04",
     "mappings": {
       "default": {
@@ -1020,7 +907,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E06",
     "mappings": {
       "default": {
@@ -1029,7 +915,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0A",
     "mappings": {
       "default": {
@@ -1038,7 +923,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0C",
     "mappings": {
       "default": {
@@ -1047,7 +931,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E0E",
     "mappings": {
       "default": {
@@ -1056,7 +939,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E10",
     "mappings": {
       "default": {
@@ -1065,7 +947,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E12",
     "mappings": {
       "default": {
@@ -1074,7 +955,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E18",
     "mappings": {
       "default": {
@@ -1083,7 +963,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1A",
     "mappings": {
       "default": {
@@ -1092,7 +971,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E1E",
     "mappings": {
       "default": {
@@ -1101,7 +979,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E20",
     "mappings": {
       "default": {
@@ -1110,7 +987,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E22",
     "mappings": {
       "default": {
@@ -1119,7 +995,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E24",
     "mappings": {
       "default": {
@@ -1128,7 +1003,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E26",
     "mappings": {
       "default": {
@@ -1137,7 +1011,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E28",
     "mappings": {
       "default": {
@@ -1146,7 +1019,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2A",
     "mappings": {
       "default": {
@@ -1155,7 +1027,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E2C",
     "mappings": {
       "default": {
@@ -1164,7 +1035,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E30",
     "mappings": {
       "default": {
@@ -1173,7 +1043,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E32",
     "mappings": {
       "default": {
@@ -1182,7 +1051,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E34",
     "mappings": {
       "default": {
@@ -1191,7 +1059,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E36",
     "mappings": {
       "default": {
@@ -1200,7 +1067,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3A",
     "mappings": {
       "default": {
@@ -1209,7 +1075,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3C",
     "mappings": {
       "default": {
@@ -1218,7 +1083,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E3E",
     "mappings": {
       "default": {
@@ -1227,7 +1091,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E40",
     "mappings": {
       "default": {
@@ -1236,7 +1099,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E42",
     "mappings": {
       "default": {
@@ -1245,7 +1107,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E44",
     "mappings": {
       "default": {
@@ -1254,7 +1115,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E46",
     "mappings": {
       "default": {
@@ -1263,7 +1123,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E48",
     "mappings": {
       "default": {
@@ -1272,7 +1131,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E4A",
     "mappings": {
       "default": {
@@ -1281,7 +1139,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E54",
     "mappings": {
       "default": {
@@ -1290,7 +1147,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E56",
     "mappings": {
       "default": {
@@ -1299,7 +1155,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E58",
     "mappings": {
       "default": {
@@ -1308,7 +1163,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5A",
     "mappings": {
       "default": {
@@ -1317,7 +1171,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E5E",
     "mappings": {
       "default": {
@@ -1326,7 +1179,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E60",
     "mappings": {
       "default": {
@@ -1335,7 +1187,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E62",
     "mappings": {
       "default": {
@@ -1344,7 +1195,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6A",
     "mappings": {
       "default": {
@@ -1353,7 +1203,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6C",
     "mappings": {
       "default": {
@@ -1362,7 +1211,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E6E",
     "mappings": {
       "default": {
@@ -1371,7 +1219,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E70",
     "mappings": {
       "default": {
@@ -1380,7 +1227,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E72",
     "mappings": {
       "default": {
@@ -1389,7 +1235,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E74",
     "mappings": {
       "default": {
@@ -1398,7 +1243,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E76",
     "mappings": {
       "default": {
@@ -1407,7 +1251,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7C",
     "mappings": {
       "default": {
@@ -1416,7 +1259,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E7E",
     "mappings": {
       "default": {
@@ -1425,7 +1267,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E80",
     "mappings": {
       "default": {
@@ -1434,7 +1275,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E82",
     "mappings": {
       "default": {
@@ -1443,7 +1283,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E84",
     "mappings": {
       "default": {
@@ -1452,7 +1291,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E86",
     "mappings": {
       "default": {
@@ -1461,7 +1299,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E88",
     "mappings": {
       "default": {
@@ -1470,7 +1307,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8A",
     "mappings": {
       "default": {
@@ -1479,7 +1315,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8C",
     "mappings": {
       "default": {
@@ -1488,7 +1323,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E8E",
     "mappings": {
       "default": {
@@ -1497,7 +1331,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E90",
     "mappings": {
       "default": {
@@ -1506,7 +1339,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E92",
     "mappings": {
       "default": {
@@ -1515,7 +1347,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1E94",
     "mappings": {
       "default": {
@@ -1524,7 +1355,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA0",
     "mappings": {
       "default": {
@@ -1533,7 +1363,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EA2",
     "mappings": {
       "default": {
@@ -1542,7 +1371,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EB8",
     "mappings": {
       "default": {
@@ -1551,7 +1379,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBA",
     "mappings": {
       "default": {
@@ -1560,7 +1387,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EBC",
     "mappings": {
       "default": {
@@ -1569,7 +1395,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EC8",
     "mappings": {
       "default": {
@@ -1578,7 +1403,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECA",
     "mappings": {
       "default": {
@@ -1587,7 +1411,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECC",
     "mappings": {
       "default": {
@@ -1596,7 +1419,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1ECE",
     "mappings": {
       "default": {
@@ -1605,7 +1427,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE4",
     "mappings": {
       "default": {
@@ -1614,7 +1435,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EE6",
     "mappings": {
       "default": {
@@ -1623,7 +1443,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF2",
     "mappings": {
       "default": {
@@ -1632,7 +1451,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF4",
     "mappings": {
       "default": {
@@ -1641,7 +1459,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF6",
     "mappings": {
       "default": {
@@ -1650,7 +1467,6 @@
     }
   },
   {
-    "category": "Lu",
     "key": "1EF8",
     "mappings": {
       "default": {

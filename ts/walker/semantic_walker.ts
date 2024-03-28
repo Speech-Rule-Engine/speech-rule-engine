@@ -18,12 +18,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Highlighter } from '../highlighter/highlighter';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
-import { AbstractWalker } from './abstract_walker';
-import { Focus } from './focus';
-import { Levels } from './levels';
+import { Highlighter } from '../highlighter/highlighter.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
+import { AbstractWalker } from './abstract_walker.js';
+import { Focus } from './focus.js';
+import { Levels } from './levels.js';
 
 export class SemanticWalker extends AbstractWalker<Focus> {
   /**
@@ -127,8 +130,8 @@ export class SemanticWalker extends AbstractWalker<Focus> {
         ];
       case SemanticType.ROOT:
         return [
-          this.singletonFocus(children[1]),
-          this.singletonFocus(children[0])
+          this.singletonFocus(children[0]),
+          this.singletonFocus(children[1])
         ];
       default:
         return children.map(this.singletonFocus.bind(this));

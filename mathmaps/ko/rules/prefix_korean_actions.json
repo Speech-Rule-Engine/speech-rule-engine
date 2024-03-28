@@ -1,0 +1,118 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "ko",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"분자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"분모\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"밑\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"지수\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"아래첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"위첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"하단첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"근호 속의 수\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"제곱근\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"왼쪽 아래첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition; [t] \"왼쪽 아래첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"왼쪽 위첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition; [t] \"왼쪽 위첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"오른쪽 아래첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition; [t] \"오른쪽 아래첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"오른쪽 위첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition; [t] \"오른쪽 위첨자\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"조합 식\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"분할 식\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition; [t] \"행\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"열\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition; [t] \"열\" (pause:200)"
+    ]
+  ]
+}

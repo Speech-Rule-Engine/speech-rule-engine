@@ -8,8 +8,7 @@
       "default": {
         "default": "flecha izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2191",
@@ -17,8 +16,7 @@
       "default": {
         "default": "flecha arriba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2192",
@@ -27,8 +25,7 @@
         "default": "flecha derecha",
         "defaultMP": "flecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2193",
@@ -36,8 +33,7 @@
       "default": {
         "default": "flecha abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2194",
@@ -45,8 +41,7 @@
       "default": {
         "default": "flecha izquierda y derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2195",
@@ -54,8 +49,7 @@
       "default": {
         "default": "flecha arriba y abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2196",
@@ -63,8 +57,7 @@
       "default": {
         "default": "flecha a noroeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2197",
@@ -72,8 +65,7 @@
       "default": {
         "default": "flecha a nordeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2198",
@@ -81,8 +73,7 @@
       "default": {
         "default": "flecha a sureste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2199",
@@ -90,8 +81,7 @@
       "default": {
         "default": "flecha a suroeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219A",
@@ -99,8 +89,7 @@
       "default": {
         "default": "flecha izquierda tachada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219B",
@@ -108,8 +97,7 @@
       "default": {
         "default": "flecha tachada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219C",
@@ -117,8 +105,7 @@
       "default": {
         "default": "flecha ondulada izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219D",
@@ -126,8 +113,7 @@
       "default": {
         "default": "flecha ondulada"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219E",
@@ -135,8 +121,7 @@
       "default": {
         "default": "flecha izquierda con doble punta"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219F",
@@ -144,8 +129,7 @@
       "default": {
         "default": "flecha con doble punta hacia arriba"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A0",
@@ -153,8 +137,7 @@
       "default": {
         "default": "flecha derechaa con doble punta"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A1",
@@ -162,8 +145,7 @@
       "default": {
         "default": "flecha con doble punta hacia abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A2",
@@ -171,8 +153,7 @@
       "default": {
         "default": "flecha izquierda con cola"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A3",
@@ -180,8 +161,7 @@
       "default": {
         "default": "flecha derecha con cola"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A4",
@@ -189,8 +169,7 @@
       "default": {
         "default": "flecha izquierda de barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A5",
@@ -198,8 +177,7 @@
       "default": {
         "default": "barra con flecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A6",
@@ -207,8 +185,7 @@
       "default": {
         "default": "flecha derecha de barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A7",
@@ -216,8 +193,7 @@
       "default": {
         "default": "flecha con barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A8",
@@ -225,8 +201,7 @@
       "default": {
         "default": "flecha arriba y abajo con base"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A9",
@@ -234,8 +209,7 @@
       "default": {
         "default": "flecha izquierda con gancho"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AA",
@@ -243,8 +217,7 @@
       "default": {
         "default": "flecha con gancho"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AB",
@@ -252,8 +225,7 @@
       "default": {
         "default": "flecha izquierda con lazo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AC",
@@ -261,8 +233,7 @@
       "default": {
         "default": "flecha con lazo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AD",
@@ -270,8 +241,7 @@
       "default": {
         "default": "flecha ondulada izquierda y derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AE",
@@ -279,8 +249,7 @@
       "default": {
         "default": "flecha izquierda y derecha tachada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21AF",
@@ -288,8 +257,7 @@
       "default": {
         "default": "flecha zigzag abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B0",
@@ -297,8 +265,7 @@
       "default": {
         "default": "flecha arriba con punta izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B1",
@@ -306,8 +273,7 @@
       "default": {
         "default": "flecha arriba con punta derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B2",
@@ -315,8 +281,7 @@
       "default": {
         "default": "flecha abajo con punta izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B3",
@@ -324,8 +289,7 @@
       "default": {
         "default": "flecha abajo con punta derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B4",
@@ -333,8 +297,7 @@
       "default": {
         "default": "flecha derecha desde esquina inferior"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B5",
@@ -342,8 +305,7 @@
       "default": {
         "default": "flecha hacia abajo desde esquina izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B6",
@@ -351,8 +313,7 @@
       "default": {
         "default": "flecha semicircular superior en sentido antihorario"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B7",
@@ -360,8 +321,7 @@
       "default": {
         "default": "flecha semicircular superior en sentido horario"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B8",
@@ -369,8 +329,7 @@
       "default": {
         "default": "flecha noroeste a barra larga"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B9",
@@ -378,8 +337,7 @@
       "default": {
         "default": "flecha izquierda a barra arriba de flecha derecha a barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BA",
@@ -387,8 +345,7 @@
       "default": {
         "default": "flecha circular abierta en sentido antihorario"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BB",
@@ -396,8 +353,7 @@
       "default": {
         "default": "flecha circular abierta en sentido horario"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C4",
@@ -405,8 +361,7 @@
       "default": {
         "default": "flecha derecha arriba de flecha izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C5",
@@ -414,8 +369,7 @@
       "default": {
         "default": "flecha arriba a la izquierda de flecha abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C6",
@@ -423,8 +377,7 @@
       "default": {
         "default": "flecha izquierda arriba de flecha derecha"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C7",
@@ -432,8 +385,7 @@
       "default": {
         "default": "dos flechas hacia la izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C8",
@@ -441,8 +393,7 @@
       "default": {
         "default": "dos flechas hacia arriba"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C9",
@@ -450,8 +401,7 @@
       "default": {
         "default": "dos flechas"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CA",
@@ -459,8 +409,7 @@
       "default": {
         "default": "dos flechas hacia abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CD",
@@ -468,8 +417,7 @@
       "default": {
         "default": "flecha doble izquierda tachada"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CE",
@@ -477,8 +425,7 @@
       "default": {
         "default": "flecha doble izquierda y derecha tachada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21CF",
@@ -486,8 +433,7 @@
       "default": {
         "default": "flecha doble tachada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D0",
@@ -495,8 +441,7 @@
       "default": {
         "default": "flecha doble hacia la izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D1",
@@ -504,8 +449,7 @@
       "default": {
         "default": "flecha doble hacia arriba"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D2",
@@ -513,8 +457,7 @@
       "default": {
         "default": "flecha doble"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D3",
@@ -522,8 +465,7 @@
       "default": {
         "default": "flecha doble hacia abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D4",
@@ -531,8 +473,7 @@
       "default": {
         "default": "flecha doble izquierda-derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D5",
@@ -540,8 +481,7 @@
       "default": {
         "default": "flecha doble vertical"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D6",
@@ -549,8 +489,7 @@
       "default": {
         "default": "flecha doble hacia noroeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D7",
@@ -558,8 +497,7 @@
       "default": {
         "default": "flecha doble hacia nordeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D8",
@@ -567,8 +505,7 @@
       "default": {
         "default": "flecha doble hacia sudeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D9",
@@ -576,8 +513,7 @@
       "default": {
         "default": "flecha doble hacia sudoeste"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DA",
@@ -585,8 +521,7 @@
       "default": {
         "default": "flecha triple izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DB",
@@ -594,8 +529,7 @@
       "default": {
         "default": "flecha triple"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DC",
@@ -603,8 +537,7 @@
       "default": {
         "default": "flecha ondulada izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DD",
@@ -612,8 +545,7 @@
       "default": {
         "default": "flecha ondulada"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DE",
@@ -621,8 +553,7 @@
       "default": {
         "default": "flecha hacia arriba con doble tachado"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DF",
@@ -630,8 +561,7 @@
       "default": {
         "default": "flecha hacia abajo con doble tachado"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E0",
@@ -639,8 +569,7 @@
       "default": {
         "default": "flecha de puntos hacia la izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E1",
@@ -648,8 +577,7 @@
       "default": {
         "default": "flecha de puntos hacia arriba"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E2",
@@ -657,8 +585,7 @@
       "default": {
         "default": "flecha de puntos"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E3",
@@ -666,8 +593,7 @@
       "default": {
         "default": "flecha de puntos hacia abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E4",
@@ -675,8 +601,7 @@
       "default": {
         "default": "flecha izquierda a barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E5",
@@ -684,8 +609,7 @@
       "default": {
         "default": "flecha derecha a barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E6",
@@ -693,8 +617,7 @@
       "default": {
         "default": "flecha vacía hacia la izquierda"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E7",
@@ -702,8 +625,7 @@
       "default": {
         "default": "flecha vacía hacia arriba"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E8",
@@ -711,8 +633,7 @@
       "default": {
         "default": "flecha vacía"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E9",
@@ -720,8 +641,7 @@
       "default": {
         "default": "flecha vacía hacia abajo"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21EA",
@@ -729,11 +649,9 @@
       "default": {
         "default": "flecha vacía hacia arriba desde barra"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "21EB",
     "mappings": {
       "default": {
@@ -742,7 +660,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21EC",
     "mappings": {
       "default": {
@@ -751,7 +668,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21ED",
     "mappings": {
       "default": {
@@ -760,7 +676,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21EE",
     "mappings": {
       "default": {
@@ -769,7 +684,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21EF",
     "mappings": {
       "default": {
@@ -778,7 +692,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F0",
     "mappings": {
       "default": {
@@ -787,7 +700,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F1",
     "mappings": {
       "default": {
@@ -796,7 +708,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F2",
     "mappings": {
       "default": {
@@ -805,7 +716,6 @@
     }
   },
   {
-    "category": "So",
     "key": "21F3",
     "mappings": {
       "default": {
@@ -814,7 +724,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F4",
     "mappings": {
       "default": {
@@ -828,11 +737,9 @@
       "default": {
         "default": "upwards arrow to the right of downwards arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "21F6",
     "mappings": {
       "default": {
@@ -841,7 +748,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F7",
     "mappings": {
       "default": {
@@ -850,7 +756,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F8",
     "mappings": {
       "default": {
@@ -859,7 +764,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21F9",
     "mappings": {
       "default": {
@@ -868,7 +772,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FA",
     "mappings": {
       "default": {
@@ -877,7 +780,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FB",
     "mappings": {
       "default": {
@@ -886,7 +788,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "21FC",
     "mappings": {
       "default": {
@@ -900,8 +801,7 @@
       "default": {
         "default": "flecha izquierda con punta vacía"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FE",
@@ -909,8 +809,7 @@
       "default": {
         "default": "flecha izquierda con punta vacía"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FF",
@@ -918,11 +817,9 @@
       "default": {
         "default": "flecha izquierda derecha con punta vacía"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2301",
     "mappings": {
       "default": {
@@ -931,7 +828,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2303",
     "mappings": {
       "default": {
@@ -940,7 +836,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2304",
     "mappings": {
       "default": {
@@ -949,7 +844,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2324",
     "mappings": {
       "default": {
@@ -958,7 +852,6 @@
     }
   },
   {
-    "category": "So",
     "key": "238B",
     "mappings": {
       "default": {
@@ -967,7 +860,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2794",
     "mappings": {
       "default": {
@@ -976,7 +868,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2798",
     "mappings": {
       "default": {
@@ -985,7 +876,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2799",
     "mappings": {
       "default": {
@@ -994,7 +884,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279A",
     "mappings": {
       "default": {
@@ -1003,7 +892,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279B",
     "mappings": {
       "default": {
@@ -1012,7 +900,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279C",
     "mappings": {
       "default": {
@@ -1021,7 +908,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279D",
     "mappings": {
       "default": {
@@ -1030,7 +916,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279E",
     "mappings": {
       "default": {
@@ -1039,7 +924,6 @@
     }
   },
   {
-    "category": "So",
     "key": "279F",
     "mappings": {
       "default": {
@@ -1048,7 +932,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A0",
     "mappings": {
       "default": {
@@ -1057,7 +940,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A1",
     "mappings": {
       "default": {
@@ -1066,7 +948,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A2",
     "mappings": {
       "default": {
@@ -1075,7 +956,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A3",
     "mappings": {
       "default": {
@@ -1084,7 +964,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A4",
     "mappings": {
       "default": {
@@ -1093,7 +972,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A5",
     "mappings": {
       "default": {
@@ -1102,7 +980,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A6",
     "mappings": {
       "default": {
@@ -1111,7 +988,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A7",
     "mappings": {
       "default": {
@@ -1120,7 +996,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A8",
     "mappings": {
       "default": {
@@ -1129,7 +1004,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27A9",
     "mappings": {
       "default": {
@@ -1138,7 +1012,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AA",
     "mappings": {
       "default": {
@@ -1147,7 +1020,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AB",
     "mappings": {
       "default": {
@@ -1156,7 +1028,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AC",
     "mappings": {
       "default": {
@@ -1165,7 +1036,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AD",
     "mappings": {
       "default": {
@@ -1174,7 +1044,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AE",
     "mappings": {
       "default": {
@@ -1183,7 +1052,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27AF",
     "mappings": {
       "default": {
@@ -1192,7 +1060,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B1",
     "mappings": {
       "default": {
@@ -1201,7 +1068,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B2",
     "mappings": {
       "default": {
@@ -1210,7 +1076,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B3",
     "mappings": {
       "default": {
@@ -1219,7 +1084,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B4",
     "mappings": {
       "default": {
@@ -1228,7 +1092,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B5",
     "mappings": {
       "default": {
@@ -1237,7 +1100,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B6",
     "mappings": {
       "default": {
@@ -1246,7 +1108,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B7",
     "mappings": {
       "default": {
@@ -1255,7 +1116,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B8",
     "mappings": {
       "default": {
@@ -1264,7 +1124,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27B9",
     "mappings": {
       "default": {
@@ -1273,7 +1132,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BA",
     "mappings": {
       "default": {
@@ -1282,7 +1140,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BB",
     "mappings": {
       "default": {
@@ -1291,7 +1148,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BC",
     "mappings": {
       "default": {
@@ -1300,7 +1156,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BD",
     "mappings": {
       "default": {
@@ -1309,7 +1164,6 @@
     }
   },
   {
-    "category": "So",
     "key": "27BE",
     "mappings": {
       "default": {
@@ -1323,8 +1177,7 @@
       "default": {
         "default": "flecha cuádruple hacia arriba"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F1",
@@ -1332,8 +1185,7 @@
       "default": {
         "default": "flecha cuádruple hacia abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F2",
@@ -1341,8 +1193,7 @@
       "default": {
         "default": "flecha hacia la izquierda desde círculo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F3",
@@ -1350,8 +1201,7 @@
       "default": {
         "default": "flecha hacia la derecha desde círculo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F4",
@@ -1359,8 +1209,7 @@
       "default": {
         "default": "flecha con más en círculo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F5",
@@ -1368,8 +1217,7 @@
       "default": {
         "default": "flecha larga hacia la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F6",
@@ -1377,8 +1225,7 @@
       "default": {
         "default": "flecha larga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F7",
@@ -1386,8 +1233,7 @@
       "default": {
         "default": "flecha larga hacia izquierda y derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F8",
@@ -1395,8 +1241,7 @@
       "default": {
         "default": "doble flecha larga hacia la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F9",
@@ -1404,8 +1249,7 @@
       "default": {
         "default": "doble flecha larga"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FA",
@@ -1413,8 +1257,7 @@
       "default": {
         "default": "doble flecha larga hacia izquierda y derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FB",
@@ -1422,8 +1265,7 @@
       "default": {
         "default": "flecha larga hacia la izquierda, desde barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FC",
@@ -1431,8 +1273,7 @@
       "default": {
         "default": "flecha larga desde barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FD",
@@ -1440,8 +1281,7 @@
       "default": {
         "default": "doble flecha larga hacia la izquierda desde barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FE",
@@ -1449,8 +1289,7 @@
       "default": {
         "default": "doble flecha larga desde barra"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FF",
@@ -1458,11 +1297,9 @@
       "default": {
         "default": "flecha larga en zigzag"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2900",
     "mappings": {
       "default": {
@@ -1471,7 +1308,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2901",
     "mappings": {
       "default": {
@@ -1480,7 +1316,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2902",
     "mappings": {
       "default": {
@@ -1489,7 +1324,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2903",
     "mappings": {
       "default": {
@@ -1498,7 +1332,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2904",
     "mappings": {
       "default": {
@@ -1512,11 +1345,9 @@
       "default": {
         "default": "rightwards two headed arrow from bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2906",
     "mappings": {
       "default": {
@@ -1525,7 +1356,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2907",
     "mappings": {
       "default": {
@@ -1534,7 +1364,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2908",
     "mappings": {
       "default": {
@@ -1543,7 +1372,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2909",
     "mappings": {
       "default": {
@@ -1552,7 +1380,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "290A",
     "mappings": {
       "default": {
@@ -1561,7 +1388,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "290B",
     "mappings": {
       "default": {
@@ -1575,8 +1401,7 @@
       "default": {
         "default": "leftwards double dash arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290D",
@@ -1584,8 +1409,7 @@
       "default": {
         "default": "rightwards double dash arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290E",
@@ -1593,8 +1417,7 @@
       "default": {
         "default": "leftwards triple dash arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290F",
@@ -1602,8 +1425,7 @@
       "default": {
         "default": "rightwards triple dash arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2910",
@@ -1611,8 +1433,7 @@
       "default": {
         "default": "rightwards two headed triple dash arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2911",
@@ -1620,8 +1441,7 @@
       "default": {
         "default": "rightwards arrow with dotted stem"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2912",
@@ -1629,8 +1449,7 @@
       "default": {
         "default": "upwards arrow to bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2913",
@@ -1638,11 +1457,9 @@
       "default": {
         "default": "downwards arrow to bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2914",
     "mappings": {
       "default": {
@@ -1651,7 +1468,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2915",
     "mappings": {
       "default": {
@@ -1665,11 +1481,9 @@
       "default": {
         "default": "rightwards two headed arrow with tail"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2917",
     "mappings": {
       "default": {
@@ -1678,7 +1492,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2918",
     "mappings": {
       "default": {
@@ -1692,11 +1505,9 @@
       "default": {
         "default": "cola de flecha hacia la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "291A",
     "mappings": {
       "default": {
@@ -1710,8 +1521,7 @@
       "default": {
         "default": "cola de doble flecha hacia la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291C",
@@ -1719,8 +1529,7 @@
       "default": {
         "default": "cola de doble flecha hacia la derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291D",
@@ -1728,8 +1537,7 @@
       "default": {
         "default": "flecha hacia diamante relleno a la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291E",
@@ -1737,8 +1545,7 @@
       "default": {
         "default": "flecha hacia diamante a la derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291F",
@@ -1746,8 +1553,7 @@
       "default": {
         "default": "flecha desde barra hacia diamante a la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2920",
@@ -1755,11 +1561,9 @@
       "default": {
         "default": "flecha desde barra hacia diamante a la derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2921",
     "mappings": {
       "default": {
@@ -1768,7 +1572,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2922",
     "mappings": {
       "default": {
@@ -1782,8 +1585,7 @@
       "default": {
         "default": "flecha a noroeste con garfio"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2924",
@@ -1791,8 +1593,7 @@
       "default": {
         "default": "flecha a nordeste con garfio"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2925",
@@ -1800,8 +1601,7 @@
       "default": {
         "default": "flecha a sureste con garfio"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2926",
@@ -1809,8 +1609,7 @@
       "default": {
         "default": "flecha a suroeste con garfio"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2927",
@@ -1818,8 +1617,7 @@
       "default": {
         "default": "flechas a noroeste y nordeste"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2928",
@@ -1827,8 +1625,7 @@
       "default": {
         "default": "flechas a nordeste y sudeste"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2929",
@@ -1836,8 +1633,7 @@
       "default": {
         "default": "flechas a suddeste y sudoeste"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "292A",
@@ -1845,11 +1641,9 @@
       "default": {
         "default": "flechas a sudoeste y noroeste"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "292D",
     "mappings": {
       "default": {
@@ -1858,7 +1652,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292E",
     "mappings": {
       "default": {
@@ -1867,7 +1660,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "292F",
     "mappings": {
       "default": {
@@ -1876,7 +1668,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2930",
     "mappings": {
       "default": {
@@ -1885,7 +1676,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2931",
     "mappings": {
       "default": {
@@ -1894,7 +1684,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2932",
     "mappings": {
       "default": {
@@ -1908,11 +1697,9 @@
       "default": {
         "default": "flecha ondulada"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2934",
     "mappings": {
       "default": {
@@ -1926,8 +1713,7 @@
       "default": {
         "default": "flecha hacia la derecha que gira hacia abajo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2936",
@@ -1935,8 +1721,7 @@
       "default": {
         "default": "flecha hacia abajo que gira hacia la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2937",
@@ -1944,8 +1729,7 @@
       "default": {
         "default": "flecha hacia abajo que gira hacia la derecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2938",
@@ -1953,8 +1737,7 @@
       "default": {
         "default": "flecha semicircular a la derecha en sentido horario"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2939",
@@ -1962,11 +1745,9 @@
       "default": {
         "default": "flecha semicircular a la izquierda en sentido antihorario"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293A",
     "mappings": {
       "default": {
@@ -1975,7 +1756,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "293B",
     "mappings": {
       "default": {
@@ -1989,8 +1769,7 @@
       "default": {
         "default": "giro negativo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "293D",
@@ -1998,11 +1777,9 @@
       "default": {
         "default": "giro positivo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293E",
     "mappings": {
       "default": {
@@ -2011,7 +1788,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "293F",
     "mappings": {
       "default": {
@@ -2020,7 +1796,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2940",
     "mappings": {
       "default": {
@@ -2029,7 +1804,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2941",
     "mappings": {
       "default": {
@@ -2038,7 +1812,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2942",
     "mappings": {
       "default": {
@@ -2047,7 +1820,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2943",
     "mappings": {
       "default": {
@@ -2056,7 +1828,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2944",
     "mappings": {
       "default": {
@@ -2070,11 +1841,9 @@
       "default": {
         "default": "flecha con más suscrito"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2946",
     "mappings": {
       "default": {
@@ -2083,7 +1852,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2947",
     "mappings": {
       "default": {
@@ -2097,8 +1865,7 @@
       "default": {
         "default": "flecha hacia la izquierda a través de círculo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2949",
@@ -2106,8 +1873,7 @@
       "default": {
         "default": "dos cabezas de flecha hacia arriba desde círculo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2970",
@@ -2115,8 +1881,7 @@
       "default": {
         "default": "round implies"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2971",
@@ -2124,8 +1889,7 @@
       "default": {
         "default": "flecha con igual"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2972",
@@ -2133,8 +1897,7 @@
       "default": {
         "default": "flecha con tilde"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2973",
@@ -2142,8 +1905,7 @@
       "default": {
         "default": "tilde con flecha hacia la izquierda"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2974",
@@ -2151,8 +1913,7 @@
       "default": {
         "default": "tilde con flecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2975",
@@ -2160,8 +1921,7 @@
       "default": {
         "default": "flecha con casi igual a"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2976",
@@ -2169,11 +1929,9 @@
       "default": {
         "default": "flecha hacia la izquierda con menor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2977",
     "mappings": {
       "default": {
@@ -2187,8 +1945,7 @@
       "default": {
         "default": "flecha con mayor que"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2979",
@@ -2196,11 +1953,9 @@
       "default": {
         "default": "flecha hacia la izquierda con incluido"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "297A",
     "mappings": {
       "default": {
@@ -2214,8 +1969,7 @@
       "default": {
         "default": "flecha hacia la izquierda con contiene"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B3",
@@ -2223,8 +1977,7 @@
       "default": {
         "default": "conjunto vacío con flecha"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B4",
@@ -2232,11 +1985,9 @@
       "default": {
         "default": "conjunto vacío con flecha inversa"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29BD",
     "mappings": {
       "default": {
@@ -2245,7 +1996,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EA",
     "mappings": {
       "default": {
@@ -2254,7 +2004,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29EC",
     "mappings": {
       "default": {
@@ -2263,7 +2012,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "29ED",
     "mappings": {
       "default": {
@@ -2277,11 +2025,9 @@
       "default": {
         "default": "integral con flecha hacia la izquierda con garfio"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2B00",
     "mappings": {
       "default": {
@@ -2290,7 +2036,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B01",
     "mappings": {
       "default": {
@@ -2299,7 +2044,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B02",
     "mappings": {
       "default": {
@@ -2308,7 +2052,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B03",
     "mappings": {
       "default": {
@@ -2317,7 +2060,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B04",
     "mappings": {
       "default": {
@@ -2326,7 +2068,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B05",
     "mappings": {
       "default": {
@@ -2335,7 +2076,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B06",
     "mappings": {
       "default": {
@@ -2344,7 +2084,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B07",
     "mappings": {
       "default": {
@@ -2353,7 +2092,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B08",
     "mappings": {
       "default": {
@@ -2362,7 +2100,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B09",
     "mappings": {
       "default": {
@@ -2371,7 +2108,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0A",
     "mappings": {
       "default": {
@@ -2380,7 +2116,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0B",
     "mappings": {
       "default": {
@@ -2389,7 +2124,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0C",
     "mappings": {
       "default": {
@@ -2398,7 +2132,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0D",
     "mappings": {
       "default": {
@@ -2407,7 +2140,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0E",
     "mappings": {
       "default": {
@@ -2416,7 +2148,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B0F",
     "mappings": {
       "default": {
@@ -2425,7 +2156,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B10",
     "mappings": {
       "default": {
@@ -2434,7 +2164,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B11",
     "mappings": {
       "default": {
@@ -2443,7 +2172,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B30",
     "mappings": {
       "default": {
@@ -2452,7 +2180,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B31",
     "mappings": {
       "default": {
@@ -2461,7 +2188,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B32",
     "mappings": {
       "default": {
@@ -2470,7 +2196,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B33",
     "mappings": {
       "default": {
@@ -2479,7 +2204,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B34",
     "mappings": {
       "default": {
@@ -2488,7 +2212,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B35",
     "mappings": {
       "default": {
@@ -2497,7 +2220,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B36",
     "mappings": {
       "default": {
@@ -2506,7 +2228,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B37",
     "mappings": {
       "default": {
@@ -2515,7 +2236,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B38",
     "mappings": {
       "default": {
@@ -2524,7 +2244,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B39",
     "mappings": {
       "default": {
@@ -2533,7 +2252,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3A",
     "mappings": {
       "default": {
@@ -2542,7 +2260,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3B",
     "mappings": {
       "default": {
@@ -2551,7 +2268,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3C",
     "mappings": {
       "default": {
@@ -2560,7 +2276,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3D",
     "mappings": {
       "default": {
@@ -2569,7 +2284,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3E",
     "mappings": {
       "default": {
@@ -2578,7 +2292,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B3F",
     "mappings": {
       "default": {
@@ -2587,7 +2300,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B40",
     "mappings": {
       "default": {
@@ -2596,7 +2308,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B41",
     "mappings": {
       "default": {
@@ -2605,7 +2316,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B42",
     "mappings": {
       "default": {
@@ -2614,7 +2324,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B43",
     "mappings": {
       "default": {
@@ -2623,7 +2332,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B44",
     "mappings": {
       "default": {
@@ -2632,7 +2340,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B45",
     "mappings": {
       "default": {
@@ -2641,7 +2348,6 @@
     }
   },
   {
-    "category": "So",
     "key": "2B46",
     "mappings": {
       "default": {
@@ -2650,7 +2356,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B47",
     "mappings": {
       "default": {
@@ -2659,7 +2364,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B48",
     "mappings": {
       "default": {
@@ -2668,7 +2372,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B49",
     "mappings": {
       "default": {
@@ -2677,7 +2380,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4A",
     "mappings": {
       "default": {
@@ -2686,7 +2388,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4B",
     "mappings": {
       "default": {
@@ -2695,7 +2396,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "2B4C",
     "mappings": {
       "default": {
@@ -2704,7 +2404,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFE9",
     "mappings": {
       "default": {
@@ -2713,7 +2412,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEA",
     "mappings": {
       "default": {
@@ -2722,7 +2420,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEB",
     "mappings": {
       "default": {
@@ -2731,7 +2428,6 @@
     }
   },
   {
-    "category": "Sm",
     "key": "FFEC",
     "mappings": {
       "default": {

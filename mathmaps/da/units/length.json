@@ -1,0 +1,95 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "ft",
+    "mappings": {
+      "default": {
+        "default": "fod",
+        "plural": "fod"
+      }
+    }
+  },
+  {
+    "key": "in",
+    "mappings": {
+      "default": {
+        "default": "tomme",
+        "plural": "tommer"
+      }
+    }
+  },
+  {
+    "key": "mi",
+    "mappings": {
+      "default": {
+        "default": "mil",
+        "plural": "mil"
+      }
+    }
+  },
+  {
+    "key": "yd",
+    "mappings": {
+      "default": {
+        "default": "yard",
+        "plural": "yards"
+      }
+    }
+  },
+  {
+    "key": "link",
+    "mappings": {
+      "default": {
+        "default": "link",
+        "plural": "links"
+      }
+    }
+  },
+  {
+    "key": "rod",
+    "mappings": {
+      "default": {
+        "default": "stang",
+        "plural": "stænger"
+      }
+    }
+  },
+  {
+    "key": "chain",
+    "mappings": {
+      "default": {
+        "default": "kæde",
+        "plural": "kæder"
+      }
+    }
+  },
+  {
+    "key": "furlong",
+    "mappings": {
+      "default": {
+        "default": "furlong",
+        "plural": "furlong"
+      }
+    }
+  },
+  {
+    "key": "n.m.",
+    "mappings": {
+      "default": {
+        "default": "sømil",
+        "plural": "sømil"
+      }
+    }
+  },
+  {
+    "key": "m",
+    "mappings": {
+      "default": {
+        "default": "meter",
+        "plural": "meter"
+      }
+    }
+  }
+]

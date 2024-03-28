@@ -8,8 +8,7 @@
       "default": {
         "default": "pil åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2191",
@@ -17,8 +16,7 @@
       "default": {
         "default": "pil uppåt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2192",
@@ -26,8 +24,7 @@
       "default": {
         "default": "pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2193",
@@ -35,8 +32,7 @@
       "default": {
         "default": "pil neråt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2194",
@@ -44,8 +40,7 @@
       "default": {
         "default": "vänster höger pil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2195",
@@ -53,8 +48,7 @@
       "default": {
         "default": "pil ned och uppåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2196",
@@ -62,8 +56,7 @@
       "default": {
         "default": "pil åt nordväst"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2197",
@@ -71,8 +64,7 @@
       "default": {
         "default": "pil åt nordöst"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2198",
@@ -80,8 +72,7 @@
       "default": {
         "default": "pil åt sydöst"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "2199",
@@ -89,8 +80,7 @@
       "default": {
         "default": "pil åt sydväst"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219A",
@@ -98,8 +88,7 @@
       "default": {
         "default": "struken pil åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219B",
@@ -107,8 +96,7 @@
       "default": {
         "default": "struken pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "219C",
@@ -116,8 +104,7 @@
       "default": {
         "default": "vågig pil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219D",
@@ -125,8 +112,7 @@
       "default": {
         "default": "vågig pil åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219E",
@@ -134,8 +120,7 @@
       "default": {
         "default": "pil åt vänster med två spetsar"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "219F",
@@ -143,8 +128,7 @@
       "default": {
         "default": "pil uppåt med två spetsar"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A0",
@@ -152,8 +136,7 @@
       "default": {
         "default": "pil åt höger med två spetsar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A1",
@@ -161,8 +144,7 @@
       "default": {
         "default": "pil nedåt med två spetsar"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A2",
@@ -170,8 +152,7 @@
       "default": {
         "default": "pil åt vänster med svans"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A3",
@@ -179,8 +160,7 @@
       "default": {
         "default": "pil åt höger med svans"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A4",
@@ -188,8 +168,7 @@
       "default": {
         "default": "pil åt vänster från streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A5",
@@ -197,8 +176,7 @@
       "default": {
         "default": "pil uppåt från streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A6",
@@ -206,8 +184,7 @@
       "default": {
         "default": "pil åt höger från streck"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21A7",
@@ -215,8 +192,7 @@
       "default": {
         "default": "pil nedåt från streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A8",
@@ -224,8 +200,7 @@
       "default": {
         "default": "pil upp och nedåt med bas"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21A9",
@@ -233,8 +208,7 @@
       "default": {
         "default": "pil åt vänster med krok"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AA",
@@ -242,8 +216,7 @@
       "default": {
         "default": "pil åt höger med krok"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AB",
@@ -251,8 +224,7 @@
       "default": {
         "default": "pil åt vänster med loop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AC",
@@ -260,8 +232,7 @@
       "default": {
         "default": "pil åt höger med loop"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AD",
@@ -269,8 +240,7 @@
       "default": {
         "default": "vågig pil åt vänster och höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21AE",
@@ -278,8 +248,7 @@
       "default": {
         "default": "struken pil åt vänster och höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21AF",
@@ -287,8 +256,7 @@
       "default": {
         "default": "pil nedåt i sick sack"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B0",
@@ -296,8 +264,7 @@
       "default": {
         "default": "pil uppåt med vinkel åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B1",
@@ -305,8 +272,7 @@
       "default": {
         "default": "pil uppåt med vinkel åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B2",
@@ -314,8 +280,7 @@
       "default": {
         "default": "pil nedåt med vinkel åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B3",
@@ -323,8 +288,7 @@
       "default": {
         "default": "pil nedåt med vinkel åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B4",
@@ -332,8 +296,7 @@
       "default": {
         "default": "pil åt höger med hörn nedåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B5",
@@ -341,8 +304,7 @@
       "default": {
         "default": "pil nedåt med hörn åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B6",
@@ -350,8 +312,7 @@
       "default": {
         "default": "pil i övre halvcirkel moturs"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B7",
@@ -359,8 +320,7 @@
       "default": {
         "default": "pil i övre halvcirkel medurs"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B8",
@@ -368,8 +328,7 @@
       "default": {
         "default": "pil åt nordväst mot långt streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21B9",
@@ -377,8 +336,7 @@
       "default": {
         "default": "pil åt vänster mot streck över pil åt höger mot streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BA",
@@ -386,8 +344,7 @@
       "default": {
         "default": "pil i öppen cirkel moturs"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BB",
@@ -395,8 +352,7 @@
       "default": {
         "default": "pil i öppen cirkel medurs"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C4",
@@ -404,8 +360,7 @@
       "default": {
         "default": "pil åt höger över pil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C5",
@@ -413,8 +368,7 @@
       "default": {
         "default": "pil uppåt till vänster om pil neråt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C6",
@@ -422,8 +376,7 @@
       "default": {
         "default": "pil åt vänster över pil åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C7",
@@ -431,8 +384,7 @@
       "default": {
         "default": "pilar åt vänster i par"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C8",
@@ -440,8 +392,7 @@
       "default": {
         "default": "pilar uppåt i par"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C9",
@@ -449,8 +400,7 @@
       "default": {
         "default": "pilar åt höger i par"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CA",
@@ -458,8 +408,7 @@
       "default": {
         "default": "pilar neråt i par"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CD",
@@ -467,8 +416,7 @@
       "default": {
         "default": "struken dubbelpil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CE",
@@ -476,8 +424,7 @@
       "default": {
         "default": "struken dubbelpil åt vänster och höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21CF",
@@ -485,8 +432,7 @@
       "default": {
         "default": "struken dubbelpil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D0",
@@ -494,8 +440,7 @@
       "default": {
         "default": "dubbelpil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D1",
@@ -503,8 +448,7 @@
       "default": {
         "default": "dubbelpil uppåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D2",
@@ -512,8 +456,7 @@
       "default": {
         "default": "dubbelpil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D3",
@@ -521,8 +464,7 @@
       "default": {
         "default": "dubbelpil neråt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D4",
@@ -530,8 +472,7 @@
       "default": {
         "default": "dubbelpil åt vänster och höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21D5",
@@ -539,8 +480,7 @@
       "default": {
         "default": "dubbelpil nedåt och uppåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D6",
@@ -548,8 +488,7 @@
       "default": {
         "default": "dubbelpil åt nordväst"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D7",
@@ -557,8 +496,7 @@
       "default": {
         "default": "dubbelpil åt nordost"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D8",
@@ -566,8 +504,7 @@
       "default": {
         "default": "dubbelpil åt sydost"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21D9",
@@ -575,8 +512,7 @@
       "default": {
         "default": "dubbelpil åt sydväst"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DA",
@@ -584,8 +520,7 @@
       "default": {
         "default": "trippelpil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DB",
@@ -593,8 +528,7 @@
       "default": {
         "default": "trippelpil åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DC",
@@ -602,8 +536,7 @@
       "default": {
         "default": "slingrande pil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DD",
@@ -611,8 +544,7 @@
       "default": {
         "default": "slingrande pil åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DE",
@@ -620,8 +552,7 @@
       "default": {
         "default": "dubbelt struken pil uppåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21DF",
@@ -629,8 +560,7 @@
       "default": {
         "default": "dubbelt struken pil neråt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E0",
@@ -638,8 +568,7 @@
       "default": {
         "default": "streckad pil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E1",
@@ -647,8 +576,7 @@
       "default": {
         "default": "streckad pil uppåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E2",
@@ -656,8 +584,7 @@
       "default": {
         "default": "streckad pil åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E3",
@@ -665,8 +592,7 @@
       "default": {
         "default": "streckad pil neråt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E4",
@@ -674,8 +600,7 @@
       "default": {
         "default": "pil åt vänster mot streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E5",
@@ -683,8 +608,7 @@
       "default": {
         "default": "pil åt höger mot streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E6",
@@ -692,8 +616,7 @@
       "default": {
         "default": "vit pil åt vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E7",
@@ -701,8 +624,7 @@
       "default": {
         "default": "vit pil uppåt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E8",
@@ -710,8 +632,7 @@
       "default": {
         "default": "vit pil åt höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21E9",
@@ -719,8 +640,7 @@
       "default": {
         "default": "vit pil neråt"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21EA",
@@ -728,96 +648,85 @@
       "default": {
         "default": "vit pil uppåt från streck"
       }
-    },
-    "category": "So"
+    }
   },
   {
-    "category": "So",
     "key": "21EB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit uppåtpil på piedestal"
       }
     }
   },
   {
-    "category": "So",
     "key": "21EC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit uppåtpil på piedestal med horisontellt streck"
       }
     }
   },
   {
-    "category": "So",
     "key": "21ED",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit uppåtpil på piedestal med vertikalt streck"
       }
     }
   },
   {
-    "category": "So",
     "key": "21EE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel vit uppåtpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "21EF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel vit uppåtpil på piedestal"
       }
     }
   },
   {
-    "category": "So",
     "key": "21F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit högerpil från vägg"
       }
     }
   },
   {
-    "category": "So",
     "key": "21F1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt nordväst mot hörn"
       }
     }
   },
   {
-    "category": "So",
     "key": "21F2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt sydöst mot hörn"
       }
     }
   },
   {
-    "category": "So",
     "key": "21F3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit uppåt- och nedåtpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21F4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med liten cirkel"
       }
     }
   },
@@ -827,69 +736,61 @@
       "default": {
         "default": "upwards arrow to the höger of downwards arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "21F6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre högerpilar"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21F7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21F8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21F9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänster- och högerpil med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21FA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med dubbla vertikala streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21FB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med dubbla vertikala streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "21FC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänster- och högerpil med dubbla vertikala streck"
       }
     }
   },
@@ -899,8 +800,7 @@
       "default": {
         "default": "pil åt vänster med öppen spets"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FE",
@@ -908,8 +808,7 @@
       "default": {
         "default": "pil åt höger med öppen spets"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "21FF",
@@ -917,447 +816,397 @@
       "default": {
         "default": "pil åt vänster och höger med öppen spets"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2301",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "elektrisk pil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2303",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pilspets uppåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "2304",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pilspets nedåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "2324",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pilspets uppåt mellan två horisontella streck"
       }
     }
   },
   {
-    "category": "So",
     "key": "238B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ofullständig cirkel med pil åt nordväst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2794",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad högerpil med bred spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "2798",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad nedåtpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2799",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "279A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad höger- och uppåtpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "279B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med avsmalnande spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "279C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad högerpil med rund spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "279D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med triangelformad spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "279E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad högerpil med triangelformad spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "279F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "streckad högerpil med triangelformad spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad streckad högerpil med triangelformad spets"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "3D-högerpil med ljus överdel"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "3D-högerpil med ljus underdel"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pilspets åt höger"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad svart högerpil böjd nedåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad svart högerpil böjd uppåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kompakt svart högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad konkav spetsig svart högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerskuggad vit högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterskuggad vit högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakåtlutad skuggad vit högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "framåtlutad skuggad vit högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "27AD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vit högerpil med vit skuggning undertill åt höger"
       }
     }
   },
   {
-    "category": "So",
     "key": "27AE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vit högerpil med vit skuggning övertill åt höger"
       }
     }
   },
   {
-    "category": "So",
     "key": "27AF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit högerpil skuggad nertill åt höger med jack"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit högerpil skuggad övertill åt höger med jack"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vit högerpil med cirkel"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit högerpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedåt- och högerpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart högerpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart uppåt- och högerpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedåt- och högerpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad svart högerpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27B9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad svart höger- och uppåtpil med fjädrar"
       }
     }
   },
   {
-    "category": "So",
     "key": "27BA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tårformad högerpil med tagg"
       }
     }
   },
   {
-    "category": "So",
     "key": "27BB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad tårformad högerpil med skaft"
       }
     }
   },
   {
-    "category": "So",
     "key": "27BC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med kilformad svans"
       }
     }
   },
   {
-    "category": "So",
     "key": "27BD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad högerpil med kilformad svans"
       }
     }
   },
   {
-    "category": "So",
     "key": "27BE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med öppna konturer"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "27F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppåtpil med fyra streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "27F1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedåtpil med fyra streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "27F2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "osluten cirkelformad pil moturs"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "27F3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "osluten cirkelformad pil medurs"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "27F4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med plus i cirkel"
       }
     }
   },
@@ -1367,8 +1216,7 @@
       "default": {
         "default": "lång pil åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F6",
@@ -1376,8 +1224,7 @@
       "default": {
         "default": "lång pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F7",
@@ -1385,8 +1232,7 @@
       "default": {
         "default": "lång vänster och höger pil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F8",
@@ -1394,8 +1240,7 @@
       "default": {
         "default": "lång dubbel pil åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27F9",
@@ -1403,8 +1248,7 @@
       "default": {
         "default": "lång dubbel pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "27FA",
@@ -1412,15 +1256,13 @@
       "default": {
         "default": "lång dubbel vänster och höger pil"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "27FB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lång vänsterpil från streck"
       }
     }
   },
@@ -1430,24 +1272,21 @@
       "default": {
         "default": "lång pil åt höger från streck"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "27FD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lång dubbelpil åt vänster från streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "27FE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lång dubbelpil åt höger från streck"
       }
     }
   },
@@ -1457,51 +1296,45 @@
       "default": {
         "default": "lång slingrande pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2900",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med två spetsar och vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2901",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tvåspetsig högerpil med dubbla vertikala streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2902",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel vänsterpil med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2903",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel högerpil med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2904",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel vänsterpil med vertikalt streck"
       }
     }
   },
@@ -1511,60 +1344,53 @@
       "default": {
         "default": "pil åt höger från streck med dubbla spetsar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2906",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel vänsterpil från streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2907",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dubbel högerpil från streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2908",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedåtpil med horisontellt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2909",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppåtpil med horisontellt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "290A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppåtpil med tre streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "290B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedåtpil med tre streck"
       }
     }
   },
@@ -1574,8 +1400,7 @@
       "default": {
         "default": "pil åt vänster med dubbla streck"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290D",
@@ -1583,8 +1408,7 @@
       "default": {
         "default": "pil åt höger med dubbla streck"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290E",
@@ -1592,8 +1416,7 @@
       "default": {
         "default": "pil åt vänster med trippla streck"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "290F",
@@ -1601,8 +1424,7 @@
       "default": {
         "default": "pil åt höger med trippla streck"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2910",
@@ -1610,8 +1432,7 @@
       "default": {
         "default": "pil åt höger med trippla streck och dubbla spetsar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2911",
@@ -1619,8 +1440,7 @@
       "default": {
         "default": "pil åt höger med prickad stam"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2912",
@@ -1628,8 +1448,7 @@
       "default": {
         "default": "upwards arrow to bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2913",
@@ -1637,24 +1456,21 @@
       "default": {
         "default": "downwards arrow to bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2914",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med svans med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2915",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med svans med vertikala dubbelstreck"
       }
     }
   },
@@ -1664,24 +1480,21 @@
       "default": {
         "default": "pil åt höger med dubbla spetsar och svans"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2917",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tvåspetsad högerpil med svans med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2918",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tvåspetsad högerpil med svans med dubbla vertikala streck"
       }
     }
   },
@@ -1691,15 +1504,13 @@
       "default": {
         "default": "pil åt vänster svans"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "291A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "höger pilsvans"
       }
     }
   },
@@ -1709,8 +1520,7 @@
       "default": {
         "default": "pil åt vänster med dubbel svans"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291C",
@@ -1718,8 +1528,7 @@
       "default": {
         "default": "pil åt höger med dubbel svans"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291D",
@@ -1727,8 +1536,7 @@
       "default": {
         "default": "pil åt vänster mot fylld diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291E",
@@ -1736,8 +1544,7 @@
       "default": {
         "default": "pil åt höger mot fylld diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "291F",
@@ -1745,8 +1552,7 @@
       "default": {
         "default": "pil åt vänster från streck mot fylld diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2920",
@@ -1754,24 +1560,21 @@
       "default": {
         "default": "pil åt höger från streck mot fylld diamant"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2921",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt nordväst och sydöst"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2922",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt nordöst och sydväst"
       }
     }
   },
@@ -1781,8 +1584,7 @@
       "default": {
         "default": "pil åt nordväst med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2924",
@@ -1790,8 +1592,7 @@
       "default": {
         "default": "pil åt nordost med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2925",
@@ -1799,8 +1600,7 @@
       "default": {
         "default": "pil åt sydost med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2926",
@@ -1808,8 +1608,7 @@
       "default": {
         "default": "pil åt sydväst med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2927",
@@ -1817,8 +1616,7 @@
       "default": {
         "default": "pil åt nordväst och pil åt nordost"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2928",
@@ -1826,8 +1624,7 @@
       "default": {
         "default": "pil åt nordost och pil åt sydost"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2929",
@@ -1835,8 +1632,7 @@
       "default": {
         "default": "pil åt sydost och pil åt sydväst"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "292A",
@@ -1844,60 +1640,53 @@
       "default": {
         "default": "pil åt sydväst och pil åt nordväst"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "292D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt sydöst som korsar pil nordöst"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "292E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt nordöst som korsar pil sydöst"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "292F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fallande diagonalt streck som korsar pil åt nordöst"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2930",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stigande diagonalt streck som korsar pil åt sydöst"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2931",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt nordöst som korsar pil åt nordväst"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2932",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil åt nordväst som korsar pil åt nordöst"
       }
     }
   },
@@ -1907,15 +1696,13 @@
       "default": {
         "default": "vågig pil som pekar direkt åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2934",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil som pekar åt höger och sedan uppåt"
       }
     }
   },
@@ -1925,8 +1712,7 @@
       "default": {
         "default": "pil åt höger som svänger neråt"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2936",
@@ -1934,8 +1720,7 @@
       "default": {
         "default": "pil neråt som svänger åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2937",
@@ -1943,8 +1728,7 @@
       "default": {
         "default": "pil neråt som svänger åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2938",
@@ -1952,8 +1736,7 @@
       "default": {
         "default": "clockwise höger semicircle arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2939",
@@ -1961,24 +1744,21 @@
       "default": {
         "default": "anticlockwise vänster semicircle arrow"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil med båge överst moturs"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "293B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil med båge underst moturs"
       }
     }
   },
@@ -1988,8 +1768,7 @@
       "default": {
         "default": "clockwise top semicircle arrow med minus"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "293D",
@@ -1997,69 +1776,61 @@
       "default": {
         "default": "anticlockwise top semicircle arrow med plus"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "293E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvcirkelformad pil moturs nedåt och åt höger"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "293F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvcirkelformad pil medurs nedåt och åt vänster"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2940",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sluten cirkelformad pil moturs"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2941",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sluten cirkelformad pil medurs"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2942",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil ovanför kort vänsterpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2943",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil ovanför kort högerpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2944",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort högerpil ovanför vänsterpil"
       }
     }
   },
@@ -2069,24 +1840,21 @@
       "default": {
         "default": "pil åt höger med plus under"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2946",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med plus nedanför"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2947",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil genom x"
       }
     }
   },
@@ -2096,8 +1864,7 @@
       "default": {
         "default": "pil åt vänster och höger genom cirkel"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2949",
@@ -2105,8 +1872,7 @@
       "default": {
         "default": "pil uppåt med dubbla spetsar från cirkel"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2970",
@@ -2114,8 +1880,7 @@
       "default": {
         "default": "round implies"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2971",
@@ -2123,8 +1888,7 @@
       "default": {
         "default": "lika med över pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2972",
@@ -2132,8 +1896,7 @@
       "default": {
         "default": "tilde över pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2973",
@@ -2141,8 +1904,7 @@
       "default": {
         "default": "leftwards arrow over tilde"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2974",
@@ -2150,8 +1912,7 @@
       "default": {
         "default": "rightwards arrow over tilde"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2975",
@@ -2159,8 +1920,7 @@
       "default": {
         "default": "pil åt höger över nästan lika med"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2976",
@@ -2168,15 +1928,13 @@
       "default": {
         "default": "mindre än över pil åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "2977",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil genom mindre än-tecken"
       }
     }
   },
@@ -2186,8 +1944,7 @@
       "default": {
         "default": "större än över pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2979",
@@ -2195,15 +1952,13 @@
       "default": {
         "default": "delmängd över pil åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "297A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil genom undermängd"
       }
     }
   },
@@ -2213,8 +1968,7 @@
       "default": {
         "default": "delmängd över pil åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B3",
@@ -2222,8 +1976,7 @@
       "default": {
         "default": "tomma mängden med pil åt höger över"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "29B4",
@@ -2231,42 +1984,37 @@
       "default": {
         "default": "tomma mängden med pil vänster över"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "29BD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppåtpil genom cirkel"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "29EA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart diamant med nedåtpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "29EC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit cirkel med nedåtpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "29ED",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart cirkel med nedåtpil"
       }
     }
   },
@@ -2276,465 +2024,413 @@
       "default": {
         "default": "integral med leftwards arrow med krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "So",
     "key": "2B00",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit pil åt nordöst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B01",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit pil åt nordväst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B02",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit pil åt sydöst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B03",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit pil åt sydväst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B04",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit vänster- och högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B05",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart vänsterpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B06",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart uppåtpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B07",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedåtpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B08",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pil åt nordöst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B09",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pil åt nordväst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B0A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pil åt sydöst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B0B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pil åt sydväst"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B0C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart vänster- och högerpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B0D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart uppåt- och vänsterpil"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B0E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med spets nedåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B0F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med spets uppåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B10",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med spets nedåt"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B11",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med spets uppåt"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B30",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med liten cirkel"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B31",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre vänsterpilar"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B32",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med plus i cirkel"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B33",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lång klottrad vänsterpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B34",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med två spetsar och vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B35",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med två spetsar och dubbla vertikala streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B36",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med två spetsar från streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B37",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippelstreckad vänsterpil med två spetsar"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B38",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med prickat skaft"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B39",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med svans med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B3A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med svans med dubbla vertikala streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B3B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tvåspetsad vänsterpil med svans"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B3C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med två spetsar och svans med vertikalt streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B3D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med två spetsar och svans med dubbla vertikala streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B3E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil genom x"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B3F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vågformad pil direkt åt vänster"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B40",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "likhetstecken ovanför vänsterpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B41",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvänd tildeoperator ovanför vänsterpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B42",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil ovanför omvänt approximationstecken"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B43",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil genom större än-tecken"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B44",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil genom undermängd"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B45",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med fyra streck"
       }
     }
   },
   {
-    "category": "So",
     "key": "2B46",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med fyra streck"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B47",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvänd tildeoperator ovanför högerpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B48",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil ovanför omvänt approximationstecken"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B49",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tildeoperator ovanför vänsterpil"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B4A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil ovanför approximationstecken"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B4B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil ovanför omvänd tildeoperator"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "2B4C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil ovanför omvänd tildeoperator"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "FFE9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vänsterpil med halv bredd"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "FFEA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppåtpil med halv bredd"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "FFEB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "högerpil med halv bredd"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "FFEC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedåtpil med halv bredd"
       }
     }
   }

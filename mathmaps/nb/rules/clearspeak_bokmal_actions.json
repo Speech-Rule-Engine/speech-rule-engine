@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[t] \"kollapset\"; [n] . (engine:modality=summary, grammar:collapsed)"
+      "[t] \"kollapset\"; [n] . (engine:modality=summary, grammar:?collapsed)"
     ],
     [
       "Action",
@@ -292,7 +292,7 @@
     [
       "Action",
       "superscript-simple-function",
-      "[n] children/*[1]; [t] \"med eksponent\" (pause:short); [n] children/*[1]"
+      "[n] children/*[1]; [t] \"med eksponent\" (pause:short); [n] children/*[2]"
     ],
     [
       "Action",
@@ -552,92 +552,92 @@
     [
       "Action",
       "sqrt",
-      "[t] \"kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "cubic",
-      "[t] \"kubikkroten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"kubikkroten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"kubikkroten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"kubikkroten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root",
-      "[n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"roten av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "root-endroot",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
       "root-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"slutt rot\" (pause:short)"
+      "[n] . (grammar:?EndRoot); [t] \"slutt rot\" (pause:short)"
     ],
     [
       "Action",
@@ -657,7 +657,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[n] . (grammar:!prefix:addArticle); [t] \"av\""
+      "[n] . (grammar:addArticle); [t] \"av\""
     ],
     [
       "Action",
@@ -812,17 +812,17 @@
     [
       "Action",
       "matrix-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"slutt matrise\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt matrise\""
     ],
     [
       "Action",
       "matrix-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"slutt matrise\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt matrise\""
     ],
     [
       "Action",
       "matrix-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"slutt determinant\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt determinant\""
     ],
     [
       "Action",
@@ -847,22 +847,22 @@
     [
       "Action",
       "vector-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"slutt matrise\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt matrise\""
     ],
     [
       "Action",
       "vector-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"slutt vektor\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt vektor\""
     ],
     [
       "Action",
       "vector-end-vector-endvector",
-      "[n] . (grammar:EndMatrix); [t] \"slutt vektor\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt vektor\""
     ],
     [
       "Action",
       "vector-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"slutt determinant\""
+      "[n] . (grammar:?EndMatrix); [t] \"slutt determinant\""
     ],
     [
       "Action",
@@ -872,12 +872,12 @@
     [
       "Action",
       "lines-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"rader\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"rader\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
       "cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"tilfeller\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"tilfeller\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -912,7 +912,7 @@
     [
       "Action",
       "lines-cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"tilfeller\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"tilfeller\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -922,7 +922,7 @@
     [
       "Action",
       "lines-equations-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"ligninger\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"ligninger\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -932,7 +932,7 @@
     [
       "Action",
       "lines-steps-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"steg\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"steg\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -942,7 +942,7 @@
     [
       "Action",
       "lines-rows-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"rader\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"rader\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -952,7 +952,7 @@
     [
       "Action",
       "lines-constraints-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"betingelser\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"betingelser\"; [n] . (grammar:?layoutSummary)"
     ],
     [
       "Action",
@@ -982,6 +982,11 @@
     [
       "Action",
       "integral",
+      "[n] children/*[1] (grammar:addArticle); [t] \"over\"; [n] children/*[2] (pause:short); [n] children/*[3] (pause:short)"
+    ],
+    [
+      "Action",
+      "integral-novar",
       "[n] children/*[1] (grammar:addArticle); [t] \"over\"; [n] children/*[2] (pause:short)"
     ],
     [
