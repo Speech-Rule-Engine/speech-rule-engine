@@ -26,7 +26,49 @@ import { Engine, EnginePromise } from './engine.js';
 import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
 
+const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];
+
+const EN_RULES: string[] = [
+  'chromevox', 'clearspeak', 'mathspeak', 'emacspeak', 'html'
+];
+
+function ensureDomain(feature: { [key: string]: boolean | string }) {
+// This preserves the possibility to specify default as domain.
+// < 3.2  this lead to the use of chromevox rules in English.
+// >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
+// we get a meaningful output.
+  if ((feature.modality && feature.modality !== 'speech') ||
+    (!feature.modality && Engine.getInstance().modality !== 'speech')) {
+    return;
+  }
+  if (!feature.domain) {
+    return;
+  }
+  if (feature.domain === 'default')  {
+    feature.domain = 'mathspeak';
+    return;
+  }
+  const locale = (feature.locale || Engine.getInstance().locale) as string;
+  const domain = feature.domain as string;
+  if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
+    if (domain !== 'mathspeak') {
+      feature.domain = 'mathspeak';
+    }
+    return;
+  }
+  if (locale === 'en') {
+    if (EN_RULES.indexOf(domain) === -1) {
+      feature.domain = 'mathspeak';
+    }
+    return;
+  }
+  if (domain !== 'mathspeak' && domain !== 'clearspeak') {
+    feature.domain = 'mathspeak';
+  }
+}
+
 // Engine setup method.
+
 /**
  * Method to setup and initialize the speech rule engine. Currently the
  * feature parameter is ignored, however, this could be used to fine tune the
@@ -36,19 +78,8 @@ import { SystemExternal } from './system_external.js';
  * @returns The promise that resolves once setup is complete.
  */
 export async function setup(feature: { [key: string]: boolean | string }) {
+  ensureDomain(feature);
   const engine = Engine.getInstance() as any;
-  // This preserves the possibility to specify default as domain.
-  // < 3.2  this lead to the use of chromevox rules in English.
-  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-  // we get a meaningful output.
-  if (
-    feature.domain === 'default' &&
-    (feature.modality === 'speech' ||
-      !feature.modality ||
-      engine.modality === 'speech')
-  ) {
-    feature.domain = 'mathspeak';
-  }
   const setIf = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
