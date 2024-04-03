@@ -30,6 +30,10 @@ import { SemanticTree } from './semantic_tree.js';
 
 export type Sexp = number | Sexp[];
 
+const Options = {
+  tree: false
+}
+
 /**
  * @param skeleton The skeleton array.
  */
@@ -284,6 +288,7 @@ export class SemanticSkeleton {
     }
     const id = node.id;
     const skeleton = [id];
+    XpathUtil.updateEvaluator(mml);
     const mmlChild = XpathUtil.evalXPath(
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
@@ -314,7 +319,10 @@ export class SemanticSkeleton {
         SemanticSkeleton.tree_(mml, child, level + 1, i + 1, l) as any
       );
     }
-    SemanticSkeleton.addAria(mmlChild, level, posinset, setsize, level ? 'group' : 'tree');
+    SemanticSkeleton.addAria(
+      mmlChild, level, posinset, setsize,
+      !Options.tree ? 'treeitem' : (level ? 'group' : 'tree')
+    );
     return skeleton;
   }
 
@@ -323,7 +331,8 @@ export class SemanticSkeleton {
     level: number,
     posinset: number,
     setsize: number,
-    role: string = level ? 'treeitem' : 'tree'
+    role: string = !Options.tree ? 'treeitem' : 
+      (level ? 'treeitem' : 'tree')
   ) {
     if (!Engine.getInstance().binaryFeatures.get('aria') || !node) {
       return;

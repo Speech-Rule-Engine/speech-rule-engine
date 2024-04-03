@@ -19,7 +19,7 @@ IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.json
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .json,$(LOCALES)))
 
-JSON_MINIFY = npx json-minify
+JSON_MINIFY = pnpm json-minify
 
 ### Intermediate minified locale files for faster building
 MINI_DIR = $(abspath ./minimaps)

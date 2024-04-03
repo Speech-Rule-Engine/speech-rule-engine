@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary, grammar:collapsed); [t] \"plegado\""
+      "[n] . (engine:modality=summary, grammar:?collapsed); [t] \"plegado\""
     ],
     [
       "Action",

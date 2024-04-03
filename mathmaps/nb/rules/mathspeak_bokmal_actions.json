@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[t] \"kollapset\"; [n] . (engine:modality=summary, grammar:collapsed)"
+      "[t] \"kollapset\"; [n] . (engine:modality=summary, grammar:?collapsed)"
     ],
     [
       "Action",

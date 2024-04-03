@@ -371,7 +371,7 @@ set(
             ' LaTeX input to SRE.'
         );
       }
-      return process('speech', `<math latex="${ltx}"></math>`);
+      return process('speech', `<math data-latex="${ltx}"></math>`);
     }
   })
 );

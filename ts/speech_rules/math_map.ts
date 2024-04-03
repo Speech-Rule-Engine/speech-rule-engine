@@ -168,8 +168,10 @@ function retrieveFiles(locale: string) {
  *
  * @param json The json mappings string.
  */
-function parseMaps(json: string) {
-  const js = JSON.parse(json) as { [key: string]: any[] };
+function parseMaps(json: string | MathMapJson) {
+  const js = (typeof json === 'string') ?
+      JSON.parse(json) as { [key: string]: any[] }
+      : json;
   addMaps(js);
 }
 
