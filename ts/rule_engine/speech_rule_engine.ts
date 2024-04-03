@@ -323,8 +323,6 @@ export class SpeechRuleEngine {
       }
       return result;
     }
-    console.log(53);
-    console.log(rule.toString());
     Debugger.getInstance().generateOutput(() => [
       'Apply Rule:',
       rule.name,
@@ -338,8 +336,6 @@ export class SpeechRuleEngine {
     const components = rule.action.components;
     result = [];
     for (let i = 0, component; (component = components[i]); i++) {
-      console.log(54);
-      console.log(component);
       let descrs: AuditoryDescription[] = [];
       const content = component.content || '';
       const attributes = component.attributes || {};
