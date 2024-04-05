@@ -382,13 +382,13 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       return this.empty_(node, children);
     }
     const sizes: { [key: string]: number } = {
-      cm: 0.4,
-      pc: 0.5,
-      em: 0.5,
-      ex: 1,
-      in: 0.15,
-      pt: 5,
-      mm: 5
+      'cm': 0.4,
+      'pc': 0.5,
+      'em': 0.5,
+      'ex': 1,
+      'in': 0.15,
+      'pt': 5,
+      'mm': 5
     };
     const unit = match[0];
     const measure = parseFloat(width.slice(0, match.index));

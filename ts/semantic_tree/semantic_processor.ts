@@ -1295,8 +1295,8 @@ export class SemanticProcessor {
             center,
             [center, children[1]],
             {
-              MSUBSUP: SemanticType.SUBSCRIPT,
-              MUNDEROVER: SemanticType.UNDERSCORE
+              'MSUBSUP': SemanticType.SUBSCRIPT,
+              'MUNDEROVER': SemanticType.UNDERSCORE
             }[mmlTag],
             1,
             true
@@ -1315,8 +1315,8 @@ export class SemanticProcessor {
             center,
             [center, children[2]],
             {
-              MSUBSUP: SemanticType.SUPERSCRIPT,
-              MUNDEROVER: SemanticType.OVERSCORE
+              'MSUBSUP': SemanticType.SUPERSCRIPT,
+              'MUNDEROVER': SemanticType.OVERSCORE
             }[mmlTag],
             1,
             true
@@ -1970,7 +1970,7 @@ export class SemanticProcessor {
    * @param prefixes Prefix operators from the outermost to the innermost.
    * @returns The new branch node.
    */
-  private prefixNode_(
+  public prefixNode(
     node: SemanticNode,
     prefixes: SemanticNode[]
   ): SemanticNode {
@@ -2041,7 +2041,7 @@ export class SemanticProcessor {
    * innermost to outermost.
    * @returns The new branch node.
    */
-  private postfixNode_(
+  public postfixNode(
     node: SemanticNode,
     postfixes: SemanticNode[]
   ): SemanticNode {
@@ -2358,10 +2358,10 @@ export class SemanticProcessor {
     }
     // Pathological case: only operators in row.
     if (nodes.length === 0) {
-      return SemanticProcessor.getInstance().prefixNode_(prefix.pop(), prefix);
+      return SemanticProcessor.getInstance().prefixNode(prefix.pop(), prefix);
     }
     if (nodes.length === 1) {
-      return SemanticProcessor.getInstance().prefixNode_(nodes[0], prefix);
+      return SemanticProcessor.getInstance().prefixNode(nodes[0], prefix);
     }
 
     // Deal with explicit juxtaposition
@@ -2382,7 +2382,7 @@ export class SemanticProcessor {
     // TODO: Currently this wraps into separate operators. We could collect them first.
     if (split.div?.role === SemanticRole.POSTFIXOP) {
       if (!split.tail.length || split.tail[0].type === SemanticType.OPERATOR) {
-        split.head = [SemanticProcessor.getInstance().postfixNode_(
+        split.head = [SemanticProcessor.getInstance().postfixNode(
           SemanticProcessor.getInstance().implicitNode(
             split.head as SemanticNode[]
           ),
@@ -2405,7 +2405,7 @@ export class SemanticProcessor {
    */
   private wrapFactor(prefix: SemanticNode[], split: SemanticUtil.Slice) {
     SemanticProcessor.getInstance().wrapPostfix(split);
-    return SemanticProcessor.getInstance().prefixNode_(
+    return SemanticProcessor.getInstance().prefixNode(
       SemanticProcessor.getInstance().implicitNode(split.head),
       prefix
     );
@@ -2450,7 +2450,7 @@ export class SemanticProcessor {
       prefix.unshift(lastop);
       if (root.type === SemanticType.INFIXOP) {
         // We assume prefixes bind stronger than postfixes.
-        const node = SemanticProcessor.getInstance().postfixNode_(
+        const node = SemanticProcessor.getInstance().postfixNode(
           // Here we know that the childNodes are not empty!
           root.childNodes.pop(),
           prefix
@@ -2458,7 +2458,7 @@ export class SemanticProcessor {
         root.appendChild(node);
         return root;
       }
-      return SemanticProcessor.getInstance().postfixNode_(root, prefix);
+      return SemanticProcessor.getInstance().postfixNode(root, prefix);
     }
 
     const split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
@@ -3640,7 +3640,7 @@ export class SemanticProcessor {
       return { integrand: args, intvar: firstNode, rest: nodes.slice(1) };
     }
     if (nodes[1] && SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
-      const intvar = SemanticProcessor.getInstance().prefixNode_(
+      const intvar = SemanticProcessor.getInstance().prefixNode(
         nodes[1] as SemanticNode,
         [firstNode]
       );

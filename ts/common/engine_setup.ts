@@ -38,7 +38,8 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
 // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
 // we get a meaningful output.
   if ((feature.modality && feature.modality !== 'speech') ||
-    (!feature.modality && Engine.getInstance().modality !== 'speech')) {
+    (!feature.modality &&
+      Engine.getInstance().stringFeatures.get('modality') !== 'speech')) {
     return;
   }
   if (!feature.domain) {
@@ -48,7 +49,8 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
     feature.domain = 'mathspeak';
     return;
   }
-  const locale = (feature.locale || Engine.getInstance().locale) as string;
+  const locale = (feature.locale
+    || Engine.getInstance().stringFeatures.get('locale')) as string;
   const domain = feature.domain as string;
   if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
     if (domain !== 'mathspeak') {
@@ -125,6 +127,10 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   }
   return MathMap.loadLocale();
 }
+
+// export async function setup(feature: { [key: string]: boolean | string }) {
+//   setupSync(feature);
+// }
 
 /**
  * Sets up browser specific functionality.

@@ -45,9 +45,9 @@ export const SemanticHeuristics = {
  * Heuristics that are run by default.
  */
   flags: {
-    combine_juxtaposition: true,
-    convert_juxtaposition: true,
-    multioperator: true
+    'combine_juxtaposition': true,
+    'convert_juxtaposition': true,
+    'multioperator': true
   } as  { [key: string]: boolean },
 
   /**

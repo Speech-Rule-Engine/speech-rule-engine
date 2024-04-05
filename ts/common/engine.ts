@@ -110,47 +110,6 @@ export class Engine {
     'prune'
   ];
 
-  // /**
-  //  * The default locale.
-  //  */
-  // public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
-
-  // public set defaultLocale(loc: string) {
-  //   this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
-  // }
-
-  // public get defaultLocale() {
-  //   return this._defaultLocale;
-  // }
-
-  // /**
-  //  * Current locale.
-  //  */
-  // public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
-
-  // /**
-  //  * Current subiso for the locale.
-  //  */
-  // public subiso = '';
-
-  // /**
-  //  * Current modality.
-  //  */
-  // public modality = ;
-
-  // /**
-  //  */
-  // public speech:  = ;
-
-  // /**
-  //  * Caching during speech generation.
-  //  */
-  // public markup: EngineConst.Markup = EngineConst.Markup.NONE;
-
-  // /**
-  //  */
-  // public rate = '100';
-
   /**
    * String feature vector.
    */
@@ -388,6 +347,20 @@ export class Engine {
       this.customLoader = fn;
     }
   }
+
+  public engineSetup(): { [key: string]: boolean | string } {
+    const features: { [key: string]: string | boolean } = {
+      'mode': this.mode
+    };
+    Engine.BINARY_FEATURES.forEach(function (x) {
+      features[x] = this.binaryFeatures.get(x);
+    });
+    Engine.STRING_FEATURES.forEach(function (x) {
+      features[x] = this.stringFeatures.get(x);
+    });
+    return features;
+  }
+
 }
 
 /**
@@ -457,6 +430,7 @@ export class EnginePromise {
   public static getall() {
     return Promise.all(Object.values(EnginePromise.promises));
   }
+
 }
 
 export function enginePromise() {

@@ -52,3 +52,7 @@ wgxpath.install = function(opt_feature) { };
 
 var Resolver = {};
 Resolver.lookupNamespaceURI;
+
+var Engine = {};
+Engine.init;
+Engine.delay;

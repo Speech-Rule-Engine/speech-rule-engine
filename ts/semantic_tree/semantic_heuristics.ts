@@ -321,21 +321,21 @@ function convertPrePost(
       next[0].role === SemanticRole.IMPLICIT
     ) {
       rel = collect.pop();
-      prev.push(processor['postfixNode_'](prev.pop(), collect));
+      prev.push(processor.postfixNode(prev.pop(), collect));
       return rel;
     }
     rel = collect.shift();
-    const result = processor['prefixNode_'](next.shift(), collect);
+    const result = processor.prefixNode(next.shift(), collect);
     next.unshift(result);
-    // next.unshift(processor['prefixNode_'](next.shift(), collect));
+    // next.unshift(processor.prefixNode(next.shift(), collect));
     return rel;
   }
   if (prevExists) {
-    prev.push(processor['postfixNode_'](prev.pop(), collect));
+    prev.push(processor.postfixNode(prev.pop(), collect));
     return rel;
   }
   if (nextExists) {
-    next.unshift(processor['prefixNode_'](next.shift(), collect));
+    next.unshift(processor.prefixNode(next.shift(), collect));
   }
   return rel;
 }
@@ -518,7 +518,7 @@ function integralFractionArg(node: SemanticNode): void {
     return;
   }
   if (SemanticPred.isIntegralDxBoundary(first, second)) {
-    const prefix = SemanticProcessor.getInstance()['prefixNode_'](second, [
+    const prefix = SemanticProcessor.getInstance().prefixNode(second, [
       first
     ]);
     prefix.role = SemanticRole.INTEGRAL;
