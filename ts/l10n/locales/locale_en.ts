@@ -47,7 +47,7 @@ function create(): Locale {
   loc.FUNCTIONS['plural'] = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
   };
-  loc.ALPHABETS['combiner'] = tr.Combiners.prefixCombiner;
+  loc.ALPHABETS['combiner'] = tr.Combiners['prefixCombiner'];
   loc.ALPHABETS['digitTrans']['default'] = NUMBERS.numberToWords;
   loc.CORRECTIONS['article'] = (name: string) => {
     return Grammar.getInstance().getParameter('noArticle') ? '' : name;

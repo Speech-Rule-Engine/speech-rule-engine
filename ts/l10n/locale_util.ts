@@ -30,9 +30,9 @@ import { Combiner, Combiners } from './transformers.js';
 export function nestingToString(count: number): string {
   switch (count) {
     case 1:
-      return LOCALE.MESSAGES.MS.ONCE || '';
+      return LOCALE.MESSAGES.MS['ONCE'] || '';
     case 2:
-      return LOCALE.MESSAGES.MS.TWICE;
+      return LOCALE.MESSAGES.MS['TWICE'];
     default:
       return count.toString();
   }

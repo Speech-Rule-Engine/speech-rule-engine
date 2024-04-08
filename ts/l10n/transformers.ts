@@ -66,7 +66,7 @@ export function siCombiner(prefix: string, unit: string) {
 // Namespaces
 export const Combiners: Record<string, Combiner> = {};
 
-Combiners.identityCombiner = function (a: string, b: string, c: string) {
+Combiners['identityCombiner'] = function (a: string, b: string, c: string) {
   return a + b + c;
 };
 
@@ -78,7 +78,7 @@ Combiners.identityCombiner = function (a: string, b: string, c: string) {
  * @param cap Capitalisation expression.
  * @returns The speech string as `font cap letter`.
  */
-Combiners.prefixCombiner = function (
+Combiners['prefixCombiner'] = function (
   letter: string,
   font: string,
   cap: string
@@ -95,7 +95,7 @@ Combiners.prefixCombiner = function (
  * @param cap Capitalisation expression.
  * @returns The speech string as `cap letter font`.
  */
-Combiners.postfixCombiner = function (
+Combiners['postfixCombiner'] = function (
   letter: string,
   font: string,
   cap: string
@@ -112,7 +112,7 @@ Combiners.postfixCombiner = function (
  * @param cap Capitalisation expression.
  * @returns The speech string as `letter cap font`.
  */
-Combiners.romanceCombiner = function (
+Combiners['romanceCombiner'] = function (
   letter: string,
   font: string,
   cap: string

@@ -80,6 +80,26 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
  * @returns The promise that resolves once setup is complete.
  */
 export async function setup(feature: { [key: string]: boolean | string }) {
+  const engine = Engine.getInstance() as any;
+  setupSync(feature);
+  // We add a break in the execution flow so custom loaders can set up.
+  if (engine.init) {
+    EnginePromise.promises['init'] = new Promise((res, _rej) => {
+      setTimeout(() => {
+        res('init');
+      }, 10);
+    });
+    engine.init = false;
+    return EnginePromise.get();
+  }
+  if (engine.delay) {
+    engine.delay = false;
+    return EnginePromise.get();
+  }
+  return MathMap.loadLocale();
+}
+
+export function setupSync(feature: { [key: string]: boolean | string }) {
   ensureDomain(feature);
   const engine = Engine.getInstance() as any;
   const setIf = (feat: string) => {
@@ -111,26 +131,7 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   setupBrowsers(engine);
   L10n.setLocale();
   engine.setDynamicCstr();
-  // We add a break in the execution flow so custom loaders can set up.
-  if (engine.init) {
-    EnginePromise.promises['init'] = new Promise((res, _rej) => {
-      setTimeout(() => {
-        res('init');
-      }, 10);
-    });
-    engine.init = false;
-    return EnginePromise.get();
-  }
-  if (engine.delay) {
-    engine.delay = false;
-    return EnginePromise.get();
-  }
-  return MathMap.loadLocale();
 }
-
-// export async function setup(feature: { [key: string]: boolean | string }) {
-//   setupSync(feature);
-// }
 
 /**
  * Sets up browser specific functionality.

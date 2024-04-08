@@ -239,8 +239,8 @@ export function FUNCTIONS(): Functions {
     combineRootIndex: function (postfix: string, _index: string) {
       return postfix;
     },
-    combineNestedFraction: tr.Combiners.identityCombiner,
-    combineNestedRadical: tr.Combiners.identityCombiner,
+    combineNestedFraction: tr.Combiners['identityCombiner'],
+    combineNestedRadical: tr.Combiners['identityCombiner'],
     fontRegexp: function (font: string) {
       return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
     },

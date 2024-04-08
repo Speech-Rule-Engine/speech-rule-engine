@@ -199,7 +199,7 @@ export class MathStore extends BaseRuleStore {
       if (s.length === 1) {
         descs.push(this.evaluateCharacter(s));
       } else if (
-        s.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))
+        s.match(new RegExp('^[' + LOCALE.MESSAGES.regexp['TEXT'] + ']+$'))
       ) {
         descs.push(this.evaluateCharacter(s));
       } else {
@@ -208,7 +208,7 @@ export class MathStore extends BaseRuleStore {
         while (rest) {
           num = this.matchNumber(rest);
           const alpha = rest.match(
-            new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+')
+            new RegExp('^[' + LOCALE.MESSAGES.regexp['TEXT'] + ']+')
           );
           if (num) {
             descs.push(this.evaluateCharacter(num.number));
