@@ -74,20 +74,20 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.COMBINERS['germanPostfix'] = germanPostfixCombiner;
-  loc.ALPHABETS.combiner = germanPrefixCombiner;
-  loc.FUNCTIONS.radicalNestDepth = (x: number) => {
+  loc.ALPHABETS['combiner'] = germanPrefixCombiner;
+  loc.FUNCTIONS['radicalNestDepth'] = (x: number) => {
     return x > 1 ? loc.NUMBERS.numberToWords(x) + 'fach' : '';
   };
-  loc.FUNCTIONS.combineRootIndex = (postfix: string, index: string) => {
+  loc.FUNCTIONS['combineRootIndex'] = (postfix: string, index: string) => {
     const root = index ? index + 'wurzel' : '';
     return postfix.replace('Wurzel', root);
   };
-  loc.FUNCTIONS.combineNestedRadical = (a: string, b: string, c: string) => {
+  loc.FUNCTIONS['combineNestedRadical'] = (a: string, b: string, c: string) => {
     a = c.match(/exponent$/) ? a + 'r' : a;
     const count = (b ? b + ' ' : '') + a;
     return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
   };
-  loc.FUNCTIONS.fontRegexp = function (font: string) {
+  loc.FUNCTIONS['fontRegexp'] = function (font: string) {
     font = font
       .split(' ')
       .map(function (x) {
@@ -96,8 +96,8 @@ function create(): Locale {
       .join(' ');
     return new RegExp('((^' + font + ' )|( ' + font + '$))');
   };
-  loc.CORRECTIONS.correctOne = (num: string) => num.replace(/^eins$/, 'ein');
-  loc.CORRECTIONS.localFontNumber = (font: string) => {
+  loc.CORRECTIONS['correctOne'] = (num: string) => num.replace(/^eins$/, 'ein');
+  loc.CORRECTIONS['localFontNumber'] = (font: string) => {
     const realFont = localFont(font);
     return realFont
       .split(' ')
@@ -106,16 +106,16 @@ function create(): Locale {
       })
       .join(' ');
   };
-  loc.CORRECTIONS.lowercase = (name: string) => name.toLowerCase();
-  loc.CORRECTIONS.article = (name: string) => {
+  loc.CORRECTIONS['lowercase'] = (name: string) => name.toLowerCase();
+  loc.CORRECTIONS['article'] = (name: string) => {
     const decl = Grammar.getInstance().getParameter('case');
     const plural = Grammar.getInstance().getParameter('plural');
     if (decl === 'dative') {
-      return { der: 'dem', die: plural ? 'den' : 'der', das: 'dem' }[name];
+      return { 'der': 'dem', 'die': plural ? 'den' : 'der', 'das': 'dem' }[name];
     }
     return name;
   };
-  loc.CORRECTIONS.masculine = (name: string) => {
+  loc.CORRECTIONS['masculine'] = (name: string) => {
     const decl = Grammar.getInstance().getParameter('case');
     if (decl === 'dative') {
       return name + 'n';
