@@ -250,14 +250,14 @@ export class ClearspeakPreferences extends DynamicCstr {
 }
 
 const PREFERENCES = new DynamicProperties({
-  AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
-  Bar: ['Auto', 'Conjugate'],
-  Caps: ['Auto', 'SayCaps'],
-  CombinationPermutation: ['Auto', 'ChoosePermute'],
-  Currency: ['Auto', 'Position', 'Prefix'],
-  Ellipses: ['Auto', 'AndSoOn'],
-  Enclosed: ['Auto', 'EndEnclose'],
-  Exponent: [
+  'AbsoluteValue': ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
+  'Bar': ['Auto', 'Conjugate'],
+  'Caps': ['Auto', 'SayCaps'],
+  'CombinationPermutation': ['Auto', 'ChoosePermute'],
+  'Currency': ['Auto', 'Position', 'Prefix'],
+  'Ellipses': ['Auto', 'AndSoOn'],
+  'Enclosed': ['Auto', 'EndEnclose'],
+  'Exponent': [
     'Auto',
     'AfterPower',
     'Ordinal',
@@ -265,7 +265,7 @@ const PREFERENCES = new DynamicProperties({
     // The following are German
     'Exponent'
   ],
-  Fraction: [
+  'Fraction': [
     'Auto',
     'EndFrac',
     'FracOver',
@@ -276,15 +276,15 @@ const PREFERENCES = new DynamicProperties({
     'OverEndFrac',
     'Per'
   ],
-  Functions: [
+  'Functions': [
     'Auto',
     'None',
     // Reciprocal is French
     'Reciprocal'
   ],
-  ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
-  Log: ['Auto', 'LnAsNaturalLog'],
-  Matrix: [
+  'ImpliedTimes': ['Auto', 'MoreImpliedTimes', 'None'],
+  'Log': ['Auto', 'LnAsNaturalLog'],
+  'Matrix': [
     'Auto',
     'Combinatoric',
     'EndMatrix',
@@ -293,7 +293,7 @@ const PREFERENCES = new DynamicProperties({
     'SpeakColNum',
     'Vector'
   ],
-  MultiLineLabel: [
+  'MultiLineLabel': [
     'Auto',
     'Case',
     'Constraint',
@@ -303,11 +303,11 @@ const PREFERENCES = new DynamicProperties({
     'Row',
     'Step'
   ],
-  MultiLineOverview: ['Auto', 'None'],
-  MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
-  MultsymbolDot: ['Auto', 'Dot'],
-  MultsymbolX: ['Auto', 'By', 'Cross'],
-  Paren: [
+  'MultiLineOverview': ['Auto', 'None'],
+  'MultiLinePausesBetweenColumns': ['Auto', 'Long', 'Short'],
+  'MultsymbolDot': ['Auto', 'Dot'],
+  'MultsymbolX': ['Auto', 'By', 'Cross'],
+  'Paren': [
     'Auto',
     'CoordPoint',
     'Interval',
@@ -315,19 +315,19 @@ const PREFERENCES = new DynamicProperties({
     'Speak',
     'SpeakNestingLevel'
   ],
-  Prime: ['Auto', 'Angle', 'Length'],
-  Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
-  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member', 'In'],
-  Sets: ['Auto', 'SilentBracket', 'woAll'],
-  TriangleSymbol: ['Auto', 'Delta'],
-  Trig: [
+  'Prime': ['Auto', 'Angle', 'Length'],
+  'Roots': ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
+  'SetMemberSymbol': ['Auto', 'Belongs', 'Element', 'Member', 'In'],
+  'Sets': ['Auto', 'SilentBracket', 'woAll'],
+  'TriangleSymbol': ['Auto', 'Delta'],
+  'Trig': [
     'Auto',
     'ArcTrig',
     'TrigInverse',
     // Reciprocal French
     'Reciprocal'
   ],
-  VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
+  'VerticalLine': ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
 class Comparator extends DefaultComparator {
