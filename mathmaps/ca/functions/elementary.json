@@ -94,7 +94,7 @@
     "key": "liminf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "límite inferior"
       }
     }
   },
@@ -102,7 +102,7 @@
     "key": "limsup",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "límite superior"
       }
     }
   },
