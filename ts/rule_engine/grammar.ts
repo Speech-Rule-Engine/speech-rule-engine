@@ -472,7 +472,7 @@ function numbersToAlpha(text: string): string {
  * @returns The untranslated text.
  */
 function noTranslateText(text: string): string {
-  if (text.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))) {
+  if (text.match(new RegExp('^[' + LOCALE.MESSAGES.regexp['TEXT'] + ']+$'))) {
     Grammar.getInstance().currentFlags['translate'] = false;
   }
   return text;
