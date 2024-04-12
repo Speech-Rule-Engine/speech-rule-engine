@@ -117,7 +117,7 @@ function numberToOrdinal(num: number, plural: boolean): string {
 function wordOrdinal(num: number): string {
   const gender = Grammar.getInstance().getParameter('gender') as string;
   const postfix = gender === 'm' ? 'o' : 'a';
-  let ordinal = NUMBERS.special.onesOrdinals[num];
+  let ordinal = NUMBERS.special['onesOrdinals'][num];
   if (ordinal) {
     return ordinal.slice(0, -1) + postfix;
   }

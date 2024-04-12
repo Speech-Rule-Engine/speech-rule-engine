@@ -118,7 +118,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
     return numericOrdinal(num);
   }
   if (num <= 10) {
-    return NUMBERS.special.onesOrdinals[num - 1];
+    return NUMBERS.special['onesOrdinals'][num - 1];
   }
   const result = numberToWords(num);
   if (result.match(/mil$/)) {

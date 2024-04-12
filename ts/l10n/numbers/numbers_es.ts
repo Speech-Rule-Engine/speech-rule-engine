@@ -50,7 +50,7 @@ function tensToWords_(num: number): string {
 function hundredsToWords_(num: number): string {
   const n = num % 1000;
   const hundred = Math.floor(n / 100);
-  const hundreds = NUMBERS.special.hundreds[hundred];
+  const hundreds = NUMBERS.special['hundreds'][hundred];
   const tens = tensToWords_(n % 100);
   if (hundred === 1) {
     if (!tens) {
@@ -110,7 +110,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
     return num.toString() + 'a';
   }
   if (num <= 12) {
-    return NUMBERS.special.onesOrdinals[num - 1];
+    return NUMBERS.special['onesOrdinals'][num - 1];
   }
   const result = [];
   if (num >= 1000) {
@@ -123,19 +123,19 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   let pos = 0;
   pos = Math.floor(num / 100);
   if (pos > 0) {
-    result.push(NUMBERS.special.hundredsOrdinals[pos - 1]);
+    result.push(NUMBERS.special['hundredsOrdinals'][pos - 1]);
     num = num % 100;
   }
   if (num <= 12) {
-    result.push(NUMBERS.special.onesOrdinals[num - 1]);
+    result.push(NUMBERS.special['onesOrdinals'][num - 1]);
   } else {
     pos = Math.floor(num / 10);
     if (pos > 0) {
-      result.push(NUMBERS.special.tensOrdinals[pos - 1]);
+      result.push(NUMBERS.special['tensOrdinals'][pos - 1]);
       num = num % 10;
     }
     if (num > 0) {
-      result.push(NUMBERS.special.onesOrdinals[num - 1]);
+      result.push(NUMBERS.special['onesOrdinals'][num - 1]);
     }
   }
   return result.join(' ');

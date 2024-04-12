@@ -62,14 +62,14 @@ function create(): Locale {
   loc.COMBINERS['italianPostfix'] = italianPostfixCombiner;
 
   // loc.FUNCTIONS.fracNestDepth = (_node) => false;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
-  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
-  loc.FUNCTIONS.combineNestedFraction = (a, b, c) =>
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
+  loc.FUNCTIONS['combineRootIndex'] = combinePostfixIndex;
+  loc.FUNCTIONS['combineNestedFraction'] = (a, b, c) =>
     c.replace(/ $/g, '') + b + a;
-  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => c + ' ' + a;
-  loc.FUNCTIONS.fontRegexp = (font) => RegExp(' (en |)' + font + '$');
+  loc.FUNCTIONS['combineNestedRadical'] = (a, _b, c) => c + ' ' + a;
+  loc.FUNCTIONS['fontRegexp'] = (font) => RegExp(' (en |)' + font + '$');
 
-  loc.ALPHABETS.combiner = Combiners.romanceCombiner;
+  loc.ALPHABETS['combiner'] = Combiners['romanceCombiner'];
 
   return loc;
 }

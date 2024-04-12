@@ -53,16 +53,16 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.COMBINERS['germanPostfix'] = germanPostfixCombiner;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
-  loc.FUNCTIONS.plural = (unit: string) => {
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
+  loc.FUNCTIONS['plural'] = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
   };
-  loc.FUNCTIONS.fontRegexp = function (font: string) {
+  loc.FUNCTIONS['fontRegexp'] = function (font: string) {
     return new RegExp('((^' + font + ' )|( ' + font + '$))');
   };
-  loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
-  loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
-  loc.CORRECTIONS.article = (name: string) => {
+  loc.ALPHABETS['combiner'] = tr.Combiners['prefixCombiner'];
+  loc.ALPHABETS['digitTrans'].default = NUMBERS.numberToWords;
+  loc.CORRECTIONS['article'] = (name: string) => {
     return Grammar.getInstance().getParameter('noArticle') ? '' : name;
   };
   return loc;
