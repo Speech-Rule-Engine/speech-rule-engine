@@ -38,7 +38,7 @@ function hundredsToWordsRo_(num: number, ordinal = false): string {
   if (n) {
     str += str ? 'og' : '';
     if (ordinal) {
-      const ord = NUMBERS.special.smallOrdinals[n];
+      const ord = NUMBERS.special['smallOrdinals'][n];
       if (ord) {
         return str + ord;
       }
@@ -46,7 +46,7 @@ function hundredsToWordsRo_(num: number, ordinal = false): string {
         return (
           str +
           NUMBERS.tens[Math.floor(n / 10)] +
-          NUMBERS.special.smallOrdinals[n % 10]
+          NUMBERS.special['smallOrdinals'][n % 10]
         );
       }
     }
@@ -66,7 +66,7 @@ function hundredsToWordsRo_(num: number, ordinal = false): string {
  */
 function numberToWordsRo(num: number, ordinal = false): string {
   if (num === 0) {
-    return ordinal ? NUMBERS.special.smallOrdinals[0] : NUMBERS.zero;
+    return ordinal ? NUMBERS.special['smallOrdinals'][0] : NUMBERS.zero;
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
@@ -114,18 +114,18 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @returns Number with ordinal ending.
  */
 function replaceOrdinal(str: string): string {
-  const letOne = NUMBERS.special.endOrdinal[0];
+  const letOne = NUMBERS.special['endOrdinal'][0];
   if (letOne === 'a' && str.match(/en$/)) {
-    return str.slice(0, -2) + NUMBERS.special.endOrdinal;
+    return str.slice(0, -2) + NUMBERS.special['endOrdinal'];
   }
   if (str.match(/(d|n)$/) || str.match(/hundre$/)) {
     return str + 'de';
   }
   if (str.match(/i$/)) {
-    return str + NUMBERS.special.endOrdinal;
+    return str + NUMBERS.special['endOrdinal'];
   }
   if (letOne === 'a' && str.match(/e$/)) {
-    return str.slice(0, -1) + NUMBERS.special.endOrdinal;
+    return str.slice(0, -1) + NUMBERS.special['endOrdinal'];
   }
   if (str.match(/e$/)) {
     return str + 'nde';
@@ -193,7 +193,7 @@ function hundredsToWordsGe_(num: number, ordinal = false): string {
   if (n) {
     str += str ? 'og' : '';
     if (ordinal) {
-      const ord = NUMBERS.special.smallOrdinals[n];
+      const ord = NUMBERS.special['smallOrdinals'][n];
       if (ord) {
         return (str += ord);
       }
@@ -219,7 +219,7 @@ function hundredsToWordsGe_(num: number, ordinal = false): string {
  */
 function numberToWordsGe(num: number, ordinal = false): string {
   if (num === 0) {
-    return ordinal ? NUMBERS.special.smallOrdinals[0] : NUMBERS.zero;
+    return ordinal ? NUMBERS.special['smallOrdinals'][0] : NUMBERS.zero;
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();

@@ -46,8 +46,8 @@ export function hi(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.ALPHABETS.combiner = Combiners.prefixCombiner;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
+  loc.ALPHABETS['combiner'] = Combiners['prefixCombiner'];
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
 
   return loc;
 }

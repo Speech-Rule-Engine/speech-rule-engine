@@ -37,7 +37,7 @@ function hundredsToWords_(num: number): string {
   str += NUMBERS.ones[Math.floor(n / 100)]
     ? NUMBERS.ones[Math.floor(n / 100)] +
       NUMBERS.numSep +
-      NUMBERS.special.hundred
+      NUMBERS.special['hundred']
     : '';
   n = n % 100;
   if (n) {
@@ -93,7 +93,7 @@ function numberToWords(num: number): string {
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
   if (num <= 10) {
-    return NUMBERS.special.smallDenominators[num];
+    return NUMBERS.special['smallDenominators'][num];
   }
   return wordOrdinal(num) + ' अंश';
 }
@@ -111,8 +111,8 @@ function wordOrdinal(num: number): string {
   }
   if (num < 10) {
     return gender === 'f'
-      ? NUMBERS.special.ordinalsFeminine[num]
-      : NUMBERS.special.ordinalsMasculine[num];
+      ? NUMBERS.special['ordinalsFeminine'][num]
+      : NUMBERS.special['ordinalsMasculine'][num];
   }
   const ordinal = numberToWords(num);
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
@@ -129,15 +129,15 @@ function numericOrdinal(num: number): string {
 
   if (num > 0 && num < 10) {
     return gender === 'f'
-      ? NUMBERS.special.simpleSmallOrdinalsFeminine[num]
-      : NUMBERS.special.simpleSmallOrdinalsMasculine[num];
+      ? NUMBERS.special['simpleSmallOrdinalsFeminine'][num]
+      : NUMBERS.special['simpleSmallOrdinalsMasculine'][num];
   }
   const ordinal = num
     .toString()
     .split('')
     .map(function (x) {
       const num = parseInt(x, 10);
-      return isNaN(num) ? '' : NUMBERS.special.simpleNumbers[num];
+      return isNaN(num) ? '' : NUMBERS.special['simpleNumbers'][num];
     })
     .join('');
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');

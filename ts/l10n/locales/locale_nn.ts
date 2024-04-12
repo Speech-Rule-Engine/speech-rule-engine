@@ -46,9 +46,9 @@ export function nn(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
-  loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
+  loc.ALPHABETS['combiner'] = tr.Combiners['prefixCombiner'];
+  loc.ALPHABETS['digitTrans'].default = NUMBERS.numberToWords;
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
   loc.SUBISO = {
     default: '',
     current: '',

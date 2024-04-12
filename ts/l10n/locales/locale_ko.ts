@@ -45,16 +45,16 @@ export function ko(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
-  loc.FUNCTIONS.plural = function(unit: string) { return unit };
-  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
+  loc.FUNCTIONS['plural'] = function(unit: string) { return unit };
+  loc.FUNCTIONS['si'] = (prefix: string, unit: string) => {
     return prefix + unit;
   };
-  loc.FUNCTIONS.combineRootIndex = function(index: string, postfix: string) {
+  loc.FUNCTIONS['combineRootIndex'] = function(index: string, postfix: string) {
     return index + postfix;
   };
-  loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
-  loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+  loc.ALPHABETS['combiner'] = tr.Combiners['prefixCombiner'];
+  loc.ALPHABETS['digitTrans'].default = NUMBERS.numberToWords;
 
   /**
    * Find if there exists final consonant in the last syllable
@@ -62,7 +62,7 @@ function create(): Locale {
    * @param name The string that needs to be check.
    * @returns The string unchanged.
    */
-  loc.CORRECTIONS.postposition = (name: string) => {
+  loc.CORRECTIONS['postposition'] = (name: string) => {
     if (['같다', '는', '와', '를', '로'].includes(name)) return name;
     const char = name.slice(-1);
     const value = (char.charCodeAt(0) - 44032) % 28;
@@ -72,7 +72,7 @@ function create(): Locale {
     Grammar.getInstance().setParameter('final', final);
     return name;
   }
-  loc.CORRECTIONS.article = (name: string) => {
+  loc.CORRECTIONS['article'] = (name: string) => {
     const final = Grammar.getInstance().getParameter('final');
     if (final) Grammar.getInstance().setParameter('final', false);
     

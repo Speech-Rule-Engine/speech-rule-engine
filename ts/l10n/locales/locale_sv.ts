@@ -42,12 +42,12 @@ export function sv(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.FUNCTIONS.radicalNestDepth = nestingToString;
-  loc.FUNCTIONS.fontRegexp = function (font: string) {
+  loc.FUNCTIONS['radicalNestDepth'] = nestingToString;
+  loc.FUNCTIONS['fontRegexp'] = function (font: string) {
     return new RegExp('((^' + font + ' )|( ' + font + '$))');
   };
-  loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
-  loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
-  loc.CORRECTIONS.correctOne = (num: string) => num.replace(/^ett$/, 'en');
+  loc.ALPHABETS['combiner'] = tr.Combiners['prefixCombiner'];
+  loc.ALPHABETS['digitTrans'].default = NUMBERS.numberToWords;
+  loc.CORRECTIONS['correctOne'] = (num: string) => num.replace(/^ett$/, 'en');
   return loc;
 }

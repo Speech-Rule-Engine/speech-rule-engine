@@ -49,12 +49,12 @@ function hundredsToWords_(num: number, ordinal = false): string {
   n = n % 100;
   if (n) {
     str += str ? ' og ' : '';
-    ones = ordinal ? NUMBERS.special.smallOrdinals[n] : NUMBERS.ones[n];
+    ones = ordinal ? NUMBERS.special['smallOrdinals'][n] : NUMBERS.ones[n];
     if (ones) {
       str += ones;
     } else {
       const tens = ordinal
-        ? NUMBERS.special.tensOrdinals[Math.floor(n / 10)]
+        ? NUMBERS.special['tensOrdinals'][Math.floor(n / 10)]
         : NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
       str += ones ? onePrefix_(ones) + 'og' + tens : tens;
