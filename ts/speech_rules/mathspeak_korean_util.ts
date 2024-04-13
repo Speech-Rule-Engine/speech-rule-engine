@@ -24,7 +24,7 @@
 
 import { Span } from '../audio/span.js';
 import * as MathspeakUtil from './mathspeak_util.js';
-import {LOCALE} from '../l10n/locale.js';
+import { LOCALE } from '../l10n/locale.js';
 import * as XpathUtil from '../common/xpath_util.js';
 
 
@@ -43,7 +43,7 @@ export function nestedFraction( node: Element, expr: string, opt_end?: string): 
   if (opt_end) {
     annotation.unshift(opt_end);
   }
-  return annotation.join(LOCALE.MESSAGES.regexp.JOINER_FRAC);
+  return annotation.join(LOCALE.MESSAGES.regexp['JOINER_FRAC']);
 }
 
 /**
@@ -54,7 +54,7 @@ export function nestedFraction( node: Element, expr: string, opt_end?: string): 
  */
 export function openingFractionVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V)
+    nestedFraction(node, LOCALE.MESSAGES.MS['START'], LOCALE.MESSAGES.MS['FRAC_V'])
   );
 }
 
@@ -67,7 +67,7 @@ export function openingFractionVerbose(node: Element): Span[] {
  */
 export function closingFractionVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V)
+    nestedFraction(node, LOCALE.MESSAGES.MS['END'], LOCALE.MESSAGES.MS['FRAC_V'])
   );
 }
 
@@ -80,7 +80,7 @@ export function closingFractionVerbose(node: Element): Span[] {
  */
 export function openingFractionBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B)
+    nestedFraction(node, LOCALE.MESSAGES.MS['START'], LOCALE.MESSAGES.MS['FRAC_B'])
   );
 }
 
@@ -93,7 +93,7 @@ export function openingFractionBrief(node: Element): Span[] {
  */
 export function closingFractionBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B)
+    nestedFraction(node, LOCALE.MESSAGES.MS['END'], LOCALE.MESSAGES.MS['FRAC_B'])
   );
 }
 
@@ -108,13 +108,13 @@ export function openingFractionSbrief(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return Span.singleton(
-      LOCALE.MESSAGES.MS.FRAC_S
+      LOCALE.MESSAGES.MS['FRAC_S']
     );
   }
   return Span.singleton(
     LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.MESSAGES.MS.FRAC_S));
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS['NEST_FRAC'],
+      LOCALE.MESSAGES.MS['FRAC_S']));
 }
 
 
@@ -128,13 +128,13 @@ export function closingFractionSbrief(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return Span.singleton(
-      LOCALE.MESSAGES.MS.ENDFRAC
+      LOCALE.MESSAGES.MS['ENDFRAC']
     );
   }
   return Span.singleton(
     LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.MESSAGES.MS.ENDFRAC));
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS['NEST_FRAC'],
+      LOCALE.MESSAGES.MS['ENDFRAC']));
 }
 
 
@@ -148,13 +148,13 @@ export function overFractionSbrief(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return Span.singleton(
-      LOCALE.MESSAGES.MS.FRAC_OVER
+      LOCALE.MESSAGES.MS['FRAC_OVER']
     );
   }
   return Span.singleton(
     LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.MESSAGES.MS.FRAC_OVER));
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS['NEST_FRAC'],
+      LOCALE.MESSAGES.MS['FRAC_OVER']));
 }
 
 
@@ -197,7 +197,7 @@ export function nestedRadical(node: Element, prefix: string, postfix: string): s
  */
 export function openingRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT)
+    nestedRadical(node, LOCALE.MESSAGES.MS['NESTED'], LOCALE.MESSAGES.MS['STARTROOT'])
   );
 }
 
@@ -210,7 +210,7 @@ export function openingRadicalVerbose(node: Element): Span[] {
  */
 export function closingRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT)
+    nestedRadical(node, LOCALE.MESSAGES.MS['NESTED'], LOCALE.MESSAGES.MS['ENDROOT'])
   );
 }
 
@@ -223,7 +223,7 @@ export function closingRadicalVerbose(node: Element): Span[] {
  */
 export function openingRadicalBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT)
+    nestedRadical(node, LOCALE.MESSAGES.MS['NEST_ROOT'], LOCALE.MESSAGES.MS['STARTROOT'])
   );
 }
 
@@ -236,7 +236,7 @@ export function openingRadicalBrief(node: Element): Span[] {
  */
 export function closingRadicalBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT)
+    nestedRadical(node, LOCALE.MESSAGES.MS['NEST_ROOT'], LOCALE.MESSAGES.MS['ENDROOT'])
   );
 }
 
@@ -248,7 +248,7 @@ export function closingRadicalBrief(node: Element): Span[] {
  */
 export function openingRadicalSbrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT)
+    nestedRadical(node, LOCALE.MESSAGES.MS['NEST_ROOT'], LOCALE.MESSAGES.MS['ROOT'])
   );
 }
 
@@ -286,7 +286,7 @@ export function indexRadical(node: Element, postfix: string): string {
  */
 export function indexRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX)
+    indexRadical(node, LOCALE.MESSAGES.MS['ROOTINDEX'])
   );
 }
 
@@ -299,7 +299,7 @@ export function indexRadicalVerbose(node: Element): Span[] {
  */
 export function indexRadicalBrief(node: Element): Span[] {
   return Span.singleton(
-    indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX)
+    indexRadical(node, LOCALE.MESSAGES.MS['ROOTINDEX'])
   );
 }
 
@@ -312,7 +312,7 @@ export function indexRadicalBrief(node: Element): Span[] {
  */
 export function indexRadicalSbrief(node: Element): Span[] {
   return Span.singleton(
-    indexRadical(node, LOCALE.MESSAGES.MS.INDEX)
+    indexRadical(node, LOCALE.MESSAGES.MS['INDEX'])
   );
 }
 
