@@ -463,27 +463,11 @@ function numbersToAlpha(text: string): string {
     : text;
 }
 
-// TODO: Check if that is still necessary!
-/**
- * Method switches of translation of text elements if they match the regexp of
- * locale.
- *
- * @param text The text.
- * @returns The untranslated text.
- */
-function noTranslateText(text: string): string {
-  if (text.match(new RegExp('^[' + LOCALE.MESSAGES.regexp['TEXT'] + ']+$'))) {
-    Grammar.getInstance().currentFlags['translate'] = false;
-  }
-  return text;
-}
-
 Grammar.getInstance().setCorrection('localFont', LocaleUtil.localFont);
 Grammar.getInstance().setCorrection('localRole', LocaleUtil.localRole);
 Grammar.getInstance().setCorrection('localEnclose', LocaleUtil.localEnclose);
 
 Grammar.getInstance().setCorrection('ignoreFont', correctFont);
 Grammar.getInstance().setPreprocessor('annotation', addAnnotation);
-Grammar.getInstance().setPreprocessor('noTranslateText', noTranslateText);
 Grammar.getInstance().setCorrection('ignoreCaps', correctCaps);
 Grammar.getInstance().setPreprocessor('numbers2alpha', numbersToAlpha);

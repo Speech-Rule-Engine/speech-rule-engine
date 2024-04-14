@@ -121,11 +121,6 @@
     ],
     [
       "Action",
-      "text",
-      "[n] text() (grammar:noTranslateText)"
-    ],
-    [
-      "Action",
       "factorial",
       "[t] \"factorial\""
     ],
