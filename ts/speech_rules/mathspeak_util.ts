@@ -32,7 +32,8 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
-import { SemanticProcessor } from '../semantic_tree/semantic_processor.js';
+import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory.js';
+import { identifierNode } from '../semantic_tree/semantic_processor.js';
 
 // import * as NumbersUtil from './numbers_util.js';
 
@@ -69,13 +70,11 @@ function spaceoutNodes(
 ): Element[] {
   const content = Array.from(node.textContent);
   const result = [];
-  const processor = SemanticProcessor.getInstance();
   const doc = node.ownerDocument;
+  const factory = new SemanticNodeFactory();
   for (let i = 0, chr; (chr = content[i]); i++) {
-    const leaf = processor
-      .getNodeFactory()
-      .makeLeafNode(chr, SemanticFont.UNKNOWN);
-    const sn = SemanticProcessor.identifierNode(leaf, SemanticFont.UNKNOWN, '');
+    const leaf = factory.makeLeafNode(chr, SemanticFont.UNKNOWN);
+    const sn = identifierNode(leaf, SemanticFont.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }

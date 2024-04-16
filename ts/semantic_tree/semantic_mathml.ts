@@ -28,7 +28,8 @@ import { SemanticMap } from './semantic_attr.js';
 import { SemanticNode } from './semantic_node.js';
 import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
-import { SemanticProcessor } from './semantic_processor.js';
+import { SemanticOptions } from './semantic_options.js';
+import * as SemanticProcessor from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
@@ -126,7 +127,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @override
    */
   public parse(mml: Element) {
-    SemanticProcessor.getInstance().setNodeFactory(this.getFactory());
+    SemanticOptions.getInstance().factory = this.getFactory();
     const children = DomUtil.toArray(mml.childNodes);
     const tag = DomUtil.tagName(mml) as MMLTAGS;
     const func = this.parseMap_.get(tag);
