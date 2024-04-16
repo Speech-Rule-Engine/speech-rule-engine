@@ -75,7 +75,7 @@ function spaceoutNodes(
     const leaf = processor
       .getNodeFactory()
       .makeLeafNode(chr, SemanticFont.UNKNOWN);
-    const sn = processor.identifierNode(leaf, SemanticFont.UNKNOWN, '');
+    const sn = SemanticProcessor.identifierNode(leaf, SemanticFont.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }

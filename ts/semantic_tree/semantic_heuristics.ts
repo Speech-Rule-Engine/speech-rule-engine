@@ -314,28 +314,27 @@ function convertPrePost(
   const prev = comps[comps.length - 1];
   const prevExists = prev && prev.length;
   const nextExists = next && next.length;
-  const processor = SemanticProcessor.getInstance();
   if (prevExists && nextExists) {
     if (
       next[0].type === SemanticType.INFIXOP &&
       next[0].role === SemanticRole.IMPLICIT
     ) {
       rel = collect.pop();
-      prev.push(processor.postfixNode(prev.pop(), collect));
+      prev.push(SemanticProcessor.postfixNode(prev.pop(), collect));
       return rel;
     }
     rel = collect.shift();
-    const result = processor.prefixNode(next.shift(), collect);
+    const result = SemanticProcessor.prefixNode(next.shift(), collect);
     next.unshift(result);
-    // next.unshift(processor.prefixNode(next.shift(), collect));
+    // next.unshift(SemanticProcessor.prefixNode(next.shift(), collect));
     return rel;
   }
   if (prevExists) {
-    prev.push(processor.postfixNode(prev.pop(), collect));
+    prev.push(SemanticProcessor.postfixNode(prev.pop(), collect));
     return rel;
   }
   if (nextExists) {
-    next.unshift(processor.prefixNode(next.shift(), collect));
+    next.unshift(SemanticProcessor.prefixNode(next.shift(), collect));
   }
   return rel;
 }
@@ -518,7 +517,7 @@ function integralFractionArg(node: SemanticNode): void {
     return;
   }
   if (SemanticPred.isIntegralDxBoundary(first, second)) {
-    const prefix = SemanticProcessor.getInstance().prefixNode(second, [
+    const prefix = SemanticProcessor.prefixNode(second, [
       first
     ]);
     prefix.role = SemanticRole.INTEGRAL;
@@ -635,7 +634,7 @@ function rewriteSubcasesTable(table: SemanticNode) {
     table.childNodes[0].childNodes.pop();
   }
   SemanticProcessor.tableToMultiline(table);
-  const newNode = SemanticProcessor.getInstance().row(row);
+  const newNode = SemanticProcessor.row(row);
   const annotation = table.annotation['Emph'];
   table.annotation['Emph'] = ['table'];
   annotation.forEach((x) => newNode.addAnnotation('Emph', x));
