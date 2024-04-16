@@ -34,6 +34,9 @@ import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
+
+  public options: SemanticOptions = new SemanticOptions();
+
   private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
 
   /**
@@ -121,13 +124,13 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     ].forEach(
       ((x: string) => this.getFactory().defaultMap.set(x, meaning)).bind(this)
     );
+    this.options.factory = this.getFactory();
   }
 
   /**
    * @override
    */
   public parse(mml: Element) {
-    SemanticOptions.getInstance().factory = this.getFactory();
     const children = DomUtil.toArray(mml.childNodes);
     const tag = DomUtil.tagName(mml) as MMLTAGS;
     const func = this.parseMap_.get(tag);

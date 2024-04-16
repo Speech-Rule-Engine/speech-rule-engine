@@ -32,11 +32,10 @@ import {
 } from './semantic_meaning.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import { SemanticNode } from './semantic_node.js';
+import { SemanticOptions } from './semantic_options.js';
 import * as SemanticPred from './semantic_pred.js';
 import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
-
-import { SemanticOptions } from './semantic_options.js';
 
 interface BoundsType {
   type: SemanticType;
@@ -404,7 +403,8 @@ function fenceToPunct(fence: SemanticNode) {
  */
 function classifyFunction(
   funcNode: SemanticNode,
-  restNodes: SemanticNode[]
+  restNodes: SemanticNode[],
+  options: SemanticOptions
 ): string {
   //  We do not allow double function application. This is not lambda
   //  calculus!
@@ -423,7 +423,7 @@ function classifyFunction(
       restNodes[0].textContent === NamedSymbol.functionApplication
   ) {
     // Store explicit function application to be reused later.
-    SemanticOptions.getInstance().funcAppls[funcNode.id] =
+    options.funcAppls[funcNode.id] =
       restNodes.shift();
     let role = SemanticRole.SIMPLEFUNC;
     SemanticHeuristics.run('simple2prefix', funcNode);
@@ -1155,19 +1155,20 @@ export function text(leaf: SemanticNode, type: string): SemanticNode {
  * @param nodes The list of nodes.
  * @returns The root node of the syntax tree.
  */
-export function row(nodes: SemanticNode[]): SemanticNode {
+export function row(nodes: SemanticNode[],
+  options: SemanticOptions): SemanticNode {
   nodes = nodes.filter(function (x) {
     return !SemanticPred.isType(x, SemanticType.EMPTY);
   });
   if (nodes.length === 0) {
-    return SemanticOptions.getInstance().factory.makeEmptyNode();
+    return options.factory.makeEmptyNode();
   }
   nodes = getFencesInRow(nodes);
   nodes = tablesInRow(nodes);
   nodes = getPunctuationInRow(nodes);
   nodes = getTextInRow(nodes);
   nodes = getFunctionsInRow(nodes);
-  return relationsInRow(nodes);
+  return relationsInRow(nodes, options);
 }
 
 /**
@@ -1180,9 +1181,10 @@ export function row(nodes: SemanticNode[]): SemanticNode {
  *     original node.
  * @returns The newly created limit node.
  */
-export function limitNode(mmlTag: string, children: SemanticNode[]): SemanticNode {
+export function limitNode(mmlTag: string, children: SemanticNode[],
+  options: SemanticOptions): SemanticNode {
   if (!children.length) {
-    return SemanticOptions.getInstance().factory.makeEmptyNode();
+    return options.factory.makeEmptyNode();
   }
   let center = children[0];
   let type = SemanticType.UNKNOWN;
@@ -1325,14 +1327,15 @@ export function mfenced(
   open: string | null,
   close: string | null,
   sepValue: string | null,
-  children: SemanticNode[]
+  children: SemanticNode[],
+  options: SemanticOptions
 ): SemanticNode {
   if (sepValue && children.length > 0) {
     const separators = nextSeparatorFunction(sepValue);
     const newChildren = [children.shift()];
     children.forEach((child) => {
       newChildren.push(
-        SemanticOptions.getInstance().factory.makeContentNode(separators())
+        options.factory.makeContentNode(separators())
       );
       newChildren.push(child);
     });
@@ -1346,22 +1349,22 @@ export function mfenced(
   // content will be interpreted into a single node.
   if (open && close) {
     return horizontalFencedNode(
-      SemanticOptions.getInstance().factory.makeContentNode(open),
-      SemanticOptions.getInstance().factory.makeContentNode(close),
+      options.factory.makeContentNode(open),
+      options.factory.makeContentNode(close),
       children
     );
   }
   if (open) {
     children.unshift(
-      SemanticOptions.getInstance().factory.makeContentNode(open)
+      options.factory.makeContentNode(open)
     );
   }
   if (close) {
     children.push(
-      SemanticOptions.getInstance().factory.makeContentNode(close)
+      options.factory.makeContentNode(close)
     );
   }
-  return row(children);
+  return row(children, options);
 }
 
 /**
@@ -1377,23 +1380,24 @@ export function fractionLikeNode(
   denom: SemanticNode,
   enume: SemanticNode,
   linethickness: string,
-  bevelled: boolean
+  bevelled: boolean,
+  options: SemanticOptions
 ): SemanticNode {
-  // return sre.SemanticOptions.getInstance().factory.makeBranchNode(
+  // return sre.options.factory.makeBranchNode(
   //     SemanticType.MULTILINE, [child0, child1], []);
   let node;
   if (!bevelled && SemanticUtil.isZeroLength(linethickness)) {
-    const child0 = SemanticOptions.getInstance().factory.makeBranchNode(
+    const child0 = options.factory.makeBranchNode(
       SemanticType.LINE,
       [denom],
       []
     );
-    const child1 = SemanticOptions.getInstance().factory.makeBranchNode(
+    const child1 = options.factory.makeBranchNode(
       SemanticType.LINE,
       [enume],
       []
     );
-    node = SemanticOptions.getInstance().factory.makeBranchNode(
+    node = options.factory.makeBranchNode(
       SemanticType.MULTILINE,
       [child0, child1],
       []
@@ -1425,9 +1429,10 @@ export function tensor(
   lsub: SemanticNode[],
   lsup: SemanticNode[],
   rsub: SemanticNode[],
-  rsup: SemanticNode[]
+  rsup: SemanticNode[],
+  options: SemanticOptions
 ): SemanticNode {
-  const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const newNode = options.factory.makeBranchNode(
     SemanticType.TENSOR,
     [
       base,
@@ -1493,7 +1498,7 @@ export function pseudoTensor(
       )
     );
   }
-  return limitNode(mmlTag, mmlchild);
+  return limitNode(mmlTag, mmlchild, options);
 }
 
 /**
@@ -1519,7 +1524,8 @@ export function font(font: string): SemanticFont {
 export function proof(
   node: Element,
   semantics: string,
-  parse: (p1: Element[]) => SemanticNode[]
+  parse: (p1: Element[]) => SemanticNode[],
+  options: SemanticOptions
 ): SemanticNode {
   const attrs = separateSemantics(semantics);
   if (!attrs['inference'] && !attrs['axiom']) {
@@ -1533,12 +1539,12 @@ export function proof(
       node.childNodes
     );
     const axiom = cleaned.length
-      ? SemanticOptions.getInstance().factory.makeBranchNode(
+      ? options.factory.makeBranchNode(
         SemanticType.INFERENCE,
         parse(cleaned),
         []
       )
-      : SemanticOptions.getInstance().factory.makeEmptyNode();
+      : options.factory.makeEmptyNode();
     axiom.role = SemanticRole.AXIOM;
     axiom.mathmlTree = node;
     return axiom;
@@ -1547,7 +1553,7 @@ export function proof(
     node,
     attrs,
     parse
-  );
+    , options);
   if (attrs['proof']) {
     inf.role = SemanticRole.PROOF;
     inf.childNodes[0].role = SemanticRole.FINAL;
@@ -1567,15 +1573,16 @@ export function proof(
 function inference(
   node: Element,
   semantics: { [key: string]: string },
-  parse: (p1: Element[]) => SemanticNode[]
+  parse: (p1: Element[]) => SemanticNode[],
+  options: SemanticOptions
 ): SemanticNode {
   if (semantics['inferenceRule']) {
     const formulas = getFormulas(
       node,
       [],
       parse
-    );
-    const inference = SemanticOptions.getInstance().factory.makeBranchNode(
+      , options);
+    const inference = options.factory.makeBranchNode(
       SemanticType.INFERENCE,
       [formulas.conclusion, formulas.premises],
       []
@@ -1593,7 +1600,7 @@ function inference(
         children,
         parse,
         SemanticRole.LEFT
-      )
+        , options)
     );
   }
   if (label === 'right' || label === 'both') {
@@ -1603,15 +1610,15 @@ function inference(
         children,
         parse,
         SemanticRole.RIGHT
-      )
+        , options)
     );
   }
   const formulas = getFormulas(
     node,
     children,
     parse
-  );
-  const inference = SemanticOptions.getInstance().factory.makeBranchNode(
+    , options);
+  const inference = options.factory.makeBranchNode(
     SemanticType.INFERENCE,
     [formulas.conclusion, formulas.premises],
     content
@@ -1635,14 +1642,15 @@ function getLabel(
   _node: Element,
   children: Element[],
   parse: (p1: Element[]) => SemanticNode[],
-  side: string
+  side: string,
+  options: SemanticOptions
 ): SemanticNode {
   const label = findNestedRow(
     children,
     'prooflabel',
     side
   );
-  const sem = SemanticOptions.getInstance().factory.makeBranchNode(
+  const sem = options.factory.makeBranchNode(
     SemanticType.RULELABEL,
     parse(DomUtil.toArray(label.childNodes)),
     []
@@ -1665,7 +1673,8 @@ function getLabel(
 function getFormulas(
   node: Element,
   children: Element[],
-  parse: (p1: Element[]) => SemanticNode[]
+  parse: (p1: Element[]) => SemanticNode[],
+  options: SemanticOptions
 ): { conclusion: SemanticNode; premises: SemanticNode } {
   const inf = children.length
     ? findNestedRow(children, 'inferenceRule')
@@ -1687,13 +1696,13 @@ function getFormulas(
   const conclusion = parse(
     DomUtil.toArray(concRow.childNodes[0].childNodes)
   )[0];
-  const prem = SemanticOptions.getInstance().factory.makeBranchNode(
+  const prem = options.factory.makeBranchNode(
     SemanticType.PREMISES,
     premises,
     []
   );
   prem.mathmlTree = premTable as Element;
-  const conc = SemanticOptions.getInstance().factory.makeBranchNode(
+  const conc = options.factory.makeBranchNode(
     SemanticType.CONCLUSION,
     [conclusion],
     []
@@ -1736,12 +1745,12 @@ export function operatorNode(node: SemanticNode): SemanticNode {
  * @returns The new branch node.
  */
 function implicitNode(nodes: SemanticNode[]): SemanticNode {
-  nodes = getMixedNumbers(nodes);
+  nodes = getMixedNumbers(nodes, options);
   nodes = combineUnits(nodes);
   if (nodes.length === 1) {
     return nodes[0];
   }
-  const node = implicitNodeRecursive(nodes);
+  const node = implicitNodeRecursive(nodes, options);
   return SemanticHeuristics.run(
     'combine_juxtaposition',
     node
@@ -1755,9 +1764,10 @@ function implicitNode(nodes: SemanticNode[]): SemanticNode {
  * @param nodes The operands.
  * @returns The new branch node.
  */
-function implicitNodeRecursive(nodes: SemanticNode[]): SemanticNode {
+function implicitNodeRecursive(nodes: SemanticNode[],
+  options: SemanticOptions): SemanticNode {
   const operators =
-    SemanticOptions.getInstance().factory.makeMultipleContentNodes(
+    options.factory.makeMultipleContentNodes(
       nodes.length - 1,
       NamedSymbol.invisibleTimes
     );
@@ -1766,7 +1776,7 @@ function implicitNodeRecursive(nodes: SemanticNode[]): SemanticNode {
   const newNode = infixNode(
     nodes,
     operators[0] as SemanticNode
-  );
+    , options);
   newNode.role = SemanticRole.IMPLICIT;
   operators.forEach(function (op) {
     op.parent = newNode;
@@ -1784,9 +1794,10 @@ function implicitNodeRecursive(nodes: SemanticNode[]): SemanticNode {
  */
 function infixNode(
   children: SemanticNode[],
-  opNode: SemanticNode
+  opNode: SemanticNode,
+  options: SemanticOptions
 ): SemanticNode {
-  const node = SemanticOptions.getInstance().factory.makeBranchNode(
+  const node = options.factory.makeBranchNode(
     SemanticType.INFIXOP,
     children,
     [opNode],
@@ -1805,7 +1816,8 @@ function infixNode(
  * @param nodes The list of nodes.
  * @returns The new list of nodes.
  */
-function explicitMixed(nodes: SemanticNode[]): SemanticNode[] {
+function explicitMixed(nodes: SemanticNode[],
+  options: SemanticOptions): SemanticNode[] {
   const partition = SemanticUtil.partitionNodes(nodes, function (x) {
     return x.textContent === NamedSymbol.invisiblePlus;
   });
@@ -1824,7 +1836,7 @@ function explicitMixed(nodes: SemanticNode[]): SemanticNode[] {
         !SemanticPred.isRole(prev[last], SemanticRole.MIXED) &&
         SemanticPred.isType(next[0], SemanticType.FRACTION)
     ) {
-      const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+      const newNode = options.factory.makeBranchNode(
         SemanticType.NUMBER,
         [prev[last], next[0]],
         []
@@ -1854,7 +1866,8 @@ function explicitMixed(nodes: SemanticNode[]): SemanticNode[] {
 function concatNode(
   inner: SemanticNode,
   nodeList: SemanticNode[],
-  type: SemanticType
+  type: SemanticType,
+  options: SemanticOptions
 ): SemanticNode {
   if (nodeList.length === 0) {
     return inner;
@@ -1864,7 +1877,7 @@ function concatNode(
       return SemanticUtil.getEmbellishedInner(x).textContent;
     })
     .join(' ');
-  const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const newNode = options.factory.makeBranchNode(
     type,
     [inner],
     nodeList,
@@ -1897,7 +1910,7 @@ export function prefixNode(
       newNode,
       op,
       SemanticType.PREFIXOP
-    );
+      , options);
     if (op.length === 1 && splitOps.indexOf(op[0].textContent) !== -1) {
       newNode.role = splitRoles.get(op[0].role);
     }
@@ -1967,7 +1980,7 @@ export function postfixNode(
     node,
     postfixes,
     SemanticType.POSTFIXOP
-  );
+    , options);
 }
 
 /**
@@ -2003,7 +2016,7 @@ function combineUnits(nodes: SemanticNode[]): SemanticNode[] {
     }
     if (comp.length > 1) {
       // For now we assume this is a multiplication using invisible times.
-      unitNode = implicitNodeRecursive(comp);
+      unitNode = implicitNodeRecursive(comp, options);
       unitNode.role = SemanticRole.UNIT;
     }
     if (unitNode) {
@@ -2024,7 +2037,8 @@ function combineUnits(nodes: SemanticNode[]): SemanticNode[] {
  * @returns The new list of nodes.
  */
 // Change that to compute mixed fractions.
-function getMixedNumbers(nodes: SemanticNode[]): SemanticNode[] {
+function getMixedNumbers(nodes: SemanticNode[],
+  options: SemanticOptions): SemanticNode[] {
   const partition = SemanticUtil.partitionNodes(nodes, function (x) {
     return (
       SemanticPred.isType(x, SemanticType.FRACTION) &&
@@ -2044,7 +2058,7 @@ function getMixedNumbers(nodes: SemanticNode[]): SemanticNode[] {
         (SemanticPred.isRole(comp[last], SemanticRole.INTEGER) ||
           SemanticPred.isRole(comp[last], SemanticRole.FLOAT))
     ) {
-      const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+      const newNode = options.factory.makeBranchNode(
         SemanticType.NUMBER,
         [comp[last], rel],
         []
@@ -2103,7 +2117,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     if (text.length) {
       // Combine multiple text elements into one.
       if (prevComp.length) {
-        result.push(row(prevComp));
+        result.push(row(prevComp, options));
       }
       text.push(currentRel);
       let dummy = dummyNode(text);
@@ -2115,7 +2129,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     }
     if (currentRel.role !== SemanticRole.UNKNOWN) {
       if (prevComp.length) {
-        result.push(row(prevComp));
+        result.push(row(prevComp, options));
       }
       result.push(currentRel);
       prevComp = nextComp;
@@ -2127,7 +2141,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
       currentRel.role = meaning.role;
       currentRel.font = meaning.font;
       if (prevComp.length) {
-        result.push(row(prevComp));
+        result.push(row(prevComp, options));
       }
       result.push(currentRel);
       prevComp = nextComp;
@@ -2165,7 +2179,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     if (currentRel.type === SemanticType.TEXT &&
       currentRel.role !== SemanticRole.UNKNOWN) {
       if (prevComp.length) {
-        result.push(row(prevComp));
+        result.push(row(prevComp, options));
       }
       result.push(currentRel);
       prevComp = nextComp;
@@ -2188,7 +2202,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     prevComp = prevComp.concat(nextComp);
   }
   if (prevComp.length > 0) {
-    result.push(row(prevComp));
+    result.push(row(prevComp, options));
   }
   return result.length > 1 ?
     [dummyNode(result)] :
@@ -2202,7 +2216,8 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
  * @param nodes The list of nodes.
  * @returns The root node of the syntax tree.
  */
-function relationsInRow(nodes: SemanticNode[]): SemanticNode {
+function relationsInRow(nodes: SemanticNode[],
+  options: SemanticOptions): SemanticNode {
   const partition = SemanticUtil.partitionNodes(
     nodes,
     SemanticPred.isRelation
@@ -2210,21 +2225,20 @@ function relationsInRow(nodes: SemanticNode[]): SemanticNode {
   const firstRel = partition.rel[0];
 
   if (!firstRel) {
-    return operationsInRow(nodes);
+    return operationsInRow(nodes, options);
   }
   if (nodes.length === 1) {
     return nodes[0];
   }
   const children: SemanticNode[] = partition.comp.map(
-    operationsInRow
-  );
+    x => operationsInRow(x, options));
   let node: SemanticNode;
   if (
     partition.rel.some(function (x) {
       return !x.equals(firstRel);
     })
   ) {
-    node = SemanticOptions.getInstance().factory.makeBranchNode(
+    node = options.factory.makeBranchNode(
       SemanticType.MULTIREL,
       children,
       partition.rel
@@ -2238,7 +2252,7 @@ function relationsInRow(nodes: SemanticNode[]): SemanticNode {
     }
     return node;
   }
-  node = SemanticOptions.getInstance().factory.makeBranchNode(
+  node = options.factory.makeBranchNode(
     SemanticType.RELSEQ,
     children,
     partition.rel,
@@ -2254,12 +2268,13 @@ function relationsInRow(nodes: SemanticNode[]): SemanticNode {
  * @param nodes The list of nodes.
  * @returns The root node of the syntax tree.
  */
-function operationsInRow(nodes: SemanticNode[]): SemanticNode {
+function operationsInRow(nodes: SemanticNode[],
+  options: SemanticOptions): SemanticNode {
   if (nodes.length === 0) {
-    return SemanticOptions.getInstance().factory.makeEmptyNode();
+    return options.factory.makeEmptyNode();
   }
   // Get explicitly given mixed numbers
-  nodes = explicitMixed(nodes);
+  nodes = explicitMixed(nodes, options);
 
   if (nodes.length === 1) {
     return nodes[0];
@@ -2416,7 +2431,7 @@ function appendOperand(
   // In general our operator tree will have the form that additions and
   // subtractions are stacked, while multiplications are subordinate.
   if (root.type !== SemanticType.INFIXOP) {
-    return infixNode([root, node], op);
+    return infixNode([root, node], op, options);
   }
   const division = appendDivisionOp(
     root,
@@ -2451,12 +2466,12 @@ function appendDivisionOp(
 ): SemanticNode {
   if (op.role === SemanticRole.DIVISION) {
     if (SemanticPred.isImplicit(root)) {
-      return infixNode([root, node], op);
+      return infixNode([root, node], op, options);
     }
     return appendLastOperand(root, op, node);
   }
   return root.role === SemanticRole.DIVISION
-    ? infixNode([root, node], op)
+    ? infixNode([root, node], op, options)
     : null;
 }
 
@@ -2484,7 +2499,7 @@ function appendLastOperand(
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
   const newNode = infixNode(
-    [lastRoot.childNodes.pop(), node],
+    [lastRoot.childNodes.pop(, options), node],
     op
   );
   lastRoot.appendChild(newNode);
@@ -2507,7 +2522,7 @@ function appendMultiplicativeOp(
   // This ensures that implicit nodes stay together, which is probably what
   // we want.
   if (SemanticPred.isImplicit(root)) {
-    return infixNode([root, node], op);
+    return infixNode([root, node], op, options);
   }
   let lastRoot = root;
   let lastChild = root.childNodes[root.childNodes.length - 1];
@@ -2520,7 +2535,7 @@ function appendMultiplicativeOp(
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
   const newNode = infixNode(
-    [lastRoot.childNodes.pop(), node],
+    [lastRoot.childNodes.pop(, options), node],
     op
   );
   lastRoot.appendChild(newNode);
@@ -2540,7 +2555,7 @@ function appendAdditiveOp(
   op: SemanticNode,
   node: SemanticNode
 ): SemanticNode {
-  return infixNode([root, node], op);
+  return infixNode([root, node], op, options);
 }
 
 /**
@@ -2946,12 +2961,12 @@ function horizontalFencedNode(
   cfence: SemanticNode,
   content: SemanticNode[]
 ): SemanticNode {
-  const childNode = row(content);
-  let newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const childNode = row(content, options);
+  let newNode = options.factory.makeBranchNode(
     SemanticType.FENCED,
     [childNode],
     [ofence, cfence]
-  );
+    , options);
   if (ofence.role === SemanticRole.OPEN) {
     // newNode.role = SemanticRole.LEFTRIGHT;
     classifyHorizontalFence(newNode);
@@ -3091,7 +3106,7 @@ function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
   let newNodes = [];
   let firstComp = partition.comp.shift();
   if (firstComp.length > 0) {
-    newNodes.push(row(firstComp));
+    newNodes.push(row(firstComp, options));
   }
   let relCounter = 0;
   while (partition.comp.length > 0) {
@@ -3106,7 +3121,7 @@ function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
     relCounter = saveCount + puncts.length;
     newNodes = newNodes.concat(puncts);
     if (firstComp && firstComp.length > 0) {
-      newNodes.push(row(firstComp));
+      newNodes.push(row(firstComp, options));
     }
   }
   return [
@@ -3128,7 +3143,7 @@ function punctuatedNode(
   nodes: SemanticNode[],
   punctuations: SemanticNode[]
 ): SemanticNode {
-  const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const newNode = options.factory.makeBranchNode(
     SemanticType.PUNCTUATED,
     nodes,
     punctuations
@@ -3177,7 +3192,7 @@ function punctuatedNode(
  */
 function dummyNode(children: SemanticNode[]): SemanticNode {
   const commata =
-    SemanticOptions.getInstance().factory.makeMultipleContentNodes(
+    options.factory.makeMultipleContentNodes(
       children.length - 1,
       NamedSymbol.invisibleComma
     );
@@ -3238,7 +3253,7 @@ function accentNode(
   let innerNode: SemanticNode;
   if (!accent && child2) {
     // For indexed we only have to nest if we have two children.
-    innerNode = SemanticOptions.getInstance().factory.makeBranchNode(
+    innerNode = options.factory.makeBranchNode(
       SemanticType.SUBSCRIPT,
       [center, child1],
       []
@@ -3259,7 +3274,7 @@ function accentNode(
         SemanticType.OVERSCORE
       );
       if (overAccent && !underAccent) {
-        innerNode = SemanticOptions.getInstance().factory.makeBranchNode(
+        innerNode = options.factory.makeBranchNode(
           SemanticType.OVERSCORE,
           [center, child2],
           []
@@ -3267,7 +3282,7 @@ function accentNode(
         children = [innerNode, child1];
         type = SemanticType.UNDERSCORE;
       } else {
-        innerNode = SemanticOptions.getInstance().factory.makeBranchNode(
+        innerNode = options.factory.makeBranchNode(
           SemanticType.UNDERSCORE,
           [center, child1],
           []
@@ -3323,7 +3338,7 @@ function makeLimitNode(
     center.type = SemanticType.LIMBOTH;
     return center;
   }
-  const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const newNode = options.factory.makeBranchNode(
     type,
     children,
     []
@@ -3574,17 +3589,17 @@ function getIntegralArgs(
  * @returns The new function node.
  */
 function functionNode(func: SemanticNode, arg: SemanticNode): SemanticNode {
-  const applNode = SemanticOptions.getInstance().factory.makeContentNode(
+  const applNode = options.factory.makeContentNode(
     NamedSymbol.functionApplication
   );
-  const appl = SemanticOptions.getInstance().funcAppls[func.id];
+  const appl = options.funcAppls[func.id];
   if (appl) {
     // TODO: Work out why we cannot just take appl.
     applNode.mathmlTree = appl.mathmlTree;
     applNode.mathml = appl.mathml;
     applNode.annotation = appl.annotation;
     applNode.attributes = appl.attributes;
-    delete SemanticOptions.getInstance().funcAppls[func.id];
+    delete options.funcAppls[func.id];
   }
   applNode.type = SemanticType.PUNCTUATION;
   applNode.role = SemanticRole.APPLICATION;
@@ -3637,8 +3652,8 @@ function integralNode(
   intvar: SemanticNode
 ): SemanticNode {
   integrand =
-    integrand || SemanticOptions.getInstance().factory.makeEmptyNode();
-  intvar = intvar || SemanticOptions.getInstance().factory.makeEmptyNode();
+    integrand || options.factory.makeEmptyNode();
+  intvar = intvar || options.factory.makeEmptyNode();
   const largeop = getFunctionOp(integral, (x) =>
     SemanticPred.isType(x, SemanticType.LARGEOP)
                                );
@@ -3681,7 +3696,7 @@ function functionalNode(
     oldParent = operator.parent;
     content.push(operator);
   }
-  const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const newNode = options.factory.makeBranchNode(
     type,
     children,
     content
@@ -3704,7 +3719,7 @@ function fractionNode(
   denom: SemanticNode,
   enume: SemanticNode
 ): SemanticNode {
-  const newNode = SemanticOptions.getInstance().factory.makeBranchNode(
+  const newNode = options.factory.makeBranchNode(
     SemanticType.FRACTION,
     [denom, enume],
     []
@@ -3744,7 +3759,7 @@ function scriptNode(
   let newNode: SemanticNode;
   switch (nodes.length) {
     case 0:
-      newNode = SemanticOptions.getInstance().factory.makeEmptyNode();
+      newNode = options.factory.makeEmptyNode();
       break;
     case 1:
       newNode = nodes[0];
