@@ -225,6 +225,10 @@ export class Engine {
    */
   public prune = '';
 
+  // TODO(cc): This is temporary until we have a full options object passed
+  //           around.
+  public counter = 0;
+
   /**
    * @returns The Engine object.
    */

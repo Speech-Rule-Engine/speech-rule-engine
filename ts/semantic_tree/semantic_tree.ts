@@ -25,6 +25,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Engine } from '../common/engine.js';
 
 import { annotate } from './semantic_annotations.js';
 import { SemanticVisitor } from './semantic_annotator.js';
@@ -142,6 +143,9 @@ export class SemanticTree {
     unitVisitor.visit(this.root, {});
 
     annotate(this.root);
+    // TODO(cc): This is temporary until we have a full options object passed
+    //           around.
+    Engine.getInstance().counter = this.parser.getFactory().idCounter;
   }
 
   /**

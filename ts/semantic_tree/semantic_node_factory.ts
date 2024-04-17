@@ -42,6 +42,14 @@ export class SemanticNodeFactory {
    */
   private idCounter_ = -1;
 
+  public get idCounter() {
+    return this.idCounter_;
+  }
+
+  public set idCounter(num: number) {
+    this.idCounter_ = num;
+  }
+
   /**
    * Creates a new node object with a given id.
    *

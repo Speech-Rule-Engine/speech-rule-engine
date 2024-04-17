@@ -21,6 +21,7 @@
 import { Span } from '../audio/span.js';
 import * as BaseUtil from '../common/base_util.js';
 import * as DomUtil from '../common/dom_util.js';
+import { Engine } from '../common/engine.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { LOCALE } from '../l10n/locale.js';
 
@@ -72,12 +73,18 @@ function spaceoutNodes(
   const result = [];
   const doc = node.ownerDocument;
   const options = new SemanticOptions();
+  // TODO(cc): This is temporary until we have a full options object passed
+  //           around.
+  options.factory.idCounter = Engine.getInstance().counter++;
   for (let i = 0, chr; (chr = content[i]); i++) {
     const leaf = options.factory.makeLeafNode(chr, SemanticFont.UNKNOWN);
     const sn = identifierNode(options, leaf, SemanticFont.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }
+  // TODO(cc): This is temporary until we have a full options object passed
+  //           around.
+  Engine.getInstance().counter = options.factory.idCounter;
   return result as Element[];
 }
 
