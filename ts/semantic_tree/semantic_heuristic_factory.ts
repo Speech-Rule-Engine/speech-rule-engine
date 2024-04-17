@@ -24,6 +24,7 @@ import {
   SemanticHeuristicTypes
 } from './semantic_heuristic.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
+import { SemanticOptions } from './semantic_options.js';
 
 export const SemanticHeuristics = {
 
@@ -80,16 +81,17 @@ export const SemanticHeuristics = {
    */
   run: function(
     name: string,
+    options: SemanticOptions,
     root: SemanticHeuristicTypes,
-    opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
+    opt_alternative?: (op: SemanticOptions, p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
   ): SemanticHeuristicTypes | void {
     const heuristic = SemanticHeuristics.heuristics.get(name);
     return heuristic &&
       !SemanticHeuristics.blacklist[name] &&
       (SemanticHeuristics.flags[name] || heuristic.applicable(root))
-      ? heuristic.apply(root)
+      ? heuristic.apply(options, root)
       : opt_alternative
-      ? opt_alternative(root)
+      ? opt_alternative(options, root)
       : root;
   }
 

@@ -20,6 +20,7 @@
  */
 
 import { SemanticNode } from './semantic_node.js';
+import { SemanticOptions } from './semantic_options.js';
 
 export declare type SemanticHeuristicTypes = SemanticNode | SemanticNode[];
 
@@ -33,7 +34,7 @@ export declare type SemanticHeuristicTypes = SemanticNode | SemanticNode[];
 export interface SemanticHeuristic<T> {
   name: string;
 
-  apply: (node: T) => void;
+  apply: (options: SemanticOptions, node: T) => void;
 
   applicable: (node: T) => boolean;
 }
@@ -41,7 +42,7 @@ export interface SemanticHeuristic<T> {
 abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes>
   implements SemanticHeuristic<T>
 {
-  public apply: (node: T) => void;
+  public apply: (options: SemanticOptions, node: T) => void;
 
   public applicable: (_node: T) => boolean;
 
@@ -54,7 +55,7 @@ abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes>
    */
   constructor(
     public name: string,
-    method: (node: T) => void,
+    method: (options: SemanticOptions, node: T) => void,
     predicate: (node: T) => boolean = (_x: T) => false
   ) {
     this.apply = method;

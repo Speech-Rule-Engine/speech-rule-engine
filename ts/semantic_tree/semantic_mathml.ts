@@ -179,7 +179,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     // Special cases:
     const semantics = node.getAttribute('semantics');
     if (semantics && semantics.match('bspr_')) {
-      return SemanticProcessor.proof(
+      return SemanticProcessor.proof(this.options,
         node,
         semantics,
         this.parseList.bind(this)
@@ -197,7 +197,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       }
     } else {
       // Case of a 'meaningful' row, even if they are empty.
-      newNode = SemanticProcessor.row(this.parseList(children));
+      newNode = SemanticProcessor.row(this.options, this.parseList(children));
     }
     newNode.mathml.unshift(node);
     return newNode;
@@ -218,7 +218,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const lower = children[1]
       ? this.parse(children[1])
       : this.getFactory().makeEmptyNode();
-    const sem = SemanticProcessor.fractionLikeNode(
+    const sem = SemanticProcessor.fractionLikeNode(this.options,
       upper,
       lower,
       node.getAttribute('linethickness'),
@@ -235,7 +235,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private limits_(node: Element, children: Element[]): SemanticNode {
-    return SemanticProcessor.limitNode(
+    return SemanticProcessor.limitNode(this.options,
       DomUtil.tagName(node),
       this.parseList(children)
     );
@@ -270,7 +270,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
     return this.getFactory().makeBranchNode(
       SemanticType.SQRT,
-      [SemanticProcessor.row(semNodes)],
+      [SemanticProcessor.row(this.options, semNodes)],
       []
     );
   }
@@ -286,6 +286,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const semantics = node.getAttribute('semantics');
     if (semantics && semantics.match('bspr_')) {
       return SemanticProcessor.proof(
+        this.options,
         node,
         semantics,
         this.parseList.bind(this)
@@ -297,7 +298,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       []
     );
     newNode.mathmlTree = node;
-    return SemanticProcessor.tableToMultiline(newNode);
+    return SemanticProcessor.tableToMultiline(this.options, newNode);
   }
 
   /**
@@ -360,7 +361,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       // semantic information into if necessary.
       childNodes = semNodes;
     } else {
-      childNodes = [SemanticProcessor.row(semNodes)];
+      childNodes = [SemanticProcessor.row(this.options, semNodes)];
     }
     const newNode = this.getFactory().makeBranchNode(
       SemanticType.CELL,
@@ -401,7 +402,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       return this.empty_(node, children);
     }
     const newNode = this.getFactory().makeUnprocessed(node);
-    return SemanticProcessor.text(newNode, DomUtil.tagName(node));
+    return SemanticProcessor.text(this.options, newNode, DomUtil.tagName(node));
   }
 
   /**
@@ -417,7 +418,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       return newNode;
     }
     newNode.updateContent(node.textContent, true);
-    return SemanticProcessor.text(newNode, DomUtil.tagName(node));
+    return SemanticProcessor.text(this.options, newNode, DomUtil.tagName(node));
   }
 
   /**
@@ -430,6 +431,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   private identifier_(node: Element, children: Element[]): SemanticNode {
     const newNode = this.leaf_(node, children);
     return SemanticProcessor.identifierNode(
+      this.options,
       newNode,
       SemanticProcessor.font(node.getAttribute('mathvariant')),
       node.getAttribute('class')
@@ -458,7 +460,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   private operator_(node: Element, children: Element[]): SemanticNode {
     const newNode = this.leaf_(node, children);
-    SemanticProcessor.operatorNode(newNode);
+    SemanticProcessor.operatorNode(this.options, newNode);
     return newNode;
   }
 
@@ -474,7 +476,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const sepValue = SemanticMathml.getAttribute_(node, 'separators', ',');
     const open = SemanticMathml.getAttribute_(node, 'open', '(');
     const close = SemanticMathml.getAttribute_(node, 'close', ')');
-    const newNode = SemanticProcessor.mfenced(
+    const newNode = SemanticProcessor.mfenced(this.options,
       open,
       close,
       sepValue,
@@ -495,7 +497,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
     const newNode = this.getFactory().makeBranchNode(
       SemanticType.ENCLOSE,
-      [SemanticProcessor.row(semNodes)],
+      [SemanticProcessor.row(this.options, semNodes)],
       []
     );
     newNode.role =
@@ -547,14 +549,14 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       !SemanticUtil.purgeNodes(lsup).length &&
       !SemanticUtil.purgeNodes(lsub).length
     ) {
-      return SemanticProcessor.pseudoTensor(
+      return SemanticProcessor.pseudoTensor(this.options,
         base,
         this.parseList(rsub),
         this.parseList(rsup)
       );
     }
     // We really deal with a multiscript tensor.
-    return SemanticProcessor.tensor(
+    return SemanticProcessor.tensor(this.options,
       base,
       this.parseList(lsub),
       this.parseList(lsup),

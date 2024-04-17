@@ -101,10 +101,11 @@ const MATHJAX_FONTS: { [key: string]: SemanticFont } = {
  *
  * @param table The node to be rewritten a multiline.
  */
-export function tableToMultiline(table: SemanticNode): SemanticNode {
+export function tableToMultiline(options: SemanticOptions, table: SemanticNode): SemanticNode {
   if (!SemanticPred.tableIsMultiline(table)) {
     return SemanticHeuristics.run(
       'rewrite_subcases',
+      options,
       table,
       classifyTable
     ) as SemanticNode;
@@ -166,7 +167,7 @@ function classifyMultiline(multiline: SemanticNode) {
   const firstRole = line.childNodes[0].role;
   if (
     firstRole !== SemanticRole.UNKNOWN &&
-      multiline.childNodes.every(function (x) {
+      multiline.childNodes.every(x => {
         const cell = x.childNodes[0];
         return (
           !cell ||
@@ -185,7 +186,7 @@ function classifyMultiline(multiline: SemanticNode) {
  *
  * @param table The table node.
  */
-function classifyTable(table: SemanticNode) {
+function classifyTable(_options: SemanticOptions, table: SemanticNode) {
   const columns = computeColumns(table);
   classifyByColumns(
     table,
@@ -310,7 +311,7 @@ function removePrefix(name: string): string {
  */
 function separateSemantics(attr: string): { [key: string]: string } {
   const result: { [key: string]: string } = {};
-  attr.split(';').forEach(function (x) {
+  attr.split(';').forEach(x => {
     const [name, value] = x.split(':');
     result[removePrefix(name)] = value;
   });
@@ -402,9 +403,9 @@ function fenceToPunct(fence: SemanticNode) {
  * @returns The string specifying the heuristic.
  */
 function classifyFunction(
+  options: SemanticOptions, 
   funcNode: SemanticNode,
-  restNodes: SemanticNode[],
-  options: SemanticOptions
+  restNodes: SemanticNode[]
 ): string {
   //  We do not allow double function application. This is not lambda
   //  calculus!
@@ -426,14 +427,14 @@ function classifyFunction(
     options.funcAppls[funcNode.id] =
       restNodes.shift();
     let role = SemanticRole.SIMPLEFUNC;
-    SemanticHeuristics.run('simple2prefix', funcNode);
+    SemanticHeuristics.run('simple2prefix', options, funcNode);
     if (
       funcNode.role === SemanticRole.PREFIXFUNC ||
         funcNode.role === SemanticRole.LIMFUNC
     ) {
       role = funcNode.role;
     }
-    propagateFunctionRole(funcNode, role);
+    propagateFunctionRole(options,funcNode, role);
     return 'prefix';
   }
   const kind = CLASSIFY_FUNCTION_[funcNode.role];
@@ -451,7 +452,7 @@ function classifyFunction(
  *     rewritten.
  * @param tag The function role to be inserted.
  */
-function propagateFunctionRole(
+function propagateFunctionRole(options: SemanticOptions, 
   funcNode: SemanticNode,
   tag: SemanticRole
 ) {
@@ -467,7 +468,7 @@ function propagateFunctionRole(
     ) {
       funcNode.role = tag;
     }
-    propagateFunctionRole(funcNode.childNodes[0], tag);
+    propagateFunctionRole(options,funcNode.childNodes[0], tag);
   }
 }
 
@@ -662,9 +663,7 @@ function rowToLine(row: SemanticNode, opt_role?: SemanticRole) {
         SemanticPred.isType(row.childNodes[0], SemanticType.CELL)
     ) {
       row.childNodes = row.childNodes[0].childNodes;
-      row.childNodes.forEach(function (x) {
-        x.parent = row;
-      });
+      row.childNodes.forEach(x => x.parent = row);
     }
   }
 }
@@ -682,7 +681,7 @@ function assignRoleToRow(row: SemanticNode, role: SemanticRole) {
   }
   if (SemanticPred.isType(row, SemanticType.ROW)) {
     row.role = role;
-    row.childNodes.forEach(function (cell) {
+    row.childNodes.forEach(cell => {
       if (SemanticPred.isType(cell, SemanticType.CELL)) {
         cell.role = role;
       }
@@ -714,16 +713,14 @@ function nextSeparatorFunction(
       sepList = separators
         .replace(/\s/g, '')
         .split('')
-        .filter(function (x) {
-          return x;
-        });
+        .filter(x => x);
     }
   } else {
     // When no separator is given MathML uses comma as default.
     sepList = [','];
   }
 
-  return function () {
+  return () => {
     if (sepList.length > 1) {
       return sepList.shift();
     }
@@ -753,7 +750,7 @@ function numberRole(
     return;
   }
   if (
-    meaning.every(function (x) {
+    meaning.every(x => {
       return (
         (x.type === SemanticType.NUMBER && x.role === SemanticRole.INTEGER) ||
           (x.type === SemanticType.PUNCTUATION && x.role === SemanticRole.COMMA)
@@ -767,7 +764,7 @@ function numberRole(
     return;
   }
   if (
-    meaning.every(function (x) {
+    meaning.every(x => {
       return (
         (x.type === SemanticType.NUMBER && x.role === SemanticRole.INTEGER) ||
           x.type === SemanticType.PUNCTUATION
@@ -803,7 +800,7 @@ function exprFont(node: SemanticNode) {
 export function compSemantics(node: SemanticNode, field: string, sem: any) {
   const content = [...node.textContent];
   const meaning = content.map(x => SemanticMap.Meaning.get(x));
-  const single = meaning.reduce(function (prev, curr: any) {
+  const single = meaning.reduce((prev, curr: any) => {
     if (
       !prev ||
         !curr[field] ||
@@ -865,12 +862,12 @@ function purgeFences(partition: {
  * @param fenced The fenced node.
  * @returns The rewritten node.
  */
-function rewriteFencedNode(fenced: SemanticNode): SemanticNode {
+function rewriteFencedNode(options: SemanticOptions, fenced: SemanticNode): SemanticNode {
   const ofence = fenced.contentNodes[0] as SemanticNode;
   const cfence = fenced.contentNodes[1] as SemanticNode;
-  let rewritten = rewriteFence(fenced, ofence);
+  let rewritten = rewriteFence(options,fenced, ofence);
   fenced.contentNodes[0] = rewritten.fence;
-  rewritten = rewriteFence(rewritten.node, cfence);
+  rewritten = rewriteFence(options,rewritten.node, cfence);
   fenced.contentNodes[1] = rewritten.fence;
   fenced.contentNodes[0].parent = fenced;
   fenced.contentNodes[1].parent = fenced;
@@ -888,7 +885,7 @@ function rewriteFencedNode(fenced: SemanticNode): SemanticNode {
  * @returns The rewritten node and fence.
  */
 // TODO (sorge) Maybe remove the superfluous MathML element.
-function rewriteFence(
+function rewriteFence(options: SemanticOptions, 
   node: SemanticNode,
   fence: SemanticNode
 ): { node: SemanticNode; fence: SemanticNode } {
@@ -896,7 +893,7 @@ function rewriteFence(
     return { node: node, fence: fence };
   }
   const newFence = fence.childNodes[0] as SemanticNode;
-  const rewritten = rewriteFence(node, newFence);
+  const rewritten = rewriteFence(options,node, newFence);
   if (
     SemanticPred.isType(fence, SemanticType.SUPERSCRIPT) ||
       SemanticPred.isType(fence, SemanticType.SUBSCRIPT) ||
@@ -1058,12 +1055,12 @@ function testColumns(
 ): boolean {
   const column = columns[index];
   return column
-    ? column.some(function (cell) {
+    ? column.some((cell) => {
       return (
         cell.childNodes.length && pred(cell.childNodes[0] as SemanticNode)
       );
     }) &&
-    column.every(function (cell) {
+    column.every((cell) => {
       return (
         !cell.childNodes.length ||
           pred(cell.childNodes[0] as SemanticNode)
@@ -1084,6 +1081,7 @@ function testColumns(
  * @returns The semantic identifier node.
  */
 export function identifierNode(
+  options: SemanticOptions,
   leaf: SemanticNode,
   font: SemanticFont,
   unit: string
@@ -1104,6 +1102,7 @@ export function identifierNode(
     leaf.font = SemanticFont.ITALIC;
     return SemanticHeuristics.run(
       'simpleNamedFunction',
+      options,
       leaf
     ) as SemanticNode;
   }
@@ -1111,7 +1110,7 @@ export function identifierNode(
     leaf.type = SemanticType.IDENTIFIER;
   }
   exprFont(leaf);
-  return SemanticHeuristics.run('simpleNamedFunction', leaf) as SemanticNode;
+  return SemanticHeuristics.run('simpleNamedFunction', options, leaf) as SemanticNode;
 }
 
 /**
@@ -1121,7 +1120,7 @@ export function identifierNode(
  * @param type The type of the text node.
  * @returns The new semantic text node.
  */
-export function text(leaf: SemanticNode, type: string): SemanticNode {
+export function text(_options: SemanticOptions, leaf: SemanticNode, type: string): SemanticNode {
   exprFont(leaf);
   leaf.type = SemanticType.TEXT;
   if (type === MMLTAGS.ANNOTATIONXML) {
@@ -1155,20 +1154,19 @@ export function text(leaf: SemanticNode, type: string): SemanticNode {
  * @param nodes The list of nodes.
  * @returns The root node of the syntax tree.
  */
-export function row(nodes: SemanticNode[],
-  options: SemanticOptions): SemanticNode {
-  nodes = nodes.filter(function (x) {
+export function row(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode {
+  nodes = nodes.filter((x) => {
     return !SemanticPred.isType(x, SemanticType.EMPTY);
   });
   if (nodes.length === 0) {
     return options.factory.makeEmptyNode();
   }
-  nodes = getFencesInRow(nodes);
+  nodes = getFencesInRow(options, nodes);
   nodes = tablesInRow(nodes);
-  nodes = getPunctuationInRow(nodes);
-  nodes = getTextInRow(nodes);
-  nodes = getFunctionsInRow(nodes);
-  return relationsInRow(nodes, options);
+  nodes = getPunctuationInRow(options, nodes);
+  nodes = getTextInRow(options, nodes);
+  nodes = getFunctionsInRow(options, nodes);
+  return relationsInRow(options, nodes);
 }
 
 /**
@@ -1181,8 +1179,7 @@ export function row(nodes: SemanticNode[],
  *     original node.
  * @returns The newly created limit node.
  */
-export function limitNode(mmlTag: string, children: SemanticNode[],
-  options: SemanticOptions): SemanticNode {
+export function limitNode(options: SemanticOptions, mmlTag: string, children: SemanticNode[]): SemanticNode {
   if (!children.length) {
     return options.factory.makeEmptyNode();
   }
@@ -1207,6 +1204,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
     ) {
       result = MML_TO_BOUNDS_[mmlTag];
       return accentNode(
+        options,
         center,
         children,
         result.type,
@@ -1217,6 +1215,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
     if (length === 2) {
       if (SemanticPred.isAccent(children[1])) {
         center = accentNode(
+        options,
           center,
           [center, children[1]],
           {
@@ -1229,6 +1228,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
         return !children[2]
           ? center
           : makeLimitNode(
+        options,
             center,
             [center, children[2]],
             null,
@@ -1237,6 +1237,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
       }
       if (children[2] && SemanticPred.isAccent(children[2])) {
         center = accentNode(
+        options,
           center,
           [center, children[2]],
           {
@@ -1247,6 +1248,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
           true
         );
         return makeLimitNode(
+        options,
           center,
           [center, children[1]],
           null,
@@ -1259,6 +1261,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
       }
     }
     return makeLimitNode(
+        options,
       center,
       children,
       null,
@@ -1268,6 +1271,7 @@ export function limitNode(mmlTag: string, children: SemanticNode[],
   // We either have an indexed, stacked or accented expression.
   result = MML_TO_BOUNDS_[mmlTag];
   return accentNode(
+        options,
     center,
     children,
     result.type,
@@ -1324,11 +1328,11 @@ export function tablesInRow(nodes: SemanticNode[]): SemanticNode[] {
  * @returns The semantic node.
  */
 export function mfenced(
+  options: SemanticOptions, 
   open: string | null,
   close: string | null,
   sepValue: string | null,
-  children: SemanticNode[],
-  options: SemanticOptions
+  children: SemanticNode[]
 ): SemanticNode {
   if (sepValue && children.length > 0) {
     const separators = nextSeparatorFunction(sepValue);
@@ -1349,6 +1353,7 @@ export function mfenced(
   // content will be interpreted into a single node.
   if (open && close) {
     return horizontalFencedNode(
+      options,
       options.factory.makeContentNode(open),
       options.factory.makeContentNode(close),
       children
@@ -1364,7 +1369,7 @@ export function mfenced(
       options.factory.makeContentNode(close)
     );
   }
-  return row(children, options);
+  return row(options, children);
 }
 
 /**
@@ -1377,11 +1382,11 @@ export function mfenced(
  * @returns The new fraction node.
  */
 export function fractionLikeNode(
+  options: SemanticOptions, 
   denom: SemanticNode,
   enume: SemanticNode,
   linethickness: string,
-  bevelled: boolean,
-  options: SemanticOptions
+  bevelled: boolean
 ): SemanticNode {
   // return sre.options.factory.makeBranchNode(
   //     SemanticType.MULTILINE, [child0, child1], []);
@@ -1406,7 +1411,7 @@ export function fractionLikeNode(
     classifyMultiline(node);
     return node;
   } else {
-    node = fractionNode(denom, enume);
+    node = fractionNode(options, denom, enume);
     if (bevelled) {
       node.addAnnotation('general', 'bevelled');
     }
@@ -1424,28 +1429,27 @@ export function fractionLikeNode(
  * @param rsup The right superscripts.
  * @returns The semantic tensor node.
  */
-export function tensor(
+export function tensor(options: SemanticOptions, 
   base: SemanticNode,
   lsub: SemanticNode[],
   lsup: SemanticNode[],
   rsub: SemanticNode[],
-  rsup: SemanticNode[],
-  options: SemanticOptions
+  rsup: SemanticNode[]
 ): SemanticNode {
   const newNode = options.factory.makeBranchNode(
     SemanticType.TENSOR,
     [
       base,
-      scriptNode(lsub, SemanticRole.LEFTSUB),
-      scriptNode(
+      scriptNode(options, lsub, SemanticRole.LEFTSUB),
+      scriptNode(options, 
         lsup,
         SemanticRole.LEFTSUPER
       ),
-      scriptNode(
+      scriptNode(options, 
         rsub,
         SemanticRole.RIGHTSUB
       ),
-      scriptNode(
+      scriptNode(options, 
         rsup,
         SemanticRole.RIGHTSUPER
       )
@@ -1466,7 +1470,7 @@ export function tensor(
  * @param sup The superscripts.
  * @returns The semantic tensor node.
  */
-export function pseudoTensor(
+export function pseudoTensor(options: SemanticOptions, 
   base: SemanticNode,
   sub: SemanticNode[],
   sup: SemanticNode[]
@@ -1483,6 +1487,7 @@ export function pseudoTensor(
   if (nonEmptySub) {
     mmlchild.push(
       scriptNode(
+    options,
         sub,
         SemanticRole.RIGHTSUB,
         true
@@ -1492,13 +1497,14 @@ export function pseudoTensor(
   if (nonEmptySup) {
     mmlchild.push(
       scriptNode(
+    options,
         sup,
         SemanticRole.RIGHTSUPER,
         true
       )
     );
   }
-  return limitNode(mmlTag, mmlchild, options);
+  return limitNode(options, mmlTag, mmlchild);
 }
 
 /**
@@ -1522,10 +1528,10 @@ export function font(font: string): SemanticFont {
  * @returns The semantic node for the proof.
  */
 export function proof(
+  options: SemanticOptions,
   node: Element,
   semantics: string,
-  parse: (p1: Element[]) => SemanticNode[],
-  options: SemanticOptions
+  parse: (p1: Element[]) => SemanticNode[]
 ): SemanticNode {
   const attrs = separateSemantics(semantics);
   if (!attrs['inference'] && !attrs['axiom']) {
@@ -1550,10 +1556,11 @@ export function proof(
     return axiom;
   }
   const inf = inference(
+    options,
     node,
     attrs,
     parse
-    , options);
+    );
   if (attrs['proof']) {
     inf.role = SemanticRole.PROOF;
     inf.childNodes[0].role = SemanticRole.FINAL;
@@ -1570,18 +1577,18 @@ export function proof(
  *     current semantic parser for list of nodes.
  * @returns The semantic node for the inference.
  */
-function inference(
+function inference(options: SemanticOptions, 
   node: Element,
   semantics: { [key: string]: string },
-  parse: (p1: Element[]) => SemanticNode[],
-  options: SemanticOptions
+  parse: (p1: Element[]) => SemanticNode[]
 ): SemanticNode {
   if (semantics['inferenceRule']) {
     const formulas = getFormulas(
+      options,
       node,
       [],
       parse
-      , options);
+    );
     const inference = options.factory.makeBranchNode(
       SemanticType.INFERENCE,
       [formulas.conclusion, formulas.premises],
@@ -1596,28 +1603,31 @@ function inference(
   if (label === 'left' || label === 'both') {
     content.push(
       getLabel(
+    options,
         node,
         children,
         parse,
         SemanticRole.LEFT
-        , options)
+        )
     );
   }
   if (label === 'right' || label === 'both') {
     content.push(
       getLabel(
+    options,
         node,
         children,
         parse,
         SemanticRole.RIGHT
-        , options)
+        )
     );
   }
   const formulas = getFormulas(
+    options,
     node,
     children,
     parse
-    , options);
+    );
   const inference = options.factory.makeBranchNode(
     SemanticType.INFERENCE,
     [formulas.conclusion, formulas.premises],
@@ -1638,12 +1648,11 @@ function inference(
  * @param side The side the label is on.
  * @returns The semantic node for the label.
  */
-function getLabel(
+function getLabel(options: SemanticOptions, 
   _node: Element,
   children: Element[],
   parse: (p1: Element[]) => SemanticNode[],
-  side: string,
-  options: SemanticOptions
+  side: string
 ): SemanticNode {
   const label = findNestedRow(
     children,
@@ -1670,11 +1679,10 @@ function getLabel(
  * @returns A pair
  *       of conclusion and premises.
  */
-function getFormulas(
+function getFormulas(options: SemanticOptions, 
   node: Element,
   children: Element[],
-  parse: (p1: Element[]) => SemanticNode[],
-  options: SemanticOptions
+  parse: (p1: Element[]) => SemanticNode[]
 ): { conclusion: SemanticNode; premises: SemanticNode } {
   const inf = children.length
     ? findNestedRow(children, 'inferenceRule')
@@ -1718,7 +1726,7 @@ function getFormulas(
  * @returns The list with all space elements removed.
  */
 function cleanInference(nodes: NodeList): Element[] {
-  return DomUtil.toArray(nodes).filter(function (x) {
+  return DomUtil.toArray(nodes).filter((x) => {
     return DomUtil.tagName(x) !== 'MSPACE';
   });
 }
@@ -1729,11 +1737,11 @@ function cleanInference(nodes: NodeList): Element[] {
  * @param node The node to retype.
  * @returns The node resulting from applying the heuristic.
  */
-export function operatorNode(node: SemanticNode): SemanticNode {
+export function operatorNode(options: SemanticOptions, node: SemanticNode): SemanticNode {
   if (node.type === SemanticType.UNKNOWN) {
     node.type = SemanticType.OPERATOR;
   }
-  return SemanticHeuristics.run('multioperator', node) as SemanticNode;
+  return SemanticHeuristics.run('multioperator', options, node) as SemanticNode;
 }
 
 /**
@@ -1744,15 +1752,16 @@ export function operatorNode(node: SemanticNode): SemanticNode {
  * @param nodes The operands.
  * @returns The new branch node.
  */
-function implicitNode(nodes: SemanticNode[]): SemanticNode {
-  nodes = getMixedNumbers(nodes, options);
-  nodes = combineUnits(nodes);
+function implicitNode(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode {
+  nodes = getMixedNumbers(options, nodes);
+  nodes = combineUnits(options, nodes);
   if (nodes.length === 1) {
     return nodes[0];
   }
-  const node = implicitNodeRecursive(nodes, options);
+  const node = implicitNodeRecursive(options, nodes);
   return SemanticHeuristics.run(
     'combine_juxtaposition',
+    options,
     node
   ) as SemanticNode;
 }
@@ -1764,8 +1773,7 @@ function implicitNode(nodes: SemanticNode[]): SemanticNode {
  * @param nodes The operands.
  * @returns The new branch node.
  */
-function implicitNodeRecursive(nodes: SemanticNode[],
-  options: SemanticOptions): SemanticNode {
+function implicitNodeRecursive(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode {
   const operators =
     options.factory.makeMultipleContentNodes(
       nodes.length - 1,
@@ -1774,11 +1782,12 @@ function implicitNodeRecursive(nodes: SemanticNode[],
   matchSpaces(nodes, operators);
   // For now we assume this is a multiplication using invisible times.
   const newNode = infixNode(
+    options,
     nodes,
     operators[0] as SemanticNode
-    , options);
+    );
   newNode.role = SemanticRole.IMPLICIT;
-  operators.forEach(function (op) {
+  operators.forEach((op) => {
     op.parent = newNode;
   });
   newNode.contentNodes = operators;
@@ -1792,10 +1801,9 @@ function implicitNodeRecursive(nodes: SemanticNode[],
  * @param opNode The operator.
  * @returns The new branch node.
  */
-function infixNode(
+function infixNode(options: SemanticOptions, 
   children: SemanticNode[],
-  opNode: SemanticNode,
-  options: SemanticOptions
+  opNode: SemanticNode
 ): SemanticNode {
   const node = options.factory.makeBranchNode(
     SemanticType.INFIXOP,
@@ -1806,6 +1814,7 @@ function infixNode(
   node.role = opNode.role;
   return SemanticHeuristics.run(
     'propagateSimpleFunction',
+    options,
     node
   ) as SemanticNode;
 }
@@ -1816,9 +1825,10 @@ function infixNode(
  * @param nodes The list of nodes.
  * @returns The new list of nodes.
  */
-function explicitMixed(nodes: SemanticNode[],
-  options: SemanticOptions): SemanticNode[] {
-  const partition = SemanticUtil.partitionNodes(nodes, function (x) {
+function explicitMixed(
+  options: SemanticOptions, nodes: SemanticNode[]
+): SemanticNode[] {
+  const partition = SemanticUtil.partitionNodes(nodes, (x) => {
     return x.textContent === NamedSymbol.invisiblePlus;
   });
   if (!partition.rel.length) {
@@ -1864,16 +1874,16 @@ function explicitMixed(nodes: SemanticNode[],
  * @returns The new branch node.
  */
 function concatNode(
+  options: SemanticOptions, 
   inner: SemanticNode,
   nodeList: SemanticNode[],
-  type: SemanticType,
-  options: SemanticOptions
+  type: SemanticType
 ): SemanticNode {
   if (nodeList.length === 0) {
     return inner;
   }
   const content = nodeList
-    .map(function (x) {
+    .map((x) => {
       return SemanticUtil.getEmbellishedInner(x).textContent;
     })
     .join(' ');
@@ -1899,6 +1909,7 @@ function concatNode(
  * @returns The new branch node.
  */
 export function prefixNode(
+  options: SemanticOptions, 
   node: SemanticNode,
   prefixes: SemanticNode[]
 ): SemanticNode {
@@ -1907,10 +1918,11 @@ export function prefixNode(
   while (newPrefixes.length > 0) {
     const op = newPrefixes.pop();
     newNode = concatNode(
+      options,
       newNode,
       op,
       SemanticType.PREFIXOP
-      , options);
+      );
     if (op.length === 1 && splitOps.indexOf(op[0].textContent) !== -1) {
       newNode.role = splitRoles.get(op[0].role);
     }
@@ -1970,6 +1982,7 @@ function splitSingles(prefixes: SemanticNode[]): SemanticNode[][] {
  * @returns The new branch node.
  */
 export function postfixNode(
+  options: SemanticOptions, 
   node: SemanticNode,
   postfixes: SemanticNode[]
 ): SemanticNode {
@@ -1977,10 +1990,11 @@ export function postfixNode(
     return node;
   }
   return concatNode(
+    options,
     node,
     postfixes,
     SemanticType.POSTFIXOP
-    , options);
+  );
 }
 
 /**
@@ -1989,8 +2003,8 @@ export function postfixNode(
  * @param nodes The list of nodes.
  * @returns The new list of nodes.
  */
-function combineUnits(nodes: SemanticNode[]): SemanticNode[] {
-  const partition = SemanticUtil.partitionNodes(nodes, function (x) {
+function combineUnits(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode[] {
+  const partition = SemanticUtil.partitionNodes(nodes, (x) => {
     return !SemanticPred.isRole(x, SemanticRole.UNIT);
   });
   if (nodes.length === partition.rel.length) {
@@ -2016,7 +2030,7 @@ function combineUnits(nodes: SemanticNode[]): SemanticNode[] {
     }
     if (comp.length > 1) {
       // For now we assume this is a multiplication using invisible times.
-      unitNode = implicitNodeRecursive(comp, options);
+      unitNode = implicitNodeRecursive(options, comp);
       unitNode.role = SemanticRole.UNIT;
     }
     if (unitNode) {
@@ -2037,9 +2051,8 @@ function combineUnits(nodes: SemanticNode[]): SemanticNode[] {
  * @returns The new list of nodes.
  */
 // Change that to compute mixed fractions.
-function getMixedNumbers(nodes: SemanticNode[],
-  options: SemanticOptions): SemanticNode[] {
-  const partition = SemanticUtil.partitionNodes(nodes, function (x) {
+function getMixedNumbers(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode[] {
+  const partition = SemanticUtil.partitionNodes(nodes, (x) => {
     return (
       SemanticPred.isType(x, SemanticType.FRACTION) &&
         SemanticPred.isRole(x, SemanticRole.VULGAR)
@@ -2081,7 +2094,7 @@ function getMixedNumbers(nodes: SemanticNode[],
  * @param nodes The list of nodes.
  * @returns The new list of nodes.
  */
-function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
+function getTextInRow(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode[] {
   if (nodes.length === 0) {
     return nodes;
   }
@@ -2117,10 +2130,10 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     if (text.length) {
       // Combine multiple text elements into one.
       if (prevComp.length) {
-        result.push(row(prevComp, options));
+        result.push(row(options, prevComp));
       }
       text.push(currentRel);
-      let dummy = dummyNode(text);
+      let dummy = dummyNode(options, text);
       // TODO: See if it already has a majority vote role.
       // dummy.role = SemanticRole.ANNOTATION;
       result.push(dummy);
@@ -2129,7 +2142,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     }
     if (currentRel.role !== SemanticRole.UNKNOWN) {
       if (prevComp.length) {
-        result.push(row(prevComp, options));
+        result.push(row(options, prevComp));
       }
       result.push(currentRel);
       prevComp = nextComp;
@@ -2141,7 +2154,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
       currentRel.role = meaning.role;
       currentRel.font = meaning.font;
       if (prevComp.length) {
-        result.push(row(prevComp, options));
+        result.push(row(options, prevComp));
       }
       result.push(currentRel);
       prevComp = nextComp;
@@ -2179,7 +2192,7 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     if (currentRel.type === SemanticType.TEXT &&
       currentRel.role !== SemanticRole.UNKNOWN) {
       if (prevComp.length) {
-        result.push(row(prevComp, options));
+        result.push(row(options, prevComp));
       }
       result.push(currentRel);
       prevComp = nextComp;
@@ -2202,10 +2215,10 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
     prevComp = prevComp.concat(nextComp);
   }
   if (prevComp.length > 0) {
-    result.push(row(prevComp, options));
+    result.push(row(options, prevComp));
   }
   return result.length > 1 ?
-    [dummyNode(result)] :
+    [dummyNode(options, result)] :
     result;
 }
 
@@ -2216,8 +2229,8 @@ function getTextInRow(nodes: SemanticNode[]): SemanticNode[] {
  * @param nodes The list of nodes.
  * @returns The root node of the syntax tree.
  */
-function relationsInRow(nodes: SemanticNode[],
-  options: SemanticOptions): SemanticNode {
+function relationsInRow(options: SemanticOptions, nodes: SemanticNode[]
+                       ): SemanticNode {
   const partition = SemanticUtil.partitionNodes(
     nodes,
     SemanticPred.isRelation
@@ -2225,16 +2238,16 @@ function relationsInRow(nodes: SemanticNode[],
   const firstRel = partition.rel[0];
 
   if (!firstRel) {
-    return operationsInRow(nodes, options);
+    return operationsInRow(options, nodes);
   }
   if (nodes.length === 1) {
     return nodes[0];
   }
   const children: SemanticNode[] = partition.comp.map(
-    x => operationsInRow(x, options));
+    x => operationsInRow(options, x));
   let node: SemanticNode;
   if (
-    partition.rel.some(function (x) {
+    partition.rel.some((x) => {
       return !x.equals(firstRel);
     })
   ) {
@@ -2244,7 +2257,7 @@ function relationsInRow(nodes: SemanticNode[],
       partition.rel
     );
     if (
-      partition.rel.every(function (x) {
+      partition.rel.every((x) => {
         return x.role === firstRel.role;
       })
     ) {
@@ -2268,13 +2281,12 @@ function relationsInRow(nodes: SemanticNode[],
  * @param nodes The list of nodes.
  * @returns The root node of the syntax tree.
  */
-function operationsInRow(nodes: SemanticNode[],
-  options: SemanticOptions): SemanticNode {
+function operationsInRow(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode {
   if (nodes.length === 0) {
     return options.factory.makeEmptyNode();
   }
   // Get explicitly given mixed numbers
-  nodes = explicitMixed(nodes, options);
+  nodes = explicitMixed(options, nodes);
 
   if (nodes.length === 1) {
     return nodes[0];
@@ -2288,38 +2300,41 @@ function operationsInRow(nodes: SemanticNode[],
   }
   // Pathological case: only operators in row.
   if (nodes.length === 0) {
-    return prefixNode(prefix.pop(), prefix);
+    return prefixNode(options, prefix.pop(), prefix);
   }
   if (nodes.length === 1) {
-    return prefixNode(nodes[0], prefix);
+    return prefixNode(options, nodes[0], prefix);
   }
 
   // Deal with explicit juxtaposition
   nodes = SemanticHeuristics.run(
     'convert_juxtaposition',
+    options,
     nodes
   ) as SemanticNode[];
   
   const split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
   // At this point, we know that split.head is not empty!
-  const node = wrapFactor(prefix, split);
-  return addFactor(node, split);
+  const node = wrapFactor(options, prefix, split);
+  return addFactor(options, node, split);
 }
 
-function wrapPostfix(split: SemanticUtil.Slice) {
+function wrapPostfix(options: SemanticOptions, split: SemanticUtil.Slice) {
   // Dealing with explicit postfix operators.
   //
   // TODO: Currently this wraps into separate operators. We could collect them first.
   if (split.div?.role === SemanticRole.POSTFIXOP) {
     if (!split.tail.length || split.tail[0].type === SemanticType.OPERATOR) {
       split.head = [postfixNode(
+        options,
         implicitNode(
+          options,
           split.head as SemanticNode[]
         ),
         [split.div]
       )];
       split.div = split.tail.shift();
-      wrapPostfix(split);
+      wrapPostfix(options, split);
     } else {
       split.div.role = SemanticRole.DIVISION;
     }
@@ -2333,15 +2348,16 @@ function wrapPostfix(split: SemanticUtil.Slice) {
  * @param prefix A list of prefix nodes.
  * @param split The split structure containing head, operator, and tail.
  */
-function wrapFactor(prefix: SemanticNode[], split: SemanticUtil.Slice) {
-  wrapPostfix(split);
+function wrapFactor(options: SemanticOptions, prefix: SemanticNode[], split: SemanticUtil.Slice) {
+  wrapPostfix(options, split);
   return prefixNode(
-    implicitNode(split.head),
+    options,
+    implicitNode(options, split.head),
     prefix
   );
 }
 
-function addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
+function addFactor(options: SemanticOptions, node: SemanticNode, split: SemanticUtil.Slice) {
   if (!split.div) {
     // Propagate unit over multiplications.
     if (SemanticPred.isUnitProduct(node)) {
@@ -2350,6 +2366,7 @@ function addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
     return node;
   }
   return operationsTree(
+    options,
     split.tail,
     node,
     split.div
@@ -2370,6 +2387,7 @@ function addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
  * @returns The root node of the syntax tree.
  */
 function operationsTree(
+  options: SemanticOptions, 
   nodes: SemanticNode[],
   root: SemanticNode,
   lastop: SemanticNode,
@@ -2381,6 +2399,7 @@ function operationsTree(
     if (root.type === SemanticType.INFIXOP) {
       // We assume prefixes bind stronger than postfixes.
       const node = postfixNode(
+        options,
         // Here we know that the childNodes are not empty!
         root.childNodes.pop(),
         prefix
@@ -2388,7 +2407,7 @@ function operationsTree(
       root.appendChild(node);
       return root;
     }
-    return postfixNode(root, prefix);
+    return postfixNode(options, root, prefix);
   }
 
   const split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
@@ -2396,6 +2415,7 @@ function operationsTree(
   if (split.head.length === 0) {
     prefix.push(split.div);
     return operationsTree(
+      options,
       split.tail,
       root,
       lastop,
@@ -2404,13 +2424,14 @@ function operationsTree(
   }
 
   // Dealing with explicit postfix operators.
-  const node = wrapFactor(prefix, split);
+  const node = wrapFactor(options, prefix, split);
   const newNode = appendOperand(
+    options,
     root,
     lastop,
     node
   );
-  return addFactor(newNode, split);
+  return addFactor(options, newNode, split);
 }
 
 // TODO (sorge) The following four functions could be combined into
@@ -2423,7 +2444,7 @@ function operationsTree(
  * @param node The node to be added.
  * @returns The modified root node.
  */
-function appendOperand(
+function appendOperand(options: SemanticOptions, 
   root: SemanticNode,
   op: SemanticNode,
   node: SemanticNode
@@ -2431,9 +2452,10 @@ function appendOperand(
   // In general our operator tree will have the form that additions and
   // subtractions are stacked, while multiplications are subordinate.
   if (root.type !== SemanticType.INFIXOP) {
-    return infixNode([root, node], op, options);
+    return infixNode(options, [root, node], op);
   }
   const division = appendDivisionOp(
+    options,
     root,
     op,
     node
@@ -2447,8 +2469,8 @@ function appendOperand(
     return root;
   }
   return op.role === SemanticRole.MULTIPLICATION
-    ? appendMultiplicativeOp(root, op, node)
-    : appendAdditiveOp(root, op, node);
+    ? appendMultiplicativeOp(options, root, op, node)
+    : appendAdditiveOp(options, root, op, node);
 }
 
 /**
@@ -2459,19 +2481,19 @@ function appendOperand(
  * @param node The operand node to be added.
  * @returns The modified root node or null.
  */
-function appendDivisionOp(
+function appendDivisionOp(options: SemanticOptions, 
   root: SemanticNode,
   op: SemanticNode,
   node: SemanticNode
 ): SemanticNode {
   if (op.role === SemanticRole.DIVISION) {
     if (SemanticPred.isImplicit(root)) {
-      return infixNode([root, node], op, options);
+      return infixNode(options, [root, node], op);
     }
-    return appendLastOperand(root, op, node);
+    return appendLastOperand(options, root, op, node);
   }
   return root.role === SemanticRole.DIVISION
-    ? infixNode([root, node], op, options)
+    ? infixNode(options, [root, node], op)
     : null;
 }
 
@@ -2483,7 +2505,7 @@ function appendDivisionOp(
  * @param node The operand node to be added.
  * @returns The modified root node.
  */
-function appendLastOperand(
+function appendLastOperand(options: SemanticOptions, 
   root: SemanticNode,
   op: SemanticNode,
   node: SemanticNode
@@ -2499,7 +2521,8 @@ function appendLastOperand(
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
   const newNode = infixNode(
-    [lastRoot.childNodes.pop(, options), node],
+    options,
+    [lastRoot.childNodes.pop(), node],
     op
   );
   lastRoot.appendChild(newNode);
@@ -2514,7 +2537,7 @@ function appendLastOperand(
  * @param node The operand node to be added.
  * @returns The modified root node.
  */
-function appendMultiplicativeOp(
+function appendMultiplicativeOp(options: SemanticOptions, 
   root: SemanticNode,
   op: SemanticNode,
   node: SemanticNode
@@ -2522,7 +2545,7 @@ function appendMultiplicativeOp(
   // This ensures that implicit nodes stay together, which is probably what
   // we want.
   if (SemanticPred.isImplicit(root)) {
-    return infixNode([root, node], op, options);
+    return infixNode(options, [root, node], op);
   }
   let lastRoot = root;
   let lastChild = root.childNodes[root.childNodes.length - 1];
@@ -2535,7 +2558,8 @@ function appendMultiplicativeOp(
     lastChild = lastRoot.childNodes[root.childNodes.length - 1];
   }
   const newNode = infixNode(
-    [lastRoot.childNodes.pop(, options), node],
+    options,
+    [lastRoot.childNodes.pop(), node],
     op
   );
   lastRoot.appendChild(newNode);
@@ -2550,12 +2574,12 @@ function appendMultiplicativeOp(
  * @param node The operand node to be added.
  * @returns The new root node.
  */
-function appendAdditiveOp(
+function appendAdditiveOp(options: SemanticOptions, 
   root: SemanticNode,
   op: SemanticNode,
   node: SemanticNode
 ): SemanticNode {
-  return infixNode([root, node], op, options);
+  return infixNode(options, [root, node], op);
 }
 
 /**
@@ -2611,11 +2635,12 @@ function appendExistingOperator(
  * @param nodes The list of nodes.
  * @returns The new list of nodes.
  */
-function getFencesInRow(nodes: SemanticNode[]): SemanticNode[] {
+function getFencesInRow(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode[] {
   let partition = SemanticUtil.partitionNodes(nodes, SemanticPred.isFence);
   partition = purgeFences(partition);
   const felem = partition.comp.shift();
   return fences(
+    options,
     partition.rel,
     partition.comp,
     [],
@@ -2638,6 +2663,7 @@ function getFencesInRow(nodes: SemanticNode[]): SemanticNode[] {
  *     expressions processed.
  */
 function fences(
+  options: SemanticOptions, 
   fence: SemanticNode[],
   content: SemanticNode[][],
   openStack: SemanticNode[],
@@ -2675,6 +2701,7 @@ function fences(
         const split = SemanticUtil.sliceNodes(openStack, openPred);
         const cutLength = split.head.length - 1;
         const innerNodes = neutralFences(
+          options,
           split.head,
           contentStack.slice(0, cutLength)
         );
@@ -2708,6 +2735,7 @@ function fences(
     }
     // contentStack.push(content.shift());
     return fences(
+      options,
       fence,
       content,
       openStack,
@@ -2722,12 +2750,14 @@ function fences(
       lastOpen.role === SemanticRole.OPEN
   ) {
     const fenced = horizontalFencedNode(
+      options,
       openStack.pop(),
       fence.shift(),
       contentStack.pop()
     );
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
     return fences(
+      options,
       fence,
       content,
       openStack,
@@ -2749,6 +2779,7 @@ function fences(
         contentStack.push(cont);
       }
       return fences(
+      options,
         fence,
         content,
         openStack,
@@ -2756,12 +2787,14 @@ function fences(
       );
     }
     const fenced = horizontalFencedNode(
+      options,
       openStack.pop(),
       fence.shift(),
       contentStack.pop()
     );
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
     return fences(
+      options,
       fence,
       content,
       openStack,
@@ -2791,17 +2824,20 @@ function fences(
     const rightContent = contentStack.pop();
     const cutLength = contentStack.length - split.tail.length + 1;
     const innerNodes = neutralFences(
+      options,
       split.tail,
       contentStack.slice(cutLength)
     );
     contentStack = contentStack.slice(0, cutLength);
     const fenced = horizontalFencedNode(
+      options,
       split.div,
       fence.shift(),
       contentStack.pop().concat(innerNodes, rightContent)
     );
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
     return fences(
+      options,
       fence,
       content,
       split.head,
@@ -2814,6 +2850,7 @@ function fences(
   fenceToPunct(fenced);
   contentStack.push(contentStack.pop().concat([fenced], content.shift()));
   return fences(
+      options,
     fence,
     content,
     openStack,
@@ -2832,6 +2869,7 @@ function fences(
  *     nodes.
  */
 function neutralFences(
+  options: SemanticOptions, 
   fences: SemanticNode[],
   content: SemanticNode[][]
 ): SemanticNode[] {
@@ -2848,10 +2886,10 @@ function neutralFences(
     const restContent = content.shift();
     restContent.unshift(firstFence);
     return restContent.concat(
-      neutralFences(fences, content)
+      neutralFences(options, fences, content)
     );
   }
-  const split = SemanticUtil.sliceNodes(fences, function (x) {
+  const split = SemanticUtil.sliceNodes(fences, (x) => {
     return SemanticPred.compareNeutralFences(x, firstFence);
   });
   if (!split.div) {
@@ -2859,17 +2897,18 @@ function neutralFences(
     const restContent = content.shift();
     restContent.unshift(firstFence);
     return restContent.concat(
-      neutralFences(fences, content)
+      neutralFences(options, fences, content)
     );
   }
   // If the first right neutral is not elligible we ignore it.
   if (!SemanticPred.elligibleRightNeutral(split.div)) {
     fenceToPunct(split.div);
     fences.unshift(firstFence);
-    return neutralFences(fences, content);
+    return neutralFences(options, fences, content);
   }
 
   const newContent = combineFencedContent(
+      options,
     firstFence,
     split.div,
     split.head,
@@ -2878,6 +2917,7 @@ function neutralFences(
   if (split.tail.length > 0) {
     const leftContent = newContent.shift();
     const result = neutralFences(
+      options,
       split.tail,
       newContent
     );
@@ -2903,7 +2943,7 @@ function neutralFences(
  *     where the first is the fully fenced node wrt. the given left and right
  *     fence.
  */
-function combineFencedContent(
+function combineFencedContent(options: SemanticOptions, 
   leftFence: SemanticNode,
   rightFence: SemanticNode,
   midFences: SemanticNode[],
@@ -2911,6 +2951,7 @@ function combineFencedContent(
 ): SemanticNode[][] {
   if (midFences.length === 0) {
     const fenced = horizontalFencedNode(
+      options,
       leftFence,
       rightFence,
       content.shift()
@@ -2929,12 +2970,14 @@ function combineFencedContent(
   content = content.slice(cutLength);
   const rightContent = content.shift();
   const innerNodes = neutralFences(
+    options,
     midFences,
     midContent
   );
   leftContent.push(...innerNodes);
   leftContent.push(...rightContent);
   const fenced = horizontalFencedNode(
+    options,
     leftFence,
     rightFence,
     leftContent
@@ -2957,28 +3000,30 @@ function combineFencedContent(
  * @returns The new node.
  */
 function horizontalFencedNode(
+  options: SemanticOptions, 
   ofence: SemanticNode,
   cfence: SemanticNode,
   content: SemanticNode[]
 ): SemanticNode {
-  const childNode = row(content, options);
+  const childNode = row(options, content);
   let newNode = options.factory.makeBranchNode(
     SemanticType.FENCED,
     [childNode],
     [ofence, cfence]
-    , options);
+    );
   if (ofence.role === SemanticRole.OPEN) {
     // newNode.role = SemanticRole.LEFTRIGHT;
     classifyHorizontalFence(newNode);
     newNode = SemanticHeuristics.run(
       'propagateComposedFunction',
+      options,
       newNode
     ) as SemanticNode;
   } else {
     newNode.role = ofence.role;
   }
-  newNode = SemanticHeuristics.run('detect_cycle', newNode) as SemanticNode;
-  return rewriteFencedNode(newNode);
+  newNode = SemanticHeuristics.run('detect_cycle', options, newNode) as SemanticNode;
+  return rewriteFencedNode(options,newNode);
 }
 
 /**
@@ -3050,7 +3095,7 @@ function setExtension(set: SemanticNode) {
  * @param nodes The list of nodes.
  * @returns The new list of nodes.
  */
-function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
+function getPunctuationInRow(options: SemanticOptions, nodes: SemanticNode[]): SemanticNode[] {
   // For now we just make a punctuation node with a particular role. This is
   // similar to an mrow. The only exception are ellipses, which we assume to
   // be in lieu of identifiers. In addition we keep the single punctuation
@@ -3068,7 +3113,7 @@ function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
     );
   };
   // Partition with improved ellipses handling.
-  const partition = SemanticUtil.partitionNodes(nodes, function (x) {
+  const partition = SemanticUtil.partitionNodes(nodes, (x) => {
     if (!SemanticPred.isPunctuation(x)) {
       return false;
     }
@@ -3106,7 +3151,7 @@ function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
   let newNodes = [];
   let firstComp = partition.comp.shift();
   if (firstComp.length > 0) {
-    newNodes.push(row(firstComp, options));
+    newNodes.push(row(options, firstComp));
   }
   let relCounter = 0;
   while (partition.comp.length > 0) {
@@ -3116,16 +3161,16 @@ function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
       puncts.push(partition.rel[relCounter++]);
       firstComp = partition.comp.shift();
     } while (partition.rel[relCounter] && firstComp && firstComp.length === 0)
-    puncts = SemanticHeuristics.run('ellipses', puncts) as SemanticNode[];
+    puncts = SemanticHeuristics.run('ellipses', options, puncts) as SemanticNode[];
     partition.rel.splice(saveCount, relCounter - saveCount, ...puncts);
     relCounter = saveCount + puncts.length;
     newNodes = newNodes.concat(puncts);
     if (firstComp && firstComp.length > 0) {
-      newNodes.push(row(firstComp, options));
+      newNodes.push(row(options, firstComp));
     }
   }
   return [
-    punctuatedNode(newNodes, partition.rel)
+    punctuatedNode(options, newNodes, partition.rel)
   ];
 }
 
@@ -3139,7 +3184,7 @@ function getPunctuationInRow(nodes: SemanticNode[]): SemanticNode[] {
  *     punctations is a subset of nodes.
  * @returns The newly create node.
  */
-function punctuatedNode(
+function punctuatedNode(options: SemanticOptions, 
   nodes: SemanticNode[],
   punctuations: SemanticNode[]
 ): SemanticNode {
@@ -3152,7 +3197,7 @@ function punctuatedNode(
     const firstRole = punctuations[0].role;
     if (
       firstRole !== SemanticRole.UNKNOWN &&
-        punctuations.every(function (punct) {
+        punctuations.every((punct) => {
           return punct.role === firstRole;
         })
     ) {
@@ -3190,16 +3235,16 @@ function punctuatedNode(
  *     separated by invisible comma.
  * @returns The new node.
  */
-function dummyNode(children: SemanticNode[]): SemanticNode {
+function dummyNode(options: SemanticOptions, children: SemanticNode[]): SemanticNode {
   const commata =
     options.factory.makeMultipleContentNodes(
       children.length - 1,
       NamedSymbol.invisibleComma
     );
-  commata.forEach(function (comma) {
+  commata.forEach((comma) => {
     comma.role = SemanticRole.DUMMY;
   });
-  return punctuatedNode(children, commata);
+  return punctuatedNode(options, children, commata);
 }
 
 /**
@@ -3241,6 +3286,7 @@ function accentRole(node: SemanticNode, type: SemanticType): boolean {
  * @returns The newly created node.
  */
 function accentNode(
+  options: SemanticOptions, 
   center: SemanticNode,
   children: SemanticNode[],
   type: SemanticType,
@@ -3294,6 +3340,7 @@ function accentNode(
     }
   }
   return makeLimitNode(
+    options,
     center,
     children,
     innerNode,
@@ -3312,7 +3359,7 @@ function accentNode(
  * @param type The new node type.
  * @returns The newly created limit node.
  */
-function makeLimitNode(
+function makeLimitNode(options: SemanticOptions, 
   center: SemanticNode,
   children: SemanticNode[],
   innerNode: SemanticNode | undefined,
@@ -3374,7 +3421,7 @@ function makeLimitNode(
  * @param opt_result The result node list.
  * @returns The fully processed list.
  */
-function getFunctionsInRow(
+function getFunctionsInRow(options: SemanticOptions, 
   restNodes: SemanticNode[],
   opt_result?: SemanticNode[]
 ): SemanticNode[] {
@@ -3384,21 +3431,24 @@ function getFunctionsInRow(
     return result;
   }
   const firstNode = restNodes.shift() as SemanticNode;
-  const heuristic = classifyFunction(firstNode, restNodes);
+  const heuristic = classifyFunction(options,firstNode, restNodes);
   // First node is not a function node.
   if (!heuristic) {
     result.push(firstNode);
     return getFunctionsInRow(
+      options,
       restNodes,
       result
     );
   }
   // Combine functions in the rest of the row.
   const processedRest = getFunctionsInRow(
+    options,
     restNodes,
     []
   );
   const newRest = getFunctionArgs(
+      options,
     firstNode,
     processedRest,
     heuristic
@@ -3417,7 +3467,7 @@ function getFunctionsInRow(
  * @returns The function and the remainder of
  *     the rest list.
  */
-function getFunctionArgs(
+function getFunctionArgs(options: SemanticOptions, 
   func: SemanticNode,
   rest: SemanticNode[],
   heuristic: string
@@ -3426,20 +3476,21 @@ function getFunctionArgs(
   switch (heuristic) {
     case 'integral': {
       const components =
-        getIntegralArgs(rest);
+        getIntegralArgs(options, rest);
       if (!components.intvar && !components.integrand.length) {
         components.rest.unshift(func);
         return components.rest;
       }
-      const integrand = row(
+      const integrand = row(options,
         components.integrand
       );
       funcNode = integralNode(
+        options,
         func,
         integrand,
         components.intvar
       );
-      SemanticHeuristics.run('intvar_from_fraction', funcNode);
+      SemanticHeuristics.run('intvar_from_fraction', options, funcNode);
       components.rest.unshift(funcNode);
       return components.rest;
     }
@@ -3454,6 +3505,7 @@ function getFunctionArgs(
           arg.role = SemanticRole.LEFTRIGHT;
         }
         funcNode = functionNode(
+          options,
           func,
           arg as SemanticNode
         );
@@ -3474,7 +3526,7 @@ function getFunctionArgs(
         }
         arg = partition.div;
       } else {
-        arg = row(partition.head);
+        arg = row(options,partition.head);
         if (partition.div) {
           partition.tail.unshift(partition.div);
         }
@@ -3484,7 +3536,7 @@ function getFunctionArgs(
       //       composition) then we combine them via a function
       //       composition. Function composition is currently implicit, but we
       //       might want to remember this a bit better.
-      funcNode = functionNode(func, arg);
+      funcNode = functionNode(options, func, arg);
       partition.tail.unshift(funcNode);
       return partition.tail;
     }
@@ -3494,8 +3546,8 @@ function getFunctionArgs(
         rest.unshift(func);
         return rest;
       }
-      arg = row(partition.head);
-      funcNode = bigOpNode(func, arg);
+      arg = row(options,partition.head);
+      funcNode = bigOpNode(options, func, arg);
       if (partition.div) {
         partition.tail.unshift(partition.div);
       }
@@ -3518,11 +3570,12 @@ function getFunctionArgs(
         //       reset to eliminate sets. Once we include bra-ket heuristics,
         //       this might be incorrect.
         firstArg.role = SemanticRole.LEFTRIGHT;
-        propagateFunctionRole(
+        propagateFunctionRole(options,
           func,
           SemanticRole.SIMPLEFUNC
         );
         funcNode = functionNode(
+          options,
           func,
           rest.shift() as SemanticNode
         );
@@ -3543,6 +3596,7 @@ function getFunctionArgs(
  * @returns Result split into integrand, integral variable and the remaining elements.
  */
 function getIntegralArgs(
+  options: SemanticOptions, 
   nodes: SemanticNode[],
   args: SemanticNode[] = []
 ): { integrand: SemanticNode[]; intvar: SemanticNode; rest: SemanticNode[] } {
@@ -3557,12 +3611,12 @@ function getIntegralArgs(
     }
     return { integrand: partition.head, intvar: null, rest: partition.tail };
   }
-  SemanticHeuristics.run('intvar_from_implicit', nodes);
+  SemanticHeuristics.run('intvar_from_implicit', options, nodes);
   const firstNode = nodes[0];
   if (SemanticPred.isGeneralFunctionBoundary(firstNode)) {
     // No intvar, test for the next big operator boundary instead.
     let {integrand: args2, rest: rest2} =
-      getIntegralArgs(args);
+      getIntegralArgs(options, args);
     return { integrand: args2, intvar: null, rest: rest2.concat(nodes)};
   }
   if (SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
@@ -3571,6 +3625,7 @@ function getIntegralArgs(
   }
   if (nodes[1] && SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
     const intvar = prefixNode(
+      options,
       nodes[1] as SemanticNode,
       [firstNode]
     );
@@ -3578,7 +3633,7 @@ function getIntegralArgs(
     return { integrand: args, intvar: intvar, rest: nodes.slice(2) };
   }
   args.push(nodes.shift());
-  return getIntegralArgs(nodes, args);
+  return getIntegralArgs(options, nodes, args);
 }
 
 /**
@@ -3588,7 +3643,7 @@ function getIntegralArgs(
  * @param arg The argument.
  * @returns The new function node.
  */
-function functionNode(func: SemanticNode, arg: SemanticNode): SemanticNode {
+function functionNode(options: SemanticOptions, func: SemanticNode, arg: SemanticNode): SemanticNode {
   const applNode = options.factory.makeContentNode(
     NamedSymbol.functionApplication
   );
@@ -3603,7 +3658,7 @@ function functionNode(func: SemanticNode, arg: SemanticNode): SemanticNode {
   }
   applNode.type = SemanticType.PUNCTUATION;
   applNode.role = SemanticRole.APPLICATION;
-  const funcop = getFunctionOp(func, function (node) {
+  const funcop = getFunctionOp(func, (node) => {
     return (
       SemanticPred.isType(node, SemanticType.FUNCTION) ||
         (SemanticPred.isType(node, SemanticType.IDENTIFIER) &&
@@ -3611,6 +3666,7 @@ function functionNode(func: SemanticNode, arg: SemanticNode): SemanticNode {
     );
   });
   return functionalNode(
+    options,
     SemanticType.APPL,
     [func, arg],
     funcop,
@@ -3625,11 +3681,12 @@ function functionNode(func: SemanticNode, arg: SemanticNode): SemanticNode {
  * @param arg The argument.
  * @returns The new big operator node.
  */
-function bigOpNode(bigOp: SemanticNode, arg: SemanticNode): SemanticNode {
+function bigOpNode(options: SemanticOptions, bigOp: SemanticNode, arg: SemanticNode): SemanticNode {
   const largeop = getFunctionOp(bigOp, (x) =>
     SemanticPred.isType(x, SemanticType.LARGEOP)
                                );
   return functionalNode(
+    options,
     SemanticType.BIGOP,
     [bigOp, arg],
     largeop,
@@ -3647,6 +3704,7 @@ function bigOpNode(bigOp: SemanticNode, arg: SemanticNode): SemanticNode {
  * @returns The new integral node.
  */
 function integralNode(
+  options: SemanticOptions,
   integral: SemanticNode,
   integrand: SemanticNode,
   intvar: SemanticNode
@@ -3658,6 +3716,7 @@ function integralNode(
     SemanticPred.isType(x, SemanticType.LARGEOP)
                                );
   return functionalNode(
+    options,
     SemanticType.INTEGRAL,
     [integral, integrand, intvar],
     largeop,
@@ -3685,6 +3744,7 @@ function integralNode(
  * @returns The new functional node.
  */
 function functionalNode(
+  options: SemanticOptions, 
   type: SemanticType,
   children: SemanticNode[],
   operator: SemanticNode | null,
@@ -3715,7 +3775,7 @@ function functionalNode(
  * @param enume The enumerator node.
  * @returns The new fraction node.
  */
-function fractionNode(
+function fractionNode(options: SemanticOptions, 
   denom: SemanticNode,
   enume: SemanticNode
 ): SemanticNode {
@@ -3724,7 +3784,7 @@ function fractionNode(
     [denom, enume],
     []
   );
-  newNode.role = newNode.childNodes.every(function (x) {
+  newNode.role = newNode.childNodes.every((x) => {
     return (
       SemanticPred.isType(x, SemanticType.NUMBER) &&
         SemanticPred.isRole(x, SemanticRole.INTEGER)
@@ -3736,6 +3796,7 @@ function fractionNode(
     : SemanticRole.DIVISION;
   return SemanticHeuristics.run(
     'propagateSimpleFunction',
+    options,
     newNode
   ) as SemanticNode;
 }
@@ -3752,6 +3813,7 @@ function fractionNode(
  * @returns The semantic tensor node.
  */
 function scriptNode(
+  options: SemanticOptions, 
   nodes: SemanticNode[],
   role: SemanticRole,
   opt_noSingle?: boolean
@@ -3768,7 +3830,7 @@ function scriptNode(
       }
       break;
     default:
-      newNode = dummyNode(nodes);
+      newNode = dummyNode(options, nodes);
   }
   newNode.role = role;
   return newNode;
