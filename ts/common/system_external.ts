@@ -94,7 +94,7 @@ export class SystemExternal {
    */
   public static commander = SystemExternal.documentSupported
     ? null
-    : SystemExternal.extRequire('commander');
+    : SystemExternal.extRequire('commander').program;
 
   /**
    * Filesystem library.
