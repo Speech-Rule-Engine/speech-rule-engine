@@ -220,7 +220,10 @@ class QueryTrieNode extends StaticTrieNode {
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
-  constructor(constraint: string, private context: SpeechRuleContext) {
+  constructor(
+    constraint: string,
+    private context: SpeechRuleContext
+  ) {
     super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.QUERY;
   }
@@ -240,7 +243,10 @@ class BooleanTrieNode extends StaticTrieNode {
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
-  constructor(constraint: string, private context: SpeechRuleContext) {
+  constructor(
+    constraint: string,
+    private context: SpeechRuleContext
+  ) {
     super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.BOOLEAN;
   }

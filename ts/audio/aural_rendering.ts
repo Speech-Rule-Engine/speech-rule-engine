@@ -44,9 +44,13 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
   [EngineConst.Markup.SSML, xmlInstance]
 ]);
 
+/**
+ *
+ */
 function getRenderer() {
-  const markup = Engine.getInstance().
-    stringFeatures.get('markup') as EngineConst.Markup;
+  const markup = Engine.getInstance().stringFeatures.get(
+    'markup'
+  ) as EngineConst.Markup;
   return renderers.get(markup);
 }
 

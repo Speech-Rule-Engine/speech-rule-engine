@@ -74,7 +74,9 @@ function numberToWords(num: number): string {
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
-  if (NUMBERS.special['tens-' + Engine.getInstance().stringFeatures.get('subiso')]) {
+  if (
+    NUMBERS.special['tens-' + Engine.getInstance().stringFeatures.get('subiso')]
+  ) {
     NUMBERS.tens = NUMBERS.special[
       'tens-' + Engine.getInstance().stringFeatures.get('subiso')
     ] as string[];
@@ -167,11 +169,9 @@ function numericOrdinal(num: number): string {
     : num.toString() + 'e';
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  'wordOrdinal': wordOrdinal,
+  'numericOrdinal': numericOrdinal,
+  'numberToWords': numberToWords,
+  'numberToOrdinal': numberToOrdinal
+});

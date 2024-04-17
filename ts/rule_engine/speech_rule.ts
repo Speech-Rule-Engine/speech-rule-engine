@@ -381,9 +381,8 @@ export class Action {
    * IDEAS NOT YET IMPLEMENTED:
    *
    * if text element is last (or only followed by personality) it gets the overall
-   *   element as a span.
+   * element as a span.
    * if next element is multinode it gets the overall element as span?
-   *
    *
    * @param comps A list of components.
    */
@@ -509,7 +508,10 @@ export class Precondition {
    * @param query A node selector function or xpath expression.
    * @param cstr A rest list of constraint functions.
    */
-  constructor(public query: string, ...cstr: string[]) {
+  constructor(
+    public query: string,
+    ...cstr: string[]
+  ) {
     this.constraints = cstr;
     const [exists, user] = this.presetPriority();
     this.priority = exists ? user : this.calculatePriority();

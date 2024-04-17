@@ -29,7 +29,7 @@ function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
   let ones = NUMBERS.ones[Math.floor(n / 100)];
-  str += ones ? ones + NUMBERS.numSep  + 'honderd' : '';
+  str += ones ? ones + NUMBERS.numSep + 'honderd' : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
@@ -132,11 +132,9 @@ function numericOrdinal(num: number): string {
   return num.toString() + '.';
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  'wordOrdinal': wordOrdinal,
+  'numericOrdinal': numericOrdinal,
+  'numberToWords': numberToWords,
+  'numberToOrdinal': numberToOrdinal
+});

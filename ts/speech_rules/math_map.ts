@@ -69,7 +69,9 @@ let _init = false;
  *     engine.
  * @returns Promise that resolves once locale is loaded.
  */
-export async function loadLocale(locale = Engine.getInstance().stringFeatures.get('locale')) {
+export async function loadLocale(
+  locale = Engine.getInstance().stringFeatures.get('locale')
+) {
   if (!_init) {
     // Generate base alphabet information.
     AlphabetGenerator.generateBase();
@@ -96,7 +98,9 @@ export async function loadLocale(locale = Engine.getInstance().stringFeatures.ge
  * @param locale The locale to be loaded. Defaults to current locale of the
  *     engine.
  */
-function _loadLocale(locale = Engine.getInstance().stringFeatures.get('locale')) {
+function _loadLocale(
+  locale = Engine.getInstance().stringFeatures.get('locale')
+) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
     MathCompoundStore.reset();
@@ -152,10 +156,10 @@ function retrieveFiles(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().
-          stringFeatures.set(
-            'locale',
-            Engine.getInstance().stringFeatures.get('defaultLocale'));
+        Engine.getInstance().stringFeatures.set(
+          'locale',
+          Engine.getInstance().stringFeatures.get('defaultLocale')
+        );
         res(locale);
       }
     );
@@ -169,8 +173,9 @@ function retrieveFiles(locale: string) {
  * @param json The json mappings string.
  */
 function parseMaps(json: string | MathMapJson) {
-  const js = (typeof json === 'string') ?
-      JSON.parse(json) as { [key: string]: any[] }
+  const js =
+    typeof json === 'string'
+      ? (JSON.parse(json) as { [key: string]: any[] })
       : json;
   addMaps(js);
 }

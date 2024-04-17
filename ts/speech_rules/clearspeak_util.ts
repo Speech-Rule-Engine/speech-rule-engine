@@ -452,8 +452,8 @@ export function ordinalExponent(node: Element): Span[] {
       isNaN(num)
         ? node.textContent
         : num > 10
-        ? LOCALE.NUMBERS.numericOrdinal(num)
-        : LOCALE.NUMBERS.wordOrdinal(num)
+          ? LOCALE.NUMBERS.numericOrdinal(num)
+          : LOCALE.NUMBERS.wordOrdinal(num)
     )
   ];
 }

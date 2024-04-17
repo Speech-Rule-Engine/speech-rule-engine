@@ -256,7 +256,8 @@ export class MathStore extends BaseRuleStore {
   }
 
   static regexp = {
-    'NUMBER': '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
+    'NUMBER':
+      '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
     'DECIMAL_MARK': '\\.',
     'DIGIT_GROUP': ','
   };
@@ -268,8 +269,12 @@ export class MathStore extends BaseRuleStore {
    * @param str The string to match.
    * @returns The number and its length.
    */
-  protected matchNumber(str: string): { number: string; length: number } | null {
-    const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp['NUMBER']));
+  protected matchNumber(
+    str: string
+  ): { number: string; length: number } | null {
+    const locNum = str.match(
+      new RegExp('^' + LOCALE.MESSAGES.regexp['NUMBER'])
+    );
     const enNum = str.match(new RegExp('^' + MathStore.regexp.NUMBER));
     if (!locNum && !enNum) {
       return null;

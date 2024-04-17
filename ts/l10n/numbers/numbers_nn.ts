@@ -154,14 +154,12 @@ function numericOrdinal(num: number): string {
   return num.toString() + '.';
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  'wordOrdinal': wordOrdinal,
+  'numericOrdinal': numericOrdinal,
+  'numberToWords': numberToWords,
+  'numberToOrdinal': numberToOrdinal
+});
 // TODO: For simple speech output this should be different.
 
 // Alternative Germanic style numbers:

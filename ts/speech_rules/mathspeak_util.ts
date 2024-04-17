@@ -307,7 +307,11 @@ function nestedFraction(node: Element, expr: string, opt_end?: string): string {
  */
 export function openingFractionVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS['START'], LOCALE.MESSAGES.MS['FRAC_V'])
+    nestedFraction(
+      node,
+      LOCALE.MESSAGES.MS['START'],
+      LOCALE.MESSAGES.MS['FRAC_V']
+    )
   );
 }
 
@@ -319,7 +323,11 @@ export function openingFractionVerbose(node: Element): Span[] {
  */
 export function closingFractionVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS['END'], LOCALE.MESSAGES.MS['FRAC_V']),
+    nestedFraction(
+      node,
+      LOCALE.MESSAGES.MS['END'],
+      LOCALE.MESSAGES.MS['FRAC_V']
+    ),
     { kind: 'LAST' }
   );
 }
@@ -331,7 +339,10 @@ export function closingFractionVerbose(node: Element): Span[] {
  * @returns The middle string.
  */
 export function overFractionVerbose(node: Element): Span[] {
-  return Span.singleton(nestedFraction(node, LOCALE.MESSAGES.MS['FRAC_OVER']), {});
+  return Span.singleton(
+    nestedFraction(node, LOCALE.MESSAGES.MS['FRAC_OVER']),
+    {}
+  );
 }
 
 /**
@@ -342,7 +353,11 @@ export function overFractionVerbose(node: Element): Span[] {
  */
 export function openingFractionBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS['START'], LOCALE.MESSAGES.MS['FRAC_B'])
+    nestedFraction(
+      node,
+      LOCALE.MESSAGES.MS['START'],
+      LOCALE.MESSAGES.MS['FRAC_B']
+    )
   );
 }
 
@@ -354,7 +369,11 @@ export function openingFractionBrief(node: Element): Span[] {
  */
 export function closingFractionBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedFraction(node, LOCALE.MESSAGES.MS['END'], LOCALE.MESSAGES.MS['FRAC_B']),
+    nestedFraction(
+      node,
+      LOCALE.MESSAGES.MS['END'],
+      LOCALE.MESSAGES.MS['FRAC_B']
+    ),
     { kind: 'LAST' }
   );
 }
@@ -630,7 +649,6 @@ function getRootIndex(node: Element): string {
   return LOCALE.MESSAGES.MSroots[content] || '';
 }
 
-
 /**
  * Opening string for radicals in Mathspeak verbose mode.
  *
@@ -639,7 +657,11 @@ function getRootIndex(node: Element): string {
  */
 export function openingRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS['NESTED'], LOCALE.MESSAGES.MS['STARTROOT'])
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS['NESTED'],
+      LOCALE.MESSAGES.MS['STARTROOT']
+    )
   );
 }
 
@@ -651,7 +673,11 @@ export function openingRadicalVerbose(node: Element): Span[] {
  */
 export function closingRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS['NESTED'], LOCALE.MESSAGES.MS['ENDROOT'])
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS['NESTED'],
+      LOCALE.MESSAGES.MS['ENDROOT']
+    )
   );
 }
 
@@ -663,7 +689,11 @@ export function closingRadicalVerbose(node: Element): Span[] {
  */
 export function indexRadicalVerbose(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS['NESTED'], LOCALE.MESSAGES.MS['ROOTINDEX'])
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS['NESTED'],
+      LOCALE.MESSAGES.MS['ROOTINDEX']
+    )
   );
 }
 
@@ -723,7 +753,11 @@ export function indexRadicalBrief(node: Element): Span[] {
  */
 export function openingRadicalSbrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS['NEST_ROOT'], LOCALE.MESSAGES.MS['ROOT'])
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS['NEST_ROOT'],
+      LOCALE.MESSAGES.MS['ROOT']
+    )
   );
 }
 
@@ -735,7 +769,11 @@ export function openingRadicalSbrief(node: Element): Span[] {
  */
 export function indexRadicalSbrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS['NEST_ROOT'], LOCALE.MESSAGES.MS['INDEX'])
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS['NEST_ROOT'],
+      LOCALE.MESSAGES.MS['INDEX']
+    )
   );
 }
 
@@ -772,7 +810,8 @@ function underscoreNestingDepth(node: Element): number {
 export function nestedUnderscript(node: Element): Span[] {
   const depth = underscoreNestingDepth(node);
   return Span.singleton(
-    Array(depth).join(LOCALE.MESSAGES.MS['UNDER']) + LOCALE.MESSAGES.MS['UNDERSCRIPT']
+    Array(depth).join(LOCALE.MESSAGES.MS['UNDER']) +
+      LOCALE.MESSAGES.MS['UNDERSCRIPT']
   );
 }
 
@@ -817,7 +856,8 @@ export function endscripts(_node: Element) {
 export function nestedOverscript(node: Element): Span[] {
   const depth = overscoreNestingDepth(node);
   return Span.singleton(
-    Array(depth).join(LOCALE.MESSAGES.MS['OVER']) + LOCALE.MESSAGES.MS['OVERSCRIPT']
+    Array(depth).join(LOCALE.MESSAGES.MS['OVER']) +
+      LOCALE.MESSAGES.MS['OVERSCRIPT']
   );
 }
 

@@ -769,7 +769,8 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public previousRules(): Focus {
     this.generator.nextStyle(
-      this.getFocus().getSemanticPrimary()?.id.toString());
+      this.getFocus().getSemanticPrimary()?.id.toString()
+    );
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
@@ -861,8 +862,8 @@ export abstract class AbstractWalker<T> implements Walker {
     const expand = this.expandable(primary)
       ? LOCALE.MESSAGES.navigate.EXPANDABLE
       : this.collapsible(primary)
-      ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
-      : '';
+        ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
+        : '';
     const level = LOCALE.MESSAGES.navigate.LEVEL + ' ' + this.getDepth();
     const snodes = this.getFocus().getSemanticNodes();
     const prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);

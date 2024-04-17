@@ -50,8 +50,8 @@ export function highlighter(
     rendererInfo.renderer === 'NativeMML' && rendererInfo.browser === 'Safari'
       ? 'MML-CSS'
       : rendererInfo.renderer === 'SVG' && rendererInfo.browser === 'v3'
-      ? 'SVG-V3'
-      : rendererInfo.renderer;
+        ? 'SVG-V3'
+        : rendererInfo.renderer;
   const highlighter = new (highlighterMapping[renderer] ||
     highlighterMapping['NativeMML'])();
   highlighter.setColor(colorPicker);

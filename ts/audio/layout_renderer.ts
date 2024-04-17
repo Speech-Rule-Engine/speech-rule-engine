@@ -27,11 +27,10 @@ import { AuditoryDescription } from './auditory_description.js';
 import { XmlRenderer } from './xml_renderer.js';
 
 export class LayoutRenderer extends XmlRenderer {
-
   public static options = {
     cayleyshort: Engine.getInstance().binaryFeatures.get('cayleyshort'),
     linebreaks: Engine.getInstance().binaryFeatures.get('linebreaks')
-  }
+  };
 
   /**
    * @override
@@ -79,8 +78,7 @@ export class LayoutRenderer extends XmlRenderer {
       content = [];
       const [pref, layout, value] = this.layoutValue(descr.layout);
       if (pref === 'begin') {
-        result.push('<' + layout +
-          (value ? ` value="${value}"` : '') +  '>');
+        result.push('<' + layout + (value ? ` value="${value}"` : '') + '>');
         continue;
       }
       if (pref === 'end') {
@@ -108,7 +106,7 @@ export class LayoutRenderer extends XmlRenderer {
     return result.join(''); // this.merge(result);
   }
 
-  private values: Map<string, {[key: string]: boolean}> = new Map();
+  private values: Map<string, { [key: string]: boolean }> = new Map();
 
   private layoutValue(layout: string) {
     const match = layout.match(/^(begin|end|)(.*\D)(\d*)$/);
@@ -123,7 +121,6 @@ export class LayoutRenderer extends XmlRenderer {
     this.values.get(layout)[value] = true;
     return [match[1], layout, value];
   }
-
 }
 
 // Postprocessing
@@ -158,14 +155,18 @@ function applyHandler(element: Element): string {
   return handler ? handler(element) : element.textContent;
 }
 
-
 const relValues = new Map();
 
-function setRelValues(values: {[key: string]: boolean}) {
+/**
+ *
+ */
+function setRelValues(values: { [key: string]: boolean }) {
   relValues.clear();
   if (!values) return;
-  const keys = Object.keys(values).map(x => parseInt(x)).sort();
-  for (let i = 0, key; key = keys[i]; i++) {
+  const keys = Object.keys(values)
+    .map((x) => parseInt(x))
+    .sort();
+  for (let i = 0, key; (key = keys[i]); i++) {
     relValues.set(key, i + 1);
   }
 }
@@ -493,7 +494,10 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
-  if (Engine.getInstance().binaryFeatures.get('cayleyshort') && mat[0].cells[0] === '⠀') {
+  if (
+    Engine.getInstance().binaryFeatures.get('cayleyshort') &&
+    mat[0].cells[0] === '⠀'
+  ) {
     bar.cells[0] = '⠀';
   }
   mat.splice(1, 0, bar);
@@ -606,10 +610,14 @@ function handleFractionPart(prt: Element): string {
 }
 
 // This implements line breaking for concepts of 14.12.1 Priority List.
+/**
+ *
+ * @param rel
+ */
 function handleRelation(rel: Element): string {
   if (!Engine.getInstance().binaryFeatures.get('linebreaks')) {
     return recurseTree(rel);
   }
-  let value = relValues.get(parseInt(rel.getAttribute('value')));
-  return  (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
+  const value = relValues.get(parseInt(rel.getAttribute('value')));
+  return (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
 }

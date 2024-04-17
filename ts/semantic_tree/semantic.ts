@@ -47,6 +47,8 @@ export { Attr };
  * Creates the semantic tree for a given MathML node.
  *
  * @param mml The MathML node.
+ * @param expr
+ * @param brief
  * @returns Semantic tree for input node as XML node.
  */
 export function xmlTreeFromString(expr: string, brief = false): Element {

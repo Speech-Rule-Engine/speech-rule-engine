@@ -12,8 +12,8 @@ var readline;
 /**
  * @constructor
  */
-readline.createInterface = function() {
-  this.on = function(msg, fnc) { };
+readline.createInterface = function () {
+  this.on = function (msg, fnc) {};
 };
 
 var commander;
@@ -27,28 +27,28 @@ module.exports;
 var global;
 var node;
 node._nsMap;
-function require(library) { }
+function require(library) {}
 var fs;
-fs.readFileSync = function(name) { };
-fs.readFile = function(name, encoding, callback) { };
-fs.writeFileSync = function(name, data) { };
-fs.writeFile = function(name, data, callback) { };
-fs.appendFileSync = function(name, data) { };
-fs.openSync = function(name, parameters) { };
-fs.createWriteStream = function(name) { };
+fs.readFileSync = function (name) {};
+fs.readFile = function (name, encoding, callback) {};
+fs.writeFileSync = function (name, data) {};
+fs.writeFile = function (name, data, callback) {};
+fs.appendFileSync = function (name, data) {};
+fs.openSync = function (name, parameters) {};
+fs.createWriteStream = function (name) {};
 
 /**
  * @typedef {stream}
  */
 var stream;
-stream.on = function(msg, fnc) { };
+stream.on = function (msg, fnc) {};
 
 var wgxpath;
 
 /**
  * @type {function(Object=)}
  */
-wgxpath.install = function(opt_feature) { };
+wgxpath.install = function (opt_feature) {};
 
 var Resolver = {};
 Resolver.lookupNamespaceURI;

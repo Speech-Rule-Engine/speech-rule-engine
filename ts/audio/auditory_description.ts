@@ -41,16 +41,13 @@ interface AudioFlags {
 }
 
 export class AuditoryItem {
-
   public prev: AuditoryItem = null;
   public next: AuditoryItem = null;
 
   constructor(public data: AuditoryDescription = null) {}
-
 }
 
 export class AuditoryList extends Set<AuditoryItem> {
-
   public annotations: AuditoryItem[] = [];
 
   private anchor: AuditoryItem;
@@ -60,15 +57,13 @@ export class AuditoryList extends Set<AuditoryItem> {
     this.anchor = new AuditoryItem();
     this.anchor.next = this.anchor;
     this.anchor.prev = this.anchor;
-    descrs.forEach(
-      d => {
-        let item = new AuditoryItem(d);
-        if (d.annotation) {
-          this.annotations.push(item);
-        }
-        this.push(item);
+    descrs.forEach((d) => {
+      const item = new AuditoryItem(d);
+      if (d.annotation) {
+        this.annotations.push(item);
       }
-    );
+      this.push(item);
+    });
   }
 
   public first() {
@@ -88,12 +83,12 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   public pop() {
-    let item = this.last();
+    const item = this.last();
     if (!item) {
       return null;
     }
     this.delete(item);
-    return item
+    return item;
   }
 
   public delete(item: AuditoryItem) {
@@ -111,7 +106,7 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   public insertBefore(descr: AuditoryDescription, item: AuditoryItem) {
-    let nitem = new AuditoryItem(descr);
+    const nitem = new AuditoryItem(descr);
     if (!item || !this.has(item)) {
       this.push(nitem);
       return;
@@ -125,7 +120,7 @@ export class AuditoryList extends Set<AuditoryItem> {
   public prevText(item: AuditoryItem) {
     do {
       item = item.prev;
-    } while (item !== this.anchor && !item.data.text)
+    } while (item !== this.anchor && !item.data.text);
     return item === this.anchor ? null : item;
   }
 
@@ -151,12 +146,11 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   public empty() {
-    return this.anchor.prev === this.anchor &&
-      this.anchor === this.anchor.next;
+    return this.anchor.prev === this.anchor && this.anchor === this.anchor.next;
   }
 
   public toList(): AuditoryDescription[] {
-    let result = [];
+    const result = [];
     let item = this.anchor.next;
     while (item !== this.anchor) {
       result.push(item.data);
@@ -164,11 +158,9 @@ export class AuditoryList extends Set<AuditoryItem> {
     }
     return result;
   }
-
 }
 
 export class AuditoryDescription {
-
   /**
    * context The context. This is all spoken with an annotation voice.
    */

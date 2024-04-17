@@ -51,7 +51,9 @@ export abstract class BaseRuleStore
   /**
    * A dynamic constraint parser.
    */
-  public parser: DynamicCstrParser = new DynamicCstrParser(DynamicCstr.DEFAULT_ORDER);
+  public parser: DynamicCstrParser = new DynamicCstrParser(
+    DynamicCstr.DEFAULT_ORDER
+  );
 
   /**
    * Default locale.
@@ -604,7 +606,10 @@ class Condition {
    * @param base The dynamic base constraint.
    * @param condition The remaining precondition constraints.
    */
-  constructor(private base: DynamicCstr, condition: Precondition) {
+  constructor(
+    private base: DynamicCstr,
+    condition: Precondition
+  ) {
     this.constraints.push(base);
     this.addCondition(base, condition);
   }

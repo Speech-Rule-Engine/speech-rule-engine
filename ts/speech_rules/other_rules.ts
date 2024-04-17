@@ -51,9 +51,10 @@ export function OtherRules() {
     'CSFvulgarFraction': NumbersUtil.vulgarFraction
   });
 
-  SpeechRules.addStore('ko.summary.', 'ko.speech.mathspeak', { 
+  SpeechRules.addStore('ko.summary.', 'ko.speech.mathspeak', {
     'CSFordinalConversion': MathspeakKoreanUtil.ordinalConversion,
-    'CSFdecreasedOrdinalConversion': MathspeakKoreanUtil.decreasedOrdinalConversion,
+    'CSFdecreasedOrdinalConversion':
+      MathspeakKoreanUtil.decreasedOrdinalConversion,
     'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion
   });
 }
@@ -91,9 +92,5 @@ export function BrailleRules() {
     }
   );
 
-  SpeechRules.addStore(
-    'euro.braille.default',
-    'nemeth.braille.default',
-    {}
-  );
+  SpeechRules.addStore('euro.braille.default', 'nemeth.braille.default', {});
 }

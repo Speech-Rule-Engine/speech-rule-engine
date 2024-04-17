@@ -35,7 +35,6 @@ Alphabets.digitTrans;
 Alphabets.letterTrans;
 Alphabets.combiner;
 
-
 var Functions = {};
 Functions.fracNestDepth;
 Functions.radicalNestDepth;

@@ -29,28 +29,37 @@ import { SystemExternal } from './system_external.js';
 const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];
 
 const EN_RULES: string[] = [
-  'chromevox', 'clearspeak', 'mathspeak', 'emacspeak', 'html'
+  'chromevox',
+  'clearspeak',
+  'mathspeak',
+  'emacspeak',
+  'html'
 ];
 
+/**
+ *
+ */
 function ensureDomain(feature: { [key: string]: boolean | string }) {
-// This preserves the possibility to specify default as domain.
-// < 3.2  this lead to the use of chromevox rules in English.
-// >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-// we get a meaningful output.
-  if ((feature.modality && feature.modality !== 'speech') ||
+  // This preserves the possibility to specify default as domain.
+  // < 3.2  this lead to the use of chromevox rules in English.
+  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
+  // we get a meaningful output.
+  if (
+    (feature.modality && feature.modality !== 'speech') ||
     (!feature.modality &&
-      Engine.getInstance().stringFeatures.get('modality') !== 'speech')) {
+      Engine.getInstance().stringFeatures.get('modality') !== 'speech')
+  ) {
     return;
   }
   if (!feature.domain) {
     return;
   }
-  if (feature.domain === 'default')  {
+  if (feature.domain === 'default') {
     feature.domain = 'mathspeak';
     return;
   }
-  const locale = (feature.locale
-    || Engine.getInstance().stringFeatures.get('locale')) as string;
+  const locale = (feature.locale ||
+    Engine.getInstance().stringFeatures.get('locale')) as string;
   const domain = feature.domain as string;
   if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
     if (domain !== 'mathspeak') {
@@ -99,6 +108,9 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   return MathMap.loadLocale();
 }
 
+/**
+ *
+ */
 export function setupSync(feature: { [key: string]: boolean | string }) {
   ensureDomain(feature);
   const engine = Engine.getInstance() as any;

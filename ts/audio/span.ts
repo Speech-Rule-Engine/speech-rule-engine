@@ -25,7 +25,10 @@ export class Span {
    * @param speech The textual content of the span.
    * @param attributes Annotations for the textual content.
    */
-  constructor(public speech: string, public attributes: SpanAttrs) {}
+  constructor(
+    public speech: string,
+    public attributes: SpanAttrs
+  ) {}
 
   public static empty() {
     return new Span('', {});

@@ -34,7 +34,6 @@ import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
-
   public options: SemanticOptions = new SemanticOptions();
 
   private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
@@ -99,7 +98,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
       [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
       [MMLTAGS.NONE, this.empty_.bind(this)],
-      [MMLTAGS.MACTION, this.action_.bind(this)],
+      [MMLTAGS.MACTION, this.action_.bind(this)]
     ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
@@ -144,9 +143,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
         MMLTAGS.MSTYLE,
         MMLTAGS.SEMANTICS,
         MMLTAGS.MACTION
-      ].indexOf(
-        tag
-      ) !== -1
+      ].indexOf(tag) !== -1
     ) {
       return newNode;
     }
@@ -179,7 +176,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     // Special cases:
     const semantics = node.getAttribute('semantics');
     if (semantics && semantics.match('bspr_')) {
-      return SemanticProcessor.proof(this.options,
+      return SemanticProcessor.proof(
+        this.options,
         node,
         semantics,
         this.parseList.bind(this)
@@ -218,7 +216,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const lower = children[1]
       ? this.parse(children[1])
       : this.getFactory().makeEmptyNode();
-    const sem = SemanticProcessor.fractionLikeNode(this.options,
+    const sem = SemanticProcessor.fractionLikeNode(
+      this.options,
       upper,
       lower,
       node.getAttribute('linethickness'),
@@ -235,7 +234,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private limits_(node: Element, children: Element[]): SemanticNode {
-    return SemanticProcessor.limitNode(this.options,
+    return SemanticProcessor.limitNode(
+      this.options,
       DomUtil.tagName(node),
       this.parseList(children)
     );
@@ -476,7 +476,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const sepValue = SemanticMathml.getAttribute_(node, 'separators', ',');
     const open = SemanticMathml.getAttribute_(node, 'open', '(');
     const close = SemanticMathml.getAttribute_(node, 'close', ')');
-    const newNode = SemanticProcessor.mfenced(this.options,
+    const newNode = SemanticProcessor.mfenced(
+      this.options,
       open,
       close,
       sepValue,
@@ -538,8 +539,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
           ? lsup.push(child)
           : lsub.push(child)
         : scriptcount & 1
-        ? rsup.push(child)
-        : rsub.push(child);
+          ? rsup.push(child)
+          : rsub.push(child);
       scriptcount++;
     }
     // This is the pathological msubsup case.
@@ -549,14 +550,16 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       !SemanticUtil.purgeNodes(lsup).length &&
       !SemanticUtil.purgeNodes(lsub).length
     ) {
-      return SemanticProcessor.pseudoTensor(this.options,
+      return SemanticProcessor.pseudoTensor(
+        this.options,
         base,
         this.parseList(rsub),
         this.parseList(rsup)
       );
     }
     // We really deal with a multiscript tensor.
-    return SemanticProcessor.tensor(this.options,
+    return SemanticProcessor.tensor(
+      this.options,
       base,
       this.parseList(lsub),
       this.parseList(lsup),
@@ -636,7 +639,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     // TODO (Euro): This should be safed earlier together with other attributes,
     //     before processing is even called!
     if (mml.hasAttribute('data-latex')) {
-      SemanticMap.LatexCommands.set(mml.getAttribute('data-latex'), mml.textContent);
+      SemanticMap.LatexCommands.set(
+        mml.getAttribute('data-latex'),
+        mml.textContent
+      );
     }
     return node;
   }

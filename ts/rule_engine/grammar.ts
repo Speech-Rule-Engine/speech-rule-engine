@@ -433,7 +433,10 @@ export function correctFont(text: string, correction: string): string {
  * @returns The cleaned up string.
  */
 function correctCaps(text: string): string {
-  let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().stringFeatures.get('domain')];
+  let cap =
+    LOCALE.ALPHABETS.capPrefix[
+      Engine.getInstance().stringFeatures.get('domain')
+    ];
   if (typeof cap === 'undefined') {
     cap = LOCALE.ALPHABETS.capPrefix['default'];
   }

@@ -27,7 +27,7 @@ import { Debugger } from './debugger.js';
 import { Variables } from './variables.js';
 
 export type SreFeature = {
-  [key: string]: any
+  [key: string]: any;
 };
 
 declare const SREfeature: SreFeature;
@@ -75,22 +75,21 @@ export class Engine {
   /**
    * Binary feature vector.
    */
-  public binaryFeatures: Map<string, boolean> = new Map(
-    [
-      // Markup options
-      ['mark', true],
-      ['automark', false], // Automatic marking of elements for spans.
-      ['character', true],
-      ['cleanpause', true],
-      ['strict', false], // Strict interpretations of rules and constraints.
-      // Enrichment options
-      ['structure', false], // Skeleton structure attributes are added
-      ['aria', false], // Aria attributes are added
-      ['pprint', false], // Pretty Print mode
-      // Nemeth layout options
-      ['cayleyshort', true],
-      ['linebreaks', false],
-    ]);
+  public binaryFeatures: Map<string, boolean> = new Map([
+    // Markup options
+    ['mark', true],
+    ['automark', false], // Automatic marking of elements for spans.
+    ['character', true],
+    ['cleanpause', true],
+    ['strict', false], // Strict interpretations of rules and constraints.
+    // Enrichment options
+    ['structure', false], // Skeleton structure attributes are added
+    ['aria', false], // Aria attributes are added
+    ['pprint', false], // Pretty Print mode
+    // Nemeth layout options
+    ['cayleyshort', true],
+    ['linebreaks', false]
+  ]);
 
   /**
    * String feature vector.
@@ -120,7 +119,7 @@ export class Engine {
     // The level to which speech attributes are added to enriched elements
     // (none, shallow, deep).
     ['speech', EngineConst.Speech.NONE], // EngineConst.Speech
-     // Current walker mode.
+    // Current walker mode.
     ['walker', 'Table'],
     ['defaultLocale', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
     ['locale', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
@@ -129,14 +128,14 @@ export class Engine {
     // scale pauses.
     ['rate', '100'],
     // Rules file to load.
-    ['rules', ''], 
+    ['rules', ''],
     ['subiso', ''],
     // EngineConstraints to prune given dot separated.
-    ['prune', ''], 
+    ['prune', '']
   ]);
 
   public getFeature(feature: string): string | boolean {
-    let str = this.stringFeatures.get(feature);
+    const str = this.stringFeatures.get(feature);
     if (str !== undefined) {
       return str;
     }
@@ -147,9 +146,11 @@ export class Engine {
     if (typeof value === 'string') {
       if (feature === 'defaultLocale') {
         value = Variables.ensureLocale(
-          value, this.stringFeatures.get('defaultLocale'));
+          value,
+          this.stringFeatures.get('defaultLocale')
+        );
       }
-      this.stringFeatures.set(feature, value)
+      this.stringFeatures.set(feature, value);
     } else {
       this.binaryFeatures.set(feature, value);
     }
@@ -215,12 +216,12 @@ export class Engine {
   private config = false;
 
   /**
-   * 
+   *
    */
   public rules = '';
 
   /**
-   * 
+   *
    */
   public prune = '';
 
@@ -273,7 +274,8 @@ export class Engine {
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
     if (this.stringFeatures.get('defaultLocale')) {
-      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] = this.stringFeatures.get('defaultLocale');
+      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] =
+        this.stringFeatures.get('defaultLocale');
     }
     if (opt_dynamic) {
       const keys = Object.keys(opt_dynamic);
@@ -287,14 +289,14 @@ export class Engine {
         }
       }
     }
-    EngineConst.DOMAIN_TO_STYLES[this.stringFeatures.get('domain')] = this.stringFeatures.get('style');
+    EngineConst.DOMAIN_TO_STYLES[this.stringFeatures.get('domain')] =
+      this.stringFeatures.get('style');
     const dynamic = [
       this.stringFeatures.get('locale'),
       this.stringFeatures.get('modality'),
       this.stringFeatures.get('domain'),
-      this.stringFeatures.get('style')].join(
-      '.'
-    );
+      this.stringFeatures.get('style')
+    ].join('.');
     const fallback = Dcstr.DynamicProperties.createProp(
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
@@ -360,7 +362,6 @@ export class Engine {
     });
     return features;
   }
-
 }
 
 /**
@@ -430,9 +431,11 @@ export class EnginePromise {
   public static getall() {
     return Promise.all(Object.values(EnginePromise.promises));
   }
-
 }
 
+/**
+ *
+ */
 export function enginePromise() {
   return EnginePromise.getall();
 }

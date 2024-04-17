@@ -111,7 +111,9 @@ function create(): Locale {
     const decl = Grammar.getInstance().getParameter('case');
     const plural = Grammar.getInstance().getParameter('plural');
     if (decl === 'dative') {
-      return { 'der': 'dem', 'die': plural ? 'den' : 'der', 'das': 'dem' }[name];
+      return { 'der': 'dem', 'die': plural ? 'den' : 'der', 'das': 'dem' }[
+        name
+      ];
     }
     return name;
   };

@@ -363,7 +363,7 @@ set(
     processor: function (ltx: string) {
       if (
         Engine.getInstance().stringFeatures.get('modality') !== 'braille' ||
-          Engine.getInstance().stringFeatures.get('locale') !== 'euro'
+        Engine.getInstance().stringFeatures.get('locale') !== 'euro'
       ) {
         console.info(
           'LaTeX input currently only works for Euro Braille output.' +

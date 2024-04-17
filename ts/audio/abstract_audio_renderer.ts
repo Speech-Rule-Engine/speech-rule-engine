@@ -44,7 +44,9 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
    */
   public get separator() {
     // TODO: (Span) Do this via setSeparator.
-    return Engine.getInstance().stringFeatures.get('modality') === 'braille' ? '' : this.separator_;
+    return Engine.getInstance().stringFeatures.get('modality') === 'braille'
+      ? ''
+      : this.separator_;
   }
 
   /**

@@ -60,9 +60,8 @@ export enum MMLTAGS {
   MUNDER = 'MUNDER',
   MUNDEROVER = 'MUNDEROVER',
   NONE = 'NONE',
-  SEMANTICS = 'SEMANTICS',
+  SEMANTICS = 'SEMANTICS'
 }
-
 
 /**
  * List of MathML Tags that are considered to be leafs.
@@ -106,10 +105,7 @@ const EMPTYTAGS: string[] = [
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-const DISPLAYTAGS: string[] = [
-  MMLTAGS.MROOT,
-  MMLTAGS.MSQRT
-];
+const DISPLAYTAGS: string[] = [MMLTAGS.MROOT, MMLTAGS.MSQRT];
 
 /**
  * List of potential attributes that should be used as speech directly.
@@ -175,7 +171,7 @@ export function hasDisplayTag(node: Element): boolean {
 export function isOrphanedGlyph(node: Element): boolean {
   return (
     !!node &&
-      DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
+    DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
     !hasLeafTag(node.parentNode as Element)
   );
 }

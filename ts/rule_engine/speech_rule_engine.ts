@@ -29,7 +29,10 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription, AuditoryList } from '../audio/auditory_description.js';
+import {
+  AuditoryDescription,
+  AuditoryList
+} from '../audio/auditory_description.js';
 import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
@@ -317,7 +320,10 @@ export class SpeechRuleEngine {
       if (engine.binaryFeatures.get('strict')) {
         return [];
       }
-      result = this.getEvaluator(engine.stringFeatures.get('locale'), engine.stringFeatures.get('modality'))(node);
+      result = this.getEvaluator(
+        engine.stringFeatures.get('locale'),
+        engine.stringFeatures.get('modality')
+      )(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
@@ -327,9 +333,9 @@ export class SpeechRuleEngine {
       'Apply Rule:',
       rule.name,
       rule.dynamicCstr.toString(),
-      engine.mode === EngineConst.Mode.HTTP ?
-        DomUtil.serializeXml(node) :
-        node.toString()
+      engine.mode === EngineConst.Mode.HTTP
+        ? DomUtil.serializeXml(node)
+        : node.toString()
     ]);
     Grammar.getInstance().processSingles();
     const context = rule.context;
@@ -348,7 +354,10 @@ export class SpeechRuleEngine {
       if (attributes.engine) {
         saveEngine = Engine.getInstance().dynamicCstr.getComponents();
         const features = Object.assign(
-          {}, saveEngine, Grammar.parseInput(attributes.engine));
+          {},
+          saveEngine,
+          Grammar.parseInput(attributes.engine)
+        );
         Engine.getInstance().setDynamicCstr(features as AxisMap);
         this.updateConstraint_();
       }
@@ -846,28 +855,39 @@ Engine.nodeEvaluator = SpeechRuleEngine.getInstance().evaluateNode.bind(
   SpeechRuleEngine.getInstance()
 );
 
+const punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
 
-let punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
-
-function processAnnotations(descrs: AuditoryDescription[]): AuditoryDescription[] {
-  let alist = new AuditoryList(descrs);
-  for (let item of alist.annotations) {
-    let descr = item.data;
+/**
+ *
+ * @param descrs
+ */
+function processAnnotations(
+  descrs: AuditoryDescription[]
+): AuditoryDescription[] {
+  const alist = new AuditoryList(descrs);
+  for (const item of alist.annotations) {
+    const descr = item.data;
     // Annotation processor
     if (descr.annotation === 'punctuation') {
-      let prev = alist.prevText(item);
+      const prev = alist.prevText(item);
       if (!prev) continue;
-      let last = prev.data;
-      if (last.annotation !== 'punctuation' && last.text !== '⠀' &&
-        descr.text.length === 1 && punctuationMarks.indexOf(descr.text) !== -1) {
-        descr.text = '⠸' + descr.text
+      const last = prev.data;
+      if (
+        last.annotation !== 'punctuation' &&
+        last.text !== '⠀' &&
+        descr.text.length === 1 &&
+        punctuationMarks.indexOf(descr.text) !== -1
+      ) {
+        descr.text = '⠸' + descr.text;
       }
     }
   }
   return alist.toList();
 }
 
-
+/**
+ *
+ */
 export function EngineInstance() {
   return SpeechRuleEngine.getInstance();
 }

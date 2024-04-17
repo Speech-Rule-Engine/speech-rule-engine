@@ -115,8 +115,8 @@ export class SsmlRenderer extends XmlRenderer {
       const id = Engine.getInstance().binaryFeatures.get('automark')
         ? span.attributes['id']
         : Engine.getInstance().binaryFeatures.get('mark')
-        ? span.attributes['extid']
-        : '';
+          ? span.attributes['extid']
+          : '';
       // TODO:
       //   * combine say as character
       //   * mark again with kind?

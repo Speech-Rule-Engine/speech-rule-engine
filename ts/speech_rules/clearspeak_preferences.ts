@@ -223,7 +223,10 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @param cstr The constraint mapping.
    * @param preference The preference.
    */
-  constructor(cstr: AxisMap, public preference: { [key: string]: string }) {
+  constructor(
+    cstr: AxisMap,
+    public preference: { [key: string]: string }
+  ) {
     super(cstr);
   }
 

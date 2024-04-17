@@ -95,6 +95,7 @@ export interface Numbers {
 }
 
 /**
+ * @param numbers
  * @returns A numbers structure.
  */
 export function NUMBERS(numbers: Numbers = {}): Numbers {

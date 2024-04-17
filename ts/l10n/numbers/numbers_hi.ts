@@ -143,11 +143,9 @@ function numericOrdinal(num: number): string {
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  'wordOrdinal': wordOrdinal,
+  'numericOrdinal': numericOrdinal,
+  'numberToWords': numberToWords,
+  'numberToOrdinal': numberToOrdinal
+});

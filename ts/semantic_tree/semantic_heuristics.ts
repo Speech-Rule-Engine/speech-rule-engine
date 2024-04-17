@@ -50,6 +50,7 @@ SemanticHeuristics.add(
 /**
  * Combines juxtapositions as much as possible.
  *
+ * @param _options
  * @param root The root of the juxtaposition tree.
  * @returns The updated node.
  */
@@ -90,7 +91,8 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().stringFeatures.get('domain') === 'clearspeak'
+    (_node: SemanticNode) =>
+      Engine.getInstance().stringFeatures.get('domain') === 'clearspeak'
   )
 );
 
@@ -111,7 +113,8 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().stringFeatures.get('domain') === 'clearspeak'
+    (_node: SemanticNode) =>
+      Engine.getInstance().stringFeatures.get('domain') === 'clearspeak'
   )
 );
 
@@ -131,7 +134,8 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().stringFeatures.get('domain') === 'clearspeak'
+    (_node: SemanticNode) =>
+      Engine.getInstance().stringFeatures.get('domain') === 'clearspeak'
   )
 );
 
@@ -142,56 +146,61 @@ SemanticHeuristics.add(
  */
 SemanticHeuristics.add(
   new SemanticTreeHeuristic(
-    'multioperator', (_options: SemanticOptions, node: SemanticNode) => {
+    'multioperator',
+    (_options: SemanticOptions, node: SemanticNode) => {
       if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
         return;
       }
       SemanticProcessor.compSemantics(node, 'role', SemanticRole);
       SemanticProcessor.compSemantics(node, 'type', SemanticType);
-    })
+    }
+  )
 );
 
 /**
  * Combines explicitly given juxtapositions.
  */
 SemanticHeuristics.add(
-  new SemanticMultiHeuristic('convert_juxtaposition', (options: SemanticOptions, nodes) => {
-    let partition = SemanticUtil.partitionNodes(nodes, function (x) {
-      return (
-        x.textContent === NamedSymbol.invisibleTimes &&
-        x.type === SemanticType.OPERATOR
+  new SemanticMultiHeuristic(
+    'convert_juxtaposition',
+    (options: SemanticOptions, nodes) => {
+      let partition = SemanticUtil.partitionNodes(nodes, function (x) {
+        return (
+          x.textContent === NamedSymbol.invisibleTimes &&
+          x.type === SemanticType.OPERATOR
+        );
+      });
+      // Preprocessing pre and postfixes.
+      partition = partition.rel.length
+        ? juxtapositionPrePost(options, partition)
+        : partition;
+      // TODO: Move to Util
+      nodes = partition.comp[0];
+      for (
+        let i = 1, c, r;
+        (c = partition.comp[i]), (r = partition.rel[i - 1]);
+        i++
+      ) {
+        nodes.push(r);
+        nodes = nodes.concat(c);
+      }
+      partition = SemanticUtil.partitionNodes(nodes, function (x) {
+        return (
+          x.textContent === NamedSymbol.invisibleTimes &&
+          (x.type === SemanticType.OPERATOR || x.type === SemanticType.INFIXOP)
+        );
+      });
+      if (!partition.rel.length) {
+        return nodes;
+      }
+      return recurseJuxtaposition(
+        options,
+        partition.comp.shift(),
+        partition.rel,
+        partition.comp
       );
-    });
-    // Preprocessing pre and postfixes.
-    partition = partition.rel.length
-      ? juxtapositionPrePost(options, partition)
-      : partition;
-    // TODO: Move to Util
-    nodes = partition.comp[0];
-    for (
-      let i = 1, c, r;
-      (c = partition.comp[i]), (r = partition.rel[i - 1]);
-      i++
-    ) {
-      nodes.push(r);
-      nodes = nodes.concat(c);
     }
-    partition = SemanticUtil.partitionNodes(nodes, function (x) {
-      return (
-        x.textContent === NamedSymbol.invisibleTimes &&
-        (x.type === SemanticType.OPERATOR || x.type === SemanticType.INFIXOP)
-      );
-    });
-    if (!partition.rel.length) {
-      return nodes;
-    }
-    return recurseJuxtaposition(
-      options,
-      partition.comp.shift(),
-      partition.rel,
-      partition.comp
-    );
-  })
+  )
 );
 
 /**
@@ -252,6 +261,7 @@ SemanticHeuristics.add(
  * Rewrites a partition with respect to explicit juxtapositions into one where
  * all multiple operators are combined to post or prefix operators.
  *
+ * @param options
  * @param partition The partition wrt. invisible
  *     times.
  * @returns The partition with collated pre/postfix
@@ -300,6 +310,7 @@ function juxtapositionPrePost(
 /**
  * Converts lists of invisible times operators into pre/postfix operatiors.
  *
+ * @param options
  * @param collect The collected list of invisible
  *     times.
  * @param next The next component element.
@@ -350,6 +361,7 @@ function convertPrePost(
  * of invisible times elements are processed. So all we have here are single
  * operators or infix operators of role implicit.
  *
+ * @param options
  * @param acc Elements to the left of the first
  *     implicit operation or application of an implicit operation. This serves
  *     as an accumulator during the recursion.
@@ -374,8 +386,10 @@ function recurseJuxtaposition(
   const left = acc.pop();
   const op = ops.shift();
   const first = elements.shift();
-  if (op.type === SemanticType.INFIXOP &&
-    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)) {
+  if (
+    op.type === SemanticType.INFIXOP &&
+    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)
+  ) {
     Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
     const right = (left ? [left, op] : [op]).concat(first);
@@ -476,6 +490,7 @@ SemanticHeuristics.add(
  * Unpacks implicit nodes and pushes them to the front of the node list. Assumes
  * that the first node of the given list is an implicit multiplication.
  *
+ * @param _options
  * @param nodes The list of nodes.
  */
 function implicitUnpack(_options: SemanticOptions, nodes: SemanticNode[]) {
@@ -491,7 +506,7 @@ SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'intvar_from_fraction',
     integralFractionArg,
-   (node: SemanticNode) => {
+    (node: SemanticNode) => {
       if (node.type !== SemanticType.INTEGRAL) return false;
       const [, integrand, intvar] = node.childNodes;
       return (
@@ -506,9 +521,13 @@ SemanticHeuristics.add(
  * If the integrand is a fraction and the integral variable is the enumerator it
  * adjusts its role to integral an possibly rewrites it into a prefix operator.
  *
+ * @param options
  * @param node The integral node.
  */
-function integralFractionArg(options: SemanticOptions, node: SemanticNode): void {
+function integralFractionArg(
+  options: SemanticOptions,
+  node: SemanticNode
+): void {
   const integrand = node.childNodes[1];
   const enumerator = integrand.childNodes[0];
   if (SemanticPred.isIntegralDxBoundarySingle(enumerator)) {
@@ -524,9 +543,7 @@ function integralFractionArg(options: SemanticOptions, node: SemanticNode): void
     return;
   }
   if (SemanticPred.isIntegralDxBoundary(first, second)) {
-    const prefix = SemanticProcessor.prefixNode(options, second, [
-      first
-    ]);
+    const prefix = SemanticProcessor.prefixNode(options, second, [first]);
     prefix.role = SemanticRole.INTEGRAL;
     if (length === 2) {
       integrand.childNodes[0] = prefix;
@@ -616,6 +633,7 @@ const rewritable: SemanticType[] = [
 
 /**
  *
+ * @param options
  * @param table
  */
 function rewriteSubcasesTable(options: SemanticOptions, table: SemanticNode) {
@@ -717,7 +735,6 @@ function rewriteFence(fence: SemanticNode): boolean {
   return true;
 }
 
-
 /**
  *  Tries to group ellipses and long bars.
  */
@@ -726,10 +743,15 @@ SemanticHeuristics.add(
     'ellipses',
     (_options: SemanticOptions, nodes: SemanticNode[]) => {
       // TODO: Test for simple elements?
-      let newNodes = [];
+      const newNodes = [];
       let current = nodes.shift();
       while (current) {
-        [current, nodes] = combineNodes(current, nodes, SemanticRole.FULLSTOP, SemanticRole.ELLIPSIS);
+        [current, nodes] = combineNodes(
+          current,
+          nodes,
+          SemanticRole.FULLSTOP,
+          SemanticRole.ELLIPSIS
+        );
         [current, nodes] = combineNodes(current, nodes, SemanticRole.DASH);
         newNodes.push(current);
         current = nodes.shift();
@@ -740,14 +762,20 @@ SemanticHeuristics.add(
   )
 );
 
+/**
+ *
+ * @param current
+ * @param nodes
+ * @param src
+ * @param target
+ */
 function combineNodes(
   current: SemanticNode,
   nodes: SemanticNode[],
   src: SemanticRole,
   target: SemanticRole = src
-):
-[SemanticNode, SemanticNode[]] {
-  let collect = [];
+): [SemanticNode, SemanticNode[]] {
+  const collect = [];
   while (current && current.role === src) {
     collect.push(current);
     current = nodes.shift();
@@ -758,11 +786,19 @@ function combineNodes(
   if (current) {
     nodes.unshift(current);
   }
-  return [(collect.length === 1) ? collect[0] : combinedNodes(collect, target), nodes];
+  return [
+    collect.length === 1 ? collect[0] : combinedNodes(collect, target),
+    nodes
+  ];
 }
 
+/**
+ *
+ * @param nodes
+ * @param role
+ */
 function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
-  let node = SemanticHeuristics.factory.makeBranchNode(
+  const node = SemanticHeuristics.factory.makeBranchNode(
     SemanticType.PUNCTUATION,
     nodes,
     []

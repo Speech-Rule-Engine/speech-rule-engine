@@ -161,11 +161,9 @@ function numericOrdinal(num: number): string {
   return str + (str.match(/1$|2$/) ? ':a' : ':e');
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  'wordOrdinal': wordOrdinal,
+  'numericOrdinal': numericOrdinal,
+  'numberToWords': numberToWords,
+  'numberToOrdinal': numberToOrdinal
+});
