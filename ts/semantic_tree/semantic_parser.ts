@@ -19,10 +19,26 @@
  */
 
 import { SemanticNode } from './semantic_node.js';
-
 import { SemanticNodeFactory } from './semantic_node_factory.js';
+import { SemanticOptions } from './semantic_options.js';
 
 export interface SemanticParser<T> {
+
+  /**
+   * The semantic options object for the parser.
+   */
+  readonly options: SemanticOptions;
+  
+  /**
+   * A new node factory for the parser.
+   */
+  readonly factory: SemanticNodeFactory;
+  
+  /**
+   * The kind of parser.
+   */
+  readonly kind: string;
+
   /**
    * The parse method of this parser.
    *
@@ -41,55 +57,40 @@ export interface SemanticParser<T> {
    */
   parseList(list: T[]): SemanticNode[];
 
-  /**
-   * @returns The node factory of the parser.
-   */
-  getFactory(): SemanticNodeFactory;
+}
 
-  /**
-   * @param factory A new node factory for the parser.
-   */
-  setFactory(factory: SemanticNodeFactory): void;
+export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
 
   /**
    * @returns The type of the parser.
    */
-  getType(): string;
-}
-
-export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
-  private factory_: SemanticNodeFactory = new SemanticNodeFactory();
+  public get kind() {
+    return this._kind; 
+  }
 
   /**
-   * @param type The type of the parser.
+   * @returns The options elements of the parser.
    */
-  constructor(private type: string) {}
+  public get options() {
+    return this._options; 
+  }
+
+  /**
+   * @returns The node factory of the parser.
+   */
+  public get factory() {
+    return this.options.factory; 
+  }
+
+  /**
+   * @param _kind The type of the parser.
+   */
+  constructor(private _kind: string, private _options: SemanticOptions) {}
 
   /**
    * @override
    */
   public abstract parse(representation: T): SemanticNode;
-
-  /**
-   * @override
-   */
-  public getFactory() {
-    return this.factory_;
-  }
-
-  /**
-   * @override
-   */
-  public setFactory(factory: SemanticNodeFactory) {
-    this.factory_ = factory;
-  }
-
-  /**
-   * @override
-   */
-  public getType() {
-    return this.type;
-  }
 
   /**
    * @override
@@ -101,4 +102,5 @@ export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
     }
     return result;
   }
+
 }

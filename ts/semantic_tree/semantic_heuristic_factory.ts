@@ -23,20 +23,9 @@ import {
   SemanticHeuristic,
   SemanticHeuristicTypes
 } from './semantic_heuristic.js';
-import { SemanticNodeFactory } from './semantic_node_factory.js';
 import { SemanticOptions } from './semantic_options.js';
 
 export const SemanticHeuristics = {
-  factory: null as SemanticNodeFactory,
-
-  /**
-   * Updates the semantic node factory.
-   *
-   * @param nodeFactory The new semantic node factory.
-   */
-  updateFactory: function (nodeFactory: SemanticNodeFactory) {
-    SemanticHeuristics.factory = nodeFactory;
-  },
 
   heuristics: new Map<string, SemanticHeuristic<SemanticHeuristicTypes>>(),
 

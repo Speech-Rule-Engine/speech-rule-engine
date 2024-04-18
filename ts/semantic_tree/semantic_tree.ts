@@ -131,13 +131,13 @@ export class SemanticTree {
    */
   constructor(public mathml: Element) {
     this.root = this.parser.parse(mathml);
-    this.collator = this.parser.getFactory().leafMap.collateMeaning();
+    this.collator = this.parser.factory.leafMap.collateMeaning();
 
     const newDefault = this.collator.newDefault();
     if (newDefault) {
       // Reparse!
       this.parser = new SemanticMathml();
-      this.parser.getFactory().defaultMap = newDefault;
+      this.parser.factory.defaultMap = newDefault;
       this.root = this.parser.parse(mathml);
     }
     unitVisitor.visit(this.root, {});
@@ -145,7 +145,7 @@ export class SemanticTree {
     annotate(this.root);
     // TODO(cc): This is temporary until we have a full options object passed
     //           around.
-    Engine.getInstance().counter = this.parser.getFactory().idCounter;
+    Engine.getInstance().counter = this.parser.factory.idCounter;
   }
 
   /**

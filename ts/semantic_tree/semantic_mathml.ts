@@ -34,7 +34,6 @@ import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
-  public options: SemanticOptions = new SemanticOptions();
 
   private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
 
@@ -66,7 +65,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * The semantic parser for MathML elements.
    */
   constructor() {
-    super('MathML');
+    super('MathML', new SemanticOptions());
     this.parseMap_ = new Map([
       [MMLTAGS.SEMANTICS, this.semantics_.bind(this)],
       [MMLTAGS.MATH, this.rows_.bind(this)],
@@ -121,9 +120,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       'ℝ',
       'ℤ'
     ].forEach(
-      ((x: string) => this.getFactory().defaultMap.set(x, meaning)).bind(this)
+      ((x: string) => this.factory.defaultMap.set(x, meaning)).bind(this)
     );
-    this.options.factory = this.getFactory();
+    this.options.factory = this.factory;
   }
 
   /**
@@ -162,7 +161,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   private semantics_(_node: Element, children: Element[]): SemanticNode {
     return children.length
       ? this.parse(children[0])
-      : this.getFactory().makeEmptyNode();
+      : this.factory.makeEmptyNode();
   }
 
   /**
@@ -210,12 +209,12 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   private fraction_(node: Element, children: Element[]): SemanticNode {
     if (!children.length) {
-      return this.getFactory().makeEmptyNode();
+      return this.factory.makeEmptyNode();
     }
     const upper = this.parse(children[0]);
     const lower = children[1]
       ? this.parse(children[1])
-      : this.getFactory().makeEmptyNode();
+      : this.factory.makeEmptyNode();
     const sem = SemanticProcessor.fractionLikeNode(
       this.options,
       upper,
@@ -252,7 +251,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     if (!children[1]) {
       return this.sqrt_(node, children);
     }
-    return this.getFactory().makeBranchNode(
+    return this.factory.makeBranchNode(
       SemanticType.ROOT,
       [this.parse(children[1]), this.parse(children[0])],
       []
@@ -268,7 +267,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   private sqrt_(_node: Element, children: Element[]): SemanticNode {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
-    return this.getFactory().makeBranchNode(
+    return this.factory.makeBranchNode(
       SemanticType.SQRT,
       [SemanticProcessor.row(this.options, semNodes)],
       []
@@ -292,7 +291,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
         this.parseList.bind(this)
       );
     }
-    const newNode = this.getFactory().makeBranchNode(
+    const newNode = this.factory.makeBranchNode(
       SemanticType.TABLE,
       this.parseList(children),
       []
@@ -309,7 +308,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private tableRow_(_node: Element, children: Element[]): SemanticNode {
-    const newNode = this.getFactory().makeBranchNode(
+    const newNode = this.factory.makeBranchNode(
       SemanticType.ROW,
       this.parseList(children),
       []
@@ -331,7 +330,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     }
     const label = this.parse(children[0]);
     label.role = SemanticRole.LABEL;
-    const newNode = this.getFactory().makeBranchNode(
+    const newNode = this.factory.makeBranchNode(
       SemanticType.ROW,
       this.parseList(children.slice(1)),
       [label]
@@ -363,7 +362,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     } else {
       childNodes = [SemanticProcessor.row(this.options, semNodes)];
     }
-    const newNode = this.getFactory().makeBranchNode(
+    const newNode = this.factory.makeBranchNode(
       SemanticType.CELL,
       childNodes,
       []
@@ -401,7 +400,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     if (!size || isNaN(measure) || measure < size) {
       return this.empty_(node, children);
     }
-    const newNode = this.getFactory().makeUnprocessed(node);
+    const newNode = this.factory.makeUnprocessed(node);
     return SemanticProcessor.text(this.options, newNode, DomUtil.tagName(node));
   }
 
@@ -496,7 +495,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   private enclosed_(node: Element, children: Element[]): SemanticNode {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
-    const newNode = this.getFactory().makeBranchNode(
+    const newNode = this.factory.makeBranchNode(
       SemanticType.ENCLOSE,
       [SemanticProcessor.row(this.options, semNodes)],
       []
@@ -516,7 +515,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   private multiscripts_(_node: Element, children: Element[]): SemanticNode {
     // Empty node. Illegal MathML markup, but valid in MathJax.
     if (!children.length) {
-      return this.getFactory().makeEmptyNode();
+      return this.factory.makeEmptyNode();
     }
     const base = this.parse(children.shift() as Element);
     if (!children.length) {
@@ -576,7 +575,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private empty_(_node: Element, _children: Element[]): SemanticNode {
-    return this.getFactory().makeEmptyNode();
+    return this.factory.makeEmptyNode();
   }
 
   /**
@@ -606,7 +605,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private dummy_(node: Element, _children: Element[]): SemanticNode {
-    const unknown = this.getFactory().makeUnprocessed(node);
+    const unknown = this.factory.makeUnprocessed(node);
     unknown.role = node.tagName as SemanticRole;
     unknown.textContent = node.textContent;
     return unknown;
@@ -626,13 +625,13 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     ) {
       // Case of a leaf that contains another node. Only in the case of text (or
       // string) nodes we process this further.
-      const node = this.getFactory().makeUnprocessed(mml);
+      const node = this.factory.makeUnprocessed(mml);
       node.role = children[0].tagName as SemanticRole;
       SemanticUtil.addAttributes(node, children[0]);
       return node;
     }
     // Save latex here if possible
-    const node = this.getFactory().makeLeafNode(
+    const node = this.factory.makeLeafNode(
       mml.textContent,
       SemanticProcessor.font(mml.getAttribute('mathvariant'))
     );

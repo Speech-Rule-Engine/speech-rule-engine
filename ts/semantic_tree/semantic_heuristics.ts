@@ -405,7 +405,7 @@ function recurseJuxtaposition(
     // Attach to the next operator, which must be an infix operation, As there
     // are no more double operators. Left also exists. Cases that left is an
     // implicit infix or simple.
-    const newOp = SemanticHeuristics.factory.makeBranchNode(
+    const newOp = options.factory.makeBranchNode(
       SemanticType.INFIXOP,
       [left, ops.shift()],
       [op],
@@ -461,7 +461,7 @@ function recurseJuxtaposition(
   } else {
     // Create new implicit node.
     Debugger.getInstance().output('Juxta Heuristic Case 8');
-    result = SemanticHeuristics.factory.makeBranchNode(
+    result = options.factory.makeBranchNode(
       SemanticType.INFIXOP,
       [left, right],
       [op],
@@ -741,18 +741,19 @@ function rewriteFence(fence: SemanticNode): boolean {
 SemanticHeuristics.add(
   new SemanticMultiHeuristic(
     'ellipses',
-    (_options: SemanticOptions, nodes: SemanticNode[]) => {
+    (options: SemanticOptions, nodes: SemanticNode[]) => {
       // TODO: Test for simple elements?
       const newNodes = [];
       let current = nodes.shift();
       while (current) {
         [current, nodes] = combineNodes(
+          options,
           current,
           nodes,
           SemanticRole.FULLSTOP,
           SemanticRole.ELLIPSIS
         );
-        [current, nodes] = combineNodes(current, nodes, SemanticRole.DASH);
+        [current, nodes] = combineNodes(options, current, nodes, SemanticRole.DASH);
         newNodes.push(current);
         current = nodes.shift();
       }
@@ -770,6 +771,7 @@ SemanticHeuristics.add(
  * @param target
  */
 function combineNodes(
+  options: SemanticOptions,
   current: SemanticNode,
   nodes: SemanticNode[],
   src: SemanticRole,
@@ -787,7 +789,7 @@ function combineNodes(
     nodes.unshift(current);
   }
   return [
-    collect.length === 1 ? collect[0] : combinedNodes(collect, target),
+    collect.length === 1 ? collect[0] : combinedNodes(options, collect, target),
     nodes
   ];
 }
@@ -797,8 +799,8 @@ function combineNodes(
  * @param nodes
  * @param role
  */
-function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
-  const node = SemanticHeuristics.factory.makeBranchNode(
+function combinedNodes(options: SemanticOptions, nodes: SemanticNode[], role: SemanticRole) {
+  const node = options.factory.makeBranchNode(
     SemanticType.PUNCTUATION,
     nodes,
     []
