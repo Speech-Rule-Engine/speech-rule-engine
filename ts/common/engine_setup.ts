@@ -23,6 +23,8 @@ import * as MathMap from '../speech_rules/math_map.js';
 import * as BrowserUtil from './browser_util.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
+import * as EngineConst from './engine_const.js';
+import { EngineFixtures } from './engine_fixtures.js';
 import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
 
@@ -125,7 +127,7 @@ export function setupSync(feature: { [key: string]: boolean | string }) {
     }
   };
   if (feature['mode']) {
-    engine.mode = feature['mode'];
+    EngineFixtures.getInstance().mode = feature['mode'] as EngineConst.Mode;
   }
   engine.configurate(feature);
   Engine.BINARY_FEATURES.forEach(setIf);
@@ -140,7 +142,7 @@ export function setupSync(feature: { [key: string]: boolean | string }) {
     SystemExternal.WGXpath = feature.xpath as string;
   }
   engine.setCustomLoader(feature.custom);
-  setupBrowsers(engine);
+  setupBrowsers();
   L10n.setLocale();
   engine.setDynamicCstr();
 }
@@ -151,7 +153,7 @@ export function setupSync(feature: { [key: string]: boolean | string }) {
  * @param engine The Engine object.
  * @deprecated
  */
-function setupBrowsers(engine: Engine) {
-  engine.isIE = BrowserUtil.detectIE();
-  engine.isEdge = BrowserUtil.detectEdge();
+function setupBrowsers() {
+  EngineFixtures.getInstance().isIE = BrowserUtil.detectIE();
+  EngineFixtures.getInstance().isEdge = BrowserUtil.detectEdge();
 }

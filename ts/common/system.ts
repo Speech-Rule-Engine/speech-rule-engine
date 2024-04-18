@@ -20,7 +20,9 @@
 
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
-import { Engine, EnginePromise, SREError } from './engine.js';
+import { Engine, EnginePromise } from './engine.js';
+import { SREError } from './engine_error.js';
+import { EngineFixtures } from './engine_fixtures.js';
 import { setup } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
@@ -281,14 +283,14 @@ export function processFile(
   input: string,
   opt_output?: string
 ) {
-  switch (Engine.getInstance().mode) {
+  switch (EngineFixtures.getInstance().mode) {
     case EngineConst.Mode.ASYNC:
       return processFileAsync(processor, input, opt_output);
     case EngineConst.Mode.SYNC:
       return processFileSync(processor, input, opt_output);
     default:
       throw new SREError(
-        `Can process files in ${Engine.getInstance().mode} mode`
+        `Can process files in ${EngineFixtures.getInstance().mode} mode`
       );
   }
 }

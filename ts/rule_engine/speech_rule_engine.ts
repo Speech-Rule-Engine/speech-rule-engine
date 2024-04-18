@@ -37,6 +37,7 @@ import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
+import { EngineFixtures } from '../common/engine_fixtures.js';
 import * as EngineConst from '../common/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
@@ -312,7 +313,9 @@ export class SpeechRuleEngine {
     const engine = Engine.getInstance();
     let result: AuditoryDescription[];
     Debugger.getInstance().output(
-      engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
+      EngineFixtures.getInstance().mode !== EngineConst.Mode.HTTP ?
+        node.toString() :
+        node
     );
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
@@ -333,7 +336,7 @@ export class SpeechRuleEngine {
       'Apply Rule:',
       rule.name,
       rule.dynamicCstr.toString(),
-      engine.mode === EngineConst.Mode.HTTP
+      EngineFixtures.getInstance().mode === EngineConst.Mode.HTTP
         ? DomUtil.serializeXml(node)
         : node.toString()
     ]);

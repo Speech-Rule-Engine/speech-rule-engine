@@ -22,6 +22,8 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 import * as EngineConst from './engine_const.js';
+import { EngineFixtures } from './engine_fixtures.js';
+import { EngineOptions } from './engine_options.js';
 
 import { Debugger } from './debugger.js';
 import { Variables } from './variables.js';
@@ -33,29 +35,13 @@ export type SreFeature = {
 declare const SREfeature: SreFeature;
 
 /**
- * The base error class for signaling SRE errors.
- *
- * @param msg The error message.
- */
-export class SREError extends Error {
-  /**
-   * @override
-   */
-  public name = 'SRE Error';
-
-  /**
-   * @param message The error Message.
-   */
-  constructor(public message: string = '') {
-    super();
-  }
-}
-
-/**
  * Initializes the basic Speech engine and contains some global context.
  *
  */
 export class Engine {
+
+  public options: EngineOptions = new EngineOptions();
+
   /**
    * Binary feature vector.
    */
@@ -176,21 +162,6 @@ export class Engine {
   public comparator: Dcstr.Comparator = null;
 
   /**
-   * The mode in which the engine is running (sync, async, http).
-   */
-  public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
-
-  /**
-   * Init flag, initially set true. Set to false after first setup.
-   */
-  public init = true;
-
-  /**
-   * Delay flag, to avoid auto setup of engine.
-   */
-  public delay = false;
-
-  /**
    * Maps domains to comparators.
    */
   public comparators: { [key: string]: () => Dcstr.Comparator } = {};
@@ -200,16 +171,7 @@ export class Engine {
    */
   public ruleSets: string[] = [];
 
-  /**
-   * Current browser is MS Internet Explorer but not Edge.
-   */
-  public isIE = false;
-
-  /**
-   * Current browser is MS Edge.
-   */
-  public isEdge = false;
-
+  // TODO(cc): This should only be called once and move to fixtures.
   /**
    * True if configuration block has been applied in HTTP mode.
    */
@@ -227,7 +189,7 @@ export class Engine {
 
   // TODO(cc): This is temporary until we have a full options object passed
   //           around.
-  public counter = 0;
+  // public counter = 0;
 
   /**
    * @returns The Engine object.
@@ -336,7 +298,7 @@ export class Engine {
    * @param feature An object describing some setup features.
    */
   public configurate(feature: { [key: string]: boolean | string }) {
-    if (this.mode === EngineConst.Mode.HTTP && !this.config) {
+    if (EngineFixtures.getInstance().mode === EngineConst.Mode.HTTP && !this.config) {
       configBlocks(feature);
       this.config = true;
     }
@@ -356,7 +318,7 @@ export class Engine {
 
   public engineSetup(): { [key: string]: boolean | string } {
     const features: { [key: string]: string | boolean } = {
-      'mode': this.mode
+      'mode': EngineFixtures.getInstance().mode
     };
     Engine.BINARY_FEATURES.forEach(function (x) {
       features[x] = this.binaryFeatures.get(x);
@@ -368,6 +330,7 @@ export class Engine {
   }
 }
 
+// TODO(cc): This should only be called once and move to fixtures.
 /**
  * Reads configuration blocks and adds them to the feature vector.
  *

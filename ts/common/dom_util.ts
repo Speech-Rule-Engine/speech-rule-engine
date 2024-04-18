@@ -22,7 +22,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine, SREError } from './engine.js';
+import { EngineFixtures } from './engine_fixtures.js';
+import { SREError } from './engine_error.js';
 import * as EngineConst from '../common/engine_const.js';
 import { SystemExternal } from './system_external.js';
 import * as XpathUtil from './xpath_util.js';
@@ -71,7 +72,7 @@ export function parseInput(input: string): Element {
       clean_input,
       html ? 'text/html' : 'text/xml'
     );
-    if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
+    if (EngineFixtures.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.xpath.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;
     }
@@ -80,21 +81,6 @@ export function parseInput(input: string): Element {
     throw new SREError('Illegal input: ' + err.message);
   }
 }
-
-// let extIdCount = 0;
-// function addMarkers(node: Element) {
-//   if (Engine.getInstance().automark && tagName(node) !== 'STREE') {
-//     extIdCount = 0;
-//     addExtId(node);
-//   }
-//   return node;
-// }
-// function addExtId(node: Element) {
-//   if (node.nodeType === NodeType.ELEMENT_NODE) {
-//     node.setAttribute('extid', (extIdCount++).toString());
-//     toArray(node.childNodes).forEach(addExtId);
-//   }
-// }
 
 /**
  * Missing Node interface.

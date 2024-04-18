@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SREError } from '../common/engine.js';
+import { SREError } from '../common/engine_error.js';
 import * as EngineConst from '../common/engine_const.js';
 import * as AudioUtil from './audio_util.js';
 import { AuditoryDescription } from './auditory_description.js';

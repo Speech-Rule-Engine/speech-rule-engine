@@ -22,8 +22,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine } from './engine.js';
 import * as EngineConst from '../common/engine_const.js';
+import { EngineFixtures } from './engine_fixtures.js';
 import { SystemExternal } from './system_external.js';
 
 /**
@@ -114,9 +114,9 @@ function evaluateXpath(
   rootNode: Node,
   type: number
 ): XPathResult {
-  return Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-    !Engine.getInstance().isIE &&
-    !Engine.getInstance().isEdge
+  return EngineFixtures.getInstance().mode === EngineConst.Mode.HTTP &&
+    !EngineFixtures.getInstance().isIE &&
+    !EngineFixtures.getInstance().isEdge
     ? xpath.currentDocument.evaluate(
         expression,
         rootNode,
@@ -202,7 +202,7 @@ export function evaluateString(expression: string, rootNode: Node): string {
  * @param node The target node that is to be evaluated.
  */
 export function updateEvaluator(node: Element) {
-  if (Engine.getInstance().mode !== EngineConst.Mode.HTTP) return;
+  if (EngineFixtures.getInstance().mode !== EngineConst.Mode.HTTP) return;
   let parent = node as any as Document;
   while (parent && !parent.evaluate) {
     parent = parent.parentNode as Document;

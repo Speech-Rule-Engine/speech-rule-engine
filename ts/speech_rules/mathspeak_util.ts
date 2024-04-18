@@ -33,7 +33,7 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
-import { SemanticOptions } from '../semantic_tree/semantic_options.js';
+// import { SemanticOptions } from '../semantic_tree/semantic_options.js';
 import { identifierNode } from '../semantic_tree/semantic_processor.js';
 
 // import * as NumbersUtil from './numbers_util.js';
@@ -72,10 +72,10 @@ function spaceoutNodes(
   const content = Array.from(node.textContent);
   const result = [];
   const doc = node.ownerDocument;
-  const options = new SemanticOptions();
+  const options = Engine.getInstance().options.semantic;
   // TODO(cc): This is temporary until we have a full options object passed
   //           around.
-  options.factory.idCounter = Engine.getInstance().counter++;
+  // options.factory.idCounter = Engine.getInstance().counter++;
   for (let i = 0, chr; (chr = content[i]); i++) {
     const leaf = options.factory.makeLeafNode(chr, SemanticFont.UNKNOWN);
     const sn = identifierNode(options, leaf, SemanticFont.UNKNOWN, '');
@@ -84,7 +84,7 @@ function spaceoutNodes(
   }
   // TODO(cc): This is temporary until we have a full options object passed
   //           around.
-  Engine.getInstance().counter = options.factory.idCounter;
+  // Engine.getInstance().counter = options.factory.idCounter;
   return result as Element[];
 }
 

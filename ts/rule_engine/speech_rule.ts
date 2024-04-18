@@ -28,7 +28,7 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { SREError } from '../common/engine.js';
+import { SREError } from '../common/engine_error.js';
 import { DynamicCstr } from './dynamic_cstr.js';
 import * as Grammar from './grammar.js';
 import { SpeechRuleContext } from './speech_rule_context.js';

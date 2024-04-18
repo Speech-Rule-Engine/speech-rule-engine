@@ -23,6 +23,7 @@
 
 import * as BrowserUtil from '../common/browser_util.js';
 import { Engine, EnginePromise } from '../common/engine.js';
+import { EngineFixtures } from '../common/engine_fixtures.js';
 import * as EngineConst from '../common/engine_const.js';
 import * as FileUtil from '../common/file_util.js';
 import { SystemExternal } from '../common/system_external.js';
@@ -127,7 +128,7 @@ function loadMethod() {
  * fall back method.
  */
 export function standardLoader() {
-  switch (Engine.getInstance().mode) {
+  switch (EngineFixtures.getInstance().mode) {
     case EngineConst.Mode.ASYNC:
       return loadFile;
     case EngineConst.Mode.HTTP:
@@ -209,8 +210,8 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
  */
 function retrieveMaps(locale: string) {
   if (
-    Engine.getInstance().isIE &&
-    Engine.getInstance().mode === EngineConst.Mode.HTTP
+    EngineFixtures.getInstance().isIE &&
+    EngineFixtures.getInstance().mode === EngineConst.Mode.HTTP
   ) {
     getJsonIE_(locale);
     return;

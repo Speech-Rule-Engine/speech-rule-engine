@@ -145,7 +145,7 @@ export class SemanticTree {
     annotate(this.root);
     // TODO(cc): This is temporary until we have a full options object passed
     //           around.
-    Engine.getInstance().counter = this.parser.factory.idCounter;
+    Engine.getInstance().options.semantic = this.parser.options;
   }
 
   /**
