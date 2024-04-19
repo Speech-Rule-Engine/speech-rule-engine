@@ -91,7 +91,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
  * @returns The promise that resolves once setup is complete.
  */
 export async function setup(feature: { [key: string]: boolean | string }) {
-  const engine = Engine.getInstance() as any;
+  const engine = EngineFixtures.getInstance();
   setupSync(feature);
   // We add a break in the execution flow so custom loaders can set up.
   if (engine.init) {
@@ -111,11 +111,14 @@ export async function setup(feature: { [key: string]: boolean | string }) {
 }
 
 /**
+ * Method to setup and initialize the speech rule engine. This takes care of all
+ * the synchronous features.
  *
+ * @param feature An object describing some setup features.
  */
 export function setupSync(feature: { [key: string]: boolean | string }) {
   ensureDomain(feature);
-  const engine = Engine.getInstance() as any;
+  const engine = Engine.getInstance();
   const setIf = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
       engine.binaryFeatures.set(feat, !!feature[feat]);
@@ -123,7 +126,7 @@ export function setupSync(feature: { [key: string]: boolean | string }) {
   };
   const setMulti = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
-      engine.stringFeatures.set(feat, feature[feat]);
+      engine.stringFeatures.set(feat, feature[feat] as string);
     }
   };
   if (feature['mode']) {
