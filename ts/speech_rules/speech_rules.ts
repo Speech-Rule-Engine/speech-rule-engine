@@ -18,7 +18,9 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import * as EngineConst from '../common/engine_const.js';
+import { EngineFeatures } from '../common/engine_features.js';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions.js';
 
 /**
@@ -64,7 +66,7 @@ export function getStore(
   return (
     funcStore.get([locale, modality, domain].join('.')) ||
     funcStore.get(
-      [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
+      [EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE), modality, domain].join('.')
     ) ||
     funcStore.get([DynamicCstr.BASE_LOCALE, modality, domain].join('.')) ||
     {}

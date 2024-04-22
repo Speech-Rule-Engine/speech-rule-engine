@@ -48,8 +48,8 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
  *
  */
 function getRenderer() {
-  const markup = Engine.getInstance().stringFeatures.get(
-    'markup'
+  const markup = Engine.getInstance().features.get(
+    EngineConst.Features.MARKUP
   ) as EngineConst.Markup;
   return renderers.get(markup);
 }

@@ -76,7 +76,53 @@ export enum Markup {
 /**
  * Maps domains to their default style.
  */
-export const DOMAIN_TO_STYLES: { [key: string]: string } = {
+export const DomainToStyles: { [key: string]: string } = {
   mathspeak: 'default',
   clearspeak: 'default'
 };
+
+
+  /**
+   * Binary features.
+   */
+export enum BinaryFeatures {
+  AUTOMARK = 'automark',
+  MARK = 'mark',
+  CHARACTER = 'character',
+  CLEANPAUSE = 'cleanpause',
+  STRICT = 'strict',
+  STRUCTURE = 'structure',
+  ARIA = 'aria',
+  PPRINT = 'pprint',
+  CAYLEYSHORT = 'cayleyshort',
+  LINEBREAKS = 'linebreaks'
+}
+
+/**
+ * String features.
+ */
+export enum StringFeatures {
+    MARKUP = 'markup',
+    SPEECH = 'speech',
+    WALKER = 'walker',
+    DEFAULTLOCALE = 'defaultLocale',
+    RATE = 'rate',
+    RULES = 'rules',
+    SUBISO = 'subiso',
+    PRUNE = 'prune'
+}
+
+export enum Axis {
+  LOCALE = 'locale',
+  MODALITY = 'modality',
+  STYLE = 'style',
+  DOMAIN = 'domain',
+  TOPIC = 'topic',
+}
+
+export const Features = {
+  ...Axis,
+  ...BinaryFeatures,
+  ...StringFeatures  
+}
+  

@@ -20,12 +20,12 @@
 
 import { Engine } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
-import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import { EngineFeatures } from '../common/engine_features.js';
 import {
-  Axis,
   AxisMap,
   AxisProperties,
   DefaultComparator,
+  DynamicCstr,
   DynamicCstrParser,
   DynamicProperties
 } from '../rule_engine/dynamic_cstr.js';
@@ -49,10 +49,10 @@ export class ClearspeakPreferences extends DynamicCstr {
     return new Comparator(
       Engine.getInstance().dynamicCstr,
       DynamicProperties.createProp(
-        [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]],
-        [DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]],
-        [DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]],
-        [DynamicCstr.DEFAULT_VALUES[Axis.STYLE]]
+        [EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE)],
+        [EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY)],
+        [EngineFeatures.getDefaultString(EngineConst.Axis.DOMAIN)],
+        [EngineFeatures.getDefaultString(EngineConst.Axis.STYLE)]
       )
     );
   }
@@ -78,9 +78,9 @@ export class ClearspeakPreferences extends DynamicCstr {
       if (
         value &&
         value !== ClearspeakPreferences.AUTO &&
-        properties[pair[0] as Axis].indexOf(value) !== -1
+        properties[pair[0] as EngineConst.Axis].indexOf(value) !== -1
       ) {
-        preferences[pair[0]] = pair[1];
+        preferences[pair[0] as EngineConst.Axis] = pair[1];
       }
     }
     return preferences;
@@ -98,7 +98,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     const keys = Object.keys(pref);
     const str = [];
     for (let i = 0; i < keys.length; i++) {
-      str.push(keys[i] + '_' + pref[keys[i]]);
+      str.push(keys[i] + '_' + pref[keys[i] as EngineConst.Axis]);
     }
     return str.length ? str.join(':') : DynamicCstr.DEFAULT_VALUE;
   }
@@ -125,7 +125,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * Returns the current clearspeak styles selection, if any is set.
    */
   public static currentPreference() {
-    return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
+    return EngineConst.DomainToStyles['clearspeak'];
   }
 
   /**
@@ -140,7 +140,8 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (!roles) {
       return 'ImpliedTimes';
     }
-    return roles[node.role] || roles[''] || 'ImpliedTimes';
+    return roles[node.role as unknown as EngineConst.Axis] ||
+      roles['' as EngineConst.Axis] || 'ImpliedTimes';
   }
 
   /**
@@ -156,7 +157,7 @@ export class ClearspeakPreferences extends DynamicCstr {
       return ClearspeakPreferences.AUTO;
     }
     const parsed = ClearspeakPreferences.fromPreference(prefs);
-    return parsed[kind] || ClearspeakPreferences.AUTO;
+    return parsed[kind as EngineConst.Axis] || ClearspeakPreferences.AUTO;
   }
 
   /**
@@ -178,7 +179,7 @@ export class ClearspeakPreferences extends DynamicCstr {
       return kind + '_' + value;
     }
     const parsed = ClearspeakPreferences.fromPreference(prefs);
-    parsed[kind] = value;
+    parsed[kind as EngineConst.Axis] = value;
     return ClearspeakPreferences.toPreference(parsed);
   }
 
@@ -204,7 +205,7 @@ export class ClearspeakPreferences extends DynamicCstr {
       if (locPrefs.length < 3) continue; // Remove languages with no real CS
       const prefs: AxisProperties = (result[locale] = {});
       for (const axis in PREFERENCES.getProperties()) {
-        const allSty = PREFERENCES.getProperties()[axis];
+        const allSty = PREFERENCES.getProperties()[axis as EngineConst.Axis];
         const values = [axis + '_Auto'];
         if (allSty) {
           for (const sty of allSty) {
@@ -213,7 +214,7 @@ export class ClearspeakPreferences extends DynamicCstr {
             }
           }
         }
-        prefs[axis] = values;
+        prefs[axis as EngineConst.Axis] = values;
       }
     }
     return result;
@@ -331,7 +332,7 @@ const PREFERENCES = new DynamicProperties({
     'Reciprocal'
   ],
   'VerticalLine': ['Auto', 'Divides', 'Given', 'SuchThat']
-});
+} as AxisProperties);
 
 class Comparator extends DefaultComparator {
   /**
@@ -356,12 +357,12 @@ class Comparator extends DefaultComparator {
     if (!(cstr instanceof ClearspeakPreferences)) {
       return super.match(cstr);
     }
-    if (cstr.getComponents()[Axis.STYLE] === 'default') {
+    if (cstr.getComponents()[EngineConst.Axis.STYLE] === 'default') {
       return true;
     }
     const keys = Object.keys(cstr.preference);
     for (let i = 0, key; (key = keys[i]); i++) {
-      if (this.preference[key] !== cstr.preference[key]) {
+      if (this.preference[key as EngineConst.Axis] !== cstr.preference[key]) {
         return false;
       }
     }
@@ -402,7 +403,7 @@ class Parser extends DynamicCstrParser {
    * @override
    */
   constructor() {
-    super([Axis.LOCALE, Axis.MODALITY, Axis.DOMAIN, Axis.STYLE]);
+    super([EngineConst.Axis.LOCALE, EngineConst.Axis.MODALITY, EngineConst.Axis.DOMAIN, EngineConst.Axis.STYLE]);
   }
 
   /**
@@ -410,9 +411,9 @@ class Parser extends DynamicCstrParser {
    */
   public parse(str: string) {
     const initial = super.parse(str);
-    let style = initial.getValue(Axis.STYLE);
-    const locale = initial.getValue(Axis.LOCALE);
-    const modality = initial.getValue(Axis.MODALITY);
+    let style = initial.getValue(EngineConst.Axis.STYLE);
+    const locale = initial.getValue(EngineConst.Axis.LOCALE);
+    const modality = initial.getValue(EngineConst.Axis.MODALITY);
     let pref = {};
     if (style !== DynamicCstr.DEFAULT_VALUE) {
       pref = this.fromPreference(style);
@@ -506,7 +507,7 @@ const SEMANTIC_MAPPING_: { [key: string]: AxisMap } = (function () {
       role = {};
       result[triple[1]] = role;
     }
-    role[triple[2]] = pref;
+    role[triple[2] as EngineConst.Axis] = pref;
   }
   return result;
 })();

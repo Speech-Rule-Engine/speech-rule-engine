@@ -25,7 +25,8 @@
  */
 
 import { Engine } from '../common/engine.js';
-import { Axis, DynamicCstr } from './dynamic_cstr.js';
+import * as EngineConst from '../common/engine_const.js';
+import { DynamicCstr } from './dynamic_cstr.js';
 
 export interface MappingsJson {
   default: { [key: string]: string };
@@ -97,7 +98,7 @@ export class MathSimpleStore {
     dynamic: DynamicCstr,
     rule: SimpleRule
   ): boolean {
-    if (Engine.getInstance().binaryFeatures.get('strict')) {
+    if (Engine.getInstance().features.get(EngineConst.BinaryFeatures.STRICT)) {
       return rule.cstr.equal(dynamic);
     }
     return Engine.getInstance().comparator.match(rule.cstr);
@@ -177,7 +178,7 @@ export class MathSimpleStore {
    * @override
    */
   public lookupRule(_node: Node, dynamic: DynamicCstr) {
-    let rules = this.getRules(dynamic.getValue(Axis.LOCALE));
+    let rules = this.getRules(dynamic.getValue(EngineConst.Axis.LOCALE));
     rules = rules.filter(function (rule) {
       return MathSimpleStore.testDynamicConstraints_(dynamic, rule);
     });

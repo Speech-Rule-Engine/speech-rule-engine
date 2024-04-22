@@ -85,7 +85,7 @@ export function process<T>(name: string, expr: string): T {
  */
 function print<T>(name: string, data: T): string {
   const processor = get(name);
-  return Engine.getInstance().binaryFeatures.get('pprint')
+  return Engine.getInstance().features.is(EngineConst.BinaryFeatures.PPRINT)
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -101,7 +101,7 @@ export function output(name: string, expr: string): string {
   const processor = get(name);
   try {
     const data = processor.processor(expr);
-    return Engine.getInstance().binaryFeatures.get('pprint')
+    return Engine.getInstance().features.is(EngineConst.BinaryFeatures.PPRINT)
       ? processor.pprint(data)
       : processor.print(data);
   } catch (_e) {
@@ -121,7 +121,7 @@ export function keypress(name: string, expr: KeyCode | string): string {
   const processor = get(name);
   const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
   const data = processor.processor(key as string);
-  return Engine.getInstance().binaryFeatures.get('pprint')
+  return Engine.getInstance().features.is(EngineConst.BinaryFeatures.PPRINT)
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -134,7 +134,7 @@ set(
       return Semantic.xmlTree(mml) as Element;
     },
     postprocessor: function (xml, _expr) {
-      const setting = Engine.getInstance().stringFeatures.get('speech');
+      const setting = Engine.getInstance().features.get(EngineConst.StringFeatures.SPEECH);
       if (setting === EngineConst.Speech.NONE) {
         return xml;
       }
@@ -190,7 +190,7 @@ set(
       return stree.toJson();
     },
     postprocessor: function (json: any, expr) {
-      const setting = Engine.getInstance().stringFeatures.get('speech');
+      const setting = Engine.getInstance().features.get(EngineConst.StringFeatures.SPEECH);
       if (setting === EngineConst.Speech.NONE) {
         return json;
       }
@@ -251,7 +251,7 @@ set(
     postprocessor: function (enr, _expr) {
       const root = WalkerUtil.getSemanticRoot(enr);
       let generator;
-      switch (Engine.getInstance().stringFeatures.get('speech')) {
+      switch (Engine.getInstance().features.get(EngineConst.StringFeatures.SPEECH)) {
         case EngineConst.Speech.NONE:
           break;
         case EngineConst.Speech.SHALLOW:
@@ -279,10 +279,10 @@ set(
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
       generator.setOptions({
-        modality: Engine.getInstance().stringFeatures.get('modality'),
-        locale: Engine.getInstance().stringFeatures.get('locale'),
-        domain: Engine.getInstance().stringFeatures.get('domain'),
-        style: Engine.getInstance().stringFeatures.get('style')
+        modality: Engine.getInstance().features.getString(EngineConst.Axis.MODALITY),
+        locale: Engine.getInstance().features.getString(EngineConst.Axis.LOCALE),
+        domain: Engine.getInstance().features.getString(EngineConst.Axis.DOMAIN),
+        style: Engine.getInstance().features.getString(EngineConst.Axis.STYLE)
       });
       Processor.LocalState.highlighter = HighlighterFactory.highlighter(
         { color: 'black' },
@@ -292,7 +292,7 @@ set(
       const node = process('enriched', expr) as Element;
       const eml = print('enriched', node);
       Processor.LocalState.walker = WalkerFactory.walker(
-        Engine.getInstance().stringFeatures.get('walker'),
+        Engine.getInstance().features.getString(EngineConst.StringFeatures.WALKER),
         node,
         generator,
         Processor.LocalState.highlighter,
@@ -363,8 +363,8 @@ set(
   new Processor('latex', {
     processor: function (ltx: string) {
       if (
-        Engine.getInstance().stringFeatures.get('modality') !== 'braille' ||
-        Engine.getInstance().stringFeatures.get('locale') !== 'euro'
+        Engine.getInstance().features.is(EngineConst.Axis.MODALITY, 'braille') ||
+          Engine.getInstance().features.is(EngineConst.Axis.LOCALE, 'euro')
       ) {
         console.info(
           'LaTeX input currently only works for Euro Braille output.' +

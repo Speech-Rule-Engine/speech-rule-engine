@@ -24,6 +24,7 @@
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticRole,
@@ -67,7 +68,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
   // deleted.
   const oldMml = DomUtil.cloneNode(mml);
   walkTree(semantic.root);
-  if (Engine.getInstance().binaryFeatures.get('structure')) {
+  if (Engine.getInstance().features.is(EngineConst.BinaryFeatures.STRUCTURE)) {
     mml.setAttribute(
       EnrichAttr.Attribute.STRUCTURE,
       SemanticSkeleton.fromStructure(mml, semantic).toString()

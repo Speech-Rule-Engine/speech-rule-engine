@@ -22,11 +22,12 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 import * as EngineConst from './engine_const.js';
+import { EngineFeatures } from './engine_features.js';
 import { EngineFixtures } from './engine_fixtures.js';
 import { EngineOptions } from './engine_options.js';
 
 import { Debugger } from './debugger.js';
-import { Variables } from './variables.js';
+// import { Variables } from './variables.js';
 
 export type SreFeature = {
   [key: string]: any;
@@ -42,105 +43,7 @@ export class Engine {
 
   public options: EngineOptions = new EngineOptions();
 
-  /**
-   * Binary feature vector.
-   */
-  public static BINARY_FEATURES: string[] = [
-    'automark',
-    'mark',
-    'character',
-    'cleanpause',
-    'strict',
-    'structure',
-    'aria',
-    'pprint',
-    'cayleyshort',
-    'linebreaks'
-  ];
-
-  /**
-   * Binary feature vector.
-   */
-  public binaryFeatures: Map<string, boolean> = new Map([
-    // Markup options
-    ['mark', true],
-    ['automark', false], // Automatic marking of elements for spans.
-    ['character', true],
-    ['cleanpause', true],
-    ['strict', false], // Strict interpretations of rules and constraints.
-    // Enrichment options
-    ['structure', false], // Skeleton structure attributes are added
-    ['aria', false], // Aria attributes are added
-    ['pprint', false], // Pretty Print mode
-    // Nemeth layout options
-    ['cayleyshort', true],
-    ['linebreaks', false]
-  ]);
-
-  /**
-   * String feature vector.
-   */
-  public static STRING_FEATURES: string[] = [
-    'markup',
-    'style',
-    'domain',
-    'speech',
-    'walker',
-    'defaultLocale',
-    'locale',
-    'modality',
-    'rate',
-    'rules',
-    'subiso',
-    'prune'
-  ];
-
-  /**
-   * String feature vector.
-   */
-  public stringFeatures: Map<string, string> = new Map([
-    ['markup', EngineConst.Markup.NONE], // EngineConst.Markup
-    ['style', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]],
-    ['domain', 'mathspeak'],
-    // The level to which speech attributes are added to enriched elements
-    // (none, shallow, deep).
-    ['speech', EngineConst.Speech.NONE], // EngineConst.Speech
-    // Current walker mode.
-    ['walker', 'Table'],
-    ['defaultLocale', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
-    ['locale', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
-    ['modality', Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
-    // Percentage of default rate used by external TTS. This can be used to
-    // scale pauses.
-    ['rate', '100'],
-    // Rules file to load.
-    ['rules', ''],
-    ['subiso', ''],
-    // EngineConstraints to prune given dot separated.
-    ['prune', '']
-  ]);
-
-  public getFeature(feature: string): string | boolean {
-    const str = this.stringFeatures.get(feature);
-    if (str !== undefined) {
-      return str;
-    }
-    return this.binaryFeatures.get(feature);
-  }
-
-  public setFeature(feature: string, value: string | boolean) {
-    if (typeof value === 'string') {
-      if (feature === 'defaultLocale') {
-        value = Variables.ensureLocale(
-          value,
-          this.stringFeatures.get('defaultLocale')
-        );
-      }
-      this.stringFeatures.set(feature, value);
-    } else {
-      this.binaryFeatures.set(feature, value);
-    }
-  }
+  public features: EngineFeatures = new EngineFeatures();
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
@@ -227,7 +130,8 @@ export class Engine {
    * @returns The current base rate.
    */
   public getRate(): number {
-    const numeric = parseInt(this.stringFeatures.get('rate'), 10);
+    const numeric = parseInt(this.features.getString(
+      EngineConst.Features.RATE), 10);
     return isNaN(numeric) ? 100 : numeric;
   }
 
@@ -239,38 +143,39 @@ export class Engine {
    *    parameters.
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
-    if (this.stringFeatures.get('defaultLocale')) {
-      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] =
-        this.stringFeatures.get('defaultLocale');
+    if (this.features.is(EngineConst.Features.DEFAULTLOCALE)) {
+      EngineFeatures.setDefault(
+        EngineConst.Axis.LOCALE,
+        this.features.get(EngineConst.Features.DEFAULTLOCALE));
     }
     if (opt_dynamic) {
       const keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {
-        const feature = keys[i] as Dcstr.Axis;
+        const feature = keys[i] as EngineConst.Axis;
         // Checks that we only have correct components.
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
           const value = opt_dynamic[feature];
           // TODO (TS): Make these features cleaner.
-          this.stringFeatures.set(feature, value);
+          this.features.set(feature, value);
         }
       }
     }
-    EngineConst.DOMAIN_TO_STYLES[this.stringFeatures.get('domain')] =
-      this.stringFeatures.get('style');
+    EngineConst.DomainToStyles[this.features.getString(EngineConst.Axis.DOMAIN)] =
+      this.features.getString(EngineConst.Axis.STYLE);
     const dynamic = [
-      this.stringFeatures.get('locale'),
-      this.stringFeatures.get('modality'),
-      this.stringFeatures.get('domain'),
-      this.stringFeatures.get('style')
+      this.features.get(EngineConst.Axis.LOCALE),
+      this.features.get(EngineConst.Axis.MODALITY),
+      this.features.get(EngineConst.Axis.DOMAIN),
+      this.features.get(EngineConst.Axis.STYLE)
     ].join('.');
     const fallback = Dcstr.DynamicProperties.createProp(
-      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
-      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
-      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
-      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
+      [EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE)],
+      [EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY)],
+      [EngineFeatures.getDefaultString(EngineConst.Axis.DOMAIN)],
+      [EngineFeatures.getDefaultString(EngineConst.Axis.STYLE)]
     );
-    const comparator = this.comparators[this.stringFeatures.get('domain')];
-    const parser = this.parsers[this.stringFeatures.get('domain')];
+    const comparator = this.comparators[this.features.getString(EngineConst.Axis.DOMAIN)];
+    const parser = this.parsers[this.features.getString(EngineConst.Axis.DOMAIN)];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
@@ -283,7 +188,8 @@ export class Engine {
    * Private constructor.
    */
   private constructor() {
-    this.stringFeatures.set('locale', this.stringFeatures.get('defaultLocale'));
+    this.features.set(
+      EngineConst.Axis.LOCALE, this.features.get(EngineConst.StringFeatures.DEFAULTLOCALE));
     this.evaluator = Engine.defaultEvaluator;
     this.defaultParser = new Dcstr.DynamicCstrParser(
       Dcstr.DynamicCstr.DEFAULT_ORDER
@@ -317,15 +223,8 @@ export class Engine {
   }
 
   public engineSetup(): { [key: string]: boolean | string } {
-    const features: { [key: string]: string | boolean } = {
-      'mode': EngineFixtures.getInstance().mode
-    };
-    Engine.BINARY_FEATURES.forEach(function (x) {
-      features[x] = this.binaryFeatures.get(x);
-    });
-    Engine.STRING_FEATURES.forEach(function (x) {
-      features[x] = this.stringFeatures.get(x);
-    });
+    const features: { [key: string]: string | boolean } = this.features.summary();
+    features['mode'] = EngineFixtures.getInstance().mode;
     return features;
   }
 }
@@ -387,7 +286,7 @@ export class EnginePromise {
    * @returns The promise for a locale.
    */
   public static get(
-    locale: string = Engine.getInstance().stringFeatures.get('locale')
+    locale: string = Engine.getInstance().features.getString(EngineConst.Axis.LOCALE)
   ): Promise<string> {
     return EnginePromise.promises[locale] || Promise.resolve('');
   }

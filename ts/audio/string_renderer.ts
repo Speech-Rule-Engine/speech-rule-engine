@@ -19,6 +19,7 @@
  */
 
 import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
 import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
 import { personalityMarkup } from './audio_util.js';
 import { AuditoryDescription } from './auditory_description.js';
@@ -59,7 +60,7 @@ export class CountingRenderer extends StringRenderer {
   public finalize(str: string): string {
     const output = super.finalize(str);
     const count =
-      Engine.getInstance().stringFeatures.get('modality') === 'braille'
+      Engine.getInstance().features.is(EngineConst.Features.MODALITY, 'braille')
         ? '⣿⠀⣿⠀⣿⠀⣿⠀⣿⠀'
         : '0123456789';
     let second = new Array(Math.trunc(output.length / 10) + 1).join(count);

@@ -20,24 +20,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as EngineConst from '../common/engine_const.js';
+import { EngineFeatures } from '../common/engine_features.js';
+
 /**
  * Attributes for dynamic constraints.
  * We define one default attribute as style. Speech rule stores can add other
  * attributes later.
  */
-export enum Axis {
-  DOMAIN = 'domain',
-  STYLE = 'style',
-  LOCALE = 'locale',
-  TOPIC = 'topic',
-  MODALITY = 'modality'
-}
+export type AxisProperties = { [key in EngineConst.Axis]?: string[] };
 
-export type AxisProperties = { [key: string]: string[] };
+export type AxisOrder = EngineConst.Axis[];
 
-export type AxisOrder = Axis[];
-
-export type AxisMap = { [key: string]: string };
+export type AxisMap = { [key in EngineConst.Axis]?: string };
 
 export class DynamicProperties {
   /**
@@ -62,7 +57,7 @@ export class DynamicProperties {
    */
   constructor(
     private properties: AxisProperties,
-    protected order: AxisOrder = Object.keys(properties) as Axis[]
+    protected order: AxisOrder = Object.keys(properties) as EngineConst.Axis[]
   ) {}
 
   /**
@@ -94,7 +89,7 @@ export class DynamicProperties {
    * @param key The attribute key.
    * @returns The component value of the constraint.
    */
-  public getProperty(key: Axis): string[] {
+  public getProperty(key: EngineConst.Axis): string[] {
     return this.properties[key];
   }
 
@@ -136,11 +131,11 @@ export class DynamicCstr extends DynamicProperties {
    *  Default order of constraints.
    */
   public static DEFAULT_ORDER: AxisOrder = [
-    Axis.LOCALE,
-    Axis.MODALITY,
-    Axis.DOMAIN,
-    Axis.STYLE,
-    Axis.TOPIC
+    EngineConst.Axis.LOCALE,
+    EngineConst.Axis.MODALITY,
+    EngineConst.Axis.DOMAIN,
+    EngineConst.Axis.STYLE,
+    EngineConst.Axis.TOPIC
   ];
 
   /**
@@ -152,17 +147,6 @@ export class DynamicCstr extends DynamicProperties {
    *  Default values for to assign. Value is default.
    */
   public static DEFAULT_VALUE = 'default';
-
-  /**
-   *  Default values for axes.
-   */
-  public static DEFAULT_VALUES: AxisMap = {
-    [Axis.LOCALE]: 'en',
-    [Axis.DOMAIN]: DynamicCstr.DEFAULT_VALUE,
-    [Axis.STYLE]: DynamicCstr.DEFAULT_VALUE,
-    [Axis.TOPIC]: DynamicCstr.DEFAULT_VALUE,
-    [Axis.MODALITY]: 'speech'
-  };
 
   private components: AxisMap;
 
@@ -189,7 +173,7 @@ export class DynamicCstr extends DynamicProperties {
     return DynamicCstr.createCstr.apply(
       null,
       DynamicCstr.DEFAULT_ORDER.map(function (x) {
-        return DynamicCstr.DEFAULT_VALUES[x];
+        return EngineFeatures.getDefault(x);
       })
     );
   }
@@ -218,7 +202,7 @@ export class DynamicCstr extends DynamicProperties {
   constructor(components_: AxisMap, order?: AxisOrder) {
     const properties: AxisProperties = {};
     for (const [key, value] of Object.entries(components_)) {
-      properties[key] = [value];
+      properties[key as EngineConst.Axis] = [value];
     }
     super(properties, order);
     this.components = components_;
@@ -238,7 +222,7 @@ export class DynamicCstr extends DynamicProperties {
    * @param key The attribute key.
    * @returns The component value of the constraint.
    */
-  public getValue(key: Axis): string {
+  public getValue(key: EngineConst.Axis): string {
     return this.components[key];
   }
 

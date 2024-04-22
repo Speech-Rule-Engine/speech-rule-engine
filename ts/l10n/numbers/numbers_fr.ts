@@ -23,6 +23,7 @@
 //
 
 import { Engine } from '../../common/engine.js';
+import * as EngineConst from '../../common/engine_const.js';
 import { Grammar } from '../../rule_engine/grammar.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
@@ -75,10 +76,10 @@ function numberToWords(num: number): string {
     return num.toString();
   }
   if (
-    NUMBERS.special['tens-' + Engine.getInstance().stringFeatures.get('subiso')]
+    NUMBERS.special['tens-' + Engine.getInstance().features.getString(EngineConst.StringFeatures.SUBISO)]
   ) {
     NUMBERS.tens = NUMBERS.special[
-      'tens-' + Engine.getInstance().stringFeatures.get('subiso')
+      'tens-' + Engine.getInstance().features.getString(EngineConst.StringFeatures.SUBISO)
     ] as string[];
   }
   let pos = 0;

@@ -22,6 +22,8 @@
  */
 
 import { Engine } from '../common/engine.js';
+import { EngineFeatures } from '../common/engine_features.js';
+import * as EngineConst from '../common/engine_const.js';
 import { locales } from '../l10n/l10n.js';
 import { addFunctionSemantic } from '../semantic_tree/semantic_attr.js';
 import {
@@ -32,17 +34,17 @@ import {
   SimpleRule,
   UnicodeJson
 } from './math_simple_store.js';
-import { Axis, DynamicCstr } from './dynamic_cstr.js';
+import { DynamicCstr } from './dynamic_cstr.js';
 
 /**
  * The locale for the store.
  */
-let locale: string = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+let locale: string = EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE);
 
 /**
  * The modality of the store.
  */
-let modality: string = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
+let modality: string = EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY);
 
 /**
  * Changes the internal locale for the rule definitions if the given JSON
@@ -358,6 +360,6 @@ function enumerate_(
  *
  */
 export function reset() {
-  locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
-  modality = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
+  locale = EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE);
+  modality = EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY);
 }

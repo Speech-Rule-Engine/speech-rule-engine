@@ -19,6 +19,7 @@
  */
 
 import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
 import { Variables } from '../common/variables.js';
 import { Grammar } from '../rule_engine/grammar.js';
 
@@ -83,11 +84,13 @@ export function setLocale() {
  * @param msg The current locale message structure.
  */
 function setSubiso(msg: Locale) {
-  const subiso = Engine.getInstance().stringFeatures.get('subiso');
+  const subiso = Engine.getInstance().features.getString(
+    EngineConst.StringFeatures.SUBISO);
   if (msg.SUBISO.all.indexOf(subiso) === -1) {
-    Engine.getInstance().stringFeatures.set('subiso', msg.SUBISO.default);
+    Engine.getInstance().features.set(EngineConst.StringFeatures.SUBISO, msg.SUBISO.default);
   }
-  msg.SUBISO.current = Engine.getInstance().stringFeatures.get('subiso');
+  msg.SUBISO.current = Engine.getInstance().features.getString(
+    EngineConst.StringFeatures.SUBISO);
 }
 
 /**
@@ -98,10 +101,10 @@ function setSubiso(msg: Locale) {
  */
 function getLocale(): Locale {
   const locale = Variables.ensureLocale(
-    Engine.getInstance().stringFeatures.get('locale'),
-    Engine.getInstance().stringFeatures.get('defaultLocale')
+    Engine.getInstance().features.getString(EngineConst.Axis.LOCALE),
+    Engine.getInstance().features.getString(EngineConst.StringFeatures.DEFAULTLOCALE)
   );
-  Engine.getInstance().stringFeatures.set('locale', locale);
+  Engine.getInstance().features.set(EngineConst.Axis.LOCALE, locale);
   return locales[locale]();
 }
 

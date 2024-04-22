@@ -63,18 +63,11 @@ export async function setupEngine(feature: {
  */
 // TODO: This needs to be changed!
 export function engineSetup(): { [key: string]: boolean | string } {
-  const engineFeatures = ['mode'].concat(
-    Engine.STRING_FEATURES,
-    Engine.BINARY_FEATURES
-  );
-  const engine = Engine.getInstance() as any;
-  const features: { [key: string]: string | boolean } = {};
-  engineFeatures.forEach(function (x) {
-    features[x] = engine[x];
-  });
+  const features: { [key: string]: string | boolean } =
+    Engine.getInstance().features.summary();
+  features['mode'] = EngineFixtures.getInstance().mode;
   features.json = SystemExternal.jsonPath;
   features.xpath = SystemExternal.WGXpath;
-  features.rules = engine.ruleSets.slice();
   return features;
 }
 

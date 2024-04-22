@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
@@ -26,6 +26,7 @@ import { Debugger } from './debugger.js';
 import { EnginePromise } from './engine.js';
 import { SREError } from './engine_error.js';
 import * as EngineConst from './engine_const.js';
+import { EngineFeatures } from './engine_features.js';
 import * as ProcessorFactory from './processor_factory.js';
 import * as System from './system.js';
 import { SystemExternal } from './system_external.js';
@@ -236,26 +237,26 @@ export class Cli {
       .option(
         '-d, --domain [name]',
         'Speech rule set [name]. See --options' + ' for details.',
-        set(Axis.DOMAIN),
-        DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]
+        set(EngineConst.Axis.DOMAIN),
+        EngineFeatures.getDefault(EngineConst.Axis.DOMAIN)
       )
       .option(
         '-s, --style [name]',
         'Speech style [name]. See --options' + ' for details.',
-        set(Axis.STYLE),
-        DynamicCstr.DEFAULT_VALUES[Axis.STYLE]
+        set(EngineConst.Axis.STYLE),
+        EngineFeatures.getDefault(EngineConst.Axis.STYLE)
       )
       .option(
         '-c, --locale [code]',
         'Locale [code].',
-        set(Axis.LOCALE),
-        DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]
+        set(EngineConst.Axis.LOCALE),
+        EngineFeatures.getDefault(EngineConst.Axis.LOCALE)
       )
       .option(
         '-b, --modality [name]',
         'Modality [name].',
-        set(Axis.MODALITY),
-        DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]
+        set(EngineConst.Axis.MODALITY),
+        EngineFeatures.getDefault(EngineConst.Axis.MODALITY)
       )
       .option(
         '-k, --markup [name]',

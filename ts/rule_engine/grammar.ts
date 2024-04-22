@@ -24,6 +24,7 @@
 
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
 import * as LocaleUtil from '../l10n/locale_util.js';
 import { LOCALE } from '../l10n/locale.js';
 import { DynamicCstr } from './dynamic_cstr.js';
@@ -153,9 +154,9 @@ export class Grammar {
     text = Grammar.prepareUnit(text);
     const engine = Engine.getInstance();
     const plural = Grammar.getInstance().getParameter('plural');
-    const strict = engine.binaryFeatures.get('strict');
-    const baseCstr = `${engine.stringFeatures.get('locale')}.${engine.stringFeatures.get('modality')}.default`;
-    engine.binaryFeatures.set('strict', true);
+    const strict = engine.features.get(EngineConst.BinaryFeatures.STRICT);
+    const baseCstr = `${engine.features.get(EngineConst.Axis.LOCALE)}.${engine.features.get(EngineConst.Axis.MODALITY)}.default`;
+    engine.features.set(EngineConst.BinaryFeatures.STRICT, true);
     let cstr: DynamicCstr;
     let result: string;
     if (plural) {
@@ -163,12 +164,12 @@ export class Grammar {
       result = engine.evaluator(text, cstr);
     }
     if (result) {
-      engine.binaryFeatures.set('strict', strict);
+      engine.features.set(EngineConst.BinaryFeatures.STRICT, strict);
       return result;
     }
     cstr = engine.defaultParser.parse(baseCstr + '.default');
     result = engine.evaluator(text, cstr);
-    engine.binaryFeatures.set('strict', strict);
+    engine.features.set(EngineConst.BinaryFeatures.STRICT, strict);
     if (!result) {
       return Grammar.cleanUnit(text);
     }
@@ -435,7 +436,7 @@ export function correctFont(text: string, correction: string): string {
 function correctCaps(text: string): string {
   let cap =
     LOCALE.ALPHABETS.capPrefix[
-      Engine.getInstance().stringFeatures.get('domain')
+      Engine.getInstance().features.getString(EngineConst.Axis.DOMAIN)
     ];
   if (typeof cap === 'undefined') {
     cap = LOCALE.ALPHABETS.capPrefix['default'];

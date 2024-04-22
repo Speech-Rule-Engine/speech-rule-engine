@@ -37,6 +37,7 @@ import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
+import { EngineFeatures, Features } from '../common/engine_features.js';
 import { EngineFixtures } from '../common/engine_fixtures.js';
 import * as EngineConst from '../common/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
@@ -45,7 +46,7 @@ import * as SpeechRules from '../speech_rules/speech_rules.js';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores.js';
 import { BaseRuleStore, RulesJson } from './base_rule_store.js';
 import { BrailleStore, EuroStore } from './braille_store.js';
-import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr.js';
+import { AxisMap, DynamicCstr } from './dynamic_cstr.js';
 import { Grammar, State as GrammarState } from './grammar.js';
 import { MathStore } from './math_store.js';
 import { ActionType, SpeechRule } from './speech_rule.js';
@@ -172,17 +173,15 @@ export class SpeechRuleEngine {
     settings: { [feature: string]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
-    const engine = Engine.getInstance() as any;
-    const save: { [feature: string]: string | boolean } = {};
+    const engine = Engine.getInstance();
+    const save = engine.features;
+    engine.features = save.clone();
     for (const [key, val] of Object.entries(settings)) {
-      save[key] = engine.getFeature(key);
-      engine.setFeature(key, val);
+      engine.features.set(key as Features, val);
     }
     engine.setDynamicCstr();
     const result = callback();
-    for (const [key, val] of Object.entries(save)) {
-      engine.setFeature(key, val);
-    }
+    engine.features = save;
     engine.setDynamicCstr();
     return result;
   }
@@ -259,8 +258,8 @@ export class SpeechRuleEngine {
   ): (p1: Node) => AuditoryDescription[] {
     const loc =
       this.evaluators_[locale] ||
-      this.evaluators_[DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]];
-    return loc[modality] || loc[DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]];
+      this.evaluators_[EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE)];
+    return loc[modality] || loc[EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY)];
   }
 
   /**
@@ -320,12 +319,12 @@ export class SpeechRuleEngine {
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
-      if (engine.binaryFeatures.get('strict')) {
+      if (engine.features.is(EngineConst.BinaryFeatures.STRICT)) {
         return [];
       }
       result = this.getEvaluator(
-        engine.stringFeatures.get('locale'),
-        engine.stringFeatures.get('modality')
+        engine.features.getString(EngineConst.Axis.LOCALE),
+        engine.features.getString(EngineConst.Axis.MODALITY)
       )(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
@@ -668,32 +667,32 @@ export class SpeechRuleEngine {
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
     const dynamic = Engine.getInstance().dynamicCstr;
-    const strict = Engine.getInstance().binaryFeatures.get('strict');
+    const strict = Engine.getInstance().features.get(EngineConst.BinaryFeatures.STRICT);;
     const trie = this.trie;
     const props: { [key: string]: string[] } = {};
-    let locale = dynamic.getValue(Axis.LOCALE);
-    let modality = dynamic.getValue(Axis.MODALITY);
-    let domain = dynamic.getValue(Axis.DOMAIN);
+    let locale = dynamic.getValue(EngineConst.Axis.LOCALE);
+    let modality = dynamic.getValue(EngineConst.Axis.MODALITY);
+    let domain = dynamic.getValue(EngineConst.Axis.DOMAIN);
     if (!trie.hasSubtrie([locale, modality, domain])) {
-      domain = DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN];
+      domain = EngineFeatures.getDefaultString(EngineConst.Axis.DOMAIN);
       if (!trie.hasSubtrie([locale, modality, domain])) {
-        modality = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
+        modality = EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY);
         if (!trie.hasSubtrie([locale, modality, domain])) {
-          locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+          locale = EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE);
         }
       }
     }
-    props[Axis.LOCALE] = [locale];
+    props[EngineConst.Axis.LOCALE] = [locale];
     // Normally modality cannot be mixed. But summary allows fallback to speech
     // if an expression can not be summarised.
-    props[Axis.MODALITY] = [
+    props[EngineConst.Axis.MODALITY] = [
       modality !== 'summary'
         ? modality
-        : DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]
+        : EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY)
     ];
     // For speech we do not want rule leaking across rule sets.
-    props[Axis.DOMAIN] = [
-      modality !== 'speech' ? DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN] : domain
+    props[EngineConst.Axis.DOMAIN] = [
+      modality !== 'speech' ? EngineFeatures.getDefaultString(EngineConst.Axis.DOMAIN) : domain
     ];
     const order = dynamic.getOrder();
     for (let i = 0, axis; (axis = order[i]); i++) {
@@ -703,7 +702,7 @@ export class SpeechRuleEngine {
           value,
           (dynamic as ClearspeakPreferences).preference
         );
-        const def = DynamicCstr.DEFAULT_VALUES[axis];
+        const def = EngineFeatures.getDefaultString(axis);
         if (!strict && value !== def) {
           valueSet.push(def);
         }

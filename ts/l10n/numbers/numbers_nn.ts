@@ -19,6 +19,7 @@
  */
 
 import { Engine } from '../../common/engine.js';
+import * as EngineConst from '../../common/engine_const.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
@@ -256,7 +257,7 @@ function numberToWordsGe(num: number, ordinal = false): string {
  */
 function numberToWords(num: number, ordinal = false): string {
   const word =
-    Engine.getInstance().stringFeatures.get('subiso') === 'alt'
+    Engine.getInstance().features.is(EngineConst.StringFeatures.SUBISO, 'alt')
       ? numberToWordsGe(num, ordinal)
       : numberToWordsRo(num, ordinal);
   return word;

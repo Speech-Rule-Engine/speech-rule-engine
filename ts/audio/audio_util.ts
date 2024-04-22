@@ -181,7 +181,7 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   }
   result = result.concat(finaliseMarkup_());
   result = simplifyMarkup_(result);
-  result = Engine.getInstance().binaryFeatures.get('cleanpause')
+  result = Engine.getInstance().features.is(EngineConst.Features.CLEANPAUSE)
     ? cleanPause(result)
     : result;
   return result;

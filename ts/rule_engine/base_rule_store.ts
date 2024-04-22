@@ -22,9 +22,10 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
+import * as EngineConst from '../common/engine_const.js';
+import { EngineFeatures } from '../common/engine_features.js';
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import {
-  Axis,
   AxisOrder,
   DynamicCstr,
   DynamicCstrParser
@@ -58,12 +59,12 @@ export abstract class BaseRuleStore
   /**
    * Default locale.
    */
-  public locale: string = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+  public locale: string = EngineFeatures.getDefaultString(EngineConst.Axis.LOCALE);
 
   /**
    * Default modality.
    */
-  public modality: string = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
+  public modality: string = EngineFeatures.getDefaultString(EngineConst.Axis.MODALITY);
 
   /**
    * Default domain.

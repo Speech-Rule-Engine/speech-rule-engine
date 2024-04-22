@@ -49,7 +49,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
   if (
     (feature.modality && feature.modality !== 'speech') ||
     (!feature.modality &&
-      Engine.getInstance().stringFeatures.get('modality') !== 'speech')
+      Engine.getInstance().features.is(EngineConst.Axis.MODALITY, 'speech'))
   ) {
     return;
   }
@@ -61,7 +61,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
     return;
   }
   const locale = (feature.locale ||
-    Engine.getInstance().stringFeatures.get('locale')) as string;
+    Engine.getInstance().features.get(EngineConst.Axis.LOCALE)) as string;
   const domain = feature.domain as string;
   if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
     if (domain !== 'mathspeak') {
@@ -119,22 +119,16 @@ export async function setup(feature: { [key: string]: boolean | string }) {
 export function setupSync(feature: { [key: string]: boolean | string }) {
   ensureDomain(feature);
   const engine = Engine.getInstance();
-  const setIf = (feat: string) => {
+  const setup = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
-      engine.binaryFeatures.set(feat, !!feature[feat]);
-    }
-  };
-  const setMulti = (feat: string) => {
-    if (typeof feature[feat] !== 'undefined') {
-      engine.stringFeatures.set(feat, feature[feat] as string);
+      engine.features.set(feat as EngineConst.Axis, feature[feat]);
     }
   };
   if (feature['mode']) {
     EngineFixtures.getInstance().mode = feature['mode'] as EngineConst.Mode;
   }
   engine.configurate(feature);
-  Engine.BINARY_FEATURES.forEach(setIf);
-  Engine.STRING_FEATURES.forEach(setMulti);
+  Object.values(EngineConst.Features).forEach(setup);
   if (feature.debug) {
     Debugger.getInstance().init();
   }

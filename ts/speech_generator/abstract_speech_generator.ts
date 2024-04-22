@@ -122,10 +122,10 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     if (!prefs[options.locale]) {
       return;
     }
-    EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
+    EngineConst.DomainToStyles[options.domain] = options.style;
     options.domain =
       options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-    options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+    options.style = EngineConst.DomainToStyles[options.domain];
     this.setOptions(options);
   }
 
@@ -171,7 +171,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
       // TODO: return the previous one?
       const smart = ClearspeakPreferences.relevantPreferences(node);
       const current = ClearspeakPreferences.findPreference(style, smart);
-      const options = loc[smart].map(function (x) {
+      const options = loc[smart as EngineConst.Axis].map(function (x) {
         return x.split('_')[1];
       });
       const index = options.indexOf(current);

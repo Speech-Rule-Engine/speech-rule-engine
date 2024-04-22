@@ -71,7 +71,7 @@ let _init = false;
  * @returns Promise that resolves once locale is loaded.
  */
 export async function loadLocale(
-  locale = Engine.getInstance().stringFeatures.get('locale')
+  locale = Engine.getInstance().features.getString(EngineConst.Axis.LOCALE)
 ) {
   if (!_init) {
     // Generate base alphabet information.
@@ -80,7 +80,7 @@ export async function loadLocale(
     _init = true;
   }
   return EnginePromise.promises[DynamicCstr.BASE_LOCALE].then(async () => {
-    const defLoc = Engine.getInstance().stringFeatures.get('defaultLocale');
+    const defLoc = Engine.getInstance().features.getString(EngineConst.StringFeatures.DEFAULTLOCALE);
     if (defLoc) {
       _loadLocale(defLoc);
       return EnginePromise.promises[defLoc].then(async () => {
@@ -100,7 +100,7 @@ export async function loadLocale(
  *     engine.
  */
 function _loadLocale(
-  locale = Engine.getInstance().stringFeatures.get('locale')
+  locale = Engine.getInstance().features.getString(EngineConst.Axis.LOCALE)
 ) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
@@ -157,9 +157,9 @@ function retrieveFiles(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().stringFeatures.set(
-          'locale',
-          Engine.getInstance().stringFeatures.get('defaultLocale')
+        Engine.getInstance().features.set(
+          EngineConst.Axis.LOCALE,
+          Engine.getInstance().features.get(EngineConst.StringFeatures.DEFAULTLOCALE)
         );
         res(locale);
       }

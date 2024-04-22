@@ -19,6 +19,7 @@
  */
 
 import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
 import { KeyCode } from '../common/event_util.js';
 import { AudioRenderer } from './audio_renderer.js';
 import { AuditoryDescription } from './auditory_description.js';
@@ -44,7 +45,8 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
    */
   public get separator() {
     // TODO: (Span) Do this via setSeparator.
-    return Engine.getInstance().stringFeatures.get('modality') === 'braille'
+    return Engine.getInstance().features.is(
+      EngineConst.Features.MODALITY, 'braille')
       ? ''
       : this.separator_;
   }

@@ -28,8 +28,12 @@ import { XmlRenderer } from './xml_renderer.js';
 
 export class LayoutRenderer extends XmlRenderer {
   public static options = {
-    cayleyshort: Engine.getInstance().binaryFeatures.get('cayleyshort'),
-    linebreaks: Engine.getInstance().binaryFeatures.get('linebreaks')
+    cayleyshort: Engine.getInstance().features.get(
+      EngineConst.Features.CAYLEYSHORT
+    ),
+    linebreaks: Engine.getInstance().features.get(
+      EngineConst.Features.LINEBREAKS
+    )
   };
 
   /**
@@ -495,7 +499,7 @@ function handleCayley(cayley: Element): string {
     sep: mat[0].sep
   };
   if (
-    Engine.getInstance().binaryFeatures.get('cayleyshort') &&
+    Engine.getInstance().features.is(EngineConst.Features.CAYLEYSHORT) &&
     mat[0].cells[0] === '⠀'
   ) {
     bar.cells[0] = '⠀';
@@ -615,7 +619,8 @@ function handleFractionPart(prt: Element): string {
  * @param rel
  */
 function handleRelation(rel: Element): string {
-  if (!Engine.getInstance().binaryFeatures.get('linebreaks')) {
+  if (Engine.getInstance().features.is(
+    EngineConst.Features.LINEBREAKS, false)) {
     return recurseTree(rel);
   }
   const value = relValues.get(parseInt(rel.getAttribute('value')));
