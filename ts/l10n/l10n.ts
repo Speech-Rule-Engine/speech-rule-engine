@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { Variables } from '../common/variables.js';
 import { Grammar } from '../rule_engine/grammar.js';
 

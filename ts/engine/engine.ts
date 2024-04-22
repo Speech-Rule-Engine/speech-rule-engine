@@ -26,7 +26,7 @@ import { EngineFeatures } from './engine_features.js';
 import { EngineFixtures } from './engine_fixtures.js';
 import { EngineOptions } from './engine_options.js';
 
-import { Debugger } from './debugger.js';
+import { Debugger } from '../common/debugger.js';
 // import { Variables } from './variables.js';
 
 export type SreFeature = {

@@ -22,9 +22,9 @@
  */
 
 import * as BrowserUtil from '../common/browser_util.js';
-import { Engine, EnginePromise } from '../common/engine.js';
-import { EngineFixtures } from '../common/engine_fixtures.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine, EnginePromise } from '../engine/engine.js';
+import { EngineFixtures } from '../engine/engine_fixtures.js';
+import * as EngineConst from '../engine/engine_const.js';
 import * as FileUtil from '../common/file_util.js';
 import { SystemExternal } from '../common/system_external.js';
 import { RulesJson } from '../rule_engine/base_rule_store.js';

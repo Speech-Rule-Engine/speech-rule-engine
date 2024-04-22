@@ -21,7 +21,7 @@
 import { Span } from '../audio/span.js';
 import * as BaseUtil from '../common/base_util.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
+import { Engine } from '../engine/engine.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { LOCALE } from '../l10n/locale.js';
 

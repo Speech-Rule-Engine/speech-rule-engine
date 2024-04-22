@@ -21,8 +21,8 @@
  */
 
 import { Debugger } from '../common/debugger.js';
-import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { NamedSymbol } from './semantic_attr.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {

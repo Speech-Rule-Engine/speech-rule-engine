@@ -20,8 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const.js';
-import { EngineFeatures } from '../common/engine_features.js';
+import * as EngineConst from '../engine/engine_const.js';
+import { EngineFeatures } from '../engine/engine_features.js';
 
 /**
  * Attributes for dynamic constraints.

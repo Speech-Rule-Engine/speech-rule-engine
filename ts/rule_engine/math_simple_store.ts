@@ -24,8 +24,8 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { DynamicCstr } from './dynamic_cstr.js';
 
 export interface MappingsJson {

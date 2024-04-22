@@ -21,9 +21,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine } from '../common/engine.js';
-import { EngineFeatures } from '../common/engine_features.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import { EngineFeatures } from '../engine/engine_features.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { locales } from '../l10n/l10n.js';
 import { addFunctionSemantic } from '../semantic_tree/semantic_attr.js';
 import {

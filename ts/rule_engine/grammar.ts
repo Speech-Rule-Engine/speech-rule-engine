@@ -23,8 +23,8 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
 import * as LocaleUtil from '../l10n/locale_util.js';
 import { LOCALE } from '../l10n/locale.js';
 import { DynamicCstr } from './dynamic_cstr.js';

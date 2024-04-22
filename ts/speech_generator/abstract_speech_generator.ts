@@ -19,13 +19,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { setup as EngineSetup } from '../common/engine_setup.js';
+import { setup as EngineSetup } from '../engine/engine_setup.js';
 import * as EnrichAttr from '../enrich_mathml/enrich_attr.js';
 import { AxisMap } from '../rule_engine/dynamic_cstr.js';
 import { RebuildStree } from '../walker/rebuild_stree.js';
 import { SpeechGenerator } from './speech_generator.js';
 import * as SpeechGeneratorUtil from './speech_generator_util.js';
-import * as EngineConst from '../common/engine_const.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { LOCALE } from '../l10n/locale.js';
 

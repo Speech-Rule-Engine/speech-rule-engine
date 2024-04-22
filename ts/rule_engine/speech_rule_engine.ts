@@ -36,10 +36,10 @@ import {
 import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
-import { EngineFeatures, Features } from '../common/engine_features.js';
-import { EngineFixtures } from '../common/engine_fixtures.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import { EngineFeatures, Features } from '../engine/engine_features.js';
+import { EngineFixtures } from '../engine/engine_fixtures.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 import * as SpeechRules from '../speech_rules/speech_rules.js';

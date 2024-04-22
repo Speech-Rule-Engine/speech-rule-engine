@@ -20,13 +20,13 @@
 
 import * as L10n from '../l10n/l10n.js';
 import * as MathMap from '../speech_rules/math_map.js';
-import * as BrowserUtil from './browser_util.js';
-import { Debugger } from './debugger.js';
+import * as BrowserUtil from '../common/browser_util.js';
+import { Debugger } from '../common/debugger.js';
 import { Engine, EnginePromise } from './engine.js';
 import * as EngineConst from './engine_const.js';
 import { EngineFixtures } from './engine_fixtures.js';
-import * as FileUtil from './file_util.js';
-import { SystemExternal } from './system_external.js';
+import * as FileUtil from '../common/file_util.js';
+import { SystemExternal } from '../common/system_external.js';
 
 const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];
 

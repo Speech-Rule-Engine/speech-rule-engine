@@ -23,7 +23,7 @@ import { Span } from '../audio/span.js';
 import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Grammar, correctFont } from '../rule_engine/grammar.js';
-import { Engine } from '../common/engine.js';
+import { Engine } from '../engine/engine.js';
 import { register, activate } from '../semantic_tree/semantic_annotations.js';
 import { SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
 import {

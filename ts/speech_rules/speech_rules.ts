@@ -18,8 +18,8 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const.js';
-import { EngineFeatures } from '../common/engine_features.js';
+import * as EngineConst from '../engine/engine_const.js';
+import { EngineFeatures } from '../engine/engine_features.js';
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions.js';
 

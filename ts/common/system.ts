@@ -20,11 +20,11 @@
 
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
-import { Engine, EnginePromise } from './engine.js';
-import { SREError } from './engine_error.js';
-import { EngineFixtures } from './engine_fixtures.js';
-import { setup } from './engine_setup.js';
-import * as EngineConst from './engine_const.js';
+import { Engine, EnginePromise } from '../engine/engine.js';
+import { SREError } from '../engine/engine_error.js';
+import { EngineFixtures } from '../engine/engine_fixtures.js';
+import { setup } from '../engine/engine_setup.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { KeyCode } from './event_util.js';
 import * as FileUtil from './file_util.js';
 import * as ProcessorFactory from './processor_factory.js';

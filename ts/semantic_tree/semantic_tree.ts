@@ -25,7 +25,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
+import { Engine } from '../engine/engine.js';
 
 import { annotate } from './semantic_annotations.js';
 import { SemanticVisitor } from './semantic_annotator.js';

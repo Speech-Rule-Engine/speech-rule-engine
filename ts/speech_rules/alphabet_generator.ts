@@ -19,8 +19,8 @@
  */
 
 import * as Alphabet from './alphabet.js';
-import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
 import * as L10n from '../l10n/l10n.js';
 import { LOCALE } from '../l10n/locale.js';
 import { localeFontCombiner } from '../l10n/locale_util.js';

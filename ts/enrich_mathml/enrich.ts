@@ -20,7 +20,7 @@
 
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import { EnginePromise } from '../common/engine.js';
+import { EnginePromise } from '../engine/engine.js';
 import * as Semantic from '../semantic_tree/semantic.js';
 
 import * as EnrichMathml from './enrich_mathml.js';

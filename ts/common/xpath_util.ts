@@ -22,8 +22,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const.js';
-import { EngineFixtures } from './engine_fixtures.js';
+import * as EngineConst from '../engine/engine_const.js';
+import { EngineFixtures } from '../engine/engine_fixtures.js';
 import { SystemExternal } from './system_external.js';
 
 /**

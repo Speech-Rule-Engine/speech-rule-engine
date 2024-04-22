@@ -28,9 +28,9 @@ import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.
 import * as WalkerFactory from '../walker/walker_factory.js';
 import * as WalkerUtil from '../walker/walker_util.js';
 import * as DomUtil from './dom_util.js';
-import { Engine } from './engine.js';
-import { SREError } from './engine_error.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import { SREError } from '../engine/engine_error.js';
+import * as EngineConst from '../engine/engine_const.js';
 import { KeyCode } from './event_util.js';
 import { Processor, KeyProcessor } from './processor.js';
 import * as XpathUtil from './xpath_util.js';

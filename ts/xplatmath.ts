@@ -9,8 +9,8 @@ import {
   EngineInstance
 } from './rule_engine/speech_rule_engine.js';
 import { deactivate } from './semantic_tree/semantic_annotations.js';
-import { setup, setupSync } from './common/engine_setup.js';
-import { enginePromise } from './common/engine.js';
+import { setup, setupSync } from './engine/engine_setup.js';
+import { enginePromise } from './engine/engine.js';
 import { markup, finalize } from './audio/aural_rendering.js';
 
 declare let Sre: any;

@@ -19,8 +19,8 @@
  */
 
 import { setdifference } from '../common/base_util.js';
-import * as EngineConst from '../common/engine_const.js';
-import { Engine } from '../common/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
+import { Engine } from '../engine/engine.js';
 import { AuditoryDescription } from './auditory_description.js';
 import { Span } from './span.js';
 

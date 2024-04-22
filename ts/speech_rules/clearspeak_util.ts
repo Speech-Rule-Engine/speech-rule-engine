@@ -20,8 +20,8 @@
 
 import { Span } from '../audio/span.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../engine/engine.js';
+import * as EngineConst from '../engine/engine_const.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { LOCALE } from '../l10n/locale.js';
 import { vulgarFractionSmall } from '../l10n/transformers.js';
