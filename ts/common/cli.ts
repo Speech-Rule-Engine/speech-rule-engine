@@ -259,6 +259,12 @@ export class Cli {
         EngineFeatures.getDefault(EngineConst.Axis.MODALITY)
       )
       .option(
+        '-D, --defaultlocale [code]',
+        'Default Locale [code].',
+        set(EngineConst.StringFeatures.DEFAULTLOCALE),
+        EngineFeatures.getDefault(EngineConst.StringFeatures.DEFAULTLOCALE)
+      )
+      .option(
         '-k, --markup [name]',
         'Generate speech output with markup tags.',
         set('markup'),
