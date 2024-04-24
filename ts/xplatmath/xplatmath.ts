@@ -3,17 +3,22 @@ import {
   xmlTreeFromString,
   getTree,
   getTreeFromString
-} from './semantic_tree/semantic.js';
+} from '../semantic_tree/semantic.js';
 import {
   SpeechRuleEngine,
   EngineInstance
-} from './rule_engine/speech_rule_engine.js';
-import { deactivate } from './semantic_tree/semantic_annotations.js';
-import { setup, setupSync } from './engine/engine_setup.js';
-import { enginePromise } from './engine/engine.js';
-import { markup, finalize } from './audio/aural_rendering.js';
+} from '../rule_engine/speech_rule_engine.js';
+import { deactivate } from '../semantic_tree/semantic_annotations.js';
+import { setup, setupSync } from '../engine/engine_setup.js';
+import { enginePromise } from '../engine/engine.js';
+import { markup, finalize } from '../audio/aural_rendering.js';
+import { preloadLocales } from './locales.js';
 
 declare let Sre: any;
+declare let SREfeature: {[key: string]: any};
+
+SREfeature = {};
+SREfeature.custom = (loc: string) => preloadLocales(loc);
 
 Sre = {
   'setup': async function (init: { [key: string]: string }) {

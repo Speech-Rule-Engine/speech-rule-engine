@@ -18,7 +18,8 @@
       "./node_modules/@types",
       "./node_modules/@node"
     ],
-    "outDir": "js"
+    "outDir": "js",
+    "resolveJsonModule": true
   },
   "include": ["ts/**/*"],
   "typeRoots": [],
