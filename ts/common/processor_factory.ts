@@ -359,18 +359,17 @@ set(
   })
 );
 
+
+import { parse } from '../latex/latex.js';
+
 set(
   new Processor('latex', {
     processor: function (ltx: string) {
       if (
-        Engine.getInstance().features.is(EngineConst.Axis.MODALITY, 'braille') ||
-          Engine.getInstance().features.is(EngineConst.Axis.LOCALE, 'euro')
+        !Engine.getInstance().features.is(EngineConst.Axis.MODALITY, 'braille') ||
+          !Engine.getInstance().features.is(EngineConst.Axis.LOCALE, 'euro')
       ) {
-        console.info(
-          'LaTeX input currently only works for Euro Braille output.' +
-            ' Please use the latex-to-speech package from npm for general' +
-            ' LaTeX input to SRE.'
-        );
+        return process('speech', parse(ltx));
       }
       return process('speech', `<math data-latex="${ltx}"></math>`);
     }
