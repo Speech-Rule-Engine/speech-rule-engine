@@ -31,6 +31,7 @@
     "bin",
     "lib",
     "sre-tests",
+    "xplatmath",
     "src"
   ]
 }

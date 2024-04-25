@@ -20,9 +20,11 @@ LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .json,$(LOCALES)))
 
 
-XPLAT_DIR = $(abspath ./xplatmath)
-XPLAT_DST = $(XPLAT_DIR)/mathmaps
-XLOC_DST = $(addprefix $(XPLAT_DST)/, $(addsuffix .ts,$(LOCALES)))
+XPLAT_DIR = $(abspath ./ts/xplatmath)
+XPLAT_DST = $(XPLAT_DIR)/locales
+XPLAT_LOC = $(addprefix $(XPLAT_DST)/, $(addsuffix .ts,$(LOCALES)))
+XPLAT_TARGET = $(abspath ./xplatmath/app.js)
+XPLAT_MAP = $(abspath ./xplatmath/report.map)
 
 JSON_MINIFY = pnpm json-minify
 
@@ -90,13 +92,13 @@ $(LOC_DST): $(MINI_DST)
 	@echo '' >> $@.tmp
 	@mv $@.tmp $@
 
-xplat: $(XPLAT_DST) $(XLOC_DST)
+xplat: $(XPLAT_DST) $(XPLAT_LOC)
 
 $(XPLAT_DST):
 	@echo "Creating Xplatmath locale destination."
 	@mkdir -p $(XPLAT_DST)
 
-$(XLOC_DST): $(LOC_DST)
+$(XPLAT_LOC): maps
 	@echo "Creating xplatmath locales" `basename $@`;
 	@if [ -e $(JSON_DST)/`basename $@ .ts`.json ]; then \
 		echo "export const "`basename $@ .ts`":{[key: string]: any} = " > $@; \
@@ -144,6 +146,8 @@ clean_json:
 
 clean_xplat:
 	rm -rf $(XPLAT_DST)
+	rm $(XPLAT_TARGET)
+	rm $(XPLAT_MAP)
 
 clean_min:
 	rm $(MINI_DST)
