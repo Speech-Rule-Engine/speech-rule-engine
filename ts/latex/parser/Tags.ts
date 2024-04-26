@@ -656,7 +656,7 @@ export const TagsFactory = {
    * @param {string} name Name of the tagging object.
    * @param {TagsClass} constr The class of the Tagging object.
    */
-  add: function(name: string, constr: TagsClass) {
+  add(name: string, constr: TagsClass) {
     tagsMapping.set(name, constr);
   },
 
@@ -665,7 +665,7 @@ export const TagsFactory = {
    * Adds a list of tagging objects to the factory.
    * @param {{[name: string]: TagsClass}} tags The list of tagging objects.
    */
-  addTags: function(tags: {[name: string]: TagsClass}) {
+  addTags(tags: {[name: string]: TagsClass}) {
     for (const key of Object.keys(tags)) {
       TagsFactory.add(key, tags[key]);
     }
@@ -677,7 +677,7 @@ export const TagsFactory = {
    * @param {string} name The name of the tagging object.
    * @return {Tags} The newly created object.
    */
-  create: function(name: string): Tags {
+  create(name: string): Tags {
     let constr = tagsMapping.get(name) || tagsMapping.get(defaultTags);
     if (!constr) {
         throw Error('Unknown tags class');
@@ -690,7 +690,7 @@ export const TagsFactory = {
    * Set the name of the default tagging object.
    * @param {string} name The default.
    */
-  setDefault: function(name: string) {
+  setDefault(name: string) {
     defaultTags = name;
   },
 
@@ -698,7 +698,7 @@ export const TagsFactory = {
   /**
    * @return {Tags} The default tagging object.
    */
-  getDefault: function(): Tags {
+  getDefault(): Tags {
     return TagsFactory.create(defaultTags);
   }
 
