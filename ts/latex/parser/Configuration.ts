@@ -205,9 +205,10 @@ export class Configuration {
 }
 
 
-export namespace ConfigurationHandler {
+let maps: Map<string, Configuration> = new Map();
 
-  let maps: Map<string, Configuration> = new Map();
+export const ConfigurationHandler = {
+
 
   /**
    * Adds a new configuration to the handler overwriting old ones.
@@ -215,9 +216,9 @@ export namespace ConfigurationHandler {
    * @param {string} name The name of the configuration.
    * @param {Configuration} map The configuration mapping.
    */
-  export let set = function(name: string, map: Configuration): void {
+  set(name: string, map: Configuration): void {
     maps.set(name, map);
-  };
+  },
 
 
   /**
@@ -226,16 +227,16 @@ export namespace ConfigurationHandler {
    * @param {string} name The name of the configuration.
    * @return {Configuration} The configuration with the given name or null.
    */
-  export let get = function(name: string): Configuration {
+   get(name: string): Configuration {
     return maps.get(name);
-  };
+   },
 
   /**
    * @return {string[]} All configurations in the handler.
    */
-  export let keys = function(): IterableIterator<string> {
+   keys(): IterableIterator<string> {
     return maps.keys();
-  };
+   },
 
 }
 
