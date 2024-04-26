@@ -29,16 +29,128 @@ import {MmlMo} from '../core/MmlTree/MmlNodes/mo.js';
 import {Attributes} from '../core/MmlTree/Attributes.js';
 
 
-namespace FilterUtil {
+/**
+ * Cleans msubsup and munderover elements.
+ * @param {ParseOptions} options The parse options.
+ * @param {string} low String representing the lower part of the expression.
+ * @param {string} up String representing the upper part.
+ */
+function _cleanSubSup(options: ParseOptions, low: string, up: string) {
+  const remove: MmlNode[] = [];
+  for (let mml of options.getList('m' + low + up) as any[]) {
+    const children = mml.childNodes;
+    if (children[mml[low]] && children[mml[up]]) {
+      continue;
+    }
+    const parent = mml.parent;
+    let newNode = (children[mml[low]] ?
+      options.nodeFactory.create('node', 'm' + low, [children[mml.base], children[mml[low]]]) :
+      options.nodeFactory.create('node', 'm' + up, [children[mml.base], children[mml[up]]]));
+    NodeUtil.copyAttributes(mml, newNode);
+    if (parent) {
+      parent.replaceChild(newNode, mml);
+    } else {
+      options.root = newNode;
+    }
+    remove.push(mml);
+  }
+  options.removeFromList('m' + low + up, remove);
+};
+
+/**
+ * Looks through the list of munderover elements for ones that have
+ * movablelimits and bases that are not mo's, and creates new msubsup
+ * elements to replace them if they aren't in displaystyle.
+ *
+ * @param {ParseOptions} options The parse options.
+ * @param {string} underover The under over elements.
+ * @param {string} subsup The sub super elements.
+ */
+function _moveLimits(options: ParseOptions, underover: string, subsup: string) {
+  const remove: MmlNode[] = [];
+  for (const mml of options.getList(underover)) {
+    if (mml.attributes.get('displaystyle')) {
+      continue;
+    }
+    const base = mml.childNodes[(mml as any).base];
+    const mo = base.coreMO();
+    if (base.getProperty('movablelimits') && !mo.attributes.hasExplicit('movablelimits')) {
+      let node = options.nodeFactory.create('node', subsup, mml.childNodes);
+      NodeUtil.copyAttributes(mml, node);
+      if (mml.parent) {
+        mml.parent.replaceChild(node, mml);
+      } else {
+        options.root = node;
+      }
+      remove.push(mml);
+    }
+  }
+  options.removeFromList(underover, remove);
+}
+
+/**
+ * Copies the specified explicit attributes from node2 to node1.
+ * @param {string[]} attrs List of explicit attribute names.
+ * @param {MmlNode} node1 The goal node.
+ * @param {MmlNode} node2 The source node.
+ */
+function _copyExplicit(attrs: string[],
+                       node1: MmlNode, node2: MmlNode) {
+  let attr1 = node1.attributes;
+  let attr2 = node2.attributes;
+  attrs.forEach(x => {
+    let attr = attr2.getExplicit(x);
+    if (attr != null) {
+      // @test Infix Stretchy Right, Preset Lspace Rspace
+      attr1.set(x, attr);
+    }
+  });
+}
+
+/**
+ * Compares the explicit attributes of two nodes. Returns true if they
+ * coincide, with the following exceptions:
+ *   - lspace attribute of node1 is ignored.
+ *   - rspace attribute of node2 is ignored.
+ *   - stretchy=false attributes are ignored.
+ * @param {MmlNode} node1 The first node.
+ * @param {MmlNode} node2 Its next sibling.
+ */
+function _compareExplicit(node1: MmlNode, node2: MmlNode) {
+  let filter = (attr: Attributes, space: string): string[] => {
+    let exp = attr.getExplicitNames();
+    return exp.filter(x => {
+      return x !== space &&
+        (x !== 'stretchy' ||
+          attr.hasExplicit('stretchy'));
+    });
+  };
+  let attr1 = node1.attributes;
+  let attr2 = node2.attributes;
+  let exp1 = filter(attr1, 'lspace');
+  let exp2 = filter(attr2, 'rspace');
+  if (exp1.length !== exp2.length) {
+    return false;
+  }
+  for (let name of exp1) {
+    if (attr1.getExplicit(name) !== attr2.getExplicit(name)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const FilterUtil = {
 
   /**
    * Visitor to set stretchy attributes to false on <mo> elements, if they are
    * not used as delimiters. Also wraps non-stretchy infix delimiters into a
    * TeXAtom.
-   * @param {MmlNode} math The node to rewrite.
-   * @param {ParseOptions} data The parse options.
+   * @param {Object} arg Data object.
+   * @param {MmlNode} arg.math The node to rewrite.
+   * @param {ParseOptions} arg.data The parse options.
    */
-  export let cleanStretchy = function(arg: {math: any, data: ParseOptions}) {
+  cleanStretchy(arg: {math: any, data: ParseOptions}) {
     let options = arg.data;
     for (let mo of options.getList('fixStretchy')) {
       if (NodeUtil.getProperty(mo, 'fixStretchy')) {
@@ -55,16 +167,17 @@ namespace FilterUtil {
         NodeUtil.removeProperties(mo, 'fixStretchy');
       }
     }
-  };
+  },
 
 
   /**
    * Visitor that removes superfluous attributes from nodes. I.e., if a node has
    * an attribute, which is also an inherited attribute it will be removed. This
    * is necessary as attributes are set bottom up in the parser.
-   * @param {ParseOptions} data   The parse options.
+   * @param {Object} arg Data object.
+   * @param {ParseOptions} arg.data The parse options.
    */
-  export let cleanAttributes = function(arg: {data: ParseOptions}) {
+   cleanAttributes(arg: {data: ParseOptions}) {
     let node = arg.data.root;
     node.walkTree((mml: MmlNode, _d: any) => {
       let attribs = mml.attributes;
@@ -79,15 +192,16 @@ namespace FilterUtil {
         }
       }
     }, {});
-  };
+  },
 
 
   /**
    * Combine adjacent <mo> elements that are relations (since MathML treats the
    * spacing very differently)
-   * @param {ParseOptions} data The parse options.
+   * @param {Object} arg Data object.
+   * @param {ParseOptions} arg.data The parse options.
    */
-  export let combineRelations = function(arg: {data: ParseOptions}) {
+  combineRelations(arg: {data: ParseOptions}) {
     const remove: MmlNode[] = [];
     for (let mo of arg.data.getList('mo')) {
       if (mo.getProperty('relationsCombined') || !mo.parent ||
@@ -135,149 +249,38 @@ namespace FilterUtil {
       mo.attributes.setInherited('form', (mo as MmlMo).getForms()[0]);
     }
     arg.data.removeFromList('mo', remove);
-  };
-
-
-  /**
-   * Copies the specified explicit attributes from node2 to node1.
-   * @param {string[]} attrs List of explicit attribute names.
-   * @param {MmlNode} node1 The goal node.
-   * @param {MmlNode} node2 The source node.
-   */
-  let _copyExplicit = function(attrs: string[],
-                               node1: MmlNode, node2: MmlNode) {
-    let attr1 = node1.attributes;
-    let attr2 = node2.attributes;
-    attrs.forEach(x => {
-      let attr = attr2.getExplicit(x);
-      if (attr != null) {
-        // @test Infix Stretchy Right, Preset Lspace Rspace
-        attr1.set(x, attr);
-      }
-    });
-  };
-
-
-  /**
-   * Compares the explicit attributes of two nodes. Returns true if they
-   * coincide, with the following exceptions:
-   *   - lspace attribute of node1 is ignored.
-   *   - rspace attribute of node2 is ignored.
-   *   - stretchy=false attributes are ignored.
-   * @param {MmlNode} node1 The first node.
-   * @param {MmlNode} node2 Its next sibling.
-   */
-  let _compareExplicit = function(node1: MmlNode, node2: MmlNode) {
-    let filter = (attr: Attributes, space: string): string[] => {
-      let exp = attr.getExplicitNames();
-      return exp.filter(x => {
-        return x !== space &&
-          (x !== 'stretchy' ||
-           attr.hasExplicit('stretchy'));
-      });
-    };
-    let attr1 = node1.attributes;
-    let attr2 = node2.attributes;
-    let exp1 = filter(attr1, 'lspace');
-    let exp2 = filter(attr2, 'rspace');
-    if (exp1.length !== exp2.length) {
-      return false;
-    }
-    for (let name of exp1) {
-      if (attr1.getExplicit(name) !== attr2.getExplicit(name)) {
-        return false;
-      }
-    }
-    return true;
-  };
-
-  /**
-   * Cleans msubsup and munderover elements.
-   * @param {ParseOptions} options The parse options.
-   * @param {string} low String representing the lower part of the expression.
-   * @param {string} up String representing the upper part.
-   */
-  let _cleanSubSup = function(options: ParseOptions, low: string, up: string) {
-    const remove: MmlNode[] = [];
-    for (let mml of options.getList('m' + low + up) as any[]) {
-      const children = mml.childNodes;
-      if (children[mml[low]] && children[mml[up]]) {
-        continue;
-      }
-      const parent = mml.parent;
-      let newNode = (children[mml[low]] ?
-                 options.nodeFactory.create('node', 'm' + low, [children[mml.base], children[mml[low]]]) :
-                 options.nodeFactory.create('node', 'm' + up, [children[mml.base], children[mml[up]]]));
-      NodeUtil.copyAttributes(mml, newNode);
-      if (parent) {
-        parent.replaceChild(newNode, mml);
-      } else {
-        options.root = newNode;
-      }
-      remove.push(mml);
-    }
-    options.removeFromList('m' + low + up, remove);
-  };
+  },
 
 
   /**
    * Visitor that rewrites incomplete msubsup/munderover elements in the given
    * node into corresponding msub/sup/under/over nodes.
-   * @param {MmlNode} math The node to rewrite.
-   * @param {ParseOptions} data The parse options.
+   * @param {Object} arg Data object.
+   * @param {MmlNode} arg.math The node to rewrite.
+   * @param {ParseOptions} arg.data The parse options.
    */
-  export let cleanSubSup = function(arg: {math: any, data: ParseOptions}) {
+  cleanSubSup(arg: {math: any, data: ParseOptions}) {
     let options = arg.data;
     if (options.error) {
       return;
     }
     _cleanSubSup(options, 'sub', 'sup');
     _cleanSubSup(options, 'under', 'over');
-  };
-
-
-  /**
-   * Looks through the list of munderover elements for ones that have
-   * movablelimits and bases that are not mo's, and creates new msubsup
-   * elements to replace them if they aren't in displaystyle.
-   *
-   * @param {MmlNode} ath The node to rewrite.
-   * @param {ParseOptions} data The parse options.
-   */
-  let _moveLimits = function (options: ParseOptions, underover: string, subsup: string) {
-    const remove: MmlNode[] = [];
-    for (const mml of options.getList(underover)) {
-      if (mml.attributes.get('displaystyle')) {
-        continue;
-      }
-      const base = mml.childNodes[(mml as any).base];
-      const mo = base.coreMO();
-      if (base.getProperty('movablelimits') && !mo.attributes.hasExplicit('movablelimits')) {
-        let node = options.nodeFactory.create('node', subsup, mml.childNodes);
-        NodeUtil.copyAttributes(mml, node);
-        if (mml.parent) {
-          mml.parent.replaceChild(node, mml);
-        } else {
-          options.root = node;
-        }
-        remove.push(mml);
-      }
-    }
-    options.removeFromList(underover, remove);
-  };
+  },
 
   /**
    * Visitor that rewrites in-line munderover elements with movablelimits but bases
    * that are not mo's into explicit msubsup elements.
    *
-   * @param {ParseOptions} data  The parse options to use
+   * @param {Object} arg Data object.
+   * @param {ParseOptions} arg.data The parse options.
    */
-  export let moveLimits = function (arg: {data: ParseOptions}) {
+  moveLimits(arg: {data: ParseOptions}) {
     const options = arg.data;
     _moveLimits(options, 'munderover', 'msubsup');
     _moveLimits(options, 'munder', 'msub');
     _moveLimits(options, 'mover', 'msup');
-  };
+  },
 
 
   /**
@@ -285,9 +288,9 @@ namespace FilterUtil {
    * @param {MmlNode} math The node to rewrite.
    * @param {ParseOptions} data The parse options.
    */
-  export let setInherited = function(arg: {math: any, data: ParseOptions}) {
+  setInherited(arg: {math: any, data: ParseOptions}) {
     arg.data.root.setInheritedAttributes({}, arg.math['display'], 0, false);
-  };
+  }
 
 }
 
