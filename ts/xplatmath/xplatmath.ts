@@ -12,6 +12,7 @@ import { deactivate } from '../semantic_tree/semantic_annotations.js';
 import { setup, setupSync } from '../engine/engine_setup.js';
 import { enginePromise } from '../engine/engine.js';
 import { markup, finalize } from '../audio/aural_rendering.js';
+import { parse } from '../latex/latex.js';
 import { preloadLocales } from './locales.js';
 
 declare let Sre: any;
@@ -35,6 +36,9 @@ Sre = {
     return finalize(
       markup(EngineInstance().evaluateNode(xmlTreeFromString(input)))
     );
+  },
+  'latex': function (input: string) {
+    return Sre.speech(parse(input));
   },
   'deactivateAnnotation': function (domain: string, kind: string) {
     deactivate(domain, kind);
