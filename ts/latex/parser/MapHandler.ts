@@ -33,10 +33,9 @@ export type HandlerType = 'delimiter' | 'macro' | 'character' | 'environment';
 export type HandlerConfig = {[P in HandlerType]?: string[]};
 export type FallbackConfig = {[P in HandlerType]?: ParseMethod};
 
+let maps: Map<string, TokenMap> = new Map();
 
-export namespace MapHandler {
-
-  let maps: Map<string, TokenMap> = new Map();
+export const MapHandler = {
 
   /**
    * Adds a new token map to the map handler. Might overwrite an existing
@@ -44,9 +43,9 @@ export namespace MapHandler {
    *
    * @param {TokenMap} map Registers a new token map.
    */
-  export let register = function(map: TokenMap): void {
+  register(map: TokenMap): void {
     maps.set(map.name, map);
-  };
+  },
 
 
   /**
@@ -55,9 +54,9 @@ export namespace MapHandler {
    * @param {string} name The name of the token map.
    * @return {TokenMap} The token map with the given name or null.
    */
-  export let getMap = function(name: string): TokenMap {
+  getMap(name: string): TokenMap {
     return maps.get(name);
-  };
+  }
 
 }
 
