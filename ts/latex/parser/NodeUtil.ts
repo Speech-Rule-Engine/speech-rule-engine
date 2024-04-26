@@ -29,31 +29,31 @@ import {Args} from './Types.js';
 import {OperatorDef} from '../core/MmlTree/OperatorDictionary.js';
 
 
-namespace NodeUtil {
+const attrs: Map<String, boolean> = new Map([
+  ['autoOP', true],
+  ['fnOP', true],
+  ['movesupsub', true],
+  ['subsupOK', true],
+  ['texprimestyle', true],
+  ['useHeight', true],
+  ['variantForm', true],
+  ['withDelims', true],
+  ['mathaccent', true],
+  ['open', true],
+  ['close', true]
+]);
 
-  const attrs: Map<String, boolean> = new Map([
-    ['autoOP', true],
-    ['fnOP', true],
-    ['movesupsub', true],
-    ['subsupOK', true],
-    ['texprimestyle', true],
-    ['useHeight', true],
-    ['variantForm', true],
-    ['withDelims', true],
-    ['mathaccent', true],
-    ['open', true],
-    ['close', true]
-  ]);
 
+const NodeUtil = {
 
   /**
    * Creates a single character from a unicode hex string.
    * @param {string} code The code.
    * @return {string} The newly created entity.
    */
-  export function createEntity(code: string): string  {
+  createEntity(code: string): string  {
     return String.fromCodePoint(parseInt(code, 16));
-  }
+  },
 
 
   /**
@@ -61,9 +61,9 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @return {MMLNODE[]} Its children.
    */
-  export function getChildren(node: MmlNode): MMLNODE[] {
+  getChildren(node: MmlNode): MMLNODE[] {
     return (node.childNodes as MMLNODE[]);
-  }
+  },
 
 
   /**
@@ -71,9 +71,9 @@ namespace NodeUtil {
    * @param {TextNode} node The node.
    * @return {string} Its text content.
    */
-  export function getText(node: TextNode): string {
+  getText(node: TextNode): string {
     return node.getText();
-  }
+  },
 
 
   /**
@@ -81,11 +81,11 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @param {MMLNODE[]} children A list of new children.
    */
-  export function appendChildren(node: MmlNode, children: MMLNODE[])  {
+  appendChildren(node: MmlNode, children: MMLNODE[])  {
     for (let child of children) {
       node.appendChild(child);
     }
-  }
+  },
 
 
   /**
@@ -94,9 +94,9 @@ namespace NodeUtil {
    * @param {string} attribute An attribute.
    * @param {Args} value The attribute value.
    */
-  export function setAttribute(node: MmlNode, attribute: string, value: Args) {
+  setAttribute(node: MmlNode, attribute: string, value: Args) {
     node.attributes.set(attribute, value);
-  }
+  },
 
 
   /**
@@ -105,9 +105,9 @@ namespace NodeUtil {
    * @param {string} property The property.
    * @param {Args} value The property value.
    */
-  export function setProperty(node: MmlNode, property: string, value: Args) {
+  setProperty(node: MmlNode, property: string, value: Args) {
     node.setProperty(property, value);
-  }
+  },
 
 
   /**
@@ -115,7 +115,7 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @param {PropertyList} properties A list of property/attribute value pairs.
    */
-  export function setProperties(node: MmlNode, properties: PropertyList) {
+  setProperties(node: MmlNode, properties: PropertyList) {
     for (const name of Object.keys(properties)) {
       let value = properties[name];
       if (name === 'texClass') {
@@ -134,7 +134,7 @@ namespace NodeUtil {
         node.attributes.set(name, value);
       }
     }
-  }
+  },
 
 
   /**
@@ -143,9 +143,9 @@ namespace NodeUtil {
    * @param {string} property A property name.
    * @return {Property} Value of the property.
    */
-  export function getProperty(node: MmlNode, property: string): Property  {
+  getProperty(node: MmlNode, property: string): Property  {
     return node.getProperty(property);
-  }
+  },
 
 
   /**
@@ -154,18 +154,18 @@ namespace NodeUtil {
    * @param {string} attr An attribute name.
    * @return {Property} Value of the attribute.
    */
-  export function getAttribute(node: MmlNode, attr: string): Property  {
+  getAttribute(node: MmlNode, attr: string): Property  {
     return node.attributes.get(attr);
-  }
+  },
 
   /**
    * Removes an attribute of a node.
    * @param {MmlNode} node The node.
    * @param {string} attr An attribute name.
    */
-  export function removeAttribute(node: MmlNode, attr: string): void  {
+  removeAttribute(node: MmlNode, attr: string): void  {
     node.attributes.unset(attr);
-  }
+  },
 
 
   /**
@@ -173,9 +173,9 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @param {string[]} ...properties  A list of properties.
    */
-  export function removeProperties(node: MmlNode, ...properties: string[]) {
+  removeProperties(node: MmlNode, ...properties: string[]) {
     node.removeProperty(...properties);
-  }
+  },
 
 
   /**
@@ -184,9 +184,9 @@ namespace NodeUtil {
    * @param {number} position The position of the child.
    * @return {MMLNODE} The child node at position.
    */
-  export function getChildAt(node: MmlNode, position: number): MMLNODE {
+  getChildAt(node: MmlNode, position: number): MMLNODE {
     return (node.childNodes[position] as MMLNODE);
-  }
+  },
 
 
   /**
@@ -195,13 +195,13 @@ namespace NodeUtil {
    * @param {number} position The position of the new child.
    * @param {MmlNode} child The new child.
    */
-  export function setChild(node: MmlNode, position: number, child: MmlNode) {
+  setChild(node: MmlNode, position: number, child: MmlNode) {
     let children = node.childNodes;
     children[position] = child;
     if (child) {
       child.parent = node;
     }
-  }
+  },
 
 
   /**
@@ -209,12 +209,12 @@ namespace NodeUtil {
    * @param {MmlNode} oldNode The source node.
    * @param {MmlNode} newNode The target node.
    */
-  export function copyChildren(oldNode: MmlNode, newNode: MmlNode) {
+  copyChildren(oldNode: MmlNode, newNode: MmlNode) {
     let children = oldNode.childNodes as (TextNode | MmlNode)[];
     for (let i = 0; i < children.length; i++) {
-      setChild(newNode, i, children[i]);
+      NodeUtil.setChild(newNode, i, children[i]);
     }
-  }
+  },
 
 
   /**
@@ -222,10 +222,10 @@ namespace NodeUtil {
    * @param {MmlNode} oldNode The source node.
    * @param {MmlNode} newNode The target node.
    */
-  export function copyAttributes(oldNode: MmlNode, newNode: MmlNode) {
+  copyAttributes(oldNode: MmlNode, newNode: MmlNode) {
     newNode.attributes = oldNode.attributes;
-    setProperties(newNode, oldNode.getAllProperties());
-  }
+    NodeUtil.setProperties(newNode, oldNode.getAllProperties());
+  },
 
 
   /**
@@ -234,9 +234,9 @@ namespace NodeUtil {
    * @param {string} kind The type to check.
    * @return {boolean} True if node is of the given type.
    */
-  export function isType(node: MmlNode, kind: string): boolean  {
+  isType(node: MmlNode, kind: string): boolean  {
     return node.isKind(kind);
-  }
+  },
 
 
   /**
@@ -244,9 +244,9 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @return {boolean} True if node is embellished.
    */
-  export function isEmbellished(node: MmlNode): boolean {
+  isEmbellished(node: MmlNode): boolean {
     return node.isEmbellished;
-  }
+  },
 
 
   /**
@@ -254,9 +254,9 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @return {number} Its texclass.
    */
-  export function getTexClass(node: MmlNode): number  {
+  getTexClass(node: MmlNode): number  {
     return node.texClass;
-  }
+  },
 
 
   /**
@@ -264,9 +264,9 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @return {MmlNode} The MO node at the core.
    */
-  export function getCoreMO(node: MmlNode): MmlNode  {
+  getCoreMO(node: MmlNode): MmlNode  {
     return node.coreMO();
-  }
+  },
 
 
   /**
@@ -274,9 +274,9 @@ namespace NodeUtil {
    * @param {any} item The object.
    * @return {boolean} True if it is a node.
    */
-  export function isNode(item: any): boolean  {
+  isNode(item: any): boolean  {
     return item instanceof AbstractMmlNode || item instanceof AbstractMmlEmptyNode;
-  }
+  },
 
 
   /**
@@ -284,9 +284,9 @@ namespace NodeUtil {
    * @param {MmlNode} node The node.
    * @return {boolean} True if the node is an inferred mrow.
    */
-  export function isInferred(node: MmlNode): boolean {
+  isInferred(node: MmlNode): boolean {
     return node.isInferred;
-  }
+  },
 
 
   /**
@@ -295,8 +295,8 @@ namespace NodeUtil {
    * @return {OperatorDef} If node is an MO returns the operator definition. O/w
    *    null.
    */
-  export function getForm(node: MmlNode): OperatorDef {
-    if (!isType(node, 'mo')) {
+  getForm(node: MmlNode): OperatorDef {
+    if (!NodeUtil.isType(node, 'mo')) {
       return null;
     }
     let mo = node as MmlMo;
@@ -308,7 +308,7 @@ namespace NodeUtil {
       }
     }
     return null;
-  }
+  },
 
   /**
    * Gets the operator definition of an mo node of a particular form.
@@ -317,7 +317,7 @@ namespace NodeUtil {
    * @return {OperatorDef} If node is an MO returns the operator definition. O/w
    *    null.
    */
-  export function getOp(mo: MmlMo, form: string = 'infix'): OperatorDef {
+  getOp(mo: MmlMo, form: string = 'infix'): OperatorDef {
     return MmlMo.OPTABLE[form][mo.getText()] || null;
   }
 

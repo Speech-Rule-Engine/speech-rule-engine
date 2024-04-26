@@ -31,7 +31,7 @@ import {ParseUtil} from './ParseUtil.js';
 
 const MATHVARIANT = TexConstant.Variant;
 
-export const ParseMethods = {
+const ParseMethods = {
 
   /**
    * Handle a variable (a single letter or multi-letter if allowed).
