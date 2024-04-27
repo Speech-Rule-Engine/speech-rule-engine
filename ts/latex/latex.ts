@@ -33,7 +33,13 @@ import './parser/ams/AmsConfiguration.js';
 export function parse(ltx: string, packages: string[] = ['base', 'ams']) {
   let configuration = new ParserConfiguration(packages, ['tex']);
   configuration.init();
-  let parseOptions = new ParseOptions(configuration, []);
+  let parseOptions = new ParseOptions(configuration, [
+    {
+      digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+    // Maximum size of TeX string to process.
+      maxBuffer: 5 * 1024
+    },
+    TagsFactory.OPTIONS]);
   parseOptions.nodeFactory.setMmlFactory(new MmlFactory());
   tags(parseOptions, configuration);
   let node;
@@ -53,7 +59,8 @@ export function parse(ltx: string, packages: string[] = ['base', 'ams']) {
   // FilterUtil.cleanAttributes({});
   FilterUtil.combineRelations({data: parseOptions});
   let visitor = new SerializedMmlVisitor();
-  return visitor.visitTree(node)
+  console.log(visitor.visitTree(node));
+  return visitor.visitTree(node);
 };
 
   /**
