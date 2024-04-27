@@ -49,10 +49,11 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
   if (
     (feature.modality && feature.modality !== 'speech') ||
     (!feature.modality &&
-      Engine.getInstance().features.is(EngineConst.Axis.MODALITY, 'speech'))
+      !Engine.getInstance().features.is(EngineConst.Axis.MODALITY, 'speech'))
   ) {
     return;
   }
+  // TODO(CC) fix this later, once every option element is separate.
   if (!feature.domain) {
     return;
   }
