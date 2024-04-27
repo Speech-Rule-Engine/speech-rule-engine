@@ -41,7 +41,7 @@ import {Label} from '../Tags.js';
 import {em} from '../../util/lengths.js';
 import {entities} from '../../util/Entities.js';
 import {lookup} from '../../util/Options.js';
-import {ColumnState} from '../ColumnParser.js';
+import {ColumnParser, ColumnState} from '../ColumnParser.js';
 import {replaceUnicode} from '../../util/string.js';
 
 
@@ -1546,7 +1546,7 @@ BaseMethods.NewColumnType = function (parser: TexParser, name: string) {
     throw new TexError('PositiveIntegerArg', 'Argument to %1 must be a positive integer', n);
   }
   const cparser = parser.configuration.columnParser;
-  cparser.columnHandler[c] = (state: ColumnState) => cparser.macroColumn(state, macro, parseInt(n));
+  cparser.columnHandler.set(c, (state: ColumnState) => ColumnParser.macroColumn(state, macro, parseInt(n)));
   parser.Push(parser.itemFactory.create('null'));
 }
 
