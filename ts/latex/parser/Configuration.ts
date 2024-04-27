@@ -65,6 +65,7 @@ export class Configuration {
    * @param {string} name The package name or empty string.
    * @param {Object} config See `create` method.
    * @return {Configuration} The newly generated configuration.
+   * @nocollapse
    */
   private static _create(name: string,
                          config: {handler?: HandlerConfig,

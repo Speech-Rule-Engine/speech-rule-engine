@@ -294,6 +294,7 @@ const NodeUtil = {
    * @param {MmlNode} node The node.
    * @return {OperatorDef} If node is an MO returns the operator definition. O/w
    *    null.
+   * @nocollapse
    */
   getForm(node: MmlNode): OperatorDef {
     if (!NodeUtil.isType(node, 'mo')) {
