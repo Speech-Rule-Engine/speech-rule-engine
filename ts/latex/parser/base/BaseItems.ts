@@ -75,9 +75,9 @@ export class StartItem extends BaseItem {
   public checkItem(item: StackItem): CheckType {
     if (item.isKind('stop')) {
       let node = this.toMml();
-      // if (!this.global.isInner) {
-      //   node = this.factory.configuration.tags.finalize(node, this.env);
-      // }
+      if (!this.global.isInner) {
+        node = this.factory.configuration.tags.finalize(node, this.env);
+      }
       return [[this.factory.create('mml', node)], true];
     }
     return super.checkItem(item);

@@ -186,19 +186,21 @@ export interface Tags {
    */
   reset(offset?: number): void;
 
-  // /**
-  //  * Initialise tagging for a MathItem
-  //  * (clear equation-specific labels and ids, set counter
-  //  * and check for recompile)
-  //  * @param {MathItem} math   The MathItem for the current equation
-  //  */
-  //   startEquation(math: MathItem<any, any, any>): void;
+  /**
+   * Initialise tagging for a MathItem
+   * (clear equation-specific labels and ids, set counter
+   * and check for recompile)
+   * @param {MathItem} math   The MathItem for the current equation
+   */
+  // startEquation(math: MathItem<any, any, any>): void;
+  startEquation(): void;
 
-  // /**
-  //  * Move equation-specific labels and ids to global ones,
-  //  * save the counter, and mark the MathItem for redos
-  //  */
-  //   finishEquation(math: MathItem<any, any, any>): void;
+  /**
+   * Move equation-specific labels and ids to global ones,
+   * save the counter, and mark the MathItem for redos
+   */
+  // finishEquation(math: MathItem<any, any, any>): void;
+  finishEquation(): void;
 
   /**
    * Finalizes tag creation.
@@ -469,41 +471,43 @@ export class AbstractTags implements Tags {
     this.label = '';
   }
 
-  // /**
-  //  * @override
-  //  */
+  /**
+   * @override
+   */
   // public startEquation(math: MathItem<any, any, any>) {
-  //   this.history = [];
-  //   this.stack = [];
-  //   this.clearTag();
-  //   this.currentTag = new TagInfo('', undefined, undefined);
-  //   this.labels = {};
-  //   this.ids = {};
-  //   this.counter = this.allCounter;
-  //   this.redo = false;
-  //   const recompile = math.inputData.recompile;
-  //   if (recompile) {
-  //     this.refUpdate = true;
-  //     this.counter = recompile.counter;
-  //   }
-  // }
+  public startEquation() {
+    this.history = [];
+    this.stack = [];
+    this.clearTag();
+    this.currentTag = new TagInfo('', undefined, undefined);
+    this.labels = {};
+    this.ids = {};
+    this.counter = this.allCounter;
+    this.redo = false;
+    // const recompile = math.inputData.recompile;
+    // if (recompile) {
+    //   this.refUpdate = true;
+    //   this.counter = recompile.counter;
+    // }
+  }
 
-  // /**
-  //  * @override
-  //  */
+  /**
+   * @override
+   */
   // public finishEquation(math: MathItem<any, any, any>) {
-  //   if (this.redo) {
-  //     math.inputData.recompile = {
-  //       state: math.state(),
-  //       counter: this.allCounter
-  //     };
-  //   }
-  //   if (!this.refUpdate) {
-  //     this.allCounter = this.counter;
-  //   }
-  //   Object.assign(this.allIds, this.ids);
-  //   Object.assign(this.allLabels, this.labels);
-  // }
+  public finishEquation() {
+    // if (this.redo) {
+    //   math.inputData.recompile = {
+    //     state: math.state(),
+    //     counter: this.allCounter
+    //   };
+    // }
+    if (!this.refUpdate) {
+      this.allCounter = this.counter;
+    }
+    Object.assign(this.allIds, this.ids);
+    Object.assign(this.allLabels, this.labels);
+  }
 
   /**
    * @override
@@ -633,21 +637,21 @@ export const TagsFactory = {
    */
   OPTIONS: {
     // Tagging style, used to be autonumber in v2.
-    tags: defaultTags,
+    'tags': defaultTags,
     // This specifies the side on which \tag{} macros will place the tags.
     // Set to 'left' to place on the left-hand side.
-    tagSide: 'right',
+    'tagSide': 'right',
     // This is the amount of indentation (from right or left) for the tags.
-    tagIndent: '0.8em',
+    'tagIndent': '0.8em',
     // make element ID's use \label name rather than equation number
     // MJ puts in an equation prefix: mjx-eqn
     // When true it uses the label name XXX as mjx-eqn:XXX
     // If false it uses the actual number N that is displayed: mjx-eqn:N
-    useLabelIds: true,
+    'useLabelIds': true,
     // Set to true in order to prevent error messages for duplicate label ids
-    ignoreDuplicateLabels: false,
+    'ignoreDuplicateLabels': false,
     // The rowalign value to use for tag cells.
-    tagAlign: 'baseline'
+    'tagAlign': 'baseline',
   } as OptionList,
 
 

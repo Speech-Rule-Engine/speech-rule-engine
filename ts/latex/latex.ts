@@ -25,32 +25,48 @@ import ParseOptions from './parser/ParseOptions.js';
 import {MmlFactory} from './core/MmlTree/MmlFactory.js';
 import {SerializedMmlVisitor} from './core/MmlTree/SerializedMmlVisitor.js';
 import FilterUtil from './parser/FilterUtil.js';
+import {TagsFactory} from './parser/Tags.js';
 import './parser/base/BaseConfiguration.js';
 import './parser/ams/AmsConfiguration.js';
 
 
-export function parse(ltx: string) {
-  let configuration = new ParserConfiguration(['base', 'ams'], ['tex']);
+export function parse(ltx: string, packages: string[] = ['base', 'ams']) {
+  let configuration = new ParserConfiguration(packages, ['tex']);
   configuration.init();
-  let options = new ParseOptions(configuration, []);
-  options.nodeFactory.setMmlFactory(new MmlFactory());
+  let parseOptions = new ParseOptions(configuration, []);
+  parseOptions.nodeFactory.setMmlFactory(new MmlFactory());
+  tags(parseOptions, configuration);
   let node;
   try {
     let parser = new TexParser(
-      ltx, {display: true, isInner: false}, options);
+      ltx, {display: true, isInner: false}, parseOptions);
     node = parser.mml();
   } catch (err) {
     throw err;
   }
-  node = options.nodeFactory.create('node', 'math', [node]);
-  options.root = node;
-  FilterUtil.cleanSubSup({math: node, data: options});
+  node = parseOptions.nodeFactory.create('node', 'math', [node]);
+  parseOptions.root = node;
+  FilterUtil.cleanSubSup({math: node, data: parseOptions});
   // this.postFilters.add(FilterUtil.setInherited, -5);
-  FilterUtil.moveLimits({data: options});
+  FilterUtil.moveLimits({data: parseOptions});
   // FilterUtil.cleanStretchy({});
   // FilterUtil.cleanAttributes({});
-  FilterUtil.combineRelations({data: options});
+  FilterUtil.combineRelations({data: parseOptions});
   let visitor = new SerializedMmlVisitor();
   return visitor.visitTree(node)
 };
+
+  /**
+   * Initialises the Tags factory. Add tagging structures from packages and set
+   * tagging to given default.
+   * @param {ParseOptions} options The parse options.
+   * @param {Configuration} configuration The configuration.
+   */
+function tags(options: ParseOptions, configuration: ParserConfiguration) {
+    TagsFactory.addTags(configuration.tags);
+    // TagsFactory.setDefault(options.options.tags);
+    options.tags = TagsFactory.getDefault();
+    options.tags.configuration = options;
+  }
+
 

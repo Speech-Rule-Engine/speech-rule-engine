@@ -25,7 +25,7 @@
 /**
  *  The PrioritizedListItem<DataClass> interface
  *
- * @template DataClass   The class of data stored in the item
+ * template DataClass   The class of data stored in the item
  */
 
 export interface PrioritizedListItem<DataClass> {
@@ -45,7 +45,7 @@ export interface PrioritizedListItem<DataClass> {
 /**
  *  Implements the PrioritizedList<DataClass> class
  *
- * @template DataClass   The class of data stored in the list
+ * template DataClass   The class of data stored in the list
  */
 
 export class PrioritizedList<DataClass> {

@@ -390,7 +390,7 @@ export const ParseUtil = {
           // @test Mbox Eqref, Mbox CR
           if (match === '' && text.substring(i).match(/^(eq)?ref\s*\{/)) {
             // @test Mbox Eqref
-            let len = ((RegExp as any)['$&'] as string).length;
+            let len = RegExp.lastMatch.length;
             if (k < i - 1) {
               // @test Mbox Eqref
               mml.push(ParseUtil.internalText(parser, text.slice(k, i - 1), def));
