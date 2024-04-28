@@ -90,13 +90,6 @@ export class SystemExternal {
     'mathmaps_ie.js';
 
   /**
-   * Commander library.
-   */
-  public static commander = SystemExternal.documentSupported
-    ? null
-    : SystemExternal.extRequire('commander');
-
-  /**
    * Filesystem library.
    */
   public static fs = SystemExternal.documentSupported
