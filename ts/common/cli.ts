@@ -33,6 +33,13 @@ import { Variables } from './variables.js';
 export class Cli {
   public process = SystemExternal.extRequire('process');
 
+  /**
+   * Commander library.
+   */
+  public static commander = SystemExternal.documentSupported
+    ? null
+    : SystemExternal.extRequire('commander');
+
   public setup: { [key: string]: string | boolean } = {
     mode: EngineConst.Mode.SYNC
   };
@@ -148,7 +155,7 @@ export class Cli {
         }
         let i = 0;
         const header = order.map((x: string) => compStr(x, length[i++]));
-        const markdown = SystemExternal.commander.opts().pprint;
+        const markdown = Cli.commander.opts().pprint;
         const separator = length.map((x: number) =>
           new Array(x + 1).join(markdown ? '-' : '=')
         );
@@ -220,7 +227,7 @@ export class Cli {
    * Method for the command line interface of the Speech Rule Engine
    */
   public async commandLine() {
-    const commander = SystemExternal.commander;
+    const commander = Cli.commander;
     const system = System;
     const set = ((key: string) => {
       return (val: string, def: string) => this.set(key, val, def);
@@ -369,7 +376,7 @@ export class Cli {
       })
       .parse(this.process.argv);
     await System.engineReady().then(() => System.setupEngine(this.setup));
-    const options = commander.opts();
+    const options = Cli.commander.opts();
     if (options.output) {
       this.output = SystemExternal.fs.createWriteStream(options.output);
     }
@@ -379,8 +386,8 @@ export class Cli {
     if (options.input) {
       this.execute(options.input);
     }
-    if (commander.args.length) {
-      commander.args.forEach(this.execute.bind(this));
+    if (Cli.commander.args.length) {
+      Cli.commander.args.forEach(this.execute.bind(this));
       System.engineReady().then(() =>
         Debugger.getInstance().exit(() => System.exit(0))
       );
