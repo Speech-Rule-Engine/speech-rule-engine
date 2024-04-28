@@ -153,19 +153,19 @@ export class BaseTags extends AbstractTags { }
  */
 export const BaseConfiguration: Configuration = Configuration.create(
   'base',  {
-    handler: {
-      character: ['command', 'special', 'letter', 'digit'],
-      delimiter: ['delimiter'],
+    'handler': {
+      'character': ['command', 'special', 'letter', 'digit'],
+      'delimiter': ['delimiter'],
       // Note, that the position of the delimiters here is important!
-      macro: ['delimiter', 'macros', 'lcGreek', 'ucGreek', 'mathchar0mi', 'mathchar0mo', 'mathchar7'],
-      environment: ['environment']
+      'macro': ['delimiter', 'macros', 'lcGreek', 'ucGreek', 'mathchar0mi', 'mathchar0mo', 'mathchar7'],
+      'environment': ['environment']
     },
-    fallback: {
-      character: Other,
-      macro: csUndefined,
-      environment: envUndefined
+    'fallback': {
+      'character': Other,
+      'macro': csUndefined,
+      'environment': envUndefined
     },
-    items: {
+    'items': {
       // BaseItems
       [bitem.StartItem.prototype.kind]: bitem.StartItem,
       [bitem.StopItem.prototype.kind]: bitem.StopItem,
@@ -194,16 +194,16 @@ export const BaseConfiguration: Configuration = Configuration.create(
       [bitem.EquationItem.prototype.kind]: bitem.EquationItem,
       [bitem.MstyleItem.prototype.kind]: bitem.MstyleItem
     },
-    options: {
-      maxMacros: 1000,
-      identifierPattern: /^[a-zA-Z]+/,  // pattern for multiLetterIdentifiers in \mathrm, etc.
-      baseURL: (typeof(document) === 'undefined' ||
+    'options': {
+      'maxMacros': 1000,
+      'identifierPattern': /^[a-zA-Z]+/,  // pattern for multiLetterIdentifiers in \mathrm, etc.
+      'baseURL': (typeof(document) === 'undefined' ||
                 document.getElementsByTagName('base').length === 0) ?
                 '' : String(document.location).replace(/#.*$/, '')
     },
-    tags: {
-      base: BaseTags
+    'tags': {
+      'base': BaseTags
     },
-    postprocessors: [[filterNonscript, -4]]
+    'postprocessors': [[filterNonscript, -4]]
   }
 );

@@ -50,26 +50,26 @@ let init = function(config: ParserConfiguration) {
 
 export const AmsConfiguration = Configuration.create(
   'ams', {
-    handler: {
-      character: ['AMSmath-operatorLetter'],
-      delimiter: ['AMSsymbols-delimiter', 'AMSmath-delimiter'],
-      macro: ['AMSsymbols-mathchar0mi', 'AMSsymbols-mathchar0mo',
+    'handler': {
+      'character': ['AMSmath-operatorLetter'],
+      'delimiter': ['AMSsymbols-delimiter', 'AMSmath-delimiter'],
+      'macro': ['AMSsymbols-mathchar0mi', 'AMSsymbols-mathchar0mo',
               'AMSsymbols-delimiter', 'AMSsymbols-macros',
               'AMSmath-mathchar0mo', 'AMSmath-macros', 'AMSmath-delimiter'],
-      environment: ['AMSmath-environment']
+      'environment': ['AMSmath-environment']
     },
-    items: {
+    'items': {
       [MultlineItem.prototype.kind]: MultlineItem,
       [FlalignItem.prototype.kind]: FlalignItem,
     },
-    tags: {'ams': AmsTags},
-    init: init,
-    options: {
-      multlineWidth: '',
-      ams: {
-        operatornamePattern: /^[-*a-zA-Z]+/,  // multiLetterIdentifier for \operatorname
-        multlineWidth: '100%',  // The width to use for multline environments.
-        multlineIndent: '1em',  // The margin to use on both sides of multline environments.
+    'tags': {'ams': AmsTags},
+    'init': init,
+    'options': {
+      'multlineWidth': '',
+      'ams': {
+        'operatornamePattern': /^[-*a-zA-Z]+/,  // multiLetterIdentifier for \operatorname
+        'multlineWidth': '100%',  // The width to use for multline environments.
+        'multlineIndent': '1em',  // The margin to use on both sides of multline environments.
       }
     }
   }

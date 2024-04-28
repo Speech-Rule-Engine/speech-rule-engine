@@ -82,8 +82,8 @@ export class Configuration {
                                   parser?: string,
                                  } = {}): Configuration {
     let priority = config.priority || PrioritizedList.DEFAULTPRIORITY;
-    let init = config.init ? this.makeProcessor(config.init, priority) : null;
-    let conf = config.config ? this.makeProcessor(config.config, priority) : null;
+    let init = config.init ? Configuration.makeProcessor(config.init, priority) : null;
+    let conf = config.config ? Configuration.makeProcessor(config.config, priority) : null;
     let preprocessors = (config.preprocessors || []).map(
       pre => this.makeProcessor(pre, priority));
     let postprocessors = (config.postprocessors || []).map(
