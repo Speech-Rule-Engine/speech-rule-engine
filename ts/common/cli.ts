@@ -31,7 +31,8 @@ import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 
 export class Cli {
-  public process = SystemExternal.extRequire('process');
+
+  public static process = SystemExternal.extRequire('process');
 
   /**
    * Commander library.
@@ -48,7 +49,7 @@ export class Cli {
 
   public dp: DOMParser;
 
-  private output: any = this.process.stdout;
+  private output: any = Cli.process.stdout;
 
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
@@ -195,9 +196,9 @@ export class Cli {
    * to the given output file.
    */
   public readline() {
-    this.process.stdin.setEncoding('utf8');
+    Cli.process.stdin.setEncoding('utf8');
     const inter = SystemExternal.extRequire('readline').createInterface({
-      input: this.process.stdin,
+      input: Cli.process.stdin,
       output: this.output
     });
     let input = '';
@@ -374,7 +375,7 @@ export class Cli {
       .on('option:opt-all', () => {
         this.enumerate(true).then(() => System.exit(0));
       })
-      .parse(this.process.argv);
+      .parse(Cli.process.argv);
     await System.engineReady().then(() => System.setupEngine(this.setup));
     const options = Cli.commander.opts();
     if (options.output) {
@@ -415,7 +416,7 @@ export class Cli {
       }
     } catch (err) {
       console.error(err.name + ': ' + err.message);
-      Debugger.getInstance().exit(() => this.process.exit(1));
+      Debugger.getInstance().exit(() => Cli.process.exit(1));
     }
   }
 
