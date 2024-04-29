@@ -80,5 +80,5 @@
     "cjs/"
   ],
   "source": "ts/index.ts",
-  "browser": "lib/sre.js"
+  "main": "lib/sre.js"
 }
