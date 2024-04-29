@@ -19,14 +19,15 @@
     "postcommonjs": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
     "module": "pnpm tsc --module nodenext --outDir js --moduleResolution nodenext",
     "postmodule": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
+    "require": "node -e \"require(\\\"fs\\\").writeFileSync(\\\"lib/require.mjs\\\", \\\"import {createRequire} from 'module';\\nglobal.require = createRequire(import.meta.url);\\n\\\");\"",
     "pretest": "git submodule update --remote --merge; pnpm compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "pnpm module",
     "clean": "rimraf js lib cjs",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; pnpm jest --silent ",
     "cleanAll": "make clean; make clean_min",
     "prepublish": "pnpm cleanAll; pnpm buildAll",
-    "build": "make -j 12 all; pnpm module; pnpm webpack",
-    "buildAll": "make -j 12 all; pnpm commonjs; pnpm module; pnpm webpack; pnpm postcommonjs; pnpm postmodule"
+    "build": "make -j 12 all; pnpm module; pnpm webpack; pnpm require",
+    "buildAll": "make -j 12 all; pnpm commonjs; pnpm module; pnpm webpack; pnpm require; pnpm postcommonjs; pnpm postmodule"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
@@ -80,5 +81,5 @@
     "cjs/"
   ],
   "source": "ts/index.ts",
-  "browser": "lib/sre.js"
+  "main": "lib/sre.js"
 }
