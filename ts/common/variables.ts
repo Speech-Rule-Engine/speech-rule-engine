@@ -22,7 +22,7 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '4.1.0-beta.9';
+  public static readonly VERSION: string = '4.1.0-beta.10';
 
   /**
    * Locale mapping to language names.
@@ -69,7 +69,7 @@ export class Variables {
    * MathJax version. This indicates the lowest MathJax version this version of
    * SRE is compatible with.
    */
-  public static readonly mathjaxVersion: string = '4.0.0-beta.1';
+  public static readonly mathjaxVersion: string = '4.0.0-beta.5';
 
   /**
    * The URL for SRE resources.
