@@ -35,7 +35,7 @@ export class MmlFactory extends AbstractNodeFactory<MmlNode, MmlNodeClass> {
   /**
    * The default node-creation functions
    */
-  public static defaultNodes = MML;
+  public defaultNodes = MML;
 
   /**
    * @return {Object}  The list of node-creation functions (similar to the
@@ -43,6 +43,10 @@ export class MmlFactory extends AbstractNodeFactory<MmlNode, MmlNodeClass> {
    */
   get MML(): Object {
     return this.node;
+  }
+
+  constructor() {
+    super(MML);
   }
 
 }

@@ -98,19 +98,6 @@ export interface Factory<N extends FactoryNode, C extends FactoryNodeClass<N>> {
 
 /*****************************************************************/
 /**
- * The generic AbstractFactoryClass interface
- *   (needed for access to defaultNodes via the constructor)
- *
- * @template N  The node type created by the factory
- * @template C  The class of the node being constructed (for access to static properties)
- */
-interface AbstractFactoryClass<N extends FactoryNode, C extends FactoryNodeClass<N>> extends Function {
-  defaultNodes: {[kind: string]: C};
-}
-
-
-/*****************************************************************/
-/**
  * The generic AbstractFactory class
  *
  * @template N  The node type created by the factory
@@ -124,7 +111,7 @@ export abstract class AbstractFactory<
   /**
    * The default collection of objects to use for the node map
    */
-  public static defaultNodes = {};
+  public defaultNodes = {};
 
   /**
    * The default kind
@@ -144,9 +131,9 @@ export abstract class AbstractFactory<
   /**
    * @override
    */
-  constructor(nodes: {[kind: string]: C} = null) {
+  constructor(nodes: {[kind: string]: C}) {
     if (nodes === null) {
-      nodes = (this.constructor as AbstractFactoryClass<N, C>).defaultNodes;
+      nodes = this.defaultNodes;
     }
     for (const kind of Object.keys(nodes)) {
       this.setNodeClass(kind, nodes[kind]);
