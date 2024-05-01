@@ -21,7 +21,6 @@
  * @author dpvc@mathjax.org (Davide Cervone)
  */
 
-// import {retryAfter} from './Retries.js';
 import {OptionList} from './Options.js';
 
 /**
@@ -502,13 +501,6 @@ function replace(match: string, entity: string): string {
   if (entities[entity]) {
     return entities[entity];
   }
-  // if (options['loadMissingEntities']) {
-  //   let file = (entity.match(/^[a-zA-Z](fr|scr|opf)$/) ? RegExp.$1 : entity.charAt(0).toLowerCase());
-  //   if (!loaded[file]) {
-  //     loaded[file] = true;
-  //     retryAfter(asyncLoad('./util/entities/' + file + '.js'));
-  //   }
-  // }
   return match;
 }
 
