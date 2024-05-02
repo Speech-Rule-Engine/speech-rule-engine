@@ -28,6 +28,11 @@ declare let require: (name: string) => any;
 declare let process: any;
 
 export class SystemExternal {
+
+  public static nodeRequire() {
+    return eval('require');
+  }
+
   /**
    * The local require function for NodeJS.
    *
@@ -36,8 +41,8 @@ export class SystemExternal {
    */
   public static extRequire(library: string) {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
-      const nodeRequire = eval('require');
-      return nodeRequire(library);
+      // System.external.nodeRequire = eval('require');
+      return SystemExternal.nodeRequire()(library);
     }
     return null;
   }
@@ -90,13 +95,6 @@ export class SystemExternal {
     'mathmaps_ie.js';
 
   /**
-   * Commander library.
-   */
-  public static commander = SystemExternal.documentSupported
-    ? null
-    : SystemExternal.extRequire('commander').program;
-
-  /**
    * Filesystem library.
    */
   public static fs = SystemExternal.documentSupported
@@ -112,15 +110,25 @@ export class SystemExternal {
    * Path to JSON files.
    */
   public static jsonPath = (function () {
-    return (
-      (SystemExternal.documentSupported
-        ? SystemExternal.url
-        : process.env.SRE_JSON_PATH ||
-          global.SRE_JSON_PATH ||
-          (typeof __dirname !== 'undefined'
-            ? __dirname + '/mathmaps'
-            : process.cwd())) + '/'
-    );
+    if (SystemExternal.documentSupported) {
+      return SystemExternal.url;
+    }
+    if (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH) {
+      return process.env.SRE_JSON_PATH || global.SRE_JSON_PATH;
+    }
+    try {
+      let path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
+      return path.replace(/sre\.js$/, '') + 'mathmaps';
+    } catch (_err) { }
+    try {
+      let path = SystemExternal.nodeRequire().resolve('.');
+      return path.replace(/sre\.js$/, '') + 'mathmaps';
+    } catch (_err) { }
+    return (typeof __dirname !== 'undefined')
+      ? (__dirname + (__dirname.match(/lib?$/)
+        ? '/mathmaps'
+        : '/lib/mathmaps'))
+      : (process.cwd() + '/lib/mathmaps');
   })();
 
   /**

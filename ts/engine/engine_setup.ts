@@ -38,6 +38,8 @@ const EN_RULES: string[] = [
   'html'
 ];
 
+const DEFAULT_DOMAIN = 'mathspeak';
+
 /**
  *
  */
@@ -55,29 +57,32 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
   }
   // TODO(CC) fix this later, once every option element is separate.
   if (!feature.domain) {
+    if (Engine.getInstance().features.is(EngineConst.Axis.DOMAIN, 'default')) {
+      feature.domain = DEFAULT_DOMAIN;
+    }
     return;
   }
   if (feature.domain === 'default') {
-    feature.domain = 'mathspeak';
+    feature.domain = DEFAULT_DOMAIN;
     return;
   }
   const locale = (feature.locale ||
     Engine.getInstance().features.get(EngineConst.Axis.LOCALE)) as string;
   const domain = feature.domain as string;
   if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
-    if (domain !== 'mathspeak') {
-      feature.domain = 'mathspeak';
+    if (domain !== DEFAULT_DOMAIN) {
+      feature.domain = DEFAULT_DOMAIN;
     }
     return;
   }
   if (locale === 'en') {
     if (EN_RULES.indexOf(domain) === -1) {
-      feature.domain = 'mathspeak';
+      feature.domain = DEFAULT_DOMAIN;
     }
     return;
   }
-  if (domain !== 'mathspeak' && domain !== 'clearspeak') {
-    feature.domain = 'mathspeak';
+  if (domain !== DEFAULT_DOMAIN && domain !== 'clearspeak') {
+    feature.domain = DEFAULT_DOMAIN;
   }
 }
 

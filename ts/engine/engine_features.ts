@@ -27,7 +27,7 @@ import * as EngineConst from './engine_const.js';
 const defaultAxis: Map<EngineConst.Axis, string> = new Map([
   [EngineConst.Axis.LOCALE, 'en'],
   [EngineConst.Axis.STYLE, 'default'],
-  [EngineConst.Axis.DOMAIN, 'mathspeak'],
+  [EngineConst.Axis.DOMAIN, 'default'],
   [EngineConst.Axis.TOPIC, 'default'],
   [EngineConst.Axis.MODALITY, 'speech']
 ]);
