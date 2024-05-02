@@ -35,7 +35,7 @@ export class MmlMtd extends AbstractMmlBaseNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlBaseNode.defaults,
     rowspan: 1,
     columnspan: 1,
@@ -51,6 +51,8 @@ export class MmlMtd extends AbstractMmlBaseNode {
   public get kind() {
     return 'mtd';
   }
+
+  public static kind = 'mtd';
 
   /**
    * <mtd> has an inferred mrow

@@ -34,7 +34,7 @@ export class MmlSemantics extends AbstractMmlBaseNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlBaseNode.defaults,
     definitionUrl: null,
     encoding: null
@@ -46,6 +46,8 @@ export class MmlSemantics extends AbstractMmlBaseNode {
   public get kind() {
     return 'semantics';
   }
+
+  public static kind = 'semantics';
 
   /**
    * <semantics> requires at least one node
@@ -75,7 +77,7 @@ export class MmlAnnotationXML extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     definitionUrl: null,
     encoding: null,
@@ -90,6 +92,8 @@ export class MmlAnnotationXML extends AbstractMmlNode {
   public get kind() {
     return 'annotation-xml';
   }
+
+  public static kind = 'annotation-xml';
 
   /**
    * Children are XMLNodes, so don't bother inheritting to them
@@ -109,7 +113,7 @@ export class MmlAnnotation extends MmlAnnotationXML {
   /**
    * @override
    */
-  public static defaults = {
+  public defaults = {
     ...MmlAnnotationXML.defaults
   };
 
@@ -126,5 +130,7 @@ export class MmlAnnotation extends MmlAnnotationXML {
   public get kind() {
     return 'annotation';
   }
+
+  public static kind = 'annotation';
 
 }

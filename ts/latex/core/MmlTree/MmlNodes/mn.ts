@@ -50,4 +50,6 @@ export class MmlMn extends AbstractMmlTokenNode {
     return 'mn';
   }
 
+  public static kind = 'mn';
+
 }

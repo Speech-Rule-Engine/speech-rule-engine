@@ -34,7 +34,7 @@ export class MmlMglyph extends AbstractMmlTokenNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlTokenNode.defaults,
     alt: '',
     src: '',
@@ -55,6 +55,8 @@ export class MmlMglyph extends AbstractMmlTokenNode {
   public get kind() {
     return 'mglyph';
   }
+
+  public static kind = 'mglyph';
 
   /**
    * @override

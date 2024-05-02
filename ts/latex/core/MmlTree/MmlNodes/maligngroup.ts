@@ -35,7 +35,7 @@ export class MmlMaligngroup extends AbstractMmlLayoutNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlLayoutNode.defaults,
     groupalign: INHERIT
   };
@@ -46,6 +46,8 @@ export class MmlMaligngroup extends AbstractMmlLayoutNode {
   public get kind() {
     return 'maligngroup';
   }
+
+  public static kind = 'maligngroup';
 
   /**
    * <maligngroup> is space-like

@@ -34,7 +34,7 @@ export class MmlMfrac extends AbstractMmlBaseNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlBaseNode.defaults,
     linethickness: 'medium',
     numalign: 'center',
@@ -48,6 +48,8 @@ export class MmlMfrac extends AbstractMmlBaseNode {
   public get kind() {
     return 'mfrac';
   }
+
+  public static kind = 'mfrac';
 
   /**
    * <mfrac> requires two children

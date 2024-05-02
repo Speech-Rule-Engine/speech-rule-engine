@@ -46,7 +46,7 @@ export class MmlMspace extends AbstractMmlTokenNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlTokenNode.defaults,
     width:  '0em',
     height: '0ex',
@@ -79,6 +79,8 @@ export class MmlMspace extends AbstractMmlTokenNode {
   public get kind() {
     return 'mspace';
   }
+
+  public static kind = 'mspace';
 
   /**
    * mspace can't have children

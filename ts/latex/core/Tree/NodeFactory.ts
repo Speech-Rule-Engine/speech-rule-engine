@@ -54,7 +54,7 @@ C extends FactoryNodeClass<N>> extends AbstractFactory<N, C> {
    * @override
    */
   public create(kind: string, properties: PropertyList = {}, children: N[] = []) {
-    return this.node[kind](properties, children);
+    return new this.node[kind](this, properties, children);
   }
 
 }

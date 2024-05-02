@@ -34,7 +34,7 @@ export class MmlMroot extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     'data-vertical-align': 'bottom'
   };
@@ -50,6 +50,8 @@ export class MmlMroot extends AbstractMmlNode {
   public get kind() {
     return 'mroot';
   }
+
+  public static kind = 'mroot';
 
   /**
    * <mroot> requires two children

@@ -34,7 +34,7 @@ export class MmlMphantom extends AbstractMmlLayoutNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlLayoutNode.defaults
   };
 
@@ -49,5 +49,7 @@ export class MmlMphantom extends AbstractMmlLayoutNode {
   public get kind() {
     return 'mphantom';
   }
+
+  public static kind = 'mphantom';
 
 }

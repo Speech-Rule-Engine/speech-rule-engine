@@ -21,7 +21,9 @@
  * @author dpvc@mathjax.org (Davide Cervone)
  */
 
-import {MmlNodeClass, TextNode, XMLNode} from './MmlNode.js';
+import {MmlNode, TextNode, XMLNode} from './MmlNode.js';
+import {MmlFactory} from './MmlFactory.js';
+import {PropertyList} from '../Tree/Node.js';
 
 import {MmlMath}      from './MmlNodes/math.js';
 
@@ -71,56 +73,56 @@ import {MathChoice} from './MmlNodes/mathchoice.js';
  *  classes as necessary.
  */
 
-export let MML: {[kind: string]: MmlNodeClass} = {
-  [MmlMath.prototype.kind]: MmlMath,
+export let MML: {[kind: string]: new (factory: MmlFactory, attributes?: PropertyList, children?: MmlNode[]) => MmlNode} = {
+  [MmlMath.kind]: MmlMath,
 
-  [MmlMi.prototype.kind]: MmlMi,
-  [MmlMn.prototype.kind]: MmlMn,
-  [MmlMo.prototype.kind]: MmlMo,
-  [MmlMtext.prototype.kind]: MmlMtext,
-  [MmlMspace.prototype.kind]: MmlMspace,
-  [MmlMs.prototype.kind]: MmlMs,
+  [MmlMi.kind]: MmlMi,
+  [MmlMn.kind]: MmlMn,
+  [MmlMo.kind]: MmlMo,
+  [MmlMtext.kind]: MmlMtext,
+  [MmlMspace.kind]: MmlMspace,
+  [MmlMs.kind]: MmlMs,
 
-  [MmlMrow.prototype.kind]: MmlMrow,
-  [MmlInferredMrow.prototype.kind]: MmlInferredMrow,
-  [MmlMfrac.prototype.kind]: MmlMfrac,
-  [MmlMsqrt.prototype.kind]: MmlMsqrt,
-  [MmlMroot.prototype.kind]: MmlMroot,
-  [MmlMstyle.prototype.kind]: MmlMstyle,
-  [MmlMerror.prototype.kind]: MmlMerror,
-  [MmlMpadded.prototype.kind]: MmlMpadded,
-  [MmlMphantom.prototype.kind]: MmlMphantom,
-  [MmlMfenced.prototype.kind]: MmlMfenced,
-  [MmlMenclose.prototype.kind]: MmlMenclose,
+  [MmlMrow.kind]: MmlMrow,
+  [MmlInferredMrow.kind]: MmlInferredMrow,
+  [MmlMfrac.kind]: MmlMfrac,
+  [MmlMsqrt.kind]: MmlMsqrt,
+  [MmlMroot.kind]: MmlMroot,
+  [MmlMstyle.kind]: MmlMstyle,
+  [MmlMerror.kind]: MmlMerror,
+  [MmlMpadded.kind]: MmlMpadded,
+  [MmlMphantom.kind]: MmlMphantom,
+  [MmlMfenced.kind]: MmlMfenced,
+  [MmlMenclose.kind]: MmlMenclose,
 
-  [MmlMaction.prototype.kind]: MmlMaction,
+  [MmlMaction.kind]: MmlMaction,
 
-  [MmlMsub.prototype.kind]: MmlMsub,
-  [MmlMsup.prototype.kind]: MmlMsup,
-  [MmlMsubsup.prototype.kind]: MmlMsubsup,
-  [MmlMunder.prototype.kind]: MmlMunder,
-  [MmlMover.prototype.kind]: MmlMover,
-  [MmlMunderover.prototype.kind]: MmlMunderover,
-  [MmlMmultiscripts.prototype.kind]: MmlMmultiscripts,
-  [MmlMprescripts.prototype.kind]: MmlMprescripts,
-  [MmlNone.prototype.kind]: MmlNone,
+  [MmlMsub.kind]: MmlMsub,
+  [MmlMsup.kind]: MmlMsup,
+  [MmlMsubsup.kind]: MmlMsubsup,
+  [MmlMunder.kind]: MmlMunder,
+  [MmlMover.kind]: MmlMover,
+  [MmlMunderover.kind]: MmlMunderover,
+  [MmlMmultiscripts.kind]: MmlMmultiscripts,
+  [MmlMprescripts.kind]: MmlMprescripts,
+  [MmlNone.kind]: MmlNone,
 
-  [MmlMtable.prototype.kind]: MmlMtable,
-  [MmlMlabeledtr.prototype.kind]: MmlMlabeledtr,
-  [MmlMtr.prototype.kind]: MmlMtr,
-  [MmlMtd.prototype.kind]: MmlMtd,
-  [MmlMaligngroup.prototype.kind]: MmlMaligngroup,
-  [MmlMalignmark.prototype.kind]: MmlMalignmark,
+  [MmlMtable.kind]: MmlMtable,
+  [MmlMlabeledtr.kind]: MmlMlabeledtr,
+  [MmlMtr.kind]: MmlMtr,
+  [MmlMtd.kind]: MmlMtd,
+  [MmlMaligngroup.kind]: MmlMaligngroup,
+  [MmlMalignmark.kind]: MmlMalignmark,
 
-  [MmlMglyph.prototype.kind]: MmlMglyph,
+  [MmlMglyph.kind]: MmlMglyph,
 
-  [MmlSemantics.prototype.kind]: MmlSemantics,
-  [MmlAnnotation.prototype.kind]: MmlAnnotation,
-  [MmlAnnotationXML.prototype.kind]: MmlAnnotationXML,
+  [MmlSemantics.kind]: MmlSemantics,
+  [MmlAnnotation.kind]: MmlAnnotation,
+  [MmlAnnotationXML.kind]: MmlAnnotationXML,
 
-  [TeXAtom.prototype.kind]: TeXAtom,
-  [MathChoice.prototype.kind]: MathChoice,
+  [TeXAtom.kind]: TeXAtom,
+  [MathChoice.kind]: MathChoice,
 
-  [TextNode.prototype.kind]: TextNode,
-  [XMLNode.prototype.kind]: XMLNode,
+  [TextNode.kind]: TextNode,
+  [XMLNode.kind]: XMLNode,
 };

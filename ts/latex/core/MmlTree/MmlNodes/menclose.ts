@@ -34,7 +34,7 @@ export class MmlMenclose extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     notation: 'longdiv'
   };
@@ -51,6 +51,8 @@ export class MmlMenclose extends AbstractMmlNode {
   public get kind() {
     return 'menclose';
   }
+
+  public static kind = 'menclose';
 
   /**
    * <menclose> has an inferred mrow

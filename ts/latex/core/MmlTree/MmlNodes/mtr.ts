@@ -36,7 +36,7 @@ export class MmlMtr extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     rowalign: INHERIT,
     columnalign: INHERIT,
@@ -50,6 +50,8 @@ export class MmlMtr extends AbstractMmlNode {
   public get kind() {
     return 'mtr';
   }
+
+  public static kind = 'mtr';
 
   /**
    * <mtr> can contain linebreaks

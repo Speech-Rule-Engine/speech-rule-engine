@@ -43,7 +43,7 @@ export class MmlMtext extends AbstractMmlTokenNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlTokenNode.defaults
   };
 
@@ -58,6 +58,8 @@ export class MmlMtext extends AbstractMmlTokenNode {
   public get kind() {
     return 'mtext';
   }
+
+  public static kind = 'mtext';
 
   /**
    * According to the spec, <mtext> is always space-like,

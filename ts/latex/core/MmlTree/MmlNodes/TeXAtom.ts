@@ -36,7 +36,7 @@ export class TeXAtom extends AbstractMmlBaseNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlBaseNode.defaults
   };
 
@@ -51,6 +51,8 @@ export class TeXAtom extends AbstractMmlBaseNode {
   public get kind() {
     return 'TeXAtom';
   }
+
+  public static kind = 'TeXAtom';
 
   /**
    * Inferred mrow with any number of children

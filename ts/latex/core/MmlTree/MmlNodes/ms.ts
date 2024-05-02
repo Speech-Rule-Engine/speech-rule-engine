@@ -34,7 +34,7 @@ export class MmlMs extends AbstractMmlTokenNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlTokenNode.defaults,
     lquote: '"',
     rquote: '"'
@@ -51,5 +51,7 @@ export class MmlMs extends AbstractMmlTokenNode {
   public get kind() {
     return 'ms';
   }
+
+  public static kind = 'ms';
 
 }

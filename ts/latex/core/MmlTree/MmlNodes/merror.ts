@@ -34,7 +34,7 @@ export class MmlMerror extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults
   };
 
@@ -49,6 +49,8 @@ export class MmlMerror extends AbstractMmlNode {
   public get kind() {
     return 'merror';
   }
+
+  public static kind = 'merror';
 
   /**
    * <merror> gets an inferred mrow

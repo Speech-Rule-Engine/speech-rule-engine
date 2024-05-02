@@ -39,6 +39,13 @@ export class MmlMrow extends AbstractMmlNode {
   };
 
   /**
+   * @override
+   */
+  public defaults: PropertyList = {
+    ...AbstractMmlNode.defaults
+  };
+
+  /**
    * The index of the core child, when acting as an embellish mrow
    */
   protected _core: number = null;
@@ -49,6 +56,8 @@ export class MmlMrow extends AbstractMmlNode {
   public get kind() {
     return 'mrow';
   }
+
+  public static kind: string = 'mrow';
 
   /**
    * An mrow is space-like if all its children are.
@@ -199,11 +208,18 @@ export class MmlInferredMrow extends MmlMrow {
   public static defaults: PropertyList = MmlMrow.defaults;
 
   /**
+   * @override
+   */
+  public defaults: PropertyList = MmlMrow.defaults;
+
+  /**
    * @return {string}  The inferred-mrow kind
    */
   public get kind(): string {
     return 'inferredMrow';
   }
+
+  public static kind: string = 'inferredMrow';
 
   /**
    * @return {boolean}  This is inferred

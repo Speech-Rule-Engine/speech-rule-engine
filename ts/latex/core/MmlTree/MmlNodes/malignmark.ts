@@ -34,7 +34,7 @@ export class MmlMalignmark extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     edge: 'left'
   };
@@ -45,6 +45,8 @@ export class MmlMalignmark extends AbstractMmlNode {
   public get kind() {
     return 'malignmark';
   }
+
+  public static kind = 'malignmark';
 
   /**
    * No children allowed

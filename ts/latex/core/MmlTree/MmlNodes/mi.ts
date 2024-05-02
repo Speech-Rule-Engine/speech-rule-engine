@@ -34,7 +34,7 @@ export class MmlMi extends AbstractMmlTokenNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlTokenNode.defaults
   };
 
@@ -59,6 +59,8 @@ export class MmlMi extends AbstractMmlTokenNode {
   public get kind() {
     return 'mi';
   }
+
+  public static kind = 'mi';
 
   /**
    * Do the usual inheritance, then check the text length to see

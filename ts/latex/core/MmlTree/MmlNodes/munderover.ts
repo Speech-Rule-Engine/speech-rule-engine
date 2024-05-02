@@ -42,6 +42,13 @@ export class MmlMunderover extends AbstractMmlBaseNode {
   };
 
   /**
+   * @override
+   */
+  public defaults: PropertyList = {
+    ...MmlMunderover.defaults
+  };
+
+  /**
    * The names of attributes controling accents for each child node (reversed for mover below)
    */
   protected static ACCENTS = ['', 'accentunder', 'accent'];
@@ -52,6 +59,8 @@ export class MmlMunderover extends AbstractMmlBaseNode {
   public get kind() {
     return 'munderover';
   }
+
+  public static kind = 'munderover';
 
   /**
    * <munderover> requires three children
@@ -165,7 +174,7 @@ export class MmlMunder extends MmlMunderover {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
       ...MmlMunderover.defaults
   };
 
@@ -175,6 +184,8 @@ export class MmlMunder extends MmlMunderover {
   public get kind() {
     return 'munder';
   }
+
+  public static kind = 'munder';
 
   /**
    * <munder> has only two children
@@ -196,7 +207,7 @@ export class MmlMover extends MmlMunderover {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
       ...MmlMunderover.defaults
   };
   /**
@@ -210,6 +221,8 @@ export class MmlMover extends MmlMunderover {
   public get kind() {
     return 'mover';
   }
+
+  public static kind = 'mover';
 
   /**
    * <mover> has only two children

@@ -37,7 +37,7 @@ export class MathChoice extends AbstractMmlBaseNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlBaseNode.defaults
   };
 
@@ -47,6 +47,8 @@ export class MathChoice extends AbstractMmlBaseNode {
   public get kind() {
     return 'MathChoice';
   }
+
+  public static kind = 'MathChoice';
 
   /**
    * 4 children (display, text, script, and scriptscript styles)

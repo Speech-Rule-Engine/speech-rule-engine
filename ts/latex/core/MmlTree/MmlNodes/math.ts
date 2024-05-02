@@ -22,7 +22,7 @@
  */
 
 import {PropertyList} from '../../Tree/Node.js';
-import {AbstractMmlLayoutNode, AttributeList} from '../MmlNode.js';
+import {inheritDefaults, AbstractMmlLayoutNode, AttributeList} from '../MmlNode.js';
 
 /*****************************************************************/
 /**
@@ -34,36 +34,9 @@ export class MmlMath extends AbstractMmlLayoutNode {
   /**
    *  These are used as the defaults for any attributes marked INHERIT in other classes
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlLayoutNode.defaults,
-    mathvariant: 'normal',
-    mathsize: 'normal',
-    mathcolor: '', // Should be 'black', but allow it to inherit from surrounding text
-    mathbackground: 'transparent',
-    dir: 'ltr',
-    scriptlevel: 0,
-    displaystyle: false,
-    display: 'inline',
-    maxwidth: '',
-    overflow: 'linebreak',
-    altimg: '',
-    'altimg-width': '',
-    'altimg-height': '',
-    'altimg-valign': '',
-    alttext: '',
-    cdgroup: '',
-    scriptsizemultiplier: 1 / Math.sqrt(2),
-    scriptminsize: '.4em',       // Should be 8pt, but that's too big
-    infixlinebreakstyle: 'before',
-    lineleading: '100%',
-    linebreakmultchar: '\u2062', // Invisible times
-    indentshift: 'auto',         // Use user configuration
-    indentalign: 'auto',
-    indenttarget: '',
-    indentalignfirst: 'indentalign',
-    indentshiftfirst: 'indentshift',
-    indentalignlast:  'indentalign',
-    indentshiftlast:  'indentshift'
+    ...inheritDefaults
   };
 
   /**
@@ -72,6 +45,8 @@ export class MmlMath extends AbstractMmlLayoutNode {
   public get kind() {
     return 'math';
   }
+
+  public static kind = 'math';
 
   /**
    * Linebreaking can occur in math nodes
@@ -105,7 +80,7 @@ export class MmlMath extends AbstractMmlLayoutNode {
                (!this.attributes.get('displaystyle') && this.attributes.get('display') === 'block'));
     this.attributes.setInherited('displaystyle', display);
     level = (this.attributes.get('scriptlevel') ||
-             (this.constructor as typeof MmlMath).defaults['scriptlevel']) as number;
+             this.defaults['scriptlevel']) as number;
     super.setChildInheritedAttributes(attributes, display, level, prime);
   }
 

@@ -43,9 +43,18 @@ export class MmlMsubsup extends AbstractMmlBaseNode {
   /**
    * @override
    */
+  public defaults: PropertyList = {
+    ...MmlMsubsup.defaults,
+  };
+
+  /**
+   * @override
+   */
   public get kind() {
     return 'msubsup';
   }
+
+  public static kind = 'msubsup';
 
   /**
    * <msubsup> requires three children
@@ -103,7 +112,7 @@ export class MmlMsub extends MmlMsubsup {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...MmlMsubsup.defaults
   };
 
@@ -113,6 +122,8 @@ export class MmlMsub extends MmlMsubsup {
   public get kind() {
     return 'msub';
   }
+
+  public static kind = 'msub';
 
   /**
    * <msub> only gets two children
@@ -134,7 +145,7 @@ export class MmlMsup extends MmlMsubsup {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...MmlMsubsup.defaults
   };
 
@@ -144,6 +155,8 @@ export class MmlMsup extends MmlMsubsup {
   public get kind() {
     return 'msup';
   }
+
+  public static kind = 'msup';
 
   /**
    * <msup> only gets two children
@@ -170,4 +183,3 @@ export class MmlMsup extends MmlMsubsup {
   }
 
 }
-

@@ -56,7 +56,7 @@ export interface FactoryNodeClass<N extends FactoryNode> {
  * @template N  The node type created by the factory
  * @template C  The class of the node being constructed (for access to static properties)
  */
-export interface Factory<N extends FactoryNode, C extends FactoryNodeClass<N>> {
+export interface Factory<N extends FactoryNode, _C> {
   /**
    * @param {string} kind  The kind of node to create
    * @return {N}  The newly created node of the given kind
@@ -69,18 +69,18 @@ export interface Factory<N extends FactoryNode, C extends FactoryNodeClass<N>> {
    * @param {string} kind  The kind whose class is being defined
    * @param {C} nodeClass  The class for the given kind
    */
-  setNodeClass(kind: string, nodeClass: C): void;
+  setNodeClass(kind: string, nodeClass: new () => N): void;
 
-  /**
-   * @param {string} kind  The kind of node whose class is to be returned
-   * @return {C}  The class object for the given kind
-   */
-  getNodeClass(kind: string): C;
+  // /**
+  //  * @param {string} kind  The kind of node whose class is to be returned
+  //  * @return {C}  The class object for the given kind
+  //  */
+  // getNodeClass(kind: string): C;
 
-  /**
-   * @param {string} kind  The kind whose definition is to be deleted
-   */
-  deleteNodeClass(kind: string): void;
+  // /**
+  //  * @param {string} kind  The kind whose definition is to be deleted
+  //  */
+  // deleteNodeClass(kind: string): void;
 
   /**
    * @param {N} node  The node to test if it is of a given kind
@@ -105,7 +105,7 @@ export interface Factory<N extends FactoryNode, C extends FactoryNodeClass<N>> {
  */
 export abstract class AbstractFactory<
   N extends FactoryNode,
-  C extends FactoryNodeClass<N>
+  C
 > implements Factory<N, C> {
 
   /**
@@ -121,17 +121,17 @@ export abstract class AbstractFactory<
   /**
    * The map of node kinds to node classes
    */
-  protected nodeMap: Map<string, C> = new Map();
+  // protected nodeMap: Map<string, C> = new Map();
 
   /**
    * An object containing functions for creating the various node kinds
    */
-  protected node: {[kind: string]: (...args: any[]) => N} = {};
+  protected node: {[kind: string]: new (...args: any[]) => N} = {};
 
   /**
    * @override
    */
-  constructor(nodes: {[kind: string]: C}) {
+  constructor(nodes: {[kind: string]: new (...args: any[]) => N}) {
     if (nodes === null) {
       nodes = this.defaultNodes;
     }
@@ -144,47 +144,45 @@ export abstract class AbstractFactory<
    * @override
    */
   public create(kind: string, ...args: any[]) {
-    return (this.node[kind] || this.node[this.defaultKind])(...args);
+    return new (this.node[kind] || this.node[this.defaultKind])(...args);
   }
 
   /**
    * @override
    */
-  public setNodeClass(kind: string, nodeClass: C) {
-    this.nodeMap.set(kind, nodeClass);
-    let THIS = this;
-    let KIND = this.nodeMap.get(kind);
-    this.node[kind] = (...args: any[]) => {
-      return new KIND(THIS, ...args);
-    };
-  }
-  /**
-   * @override
-   */
-  public getNodeClass(kind: string): C {
-    return this.nodeMap.get(kind);
+  public setNodeClass(kind: string, nodeClass: new () => N) {
+    // this.nodeMap.set(kind, nodeClass);
+    // let KIND = this.nodeMap.get(kind);
+    this.node[kind] = nodeClass;
   }
 
-  /**
-   * @override
-   */
-  public deleteNodeClass(kind: string) {
-    this.nodeMap.delete(kind);
-    delete this.node[kind];
-  }
+  // /**
+  //  * @override
+  //  */
+  // public getNodeClass(kind: string): C {
+  //   return this.nodeMap.get(kind);
+  // }
+
+  // /**
+  //  * @override
+  //  */
+  // public deleteNodeClass(kind: string) {
+  //   this.nodeMap.delete(kind);
+  //   delete this.node[kind];
+  // }
 
   /**
    * @override
    */
   public nodeIsKind(node: N, kind: string) {
-    return (node instanceof this.getNodeClass(kind));
+    return node.kind === kind;
   }
 
   /**
    * @override
    */
   public getKinds() {
-    return Array.from(this.nodeMap.keys());
+    return Object.keys(this.node);
   }
 
 }

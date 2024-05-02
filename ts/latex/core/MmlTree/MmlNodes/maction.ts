@@ -34,7 +34,7 @@ export class MmlMaction extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     actiontype: 'toggle',
     selection: 1
@@ -46,6 +46,8 @@ export class MmlMaction extends AbstractMmlNode {
   public get kind() {
     return 'maction';
   }
+
+  public static kind = 'maction';
 
   /**
    * At least one child

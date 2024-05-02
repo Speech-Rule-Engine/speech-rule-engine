@@ -142,6 +142,8 @@ export interface MmlNode extends Node<MmlNode, MmlNodeClass> {
    */
   attributes: Attributes;
 
+  readonly defaults: PropertyList;
+
   /**
    * @override
    *
@@ -255,6 +257,40 @@ export interface MmlNodeClass extends NodeClass<MmlNode, MmlNodeClass> {
 
 }
 
+/**
+ *  These are used as the defaults for any attributes marked INHERIT in other classes
+ */
+export const inheritDefaults: PropertyList = {
+    mathvariant: 'normal',
+    mathsize: 'normal',
+    mathcolor: '', // Should be 'black', but allow it to inherit from surrounding text
+    mathbackground: 'transparent',
+    dir: 'ltr',
+    scriptlevel: 0,
+    displaystyle: false,
+    display: 'inline',
+    maxwidth: '',
+    overflow: 'linebreak',
+    altimg: '',
+    'altimg-width': '',
+    'altimg-height': '',
+    'altimg-valign': '',
+    alttext: '',
+    cdgroup: '',
+    scriptsizemultiplier: 1 / Math.sqrt(2),
+    scriptminsize: '.4em',       // Should be 8pt, but that's too big
+    infixlinebreakstyle: 'before',
+    lineleading: '100%',
+    linebreakmultchar: '\u2062', // Invisible times
+    indentshift: 'auto',         // Use user configuration
+    indentalign: 'auto',
+    indenttarget: '',
+    indentalignfirst: 'indentalign',
+    indentshiftfirst: 'indentshift',
+    indentalignlast:  'indentalign',
+    indentshiftlast:  'indentshift'
+  };
+
 
 /*****************************************************************/
 /**
@@ -273,6 +309,10 @@ export abstract class AbstractMmlNode extends AbstractNode<MmlNode, MmlNodeClass
     mathsize: INHERIT,  // technically only for token elements, but <mstyle mathsize="..."> should
     //    scale all spaces, fractions, etc.
     dir: INHERIT
+  };
+
+  public defaults: PropertyList = {
+    ...AbstractMmlNode.defaults
   };
 
   /**
@@ -389,8 +429,8 @@ export abstract class AbstractMmlNode extends AbstractNode<MmlNode, MmlNodeClass
     }
     this.setChildren(children);
     this.attributes = new Attributes(
-      factory.getNodeClass(this.kind).defaults,
-      factory.getNodeClass('math').defaults
+      this.defaults,
+      inheritDefaults
     );
     this.attributes.setList(attributes);
   }
@@ -902,6 +942,13 @@ export abstract class AbstractMmlTokenNode extends AbstractMmlNode {
   /**
    * @override
    */
+  public defaults: PropertyList = {
+    ...AbstractMmlTokenNode.defaults
+  }
+
+  /**
+   * @override
+   */
   public get isToken() {
     return true;
   }
@@ -1097,6 +1144,8 @@ export abstract class AbstractMmlEmptyNode extends AbstractEmptyNode<MmlNode, Mm
   //  */
   // public childNodes: MmlNode[];
 
+  public defaults = {};
+
   /**
    * @return {boolean}  Not a token element
    */
@@ -1284,6 +1333,8 @@ export class TextNode extends AbstractMmlEmptyNode {
     return 'text';
   }
 
+  public static kind = 'text';
+
   /**
    * @return {string}  Return the node's text
    */
@@ -1335,6 +1386,8 @@ export class XMLNode extends AbstractMmlEmptyNode {
   public get kind() {
     return 'XML';
   }
+
+  public static kind = 'XML';
 
   /**
    * @return {Object}  Return the node's XML content

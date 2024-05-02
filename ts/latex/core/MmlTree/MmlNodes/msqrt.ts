@@ -34,7 +34,7 @@ export class MmlMsqrt extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     'data-vertical-align': 'bottom'
   };
@@ -50,6 +50,8 @@ export class MmlMsqrt extends AbstractMmlNode {
   public get kind() {
     return 'msqrt';
   }
+
+  public static kind = 'msqrt';
 
   /**
    * <msqrt> has an inferred mrow

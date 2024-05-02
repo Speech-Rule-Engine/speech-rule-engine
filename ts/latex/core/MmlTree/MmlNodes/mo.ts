@@ -38,7 +38,7 @@ export class MmlMo extends AbstractMmlTokenNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlTokenNode.defaults,
     form: 'infix',
     fence: false,
@@ -186,6 +186,8 @@ export class MmlMo extends AbstractMmlTokenNode {
     return 'mo';
   }
 
+  public static kind = 'mo';
+
   /**
    * All <mo> are considered embellished
    * @override
@@ -199,10 +201,9 @@ export class MmlMo extends AbstractMmlTokenNode {
    *                    with this node as its core
    */
   public coreParent(): MmlNode {
-    let embellished = this;
+    let embellished: MmlNode = this;
     let parent = this as MmlNode;
-    let math = this.factory.getNodeClass('math');
-    while (parent && parent.isEmbellished && parent.coreMO() === this && !(parent instanceof math)) {
+    while (parent && parent.isEmbellished && parent.coreMO() === this && !(parent.isKind('math'))) {
       embellished = parent;
       parent = (parent as MmlNode).parent;
     }

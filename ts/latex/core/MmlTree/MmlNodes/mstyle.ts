@@ -35,7 +35,7 @@ export class MmlMstyle extends AbstractMmlLayoutNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlLayoutNode.defaults,
     scriptlevel: INHERIT,
     displaystyle: INHERIT,
@@ -53,6 +53,8 @@ export class MmlMstyle extends AbstractMmlLayoutNode {
   public get kind() {
     return 'mstyle';
   }
+
+  public static kind = 'mstyle';
 
   /**
    * @override

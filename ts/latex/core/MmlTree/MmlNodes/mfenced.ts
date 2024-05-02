@@ -34,7 +34,7 @@ export class MmlMfenced extends AbstractMmlNode {
   /**
    * @overeride
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     open: '(',
     close: ')',
@@ -65,6 +65,8 @@ export class MmlMfenced extends AbstractMmlNode {
   public get kind() {
     return 'mfenced';
   }
+
+  public static kind = 'mfenced';
 
   /**
    * Include the fake nodes in the process, since they will be used

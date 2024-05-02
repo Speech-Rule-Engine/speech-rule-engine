@@ -35,7 +35,7 @@ export class MmlMmultiscripts extends MmlMsubsup {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...MmlMsubsup.defaults
   };
 
@@ -45,6 +45,8 @@ export class MmlMmultiscripts extends MmlMsubsup {
   public get kind() {
     return 'mmultiscripts';
   }
+
+  public static kind = 'mmultiscripts';
 
   /**
    * <mmultiscripts> requires at least one child (the base)
@@ -128,7 +130,7 @@ export class MmlMprescripts extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults
   };
 
@@ -138,6 +140,8 @@ export class MmlMprescripts extends AbstractMmlNode {
   public get kind(): string {
     return 'mprescripts';
   }
+
+  public static kind = 'mprescripts';
 
   /**
    * @return {number}  <mprescripts> can have no children
@@ -170,7 +174,7 @@ export class MmlNone extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults
   };
 
@@ -180,6 +184,8 @@ export class MmlNone extends AbstractMmlNode {
   public get kind(): string {
     return 'none';
   }
+
+  public static kind = 'none';
 
   /**
    * @return {number}  <none> can have no children

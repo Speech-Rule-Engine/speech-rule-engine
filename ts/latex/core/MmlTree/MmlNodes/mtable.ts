@@ -35,7 +35,7 @@ export class MmlMtable extends AbstractMmlNode {
   /**
    * @override
    */
-  public static defaults: PropertyList = {
+  public defaults: PropertyList = {
     ...AbstractMmlNode.defaults,
     align: 'axis',
     rowalign: 'baseline',
@@ -76,6 +76,8 @@ export class MmlMtable extends AbstractMmlNode {
   public get kind() {
     return 'mtable';
   }
+
+  public static kind = 'mtable';
 
   /**
    * Linebreaks are allowed in tables
