@@ -38,7 +38,9 @@ Sre = {
     );
   },
   'latex': function (input: string) {
-    return Sre.speech(parse(input));
+    let result = parse(input)
+    return finalize(
+      markup(EngineInstance().evaluateNode(xmlTreeFromString(result))));
   },
   'deactivateAnnotation': function (domain: string, kind: string) {
     deactivate(domain, kind);
