@@ -35,6 +35,15 @@ export const toEntity = (c: string) => '&#x' + c.codePointAt(0).toString(16).toU
 
 export class SerializedMmlVisitor extends MmlVisitor {
 
+  constructor() {
+    super();
+    // for CC
+    this.nodeHandlers.set('text', this.visitTextNode.bind(this));
+    this.nodeHandlers.set('XML', this.visitXMLNode.bind(this));
+    this.nodeHandlers.set('annotation', this.visitAnnotationNode.bind(this));
+    this.nodeHandlers.set('inferredMrow', this.visitInferredMrowNode.bind(this));
+  }
+
   /**
    * Convert the tree rooted at a particular node into a serialized MathML string
    *

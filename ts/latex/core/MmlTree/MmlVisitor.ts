@@ -76,6 +76,9 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
       factory = new MmlFactory();
     }
     super(factory);
+    // for CC
+    this.nodeHandlers.set('text', this.visitTextNode.bind(this));
+    this.nodeHandlers.set('XML', this.visitXMLNode.bind(this));
   }
 
   /***********************************************/
@@ -108,7 +111,7 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
    */
   protected getKind(node: MmlNode): string {
     const kind = node.kind;
-    return lookup(kind, (this.constructor as typeof MmlVisitor).rename, kind);
+    return lookup(kind, MmlVisitor.rename, kind);
   }
 
   /***********************************************/
@@ -121,15 +124,14 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
    * @return {PropertyList}   The attribute list
    */
   protected getAttributeList(node: MmlNode): PropertyList {
-    const CLASS = this.constructor as typeof MmlVisitor;
-    const defaults = lookup(node.kind, CLASS.defaultAttributes, {});
+    const defaults = lookup(node.kind, MmlVisitor.defaultAttributes, {});
     const attributes = Object.assign(
       {},
       defaults,
       this.getDataAttributes(node),
       node.attributes.getAllAttributes()
     ) as PropertyList;
-    const variants = CLASS.variants;
+    const variants = MmlVisitor.variants;
     if (attributes.hasOwnProperty('mathvariant')) {
       if (variants.hasOwnProperty(attributes.mathvariant as string)) {
         attributes.mathvariant = variants[attributes.mathvariant as string];
@@ -149,7 +151,7 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
   protected getDataAttributes(node: MmlNode): PropertyList {
     const data = {} as PropertyList;
     const variant = node.attributes.getExplicit('mathvariant') as string;
-    const variants = (this.constructor as typeof MmlVisitor).variants;
+    const variants = MmlVisitor.variants;
     variant && (node.getProperty('ignore-variant') || variants.hasOwnProperty(variant)) &&
       this.setDataAttribute(data, 'variant', variant);
     node.getProperty('variantForm') && this.setDataAttribute(data, 'alternate', '1');
