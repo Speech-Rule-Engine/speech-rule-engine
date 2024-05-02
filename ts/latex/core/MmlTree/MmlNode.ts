@@ -261,34 +261,34 @@ export interface MmlNodeClass extends NodeClass<MmlNode, MmlNodeClass> {
  *  These are used as the defaults for any attributes marked INHERIT in other classes
  */
 export const inheritDefaults: PropertyList = {
-    mathvariant: 'normal',
-    mathsize: 'normal',
-    mathcolor: '', // Should be 'black', but allow it to inherit from surrounding text
-    mathbackground: 'transparent',
-    dir: 'ltr',
-    scriptlevel: 0,
-    displaystyle: false,
-    display: 'inline',
-    maxwidth: '',
-    overflow: 'linebreak',
-    altimg: '',
-    'altimg-width': '',
-    'altimg-height': '',
-    'altimg-valign': '',
-    alttext: '',
-    cdgroup: '',
-    scriptsizemultiplier: 1 / Math.sqrt(2),
-    scriptminsize: '.4em',       // Should be 8pt, but that's too big
-    infixlinebreakstyle: 'before',
-    lineleading: '100%',
-    linebreakmultchar: '\u2062', // Invisible times
-    indentshift: 'auto',         // Use user configuration
-    indentalign: 'auto',
-    indenttarget: '',
-    indentalignfirst: 'indentalign',
-    indentshiftfirst: 'indentshift',
-    indentalignlast:  'indentalign',
-    indentshiftlast:  'indentshift'
+  'mathvariant': 'normal',
+  'mathsize': 'normal',
+  'mathcolor': '', // Should be 'black', but allow it to inherit from surrounding text
+  'mathbackground': 'transparent',
+  'dir': 'ltr',
+  'scriptlevel': 0,
+  'displaystyle': false,
+  'display': 'inline',
+  'maxwidth': '',
+  'overflow': 'linebreak',
+  'altimg': '',
+  'altimg-width': '',
+  'altimg-height': '',
+  'altimg-valign': '',
+  'alttext': '',
+  'cdgroup': '',
+  'scriptsizemultiplier': 1 / Math.sqrt(2),
+  'scriptminsize': '.4em',       // Should be 8pt, but that's too big
+  'infixlinebreakstyle': 'before',
+  'lineleading': '100%',
+  'linebreakmultchar': '\u2062', // Invisible times
+  'indentshift': 'auto',         // Use user configuration
+  'indentalign': 'auto',
+  'indenttarget': '',
+  'indentalignfirst': 'indentalign',
+  'indentshiftfirst': 'indentshift',
+  'indentalignlast':  'indentalign',
+  'indentshiftlast':  'indentshift'
   };
 
 
@@ -304,11 +304,11 @@ export abstract class AbstractMmlNode extends AbstractNode<MmlNode, MmlNodeClass
    * The properties common to all MathML nodes
    */
   public static defaults: PropertyList = {
-    mathbackground: INHERIT,
-    mathcolor: INHERIT,
-    mathsize: INHERIT,  // technically only for token elements, but <mstyle mathsize="..."> should
+    'mathbackground': INHERIT,
+    'mathcolor': INHERIT,
+    'mathsize': INHERIT,  // technically only for token elements, but <mstyle mathsize="..."> should
     //    scale all spaces, fractions, etc.
-    dir: INHERIT
+    'dir': INHERIT
   };
 
   public defaults: PropertyList = {
@@ -324,21 +324,21 @@ export abstract class AbstractMmlNode extends AbstractNode<MmlNode, MmlNodeClass
    *  For example, an mpadded element will not inherit a width attribute from an mstyle node.
    */
   public static noInherit: {[node1: string]: {[node2: string]: {[attribute: string]: boolean}}} = {
-    mstyle: {
-      mpadded: {width: true, height: true, depth: true, lspace: true, voffset: true},
-      mtable:  {width: true, height: true, depth: true, align: true}
+    'mstyle': {
+      'mpadded': {'width': true, 'height': true, 'depth': true, 'lspace': true, 'voffset': true},
+      'mtable':  {'width': true, 'height': true, 'depth': true, 'align': true}
     },
-    maligngroup: {
-      mrow: {groupalign: true},
-      mtable: {groupalign: true}
+    'maligngroup': {
+      'mrow': {'groupalign': true},
+      'mtable': {'groupalign': true}
     },
-    mtr: {
-      msqrt: {'data-vertical-align': true},
-      mroot: {'data-vertical-align': true}
+    'mtr': {
+      'msqrt': {'data-vertical-align': true},
+      'mroot': {'data-vertical-align': true}
     },
-    mlabeledtr: {
-      msqrt: {'data-vertical-align': true},
-      mroot: {'data-vertical-align': true}
+    'mlabeledtr': {
+      'msqrt': {'data-vertical-align': true},
+      'mroot': {'data-vertical-align': true}
     }
   };
 
@@ -348,7 +348,7 @@ export abstract class AbstractMmlNode extends AbstractNode<MmlNode, MmlNodeClass
    *   tables -- see issue mathjax/MathJax#2890).
    */
   public static stopInherit: {[node: string]: {[attribute: string]: boolean}} = {
-    mtd: {columnalign: true, rowalign: true, groupalign: true}
+    'mtd': {'columnalign': true, 'rowalign': true, 'groupalign': true}
   };
 
   /**
@@ -356,21 +356,21 @@ export abstract class AbstractMmlNode extends AbstractNode<MmlNode, MmlNodeClass
    *   even when there is no default value for the attribute.
    */
   public static alwaysInherit: {[name: string]: boolean} = {
-    scriptminsize: true,
-    scriptsizemultiplier: true,
-    infixlinebreakstyle: true
+    'scriptminsize': true,
+    'scriptsizemultiplier': true,
+    'infixlinebreakstyle': true
   };
 
   /**
    * This is the list of options for the verifyTree() method
    */
   public static verifyDefaults: PropertyList = {
-    checkArity: true,
-    checkAttributes: false,
-    checkMathvariants: true,
-    fullErrors: false,
-    fixMmultiscripts: true,
-    fixMtables: true
+    'checkArity': true,
+    'checkAttributes': false,
+    'checkMathvariants': true,
+    'fullErrors': false,
+    'fixMmultiscripts': true,
+    'fixMtables': true
   };
 
   /*
