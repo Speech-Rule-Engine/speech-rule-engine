@@ -1,6 +1,6 @@
 {
   "name": "speech-rule-engine",
-  "version": "4.1.0-beta.9",
+  "version": "4.1.0-beta.10",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "directories": {
     "test": "tests"
@@ -19,14 +19,15 @@
     "postcommonjs": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
     "module": "pnpm tsc --module nodenext --outDir js --moduleResolution nodenext",
     "postmodule": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
+    "require": "node -e \"require(\\\"fs\\\").writeFileSync(\\\"lib/require.mjs\\\", \\\"import {createRequire} from 'module';\\nglobal.require = createRequire(import.meta.url);\\n\\\");\"",
     "pretest": "git submodule update --remote --merge; pnpm compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "pnpm module",
     "clean": "rimraf js lib cjs",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; pnpm jest --silent ",
     "cleanAll": "make clean; make clean_min",
     "prepublish": "pnpm cleanAll; pnpm buildAll",
-    "build": "make -j 12 all; pnpm module; pnpm webpack",
-    "buildAll": "make -j 12 all; pnpm commonjs; pnpm module; pnpm webpack"
+    "build": "make -j 12 all; pnpm module; pnpm webpack; pnpm require",
+    "buildAll": "make -j 12 all; pnpm commonjs; pnpm module; pnpm webpack; pnpm require; pnpm postcommonjs; pnpm postmodule"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
@@ -48,29 +49,29 @@
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
     "@xmldom/xmldom": "0.9.0-beta.8",
-    "commander": "11.1.0",
+    "commander": "12.0.0",
     "wicked-good-xpath": "1.3.0"
   },
   "devDependencies": {
     "@tscc/tscc": "^0.9.4",
-    "@types/node": "^20.8.9",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
+    "@types/node": "^20.12.8",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "circular-dependency-plugin": "^5.2.2",
     "eslint": "^8.52.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsdoc": "^48.2.3",
     "google-closure-compiler": "^20230802.0.0",
     "json-minify": "1.0.0",
-    "prettier": "^3.0.3",
+    "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "terser-webpack-plugin": "5.3.9",
-    "ts-loader": "9.5.0",
+    "terser-webpack-plugin": "5.3.10",
+    "ts-loader": "9.5.1",
     "ts-prune": "^0.10.3",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.2",
-    "typescript": "5.2.2",
-    "webpack": "5.89.0",
+    "typedoc": "^0.25.13",
+    "typescript": "5.4.5",
+    "webpack": "5.91.0",
     "webpack-cli": "^5.1.4"
   },
   "files": [
@@ -83,5 +84,5 @@
     "cjs/"
   ],
   "source": "ts/index.ts",
-  "browser": "lib/sre.js"
+  "main": "lib/sre.js"
 }
