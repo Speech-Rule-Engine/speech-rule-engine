@@ -124,9 +124,11 @@ export class SystemExternal {
       let path = SystemExternal.nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
     } catch (_err) { }
-    return (typeof __dirname !== 'undefined'
-      ? __dirname + '/lib/mathmaps'
-      : process.cwd()) + '/lib/mathmaps';
+    return (typeof __dirname !== 'undefined')
+      ? (__dirname + (__dirname.match(/lib?$/)
+        ? '/mathmaps'
+        : '/lib/mathmaps'))
+      : (process.cwd() + '/lib/mathmaps');
   })();
 
   /**
