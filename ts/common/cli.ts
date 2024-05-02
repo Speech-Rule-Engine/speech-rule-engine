@@ -39,7 +39,7 @@ export class Cli {
    */
   public static commander = SystemExternal.documentSupported
     ? null
-    : SystemExternal.extRequire('commander');
+    : SystemExternal.extRequire('commander').program;
 
   public setup: { [key: string]: string | boolean } = {
     mode: EngineConst.Mode.SYNC
