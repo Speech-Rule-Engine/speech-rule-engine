@@ -32,7 +32,15 @@ import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 
 export class Cli {
-  public process = SystemExternal.extRequire('process');
+
+  public static process = SystemExternal.extRequire('process');
+
+  /**
+   * Commander library.
+   */
+  public static commander = SystemExternal.documentSupported
+    ? null
+    : SystemExternal.extRequire('commander');
 
   public setup: { [key: string]: string | boolean } = {
     mode: EngineConst.Mode.SYNC
@@ -42,7 +50,7 @@ export class Cli {
 
   public dp: DOMParser;
 
-  private output: any = this.process.stdout;
+  private output: any = Cli.process.stdout;
 
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
@@ -149,7 +157,7 @@ export class Cli {
         }
         let i = 0;
         const header = order.map((x: string) => compStr(x, length[i++]));
-        const markdown = SystemExternal.commander.opts().pprint;
+        const markdown = Cli.commander.opts().pprint;
         const separator = length.map((x: number) =>
           new Array(x + 1).join(markdown ? '-' : '=')
         );
@@ -189,9 +197,9 @@ export class Cli {
    * to the given output file.
    */
   public readline() {
-    this.process.stdin.setEncoding('utf8');
+    Cli.process.stdin.setEncoding('utf8');
     const inter = SystemExternal.extRequire('readline').createInterface({
-      input: this.process.stdin,
+      input: Cli.process.stdin,
       output: this.output
     });
     let input = '';
@@ -221,7 +229,7 @@ export class Cli {
    * Method for the command line interface of the Speech Rule Engine
    */
   public async commandLine() {
-    const commander = SystemExternal.commander;
+    const commander = Cli.commander;
     const system = System;
     const set = ((key: string) => {
       return (val: string, def: string) => this.set(key, val, def);
@@ -368,9 +376,9 @@ export class Cli {
       .on('option:opt-all', () => {
         this.enumerate(true).then(() => System.exit(0));
       })
-      .parse(this.process.argv);
+      .parse(Cli.process.argv);
     await System.engineReady().then(() => System.setupEngine(this.setup));
-    const options = commander.opts();
+    const options = Cli.commander.opts();
     if (options.output) {
       this.output = SystemExternal.fs.createWriteStream(options.output);
     }
@@ -380,8 +388,8 @@ export class Cli {
     if (options.input) {
       this.execute(options.input);
     }
-    if (commander.args.length) {
-      commander.args.forEach(this.execute.bind(this));
+    if (Cli.commander.args.length) {
+      Cli.commander.args.forEach(this.execute.bind(this));
       System.engineReady().then(() =>
         Debugger.getInstance().exit(() => System.exit(0))
       );
@@ -409,7 +417,7 @@ export class Cli {
       }
     } catch (err) {
       console.error(err.name + ': ' + err.message);
-      Debugger.getInstance().exit(() => this.process.exit(1));
+      Debugger.getInstance().exit(() => Cli.process.exit(1));
     }
   }
 
