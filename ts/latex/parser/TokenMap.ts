@@ -270,6 +270,7 @@ export class DelimiterMap extends CharacterMap {
 
 }
 
+type ParseArgs = (ParseMethod | Args)[];
 
 /**
  * Maps macros that all bring their own parsing method.
@@ -287,13 +288,20 @@ export class MacroMap extends AbstractParseMap<Macro> {
    *     functions for the single macros.
    */
   constructor(name: string,
-              json: {[index: string]: string | Args[]},
-              functionMap: Record<string, ParseMethod>) {
+              json: {[index: string]: ParseMethod | ParseArgs},
+              _functionMap: Record<string, ParseMethod>) {
     super(name, null);
-    for (const key of Object.keys(json)) {
-      let value = json[key];
-      let [func, ...attrs] = (typeof(value) === 'string') ? [value] : value;
-      let character = new Macro(key, functionMap[func as string], attrs);
+    for (const [key, value] of Object.entries(json)) {
+      let func: ParseMethod;
+      let args: Args[];
+      if (Array.isArray(value)) {
+        func = value[0] as ParseMethod;
+        args = value.slice(1) as Args[];
+      } else {
+        func = value;
+        args = [];
+      }
+      let character = new Macro(key, func, args);
       this.add(key, character);
     }
   }
@@ -370,7 +378,7 @@ export class EnvironmentMap extends MacroMap {
    */
   constructor(name: string,
               parser: ParseMethod,
-              json: {[index: string]: string | Args[]},
+              json: {[index: string]: ParseMethod | [ParseMethod, ...Array<Args>]},
               functionMap: Record<string, ParseMethod>) {
     super(name, json, functionMap);
     this.parser = parser;
