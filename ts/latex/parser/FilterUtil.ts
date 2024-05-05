@@ -26,8 +26,18 @@ import {TEXCLASS, MMLNODE, MmlNode} from '../core/MmlTree/MmlNode.js';
 import NodeUtil from './NodeUtil.js';
 import ParseOptions from './ParseOptions.js';
 import {MmlMo} from '../core/MmlTree/MmlNodes/mo.js';
+import {MmlMunderover} from '../core/MmlTree/MmlNodes/munderover.js';
+import {MmlMsubsup} from '../core/MmlTree/MmlNodes/msubsup.js';
 import {Attributes} from '../core/MmlTree/Attributes.js';
 
+
+
+const SubSupGetter: {[key: string]: (x: MmlMunderover | MmlMsubsup) => number} = {
+  'under': (x: MmlMunderover) => x.under,
+  'over': (x: MmlMunderover) => x.over,
+  'sub': (x: MmlMsubsup) => x.sub,
+  'sup': (x: MmlMsubsup) => x.sup,
+};
 
 /**
  * Cleans msubsup and munderover elements.
@@ -44,8 +54,10 @@ function _cleanSubSup(options: ParseOptions, low: string, up: string) {
     }
     const parent = mml.parent;
     let newNode = (children[mml[low]] ?
-      options.nodeFactory.create('node', 'm' + low, [children[mml.base], children[mml[low]]]) :
-      options.nodeFactory.create('node', 'm' + up, [children[mml.base], children[mml[up]]]));
+      options.nodeFactory.create(
+        'node', 'm' + low, [children[mml.base], children[SubSupGetter[low](mml)]]) :
+      options.nodeFactory.create(
+        'node', 'm' + up, [children[mml.base],  children[SubSupGetter[up](mml)]]));
     NodeUtil.copyAttributes(mml, newNode);
     if (parent) {
       parent.replaceChild(newNode, mml);

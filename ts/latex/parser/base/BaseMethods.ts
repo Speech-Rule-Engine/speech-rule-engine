@@ -663,7 +663,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     // @test Vector
     const c = parser.ParseArg(name);
     // @test Vector Font
-    const def = {...ParseUtil.getFontDef(parser), accent: true, mathaccent: true};
+    const def = {...ParseUtil.getFontDef(parser), 'accent': true, 'mathaccent': true};
     const entity = NodeUtil.createEntity(accent);
     const moNode = parser.create('token', 'mo', def, entity);
     const mml = moNode;

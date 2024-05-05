@@ -111,7 +111,7 @@ export class MmlMunderover extends AbstractMmlBaseNode {
     let nodes = this.childNodes;
     nodes[0].setInheritedAttributes(attributes, display, level, prime || !!nodes[this.over]);
     let force = !!(!display && nodes[0].coreMO().attributes.get('movablelimits'));
-    let ACCENTS = (this.constructor as typeof MmlMunderover).ACCENTS;
+    let ACCENTS = MmlMunderover.ACCENTS;
     nodes[1].setInheritedAttributes(attributes, false,
                                     this.getScriptlevel(ACCENTS[1], force, level),
                                     prime || this.under === 1);

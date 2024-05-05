@@ -482,8 +482,8 @@ export const ParseUtil = {
     ParseUtil.checkMovableLimits(base);
     if (NodeUtil.isType(base, 'munderover') && NodeUtil.isEmbellished(base)) {
       // @test Overline Limits
-      NodeUtil.setProperties(NodeUtil.getCoreMO(base), {lspace: 0, rspace: 0});
-      const mo = parser.create('node', 'mo', [], {rspace: 0});
+      NodeUtil.setProperties(NodeUtil.getCoreMO(base), {'lspace': 0, 'rspace': 0});
+      const mo = parser.create('node', 'mo', [], {'rspace': 0});
       base = parser.create('node', 'mrow', [mo, base]);
       // TODO? add an empty <mi> so it's not embellished any more
     }
@@ -492,7 +492,7 @@ export const ParseUtil = {
     let node: MmlNode = mml;
     if (stack) {
       // @test Overbrace 1 2 3, Underbrace, Overbrace Op 1 2
-      node = parser.create('node', 'TeXAtom', [mml], {texClass: TEXCLASS.OP, movesupsub: true});
+      node = parser.create('node', 'TeXAtom', [mml], {'texClass': TEXCLASS.OP, 'movesupsub': true});
     }
     NodeUtil.setProperty(node, 'subsupOK', true);
     return node;
@@ -506,7 +506,7 @@ export const ParseUtil = {
     const symbol = (NodeUtil.isType(base, 'mo') ? NodeUtil.getForm(base) : null);
     if (NodeUtil.getProperty(base, 'movablelimits') || (symbol && symbol[3] && symbol[3].movablelimits)) {
       // @test Overline Sum
-      NodeUtil.setProperties(base, {movablelimits: false});
+      NodeUtil.setProperties(base, {'movablelimits': false});
     }
   },
 

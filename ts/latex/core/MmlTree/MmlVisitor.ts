@@ -42,7 +42,7 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
    * MmlNode kinds to replace with other names
    */
   public static rename: PropertyList = {
-    TeXAtom: 'mrow'
+    'TeXAtom': 'mrow'
   };
 
   /**
@@ -61,7 +61,7 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
    */
   public static defaultAttributes: {[kind: string]: PropertyList} = {
     math: {
-      xmlns: 'http://www.w3.org/1998/Math/MathML'
+      'xmlns': 'http://www.w3.org/1998/Math/MathML'
     }
   };
 
