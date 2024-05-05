@@ -357,19 +357,18 @@ export class MmlMo extends AbstractMmlTokenNode {
   protected getOperatorDef(mo: string) {
     const [form1, form2, form3] = this.handleExplicitForm(this.getForms());
     this.attributes.setInherited('form', form1);
-    const CLASS = this.constructor as typeof MmlMo
-    const OPTABLE = CLASS.OPTABLE;
+    const OPTABLE = MmlMo.OPTABLE;
     const def = OPTABLE[form1][mo] || OPTABLE[form2][mo] || OPTABLE[form3][mo];
     if (def) {
       return def;
     }
     const limits = this.attributes.get('movablelimits');
-    const isOP = !!mo.match(CLASS.opPattern);
+    const isOP = !!mo.match(MmlMo.opPattern);
     if ((isOP || limits) && this.getProperty('texClass') === undefined) {
       return OPDEF(1, 2, TEXCLASS.OP);
     }
     const range = getRange(mo);
-    const [l, r] = CLASS.MMLSPACING[range[2]];
+    const [l, r] = MmlMo.MMLSPACING[range[2]];
     return OPDEF(l, r, range[2]);
   }
 
@@ -434,7 +433,7 @@ export class MmlMo extends AbstractMmlTokenNode {
    * @param {string} mo   The test of the mo element
    */
   protected checkPseudoScripts(mo: string) {
-    const PSEUDOSCRIPTS = (this.constructor as typeof MmlMo).pseudoScripts;
+    const PSEUDOSCRIPTS = MmlMo.pseudoScripts;
     if (!mo.match(PSEUDOSCRIPTS)) return;
     const parent = this.coreParent().Parent;
     const isPseudo = !parent || !(parent.isKind('msubsup') && !parent.isKind('msub'));
@@ -451,9 +450,9 @@ export class MmlMo extends AbstractMmlTokenNode {
    * @param {string} mo   The test of the mo element
    */
   protected checkPrimes(mo: string) {
-    const PRIMES = (this.constructor as typeof MmlMo).primes;
+    const PRIMES = MmlMo.primes;
     if (!mo.match(PRIMES)) return;
-    const REMAP = (this.constructor as typeof MmlMo).remapPrimes;
+    const REMAP = MmlMo.remapPrimes;
     const primes = unicodeString(unicodeChars(mo).map(c => REMAP[c]));
     this.setProperty('primes', primes);
   }
@@ -471,7 +470,7 @@ export class MmlMo extends AbstractMmlTokenNode {
     const isUnder = !!(under && under.isEmbellished && under.coreMO() === this);
     const isOver = !!(over && over.isEmbellished && under.coreMO() === this);
     if (!isUnder && !isOver) return;
-    const MATHACCENT = (this.constructor as typeof MmlMo).mathaccents;
+    const MATHACCENT = MmlMo.mathaccents;
     if (mo.match(MATHACCENT)) {
       this.setProperty('mathaccent', true);
     }

@@ -518,7 +518,7 @@ export class Styles {
    *                           as well as the merged style shorthands)
    */
   protected parse(cssText: string = '') {
-    let PATTERN = (this.constructor as typeof Styles).pattern;
+    let PATTERN = Styles.pattern;
     this.styles = {};
     const parts = cssText.replace(PATTERN.comment, '').split(PATTERN.style);
     while (parts.length > 1) {
