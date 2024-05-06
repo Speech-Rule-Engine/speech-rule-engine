@@ -369,7 +369,7 @@ Building from Source
 
 Clone from github and install dependencies either by running:
 
-     npm install
+     pnpm install
 
 Or install them manually. SRE depends on the following libraries to run:
 
@@ -383,7 +383,7 @@ In addition SRE depends on a number of libraries for development, in particular
 to ensure source code hygiene. These are too numerous to list here and are best
 viewed in the `devDependencies` section of the `package.json` file.
 
-Running `npm install` will build the single JavaScript modules, webpack the
+Running `pnpm install` will build the single JavaScript modules, webpack the
 bundle file in `lib/sre.js` as well as assemble the locale files in
 `lib/mathmaps`. For more details on the build process as well as how to use
 different bundlers see the [developers documentation
@@ -560,10 +560,10 @@ make sure to transpile first with `npx tsc`.
 Install the required packages:
 
 ``` shell
-npm install --no-save rollup
-npm install --no-save @rollup/plugin-commonjs
-npm install --no-save @rollup/plugin-node-resolve
-npm install --no-save @rollup/plugin-terser
+pnpm install --no-save rollup
+pnpm install --no-save @rollup/plugin-commonjs
+pnpm install --no-save @rollup/plugin-node-resolve
+pnpm install --no-save @rollup/plugin-terser
 ```
 
 Add a `rollup.config.js` file of the form:
@@ -608,7 +608,7 @@ that it can work with ES6 modules only.
 Install the required packages:
 
 ``` shell
-npm install --no-save esbuild
+pnpm install --no-save esbuild
 ```
 
 Build using the following command line:
@@ -624,7 +624,7 @@ npx esbuild ./ts/index.ts --bundle --outfile=lib/sre.js --format=esm --minify
 To run in node you need ES6 modules enabled.
 
 ``` shell
-npm install --no-save esm
+pnpm install --no-save esm
 ```
 
 Then start node with `node -r esm`. If you want to use the CLI interface, adapt
@@ -650,6 +650,29 @@ Import the SRE library as ES6 module into the browser, e.g.,
 ### Parcel
 
 SRE currently does not support bundling with `parcel`.
+
+
+TSCC and XPlatMath
+------------------
+
+Running SRE with tsickle and closure compiler: Clone the repository, install and
+build the application.
+
+``` bash
+git clone git@github.com:Speech-Rule-Engine/speech-rule-engine.git
+cd speech-rule-engine/
+git checkout xplatmath
+pnpm install
+pnpm xplat
+```
+
+Then run `node` and test the installation with
+
+``` JavaScript
+await import('./xplatmath/app.js').
+  then(()=> Sre.setup({locale: 'en', domain: 'clearspeak'})).
+  then(() => console.log(Sre.latex('\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}')));
+```
 
 
 Locale Loading
@@ -893,7 +916,6 @@ To publish the node package run
     npm publish
 
 For manually going through the build steps see the `prepublish` script in `package.json`.
-
 
 
 Removed or Deprecated Functionality
