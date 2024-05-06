@@ -1003,9 +1003,9 @@ export class ArrayItem extends BaseItem {
    * Data for setting cell/row/table alignment for when there are line breaks
    */
   public breakAlign = {
-    cell: '',
-    row: '',
-    table: ''
+    'cell': '',
+    'row': '',
+    'table': ''
   };
 
   /**

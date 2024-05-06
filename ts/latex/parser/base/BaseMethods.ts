@@ -197,7 +197,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
         if (!NodeUtil.isType(base, 'munderover') || NodeUtil.isType(base, 'mover') ||
           NodeUtil.getChildAt(base, (base as MmlMunderover).over)) {
           // @test Large Operator
-          base = parser.create('node', 'munderover', [base], {movesupsub: true});
+          base = parser.create('node', 'munderover', [base], {'movesupsub': true});
         }
         position = (base as MmlMunderover).over;
       } else {
@@ -208,7 +208,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     }
     parser.Push(
       parser.itemFactory.create('subsup', base).setProperties({
-        position: position, primes: primes, movesupsub: movesupsub
+        'position': position, 'primes': primes, 'movesupsub': movesupsub
       }) );
   },
 
@@ -266,7 +266,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     }
     parser.Push(
       parser.itemFactory.create('subsup', base).setProperties({
-        position: position, primes: primes, movesupsub: movesupsub
+        'position': position, 'primes': primes, 'movesupsub': movesupsub
       }) );
   },
 
@@ -376,7 +376,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     parser.stack.env['level'] = level;
     parser.Push(
       parser.itemFactory.create('style').setProperty(
-        'styles', {displaystyle: style, scriptlevel: level}));
+        'styles', {'displaystyle': style, 'scriptlevel': level}));
   },
 
 
@@ -389,7 +389,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
   SetSize(parser: TexParser, _name: string, size: number) {
     parser.stack.env['size'] = size;
     parser.Push(
-      parser.itemFactory.create('style').setProperty('styles', {mathsize: em(size)}));
+      parser.itemFactory.create('style').setProperty('styles', {'mathsize': em(size)}));
   },
 
   /**
@@ -400,8 +400,8 @@ const BaseMethods: {[key: string]: ParseMethod} = {
    */
   Spacer(parser: TexParser, _name: string, space: number) {
     // @test Positive Spacing, Negative Spacing
-    const node = parser.create('node', 'mspace', [], {width: em(space)});
-    const style = parser.create('node', 'mstyle', [node], {scriptlevel: 0});
+    const node = parser.create('node', 'mspace', [], {'width': em(space)});
+    const style = parser.create('node', 'mstyle', [node], {'scriptlevel': 0});
     parser.Push(style);
   },
 
@@ -412,7 +412,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
    * @param {string} _name The macro name.
    */
   DiscretionaryTimes(parser: TexParser, _name: string) {
-    parser.Push(parser.create('token', 'mo', {linebreakmultchar: '\u00D7'}, '\u2062'));
+    parser.Push(parser.create('token', 'mo', {'linebreakmultchar': '\u00D7'}, '\u2062'));
   },
 
   /**
@@ -432,7 +432,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
    * @param {string} _name The macro name.
    */
   Break(parser: TexParser, _name: string) {
-    parser.Push(parser.create('token', 'mspace', {linebreak: TexConstant.LineBreak.NEWLINE}));
+    parser.Push(parser.create('token', 'mspace', {'linebreak': TexConstant.LineBreak.NEWLINE}));
   },
 
   /**
@@ -761,7 +761,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
    * @param {number} mclass The new TeX class.
    */
   TeXAtom(parser: TexParser, name: string, mclass: number) {
-    let def: EnvList = {texClass: mclass};
+    let def: EnvList = {'texClass': mclass};
     let mml: StackItem | MmlNode;
     let node: MmlNode;
     if (mclass === TEXCLASS.OP) {
@@ -794,7 +794,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
    */
   VBox(parser: TexParser, name: string, align: string) {
     const arg = new TexParser(parser.GetArgument(name), parser.stack.env, parser.configuration);
-    const def = {'data-vertical-align': align, texClass: TEXCLASS.ORD} as EnvList;
+    const def = {'data-vertical-align': align, 'texClass': TEXCLASS.ORD} as EnvList;
     if (arg.stack.env.hsize) {
       def.width = arg.stack.env.hsize;
       def['data-overflow'] = 'linebreak';
@@ -1017,7 +1017,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     // @test Raise, Lower, Raise Negative, Lower Negative
     let h = parser.GetDimen(name);
     let item =
-      parser.itemFactory.create('position').setProperties({name: parser.currentCS, move: 'vertical'}) ;
+      parser.itemFactory.create('position').setProperties({'name': parser.currentCS, 'move': 'vertical'}) ;
     // TEMP: Changes here:
     if (h.charAt(0) === '-') {
       // @test Raise Negative, Lower Negative
@@ -1053,9 +1053,9 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     }
     parser.Push(
       parser.itemFactory.create('position').setProperties({
-        name: parser.currentCS, move: 'horizontal',
-        left:  parser.create('node', 'mspace', [], {width: h}),
-        right: parser.create('node', 'mspace', [], {width: nh})}) );
+        'name': parser.currentCS, 'move': 'horizontal',
+        'left':  parser.create('node', 'mspace', [], {'width': h}),
+        'right': parser.create('node', 'mspace', [], {'width': nh})}) );
   },
 
 
@@ -1094,7 +1094,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     const w = parser.GetDimen(name),
     h = parser.GetDimen(name),
     d = parser.GetDimen(name);
-    let def: EnvList = {width: w, height: h, depth: d};
+    let def: EnvList = {'width': w, 'height': h, 'depth': d};
     if (style !== 'blank') {
       def['mathbackground'] = (parser.stack.env['color'] || 'black');
     }
@@ -1261,8 +1261,8 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     const cdots = parser.create('token', 'mo', {stretchy: false}, cdotsEntity);
     parser.Push(
       parser.itemFactory.create('dots').setProperties({
-        ldots: ldots,
-        cdots: cdots
+        'ldots': ldots,
+        'cdots': cdots
       }) );
   },
 
@@ -1303,8 +1303,8 @@ const BaseMethods: {[key: string]: ParseMethod} = {
       array.setProperty('arrayPadding', '.2em .125em');
     }
     array.arraydef = {
-      rowspacing: (vspacing || '4pt'),
-      columnspacing: (spacing || '1em')
+      'rowspacing': (vspacing || '4pt'),
+      'columnspacing': (spacing || '1em')
     };
     if (cases) {
       // @test Matrix Cases
@@ -1339,7 +1339,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
    */
   Entry(parser: TexParser, name: string) {
     // @test Label, Array, Cross Product Formula
-    parser.Push(parser.itemFactory.create('cell').setProperties({isEntry: true, name: name}));
+    parser.Push(parser.itemFactory.create('cell').setProperties({'isEntry': true, 'name': name}));
     const top = parser.stack.Top();
     const env = top.getProperty('casesEnv') as string;
     const cases = top.getProperty('isCases');
@@ -1428,7 +1428,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
   Cr(parser: TexParser, name: string) {
     // @test Cr Linebreak, Misplaced Cr
     parser.Push(
-      parser.itemFactory.create('cell').setProperties({isCR: true, name: name}));
+      parser.itemFactory.create('cell').setProperties({'isCR': true, 'name': name}));
   },
 
 
@@ -1460,7 +1460,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
       }
     }
     parser.Push(
-      parser.itemFactory.create('cell').setProperties({isCR: true, name: name, linebreak: true})
+      parser.itemFactory.create('cell').setProperties({'isCR': true, 'name': name, 'linebreak': true})
     );
     const top = parser.stack.Top();
     let node: MmlNode;
@@ -1471,7 +1471,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
       }
     } else {
       // @test Linebreak
-      node = parser.create('node', 'mspace', [], {linebreak: TexConstant.LineBreak.NEWLINE});
+      node = parser.create('node', 'mspace', [], {'linebreak': TexConstant.LineBreak.NEWLINE});
       // @test Custom Linebreak
       if (n) {
         NodeUtil.setAttribute(node, 'data-lineleading', n);
@@ -1605,8 +1605,8 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     begin.getName() === 'array' && array.setProperty('arrayPadding', '.5em .125em');
     array.parser = parser;
     array.arraydef = {
-      columnspacing: (spacing || '1em'),
-      rowspacing: (vspacing || '4pt')
+      'columnspacing': (spacing || '1em'),
+      'rowspacing': (vspacing || '4pt')
     };
     parser.configuration.columnParser.process(parser, align, array);
     if (open)  {
@@ -1682,7 +1682,7 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     if (lcr && !lcr.match(/^([lcr]{1,3})?$/)) {
       throw new TexError('BadAlignment', 'Alignment must be one to three copies of l, c, or r');
     }
-    const align = [...lcr].map(c => ({l: 'left', c: 'center', r: 'right'})[c]);
+    const align = [...lcr].map(c => ({'l': 'left', 'c': 'center', 'r': 'right'})[c]);
     align.length === 1 && align.push(align[0]);
     //
     // Set the properties for the mstyle
@@ -1751,13 +1751,13 @@ const BaseMethods: {[key: string]: ParseMethod} = {
     let newItem = parser.itemFactory.create('eqnarray', name,
                                             numbered, taggable, parser.stack.global) as sitem.ArrayItem;
     newItem.arraydef = {
-      displaystyle: true,
-      columnalign: align,
-      columnspacing: (spacing || '1em'),
-      rowspacing: '3pt',
+      'displaystyle': true,
+      'columnalign': align,
+      'columnspacing': (spacing || '1em'),
+      'rowspacing': '3pt',
       'data-break-align': balign,
-      side: parser.options['tagSide'],
-      minlabelspacing: parser.options['tagIndent']
+      'side': parser.options['tagSide'],
+      'minlabelspacing': parser.options['tagIndent']
     };
     if (isGather) {
       newItem.setProperty('nestable', true);

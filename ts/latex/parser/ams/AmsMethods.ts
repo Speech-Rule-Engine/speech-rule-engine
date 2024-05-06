@@ -151,12 +151,12 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
     const padding = parser.options.ams['multlineIndent'];
     const item = parser.itemFactory.create('multline', numbered, parser.stack) as ArrayItem;
     item.arraydef = {
-      displaystyle: true,
-      rowspacing: '.5em',
-      columnspacing: '100%',
-      width: parser.options.ams['multlineWidth'],
-      side: parser.options['tagSide'],
-      minlabelspacing: parser.options['tagIndent'],
+      'displaystyle': true,
+      'rowspacing': '.5em',
+      'columnspacing': '100%',
+      'width': parser.options.ams['multlineWidth'],
+      'side': parser.options['tagSide'],
+      'minlabelspacing': parser.options['tagIndent'],
       'data-array-padding': `${padding} ${padding}`,
       'data-width-includes-label': true // take label space out of 100% width
     };
@@ -216,15 +216,15 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
     const item = parser.itemFactory.create(
       'flalign', begin.getName(), numbered, padded, center, parser.stack) as FlalignItem;
     item.arraydef = {
-      width: '100%',
-      displaystyle: true,
-      columnalign: align,
-      columnspacing: '0em',
-      columnwidth: width,
-      rowspacing: '3pt',
+      'width': '100%',
+      'displaystyle': true,
+      'columnalign': align,
+      'columnspacing': '0em',
+      'columnwidth': width,
+      'rowspacing': '3pt',
       'data-break-align': balign,
-      side: parser.options['tagSide'],
-      minlabelspacing: (zeroWidthLabel ? '0' : parser.options['tagIndent']),
+      'side': parser.options['tagSide'],
+      'minlabelspacing': (zeroWidthLabel ? '0' : parser.options['tagIndent']),
       'data-width-includes-label': true,
     };
     item.setProperty('zeroWidthLabel', zeroWidthLabel);
@@ -277,7 +277,7 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
     //
     //  Mark the limit properties and the TeX class.
     //
-    NodeUtil.setProperties(mml, {movesupsub: star, movablelimits: true, texClass: TEXCLASS.OP});
+    NodeUtil.setProperties(mml, {'movesupsub': star, 'movablelimits': true, 'texClass': TEXCLASS.OP});
     //
     //  Skip a following \limits macro if not a starred operator
     //
@@ -319,7 +319,7 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
         //
         preScripts.replaceChild(
           parser.create('node', 'mphantom', [
-            parser.create('node', 'mpadded', [ParseUtil.copyNode(base, parser)], {width: 0})
+            parser.create('node', 'mpadded', [ParseUtil.copyNode(base, parser)], {'width': 0})
           ]),
           NodeUtil.getChildAt(preScripts, 0)
         );
@@ -364,7 +364,9 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
     //    either as part of the mmultiscripts node, or the
     //    msubsup with the base inserted into it.
     //
-    const mrow = parser.create('node', 'TeXAtom', [], {texClass: TEXCLASS.OP, movesupsub: true, movablelimits: true});
+    const mrow = parser.create(
+      'node', 'TeXAtom', [],
+      {'texClass': TEXCLASS.OP, 'movesupsub': true, 'movablelimits': true});
     if (preRest) {
       preScripts && mrow.appendChild(preScripts);
       mrow.appendChild(preRest);
@@ -425,13 +427,13 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
    */
   xArrow(parser: TexParser, name: string,
          chr: number, l: number, r: number) {
-    let def = {width: '+' + UnitUtil.em((l + r) / 18), lspace: UnitUtil.em(l / 18)};
+    let def = {'width': '+' + UnitUtil.em((l + r) / 18), 'lspace': UnitUtil.em(l / 18)};
     let bot = parser.GetBrackets(name);
     let first = parser.ParseArg(name);
-    let dstrut = parser.create('node', 'mspace', [], {depth: '.2em'});
+    let dstrut = parser.create('node', 'mspace', [], {'depth': '.2em'});
     let arrow = parser.create('token',
-                              'mo', {stretchy: true, texClass: TEXCLASS.REL}, String.fromCodePoint(chr));
-    arrow = parser.create('node', 'mstyle', [arrow], {scriptlevel: 0});
+                              'mo', {'stretchy': true, 'texClass': TEXCLASS.REL}, String.fromCodePoint(chr));
+    arrow = parser.create('node', 'mstyle', [arrow], {'scriptlevel': 0});
     let mml = parser.create('node', 'munderover', [arrow]) as MmlMunderover;
     let mpadded = parser.create('node', 'mpadded', [first, dstrut], def);
     NodeUtil.setAttribute(mpadded, 'voffset', '-.2em');
@@ -440,7 +442,7 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
     if (bot) {
       // @test Above Below Left Arrow, Above Below Right Arrow
       let bottom = new TexParser(bot, parser.stack.env, parser.configuration).mml();
-      let bstrut = parser.create('node', 'mspace', [], {height: '.75em'});
+      let bstrut = parser.create('node', 'mspace', [], {'height': '.75em'});
       mpadded = parser.create('node', 'mpadded', [bottom, bstrut], def);
       NodeUtil.setAttribute(mpadded, 'voffset', '.15em');
       NodeUtil.setAttribute(mpadded, 'depth', '-.15em');
@@ -501,7 +503,7 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
     }
     if (lr) {
       // @test Right Fraction, Left Fraction
-      NodeUtil.setProperties(frac, {numalign: lr, denomalign: lr});
+      NodeUtil.setProperties(frac, {'numalign': lr, 'denomalign': lr});
     }
     // @test Center Fraction
     parser.Push(frac);
@@ -554,13 +556,13 @@ export const AmsMethods: {[key: string]: ParseMethod} = {
       if (styleAlpha === 'D') {
         // @test Display Fraction, Display Sub Fraction, Display Binomial,
         //       Display Sub Binomial
-        NodeUtil.setProperties(frac, {displaystyle: true, scriptlevel: 0});
+        NodeUtil.setProperties(frac, {'displaystyle': true, 'scriptlevel': 0});
       }
       else {
         // @test Text Fraction, Text Sub Fraction, Text Binomial,
         //       Text Sub Binomial
-        NodeUtil.setProperties(frac, {displaystyle: false,
-                                      scriptlevel: styleDigit - 1});
+        NodeUtil.setProperties(frac, {'displaystyle': false,
+                                      'scriptlevel': styleDigit - 1});
       }
     }
     // @test Text Fraction, Normal Sub Binomial, Normal Binomial

@@ -58,7 +58,7 @@ export function parse(ltx: string, packages: string[] = ['base', 'ams']) {
   // FilterUtil.cleanStretchy({});
   // FilterUtil.cleanAttributes({});
   FilterUtil.combineRelations({data: parseOptions});
-  let visitor = new SerializedMmlVisitor();
+  const visitor = new SerializedMmlVisitor();
   return visitor.visitTree(node);
 };
 

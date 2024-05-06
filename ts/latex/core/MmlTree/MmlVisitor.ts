@@ -60,7 +60,7 @@ export class MmlVisitor extends AbstractVisitor<MmlNode> {
    * Attributes to include on every element of a given kind
    */
   public static defaultAttributes: {[kind: string]: PropertyList} = {
-    math: {
+    'math': {
       'xmlns': 'http://www.w3.org/1998/Math/MathML'
     }
   };

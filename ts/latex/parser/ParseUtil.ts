@@ -226,14 +226,14 @@ export const ParseUtil = {
     // @test Fenced, Fenced3
     let nf = configuration.nodeFactory;
     let mrow = nf.create('node', 'mrow', [],
-                         {open: open, close: close, texClass: TEXCLASS.INNER});
+                         {'open': open, 'close': close, 'texClass': TEXCLASS.INNER});
     let mo;
     if (big) {
       mo = new TexParser('\\' + big + 'l' + open, configuration.parser.stack.env, configuration).mml();
     } else {
       let openNode = nf.create('text', open);
       mo = nf.create('node', 'mo', [],
-                     {fence: true, stretchy: true, symmetric: true, texClass: TEXCLASS.OPEN},
+                     {'fence': true, 'stretchy': true, 'symmetric': true, 'texClass': TEXCLASS.OPEN},
                      openNode);
     }
     NodeUtil.appendChildren(mrow, [mo, mml]);
@@ -242,7 +242,7 @@ export const ParseUtil = {
     } else {
       let closeNode = nf.create('text', close);
       mo = nf.create('node', 'mo', [],
-                     {fence: true, stretchy: true, symmetric: true, texClass: TEXCLASS.CLOSE},
+                     {'fence': true, 'stretchy': true, 'symmetric': true, 'texClass': TEXCLASS.CLOSE},
                      closeNode);
     }
     color && mo.attributes.set('mathcolor', color);
@@ -263,7 +263,7 @@ export const ParseUtil = {
              mml: MmlNode, close: string): MmlNode {
     // @test Choose, Over With Delims, Above with Delims
     let mrow = configuration.nodeFactory.create('node',
-                                                'mrow', [], {open: open, close: close, texClass: TEXCLASS.ORD});
+                                                'mrow', [], {'open': open, 'close': close, 'texClass': TEXCLASS.ORD});
     if (open) {
       NodeUtil.appendChildren(mrow, [ParseUtil.mathPalette(configuration, open, 'l')]);
     }
@@ -445,7 +445,7 @@ export const ParseUtil = {
     }
     if (level != null) {
       // @test Label, Fbox, Hbox
-      mml = [parser.create('node', 'mstyle', mml, {displaystyle: false, scriptlevel: level})];
+      mml = [parser.create('node', 'mstyle', mml, {'displaystyle': false, 'scriptlevel': level})];
     } else if (mml.length > 1) {
       // @test Interspersed Text
       mml = [parser.create('node', 'mrow', mml)];

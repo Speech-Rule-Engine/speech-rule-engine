@@ -146,7 +146,7 @@ export class ColumnParser {
    * @param {ArrayItem} array     The array stack item to adjust
    */
   protected setColumnAlign(state: ColumnState, array: ArrayItem) {
-    array.arraydef.columnalign = state.calign.join(' ');
+    array.arraydef['columnalign'] = state.calign.join(' ');
   }
 
   /**
