@@ -22,12 +22,15 @@
     "require": "node -e \"require(\\\"fs\\\").writeFileSync(\\\"lib/require.mjs\\\", \\\"import {createRequire} from 'module';\\nglobal.require = createRequire(import.meta.url);\\n\\\");\"",
     "pretest": "git submodule update --remote --merge; pnpm compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "pnpm module",
-    "clean": "rimraf js lib cjs",
+    "clean": "rimraf js lib cjs xplatmath",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; pnpm jest --silent ",
-    "cleanAll": "make clean; make clean_min",
+    "cleanXplat": "rimraf ts/xplatmath/locales .tscc_temp",
+    "cleanAll": "make clean; make clean_min; pnpm cleanXplat",
     "prepublish": "pnpm cleanAll; pnpm buildAll",
-    "build": "make -j 12 all; pnpm module; pnpm webpack; pnpm require",
-    "buildAll": "make -j 12 all; pnpm commonjs; pnpm module; pnpm webpack; pnpm require; pnpm postcommonjs; pnpm postmodule"
+    "locales": "make -j 12 all; make xplat",
+    "build": "pnpm locales; pnpm module; pnpm webpack; pnpm require",
+    "xplat": "pnpm locales; mkdir -p xplatmath; pnpm tscc",
+    "buildAll": "pnpm locales; pnpm commonjs; pnpm module; pnpm webpack; pnpm require; pnpm postcommonjs; pnpm postmodule"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"
