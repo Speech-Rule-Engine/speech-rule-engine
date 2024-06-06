@@ -381,12 +381,12 @@ export abstract class BaseItem extends MmlStack implements StackItem {
    */
   protected static errors: {[key: string]: string[]} = {
     // @test ExtraOpenMissingClose
-    end: ['MissingBeginExtraEnd', 'Missing \\begin{%1} or extra \\end{%1}'],
+    'end': ['MissingBeginExtraEnd', 'Missing \\begin{%1} or extra \\end{%1}'],
     // @test ExtraCloseMissingOpen
-    close: ['ExtraCloseMissingOpen', 'Extra close brace or missing open brace'],
+    'close': ['ExtraCloseMissingOpen', 'Extra close brace or missing open brace'],
     // @test MissingLeftExtraRight
-    right: ['MissingLeftExtraRight', 'Missing \\left or extra \\right'],
-    middle: ['ExtraMiddle', 'Extra \\middle']
+    'right': ['MissingLeftExtraRight', 'Missing \\left or extra \\right'],
+    'middle': ['ExtraMiddle', 'Extra \\middle']
   };
 
 

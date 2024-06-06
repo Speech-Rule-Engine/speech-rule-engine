@@ -173,7 +173,7 @@ export const MMLSPACING = [
  *  The operator dictionary, with sections for the three forms:  prefix, postfix, and infix
  */
 export const OPTABLE: {[form: string]: OperatorList} = {
-  prefix: {
+  'prefix': {
     '(': MO.OPEN,            // left parenthesis
     '+': MO.BIN01,           // plus sign
     '-': MO.BIN01,           // hyphen-minus
@@ -272,7 +272,7 @@ export const OPTABLE: {[form: string]: OperatorList} = {
     '\u2AFC': MO.OP,         // large triple vertical bar operator
     '\u2AFF': MO.OP,         // n-ary white vertical bar
   },
-  postfix: {
+  'postfix': {
     '!!': OPDEF(1, 0),       // multiple character operator: !!
     '!': [1, 0, TEXCLASS.CLOSE, null], // exclamation mark
     '"': MO.ACCENT,          // quotation mark
@@ -400,7 +400,7 @@ export const OPTABLE: {[form: string]: OperatorList} = {
     '\u2998': MO.CLOSE,      // right black tortoise shell bracket
     '\u29FD': MO.CLOSE,      // right-pointing curved angle bracket
   },
-  infix: {
+  'infix': {
     '!=': MO.BIN4,           // multiple character operator: !=
     '#': MO.ORD,             // #
     '$': MO.ORD,             // $
@@ -1334,10 +1334,10 @@ export const OPTABLE: {[form: string]: OperatorList} = {
 //
 //  These are not in the W3C table, but we need them for \widehat and \underline
 //
-OPTABLE.infix['^'] = MO.WIDEREL;
-OPTABLE.infix['_'] = MO.WIDEREL;
+OPTABLE['infix']['^'] = MO.WIDEREL;
+OPTABLE['infix']['_'] = MO.WIDEREL;
 
 //
 //  Remove from Appendix C, but perhaps that was a mistake?
 //
-OPTABLE.infix['\u2ADC'] = MO.REL;
+OPTABLE['infix']['\u2ADC'] = MO.REL;
