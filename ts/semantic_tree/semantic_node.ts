@@ -367,6 +367,7 @@ export class SemanticNode {
     if (this.textContent === content) {
       return;
     }
+    content = content.replace(/\s/g, ' ');
     const meaning = SemanticMap.Meaning.get(content);
     this.textContent = content;
     this.role = meaning.role;
@@ -667,7 +668,7 @@ export class SemanticNode {
    */
   private addAnnotation_(domain: string, annotation: string) {
     const content = this.annotation[domain];
-    if (content) {
+    if (content && !content.includes(annotation)) {
       content.push(annotation);
     } else {
       this.annotation[domain] = [annotation];
