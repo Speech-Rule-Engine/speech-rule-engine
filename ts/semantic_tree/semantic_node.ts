@@ -367,8 +367,7 @@ export class SemanticNode {
     if (this.textContent === content) {
       return;
     }
-    content = content.replace(/\s/g, ' ');
-    const meaning = SemanticMap.Meaning.get(content);
+    const meaning = SemanticMap.Meaning.get(content.replace(/\s/g, ' '));
     this.textContent = content;
     this.role = meaning.role;
     this.type = meaning.type;
