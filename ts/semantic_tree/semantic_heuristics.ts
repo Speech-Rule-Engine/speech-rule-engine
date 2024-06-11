@@ -764,3 +764,29 @@ function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
   node.role = role;
   return node;
 }
+
+/**
+ * Rewrites a simple function to a prefix function if it consists of multiple
+ * letters. (Currently restricted to Braille!)
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'op_with_limits',
+    (nodes: SemanticNode[]) => {
+      let center = nodes[0];
+      center.type = SemanticType.LARGEOP;
+      center.role = SemanticRole.SUM;
+      return nodes;
+    },
+    (nodes: SemanticNode[]) => {
+      return nodes[0].type === SemanticType.OPERATOR &&
+        nodes.slice(1).some(
+          node => node.type === SemanticType.RELSEQ ||
+            node.type === SemanticType.MULTIREL ||
+            (node.type === SemanticType.INFIXOP &&
+              node.role === SemanticRole.ELEMENT) ||
+            (node.type === SemanticType.PUNCTUATED &&
+              node.role === SemanticRole.SEQUENCE)
+        )
+    }
+  ));
