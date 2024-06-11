@@ -326,6 +326,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     }
     const label = this.parse(children[0]);
     label.role = SemanticRole.LABEL;
+    if (label.childNodes[0]?.type === SemanticType.TEXT) {
+      label.childNodes[0].role = SemanticRole.LABEL;
+    }
     const newNode = this.getFactory().makeBranchNode(
       SemanticType.ROW,
       this.parseList(children.slice(1)),
