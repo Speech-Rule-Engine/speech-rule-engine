@@ -405,7 +405,8 @@ export function isSmallVulgarFraction(node: Element): Element[] {
  */
 function isUnitExpression(node: SemanticNode): boolean {
   return (
-    node.type === SemanticType.TEXT ||
+    (node.type === SemanticType.TEXT &&
+      node.role !== SemanticRole.LABEL) ||
     (node.type === SemanticType.PUNCTUATED &&
       node.role === SemanticRole.TEXT &&
       isNumber_(node.childNodes[0]) &&

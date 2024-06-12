@@ -331,7 +331,7 @@ export function relationIterator(
   const childNodes = nodes.slice(0);
   let first = true;
   let parentNode = nodes[0].parentNode.parentNode as Element;
-  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
   let depth = match ? match[1] : '';
   let contentNodes: Element[];
   if (nodes.length > 0) {
@@ -454,7 +454,7 @@ export function contentIterator(
 ) {
   let func = suCI(nodes, context);
   let parentNode = nodes[0].parentNode.parentNode as Element;
-  let match = parentNode.getAttribute('annotation').match(/depth:(\d+)/);
+  let match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
   let depth = match ? match[1] : '';
   return function() {
     const descrs = func();

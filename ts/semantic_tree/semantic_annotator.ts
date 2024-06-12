@@ -44,6 +44,7 @@ export class SemanticAnnotator {
    */
   public annotate(node: SemanticNode) {
     node.childNodes.forEach(this.annotate.bind(this));
+    node.contentNodes.forEach(this.annotate.bind(this));
     node.addAnnotation(this.domain, this.func(node));
   }
 }
@@ -80,6 +81,9 @@ export class SemanticVisitor {
     node.addAnnotation(this.domain, result[0]);
     for (let i = 0, child; (child = node.childNodes[i]); i++) {
       result = this.visit(child, result[1] as { [key: string]: any });
+    }
+    for (let i = 0, content; (content = node.contentNodes[i]); i++) {
+      result = this.visit(content, result[1] as { [key: string]: any });
     }
     return result;
   }
