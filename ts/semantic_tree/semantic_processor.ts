@@ -1268,6 +1268,7 @@ export class SemanticProcessor {
     }
 
     let result: BoundsType;
+    SemanticHeuristics.run('op_with_limits', children)
     if (SemanticPred.isLimitBase(center)) {
       result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
       const length = result.length;
