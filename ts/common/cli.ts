@@ -303,6 +303,9 @@ export class Cli {
       .option('-m, --mathml', 'Generate enriched MathML.', () =>
         processor('enriched')
       )
+      .option('-u, --rebuild', 'Rebuild semantic tree from enriched MathML.', () =>
+        processor('rebuild')
+      )
       .option(
         '-t, --latex',
         'Accepts LaTeX input for certain locale/modality combinations.',
