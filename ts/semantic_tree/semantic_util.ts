@@ -65,6 +65,11 @@ export enum MMLTAGS {
 
 
 /**
+ * List of all MathML Tags.
+ */
+const ALLTAGS: string[] = Object.values(MMLTAGS);
+
+/**
  * List of MathML Tags that are considered to be leafs.
  */
 const LEAFTAGS: string[] = [
@@ -143,7 +148,8 @@ function hasLeafTag(node: Element): boolean {
  * @returns True if element is an ignore node.
  */
 export function hasIgnoreTag(node: Element): boolean {
-  return !!node && IGNORETAGS.includes(DomUtil.tagName(node));
+  return !!node && (IGNORETAGS.includes(DomUtil.tagName(node)) ||
+    !ALLTAGS.includes(DomUtil.tagName(node)));
 }
 
 /**
