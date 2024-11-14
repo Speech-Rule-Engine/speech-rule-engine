@@ -68,7 +68,7 @@
     "ts-prune": "^0.10.3",
     "typedoc": "^0.25.13",
     "typescript": "5.4.5",
-    "webpack": "5.91.0",
+    "webpack": "5.94.0",
     "webpack-cli": "^5.1.4"
   },
   "files": [
