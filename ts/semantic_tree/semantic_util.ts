@@ -65,6 +65,11 @@ export enum MMLTAGS {
 
 
 /**
+ * List of all MathML Tags.
+ */
+const ALLTAGS: string[] = Object.values(MMLTAGS);
+
+/**
  * List of MathML Tags that are considered to be leafs.
  */
 const LEAFTAGS: string[] = [
@@ -133,7 +138,7 @@ export function hasMathTag(node: Element): boolean {
  * @returns True if element is an leaf node.
  */
 function hasLeafTag(node: Element): boolean {
-  return !!node && LEAFTAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && LEAFTAGS.includes(DomUtil.tagName(node));
 }
 
 /**
@@ -143,7 +148,8 @@ function hasLeafTag(node: Element): boolean {
  * @returns True if element is an ignore node.
  */
 export function hasIgnoreTag(node: Element): boolean {
-  return !!node && IGNORETAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && (IGNORETAGS.includes(DomUtil.tagName(node)) ||
+    !ALLTAGS.includes(DomUtil.tagName(node)));
 }
 
 /**
@@ -153,7 +159,7 @@ export function hasIgnoreTag(node: Element): boolean {
  * @returns True if element is an empty node.
  */
 export function hasEmptyTag(node: Element): boolean {
-  return !!node && EMPTYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && EMPTYTAGS.includes(DomUtil.tagName(node));
 }
 
 /**
@@ -163,7 +169,7 @@ export function hasEmptyTag(node: Element): boolean {
  * @returns True if element is an display node.
  */
 export function hasDisplayTag(node: Element): boolean {
-  return !!node && DISPLAYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && DISPLAYTAGS.includes(DomUtil.tagName(node));
 }
 
 /**
@@ -196,10 +202,10 @@ export function purgeNodes(nodes: Element[]): Element[] {
       continue;
     }
     const tagName = DomUtil.tagName(node);
-    if (IGNORETAGS.indexOf(tagName) !== -1) {
+    if (IGNORETAGS.includes(tagName)) {
       continue;
     }
-    if (EMPTYTAGS.indexOf(tagName) !== -1 && node.childNodes.length === 0) {
+    if (EMPTYTAGS.includes(tagName) && node.childNodes.length === 0) {
       continue;
     }
     nodeArray.push(node);
@@ -226,7 +232,7 @@ export function isZeroLength(length: string): boolean {
     'negativeverythickmathspace',
     'negativeveryverythickmathspace'
   ];
-  if (negativeNamedSpaces.indexOf(length) !== -1) {
+  if (negativeNamedSpaces.includes(length)) {
     return true;
   }
   const value = length.match(/[0-9.]+/);
@@ -254,7 +260,7 @@ export function addAttributes(to: SemanticNode, from: Element) {
         to.attributes[key] = attrs[i].value;
         to.nobreaking = true;
       }
-      if (directSpeechKeys.indexOf(key) !== -1) {
+      if (directSpeechKeys.includes(key)) {
         to.attributes['ext-speech'] = attrs[i].value;
         to.nobreaking = true;
       }
