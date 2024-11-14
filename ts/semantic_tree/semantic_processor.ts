@@ -3195,12 +3195,15 @@ export class SemanticProcessor {
         newNodes.push(SemanticProcessor.getInstance().row(firstComp));
       }
     }
-    return [
-      SemanticProcessor.getInstance().punctuatedNode_(newNodes, partition.rel)
-    ];
+    return (newNodes.length === 1 && partition.rel.length === 1) ? newNodes :
+      [
+        SemanticProcessor.getInstance().punctuatedNode_(newNodes, partition.rel)
+      ];
   }
 
   // TODO: Refine roles to reflect same roles. Find sequences of punctuation
+  // TODO: Extend punctuated nodes to include elements outside the current scope
+  //       Example: a\mathinner{...\_\_\_}
   // elements and separate those out or at least rewrite ellipses.
   /**
    * Create a punctuated node.

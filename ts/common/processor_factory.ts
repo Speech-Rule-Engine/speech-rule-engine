@@ -27,6 +27,7 @@ import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_fa
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
 import * as WalkerFactory from '../walker/walker_factory.js';
 import * as WalkerUtil from '../walker/walker_util.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
 import * as DomUtil from './dom_util.js';
 import { Engine, SREError } from './engine.js';
 import * as EngineConst from '../common/engine_const.js';
@@ -265,6 +266,19 @@ set(
           break;
       }
       return enr;
+    },
+    pprint: function (tree) {
+      return DomUtil.formatXml(tree.toString());
+    }
+  })
+);
+
+//  rebuild: Rebuild semnatic tree from Enriched MathML node.
+set(
+  new Processor<Element>('rebuild', {
+    processor: function (expr) {
+      let rebuilt = new RebuildStree(DomUtil.parseInput(expr));
+      return rebuilt.stree.xml();
     },
     pprint: function (tree) {
       return DomUtil.formatXml(tree.toString());
