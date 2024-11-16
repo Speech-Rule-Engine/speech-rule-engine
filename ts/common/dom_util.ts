@@ -73,7 +73,7 @@ export function parseInput(input: string): Element {
     );
     if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.xpath.currentDocument = doc;
-      return html ? doc.body.childNodes[0] : doc.documentElement;
+      return (html ? doc.body.childNodes[0] : doc.documentElement) as Element;
     }
     return doc.documentElement;
   } catch (err) {

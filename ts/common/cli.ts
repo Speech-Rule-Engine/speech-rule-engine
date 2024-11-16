@@ -37,7 +37,7 @@ export class Cli {
   /**
    * Commander library.
    */
-  public static commander = SystemExternal.documentSupported
+  public static commander = (SystemExternal.documentSupported || SystemExternal.webworker)
     ? null
     : SystemExternal.extRequire('commander').program;
 

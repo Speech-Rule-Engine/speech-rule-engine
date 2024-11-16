@@ -114,7 +114,8 @@ function evaluateXpath(
   rootNode: Node,
   type: number
 ): XPathResult {
-  return Engine.getInstance().mode === EngineConst.Mode.HTTP &&
+  return !SystemExternal.webworker &&
+    Engine.getInstance().mode === EngineConst.Mode.HTTP &&
     !Engine.getInstance().isIE &&
     !Engine.getInstance().isEdge
     ? xpath.currentDocument.evaluate(

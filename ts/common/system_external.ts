@@ -22,10 +22,13 @@
  */
 
 import { Variables } from './variables.js';
+import * as Xmldom from '@xmldom/xmldom';
+import * as wgx from 'wicked-good-xpath';
 
 declare let global: any;
 declare let require: (name: string) => any;
 declare let process: any;
+declare const DedicatedWorkerGlobalScope: any;
 
 export class SystemExternal {
 
@@ -60,18 +63,26 @@ export class SystemExternal {
     !(typeof window.document === 'undefined'))();
 
   /**
+   * Check if webworker environment.
+   *
+   * @returns True if the DedicatedWorkerGlobalScope is available.
+   */
+  public static webworker: boolean = (() =>
+    !(typeof DedicatedWorkerGlobalScope === 'undefined'))();
+
+  /**
    * Xmldom library.
    */
   public static xmldom = SystemExternal.documentSupported
     ? window
-    : SystemExternal.extRequire('@xmldom/xmldom');
+    : Xmldom;
 
   /**
    * DOM document implementation.
    */
   public static document: Document = SystemExternal.documentSupported
     ? window.document
-    : new SystemExternal.xmldom.DOMImplementation().createDocument('', '', 0);
+    : new SystemExternal.xmldom.DOMImplementation().createDocument('', '');
 
   /**
    * Xpath library.
@@ -80,7 +91,6 @@ export class SystemExternal {
     ? document
     : (function () {
         const window = { document: {}, XPathResult: {} };
-        const wgx = SystemExternal.extRequire('wicked-good-xpath');
         wgx.install(window);
         (window.document as any).XPathResult = window.XPathResult;
         return window.document;
@@ -97,7 +107,7 @@ export class SystemExternal {
   /**
    * Filesystem library.
    */
-  public static fs = SystemExternal.documentSupported
+  public static fs = SystemExternal.documentSupported || SystemExternal.webworker
     ? null
     : SystemExternal.extRequire('fs');
 
@@ -110,7 +120,7 @@ export class SystemExternal {
    * Path to JSON files.
    */
   public static jsonPath = (function () {
-    if (SystemExternal.documentSupported) {
+    if (SystemExternal.documentSupported || SystemExternal.webworker) {
       return SystemExternal.url;
     }
     if (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH) {

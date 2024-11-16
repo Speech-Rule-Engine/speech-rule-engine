@@ -405,7 +405,7 @@ export function exit(opt_value?: number) {
  */
 export const localePath = FileUtil.localePath;
 
-if (SystemExternal.documentSupported) {
+if (SystemExternal.documentSupported || SystemExternal.webworker) {
   setupEngine({ mode: EngineConst.Mode.HTTP }).then(() => setupEngine({}));
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
