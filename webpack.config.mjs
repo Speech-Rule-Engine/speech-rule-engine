@@ -63,7 +63,7 @@ let sreConfig = Object.assign({}, config, {
 });
 
 let mjConfig = Object.assign({}, config, {
-  entry: path.resolve(__dirname, 'ts/common/mathjax.ts'),
+  entry: path.resolve(__dirname, 'js/common/mathjax.js'),
   target: 'web',
   output: {
     filename: 'mathjax-sre.js',
@@ -74,4 +74,28 @@ let mjConfig = Object.assign({}, config, {
   }
 });
 
-export default [sreConfig];
+let semConfig = Object.assign({}, config, {
+  entry: path.resolve(__dirname, 'js/semantic_tree/semantic.js'),
+  target: 'web',
+  output: {
+    filename: 'semantic.js',
+    library: 'SEM',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    path: path.join(__dirname, 'lib'),
+  }
+});
+
+let emlConfig = Object.assign({}, config, {
+  entry: path.resolve(__dirname, 'js/enrich_mathml/enrich.js'),
+  target: 'web',
+  output: {
+    filename: 'enrich.js',
+    library: 'SEM',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    path: path.join(__dirname, 'lib'),
+  }
+});
+
+export default [semConfig];
