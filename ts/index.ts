@@ -1,3 +1,4 @@
+import './common/lib_external.js';
 export * from './common/system.js';
 import { Cli } from './common/cli.js';
 import { Variables } from './common/variables.js';

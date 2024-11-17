@@ -32,10 +32,7 @@ import { SystemExternal } from './system_external.js';
  * @returns True if xpath is supported.
  */
 function xpathSupported(): boolean {
-  if (typeof XPathResult === 'undefined') {
-    return false;
-  }
-  return true;
+  return typeof XPathResult === 'undefined' ? false : true;
 }
 
 /**
@@ -64,11 +61,11 @@ export const xpath: {
   currentDocument: null,
   evaluate: xpathSupported()
     ? document.evaluate
-    : SystemExternal.xpath.evaluate,
-  result: xpathSupported() ? XPathResult : SystemExternal.xpath.XPathResult,
+    : SystemExternal.xpath?.evaluate,
+  result: xpathSupported() ? XPathResult : SystemExternal.xpath?.XPathResult,
   createNSResolver: xpathSupported()
     ? document.createNSResolver
-    : SystemExternal.xpath.createNSResolver
+    : SystemExternal.xpath?.createNSResolver
 };
 
 /**
