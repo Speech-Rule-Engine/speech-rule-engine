@@ -98,4 +98,4 @@ let emlConfig = Object.assign({}, config, {
   }
 });
 
-export default [semConfig];
+export default [sreConfig];
