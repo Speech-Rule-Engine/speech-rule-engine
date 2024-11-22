@@ -118,4 +118,9 @@ export interface SpeechGenerator {
    */
   getLevel(depth: string): string;
 
+  getSpeechStructure(node: Element, xml: Element, root?: Element): {[id: string]: {
+    speech?: string,
+    prefix?: string,
+    postfix?: string,
+  }};
 }

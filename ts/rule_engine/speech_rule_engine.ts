@@ -66,6 +66,8 @@ export class SpeechRuleEngine {
     [key: string]: { [key: string]: (p1: Node) => AuditoryDescription[] };
   } = {};
 
+  public speechMappings: Map<string, AuditoryDescription[]> = new Map();
+
   /**
    * @returns The Engine object.
    */
@@ -118,6 +120,15 @@ export class SpeechRuleEngine {
     }
   }
 
+  private addSpeechMapping(node: Element, descr: AuditoryDescription[]) {
+    console.log(`Adding to speech mapping (type: ${node.nodeType}):\n ${node.toString()}\n ${descr}`);
+    if (node.nodeType === DomUtil.NodeType.ELEMENT_NODE && node.hasAttribute('id')) {
+      console.log('Setting: ' + node.getAttribute('id'));
+      this.speechMappings.set(node.getAttribute('id'), descr);
+    }
+  }
+
+
   // Dispatch functionality.
   // The timing function is temporary until the MOSS deliverable is done.
   /**
@@ -128,14 +139,19 @@ export class SpeechRuleEngine {
    * @returns A list of auditory descriptions
    *   for that node.
    */
-  public evaluateNode(node: Element): AuditoryDescription[] {
+  public evaluateNode(node: Element, clear = false): AuditoryDescription[] {
     updateEvaluator(node);
+    console.log('RESETTING!');
+    if (clear) {
+      this.speechMappings.clear(); 
+    }
     const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
     try {
+      // console.log('Evaluate Node top level');
+      // console.log(node.toString());
       result = this.evaluateNode_(node);
     } catch (err) {
-      console.log(err);
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
@@ -301,12 +317,27 @@ export class SpeechRuleEngine {
   }
 
   /**
+   * Wrapper function to save computed speech.
+   *
+   * @param node The node to be evaluated.
+   * @returns A list of auditory descriptions for that node.
+   */
+  private evaluateTree_(node: Element): AuditoryDescription[] {
+    // console.log('Evaluate Tree wrapper level');
+    // console.log(node.toString());
+    let result = this.evaluateTreeInternal_(node);
+    // console.log('Evaluate Tree wrapper level: ' + result);
+    this.addSpeechMapping(node, result);
+    return result;
+  }
+
+  /**
    * Applies rules recursively to compute the final speech object.
    *
    * @param node Node to apply the speech rule to.
    * @returns A list of Auditory descriptions.
    */
-  private evaluateTree_(node: Element): AuditoryDescription[] {
+  private evaluateTreeInternal_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
     let result: AuditoryDescription[];
     Debugger.getInstance().output(

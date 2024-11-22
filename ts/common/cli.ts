@@ -306,6 +306,9 @@ export class Cli {
       .option('-u, --rebuild', 'Rebuild semantic tree from enriched MathML.', () =>
         processor('rebuild')
       )
+      .option('-T, --speechStructure', 'Return speech structure only.', () =>
+        processor('speechStructure')
+      )
       .option(
         '-t, --latex',
         'Accepts LaTeX input for certain locale/modality combinations.',

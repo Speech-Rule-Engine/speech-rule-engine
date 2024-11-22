@@ -108,6 +108,10 @@ export function toSpeech(expr: string): string {
   return processString('speech', expr);
 }
 
+export function toSpeechStructure(expr: string): string {
+  return processString('speechStructure', expr);
+}
+
 /**
  * Function to translate MathML string into Semantic Tree.
  *

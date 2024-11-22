@@ -389,3 +389,25 @@ set(
     }
   })
 );
+
+//  testing the new speech structure.
+set(
+  new Processor('speechStructure', {
+    processor: function (expr) {
+      let enr =  Enrich.semanticMathmlSync(expr);
+      // let enr = DomUtil.parseInput(expr);
+      let generator = SpeechGeneratorFactory.generator('Tree');
+      const res = generator.getSpeechStructure(enr, enr);
+      return res;
+    },
+    print: function (descrs) {
+      return JSON.stringify(descrs);
+    },
+    pprint: function (descrs) {
+      return JSON.stringify(descrs, null, 2);
+    }
+  })
+);
+
+// ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
+// echo "<math><mi>a</mi><mi>b</mi></math>" | ./bin/sre -T -P -d clearspeak

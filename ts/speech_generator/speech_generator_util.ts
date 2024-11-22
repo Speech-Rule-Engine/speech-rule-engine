@@ -37,7 +37,10 @@ import * as WalkerUtil from '../walker/walker_util.js';
  *     for the node.
  */
 export function computeSpeech(xml: Element): AuditoryDescription[] {
-  return SpeechRuleEngine.getInstance().evaluateNode(xml);
+  const result = SpeechRuleEngine.getInstance().evaluateNode(xml, true);
+  console.log(SpeechRuleEngine.getInstance().speechMappings);
+  console.log(SpeechRuleEngine.getInstance().speechMappings.keys());
+  return result;
 }
 
 /**
