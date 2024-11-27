@@ -26,9 +26,9 @@ import * as WalkerUtil from '../walker/walker_util.js';
 import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
 import * as SpeechGeneratorUtil from './speech_generator_util.js';
 
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
-import * as AuralRendering from '../audio/aural_rendering.js';
-import * as DomUtil from '../common/dom_util.js';
+// import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+// import * as AuralRendering from '../audio/aural_rendering.js';
+// import * as DomUtil from '../common/dom_util.js';
 
 export class TreeSpeechGenerator extends AbstractSpeechGenerator {
   /**
@@ -63,45 +63,46 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
     return speech;
   }
 
-  public getSpeechStructure(node: Element, xml: Element) {
-    if (this.getRebuilt()) {
-      SpeechGeneratorUtil.connectMactions(node, xml, this.getRebuilt().xml);
-    }
-    const structure: {[id: string]: {
-    speech?: string,
-    prefix?: string,
-    postfix?: string,
-    }} = {};
-    this.generateSpeech(node, xml);
-    const nodeMap: Map<string, Element> = new Map();
-    const nodes = this.getRebuilt().nodeDict;
-    console.log(5);
-    console.log(Object.keys(nodes));
-    const xmlDoc = DomUtil.parseInput('<stree></stree>');
-    const missing = [];
-    for (const [id, node] of Object.entries(nodes)) {
-      let descr = SpeechRuleEngine.getInstance().speechMappings.get(id);
-      const xmlNode = node.xml(xmlDoc.ownerDocument)
-      xmlDoc.appendChild(xmlNode);
-      nodeMap.set(id, xmlNode);
-      if (!descr) {
-        console.log('NO DESCR: ' + id);
-        missing.push(id);
-        continue;
-      }
-        console.log('DESCR' + id);
-      structure[id] = {
-        speech: AuralRendering.finalize(AuralRendering.markup(descr))
-      };
-    }
-    console.log(missing);
-    for (const node of missing) {
-      structure[node] = {
-        speech: AuralRendering.finalize(
-          SpeechGeneratorUtil.computeMarkup(nodeMap.get(node)))
-      }
-    }
-    return structure;
-  }
+  // public getSpeechStructure(node: Element, xml: Element) {
+  //   if (this.getRebuilt()) {
+  //     SpeechGeneratorUtil.connectMactions(node, xml, this.getRebuilt().xml);
+  //   }
+  //   const structure: {[id: string]: {
+  //   speech?: string,
+  //   prefix?: string,
+  //   postfix?: string,
+  //   }} = {};
+  //   this.generateSpeech(node, xml);
+  //   const nodeMap: Map<string, Element> = new Map();
+  //   const nodes = this.getRebuilt().nodeDict;
+  //   const speechStructure = SpeechRuleEngine.getInstance().speechStructure;
+  //   console.log(5);
+  //   console.log(Object.keys(nodes));
+  //   const xmlDoc = DomUtil.parseInput('<stree></stree>');
+  //   const missing = [];
+  //   for (const [id, node] of Object.entries(nodes)) {
+  //     let descr = speechStructure.get(id);
+  //     const xmlNode = node.xml(xmlDoc.ownerDocument)
+  //     xmlDoc.appendChild(xmlNode);
+  //     nodeMap.set(id, xmlNode);
+  //     if (!descr) {
+  //       console.log('NO DESCR: ' + id);
+  //       missing.push(id);
+  //       continue;
+  //     }
+  //       console.log('DESCR' + id);
+  //     structure[id] = {
+  //       speech: AuralRendering.finalize(AuralRendering.markup(descr))
+  //     };
+  //   }
+  //   console.log(missing);
+  //   for (const node of missing) {
+  //     structure[node] = {
+  //       speech: AuralRendering.finalize(
+  //         SpeechGeneratorUtil.computeMarkup(nodeMap.get(node)))
+  //     }
+  //   }
+  //   return structure;
+  // }
 
 }

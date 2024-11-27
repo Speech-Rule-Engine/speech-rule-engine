@@ -38,8 +38,6 @@ import * as WalkerUtil from '../walker/walker_util.js';
  */
 export function computeSpeech(xml: Element): AuditoryDescription[] {
   const result = SpeechRuleEngine.getInstance().evaluateNode(xml, true);
-  console.log(SpeechRuleEngine.getInstance().speechMappings);
-  console.log(SpeechRuleEngine.getInstance().speechMappings.keys());
   return result;
 }
 
@@ -52,7 +50,7 @@ export function computeSpeech(xml: Element): AuditoryDescription[] {
  */
 function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
   const tree = SemanticTree.fromNode(semantic);
-  return computeSpeech(tree.xml());
+  return SpeechRuleEngine.getInstance().evaluateNode(tree.xml(), true);
 }
 
 /**

@@ -35,6 +35,8 @@ import { KeyCode } from './event_util.js';
 import { Processor, KeyProcessor } from './processor.js';
 import * as XpathUtil from './xpath_util.js';
 
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+
 const PROCESSORS = new Map();
 
 /**
@@ -394,11 +396,15 @@ set(
 set(
   new Processor('speechStructure', {
     processor: function (expr) {
-      let enr =  Enrich.semanticMathmlSync(expr);
-      // let enr = DomUtil.parseInput(expr);
-      let generator = SpeechGeneratorFactory.generator('Tree');
-      const res = generator.getSpeechStructure(enr, enr);
-      return res;
+      process('speech', expr);
+      const structure = SpeechRuleEngine.getInstance().speechStructure;
+      // let enr =  Enrich.semanticMathmlSync(expr);
+      // // let enr = DomUtil.parseInput(expr);
+      // let generator = SpeechGeneratorFactory.generator('Tree');
+      // const res = generator.getSpeech(enr, enr);
+      // console.log(enr.toString());
+      structure.complete('speech');
+      return structure;
     },
     print: function (descrs) {
       return JSON.stringify(descrs);
