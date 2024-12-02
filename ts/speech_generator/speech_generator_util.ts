@@ -25,6 +25,7 @@ import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
@@ -33,13 +34,12 @@ import * as WalkerUtil from '../walker/walker_util.js';
  * Compute speech string for the xml version of the semantic tree.
  *
  * @param xml The xml element.
+ * @param clear If the speech structure is to be cleared in the engine.
  * @returns A list of auditory descriptions
  *     for the node.
  */
-export function computeSpeech(xml: Element): AuditoryDescription[] {
-  const result = SpeechRuleEngine.getInstance().evaluateNode(xml, true);
-  console.log(SpeechRuleEngine.getInstance().speechMappings);
-  console.log(SpeechRuleEngine.getInstance().speechMappings.keys());
+export function computeSpeech(xml: Element, clear = false): AuditoryDescription[] {
+  const result = SpeechRuleEngine.getInstance().evaluateNode(xml, clear);
   return result;
 }
 
@@ -59,10 +59,11 @@ function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
  * Computes speech markup for the xml version of the semantic tree.
  *
  * @param tree The semantic node as XML.
+ * @param clear If the speech structure is to be cleared in the engine.
  * @returns The speech string.
  */
-export function computeMarkup(tree: Element): string {
-  const descrs = computeSpeech(tree);
+export function computeMarkup(tree: Element, clear = false): string {
+  const descrs = computeSpeech(tree, clear);
   return AuralRendering.markup(descrs);
 }
 
@@ -137,31 +138,18 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
  * @returns The prefix speech string.
  */
 export function retrievePrefix(semantic: SemanticNode): string {
-  const descrs = computePrefix(semantic);
+  const node = computePrefixNode(semantic);
+  const descrs = computePrefix(node);
   return AuralRendering.markup(descrs);
 }
 
 /**
- * Adds a speech prefix if necessary.
+ * Computes prefix speech.
  *
- * @param semantic The semantic tree node.
- * @returns A list of auditory descriptions
- *     for the prefix.
+ * @param xml The xml element.
+ * @returns A list of auditory descriptions for the prefix.
  */
-function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
-  const tree = SemanticTree.fromRoot(semantic);
-  const nodes = XpathUtil.evalXPath(
-    './/*[@id="' + semantic.id + '"]',
-    tree.xml()
-  ) as Element[];
-  let node = nodes[0];
-  if (nodes.length > 1) {
-    // Find the node we actually want. Here the problem is that our semantic
-    // tree is actually a DAG: While elements can appear as children only once,
-    // they can appear in multiple content nodes. XML serialization can
-    // therefore not create unique ids.
-    node = nodeAtPosition(semantic, nodes) || node;
-  }
+export function computePrefix(node: Element): AuditoryDescription[] {
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
         {
@@ -177,6 +165,31 @@ function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
       )
     : [];
 }
+
+/**
+ * Computes the exact XML node from a semantic node for which a prefix is to be
+ * computed.
+ *
+ * @param semantic The semantic tree node.
+ * @returns An XML node corresponding to the tree node.
+ */
+function computePrefixNode(semantic: SemanticNode): Element {
+  const tree = SemanticTree.fromRoot(semantic);
+  const nodes = XpathUtil.evalXPath(
+    './/*[@id="' + semantic.id + '"]',
+    tree.xml()
+  ) as Element[];
+  let node = nodes[0];
+  if (nodes.length > 1) {
+    // Find the node we actually want. Here the problem is that our semantic
+    // tree is actually a DAG: While elements can appear as children only once,
+    // they can appear in multiple content nodes. XML serialization can
+    // therefore not create unique ids.
+    node = nodeAtPosition(semantic, nodes) || node;
+  }
+  return node;
+}
+
 /**
  * Finds the nodes at the same position as the semantic node in a list of XML
  * nodes. We define position via the path to root.
@@ -303,7 +316,7 @@ export function retrieveSummary(
  * @returns A list of auditory descriptions
  *     for the summary.
  */
-function computeSummary(
+export function computeSummary(
   node: Element,
   options: { [key: string]: string } = {}): AuditoryDescription[] {
   const preOption = options.locale ? {locale: options.locale} : {};
@@ -316,4 +329,26 @@ function computeSummary(
         }
       )
     : [];
+}
+
+/**
+ * Adds a speech summary if necessary.
+ *
+ * @param node The XML node.
+ * @returns A list of auditory descriptions
+ *     for the summary.
+ */
+export function computePostfix(node: Element): AuditoryDescription[] {
+  // TODO: Maybe add personality.
+  console.log(3);
+  const postfix = [];
+  if (node.getAttribute('role') === SemanticRole.MGLYPH) {
+    postfix.push(new AuditoryDescription({text: 'image', personality: {}}));
+  }
+  if (node.hasAttribute('href')) {
+    postfix.push(new AuditoryDescription({text: 'link', personality: {}}));
+  }
+  // TODO: This is trickery. Make that cleaner.
+  SpeechRuleEngine.getInstance().speechStructure.addNode(node, postfix, 'postfix');
+  return postfix;
 }

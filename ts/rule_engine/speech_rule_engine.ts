@@ -49,6 +49,7 @@ import { ActionType, SpeechRule } from './speech_rule.js';
 import { SpeechRuleContext } from './speech_rule_context.js';
 
 import { Trie } from '../indexing/trie.js';
+import { SpeechStructure } from './speech_structure.js';
 
 export class SpeechRuleEngine {
   // TODO (TS): Keeping this as a singleton for the time being.
@@ -66,7 +67,7 @@ export class SpeechRuleEngine {
     [key: string]: { [key: string]: (p1: Node) => AuditoryDescription[] };
   } = {};
 
-  public speechMappings: Map<string, AuditoryDescription[]> = new Map();
+  public speechStructure: SpeechStructure = null;
 
   /**
    * @returns The Engine object.
@@ -120,15 +121,6 @@ export class SpeechRuleEngine {
     }
   }
 
-  private addSpeechMapping(node: Element, descr: AuditoryDescription[]) {
-    console.log(`Adding to speech mapping (type: ${node.nodeType}):\n ${node.toString()}\n ${descr}`);
-    if (node.nodeType === DomUtil.NodeType.ELEMENT_NODE && node.hasAttribute('id')) {
-      console.log('Setting: ' + node.getAttribute('id'));
-      this.speechMappings.set(node.getAttribute('id'), descr);
-    }
-  }
-
-
   // Dispatch functionality.
   // The timing function is temporary until the MOSS deliverable is done.
   /**
@@ -139,17 +131,15 @@ export class SpeechRuleEngine {
    * @returns A list of auditory descriptions
    *   for that node.
    */
-  public evaluateNode(node: Element, clear = false): AuditoryDescription[] {
+  public evaluateNode(node: Element, _clear = false): AuditoryDescription[] {
     updateEvaluator(node);
-    console.log('RESETTING!');
-    if (clear) {
-      this.speechMappings.clear(); 
+    if (!this.speechStructure || _clear) {
+    // if (!this.speechStructure) {
+      this.speechStructure = new SpeechStructure(node);
     }
     const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
     try {
-      // console.log('Evaluate Node top level');
-      // console.log(node.toString());
       result = this.evaluateNode_(node);
     } catch (err) {
       console.error('Something went wrong computing speech.');
@@ -323,11 +313,8 @@ export class SpeechRuleEngine {
    * @returns A list of auditory descriptions for that node.
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
-    // console.log('Evaluate Tree wrapper level');
-    // console.log(node.toString());
     let result = this.evaluateTreeInternal_(node);
-    // console.log('Evaluate Tree wrapper level: ' + result);
-    this.addSpeechMapping(node, result);
+    this.speechStructure.addNode(node, result, Engine.getInstance().modality);
     return result;
   }
 

@@ -35,28 +35,32 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as DomUtil from '../common/dom_util.js';
 import { markup } from '../audio/aural_rendering.js';
-// import { EngineConst } from '../common/engine_const.js';
+import { Engine } from '../common/engine.js';
+import { setup } from '../common/engine_setup.js';
 // import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 
-// type SpeechMap = Map<string, AuditoryDescription[]>;
-type SpeechMap = Map<string, string>;
+type SpeechMap = Map<string, AuditoryDescription[]>;
+// type SpeechMap = Map<string, string>;
 
 export class SpeechStructure {
 
   public speechMaps: Map<string, SpeechMap> = new Map();
 
-  private getSpeechMap(modality: string): SpeechMap {
-    let map = this.speechMaps.get(modality);
+  private getSpeechMap(id: string): SpeechMap {
+    let map = this.speechMaps.get(id);
     if (!map) {
       map = new Map();
-      this.speechMaps.set(modality, map);
+      this.speechMaps.set(id, map);
     }
     return map;
   }
 
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
-    let map = this.getSpeechMap(modality);
-    map.set(id, markup(descr));
+    // console.log(10);
+    // console.log(markup(descr));
+    let map = this.getSpeechMap(id);
+    // map.set(id, markup(descr));
+    map.set(modality, descr);
   }
   
   private nodeMap: Map<string, Element> = null;
@@ -75,30 +79,63 @@ export class SpeechStructure {
     return this.speechMaps.get(id);
   }
 
-  private completeNodeMap() {
-    if (this.nodeMap) return;
+  private getNodeMap() {
+    if (this.nodeMap) {
+      return this.nodeMap;
+    }
     this.nodeMap = new Map();
     for (const node of DomUtil.querySelectorAllByAttr(this.node, 'id')) {
-      this.nodeMap.set(node.getAttribute('id'), node);
+      const id = node.getAttribute('id');
+      if (!this.nodeMap.has(id)) {
+        this.nodeMap.set(node.getAttribute('id'), node);
+        continue;
+      }
+      // Here we are taking care of the case that we have multiple occurrences
+      // of the same node, e.g., as content node. If it is a child node it will
+      // be overwritten.
+      const tag = (node.parentNode as Element).tagName;
+      if ( tag === 'children' || tag === 'stree') {
+        this.nodeMap.set(id, node);
+      }
     }
+    return this.nodeMap;
   }
 
-  public complete(modality: string, _func: any) {
-    this.completeNodeMap();
-    const map = this.getSpeechMap(modality);
-    console.log(map);
-    for (const [x, y] of this.nodeMap) {
-      console.log(`${x}: ${y.toString()}`);
+  public completeModality(modality: string, func: any) {
+    const oldModality = Engine.getInstance().modality;
+    setup({modality: modality});
+    for (const [id, descrs] of this.getNodeMap()) {
+      console.log(id);
+      console.log(descrs.toString());
+      const speechMap = this.getSpeechMap(id);
+      if (!speechMap.has(modality)) {
+        console.log(`Completing ${id} for ${modality}`);
+        func(descrs);
+        // speechMap.set(modality, func(descrs));
+      }
     };
-    for (const [modality, map] of this.speechMaps) {
-      console.log('HHHHHHHHHHHHHHHHHHHHHH');
-      console.log(modality);
-      console.log(map);
-    }
+    setup({modality: oldModality});
   }
 
-  public json() {
-    
+  // public complete(_func: any) {
+  //   this.completeNodeMap();
+  //   // this.completeModality('speech', func);
+  //   // this.completeModality('prefix', func);
+  // }
+
+  public json(mls = ['none']) {
+    const result: {[id: string]: {[modality: string]: string}} = {};
+    const oldMl = Engine.getInstance().markup;
+    for (const [id, map] of this.speechMaps) {
+      const modality: {[modality: string]: string} = {};
+      for (const ml of mls) {
+        setup({markup: ml});
+        map.forEach((x, y) => modality[`${y}-${ml}`] = markup(x));
+        result[id] = modality;
+      }
+    }
+    setup({markup: oldMl});
+    return result;
   }
 
 }

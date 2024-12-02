@@ -35,6 +35,8 @@ import { KeyCode } from './event_util.js';
 import { Processor, KeyProcessor } from './processor.js';
 import * as XpathUtil from './xpath_util.js';
 
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+
 const PROCESSORS = new Map();
 
 /**
@@ -141,7 +143,7 @@ set(
       // This avoids temporary attributes (e.g., for grammar) to bleed into
       // the tree.
       const clone = DomUtil.cloneNode(xml);
-      let speech = SpeechGeneratorUtil.computeMarkup(clone);
+      let speech = SpeechGeneratorUtil.computeMarkup(clone, true);
       if (setting === EngineConst.Speech.SHALLOW) {
         xml.setAttribute('speech', AuralRendering.finalize(speech));
         return xml;
@@ -170,7 +172,7 @@ set(
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
       const xml = Semantic.xmlTree(mml);
-      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return AuralRendering.finalize(AuralRendering.markup(descrs));
     },
     pprint: function (speech) {
@@ -230,7 +232,7 @@ set(
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
       const xml = Semantic.xmlTree(mml);
-      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return descrs;
     },
     print: function (descrs) {
@@ -390,15 +392,19 @@ set(
   })
 );
 
-//  testing the new speech structure.
+// testing the new speech structure.
+// Very much geared towards the webworker integration.
 set(
   new Processor('speechStructure', {
     processor: function (expr) {
-      let enr =  Enrich.semanticMathmlSync(expr);
-      // let enr = DomUtil.parseInput(expr);
-      let generator = SpeechGeneratorFactory.generator('Tree');
-      const res = generator.getSpeechStructure(enr, enr);
-      return res;
+      Engine.getInstance().automark = true;
+      process('speech', expr);
+      const structure = SpeechRuleEngine.getInstance().speechStructure;
+      structure.completeModality('speech', SpeechGeneratorUtil.computeSpeech);
+      structure.completeModality('prefix', SpeechGeneratorUtil.computePrefix);
+      structure.completeModality('postfix', SpeechGeneratorUtil.computePostfix);
+      structure.completeModality('summary', SpeechGeneratorUtil.computeSummary);
+      return structure.json(['none', 'ssml']);
     },
     print: function (descrs) {
       return JSON.stringify(descrs);
