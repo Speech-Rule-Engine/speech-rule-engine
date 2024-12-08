@@ -105,13 +105,9 @@ export class SpeechStructure {
     const oldModality = Engine.getInstance().modality;
     setup({modality: modality});
     for (const [id, descrs] of this.getNodeMap()) {
-      console.log(id);
-      console.log(descrs.toString());
       const speechMap = this.getSpeechMap(id);
       if (!speechMap.has(modality)) {
-        console.log(`Completing ${id} for ${modality}`);
         func(descrs);
-        // speechMap.set(modality, func(descrs));
       }
     };
     setup({modality: oldModality});

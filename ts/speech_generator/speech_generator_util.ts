@@ -340,7 +340,6 @@ export function computeSummary(
  */
 export function computePostfix(node: Element): AuditoryDescription[] {
   // TODO: Maybe add personality.
-  console.log(3);
   const postfix = [];
   if (node.getAttribute('role') === SemanticRole.MGLYPH) {
     postfix.push(new AuditoryDescription({text: 'image', personality: {}}));

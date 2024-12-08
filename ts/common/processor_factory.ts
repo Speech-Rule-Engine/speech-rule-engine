@@ -398,7 +398,13 @@ set(
   new Processor('speechStructure', {
     processor: function (expr) {
       Engine.getInstance().automark = true;
-      process('speech', expr);
+      // Direct from MathML
+      // process('speech', expr);
+
+      // Indirect from rebuilt semantic tree
+      let rebuilt = new RebuildStree(DomUtil.parseInput(expr));
+      SpeechGeneratorUtil.computeSpeech(rebuilt.stree.xml(), true);
+
       const structure = SpeechRuleEngine.getInstance().speechStructure;
       structure.completeModality('speech', SpeechGeneratorUtil.computeSpeech);
       structure.completeModality('prefix', SpeechGeneratorUtil.computePrefix);
