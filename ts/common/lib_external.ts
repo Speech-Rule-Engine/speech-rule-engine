@@ -22,22 +22,20 @@
 
 import * as Xmldom from '@xmldom/xmldom';
 import * as wgx from 'wicked-good-xpath';
-import { SystemExternal } from './system_external.js';
-import { xpath } from './xpath_util.js';
 
-if (!SystemExternal.documentSupported) {
-  // Setting the DOM library. 
-  SystemExternal.xmldom = Xmldom;
-  SystemExternal.document = new SystemExternal.xmldom.DOMImplementation().createDocument('', '');
+export const xmldom = Xmldom;
+export const document = new xmldom.DOMImplementation().createDocument('', '');
 
-  // Setting Xpath library and properties.
-  const Xpath: any = (function () {
-    const window = { document: {}, XPathResult: {} };
-    wgx.install(window);
-    (window.document as any).XPathResult = window.XPathResult;
-    return window.document;
-  })();
-  xpath.evaluate = Xpath.evaluate;
-  xpath.result = Xpath.XPathResult;
-  xpath.createNSResolver = Xpath.createNSResolver;
+// Setting Xpath library and properties.
+const Xpath: any = (function () {
+  const window = { document: {}, XPathResult: {} };
+  wgx.install(window);
+  (window.document as any).XPathResult = window.XPathResult;
+  return window.document;
+})();
+export const xpath = {
+  currentDocument: document,
+  evaluate: Xpath.evaluate,
+  result: Xpath.XPathResult,
+  createNSResolver: Xpath.createNSResolver,
 }

@@ -56,10 +56,7 @@ export class SpeechStructure {
   }
 
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
-    // console.log(10);
-    // console.log(markup(descr));
     let map = this.getSpeechMap(id);
-    // map.set(id, markup(descr));
     map.set(modality, descr);
   }
   

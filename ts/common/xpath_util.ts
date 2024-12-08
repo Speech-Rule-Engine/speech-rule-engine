@@ -27,15 +27,6 @@ import * as EngineConst from '../common/engine_const.js';
 import { SystemExternal } from './system_external.js';
 
 /**
- * Returns whether or not xpath is supported.
- *
- * @returns True if xpath is supported.
- */
-function xpathSupported(): boolean {
-  return typeof XPathResult === 'undefined' ? false : true;
-}
-
-/**
  * Holds variables that might need to be adjusted during document evaluation.
  *
  * currentDocument:  Current XML Document inside a browser.
@@ -57,16 +48,7 @@ export const xpath: {
   ) => XPathResult;
   result: any;
   createNSResolver: (nodeResolver: Node) => XPathNSResolver;
-} = {
-  currentDocument: null,
-  evaluate: xpathSupported()
-    ? document.evaluate
-    : SystemExternal.xpath?.evaluate,
-  result: xpathSupported() ? XPathResult : SystemExternal.xpath?.XPathResult,
-  createNSResolver: xpathSupported()
-    ? document.createNSResolver
-    : SystemExternal.xpath?.createNSResolver
-};
+} = SystemExternal.xpath;
 
 /**
  * Mapping for some default namespaces.
@@ -111,18 +93,7 @@ function evaluateXpath(
   rootNode: Node,
   type: number
 ): XPathResult {
-  return !SystemExternal.webworker &&
-    Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-    !Engine.getInstance().isIE &&
-    !Engine.getInstance().isEdge
-    ? xpath.currentDocument.evaluate(
-        expression,
-        rootNode,
-        resolveNameSpace,
-        type,
-        null
-      )
-    : xpath.evaluate(expression, rootNode, new Resolver(), type, null);
+  return xpath.evaluate(expression, rootNode, new Resolver(), type, null);
 }
 
 /**

@@ -22,6 +22,7 @@
  */
 
 import { Variables } from './variables.js';
+import { xpath, xmldom, document } from './lib_external.js';
 
 declare let global: any;
 declare let require: (name: string) => any;
@@ -34,7 +35,6 @@ const documentSupported = (() =>
 const webworker = (() =>
   !(typeof DedicatedWorkerGlobalScope === 'undefined'))();
 const nodeRequire = () => eval('require');
-
 
 export const SystemExternal: any = {
 
@@ -71,12 +71,12 @@ export const SystemExternal: any = {
   /**
    * Xmldom library.
    */
-  xmldom: documentSupported ? window : null,
+  xmldom: xmldom,
 
   /**
    * DOM document implementation.
    */
-  document: documentSupported ? window.document : null,
+  document: document,
 
 
   /**
@@ -133,4 +133,7 @@ export const SystemExternal: any = {
    * WGXpath library.
    */
   wgxpath: null as any,
+
+  xpath: xpath,
+
 };

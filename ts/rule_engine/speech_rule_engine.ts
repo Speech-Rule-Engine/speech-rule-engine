@@ -327,9 +327,9 @@ export class SpeechRuleEngine {
   private evaluateTreeInternal_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
     let result: AuditoryDescription[];
-    Debugger.getInstance().output(
-      engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
-    );
+    // Debugger.getInstance().output(
+    //   engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
+    // );
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
@@ -342,14 +342,14 @@ export class SpeechRuleEngine {
       }
       return result;
     }
-    Debugger.getInstance().generateOutput(() => [
-      'Apply Rule:',
-      rule.name,
-      rule.dynamicCstr.toString(),
-      engine.mode === EngineConst.Mode.HTTP ?
-        DomUtil.serializeXml(node) :
-        node.toString()
-    ]);
+    // Debugger.getInstance().generateOutput(() => [
+    //   'Apply Rule:',
+    //   rule.name,
+    //   rule.dynamicCstr.toString(),
+    //   engine.mode === EngineConst.Mode.HTTP ?
+    //     DomUtil.serializeXml(node) :
+    //     node.toString()
+    // ]);
     Grammar.getInstance().processSingles();
     const context = rule.context;
     const components = rule.action.components;
@@ -801,11 +801,11 @@ export class SpeechRuleEngine {
         r2.precondition.rank - r1.precondition.rank
       );
     });
-    Debugger.getInstance().generateOutput(
-      (() => {
-        return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
-      }).bind(this)
-    );
+    // Debugger.getInstance().generateOutput(
+    //   (() => {
+    //     return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
+    //   }).bind(this)
+    // );
     return rules[0];
   }
 }

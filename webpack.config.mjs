@@ -98,4 +98,16 @@ let emlConfig = Object.assign({}, config, {
   }
 });
 
-export default [sreConfig];
+let extLibs = Object.assign({}, config, {
+  entry: path.resolve(__dirname, 'js/common/lib_external.js'),
+  target: 'web',
+  output: {
+    filename: 'sreLibs.js',
+    library: 'SEM',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    path: path.join(__dirname, 'lib'),
+  }
+});
+
+export default [extLibs];
