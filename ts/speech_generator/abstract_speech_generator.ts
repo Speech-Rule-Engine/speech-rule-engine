@@ -199,10 +199,4 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     ) : '';
   }
 
-  /**
-   * @override
-   */
-  public getSpeechStructure(_node: Element, _xml: Element, _root: Element = null) {
-    return {};
-  }
 }
