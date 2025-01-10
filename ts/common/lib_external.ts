@@ -21,17 +21,19 @@
  */
 
 import * as Xmldom from '@xmldom/xmldom';
-import * as wgx from 'wicked-good-xpath';
+import wgx from 'wicked-good-xpath';
 
 export const xmldom = Xmldom;
 export const document = new xmldom.DOMImplementation().createDocument('', '');
 
+const install = wgx?.install || (window as any).wgxpath.install;
 // Setting Xpath library and properties.
 const Xpath: any = (function () {
-  const window = { document: {}, XPathResult: {} };
-  wgx.install(window);
-  (window.document as any).XPathResult = window.XPathResult;
-  return window.document;
+  const win = { document: {}, XPathResult: {} };
+  install(win);
+  // wgx.install(win);
+  (win.document as any).XPathResult = win.XPathResult;
+  return win.document;
 })();
 export const xpath = {
   currentDocument: document,
