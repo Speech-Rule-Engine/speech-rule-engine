@@ -621,7 +621,7 @@ export class SpeechRuleEngine {
     if (descr.attributes['id'] === undefined) {
       descr.attributes['id'] = node.getAttribute('id');
     }
-    if (node.hasAttributes()) {
+    if (node.attributes?.length) {
       const attrs = node.attributes;
       for (let i = attrs.length - 1; i >= 0; i--) {
         const key = attrs[i].name;

@@ -91,7 +91,7 @@ let emlConfig = Object.assign({}, config, {
   target: 'web',
   output: {
     filename: 'enrich.js',
-    library: 'SEM',
+    library: 'ENR',
     libraryTarget: 'umd',
     globalObject: 'this',
     path: path.join(__dirname, 'lib'),
@@ -102,12 +102,12 @@ let extLibs = Object.assign({}, config, {
   entry: path.resolve(__dirname, 'js/common/lib_external.js'),
   target: 'web',
   output: {
+    library: 'LIBS',
     filename: 'sreLibs.js',
-    library: 'SEM',
     libraryTarget: 'umd',
-    globalObject: 'this',
+    globalObject: 'window',
     path: path.join(__dirname, 'lib'),
   }
 });
 
-export default [extLibs];
+export default [sreConfig, extLibs];
