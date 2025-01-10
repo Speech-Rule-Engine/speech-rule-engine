@@ -36,11 +36,9 @@ import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as DomUtil from '../common/dom_util.js';
 import { markup } from '../audio/aural_rendering.js';
 import { Engine } from '../common/engine.js';
-import { setup } from '../common/engine_setup.js';
-// import { SemanticTree } from '../semantic_tree/semantic_tree.js';
+import { Markup } from '../common/engine_const.js';
 
 type SpeechMap = Map<string, AuditoryDescription[]>;
-// type SpeechMap = Map<string, string>;
 
 export class SpeechStructure {
 
@@ -100,34 +98,28 @@ export class SpeechStructure {
 
   public completeModality(modality: string, func: any) {
     const oldModality = Engine.getInstance().modality;
-    setup({modality: modality});
+    Engine.getInstance().modality = modality;
     for (const [id, descrs] of this.getNodeMap()) {
       const speechMap = this.getSpeechMap(id);
       if (!speechMap.has(modality)) {
         func(descrs);
       }
     };
-    setup({modality: oldModality});
+    Engine.getInstance().modality = oldModality;
   }
-
-  // public complete(_func: any) {
-  //   this.completeNodeMap();
-  //   // this.completeModality('speech', func);
-  //   // this.completeModality('prefix', func);
-  // }
 
   public json(mls = ['none']) {
     const result: {[id: string]: {[modality: string]: string}} = {};
-    const oldMl = Engine.getInstance().markup;
+    const oldMarkup = Engine.getInstance().markup;
     for (const [id, map] of this.speechMaps) {
       const modality: {[modality: string]: string} = {};
       for (const ml of mls) {
-        setup({markup: ml});
+        Engine.getInstance().markup = ml as Markup;
         map.forEach((x, y) => modality[`${y}-${ml}`] = markup(x));
         result[id] = modality;
       }
     }
-    setup({markup: oldMl});
+    Engine.getInstance().markup = oldMarkup;
     return result;
   }
 

@@ -134,7 +134,6 @@ export class SpeechRuleEngine {
   public evaluateNode(node: Element, _clear = false): AuditoryDescription[] {
     updateEvaluator(node);
     if (!this.speechStructure || _clear) {
-    // if (!this.speechStructure) {
       this.speechStructure = new SpeechStructure(node);
     }
     const timeIn = new Date().getTime();
