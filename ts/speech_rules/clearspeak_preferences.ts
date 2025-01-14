@@ -140,7 +140,15 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (!roles) {
       return 'ImpliedTimes';
     }
-    return roles[node.role] || roles[''] || 'ImpliedTimes';
+    const cons = roles[node.role] || roles[''];
+    if (!cons) {
+      return 'ImpliedTimes';
+    }
+    if (typeof cons === 'string') {
+      return cons;
+    } else {
+      return testSpecial(cons, node) || 'ImpliedTimes';
+    }
   }
 
   /**
@@ -455,58 +463,120 @@ class Parser extends DynamicCstrParser {
  */
 // TODO (TS): Replace with a Map to partial meaning elements.
 const REVERSE_MAPPING: string[][] = [
-  [
-    'AbsoluteValue',
-    SemanticType.FENCED,
-    SemanticRole.NEUTRAL,
-    SemanticRole.METRIC
-  ],
-  ['Bar', SemanticType.OVERSCORE, SemanticRole.OVERACCENT], // more
-  ['Caps', SemanticType.IDENTIFIER, SemanticRole.LATINLETTER], // more
+  ['AbsoluteValue', SemanticType.FENCED, SemanticRole.NEUTRAL],
+  ['AbsoluteValue', SemanticType.FENCED, SemanticRole.METRIC],
+  ['Bar', SemanticType.OVERSCORE, ''], // more
+  ['Caps', SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, 'category:Lu'], // more
   ['CombinationPermutation', SemanticType.APPL, SemanticRole.UNKNOWN], // more
+  ['Currency', SemanticType.IDENTIFIER, SemanticRole.UNIT, 'unit:currency'],
+  ['Currency', SemanticType.INFIXOP, SemanticRole.UNIT, 'unit:currency'],
+  ['Enclosed', SemanticType.ENCLOSE, ''],
   ['Ellipses', SemanticType.PUNCTUATION, SemanticRole.ELLIPSIS],
   ['Exponent', SemanticType.SUPERSCRIPT, ''],
   ['Fraction', SemanticType.FRACTION, ''],
   ['Functions', SemanticType.APPL, SemanticRole.SIMPLEFUNC],
   ['ImpliedTimes', SemanticType.OPERATOR, SemanticRole.IMPLICIT],
-  ['Log', SemanticType.APPL, SemanticRole.PREFIXFUNC], // specific
+  ['Log', SemanticType.APPL, SemanticRole.PREFIXFUNC, 'appl:Logarithm'], // specific
+  ['Log', SemanticType.FUNCTION, SemanticRole.PREFIXFUNC, 'category:Logarithm'], // specific
   ['Matrix', SemanticType.MATRIX, ''], // multiple
   ['Matrix', SemanticType.VECTOR, ''], // multiple
   ['MultiLineLabel', SemanticType.MULTILINE, SemanticRole.LABEL], // more, multiple (table)
-  ['MultiLineOverview', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
   ['MultiLinePausesBetweenColumns', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.MULTILINE, ''], // more, multiple (table)
   ['MultiLineLabel', SemanticType.TABLE, SemanticRole.LABEL], // more, multiple (table)
-  ['MultiLineOverview', SemanticType.TABLE, SemanticRole.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', SemanticType.TABLE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', SemanticType.TABLE, ''], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.TABLE, ''], // more, multiple (table)
   ['MultiLineLabel', SemanticType.CASES, SemanticRole.LABEL], // more, multiple (table)
-  ['MultiLineOverview', SemanticType.CASES, SemanticRole.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', SemanticType.CASES, SemanticRole.TABLE], // more, multiple (table)
-  ['MultsymbolDot', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION], // multiple?
-  ['MultsymbolX', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION], // multiple?
+  ['MultiLinePausesBetweenColumns', SemanticType.CASES, ''], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.CASES, ''], // more, multiple (table)
+  ['MultsymbolDot', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION, 'content:22C5'], // multiple?
+  ['MultsymbolX', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION, 'content:00D7'], // multiple?
   ['Paren', SemanticType.FENCED, SemanticRole.LEFTRIGHT],
-  ['Prime', SemanticType.SUPERSCRIPT, SemanticRole.PRIME],
+  ['Prime', SemanticType.PUNCTUATION, SemanticRole.PRIME],
   ['Roots', SemanticType.ROOT, ''], // multiple (sqrt)
   ['Roots', SemanticType.SQRT, ''], // multiple (sqrt)
-  ['SetMemberSymbol', SemanticType.RELATION, SemanticRole.ELEMENT],
+  ['SetMemberSymbol', SemanticType.OPERATOR, SemanticRole.ELEMENT],
   ['Sets', SemanticType.FENCED, SemanticRole.SETEXT], // multiple
-  ['TriangleSymbol', SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER], // ????
-  ['Trig', SemanticType.APPL, SemanticRole.PREFIXFUNC], // specific
-  ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR]
+  ['TriangleSymbol', SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER, 'content:0394'], // ????
+  ['Trig', SemanticType.APPL, SemanticRole.PREFIXFUNC, 'appl:Trigonometric'], // specific
+  ['Trig', SemanticType.FUNCTION, SemanticRole.PREFIXFUNC, 'category:Trigonometric'], // specific
+  ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR],
+  ['VerticalLine', SemanticType.PUNCTUATION, SemanticRole.VBAR]
 ];
 
-const SEMANTIC_MAPPING_: { [key: string]: AxisMap } = (function () {
-  const result: { [key: string]: AxisMap } = {};
+const SEMANTIC_MAPPING_: { [key: string]: { [key: string] : string | {[key: string]: string}}} = (function () {
+  const result: { [key: string]: { [key: string] : string | {[key: string]: string}}} = {};
   for (let i = 0, triple; (triple = REVERSE_MAPPING[i]); i++) {
     const pref = triple[0];
+    const special = triple[3];
     let role = result[triple[1]];
     if (!role) {
       role = {};
       result[triple[1]] = role;
     }
-    role[triple[2]] = pref;
+    if (!special) {
+      role[triple[2]] = pref;
+      continue;
+    }
+    let specialize = role[triple[2]] as {[key: string]: string};
+    if (!specialize) {
+      specialize = {};
+      role[triple[2]] = specialize;
+    }
+    specialize[special] = pref;
   }
   return result;
 })();
+
+/**
+ * Test mappings of special predicates on the semantic node.
+ *
+ * @param special Special predicate mapping.
+ * @param node The semantic node to test.
+ */
+function testSpecial(special: {[key: string]: string}, node: SemanticNode): string {
+  for (const [pred, res] of Object.entries(special)) {
+    if (executeSpecial(pred, node)) {
+      return res;
+    }
+  }
+  return '';
+}
+
+/**
+ * Executes a special predicate on the semantic node.
+ *
+ * @param special Special predicate specification of the form "PRED:ARG".
+ * @param node The semantic node to test.
+ */
+function executeSpecial(special: string, node: SemanticNode) {
+  const [pred, arg] = special.split(':');
+  if (!pred) {
+    return false;
+  }
+  const func = specialPred[pred];
+  if (!func) {
+    return false;
+  }
+  return func(node, arg);
+}
+
+const specialPred: {[key: string]: (node: SemanticNode, arg: string) => boolean} = {
+  category: (node: SemanticNode, arg: string) => {
+    return MathCompoundStore.lookupCategory(node.textContent) === arg;
+  },
+  content: (node: SemanticNode, arg: string) => {
+    return node.textContent === String.fromCodePoint(parseInt(arg, 16));
+  },
+  appl: (node: SemanticNode, arg: string) => {
+    const func = node.childNodes[0];
+    return func ? MathCompoundStore.lookupCategory(func.textContent) === arg : false;
+  },
+  unit: (node: SemanticNode, arg: string) => {
+    return MathCompoundStore.lookupCategory(node.textContent + ':unit') === arg;
+  }
+}
+
 
 /**
  * Add new comparator and parser.
