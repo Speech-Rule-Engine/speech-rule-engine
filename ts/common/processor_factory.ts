@@ -402,15 +402,21 @@ set(
       // process('speech', expr);
 
       // Indirect from rebuilt semantic tree
-      let rebuilt = new RebuildStree(DomUtil.parseInput(expr));
-      SpeechGeneratorUtil.computeSpeech(rebuilt.stree.xml(), true);
-
+      let mml = DomUtil.parseInput(expr);
+      let rebuilt = new RebuildStree(mml);
+      let sxml = rebuilt.stree.xml();
+      let mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+      SpeechGeneratorUtil.computeSpeech(sxml, true);
       const structure = SpeechRuleEngine.getInstance().speechStructure;
       structure.completeModality('speech', SpeechGeneratorUtil.computeSpeech);
       structure.completeModality('prefix', SpeechGeneratorUtil.computePrefix);
       structure.completeModality('postfix', SpeechGeneratorUtil.computePostfix);
       structure.completeModality('summary', SpeechGeneratorUtil.computeSummary);
-      return structure.json(['none', 'ssml']);
+      const json = structure.json(['none', 'ssml']);
+      if (mactions) {
+        json['mactions'] = mactions;
+      }
+      return json;
     },
     print: function (descrs) {
       return JSON.stringify(descrs);
@@ -420,6 +426,15 @@ set(
     }
   })
 );
+
+set(
+  new Processor<RebuildStree>('rebuildStree', {
+    processor: function (expr) {
+      return new RebuildStree(DomUtil.parseInput(expr));
+    }
+  })
+)
+
 
 // ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
 // echo "<math><mi>a</mi><mi>b</mi></math>" | ./bin/sre -T -P -d clearspeak

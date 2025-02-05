@@ -29,6 +29,8 @@ import * as ProcessorFactory from './processor_factory.js';
 import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 import { standardLoader } from '../speech_rules/math_map.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
 
 /**
  * Version number.
@@ -109,6 +111,19 @@ export function toSpeech(expr: string): string {
 }
 
 export function toSpeechStructure(expr: string): string {
+  return processString('speechStructure', expr);
+}
+
+export function nextDomain(options: { [key: string]: string }): string {
+  setupEngine(SpeechGeneratorUtil.nextRules(options));
+  return options.domain;
+}
+
+export function nextStyle(expr: string, id: string): string {
+  const rebuilt = ProcessorFactory.process('rebuildStree', expr) as RebuildStree;
+  const options = engineSetup() as {[key: string]: string};
+  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  setupEngine({style: style});
   return processString('speechStructure', expr);
 }
 
