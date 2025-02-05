@@ -109,7 +109,8 @@ export class SpeechStructure {
   }
 
   public json(mls = ['none']) {
-    const result: {[id: string]: {[modality: string]: string}} = {};
+    const result: {
+      [id: string]: {[modality: string]: string}} = { };
     const oldMarkup = Engine.getInstance().markup;
     for (const [id, map] of this.speechMaps) {
       const modality: {[modality: string]: string} = {};

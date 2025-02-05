@@ -29,6 +29,9 @@ import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+// import { RebuildStree } from '../walker/rebuild_stree.js';
 
 /**
  * Compute speech string for the xml version of the semantic tree.
@@ -281,6 +284,34 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
 }
 
 /**
+ * Connects maction nodes as alternatives if they are collapsed in the actual
+ * node.
+ *
+ * @param mml The mathml element for the node.
+ * @param stree The XML for the semantic tree.
+ */
+export function connectMactionSelections(mml: Element, stree: Element) {
+  const mactions = DomUtil.querySelectorAll(mml, 'maction');
+  const results: {[key: string]: string} = {};
+  for (let i = 0, maction; (maction = mactions[i]); i++) {
+    // Get the span with the maction id in node.
+    const selection = parseInt(maction.getAttribute('selection'));
+    const children = Array.from(maction.childNodes);
+    const semantic = children.filter(child =>
+      (child as Element).hasAttribute('data-semantic-id'))[0] as Element;
+    const selected = children[selection - 1];
+    if (!semantic || semantic === selected) {
+      continue;
+    }
+    const mid = semantic.getAttribute(Attribute.ID);
+    const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    cst.setAttribute('alternative', mid);
+    results[maction.getAttribute('id')] = mid;
+  }
+  return results;
+}
+
+/**
  * Connects all maction nodes as alternatives.
  *
  * @param mml The mathml element.
@@ -350,4 +381,66 @@ export function computePostfix(node: Element): AuditoryDescription[] {
   // TODO: This is trickery. Make that cleaner.
   SpeechRuleEngine.getInstance().speechStructure.addNode(node, postfix, 'postfix');
   return postfix;
+}
+
+export function nextRules(options: { [key: string]: string }): { [key: string]: string } {
+  // Rule cycling only makes sense for speech modality.
+  if (options.modality !== 'speech') {
+    return options;
+  }
+  const prefs = ClearspeakPreferences.getLocalePreferences();
+  if (!prefs[options.locale]) {
+    return options;
+  }
+  EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
+  options.domain =
+    options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
+  options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+  return options;
+}
+
+  /**
+   * Cycles to next style or preference of the speech rule set if possible.
+   *
+   * @param node The semantic node currently in focus.
+   * @returns The new style name.
+   */
+export function nextStyle(node: SemanticNode, options: {[key: string]: string}) {
+  const {modality: modality, domain: domain, style: style} = options;
+  // Rule cycling only makes sense for speech modality.
+  if (modality !== 'speech') {
+    return style;
+  }
+
+  if (domain === 'mathspeak') {
+    const styles = ['default', 'brief', 'sbrief'];
+    const index = styles.indexOf(style);
+    if (index === -1) {
+      return style;
+    }
+    return index >= styles.length - 1 ? styles[0] : styles[index + 1];
+  }
+  if (domain === 'clearspeak') {
+    const prefs = ClearspeakPreferences.getLocalePreferences();
+    const loc = prefs['en'];
+    // TODO: use correct locale.
+    if (!loc) {
+      return 'default';
+    }
+    // TODO: return the previous one?
+    const smart = ClearspeakPreferences.relevantPreferences(node);
+    const current = ClearspeakPreferences.findPreference(style, smart);
+    const options = loc[smart].map(function (x) {
+      return x.split('_')[1];
+    });
+    const index = options.indexOf(current);
+    if (index === -1) {
+      return style;
+    }
+    const next =
+      index >= options.length - 1 ? options[0] : options[index + 1];
+    const result = ClearspeakPreferences.addPreference(style, smart, next);
+    return result;
+  }
+  return style;
 }
