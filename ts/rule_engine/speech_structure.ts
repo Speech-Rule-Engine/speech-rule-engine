@@ -96,6 +96,12 @@ export class SpeechStructure {
     return this.nodeMap;
   }
 
+  /**
+   * Completes a speech modality.
+   *
+   * @param {string} modality The modality to complete.
+   * @param {any} func The function to use for completion.
+   */
   public completeModality(modality: string, func: any) {
     const oldModality = Engine.getInstance().modality;
     Engine.getInstance().modality = modality;
@@ -108,7 +114,12 @@ export class SpeechStructure {
     Engine.getInstance().modality = oldModality;
   }
 
-  public json(mls = ['none']) {
+  /**
+   * Computes json speech structure for a list of given markups.
+   *
+   * @param {string[]} mls Optional markup strings. Defaults to none.
+   */
+  public json(mls: string[] = ['none']) {
     const result: {
       [id: string]: {[modality: string]: string}} = { };
     const oldMarkup = Engine.getInstance().markup;

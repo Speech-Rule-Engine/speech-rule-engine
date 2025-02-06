@@ -35,8 +35,6 @@ import { KeyCode } from './event_util.js';
 import { Processor, KeyProcessor } from './processor.js';
 import * as XpathUtil from './xpath_util.js';
 
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
-
 const PROCESSORS = new Map();
 
 /**
@@ -392,31 +390,26 @@ set(
   })
 );
 
-// testing the new speech structure.
-// Very much geared towards the webworker integration.
+set(
+  new Processor<RebuildStree>('rebuildStree', {
+    processor: function (expr) {
+      return new RebuildStree(DomUtil.parseInput(expr));
+    }
+  })
+)
+
+// The new speech structure for the webworker integration.
 set(
   new Processor('speechStructure', {
     processor: function (expr) {
-      Engine.getInstance().automark = true;
       // Direct from MathML
       // process('speech', expr);
-
       // Indirect from rebuilt semantic tree
       let mml = DomUtil.parseInput(expr);
       let rebuilt = new RebuildStree(mml);
       let sxml = rebuilt.stree.xml();
-      let mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
-      SpeechGeneratorUtil.computeSpeech(sxml, true);
-      const structure = SpeechRuleEngine.getInstance().speechStructure;
-      structure.completeModality('speech', SpeechGeneratorUtil.computeSpeech);
-      structure.completeModality('prefix', SpeechGeneratorUtil.computePrefix);
-      structure.completeModality('postfix', SpeechGeneratorUtil.computePostfix);
-      structure.completeModality('summary', SpeechGeneratorUtil.computeSummary);
-      const json = structure.json(['none', 'ssml']);
-      if (mactions) {
-        json['mactions'] = mactions;
-      }
-      return json;
+      SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+      return SpeechGeneratorUtil.computeSpeechStructure(sxml);
     },
     print: function (descrs) {
       return JSON.stringify(descrs);
@@ -426,14 +419,6 @@ set(
     }
   })
 );
-
-set(
-  new Processor<RebuildStree>('rebuildStree', {
-    processor: function (expr) {
-      return new RebuildStree(DomUtil.parseInput(expr));
-    }
-  })
-)
 
 
 // ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml

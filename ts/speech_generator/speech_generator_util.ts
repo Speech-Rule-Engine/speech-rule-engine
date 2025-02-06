@@ -25,6 +25,7 @@ import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { SpeechStructure } from '../rule_engine/speech_structure.js';
 import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
@@ -32,6 +33,9 @@ import * as WalkerUtil from '../walker/walker_util.js';
 import * as EngineConst from '../common/engine_const.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 // import { RebuildStree } from '../walker/rebuild_stree.js';
+
+type OptionsList = { [key: string]: string };
+
 
 /**
  * Compute speech string for the xml version of the semantic tree.
@@ -283,22 +287,40 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
   }
 }
 
+
+enum NeededAttributes {
+  ID = 'data-semantic-id',
+  PARENT = 'data-semantic-parent',
+  LEVEL = 'aria-level',
+  POS = 'aria-posinset',
+  ROLE = 'role',
+}
+
+function getNeededAttributes(stree: Element) {
+  const result: {[K in NeededAttributes]?: string} = {}
+  for (let [,attr] of Object.entries(NeededAttributes)) {
+    result[attr] = stree.getAttribute(attr);
+  }
+  return result;
+}
+
 /**
  * Connects maction nodes as alternatives if they are collapsed in the actual
  * node.
  *
  * @param mml The mathml element for the node.
  * @param stree The XML for the semantic tree.
+ * @returns Mapping for semantic and aria attributes missing on mactions.
  */
 export function connectMactionSelections(mml: Element, stree: Element) {
   const mactions = DomUtil.querySelectorAll(mml, 'maction');
-  const results: {[key: string]: string} = {};
+  const results: {[key: string]: {[K in NeededAttributes]?: string}} = {};
   for (let i = 0, maction; (maction = mactions[i]); i++) {
     // Get the span with the maction id in node.
     const selection = parseInt(maction.getAttribute('selection'));
     const children = Array.from(maction.childNodes);
     const semantic = children.filter(child =>
-      (child as Element).hasAttribute('data-semantic-id'))[0] as Element;
+      (child as Element).hasAttribute(NeededAttributes.ID))[0] as Element;
     const selected = children[selection - 1];
     if (!semantic || semantic === selected) {
       continue;
@@ -306,7 +328,7 @@ export function connectMactionSelections(mml: Element, stree: Element) {
     const mid = semantic.getAttribute(Attribute.ID);
     const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
-    results[maction.getAttribute('id')] = mid;
+    results[maction.getAttribute('id')] = getNeededAttributes(semantic);
   }
   return results;
 }
@@ -335,7 +357,7 @@ export function connectAllMactions(mml: Element, stree: Element) {
  */
 export function retrieveSummary(
   node: Element,
-  options: { [key: string]: string } = {}): string {
+  options: OptionsList = {}): string {
   const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
 }
@@ -349,7 +371,7 @@ export function retrieveSummary(
  */
 export function computeSummary(
   node: Element,
-  options: { [key: string]: string } = {}): AuditoryDescription[] {
+  options: OptionsList = {}): AuditoryDescription[] {
   const preOption = options.locale ? {locale: options.locale} : {};
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
@@ -383,7 +405,29 @@ export function computePostfix(node: Element): AuditoryDescription[] {
   return postfix;
 }
 
-export function nextRules(options: { [key: string]: string }): { [key: string]: string } {
+
+// Changes for the webworker
+
+export function completeModalities(structure: SpeechStructure) {
+  structure.completeModality('speech', computeSpeech);
+  structure.completeModality('prefix', computePrefix);
+  structure.completeModality('postfix', computePostfix);
+  structure.completeModality('summary', computeSummary);
+}
+
+
+export function computeSpeechStructure(sxml: Element) {
+  computeSpeech(sxml, true);
+  const structure = SpeechRuleEngine.getInstance().speechStructure;
+  completeModalities(structure);
+  return structure.json(['none', 'ssml']);
+}
+
+/**
+ *
+ * @param options
+ */
+export function nextRules(options: OptionsList): OptionsList {
   // Rule cycling only makes sense for speech modality.
   if (options.modality !== 'speech') {
     return options;
@@ -399,13 +443,13 @@ export function nextRules(options: { [key: string]: string }): { [key: string]: 
   return options;
 }
 
-  /**
-   * Cycles to next style or preference of the speech rule set if possible.
-   *
-   * @param node The semantic node currently in focus.
-   * @returns The new style name.
-   */
-export function nextStyle(node: SemanticNode, options: {[key: string]: string}) {
+/**
+ * Cycles to next style or preference of the speech rule set if possible.
+ *
+ * @param node The semantic node currently in focus.
+ * @returns The new style name.
+ */
+export function nextStyle(node: SemanticNode, options: OptionsList) {
   const {modality: modality, domain: domain, style: style} = options;
   // Rule cycling only makes sense for speech modality.
   if (modality !== 'speech') {

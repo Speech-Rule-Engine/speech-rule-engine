@@ -31,6 +31,7 @@ import { Variables } from './variables.js';
 import { standardLoader } from '../speech_rules/math_map.js';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
 import { RebuildStree } from '../walker/rebuild_stree.js';
+import * as DomUtil from './dom_util.js';
 
 /**
  * Version number.
@@ -108,23 +109,6 @@ export const localeLoader = standardLoader;
  */
 export function toSpeech(expr: string): string {
   return processString('speech', expr);
-}
-
-export function toSpeechStructure(expr: string): string {
-  return processString('speechStructure', expr);
-}
-
-export function nextDomain(options: { [key: string]: string }): string {
-  setupEngine(SpeechGeneratorUtil.nextRules(options));
-  return options.domain;
-}
-
-export function nextStyle(expr: string, id: string): string {
-  const rebuilt = ProcessorFactory.process('rebuildStree', expr) as RebuildStree;
-  const options = engineSetup() as {[key: string]: string};
-  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
-  setupEngine({style: style});
-  return processString('speechStructure', expr);
 }
 
 /**
@@ -415,6 +399,75 @@ export function exit(opt_value?: number) {
   const value = opt_value || 0;
   EnginePromise.getall().then(() => process.exit(value));
 }
+
+
+/**
+ * Function to translate expression into speech structure, with all speech
+ * components for all nodes.
+ *
+ * @param expr Processes a given MathML expression for translation.
+ * @returns The json structure containing all speech mappings.
+ */
+export function toSpeechStructure(expr: string): string {
+  return processString('speechStructure', expr);
+}
+
+/**
+ *  Web worker related API methods.
+ */
+type OptionsList = { [key: string]: string };
+
+import { LOCALE } from '../l10n/locale.js';
+
+export async function workerSpeech(expr: string, options: OptionsList) {
+  let mml = DomUtil.parseInput(expr);
+  let rebuilt = new RebuildStree(mml);
+  let sxml = rebuilt.stree.xml();
+  let json = assembleSpeechStructure(mml, sxml, options);
+  return json;
+
+}
+
+export async function workerNextRules(expr: string, options: OptionsList) {
+  // TODO: Don't do anything if no next rules!
+  let mml = DomUtil.parseInput(expr);
+  let rebuilt = new RebuildStree(mml);
+  let sxml = rebuilt.stree.xml();
+  options = SpeechGeneratorUtil.nextRules(options);
+  let json = assembleSpeechStructure(mml, sxml, options);
+  return json;
+}
+
+export async function workerNextStyle(expr: string, options: OptionsList, id: string) {
+  // TODO: Don't do anything if no next style!
+  let mml = DomUtil.parseInput(expr);
+  let rebuilt = new RebuildStree(mml);
+  let sxml = rebuilt.stree.xml();
+  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  options.style = style;
+  let json = assembleSpeechStructure(mml, sxml, options);
+  return json;
+}
+
+type speechStructure = {
+  speech?: {},
+  braille?: {},
+  mactions?: {},
+  options?: {},
+  translations?: {}
+};
+
+async function assembleSpeechStructure(mml: Element, sxml: Element, options: OptionsList): Promise<speechStructure> {
+  await setupEngine(options);
+  Engine.getInstance().automark = true;
+  const json: speechStructure = {};
+  json.options = options;
+  json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+  json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
+  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
+  return json;
+}
+
 
 /**
  * Returns the default locale path, depending on the mode of operation.
