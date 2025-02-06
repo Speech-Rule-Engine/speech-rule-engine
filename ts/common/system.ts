@@ -415,41 +415,11 @@ export function toSpeechStructure(expr: string): string {
 /**
  *  Web worker related API methods.
  */
-type OptionsList = { [key: string]: string };
-
 import { LOCALE } from '../l10n/locale.js';
 
-export async function workerSpeech(expr: string, options: OptionsList) {
-  let mml = DomUtil.parseInput(expr);
-  let rebuilt = new RebuildStree(mml);
-  let sxml = rebuilt.stree.xml();
-  let json = assembleSpeechStructure(mml, sxml, options);
-  return json;
+type OptionsList = { [key: string]: string };
 
-}
-
-export async function workerNextRules(expr: string, options: OptionsList) {
-  // TODO: Don't do anything if no next rules!
-  let mml = DomUtil.parseInput(expr);
-  let rebuilt = new RebuildStree(mml);
-  let sxml = rebuilt.stree.xml();
-  options = SpeechGeneratorUtil.nextRules(options);
-  let json = assembleSpeechStructure(mml, sxml, options);
-  return json;
-}
-
-export async function workerNextStyle(expr: string, options: OptionsList, id: string) {
-  // TODO: Don't do anything if no next style!
-  let mml = DomUtil.parseInput(expr);
-  let rebuilt = new RebuildStree(mml);
-  let sxml = rebuilt.stree.xml();
-  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
-  options.style = style;
-  let json = assembleSpeechStructure(mml, sxml, options);
-  return json;
-}
-
-type speechStructure = {
+type WorkerStructure = {
   speech?: {},
   braille?: {},
   mactions?: {},
@@ -457,10 +427,64 @@ type speechStructure = {
   translations?: {}
 };
 
-async function assembleSpeechStructure(mml: Element, sxml: Element, options: OptionsList): Promise<speechStructure> {
+/**
+ * Compute speech structure for the expression.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerSpeech(expr: string, options: OptionsList): Promise<WorkerStructure> {
+  let mml = DomUtil.parseInput(expr);
+  let rebuilt = new RebuildStree(mml);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the speech for the next rule set.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerNextRules(expr: string, options: OptionsList): Promise<WorkerStructure> {
+  // TODO: Don't do anything if no next rules!
+  let mml = DomUtil.parseInput(expr);
+  let rebuilt = new RebuildStree(mml);
+  options = SpeechGeneratorUtil.nextRules(options);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the speech for the next style wrt to a particular node.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @param id Semantic id of the focused node.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerNextStyle(expr: string, options: OptionsList, id: string): Promise<WorkerStructure> {
+  // TODO: Don't do anything if no next style!
+  let mml = DomUtil.parseInput(expr);
+  let rebuilt = new RebuildStree(mml);
+  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  options.style = style;
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the structure returnable to the worker, containing all necessary
+ * speech content to be attached.
+ *
+ * @param mml The math expression.
+ * @param sxml The element.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+async function assembleWorkerStructure(mml: Element, sxml: Element, options: OptionsList): Promise<WorkerStructure> {
   await setupEngine(options);
   Engine.getInstance().automark = true;
-  const json: speechStructure = {};
+  const json: WorkerStructure = {};
   json.options = options;
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
   json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
