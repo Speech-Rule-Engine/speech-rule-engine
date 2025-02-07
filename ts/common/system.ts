@@ -418,13 +418,16 @@ export function toSpeechStructure(expr: string): string {
 import { LOCALE } from '../l10n/locale.js';
 
 type OptionsList = { [key: string]: string };
+type SpeechList = {[id: string]: {[mod: string]: string}};
 
 type WorkerStructure = {
-  speech?: {},
-  braille?: {},
-  mactions?: {},
-  options?: {},
-  translations?: {}
+  speech?: SpeechList,
+  braille?: SpeechList,
+  mactions?: SpeechList,
+  options?: OptionsList,
+  translations?: OptionsList,
+  label?: string,
+  braillelabel?: string,
 };
 
 /**
@@ -488,6 +491,8 @@ async function assembleWorkerStructure(mml: Element, sxml: Element, options: Opt
   json.options = options;
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
   json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
+  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
+  json.label = json.speech[root]['speech-none'];
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   return json;
 }
