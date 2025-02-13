@@ -423,6 +423,12 @@ export function computeSpeechStructure(sxml: Element) {
   return structure.json(['none', 'ssml']);
 }
 
+export function computeBrailleStructure(sxml: Element) {
+  computeSpeech(sxml, true);
+  const structure = SpeechRuleEngine.getInstance().speechStructure;
+  return structure.json(['none']);
+}
+
 /**
  *
  * @param options

@@ -492,6 +492,16 @@ async function assembleWorkerStructure(mml: Element, sxml: Element, options: Opt
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
   json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
   const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
+  if (options.braille !== 'none') {
+    await setupEngine({
+      modality: 'braille',
+      locale: options.braille,
+      domain: 'default',
+      style: 'default'
+    });
+    json.braille = SpeechGeneratorUtil.computeBrailleStructure(sxml);
+    json.braillelabel = json.braille[root]['braille-none'];
+  }
   json.label = json.speech[root]['speech-none'];
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   return json;
