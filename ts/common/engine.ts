@@ -141,10 +141,16 @@ export class Engine {
    */
   public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
 
+  /**
+   *
+   */
   public set defaultLocale(loc: string) {
     this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
   }
 
+  /**
+   *
+   */
   public get defaultLocale() {
     return this._defaultLocale;
   }
@@ -274,6 +280,10 @@ export class Engine {
       return [];
     };
 
+  /**
+   *
+   * @param node
+   */
   public static evaluateNode(node: Element) {
     return Engine.nodeEvaluator(node);
   }

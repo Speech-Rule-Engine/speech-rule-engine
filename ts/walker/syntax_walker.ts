@@ -36,6 +36,9 @@ export class SyntaxWalker extends AbstractWalker<string> {
    * Caching of levels.
    */
   public levels: Levels<string> = null;
+  /**
+   *
+   */
   constructor(
     public node: Element,
     public generator: SpeechGenerator,
@@ -159,10 +162,16 @@ export class SyntaxWalker extends AbstractWalker<string> {
     return this.singletonFocus(id.toString());
   }
 
+  /**
+   *
+   */
   public focusDomNodes() {
     return [this.getFocus().getDomPrimary()];
   }
 
+  /**
+   *
+   */
   public focusSemanticNodes() {
     return [this.getFocus().getSemanticPrimary()];
   }

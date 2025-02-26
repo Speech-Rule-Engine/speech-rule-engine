@@ -612,6 +612,9 @@ class Condition {
     this.addCondition(base, condition);
   }
 
+  /**
+   *
+   */
   public get conditions() {
     return this._conditions;
   }
@@ -636,14 +639,27 @@ class Condition {
     this._conditions = this._conditions.concat(newConds);
   }
 
+  /**
+   *
+   * @param cond
+   */
   public addBaseCondition(cond: Precondition) {
     this.addCondition(this.base, cond);
   }
 
+  /**
+   *
+   * @param cond
+   */
   public addFullCondition(cond: Precondition) {
     this.constraints.forEach((cstr) => this.addCondition(cstr, cond));
   }
 
+  /**
+   *
+   * @param dynamic
+   * @param cond
+   */
   private addCondition(dynamic: DynamicCstr, cond: Precondition) {
     const condStr = dynamic.toString() + ' ' + cond.toString();
     if (this.allCstr.condStr) {

@@ -44,6 +44,10 @@ export class AuditoryItem {
   public prev: AuditoryItem = null;
   public next: AuditoryItem = null;
 
+  /**
+   *
+   * @param data
+   */
   constructor(public data: AuditoryDescription = null) {}
 }
 
@@ -52,13 +56,17 @@ export class AuditoryList extends Set<AuditoryItem> {
 
   private anchor: AuditoryItem;
 
+  /**
+   *
+   * @param descrs
+   */
   constructor(descrs: AuditoryDescription[]) {
     super();
     this.anchor = new AuditoryItem();
     this.anchor.next = this.anchor;
     this.anchor.prev = this.anchor;
     descrs.forEach((d) => {
-      let item = new AuditoryItem(d);
+      const item = new AuditoryItem(d);
       if (d.annotation) {
         this.annotations.push(item);
       }
@@ -66,14 +74,24 @@ export class AuditoryList extends Set<AuditoryItem> {
     });
   }
 
+  /**
+   *
+   */
   public first() {
     return this.empty ? null : this.anchor.next;
   }
 
+  /**
+   *
+   */
   public last() {
     return this.empty ? null : this.anchor.prev;
   }
 
+  /**
+   *
+   * @param item
+   */
   public push(item: AuditoryItem) {
     item.next = this.anchor;
     item.prev = this.anchor.prev;
@@ -82,8 +100,11 @@ export class AuditoryList extends Set<AuditoryItem> {
     super.add(item);
   }
 
+  /**
+   *
+   */
   public pop() {
-    let item = this.last();
+    const item = this.last();
     if (!item) {
       return null;
     }
@@ -91,6 +112,10 @@ export class AuditoryList extends Set<AuditoryItem> {
     return item;
   }
 
+  /**
+   *
+   * @param item
+   */
   public delete(item: AuditoryItem) {
     if (!this.has(item)) {
       return false;
@@ -101,12 +126,22 @@ export class AuditoryList extends Set<AuditoryItem> {
     return true;
   }
 
+  /**
+   *
+   * @param descr
+   * @param item
+   */
   public insertAfter(descr: AuditoryDescription, item: AuditoryItem) {
     this.insertBefore(descr, item.next);
   }
 
+  /**
+   *
+   * @param descr
+   * @param item
+   */
   public insertBefore(descr: AuditoryDescription, item: AuditoryItem) {
-    let nitem = new AuditoryItem(descr);
+    const nitem = new AuditoryItem(descr);
     if (!item || !this.has(item)) {
       this.push(nitem);
       return;
@@ -117,6 +152,10 @@ export class AuditoryList extends Set<AuditoryItem> {
     item.prev = nitem;
   }
 
+  /**
+   *
+   * @param item
+   */
   public prevText(item: AuditoryItem) {
     do {
       item = item.prev;
@@ -124,6 +163,9 @@ export class AuditoryList extends Set<AuditoryItem> {
     return item === this.anchor ? null : item;
   }
 
+  /**
+   *
+   */
   public *[Symbol.iterator](): IterableIterator<AuditoryItem> {
     let current = this.anchor.next;
     while (current !== this.anchor) {
@@ -132,6 +174,10 @@ export class AuditoryList extends Set<AuditoryItem> {
     }
   }
 
+  /**
+   *
+   * @param item
+   */
   public nextText(item: AuditoryItem) {
     while (item !== this.anchor && !item.data.text) {
       item = item.next;
@@ -139,18 +185,27 @@ export class AuditoryList extends Set<AuditoryItem> {
     return item;
   }
 
+  /**
+   *
+   */
   public clear() {
     this.anchor.next = this.anchor;
     this.anchor.prev = this.anchor;
     super.clear();
   }
 
+  /**
+   *
+   */
   public empty() {
     return this.anchor.prev === this.anchor && this.anchor === this.anchor.next;
   }
 
+  /**
+   *
+   */
   public toList(): AuditoryDescription[] {
-    let result = [];
+    const result = [];
     let item = this.anchor.next;
     while (item !== this.anchor) {
       result.push(item.data);

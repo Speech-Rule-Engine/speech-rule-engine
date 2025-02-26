@@ -101,6 +101,9 @@ export class Trie {
     return Math.max(children.length, max);
   }
 
+  /**
+   *
+   */
   constructor() {
     this.root = getNode(TrieNodeKind.ROOT, '', null);
   }

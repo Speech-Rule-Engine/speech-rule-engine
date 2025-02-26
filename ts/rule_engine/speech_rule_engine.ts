@@ -853,19 +853,23 @@ Engine.nodeEvaluator = SpeechRuleEngine.getInstance().evaluateNode.bind(
   SpeechRuleEngine.getInstance()
 );
 
-let punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
+const punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
 
+/**
+ *
+ * @param descrs
+ */
 function processAnnotations(
   descrs: AuditoryDescription[]
 ): AuditoryDescription[] {
-  let alist = new AuditoryList(descrs);
-  for (let item of alist.annotations) {
-    let descr = item.data;
+  const alist = new AuditoryList(descrs);
+  for (const item of alist.annotations) {
+    const descr = item.data;
     // Annotation processor
     if (descr.annotation === 'punctuation') {
-      let prev = alist.prevText(item);
+      const prev = alist.prevText(item);
       if (!prev) continue;
-      let last = prev.data;
+      const last = prev.data;
       if (
         last.annotation !== 'punctuation' &&
         last.text !== '⠀' &&

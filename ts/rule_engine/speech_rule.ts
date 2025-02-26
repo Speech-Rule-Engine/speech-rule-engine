@@ -381,9 +381,8 @@ export class Action {
    * IDEAS NOT YET IMPLEMENTED:
    *
    * if text element is last (or only followed by personality) it gets the overall
-   *   element as a span.
+   * element as a span.
    * if next element is multinode it gets the overall element as span?
-   *
    *
    * @param comps A list of components.
    */
@@ -409,6 +408,11 @@ export class Action {
   }
 
   // Span Naive: Here we add a custom span for the next node if it exists.
+  /**
+   *
+   * @param comp
+   * @param span
+   */
   private static addNaiveSpan(comp: Component, span: string) {
     if (!comp.attributes) {
       comp.attributes = {};

@@ -114,8 +114,8 @@ export class Focus {
    * the same semantic id. This can be the case due to linebreaking duplicating
    * semantic information.
    *
-   * @param {string[]} ids The ids.
-   * @param {Element} domNode The root node in the dom.
+   * @param ids The ids.
+   * @param domNode The root node in the dom.
    * @returns A list of nodes with the given ids.
    */
   private static getAllVisibleNodes(ids: string[], domNode: Element) {

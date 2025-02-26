@@ -59,6 +59,7 @@ function create(): Locale {
   /**
    * Find if there exists final consonant in the last syllable
    * and therefore needs adjustment of postposition.
+   *
    * @param name The string that needs to be check.
    * @returns The string unchanged.
    */

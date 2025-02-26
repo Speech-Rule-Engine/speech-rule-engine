@@ -50,6 +50,9 @@ export class Cli {
 
   private output: any = Cli.process.stdout;
 
+  /**
+   *
+   */
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
       errorHandler: (_key: string, _msg: string) => {

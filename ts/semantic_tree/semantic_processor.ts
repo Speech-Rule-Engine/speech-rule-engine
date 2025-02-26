@@ -784,6 +784,11 @@ export class SemanticProcessor {
     };
   }
 
+  /**
+   *
+   * @param node
+   * @param func
+   */
   private static meaningFromContent(
     node: SemanticNode,
     func: (n: SemanticNode, c: string[], m: SemanticMeaning[]) => void
@@ -798,6 +803,8 @@ export class SemanticProcessor {
    * Compute the role of a number if it does not have one already.
    *
    * @param node The semantic tree node.
+   * @param content
+   * @param meaning
    */
   private static numberRole_(
     node: SemanticNode,
@@ -1039,6 +1046,7 @@ export class SemanticProcessor {
    *
    * @param node The node.
    * @param relation The relation to be tested.
+   * @param relations
    * @param opt_right From the right side?
    * @returns True if the node is an end relation.
    */
@@ -1066,6 +1074,7 @@ export class SemanticProcessor {
    *
    * @param node The node.
    * @param relation The relation to be tested.
+   * @param relations
    * @returns True if the node is an end relation.
    */
   private static isPureRelation_(
@@ -2219,7 +2228,7 @@ export class SemanticProcessor {
           result.push(SemanticProcessor.getInstance().row(prevComp));
         }
         text.push(currentRel);
-        let dummy = SemanticProcessor.getInstance().dummyNode_(text);
+        const dummy = SemanticProcessor.getInstance().dummyNode_(text);
         // TODO: See if it already has a majority vote role.
         // dummy.role = SemanticRole.ANNOTATION;
         result.push(dummy);
@@ -2412,6 +2421,10 @@ export class SemanticProcessor {
     return SemanticProcessor.getInstance().addFactor(node, split);
   }
 
+  /**
+   *
+   * @param split
+   */
   private wrapPostfix(split: SemanticUtil.Slice) {
     // Dealing with explicit postfix operators.
     //
@@ -2449,6 +2462,11 @@ export class SemanticProcessor {
     );
   }
 
+  /**
+   *
+   * @param node
+   * @param split
+   */
   private addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
     if (!split.div) {
       // Propagate unit over multiplications.
@@ -2475,6 +2493,7 @@ export class SemanticProcessor {
    * @param opt_prefixes Operator nodes that
    * will become prefix operation (or postfix in case they come after last
    * operand).
+   * @param prefix
    * @returns The root node of the syntax tree.
    */
   private operationsTree_(
@@ -3219,7 +3238,7 @@ export class SemanticProcessor {
     let relCounter = 0;
     while (partition.comp.length > 0) {
       let puncts = [];
-      let saveCount = relCounter;
+      const saveCount = relCounter;
       do {
         puncts.push(partition.rel[relCounter++]);
         firstComp = partition.comp.shift();
@@ -3279,7 +3298,7 @@ export class SemanticProcessor {
         return newNode;
       }
     }
-    let fpunct = punctuations[0];
+    const fpunct = punctuations[0];
     if (SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
       newNode.role =
         fpunct.childNodes.length && !fpunct.embellished
@@ -3684,7 +3703,7 @@ export class SemanticProcessor {
     const firstNode = nodes[0];
     if (SemanticPred.isGeneralFunctionBoundary(firstNode)) {
       // No intvar, test for the next big operator boundary instead.
-      let { integrand: args2, rest: rest2 } =
+      const { integrand: args2, rest: rest2 } =
         SemanticProcessor.getInstance().getIntegralArgs_(args);
       return { integrand: args2, intvar: null, rest: rest2.concat(nodes) };
     }

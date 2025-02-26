@@ -721,7 +721,7 @@ SemanticHeuristics.add(
     'ellipses',
     (nodes: SemanticNode[]) => {
       // TODO: Test for simple elements?
-      let newNodes = [];
+      const newNodes = [];
       let current = nodes.shift();
       while (current) {
         [current, nodes] = combineNodes(
@@ -740,13 +740,20 @@ SemanticHeuristics.add(
   )
 );
 
+/**
+ *
+ * @param current
+ * @param nodes
+ * @param src
+ * @param target
+ */
 function combineNodes(
   current: SemanticNode,
   nodes: SemanticNode[],
   src: SemanticRole,
   target: SemanticRole = src
 ): [SemanticNode, SemanticNode[]] {
-  let collect = [];
+  const collect = [];
   while (current && current.role === src) {
     collect.push(current);
     current = nodes.shift();
@@ -763,8 +770,13 @@ function combineNodes(
   ];
 }
 
+/**
+ *
+ * @param nodes
+ * @param role
+ */
 function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
-  let node = SemanticHeuristics.factory.makeBranchNode(
+  const node = SemanticHeuristics.factory.makeBranchNode(
     SemanticType.PUNCTUATION,
     nodes,
     []
@@ -781,7 +793,7 @@ SemanticHeuristics.add(
   new SemanticMultiHeuristic(
     'op_with_limits',
     (nodes: SemanticNode[]) => {
-      let center = nodes[0];
+      const center = nodes[0];
       center.type = SemanticType.LARGEOP;
       center.role = SemanticRole.SUM;
       return nodes;

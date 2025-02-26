@@ -74,6 +74,10 @@ export class CaseEmpheq extends AbstractEnrichCase {
     return this.mml;
   }
 
+  /**
+   *
+   * @param node
+   */
   private recurseToTable(node: SemanticNode) {
     if (
       !(
@@ -123,6 +127,10 @@ export class CaseEmpheq extends AbstractEnrichCase {
     node.contentNodes.forEach(this.recurseToTable.bind(this));
   }
 
+  /**
+   *
+   * @param node
+   */
   private finalizeTable(node: SemanticNode) {
     setAttributes(node.mathmlTree, node);
     node.contentNodes.forEach((x) => {

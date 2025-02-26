@@ -150,6 +150,10 @@ export class SsmlRenderer extends XmlRenderer {
     return result.join(this.separator);
   }
 
+  /**
+   *
+   * @param span
+   */
   private isEmptySpan(span: Span) {
     const sep = span.attributes['separator'];
     return span.speech.match(/^\s*$/) && (!sep || sep.match(/^\s*$/));

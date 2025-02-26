@@ -22,6 +22,7 @@ import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
  * @returns The string representation of that number.
  */
@@ -49,6 +50,7 @@ function thousandsToWords_(num: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
  * @returns The string representation of that number.
  */
@@ -74,8 +76,10 @@ function numberToWords(num: number): string {
 /**
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
+ *
  * @param num The number to translate.
  * @param plural A flag indicating if the ordinal is in plural.
+ * @param _plural
  * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
@@ -85,6 +89,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 
 /**
  * Creates a word ordinal string from a number.
+ *
  * @param num The number to be converted.
  * @returns The ordinal string.
  */
@@ -101,6 +106,7 @@ function wordOrdinal(num: number): string {
 
 /**
  * Creates a numeric ordinal string from a number.
+ *
  * @param num The number to be converted.
  * @returns The ordinal string.
  */

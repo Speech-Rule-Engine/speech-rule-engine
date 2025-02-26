@@ -154,6 +154,8 @@ export class SemanticSkeleton {
    * node.
    *
    * @param semantic The semantic tree node.
+   * @param type
+   * @param _role
    * @param content The list of content nodes.
    * @param children The list of child nodes.
    * @returns The combined list.
@@ -329,6 +331,14 @@ export class SemanticSkeleton {
     return skeleton;
   }
 
+  /**
+   *
+   * @param node
+   * @param level
+   * @param posinset
+   * @param setsize
+   * @param role
+   */
   private static addAria(
     node: Element,
     level: number,
@@ -387,6 +397,10 @@ export class SemanticSkeleton {
     return result;
   }
 
+  /**
+   *
+   * @param skeleton
+   */
   constructor(skeleton: Sexp) {
     skeleton = skeleton === 0 ? skeleton : skeleton || [];
     this.array = skeleton;
@@ -450,6 +464,10 @@ export class SemanticSkeleton {
     return id === level[0];
   }
 
+  /**
+   *
+   * @param id
+   */
   public directChildren(id: number): number[] {
     if (!this.isRoot(id)) {
       return [];
@@ -466,6 +484,10 @@ export class SemanticSkeleton {
     }) as number[];
   }
 
+  /**
+   *
+   * @param id
+   */
   public subtreeNodes(id: number): number[] {
     if (!this.isRoot(id)) {
       return [];

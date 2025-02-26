@@ -175,7 +175,7 @@ export function addPrefix(attr: string): Attribute {
 }
 
 /**
- * @return A newly created mrow with an added attribute.
+ * @returns A newly created mrow with an added attribute.
  */
 export function addMrow(): Element {
   const mrow = DomUtil.createElement('mrow');

@@ -301,11 +301,15 @@ register(
   new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
 );
 
+/**
+ *
+ * @param node
+ */
 function annotateDepth(node: SemanticNode): any[] {
   if (!node.parent) {
     return [1];
   }
-  let depth = parseInt(node.parent.annotation['depth'][0]);
+  const depth = parseInt(node.parent.annotation['depth'][0]);
   return [depth + 1];
 }
 
@@ -328,9 +332,9 @@ export function relationIterator(
 ): () => AuditoryDescription[] {
   const childNodes = nodes.slice(0);
   let first = true;
-  let parentNode = nodes[0].parentNode.parentNode as Element;
-  let match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
-  let depth = match ? match[1] : '';
+  const parentNode = nodes[0].parentNode.parentNode as Element;
+  const match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
+  const depth = match ? match[1] : '';
   let contentNodes: Element[];
   if (nodes.length > 0) {
     contentNodes = XpathUtil.evalXPath('./content/*', parentNode) as Element[];
@@ -435,17 +439,26 @@ export function implicitIterator(
   };
 }
 
+/**
+ *
+ * @param text
+ */
 function ignoreEnglish(text: string) {
   return correctFont(text, LOCALE.ALPHABETS.languagePrefix.english);
 }
 
 Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
 
+/**
+ *
+ * @param nodes
+ * @param context
+ */
 export function contentIterator(nodes: Element[], context: string) {
-  let func = suCI(nodes, context);
-  let parentNode = nodes[0].parentNode.parentNode as Element;
-  let match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
-  let depth = match ? match[1] : '';
+  const func = suCI(nodes, context);
+  const parentNode = nodes[0].parentNode.parentNode as Element;
+  const match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
+  const depth = match ? match[1] : '';
   return function () {
     const descrs = func();
     descrs.unshift(

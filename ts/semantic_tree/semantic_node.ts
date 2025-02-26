@@ -584,6 +584,10 @@ export class SemanticNode {
     }
   }
 
+  /**
+   *
+   * @param value
+   */
   private static escapeValue(value: string): string {
     return value.replace(/;/g, '\\0003B');
   }

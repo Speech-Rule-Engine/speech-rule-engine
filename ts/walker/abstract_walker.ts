@@ -279,10 +279,16 @@ export abstract class AbstractWalker<T> implements Walker {
     return this.generator.modality === Attribute.SPEECH;
   }
 
+  /**
+   *
+   */
   public focusDomNodes() {
     return this.getFocus().getDomNodes();
   }
 
+  /**
+   *
+   */
   public focusSemanticNodes() {
     return this.getFocus().getSemanticNodes();
   }

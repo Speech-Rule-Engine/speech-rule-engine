@@ -277,7 +277,7 @@ set(
 set(
   new Processor<Element>('rebuild', {
     processor: function (expr) {
-      let rebuilt = new RebuildStree(DomUtil.parseInput(expr));
+      const rebuilt = new RebuildStree(DomUtil.parseInput(expr));
       return rebuilt.stree.xml();
     },
     pprint: function (tree) {

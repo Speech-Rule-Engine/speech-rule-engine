@@ -96,6 +96,9 @@ export function resolveNameSpace(prefix: string): string {
  */
 class Resolver {
   public lookupNamespaceURI: any;
+  /**
+   *
+   */
   constructor() {
     this.lookupNamespaceURI = resolveNameSpace;
   }

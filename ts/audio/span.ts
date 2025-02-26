@@ -30,14 +30,26 @@ export class Span {
     public attributes: SpanAttrs
   ) {}
 
+  /**
+   *
+   */
   public static empty() {
     return new Span('', {});
   }
 
+  /**
+   *
+   * @param str
+   */
   public static stringEmpty(str: string) {
     return new Span(str, {});
   }
 
+  /**
+   *
+   * @param str
+   * @param attr
+   */
   public static stringAttr(str: string, attr: SpanAttrs) {
     return new Span(str, attr);
   }
@@ -45,7 +57,7 @@ export class Span {
   /**
    * Creates a span singleton for a string.
    *
-   * @param {string} str The string for the span.
+   * @param str The string for the span.
    * @param def Optional attributes.
    * @returns The span singleton.
    */
@@ -54,6 +66,12 @@ export class Span {
   }
 
   // Note: def will overwrite attributes harvested from the node.
+  /**
+   *
+   * @param str
+   * @param node
+   * @param def
+   */
   public static node(str: string, node: Element, def: SpanAttrs = {}) {
     const attr = Span.getAttributes(node);
     Object.assign(attr, def);
@@ -62,6 +80,10 @@ export class Span {
 
   static attributeList = ['id', 'extid'];
 
+  /**
+   *
+   * @param node
+   */
   public static getAttributes(node: Element): SpanAttrs {
     const attrs: { [key: string]: string } = {};
     for (const attr of Span.attributeList) {

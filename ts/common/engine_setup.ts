@@ -36,6 +36,9 @@ const EN_RULES: string[] = [
   'html'
 ];
 
+/**
+ *
+ */
 function ensureDomain(feature: { [key: string]: boolean | string }) {
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.

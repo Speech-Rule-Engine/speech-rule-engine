@@ -91,6 +91,10 @@ export class LayoutRenderer extends XmlRenderer {
     return result.join('');
   }
 
+  /**
+   *
+   * @param content
+   */
   private processContent(content: AuditoryDescription[]) {
     const result = [];
     const markup = AudioUtil.personalityMarkup(content);
@@ -108,6 +112,10 @@ export class LayoutRenderer extends XmlRenderer {
 
   private values: Map<string, { [key: string]: boolean }> = new Map();
 
+  /**
+   *
+   * @param layout
+   */
   private layoutValue(layout: string) {
     const match = layout.match(/^(begin|end|)(.*\D)(\d*)$/);
     const value = match[3];
@@ -157,6 +165,9 @@ function applyHandler(element: Element): string {
 
 const relValues = new Map();
 
+/**
+ *
+ */
 function setRelValues(values: { [key: string]: boolean }) {
   relValues.clear();
   if (!values) return;
@@ -604,10 +615,14 @@ function handleFractionPart(prt: Element): string {
 }
 
 // This implements line breaking for concepts of 14.12.1 Priority List.
+/**
+ *
+ * @param rel
+ */
 function handleRelation(rel: Element): string {
   if (!Engine.getInstance().linebreaks) {
     return recurseTree(rel);
   }
-  let value = relValues.get(parseInt(rel.getAttribute('value')));
+  const value = relValues.get(parseInt(rel.getAttribute('value')));
   return (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
 }

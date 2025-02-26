@@ -28,6 +28,9 @@ declare let require: (name: string) => any;
 declare let process: any;
 
 export class SystemExternal {
+  /**
+   *
+   */
   public static nodeRequire() {
     return eval('require');
   }
@@ -116,11 +119,11 @@ export class SystemExternal {
       return process.env.SRE_JSON_PATH || global.SRE_JSON_PATH;
     }
     try {
-      let path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
+      const path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
     } catch (_err) {}
     try {
-      let path = SystemExternal.nodeRequire().resolve('.');
+      const path = SystemExternal.nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
     } catch (_err) {}
     return typeof __dirname !== 'undefined'
