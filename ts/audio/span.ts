@@ -22,6 +22,8 @@
 export type SpanAttrs = { [key: string]: string };
 export class Span {
   /**
+   * A span is a string with an annotation.
+   *
    * @param speech The textual content of the span.
    * @param attributes Annotations for the textual content.
    */
@@ -31,24 +33,24 @@ export class Span {
   ) {}
 
   /**
-   *
+   * @returns An empty span.
    */
   public static empty() {
     return new Span('', {});
   }
 
   /**
-   *
-   * @param str
+   * @param str A string.
+   * @returns A simple span for string without annotations.
    */
   public static stringEmpty(str: string) {
     return new Span(str, {});
   }
 
   /**
-   *
-   * @param str
-   * @param attr
+   * @param str A string.
+   * @param attr An annotation attribute.
+   * @returns A simple span for string with the given annotation.
    */
   public static stringAttr(str: string, attr: SpanAttrs) {
     return new Span(str, attr);

@@ -45,8 +45,9 @@ export class AuditoryItem {
   public next: AuditoryItem = null;
 
   /**
+   * A wrapper class for adding auditory descriptions into a linked list.
    *
-   * @param data
+   * @param data The auditory description.
    */
   constructor(public data: AuditoryDescription = null) {}
 }
@@ -57,8 +58,9 @@ export class AuditoryList extends Set<AuditoryItem> {
   private anchor: AuditoryItem;
 
   /**
+   * A linked list of auditory descriptions.
    *
-   * @param descrs
+   * @param descrs The initial list of auditory descriptions.
    */
   constructor(descrs: AuditoryDescription[]) {
     super();
@@ -75,22 +77,23 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
-   *
+   * @returns The first element in the list.
    */
   public first() {
     return this.empty ? null : this.anchor.next;
   }
 
   /**
-   *
+   * @returns The last element in the list.
    */
   public last() {
     return this.empty ? null : this.anchor.prev;
   }
 
   /**
+   * Pushing an element to the front of the list.
    *
-   * @param item
+   * @param item The element to add.
    */
   public push(item: AuditoryItem) {
     item.next = this.anchor;
@@ -101,7 +104,9 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
+   * Popping an element from the end of the list.
    *
+   * @returns The last element.
    */
   public pop() {
     const item = this.last();
@@ -113,8 +118,10 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
+   * Deleting an element from the list.
    *
-   * @param item
+   * @param item The element to delete.
+   * @returns True if deleted successfully.
    */
   public delete(item: AuditoryItem) {
     if (!this.has(item)) {
@@ -127,18 +134,20 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
+   * Insert a new auditory description after an existing element.
    *
-   * @param descr
-   * @param item
+   * @param descr The new description.
+   * @param item The element already in the list.
    */
   public insertAfter(descr: AuditoryDescription, item: AuditoryItem) {
     this.insertBefore(descr, item.next);
   }
 
   /**
+   * Insert a new auditory description before an existing element.
    *
-   * @param descr
-   * @param item
+   * @param descr The new description.
+   * @param item The element already in the list.
    */
   public insertBefore(descr: AuditoryDescription, item: AuditoryItem) {
     const nitem = new AuditoryItem(descr);
@@ -153,8 +162,10 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
+   * Gets the previous item in the list that as text content.
    *
-   * @param item
+   * @param item The start item.
+   * @returns The previous item in the list that as text content.
    */
   public prevText(item: AuditoryItem) {
     do {
@@ -164,7 +175,7 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
-   *
+   * @yields Iterator of the list.
    */
   public *[Symbol.iterator](): IterableIterator<AuditoryItem> {
     let current = this.anchor.next;
@@ -175,8 +186,10 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
+   * Gets the next item in the list that as text content.
    *
-   * @param item
+   * @param item The start item.
+   * @returns The next item in the list that as text content.
    */
   public nextText(item: AuditoryItem) {
     while (item !== this.anchor && !item.data.text) {
@@ -186,7 +199,7 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
-   *
+   * Empties the list.
    */
   public clear() {
     this.anchor.next = this.anchor;
@@ -195,14 +208,16 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
-   *
+   * @returns True if the list is empty.
    */
   public empty() {
     return this.anchor.prev === this.anchor && this.anchor === this.anchor.next;
   }
 
   /**
+   * Turn linked list into a regular array.
    *
+   * @returns The array.
    */
   public toList(): AuditoryDescription[] {
     const result = [];

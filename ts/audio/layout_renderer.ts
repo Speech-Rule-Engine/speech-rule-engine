@@ -92,8 +92,10 @@ export class LayoutRenderer extends XmlRenderer {
   }
 
   /**
+   * Turns a list of descriptions without layout info into a text string.
    *
-   * @param content
+   * @param content The descriptions list.
+   * @returns The resulting text.
    */
   private processContent(content: AuditoryDescription[]) {
     const result = [];
@@ -113,8 +115,10 @@ export class LayoutRenderer extends XmlRenderer {
   private values: Map<string, { [key: string]: boolean }> = new Map();
 
   /**
+   * Processes the layout value.
    *
-   * @param layout
+   * @param layout The layout string.
+   * @returns The triple containing layout type, layout tag and value.
    */
   private layoutValue(layout: string) {
     const match = layout.match(/^(begin|end|)(.*\D)(\d*)$/);
@@ -166,7 +170,9 @@ function applyHandler(element: Element): string {
 const relValues = new Map();
 
 /**
+ * Adds a list of relation values into the relation values map.
  *
+ * @param values The relation values.
  */
 function setRelValues(values: { [key: string]: boolean }) {
   relValues.clear();
@@ -614,10 +620,11 @@ function handleFractionPart(prt: Element): string {
   return content;
 }
 
-// This implements line breaking for concepts of 14.12.1 Priority List.
 /**
+ * This implements line breaking for concepts of 14.12.1 Priority List.
  *
- * @param rel
+ * @param rel A relation element.
+ * @returns A markup string with the correct linebreaking value.
  */
 function handleRelation(rel: Element): string {
   if (!Engine.getInstance().linebreaks) {
