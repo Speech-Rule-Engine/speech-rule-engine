@@ -62,6 +62,17 @@ let sreConfig = Object.assign({}, config, {
   }
 });
 
+let workerConfig = Object.assign({}, config, {
+  entry: path.resolve(__dirname, 'js/index.js'),
+  output: {
+    filename: 'sre.js',
+    library: 'SRE',
+    libraryTarget: 'umd',
+    globalObject: 'self',
+    path: path.join(__dirname, 'lib'),
+  }
+});
+
 let mjConfig = Object.assign({}, config, {
   entry: path.resolve(__dirname, 'js/common/mathjax.js'),
   target: 'web',
@@ -110,4 +121,4 @@ let extLibs = Object.assign({}, config, {
   }
 });
 
-export default [sreConfig, extLibs];
+export default [sreConfig];
