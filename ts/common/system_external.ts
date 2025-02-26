@@ -29,7 +29,7 @@ declare let process: any;
 
 export class SystemExternal {
   /**
-   *
+   * @returns The require method in node.
    */
   public static nodeRequire() {
     return eval('require');
@@ -121,11 +121,15 @@ export class SystemExternal {
     try {
       const path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) {}
+    } catch (_err) {
+      // continue regardless of error
+    }
     try {
       const path = SystemExternal.nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) {}
+    } catch (_err) {
+      // continue regardless of error
+    }
     return typeof __dirname !== 'undefined'
       ? __dirname + (__dirname.match(/lib?$/) ? '/mathmaps' : '/lib/mathmaps')
       : process.cwd() + '/lib/mathmaps';

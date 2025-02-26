@@ -13,6 +13,7 @@
     "no-inner-declarations": "off",
     "prefer-const": ["error", {"destructuring": "all"}],
     "jsdoc/require-jsdoc": ["warn", {"contexts": ["MethodDefinition"]}],
+    "jsdoc/require-description": ["warn", {"exemptedBy": ["returns"]}],
     "jsdoc/tag-lines": ["warn", "always", {"count": 0, "startLines": 1}],
     "jsdoc/check-tag-names": ["warn", {"definedTags": ["override"]}]
   }

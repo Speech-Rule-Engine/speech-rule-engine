@@ -41,7 +41,7 @@ export function nestedFraction(
   opt_end?: string
 ): string {
   const depth = MathspeakUtil.fractionNestingDepth(node);
-  const annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
+  const annotation = [...Array(depth)].map((_x: string) => expr);
   if (opt_end) {
     annotation.unshift(opt_end);
   }

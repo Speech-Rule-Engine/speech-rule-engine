@@ -199,8 +199,7 @@ export class Component {
           // string, it can be treated like node and multi type.
           break;
         }
-      // eslint-disable no-fallthrough
-      case ActionType.NODE:
+      case ActionType.NODE: // eslint-disable-line no-fallthrough
       case ActionType.MULTI:
         {
           const bracket = rest.indexOf(' (');
