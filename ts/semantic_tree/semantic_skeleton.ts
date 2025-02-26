@@ -32,7 +32,7 @@ export type Sexp = number | Sexp[];
 
 const Options = {
   tree: false
-}
+};
 
 /**
  * @param skeleton The skeleton array.
@@ -320,8 +320,11 @@ export class SemanticSkeleton {
       );
     }
     SemanticSkeleton.addAria(
-      mmlChild, level, posinset, setsize,
-      !Options.tree ? 'treeitem' : (level ? 'group' : 'tree')
+      mmlChild,
+      level,
+      posinset,
+      setsize,
+      !Options.tree ? 'treeitem' : level ? 'group' : 'tree'
     );
     return skeleton;
   }
@@ -331,8 +334,7 @@ export class SemanticSkeleton {
     level: number,
     posinset: number,
     setsize: number,
-    role: string = !Options.tree ? 'treeitem' : 
-      (level ? 'treeitem' : 'tree')
+    role: string = !Options.tree ? 'treeitem' : level ? 'treeitem' : 'tree'
   ) {
     if (!Engine.getInstance().aria || !node) {
       return;

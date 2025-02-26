@@ -130,7 +130,10 @@ export class Focus {
    * @param nodes The semantic nodes of the focus.
    * @param primary The primary component of the focus.
    */
-  constructor(private nodes: SemanticNode[], private primary: SemanticNode) {}
+  constructor(
+    private nodes: SemanticNode[],
+    private primary: SemanticNode
+  ) {}
 
   /**
    * @returns The nodes of the focus.

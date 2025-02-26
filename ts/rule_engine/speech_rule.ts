@@ -509,7 +509,10 @@ export class Precondition {
    * @param query A node selector function or xpath expression.
    * @param cstr A rest list of constraint functions.
    */
-  constructor(public query: string, ...cstr: string[]) {
+  constructor(
+    public query: string,
+    ...cstr: string[]
+  ) {
     this.constraints = cstr;
     const [exists, user] = this.presetPriority();
     this.priority = exists ? user : this.calculatePriority();

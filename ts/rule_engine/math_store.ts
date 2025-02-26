@@ -268,7 +268,9 @@ export class MathStore extends BaseRuleStore {
    * @param str The string to match.
    * @returns The number and its length.
    */
-  protected matchNumber(str: string): { number: string; length: number } | null {
+  protected matchNumber(
+    str: string
+  ): { number: string; length: number } | null {
     const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
     const enNum = str.match(new RegExp('^' + MathStore.regexp.NUMBER));
     if (!locNum && !enNum) {

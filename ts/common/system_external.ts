@@ -28,7 +28,6 @@ declare let require: (name: string) => any;
 declare let process: any;
 
 export class SystemExternal {
-
   public static nodeRequire() {
     return eval('require');
   }
@@ -119,16 +118,14 @@ export class SystemExternal {
     try {
       let path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) { }
+    } catch (_err) {}
     try {
       let path = SystemExternal.nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) { }
-    return (typeof __dirname !== 'undefined')
-      ? (__dirname + (__dirname.match(/lib?$/)
-        ? '/mathmaps'
-        : '/lib/mathmaps'))
-      : (process.cwd() + '/lib/mathmaps');
+    } catch (_err) {}
+    return typeof __dirname !== 'undefined'
+      ? __dirname + (__dirname.match(/lib?$/) ? '/mathmaps' : '/lib/mathmaps')
+      : process.cwd() + '/lib/mathmaps';
   })();
 
   /**

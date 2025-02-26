@@ -26,7 +26,10 @@ import { MathStore } from './math_store.js';
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import { activate } from '../semantic_tree/semantic_annotations.js';
 import { SemanticMap } from '../semantic_tree/semantic_attr.js';
-import { SemanticType, SemanticRole } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticType,
+  SemanticRole
+} from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.
@@ -80,11 +83,11 @@ export class EuroStore extends BrailleStore {
    */
   public customTranscriptions = {};
 
-  public customCommands: {[key: string]: string} = {
+  public customCommands: { [key: string]: string } = {
     '\\cdot': '*',
     '\\lt': '<',
     '\\gt': '>'
-  }
+  };
 
   /**
    * @override
@@ -95,7 +98,6 @@ export class EuroStore extends BrailleStore {
     let cleaned = this.cleanup(split);
     return super.evaluateString(cleaned);
   }
-
 
   /**
    * Cleaning up the command sequence:
@@ -174,9 +176,11 @@ export class EuroStore extends BrailleStore {
       return false;
     }
     let meaning = SemanticMap.Meaning.get(char);
-    return meaning.type === SemanticType.OPERATOR ||
+    return (
+      meaning.type === SemanticType.OPERATOR ||
       meaning.type === SemanticType.RELATION ||
       (meaning.type === SemanticType.PUNCTUATION &&
-        meaning.role === SemanticRole.COLON);
+        meaning.role === SemanticRole.COLON)
+    );
   }
 }

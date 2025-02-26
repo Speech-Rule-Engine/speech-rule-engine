@@ -18,13 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import { Grammar } from '../../rule_engine/grammar.js';
 import { createLocale, Locale } from '../locale.js';
 import { nestingToString } from '../locale_util.js';
 import { NUMBERS } from '../numbers/numbers_ko.js';
 import * as tr from '../transformers.js';
-
 
 let locale: Locale = null;
 
@@ -46,11 +44,13 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.radicalNestDepth = nestingToString;
-  loc.FUNCTIONS.plural = function(unit: string) { return unit };
+  loc.FUNCTIONS.plural = function (unit: string) {
+    return unit;
+  };
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     return prefix + unit;
   };
-  loc.FUNCTIONS.combineRootIndex = function(index: string, postfix: string) {
+  loc.FUNCTIONS.combineRootIndex = function (index: string, postfix: string) {
     return index + postfix;
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
@@ -66,21 +66,21 @@ function create(): Locale {
     if (['같다', '는', '와', '를', '로'].includes(name)) return name;
     const char = name.slice(-1);
     const value = (char.charCodeAt(0) - 44032) % 28;
-    
-    let final = (value > 0) ? true : false;
+
+    let final = value > 0 ? true : false;
     if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
     Grammar.getInstance().setParameter('final', final);
     return name;
-  }
+  };
   loc.CORRECTIONS.article = (name: string) => {
     const final = Grammar.getInstance().getParameter('final');
     if (final) Grammar.getInstance().setParameter('final', false);
-    
-    if (name === '같다') name = '는';
-    const temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
 
-    return (temp !== undefined && final) ? temp : name;
-  }
+    if (name === '같다') name = '는';
+    const temp = { 는: '은', 와: '과', 를: '을', 로: '으로' }[name];
+
+    return temp !== undefined && final ? temp : name;
+  };
 
   return loc;
 }

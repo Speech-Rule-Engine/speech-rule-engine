@@ -152,10 +152,8 @@ function numericOrdinal(num: number): string {
   return num.toString() + (gender === 'f' ? 'a' : 'o');
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});

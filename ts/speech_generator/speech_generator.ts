@@ -117,5 +117,4 @@ export interface SpeechGenerator {
    * @param {string} depth The nesting level of a node.
    */
   getLevel(depth: string): string;
-
 }

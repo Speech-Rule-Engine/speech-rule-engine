@@ -76,7 +76,7 @@ export const NamedSymbol = {
    * Invisible operator for plus.
    */
   invisiblePlus: String.fromCodePoint(0x2064)
-}
+};
 
 // Map extensions for semantic maps.
 
@@ -172,8 +172,7 @@ export const SemanticMap = {
   FencesVert: new Map(),
 
   LatexCommands: new Map()
-
-}
+};
 
 /**
  *
@@ -341,15 +340,7 @@ function initMeaning() {
 
     // dashes as operators
     {
-      set: [
-        '2d',
-        '207b',
-        '208b',
-        '2212',
-        '2796',
-        'fe63',
-        'ff0d'
-      ],
+      set: ['2d', '207b', '208b', '2212', '2796', 'fe63', 'ff0d'],
       type: SemanticType.OPERATOR,
       role: SemanticRole.DASH,
       secondary: SemanticSecondary.BAR
@@ -578,13 +569,7 @@ function initMeaning() {
 
     // postfix operators
     {
-      set: [
-        '25',
-        '2030',
-        '2031',
-        'ff05',
-        'fe6a'
-      ],
+      set: ['25', '2030', '2031', 'ff05', 'fe6a'],
       type: SemanticType.OPERATOR,
       role: SemanticRole.POSTFIXOP
     },
@@ -1498,7 +1483,9 @@ function singleAlphabet(
   change: { [position: number]: SemanticMeaning } = {},
   secondary: { [position: number]: SemanticSecondary } = {}
 ) {
-  const interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
+  const interval = Alphabet.INTERVALS.get(
+    Alphabet.alphabetName(alphabet, font)
+  );
   if (interval) {
     interval.unicode.forEach((x) => {
       SemanticMap.Meaning.set(x, {
@@ -1522,8 +1509,8 @@ function alphabets() {
     const semfont = emb
       ? SemanticFont.UNKNOWN
       : font === SemanticFont.FULLWIDTH
-      ? SemanticFont.NORMAL
-      : font;
+        ? SemanticFont.NORMAL
+        : font;
     singleAlphabet(
       Alphabet.Base.LATINCAP,
       SemanticType.IDENTIFIER,

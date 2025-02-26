@@ -115,8 +115,8 @@ export class SsmlRenderer extends XmlRenderer {
       const id = Engine.getInstance().automark
         ? span.attributes['id']
         : Engine.getInstance().mark
-        ? span.attributes['extid']
-        : '';
+          ? span.attributes['extid']
+          : '';
       // TODO:
       //   * combine say as character
       //   * mark again with kind?

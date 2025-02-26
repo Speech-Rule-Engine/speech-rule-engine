@@ -174,7 +174,6 @@ export function addPrefix(attr: string): Attribute {
   return (Prefix + attr) as Attribute;
 }
 
-
 /**
  * @return A newly created mrow with an added attribute.
  */

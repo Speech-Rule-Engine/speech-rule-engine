@@ -369,8 +369,10 @@ function recurseJuxtaposition(
   const left = acc.pop();
   const op = ops.shift();
   const first = elements.shift();
-  if (op.type === SemanticType.INFIXOP &&
-    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)) {
+  if (
+    op.type === SemanticType.INFIXOP &&
+    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)
+  ) {
     Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
     const right = (left ? [left, op] : [op]).concat(first);
@@ -485,7 +487,7 @@ SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'intvar_from_fraction',
     integralFractionArg,
-   (node: SemanticNode) => {
+    (node: SemanticNode) => {
       if (node.type !== SemanticType.INTEGRAL) return false;
       const [, integrand, intvar] = node.childNodes;
       return (
@@ -711,7 +713,6 @@ function rewriteFence(fence: SemanticNode): boolean {
   return true;
 }
 
-
 /**
  *  Tries to group ellipses and long bars.
  */
@@ -723,7 +724,12 @@ SemanticHeuristics.add(
       let newNodes = [];
       let current = nodes.shift();
       while (current) {
-        [current, nodes] = combineNodes(current, nodes, SemanticRole.FULLSTOP, SemanticRole.ELLIPSIS);
+        [current, nodes] = combineNodes(
+          current,
+          nodes,
+          SemanticRole.FULLSTOP,
+          SemanticRole.ELLIPSIS
+        );
         [current, nodes] = combineNodes(current, nodes, SemanticRole.DASH);
         newNodes.push(current);
         current = nodes.shift();
@@ -739,8 +745,7 @@ function combineNodes(
   nodes: SemanticNode[],
   src: SemanticRole,
   target: SemanticRole = src
-):
-[SemanticNode, SemanticNode[]] {
+): [SemanticNode, SemanticNode[]] {
   let collect = [];
   while (current && current.role === src) {
     collect.push(current);
@@ -752,7 +757,10 @@ function combineNodes(
   if (current) {
     nodes.unshift(current);
   }
-  return [(collect.length === 1) ? collect[0] : combinedNodes(collect, target), nodes];
+  return [
+    collect.length === 1 ? collect[0] : combinedNodes(collect, target),
+    nodes
+  ];
 }
 
 function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
@@ -779,14 +787,20 @@ SemanticHeuristics.add(
       return nodes;
     },
     (nodes: SemanticNode[]) => {
-      return nodes[0].type === SemanticType.OPERATOR &&
-        nodes.slice(1).some(
-          node => node.type === SemanticType.RELSEQ ||
-            node.type === SemanticType.MULTIREL ||
-            (node.type === SemanticType.INFIXOP &&
-              node.role === SemanticRole.ELEMENT) ||
-            (node.type === SemanticType.PUNCTUATED &&
-              node.role === SemanticRole.SEQUENCE)
-        )
+      return (
+        nodes[0].type === SemanticType.OPERATOR &&
+        nodes
+          .slice(1)
+          .some(
+            (node) =>
+              node.type === SemanticType.RELSEQ ||
+              node.type === SemanticType.MULTIREL ||
+              (node.type === SemanticType.INFIXOP &&
+                node.role === SemanticRole.ELEMENT) ||
+              (node.type === SemanticType.PUNCTUATED &&
+                node.role === SemanticRole.SEQUENCE)
+          )
+      );
     }
-  ));
+  )
+);

@@ -31,7 +31,6 @@ import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 
 export class Cli {
-
   public static process = SystemExternal.extRequire('process');
 
   /**
@@ -303,8 +302,10 @@ export class Cli {
       .option('-m, --mathml', 'Generate enriched MathML.', () =>
         processor('enriched')
       )
-      .option('-u, --rebuild', 'Rebuild semantic tree from enriched MathML.', () =>
-        processor('rebuild')
+      .option(
+        '-u, --rebuild',
+        'Rebuild semantic tree from enriched MathML.',
+        () => processor('rebuild')
       )
       .option(
         '-t, --latex',

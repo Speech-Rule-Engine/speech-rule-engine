@@ -604,7 +604,10 @@ class Condition {
    * @param base The dynamic base constraint.
    * @param condition The remaining precondition constraints.
    */
-  constructor(private base: DynamicCstr, condition: Precondition) {
+  constructor(
+    private base: DynamicCstr,
+    condition: Precondition
+  ) {
     this.constraints.push(base);
     this.addCondition(base, condition);
   }

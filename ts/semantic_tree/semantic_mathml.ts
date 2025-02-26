@@ -95,7 +95,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
       [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
       [MMLTAGS.NONE, this.empty_.bind(this)],
-      [MMLTAGS.MACTION, this.action_.bind(this)],
+      [MMLTAGS.MACTION, this.action_.bind(this)]
     ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
@@ -140,9 +140,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
         MMLTAGS.MSTYLE,
         MMLTAGS.SEMANTICS,
         MMLTAGS.MACTION
-      ].indexOf(
-        tag
-      ) !== -1
+      ].indexOf(tag) !== -1
     ) {
       return newNode;
     }
@@ -535,8 +533,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
           ? lsup.push(child)
           : lsub.push(child)
         : scriptcount & 1
-        ? rsup.push(child)
-        : rsub.push(child);
+          ? rsup.push(child)
+          : rsub.push(child);
       scriptcount++;
     }
     // This is the pathological msubsup case.
@@ -633,7 +631,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     // TODO (Euro): This should be safed earlier together with other attributes,
     //     before processing is even called!
     if (mml.hasAttribute('data-latex')) {
-      SemanticMap.LatexCommands.set(mml.getAttribute('data-latex'), mml.textContent);
+      SemanticMap.LatexCommands.set(
+        mml.getAttribute('data-latex'),
+        mml.textContent
+      );
     }
     return node;
   }

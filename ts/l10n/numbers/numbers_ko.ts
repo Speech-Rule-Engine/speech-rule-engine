@@ -20,7 +20,6 @@
 
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
-
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param num The number to translate.
@@ -29,18 +28,24 @@ import { Numbers, NUMBERS as NUMB } from '../messages.js';
 function thousandsToWords_(num: number): string {
   let n = num % 10000;
   let str = '';
-  str += NUMBERS.ones[Math.floor(n / 1000)] ?
-      (Math.floor(n / 1000) === 1 ? '천' : NUMBERS.ones[Math.floor(n / 1000)] + '천') : '';
+  str += NUMBERS.ones[Math.floor(n / 1000)]
+    ? Math.floor(n / 1000) === 1
+      ? '천'
+      : NUMBERS.ones[Math.floor(n / 1000)] + '천'
+    : '';
   n = n % 1000;
   if (n) {
-    str += NUMBERS.ones[Math.floor(n / 100)] ?
-      (Math.floor(n / 100) === 1 ? '백' : NUMBERS.ones[Math.floor(n / 100)] + '백') : '';
+    str += NUMBERS.ones[Math.floor(n / 100)]
+      ? Math.floor(n / 100) === 1
+        ? '백'
+        : NUMBERS.ones[Math.floor(n / 100)] + '백'
+      : '';
     n = n % 100;
-    str += NUMBERS.tens[Math.floor(n / 10)] + (n % 10 ? NUMBERS.ones[n % 10] : '');
+    str +=
+      NUMBERS.tens[Math.floor(n / 10)] + (n % 10 ? NUMBERS.ones[n % 10] : '');
   }
   return str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -56,15 +61,15 @@ function numberToWords(num: number): string {
     const thousands = num % 10000;
     if (thousands) {
       str =
-      thousandsToWords_(num % 10000) +
-          (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') + str;
+        thousandsToWords_(num % 10000) +
+        (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') +
+        str;
     }
     num = Math.floor(num / 10000);
     pos++;
   }
   return str.replace(/ $/, '');
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -78,7 +83,6 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   return wordOrdinal(num) + '번째';
 }
 
-
 /**
  * Creates a word ordinal string from a number.
  * @param num The number to be converted.
@@ -86,14 +90,14 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  */
 function wordOrdinal(num: number): string {
   const ordinal = numberToWords(num);
-  num %= 100; const label = numberToWords(num);
+  num %= 100;
+  const label = numberToWords(num);
   if (!label || !num) return ordinal;
-  
-  const tens = (num === 20) ? '스무' : NUMBERS.tens[10 + Math.floor(num / 10)];
+
+  const tens = num === 20 ? '스무' : NUMBERS.tens[10 + Math.floor(num / 10)];
   const ones = NUMBERS.ones[10 + Math.floor(num % 10)];
   return ordinal.slice(0, -label.length) + tens + ones;
 }
-
 
 /**
  * Creates a numeric ordinal string from a number.
@@ -104,11 +108,9 @@ function numericOrdinal(num: number): string {
   return numberToOrdinal(num, false);
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  wordOrdinal: wordOrdinal,
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});

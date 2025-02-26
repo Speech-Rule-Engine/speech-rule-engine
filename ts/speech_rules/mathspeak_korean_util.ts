@@ -24,10 +24,8 @@
 
 import { Span } from '../audio/span.js';
 import * as MathspeakUtil from './mathspeak_util.js';
-import {LOCALE} from '../l10n/locale.js';
+import { LOCALE } from '../l10n/locale.js';
 import * as XpathUtil from '../common/xpath_util.js';
-
-
 
 /**
  * Computes disambiguations for nested fractions.
@@ -37,7 +35,11 @@ import * as XpathUtil from '../common/xpath_util.js';
  * @param opt_end Optional end expression.
  * @returns The disambiguating string.
  */
-export function nestedFraction( node: Element, expr: string, opt_end?: string): string {
+export function nestedFraction(
+  node: Element,
+  expr: string,
+  opt_end?: string
+): string {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   const annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
   if (opt_end) {
@@ -58,7 +60,6 @@ export function openingFractionVerbose(node: Element): Span[] {
   );
 }
 
-
 /**
  * Closing string for fractions in Mathspeak verbose mode.
  *
@@ -70,7 +71,6 @@ export function closingFractionVerbose(node: Element): Span[] {
     nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V)
   );
 }
-
 
 /**
  * Opening string for fractions in Mathspeak brief mode.
@@ -84,7 +84,6 @@ export function openingFractionBrief(node: Element): Span[] {
   );
 }
 
-
 /**
  * Closing string for fractions in Mathspeak brief mode.
  *
@@ -97,7 +96,6 @@ export function closingFractionBrief(node: Element): Span[] {
   );
 }
 
-
 /**
  * Opening string for fractions in Mathspeak superbrief mode.
  *
@@ -107,16 +105,16 @@ export function closingFractionBrief(node: Element): Span[] {
 export function openingFractionSbrief(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
-    return Span.singleton(
-      LOCALE.MESSAGES.MS.FRAC_S
-    );
+    return Span.singleton(LOCALE.MESSAGES.MS.FRAC_S);
   }
   return Span.singleton(
     LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.MESSAGES.MS.FRAC_S));
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.MESSAGES.MS.FRAC_S
+    )
+  );
 }
-
 
 /**
  * Closing string for fractions in Mathspeak superbrief mode.
@@ -127,16 +125,16 @@ export function openingFractionSbrief(node: Element): Span[] {
 export function closingFractionSbrief(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
-    return Span.singleton(
-      LOCALE.MESSAGES.MS.ENDFRAC
-    );
+    return Span.singleton(LOCALE.MESSAGES.MS.ENDFRAC);
   }
   return Span.singleton(
     LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.MESSAGES.MS.ENDFRAC));
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.MESSAGES.MS.ENDFRAC
+    )
+  );
 }
-
 
 /**
  * Middle string for fractions in Mathspeak superbrief mode.
@@ -147,16 +145,16 @@ export function closingFractionSbrief(node: Element): Span[] {
 export function overFractionSbrief(node: Element): Span[] {
   const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
-    return Span.singleton(
-      LOCALE.MESSAGES.MS.FRAC_OVER
-    );
+    return Span.singleton(LOCALE.MESSAGES.MS.FRAC_OVER);
   }
   return Span.singleton(
     LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
-      LOCALE.MESSAGES.MS.FRAC_OVER));
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.MESSAGES.MS.FRAC_OVER
+    )
+  );
 }
-
 
 /**
  * Query function that checks if we have a simple index in the sense that
@@ -166,11 +164,12 @@ export function overFractionSbrief(node: Element): Span[] {
  * @returns List containing input node if true.
  */
 export function isSimpleIndex(node: Element): Element[] {
-  const index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
+  const index = XpathUtil.evalXPath('children/*[1]', node)[0]
+    .toString()
+    .match(/[^>⁢>]+<\/[^>]*>/g);
 
-  return (index.length === 1) ? [node] : []
+  return index.length === 1 ? [node] : [];
 }
-
 
 /**
  * Nested string for radicals in Mathspeak mode putting together the nesting
@@ -181,12 +180,19 @@ export function isSimpleIndex(node: Element): Element[] {
  * @param postfix A postfix string.
  * @returns The opening string.
  */
-export function nestedRadical(node: Element, prefix: string, postfix: string): string {
+export function nestedRadical(
+  node: Element,
+  prefix: string,
+  postfix: string
+): string {
   const depth = MathspeakUtil.radicalNestingDepth(node);
-  if (depth === 1) return postfix
+  if (depth === 1) return postfix;
 
   return LOCALE.FUNCTIONS.combineNestedRadical(
-      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
+    LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+    prefix,
+    postfix
+  );
 }
 
 /**
@@ -201,7 +207,6 @@ export function openingRadicalVerbose(node: Element): Span[] {
   );
 }
 
-
 /**
  * Closing string for radicals in Mathspeak verbose mode.
  *
@@ -214,7 +219,6 @@ export function closingRadicalVerbose(node: Element): Span[] {
   );
 }
 
-
 /**
  * Opening string for radicals in Mathspeak brief mode.
  *
@@ -223,10 +227,13 @@ export function closingRadicalVerbose(node: Element): Span[] {
  */
 export function openingRadicalBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT)
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.STARTROOT
+    )
   );
 }
-
 
 /**
  * Closing string for radicals in Mathspeak brief mode.
@@ -236,7 +243,11 @@ export function openingRadicalBrief(node: Element): Span[] {
  */
 export function closingRadicalBrief(node: Element): Span[] {
   return Span.singleton(
-    nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT)
+    nestedRadical(
+      node,
+      LOCALE.MESSAGES.MS.NEST_ROOT,
+      LOCALE.MESSAGES.MS.ENDROOT
+    )
   );
 }
 
@@ -252,7 +263,6 @@ export function openingRadicalSbrief(node: Element): Span[] {
   );
 }
 
-
 /**
  * A string indexing the root.
  *
@@ -260,10 +270,12 @@ export function openingRadicalSbrief(node: Element): Span[] {
  * @returns The localised indexing string.
  */
 export function getRootIndex(node: Element): string {
-  const content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
-  return LOCALE.MESSAGES.MSroots[content] || content + "제곱근";
+  const content = XpathUtil.evalXPath(
+    'children/*[1]',
+    node
+  )[0].textContent.trim();
+  return LOCALE.MESSAGES.MSroots[content] || content + '제곱근';
 }
-
 
 /**
  * Indexing string for radicals in Mathspeak mode putting together.
@@ -277,7 +289,6 @@ export function indexRadical(node: Element, postfix: string): string {
   return index ? index : postfix;
 }
 
-
 /**
  * Non-simple indexing string for radicals in Mathspeak verbose mode.
  *
@@ -285,11 +296,8 @@ export function indexRadical(node: Element, postfix: string): string {
  * @returns The indexing string.
  */
 export function indexRadicalVerbose(node: Element): Span[] {
-  return Span.singleton(
-    indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX)
-  );
+  return Span.singleton(indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX));
 }
-
 
 /**
  * Non-simple indexing string for radicals in Mathspeak brief mode.
@@ -298,11 +306,8 @@ export function indexRadicalVerbose(node: Element): Span[] {
  * @returns The indexing string.
  */
 export function indexRadicalBrief(node: Element): Span[] {
-  return Span.singleton(
-    indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX)
-  );
+  return Span.singleton(indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX));
 }
-
 
 /**
  * Non-simple indexing string for radicals in Mathspeak superbrief mode.
@@ -311,11 +316,8 @@ export function indexRadicalBrief(node: Element): Span[] {
  * @returns The indexing string.
  */
 export function indexRadicalSbrief(node: Element): Span[] {
-  return Span.singleton(
-    indexRadical(node, LOCALE.MESSAGES.MS.INDEX)
-  );
+  return Span.singleton(indexRadical(node, LOCALE.MESSAGES.MS.INDEX));
 }
-
 
 /**
  * String function to turn a child position into an ordinal.
@@ -326,11 +328,8 @@ export function indexRadicalSbrief(node: Element): Span[] {
  */
 export function ordinalConversion(node: Element): Span[] {
   const children = XpathUtil.evalXPath('children/*', node) as Element[];
-  return Span.singleton(
-    LOCALE.NUMBERS.wordOrdinal(children.length)
-  );
+  return Span.singleton(LOCALE.NUMBERS.wordOrdinal(children.length));
 }
-
 
 /**
  * String function to convert a child position into an ordinal.
@@ -341,11 +340,8 @@ export function ordinalConversion(node: Element): Span[] {
  */
 export function decreasedOrdinalConversion(node: Element): Span[] {
   const children = XpathUtil.evalXPath('children/*', node) as Element[];
-  return Span.singleton(
-    LOCALE.NUMBERS.wordOrdinal(children.length - 1)
-  );
+  return Span.singleton(LOCALE.NUMBERS.wordOrdinal(children.length - 1));
 }
-
 
 /**
  * String function to convert a child position into an ordinal.
@@ -362,7 +358,6 @@ export function listOrdinalConversion(node: Element): Span[] {
   );
 }
 
-
 /**
  * Query function to check if the child depth of the current node
  * is above a certain standard value.
@@ -375,10 +370,9 @@ export function checkDepth(node: Element): Element[] {
   const roleList: string[] = [];
   const depth = getDepthValue(node, roleList);
   // TODO: determine the standard value.
-  return (depth > 3) ? [] : [node];
+  return depth > 3 ? [] : [node];
 }
 //TODO: use as a custom function if needed.
-
 
 /**
  * DFS function to calculate the child depth of the current node
@@ -395,13 +389,14 @@ export function getDepthValue(node: Element, roleList: string[]): number {
     roleList.push(role);
   }
   const children = XpathUtil.evalXPath('children/*', node) as Element[];
-  let max = 0, cur = 0;
+  let max = 0,
+    cur = 0;
   if (children.length) {
-    children.forEach(child => {
+    children.forEach((child) => {
       cur = getDepthValue(child, roleList);
-      cur > max ? max = cur : max;
+      cur > max ? (max = cur) : max;
     });
-    return (max + 1);
+    return max + 1;
   }
   return 0;
 }
