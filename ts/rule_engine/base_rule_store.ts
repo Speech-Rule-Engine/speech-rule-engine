@@ -613,7 +613,7 @@ class Condition {
   }
 
   /**
-   *
+   * @returns The precondition constraints.
    */
   public get conditions() {
     return this._conditions;
@@ -640,25 +640,29 @@ class Condition {
   }
 
   /**
+   * Adds a precondition to the base constraint.
    *
-   * @param cond
+   * @param cond The precondition.
    */
   public addBaseCondition(cond: Precondition) {
     this.addCondition(this.base, cond);
   }
 
   /**
+   * Adds a precondition to the full constraint.
    *
-   * @param cond
+   * @param cond The precondition.
    */
   public addFullCondition(cond: Precondition) {
     this.constraints.forEach((cstr) => this.addCondition(cstr, cond));
   }
 
   /**
+   * Adds a precondition to the dynamic constraint. Replaces an existing
+   * matching one.
    *
-   * @param dynamic
-   * @param cond
+   * @param dynamic The dynamic constraint.
+   * @param cond The precondition.
    */
   private addCondition(dynamic: DynamicCstr, cond: Precondition) {
     const condStr = dynamic.toString() + ' ' + cond.toString();

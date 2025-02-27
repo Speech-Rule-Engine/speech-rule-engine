@@ -37,7 +37,10 @@ const EN_RULES: string[] = [
 ];
 
 /**
+ * Ensures that the domain and preference/style combination in a given feature
+ * vector actually exists.
  *
+ * @param feature The current SRE feature vector.
  */
 function ensureDomain(feature: { [key: string]: boolean | string }) {
   // This preserves the possibility to specify default as domain.

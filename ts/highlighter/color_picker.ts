@@ -126,6 +126,8 @@ export class ColorPicker {
   }
 
   /**
+   * Color picker class.
+   *
    * @param background The background color definition.
    * @param foreground The optional foreground color definition.
    */

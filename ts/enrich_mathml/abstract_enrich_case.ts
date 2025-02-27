@@ -29,6 +29,8 @@ export abstract class AbstractEnrichCase implements EnrichCase {
   public abstract getMathml(): Element;
 
   /**
+   * Abstract enrichment case.
+   *
    * @param semantic The semantic node that is enriched.
    */
   constructor(public semantic: SemanticNode) {}

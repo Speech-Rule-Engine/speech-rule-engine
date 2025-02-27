@@ -78,8 +78,7 @@ function numberToWords(num: number): string {
  * its ordinal.
  *
  * @param num The number to translate.
- * @param plural A flag indicating if the ordinal is in plural.
- * @param _plural
+ * @param _plural A flag indicating if the ordinal is in plural.
  * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {

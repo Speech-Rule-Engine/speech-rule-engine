@@ -87,7 +87,7 @@ export const baseStores: Map<string, BaseJson> = new Map();
 /**
  * Retrieves a substore for a key. Creates a new one if it does not exist.
  *
- * @param base
+ * @param base The key for the base store.
  * @param key The key for the store.
  * @returns The rule store.
  */
@@ -106,7 +106,7 @@ function getSubStore(base: string, key: string): MathSimpleStore {
  * Completes a JSON representation of a rule with the information held in its
  * corresponding base structure.
  *
- * @param json
+ * @param json Structure for unicode information.
  */
 function completeWithBase(json: UnicodeJson) {
   const base = baseStores.get(json.key);
@@ -124,7 +124,7 @@ function completeWithBase(json: UnicodeJson) {
  * Function creates a rule store in the compound store for a particular
  * string, and populates it with a set of rules.
  *
- * @param base
+ * @param base The key for the base store.
  * @param str String used as key to refer to the rule store
  * precondition and constr
  * @param mappings JSON representation of mappings from styles and
@@ -355,7 +355,7 @@ function enumerate_(
 }
 
 /**
- *
+ * Resets the locale and modality values used for adding rules.
  */
 export function reset() {
   locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];

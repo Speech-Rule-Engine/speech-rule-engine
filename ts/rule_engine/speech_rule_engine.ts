@@ -801,9 +801,9 @@ export class SpeechRuleEngine {
 const stores: Map<string, BaseRuleStore> = new Map();
 
 /**
- * Factory method for generating rule stores by modality.
+ * Factory method for generating rule stores by locale and modality.
  *
- * @param locale
+ * @param locale The locale.
  * @param modality The modality.
  * @returns The generated rule store.
  */

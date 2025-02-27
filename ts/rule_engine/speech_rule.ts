@@ -406,11 +406,12 @@ export class Action {
     }
   }
 
-  // Span Naive: Here we add a custom span for the next node if it exists.
+  // Span Naive: Here we 
   /**
+   * Add a naive custom span for the next node if it exists.
    *
-   * @param comp
-   * @param span
+   * @param comp The component.
+   * @param span The span with a single string.
    */
   private static addNaiveSpan(comp: Component, span: string) {
     if (!comp.attributes) {

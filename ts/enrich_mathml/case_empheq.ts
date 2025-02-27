@@ -75,8 +75,9 @@ export class CaseEmpheq extends AbstractEnrichCase {
   }
 
   /**
-   *
-   * @param node
+   * Find a table element recursively and finalize it.
+   * 
+   * @param node The node to examine.
    */
   private recurseToTable(node: SemanticNode) {
     if (
@@ -128,8 +129,9 @@ export class CaseEmpheq extends AbstractEnrichCase {
   }
 
   /**
+   * Finalizes the table enrichment, but enriching the cell elements.
    *
-   * @param node
+   * @param node The table element.
    */
   private finalizeTable(node: SemanticNode) {
     setAttributes(node.mathmlTree, node);

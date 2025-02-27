@@ -91,13 +91,11 @@ export function resolveNameSpace(prefix: string): string {
   return nameSpaces[prefix] || null;
 }
 
-/**
- * Resolver to work with xpath in node and wgxpath in IE/Edge.
- */
 class Resolver {
   public lookupNamespaceURI: any;
+
   /**
-   *
+   * Resolver to work with xpath in node and wgxpath in IE/Edge.
    */
   constructor() {
     this.lookupNamespaceURI = resolveNameSpace;

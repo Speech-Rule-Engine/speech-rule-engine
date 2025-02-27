@@ -94,8 +94,11 @@ export function overBevelledFraction(node: Element): Span[] {
 }
 
 /**
+ * Checks if node is the boundary of a hyperfraction.
  *
- * @param node
+ * @param node The node to test.
+ * @returns The array with the node if it is a hyperfraction boundary. Otherwise
+ * empty array.
  */
 export function hyperFractionBoundary(node: Element): Element[] {
   return LOCALE.MESSAGES.regexp.HYPER ===
@@ -302,8 +305,10 @@ register(
 );
 
 /**
+ * Annotator that adds a tree depth annotation for each node.
  *
- * @param node
+ * @param node The node to annotate.
+ * @returns Array with the current depth in the tree.
  */
 function annotateDepth(node: SemanticNode): any[] {
   if (!node.parent) {
@@ -440,8 +445,10 @@ export function implicitIterator(
 }
 
 /**
+ * Ignore English language modifier if not necessary.
  *
- * @param text
+ * @param text The current Nemeth Braille string.
+ * @returns The corrected Braille string.
  */
 function ignoreEnglish(text: string) {
   return correctFont(text, LOCALE.ALPHABETS.languagePrefix.english);
@@ -450,9 +457,13 @@ function ignoreEnglish(text: string) {
 Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
 
 /**
+ * Iterates over the list of content nodes of the parent of the given nodes.
  *
- * @param nodes
- * @param context
+ * @param nodes A node array.
+ * @param context A context string.
+ * @returns A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
  */
 export function contentIterator(nodes: Element[], context: string) {
   const func = suCI(nodes, context);

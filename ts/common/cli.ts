@@ -51,7 +51,7 @@ export class Cli {
   private output: any = Cli.process.stdout;
 
   /**
-   *
+   * The command line interface for SRE.
    */
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({

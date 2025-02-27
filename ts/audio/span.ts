@@ -69,10 +69,12 @@ export class Span {
 
   // Note: def will overwrite attributes harvested from the node.
   /**
+   * Creates span from string adding attributes from a node.
    *
-   * @param str
-   * @param node
-   * @param def
+   * @param str The text string.
+   * @param node The node that contains attributes.
+   * @param def An optional attribute list.
+   * @returns The newly created span.
    */
   public static node(str: string, node: Element, def: SpanAttrs = {}) {
     const attr = Span.getAttributes(node);
@@ -83,8 +85,10 @@ export class Span {
   static attributeList = ['id', 'extid'];
 
   /**
+   * Harvests attributes from a node.
    *
-   * @param node
+   * @param node The node.
+   * @returns The list of span attributes
    */
   public static getAttributes(node: Element): SpanAttrs {
     const attrs: { [key: string]: string } = {};

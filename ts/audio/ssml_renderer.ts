@@ -151,8 +151,10 @@ export class SsmlRenderer extends XmlRenderer {
   }
 
   /**
+   * Predicate to test if a span is empty.
    *
-   * @param span
+   * @param span The span in question.
+   * @returns True if span is empty.
    */
   private isEmptySpan(span: Span) {
     const sep = span.attributes['separator'];
