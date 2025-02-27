@@ -437,7 +437,7 @@ export class Cli {
     try {
       const testInput = input.replace(/(&|#|;)/g, '');
       this.dp.parseFromString(testInput, 'text/xml');
-    } catch (err) {
+    } catch (_err) {
       return false;
     }
     return true;

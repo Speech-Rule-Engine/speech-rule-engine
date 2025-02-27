@@ -85,7 +85,8 @@ class meaningMap extends Map<string, SemanticMeaning> {
    * Lookup the semantic meaning of a symbol in terms of type and role. If symbol
    * has no predefined meaning, returns unknown.
    *
-   * @param symbol
+   * @param symbol The symbol to lookup.
+   * @returns The mening element for the symbol.
    */
   public get(symbol: string) {
     return (
@@ -104,10 +105,9 @@ class meaningMap extends Map<string, SemanticMeaning> {
  */
 class secondaryMap extends Map<string, string> {
   /**
-   * @override
-   *
    * Builds the secondary annotation structure.
    *
+   * @override
    * @param char The character to define a secondary meaning on.
    * @param kind The kind of annotation.
    * @param annotation Optionally an annotation value. Default is `kind`.
@@ -119,8 +119,8 @@ class secondaryMap extends Map<string, string> {
 
   /**
    * @override
-   * @param kind The kind of annotation.
    * @param char The character to look up.
+   * @param kind The kind of annotation.
    */
   public has(char: string, kind?: SemanticSecondary) {
     return super.has(this.secKey(kind, char));
@@ -128,8 +128,8 @@ class secondaryMap extends Map<string, string> {
 
   /**
    * @override
-   * @param kind The kind of annotation.
    * @param char The character to look up.
+   * @param kind The kind of annotation.
    */
   public get(char: string, kind?: SemanticSecondary) {
     return super.get(this.secKey(kind, char));
@@ -175,9 +175,10 @@ export const SemanticMap = {
 };
 
 /**
+ * Add meaning for a set of symbols.
  *
- * @param symbols
- * @param meaning
+ * @param symbols The list of symbols.
+ * @param meaning The associated meaning structure.
  */
 function addMeaning(symbols: string[], meaning: MeaningSet) {
   for (const symbol of symbols) {

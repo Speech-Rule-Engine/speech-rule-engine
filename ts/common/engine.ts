@@ -410,7 +410,7 @@ function configBlocks(feature: { [key: string]: boolean | string }) {
       for (const [key, val] of Object.entries(config)) {
         feature[key] = val;
       }
-    } catch (err) {
+    } catch (_err) {
       Debugger.getInstance().output('Illegal configuration ', inner);
     }
   }

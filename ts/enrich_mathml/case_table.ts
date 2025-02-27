@@ -82,11 +82,15 @@ export class CaseTable extends AbstractEnrichCase {
     } else if (DomUtil.tagName(this.mml) === MMLTAGS.MFENCED) {
       const children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);
-      rfence && this.mml.appendChild(rfence);
+      if (rfence) {
+        this.mml.appendChild(rfence);
+      }
       this.mml = EnrichMathml.rewriteMfenced(this.mml);
     } else {
       const newChildren = [lfence, this.mml];
-      rfence && newChildren.push(rfence);
+      if (rfence) {
+        newChildren.push(rfence);
+      }
       this.mml = EnrichMathml.introduceNewLayer(newChildren, this.semantic);
     }
     setAttributes(this.mml, this.semantic);

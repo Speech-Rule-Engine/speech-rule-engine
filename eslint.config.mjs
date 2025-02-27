@@ -25,6 +25,7 @@ export default [...compat.extends(
 
     "@typescript-eslint/no-unused-vars": ["error", {
       argsIgnorePattern: "^_",
+      caughtErrorsIgnorePattern: "^_"
     }],
 
     "no-inner-declarations": "off",

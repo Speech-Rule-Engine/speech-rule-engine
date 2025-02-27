@@ -2488,12 +2488,9 @@ export class SemanticProcessor {
    *
    * @param nodes The list of nodes.
    * @param root Initial tree.
-   * @param lastop Last operator that has not been
-   * processed yet.
-   * @param opt_prefixes Operator nodes that
-   * will become prefix operation (or postfix in case they come after last
-   * operand).
-   * @param prefix
+   * @param lastop Last operator that has not been processed yet.
+   * @param prefixe Operator nodes that will become prefix operation (or postfix
+   *     in case they come after last operand).
    * @returns The root node of the syntax tree.
    */
   private operationsTree_(

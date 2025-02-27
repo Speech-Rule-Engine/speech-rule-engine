@@ -41,6 +41,7 @@ const PROCESSORS = new Map();
  * Adds a processor to the processor map.
  *
  * @param processor The processor object.
+ * @template T
  */
 function set<T>(processor: Processor<T>) {
   PROCESSORS.set(processor.name, processor);
@@ -51,6 +52,7 @@ function set<T>(processor: Processor<T>) {
  *
  * @param name The name of the processor.
  * @returns The processor.
+ * @template T
  */
 function get<T>(name: string): Processor<T> {
   const processor = PROCESSORS.get(name);
@@ -66,6 +68,7 @@ function get<T>(name: string): Processor<T> {
  * @param name The name of the processor.
  * @param expr The expression to process.
  * @returns The data structure resulting from the processing the expression.
+ * @template T
  */
 export function process<T>(name: string, expr: string): T {
   const processor = get(name);
@@ -82,6 +85,7 @@ export function process<T>(name: string, expr: string): T {
  * @param name The name of the processor.
  * @param data The data structure that's the result of this processor.
  * @returns A string representation of the result.
+ * @template T
  */
 function print<T>(name: string, data: T): string {
   const processor = get(name);
