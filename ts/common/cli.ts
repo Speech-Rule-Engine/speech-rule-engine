@@ -55,7 +55,7 @@ export class Cli {
    */
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
-      errorHandler: (_key: string, _msg: string) => {
+      onError: (_key: string, _msg: string) => {
         throw new SREError('XML DOM error!');
       }
     });

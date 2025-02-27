@@ -644,7 +644,7 @@ export class SpeechRuleEngine {
         typeof descrPersonality[key] == 'number' &&
         typeof val == 'number'
       ) {
-        descrPersonality[key] = descrPersonality[key] + val;
+        descrPersonality[key] = (descrPersonality[key] + val).toString();
       } else if (!descrPersonality[key]) {
         descrPersonality[key] = val;
       }

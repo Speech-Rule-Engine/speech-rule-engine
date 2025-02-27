@@ -12,6 +12,7 @@
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "no-inner-declarations": "off",
     "prefer-const": ["error", {"destructuring": "all"}],
+    "jsdoc/require-template": "error",
     "jsdoc/require-jsdoc": ["warn", {"contexts": ["MethodDefinition"]}],
     "jsdoc/require-description": ["warn", {"exemptedBy": ["returns", "yields"]}],
     "jsdoc/tag-lines": ["warn", "always", {"count": 0, "startLines": 1}],
