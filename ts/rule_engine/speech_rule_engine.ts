@@ -853,11 +853,15 @@ Engine.nodeEvaluator = SpeechRuleEngine.getInstance().evaluateNode.bind(
   SpeechRuleEngine.getInstance()
 );
 
+// TODO: This is a particular method for nemeth annotation, that should be
+// handled better elsewhere.
 const punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
 
 /**
+ * Removes unnecessary punctuation marks.
  *
- * @param descrs
+ * @param descrs A list of auditory descriptions.
+ * @returns The processed list.
  */
 function processAnnotations(
   descrs: AuditoryDescription[]

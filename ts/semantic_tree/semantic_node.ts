@@ -45,9 +45,6 @@ const enum Attribute {
   TEXT = '$t'
 }
 
-/**
- * @param id Node id.
- */
 export class SemanticNode {
   /**
    * MathML nodes of the node.
@@ -192,7 +189,9 @@ export class SemanticNode {
   }
 
   /**
-   * @param id The id number.
+   * Semantic Node class.
+   *
+   * @param id Node id.
    */
   constructor(public id: number) {}
 
@@ -585,8 +584,10 @@ export class SemanticNode {
   }
 
   /**
+   * Escapes the semi-colons in a string.
    *
-   * @param value
+   * @param value The original string.
+   * @returns The modified string.
    */
   private static escapeValue(value: string): string {
     return value.replace(/;/g, '\\0003B');

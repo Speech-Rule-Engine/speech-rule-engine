@@ -153,9 +153,8 @@ export class SemanticSkeleton {
    * Combines content and children lists depending on the type of the semantic
    * node.
    *
-   * @param semantic The semantic tree node.
-   * @param type
-   * @param _role
+   * @param type The semantic type.
+   * @param _role The semantic role (unused).
    * @param content The list of content nodes.
    * @param children The list of child nodes.
    * @returns The combined list.
@@ -273,9 +272,9 @@ export class SemanticSkeleton {
    *
    * @param mml A mml node to add a structure to.
    * @param node A semantic node.
-   * @param level
-   * @param posinset
-   * @param setsize
+   * @param level The level in the tree, used for aria-level.
+   * @param posinset The position in the child set, used for aria-posinset.
+   * @param setsize The size of the child set, used for aria-setsize.
    * @returns The sexp structure.
    */
   private static tree_(
@@ -332,12 +331,13 @@ export class SemanticSkeleton {
   }
 
   /**
+   * Adds aria attributes to the element.
    *
-   * @param node
-   * @param level
-   * @param posinset
-   * @param setsize
-   * @param role
+   * @param node A mml node to add a attributes to.
+   * @param level The level in the tree, used for aria-level.
+   * @param posinset The position in the child set, used for aria-posinset.
+   * @param setsize The size of the child set, used for aria-setsize.
+   * @param role The aria-role to add.
    */
   private static addAria(
     node: Element,
@@ -398,8 +398,9 @@ export class SemanticSkeleton {
   }
 
   /**
+   * Semantic skeleton describes the semantic tree structure as an sexp.
    *
-   * @param skeleton
+   * @param skeleton The sexpression.
    */
   constructor(skeleton: Sexp) {
     skeleton = skeleton === 0 ? skeleton : skeleton || [];
@@ -465,8 +466,10 @@ export class SemanticSkeleton {
   }
 
   /**
+   * Compute the direct children of a node in the skeleton.
    *
-   * @param id
+   * @param id The node id.
+   * @returns The list of ids of direct children.
    */
   public directChildren(id: number): number[] {
     if (!this.isRoot(id)) {
@@ -485,8 +488,10 @@ export class SemanticSkeleton {
   }
 
   /**
+   * Compute nodes in the subtree rooted in a node in the skeleton.
    *
-   * @param id
+   * @param id The node id.
+   * @returns The list of ids of children in the spanned subtree.
    */
   public subtreeNodes(id: number): number[] {
     if (!this.isRoot(id)) {
