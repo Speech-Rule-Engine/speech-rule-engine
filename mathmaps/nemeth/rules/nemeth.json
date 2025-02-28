@@ -11,6 +11,14 @@
       "CQFresetNesting"
     ],
     [
+      "Rule",
+      "direct-speech",
+      "default",
+      "[t] @ext-speech (grammar:literal)",
+      "self::*[@ext-speech]",
+      "priority=Infinity"
+    ],
+    [
       "Precondition",
       "unknown",
       "default",

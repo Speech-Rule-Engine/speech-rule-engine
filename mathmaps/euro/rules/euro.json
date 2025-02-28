@@ -12,6 +12,14 @@
     ],
     [
       "Rule",
+      "direct-speech",
+      "default",
+      "[t] @ext-speech (grammar:literal)",
+      "self::*[@ext-speech]",
+      "priority=Infinity"
+    ],
+    [
+      "Rule",
       "latex",
       "default",
       "[n] @latex",

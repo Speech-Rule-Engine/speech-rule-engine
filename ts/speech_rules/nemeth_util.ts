@@ -481,3 +481,11 @@ export function contentIterator(nodes: Element[], context: string) {
     return descrs;
   };
 }
+
+function literal(text: string) {
+  const evalStr = (e: string) =>
+    Engine.getInstance().evaluator(e, Engine.getInstance().dynamicCstr);
+  return Array.from(text).map(evalStr).join('');
+}
+
+Grammar.getInstance().setCorrection('literal', literal);
