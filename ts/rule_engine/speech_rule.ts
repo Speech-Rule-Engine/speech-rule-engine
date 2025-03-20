@@ -406,7 +406,7 @@ export class Action {
     }
   }
 
-  // Span Naive: Here we 
+  // Span Naive: Here we
   /**
    * Add a naive custom span for the next node if it exists.
    *

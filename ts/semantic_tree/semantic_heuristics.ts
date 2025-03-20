@@ -843,14 +843,28 @@ SemanticHeuristics.add(
       const leftFence = nodes[0];
       const rightFence = nodes[1];
       const content = nodes.slice(2);
-      if (!(leftFence && (leftFence.textContent === ']' || leftFence.textContent === '[') &&
-        rightFence && (rightFence.textContent === ']' || rightFence.textContent === '['))) {
+      if (
+        !(
+          leftFence &&
+          (leftFence.textContent === ']' || leftFence.textContent === '[') &&
+          rightFence &&
+          (rightFence.textContent === ']' || rightFence.textContent === '[')
+        )
+      ) {
         return false;
       }
-      const partition = SemanticUtil.partitionNodes(content, SemanticPred.isPunctuation);
-      return !!(partition.rel.length === 1 && partition.comp[0].length && partition.comp[1].length);
+      const partition = SemanticUtil.partitionNodes(
+        content,
+        SemanticPred.isPunctuation
+      );
+      return !!(
+        partition.rel.length === 1 &&
+        partition.comp[0].length &&
+        partition.comp[1].length
+      );
     }
-  ));
+  )
+);
 
 /**
  *  Heuristic that tries to combine simple identifiers into composite names, in
@@ -860,9 +874,9 @@ SemanticHeuristics.add(
   new SemanticMmlHeuristic(
     'function_from_identifiers',
     (node: Element) => {
-      const expr = DomUtil.toArray(node.childNodes).
-        map(x => x.textContent.trim()).
-        join('');
+      const expr = DomUtil.toArray(node.childNodes)
+        .map((x) => x.textContent.trim())
+        .join('');
       const meaning = SemanticMap.Meaning.get(expr);
       if (meaning.type === SemanticType.UNKNOWN) {
         return node;
@@ -879,9 +893,12 @@ SemanticHeuristics.add(
       if (children.length < 2) {
         return false;
       }
-      return children.every(child =>
-        DomUtil.tagName(child) === MMLTAGS.MI &&
-        SemanticMap.Meaning.get(child.textContent.trim()).role ===
-        SemanticRole.LATINLETTER);
-    })
+      return children.every(
+        (child) =>
+          DomUtil.tagName(child) === MMLTAGS.MI &&
+          SemanticMap.Meaning.get(child.textContent.trim()).role ===
+            SemanticRole.LATINLETTER
+      );
+    }
+  )
 );

@@ -76,7 +76,7 @@ export class CaseEmpheq extends AbstractEnrichCase {
 
   /**
    * Find a table element recursively and finalize it.
-   * 
+   *
    * @param node The node to examine.
    */
   private recurseToTable(node: SemanticNode) {

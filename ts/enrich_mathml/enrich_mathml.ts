@@ -158,8 +158,7 @@ export function walkTree(semantic: SemanticNode): Element {
   newNode = rewriteMfenced(newNode);
   mergeChildren(newNode, childrenList, semantic);
   if (!IDS.has(semantic.id)) {
-    IDS.set(semantic.id, true),
-    EnrichAttr.setAttributes(newNode, semantic);
+    IDS.set(semantic.id, true), EnrichAttr.setAttributes(newNode, semantic);
   }
   Debugger.getInstance().output('WALKING END: ' + semantic.toString());
   return ascendNewNode(newNode);

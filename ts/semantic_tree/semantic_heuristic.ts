@@ -21,7 +21,10 @@
 
 import { SemanticNode } from './semantic_node.js';
 
-export declare type SemanticHeuristicTypes = Element | SemanticNode | SemanticNode[];
+export declare type SemanticHeuristicTypes =
+  | Element
+  | SemanticNode
+  | SemanticNode[];
 
 // TODO: Heuristic paths have to be included in the tests.
 /**
@@ -83,6 +86,4 @@ export class SemanticMultiHeuristic extends SemanticAbstractHeuristic<
  *
  * @override
  */
-export class SemanticMmlHeuristic extends SemanticAbstractHeuristic<
-  Element
-> {}
+export class SemanticMmlHeuristic extends SemanticAbstractHeuristic<Element> {}

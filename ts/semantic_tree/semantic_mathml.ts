@@ -193,8 +193,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     } else {
       // Case of a 'meaningful' row, even if they are empty.
       const snode = SemanticHeuristics.run('function_from_identifiers', node);
-      newNode = (snode && snode !== node) ? snode :
-        SemanticProcessor.getInstance().row(this.parseList(children));
+      newNode =
+        snode && snode !== node
+          ? snode
+          : SemanticProcessor.getInstance().row(this.parseList(children));
     }
     newNode.mathml.unshift(node);
     return newNode;
