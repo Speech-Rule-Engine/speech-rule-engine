@@ -22,10 +22,11 @@
 
 import { Debugger } from '../common/debugger.js';
 import { Engine } from '../common/engine.js';
-import { NamedSymbol } from './semantic_attr.js';
+import { SemanticMap, NamedSymbol } from './semantic_attr.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
   SemanticTreeHeuristic,
+  SemanticMmlHeuristic,
   SemanticMultiHeuristic
 } from './semantic_heuristic.js';
 import { SemanticRole, SemanticType } from './semantic_meaning.js';
@@ -817,10 +818,11 @@ SemanticHeuristics.add(
   )
 );
 
-
-// "Continential" Interval Heuristic:
-// * We look for two square brakets, regardless of direction, enclosing a
-//   punctuated pair.
+/**
+ * "Continential" Interval Heuristic:
+ * We look for two square brakets, regardless of direction, enclosing a
+ * punctuated pair.
+ **/
 SemanticHeuristics.add(
   new SemanticMultiHeuristic(
     'bracketed_interval',
@@ -849,3 +851,37 @@ SemanticHeuristics.add(
       return !!(partition.rel.length === 1 && partition.comp[0].length && partition.comp[1].length);
     }
   ));
+
+/**
+ *  Heuristic that tries to combine simple identifiers into composite names, in
+ *  case they are known functions.
+ */
+SemanticHeuristics.add(
+  new SemanticMmlHeuristic(
+    'function_from_identifiers',
+    (node: Element) => {
+      const expr = DomUtil.toArray(node.childNodes).
+        map(x => x.textContent.trim()).
+        join('');
+      const meaning = SemanticMap.Meaning.get(expr);
+      if (meaning.type === SemanticType.UNKNOWN) {
+        return node;
+      }
+      const snode = SemanticHeuristics.factory.makeLeafNode(
+        expr,
+        SemanticProcessor.getInstance().font(node.getAttribute('mathvariant'))
+      );
+      snode.mathmlTree = node;
+      return snode;
+    },
+    (node: Element) => {
+      const children = DomUtil.toArray(node.childNodes);
+      if (children.length < 2) {
+        return false;
+      }
+      return children.every(child =>
+        DomUtil.tagName(child) === MMLTAGS.MI &&
+        SemanticMap.Meaning.get(child.textContent.trim()).role ===
+        SemanticRole.LATINLETTER);
+    })
+);
