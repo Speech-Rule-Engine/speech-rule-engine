@@ -93,7 +93,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     const children = DomUtil.toArray(this.mml.childNodes).slice(1);
     let childCounter = 0;
     const completeIndices = (indices: number[]) => {
-      for (let index of indices) {
+      for (const index of indices) {
         const child = children[childCounter];
         if (child && index === parseInt(child.getAttribute(Attribute.ID))) {
           child.setAttribute(Attribute.PARENT, this.semantic.id.toString());

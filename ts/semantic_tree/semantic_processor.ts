@@ -2491,6 +2491,7 @@ export class SemanticProcessor {
    * @param lastop Last operator that has not been processed yet.
    * @param prefixe Operator nodes that will become prefix operation (or postfix
    *     in case they come after last operand).
+   * @param prefix
    * @returns The root node of the syntax tree.
    */
   private operationsTree_(
@@ -2772,7 +2773,7 @@ export class SemanticProcessor {
       return contentStack[0];
     }
     // Attack with interval heuristic.
-    let interval = SemanticHeuristics.run(
+    const interval = SemanticHeuristics.run(
       'bracketed_interval',
       [fences[0], fences[1], ...(content[0] || [])],
       () => null

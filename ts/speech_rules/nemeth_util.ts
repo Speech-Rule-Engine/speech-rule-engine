@@ -482,6 +482,10 @@ export function contentIterator(nodes: Element[], context: string) {
   };
 }
 
+/**
+ *
+ * @param text
+ */
 function literal(text: string) {
   const evalStr = (e: string) =>
     Engine.getInstance().evaluator(e, Engine.getInstance().dynamicCstr);

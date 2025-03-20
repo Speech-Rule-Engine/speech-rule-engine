@@ -822,7 +822,7 @@ SemanticHeuristics.add(
  * "Continential" Interval Heuristic:
  * We look for two square brakets, regardless of direction, enclosing a
  * punctuated pair.
- **/
+ */
 SemanticHeuristics.add(
   new SemanticMultiHeuristic(
     'bracketed_interval',
