@@ -2771,6 +2771,25 @@ export class SemanticProcessor {
     if (fences.length === 0 && openStack.length === 0) {
       return contentStack[0];
     }
+    // Attack with interval heuristic.
+    let interval = SemanticHeuristics.run(
+      'bracketed_interval',
+      [fences[0], fences[1], ...(content[0] || [])],
+      () => null
+    ) as SemanticNode;
+    if (interval) {
+      fences.shift();
+      fences.shift();
+      content.shift();
+      const stack = contentStack.pop() || [];
+      contentStack.push([...stack, interval, ...content.shift()]);
+      return SemanticProcessor.getInstance().fences_(
+        fences,
+        content,
+        openStack,
+        contentStack
+      );
+    }
     const openPred = (x: SemanticNode) =>
       SemanticPred.isRole(x, SemanticRole.OPEN);
     // Base case 2: Only open and neutral fences are left on the stack.

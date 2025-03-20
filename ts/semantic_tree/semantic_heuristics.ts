@@ -818,6 +818,39 @@ SemanticHeuristics.add(
   )
 );
 
+/**
+ * "Continential" Interval Heuristic:
+ * We look for two square brakets, regardless of direction, enclosing a
+ * punctuated pair.
+ **/
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'bracketed_interval',
+    (nodes: SemanticNode[]) => {
+      const leftFence = nodes[0];
+      const rightFence = nodes[1];
+      const content = nodes.slice(2);
+      const childNode = SemanticProcessor.getInstance().row(content);
+      const fenced = SemanticHeuristics.factory.makeBranchNode(
+        SemanticType.FENCED,
+        [childNode],
+        [leftFence, rightFence]
+      );
+      fenced.role = SemanticRole.LEFTRIGHT;
+      return fenced;
+    },
+    (nodes: SemanticNode[]) => {
+      const leftFence = nodes[0];
+      const rightFence = nodes[1];
+      const content = nodes.slice(2);
+      if (!(leftFence && (leftFence.textContent === ']' || leftFence.textContent === '[') &&
+        rightFence && (rightFence.textContent === ']' || rightFence.textContent === '['))) {
+        return false;
+      }
+      const partition = SemanticUtil.partitionNodes(content, SemanticPred.isPunctuation);
+      return !!(partition.rel.length === 1 && partition.comp[0].length && partition.comp[1].length);
+    }
+  ));
 
 /**
  *  Heuristic that tries to combine simple identifiers into composite names, in
