@@ -31,6 +31,7 @@ import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
   private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
@@ -191,7 +192,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       }
     } else {
       // Case of a 'meaningful' row, even if they are empty.
-      newNode = SemanticProcessor.getInstance().row(this.parseList(children));
+      const snode = SemanticHeuristics.run('function_from_identifiers', node);
+      newNode = (snode && snode !== node) ? snode :
+        SemanticProcessor.getInstance().row(this.parseList(children));
     }
     newNode.mathml.unshift(node);
     return newNode;
