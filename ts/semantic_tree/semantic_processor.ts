@@ -1045,8 +1045,7 @@ export class SemanticProcessor {
    * or the relation ends in an side.
    *
    * @param node The node.
-   * @param relation The relation to be tested.
-   * @param relations
+   * @param relations The relation to be tested.
    * @param opt_right From the right side?
    * @returns True if the node is an end relation.
    */
@@ -1073,8 +1072,7 @@ export class SemanticProcessor {
    * Check for a particular relations.
    *
    * @param node The node.
-   * @param relation The relation to be tested.
-   * @param relations
+   * @param relations The relation to be tested.
    * @returns True if the node is an end relation.
    */
   private static isPureRelation_(
@@ -2489,9 +2487,8 @@ export class SemanticProcessor {
    * @param nodes The list of nodes.
    * @param root Initial tree.
    * @param lastop Last operator that has not been processed yet.
-   * @param prefixe Operator nodes that will become prefix operation (or postfix
+   * @param prefix Operator nodes that will become prefix operation (or postfix
    *     in case they come after last operand).
-   * @param prefix
    * @returns The root node of the syntax tree.
    */
   private operationsTree_(

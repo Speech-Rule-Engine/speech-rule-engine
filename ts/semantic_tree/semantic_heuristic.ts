@@ -32,6 +32,8 @@ export declare type SemanticHeuristicTypes =
  * that either switches them on automatically (e.g., on selection of a domain),
  * or they can be switched on manually via a flag. Currently these flags are
  * hard coded.
+ *
+ * @template T
  */
 export interface SemanticHeuristic<T> {
   name: string;

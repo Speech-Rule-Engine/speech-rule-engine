@@ -483,8 +483,9 @@ export function contentIterator(nodes: Element[], context: string) {
 }
 
 /**
+ * Translates text into literal Braille.
  *
- * @param text
+ * @param text The text to be translated.
  */
 function literal(text: string) {
   const evalStr = (e: string) =>

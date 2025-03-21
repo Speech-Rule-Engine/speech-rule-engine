@@ -55,10 +55,10 @@ function create(): Locale {
   loc.COMBINERS['sansserif'] = sansserifCombiner;
 
   loc.FUNCTIONS.fracNestDepth = (_node) => false;
-  (loc.FUNCTIONS.combineRootIndex = combinePostfixIndex),
-    (loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c);
+  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
+  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c;
   loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font + ' ');
-  (loc.FUNCTIONS.plural = (unit: string) => {
+  loc.FUNCTIONS.plural = (unit: string) => {
     if (/.*os$/.test(unit)) {
       return unit + 'sos';
     }
@@ -91,8 +91,8 @@ function create(): Locale {
     }
     // Note some stressed vowels are missing.
     return unit + 's';
-  }),
-    (loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+  };
+  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
       if (unit.match(/^metre/)) {
         prefix = prefix
           .replace(/a$/, 'à')
@@ -100,7 +100,7 @@ function create(): Locale {
           .replace(/i$/, 'í');
       }
       return prefix + unit;
-    });
+  };
 
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 

@@ -394,7 +394,7 @@ export function getDepthValue(node: Element, roleList: string[]): number {
   if (children.length) {
     children.forEach((child) => {
       cur = getDepthValue(child, roleList);
-      cur > max ? (max = cur) : max;
+      max = cur > max ? cur : max;
     });
     return max + 1;
   }
