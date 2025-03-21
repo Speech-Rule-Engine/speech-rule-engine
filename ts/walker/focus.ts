@@ -127,6 +127,8 @@ export class Focus {
   }
 
   /**
+   * Class of focus structures for walkers.
+   *
    * @param nodes The semantic nodes of the focus.
    * @param primary The primary component of the focus.
    */

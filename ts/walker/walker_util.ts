@@ -81,9 +81,12 @@ export function getBySemanticId(root: Element, id: string): Element {
 }
 
 /**
+ * Get all nodes in a DOM element that have a particular semantic id. There can
+ * be multiple due to mactions, etc.
  *
- * @param root
- * @param id
+ * @param root The root of the DOM tree.
+ * @param id The semantic id to look for.
+ * @returns The list of elements that have that semantic id.
  */
 export function getAllBySemanticId(root: Element, id: string): Element[] {
   if (root.getAttribute(Attribute.ID) === id) {

@@ -486,7 +486,9 @@ export function contentIterator(nodes: Element[], context: string) {
  * Translates text into literal Braille.
  *
  * @param text The text to be translated.
+ * @returns The Braille string.
  */
+// TODO: Add number indicator at the right points.
 function literal(text: string) {
   const evalStr = (e: string) =>
     Engine.getInstance().evaluator(e, Engine.getInstance().dynamicCstr);

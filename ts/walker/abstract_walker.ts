@@ -150,6 +150,8 @@ export abstract class AbstractWalker<T> implements Walker {
   ): T[];
 
   /**
+   * Abstract walker class constructor.
+   *
    * @param node The (rendered) node on which the walker is called.
    * @param generator The speech generator for
    *     this walker.
@@ -280,14 +282,14 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   *
+   * @returns The DOM nodes in the focus element.
    */
   public focusDomNodes() {
     return this.getFocus().getDomNodes();
   }
 
   /**
-   *
+   * @returns The semantic nodes for the focus element.
    */
   public focusSemanticNodes() {
     return this.getFocus().getSemanticNodes();

@@ -195,8 +195,6 @@ function addMeaning(symbols: string[], meaning: MeaningSet) {
 
 /**
  * Initializes the dictionary mapping symbols to meaning.
- *
- * @returns The dictionary mapping strings to semantic attributes.
  */
 function initMeaning() {
   // Punctuation Characters.
@@ -1183,10 +1181,12 @@ function initMeaning() {
 
 // Fences
 /**
+ * Adds fences mappaings to a meaning map.
  *
- * @param map
- * @param ints
- * @param sep
+ * @param map The map to add to.
+ * @param ints The initial list of maps.
+ * @param sep The separation for fence and their closing counterpart for a
+ *     single unicode value.
  */
 function addFences(
   map: Map<string, string>,
@@ -1204,7 +1204,7 @@ function addFences(
 }
 
 /**
- *
+ * Initializes the dictionary mapping for fences.
  */
 function initFences() {
   // The intervals are manually minimised.
@@ -1318,7 +1318,7 @@ const prefixFunctions: string[] = trigonometricFunctions.concat(
 );
 
 /**
- *
+ * Initializes the dictionary mapping for functions.
  */
 function initFunctions() {
   // Functions
@@ -1434,8 +1434,11 @@ export function isMatchingFence(open: string, close: string): boolean {
  */
 
 /**
+ * Change semantic meaning of some alphabet entries.
  *
- * @param alphabet
+ * @param alphabet The alphabet set.
+ * @param change Mapping on elements to change with alphabet position and new
+ * meaning.
  */
 function changeSemantics(
   alphabet: string[],
@@ -1450,8 +1453,11 @@ function changeSemantics(
 }
 
 /**
+ * Add secondary semantic meaning of some alphabet entries.
  *
- * @param alphabet
+ * @param alphabet The alphabet set.
+ * @param change Mapping on elements to change with alphabet position and
+ * secondary meaning.
  */
 function addSecondaries(
   alphabet: string[],
@@ -1466,13 +1472,18 @@ function addSecondaries(
 }
 
 /**
+ * Initialise meaning mappings for a single alphabet.
  *
- * @param alphabet
- * @param type
- * @param role
- * @param font
- * @param semfont
- * @param secondaries
+ * @param alphabet The base alphabet.
+ * @param type The semantic type.
+ * @param role The semantic role.
+ * @param font The font.
+ * @param semfont The semantic name of the font.
+ * @param secondaries List of secondary meanings that are being added.
+ * @param change A mapping for meaning changes of elements in the alphabet,
+ * given as alphabet positions and the semantic to change to.
+ * @param seondary A mapping for secondary meanings of elements in the alphabet,
+ * given as alphabet positions and the secondary semantic.
  */
 function singleAlphabet(
   alphabet: Alphabet.Base,
@@ -1502,9 +1513,9 @@ function singleAlphabet(
 }
 
 /**
- *
+ * Iniialises all alphabets.
  */
-function alphabets() {
+function initAlphabets() {
   for (const [name, font] of Object.entries(SemanticFont)) {
     const emb = !!(Alphabet as any).Embellish[name];
     const semfont = emb
@@ -1570,5 +1581,5 @@ function alphabets() {
 
 initMeaning();
 initFences();
-alphabets();
+initAlphabets();
 initFunctions();

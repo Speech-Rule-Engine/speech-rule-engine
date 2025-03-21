@@ -136,6 +136,7 @@ export class SemanticProcessor {
    * the cell hierarchy level.
    *
    * @param table The node to be rewritten a multiline.
+   * @returns The rewritten table node.
    */
   public static tableToMultiline(table: SemanticNode): SemanticNode {
     if (!SemanticPred.tableIsMultiline(table)) {
@@ -220,9 +221,11 @@ export class SemanticProcessor {
    * Semantically classifies a table in terms of equation system it might be.
    *
    * @param table The table node.
+   * @returns The rewritten table node.
    */
   public static classifyTable(table: SemanticNode) {
     const columns = SemanticProcessor.computeColumns_(table);
+    /* eslint-disable @typescript-eslint/no-unused-expressions */
     SemanticProcessor.classifyByColumns_(
       table,
       columns,
@@ -785,9 +788,10 @@ export class SemanticProcessor {
   }
 
   /**
+   * Derives meaning of the semantic node from the actual textual content.
    *
-   * @param node
-   * @param func
+   * @param node The semantic node.
+   * @param func The function to apply that updates the meaning.
    */
   private static meaningFromContent(
     node: SemanticNode,
@@ -803,8 +807,8 @@ export class SemanticProcessor {
    * Compute the role of a number if it does not have one already.
    *
    * @param node The semantic tree node.
-   * @param content
-   * @param meaning
+   * @param content The textual content as a string of single characters
+   * @param meaning The semantic meaning for each single character.
    */
   private static numberRole_(
     node: SemanticNode,
@@ -2420,8 +2424,9 @@ export class SemanticProcessor {
   }
 
   /**
+   * Wraps postfix operators for a sliced structure.
    *
-   * @param split
+   * @param split The slice.
    */
   private wrapPostfix(split: SemanticUtil.Slice) {
     // Dealing with explicit postfix operators.
@@ -2451,6 +2456,7 @@ export class SemanticProcessor {
    *
    * @param prefix A list of prefix nodes.
    * @param split The split structure containing head, operator, and tail.
+   * @returns The new prefix node.
    */
   private wrapFactor(prefix: SemanticNode[], split: SemanticUtil.Slice) {
     SemanticProcessor.getInstance().wrapPostfix(split);
@@ -2461,9 +2467,11 @@ export class SemanticProcessor {
   }
 
   /**
+   * Adds an additional factor to an operations tree.
    *
-   * @param node
-   * @param split
+   * @param node The operations tree.
+   * @param split The slice.
+   * @returns The root node of ths operations tree.
    */
   private addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
     if (!split.div) {

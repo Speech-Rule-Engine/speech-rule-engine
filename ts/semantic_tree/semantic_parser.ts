@@ -61,6 +61,8 @@ export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
   private factory_: SemanticNodeFactory = new SemanticNodeFactory();
 
   /**
+   * Abstract parser for semantic trees.
+   *
    * @param type The type of the parser.
    */
   constructor(private type: string) {}
