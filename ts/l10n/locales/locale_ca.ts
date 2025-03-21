@@ -93,13 +93,10 @@ function create(): Locale {
     return unit + 's';
   };
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
-      if (unit.match(/^metre/)) {
-        prefix = prefix
-          .replace(/a$/, 'à')
-          .replace(/o$/, 'ò')
-          .replace(/i$/, 'í');
-      }
-      return prefix + unit;
+    if (unit.match(/^metre/)) {
+      prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');
+    }
+    return prefix + unit;
   };
 
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;

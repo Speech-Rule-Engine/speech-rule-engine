@@ -114,7 +114,7 @@ function create(): Locale {
   loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font);
   loc.FUNCTIONS.si = identityTransformer;
   loc.ALPHABETS.combiner = (letter, font, num) => {
-      return font ? font + num + letter : simpleEnglish(letter);
+    return font ? font + num + letter : simpleEnglish(letter);
   };
   loc.ALPHABETS.digitTrans = { default: NUMBERS.numberToWords };
 

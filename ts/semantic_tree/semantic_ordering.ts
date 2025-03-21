@@ -89,7 +89,6 @@ export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
 }
 
 class SemanticComparator {
-
   /**
    * Class of semantic comparators.
    *

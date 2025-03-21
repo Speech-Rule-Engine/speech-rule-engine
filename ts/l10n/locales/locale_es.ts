@@ -77,13 +77,10 @@ function create(): Locale {
     return unit + 'es';
   };
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
-      if (unit.match(/^metro/)) {
-        prefix = prefix
-          .replace(/a$/, 'á')
-          .replace(/o$/, 'ó')
-          .replace(/i$/, 'í');
-      }
-      return prefix + unit;
+    if (unit.match(/^metro/)) {
+      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
+    }
+    return prefix + unit;
   };
 
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
