@@ -131,7 +131,7 @@ export class SpeechRuleEngine {
    * no node is given.
    *
    * @param node The node to be evaluated.
-   * @param _clear
+   * @param _clear Flag indicating if the speech structure should be cleared.
    * @returns A list of auditory descriptions
    *   for that node.
    */

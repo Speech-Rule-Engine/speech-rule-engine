@@ -565,6 +565,7 @@ const SEMANTIC_MAPPING_: {
  *
  * @param special Special predicate mapping.
  * @param node The semantic node to test.
+ * @returns Preference computed by the special test.
  */
 function testSpecial(
   special: { [key: string]: string },
@@ -583,6 +584,7 @@ function testSpecial(
  *
  * @param special Special predicate specification of the form "PRED:ARG".
  * @param node The semantic node to test.
+ * @returns True if a specialized preference predicate holds on the node.
  */
 function executeSpecial(special: string, node: SemanticNode) {
   const [pred, arg] = special.split(':');
