@@ -20,17 +20,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-/** ## Basic Idea
-
-* Holds the speech in a JSON structure arranged by semantic node ids 
-* Collates information from the speech rule engine 
-* Engine runs with one instance of the structure
-* Completion is by supplying another argument plus callback for the rule engine and setup
-
-* One map per modality
-* Completion then goes through all of the maps and fills them.
-
-*/
+/**
+ ## Basic Idea
+ 
+ * Holds the speech in a JSON structure arranged by semantic node ids 
+ * Collates information from the speech rule engine 
+ * Engine runs with one instance of the structure
+ * Completion is by supplying another argument plus callback for the rule engine and setup
+ 
+ * One map per modality
+ * Completion then goes through all of the maps and fills them.
+ 
+ */
 
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as DomUtil from '../common/dom_util.js';
@@ -43,6 +44,10 @@ type SpeechMap = Map<string, AuditoryDescription[]>;
 export class SpeechStructure {
   public speechMaps: Map<string, SpeechMap> = new Map();
 
+  /**
+   *
+   * @param id
+   */
   private getSpeechMap(id: string): SpeechMap {
     let map = this.speechMaps.get(id);
     if (!map) {
@@ -52,15 +57,31 @@ export class SpeechStructure {
     return map;
   }
 
+  /**
+   *
+   * @param modality
+   * @param id
+   * @param descr
+   */
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
-    let map = this.getSpeechMap(id);
+    const map = this.getSpeechMap(id);
     map.set(modality, descr);
   }
 
   private nodeMap: Map<string, Element> = null;
 
+  /**
+   *
+   * @param node
+   */
   constructor(public node: Element) {}
 
+  /**
+   *
+   * @param node
+   * @param descr
+   * @param modality
+   */
   public addNode(
     node: Element,
     descr: AuditoryDescription[],
@@ -76,10 +97,17 @@ export class SpeechStructure {
     }
   }
 
+  /**
+   *
+   * @param id
+   */
   public get(id: string) {
     return this.speechMaps.get(id);
   }
 
+  /**
+   *
+   */
   private getNodeMap() {
     if (this.nodeMap) {
       return this.nodeMap;
@@ -105,8 +133,8 @@ export class SpeechStructure {
   /**
    * Completes a speech modality.
    *
-   * @param {string} modality The modality to complete.
-   * @param {any} func The function to use for completion.
+   * @param modality The modality to complete.
+   * @param func The function to use for completion.
    */
   public completeModality(modality: string, func: any) {
     const oldModality = Engine.getInstance().modality;
@@ -123,7 +151,7 @@ export class SpeechStructure {
   /**
    * Computes json speech structure for a list of given markups.
    *
-   * @param {string[]} mls Optional markup strings. Defaults to none.
+   * @param mls Optional markup strings. Defaults to none.
    */
   public json(mls: string[] = ['none']) {
     const result: {

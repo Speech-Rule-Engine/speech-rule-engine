@@ -441,8 +441,8 @@ export async function workerSpeech(
   expr: string,
   options: OptionsList
 ): Promise<WorkerStructure> {
-  let mml = DomUtil.parseInput(expr);
-  let rebuilt = new RebuildStree(mml);
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -458,8 +458,8 @@ export async function workerNextRules(
   options: OptionsList
 ): Promise<WorkerStructure> {
   // TODO: Don't do anything if no next rules!
-  let mml = DomUtil.parseInput(expr);
-  let rebuilt = new RebuildStree(mml);
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
   options = SpeechGeneratorUtil.nextRules(options);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
@@ -478,8 +478,8 @@ export async function workerNextStyle(
   id: string
 ): Promise<WorkerStructure> {
   // TODO: Don't do anything if no next style!
-  let mml = DomUtil.parseInput(expr);
-  let rebuilt = new RebuildStree(mml);
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
   const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
   options.style = style;
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);

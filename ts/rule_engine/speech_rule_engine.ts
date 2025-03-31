@@ -131,6 +131,7 @@ export class SpeechRuleEngine {
    * no node is given.
    *
    * @param node The node to be evaluated.
+   * @param _clear
    * @returns A list of auditory descriptions
    *   for that node.
    */
@@ -315,7 +316,7 @@ export class SpeechRuleEngine {
    * @returns A list of auditory descriptions for that node.
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
-    let result = this.evaluateTreeInternal_(node);
+    const result = this.evaluateTreeInternal_(node);
     this.speechStructure.addNode(node, result, Engine.getInstance().modality);
     return result;
   }

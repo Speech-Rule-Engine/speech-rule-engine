@@ -409,9 +409,9 @@ set(
       // Direct from MathML
       // process('speech', expr);
       // Indirect from rebuilt semantic tree
-      let mml = DomUtil.parseInput(expr);
-      let rebuilt = new RebuildStree(mml);
-      let sxml = rebuilt.stree.xml();
+      const mml = DomUtil.parseInput(expr);
+      const rebuilt = new RebuildStree(mml);
+      const sxml = rebuilt.stree.xml();
       SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
       return SpeechGeneratorUtil.computeSpeechStructure(sxml);
     },

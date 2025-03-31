@@ -156,6 +156,7 @@ export function retrievePrefix(semantic: SemanticNode): string {
  * Computes prefix speech.
  *
  * @param xml The xml element.
+ * @param node
  * @returns A list of auditory descriptions for the prefix.
  */
 export function computePrefix(node: Element): AuditoryDescription[] {
@@ -297,9 +298,13 @@ enum NeededAttributes {
   ROLE = 'role'
 }
 
+/**
+ *
+ * @param stree
+ */
 function getNeededAttributes(stree: Element) {
   const result: { [K in NeededAttributes]?: string } = {};
-  for (let [, attr] of Object.entries(NeededAttributes)) {
+  for (const [, attr] of Object.entries(NeededAttributes)) {
     result[attr] = stree.getAttribute(attr);
   }
   return result;
@@ -355,6 +360,7 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * Computes a speech summary if it exists.
  *
  * @param node The XML node.
+ * @param options
  * @returns The summary speech string.
  */
 export function retrieveSummary(
@@ -369,6 +375,7 @@ export function retrieveSummary(
  * Adds a speech summary if necessary.
  *
  * @param node The XML node.
+ * @param options
  * @returns A list of auditory descriptions
  *     for the summary.
  */
@@ -418,6 +425,10 @@ export function computePostfix(node: Element): AuditoryDescription[] {
 
 // Changes for the webworker
 
+/**
+ *
+ * @param structure
+ */
 export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('speech', computeSpeech);
   structure.completeModality('prefix', computePrefix);
@@ -425,6 +436,10 @@ export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('summary', computeSummary);
 }
 
+/**
+ *
+ * @param sxml
+ */
 export function computeSpeechStructure(sxml: Element) {
   computeSpeech(sxml, true);
   const structure = SpeechRuleEngine.getInstance().speechStructure;
@@ -432,6 +447,10 @@ export function computeSpeechStructure(sxml: Element) {
   return structure.json(['none', 'ssml']);
 }
 
+/**
+ *
+ * @param sxml
+ */
 export function computeBrailleStructure(sxml: Element) {
   computeSpeech(sxml, true);
   const structure = SpeechRuleEngine.getInstance().speechStructure;
@@ -461,6 +480,7 @@ export function nextRules(options: OptionsList): OptionsList {
  * Cycles to next style or preference of the speech rule set if possible.
  *
  * @param node The semantic node currently in focus.
+ * @param options
  * @returns The new style name.
  */
 export function nextStyle(node: SemanticNode, options: OptionsList) {
