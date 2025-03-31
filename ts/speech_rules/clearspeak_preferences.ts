@@ -122,7 +122,7 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * Returns the current clearspeak styles selection, if any is set.
+   * @returns The current clearspeak styles selection, if any is set.
    */
   public static currentPreference() {
     return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
@@ -220,10 +220,16 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
+   * The clearspeak preferences class, which is a specialization of dynamic
+   * constraints.
+   *
    * @param cstr The constraint mapping.
    * @param preference The preference.
    */
-  constructor(cstr: AxisMap, public preference: { [key: string]: string }) {
+  constructor(
+    cstr: AxisMap,
+    public preference: { [key: string]: string }
+  ) {
     super(cstr);
   }
 
@@ -337,6 +343,8 @@ class Comparator extends DefaultComparator {
   public preference: AxisMap;
 
   /**
+   * Comparator for clearspeak preference constraints.
+   *
    * @param cstr A Clearspeak preference constraint.
    * @param props A properties element for matching.
    */

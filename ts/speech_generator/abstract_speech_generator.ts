@@ -143,7 +143,11 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    * @returns The new style name.
    */
   private nextStyle_(node: SemanticNode): string {
-    const {modality: modality, domain: domain, style: style} = this.getOptions();
+    const {
+      modality: modality,
+      domain: domain,
+      style: style
+    } = this.getOptions();
     // Rule cycling only makes sense for speech modality.
     if (modality !== 'speech') {
       return style;
@@ -193,10 +197,10 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    * @override
    */
   public getActionable(actionable: number) {
-    return actionable ? (
-      actionable < 0 ? LOCALE.MESSAGES.navigate.EXPANDABLE :
-        LOCALE.MESSAGES.navigate.COLLAPSIBLE
-    ) : '';
+    return actionable
+      ? actionable < 0
+        ? LOCALE.MESSAGES.navigate.EXPANDABLE
+        : LOCALE.MESSAGES.navigate.COLLAPSIBLE
+      : '';
   }
-
 }

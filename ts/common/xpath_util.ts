@@ -91,11 +91,12 @@ export function resolveNameSpace(prefix: string): string {
   return nameSpaces[prefix] || null;
 }
 
-/**
- * Resolver to work with xpath in node and wgxpath in IE/Edge.
- */
 class Resolver {
   public lookupNamespaceURI: any;
+
+  /**
+   * Resolver to work with xpath in node and wgxpath in IE/Edge.
+   */
   constructor() {
     this.lookupNamespaceURI = resolveNameSpace;
   }
@@ -143,7 +144,7 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
       rootNode,
       xpath.result.ORDERED_NODE_ITERATOR_TYPE
     );
-  } catch (err) {
+  } catch (_err) {
     return [];
   }
   const results = [];
@@ -170,7 +171,7 @@ export function evaluateBoolean(expression: string, rootNode: Node): boolean {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.BOOLEAN_TYPE);
-  } catch (err) {
+  } catch (_err) {
     return false;
   }
   return result.booleanValue;
@@ -188,7 +189,7 @@ export function evaluateString(expression: string, rootNode: Node): string {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.STRING_TYPE);
-  } catch (err) {
+  } catch (_err) {
     return '';
   }
   return result.stringValue;

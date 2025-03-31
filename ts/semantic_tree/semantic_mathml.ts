@@ -31,6 +31,7 @@ import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
   private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
@@ -95,7 +96,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
       [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
       [MMLTAGS.NONE, this.empty_.bind(this)],
-      [MMLTAGS.MACTION, this.action_.bind(this)],
+      [MMLTAGS.MACTION, this.action_.bind(this)]
     ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
@@ -140,9 +141,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
         MMLTAGS.MSTYLE,
         MMLTAGS.SEMANTICS,
         MMLTAGS.MACTION
-      ].indexOf(
-        tag
-      ) !== -1
+      ].indexOf(tag) !== -1
     ) {
       return newNode;
     }
@@ -193,7 +192,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       }
     } else {
       // Case of a 'meaningful' row, even if they are empty.
-      newNode = SemanticProcessor.getInstance().row(this.parseList(children));
+      const snode = SemanticHeuristics.run('function_from_identifiers', node);
+      newNode =
+        snode && snode !== node
+          ? snode
+          : SemanticProcessor.getInstance().row(this.parseList(children));
     }
     newNode.mathml.unshift(node);
     return newNode;
@@ -535,8 +538,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
           ? lsup.push(child)
           : lsub.push(child)
         : scriptcount & 1
-        ? rsup.push(child)
-        : rsub.push(child);
+          ? rsup.push(child)
+          : rsub.push(child);
       scriptcount++;
     }
     // This is the pathological msubsup case.
@@ -633,7 +636,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     // TODO (Euro): This should be safed earlier together with other attributes,
     //     before processing is even called!
     if (mml.hasAttribute('data-latex')) {
-      SemanticMap.LatexCommands.set(mml.getAttribute('data-latex'), mml.textContent);
+      SemanticMap.LatexCommands.set(
+        mml.getAttribute('data-latex'),
+        mml.textContent
+      );
     }
     return node;
   }

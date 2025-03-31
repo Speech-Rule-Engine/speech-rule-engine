@@ -33,7 +33,9 @@ import {
 const comparators: SemanticComparator[] = [];
 
 /**
- * @param comparator Adds the comparator
+ *  Adds a comparator.
+ *
+ * @param comparator The comparator to add.
  */
 function add(comparator: SemanticComparator) {
   comparators.push(comparator);
@@ -88,6 +90,8 @@ export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
 
 class SemanticComparator {
   /**
+   * Class of semantic comparators.
+   *
    * @param comparator The actual comparator function.
    * @param type Type restriction for a comparator to work on. If not given it works on any type.
    */

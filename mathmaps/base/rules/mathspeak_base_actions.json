@@ -11,13 +11,13 @@
     ],
     [
       "Action",
-      "identifier-spacing",
-      "[m] CQFspaceoutIdentifier"
+      "identifier",
+      "[n] text()"
     ],
     [
       "Action",
-      "identifier",
-      "[n] text()"
+      "identifier-spacing",
+      "[m] CQFspaceoutIdentifier"
     ],
     [
       "Action",

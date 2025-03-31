@@ -41,44 +41,60 @@ interface AudioFlags {
 }
 
 export class AuditoryItem {
-
   public prev: AuditoryItem = null;
   public next: AuditoryItem = null;
 
+  /**
+   * A wrapper class for adding auditory descriptions into a linked list.
+   *
+   * @param data The auditory description.
+   */
   constructor(public data: AuditoryDescription = null) {}
-
 }
 
 export class AuditoryList extends Set<AuditoryItem> {
-
   public annotations: AuditoryItem[] = [];
 
   private anchor: AuditoryItem;
 
+  /**
+   * A linked list of auditory descriptions.
+   *
+   * @param descrs The initial list of auditory descriptions.
+   */
   constructor(descrs: AuditoryDescription[]) {
     super();
     this.anchor = new AuditoryItem();
     this.anchor.next = this.anchor;
     this.anchor.prev = this.anchor;
-    descrs.forEach(
-      d => {
-        let item = new AuditoryItem(d);
-        if (d.annotation) {
-          this.annotations.push(item);
-        }
-        this.push(item);
+    descrs.forEach((d) => {
+      const item = new AuditoryItem(d);
+      if (d.annotation) {
+        this.annotations.push(item);
       }
-    );
+      this.push(item);
+    });
   }
 
+  /**
+   * @returns The first element in the list.
+   */
   public first() {
     return this.empty ? null : this.anchor.next;
   }
 
+  /**
+   * @returns The last element in the list.
+   */
   public last() {
     return this.empty ? null : this.anchor.prev;
   }
 
+  /**
+   * Pushing an element to the front of the list.
+   *
+   * @param item The element to add.
+   */
   public push(item: AuditoryItem) {
     item.next = this.anchor;
     item.prev = this.anchor.prev;
@@ -87,15 +103,26 @@ export class AuditoryList extends Set<AuditoryItem> {
     super.add(item);
   }
 
+  /**
+   * Popping an element from the end of the list.
+   *
+   * @returns The last element.
+   */
   public pop() {
-    let item = this.last();
+    const item = this.last();
     if (!item) {
       return null;
     }
     this.delete(item);
-    return item
+    return item;
   }
 
+  /**
+   * Deleting an element from the list.
+   *
+   * @param item The element to delete.
+   * @returns True if deleted successfully.
+   */
   public delete(item: AuditoryItem) {
     if (!this.has(item)) {
       return false;
@@ -106,12 +133,24 @@ export class AuditoryList extends Set<AuditoryItem> {
     return true;
   }
 
+  /**
+   * Insert a new auditory description after an existing element.
+   *
+   * @param descr The new description.
+   * @param item The element already in the list.
+   */
   public insertAfter(descr: AuditoryDescription, item: AuditoryItem) {
     this.insertBefore(descr, item.next);
   }
 
+  /**
+   * Insert a new auditory description before an existing element.
+   *
+   * @param descr The new description.
+   * @param item The element already in the list.
+   */
   public insertBefore(descr: AuditoryDescription, item: AuditoryItem) {
-    let nitem = new AuditoryItem(descr);
+    const nitem = new AuditoryItem(descr);
     if (!item || !this.has(item)) {
       this.push(nitem);
       return;
@@ -122,13 +161,22 @@ export class AuditoryList extends Set<AuditoryItem> {
     item.prev = nitem;
   }
 
+  /**
+   * Gets the previous item in the list that as text content.
+   *
+   * @param item The start item.
+   * @returns The previous item in the list that as text content.
+   */
   public prevText(item: AuditoryItem) {
     do {
       item = item.prev;
-    } while (item !== this.anchor && !item.data.text)
+    } while (item !== this.anchor && !item.data.text);
     return item === this.anchor ? null : item;
   }
 
+  /**
+   * @yields Iterator of the list.
+   */
   public *[Symbol.iterator](): IterableIterator<AuditoryItem> {
     let current = this.anchor.next;
     while (current !== this.anchor) {
@@ -137,6 +185,12 @@ export class AuditoryList extends Set<AuditoryItem> {
     }
   }
 
+  /**
+   * Gets the next item in the list that as text content.
+   *
+   * @param item The start item.
+   * @returns The next item in the list that as text content.
+   */
   public nextText(item: AuditoryItem) {
     while (item !== this.anchor && !item.data.text) {
       item = item.next;
@@ -144,19 +198,29 @@ export class AuditoryList extends Set<AuditoryItem> {
     return item;
   }
 
+  /**
+   * Empties the list.
+   */
   public clear() {
     this.anchor.next = this.anchor;
     this.anchor.prev = this.anchor;
     super.clear();
   }
 
+  /**
+   * @returns True if the list is empty.
+   */
   public empty() {
-    return this.anchor.prev === this.anchor &&
-      this.anchor === this.anchor.next;
+    return this.anchor.prev === this.anchor && this.anchor === this.anchor.next;
   }
 
+  /**
+   * Turn linked list into a regular array.
+   *
+   * @returns The array.
+   */
   public toList(): AuditoryDescription[] {
-    let result = [];
+    const result = [];
     let item = this.anchor.next;
     while (item !== this.anchor) {
       result.push(item.data);
@@ -164,11 +228,9 @@ export class AuditoryList extends Set<AuditoryItem> {
     }
     return result;
   }
-
 }
 
 export class AuditoryDescription {
-
   /**
    * context The context. This is all spoken with an annotation voice.
    */

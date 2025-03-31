@@ -288,7 +288,8 @@ export function connectAllMactions(mml: Element, stree: Element) {
  */
 export function retrieveSummary(
   node: Element,
-  options: { [key: string]: string } = {}): string {
+  options: { [key: string]: string } = {}
+): string {
   const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
 }
@@ -302,12 +303,16 @@ export function retrieveSummary(
  */
 function computeSummary(
   node: Element,
-  options: { [key: string]: string } = {}): AuditoryDescription[] {
-  const preOption = options.locale ? {locale: options.locale} : {};
+  options: { [key: string]: string } = {}
+): AuditoryDescription[] {
+  const preOption = options.locale ? { locale: options.locale } : {};
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
-      Object.assign(preOption,
-                    { modality: 'summary', strict: false, speech: true }),
+        Object.assign(preOption, {
+          modality: 'summary',
+          strict: false,
+          speech: true
+        }),
         function () {
           return SpeechRuleEngine.getInstance().evaluateNode(node);
         }

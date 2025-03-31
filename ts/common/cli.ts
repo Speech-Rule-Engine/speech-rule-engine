@@ -31,7 +31,6 @@ import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 
 export class Cli {
-
   public static process = SystemExternal.extRequire('process');
 
   /**
@@ -51,9 +50,12 @@ export class Cli {
 
   private output: any = Cli.process.stdout;
 
+  /**
+   * The command line interface for SRE.
+   */
   constructor() {
     this.dp = new SystemExternal.xmldom.DOMParser({
-      errorHandler: (_key: string, _msg: string) => {
+      onError: (_key: string, _msg: string) => {
         throw new SREError('XML DOM error!');
       }
     });
@@ -303,8 +305,10 @@ export class Cli {
       .option('-m, --mathml', 'Generate enriched MathML.', () =>
         processor('enriched')
       )
-      .option('-u, --rebuild', 'Rebuild semantic tree from enriched MathML.', () =>
-        processor('rebuild')
+      .option(
+        '-u, --rebuild',
+        'Rebuild semantic tree from enriched MathML.',
+        () => processor('rebuild')
       )
       .option(
         '-t, --latex',
@@ -433,7 +437,7 @@ export class Cli {
     try {
       const testInput = input.replace(/(&|#|;)/g, '');
       this.dp.parseFromString(testInput, 'text/xml');
-    } catch (err) {
+    } catch (_err) {
       return false;
     }
     return true;

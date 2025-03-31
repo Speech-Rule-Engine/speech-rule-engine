@@ -95,6 +95,9 @@ export interface Numbers {
 }
 
 /**
+ * Assigns numbers messages of a locale to the default numbers structure.
+ *
+ * @param numbers The numbers structure to assign.
  * @returns A numbers structure.
  */
 export function NUMBERS(numbers: Numbers = {}): Numbers {

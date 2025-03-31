@@ -60,7 +60,7 @@ export interface SpeechRuleEvaluator {
   /**
    * Default evaluation of a character.
    *
-   * @param chr The character.
+   * @param str The character.
    * @returns The resulting description.
    */
   evaluateCharacter(str: string): AuditoryDescription;

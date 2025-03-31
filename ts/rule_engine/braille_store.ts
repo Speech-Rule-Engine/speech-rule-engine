@@ -26,7 +26,10 @@ import { MathStore } from './math_store.js';
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import { activate } from '../semantic_tree/semantic_annotations.js';
 import { SemanticMap } from '../semantic_tree/semantic_attr.js';
-import { SemanticType, SemanticRole } from '../semantic_tree/semantic_meaning.js';
+import {
+  SemanticType,
+  SemanticRole
+} from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Braille rule store.
@@ -80,35 +83,34 @@ export class EuroStore extends BrailleStore {
    */
   public customTranscriptions = {};
 
-  public customCommands: {[key: string]: string} = {
+  public customCommands: { [key: string]: string } = {
     '\\cdot': '*',
     '\\lt': '<',
     '\\gt': '>'
-  }
+  };
 
   /**
    * @override
    */
   public evaluateString(str: string) {
     const regexp = /(\\[a-z]+|\\{|\\}|\\\\)/i;
-    let split = str.split(regexp);
-    let cleaned = this.cleanup(split);
+    const split = str.split(regexp);
+    const cleaned = this.cleanup(split);
     return super.evaluateString(cleaned);
   }
 
-
   /**
    * Cleaning up the command sequence:
-   * * Remove unnecessary spaces.
-   * * Replace commands if necessary.
-   * * Add spaces before relations and operators.
-   * * Add spaces between two consecutive commands.
+   * Remove unnecessary spaces.
+   * Replace commands if necessary.
+   * Add spaces before relations and operators.
+   * Add spaces between two consecutive commands.
    *
    * @param commands The list of commands and intermediate strings.
-   * @return A string with the cleanedup latex expression.
+   * @returns A string with the cleanedup latex expression.
    */
   protected cleanup(commands: string[]): string {
-    let cleaned: string[] = [];
+    const cleaned: string[] = [];
     let intext = false;
     let lastcom = null;
     for (let command of commands) {
@@ -120,7 +122,7 @@ export class EuroStore extends BrailleStore {
           cleaned.push(' ');
         }
         command = this.customCommands[command] || command;
-        let newcom = command.match(/^\\/);
+        const newcom = command.match(/^\\/);
         if (newcom && command.match(/^\\[a-zA-Z]+$/) && lastcom) {
           cleaned.push(' ');
         }
@@ -128,8 +130,8 @@ export class EuroStore extends BrailleStore {
         cleaned.push(command);
         continue;
       }
-      let rest = command.split('');
-      for (let char of rest) {
+      const rest = command.split('');
+      for (const char of rest) {
         // TODO (Euro): This is still rather naive.
         if (intext) {
           cleaned.push(char);
@@ -161,7 +163,7 @@ export class EuroStore extends BrailleStore {
    * Determines if spaces should be added.
    *
    * @param char The character.
-   * @return True if a space should be added before the character.
+   * @returns True if a space should be added before the character.
    */
   private addSpace(char: string): boolean {
     if (!char) return false;
@@ -173,10 +175,12 @@ export class EuroStore extends BrailleStore {
       this.lastSpecial = false;
       return false;
     }
-    let meaning = SemanticMap.Meaning.get(char);
-    return meaning.type === SemanticType.OPERATOR ||
+    const meaning = SemanticMap.Meaning.get(char);
+    return (
+      meaning.type === SemanticType.OPERATOR ||
       meaning.type === SemanticType.RELATION ||
       (meaning.type === SemanticType.PUNCTUATION &&
-        meaning.role === SemanticRole.COLON);
+        meaning.role === SemanticRole.COLON)
+    );
   }
 }

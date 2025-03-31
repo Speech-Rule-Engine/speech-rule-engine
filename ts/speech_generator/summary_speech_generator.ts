@@ -26,7 +26,6 @@ import { setup as EngineSetup } from '../common/engine_setup.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 
 export class SummarySpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */
@@ -34,11 +33,11 @@ export class SummarySpeechGenerator extends AbstractSpeechGenerator {
     // SpeechGeneratorUtil.connectAllMactions(xml, this.getRebuilt().xml);
     EngineSetup(this.getOptions());
     const id = node.getAttribute(Attribute.ID);
-    const snode =
-      this.getRebuilt().streeRoot.querySelectorAll(x => x.id.toString() === id)[0];
+    const snode = this.getRebuilt().streeRoot.querySelectorAll(
+      (x) => x.id.toString() === id
+    )[0];
     SpeechGeneratorUtil.addModality(node, snode, this.modality);
     const speech = node.getAttribute(Attribute.SUMMARY);
     return speech;
   }
-
 }

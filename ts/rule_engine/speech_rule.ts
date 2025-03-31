@@ -199,8 +199,7 @@ export class Component {
           // string, it can be treated like node and multi type.
           break;
         }
-      // eslint-disable no-fallthrough
-      case ActionType.NODE:
+      case ActionType.NODE: // eslint-disable-line no-fallthrough
       case ActionType.MULTI:
         {
           const bracket = rest.indexOf(' (');
@@ -381,9 +380,8 @@ export class Action {
    * IDEAS NOT YET IMPLEMENTED:
    *
    * if text element is last (or only followed by personality) it gets the overall
-   *   element as a span.
+   * element as a span.
    * if next element is multinode it gets the overall element as span?
-   *
    *
    * @param comps A list of components.
    */
@@ -408,7 +406,13 @@ export class Action {
     }
   }
 
-  // Span Naive: Here we add a custom span for the next node if it exists.
+  // Span Naive: Here we
+  /**
+   * Add a naive custom span for the next node if it exists.
+   *
+   * @param comp The component.
+   * @param span The span with a single string.
+   */
   private static addNaiveSpan(comp: Component, span: string) {
     if (!comp.attributes) {
       comp.attributes = {};
@@ -509,7 +513,10 @@ export class Precondition {
    * @param query A node selector function or xpath expression.
    * @param cstr A rest list of constraint functions.
    */
-  constructor(public query: string, ...cstr: string[]) {
+  constructor(
+    public query: string,
+    ...cstr: string[]
+  ) {
     this.constraints = cstr;
     const [exists, user] = this.presetPriority();
     this.priority = exists ? user : this.calculatePriority();

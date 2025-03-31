@@ -21,7 +21,10 @@
 
 import { SemanticNode } from './semantic_node.js';
 
-export declare type SemanticHeuristicTypes = SemanticNode | SemanticNode[];
+export declare type SemanticHeuristicTypes =
+  | Element
+  | SemanticNode
+  | SemanticNode[];
 
 // TODO: Heuristic paths have to be included in the tests.
 /**
@@ -29,6 +32,8 @@ export declare type SemanticHeuristicTypes = SemanticNode | SemanticNode[];
  * that either switches them on automatically (e.g., on selection of a domain),
  * or they can be switched on manually via a flag. Currently these flags are
  * hard coded.
+ *
+ * @template T
  */
 export interface SemanticHeuristic<T> {
   name: string;
@@ -77,3 +82,10 @@ export class SemanticTreeHeuristic extends SemanticAbstractHeuristic<SemanticNod
 export class SemanticMultiHeuristic extends SemanticAbstractHeuristic<
   SemanticNode[]
 > {}
+
+/**
+ * Heuristics work on a single mml node.
+ *
+ * @override
+ */
+export class SemanticMmlHeuristic extends SemanticAbstractHeuristic<Element> {}

@@ -35,6 +35,8 @@ export class AbstractTrieNode<T> implements TrieNode {
   private children_: { [key: string]: TrieNode } = {};
 
   /**
+   * Abstract trie node.
+   *
    * @param constraint The constraint the node represents.
    * @param test The constraint test of this node.
    */
@@ -126,6 +128,8 @@ export class StaticTrieNode extends AbstractTrieNode<Node> {
   private rule_: SpeechRule | null = null;
 
   /**
+   * Trie node for static constraints
+   *
    * @param constraint The constraint the node represents.
    * @param test The constraint test of this node.
    */
@@ -142,6 +146,8 @@ export class StaticTrieNode extends AbstractTrieNode<Node> {
   }
 
   /**
+   * Sets the rule of the node.
+   *
    * @param rule speech rule of the node.
    */
   public setRule(rule: SpeechRule) {

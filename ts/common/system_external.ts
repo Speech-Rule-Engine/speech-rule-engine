@@ -28,7 +28,9 @@ declare let require: (name: string) => any;
 declare let process: any;
 
 export class SystemExternal {
-
+  /**
+   * @returns The require method in node.
+   */
   public static nodeRequire() {
     return eval('require');
   }
@@ -117,18 +119,20 @@ export class SystemExternal {
       return process.env.SRE_JSON_PATH || global.SRE_JSON_PATH;
     }
     try {
-      let path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
+      const path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) { }
+    } catch (_err) {
+      // continue regardless of error
+    }
     try {
-      let path = SystemExternal.nodeRequire().resolve('.');
+      const path = SystemExternal.nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) { }
-    return (typeof __dirname !== 'undefined')
-      ? (__dirname + (__dirname.match(/lib?$/)
-        ? '/mathmaps'
-        : '/lib/mathmaps'))
-      : (process.cwd() + '/lib/mathmaps');
+    } catch (_err) {
+      // continue regardless of error
+    }
+    return typeof __dirname !== 'undefined'
+      ? __dirname + (__dirname.match(/lib?$/) ? '/mathmaps' : '/lib/mathmaps')
+      : process.cwd() + '/lib/mathmaps';
   })();
 
   /**

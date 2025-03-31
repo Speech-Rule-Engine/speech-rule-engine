@@ -94,8 +94,11 @@ export function overBevelledFraction(node: Element): Span[] {
 }
 
 /**
+ * Checks if node is the boundary of a hyperfraction.
  *
- * @param node
+ * @param node The node to test.
+ * @returns The array with the node if it is a hyperfraction boundary. Otherwise
+ * empty array.
  */
 export function hyperFractionBoundary(node: Element): Element[] {
   return LOCALE.MESSAGES.regexp.HYPER ===
@@ -232,7 +235,8 @@ function checkParent(
     NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
     (type === SemanticType.PREFIXOP &&
       parent.role === SemanticRole.NEGATIVE &&
-      !info.script && !info.enclosed) ||
+      !info.script &&
+      !info.enclosed) ||
     (type === SemanticType.PREFIXOP &&
       // TODO: This needs to be rewritten once there is a better treatment
       // of prefixop.
@@ -281,9 +285,11 @@ function propagateNumber(
     info.enclosed = true;
     return ['', info];
   }
-  if (node.type === SemanticType.PREFIXOP &&
+  if (
+    node.type === SemanticType.PREFIXOP &&
     node.role !== SemanticRole.GEOMETRY &&
-    node.role !== SemanticRole.NEGATIVE) {
+    node.role !== SemanticRole.NEGATIVE
+  ) {
     info.number = false;
     return ['', info];
   }
@@ -298,21 +304,22 @@ register(
   new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
 );
 
-function annotateDepth(
-  node: SemanticNode
-): any[] {
+/**
+ * Annotator that adds a tree depth annotation for each node.
+ *
+ * @param node The node to annotate.
+ * @returns Array with the current depth in the tree.
+ */
+function annotateDepth(node: SemanticNode): any[] {
   if (!node.parent) {
     return [1];
   }
-  let depth = parseInt(node.parent.annotation['depth'][0]);
+  const depth = parseInt(node.parent.annotation['depth'][0]);
   return [depth + 1];
 }
 
-register(
-  new SemanticVisitor('depth', 'depth', annotateDepth)
-);
+register(new SemanticVisitor('depth', 'depth', annotateDepth));
 activate('depth', 'depth');
-
 
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if
@@ -330,15 +337,12 @@ export function relationIterator(
 ): () => AuditoryDescription[] {
   const childNodes = nodes.slice(0);
   let first = true;
-  let parentNode = nodes[0].parentNode.parentNode as Element;
-  let match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
-  let depth = match ? match[1] : '';
+  const parentNode = nodes[0].parentNode.parentNode as Element;
+  const match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
+  const depth = match ? match[1] : '';
   let contentNodes: Element[];
   if (nodes.length > 0) {
-    contentNodes = XpathUtil.evalXPath(
-      './content/*',
-      parentNode
-    ) as Element[];
+    contentNodes = XpathUtil.evalXPath('./content/*', parentNode) as Element[];
   } else {
     contentNodes = [];
   }
@@ -360,9 +364,7 @@ export function relationIterator(
       : '';
     const left =
       (leftChild && DomUtil.tagName(leftChild) !== 'EMPTY') ||
-      (first &&
-        parentNode &&
-        parentNode.previousSibling)
+      (first && parentNode && parentNode.previousSibling)
         ? [
             AuditoryDescription.create(
               { text: LOCALE.MESSAGES.regexp.SPACE + base },
@@ -372,9 +374,7 @@ export function relationIterator(
         : [];
     const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
-      (!contentNodes.length &&
-        parentNode &&
-        parentNode.nextSibling)
+      (!contentNodes.length && parentNode && parentNode.nextSibling)
         ? [
             AuditoryDescription.create(
               { text: LOCALE.MESSAGES.regexp.SPACE },
@@ -387,7 +387,9 @@ export function relationIterator(
     descrs.unshift(
       new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
     );
-    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
+    descrs.push(
+      new AuditoryDescription({ text: '', layout: `endrel${depth}` })
+    );
     first = false;
     // TODO: Check with the context!
     return contextDescr.concat(left, descrs, right);
@@ -442,26 +444,55 @@ export function implicitIterator(
   };
 }
 
+/**
+ * Ignore English language modifier if not necessary.
+ *
+ * @param text The current Nemeth Braille string.
+ * @returns The corrected Braille string.
+ */
 function ignoreEnglish(text: string) {
   return correctFont(text, LOCALE.ALPHABETS.languagePrefix.english);
 }
 
 Grammar.getInstance().setCorrection('ignoreEnglish', ignoreEnglish);
 
-export function contentIterator(
-  nodes: Element[],
-  context: string
-) {
-  let func = suCI(nodes, context);
-  let parentNode = nodes[0].parentNode.parentNode as Element;
-  let match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
-  let depth = match ? match[1] : '';
-  return function() {
+/**
+ * Iterates over the list of content nodes of the parent of the given nodes.
+ *
+ * @param nodes A node array.
+ * @param context A context string.
+ * @returns A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
+ */
+export function contentIterator(nodes: Element[], context: string) {
+  const func = suCI(nodes, context);
+  const parentNode = nodes[0].parentNode.parentNode as Element;
+  const match = parentNode.getAttribute('annotation')?.match(/depth:(\d+)/);
+  const depth = match ? match[1] : '';
+  return function () {
     const descrs = func();
     descrs.unshift(
       new AuditoryDescription({ text: '', layout: `beginrel${depth}` })
     );
-    descrs.push(new AuditoryDescription({ text: '', layout: `endrel${depth}` }));
+    descrs.push(
+      new AuditoryDescription({ text: '', layout: `endrel${depth}` })
+    );
     return descrs;
-  }
+  };
 }
+
+/**
+ * Translates text into literal Braille.
+ *
+ * @param text The text to be translated.
+ * @returns The Braille string.
+ */
+// TODO: Add number indicator at the right points.
+function literal(text: string) {
+  const evalStr = (e: string) =>
+    Engine.getInstance().evaluator(e, Engine.getInstance().dynamicCstr);
+  return Array.from(text).map(evalStr).join('');
+}
+
+Grammar.getInstance().setCorrection('literal', literal);

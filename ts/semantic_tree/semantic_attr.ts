@@ -76,7 +76,7 @@ export const NamedSymbol = {
    * Invisible operator for plus.
    */
   invisiblePlus: String.fromCodePoint(0x2064)
-}
+};
 
 // Map extensions for semantic maps.
 
@@ -85,7 +85,8 @@ class meaningMap extends Map<string, SemanticMeaning> {
    * Lookup the semantic meaning of a symbol in terms of type and role. If symbol
    * has no predefined meaning, returns unknown.
    *
-   * @param symbol
+   * @param symbol The symbol to lookup.
+   * @returns The mening element for the symbol.
    */
   public get(symbol: string) {
     return (
@@ -104,10 +105,9 @@ class meaningMap extends Map<string, SemanticMeaning> {
  */
 class secondaryMap extends Map<string, string> {
   /**
-   * @override
-   *
    * Builds the secondary annotation structure.
    *
+   * @override
    * @param char The character to define a secondary meaning on.
    * @param kind The kind of annotation.
    * @param annotation Optionally an annotation value. Default is `kind`.
@@ -119,8 +119,8 @@ class secondaryMap extends Map<string, string> {
 
   /**
    * @override
-   * @param kind The kind of annotation.
    * @param char The character to look up.
+   * @param kind The kind of annotation.
    */
   public has(char: string, kind?: SemanticSecondary) {
     return super.has(this.secKey(kind, char));
@@ -128,8 +128,8 @@ class secondaryMap extends Map<string, string> {
 
   /**
    * @override
-   * @param kind The kind of annotation.
    * @param char The character to look up.
+   * @param kind The kind of annotation.
    */
   public get(char: string, kind?: SemanticSecondary) {
     return super.get(this.secKey(kind, char));
@@ -172,13 +172,13 @@ export const SemanticMap = {
   FencesVert: new Map(),
 
   LatexCommands: new Map()
-
-}
+};
 
 /**
+ * Add meaning for a set of symbols.
  *
- * @param symbols
- * @param meaning
+ * @param symbols The list of symbols.
+ * @param meaning The associated meaning structure.
  */
 function addMeaning(symbols: string[], meaning: MeaningSet) {
   for (const symbol of symbols) {
@@ -195,8 +195,6 @@ function addMeaning(symbols: string[], meaning: MeaningSet) {
 
 /**
  * Initializes the dictionary mapping symbols to meaning.
- *
- * @returns The dictionary mapping strings to semantic attributes.
  */
 function initMeaning() {
   // Punctuation Characters.
@@ -341,15 +339,7 @@ function initMeaning() {
 
     // dashes as operators
     {
-      set: [
-        '2d',
-        '207b',
-        '208b',
-        '2212',
-        '2796',
-        'fe63',
-        'ff0d'
-      ],
+      set: ['2d', '207b', '208b', '2212', '2796', 'fe63', 'ff0d'],
       type: SemanticType.OPERATOR,
       role: SemanticRole.DASH,
       secondary: SemanticSecondary.BAR
@@ -578,13 +568,7 @@ function initMeaning() {
 
     // postfix operators
     {
-      set: [
-        '25',
-        '2030',
-        '2031',
-        'ff05',
-        'fe6a'
-      ],
+      set: ['25', '2030', '2031', 'ff05', 'fe6a'],
       type: SemanticType.OPERATOR,
       role: SemanticRole.POSTFIXOP
     },
@@ -1197,10 +1181,12 @@ function initMeaning() {
 
 // Fences
 /**
+ * Adds fences mappaings to a meaning map.
  *
- * @param map
- * @param ints
- * @param sep
+ * @param map The map to add to.
+ * @param ints The initial list of maps.
+ * @param sep The separation for fence and their closing counterpart for a
+ *     single unicode value.
  */
 function addFences(
   map: Map<string, string>,
@@ -1218,7 +1204,7 @@ function addFences(
 }
 
 /**
- *
+ * Initializes the dictionary mapping for fences.
  */
 function initFences() {
   // The intervals are manually minimised.
@@ -1332,7 +1318,7 @@ const prefixFunctions: string[] = trigonometricFunctions.concat(
 );
 
 /**
- *
+ * Initializes the dictionary mapping for functions.
  */
 function initFunctions() {
   // Functions
@@ -1448,8 +1434,11 @@ export function isMatchingFence(open: string, close: string): boolean {
  */
 
 /**
+ * Change semantic meaning of some alphabet entries.
  *
- * @param alphabet
+ * @param alphabet The alphabet set.
+ * @param change Mapping on elements to change with alphabet position and new
+ * meaning.
  */
 function changeSemantics(
   alphabet: string[],
@@ -1464,8 +1453,11 @@ function changeSemantics(
 }
 
 /**
+ * Add secondary semantic meaning of some alphabet entries.
  *
- * @param alphabet
+ * @param alphabet The alphabet set.
+ * @param change Mapping on elements to change with alphabet position and
+ * secondary meaning.
  */
 function addSecondaries(
   alphabet: string[],
@@ -1480,13 +1472,18 @@ function addSecondaries(
 }
 
 /**
+ * Initialise meaning mappings for a single alphabet.
  *
- * @param alphabet
- * @param type
- * @param role
- * @param font
- * @param semfont
- * @param secondaries
+ * @param alphabet The base alphabet.
+ * @param type The semantic type.
+ * @param role The semantic role.
+ * @param font The font.
+ * @param semfont The semantic name of the font.
+ * @param secondaries List of secondary meanings that are being added.
+ * @param change A mapping for meaning changes of elements in the alphabet,
+ * given as alphabet positions and the semantic to change to.
+ * @param seondary A mapping for secondary meanings of elements in the alphabet,
+ * given as alphabet positions and the secondary semantic.
  */
 function singleAlphabet(
   alphabet: Alphabet.Base,
@@ -1498,7 +1495,9 @@ function singleAlphabet(
   change: { [position: number]: SemanticMeaning } = {},
   secondary: { [position: number]: SemanticSecondary } = {}
 ) {
-  const interval = Alphabet.INTERVALS.get(Alphabet.alphabetName(alphabet, font));
+  const interval = Alphabet.INTERVALS.get(
+    Alphabet.alphabetName(alphabet, font)
+  );
   if (interval) {
     interval.unicode.forEach((x) => {
       SemanticMap.Meaning.set(x, {
@@ -1514,16 +1513,16 @@ function singleAlphabet(
 }
 
 /**
- *
+ * Iniialises all alphabets.
  */
-function alphabets() {
+function initAlphabets() {
   for (const [name, font] of Object.entries(SemanticFont)) {
     const emb = !!(Alphabet as any).Embellish[name];
     const semfont = emb
       ? SemanticFont.UNKNOWN
       : font === SemanticFont.FULLWIDTH
-      ? SemanticFont.NORMAL
-      : font;
+        ? SemanticFont.NORMAL
+        : font;
     singleAlphabet(
       Alphabet.Base.LATINCAP,
       SemanticType.IDENTIFIER,
@@ -1582,5 +1581,5 @@ function alphabets() {
 
 initMeaning();
 initFences();
-alphabets();
+initAlphabets();
 initFunctions();

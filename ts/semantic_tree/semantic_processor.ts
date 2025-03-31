@@ -67,11 +67,27 @@ export class SemanticProcessor {
    */
   private static readonly MML_TO_BOUNDS_: { [key: string]: BoundsType } = {
     [MMLTAGS.MSUB]: { type: SemanticType.SUBSCRIPT, length: 1, accent: false },
-    [MMLTAGS.MSUP]: { type: SemanticType.SUPERSCRIPT, length: 1, accent: false },
-    [MMLTAGS.MSUBSUP]: { type: SemanticType.SUBSCRIPT, length: 2, accent: false },
-    [MMLTAGS.MUNDER]: { type: SemanticType.UNDERSCORE, length: 1, accent: true },
+    [MMLTAGS.MSUP]: {
+      type: SemanticType.SUPERSCRIPT,
+      length: 1,
+      accent: false
+    },
+    [MMLTAGS.MSUBSUP]: {
+      type: SemanticType.SUBSCRIPT,
+      length: 2,
+      accent: false
+    },
+    [MMLTAGS.MUNDER]: {
+      type: SemanticType.UNDERSCORE,
+      length: 1,
+      accent: true
+    },
     [MMLTAGS.MOVER]: { type: SemanticType.OVERSCORE, length: 1, accent: true },
-    [MMLTAGS.MUNDEROVER]: { type: SemanticType.UNDERSCORE, length: 2, accent: true }
+    [MMLTAGS.MUNDEROVER]: {
+      type: SemanticType.UNDERSCORE,
+      length: 2,
+      accent: true
+    }
   };
 
   private static readonly CLASSIFY_FUNCTION_: { [key: string]: string } = {
@@ -120,6 +136,7 @@ export class SemanticProcessor {
    * the cell hierarchy level.
    *
    * @param table The node to be rewritten a multiline.
+   * @returns The rewritten table node.
    */
   public static tableToMultiline(table: SemanticNode): SemanticNode {
     if (!SemanticPred.tableIsMultiline(table)) {
@@ -204,9 +221,11 @@ export class SemanticProcessor {
    * Semantically classifies a table in terms of equation system it might be.
    *
    * @param table The table node.
+   * @returns The rewritten table node.
    */
   public static classifyTable(table: SemanticNode) {
     const columns = SemanticProcessor.computeColumns_(table);
+    /* eslint-disable @typescript-eslint/no-unused-expressions */
     SemanticProcessor.classifyByColumns_(
       table,
       columns,
@@ -477,8 +496,8 @@ export class SemanticProcessor {
     return kind
       ? kind
       : SemanticPred.isSimpleFunctionHead(funcNode)
-      ? 'simple'
-      : '';
+        ? 'simple'
+        : '';
   }
 
   /**
@@ -768,9 +787,16 @@ export class SemanticProcessor {
     };
   }
 
+  /**
+   * Derives meaning of the semantic node from the actual textual content.
+   *
+   * @param node The semantic node.
+   * @param func The function to apply that updates the meaning.
+   */
   private static meaningFromContent(
     node: SemanticNode,
-    func: (n: SemanticNode, c: string[], m: SemanticMeaning[]) => void) {
+    func: (n: SemanticNode, c: string[], m: SemanticMeaning[]) => void
+  ) {
     const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
     const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     func(node, content, meaning);
@@ -781,11 +807,14 @@ export class SemanticProcessor {
    * Compute the role of a number if it does not have one already.
    *
    * @param node The semantic tree node.
+   * @param content The textual content as a string of single characters
+   * @param meaning The semantic meaning for each single character.
    */
   private static numberRole_(
     node: SemanticNode,
     content: string[],
-    meaning: SemanticMeaning[]) {
+    meaning: SemanticMeaning[]
+  ) {
     if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
@@ -839,7 +868,7 @@ export class SemanticProcessor {
    */
   public static compSemantics(node: SemanticNode, field: string, sem: any) {
     const content = [...node.textContent];
-    const meaning = content.map(x => SemanticMap.Meaning.get(x));
+    const meaning = content.map((x) => SemanticMap.Meaning.get(x));
     const single = meaning.reduce(function (prev, curr: any) {
       if (
         !prev ||
@@ -1020,7 +1049,7 @@ export class SemanticProcessor {
    * or the relation ends in an side.
    *
    * @param node The node.
-   * @param relation The relation to be tested.
+   * @param relations The relation to be tested.
    * @param opt_right From the right side?
    * @returns True if the node is an end relation.
    */
@@ -1032,8 +1061,8 @@ export class SemanticProcessor {
     const position = opt_right ? node.childNodes.length - 1 : 0;
     return (
       SemanticPred.isType(node, SemanticType.RELSEQ) &&
-        relations.some(relation => SemanticPred.isRole(node, relation)) &&
-        SemanticPred.isType(node.childNodes[position], SemanticType.EMPTY)
+      relations.some((relation) => SemanticPred.isRole(node, relation)) &&
+      SemanticPred.isType(node.childNodes[position], SemanticType.EMPTY)
     );
   }
 
@@ -1047,7 +1076,7 @@ export class SemanticProcessor {
    * Check for a particular relations.
    *
    * @param node The node.
-   * @param relation The relation to be tested.
+   * @param relations The relation to be tested.
    * @returns True if the node is an end relation.
    */
   private static isPureRelation_(
@@ -1056,7 +1085,7 @@ export class SemanticProcessor {
   ): boolean {
     return (
       SemanticPred.isType(node, SemanticType.RELATION) &&
-        relations.some(relation => SemanticPred.isRole(node, relation))
+      relations.some((relation) => SemanticPred.isRole(node, relation))
     );
   }
 
@@ -1268,7 +1297,7 @@ export class SemanticProcessor {
     }
 
     let result: BoundsType;
-    SemanticHeuristics.run('op_with_limits', children)
+    SemanticHeuristics.run('op_with_limits', children);
     if (SemanticPred.isLimitBase(center)) {
       result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
       const length = result.length;
@@ -1551,7 +1580,11 @@ export class SemanticProcessor {
     if (!nonEmptySub && !nonEmptySup) {
       return base;
     }
-    const mmlTag = nonEmptySub ? (nonEmptySup ? MMLTAGS.MSUBSUP : MMLTAGS.MSUB) : MMLTAGS.MSUP;
+    const mmlTag = nonEmptySub
+      ? nonEmptySup
+        ? MMLTAGS.MSUBSUP
+        : MMLTAGS.MSUB
+      : MMLTAGS.MSUP;
     const mmlchild = [base];
     if (nonEmptySub) {
       mmlchild.push(
@@ -1957,7 +1990,7 @@ export class SemanticProcessor {
       content
     );
     if (nodeList.length > 1) {
-        newNode.role = SemanticRole.MULTIOP;
+      newNode.role = SemanticRole.MULTIOP;
     }
     return newNode;
   }
@@ -2160,13 +2193,15 @@ export class SemanticProcessor {
     if (nodes.length === 1) {
       // TODO: This could be reclassified as TEXT once we know it is not a
       //       label?
-      if (nodes[0].type === SemanticType.TEXT &&
-        nodes[0].role === SemanticRole.UNKNOWN) {
+      if (
+        nodes[0].type === SemanticType.TEXT &&
+        nodes[0].role === SemanticRole.UNKNOWN
+      ) {
         nodes[0].role = SemanticRole.ANNOTATION;
       }
       return nodes;
     }
-    const {rel: rel, comp: comp} = SemanticUtil.partitionNodes(nodes, (x) =>
+    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) =>
       SemanticPred.isType(x, SemanticType.TEXT)
     );
     if (rel.length === 0) {
@@ -2178,10 +2213,13 @@ export class SemanticProcessor {
       let currentRel = rel.shift();
       let nextComp = comp.shift();
       const text = [];
-      while (!nextComp.length && rel.length &&
+      while (
+        !nextComp.length &&
+        rel.length &&
         // Don't destroy space separations.
         currentRel.role !== SemanticRole.SPACE &&
-        rel[0].role !== SemanticRole.SPACE) {
+        rel[0].role !== SemanticRole.SPACE
+      ) {
         text.push(currentRel);
         currentRel = rel.shift();
         nextComp = comp.shift();
@@ -2192,7 +2230,7 @@ export class SemanticProcessor {
           result.push(SemanticProcessor.getInstance().row(prevComp));
         }
         text.push(currentRel);
-        let dummy = SemanticProcessor.getInstance().dummyNode_(text);
+        const dummy = SemanticProcessor.getInstance().dummyNode_(text);
         // TODO: See if it already has a majority vote role.
         // dummy.role = SemanticRole.ANNOTATION;
         result.push(dummy);
@@ -2240,16 +2278,24 @@ export class SemanticProcessor {
             n.type = SemanticType.NUMBER;
             return;
           }
-          if (m.some((x) => x.type !== SemanticType.NUMBER &&
-            x.type !== SemanticType.IDENTIFIER)) {
+          if (
+            m.some(
+              (x) =>
+                x.type !== SemanticType.NUMBER &&
+                x.type !== SemanticType.IDENTIFIER
+            )
+          ) {
             n.type = SemanticType.TEXT;
             n.role = SemanticRole.ANNOTATION;
             return;
           }
           n.role = SemanticRole.UNKNOWN;
-        });
-      if (currentRel.type === SemanticType.TEXT &&
-        currentRel.role !== SemanticRole.UNKNOWN) {
+        }
+      );
+      if (
+        currentRel.type === SemanticType.TEXT &&
+        currentRel.role !== SemanticRole.UNKNOWN
+      ) {
         if (prevComp.length) {
           result.push(SemanticProcessor.getInstance().row(prevComp));
         }
@@ -2276,9 +2322,9 @@ export class SemanticProcessor {
     if (prevComp.length > 0) {
       result.push(SemanticProcessor.getInstance().row(prevComp));
     }
-    return result.length > 1 ?
-      [SemanticProcessor.getInstance().dummyNode_(result)] :
-      result;
+    return result.length > 1
+      ? [SemanticProcessor.getInstance().dummyNode_(result)]
+      : result;
   }
 
   /**
@@ -2352,7 +2398,7 @@ export class SemanticProcessor {
     }
 
     // TODO (nemeth): Here we could convert dashes to identifiers.
-    
+
     const prefix = [];
     while (nodes.length > 0 && SemanticPred.isOperator(nodes[0])) {
       prefix.push(nodes.shift());
@@ -2370,25 +2416,32 @@ export class SemanticProcessor {
       'convert_juxtaposition',
       nodes
     ) as SemanticNode[];
-    
+
     const split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
     // At this point, we know that split.head is not empty!
     const node = SemanticProcessor.getInstance().wrapFactor(prefix, split);
     return SemanticProcessor.getInstance().addFactor(node, split);
   }
 
+  /**
+   * Wraps postfix operators for a sliced structure.
+   *
+   * @param split The slice.
+   */
   private wrapPostfix(split: SemanticUtil.Slice) {
     // Dealing with explicit postfix operators.
     //
     // TODO: Currently this wraps into separate operators. We could collect them first.
     if (split.div?.role === SemanticRole.POSTFIXOP) {
       if (!split.tail.length || split.tail[0].type === SemanticType.OPERATOR) {
-        split.head = [SemanticProcessor.getInstance().postfixNode_(
-          SemanticProcessor.getInstance().implicitNode(
-            split.head as SemanticNode[]
-          ),
-          [split.div]
-        )];
+        split.head = [
+          SemanticProcessor.getInstance().postfixNode_(
+            SemanticProcessor.getInstance().implicitNode(
+              split.head as SemanticNode[]
+            ),
+            [split.div]
+          )
+        ];
         split.div = split.tail.shift();
         SemanticProcessor.getInstance().wrapPostfix(split);
       } else {
@@ -2403,6 +2456,7 @@ export class SemanticProcessor {
    *
    * @param prefix A list of prefix nodes.
    * @param split The split structure containing head, operator, and tail.
+   * @returns The new prefix node.
    */
   private wrapFactor(prefix: SemanticNode[], split: SemanticUtil.Slice) {
     SemanticProcessor.getInstance().wrapPostfix(split);
@@ -2412,6 +2466,13 @@ export class SemanticProcessor {
     );
   }
 
+  /**
+   * Adds an additional factor to an operations tree.
+   *
+   * @param node The operations tree.
+   * @param split The slice.
+   * @returns The root node of ths operations tree.
+   */
   private addFactor(node: SemanticNode, split: SemanticUtil.Slice) {
     if (!split.div) {
       // Propagate unit over multiplications.
@@ -2433,11 +2494,9 @@ export class SemanticProcessor {
    *
    * @param nodes The list of nodes.
    * @param root Initial tree.
-   * @param lastop Last operator that has not been
-   * processed yet.
-   * @param opt_prefixes Operator nodes that
-   * will become prefix operation (or postfix in case they come after last
-   * operand).
+   * @param lastop Last operator that has not been processed yet.
+   * @param prefix Operator nodes that will become prefix operation (or postfix
+   *     in case they come after last operand).
    * @returns The root node of the syntax tree.
    */
   private operationsTree_(
@@ -2717,6 +2776,25 @@ export class SemanticProcessor {
     // Base case 1: Everything is used up.
     if (fences.length === 0 && openStack.length === 0) {
       return contentStack[0];
+    }
+    // Attack with interval heuristic.
+    const interval = SemanticHeuristics.run(
+      'bracketed_interval',
+      [fences[0], fences[1], ...(content[0] || [])],
+      () => null
+    ) as SemanticNode;
+    if (interval) {
+      fences.shift();
+      fences.shift();
+      content.shift();
+      const stack = contentStack.pop() || [];
+      contentStack.push([...stack, interval, ...content.shift()]);
+      return SemanticProcessor.getInstance().fences_(
+        fences,
+        content,
+        openStack,
+        contentStack
+      );
     }
     const openPred = (x: SemanticNode) =>
       SemanticPred.isRole(x, SemanticRole.OPEN);
@@ -3182,11 +3260,15 @@ export class SemanticProcessor {
     let relCounter = 0;
     while (partition.comp.length > 0) {
       let puncts = [];
-      let saveCount = relCounter;
+      const saveCount = relCounter;
       do {
         puncts.push(partition.rel[relCounter++]);
         firstComp = partition.comp.shift();
-      } while (partition.rel[relCounter] && firstComp && firstComp.length === 0)
+      } while (
+        partition.rel[relCounter] &&
+        firstComp &&
+        firstComp.length === 0
+      );
       puncts = SemanticHeuristics.run('ellipses', puncts) as SemanticNode[];
       partition.rel.splice(saveCount, relCounter - saveCount, ...puncts);
       relCounter = saveCount + puncts.length;
@@ -3195,10 +3277,14 @@ export class SemanticProcessor {
         newNodes.push(SemanticProcessor.getInstance().row(firstComp));
       }
     }
-    return (newNodes.length === 1 && partition.rel.length === 1) ? newNodes :
-      [
-        SemanticProcessor.getInstance().punctuatedNode_(newNodes, partition.rel)
-      ];
+    return newNodes.length === 1 && partition.rel.length === 1
+      ? newNodes
+      : [
+          SemanticProcessor.getInstance().punctuatedNode_(
+            newNodes,
+            partition.rel
+          )
+        ];
   }
 
   // TODO: Refine roles to reflect same roles. Find sequences of punctuation
@@ -3234,15 +3320,19 @@ export class SemanticProcessor {
         return newNode;
       }
     }
-    let fpunct = punctuations[0];
+    const fpunct = punctuations[0];
     if (SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
-      newNode.role = (fpunct.childNodes.length && !fpunct.embellished) ?
-        fpunct.role : SemanticRole.STARTPUNCT;
+      newNode.role =
+        fpunct.childNodes.length && !fpunct.embellished
+          ? fpunct.role
+          : SemanticRole.STARTPUNCT;
     } else if (
       SemanticPred.singlePunctAtPosition(nodes, punctuations, nodes.length - 1)
     ) {
-      newNode.role = (fpunct.childNodes.length && !fpunct.embellished) ?
-        fpunct.role : SemanticRole.ENDPUNCT;
+      newNode.role =
+        fpunct.childNodes.length && !fpunct.embellished
+          ? fpunct.role
+          : SemanticRole.ENDPUNCT;
     } else if (
       punctuations.every((x) => SemanticPred.isRole(x, SemanticRole.DUMMY))
     ) {
@@ -3635,9 +3725,9 @@ export class SemanticProcessor {
     const firstNode = nodes[0];
     if (SemanticPred.isGeneralFunctionBoundary(firstNode)) {
       // No intvar, test for the next big operator boundary instead.
-      let {integrand: args2, rest: rest2} =
+      const { integrand: args2, rest: rest2 } =
         SemanticProcessor.getInstance().getIntegralArgs_(args);
-      return { integrand: args2, intvar: null, rest: rest2.concat(nodes)};
+      return { integrand: args2, intvar: null, rest: rest2.concat(nodes) };
     }
     if (SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
       firstNode.role = SemanticRole.INTEGRAL;
@@ -3806,8 +3896,8 @@ export class SemanticProcessor {
     })
       ? SemanticRole.VULGAR
       : newNode.childNodes.every(SemanticPred.isPureUnit)
-      ? SemanticRole.UNIT
-      : SemanticRole.DIVISION;
+        ? SemanticRole.UNIT
+        : SemanticRole.DIVISION;
     return SemanticHeuristics.run(
       'propagateSimpleFunction',
       newNode

@@ -631,7 +631,6 @@ function getRootIndex(node: Element): string {
   return LOCALE.MESSAGES.MSroots[content] || '';
 }
 
-
 /**
  * Opening string for radicals in Mathspeak verbose mode.
  *

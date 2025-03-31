@@ -27,11 +27,10 @@ import { AuditoryDescription } from './auditory_description.js';
 import { XmlRenderer } from './xml_renderer.js';
 
 export class LayoutRenderer extends XmlRenderer {
-
   public static options = {
     cayleyshort: Engine.getInstance().cayleyshort,
     linebreaks: Engine.getInstance().linebreaks
-  }
+  };
 
   /**
    * @override
@@ -79,8 +78,7 @@ export class LayoutRenderer extends XmlRenderer {
       content = [];
       const [pref, layout, value] = this.layoutValue(descr.layout);
       if (pref === 'begin') {
-        result.push('<' + layout +
-          (value ? ` value="${value}"` : '') +  '>');
+        result.push('<' + layout + (value ? ` value="${value}"` : '') + '>');
         continue;
       }
       if (pref === 'end') {
@@ -93,6 +91,12 @@ export class LayoutRenderer extends XmlRenderer {
     return result.join('');
   }
 
+  /**
+   * Turns a list of descriptions without layout info into a text string.
+   *
+   * @param content The descriptions list.
+   * @returns The resulting text.
+   */
   private processContent(content: AuditoryDescription[]) {
     const result = [];
     const markup = AudioUtil.personalityMarkup(content);
@@ -108,8 +112,14 @@ export class LayoutRenderer extends XmlRenderer {
     return result.join(''); // this.merge(result);
   }
 
-  private values: Map<string, {[key: string]: boolean}> = new Map();
+  private values: Map<string, { [key: string]: boolean }> = new Map();
 
+  /**
+   * Processes the layout value.
+   *
+   * @param layout The layout string.
+   * @returns The triple containing layout type, layout tag and value.
+   */
   private layoutValue(layout: string) {
     const match = layout.match(/^(begin|end|)(.*\D)(\d*)$/);
     const value = match[3];
@@ -123,7 +133,6 @@ export class LayoutRenderer extends XmlRenderer {
     this.values.get(layout)[value] = true;
     return [match[1], layout, value];
   }
-
 }
 
 // Postprocessing
@@ -158,14 +167,20 @@ function applyHandler(element: Element): string {
   return handler ? handler(element) : element.textContent;
 }
 
-
 const relValues = new Map();
 
-function setRelValues(values: {[key: string]: boolean}) {
+/**
+ * Adds a list of relation values into the relation values map.
+ *
+ * @param values The relation values.
+ */
+function setRelValues(values: { [key: string]: boolean }) {
   relValues.clear();
   if (!values) return;
-  const keys = Object.keys(values).map(x => parseInt(x)).sort();
-  for (let i = 0, key; key = keys[i]; i++) {
+  const keys = Object.keys(values)
+    .map((x) => parseInt(x))
+    .sort();
+  for (let i = 0, key; (key = keys[i]); i++) {
     relValues.set(key, i + 1);
   }
 }
@@ -605,11 +620,16 @@ function handleFractionPart(prt: Element): string {
   return content;
 }
 
-// This implements line breaking for concepts of 14.12.1 Priority List.
+/**
+ * This implements line breaking for concepts of 14.12.1 Priority List.
+ *
+ * @param rel A relation element.
+ * @returns A markup string with the correct linebreaking value.
+ */
 function handleRelation(rel: Element): string {
   if (!Engine.getInstance().linebreaks) {
     return recurseTree(rel);
   }
-  let value = relValues.get(parseInt(rel.getAttribute('value')));
-  return  (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
+  const value = relValues.get(parseInt(rel.getAttribute('value')));
+  return (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
 }

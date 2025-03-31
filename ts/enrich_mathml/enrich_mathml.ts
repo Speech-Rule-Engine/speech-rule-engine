@@ -52,6 +52,8 @@ const SETTINGS: {
   wiki: true
 };
 
+const IDS = new Map();
+
 /**
  * Enriches a MathML element with semantics from the tree.
  *
@@ -65,6 +67,7 @@ const SETTINGS: {
 export function enrich(mml: Element, semantic: SemanticTree): Element {
   // The first line is only to preserve output. This should eventually be
   // deleted.
+  IDS.clear();
   const oldMml = DomUtil.cloneNode(mml);
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
@@ -154,7 +157,10 @@ export function walkTree(semantic: SemanticNode): Element {
   }
   newNode = rewriteMfenced(newNode);
   mergeChildren(newNode, childrenList, semantic);
-  EnrichAttr.setAttributes(newNode, semantic);
+  if (!IDS.has(semantic.id)) {
+    IDS.set(semantic.id, true);
+    EnrichAttr.setAttributes(newNode, semantic);
+  }
   Debugger.getInstance().output('WALKING END: ' + semantic.toString());
   return ascendNewNode(newNode);
 }
@@ -189,9 +195,11 @@ export function introduceNewLayer(
   const lca = mathmlLca(children);
   let newNode = lca.node;
   const info = lca.type;
-  if (info !== lcaType.VALID || !SemanticUtil.hasEmptyTag(newNode)
-    || (!newNode.parentNode && semantic.parent)
-     ) {
+  if (
+    info !== lcaType.VALID ||
+    !SemanticUtil.hasEmptyTag(newNode) ||
+    (!newNode.parentNode && semantic.parent)
+  ) {
     Debugger.getInstance().output('Walktree Case 1.1');
     newNode = EnrichAttr.addMrow();
     if (info === lcaType.PRUNED) {
@@ -586,8 +594,8 @@ function mathmlLca(children: Element[]): {
       newLeftPath.length !== leftPath.length
         ? lcaType.PRUNED
         : validLca(newLeftPath[lIndex + 1], rightPath[1])
-        ? lcaType.VALID
-        : lcaType.INVALID,
+          ? lcaType.VALID
+          : lcaType.INVALID,
     node: lca
   };
 }
@@ -869,10 +877,12 @@ export function getInnerNode(node: Element): Element {
   });
   const result = [];
   for (let i = 0, remain; (remain = remainder[i]); i++) {
-    if (SemanticUtil.hasEmptyTag(remain) &&
+    if (
+      SemanticUtil.hasEmptyTag(remain) &&
       // Special case for punctuation?
-      remain.getAttribute(EnrichAttr.Attribute.TYPE) !== SemanticType.PUNCTUATION
-       ) {
+      remain.getAttribute(EnrichAttr.Attribute.TYPE) !==
+        SemanticType.PUNCTUATION
+    ) {
       const nextInner = getInnerNode(remain);
       if (nextInner && nextInner !== remain) {
         result.push(nextInner);
