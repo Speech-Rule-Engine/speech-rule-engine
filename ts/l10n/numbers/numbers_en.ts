@@ -145,11 +145,9 @@ function numericOrdinal(num: number): string {
   }
 }
 
-export const NUMBERS: Numbers = NUMB(
-  {
-    'wordOrdinal': wordOrdinal,
-    'numericOrdinal': numericOrdinal,
-    'numberToWords': numberToWords,
-    'numberToOrdinal': numberToOrdinal,
-  }
-);
+export const NUMBERS: Numbers = NUMB({
+  wordOrdinal: wordOrdinal,
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});

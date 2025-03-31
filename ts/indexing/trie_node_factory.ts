@@ -70,6 +70,8 @@ class RootTrieNode extends AbstractTrieNode<Node> {
 
 class DynamicTrieNode extends AbstractTrieNode<string> {
   /**
+   * Class of trie nodes for dynamic constraints.
+   *
    * @param constraint The constraint the node represents.
    */
   constructor(constraint: string) {
@@ -217,10 +219,15 @@ function constraintTest(constraint: string): ((p1: Node) => boolean) | null {
 
 class QueryTrieNode extends StaticTrieNode {
   /**
+   * Trie nodes with query constraints.
+   *
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
-  constructor(constraint: string, private context: SpeechRuleContext) {
+  constructor(
+    constraint: string,
+    private context: SpeechRuleContext
+  ) {
     super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.QUERY;
   }
@@ -237,10 +244,15 @@ class QueryTrieNode extends StaticTrieNode {
 
 class BooleanTrieNode extends StaticTrieNode {
   /**
+   * Trie nodes with static boolean constraints.
+   *
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
-  constructor(constraint: string, private context: SpeechRuleContext) {
+  constructor(
+    constraint: string,
+    private context: SpeechRuleContext
+  ) {
     super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.BOOLEAN;
   }

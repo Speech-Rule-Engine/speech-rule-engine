@@ -57,6 +57,8 @@ export class DynamicProperties {
   }
 
   /**
+   * Dynamic properties.
+   *
    * @param properties The property mapping.
    * @param order A parse order of the keys.
    */

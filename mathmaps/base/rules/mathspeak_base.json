@@ -250,6 +250,15 @@
       "self::identifier"
     ],
     [
+      "Alias",
+      "identifier",
+      "self::identifier",
+      "string-length(text())>1",
+      "@role!=\"unit\"",
+      "not(@font) or @font=\"normal\" or contains(@grammar, \"ignoreFont\")",
+      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyz\", \"\")"
+    ],
+    [
       "Precondition",
       "negative-number",
       "default",

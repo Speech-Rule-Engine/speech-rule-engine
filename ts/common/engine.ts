@@ -41,6 +41,8 @@ export class SREError extends Error {
   public name = 'SRE Error';
 
   /**
+   * The basic SRE Error class.
+   *
    * @param message The error Message.
    */
   constructor(public message: string = '') {
@@ -142,10 +144,16 @@ export class Engine {
    */
   public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
 
+  /**
+   * Sets the default locale for SRE.
+   */
   public set defaultLocale(loc: string) {
     this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
   }
 
+  /**
+   * @returns The current default locale for SRE.
+   */
   public get defaultLocale() {
     return this._defaultLocale;
   }
@@ -275,6 +283,10 @@ export class Engine {
       return [];
     };
 
+  /**
+   * @param node An XML element.
+   * @returns The auditory descriptions after evaluating the node in SRE.
+   */
   public static evaluateNode(node: Element) {
     return Engine.nodeEvaluator(node);
   }
@@ -399,7 +411,7 @@ function configBlocks(feature: { [key: string]: boolean | string }) {
       for (const [key, val] of Object.entries(config)) {
         feature[key] = val;
       }
-    } catch (err) {
+    } catch (_err) {
       Debugger.getInstance().output('Illegal configuration ', inner);
     }
   }

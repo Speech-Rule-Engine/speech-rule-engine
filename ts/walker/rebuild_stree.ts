@@ -108,6 +108,9 @@ export class RebuildStree {
   }
 
   /**
+   * Class to hold information for rebuilding semantic trees from enriched
+   * XML/HTML elements.
+   *
    * @param mathml The enriched MathML node.
    */
   constructor(public mathml: Element) {

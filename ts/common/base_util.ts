@@ -40,8 +40,12 @@ export function removeEmpty(strs: string[]): string[] {
 export function interleaveLists(list1: any[], list2: any[]): any[] {
   const result = [];
   while (list1.length || list2.length) {
-    list1.length && result.push(list1.shift());
-    list2.length && result.push(list2.shift());
+    if (list1.length) {
+      result.push(list1.shift());
+    }
+    if (list2.length) {
+      result.push(list2.shift());
+    }
   }
   return result;
 }

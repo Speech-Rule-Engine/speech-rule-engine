@@ -150,6 +150,8 @@ export abstract class AbstractWalker<T> implements Walker {
   ): T[];
 
   /**
+   * Abstract walker class constructor.
+   *
    * @param node The (rendered) node on which the walker is called.
    * @param generator The speech generator for
    *     this walker.
@@ -279,10 +281,16 @@ export abstract class AbstractWalker<T> implements Walker {
     return this.generator.modality === Attribute.SPEECH;
   }
 
+  /**
+   * @returns The DOM nodes in the focus element.
+   */
   public focusDomNodes() {
     return this.getFocus().getDomNodes();
   }
 
+  /**
+   * @returns The semantic nodes for the focus element.
+   */
   public focusSemanticNodes() {
     return this.getFocus().getSemanticNodes();
   }
@@ -769,7 +777,8 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public previousRules(): Focus {
     this.generator.nextStyle(
-      this.getFocus().getSemanticPrimary()?.id.toString());
+      this.getFocus().getSemanticPrimary()?.id.toString()
+    );
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
@@ -861,8 +870,8 @@ export abstract class AbstractWalker<T> implements Walker {
     const expand = this.expandable(primary)
       ? LOCALE.MESSAGES.navigate.EXPANDABLE
       : this.collapsible(primary)
-      ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
-      : '';
+        ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
+        : '';
     const level = LOCALE.MESSAGES.navigate.LEVEL + ' ' + this.getDepth();
     const snodes = this.getFocus().getSemanticNodes();
     const prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);

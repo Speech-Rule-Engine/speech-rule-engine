@@ -60,9 +60,8 @@ export enum MMLTAGS {
   MUNDER = 'MUNDER',
   MUNDEROVER = 'MUNDEROVER',
   NONE = 'NONE',
-  SEMANTICS = 'SEMANTICS',
+  SEMANTICS = 'SEMANTICS'
 }
-
 
 /**
  * List of all MathML Tags.
@@ -111,10 +110,7 @@ const EMPTYTAGS: string[] = [
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-const DISPLAYTAGS: string[] = [
-  MMLTAGS.MROOT,
-  MMLTAGS.MSQRT
-];
+const DISPLAYTAGS: string[] = [MMLTAGS.MROOT, MMLTAGS.MSQRT];
 
 /**
  * List of potential attributes that should be used as speech directly.
@@ -148,8 +144,11 @@ function hasLeafTag(node: Element): boolean {
  * @returns True if element is an ignore node.
  */
 export function hasIgnoreTag(node: Element): boolean {
-  return !!node && (IGNORETAGS.includes(DomUtil.tagName(node)) ||
-    !ALLTAGS.includes(DomUtil.tagName(node)));
+  return (
+    !!node &&
+    (IGNORETAGS.includes(DomUtil.tagName(node)) ||
+      !ALLTAGS.includes(DomUtil.tagName(node)))
+  );
 }
 
 /**
@@ -181,7 +180,7 @@ export function hasDisplayTag(node: Element): boolean {
 export function isOrphanedGlyph(node: Element): boolean {
   return (
     !!node &&
-      DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
+    DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
     !hasLeafTag(node.parentNode as Element)
   );
 }

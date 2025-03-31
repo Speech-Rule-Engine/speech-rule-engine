@@ -781,9 +781,11 @@ const PROTO_INTERVALS: ProtoAlphabet[] = [
 export const INTERVALS: Map<string, Alphabet> = new Map();
 
 /**
+ * Create name of an alphabet entry.
  *
- * @param base
- * @param font
+ * @param base The base name entry.
+ * @param font The font of the character.
+ * @returns The alphabet entry combining the base name and the font.
  */
 export function alphabetName(base: string, font: string) {
   const capFont = font

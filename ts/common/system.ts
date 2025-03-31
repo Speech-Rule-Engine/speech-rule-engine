@@ -199,6 +199,7 @@ export function vulgar(expr: string): string {
  * @param processor The name of the processor to call.
  * @param input The input string.
  * @returns The computed data structure.
+ * @template T
  */
 function processString<T>(processor: string, input: string): T {
   return ProcessorFactory.process(processor, input);
@@ -315,7 +316,7 @@ function processFileSync(
   if (opt_output) {
     try {
       SystemExternal.fs.writeFileSync(opt_output, result);
-    } catch (err) {
+    } catch (_err) {
       throw new SREError('Can not write to file: ' + opt_output);
     }
   }
@@ -333,7 +334,7 @@ function inputFileSync_(file: string): string {
   let expr;
   try {
     expr = SystemExternal.fs.readFileSync(file, { encoding: 'utf8' });
-  } catch (err) {
+  } catch (_err) {
     throw new SREError('Can not open file: ' + file);
   }
   return expr;

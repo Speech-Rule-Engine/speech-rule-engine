@@ -70,8 +70,8 @@ export interface SpeechRuleStore {
    * @param name Name of the rule. It does not have to be unique.
    * @param dynamic Dynamic constraint annotation of the rule.
    * @param action String version of the speech rule.
-   * @param prec Precondition of the rule.
-   * @param var_args Additional constraints.
+   * @param pre Precondition of the rule.
+   * @param args Additional constraints.
    * @returns The newly defined rule.
    */
   defineRule(

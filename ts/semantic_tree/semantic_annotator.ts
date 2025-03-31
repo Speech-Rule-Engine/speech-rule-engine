@@ -27,6 +27,8 @@ export class SemanticAnnotator {
   public active = false;
 
   /**
+   * Class of semantic annotators. Annotates a tree bottom up.
+   *
    * @param domain The domain name of the annotation.
    * @param name A name for the annotator.
    * @param func The annotation function.
@@ -56,6 +58,8 @@ export class SemanticVisitor {
   public active = false;
 
   /**
+   * Class of semantic visitors. Annotates a tree top down.
+   *
    * @param domain The domain name of the annotation.
    * @param name A name for the visitor.
    * @param func The annotation

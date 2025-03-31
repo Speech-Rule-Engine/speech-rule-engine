@@ -405,8 +405,7 @@ export function isSmallVulgarFraction(node: Element): Element[] {
  */
 function isUnitExpression(node: SemanticNode): boolean {
   return (
-    (node.type === SemanticType.TEXT &&
-      node.role !== SemanticRole.LABEL) ||
+    (node.type === SemanticType.TEXT && node.role !== SemanticRole.LABEL) ||
     (node.type === SemanticType.PUNCTUATED &&
       node.role === SemanticRole.TEXT &&
       isNumber_(node.childNodes[0]) &&
@@ -453,8 +452,8 @@ export function ordinalExponent(node: Element): Span[] {
       isNaN(num)
         ? node.textContent
         : num > 10
-        ? LOCALE.NUMBERS.numericOrdinal(num)
-        : LOCALE.NUMBERS.wordOrdinal(num)
+          ? LOCALE.NUMBERS.numericOrdinal(num)
+          : LOCALE.NUMBERS.wordOrdinal(num)
     )
   ];
 }

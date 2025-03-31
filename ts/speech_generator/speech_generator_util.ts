@@ -372,11 +372,14 @@ export function retrieveSummary(
 export function computeSummary(
   node: Element,
   options: OptionsList = {}): AuditoryDescription[] {
-  const preOption = options.locale ? {locale: options.locale} : {};
+  const preOption = options.locale ? { locale: options.locale } : {};
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
-      Object.assign(preOption,
-                    { modality: 'summary', strict: false, speech: true }),
+        Object.assign(preOption, {
+          modality: 'summary',
+          strict: false,
+          speech: true
+        }),
         function () {
           return SpeechRuleEngine.getInstance().evaluateNode(node);
         }

@@ -115,8 +115,8 @@ export class SsmlRenderer extends XmlRenderer {
       const id = Engine.getInstance().automark
         ? span.attributes['id']
         : Engine.getInstance().mark
-        ? span.attributes['extid']
-        : '';
+          ? span.attributes['extid']
+          : '';
       // TODO:
       //   * combine say as character
       //   * mark again with kind?
@@ -150,6 +150,12 @@ export class SsmlRenderer extends XmlRenderer {
     return result.join(this.separator);
   }
 
+  /**
+   * Predicate to test if a span is empty.
+   *
+   * @param span The span in question.
+   * @returns True if span is empty.
+   */
   private isEmptySpan(span: Span) {
     const sep = span.attributes['separator'];
     return span.speech.match(/^\s*$/) && (!sep || sep.match(/^\s*$/));

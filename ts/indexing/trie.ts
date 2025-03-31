@@ -101,6 +101,9 @@ export class Trie {
     return Math.max(children.length, max);
   }
 
+  /**
+   * Trie structure for indexing of speech rules.
+   */
   constructor() {
     this.root = getNode(TrieNodeKind.ROOT, '', null);
   }
@@ -205,7 +208,9 @@ export class Trie {
   }
 
   /**
-   * @param root
+   * Collects rules of the trie starting at a particular node.
+   *
+   * @param root The node to start from. Defaults to root.
    * @returns Set of speech rules in the trie.
    */
   public collectRules(root: TrieNode = this.root): SpeechRule[] {

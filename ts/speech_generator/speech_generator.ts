@@ -107,15 +107,14 @@ export interface SpeechGenerator {
    * >1: collapsible
    * 0 : empty
    *
-   * @param {number} actionable The actionable value.
+   * @param actionable The actionable value.
    */
   getActionable(actionable: number): string;
 
   /**
    * The localised depth message.
    *
-   * @param {string} depth The nesting level of a node.
+   * @param depth The nesting level of a node.
    */
   getLevel(depth: string): string;
-
 }

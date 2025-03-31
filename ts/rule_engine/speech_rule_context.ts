@@ -117,12 +117,12 @@ export class SpeechRuleContext {
   }
 
   /**
-   * Constructs a string from the node and the given expression.
+   * Constructs a span from the node and the given expression.
    *
    * @param node The initial node.
    * @param expr An Xpath expression string, a name of a custom
    *     function or a string.
-   * @param def
+   * @param def An optional attribute list.
    * @returns The result of applying expression to node.
    */
   public constructSpan(node: Node, expr: string, def: SpanAttrs): Span[] {

@@ -132,10 +132,10 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    * @override
    */
   public getActionable(actionable: number) {
-    return actionable ? (
-      actionable < 0 ? LOCALE.MESSAGES.navigate.EXPANDABLE :
-        LOCALE.MESSAGES.navigate.COLLAPSIBLE
-    ) : '';
+    return actionable
+      ? actionable < 0
+        ? LOCALE.MESSAGES.navigate.EXPANDABLE
+        : LOCALE.MESSAGES.navigate.COLLAPSIBLE
+      : '';
   }
-
 }

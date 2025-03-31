@@ -110,18 +110,20 @@ export const SystemExternal: any = {
       return process.env.SRE_JSON_PATH || global.SRE_JSON_PATH;
     }
     try {
-      let path = nodeRequire().resolve('speech-rule-engine');
+      const path = nodeRequire().resolve('speech-rule-engine');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) { }
+    } catch (_err) {
+      // continue regardless of error
+    }
     try {
-      let path = nodeRequire().resolve('.');
+      const path = nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
-    } catch (_err) { }
-    return (typeof __dirname !== 'undefined')
-      ? (__dirname + (__dirname.match(/lib?$/)
-        ? '/mathmaps'
-        : '/lib/mathmaps'))
-      : (process.cwd() + '/lib/mathmaps');
+    } catch (_err) {
+      // continue regardless of error
+    }
+    return typeof __dirname !== 'undefined'
+      ? __dirname + (__dirname.match(/lib?$/) ? '/mathmaps' : '/lib/mathmaps')
+      : process.cwd() + '/lib/mathmaps';
   })(),
 
   /**

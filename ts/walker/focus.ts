@@ -114,8 +114,8 @@ export class Focus {
    * the same semantic id. This can be the case due to linebreaking duplicating
    * semantic information.
    *
-   * @param {string[]} ids The ids.
-   * @param {Element} domNode The root node in the dom.
+   * @param ids The ids.
+   * @param domNode The root node in the dom.
    * @returns A list of nodes with the given ids.
    */
   private static getAllVisibleNodes(ids: string[], domNode: Element) {
@@ -127,10 +127,15 @@ export class Focus {
   }
 
   /**
+   * Class of focus structures for walkers.
+   *
    * @param nodes The semantic nodes of the focus.
    * @param primary The primary component of the focus.
    */
-  constructor(private nodes: SemanticNode[], private primary: SemanticNode) {}
+  constructor(
+    private nodes: SemanticNode[],
+    private primary: SemanticNode
+  ) {}
 
   /**
    * @returns The nodes of the focus.

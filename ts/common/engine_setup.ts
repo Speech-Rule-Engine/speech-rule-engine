@@ -29,22 +29,34 @@ import { SystemExternal } from './system_external.js';
 const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];
 
 const EN_RULES: string[] = [
-  'chromevox', 'clearspeak', 'mathspeak', 'emacspeak', 'html'
+  'chromevox',
+  'clearspeak',
+  'mathspeak',
+  'emacspeak',
+  'html'
 ];
 
+/**
+ * Ensures that the domain and preference/style combination in a given feature
+ * vector actually exists.
+ *
+ * @param feature The current SRE feature vector.
+ */
 function ensureDomain(feature: { [key: string]: boolean | string }) {
-// This preserves the possibility to specify default as domain.
-// < 3.2  this lead to the use of chromevox rules in English.
-// >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-// we get a meaningful output.
-  if ((feature.modality && feature.modality !== 'speech') ||
-    (!feature.modality && Engine.getInstance().modality !== 'speech')) {
+  // This preserves the possibility to specify default as domain.
+  // < 3.2  this lead to the use of chromevox rules in English.
+  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
+  // we get a meaningful output.
+  if (
+    (feature.modality && feature.modality !== 'speech') ||
+    (!feature.modality && Engine.getInstance().modality !== 'speech')
+  ) {
     return;
   }
   if (!feature.domain) {
     return;
   }
-  if (feature.domain === 'default')  {
+  if (feature.domain === 'default') {
     feature.domain = 'mathspeak';
     return;
   }

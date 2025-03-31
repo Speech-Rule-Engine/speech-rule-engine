@@ -26,7 +26,6 @@ import {
 import { SemanticNodeFactory } from './semantic_node_factory.js';
 
 export const SemanticHeuristics = {
-
   factory: null as SemanticNodeFactory,
 
   /**
@@ -34,21 +33,20 @@ export const SemanticHeuristics = {
    *
    * @param nodeFactory The new semantic node factory.
    */
-  updateFactory: function(nodeFactory: SemanticNodeFactory) {
+  updateFactory: function (nodeFactory: SemanticNodeFactory) {
     SemanticHeuristics.factory = nodeFactory;
   },
 
-  heuristics: new Map<string,
-    SemanticHeuristic<SemanticHeuristicTypes>>(),
+  heuristics: new Map<string, SemanticHeuristic<SemanticHeuristicTypes>>(),
 
-/**
- * Heuristics that are run by default.
- */
+  /**
+   * Heuristics that are run by default.
+   */
   flags: {
     combine_juxtaposition: true,
     convert_juxtaposition: true,
     multioperator: true
-  } as  { [key: string]: boolean },
+  } as { [key: string]: boolean },
 
   /**
    * Heuristics that are permanently switched off.
@@ -60,7 +58,7 @@ export const SemanticHeuristics = {
    *
    * @param heuristic The heuristic.
    */
-  add: function(heuristic: SemanticHeuristic<SemanticHeuristicTypes>) {
+  add: function (heuristic: SemanticHeuristic<SemanticHeuristicTypes>) {
     const name = heuristic.name;
     SemanticHeuristics.heuristics.set(name, heuristic);
     // Registered switched off, unless it is set by default.
@@ -78,7 +76,7 @@ export const SemanticHeuristics = {
    *       optional method to run if the heuristic is not applicable.
    * @returns The resulting subtree.
    */
-  run: function(
+  run: function (
     name: string,
     root: SemanticHeuristicTypes,
     opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
@@ -89,8 +87,7 @@ export const SemanticHeuristics = {
       (SemanticHeuristics.flags[name] || heuristic.applicable(root))
       ? heuristic.apply(root)
       : opt_alternative
-      ? opt_alternative(root)
-      : root;
+        ? opt_alternative(root)
+        : root;
   }
-
-}
+};

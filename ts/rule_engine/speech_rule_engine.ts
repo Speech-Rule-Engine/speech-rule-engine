@@ -29,7 +29,10 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription, AuditoryList } from '../audio/auditory_description.js';
+import {
+  AuditoryDescription,
+  AuditoryList
+} from '../audio/auditory_description.js';
 import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
@@ -366,7 +369,10 @@ export class SpeechRuleEngine {
       if (attributes.engine) {
         saveEngine = Engine.getInstance().dynamicCstr.getComponents();
         const features = Object.assign(
-          {}, saveEngine, Grammar.parseInput(attributes.engine));
+          {},
+          saveEngine,
+          Grammar.parseInput(attributes.engine)
+        );
         Engine.getInstance().setDynamicCstr(features as AxisMap);
         this.updateConstraint_();
       }
@@ -655,7 +661,7 @@ export class SpeechRuleEngine {
         typeof descrPersonality[key] == 'number' &&
         typeof val == 'number'
       ) {
-        descrPersonality[key] = descrPersonality[key] + val;
+        descrPersonality[key] = (descrPersonality[key] + val).toString();
       } else if (!descrPersonality[key]) {
         descrPersonality[key] = val;
       }
@@ -812,9 +818,9 @@ export class SpeechRuleEngine {
 const stores: Map<string, BaseRuleStore> = new Map();
 
 /**
- * Factory method for generating rule stores by modality.
+ * Factory method for generating rule stores by locale and modality.
  *
- * @param locale
+ * @param locale The locale.
  * @param modality The modality.
  * @returns The generated rule store.
  */
@@ -864,21 +870,34 @@ Engine.nodeEvaluator = SpeechRuleEngine.getInstance().evaluateNode.bind(
   SpeechRuleEngine.getInstance()
 );
 
+// TODO: This is a particular method for nemeth annotation, that should be
+// handled better elsewhere.
+const punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
 
-let punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
-
-function processAnnotations(descrs: AuditoryDescription[]): AuditoryDescription[] {
-  let alist = new AuditoryList(descrs);
-  for (let item of alist.annotations) {
-    let descr = item.data;
+/**
+ * Removes unnecessary punctuation marks.
+ *
+ * @param descrs A list of auditory descriptions.
+ * @returns The processed list.
+ */
+function processAnnotations(
+  descrs: AuditoryDescription[]
+): AuditoryDescription[] {
+  const alist = new AuditoryList(descrs);
+  for (const item of alist.annotations) {
+    const descr = item.data;
     // Annotation processor
     if (descr.annotation === 'punctuation') {
-      let prev = alist.prevText(item);
+      const prev = alist.prevText(item);
       if (!prev) continue;
-      let last = prev.data;
-      if (last.annotation !== 'punctuation' && last.text !== '⠀' &&
-        descr.text.length === 1 && punctuationMarks.indexOf(descr.text) !== -1) {
-        descr.text = '⠸' + descr.text
+      const last = prev.data;
+      if (
+        last.annotation !== 'punctuation' &&
+        last.text !== '⠀' &&
+        descr.text.length === 1 &&
+        punctuationMarks.indexOf(descr.text) !== -1
+      ) {
+        descr.text = '⠸' + descr.text;
       }
     }
   }
