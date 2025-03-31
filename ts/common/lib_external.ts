@@ -39,5 +39,5 @@ export const xpath = {
   currentDocument: document,
   evaluate: Xpath.evaluate,
   result: Xpath.XPathResult,
-  createNSResolver: Xpath.createNSResolver,
-}
+  createNSResolver: Xpath.createNSResolver
+};

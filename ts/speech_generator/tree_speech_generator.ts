@@ -58,5 +58,4 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
     }
     return speech;
   }
-
 }

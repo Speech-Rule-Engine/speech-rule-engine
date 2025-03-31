@@ -41,7 +41,6 @@ import { Markup } from '../common/engine_const.js';
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
 export class SpeechStructure {
-
   public speechMaps: Map<string, SpeechMap> = new Map();
 
   private getSpeechMap(id: string): SpeechMap {
@@ -57,14 +56,21 @@ export class SpeechStructure {
     let map = this.getSpeechMap(id);
     map.set(modality, descr);
   }
-  
+
   private nodeMap: Map<string, Element> = null;
 
-  constructor(public node: Element) { }
+  constructor(public node: Element) {}
 
-  public addNode(node: Element, descr: AuditoryDescription[], modality: string = 'speech') {
+  public addNode(
+    node: Element,
+    descr: AuditoryDescription[],
+    modality: string = 'speech'
+  ) {
     // console.log(`Adding to speech mapping (type: ${node.nodeType}):\n ${node.toString()}\n ${descr}`);
-    if (node.nodeType === DomUtil.NodeType.ELEMENT_NODE && node.hasAttribute('id')) {
+    if (
+      node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
+      node.hasAttribute('id')
+    ) {
       // console.log('Setting: ' + node.getAttribute('id'));
       this.setMap(modality, node.getAttribute('id'), descr);
     }
@@ -89,7 +95,7 @@ export class SpeechStructure {
       // of the same node, e.g., as content node. If it is a child node it will
       // be overwritten.
       const tag = (node.parentNode as Element).tagName;
-      if ( tag === 'children' || tag === 'stree') {
+      if (tag === 'children' || tag === 'stree') {
         this.nodeMap.set(id, node);
       }
     }
@@ -110,7 +116,7 @@ export class SpeechStructure {
       if (!speechMap.has(modality)) {
         func(descrs);
       }
-    };
+    }
     Engine.getInstance().modality = oldModality;
   }
 
@@ -121,18 +127,18 @@ export class SpeechStructure {
    */
   public json(mls: string[] = ['none']) {
     const result: {
-      [id: string]: {[modality: string]: string}} = { };
+      [id: string]: { [modality: string]: string };
+    } = {};
     const oldMarkup = Engine.getInstance().markup;
     for (const [id, map] of this.speechMaps) {
-      const modality: {[modality: string]: string} = {};
+      const modality: { [modality: string]: string } = {};
       for (const ml of mls) {
         Engine.getInstance().markup = ml as Markup;
-        map.forEach((x, y) => modality[`${y}-${ml}`] = markup(x));
+        map.forEach((x, y) => (modality[`${y}-${ml}`] = markup(x)));
         result[id] = modality;
       }
     }
     Engine.getInstance().markup = oldMarkup;
     return result;
   }
-
 }

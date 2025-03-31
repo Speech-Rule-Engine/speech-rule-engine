@@ -497,23 +497,47 @@ const REVERSE_MAPPING: string[][] = [
   ['MultiLineLabel', SemanticType.CASES, SemanticRole.LABEL], // more, multiple (table)
   ['MultiLinePausesBetweenColumns', SemanticType.CASES, ''], // more, multiple (table)
   ['MultiLineOverview', SemanticType.CASES, ''], // more, multiple (table)
-  ['MultsymbolDot', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION, 'content:22C5'], // multiple?
-  ['MultsymbolX', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION, 'content:00D7'], // multiple?
+  [
+    'MultsymbolDot',
+    SemanticType.OPERATOR,
+    SemanticRole.MULTIPLICATION,
+    'content:22C5'
+  ], // multiple?
+  [
+    'MultsymbolX',
+    SemanticType.OPERATOR,
+    SemanticRole.MULTIPLICATION,
+    'content:00D7'
+  ], // multiple?
   ['Paren', SemanticType.FENCED, SemanticRole.LEFTRIGHT],
   ['Prime', SemanticType.PUNCTUATION, SemanticRole.PRIME],
   ['Roots', SemanticType.ROOT, ''], // multiple (sqrt)
   ['Roots', SemanticType.SQRT, ''], // multiple (sqrt)
   ['SetMemberSymbol', SemanticType.OPERATOR, SemanticRole.ELEMENT],
   ['Sets', SemanticType.FENCED, SemanticRole.SETEXT], // multiple
-  ['TriangleSymbol', SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER, 'content:0394'], // ????
+  [
+    'TriangleSymbol',
+    SemanticType.IDENTIFIER,
+    SemanticRole.GREEKLETTER,
+    'content:0394'
+  ], // ????
   ['Trig', SemanticType.APPL, SemanticRole.PREFIXFUNC, 'appl:Trigonometric'], // specific
-  ['Trig', SemanticType.FUNCTION, SemanticRole.PREFIXFUNC, 'category:Trigonometric'], // specific
+  [
+    'Trig',
+    SemanticType.FUNCTION,
+    SemanticRole.PREFIXFUNC,
+    'category:Trigonometric'
+  ], // specific
   ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR],
   ['VerticalLine', SemanticType.PUNCTUATION, SemanticRole.VBAR]
 ];
 
-const SEMANTIC_MAPPING_: { [key: string]: { [key: string] : string | {[key: string]: string}}} = (function () {
-  const result: { [key: string]: { [key: string] : string | {[key: string]: string}}} = {};
+const SEMANTIC_MAPPING_: {
+  [key: string]: { [key: string]: string | { [key: string]: string } };
+} = (function () {
+  const result: {
+    [key: string]: { [key: string]: string | { [key: string]: string } };
+  } = {};
   for (let i = 0, triple; (triple = REVERSE_MAPPING[i]); i++) {
     const pref = triple[0];
     const special = triple[3];
@@ -526,7 +550,7 @@ const SEMANTIC_MAPPING_: { [key: string]: { [key: string] : string | {[key: stri
       role[triple[2]] = pref;
       continue;
     }
-    let specialize = role[triple[2]] as {[key: string]: string};
+    let specialize = role[triple[2]] as { [key: string]: string };
     if (!specialize) {
       specialize = {};
       role[triple[2]] = specialize;
@@ -542,7 +566,10 @@ const SEMANTIC_MAPPING_: { [key: string]: { [key: string] : string | {[key: stri
  * @param special Special predicate mapping.
  * @param node The semantic node to test.
  */
-function testSpecial(special: {[key: string]: string}, node: SemanticNode): string {
+function testSpecial(
+  special: { [key: string]: string },
+  node: SemanticNode
+): string {
   for (const [pred, res] of Object.entries(special)) {
     if (executeSpecial(pred, node)) {
       return res;
@@ -569,7 +596,9 @@ function executeSpecial(special: string, node: SemanticNode) {
   return func(node, arg);
 }
 
-const specialPred: {[key: string]: (node: SemanticNode, arg: string) => boolean} = {
+const specialPred: {
+  [key: string]: (node: SemanticNode, arg: string) => boolean;
+} = {
   category: (node: SemanticNode, arg: string) => {
     return MathCompoundStore.lookupCategory(node.textContent) === arg;
   },
@@ -578,13 +607,14 @@ const specialPred: {[key: string]: (node: SemanticNode, arg: string) => boolean}
   },
   appl: (node: SemanticNode, arg: string) => {
     const func = node.childNodes[0];
-    return func ? MathCompoundStore.lookupCategory(func.textContent) === arg : false;
+    return func
+      ? MathCompoundStore.lookupCategory(func.textContent) === arg
+      : false;
   },
   unit: (node: SemanticNode, arg: string) => {
     return MathCompoundStore.lookupCategory(node.textContent + ':unit') === arg;
   }
-}
-
+};
 
 /**
  * Add new comparator and parser.

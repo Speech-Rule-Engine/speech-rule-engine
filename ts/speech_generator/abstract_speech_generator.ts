@@ -118,7 +118,11 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   public nextStyle(id: string) {
     this.setOption(
       'style',
-      SpeechGeneratorUtil.nextStyle(this.getRebuilt().nodeDict[id], this.getOptions()));
+      SpeechGeneratorUtil.nextStyle(
+        this.getRebuilt().nodeDict[id],
+        this.getOptions()
+      )
+    );
   }
 
   /**

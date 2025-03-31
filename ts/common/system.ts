@@ -401,7 +401,6 @@ export function exit(opt_value?: number) {
   EnginePromise.getall().then(() => process.exit(value));
 }
 
-
 /**
  * Function to translate expression into speech structure, with all speech
  * components for all nodes.
@@ -419,16 +418,16 @@ export function toSpeechStructure(expr: string): string {
 import { LOCALE } from '../l10n/locale.js';
 
 type OptionsList = { [key: string]: string };
-type SpeechList = {[id: string]: {[mod: string]: string}};
+type SpeechList = { [id: string]: { [mod: string]: string } };
 
 type WorkerStructure = {
-  speech?: SpeechList,
-  braille?: SpeechList,
-  mactions?: SpeechList,
-  options?: OptionsList,
-  translations?: OptionsList,
-  label?: string,
-  braillelabel?: string,
+  speech?: SpeechList;
+  braille?: SpeechList;
+  mactions?: SpeechList;
+  options?: OptionsList;
+  translations?: OptionsList;
+  label?: string;
+  braillelabel?: string;
 };
 
 /**
@@ -438,7 +437,10 @@ type WorkerStructure = {
  * @param options The list of options.
  * @returns The worker structure once the promise resolves.
  */
-export async function workerSpeech(expr: string, options: OptionsList): Promise<WorkerStructure> {
+export async function workerSpeech(
+  expr: string,
+  options: OptionsList
+): Promise<WorkerStructure> {
   let mml = DomUtil.parseInput(expr);
   let rebuilt = new RebuildStree(mml);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
@@ -451,7 +453,10 @@ export async function workerSpeech(expr: string, options: OptionsList): Promise<
  * @param options The list of options.
  * @returns The worker structure once the promise resolves.
  */
-export async function workerNextRules(expr: string, options: OptionsList): Promise<WorkerStructure> {
+export async function workerNextRules(
+  expr: string,
+  options: OptionsList
+): Promise<WorkerStructure> {
   // TODO: Don't do anything if no next rules!
   let mml = DomUtil.parseInput(expr);
   let rebuilt = new RebuildStree(mml);
@@ -467,7 +472,11 @@ export async function workerNextRules(expr: string, options: OptionsList): Promi
  * @param id Semantic id of the focused node.
  * @returns The worker structure once the promise resolves.
  */
-export async function workerNextStyle(expr: string, options: OptionsList, id: string): Promise<WorkerStructure> {
+export async function workerNextStyle(
+  expr: string,
+  options: OptionsList,
+  id: string
+): Promise<WorkerStructure> {
   // TODO: Don't do anything if no next style!
   let mml = DomUtil.parseInput(expr);
   let rebuilt = new RebuildStree(mml);
@@ -485,7 +494,11 @@ export async function workerNextStyle(expr: string, options: OptionsList, id: st
  * @param options The list of options.
  * @returns The worker structure once the promise resolves.
  */
-async function assembleWorkerStructure(mml: Element, sxml: Element, options: OptionsList): Promise<WorkerStructure> {
+async function assembleWorkerStructure(
+  mml: Element,
+  sxml: Element,
+  options: OptionsList
+): Promise<WorkerStructure> {
   await setupEngine(options);
   Engine.getInstance().automark = true;
   const json: WorkerStructure = {};
@@ -507,7 +520,6 @@ async function assembleWorkerStructure(mml: Element, sxml: Element, options: Opt
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   return json;
 }
-
 
 /**
  * Returns the default locale path, depending on the mode of operation.

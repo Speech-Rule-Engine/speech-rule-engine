@@ -400,7 +400,7 @@ set(
       return new RebuildStree(DomUtil.parseInput(expr));
     }
   })
-)
+);
 
 // The new speech structure for the webworker integration.
 set(
@@ -423,7 +423,6 @@ set(
     }
   })
 );
-
 
 // ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
 // echo "<math><mi>a</mi><mi>b</mi></math>" | ./bin/sre -T -P -d clearspeak

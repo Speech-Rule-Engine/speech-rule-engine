@@ -36,9 +36,10 @@ export class Cli {
   /**
    * Commander library.
    */
-  public static commander = (SystemExternal.documentSupported || SystemExternal.webworker)
-    ? null
-    : SystemExternal.extRequire('commander').program;
+  public static commander =
+    SystemExternal.documentSupported || SystemExternal.webworker
+      ? null
+      : SystemExternal.extRequire('commander').program;
 
   public setup: { [key: string]: string | boolean } = {
     mode: EngineConst.Mode.SYNC

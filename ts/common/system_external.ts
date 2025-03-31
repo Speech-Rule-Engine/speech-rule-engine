@@ -37,8 +37,6 @@ const webworker = (() =>
 const nodeRequire = () => eval('require');
 
 export const SystemExternal: any = {
-
-
   /**
    * The local require function for NodeJS.
    *
@@ -78,7 +76,6 @@ export const SystemExternal: any = {
    */
   document: document,
 
-
   /**
    * The URL for Mathmaps for IE.
    */
@@ -90,9 +87,7 @@ export const SystemExternal: any = {
   /**
    * Filesystem library.
    */
-  fs: documentSupported || webworker
-    ? null
-    : nodeRequire()('fs'),
+  fs: documentSupported || webworker ? null : nodeRequire()('fs'),
 
   /**
    * The URL for SRE resources.
@@ -136,6 +131,5 @@ export const SystemExternal: any = {
    */
   wgxpath: null as any,
 
-  xpath: xpath,
-
+  xpath: xpath
 };

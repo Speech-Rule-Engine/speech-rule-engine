@@ -57,8 +57,10 @@ export class SvgV3Highlighter extends SvgHighlighter {
       return info;
     }
     // This is a hack for v4.
-    const rect = (document ?? DomUtil).
-      createElementNS('http://www.w3.org/2000/svg', 'rect');
+    const rect = (document ?? DomUtil).createElementNS(
+      'http://www.w3.org/2000/svg',
+      'rect'
+    );
     rect.setAttribute(
       'sre-highlighter-added', // Mark highlighting rect.
       'true'

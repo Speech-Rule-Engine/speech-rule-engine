@@ -362,7 +362,11 @@ export class Engine {
    * @param feature An object describing some setup features.
    */
   public configurate(feature: { [key: string]: boolean | string }) {
-    if (this.mode === EngineConst.Mode.HTTP && !SystemExternal.webworker && !this.config) {
+    if (
+      this.mode === EngineConst.Mode.HTTP &&
+      !SystemExternal.webworker &&
+      !this.config
+    ) {
       configBlocks(feature);
       this.config = true;
     }

@@ -47,7 +47,7 @@ export function semanticMathmlNode(mml: Element): Element {
 export function semanticMathmlSync(expr: string): Element {
   const mml = DomUtil.parseInput(expr);
   try {
-    semanticMathmlNode(mml)
+    semanticMathmlNode(mml);
   } catch (err) {
     console.error(err);
   }

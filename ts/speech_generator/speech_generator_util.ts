@@ -36,7 +36,6 @@ import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js
 
 type OptionsList = { [key: string]: string };
 
-
 /**
  * Compute speech string for the xml version of the semantic tree.
  *
@@ -45,7 +44,10 @@ type OptionsList = { [key: string]: string };
  * @returns A list of auditory descriptions
  *     for the node.
  */
-export function computeSpeech(xml: Element, clear = false): AuditoryDescription[] {
+export function computeSpeech(
+  xml: Element,
+  clear = false
+): AuditoryDescription[] {
   const result = SpeechRuleEngine.getInstance().evaluateNode(xml, clear);
   return result;
 }
@@ -287,18 +289,17 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
   }
 }
 
-
 enum NeededAttributes {
   ID = 'data-semantic-id',
   PARENT = 'data-semantic-parent',
   LEVEL = 'aria-level',
   POS = 'aria-posinset',
-  ROLE = 'role',
+  ROLE = 'role'
 }
 
 function getNeededAttributes(stree: Element) {
-  const result: {[K in NeededAttributes]?: string} = {}
-  for (let [,attr] of Object.entries(NeededAttributes)) {
+  const result: { [K in NeededAttributes]?: string } = {};
+  for (let [, attr] of Object.entries(NeededAttributes)) {
     result[attr] = stree.getAttribute(attr);
   }
   return result;
@@ -314,13 +315,14 @@ function getNeededAttributes(stree: Element) {
  */
 export function connectMactionSelections(mml: Element, stree: Element) {
   const mactions = DomUtil.querySelectorAll(mml, 'maction');
-  const results: {[key: string]: {[K in NeededAttributes]?: string}} = {};
+  const results: { [key: string]: { [K in NeededAttributes]?: string } } = {};
   for (let i = 0, maction; (maction = mactions[i]); i++) {
     // Get the span with the maction id in node.
     const selection = parseInt(maction.getAttribute('selection'));
     const children = Array.from(maction.childNodes);
-    const semantic = children.filter(child =>
-      (child as Element).hasAttribute(NeededAttributes.ID))[0] as Element;
+    const semantic = children.filter((child) =>
+      (child as Element).hasAttribute(NeededAttributes.ID)
+    )[0] as Element;
     const selected = children[selection - 1];
     if (!semantic || semantic === selected) {
       continue;
@@ -357,7 +359,8 @@ export function connectAllMactions(mml: Element, stree: Element) {
  */
 export function retrieveSummary(
   node: Element,
-  options: OptionsList = {}): string {
+  options: OptionsList = {}
+): string {
   const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
 }
@@ -371,7 +374,8 @@ export function retrieveSummary(
  */
 export function computeSummary(
   node: Element,
-  options: OptionsList = {}): AuditoryDescription[] {
+  options: OptionsList = {}
+): AuditoryDescription[] {
   const preOption = options.locale ? { locale: options.locale } : {};
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
@@ -398,16 +402,19 @@ export function computePostfix(node: Element): AuditoryDescription[] {
   // TODO: Maybe add personality.
   const postfix = [];
   if (node.getAttribute('role') === SemanticRole.MGLYPH) {
-    postfix.push(new AuditoryDescription({text: 'image', personality: {}}));
+    postfix.push(new AuditoryDescription({ text: 'image', personality: {} }));
   }
   if (node.hasAttribute('href')) {
-    postfix.push(new AuditoryDescription({text: 'link', personality: {}}));
+    postfix.push(new AuditoryDescription({ text: 'link', personality: {} }));
   }
   // TODO: This is trickery. Make that cleaner.
-  SpeechRuleEngine.getInstance().speechStructure.addNode(node, postfix, 'postfix');
+  SpeechRuleEngine.getInstance().speechStructure.addNode(
+    node,
+    postfix,
+    'postfix'
+  );
   return postfix;
 }
-
 
 // Changes for the webworker
 
@@ -417,7 +424,6 @@ export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('postfix', computePostfix);
   structure.completeModality('summary', computeSummary);
 }
-
 
 export function computeSpeechStructure(sxml: Element) {
   computeSpeech(sxml, true);
@@ -446,8 +452,7 @@ export function nextRules(options: OptionsList): OptionsList {
     return options;
   }
   EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
-  options.domain =
-    options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
+  options.domain = options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
   options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
   return options;
 }
@@ -459,7 +464,7 @@ export function nextRules(options: OptionsList): OptionsList {
  * @returns The new style name.
  */
 export function nextStyle(node: SemanticNode, options: OptionsList) {
-  const {modality: modality, domain: domain, style: style} = options;
+  const { modality: modality, domain: domain, style: style } = options;
   // Rule cycling only makes sense for speech modality.
   if (modality !== 'speech') {
     return style;
@@ -490,8 +495,7 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
     if (index === -1) {
       return style;
     }
-    const next =
-      index >= options.length - 1 ? options[0] : options[index + 1];
+    const next = index >= options.length - 1 ? options[0] : options[index + 1];
     const result = ClearspeakPreferences.addPreference(style, smart, next);
     return result;
   }
