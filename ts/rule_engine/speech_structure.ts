@@ -42,6 +42,7 @@ import { Markup } from '../common/engine_const.js';
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
 export class SpeechStructure {
+
   public speechMaps: Map<string, SpeechMap> = new Map();
 
   /**
@@ -87,12 +88,10 @@ export class SpeechStructure {
     descr: AuditoryDescription[],
     modality: string = 'speech'
   ) {
-    // console.log(`Adding to speech mapping (type: ${node.nodeType}):\n ${node.toString()}\n ${descr}`);
     if (
       node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
       node.hasAttribute('id')
     ) {
-      // console.log('Setting: ' + node.getAttribute('id'));
       this.setMap(modality, node.getAttribute('id'), descr);
     }
   }
