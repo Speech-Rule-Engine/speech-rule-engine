@@ -4,11 +4,6 @@
   },
   {
     "key": "cu",
-    "category": "volume",
-    "names": [
-      "cu",
-      "cu."
-    ],
     "mappings": {
       "default": {
         "default": "cúbic",
@@ -18,11 +13,6 @@
   },
   {
     "key": "cu inch",
-    "category": "volume",
-    "names": [
-      "cu in",
-      "cu. in."
-    ],
     "mappings": {
       "default": {
         "default": "polzada cúbica",
@@ -32,11 +22,6 @@
   },
   {
     "key": "cu ft",
-    "category": "volume",
-    "names": [
-      "cu ft",
-      "cu. ft."
-    ],
     "mappings": {
       "default": {
         "default": "peu cúbic",
@@ -46,11 +31,6 @@
   },
   {
     "key": "cu yd",
-    "category": "volume",
-    "names": [
-      "cu yd",
-      "cu. yd."
-    ],
     "mappings": {
       "default": {
         "default": "iarda cúbica",
@@ -60,11 +40,6 @@
   },
   {
     "key": "bbl",
-    "category": "volume",
-    "names": [
-      "bbl.",
-      "bbl"
-    ],
     "mappings": {
       "default": {
         "default": "barril",
@@ -74,11 +49,6 @@
   },
   {
     "key": "fl. oz.",
-    "category": "volume",
-    "names": [
-      "fl. oz.",
-      "fl oz"
-    ],
     "mappings": {
       "default": {
         "default": "unça líquida",
@@ -88,11 +58,6 @@
   },
   {
     "key": "gal",
-    "category": "volume",
-    "names": [
-      "gal",
-      "gal."
-    ],
     "mappings": {
       "default": {
         "default": "galó",
@@ -102,11 +67,6 @@
   },
   {
     "key": "pt",
-    "category": "volume",
-    "names": [
-      "pt",
-      "pt."
-    ],
     "mappings": {
       "default": {
         "default": "pinta",
@@ -116,11 +76,6 @@
   },
   {
     "key": "qt",
-    "category": "volume",
-    "names": [
-      "qt",
-      "qt."
-    ],
     "mappings": {
       "default": {
         "default": "quart",
@@ -130,11 +85,6 @@
   },
   {
     "key": "fluid dram",
-    "category": "volume",
-    "names": [
-      "fl dr",
-      "fl. dr."
-    ],
     "mappings": {
       "default": {
         "default": "dracma líquida",
@@ -144,13 +94,6 @@
   },
   {
     "key": "tbsp",
-    "category": "volume",
-    "names": [
-      "tbsp",
-      "tbsp.",
-      "Tbsp",
-      "Tbsp."
-    ],
     "mappings": {
       "default": {
         "default": "cullerada",
@@ -160,11 +103,6 @@
   },
   {
     "key": "tsp",
-    "category": "volume",
-    "names": [
-      "tsp",
-      "tsp."
-    ],
     "mappings": {
       "default": {
         "default": "culleradeta",
@@ -174,11 +112,6 @@
   },
   {
     "key": "cup",
-    "category": "volume",
-    "names": [
-      "cp",
-      "cp."
-    ],
     "mappings": {
       "default": {
         "default": "tassa",
@@ -188,11 +121,6 @@
   },
   {
     "key": "cc",
-    "category": "volume",
-    "names": [
-      "cc",
-      "ccm"
-    ],
     "mappings": {
       "default": {
         "default": "centímetre cúbic",
@@ -202,11 +130,6 @@
   },
   {
     "key": "l",
-    "category": "volume",
-    "names": [
-      "l"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "litre",

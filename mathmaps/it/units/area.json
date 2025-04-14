@@ -3,15 +3,7 @@
     "locale": "it"
   },
   {
-    "locale": "it"
-  },
-  {
     "key": "sq",
-    "category": "other",
-    "names": [
-      "sq",
-      "sq."
-    ],
     "mappings": {
       "default": {
         "plural": "quadrati",
@@ -20,28 +12,16 @@
     }
   },
   {
-    "key": "sq in",
+    "key": "sq inch",
     "mappings": {
       "default": {
         "plural": "pollici quadrati",
         "default": "pollice quadrato"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq in",
-      "sq. in.",
-      "sq inch",
-      "sq. inch"
-    ]
+    }
   },
   {
     "key": "sq rd",
-    "category": "area",
-    "names": [
-      "sq rd",
-      "sq. rd."
-    ],
     "mappings": {
       "default": {
         "plural": "pertiche quadrati",
@@ -56,12 +36,7 @@
         "plural": "piedi quadrati",
         "default": "piede quadrato"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq ft",
-      "sq. ft."
-    ]
+    }
   },
   {
     "key": "sq yd",
@@ -70,12 +45,7 @@
         "plural": "iarde quadrate",
         "default": "iarda quadrata"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq yd",
-      "sq. yd."
-    ]
+    }
   },
   {
     "key": "sq mi",
@@ -84,28 +54,16 @@
         "plural": "miglia quadrate",
         "default": "miglio quadrato"
       }
-    },
-    "category": "area",
-    "names": [
-      "sq mi",
-      "sq. mi."
-    ]
+    }
   },
   {
-    "key": "ac",
+    "key": "acr",
     "mappings": {
       "default": {
         "plural": "acri",
         "default": "acro"
       }
-    },
-    "category": "area",
-    "names": [
-      "ac",
-      "ac.",
-      "acr",
-      "acr."
-    ]
+    }
   },
   {
     "key": "ha",
@@ -114,10 +72,6 @@
         "plural": "ettari",
         "default": "ettaro"
       }
-    },
-    "category": "area",
-    "names": [
-      "ha"
-    ]
+    }
   }
 ]

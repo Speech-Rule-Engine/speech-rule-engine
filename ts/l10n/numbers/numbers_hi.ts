@@ -22,8 +22,8 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import { Grammar } from '../../rule_engine/grammar';
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -143,10 +143,9 @@ function numericOrdinal(num: number): string {
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.numericOrdinal = numericOrdinal;
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToOrdinal;
-
-export default NUMBERS;
+export const NUMBERS: Numbers = NUMB({
+  wordOrdinal: wordOrdinal,
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});

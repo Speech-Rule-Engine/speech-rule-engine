@@ -18,12 +18,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import { walkTree } from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import { walkTree } from './enrich_mathml.js';
+import { addMrow, setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseBinomial extends AbstractEnrichCase {
   /**
@@ -64,8 +67,7 @@ export class CaseBinomial extends AbstractEnrichCase {
     this.mml = walkTree(child as SemanticNode);
     // Adds a redundant mrow to include the line information.
     if (this.mml.hasAttribute(Attribute.TYPE)) {
-      const mrow = DomUtil.createElement('mrow');
-      mrow.setAttribute(Attribute.ADDED, 'true');
+      const mrow = addMrow();
       DomUtil.replaceNode(this.mml, mrow);
       mrow.appendChild(this.mml);
       this.mml = mrow;

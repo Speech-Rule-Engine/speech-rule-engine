@@ -3,7 +3,6 @@
     "locale": "es"
   },
   {
-    "category": "Zs",
     "key": "0020",
     "mappings": {
       "default": {
@@ -17,8 +16,7 @@
       "default": {
         "default": " "
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "00AD",
@@ -26,11 +24,9 @@
       "default": {
         "default": "guión corto"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Zs",
     "key": "2000",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "2001",
     "mappings": {
       "default": {
@@ -53,8 +48,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2003",
@@ -62,8 +56,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2004",
@@ -71,8 +64,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2005",
@@ -80,11 +72,9 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
-    "category": "Zs",
     "key": "2006",
     "mappings": {
       "default": {
@@ -98,8 +88,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2008",
@@ -107,8 +96,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2009",
@@ -116,8 +104,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "200A",
@@ -125,8 +112,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "200B",
@@ -134,8 +120,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "200C",
@@ -143,8 +128,7 @@
       "default": {
         "default": "ancho de cero no ensamblador"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "200D",
@@ -152,8 +136,7 @@
       "default": {
         "default": "ancho de cero ensamblador"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "200E",
@@ -161,8 +144,7 @@
       "default": {
         "default": "marca de izquierda a derecha"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "200F",
@@ -170,11 +152,9 @@
       "default": {
         "default": "marca de derecha a izquierda"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Zl",
     "key": "2028",
     "mappings": {
       "default": {
@@ -183,7 +163,6 @@
     }
   },
   {
-    "category": "Zp",
     "key": "2029",
     "mappings": {
       "default": {
@@ -192,7 +171,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202A",
     "mappings": {
       "default": {
@@ -201,7 +179,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202B",
     "mappings": {
       "default": {
@@ -210,7 +187,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202C",
     "mappings": {
       "default": {
@@ -219,7 +195,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202D",
     "mappings": {
       "default": {
@@ -228,7 +203,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "202E",
     "mappings": {
       "default": {
@@ -237,7 +211,6 @@
     }
   },
   {
-    "category": "Zs",
     "key": "202F",
     "mappings": {
       "default": {
@@ -251,8 +224,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Zs"
+    }
   },
   {
     "key": "2060",
@@ -260,8 +232,7 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2061",
@@ -269,8 +240,7 @@
       "default": {
         "default": "de"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2062",
@@ -278,8 +248,7 @@
       "default": {
         "default": "por"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2063",
@@ -287,8 +256,7 @@
       "default": {
         "default": "coma"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
     "key": "2064",
@@ -296,11 +264,9 @@
       "default": {
         "default": "más"
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Cf",
     "key": "206A",
     "mappings": {
       "default": {
@@ -309,7 +275,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206B",
     "mappings": {
       "default": {
@@ -318,7 +283,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206E",
     "mappings": {
       "default": {
@@ -327,7 +291,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "206F",
     "mappings": {
       "default": {
@@ -341,11 +304,9 @@
       "default": {
         "default": ""
       }
-    },
-    "category": "Cf"
+    }
   },
   {
-    "category": "Cf",
     "key": "FFF9",
     "mappings": {
       "default": {
@@ -354,7 +315,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFFA",
     "mappings": {
       "default": {
@@ -363,7 +323,6 @@
     }
   },
   {
-    "category": "Cf",
     "key": "FFFB",
     "mappings": {
       "default": {

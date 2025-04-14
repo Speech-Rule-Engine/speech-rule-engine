@@ -1,143 +1,128 @@
 [
-  {"locale": "en"},
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic"
-     }
-   },
-   "key": "cu",
-   "names": ["cu", "cu."]
+  {
+    "locale": "en"
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic inch",
-       "plural": "cubic inches"
-     }
-   },
-   "key": "cu inch",
-   "names": ["cu in", "cu. in."]
+  {
+    "key": "cu",
+    "mappings": {
+      "default": {
+        "default": "cubic",
+        "plural": "cubic"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic foot",
-       "plural": "cubic feet"
-     }
-   },
-   "key": "cu ft",
-   "names": ["cu ft", "cu. ft."]
+  {
+    "key": "cu inch",
+    "mappings": {
+      "default": {
+        "default": "cubic inch",
+        "plural": "cubic inches"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic yard"
-     }
-   },
-   "key": "cu yd",
-   "names": ["cu yd", "cu. yd."]
+  {
+    "key": "cu ft",
+    "mappings": {
+      "default": {
+        "default": "cubic foot",
+        "plural": "cubic feet"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "barrel"
-     }
-   },
-   "key": "bbl",
-   "names": ["bbl.", "bbl"]
+  {
+    "key": "cu yd",
+    "mappings": {
+      "default": {
+        "default": "cubic yard"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "fluid ounce"
-     }
-   },
-   "key": "fl. oz.",
-   "names": ["fl. oz.", "fl oz"]
+  {
+    "key": "bbl",
+    "mappings": {
+      "default": {
+        "default": "barrel"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "gallon"
-     }
-   },
-   "key": "gal",
-   "names": ["gal", "gal."]
+  {
+    "key": "fl. oz.",
+    "mappings": {
+      "default": {
+        "default": "fluid ounce"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "pint"
-     }
-   },
-   "key": "pt",
-   "names": ["pt", "pt."]
+  {
+    "key": "gal",
+    "mappings": {
+      "default": {
+        "default": "gallon"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "quart"
-     }
-   },
-   "key": "qt",
-   "names": ["qt", "qt."]
+  {
+    "key": "pt",
+    "mappings": {
+      "default": {
+        "default": "pint"
+      }
+    }
   },
- 
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "fluid dram"
-     }
-   },
-   "key": "fluid dram",
-   "names": ["fl dr", "fl. dr."]
+  {
+    "key": "qt",
+    "mappings": {
+      "default": {
+        "default": "quart"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "tablespoon"
-     }
-   },
-   "key": "tbsp",
-   "names": ["tbsp", "tbsp.", "Tbsp", "Tbsp."]
+  {
+    "key": "fluid dram",
+    "mappings": {
+      "default": {
+        "default": "fluid dram"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "teaspoon"
-     }
-   },
-   "key": "tsp",
-   "names": ["tsp", "tsp."]
+  {
+    "key": "tbsp",
+    "mappings": {
+      "default": {
+        "default": "tablespoon"
+      }
+    }
   },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cup"
-     }
-   },
-   "key": "cup",
-   "names": ["cp", "cp."]
+  {
+    "key": "tsp",
+    "mappings": {
+      "default": {
+        "default": "teaspoon"
+      }
+    }
   },
-
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "cubic centimeter"
-     }
-   },
-   "key": "cc",
-   "names": ["cc", "ccm"]
+  {
+    "key": "cup",
+    "mappings": {
+      "default": {
+        "default": "cup"
+      }
+    }
   },
-  {"category": "volume",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "liter"
-     }
-   },
-   "key": "l",
-   "names": ["l"]
+  {
+    "key": "cc",
+    "mappings": {
+      "default": {
+        "default": "cubic centimeter"
+      }
+    }
+  },
+  {
+    "key": "l",
+    "mappings": {
+      "default": {
+        "default": "liter"
+      }
+    }
   }
 ]

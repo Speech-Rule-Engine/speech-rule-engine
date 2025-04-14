@@ -22,7 +22,7 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of into a Braille string representation.
@@ -39,8 +39,7 @@ function numberToWords(num: number): string {
     .join('');
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToWords;
-
-export default NUMBERS;
+export const NUMBERS: Numbers = NUMB({
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToWords
+});

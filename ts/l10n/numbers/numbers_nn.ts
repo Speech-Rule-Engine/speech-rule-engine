@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../../common/engine';
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Engine } from '../../common/engine.js';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -154,13 +154,12 @@ function numericOrdinal(num: number): string {
   return num.toString() + '.';
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.numericOrdinal = numericOrdinal;
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToOrdinal;
-
-export default NUMBERS;
+export const NUMBERS: Numbers = NUMB({
+  wordOrdinal: wordOrdinal,
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});
 // TODO: For simple speech output this should be different.
 
 // Alternative Germanic style numbers:

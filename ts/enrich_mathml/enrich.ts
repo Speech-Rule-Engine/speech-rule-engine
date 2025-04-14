@@ -18,14 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import { EnginePromise } from '../common/engine';
-import * as Semantic from '../semantic_tree/semantic';
+import { Debugger } from '../common/debugger.js';
+import * as DomUtil from '../common/dom_util.js';
+import { EnginePromise } from '../common/engine.js';
+import * as Semantic from '../semantic_tree/semantic.js';
 
-import * as EnrichMathml from './enrich_mathml';
-import { removeAttributePrefix } from './enrich_attr';
-import './enrich_case_factory';
+import * as EnrichMathml from './enrich_mathml.js';
+import './enrich_case_factory.js';
 
 /**
  * Semantically enriches a MathML node.
@@ -34,7 +33,7 @@ import './enrich_case_factory';
  * @returns Semantically enriched MathML node.
  */
 export function semanticMathmlNode(mml: Element): Element {
-  const clone = mml.cloneNode(true) as Element;
+  const clone = DomUtil.cloneNode(mml);
   const tree = Semantic.getTree(clone);
   return EnrichMathml.enrich(clone, tree);
 }
@@ -69,11 +68,9 @@ export function semanticMathml(expr: string, callback: (p1: Element) => any) {
  * @param expr MathML expression.
  * @returns The enriched MathML expression.
  */
-export function testTranslation__(expr: string): string {
-  // dummy call
+export function testTranslation(expr: string): Element {
   Debugger.getInstance().init();
-  const mml = semanticMathmlSync(prepareMmlString(expr)).toString();
-  removeAttributePrefix(mml);
+  const mml = semanticMathmlSync(prepareMmlString(expr));
   Debugger.getInstance().exit();
   return mml;
 }

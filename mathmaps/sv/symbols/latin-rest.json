@@ -8,528 +8,469 @@
       "default": {
         "default": "planck constant"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Mn",
     "key": "0363",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande a"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "0364",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande e"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "0365",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande i"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "0366",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande o"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "0367",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande u"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "0368",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande c"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "0369",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande d"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "036A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande h"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "036B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande m"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "036C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande r"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "036D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande t"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "036E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande v"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "036F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande x"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D62",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt i"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D63",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt r"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D64",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt u"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D65",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt v"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DCA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande r nedre"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande platt öppet a övre"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande ae"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande ao"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande av"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande c cedilj"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande omslutet d"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DD9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande eth"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DDA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande g"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DDB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten versal G"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DDC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande k"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DDD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande l"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DDE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten versal L"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DDF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten versal M"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande n"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten versal N"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten versal R"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande r rotunda"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande s"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande långt s"
       }
     }
   },
   {
-    "category": "Mn",
     "key": "1DE6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande z"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2071",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "upphöjt i"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "207F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "upphöjt n"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2090",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt a"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2091",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt e"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2092",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt o"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2093",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt x"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2094",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt schwa"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2095",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt h"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2096",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt k"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2097",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt l"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2098",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt m"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2099",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt n"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "209A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt p"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "209B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt s"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "209C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt t"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "2C7C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt j"
       }
     }
   },
   {
-    "category": "So",
     "key": "1F12A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sköldpaddsskalformat versalt S med parentes"
       }
     }
   },
   {
-    "category": "So",
     "key": "1F12B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "runt kursivt versalt C"
       }
     }
   },
   {
-    "category": "So",
     "key": "1F12C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "runt kursivt versalt R"
       }
     }
   },
   {
-    "category": "So",
     "key": "1F18A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "överkryssat negativt kvadratiskt versalt P"
       }
     }
   }

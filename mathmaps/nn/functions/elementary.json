@@ -4,10 +4,6 @@
   },
   {
     "key": "log",
-    "category": "Logarithm",
-    "names": [
-      "log"
-    ],
     "mappings": {
       "default": {
         "default": "log"
@@ -16,10 +12,6 @@
   },
   {
     "key": "ln",
-    "category": "Logarithm",
-    "names": [
-      "ln"
-    ],
     "mappings": {
       "default": {
         "default": "ln"
@@ -28,10 +20,6 @@
   },
   {
     "key": "lg",
-    "category": "Logarithm",
-    "names": [
-      "lg"
-    ],
     "mappings": {
       "default": {
         "default": "lg"
@@ -40,11 +28,6 @@
   },
   {
     "key": "exp",
-    "category": "Elementary",
-    "names": [
-      "exp",
-      "expt"
-    ],
     "mappings": {
       "default": {
         "default": "eksponent"
@@ -53,10 +36,6 @@
   },
   {
     "key": "gcd",
-    "category": "Elementary",
-    "names": [
-      "gcd"
-    ],
     "mappings": {
       "default": {
         "default": "største fellesnemnar"
@@ -65,10 +44,6 @@
   },
   {
     "key": "lcm",
-    "category": "Elementary",
-    "names": [
-      "lcm"
-    ],
     "mappings": {
       "default": {
         "default": "minste fellesnemnar"
@@ -77,10 +52,6 @@
   },
   {
     "key": "arg",
-    "category": "Complex",
-    "names": [
-      "arg"
-    ],
     "mappings": {
       "default": {
         "default": "arg"
@@ -89,10 +60,6 @@
   },
   {
     "key": "im",
-    "category": "Complex",
-    "names": [
-      "im"
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -101,10 +68,6 @@
   },
   {
     "key": "re",
-    "category": "Complex",
-    "names": [
-      "re"
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -113,10 +76,6 @@
   },
   {
     "key": "inf",
-    "category": "Limits",
-    "names": [
-      "inf"
-    ],
     "mappings": {
       "default": {
         "default": "inf"
@@ -125,10 +84,6 @@
   },
   {
     "key": "lim",
-    "category": "Limits",
-    "names": [
-      "lim"
-    ],
     "mappings": {
       "default": {
         "default": "grense"
@@ -137,11 +92,6 @@
   },
   {
     "key": "liminf",
-    "category": "Limits",
-    "names": [
-      "lim inf",
-      "liminf"
-    ],
     "mappings": {
       "default": {
         "default": "nedre grense"
@@ -150,11 +100,6 @@
   },
   {
     "key": "limsup",
-    "category": "Limits",
-    "names": [
-      "lim sup",
-      "limsup"
-    ],
     "mappings": {
       "default": {
         "default": "øvre grense"
@@ -163,10 +108,6 @@
   },
   {
     "key": "max",
-    "category": "Limits",
-    "names": [
-      "max"
-    ],
     "mappings": {
       "default": {
         "default": "maks"
@@ -175,10 +116,6 @@
   },
   {
     "key": "min",
-    "category": "Limits",
-    "names": [
-      "min"
-    ],
     "mappings": {
       "default": {
         "default": "min"
@@ -187,10 +124,6 @@
   },
   {
     "key": "sup",
-    "category": "Limits",
-    "names": [
-      "sup"
-    ],
     "mappings": {
       "default": {
         "default": "sup"
@@ -199,11 +132,6 @@
   },
   {
     "key": "injlim",
-    "category": "Limits",
-    "names": [
-      "injlim",
-      "inj lim"
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -212,11 +140,6 @@
   },
   {
     "key": "projlim",
-    "category": "Limits",
-    "names": [
-      "projlim",
-      "proj lim"
-    ],
     "mappings": {
       "default": {
         "default": "omvendt grense"
@@ -225,10 +148,6 @@
   },
   {
     "key": "mod",
-    "category": "Elementary",
-    "names": [
-      "mod"
-    ],
     "mappings": {
       "default": {
         "default": "mod"
@@ -237,10 +156,6 @@
   },
   {
     "key": "Pr",
-    "category": "Probability",
-    "names": [
-      "Pr"
-    ],
     "mappings": {
       "default": {
         "default": "sannsyn"

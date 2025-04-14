@@ -22,11 +22,11 @@
 // This work was sponsored by TextHelp
 //
 
-import { Grammar } from '../../rule_engine/grammar';
-import { createLocale, Locale } from '../locale';
-import { combinePostfixIndex, nestingToString } from '../locale_util';
-import NUMBERS from '../numbers/numbers_fr';
-import { Combiners } from '../transformers';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { createLocale, Locale } from '../locale.js';
+import { combinePostfixIndex, nestingToString } from '../locale_util.js';
+import { NUMBERS } from '../numbers/numbers_fr.js';
+import { Combiners } from '../transformers.js';
 
 let locale: Locale = null;
 

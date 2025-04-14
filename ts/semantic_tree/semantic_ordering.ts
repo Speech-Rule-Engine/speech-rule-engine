@@ -24,7 +24,7 @@ import {
   SemanticMeaning,
   SemanticRole,
   SemanticType
-} from './semantic_meaning';
+} from './semantic_meaning.js';
 
 // TODO: Have some better ordering mechanism than array order.
 /**
@@ -33,9 +33,11 @@ import {
 const comparators: SemanticComparator[] = [];
 
 /**
- * @param comparator Adds the comparator
+ *  Adds a comparator.
+ *
+ * @param comparator The comparator to add.
  */
-export function add(comparator: SemanticComparator) {
+function add(comparator: SemanticComparator) {
   comparators.push(comparator);
 }
 
@@ -46,10 +48,7 @@ export function add(comparator: SemanticComparator) {
  * @param meaning2 The second meaning.
  * @returns 0, 1, -1 depending on the partial order.
  */
-export function apply(
-  meaning1: SemanticMeaning,
-  meaning2: SemanticMeaning
-): number {
+function apply(meaning1: SemanticMeaning, meaning2: SemanticMeaning): number {
   for (let i = 0, comparator; (comparator = comparators[i]); i++) {
     const result = comparator.compare(meaning1, meaning2);
     if (result !== 0) {
@@ -64,7 +63,7 @@ export function apply(
  *
  * @param meanings List of meaning elements.
  */
-export function sort(meanings: SemanticMeaning[]) {
+function sort(meanings: SemanticMeaning[]) {
   meanings.sort(apply);
 }
 
@@ -89,8 +88,10 @@ export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
   return result;
 }
 
-export class SemanticComparator {
+class SemanticComparator {
   /**
+   * Class of semantic comparators.
+   *
    * @param comparator The actual comparator function.
    * @param type Type restriction for a comparator to work on. If not given it works on any type.
    */

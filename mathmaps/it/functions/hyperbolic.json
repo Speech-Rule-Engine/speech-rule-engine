@@ -8,11 +8,7 @@
       "default": {
         "default": "coseno iperbolico"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "cosh"
-    ]
+    }
   },
   {
     "key": "coth",
@@ -20,11 +16,7 @@
       "default": {
         "default": "cotangente iperbolica"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "coth"
-    ]
+    }
   },
   {
     "key": "csch",
@@ -32,11 +24,7 @@
       "default": {
         "default": "cosecante iperbolica"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "csch"
-    ]
+    }
   },
   {
     "key": "sech",
@@ -44,11 +32,7 @@
       "default": {
         "default": "secante iperbolica"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "sech"
-    ]
+    }
   },
   {
     "key": "sinh",
@@ -56,11 +40,7 @@
       "default": {
         "default": "seno iperbolico"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "sinh"
-    ]
+    }
   },
   {
     "key": "tanh",
@@ -68,11 +48,7 @@
       "default": {
         "default": "tangente iperbolica"
       }
-    },
-    "category": "Hyperbolic",
-    "names": [
-      "tanh"
-    ]
+    }
   },
   {
     "key": "arcosh",
@@ -81,10 +57,7 @@
         "default": "settore coseno iperbolico"
       }
     },
-    "category": "Area",
     "names": [
-      "arcosh",
-      "arccosh",
       "settcosh"
     ]
   },
@@ -95,10 +68,7 @@
         "default": "settore co-tangente iperbolica"
       }
     },
-    "category": "Area",
     "names": [
-      "arcoth",
-      "arccoth",
       "settcoth"
     ]
   },
@@ -109,10 +79,7 @@
         "default": "settore co-secante iperbolica"
       }
     },
-    "category": "Area",
     "names": [
-      "arcsch",
-      "arccsch",
       "settcsch"
     ]
   },
@@ -123,10 +90,7 @@
         "default": "settore secante iperbolica"
       }
     },
-    "category": "Area",
     "names": [
-      "arsech",
-      "arcsech",
       "settsech"
     ]
   },
@@ -137,10 +101,7 @@
         "default": "settore seno iperbolico"
       }
     },
-    "category": "Area",
     "names": [
-      "arsinh",
-      "arcsinh",
       "settsinh"
     ]
   },
@@ -151,10 +112,7 @@
         "default": "settore tangente iperbolica"
       }
     },
-    "category": "Area",
     "names": [
-      "artanh",
-      "arctanh",
       "settanh"
     ]
   }

@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import { DynamicCstr } from '../rule_engine/dynamic_cstr';
+import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import {
   Axis,
   AxisMap,
@@ -28,11 +28,14 @@ import {
   DefaultComparator,
   DynamicCstrParser,
   DynamicProperties
-} from '../rule_engine/dynamic_cstr';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+} from '../rule_engine/dynamic_cstr.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 export class ClearspeakPreferences extends DynamicCstr {
   private static AUTO = 'Auto';
@@ -118,66 +121,16 @@ export class ClearspeakPreferences extends DynamicCstr {
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
   }
 
-  // TODO: The following should be done in MathJax in the future!
-  // TODO (TS): Import the mathjax types, get rid of any.
-  // static getSpeechExplorer(item: MathItem): Explorer {
   /**
-   * Computes a selection of clearspeak preferences for the MathJax context menu
-   * wrt. currently focused subexpression.
-   *
-   * @param item A Math Item.
-   * @param locale The current locale.
-   * @returns The menu settings for a new radio button
-   *    sub menu.
+   * @returns The current clearspeak styles selection, if any is set.
    */
-  // TODO (TS): item should get MathJax type MathItem
-  public static smartPreferences(item: any, locale: string): AxisMap[] {
-    const prefs = ClearspeakPreferences.getLocalePreferences();
-    const loc = prefs[locale];
-    if (!loc) {
-      return [];
-    }
-    const explorer = item['explorers']['speech'];
-    const smart = ClearspeakPreferences.relevantPreferences(
-      explorer.walker.getFocus().getSemanticPrimary()
-    );
-    // var smart = 'Bar'; // TODO: Lookup the right preference.
-    const previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
-    const items = [
-      {
-        type: 'radio',
-        content: 'No Preferences',
-        id: 'clearspeak-default',
-        variable: 'speechRules'
-      },
-      {
-        type: 'radio',
-        content: 'Current Preferences',
-        id: 'clearspeak-' + previous,
-        variable: 'speechRules'
-      },
-      { type: 'rule' },
-      { type: 'label', content: 'Preferences for ' + smart },
-      { type: 'rule' }
-    ];
-    return items.concat(
-      loc[smart].map(function (x) {
-        const pair = x.split('_');
-        return {
-          type: 'radio',
-          content: pair[1],
-          id:
-            'clearspeak-' +
-            ClearspeakPreferences.addPreference(previous, pair[0], pair[1]),
-          variable: 'speechRules'
-        };
-      })
-    );
+  public static currentPreference() {
+    return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
   }
 
   /**
-   * Computes a clearspeak preference that should be changed given the type of
-   * the node.
+   * Computes a relevant selection of clearspeak preferences for a given
+   * semantic node.
    *
    * @param node A semantic node.
    * @returns The preference that fits the node's type and role.
@@ -191,7 +144,7 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * Look up the setting of a preference in a preference settings sting.
+   * Look up the setting of a preference in a preference settings string.
    *
    * @param prefs Preference settings.
    * @param kind The preference to look up.
@@ -207,7 +160,9 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * Adds or updates a value in a preference settings.
+   * Takes the string representation of a clearspeak preference setting and adds
+   * a new preference setting via a preference name and value pair. The updated
+   * setting is then returned again as a string.
    *
    * @param prefs Preference settings.
    * @param kind New preference name.
@@ -238,7 +193,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     [key: string]: AxisProperties;
   } {
     const result: { [key: string]: AxisProperties } = {};
-    for (const locale in dynamic) {
+    for (const locale of Object.keys(dynamic)) {
       if (
         !dynamic[locale]['speech'] ||
         !dynamic[locale]['speech']['clearspeak']
@@ -246,6 +201,7 @@ export class ClearspeakPreferences extends DynamicCstr {
         continue;
       }
       const locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
+      if (locPrefs.length < 3) continue; // Remove languages with no real CS
       const prefs: AxisProperties = (result[locale] = {});
       for (const axis in PREFERENCES.getProperties()) {
         const allSty = PREFERENCES.getProperties()[axis];
@@ -264,10 +220,16 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
+   * The clearspeak preferences class, which is a specialization of dynamic
+   * constraints.
+   *
    * @param cstr The constraint mapping.
    * @param preference The preference.
    */
-  constructor(cstr: AxisMap, public preference: { [key: string]: string }) {
+  constructor(
+    cstr: AxisMap,
+    public preference: { [key: string]: string }
+  ) {
     super(cstr);
   }
 
@@ -374,13 +336,15 @@ const PREFERENCES = new DynamicProperties({
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
-export class Comparator extends DefaultComparator {
+class Comparator extends DefaultComparator {
   /**
    * @override
    */
   public preference: AxisMap;
 
   /**
+   * Comparator for clearspeak preference constraints.
+   *
    * @param cstr A Clearspeak preference constraint.
    * @param props A properties element for matching.
    */
@@ -438,7 +402,7 @@ export class Comparator extends DefaultComparator {
   }
 }
 
-export class Parser extends DynamicCstrParser {
+class Parser extends DynamicCstrParser {
   /**
    * @override
    */

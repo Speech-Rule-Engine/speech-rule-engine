@@ -9,12 +9,7 @@
         "plural": "piedi",
         "default": "piede"
       }
-    },
-    "category": "length",
-    "names": [
-      "ft",
-      "ft."
-    ]
+    }
   },
   {
     "key": "in",
@@ -23,12 +18,7 @@
         "plural": "pollici",
         "default": "pollice"
       }
-    },
-    "category": "length",
-    "names": [
-      "in",
-      "in."
-    ]
+    }
   },
   {
     "key": "mi",
@@ -37,12 +27,7 @@
         "plural": "miglia",
         "default": "miglio"
       }
-    },
-    "category": "length",
-    "names": [
-      "mi",
-      "mi."
-    ]
+    }
   },
   {
     "key": "yd",
@@ -51,62 +36,37 @@
         "plural": "iarde",
         "default": "iarda"
       }
-    },
-    "category": "length",
-    "names": [
-      "yd",
-      "yd."
-    ]
+    }
   },
   {
-    "key": "li",
+    "key": "link",
     "mappings": {
       "default": {
         "plural": "links",
         "default": "link"
       }
-    },
-    "category": "length",
-    "names": [
-      "li",
-      "li."
-    ]
+    }
   },
   {
-    "key": "rd",
+    "key": "rod",
     "mappings": {
       "default": {
         "plural": "pertiche",
         "default": "pertica"
       }
-    },
-    "category": "length",
-    "names": [
-      "rd",
-      "rd."
-    ]
+    }
   },
   {
-    "key": "ch",
+    "key": "chain",
     "mappings": {
       "default": {
         "plural": "catene",
         "default": "catena"
       }
-    },
-    "category": "length",
-    "names": [
-      "ch",
-      "ch."
-    ]
+    }
   },
   {
     "key": "furlong",
-    "category": "length",
-    "names": [
-      "fur",
-      "fur."
-    ],
     "mappings": {
       "default": {
         "plural": "furlong",
@@ -116,10 +76,6 @@
   },
   {
     "key": "n.m.",
-    "category": "length",
-    "names": [
-      "n.m."
-    ],
     "mappings": {
       "default": {
         "plural": "miglia nautiche",
@@ -134,11 +90,6 @@
         "plural": "metri",
         "default": "metro"
       }
-    },
-    "category": "length",
-    "names": [
-      "m"
-    ],
-    "si": true
+    }
   }
 ]

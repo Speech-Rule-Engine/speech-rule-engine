@@ -22,7 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
-import * as MathspeakUtil from './mathspeak_util';
+import { Span } from '../audio/span.js';
+import * as MathspeakUtil from './mathspeak_util.js';
 
 /**
  * Computes baseline prefix in verbose mode.
@@ -30,9 +31,10 @@ import * as MathspeakUtil from './mathspeak_util';
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function baselineVerbose(node: Element): string {
+export function baselineVerbose(node: Element): Span[] {
   const baseline = MathspeakUtil.baselineVerbose(node);
-  return baseline.replace(/-$/, '');
+  baseline[0].speech = baseline[0].speech.replace(/-$/, '');
+  return baseline;
 }
 
 /**
@@ -41,9 +43,10 @@ export function baselineVerbose(node: Element): string {
  * @param node Subscript node.
  * @returns The prefix string.
  */
-export function baselineBrief(node: Element): string {
+export function baselineBrief(node: Element): Span[] {
   const baseline = MathspeakUtil.baselineBrief(node);
-  return baseline.replace(/-$/, '');
+  baseline[0].speech = baseline[0].speech.replace(/-$/, '');
+  return baseline;
 }
 
 /**
@@ -52,9 +55,13 @@ export function baselineBrief(node: Element): string {
  * @param node Tensor node.
  * @returns The prefix string.
  */
-export function leftSuperscriptVerbose(node: Element): string {
+export function leftSuperscriptVerbose(node: Element): Span[] {
   const leftIndex = MathspeakUtil.superscriptVerbose(node);
-  return leftIndex.replace(/^exposant/, 'exposant gauche');
+  leftIndex[0].speech = leftIndex[0].speech.replace(
+    /^exposant/,
+    'exposant gauche'
+  );
+  return leftIndex;
 }
 
 /**
@@ -63,9 +70,10 @@ export function leftSuperscriptVerbose(node: Element): string {
  * @param node Tensor node.
  * @returns The prefix string.
  */
-export function leftSubscriptVerbose(node: Element): string {
+export function leftSubscriptVerbose(node: Element): Span[] {
   const leftIndex = MathspeakUtil.subscriptVerbose(node);
-  return leftIndex.replace(/^indice/, 'indice gauche');
+  leftIndex[0].speech = leftIndex[0].speech.replace(/^indice/, 'indice gauche');
+  return leftIndex;
 }
 
 /**
@@ -74,9 +82,10 @@ export function leftSubscriptVerbose(node: Element): string {
  * @param node Tensor node.
  * @returns The prefix string.
  */
-export function leftSuperscriptBrief(node: Element): string {
+export function leftSuperscriptBrief(node: Element): Span[] {
   const leftIndex = MathspeakUtil.superscriptBrief(node);
-  return leftIndex.replace(/^sup/, 'sup gauche');
+  leftIndex[0].speech = leftIndex[0].speech.replace(/^sup/, 'sup gauche');
+  return leftIndex;
 }
 
 /**
@@ -85,7 +94,8 @@ export function leftSuperscriptBrief(node: Element): string {
  * @param node Tensor node.
  * @returns The prefix string.
  */
-export function leftSubscriptBrief(node: Element): string {
+export function leftSubscriptBrief(node: Element): Span[] {
   const leftIndex = MathspeakUtil.subscriptBrief(node);
-  return leftIndex.replace(/^sub/, 'sub gauche');
+  leftIndex[0].speech = leftIndex[0].speech.replace(/^sub/, 'sub gauche');
+  return leftIndex;
 }

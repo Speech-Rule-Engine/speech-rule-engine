@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as tr from './transformers';
+import * as tr from './transformers.js';
 
 /**
  * General messages for Mathspek, fonts, etc.
@@ -85,33 +85,39 @@ export interface Numbers {
   special?: { [key: string]: string | string[] };
 
   // Constructor methods
-  wordOrdinal: tr.Transformer;
-  numericOrdinal: tr.Transformer;
-  numberToWords: tr.Transformer;
-  numberToOrdinal: tr.GrammarCase;
+  wordOrdinal?: tr.Transformer;
+  numericOrdinal?: tr.Transformer;
+  numberToWords?: tr.Transformer;
+  numberToOrdinal?: tr.GrammarCase;
 
-  vulgarSep: string;
-  numSep: string;
+  vulgarSep?: string;
+  numSep?: string;
 }
 
 /**
+ * Assigns numbers messages of a locale to the default numbers structure.
+ *
+ * @param numbers The numbers structure to assign.
  * @returns A numbers structure.
  */
-export function NUMBERS(): Numbers {
-  return {
-    zero: 'zero',
-    ones: [],
-    tens: [],
-    large: [],
-    special: {},
+export function NUMBERS(numbers: Numbers = {}): Numbers {
+  return Object.assign(
+    {
+      zero: 'zero',
+      ones: [],
+      tens: [],
+      large: [],
+      special: {},
 
-    wordOrdinal: tr.identityTransformer,
-    numericOrdinal: tr.identityTransformer,
-    numberToWords: tr.identityTransformer,
-    numberToOrdinal: tr.pluralCase,
-    vulgarSep: ' ',
-    numSep: ' '
-  };
+      wordOrdinal: tr.identityTransformer,
+      numericOrdinal: tr.identityTransformer,
+      numberToWords: tr.identityTransformer,
+      numberToOrdinal: tr.pluralCase,
+      vulgarSep: ' ',
+      numSep: ' '
+    },
+    numbers
+  );
 }
 
 /**

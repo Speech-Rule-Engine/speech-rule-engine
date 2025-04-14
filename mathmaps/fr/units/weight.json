@@ -8,11 +8,7 @@
       "default": {
         "default": "livre"
       }
-    },
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "oz",
@@ -20,11 +16,7 @@
       "default": {
         "default": "once"
       }
-    },
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
   {
     "key": "gr",
@@ -32,22 +24,15 @@
       "default": {
         "default": "gramme"
       }
-    },
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "si": true,
     "mappings": {
       "default": {
         "default": "gramme"
       }
-    },
-    "names": [
-      "g"
-    ]
+    }
   },
   {
     "key": "t",
@@ -55,83 +40,57 @@
       "default": {
         "default": "tonne"
       }
-    },
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   },
-    {
-    "category": "weight",
+  {
+    "key": "dram",
     "mappings": {
       "default": {
         "default": "drachme"
       }
-    },
-    "key": "dram",
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "st",
     "mappings": {
       "default": {
         "default": "stone"
       }
-    },
-    "key": "st",
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "qtr",
     "mappings": {
       "default": {
         "default": "quarter"
       }
-    },
-    "key": "qtr",
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "LT",
     "mappings": {
       "default": {
         "default": "long ton"
       }
-    },
-    "key": "LT",
-    "names": [
-      "LT",
-      "L.T."
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "mcg",
     "mappings": {
       "default": {
         "default": "microgramme"
       }
-    },
-    "key": "mcg",
-    "names": [
-      "mcg"
-    ]
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "quintal"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt.", "qq"]
+  {
+    "key": "cwt",
+    "mappings": {
+      "default": {
+        "default": "quintal"
+      }
+    },
+    "names": [
+      "qq"
+    ]
   }
 ]

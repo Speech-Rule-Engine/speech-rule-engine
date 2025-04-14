@@ -28,10 +28,10 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { SREError } from '../common/engine';
-import { DynamicCstr } from './dynamic_cstr';
-import * as Grammar from './grammar';
-import { SpeechRuleContext } from './speech_rule_context';
+import { SREError } from '../common/engine.js';
+import { DynamicCstr } from './dynamic_cstr.js';
+import * as Grammar from './grammar.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
 export class SpeechRule {
   /**
@@ -80,6 +80,7 @@ export enum ActionType {
   PERSONALITY = 'PERSONALITY'
 }
 
+// TODO (ts) Rewrite that into maps.
 /**
  * Maps a string to a valid speech rule type.
  *
@@ -125,7 +126,7 @@ function actionToString(speechType: ActionType): string {
 /**
  *  The type of single components.
  */
-export interface ComponentType {
+interface ComponentType {
   type: ActionType;
   content?: string;
   attributes?: Attributes;
@@ -198,8 +199,7 @@ export class Component {
           // string, it can be treated like node and multi type.
           break;
         }
-      // eslint-disable no-fallthrough
-      case ActionType.NODE:
+      case ActionType.NODE: // eslint-disable-line no-fallthrough
       case ActionType.MULTI:
         {
           const bracket = rest.indexOf(' (');
@@ -241,8 +241,7 @@ export class Component {
     }
     const attributes: { [key: string]: string | Grammar.State } = {};
     const attribs = splitString(attrs.slice(1, -1), ',');
-    for (let i = 0, m = attribs.length; i < m; i++) {
-      const attr = attribs[i];
+    for (const attr of attribs) {
       const colon = attr.indexOf(':');
       if (colon === -1) {
         attributes[attr.trim()] = 'true';
@@ -299,15 +298,14 @@ export class Component {
    * @returns List of translated attribute:value strings.
    */
   public getGrammar(): string[] {
+    if (!this.grammar) {
+      return [];
+    }
     const attribs = [];
-    for (const key in this.grammar) {
-      if (this.grammar[key] === true) {
-        attribs.push(key);
-      } else if (this.grammar[key] === false) {
-        attribs.push('!' + key);
-      } else {
-        attribs.push(key + '=' + this.grammar[key]);
-      }
+    for (const [key, val] of Object.entries(this.grammar)) {
+      attribs.push(
+        val === true ? key : val === false ? `!${key}` : `${key}=${val}`
+      );
     }
     return attribs;
   }
@@ -330,10 +328,12 @@ export class Component {
    * @returns List of translated attribute:value strings.
    */
   public getAttributes(): string[] {
+    if (!this.attributes) {
+      return [];
+    }
     const attribs = [];
-    for (const key in this.attributes) {
-      const value = this.attributes[key];
-      value === 'true' ? attribs.push(key) : attribs.push(key + ':' + value);
+    for (const [key, val] of Object.entries(this.attributes)) {
+      attribs.push(val === 'true' ? key : `${key}:${val}`);
     }
     return attribs;
   }
@@ -366,7 +366,58 @@ export class Action {
         newComps.push(comp);
       }
     }
+    Action.naiveSpan(newComps);
     return new Action(newComps);
+  }
+
+  /**
+   * Adds a default span to text components if none is given. Current heuristic
+   * is as follows:
+   *
+   * A textual component gets the next node (if there is any) assigned as span.
+   * The exception is the first component, that gets the entire node assigned.
+   *
+   * IDEAS NOT YET IMPLEMENTED:
+   *
+   * if text element is last (or only followed by personality) it gets the overall
+   * element as a span.
+   * if next element is multinode it gets the overall element as span?
+   *
+   * @param comps A list of components.
+   */
+  private static naiveSpan(comps: Component[]) {
+    let first = false;
+    for (let i = 0, comp; (comp = comps[i]); i++) {
+      if (
+        first &&
+        (comp.type !== ActionType.TEXT ||
+          (comp.content[0] !== '"' && !comp.content.match(/^CSF/)))
+      )
+        continue;
+      if (!first && comp.type === ActionType.PERSONALITY) continue;
+      if (!first) {
+        first = true;
+        continue;
+      }
+      if (comp.attributes?.span) continue;
+      const next = comps[i + 1];
+      if (next && next.type !== ActionType.NODE) continue;
+      Action.addNaiveSpan(comp, next ? next.content : 'LAST');
+    }
+  }
+
+  // Span Naive: Here we
+  /**
+   * Add a naive custom span for the next node if it exists.
+   *
+   * @param comp The component.
+   * @param span The span with a single string.
+   */
+  private static addNaiveSpan(comp: Component, span: string) {
+    if (!comp.attributes) {
+      comp.attributes = {};
+    }
+    comp.attributes['span'] = span;
   }
 
   /**
@@ -395,7 +446,8 @@ export class Precondition {
    * 4. Specific self with condition
    */
   private static queryPriorities: RegExp[] = [
-    // /^self::\*$/, /^self::[\w-]+$/,
+    /^self::\*$/,
+    /^self::[\w-]+$/,
     /^self::\*\[.+\]$/,
     /^self::[\w-]+\[.+\]$/
   ];
@@ -461,9 +513,13 @@ export class Precondition {
    * @param query A node selector function or xpath expression.
    * @param cstr A rest list of constraint functions.
    */
-  constructor(public query: string, ...cstr: string[]) {
+  constructor(
+    public query: string,
+    ...cstr: string[]
+  ) {
     this.constraints = cstr;
-    this.priority = this.calculatePriority();
+    const [exists, user] = this.presetPriority();
+    this.priority = exists ? user : this.calculatePriority();
   }
 
   /**
@@ -484,12 +540,36 @@ export class Precondition {
     if (!query) {
       return 0;
     }
-    const inner = this.query.match(/^self::.+\[(.+)\]/)[1];
-    const attr = Precondition.constraintValue(
-      inner,
-      Precondition.attributePriorities
-    );
+    const match = this.query.match(/^self::.+\[(.+)\]/);
+    let attr = 0;
+    if (match?.length && match[1]) {
+      const inner = match[1];
+      attr = Precondition.constraintValue(
+        inner,
+        Precondition.attributePriorities
+      );
+    }
     return query * 100 + attr * 10;
+  }
+
+  /**
+   * Retrieves a preset priority if one is defined. Note that this priority will
+   * supersede the heuristically computed priorities!
+   *
+   * @returns The priority number.
+   */
+  private presetPriority(): [boolean, number] {
+    if (!this.constraints.length) {
+      return [false, 0];
+    }
+    const last =
+      this.constraints[this.constraints.length - 1].match(/^priority=(.*$)/);
+    if (!last) {
+      return [false, 0];
+    }
+    this.constraints.pop();
+    const numb = parseFloat(last[1]);
+    return [true, isNaN(numb) ? 0 : numb];
   }
 }
 

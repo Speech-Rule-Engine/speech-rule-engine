@@ -18,10 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { setdifference } from '../common/base_util';
-import * as EngineConst from '../common/engine_const';
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
+import { setdifference } from '../common/base_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../common/engine.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
 
 export interface Tags {
   open?: EngineConst.personalityProps[];
@@ -180,7 +181,24 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   }
   result = result.concat(finaliseMarkup_());
   result = simplifyMarkup_(result);
+  result = Engine.getInstance().cleanpause ? cleanPause(result) : result;
   return result;
+}
+
+/**
+ * Removes pause elements from start and end of auditory markup.
+ *
+ * @param markup The auditory markup.
+ * @returns The markup with leading and trailing pauses removed.
+ */
+function cleanPause(markup: Markup[]) {
+  while (isPauseElement(markup[0])) {
+    markup.shift();
+  }
+  while (isPauseElement(markup[markup.length - 1])) {
+    markup.pop();
+  }
+  return markup;
 }
 
 /**
@@ -336,7 +354,7 @@ export function isPauseElement(element: Markup): boolean {
  * @param element An element of the markup list.
  * @returns True if this is a span element.
  */
-export function isSpanElement(element: Markup): boolean {
+function isSpanElement(element: Markup): boolean {
   const keys = Object.keys(element);
   return (
     typeof element === 'object' &&
@@ -386,13 +404,13 @@ function appendMarkup_(
       // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
         const lastSpan = last['span'].pop();
-        span = new Span(
+        span = Span.stringAttr(
           lastSpan.speech + oldJoin + span.speech,
           lastSpan.attributes
         );
       }
       last['span'].push(span);
-      span = new Span('', {});
+      span = Span.empty();
       last[EngineConst.personalityProps.JOIN] = join;
     }
   }

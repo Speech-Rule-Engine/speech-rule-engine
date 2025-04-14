@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from './semantic_node';
+import { SemanticNode } from './semantic_node.js';
 
 export class SemanticAnnotator {
   /**
@@ -27,6 +27,8 @@ export class SemanticAnnotator {
   public active = false;
 
   /**
+   * Class of semantic annotators. Annotates a tree bottom up.
+   *
    * @param domain The domain name of the annotation.
    * @param name A name for the annotator.
    * @param func The annotation function.
@@ -44,6 +46,7 @@ export class SemanticAnnotator {
    */
   public annotate(node: SemanticNode) {
     node.childNodes.forEach(this.annotate.bind(this));
+    node.contentNodes.forEach(this.annotate.bind(this));
     node.addAnnotation(this.domain, this.func(node));
   }
 }
@@ -55,6 +58,8 @@ export class SemanticVisitor {
   public active = false;
 
   /**
+   * Class of semantic visitors. Annotates a tree top down.
+   *
    * @param domain The domain name of the annotation.
    * @param name A name for the visitor.
    * @param func The annotation
@@ -80,6 +85,9 @@ export class SemanticVisitor {
     node.addAnnotation(this.domain, result[0]);
     for (let i = 0, child; (child = node.childNodes[i]); i++) {
       result = this.visit(child, result[1] as { [key: string]: any });
+    }
+    for (let i = 0, content; (content = node.contentNodes[i]); i++) {
+      result = this.visit(content, result[1] as { [key: string]: any });
     }
     return result;
   }

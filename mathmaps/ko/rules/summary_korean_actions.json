@@ -1,0 +1,397 @@
+{
+  "locale": "ko",
+  "modality": "summary",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"긴 변수\""
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"변수\""
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"긴 수\""
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"수\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"긴 대분수\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"대분수\""
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"문자\""
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"함수\""
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"함수\""
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"리미트\""
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"리미트\""
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"분수\""
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"분수\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"연분수\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"연분수\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"루트\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"루트\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\"; [t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\"; [t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-end",
+      "[t] CSFindexRadicalVerbose; [t] \"루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root",
+      "[t] CSFindexRadicalSbrief; [t] \"루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-brief",
+      "[t] \"루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-nested-end",
+      "[t] CSFindexRadicalVerbose; [t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-nested",
+      "[t] CSFindexRadicalSbrief; [t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-nested-brief",
+      "[t] \"중첩루트\""
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"거듭제곱\""
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"아래첨자\""
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"거듭제곱과 아래첨자\""
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] \"인자가\"; [t] CSFordinalConversion; [t] \"개인\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] \"인자가 여러 개인\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] \"항이\"; [t] CSFordinalConversion; [t] \"개인 덧셈\""
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"합\""
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"항이 여러 개인 덧셈\""
+    ],
+    [
+      "Action",
+      "abstr-subtraction",
+      "[t] \"항이\"; [t] CSFordinalConversion; [t] \"개인 뺄셈\""
+    ],
+    [
+      "Action",
+      "abstr-subtraction-brief",
+      "[t] \"차\""
+    ],
+    [
+      "Action",
+      "abstr-subtraction-var",
+      "[t] \"항이 여러 개인 뺄셈\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] \"인자가\"; [t] CSFordinalConversion; [t] \"개인 곱셈\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"곱\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"인자가 여러 개인 곱셈\""
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] count(./children/*); [t] \"차원 벡터\""
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"벡터\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"n 차원 벡터\""
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"이항식\""
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] count(./children/*); [t] \"차원 행렬식\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"행렬식\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"n 차원 행렬식\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] count(./children/*); [t] \"차원 정방행렬\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"정방행렬\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] count(./children/row/children/*); [t] \"차원 행 벡터\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"행 벡터\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"n 차원 행 벡터\""
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의 행렬\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"행렬\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"n 행 m 열의 행렬\""
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] \"케이스가\"; [t] CSFordinalConversion; [t] \"개인 조건문\""
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"조건문\""
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"케이스가 여러 개인 조건문\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[t] CSFlistOrdinalConversion; [t] \"개의 원소가\"; [n] content/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"나누어진\"; [t] \"리스트\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[n] content/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"나누어진 리스트\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[t] \"여러 개의 원소가\"; [n] content/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"나누어진 리스트\""
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"인테그럴\""
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] CSFdecreasedOrdinalConversion; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] \"연속된\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] \"여러 개의 연속된\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] CSFdecreasedOrdinalConversion; [t] \"개의 연속된 관계식\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"연속된 관계식\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"여러 개의 연속된 관계식\""
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열로 이루어진 표\""
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"이 다음과 같은\"; [t] count(children/*); [t] \"열의\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..)"
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole)"
+    ]
+  ]
+}

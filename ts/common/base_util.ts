@@ -40,8 +40,12 @@ export function removeEmpty(strs: string[]): string[] {
 export function interleaveLists(list1: any[], list2: any[]): any[] {
   const result = [];
   while (list1.length || list2.length) {
-    list1.length && result.push(list1.shift());
-    list2.length && result.push(list2.shift());
+    if (list1.length) {
+      result.push(list1.shift());
+    }
+    if (list2.length) {
+      result.push(list2.shift());
+    }
   }
   return result;
 }
@@ -61,19 +65,4 @@ export function setdifference(a: any[], b: any[]): any[] {
     return a;
   }
   return a.filter((x) => b.indexOf(x) < 0);
-}
-
-/**
- * Computes the union of two arrays (not in a strictly set theoretical sense
- * as all duplicate elements in either array still remain as duplicates!).
- *
- * @param a An array.
- * @param b Another array.
- * @returns Union of a and b.
- */
-export function union(a: any[], b: any[]): any[] {
-  if (!a || !b) {
-    return a || b || [];
-  }
-  return a.concat(setdifference(b, a));
 }

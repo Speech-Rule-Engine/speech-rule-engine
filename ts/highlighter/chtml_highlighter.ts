@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { CssHighlighter } from './css_highlighter';
+import { CssHighlighter } from './css_highlighter.js';
 
 export class ChtmlHighlighter extends CssHighlighter {
   /**
@@ -32,7 +32,7 @@ export class ChtmlHighlighter extends CssHighlighter {
    * @override
    */
   public isMactionNode(node: HTMLElement) {
-    return node.tagName.toUpperCase() === this.mactionName.toUpperCase();
+    return node.tagName?.toUpperCase() === this.mactionName.toUpperCase();
   }
 
   /**

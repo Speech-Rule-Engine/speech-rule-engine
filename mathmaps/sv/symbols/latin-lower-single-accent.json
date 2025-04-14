@@ -8,8 +8,7 @@
       "default": {
         "default": "a med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E1",
@@ -17,8 +16,7 @@
       "default": {
         "default": "a med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E2",
@@ -26,8 +24,7 @@
       "default": {
         "default": "a med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E3",
@@ -35,8 +32,7 @@
       "default": {
         "default": "a med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E4",
@@ -44,8 +40,7 @@
       "default": {
         "default": "a med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E5",
@@ -53,8 +48,7 @@
       "default": {
         "default": "litet å"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E7",
@@ -62,8 +56,7 @@
       "default": {
         "default": "c med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E8",
@@ -71,8 +64,7 @@
       "default": {
         "default": "e med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00E9",
@@ -80,8 +72,7 @@
       "default": {
         "default": "e med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EA",
@@ -89,8 +80,7 @@
       "default": {
         "default": "e med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EB",
@@ -98,8 +88,7 @@
       "default": {
         "default": "e med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EC",
@@ -107,8 +96,7 @@
       "default": {
         "default": "i med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00ED",
@@ -116,8 +104,7 @@
       "default": {
         "default": "i med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EE",
@@ -125,8 +112,7 @@
       "default": {
         "default": "i med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00EF",
@@ -134,8 +120,7 @@
       "default": {
         "default": "i med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F1",
@@ -143,8 +128,7 @@
       "default": {
         "default": "n med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F2",
@@ -152,8 +136,7 @@
       "default": {
         "default": "o med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F3",
@@ -161,8 +144,7 @@
       "default": {
         "default": "o med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F4",
@@ -170,8 +152,7 @@
       "default": {
         "default": "o med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F5",
@@ -179,8 +160,7 @@
       "default": {
         "default": "o med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F6",
@@ -188,8 +168,7 @@
       "default": {
         "default": "o med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00F9",
@@ -197,8 +176,7 @@
       "default": {
         "default": "u med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FA",
@@ -206,8 +184,7 @@
       "default": {
         "default": "u med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FB",
@@ -215,8 +192,7 @@
       "default": {
         "default": "u med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FC",
@@ -224,8 +200,7 @@
       "default": {
         "default": "u med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FD",
@@ -233,8 +208,7 @@
       "default": {
         "default": "y med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "00FF",
@@ -242,8 +216,7 @@
       "default": {
         "default": "y med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0101",
@@ -251,8 +224,7 @@
       "default": {
         "default": "a med streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0103",
@@ -260,8 +232,7 @@
       "default": {
         "default": "a med brevis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0105",
@@ -269,8 +240,7 @@
       "default": {
         "default": "a med svans"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0107",
@@ -278,8 +248,7 @@
       "default": {
         "default": "c med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0109",
@@ -287,8 +256,7 @@
       "default": {
         "default": "c med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010B",
@@ -296,8 +264,7 @@
       "default": {
         "default": "c med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010D",
@@ -305,8 +272,7 @@
       "default": {
         "default": "c med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "010F",
@@ -314,8 +280,7 @@
       "default": {
         "default": "d med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0113",
@@ -323,15 +288,13 @@
       "default": {
         "default": "e med streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0115",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med brevis"
       }
     }
   },
@@ -341,8 +304,7 @@
       "default": {
         "default": "e med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0119",
@@ -350,8 +312,7 @@
       "default": {
         "default": "e med svans"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011B",
@@ -359,8 +320,7 @@
       "default": {
         "default": "e med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011D",
@@ -368,8 +328,7 @@
       "default": {
         "default": "g med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "011F",
@@ -377,8 +336,7 @@
       "default": {
         "default": "g med brevis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0121",
@@ -386,15 +344,13 @@
       "default": {
         "default": "g med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "0123",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med cedilj"
       }
     }
   },
@@ -404,8 +360,7 @@
       "default": {
         "default": "h med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0129",
@@ -413,8 +368,7 @@
       "default": {
         "default": "i med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "012B",
@@ -422,15 +376,13 @@
       "default": {
         "default": "i med streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "012D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med brevis"
       }
     }
   },
@@ -440,8 +392,7 @@
       "default": {
         "default": "i med svans"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0131",
@@ -449,8 +400,7 @@
       "default": {
         "default": "i utan punkt"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0135",
@@ -458,8 +408,7 @@
       "default": {
         "default": "j med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0137",
@@ -467,8 +416,7 @@
       "default": {
         "default": "k med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013A",
@@ -476,8 +424,7 @@
       "default": {
         "default": "l med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013C",
@@ -485,8 +432,7 @@
       "default": {
         "default": "l med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "013E",
@@ -494,8 +440,7 @@
       "default": {
         "default": "l med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0140",
@@ -503,8 +448,7 @@
       "default": {
         "default": "l med mellanpunkt"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0144",
@@ -512,8 +456,7 @@
       "default": {
         "default": "n med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0146",
@@ -521,8 +464,7 @@
       "default": {
         "default": "n med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0148",
@@ -530,8 +472,7 @@
       "default": {
         "default": "n med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "014D",
@@ -539,15 +480,13 @@
       "default": {
         "default": "o med streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "014F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med brevis"
       }
     }
   },
@@ -557,8 +496,7 @@
       "default": {
         "default": "o med dubbel akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0155",
@@ -566,8 +504,7 @@
       "default": {
         "default": "r med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0157",
@@ -575,8 +512,7 @@
       "default": {
         "default": "r med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0159",
@@ -584,8 +520,7 @@
       "default": {
         "default": "r med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015B",
@@ -593,8 +528,7 @@
       "default": {
         "default": "s med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015D",
@@ -602,8 +536,7 @@
       "default": {
         "default": "s med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "015F",
@@ -611,8 +544,7 @@
       "default": {
         "default": "s med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0161",
@@ -620,8 +552,7 @@
       "default": {
         "default": "s med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0163",
@@ -629,8 +560,7 @@
       "default": {
         "default": "t med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0165",
@@ -638,8 +568,7 @@
       "default": {
         "default": "t med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0169",
@@ -647,8 +576,7 @@
       "default": {
         "default": "u med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016B",
@@ -656,8 +584,7 @@
       "default": {
         "default": "u med streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016D",
@@ -665,8 +592,7 @@
       "default": {
         "default": "u med brevis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "016F",
@@ -674,8 +600,7 @@
       "default": {
         "default": "u med ring över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0171",
@@ -683,8 +608,7 @@
       "default": {
         "default": "u med dubbel akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0173",
@@ -692,8 +616,7 @@
       "default": {
         "default": "u med svans"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0175",
@@ -701,8 +624,7 @@
       "default": {
         "default": "w med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "0177",
@@ -710,8 +632,7 @@
       "default": {
         "default": "y med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017A",
@@ -719,8 +640,7 @@
       "default": {
         "default": "z med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017C",
@@ -728,8 +648,7 @@
       "default": {
         "default": "z med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "017E",
@@ -737,78 +656,69 @@
       "default": {
         "default": "z med hake"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "k med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med svans"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j med hake"
       }
     }
   },
@@ -818,195 +728,173 @@
       "default": {
         "default": "g med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
-    "category": "Ll",
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0201",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med dubbel grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0203",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med omvänd brevis"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0205",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med dubbel grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0207",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med omvänd brevis"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0209",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med dubbel grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "020B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med omvänd brevis"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "020D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med dubbel grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "020F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med omvänd brevis"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0211",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med dubbel grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0213",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med omvänd breve"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0215",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med dubbel grav accent"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0217",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med omvänd brevis"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0219",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med komma under"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "021B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med komma under"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "021F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "h med hake"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0227",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med punkt över"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0229",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med cedilj"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "022F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med punkt över"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0233",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "y med streck"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "0237",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j utan punkt"
       }
     }
   },
@@ -1016,8 +904,7 @@
       "default": {
         "default": "a med ring under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E03",
@@ -1025,8 +912,7 @@
       "default": {
         "default": "b med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E05",
@@ -1034,8 +920,7 @@
       "default": {
         "default": "b med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E07",
@@ -1043,8 +928,7 @@
       "default": {
         "default": "b med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0B",
@@ -1052,8 +936,7 @@
       "default": {
         "default": "d med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0D",
@@ -1061,8 +944,7 @@
       "default": {
         "default": "d med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E0F",
@@ -1070,8 +952,7 @@
       "default": {
         "default": "d med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E11",
@@ -1079,8 +960,7 @@
       "default": {
         "default": "d med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E13",
@@ -1088,8 +968,7 @@
       "default": {
         "default": "d med cirkumflex under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E19",
@@ -1097,8 +976,7 @@
       "default": {
         "default": "e med cirkumflex under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1B",
@@ -1106,8 +984,7 @@
       "default": {
         "default": "e med tilde under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E1F",
@@ -1115,8 +992,7 @@
       "default": {
         "default": "f med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E21",
@@ -1124,8 +1000,7 @@
       "default": {
         "default": "g med streck"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E23",
@@ -1133,8 +1008,7 @@
       "default": {
         "default": "h med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E25",
@@ -1142,8 +1016,7 @@
       "default": {
         "default": "h med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E27",
@@ -1151,8 +1024,7 @@
       "default": {
         "default": "h med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E29",
@@ -1160,8 +1032,7 @@
       "default": {
         "default": "h med cedilj"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2B",
@@ -1169,8 +1040,7 @@
       "default": {
         "default": "h med brevis under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E2D",
@@ -1178,8 +1048,7 @@
       "default": {
         "default": "i med tilde under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E31",
@@ -1187,8 +1056,7 @@
       "default": {
         "default": "k med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E33",
@@ -1196,8 +1064,7 @@
       "default": {
         "default": "k med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E35",
@@ -1205,8 +1072,7 @@
       "default": {
         "default": "k med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E37",
@@ -1214,8 +1080,7 @@
       "default": {
         "default": "l med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3B",
@@ -1223,8 +1088,7 @@
       "default": {
         "default": "l med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3D",
@@ -1232,8 +1096,7 @@
       "default": {
         "default": "l med cirkumflex under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E3F",
@@ -1241,8 +1104,7 @@
       "default": {
         "default": "m med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E41",
@@ -1250,8 +1112,7 @@
       "default": {
         "default": "m med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E43",
@@ -1259,8 +1120,7 @@
       "default": {
         "default": "m med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E45",
@@ -1268,8 +1128,7 @@
       "default": {
         "default": "n med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E47",
@@ -1277,8 +1136,7 @@
       "default": {
         "default": "n med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E49",
@@ -1286,8 +1144,7 @@
       "default": {
         "default": "n med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E4B",
@@ -1295,8 +1152,7 @@
       "default": {
         "default": "n med cirkumflex under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E55",
@@ -1304,8 +1160,7 @@
       "default": {
         "default": "p med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E57",
@@ -1313,8 +1168,7 @@
       "default": {
         "default": "p med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E59",
@@ -1322,8 +1176,7 @@
       "default": {
         "default": "r med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5B",
@@ -1331,8 +1184,7 @@
       "default": {
         "default": "r med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E5F",
@@ -1340,8 +1192,7 @@
       "default": {
         "default": "r med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E61",
@@ -1349,8 +1200,7 @@
       "default": {
         "default": "s med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E63",
@@ -1358,8 +1208,7 @@
       "default": {
         "default": "s med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6B",
@@ -1367,8 +1216,7 @@
       "default": {
         "default": "t med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6D",
@@ -1376,8 +1224,7 @@
       "default": {
         "default": "t med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E6F",
@@ -1385,8 +1232,7 @@
       "default": {
         "default": "t med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E71",
@@ -1394,8 +1240,7 @@
       "default": {
         "default": "t med cirkumflex under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E73",
@@ -1403,8 +1248,7 @@
       "default": {
         "default": "u med dieresis under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E75",
@@ -1412,8 +1256,7 @@
       "default": {
         "default": "u med tilde under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E77",
@@ -1421,8 +1264,7 @@
       "default": {
         "default": "u med cirkumflex under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7D",
@@ -1430,8 +1272,7 @@
       "default": {
         "default": "v med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E7F",
@@ -1439,8 +1280,7 @@
       "default": {
         "default": "v med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E81",
@@ -1448,8 +1288,7 @@
       "default": {
         "default": "w med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E83",
@@ -1457,8 +1296,7 @@
       "default": {
         "default": "w med akut"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E85",
@@ -1466,8 +1304,7 @@
       "default": {
         "default": "w med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E87",
@@ -1475,8 +1312,7 @@
       "default": {
         "default": "w med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E89",
@@ -1484,8 +1320,7 @@
       "default": {
         "default": "w med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8B",
@@ -1493,8 +1328,7 @@
       "default": {
         "default": "x med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8D",
@@ -1502,8 +1336,7 @@
       "default": {
         "default": "x med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E8F",
@@ -1511,8 +1344,7 @@
       "default": {
         "default": "y med punkt över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E91",
@@ -1520,8 +1352,7 @@
       "default": {
         "default": "z med cirkumflex"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E93",
@@ -1529,8 +1360,7 @@
       "default": {
         "default": "z med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E95",
@@ -1538,8 +1368,7 @@
       "default": {
         "default": "z med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E96",
@@ -1547,8 +1376,7 @@
       "default": {
         "default": "h med streck under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E97",
@@ -1556,8 +1384,7 @@
       "default": {
         "default": "t med dieresis"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E98",
@@ -1565,8 +1392,7 @@
       "default": {
         "default": "w med ring över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E99",
@@ -1574,8 +1400,7 @@
       "default": {
         "default": "y med ring över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1E9A",
@@ -1583,8 +1408,7 @@
       "default": {
         "default": "a med höger halv ring"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA1",
@@ -1592,8 +1416,7 @@
       "default": {
         "default": "a med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EA3",
@@ -1601,8 +1424,7 @@
       "default": {
         "default": "a med krok över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EB9",
@@ -1610,8 +1432,7 @@
       "default": {
         "default": "e med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBB",
@@ -1619,8 +1440,7 @@
       "default": {
         "default": "e med krok över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EBD",
@@ -1628,8 +1448,7 @@
       "default": {
         "default": "e med tilde"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EC9",
@@ -1637,8 +1456,7 @@
       "default": {
         "default": "i med krok över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECB",
@@ -1646,8 +1464,7 @@
       "default": {
         "default": "i med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECD",
@@ -1655,8 +1472,7 @@
       "default": {
         "default": "o med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1ECF",
@@ -1664,8 +1480,7 @@
       "default": {
         "default": "o med krok över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE5",
@@ -1673,8 +1488,7 @@
       "default": {
         "default": "u med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EE7",
@@ -1682,8 +1496,7 @@
       "default": {
         "default": "u med krok över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF3",
@@ -1691,8 +1504,7 @@
       "default": {
         "default": "y med grav"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF5",
@@ -1700,8 +1512,7 @@
       "default": {
         "default": "y med punkt under"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF7",
@@ -1709,8 +1520,7 @@
       "default": {
         "default": "y med krok över"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "1EF9",
@@ -1718,7 +1528,6 @@
       "default": {
         "default": "y med tilde"
       }
-    },
-    "category": "Ll"
+    }
   }
 ]

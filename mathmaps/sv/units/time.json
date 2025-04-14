@@ -9,64 +9,41 @@
         "default": "sekund",
         "plural": "sekunder"
       }
-    },
-    "category": "time",
-    "names": [
-      "s"
-    ],
-    "si": true
+    }
   },
   {
     "key": "″",
-    "category": "time",
-    "names": [
-      "″"
-    ],
     "mappings": {
       "default": {
-        "default": "second",
-        "plural": "seconds"
+        "default": "sekund",
+        "plural": "sekunder"
       }
     }
   },
   {
     "key": "min",
-    "category": "time",
-    "names": [
-      "min",
-      "′"
-    ],
     "mappings": {
       "default": {
-        "default": "minute",
-        "plural": "minutes"
+        "default": "minut",
+        "plural": "minuter"
       }
     }
   },
   {
     "key": "°",
-    "category": "time",
-    "names": [
-      "°"
-    ],
     "mappings": {
       "default": {
-        "default": "degree",
-        "plural": "degrees"
+        "default": "grad",
+        "plural": "grader"
       }
     }
   },
   {
     "key": "h",
-    "category": "time",
-    "names": [
-      "h",
-      "hr"
-    ],
     "mappings": {
       "default": {
-        "default": "hour",
-        "plural": "hours"
+        "default": "timme",
+        "plural": "timmar"
       }
     }
   }

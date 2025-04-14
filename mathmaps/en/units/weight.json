@@ -1,103 +1,93 @@
 [
-  {"locale": "en"},
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "dram"
-     }
-   },
-   "key": "dram",
-   "names": ["dr", "dr."]
+  {
+    "locale": "en"
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "ounce"
-     }
-   },
-   "key": "oz",
-   "names": ["oz", "oz."]
+  {
+    "key": "dram",
+    "mappings": {
+      "default": {
+        "default": "dram"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "pound"
-     }
-   },
-   "key": "lb",
-   "names": ["lb", "lb."]
+  {
+    "key": "oz",
+    "mappings": {
+      "default": {
+        "default": "ounce"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "stone"
-     }
-   },
-   "key": "st",
-   "names": ["st", "st."]
+  {
+    "key": "lb",
+    "mappings": {
+      "default": {
+        "default": "pound"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "quarter"
-     }
-   },
-   "key": "qtr",
-   "names": ["qtr", "qtr."]
+  {
+    "key": "st",
+    "mappings": {
+      "default": {
+        "default": "stone"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "hundredweight"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt."]
+  {
+    "key": "qtr",
+    "mappings": {
+      "default": {
+        "default": "quarter"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "long ton"
-     }
-   },
-   "key": "LT",
-   "names": ["LT", "L.T."]
+  {
+    "key": "cwt",
+    "mappings": {
+      "default": {
+        "default": "hundredweight"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "gram"
-     }
-   },
-   "key": "gr",
-   "names": ["gr"]
+  {
+    "key": "LT",
+    "mappings": {
+      "default": {
+        "default": "long ton"
+      }
+    }
   },
-  {"category": "weight",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "gram"
-     }
-   },
-   "key": "g",
-   "names": ["g"]
+  {
+    "key": "gr",
+    "mappings": {
+      "default": {
+        "default": "gram"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "microgram"
-     }
-   },
-   "key": "mcg",
-   "names": ["mcg"]
+  {
+    "key": "g",
+    "mappings": {
+      "default": {
+        "default": "gram"
+      }
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "ton"
-     }
-   },
-   "key": "t",
-   "names": ["t", "T"]
+  {
+    "key": "mcg",
+    "mappings": {
+      "default": {
+        "default": "microgram"
+      }
+    }
+  },
+  {
+    "key": "t",
+    "mappings": {
+      "default": {
+        "default": "ton"
+      }
+    }
   }
 ]

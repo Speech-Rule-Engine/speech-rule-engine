@@ -22,9 +22,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from './engine';
-import * as EngineConst from '../common/engine_const';
-import SystemExternal from './system_external';
+import { Engine } from './engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { SystemExternal } from './system_external.js';
 
 /**
  * Returns whether or not xpath is supported.
@@ -91,11 +91,12 @@ export function resolveNameSpace(prefix: string): string {
   return nameSpaces[prefix] || null;
 }
 
-/**
- * Resolver to work with xpath in node and wgxpath in IE/Edge.
- */
 class Resolver {
   public lookupNamespaceURI: any;
+
+  /**
+   * Resolver to work with xpath in node and wgxpath in IE/Edge.
+   */
   constructor() {
     this.lookupNamespaceURI = resolveNameSpace;
   }
@@ -143,7 +144,7 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
       rootNode,
       xpath.result.ORDERED_NODE_ITERATOR_TYPE
     );
-  } catch (err) {
+  } catch (_err) {
     return [];
   }
   const results = [];
@@ -159,15 +160,6 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
 }
 
 /**
- * Given a rootNode, it returns an array of all its leaf nodes.
- *
- * @param rootNode The node to get the leaf nodes from.
- * @returns The array of leaf nodes for the given rootNode.
- */
-export function getLeafNodes(rootNode: Node): Node[] {
-  return evalXPath('.//*[count(*)=0]', rootNode);
-}
-/**
  * Given an XPath expression and rootNode, it evaluates the XPath expression
  * as a boolean type and returns the result.
  *
@@ -179,7 +171,7 @@ export function evaluateBoolean(expression: string, rootNode: Node): boolean {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.BOOLEAN_TYPE);
-  } catch (err) {
+  } catch (_err) {
     return false;
   }
   return result.booleanValue;
@@ -197,8 +189,28 @@ export function evaluateString(expression: string, rootNode: Node): string {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.STRING_TYPE);
-  } catch (err) {
+  } catch (_err) {
     return '';
   }
   return result.stringValue;
+}
+
+/**
+ * Updates the evaluator method for the document of the given node. This is
+ * particular important for XML documents in Firefox that generates a novel
+ * object (plus evaluate method) for every document.
+ *
+ * @param node The target node that is to be evaluated.
+ */
+export function updateEvaluator(node: Element) {
+  if (Engine.getInstance().mode !== EngineConst.Mode.HTTP) return;
+  let parent = node as any as Document;
+  while (parent && !parent.evaluate) {
+    parent = parent.parentNode as Document;
+  }
+  if (parent && parent.evaluate) {
+    xpath.currentDocument = parent;
+  } else if (node.ownerDocument) {
+    xpath.currentDocument = node.ownerDocument;
+  }
 }

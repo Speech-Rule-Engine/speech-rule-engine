@@ -3,14 +3,7 @@
     "locale": "nb"
   },
   {
-    "locale": "nb"
-  },
-  {
     "key": "deg",
-    "category": "Algebra",
-    "names": [
-      "deg"
-    ],
     "mappings": {
       "default": {
         "default": "grad"
@@ -19,10 +12,6 @@
   },
   {
     "key": "det",
-    "category": "Algebra",
-    "names": [
-      "det"
-    ],
     "mappings": {
       "default": {
         "default": "det"
@@ -31,10 +20,6 @@
   },
   {
     "key": "dim",
-    "category": "Algebra",
-    "names": [
-      "dim"
-    ],
     "mappings": {
       "default": {
         "default": "dimensjon"
@@ -43,11 +28,6 @@
   },
   {
     "key": "hom",
-    "category": "Algebra",
-    "names": [
-      "hom",
-      "Hom"
-    ],
     "mappings": {
       "default": {
         "default": "hom"
@@ -56,10 +36,6 @@
   },
   {
     "key": "ker",
-    "category": "Algebra",
-    "names": [
-      "ker"
-    ],
     "mappings": {
       "default": {
         "default": "kjerne"
@@ -68,11 +44,6 @@
   },
   {
     "key": "Tr",
-    "category": "Algebra",
-    "names": [
-      "Tr",
-      "tr"
-    ],
     "mappings": {
       "default": {
         "default": "trase"

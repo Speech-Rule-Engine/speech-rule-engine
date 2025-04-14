@@ -20,8 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Grammar } from '../rule_engine/grammar';
-import { Span } from './span';
+import { Grammar } from '../rule_engine/grammar.js';
+import { Span } from './span.js';
 
 interface AudioDescr {
   context?: string;
@@ -38,6 +38,196 @@ interface AudioFlags {
   preprocess?: boolean;
   correct?: boolean;
   translate?: boolean;
+}
+
+export class AuditoryItem {
+  public prev: AuditoryItem = null;
+  public next: AuditoryItem = null;
+
+  /**
+   * A wrapper class for adding auditory descriptions into a linked list.
+   *
+   * @param data The auditory description.
+   */
+  constructor(public data: AuditoryDescription = null) {}
+}
+
+export class AuditoryList extends Set<AuditoryItem> {
+  public annotations: AuditoryItem[] = [];
+
+  private anchor: AuditoryItem;
+
+  /**
+   * A linked list of auditory descriptions.
+   *
+   * @param descrs The initial list of auditory descriptions.
+   */
+  constructor(descrs: AuditoryDescription[]) {
+    super();
+    this.anchor = new AuditoryItem();
+    this.anchor.next = this.anchor;
+    this.anchor.prev = this.anchor;
+    descrs.forEach((d) => {
+      const item = new AuditoryItem(d);
+      if (d.annotation) {
+        this.annotations.push(item);
+      }
+      this.push(item);
+    });
+  }
+
+  /**
+   * @returns The first element in the list.
+   */
+  public first() {
+    return this.empty ? null : this.anchor.next;
+  }
+
+  /**
+   * @returns The last element in the list.
+   */
+  public last() {
+    return this.empty ? null : this.anchor.prev;
+  }
+
+  /**
+   * Pushing an element to the front of the list.
+   *
+   * @param item The element to add.
+   */
+  public push(item: AuditoryItem) {
+    item.next = this.anchor;
+    item.prev = this.anchor.prev;
+    item.prev.next = item;
+    this.anchor.prev = item;
+    super.add(item);
+  }
+
+  /**
+   * Popping an element from the end of the list.
+   *
+   * @returns The last element.
+   */
+  public pop() {
+    const item = this.last();
+    if (!item) {
+      return null;
+    }
+    this.delete(item);
+    return item;
+  }
+
+  /**
+   * Deleting an element from the list.
+   *
+   * @param item The element to delete.
+   * @returns True if deleted successfully.
+   */
+  public delete(item: AuditoryItem) {
+    if (!this.has(item)) {
+      return false;
+    }
+    super.delete(item);
+    item.prev.next = item.next;
+    item.next = item.prev;
+    return true;
+  }
+
+  /**
+   * Insert a new auditory description after an existing element.
+   *
+   * @param descr The new description.
+   * @param item The element already in the list.
+   */
+  public insertAfter(descr: AuditoryDescription, item: AuditoryItem) {
+    this.insertBefore(descr, item.next);
+  }
+
+  /**
+   * Insert a new auditory description before an existing element.
+   *
+   * @param descr The new description.
+   * @param item The element already in the list.
+   */
+  public insertBefore(descr: AuditoryDescription, item: AuditoryItem) {
+    const nitem = new AuditoryItem(descr);
+    if (!item || !this.has(item)) {
+      this.push(nitem);
+      return;
+    }
+    item.prev.next = nitem;
+    nitem.prev = item.prev;
+    nitem.next = item;
+    item.prev = nitem;
+  }
+
+  /**
+   * Gets the previous item in the list that as text content.
+   *
+   * @param item The start item.
+   * @returns The previous item in the list that as text content.
+   */
+  public prevText(item: AuditoryItem) {
+    do {
+      item = item.prev;
+    } while (item !== this.anchor && !item.data.text);
+    return item === this.anchor ? null : item;
+  }
+
+  /**
+   * @yields Iterator of the list.
+   */
+  public *[Symbol.iterator](): IterableIterator<AuditoryItem> {
+    let current = this.anchor.next;
+    while (current !== this.anchor) {
+      yield current;
+      current = current.next;
+    }
+  }
+
+  /**
+   * Gets the next item in the list that as text content.
+   *
+   * @param item The start item.
+   * @returns The next item in the list that as text content.
+   */
+  public nextText(item: AuditoryItem) {
+    while (item !== this.anchor && !item.data.text) {
+      item = item.next;
+    }
+    return item;
+  }
+
+  /**
+   * Empties the list.
+   */
+  public clear() {
+    this.anchor.next = this.anchor;
+    this.anchor.prev = this.anchor;
+    super.clear();
+  }
+
+  /**
+   * @returns True if the list is empty.
+   */
+  public empty() {
+    return this.anchor.prev === this.anchor && this.anchor === this.anchor.next;
+  }
+
+  /**
+   * Turn linked list into a regular array.
+   *
+   * @returns The array.
+   */
+  public toList(): AuditoryDescription[] {
+    const result = [];
+    let item = this.anchor.next;
+    while (item !== this.anchor) {
+      result.push(item.data);
+      item = item.next;
+    }
+    return result;
+  }
 }
 
 export class AuditoryDescription {
@@ -145,15 +335,15 @@ export class AuditoryDescription {
     let personality: { [key: string]: string };
     if (this.personality) {
       personality = {};
-      for (const key in this.personality) {
-        personality[key] = this.personality[key];
+      for (const [key, val] of Object.entries(this.personality)) {
+        personality[key] = val;
       }
     }
     let attributes: { [key: string]: string };
     if (this.attributes) {
       attributes = {};
-      for (const key in this.attributes) {
-        attributes[key] = this.attributes[key];
+      for (const [key, val] of Object.entries(this.attributes)) {
+        attributes[key] = val;
       }
     }
     return new AuditoryDescription({
@@ -201,7 +391,7 @@ export class AuditoryDescription {
    *     of this object.
    */
   public descriptionSpan(): Span {
-    return new Span(this.descriptionString(), this.attributes);
+    return Span.stringAttr(this.descriptionString(), this.attributes);
   }
 
   /**

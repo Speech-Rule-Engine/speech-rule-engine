@@ -1,0 +1,478 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "210E",
+    "mappings": {
+      "default": {
+        "default": "kursief h",
+        "physics": "planck constant"
+      }
+    }
+  },
+  {
+    "key": "0363",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde a"
+      }
+    }
+  },
+  {
+    "key": "0364",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde e"
+      }
+    }
+  },
+  {
+    "key": "0365",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde i"
+      }
+    }
+  },
+  {
+    "key": "0366",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde o"
+      }
+    }
+  },
+  {
+    "key": "0367",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde u"
+      }
+    }
+  },
+  {
+    "key": "0368",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde c"
+      }
+    }
+  },
+  {
+    "key": "0369",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde d"
+      }
+    }
+  },
+  {
+    "key": "036A",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde h"
+      }
+    }
+  },
+  {
+    "key": "036B",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde m"
+      }
+    }
+  },
+  {
+    "key": "036C",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde r"
+      }
+    }
+  },
+  {
+    "key": "036D",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde t"
+      }
+    }
+  },
+  {
+    "key": "036E",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde v"
+      }
+    }
+  },
+  {
+    "key": "036F",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde x"
+      }
+    }
+  },
+  {
+    "key": "1D62",
+    "mappings": {
+      "default": {
+        "default": "onderskrif i"
+      }
+    }
+  },
+  {
+    "key": "1D63",
+    "mappings": {
+      "default": {
+        "default": "onderskrif r"
+      }
+    }
+  },
+  {
+    "key": "1D64",
+    "mappings": {
+      "default": {
+        "default": "onderskrif u"
+      }
+    }
+  },
+  {
+    "key": "1D65",
+    "mappings": {
+      "default": {
+        "default": "onderskrif v"
+      }
+    }
+  },
+  {
+    "key": "1DCA",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde r onder"
+      }
+    }
+  },
+  {
+    "key": "1DD3",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde platgedrukte oop a bo"
+      }
+    }
+  },
+  {
+    "key": "1DD4",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde ae"
+      }
+    }
+  },
+  {
+    "key": "1DD5",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde ao"
+      }
+    }
+  },
+  {
+    "key": "1DD6",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde av"
+      }
+    }
+  },
+  {
+    "key": "1DD7",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde c sedilla"
+      }
+    }
+  },
+  {
+    "key": "1DD8",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde insulêr d"
+      }
+    }
+  },
+  {
+    "key": "1DD9",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde eth"
+      }
+    }
+  },
+  {
+    "key": "1DDA",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde g"
+      }
+    }
+  },
+  {
+    "key": "1DDB",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde klein hoofletter G"
+      }
+    }
+  },
+  {
+    "key": "1DDC",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde k"
+      }
+    }
+  },
+  {
+    "key": "1DDD",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde l"
+      }
+    }
+  },
+  {
+    "key": "1DDE",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde klein hoofletter L"
+      }
+    }
+  },
+  {
+    "key": "1DDF",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde klein hoofletter M"
+      }
+    }
+  },
+  {
+    "key": "1DE0",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde n"
+      }
+    }
+  },
+  {
+    "key": "1DE1",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde klein hoofletter N"
+      }
+    }
+  },
+  {
+    "key": "1DE2",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde klein hoofletter R"
+      }
+    }
+  },
+  {
+    "key": "1DE3",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde r rotunda"
+      }
+    }
+  },
+  {
+    "key": "1DE4",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde s"
+      }
+    }
+  },
+  {
+    "key": "1DE5",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde lang s"
+      }
+    }
+  },
+  {
+    "key": "1DE6",
+    "mappings": {
+      "default": {
+        "default": "gekombineerde z"
+      }
+    }
+  },
+  {
+    "key": "2071",
+    "mappings": {
+      "default": {
+        "default": "boskrif i"
+      }
+    }
+  },
+  {
+    "key": "207F",
+    "mappings": {
+      "default": {
+        "default": "boskrif n"
+      }
+    }
+  },
+  {
+    "key": "2090",
+    "mappings": {
+      "default": {
+        "default": "onderskrif a"
+      }
+    }
+  },
+  {
+    "key": "2091",
+    "mappings": {
+      "default": {
+        "default": "onderskrif e"
+      }
+    }
+  },
+  {
+    "key": "2092",
+    "mappings": {
+      "default": {
+        "default": "onderskrif o"
+      }
+    }
+  },
+  {
+    "key": "2093",
+    "mappings": {
+      "default": {
+        "default": "onderskrif x"
+      }
+    }
+  },
+  {
+    "key": "2094",
+    "mappings": {
+      "default": {
+        "default": "onderskrif schwa"
+      }
+    }
+  },
+  {
+    "key": "2095",
+    "mappings": {
+      "default": {
+        "default": "onderskrif h"
+      }
+    }
+  },
+  {
+    "key": "2096",
+    "mappings": {
+      "default": {
+        "default": "onderskrif k"
+      }
+    }
+  },
+  {
+    "key": "2097",
+    "mappings": {
+      "default": {
+        "default": "onderskrif l"
+      }
+    }
+  },
+  {
+    "key": "2098",
+    "mappings": {
+      "default": {
+        "default": "onderskrif m"
+      }
+    }
+  },
+  {
+    "key": "2099",
+    "mappings": {
+      "default": {
+        "default": "onderskrif n"
+      }
+    }
+  },
+  {
+    "key": "209A",
+    "mappings": {
+      "default": {
+        "default": "onderskrif p"
+      }
+    }
+  },
+  {
+    "key": "209B",
+    "mappings": {
+      "default": {
+        "default": "onderskrif s"
+      }
+    }
+  },
+  {
+    "key": "209C",
+    "mappings": {
+      "default": {
+        "default": "onderskrif t"
+      }
+    }
+  },
+  {
+    "key": "2C7C",
+    "mappings": {
+      "default": {
+        "default": "onderskrif j"
+      }
+    }
+  },
+  {
+    "key": "1F12A",
+    "mappings": {
+      "default": {
+        "default": "skilpaddop hoofletter S in hakkies"
+      }
+    }
+  },
+  {
+    "key": "1F12B",
+    "mappings": {
+      "default": {
+        "default": "omkringde kursief hoofletter C"
+      }
+    }
+  },
+  {
+    "key": "1F12C",
+    "mappings": {
+      "default": {
+        "default": "omkringde kursief hoofletter R"
+      }
+    }
+  },
+  {
+    "key": "1F18A",
+    "mappings": {
+      "default": {
+        "default": "gekruisde negatiewe kwadraat hoofletter P"
+      }
+    }
+  }
+]

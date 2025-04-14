@@ -1,0 +1,1685 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "00F8",
+    "mappings": {
+      "default": {
+        "default": "streep o"
+      }
+    }
+  },
+  {
+    "key": "0111",
+    "mappings": {
+      "default": {
+        "default": "d met streep"
+      }
+    }
+  },
+  {
+    "key": "0127",
+    "mappings": {
+      "default": {
+        "default": "h met streep"
+      }
+    }
+  },
+  {
+    "key": "0142",
+    "mappings": {
+      "default": {
+        "default": "l met streep"
+      }
+    }
+  },
+  {
+    "key": "0167",
+    "mappings": {
+      "default": {
+        "default": "t met streep"
+      }
+    }
+  },
+  {
+    "key": "0180",
+    "mappings": {
+      "default": {
+        "default": "b met streep"
+      }
+    }
+  },
+  {
+    "key": "019B",
+    "mappings": {
+      "default": {
+        "default": "lamda met streep"
+      }
+    }
+  },
+  {
+    "key": "01B6",
+    "mappings": {
+      "default": {
+        "default": "z met streep"
+      }
+    }
+  },
+  {
+    "key": "01BE",
+    "mappings": {
+      "default": {
+        "default": "latynse letter omgekeerde glotale stop met streep"
+      }
+    }
+  },
+  {
+    "key": "01E5",
+    "mappings": {
+      "default": {
+        "default": "g met streep"
+      }
+    }
+  },
+  {
+    "key": "01FF",
+    "mappings": {
+      "default": {
+        "default": "o met streep en akuut"
+      }
+    }
+  },
+  {
+    "key": "023C",
+    "mappings": {
+      "default": {
+        "default": "c met streep"
+      }
+    }
+  },
+  {
+    "key": "0247",
+    "mappings": {
+      "default": {
+        "default": "e met streep"
+      }
+    }
+  },
+  {
+    "key": "0249",
+    "mappings": {
+      "default": {
+        "default": "j met streep"
+      }
+    }
+  },
+  {
+    "key": "024D",
+    "mappings": {
+      "default": {
+        "default": "r met streep"
+      }
+    }
+  },
+  {
+    "key": "024F",
+    "mappings": {
+      "default": {
+        "default": "y  met streep"
+      }
+    }
+  },
+  {
+    "key": "025F",
+    "mappings": {
+      "default": {
+        "default": "puntlose j met streep"
+      }
+    }
+  },
+  {
+    "key": "0268",
+    "mappings": {
+      "default": {
+        "default": "i met streep"
+      }
+    }
+  },
+  {
+    "key": "0284",
+    "mappings": {
+      "default": {
+        "default": "puntlose j met streep en haak"
+      }
+    }
+  },
+  {
+    "key": "02A1",
+    "mappings": {
+      "default": {
+        "default": "latynse letter glotale stop met streep"
+      }
+    }
+  },
+  {
+    "key": "02A2",
+    "mappings": {
+      "default": {
+        "default": "latynse letter agterstevoor glotale stop met streep"
+      }
+    }
+  },
+  {
+    "key": "1D13",
+    "mappings": {
+      "default": {
+        "default": "dwarsgedraaide o met streep"
+      }
+    }
+  },
+  {
+    "key": "1D7C",
+    "mappings": {
+      "default": {
+        "default": "iota met streep"
+      }
+    }
+  },
+  {
+    "key": "1D7D",
+    "mappings": {
+      "default": {
+        "default": "p met streep"
+      }
+    }
+  },
+  {
+    "key": "1D7F",
+    "mappings": {
+      "default": {
+        "default": "upsilon met streep"
+      }
+    }
+  },
+  {
+    "key": "1E9C",
+    "mappings": {
+      "default": {
+        "default": "lang s met diagonale streep"
+      }
+    }
+  },
+  {
+    "key": "1E9D",
+    "mappings": {
+      "default": {
+        "default": "lang s met hoë streep"
+      }
+    }
+  },
+  {
+    "key": "018D",
+    "mappings": {
+      "default": {
+        "default": "gedraaide delta"
+      }
+    }
+  },
+  {
+    "key": "1E9B",
+    "mappings": {
+      "default": {
+        "default": "lang s met punt bo"
+      }
+    }
+  },
+  {
+    "key": "1E9F",
+    "mappings": {
+      "default": {
+        "default": "delta"
+      }
+    }
+  },
+  {
+    "key": "0138",
+    "mappings": {
+      "default": {
+        "default": "kra"
+      }
+    }
+  },
+  {
+    "key": "017F",
+    "mappings": {
+      "default": {
+        "default": "lang s"
+      }
+    }
+  },
+  {
+    "key": "0183",
+    "mappings": {
+      "default": {
+        "default": "b met bo staaf"
+      }
+    }
+  },
+  {
+    "key": "0185",
+    "mappings": {
+      "default": {
+        "default": "toon ses"
+      }
+    }
+  },
+  {
+    "key": "0188",
+    "mappings": {
+      "default": {
+        "default": "c met haak"
+      }
+    }
+  },
+  {
+    "key": "018C",
+    "mappings": {
+      "default": {
+        "default": "d met bo staaf"
+      }
+    }
+  },
+  {
+    "key": "0192",
+    "mappings": {
+      "default": {
+        "default": "f met haak"
+      }
+    }
+  },
+  {
+    "key": "0195",
+    "mappings": {
+      "default": {
+        "default": "hv"
+      }
+    }
+  },
+  {
+    "key": "0199",
+    "mappings": {
+      "default": {
+        "default": "k met haak"
+      }
+    }
+  },
+  {
+    "key": "019A",
+    "mappings": {
+      "default": {
+        "default": "l met staaf"
+      }
+    }
+  },
+  {
+    "key": "019E",
+    "mappings": {
+      "default": {
+        "default": "n met lang regter been"
+      }
+    }
+  },
+  {
+    "key": "01A1",
+    "mappings": {
+      "default": {
+        "default": "o met horing"
+      }
+    }
+  },
+  {
+    "key": "01A3",
+    "mappings": {
+      "default": {
+        "default": "oi"
+      }
+    }
+  },
+  {
+    "key": "01A5",
+    "mappings": {
+      "default": {
+        "default": "p met haak"
+      }
+    }
+  },
+  {
+    "key": "01A8",
+    "mappings": {
+      "default": {
+        "default": "toon twee"
+      }
+    }
+  },
+  {
+    "key": "01AA",
+    "mappings": {
+      "default": {
+        "default": "latin letter reversed esh loop"
+      }
+    }
+  },
+  {
+    "key": "01AB",
+    "mappings": {
+      "default": {
+        "default": "t met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "01AD",
+    "mappings": {
+      "default": {
+        "default": "t met haak"
+      }
+    }
+  },
+  {
+    "key": "01B0",
+    "mappings": {
+      "default": {
+        "default": "u  met horing"
+      }
+    }
+  },
+  {
+    "key": "01B4",
+    "mappings": {
+      "default": {
+        "default": "y met haak"
+      }
+    }
+  },
+  {
+    "key": "01B9",
+    "mappings": {
+      "default": {
+        "default": "ezh reversed"
+      }
+    }
+  },
+  {
+    "key": "01BA",
+    "mappings": {
+      "default": {
+        "default": "ezh with tail"
+      }
+    }
+  },
+  {
+    "key": "01BD",
+    "mappings": {
+      "default": {
+        "default": "toon vyf"
+      }
+    }
+  },
+  {
+    "key": "01BF",
+    "mappings": {
+      "default": {
+        "default": "latin letter wynn"
+      }
+    }
+  },
+  {
+    "key": "01C6",
+    "mappings": {
+      "default": {
+        "default": "dz with caron"
+      }
+    }
+  },
+  {
+    "key": "01C9",
+    "mappings": {
+      "default": {
+        "default": "lj"
+      }
+    }
+  },
+  {
+    "key": "01CC",
+    "mappings": {
+      "default": {
+        "default": "nj"
+      }
+    }
+  },
+  {
+    "key": "01E3",
+    "mappings": {
+      "default": {
+        "default": "ae with macron"
+      }
+    }
+  },
+  {
+    "key": "01EF",
+    "mappings": {
+      "default": {
+        "default": "ezh with caron"
+      }
+    }
+  },
+  {
+    "key": "01F3",
+    "mappings": {
+      "default": {
+        "default": "dz"
+      }
+    }
+  },
+  {
+    "key": "021D",
+    "mappings": {
+      "default": {
+        "default": "yogh"
+      }
+    }
+  },
+  {
+    "key": "026E",
+    "mappings": {
+      "default": {
+        "default": "lezh"
+      }
+    }
+  },
+  {
+    "key": "0292",
+    "mappings": {
+      "default": {
+        "default": "ezh"
+      }
+    }
+  },
+  {
+    "key": "0293",
+    "mappings": {
+      "default": {
+        "default": "ezh with curl"
+      }
+    }
+  },
+  {
+    "key": "02A4",
+    "mappings": {
+      "default": {
+        "default": "dezh digraph"
+      }
+    }
+  },
+  {
+    "key": "01DD",
+    "mappings": {
+      "default": {
+        "default": "gedraaide e"
+      }
+    }
+  },
+  {
+    "key": "01FD",
+    "mappings": {
+      "default": {
+        "default": "ae met akuut"
+      }
+    }
+  },
+  {
+    "key": "0221",
+    "mappings": {
+      "default": {
+        "default": "d met krul"
+      }
+    }
+  },
+  {
+    "key": "0223",
+    "mappings": {
+      "default": {
+        "default": "ou"
+      }
+    }
+  },
+  {
+    "key": "0225",
+    "mappings": {
+      "default": {
+        "default": "z met haak"
+      }
+    }
+  },
+  {
+    "key": "0234",
+    "mappings": {
+      "default": {
+        "default": "l met krul"
+      }
+    }
+  },
+  {
+    "key": "0235",
+    "mappings": {
+      "default": {
+        "default": "n met krul"
+      }
+    }
+  },
+  {
+    "key": "0236",
+    "mappings": {
+      "default": {
+        "default": "t met krul"
+      }
+    }
+  },
+  {
+    "key": "0238",
+    "mappings": {
+      "default": {
+        "default": "db digraph"
+      }
+    }
+  },
+  {
+    "key": "0239",
+    "mappings": {
+      "default": {
+        "default": "qp digraph"
+      }
+    }
+  },
+  {
+    "key": "023F",
+    "mappings": {
+      "default": {
+        "default": "s with swash tail"
+      }
+    }
+  },
+  {
+    "key": "0240",
+    "mappings": {
+      "default": {
+        "default": "z with swash tail"
+      }
+    }
+  },
+  {
+    "key": "0242",
+    "mappings": {
+      "default": {
+        "default": "glotale stop"
+      }
+    }
+  },
+  {
+    "key": "024B",
+    "mappings": {
+      "default": {
+        "default": "q met haakstert"
+      }
+    }
+  },
+  {
+    "key": "0250",
+    "mappings": {
+      "default": {
+        "default": "gedraaide a"
+      }
+    }
+  },
+  {
+    "key": "0251",
+    "mappings": {
+      "default": {
+        "default": "alfa"
+      }
+    }
+  },
+  {
+    "key": "0252",
+    "mappings": {
+      "default": {
+        "default": "gedraaide alfa"
+      }
+    }
+  },
+  {
+    "key": "0253",
+    "mappings": {
+      "default": {
+        "default": "b met haak"
+      }
+    }
+  },
+  {
+    "key": "0254",
+    "mappings": {
+      "default": {
+        "default": "oop o"
+      }
+    }
+  },
+  {
+    "key": "0255",
+    "mappings": {
+      "default": {
+        "default": "c met krul"
+      }
+    }
+  },
+  {
+    "key": "0256",
+    "mappings": {
+      "default": {
+        "default": "d met stert"
+      }
+    }
+  },
+  {
+    "key": "0257",
+    "mappings": {
+      "default": {
+        "default": "d met haak"
+      }
+    }
+  },
+  {
+    "key": "0258",
+    "mappings": {
+      "default": {
+        "default": "agterstevoor d"
+      }
+    }
+  },
+  {
+    "key": "0259",
+    "mappings": {
+      "default": {
+        "default": "shwa"
+      }
+    }
+  },
+  {
+    "key": "025A",
+    "mappings": {
+      "default": {
+        "default": "shwa met haak"
+      }
+    }
+  },
+  {
+    "key": "025B",
+    "mappings": {
+      "default": {
+        "default": "oop e"
+      }
+    }
+  },
+  {
+    "key": "025C",
+    "mappings": {
+      "default": {
+        "default": "agterstevoor oop e"
+      }
+    }
+  },
+  {
+    "key": "025D",
+    "mappings": {
+      "default": {
+        "default": "agterstevoor oop e met haak"
+      }
+    }
+  },
+  {
+    "key": "025E",
+    "mappings": {
+      "default": {
+        "default": "toe agterstevoor oop e"
+      }
+    }
+  },
+  {
+    "key": "0260",
+    "mappings": {
+      "default": {
+        "default": "g met haak"
+      }
+    }
+  },
+  {
+    "key": "0261",
+    "mappings": {
+      "default": {
+        "default": "script g"
+      }
+    }
+  },
+  {
+    "key": "0263",
+    "mappings": {
+      "default": {
+        "default": "gamma"
+      }
+    }
+  },
+  {
+    "key": "0264",
+    "mappings": {
+      "default": {
+        "default": "ramshoring"
+      }
+    }
+  },
+  {
+    "key": "0265",
+    "mappings": {
+      "default": {
+        "default": "gedraaide h"
+      }
+    }
+  },
+  {
+    "key": "0266",
+    "mappings": {
+      "default": {
+        "default": "h met haak"
+      }
+    }
+  },
+  {
+    "key": "0267",
+    "mappings": {
+      "default": {
+        "default": "heng met haak"
+      }
+    }
+  },
+  {
+    "key": "0269",
+    "mappings": {
+      "default": {
+        "default": "iota"
+      }
+    }
+  },
+  {
+    "key": "026B",
+    "mappings": {
+      "default": {
+        "default": "l met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "026C",
+    "mappings": {
+      "default": {
+        "default": "l met gordel"
+      }
+    }
+  },
+  {
+    "key": "026D",
+    "mappings": {
+      "default": {
+        "default": "l with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "026F",
+    "mappings": {
+      "default": {
+        "default": "gedraaide m"
+      }
+    }
+  },
+  {
+    "key": "0270",
+    "mappings": {
+      "default": {
+        "default": "gedraaide m met lang been"
+      }
+    }
+  },
+  {
+    "key": "0271",
+    "mappings": {
+      "default": {
+        "default": "m met haak"
+      }
+    }
+  },
+  {
+    "key": "0272",
+    "mappings": {
+      "default": {
+        "default": "n met linker haak"
+      }
+    }
+  },
+  {
+    "key": "0273",
+    "mappings": {
+      "default": {
+        "default": "n with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "0275",
+    "mappings": {
+      "default": {
+        "default": "barred o"
+      }
+    }
+  },
+  {
+    "key": "0277",
+    "mappings": {
+      "default": {
+        "default": "toe omega"
+      }
+    }
+  },
+  {
+    "key": "0278",
+    "mappings": {
+      "default": {
+        "default": "phi"
+      }
+    }
+  },
+  {
+    "key": "0279",
+    "mappings": {
+      "default": {
+        "default": "gedraaide r"
+      }
+    }
+  },
+  {
+    "key": "027A",
+    "mappings": {
+      "default": {
+        "default": "gedraaide r met lang been"
+      }
+    }
+  },
+  {
+    "key": "027B",
+    "mappings": {
+      "default": {
+        "default": "gedraaide r met haak"
+      }
+    }
+  },
+  {
+    "key": "027C",
+    "mappings": {
+      "default": {
+        "default": "r met lang been"
+      }
+    }
+  },
+  {
+    "key": "027D",
+    "mappings": {
+      "default": {
+        "default": "r met stert"
+      }
+    }
+  },
+  {
+    "key": "027E",
+    "mappings": {
+      "default": {
+        "default": "r met vishoek"
+      }
+    }
+  },
+  {
+    "key": "027F",
+    "mappings": {
+      "default": {
+        "default": "agterstevoor r met vishoek"
+      }
+    }
+  },
+  {
+    "key": "0282",
+    "mappings": {
+      "default": {
+        "default": "s met haak"
+      }
+    }
+  },
+  {
+    "key": "0283",
+    "mappings": {
+      "default": {
+        "default": "esh"
+      }
+    }
+  },
+  {
+    "key": "0285",
+    "mappings": {
+      "default": {
+        "default": "squat reversed esh"
+      }
+    }
+  },
+  {
+    "key": "0286",
+    "mappings": {
+      "default": {
+        "default": "esh with curl"
+      }
+    }
+  },
+  {
+    "key": "0287",
+    "mappings": {
+      "default": {
+        "default": "gedraaide t"
+      }
+    }
+  },
+  {
+    "key": "0288",
+    "mappings": {
+      "default": {
+        "default": "t with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "0289",
+    "mappings": {
+      "default": {
+        "default": "u bar"
+      }
+    }
+  },
+  {
+    "key": "028A",
+    "mappings": {
+      "default": {
+        "default": "upsilon"
+      }
+    }
+  },
+  {
+    "key": "028B",
+    "mappings": {
+      "default": {
+        "default": "v met haak"
+      }
+    }
+  },
+  {
+    "key": "028C",
+    "mappings": {
+      "default": {
+        "default": "gedraaide v"
+      }
+    }
+  },
+  {
+    "key": "028D",
+    "mappings": {
+      "default": {
+        "default": "gedraaide w"
+      }
+    }
+  },
+  {
+    "key": "028E",
+    "mappings": {
+      "default": {
+        "default": "gedraaide y"
+      }
+    }
+  },
+  {
+    "key": "0290",
+    "mappings": {
+      "default": {
+        "default": "z with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "0291",
+    "mappings": {
+      "default": {
+        "default": "z met krul"
+      }
+    }
+  },
+  {
+    "key": "0295",
+    "mappings": {
+      "default": {
+        "default": "latynse letter farangiale stemhebbende frikatief"
+      }
+    }
+  },
+  {
+    "key": "0296",
+    "mappings": {
+      "default": {
+        "default": "latynse letter omgekeerde glotale stop"
+      }
+    }
+  },
+  {
+    "key": "0297",
+    "mappings": {
+      "default": {
+        "default": "latynse letter gerekte c"
+      }
+    }
+  },
+  {
+    "key": "0298",
+    "mappings": {
+      "default": {
+        "default": "latynse letter bilabiale klik"
+      }
+    }
+  },
+  {
+    "key": "029A",
+    "mappings": {
+      "default": {
+        "default": "toe oop e"
+      }
+    }
+  },
+  {
+    "key": "029E",
+    "mappings": {
+      "default": {
+        "default": "gedraaide k"
+      }
+    }
+  },
+  {
+    "key": "02A0",
+    "mappings": {
+      "default": {
+        "default": "q met haak"
+      }
+    }
+  },
+  {
+    "key": "02A3",
+    "mappings": {
+      "default": {
+        "default": "dz digraph"
+      }
+    }
+  },
+  {
+    "key": "02A5",
+    "mappings": {
+      "default": {
+        "default": "dz digraph with curl"
+      }
+    }
+  },
+  {
+    "key": "02A6",
+    "mappings": {
+      "default": {
+        "default": "ts digraph"
+      }
+    }
+  },
+  {
+    "key": "02A7",
+    "mappings": {
+      "default": {
+        "default": "tesh digraph"
+      }
+    }
+  },
+  {
+    "key": "02A8",
+    "mappings": {
+      "default": {
+        "default": "tc digraph with curl"
+      }
+    }
+  },
+  {
+    "key": "02A9",
+    "mappings": {
+      "default": {
+        "default": "feng digraph"
+      }
+    }
+  },
+  {
+    "key": "02AA",
+    "mappings": {
+      "default": {
+        "default": "ls digraph"
+      }
+    }
+  },
+  {
+    "key": "02AB",
+    "mappings": {
+      "default": {
+        "default": "lz digraph"
+      }
+    }
+  },
+  {
+    "key": "02AC",
+    "mappings": {
+      "default": {
+        "default": "latynse letter bilabiale perkusief"
+      }
+    }
+  },
+  {
+    "key": "02AD",
+    "mappings": {
+      "default": {
+        "default": "latynse letter bidentale perkusief"
+      }
+    }
+  },
+  {
+    "key": "02AE",
+    "mappings": {
+      "default": {
+        "default": "gedraaide h met vishoek"
+      }
+    }
+  },
+  {
+    "key": "02AF",
+    "mappings": {
+      "default": {
+        "default": "gedraaide h met vishoek en stert"
+      }
+    }
+  },
+  {
+    "key": "1D02",
+    "mappings": {
+      "default": {
+        "default": "gedraaide ae"
+      }
+    }
+  },
+  {
+    "key": "1D08",
+    "mappings": {
+      "default": {
+        "default": "gedraaide oop e"
+      }
+    }
+  },
+  {
+    "key": "1D09",
+    "mappings": {
+      "default": {
+        "default": "gedraaide i"
+      }
+    }
+  },
+  {
+    "key": "1D11",
+    "mappings": {
+      "default": {
+        "default": "dwars o"
+      }
+    }
+  },
+  {
+    "key": "1D12",
+    "mappings": {
+      "default": {
+        "default": "dwars oop o"
+      }
+    }
+  },
+  {
+    "key": "1D14",
+    "mappings": {
+      "default": {
+        "default": "gedraaide o"
+      }
+    }
+  },
+  {
+    "key": "1D16",
+    "mappings": {
+      "default": {
+        "default": "boonste halwe o"
+      }
+    }
+  },
+  {
+    "key": "1D17",
+    "mappings": {
+      "default": {
+        "default": "onderste halwe o"
+      }
+    }
+  },
+  {
+    "key": "1D1D",
+    "mappings": {
+      "default": {
+        "default": "dwars u"
+      }
+    }
+  },
+  {
+    "key": "1D1E",
+    "mappings": {
+      "default": {
+        "default": "sideways diaeresized u"
+      }
+    }
+  },
+  {
+    "key": "1D1F",
+    "mappings": {
+      "default": {
+        "default": "dwars geddraaide m"
+      }
+    }
+  },
+  {
+    "key": "1D24",
+    "mappings": {
+      "default": {
+        "default": "latin letter voiced laryngeal spirant"
+      }
+    }
+  },
+  {
+    "key": "1D25",
+    "mappings": {
+      "default": {
+        "default": "latin letter ain"
+      }
+    }
+  },
+  {
+    "key": "1D6B",
+    "mappings": {
+      "default": {
+        "default": "ue"
+      }
+    }
+  },
+  {
+    "key": "1D6C",
+    "mappings": {
+      "default": {
+        "default": "b met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D6D",
+    "mappings": {
+      "default": {
+        "default": "d met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D6E",
+    "mappings": {
+      "default": {
+        "default": "f met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D6F",
+    "mappings": {
+      "default": {
+        "default": "m met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D70",
+    "mappings": {
+      "default": {
+        "default": "n met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D71",
+    "mappings": {
+      "default": {
+        "default": "p met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D72",
+    "mappings": {
+      "default": {
+        "default": "r met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D73",
+    "mappings": {
+      "default": {
+        "default": "r met vishoek en middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D74",
+    "mappings": {
+      "default": {
+        "default": "s met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D75",
+    "mappings": {
+      "default": {
+        "default": "t met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D76",
+    "mappings": {
+      "default": {
+        "default": "z met middel tilde"
+      }
+    }
+  },
+  {
+    "key": "1D77",
+    "mappings": {
+      "default": {
+        "default": "gedraaide g"
+      }
+    }
+  },
+  {
+    "key": "1D79",
+    "mappings": {
+      "default": {
+        "default": "insular g"
+      }
+    }
+  },
+  {
+    "key": "1D7A",
+    "mappings": {
+      "default": {
+        "default": "th with strikethrough"
+      }
+    }
+  },
+  {
+    "key": "1D80",
+    "mappings": {
+      "default": {
+        "default": "b met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D81",
+    "mappings": {
+      "default": {
+        "default": "d met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D82",
+    "mappings": {
+      "default": {
+        "default": "f met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D83",
+    "mappings": {
+      "default": {
+        "default": "g met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D84",
+    "mappings": {
+      "default": {
+        "default": "k met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D85",
+    "mappings": {
+      "default": {
+        "default": "l met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D86",
+    "mappings": {
+      "default": {
+        "default": "m met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D87",
+    "mappings": {
+      "default": {
+        "default": "n met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D88",
+    "mappings": {
+      "default": {
+        "default": "p met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D89",
+    "mappings": {
+      "default": {
+        "default": "r met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D8A",
+    "mappings": {
+      "default": {
+        "default": "s met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D8B",
+    "mappings": {
+      "default": {
+        "default": "esh with palatal hook"
+      }
+    }
+  },
+  {
+    "key": "1D8C",
+    "mappings": {
+      "default": {
+        "default": "v met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D8D",
+    "mappings": {
+      "default": {
+        "default": "x met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D8E",
+    "mappings": {
+      "default": {
+        "default": "z met palatale haak"
+      }
+    }
+  },
+  {
+    "key": "1D8F",
+    "mappings": {
+      "default": {
+        "default": "a with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D90",
+    "mappings": {
+      "default": {
+        "default": "alpha with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D91",
+    "mappings": {
+      "default": {
+        "default": "d met haak en stert"
+      }
+    }
+  },
+  {
+    "key": "1D92",
+    "mappings": {
+      "default": {
+        "default": "e with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D93",
+    "mappings": {
+      "default": {
+        "default": "open e with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D94",
+    "mappings": {
+      "default": {
+        "default": "reversed open e with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D95",
+    "mappings": {
+      "default": {
+        "default": "schwa with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D96",
+    "mappings": {
+      "default": {
+        "default": "i with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D97",
+    "mappings": {
+      "default": {
+        "default": "open o with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D98",
+    "mappings": {
+      "default": {
+        "default": "esh with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D99",
+    "mappings": {
+      "default": {
+        "default": "u with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "1D9A",
+    "mappings": {
+      "default": {
+        "default": "ezh with retroflex hook"
+      }
+    }
+  },
+  {
+    "key": "0149",
+    "mappings": {
+      "default": {
+        "default": "n met afkappingsteken vooraf"
+      }
+    }
+  },
+  {
+    "key": "014B",
+    "mappings": {
+      "default": {
+        "default": "eng"
+      }
+    }
+  }
+]

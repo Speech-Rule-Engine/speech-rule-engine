@@ -1,0 +1,197 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "22BE",
+    "mappings": {
+      "default": {
+        "default": "regs hoek met boog"
+      }
+    }
+  },
+  {
+    "key": "237C",
+    "mappings": {
+      "default": {
+        "default": "regs hoek met afwaartse heen en weer pyltjie"
+      }
+    }
+  },
+  {
+    "key": "27C0",
+    "mappings": {
+      "default": {
+        "default": "driedimensionele hoek"
+      }
+    }
+  },
+  {
+    "key": "299B",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek opening links"
+      }
+    }
+  },
+  {
+    "key": "299C",
+    "mappings": {
+      "default": {
+        "default": "regs hoek variant met vierkant"
+      }
+    }
+  },
+  {
+    "key": "299D",
+    "mappings": {
+      "default": {
+        "default": "gemete regs hoek met punt"
+      }
+    }
+  },
+  {
+    "key": "299E",
+    "mappings": {
+      "default": {
+        "default": "hoek met s binnein"
+      }
+    }
+  },
+  {
+    "key": "299F",
+    "mappings": {
+      "default": {
+        "default": "akkute hoek"
+      }
+    }
+  },
+  {
+    "key": "29A0",
+    "mappings": {
+      "default": {
+        "default": "bolvormige hoek opening links"
+      }
+    }
+  },
+  {
+    "key": "29A1",
+    "mappings": {
+      "default": {
+        "default": "bolvormige hoek opening boontoe"
+      }
+    }
+  },
+  {
+    "key": "29A2",
+    "mappings": {
+      "default": {
+        "default": "gedraaide hoek"
+      }
+    }
+  },
+  {
+    "key": "29A3",
+    "mappings": {
+      "default": {
+        "default": "tru hoek"
+      }
+    }
+  },
+  {
+    "key": "29A4",
+    "mappings": {
+      "default": {
+        "default": "hoek met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "29A5",
+    "mappings": {
+      "default": {
+        "default": "tru hoek met onderstaaf"
+      }
+    }
+  },
+  {
+    "key": "29A6",
+    "mappings": {
+      "default": {
+        "default": "skuins hoek opening boontoe"
+      }
+    }
+  },
+  {
+    "key": "29A7",
+    "mappings": {
+      "default": {
+        "default": "skuins hoek opening ondertoe"
+      }
+    }
+  },
+  {
+    "key": "29A8",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat op en regs wys"
+      }
+    }
+  },
+  {
+    "key": "29A9",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat op en links wys"
+      }
+    }
+  },
+  {
+    "key": "29AA",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat af en regs wys"
+      }
+    }
+  },
+  {
+    "key": "29AB",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat af en links wys"
+      }
+    }
+  },
+  {
+    "key": "29AC",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat regs en op wys"
+      }
+    }
+  },
+  {
+    "key": "29AD",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat links en op wys"
+      }
+    }
+  },
+  {
+    "key": "29AE",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat regs en af wys"
+      }
+    }
+  },
+  {
+    "key": "29AF",
+    "mappings": {
+      "default": {
+        "default": "gemete hoek met oop arm wat in 'n pyltjie eindig wat links en af wys"
+      }
+    }
+  }
+]

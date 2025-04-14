@@ -4,11 +4,6 @@
   },
   {
     "key": "ft",
-    "category": "length",
-    "names": [
-      "ft",
-      "ft."
-    ],
     "mappings": {
       "default": {
         "default": "fot"
@@ -17,11 +12,6 @@
   },
   {
     "key": "in",
-    "category": "length",
-    "names": [
-      "in",
-      "in."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -30,11 +20,6 @@
   },
   {
     "key": "mi",
-    "category": "length",
-    "names": [
-      "mi",
-      "mi."
-    ],
     "mappings": {
       "default": {
         "default": "mil"
@@ -43,11 +28,6 @@
   },
   {
     "key": "yd",
-    "category": "length",
-    "names": [
-      "yd",
-      "yd."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -56,11 +36,6 @@
   },
   {
     "key": "link",
-    "category": "length",
-    "names": [
-      "li",
-      "li."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -69,11 +44,6 @@
   },
   {
     "key": "rod",
-    "category": "length",
-    "names": [
-      "rd",
-      "rd."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -82,11 +52,6 @@
   },
   {
     "key": "chain",
-    "category": "length",
-    "names": [
-      "ch",
-      "ch."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -95,11 +60,6 @@
   },
   {
     "key": "furlong",
-    "category": "length",
-    "names": [
-      "fur",
-      "fur."
-    ],
     "mappings": {
       "default": {
         "default": ""
@@ -108,10 +68,6 @@
   },
   {
     "key": "n.m.",
-    "category": "length",
-    "names": [
-      "n.m."
-    ],
     "mappings": {
       "default": {
         "default": "nautisk mil"
@@ -120,11 +76,6 @@
   },
   {
     "key": "m",
-    "category": "length",
-    "names": [
-      "m"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "default": "meter"

@@ -18,12 +18,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { interleaveLists } from '../common/base_util';
-import { Highlighter } from '../highlighter/highlighter';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
-import { AbstractWalker } from './abstract_walker';
-import { Levels } from './levels';
+import { interleaveLists } from '../common/base_util.js';
+import { Highlighter } from '../highlighter/highlighter.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
+import { AbstractWalker } from './abstract_walker.js';
+import { Levels } from './levels.js';
 
 /**
  * @override
@@ -33,6 +36,9 @@ export class SyntaxWalker extends AbstractWalker<string> {
    * Caching of levels.
    */
   public levels: Levels<string> = null;
+  /**
+   *
+   */
   constructor(
     public node: Element,
     public generator: SpeechGenerator,
@@ -117,7 +123,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
       case SemanticType.APPL:
         return [children[0], content[0], children[1]];
       case SemanticType.ROOT:
-        return [children[1], children[0]];
+        return [children[0], children[1]];
       default:
         return children;
     }
@@ -154,5 +160,19 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public findFocusOnLevel(id: number) {
     return this.singletonFocus(id.toString());
+  }
+
+  /**
+   *
+   */
+  public focusDomNodes() {
+    return [this.getFocus().getDomPrimary()];
+  }
+
+  /**
+   *
+   */
+  public focusSemanticNodes() {
+    return [this.getFocus().getSemanticPrimary()];
   }
 }

@@ -3,110 +3,98 @@
     "locale": "sv"
   },
   {
-    "category": "Ll",
     "key": "1D26",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Gamma"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Lambda"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Pi"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Rho"
       }
     }
   },
   {
-    "category": "Ll",
     "key": "1D2A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Psi"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "upphöjt gamma"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "upphöjt fi"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt beta"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt gamma"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt rho"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt fi"
       }
     }
   },
   {
-    "category": "Lm",
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt chi"
       }
     }
   }

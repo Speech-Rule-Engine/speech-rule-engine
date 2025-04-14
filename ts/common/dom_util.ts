@@ -22,10 +22,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine, { SREError } from './engine';
-import * as EngineConst from '../common/engine_const';
-import SystemExternal from './system_external';
-import * as XpathUtil from './xpath_util';
+import { Engine, SREError } from './engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { SystemExternal } from './system_external.js';
+import * as XpathUtil from './xpath_util.js';
 
 /**
  * Converts a NodeList into an array
@@ -47,21 +47,10 @@ export function toArray(nodeList: NodeList | NamedNodeMap): any[] {
  * @param input The XML input string.
  * @returns The string with whitespace removed between tags.
  */
-export function trimInput_(input: string): string {
+function trimInput(input: string): string {
   input = input.replace(/&nbsp;/g, ' ');
   return input.replace(/>[ \f\n\r\t\v\u200b]+</g, '><').trim();
 }
-
-/**
- * Set of XML entities.
- */
-export const XML_ENTITIES: { [key: string]: boolean } = {
-  '&lt;': true,
-  '&gt;': true,
-  '&amp;': true,
-  '&quot;': true,
-  '&apos;': true
-};
 
 /**
  * Parses the XML input string into an XML structure.
@@ -71,7 +60,7 @@ export const XML_ENTITIES: { [key: string]: boolean } = {
  */
 export function parseInput(input: string): Element {
   const dp = new SystemExternal.xmldom.DOMParser();
-  const clean_input = trimInput_(input);
+  const clean_input = trimInput(input);
   const allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
   const html = !!allValues;
   if (!clean_input) {
@@ -91,6 +80,21 @@ export function parseInput(input: string): Element {
     throw new SREError('Illegal input: ' + err.message);
   }
 }
+
+// let extIdCount = 0;
+// function addMarkers(node: Element) {
+//   if (Engine.getInstance().automark && tagName(node) !== 'STREE') {
+//     extIdCount = 0;
+//     addExtId(node);
+//   }
+//   return node;
+// }
+// function addExtId(node: Element) {
+//   if (node.nodeType === NodeType.ELEMENT_NODE) {
+//     node.setAttribute('extid', (extIdCount++).toString());
+//     toArray(node.childNodes).forEach(addExtId);
+//   }
+// }
 
 /**
  * Missing Node interface.
@@ -193,7 +197,7 @@ export function formatXml(xml: string): string {
     let indent = 0;
     if (node.match(/^<\w[^>/]*>[^>]+$/)) {
       // Start node with trailing content.
-      const match = matchingStartEnd_(node, split[0]);
+      const match = matchingStartEnd(node, split[0]);
       if (match[0]) {
         // Combine with end node
         if (match[1]) {
@@ -229,7 +233,7 @@ export function formatXml(xml: string): string {
       ) {
         split.unshift();
       }
-      node = node.slice(0, position);
+      node = node.slice(0, position) + rest;
     } else {
       // Empty tag node
       indent = 0;
@@ -239,6 +243,7 @@ export function formatXml(xml: string): string {
   }
   return formatted;
 }
+
 /**
  * Checks for two tags if the second is a matching end tag for the first.
  *
@@ -247,45 +252,13 @@ export function formatXml(xml: string): string {
  * @returns A pair indicating success and the possible
  *     remainder after the end tag, in case it is followed by mixed content.
  */
-export function matchingStartEnd_(
-  start: string,
-  end: string
-): [boolean, string] {
+function matchingStartEnd(start: string, end: string): [boolean, string] {
   if (!end) {
     return [false, ''];
   }
   const tag1 = start.match(/^<([^> ]+).*>/);
   const tag2 = end.match(/^<\/([^>]+)>(.*)/);
   return tag1 && tag2 && tag1[1] === tag2[1] ? [true, tag2[2]] : [false, ''];
-}
-
-/**
- * Transforms a data attribute name into its camel cased version.
- *
- * @param attr Micro data attributes.
- * @returns The camel cased attribute.
- */
-export function dataAttribute(attr: string): string {
-  if (attr.match(/^data-/)) {
-    attr = attr.substr(5);
-  }
-  return attr.replace(/-([a-z])/g, (_, index) => index.toUpperCase());
-}
-
-/**
- * Retrieves a data attribute from a given node. Tries using microdata access if
- * possible.
- *
- * @param node A DOM node.
- * @param attr The data attribute.
- * @returns The value for that attribute.
- */
-export function getDataAttribute(node: Element, attr: string): string {
-  // TODO (TS): Get this on the HTML side without crashing in node.
-  // if (node instanceof HTMLElement) {
-  //   return node.dataset[dataAttribute(attr)];
-  // }
-  return node.getAttribute(attr);
 }
 
 /**
@@ -343,4 +316,25 @@ export function querySelectorAll(node: Element, tag: string): Element[] {
  */
 export function tagName(node: Element): string {
   return node.tagName.toUpperCase();
+}
+
+/**
+ * Deep clone of an Element, depending on the environment.
+ *
+ * @param node The element to be cloned.
+ * @returns The deep clone.
+ */
+export function cloneNode(node: Element): Element {
+  return node.cloneNode(true) as Element;
+}
+
+/**
+ * Serializes and XML element.
+ *
+ * @param node The node to serialize.
+ * @returns The serialized expression.
+ */
+export function serializeXml(node: Element): string {
+  const xmls = new SystemExternal.xmldom.XMLSerializer();
+  return xmls.serializeToString(node);
 }

@@ -9,7 +9,8 @@
       "direct-speech",
       "default",
       "[t] @ext-speech",
-      "self::*[@ext-speech]"
+      "self::*[@ext-speech]",
+      "priority=Infinity"
     ],
     [
       "Rule",
@@ -48,6 +49,16 @@
       "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Rule",
+      "omit-font-text",
+      "default",
+      "[n] . (grammar:ignoreFont=@font)",
+      "self::identifier[@font=\"normal\"]",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "contains(@annotation, \"general:text\")"
     ],
     [
       "SpecializedRule",
@@ -127,8 +138,7 @@
       "Precondition",
       "font",
       "default",
-      "self::*",
-      "@font",
+      "self::*[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\""
     ],
@@ -1171,6 +1181,11 @@
       "@role=\"leftright\""
     ],
     [
+      "Alias",
+      "fences-open-close",
+      "self::fenced"
+    ],
+    [
       "Specialized",
       "fences-open-close",
       "default",
@@ -1717,7 +1732,7 @@
       "Precondition",
       "set-prefix-operators",
       "default",
-      "self::*",
+      "self::*[@grammar]",
       "contains(@grammar,\"prefix\")",
       "descendant-or-self::*/text()=\"∩\" or descendant-or-self::*/text()=\"∪\"",
       "self::*",
@@ -1825,7 +1840,7 @@
       "Precondition",
       "simple-in-fraction",
       "default",
-      "self::*",
+      "self::*[@annotation]",
       "contains(@annotation, \"clearspeak:simple\")",
       "not(contains(@grammar, \"inFrac\"))",
       "name(.)!=\"identifier\"",
@@ -2587,6 +2602,13 @@
       "integral",
       "default",
       "self::integral"
+    ],
+    [
+      "Precondition",
+      "integral-novar",
+      "default",
+      "self::integral",
+      "name(children/*[3])=\"empty\""
     ],
     [
       "Precondition",

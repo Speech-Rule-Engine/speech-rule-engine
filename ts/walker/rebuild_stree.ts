@@ -20,21 +20,19 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { invisibleComma } from '../semantic_tree/semantic_attr';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticFont,
   SemanticRole,
   SemanticType
-} from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory';
-import SemanticProcessor from '../semantic_tree/semantic_processor';
-import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
-import { SemanticTree } from '../semantic_tree/semantic_tree';
-import * as SemanticUtil from '../semantic_tree/semantic_util';
-import * as WalkerUtil from './walker_util';
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory.js';
+// import SemanticProcessor from '../semantic_tree/semantic_processor.js';
+import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
+import { SemanticTree } from '../semantic_tree/semantic_tree.js';
+import * as WalkerUtil from './walker_util.js';
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
@@ -68,29 +66,6 @@ export class RebuildStree {
    * The xml representation of semantic tree.
    */
   public xml: Element;
-
-  /**
-   * Adds external attributes if they exists. Recurses one level if we have a
-   * leaf element with a none-text child.
-   *
-   * @param snode The semantic node.
-   * @param node The mml node.
-   * @param leaf True if it is a leaf node.
-   */
-  public static addAttributes(
-    snode: SemanticNode,
-    node: Element,
-    leaf: boolean
-  ) {
-    if (
-      leaf &&
-      node.childNodes.length === 1 &&
-      node.childNodes[0].nodeType !== DomUtil.NodeType.TEXT_NODE
-    ) {
-      SemanticUtil.addAttributes(snode, node.childNodes[0] as Element);
-    }
-    SemanticUtil.addAttributes(snode, node);
-  }
 
   /**
    * Sets the text content of the semantic node. If no text content is available
@@ -133,6 +108,9 @@ export class RebuildStree {
   }
 
   /**
+   * Class to hold information for rebuilding semantic trees from enriched
+   * XML/HTML elements.
+   *
    * @param mathml The enriched MathML node.
    */
   constructor(public mathml: Element) {
@@ -140,7 +118,7 @@ export class RebuildStree {
     this.streeRoot = this.assembleTree(this.mmlRoot);
     this.stree = SemanticTree.fromNode(this.streeRoot, this.mathml);
     this.xml = this.stree.xml();
-    SemanticProcessor.getInstance().setNodeFactory(this.factory);
+    // SemanticProcessor.getInstance().setNodeFactory(this.factory);
   }
 
   /**
@@ -163,11 +141,6 @@ export class RebuildStree {
     );
     const content = WalkerUtil.splitAttribute(
       WalkerUtil.getAttribute(node, Attribute.CONTENT)
-    );
-    RebuildStree.addAttributes(
-      snode,
-      node,
-      !(children.length || content.length)
     );
     if (content.length === 0 && children.length === 0) {
       RebuildStree.textContent(snode, node);
@@ -197,6 +170,8 @@ export class RebuildStree {
     const font = WalkerUtil.getAttribute(node, Attribute.FONT);
     const annotation =
       WalkerUtil.getAttribute(node, Attribute.ANNOTATION) || '';
+    const attributes =
+      WalkerUtil.getAttribute(node, Attribute.ATTRIBUTES) || '';
     const id = WalkerUtil.getAttribute(node, Attribute.ID);
     const embellished = WalkerUtil.getAttribute(node, Attribute.EMBELLISHED);
     const fencepointer = WalkerUtil.getAttribute(node, Attribute.FENCEPOINTER);
@@ -205,6 +180,7 @@ export class RebuildStree {
     snode.role = role as SemanticRole;
     snode.font = font ? (font as SemanticFont) : SemanticFont.UNKNOWN;
     snode.parseAnnotation(annotation);
+    snode.parseAttributes(attributes);
     if (fencepointer) {
       snode.fencePointer = fencepointer;
     }
@@ -222,7 +198,7 @@ export class RebuildStree {
    */
   public makePunctuation(id: number): SemanticNode {
     const node = this.createNode(id);
-    node.updateContent(invisibleComma());
+    node.updateContent(NamedSymbol.invisibleComma);
     node.role = SemanticRole.DUMMY;
     return node;
   }
@@ -389,8 +365,8 @@ export class RebuildStree {
   /**
    * Sets a parent for a node.
    *
-   * @param {string} id of the node.
-   * @param {SemanticNode} snode The parent node.
+   * @param id of the node.
+   * @param snode The parent node.
    * @returns The newly assembled child node.
    */
   private setParent(id: string, snode: SemanticNode): SemanticNode {

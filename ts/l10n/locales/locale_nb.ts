@@ -22,10 +22,10 @@
 // This work was sponsored by TextHelp
 //
 
-import { createLocale, Locale } from '../locale';
-import { nestingToString } from '../locale_util';
-import NUMBERS from '../numbers/numbers_nn';
-import * as tr from '../transformers';
+import { createLocale, Locale } from '../locale.js';
+import { nestingToString } from '../locale_util.js';
+import { NUMBERS } from '../numbers/numbers_nn.js';
+import * as tr from '../transformers.js';
 
 let locale: Locale = null;
 

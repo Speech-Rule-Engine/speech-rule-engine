@@ -18,25 +18,41 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import * as XpathUtil from '../common/xpath_util';
-import { LOCALE } from '../l10n/locale';
-import { vulgarFractionSmall } from '../l10n/transformers';
-import { Grammar } from '../rule_engine/grammar';
-import * as StoreUtil from '../rule_engine/store_util';
-import { register } from '../semantic_tree/semantic_annotations';
-import { SemanticAnnotator } from '../semantic_tree/semantic_annotator';
-import { isMatchingFence } from '../semantic_tree/semantic_attr';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import { Engine } from '../common/engine.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { vulgarFractionSmall } from '../l10n/transformers.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import * as StoreUtil from '../rule_engine/store_util.js';
+import { register } from '../semantic_tree/semantic_annotations.js';
+import { SemanticAnnotator } from '../semantic_tree/semantic_annotator.js';
+import { isMatchingFence } from '../semantic_tree/semantic_attr.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 /**
- * Count list of nodes and concatenate this with the context string, adding a
- * colon at the end. Returns a closure with a local state.
+ * Count list of nodes and combine this according to the formatted context
+ * string. Formatting can consist of up to three, dash separated parts:
+ *
+ * Part 1 is the regular context string that is passed to the context
+ * function. For example context:"Column" returns `Column 1`, `Column 2`, ...
+ *
+ * Part 2 is a separator that is concatenated at the end of the computed
+ * context. For example context:"Column-:" returns `Column 1:`, `Column 2:`, ...
+ *
+ * Part 3 is a initial string that is prefixed only to the very first context
+ * string. For example context: "Column-:-Start " returns `Start Column 1:`,
+ * `Column 2:`, ...
+ *
+ * Returns a closure with a local state.
  *
  * @param nodes A node array.
- * @param context A context string.
+ * @param context The formatted context string.
  * @returns A function returning a string.
  */
 export function nodeCounter(
@@ -83,7 +99,7 @@ export function nodeCounter(
  * @param node The semantic node.
  * @returns True if the node is a simple expression.
  */
-export function isSimpleExpression(node: SemanticNode): boolean {
+function isSimpleExpression(node: SemanticNode): boolean {
   return (
     isSimpleNumber_(node) ||
     isSimpleLetters_(node) ||
@@ -102,7 +118,7 @@ export function isSimpleExpression(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is a simple function.
  */
-export function isSimpleFunction_(node: SemanticNode): boolean {
+function isSimpleFunction_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.APPL &&
     // The types are there for distinguishing non-embellished
@@ -128,7 +144,7 @@ export function isSimpleFunction_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is negated simple expression.
  */
-export function isSimpleNegative_(node: SemanticNode): boolean {
+function isSimpleNegative_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.PREFIXOP &&
     node.role === SemanticRole.NEGATIVE &&
@@ -148,7 +164,7 @@ export function isSimpleNegative_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is simple degree expression.
  */
-export function isSimpleDegree_(node: SemanticNode): boolean {
+function isSimpleDegree_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.PUNCTUATED &&
     node.role === SemanticRole.ENDPUNCT &&
@@ -173,7 +189,7 @@ export function isSimpleDegree_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is simple non-negative letter expression.
  */
-export function isSimpleLetters_(node: SemanticNode): boolean {
+function isSimpleLetters_(node: SemanticNode): boolean {
   return (
     isLetter_(node) ||
     (node.type === SemanticType.INFIXOP &&
@@ -195,7 +211,7 @@ export function isSimpleLetters_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is already annotated as simple.
  */
-export function isSimple_(node: SemanticNode): boolean {
+function isSimple_(node: SemanticNode): boolean {
   return node.hasAnnotation('clearspeak', 'simple');
 }
 
@@ -205,7 +221,7 @@ export function isSimple_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the node is a single letter from any alphabet.
  */
-export function isLetter_(node: SemanticNode): boolean {
+function isLetter_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.IDENTIFIER &&
     (node.role === SemanticRole.LATINLETTER ||
@@ -223,7 +239,7 @@ export function isLetter_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if the number is an integer or a decimal.
  */
-export function isNumber_(node: SemanticNode): boolean {
+function isNumber_(node: SemanticNode): boolean {
   return (
     node.type === SemanticType.NUMBER &&
     (node.role === SemanticRole.INTEGER || node.role === SemanticRole.FLOAT)
@@ -237,7 +253,7 @@ export function isNumber_(node: SemanticNode): boolean {
  * @param node The semantic node.
  * @returns True if node is number or a vulgar fraction.
  */
-export function isSimpleNumber_(node: SemanticNode): boolean {
+function isSimpleNumber_(node: SemanticNode): boolean {
   return isNumber_(node) || isSimpleFraction_(node);
 }
 
@@ -248,7 +264,7 @@ export function isSimpleNumber_(node: SemanticNode): boolean {
  * @returns True if node is a vulgar fraction that would be spoken as
  *   ordinal for the current preference settings.
  */
-export function isSimpleFraction_(node: SemanticNode): boolean {
+function isSimpleFraction_(node: SemanticNode): boolean {
   if (hasPreference('Fraction_Over') || hasPreference('Fraction_FracOver')) {
     return false;
   }
@@ -274,7 +290,7 @@ export function isSimpleFraction_(node: SemanticNode): boolean {
  * @param pref The preference.
  * @returns True of the given preference is set.
  */
-export function hasPreference(pref: string): boolean {
+function hasPreference(pref: string): boolean {
   return Engine.getInstance().style === pref;
 }
 
@@ -290,7 +306,7 @@ register(
  * @param node The node in question.
  * @returns True if the node has a annotation entry of simple.
  */
-export function simpleNode(node: Element): boolean {
+function simpleNode(node: Element): boolean {
   if (!node.hasAttribute('annotation')) {
     return false;
   }
@@ -304,7 +320,7 @@ export function simpleNode(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is a simple cell.
  */
-export function simpleCell_(node: Element): boolean {
+function simpleCell_(node: Element): boolean {
   if (simpleNode(node)) {
     return true;
   }
@@ -333,7 +349,7 @@ export function simpleCell_(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is an integer.
  */
-export function isInteger_(node: Element): boolean {
+function isInteger_(node: Element): boolean {
   return (
     node.tagName === SemanticType.NUMBER &&
     node.hasAttribute('role') &&
@@ -347,7 +363,7 @@ export function isInteger_(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is an index.
  */
-export function allIndices_(node: Element): boolean {
+function allIndices_(node: Element): boolean {
   const nodes = XpathUtil.evalXPath('children/*', node);
   return nodes.every(
     (x: Element) => isInteger_(x) || x.tagName === SemanticType.IDENTIFIER
@@ -387,9 +403,9 @@ export function isSmallVulgarFraction(node: Element): Element[] {
  * @param node The semantic node in question.
  * @returns True if the node is a unit expression.
  */
-export function isUnitExpression(node: SemanticNode): boolean {
+function isUnitExpression(node: SemanticNode): boolean {
   return (
-    node.type === SemanticType.TEXT ||
+    (node.type === SemanticType.TEXT && node.role !== SemanticRole.LABEL) ||
     (node.type === SemanticType.PUNCTUATED &&
       node.role === SemanticRole.TEXT &&
       isNumber_(node.childNodes[0]) &&
@@ -408,7 +424,7 @@ export function isUnitExpression(node: SemanticNode): boolean {
  * @param nodes A list of semantic nodes.
  * @returns True if condition holds.
  */
-export function allTextLastContent_(nodes: SemanticNode[]): boolean {
+function allTextLastContent_(nodes: SemanticNode[]): boolean {
   for (let i = 0; i < nodes.length - 1; i++) {
     if (!(nodes[i].type === SemanticType.TEXT && nodes[i].textContent === '')) {
       return false;
@@ -429,17 +445,20 @@ register(
  * @param node The node to translate.
  * @returns The ordinal exponent as a word.
  */
-export function ordinalExponent(node: Element): string {
+export function ordinalExponent(node: Element): Span[] {
   const num = parseInt(node.textContent, 10);
-  if (isNaN(num)) {
-    return node.textContent;
-  }
-  return num > 10
-    ? LOCALE.NUMBERS.numericOrdinal(num)
-    : LOCALE.NUMBERS.wordOrdinal(num);
+  return [
+    Span.stringEmpty(
+      isNaN(num)
+        ? node.textContent
+        : num > 10
+          ? LOCALE.NUMBERS.numericOrdinal(num)
+          : LOCALE.NUMBERS.wordOrdinal(num)
+    )
+  ];
 }
 
-export let NESTING_DEPTH: string | null = null;
+let NESTING_DEPTH: string | null = null;
 
 /**
  * Computes the nesting depth of a fenced expressions.
@@ -447,7 +466,7 @@ export let NESTING_DEPTH: string | null = null;
  * @param node The fenced node.
  * @returns The nesting depth as an ordinal number.
  */
-export function nestingDepth(node: Element): string | null {
+export function nestingDepth(node: Element): Span[] {
   let count = 0;
   const fence = (node as Element).textContent;
   const index = node.getAttribute('role') === 'open' ? 0 : 1;
@@ -462,7 +481,7 @@ export function nestingDepth(node: Element): string | null {
     parent = parent.parentNode as Element;
   }
   NESTING_DEPTH = count > 1 ? LOCALE.NUMBERS.wordOrdinal(count) : '';
-  return NESTING_DEPTH;
+  return [Span.stringEmpty(NESTING_DEPTH)];
 }
 
 /**
@@ -496,7 +515,7 @@ export function matchingFences(node: Element): Element[] {
  * @param correction The nesting depth as correction text.
  * @returns The corrected text. E.g., open second paren.
  */
-export function insertNesting(text: string, correction: string): string {
+function insertNesting(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
@@ -558,7 +577,7 @@ export function simpleArguments(node: Element): Element[] {
  * @returns True if the node is a number, identifier, function or
  *     applicatio or a fraction.
  */
-export function simpleFactor_(node: Element): boolean {
+function simpleFactor_(node: Element): boolean {
   return (
     !!node &&
     (node.tagName === SemanticType.NUMBER ||
@@ -578,7 +597,7 @@ export function simpleFactor_(node: Element): boolean {
  * @returns True if the node is a fenced on both sides or a matrix or
  *     vector.
  */
-export function fencedFactor_(node: Element): boolean {
+function fencedFactor_(node: Element): boolean {
   return (
     node &&
     (node.tagName === SemanticType.FENCED ||
@@ -594,7 +613,7 @@ export function fencedFactor_(node: Element): boolean {
  * @param node The node in question.
  * @returns True if the node is a matrix or vector.
  */
-export function layoutFactor_(node: Element): boolean {
+function layoutFactor_(node: Element): boolean {
   return (
     !!node &&
     (node.tagName === SemanticType.MATRIX ||
@@ -609,6 +628,8 @@ export function layoutFactor_(node: Element): boolean {
  * @param node The node to translate.
  * @returns The ordinal as a word.
  */
-export function wordOrdinal(node: Element): string {
-  return LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
+export function wordOrdinal(node: Element): Span[] {
+  return [
+    Span.stringEmpty(LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10)))
+  ];
 }

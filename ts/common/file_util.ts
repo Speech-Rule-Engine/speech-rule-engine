@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import SystemExternal from './system_external';
+import { SystemExternal } from './system_external.js';
 
 /**
  * Corrects pathnames to have trailing slashes.

@@ -22,85 +22,72 @@
 import {
   SemanticHeuristic,
   SemanticHeuristicTypes
-} from './semantic_heuristic';
-import { SemanticNodeFactory } from './semantic_node_factory';
+} from './semantic_heuristic.js';
+import { SemanticNodeFactory } from './semantic_node_factory.js';
 
-export let factory: SemanticNodeFactory = null;
+export const SemanticHeuristics = {
+  factory: null as SemanticNodeFactory,
 
-/**
- * Updates the semantic node factory.
- *
- * @param nodeFactory The new semantic node factory.
- */
-export function updateFactory(nodeFactory: SemanticNodeFactory) {
-  factory = nodeFactory;
-}
+  /**
+   * Updates the semantic node factory.
+   *
+   * @param nodeFactory The new semantic node factory.
+   */
+  updateFactory: function (nodeFactory: SemanticNodeFactory) {
+    SemanticHeuristics.factory = nodeFactory;
+  },
 
-const heuristics: Map<
-  string,
-  SemanticHeuristic<SemanticHeuristicTypes>
-> = new Map();
+  heuristics: new Map<string, SemanticHeuristic<SemanticHeuristicTypes>>(),
 
-/**
- * Heuristics that are run by default.
- */
-export const flags: { [key: string]: boolean } = {
-  combine_juxtaposition: true,
-  convert_juxtaposition: true,
-  multioperator: true
-};
+  /**
+   * Heuristics that are run by default.
+   */
+  flags: {
+    combine_juxtaposition: true,
+    convert_juxtaposition: true,
+    multioperator: true
+  } as { [key: string]: boolean },
 
-/**
- * Heuristics that are permanently switched off.
- */
-export const blacklist: { [key: string]: boolean } = {};
+  /**
+   * Heuristics that are permanently switched off.
+   */
+  blacklist: {} as { [key: string]: boolean },
 
-/**
- * Register a heuristic with the handler.
- *
- * @param heuristic The heuristic.
- */
-export function add(heuristic: SemanticHeuristic<SemanticHeuristicTypes>) {
-  const name = heuristic.name;
-  heuristics.set(name, heuristic);
-  // Registered switched off, unless it is set by default.
-  if (!flags[name]) {
-    flags[name] = false;
+  /**
+   * Register a heuristic with the handler.
+   *
+   * @param heuristic The heuristic.
+   */
+  add: function (heuristic: SemanticHeuristic<SemanticHeuristicTypes>) {
+    const name = heuristic.name;
+    SemanticHeuristics.heuristics.set(name, heuristic);
+    // Registered switched off, unless it is set by default.
+    if (!SemanticHeuristics.flags[name]) {
+      SemanticHeuristics.flags[name] = false;
+    }
+  },
+
+  /**
+   * Runs a heuristic if its predicate evaluates to true.
+   *
+   * @param name The name of the heuristic.
+   * @param root The root node of the subtree.
+   * @param opt_alternative An
+   *       optional method to run if the heuristic is not applicable.
+   * @returns The resulting subtree.
+   */
+  run: function (
+    name: string,
+    root: SemanticHeuristicTypes,
+    opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
+  ): SemanticHeuristicTypes | void {
+    const heuristic = SemanticHeuristics.heuristics.get(name);
+    return heuristic &&
+      !SemanticHeuristics.blacklist[name] &&
+      (SemanticHeuristics.flags[name] || heuristic.applicable(root))
+      ? heuristic.apply(root)
+      : opt_alternative
+        ? opt_alternative(root)
+        : root;
   }
-}
-
-/**
- * Runs a heuristic if its predicate evaluates to true.
- *
- * @param name The name of the heuristic.
- * @param root The root node of the subtree.
- * @param opt_alternative An
- *       optional method to run if the heuristic is not applicable.
- * @returns The resulting subtree.
- */
-export function run(
-  name: string,
-  root: SemanticHeuristicTypes,
-  opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
-): SemanticHeuristicTypes | void {
-  const heuristic = lookup(name);
-  return heuristic &&
-    !blacklist[name] &&
-    (flags[name] || heuristic.applicable(root))
-    ? heuristic.apply(root)
-    : opt_alternative
-    ? opt_alternative(root)
-    : root;
-}
-
-/**
- * Looks up the named heuristic.
- *
- * @param name The name of the heuristic.
- * @returns The heuristic.
- */
-export function lookup(
-  name: string
-): SemanticHeuristic<SemanticHeuristicTypes> {
-  return heuristics.get(name);
-}
+};

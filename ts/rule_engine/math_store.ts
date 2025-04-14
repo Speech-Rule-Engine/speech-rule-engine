@@ -19,12 +19,12 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as BaseUtil from '../common/base_util';
-import { LOCALE } from '../l10n/locale';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { BaseRuleStore, RulesJson } from './base_rule_store';
-import { Action, OutputError, SpeechRule } from './speech_rule';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as BaseUtil from '../common/base_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { BaseRuleStore, RulesJson } from './base_rule_store.js';
+import { Action, OutputError, SpeechRule } from './speech_rule.js';
 
 export class MathStore extends BaseRuleStore {
   /**
@@ -189,7 +189,7 @@ export class MathStore extends BaseRuleStore {
       return descs;
     }
     // Case of numbers with whitespace for separation.
-    let num = this.matchNumber_(str);
+    let num = this.matchNumber(str);
     if (num && num.length === str.length) {
       descs.push(this.evaluateCharacter(num.number));
       return descs;
@@ -206,7 +206,7 @@ export class MathStore extends BaseRuleStore {
         // Break up string even further wrt. symbols vs alphanum substrings.
         let rest = s;
         while (rest) {
-          num = this.matchNumber_(rest);
+          num = this.matchNumber(rest);
           const alpha = rest.match(
             new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+')
           );
@@ -268,7 +268,9 @@ export class MathStore extends BaseRuleStore {
    * @param str The string to match.
    * @returns The number and its length.
    */
-  private matchNumber_(str: string): { number: string; length: number } | null {
+  protected matchNumber(
+    str: string
+  ): { number: string; length: number } | null {
     const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
     const enNum = str.match(new RegExp('^' + MathStore.regexp.NUMBER));
     if (!locNum && !enNum) {

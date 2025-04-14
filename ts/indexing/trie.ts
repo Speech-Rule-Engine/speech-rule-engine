@@ -27,11 +27,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SpeechRule } from '../rule_engine/speech_rule';
-import { SpeechRuleContext } from '../rule_engine/speech_rule_context';
-import { StaticTrieNode } from './abstract_trie_node';
-import { TrieNode, TrieNodeKind } from './trie_node';
-import { getNode } from './trie_node_factory';
+import { SpeechRule } from '../rule_engine/speech_rule.js';
+import { SpeechRuleContext } from '../rule_engine/speech_rule_context.js';
+import { StaticTrieNode } from './abstract_trie_node.js';
+import { TrieNode, TrieNodeKind } from './trie_node.js';
+import { getNode } from './trie_node_factory.js';
 
 export class Trie {
   /**
@@ -101,6 +101,9 @@ export class Trie {
     return Math.max(children.length, max);
   }
 
+  /**
+   * Trie structure for indexing of speech rules.
+   */
   constructor() {
     this.root = getNode(TrieNodeKind.ROOT, '', null);
   }
@@ -205,10 +208,13 @@ export class Trie {
   }
 
   /**
+   * Collects rules of the trie starting at a particular node.
+   *
+   * @param root The node to start from. Defaults to root.
    * @returns Set of speech rules in the trie.
    */
-  public collectRules(): SpeechRule[] {
-    return Trie.collectRules_(this.root);
+  public collectRules(root: TrieNode = this.root): SpeechRule[] {
+    return Trie.collectRules_(root);
   }
 
   /**

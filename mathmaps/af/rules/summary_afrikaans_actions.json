@@ -1,0 +1,352 @@
+{
+  "locale": "af",
+  "modality": "summary",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"lang identifiseerder\""
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"identifiseerder\""
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"lang getal\""
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"getal\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"lang gemengde getal\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"gemengde getal\""
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"teks\""
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"funksionele uitdrukking\""
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"funksie\""
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"limiet funksie\""
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"limïet\""
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"breuk\""
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"breuk\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"voortgesette breuk\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"voortgesette breuk\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"vierkantswortel\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"genesde vierkantswortel\""
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[t] \"wortel van indeks\"; [n] children/*[1] (engine:modality=speech); [t] \"endindeks\""
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[t] \"wortel van indeks\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"wortel\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[t] \"genesde wortel van indeks\"; [n] children/*[1] (engine:modality=speech); [t] \"end indeks\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[t] \"genesde wortel van indeks\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"genesde wortel\""
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"mag\""
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"onderskrif\""
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"mag met onderskrif\""
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] @role (grammar:localRole); [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] @role (grammar:localRole); [t] \"met wisselende hoeveelheid elemente\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] \"som met\"; [t] count(./children/*); [t] \"terme\""
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"som\""
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"som met wisselende aantal terme\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] \"produk met\"; [t] count(./children/*); [t] \"faktore\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"produk\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"produk met wisselende hoeveelheid faktore\""
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] count(./children/*); [t] \"dimensionele vektor\""
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"vektor\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"n dimensionele vektor\""
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"binomiaal\""
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] count(./children/*); [t] \"dimensionele determinant\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"determinant\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"n dimensional determinant\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] count(./children/*); [t] \"dimensionele vierkant matriks\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"vierkant matriks\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] count(./children/row/children/*); [t] \"dimensionele ry vektor\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"ry vektor\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"n dimensionele ry vektor\""
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matriks\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"matriks\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"n by m dimensionele matriks\""
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] \"gevalstelling\"; [t] \"met\"; [t] count(children/*); [t] \"gevalle\""
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"gevalstelling\""
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"gevalstelling met wisselende hoeveelheid gevalle\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[n] content/*[1]; [t] \"opgebreekte lys\"; [t] \"met lengte\"; [t] count(children/*) - count(content/*)"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[n] content/*[1]; [t] \"opgebreekte lys\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[n] content/*[1]; [t] \"opgebreekte lys\"; [t] \"met wisselende lengte\""
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"integraal\""
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] @role (grammar:localRole); [t] \"ketting\"; [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] @role (grammar:localRole); [t] \"ketting\""
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] @role (grammar:localRole); [t] \"ketting\"; [t] \"met wisselende hoeveelheid elemente\""
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] \"verwantskapsketting\"; [t] \"met\"; [t] count(./children/*); [t] \"elemente\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"verwantskapsketting\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"verwantskapsketting met 'n wisselende aantal elemente\""
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] \"tabêl met\"; [t] count(children/*); [t] \"rye en\"; [t] count(children/*[1]/children/*); [t] \"kolomme\""
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] \"in\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"in\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"met\"; [t] count(children/*); [t] \"kolomme\""
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] \"in\"; [t] @role (grammar:localRole)"
+    ]
+  ]
+}

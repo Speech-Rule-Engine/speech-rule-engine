@@ -8,12 +8,7 @@
       "default": {
         "default": "Pfund"
       }
-    },
-    "category": "weight",
-    "names": [
-      "lb",
-      "lb."
-    ]
+    }
   },
   {
     "key": "oz",
@@ -22,21 +17,15 @@
         "plural": "Unzen",
         "default": "Unze"
       }
-    },
-    "category": "weight",
-    "names": [
-      "oz",
-      "oz."
-    ]
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Long ton"
-     }
-   },
-   "key": "LT",
-   "names": ["LT", "L.T."]
+  {
+    "key": "LT",
+    "mappings": {
+      "default": {
+        "default": "Long ton"
+      }
+    }
   },
   {
     "key": "gr",
@@ -44,33 +33,23 @@
       "default": {
         "default": "Gramm"
       }
-    },
-    "category": "weight",
-    "names": [
-      "gr"
-    ]
+    }
   },
   {
     "key": "g",
-    "si": true,
     "mappings": {
       "default": {
         "default": "Gramm"
       }
-    },
-    "category": "weight",
-    "names": [
-      "g"
-    ]
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Mikrogramm"
-     }
-   },
-   "key": "mcg",
-   "names": ["mcg"]
+  {
+    "key": "mcg",
+    "mappings": {
+      "default": {
+        "default": "Mikrogramm"
+      }
+    }
   },
   {
     "key": "t",
@@ -79,60 +58,43 @@
         "plural": "Tonnen",
         "default": "Tonne"
       }
-    },
-    "category": "weight",
-    "names": [
-      "t",
-      "T"
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "dram",
     "mappings": {
       "default": {
         "plural": "Drachmen",
         "default": "Drachme"
       }
-    },
-    "key": "dram",
-    "names": [
-      "dr",
-      "dr."
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "st",
     "mappings": {
       "default": {
         "default": "Stone"
       }
-    },
-    "key": "st",
-    "names": [
-      "st",
-      "st."
-    ]
+    }
   },
   {
-    "category": "weight",
+    "key": "qtr",
     "mappings": {
       "default": {
         "default": "Viertelzentner"
       }
-    },
-    "key": "qtr",
-    "names": [
-      "qtr",
-      "qtr."
-    ]
+    }
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Zentner"
-     }
-   },
-   "key": "cwt",
-   "names": ["cwt", "cwt.", "Ztr.", "Ctr."]
+  {
+    "key": "cwt",
+    "mappings": {
+      "default": {
+        "default": "Zentner"
+      }
+    },
+    "names": [
+      "Ztr.",
+      "Ctr."
+    ]
   }
 ]

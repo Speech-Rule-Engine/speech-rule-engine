@@ -20,19 +20,24 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import Engine from '../common/engine';
-import * as SemanticAttr from './semantic_attr';
-import * as SemanticHeuristics from './semantic_heuristic_factory';
+import { Debugger } from '../common/debugger.js';
+import { Engine } from '../common/engine.js';
+import { SemanticMap, NamedSymbol } from './semantic_attr.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
   SemanticTreeHeuristic,
+  SemanticMmlHeuristic,
   SemanticMultiHeuristic
-} from './semantic_heuristic';
-import { SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+} from './semantic_heuristic.js';
+import { SemanticRole, SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import * as SemanticPred from './semantic_pred.js';
+import { SemanticProcessor } from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
+import { SemanticSkeleton } from './semantic_skeleton.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+
+import * as DomUtil from '../common/dom_util.js';
 
 /**
  * Recursively combines implicit nodes as much as possible for the given root
@@ -140,26 +145,8 @@ SemanticHeuristics.add(
     if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
       return;
     }
-    // TODO: Combine with lines in numberRole_/exprFont_?
-    const content = [...node.textContent];
-    const meaning = content.map(SemanticAttr.lookupMeaning);
-    const singleRole = meaning.reduce(function (prev, curr) {
-      if (
-        !prev ||
-        !curr.role ||
-        curr.role === SemanticRole.UNKNOWN ||
-        curr.role === prev
-      ) {
-        return prev;
-      }
-      if (prev === SemanticRole.UNKNOWN) {
-        return curr.role;
-      }
-      return null;
-    }, SemanticRole.UNKNOWN);
-    if (singleRole) {
-      node.role = singleRole;
-    }
+    SemanticProcessor.compSemantics(node, 'role', SemanticRole);
+    SemanticProcessor.compSemantics(node, 'type', SemanticType);
   })
 );
 
@@ -170,7 +157,7 @@ SemanticHeuristics.add(
   new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
     let partition = SemanticUtil.partitionNodes(nodes, function (x) {
       return (
-        x.textContent === SemanticAttr.invisibleTimes() &&
+        x.textContent === NamedSymbol.invisibleTimes &&
         x.type === SemanticType.OPERATOR
       );
     });
@@ -190,7 +177,7 @@ SemanticHeuristics.add(
     }
     partition = SemanticUtil.partitionNodes(nodes, function (x) {
       return (
-        x.textContent === SemanticAttr.invisibleTimes() &&
+        x.textContent === NamedSymbol.invisibleTimes &&
         (x.type === SemanticType.OPERATOR || x.type === SemanticType.INFIXOP)
       );
     });
@@ -383,7 +370,10 @@ function recurseJuxtaposition(
   const left = acc.pop();
   const op = ops.shift();
   const first = elements.shift();
-  if (SemanticPred.isImplicitOp(op)) {
+  if (
+    op.type === SemanticType.INFIXOP &&
+    (op.role === SemanticRole.IMPLICIT || op.role === SemanticRole.UNIT)
+  ) {
     Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
     const right = (left ? [left, op] : [op]).concat(first);
@@ -465,3 +455,468 @@ function recurseJuxtaposition(
   acc.push(result);
   return recurseJuxtaposition(acc.concat(first), ops, elements);
 }
+
+// New Integral Heuristics
+/**
+ * Heuristic to extract integral variables from elements that are considered to be
+ * in elided products. This implies we ignore any invisible grouping.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'intvar_from_implicit',
+    implicitUnpack,
+    (nodes: SemanticNode[]) => nodes[0] && SemanticPred.isImplicit(nodes[0])
+  )
+);
+
+/**
+ * Unpacks implicit nodes and pushes them to the front of the node list. Assumes
+ * that the first node of the given list is an implicit multiplication.
+ *
+ * @param nodes The list of nodes.
+ */
+function implicitUnpack(nodes: SemanticNode[]) {
+  const children = nodes[0].childNodes;
+  nodes.splice(0, 1, ...children);
+}
+
+/**
+ * Heuristic to extract find an integral variable as enumerator a fraction.
+ * Just changes the role to integral.
+ */
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'intvar_from_fraction',
+    integralFractionArg,
+    (node: SemanticNode) => {
+      if (node.type !== SemanticType.INTEGRAL) return false;
+      const [, integrand, intvar] = node.childNodes;
+      return (
+        intvar.type === SemanticType.EMPTY &&
+        integrand.type === SemanticType.FRACTION
+      );
+    }
+  )
+);
+
+/**
+ * If the integrand is a fraction and the integral variable is the enumerator it
+ * adjusts its role to integral an possibly rewrites it into a prefix operator.
+ *
+ * @param node The integral node.
+ */
+function integralFractionArg(node: SemanticNode): void {
+  const integrand = node.childNodes[1];
+  const enumerator = integrand.childNodes[0];
+  if (SemanticPred.isIntegralDxBoundarySingle(enumerator)) {
+    enumerator.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (!SemanticPred.isImplicit(enumerator)) return;
+  const length = enumerator.childNodes.length;
+  const first = enumerator.childNodes[length - 2];
+  const second = enumerator.childNodes[length - 1];
+  if (SemanticPred.isIntegralDxBoundarySingle(second)) {
+    second.role = SemanticRole.INTEGRAL;
+    return;
+  }
+  if (SemanticPred.isIntegralDxBoundary(first, second)) {
+    const prefix = SemanticProcessor.getInstance()['prefixNode_'](second, [
+      first
+    ]);
+    prefix.role = SemanticRole.INTEGRAL;
+    if (length === 2) {
+      integrand.childNodes[0] = prefix;
+    } else {
+      enumerator.childNodes.pop();
+      enumerator.contentNodes.pop();
+      enumerator.childNodes[length - 2] = prefix;
+      prefix.parent = enumerator;
+    }
+  }
+}
+
+/**
+ * Heuristic to rewrite semantic trees with subcases. Mainly for structure
+ * coming from empheq package.
+ */
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'rewrite_subcases',
+    rewriteSubcasesTable,
+    (table: SemanticNode) => {
+      // Here semantics would work best. But we do previews into top left and
+      // top right element. If they appear to be created by empheq and the rest
+      // column is empty we will rewrite.
+      let left = true;
+      let right = true;
+      const topLeft = table.childNodes[0].childNodes[0];
+      if (!eligibleNode(topLeft.mathmlTree)) {
+        left = false;
+      } else {
+        for (let i = 1, row; (row = table.childNodes[i]); i++) {
+          if (row.childNodes[0].childNodes.length) {
+            left = false;
+            break;
+          }
+        }
+      }
+      if (left) {
+        table.addAnnotation('Emph', 'left');
+      }
+      const topRight =
+        table.childNodes[0].childNodes[
+          table.childNodes[0].childNodes.length - 1
+        ];
+      if (!eligibleNode(topRight.mathmlTree)) {
+        right = false;
+      } else {
+        const firstRow = table.childNodes[0].childNodes.length;
+        for (let i = 1, row; (row = table.childNodes[i]); i++) {
+          if (row.childNodes.length >= firstRow) {
+            right = false;
+            break;
+          }
+        }
+      }
+      if (right) {
+        table.addAnnotation('Emph', 'right');
+      }
+      return left || right;
+    }
+  )
+);
+
+/**
+ * Checks if a node is eligible for subcase rewriting.
+ *
+ * @param node The node to test for subcases.
+ * @returns True if the node is the root of a subcases element.
+ */
+function eligibleNode(node: Element) {
+  return (
+    node.childNodes[0] &&
+    node.childNodes[0].childNodes[0] &&
+    DomUtil.tagName(node.childNodes[0] as Element) === MMLTAGS.MPADDED &&
+    DomUtil.tagName(node.childNodes[0].childNodes[0] as Element) ===
+      MMLTAGS.MPADDED &&
+    DomUtil.tagName(
+      node.childNodes[0].childNodes[
+        node.childNodes[0].childNodes.length - 1
+      ] as Element
+    ) === MMLTAGS.MPHANTOM
+  );
+}
+
+const rewritable: SemanticType[] = [
+  SemanticType.PUNCTUATED,
+  SemanticType.RELSEQ,
+  SemanticType.MULTIREL,
+  SemanticType.INFIXOP,
+  SemanticType.PREFIXOP,
+  SemanticType.POSTFIXOP
+];
+
+/**
+ * Rewrites a table structure that contains subcases generated by Empheq package
+ * output.
+ *
+ * @param table The table node.
+ * @returns The rewritten semantic node.
+ */
+function rewriteSubcasesTable(table: SemanticNode) {
+  table.addAnnotation('Emph', 'top');
+  let row: SemanticNode[] = [];
+  if (table.hasAnnotation('Emph', 'left')) {
+    const topLeft = table.childNodes[0].childNodes[0].childNodes[0];
+    const cells = rewriteCell(topLeft, true);
+    cells.forEach((x) => x.addAnnotation('Emph', 'left'));
+    row = row.concat(cells);
+    for (let i = 0, line: SemanticNode; (line = table.childNodes[i]); i++) {
+      line.childNodes.shift();
+    }
+  }
+  row.push(table);
+  if (table.hasAnnotation('Emph', 'right')) {
+    const topRight =
+      table.childNodes[0].childNodes[table.childNodes[0].childNodes.length - 1]
+        .childNodes[0];
+    const cells = rewriteCell(topRight);
+    cells.forEach((x) => x.addAnnotation('Emph', 'left'));
+    row = row.concat(cells);
+    table.childNodes[0].childNodes.pop();
+  }
+  SemanticProcessor.tableToMultiline(table);
+  const newNode = SemanticProcessor.getInstance().row(row);
+  const annotation = table.annotation['Emph'];
+  table.annotation['Emph'] = ['table'];
+  annotation.forEach((x) => newNode.addAnnotation('Emph', x));
+  return newNode;
+}
+
+/**
+ * Rewrites a single cell in subcases statement.
+ *
+ * @param cell The cell node.
+ * @param left Flag indicating if the cell has a left brace.
+ * @returns The rewritten semantic node.
+ */
+function rewriteCell(cell: SemanticNode, left?: boolean) {
+  if (!cell.childNodes.length) {
+    rewriteFence(cell);
+    return [cell];
+  }
+  let fence = null;
+  if (
+    cell.type === SemanticType.PUNCTUATED &&
+    (left
+      ? cell.role === SemanticRole.ENDPUNCT
+      : cell.role === SemanticRole.STARTPUNCT)
+  ) {
+    const children = cell.childNodes;
+    if (rewriteFence(children[left ? children.length - 1 : 0])) {
+      cell = children[left ? 0 : children.length - 1];
+      fence = children[left ? children.length - 1 : 0];
+    }
+  }
+  if (rewritable.indexOf(cell.type) !== -1) {
+    const children = cell.childNodes;
+    rewriteFence(children[left ? children.length - 1 : 0]);
+    const newNodes = SemanticSkeleton.combineContentChildren<SemanticNode>(
+      cell.type,
+      cell.role,
+      cell.contentNodes,
+      cell.childNodes
+    );
+    if (fence) {
+      if (left) {
+        newNodes.push(fence);
+      } else {
+        newNodes.unshift(fence);
+      }
+    }
+    return newNodes;
+  }
+  return fence ? (left ? [cell, fence] : [fence, cell]) : [cell];
+}
+
+const PUNCT_TO_FENCE_: { [key: string]: SemanticRole } = {
+  [SemanticRole.METRIC]: SemanticRole.METRIC,
+  [SemanticRole.VBAR]: SemanticRole.NEUTRAL,
+  [SemanticRole.OPENFENCE]: SemanticRole.OPEN,
+  [SemanticRole.CLOSEFENCE]: SemanticRole.CLOSE
+};
+
+/**
+ * Rewrites a fence node in a subcases statement.
+ *
+ * @param fence The fence node.
+ * @returns True if the node was updated.
+ */
+function rewriteFence(fence: SemanticNode): boolean {
+  if (fence.type !== SemanticType.PUNCTUATION) {
+    return false;
+  }
+  const role = PUNCT_TO_FENCE_[fence.role];
+  if (!role) {
+    return false;
+  }
+  fence.role = role;
+  fence.type = SemanticType.FENCE;
+  fence.addAnnotation('Emph', 'fence');
+  return true;
+}
+
+/**
+ *  Tries to group ellipses and long bars.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'ellipses',
+    (nodes: SemanticNode[]) => {
+      // TODO: Test for simple elements?
+      const newNodes = [];
+      let current = nodes.shift();
+      while (current) {
+        [current, nodes] = combineNodes(
+          current,
+          nodes,
+          SemanticRole.FULLSTOP,
+          SemanticRole.ELLIPSIS
+        );
+        [current, nodes] = combineNodes(current, nodes, SemanticRole.DASH);
+        newNodes.push(current);
+        current = nodes.shift();
+      }
+      return newNodes;
+    },
+    (nodes: SemanticNode[]) => nodes.length > 1
+  )
+);
+
+/**
+ * Combines a contiguous list of punctunation nodes into a single
+ * punctuation. Eg. fullstops into ellipses.
+ *
+ * @param current The current node under investigation.
+ * @param nodes The rest of the nodes, not yet checked.
+ * @param src The role to look for.
+ * @param target The role to rewrite to.
+ * @returns The list of rewritten nodes.
+ */
+function combineNodes(
+  current: SemanticNode,
+  nodes: SemanticNode[],
+  src: SemanticRole,
+  target: SemanticRole = src
+): [SemanticNode, SemanticNode[]] {
+  const collect = [];
+  while (current && current.role === src) {
+    collect.push(current);
+    current = nodes.shift();
+  }
+  if (!collect.length) {
+    return [current, nodes];
+  }
+  if (current) {
+    nodes.unshift(current);
+  }
+  return [
+    collect.length === 1 ? collect[0] : combinedNodes(collect, target),
+    nodes
+  ];
+}
+
+/**
+ * Combines a contiguous list of punctunation nodes into a single node.
+ *
+ * @param nodes The list of nodes to combine.
+ * @param role The role of the new node.
+ * @returns The new combined node.
+ */
+function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
+  const node = SemanticHeuristics.factory.makeBranchNode(
+    SemanticType.PUNCTUATION,
+    nodes,
+    []
+  );
+  node.role = role;
+  return node;
+}
+
+/**
+ * Rewrites a simple function to a prefix function if it consists of multiple
+ * letters. (Currently restricted to Braille!)
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'op_with_limits',
+    (nodes: SemanticNode[]) => {
+      const center = nodes[0];
+      center.type = SemanticType.LARGEOP;
+      center.role = SemanticRole.SUM;
+      return nodes;
+    },
+    (nodes: SemanticNode[]) => {
+      return (
+        nodes[0].type === SemanticType.OPERATOR &&
+        nodes
+          .slice(1)
+          .some(
+            (node) =>
+              node.type === SemanticType.RELSEQ ||
+              node.type === SemanticType.MULTIREL ||
+              (node.type === SemanticType.INFIXOP &&
+                node.role === SemanticRole.ELEMENT) ||
+              (node.type === SemanticType.PUNCTUATED &&
+                node.role === SemanticRole.SEQUENCE)
+          )
+      );
+    }
+  )
+);
+
+/**
+ * "Continential" Interval Heuristic:
+ * We look for two square brakets, regardless of direction, enclosing a
+ * punctuated pair.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'bracketed_interval',
+    (nodes: SemanticNode[]) => {
+      const leftFence = nodes[0];
+      const rightFence = nodes[1];
+      const content = nodes.slice(2);
+      const childNode = SemanticProcessor.getInstance().row(content);
+      const fenced = SemanticHeuristics.factory.makeBranchNode(
+        SemanticType.FENCED,
+        [childNode],
+        [leftFence, rightFence]
+      );
+      fenced.role = SemanticRole.LEFTRIGHT;
+      return fenced;
+    },
+    (nodes: SemanticNode[]) => {
+      const leftFence = nodes[0];
+      const rightFence = nodes[1];
+      const content = nodes.slice(2);
+      if (
+        !(
+          leftFence &&
+          (leftFence.textContent === ']' || leftFence.textContent === '[') &&
+          rightFence &&
+          (rightFence.textContent === ']' || rightFence.textContent === '[')
+        )
+      ) {
+        return false;
+      }
+      const partition = SemanticUtil.partitionNodes(
+        content,
+        SemanticPred.isPunctuation
+      );
+      return !!(
+        partition.rel.length === 1 &&
+        partition.comp[0].length &&
+        partition.comp[1].length
+      );
+    }
+  )
+);
+
+/**
+ *  Heuristic that tries to combine simple identifiers into composite names, in
+ *  case they are known functions.
+ */
+SemanticHeuristics.add(
+  new SemanticMmlHeuristic(
+    'function_from_identifiers',
+    (node: Element) => {
+      const expr = DomUtil.toArray(node.childNodes)
+        .map((x) => x.textContent.trim())
+        .join('');
+      const meaning = SemanticMap.Meaning.get(expr);
+      if (meaning.type === SemanticType.UNKNOWN) {
+        return node;
+      }
+      const snode = SemanticHeuristics.factory.makeLeafNode(
+        expr,
+        SemanticProcessor.getInstance().font(node.getAttribute('mathvariant'))
+      );
+      snode.mathmlTree = node;
+      return snode;
+    },
+    (node: Element) => {
+      const children = DomUtil.toArray(node.childNodes);
+      if (children.length < 2) {
+        return false;
+      }
+      return children.every(
+        (child) =>
+          DomUtil.tagName(child) === MMLTAGS.MI &&
+          SemanticMap.Meaning.get(child.textContent.trim()).role ===
+            SemanticRole.LATINLETTER
+      );
+    }
+  )
+);

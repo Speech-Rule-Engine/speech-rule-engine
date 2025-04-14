@@ -1,48 +1,45 @@
-[{"locale": "en"},
- {"category": "time",
-  "si": true,
-   "mappings": {
-     "default": {
-       "default": "second"
-     }
-   },
-   "key": "s",
-  "names": ["s"]
- },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "second"
-     }
-   },
-   "key": "″",
-  "names": ["″"]
+[
+  {
+    "locale": "en"
   },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "minute"
-     }
-   },
-   "key": "min",
-   "names": ["min", "′"]
+  {
+    "key": "s",
+    "mappings": {
+      "default": {
+        "default": "second"
+      }
+    }
   },
- {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "degree"
-     }
-   },
-  "key": "°",
-  "names": ["°"]
- },
- {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "hour"
-     }
-   },
-   "key": "h",
-   "names": ["h", "hr"]
+  {
+    "key": "″",
+    "mappings": {
+      "default": {
+        "default": "second"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "mappings": {
+      "default": {
+        "default": "minute"
+      }
+    }
+  },
+  {
+    "key": "°",
+    "mappings": {
+      "default": {
+        "default": "degree"
+      }
+    }
+  },
+  {
+    "key": "h",
+    "mappings": {
+      "default": {
+        "default": "hour"
+      }
+    }
   }
 ]

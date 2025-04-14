@@ -1,80 +1,74 @@
 [
-  {"locale": "fr"},
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "carrée"
-     }
-   },
-   "key": "sq",
-   "names": ["sq", "sq."]
+  {
+    "locale": "fr"
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "pouce carré",
-       "plural": "pouces carré"
-     }
-   },
-   "key": "sq inch",
-   "names": ["sq in", "sq. in.", "sq inch", "sq. inch"]
+  {
+    "key": "sq",
+    "mappings": {
+      "default": {
+        "default": "carrée"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "rod carré",
-       "plural": "rods carré"
-     }
-   },
-   "key": "sq rd",
-   "names": ["sq rd", "sq. rd."]
+  {
+    "key": "sq inch",
+    "mappings": {
+      "default": {
+        "default": "pouce carré",
+        "plural": "pouces carré"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "pied carré",
-       "plural": "pieds carré"
-     }
-   },
-   "key": "sq ft",
-   "names": ["sq ft", "sq. ft."]
+  {
+    "key": "sq rd",
+    "mappings": {
+      "default": {
+        "default": "rod carré",
+        "plural": "rods carré"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "verge carrée",
-       "plural": "verges carrée"
-     }
-   },
-   "key": "sq yd",
-   "names": ["sq yd", "sq. yd."]
+  {
+    "key": "sq ft",
+    "mappings": {
+      "default": {
+        "default": "pied carré",
+        "plural": "pieds carré"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "mile carré",
-       "plural": "miles carré"
-     }
-   },
-   "key": "sq mi",
-   "names": ["sq mi", "sq. mi."]
+  {
+    "key": "sq yd",
+    "mappings": {
+      "default": {
+        "default": "verge carrée",
+        "plural": "verges carrée"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "acre"
-     }
-   },
-   "key": "acr",
-   "names": ["ac", "ac.", "acr", "acr."]
+  {
+    "key": "sq mi",
+    "mappings": {
+      "default": {
+        "default": "mile carré",
+        "plural": "miles carré"
+      }
+    }
   },
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "hectare"
-     }
-   },
-   "key": "ha",
-   "names": ["ha"]
+  {
+    "key": "acr",
+    "mappings": {
+      "default": {
+        "default": "acre"
+      }
+    }
+  },
+  {
+    "key": "ha",
+    "mappings": {
+      "default": {
+        "default": "hectare"
+      }
+    }
   }
 ]

@@ -4,11 +4,6 @@
   },
   {
     "key": "cu",
-    "category": "volume",
-    "names": [
-      "cu",
-      "cu."
-    ],
     "mappings": {
       "default": {
         "plural": "cubici",
@@ -17,18 +12,13 @@
     }
   },
   {
-    "key": "cu in",
+    "key": "cu inch",
     "mappings": {
       "default": {
         "plural": "pollici cubici",
         "default": "pollice cubico"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu in",
-      "cu. in."
-    ]
+    }
   },
   {
     "key": "cu ft",
@@ -37,12 +27,7 @@
         "plural": "piedi cubici",
         "default": "piede cubico"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu ft",
-      "cu. ft."
-    ]
+    }
   },
   {
     "key": "cu yd",
@@ -51,12 +36,7 @@
         "plural": "iarde cubiche",
         "default": "iarda cubica"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cu yd",
-      "cu. yd."
-    ]
+    }
   },
   {
     "key": "bbl",
@@ -65,26 +45,16 @@
         "plural": "barili",
         "default": "barile"
       }
-    },
-    "category": "volume",
-    "names": [
-      "bbl.",
-      "bbl"
-    ]
+    }
   },
   {
-    "key": "fl oz",
+    "key": "fl. oz.",
     "mappings": {
       "default": {
         "plural": "once liquide",
         "default": "oncia liquida"
       }
-    },
-    "category": "volume",
-    "names": [
-      "fl. oz.",
-      "fl oz"
-    ]
+    }
   },
   {
     "key": "gal",
@@ -93,12 +63,7 @@
         "plural": "galloni",
         "default": "gallone"
       }
-    },
-    "category": "volume",
-    "names": [
-      "gal",
-      "gal."
-    ]
+    }
   },
   {
     "key": "pt",
@@ -107,12 +72,7 @@
         "plural": "pinte",
         "default": "pinta"
       }
-    },
-    "category": "volume",
-    "names": [
-      "pt",
-      "pt."
-    ]
+    }
   },
   {
     "key": "qt",
@@ -121,26 +81,16 @@
         "plural": "quarti",
         "default": "quarto"
       }
-    },
-    "category": "volume",
-    "names": [
-      "qt",
-      "qt."
-    ]
+    }
   },
   {
-    "key": "fl dr",
+    "key": "fluid dram",
     "mappings": {
       "default": {
         "plural": "dramme liquide",
         "default": "dramma liquida"
       }
-    },
-    "category": "volume",
-    "names": [
-      "fl dr",
-      "fl. dr."
-    ]
+    }
   },
   {
     "key": "tbsp",
@@ -149,14 +99,7 @@
         "plural": "cucchiai da tavola",
         "default": "cucchiaio da tavola"
       }
-    },
-    "category": "volume",
-    "names": [
-      "tbsp",
-      "tbsp.",
-      "Tbsp",
-      "Tbsp."
-    ]
+    }
   },
   {
     "key": "tsp",
@@ -165,34 +108,19 @@
         "plural": "cucchiai da te",
         "default": "cucchiaio da te"
       }
-    },
-    "category": "volume",
-    "names": [
-      "tsp",
-      "tsp."
-    ]
+    }
   },
   {
-    "key": "cp",
+    "key": "cup",
     "mappings": {
       "default": {
         "plural": "tazze",
         "default": "tazza"
       }
-    },
-    "category": "volume",
-    "names": [
-      "cp",
-      "cp."
-    ]
+    }
   },
   {
     "key": "cc",
-    "category": "volume",
-    "names": [
-      "cc",
-      "ccm"
-    ],
     "mappings": {
       "default": {
         "plural": "centimetri cubi",
@@ -207,11 +135,6 @@
         "plural": "litri",
         "default": "litro"
       }
-    },
-    "category": "volume",
-    "names": [
-      "l"
-    ],
-    "si": true
+    }
   }
 ]

@@ -19,30 +19,29 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import { AcssRenderer } from './acss_renderer';
-import { AudioRenderer } from './audio_renderer';
-import { AuditoryDescription } from './auditory_description';
-import { LayoutRenderer } from './layout_renderer';
-import { PunctuationRenderer } from './punctuation_renderer';
-import { SableRenderer } from './sable_renderer';
-import { Span } from './span';
-import { SsmlRenderer } from './ssml_renderer';
-import { SsmlStepRenderer } from './ssml_step_renderer';
-import { StringRenderer } from './string_renderer';
-import { XmlRenderer } from './xml_renderer';
+import { Engine } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { AcssRenderer } from './acss_renderer.js';
+import { AudioRenderer } from './audio_renderer.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { LayoutRenderer } from './layout_renderer.js';
+import { PunctuationRenderer } from './punctuation_renderer.js';
+import { SableRenderer } from './sable_renderer.js';
+import { Span } from './span.js';
+import { SsmlRenderer } from './ssml_renderer.js';
+import { CountingRenderer, StringRenderer } from './string_renderer.js';
+import { XmlRenderer } from './xml_renderer.js';
 
 const xmlInstance = new SsmlRenderer();
 const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
   [EngineConst.Markup.NONE, new StringRenderer()],
+  [EngineConst.Markup.COUNTING, new CountingRenderer()],
   [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
   [EngineConst.Markup.LAYOUT, new LayoutRenderer()],
   [EngineConst.Markup.ACSS, new AcssRenderer()],
   [EngineConst.Markup.SABLE, new SableRenderer()],
   [EngineConst.Markup.VOICEXML, xmlInstance],
-  [EngineConst.Markup.SSML, xmlInstance],
-  [EngineConst.Markup.SSML_STEP, new SsmlStepRenderer()]
+  [EngineConst.Markup.SSML, xmlInstance]
 ]);
 
 /**
@@ -51,7 +50,7 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
 export function setSeparator(sep: string) {
   const renderer = renderers.get(Engine.getInstance().markup);
   if (renderer) {
-    renderer.setSeparator(sep);
+    renderer.separator = sep;
   }
 }
 
@@ -60,7 +59,7 @@ export function setSeparator(sep: string) {
  */
 export function getSeparator() {
   const renderer = renderers.get(Engine.getInstance().markup);
-  return renderer ? renderer.getSeparator() : '';
+  return renderer ? renderer.separator : '';
 }
 
 /**
@@ -80,7 +79,7 @@ export function markup(descrs: AuditoryDescription[]) {
 export function merge(strs: (Span | string)[]) {
   // TODO (TS): Ensure that these are all spans!
   const span = strs.map((s) => {
-    return typeof s === 'string' ? new Span(s, {}) : s;
+    return typeof s === 'string' ? Span.stringEmpty(s) : s;
   });
   const renderer = renderers.get(Engine.getInstance().markup);
   if (!renderer) {

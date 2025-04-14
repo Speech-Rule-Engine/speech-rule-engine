@@ -4,11 +4,6 @@
   },
   {
     "key": "s",
-    "category": "time",
-    "names": [
-      "s"
-    ],
-    "si": true,
     "mappings": {
       "default": {
         "plural": "secondi",
@@ -23,48 +18,32 @@
         "plural": "secondi",
         "default": "secondo"
       }
-    },
-    "category": "time",
-    "names": [
-      "″"
-    ]
+    }
   },
   {
-    "key": "′",
+    "key": "min",
     "mappings": {
       "default": {
         "plural": "minuti",
         "default": "minuto"
       }
-    },
-    "category": "time",
-    "names": [
-      "min",
-      "′"
-    ]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "gradi",
-       "default": "grado"
-     }
-   },
-   "key": "°",
-   "names": ["°"]
+    }
   },
   {
-    "key": "hr",
+    "key": "°",
+    "mappings": {
+      "default": {
+        "default": "grado"
+      }
+    }
+  },
+  {
+    "key": "h",
     "mappings": {
       "default": {
         "plural": "ore",
         "default": "ora"
       }
-    },
-    "category": "time",
-    "names": [
-      "h",
-      "hr"
-    ]
+    }
   }
 ]

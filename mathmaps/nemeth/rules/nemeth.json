@@ -11,6 +11,14 @@
       "CQFresetNesting"
     ],
     [
+      "Rule",
+      "direct-speech",
+      "default",
+      "[t] @ext-speech (grammar:literal)",
+      "self::*[@ext-speech]",
+      "priority=Infinity"
+    ],
+    [
       "Precondition",
       "unknown",
       "default",
@@ -20,8 +28,7 @@
       "Precondition",
       "protected",
       "default",
-      "self::*",
-      "@role=\"protected\""
+      "self::*[@role=\"protected\"]"
     ],
     [
       "Precondition",
@@ -41,8 +48,7 @@
       "Precondition",
       "font",
       "default",
-      "self::*",
-      "@font",
+      "self::*[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\"",
       "@font!=\"fullwidth\"",
@@ -52,46 +58,43 @@
       "Precondition",
       "font-identifier-short",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
+      "self::identifier[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
+      "@role!=\"unit\"",
+      "string-length(text())=1",
       "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
-      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
-      "@role!=\"unit\""
+      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")"
     ],
     [
       "Precondition",
       "font-identifier-english",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
+      "self::identifier[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "string-length(text())=1",
+      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")"
     ],
     [
       "Precondition",
       "multi-caps-english",
       "default",
-      "self::identifier",
+      "self::identifier[@font]",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "@role!=\"unit\"",
       "string-length(text())>1",
       "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
-      "@role!=\"unit\""
+      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")"
     ],
     [
       "Precondition",
       "font-identifier",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
+      "self::identifier[@font]",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "string-length(text())=1",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\""
     ],
     [
       "Precondition",
@@ -108,7 +111,7 @@
       "number-indicator",
       "default",
       "self::number",
-      "not(@font) or @font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
       "contains(@annotation, \"nemeth:number\")",
       "not(ancestor::sqrt)",
       "not(ancestor::root)",
@@ -179,7 +182,8 @@
       "english-letter",
       "default",
       "self::identifier",
-      "@role=\"latinletter\""
+      "@role=\"latinletter\"",
+      "@font=\"italic\" or @font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\""
     ],
     [
       "Precondition",
@@ -281,14 +285,14 @@
       "Precondition",
       "factorial-space",
       "default",
-      "self::punctuation[text()=\"!\"]",
+      "self::punctuation[@role=\"exclamation\"]",
       "name(preceding-sibling::*[1])!=\"text\""
     ],
     [
       "Precondition",
       "factorial",
       "default",
-      "self::punctuation[text()=\"!\"]",
+      "self::punctuation[@role=\"exclamation\"]",
       "name(preceding-sibling::*[1])!=\"text\"",
       "not(following::*) or name(following::*)=\"punctuation\""
     ],
@@ -323,6 +327,19 @@
       "self::punctuated",
       "@role=\"prime\"",
       "count(children/*)=4"
+    ],
+    [
+      "Precondition",
+      "hyperfraction",
+      "default",
+      "self::fraction",
+      "CQFhyperFraction"
+    ],
+    [
+      "Alias",
+      "hyperfraction",
+      "self::fraction",
+      "contains(@grammar, \"hyperfraction\")"
     ],
     [
       "Precondition",
@@ -568,7 +585,8 @@
       "name(following::*[1]/../..)!=\"relseq\"",
       "name(following::*[1]/../..)!=\"multirel\"",
       "name(following::*[1])!=\"punctuation\"",
-      "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
+      "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])",
+      "not(children/*[2][@role=\"prime\"])"
     ],
     [
       "Alias",
@@ -737,6 +755,13 @@
       "self::vector"
     ],
     [
+      "Rule",
+      "binomial",
+      "default",
+      "[n] content/*[1]; [n] children/*[1]; [t] \"⠩\"; [n] children/*[2]; [n] content/*[2]",
+      "self::vector[@role=\"binomial\"]"
+    ],
+    [
       "Precondition",
       "matrix-row",
       "default",
@@ -748,12 +773,6 @@
       "default",
       "self::line",
       "@role=\"vector\""
-    ],
-    [
-      "Alias",
-      "vector-line",
-      "self::line",
-      "@role=\"binomial\""
     ],
     [
       "Precondition",
@@ -774,6 +793,14 @@
       "default",
       "self::cell",
       "count(children/*)=0"
+    ],
+    [
+      "Precondition",
+      "empty-table-cell",
+      "default",
+      "self::cell",
+      "count(children/*)=0",
+      "parent::*/parent::*/parent::*/parent::table[@role=\"cayley\"]"
     ],
     [
       "Precondition",
@@ -933,12 +960,21 @@
       "@role=\"startpunct\""
     ],
     [
-      "Precondition",
+      "Rule",
       "punctuation",
+      "default",
+      "[n] text() (annotation:punctuation, engine:style=literary)",
+      "self::punctuation",
+      "@role!=\"prime\""
+    ],
+    [
+      "Precondition",
+      "punctuation-point",
       "default",
       "self::punctuation",
       "@role=\"fullstop\"",
-      "contains(@annotation, \"nemeth:number\")"
+      "contains(@annotation, \"nemeth:number\")",
+      "following::*"
     ],
     [
       "Precondition",
@@ -950,13 +986,9 @@
       "Precondition",
       "punctuation-comma",
       "default",
-      "self::punctuation",
+      "self::punctuation[@role=\"comma\" or @role=\"semicolon\"]",
       "parent::*/parent::punctuated",
-      "following-sibling::*",
-      "@role!=\"fullstop\"",
-      "@role!=\"vbar\"",
-      "@role!=\"colon\"",
-      "@role!=\"ellipsis\""
+      "following-sibling::*"
     ],
     [
       "Precondition",
@@ -977,9 +1009,24 @@
     ],
     [
       "Precondition",
+      "punctuation-ellipsis-cell",
+      "default",
+      "self::punctuation[@role=\"ellipsis\"]",
+      "count(../*)=1",
+      "name(../..)=\"cell\" or name(../..)=\"line\""
+    ],
+    [
+      "Alias",
+      "punctuation-ellipsis-cell",
+      "self::punctuation[@role=\"ellipsis\"]",
+      "children/*"
+    ],
+    [
+      "Precondition",
       "punctuation-ellipses-both",
       "default",
       "self::punctuation[@role=\"ellipsis\"]",
+      "not(contains(@grammar, \"noellipsis\"))",
       "parent::*/parent::punctuated",
       "following-sibling::*",
       "name(preceding-sibling::*[1])!=\"punctuation\"",
@@ -990,6 +1037,8 @@
       "punctuation-ellipses-left",
       "default",
       "self::punctuation[@role=\"ellipsis\"]",
+      "not(contains(@grammar, \"noellipsis\"))",
+      "preceding-sibling::*",
       "name(preceding-sibling::*[1])!=\"punctuation\""
     ],
     [
@@ -997,8 +1046,17 @@
       "punctuation-ellipses-right",
       "default",
       "self::punctuation[@role=\"ellipsis\"]",
+      "not(contains(@grammar, \"noellipsis\"))",
       "following-sibling::*",
       "name(following-sibling::*[1])!=\"punctuation\""
+    ],
+    [
+      "Rule",
+      "long-bar",
+      "default",
+      "[t] \"⠤⠤⠤⠤\"",
+      "self::punctuation[@role=\"dash\"]",
+      "children/*"
     ],
     [
       "Precondition",
@@ -1018,11 +1076,57 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
+      "Rule",
+      "space",
+      "default",
+      "[t] \"⠀\"",
+      "self::text[@role=\"space\"]"
+    ],
+    [
       "Generator",
       "CGFtensorRules"
+    ],
+    [
+      "Rule",
+      "unit",
+      "default",
+      "[n] text() (engine:style=literary)",
+      "self::identifier[@role=\"unit\"]"
+    ],
+    [
+      "Rule",
+      "question-underscore",
+      "default",
+      "[t] \"⠿\"",
+      "self::underscore[@role=\"question\"]"
+    ],
+    [
+      "Rule",
+      "question-rel",
+      "default",
+      "[t] \"⠀⠿⠀\"",
+      "self::punctuation[@role=\"question\"]",
+      "following-sibling::infixop or preceding-sibling::infixop"
+    ],
+    [
+      "Rule",
+      "relation",
+      "default",
+      "[m] CQFspaceoutNumber (separator:\"⠐\")",
+      "self::relation",
+      "string-length(text())>1"
+    ],
+    [
+      "Rule",
+      "operator",
+      "default",
+      "[m] CQFspaceoutNumber (separator:\"⠐\")",
+      "self::operator",
+      "string-length(text())>1"
     ]
   ],
   "annotators": [
-    "number"
+    "number",
+    "depth"
   ]
 }

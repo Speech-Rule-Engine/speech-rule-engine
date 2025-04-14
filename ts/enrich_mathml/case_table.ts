@@ -18,13 +18,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import * as DomUtil from '../common/dom_util.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { setAttributes } from './enrich_attr.js';
 
 export class CaseTable extends AbstractEnrichCase {
   /**
@@ -78,14 +79,18 @@ export class CaseTable extends AbstractEnrichCase {
         [lfence].concat(this.inner, [rfence]),
         this.semantic
       );
-    } else if (DomUtil.tagName(this.mml) === 'MFENCED') {
+    } else if (DomUtil.tagName(this.mml) === MMLTAGS.MFENCED) {
       const children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);
-      rfence && this.mml.appendChild(rfence);
+      if (rfence) {
+        this.mml.appendChild(rfence);
+      }
       this.mml = EnrichMathml.rewriteMfenced(this.mml);
     } else {
       const newChildren = [lfence, this.mml];
-      rfence && newChildren.push(rfence);
+      if (rfence) {
+        newChildren.push(rfence);
+      }
       this.mml = EnrichMathml.introduceNewLayer(newChildren, this.semantic);
     }
     setAttributes(this.mml, this.semantic);

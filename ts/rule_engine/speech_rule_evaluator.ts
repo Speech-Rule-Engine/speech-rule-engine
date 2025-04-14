@@ -22,7 +22,7 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description.js';
 
 export interface SpeechRuleEvaluator {
   /**
@@ -60,7 +60,7 @@ export interface SpeechRuleEvaluator {
   /**
    * Default evaluation of a character.
    *
-   * @param chr The character.
+   * @param str The character.
    * @returns The resulting description.
    */
   evaluateCharacter(str: string): AuditoryDescription;

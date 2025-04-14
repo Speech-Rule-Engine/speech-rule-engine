@@ -8,8 +8,7 @@
       "default": {
         "default": "símbol beta"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "03D7",
@@ -17,8 +16,7 @@
       "default": {
         "default": "símbol kai grec"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "key": "03F6",
@@ -26,11 +24,9 @@
       "default": {
         "default": "èpsilon invertit"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Lu",
     "key": "1D7CA",
     "mappings": {
       "default": {
@@ -39,7 +35,6 @@
     }
   },
   {
-    "category": "Ll",
     "key": "1D7CB",
     "mappings": {
       "default": {

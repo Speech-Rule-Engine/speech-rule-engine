@@ -20,7 +20,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AbstractHighlighter, Highlight } from './abstract_highlighter';
+import { AbstractHighlighter, Highlight } from './abstract_highlighter.js';
 
 export class MmlHighlighter extends AbstractHighlighter {
   /**

@@ -12,8 +12,7 @@
         "Exponent_Exponent": "mit Exponent 2",
         "Exponent_OrdinalPower": "zur zweiten Potenz"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00B3",
@@ -25,8 +24,7 @@
         "Exponent_Exponent": "mit Exponent 3",
         "Exponent_OrdinalPower": "zur dritten Potenz"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BC",
@@ -34,8 +32,7 @@
       "default": {
         "default": "ein Viertel"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BD",
@@ -43,8 +40,7 @@
       "default": {
         "default": "ein Halb"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BE",
@@ -52,11 +48,9 @@
       "default": {
         "default": "drei Viertel"
       }
-    },
-    "category": "No"
+    }
   },
   {
-    "category": "No",
     "key": "2150",
     "mappings": {
       "default": {
@@ -65,7 +59,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2151",
     "mappings": {
       "default": {
@@ -74,7 +67,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2152",
     "mappings": {
       "default": {
@@ -83,7 +75,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2153",
     "mappings": {
       "default": {
@@ -92,7 +83,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2154",
     "mappings": {
       "default": {
@@ -101,7 +91,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2155",
     "mappings": {
       "default": {
@@ -110,7 +99,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2156",
     "mappings": {
       "default": {
@@ -119,7 +107,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2157",
     "mappings": {
       "default": {
@@ -128,7 +115,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2158",
     "mappings": {
       "default": {
@@ -137,7 +123,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2159",
     "mappings": {
       "default": {
@@ -146,7 +131,6 @@
     }
   },
   {
-    "category": "No",
     "key": "215A",
     "mappings": {
       "default": {
@@ -155,7 +139,6 @@
     }
   },
   {
-    "category": "No",
     "key": "215B",
     "mappings": {
       "default": {
@@ -164,7 +147,6 @@
     }
   },
   {
-    "category": "No",
     "key": "215C",
     "mappings": {
       "default": {
@@ -173,7 +155,6 @@
     }
   },
   {
-    "category": "No",
     "key": "215D",
     "mappings": {
       "default": {
@@ -182,7 +163,6 @@
     }
   },
   {
-    "category": "No",
     "key": "215E",
     "mappings": {
       "default": {
@@ -191,7 +171,6 @@
     }
   },
   {
-    "category": "No",
     "key": "215F",
     "mappings": {
       "default": {
@@ -200,7 +179,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2189",
     "mappings": {
       "default": {
@@ -209,7 +187,6 @@
     }
   },
   {
-    "category": "No",
     "key": "3248",
     "mappings": {
       "default": {
@@ -218,7 +195,6 @@
     }
   },
   {
-    "category": "No",
     "key": "3249",
     "mappings": {
       "default": {
@@ -227,7 +203,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324A",
     "mappings": {
       "default": {
@@ -236,7 +211,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324B",
     "mappings": {
       "default": {
@@ -245,7 +219,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324C",
     "mappings": {
       "default": {
@@ -254,7 +227,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324D",
     "mappings": {
       "default": {
@@ -263,7 +235,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324E",
     "mappings": {
       "default": {
@@ -272,7 +243,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324F",
     "mappings": {
       "default": {

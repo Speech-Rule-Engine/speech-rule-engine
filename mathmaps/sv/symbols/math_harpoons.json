@@ -8,8 +8,7 @@
       "default": {
         "default": "vänster harpoon up"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BD",
@@ -17,8 +16,7 @@
       "default": {
         "default": "vänster harpoon ner"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BE",
@@ -26,8 +24,7 @@
       "default": {
         "default": "up harpoon höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21BF",
@@ -35,8 +32,7 @@
       "default": {
         "default": "up harpoon vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C0",
@@ -44,8 +40,7 @@
       "default": {
         "default": "höger harpoon up"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C1",
@@ -53,8 +48,7 @@
       "default": {
         "default": "höger harpoon ner"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C2",
@@ -62,8 +56,7 @@
       "default": {
         "default": "ner harpoon höger"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21C3",
@@ -71,8 +64,7 @@
       "default": {
         "default": "ner harpoon vänster"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CB",
@@ -80,8 +72,7 @@
       "default": {
         "default": "vänster harpoon over höger harpoon"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "21CC",
@@ -89,8 +80,7 @@
       "default": {
         "default": "höger harpoon over vänster harpoon"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "key": "294A",
@@ -98,8 +88,7 @@
       "default": {
         "default": "vänster barb up höger barb ner harpoon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294B",
@@ -107,24 +96,21 @@
       "default": {
         "default": "vänster barb ner höger barb up harpoon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
-    "category": "Sm",
     "key": "294C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tagg uppåt höger tagg neråt vänster harpun"
       }
     }
   },
   {
-    "category": "Sm",
     "key": "294D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tagg uppåt vänster tagg neråt höger harpun"
       }
     }
   },
@@ -134,8 +120,7 @@
       "default": {
         "default": "vänster barb up höger barb up harpoon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "294F",
@@ -143,8 +128,7 @@
       "default": {
         "default": "up ner harpoon höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2950",
@@ -152,8 +136,7 @@
       "default": {
         "default": "vänster barb ner höger barb ner harpoon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2951",
@@ -161,8 +144,7 @@
       "default": {
         "default": "up ner harpoon vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2952",
@@ -170,8 +152,7 @@
       "default": {
         "default": "leftwards harpoon to bar med barb upwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2953",
@@ -179,8 +160,7 @@
       "default": {
         "default": "rightwards harpoon to bar med barb upwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2954",
@@ -188,8 +168,7 @@
       "default": {
         "default": "upwards harpoon to bar med barb rightwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2955",
@@ -197,8 +176,7 @@
       "default": {
         "default": "downwards harpoon to bar med barb rightwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2956",
@@ -206,8 +184,7 @@
       "default": {
         "default": "leftwards harpoon to bar med barb downwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2957",
@@ -215,8 +192,7 @@
       "default": {
         "default": "rightwards harpoon to bar med barb downwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2958",
@@ -224,8 +200,7 @@
       "default": {
         "default": "upwards harpoon to bar med barb leftwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2959",
@@ -233,8 +208,7 @@
       "default": {
         "default": "downwards harpoon to bar med barb leftwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295A",
@@ -242,8 +216,7 @@
       "default": {
         "default": "leftwards harpoon from bar med barb upwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295B",
@@ -251,8 +224,7 @@
       "default": {
         "default": "rightwards harpoon from bar med barb upwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295C",
@@ -260,8 +232,7 @@
       "default": {
         "default": "upwards harpoon from bar med barb rightwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295D",
@@ -269,8 +240,7 @@
       "default": {
         "default": "downwards harpoon from bar med barb rightwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295E",
@@ -278,8 +248,7 @@
       "default": {
         "default": "leftwards harpoon from bar med barb downwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "295F",
@@ -287,8 +256,7 @@
       "default": {
         "default": "rightwards harpoon from bar med barb downwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2960",
@@ -296,8 +264,7 @@
       "default": {
         "default": "upwards harpoon from bar med barb leftwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2961",
@@ -305,8 +272,7 @@
       "default": {
         "default": "downwards harpoon from bar med barb leftwards"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2962",
@@ -314,8 +280,7 @@
       "default": {
         "default": "leftwards harpoon med barb up above leftwards harpoon med barb ner"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2963",
@@ -323,8 +288,7 @@
       "default": {
         "default": "upwards harpoon med barb vänster beside upwards harpoon med barb höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2964",
@@ -332,8 +296,7 @@
       "default": {
         "default": "rightwards harpoon med barb up above rightwards harpoon med barb ner"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2965",
@@ -341,8 +304,7 @@
       "default": {
         "default": "downwards harpoon med barb vänster beside downwards harpoon med barb höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2966",
@@ -350,8 +312,7 @@
       "default": {
         "default": "leftwards harpoon med barb up above rightwards harpoon med barb up"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2967",
@@ -359,8 +320,7 @@
       "default": {
         "default": "leftwards harpoon med barb ner above rightwards harpoon med barb ner"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2968",
@@ -368,8 +328,7 @@
       "default": {
         "default": "rightwards harpoon med barb up above leftwards harpoon med barb up"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "2969",
@@ -377,8 +336,7 @@
       "default": {
         "default": "rightwards harpoon med barb ner above leftwards harpoon med barb ner"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296A",
@@ -386,8 +344,7 @@
       "default": {
         "default": "leftwards harpoon over bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296B",
@@ -395,8 +352,7 @@
       "default": {
         "default": "leftwards harpoon under bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296C",
@@ -404,8 +360,7 @@
       "default": {
         "default": "rightwards harpoon over bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296D",
@@ -413,8 +368,7 @@
       "default": {
         "default": "rightwards harpoon under bar"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296E",
@@ -422,8 +376,7 @@
       "default": {
         "default": "upwards harpoon to the vänster of downwards harpoon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "296F",
@@ -431,8 +384,7 @@
       "default": {
         "default": "upwards harpoon to the höger of downwards harpoon"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297C",
@@ -440,8 +392,7 @@
       "default": {
         "default": "fiskstjärt åt vänster"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297D",
@@ -449,8 +400,7 @@
       "default": {
         "default": "fiskstjärt åt höger"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297E",
@@ -458,8 +408,7 @@
       "default": {
         "default": "vertical bar med dubbel krok"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "key": "297F",
@@ -467,7 +416,6 @@
       "default": {
         "default": "fiskstjärt neråt"
       }
-    },
-    "category": "Sm"
+    }
   }
 ]

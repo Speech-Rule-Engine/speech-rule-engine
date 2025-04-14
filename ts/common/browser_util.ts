@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import SystemExternal from './system_external';
-import { xpath } from './xpath_util';
+import { SystemExternal } from './system_external.js';
+import { xpath } from './xpath_util.js';
 
 /**
  * Predicate to check for MS Internet Explorer but not Edge.
@@ -34,8 +34,8 @@ export function detectIE(): boolean {
   if (!isIE) {
     return false;
   }
-  loadMapsForIE_();
-  loadWGXpath_();
+  loadMapsForIE();
+  loadWGXpath();
   return true;
 }
 
@@ -55,7 +55,7 @@ export function detectEdge(): boolean {
     return false;
   }
   document.evaluate = null;
-  loadWGXpath_(true);
+  loadWGXpath(true);
   return true;
 }
 
@@ -69,9 +69,9 @@ export const mapsForIE: { [key: string]: any } = null;
  *
  * @param opt_isEdge Optional boolean if browser is Edge.
  */
-export function loadWGXpath_(opt_isEdge?: boolean) {
+function loadWGXpath(opt_isEdge?: boolean) {
   loadScript(SystemExternal.WGXpath);
-  installWGXpath_(opt_isEdge);
+  installWGXpath(opt_isEdge);
 }
 
 declare let wgxpath: any;
@@ -82,12 +82,12 @@ declare let wgxpath: any;
  * @param opt_isEdge Optional boolean if browser is Edge.
  * @param opt_count Optional counter argument for callback.
  */
-export function installWGXpath_(opt_isEdge?: boolean, opt_count?: number) {
+function installWGXpath(opt_isEdge?: boolean, opt_count?: number) {
   let count = opt_count || 1;
   // TODO (TS): Rewrite as promise
   if (typeof wgxpath === 'undefined' && count < 10) {
     setTimeout(function () {
-      installWGXpath_(opt_isEdge, count++);
+      installWGXpath(opt_isEdge, count++);
     }, 200);
     return;
   }
@@ -106,7 +106,7 @@ export function installWGXpath_(opt_isEdge?: boolean, opt_count?: number) {
 /**
  * Loads all JSON mappings for IE using a script tag.
  */
-export function loadMapsForIE_() {
+function loadMapsForIE() {
   loadScript(SystemExternal.mathmapsIePath);
 }
 
@@ -115,7 +115,7 @@ export function loadMapsForIE_() {
  *
  * @param src The source of the script to load.
  */
-export function loadScript(src: string) {
+function loadScript(src: string) {
   const scr = SystemExternal.document.createElement('script');
   scr.type = 'text/javascript';
   scr.src = src;

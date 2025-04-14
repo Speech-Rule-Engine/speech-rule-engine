@@ -8,8 +8,7 @@
       "default": {
         "default": "apice 2"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00B3",
@@ -17,8 +16,7 @@
       "default": {
         "default": "apice 3"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BC",
@@ -26,8 +24,7 @@
       "default": {
         "default": "un quarto"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BD",
@@ -35,8 +32,7 @@
       "default": {
         "default": "un mezzo"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "00BE",
@@ -44,11 +40,9 @@
       "default": {
         "default": "tre quarti"
       }
-    },
-    "category": "No"
+    }
   },
   {
-    "category": "No",
     "key": "2150",
     "mappings": {
       "default": {
@@ -57,7 +51,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2151",
     "mappings": {
       "default": {
@@ -66,7 +59,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2152",
     "mappings": {
       "default": {
@@ -80,8 +72,7 @@
       "default": {
         "default": "un terzo"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2154",
@@ -89,8 +80,7 @@
       "default": {
         "default": "due terzi"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2155",
@@ -98,8 +88,7 @@
       "default": {
         "default": "un quinto"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2156",
@@ -107,8 +96,7 @@
       "default": {
         "default": "due quinti"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2157",
@@ -116,8 +104,7 @@
       "default": {
         "default": "tre quinti"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2158",
@@ -125,8 +112,7 @@
       "default": {
         "default": "quattro quinti"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "2159",
@@ -134,8 +120,7 @@
       "default": {
         "default": "un sesto"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215A",
@@ -143,8 +128,7 @@
       "default": {
         "default": "cinque sesti"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215B",
@@ -152,8 +136,7 @@
       "default": {
         "default": "un ottavo"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215C",
@@ -161,8 +144,7 @@
       "default": {
         "default": "tre ottavi"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215D",
@@ -170,8 +152,7 @@
       "default": {
         "default": "cinque ottavi"
       }
-    },
-    "category": "No"
+    }
   },
   {
     "key": "215E",
@@ -179,11 +160,9 @@
       "default": {
         "default": "sette ottavi"
       }
-    },
-    "category": "No"
+    }
   },
   {
-    "category": "No",
     "key": "215F",
     "mappings": {
       "default": {
@@ -192,7 +171,6 @@
     }
   },
   {
-    "category": "No",
     "key": "2189",
     "mappings": {
       "default": {
@@ -201,7 +179,6 @@
     }
   },
   {
-    "category": "No",
     "key": "3248",
     "mappings": {
       "default": {
@@ -210,7 +187,6 @@
     }
   },
   {
-    "category": "No",
     "key": "3249",
     "mappings": {
       "default": {
@@ -219,7 +195,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324A",
     "mappings": {
       "default": {
@@ -228,7 +203,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324B",
     "mappings": {
       "default": {
@@ -237,7 +211,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324C",
     "mappings": {
       "default": {
@@ -246,7 +219,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324D",
     "mappings": {
       "default": {
@@ -255,7 +227,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324E",
     "mappings": {
       "default": {
@@ -264,7 +235,6 @@
     }
   },
   {
-    "category": "No",
     "key": "324F",
     "mappings": {
       "default": {

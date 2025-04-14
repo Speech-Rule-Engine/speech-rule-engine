@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -145,11 +145,9 @@ function numericOrdinal(num: number): string {
   }
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.numericOrdinal = numericOrdinal;
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToOrdinal;
-
-export default NUMBERS;
-// TODO: For simple speech output this should be different.
+export const NUMBERS: Numbers = NUMB({
+  wordOrdinal: wordOrdinal,
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});

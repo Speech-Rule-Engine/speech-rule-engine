@@ -23,9 +23,9 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { createLocale, Locale } from '../locale';
-import NUMBERS from '../numbers/numbers_nemeth';
-import { identityTransformer } from '../transformers';
+import { createLocale, Locale } from '../locale.js';
+import { NUMBERS } from '../numbers/numbers_nemeth.js';
+import { identityTransformer } from '../transformers.js';
 
 /**
  * Removes English indicator from a simple letter.
@@ -112,10 +112,10 @@ function create(): Locale {
 
   loc.FUNCTIONS.fracNestDepth = (_node) => false;
   loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font);
-  (loc.FUNCTIONS.si = identityTransformer),
-    (loc.ALPHABETS.combiner = (letter, font, num) => {
-      return font ? font + num + letter : simpleEnglish(letter);
-    });
+  loc.FUNCTIONS.si = identityTransformer;
+  loc.ALPHABETS.combiner = (letter, font, num) => {
+    return font ? font + num + letter : simpleEnglish(letter);
+  };
   loc.ALPHABETS.digitTrans = { default: NUMBERS.numberToWords };
 
   return loc;

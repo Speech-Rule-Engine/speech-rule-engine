@@ -1,0 +1,77 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "sq",
+    "mappings": {
+      "default": {
+        "default": "s",
+        "plural": "kvadrat"
+      }
+    }
+  },
+  {
+    "key": "sq inch",
+    "mappings": {
+      "default": {
+        "default": "kvadrattomme",
+        "plural": "kvadrattommer"
+      }
+    }
+  },
+  {
+    "key": "sq rd",
+    "mappings": {
+      "default": {
+        "default": "s",
+        "plural": "kvadratrødder"
+      }
+    }
+  },
+  {
+    "key": "sq ft",
+    "mappings": {
+      "default": {
+        "default": "kvadrat fod",
+        "plural": "kvadratfod"
+      }
+    }
+  },
+  {
+    "key": "sq yd",
+    "mappings": {
+      "default": {
+        "default": "kvadrat yard",
+        "plural": "kvadratyard"
+      }
+    }
+  },
+  {
+    "key": "sq mi",
+    "mappings": {
+      "default": {
+        "default": "kvadrat mil",
+        "plural": "kvadratmil"
+      }
+    }
+  },
+  {
+    "key": "acr",
+    "mappings": {
+      "default": {
+        "default": "acre",
+        "plural": "acres"
+      }
+    }
+  },
+  {
+    "key": "ha",
+    "mappings": {
+      "default": {
+        "default": "s",
+        "plural": "hektarer"
+      }
+    }
+  }
+]

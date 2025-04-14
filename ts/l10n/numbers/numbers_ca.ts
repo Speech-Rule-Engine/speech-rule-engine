@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Grammar } from '../../rule_engine/grammar';
-import { Numbers, NUMBERS as NUMB } from '../messages';
+import { Grammar } from '../../rule_engine/grammar.js';
+import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
 //
 // This work was sponsored by
@@ -144,9 +144,8 @@ function numericOrdinal(num: number): string {
   return num.toString() + (gender === 'f' ? 'a' : 'n');
 }
 
-const NUMBERS: Numbers = NUMB();
-NUMBERS.numericOrdinal = numericOrdinal;
-NUMBERS.numberToWords = numberToWords;
-NUMBERS.numberToOrdinal = numberToOrdinal;
-
-export default NUMBERS;
+export const NUMBERS: Numbers = NUMB({
+  numericOrdinal: numericOrdinal,
+  numberToWords: numberToWords,
+  numberToOrdinal: numberToOrdinal
+});

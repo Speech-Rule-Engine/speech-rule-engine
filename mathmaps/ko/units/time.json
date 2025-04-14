@@ -1,0 +1,48 @@
+[{"locale": "ko"},
+  {"category": "time",
+   "si": true,
+    "mappings": {
+      "default": {
+        "default": "초"
+      }
+    },
+    "key": "s",
+   "names": ["s", "second", "seconds"]
+  },
+   {"category": "time",
+    "mappings": {
+      "default": {
+        "default": "초"
+      }
+    },
+    "key": "″",
+   "names": ["″", "second", "seconds"]
+   },
+   {"category": "time",
+    "mappings": {
+      "default": {
+        "default": "분"
+      }
+    },
+    "key": "min",
+    "names": ["min", "′", "minute", "minutes"]
+   },
+  {"category": "time",
+    "mappings": {
+      "default": {
+        "default": "도"
+      }
+    },
+   "key": "°",
+   "names": ["°", "degree", "degrees"]
+  },
+  {"category": "time",
+    "mappings": {
+      "default": {
+        "default": "시간"
+      }
+    },
+    "key": "h",
+    "names": ["h", "hr", "hour", "hours"]
+   }
+ ]

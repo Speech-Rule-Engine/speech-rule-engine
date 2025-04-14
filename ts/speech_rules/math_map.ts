@@ -21,18 +21,19 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as BrowserUtil from '../common/browser_util';
-import Engine, { EnginePromise } from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import * as FileUtil from '../common/file_util';
-import SystemExternal from '../common/system_external';
-import { RulesJson } from '../rule_engine/base_rule_store';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import * as BrowserUtil from '../common/browser_util.js';
+import { Engine, EnginePromise } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import * as FileUtil from '../common/file_util.js';
+import { SystemExternal } from '../common/system_external.js';
+import { RulesJson } from '../rule_engine/base_rule_store.js';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
 
-import { completeLocale } from '../l10n/l10n';
-import * as AlphabetGenerator from './alphabet_generator';
+import { completeLocale } from '../l10n/l10n.js';
+import * as AlphabetGenerator from './alphabet_generator.js';
 
 declare type MathMapType = UnicodeJson[] | [SiJson] | RulesJson;
 
@@ -43,7 +44,7 @@ interface MathMapJson {
 /**
  * The compund store for symbol and function mappings.
  */
-export const store = MathCompoundStore;
+// const store = MathCompoundStore;
 
 /**
  * Methods for parsing json structures.
@@ -52,23 +53,41 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
   functions: MathCompoundStore.addFunctionRules,
   symbols: MathCompoundStore.addSymbolRules,
   units: MathCompoundStore.addUnitRules,
-  si: MathCompoundStore.setSiPrefixes
+  si: (x: [SiJson]) => x.forEach(MathCompoundStore.setSiPrefixes),
+  messages: completeLocale,
+  rules: SpeechRuleEngine.addStore,
+  characters: MathCompoundStore.addCharacterRules
 };
 
 let _init = false;
 
 /**
- * Init method for the mathmaps. Loads the base locale when called for the
- * first time.
+ * Loads a new locale if necessary. Initialises mathmaps if necessary, by
+ * loading the base locale when called for the first time.
  *
- * @returns Promise that resolves once base is loaded.
+ * @param locale The locale to be loaded. Defaults to current locale of the
+ *     engine.
+ * @returns Promise that resolves once locale is loaded.
  */
-export function init() {
+export async function loadLocale(locale = Engine.getInstance().locale) {
   if (!_init) {
-    loadLocale('base');
+    // Generate base alphabet information.
+    AlphabetGenerator.generateBase();
+    _loadLocale(DynamicCstr.BASE_LOCALE);
     _init = true;
   }
-  return EnginePromise.promises['base'];
+  return EnginePromise.promises[DynamicCstr.BASE_LOCALE].then(async () => {
+    const defLoc = Engine.getInstance().defaultLocale;
+    if (defLoc) {
+      _loadLocale(defLoc);
+      return EnginePromise.promises[defLoc].then(async () => {
+        _loadLocale(locale);
+        return EnginePromise.promises[locale];
+      });
+    }
+    _loadLocale(locale);
+    return EnginePromise.promises[locale];
+  });
 }
 
 /**
@@ -77,9 +96,10 @@ export function init() {
  * @param locale The locale to be loaded. Defaults to current locale of the
  *     engine.
  */
-export function loadLocale(locale = Engine.getInstance().locale) {
+function _loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
+    MathCompoundStore.reset();
     retrieveMaps(locale);
   }
 }
@@ -92,10 +112,17 @@ export function loadLocale(locale = Engine.getInstance().locale) {
  *     provided it is returned instead.
  */
 function loadMethod() {
-  // TODO: Custom loader here.
   if (Engine.getInstance().customLoader) {
     return Engine.getInstance().customLoader;
   }
+  return standardLoader();
+}
+
+/**
+ * @returns The standard load method for the given mode. This is exported as
+ * fall back method.
+ */
+export function standardLoader() {
   switch (Engine.getInstance().mode) {
     case EngineConst.Mode.ASYNC:
       return loadFile;
@@ -112,7 +139,7 @@ function loadMethod() {
  *
  * @param locale The target locale.
  */
-export function retrieveFiles(locale: string) {
+function retrieveFiles(locale: string) {
   const loader = loadMethod();
   const promise = new Promise<string>((res) => {
     const inner = loader(locale);
@@ -125,7 +152,7 @@ export function retrieveFiles(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().locale = 'en';
+        Engine.getInstance().locale = Engine.getInstance().defaultLocale;
         res(locale);
       }
     );
@@ -138,8 +165,11 @@ export function retrieveFiles(locale: string) {
  *
  * @param json The json mappings string.
  */
-export function parseMaps(json: string) {
-  const js = JSON.parse(json) as { [key: string]: any[] };
+function parseMaps(json: string | MathMapJson) {
+  const js =
+    typeof json === 'string'
+      ? (JSON.parse(json) as { [key: string]: any[] })
+      : json;
   addMaps(js);
 }
 
@@ -157,17 +187,11 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
     if (opt_locale && opt_locale !== info[0]) {
       continue;
     }
-    if (info[1] === 'rules') {
-      SpeechRuleEngine.getInstance().addStore(json[key] as RulesJson);
-    } else if (info[1] === 'messages') {
-      completeLocale(json[key]);
-    } else {
-      if (generate) {
-        AlphabetGenerator.generate(info[0]);
-        generate = false;
-      }
-      (json[key] as UnicodeJson[] | [SiJson]).forEach(addSymbols[info[1]]);
+    if (generate && info[1] === 'symbols' && info[0] !== 'base') {
+      AlphabetGenerator.generate(info[0]);
+      generate = false;
     }
+    addSymbols[info[1]](json[key]);
   }
 }
 
@@ -210,7 +234,7 @@ function getJsonIE_(locale: string, opt_count?: number) {
  * @param locale The locale to be loaded.
  * @returns A promise the resolves to the JSON string.
  */
-export function loadFile(locale: string): Promise<string> {
+function loadFile(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
   return new Promise((res, rej) => {
     SystemExternal.fs.readFile(file, 'utf8', (err: Error, json: string) => {
@@ -228,7 +252,7 @@ export function loadFile(locale: string): Promise<string> {
  * @param locale The locale to retrieve.
  * @returns A string representing a JSON array.
  */
-export function loadFileSync(locale: string): Promise<string> {
+function loadFileSync(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
   return new Promise((res, rej) => {
     let str = '{}';
@@ -247,7 +271,7 @@ export function loadFileSync(locale: string): Promise<string> {
  * @param locale The locale to retrieve.
  * @returns A promise the resolves to the JSON string.
  */
-export function loadAjax(locale: string): Promise<string> {
+function loadAjax(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
   const httpRequest = new XMLHttpRequest();
   return new Promise((res, rej) => {

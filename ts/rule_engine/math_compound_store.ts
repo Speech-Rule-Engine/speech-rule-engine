@@ -21,17 +21,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import Engine from '../common/engine';
-import { locales } from '../l10n/l10n';
+import { Engine } from '../common/engine.js';
+import { locales } from '../l10n/l10n.js';
+import { addFunctionSemantic } from '../semantic_tree/semantic_attr.js';
 import {
+  BaseJson,
   MathSimpleStore,
   SiJson,
   MappingsJson,
   SimpleRule,
   UnicodeJson
-} from './math_simple_store';
-import { Axis, DynamicCstr } from './dynamic_cstr';
+} from './math_simple_store.js';
+import { Axis, DynamicCstr } from './dynamic_cstr.js';
 
 /**
  * The locale for the store.
@@ -42,6 +43,22 @@ let locale: string = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
  * The modality of the store.
  */
 let modality: string = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
+
+/**
+ * Changes the internal locale for the rule definitions if the given JSON
+ * element is a locale instruction.
+ *
+ * @param json JSON object of a speech rules.
+ * @returns True if the locale was changed.
+ */
+export function changeLocale(json: UnicodeJson): boolean {
+  if (!json['locale'] && !json['modality']) {
+    return false;
+  }
+  locale = json['locale'] || locale;
+  modality = json['modality'] || modality;
+  return true;
+}
 
 /**
  * An association list of SI prefixes.
@@ -58,61 +75,101 @@ export function setSiPrefixes(prefixes: SiJson) {
 }
 
 /**
- * A set of efficient substores.
+ * A map of efficient substores.
  */
-const subStores_: { [key: string]: MathSimpleStore } = {};
+export const subStores: Map<string, MathSimpleStore> = new Map();
+
+/**
+ * A map to hold elements symbols have in common across all locales.
+ */
+export const baseStores: Map<string, BaseJson> = new Map();
+
+/**
+ * Retrieves a substore for a key. Creates a new one if it does not exist.
+ *
+ * @param base The key for the base store.
+ * @param key The key for the store.
+ * @returns The rule store.
+ */
+function getSubStore(base: string, key: string): MathSimpleStore {
+  let store = subStores.get(key);
+  if (store) {
+    return store;
+  }
+  store = new MathSimpleStore();
+  store.base = baseStores.get(base);
+  subStores.set(key, store);
+  return store;
+}
+
+/**
+ * Completes a JSON representation of a rule with the information held in its
+ * corresponding base structure.
+ *
+ * @param json Structure for unicode information.
+ */
+function completeWithBase(json: UnicodeJson) {
+  const base = baseStores.get(json.key);
+  if (!base) {
+    return;
+  }
+  const names = json.names;
+  Object.assign(json, base);
+  if (names && base.names) {
+    json.names = json.names.concat(names);
+  }
+}
 
 /**
  * Function creates a rule store in the compound store for a particular
  * string, and populates it with a set of rules.
  *
- * @param name Name of the rule.
+ * @param base The key for the base store.
  * @param str String used as key to refer to the rule store
  * precondition and constr
- * @param cat The category if it exists.
  * @param mappings JSON representation of mappings from styles and
  *     domains to strings, from which the speech rules will be computed.
  */
-export function defineRules(
-  name: string,
-  str: string,
-  cat: string,
-  mappings: MappingsJson
-) {
-  const store = getSubStore_(str);
-  setupStore_(store, cat);
-  store.defineRulesFromMappings(name, locale, modality, str, mappings);
+export function defineRules(base: string, str: string, mappings: MappingsJson) {
+  const store = getSubStore(base, str);
+  store.defineRulesFromMappings(locale, modality, mappings);
 }
 
 /**
  * Creates a single rule from strings.
  *
- * @param name Name of the rule.
  * @param domain The domain axis.
  * @param style The style axis.
- * @param cat The category if it exists.
  * @param str String for precondition and constraints.
  * @param content The content for the postcondition.
  */
 export function defineRule(
-  name: string,
   domain: string,
   style: string,
-  cat: string,
   str: string,
   content: string
 ) {
-  const store = getSubStore_(str);
-  setupStore_(store, cat);
-  store.defineRuleFromStrings(
-    name,
-    locale,
-    modality,
-    domain,
-    style,
-    str,
-    content
-  );
+  const store = getSubStore(str, str);
+  store.defineRuleFromStrings(locale, modality, domain, style, content);
+}
+
+/**
+ * Makes speech rules for Unicode characters from their JSON representation.
+ *
+ * @param json JSON object of the speech rules.
+ */
+export function addSymbolRules(json: UnicodeJson[]) {
+  for (const rule of json) {
+    if (changeLocale(rule)) {
+      continue;
+    }
+    const key = MathSimpleStore.parseUnicode(rule['key']);
+    if (locale === 'base') {
+      baseStores.set(key, rule);
+      continue;
+    }
+    defineRules(key, key, rule['mappings']);
+  }
 }
 
 /**
@@ -120,45 +177,74 @@ export function defineRule(
  *
  * @param json JSON object of the speech rules.
  */
-export function addSymbolRules(json: UnicodeJson) {
-  if (changeLocale_(json)) {
+function addCharacterRule(json: UnicodeJson) {
+  if (changeLocale(json)) {
     return;
   }
-  const key = MathSimpleStore.parseUnicode(json['key']);
-  defineRules(json['key'], key, json['category'], json['mappings']);
+  for (const [key, value] of Object.entries(json)) {
+    defineRule('default', 'default', key, value);
+  }
 }
+export const addCharacterRules = (json: UnicodeJson[]) =>
+  json.forEach(addCharacterRule);
 
 /**
  * Makes a speech rule for Function names from its JSON representation.
  *
+ * @param json JSON object of a speech rule.
+ */
+function addFunctionRule(json: UnicodeJson) {
+  for (let j = 0, name; (name = json.names[j]); j++) {
+    defineRules(json.key, name, json.mappings);
+  }
+}
+
+/**
+ * Makes speech rule for a list of functions from their JSON representation.
+ *
  * @param json JSON object of the speech rules.
  */
-export function addFunctionRules(json: UnicodeJson) {
-  if (changeLocale_(json)) {
-    return;
-  }
-  const names = json['names'];
-  const mappings = json['mappings'];
-  const category = json['category'];
-  for (let j = 0, name; (name = names[j]); j++) {
-    defineRules(name, name, category, mappings);
+export function addFunctionRules(json: UnicodeJson[]) {
+  for (const rule of json) {
+    if (changeLocale(rule)) {
+      continue;
+    }
+    addFunctionSemantic(rule.key, rule.names || []);
+    if (locale === 'base') {
+      baseStores.set(rule.key, rule);
+      continue;
+    }
+    completeWithBase(rule);
+    addFunctionRule(rule);
   }
 }
 
 /**
  * Makes speech rules for Unit descriptors from its JSON representation.
  *
- * @param json JSON object of the speech rules.
+ * @param json List of JSON objects of the speech rules.
  */
-export function addUnitRules(json: UnicodeJson) {
-  if (changeLocale_(json)) {
-    return;
+export function addUnitRules(json: UnicodeJson[]) {
+  for (const rule of json) {
+    if (changeLocale(rule)) {
+      continue;
+    }
+    rule.key += ':unit';
+    if (locale === 'base') {
+      baseStores.set(rule.key, rule);
+      continue;
+    }
+    completeWithBase(rule);
+    if (rule.names) {
+      rule.names = rule.names.map(function (name) {
+        return name + ':unit';
+      });
+    }
+    if (rule.si) {
+      addSiUnitRule(rule);
+    }
+    addFunctionRule(rule);
   }
-  if (json['si']) {
-    addSiUnitRules(json);
-    return;
-  }
-  addUnitRules_(json);
 }
 
 /**
@@ -167,28 +253,25 @@ export function addUnitRules(json: UnicodeJson) {
  *
  * @param json JSON object of the base speech rules.
  */
-export function addSiUnitRules(json: UnicodeJson) {
+function addSiUnitRule(json: UnicodeJson) {
   for (const key of Object.keys(siPrefixes)) {
     const newJson = Object.assign({}, json);
     newJson.mappings = {} as MappingsJson;
     const prefix = siPrefixes[key];
-    newJson['key'] = key + newJson['key'];
     newJson['names'] = newJson['names'].map(function (name) {
       return key + name;
     });
     for (const domain of Object.keys(json['mappings'])) {
       newJson.mappings[domain] = {};
       for (const style of Object.keys(json['mappings'][domain])) {
-        // TODO: This should not really call the locale method.
         newJson['mappings'][domain][style] = locales[locale]().FUNCTIONS.si(
           prefix,
           json['mappings'][domain][style]
         );
       }
     }
-    addUnitRules_(newJson);
+    addFunctionRule(newJson);
   }
-  addUnitRules_(json);
 }
 
 /**
@@ -200,7 +283,7 @@ export function addSiUnitRules(json: UnicodeJson) {
  * @returns The speech rule if it exists.
  */
 export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
-  const store = subStores_[node];
+  const store = subStores.get(node);
   return store ? store.lookupRule(null, dynamic) : null;
 }
 
@@ -211,8 +294,8 @@ export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
  * @returns The category if it exists.
  */
 export function lookupCategory(character: string): string {
-  const store = subStores_[character];
-  return store ? store.category : '';
+  const store = subStores.get(character);
+  return store?.base ? store.base.category : '';
 }
 
 /**
@@ -242,7 +325,7 @@ Engine.getInstance().evaluator = lookupString;
 export function enumerate(info: { [key: string]: any } = {}): {
   [key: string]: any;
 } {
-  for (const store of Object.values(subStores_)) {
+  for (const store of subStores.values()) {
     for (const [, rules] of store.rules.entries()) {
       for (const { cstr: dynamic } of rules) {
         info = enumerate_(dynamic.getValues(), info);
@@ -272,62 +355,9 @@ function enumerate_(
 }
 
 /**
- * Adds a single speech rule for Unit descriptors from its JSON
- * representation.
- *
- * @param json JSON object of the speech rules.
+ * Resets the locale and modality values used for adding rules.
  */
-function addUnitRules_(json: UnicodeJson) {
-  const names = json['names'];
-  if (names) {
-    json['names'] = names.map(function (name) {
-      return name + ':' + 'unit';
-    });
-  }
-  addFunctionRules(json);
-}
-
-/**
- * Changes the internal locale for the rule definitions if the given JSON
- * element is a locale instruction.
- *
- * @param json JSON object of a speech rules.
- * @returns True if the locale was changed.
- */
-function changeLocale_(json: UnicodeJson): boolean {
-  if (!json['locale'] && !json['modality']) {
-    return false;
-  }
-  locale = json['locale'] || locale;
-  modality = json['modality'] || modality;
-  return true;
-}
-
-/**
- * Retrieves a substore for a key. Creates a new one if it does not exist.
- *
- * @param key The key for the store.
- * @returns The rule store.
- */
-function getSubStore_(key: string): MathSimpleStore {
-  let store = subStores_[key];
-  if (store) {
-    Debugger.getInstance().output('Store exists! ' + key);
-    return store;
-  }
-  store = new MathSimpleStore();
-  subStores_[key] = store;
-  return store;
-}
-
-/**
- * Transfers parameters of the compound store to a substore.
- *
- * @param store A simple math store.
- * @param opt_cat The category if it exists.
- */
-function setupStore_(store: MathSimpleStore, opt_cat?: string) {
-  if (opt_cat) {
-    store.category = opt_cat;
-  }
+export function reset() {
+  locale = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+  modality = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
 }

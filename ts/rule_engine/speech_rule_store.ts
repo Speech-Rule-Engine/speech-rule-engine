@@ -24,8 +24,8 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import { SpeechRule } from './speech_rule';
-import { SpeechRuleContext } from './speech_rule_context';
+import { SpeechRule } from './speech_rule.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
 export interface SpeechRuleStore {
   /**
@@ -70,8 +70,8 @@ export interface SpeechRuleStore {
    * @param name Name of the rule. It does not have to be unique.
    * @param dynamic Dynamic constraint annotation of the rule.
    * @param action String version of the speech rule.
-   * @param prec Precondition of the rule.
-   * @param var_args Additional constraints.
+   * @param pre Precondition of the rule.
+   * @param args Additional constraints.
    * @returns The newly defined rule.
    */
   defineRule(

@@ -18,16 +18,20 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
-import { AbstractEnrichCase } from './abstract_enrich_case';
-import { CaseDoubleScript } from './case_double_script';
-import { CaseMultiscripts } from './case_multiscripts';
-import { CaseTensor } from './case_tensor';
-import * as EnrichMathml from './enrich_mathml';
-import { setAttributes, Attribute } from './enrich_attr';
+import { AbstractEnrichCase } from './abstract_enrich_case.js';
+import { CaseDoubleScript } from './case_double_script.js';
+import { CaseMultiscripts } from './case_multiscripts.js';
+import { CaseTensor } from './case_tensor.js';
+import * as EnrichMathml from './enrich_mathml.js';
+import { addMrow, setAttributes, Attribute } from './enrich_attr.js';
 
 export class CaseEmbellished extends AbstractEnrichCase {
   /**
@@ -105,7 +109,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
    * @returns The new empty node.
    */
   private static makeEmptyNode_(id: number): SemanticNode {
-    const mrow = DomUtil.createElement('mrow');
+    const mrow = addMrow();
     const empty = new SemanticNode(id);
     empty.type = SemanticType.EMPTY;
     empty.mathmlTree = mrow;
@@ -297,10 +301,10 @@ export class CaseEmbellished extends AbstractEnrichCase {
     const mmlTag = DomUtil.tagName(mml);
     let parent = null;
     let caller;
-    if (mmlTag === 'MSUBSUP') {
+    if (mmlTag === MMLTAGS.MSUBSUP) {
       parent = semantic.childNodes[0];
       caller = CaseDoubleScript;
-    } else if (mmlTag === 'MMULTISCRIPTS') {
+    } else if (mmlTag === MMLTAGS.MMULTISCRIPTS) {
       if (
         semantic.type === SemanticType.SUPERSCRIPT ||
         semantic.type === SemanticType.SUBSCRIPT
@@ -340,14 +344,14 @@ export class CaseEmbellished extends AbstractEnrichCase {
     const fullOfence = this.fullFence(this.ofenceMml);
     const fullCfence = this.fullFence(this.cfenceMml);
     // Introduce a definite new layer.
-    let newNode = DomUtil.createElement('mrow');
+    let newNode = addMrow();
     DomUtil.replaceNode(this.fencedMml as Element, newNode);
     this.fencedMmlNodes.forEach((node) => newNode.appendChild(node));
     newNode.insertBefore(fullOfence, this.fencedMml);
     newNode.appendChild(fullCfence);
     // The case of top element math.
     if (!newNode.parentNode) {
-      const mrow = DomUtil.createElement('mrow');
+      const mrow = addMrow();
       while (newNode.childNodes.length > 0) {
         mrow.appendChild(newNode.childNodes[0]);
       }

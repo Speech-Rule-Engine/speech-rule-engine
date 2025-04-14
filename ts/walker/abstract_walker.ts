@@ -18,28 +18,32 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as AuralRendering from '../audio/aural_rendering';
-import * as DomUtil from '../common/dom_util';
-import * as EngineConst from '../common/engine_const';
-import { setup as EngineSetup } from '../common/engine_setup';
-import { KeyCode } from '../common/event_util';
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import { Highlighter } from '../highlighter/highlighter';
-import { LOCALE } from '../l10n/locale';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
-import { Grammar } from '../rule_engine/grammar';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
-import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
-import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import { Focus } from './focus';
-import { Levels } from './levels';
-import { RebuildStree } from './rebuild_stree';
-import { Walker, WalkerMoves, WalkerState } from './walker';
-import * as WalkerUtil from './walker_util';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as AuralRendering from '../audio/aural_rendering.js';
+import * as DomUtil from '../common/dom_util.js';
+import { setup as EngineSetup } from '../common/engine_setup.js';
+import { KeyCode } from '../common/event_util.js';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import { Highlighter } from '../highlighter/highlighter.js';
+import { LOCALE } from '../l10n/locale.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import {
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import { Focus } from './focus.js';
+import { Levels } from './levels.js';
+import { RebuildStree } from './rebuild_stree.js';
+import { Walker, WalkerMoves, WalkerState } from './walker.js';
+import * as WalkerUtil from './walker_util.js';
+
+import * as XpathUtil from '../common/xpath_util.js';
 
 /**
  * The abstract walker class.
@@ -66,6 +70,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   public rootId: string;
   // End of uninitialized fields.
+
+  public skeleton: SemanticSkeleton;
 
   public keyMapping: Map<KeyCode, () => any> = new Map([
     [KeyCode.UP, this.up.bind(this)],
@@ -144,6 +150,8 @@ export abstract class AbstractWalker<T> implements Walker {
   ): T[];
 
   /**
+   * Abstract walker class constructor.
+   *
    * @param node The (rendered) node on which the walker is called.
    * @param generator The speech generator for
    *     this walker.
@@ -203,7 +211,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public getRebuilt() {
     if (!this.rebuilt_) {
-      this.rebuilt_ = this.rebuildStree();
+      this.rebuildStree();
     }
     return this.rebuilt_;
   }
@@ -222,7 +230,6 @@ export abstract class AbstractWalker<T> implements Walker {
     if (this.isActive()) {
       return;
     }
-    this.generator.start();
     this.toggleActive_();
   }
 
@@ -234,7 +241,6 @@ export abstract class AbstractWalker<T> implements Walker {
       return;
     }
     WalkerState.setState(this.id, this.primaryId());
-    this.generator.end();
     this.toggleActive_();
   }
 
@@ -242,18 +248,16 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public getFocus(update = false) {
+    if (this.rootId === null) {
+      this.getRebuilt();
+    }
     if (!this.focus_) {
-      this.focus_ = Focus.factory(
-        this.rootId,
-        [this.rootId],
-        this.getRebuilt(),
-        this.node
-      );
+      this.focus_ = this.singletonFocus(this.rootId);
     }
     if (update) {
       this.updateFocus();
     }
-    return this.focus_ as Focus;
+    return this.focus_;
   }
 
   /**
@@ -278,10 +282,24 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
+   * @returns The DOM nodes in the focus element.
+   */
+  public focusDomNodes() {
+    return this.getFocus().getDomNodes();
+  }
+
+  /**
+   * @returns The semantic nodes for the focus element.
+   */
+  public focusSemanticNodes() {
+    return this.getFocus().getSemanticNodes();
+  }
+
+  /**
    * @override
    */
   public speech() {
-    const nodes = this.getFocus().getDomNodes();
+    const nodes = this.focusDomNodes();
     if (!nodes.length) {
       return '';
     }
@@ -298,13 +316,13 @@ export abstract class AbstractWalker<T> implements Walker {
         return this.detail_();
       default: {
         const speech = [];
-        const snodes = this.getFocus().getSemanticNodes();
+        const snodes = this.focusSemanticNodes();
         for (let i = 0, l = nodes.length; i < l; i++) {
           const node = nodes[i];
           const snode = snodes[i] as SemanticNode;
           speech.push(
             node
-              ? this.generator.getSpeech(node, this.getXml())
+              ? this.generator.getSpeech(node, this.getXml(), this.node)
               : SpeechGeneratorUtil.recomputeMarkup(snode)
           );
         }
@@ -399,12 +417,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   protected home(): Focus | null {
     this.moved = WalkerMoves.HOME;
-    const focus = Focus.factory(
-      this.rootId,
-      [this.rootId],
-      this.getRebuilt(),
-      this.node
-    );
+    const focus = this.singletonFocus(this.rootId);
     return focus;
   }
 
@@ -512,17 +525,20 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Rebuilds the semantic tree given in the input xml element fully connected
    * with maction elements.
-   *
-   * @returns The reconstructed semantic tree.
    */
-  protected rebuildStree(): RebuildStree {
-    const rebuilt = new RebuildStree(this.getXml());
-    this.rootId = rebuilt.stree.root.id.toString();
-    this.generator.setRebuilt(rebuilt);
-    this.focus_ = Focus.factory(this.rootId, [this.rootId], rebuilt, this.node);
+  protected rebuildStree() {
+    this.rebuilt_ = new RebuildStree(this.getXml());
+    this.rootId = this.rebuilt_.stree.root.id.toString();
+    this.generator.setRebuilt(this.rebuilt_);
+    this.skeleton = SemanticSkeleton.fromTree(this.rebuilt_.stree);
+    this.skeleton.populate();
+    this.focus_ = this.singletonFocus(this.rootId);
     this.levels = this.initLevels();
-    SpeechGeneratorUtil.connectMactions(this.node, this.getXml(), rebuilt.xml);
-    return rebuilt;
+    SpeechGeneratorUtil.connectMactions(
+      this.node,
+      this.getXml(),
+      this.rebuilt_.xml
+    );
   }
 
   /**
@@ -585,7 +601,54 @@ export abstract class AbstractWalker<T> implements Walker {
    *     properties of the old focus.
    */
   public singletonFocus(id: string): Focus {
-    return this.focusFromId(id, [id]);
+    this.getRebuilt();
+    const ids = this.retrieveVisuals(id);
+    return this.focusFromId(id, ids);
+  }
+
+  /**
+   * Retrieves all root nodes of the visual subtrees.
+   *
+   * @param id The id of the root node.
+   * @returns The list of ids.
+   */
+  private retrieveVisuals(id: string): string[] {
+    if (!this.skeleton) {
+      return [id];
+    }
+    const num = parseInt(id, 10);
+    const semStree = this.skeleton.subtreeNodes(num);
+    if (!semStree.length) {
+      return [id];
+    }
+    semStree.unshift(num);
+    const mmlStree: { [num: number]: boolean } = {};
+    const result = [];
+    XpathUtil.updateEvaluator(this.getXml());
+    for (const child of semStree) {
+      if (mmlStree[child]) {
+        continue;
+      }
+      result.push(child.toString());
+      mmlStree[child] = true;
+      this.subtreeIds(child, mmlStree);
+    }
+    return result;
+  }
+
+  /**
+   * Find all ids in the subtree spanned at a node and register them.
+   *
+   * @param id The root id of the subtree.
+   * @param nodes The accumulator collecting the nodes.
+   */
+  private subtreeIds(id: number, nodes: { [num: number]: boolean }) {
+    const xmlRoot = XpathUtil.evalXPath(
+      `//*[@data-semantic-id="${id}"]`,
+      this.getXml()
+    );
+    const xpath = XpathUtil.evalXPath('*//@data-semantic-id', xmlRoot[0]);
+    xpath.forEach((x) => (nodes[parseInt(x.textContent, 10)] = true));
   }
 
   /**
@@ -680,7 +743,6 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public update(options: AxisMap) {
-    this.generator.setOptions(options);
     EngineSetup(options).then(() =>
       SpeechGeneratorFactory.generator('Tree').getSpeech(
         this.node,
@@ -690,7 +752,6 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   // Facilities for keyboard driven rules cycling.
-  // TODO: Refactor this into the speech generators.
   /**
    * Cycles to next speech rule set if possible.
    *
@@ -698,61 +759,14 @@ export abstract class AbstractWalker<T> implements Walker {
    *     possible a cloned focus.
    */
   public nextRules(): Focus {
+    this.generator.nextRules();
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
     }
-    // TODO: Check if domains exist for the current locale.
-    EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
-    options.domain =
-      options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-    options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
     this.update(options);
     this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();
-  }
-
-  /**
-   * Cycles to next style or preference of the speech rule set if possible.
-   *
-   * @param domain The current speech rule set name.
-   * @param style The current style name.
-   * @returns The new style name.
-   */
-  public nextStyle(domain: string, style: string): string {
-    if (domain === 'mathspeak') {
-      const styles = ['default', 'brief', 'sbrief'];
-      const index = styles.indexOf(style);
-      if (index === -1) {
-        return style;
-      }
-      return index >= styles.length - 1 ? styles[0] : styles[index + 1];
-    }
-    if (domain === 'clearspeak') {
-      const prefs = ClearspeakPreferences.getLocalePreferences();
-      const loc = prefs['en'];
-      // TODO: use correct locale.
-      if (!loc) {
-        return 'default';
-      }
-      // TODO: return the previous one?
-      const smart = ClearspeakPreferences.relevantPreferences(
-        this.getFocus().getSemanticPrimary()
-      );
-      const current = ClearspeakPreferences.findPreference(style, smart);
-      const options = loc[smart].map(function (x) {
-        return x.split('_')[1];
-      });
-      const index = options.indexOf(current);
-      if (index === -1) {
-        return style;
-      }
-      const next =
-        index >= options.length - 1 ? options[0] : options[index + 1];
-      const result = ClearspeakPreferences.addPreference(style, smart, next);
-      return result;
-    }
-    return style;
   }
 
   /**
@@ -762,11 +776,13 @@ export abstract class AbstractWalker<T> implements Walker {
    *     possible a cloned focus.
    */
   public previousRules(): Focus {
+    this.generator.nextStyle(
+      this.getFocus().getSemanticPrimary()?.id.toString()
+    );
     const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
     }
-    options.style = this.nextStyle(options.domain, options.style);
     this.update(options);
     this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();
@@ -854,8 +870,8 @@ export abstract class AbstractWalker<T> implements Walker {
     const expand = this.expandable(primary)
       ? LOCALE.MESSAGES.navigate.EXPANDABLE
       : this.collapsible(primary)
-      ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
-      : '';
+        ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
+        : '';
     const level = LOCALE.MESSAGES.navigate.LEVEL + ' ' + this.getDepth();
     const snodes = this.getFocus().getSemanticNodes();
     const prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);

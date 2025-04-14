@@ -22,18 +22,18 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description.js';
 import {
   Axis,
   AxisOrder,
   DynamicCstr,
   DynamicCstrParser
-} from './dynamic_cstr';
-import { Action, Precondition, SpeechRule } from './speech_rule';
-import { SpeechRuleContext } from './speech_rule_context';
-import { SpeechRuleEvaluator } from './speech_rule_evaluator';
-import { SpeechRuleFunction } from './speech_rule_functions';
-import { SpeechRuleStore } from './speech_rule_store';
+} from './dynamic_cstr.js';
+import { Action, Precondition, SpeechRule } from './speech_rule.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
+import { SpeechRuleEvaluator } from './speech_rule_evaluator.js';
+import { SpeechRuleFunction } from './speech_rule_functions.js';
+import { SpeechRuleStore } from './speech_rule_store.js';
 
 export abstract class BaseRuleStore
   implements SpeechRuleEvaluator, SpeechRuleStore
@@ -591,7 +591,7 @@ export abstract class BaseRuleStore
 
 // Conditions are clusters of preconditions that are used to define rules via
 // actions.
-export class Condition {
+class Condition {
   private _conditions: [DynamicCstr, Precondition][] = [];
 
   private constraints: DynamicCstr[] = [];
@@ -604,11 +604,17 @@ export class Condition {
    * @param base The dynamic base constraint.
    * @param condition The remaining precondition constraints.
    */
-  constructor(private base: DynamicCstr, condition: Precondition) {
+  constructor(
+    private base: DynamicCstr,
+    condition: Precondition
+  ) {
     this.constraints.push(base);
     this.addCondition(base, condition);
   }
 
+  /**
+   * @returns The precondition constraints.
+   */
   public get conditions() {
     return this._conditions;
   }
@@ -633,14 +639,31 @@ export class Condition {
     this._conditions = this._conditions.concat(newConds);
   }
 
+  /**
+   * Adds a precondition to the base constraint.
+   *
+   * @param cond The precondition.
+   */
   public addBaseCondition(cond: Precondition) {
     this.addCondition(this.base, cond);
   }
 
+  /**
+   * Adds a precondition to the full constraint.
+   *
+   * @param cond The precondition.
+   */
   public addFullCondition(cond: Precondition) {
     this.constraints.forEach((cstr) => this.addCondition(cstr, cond));
   }
 
+  /**
+   * Adds a precondition to the dynamic constraint. Replaces an existing
+   * matching one.
+   *
+   * @param dynamic The dynamic constraint.
+   * @param cond The precondition.
+   */
   private addCondition(dynamic: DynamicCstr, cond: Precondition) {
     const condStr = dynamic.toString() + ' ' + cond.toString();
     if (this.allCstr.condStr) {

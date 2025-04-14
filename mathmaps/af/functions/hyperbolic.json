@@ -1,0 +1,101 @@
+[
+  {
+    "locale": "af"
+  },
+  {
+    "key": "cosh",
+    "mappings": {
+      "default": {
+        "default": "hiperboliese kosinus"
+      }
+    }
+  },
+  {
+    "key": "coth",
+    "mappings": {
+      "default": {
+        "default": "hiperboliese kotangens"
+      }
+    }
+  },
+  {
+    "key": "csch",
+    "mappings": {
+      "default": {
+        "default": "hiperboliese kosekans"
+      }
+    }
+  },
+  {
+    "key": "sech",
+    "mappings": {
+      "default": {
+        "default": "hiperboliese sekans"
+      }
+    }
+  },
+  {
+    "key": "sinh",
+    "mappings": {
+      "default": {
+        "default": "hiperboliese sinus"
+      }
+    }
+  },
+  {
+    "key": "tanh",
+    "mappings": {
+      "default": {
+        "default": "hiperboliese tangens"
+      }
+    }
+  },
+  {
+    "key": "arcosh",
+    "mappings": {
+      "default": {
+        "default": "booh hiperboliese kosinus"
+      }
+    }
+  },
+  {
+    "key": "arcoth",
+    "mappings": {
+      "default": {
+        "default": "boog hiperboliese kotangens"
+      }
+    }
+  },
+  {
+    "key": "arcsch",
+    "mappings": {
+      "default": {
+        "default": "boog hiperboliese kosekans"
+      }
+    }
+  },
+  {
+    "key": "arsech",
+    "mappings": {
+      "default": {
+        "default": "boog hiperboliese sekans"
+      }
+    }
+  },
+  {
+    "key": "arsinh",
+    "mappings": {
+      "default": {
+        "default": "boog hiperboliese sinus"
+      }
+    }
+  },
+  {
+    "key": "artanh",
+    "mappings": {
+      "default": {
+        "default": "boog hiperboliese tangens"
+      }
+    }
+  }
+]

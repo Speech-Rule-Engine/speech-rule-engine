@@ -18,18 +18,25 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import * as EngineConst from '../common/engine_const';
-import * as AudioUtil from './audio_util';
-import { AuditoryDescription } from './auditory_description';
-import { XmlRenderer } from './xml_renderer';
+import { Debugger } from '../common/debugger.js';
+import * as DomUtil from '../common/dom_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { Engine } from '../common/engine.js';
+import * as AudioUtil from './audio_util.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { XmlRenderer } from './xml_renderer.js';
 
 export class LayoutRenderer extends XmlRenderer {
+  public static options = {
+    cayleyshort: Engine.getInstance().cayleyshort,
+    linebreaks: Engine.getInstance().linebreaks
+  };
+
   /**
    * @override
    */
   public finalize(str: string) {
+    setRelValues(this.values.get('rel'));
     return setTwoDim(str);
   }
 
@@ -59,6 +66,7 @@ export class LayoutRenderer extends XmlRenderer {
    */
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
+    this.values.clear();
     const result = [];
     let content: AuditoryDescription[] = [];
     for (const descr of descrs) {
@@ -68,21 +76,27 @@ export class LayoutRenderer extends XmlRenderer {
       }
       result.push(this.processContent(content));
       content = [];
-      const value = descr.layout;
-      if (value.match(/^begin/)) {
-        result.push('<' + value.replace(/^begin/, '') + '>');
+      const [pref, layout, value] = this.layoutValue(descr.layout);
+      if (pref === 'begin') {
+        result.push('<' + layout + (value ? ` value="${value}"` : '') + '>');
         continue;
       }
-      if (value.match(/^end/)) {
-        result.push('</' + value.replace(/^end/, '') + '>');
+      if (pref === 'end') {
+        result.push('</' + layout + '>');
         continue;
       }
-      console.warn('Something went wrong with layout markup: ' + value);
+      console.warn('Something went wrong with layout markup: ' + layout);
     }
     result.push(this.processContent(content));
     return result.join('');
   }
 
+  /**
+   * Turns a list of descriptions without layout info into a text string.
+   *
+   * @param content The descriptions list.
+   * @returns The resulting text.
+   */
   private processContent(content: AuditoryDescription[]) {
     const result = [];
     const markup = AudioUtil.personalityMarkup(content);
@@ -96,6 +110,28 @@ export class LayoutRenderer extends XmlRenderer {
       }
     }
     return result.join(''); // this.merge(result);
+  }
+
+  private values: Map<string, { [key: string]: boolean }> = new Map();
+
+  /**
+   * Processes the layout value.
+   *
+   * @param layout The layout string.
+   * @returns The triple containing layout type, layout tag and value.
+   */
+  private layoutValue(layout: string) {
+    const match = layout.match(/^(begin|end|)(.*\D)(\d*)$/);
+    const value = match[3];
+    if (!value) {
+      return [match[1], match[2], ''];
+    }
+    layout = match[2];
+    if (!this.values.has(layout)) {
+      this.values.set(layout, {});
+    }
+    this.values.get(layout)[value] = true;
+    return [match[1], layout, value];
   }
 }
 
@@ -112,7 +148,10 @@ const handlers: { [key: string]: (node: Element) => string } = {
   ROW: recurseTree,
   FRACTION: handleFraction,
   NUMERATOR: handleFractionPart,
-  DENOMINATOR: handleFractionPart
+  DENOMINATOR: handleFractionPart,
+  // Processing for linebreaking
+  REL: handleRelation,
+  OP: handleRelation
 };
 
 /**
@@ -123,8 +162,27 @@ const handlers: { [key: string]: (node: Element) => string } = {
  */
 function applyHandler(element: Element): string {
   const tag = DomUtil.tagName(element as Element);
+  // Numerical?
   const handler = handlers[tag];
   return handler ? handler(element) : element.textContent;
+}
+
+const relValues = new Map();
+
+/**
+ * Adds a list of relation values into the relation values map.
+ *
+ * @param values The relation values.
+ */
+function setRelValues(values: { [key: string]: boolean }) {
+  relValues.clear();
+  if (!values) return;
+  const keys = Object.keys(values)
+    .map((x) => parseInt(x))
+    .sort();
+  for (let i = 0, key; (key = keys[i]); i++) {
+    relValues.set(key, i + 1);
+  }
 }
 
 /**
@@ -188,7 +246,7 @@ function recurseTree(dom: Element): string {
 /**
  * Computes the 2D height of the string.
  *
- * @param {string} str The input string.
+ * @param str The input string.
  * @returns The height of the string.
  */
 function strHeight(str: string): number {
@@ -198,7 +256,7 @@ function strHeight(str: string): number {
 /**
  * Computes the max 2D width of the string.
  *
- * @param {string} str The input string.
+ * @param str The input string.
  * @returns The width of the string.
  */
 function strWidth(str: string): number {
@@ -208,8 +266,8 @@ function strWidth(str: string): number {
 /**
  * Pads a string to the given height.
  *
- * @param {string} str The input string.
- * @param {number} height The height.
+ * @param str The input string.
+ * @param height The height.
  * @returns The padded string.
  */
 function padHeight(str: string, height: number): string {
@@ -220,8 +278,8 @@ function padHeight(str: string, height: number): string {
 /**
  * Pads a string to the given width.
  *
- * @param {string} str The input string.
- * @param {number} width The width.
+ * @param str The input string.
+ * @param width The width.
  * @returns The padded string.
  */
 function padWidth(str: string, width: number): string {
@@ -450,6 +508,9 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
+  if (Engine.getInstance().cayleyshort && mat[0].cells[0] === '⠀') {
+    bar.cells[0] = '⠀';
+  }
   mat.splice(1, 0, bar);
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);
@@ -557,4 +618,18 @@ function handleFractionPart(prt: Element): string {
     }
   }
   return content;
+}
+
+/**
+ * This implements line breaking for concepts of 14.12.1 Priority List.
+ *
+ * @param rel A relation element.
+ * @returns A markup string with the correct linebreaking value.
+ */
+function handleRelation(rel: Element): string {
+  if (!Engine.getInstance().linebreaks) {
+    return recurseTree(rel);
+  }
+  const value = relValues.get(parseInt(rel.getAttribute('value')));
+  return (value ? `<br value="${value}"/>` : '') + recurseTree(rel);
 }

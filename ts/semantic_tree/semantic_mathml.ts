@@ -18,18 +18,23 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { SemanticAbstractParser } from './semantic_parser';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+import * as DomUtil from '../common/dom_util.js';
+import {
+  SemanticFont,
+  SemanticRole,
+  SemanticType
+} from './semantic_meaning.js';
+import { SemanticMap } from './semantic_attr.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticAbstractParser } from './semantic_parser.js';
+import * as SemanticPred from './semantic_pred.js';
+import { SemanticProcessor } from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
+import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
-  private parseMap_: {
-    [key: string]: (p1: Element, p2: Element[]) => SemanticNode;
-  };
+  private parseMap_: Map<string, (p1: Element, p2: Element[]) => SemanticNode>;
 
   /**
    * Get an attribute from a node and provide a default if it does not exist. It
@@ -60,40 +65,39 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   constructor() {
     super('MathML');
-    this.parseMap_ = {
-      SEMANTICS: this.semantics_.bind(this),
-      MATH: this.rows_.bind(this),
-      MROW: this.rows_.bind(this),
-      MPADDED: this.rows_.bind(this),
-      MSTYLE: this.rows_.bind(this),
-      MFRAC: this.fraction_.bind(this),
-      MSUB: this.limits_.bind(this),
-      MSUP: this.limits_.bind(this),
-      MSUBSUP: this.limits_.bind(this),
-      MOVER: this.limits_.bind(this),
-      MUNDER: this.limits_.bind(this),
-      MUNDEROVER: this.limits_.bind(this),
-      MROOT: this.root_.bind(this),
-      MSQRT: this.sqrt_.bind(this),
-      MTABLE: this.table_.bind(this),
-      MLABELEDTR: this.tableLabeledRow_.bind(this),
-      MTR: this.tableRow_.bind(this),
-      MTD: this.tableCell_.bind(this),
-      MS: this.text_.bind(this),
-      MTEXT: this.text_.bind(this),
-      MSPACE: this.space_.bind(this),
-      'ANNOTATION-XML': this.text_.bind(this),
-      MI: this.identifier_.bind(this),
-      MN: this.number_.bind(this),
-      MO: this.operator_.bind(this),
-      MFENCED: this.fenced_.bind(this),
-      MENCLOSE: this.enclosed_.bind(this),
-      MMULTISCRIPTS: this.multiscripts_.bind(this),
-      ANNOTATION: this.empty_.bind(this),
-      NONE: this.empty_.bind(this),
-      MACTION: this.action_.bind(this)
-    };
-
+    this.parseMap_ = new Map([
+      [MMLTAGS.SEMANTICS, this.semantics_.bind(this)],
+      [MMLTAGS.MATH, this.rows_.bind(this)],
+      [MMLTAGS.MROW, this.rows_.bind(this)],
+      [MMLTAGS.MPADDED, this.rows_.bind(this)],
+      [MMLTAGS.MSTYLE, this.rows_.bind(this)],
+      [MMLTAGS.MFRAC, this.fraction_.bind(this)],
+      [MMLTAGS.MSUB, this.limits_.bind(this)],
+      [MMLTAGS.MSUP, this.limits_.bind(this)],
+      [MMLTAGS.MSUBSUP, this.limits_.bind(this)],
+      [MMLTAGS.MOVER, this.limits_.bind(this)],
+      [MMLTAGS.MUNDER, this.limits_.bind(this)],
+      [MMLTAGS.MUNDEROVER, this.limits_.bind(this)],
+      [MMLTAGS.MROOT, this.root_.bind(this)],
+      [MMLTAGS.MSQRT, this.sqrt_.bind(this)],
+      [MMLTAGS.MTABLE, this.table_.bind(this)],
+      [MMLTAGS.MLABELEDTR, this.tableLabeledRow_.bind(this)],
+      [MMLTAGS.MTR, this.tableRow_.bind(this)],
+      [MMLTAGS.MTD, this.tableCell_.bind(this)],
+      [MMLTAGS.MS, this.text_.bind(this)],
+      [MMLTAGS.MTEXT, this.text_.bind(this)],
+      [MMLTAGS.MSPACE, this.space_.bind(this)],
+      [MMLTAGS.ANNOTATIONXML, this.text_.bind(this)],
+      [MMLTAGS.MI, this.identifier_.bind(this)],
+      [MMLTAGS.MN, this.number_.bind(this)],
+      [MMLTAGS.MO, this.operator_.bind(this)],
+      [MMLTAGS.MFENCED, this.fenced_.bind(this)],
+      [MMLTAGS.MENCLOSE, this.enclosed_.bind(this)],
+      [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
+      [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
+      [MMLTAGS.NONE, this.empty_.bind(this)],
+      [MMLTAGS.MACTION, this.action_.bind(this)]
+    ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
       role: SemanticRole.NUMBERSET,
@@ -115,7 +119,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       'ℝ',
       'ℤ'
     ].forEach(
-      ((x: string) => this.getFactory().defaultMap.add(x, meaning)).bind(this)
+      ((x: string) => this.getFactory().defaultMap.set(x, meaning)).bind(this)
     );
   }
 
@@ -125,12 +129,19 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   public parse(mml: Element) {
     SemanticProcessor.getInstance().setNodeFactory(this.getFactory());
     const children = DomUtil.toArray(mml.childNodes);
-    const tag = DomUtil.tagName(mml);
-    const func = this.parseMap_[tag];
+    const tag = DomUtil.tagName(mml) as MMLTAGS;
+    const func = this.parseMap_.get(tag);
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
     SemanticUtil.addAttributes(newNode, mml);
     if (
-      ['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1
+      [
+        MMLTAGS.MATH,
+        MMLTAGS.MROW,
+        MMLTAGS.MPADDED,
+        MMLTAGS.MSTYLE,
+        MMLTAGS.SEMANTICS,
+        MMLTAGS.MACTION
+      ].indexOf(tag) !== -1
     ) {
       return newNode;
     }
@@ -181,7 +192,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       }
     } else {
       // Case of a 'meaningful' row, even if they are empty.
-      newNode = SemanticProcessor.getInstance().row(this.parseList(children));
+      const snode = SemanticHeuristics.run('function_from_identifiers', node);
+      newNode =
+        snode && snode !== node
+          ? snode
+          : SemanticProcessor.getInstance().row(this.parseList(children));
     }
     newNode.mathml.unshift(node);
     return newNode;
@@ -281,8 +296,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       []
     );
     newNode.mathmlTree = node;
-    SemanticProcessor.tableToMultiline(newNode);
-    return newNode;
+    return SemanticProcessor.tableToMultiline(newNode);
   }
 
   /**
@@ -315,6 +329,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     }
     const label = this.parse(children[0]);
     label.role = SemanticRole.LABEL;
+    if (label.childNodes[0]?.type === SemanticType.TEXT) {
+      label.childNodes[0].role = SemanticRole.LABEL;
+    }
     const newNode = this.getFactory().makeBranchNode(
       SemanticType.ROW,
       this.parseList(children.slice(1)),
@@ -511,7 +528,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     let prescripts = false;
     let scriptcount = 0;
     for (let i = 0, child; (child = children[i]); i++) {
-      if (DomUtil.tagName(child) === 'MPRESCRIPTS') {
+      if (DomUtil.tagName(child) === MMLTAGS.MPRESCRIPTS) {
         prescripts = true;
         scriptcount = 0;
         continue;
@@ -521,8 +538,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
           ? lsup.push(child)
           : lsub.push(child)
         : scriptcount & 1
-        ? rsup.push(child)
-        : rsub.push(child);
+          ? rsup.push(child)
+          : rsub.push(child);
       scriptcount++;
     }
     // This is the pathological msubsup case.
@@ -567,10 +584,15 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private action_(node: Element, children: Element[]): SemanticNode {
-    // This here is currently geared towards our collapse actions!
-    return children.length > 1
-      ? this.parse(children[1])
-      : this.getFactory().makeUnprocessed(node);
+    const selection =
+      children[
+        node.hasAttribute('selection')
+          ? parseInt(node.getAttribute('selection'), 10) - 1
+          : 0
+      ];
+    const stree = this.parse(selection);
+    stree.mathmlTree = selection;
+    return stree;
   }
 
   /**
@@ -599,20 +621,28 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       children.length === 1 &&
       children[0].nodeType !== DomUtil.NodeType.TEXT_NODE
     ) {
+      // Case of a leaf that contains another node. Only in the case of text (or
+      // string) nodes we process this further.
       const node = this.getFactory().makeUnprocessed(mml);
       node.role = children[0].tagName as SemanticRole;
       SemanticUtil.addAttributes(node, children[0]);
       return node;
     }
-    return this.getFactory().makeLeafNode(
+    // Save latex here if possible
+    const node = this.getFactory().makeLeafNode(
       mml.textContent,
       SemanticProcessor.getInstance().font(mml.getAttribute('mathvariant'))
     );
+    // TODO (Euro): This should be safed earlier together with other attributes,
+    //     before processing is even called!
+    if (mml.hasAttribute('data-latex')) {
+      SemanticMap.LatexCommands.set(
+        mml.getAttribute('data-latex'),
+        mml.textContent
+      );
+    }
+    return node;
   }
 }
 
-// TODO (sorge) Role and font of multi-character and digits unicode strings.
-// TODO (sorge) Reclassify wrongly tagged numbers or identifiers more
-//              systematically.
-// TODO (sorge) Put this all in a single clean reclassification method.
 // TODO (sorge) Do something useful with error and phantom symbols.

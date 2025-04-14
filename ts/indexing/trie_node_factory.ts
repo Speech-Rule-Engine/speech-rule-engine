@@ -22,14 +22,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { Grammar } from '../rule_engine/grammar';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SpeechRuleContext } from '../rule_engine/speech_rule_context';
-import { AbstractTrieNode } from './abstract_trie_node';
-import { StaticTrieNode } from './abstract_trie_node';
-import { TrieNode, TrieNodeKind } from './trie_node';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SpeechRuleContext } from '../rule_engine/speech_rule_context.js';
+import { AbstractTrieNode } from './abstract_trie_node.js';
+import { StaticTrieNode } from './abstract_trie_node.js';
+import { TrieNode, TrieNodeKind } from './trie_node.js';
 
 /**
  * Generates a trie node of a given kind in the given rule store.
@@ -58,7 +58,7 @@ export function getNode(
   }
 }
 
-export class RootTrieNode extends AbstractTrieNode<Node> {
+class RootTrieNode extends AbstractTrieNode<Node> {
   /**
    * Creates the root node for the trie.
    */
@@ -68,8 +68,10 @@ export class RootTrieNode extends AbstractTrieNode<Node> {
   }
 }
 
-export class DynamicTrieNode extends AbstractTrieNode<string> {
+class DynamicTrieNode extends AbstractTrieNode<string> {
   /**
+   * Class of trie nodes for dynamic constraints.
+   *
    * @param constraint The constraint the node represents.
    */
   constructor(constraint: string) {
@@ -95,9 +97,7 @@ const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
  *    xpath expression.
  */
 // TODO (TS): Improve methods by testing for Element type.
-export function constraintTest_(
-  constraint: string
-): ((p1: Node) => boolean) | null {
+function constraintTest(constraint: string): ((p1: Node) => boolean) | null {
   // @self::*
   if (constraint.match(/^self::\*$/)) {
     return (_node) => true;
@@ -221,13 +221,18 @@ export function constraintTest_(
   return null;
 }
 
-export class QueryTrieNode extends StaticTrieNode {
+class QueryTrieNode extends StaticTrieNode {
   /**
+   * Trie nodes with query constraints.
+   *
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
-  constructor(constraint: string, private context: SpeechRuleContext) {
-    super(constraint, constraintTest_(constraint));
+  constructor(
+    constraint: string,
+    private context: SpeechRuleContext
+  ) {
+    super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.QUERY;
   }
 
@@ -241,13 +246,18 @@ export class QueryTrieNode extends StaticTrieNode {
   }
 }
 
-export class BooleanTrieNode extends StaticTrieNode {
+class BooleanTrieNode extends StaticTrieNode {
   /**
+   * Trie nodes with static boolean constraints.
+   *
    * @param constraint The constraint the node represents.
    * @param context The rule context.
    */
-  constructor(constraint: string, private context: SpeechRuleContext) {
-    super(constraint, constraintTest_(constraint));
+  constructor(
+    constraint: string,
+    private context: SpeechRuleContext
+  ) {
+    super(constraint, constraintTest(constraint));
     this.kind = TrieNodeKind.BOOLEAN;
   }
 

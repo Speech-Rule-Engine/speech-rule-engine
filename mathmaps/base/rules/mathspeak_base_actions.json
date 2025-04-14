@@ -11,13 +11,13 @@
     ],
     [
       "Action",
-      "identifier-spacing",
-      "[m] CQFspaceoutIdentifier"
+      "identifier",
+      "[n] text()"
     ],
     [
       "Action",
-      "identifier",
-      "[n] text()"
+      "identifier-spacing",
+      "[m] CQFspaceoutIdentifier"
     ],
     [
       "Action",
@@ -62,7 +62,7 @@
     [
       "Action",
       "matrix-cell",
-      "[n] children/*[1] (pause: 300)"
+      "[n] children/*[1] (pause:300)"
     ],
     [
       "Action",
@@ -253,6 +253,11 @@
       "Action",
       "quadruple-prime",
       "[t] \"⁗\" (grammar:translate)"
+    ],
+    [
+      "Action",
+      "prime-multilength",
+      "[m] children/*"
     ],
     [
       "Action",

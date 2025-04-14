@@ -37,8 +37,6 @@ export type AxisProperties = { [key: string]: string[] };
 
 export type AxisOrder = Axis[];
 
-export type AxisValues = { [key: string]: boolean };
-
 export type AxisMap = { [key: string]: string };
 
 export class DynamicProperties {
@@ -59,6 +57,8 @@ export class DynamicProperties {
   }
 
   /**
+   * Dynamic properties.
+   *
    * @param properties The property mapping.
    * @param order A parse order of the keys.
    */
@@ -144,6 +144,11 @@ export class DynamicCstr extends DynamicProperties {
     Axis.STYLE,
     Axis.TOPIC
   ];
+
+  /**
+   *  Default values for to assign. Value is default.
+   */
+  public static BASE_LOCALE = 'base';
 
   /**
    *  Default values for to assign. Value is default.

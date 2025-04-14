@@ -20,15 +20,24 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
-import * as SpeechGeneratorUtil from './speech_generator_util';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
+import * as SpeechGeneratorUtil from './speech_generator_util.js';
+import { setup as EngineSetup } from '../common/engine_setup.js';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
 
 export class SummarySpeechGenerator extends AbstractSpeechGenerator {
   /**
    * @override
    */
-  public getSpeech(node: Element, xml: Element) {
-    SpeechGeneratorUtil.connectAllMactions(xml, this.getRebuilt().xml);
-    return this.generateSpeech(node, xml);
+  public getSpeech(node: Element, _xml: Element) {
+    // SpeechGeneratorUtil.connectAllMactions(xml, this.getRebuilt().xml);
+    EngineSetup(this.getOptions());
+    const id = node.getAttribute(Attribute.ID);
+    const snode = this.getRebuilt().streeRoot.querySelectorAll(
+      (x) => x.id.toString() === id
+    )[0];
+    SpeechGeneratorUtil.addModality(node, snode, this.modality);
+    const speech = node.getAttribute(Attribute.SUMMARY);
+    return speech;
   }
 }

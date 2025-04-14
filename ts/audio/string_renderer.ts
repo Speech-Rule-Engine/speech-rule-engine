@@ -18,9 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AbstractAudioRenderer } from './abstract_audio_renderer';
-import { personalityMarkup } from './audio_util';
-import { AuditoryDescription } from './auditory_description';
+import { Engine } from '../common/engine.js';
+import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
+import { personalityMarkup } from './audio_util.js';
+import { AuditoryDescription } from './auditory_description.js';
 
 export class StringRenderer extends AbstractAudioRenderer {
   /**
@@ -42,8 +43,25 @@ export class StringRenderer extends AbstractAudioRenderer {
         continue;
       }
       const join = descr.join;
-      str += typeof join === 'undefined' ? this.getSeparator() : join;
+      str += typeof join === 'undefined' ? this.separator : join;
     }
     return str;
+  }
+}
+
+/**
+ * Auxiliary rendering to add counter or reference elments for reading output.
+ */
+export class CountingRenderer extends StringRenderer {
+  /**
+   * @override
+   */
+  public finalize(str: string): string {
+    const output = super.finalize(str);
+    const count =
+      Engine.getInstance().modality === 'braille' ? '⣿⠀⣿⠀⣿⠀⣿⠀⣿⠀' : '0123456789';
+    let second = new Array(Math.trunc(output.length / 10) + 1).join(count);
+    second += count.slice(0, output.length % 10);
+    return output + '\n' + second;
   }
 }
