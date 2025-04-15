@@ -133,7 +133,7 @@ export class StaticTrieNode extends AbstractTrieNode<Node> {
    * @param constraint The constraint the node represents.
    * @param test The constraint test of this node.
    */
-  constructor(constraint: string, test: ((p1: Node) => boolean) | null) {
+  constructor(constraint: string, test: ((p1: Element) => boolean) | null) {
     super(constraint, test);
     this.kind = TrieNodeKind.STATIC;
   }
