@@ -86,7 +86,7 @@ abstract class FunctionsStore<S> {
   }
 }
 
-export type CustomQuery = (p1: Node) => Node[];
+export type CustomQuery = (p1: Element) => Element[];
 
 export class CustomQueries extends FunctionsStore<CustomQuery> {
   /**
@@ -98,7 +98,7 @@ export class CustomQueries extends FunctionsStore<CustomQuery> {
   }
 }
 
-export type CustomString = (p1: Node) => Span[];
+export type CustomString = (p1: Element) => Span[];
 
 export class CustomStrings extends FunctionsStore<CustomString> {
   /**
@@ -118,7 +118,7 @@ export class CustomStrings extends FunctionsStore<CustomString> {
  * between the descriptions computed by a rule.
  */
 export type ContextFunction = (
-  p1: Node[] | Node,
+  p1: Element[] | Element,
   p2: string | null
 ) => () => string | AuditoryDescription[];
 
