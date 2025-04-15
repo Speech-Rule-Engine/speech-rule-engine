@@ -67,7 +67,7 @@ export class SpeechRuleEngine {
    * Default evaluators collated by locale and modality.
    */
   private evaluators_: {
-    [key: string]: { [key: string]: (p1: Node) => AuditoryDescription[] };
+    [key: string]: { [key: string]: (p1: Element) => AuditoryDescription[] };
   } = {};
 
   public speechStructure: SpeechStructure = null;
@@ -87,7 +87,7 @@ export class SpeechRuleEngine {
    * @param rule A speech rule.
    * @param node DOM node to test applicability of the rule.
    */
-  public static debugSpeechRule(rule: SpeechRule, node: Node) {
+  public static debugSpeechRule(rule: SpeechRule, node: Element) {
     const prec = rule.precondition;
     const queryResult = rule.context.applyQuery(node, prec.query);
     Debugger.getInstance().output(
@@ -108,7 +108,7 @@ export class SpeechRuleEngine {
    * @param name Rule to debug.
    * @param node DOM node to test applicability of the rule.
    */
-  public static debugNamedSpeechRule(name: string, node: Node) {
+  public static debugNamedSpeechRule(name: string, node: Element) {
     const rules = SpeechRuleEngine.getInstance().trie.collectRules();
     const allRules = rules.filter((rule) => rule.name == name);
     for (let i = 0, rule; (rule = allRules[i]); i++) {
@@ -221,7 +221,7 @@ export class SpeechRuleEngine {
    */
   public processGrammar(
     context: SpeechRuleContext,
-    node: Node,
+    node: Element,
     grammar: GrammarState
   ) {
     const assignment: GrammarState = {};
@@ -245,7 +245,7 @@ export class SpeechRuleEngine {
       loc[store.modality] = fun;
       return;
     }
-    const mod: { [key: string]: (p1: Node) => AuditoryDescription[] } = {};
+    const mod: { [key: string]: (p1: Element) => AuditoryDescription[] } = {};
     mod[store.modality] = fun;
     this.evaluators_[store.locale] = mod;
   }
@@ -262,7 +262,7 @@ export class SpeechRuleEngine {
   public getEvaluator(
     locale: string,
     modality: string
-  ): (p1: Node) => AuditoryDescription[] {
+  ): (p1: Element) => AuditoryDescription[] {
     const loc =
       this.evaluators_[locale] ||
       this.evaluators_[DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]];
@@ -560,7 +560,7 @@ export class SpeechRuleEngine {
     descrs: AuditoryDescription[],
     props: { [key: string]: string },
     multi: boolean,
-    node: Node
+    node: Element
   ): AuditoryDescription[] {
     const personality: { [key: string]: string | number } = {};
     let pause = null;
@@ -752,7 +752,7 @@ export class SpeechRuleEngine {
    *     constraints. These are matched against properties of a rule.
    * @returns The speech rule if an applicable one exists.
    */
-  public lookupRule(node: Node, dynamic: DynamicCstr) {
+  public lookupRule(node: Element, dynamic: DynamicCstr) {
     if (
       !node ||
       (node.nodeType !== DomUtil.NodeType.ELEMENT_NODE &&
@@ -774,7 +774,7 @@ export class SpeechRuleEngine {
    *     constraints. These are matched against properties of a rule.
    * @returns All applicable speech rules.
    */
-  public lookupRules(node: Node, dynamic: DynamicCstr): SpeechRule[] {
+  public lookupRules(node: Element, dynamic: DynamicCstr): SpeechRule[] {
     return this.trie.lookupRules(node, dynamic.allProperties());
   }
 

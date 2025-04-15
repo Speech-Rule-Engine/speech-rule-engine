@@ -56,7 +56,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node.js';
  * @returns A function returning a string.
  */
 export function nodeCounter(
-  nodes: Node[],
+  nodes: Element[],
   context: string | null
 ): () => string {
   const split = context.split('-');

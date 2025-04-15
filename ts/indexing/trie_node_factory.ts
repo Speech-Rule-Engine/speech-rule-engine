@@ -97,7 +97,7 @@ const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
  *    xpath expression.
  */
 // TODO (TS): Improve methods by testing for Element type.
-function constraintTest(constraint: string): ((p1: Node) => boolean) | null {
+function constraintTest(constraint: string): ((p1: Element) => boolean) | null {
   // @self::*
   if (constraint.match(/^self::\*$/)) {
     return (_node) => true;
@@ -235,7 +235,7 @@ class QueryTrieNode extends StaticTrieNode {
   /**
    * @override
    */
-  public applyTest(object: Node) {
+  public applyTest(object: Element) {
     return this.test
       ? this.test(object)
       : this.context.applyQuery(object, this.constraint) === object;
@@ -260,7 +260,7 @@ class BooleanTrieNode extends StaticTrieNode {
   /**
    * @override
    */
-  public applyTest(object: Node) {
+  public applyTest(object: Element) {
     return this.test
       ? this.test(object)
       : this.context.applyConstraint(object, this.constraint);
