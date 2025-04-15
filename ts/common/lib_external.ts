@@ -21,7 +21,7 @@
  */
 
 import * as Xmldom from '@xmldom/xmldom';
-import wgx from 'wicked-good-xpath';
+import * as wgx from 'wicked-good-xpath';
 
 export const xmldom = Xmldom;
 export const document = new xmldom.DOMImplementation().createDocument('', '');
