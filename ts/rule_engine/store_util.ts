@@ -31,7 +31,7 @@ import { Engine } from '../common/engine.js';
  * @returns A function returning a string.
  */
 export function nodeCounter(
-  nodes: Node[],
+  nodes: Element[],
   context: string | null
 ): () => string {
   // Local state.
@@ -58,7 +58,7 @@ export function nodeCounter(
  *     returns a personality description of a single pause.
  */
 export function pauseSeparator(
-  _nodes: Node[],
+  _nodes: Element[],
   context: string
 ): () => AuditoryDescription[] {
   const numeral = parseFloat(context);

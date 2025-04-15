@@ -31,7 +31,7 @@ import { convertVulgarFraction } from '../l10n/transformers.js';
  * @param context The context string.
  * @returns The context function returning ordinals.
  */
-export function ordinalCounter(_node: Node, context: string): () => string {
+export function ordinalCounter(_node: Element, context: string): () => string {
   let counter = 0;
   return function () {
     return LOCALE.NUMBERS.numericOrdinal(++counter) + ' ' + context;
@@ -93,7 +93,7 @@ export function vulgarFraction(node: Element): Span[] {
  * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
-export function ordinalPosition(node: Node): Span[] {
+export function ordinalPosition(node: Element): Span[] {
   const children = DomUtil.toArray(node.parentNode.childNodes);
   return Span.singleton(
     LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString()
