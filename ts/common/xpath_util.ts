@@ -53,13 +53,13 @@ export const xpath: {
   currentDocument: Document;
   evaluate: (
     x: string,
-    node: Node,
+    node: Element,
     nsr: Resolver,
     rt: number,
     result: XPathResult
   ) => XPathResult;
   result: any;
-  createNSResolver: (nodeResolver: Node) => XPathNSResolver;
+  createNSResolver: (nodeResolver: Element) => XPathNSResolver;
 } = {
   currentDocument: null,
   evaluate: xpathSupported()
@@ -112,7 +112,7 @@ class Resolver {
  */
 function evaluateXpath(
   expression: string,
-  rootNode: Node,
+  rootNode: Element,
   type: number
 ): XPathResult {
   return Engine.getInstance().mode === EngineConst.Mode.HTTP &&
@@ -136,7 +136,7 @@ function evaluateXpath(
  * @param rootNode The HTML node to start evaluating the XPath from.
  * @returns The array of children nodes that match.
  */
-export function evalXPath(expression: string, rootNode: Node): Node[] {
+export function evalXPath(expression: string, rootNode: Element): Element[] {
   let iterator: XPathResult;
   try {
     iterator = evaluateXpath(
@@ -154,7 +154,7 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
     xpathNode;
     xpathNode = iterator.iterateNext()
   ) {
-    results.push(xpathNode);
+    results.push(xpathNode as Element);
   }
   return results;
 }
@@ -167,7 +167,7 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
  * @param rootNode The HTML node to start evaluating the XPath from.
  * @returns The result of evaluating the xpath expression.
  */
-export function evaluateBoolean(expression: string, rootNode: Node): boolean {
+export function evaluateBoolean(expression: string, rootNode: Element): boolean {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.BOOLEAN_TYPE);
@@ -185,7 +185,7 @@ export function evaluateBoolean(expression: string, rootNode: Node): boolean {
  * @param rootNode The HTML node to start evaluating the XPath from.
  * @returns The result of evaluating the Xpath expression.
  */
-export function evaluateString(expression: string, rootNode: Node): string {
+export function evaluateString(expression: string, rootNode: Element): string {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.STRING_TYPE);

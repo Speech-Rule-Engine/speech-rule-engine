@@ -142,7 +142,7 @@ export class Trie {
    * @returns The speech rules that can be applied to the
    *     given node.
    */
-  public lookupRules(xml: Node, dynamic: string[][]): SpeechRule[] {
+  public lookupRules(xml: Element, dynamic: string[][]): SpeechRule[] {
     let nodes = [this.root];
     const rules = [];
     // Algorithm:

@@ -50,7 +50,7 @@ export class SpeechRuleContext {
    * @param funcName A function name.
    * @returns The list of resulting nodes.
    */
-  public applyCustomQuery(node: Node, funcName: string): Node[] {
+  public applyCustomQuery(node: Element, funcName: string): Element[] {
     const func = this.customQueries.lookup(funcName);
     return func ? func(node) : null;
   }
@@ -64,7 +64,7 @@ export class SpeechRuleContext {
    *     query.
    * @returns The list of resulting nodes.
    */
-  public applySelector(node: Node, expr: string): Node[] {
+  public applySelector(node: Element, expr: string): Element[] {
     const result = this.applyCustomQuery(node, expr);
     return result || XpathUtil.evalXPath(expr, node);
   }
@@ -78,7 +78,7 @@ export class SpeechRuleContext {
    *     query.
    * @returns The resulting node.
    */
-  public applyQuery(node: Node, expr: string): Node {
+  public applyQuery(node: Element, expr: string): Element {
     const results = this.applySelector(node, expr);
     if (results.length > 0) {
       return results[0];
@@ -95,7 +95,7 @@ export class SpeechRuleContext {
    *     query.
    * @returns True if application was successful.
    */
-  public applyConstraint(node: Node, expr: string): boolean {
+  public applyConstraint(node: Element, expr: string): boolean {
     const result = this.applyQuery(node, expr);
     return !!result || XpathUtil.evaluateBoolean(expr, node);
   }
@@ -108,7 +108,7 @@ export class SpeechRuleContext {
    *     function or a string.
    * @returns The result of applying expression to node.
    */
-  public constructString(node: Node, expr: string): string {
+  public constructString(node: Element, expr: string): string {
     const result = this.constructString_(node, expr);
     // TODO (span): We might need to join with the separator here.
     return Array.isArray(result)
@@ -125,7 +125,7 @@ export class SpeechRuleContext {
    * @param def An optional attribute list.
    * @returns The result of applying expression to node.
    */
-  public constructSpan(node: Node, expr: string, def: SpanAttrs): Span[] {
+  public constructSpan(node: Element, expr: string, def: SpanAttrs): Span[] {
     const result = this.constructString_(node, expr);
     // Add default to the last of the array;
     if (Array.isArray(result)) {
@@ -145,7 +145,7 @@ export class SpeechRuleContext {
    *     function or a string.
    * @returns The result of applying expression to node.
    */
-  private constructString_(node: Node, expr: string): string | Span[] {
+  private constructString_(node: Element, expr: string): string | Span[] {
     if (!expr) {
       return '';
     }
