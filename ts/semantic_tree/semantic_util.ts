@@ -251,7 +251,7 @@ export function addAttributes(to: SemanticNode, from: Element) {
   // TODO:
   // Propagate external attributes from singleton mrow-like elements.
   // Cleaner dealing with no breaking attributes.
-  if (from.hasAttributes()) {
+  if (from.attributes?.length) {
     const attrs = from.attributes;
     for (let i = attrs.length - 1; i >= 0; i--) {
       const key = attrs[i].name;

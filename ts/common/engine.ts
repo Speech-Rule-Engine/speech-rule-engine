@@ -22,6 +22,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 import * as EngineConst from './engine_const.js';
+import { SystemExternal } from './system_external.js';
 
 import { Debugger } from './debugger.js';
 import { Variables } from './variables.js';
@@ -361,7 +362,11 @@ export class Engine {
    * @param feature An object describing some setup features.
    */
   public configurate(feature: { [key: string]: boolean | string }) {
-    if (this.mode === EngineConst.Mode.HTTP && !this.config) {
+    if (
+      this.mode === EngineConst.Mode.HTTP &&
+      !SystemExternal.webworker &&
+      !this.config
+    ) {
       configBlocks(feature);
       this.config = true;
     }

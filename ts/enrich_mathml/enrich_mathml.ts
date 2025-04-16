@@ -21,7 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger.js';
+// import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
@@ -67,8 +67,8 @@ const IDS = new Map();
 export function enrich(mml: Element, semantic: SemanticTree): Element {
   // The first line is only to preserve output. This should eventually be
   // deleted.
+  // const oldMml = DomUtil.cloneNode(mml);
   IDS.clear();
-  const oldMml = DomUtil.cloneNode(mml);
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
     mml.setAttribute(
@@ -76,11 +76,11 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
       SemanticSkeleton.fromStructure(mml, semantic).toString()
     );
   }
-  Debugger.getInstance().generateOutput(() => [
-    formattedOutput(oldMml, 'Original MathML', SETTINGS.wiki),
-    formattedOutput(semantic, 'Semantic Tree', SETTINGS.wiki),
-    formattedOutput(mml, 'Semantically enriched MathML', SETTINGS.wiki)
-  ]);
+  // Debugger.getInstance().generateOutput(() => [
+  //   formattedOutput(oldMml, 'Original MathML', SETTINGS.wiki),
+  //   formattedOutput(semantic, 'Semantic Tree', SETTINGS.wiki),
+  //   formattedOutput(mml, 'Semantically enriched MathML', SETTINGS.wiki)
+  // ]);
   return mml;
 }
 
@@ -94,21 +94,21 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  * @returns The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
-  Debugger.getInstance().output('WALKING START: ' + semantic.toString());
+  // Debugger.getInstance().output('WALKING START: ' + semantic.toString());
   const specialCase = getCase(semantic);
   let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();
-    Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+    // Debugger.getInstance().output('WALKING END: ' + semantic.toString());
     return ascendNewNode(newNode);
   }
   if (semantic.mathml.length === 1) {
-    Debugger.getInstance().output('Walktree Case 0');
+    // Debugger.getInstance().output('Walktree Case 0');
     if (!semantic.childNodes.length) {
-      Debugger.getInstance().output('Walktree Case 0.1');
+      // Debugger.getInstance().output('Walktree Case 0.1');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
-      Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+      // Debugger.getInstance().output('WALKING END: ' + semantic.toString());
       return ascendNewNode(newNode);
     }
     const fchild = semantic.childNodes[0];
@@ -116,11 +116,11 @@ export function walkTree(semantic: SemanticNode): Element {
       semantic.childNodes.length === 1 &&
       fchild.type === SemanticType.EMPTY
     ) {
-      Debugger.getInstance().output('Walktree Case 0.2');
+      // Debugger.getInstance().output('Walktree Case 0.2');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
       newNode.appendChild(walkTree(fchild));
-      Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+      // Debugger.getInstance().output('WALKING END: ' + semantic.toString());
       return ascendNewNode(newNode);
     }
     // Children should not all be empty.
@@ -142,16 +142,16 @@ export function walkTree(semantic: SemanticNode): Element {
   );
   newNode = semantic.mathmlTree;
   if (newNode === null) {
-    Debugger.getInstance().output('Walktree Case 1');
+    // Debugger.getInstance().output('Walktree Case 1');
     newNode = introduceNewLayer(childrenList, semantic);
   } else {
     const attached = attachedElement(childrenList);
-    Debugger.getInstance().output('Walktree Case 2');
+    // Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
-      Debugger.getInstance().output('Walktree Case 2.1');
+      // Debugger.getInstance().output('Walktree Case 2.1');
       newNode = parentNode(attached);
     } else {
-      Debugger.getInstance().output('Walktree Case 2.2');
+      // Debugger.getInstance().output('Walktree Case 2.2');
       newNode = getInnerNode(newNode);
     }
   }
@@ -161,7 +161,7 @@ export function walkTree(semantic: SemanticNode): Element {
     IDS.set(semantic.id, true);
     EnrichAttr.setAttributes(newNode, semantic);
   }
-  Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+  // Debugger.getInstance().output('WALKING END: ' + semantic.toString());
   return ascendNewNode(newNode);
 }
 
@@ -200,13 +200,13 @@ export function introduceNewLayer(
     !SemanticUtil.hasEmptyTag(newNode) ||
     (!newNode.parentNode && semantic.parent)
   ) {
-    Debugger.getInstance().output('Walktree Case 1.1');
+    // Debugger.getInstance().output('Walktree Case 1.1');
     newNode = EnrichAttr.addMrow();
     if (info === lcaType.PRUNED) {
-      Debugger.getInstance().output('Walktree Case 1.1.0');
+      // Debugger.getInstance().output('Walktree Case 1.1.0');
       newNode = introduceLayerAboveLca(newNode, lca.node as Element, children);
     } else if (children[0]) {
-      Debugger.getInstance().output('Walktree Case 1.1.1');
+      // Debugger.getInstance().output('Walktree Case 1.1.1');
       const node = attachedElement(children);
       if (node) {
         const oldChildren = childrenSubset(parentNode(node), children);
@@ -244,7 +244,7 @@ function introduceLayerAboveLca(
   let innerNode = descendNode(lca);
   // Case if lca is actually the MathML root node.
   if (SemanticUtil.hasMathTag(innerNode)) {
-    Debugger.getInstance().output('Walktree Case 1.1.0.0');
+    // Debugger.getInstance().output('Walktree Case 1.1.0.0');
     moveSemanticAttributes(innerNode, mrow);
     DomUtil.toArray(innerNode.childNodes).forEach(function (x) {
       mrow.appendChild(x);
@@ -907,16 +907,16 @@ export function getInnerNode(node: Element): Element {
  * @param wiki Flag to specify wiki output.
  * @returns Formatted output string.
  */
-function formattedOutput(
-  element: Element | SemanticTree,
-  name: string,
-  wiki = false
-) {
-  const output = EnrichAttr.removeAttributePrefix(
-    DomUtil.formatXml(element.toString())
-  );
-  return wiki ? name + ':\n```html\n' + output + '\n```\n' : output;
-}
+// function formattedOutput(
+//   element: Element | SemanticTree,
+//   name: string,
+//   wiki = false
+// ) {
+//   const output = EnrichAttr.removeAttributePrefix(
+//     DomUtil.formatXml(element.toString())
+//   );
+//   return wiki ? name + ':\n```html\n' + output + '\n```\n' : output;
+// }
 
 /**
  * Collapses a punctuated node that only contains invisible separators.

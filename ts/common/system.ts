@@ -29,6 +29,9 @@ import * as ProcessorFactory from './processor_factory.js';
 import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 import { standardLoader } from '../speech_rules/math_map.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
+import * as DomUtil from './dom_util.js';
 
 /**
  * Version number.
@@ -399,6 +402,126 @@ export function exit(opt_value?: number) {
 }
 
 /**
+ * Function to translate expression into speech structure, with all speech
+ * components for all nodes.
+ *
+ * @param expr Processes a given MathML expression for translation.
+ * @returns The json structure containing all speech mappings.
+ */
+export function toSpeechStructure(expr: string): string {
+  return processString('speechStructure', expr);
+}
+
+/**
+ *  Web worker related API methods.
+ */
+import { LOCALE } from '../l10n/locale.js';
+
+type OptionsList = { [key: string]: string };
+type SpeechList = { [id: string]: { [mod: string]: string } };
+
+type WorkerStructure = {
+  speech?: SpeechList;
+  braille?: SpeechList;
+  mactions?: SpeechList;
+  options?: OptionsList;
+  translations?: OptionsList;
+  label?: string;
+  braillelabel?: string;
+};
+
+/**
+ * Compute speech structure for the expression.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerSpeech(
+  expr: string,
+  options: OptionsList
+): Promise<WorkerStructure> {
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the speech for the next rule set.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerNextRules(
+  expr: string,
+  options: OptionsList
+): Promise<WorkerStructure> {
+  // TODO: Don't do anything if no next rules!
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  options = SpeechGeneratorUtil.nextRules(options);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the speech for the next style wrt to a particular node.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @param id Semantic id of the focused node.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerNextStyle(
+  expr: string,
+  options: OptionsList,
+  id: string
+): Promise<WorkerStructure> {
+  // TODO: Don't do anything if no next style!
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  options.style = style;
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the structure returnable to the worker, containing all necessary
+ * speech content to be attached.
+ *
+ * @param mml The math expression.
+ * @param sxml The element.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+async function assembleWorkerStructure(
+  mml: Element,
+  sxml: Element,
+  options: OptionsList
+): Promise<WorkerStructure> {
+  await setupEngine(options);
+  Engine.getInstance().automark = true;
+  const json: WorkerStructure = {};
+  json.options = options;
+  json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+  json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
+  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
+  if (options.braille !== 'none') {
+    await setupEngine({
+      modality: 'braille',
+      locale: options.braille,
+      domain: 'default',
+      style: 'default'
+    });
+    json.braille = SpeechGeneratorUtil.computeBrailleStructure(sxml);
+    json.braillelabel = json.braille[root]['braille-none'];
+  }
+  json.label = json.speech[root]['speech-none'];
+  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
+  return json;
+}
+
+/**
  * Returns the default locale path, depending on the mode of operation.
  *
  * @param locale The locale iso.
@@ -406,7 +529,7 @@ export function exit(opt_value?: number) {
  */
 export const localePath = FileUtil.localePath;
 
-if (SystemExternal.documentSupported) {
+if (SystemExternal.documentSupported || SystemExternal.webworker) {
   setupEngine({ mode: EngineConst.Mode.HTTP }).then(() => setupEngine({}));
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>

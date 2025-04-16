@@ -22,110 +22,96 @@
  */
 
 import { Variables } from './variables.js';
+import { xpath, xmldom, document } from './lib_external.js';
 
 declare let global: any;
 declare let require: (name: string) => any;
 declare let process: any;
+declare const DedicatedWorkerGlobalScope: any;
 
-export class SystemExternal {
-  /**
-   * @returns The require method in node.
-   */
-  public static nodeRequire() {
-    return eval('require');
-  }
+const windowSupported = (() => !(typeof window === 'undefined'))();
+const documentSupported = (() =>
+  windowSupported && !(typeof window.document === 'undefined'))();
+const webworker = (() =>
+  !(typeof DedicatedWorkerGlobalScope === 'undefined'))();
+const nodeRequire = () => eval('require');
 
+export const SystemExternal: any = {
   /**
    * The local require function for NodeJS.
    *
    * @param library A library name.
    * @returns The library object that has been loaded.
    */
-  public static extRequire(library: string) {
+  extRequire(library: string) {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
-      // System.external.nodeRequire = eval('require');
-      return SystemExternal.nodeRequire()(library);
+      return nodeRequire()(library);
     }
     return null;
-  }
+  },
 
-  public static windowSupported: boolean = (() =>
-    !(typeof window === 'undefined'))();
+  windowSupported: windowSupported,
 
   /**
    * Check if DOM document is already supported in this JS.
    *
    * @returns True if document is defined.
    */
-  public static documentSupported: boolean = (() =>
-    SystemExternal.windowSupported &&
-    !(typeof window.document === 'undefined'))();
+  documentSupported: documentSupported,
+
+  /**
+   * Check if webworker environment.
+   *
+   * @returns True if the DedicatedWorkerGlobalScope is available.
+   */
+  webworker: webworker,
 
   /**
    * Xmldom library.
    */
-  public static xmldom = SystemExternal.documentSupported
-    ? window
-    : SystemExternal.extRequire('@xmldom/xmldom');
+  xmldom: xmldom,
 
   /**
    * DOM document implementation.
    */
-  public static document: Document = SystemExternal.documentSupported
-    ? window.document
-    : new SystemExternal.xmldom.DOMImplementation().createDocument('', '', 0);
-
-  /**
-   * Xpath library.
-   */
-  public static xpath: any = SystemExternal.documentSupported
-    ? document
-    : (function () {
-        const window = { document: {}, XPathResult: {} };
-        const wgx = SystemExternal.extRequire('wicked-good-xpath');
-        wgx.install(window);
-        (window.document as any).XPathResult = window.XPathResult;
-        return window.document;
-      })();
+  document: document,
 
   /**
    * The URL for Mathmaps for IE.
    */
-  public static mathmapsIePath =
+  mathmapsIePath:
     'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
     Variables.VERSION +
-    'mathmaps_ie.js';
+    'mathmaps_ie.js',
 
   /**
    * Filesystem library.
    */
-  public static fs = SystemExternal.documentSupported
-    ? null
-    : SystemExternal.extRequire('fs');
+  fs: documentSupported || webworker ? null : nodeRequire()('fs'),
 
   /**
    * The URL for SRE resources.
    */
-  public static url: string = Variables.url;
+  url: Variables.url,
 
   /**
    * Path to JSON files.
    */
-  public static jsonPath = (function () {
-    if (SystemExternal.documentSupported) {
-      return SystemExternal.url;
+  jsonPath: (function () {
+    if (documentSupported || webworker) {
+      return Variables.url;
     }
     if (process.env.SRE_JSON_PATH || global.SRE_JSON_PATH) {
       return process.env.SRE_JSON_PATH || global.SRE_JSON_PATH;
     }
     try {
-      const path = SystemExternal.nodeRequire().resolve('speech-rule-engine');
+      const path = nodeRequire().resolve('speech-rule-engine');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
     } catch (_err) {
       // continue regardless of error
     }
     try {
-      const path = SystemExternal.nodeRequire().resolve('.');
+      const path = nodeRequire().resolve('.');
       return path.replace(/sre\.js$/, '') + 'mathmaps';
     } catch (_err) {
       // continue regardless of error
@@ -133,15 +119,17 @@ export class SystemExternal {
     return typeof __dirname !== 'undefined'
       ? __dirname + (__dirname.match(/lib?$/) ? '/mathmaps' : '/lib/mathmaps')
       : process.cwd() + '/lib/mathmaps';
-  })();
+  })(),
 
   /**
    * Path to Xpath library file.
    */
-  public static WGXpath = Variables.WGXpath;
+  WGXpath: Variables.WGXpath,
 
   /**
    * WGXpath library.
    */
-  public static wgxpath: any = null;
-}
+  wgxpath: null as any,
+
+  xpath: xpath
+};

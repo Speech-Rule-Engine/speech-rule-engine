@@ -25,11 +25,7 @@ import { AxisMap } from '../rule_engine/dynamic_cstr.js';
 import { RebuildStree } from '../walker/rebuild_stree.js';
 import { SpeechGenerator } from './speech_generator.js';
 import * as SpeechGeneratorUtil from './speech_generator_util.js';
-import * as EngineConst from '../common/engine_const.js';
-import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { LOCALE } from '../l10n/locale.js';
-
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
@@ -113,77 +109,20 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    * @override
    */
   public nextRules() {
-    const options = this.getOptions();
-    // Rule cycling only makes sense for speech modality.
-    if (options.modality !== 'speech') {
-      return;
-    }
-    const prefs = ClearspeakPreferences.getLocalePreferences();
-    if (!prefs[options.locale]) {
-      return;
-    }
-    EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
-    options.domain =
-      options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-    options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
-    this.setOptions(options);
+    this.setOptions(SpeechGeneratorUtil.nextRules(this.getOptions()));
   }
 
   /**
    * @override
    */
   public nextStyle(id: string) {
-    this.setOption('style', this.nextStyle_(this.getRebuilt().nodeDict[id]));
-  }
-
-  /**
-   * Cycles to next style or preference of the speech rule set if possible.
-   *
-   * @param node The semantic node currently in focus.
-   * @returns The new style name.
-   */
-  private nextStyle_(node: SemanticNode): string {
-    const {
-      modality: modality,
-      domain: domain,
-      style: style
-    } = this.getOptions();
-    // Rule cycling only makes sense for speech modality.
-    if (modality !== 'speech') {
-      return style;
-    }
-
-    if (domain === 'mathspeak') {
-      const styles = ['default', 'brief', 'sbrief'];
-      const index = styles.indexOf(style);
-      if (index === -1) {
-        return style;
-      }
-      return index >= styles.length - 1 ? styles[0] : styles[index + 1];
-    }
-    if (domain === 'clearspeak') {
-      const prefs = ClearspeakPreferences.getLocalePreferences();
-      const loc = prefs['en'];
-      // TODO: use correct locale.
-      if (!loc) {
-        return 'default';
-      }
-      // TODO: return the previous one?
-      const smart = ClearspeakPreferences.relevantPreferences(node);
-      const current = ClearspeakPreferences.findPreference(style, smart);
-      const options = loc[smart].map(function (x) {
-        return x.split('_')[1];
-      });
-      const index = options.indexOf(current);
-      if (index === -1) {
-        return style;
-      }
-      const next =
-        index >= options.length - 1 ? options[0] : options[index + 1];
-      const result = ClearspeakPreferences.addPreference(style, smart, next);
-      return result;
-    }
-    return style;
+    this.setOption(
+      'style',
+      SpeechGeneratorUtil.nextStyle(
+        this.getRebuilt().nodeDict[id],
+        this.getOptions()
+      )
+    );
   }
 
   /**

@@ -25,19 +25,31 @@ import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { SpeechStructure } from '../rule_engine/speech_structure.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+// import { RebuildStree } from '../walker/rebuild_stree.js';
+
+type OptionsList = { [key: string]: string };
 
 /**
  * Compute speech string for the xml version of the semantic tree.
  *
  * @param xml The xml element.
+ * @param clear If the speech structure is to be cleared in the engine.
  * @returns A list of auditory descriptions
  *     for the node.
  */
-export function computeSpeech(xml: Element): AuditoryDescription[] {
-  return SpeechRuleEngine.getInstance().evaluateNode(xml);
+export function computeSpeech(
+  xml: Element,
+  clear = false
+): AuditoryDescription[] {
+  const result = SpeechRuleEngine.getInstance().evaluateNode(xml, clear);
+  return result;
 }
 
 /**
@@ -56,10 +68,11 @@ function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
  * Computes speech markup for the xml version of the semantic tree.
  *
  * @param tree The semantic node as XML.
+ * @param clear If the speech structure is to be cleared in the engine.
  * @returns The speech string.
  */
-export function computeMarkup(tree: Element): string {
-  const descrs = computeSpeech(tree);
+export function computeMarkup(tree: Element, clear = false): string {
+  const descrs = computeSpeech(tree, clear);
   return AuralRendering.markup(descrs);
 }
 
@@ -134,31 +147,19 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
  * @returns The prefix speech string.
  */
 export function retrievePrefix(semantic: SemanticNode): string {
-  const descrs = computePrefix(semantic);
+  const node = computePrefixNode(semantic);
+  const descrs = computePrefix(node);
   return AuralRendering.markup(descrs);
 }
 
 /**
- * Adds a speech prefix if necessary.
+ * Computes prefix speech.
  *
- * @param semantic The semantic tree node.
- * @returns A list of auditory descriptions
- *     for the prefix.
+ * @param xml The xml element.
+ * @param node
+ * @returns A list of auditory descriptions for the prefix.
  */
-function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
-  const tree = SemanticTree.fromRoot(semantic);
-  const nodes = XpathUtil.evalXPath(
-    './/*[@id="' + semantic.id + '"]',
-    tree.xml()
-  ) as Element[];
-  let node = nodes[0];
-  if (nodes.length > 1) {
-    // Find the node we actually want. Here the problem is that our semantic
-    // tree is actually a DAG: While elements can appear as children only once,
-    // they can appear in multiple content nodes. XML serialization can
-    // therefore not create unique ids.
-    node = nodeAtPosition(semantic, nodes) || node;
-  }
+export function computePrefix(node: Element): AuditoryDescription[] {
   return node
     ? SpeechRuleEngine.getInstance().runInSetting(
         {
@@ -174,6 +175,31 @@ function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
       )
     : [];
 }
+
+/**
+ * Computes the exact XML node from a semantic node for which a prefix is to be
+ * computed.
+ *
+ * @param semantic The semantic tree node.
+ * @returns An XML node corresponding to the tree node.
+ */
+function computePrefixNode(semantic: SemanticNode): Element {
+  const tree = SemanticTree.fromRoot(semantic);
+  const nodes = XpathUtil.evalXPath(
+    './/*[@id="' + semantic.id + '"]',
+    tree.xml()
+  ) as Element[];
+  let node = nodes[0];
+  if (nodes.length > 1) {
+    // Find the node we actually want. Here the problem is that our semantic
+    // tree is actually a DAG: While elements can appear as children only once,
+    // they can appear in multiple content nodes. XML serialization can
+    // therefore not create unique ids.
+    node = nodeAtPosition(semantic, nodes) || node;
+  }
+  return node;
+}
+
 /**
  * Finds the nodes at the same position as the semantic node in a list of XML
  * nodes. We define position via the path to root.
@@ -264,6 +290,56 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
   }
 }
 
+enum NeededAttributes {
+  ID = 'data-semantic-id',
+  PARENT = 'data-semantic-parent',
+  LEVEL = 'aria-level',
+  POS = 'aria-posinset',
+  ROLE = 'role'
+}
+
+/**
+ *
+ * @param stree
+ */
+function getNeededAttributes(stree: Element) {
+  const result: { [K in NeededAttributes]?: string } = {};
+  for (const [, attr] of Object.entries(NeededAttributes)) {
+    result[attr] = stree.getAttribute(attr);
+  }
+  return result;
+}
+
+/**
+ * Connects maction nodes as alternatives if they are collapsed in the actual
+ * node.
+ *
+ * @param mml The mathml element for the node.
+ * @param stree The XML for the semantic tree.
+ * @returns Mapping for semantic and aria attributes missing on mactions.
+ */
+export function connectMactionSelections(mml: Element, stree: Element) {
+  const mactions = DomUtil.querySelectorAll(mml, 'maction');
+  const results: { [key: string]: { [K in NeededAttributes]?: string } } = {};
+  for (let i = 0, maction; (maction = mactions[i]); i++) {
+    // Get the span with the maction id in node.
+    const selection = parseInt(maction.getAttribute('selection'));
+    const children = Array.from(maction.childNodes);
+    const semantic = children.filter((child) =>
+      (child as Element).hasAttribute(NeededAttributes.ID)
+    )[0] as Element;
+    const selected = children[selection - 1];
+    if (!semantic || semantic === selected) {
+      continue;
+    }
+    const mid = semantic.getAttribute(Attribute.ID);
+    const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    cst.setAttribute('alternative', mid);
+    results[maction.getAttribute('id')] = getNeededAttributes(semantic);
+  }
+  return results;
+}
+
 /**
  * Connects all maction nodes as alternatives.
  *
@@ -284,11 +360,12 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * Computes a speech summary if it exists.
  *
  * @param node The XML node.
+ * @param options
  * @returns The summary speech string.
  */
 export function retrieveSummary(
   node: Element,
-  options: { [key: string]: string } = {}
+  options: OptionsList = {}
 ): string {
   const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
@@ -298,12 +375,13 @@ export function retrieveSummary(
  * Adds a speech summary if necessary.
  *
  * @param node The XML node.
+ * @param options
  * @returns A list of auditory descriptions
  *     for the summary.
  */
-function computeSummary(
+export function computeSummary(
   node: Element,
-  options: { [key: string]: string } = {}
+  options: OptionsList = {}
 ): AuditoryDescription[] {
   const preOption = options.locale ? { locale: options.locale } : {};
   return node
@@ -318,4 +396,128 @@ function computeSummary(
         }
       )
     : [];
+}
+
+/**
+ * Adds a speech summary if necessary.
+ *
+ * @param node The XML node.
+ * @returns A list of auditory descriptions
+ *     for the summary.
+ */
+export function computePostfix(node: Element): AuditoryDescription[] {
+  // TODO: Maybe add personality.
+  const postfix = [];
+  if (node.getAttribute('role') === SemanticRole.MGLYPH) {
+    postfix.push(new AuditoryDescription({ text: 'image', personality: {} }));
+  }
+  if (node.hasAttribute('href')) {
+    postfix.push(new AuditoryDescription({ text: 'link', personality: {} }));
+  }
+  // TODO: This is trickery. Make that cleaner.
+  SpeechRuleEngine.getInstance().speechStructure.addNode(
+    node,
+    postfix,
+    'postfix'
+  );
+  return postfix;
+}
+
+// Changes for the webworker
+
+/**
+ *
+ * @param structure
+ */
+export function completeModalities(structure: SpeechStructure) {
+  structure.completeModality('speech', computeSpeech);
+  structure.completeModality('prefix', computePrefix);
+  structure.completeModality('postfix', computePostfix);
+  structure.completeModality('summary', computeSummary);
+}
+
+/**
+ *
+ * @param sxml
+ */
+export function computeSpeechStructure(sxml: Element) {
+  computeSpeech(sxml, true);
+  const structure = SpeechRuleEngine.getInstance().speechStructure;
+  completeModalities(structure);
+  return structure.json(['none', 'ssml']);
+}
+
+/**
+ *
+ * @param sxml
+ */
+export function computeBrailleStructure(sxml: Element) {
+  computeSpeech(sxml, true);
+  const structure = SpeechRuleEngine.getInstance().speechStructure;
+  return structure.json(['none']);
+}
+
+/**
+ *
+ * @param options
+ */
+export function nextRules(options: OptionsList): OptionsList {
+  // Rule cycling only makes sense for speech modality.
+  if (options.modality !== 'speech') {
+    return options;
+  }
+  const prefs = ClearspeakPreferences.getLocalePreferences();
+  if (!prefs[options.locale]) {
+    return options;
+  }
+  EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
+  options.domain = options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
+  options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+  return options;
+}
+
+/**
+ * Cycles to next style or preference of the speech rule set if possible.
+ *
+ * @param node The semantic node currently in focus.
+ * @param options
+ * @returns The new style name.
+ */
+export function nextStyle(node: SemanticNode, options: OptionsList) {
+  const { modality: modality, domain: domain, style: style } = options;
+  // Rule cycling only makes sense for speech modality.
+  if (modality !== 'speech') {
+    return style;
+  }
+
+  if (domain === 'mathspeak') {
+    const styles = ['default', 'brief', 'sbrief'];
+    const index = styles.indexOf(style);
+    if (index === -1) {
+      return style;
+    }
+    return index >= styles.length - 1 ? styles[0] : styles[index + 1];
+  }
+  if (domain === 'clearspeak') {
+    const prefs = ClearspeakPreferences.getLocalePreferences();
+    const loc = prefs['en'];
+    // TODO: use correct locale.
+    if (!loc) {
+      return 'default';
+    }
+    // TODO: return the previous one?
+    const smart = ClearspeakPreferences.relevantPreferences(node);
+    const current = ClearspeakPreferences.findPreference(style, smart);
+    const options = loc[smart].map(function (x) {
+      return x.split('_')[1];
+    });
+    const index = options.indexOf(current);
+    if (index === -1) {
+      return style;
+    }
+    const next = index >= options.length - 1 ? options[0] : options[index + 1];
+    const result = ClearspeakPreferences.addPreference(style, smart, next);
+    return result;
+  }
+  return style;
 }

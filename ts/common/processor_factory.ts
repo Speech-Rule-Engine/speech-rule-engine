@@ -145,7 +145,7 @@ set(
       // This avoids temporary attributes (e.g., for grammar) to bleed into
       // the tree.
       const clone = DomUtil.cloneNode(xml);
-      let speech = SpeechGeneratorUtil.computeMarkup(clone);
+      let speech = SpeechGeneratorUtil.computeMarkup(clone, true);
       if (setting === EngineConst.Speech.SHALLOW) {
         xml.setAttribute('speech', AuralRendering.finalize(speech));
         return xml;
@@ -174,7 +174,7 @@ set(
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
       const xml = Semantic.xmlTree(mml);
-      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return AuralRendering.finalize(AuralRendering.markup(descrs));
     },
     pprint: function (speech) {
@@ -234,7 +234,7 @@ set(
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
       const xml = Semantic.xmlTree(mml);
-      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return descrs;
     },
     print: function (descrs) {
@@ -393,3 +393,36 @@ set(
     }
   })
 );
+
+set(
+  new Processor<RebuildStree>('rebuildStree', {
+    processor: function (expr) {
+      return new RebuildStree(DomUtil.parseInput(expr));
+    }
+  })
+);
+
+// The new speech structure for the webworker integration.
+set(
+  new Processor('speechStructure', {
+    processor: function (expr) {
+      // Direct from MathML
+      // process('speech', expr);
+      // Indirect from rebuilt semantic tree
+      const mml = DomUtil.parseInput(expr);
+      const rebuilt = new RebuildStree(mml);
+      const sxml = rebuilt.stree.xml();
+      SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+      return SpeechGeneratorUtil.computeSpeechStructure(sxml);
+    },
+    print: function (descrs) {
+      return JSON.stringify(descrs);
+    },
+    pprint: function (descrs) {
+      return JSON.stringify(descrs, null, 2);
+    }
+  })
+);
+
+// ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
+// echo "<math><mi>a</mi><mi>b</mi></math>" | ./bin/sre -T -P -d clearspeak

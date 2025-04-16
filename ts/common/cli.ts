@@ -36,9 +36,10 @@ export class Cli {
   /**
    * Commander library.
    */
-  public static commander = SystemExternal.documentSupported
-    ? null
-    : SystemExternal.extRequire('commander').program;
+  public static commander =
+    SystemExternal.documentSupported || SystemExternal.webworker
+      ? null
+      : SystemExternal.extRequire('commander').program;
 
   public setup: { [key: string]: string | boolean } = {
     mode: EngineConst.Mode.SYNC
@@ -309,6 +310,9 @@ export class Cli {
         '-u, --rebuild',
         'Rebuild semantic tree from enriched MathML.',
         () => processor('rebuild')
+      )
+      .option('-T, --speechStructure', 'Return speech structure only.', () =>
+        processor('speechStructure')
       )
       .option(
         '-t, --latex',
