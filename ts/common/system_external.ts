@@ -145,3 +145,5 @@ export class SystemExternal {
    */
   public static wgxpath: any = null;
 }
+// Backwards compatibility for 4.X
+export default SystemExternal;

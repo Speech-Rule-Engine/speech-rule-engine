@@ -1,5 +1,5 @@
 //
-// Copyright 2014-21 Volker Sorge
+// Copyright 2014-25 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '4.1.1';
+  public static readonly VERSION: string = '4.1.2';
 
   /**
    * Locale mapping to language names.

@@ -18,7 +18,7 @@
       "./node_modules/@types",
       "./node_modules/@node"
     ],
-    "outDir": "js"
+    "outDir": "mjs"
   },
   "include": ["ts/**/*"],
   "typeRoots": [],
