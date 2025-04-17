@@ -379,6 +379,8 @@ export class Engine {
     }
   }
 }
+// Backwards compatibility for 4.X
+export default Engine;
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
