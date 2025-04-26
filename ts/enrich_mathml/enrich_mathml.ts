@@ -70,7 +70,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
   // const oldMml = DomUtil.cloneNode(mml);
   IDS.clear();
   walkTree(semantic.root);
-  if (Engine.getInstance().structure) {
+  if (Engine.getInstance().options.structure) {
     mml.setAttribute(
       EnrichAttr.Attribute.STRUCTURE,
       SemanticSkeleton.fromStructure(mml, semantic).toString()

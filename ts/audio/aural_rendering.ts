@@ -48,7 +48,7 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
  * @override
  */
 export function setSeparator(sep: string) {
-  const renderer = renderers.get(Engine.getInstance().markup);
+  const renderer = renderers.get(Engine.getInstance().options.markup);
   if (renderer) {
     renderer.separator = sep;
   }
@@ -58,7 +58,7 @@ export function setSeparator(sep: string) {
  * @override
  */
 export function getSeparator() {
-  const renderer = renderers.get(Engine.getInstance().markup);
+  const renderer = renderers.get(Engine.getInstance().options.markup);
   return renderer ? renderer.separator : '';
 }
 
@@ -66,7 +66,7 @@ export function getSeparator() {
  * @override
  */
 export function markup(descrs: AuditoryDescription[]) {
-  const renderer = renderers.get(Engine.getInstance().markup);
+  const renderer = renderers.get(Engine.getInstance().options.markup);
   if (!renderer) {
     return '';
   }
@@ -81,7 +81,7 @@ export function merge(strs: (Span | string)[]) {
   const span = strs.map((s) => {
     return typeof s === 'string' ? Span.stringEmpty(s) : s;
   });
-  const renderer = renderers.get(Engine.getInstance().markup);
+  const renderer = renderers.get(Engine.getInstance().options.markup);
   if (!renderer) {
     return strs.join();
   }
@@ -92,7 +92,7 @@ export function merge(strs: (Span | string)[]) {
  * @override
  */
 export function finalize(str: string) {
-  const renderer = renderers.get(Engine.getInstance().markup);
+  const renderer = renderers.get(Engine.getInstance().options.markup);
   if (!renderer) {
     return str;
   }
@@ -103,7 +103,7 @@ export function finalize(str: string) {
  * @override
  */
 export function error(key: string) {
-  const renderer = renderers.get(Engine.getInstance().markup);
+  const renderer = renderers.get(Engine.getInstance().options.markup);
   if (!renderer) {
     return '';
   }
@@ -129,5 +129,5 @@ export function registerRenderer(
  * @returns True if it is an instance of the given type.
  */
 export function isXml(): boolean {
-  return renderers.get(Engine.getInstance().markup) instanceof XmlRenderer;
+  return renderers.get(Engine.getInstance().options.markup) instanceof XmlRenderer;
 }

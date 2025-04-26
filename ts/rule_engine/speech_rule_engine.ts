@@ -37,6 +37,7 @@ import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
+import { Options } from '../common/options.js';
 import * as EngineConst from '../common/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
@@ -178,17 +179,19 @@ export class SpeechRuleEngine {
     settings: { [feature: string]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
-    const engine = Engine.getInstance() as any;
-    const save: { [feature: string]: string | boolean } = {};
-    for (const [key, val] of Object.entries(settings)) {
-      save[key] = engine[key];
-      engine[key] = val;
+    const engine = Engine.getInstance();
+    const save = engine.options as any;
+    const newOpt = new Options() as any;
+    for (const key of Options.BINARY_FEATURES) {
+      newOpt[key] = settings[key] ?? save[key];
     }
+    for (const key of Options.STRING_FEATURES) {
+      newOpt[key] = settings[key] ?? save[key];
+    }
+    engine.options = newOpt;
     engine.setDynamicCstr();
     const result = callback();
-    for (const [key, val] of Object.entries(save)) {
-      engine[key] = val;
-    }
+    engine.options = save;
     engine.setDynamicCstr();
     return result;
   }
@@ -317,7 +320,7 @@ export class SpeechRuleEngine {
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
     const result = this.evaluateTreeInternal_(node);
-    this.speechStructure.addNode(node, result, Engine.getInstance().modality);
+    this.speechStructure.addNode(node, result, Engine.getInstance().options.modality);
     return result;
   }
 
@@ -336,10 +339,10 @@ export class SpeechRuleEngine {
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
-      if (engine.strict) {
+      if (engine.options.strict) {
         return [];
       }
-      result = this.getEvaluator(engine.locale, engine.modality)(node);
+      result = this.getEvaluator(engine.options.locale, engine.options.modality)(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
@@ -681,7 +684,7 @@ export class SpeechRuleEngine {
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
     const dynamic = Engine.getInstance().dynamicCstr;
-    const strict = Engine.getInstance().strict;
+    const strict = Engine.getInstance().options.strict;
     const trie = this.trie;
     const props: { [key: string]: string[] } = {};
     let locale = dynamic.getValue(Axis.LOCALE);

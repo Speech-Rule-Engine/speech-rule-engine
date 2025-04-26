@@ -346,7 +346,7 @@ export class SemanticSkeleton {
     setsize: number,
     role: string = !Options.tree ? 'treeitem' : level ? 'treeitem' : 'tree'
   ) {
-    if (!Engine.getInstance().aria || !node) {
+    if (!Engine.getInstance().options.aria || !node) {
       return;
     }
     // Aria elements

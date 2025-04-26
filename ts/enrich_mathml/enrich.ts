@@ -47,11 +47,11 @@ export function semanticMathmlNode(mml: Element): Element {
 export function semanticMathmlSync(expr: string): Element {
   const mml = DomUtil.parseInput(expr);
   try {
-    semanticMathmlNode(mml);
+    return semanticMathmlNode(mml);
   } catch (err) {
     console.error(err);
+    return mml;
   }
-  return semanticMathmlNode(mml);
 }
 
 /**

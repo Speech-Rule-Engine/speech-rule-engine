@@ -83,7 +83,7 @@ export function parseInput(input: string): Element {
 
 // let extIdCount = 0;
 // function addMarkers(node: Element) {
-//   if (Engine.getInstance().automark && tagName(node) !== 'STREE') {
+//   if (Engine.getInstance().options.automark && tagName(node) !== 'STREE') {
 //     extIdCount = 0;
 //     addExtId(node);
 //   }

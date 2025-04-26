@@ -21,6 +21,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
 import { Engine, EnginePromise, SREError } from './engine.js';
+import { Options } from './options.js';
 import { setup } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
@@ -64,13 +65,13 @@ export async function setupEngine(feature: {
  */
 export function engineSetup(): { [key: string]: boolean | string } {
   const engineFeatures = ['mode'].concat(
-    Engine.STRING_FEATURES,
-    Engine.BINARY_FEATURES
+    Options.STRING_FEATURES,
+    Options.BINARY_FEATURES
   );
   const engine = Engine.getInstance() as any;
   const features: { [key: string]: string | boolean } = {};
   engineFeatures.forEach(function (x) {
-    features[x] = engine[x];
+    features[x] = engine.options[x];
   });
   features.json = SystemExternal.jsonPath;
   features.xpath = SystemExternal.WGXpath;
@@ -500,7 +501,7 @@ async function assembleWorkerStructure(
   options: OptionsList
 ): Promise<WorkerStructure> {
   await setupEngine(options);
-  Engine.getInstance().automark = true;
+  Engine.getInstance().options.automark = true;
   const json: WorkerStructure = {};
   json.options = options;
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);

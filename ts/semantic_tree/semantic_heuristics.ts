@@ -90,7 +90,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => Engine.getInstance().options.domain === 'clearspeak'
   )
 );
 
@@ -111,7 +111,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => Engine.getInstance().options.domain === 'clearspeak'
   )
 );
 
@@ -131,7 +131,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => Engine.getInstance().options.domain === 'clearspeak'
   )
 );
 
@@ -210,7 +210,7 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) =>
-      Engine.getInstance().modality === 'braille' &&
+      Engine.getInstance().options.modality === 'braille' &&
       node.type === SemanticType.IDENTIFIER
   )
 );

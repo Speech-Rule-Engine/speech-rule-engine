@@ -23,6 +23,7 @@ import * as MathMap from '../speech_rules/math_map.js';
 import * as BrowserUtil from './browser_util.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
+import { Options } from './options.js';
 import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
 
@@ -49,7 +50,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
   // we get a meaningful output.
   if (
     (feature.modality && feature.modality !== 'speech') ||
-    (!feature.modality && Engine.getInstance().modality !== 'speech')
+    (!feature.modality && Engine.getInstance().options.modality !== 'speech')
   ) {
     return;
   }
@@ -60,7 +61,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
     feature.domain = 'mathspeak';
     return;
   }
-  const locale = (feature.locale || Engine.getInstance().locale) as string;
+  const locale = (feature.locale || Engine.getInstance().options.locale) as string;
   const domain = feature.domain as string;
   if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
     if (domain !== 'mathspeak') {
@@ -91,21 +92,22 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
  */
 export async function setup(feature: { [key: string]: boolean | string }) {
   ensureDomain(feature);
-  const engine = Engine.getInstance() as any;
+  const engine = Engine.getInstance();
+  const options = engine.options as any;
   const setIf = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
-      engine[feat] = !!feature[feat];
+      options[feat] = !!feature[feat];
     }
   };
   const setMulti = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
-      engine[feat] = feature[feat];
+      options[feat] = feature[feat];
     }
   };
   setMulti('mode');
   engine.configurate(feature);
-  Engine.BINARY_FEATURES.forEach(setIf);
-  Engine.STRING_FEATURES.forEach(setMulti);
+  Options.BINARY_FEATURES.forEach(setIf);
+  Options.STRING_FEATURES.forEach(setMulti);
   if (feature.debug) {
     Debugger.getInstance().init();
   }
@@ -129,8 +131,8 @@ export async function setup(feature: { [key: string]: boolean | string }) {
     engine.init = false;
     return EnginePromise.get();
   }
-  if (engine.delay) {
-    engine.delay = false;
+  if (options.delay) {
+    options.delay = false;
     return EnginePromise.get();
   }
   return MathMap.loadLocale();
