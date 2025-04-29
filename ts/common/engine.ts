@@ -189,7 +189,7 @@ export class Engine {
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
           const value = opt_dynamic[feature];
           // TODO (TS): Make these features cleaner.
-          (this as any)[feature] = value;
+          (this.options as any)[feature] = value;
         }
       }
     }
