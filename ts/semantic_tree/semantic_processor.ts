@@ -35,7 +35,7 @@ import { SemanticNode } from './semantic_node.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
 import * as SemanticPred from './semantic_pred.js';
 import * as SemanticUtil from './semantic_util.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 
 interface BoundsType {
   type: SemanticType;

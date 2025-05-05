@@ -35,7 +35,7 @@ import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { SemanticSkeleton } from './semantic_skeleton.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 
 import * as DomUtil from '../common/dom_util.js';
 
