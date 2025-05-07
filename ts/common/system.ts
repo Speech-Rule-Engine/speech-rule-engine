@@ -75,7 +75,6 @@ export function engineSetup(): { [key: string]: boolean | string } {
   });
   features.json = SystemExternal.jsonPath;
   features.xpath = SystemExternal.WGXpath;
-  features.rules = engine.ruleSets.slice();
   return features;
 }
 

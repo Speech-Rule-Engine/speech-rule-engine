@@ -133,11 +133,6 @@ export class Options {
   public tree = false;
 
   /**
-   * List of rule sets given as the constructor functions.
-   */
-  public ruleSets: string[] = [];
-
-  /**
    * Strict interpretations of rules and constraints.
    */
   public strict = false;
