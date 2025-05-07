@@ -23,7 +23,7 @@ import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 
 export class Options {
 
-    /**
+  /**
    * Binary feature vector.
    */
   public static BINARY_FEATURES: string[] = [
@@ -36,7 +36,8 @@ export class Options {
     'aria',
     'pprint',
     'cayleyshort',
-    'linebreaks'
+    'linebreaks',
+    'tree'
   ];
 
   /**
@@ -48,7 +49,6 @@ export class Options {
     'domain',
     'speech',
     'walker',
-    'defaultLocale',
     'locale',
     'delay',
     'modality',
@@ -130,6 +130,7 @@ export class Options {
    */
   public structure = false;
   public aria = false;
+  public tree = false;
 
   /**
    * List of rule sets given as the constructor functions.

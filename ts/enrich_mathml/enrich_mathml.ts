@@ -73,7 +73,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
   if (Engine.getInstance().options.structure) {
     mml.setAttribute(
       EnrichAttr.Attribute.STRUCTURE,
-      SemanticSkeleton.fromStructure(mml, semantic).toString()
+      SemanticSkeleton.fromStructure(mml, semantic, Engine.getInstance().options).toString()
     );
   }
   // Debugger.getInstance().generateOutput(() => [
