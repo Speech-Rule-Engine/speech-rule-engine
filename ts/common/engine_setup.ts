@@ -23,6 +23,7 @@ import * as MathMap from '../speech_rules/math_map.js';
 import * as BrowserUtil from './browser_util.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
+import { Mode } from './engine_const.js';
 import { Options } from './options.js';
 import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
@@ -104,7 +105,10 @@ export async function setup(feature: { [key: string]: boolean | string }) {
       options[feat] = feature[feat];
     }
   };
-  setMulti('mode');
+  // Setting mode first!
+  if (typeof feature['mode'] !== 'undefined') {
+    engine.mode = feature['mode'] as Mode;
+  }
   engine.configurate(feature);
   Options.BINARY_FEATURES.forEach(setIf);
   Options.STRING_FEATURES.forEach(setMulti);

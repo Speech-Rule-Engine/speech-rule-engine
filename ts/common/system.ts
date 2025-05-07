@@ -64,12 +64,13 @@ export async function setupEngine(feature: {
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
-  const engineFeatures = ['mode'].concat(
+  const engineFeatures = [].concat(
     Options.STRING_FEATURES,
     Options.BINARY_FEATURES
   );
   const engine = Engine.getInstance() as any;
   const features: { [key: string]: string | boolean } = {};
+  features['mode'] = engine.mode;
   engineFeatures.forEach(function (x) {
     features[x] = engine.options[x];
   });
