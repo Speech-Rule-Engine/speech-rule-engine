@@ -23,7 +23,7 @@
 
 // import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
+import { Options } from '../common/options.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticRole,
@@ -64,16 +64,16 @@ const IDS = new Map();
  * @param semantic The semantic tree.
  * @returns The modified MathML element.
  */
-export function enrich(mml: Element, semantic: SemanticTree): Element {
+export function enrich(mml: Element, semantic: SemanticTree, options: Options): Element {
   // The first line is only to preserve output. This should eventually be
   // deleted.
   // const oldMml = DomUtil.cloneNode(mml);
   IDS.clear();
   walkTree(semantic.root);
-  if (Engine.getInstance().options.structure) {
+  if (options.structure) {
     mml.setAttribute(
       EnrichAttr.Attribute.STRUCTURE,
-      SemanticSkeleton.fromStructure(mml, semantic, Engine.getInstance().options).toString()
+      SemanticSkeleton.fromStructure(mml, semantic, options).toString()
     );
   }
   // Debugger.getInstance().generateOutput(() => [
