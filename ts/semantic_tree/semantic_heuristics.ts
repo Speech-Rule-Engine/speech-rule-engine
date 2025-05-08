@@ -805,8 +805,8 @@ function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
 }
 
 /**
- * Rewrites a simple function to a prefix function if it consists of multiple
- * letters. (Currently restricted to Braille!)
+ * Rewrites simple operations with indexing style limits into large operators of
+ * role sum.
  */
 SemanticHeuristics.add(
   new SemanticMultiHeuristic(
