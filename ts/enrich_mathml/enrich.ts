@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger.js';
+// import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { EnginePromise } from '../common/engine.js';
 import { Options } from '../common/options.js';
@@ -35,7 +35,7 @@ import './enrich_case_factory.js';
  */
 export function semanticMathmlNode(mml: Element, options: Options): Element {
   const clone = DomUtil.cloneNode(mml);
-  const tree = Semantic.getTree(clone);
+  const tree = Semantic.getTree(clone, options);
   return EnrichMathml.enrich(clone, tree, options);
 }
 
@@ -68,18 +68,18 @@ export function semanticMathml(expr: string, options: Options, callback: (p1: El
   });
 }
 
-/**
- * Tests for an expression with debugger output.
- *
- * @param expr MathML expression.
- * @returns The enriched MathML expression.
- */
-export function testTranslation(expr: string): Element {
-  Debugger.getInstance().init();
-  const mml = semanticMathmlSync(prepareMmlString(expr), options);
-  Debugger.getInstance().exit();
-  return mml;
-}
+// /**
+//  * Tests for an expression with debugger output.
+//  *
+//  * @param expr MathML expression.
+//  * @returns The enriched MathML expression.
+//  */
+// export function testTranslation(expr: string): Element {
+//   Debugger.getInstance().init();
+//   const mml = semanticMathmlSync(prepareMmlString(expr), options);
+//   Debugger.getInstance().exit();
+//   return mml;
+// }
 
 /**
  * Adds Math tags to a MathML string, if necessary.

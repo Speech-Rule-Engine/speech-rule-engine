@@ -19,6 +19,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Options } from '../common/options.js';
 import {
   SemanticFont,
   SemanticRole,
@@ -63,8 +64,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * The semantic parser for MathML elements.
    */
-  constructor() {
+  constructor(public options: Options) {
     super('MathML');
+    // TODO: process options, in particular for heuristics
+    SemanticHeuristics.options = options;
     this.parseMap_ = new Map([
       [MMLTAGS.SEMANTICS, this.semantics_.bind(this)],
       [MMLTAGS.MATH, this.rows_.bind(this)],

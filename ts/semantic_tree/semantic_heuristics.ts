@@ -21,7 +21,6 @@
  */
 
 import { Debugger } from '../common/debugger.js';
-import { Engine } from '../common/engine.js';
 import { SemanticMap, NamedSymbol } from './semantic_attr.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
@@ -90,7 +89,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().options.domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -111,7 +110,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().options.domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -131,7 +130,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().options.domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -210,7 +209,7 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) =>
-      Engine.getInstance().options.modality === 'braille' &&
+      SemanticHeuristics.options.modality === 'braille' &&
       node.type === SemanticType.IDENTIFIER
   )
 );

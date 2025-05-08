@@ -135,7 +135,7 @@ set(
   new Processor<Element>('semantic', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      return Semantic.xmlTree(mml) as Element;
+      return Semantic.xmlTree(mml, Engine.getInstance().options) as Element;
     },
     postprocessor: function (xml, _expr) {
       const setting = Engine.getInstance().options.speech;
@@ -173,7 +173,7 @@ set(
   new Processor('speech', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
+      const xml = Semantic.xmlTree(mml, Engine.getInstance().options);
       const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return AuralRendering.finalize(AuralRendering.markup(descrs));
     },
@@ -190,7 +190,7 @@ set(
   new Processor('json', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const stree = Semantic.getTree(mml);
+      const stree = Semantic.getTree(mml, Engine.getInstance().options);
       return stree.toJson();
     },
     postprocessor: function (json: any, expr) {
@@ -199,7 +199,7 @@ set(
         return json;
       }
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
+      const xml = Semantic.xmlTree(mml, Engine.getInstance().options);
       const speech = SpeechGeneratorUtil.computeMarkup(xml);
       if (setting === EngineConst.Speech.SHALLOW) {
         json.stree.speech = AuralRendering.finalize(speech);
@@ -233,7 +233,7 @@ set(
   new Processor('description', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
+      const xml = Semantic.xmlTree(mml, Engine.getInstance().options);
       const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return descrs;
     },
