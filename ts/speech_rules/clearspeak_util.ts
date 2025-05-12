@@ -20,6 +20,7 @@
 
 import { Span } from '../audio/span.js';
 import * as DomUtil from '../common/dom_util.js';
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { LOCALE } from '../l10n/locale.js';
@@ -291,7 +292,7 @@ function isSimpleFraction_(node: SemanticNode): boolean {
  * @returns True of the given preference is set.
  */
 function hasPreference(pref: string): boolean {
-  return Engine.getInstance().options.style === pref;
+  return Engine.getInstance().options.get(Option.STYLE) === pref;
 }
 
 register(

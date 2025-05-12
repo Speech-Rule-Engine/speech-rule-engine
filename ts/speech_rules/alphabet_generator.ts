@@ -19,6 +19,7 @@
  */
 
 import * as Alphabet from './alphabet.js';
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import * as L10n from '../l10n/l10n.js';
 import { LOCALE } from '../l10n/locale.js';
@@ -76,8 +77,8 @@ export function generateBase() {
  * @param locale The current locale.
  */
 export function generate(locale: string) {
-  const oldLocale = Engine.getInstance().options.locale;
-  Engine.getInstance().options.locale = locale;
+  const oldLocale = Engine.getInstance().options.get(Option.LOCALE);
+  Engine.getInstance().options.set(Option.LOCALE, locale);
   L10n.setLocale();
   MathCompoundStore.changeLocale({ locale: locale } as UnicodeJson);
   makeDomains();
@@ -90,7 +91,7 @@ export function generate(locale: string) {
       alphabetRules(letters, alphabet, int.font, !!int.capital);
     }
   }
-  Engine.getInstance().options.locale = oldLocale;
+  Engine.getInstance().options.set(Option.LOCALE, oldLocale);
   L10n.setLocale();
 }
 

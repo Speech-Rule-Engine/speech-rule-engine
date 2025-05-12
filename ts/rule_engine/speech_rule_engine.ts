@@ -37,7 +37,7 @@ import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
-import { Options } from '../common/options.js';
+import { Option } from '../common/options.js';
 import * as EngineConst from '../common/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
@@ -175,23 +175,41 @@ export class SpeechRuleEngine {
    *     function that computes speech results.
    * @returns The result of the callback.
    */
+  // public runInSetting(
+  //   settings: { [feature: string]: string | boolean },
+  //   callback: () => AuditoryDescription[]
+  // ): AuditoryDescription[] {
+  //   const engine = Engine.getInstance();
+  //   const save = engine.options as any;
+  //   const newOpt = new Options() as any;
+  //   for (const key of Options.BINARY_FEATURES) {
+  //     newOpt[key] = settings[key] ?? save[key];
+  //   }
+  //   for (const key of Options.STRING_FEATURES) {
+  //     newOpt[key] = settings[key] ?? save[key];
+  //   }
+  //   engine.options = newOpt;
+  //   engine.setDynamicCstr();
+  //   const result = callback();
+  //   engine.options = save;
+  //   engine.setDynamicCstr();
+  //   return result;
+  // }
   public runInSetting(
-    settings: { [feature: string]: string | boolean },
+    settings: { [key in Option]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
     const engine = Engine.getInstance();
-    const save = engine.options as any;
-    const newOpt = new Options() as any;
-    for (const key of Options.BINARY_FEATURES) {
-      newOpt[key] = settings[key] ?? save[key];
+    const save = Array.from(engine.options.entries());
+    for (const [key, value] of Object.entries(settings)) {
+      engine.options.set(key as Option, value);
     }
-    for (const key of Options.STRING_FEATURES) {
-      newOpt[key] = settings[key] ?? save[key];
-    }
-    engine.options = newOpt;
+    // engine.options = newOpt;
     engine.setDynamicCstr();
     const result = callback();
-    engine.options = save;
+    for (const [key, value] of save) {
+      engine.options.set(key as Option, value);
+    }
     engine.setDynamicCstr();
     return result;
   }
@@ -320,7 +338,7 @@ export class SpeechRuleEngine {
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
     const result = this.evaluateTreeInternal_(node);
-    this.speechStructure.addNode(node, result, Engine.getInstance().options.modality);
+    this.speechStructure.addNode(node, result, Engine.getInstance().options.getString(Option.MODALITY));
     return result;
   }
 
@@ -339,10 +357,12 @@ export class SpeechRuleEngine {
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
-      if (engine.options.strict) {
+      if (engine.options.get(Option.STRICT)) {
         return [];
       }
-      result = this.getEvaluator(engine.options.locale, engine.options.modality)(node);
+      result = this.getEvaluator(
+        engine.options.getString(Option.LOCALE),
+        engine.options.getString(Option.MODALITY))(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
@@ -684,7 +704,7 @@ export class SpeechRuleEngine {
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
     const dynamic = Engine.getInstance().dynamicCstr;
-    const strict = Engine.getInstance().options.strict;
+    const strict = Engine.getInstance().options.get(Option.STRICT);
     const trie = this.trie;
     const props: { [key: string]: string[] } = {};
     let locale = dynamic.getValue(Axis.LOCALE);

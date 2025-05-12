@@ -29,6 +29,7 @@ import * as WalkerFactory from '../walker/walker_factory.js';
 import * as WalkerUtil from '../walker/walker_util.js';
 import { RebuildStree } from '../walker/rebuild_stree.js';
 import * as DomUtil from './dom_util.js';
+import { Option } from './options.js';
 import { Engine, SREError } from './engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import { KeyCode } from './event_util.js';
@@ -89,7 +90,7 @@ export function process<T>(name: string, expr: string): T {
  */
 function print<T>(name: string, data: T): string {
   const processor = get(name);
-  return Engine.getInstance().options.pprint
+  return Engine.getInstance().options.get(Option.PPRINT)
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -105,7 +106,7 @@ export function output(name: string, expr: string): string {
   const processor = get(name);
   try {
     const data = processor.processor(expr);
-    return Engine.getInstance().options.pprint
+    return Engine.getInstance().options.get(Option.PPRINT)
       ? processor.pprint(data)
       : processor.print(data);
   } catch (_e) {
@@ -125,7 +126,7 @@ export function keypress(name: string, expr: KeyCode | string): string {
   const processor = get(name);
   const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
   const data = processor.processor(key as string);
-  return Engine.getInstance().options.pprint
+  return Engine.getInstance().options.get(Option.PPRINT)
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -138,7 +139,7 @@ set(
       return Semantic.xmlTree(mml, Engine.getInstance().options) as Element;
     },
     postprocessor: function (xml, _expr) {
-      const setting = Engine.getInstance().options.speech;
+      const setting = Engine.getInstance().options.get(Option.SPEECH);
       if (setting === EngineConst.Speech.NONE) {
         return xml;
       }
@@ -194,7 +195,7 @@ set(
       return stree.toJson();
     },
     postprocessor: function (json: any, expr) {
-      const setting = Engine.getInstance().options.speech;
+      const setting = Engine.getInstance().options.get(Option.SPEECH);
       if (setting === EngineConst.Speech.NONE) {
         return json;
       }
@@ -256,7 +257,7 @@ set(
     postprocessor: function (enr, _expr) {
       const root = WalkerUtil.getSemanticRoot(enr);
       let generator;
-      switch (Engine.getInstance().options.speech) {
+      switch (Engine.getInstance().options.get(Option.SPEECH)) {
         case EngineConst.Speech.NONE:
           break;
         case EngineConst.Speech.SHALLOW:
@@ -297,10 +298,10 @@ set(
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
       generator.setOptions({
-        modality: Engine.getInstance().options.modality,
-        locale: Engine.getInstance().options.locale,
-        domain: Engine.getInstance().options.domain,
-        style: Engine.getInstance().options.style
+        [Option.MODALITY]: Engine.getInstance().options.getString(Option.MODALITY),
+        [Option.LOCALE]: Engine.getInstance().options.getString(Option.LOCALE),
+        [Option.DOMAIN]: Engine.getInstance().options.getString(Option.DOMAIN),
+        [Option.STYLE]: Engine.getInstance().options.getString(Option.STYLE)
       });
       Processor.LocalState.highlighter = HighlighterFactory.highlighter(
         { color: 'black' },
@@ -310,7 +311,7 @@ set(
       const node = process('enriched', expr) as Element;
       const eml = print('enriched', node);
       Processor.LocalState.walker = WalkerFactory.walker(
-        Engine.getInstance().options.walker,
+        Engine.getInstance().options.getString(Option.WALKER),
         node,
         generator,
         Processor.LocalState.highlighter,
@@ -381,8 +382,8 @@ set(
   new Processor('latex', {
     processor: function (ltx: string) {
       if (
-        Engine.getInstance().options.modality !== 'braille' ||
-        Engine.getInstance().options.locale !== 'euro'
+        Engine.getInstance().options.get(Option.MODALITY) !== 'braille' ||
+          Engine.getInstance().options.get(Option.LOCALE) !== 'euro'
       ) {
         console.info(
           'LaTeX input currently only works for Euro Braille output.' +

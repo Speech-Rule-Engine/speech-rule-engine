@@ -20,7 +20,7 @@
  */
 
 import * as BaseUtil from '../common/base_util.js';
-import { Options } from '../common/options.js';
+import { Options, Option } from '../common/options.js';
 
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr.js';
@@ -347,8 +347,8 @@ export class SemanticSkeleton {
     setsize: number,
     options: Options
   ) {
-    const role = !options.tree ? 'treeitem' : level ? 'treeitem' : 'tree'
-    if (!options.aria || !node) {
+    const role = !options.get(Option.TREE) ? 'treeitem' : level ? 'treeitem' : 'tree'
+    if (!options.get(Option.ARIA) || !node) {
       return;
     }
     // Aria elements

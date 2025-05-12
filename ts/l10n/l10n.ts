@@ -18,6 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import { Variables } from '../common/variables.js';
 import { Grammar } from '../rule_engine/grammar.js';
@@ -83,11 +84,11 @@ export function setLocale() {
  * @param msg The current locale message structure.
  */
 function setSubiso(msg: Locale) {
-  const subiso = Engine.getInstance().options.subiso;
+  const subiso = Engine.getInstance().options.getString(Option.SUBISO);
   if (msg.SUBISO.all.indexOf(subiso) === -1) {
-    Engine.getInstance().options.subiso = msg.SUBISO.default;
+    Engine.getInstance().options.set(Option.SUBISO, msg.SUBISO.default);
   }
-  msg.SUBISO.current = Engine.getInstance().options.subiso;
+  msg.SUBISO.current = Engine.getInstance().options.getString(Option.SUBISO);
 }
 
 /**
@@ -98,10 +99,10 @@ function setSubiso(msg: Locale) {
  */
 function getLocale(): Locale {
   const locale = Variables.ensureLocale(
-    Engine.getInstance().options.locale,
+    Engine.getInstance().options.getString(Option.LOCALE),
     Engine.getInstance().defaultLocale
   );
-  Engine.getInstance().options.locale = locale;
+  Engine.getInstance().options.set(Option.LOCALE, locale);
   return locales[locale]();
 }
 

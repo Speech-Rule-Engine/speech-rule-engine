@@ -37,6 +37,7 @@ import { SemanticSkeleton } from './semantic_skeleton.js';
 import { MMLTAGS } from './semantic_util.js';
 
 import * as DomUtil from '../common/dom_util.js';
+import { Option } from '../common/options.js';
 
 /**
  * Recursively combines implicit nodes as much as possible for the given root
@@ -89,7 +90,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.get(Option.DOMAIN) === 'clearspeak'
   )
 );
 
@@ -110,7 +111,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.get(Option.DOMAIN) === 'clearspeak'
   )
 );
 
@@ -130,7 +131,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.get(Option.DOMAIN) === 'clearspeak'
   )
 );
 
@@ -209,7 +210,7 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) =>
-      SemanticHeuristics.options.modality === 'braille' &&
+      SemanticHeuristics.options.get(Option.MODALITY) === 'braille' &&
       node.type === SemanticType.IDENTIFIER
   )
 );

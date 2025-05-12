@@ -36,8 +36,9 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as DomUtil from '../common/dom_util.js';
 import { markup } from '../audio/aural_rendering.js';
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
-import { Markup } from '../common/engine_const.js';
+// import { Markup } from '../common/engine_const.js';
 
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
@@ -136,15 +137,15 @@ export class SpeechStructure {
    * @param func The function to use for completion.
    */
   public completeModality(modality: string, func: any) {
-    const oldModality = Engine.getInstance().options.modality;
-    Engine.getInstance().options.modality = modality;
+    const oldModality = Engine.getInstance().options.get(Option.MODALITY);
+    Engine.getInstance().options.set(Option.MODALITY, modality);
     for (const [id, descrs] of this.getNodeMap()) {
       const speechMap = this.getSpeechMap(id);
       if (!speechMap.has(modality)) {
         func(descrs);
       }
     }
-    Engine.getInstance().options.modality = oldModality;
+    Engine.getInstance().options.set(Option.MODALITY, oldModality);
   }
 
   /**
@@ -156,16 +157,16 @@ export class SpeechStructure {
     const result: {
       [id: string]: { [modality: string]: string };
     } = {};
-    const oldMarkup = Engine.getInstance().options.markup;
+    const oldMarkup = Engine.getInstance().options.get(Option.MARKUP);
     for (const [id, map] of this.speechMaps) {
       const modality: { [modality: string]: string } = {};
       for (const ml of mls) {
-        Engine.getInstance().options.markup = ml as Markup;
+        Engine.getInstance().options.set(Option.MARKUP, ml);
         map.forEach((x, y) => (modality[`${y}-${ml}`] = markup(x)));
         result[id] = modality;
       }
     }
-    Engine.getInstance().options.markup = oldMarkup;
+    Engine.getInstance().options.set(Option.MARKUP, oldMarkup);
     return result;
   }
 }

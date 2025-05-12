@@ -19,6 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import { AcssRenderer } from './acss_renderer.js';
@@ -44,11 +45,15 @@ const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
   [EngineConst.Markup.SSML, xmlInstance]
 ]);
 
+function getRenderer() {
+  return renderers.get(Engine.getInstance().options.get(Option.MARKUP) as EngineConst.Markup);
+}
+
 /**
  * @override
  */
 export function setSeparator(sep: string) {
-  const renderer = renderers.get(Engine.getInstance().options.markup);
+  const renderer = getRenderer();
   if (renderer) {
     renderer.separator = sep;
   }
@@ -58,7 +63,7 @@ export function setSeparator(sep: string) {
  * @override
  */
 export function getSeparator() {
-  const renderer = renderers.get(Engine.getInstance().options.markup);
+  const renderer = getRenderer();
   return renderer ? renderer.separator : '';
 }
 
@@ -66,7 +71,7 @@ export function getSeparator() {
  * @override
  */
 export function markup(descrs: AuditoryDescription[]) {
-  const renderer = renderers.get(Engine.getInstance().options.markup);
+  const renderer = getRenderer();
   if (!renderer) {
     return '';
   }
@@ -81,7 +86,7 @@ export function merge(strs: (Span | string)[]) {
   const span = strs.map((s) => {
     return typeof s === 'string' ? Span.stringEmpty(s) : s;
   });
-  const renderer = renderers.get(Engine.getInstance().options.markup);
+  const renderer = getRenderer();
   if (!renderer) {
     return strs.join();
   }
@@ -92,7 +97,7 @@ export function merge(strs: (Span | string)[]) {
  * @override
  */
 export function finalize(str: string) {
-  const renderer = renderers.get(Engine.getInstance().options.markup);
+  const renderer = getRenderer();
   if (!renderer) {
     return str;
   }
@@ -103,7 +108,7 @@ export function finalize(str: string) {
  * @override
  */
 export function error(key: string) {
-  const renderer = renderers.get(Engine.getInstance().options.markup);
+  const renderer = getRenderer();
   if (!renderer) {
     return '';
   }
@@ -129,5 +134,5 @@ export function registerRenderer(
  * @returns True if it is an instance of the given type.
  */
 export function isXml(): boolean {
-  return renderers.get(Engine.getInstance().options.markup) instanceof XmlRenderer;
+  return getRenderer() instanceof XmlRenderer;
 }

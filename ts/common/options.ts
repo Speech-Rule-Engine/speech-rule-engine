@@ -21,7 +21,67 @@
 import * as EngineConst from './engine_const.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 
-export class Options {
+export enum StringOption {
+  MARKUP = 'markup',
+  STYLE = 'style',
+  DOMAIN = 'domain',
+  SPEECH = 'speech',
+  WALKER = 'walker',
+  LOCALE = 'locale',
+  DELAY = 'delay',
+  MODALITY = 'modality',
+  RATE = 'rate',
+  RULES = 'rules',
+  SUBISO = 'subiso',
+  PRUNE = 'prune',
+};
+
+export enum BoolOption {
+  AUTOMARK = 'automark',
+  MARK = 'mark',
+  CHARACTER = 'character',
+  CLEANPAUSE = 'cleanpause',
+  STRICT = 'strict',
+  STRUCTURE = 'structure',
+  ARIA = 'aria',
+  PPRINT = 'pprint',
+  CAYLEYSHORT = 'cayleyshort',
+  LINEBREAKS = 'linebreaks',
+  TREE = 'tree',
+}
+
+export const Option = { ...StringOption, ...BoolOption };
+export type Option = StringOption | BoolOption;
+
+const DefaultOptions: [Option, string | boolean][] = [
+  [ Option.DELAY, false],  // Delay flag, to avoid auto setup of engine.
+  [ Option.DOMAIN, 'mathspeak'],  // Current domain.
+  [ Option.STYLE, Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]],  // Current style.
+  [ Option.LOCALE, Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],  // Current locale.
+  [ Option.SUBISO, ''],  // Current subiso for the locale.
+  [ Option.MODALITY, Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],  // Current modality.
+  [ Option.SPEECH, EngineConst.Speech.NONE],  // Level for speech attributes
+                                               // added to enriched elements
+  [ Option.MARKUP, EngineConst.Markup.NONE],  // Caching during speech generation.
+  [ Option.MARK, true],  // Markup options
+  [ Option.AUTOMARK, false],  // Automatic marking of elements for spans.
+  [ Option.CHARACTER, true],
+  [ Option.CLEANPAUSE, true],
+  [ Option.CAYLEYSHORT, true],  // Nemeth layout options
+  [ Option.LINEBREAKS, false],
+  [ Option.RATE, '100'],   // Percentage of default rate used by external
+                            // TTS. This can be used to scale pauses.
+  [ Option.WALKER, 'Table'],  // Current walker mode.
+  [ Option.STRUCTURE, false],  // Add skeletons to enriched elements
+  [ Option.ARIA, false],
+  [ Option.TREE, false],
+  [ Option.STRICT, false],  // Strict interpretations of rules and constraints.
+  [ Option.PPRINT, false],  // Pretty Print mode.
+  [ Option.RULES, ''],  // Rules file to load.
+  [ Option.PRUNE, ''],  // EngineConstraints to prune given dot separated.  
+]
+
+export class Options extends Map<Option, string | boolean> {
 
   /**
    * Binary feature vector.
@@ -58,98 +118,113 @@ export class Options {
     'prune'
   ];
 
-  /**
-   * Delay flag, to avoid auto setup of engine.
-   */
-  public delay = false;
+  constructor(options: {[key: string]: string} = {}) {
+    super(DefaultOptions);
+    for (const [option, value] of Object.entries(options)) {
+      this.set(option as Option, value);
+    }
+  }
 
-  /**
-   * Current domain.
-   */
-  public domain = 'mathspeak';
+  public getString(option: StringOption): string {
+    return this.get(option) as string;
+  }
+  
+  public getBool(option: StringOption): string {
+    return this.get(option) as string;
+  }
+  
+  // /**
+  //  * Delay flag, to avoid auto setup of engine.
+  //  */
+  // public delay = false;
 
-  /**
-   * Current style.
-   */
-  public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
+  // /**
+  //  * Current domain.
+  //  */
+  // public domain = 'mathspeak';
 
-  /**
-   * Current locale.
-   */
-  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+  // /**
+  //  * Current style.
+  //  */
+  // public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
 
-  /**
-   * Current subiso for the locale.
-   */
-  public subiso = '';
+  // /**
+  //  * Current locale.
+  //  */
+  // public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
 
-  /**
-   * Current modality.
-   */
-  public modality = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY];
+  // /**
+  //  * Current subiso for the locale.
+  //  */
+  // public subiso = '';
 
-  /**
-   * The level to which speech attributes are added to enriched elements
-   * (none, shallow, deep).
-   */
-  public speech: EngineConst.Speech = EngineConst.Speech.NONE;
+  // /**
+  //  * Current modality.
+  //  */
+  // public modality = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY];
 
-  /**
-   * Caching during speech generation.
-   */
-  public markup: EngineConst.Markup = EngineConst.Markup.NONE;
+  // /**
+  //  * The level to which speech attributes are added to enriched elements
+  //  * (none, shallow, deep).
+  //  */
+  // public speech: EngineConst.Speech = EngineConst.Speech.NONE;
 
-  // Markup options
-  public mark = true;
-  /**
-   * Automatic marking of elements for spans.
-   */
-  public automark = false;
-  public character = true;
-  public cleanpause = true;
+  // /**
+  //  * Caching during speech generation.
+  //  */
+  // public markup: EngineConst.Markup = EngineConst.Markup.NONE;
 
-  /**
-   * Nemeth layout options
-   */
-  public cayleyshort = true;
-  public linebreaks = false;
+  // // Markup options
+  // public mark = true;
+  // /**
+  //  * Automatic marking of elements for spans.
+  //  */
+  // public automark = false;
+  // public character = true;
+  // public cleanpause = true;
 
-  /**
-   * Percentage of default rate used by external TTS. This can be used to scale
-   * pauses.
-   */
-  public rate = '100';
+  // /**
+  //  * Nemeth layout options
+  //  */
+  // public cayleyshort = true;
+  // public linebreaks = false;
 
-  /**
-   * Current walker mode.
-   */
-  public walker = 'Table';
+  // /**
+  //  * Percentage of default rate used by external TTS. This can be used to scale
+  //  * pauses.
+  //  */
+  // public rate = '100';
 
-  /**
-   * Indicates if skeleton structure attributes are added to enriched elements
-   */
-  public structure = false;
-  public aria = false;
-  public tree = false;
+  // /**
+  //  * Current walker mode.
+  //  */
+  // public walker = 'Table';
 
-  /**
-   * Strict interpretations of rules and constraints.
-   */
-  public strict = false;
+  // /**
+  //  * Indicates if skeleton structure attributes are added to enriched elements
+  //  */
+  // public structure = false;
+  // public aria = false;
+  // public tree = false;
 
-  /**
-   * Pretty Print mode.
-   */
-  public pprint = false;
+  // /**
+  //  * Strict interpretations of rules and constraints.
+  //  */
+  // public strict = false;
 
-  /**
-   * Rules file to load.
-   */
-  public rules = '';
+  // /**
+  //  * Pretty Print mode.
+  //  */
+  // public pprint = false;
 
-  /**
-   * EngineConstraints to prune given dot separated.
-   */
-  public prune = '';
+  // /**
+  //  * Rules file to load.
+  //  */
+  // public rules = '';
+
+  // /**
+  //  * EngineConstraints to prune given dot separated.
+  //  */
+  // public prune = '';
 
 }

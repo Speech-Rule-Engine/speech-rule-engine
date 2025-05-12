@@ -20,6 +20,7 @@
 
 import { setdifference } from '../common/base_util.js';
 import * as EngineConst from '../common/engine_const.js';
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import { AuditoryDescription } from './auditory_description.js';
 import { Span } from './span.js';
@@ -182,7 +183,7 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   }
   result = result.concat(finaliseMarkup_());
   result = simplifyMarkup_(result);
-  result = Engine.getInstance().options.cleanpause ? cleanPause(result) : result;
+  result = Engine.getInstance().options.get(Option.CLEANPAUSE) ? cleanPause(result) : result;
   return result;
 }
 

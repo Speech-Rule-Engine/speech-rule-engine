@@ -24,6 +24,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import { Axis, DynamicCstr } from './dynamic_cstr.js';
 
@@ -97,7 +98,7 @@ export class MathSimpleStore {
     dynamic: DynamicCstr,
     rule: SimpleRule
   ): boolean {
-    if (Engine.getInstance().options.strict) {
+    if (Engine.getInstance().options.get(Option.STRICT)) {
       return rule.cstr.equal(dynamic);
     }
     return Engine.getInstance().comparator.match(rule.cstr);

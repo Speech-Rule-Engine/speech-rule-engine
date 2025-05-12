@@ -18,6 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
 import { personalityMarkup } from './audio_util.js';
@@ -59,7 +60,7 @@ export class CountingRenderer extends StringRenderer {
   public finalize(str: string): string {
     const output = super.finalize(str);
     const count =
-      Engine.getInstance().options.modality === 'braille' ? '⣿⠀⣿⠀⣿⠀⣿⠀⣿⠀' : '0123456789';
+      Engine.getInstance().options.get(Option.MODALITY) === 'braille' ? '⣿⠀⣿⠀⣿⠀⣿⠀⣿⠀' : '0123456789';
     let second = new Array(Math.trunc(output.length / 10) + 1).join(count);
     second += count.slice(0, output.length % 10);
     return output + '\n' + second;

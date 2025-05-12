@@ -21,6 +21,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
+import { Option } from '../common/options.js';
 import * as BrowserUtil from '../common/browser_util.js';
 import { Engine, EnginePromise } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
@@ -69,7 +70,7 @@ let _init = false;
  *     engine.
  * @returns Promise that resolves once locale is loaded.
  */
-export async function loadLocale(locale = Engine.getInstance().options.locale) {
+export async function loadLocale(locale = Engine.getInstance().options.getString(Option.LOCALE)) {
   if (!_init) {
     // Generate base alphabet information.
     AlphabetGenerator.generateBase();
@@ -96,7 +97,7 @@ export async function loadLocale(locale = Engine.getInstance().options.locale) {
  * @param locale The locale to be loaded. Defaults to current locale of the
  *     engine.
  */
-function _loadLocale(locale = Engine.getInstance().options.locale) {
+function _loadLocale(locale = Engine.getInstance().options.getString(Option.LOCALE)) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
     MathCompoundStore.reset();
@@ -152,7 +153,7 @@ function retrieveFiles(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().options.locale = Engine.getInstance().defaultLocale;
+        Engine.getInstance().options.set(Option.LOCALE, Engine.getInstance().defaultLocale);
         res(locale);
       }
     );

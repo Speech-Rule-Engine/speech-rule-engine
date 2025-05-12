@@ -24,7 +24,7 @@ import * as BrowserUtil from './browser_util.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
 import { Mode } from './engine_const.js';
-import { Options } from './options.js';
+import { Options, Option, StringOption, BoolOption } from './options.js';
 import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
 
@@ -51,7 +51,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
   // we get a meaningful output.
   if (
     (feature.modality && feature.modality !== 'speech') ||
-    (!feature.modality && Engine.getInstance().options.modality !== 'speech')
+      (!feature.modality && Engine.getInstance().options.get(Option.MODALITY) !== 'speech')
   ) {
     return;
   }
@@ -62,7 +62,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
     feature.domain = 'mathspeak';
     return;
   }
-  const locale = (feature.locale || Engine.getInstance().options.locale) as string;
+  const locale = (feature.locale || Engine.getInstance().options.get(Option.LOCALE)) as string;
   const domain = feature.domain as string;
   if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
     if (domain !== 'mathspeak') {
@@ -94,15 +94,15 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
 export async function setup(feature: { [key: string]: boolean | string }) {
   ensureDomain(feature);
   const engine = Engine.getInstance();
-  const options = engine.options as any;
-  const setIf = (feat: string) => {
+  const options = engine.options;
+  const setIf = (feat: BoolOption) => {
     if (typeof feature[feat] !== 'undefined') {
-      options[feat] = !!feature[feat];
+      options.set(feat, !!feature[feat]);
     }
   };
-  const setMulti = (feat: string) => {
+  const setMulti = (feat: StringOption) => {
     if (typeof feature[feat] !== 'undefined') {
-      options[feat] = feature[feat];
+      options.set(feat, feature[feat]);
     }
   };
   // Setting mode first!
@@ -135,8 +135,8 @@ export async function setup(feature: { [key: string]: boolean | string }) {
     engine.init = false;
     return EnginePromise.get();
   }
-  if (options.delay) {
-    options.delay = false;
+  if (options.get(Option.DELAY)) {
+    options.set(Option.DELAY, false);
     return EnginePromise.get();
   }
   return MathMap.loadLocale();

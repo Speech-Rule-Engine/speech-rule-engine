@@ -23,7 +23,7 @@
 
 // import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Options } from '../common/options.js';
+import { Options, Option } from '../common/options.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticRole,
@@ -70,7 +70,7 @@ export function enrich(mml: Element, semantic: SemanticTree, options: Options): 
   // const oldMml = DomUtil.cloneNode(mml);
   IDS.clear();
   walkTree(semantic.root);
-  if (options.structure) {
+  if (options.get(Option.STRUCTURE)) {
     mml.setAttribute(
       EnrichAttr.Attribute.STRUCTURE,
       SemanticSkeleton.fromStructure(mml, semantic, options).toString()

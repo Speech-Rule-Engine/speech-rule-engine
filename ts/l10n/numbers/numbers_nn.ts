@@ -18,6 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Option } from '../../common/options.js';
 import { Engine } from '../../common/engine.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
 
@@ -256,7 +257,7 @@ function numberToWordsGe(num: number, ordinal = false): string {
  */
 function numberToWords(num: number, ordinal = false): string {
   const word =
-    Engine.getInstance().options.subiso === 'alt'
+    Engine.getInstance().options.get(Option.SUBISO) === 'alt'
       ? numberToWordsGe(num, ordinal)
       : numberToWordsRo(num, ordinal);
   return word;

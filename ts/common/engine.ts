@@ -26,7 +26,7 @@ import { SystemExternal } from './system_external.js';
 
 import { Debugger } from './debugger.js';
 import { Variables } from './variables.js';
-import { Options } from './options.js';
+import { Options, Option, StringOption } from './options.js';
 
 declare const SREfeature: { [key: string]: any };
 
@@ -166,7 +166,7 @@ export class Engine {
    * @returns The current base rate.
    */
   public getRate(): number {
-    const numeric = parseInt(this.options.rate, 10);
+    const numeric = parseInt(this.options.get(StringOption.RATE) as string, 10);
     return isNaN(numeric) ? 100 : numeric;
   }
 
@@ -193,8 +193,9 @@ export class Engine {
         }
       }
     }
-    EngineConst.DOMAIN_TO_STYLES[this.options.domain] = this.options.style;
-    const dynamic = [this.options.locale, this.options.modality, this.options.domain, this.options.style].join(
+    EngineConst.DOMAIN_TO_STYLES[this.options.getString(StringOption.DOMAIN)] =
+      this.options.getString(StringOption.STYLE);
+    const dynamic = [this.options.get(Option.LOCALE), this.options.get(Option.MODALITY), this.options.get(Option.DOMAIN), this.options.get(Option.STYLE)].join(
       '.'
     );
     const fallback = Dcstr.DynamicProperties.createProp(
@@ -203,8 +204,8 @@ export class Engine {
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
     );
-    const comparator = this.comparators[this.options.domain];
-    const parser = this.parsers[this.options.domain];
+    const comparator = this.comparators[this.options.getString(StringOption.DOMAIN)];
+    const parser = this.parsers[this.options.getString(StringOption.DOMAIN)];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
@@ -217,7 +218,7 @@ export class Engine {
    * Private constructor.
    */
   private constructor() {
-    this.options.locale = this.defaultLocale;
+    this.options.set(StringOption.LOCALE, this.defaultLocale);
     this.evaluator = Engine.defaultEvaluator;
     this.defaultParser = new Dcstr.DynamicCstrParser(
       Dcstr.DynamicCstr.DEFAULT_ORDER
@@ -311,7 +312,7 @@ export class EnginePromise {
    * @returns The promise for a locale.
    */
   public static get(
-    locale: string = Engine.getInstance().options.locale
+    locale: string = Engine.getInstance().options.get(StringOption.LOCALE) as string
   ): Promise<string> {
     return EnginePromise.promises[locale] || Promise.resolve('');
   }

@@ -21,7 +21,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
 import { Engine, EnginePromise, SREError } from './engine.js';
-import { Options } from './options.js';
+import { Options, Option } from './options.js';
 import { setup } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
@@ -501,7 +501,7 @@ async function assembleWorkerStructure(
   options: OptionsList
 ): Promise<WorkerStructure> {
   await setupEngine(options);
-  Engine.getInstance().options.automark = true;
+  Engine.getInstance().options.set(Option.AUTOMARK, true);
   const json: WorkerStructure = {};
   json.options = options;
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);

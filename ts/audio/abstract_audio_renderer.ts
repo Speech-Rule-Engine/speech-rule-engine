@@ -19,6 +19,7 @@
  */
 
 import { Engine } from '../common/engine.js';
+import { Option } from '../common/options.js';
 import { KeyCode } from '../common/event_util.js';
 import { AudioRenderer } from './audio_renderer.js';
 import { AuditoryDescription } from './auditory_description.js';
@@ -44,7 +45,7 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
    */
   public get separator() {
     // TODO: (Span) Do this via setSeparator.
-    return Engine.getInstance().options.modality === 'braille' ? '' : this.separator_;
+    return Engine.getInstance().options.get(Option.MODALITY) === 'braille' ? '' : this.separator_;
   }
 
   /**

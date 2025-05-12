@@ -23,6 +23,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import * as LocaleUtil from '../l10n/locale_util.js';
 import { LOCALE } from '../l10n/locale.js';
@@ -153,9 +154,9 @@ export class Grammar {
     text = Grammar.prepareUnit(text);
     const engine = Engine.getInstance();
     const plural = Grammar.getInstance().getParameter('plural');
-    const strict = engine.options.strict;
-    const baseCstr = `${engine.options.locale}.${engine.options.modality}.default`;
-    engine.options.strict = true;
+    const strict = engine.options.get(Option.STRICT);
+    const baseCstr = `${engine.options.get(Option.LOCALE)}.${engine.options.get(Option.MODALITY)}.default`;
+    engine.options.set(Option.STRICT, true);
     let cstr: DynamicCstr;
     let result: string;
     if (plural) {
@@ -163,12 +164,12 @@ export class Grammar {
       result = engine.evaluator(text, cstr);
     }
     if (result) {
-      engine.options.strict = strict;
+      engine.options.set(Option.STRICT, strict);
       return result;
     }
     cstr = engine.defaultParser.parse(baseCstr + '.default');
     result = engine.evaluator(text, cstr);
-    engine.options.strict = strict;
+    engine.options.set(Option.STRICT, strict);
     if (!result) {
       return Grammar.cleanUnit(text);
     }
@@ -433,7 +434,7 @@ export function correctFont(text: string, correction: string): string {
  * @returns The cleaned up string.
  */
 function correctCaps(text: string): string {
-  let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().options.domain];
+  let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().options.getString(Option.DOMAIN)];
   if (typeof cap === 'undefined') {
     cap = LOCALE.ALPHABETS.capPrefix['default'];
   }

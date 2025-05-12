@@ -21,6 +21,7 @@
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import * as EngineConst from '../common/engine_const.js';
+import { Option } from '../common/options.js';
 import { Engine } from '../common/engine.js';
 import * as AudioUtil from './audio_util.js';
 import { AuditoryDescription } from './auditory_description.js';
@@ -28,8 +29,8 @@ import { XmlRenderer } from './xml_renderer.js';
 
 export class LayoutRenderer extends XmlRenderer {
   public static options = {
-    cayleyshort: Engine.getInstance().options.cayleyshort,
-    linebreaks: Engine.getInstance().options.linebreaks
+    cayleyshort: Engine.getInstance().options.get(Option.CAYLEYSHORT),
+    linebreaks: Engine.getInstance().options.get(Option.LINEBREAKS)
   };
 
   /**
@@ -508,7 +509,7 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
-  if (Engine.getInstance().options.cayleyshort && mat[0].cells[0] === '⠀') {
+  if (Engine.getInstance().options.get(Option.CAYLEYSHORT) && mat[0].cells[0] === '⠀') {
     bar.cells[0] = '⠀';
   }
   mat.splice(1, 0, bar);
@@ -627,7 +628,7 @@ function handleFractionPart(prt: Element): string {
  * @returns A markup string with the correct linebreaking value.
  */
 function handleRelation(rel: Element): string {
-  if (!Engine.getInstance().options.linebreaks) {
+  if (!Engine.getInstance().options.get(Option.LINEBREAKS)) {
     return recurseTree(rel);
   }
   const value = relValues.get(parseInt(rel.getAttribute('value')));

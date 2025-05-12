@@ -22,6 +22,7 @@
 // This work was sponsored by TextHelp
 //
 
+import { Option } from '../../common/options.js';
 import { Engine } from '../../common/engine.js';
 import { Grammar } from '../../rule_engine/grammar.js';
 import { Numbers, NUMBERS as NUMB } from '../messages.js';
@@ -74,9 +75,9 @@ function numberToWords(num: number): string {
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
-  if (NUMBERS.special['tens-' + Engine.getInstance().options.subiso]) {
+  if (NUMBERS.special['tens-' + Engine.getInstance().options.get(Option.SUBISO)]) {
     NUMBERS.tens = NUMBERS.special[
-      'tens-' + Engine.getInstance().options.subiso
+      'tens-' + Engine.getInstance().options.get(Option.SUBISO)
     ] as string[];
   }
   let pos = 0;
