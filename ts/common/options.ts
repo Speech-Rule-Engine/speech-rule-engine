@@ -165,4 +165,14 @@ export class Options {
     }
   }
 
+  json(): {[key: string]: boolean | string} {
+    const features: { [key: string]: string | boolean } = {};
+    const engineFeatures = [].concat(
+      Options.STRING_FEATURES,
+      Options.BINARY_FEATURES
+    );
+    engineFeatures.forEach(x => features[x] = (this as any)[x]);
+    return features;
+  }
+
 }

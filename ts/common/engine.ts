@@ -284,12 +284,8 @@ export class Engine {
    * @returns Overview of engine setup as a JSON dictionary.
    */
   public json(): { [key: string]: boolean | string } {
-    const features: { [key: string]: string | boolean } = {'mode': this.mode};
-    const engineFeatures = [].concat(
-      Options.STRING_FEATURES,
-      Options.BINARY_FEATURES
-    );
-    engineFeatures.forEach(x => features[x] = (this.options as any)[x]);
+    const features: { [key: string]: string | boolean } = this.options.json();
+    features['mode'] = this.mode;
     return features;
   }
 
