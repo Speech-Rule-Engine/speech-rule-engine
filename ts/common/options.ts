@@ -3,7 +3,7 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
+// You may tain a copy of the License at
 //
 //      http://www.apache.org/licenses/LICENSE-2.0
 //
@@ -151,5 +151,18 @@ export class Options {
    * EngineConstraints to prune given dot separated.
    */
   public prune = '';
+
+  constructor(options: {[key: string]: boolean | string} = {}) {
+    this.set(options);
+  }
+
+  set(options: {[key: string]: boolean | string}) {
+    for (const [option, value] of Object.entries(options)) {
+      if (Options.BINARY_FEATURES.includes(option) || Options.STRING_FEATURES.includes(option)) {
+        (this as any)[option] = value;
+        continue;
+      }
+    }
+  }
 
 }

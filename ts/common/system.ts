@@ -21,8 +21,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
 import { Engine, EnginePromise, SREError } from './engine.js';
-import { Options } from './options.js';
-import { setup } from './engine_setup.js';
+import { setupEngine as setup, engineSetup as engine } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
 import * as FileUtil from './file_util.js';
@@ -64,19 +63,7 @@ export async function setupEngine(feature: {
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
-  const engineFeatures = [].concat(
-    Options.STRING_FEATURES,
-    Options.BINARY_FEATURES
-  );
-  const engine = Engine.getInstance() as any;
-  const features: { [key: string]: string | boolean } = {};
-  features['mode'] = engine.mode;
-  engineFeatures.forEach(function (x) {
-    features[x] = engine.options[x];
-  });
-  features.json = SystemExternal.jsonPath;
-  features.xpath = SystemExternal.WGXpath;
-  return features;
+  return engine();
 }
 
 /**

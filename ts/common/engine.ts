@@ -56,6 +56,7 @@ export class SREError extends Error {
  *
  */
 export class Engine {
+
   public options: Options = new Options();
   
   /**
@@ -253,6 +254,24 @@ export class Engine {
       this.customLoader = fn;
     }
   }
+
+  /**
+   * Method to setup the basic engine parameters and options.
+   *
+   * @param feature An object describing some setup features.
+   */
+  public setup(feature: { [key: string]: boolean | string }) {
+    ensureDomain(feature);
+    const options = this.options;
+    // Setting mode first!
+    if (typeof feature['mode'] !== 'undefined') {
+      this.mode = feature['mode'] as EngineConst.Mode;
+    }
+    this.configurate(feature);
+    options.set(feature);
+    this.setCustomLoader(feature.custom);
+  }
+
 }
 
 /**
@@ -322,4 +341,59 @@ export class EnginePromise {
   public static getall() {
     return Promise.all(Object.values(EnginePromise.promises));
   }
+
 }
+
+const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];
+
+const EN_RULES: string[] = [
+  'chromevox',
+  'clearspeak',
+  'mathspeak',
+  'emacspeak',
+  'html'
+];
+
+/**
+ * Ensures that the domain and preference/style combination in a given feature
+ * vector actually exists.
+ *
+ * @param feature The current SRE feature vector.
+ */
+function ensureDomain(feature: { [key: string]: boolean | string }) {
+  // This preserves the possibility to specify default as domain.
+  // < 3.2  this lead to the use of chromevox rules in English.
+  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
+  // we get a meaningful output.
+  if (
+    (feature.modality && feature.modality !== 'speech') ||
+    (!feature.modality && Engine.getInstance().options.modality !== 'speech')
+  ) {
+    return;
+  }
+  if (!feature.domain) {
+    return;
+  }
+  if (feature.domain === 'default') {
+    feature.domain = 'mathspeak';
+    return;
+  }
+  const locale = (feature.locale || Engine.getInstance().options.locale) as string;
+  const domain = feature.domain as string;
+  if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
+    if (domain !== 'mathspeak') {
+      feature.domain = 'mathspeak';
+    }
+    return;
+  }
+  if (locale === 'en') {
+    if (EN_RULES.indexOf(domain) === -1) {
+      feature.domain = 'mathspeak';
+    }
+    return;
+  }
+  if (domain !== 'mathspeak' && domain !== 'clearspeak') {
+    feature.domain = 'mathspeak';
+  }
+}
+

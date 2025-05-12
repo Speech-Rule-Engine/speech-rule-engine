@@ -21,65 +21,11 @@
 import * as L10n from '../l10n/l10n.js';
 import * as MathMap from '../speech_rules/math_map.js';
 import * as BrowserUtil from './browser_util.js';
+import { Options } from './options.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
-import { Mode } from './engine_const.js';
-import { Options } from './options.js';
 import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
-
-const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];
-
-const EN_RULES: string[] = [
-  'chromevox',
-  'clearspeak',
-  'mathspeak',
-  'emacspeak',
-  'html'
-];
-
-/**
- * Ensures that the domain and preference/style combination in a given feature
- * vector actually exists.
- *
- * @param feature The current SRE feature vector.
- */
-function ensureDomain(feature: { [key: string]: boolean | string }) {
-  // This preserves the possibility to specify default as domain.
-  // < 3.2  this lead to the use of chromevox rules in English.
-  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-  // we get a meaningful output.
-  if (
-    (feature.modality && feature.modality !== 'speech') ||
-    (!feature.modality && Engine.getInstance().options.modality !== 'speech')
-  ) {
-    return;
-  }
-  if (!feature.domain) {
-    return;
-  }
-  if (feature.domain === 'default') {
-    feature.domain = 'mathspeak';
-    return;
-  }
-  const locale = (feature.locale || Engine.getInstance().options.locale) as string;
-  const domain = feature.domain as string;
-  if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
-    if (domain !== 'mathspeak') {
-      feature.domain = 'mathspeak';
-    }
-    return;
-  }
-  if (locale === 'en') {
-    if (EN_RULES.indexOf(domain) === -1) {
-      feature.domain = 'mathspeak';
-    }
-    return;
-  }
-  if (domain !== 'mathspeak' && domain !== 'clearspeak') {
-    feature.domain = 'mathspeak';
-  }
-}
 
 // Engine setup method.
 
@@ -91,27 +37,9 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
  * @param feature An object describing some setup features.
  * @returns The promise that resolves once setup is complete.
  */
-export async function setup(feature: { [key: string]: boolean | string }) {
-  ensureDomain(feature);
+export async function setupEngine(feature: { [key: string]: boolean | string }) {
   const engine = Engine.getInstance();
-  const options = engine.options as any;
-  const setIf = (feat: string) => {
-    if (typeof feature[feat] !== 'undefined') {
-      options[feat] = !!feature[feat];
-    }
-  };
-  const setMulti = (feat: string) => {
-    if (typeof feature[feat] !== 'undefined') {
-      options[feat] = feature[feat];
-    }
-  };
-  // Setting mode first!
-  if (typeof feature['mode'] !== 'undefined') {
-    engine.mode = feature['mode'] as Mode;
-  }
-  engine.configurate(feature);
-  Options.BINARY_FEATURES.forEach(setIf);
-  Options.STRING_FEATURES.forEach(setMulti);
+  engine.setup(feature);
   if (feature.debug) {
     Debugger.getInstance().init();
   }
@@ -121,7 +49,6 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   if (feature.xpath) {
     SystemExternal.WGXpath = feature.xpath as string;
   }
-  engine.setCustomLoader(feature.custom);
   setupBrowsers(engine);
   L10n.setLocale();
   engine.setDynamicCstr();
@@ -135,8 +62,8 @@ export async function setup(feature: { [key: string]: boolean | string }) {
     engine.init = false;
     return EnginePromise.get();
   }
-  if (options.delay) {
-    options.delay = false;
+  if (engine.options.delay) {
+    engine.options.delay = false;
     return EnginePromise.get();
   }
   return MathMap.loadLocale();
@@ -152,3 +79,26 @@ function setupBrowsers(engine: Engine) {
   engine.isIE = BrowserUtil.detectIE();
   engine.isEdge = BrowserUtil.detectEdge();
 }
+
+/**
+ * Query the engine setup.
+ *
+ * @returns Object vector with all engine feature
+ *     values.
+ */
+export function engineSetup(): { [key: string]: boolean | string } {
+  const engineFeatures = [].concat(
+    Options.STRING_FEATURES,
+    Options.BINARY_FEATURES
+  );
+  const engine = Engine.getInstance() as any;
+  const features: { [key: string]: string | boolean } = {};
+  features['mode'] = engine.mode;
+  engineFeatures.forEach(function (x) {
+    features[x] = engine.options[x];
+  });
+  features.json = SystemExternal.jsonPath;
+  features.xpath = SystemExternal.WGXpath;
+  return features;
+}
+
