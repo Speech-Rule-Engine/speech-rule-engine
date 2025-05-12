@@ -21,10 +21,8 @@
 import * as L10n from '../l10n/l10n.js';
 import * as MathMap from '../speech_rules/math_map.js';
 import * as BrowserUtil from './browser_util.js';
-import { Options } from './options.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
-import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
 
 // Engine setup method.
@@ -38,17 +36,11 @@ import { SystemExternal } from './system_external.js';
  * @returns The promise that resolves once setup is complete.
  */
 export async function setupEngine(feature: { [key: string]: boolean | string }) {
-  const engine = Engine.getInstance();
-  engine.setup(feature);
   if (feature.debug) {
     Debugger.getInstance().init();
   }
-  if (feature.json) {
-    SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
-  }
-  if (feature.xpath) {
-    SystemExternal.WGXpath = feature.xpath as string;
-  }
+  const engine = Engine.getInstance();
+  engine.setup(feature);
   setupBrowsers(engine);
   L10n.setLocale();
   engine.setDynamicCstr();
@@ -87,16 +79,7 @@ function setupBrowsers(engine: Engine) {
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
-  const engineFeatures = [].concat(
-    Options.STRING_FEATURES,
-    Options.BINARY_FEATURES
-  );
-  const engine = Engine.getInstance() as any;
-  const features: { [key: string]: string | boolean } = {};
-  features['mode'] = engine.mode;
-  engineFeatures.forEach(function (x) {
-    features[x] = engine.options[x];
-  });
+  const features: { [key: string]: string | boolean } = Engine.getInstance().json();
   features.json = SystemExternal.jsonPath;
   features.xpath = SystemExternal.WGXpath;
   return features;

@@ -22,6 +22,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 import * as EngineConst from './engine_const.js';
+import * as FileUtil from './file_util.js';
 import { SystemExternal } from './system_external.js';
 
 import { Debugger } from './debugger.js';
@@ -262,14 +263,34 @@ export class Engine {
    */
   public setup(feature: { [key: string]: boolean | string }) {
     ensureDomain(feature);
-    const options = this.options;
     // Setting mode first!
     if (typeof feature['mode'] !== 'undefined') {
       this.mode = feature['mode'] as EngineConst.Mode;
     }
     this.configurate(feature);
-    options.set(feature);
+    this.options.set(feature);
+    if (feature.json) {
+      SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
+    }
+    if (feature.xpath) {
+      SystemExternal.WGXpath = feature.xpath as string;
+    }
     this.setCustomLoader(feature.custom);
+  }
+
+  /**
+   * Query the engine setup.
+   *
+   * @returns Overview of engine setup as a JSON dictionary.
+   */
+  public json(): { [key: string]: boolean | string } {
+    const features: { [key: string]: string | boolean } = {'mode': this.mode};
+    const engineFeatures = [].concat(
+      Options.STRING_FEATURES,
+      Options.BINARY_FEATURES
+    );
+    engineFeatures.forEach(x => features[x] = (this.options as any)[x]);
+    return features;
   }
 
 }
