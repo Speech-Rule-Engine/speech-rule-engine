@@ -284,9 +284,7 @@ export class Engine {
    * @returns Overview of engine setup as a JSON dictionary.
    */
   public json(): { [key: string]: boolean | string } {
-    const features: { [key: string]: string | boolean } = this.options.json();
-    features['mode'] = this.mode;
-    return features;
+    return Object.assign({'mode': this.mode}, this.options.json());
   }
 
 }
@@ -388,7 +386,7 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
   ) {
     return;
   }
-  if (!feature.domain) {
+  if (!feature.domain && !feature.locale) {
     return;
   }
   if (feature.domain === 'default') {
@@ -396,11 +394,9 @@ function ensureDomain(feature: { [key: string]: boolean | string }) {
     return;
   }
   const locale = (feature.locale || Engine.getInstance().options.locale) as string;
-  const domain = feature.domain as string;
-  if (MATHSPEAK_ONLY.indexOf(locale) !== -1) {
-    if (domain !== 'mathspeak') {
-      feature.domain = 'mathspeak';
-    }
+  const domain = (feature.domain || Engine.getInstance().options.domain) as string;
+  if (MATHSPEAK_ONLY.indexOf(locale) !== -1 && domain !== 'mathspeak') {
+    feature.domain = 'mathspeak';
     return;
   }
   if (locale === 'en') {
