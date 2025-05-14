@@ -20,7 +20,7 @@
  */
 
 import * as BaseUtil from '../common/base_util.js';
-import { Engine } from '../common/engine.js';
+import { Options } from '../common/options.js';
 
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr.js';
@@ -29,10 +29,6 @@ import { SemanticNode } from './semantic_node.js';
 import { SemanticTree } from './semantic_tree.js';
 
 export type Sexp = number | Sexp[];
-
-const Options = {
-  tree: false
-};
 
 /**
  * @param skeleton The skeleton array.
@@ -140,13 +136,16 @@ export class SemanticSkeleton {
    *
    * @param mml A mml node to add a structure to.
    * @param tree A semantic tree.
+   * @param options The system options.
    * @returns The skeletal structure.
    */
   public static fromStructure(
     mml: Element,
-    tree: SemanticTree
+    tree: SemanticTree,
+    options: Options
   ): SemanticSkeleton {
-    return new SemanticSkeleton(SemanticSkeleton.tree_(mml, tree.root));
+    return new SemanticSkeleton(
+      SemanticSkeleton.tree_(mml, tree.root, options));
   }
 
   /**
@@ -272,6 +271,7 @@ export class SemanticSkeleton {
    *
    * @param mml A mml node to add a structure to.
    * @param node A semantic node.
+   * @param options The system options.
    * @param level The level in the tree, used for aria-level.
    * @param posinset The position in the child set, used for aria-posinset.
    * @param setsize The size of the child set, used for aria-setsize.
@@ -280,6 +280,7 @@ export class SemanticSkeleton {
   private static tree_(
     mml: Element,
     node: SemanticNode,
+    options: Options,
     level = 0,
     posinset = 1,
     setsize = 1
@@ -295,7 +296,7 @@ export class SemanticSkeleton {
       mml
     )[0] as Element;
     if (!node.childNodes.length) {
-      SemanticSkeleton.addAria(mmlChild, level, posinset, setsize);
+      SemanticSkeleton.addAria(mmlChild, level, posinset, setsize, options);
       return node.id;
     }
     const children = SemanticSkeleton.combineContentChildren<SemanticNode>(
@@ -317,7 +318,7 @@ export class SemanticSkeleton {
       i++
     ) {
       skeleton.push(
-        SemanticSkeleton.tree_(mml, child, level + 1, i + 1, l) as any
+        SemanticSkeleton.tree_(mml, child, options, level + 1, i + 1, l) as any
       );
     }
     SemanticSkeleton.addAria(
@@ -325,7 +326,7 @@ export class SemanticSkeleton {
       level,
       posinset,
       setsize,
-      !Options.tree ? 'treeitem' : level ? 'group' : 'tree'
+      options
     );
     return skeleton;
   }
@@ -337,16 +338,17 @@ export class SemanticSkeleton {
    * @param level The level in the tree, used for aria-level.
    * @param posinset The position in the child set, used for aria-posinset.
    * @param setsize The size of the child set, used for aria-setsize.
-   * @param role The aria-role to add.
+   * @param options The system options.
    */
   private static addAria(
     node: Element,
     level: number,
     posinset: number,
     setsize: number,
-    role: string = !Options.tree ? 'treeitem' : level ? 'treeitem' : 'tree'
+    options: Options
   ) {
-    if (!Engine.getInstance().aria || !node) {
+    const role = !options.tree ? 'treeitem' : level ? 'treeitem' : 'tree'
+    if (!options.aria || !node) {
       return;
     }
     // Aria elements

@@ -25,6 +25,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Options } from '../common/options.js';
 
 import { annotate } from './semantic_annotations.js';
 import { SemanticVisitor } from './semantic_annotator.js';
@@ -40,7 +41,7 @@ export class SemanticTree {
   /**
    * The root of the tree.
    */
-  public parser: SemanticParser<Element> = new SemanticMathml();
+  public parser: SemanticParser<Element>;
 
   /**
    * The root of the tree.
@@ -59,7 +60,7 @@ export class SemanticTree {
    */
   public static empty(): SemanticTree {
     const empty = DomUtil.parseInput('<math/>');
-    const stree = new SemanticTree(empty);
+    const stree = new SemanticTree(empty, new Options());
     stree.mathml = empty;
     return stree;
   }
@@ -128,14 +129,15 @@ export class SemanticTree {
    *
    * @param mathml The original MathML node.
    */
-  constructor(public mathml: Element) {
+  constructor(public mathml: Element, public options: Options) {
+    this.parser = new SemanticMathml(options);
     this.root = this.parser.parse(mathml);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
 
     const newDefault = this.collator.newDefault();
     if (newDefault) {
       // Reparse!
-      this.parser = new SemanticMathml();
+      this.parser = new SemanticMathml(options);
       this.parser.getFactory().defaultMap = newDefault;
       this.root = this.parser.parse(mathml);
     }

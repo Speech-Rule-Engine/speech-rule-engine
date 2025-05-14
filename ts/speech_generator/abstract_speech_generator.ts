@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { setup as EngineSetup } from '../common/engine_setup.js';
+import { setupEngine } from '../common/engine_setup.js';
 import * as EnrichAttr from '../enrich_mathml/enrich_attr.js';
 import { AxisMap } from '../rule_engine/dynamic_cstr.js';
 import { RebuildStree } from '../walker/rebuild_stree.js';
@@ -101,7 +101,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     if (!this.rebuilt_) {
       this.rebuilt_ = new RebuildStree(xml);
     }
-    EngineSetup(this.options_);
+    setupEngine(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
 

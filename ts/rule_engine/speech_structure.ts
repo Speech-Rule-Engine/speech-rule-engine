@@ -136,15 +136,15 @@ export class SpeechStructure {
    * @param func The function to use for completion.
    */
   public completeModality(modality: string, func: any) {
-    const oldModality = Engine.getInstance().modality;
-    Engine.getInstance().modality = modality;
+    const oldModality = Engine.getInstance().options.modality;
+    Engine.getInstance().options.modality = modality;
     for (const [id, descrs] of this.getNodeMap()) {
       const speechMap = this.getSpeechMap(id);
       if (!speechMap.has(modality)) {
         func(descrs);
       }
     }
-    Engine.getInstance().modality = oldModality;
+    Engine.getInstance().options.modality = oldModality;
   }
 
   /**
@@ -156,16 +156,16 @@ export class SpeechStructure {
     const result: {
       [id: string]: { [modality: string]: string };
     } = {};
-    const oldMarkup = Engine.getInstance().markup;
+    const oldMarkup = Engine.getInstance().options.markup;
     for (const [id, map] of this.speechMaps) {
       const modality: { [modality: string]: string } = {};
       for (const ml of mls) {
-        Engine.getInstance().markup = ml as Markup;
+        Engine.getInstance().options.markup = ml as Markup;
         map.forEach((x, y) => (modality[`${y}-${ml}`] = markup(x)));
         result[id] = modality;
       }
     }
-    Engine.getInstance().markup = oldMarkup;
+    Engine.getInstance().options.markup = oldMarkup;
     return result;
   }
 }

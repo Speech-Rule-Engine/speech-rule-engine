@@ -21,7 +21,6 @@
  */
 
 import { Debugger } from '../common/debugger.js';
-import { Engine } from '../common/engine.js';
 import { SemanticMap, NamedSymbol } from './semantic_attr.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
@@ -35,7 +34,7 @@ import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { SemanticSkeleton } from './semantic_skeleton.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 
 import * as DomUtil from '../common/dom_util.js';
 
@@ -90,7 +89,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -111,7 +110,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -131,7 +130,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -210,7 +209,7 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) =>
-      Engine.getInstance().modality === 'braille' &&
+      SemanticHeuristics.options.modality === 'braille' &&
       node.type === SemanticType.IDENTIFIER
   )
 );
@@ -805,8 +804,8 @@ function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
 }
 
 /**
- * Rewrites a simple function to a prefix function if it consists of multiple
- * letters. (Currently restricted to Braille!)
+ * Rewrites simple operations with indexing style limits into large operators of
+ * role sum.
  */
 SemanticHeuristics.add(
   new SemanticMultiHeuristic(

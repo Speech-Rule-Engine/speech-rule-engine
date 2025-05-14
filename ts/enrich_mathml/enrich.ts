@@ -18,9 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger.js';
+// import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { EnginePromise } from '../common/engine.js';
+import { Options } from '../common/options.js';
 import * as Semantic from '../semantic_tree/semantic.js';
 
 import * as EnrichMathml from './enrich_mathml.js';
@@ -32,10 +33,10 @@ import './enrich_case_factory.js';
  * @param mml The original MathML node.
  * @returns Semantically enriched MathML node.
  */
-export function semanticMathmlNode(mml: Element): Element {
+export function semanticMathmlNode(mml: Element, options: Options): Element {
   const clone = DomUtil.cloneNode(mml);
-  const tree = Semantic.getTree(clone);
-  return EnrichMathml.enrich(clone, tree);
+  const tree = Semantic.getTree(clone, options);
+  return EnrichMathml.enrich(clone, tree, options);
 }
 
 /**
@@ -44,14 +45,14 @@ export function semanticMathmlNode(mml: Element): Element {
  * @param expr The MathML expression as a string without math tags.
  * @returns The modified MathML element.
  */
-export function semanticMathmlSync(expr: string): Element {
+export function semanticMathmlSync(expr: string, options: Options): Element {
   const mml = DomUtil.parseInput(expr);
   try {
-    semanticMathmlNode(mml);
+    return semanticMathmlNode(mml, options);
   } catch (err) {
     console.error(err);
+    return mml;
   }
-  return semanticMathmlNode(mml);
 }
 
 /**
@@ -60,25 +61,25 @@ export function semanticMathmlSync(expr: string): Element {
  * @param expr The MathML expression as a string without math tags.
  * @param callback Function to apply on the result.
  */
-export function semanticMathml(expr: string, callback: (p1: Element) => any) {
+export function semanticMathml(expr: string, options: Options, callback: (p1: Element) => any) {
   EnginePromise.getall().then(() => {
     const mml = DomUtil.parseInput(expr);
-    callback(semanticMathmlNode(mml));
+    callback(semanticMathmlNode(mml, options));
   });
 }
 
-/**
- * Tests for an expression with debugger output.
- *
- * @param expr MathML expression.
- * @returns The enriched MathML expression.
- */
-export function testTranslation(expr: string): Element {
-  Debugger.getInstance().init();
-  const mml = semanticMathmlSync(prepareMmlString(expr));
-  Debugger.getInstance().exit();
-  return mml;
-}
+// /**
+//  * Tests for an expression with debugger output.
+//  *
+//  * @param expr MathML expression.
+//  * @returns The enriched MathML expression.
+//  */
+// export function testTranslation(expr: string): Element {
+//   Debugger.getInstance().init();
+//   const mml = semanticMathmlSync(prepareMmlString(expr), options);
+//   Debugger.getInstance().exit();
+//   return mml;
+// }
 
 /**
  * Adds Math tags to a MathML string, if necessary.

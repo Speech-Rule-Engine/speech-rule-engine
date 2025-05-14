@@ -21,7 +21,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as AuralRendering from '../audio/aural_rendering.js';
 import * as DomUtil from '../common/dom_util.js';
-import { setup as EngineSetup } from '../common/engine_setup.js';
+import { setupEngine } from '../common/engine_setup.js';
 import { KeyCode } from '../common/event_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { Highlighter } from '../highlighter/highlighter.js';
@@ -743,7 +743,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public update(options: AxisMap) {
-    EngineSetup(options).then(() =>
+    setupEngine(options).then(() =>
       SpeechGeneratorFactory.generator('Tree').getSpeech(
         this.node,
         this.getXml()

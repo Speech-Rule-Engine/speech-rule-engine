@@ -19,6 +19,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Options } from '../common/options.js';
 import {
   SemanticFont,
   SemanticRole,
@@ -30,7 +31,7 @@ import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
@@ -63,8 +64,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * The semantic parser for MathML elements.
    */
-  constructor() {
+  constructor(public options: Options) {
     super('MathML');
+    // TODO: process options, in particular for heuristics
+    SemanticHeuristics.options = options;
     this.parseMap_ = new Map([
       [MMLTAGS.SEMANTICS, this.semantics_.bind(this)],
       [MMLTAGS.MATH, this.rows_.bind(this)],
