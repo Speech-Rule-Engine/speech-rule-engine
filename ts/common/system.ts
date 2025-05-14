@@ -67,6 +67,13 @@ export function engineSetup(): { [key: string]: boolean | string } {
 }
 
 /**
+ * Reset the engine options setup.
+ */
+export function resetEngine() {
+  return Engine.getInstance().reset();
+}
+
+/**
  * @returns True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */

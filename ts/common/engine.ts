@@ -286,6 +286,14 @@ export class Engine {
     return Object.assign({'mode': this.mode}, this.options.json());
   }
 
+  /**
+   * Reset the engine options. This excludes computed elements like mode,
+   * comparators etc.
+   */
+  public reset() {
+    this.options = new Options();
+  }
+
 }
 
 /**
