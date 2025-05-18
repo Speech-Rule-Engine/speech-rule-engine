@@ -195,7 +195,7 @@ export class Engine {
         }
       }
     }
-    EngineConst.DOMAIN_TO_STYLES[this.options.domain] = this.options.style;
+    // EngineConst.DOMAIN_TO_STYLES[this.options.domain] = this.options.style;
     const dynamic = [this.options.locale, this.options.modality, this.options.domain, this.options.style].join(
       '.'
     );

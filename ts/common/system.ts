@@ -423,6 +423,7 @@ type WorkerStructure = {
   translations?: OptionsList;
   label?: string;
   braillelabel?: string;
+  ssml?: string;
 };
 
 /**
@@ -455,7 +456,9 @@ export async function workerNextRules(
   // TODO: Don't do anything if no next rules!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
+  SpeechGeneratorUtil.setStyles(options.domain2style);
   options = SpeechGeneratorUtil.nextRules(options);
+  options.domain2style = SpeechGeneratorUtil.getStyles();
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -475,8 +478,11 @@ export async function workerNextStyle(
   // TODO: Don't do anything if no next style!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
-  options.style = style;
+  SpeechGeneratorUtil.setStyles(options.domain2style);
+  options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+  options.style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
+  options.domain2style = SpeechGeneratorUtil.getStyles();
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -512,6 +518,7 @@ async function assembleWorkerStructure(
     json.braillelabel = json.braille[root]['braille-none'];
   }
   json.label = json.speech[root]['speech-none'];
+  json.ssml = json.speech[root]['speech-ssml'];
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   return json;
 }

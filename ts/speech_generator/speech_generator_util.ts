@@ -521,3 +521,27 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
   }
   return style;
 }
+
+export function setStyles(option: string) {
+  if (!option) {
+    return;
+  }
+  const split = option.split(',');
+  for (const pair of split) {
+    const [first, second] = pair.split(/:(.*)/);
+    if (second && EngineConst.DOMAIN_TO_STYLES[first]) {
+      EngineConst.DOMAIN_TO_STYLES[first] = second;
+    }
+  }
+}
+
+export function getStyles(): string {
+  let styles = [];
+  console.log(3);
+  console.log(EngineConst.DOMAIN_TO_STYLES);
+  for (const [domain, style] of Object.entries(EngineConst.DOMAIN_TO_STYLES)) {
+    console.log((`${domain}:${style}`));
+    styles.push(`${domain}:${style}`);
+  }
+  return styles.join(',');
+}
