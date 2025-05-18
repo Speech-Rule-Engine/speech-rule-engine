@@ -456,9 +456,9 @@ export async function workerNextRules(
   // TODO: Don't do anything if no next rules!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  SpeechGeneratorUtil.setStyles(options.domain2style);
-  options = SpeechGeneratorUtil.nextRules(options);
-  options.domain2style = SpeechGeneratorUtil.getStyles();
+  const styles = SpeechGeneratorUtil.toStyles(options.domain2style);
+  options = SpeechGeneratorUtil.nextRules(options, styles);
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -478,11 +478,10 @@ export async function workerNextStyle(
   // TODO: Don't do anything if no next style!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  SpeechGeneratorUtil.setStyles(options.domain2style);
-  options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+  const styles = SpeechGeneratorUtil.toStyles(options.domain2style);
   options.style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
-  EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
-  options.domain2style = SpeechGeneratorUtil.getStyles();
+  styles[options.domain] = options.style;
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 

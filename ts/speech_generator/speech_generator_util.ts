@@ -461,7 +461,9 @@ export function computeBrailleStructure(sxml: Element) {
  *
  * @param options
  */
-export function nextRules(options: OptionsList): OptionsList {
+export function nextRules(
+  options: OptionsList,
+  styles: OptionsList = EngineConst.DOMAIN_TO_STYLES): OptionsList {
   // Rule cycling only makes sense for speech modality.
   if (options.modality !== 'speech') {
     return options;
@@ -470,9 +472,8 @@ export function nextRules(options: OptionsList): OptionsList {
   if (!prefs[options.locale]) {
     return options;
   }
-  EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
   options.domain = options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-  options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+  options.style = styles[options.domain] ?? options.style;
   return options;
 }
 
@@ -522,26 +523,25 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
   return style;
 }
 
-export function setStyles(option: string) {
+export function toStyles(option: string): OptionsList {
+  const styles: OptionsList = {};
   if (!option) {
-    return;
+    Object.assign(styles, EngineConst.DOMAIN_TO_STYLES);
+    return styles;
   }
   const split = option.split(',');
   for (const pair of split) {
     const [first, second] = pair.split(/:(.*)/);
-    if (second && EngineConst.DOMAIN_TO_STYLES[first]) {
-      EngineConst.DOMAIN_TO_STYLES[first] = second;
-    }
+    styles[first] = second ? second :
+      (EngineConst.DOMAIN_TO_STYLES[first] ?? 'default');
   }
+  return styles;
 }
 
-export function getStyles(): string {
-  let styles = [];
-  console.log(3);
-  console.log(EngineConst.DOMAIN_TO_STYLES);
-  for (const [domain, style] of Object.entries(EngineConst.DOMAIN_TO_STYLES)) {
-    console.log((`${domain}:${style}`));
-    styles.push(`${domain}:${style}`);
+export function fromStyles(styles: OptionsList): string {
+  let strs = [];
+  for (const [domain, style] of Object.entries(styles)) {
+    strs.push(`${domain}:${style}`);
   }
-  return styles.join(',');
+  return strs.join(',');
 }
