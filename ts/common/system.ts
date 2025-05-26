@@ -489,14 +489,27 @@ export async function workerNextStyle(
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
-export async function workerLocalePreferences(options: OptionsList) {
+/**
+ * Compute clearspeak preferences for a locale.
+ *
+ * @param options The options containing the locale setting.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerLocalePreferences(options: OptionsList): Promise<WorkerStructure> {
   return ClearspeakPreferences.getLocalePreferences()[options.locale] || {};
 }
 
+/**
+ * Compute clearspeak preference category for a node.
+ *
+ * @param expr The math expression.
+ * @param id The semantic id of a node in the expression to compute the category for.
+ * @returns The worker structure once the promise resolves.
+ */
 export async function workerRelevantPreferences(
   expr: string,
   id: string
-) {
+): Promise<string> {
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
   const query = rebuilt.stree.root.querySelectorAll((x) => x.id.toString() === id)[0] ?? rebuilt.stree.root;
