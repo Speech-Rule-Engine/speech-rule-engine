@@ -496,7 +496,7 @@ export async function workerNextStyle(
  * @returns The worker structure once the promise resolves.
  */
 export async function workerLocalePreferences(options: OptionsList): Promise<WorkerStructure> {
-  return ClearspeakPreferences.getLocalePreferences()[options.locale] || {};
+  return ClearspeakPreferences.getLocalePreferences()[options.locale];
 }
 
 /**
