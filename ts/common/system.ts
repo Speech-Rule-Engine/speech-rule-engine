@@ -33,6 +33,8 @@ import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.
 import { RebuildStree } from '../walker/rebuild_stree.js';
 import * as DomUtil from './dom_util.js';
 
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+
 /**
  * Version number.
  */
@@ -439,6 +441,8 @@ export async function workerSpeech(
 ): Promise<WorkerStructure> {
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -456,7 +460,7 @@ export async function workerNextRules(
   // TODO: Don't do anything if no next rules!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  const styles = SpeechGeneratorUtil.toStyles(options.domain2style);
+  const styles = SpeechGeneratorUtil.toStyles(options);
   options = SpeechGeneratorUtil.nextRules(options, styles);
   options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
@@ -478,11 +482,25 @@ export async function workerNextStyle(
   // TODO: Don't do anything if no next style!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  const styles = SpeechGeneratorUtil.toStyles(options.domain2style);
+  const styles = SpeechGeneratorUtil.toStyles(options);
   options.style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
   styles[options.domain] = options.style;
   options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+export async function workerLocalePreferences(options: OptionsList) {
+  return ClearspeakPreferences.getLocalePreferences()[options.locale] || {};
+}
+
+export async function workerRelevantPreferences(
+  expr: string,
+  id: string
+) {
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const query = rebuilt.stree.root.querySelectorAll((x) => x.id.toString() === id)[0] ?? rebuilt.stree.root;
+  return ClearspeakPreferences.relevantPreferences(query);
 }
 
 /**
