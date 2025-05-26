@@ -122,13 +122,6 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * @returns The current clearspeak styles selection, if any is set.
-   */
-  public static currentPreference() {
-    return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
-  }
-
-  /**
    * Computes a relevant selection of clearspeak preferences for a given
    * semantic node.
    *
