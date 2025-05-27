@@ -31,6 +31,7 @@ import './enrich_case_factory.js';
  * Semantically enriches a MathML node.
  *
  * @param mml The original MathML node.
+ * @param options The options to use.
  * @returns Semantically enriched MathML node.
  */
 export function semanticMathmlNode(mml: Element, options: Options): Element {
@@ -43,6 +44,7 @@ export function semanticMathmlNode(mml: Element, options: Options): Element {
  * Reads a MathML element from a string and semantically enriches its.
  *
  * @param expr The MathML expression as a string without math tags.
+ * @param options The options to use.
  * @returns The modified MathML element.
  */
 export function semanticMathmlSync(expr: string, options: Options): Element {
@@ -59,6 +61,7 @@ export function semanticMathmlSync(expr: string, options: Options): Element {
  * Reads a MathML element from a string and semantically enriches its.
  *
  * @param expr The MathML expression as a string without math tags.
+ * @param options The options to use.
  * @param callback Function to apply on the result.
  */
 export function semanticMathml(expr: string, options: Options, callback: (p1: Element) => any) {
