@@ -2,9 +2,6 @@
   "name": "speech-rule-engine",
   "version": "5.0.0-alpha.2",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
-  "directories": {
-    "test": "tests"
-  },
   "bin": {
     "sre": "bin/sre"
   },
@@ -67,6 +64,7 @@
     "terser-webpack-plugin": "5.3.14",
     "ts-loader": "9.5.2",
     "ts-prune": "^0.10.3",
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typedoc": "^0.28.2",
     "typescript": "5.8.3",
     "webpack": "5.99.5",
@@ -81,6 +79,14 @@
     "js/",
     "cjs/"
   ],
-  "source": "ts/index.ts",
+  "exports": {
+    "./js/*": {
+      "import": "./js/*",
+      "require": "./cjs/*"
+    }
+  },
+  "imports": {
+    "#js/*": "js/*"
+  },
   "main": "lib/sre.js"
 }

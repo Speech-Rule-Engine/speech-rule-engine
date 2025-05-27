@@ -2,6 +2,7 @@ import * as path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
 import { fileURLToPath } from 'url';
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -20,6 +21,9 @@ let config = {
     maxAssetSize: 400000
   },
   resolve: {
+    plugins: [new TsconfigPathsPlugin({
+      baseUrl: "./js/",
+    })],
     extensions: [ '.tsx', '.ts', '.js'],
   },
   node: {
