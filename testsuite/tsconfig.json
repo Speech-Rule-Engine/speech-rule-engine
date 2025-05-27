@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./js",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "baseUrl": "..",
+    "lib": ["ES2022"]
+  },
+  "include": ["tests", "src"]
+}
