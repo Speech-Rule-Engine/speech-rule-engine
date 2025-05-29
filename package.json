@@ -22,7 +22,7 @@
     "clean": "rimraf js lib cjs",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; pnpm jest --silent ",
     "cleanAll": "make clean; make clean_min",
-    "prepublish": "pnpm cleanAll; pnpm buildAll",
+    "prepublish": "pnpm cleanAll; pnpm buildAll; rimraf js/**/*.js.map cjs/**/*.js.map",
     "build": "make -j 12 all; pnpm module; pnpm webpack; pnpm require",
     "buildAll": "make -j 12 all; pnpm commonjs; pnpm module; pnpm webpack; pnpm require; pnpm postcommonjs; pnpm postmodule"
   },
