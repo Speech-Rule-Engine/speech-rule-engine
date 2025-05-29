@@ -80,8 +80,8 @@ export class SvgV3Highlighter extends SvgHighlighter {
     node.parentNode.insertBefore(rect, node);
     info = { node: node, foreground: node.getAttribute('fill') };
     if (node.nodeName === 'rect') {
-      const picker = new ColorPicker({ alpha: 0, color: 'black' });
-      node.setAttribute('fill', picker.rgba().foreground);
+      const picker = new ColorPicker({ alpha: 0, color: 'white' });
+      node.setAttribute('fill', picker.rgba().background);
     } else {
       node.setAttribute('fill', this.colorString().foreground);
     }

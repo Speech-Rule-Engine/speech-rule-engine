@@ -32,6 +32,7 @@ import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
 import * as EngineConst from '../common/engine_const.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import { addPreference, findPreference } from '../speech_rules/clearspeak_preference_string.js';
 // import { RebuildStree } from '../walker/rebuild_stree.js';
 
 type OptionsList = { [key: string]: string };
@@ -461,7 +462,9 @@ export function computeBrailleStructure(sxml: Element) {
  *
  * @param options
  */
-export function nextRules(options: OptionsList): OptionsList {
+export function nextRules(
+  options: OptionsList,
+  styles: OptionsList = EngineConst.DOMAIN_TO_STYLES): OptionsList {
   // Rule cycling only makes sense for speech modality.
   if (options.modality !== 'speech') {
     return options;
@@ -470,9 +473,8 @@ export function nextRules(options: OptionsList): OptionsList {
   if (!prefs[options.locale]) {
     return options;
   }
-  EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
   options.domain = options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-  options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
+  options.style = styles[options.domain] ?? options.style;
   return options;
 }
 
@@ -484,12 +486,13 @@ export function nextRules(options: OptionsList): OptionsList {
  * @returns The new style name.
  */
 export function nextStyle(node: SemanticNode, options: OptionsList) {
-  const { modality: modality, domain: domain, style: style } = options;
+  const { modality: modality, domain: domain, style: style, locale: locale } = options;
   // Rule cycling only makes sense for speech modality.
   if (modality !== 'speech') {
     return style;
   }
 
+  console.log(`${locale} ${domain} ${style}`);
   if (domain === 'mathspeak') {
     const styles = ['default', 'brief', 'sbrief'];
     const index = styles.indexOf(style);
@@ -500,24 +503,52 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
   }
   if (domain === 'clearspeak') {
     const prefs = ClearspeakPreferences.getLocalePreferences();
-    const loc = prefs['en'];
-    // TODO: use correct locale.
+    const loc = prefs[locale];
     if (!loc) {
       return 'default';
     }
     // TODO: return the previous one?
     const smart = ClearspeakPreferences.relevantPreferences(node);
-    const current = ClearspeakPreferences.findPreference(style, smart);
+    const current = findPreference(style, smart);
     const options = loc[smart].map(function (x) {
       return x.split('_')[1];
     });
     const index = options.indexOf(current);
+    console.log(current);
     if (index === -1) {
+      console.log(31);
       return style;
     }
     const next = index >= options.length - 1 ? options[0] : options[index + 1];
-    const result = ClearspeakPreferences.addPreference(style, smart, next);
+    const result = addPreference(style, smart, next);
+    console.log(32);
+    console.log(result);
     return result;
   }
   return style;
+}
+
+export function toStyles(options: OptionsList): OptionsList {
+  const {domain, style, domain2style} = options;
+  const styles: OptionsList = {};
+  if (!domain2style) {
+    Object.assign(styles, EngineConst.DOMAIN_TO_STYLES);
+    styles[domain] = style;
+    return styles;
+  }
+  const split = domain2style.split(',');
+  for (const pair of split) {
+    const [first, second] = pair.split(/:(.*)/);
+    styles[first] = second ? second :
+      (EngineConst.DOMAIN_TO_STYLES[first] ?? 'default');
+  }
+  return styles;
+}
+
+export function fromStyles(styles: OptionsList): string {
+  let strs = [];
+  for (const [domain, style] of Object.entries(styles)) {
+    strs.push(`${domain}:${style}`);
+  }
+  return strs.join(',');
 }

@@ -19,7 +19,6 @@
  */
 
 import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import {
   Axis,
@@ -36,9 +35,9 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { fromPreference, toPreference, PREFERENCES } from './clearspeak_preference_string.js';
 
 export class ClearspeakPreferences extends DynamicCstr {
-  private static AUTO = 'Auto';
 
   /**
    * Exports the Clearspeak comparator with default settings.
@@ -58,52 +57,6 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * Parse the preferences from a string of the form:
-   * preference1_setting1:preference2_setting2:....:preferenceN_settingN
-   *
-   * @param pref The preference string.
-   * @returns The preference settings.
-   */
-  public static fromPreference(pref: string): AxisMap {
-    const pairs = pref.split(':');
-    const preferences: AxisMap = {};
-    const properties = PREFERENCES.getProperties();
-    const validKeys = Object.keys(properties);
-    for (let i = 0, key; (key = pairs[i]); i++) {
-      const pair = key.split('_');
-      if (validKeys.indexOf(pair[0]) === -1) {
-        continue;
-      }
-      const value = pair[1];
-      if (
-        value &&
-        value !== ClearspeakPreferences.AUTO &&
-        properties[pair[0] as Axis].indexOf(value) !== -1
-      ) {
-        preferences[pair[0]] = pair[1];
-      }
-    }
-    return preferences;
-  }
-
-  /**
-   * Creates a style string from a set of preference mappings, by joining them
-   * via underscore and colon in the form:
-   * preference1_setting1:preference2_setting2:....:preferenceN_settingN
-   *
-   * @param pref A preference mapping.
-   * @returns A style string created from the preferences.
-   */
-  public static toPreference(pref: AxisMap): string {
-    const keys = Object.keys(pref);
-    const str = [];
-    for (let i = 0; i < keys.length; i++) {
-      str.push(keys[i] + '_' + pref[keys[i]]);
-    }
-    return str.length ? str.join(':') : DynamicCstr.DEFAULT_VALUE;
-  }
-
-  /**
    * Computes the clearspeak preferences per locale and caches them.
    *
    * @param opt_dynamic Optionally a tree structure with the dynamic
@@ -119,13 +72,6 @@ export class ClearspeakPreferences extends DynamicCstr {
       opt_dynamic ||
       MathCompoundStore.enumerate(SpeechRuleEngine.getInstance().enumerate());
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
-  }
-
-  /**
-   * @returns The current clearspeak styles selection, if any is set.
-   */
-  public static currentPreference() {
-    return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
   }
 
   /**
@@ -149,45 +95,6 @@ export class ClearspeakPreferences extends DynamicCstr {
     } else {
       return testSpecial(cons, node) || 'ImpliedTimes';
     }
-  }
-
-  /**
-   * Look up the setting of a preference in a preference settings string.
-   *
-   * @param prefs Preference settings.
-   * @param kind The preference to look up.
-   * @returns The setting of that preference. If it does not exist,
-   *     returns Auto.
-   */
-  public static findPreference(prefs: string, kind: string): string {
-    if (prefs === 'default') {
-      return ClearspeakPreferences.AUTO;
-    }
-    const parsed = ClearspeakPreferences.fromPreference(prefs);
-    return parsed[kind] || ClearspeakPreferences.AUTO;
-  }
-
-  /**
-   * Takes the string representation of a clearspeak preference setting and adds
-   * a new preference setting via a preference name and value pair. The updated
-   * setting is then returned again as a string.
-   *
-   * @param prefs Preference settings.
-   * @param kind New preference name.
-   * @param value New preference value.
-   * @returns The updated preference settings.
-   */
-  public static addPreference(
-    prefs: string,
-    kind: string,
-    value: string
-  ): string {
-    if (prefs === 'default') {
-      return kind + '_' + value;
-    }
-    const parsed = ClearspeakPreferences.fromPreference(prefs);
-    parsed[kind] = value;
-    return ClearspeakPreferences.toPreference(parsed);
   }
 
   /**
@@ -262,87 +169,6 @@ export class ClearspeakPreferences extends DynamicCstr {
     return true;
   }
 }
-
-const PREFERENCES = new DynamicProperties({
-  AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
-  Bar: ['Auto', 'Conjugate'],
-  Caps: ['Auto', 'SayCaps'],
-  CombinationPermutation: ['Auto', 'ChoosePermute'],
-  Currency: ['Auto', 'Position', 'Prefix'],
-  Ellipses: ['Auto', 'AndSoOn'],
-  Enclosed: ['Auto', 'EndEnclose'],
-  Exponent: [
-    'Auto',
-    'AfterPower',
-    'Ordinal',
-    'OrdinalPower',
-    // The following are German
-    'Exponent'
-  ],
-  Fraction: [
-    'Auto',
-    'EndFrac',
-    'FracOver',
-    'General',
-    'GeneralEndFrac',
-    'Ordinal',
-    'Over',
-    'OverEndFrac',
-    'Per'
-  ],
-  Functions: [
-    'Auto',
-    'None',
-    // Reciprocal is French
-    'Reciprocal'
-  ],
-  ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
-  Log: ['Auto', 'LnAsNaturalLog'],
-  Matrix: [
-    'Auto',
-    'Combinatoric',
-    'EndMatrix',
-    'EndVector',
-    'SilentColNum',
-    'SpeakColNum',
-    'Vector'
-  ],
-  MultiLineLabel: [
-    'Auto',
-    'Case',
-    'Constraint',
-    'Equation',
-    'Line',
-    'None',
-    'Row',
-    'Step'
-  ],
-  MultiLineOverview: ['Auto', 'None'],
-  MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
-  MultsymbolDot: ['Auto', 'Dot'],
-  MultsymbolX: ['Auto', 'By', 'Cross'],
-  Paren: [
-    'Auto',
-    'CoordPoint',
-    'Interval',
-    'Silent',
-    'Speak',
-    'SpeakNestingLevel'
-  ],
-  Prime: ['Auto', 'Angle', 'Length'],
-  Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
-  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member', 'In'],
-  Sets: ['Auto', 'SilentBracket', 'woAll'],
-  TriangleSymbol: ['Auto', 'Delta'],
-  Trig: [
-    'Auto',
-    'ArcTrig',
-    'TrigInverse',
-    // Reciprocal French
-    'Reciprocal'
-  ],
-  VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
-});
 
 class Comparator extends DefaultComparator {
   /**
@@ -450,7 +276,7 @@ class Parser extends DynamicCstrParser {
    * @returns The preference settings.
    */
   public fromPreference(pref: string): { [key: string]: string } {
-    return ClearspeakPreferences.fromPreference(pref);
+    return fromPreference(pref);
   }
 
   /**
@@ -462,7 +288,7 @@ class Parser extends DynamicCstrParser {
    * @returns A style string created from the preferences.
    */
   public toPreference(pref: { [key: string]: string }): string {
-    return ClearspeakPreferences.toPreference(pref);
+    return toPreference(pref);
   }
 }
 

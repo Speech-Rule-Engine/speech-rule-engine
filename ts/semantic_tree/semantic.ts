@@ -48,6 +48,7 @@ export { Attr };
  * Creates the semantic tree for a given MathML node.
  *
  * @param mml The MathML node.
+ * @param options The options to use.
  * @returns Semantic tree for input node as XML node.
  */
 export function xmlTree(mml: Element, options: Options): Element {
@@ -58,6 +59,7 @@ export function xmlTree(mml: Element, options: Options): Element {
  * Creates the semantic tree for a given MathML node.
  *
  * @param mml The MathML node.
+ * @param options The options to use.
  * @returns Semantic tree for input node.
  */
 export function getTree(mml: Element, options: Options): SemanticTree {
@@ -68,6 +70,7 @@ export function getTree(mml: Element, options: Options): SemanticTree {
  * Creates the semantic tree for a MathML string.
  *
  * @param expr The string representing the MathML expression.
+ * @param options The options to use.
  * @returns Semantic tree for input string as XML node.
  */
 export function getTreeFromString(expr: string, options: Options): SemanticTree {

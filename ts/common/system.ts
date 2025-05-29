@@ -33,6 +33,8 @@ import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.
 import { RebuildStree } from '../walker/rebuild_stree.js';
 import * as DomUtil from './dom_util.js';
 
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+
 /**
  * Version number.
  */
@@ -423,6 +425,7 @@ type WorkerStructure = {
   translations?: OptionsList;
   label?: string;
   braillelabel?: string;
+  ssml?: string;
 };
 
 /**
@@ -438,6 +441,8 @@ export async function workerSpeech(
 ): Promise<WorkerStructure> {
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -455,7 +460,9 @@ export async function workerNextRules(
   // TODO: Don't do anything if no next rules!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  options = SpeechGeneratorUtil.nextRules(options);
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options = SpeechGeneratorUtil.nextRules(options, styles);
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
 }
 
@@ -475,9 +482,38 @@ export async function workerNextStyle(
   // TODO: Don't do anything if no next style!
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  const style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
-  options.style = style;
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options.style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  styles[options.domain] = options.style;
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
   return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Compute clearspeak preferences for a locale.
+ *
+ * @param options The options containing the locale setting.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerLocalePreferences(options: OptionsList): Promise<WorkerStructure> {
+  return ClearspeakPreferences.getLocalePreferences()[options.locale];
+}
+
+/**
+ * Compute clearspeak preference category for a node.
+ *
+ * @param expr The math expression.
+ * @param id The semantic id of a node in the expression to compute the category for.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerRelevantPreferences(
+  expr: string,
+  id: string
+): Promise<string> {
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const query = rebuilt.stree.root.querySelectorAll((x) => x.id.toString() === id)[0] ?? rebuilt.stree.root;
+  return ClearspeakPreferences.relevantPreferences(query);
 }
 
 /**
@@ -512,6 +548,7 @@ async function assembleWorkerStructure(
     json.braillelabel = json.braille[root]['braille-none'];
   }
   json.label = json.speech[root]['speech-none'];
+  json.ssml = json.speech[root]['speech-ssml'];
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   return json;
 }
