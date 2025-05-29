@@ -14,7 +14,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const tsjest = path.resolve(__dirname, 'node_modules', 'ts-jest');
 const { compilerOptions } = json;
 
-console.log(compilerOptions.paths);
+// We rewrite the module paths.
+for (const [key, entry] of Object.entries(compilerOptions.paths)) {
+  compilerOptions.paths[key] = entry.map(x => x.replace(/^ts/, 'js'));
+}
+
+// We create a require method.
+import {createRequire} from 'module';
+global.require = createRequire(import.meta.url);
 
 const config = {
   rootDir: '..',
