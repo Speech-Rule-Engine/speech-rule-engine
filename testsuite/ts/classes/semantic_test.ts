@@ -26,6 +26,7 @@ import { Engine } from '#js/common/engine.js';
 import { AbstractExamples } from './abstract_examples.js';
 import { AbstractJsonTest } from './abstract_test.js';
 import { JsonTests } from '../base/test_util.js';
+import { expect } from '@jest/globals';
 
 import * as Enrich from '#js/enrich_mathml/enrich.js';
 import {

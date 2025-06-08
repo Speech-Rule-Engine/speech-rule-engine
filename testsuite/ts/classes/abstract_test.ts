@@ -18,6 +18,7 @@
 
 import * as assert from 'assert';
 import * as tu from '../base/test_util.js';
+import { expect } from '@jest/globals';
 
 export abstract class AbstractTest {
 

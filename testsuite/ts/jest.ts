@@ -1,5 +1,6 @@
 import AnalyticsTest from './analytics/analytics_test.js';
 import { get } from './classes/test_factory.js';
+import { describe, beforeAll, afterAll, test } from '@jest/globals';
 
 /**
  * Runs tests for a json file.
