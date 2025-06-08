@@ -6,7 +6,7 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "baseUrl": "..",
-    "lib": ["ES2022"]
+    "lib": ["ES2022", "DOM"]
   },
-  "include": ["tests", "src"]
+  "include": ["ts"]
 }
