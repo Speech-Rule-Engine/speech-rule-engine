@@ -18,13 +18,13 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-import { annotators } from '../../speech-rule-engine/js/semantic_tree/semantic_annotations.js';
-import { Engine } from '../../speech-rule-engine/js/common/engine.js';
-import * as Semantic from '../../speech-rule-engine/js/semantic_tree/semantic.js';
-import { ClearspeakPreferences } from '../../speech-rule-engine/js/speech_rules/clearspeak_preferences.js';
-import * as System from '../../speech-rule-engine/js/common/system.js';
-import * as Enrich from '../../speech-rule-engine/js/enrich_mathml/enrich.js';
-import { DummySpeechGenerator } from '../../speech-rule-engine/js/speech_generator/dummy_speech_generator.js';
+import { annotators } from '#js/semantic_tree/semantic_annotations.js';
+import { Engine } from '#js/common/engine.js';
+import * as Semantic from '#js/semantic_tree/semantic.js';
+import { ClearspeakPreferences } from '#js/speech_rules/clearspeak_preferences.js';
+import * as System from '#js/common/system.js';
+import * as Enrich from '#js/enrich_mathml/enrich.js';
+import { DummySpeechGenerator } from '#js/speech_generator/dummy_speech_generator.js';
 
 import { AbstractJsonTest } from './abstract_test.js';
 

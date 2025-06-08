@@ -1,4 +1,4 @@
-import { KeyCode as kc } from '../../speech-rule-engine/js/common/event_util.js';
+import { KeyCode as kc } from '#js/common/event_util.js';
 
 export const Key = new Map([
   ['ENTER', kc.ENTER],

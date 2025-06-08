@@ -19,14 +19,14 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { Engine } from '../../speech-rule-engine/js/common/engine.js';
-import * as System from '../../speech-rule-engine/js/common/system.js';
-import * as Enrich from '../../speech-rule-engine/js/enrich_mathml/enrich.js';
-import { Grammar } from '../../speech-rule-engine/js/rule_engine/grammar.js';
-import * as SpeechGeneratorUtil from '../../speech-rule-engine/js/speech_generator/speech_generator_util.js';
-import * as Semantic from '../../speech-rule-engine/js/semantic_tree/semantic.js';
-import { SemanticNode } from '../../speech-rule-engine/js/semantic_tree/semantic_node.js';
-import * as EngineConst from '../../speech-rule-engine/js/common/engine_const.js';
+import { Engine } from '#js/common/engine.js';
+import * as System from '#js/common/system.js';
+import * as Enrich from '#js/enrich_mathml/enrich.js';
+import { Grammar } from '#js/rule_engine/grammar.js';
+import * as SpeechGeneratorUtil from '#js/speech_generator/speech_generator_util.js';
+import * as Semantic from '#js/semantic_tree/semantic.js';
+import { SemanticNode } from '#js/semantic_tree/semantic_node.js';
+import * as EngineConst from '#js/common/engine_const.js';
 
 import { SpeechTest } from './speech_test.js';
 

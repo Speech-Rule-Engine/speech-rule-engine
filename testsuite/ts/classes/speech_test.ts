@@ -18,11 +18,11 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-import * as System from '../../speech-rule-engine/js/common/system.js';
+import * as System from '#js/common/system.js';
 import {
   Axis,
   DynamicCstr
-} from '../../speech-rule-engine/js/rule_engine/dynamic_cstr.js';
+} from '#js/rule_engine/dynamic_cstr.js';
 
 import { TestUtil } from '../base/test_util.js';
 import { AbstractExamples } from './abstract_examples.js';

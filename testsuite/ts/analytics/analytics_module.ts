@@ -17,23 +17,23 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Trie } from '../../speech-rule-engine/js/indexing/trie.js';
-import { StaticTrieNode } from '../../speech-rule-engine/js/indexing/abstract_trie_node.js';
-import { TrieNode } from '../../speech-rule-engine/js/indexing/trie_node.js';
-import { MathStore } from '../../speech-rule-engine/js/rule_engine/math_store.js';
+import { Trie } from '#js/indexing/trie.js';
+import { StaticTrieNode } from '#js/indexing/abstract_trie_node.js';
+import { TrieNode } from '#js/indexing/trie_node.js';
+import { MathStore } from '#js/rule_engine/math_store.js';
 import {
   BaseRuleStore,
   RulesJson
-} from '../../speech-rule-engine/js/rule_engine/base_rule_store.js';
+} from '#js/rule_engine/base_rule_store.js';
 import {
   Action,
   ActionType,
   Component,
   Precondition,
   SpeechRule
-} from '../../speech-rule-engine/js/rule_engine/speech_rule.js';
+} from '#js/rule_engine/speech_rule.js';
 
-declare module '../../speech-rule-engine/js/indexing/trie.js' {
+declare module '#js/indexing/trie.js' {
   interface Trie {
     store: BaseRuleStore;
     root: TrieNode;
@@ -95,7 +95,7 @@ Trie.prototype.singleStyle = function (style: string) {
 };
 
 // Queries for rule sets.
-declare module '../../speech-rule-engine/js/rule_engine/math_store.js' {
+declare module '#js/rule_engine/math_store.js' {
   interface MathStore {
     annotators: string[];
     initialize(): void;
@@ -156,7 +156,7 @@ MathStore.prototype.initialize = function () {
   allStores.push(this);
 };
 
-declare module '../../speech-rule-engine/js/rule_engine/speech_rule.js' {
+declare module '#js/rule_engine/speech_rule.js' {
   interface SpeechRule {
     toString(): string;
     localizable(): boolean;

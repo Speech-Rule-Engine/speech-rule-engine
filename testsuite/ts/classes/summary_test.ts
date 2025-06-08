@@ -19,7 +19,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import * as ProcessorFactory from '../../speech-rule-engine/js/common/processor_factory.js';
+import * as ProcessorFactory from '#js/common/processor_factory.js';
 import { Key } from './keycodes.js';
 
 import { SpeechTest } from './speech_test.js';

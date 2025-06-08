@@ -17,11 +17,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Trie } from '../../speech-rule-engine/js/indexing/trie.js';
-import * as System from '../../speech-rule-engine/js/common/system.js';
-import { Variables } from '../../speech-rule-engine/js/common/variables.js';
-import { SpeechRuleEngine } from '../../speech-rule-engine/js/rule_engine/speech_rule_engine.js';
-import { SpeechRule } from '../../speech-rule-engine/js/rule_engine/speech_rule.js';
+import { Trie } from '#js/indexing/trie.js';
+import * as System from '#js/common/system.js';
+import { Variables } from '#js/common/variables.js';
+import { SpeechRuleEngine } from '#js/rule_engine/speech_rule_engine.js';
+import { SpeechRule } from '#js/rule_engine/speech_rule.js';
 
 import { JsonFile, TestPath, TestUtil } from '../base/test_util.js';
 

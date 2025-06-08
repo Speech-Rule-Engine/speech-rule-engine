@@ -19,7 +19,7 @@
 import {
   Color,
   ColorPicker
-} from '../../speech-rule-engine/js/highlighter/color_picker.js';
+} from '#js/highlighter/color_picker.js';
 import { AbstractJsonTest } from '../classes/abstract_test.js';
 
 export class ColorPickerTest extends AbstractJsonTest {

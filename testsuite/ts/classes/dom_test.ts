@@ -16,8 +16,8 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../../speech-rule-engine/js/common/dom_util.js';
-import * as XpathUtil from '../../speech-rule-engine/js/common/xpath_util.js';
+import * as DomUtil from '#js/common/dom_util.js';
+import * as XpathUtil from '#js/common/xpath_util.js';
 
 import { AbstractJsonTest } from '../classes/abstract_test.js';
 

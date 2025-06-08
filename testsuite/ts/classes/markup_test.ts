@@ -17,9 +17,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../../speech-rule-engine/js/common/engine_const.js';
-import * as System from '../../speech-rule-engine/js/common/system.js';
-import * as AuralRendering from '../../speech-rule-engine/js/audio/aural_rendering.js';
+import * as EngineConst from '#js/common/engine_const.js';
+import * as System from '#js/common/system.js';
+import * as AuralRendering from '#js/audio/aural_rendering.js';
 
 import { AbstractJsonTest } from '../classes/abstract_test.js';
 

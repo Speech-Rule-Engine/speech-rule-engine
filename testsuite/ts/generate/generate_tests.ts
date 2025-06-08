@@ -20,12 +20,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { Engine } from '../../speech-rule-engine/js/common/engine.js';
-import * as DomUtil from '../../speech-rule-engine/js/common/dom_util.js';
-import * as Enrich from '../../speech-rule-engine/js/enrich_mathml/enrich.js';
-import * as Semantic from '../../speech-rule-engine/js/semantic_tree/semantic.js';
-import { SemanticNode } from '../../speech-rule-engine/js/semantic_tree/semantic_node.js';
-import { SemanticTree } from '../../speech-rule-engine/js/semantic_tree/semantic_tree.js';
+import { Engine } from '#js/common/engine.js';
+import * as DomUtil from '#js/common/dom_util.js';
+import * as Enrich from '#js/enrich_mathml/enrich.js';
+import * as Semantic from '#js/semantic_tree/semantic.js';
+import { SemanticNode } from '#js/semantic_tree/semantic_node.js';
+import { SemanticTree } from '#js/semantic_tree/semantic_tree.js';
 
 import * as tu from '../base/test_util.js';
 import * as TestFactory from '../classes/test_factory.js';

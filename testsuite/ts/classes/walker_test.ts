@@ -19,17 +19,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../../speech-rule-engine/js/common/engine_const.js';
-import { Engine } from '../../speech-rule-engine/js/common/engine.js';
-import { Options } from '../../speech-rule-engine/js/common/options.js';
-import * as System from '../../speech-rule-engine/js/common/system.js';
-import { Walker } from '../../speech-rule-engine/js/walker/walker.js';
-import { TableWalker } from '../../speech-rule-engine/js/walker/table_walker.js';
-import * as DomUtil from '../../speech-rule-engine/js/common/dom_util.js';
-import * as WalkerFactory from '../../speech-rule-engine/js/walker/walker_factory.js';
-import * as SpeechGeneratorFactory from '../../speech-rule-engine/js/speech_generator/speech_generator_factory.js';
-import { Highlighter } from '../../speech-rule-engine/js/highlighter/highlighter.js';
-import * as HighlighterFactory from '../../speech-rule-engine/js/highlighter/highlighter_factory.js';
+import * as EngineConst from '#js/common/engine_const.js';
+import { Engine } from '#js/common/engine.js';
+import { Options } from '#js/common/options.js';
+import * as System from '#js/common/system.js';
+import { Walker } from '#js/walker/walker.js';
+import { TableWalker } from '#js/walker/table_walker.js';
+import * as DomUtil from '#js/common/dom_util.js';
+import * as WalkerFactory from '#js/walker/walker_factory.js';
+import * as SpeechGeneratorFactory from '#js/speech_generator/speech_generator_factory.js';
+import { Highlighter } from '#js/highlighter/highlighter.js';
+import * as HighlighterFactory from '#js/highlighter/highlighter_factory.js';
 
 import { AbstractJsonTest } from '../classes/abstract_test.js';
 import { Key } from './keycodes.js';
@@ -132,10 +132,10 @@ export class WalkerTest extends AbstractJsonTest {
   }
 }
 
-import * as Enrich from '../../speech-rule-engine/js/enrich_mathml/enrich.js';
-import { enrich } from '../../speech-rule-engine/js/enrich_mathml/enrich_mathml.js';
-import { SemanticTree } from '../../speech-rule-engine/js/semantic_tree/semantic_tree.js';
-import { SemanticSkeleton } from '../../speech-rule-engine/js/semantic_tree/semantic_skeleton.js'
+import * as Enrich from '#js/enrich_mathml/enrich.js';
+import { enrich } from '#js/enrich_mathml/enrich_mathml.js';
+import { SemanticTree } from '#js/semantic_tree/semantic_tree.js';
+import { SemanticSkeleton } from '#js/semantic_tree/semantic_skeleton.js'
 
 /**
  *

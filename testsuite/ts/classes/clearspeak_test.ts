@@ -19,8 +19,8 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../../speech-rule-engine/js/common/engine_const.js';
-import * as System from '../../speech-rule-engine/js/common/system.js';
+import * as EngineConst from '#js/common/engine_const.js';
+import * as System from '#js/common/system.js';
 
 import { SpeechTest } from './speech_test.js';
 

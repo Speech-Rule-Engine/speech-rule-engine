@@ -5,8 +5,12 @@
     "outDir": "./js",
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "baseUrl": "..",
+    "baseUrl": ".",
     "lib": ["ES2022", "DOM"]
+    "paths": {
+      "#js/*": ["../js/*"],
+      "#mathjax/*": ["./node_modules/mathjax-full/mjs/*"]
+    },
   },
   "include": ["ts"]
 }

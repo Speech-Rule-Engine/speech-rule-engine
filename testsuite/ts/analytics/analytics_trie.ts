@@ -18,11 +18,11 @@
  */
 
 import { allStores } from './analytics_module.js';
-import { Trie } from '../../speech-rule-engine/js/indexing/trie.js';
-import { StaticTrieNode } from '../../speech-rule-engine/js/indexing/abstract_trie_node.js';
-import { MathStore } from '../../speech-rule-engine/js/rule_engine/math_store.js';
-import { SpeechRule } from '../../speech-rule-engine/js/rule_engine/speech_rule.js';
-import { SpeechRuleEngine } from '../../speech-rule-engine/js/rule_engine/speech_rule_engine.js';
+import { Trie } from '#js/indexing/trie.js';
+import { StaticTrieNode } from '#js/indexing/abstract_trie_node.js';
+import { MathStore } from '#js/rule_engine/math_store.js';
+import { SpeechRule } from '#js/rule_engine/speech_rule.js';
+import { SpeechRuleEngine } from '#js/rule_engine/speech_rule_engine.js';
 
 import { TestUtil } from '../base/test_util.js';
 
