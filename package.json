@@ -85,8 +85,5 @@
       "require": "./cjs/*"
     }
   },
-  "imports": {
-    "#js/*": "js/*"
-  },
   "main": "lib/sre.js"
 }

@@ -3,7 +3,6 @@
  * https://jestjs.io/docs/configuration
  */
 
-// import type {Config} from 'jest';
 import * as path from 'path';
 import json from '../tsconfig.json' with {type: 'json'};
 import { pathsToModuleNameMapper } from 'ts-jest';
@@ -18,10 +17,6 @@ const { compilerOptions } = json;
 for (const [key, entry] of Object.entries(compilerOptions.paths)) {
   compilerOptions.paths[key] = entry.map(x => x.replace(/^ts/, 'js'));
 }
-
-// We create a require method.
-import {createRequire} from 'module';
-global.require = createRequire(import.meta.url);
 
 const config = {
   rootDir: '..',
@@ -40,6 +35,7 @@ const config = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     prefix: '<rootDir>/',
   }),
+  setupFiles:  ["./lib/require.mjs"],
   transform: {
     "^.+\\.tsx?$": [ tsjest, { useESM: true } ],
   }

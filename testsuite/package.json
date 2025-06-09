@@ -1,13 +1,16 @@
 {
-  "name": "MathJax jest",
+  "name": "sre-tests",
   "version": "1.0.0",
-  "description": "MathJax jest tests for v4",
+  "description": "Speech Rule Engine tests with Jest",
+  "directories": {
+    "test": "tests"
+  },
   "type": "module",
   "scripts": {
     "compile": "pnpm tsc",
-    "prepare": "pnpm clean; node tests.config.js",
-    "build": "pnpm prepare && pnpm compile",
-    "clean": "pnpm rimraf dist js ts/output ts/json ts/analyse ts/actions coverage",
+    "prepare": "node tests.config.js",
+    "build": "pnpm clean; pnpm prepare && pnpm compile",
+    "clean": "pnpm rimraf dist js tests/output tests/json tests/analyse tests/actions coverage",
     "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
   },
   "imports": {
@@ -16,7 +19,7 @@
     "#src/*": "./src/*",
     "#helpers": "./js/src/index.js",
     "#mathjax/*": "mathjax-full/mjs/*",
-    "#tests/*": "../../sre-tests/js/*"
+    "#tests/*": "./js/*"
   },
   "dependencies": {
     "@jest/globals": "^29.7.0",

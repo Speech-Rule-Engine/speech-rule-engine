@@ -9,8 +9,9 @@
     "lib": ["ES2022", "DOM"],
     "paths": {
       "#js/*": ["../js/*"],
+      "#tests/*": ["./js/*"],
       "#mathjax/*": ["./node_modules/mathjax-full/mjs/*"]
-    },
+    }
   },
   "types": ["jest"],
   "include": ["ts"]
