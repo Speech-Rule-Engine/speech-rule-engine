@@ -1,0 +1,15 @@
+{
+  "locale": "fr",
+  "name": "FrenchExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsFrench",
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "logarithme népérien"
+    }
+  }
+}

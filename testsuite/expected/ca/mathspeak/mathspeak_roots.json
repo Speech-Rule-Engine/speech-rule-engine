@@ -1,0 +1,373 @@
+{
+  "name": "CatalanMathspeakRoots",
+  "locale": "ca",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "Catalan Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "sqrt_0_brief": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "arrel quadrada a finalitzar arrel quadrada"
+    },
+    "sqrt_1_default": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "sqrt_1_brief": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "arrel quadrada a finalitzar arrel quadrada"
+    },
+    "sqrt_2_default": {
+      "expected": "començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "sqrt_2_brief": {
+      "expected": "començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "arrel quadrada arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "sqrt_3_default": {
+      "expected": "començar arrel quadrada començar arrel quadrada començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "sqrt_3_brief": {
+      "expected": "començar arrel quadrada començar arrel quadrada començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "arrel quadrada arrel quadrada arrel quadrada arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "roots_0_default": {
+      "expected": "índex d'arrel 1 començar arrel a finalitzar arrel"
+    },
+    "roots_0_brief": {
+      "expected": "índex d'arrel 1 començar arrel a finalitzar arrel"
+    },
+    "roots_0_sbrief": {
+      "expected": "índex 1 arrel a finalitzar arrel"
+    },
+    "roots_1_default": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "roots_1_brief": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "roots_1_sbrief": {
+      "expected": "arrel quadrada a finalitzar arrel quadrada"
+    },
+    "roots_2_default": {
+      "expected": "començar arrel cúbica a finalitzar arrel cúbica"
+    },
+    "roots_2_brief": {
+      "expected": "començar arrel cúbica a finalitzar arrel cúbica"
+    },
+    "roots_2_sbrief": {
+      "expected": "arrel cúbica a finalitzar arrel cúbica"
+    },
+    "roots_3_default": {
+      "expected": "començar arrel a la quarta a finalitzar arrel a la quarta"
+    },
+    "roots_3_brief": {
+      "expected": "començar arrel a la quarta a finalitzar arrel a la quarta"
+    },
+    "roots_3_sbrief": {
+      "expected": "arrel a la quarta a finalitzar arrel a la quarta"
+    },
+    "roots_4_default": {
+      "expected": "començar arrel a la cinquena a finalitzar arrel a la cinquena"
+    },
+    "roots_4_brief": {
+      "expected": "començar arrel a la cinquena a finalitzar arrel a la cinquena"
+    },
+    "roots_4_sbrief": {
+      "expected": "arrel a la cinquena a finalitzar arrel a la cinquena"
+    },
+    "roots_5_default": {
+      "expected": "començar arrel a la sisena a finalitzar arrel a la sisena"
+    },
+    "roots_5_brief": {
+      "expected": "començar arrel a la sisena a finalitzar arrel a la sisena"
+    },
+    "roots_5_sbrief": {
+      "expected": "arrel a la sisena a finalitzar arrel a la sisena"
+    },
+    "roots_6_default": {
+      "expected": "començar arrel a la setena a finalitzar arrel a la setena"
+    },
+    "roots_6_brief": {
+      "expected": "començar arrel a la setena a finalitzar arrel a la setena"
+    },
+    "roots_6_sbrief": {
+      "expected": "arrel a la setena a finalitzar arrel a la setena"
+    },
+    "roots_7_default": {
+      "expected": "començar arrel a la vuitena a finalitzar arrel a la vuitena"
+    },
+    "roots_7_brief": {
+      "expected": "començar arrel a la vuitena a finalitzar arrel a la vuitena"
+    },
+    "roots_7_sbrief": {
+      "expected": "arrel a la vuitena a finalitzar arrel a la vuitena"
+    },
+    "roots_8_default": {
+      "expected": "començar arrel a la novena a finalitzar arrel a la novena"
+    },
+    "roots_8_brief": {
+      "expected": "començar arrel a la novena a finalitzar arrel a la novena"
+    },
+    "roots_8_sbrief": {
+      "expected": "arrel a la novena a finalitzar arrel a la novena"
+    },
+    "roots_9_default": {
+      "expected": "començar arrel a la desena a finalitzar arrel a la desena"
+    },
+    "roots_9_brief": {
+      "expected": "començar arrel a la desena a finalitzar arrel a la desena"
+    },
+    "roots_9_sbrief": {
+      "expected": "arrel a la desena a finalitzar arrel a la desena"
+    },
+    "roots_10_default": {
+      "expected": "índex d'arrel 11 començar arrel a finalitzar arrel"
+    },
+    "roots_10_brief": {
+      "expected": "índex d'arrel 11 començar arrel a finalitzar arrel"
+    },
+    "roots_10_sbrief": {
+      "expected": "índex 11 arrel a finalitzar arrel"
+    },
+    "nested-roots_0_default": {
+      "expected": "índex d'arrel 1 començar arrel índex d'arrel 1 començar arrel a finalitzar arrel finalitzar arrel"
+    },
+    "nested-roots_0_brief": {
+      "expected": "índex d'arrel 1 començar arrel índex d'arrel 1 començar arrel a finalitzar arrel finalitzar arrel"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "índex 1 arrel índex 1 arrel a finalitzar arrel finalitzar arrel"
+    },
+    "nested-roots_1_default": {
+      "expected": "començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "nested-roots_1_brief": {
+      "expected": "començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "arrel quadrada arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "nested-roots_2_default": {
+      "expected": "començar arrel cúbica començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "nested-roots_2_brief": {
+      "expected": "començar arrel cúbica començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "arrel cúbica arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "nested-roots_3_default": {
+      "expected": "començar arrel a la quarta començar arrel a la quarta a finalitzar arrel a la quarta finalitzar arrel a la quarta"
+    },
+    "nested-roots_3_brief": {
+      "expected": "començar arrel a la quarta començar arrel a la quarta a finalitzar arrel a la quarta finalitzar arrel a la quarta"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "arrel a la quarta arrel a la quarta a finalitzar arrel a la quarta finalitzar arrel a la quarta"
+    },
+    "nested-roots_4_default": {
+      "expected": "començar arrel a la cinquena començar arrel a la cinquena a finalitzar arrel a la cinquena finalitzar arrel a la cinquena"
+    },
+    "nested-roots_4_brief": {
+      "expected": "començar arrel a la cinquena començar arrel a la cinquena a finalitzar arrel a la cinquena finalitzar arrel a la cinquena"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "arrel a la cinquena arrel a la cinquena a finalitzar arrel a la cinquena finalitzar arrel a la cinquena"
+    },
+    "nested-roots_5_default": {
+      "expected": "començar arrel a la sisena començar arrel a la sisena a finalitzar arrel a la sisena finalitzar arrel a la sisena"
+    },
+    "nested-roots_5_brief": {
+      "expected": "començar arrel a la sisena començar arrel a la sisena a finalitzar arrel a la sisena finalitzar arrel a la sisena"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "arrel a la sisena arrel a la sisena a finalitzar arrel a la sisena finalitzar arrel a la sisena"
+    },
+    "nested-roots_6_default": {
+      "expected": "començar arrel a la setena començar arrel a la setena a finalitzar arrel a la setena finalitzar arrel a la setena"
+    },
+    "nested-roots_6_brief": {
+      "expected": "començar arrel a la setena començar arrel a la setena a finalitzar arrel a la setena finalitzar arrel a la setena"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "arrel a la setena arrel a la setena a finalitzar arrel a la setena finalitzar arrel a la setena"
+    },
+    "nested-roots_7_default": {
+      "expected": "començar arrel a la vuitena començar arrel a la vuitena a finalitzar arrel a la vuitena finalitzar arrel a la vuitena"
+    },
+    "nested-roots_7_brief": {
+      "expected": "començar arrel a la vuitena començar arrel a la vuitena a finalitzar arrel a la vuitena finalitzar arrel a la vuitena"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "arrel a la vuitena arrel a la vuitena a finalitzar arrel a la vuitena finalitzar arrel a la vuitena"
+    },
+    "nested-roots_8_default": {
+      "expected": "començar arrel a la novena començar arrel a la novena a finalitzar arrel a la novena finalitzar arrel a la novena"
+    },
+    "nested-roots_8_brief": {
+      "expected": "començar arrel a la novena començar arrel a la novena a finalitzar arrel a la novena finalitzar arrel a la novena"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "arrel a la novena arrel a la novena a finalitzar arrel a la novena finalitzar arrel a la novena"
+    },
+    "nested-roots_9_default": {
+      "expected": "començar arrel a la desena començar arrel a la desena a finalitzar arrel a la desena finalitzar arrel a la desena"
+    },
+    "nested-roots_9_brief": {
+      "expected": "començar arrel a la desena començar arrel a la desena a finalitzar arrel a la desena finalitzar arrel a la desena"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "arrel a la desena arrel a la desena a finalitzar arrel a la desena finalitzar arrel a la desena"
+    },
+    "nested-roots_10_default": {
+      "expected": "índex d'arrel 11 començar arrel índex d'arrel 11 començar arrel a finalitzar arrel finalitzar arrel"
+    },
+    "nested-roots_10_brief": {
+      "expected": "índex d'arrel 11 començar arrel índex d'arrel 11 començar arrel a finalitzar arrel finalitzar arrel"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "índex 11 arrel índex 11 arrel a finalitzar arrel finalitzar arrel"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "índex d'arrel 1 començar arrel començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "índex d'arrel 1 començar arrel començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "índex 1 arrel arrel cúbica a finalitzar arrel cúbica finalitzar arrel"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "començar arrel quadrada començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "començar arrel quadrada començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "arrel quadrada arrel cúbica a finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "començar arrel cúbica començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "començar arrel cúbica començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "arrel cúbica arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "començar arrel a la quarta començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la quarta"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "començar arrel a la quarta començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la quarta"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "arrel a la quarta arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la quarta"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "començar arrel a la cinquena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la cinquena"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "començar arrel a la cinquena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la cinquena"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "arrel a la cinquena arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la cinquena"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "començar arrel a la sisena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la sisena"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "començar arrel a la sisena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la sisena"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "arrel a la sisena arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la sisena"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "començar arrel a la setena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la setena"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "començar arrel a la setena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la setena"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "arrel a la setena arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la setena"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "començar arrel a la vuitena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la vuitena"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "començar arrel a la vuitena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la vuitena"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "arrel a la vuitena arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la vuitena"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "començar arrel a la novena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la novena"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "començar arrel a la novena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la novena"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "arrel a la novena arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la novena"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "començar arrel a la desena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la desena"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "començar arrel a la desena començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la desena"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "arrel a la desena arrel cúbica a finalitzar arrel cúbica finalitzar arrel a la desena"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "índex d'arrel 11 començar arrel començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "índex d'arrel 11 començar arrel començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "índex 11 arrel arrel cúbica a finalitzar arrel cúbica finalitzar arrel"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel a la quarta començar arrel a la cinquena a finalitzar arrel a la cinquena finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel a la quarta començar arrel a la cinquena a finalitzar arrel a la cinquena finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "arrel quadrada arrel cúbica arrel a la quarta arrel a la cinquena a finalitzar arrel a la cinquena finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel quadrada començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel quadrada començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "arrel quadrada arrel cúbica arrel quadrada arrel cúbica a finalitzar arrel cúbica finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel quadrada començar arrel cúbica començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel quadrada començar arrel cúbica començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "arrel quadrada arrel cúbica arrel quadrada arrel cúbica arrel quadrada a finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel quadrada"
+    }
+  }
+}

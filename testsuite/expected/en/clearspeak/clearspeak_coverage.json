@@ -1,0 +1,278 @@
+{
+  "name": "EnglishClearspeakCoverage",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "English Clearspeak Coverage tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f of, g of x"
+    },
+    "ApplSimple_1": {
+      "expected": "f of, g of x, equals f of x, plus g of x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "sine x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 lines, Line 1: a. Line 2: blank"
+    },
+    "Empty_Line_1": {
+      "expected": "2 lines, Line 1: a. Line 2: blank"
+    },
+    "Empty_Line_2": {
+      "expected": "2 lines, Line 1: a. Line 2: blank"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 lines, Line 1: a; equals; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 lines, Line 1: a; equals; b. Line 2: blank"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 lines, Line 1: a; equals; b. Line 2: blank"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 lines, Line 1: a; equals; b. Line 2: 1; blank; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 degrees, 10 minutes, 20 seconds"
+    },
+    "Angle_1_default": {
+      "expected": "1 degree, 10 minutes, 20 seconds"
+    },
+    "Angle_2_default": {
+      "expected": "45 degrees, 1 minute, 20 seconds"
+    },
+    "Angle_3_default": {
+      "expected": "45 degrees, 10 minutes, 1 second"
+    },
+    "Angle_4_default": {
+      "expected": "1 foot, 20 inches"
+    },
+    "Angle_5_default": {
+      "expected": "10 feet, 1 inch"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 degrees, 10 minutes, 20 seconds"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 degree, 10 minutes, 20 seconds"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 degrees, 1 minute, 20 seconds"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 degrees, 10 minutes, 1 second"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 minute, 20 seconds"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 minutes, 1 second"
+    },
+    "Angle_0_Length": {
+      "expected": "45 degrees, 10 minutes, 20 seconds"
+    },
+    "Angle_1_Length": {
+      "expected": "1 degree, 10 minutes, 20 seconds"
+    },
+    "Angle_2_Length": {
+      "expected": "45 degrees, 1 minute, 20 seconds"
+    },
+    "Angle_3_Length": {
+      "expected": "45 degrees, 10 minutes, 1 second"
+    },
+    "Angle_4_Length": {
+      "expected": "1 foot, 20 inches"
+    },
+    "Angle_5_Length": {
+      "expected": "10 feet, 1 inch"
+    },
+    "Enclose_0": {
+      "expected": "enclosed with box 12"
+    },
+    "Enclose_1": {
+      "expected": "crossed out 12"
+    },
+    "Enclose_2": {
+      "expected": "12 crossed out with 2"
+    },
+    "Enclose_3": {
+      "expected": "12 crossed out with 2"
+    },
+    "Enclose_4": {
+      "expected": "12 crossed out with 2"
+    },
+    "Enclose_5": {
+      "expected": "12 crossed out with 2"
+    },
+    "Enclose_6": {
+      "expected": "enclosed with box 12 end enclosed"
+    },
+    "Enclose_7": {
+      "expected": "crossed out 12 end crossout"
+    },
+    "Enclose_8": {
+      "expected": "crossed out 12 with 2 end crossout"
+    },
+    "Enclose_9": {
+      "expected": "crossed out 12 with 2 end crossout"
+    },
+    "Enclose_10": {
+      "expected": "crossed out 12 with 2 end crossout"
+    },
+    "Enclose_11": {
+      "expected": "crossed out 12 with 2 end crossout"
+    },
+    "NestedRoots_0": {
+      "expected": "the square root of, the cube root of a, plus b"
+    },
+    "NestedRoots_1": {
+      "expected": "the square root of, the fourth root of a, plus b"
+    },
+    "NestedRoots_2": {
+      "expected": "the square root of, the square root of a, plus b"
+    },
+    "NestedRoots_3": {
+      "expected": "the positive square root of, the positive square root of a, plus b"
+    },
+    "NestedRoots_4": {
+      "expected": "the positive square root of, the positive square root of a, plus b, end root"
+    },
+    "Tensor_0": {
+      "expected": "left sub a left super b x right sub c right super d"
+    },
+    "Tensor_1": {
+      "expected": "left sub a b left super g h x right sub c d right super e f"
+    },
+    "Tensor_2": {
+      "expected": "left sub a left super b x; right super d"
+    },
+    "Tensor_3": {
+      "expected": "left sub a left super b x right sub c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; left super b x right sub c right super d"
+    },
+    "Tensor_5": {
+      "expected": "left sub a; x right sub c right super d"
+    },
+    "Set_0": {
+      "expected": "the set of all x not in A such that B"
+    },
+    "Set_1": {
+      "expected": "the set of all x not belonging to A such that B"
+    },
+    "Set_2": {
+      "expected": "the set of all x not an element of A such that B"
+    },
+    "Set_3": {
+      "expected": "the set of all x not a member of A such that B"
+    },
+    "Set_4": {
+      "expected": "the set B"
+    },
+    "Set_5": {
+      "expected": "the empty set"
+    },
+    "EncloseSpecial_0": {
+      "expected": "vertical bar A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A horizontal bar"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A vertical bar"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A over horizontal bar"
+    },
+    "NestedRoots_5": {
+      "expected": "the positive square root of, the negative square root of a, end root, plus b, end root"
+    },
+    "NamedSet_0": {
+      "expected": "the positive rational numbers"
+    },
+    "NamedSet_1": {
+      "expected": "the positive rational numbers"
+    },
+    "NamedSet_2": {
+      "expected": "the negative rational numbers"
+    },
+    "NamedSet_3": {
+      "expected": "the negative rational numbers"
+    },
+    "NamedSet_4": {
+      "expected": "q-two"
+    },
+    "NamedSet_5": {
+      "expected": "q-two"
+    },
+    "NamedSet_6": {
+      "expected": "n-two"
+    },
+    "NamedSet_7": {
+      "expected": "n-two"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 cases, Case 1: f of x, equals negative x, if x is less than 0. Case 2: f of x, equals x, if x is greater than or equal to 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 constraints, Constraint 1: f of x, equals negative x; if x is less than 0. Constraint 2: f of x, equals x, if x is greater than or equal to 0"
+    },
+    "UnitFraction": {
+      "expected": "2 kilometers over b"
+    },
+    "VulgarFraction": {
+      "expected": "10 over 20"
+    },
+    "Decimal": {
+      "expected": "the repeating decimal 1 point 4 followed by repeating digit 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 such that 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end determinant"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 raised to the 2 squared power"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 raised to the i squared power"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 raised to the two thirds squared power"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 raised to the 2 cubed power"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 raised to the i cubed power"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 raised to the two thirds cubed power"
+    },
+    "MultiRel": {
+      "expected": "a is less than or equal to b equals c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 raised to the sine of, open paren, 2 plus x, close paren, power"
+    },
+    "CompositeFunctionFences": {
+      "expected": "open paren, f plus g, close paren, of, open paren, 2 plus x, close paren"
+    },
+    "LimUpper": {
+      "expected": "sum under I"
+    },
+    "Overscript": {
+      "expected": "A under B"
+    }
+  }
+}

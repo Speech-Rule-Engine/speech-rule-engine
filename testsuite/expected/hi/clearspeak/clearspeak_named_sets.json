@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from a UKIERI grant.",
+  "name": "HindiClearspeakNamedSets",
+  "locale": "hi",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Hindi Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NumSys001": {
+      "expected": "वास्तविक संख्याएं"
+    },
+    "NumSys001a": {
+      "expected": "वास्तविक संख्याएं"
+    },
+    "NumSys002": {
+      "expected": "सम्मिश्र संख्याएं"
+    },
+    "NumSys002a": {
+      "expected": "सम्मिश्र संख्याएं"
+    },
+    "NumSys003": {
+      "expected": "पूर्णांक"
+    },
+    "NumSys003a": {
+      "expected": "पूर्णांक"
+    },
+    "NumSys004": {
+      "expected": "परिमेय संख्याएं"
+    },
+    "NumSys004a": {
+      "expected": "परिमेय संख्याएं"
+    },
+    "NumSys005": {
+      "expected": "प्राकृत संख्याएं"
+    },
+    "NumSys005a": {
+      "expected": "प्राकृत संख्याएं"
+    },
+    "NumSys005_1": {
+      "expected": "शून्य सहित प्राकृत संख्याएं"
+    },
+    "NumSys005_1a": {
+      "expected": "शून्य सहित प्राकृत संख्याएं"
+    },
+    "NumSys006": {
+      "expected": "धनात्मक पूर्णांक"
+    },
+    "NumSys006a": {
+      "expected": "धनात्मक पूर्णांक"
+    },
+    "NumSys006_1": {
+      "expected": "ऋणात्मक पूर्णांक"
+    },
+    "NumSys006_1a": {
+      "expected": "ऋणात्मक पूर्णांक"
+    },
+    "NumSys007": {
+      "expected": "आर-दो"
+    },
+    "NumSys007a": {
+      "expected": "आर-दो"
+    },
+    "NumSys008": {
+      "expected": "जेड-तीन"
+    },
+    "NumSys008a": {
+      "expected": "जेड-तीन"
+    },
+    "NumSys009": {
+      "expected": "सी-एन"
+    },
+    "NumSys009a": {
+      "expected": "सी-एन"
+    },
+    "NumSys010": {
+      "expected": "आर-अनन्तता"
+    },
+    "NumSys010a": {
+      "expected": "आर-अनन्तता"
+    }
+  }
+}

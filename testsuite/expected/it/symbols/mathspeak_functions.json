@@ -1,0 +1,311 @@
+{
+  "name": "ItalianMathspeakFunction",
+  "locale": "it",
+  "domain": "mathspeak",
+  "style": "default",
+  "active": "MathspeakSymbolsItalian",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Italian Mathspeak Function tests.",
+  "tests": {
+    "deg": {
+      "expected": "grado"
+    },
+    "Deg": {
+      "expected": "grado"
+    },
+    "det": {
+      "expected": "determinante"
+    },
+    "Det": {
+      "expected": "determinante"
+    },
+    "dim": {
+      "expected": "dimensione"
+    },
+    "Dim": {
+      "expected": "dimensione"
+    },
+    "hom": {
+      "expected": "omomorfismo"
+    },
+    "Hom": {
+      "expected": "omomorfismo"
+    },
+    "HOM": {
+      "expected": "omomorfismo"
+    },
+    "ker": {
+      "expected": "nucleo"
+    },
+    "Ker": {
+      "expected": "nucleo"
+    },
+    "Tr": {
+      "expected": "traccia"
+    },
+    "tr": {
+      "expected": "traccia"
+    },
+    "log": {
+      "expected": "logaritmo"
+    },
+    "ln": {
+      "expected": "logaritmo naturale"
+    },
+    "lg": {
+      "expected": "logaritmo in basi 10"
+    },
+    "exp": {
+      "expected": "esponenziale"
+    },
+    "expt": {
+      "expected": "esponenziale"
+    },
+    "gcd": {
+      "expected": "massimo comun divisore"
+    },
+    "GCD": {
+      "expected": "massimo comun divisore"
+    },
+    "lcm": {
+      "expected": "minimo comune multiplo"
+    },
+    "LCM": {
+      "expected": "minimo comune multiplo"
+    },
+    "arg": {
+      "expected": "argomento"
+    },
+    "Arg": {
+      "expected": "argomento"
+    },
+    "im": {
+      "expected": "la parte immaginaria del numero complesso"
+    },
+    "Im": {
+      "expected": "la parte immaginaria del numero complesso"
+    },
+    "re": {
+      "expected": "la parte reale del numero complesso"
+    },
+    "Re": {
+      "expected": "la parte reale del numero complesso"
+    },
+    "inf": {
+      "expected": "estremo inferiore"
+    },
+    "Inf": {
+      "expected": "estremo inferiore"
+    },
+    "lim": {
+      "expected": "limite"
+    },
+    "lim inf": {
+      "expected": "limite inferiore"
+    },
+    "liminf": {
+      "expected": "limite inferiore"
+    },
+    "lim sup": {
+      "expected": "limite superiore"
+    },
+    "limsup": {
+      "expected": "limite superiore"
+    },
+    "max": {
+      "expected": "massimo"
+    },
+    "Max": {
+      "expected": "massimo"
+    },
+    "min": {
+      "expected": "minimo"
+    },
+    "Min": {
+      "expected": "minimo"
+    },
+    "sup": {
+      "expected": "estremo superiore"
+    },
+    "Sup": {
+      "expected": "estremo superiore"
+    },
+    "injlim": {
+      "expected": "colimiti"
+    },
+    "inj lim": {
+      "expected": "colimiti"
+    },
+    "projlim": {
+      "expected": "limite proiettivo"
+    },
+    "proj lim": {
+      "expected": "limite proiettivo"
+    },
+    "mod": {
+      "expected": "modulo"
+    },
+    "Pr": {
+      "expected": "probabilità"
+    },
+    "cosh": {
+      "expected": "coseno iperbolico"
+    },
+    "coth": {
+      "expected": "cotangente iperbolica"
+    },
+    "csch": {
+      "expected": "cosecante iperbolica"
+    },
+    "sech": {
+      "expected": "secante iperbolica"
+    },
+    "sinh": {
+      "expected": "seno iperbolico"
+    },
+    "tanh": {
+      "expected": "tangente iperbolica"
+    },
+    "arcosh": {
+      "expected": "settore coseno iperbolico"
+    },
+    "arccosh": {
+      "expected": "settore coseno iperbolico"
+    },
+    "arcoth": {
+      "expected": "settore co-tangente iperbolica"
+    },
+    "arccoth": {
+      "expected": "settore co-tangente iperbolica"
+    },
+    "arcsch": {
+      "expected": "settore co-secante iperbolica"
+    },
+    "arccsch": {
+      "expected": "settore co-secante iperbolica"
+    },
+    "arsech": {
+      "expected": "settore secante iperbolica"
+    },
+    "arcsech": {
+      "expected": "settore secante iperbolica"
+    },
+    "arsinh": {
+      "expected": "settore seno iperbolico"
+    },
+    "arcsinh": {
+      "expected": "settore seno iperbolico"
+    },
+    "artanh": {
+      "expected": "settore tangente iperbolica"
+    },
+    "arctanh": {
+      "expected": "settore tangente iperbolica"
+    },
+    "cos": {
+      "expected": "coseno"
+    },
+    "cosine": {
+      "expected": "coseno"
+    },
+    "cot": {
+      "expected": "cotangente"
+    },
+    "csc": {
+      "expected": "cosecante"
+    },
+    "sec": {
+      "expected": "secante"
+    },
+    "sin": {
+      "expected": "seno"
+    },
+    "sine": {
+      "expected": "seno"
+    },
+    "tan": {
+      "expected": "tangente"
+    },
+    "arccos": {
+      "expected": "arcocoseno"
+    },
+    "arccot": {
+      "expected": "arcocotangente"
+    },
+    "arccsc": {
+      "expected": "arcocosecante"
+    },
+    "arcsec": {
+      "expected": "arcosecante"
+    },
+    "arcsin": {
+      "expected": "arcoseno"
+    },
+    "arctan": {
+      "expected": "arcotangente"
+    },
+    "_commentAdded_": "Add for locale",
+    "mcd": {
+      "expected": "massimo comun divisore"
+    },
+    "MCD": {
+      "expected": "massimo comun divisore"
+    },
+    "mcm": {
+      "expected": "minimo comune multiplo"
+    },
+    "MCM": {
+      "expected": "minimo comune multiplo"
+    },
+    "settcosh": {
+      "expected": "settore coseno iperbolico"
+    },
+    "settcoth": {
+      "expected": "settore co-tangente iperbolica"
+    },
+    "settcsch": {
+      "expected": "settore co-secante iperbolica"
+    },
+    "settsech": {
+      "expected": "settore secante iperbolica"
+    },
+    "settsinh": {
+      "expected": "settore seno iperbolico"
+    },
+    "settanh": {
+      "expected": "settore tangente iperbolica"
+    },
+    "sen": {
+      "expected": "seno"
+    },
+    "acos": {
+      "expected": "arcocoseno"
+    },
+    "acot": {
+      "expected": "arcocotangente"
+    },
+    "acsc": {
+      "expected": "arcocosecante"
+    },
+    "asec": {
+      "expected": "arcosecante"
+    },
+    "arcsen": {
+      "expected": "arcoseno"
+    },
+    "asin": {
+      "expected": "arcoseno"
+    },
+    "asen": {
+      "expected": "arcoseno"
+    },
+    "asn": {
+      "expected": "arcoseno"
+    },
+    "atan": {
+      "expected": "arcotangente"
+    }
+  }
+}

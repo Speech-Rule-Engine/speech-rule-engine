@@ -1,0 +1,238 @@
+{
+  "factory": "clearspeak",
+  "locale": "de",
+  "active": "ClearspeakGerman",
+  "name": "GermanClearspeakSekundarstufe1",
+  "information": "LaTeX Manual Sekundarstufe 1",
+  "base": "input/euro/Sekundarstufe1.json",
+  "actual": true,
+  "tests": {
+    "_comment0_": "Mengen und deren Verknüpfungen",
+    "Mengen_0": {
+      "expected": "Mengenklammer auf, 1, 2, 3, 4, Mengenklammer zu"
+    },
+    "Mengen_1": {
+      "expected": "groß P ist Menge der Elemente klein x, für die gilt: x ist Primzahl"
+    },
+    "Mengen_2": {
+      "expected": "3 ist Element der Menge P"
+    },
+    "Mengen_3": {
+      "expected": "4 ist nicht Element von P"
+    },
+    "Mengen_4": {
+      "expected": "Menge A ist echt in Menge B enthalten"
+    },
+    "Mengen_5": {
+      "expected": "Menge A ist in Menge B enthalten oder ist gleich der Menge B"
+    },
+    "Mengen_6": {
+      "expected": "Vereinigung der Mengen A und B"
+    },
+    "Mengen_7": {
+      "expected": "Durchschnitt der Mengen A und B"
+    },
+    "Mengen_8": {
+      "expected": "Menge A ohne die Menge B"
+    },
+    "Mengen_9": {
+      "expected": "leere Menge als leere Mengenklammern bzw. als Symbol"
+    },
+    "Mengen_10": {
+      "expected": "Menge A quer"
+    },
+    "_comment1_": "Spezielle Zahlenmengen  1)",
+    "Spezielle_0": {
+      "expected": "Menge der natürlichen Zahlen"
+    },
+    "Spezielle_1": {
+      "expected": "Menge der ganzen Zahlen"
+    },
+    "Spezielle_2": {
+      "expected": "Menge der negativen ganzen Zahlen einschließlich der Zahl 0"
+    },
+    "Spezielle_3": {
+      "expected": "Menge der rationalen Zahlen"
+    },
+    "Spezielle_4": {
+      "expected": "Menge der reellen Zahlen"
+    },
+    "Spezielle_5": {
+      "expected": "Potenzmenge P"
+    },
+    "_comment2_": "Verknüpfungen von Zahlen",
+    "Verknüpfungen_0": {
+      "expected": "x ist Element von N und x ist echt kleiner 3"
+    },
+    "Verknüpfungen_1": {
+      "expected": "Aus A folgt B (\"Wer A sagt, muss auch B sagen.\")"
+    },
+    "Verknüpfungen_2": {
+      "expected": "x geht gegen unendlich"
+    },
+    "Verknüpfungen_3": {
+      "expected": "x = 1 oder x = 2"
+    },
+    "Verknüpfungen_4": {
+      "expected": "3x = 12 ist äquivalent zu x = 4"
+    },
+    "Verknüpfungen_5": {
+      "expected": "x ist kleiner oder gleich 10"
+    },
+    "Verknüpfungen_6": {
+      "expected": "a ist größer oder gleich b"
+    },
+    "Verknüpfungen_7": {
+      "expected": "viel größer als"
+    },
+    "Verknüpfungen_8": {
+      "expected": "viel kleiner als"
+    },
+    "Verknüpfungen_9": {
+      "expected": "Die Zahl pi ist ungefähr gleich 3,14"
+    },
+    "Verknüpfungen_10": {
+      "expected": "runde Klammer auf, a plus b, runde Klammer zu, hoch 2"
+    },
+    "Verknüpfungen_11": {
+      "expected": "eckige Klammer auf, x minus y, eckige Klammer zu, hoch 3"
+    },
+    "Verknüpfungen_12": {
+      "expected": "s ist proportional zu t (das Zeichen bedeutet auch \"ähnlich\" (similar))"
+    },
+    "Verknüpfungen_13": {
+      "expected": "a entspricht b"
+    },
+    "Verknüpfungen_14": {
+      "expected": "7 teilt die Zahl 28"
+    },
+    "_comment3_": "Verknüpfungen von Aussagen",
+    "_comment4_": "Brüche  2) und Dezimalzahlen",
+    "Brüche_0": {
+      "expected": "zwei Drittel bzw. Bruchanfang, 2 durch 3, Bruchende"
+    },
+    "Brüche_1": {
+      "expected": "vier Dreifünftel bzw. 4 Bruchanfang, 3 durch 5, Bruchende"
+    },
+    "Brüche_2": {
+      "expected": "1 durch x bzw. Bruchanfang, 1 durch x, Bruchende"
+    },
+    "Brüche_3": {
+      "expected": "Bruchanfang 1 durch x plus 2 Bruchende ist ungleich Bruchanfang 1 durch x Bruchende plus 2"
+    },
+    "Brüche_4": {
+      "expected": "Bruchanfang Bruchanfang a plus b durch 2 Bruchende durch Bruchanfang x durch a minus b Bruchende Bruchende ist gleich 1"
+    },
+    "Brüche_5": {
+      "expected": "0 Komma 25 ist gleich ein Viertel"
+    },
+    "Brüche_6": {
+      "expected": "0 Komma 1 Periode 6 ist gleich ein Sechstel"
+    },
+    "Brüche_7": {
+      "expected": "75 Prozent sind gleich 3 Viertel"
+    },
+    "Brüche_8": {
+      "expected": "2,5 Promille"
+    },
+    "_comment5_": "Potenzen, Wurzeln, Indizes",
+    "Potenzen,_0": {
+      "expected": "a zum Quadrat"
+    },
+    "Potenzen,_1": {
+      "expected": "a hoch 12"
+    },
+    "Potenzen,_2": {
+      "expected": "2 hoch minus 3 ist gleich ein Achtel"
+    },
+    "Potenzen,_3": {
+      "expected": "a hoch Exponentanfang n + 1 Exponentende ist ungleich a hoch Exponentanfang n Exponentende + 1"
+    },
+    "Potenzen,_4": {
+      "expected": "Die Quadratwurzel aus 25 ist gleich 5"
+    },
+    "Potenzen,_5": {
+      "expected": "Die Wurzel aus x hoch 2 plus y hoch 2 Wurzelende ist ungleich x plus y"
+    },
+    "Potenzen,_6": {
+      "expected": "Die dritte Wurzel aus 8 ist gleich 2"
+    },
+    "Potenzen,_7": {
+      "expected": "Die dritte Wurzel aus a hoch 2 Wurzelende ist gleich a hoch zwei Drittel"
+    },
+    "Potenzen,_8": {
+      "expected": "a Index 1 plus a Index n"
+    },
+    "Potenzen,_9": {
+      "expected": "a Index n minus 1 Indexende"
+    },
+    "Potenzen,_10": {
+      "expected": "Index und Exponent vor einem Zeichen (Bsp. Chemie)"
+    },
+    "_comment6_": "Weitere Rechenoperationen, Funktionen",
+    "Weitere_0": {
+      "expected": "f von x ist gleich 2x +1"
+    },
+    "Weitere_1": {
+      "expected": "f von 3 ist gleich 7"
+    },
+    "Weitere_2": {
+      "expected": "Die Zuordnungsvorschrift der Funktion f lautet: y =2x +1"
+    },
+    "Weitere_3": {
+      "expected": "Die Zuordnungsvorschrift der Funktion f lautet: x Zuordnungspfeil nach rechts 2x +1"
+    },
+    "Weitere_4": {
+      "expected": "Punkt P mit der x-Koordinate 3,5 und der y-Koordinate 8"
+    },
+    "Weitere_5": {
+      "expected": "Betrag von a"
+    },
+    "Weitere_6": {
+      "expected": "Logarithmus von x zur Basis a"
+    },
+    "Weitere_7": {
+      "expected": "natürlicher Logarithmus (Logarithmus von x zur Basis e)"
+    },
+    "Weitere_8": {
+      "expected": "Sinus von klein alpha"
+    },
+    "Weitere_9": {
+      "expected": "Kosinus Quadrat von klein beta"
+    },
+    "Weitere_10": {
+      "expected": "Tangens von klein gamma"
+    },
+    "Weitere_11": {
+      "expected": "Kotangens 45 Grad"
+    },
+    "Weitere_12": {
+      "expected": "Sinus von Klammer auf Pi Sechstel Klammer zu"
+    },
+    "_comment7_": "Geometrie",
+    "Geometrie_0": {
+      "expected": "Strecke AB"
+    },
+    "Geometrie_1": {
+      "expected": "Dreieck ABC"
+    },
+    "Geometrie_2": {
+      "expected": "Winkel BAC"
+    },
+    "Geometrie_3": {
+      "expected": "klein alpha, beta, gamma, delta, epsilon"
+    },
+    "Geometrie_4": {
+      "expected": "g parallel zu h"
+    },
+    "Geometrie_5": {
+      "expected": "g nicht parallel zu h"
+    },
+    "Geometrie_6": {
+      "expected": "g senkrecht zu h"
+    },
+    "Geometrie_7": {
+      "expected": "F kongruent zu F Strich"
+    }
+  }
+}

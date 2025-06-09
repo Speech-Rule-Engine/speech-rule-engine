@@ -1,0 +1,319 @@
+{
+  "name": "FrenchClearspeakUnits",
+  "locale": "fr",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "French Clearspeak Units tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakFrench",
+  "exclude": [
+    "UnitSquare_0_brief",
+    "UnitSquare_0_sbrief",
+    "UnitSquare_1_brief",
+    "UnitSquare_1_sbrief",
+    "UnitSquare_2_brief",
+    "UnitSquare_2_sbrief",
+    "UnitCube_0_brief",
+    "UnitCube_0_sbrief",
+    "UnitCube_1_brief",
+    "UnitCube_1_sbrief",
+    "UnitCube_2_brief",
+    "UnitCube_2_sbrief",
+    "UnitInverse_brief",
+    "UnitInverse_sbrief",
+    "UnitDoubleInverse_brief",
+    "UnitDoubleInverse_sbrief",
+    "UnitDivide_brief",
+    "UnitDivide_sbrief"
+  ],
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "pouces carré"
+    },
+    "UnitSquare_1_default": {
+      "expected": "secondes carré"
+    },
+    "UnitSquare_2_default": {
+      "expected": "mètres carré"
+    },
+    "UnitCube_0_default": {
+      "expected": "pouces cube"
+    },
+    "UnitCube_1_default": {
+      "expected": "secondes cube"
+    },
+    "UnitCube_2_default": {
+      "expected": "mètres cube"
+    },
+    "UnitInverse_default": {
+      "expected": "réciproque pouces"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "réciproque pouces par millimètre"
+    },
+    "UnitDivide_default": {
+      "expected": "pouces par millimètre"
+    },
+    "UnitsSingle_0": {
+      "expected": "kilomètres"
+    },
+    "UnitsSingle_1": {
+      "expected": "ampères"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohms"
+    },
+    "UnitsSingle_3": {
+      "expected": "kiloohms"
+    },
+    "UnitsSingle_4": {
+      "expected": "celcius"
+    },
+    "UnitsSimple_0": {
+      "expected": "minimum de minutes"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 kilomètres"
+    },
+    "UnitsSimple_2": {
+      "expected": "kilomètres plus secondes"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "kilomètres carré"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "mètres cube"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "kilomètres à la puissance 4"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "réciproque mètres"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "secondes par mètre"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "secondes par mètre à la puissance négatif 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "secondes par mètre à la puissance négatif 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 réciproque mètres"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "kilomètres par heure"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "newtons kilomètres par heure"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "m sur kilomètres"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 kilomètres heures"
+    },
+    "UnitsExpressions_0": {
+      "expected": "secondes 3 m kilomètres heures"
+    },
+    "UnitsExpressions_1": {
+      "expected": "kilomètres secondes carré 3 m kilomètres heures"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m kilomètres heures fraction avec numérateur N et dénominateur secondes carré"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m kilomètres heures newtons par seconde carré"
+    },
+    "UnitPlural_1": {
+      "expected": "4 millimètres"
+    },
+    "UnitPlural_2": {
+      "expected": "1 millimètre"
+    },
+    "UnitPlural_3": {
+      "expected": "4 millimètres"
+    },
+    "UnitPlural_4": {
+      "expected": "1 millimètre"
+    },
+    "UnitCombine_0": {
+      "expected": "mètres secondes"
+    },
+    "UnitCombine_1": {
+      "expected": "m secondes"
+    },
+    "UnitCombine_2": {
+      "expected": "mètres s"
+    },
+    "UnitCombine_3": {
+      "expected": "mètres secondes"
+    },
+    "UnitCombine_4": {
+      "expected": "m secondes"
+    },
+    "UnitCombine_5": {
+      "expected": "mètres s"
+    },
+    "UnitCombine_6": {
+      "expected": "mètres secondes litres"
+    },
+    "issue_364_1": {
+      "expected": "63360 pouces égale 63360 pouces égale 63360 pouces égale 63360 inches égale 5280 pieds égale 5280 pieds égale 5280 pieds égale 5280 feet égale 1760 yards égale 1760 yards égale 1760 yards égale 1 mile égale 1 mile égale 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 chaînons égale 8000 chaînons égale 8000 links égale 320 rods égale 320 rods égale 320 rods égale 80 chaînes égale 80 chaînes égale 80 chains égale 8 furlongs égale 8 furlongs égale 8 furlongs égale 1 mile égale 1 mile égale 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 pieds carré égale 43560 pieds carré égale 43560 pieds carré égale 43560 pieds au carré égale 43560 square feet égale 4840 verges carrée égale 4840 verges carrée égale 4840 yards carré égale 4840 square yards égale 160 rods carré égale 160 rods carré égale 160 rods carré égale 160 square rods égale 1 acre égale 1 acre égale 1 acre égale 1 sur 640 miles carré égale 1 sur 640 miles carré égale 1 sur 640 miles carré égale 1 sur 640 square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 pouce cubes égale 46656 pouce cubes égale 46656 pouces cube égale 46656 pouces au cube égale 46656 cubic inches égale 27 pied cubes égale 27 pied cubes égale 27 pieds cube égale 27 pieds au cube égale 27 cubic feet égale 1 yard cube égale 1 yard cube égale 1 yard cube égale 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 drachme liquides égale 1024 drachme liquides égale 1024 fluid drams égale 768 cuillères à thé égale 768 cuillères à thé égale 768 teaspoons égale 256 cuillères à soupe égale 256 cuillères à soupe égale 256 tablespoons égale 128 once liquides égale 128 once liquides égale 128 fluid ounces égale 16 tasses égale 16 tasses égale 16 cups égale 8 pintes égale 8 pintes égale 8 pints égale 4 quarts égale 4 quarts égale 4 quarts égale 1 gallon égale 1 gallon égale 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 drachmes égale 256 drachmes égale 256 drams égale 16 onces égale 16 onces égale 16 ounces égale 1 # égale 1 livre égale 1 livre égale 1 pounds égale 100 quintals égale 100 quintals égale 100 hundredweights égale 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 pouces égale 63360 pouces égale 63360 pouces égale 63360 inches égale 5280 pieds égale 5280 pieds égale 5280 pieds égale 5280 feet égale 1760 yards égale 1760 yards égale 1760 yards égale 1 mile égale 1 mile égale 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 joule égale 1 kilogramme point médian mètres carré point médian secondes à la puissance négatif 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 joule égale 1 kilogramme mètres carré secondes à la puissance négatif 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 joule égale 1 kilogramme mètres carré secondes à la puissance négatif 2"
+    },
+    "unit_cube": {
+      "expected": "pouces cube"
+    },
+    "UnitDiv_0": {
+      "expected": "kilomètres kilogrammes secondes carré par joule"
+    },
+    "UnitDiv_1": {
+      "expected": "3 kilomètres 1 kilogramme secondes carré sur joules"
+    },
+    "UnitDiv_2": {
+      "expected": "1 kilomètre kilogrammes secondes carré sur joules"
+    },
+    "UnitDiv_3": {
+      "expected": "1 kilomètre kilogrammes secondes carré sur 5 joules"
+    },
+    "UnitKm": {
+      "expected": "kilomètres"
+    },
+    "UnitLong_1": {
+      "expected": "3 kilomètres kilogrammes secondes carré joules"
+    },
+    "UnitLong_2": {
+      "expected": "3 kilomètres kilogrammes secondes carré joules"
+    },
+    "UnitLong_3": {
+      "expected": "3 kilomètres 4 kilogrammes secondes carré joules"
+    },
+    "UnitLong_4": {
+      "expected": "3 kilomètres 1 kilogramme secondes carré joules"
+    },
+    "UnitMultiple": {
+      "expected": "1 kilomètre secondes plus 2 kilomètres secondes plus 0 kilomètres secondes plus a kilomètres secondes plus"
+    },
+    "UnitMultitude": {
+      "expected": "1 kilomètre plus 2 kilomètres plus 0 kilomètres plus a kilomètres"
+    },
+    "UnitNumb_0": {
+      "expected": "1 et deux-tiers kilogrammes"
+    },
+    "UnitNumb_1": {
+      "expected": "1 et deux-tiers kilogrammes kilomètres"
+    },
+    "UnitNumb_2": {
+      "expected": "1 kilomètre 2 kilogrammes kilomètres"
+    },
+    "UnitTriple": {
+      "expected": "1 kilomètre kilogrammes secondes plus 2 kilomètres kilogrammes secondes plus 0 kilomètres kilogrammes secondes plus a kilomètres kilogrammes secondes plus"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dollar"
+    },
+    "CurrencySingular_0_Currency_Position": {
+      "expected": "1 dollars"
+    },
+    "CurrencySingular_0_Currency_Prefix": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "1 dollars"
+    },
+    "CurrencySingular_1_Currency_Position": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingular_1_Currency_Prefix": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_0_Currency_Position": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_0_Currency_Prefix": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_Currency_Position": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_Currency_Prefix": {
+      "expected": "dollars"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_0_Currency_Position": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_0_Currency_Prefix": {
+      "expected": "dollars 2"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_1_Currency_Position": {
+      "expected": "dollars 2"
+    },
+    "CurrencyPlural_1_Currency_Prefix": {
+      "expected": "dollars 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dollar plus 2 dollars plus 0 dollars plus a dollars"
+    },
+    "CurrencyMultitude_0_Currency_Position": {
+      "expected": "1 dollars plus 2 dollars plus 0 dollars plus a dollars"
+    },
+    "CurrencyMultitude_0_Currency_Prefix": {
+      "expected": "dollars 1 plus dollars 2 plus dollars 0 plus dollars a"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dollar plus 2 dollars plus 0 dollars plus a dollars"
+    },
+    "CurrencyMultitude_1_Currency_Position": {
+      "expected": "1 dollars plus dollars 2 plus 0 dollars plus dollars a"
+    },
+    "CurrencyMultitude_1_Currency_Prefix": {
+      "expected": "dollars 1 plus dollars 2 plus dollars 0 plus dollars a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euro plus 2 euros plus 0 euros plus a euros"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 livre plus 2 livres plus 0 livres plus a livres"
+    }
+  }
+}

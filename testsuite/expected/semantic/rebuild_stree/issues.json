@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree issues tests.",
+  "base": "input/semantic/issues.json"
+}

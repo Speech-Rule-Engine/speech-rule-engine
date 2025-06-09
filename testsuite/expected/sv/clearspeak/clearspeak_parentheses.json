@@ -1,0 +1,247 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakParentheses",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_parentheses.json",
+  "information": "Swedish Clearspeak Parentheses rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Paren001": {
+      "expected": "25"
+    },
+    "Paren002": {
+      "expected": "2 x"
+    },
+    "Paren003": {
+      "expected": "2 plus minus 2"
+    },
+    "Paren004": {
+      "expected": "2 minus minus 2"
+    },
+    "Paren004a": {
+      "expected": "2 minus minus 2"
+    },
+    "Paren005": {
+      "expected": "2 minus, öppna, minus 2, stäng, kubik"
+    },
+    "Paren006": {
+      "expected": "öppna, 2 x, stäng, kvadrat"
+    },
+    "Paren007": {
+      "expected": "öppna, 2 x, stäng, upphöjt till y plus 1"
+    },
+    "Paren008": {
+      "expected": "minus 2 x"
+    },
+    "Paren009": {
+      "expected": "öppna, minus 2 x, stäng, kvadrat"
+    },
+    "Paren010": {
+      "expected": "minus, öppna, 2 x, stäng, kvadrat"
+    },
+    "Paren011": {
+      "expected": "en halv"
+    },
+    "Paren012": {
+      "expected": "tre fjärdelar x"
+    },
+    "Paren013": {
+      "expected": "öppna, 11 delat med 22, stäng"
+    },
+    "Paren014": {
+      "expected": "en halv upphöjt till fjärde"
+    },
+    "Paren015": {
+      "expected": "öppna, 11 delat med 15, stäng, kvadrat"
+    },
+    "Paren016": {
+      "expected": "öppna, 25, stäng"
+    },
+    "Paren017": {
+      "expected": "öppna, 2 x, stäng"
+    },
+    "Paren018": {
+      "expected": "2 plus, öppna, minus 2, stäng"
+    },
+    "Paren019": {
+      "expected": "2 minus, öppna, minus 2, stäng"
+    },
+    "Paren020": {
+      "expected": "2 minus, öppna, minus 2, stäng, kubik"
+    },
+    "Paren021": {
+      "expected": "öppna, 2 x, stäng, kvadrat"
+    },
+    "Paren022": {
+      "expected": "öppna, 2 x, stäng, upphöjt till y plus 1"
+    },
+    "Paren023": {
+      "expected": "öppna, minus 2 x, stäng"
+    },
+    "Paren024": {
+      "expected": "öppna, minus 2 x, stäng, kvadrat"
+    },
+    "Paren025": {
+      "expected": "minus, öppna, 2 x, stäng, kvadrat"
+    },
+    "Paren026": {
+      "expected": "öppna, en halv, stäng"
+    },
+    "Paren027": {
+      "expected": "öppna, tre fjärdelar x, stäng"
+    },
+    "Paren028": {
+      "expected": "öppna, 11 delat med 22, stäng"
+    },
+    "Paren029": {
+      "expected": "öppna, en halv, stäng, upphöjt till fjärde"
+    },
+    "Paren030": {
+      "expected": "öppna, 11 delat med 15, stäng, kvadrat"
+    },
+    "Paren031": {
+      "expected": "Punkten med koordinaterna 1 komma 2"
+    },
+    "Paren032": {
+      "expected": "Punkten med koordinaterna x komma y"
+    },
+    "Paren033": {
+      "expected": "Punkten med koordinaterna 1 komma 2 komma 3"
+    },
+    "Paren034": {
+      "expected": "Punkten med koordinaterna x komma y komma z"
+    },
+    "Paren035": {
+      "expected": "Punkten med koordinaterna 1 komma 2 komma 386"
+    },
+    "Paren036": {
+      "expected": "intervallet från a till b, utan a eller b"
+    },
+    "Paren037": {
+      "expected": "intervallet från 0 till 1, utan 0 eller 1"
+    },
+    "Paren038": {
+      "expected": "intervallet från a till b, inkluderat a, men utan b"
+    },
+    "Paren039": {
+      "expected": "intervallet från 0 till 1, inkluderat 0, men utan 1"
+    },
+    "Paren040": {
+      "expected": "intervallet från a till b, utan a, men inkluderat b"
+    },
+    "Paren041": {
+      "expected": "intervallet från 0 till 1, utan 0, men inkluderat 1"
+    },
+    "Paren042": {
+      "expected": "intervallet från a till b, inkluderat a och b"
+    },
+    "Paren043": {
+      "expected": "intervallet från 0 till 1, inkluderat 0 och 1"
+    },
+    "Paren044": {
+      "expected": "intervallet från minus oändlighet till b, utan b"
+    },
+    "Paren045": {
+      "expected": "intervallet från minus oändlighet till 1, utan 1"
+    },
+    "Paren046": {
+      "expected": "intervallet från minus oändlighet till b, inkluderat b"
+    },
+    "Paren047": {
+      "expected": "intervallet från minus oändlighet till 1, inkluderat 1"
+    },
+    "Paren048": {
+      "expected": "intervallet från a till oändlighet, utan a"
+    },
+    "Paren049": {
+      "expected": "intervallet från 1 till oändlighet, utan 1"
+    },
+    "Paren050": {
+      "expected": "intervallet från a till oändlighet, inkluderat a"
+    },
+    "Paren051": {
+      "expected": "intervallet från 1 till oändlighet, inkluderat 1"
+    },
+    "Paren052": {
+      "expected": "intervallet från minus oändlighet till oändlighet"
+    },
+    "Paren053": {
+      "expected": "intervallet från minus oändlighet till plus oändlighet"
+    },
+    "Nest001": {
+      "expected": "f av, g av x"
+    },
+    "Nest002": {
+      "expected": "f av, öppna, g av, öppna, x plus 1, stäng, stäng"
+    },
+    "Nest003": {
+      "expected": "6 minus, vänster parentes, 2 minus, öppna, 3 plus 5, stäng, höger parentes"
+    },
+    "Nest004": {
+      "expected": "6 minus, öppna, 2 minus, andra öppna, 3 plus 5, andra stäng, stäng"
+    },
+    "Nest005": {
+      "expected": "4 gånger, vänster parentes, x plus 3 gånger, öppna, 2 x, plus 1, stäng, höger parentes"
+    },
+    "Nest006": {
+      "expected": "4 gånger, öppna, x plus 3 gånger, andra öppna, 2 x, plus 1, andra stäng, stäng"
+    },
+    "Nest007": {
+      "expected": "1 plus, öppna, 2 plus, andra öppna, 3 plus 7, andra stäng, minus, andra öppna, 2 plus 8, andra stäng, stäng"
+    },
+    "Nest008": {
+      "expected": "1 plus, öppna, 2 plus, andra öppna, 3 minus, tredje öppna, 4 minus 5, tredje stäng, andra stäng, stäng"
+    },
+    "Nest009": {
+      "expected": "öppna, andra öppna, 2 plus, tredje öppna, 3 plus 4, tredje stäng, plus 5, andra stäng, plus 6 plus, andra öppna, tredje öppna, 7 plus, fjärde öppna, 8 plus 1, fjärde stäng, tredje stäng, plus 2, andra stäng, stäng"
+    },
+    "SilParen001": {
+      "expected": "25"
+    },
+    "SilParen002": {
+      "expected": "2 x"
+    },
+    "SilParen003": {
+      "expected": "2 plus, minus 2"
+    },
+    "SilParen004": {
+      "expected": "2 minus, minus 2"
+    },
+    "SilParen005": {
+      "expected": "2 minus, minus 2, kubik"
+    },
+    "SilParen006": {
+      "expected": "2 x, kvadrat"
+    },
+    "SilParen007": {
+      "expected": "2 x, upphöjt till y plus 1"
+    },
+    "SilParen008": {
+      "expected": "minus 2 x"
+    },
+    "SilParen009": {
+      "expected": "minus 2 x, kvadrat"
+    },
+    "SilParen010": {
+      "expected": "minus, 2 x, kvadrat"
+    },
+    "SilParen011": {
+      "expected": "en halv"
+    },
+    "SilParen012": {
+      "expected": "tre fjärdelar x"
+    },
+    "SilParen013": {
+      "expected": "11 delat med 22"
+    },
+    "SilParen014": {
+      "expected": "en halv, upphöjt till fjärde"
+    },
+    "SilParen015": {
+      "expected": "11 delat med 15, kvadrat"
+    }
+  }
+}

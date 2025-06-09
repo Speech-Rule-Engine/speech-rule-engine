@@ -1,0 +1,259 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakPart3Adornments",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
+  "information": "Nynorsk Clearspeak Part3Adornments rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Prime001": {
+      "expected": "A prim, B prim"
+    },
+    "Prime002": {
+      "expected": "A dobbel prim, B dobbel prim"
+    },
+    "Prime003": {
+      "expected": "A trippel prim, B trippel prim"
+    },
+    "Prime004": {
+      "expected": "f prim av x"
+    },
+    "Prime005": {
+      "expected": "f dobbel prim av x"
+    },
+    "Prime006": {
+      "expected": "f trippel prim av x"
+    },
+    "Prime007": {
+      "expected": "1 fot"
+    },
+    "Prime008": {
+      "expected": "2 fot"
+    },
+    "Prime009": {
+      "expected": "1 in"
+    },
+    "Prime010": {
+      "expected": "2 in"
+    },
+    "Prime011": {
+      "expected": "16 fot, 10 in"
+    },
+    "Prime012": {
+      "expected": "45 grader, 10 minutter"
+    },
+    "Prime013": {
+      "expected": "x grader, y minutter"
+    },
+    "Prime014": {
+      "expected": "45 grader, 10 minutter, 25 sekunder"
+    },
+    "Prime015": {
+      "expected": "x grader, y minutter, z sekunder"
+    },
+    "Prime016": {
+      "expected": "1 minutt"
+    },
+    "Prime017": {
+      "expected": "x minutter"
+    },
+    "Prime018": {
+      "expected": "2 minutter"
+    },
+    "Prime019": {
+      "expected": "1 sekund"
+    },
+    "Prime020": {
+      "expected": "x sekunder"
+    },
+    "Prime021": {
+      "expected": "2 sekunder"
+    },
+    "Prime022": {
+      "expected": "16 minutter, 10 sekunder"
+    },
+    "Prime023": {
+      "expected": "x minutter, y sekunder"
+    },
+    "Prime024": {
+      "expected": "45 grader, 10 minutter"
+    },
+    "Prime025": {
+      "expected": "45 grader, 10 minutter, 25 sekunder"
+    },
+    "Prime026": {
+      "expected": "A prim, B prim"
+    },
+    "Prime027": {
+      "expected": "A dobbel prim, B dobbel prim"
+    },
+    "Prime028": {
+      "expected": "A trippel prim, B trippel prim"
+    },
+    "Prime029": {
+      "expected": "f prim av x"
+    },
+    "Prime030": {
+      "expected": "f dobbel prim av x"
+    },
+    "Prime031": {
+      "expected": "f trippel prim av x"
+    },
+    "Prime032": {
+      "expected": "1 fot"
+    },
+    "Prime033": {
+      "expected": "x fot"
+    },
+    "Prime034": {
+      "expected": "2 fot"
+    },
+    "Prime035": {
+      "expected": "1 in"
+    },
+    "Prime036": {
+      "expected": "x in"
+    },
+    "Prime037": {
+      "expected": "2 in"
+    },
+    "Prime038": {
+      "expected": "16 fot, 10 in"
+    },
+    "Prime039": {
+      "expected": "x fot, y in"
+    },
+    "Prime040": {
+      "expected": "45 grader, 10 minutter"
+    },
+    "Prime041": {
+      "expected": "45 grader, 10 minutter, 25 sekunder"
+    },
+    "Prime042": {
+      "expected": "A prim, B prim"
+    },
+    "Prime043": {
+      "expected": "A dobbel prim, B dobbel prim"
+    },
+    "Prime044": {
+      "expected": "A trippel prim, B trippel prim"
+    },
+    "Prime045": {
+      "expected": "f prim av x"
+    },
+    "Prime046": {
+      "expected": "f dobbel prim av x"
+    },
+    "Prime047": {
+      "expected": "f trippel prim av x"
+    },
+    "CombPerm001a": {
+      "expected": "n C r"
+    },
+    "CombPerm002a": {
+      "expected": "n P r"
+    },
+    "CombPerm003a": {
+      "expected": "10 C 3"
+    },
+    "CombPerm004a": {
+      "expected": "10 P 3"
+    },
+    "CombPerm005a": {
+      "expected": "n over r"
+    },
+    "CombPerm006a": {
+      "expected": "n permutasjon av r"
+    },
+    "CombPerm007a": {
+      "expected": "10 over 3"
+    },
+    "CombPerm008a": {
+      "expected": "10 permutasjon av 3"
+    },
+    "Bar001": {
+      "expected": "f strek"
+    },
+    "Bar002": {
+      "expected": "f strek av x"
+    },
+    "Bar003": {
+      "expected": "f indeks 1, strek"
+    },
+    "Bar004": {
+      "expected": "f indeks 1, strek av x"
+    },
+    "Bar005": {
+      "expected": "z strek"
+    },
+    "Bar006": {
+      "expected": "desimalbrøk 0 komma etterfølgt av gjentatt siffer 3"
+    },
+    "Bar007": {
+      "expected": "desimalbrøk 0 komma etterfølgt av gjentatte siffer 1 2"
+    },
+    "Bar008": {
+      "expected": "desimalbrøk 2 komma etterfølgt av gjentatte siffer 1 3 4"
+    },
+    "Bar009": {
+      "expected": "desimalbrøk komma 1 3 etterfølgt av gjentatte siffer 4 6 7"
+    },
+    "Bar010": {
+      "expected": "desimalbrøk 2 5 komma 1 2 etterfølgt av gjentatte siffer 6 3 2"
+    },
+    "Bar011": {
+      "expected": "z, z strek"
+    },
+    "Bar012": {
+      "expected": "linjestykket C D"
+    },
+    "Bar013": {
+      "expected": "linjestykket C prim D prim"
+    },
+    "Bar014": {
+      "expected": "linjestykket C dobbel prim D dobbel prim"
+    },
+    "Bar015": {
+      "expected": "linjestykket C trippel prim D trippel prim"
+    },
+    "Bar016": {
+      "expected": "komplekskonjugatet til z"
+    },
+    "Bar017": {
+      "expected": "z, komplekskonjugatet til z"
+    },
+    "Bar018": {
+      "expected": "komplekskonjugatet til 3 minus 2 i, er lik 3 pluss 2 i"
+    },
+    "Bar006a": {
+      "expected": "desimalbrøk 0 komma etterfølgt av gjentatt siffer 3"
+    },
+    "Bar007a": {
+      "expected": "desimalbrøk 0 komma etterfølgt av gjentatte siffer 1 2"
+    },
+    "Bar008a": {
+      "expected": "desimalbrøk 2 komma etterfølgt av gjentatte siffer 1 3 4"
+    },
+    "Bar009a": {
+      "expected": "desimalbrøk komma 1 3 etterfølgt av gjentatte siffer 4 6 7"
+    },
+    "Bar010a": {
+      "expected": "desimalbrøk 2 5 komma 1 2 etterfølgt av gjentatte siffer 6 3 2"
+    },
+    "Equal001": {
+      "expected": "er definert som"
+    },
+    "Equal002": {
+      "expected": "venstreparentes, f grad g, høgreparentes, av x, er definert som, f av, g av x"
+    },
+    "Equal003": {
+      "expected": "er lik teikn med spørsmålsteikn over"
+    },
+    "Equal004": {
+      "expected": "x pluss 2 er lik teikn med spørsmålsteikn over 4"
+    }
+  }
+}

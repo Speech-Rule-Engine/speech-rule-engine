@@ -1,0 +1,808 @@
+{
+  "name": "HindiDefaultSiUnit",
+  "locale": "hi",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsHindi",
+  "grammar": {
+    "annotation": "unit"
+  },
+  "factory": "symbol",
+  "base": "input/common/si_units.json",
+  "information": "Hindi Default SI Unit tests.",
+  "compare": true,
+  "tests": {
+    "YW": {
+      "expected": "योट्टावॉट"
+    },
+    "Yw": {
+      "expected": "योट्टावॉट"
+    },
+    "ZW": {
+      "expected": "जेट्टावॉट"
+    },
+    "Zw": {
+      "expected": "जेट्टावॉट"
+    },
+    "EW": {
+      "expected": "एक्सावॉट"
+    },
+    "Ew": {
+      "expected": "एक्सावॉट"
+    },
+    "PW": {
+      "expected": "पेटावॉट"
+    },
+    "Pw": {
+      "expected": "पेटावॉट"
+    },
+    "TW": {
+      "expected": "टेरावॉट"
+    },
+    "Tw": {
+      "expected": "टेरावॉट"
+    },
+    "GW": {
+      "expected": "जिगावॉट"
+    },
+    "Gw": {
+      "expected": "जिगावॉट"
+    },
+    "MW": {
+      "expected": "मेगावॉट"
+    },
+    "Mw": {
+      "expected": "मेगावॉट"
+    },
+    "kW": {
+      "expected": "किलोवॉट"
+    },
+    "kw": {
+      "expected": "किलोवॉट"
+    },
+    "hW": {
+      "expected": "हेक्टोवॉट"
+    },
+    "hw": {
+      "expected": "हेक्टोवॉट"
+    },
+    "daW": {
+      "expected": "daW"
+    },
+    "daw": {
+      "expected": "daw"
+    },
+    "dW": {
+      "expected": "डेसीवॉट"
+    },
+    "dw": {
+      "expected": "डेसीवॉट"
+    },
+    "cW": {
+      "expected": "सेन्टीवॉट"
+    },
+    "cw": {
+      "expected": "सेन्टीवॉट"
+    },
+    "mW": {
+      "expected": "मिलीवॉट"
+    },
+    "mw": {
+      "expected": "मिलीवॉट"
+    },
+    "µW": {
+      "expected": "माइक्रोवॉट"
+    },
+    "µw": {
+      "expected": "माइक्रोवॉट"
+    },
+    "μW": {
+      "expected": "माइक्रोवॉट"
+    },
+    "μw": {
+      "expected": "माइक्रोवॉट"
+    },
+    "nW": {
+      "expected": "नैनोवॉट"
+    },
+    "nw": {
+      "expected": "नैनोवॉट"
+    },
+    "pW": {
+      "expected": "पिकोवॉट"
+    },
+    "pw": {
+      "expected": "पिकोवॉट"
+    },
+    "fW": {
+      "expected": "फेम्टोवॉट"
+    },
+    "fw": {
+      "expected": "फेम्टोवॉट"
+    },
+    "aW": {
+      "expected": "आट्टोवॉट"
+    },
+    "aw": {
+      "expected": "आट्टोवॉट"
+    },
+    "zW": {
+      "expected": "जेप्टोवॉट"
+    },
+    "zw": {
+      "expected": "जेप्टोवॉट"
+    },
+    "yW": {
+      "expected": "योक्टोवॉट"
+    },
+    "yw": {
+      "expected": "योक्टोवॉट"
+    },
+    "W": {
+      "expected": "वॉट"
+    },
+    "w": {
+      "expected": "वॉट"
+    },
+    "YJ": {
+      "expected": "योट्टाजूल"
+    },
+    "ZJ": {
+      "expected": "जेट्टाजूल"
+    },
+    "EJ": {
+      "expected": "एक्साजूल"
+    },
+    "PJ": {
+      "expected": "पेटाजूल"
+    },
+    "TJ": {
+      "expected": "टेराजूल"
+    },
+    "GJ": {
+      "expected": "जिगाजूल"
+    },
+    "MJ": {
+      "expected": "मेगाजूल"
+    },
+    "kJ": {
+      "expected": "किलोजूल"
+    },
+    "hJ": {
+      "expected": "हेक्टोजूल"
+    },
+    "daJ": {
+      "expected": "daJ"
+    },
+    "dJ": {
+      "expected": "डेसीजूल"
+    },
+    "cJ": {
+      "expected": "सेन्टीजूल"
+    },
+    "mJ": {
+      "expected": "मिलीजूल"
+    },
+    "µJ": {
+      "expected": "माइक्रोजूल"
+    },
+    "μJ": {
+      "expected": "माइक्रोजूल"
+    },
+    "nJ": {
+      "expected": "नैनोजूल"
+    },
+    "pJ": {
+      "expected": "पिकोजूल"
+    },
+    "fJ": {
+      "expected": "फेम्टोजूल"
+    },
+    "aJ": {
+      "expected": "आट्टोजूल"
+    },
+    "zJ": {
+      "expected": "जेप्टोजूल"
+    },
+    "yJ": {
+      "expected": "योक्टोजूल"
+    },
+    "J": {
+      "expected": "जूल"
+    },
+    "YN": {
+      "expected": "योट्टान्यूटन"
+    },
+    "ZN": {
+      "expected": "जेट्टान्यूटन"
+    },
+    "EN": {
+      "expected": "एक्सान्यूटन"
+    },
+    "PN": {
+      "expected": "पेटान्यूटन"
+    },
+    "TN": {
+      "expected": "टेरान्यूटन"
+    },
+    "GN": {
+      "expected": "जिगान्यूटन"
+    },
+    "MN": {
+      "expected": "मेगान्यूटन"
+    },
+    "kN": {
+      "expected": "किलोन्यूटन"
+    },
+    "hN": {
+      "expected": "हेक्टोन्यूटन"
+    },
+    "daN": {
+      "expected": "daN"
+    },
+    "dN": {
+      "expected": "डेसीन्यूटन"
+    },
+    "cN": {
+      "expected": "सेन्टीन्यूटन"
+    },
+    "mN": {
+      "expected": "मिलीन्यूटन"
+    },
+    "µN": {
+      "expected": "माइक्रोन्यूटन"
+    },
+    "μN": {
+      "expected": "माइक्रोन्यूटन"
+    },
+    "nN": {
+      "expected": "नैनोन्यूटन"
+    },
+    "pN": {
+      "expected": "पिकोन्यूटन"
+    },
+    "fN": {
+      "expected": "फेम्टोन्यूटन"
+    },
+    "aN": {
+      "expected": "आट्टोन्यूटन"
+    },
+    "zN": {
+      "expected": "जेप्टोन्यूटन"
+    },
+    "yN": {
+      "expected": "योक्टोन्यूटन"
+    },
+    "N": {
+      "expected": "न्यूटन"
+    },
+    "YA": {
+      "expected": "योट्टाएम्पियर"
+    },
+    "ZA": {
+      "expected": "जेट्टाएम्पियर"
+    },
+    "EA": {
+      "expected": "एक्साएम्पियर"
+    },
+    "PA": {
+      "expected": "पेटाएम्पियर"
+    },
+    "TA": {
+      "expected": "टेराएम्पियर"
+    },
+    "GA": {
+      "expected": "जिगाएम्पियर"
+    },
+    "MA": {
+      "expected": "मेगाएम्पियर"
+    },
+    "kA": {
+      "expected": "किलोएम्पियर"
+    },
+    "hA": {
+      "expected": "हेक्टोएम्पियर"
+    },
+    "daA": {
+      "expected": "daA"
+    },
+    "dA": {
+      "expected": "डेसीएम्पियर"
+    },
+    "cA": {
+      "expected": "सेन्टीएम्पियर"
+    },
+    "mA": {
+      "expected": "मिलीएम्पियर"
+    },
+    "µA": {
+      "expected": "माइक्रोएम्पियर"
+    },
+    "μA": {
+      "expected": "माइक्रोएम्पियर"
+    },
+    "nA": {
+      "expected": "नैनोएम्पियर"
+    },
+    "pA": {
+      "expected": "पिकोएम्पियर"
+    },
+    "fA": {
+      "expected": "फेम्टोएम्पियर"
+    },
+    "aA": {
+      "expected": "आट्टोएम्पियर"
+    },
+    "zA": {
+      "expected": "जेप्टोएम्पियर"
+    },
+    "yA": {
+      "expected": "योक्टोएम्पियर"
+    },
+    "A": {
+      "expected": "एम्पियर"
+    },
+    "YV": {
+      "expected": "योट्टावॉल्ट"
+    },
+    "ZV": {
+      "expected": "जेट्टावॉल्ट"
+    },
+    "EV": {
+      "expected": "एक्सावॉल्ट"
+    },
+    "PV": {
+      "expected": "पेटावॉल्ट"
+    },
+    "TV": {
+      "expected": "टेरावॉल्ट"
+    },
+    "GV": {
+      "expected": "जिगावॉल्ट"
+    },
+    "MV": {
+      "expected": "मेगावॉल्ट"
+    },
+    "kV": {
+      "expected": "किलोवॉल्ट"
+    },
+    "hV": {
+      "expected": "हेक्टोवॉल्ट"
+    },
+    "daV": {
+      "expected": "daV"
+    },
+    "dV": {
+      "expected": "डेसीवॉल्ट"
+    },
+    "cV": {
+      "expected": "सेन्टीवॉल्ट"
+    },
+    "mV": {
+      "expected": "मिलीवॉल्ट"
+    },
+    "µV": {
+      "expected": "माइक्रोवॉल्ट"
+    },
+    "μV": {
+      "expected": "माइक्रोवॉल्ट"
+    },
+    "nV": {
+      "expected": "नैनोवॉल्ट"
+    },
+    "pV": {
+      "expected": "पिकोवॉल्ट"
+    },
+    "fV": {
+      "expected": "फेम्टोवॉल्ट"
+    },
+    "aV": {
+      "expected": "आट्टोवॉल्ट"
+    },
+    "zV": {
+      "expected": "जेप्टोवॉल्ट"
+    },
+    "yV": {
+      "expected": "योक्टोवॉल्ट"
+    },
+    "V": {
+      "expected": "वॉल्ट"
+    },
+    "YΩ": {
+      "expected": "योट्टाओह्म"
+    },
+    "ZΩ": {
+      "expected": "जेट्टाओह्म"
+    },
+    "EΩ": {
+      "expected": "एक्साओह्म"
+    },
+    "PΩ": {
+      "expected": "पेटाओह्म"
+    },
+    "TΩ": {
+      "expected": "टेराओह्म"
+    },
+    "GΩ": {
+      "expected": "जिगाओह्म"
+    },
+    "MΩ": {
+      "expected": "मेगाओह्म"
+    },
+    "kΩ": {
+      "expected": "किलोओह्म"
+    },
+    "hΩ": {
+      "expected": "हेक्टोओह्म"
+    },
+    "daΩ": {
+      "expected": "daΩ"
+    },
+    "dΩ": {
+      "expected": "डेसीओह्म"
+    },
+    "cΩ": {
+      "expected": "सेन्टीओह्म"
+    },
+    "mΩ": {
+      "expected": "मिलीओह्म"
+    },
+    "µΩ": {
+      "expected": "माइक्रोओह्म"
+    },
+    "μΩ": {
+      "expected": "माइक्रोओह्म"
+    },
+    "nΩ": {
+      "expected": "नैनोओह्म"
+    },
+    "pΩ": {
+      "expected": "पिकोओह्म"
+    },
+    "fΩ": {
+      "expected": "फेम्टोओह्म"
+    },
+    "aΩ": {
+      "expected": "आट्टोओह्म"
+    },
+    "zΩ": {
+      "expected": "जेप्टोओह्म"
+    },
+    "yΩ": {
+      "expected": "योक्टोओह्म"
+    },
+    "Ω": {
+      "expected": "ओह्म"
+    },
+    "Ym": {
+      "expected": "योट्टामीटर"
+    },
+    "Zm": {
+      "expected": "जेट्टामीटर"
+    },
+    "Em": {
+      "expected": "एक्सामीटर"
+    },
+    "Pm": {
+      "expected": "पेटामीटर"
+    },
+    "Tm": {
+      "expected": "टेरामीटर"
+    },
+    "Gm": {
+      "expected": "जिगामीटर"
+    },
+    "Mm": {
+      "expected": "मेगामीटर"
+    },
+    "km": {
+      "expected": "किलोमीटर"
+    },
+    "hm": {
+      "expected": "हेक्टोमीटर"
+    },
+    "dam": {
+      "expected": "dam"
+    },
+    "dm": {
+      "expected": "डेसीमीटर"
+    },
+    "cm": {
+      "expected": "सेन्टीमीटर"
+    },
+    "mm": {
+      "expected": "मिलीमीटर"
+    },
+    "µm": {
+      "expected": "माइक्रोमीटर"
+    },
+    "μm": {
+      "expected": "माइक्रोमीटर"
+    },
+    "nm": {
+      "expected": "नैनोमीटर"
+    },
+    "pm": {
+      "expected": "पिकोमीटर"
+    },
+    "fm": {
+      "expected": "फेम्टोमीटर"
+    },
+    "am": {
+      "expected": "आट्टोमीटर"
+    },
+    "zm": {
+      "expected": "जेप्टोमीटर"
+    },
+    "ym": {
+      "expected": "योक्टोमीटर"
+    },
+    "m": {
+      "expected": "मीटर"
+    },
+    "YB": {
+      "expected": "योट्टाबाईट"
+    },
+    "ZB": {
+      "expected": "जेट्टाबाईट"
+    },
+    "EB": {
+      "expected": "एक्साबाईट"
+    },
+    "PB": {
+      "expected": "पेटाबाईट"
+    },
+    "TB": {
+      "expected": "टेराबाईट"
+    },
+    "GB": {
+      "expected": "जिगाबाईट"
+    },
+    "MB": {
+      "expected": "मेगाबाईट"
+    },
+    "kB": {
+      "expected": "किलोबाईट"
+    },
+    "hB": {
+      "expected": "हेक्टोबाईट"
+    },
+    "daB": {
+      "expected": "daB"
+    },
+    "dB": {
+      "expected": "डेसीबाईट"
+    },
+    "cB": {
+      "expected": "सेन्टीबाईट"
+    },
+    "mB": {
+      "expected": "मिलीबाईट"
+    },
+    "µB": {
+      "expected": "माइक्रोबाईट"
+    },
+    "μB": {
+      "expected": "माइक्रोबाईट"
+    },
+    "nB": {
+      "expected": "नैनोबाईट"
+    },
+    "pB": {
+      "expected": "पिकोबाईट"
+    },
+    "fB": {
+      "expected": "फेम्टोबाईट"
+    },
+    "aB": {
+      "expected": "आट्टोबाईट"
+    },
+    "zB": {
+      "expected": "जेप्टोबाईट"
+    },
+    "yB": {
+      "expected": "योक्टोबाईट"
+    },
+    "B": {
+      "expected": "बाईट"
+    },
+    "Ys": {
+      "expected": "योट्टासेकंड"
+    },
+    "Zs": {
+      "expected": "जेट्टासेकंड"
+    },
+    "Es": {
+      "expected": "एक्सासेकंड"
+    },
+    "Ps": {
+      "expected": "पेटासेकंड"
+    },
+    "Ts": {
+      "expected": "टेरासेकंड"
+    },
+    "Gs": {
+      "expected": "जिगासेकंड"
+    },
+    "Ms": {
+      "expected": "मेगासेकंड"
+    },
+    "ks": {
+      "expected": "किलोसेकंड"
+    },
+    "hs": {
+      "expected": "हेक्टोसेकंड"
+    },
+    "das": {
+      "expected": "das"
+    },
+    "ds": {
+      "expected": "डेसीसेकंड"
+    },
+    "cs": {
+      "expected": "सेन्टीसेकंड"
+    },
+    "ms": {
+      "expected": "मिलीसेकंड"
+    },
+    "µs": {
+      "expected": "माइक्रोसेकंड"
+    },
+    "μs": {
+      "expected": "माइक्रोसेकंड"
+    },
+    "ns": {
+      "expected": "नैनोसेकंड"
+    },
+    "ps": {
+      "expected": "पिकोसेकंड"
+    },
+    "fs": {
+      "expected": "फेम्टोसेकंड"
+    },
+    "as": {
+      "expected": "आट्टोसेकंड"
+    },
+    "zs": {
+      "expected": "जेप्टोसेकंड"
+    },
+    "ys": {
+      "expected": "योक्टोसेकंड"
+    },
+    "s": {
+      "expected": "सेकंड"
+    },
+    "Yl": {
+      "expected": "योट्टालीटर"
+    },
+    "Zl": {
+      "expected": "जेट्टालीटर"
+    },
+    "El": {
+      "expected": "एक्सालीटर"
+    },
+    "Pl": {
+      "expected": "पेटालीटर"
+    },
+    "Tl": {
+      "expected": "टेरालीटर"
+    },
+    "Gl": {
+      "expected": "जिगालीटर"
+    },
+    "Ml": {
+      "expected": "मेगालीटर"
+    },
+    "kl": {
+      "expected": "किलोलीटर"
+    },
+    "hl": {
+      "expected": "हेक्टोलीटर"
+    },
+    "dal": {
+      "expected": "dal"
+    },
+    "dl": {
+      "expected": "डेसीलीटर"
+    },
+    "cl": {
+      "expected": "सेन्टीलीटर"
+    },
+    "ml": {
+      "expected": "मिलीलीटर"
+    },
+    "µl": {
+      "expected": "माइक्रोलीटर"
+    },
+    "μl": {
+      "expected": "माइक्रोलीटर"
+    },
+    "nl": {
+      "expected": "नैनोलीटर"
+    },
+    "pl": {
+      "expected": "पिकोलीटर"
+    },
+    "fl": {
+      "expected": "फेम्टोलीटर"
+    },
+    "al": {
+      "expected": "आट्टोलीटर"
+    },
+    "zl": {
+      "expected": "जेप्टोलीटर"
+    },
+    "yl": {
+      "expected": "योक्टोलीटर"
+    },
+    "l": {
+      "expected": "लीटर"
+    },
+    "Yg": {
+      "expected": "योट्टाग्राम"
+    },
+    "Zg": {
+      "expected": "जेट्टाग्राम"
+    },
+    "Eg": {
+      "expected": "एक्साग्राम"
+    },
+    "Pg": {
+      "expected": "पेटाग्राम"
+    },
+    "Tg": {
+      "expected": "टेराग्राम"
+    },
+    "Gg": {
+      "expected": "जिगाग्राम"
+    },
+    "Mg": {
+      "expected": "मेगाग्राम"
+    },
+    "kg": {
+      "expected": "किलोग्राम"
+    },
+    "hg": {
+      "expected": "हेक्टोग्राम"
+    },
+    "dag": {
+      "expected": "dag"
+    },
+    "dg": {
+      "expected": "डेसीग्राम"
+    },
+    "cg": {
+      "expected": "सेन्टीग्राम"
+    },
+    "mg": {
+      "expected": "मिलीग्राम"
+    },
+    "µg": {
+      "expected": "माइक्रोग्राम"
+    },
+    "μg": {
+      "expected": "माइक्रोग्राम"
+    },
+    "ng": {
+      "expected": "नैनोग्राम"
+    },
+    "pg": {
+      "expected": "पिकोग्राम"
+    },
+    "fg": {
+      "expected": "फेम्टोग्राम"
+    },
+    "ag": {
+      "expected": "आट्टोग्राम"
+    },
+    "zg": {
+      "expected": "जेप्टोग्राम"
+    },
+    "yg": {
+      "expected": "योक्टोग्राम"
+    },
+    "g": {
+      "expected": "ग्राम"
+    }
+  }
+}

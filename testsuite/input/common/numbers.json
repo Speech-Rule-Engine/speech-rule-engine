@@ -1,0 +1,637 @@
+{
+  "tests": {
+    "Number_0": {
+      "input": "0"
+    },
+    "Number_1": {
+      "input": "1"
+    },
+    "Number_2": {
+      "input": "2"
+    },
+    "Number_3": {
+      "input": "3"
+    },
+    "Number_4": {
+      "input": "4"
+    },
+    "Number_5": {
+      "input": "5"
+    },
+    "Number_6": {
+      "input": "6"
+    },
+    "Number_7": {
+      "input": "7"
+    },
+    "Number_8": {
+      "input": "8"
+    },
+    "Number_9": {
+      "input": "9"
+    },
+    "Number_10": {
+      "input": "10"
+    },
+    "Number_11": {
+      "input": "11"
+    },
+    "Number_12": {
+      "input": "12"
+    },
+    "Number_13": {
+      "input": "13"
+    },
+    "Number_14": {
+      "input": "14"
+    },
+    "Number_15": {
+      "input": "15"
+    },
+    "Number_16": {
+      "input": "16"
+    },
+    "Number_17": {
+      "input": "17"
+    },
+    "Number_18": {
+      "input": "18"
+    },
+    "Number_19": {
+      "input": "19"
+    },
+    "Number_20": {
+      "input": "20"
+    },
+    "Number_21": {
+      "input": "21"
+    },
+    "Number_22": {
+      "input": "22"
+    },
+    "Number_23": {
+      "input": "23"
+    },
+    "Number_24": {
+      "input": "24"
+    },
+    "Number_25": {
+      "input": "25"
+    },
+    "Number_26": {
+      "input": "26"
+    },
+    "Number_27": {
+      "input": "27"
+    },
+    "Number_28": {
+      "input": "28"
+    },
+    "Number_29": {
+      "input": "29"
+    },
+    "Number_30": {
+      "input": "30"
+    },
+    "Number_31": {
+      "input": "31"
+    },
+    "Number_32": {
+      "input": "32"
+    },
+    "Number_33": {
+      "input": "33"
+    },
+    "Number_34": {
+      "input": "34"
+    },
+    "Number_35": {
+      "input": "35"
+    },
+    "Number_36": {
+      "input": "36"
+    },
+    "Number_37": {
+      "input": "37"
+    },
+    "Number_38": {
+      "input": "38"
+    },
+    "Number_39": {
+      "input": "39"
+    },
+    "Number_40": {
+      "input": "40"
+    },
+    "Number_41": {
+      "input": "41"
+    },
+    "Number_42": {
+      "input": "42"
+    },
+    "Number_43": {
+      "input": "43"
+    },
+    "Number_44": {
+      "input": "44"
+    },
+    "Number_45": {
+      "input": "45"
+    },
+    "Number_46": {
+      "input": "46"
+    },
+    "Number_47": {
+      "input": "47"
+    },
+    "Number_48": {
+      "input": "48"
+    },
+    "Number_49": {
+      "input": "49"
+    },
+    "Number_50": {
+      "input": "50"
+    },
+    "Number_51": {
+      "input": "51"
+    },
+    "Number_52": {
+      "input": "52"
+    },
+    "Number_53": {
+      "input": "53"
+    },
+    "Number_54": {
+      "input": "54"
+    },
+    "Number_55": {
+      "input": "55"
+    },
+    "Number_56": {
+      "input": "56"
+    },
+    "Number_57": {
+      "input": "57"
+    },
+    "Number_58": {
+      "input": "58"
+    },
+    "Number_59": {
+      "input": "59"
+    },
+    "Number_60": {
+      "input": "60"
+    },
+    "Number_61": {
+      "input": "61"
+    },
+    "Number_62": {
+      "input": "62"
+    },
+    "Number_63": {
+      "input": "63"
+    },
+    "Number_64": {
+      "input": "64"
+    },
+    "Number_65": {
+      "input": "65"
+    },
+    "Number_66": {
+      "input": "66"
+    },
+    "Number_67": {
+      "input": "67"
+    },
+    "Number_68": {
+      "input": "68"
+    },
+    "Number_69": {
+      "input": "69"
+    },
+    "Number_70": {
+      "input": "70"
+    },
+    "Number_71": {
+      "input": "71"
+    },
+    "Number_72": {
+      "input": "72"
+    },
+    "Number_73": {
+      "input": "73"
+    },
+    "Number_74": {
+      "input": "74"
+    },
+    "Number_75": {
+      "input": "75"
+    },
+    "Number_76": {
+      "input": "76"
+    },
+    "Number_77": {
+      "input": "77"
+    },
+    "Number_78": {
+      "input": "78"
+    },
+    "Number_79": {
+      "input": "79"
+    },
+    "Number_80": {
+      "input": "80"
+    },
+    "Number_81": {
+      "input": "81"
+    },
+    "Number_82": {
+      "input": "82"
+    },
+    "Number_83": {
+      "input": "83"
+    },
+    "Number_84": {
+      "input": "84"
+    },
+    "Number_85": {
+      "input": "85"
+    },
+    "Number_86": {
+      "input": "86"
+    },
+    "Number_87": {
+      "input": "87"
+    },
+    "Number_88": {
+      "input": "88"
+    },
+    "Number_89": {
+      "input": "89"
+    },
+    "Number_90": {
+      "input": "90"
+    },
+    "Number_91": {
+      "input": "91"
+    },
+    "Number_92": {
+      "input": "92"
+    },
+    "Number_93": {
+      "input": "93"
+    },
+    "Number_94": {
+      "input": "94"
+    },
+    "Number_95": {
+      "input": "95"
+    },
+    "Number_96": {
+      "input": "96"
+    },
+    "Number_97": {
+      "input": "97"
+    },
+    "Number_98": {
+      "input": "98"
+    },
+    "Number_99": {
+      "input": "99"
+    },
+    "Number_100": {
+      "input": "100"
+    },
+    "Number_101": {
+      "input": "101"
+    },
+    "Number_102": {
+      "input": "102"
+    },
+    "Number_103": {
+      "input": "103"
+    },
+    "Number_104": {
+      "input": "104"
+    },
+    "Number_105": {
+      "input": "105"
+    },
+    "Number_106": {
+      "input": "106"
+    },
+    "Number_107": {
+      "input": "107"
+    },
+    "Number_108": {
+      "input": "108"
+    },
+    "Number_109": {
+      "input": "109"
+    },
+    "Number_110": {
+      "input": "110"
+    },
+    "Number_200": {
+      "input": "200"
+    },
+    "Number_201": {
+      "input": "201"
+    },
+    "Number_300": {
+      "input": "300"
+    },
+    "Number_301": {
+      "input": "301"
+    },
+    "Number_400": {
+      "input": "400"
+    },
+    "Number_401": {
+      "input": "401"
+    },
+    "Number_500": {
+      "input": "500"
+    },
+    "Number_501": {
+      "input": "501"
+    },
+    "Number_600": {
+      "input": "600"
+    },
+    "Number_601": {
+      "input": "601"
+    },
+    "Number_700": {
+      "input": "700"
+    },
+    "Number_701": {
+      "input": "701"
+    },
+    "Number_800": {
+      "input": "800"
+    },
+    "Number_801": {
+      "input": "801"
+    },
+    "Number_900": {
+      "input": "900"
+    },
+    "Number_901": {
+      "input": "901"
+    },
+    "Number_1000": {
+      "input": "1000"
+    },
+    "Number_1001": {
+      "input": "1001"
+    },
+    "Number_2000": {
+      "input": "2000"
+    },
+    "Number_2001": {
+      "input": "2001"
+    },
+    "Number_3000": {
+      "input": "3000"
+    },
+    "Number_3001": {
+      "input": "3001"
+    },
+    "Number_4000": {
+      "input": "4000"
+    },
+    "Number_4001": {
+      "input": "4001"
+    },
+    "Number_5000": {
+      "input": "5000"
+    },
+    "Number_5001": {
+      "input": "5001"
+    },
+    "Number_6000": {
+      "input": "6000"
+    },
+    "Number_6001": {
+      "input": "6001"
+    },
+    "Number_7000": {
+      "input": "7000"
+    },
+    "Number_7001": {
+      "input": "7001"
+    },
+    "Number_8000": {
+      "input": "8000"
+    },
+    "Number_8001": {
+      "input": "8001"
+    },
+    "Number_9000": {
+      "input": "9000"
+    },
+    "Number_9001": {
+      "input": "9001"
+    },
+    "Number_10000": {
+      "input": "10000"
+    },
+    "Number_10001": {
+      "input": "10001"
+    },
+    "Number_20000": {
+      "input": "20000"
+    },
+    "Number_20001": {
+      "input": "20001"
+    },
+    "Number_30000": {
+      "input": "30000"
+    },
+    "Number_30001": {
+      "input": "30001"
+    },
+    "Number_40000": {
+      "input": "40000"
+    },
+    "Number_40001": {
+      "input": "40001"
+    },
+    "Number_50000": {
+      "input": "50000"
+    },
+    "Number_50001": {
+      "input": "50001"
+    },
+    "Number_60000": {
+      "input": "60000"
+    },
+    "Number_60001": {
+      "input": "60001"
+    },
+    "Number_70000": {
+      "input": "70000"
+    },
+    "Number_70001": {
+      "input": "70001"
+    },
+    "Number_80000": {
+      "input": "80000"
+    },
+    "Number_80001": {
+      "input": "80001"
+    },
+    "Number_90000": {
+      "input": "90000"
+    },
+    "Number_90001": {
+      "input": "90001"
+    },
+    "Number_100000": {
+      "input": "100000"
+    },
+    "Number_100001": {
+      "input": "100001"
+    },
+    "Number_200000": {
+      "input": "200000"
+    },
+    "Number_200001": {
+      "input": "200001"
+    },
+    "Number_1000000": {
+      "input": "1000000"
+    },
+    "Number_1000001": {
+      "input": "1000001"
+    },
+    "Number_2000000": {
+      "input": "2000000"
+    },
+    "Number_2000001": {
+      "input": "2000001"
+    },
+    "Number_10000000": {
+      "input": "10000000"
+    },
+    "Number_10000001": {
+      "input": "10000001"
+    },
+    "Number_20000000": {
+      "input": "20000000"
+    },
+    "Number_20000001": {
+      "input": "20000001"
+    },
+    "Number_100000000": {
+      "input": "100000000"
+    },
+    "Number_100000001": {
+      "input": "100000001"
+    },
+    "Number_200000000": {
+      "input": "200000000"
+    },
+    "Number_200000001": {
+      "input": "200000001"
+    },
+    "Number_1000000000": {
+      "input": "1000000000"
+    },
+    "Number_1000000001": {
+      "input": "1000000001"
+    },
+    "Number_2000000000": {
+      "input": "2000000000"
+    },
+    "Number_2000000001": {
+      "input": "2000000001"
+    },
+    "Number_10000000000": {
+      "input": "10000000000"
+    },
+    "Number_10000000001": {
+      "input": "10000000001"
+    },
+    "Number_20000000000": {
+      "input": "20000000000"
+    },
+    "Number_20000000001": {
+      "input": "20000000001"
+    },
+    "Number_100000000000": {
+      "input": "100000000000"
+    },
+    "Number_100000000001": {
+      "input": "100000000001"
+    },
+    "Number_200000000000": {
+      "input": "200000000000"
+    },
+    "Number_200000000001": {
+      "input": "200000000001"
+    },
+    "Number_1000000000000": {
+      "input": "1000000000000"
+    },
+    "Number_1000000000001": {
+      "input": "1000000000001"
+    },
+    "Number_2000000000000": {
+      "input": "2000000000000"
+    },
+    "Number_2000000000001": {
+      "input": "2000000000001"
+    },
+    "Number_10000000000000": {
+      "input": "10000000000000"
+    },
+    "Number_10000000000001": {
+      "input": "10000000000001"
+    },
+    "Number_20000000000000": {
+      "input": "20000000000000"
+    },
+    "Number_20000000000001": {
+      "input": "20000000000001"
+    },
+    "Number_100000000000000": {
+      "input": "100000000000000"
+    },
+    "Number_100000000000001": {
+      "input": "100000000000001"
+    },
+    "Number_200000000000000": {
+      "input": "200000000000000"
+    },
+    "Number_200000000000001": {
+      "input": "200000000000001"
+    },
+    "Number_1000000000000000": {
+      "input": "1000000000000000"
+    },
+    "Number_1000000000000001": {
+      "input": "1000000000000001"
+    },
+    "Number_2000000000000000": {
+      "input": "2000000000000000"
+    },
+    "Number_2000000000000001": {
+      "input": "2000000000000001"
+    },
+    "Number_10000000000000000": {
+      "input": "10000000000000000"
+    },
+    "Number_10000000000000001": {
+      "input": "10000000000000001"
+    },
+    "Number_20000000000000000": {
+      "input": "20000000000000000"
+    },
+    "Number_20000000000000001": {
+      "input": "20000000000000001"
+    }
+  }
+}

@@ -1,0 +1,697 @@
+{
+  "name": "HindiMathspeakTensors",
+  "locale": "hi",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_tensors.json",
+  "information": "Hindi Mathspeak Tensor tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "PartialTensorABCD_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी"
+    },
+    "PartialTensorABCD_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "PartialTensorABCD_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "PartialTensorABC_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी"
+    },
+    "PartialTensorABC_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी"
+    },
+    "PartialTensorABC_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी"
+    },
+    "PartialTensorABD_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी"
+    },
+    "PartialTensorABD_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी"
+    },
+    "PartialTensorABD_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी"
+    },
+    "PartialTensorABDR_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर"
+    },
+    "PartialTensorABDR_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर"
+    },
+    "PartialTensorABDR_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर"
+    },
+    "PartialTensorABDRootR_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorABDRootR_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorABDRootR_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorABDRRoot_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorABDRRoot_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorABDRRoot_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorABDFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorABDFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार अंतभिन्न आर"
+    },
+    "PartialTensorABDFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorABDRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorABDRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर अंतभिन्न"
+    },
+    "PartialTensorABDRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorAB_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स"
+    },
+    "PartialTensorAB_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स"
+    },
+    "PartialTensorAB_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स"
+    },
+    "PartialTensorABR_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स आर"
+    },
+    "PartialTensorABR_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स आर"
+    },
+    "PartialTensorABR_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स आर"
+    },
+    "PartialTensorABRootR_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स मूल समाप्त आर"
+    },
+    "PartialTensorABRootR_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स मूल समाप्त आर"
+    },
+    "PartialTensorABRootR_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स मूल समाप्त आर"
+    },
+    "PartialTensorABRRoot_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स आर मूल समाप्त"
+    },
+    "PartialTensorABRRoot_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स आर मूल समाप्त"
+    },
+    "PartialTensorABRRoot_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स आर मूल समाप्त"
+    },
+    "PartialTensorABFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स अंतभिन्न आर"
+    },
+    "PartialTensorABFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अंतभिन्न आर"
+    },
+    "PartialTensorABFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स भिन्न समाप्त आर"
+    },
+    "PartialTensorABRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स आर अंतभिन्न"
+    },
+    "PartialTensorABRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स आर अंतभिन्न"
+    },
+    "PartialTensorABRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स आर भिन्न समाप्त"
+    },
+    "PartialTensorABCR_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी आधार रेखा आर"
+    },
+    "PartialTensorABCR_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी आधार आर"
+    },
+    "PartialTensorABCR_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी आधार आर"
+    },
+    "PartialTensorABCDR_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर"
+    },
+    "PartialTensorABCDR_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर"
+    },
+    "PartialTensorABCDR_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर"
+    },
+    "PartialTensorABCDRoot_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी मूल समाप्त"
+    },
+    "PartialTensorABCDRoot_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी मूल समाप्त"
+    },
+    "PartialTensorABCDRoot_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी मूल समाप्त"
+    },
+    "PartialTensorABCDRootR_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorABCDRootR_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorABCDRootR_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "expected": "मूल आरंभ पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorABCDRRoot_brief": {
+      "expected": "मूल आरंभ अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorABCDRRoot_sbrief": {
+      "expected": "मूल अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorABCDFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी अंतभिन्न"
+    },
+    "PartialTensorABCDFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी अंतभिन्न"
+    },
+    "PartialTensorABCDFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी भिन्न समाप्त"
+    },
+    "PartialTensorABCDFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorABCDFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार अंतभिन्न आर"
+    },
+    "PartialTensorABCDFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorABCDRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर अंतभिन्न"
+    },
+    "PartialTensorABCDRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorB_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स"
+    },
+    "PartialTensorB_brief": {
+      "expected": "उर्ध्व बी आधार एक्स"
+    },
+    "PartialTensorB_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स"
+    },
+    "PartialTensorBR_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स आर"
+    },
+    "PartialTensorBR_brief": {
+      "expected": "उर्ध्व बी आधार एक्स आर"
+    },
+    "PartialTensorBR_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स आर"
+    },
+    "PartialTensorBRootR_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स मूल समाप्त आर"
+    },
+    "PartialTensorBRootR_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स मूल समाप्त आर"
+    },
+    "PartialTensorBRootR_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स मूल समाप्त आर"
+    },
+    "PartialTensorBRRoot_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स आर मूल समाप्त"
+    },
+    "PartialTensorBRRoot_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स आर मूल समाप्त"
+    },
+    "PartialTensorBRRoot_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स आर मूल समाप्त"
+    },
+    "PartialTensorBFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स अंतभिन्न आर"
+    },
+    "PartialTensorBFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स अंतभिन्न आर"
+    },
+    "PartialTensorBFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स भिन्न समाप्त आर"
+    },
+    "PartialTensorBRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स आर अंतभिन्न"
+    },
+    "PartialTensorBRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स आर अंतभिन्न"
+    },
+    "PartialTensorBRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स आर भिन्न समाप्त"
+    },
+    "PartialTensorBD_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी"
+    },
+    "PartialTensorBD_brief": {
+      "expected": "उर्ध्व बी आधार एक्स उर्ध्व डी"
+    },
+    "PartialTensorBD_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स उर्ध्व डी"
+    },
+    "PartialTensorBDR_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर"
+    },
+    "PartialTensorBDR_brief": {
+      "expected": "उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर"
+    },
+    "PartialTensorBDR_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर"
+    },
+    "PartialTensorBDRootR_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorBDRootR_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorBDRootR_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorBDRRoot_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorBDRRoot_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorBDRRoot_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorBDFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorBDFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स उर्ध्व डी आधार अंतभिन्न आर"
+    },
+    "PartialTensorBDFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स उर्ध्व डी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorBDRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorBDRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर अंतभिन्न"
+    },
+    "PartialTensorBDRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स उर्ध्व डी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorBC_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स पादांक सी"
+    },
+    "PartialTensorBC_brief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी"
+    },
+    "PartialTensorBC_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी"
+    },
+    "PartialTensorBCR_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स पादांक सी आधार रेखा आर"
+    },
+    "PartialTensorBCR_brief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी आधार आर"
+    },
+    "PartialTensorBCR_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी आधार आर"
+    },
+    "PartialTensorBCRootR_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स पादांक सी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorBCRootR_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स अधो सी आधार मूल समाप्त आर"
+    },
+    "PartialTensorBCRootR_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स अधो सी आधार मूल समाप्त आर"
+    },
+    "PartialTensorBCRRoot_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स पादांक सी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorBCRRoot_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स अधो सी आधार आर मूल समाप्त"
+    },
+    "PartialTensorBCRRoot_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स अधो सी आधार आर मूल समाप्त"
+    },
+    "PartialTensorBCFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स पादांक सी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorBCFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी आधार अंतभिन्न आर"
+    },
+    "PartialTensorBCFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorBCRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स पादांक सी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorBCRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी आधार आर अंतभिन्न"
+    },
+    "PartialTensorBCRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorBCD_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी"
+    },
+    "PartialTensorBCD_brief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "PartialTensorBCD_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "PartialTensorBCDR_default": {
+      "expected": "उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर"
+    },
+    "PartialTensorBCDR_brief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर"
+    },
+    "PartialTensorBCDR_sbrief": {
+      "expected": "उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर"
+    },
+    "PartialTensorBCDRootR_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorBCDRootR_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorBCDRootR_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "expected": "मूल आरंभ उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorBCDRRoot_brief": {
+      "expected": "मूल आरंभ उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorBCDRRoot_sbrief": {
+      "expected": "मूल उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorBCDFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorBCDFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार अंतभिन्न आर"
+    },
+    "PartialTensorBCDFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorBCDRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर अंतभिन्न"
+    },
+    "PartialTensorBCDRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorA_default": {
+      "expected": "पादांक ए आधार रेखा एक्स"
+    },
+    "PartialTensorA_brief": {
+      "expected": "अधो ए आधार एक्स"
+    },
+    "PartialTensorA_sbrief": {
+      "expected": "अधो ए आधार एक्स"
+    },
+    "PartialTensorAR_default": {
+      "expected": "पादांक ए आधार रेखा एक्स आर"
+    },
+    "PartialTensorAR_brief": {
+      "expected": "अधो ए आधार एक्स आर"
+    },
+    "PartialTensorAR_sbrief": {
+      "expected": "अधो ए आधार एक्स आर"
+    },
+    "PartialTensorARootR_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स मूल समाप्त आर"
+    },
+    "PartialTensorARootR_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स मूल समाप्त आर"
+    },
+    "PartialTensorARootR_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स मूल समाप्त आर"
+    },
+    "PartialTensorARRoot_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स आर मूल समाप्त"
+    },
+    "PartialTensorARRoot_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स आर मूल समाप्त"
+    },
+    "PartialTensorARRoot_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स आर मूल समाप्त"
+    },
+    "PartialTensorAFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स अंतभिन्न आर"
+    },
+    "PartialTensorAFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स अंतभिन्न आर"
+    },
+    "PartialTensorAFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स भिन्न समाप्त आर"
+    },
+    "PartialTensorARFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स आर अंतभिन्न"
+    },
+    "PartialTensorARFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स आर अंतभिन्न"
+    },
+    "PartialTensorARFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स आर भिन्न समाप्त"
+    },
+    "PartialTensorAD_default": {
+      "expected": "पादांक ए आधार रेखा एक्स उर्ध्वान्क डी"
+    },
+    "PartialTensorAD_brief": {
+      "expected": "अधो ए आधार एक्स उर्ध्व डी"
+    },
+    "PartialTensorAD_sbrief": {
+      "expected": "अधो ए आधार एक्स उर्ध्व डी"
+    },
+    "PartialTensorADR_default": {
+      "expected": "पादांक ए आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर"
+    },
+    "PartialTensorADR_brief": {
+      "expected": "अधो ए आधार एक्स उर्ध्व डी आधार आर"
+    },
+    "PartialTensorADR_sbrief": {
+      "expected": "अधो ए आधार एक्स उर्ध्व डी आधार आर"
+    },
+    "PartialTensorADRootR_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorADRootR_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorADRootR_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorADRRoot_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorADRRoot_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorADRRoot_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorADFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorADFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स उर्ध्व डी आधार अंतभिन्न आर"
+    },
+    "PartialTensorADFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स उर्ध्व डी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorADRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स उर्ध्वान्क डी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorADRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स उर्ध्व डी आधार आर अंतभिन्न"
+    },
+    "PartialTensorADRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स उर्ध्व डी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorAC_default": {
+      "expected": "पादांक ए आधार रेखा एक्स पादांक सी"
+    },
+    "PartialTensorAC_brief": {
+      "expected": "अधो ए आधार एक्स अधो सी"
+    },
+    "PartialTensorAC_sbrief": {
+      "expected": "अधो ए आधार एक्स अधो सी"
+    },
+    "PartialTensorACR_default": {
+      "expected": "पादांक ए आधार रेखा एक्स पादांक सी आधार रेखा आर"
+    },
+    "PartialTensorACR_brief": {
+      "expected": "अधो ए आधार एक्स अधो सी आधार आर"
+    },
+    "PartialTensorACR_sbrief": {
+      "expected": "अधो ए आधार एक्स अधो सी आधार आर"
+    },
+    "PartialTensorACRootR_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स पादांक सी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorACRootR_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स अधो सी आधार मूल समाप्त आर"
+    },
+    "PartialTensorACRootR_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स अधो सी आधार मूल समाप्त आर"
+    },
+    "PartialTensorACRRoot_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स पादांक सी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorACRRoot_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स अधो सी आधार आर मूल समाप्त"
+    },
+    "PartialTensorACRRoot_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स अधो सी आधार आर मूल समाप्त"
+    },
+    "PartialTensorACFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स पादांक सी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorACFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स अधो सी आधार अंतभिन्न आर"
+    },
+    "PartialTensorACFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स अधो सी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorACRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स पादांक सी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorACRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स अधो सी आधार आर अंतभिन्न"
+    },
+    "PartialTensorACRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स अधो सी आधार आर भिन्न समाप्त"
+    },
+    "PartialTensorACD_default": {
+      "expected": "पादांक ए आधार रेखा एक्स पादांक सी उर्ध्वान्क डी"
+    },
+    "PartialTensorACD_brief": {
+      "expected": "अधो ए आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "PartialTensorACD_sbrief": {
+      "expected": "अधो ए आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "PartialTensorACDR_default": {
+      "expected": "पादांक ए आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर"
+    },
+    "PartialTensorACDR_brief": {
+      "expected": "अधो ए आधार एक्स अधो सी उर्ध्व डी आधार आर"
+    },
+    "PartialTensorACDR_sbrief": {
+      "expected": "अधो ए आधार एक्स अधो सी उर्ध्व डी आधार आर"
+    },
+    "PartialTensorACDRootR_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा मूल समाप्त आर"
+    },
+    "PartialTensorACDRootR_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स अधो सी उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorACDRootR_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स अधो सी उर्ध्व डी आधार मूल समाप्त आर"
+    },
+    "PartialTensorACDRRoot_default": {
+      "expected": "मूल आरंभ पादांक ए आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर मूल समाप्त"
+    },
+    "PartialTensorACDRRoot_brief": {
+      "expected": "मूल आरंभ अधो ए आधार एक्स अधो सी उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorACDRRoot_sbrief": {
+      "expected": "मूल अधो ए आधार एक्स अधो सी उर्ध्व डी आधार आर मूल समाप्त"
+    },
+    "PartialTensorACDFracR_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा अंतभिन्न आर"
+    },
+    "PartialTensorACDFracR_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स अधो सी उर्ध्व डी आधार अंतभिन्न आर"
+    },
+    "PartialTensorACDFracR_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स अधो सी उर्ध्व डी आधार भिन्न समाप्त आर"
+    },
+    "PartialTensorACDRFrac_default": {
+      "expected": "आरंभभिन्न 1 के हर में पादांक ए आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा आर अंतभिन्न"
+    },
+    "PartialTensorACDRFrac_brief": {
+      "expected": "आरंभभिन्न 1 के हर में अधो ए आधार एक्स अधो सी उर्ध्व डी आधार आर अंतभिन्न"
+    },
+    "PartialTensorACDRFrac_sbrief": {
+      "expected": "भिन्न 1 के हर में अधो ए आधार एक्स अधो सी उर्ध्व डी आधार आर भिन्न समाप्त"
+    },
+    "TensorMultiSimpleABC_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी अधो उर्ध्वान्क एल"
+    },
+    "TensorMultiSimpleABC_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो उर्ध्व एल"
+    },
+    "TensorMultiSimpleABC_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो उर्ध्व एल"
+    },
+    "TensorMultiSub_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी अधो पादांक एल उर्ध्वान्क डी"
+    },
+    "TensorMultiSub_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो अधो एल उर्ध्व डी"
+    },
+    "TensorMultiSub_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो अधो एल उर्ध्व डी"
+    },
+    "TensorMultiSubSup_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी अधो पादांक एल अधो अधो उर्ध्वान्क के पादांक ई उर्ध्वान्क डी"
+    },
+    "TensorMultiSubSup_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो अधो एल अधो अधो उर्ध्व के अधो ई उर्ध्व डी"
+    },
+    "TensorMultiSubSup_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो अधो एल अधो अधो उर्ध्व के अधो ई उर्ध्व डी"
+    },
+    "TensorMultiSimple_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी अधो उर्ध्वान्क एल उर्ध्वान्क डी"
+    },
+    "TensorMultiSimple_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो उर्ध्व एल उर्ध्व डी"
+    },
+    "TensorMultiSimple_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी अधो उर्ध्व एल उर्ध्व डी"
+    },
+    "TensorMultiComplex_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी के अधो उर्ध्वान्क एल उर्ध्वान्क डी"
+    },
+    "TensorMultiComplex_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी के अधो उर्ध्व एल उर्ध्व डी"
+    },
+    "TensorMultiComplex_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी के अधो उर्ध्व एल उर्ध्व डी"
+    },
+    "TwoTensors_default": {
+      "expected": "पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी आधार रेखा पादांक ए उर्ध्वान्क बी आधार रेखा एक्स पादांक सी उर्ध्वान्क डी"
+    },
+    "TwoTensors_brief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी"
+    },
+    "TwoTensors_sbrief": {
+      "expected": "अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी आधार अधो ए उर्ध्व बी आधार एक्स अधो सी उर्ध्व डी"
+    }
+  }
+}

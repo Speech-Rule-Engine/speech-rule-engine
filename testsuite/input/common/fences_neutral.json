@@ -1,0 +1,437 @@
+{
+  "_comment_0": "Abs value vs metric with diverse bars.",
+  "tests": {
+    "BarFenced_0_default": {
+      "input": "<mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "BarFenced_1_default": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>｜</mo>",
+      "preference": "default"
+    },
+    "BarFenced_2_default": {
+      "input": "<mo>¦</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "default"
+    },
+    "BarFenced_3_default": {
+      "input": "<mo>∥</mo><mi>a</mi><mo>∥</mo>",
+      "preference": "default"
+    },
+    "BarFenced_4_default": {
+      "input": "<mo>⦀</mo><mi>a</mi><mo>⦀</mo>",
+      "preference": "default"
+    },
+    "BarFenced_5_default": {
+      "input": "<mo>⫴</mo><mi>a</mi><mo>⫴</mo>",
+      "preference": "default"
+    },
+    "BarFenced_6_default": {
+      "input": "<mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "BarFencedMixed_0_default": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "BarFencedMixed_1_default": {
+      "input": "<mo>∥</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "BarFencedMixed_2_default": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "default"
+    },
+    "BarFencedMixed_3_default": {
+      "input": "<mo>⦀</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "CenterBar_0_default": {
+      "input": "<mi>a</mi><mo>｜</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "CenterBar_1_default": {
+      "input": "<mi>a</mi><mo>|</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "CenterBar_2_default": {
+      "input": "<mi>a</mi><mo>¦</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "CenterBar_3_default": {
+      "input": "<mi>a</mi><mo>‖</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "CenterBar_4_default": {
+      "input": "<mi>a</mi><mo>∥</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "CenterBar_5_default": {
+      "input": "<mi>a</mi><mo>⦀</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_0_default": {
+      "input": "<mi>f</mi><mo>｜</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_1_default": {
+      "input": "<mi>f</mi><mo>|</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_2_default": {
+      "input": "<mi>f</mi><mo>¦</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_3_default": {
+      "input": "<mi>f</mi><mo>‖</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_4_default": {
+      "input": "<mi>f</mi><mo>∥</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_5_default": {
+      "input": "<mi>f</mi><mo>⦀</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "CenterBarFunc_6_default": {
+      "input": "<mi>sin</mi><mo>⦀</mo><mi>g</mi>",
+      "preference": "default"
+    },
+    "Function_0_default": {
+      "input": "<mi>f</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "Function_1_default": {
+      "input": "<mi>g</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "Function_2_default": {
+      "input": "<mi>h</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "Function_3_default": {
+      "input": "<mi>r</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "Function_4_default": {
+      "input": "<mi>sin</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "Function_5_default": {
+      "input": "<mo>∑</mo><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "FunctionMetric0_default": {
+      "input": "<mi>f</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "FunctionMetric1_default": {
+      "input": "<mi>g</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "FunctionMetric2_default": {
+      "input": "<mi>h</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "FunctionMetric3_default": {
+      "input": "<mi>r</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "FunctionMetric4_default": {
+      "input": "<mi>sin</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "FunctionMetric5_default": {
+      "input": "<mo>∑</mo><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "BarFenced_0_sbrief": {
+      "input": "<mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "BarFenced_1_sbrief": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>｜</mo>",
+      "preference": "sbrief"
+    },
+    "BarFenced_2_sbrief": {
+      "input": "<mo>¦</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "sbrief"
+    },
+    "BarFenced_3_sbrief": {
+      "input": "<mo>∥</mo><mi>a</mi><mo>∥</mo>",
+      "preference": "sbrief"
+    },
+    "BarFenced_4_sbrief": {
+      "input": "<mo>⦀</mo><mi>a</mi><mo>⦀</mo>",
+      "preference": "sbrief"
+    },
+    "BarFenced_5_sbrief": {
+      "input": "<mo>⫴</mo><mi>a</mi><mo>⫴</mo>",
+      "preference": "sbrief"
+    },
+    "BarFenced_6_sbrief": {
+      "input": "<mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "BarFencedMixed_0_sbrief": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "BarFencedMixed_1_sbrief": {
+      "input": "<mo>∥</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "BarFencedMixed_2_sbrief": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "sbrief"
+    },
+    "BarFencedMixed_3_sbrief": {
+      "input": "<mo>⦀</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "CenterBar_0_sbrief": {
+      "input": "<mi>a</mi><mo>｜</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBar_1_sbrief": {
+      "input": "<mi>a</mi><mo>|</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBar_2_sbrief": {
+      "input": "<mi>a</mi><mo>¦</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBar_3_sbrief": {
+      "input": "<mi>a</mi><mo>‖</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBar_4_sbrief": {
+      "input": "<mi>a</mi><mo>∥</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBar_5_sbrief": {
+      "input": "<mi>a</mi><mo>⦀</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "Function_0_sbrief": {
+      "input": "<mi>f</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "Function_1_sbrief": {
+      "input": "<mi>g</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "Function_2_sbrief": {
+      "input": "<mi>h</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "Function_3_sbrief": {
+      "input": "<mi>r</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "Function_4_sbrief": {
+      "input": "<mi>sin</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "Function_5_sbrief": {
+      "input": "<mo>∑</mo><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "FunctionMetric0_sbrief": {
+      "input": "<mi>f</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "FunctionMetric1_sbrief": {
+      "input": "<mi>g</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "FunctionMetric2_sbrief": {
+      "input": "<mi>h</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "FunctionMetric3_sbrief": {
+      "input": "<mi>r</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "FunctionMetric4_sbrief": {
+      "input": "<mi>sin</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "FunctionMetric5_sbrief": {
+      "input": "<mo>∑</mo><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_0_sbrief": {
+      "input": "<mi>f</mi><mo>｜</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_1_sbrief": {
+      "input": "<mi>f</mi><mo>|</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_2_sbrief": {
+      "input": "<mi>f</mi><mo>¦</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_3_sbrief": {
+      "input": "<mi>f</mi><mo>‖</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_4_sbrief": {
+      "input": "<mi>f</mi><mo>∥</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_5_sbrief": {
+      "input": "<mi>f</mi><mo>⦀</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "CenterBarFunc_6_sbrief": {
+      "input": "<mi>sin</mi><mo>⦀</mo><mi>g</mi>",
+      "preference": "sbrief"
+    },
+    "BarFenced_0_AbsoluteValue_AbsEnd": {
+      "input": "<mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFenced_1_AbsoluteValue_AbsEnd": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>｜</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFenced_2_AbsoluteValue_AbsEnd": {
+      "input": "<mo>¦</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFenced_3_AbsoluteValue_AbsEnd": {
+      "input": "<mo>∥</mo><mi>a</mi><mo>∥</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFenced_4_AbsoluteValue_AbsEnd": {
+      "input": "<mo>⦀</mo><mi>a</mi><mo>⦀</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFenced_5_AbsoluteValue_AbsEnd": {
+      "input": "<mo>⫴</mo><mi>a</mi><mo>⫴</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFenced_6_AbsoluteValue_AbsEnd": {
+      "input": "<mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd": {
+      "input": "<mo>∥</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd": {
+      "input": "<mo>｜</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd": {
+      "input": "<mo>⦀</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBar_0_AbsoluteValue_AbsEnd": {
+      "input": "<mi>a</mi><mo>｜</mo><mi>b</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBar_1_AbsoluteValue_AbsEnd": {
+      "input": "<mi>a</mi><mo>|</mo><mi>b</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBar_2_AbsoluteValue_AbsEnd": {
+      "input": "<mi>a</mi><mo>¦</mo><mi>b</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBar_3_AbsoluteValue_AbsEnd": {
+      "input": "<mi>a</mi><mo>‖</mo><mi>b</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBar_4_AbsoluteValue_AbsEnd": {
+      "input": "<mi>a</mi><mo>∥</mo><mi>b</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBar_5_AbsoluteValue_AbsEnd": {
+      "input": "<mi>a</mi><mo>⦀</mo><mi>b</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "Function_0_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "Function_1_AbsoluteValue_AbsEnd": {
+      "input": "<mi>g</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "Function_2_AbsoluteValue_AbsEnd": {
+      "input": "<mi>h</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "Function_3_AbsoluteValue_AbsEnd": {
+      "input": "<mi>r</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "Function_4_AbsoluteValue_AbsEnd": {
+      "input": "<mi>sin</mi><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "Function_5_AbsoluteValue_AbsEnd": {
+      "input": "<mo>∑</mo><mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "FunctionMetric0_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "FunctionMetric1_AbsoluteValue_AbsEnd": {
+      "input": "<mi>g</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "FunctionMetric2_AbsoluteValue_AbsEnd": {
+      "input": "<mi>h</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "FunctionMetric3_AbsoluteValue_AbsEnd": {
+      "input": "<mi>r</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "FunctionMetric4_AbsoluteValue_AbsEnd": {
+      "input": "<mi>sin</mi><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "FunctionMetric5_AbsoluteValue_AbsEnd": {
+      "input": "<mo>∑</mo><mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>｜</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>|</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>¦</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>‖</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>∥</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd": {
+      "input": "<mi>f</mi><mo>⦀</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    },
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd": {
+      "input": "<mi>sin</mi><mo>⦀</mo><mi>g</mi>",
+      "preference": "AbsoluteValue_AbsEnd"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech limits tests.",
+  "base": "input/semantic/limits.json"
+}

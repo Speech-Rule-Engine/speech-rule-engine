@@ -1,0 +1,7 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech tables tests.",
+  "exclude": ["SemanticsAnnotation_0", "SemanticsAnnotationXml_1"],
+  "base": "input/semantic/tables.json"
+}

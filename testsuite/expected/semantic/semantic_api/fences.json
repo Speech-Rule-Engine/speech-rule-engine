@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic api fences tests.",
+  "base": "input/semantic/fences.json"
+}

@@ -1,0 +1,6 @@
+{
+  "factory": "rebuildEnriched",
+  "tests": "ALL",
+  "information": "Compare stree from input and enriched for semantically annotated spacing elements",
+  "base": "input/semantic/spaces.json"
+}

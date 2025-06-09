@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakAbsoluteValue",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_absolute_value.json",
+  "information": "Swedish Clearspeak AbsoluteValue rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Abs01": {
+      "expected": "absolutvärdet av x"
+    },
+    "Abs02": {
+      "expected": "absolutvärdet av x plus 1"
+    },
+    "Abs03": {
+      "expected": "absolutvärdet av x, plus 1"
+    },
+    "Abs04": {
+      "expected": "absolutvärdet av x, plus, absolutvärdet av y, större än eller lika med, absolutvärdet av z"
+    },
+    "AbsEnd01": {
+      "expected": "absolutvärdet av x, slut absolutvärde"
+    },
+    "AbsEnd02": {
+      "expected": "absolutvärdet av x plus 1, slut absolutvärde"
+    },
+    "AbsEnd03": {
+      "expected": "absolutvärdet av x, slut absolutvärde, plus 1"
+    },
+    "AbsEnd04": {
+      "expected": "absolutvärdet av x, slut absolutvärde, plus, absolutvärdet av y, slut absolutvärde, större än eller lika med, absolutvärdet av z, slut absolutvärde"
+    },
+    "Card01": {
+      "expected": "kardinaliteten av S"
+    },
+    "Determinant01": {
+      "expected": "determinanten av M"
+    },
+    "AbsDet01": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2, 1 rad 2: 7, 5"
+    },
+    "AbsDet02": {
+      "expected": "determinanten av 3 gånger 3 matrisen. rad 1: 2, 4, 1 rad 2: 3, 5, 2 rad 3: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "expected": "determinanten av 4 gånger 4 matrisen. rad 1: kolumn 1, 0; kolumn 2, 3; kolumn 3, 4; kolumn 4, 3. rad 2: kolumn 1, 2; kolumn 2, 1; kolumn 3, 0; kolumn 4, 9. rad 3: kolumn 1, 3; kolumn 2, 0; kolumn 3, 2; kolumn 4, 1. rad 4: kolumn 1, 6; kolumn 2, 2; kolumn 3, 9; kolumn 4, 0"
+    },
+    "AbsDet04": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: kolumn 1, 2; kolumn 2, 1. rad 2: kolumn 1, 7; kolumn 2, 5 plus x"
+    },
+    "AbsDet05": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2 x, 1 rad 2: 7, 5"
+    },
+    "AbsDet06": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2 x, y rad 2: en halv, två tredjedelar"
+    },
+    "AbsDet07": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: en halv, två tredjedelar rad 2: tre fjärdelar, en femtedel"
+    },
+    "AbsDet08": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2, 1 rad 2: 7, 5"
+    },
+    "AbsDet09": {
+      "expected": "determinanten av 3 gånger 3 matrisen. rad 1: 2, 4, 1 rad 2: 3, 5, 2 rad 3: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "expected": "determinanten av 4 gånger 4 matrisen. rad 1: kolumn 1, 0; kolumn 2, 3; kolumn 3, 4; kolumn 4, 3. rad 2: kolumn 1, 2; kolumn 2, 1; kolumn 3, 0; kolumn 4, 9. rad 3: kolumn 1, 3; kolumn 2, 0; kolumn 3, 2; kolumn 4, 1. rad 4: kolumn 1, 6; kolumn 2, 2; kolumn 3, 9; kolumn 4, 0"
+    },
+    "AbsDet11": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: kolumn 1, 2; kolumn 2, 1. rad 2: kolumn 1, 7; kolumn 2, 5 plus x"
+    },
+    "AbsDet12": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2 x, 1 rad 2: 7, 5"
+    },
+    "AbsDet13": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2 x, y rad 2: en halv, två tredjedelar"
+    },
+    "AbsDet14": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: en halv, två tredjedelar rad 2: tre fjärdelar, en femtedel"
+    }
+  }
+}

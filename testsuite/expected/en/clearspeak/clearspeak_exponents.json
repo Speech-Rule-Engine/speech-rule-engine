@@ -1,0 +1,567 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakExponents",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_exponents.json",
+  "information": "English Clearspeak Exponents rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Exponents",
+    "Exp001": {
+      "expected": "3 squared"
+    },
+    "Exp002a": {
+      "expected": "3 cubed"
+    },
+    "Exp003": {
+      "expected": "3 to the fifth power"
+    },
+    "Exp004": {
+      "expected": "3 to the first power"
+    },
+    "Exp005": {
+      "expected": "b to the first power"
+    },
+    "Exp006": {
+      "expected": "3 raised to the 5.0 power"
+    },
+    "Exp007": {
+      "expected": "3 to the 0 power"
+    },
+    "Exp008": {
+      "expected": "4 to the 11th power"
+    },
+    "Exp009": {
+      "expected": "3 to the negative 2 power"
+    },
+    "Exp010a": {
+      "expected": "3 raised to the negative 2.0 power"
+    },
+    "Exp011": {
+      "expected": "4 to the x-th power"
+    },
+    "Exp012": {
+      "expected": "3 raised to the y plus 2 power"
+    },
+    "Exp013": {
+      "expected": "open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power"
+    },
+    "Exp014": {
+      "expected": "p sub 1, squared"
+    },
+    "Exp015": {
+      "expected": "p sub 1, cubed"
+    },
+    "Exp016": {
+      "expected": "p sub 1, to the fourth power"
+    },
+    "Exp017": {
+      "expected": "p sub 1, to the tenth power"
+    },
+    "Exp018": {
+      "expected": "p sub 1, raised to the x plus 1 power"
+    },
+    "Exp019": {
+      "expected": "p sub, x sub 1, squared"
+    },
+    "Exp010b": {
+      "expected": "p sub, x sub 1, cubed"
+    },
+    "Exp011b": {
+      "expected": "p sub, x sub 1, to the fourth power"
+    },
+    "Exp012b": {
+      "expected": "p sub, x sub 1, to the tenth power"
+    },
+    "Exp013b": {
+      "expected": "p sub, x sub 1, raised to the y plus 1 power"
+    },
+    "Exp014b": {
+      "expected": "3 raised to the 2 squared power"
+    },
+    "Exp015b": {
+      "expected": "3 raised to the 2 x squared power"
+    },
+    "Exp016b": {
+      "expected": "5 raised to the 2 cubed power"
+    },
+    "Exp017b": {
+      "expected": "5 raised to the 2 x cubed power"
+    },
+    "Exp018b": {
+      "expected": "3 raised to the exponent, 2 squared plus 1, end exponent"
+    },
+    "Exp019b": {
+      "expected": "3 raised to the 2 squared power, plus 1"
+    },
+    "Exp020": {
+      "expected": "2 raised to the exponent, x squared plus 3 x cubed, end exponent"
+    },
+    "Exp021": {
+      "expected": "3 raised to the exponent, 3 to the fourth power, end exponent"
+    },
+    "Exp022": {
+      "expected": "3 raised to the exponent, 3 to the fourth power, plus 2, end exponent"
+    },
+    "Exp023": {
+      "expected": "3 raised to the exponent, 3 to the fourth power, end exponent, plus 2"
+    },
+    "Exp024": {
+      "expected": "2 raised to the exponent, x to the fourth power, end exponent"
+    },
+    "Exp025": {
+      "expected": "2 raised to the exponent, 10 raised to the x plus 3 power, end exponent"
+    },
+    "Exp026": {
+      "expected": "3 raised to the exponent, 3 to the tenth power, end exponent"
+    },
+    "Exp027": {
+      "expected": "3 raised to the exponent, 3 to the tenth power, plus 1, end exponent"
+    },
+    "Exp028": {
+      "expected": "3 raised to the exponent, 3 to the tenth power, end exponent, plus 1"
+    },
+    "Exp029": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, squared, end exponent"
+    },
+    "Exp030": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the tenth power, end exponent"
+    },
+    "Exp031": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent"
+    },
+    "Exp032": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, plus 2, end exponent"
+    },
+    "Exp033": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, end exponent, plus 2"
+    },
+    "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
+    "_comment3_": "       (-x)(y).",
+    "Exp034": {
+      "expected": "e raised to the negative one half, x squared power"
+    },
+    "Exp035": {
+      "expected": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, squared, end exponent"
+    },
+    "Exp036": {
+      "expected": "2 to the n-th power"
+    },
+    "Exp037": {
+      "expected": "2 to the m-th power"
+    },
+    "Exp038": {
+      "expected": "2 to the i-th power"
+    },
+    "Exp039": {
+      "expected": "2 to the j-th power"
+    },
+    "Exp040": {
+      "expected": "2 to the a-th power"
+    },
+    "Exp041": {
+      "expected": "3 to the second"
+    },
+    "Exp042": {
+      "expected": "3 to the third"
+    },
+    "Exp043": {
+      "expected": "3 to the zero"
+    },
+    "Exp044": {
+      "expected": "3 to the first"
+    },
+    "Exp045": {
+      "expected": "3 to the fifth"
+    },
+    "Exp046": {
+      "expected": "4 raised to the 3.0 power"
+    },
+    "Exp047": {
+      "expected": "4 to the eleventh"
+    },
+    "Exp048": {
+      "expected": "3 to the negative 2"
+    },
+    "Exp049": {
+      "expected": "3 raised to the negative 2.0 power"
+    },
+    "Exp050": {
+      "expected": "4 to the x-th"
+    },
+    "Exp051": {
+      "expected": "3 raised to the y plus 2 power"
+    },
+    "Exp052": {
+      "expected": "open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power"
+    },
+    "Exp053": {
+      "expected": "p sub 1, to the second"
+    },
+    "Exp054": {
+      "expected": "p sub 1, to the third"
+    },
+    "Exp055": {
+      "expected": "p sub 1, to the fourth"
+    },
+    "Exp056": {
+      "expected": "p sub 1, to the tenth"
+    },
+    "Exp057": {
+      "expected": "p sub 1, raised to the x plus 1 power"
+    },
+    "Exp058": {
+      "expected": "p sub, x sub 1, to the second"
+    },
+    "Exp059": {
+      "expected": "p sub, x sub 1, to the third"
+    },
+    "Exp060": {
+      "expected": "p sub, x sub 1, to the fourth"
+    },
+    "Exp061": {
+      "expected": "p sub, x sub 1, to the tenth"
+    },
+    "Exp062": {
+      "expected": "p sub, x sub 1, raised to the y plus 1 power"
+    },
+    "Exp063": {
+      "expected": "3 raised to the exponent, 2 to the second, end exponent"
+    },
+    "Exp064": {
+      "expected": "3 raised to the exponent, 2 x to the second, end exponent"
+    },
+    "Exp065": {
+      "expected": "5 raised to the exponent, 2 to the third, end exponent"
+    },
+    "Exp066": {
+      "expected": "5 raised to the exponent, 2 x to the third, end exponent"
+    },
+    "Exp067": {
+      "expected": "3 raised to the exponent, 2 to the second, plus 1, end exponent"
+    },
+    "Exp068": {
+      "expected": "3 raised to the exponent, 2 to the second, end exponent, plus 1"
+    },
+    "Exp069": {
+      "expected": "2 raised to the exponent, x to the second, plus 3 x to the third, end exponent"
+    },
+    "Exp070": {
+      "expected": "3 raised to the exponent, 3 to the fourth, end exponent"
+    },
+    "Exp071": {
+      "expected": "3 raised to the exponent, 3 to the fourth, plus 2, end exponent"
+    },
+    "Exp072": {
+      "expected": "3 raised to the exponent, 3 to the fourth, end exponent, plus 2"
+    },
+    "Exp073": {
+      "expected": "2 raised to the exponent, x to the fourth, end exponent"
+    },
+    "Exp074": {
+      "expected": "2 raised to the exponent, 10 raised to the x plus 3 power, end exponent"
+    },
+    "Exp075": {
+      "expected": "3 raised to the exponent, 3 to the tenth, end exponent"
+    },
+    "Exp076": {
+      "expected": "3 raised to the exponent, 3 to the tenth, plus 1, end exponent"
+    },
+    "Exp077": {
+      "expected": "3 raised to the exponent, 3 to the tenth, end exponent, plus 1"
+    },
+    "Exp078": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the second, end exponent"
+    },
+    "Exp079": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the tenth, end exponent"
+    },
+    "Exp080": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent"
+    },
+    "Exp081": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th, plus 2, end exponent"
+    },
+    "Exp082": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th, end exponent, plus 2"
+    },
+    "Exp083": {
+      "expected": "e raised to the exponent, negative one half x to the second, end exponent"
+    },
+    "Exp084": {
+      "expected": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, to the second, end exponent"
+    },
+    "Exp085": {
+      "expected": "3 to the second power"
+    },
+    "Exp086": {
+      "expected": "3 to the third power"
+    },
+    "Exp087": {
+      "expected": "3 to the zero power"
+    },
+    "Exp088": {
+      "expected": "3 to the first power"
+    },
+    "Exp089": {
+      "expected": "3 to the fifth power"
+    },
+    "Exp090": {
+      "expected": "3 raised to the 5.0 power"
+    },
+    "Exp091": {
+      "expected": "4 to the eleventh power"
+    },
+    "Exp092": {
+      "expected": "3 to the negative 2 power"
+    },
+    "Exp093": {
+      "expected": "3 raised to the negative 2.0 power"
+    },
+    "Exp094": {
+      "expected": "4 to the x-th power"
+    },
+    "Exp095": {
+      "expected": "3 raised to the y plus 2 power"
+    },
+    "Exp096": {
+      "expected": "open paren, 2 y, minus 3, close paren, raised to the 3 z, plus 8 power"
+    },
+    "Exp097": {
+      "expected": "p sub 1, to the second power"
+    },
+    "Exp098": {
+      "expected": "p sub 1, to the third power"
+    },
+    "Exp099": {
+      "expected": "p sub 1, to the fourth power"
+    },
+    "Exp100": {
+      "expected": "p sub 1, to the tenth power"
+    },
+    "Exp101": {
+      "expected": "p sub 1, raised to the x plus 1 power"
+    },
+    "Exp102": {
+      "expected": "p sub, x sub 1, to the second power"
+    },
+    "Exp103": {
+      "expected": "p sub, x sub 1, to the third power"
+    },
+    "Exp104": {
+      "expected": "p sub, x sub 1, to the fourth power"
+    },
+    "Exp105": {
+      "expected": "p sub, x sub 1, to the tenth power"
+    },
+    "Exp106": {
+      "expected": "p sub, x sub 1, raised to the y plus 1 power"
+    },
+    "Exp107": {
+      "expected": "3 raised to the exponent, 2 to the second power, end exponent"
+    },
+    "Exp108": {
+      "expected": "3 raised to the exponent, 2 x to the second power, end exponent"
+    },
+    "Exp109": {
+      "expected": "5 raised to the exponent, 2 to the third power, end exponent"
+    },
+    "Exp110": {
+      "expected": "5 raised to the exponent, 2 x to the third power, end exponent"
+    },
+    "Exp111": {
+      "expected": "3 raised to the exponent, 2 to the second power, plus 1, end exponent"
+    },
+    "Exp112": {
+      "expected": "3 raised to the exponent, 2 to the second power, end exponent, plus 1"
+    },
+    "Exp113": {
+      "expected": "2 raised to the exponent, x to the second power, plus 3 x to the third power, end exponent"
+    },
+    "Exp114": {
+      "expected": "3 raised to the exponent, 3 to the fourth power, end exponent"
+    },
+    "Exp115": {
+      "expected": "3 raised to the exponent, 3 to the fourth power, plus 2, end exponent"
+    },
+    "Exp116": {
+      "expected": "3 raised to the exponent, 3 to the fourth power, end exponent, plus 2"
+    },
+    "Exp117": {
+      "expected": "2 raised to the exponent, x to the fourth power, end exponent"
+    },
+    "Exp118": {
+      "expected": "2 raised to the exponent, 10 raised to the x plus 3 power, end exponent"
+    },
+    "Exp119": {
+      "expected": "3 raised to the exponent, 3 to the tenth power, end exponent"
+    },
+    "Exp120": {
+      "expected": "3 raised to the exponent, 3 to the tenth power, plus 1, end exponent"
+    },
+    "Exp121": {
+      "expected": "3 raised to the exponent, 3 to the tenth power, end exponent, plus 1"
+    },
+    "Exp122": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the second power, end exponent"
+    },
+    "Exp123": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the tenth power, end exponent"
+    },
+    "Exp124": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the y plus 2 power, end exponent"
+    },
+    "Exp125": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, plus 2, end exponent"
+    },
+    "Exp126": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, to the y-th power, end exponent, plus 2"
+    },
+    "Exp127": {
+      "expected": "e raised to the exponent, negative one half x to the second power, end exponent"
+    },
+    "Exp128": {
+      "expected": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, to the second power, end exponent"
+    },
+    "Exp129": {
+      "expected": "3 raised to the power 2"
+    },
+    "Exp130": {
+      "expected": "3 raised to the power 3"
+    },
+    "Exp131": {
+      "expected": "3 raised to the power 1"
+    },
+    "Exp132b": {
+      "expected": "3 raised to the power 0"
+    },
+    "Exp133": {
+      "expected": "3 raised to the power 5"
+    },
+    "Exp134": {
+      "expected": "3 raised to the power 5.0"
+    },
+    "Exp135": {
+      "expected": "4 raised to the power 11"
+    },
+    "Exp136": {
+      "expected": "3 raised to the power negative 2"
+    },
+    "Exp137": {
+      "expected": "3 raised to the power negative 2.0"
+    },
+    "Exp138": {
+      "expected": "4 raised to the power x"
+    },
+    "Exp139": {
+      "expected": "3 raised to the power y plus 2"
+    },
+    "Exp140": {
+      "expected": "open paren, 2 y, minus 3, close paren, raised to the power 3 z plus 8"
+    },
+    "Exp141": {
+      "expected": "p sub 1, raised to the power 2"
+    },
+    "Exp142": {
+      "expected": "p sub 1, raised to the power 3"
+    },
+    "Exp143": {
+      "expected": "p sub 1, raised to the power 4"
+    },
+    "Exp144": {
+      "expected": "p sub 1, raised to the power 10"
+    },
+    "Exp145": {
+      "expected": "p sub 1, raised to the power x plus 1"
+    },
+    "Exp146": {
+      "expected": "p sub, x sub 1, raised to the power 2"
+    },
+    "Exp147": {
+      "expected": "p sub, x sub 1, raised to the power 3"
+    },
+    "Exp148": {
+      "expected": "p sub, x sub 1, raised to the power 4"
+    },
+    "Exp149": {
+      "expected": "p sub, x sub 1, raised to the power 10"
+    },
+    "Exp150": {
+      "expected": "p sub, x sub 1, raised to the power y plus 1"
+    },
+    "Exp151": {
+      "expected": "3 raised to the exponent, 2 raised to the power 2, end exponent"
+    },
+    "Exp152": {
+      "expected": "3 raised to the exponent, 2 x raised to the power 2, end exponent"
+    },
+    "Exp153": {
+      "expected": "3 raised to the exponent, 2 raised to the power 2, end exponent"
+    },
+    "Exp154": {
+      "expected": "3 raised to the exponent, 2 x raised to the power 2, end exponent"
+    },
+    "Exp155": {
+      "expected": "5 raised to the exponent, 2 raised to the power 3, end exponent"
+    },
+    "Exp156": {
+      "expected": "5 raised to the exponent, 2 x raised to the power 3, end exponent"
+    },
+    "Exp157": {
+      "expected": "3 raised to the exponent, 2 raised to the power 2, plus 1, end exponent"
+    },
+    "Exp158": {
+      "expected": "3 raised to the exponent, 2 raised to the power 2, end exponent, plus 1"
+    },
+    "Exp159": {
+      "expected": "2 raised to the exponent, x raised to the power 2, plus 3 x raised to the power 3, end exponent"
+    },
+    "Exp160": {
+      "expected": "3 raised to the exponent, 3 raised to the power 4, end exponent"
+    },
+    "Exp161": {
+      "expected": "3 raised to the exponent, 3 raised to the power 4, plus 2, end exponent"
+    },
+    "Exp162": {
+      "expected": "3 raised to the exponent, 3 raised to the power 4, end exponent, plus 2"
+    },
+    "Exp163": {
+      "expected": "2 raised to the exponent, x raised to the power 4, end exponent"
+    },
+    "Exp164": {
+      "expected": "2 raised to the exponent, 10 raised to the power x plus 3, end exponent"
+    },
+    "Exp165": {
+      "expected": "3 raised to the exponent, 3 raised to the power 10, end exponent"
+    },
+    "Exp166": {
+      "expected": "3 raised to the exponent, 3 raised to the power 10, plus 1, end exponent"
+    },
+    "Exp167": {
+      "expected": "3 raised to the exponent, 3 raised to the power 10, end exponent, plus 1"
+    },
+    "Exp168": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power 2, end exponent"
+    },
+    "Exp169": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power 10, end exponent"
+    },
+    "Exp170": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power y plus 2, end exponent"
+    },
+    "Exp171": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power y, plus 2, end exponent"
+    },
+    "Exp172": {
+      "expected": "3 raised to the exponent, open paren, x plus 1, close paren, raised to the power y, end exponent, plus 2"
+    },
+    "Exp173": {
+      "expected": "e raised to the exponent, negative one half x raised to the power 2, end exponent"
+    },
+    "Exp174": {
+      "expected": "e raised to the exponent, negative one half times, open paren, the fraction with numerator x minus mu, and denominator sigma, close paren, raised to the power 2, end exponent"
+    }
+  }
+}

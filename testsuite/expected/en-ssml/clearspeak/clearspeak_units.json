@@ -1,0 +1,319 @@
+{
+  "name": "EnglishClearspeakUnits",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/common/units_speech.json",
+  "information": "English Clearspeak Units tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakEnglish",
+  "exclude": [
+    "UnitSquare_0_brief",
+    "UnitSquare_0_sbrief",
+    "UnitSquare_1_brief",
+    "UnitSquare_1_sbrief",
+    "UnitSquare_2_brief",
+    "UnitSquare_2_sbrief",
+    "UnitCube_0_brief",
+    "UnitCube_0_sbrief",
+    "UnitCube_1_brief",
+    "UnitCube_1_sbrief",
+    "UnitCube_2_brief",
+    "UnitCube_2_sbrief",
+    "UnitInverse_brief",
+    "UnitInverse_sbrief",
+    "UnitDoubleInverse_brief",
+    "UnitDoubleInverse_sbrief",
+    "UnitDivide_brief",
+    "UnitDivide_sbrief"
+  ],
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> square <mark name=\"0\"/> inches </prosody></speak>"
+    },
+    "UnitSquare_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> seconds <mark name=\"1\"/> to the second <mark name=\"2\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitSquare_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> square <mark name=\"0\"/> meters </prosody></speak>"
+    },
+    "UnitCube_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> cubic <mark name=\"0\"/> inches </prosody></speak>"
+    },
+    "UnitCube_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> seconds <mark name=\"1\"/> to the third <mark name=\"2\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitCube_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> cubic <mark name=\"0\"/> meters </prosody></speak>"
+    },
+    "UnitInverse_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> reciprocal <mark name=\"0\"/> inches </prosody></speak>"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> reciprocal <mark name=\"0\"/> inches <mark name=\"9\"/> per <mark name=\"5\"/> millimeter </prosody></speak>"
+    },
+    "UnitDivide_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> inches <mark name=\"1\"/> per millimeter </prosody></speak>"
+    },
+    "UnitsSingle_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers </prosody></speak>"
+    },
+    "UnitsSingle_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> amperes </prosody></speak>"
+    },
+    "UnitsSingle_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> ohms </prosody></speak>"
+    },
+    "UnitsSingle_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilohms </prosody></speak>"
+    },
+    "UnitsSingle_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> Celsius </prosody></speak>"
+    },
+    "UnitsSimple_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> min <mark name=\"1\"/> of minutes </prosody></speak>"
+    },
+    "UnitsSimple_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers </prosody></speak>"
+    },
+    "UnitsSimple_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers <mark name=\"1\"/> plus <mark name=\"2\"/> seconds </prosody></speak>"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> square <mark name=\"0\"/> kilometers </prosody></speak>"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> cubic <mark name=\"0\"/> meters </prosody></speak>"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> reciprocal <mark name=\"0\"/> meters </prosody></speak>"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> seconds <mark name=\"5\"/> per <mark name=\"1\"/> meter </prosody></speak>"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> seconds <mark name=\"1\"/> per meter <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> seconds <mark name=\"1\"/> per meter <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"5\"/> reciprocal <mark name=\"1\"/> meters </prosody></speak>"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers <mark name=\"1\"/> per hour </prosody></speak>"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> Newtons <mark name=\"1\"/> kilometers <mark name=\"2\"/> per hour </prosody></speak>"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"1\"/> over kilometers </prosody></speak>"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers <mark name=\"2\"/> hours </prosody></speak>"
+    },
+    "UnitsExpressions_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> seconds <mark name=\"1\"/> 3 <mark name=\"2\"/> <say-as interpret-as=\"character\">m</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> kilometers <mark name=\"4\"/> hours </prosody></speak>"
+    },
+    "UnitsExpressions_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers <mark name=\"1\"/> seconds <mark name=\"2\"/> to the second <mark name=\"3\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"4\"/> 3 <mark name=\"5\"/> <say-as interpret-as=\"character\">m</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> kilometers <mark name=\"7\"/> hours </prosody></speak>"
+    },
+    "UnitsExpressions_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> <say-as interpret-as=\"character\">m</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> kilometers <mark name=\"3\"/> hours <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"4\"/> fraction with numerator <prosody pitch=\"+30%\"> <mark name=\"4\"/> <say-as interpret-as=\"character\">N</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"5\"/> seconds <mark name=\"6\"/> to the second <mark name=\"7\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitsExpressions_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> <say-as interpret-as=\"character\">m</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> kilometers <mark name=\"3\"/> hours <mark name=\"4\"/> Newtons <mark name=\"7\"/> per <mark name=\"5\"/> second <mark name=\"6\"/> to the second <mark name=\"7\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "UnitPlural_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 4 <mark name=\"2\"/> millimeters </prosody></speak>"
+    },
+    "UnitPlural_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\"/> millimeter </prosody></speak>"
+    },
+    "UnitPlural_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 4 <mark name=\"1\"/> millimeters </prosody></speak>"
+    },
+    "UnitPlural_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> millimeter </prosody></speak>"
+    },
+    "UnitCombine_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> meters <mark name=\"2\"/> seconds </prosody></speak>"
+    },
+    "UnitCombine_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"2\"/> seconds </prosody></speak>"
+    },
+    "UnitCombine_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> meters <mark name=\"2\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "UnitCombine_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> meters <mark name=\"1\"/> seconds </prosody></speak>"
+    },
+    "UnitCombine_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"1\"/> seconds </prosody></speak>"
+    },
+    "UnitCombine_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> meters <mark name=\"1\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "UnitCombine_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> meters <mark name=\"2\"/> seconds <mark name=\"3\"/> liters </prosody></speak>"
+    },
+    "issue_364_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 63360 <mark name=\"1\"/> inches <mark name=\"4\"/> equals <mark name=\"5\"/> 63360 <mark name=\"6\"/> inches <mark name=\"9\"/> equals <mark name=\"10\"/> 63360 <mark name=\"12\" kind=\"LAST\"/> inches <mark name=\"13\"/> equals <mark name=\"14\"/> 63360 <mark name=\"15\"/> inches <mark name=\"18\"/> equals <mark name=\"19\"/> 5280 <mark name=\"20\"/> feet <mark name=\"23\"/> equals <mark name=\"24\"/> 5280 <mark name=\"25\"/> feet <mark name=\"28\"/> equals <mark name=\"29\"/> 5280 <mark name=\"31\" kind=\"LAST\"/> feet <mark name=\"32\"/> equals <mark name=\"33\"/> 5280 <mark name=\"34\"/> feet <mark name=\"37\"/> equals <mark name=\"38\"/> 1760 <mark name=\"39\"/> yards <mark name=\"42\"/> equals <mark name=\"43\"/> 1760 <mark name=\"44\"/> yards <mark name=\"47\"/> equals <mark name=\"48\"/> 1760 <mark name=\"49\"/> yards <mark name=\"52\"/> equals <mark name=\"53\"/> 1 <mark name=\"54\"/> mile <mark name=\"57\"/> equals <mark name=\"58\"/> 1 <mark name=\"59\"/> mile <mark name=\"62\"/> equals <mark name=\"63\"/> 1 <mark name=\"64\"/> mile </prosody></speak>"
+    },
+    "issue_364_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 8000 <mark name=\"1\"/> links <mark name=\"4\"/> equals <mark name=\"5\"/> 8000 <mark name=\"6\"/> links <mark name=\"9\"/> equals <mark name=\"10\"/> 8000 <mark name=\"11\"/> links <mark name=\"14\"/> equals <mark name=\"15\"/> 320 <mark name=\"16\"/> rods <mark name=\"19\"/> equals <mark name=\"20\"/> 320 <mark name=\"21\"/> rods <mark name=\"24\"/> equals <mark name=\"25\"/> 320 <mark name=\"26\"/> rods <mark name=\"29\"/> equals <mark name=\"30\"/> 80 <mark name=\"31\"/> chains <mark name=\"34\"/> equals <mark name=\"35\"/> 80 <mark name=\"36\"/> chains <mark name=\"39\"/> equals <mark name=\"40\"/> 80 <mark name=\"41\"/> chains <mark name=\"44\"/> equals <mark name=\"45\"/> 8 <mark name=\"46\"/> furlongs <mark name=\"49\"/> equals <mark name=\"50\"/> 8 <mark name=\"51\"/> furlongs <mark name=\"54\"/> equals <mark name=\"55\"/> 8 <mark name=\"56\"/> furlongs <mark name=\"59\"/> equals <mark name=\"60\"/> 1 <mark name=\"61\"/> mile <mark name=\"64\"/> equals <mark name=\"65\"/> 1 <mark name=\"66\"/> mile <mark name=\"69\"/> equals <mark name=\"70\"/> 1 <mark name=\"71\"/> mile </prosody></speak>"
+    },
+    "issue_364_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 43560 <mark name=\"1\"/> square feet <mark name=\"4\"/> equals <mark name=\"5\"/> 43560 <mark name=\"6\"/> square feet <mark name=\"9\"/> equals <mark name=\"10\"/> 43560 <mark name=\"13\"/> square <mark name=\"11\"/> feet <mark name=\"16\"/> equals <mark name=\"17\"/> 43560 <mark name=\"19\" kind=\"LAST\"/> feet <mark name=\"20\"/> squared <mark name=\"22\"/> equals <mark name=\"23\"/> 43560 <mark name=\"24\"/> square feet <mark name=\"27\"/> equals <mark name=\"28\"/> 4840 <mark name=\"29\"/> square yards <mark name=\"32\"/> equals <mark name=\"33\"/> 4840 <mark name=\"34\"/> square yards <mark name=\"37\"/> equals <mark name=\"38\"/> 4840 <mark name=\"41\"/> square <mark name=\"39\"/> yards <mark name=\"44\"/> equals <mark name=\"45\"/> 4840 <mark name=\"46\"/> square yards <mark name=\"49\"/> equals <mark name=\"50\"/> 160 <mark name=\"51\"/> square rods <mark name=\"54\"/> equals <mark name=\"55\"/> 160 <mark name=\"56\"/> square rods <mark name=\"59\"/> equals <mark name=\"60\"/> 160 <mark name=\"63\"/> square <mark name=\"61\"/> rods <mark name=\"66\"/> equals <mark name=\"67\"/> 160 <mark name=\"68\"/> square rods <mark name=\"71\"/> equals <mark name=\"72\"/> 1 <mark name=\"73\"/> acre <mark name=\"76\"/> equals <mark name=\"77\"/> 1 <mark name=\"78\"/> acre <mark name=\"81\"/> equals <mark name=\"82\"/> 1 <mark name=\"83\"/> acre <mark name=\"86\"/> equals <break time=\"250ms\"/> <mark name=\"87\"/> 1 <mark name=\"88\"/> over 640 <break time=\"250ms\"/> <mark name=\"90\"/> square miles <mark name=\"93\"/> equals <break time=\"250ms\"/> <mark name=\"94\"/> 1 <mark name=\"95\"/> over 640 <break time=\"250ms\"/> <mark name=\"97\"/> square miles <mark name=\"100\"/> equals <break time=\"250ms\"/> <mark name=\"101\"/> 1 <mark name=\"102\"/> over 640 <break time=\"250ms\"/> <mark name=\"106\"/> square <mark name=\"104\"/> miles <mark name=\"109\"/> equals <break time=\"250ms\"/> <mark name=\"110\"/> 1 <mark name=\"111\"/> over 640 <break time=\"250ms\"/> <mark name=\"113\"/> square miles </prosody></speak>"
+    },
+    "issue_364_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 46656 <mark name=\"1\"/> cubic inches <mark name=\"4\"/> equals <mark name=\"5\"/> 46656 <mark name=\"6\"/> cubic inches <mark name=\"9\"/> equals <mark name=\"10\"/> 46656 <mark name=\"13\"/> cubic <mark name=\"11\"/> inches <mark name=\"16\"/> equals <mark name=\"17\"/> 46656 <mark name=\"19\" kind=\"LAST\"/> inches <mark name=\"20\"/> cubed <mark name=\"22\"/> equals <mark name=\"23\"/> 46656 <mark name=\"24\"/> cubic inches <mark name=\"27\"/> equals <mark name=\"28\"/> 27 <mark name=\"29\"/> cubic feet <mark name=\"32\"/> equals <mark name=\"33\"/> 27 <mark name=\"34\"/> cubic feet <mark name=\"37\"/> equals <mark name=\"38\"/> 27 <mark name=\"41\"/> cubic <mark name=\"39\"/> feet <mark name=\"44\"/> equals <mark name=\"45\"/> 27 <mark name=\"47\" kind=\"LAST\"/> feet <mark name=\"48\"/> cubed <mark name=\"50\"/> equals <mark name=\"51\"/> 27 <mark name=\"52\"/> cubic feet <mark name=\"55\"/> equals <mark name=\"56\"/> 1 <mark name=\"57\"/> cubic yard <mark name=\"60\"/> equals <mark name=\"61\"/> 1 <mark name=\"62\"/> cubic yard <mark name=\"65\"/> equals <mark name=\"66\"/> 1 <mark name=\"69\"/> cubic <mark name=\"67\"/> yard <mark name=\"72\"/> equals <mark name=\"73\"/> 1 <mark name=\"74\"/> cubic yard </prosody></speak>"
+    },
+    "issue_364_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1024 <mark name=\"1\"/> fluid drams <mark name=\"4\"/> equals <mark name=\"5\"/> 1024 <mark name=\"6\"/> fluid drams <mark name=\"9\"/> equals <mark name=\"10\"/> 1024 <mark name=\"11\"/> fluid drams <mark name=\"14\"/> equals <mark name=\"15\"/> 768 <mark name=\"16\"/> teaspoons <mark name=\"19\"/> equals <mark name=\"20\"/> 768 <mark name=\"21\"/> teaspoons <mark name=\"24\"/> equals <mark name=\"25\"/> 768 <mark name=\"26\"/> teaspoons <mark name=\"29\"/> equals <mark name=\"30\"/> 256 <mark name=\"31\"/> tablespoons <mark name=\"34\"/> equals <mark name=\"35\"/> 256 <mark name=\"36\"/> tablespoons <mark name=\"39\"/> equals <mark name=\"40\"/> 256 <mark name=\"41\"/> tablespoons <mark name=\"44\"/> equals <mark name=\"45\"/> 128 <mark name=\"46\"/> fluid ounces <mark name=\"49\"/> equals <mark name=\"50\"/> 128 <mark name=\"51\"/> fluid ounces <mark name=\"54\"/> equals <mark name=\"55\"/> 128 <mark name=\"56\"/> fluid ounces <mark name=\"59\"/> equals <mark name=\"60\"/> 16 <mark name=\"61\"/> cups <mark name=\"64\"/> equals <mark name=\"65\"/> 16 <mark name=\"66\"/> cups <mark name=\"69\"/> equals <mark name=\"70\"/> 16 <mark name=\"71\"/> cups <mark name=\"74\"/> equals <mark name=\"75\"/> 8 <mark name=\"76\"/> pints <mark name=\"79\"/> equals <mark name=\"80\"/> 8 <mark name=\"81\"/> pints <mark name=\"84\"/> equals <mark name=\"85\"/> 8 <mark name=\"86\"/> pints <mark name=\"89\"/> equals <mark name=\"90\"/> 4 <mark name=\"91\"/> quarts <mark name=\"94\"/> equals <mark name=\"95\"/> 4 <mark name=\"96\"/> quarts <mark name=\"99\"/> equals <mark name=\"100\"/> 4 <mark name=\"101\"/> quarts <mark name=\"104\"/> equals <mark name=\"105\"/> 1 <mark name=\"106\"/> gallon <mark name=\"109\"/> equals <mark name=\"110\"/> 1 <mark name=\"111\"/> gallon <mark name=\"114\"/> equals <mark name=\"115\"/> 1 <mark name=\"116\"/> gallon </prosody></speak>"
+    },
+    "issue_364_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 256 <mark name=\"1\"/> drams <mark name=\"4\"/> equals <mark name=\"5\"/> 256 <mark name=\"6\"/> drams <mark name=\"9\"/> equals <mark name=\"10\"/> 256 <mark name=\"11\"/> drams <mark name=\"14\"/> equals <mark name=\"15\"/> 16 <mark name=\"16\"/> ounces <mark name=\"19\"/> equals <mark name=\"20\"/> 16 <mark name=\"21\"/> ounces <mark name=\"24\"/> equals <mark name=\"25\"/> 16 <mark name=\"26\"/> ounces <mark name=\"29\"/> equals <mark name=\"30\"/> 1 <mark name=\"31\"/> # <mark name=\"34\"/> equals <mark name=\"35\"/> 1 <mark name=\"36\"/> pound <mark name=\"39\"/> equals <mark name=\"40\"/> 1 <mark name=\"41\"/> pound <mark name=\"44\"/> equals <mark name=\"45\"/> 1 <mark name=\"46\"/> pounds <mark name=\"49\"/> equals <mark name=\"50\"/> 100 <mark name=\"51\"/> hundredweights <mark name=\"54\"/> equals <mark name=\"55\"/> 100 <mark name=\"56\"/> hundredweights <mark name=\"59\"/> equals <mark name=\"60\"/> 100 <mark name=\"61\"/> hundredweights <mark name=\"64\"/> equals <mark name=\"65\"/> 2000 <mark name=\"66\"/> tons </prosody></speak>"
+    },
+    "issue_366": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 63360 <mark name=\"1\"/> inches <mark name=\"4\"/> equals <mark name=\"5\"/> 63360 <mark name=\"6\"/> inches <mark name=\"9\"/> equals <mark name=\"10\"/> 63360 <mark name=\"12\" kind=\"LAST\"/> inches <mark name=\"13\"/> equals <mark name=\"14\"/> 63360 <mark name=\"15\"/> inches <mark name=\"18\"/> equals <mark name=\"19\"/> 5280 <mark name=\"20\"/> feet <mark name=\"23\"/> equals <mark name=\"24\"/> 5280 <mark name=\"25\"/> feet <mark name=\"28\"/> equals <mark name=\"29\"/> 5280 <mark name=\"31\" kind=\"LAST\"/> feet <mark name=\"32\"/> equals <mark name=\"33\"/> 5280 <mark name=\"34\"/> feet <mark name=\"37\"/> equals <mark name=\"38\"/> 1760 <mark name=\"39\"/> yards <mark name=\"42\"/> equals <mark name=\"43\"/> 1760 <mark name=\"44\"/> yards <mark name=\"47\"/> equals <mark name=\"48\"/> 1760 <mark name=\"49\"/> yards <mark name=\"52\"/> equals <mark name=\"53\"/> 1 <mark name=\"54\"/> mile <mark name=\"57\"/> equals <mark name=\"58\"/> 1 <mark name=\"59\"/> mile <mark name=\"62\"/> equals <mark name=\"63\"/> 1 <mark name=\"64\"/> mile </prosody></speak>"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> joule <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"4\"/> kilogram <mark name=\"5\"/> times <mark name=\"8\"/> square <mark name=\"6\"/> meters <mark name=\"9\"/> times <mark name=\"10\"/> seconds <mark name=\"13\"/> to the <mark name=\"11\"/> negative <mark name=\"12\"/> 2 <mark name=\"14\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> joule <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"4\"/> kilogram <mark name=\"7\"/> square <mark name=\"5\"/> meters <mark name=\"8\"/> seconds <mark name=\"11\"/> to the <mark name=\"9\"/> negative <mark name=\"10\"/> 2 <mark name=\"12\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> joule <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"5\"/> kilogram <mark name=\"9\"/> square <mark name=\"7\"/> meters <mark name=\"11\"/> seconds <mark name=\"14\"/> to the <mark name=\"12\"/> negative <mark name=\"13\"/> 2 <mark name=\"15\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "unit_cube": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> cubic <mark name=\"0\"/> inches </prosody></speak>"
+    },
+    "UnitDiv_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers <mark name=\"1\"/> kilograms <mark name=\"2\"/> seconds <mark name=\"3\"/> to the second <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> per joule </prosody></speak>"
+    },
+    "UnitDiv_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers <break time=\"250ms\"/> <mark name=\"2\"/> 1 <mark name=\"3\"/> kilogram <mark name=\"4\"/> seconds <mark name=\"5\"/> to the second <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> over joules </prosody></speak>"
+    },
+    "UnitDiv_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> kilometer <mark name=\"2\"/> kilograms <mark name=\"3\"/> seconds <mark name=\"4\"/> to the second <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> over joules </prosody></speak>"
+    },
+    "UnitDiv_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> kilometer <mark name=\"2\"/> kilograms <mark name=\"3\"/> seconds <mark name=\"4\"/> to the second <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"13\"/> over <mark name=\"10\"/> 5 <mark name=\"11\"/> joules </prosody></speak>"
+    },
+    "UnitKm": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> kilometers </prosody></speak>"
+    },
+    "UnitLong_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers <mark name=\"2\"/> kilograms <mark name=\"3\"/> seconds <mark name=\"4\"/> to the second <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> joules </prosody></speak>"
+    },
+    "UnitLong_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers <mark name=\"2\"/> kilograms <mark name=\"3\"/> seconds <mark name=\"4\"/> to the second <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> joules </prosody></speak>"
+    },
+    "UnitLong_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers <break time=\"250ms\"/> <mark name=\"2\"/> 4 <mark name=\"3\"/> kilograms <mark name=\"4\"/> seconds <mark name=\"5\"/> to the second <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> joules </prosody></speak>"
+    },
+    "UnitLong_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> kilometers <break time=\"250ms\"/> <mark name=\"2\"/> 1 <mark name=\"3\"/> kilogram <mark name=\"4\"/> seconds <mark name=\"5\"/> to the second <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> joules </prosody></speak>"
+    },
+    "UnitMultiple": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> kilometer <mark name=\"2\"/> seconds <mark name=\"3\"/> plus <mark name=\"4\"/> 2 <mark name=\"5\"/> kilometers <mark name=\"6\"/> seconds <mark name=\"7\"/> plus <mark name=\"8\"/> 0 <mark name=\"9\"/> kilometers <mark name=\"10\"/> seconds <mark name=\"11\"/> plus <mark name=\"12\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> kilometers <mark name=\"14\"/> seconds <mark name=\"15\"/> plus </prosody></speak>"
+    },
+    "UnitMultitude": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> kilometer <mark name=\"2\"/> plus <mark name=\"3\"/> 2 <mark name=\"4\"/> kilometers <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> kilometers <mark name=\"8\"/> plus <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> kilometers </prosody></speak>"
+    },
+    "UnitNumb_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"3\"/> and <mark name=\"1\"/> two <mark name=\"2\"/> thirds <mark name=\"4\"/> kilograms </prosody></speak>"
+    },
+    "UnitNumb_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"3\"/> and <mark name=\"1\"/> two <mark name=\"2\"/> thirds <mark name=\"4\"/> kilograms <mark name=\"5\"/> kilometers </prosody></speak>"
+    },
+    "UnitNumb_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> kilometer <break time=\"250ms\"/> <mark name=\"2\"/> 2 <mark name=\"3\"/> kilograms <mark name=\"4\"/> kilometers </prosody></speak>"
+    },
+    "UnitTriple": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> kilometer <mark name=\"2\"/> kilograms <mark name=\"3\"/> seconds <mark name=\"4\"/> plus <mark name=\"5\"/> 2 <mark name=\"6\"/> kilometers <mark name=\"7\"/> kilograms <mark name=\"8\"/> seconds <mark name=\"9\"/> plus <mark name=\"10\"/> 0 <mark name=\"11\"/> kilometers <mark name=\"12\"/> kilograms <mark name=\"13\"/> seconds <mark name=\"14\"/> plus <mark name=\"15\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> kilometers <mark name=\"17\"/> kilograms <mark name=\"18\"/> seconds <mark name=\"19\"/> plus </prosody></speak>"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> dollar </prosody></speak>"
+    },
+    "CurrencySingular_0_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingular_0_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> dollars <mark name=\"0\"/> 1 </prosody></speak>"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 1 <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingular_1_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars <mark name=\"1\"/> 1 </prosody></speak>"
+    },
+    "CurrencySingular_1_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars <mark name=\"1\"/> 1 </prosody></speak>"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingle_0_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingle_0_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingle_1_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencySingle_1_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> dollars </prosody></speak>"
+    },
+    "CurrencyPlural_0_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> dollars </prosody></speak>"
+    },
+    "CurrencyPlural_0_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> dollars <mark name=\"0\"/> 2 </prosody></speak>"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 2 <mark name=\"0\"/> dollars </prosody></speak>"
+    },
+    "CurrencyPlural_1_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars <mark name=\"1\"/> 2 </prosody></speak>"
+    },
+    "CurrencyPlural_1_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dollars <mark name=\"1\"/> 2 </prosody></speak>"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> dollar <mark name=\"2\"/> plus <mark name=\"3\"/> 2 <mark name=\"4\"/> dollars <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> dollars <mark name=\"8\"/> plus <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> dollars </prosody></speak>"
+    },
+    "CurrencyMultitude_0_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> dollars <mark name=\"2\"/> plus <mark name=\"3\"/> 2 <mark name=\"4\"/> dollars <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> dollars <mark name=\"8\"/> plus <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> dollars </prosody></speak>"
+    },
+    "CurrencyMultitude_0_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> dollars <mark name=\"0\"/> 1 <mark name=\"2\"/> plus <mark name=\"4\"/> dollars <mark name=\"3\"/> 2 <mark name=\"5\"/> plus <mark name=\"7\"/> dollars <mark name=\"6\"/> 0 <mark name=\"8\"/> plus <mark name=\"10\"/> dollars <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> dollar <mark name=\"2\"/> plus <mark name=\"4\"/> 2 <mark name=\"3\"/> dollars <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> dollars <mark name=\"8\"/> plus <mark name=\"10\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"9\"/> dollars </prosody></speak>"
+    },
+    "CurrencyMultitude_1_Currency_Position": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> dollars <mark name=\"2\"/> plus <mark name=\"3\"/> dollars <mark name=\"4\"/> 2 <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> dollars <mark name=\"8\"/> plus <mark name=\"9\"/> dollars <mark name=\"10\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "CurrencyMultitude_1_Currency_Prefix": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> dollars <mark name=\"0\"/> 1 <mark name=\"2\"/> plus <mark name=\"3\"/> dollars <mark name=\"4\"/> 2 <mark name=\"5\"/> plus <mark name=\"7\"/> dollars <mark name=\"6\"/> 0 <mark name=\"8\"/> plus <mark name=\"9\"/> dollars <mark name=\"10\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> euro <mark name=\"2\"/> plus <mark name=\"3\"/> 2 <mark name=\"4\"/> euros <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> euros <mark name=\"8\"/> plus <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> euros </prosody></speak>"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> pound <mark name=\"2\"/> plus <mark name=\"3\"/> 2 <mark name=\"4\"/> pounds <mark name=\"5\"/> plus <mark name=\"6\"/> 0 <mark name=\"7\"/> pounds <mark name=\"8\"/> plus <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> pounds </prosody></speak>"
+    }
+  }
+}

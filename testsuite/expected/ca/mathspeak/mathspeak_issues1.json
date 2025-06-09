@@ -1,0 +1,274 @@
+{
+  "name": "CatalanMathspeakIssues1",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Catalan Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "locale": "ca",
+  "active": "MathspeakIssuesCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "començar valor absolut a finalitzar valor absolut"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "començar valor absolut a finalitzar valor absolut"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "valor absolut a finalitzar valor absolut"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "començar valor absolut a finalitzar valor absolut"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "començar valor absolut a finalitzar valor absolut"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "valor absolut a finalitzar valor absolut"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "menys començar fracció 5 entre 18 finalitzar fracció"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "menys començar frac 5 entre 18 finalitzar frac"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "menys començar frac 5 entre 18 finalitzar frac"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 grau"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 grau"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 grau"
+    },
+    "MixedIdentifier_default": {
+      "expected": "majúscula S i normal majúscula O subíndex 2 línia base més 6 normal majúscula H normal majúscula F fletxa dreta normal majúscula H subíndex 2 línia base majúscula S i normal majúscula F subíndex 6 línia base més 2 normal majúscula H subíndex 2 línia base normal majúscula O"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "majúscula S i normal majúscula O sub 2 base més 6 normal majúscula H normal majúscula F fletxa dreta normal majúscula H sub 2 base majúscula S i normal majúscula F sub 6 base més 2 normal majúscula H sub 2 base normal majúscula O"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "majúscula S i normal majúscula O sub 2 base més 6 normal majúscula H normal majúscula F fletxa dreta normal majúscula H sub 2 base majúscula S i normal majúscula F sub 6 base més 2 normal majúscula H sub 2 base normal majúscula O"
+    },
+    "ParenSuper_default": {
+      "expected": "parèntesi esquerre a parèntesi dret al quadrat"
+    },
+    "ParenSuper_brief": {
+      "expected": "parèntesi esquerre a parèntesi dret al quadrat"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "parèntesi esquerre a parèntesi dret al quadrat"
+    },
+    "ParenConvoluted_default": {
+      "expected": "parèntesi esquerre menys x al quadrat barra obliqua 2 parèntesi dret"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "parèntesi esquerre menys x al quadrat barra obliqua 2 parèntesi dret"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "parèntesi esquerre menys x al quadrat barra obliqua 2 parèntesi dret"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c subíndex 1 línia base h superíndex 4 menos 2 s línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció menor o igual que c subíndex 2 línia base h superíndex 4 menos 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c sub 1 base h sup 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que c sub 2 base h sup 4 menos 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c sub 1 base h sup 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que c sub 2 base h sup 4 menos 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c subíndex 1 línia base h superíndex 4 menos 2 s línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció igual c subíndex 2 línia base h superíndex 4 menos 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c sub 1 base h sup 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual c sub 2 base h sup 4 menos 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c sub 1 base h sup 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual c sub 2 base h sup 4 menos 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h subíndex s línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció menor o igual que h subíndex s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h sub s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que h sub s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h sub s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que h sub s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h subíndex s línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció igual h subíndex s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h sub s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual h sub s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h sub s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual h sub s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h subíndex s superíndex t línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció menor o igual que h subíndex s superíndex t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h sub s sup t base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que h sub s sup t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h sub s sup t base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que h sub s sup t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h subíndex s superíndex t línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció igual h subíndex s superíndex t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h sub s sup t base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual h sub s sup t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h sub s sup t base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual h sub s sup t"
+    },
+    "SquareWithText_default": {
+      "expected": "començar fracció area of triangle entre area of square finalitzar fracció igual començar fracció 1 unit al quadrat entre 16 units al cub finalitzar fracció"
+    },
+    "SquareWithText_brief": {
+      "expected": "començar frac area of triangle entre area of square finalitzar frac igual començar frac 1 unit al quadrat entre 16 units al cub finalitzar frac"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "començar frac area of triangle entre area of square finalitzar frac igual començar frac 1 unit al quadrat entre 16 units al cub finalitzar frac"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square superíndex 1 línia base 1 unit superíndex 2 línia base 16 units superíndex 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square sup 1 base 1 unit sup 2 base 16 units sup 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square sup 1 base 1 unit sup 2 base 16 units sup 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle superíndex 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle sup 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle sup 2"
+    },
+    "LabelledRow_default": {
+      "expected": "començar esquema primera fila  amb etiqueta parèntesi esquerre 1 parèntesi dret finalitzar etiqueta primera columna a segona columna b finalitzar esquema"
+    },
+    "LabelledRow_brief": {
+      "expected": "començar esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret primera columna a segona columna b finalitzar esquema"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret primera columna a segona columna b finalitzar esquema"
+    },
+    "LabelledLine_default": {
+      "expected": "començar esquema primera fila  amb etiqueta parèntesi esquerre 1 parèntesi dret finalitzar etiqueta a finalitzar esquema"
+    },
+    "LabelledLine_brief": {
+      "expected": "començar esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret a finalitzar esquema"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret a finalitzar esquema"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "començar esquema primera fila  amb etiqueta parèntesi esquerre 1 parèntesi dret finalitzar etiqueta espai finalitzar esquema"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "començar esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret espai finalitzar esquema"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret espai finalitzar esquema"
+    },
+    "EmptyLine_default": {
+      "expected": "començar esquema primera fila  espai finalitzar esquema"
+    },
+    "EmptyLine_brief": {
+      "expected": "començar esquema primera fila  espai finalitzar esquema"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "esquema primera fila  espai finalitzar esquema"
+    },
+    "EmptyRow_default": {
+      "expected": "començar esquema primera fila primera columna a segona columna b segona fila  espai finalitzar esquema"
+    },
+    "EmptyRow_brief": {
+      "expected": "començar esquema primera fila primera columna a segona columna b segona fila  espai finalitzar esquema"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "esquema primera fila primera columna a segona columna b segona fila  espai finalitzar esquema"
+    },
+    "EmptyCell_default": {
+      "expected": "començar esquema primera fila  espai finalitzar esquema"
+    },
+    "EmptyCell_brief": {
+      "expected": "començar esquema primera fila  espai finalitzar esquema"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "esquema primera fila  espai finalitzar esquema"
+    },
+    "TextLabelledLine_default": {
+      "expected": "començar esquema primera fila  amb etiqueta parèntesi esquerre 1 parèntesi dret finalitzar etiqueta a finalitzar esquema"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "començar esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret a finalitzar esquema"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "esquema primera fila  etiqueta 1 a finalitzar esquema"
+    },
+    "TextLabelledRow_default": {
+      "expected": "començar esquema primera fila  amb etiqueta parèntesi esquerre 1 parèntesi dret finalitzar etiqueta primera columna a segona columna b finalitzar esquema"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "començar esquema primera fila  etiqueta parèntesi esquerre 1 parèntesi dret primera columna a segona columna b finalitzar esquema"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "esquema primera fila  etiqueta 1 primera columna a segona columna b finalitzar esquema"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a barra"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a barra"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a barra"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a subbarra"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a subbarra"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a subbarra"
+    },
+    "PrefixopSquare_default": {
+      "expected": "diferencial parcial al quadrat x"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "diferencial parcial al quadrat x"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "diferencial parcial al quadrat x"
+    },
+    "PrefixopCube_default": {
+      "expected": "diferencial parcial al cub x"
+    },
+    "PrefixopCube_brief": {
+      "expected": "diferencial parcial al cub x"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "diferencial parcial al cub x"
+    },
+    "Vector_default": {
+      "expected": "començar matriu 3 per 1 primera fila  a segona fila  b tercera fila  c finalitzar matriu"
+    },
+    "Vector_brief": {
+      "expected": "començar matriu 3 per 1 primera fila  a segona fila  b tercera fila  c finalitzar matriu"
+    },
+    "Vector_sbrief": {
+      "expected": "matriu 3 per 1 primera   a segona   b tercera   c finalitzar matriu"
+    }
+  }
+}

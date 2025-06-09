@@ -1,0 +1,155 @@
+{
+  "name": "NemethDefaultAlphabetNegativeCircled",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet negative-circled tests.",
+  "tests": {
+    "⓿": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠴⠻"
+    },
+    "❶": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠻"
+    },
+    "❷": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠆⠻"
+    },
+    "❸": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠒⠻"
+    },
+    "❹": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠲⠻"
+    },
+    "❺": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠢⠻"
+    },
+    "❻": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠖⠻"
+    },
+    "❼": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠶⠻"
+    },
+    "❽": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠦⠻"
+    },
+    "❾": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠔⠻"
+    },
+    "❿": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠴⠻"
+    },
+    "⓫": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠂⠻"
+    },
+    "⓬": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠆⠻"
+    },
+    "⓭": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠒⠻"
+    },
+    "⓮": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠲⠻"
+    },
+    "⓯": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠢⠻"
+    },
+    "⓰": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠖⠻"
+    },
+    "⓱": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠶⠻"
+    },
+    "⓲": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠦⠻"
+    },
+    "⓳": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠂⠔⠻"
+    },
+    "⓴": {
+      "expected": "⠫⠸⠉⠸⠫⠼⠆⠴⠻"
+    },
+    "🅐": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠁⠻"
+    },
+    "🅑": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠃⠻"
+    },
+    "🅒": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠉⠻"
+    },
+    "🅓": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠙⠻"
+    },
+    "🅔": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠑⠻"
+    },
+    "🅕": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠋⠻"
+    },
+    "🅖": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠛⠻"
+    },
+    "🅗": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠓⠻"
+    },
+    "🅘": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠊⠻"
+    },
+    "🅙": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠚⠻"
+    },
+    "🅚": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠅⠻"
+    },
+    "🅛": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠇⠻"
+    },
+    "🅜": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠍⠻"
+    },
+    "🅝": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠝⠻"
+    },
+    "🅞": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠕⠻"
+    },
+    "🅟": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠏⠻"
+    },
+    "🅠": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠟⠻"
+    },
+    "🅡": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠗⠻"
+    },
+    "🅢": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠎⠻"
+    },
+    "🅣": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠞⠻"
+    },
+    "🅤": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠥⠻"
+    },
+    "🅥": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠧⠻"
+    },
+    "🅦": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠺⠻"
+    },
+    "🅧": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠭⠻"
+    },
+    "🅨": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠽⠻"
+    },
+    "🅩": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠵⠻"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakLogarithms",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_logarithms.json",
+  "information": "Italian Clearspeak Logarithms rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Log001": {
+      "expected": "logaritmo di x"
+    },
+    "Log002": {
+      "expected": "logaritmo base 10 di, x"
+    },
+    "Log003": {
+      "expected": "logaritmo base b di, a x, uguale a, logaritmo base b di, a, più, logaritmo base b di, x"
+    },
+    "Log004": {
+      "expected": "logaritmo base b di, S fratto T, uguale a, logaritmo base b di, S, meno, logaritmo base b di, T"
+    },
+    "Log005": {
+      "expected": "logaritmo base b di, parentesi tonda aperta, x alla k-esima potenza, parentesi tonda chiusa, uguale a k, logaritmo base b di, x"
+    },
+    "Log006": {
+      "expected": "10 elevato alla logaritmo base 10 di, x; uguale a x"
+    },
+    "Log007": {
+      "expected": "logaritmo base 10 di, 10 alla x-esima potenza, uguale a x"
+    },
+    "Log008": {
+      "expected": "10 elevato alla logaritmo base 10 di, 5; uguale a 5"
+    },
+    "Log009": {
+      "expected": "logaritmo base 10 di, 10 cubo, uguale a 3"
+    },
+    "Log010": {
+      "expected": "logaritmo base a di, x, uguale a, logaritmo base b di, x, fratto, logaritmo base b di, a"
+    },
+    "Log011": {
+      "expected": "logaritmo base 10 di, 18, fratto, logaritmo base 10 di, 3, uguale a, logaritmo base 3 di, 18"
+    },
+    "Log012": {
+      "expected": "logaritmo di x fratto logaritmo di a"
+    },
+    "Log013": {
+      "expected": "logaritmo di, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "Log014": {
+      "expected": "logaritmo di, parentesi tonda aperta, x più 1, parentesi tonda chiusa, quadrato"
+    },
+    "Log015": {
+      "expected": "logaritmo di x y"
+    },
+    "Log016": {
+      "expected": "frazione con numeratore, logaritmo di, parentesi tonda aperta, x più 1, parentesi tonda chiusa, e denominatore, logaritmo di, parentesi tonda aperta, x più 2, parentesi tonda chiusa"
+    },
+    "Log017": {
+      "expected": "frazione con numeratore, logaritmo base 6 di, parentesi tonda aperta, x più 1, parentesi tonda chiusa, e denominatore, logaritmo base 6 di, parentesi tonda aperta, x più 2, parentesi tonda chiusa"
+    },
+    "Log018": {
+      "expected": "frazione con numeratore logaritmo di 40 più logaritmo di 60, e denominatore logaritmo di 5"
+    },
+    "Log019": {
+      "expected": "frazione con numeratore, logaritmo base 3 di, 40, più, logaritmo base 3 di, 60, e denominatore, logaritmo base 3 di, 5"
+    },
+    "Log020": {
+      "expected": "logaritmo di, parentesi tonda aperta, 3 alla quarta potenza, 12 alla nona potenza, parentesi tonda chiusa, uguale a 4 logaritmo di 3, più 9 logaritmo di 12"
+    },
+    "Log021": {
+      "expected": "logaritmo di, parentesi tonda aperta, x fratto y, parentesi tonda chiusa"
+    },
+    "Log022": {
+      "expected": "logaritmo di, parentesi tonda aperta, frazione con numeratore 3 alla quarta potenza, e denominatore 8 alla decima potenza, parentesi tonda chiusa, uguale a 4 logaritmo di 3, meno 10 logaritmo di 8"
+    },
+    "Log023": {
+      "expected": "10 elevato alla logaritmo di x"
+    },
+    "NatLog001": {
+      "expected": "l n di x"
+    },
+    "NatLog002": {
+      "expected": "l n di x, meno l n di, parentesi tonda aperta, x meno 1, parentesi tonda chiusa, uguale a l n di, parentesi tonda aperta, frazione con numeratore x, e denominatore x meno 1, parentesi tonda chiusa"
+    },
+    "NatLog003": {
+      "expected": "l n di, parentesi tonda aperta, e alla x-esima potenza, parentesi tonda chiusa, uguale a x"
+    },
+    "NatLog004": {
+      "expected": "e elevato alla l n di x; uguale a x"
+    },
+    "NatLog005": {
+      "expected": "l n di, parentesi tonda aperta, e alla x-esima potenza, parentesi tonda chiusa, uguale a x"
+    },
+    "NatLog006": {
+      "expected": "e elevato alla l n di 4; uguale a 4"
+    },
+    "NatLog007": {
+      "expected": "l n di 40, fratto l n di 5, uguale a, logaritmo base 5 di, 40"
+    },
+    "NatLog008": {
+      "expected": "frazione con numeratore l n di 40, più l n di 60, e denominatore l n di 5"
+    },
+    "NatLog009": {
+      "expected": "logaritmo naturale di x"
+    },
+    "NatLog010": {
+      "expected": "logaritmo naturale di x, meno, logaritmo naturale di, parentesi tonda aperta, x meno 1, parentesi tonda chiusa, uguale a, logaritmo naturale di, parentesi tonda aperta, frazione con numeratore x, e denominatore x meno 1, parentesi tonda chiusa"
+    },
+    "NatLog011": {
+      "expected": "logaritmo naturale di, parentesi tonda aperta, e alla x-esima potenza, parentesi tonda chiusa, uguale a x"
+    },
+    "NatLog012": {
+      "expected": "e elevato alla logaritmo naturale di x; uguale a x"
+    },
+    "NatLog013": {
+      "expected": "logaritmo naturale di, parentesi tonda aperta, e alla x-esima potenza, parentesi tonda chiusa, uguale a x"
+    },
+    "NatLog014": {
+      "expected": "e elevato alla logaritmo naturale di 4; uguale a 4"
+    },
+    "NatLog015": {
+      "expected": "logaritmo naturale di 40, fratto logaritmo naturale di 5, uguale a, logaritmo base 5 di, 40"
+    },
+    "NatLog016": {
+      "expected": "frazione con numeratore logaritmo naturale di 40, più logaritmo naturale di 60, e denominatore logaritmo naturale di 5"
+    }
+  }
+}

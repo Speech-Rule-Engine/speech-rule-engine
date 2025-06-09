@@ -1,0 +1,285 @@
+{
+  "name": "SwedishClearspeakCoverage",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "Swedish Clearspeak Coverage tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f av, g av x"
+    },
+    "ApplSimple_1": {
+      "expected": "f av, g av x, är lika med f av x, plus g av x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "sinus x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 rader, rad 1: a. rad 2: tom"
+    },
+    "Empty_Line_1": {
+      "expected": "2 rader, rad 1: a. rad 2: tom"
+    },
+    "Empty_Line_2": {
+      "expected": "2 rader, rad 1: a. rad 2: tom"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 rader, rad 1: a; är lika med; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 rader, rad 1: a; är lika med; b. rad 2: tom"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 rader, rad 1: a; är lika med; b. rad 2: tom"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 rader, rad 1: a; är lika med; b. rad 2: 1; tom; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 grader, 10 minuter, 20 sekunder"
+    },
+    "Angle_1_default": {
+      "expected": "1 grad, 10 minuter, 20 sekunder"
+    },
+    "Angle_2_default": {
+      "expected": "45 grader, 1 minut, 20 sekunder"
+    },
+    "Angle_3_default": {
+      "expected": "45 grader, 10 minuter, 1 sekund"
+    },
+    "Angle_4_default": {
+      "expected": "1 fot, 20 tum"
+    },
+    "Angle_5_default": {
+      "expected": "10 fot, 1 tum"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 grader, 10 minuter, 20 sekunder"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 grad, 10 minuter, 20 sekunder"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 grader, 1 minut, 20 sekunder"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 grader, 10 minuter, 1 sekund"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 minut, 20 sekunder"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 minuter, 1 sekund"
+    },
+    "Angle_0_Length": {
+      "expected": "45 grader, 10 minuter, 20 sekunder"
+    },
+    "Angle_1_Length": {
+      "expected": "1 grad, 10 minuter, 20 sekunder"
+    },
+    "Angle_2_Length": {
+      "expected": "45 grader, 1 minut, 20 sekunder"
+    },
+    "Angle_3_Length": {
+      "expected": "45 grader, 10 minuter, 1 sekund"
+    },
+    "Angle_4_Length": {
+      "expected": "1 fot, 20 tum"
+    },
+    "Angle_5_Length": {
+      "expected": "10 fot, 1 tum"
+    },
+    "Enclose_0": {
+      "expected": "omsluten av låda 12"
+    },
+    "Enclose_1": {
+      "expected": "överstruket 12"
+    },
+    "Enclose_2": {
+      "expected": "12 överstruket med 2"
+    },
+    "Enclose_3": {
+      "expected": "12 överstruket med 2"
+    },
+    "Enclose_4": {
+      "expected": "12 överstruket med 2"
+    },
+    "Enclose_5": {
+      "expected": "12 överstruket med 2"
+    },
+    "Enclose_6": {
+      "expected": "omsluten av låda 12 slut omsluten"
+    },
+    "Enclose_7": {
+      "expected": "överstruket 12 slut överstrykning"
+    },
+    "Enclose_8": {
+      "expected": "12 överstruket med 2 slut överstrykning"
+    },
+    "Enclose_9": {
+      "expected": "12 överstruket med 2 slut överstrykning"
+    },
+    "Enclose_10": {
+      "expected": "12 överstruket med 2 slut överstrykning"
+    },
+    "Enclose_11": {
+      "expected": "12 överstruket med 2 slut överstrykning"
+    },
+    "EncloseSpecial_0": {
+      "expected": "vertikalt streck A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A horisontellt streck"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A vertikalt streck"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A över horisontellt streck"
+    },
+    "NestedRoots_0": {
+      "expected": "kvadratroten av, kubikroten av a, plus b"
+    },
+    "NestedRoots_1": {
+      "expected": "kvadratroten av, fjärde roten av a, plus b"
+    },
+    "NestedRoots_2": {
+      "expected": "kvadratroten av, kvadratroten av a, plus b"
+    },
+    "NestedRoots_3": {
+      "expected": "den positiva kvadratroten av, den positiva kvadratroten av a, plus b"
+    },
+    "NestedRoots_4": {
+      "expected": "den positiva kvadratroten av, den positiva kvadratroten av a, plus b, slut rot"
+    },
+    "NestedRoots_5": {
+      "expected": "den positiva kvadratroten av, den negativa kvadratroten av a, slut rot, plus b, slut rot"
+    },
+    "Tensor_0": {
+      "expected": "vänster nedre index a vänster övre index b x höger nedre index c höger övre index d"
+    },
+    "Tensor_1": {
+      "expected": "vänster nedre index a b vänster övre index g h x höger nedre index c d höger övre index e f"
+    },
+    "Tensor_2": {
+      "expected": "vänster nedre index a vänster övre index b x; höger övre index d"
+    },
+    "Tensor_3": {
+      "expected": "vänster nedre index a vänster övre index b x höger nedre index c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; vänster övre index b x höger nedre index c höger övre index d"
+    },
+    "Tensor_5": {
+      "expected": "vänster nedre index a; x höger nedre index c höger övre index d"
+    },
+    "Set_0": {
+      "expected": "hela mängden x inte i A med B"
+    },
+    "Set_1": {
+      "expected": "hela mängden x inte tillhörande A med B"
+    },
+    "Set_2": {
+      "expected": "hela mängden x inte ett element av A med B"
+    },
+    "Set_3": {
+      "expected": "hela mängden x inte medlem av A med B"
+    },
+    "Set_4": {
+      "expected": "mängden B"
+    },
+    "Set_5": {
+      "expected": "den tomma mängden"
+    },
+    "NamedSet_0": {
+      "expected": "de positiva rationella talen"
+    },
+    "NamedSet_1": {
+      "expected": "de positiva rationella talen"
+    },
+    "NamedSet_2": {
+      "expected": "de negativa rationella talen"
+    },
+    "NamedSet_3": {
+      "expected": "de negativa rationella talen"
+    },
+    "NamedSet_4": {
+      "expected": "q-två"
+    },
+    "NamedSet_5": {
+      "expected": "q-två"
+    },
+    "NamedSet_6": {
+      "expected": "n-två"
+    },
+    "NamedSet_7": {
+      "expected": "n-två"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 fall, fall 1: f av x, är lika med minus x, if x mindre än 0. fall 2: f av x, är lika med x, if x större än eller lika med 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 begränsning, begränsning 1: f av x, är lika med minus x; if x mindre än 0. begränsning 2: f av x, är lika med x, if x större än eller lika med 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 delat med 20"
+    },
+    "UnitFraction": {
+      "expected": "2 kilometer delat med b"
+    },
+    "Decimal": {
+      "expected": "decimalbråk 1 komma 4 följt av upprepande siffra 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 sådan att 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "determinanten av 2 gånger 2 matrisen. rad 1: 2, 1 rad 2: 7, 5. slut determinant"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 upphöjt till 2 kvadrat"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 upphöjt till I kvadrat"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 upphöjt till två tredjedelar kvadrat"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 upphöjt till 2 kubik"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 upphöjt till I kubik"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 upphöjt till två tredjedelar kubik"
+    },
+    "MultiRel": {
+      "expected": "a mindre än eller lika med b är lika med c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 upphöjt till sinus av, öppna, 2 plus x, stäng"
+    },
+    "CompositeFunctionFences": {
+      "expected": "öppna, f plus g, stäng, av, öppna, 2 plus x, stäng"
+    },
+    "LimUpper": {
+      "expected": "summa under I"
+    },
+    "Overscript": {
+      "expected": "A under B"
+    },
+    "DetFemale": {
+      "expected": "determinant A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x upphöjt till A"
+    }
+  }
+}

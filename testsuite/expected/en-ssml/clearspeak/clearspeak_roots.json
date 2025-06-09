@@ -1,0 +1,425 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakRoots",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "English Clearspeak Roots rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> 2 </prosody></speak>"
+    },
+    "Root002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus or minus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus or plus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> 2 </prosody></speak>"
+    },
+    "Root006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 </prosody></speak>"
+    },
+    "Root008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 </prosody></speak>"
+    },
+    "Root009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 </prosody></speak>"
+    },
+    "Root011a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 </prosody></speak>"
+    },
+    "Root012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Root013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> the square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> close paren <break time=\"250ms\"/> <mark name=\"5\"/> squared </prosody></speak>"
+    },
+    "Root014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> the square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"6\"/> squared </prosody></speak>"
+    },
+    "Root015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> squared </prosody></speak>"
+    },
+    "Root016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared </prosody></speak>"
+    },
+    "Root017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> squared </prosody></speak>"
+    },
+    "Root018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"18\"/> the square root of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> squared <mark name=\"6\"/> plus <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> squared </prosody></speak>"
+    },
+    "Root019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"28\"/> the square root of <break time=\"250ms\"/> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> sub 2 <break time=\"250ms\"/> <mark name=\"4\"/> minus <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> sub 1 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> squared <mark name=\"13\"/> plus <break time=\"250ms\"/> <mark name=\"14\"/> open paren <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> sub 2 <break time=\"250ms\"/> <mark name=\"18\"/> minus <break time=\"250ms\"/> <mark name=\"19\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"20\"/> sub 1 <break time=\"250ms\"/> <mark name=\"23\"/> close paren <break time=\"250ms\"/> <mark name=\"25\"/> squared </prosody></speak>"
+    },
+    "Root020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the square root of <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody></speak>"
+    },
+    "Root021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the square root of <break time=\"250ms\"/> <mark name=\"0\"/> 23 <mark name=\"1\"/> over 66 </prosody></speak>"
+    },
+    "Root022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the square root of <break time=\"250ms\"/> <mark name=\"11\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "Root023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"21\"/> the <mark name=\"16\"/> fraction with numerator <mark name=\"0\"/> negative <mark name=\"1\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"2\"/> plus or minus <mark name=\"14\"/> the square root of <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> squared <mark name=\"6\"/> minus <prosody rate=\"+25%\"> <mark name=\"7\"/> 4 <mark name=\"8\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"9\"/> <say-as interpret-as=\"character\">c</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"20\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"17\"/> 2 <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> </prosody> </prosody></speak>"
+    },
+    "Root024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> 2 </prosody></speak>"
+    },
+    "Root025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"3\"/> the positive square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus or minus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus or plus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> 2 </prosody></speak>"
+    },
+    "Root029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"3\"/> the positive square root of <mark name=\"2\"/> 2 </prosody></speak>"
+    },
+    "Root030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 </prosody></speak>"
+    },
+    "Root031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 </prosody></speak>"
+    },
+    "Root032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 </prosody></speak>"
+    },
+    "Root034a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 </prosody></speak>"
+    },
+    "Root035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Root036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> the positive square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> close paren <break time=\"250ms\"/> <mark name=\"5\"/> squared </prosody></speak>"
+    },
+    "Root037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> the negative square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> squared </prosody></speak>"
+    },
+    "Root038": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> the positive square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"6\"/> squared </prosody></speak>"
+    },
+    "Root039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> squared </prosody></speak>"
+    },
+    "Root040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared </prosody></speak>"
+    },
+    "Root041": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> squared </prosody></speak>"
+    },
+    "Root042": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"18\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> squared <mark name=\"6\"/> plus <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> squared </prosody></speak>"
+    },
+    "Root043": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"28\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> sub 2 <break time=\"250ms\"/> <mark name=\"4\"/> minus <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> sub 1 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> squared <mark name=\"13\"/> plus <break time=\"250ms\"/> <mark name=\"14\"/> open paren <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> sub 2 <break time=\"250ms\"/> <mark name=\"18\"/> minus <break time=\"250ms\"/> <mark name=\"19\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"20\"/> sub 1 <break time=\"250ms\"/> <mark name=\"23\"/> close paren <break time=\"250ms\"/> <mark name=\"25\"/> squared </prosody></speak>"
+    },
+    "Root044": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the positive square root of <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody></speak>"
+    },
+    "Root045": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"0\"/> 23 <mark name=\"1\"/> over 66 </prosody></speak>"
+    },
+    "Root046": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"11\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "Root047": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"21\"/> the <mark name=\"16\"/> fraction with numerator <mark name=\"0\"/> negative <mark name=\"1\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"2\"/> plus or minus <mark name=\"14\"/> the square root of <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> squared <mark name=\"6\"/> minus <prosody rate=\"+25%\"> <mark name=\"7\"/> 4 <mark name=\"8\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"9\"/> <say-as interpret-as=\"character\">c</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"20\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"17\"/> 2 <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> </prosody> </prosody></speak>"
+    },
+    "Root048": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root049": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root050": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus or minus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root051": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus or plus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root052": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root053": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root054": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root055": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root056": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root057": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root058": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root058a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"1\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 </prosody></speak>"
+    },
+    "Root059": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root060": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> the square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"3\"/> close paren <break time=\"250ms\"/> <mark name=\"5\"/> squared </prosody></speak>"
+    },
+    "Root061": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> the square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"6\"/> squared </prosody></speak>"
+    },
+    "Root062": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"1\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"2\"/> squared </prosody></speak>"
+    },
+    "Root063": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root064": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> squared <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root065": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"18\"/> the square root of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> squared <mark name=\"6\"/> plus <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> squared <break time=\"250ms\"/> <mark name=\"18\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root066": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"28\"/> the square root of <break time=\"250ms\"/> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> sub 2 <break time=\"250ms\"/> <mark name=\"4\"/> minus <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> sub 1 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> squared <mark name=\"13\"/> plus <break time=\"250ms\"/> <mark name=\"14\"/> open paren <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> sub 2 <break time=\"250ms\"/> <mark name=\"18\"/> minus <break time=\"250ms\"/> <mark name=\"19\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"20\"/> sub 1 <break time=\"250ms\"/> <mark name=\"23\"/> close paren <break time=\"250ms\"/> <mark name=\"25\"/> squared <break time=\"250ms\"/> <mark name=\"28\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root067": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the square root of <mark name=\"0\"/> one <mark name=\"1\"/> half <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root068": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the square root of <break time=\"250ms\"/> <mark name=\"0\"/> 23 <mark name=\"1\"/> over 66 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root069": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the square root of <break time=\"250ms\"/> <mark name=\"11\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"12\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root070": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"21\"/> the <mark name=\"16\"/> fraction with numerator <mark name=\"0\"/> negative <mark name=\"1\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"2\"/> plus or minus <mark name=\"14\"/> the square root of <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> squared <mark name=\"6\"/> minus <prosody rate=\"+25%\"> <mark name=\"7\"/> 4 <mark name=\"8\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"9\"/> <say-as interpret-as=\"character\">c</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"14\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"20\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"17\"/> 2 <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> </prosody> </prosody></speak>"
+    },
+    "Root071": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root072": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"3\"/> the positive square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root073": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus or minus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root074": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus or plus <mark name=\"3\"/> the square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root075": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root076": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"3\"/> the positive square root of <mark name=\"2\"/> 2 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root077": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root078": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <mark name=\"5\"/> the negative square root of <mark name=\"3\"/> 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root079": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root080": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the negative square root of <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Root081": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root081a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"1\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 </prosody></speak>"
+    },
+    "Root082": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the negative square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root083": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> the positive square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"3\"/> close paren <break time=\"250ms\"/> <mark name=\"5\"/> squared </prosody></speak>"
+    },
+    "Root084": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> the negative square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> squared </prosody></speak>"
+    },
+    "Root085": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"1\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"2\"/> squared </prosody></speak>"
+    },
+    "Root086": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root087": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> squared <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root088": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"18\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> squared <mark name=\"6\"/> plus <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> squared <break time=\"250ms\"/> <mark name=\"18\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root089": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"28\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> sub 2 <break time=\"250ms\"/> <mark name=\"4\"/> minus <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> sub 1 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> squared <mark name=\"13\"/> plus <break time=\"250ms\"/> <mark name=\"14\"/> open paren <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> sub 2 <break time=\"250ms\"/> <mark name=\"18\"/> minus <break time=\"250ms\"/> <mark name=\"19\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"20\"/> sub 1 <break time=\"250ms\"/> <mark name=\"23\"/> close paren <break time=\"250ms\"/> <mark name=\"25\"/> squared <break time=\"250ms\"/> <mark name=\"28\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root090": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the positive square root of <mark name=\"0\"/> one <mark name=\"1\"/> half <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root091": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"0\"/> 23 <mark name=\"1\"/> over 66 <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root092": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"11\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"12\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Root093": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"21\"/> the <mark name=\"16\"/> fraction with numerator <mark name=\"0\"/> negative <mark name=\"1\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"2\"/> plus or minus <mark name=\"14\"/> the square root of <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> squared <mark name=\"6\"/> minus <prosody rate=\"+25%\"> <mark name=\"7\"/> 4 <mark name=\"8\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"9\"/> <say-as interpret-as=\"character\">c</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"14\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"20\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"17\"/> 2 <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> </prosody> </prosody></speak>"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the cube root of <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "HighRoot002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fourth <mark name=\"1\"/> root of <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "HighRoot003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fifth <mark name=\"1\"/> root of 35 </prosody></speak>"
+    },
+    "HighRoot004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the ninth <mark name=\"1\"/> root of 146 </prosody></speak>"
+    },
+    "HighRoot005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the n-th <mark name=\"1\"/> root of <say-as interpret-as=\"character\">d</say-as> </prosody></speak>"
+    },
+    "HighRoot006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the m-th <mark name=\"1\"/> root of 243 </prosody></speak>"
+    },
+    "HighRoot007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the i-th <mark name=\"3\"/> root of <mark name=\"1\"/> 2 <mark name=\"2\"/> to the i-th <mark name=\"3\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "HighRoot008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the j-th <mark name=\"1\"/> root of 125 </prosody></speak>"
+    },
+    "HighRoot009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"3\"/> the cube root of <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "HighRoot010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"1\"/> the fourth <mark name=\"2\"/> root of <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "HighRoot011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the cube root of <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fourth <mark name=\"1\"/> root of <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fifth <mark name=\"1\"/> root of 35 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the ninth <mark name=\"1\"/> root of 146 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the n-th <mark name=\"1\"/> root of <say-as interpret-as=\"character\">d</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the m-th <mark name=\"1\"/> root of 243 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the i-th <mark name=\"3\"/> root of <mark name=\"1\"/> 2 <mark name=\"2\"/> to the i-th <mark name=\"3\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the j-th <mark name=\"1\"/> root of 125 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"3\"/> the cube root of <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"1\"/> the fourth <mark name=\"2\"/> root of <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the cube root of <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "HighRoot022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fourth <mark name=\"1\"/> root of <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "HighRoot023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fifth <mark name=\"1\"/> root of 35 </prosody></speak>"
+    },
+    "HighRoot024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the ninth <mark name=\"1\"/> root of 146 </prosody></speak>"
+    },
+    "HighRoot025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the n-th <mark name=\"1\"/> root of <say-as interpret-as=\"character\">d</say-as> </prosody></speak>"
+    },
+    "HighRoot026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the m-th <mark name=\"1\"/> root of 243 </prosody></speak>"
+    },
+    "HighRoot027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the i-th <mark name=\"3\"/> root of <mark name=\"1\"/> 2 <mark name=\"2\"/> to the i-th <mark name=\"3\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "HighRoot028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the j-th <mark name=\"1\"/> root of 125 </prosody></speak>"
+    },
+    "HighRoot029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"3\"/> the cube root of <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "HighRoot030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"1\"/> the fourth <mark name=\"2\"/> root of <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "HighRoot031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the cube root of <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fourth <mark name=\"1\"/> root of <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the fifth <mark name=\"1\"/> root of 35 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the ninth <mark name=\"1\"/> root of 146 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the n-th <mark name=\"1\"/> root of <say-as interpret-as=\"character\">d</say-as> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the m-th <mark name=\"1\"/> root of 243 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the i-th <mark name=\"3\"/> root of <mark name=\"1\"/> 2 <mark name=\"2\"/> to the i-th <mark name=\"3\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot038": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the j-th <mark name=\"1\"/> root of 125 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"3\"/> the cube root of <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "HighRoot040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> negative <mark name=\"1\"/> the fourth <mark name=\"2\"/> root of <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"3\" kind=\"LAST\"/> end root </prosody></speak>"
+    }
+  }
+}

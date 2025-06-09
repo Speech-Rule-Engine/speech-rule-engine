@@ -1,0 +1,273 @@
+{
+  "name": "EnglishMathspeakIssues1",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "English Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesEnglish",
+  "exclude": [],
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> StartAbsoluteValue <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndAbsoluteValue </prosody></speak>"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> StartAbsoluteValue <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndAbsoluteValue </prosody></speak>"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> AbsoluteValue <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndAbsoluteValue </prosody></speak>"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> StartAbsoluteValue <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndAbsoluteValue </prosody></speak>"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> StartAbsoluteValue <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndAbsoluteValue </prosody></speak>"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> AbsoluteValue <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndAbsoluteValue </prosody></speak>"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> negative <mark name=\"1\"/> five <mark name=\"2\"/> eighteenths </prosody></speak>"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> negative <mark name=\"1\"/> five <mark name=\"2\"/> eighteenths </prosody></speak>"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> negative <mark name=\"1\"/> five <mark name=\"2\"/> eighteenths </prosody></speak>"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 30 degree </prosody></speak>"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 30 degree </prosody></speak>"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 30 degree </prosody></speak>"
+    },
+    "MixedIdentifier_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"36\"/> upper S <mark name=\"37\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"1\"/> normal upper O <mark name=\"2\"/> 2 <mark name=\"4\"/> plus <mark name=\"5\"/> 6 <mark name=\"6\"/> normal upper H <mark name=\"7\"/> normal upper F <mark name=\"8\"/> right arrow <mark name=\"9\"/> normal upper H <mark name=\"10\"/> 2 <mark name=\"38\"/> upper S <mark name=\"39\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"13\"/> normal upper F <mark name=\"14\"/> 6 <mark name=\"16\"/> plus <mark name=\"17\"/> 2 <mark name=\"18\"/> normal upper H <mark name=\"19\"/> 2 <mark name=\"21\"/> normal upper O </prosody></speak>"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"36\"/> upper S <mark name=\"37\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"1\"/> normal upper O <mark name=\"2\"/> 2 <mark name=\"4\"/> plus <mark name=\"5\"/> 6 <mark name=\"6\"/> normal upper H <mark name=\"7\"/> normal upper F <mark name=\"8\"/> right arrow <mark name=\"9\"/> normal upper H <mark name=\"10\"/> 2 <mark name=\"38\"/> upper S <mark name=\"39\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"13\"/> normal upper F <mark name=\"14\"/> 6 <mark name=\"16\"/> plus <mark name=\"17\"/> 2 <mark name=\"18\"/> normal upper H <mark name=\"19\"/> 2 <mark name=\"21\"/> normal upper O </prosody></speak>"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"36\"/> upper S <mark name=\"37\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"1\"/> normal upper O <mark name=\"2\"/> 2 <mark name=\"4\"/> plus <mark name=\"5\"/> 6 <mark name=\"6\"/> normal upper H <mark name=\"7\"/> normal upper F <mark name=\"8\"/> R arrow <mark name=\"9\"/> normal upper H <mark name=\"10\"/> 2 <mark name=\"38\"/> upper S <mark name=\"39\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"13\"/> normal upper F <mark name=\"14\"/> 6 <mark name=\"16\"/> plus <mark name=\"17\"/> 2 <mark name=\"18\"/> normal upper H <mark name=\"19\"/> 2 <mark name=\"21\"/> normal upper O </prosody></speak>"
+    },
+    "ParenSuper_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> left parenthesis <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> right parenthesis <mark name=\"3\"/> squared </prosody></speak>"
+    },
+    "ParenSuper_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> left p'ren <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> right p'ren <mark name=\"3\"/> squared </prosody></speak>"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> L p'ren <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> R p'ren <mark name=\"3\"/> squared </prosody></speak>"
+    },
+    "ParenConvoluted_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> left parenthesis <mark name=\"6\"/> minus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> squared <mark name=\"5\"/> slash 2 right parenthesis </prosody></speak>"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> left p'ren <mark name=\"6\"/> minus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> squared <mark name=\"5\"/> slash 2 right p'ren </prosody></speak>"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> L p'ren <mark name=\"6\"/> minus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> squared <mark name=\"5\"/> slash 2 R p'ren </prosody></speak>"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> 1 <mark name=\"3\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> Superscript <mark name=\"4\"/> 4 <mark name=\"10\"/> minus <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"11\" kind=\"LAST\"/> Baseline <mark name=\"12\"/> less than or equals <mark name=\"18\"/> StartFraction <mark name=\"13\"/> 1 <mark name=\"17\"/> Over <mark name=\"14\"/> 2 <mark name=\"15\"/> upper T <mark name=\"18\" kind=\"LAST\"/> EndFraction <mark name=\"19\"/> less than or equals <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> 2 <mark name=\"23\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"30\"/> Superscript <mark name=\"24\"/> 4 <mark name=\"30\"/> minus <mark name=\"26\"/> 2 <mark name=\"27\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> 1 <mark name=\"3\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> Sup <mark name=\"4\"/> 4 <mark name=\"10\"/> minus <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"11\" kind=\"LAST\"/> Base <mark name=\"12\"/> less than or equals <mark name=\"18\"/> StartFrac <mark name=\"13\"/> 1 <mark name=\"17\"/> Over <mark name=\"14\"/> 2 <mark name=\"15\"/> upper T <mark name=\"18\" kind=\"LAST\"/> EndFrac <mark name=\"19\"/> less than or equals <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> 2 <mark name=\"23\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"30\"/> Sup <mark name=\"24\"/> 4 <mark name=\"30\"/> minus <mark name=\"26\"/> 2 <mark name=\"27\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> 1 <mark name=\"3\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> Sup <mark name=\"4\"/> 4 <mark name=\"10\"/> minus <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"11\" kind=\"LAST\"/> Base <mark name=\"12\"/> less than or equals <mark name=\"18\"/> Frac <mark name=\"13\"/> 1 <mark name=\"17\"/> Over <mark name=\"14\"/> 2 <mark name=\"15\"/> upper T <mark name=\"18\" kind=\"LAST\"/> EndFrac <mark name=\"19\"/> less than or equals <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> 2 <mark name=\"23\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"30\"/> Sup <mark name=\"24\"/> 4 <mark name=\"30\"/> minus <mark name=\"26\"/> 2 <mark name=\"27\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> 1 <mark name=\"3\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> Superscript <mark name=\"4\"/> 4 <mark name=\"10\"/> minus <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"11\" kind=\"LAST\"/> Baseline <mark name=\"12\"/> less than or equals <mark name=\"18\"/> StartFraction <mark name=\"13\"/> 1 <mark name=\"17\"/> Over <mark name=\"14\"/> 2 <mark name=\"15\"/> upper T <mark name=\"18\" kind=\"LAST\"/> EndFraction <mark name=\"19\"/> equals <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> 2 <mark name=\"23\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"30\"/> Superscript <mark name=\"24\"/> 4 <mark name=\"30\"/> minus <mark name=\"26\"/> 2 <mark name=\"27\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> 1 <mark name=\"3\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> Sup <mark name=\"4\"/> 4 <mark name=\"10\"/> minus <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"11\" kind=\"LAST\"/> Base <mark name=\"12\"/> less than or equals <mark name=\"18\"/> StartFrac <mark name=\"13\"/> 1 <mark name=\"17\"/> Over <mark name=\"14\"/> 2 <mark name=\"15\"/> upper T <mark name=\"18\" kind=\"LAST\"/> EndFrac <mark name=\"19\"/> equals <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> 2 <mark name=\"23\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"30\"/> Sup <mark name=\"24\"/> 4 <mark name=\"30\"/> minus <mark name=\"26\"/> 2 <mark name=\"27\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> 1 <mark name=\"3\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> Sup <mark name=\"4\"/> 4 <mark name=\"10\"/> minus <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"11\" kind=\"LAST\"/> Base <mark name=\"12\"/> less than or equals <mark name=\"18\"/> Frac <mark name=\"13\"/> 1 <mark name=\"17\"/> Over <mark name=\"14\"/> 2 <mark name=\"15\"/> upper T <mark name=\"18\" kind=\"LAST\"/> EndFrac <mark name=\"19\"/> equals <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> 2 <mark name=\"23\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"30\"/> Sup <mark name=\"24\"/> 4 <mark name=\"30\"/> minus <mark name=\"26\"/> 2 <mark name=\"27\"/> <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\" kind=\"LAST\"/> Baseline <mark name=\"3\"/> less than or equals <mark name=\"9\"/> StartFraction <mark name=\"4\"/> 1 <mark name=\"8\"/> Over <mark name=\"5\"/> 2 <mark name=\"6\"/> upper T <mark name=\"9\" kind=\"LAST\"/> EndFraction <mark name=\"10\"/> less than or equals <mark name=\"11\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> Subscript <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\" kind=\"LAST\"/> Base <mark name=\"3\"/> less than or equals <mark name=\"9\"/> StartFrac <mark name=\"4\"/> 1 <mark name=\"8\"/> Over <mark name=\"5\"/> 2 <mark name=\"6\"/> upper T <mark name=\"9\" kind=\"LAST\"/> EndFrac <mark name=\"10\"/> less than or equals <mark name=\"11\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> Sub <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\" kind=\"LAST\"/> Base <mark name=\"3\"/> less than or equals <mark name=\"9\"/> Frac <mark name=\"4\"/> 1 <mark name=\"8\"/> Over <mark name=\"5\"/> 2 <mark name=\"6\"/> upper T <mark name=\"9\" kind=\"LAST\"/> EndFrac <mark name=\"10\"/> less than or equals <mark name=\"11\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> Sub <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\" kind=\"LAST\"/> Baseline <mark name=\"3\"/> less than or equals <mark name=\"9\"/> StartFraction <mark name=\"4\"/> 1 <mark name=\"8\"/> Over <mark name=\"5\"/> 2 <mark name=\"6\"/> upper T <mark name=\"9\" kind=\"LAST\"/> EndFraction <mark name=\"10\"/> equals <mark name=\"11\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> Subscript <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\" kind=\"LAST\"/> Base <mark name=\"3\"/> less than or equals <mark name=\"9\"/> StartFrac <mark name=\"4\"/> 1 <mark name=\"8\"/> Over <mark name=\"5\"/> 2 <mark name=\"6\"/> upper T <mark name=\"9\" kind=\"LAST\"/> EndFrac <mark name=\"10\"/> equals <mark name=\"11\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> Sub <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\" kind=\"LAST\"/> Base <mark name=\"3\"/> less than or equals <mark name=\"9\"/> Frac <mark name=\"4\"/> 1 <mark name=\"8\"/> Over <mark name=\"5\"/> 2 <mark name=\"6\"/> upper T <mark name=\"9\" kind=\"LAST\"/> EndFrac <mark name=\"10\"/> equals <mark name=\"11\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> Sub <say-as interpret-as=\"character\">s</say-as> </prosody></speak>"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\"/> Superscript <say-as interpret-as=\"character\">t</say-as> <mark name=\"4\" kind=\"LAST\"/> Baseline <mark name=\"5\"/> less than or equals <mark name=\"11\"/> StartFraction <mark name=\"6\"/> 1 <mark name=\"10\"/> Over <mark name=\"7\"/> 2 <mark name=\"8\"/> upper T <mark name=\"11\" kind=\"LAST\"/> EndFraction <mark name=\"12\"/> less than or equals <mark name=\"13\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> Subscript <say-as interpret-as=\"character\">s</say-as> <mark name=\"15\"/> Superscript <say-as interpret-as=\"character\">t</say-as> </prosody></speak>"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">t</say-as> <mark name=\"4\" kind=\"LAST\"/> Base <mark name=\"5\"/> less than or equals <mark name=\"11\"/> StartFrac <mark name=\"6\"/> 1 <mark name=\"10\"/> Over <mark name=\"7\"/> 2 <mark name=\"8\"/> upper T <mark name=\"11\" kind=\"LAST\"/> EndFrac <mark name=\"12\"/> less than or equals <mark name=\"13\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"15\"/> Sup <say-as interpret-as=\"character\">t</say-as> </prosody></speak>"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">t</say-as> <mark name=\"4\" kind=\"LAST\"/> Base <mark name=\"5\"/> less than or equals <mark name=\"11\"/> Frac <mark name=\"6\"/> 1 <mark name=\"10\"/> Over <mark name=\"7\"/> 2 <mark name=\"8\"/> upper T <mark name=\"11\" kind=\"LAST\"/> EndFrac <mark name=\"12\"/> less than or equals <mark name=\"13\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"15\"/> Sup <say-as interpret-as=\"character\">t</say-as> </prosody></speak>"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\"/> Superscript <say-as interpret-as=\"character\">t</say-as> <mark name=\"4\" kind=\"LAST\"/> Baseline <mark name=\"5\"/> less than or equals <mark name=\"11\"/> StartFraction <mark name=\"6\"/> 1 <mark name=\"10\"/> Over <mark name=\"7\"/> 2 <mark name=\"8\"/> upper T <mark name=\"11\" kind=\"LAST\"/> EndFraction <mark name=\"12\"/> equals <mark name=\"13\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> Subscript <say-as interpret-as=\"character\">s</say-as> <mark name=\"15\"/> Superscript <say-as interpret-as=\"character\">t</say-as> </prosody></speak>"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">t</say-as> <mark name=\"4\" kind=\"LAST\"/> Base <mark name=\"5\"/> less than or equals <mark name=\"11\"/> StartFrac <mark name=\"6\"/> 1 <mark name=\"10\"/> Over <mark name=\"7\"/> 2 <mark name=\"8\"/> upper T <mark name=\"11\" kind=\"LAST\"/> EndFrac <mark name=\"12\"/> equals <mark name=\"13\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"15\"/> Sup <say-as interpret-as=\"character\">t</say-as> </prosody></speak>"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">t</say-as> <mark name=\"4\" kind=\"LAST\"/> Base <mark name=\"5\"/> less than or equals <mark name=\"11\"/> Frac <mark name=\"6\"/> 1 <mark name=\"10\"/> Over <mark name=\"7\"/> 2 <mark name=\"8\"/> upper T <mark name=\"11\" kind=\"LAST\"/> EndFrac <mark name=\"12\"/> equals <mark name=\"13\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> Sub <say-as interpret-as=\"character\">s</say-as> <mark name=\"15\"/> Sup <say-as interpret-as=\"character\">t</say-as> </prosody></speak>"
+    },
+    "SquareWithText_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> StartFraction <mark name=\"0\"/> area of triangle <mark name=\"1\"/> Over area of square <mark name=\"2\" kind=\"LAST\"/> EndFraction <mark name=\"3\"/> equals <mark name=\"10\"/> StartFraction <mark name=\"4\"/> 1 unit <mark name=\"5\"/> squared <mark name=\"9\"/> Over <mark name=\"7\"/> 16 units <mark name=\"8\"/> cubed <mark name=\"10\" kind=\"LAST\"/> EndFraction </prosody></speak>"
+    },
+    "SquareWithText_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> StartFrac <mark name=\"0\"/> area of triangle <mark name=\"1\"/> Over area of square <mark name=\"2\" kind=\"LAST\"/> EndFrac <mark name=\"3\"/> equals <mark name=\"10\"/> StartFrac <mark name=\"4\"/> 1 unit <mark name=\"5\"/> squared <mark name=\"9\"/> Over <mark name=\"7\"/> 16 units <mark name=\"8\"/> cubed <mark name=\"10\" kind=\"LAST\"/> EndFrac </prosody></speak>"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Frac <mark name=\"0\"/> area of triangle <mark name=\"1\"/> Over area of square <mark name=\"2\" kind=\"LAST\"/> EndFrac <mark name=\"3\"/> equals <mark name=\"10\"/> Frac <mark name=\"4\"/> 1 unit <mark name=\"5\"/> squared <mark name=\"9\"/> Over <mark name=\"7\"/> 16 units <mark name=\"8\"/> cubed <mark name=\"10\" kind=\"LAST\"/> EndFrac </prosody></speak>"
+    },
+    "FootnoteWithText_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> area of triangle <mark name=\"2\"/> area of square <mark name=\"3\"/> Superscript 1 <mark name=\"4\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> 1 unit <mark name=\"7\"/> Superscript 2 <mark name=\"8\" kind=\"LAST\"/> Baseline <mark name=\"10\"/> 16 units <mark name=\"11\"/> Superscript 3 </prosody></speak>"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> area of triangle <mark name=\"2\"/> area of square <mark name=\"3\"/> Sup 1 <mark name=\"4\" kind=\"LAST\"/> Base <mark name=\"6\"/> 1 unit <mark name=\"7\"/> Sup 2 <mark name=\"8\" kind=\"LAST\"/> Base <mark name=\"10\"/> 16 units <mark name=\"11\"/> Sup 3 </prosody></speak>"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> area of triangle <mark name=\"2\"/> area of square <mark name=\"3\"/> Sup 1 <mark name=\"4\" kind=\"LAST\"/> Base <mark name=\"6\"/> 1 unit <mark name=\"7\"/> Sup 2 <mark name=\"8\" kind=\"LAST\"/> Base <mark name=\"10\"/> 16 units <mark name=\"11\"/> Sup 3 </prosody></speak>"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> area of triangle <mark name=\"1\"/> Superscript 2 </prosody></speak>"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> area of triangle <mark name=\"1\"/> Sup 2 </prosody></speak>"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> area of triangle <mark name=\"1\"/> Sup 2 </prosody></speak>"
+    },
+    "LabelledRow_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> StartLayout <mark name=\"6\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 1 right parenthesis <break time=\"300ms\"/> <mark name=\"6\"/> EndLabel <break time=\"200ms\"/> <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledRow_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> StartLayout <mark name=\"6\"/> 1st Row  Label <mark name=\"0\"/> left p'ren 1 right p'ren <break time=\"300ms\"/> <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> Layout <mark name=\"6\"/> 1st Row  Label <mark name=\"0\"/> L p'ren 1 R p'ren <break time=\"300ms\"/> <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledLine_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> StartLayout <mark name=\"4\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 1 right parenthesis <break time=\"300ms\"/> <mark name=\"4\"/> EndLabel <break time=\"200ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledLine_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> StartLayout <mark name=\"4\"/> 1st Row  Label <mark name=\"0\"/> left p'ren 1 right p'ren <break time=\"500ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> Layout <mark name=\"4\"/> 1st Row  Label <mark name=\"0\"/> L p'ren 1 R p'ren <break time=\"500ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> StartLayout <mark name=\"3\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 1 right parenthesis <break time=\"300ms\"/> <mark name=\"3\"/> EndLabel <break time=\"200ms\"/> <mark name=\"3\" kind=\"LAST\"/> Blank <mark name=\"4\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> StartLayout <mark name=\"3\"/> 1st Row  Label <mark name=\"0\"/> left p'ren 1 right p'ren <break time=\"500ms\"/> <mark name=\"3\" kind=\"LAST\"/> Blank <mark name=\"4\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> Layout <mark name=\"3\"/> 1st Row  Label <mark name=\"0\"/> L p'ren 1 R p'ren <break time=\"500ms\"/> <mark name=\"3\" kind=\"LAST\"/> Blank <mark name=\"4\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyLine_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> StartLayout <mark name=\"0\"/> 1st Row  Blank <mark name=\"1\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyLine_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> StartLayout <mark name=\"0\"/> 1st Row  Blank <mark name=\"1\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> Layout <mark name=\"0\"/> 1st Row  Blank <mark name=\"1\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyRow_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> StartLayout <mark name=\"0\"/> 1st Row 1st Column a <break time=\"300ms\"/> <mark name=\"2\"/> 2nd Column b <break time=\"500ms\"/> <mark name=\"5\"/> 2nd Row  Blank <mark name=\"6\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyRow_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> StartLayout <mark name=\"0\"/> 1st Row 1st Column a <break time=\"300ms\"/> <mark name=\"2\"/> 2nd Column b <break time=\"500ms\"/> <mark name=\"5\"/> 2nd Row  Blank <mark name=\"6\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> Layout <mark name=\"0\"/> 1st Row 1st Column a <break time=\"300ms\"/> <mark name=\"2\"/> 2nd Column b <break time=\"500ms\"/> <mark name=\"5\"/> 2nd Row  Blank <mark name=\"6\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyCell_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> StartLayout <mark name=\"1\"/> 1st Row  Blank <mark name=\"2\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyCell_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> StartLayout <mark name=\"1\"/> 1st Row  Blank <mark name=\"2\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Layout <mark name=\"1\"/> 1st Row  Blank <mark name=\"2\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "TextLabelledLine_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> StartLayout <mark name=\"4\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 1 right parenthesis <break time=\"300ms\"/> <mark name=\"4\"/> EndLabel <break time=\"200ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> StartLayout <mark name=\"4\"/> 1st Row  Label <mark name=\"0\"/> left p'ren 1 right p'ren <break time=\"500ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> Layout <mark name=\"4\"/> 1st Row  Label 1 <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "TextLabelledRow_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> StartLayout <mark name=\"6\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 1 right parenthesis <break time=\"300ms\"/> <mark name=\"6\"/> EndLabel <break time=\"200ms\"/> <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> StartLayout <mark name=\"6\"/> 1st Row  Label <mark name=\"0\"/> left p'ren 1 right p'ren <break time=\"300ms\"/> <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> Layout <mark name=\"6\"/> 1st Row  Label 1 <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "EncloseOverbar_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> overbar </prosody></speak>"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> overbar </prosody></speak>"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> overbar </prosody></speak>"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> underbar </prosody></speak>"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> underbar </prosody></speak>"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> underbar </prosody></speak>"
+    },
+    "PrefixopSquare_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "PrefixopCube_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> cubed <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "PrefixopCube_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> cubed <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> cubed <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Vector_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"10\"/> Start 3 By 1 Matrix <mark name=\"1\"/> 1st Row  a <mark name=\"4\"/> 2nd Row  b <mark name=\"7\"/> 3rd Row  c <mark name=\"10\" kind=\"LAST\"/> EndMatrix </prosody></speak>"
+    },
+    "Vector_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"10\"/> Start 3 By 1 Matrix <mark name=\"1\"/> 1st Row  a <mark name=\"4\"/> 2nd Row  b <mark name=\"7\"/> 3rd Row  c <mark name=\"10\" kind=\"LAST\"/> EndMatrix </prosody></speak>"
+    },
+    "Vector_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"10\"/> 3 By 1 Matrix <mark name=\"1\"/> 1st Row  a <mark name=\"4\"/> 2nd Row  b <mark name=\"7\"/> 3rd Row  c <mark name=\"10\" kind=\"LAST\"/> EndMatrix </prosody></speak>"
+    }
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakMatricesAndCombinatorics",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
+  "information": "English Clearspeak Matrices, Vectors, and Combinatorics rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Matrices, Vectors, and",
+    "_comment2_": " Combinatorics",
+    "_comment3_": " Matrices, Vectors, and Combinatorics",
+    "Matrix001": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix002": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix003": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix004": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix005": {
+      "expected": "the 3 by 1 column matrix. 1, 2, 3"
+    },
+    "Matrix006": {
+      "expected": "the 3 by 1 column matrix. 1, 2, 3"
+    },
+    "Matrix007": {
+      "expected": "the 1 by 2 row matrix. 3, 5"
+    },
+    "Matrix008": {
+      "expected": "the 1 by 2 row matrix. 3, 5"
+    },
+    "Matrix008a": {
+      "expected": "the 1 by 1 matrix with entry 3"
+    },
+    "Matrix008b": {
+      "expected": "the 1 by 1 matrix with entry 3"
+    },
+    "Matrix009": {
+      "expected": "the 2 by 1 column matrix. Row 1: x plus 1 Row 2: x minus 1"
+    },
+    "Matrix010": {
+      "expected": "the 4 by 1 column matrix. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2"
+    },
+    "Matrix011": {
+      "expected": "the 1 by 2 row matrix. Column 1: x plus 1 Column 2: 2 x"
+    },
+    "Matrix012": {
+      "expected": "the 1 by 4 row matrix. Column 1: 3 Column 2: 6 Column 3: 1 Column 4: 2"
+    },
+    "Matrix013": {
+      "expected": "the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "Matrix014": {
+      "expected": "the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "Matrix015": {
+      "expected": "the 2 by 5 matrix. Row 1: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 5; Column 5, 3. Row 2: Column 1, 3; Column 2, 4; Column 3, 2; Column 4, 7; Column 5, 0"
+    },
+    "Matrix016": {
+      "expected": "the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4: Column 1, 0; Column 2, 5"
+    },
+    "Matrix017": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "Matrix018": {
+      "expected": "the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix019": {
+      "expected": "the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "Matrix019b": {
+      "expected": "the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "Matrix020": {
+      "expected": "the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "Matrix021": {
+      "expected": "the 2 by 2 matrix. Row 1: b sub 1 1, b sub 1 2 Row 2: b sub 2 1, b sub 2 2"
+    },
+    "Matrix022": {
+      "_comment4_": " var speech = '3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times the",
+      "_comment5_": " 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column",
+      "_comment6_": " 1, 0; Column 2, 2; Column 3, 6';",
+      "expected": "3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix023": {
+      "expected": "the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth. times the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix024": {
+      "expected": "the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0. times the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4: Column 1, 0; Column 2, 5"
+    },
+    "Matrix025": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix026": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix027": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "Matrix028": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "Matrix029": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "Matrix030": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "Matrix031": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "Matrix032": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "Matrix033": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "Matrix034": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "Matrix035": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "Matrix036": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "Matrix037": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "Matrix038": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "Matrix039": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix040": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix041": {
+      "expected": "the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix042": {
+      "expected": "the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix043": {
+      "expected": "the 3 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3"
+    },
+    "Matrix044": {
+      "expected": "the 3 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3"
+    },
+    "Matrix045": {
+      "expected": "the 1 by 2 row matrix. Column 1: 3 Column 2: 5"
+    },
+    "Matrix046": {
+      "expected": "the 1 by 2 row matrix. Column 1: 3 Column 2: 5"
+    },
+    "Matrix047": {
+      "expected": "the 1 by 4 row matrix. Column 1: 1 Column 2: 2 Column 3: 3 Column 4: 4"
+    },
+    "Matrix048": {
+      "expected": "the 1 by 4 row matrix. Column 1: 1 Column 2: 2 Column 3: 3 Column 4: 4"
+    },
+    "Matrix049": {
+      "expected": "the 4 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3 Row 4: 4"
+    },
+    "Matrix050": {
+      "expected": "the 4 by 1 column matrix. Row 1: 1 Row 2: 2 Row 3: 3 Row 4: 4"
+    },
+    "Matrix051": {
+      "expected": "the 2 by 1 column matrix. Row 1: x plus 1 Row 2: x minus 1"
+    },
+    "Matrix052": {
+      "expected": "the 4 by 1 column matrix. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2"
+    },
+    "Matrix053": {
+      "expected": "the 1 by 2 row matrix. Column 1: x plus 1 Column 2: 2 x"
+    },
+    "Matrix054": {
+      "expected": "the 1 by 4 row matrix. Column 1: 3 Column 2: 6 Column 3: 1 Column 4: 2"
+    },
+    "Matrix055": {
+      "expected": "the 3 by 3 matrix. Row 1: Column 1, 2; Column 2, 4; Column 3, 1. Row 2: Column 1, 3; Column 2, 5; Column 3, 2. Row 3: Column 1, 1; Column 2, 4; Column 3, 7"
+    },
+    "Matrix056": {
+      "expected": "the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "Matrix057": {
+      "expected": "the 2 by 5 matrix. Row 1: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 5; Column 5, 3. Row 2: Column 1, 3; Column 2, 4; Column 3, 2; Column 4, 7; Column 5, 0"
+    },
+    "Matrix057a": {
+      "expected": "the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4: Column 1, 0; Column 2, 5"
+    },
+    "Matrix058": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "Matrix059": {
+      "expected": "the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix060": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix061": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, y. Row 2: Column 1, one half; Column 2, two thirds"
+    },
+    "Matrix062": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, one half; Column 2, two thirds. Row 2: Column 1, three fourths; Column 2, one fifth"
+    },
+    "Matrix063": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, b sub 1 1; Column 2, b sub 1 2. Row 2: Column 1, b sub 2 1; Column 2, b sub 2 2"
+    },
+    "Matrix064": {
+      "expected": "3 times the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5. times the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix065": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, one half; Column 2, two thirds. Row 2: Column 1, three fourths; Column 2, one fifth. times the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6"
+    },
+    "Matrix066": {
+      "expected": "the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0. times the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4: Column 1, 0; Column 2, 5"
+    },
+    "Matrix067": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix068": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix069": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: Column 1, 2; Column 2, 4; Column 3, 1. Row 2: Column 1, 3; Column 2, 5; Column 3, 2. Row 3: Column 1, 1; Column 2, 4; Column 3, 7"
+    },
+    "Matrix070": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: Column 1, 2; Column 2, 4; Column 3, 1. Row 2: Column 1, 3; Column 2, 5; Column 3, 2. Row 3: Column 1, 1; Column 2, 4; Column 3, 7"
+    },
+    "Matrix071": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "Matrix072": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "Matrix073": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "Matrix074": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "Matrix075": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix076": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, 1. Row 2: Column 1, 7; Column 2, 5"
+    },
+    "Matrix077": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, y. Row 2: Column 1, one half; Column 2, two thirds"
+    },
+    "Matrix078": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2 x; Column 2, y. Row 2: Column 1, one half; Column 2, two thirds"
+    },
+    "Matrix079": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, one half; Column 2, two thirds. Row 2: Column 1, three fourths; Column 2, one fifth"
+    },
+    "Matrix080": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, one half; Column 2, two thirds. Row 2: Column 1, three fourths; Column 2, one fifth"
+    },
+    "Matrix081": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix082": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix083": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix084": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix085": {
+      "expected": "the 3 by 1 column matrix. 1, 2, 3"
+    },
+    "Matrix086": {
+      "expected": "the 3 by 1 column matrix. 1, 2, 3"
+    },
+    "Matrix087": {
+      "expected": "the 1 by 2 row matrix. 3, 5"
+    },
+    "Matrix088": {
+      "expected": "the 1 by 2 row matrix. 3, 5"
+    },
+    "Matrix089": {
+      "expected": "the 2 by 1 column matrix. x plus 1, x minus 1"
+    },
+    "Matrix090": {
+      "expected": "the 4 by 1 column matrix. 3, 6, 1, 2"
+    },
+    "Matrix091": {
+      "expected": "the 1 by 2 row matrix. x plus 1, 2 x"
+    },
+    "Matrix092": {
+      "expected": "the 1 by 4 row matrix. 3, 6, 1, 2"
+    },
+    "Matrix092a": {
+      "expected": "the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "Matrix093": {
+      "expected": "the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row 2: 2, 1, 0, 9 Row 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0"
+    },
+    "Matrix094": {
+      "expected": "the 2 by 5 matrix. Row 1: 2, 1, 0, 5, 3 Row 2: 3, 4, 2, 7, 0"
+    },
+    "Matrix095": {
+      "expected": "the 4 by 2 matrix. Row 1: 1, 3 Row 2: 4, 2 Row 3: 2, 1 Row 4: 0, 5"
+    },
+    "Matrix096": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5 plus x"
+    },
+    "Matrix097": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1 minus x, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix098": {
+      "expected": "the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "Matrix099": {
+      "expected": "the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "Matrix100": {
+      "expected": "the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "Matrix101": {
+      "expected": "the 2 by 2 matrix. Row 1: b sub 1 1, b sub 1 2 Row 2: b sub 2 1, b sub 2 2"
+    },
+    "Matrix102": {
+      "expected": "3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. times the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix103": {
+      "expected": "the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth. times the 2 by 3 matrix. Row 1: 3, 1 minus x, 4 Row 2: 0, 2, 6"
+    },
+    "Matrix104": {
+      "expected": "the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row 2: 2, 1, 0, 9 Row 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0. times the 4 by 2 matrix. Row 1: 1, 3 Row 2: 4, 2 Row 3: 2, 1 Row 4: 0, 5"
+    },
+    "Matrix105": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix106": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "Matrix107": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "Matrix108": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "Matrix109": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row 2: 2, 1, 0, 9 Row 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0"
+    },
+    "Matrix110": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: 0, 3, 4, 3 Row 2: 2, 1, 0, 9 Row 3: 3, 0, 2, 1 Row 4: 6, 2, 9, 0"
+    },
+    "Matrix111": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5 plus x"
+    },
+    "Matrix112": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5 plus x"
+    },
+    "Matrix113": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "Matrix114": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "Matrix115": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "Matrix116": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "Matrix117": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "Matrix118": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "Matrix119": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end matrix"
+    },
+    "Matrix120": {
+      "expected": "the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end matrix"
+    },
+    "Matrix121": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6. end matrix"
+    },
+    "Matrix122": {
+      "expected": "the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6. end matrix"
+    },
+    "Matrix123": {
+      "expected": "the 3 by 1 column matrix. 1, 2, 3. end matrix"
+    },
+    "Matrix124": {
+      "expected": "the 3 by 1 column matrix. 1, 2, 3. end matrix"
+    },
+    "Matrix125": {
+      "expected": "the 1 by 2 row matrix. 3, 5. end matrix"
+    },
+    "Matrix126": {
+      "expected": "the 1 by 2 row matrix. 3, 5. end matrix"
+    },
+    "Matrix127": {
+      "expected": "the 2 by 1 column matrix. Row 1: x plus 1 Row 2: x minus 1. end matrix"
+    },
+    "Matrix128": {
+      "expected": "the 4 by 1 column matrix. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2. end matrix"
+    },
+    "Matrix129": {
+      "expected": "the 1 by 2 row matrix. Column 1: x plus 1 Column 2: 2 x. end matrix"
+    },
+    "Matrix130": {
+      "expected": "the 1 by 4 row matrix. Column 1: 3 Column 2: 6 Column 3: 1 Column 4: 2. end matrix"
+    },
+    "Matrix131": {
+      "expected": "the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7. end matrix"
+    },
+    "Matrix132": {
+      "expected": "the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0. end matrix"
+    },
+    "Matrix133": {
+      "expected": "the 2 by 5 matrix. Row 1: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 5; Column 5, 3. Row 2: Column 1, 3; Column 2, 4; Column 3, 2; Column 4, 7; Column 5, 0. end matrix"
+    },
+    "Matrix134": {
+      "expected": "the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4: Column 1, 0; Column 2, 5. end matrix"
+    },
+    "Matrix135": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x. end matrix"
+    },
+    "Matrix136": {
+      "expected": "the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6. end matrix"
+    },
+    "Matrix137": {
+      "expected": "the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5. end matrix"
+    },
+    "Matrix138": {
+      "expected": "the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds. end matrix"
+    },
+    "Matrix139": {
+      "expected": "the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth. end matrix"
+    },
+    "_comment7_": " TODO: (Simons) Rewrite certain indices from implicit multiplication to",
+    "_comment8_": " punctuation.",
+    "Matrix140": {
+      "expected": "the 2 by 2 matrix. Row 1: b sub 1 1, b sub 1 2 Row 2: b sub 2 1, b sub 2 2. end matrix"
+    },
+    "Matrix141": {
+      "expected": "3 times the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end matrix times the 2 by 3 matrix. Row 1: 3, 1, 4 Row 2: 0, 2, 6. end matrix"
+    },
+    "Matrix142": {
+      "expected": "the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth. end matrix times the 2 by 3 matrix. Row 1: Column 1, 3; Column 2, 1 minus x; Column 3, 4. Row 2: Column 1, 0; Column 2, 2; Column 3, 6. end matrix"
+    },
+    "Matrix143": {
+      "expected": "the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0. end matrix times the 4 by 2 matrix. Row 1: Column 1, 1; Column 2, 3. Row 2: Column 1, 4; Column 2, 2. Row 3: Column 1, 2; Column 2, 1. Row 4: Column 1, 0; Column 2, 5. end matrix"
+    },
+    "Matrix144": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end determinant"
+    },
+    "Matrix145": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5. end matrix"
+    },
+    "Matrix146": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7. end determinant"
+    },
+    "Matrix147": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7. end matrix"
+    },
+    "Matrix148": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0. end determinant"
+    },
+    "Matrix149": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0. end matrix"
+    },
+    "Matrix150": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x. end determinant"
+    },
+    "Matrix151": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x. end matrix"
+    },
+    "Matrix152": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5. end determinant"
+    },
+    "Matrix153": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5. end matrix"
+    },
+    "Matrix154": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds. end determinant"
+    },
+    "Matrix155": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds. end matrix"
+    },
+    "Matrix156": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth. end determinant"
+    },
+    "Matrix157": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth. end matrix"
+    },
+    "Matrix158": {
+      "expected": "the 3 by 1 column vector. 1, 2, 3"
+    },
+    "Matrix159": {
+      "expected": "the 3 by 1 column vector. 1, 2, 3"
+    },
+    "Matrix160": {
+      "expected": "the 1 by 2 row vector. 3, 5"
+    },
+    "Matrix161": {
+      "expected": "the 1 by 2 row vector. 3, 5"
+    },
+    "Matrix162": {
+      "expected": "the 2 by 1 column vector. Row 1: x plus 1 Row 2: x minus 1"
+    },
+    "Matrix163": {
+      "expected": "the 4 by 1 column vector. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2"
+    },
+    "Matrix164": {
+      "expected": "the 1 by 2 row vector. Column 1: x plus 1 Column 2: 2 x"
+    },
+    "Matrix165": {
+      "expected": "the 1 by 2 row vector. 3, 2. times the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4"
+    },
+    "Matrix166": {
+      "expected": "the 1 by 3 row vector. 1, 2, 7. times the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2"
+    },
+    "Matrix167": {
+      "expected": "the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. times the 2 by 1 column vector. 3, 2"
+    },
+    "Matrix168": {
+      "expected": "the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. times the 3 by 1 column vector. 1, 2, 7"
+    },
+    "Matrix169": {
+      "expected": "the 3 by 1 column vector. 1, 2, 3. end vector"
+    },
+    "Matrix170": {
+      "expected": "the 3 by 1 column vector. 1, 2, 3. end vector"
+    },
+    "Matrix171": {
+      "expected": "the 1 by 2 row vector. 3, 5. end vector"
+    },
+    "Matrix172": {
+      "expected": "the 1 by 2 row vector. 3, 5. end vector"
+    },
+    "Matrix173": {
+      "expected": "the 2 by 1 column vector. Row 1: x plus 1 Row 2: x minus 1. end vector"
+    },
+    "Matrix174": {
+      "expected": "the 4 by 1 column vector. Row 1: 3 Row 2: 6 Row 3: 1 Row 4: 2. end vector"
+    },
+    "Matrix175": {
+      "expected": "the 1 by 2 row vector. Column 1: x plus 1 Column 2: 2 x. end vector"
+    },
+    "Matrix176": {
+      "expected": "the 1 by 2 row vector. 3, 2. end vector times the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. end matrix"
+    },
+    "Matrix177": {
+      "expected": "the 1 by 3 row vector. 1, 2, 7. end vector times the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. end matrix"
+    },
+    "Matrix178": {
+      "expected": "the 2 by 2 matrix. Row 1: 0, 5 Row 2: 9, 4. end matrix times the 2 by 1 column vector. 3, 2. end vector"
+    },
+    "Matrix179": {
+      "expected": "the 3 by 3 matrix. Row 1: 3, 5, 4 Row 2: 8, 0, 6 Row 3: 1, 4, 2. end matrix times the 3 by 1 column vector. 1, 2, 7. end vector"
+    },
+    "Matrix180": {
+      "expected": "n choose r"
+    },
+    "Matrix181": {
+      "expected": "10 choose 7"
+    },
+    "Matrix182": {
+      "expected": "15 choose 0"
+    },
+    "Matrix183": {
+      "expected": "8 choose 3"
+    }
+  }
+}

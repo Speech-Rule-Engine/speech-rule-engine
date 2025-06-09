@@ -1,0 +1,1003 @@
+{
+  "name": "AfrikaansMathspeakNoble",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/noble_test.json",
+  "information": "Afrikaans Mathspeak Steve Noble's samples.",
+  "domain": "mathspeak",
+  "active": "NobleSamplesAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sample_1_default": {
+      "expected": "negatief 5 en een vyfde minus 6 en twee derdes is gelyk aan"
+    },
+    "Sample_1_brief": {
+      "expected": "negatief 5 en een vyfde minus 6 en twee derdes is gelyk aan"
+    },
+    "Sample_1_sbrief": {
+      "expected": "negatief 5 en een vyfde minus 6 en twee derdes is gelyk aan"
+    },
+    "Sample_2_default": {
+      "expected": "negatief 7 en drie kwarte minus links hakkie negatief 4 en sewe agstes regs hakkie is gelyk aan"
+    },
+    "Sample_2_brief": {
+      "expected": "negatief 7 en drie kwarte minus links hakkie negatief 4 en sewe agstes regs hakkie is gelyk aan"
+    },
+    "Sample_2_sbrief": {
+      "expected": "negatief 7 en drie kwarte minus links hakkie negatief 4 en sewe agstes regs hakkie is gelyk aan"
+    },
+    "Sample_3_default": {
+      "expected": "negatief 24,15 minus links hakkie 13,7 regs hakkie is gelyk aan"
+    },
+    "Sample_3_brief": {
+      "expected": "negatief 24,15 minus links hakkie 13,7 regs hakkie is gelyk aan"
+    },
+    "Sample_3_sbrief": {
+      "expected": "negatief 24,15 minus links hakkie 13,7 regs hakkie is gelyk aan"
+    },
+    "Sample_4_default": {
+      "expected": "links hakkie negatief 4 regs hakkie maal 3 is gelyk aan negatief 12"
+    },
+    "Sample_4_brief": {
+      "expected": "links hakkie negatief 4 regs hakkie maal 3 is gelyk aan negatief 12"
+    },
+    "Sample_4_sbrief": {
+      "expected": "links hakkie negatief 4 regs hakkie maal 3 is gelyk aan negatief 12"
+    },
+    "Sample_5_default": {
+      "expected": "negatief 12 gedeel deur 3 is gelyk aan negatief 4"
+    },
+    "Sample_5_brief": {
+      "expected": "negatief 12 gedeel deur 3 is gelyk aan negatief 4"
+    },
+    "Sample_5_sbrief": {
+      "expected": "negatief 12 gedeel deur 3 is gelyk aan negatief 4"
+    },
+    "Sample_6_default": {
+      "expected": "negatief 12 gedeel deur links hakkie negatief 4 regs hakkie is gelyk aan 3"
+    },
+    "Sample_6_brief": {
+      "expected": "negatief 12 gedeel deur links hakkie negatief 4 regs hakkie is gelyk aan 3"
+    },
+    "Sample_6_sbrief": {
+      "expected": "negatief 12 gedeel deur links hakkie negatief 4 regs hakkie is gelyk aan 3"
+    },
+    "Sample_7_default": {
+      "expected": "6 maal 5"
+    },
+    "Sample_7_brief": {
+      "expected": "6 maal 5"
+    },
+    "Sample_7_sbrief": {
+      "expected": "6 maal 5"
+    },
+    "Sample_8_default": {
+      "expected": "6 maal links hakkie negatief 5 regs hakkie"
+    },
+    "Sample_8_brief": {
+      "expected": "6 maal links hakkie negatief 5 regs hakkie"
+    },
+    "Sample_8_sbrief": {
+      "expected": "6 maal links hakkie negatief 5 regs hakkie"
+    },
+    "Sample_9_default": {
+      "expected": "negatief 6 maal 5"
+    },
+    "Sample_9_brief": {
+      "expected": "negatief 6 maal 5"
+    },
+    "Sample_9_sbrief": {
+      "expected": "negatief 6 maal 5"
+    },
+    "Sample_10_default": {
+      "expected": "negatief 6 maal links hakkie negatief 5 regs hakkie"
+    },
+    "Sample_10_brief": {
+      "expected": "negatief 6 maal links hakkie negatief 5 regs hakkie"
+    },
+    "Sample_10_sbrief": {
+      "expected": "negatief 6 maal links hakkie negatief 5 regs hakkie"
+    },
+    "Sample_11_default": {
+      "expected": "negatief 8 maal 7"
+    },
+    "Sample_11_brief": {
+      "expected": "negatief 8 maal 7"
+    },
+    "Sample_11_sbrief": {
+      "expected": "negatief 8 maal 7"
+    },
+    "Sample_12_default": {
+      "expected": "negatief 8 maal links hakkie negatief 7 regs hakkie"
+    },
+    "Sample_12_brief": {
+      "expected": "negatief 8 maal links hakkie negatief 7 regs hakkie"
+    },
+    "Sample_12_sbrief": {
+      "expected": "negatief 8 maal links hakkie negatief 7 regs hakkie"
+    },
+    "Sample_13_default": {
+      "expected": "8 maal links hakkie negatief 7 regs hakkie"
+    },
+    "Sample_13_brief": {
+      "expected": "8 maal links hakkie negatief 7 regs hakkie"
+    },
+    "Sample_13_sbrief": {
+      "expected": "8 maal links hakkie negatief 7 regs hakkie"
+    },
+    "Sample_14_default": {
+      "expected": "8 maal 7"
+    },
+    "Sample_14_brief": {
+      "expected": "8 maal 7"
+    },
+    "Sample_14_sbrief": {
+      "expected": "8 maal 7"
+    },
+    "Sample_15_default": {
+      "expected": "m hoek 1 is gelyk aan 30 graad"
+    },
+    "Sample_15_brief": {
+      "expected": "m hoek 1 is gelyk aan 30 graad"
+    },
+    "Sample_15_sbrief": {
+      "expected": "m hoek 1 is gelyk aan 30 graad"
+    },
+    "Sample_16_default": {
+      "expected": "m hoek 2 is gelyk aan 60 graad"
+    },
+    "Sample_16_brief": {
+      "expected": "m hoek 2 is gelyk aan 60 graad"
+    },
+    "Sample_16_sbrief": {
+      "expected": "m hoek 2 is gelyk aan 60 graad"
+    },
+    "Sample_17_default": {
+      "expected": "m hoek 1 plus m hoek 2 is gelyk aan 90 graad"
+    },
+    "Sample_17_brief": {
+      "expected": "m hoek 1 plus m hoek 2 is gelyk aan 90 graad"
+    },
+    "Sample_17_sbrief": {
+      "expected": "m hoek 1 plus m hoek 2 is gelyk aan 90 graad"
+    },
+    "Sample_18_default": {
+      "expected": "m hoek hoofletter M plus m hoek hoofletter N is gelyk aan 180 graad"
+    },
+    "Sample_18_brief": {
+      "expected": "m hoek hoofletter M plus m hoek hoofletter N is gelyk aan 180 graad"
+    },
+    "Sample_18_sbrief": {
+      "expected": "m hoek hoofletter M plus m hoek hoofletter N is gelyk aan 180 graad"
+    },
+    "Sample_19_default": {
+      "expected": "hoofletter A is gelyk aan een helfte b h"
+    },
+    "Sample_19_brief": {
+      "expected": "hoofletter A is gelyk aan een helfte b h"
+    },
+    "Sample_19_sbrief": {
+      "expected": "hoofletter A is gelyk aan een helfte b h"
+    },
+    "Sample_20_default": {
+      "expected": "BeginBreuk area of triangle Oor area of square EndBreuk is gelyk aan BeginBreuk 1 unit kwadraat Oor 16 units kwadraat EndBreuk"
+    },
+    "Sample_20_brief": {
+      "expected": "BeginBreuk area of triangle Oor area of square EndBreuk is gelyk aan BeginBreuk 1 unit kwadraat Oor 16 units kwadraat EndBreuk"
+    },
+    "Sample_20_sbrief": {
+      "expected": "Breuk area of triangle Oor area of square End breuk is gelyk aan Breuk 1 unit kwadraat Oor 16 units kwadraat End breuk"
+    },
+    "Sample_21_default": {
+      "expected": "0,6 kwadraat"
+    },
+    "Sample_21_brief": {
+      "expected": "0,6 kwadraat"
+    },
+    "Sample_21_sbrief": {
+      "expected": "0,6 kwadraat"
+    },
+    "Sample_22_default": {
+      "expected": "1,5 kwadraat"
+    },
+    "Sample_22_brief": {
+      "expected": "1,5 kwadraat"
+    },
+    "Sample_22_sbrief": {
+      "expected": "1,5 kwadraat"
+    },
+    "Sample_23_default": {
+      "expected": "4 links hakkie 2 x plus 3 x regs hakkie"
+    },
+    "Sample_23_brief": {
+      "expected": "4 links hakkie 2 x plus 3 x regs hakkie"
+    },
+    "Sample_23_sbrief": {
+      "expected": "4 links hakkie 2 x plus 3 x regs hakkie"
+    },
+    "Sample_24_default": {
+      "expected": "36 plus 4 y minus 1 y kwadraat plus 5 y kwadraat minus 2"
+    },
+    "Sample_24_brief": {
+      "expected": "36 plus 4 y minus 1 y kwadraat plus 5 y kwadraat minus 2"
+    },
+    "Sample_24_sbrief": {
+      "expected": "36 plus 4 y minus 1 y kwadraat plus 5 y kwadraat minus 2"
+    },
+    "Sample_25_default": {
+      "expected": "links hakkie 5 plus 9 regs hakkie minus 4 plus 3 is gelyk aan"
+    },
+    "Sample_25_brief": {
+      "expected": "links hakkie 5 plus 9 regs hakkie minus 4 plus 3 is gelyk aan"
+    },
+    "Sample_25_sbrief": {
+      "expected": "links hakkie 5 plus 9 regs hakkie minus 4 plus 3 is gelyk aan"
+    },
+    "Sample_26_default": {
+      "expected": "pas boonste aan hoofletter B hoofletter C met links regs pyltjie"
+    },
+    "Sample_26_brief": {
+      "expected": "pas aan bo hoofletter B hoofletter C met links regs pyltjie"
+    },
+    "Sample_26_sbrief": {
+      "expected": "pas aan bo hoofletter B hoofletter C met links regs pyltjie"
+    },
+    "Sample_27_default": {
+      "expected": "pas boonste aan hoofletter P hoofletter Q met regs pyltjie"
+    },
+    "Sample_27_brief": {
+      "expected": "pas aan bo hoofletter P hoofletter Q met regs pyltjie"
+    },
+    "Sample_27_sbrief": {
+      "expected": "pas aan bo hoofletter P hoofletter Q met regs pyltjie"
+    },
+    "Sample_28_default": {
+      "expected": "pas boonste aan hoofletter G hoofletter H met makron"
+    },
+    "Sample_28_brief": {
+      "expected": "pas aan bo hoofletter G hoofletter H met makron"
+    },
+    "Sample_28_sbrief": {
+      "expected": "pas aan bo hoofletter G hoofletter H met makron"
+    },
+    "Sample_29_default": {
+      "expected": "pas boonste aan hoofletter W hoofletter X met makron ongeveer gelyk aan pas boonste aan hoofletter Y hoofletter Z met makron"
+    },
+    "Sample_29_brief": {
+      "expected": "pas aan bo hoofletter W hoofletter X met makron ongeveer gelyk aan pas aan bo hoofletter Y hoofletter Z met makron"
+    },
+    "Sample_29_sbrief": {
+      "expected": "pas aan bo hoofletter W hoofletter X met makron ongeveer gelyk aan pas aan bo hoofletter Y hoofletter Z met makron"
+    },
+    "Sample_30_default": {
+      "expected": "hoek hoofletter B hoofletter E hoofletter F"
+    },
+    "Sample_30_brief": {
+      "expected": "hoek hoofletter B hoofletter E hoofletter F"
+    },
+    "Sample_30_sbrief": {
+      "expected": "hoek hoofletter B hoofletter E hoofletter F"
+    },
+    "Sample_31_default": {
+      "expected": "hoek hoofletter B hoofletter E hoofletter D"
+    },
+    "Sample_31_brief": {
+      "expected": "hoek hoofletter B hoofletter E hoofletter D"
+    },
+    "Sample_31_sbrief": {
+      "expected": "hoek hoofletter B hoofletter E hoofletter D"
+    },
+    "Sample_32_default": {
+      "expected": "hoek hoofletter D hoofletter E hoofletter F"
+    },
+    "Sample_32_brief": {
+      "expected": "hoek hoofletter D hoofletter E hoofletter F"
+    },
+    "Sample_32_sbrief": {
+      "expected": "hoek hoofletter D hoofletter E hoofletter F"
+    },
+    "Sample_33_default": {
+      "expected": "x is gelyk aan BeginBreuk negatief b plus of minus Begin wortel b kwadraat minus 4 a c End wortel Oor 2 a EndBreuk"
+    },
+    "Sample_33_brief": {
+      "expected": "x is gelyk aan BeginBreuk negatief b plus of minus Begin wortel b kwadraat minus 4 a c End wortel Oor 2 a EndBreuk"
+    },
+    "Sample_33_sbrief": {
+      "expected": "x is gelyk aan Breuk negatief b plus of minus Wortel b kwadraat minus 4 a c End wortel Oor 2 a End breuk"
+    },
+    "Sample_34_default": {
+      "expected": "y is gelyk aan x kwadraat plus 8 x plus 16"
+    },
+    "Sample_34_brief": {
+      "expected": "y is gelyk aan x kwadraat plus 8 x plus 16"
+    },
+    "Sample_34_sbrief": {
+      "expected": "y is gelyk aan x kwadraat plus 8 x plus 16"
+    },
+    "Sample_35_default": {
+      "expected": "y is gelyk aan een derde links hakkie 3 Superskrif x Basislyn regs hakkie"
+    },
+    "Sample_35_brief": {
+      "expected": "y is gelyk aan een derde links hakkie 3 Sup x Basis regs hakkie"
+    },
+    "Sample_35_sbrief": {
+      "expected": "y is gelyk aan een derde links hakkie 3 Sup x Basis regs hakkie"
+    },
+    "Sample_36_default": {
+      "expected": "y is gelyk aan 10 minus 2 x"
+    },
+    "Sample_36_brief": {
+      "expected": "y is gelyk aan 10 minus 2 x"
+    },
+    "Sample_36_sbrief": {
+      "expected": "y is gelyk aan 10 minus 2 x"
+    },
+    "Sample_37_default": {
+      "expected": "y is gelyk aan 2 x kubbiek plus 5"
+    },
+    "Sample_37_brief": {
+      "expected": "y is gelyk aan 2 x kubbiek plus 5"
+    },
+    "Sample_37_sbrief": {
+      "expected": "y is gelyk aan 2 x kubbiek plus 5"
+    },
+    "Sample_38_default": {
+      "expected": "y is gelyk aan links hakkie x kwadraat plus 1 regs hakkie links hakkie x kwadraat plus 3 regs hakkie"
+    },
+    "Sample_38_brief": {
+      "expected": "y is gelyk aan links hakkie x kwadraat plus 1 regs hakkie links hakkie x kwadraat plus 3 regs hakkie"
+    },
+    "Sample_38_sbrief": {
+      "expected": "y is gelyk aan links hakkie x kwadraat plus 1 regs hakkie links hakkie x kwadraat plus 3 regs hakkie"
+    },
+    "Sample_39_default": {
+      "expected": "y is gelyk aan 0,5 Superskrif x"
+    },
+    "Sample_39_brief": {
+      "expected": "y is gelyk aan 0,5 Sup x"
+    },
+    "Sample_39_sbrief": {
+      "expected": "y is gelyk aan 0,5 Sup x"
+    },
+    "Sample_40_default": {
+      "expected": "y is gelyk aan 22 minus 2 x"
+    },
+    "Sample_40_brief": {
+      "expected": "y is gelyk aan 22 minus 2 x"
+    },
+    "Sample_40_sbrief": {
+      "expected": "y is gelyk aan 22 minus 2 x"
+    },
+    "Sample_41_default": {
+      "expected": "y is gelyk aan BeginBreuk 3 Oor x EndBreuk"
+    },
+    "Sample_41_brief": {
+      "expected": "y is gelyk aan BeginBreuk 3 Oor x EndBreuk"
+    },
+    "Sample_41_sbrief": {
+      "expected": "y is gelyk aan Breuk 3 Oor x End breuk"
+    },
+    "Sample_42_default": {
+      "expected": "y is gelyk aan links hakkie x plus 4 regs hakkie links hakkie x plus 4 regs hakkie"
+    },
+    "Sample_42_brief": {
+      "expected": "y is gelyk aan links hakkie x plus 4 regs hakkie links hakkie x plus 4 regs hakkie"
+    },
+    "Sample_42_sbrief": {
+      "expected": "y is gelyk aan links hakkie x plus 4 regs hakkie links hakkie x plus 4 regs hakkie"
+    },
+    "Sample_43_default": {
+      "expected": "y is gelyk aan links hakkie 4 x minus 3 regs hakkie links hakkie x plus 1 regs hakkie"
+    },
+    "Sample_43_brief": {
+      "expected": "y is gelyk aan links hakkie 4 x minus 3 regs hakkie links hakkie x plus 1 regs hakkie"
+    },
+    "Sample_43_sbrief": {
+      "expected": "y is gelyk aan links hakkie 4 x minus 3 regs hakkie links hakkie x plus 1 regs hakkie"
+    },
+    "Sample_44_default": {
+      "expected": "y is gelyk aan 20 x minus 4 x kwadraat"
+    },
+    "Sample_44_brief": {
+      "expected": "y is gelyk aan 20 x minus 4 x kwadraat"
+    },
+    "Sample_44_sbrief": {
+      "expected": "y is gelyk aan 20 x minus 4 x kwadraat"
+    },
+    "Sample_45_default": {
+      "expected": "y is gelyk aan x kwadraat"
+    },
+    "Sample_45_brief": {
+      "expected": "y is gelyk aan x kwadraat"
+    },
+    "Sample_45_sbrief": {
+      "expected": "y is gelyk aan x kwadraat"
+    },
+    "Sample_46_default": {
+      "expected": "y is gelyk aan 3 Superskrif x minus 1"
+    },
+    "Sample_46_brief": {
+      "expected": "y is gelyk aan 3 Sup x minus 1"
+    },
+    "Sample_46_sbrief": {
+      "expected": "y is gelyk aan 3 Sup x minus 1"
+    },
+    "Sample_47_default": {
+      "expected": "y is gelyk aan 16 minus 2 links hakkie x plus 3 regs hakkie"
+    },
+    "Sample_47_brief": {
+      "expected": "y is gelyk aan 16 minus 2 links hakkie x plus 3 regs hakkie"
+    },
+    "Sample_47_sbrief": {
+      "expected": "y is gelyk aan 16 minus 2 links hakkie x plus 3 regs hakkie"
+    },
+    "Sample_48_default": {
+      "expected": "y is gelyk aan 4 x kwadraat minus x minus 3"
+    },
+    "Sample_48_brief": {
+      "expected": "y is gelyk aan 4 x kwadraat minus x minus 3"
+    },
+    "Sample_48_sbrief": {
+      "expected": "y is gelyk aan 4 x kwadraat minus x minus 3"
+    },
+    "Sample_49_default": {
+      "expected": "y is gelyk aan x plus BeginBreuk 1 Oor x EndBreuk"
+    },
+    "Sample_49_brief": {
+      "expected": "y is gelyk aan x plus BeginBreuk 1 Oor x EndBreuk"
+    },
+    "Sample_49_sbrief": {
+      "expected": "y is gelyk aan x plus Breuk 1 Oor x End breuk"
+    },
+    "Sample_50_default": {
+      "expected": "y is gelyk aan 4 x links hakkie 5 minus x regs hakkie"
+    },
+    "Sample_50_brief": {
+      "expected": "y is gelyk aan 4 x links hakkie 5 minus x regs hakkie"
+    },
+    "Sample_50_sbrief": {
+      "expected": "y is gelyk aan 4 x links hakkie 5 minus x regs hakkie"
+    },
+    "Sample_51_default": {
+      "expected": "y is gelyk aan 2 links hakkie x minus 3 regs hakkie plus 6 links hakkie 1 minus x regs hakkie"
+    },
+    "Sample_51_brief": {
+      "expected": "y is gelyk aan 2 links hakkie x minus 3 regs hakkie plus 6 links hakkie 1 minus x regs hakkie"
+    },
+    "Sample_51_sbrief": {
+      "expected": "y is gelyk aan 2 links hakkie x minus 3 regs hakkie plus 6 links hakkie 1 minus x regs hakkie"
+    },
+    "Sample_52_default": {
+      "expected": "0,25 groter as vyf sestiendes"
+    },
+    "Sample_52_brief": {
+      "expected": "0,25 groter as vyf sestiendes"
+    },
+    "Sample_52_sbrief": {
+      "expected": "0,25 groter as vyf sestiendes"
+    },
+    "Sample_53_default": {
+      "expected": "32 punt links hakkie 5 punt 7 regs hakkie"
+    },
+    "Sample_53_brief": {
+      "expected": "32 punt links hakkie 5 punt 7 regs hakkie"
+    },
+    "Sample_53_sbrief": {
+      "expected": "32 punt links hakkie 5 punt 7 regs hakkie"
+    },
+    "Sample_54_default": {
+      "expected": "links hakkie een helfte maal een helfte maal pi maal 2 regs hakkie plus links hakkie 2 maal een helfte maal pi maal 5 regs hakkie"
+    },
+    "Sample_54_brief": {
+      "expected": "links hakkie een helfte maal een helfte maal pi maal 2 regs hakkie plus links hakkie 2 maal een helfte maal pi maal 5 regs hakkie"
+    },
+    "Sample_54_sbrief": {
+      "expected": "links hakkie een helfte maal een helfte maal pi maal 2 regs hakkie plus links hakkie 2 maal een helfte maal pi maal 5 regs hakkie"
+    },
+    "Sample_55_default": {
+      "expected": "liminf Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E Onderskrif n Basislyn is gelyk aan n ary union Onderskrif n groter of gelyk aan 1 End skrifte n ary intersection Onderskrif k groter of gelyk aan n End skrifte hoofletter E Onderskrif k Basislyn komma limsup Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E Onderskrif n Basislyn is gelyk aan n ary intersection Onderskrif n groter of gelyk aan 1 End skrifte n ary union Onderskrif k groter of gelyk aan n End skrifte hoofletter E Onderskrif k Basislyn punt"
+    },
+    "Sample_55_brief": {
+      "expected": "liminf Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E Onderskrif n Basis is gelyk aan n ary union Onderskrif n groter of gelyk aan 1 End skrifte n ary intersection Onderskrif k groter of gelyk aan n End skrifte hoofletter E Onderskrif k Basis komma limsup Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E Onderskrif n Basis is gelyk aan n ary intersection Onderskrif n groter of gelyk aan 1 End skrifte n ary union Onderskrif k groter of gelyk aan n End skrifte hoofletter E Onderskrif k Basis punt"
+    },
+    "Sample_55_sbrief": {
+      "expected": "liminf Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E Onderskrif n Basis is gelyk aan n ary union Onderskrif n groter of gelyk aan 1 End skrifte n ary intersection Onderskrif k groter of gelyk aan n End skrifte hoofletter E Onderskrif k Basis komma limsup Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E Onderskrif n Basis is gelyk aan n ary intersection Onderskrif n groter of gelyk aan 1 End skrifte n ary union Onderskrif k groter of gelyk aan n End skrifte hoofletter E Onderskrif k Basis punt"
+    },
+    "Sample_56_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom links hakkie i regs hakkie 2. Kolom skrif hoofletter S element van skrif hoofletter A kommapunt 2. Ry 1. Kolom links hakkie ii regs hakkie 2. Kolom if hoofletter E element van skrif hoofletter A then hoofletter E bostaaf element van skrif hoofletter A kommapunt 3. Ry 1. Kolom links hakkie iii regs hakkie 2. Kolom if hoofletter E 1 komma hoofletter E 2 element van skrif hoofletter A then hoofletter E 1 eenheid hoofletter E 2 element van skrif hoofletter A punt End uitleg"
+    },
+    "Sample_56_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom links hakkie i regs hakkie 2. Kolom skrif hoofletter S element van skrif hoofletter A kommapunt 2. Ry 1. Kolom links hakkie ii regs hakkie 2. Kolom if hoofletter E element van skrif hoofletter A then hoofletter E bostaaf element van skrif hoofletter A kommapunt 3. Ry 1. Kolom links hakkie iii regs hakkie 2. Kolom if hoofletter E 1 komma hoofletter E 2 element van skrif hoofletter A then hoofletter E 1 eenheid hoofletter E 2 element van skrif hoofletter A punt End uitleg"
+    },
+    "Sample_56_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom links hakkie i regs hakkie 2. Kolom skrif hoofletter S element van skrif hoofletter A kommapunt 2. Ry 1. Kolom links hakkie ii regs hakkie 2. Kolom if hoofletter E element van skrif hoofletter A then hoofletter E bostaaf element van skrif hoofletter A kommapunt 3. Ry 1. Kolom links hakkie iii regs hakkie 2. Kolom if hoofletter E 1 komma hoofletter E 2 element van skrif hoofletter A then hoofletter E 1 eenheid hoofletter E 2 element van skrif hoofletter A punt End uitleg"
+    },
+    "Sample_57_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 1 regs hakkie hoofletter I f hoofletter A element van skrif hoofletter F then 0 kleiner of gelyk aan hoofletter P links krulhakkie hoofletter A regs krulhakkie kleiner of gelyk aan 1 punt 4. Kolom links hakkie 1 regs hakkie 2. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 2 regs hakkie hoofletter P links krulhakkie skrif hoofletter S regs krulhakkie is gelyk aan 1 punt 4. Kolom links hakkie 2 regs hakkie 3. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 3 regs hakkie hoofletter I f links krulhakkie hoofletter E Onderskrif n Basislyn komma n groter of gelyk aan 1 regs krulhakkie element van skrif hoofletter F is a sequence of disjoint 4. Kolom links hakkie 3 regs hakkie End uitleg"
+    },
+    "Sample_57_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 1 regs hakkie hoofletter I f hoofletter A element van skrif hoofletter F then 0 kleiner of gelyk aan hoofletter P links krulhakkie hoofletter A regs krulhakkie kleiner of gelyk aan 1 punt 4. Kolom links hakkie 1 regs hakkie 2. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 2 regs hakkie hoofletter P links krulhakkie skrif hoofletter S regs krulhakkie is gelyk aan 1 punt 4. Kolom links hakkie 2 regs hakkie 3. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 3 regs hakkie hoofletter I f links krulhakkie hoofletter E Onderskrif n Basis komma n groter of gelyk aan 1 regs krulhakkie element van skrif hoofletter F is a sequence of disjoint 4. Kolom links hakkie 3 regs hakkie End uitleg"
+    },
+    "Sample_57_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 1 regs hakkie hoofletter I f hoofletter A element van skrif hoofletter F then 0 kleiner of gelyk aan hoofletter P links krulhakkie hoofletter A regs krulhakkie kleiner of gelyk aan 1 punt 4. Kolom links hakkie 1 regs hakkie 2. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 2 regs hakkie hoofletter P links krulhakkie skrif hoofletter S regs krulhakkie is gelyk aan 1 punt 4. Kolom links hakkie 2 regs hakkie 3. Ry 1. Kolom leeg 2. Kolom leeg 3. Kolom links hakkie normaal hoofletter A punt 3 regs hakkie hoofletter I f links krulhakkie hoofletter E Onderskrif n Basis komma n groter of gelyk aan 1 regs krulhakkie element van skrif hoofletter F is a sequence of disjoint 4. Kolom links hakkie 3 regs hakkie End uitleg"
+    },
+    "Sample_58_default": {
+      "expected": "hoofletter P links krulhakkie hoofletter B Onderskrif j Basislyn afstreep hoofletter A regs krulhakkie is gelyk aan BeginBreuk hoofletter P links krulhakkie hoofletter B Onderskrif j Basislyn regs krulhakkie hoofletter P links krulhakkie hoofletter A afstreep hoofletter B Onderskrif j Basislyn regs krulhakkie Oor som Onderskrif j priem element van hoofletter J End skrifte hoofletter P links krulhakkie hoofletter B Onderskrif j priem Basislyn regs krulhakkie hoofletter P links krulhakkie hoofletter A afstreep hoofletter B Onderskrif j priem Basislyn regs krulhakkie EndBreuk punt"
+    },
+    "Sample_58_brief": {
+      "expected": "hoofletter P links krulhakkie hoofletter B Onderskrif j Basis afstreep hoofletter A regs krulhakkie is gelyk aan BeginBreuk hoofletter P links krulhakkie hoofletter B Onderskrif j Basis regs krulhakkie hoofletter P links krulhakkie hoofletter A afstreep hoofletter B Onderskrif j Basis regs krulhakkie Oor som Onderskrif j priem element van hoofletter J End skrifte hoofletter P links krulhakkie hoofletter B Onderskrif j priem Basis regs krulhakkie hoofletter P links krulhakkie hoofletter A afstreep hoofletter B Onderskrif j priem Basis regs krulhakkie EndBreuk punt"
+    },
+    "Sample_58_sbrief": {
+      "expected": "hoofletter P links krulhakkie hoofletter B Onderskrif j Basis afstreep hoofletter A regs krulhakkie is gelyk aan Breuk hoofletter P links krulhakkie hoofletter B Onderskrif j Basis regs krulhakkie hoofletter P links krulhakkie hoofletter A afstreep hoofletter B Onderskrif j Basis regs krulhakkie Oor som Onderskrif j priem element van hoofletter J End skrifte hoofletter P links krulhakkie hoofletter B Onderskrif j priem Basis regs krulhakkie hoofletter P links krulhakkie hoofletter A afstreep hoofletter B Onderskrif j priem Basis regs krulhakkie End breuk punt"
+    },
+    "Sample_59_default": {
+      "expected": "my 1 links hakkie hoofletter B regs hakkie is gelyk aan integraal Onderskrif hoofletter B End skrifte f links hakkie x regs hakkie d my 2 links hakkie x regs hakkie"
+    },
+    "Sample_59_brief": {
+      "expected": "my 1 links hakkie hoofletter B regs hakkie is gelyk aan integraal Onderskrif hoofletter B End skrifte f links hakkie x regs hakkie d my 2 links hakkie x regs hakkie"
+    },
+    "Sample_59_sbrief": {
+      "expected": "my 1 links hakkie hoofletter B regs hakkie is gelyk aan integraal Onderskrif hoofletter B End skrifte f links hakkie x regs hakkie d my 2 links hakkie x regs hakkie"
+    },
+    "Sample_60_default": {
+      "expected": "limit Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E links krulhakkie begin absolute Waarde hoofletter X Onderskrif n Basislyn minus hoofletter X End Absolute Waarde regs krulhakkie is gelyk aan hoofletter E links krulhakkie limit Onderskrif n regs pyltjie oneindigheid End skrifte begin absolute Waarde hoofletter X Onderskrif n Basislyn minus hoofletter X End Absolute Waarde regs krulhakkie is gelyk aan 0 punt"
+    },
+    "Sample_60_brief": {
+      "expected": "limit Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E links krulhakkie begin absolute Waarde hoofletter X Onderskrif n Basis minus hoofletter X End Absolute Waarde regs krulhakkie is gelyk aan hoofletter E links krulhakkie limit Onderskrif n regs pyltjie oneindigheid End skrifte begin absolute Waarde hoofletter X Onderskrif n Basis minus hoofletter X End Absolute Waarde regs krulhakkie is gelyk aan 0 punt"
+    },
+    "Sample_60_sbrief": {
+      "expected": "limit Onderskrif n regs pyltjie oneindigheid End skrifte hoofletter E links krulhakkie Absolute Waarde hoofletter X Onderskrif n Basis minus hoofletter X End Absolute Waarde regs krulhakkie is gelyk aan hoofletter E links krulhakkie limit Onderskrif n regs pyltjie oneindigheid End skrifte Absolute Waarde hoofletter X Onderskrif n Basis minus hoofletter X End Absolute Waarde regs krulhakkie is gelyk aan 0 punt"
+    },
+    "Sample_61_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom hoofletter P Onderskrif my komma sigma Basislyn links krulhakkie hoofletter Y groter of gelyk aan l Onderskrif beta Basislyn links hakkie hoofletter Y bostaaf Onderskrif n Basislyn komma hoofletter S Onderskrif n Basislyn regs hakkie regs krulhakkie is gelyk aan hoofletter P Onderskrif my komma sigma Basislyn links krulhakkie links hakkie hoofletter Y minus hoofletter Y bostaaf Onderskrif n Basislyn regs hakkie gedeel deur links hakkie hoofletter S dot links hakkie 1 plus BeginBreuk 1 Oor n EndBreuk regs hakkie Superskrif 1 gedeel deur 2 Basislyn regs hakkie groter of gelyk aan minus t Onderskrif beta Basislyn links blokhakkie n minus 1 regs blokhakkie regs krulhakkie is gelyk aan beta komma 2. Ry 1. Kolom leeg 2. Kolom links hakkie 1 regs hakkie End uitleg"
+    },
+    "Sample_61_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom hoofletter P Onderskrif my komma sigma Basis links krulhakkie hoofletter Y groter of gelyk aan l Onderskrif beta Basis links hakkie hoofletter Y bostaaf Onderskrif n Basis komma hoofletter S Onderskrif n Basis regs hakkie regs krulhakkie is gelyk aan hoofletter P Onderskrif my komma sigma Basis links krulhakkie links hakkie hoofletter Y minus hoofletter Y bostaaf Onderskrif n Basis regs hakkie gedeel deur links hakkie hoofletter S dot links hakkie 1 plus BeginBreuk 1 Oor n EndBreuk regs hakkie Sup 1 gedeel deur 2 Basis regs hakkie groter of gelyk aan minus t Onderskrif beta Basis links blokhakkie n minus 1 regs blokhakkie regs krulhakkie is gelyk aan beta komma 2. Ry 1. Kolom leeg 2. Kolom links hakkie 1 regs hakkie End uitleg"
+    },
+    "Sample_61_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom hoofletter P Onderskrif my komma sigma Basis links krulhakkie hoofletter Y groter of gelyk aan l Onderskrif beta Basis links hakkie hoofletter Y bostaaf Onderskrif n Basis komma hoofletter S Onderskrif n Basis regs hakkie regs krulhakkie is gelyk aan hoofletter P Onderskrif my komma sigma Basis links krulhakkie links hakkie hoofletter Y minus hoofletter Y bostaaf Onderskrif n Basis regs hakkie gedeel deur links hakkie hoofletter S dot links hakkie 1 plus Breuk 1 Oor n End breuk regs hakkie Sup 1 gedeel deur 2 Basis regs hakkie groter of gelyk aan minus t Onderskrif beta Basis links blokhakkie n minus 1 regs blokhakkie regs krulhakkie is gelyk aan beta komma 2. Ry 1. Kolom leeg 2. Kolom links hakkie 1 regs hakkie End uitleg"
+    },
+    "Sample_62_default": {
+      "expected": "hoofletter L is gelyk aan Begin 5 By 6 Matriks 1. Ry 1. Kolom 1 2. Kolom negatief 1 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 2. Ry 1. Kolom leeg 2. Kolom 1 3. Kolom negatief 1 4. Kolom Leeg 5. Kolom 0 6. Kolom Leeg 3. Ry 1. Kolom leeg 2. Kolom Leeg 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 4. Ry 1. Kolom leeg 2. Kolom 0 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 5. Ry 1. Kolom leeg 2. Kolom Leeg 3. Kolom Leeg 4. Kolom Leeg 5. Kolom 1 6. Kolom negatief 1 End Matriks punt"
+    },
+    "Sample_62_brief": {
+      "expected": "hoofletter L is gelyk aan Begin 5 By 6 Matriks 1. Ry 1. Kolom 1 2. Kolom negatief 1 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 2. Ry 1. Kolom leeg 2. Kolom 1 3. Kolom negatief 1 4. Kolom Leeg 5. Kolom 0 6. Kolom Leeg 3. Ry 1. Kolom leeg 2. Kolom Leeg 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 4. Ry 1. Kolom leeg 2. Kolom 0 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 5. Ry 1. Kolom leeg 2. Kolom Leeg 3. Kolom Leeg 4. Kolom Leeg 5. Kolom 1 6. Kolom negatief 1 End Matriks punt"
+    },
+    "Sample_62_sbrief": {
+      "expected": "hoofletter L is gelyk aan 5 By 6 Matriks 1. Ry 1. Kolom 1 2. Kolom negatief 1 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 2. Ry 1. Kolom leeg 2. Kolom 1 3. Kolom negatief 1 4. Kolom Leeg 5. Kolom 0 6. Kolom Leeg 3. Ry 1. Kolom leeg 2. Kolom Leeg 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 4. Ry 1. Kolom leeg 2. Kolom 0 3. Kolom Leeg 4. Kolom Leeg 5. Kolom Leeg 6. Kolom Leeg 5. Ry 1. Kolom leeg 2. Kolom Leeg 3. Kolom Leeg 4. Kolom Leeg 5. Kolom 1 6. Kolom negatief 1 End Matriks punt"
+    },
+    "Sample_63_default": {
+      "expected": "Begin wortel n End wortel links blokhakkie hoofletter Y bostaaf Onderskrif n Basislyn minus links hakkie my plus z Onderskrif beta Basislyn sigma regs hakkie regs blokhakkie gedeel deur hoofletter S Onderskrif n Basislyn tilde BeginBreuk hoofletter U plus Begin wortel n End wortel z Onderskrif 1 minus beta Basislyn Oor links hakkie chi kwadraat links blokhakkie n minus 1 regs blokhakkie gedeel deur links hakkie n minus 1 regs hakkie regs hakkie Superskrif 1 gedeel deur 2 Basislyn EndBreuk tilde t links blokhakkie n minus 1 kommapunt Begin wortel n End wortel z Onderskrif 1 minus beta Basislyn regs blokhakkie komma"
+    },
+    "Sample_63_brief": {
+      "expected": "Begin wortel n End wortel links blokhakkie hoofletter Y bostaaf Onderskrif n Basis minus links hakkie my plus z Onderskrif beta Basis sigma regs hakkie regs blokhakkie gedeel deur hoofletter S Onderskrif n Basis tilde BeginBreuk hoofletter U plus Begin wortel n End wortel z Onderskrif 1 minus beta Basis Oor links hakkie chi kwadraat links blokhakkie n minus 1 regs blokhakkie gedeel deur links hakkie n minus 1 regs hakkie regs hakkie Sup 1 gedeel deur 2 Basis EndBreuk tilde t links blokhakkie n minus 1 kommapunt Begin wortel n End wortel z Onderskrif 1 minus beta Basis regs blokhakkie komma"
+    },
+    "Sample_63_sbrief": {
+      "expected": "Wortel n End wortel links blokhakkie hoofletter Y bostaaf Onderskrif n Basis minus links hakkie my plus z Onderskrif beta Basis sigma regs hakkie regs blokhakkie gedeel deur hoofletter S Onderskrif n Basis tilde Breuk hoofletter U plus Wortel n End wortel z Onderskrif 1 minus beta Basis Oor links hakkie chi kwadraat links blokhakkie n minus 1 regs blokhakkie gedeel deur links hakkie n minus 1 regs hakkie regs hakkie Sup 1 gedeel deur 2 Basis End breuk tilde t links blokhakkie n minus 1 kommapunt Wortel n End wortel z Onderskrif 1 minus beta Basis regs blokhakkie komma"
+    },
+    "Sample_64_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom gamma 2. Kolom is gelyk aan hoofletter P links krulhakkie hoofletter E Onderskrif p komma q Basislyn deelversameling van links hakkie hoofletter X Onderskrif links hakkie r regs hakkie Basislyn komma hoofletter X Onderskrif links hakkie s regs hakkie Basislyn regs krulhakkie 2. Ry 1. Kolom leeg 2. Kolom is gelyk aan BeginBreuk n faktoriaal Oor links hakkie r minus 1 regs hakkie faktoriaal EndBreuk som Onderskrif j is gelyk aan 0 Boskrif s minus r minus 1 End skrifte links hakkie negatief 1 regs hakkie Superskrif j Basislyn BeginBreuk p Superskrif r plus j Basislyn Oor links hakkie n minus r minus j regs hakkie faktoriaal j faktoriaal EndBreuk hoofletter I Onderskrif 1 minus q Basislyn links hakkie n minus s plus 1 komma s minus r minus j regs hakkie punt End uitleg"
+    },
+    "Sample_64_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom gamma 2. Kolom is gelyk aan hoofletter P links krulhakkie hoofletter E Onderskrif p komma q Basis deelversameling van links hakkie hoofletter X Onderskrif links hakkie r regs hakkie Basis komma hoofletter X Onderskrif links hakkie s regs hakkie Basis regs krulhakkie 2. Ry 1. Kolom leeg 2. Kolom is gelyk aan BeginBreuk n faktoriaal Oor links hakkie r minus 1 regs hakkie faktoriaal EndBreuk som Onderskrif j is gelyk aan 0 Boskrif s minus r minus 1 End skrifte links hakkie negatief 1 regs hakkie Sup j Basis BeginBreuk p Sup r plus j Basis Oor links hakkie n minus r minus j regs hakkie faktoriaal j faktoriaal EndBreuk hoofletter I Onderskrif 1 minus q Basis links hakkie n minus s plus 1 komma s minus r minus j regs hakkie punt End uitleg"
+    },
+    "Sample_64_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom gamma 2. Kolom is gelyk aan hoofletter P links krulhakkie hoofletter E Onderskrif p komma q Basis deelversameling van links hakkie hoofletter X Onderskrif links hakkie r regs hakkie Basis komma hoofletter X Onderskrif links hakkie s regs hakkie Basis regs krulhakkie 2. Ry 1. Kolom leeg 2. Kolom is gelyk aan Breuk n faktoriaal Oor links hakkie r minus 1 regs hakkie faktoriaal End breuk som Onderskrif j is gelyk aan 0 Boskrif s minus r minus 1 End skrifte links hakkie negatief 1 regs hakkie Sup j Basis Breuk p Sup r plus j Basis Oor links hakkie n minus r minus j regs hakkie faktoriaal j faktoriaal End breuk hoofletter I Onderskrif 1 minus q Basis links hakkie n minus s plus 1 komma s minus r minus j regs hakkie punt End uitleg"
+    },
+    "Sample_65_default": {
+      "expected": "hoofletter S Onderskrif i Basislyn Begin Binomiaal of Matriks t Kies x End Binomiaal of Matriks is gelyk aan Begin 2 By 2 Matriks 1. Ry 1. Kolom 1 gedeel deur m 2. Kolom 0 2. Ry 1. Kolom a Onderskrif i Basislyn 2. Kolom r Onderskrif i Basislyn End Matriks Begin Binomiaal of Matriks t Kies x End Binomiaal of Matriks plus Begin Binomiaal of Matriks links hakkie i minus 1 regs hakkie gedeel deur m Kies b Onderskrif i Basislyn End Binomiaal of Matriks komma"
+    },
+    "Sample_65_brief": {
+      "expected": "hoofletter S Onderskrif i Basis Begin Binomiaal of Matriks t Kies x End Binomiaal of Matriks is gelyk aan Begin 2 By 2 Matriks 1. Ry 1. Kolom 1 gedeel deur m 2. Kolom 0 2. Ry 1. Kolom a Onderskrif i Basis 2. Kolom r Onderskrif i Basis End Matriks Begin Binomiaal of Matriks t Kies x End Binomiaal of Matriks plus Begin Binomiaal of Matriks links hakkie i minus 1 regs hakkie gedeel deur m Kies b Onderskrif i Basis End Binomiaal of Matriks komma"
+    },
+    "Sample_65_sbrief": {
+      "expected": "hoofletter S Onderskrif i Basis Binomiaal of Matriks t Kies x End Binomiaal of Matriks is gelyk aan 2 By 2 Matriks 1. Ry 1. Kolom 1 gedeel deur m 2. Kolom 0 2. Ry 1. Kolom a Onderskrif i Basis 2. Kolom r Onderskrif i Basis End Matriks Binomiaal of Matriks t Kies x End Binomiaal of Matriks plus Binomiaal of Matriks links hakkie i minus 1 regs hakkie gedeel deur m Kies b Onderskrif i Basis End Binomiaal of Matriks komma"
+    },
+    "Sample_66_default": {
+      "expected": "c 1 h Superskrif 4 minus 2 s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk integraal Onderskrif negatief hoofletter T Boskrif hoofletter T Basislyn links hakkie f links hakkie t plus h regs hakkie minus f links hakkie t regs hakkie regs hakkie kwadraat normaal d t kleiner of gelyk aan c 2 h Superskrif 4 minus 2 s"
+    },
+    "Sample_66_brief": {
+      "expected": "c 1 h Sup 4 minus 2 s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk integraal Onder negatief hoofletter T Bo hoofletter T Basis links hakkie f links hakkie t plus h regs hakkie minus f links hakkie t regs hakkie regs hakkie kwadraat normaal d t kleiner of gelyk aan c 2 h Sup 4 minus 2 s"
+    },
+    "Sample_66_sbrief": {
+      "expected": "c 1 h Sup 4 minus 2 s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk integraal Onder negatief hoofletter T Bo hoofletter T Basis links hakkie f links hakkie t plus h regs hakkie minus f links hakkie t regs hakkie regs hakkie kwadraat normaal d t kleiner of gelyk aan c 2 h Sup 4 minus 2 s"
+    },
+    "Sample_67_default": {
+      "expected": "hoofletter C links hakkie 0 regs hakkie minus hoofletter C links hakkie h regs hakkie assimtoties gelyk aan c h Superskrif 4 minus 2 s"
+    },
+    "Sample_67_brief": {
+      "expected": "hoofletter C links hakkie 0 regs hakkie minus hoofletter C links hakkie h regs hakkie assimtoties gelyk aan c h Sup 4 minus 2 s"
+    },
+    "Sample_67_sbrief": {
+      "expected": "hoofletter C links hakkie 0 regs hakkie minus hoofletter C links hakkie h regs hakkie assimtoties gelyk aan c h Sup 4 minus 2 s"
+    },
+    "Sample_68_default": {
+      "expected": "hoofletter S links hakkie omega regs hakkie is gelyk aan limit Onderskrif hoofletter T regs pyltjie oneindigheid End skrifte BeginBreuk 1 Oor 2 hoofletter T EndBreuk begin absolute Waarde integraal Onderskrif negatief hoofletter T Boskrif hoofletter T Basislyn komma f komma links hakkie komma t komma regs hakkie komma normaal e Superskrif kursief it omega Basislyn komma normaal d komma t End Absolute Waarde kwadraat punt"
+    },
+    "Sample_68_brief": {
+      "expected": "hoofletter S links hakkie omega regs hakkie is gelyk aan limit Onderskrif hoofletter T regs pyltjie oneindigheid End skrifte BeginBreuk 1 Oor 2 hoofletter T EndBreuk begin absolute Waarde integraal Onder negatief hoofletter T Bo hoofletter T Basis komma f komma links hakkie komma t komma regs hakkie komma normaal e Sup kursief it omega Basis komma normaal d komma t End Absolute Waarde kwadraat punt"
+    },
+    "Sample_68_sbrief": {
+      "expected": "hoofletter S links hakkie omega regs hakkie is gelyk aan limit Onderskrif hoofletter T regs pyltjie oneindigheid End skrifte Breuk 1 Oor 2 hoofletter T End breuk Absolute Waarde integraal Onder negatief hoofletter T Bo hoofletter T Basis komma f komma links hakkie komma t komma regs hakkie komma normaal e Sup kursief it omega Basis komma normaal d komma t End Absolute Waarde kwadraat punt"
+    },
+    "Sample_69_default": {
+      "expected": "integraal Onderskrif 0 Boskrif 1 Basislyn integraal Onderskrif 0 Boskrif 1 Basislyn links blokhakkie begin absolute Waarde f links hakkie t regs hakkie minus f links hakkie u regs hakkie End Absolute Waarde kwadraat plus begin absolute Waarde t minus u End Absolute Waarde kwadraat regs blokhakkie Superskrif negatief s gedeel deur 2 Basislyn normaal d t normaal d u kleiner as oneindigheid"
+    },
+    "Sample_69_brief": {
+      "expected": "integraal Onder 0 Bo 1 Basis integraal Onder 0 Bo 1 Basis links blokhakkie begin absolute Waarde f links hakkie t regs hakkie minus f links hakkie u regs hakkie End Absolute Waarde kwadraat plus begin absolute Waarde t minus u End Absolute Waarde kwadraat regs blokhakkie Sup negatief s gedeel deur 2 Basis normaal d t normaal d u kleiner as oneindigheid"
+    },
+    "Sample_69_sbrief": {
+      "expected": "integraal Onder 0 Bo 1 Basis integraal Onder 0 Bo 1 Basis links blokhakkie Absolute Waarde f links hakkie t regs hakkie minus f links hakkie u regs hakkie End Absolute Waarde kwadraat plus Absolute Waarde t minus u End Absolute Waarde kwadraat regs blokhakkie Sup negatief s gedeel deur 2 Basis normaal d t normaal d u kleiner as oneindigheid"
+    },
+    "Sample_70_default": {
+      "expected": "sans serif hoofletter E links hakkie som Onderskrif hoofletter I element van hoofletter E Onderskrif k plus 1 Basislyn End skrifte begin absolute Waarde hoofletter I End Absolute Waarde Superskrif s Basislyn regs hakkie is gelyk aan sans serif hoofletter E links hakkie som Onderskrif hoofletter I element van hoofletter E Onderskrif k Basislyn End skrifte begin absolute Waarde hoofletter I End Absolute Waarde Superskrif s Basislyn regs hakkie sans serif hoofletter E links hakkie hoofletter R 1 Superskrif s Basislyn plus hoofletter R 2 Superskrif s Basislyn regs hakkie punt"
+    },
+    "Sample_70_brief": {
+      "expected": "sans serif hoofletter E links hakkie som Onderskrif hoofletter I element van hoofletter E Onderskrif k plus 1 Basis End skrifte begin absolute Waarde hoofletter I End Absolute Waarde Sup s Basis regs hakkie is gelyk aan sans serif hoofletter E links hakkie som Onderskrif hoofletter I element van hoofletter E Onderskrif k Basis End skrifte begin absolute Waarde hoofletter I End Absolute Waarde Sup s Basis regs hakkie sans serif hoofletter E links hakkie hoofletter R 1 Sup s Basis plus hoofletter R 2 Sup s Basis regs hakkie punt"
+    },
+    "Sample_70_sbrief": {
+      "expected": "sans serif hoofletter E links hakkie som Onderskrif hoofletter I element van hoofletter E Onderskrif k plus 1 Basis End skrifte Absolute Waarde hoofletter I End Absolute Waarde Sup s Basis regs hakkie is gelyk aan sans serif hoofletter E links hakkie som Onderskrif hoofletter I element van hoofletter E Onderskrif k Basis End skrifte Absolute Waarde hoofletter I End Absolute Waarde Sup s Basis regs hakkie sans serif hoofletter E links hakkie hoofletter R 1 Sup s Basis plus hoofletter R 2 Sup s Basis regs hakkie punt"
+    },
+    "Sample_71_default": {
+      "expected": "links hakkie x 1 komma y 1 regs hakkie"
+    },
+    "Sample_71_brief": {
+      "expected": "links hakkie x 1 komma y 1 regs hakkie"
+    },
+    "Sample_71_sbrief": {
+      "expected": "links hakkie x 1 komma y 1 regs hakkie"
+    },
+    "Sample_72_default": {
+      "expected": "links hakkie x 2 komma y 2 regs hakkie"
+    },
+    "Sample_72_brief": {
+      "expected": "links hakkie x 2 komma y 2 regs hakkie"
+    },
+    "Sample_72_sbrief": {
+      "expected": "links hakkie x 2 komma y 2 regs hakkie"
+    },
+    "Sample_73_default": {
+      "expected": "d is gelyk aan Begin wortel links hakkie x 2 minus x 1 regs hakkie kwadraat plus links hakkie y 2 minus y 1 regs hakkie kwadraat End wortel"
+    },
+    "Sample_73_brief": {
+      "expected": "d is gelyk aan Begin wortel links hakkie x 2 minus x 1 regs hakkie kwadraat plus links hakkie y 2 minus y 1 regs hakkie kwadraat End wortel"
+    },
+    "Sample_73_sbrief": {
+      "expected": "d is gelyk aan Wortel links hakkie x 2 minus x 1 regs hakkie kwadraat plus links hakkie y 2 minus y 1 regs hakkie kwadraat End wortel"
+    },
+    "Sample_74_default": {
+      "expected": "hoofletter R dubbelgeslaan"
+    },
+    "Sample_74_brief": {
+      "expected": "hoofletter R dubbelgeslaan"
+    },
+    "Sample_74_sbrief": {
+      "expected": "hoofletter R dubbelgeslaan"
+    },
+    "Sample_75_default": {
+      "expected": "hoofletter R dubbelgeslaan is gelyk aan links hakkie negatief oneindigheid komma oneindigheid regs hakkie"
+    },
+    "Sample_75_brief": {
+      "expected": "hoofletter R dubbelgeslaan is gelyk aan links hakkie negatief oneindigheid komma oneindigheid regs hakkie"
+    },
+    "Sample_75_sbrief": {
+      "expected": "hoofletter R dubbelgeslaan is gelyk aan links hakkie negatief oneindigheid komma oneindigheid regs hakkie"
+    },
+    "Sample_76_default": {
+      "expected": "begin versameling 1 komma 2 komma 3 End versameling"
+    },
+    "Sample_76_brief": {
+      "expected": "begin versameling 1 komma 2 komma 3 End versameling"
+    },
+    "Sample_76_sbrief": {
+      "expected": "Versameling 1 komma 2 komma 3 End Versameling"
+    },
+    "Sample_77_default": {
+      "expected": "1 element van hoofletter S"
+    },
+    "Sample_77_brief": {
+      "expected": "1 element van hoofletter S"
+    },
+    "Sample_77_sbrief": {
+      "expected": "1 element van hoofletter S"
+    },
+    "Sample_78_default": {
+      "expected": "3 element van hoofletter S"
+    },
+    "Sample_78_brief": {
+      "expected": "3 element van hoofletter S"
+    },
+    "Sample_78_sbrief": {
+      "expected": "3 element van hoofletter S"
+    },
+    "Sample_79_default": {
+      "expected": "4 nie 'n element van hoofletter S"
+    },
+    "Sample_79_brief": {
+      "expected": "4 nie 'n element van hoofletter S"
+    },
+    "Sample_79_sbrief": {
+      "expected": "4 nie 'n element van hoofletter S"
+    },
+    "Sample_80_default": {
+      "expected": "a is gelyk aan Begin wortel 3 x minus 1 End wortel plus links hakkie 1 plus x regs hakkie kwadraat"
+    },
+    "Sample_80_brief": {
+      "expected": "a is gelyk aan Begin wortel 3 x minus 1 End wortel plus links hakkie 1 plus x regs hakkie kwadraat"
+    },
+    "Sample_80_sbrief": {
+      "expected": "a is gelyk aan Wortel 3 x minus 1 End wortel plus links hakkie 1 plus x regs hakkie kwadraat"
+    },
+    "Sample_81_default": {
+      "expected": "a is gelyk aan BeginBreuk links hakkie b plus c regs hakkie kwadraat Oor d EndBreuk plus BeginBreuk links hakkie e plus f regs hakkie kwadraat Oor g EndBreuk"
+    },
+    "Sample_81_brief": {
+      "expected": "a is gelyk aan BeginBreuk links hakkie b plus c regs hakkie kwadraat Oor d EndBreuk plus BeginBreuk links hakkie e plus f regs hakkie kwadraat Oor g EndBreuk"
+    },
+    "Sample_81_sbrief": {
+      "expected": "a is gelyk aan Breuk links hakkie b plus c regs hakkie kwadraat Oor d End breuk plus Breuk links hakkie e plus f regs hakkie kwadraat Oor g End breuk"
+    },
+    "Sample_82_default": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat links hakkie c minus b regs hakkie kwadraat regs blokhakkie plus links blokhakkie links hakkie d plus e regs hakkie kwadraat links hakkie f minus e regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_82_brief": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat links hakkie c minus b regs hakkie kwadraat regs blokhakkie plus links blokhakkie links hakkie d plus e regs hakkie kwadraat links hakkie f minus e regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_82_sbrief": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat links hakkie c minus b regs hakkie kwadraat regs blokhakkie plus links blokhakkie links hakkie d plus e regs hakkie kwadraat links hakkie f minus e regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_83_default": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat regs blokhakkie plus links blokhakkie links hakkie f minus e regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_83_brief": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat regs blokhakkie plus links blokhakkie links hakkie f minus e regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_83_sbrief": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat regs blokhakkie plus links blokhakkie links hakkie f minus e regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_84_default": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_84_brief": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_84_sbrief": {
+      "expected": "x is gelyk aan links blokhakkie links hakkie a plus b regs hakkie kwadraat regs blokhakkie"
+    },
+    "Sample_85_default": {
+      "expected": "x is gelyk aan links hakkie a plus b regs hakkie kwadraat"
+    },
+    "Sample_85_brief": {
+      "expected": "x is gelyk aan links hakkie a plus b regs hakkie kwadraat"
+    },
+    "Sample_85_sbrief": {
+      "expected": "x is gelyk aan links hakkie a plus b regs hakkie kwadraat"
+    },
+    "Sample_86_default": {
+      "expected": "x is gelyk aan a plus b kwadraat"
+    },
+    "Sample_86_brief": {
+      "expected": "x is gelyk aan a plus b kwadraat"
+    },
+    "Sample_86_sbrief": {
+      "expected": "x is gelyk aan a plus b kwadraat"
+    },
+    "Sample_87_default": {
+      "expected": "BeginBreuk een helfte Oor drie kwarte EndBreuk is gelyk aan twee derdes"
+    },
+    "Sample_87_brief": {
+      "expected": "BeginBreuk een helfte Oor drie kwarte EndBreuk is gelyk aan twee derdes"
+    },
+    "Sample_87_sbrief": {
+      "expected": "Breuk een helfte Oor drie kwarte End breuk is gelyk aan twee derdes"
+    },
+    "Sample_88_default": {
+      "expected": "2 links hakkie links hakkie x plus 1 regs hakkie links hakkie x plus 3 regs hakkie minus 4 links hakkie links hakkie x minus 1 regs hakkie links hakkie x plus 2 regs hakkie minus 3 regs hakkie regs hakkie is gelyk aan y"
+    },
+    "Sample_88_brief": {
+      "expected": "2 links hakkie links hakkie x plus 1 regs hakkie links hakkie x plus 3 regs hakkie minus 4 links hakkie links hakkie x minus 1 regs hakkie links hakkie x plus 2 regs hakkie minus 3 regs hakkie regs hakkie is gelyk aan y"
+    },
+    "Sample_88_sbrief": {
+      "expected": "2 links hakkie links hakkie x plus 1 regs hakkie links hakkie x plus 3 regs hakkie minus 4 links hakkie links hakkie x minus 1 regs hakkie links hakkie x plus 2 regs hakkie minus 3 regs hakkie regs hakkie is gelyk aan y"
+    },
+    "Sample_89_default": {
+      "expected": "kosinus x is gelyk aan 1 minus BeginBreuk x kwadraat Oor 2 faktoriaal EndBreuk plus BeginBreuk x Superskrif 4 Basislyn Oor 4 faktoriaal EndBreuk minus ellipsis"
+    },
+    "Sample_89_brief": {
+      "expected": "kosinus x is gelyk aan 1 minus BeginBreuk x kwadraat Oor 2 faktoriaal EndBreuk plus BeginBreuk x Sup 4 Basis Oor 4 faktoriaal EndBreuk minus ellipsis"
+    },
+    "Sample_89_sbrief": {
+      "expected": "kosinus x is gelyk aan 1 minus Breuk x kwadraat Oor 2 faktoriaal End breuk plus Breuk x Sup 4 Basis Oor 4 faktoriaal End breuk minus ellipsis"
+    },
+    "Sample_90_default": {
+      "expected": "x is gelyk aan BeginBreuk negatief b plus of minus Begin wortel b kwadraat minus 4 a c End wortel Oor 2 a EndBreuk"
+    },
+    "Sample_90_brief": {
+      "expected": "x is gelyk aan BeginBreuk negatief b plus of minus Begin wortel b kwadraat minus 4 a c End wortel Oor 2 a EndBreuk"
+    },
+    "Sample_90_sbrief": {
+      "expected": "x is gelyk aan Breuk negatief b plus of minus Wortel b kwadraat minus 4 a c End wortel Oor 2 a End breuk"
+    },
+    "Sample_91_default": {
+      "expected": "x plus y Superskrif BeginBreuk 2 Oor k plus 1 EndBreuk"
+    },
+    "Sample_91_brief": {
+      "expected": "x plus y Sup BeginBreuk 2 Oor k plus 1 EndBreuk"
+    },
+    "Sample_91_sbrief": {
+      "expected": "x plus y Sup Breuk 2 Oor k plus 1 End breuk"
+    },
+    "Sample_92_default": {
+      "expected": "limit Onderskrif x regs pyltjie 0 End skrifte BeginBreuk sinus x Oor x EndBreuk is gelyk aan 1"
+    },
+    "Sample_92_brief": {
+      "expected": "limit Onderskrif x regs pyltjie 0 End skrifte BeginBreuk sinus x Oor x EndBreuk is gelyk aan 1"
+    },
+    "Sample_92_sbrief": {
+      "expected": "limit Onderskrif x regs pyltjie 0 End skrifte Breuk sinus x Oor x End breuk is gelyk aan 1"
+    },
+    "Sample_93_default": {
+      "expected": "d is gelyk aan Begin wortel links hakkie x 2 minus x 1 regs hakkie kwadraat plus links hakkie y 2 minus y 1 regs hakkie kwadraat End wortel"
+    },
+    "Sample_93_brief": {
+      "expected": "d is gelyk aan Begin wortel links hakkie x 2 minus x 1 regs hakkie kwadraat plus links hakkie y 2 minus y 1 regs hakkie kwadraat End wortel"
+    },
+    "Sample_93_sbrief": {
+      "expected": "d is gelyk aan Wortel links hakkie x 2 minus x 1 regs hakkie kwadraat plus links hakkie y 2 minus y 1 regs hakkie kwadraat End wortel"
+    },
+    "Sample_94_default": {
+      "expected": "hoofletter F Onderskrif n Basislyn is gelyk aan hoofletter F Onderskrif n minus 1 Basislyn plus hoofletter F Onderskrif n minus 2"
+    },
+    "Sample_94_brief": {
+      "expected": "hoofletter F Onderskrif n Basis is gelyk aan hoofletter F Onderskrif n minus 1 Basis plus hoofletter F Onderskrif n minus 2"
+    },
+    "Sample_94_sbrief": {
+      "expected": "hoofletter F Onderskrif n Basis is gelyk aan hoofletter F Onderskrif n minus 1 Basis plus hoofletter F Onderskrif n minus 2"
+    },
+    "Sample_95_default": {
+      "expected": "vetgedruk hoofletter Pi is gelyk aan Begin 6 By 6 Matriks 1. Ry 1. Kolom pi 11 2. Kolom pi 12 3. Kolom pi 12 4. Kolom 0 5. Kolom 0 6. Kolom 0 2. Ry 1. Kolom pi 12 2. Kolom pi 11 3. Kolom pi 12 4. Kolom 0 5. Kolom 0 6. Kolom 0 3. Ry 1. Kolom pi 12 2. Kolom pi 12 3. Kolom pi 11 4. Kolom 0 5. Kolom 0 6. Kolom 0 4. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom pi 44 5. Kolom 0 6. Kolom 0 5. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom 0 5. Kolom pi 44 6. Kolom 0 6. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom 0 5. Kolom 0 6. Kolom pi 44 End Matriks"
+    },
+    "Sample_95_brief": {
+      "expected": "vetgedruk hoofletter Pi is gelyk aan Begin 6 By 6 Matriks 1. Ry 1. Kolom pi 11 2. Kolom pi 12 3. Kolom pi 12 4. Kolom 0 5. Kolom 0 6. Kolom 0 2. Ry 1. Kolom pi 12 2. Kolom pi 11 3. Kolom pi 12 4. Kolom 0 5. Kolom 0 6. Kolom 0 3. Ry 1. Kolom pi 12 2. Kolom pi 12 3. Kolom pi 11 4. Kolom 0 5. Kolom 0 6. Kolom 0 4. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom pi 44 5. Kolom 0 6. Kolom 0 5. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom 0 5. Kolom pi 44 6. Kolom 0 6. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom 0 5. Kolom 0 6. Kolom pi 44 End Matriks"
+    },
+    "Sample_95_sbrief": {
+      "expected": "vetgedruk hoofletter Pi is gelyk aan 6 By 6 Matriks 1. Ry 1. Kolom pi 11 2. Kolom pi 12 3. Kolom pi 12 4. Kolom 0 5. Kolom 0 6. Kolom 0 2. Ry 1. Kolom pi 12 2. Kolom pi 11 3. Kolom pi 12 4. Kolom 0 5. Kolom 0 6. Kolom 0 3. Ry 1. Kolom pi 12 2. Kolom pi 12 3. Kolom pi 11 4. Kolom 0 5. Kolom 0 6. Kolom 0 4. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom pi 44 5. Kolom 0 6. Kolom 0 5. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom 0 5. Kolom pi 44 6. Kolom 0 6. Ry 1. Kolom 0 2. Kolom 0 3. Kolom 0 4. Kolom 0 5. Kolom 0 6. Kolom pi 44 End Matriks"
+    },
+    "Sample_96_default": {
+      "expected": "s 11 is gelyk aan BeginBreuk c 11 plus c 12 Oor links hakkie c 11 minus c 12 regs hakkie links hakkie c 11 plus 2 c 12 regs hakkie EndBreuk"
+    },
+    "Sample_96_brief": {
+      "expected": "s 11 is gelyk aan BeginBreuk c 11 plus c 12 Oor links hakkie c 11 minus c 12 regs hakkie links hakkie c 11 plus 2 c 12 regs hakkie EndBreuk"
+    },
+    "Sample_96_sbrief": {
+      "expected": "s 11 is gelyk aan Breuk c 11 plus c 12 Oor links hakkie c 11 minus c 12 regs hakkie links hakkie c 11 plus 2 c 12 regs hakkie End breuk"
+    },
+    "Sample_97_default": {
+      "expected": "hoofletter S i normaal hoofletter O 2 plus 6 normaal hoofletter H normaal hoofletter F regs pyltjie normaal hoofletter H 2 hoofletter S i normaal hoofletter F 6 plus 2 normaal hoofletter H 2 normaal hoofletter O"
+    },
+    "Sample_97_brief": {
+      "expected": "hoofletter S i normaal hoofletter O 2 plus 6 normaal hoofletter H normaal hoofletter F regs pyltjie normaal hoofletter H 2 hoofletter S i normaal hoofletter F 6 plus 2 normaal hoofletter H 2 normaal hoofletter O"
+    },
+    "Sample_97_sbrief": {
+      "expected": "hoofletter S i normaal hoofletter O 2 plus 6 normaal hoofletter H normaal hoofletter F regs pyltjie normaal hoofletter H 2 hoofletter S i normaal hoofletter F 6 plus 2 normaal hoofletter H 2 normaal hoofletter O"
+    },
+    "Sample_98_default": {
+      "expected": "BeginBreuk d Oor d x EndBreuk links hakkie hoofletter E links hakkie x regs hakkie hoofletter A links hakkie x regs hakkie BeginBreuk d w links hakkie x regs hakkie Oor d x EndBreuk regs hakkie plus p links hakkie x regs hakkie is gelyk aan 0"
+    },
+    "Sample_98_brief": {
+      "expected": "BeginBreuk d Oor d x EndBreuk links hakkie hoofletter E links hakkie x regs hakkie hoofletter A links hakkie x regs hakkie BeginBreuk d w links hakkie x regs hakkie Oor d x EndBreuk regs hakkie plus p links hakkie x regs hakkie is gelyk aan 0"
+    },
+    "Sample_98_sbrief": {
+      "expected": "Breuk d Oor d x End breuk links hakkie hoofletter E links hakkie x regs hakkie hoofletter A links hakkie x regs hakkie Breuk d w links hakkie x regs hakkie Oor d x End breuk regs hakkie plus p links hakkie x regs hakkie is gelyk aan 0"
+    },
+    "Sample_99_default": {
+      "expected": "TCS Onderskrif gas Basislyn is gelyk aan minus een helfte links hakkie BeginBreuk hoofletter P Onderskrif seal Basislyn Oor hoofletter P Onderskrif max Basislyn EndBreuk regs hakkie links hakkie BeginBreuk 1 Oor hoofletter T Onderskrif seal Basislyn EndBreuk regs hakkie"
+    },
+    "Sample_99_brief": {
+      "expected": "TCS Onderskrif gas Basis is gelyk aan minus een helfte links hakkie BeginBreuk hoofletter P Onderskrif seal Basis Oor hoofletter P Onderskrif max Basis EndBreuk regs hakkie links hakkie BeginBreuk 1 Oor hoofletter T Onderskrif seal Basis EndBreuk regs hakkie"
+    },
+    "Sample_99_sbrief": {
+      "expected": "TCS Onderskrif gas Basis is gelyk aan minus een helfte links hakkie Breuk hoofletter P Onderskrif seal Basis Oor hoofletter P Onderskrif max Basis End breuk regs hakkie links hakkie Breuk 1 Oor hoofletter T Onderskrif seal Basis End breuk regs hakkie"
+    },
+    "Sample_100_default": {
+      "expected": "hoofletter B Onderskrif p Basislyn is gelyk aan BeginBeginBreuk BeginBreuk 7 minus v kwadraat Oor 3 EndBreuk links hakkie 1 plus BeginBreuk c kwadraat Oor a kwadraat EndBreuk plus BeginBreuk c Superskrif 4 Basislyn Oor a Superskrif 4 Basislyn EndBreuk regs hakkie plus BeginBreuk links hakkie 3 minus v regs hakkie kwadraat c kwadraat Oor links hakkie 1 plus v regs hakkie a kwadraat EndBreuk OorOor links hakkie 1 minus v regs hakkie links hakkie 1 minus BeginBreuk c Superskrif 4 Basislyn Oor a Superskrif 4 Basislyn EndBreuk regs hakkie links hakkie 1 minus BeginBreuk c kwadraat Oor a kwadraat EndBreuk regs hakkie EndEndBreuk"
+    },
+    "Sample_100_brief": {
+      "expected": "hoofletter B Onderskrif p Basis is gelyk aan BeginBeginBreuk BeginBreuk 7 minus v kwadraat Oor 3 EndBreuk links hakkie 1 plus BeginBreuk c kwadraat Oor a kwadraat EndBreuk plus BeginBreuk c Sup 4 Basis Oor a Sup 4 Basis EndBreuk regs hakkie plus BeginBreuk links hakkie 3 minus v regs hakkie kwadraat c kwadraat Oor links hakkie 1 plus v regs hakkie a kwadraat EndBreuk OorOor links hakkie 1 minus v regs hakkie links hakkie 1 minus BeginBreuk c Sup 4 Basis Oor a Sup 4 Basis EndBreuk regs hakkie links hakkie 1 minus BeginBreuk c kwadraat Oor a kwadraat EndBreuk regs hakkie EndEndBreuk"
+    },
+    "Sample_100_sbrief": {
+      "expected": "hoofletter B Onderskrif p Basis is gelyk aan genesBreuk Breuk 7 minus v kwadraat Oor 3 End breuk links hakkie 1 plus Breuk c kwadraat Oor a kwadraat End breuk plus Breuk c Sup 4 Basis Oor a Sup 4 Basis End breuk regs hakkie plus Breuk links hakkie 3 minus v regs hakkie kwadraat c kwadraat Oor links hakkie 1 plus v regs hakkie a kwadraat End breuk genesOor links hakkie 1 minus v regs hakkie links hakkie 1 minus Breuk c Sup 4 Basis Oor a Sup 4 Basis End breuk regs hakkie links hakkie 1 minus Breuk c kwadraat Oor a kwadraat End breuk regs hakkie genesEnd breuk"
+    },
+    "Sample_101_default": {
+      "expected": "hoofletter Q Onderskrif tank Superskrif series Basislyn is gelyk aan BeginBreuk 1 Oor hoofletter R Onderskrif s Basislyn EndBreuk Begin wortel BeginBreuk hoofletter L Onderskrif s Basislyn Oor hoofletter C Onderskrif s Basislyn EndBreuk End wortel"
+    },
+    "Sample_101_brief": {
+      "expected": "hoofletter Q Onderskrif tank Sup series Basis is gelyk aan BeginBreuk 1 Oor hoofletter R Onderskrif s Basis EndBreuk Begin wortel BeginBreuk hoofletter L Onderskrif s Basis Oor hoofletter C Onderskrif s Basis EndBreuk End wortel"
+    },
+    "Sample_101_sbrief": {
+      "expected": "hoofletter Q Onderskrif tank Sup series Basis is gelyk aan Breuk 1 Oor hoofletter R Onderskrif s Basis End breuk Wortel Breuk hoofletter L Onderskrif s Basis Oor hoofletter C Onderskrif s Basis End breuk End wortel"
+    },
+    "Sample_102_default": {
+      "expected": "hoofletter Delta phi Onderskrif peak Basislyn is gelyk aan tangens Superskrif negatief 1 Basislyn links hakkie k kwadraat hoofletter Q Onderskrif tank Superskrif series Basislyn regs hakkie"
+    },
+    "Sample_102_brief": {
+      "expected": "hoofletter Delta phi Onderskrif peak Basis is gelyk aan tangens Sup negatief 1 Basis links hakkie k kwadraat hoofletter Q Onderskrif tank Sup series Basis regs hakkie"
+    },
+    "Sample_102_sbrief": {
+      "expected": "hoofletter Delta phi Onderskrif peak Basis is gelyk aan tangens Sup negatief 1 Basis links hakkie k kwadraat hoofletter Q Onderskrif tank Sup series Basis regs hakkie"
+    },
+    "Sample_103_default": {
+      "expected": "f is gelyk aan 1.013 BeginBreuk hoofletter W Oor hoofletter L kwadraat EndBreuk Begin wortel BeginBreuk hoofletter E Oor rho EndBreuk End wortel Begin wortel links hakkie 1 plus 0.293 BeginBreuk hoofletter L kwadraat Oor EW kwadraat EndBreuk sigma regs hakkie End wortel"
+    },
+    "Sample_103_brief": {
+      "expected": "f is gelyk aan 1.013 BeginBreuk hoofletter W Oor hoofletter L kwadraat EndBreuk Begin wortel BeginBreuk hoofletter E Oor rho EndBreuk End wortel Begin wortel links hakkie 1 plus 0.293 BeginBreuk hoofletter L kwadraat Oor EW kwadraat EndBreuk sigma regs hakkie End wortel"
+    },
+    "Sample_103_sbrief": {
+      "expected": "f is gelyk aan 1.013 Breuk hoofletter W Oor hoofletter L kwadraat End breuk Wortel Breuk hoofletter E Oor rho End breuk End wortel Wortel links hakkie 1 plus 0.293 Breuk hoofletter L kwadraat Oor EW kwadraat End breuk sigma regs hakkie End wortel"
+    },
+    "Sample_104_default": {
+      "expected": "u Onderskrif n Basislyn links hakkie x regs hakkie is gelyk aan gamma Onderskrif n Basislyn links hakkie hiperboliese kosinus k Onderskrif n Basislyn x minus kosinus k Onderskrif n Basislyn x regs hakkie plus links hakkie hiperboliese sinus k Onderskrif n Basislyn x minus sinus k Onderskrif n Basislyn x regs hakkie"
+    },
+    "Sample_104_brief": {
+      "expected": "u Onderskrif n Basis links hakkie x regs hakkie is gelyk aan gamma Onderskrif n Basis links hakkie hiperboliese kosinus k Onderskrif n Basis x minus kosinus k Onderskrif n Basis x regs hakkie plus links hakkie hiperboliese sinus k Onderskrif n Basis x minus sinus k Onderskrif n Basis x regs hakkie"
+    },
+    "Sample_104_sbrief": {
+      "expected": "u Onderskrif n Basis links hakkie x regs hakkie is gelyk aan gamma Onderskrif n Basis links hakkie hiperboliese kosinus k Onderskrif n Basis x minus kosinus k Onderskrif n Basis x regs hakkie plus links hakkie hiperboliese sinus k Onderskrif n Basis x minus sinus k Onderskrif n Basis x regs hakkie"
+    },
+    "Sample_105_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom hoofletter B 2. Kolom is gelyk aan BeginBeginBreuk BeginBreuk hoofletter F 0 Oor m EndBreuk OorOor Begin wortel links hakkie omega 0 kwadraat minus omega kwadraat regs hakkie kwadraat plus 4 n kwadraat omega kwadraat End wortel EndEndBreuk 2. Ry 1. Kolom leeg 2. Kolom is gelyk aan BeginBeginBreuk BeginBreuk hoofletter F 0 Oor k EndBreuk OorOor Begin wortel links hakkie 1 minus links hakkie omega gedeel deur omega 0 kwadraat regs hakkie kwadraat regs hakkie kwadraat plus 4 links hakkie n gedeel deur omega 0 regs hakkie kwadraat links hakkie omega gedeel deur omega 0 regs hakkie kwadraat End wortel EndEndBreuk End uitleg"
+    },
+    "Sample_105_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom hoofletter B 2. Kolom is gelyk aan BeginBeginBreuk BeginBreuk hoofletter F 0 Oor m EndBreuk OorOor Begin wortel links hakkie omega 0 kwadraat minus omega kwadraat regs hakkie kwadraat plus 4 n kwadraat omega kwadraat End wortel EndEndBreuk 2. Ry 1. Kolom leeg 2. Kolom is gelyk aan BeginBeginBreuk BeginBreuk hoofletter F 0 Oor k EndBreuk OorOor Begin wortel links hakkie 1 minus links hakkie omega gedeel deur omega 0 kwadraat regs hakkie kwadraat regs hakkie kwadraat plus 4 links hakkie n gedeel deur omega 0 regs hakkie kwadraat links hakkie omega gedeel deur omega 0 regs hakkie kwadraat End wortel EndEndBreuk End uitleg"
+    },
+    "Sample_105_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom hoofletter B 2. Kolom is gelyk aan genesBreuk Breuk hoofletter F 0 Oor m End breuk genesOor Wortel links hakkie omega 0 kwadraat minus omega kwadraat regs hakkie kwadraat plus 4 n kwadraat omega kwadraat End wortel genesEnd breuk 2. Ry 1. Kolom leeg 2. Kolom is gelyk aan genesBreuk Breuk hoofletter F 0 Oor k End breuk genesOor Wortel links hakkie 1 minus links hakkie omega gedeel deur omega 0 kwadraat regs hakkie kwadraat regs hakkie kwadraat plus 4 links hakkie n gedeel deur omega 0 regs hakkie kwadraat links hakkie omega gedeel deur omega 0 regs hakkie kwadraat End wortel genesEnd breuk End uitleg"
+    },
+    "Sample_106_default": {
+      "expected": "normaal p links hakkie hoofletter A and hoofletter B regs hakkie is gelyk aan normaal p links hakkie hoofletter A regs hakkie normaal p links hakkie hoofletter B afstreep hoofletter A regs hakkie"
+    },
+    "Sample_106_brief": {
+      "expected": "normaal p links hakkie hoofletter A and hoofletter B regs hakkie is gelyk aan normaal p links hakkie hoofletter A regs hakkie normaal p links hakkie hoofletter B afstreep hoofletter A regs hakkie"
+    },
+    "Sample_106_sbrief": {
+      "expected": "normaal p links hakkie hoofletter A and hoofletter B regs hakkie is gelyk aan normaal p links hakkie hoofletter A regs hakkie normaal p links hakkie hoofletter B afstreep hoofletter A regs hakkie"
+    },
+    "Sample_107_default": {
+      "expected": "hoofletter P hoofletter M hoofletter F links hakkie x regs hakkie eweredig aan links hakkie BeginBreuk 1 Oor x EndBreuk regs hakkie Superskrif alfa"
+    },
+    "Sample_107_brief": {
+      "expected": "hoofletter P hoofletter M hoofletter F links hakkie x regs hakkie eweredig aan links hakkie BeginBreuk 1 Oor x EndBreuk regs hakkie Sup alfa"
+    },
+    "Sample_107_sbrief": {
+      "expected": "hoofletter P hoofletter M hoofletter F links hakkie x regs hakkie eweredig aan links hakkie Breuk 1 Oor x End breuk regs hakkie Sup alfa"
+    },
+    "Sample_108_default": {
+      "expected": "f links hakkie x regs hakkie is gelyk aan BeginBreuk 1 Oor Begin wortel 2 pi End wortel EndBreuk exp links hakkie minus x kwadraat skuinsstreep 2 regs hakkie"
+    },
+    "Sample_108_brief": {
+      "expected": "f links hakkie x regs hakkie is gelyk aan BeginBreuk 1 Oor Begin wortel 2 pi End wortel EndBreuk exp links hakkie minus x kwadraat skuinsstreep 2 regs hakkie"
+    },
+    "Sample_108_sbrief": {
+      "expected": "f links hakkie x regs hakkie is gelyk aan Breuk 1 Oor Wortel 2 pi End wortel End breuk exp links hakkie minus x kwadraat skuinsstreep 2 regs hakkie"
+    },
+    "Sample_109_default": {
+      "expected": "BeginBreuk d x Oor d theta EndBreuk is gelyk aan BeginBreuk beta Oor kosinus kwadraat theta EndBreuk"
+    },
+    "Sample_109_brief": {
+      "expected": "BeginBreuk d x Oor d theta EndBreuk is gelyk aan BeginBreuk beta Oor kosinus kwadraat theta EndBreuk"
+    },
+    "Sample_109_sbrief": {
+      "expected": "Breuk d x Oor d theta End breuk is gelyk aan Breuk beta Oor kosinus kwadraat theta End breuk"
+    },
+    "Sample_110_default": {
+      "expected": "s gedeel deur Begin wortel 2 links hakkie n minus 1 regs hakkie End wortel"
+    },
+    "Sample_110_brief": {
+      "expected": "s gedeel deur Begin wortel 2 links hakkie n minus 1 regs hakkie End wortel"
+    },
+    "Sample_110_sbrief": {
+      "expected": "s gedeel deur Wortel 2 links hakkie n minus 1 regs hakkie End wortel"
+    }
+  }
+}

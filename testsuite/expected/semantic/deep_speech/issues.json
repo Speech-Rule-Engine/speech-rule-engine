@@ -1,0 +1,6 @@
+{
+  "factory": "deepSpeech",
+  "tests": "ALL",
+  "information": "Deep speech issues tests.",
+  "base": "input/semantic/issues.json"
+}

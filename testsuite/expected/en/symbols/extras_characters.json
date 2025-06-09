@@ -1,0 +1,7084 @@
+{
+  "locale": "en",
+  "name": "EnglishExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsEnglish",
+  "information": "English Extra Character tests.",
+  "tests": {
+    "2045-mathspeak-brief": {
+      "key": "⁅",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack with quill"
+    },
+    "2045-mathspeak-sbrief": {
+      "key": "⁅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack with quill"
+    },
+    "2046-mathspeak-brief": {
+      "key": "⁆",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack with quill"
+    },
+    "2046-mathspeak-sbrief": {
+      "key": "⁆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack with quill"
+    },
+    "2061-default-alternative": {
+      "key": "⁡",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "function application"
+    },
+    "2062-default-alternative": {
+      "key": "⁢",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "invisible times"
+    },
+    "2063-default-alternative": {
+      "key": "⁣",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "invisible separator"
+    },
+    "2064-default-alternative": {
+      "key": "⁤",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "invisible plus"
+    },
+    "2121-default-alternative": {
+      "key": "℡",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "t e l symbol"
+    },
+    "2135-default-alternative": {
+      "key": "ℵ",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "alef"
+    },
+    "2136-default-alternative": {
+      "key": "ℶ",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "bet"
+    },
+    "2137-default-alternative": {
+      "key": "ℷ",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "gimel"
+    },
+    "2138-default-alternative": {
+      "key": "ℸ",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "dalet"
+    },
+    "2190-mathspeak-sbrief": {
+      "key": "←",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow"
+    },
+    "2191-mathspeak-sbrief": {
+      "key": "↑",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow"
+    },
+    "2192-mathspeak-sbrief": {
+      "key": "→",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow"
+    },
+    "2193-mathspeak-sbrief": {
+      "key": "↓",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow"
+    },
+    "2194-mathspeak-sbrief": {
+      "key": "↔",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R arrow"
+    },
+    "2195-mathspeak-sbrief": {
+      "key": "↕",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U D arrow"
+    },
+    "2196-mathspeak-sbrief": {
+      "key": "↖",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U L arrow"
+    },
+    "2197-mathspeak-sbrief": {
+      "key": "↗",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U R arrow"
+    },
+    "2198-mathspeak-sbrief": {
+      "key": "↘",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D R arrow"
+    },
+    "2199-mathspeak-sbrief": {
+      "key": "↙",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D L arrow"
+    },
+    "2223-default-alternative": {
+      "key": "∣",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "divides"
+    },
+    "2303-mathspeak-sbrief": {
+      "key": "⌃",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrowhead"
+    },
+    "2304-mathspeak-sbrief": {
+      "key": "⌄",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrowhead"
+    },
+    "2324-mathspeak-sbrief": {
+      "key": "⌤",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrowhead between two horizontal bars"
+    },
+    "2329-default-physics": {
+      "key": "〈",
+      "domain": "default",
+      "style": "physics",
+      "expected": "bra"
+    },
+    "2705-default-alternative": {
+      "key": "✅",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "white heavy check mark"
+    },
+    "2768-mathspeak-brief": {
+      "key": "❨",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "medium left p'ren ornament"
+    },
+    "2768-mathspeak-sbrief": {
+      "key": "❨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "medium L p'ren ornament"
+    },
+    "2769-mathspeak-brief": {
+      "key": "❩",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "medium right p'ren ornament"
+    },
+    "2769-mathspeak-sbrief": {
+      "key": "❩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "medium R p'ren ornament"
+    },
+    "2774-mathspeak-sbrief": {
+      "key": "❴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "medium L brace ornament"
+    },
+    "2775-mathspeak-sbrief": {
+      "key": "❵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "medium R brace ornament"
+    },
+    "2794-mathspeak-sbrief": {
+      "key": "➔",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy wide headed R arrow"
+    },
+    "2798-mathspeak-sbrief": {
+      "key": "➘",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy D R arrow"
+    },
+    "2799-mathspeak-sbrief": {
+      "key": "➙",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy R arrow"
+    },
+    "2900-mathspeak-sbrief": {
+      "key": "⤀",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed R arrow with vertical stroke"
+    },
+    "2901-mathspeak-sbrief": {
+      "key": "⤁",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed R arrow with double vertical stroke"
+    },
+    "2902-mathspeak-sbrief": {
+      "key": "⤂",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double L arrow with vertical stroke"
+    },
+    "2903-mathspeak-sbrief": {
+      "key": "⤃",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double R arrow with vertical stroke"
+    },
+    "2904-mathspeak-sbrief": {
+      "key": "⤄",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double L R arrow with vertical stroke"
+    },
+    "2905-mathspeak-sbrief": {
+      "key": "⤅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed R arrow from bar"
+    },
+    "2906-mathspeak-sbrief": {
+      "key": "⤆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double L arrow from bar"
+    },
+    "2907-mathspeak-sbrief": {
+      "key": "⤇",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double R arrow from bar"
+    },
+    "2909-mathspeak-sbrief": {
+      "key": "⤉",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow with horizontal stroke"
+    },
+    "2910-mathspeak-sbrief": {
+      "key": "⤐",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r two headed triple dash arrow"
+    },
+    "2911-mathspeak-sbrief": {
+      "key": "⤑",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with dotted stem"
+    },
+    "2912-mathspeak-sbrief": {
+      "key": "⤒",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow to bar"
+    },
+    "2913-mathspeak-sbrief": {
+      "key": "⤓",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow to bar"
+    },
+    "2914-mathspeak-sbrief": {
+      "key": "⤔",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with tail with vertical stroke"
+    },
+    "2915-mathspeak-sbrief": {
+      "key": "⤕",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with tail with double vertical stroke"
+    },
+    "2916-mathspeak-sbrief": {
+      "key": "⤖",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R two headed arrow with tail"
+    },
+    "2917-mathspeak-sbrief": {
+      "key": "⤗",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R two headed arrow with tail with vertical stroke"
+    },
+    "2918-mathspeak-sbrief": {
+      "key": "⤘",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R two headed arrow with tail with double vertical stroke"
+    },
+    "2919-mathspeak-sbrief": {
+      "key": "⤙",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow tail"
+    },
+    "2920-mathspeak-sbrief": {
+      "key": "⤠",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow from bar to black diamond"
+    },
+    "2938-mathspeak-sbrief": {
+      "key": "⤸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R side arc clockwise arrow"
+    },
+    "2939-mathspeak-sbrief": {
+      "key": "⤹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L side arc anticlockwise arrow"
+    },
+    "2942-mathspeak-sbrief": {
+      "key": "⥂",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow above short L arrow"
+    },
+    "2943-mathspeak-sbrief": {
+      "key": "⥃",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow above short R arrow"
+    },
+    "2944-mathspeak-sbrief": {
+      "key": "⥄",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "short R arrow above L arrow"
+    },
+    "2945-mathspeak-sbrief": {
+      "key": "⥅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with plus below"
+    },
+    "2946-mathspeak-sbrief": {
+      "key": "⥆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with plus below"
+    },
+    "2947-mathspeak-sbrief": {
+      "key": "⥇",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow through x"
+    },
+    "2948-mathspeak-sbrief": {
+      "key": "⥈",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R arrow through small circle"
+    },
+    "2949-mathspeak-sbrief": {
+      "key": "⥉",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U two headed arrow from small circle"
+    },
+    "2970-mathspeak-sbrief": {
+      "key": "⥰",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R double arrow with rounded head"
+    },
+    "2971-mathspeak-sbrief": {
+      "key": "⥱",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "equals sign above R arrow"
+    },
+    "2972-mathspeak-sbrief": {
+      "key": "⥲",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "tilde operator above R arrow"
+    },
+    "2973-mathspeak-sbrief": {
+      "key": "⥳",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow above tilde operator"
+    },
+    "2974-mathspeak-sbrief": {
+      "key": "⥴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow above tilde operator"
+    },
+    "2975-mathspeak-sbrief": {
+      "key": "⥵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow above almost equals"
+    },
+    "2976-mathspeak-sbrief": {
+      "key": "⥶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "less than above L arrow"
+    },
+    "2977-mathspeak-sbrief": {
+      "key": "⥷",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow through less than"
+    },
+    "2978-mathspeak-sbrief": {
+      "key": "⥸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "greater than above R arrow"
+    },
+    "2979-mathspeak-sbrief": {
+      "key": "⥹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "subset above R arrow"
+    },
+    "2985-mathspeak-brief": {
+      "key": "⦅",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "white left p'ren"
+    },
+    "2985-mathspeak-sbrief": {
+      "key": "⦅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white L p'ren"
+    },
+    "2986-mathspeak-brief": {
+      "key": "⦆",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "white right p'ren"
+    },
+    "2986-mathspeak-sbrief": {
+      "key": "⦆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white R p'ren"
+    },
+    "2990-mathspeak-brief": {
+      "key": "⦐",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack with tick in top corner"
+    },
+    "2990-mathspeak-sbrief": {
+      "key": "⦐",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack with tick in top corner"
+    },
+    "2991-mathspeak-sbrief": {
+      "key": "⦑",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "l angle bracket with dot"
+    },
+    "2992-mathspeak-sbrief": {
+      "key": "⦒",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r angle bracket with dot"
+    },
+    "3008-mathspeak-sbrief": {
+      "key": "〈",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "l angle bracket"
+    },
+    "3009-mathspeak-sbrief": {
+      "key": "〉",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r angle bracket"
+    },
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "cap Delta"
+    },
+    "00E0-mathspeak-brief": {
+      "key": "à",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with grave"
+    },
+    "00E0-mathspeak-sbrief": {
+      "key": "à",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with grave"
+    },
+    "00E1-mathspeak-brief": {
+      "key": "á",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with acute"
+    },
+    "00E1-mathspeak-sbrief": {
+      "key": "á",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with acute"
+    },
+    "00E2-mathspeak-brief": {
+      "key": "â",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with caret"
+    },
+    "00E2-mathspeak-sbrief": {
+      "key": "â",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with caret"
+    },
+    "00E3-mathspeak-brief": {
+      "key": "ã",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "a overtilde"
+    },
+    "00E3-mathspeak-sbrief": {
+      "key": "ã",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "a overtilde"
+    },
+    "00E4-mathspeak-brief": {
+      "key": "ä",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with double dot"
+    },
+    "00E4-mathspeak-sbrief": {
+      "key": "ä",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with double dot"
+    },
+    "00E5-mathspeak-brief": {
+      "key": "å",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with ring"
+    },
+    "00E5-mathspeak-sbrief": {
+      "key": "å",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with ring"
+    },
+    "00E7-mathspeak-brief": {
+      "key": "ç",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above c with cedilla"
+    },
+    "00E7-mathspeak-sbrief": {
+      "key": "ç",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above c with cedilla"
+    },
+    "00E8-mathspeak-brief": {
+      "key": "è",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with grave"
+    },
+    "00E8-mathspeak-sbrief": {
+      "key": "è",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with grave"
+    },
+    "00E9-mathspeak-brief": {
+      "key": "é",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with acute"
+    },
+    "00E9-mathspeak-sbrief": {
+      "key": "é",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with acute"
+    },
+    "00EA-mathspeak-brief": {
+      "key": "ê",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with caret"
+    },
+    "00EA-mathspeak-sbrief": {
+      "key": "ê",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with caret"
+    },
+    "00EB-mathspeak-brief": {
+      "key": "ë",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with double dot"
+    },
+    "00EB-mathspeak-sbrief": {
+      "key": "ë",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with double dot"
+    },
+    "00EC-mathspeak-brief": {
+      "key": "ì",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with grave"
+    },
+    "00EC-mathspeak-sbrief": {
+      "key": "ì",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with grave"
+    },
+    "00ED-mathspeak-brief": {
+      "key": "í",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with acute"
+    },
+    "00ED-mathspeak-sbrief": {
+      "key": "í",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with acute"
+    },
+    "00EE-mathspeak-brief": {
+      "key": "î",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with caret"
+    },
+    "00EE-mathspeak-sbrief": {
+      "key": "î",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with caret"
+    },
+    "00EF-mathspeak-brief": {
+      "key": "ï",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with double dot"
+    },
+    "00EF-mathspeak-sbrief": {
+      "key": "ï",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with double dot"
+    },
+    "00F1-mathspeak-brief": {
+      "key": "ñ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "n overtilde"
+    },
+    "00F1-mathspeak-sbrief": {
+      "key": "ñ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "n overtilde"
+    },
+    "00F2-mathspeak-brief": {
+      "key": "ò",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with grave"
+    },
+    "00F2-mathspeak-sbrief": {
+      "key": "ò",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with grave"
+    },
+    "00F3-mathspeak-brief": {
+      "key": "ó",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with acute"
+    },
+    "00F3-mathspeak-sbrief": {
+      "key": "ó",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with acute"
+    },
+    "00F4-mathspeak-brief": {
+      "key": "ô",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with caret"
+    },
+    "00F4-mathspeak-sbrief": {
+      "key": "ô",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with caret"
+    },
+    "00F5-mathspeak-brief": {
+      "key": "õ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "o overtilde"
+    },
+    "00F5-mathspeak-sbrief": {
+      "key": "õ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "o overtilde"
+    },
+    "00F6-mathspeak-brief": {
+      "key": "ö",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with double dot"
+    },
+    "00F6-mathspeak-sbrief": {
+      "key": "ö",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with double dot"
+    },
+    "00F9-mathspeak-brief": {
+      "key": "ù",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with grave"
+    },
+    "00F9-mathspeak-sbrief": {
+      "key": "ù",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with grave"
+    },
+    "00FA-mathspeak-brief": {
+      "key": "ú",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with acute"
+    },
+    "00FA-mathspeak-sbrief": {
+      "key": "ú",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with acute"
+    },
+    "00FB-mathspeak-brief": {
+      "key": "û",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with caret"
+    },
+    "00FB-mathspeak-sbrief": {
+      "key": "û",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with caret"
+    },
+    "00FC-mathspeak-brief": {
+      "key": "ü",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with double dot"
+    },
+    "00FC-mathspeak-sbrief": {
+      "key": "ü",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with double dot"
+    },
+    "00FD-mathspeak-brief": {
+      "key": "ý",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with acute"
+    },
+    "00FD-mathspeak-sbrief": {
+      "key": "ý",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with acute"
+    },
+    "00FF-mathspeak-brief": {
+      "key": "ÿ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with double dot"
+    },
+    "00FF-mathspeak-sbrief": {
+      "key": "ÿ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with double dot"
+    },
+    "0101-mathspeak-brief": {
+      "key": "ā",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "a overbar"
+    },
+    "0101-mathspeak-sbrief": {
+      "key": "ā",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "a overbar"
+    },
+    "0103-mathspeak-brief": {
+      "key": "ă",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with breve"
+    },
+    "0103-mathspeak-sbrief": {
+      "key": "ă",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with breve"
+    },
+    "0105-mathspeak-brief": {
+      "key": "ą",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with ogonek"
+    },
+    "0105-mathspeak-sbrief": {
+      "key": "ą",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with ogonek"
+    },
+    "0107-mathspeak-brief": {
+      "key": "ć",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above c with acute"
+    },
+    "0107-mathspeak-sbrief": {
+      "key": "ć",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above c with acute"
+    },
+    "0109-mathspeak-brief": {
+      "key": "ĉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above c with caret"
+    },
+    "0109-mathspeak-sbrief": {
+      "key": "ĉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above c with caret"
+    },
+    "010B-mathspeak-brief": {
+      "key": "ċ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above c with dot"
+    },
+    "010B-mathspeak-sbrief": {
+      "key": "ċ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above c with dot"
+    },
+    "010D-mathspeak-brief": {
+      "key": "č",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above c with caron"
+    },
+    "010D-mathspeak-sbrief": {
+      "key": "č",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above c with caron"
+    },
+    "010F-mathspeak-brief": {
+      "key": "ď",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above d with caron"
+    },
+    "010F-mathspeak-sbrief": {
+      "key": "ď",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above d with caron"
+    },
+    "0113-mathspeak-brief": {
+      "key": "ē",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "e overbar"
+    },
+    "0113-mathspeak-sbrief": {
+      "key": "ē",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "e overbar"
+    },
+    "0115-mathspeak-brief": {
+      "key": "ĕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with breve"
+    },
+    "0115-mathspeak-sbrief": {
+      "key": "ĕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with breve"
+    },
+    "0117-mathspeak-brief": {
+      "key": "ė",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with dot"
+    },
+    "0117-mathspeak-sbrief": {
+      "key": "ė",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with dot"
+    },
+    "0119-mathspeak-brief": {
+      "key": "ę",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with ogonek"
+    },
+    "0119-mathspeak-sbrief": {
+      "key": "ę",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with ogonek"
+    },
+    "011B-mathspeak-brief": {
+      "key": "ě",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with caron"
+    },
+    "011B-mathspeak-sbrief": {
+      "key": "ě",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with caron"
+    },
+    "011D-mathspeak-brief": {
+      "key": "ĝ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above g with caret"
+    },
+    "011D-mathspeak-sbrief": {
+      "key": "ĝ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above g with caret"
+    },
+    "011F-mathspeak-brief": {
+      "key": "ğ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above g with breve"
+    },
+    "011F-mathspeak-sbrief": {
+      "key": "ğ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above g with breve"
+    },
+    "0121-mathspeak-brief": {
+      "key": "ġ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above g with dot"
+    },
+    "0121-mathspeak-sbrief": {
+      "key": "ġ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above g with dot"
+    },
+    "0123-mathspeak-brief": {
+      "key": "ģ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above g with cedilla"
+    },
+    "0123-mathspeak-sbrief": {
+      "key": "ģ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above g with cedilla"
+    },
+    "0125-mathspeak-brief": {
+      "key": "ĥ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above h with caret"
+    },
+    "0125-mathspeak-sbrief": {
+      "key": "ĥ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above h with caret"
+    },
+    "0129-mathspeak-brief": {
+      "key": "ĩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "i overtilde"
+    },
+    "0129-mathspeak-sbrief": {
+      "key": "ĩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "i overtilde"
+    },
+    "012B-mathspeak-brief": {
+      "key": "ī",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "i overbar"
+    },
+    "012B-mathspeak-sbrief": {
+      "key": "ī",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "i overbar"
+    },
+    "012D-mathspeak-brief": {
+      "key": "ĭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with breve"
+    },
+    "012D-mathspeak-sbrief": {
+      "key": "ĭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with breve"
+    },
+    "012F-mathspeak-brief": {
+      "key": "į",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with ogonek"
+    },
+    "012F-mathspeak-sbrief": {
+      "key": "į",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with ogonek"
+    },
+    "0131-mathspeak-brief": {
+      "key": "ı",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above dotless i"
+    },
+    "0131-mathspeak-sbrief": {
+      "key": "ı",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above dotless i"
+    },
+    "0135-mathspeak-brief": {
+      "key": "ĵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above j with caret"
+    },
+    "0135-mathspeak-sbrief": {
+      "key": "ĵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above j with caret"
+    },
+    "0137-mathspeak-brief": {
+      "key": "ķ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above k with cedilla"
+    },
+    "0137-mathspeak-sbrief": {
+      "key": "ķ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above k with cedilla"
+    },
+    "013A-mathspeak-brief": {
+      "key": "ĺ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above l with acute"
+    },
+    "013A-mathspeak-sbrief": {
+      "key": "ĺ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above l with acute"
+    },
+    "013C-mathspeak-brief": {
+      "key": "ļ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above l with cedilla"
+    },
+    "013C-mathspeak-sbrief": {
+      "key": "ļ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above l with cedilla"
+    },
+    "013E-mathspeak-brief": {
+      "key": "ľ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above l with caron"
+    },
+    "013E-mathspeak-sbrief": {
+      "key": "ľ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above l with caron"
+    },
+    "0140-mathspeak-brief": {
+      "key": "ŀ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above l with middle dot"
+    },
+    "0140-mathspeak-sbrief": {
+      "key": "ŀ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above l with middle dot"
+    },
+    "0144-mathspeak-brief": {
+      "key": "ń",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above n with acute"
+    },
+    "0144-mathspeak-sbrief": {
+      "key": "ń",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above n with acute"
+    },
+    "0146-mathspeak-brief": {
+      "key": "ņ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above n with cedilla"
+    },
+    "0146-mathspeak-sbrief": {
+      "key": "ņ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above n with cedilla"
+    },
+    "0148-mathspeak-brief": {
+      "key": "ň",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above n with caron"
+    },
+    "0148-mathspeak-sbrief": {
+      "key": "ň",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above n with caron"
+    },
+    "014D-mathspeak-brief": {
+      "key": "ō",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "o overbar"
+    },
+    "014D-mathspeak-sbrief": {
+      "key": "ō",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "o overbar"
+    },
+    "014F-mathspeak-brief": {
+      "key": "ŏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with breve"
+    },
+    "014F-mathspeak-sbrief": {
+      "key": "ŏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with breve"
+    },
+    "0151-mathspeak-brief": {
+      "key": "ő",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with double acute"
+    },
+    "0151-mathspeak-sbrief": {
+      "key": "ő",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with double acute"
+    },
+    "0155-mathspeak-brief": {
+      "key": "ŕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above r with acute"
+    },
+    "0155-mathspeak-sbrief": {
+      "key": "ŕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above r with acute"
+    },
+    "0157-mathspeak-brief": {
+      "key": "ŗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above r with cedilla"
+    },
+    "0157-mathspeak-sbrief": {
+      "key": "ŗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above r with cedilla"
+    },
+    "0159-mathspeak-brief": {
+      "key": "ř",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above r with caron"
+    },
+    "0159-mathspeak-sbrief": {
+      "key": "ř",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above r with caron"
+    },
+    "015B-mathspeak-brief": {
+      "key": "ś",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above s with acute"
+    },
+    "015B-mathspeak-sbrief": {
+      "key": "ś",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above s with acute"
+    },
+    "015D-mathspeak-brief": {
+      "key": "ŝ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above s with caret"
+    },
+    "015D-mathspeak-sbrief": {
+      "key": "ŝ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above s with caret"
+    },
+    "015F-mathspeak-brief": {
+      "key": "ş",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above s with cedilla"
+    },
+    "015F-mathspeak-sbrief": {
+      "key": "ş",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above s with cedilla"
+    },
+    "0161-mathspeak-brief": {
+      "key": "š",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above s with caron"
+    },
+    "0161-mathspeak-sbrief": {
+      "key": "š",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above s with caron"
+    },
+    "0163-mathspeak-brief": {
+      "key": "ţ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above t with cedilla"
+    },
+    "0163-mathspeak-sbrief": {
+      "key": "ţ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above t with cedilla"
+    },
+    "0165-mathspeak-brief": {
+      "key": "ť",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above t with caron"
+    },
+    "0165-mathspeak-sbrief": {
+      "key": "ť",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above t with caron"
+    },
+    "0169-mathspeak-brief": {
+      "key": "ũ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "u overtilde"
+    },
+    "0169-mathspeak-sbrief": {
+      "key": "ũ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "u overtilde"
+    },
+    "016B-mathspeak-brief": {
+      "key": "ū",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "u overbar"
+    },
+    "016B-mathspeak-sbrief": {
+      "key": "ū",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "u overbar"
+    },
+    "016D-mathspeak-brief": {
+      "key": "ŭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with breve"
+    },
+    "016D-mathspeak-sbrief": {
+      "key": "ŭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with breve"
+    },
+    "016F-mathspeak-brief": {
+      "key": "ů",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with ring"
+    },
+    "016F-mathspeak-sbrief": {
+      "key": "ů",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with ring"
+    },
+    "0171-mathspeak-brief": {
+      "key": "ű",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with double acute"
+    },
+    "0171-mathspeak-sbrief": {
+      "key": "ű",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with double acute"
+    },
+    "0173-mathspeak-brief": {
+      "key": "ų",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with ogonek"
+    },
+    "0173-mathspeak-sbrief": {
+      "key": "ų",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with ogonek"
+    },
+    "0175-mathspeak-brief": {
+      "key": "ŵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above w with caret"
+    },
+    "0175-mathspeak-sbrief": {
+      "key": "ŵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above w with caret"
+    },
+    "0177-mathspeak-brief": {
+      "key": "ŷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with caret"
+    },
+    "0177-mathspeak-sbrief": {
+      "key": "ŷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with caret"
+    },
+    "017A-mathspeak-brief": {
+      "key": "ź",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above z with acute"
+    },
+    "017A-mathspeak-sbrief": {
+      "key": "ź",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above z with acute"
+    },
+    "017C-mathspeak-brief": {
+      "key": "ż",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above z with dot"
+    },
+    "017C-mathspeak-sbrief": {
+      "key": "ż",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above z with dot"
+    },
+    "017E-mathspeak-brief": {
+      "key": "ž",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above z with caron"
+    },
+    "017E-mathspeak-sbrief": {
+      "key": "ž",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above z with caron"
+    },
+    "01CE-mathspeak-brief": {
+      "key": "ǎ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with caron"
+    },
+    "01CE-mathspeak-sbrief": {
+      "key": "ǎ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with caron"
+    },
+    "01D0-mathspeak-brief": {
+      "key": "ǐ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with caron"
+    },
+    "01D0-mathspeak-sbrief": {
+      "key": "ǐ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with caron"
+    },
+    "01D2-mathspeak-brief": {
+      "key": "ǒ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with caron"
+    },
+    "01D2-mathspeak-sbrief": {
+      "key": "ǒ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with caron"
+    },
+    "01D4-mathspeak-brief": {
+      "key": "ǔ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with caron"
+    },
+    "01D4-mathspeak-sbrief": {
+      "key": "ǔ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with caron"
+    },
+    "01E7-mathspeak-brief": {
+      "key": "ǧ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above g with caron"
+    },
+    "01E7-mathspeak-sbrief": {
+      "key": "ǧ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above g with caron"
+    },
+    "01E9-mathspeak-brief": {
+      "key": "ǩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above k with caron"
+    },
+    "01E9-mathspeak-sbrief": {
+      "key": "ǩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above k with caron"
+    },
+    "01EB-mathspeak-brief": {
+      "key": "ǫ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with ogonek"
+    },
+    "01EB-mathspeak-sbrief": {
+      "key": "ǫ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with ogonek"
+    },
+    "01F0-mathspeak-brief": {
+      "key": "ǰ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above j with caron"
+    },
+    "01F0-mathspeak-sbrief": {
+      "key": "ǰ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above j with caron"
+    },
+    "01F5-mathspeak-brief": {
+      "key": "ǵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above g with acute"
+    },
+    "01F5-mathspeak-sbrief": {
+      "key": "ǵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above g with acute"
+    },
+    "01F9-mathspeak-brief": {
+      "key": "ǹ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above n with grave"
+    },
+    "01F9-mathspeak-sbrief": {
+      "key": "ǹ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above n with grave"
+    },
+    "0201-mathspeak-brief": {
+      "key": "ȁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with double grave"
+    },
+    "0201-mathspeak-sbrief": {
+      "key": "ȁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with double grave"
+    },
+    "0203-mathspeak-brief": {
+      "key": "ȃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with inverted breve"
+    },
+    "0203-mathspeak-sbrief": {
+      "key": "ȃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with inverted breve"
+    },
+    "0205-mathspeak-brief": {
+      "key": "ȅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with double grave"
+    },
+    "0205-mathspeak-sbrief": {
+      "key": "ȅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with double grave"
+    },
+    "0207-mathspeak-brief": {
+      "key": "ȇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with inverted breve"
+    },
+    "0207-mathspeak-sbrief": {
+      "key": "ȇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with inverted breve"
+    },
+    "0209-mathspeak-brief": {
+      "key": "ȉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with double grave"
+    },
+    "0209-mathspeak-sbrief": {
+      "key": "ȉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with double grave"
+    },
+    "020B-mathspeak-brief": {
+      "key": "ȋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with inverted breve"
+    },
+    "020B-mathspeak-sbrief": {
+      "key": "ȋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with inverted breve"
+    },
+    "020D-mathspeak-brief": {
+      "key": "ȍ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with double grave"
+    },
+    "020D-mathspeak-sbrief": {
+      "key": "ȍ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with double grave"
+    },
+    "020F-mathspeak-brief": {
+      "key": "ȏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with inverted breve"
+    },
+    "020F-mathspeak-sbrief": {
+      "key": "ȏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with inverted breve"
+    },
+    "0211-mathspeak-brief": {
+      "key": "ȑ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above r with double grave"
+    },
+    "0211-mathspeak-sbrief": {
+      "key": "ȑ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above r with double grave"
+    },
+    "0213-mathspeak-brief": {
+      "key": "ȓ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above r with inverted breve"
+    },
+    "0213-mathspeak-sbrief": {
+      "key": "ȓ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above r with inverted breve"
+    },
+    "0215-mathspeak-brief": {
+      "key": "ȕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with double grave"
+    },
+    "0215-mathspeak-sbrief": {
+      "key": "ȕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with double grave"
+    },
+    "0217-mathspeak-brief": {
+      "key": "ȗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with inverted breve"
+    },
+    "0217-mathspeak-sbrief": {
+      "key": "ȗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with inverted breve"
+    },
+    "0219-mathspeak-brief": {
+      "key": "ș",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below s with comma below"
+    },
+    "0219-mathspeak-sbrief": {
+      "key": "ș",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below s with comma below"
+    },
+    "021B-mathspeak-brief": {
+      "key": "ț",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below t with comma below"
+    },
+    "021B-mathspeak-sbrief": {
+      "key": "ț",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below t with comma below"
+    },
+    "021F-mathspeak-brief": {
+      "key": "ȟ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above h with caron"
+    },
+    "021F-mathspeak-sbrief": {
+      "key": "ȟ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above h with caron"
+    },
+    "0227-mathspeak-brief": {
+      "key": "ȧ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with dot"
+    },
+    "0227-mathspeak-sbrief": {
+      "key": "ȧ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with dot"
+    },
+    "0229-mathspeak-brief": {
+      "key": "ȩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with cedilla"
+    },
+    "0229-mathspeak-sbrief": {
+      "key": "ȩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with cedilla"
+    },
+    "022F-mathspeak-brief": {
+      "key": "ȯ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with dot"
+    },
+    "022F-mathspeak-sbrief": {
+      "key": "ȯ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with dot"
+    },
+    "0233-mathspeak-brief": {
+      "key": "ȳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "y overbar"
+    },
+    "0233-mathspeak-sbrief": {
+      "key": "ȳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "y overbar"
+    },
+    "0237-mathspeak-brief": {
+      "key": "ȷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above dotless j"
+    },
+    "0237-mathspeak-sbrief": {
+      "key": "ȷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above dotless j"
+    },
+    "1E01-mathspeak-brief": {
+      "key": "ḁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below a with ring below"
+    },
+    "1E01-mathspeak-sbrief": {
+      "key": "ḁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below a with ring below"
+    },
+    "1E03-mathspeak-brief": {
+      "key": "ḃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above b with dot"
+    },
+    "1E03-mathspeak-sbrief": {
+      "key": "ḃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above b with dot"
+    },
+    "1E05-mathspeak-brief": {
+      "key": "ḅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below b with dot"
+    },
+    "1E05-mathspeak-sbrief": {
+      "key": "ḅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below b with dot"
+    },
+    "1E07-mathspeak-brief": {
+      "key": "ḇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "b underbar"
+    },
+    "1E07-mathspeak-sbrief": {
+      "key": "ḇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "b underbar"
+    },
+    "1E0B-mathspeak-brief": {
+      "key": "ḋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above d with dot"
+    },
+    "1E0B-mathspeak-sbrief": {
+      "key": "ḋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above d with dot"
+    },
+    "1E0D-mathspeak-brief": {
+      "key": "ḍ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below d with dot"
+    },
+    "1E0D-mathspeak-sbrief": {
+      "key": "ḍ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below d with dot"
+    },
+    "1E0F-mathspeak-brief": {
+      "key": "ḏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "d underbar"
+    },
+    "1E0F-mathspeak-sbrief": {
+      "key": "ḏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "d underbar"
+    },
+    "1E11-mathspeak-brief": {
+      "key": "ḑ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above d with cedilla"
+    },
+    "1E11-mathspeak-sbrief": {
+      "key": "ḑ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above d with cedilla"
+    },
+    "1E13-mathspeak-brief": {
+      "key": "ḓ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below d with caret"
+    },
+    "1E13-mathspeak-sbrief": {
+      "key": "ḓ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below d with caret"
+    },
+    "1E19-mathspeak-brief": {
+      "key": "ḙ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below e with caret"
+    },
+    "1E19-mathspeak-sbrief": {
+      "key": "ḙ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below e with caret"
+    },
+    "1E1B-mathspeak-brief": {
+      "key": "ḛ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "e undertilde"
+    },
+    "1E1B-mathspeak-sbrief": {
+      "key": "ḛ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "e undertilde"
+    },
+    "1E1F-mathspeak-brief": {
+      "key": "ḟ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above f with dot"
+    },
+    "1E1F-mathspeak-sbrief": {
+      "key": "ḟ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above f with dot"
+    },
+    "1E21-mathspeak-brief": {
+      "key": "ḡ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "g overbar"
+    },
+    "1E21-mathspeak-sbrief": {
+      "key": "ḡ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "g overbar"
+    },
+    "1E23-mathspeak-brief": {
+      "key": "ḣ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above h with dot"
+    },
+    "1E23-mathspeak-sbrief": {
+      "key": "ḣ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above h with dot"
+    },
+    "1E25-mathspeak-brief": {
+      "key": "ḥ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below h with dot"
+    },
+    "1E25-mathspeak-sbrief": {
+      "key": "ḥ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below h with dot"
+    },
+    "1E27-mathspeak-brief": {
+      "key": "ḧ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above h with double dot"
+    },
+    "1E27-mathspeak-sbrief": {
+      "key": "ḧ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above h with double dot"
+    },
+    "1E29-mathspeak-brief": {
+      "key": "ḩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above h with cedilla"
+    },
+    "1E29-mathspeak-sbrief": {
+      "key": "ḩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above h with cedilla"
+    },
+    "1E2B-mathspeak-brief": {
+      "key": "ḫ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below h with breve below"
+    },
+    "1E2B-mathspeak-sbrief": {
+      "key": "ḫ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below h with breve below"
+    },
+    "1E2D-mathspeak-brief": {
+      "key": "ḭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "i undertilde"
+    },
+    "1E2D-mathspeak-sbrief": {
+      "key": "ḭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "i undertilde"
+    },
+    "1E31-mathspeak-brief": {
+      "key": "ḱ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above k with acute"
+    },
+    "1E31-mathspeak-sbrief": {
+      "key": "ḱ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above k with acute"
+    },
+    "1E33-mathspeak-brief": {
+      "key": "ḳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below k with dot"
+    },
+    "1E33-mathspeak-sbrief": {
+      "key": "ḳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below k with dot"
+    },
+    "1E35-mathspeak-brief": {
+      "key": "ḵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "k underbar"
+    },
+    "1E35-mathspeak-sbrief": {
+      "key": "ḵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "k underbar"
+    },
+    "1E37-mathspeak-brief": {
+      "key": "ḷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below l with dot"
+    },
+    "1E37-mathspeak-sbrief": {
+      "key": "ḷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below l with dot"
+    },
+    "1E3B-mathspeak-brief": {
+      "key": "ḻ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "l underbar"
+    },
+    "1E3B-mathspeak-sbrief": {
+      "key": "ḻ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "l underbar"
+    },
+    "1E3D-mathspeak-brief": {
+      "key": "ḽ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below l with caret"
+    },
+    "1E3D-mathspeak-sbrief": {
+      "key": "ḽ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below l with caret"
+    },
+    "1E3F-mathspeak-brief": {
+      "key": "ḿ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above m with acute"
+    },
+    "1E3F-mathspeak-sbrief": {
+      "key": "ḿ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above m with acute"
+    },
+    "1E41-mathspeak-brief": {
+      "key": "ṁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above m with dot"
+    },
+    "1E41-mathspeak-sbrief": {
+      "key": "ṁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above m with dot"
+    },
+    "1E43-mathspeak-brief": {
+      "key": "ṃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below m with dot"
+    },
+    "1E43-mathspeak-sbrief": {
+      "key": "ṃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below m with dot"
+    },
+    "1E45-mathspeak-brief": {
+      "key": "ṅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above n with dot"
+    },
+    "1E45-mathspeak-sbrief": {
+      "key": "ṅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above n with dot"
+    },
+    "1E47-mathspeak-brief": {
+      "key": "ṇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below n with dot"
+    },
+    "1E47-mathspeak-sbrief": {
+      "key": "ṇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below n with dot"
+    },
+    "1E49-mathspeak-brief": {
+      "key": "ṉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "n underbar"
+    },
+    "1E49-mathspeak-sbrief": {
+      "key": "ṉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "n underbar"
+    },
+    "1E4B-mathspeak-brief": {
+      "key": "ṋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below n with caret"
+    },
+    "1E4B-mathspeak-sbrief": {
+      "key": "ṋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below n with caret"
+    },
+    "1E55-mathspeak-brief": {
+      "key": "ṕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above p with acute"
+    },
+    "1E55-mathspeak-sbrief": {
+      "key": "ṕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above p with acute"
+    },
+    "1E57-mathspeak-brief": {
+      "key": "ṗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above p with dot"
+    },
+    "1E57-mathspeak-sbrief": {
+      "key": "ṗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above p with dot"
+    },
+    "1E59-mathspeak-brief": {
+      "key": "ṙ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above r with dot"
+    },
+    "1E59-mathspeak-sbrief": {
+      "key": "ṙ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above r with dot"
+    },
+    "1E5B-mathspeak-brief": {
+      "key": "ṛ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below r with dot"
+    },
+    "1E5B-mathspeak-sbrief": {
+      "key": "ṛ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below r with dot"
+    },
+    "1E5F-mathspeak-brief": {
+      "key": "ṟ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "r underbar"
+    },
+    "1E5F-mathspeak-sbrief": {
+      "key": "ṟ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r underbar"
+    },
+    "1E61-mathspeak-brief": {
+      "key": "ṡ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above s with dot"
+    },
+    "1E61-mathspeak-sbrief": {
+      "key": "ṡ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above s with dot"
+    },
+    "1E63-mathspeak-brief": {
+      "key": "ṣ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below s with dot"
+    },
+    "1E63-mathspeak-sbrief": {
+      "key": "ṣ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below s with dot"
+    },
+    "1E6B-mathspeak-brief": {
+      "key": "ṫ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above t with dot"
+    },
+    "1E6B-mathspeak-sbrief": {
+      "key": "ṫ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above t with dot"
+    },
+    "1E6D-mathspeak-brief": {
+      "key": "ṭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below t with dot"
+    },
+    "1E6D-mathspeak-sbrief": {
+      "key": "ṭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below t with dot"
+    },
+    "1E6F-mathspeak-brief": {
+      "key": "ṯ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "t underbar"
+    },
+    "1E6F-mathspeak-sbrief": {
+      "key": "ṯ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "t underbar"
+    },
+    "1E71-mathspeak-brief": {
+      "key": "ṱ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below t with caret"
+    },
+    "1E71-mathspeak-sbrief": {
+      "key": "ṱ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below t with caret"
+    },
+    "1E73-mathspeak-brief": {
+      "key": "ṳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below u with double dot"
+    },
+    "1E73-mathspeak-sbrief": {
+      "key": "ṳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below u with double dot"
+    },
+    "1E75-mathspeak-brief": {
+      "key": "ṵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "u undertilde"
+    },
+    "1E75-mathspeak-sbrief": {
+      "key": "ṵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "u undertilde"
+    },
+    "1E77-mathspeak-brief": {
+      "key": "ṷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below u with caret"
+    },
+    "1E77-mathspeak-sbrief": {
+      "key": "ṷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below u with caret"
+    },
+    "1E7D-mathspeak-brief": {
+      "key": "ṽ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "v overtilde"
+    },
+    "1E7D-mathspeak-sbrief": {
+      "key": "ṽ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "v overtilde"
+    },
+    "1E7F-mathspeak-brief": {
+      "key": "ṿ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below v with dot"
+    },
+    "1E7F-mathspeak-sbrief": {
+      "key": "ṿ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below v with dot"
+    },
+    "1E81-mathspeak-brief": {
+      "key": "ẁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above w with grave"
+    },
+    "1E81-mathspeak-sbrief": {
+      "key": "ẁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above w with grave"
+    },
+    "1E83-mathspeak-brief": {
+      "key": "ẃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above w with acute"
+    },
+    "1E83-mathspeak-sbrief": {
+      "key": "ẃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above w with acute"
+    },
+    "1E85-mathspeak-brief": {
+      "key": "ẅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above w with double dot"
+    },
+    "1E85-mathspeak-sbrief": {
+      "key": "ẅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above w with double dot"
+    },
+    "1E87-mathspeak-brief": {
+      "key": "ẇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above w with dot"
+    },
+    "1E87-mathspeak-sbrief": {
+      "key": "ẇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above w with dot"
+    },
+    "1E89-mathspeak-brief": {
+      "key": "ẉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below w with dot"
+    },
+    "1E89-mathspeak-sbrief": {
+      "key": "ẉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below w with dot"
+    },
+    "1E8B-mathspeak-brief": {
+      "key": "ẋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above x with dot"
+    },
+    "1E8B-mathspeak-sbrief": {
+      "key": "ẋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above x with dot"
+    },
+    "1E8D-mathspeak-brief": {
+      "key": "ẍ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above x with double dot"
+    },
+    "1E8D-mathspeak-sbrief": {
+      "key": "ẍ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above x with double dot"
+    },
+    "1E8F-mathspeak-brief": {
+      "key": "ẏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with dot"
+    },
+    "1E8F-mathspeak-sbrief": {
+      "key": "ẏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with dot"
+    },
+    "1E91-mathspeak-brief": {
+      "key": "ẑ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above z with caret"
+    },
+    "1E91-mathspeak-sbrief": {
+      "key": "ẑ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above z with caret"
+    },
+    "1E93-mathspeak-brief": {
+      "key": "ẓ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below z with dot"
+    },
+    "1E93-mathspeak-sbrief": {
+      "key": "ẓ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below z with dot"
+    },
+    "1E95-mathspeak-brief": {
+      "key": "ẕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "z underbar"
+    },
+    "1E95-mathspeak-sbrief": {
+      "key": "ẕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "z underbar"
+    },
+    "1E96-mathspeak-brief": {
+      "key": "ẖ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "h underbar"
+    },
+    "1E96-mathspeak-sbrief": {
+      "key": "ẖ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "h underbar"
+    },
+    "1E97-mathspeak-brief": {
+      "key": "ẗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above t with double dot"
+    },
+    "1E97-mathspeak-sbrief": {
+      "key": "ẗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above t with double dot"
+    },
+    "1E98-mathspeak-brief": {
+      "key": "ẘ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above w with ring"
+    },
+    "1E98-mathspeak-sbrief": {
+      "key": "ẘ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above w with ring"
+    },
+    "1E99-mathspeak-brief": {
+      "key": "ẙ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with ring"
+    },
+    "1E99-mathspeak-sbrief": {
+      "key": "ẙ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with ring"
+    },
+    "1E9A-mathspeak-brief": {
+      "key": "ẚ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with right half ring"
+    },
+    "1E9A-mathspeak-sbrief": {
+      "key": "ẚ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with right half ring"
+    },
+    "1EA1-mathspeak-brief": {
+      "key": "ạ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below a with dot"
+    },
+    "1EA1-mathspeak-sbrief": {
+      "key": "ạ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below a with dot"
+    },
+    "1EA3-mathspeak-brief": {
+      "key": "ả",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above a with hook"
+    },
+    "1EA3-mathspeak-sbrief": {
+      "key": "ả",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above a with hook"
+    },
+    "1EB9-mathspeak-brief": {
+      "key": "ẹ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below e with dot"
+    },
+    "1EB9-mathspeak-sbrief": {
+      "key": "ẹ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below e with dot"
+    },
+    "1EBB-mathspeak-brief": {
+      "key": "ẻ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above e with hook"
+    },
+    "1EBB-mathspeak-sbrief": {
+      "key": "ẻ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above e with hook"
+    },
+    "1EBD-mathspeak-brief": {
+      "key": "ẽ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "e overtilde"
+    },
+    "1EBD-mathspeak-sbrief": {
+      "key": "ẽ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "e overtilde"
+    },
+    "1EC9-mathspeak-brief": {
+      "key": "ỉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above i with hook"
+    },
+    "1EC9-mathspeak-sbrief": {
+      "key": "ỉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above i with hook"
+    },
+    "1ECB-mathspeak-brief": {
+      "key": "ị",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below i with dot"
+    },
+    "1ECB-mathspeak-sbrief": {
+      "key": "ị",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below i with dot"
+    },
+    "1ECD-mathspeak-brief": {
+      "key": "ọ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below o with dot"
+    },
+    "1ECD-mathspeak-sbrief": {
+      "key": "ọ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below o with dot"
+    },
+    "1ECF-mathspeak-brief": {
+      "key": "ỏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above o with hook"
+    },
+    "1ECF-mathspeak-sbrief": {
+      "key": "ỏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above o with hook"
+    },
+    "1EE5-mathspeak-brief": {
+      "key": "ụ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below u with dot"
+    },
+    "1EE5-mathspeak-sbrief": {
+      "key": "ụ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below u with dot"
+    },
+    "1EE7-mathspeak-brief": {
+      "key": "ủ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above u with hook"
+    },
+    "1EE7-mathspeak-sbrief": {
+      "key": "ủ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above u with hook"
+    },
+    "1EF3-mathspeak-brief": {
+      "key": "ỳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with grave"
+    },
+    "1EF3-mathspeak-sbrief": {
+      "key": "ỳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with grave"
+    },
+    "1EF5-mathspeak-brief": {
+      "key": "ỵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below y with dot"
+    },
+    "1EF5-mathspeak-sbrief": {
+      "key": "ỵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below y with dot"
+    },
+    "1EF7-mathspeak-brief": {
+      "key": "ỷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above y with hook"
+    },
+    "1EF7-mathspeak-sbrief": {
+      "key": "ỷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above y with hook"
+    },
+    "1EF9-mathspeak-brief": {
+      "key": "ỹ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "y overtilde"
+    },
+    "1EF9-mathspeak-sbrief": {
+      "key": "ỹ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "y overtilde"
+    },
+    "210E-default-physics": {
+      "key": "ℎ",
+      "domain": "default",
+      "style": "physics",
+      "expected": "planck constant"
+    },
+    "00C0-mathspeak-brief": {
+      "key": "À",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with grave"
+    },
+    "00C0-mathspeak-sbrief": {
+      "key": "À",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with grave"
+    },
+    "00C1-mathspeak-brief": {
+      "key": "Á",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with acute"
+    },
+    "00C1-mathspeak-sbrief": {
+      "key": "Á",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with acute"
+    },
+    "00C2-mathspeak-brief": {
+      "key": "Â",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with caret"
+    },
+    "00C2-mathspeak-sbrief": {
+      "key": "Â",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with caret"
+    },
+    "00C3-mathspeak-brief": {
+      "key": "Ã",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper A overtilde"
+    },
+    "00C3-mathspeak-sbrief": {
+      "key": "Ã",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper A overtilde"
+    },
+    "00C4-mathspeak-brief": {
+      "key": "Ä",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with double dot"
+    },
+    "00C4-mathspeak-sbrief": {
+      "key": "Ä",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with double dot"
+    },
+    "00C5-mathspeak-brief": {
+      "key": "Å",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with ring"
+    },
+    "00C5-mathspeak-sbrief": {
+      "key": "Å",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with ring"
+    },
+    "00C7-mathspeak-brief": {
+      "key": "Ç",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper C with cedilla"
+    },
+    "00C7-mathspeak-sbrief": {
+      "key": "Ç",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper C with cedilla"
+    },
+    "00C8-mathspeak-brief": {
+      "key": "È",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with grave"
+    },
+    "00C8-mathspeak-sbrief": {
+      "key": "È",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with grave"
+    },
+    "00C9-mathspeak-brief": {
+      "key": "É",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with acute"
+    },
+    "00C9-mathspeak-sbrief": {
+      "key": "É",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with acute"
+    },
+    "00CA-mathspeak-brief": {
+      "key": "Ê",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with caret"
+    },
+    "00CA-mathspeak-sbrief": {
+      "key": "Ê",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with caret"
+    },
+    "00CB-mathspeak-brief": {
+      "key": "Ë",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with double dot"
+    },
+    "00CB-mathspeak-sbrief": {
+      "key": "Ë",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with double dot"
+    },
+    "00CC-mathspeak-brief": {
+      "key": "Ì",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with grave"
+    },
+    "00CC-mathspeak-sbrief": {
+      "key": "Ì",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with grave"
+    },
+    "00CD-mathspeak-brief": {
+      "key": "Í",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with acute"
+    },
+    "00CD-mathspeak-sbrief": {
+      "key": "Í",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with acute"
+    },
+    "00CE-mathspeak-brief": {
+      "key": "Î",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with caret"
+    },
+    "00CE-mathspeak-sbrief": {
+      "key": "Î",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with caret"
+    },
+    "00CF-mathspeak-brief": {
+      "key": "Ï",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with double dot"
+    },
+    "00CF-mathspeak-sbrief": {
+      "key": "Ï",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with double dot"
+    },
+    "00D1-mathspeak-brief": {
+      "key": "Ñ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper N overtilde"
+    },
+    "00D1-mathspeak-sbrief": {
+      "key": "Ñ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper N overtilde"
+    },
+    "00D2-mathspeak-brief": {
+      "key": "Ò",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with grave"
+    },
+    "00D2-mathspeak-sbrief": {
+      "key": "Ò",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with grave"
+    },
+    "00D3-mathspeak-brief": {
+      "key": "Ó",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with acute"
+    },
+    "00D3-mathspeak-sbrief": {
+      "key": "Ó",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with acute"
+    },
+    "00D4-mathspeak-brief": {
+      "key": "Ô",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with caret"
+    },
+    "00D4-mathspeak-sbrief": {
+      "key": "Ô",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with caret"
+    },
+    "00D5-mathspeak-brief": {
+      "key": "Õ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper O overtilde"
+    },
+    "00D5-mathspeak-sbrief": {
+      "key": "Õ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper O overtilde"
+    },
+    "00D6-mathspeak-brief": {
+      "key": "Ö",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with double dot"
+    },
+    "00D6-mathspeak-sbrief": {
+      "key": "Ö",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with double dot"
+    },
+    "00D9-mathspeak-brief": {
+      "key": "Ù",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with grave"
+    },
+    "00D9-mathspeak-sbrief": {
+      "key": "Ù",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with grave"
+    },
+    "00DA-mathspeak-brief": {
+      "key": "Ú",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with acute"
+    },
+    "00DA-mathspeak-sbrief": {
+      "key": "Ú",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with acute"
+    },
+    "00DB-mathspeak-brief": {
+      "key": "Û",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with caret"
+    },
+    "00DB-mathspeak-sbrief": {
+      "key": "Û",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with caret"
+    },
+    "00DC-mathspeak-brief": {
+      "key": "Ü",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with double dot"
+    },
+    "00DC-mathspeak-sbrief": {
+      "key": "Ü",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with double dot"
+    },
+    "00DD-mathspeak-brief": {
+      "key": "Ý",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Y with acute"
+    },
+    "00DD-mathspeak-sbrief": {
+      "key": "Ý",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Y with acute"
+    },
+    "0100-mathspeak-brief": {
+      "key": "Ā",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper A overbar"
+    },
+    "0100-mathspeak-sbrief": {
+      "key": "Ā",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper A overbar"
+    },
+    "0102-mathspeak-brief": {
+      "key": "Ă",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with breve"
+    },
+    "0102-mathspeak-sbrief": {
+      "key": "Ă",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with breve"
+    },
+    "0104-mathspeak-brief": {
+      "key": "Ą",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with ogonek"
+    },
+    "0104-mathspeak-sbrief": {
+      "key": "Ą",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with ogonek"
+    },
+    "0106-mathspeak-brief": {
+      "key": "Ć",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper C with acute"
+    },
+    "0106-mathspeak-sbrief": {
+      "key": "Ć",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper C with acute"
+    },
+    "0108-mathspeak-brief": {
+      "key": "Ĉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper C with caret"
+    },
+    "0108-mathspeak-sbrief": {
+      "key": "Ĉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper C with caret"
+    },
+    "010A-mathspeak-brief": {
+      "key": "Ċ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper C with dot"
+    },
+    "010A-mathspeak-sbrief": {
+      "key": "Ċ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper C with dot"
+    },
+    "010C-mathspeak-brief": {
+      "key": "Č",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper C with caron"
+    },
+    "010C-mathspeak-sbrief": {
+      "key": "Č",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper C with caron"
+    },
+    "010E-mathspeak-brief": {
+      "key": "Ď",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper D with caron"
+    },
+    "010E-mathspeak-sbrief": {
+      "key": "Ď",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper D with caron"
+    },
+    "0112-mathspeak-brief": {
+      "key": "Ē",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper E overbar"
+    },
+    "0112-mathspeak-sbrief": {
+      "key": "Ē",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper E overbar"
+    },
+    "0114-mathspeak-brief": {
+      "key": "Ĕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with breve"
+    },
+    "0114-mathspeak-sbrief": {
+      "key": "Ĕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with breve"
+    },
+    "0116-mathspeak-brief": {
+      "key": "Ė",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with dot"
+    },
+    "0116-mathspeak-sbrief": {
+      "key": "Ė",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with dot"
+    },
+    "0118-mathspeak-brief": {
+      "key": "Ę",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with ogonek"
+    },
+    "0118-mathspeak-sbrief": {
+      "key": "Ę",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with ogonek"
+    },
+    "011A-mathspeak-brief": {
+      "key": "Ě",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with caron"
+    },
+    "011A-mathspeak-sbrief": {
+      "key": "Ě",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with caron"
+    },
+    "011C-mathspeak-brief": {
+      "key": "Ĝ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper G with caret"
+    },
+    "011C-mathspeak-sbrief": {
+      "key": "Ĝ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper G with caret"
+    },
+    "011E-mathspeak-brief": {
+      "key": "Ğ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper G with breve"
+    },
+    "011E-mathspeak-sbrief": {
+      "key": "Ğ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper G with breve"
+    },
+    "0120-mathspeak-brief": {
+      "key": "Ġ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper G with dot"
+    },
+    "0120-mathspeak-sbrief": {
+      "key": "Ġ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper G with dot"
+    },
+    "0122-mathspeak-brief": {
+      "key": "Ģ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper G with cedilla"
+    },
+    "0122-mathspeak-sbrief": {
+      "key": "Ģ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper G with cedilla"
+    },
+    "0124-mathspeak-brief": {
+      "key": "Ĥ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper H with caret"
+    },
+    "0124-mathspeak-sbrief": {
+      "key": "Ĥ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper H with caret"
+    },
+    "0128-mathspeak-brief": {
+      "key": "Ĩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper I overtilde"
+    },
+    "0128-mathspeak-sbrief": {
+      "key": "Ĩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper I overtilde"
+    },
+    "012A-mathspeak-brief": {
+      "key": "Ī",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper I overbar"
+    },
+    "012A-mathspeak-sbrief": {
+      "key": "Ī",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper I overbar"
+    },
+    "012C-mathspeak-brief": {
+      "key": "Ĭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with breve"
+    },
+    "012C-mathspeak-sbrief": {
+      "key": "Ĭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with breve"
+    },
+    "012E-mathspeak-brief": {
+      "key": "Į",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with ogonek"
+    },
+    "012E-mathspeak-sbrief": {
+      "key": "Į",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with ogonek"
+    },
+    "0130-mathspeak-brief": {
+      "key": "İ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with dot"
+    },
+    "0130-mathspeak-sbrief": {
+      "key": "İ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with dot"
+    },
+    "0134-mathspeak-brief": {
+      "key": "Ĵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper J with caret"
+    },
+    "0134-mathspeak-sbrief": {
+      "key": "Ĵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper J with caret"
+    },
+    "0136-mathspeak-brief": {
+      "key": "Ķ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper K with cedilla"
+    },
+    "0136-mathspeak-sbrief": {
+      "key": "Ķ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper K with cedilla"
+    },
+    "0139-mathspeak-brief": {
+      "key": "Ĺ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper L with acute"
+    },
+    "0139-mathspeak-sbrief": {
+      "key": "Ĺ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper L with acute"
+    },
+    "013B-mathspeak-brief": {
+      "key": "Ļ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper L with cedilla"
+    },
+    "013B-mathspeak-sbrief": {
+      "key": "Ļ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper L with cedilla"
+    },
+    "013D-mathspeak-brief": {
+      "key": "Ľ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper L with caron"
+    },
+    "013D-mathspeak-sbrief": {
+      "key": "Ľ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper L with caron"
+    },
+    "013F-mathspeak-brief": {
+      "key": "Ŀ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper L with middle dot"
+    },
+    "013F-mathspeak-sbrief": {
+      "key": "Ŀ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper L with middle dot"
+    },
+    "0143-mathspeak-brief": {
+      "key": "Ń",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper N with acute"
+    },
+    "0143-mathspeak-sbrief": {
+      "key": "Ń",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper N with acute"
+    },
+    "0145-mathspeak-brief": {
+      "key": "Ņ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper N with cedilla"
+    },
+    "0145-mathspeak-sbrief": {
+      "key": "Ņ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper N with cedilla"
+    },
+    "0147-mathspeak-brief": {
+      "key": "Ň",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper N with caron"
+    },
+    "0147-mathspeak-sbrief": {
+      "key": "Ň",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper N with caron"
+    },
+    "014C-mathspeak-brief": {
+      "key": "Ō",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper O overbar"
+    },
+    "014C-mathspeak-sbrief": {
+      "key": "Ō",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper O overbar"
+    },
+    "014E-mathspeak-brief": {
+      "key": "Ŏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with breve"
+    },
+    "014E-mathspeak-sbrief": {
+      "key": "Ŏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with breve"
+    },
+    "0150-mathspeak-brief": {
+      "key": "Ő",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with double acute"
+    },
+    "0150-mathspeak-sbrief": {
+      "key": "Ő",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with double acute"
+    },
+    "0154-mathspeak-brief": {
+      "key": "Ŕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper R with acute"
+    },
+    "0154-mathspeak-sbrief": {
+      "key": "Ŕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper R with acute"
+    },
+    "0156-mathspeak-brief": {
+      "key": "Ŗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper R with cedilla"
+    },
+    "0156-mathspeak-sbrief": {
+      "key": "Ŗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper R with cedilla"
+    },
+    "0158-mathspeak-brief": {
+      "key": "Ř",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper R with caron"
+    },
+    "0158-mathspeak-sbrief": {
+      "key": "Ř",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper R with caron"
+    },
+    "015A-mathspeak-brief": {
+      "key": "Ś",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper S with acute"
+    },
+    "015A-mathspeak-sbrief": {
+      "key": "Ś",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper S with acute"
+    },
+    "015C-mathspeak-brief": {
+      "key": "Ŝ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper S with caret"
+    },
+    "015C-mathspeak-sbrief": {
+      "key": "Ŝ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper S with caret"
+    },
+    "015E-mathspeak-brief": {
+      "key": "Ş",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper S with cedilla"
+    },
+    "015E-mathspeak-sbrief": {
+      "key": "Ş",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper S with cedilla"
+    },
+    "0160-mathspeak-brief": {
+      "key": "Š",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper S with caron"
+    },
+    "0160-mathspeak-sbrief": {
+      "key": "Š",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper S with caron"
+    },
+    "0162-mathspeak-brief": {
+      "key": "Ţ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper T with cedilla"
+    },
+    "0162-mathspeak-sbrief": {
+      "key": "Ţ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper T with cedilla"
+    },
+    "0164-mathspeak-brief": {
+      "key": "Ť",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper T with caron"
+    },
+    "0164-mathspeak-sbrief": {
+      "key": "Ť",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper T with caron"
+    },
+    "0168-mathspeak-brief": {
+      "key": "Ũ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper U overtilde"
+    },
+    "0168-mathspeak-sbrief": {
+      "key": "Ũ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper U overtilde"
+    },
+    "016A-mathspeak-brief": {
+      "key": "Ū",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper U overbar"
+    },
+    "016A-mathspeak-sbrief": {
+      "key": "Ū",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper U overbar"
+    },
+    "016C-mathspeak-brief": {
+      "key": "Ŭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with breve"
+    },
+    "016C-mathspeak-sbrief": {
+      "key": "Ŭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with breve"
+    },
+    "016E-mathspeak-brief": {
+      "key": "Ů",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with ring"
+    },
+    "016E-mathspeak-sbrief": {
+      "key": "Ů",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with ring"
+    },
+    "0170-mathspeak-brief": {
+      "key": "Ű",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with double acute"
+    },
+    "0170-mathspeak-sbrief": {
+      "key": "Ű",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with double acute"
+    },
+    "0172-mathspeak-brief": {
+      "key": "Ų",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with ogonek"
+    },
+    "0172-mathspeak-sbrief": {
+      "key": "Ų",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with ogonek"
+    },
+    "0174-mathspeak-brief": {
+      "key": "Ŵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper W with caret"
+    },
+    "0174-mathspeak-sbrief": {
+      "key": "Ŵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper W with caret"
+    },
+    "0176-mathspeak-brief": {
+      "key": "Ŷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Y with caret"
+    },
+    "0176-mathspeak-sbrief": {
+      "key": "Ŷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Y with caret"
+    },
+    "0178-mathspeak-brief": {
+      "key": "Ÿ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Y with double dot"
+    },
+    "0178-mathspeak-sbrief": {
+      "key": "Ÿ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Y with double dot"
+    },
+    "0179-mathspeak-brief": {
+      "key": "Ź",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Z with acute"
+    },
+    "0179-mathspeak-sbrief": {
+      "key": "Ź",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Z with acute"
+    },
+    "017B-mathspeak-brief": {
+      "key": "Ż",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Z with dot"
+    },
+    "017B-mathspeak-sbrief": {
+      "key": "Ż",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Z with dot"
+    },
+    "017D-mathspeak-brief": {
+      "key": "Ž",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Z with caron"
+    },
+    "017D-mathspeak-sbrief": {
+      "key": "Ž",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Z with caron"
+    },
+    "01CD-mathspeak-brief": {
+      "key": "Ǎ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with caron"
+    },
+    "01CD-mathspeak-sbrief": {
+      "key": "Ǎ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with caron"
+    },
+    "01CF-mathspeak-brief": {
+      "key": "Ǐ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with caron"
+    },
+    "01CF-mathspeak-sbrief": {
+      "key": "Ǐ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with caron"
+    },
+    "01D1-mathspeak-brief": {
+      "key": "Ǒ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with caron"
+    },
+    "01D1-mathspeak-sbrief": {
+      "key": "Ǒ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with caron"
+    },
+    "01D3-mathspeak-brief": {
+      "key": "Ǔ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with caron"
+    },
+    "01D3-mathspeak-sbrief": {
+      "key": "Ǔ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with caron"
+    },
+    "01E6-mathspeak-brief": {
+      "key": "Ǧ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper G with caron"
+    },
+    "01E6-mathspeak-sbrief": {
+      "key": "Ǧ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper G with caron"
+    },
+    "01E8-mathspeak-brief": {
+      "key": "Ǩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper K with caron"
+    },
+    "01E8-mathspeak-sbrief": {
+      "key": "Ǩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper K with caron"
+    },
+    "01EA-mathspeak-brief": {
+      "key": "Ǫ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with ogonek"
+    },
+    "01EA-mathspeak-sbrief": {
+      "key": "Ǫ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with ogonek"
+    },
+    "01F4-mathspeak-brief": {
+      "key": "Ǵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper G with acute"
+    },
+    "01F4-mathspeak-sbrief": {
+      "key": "Ǵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper G with acute"
+    },
+    "01F8-mathspeak-brief": {
+      "key": "Ǹ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper N with grave"
+    },
+    "01F8-mathspeak-sbrief": {
+      "key": "Ǹ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper N with grave"
+    },
+    "0200-mathspeak-brief": {
+      "key": "Ȁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with double grave"
+    },
+    "0200-mathspeak-sbrief": {
+      "key": "Ȁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with double grave"
+    },
+    "0202-mathspeak-brief": {
+      "key": "Ȃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with inverted breve"
+    },
+    "0202-mathspeak-sbrief": {
+      "key": "Ȃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with inverted breve"
+    },
+    "0204-mathspeak-brief": {
+      "key": "Ȅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with double grave"
+    },
+    "0204-mathspeak-sbrief": {
+      "key": "Ȅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with double grave"
+    },
+    "0206-mathspeak-brief": {
+      "key": "Ȇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with inverted breve"
+    },
+    "0206-mathspeak-sbrief": {
+      "key": "Ȇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with inverted breve"
+    },
+    "0208-mathspeak-brief": {
+      "key": "Ȉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with double grave"
+    },
+    "0208-mathspeak-sbrief": {
+      "key": "Ȉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with double grave"
+    },
+    "020A-mathspeak-brief": {
+      "key": "Ȋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with inverted breve"
+    },
+    "020A-mathspeak-sbrief": {
+      "key": "Ȋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with inverted breve"
+    },
+    "020C-mathspeak-brief": {
+      "key": "Ȍ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with double grave"
+    },
+    "020C-mathspeak-sbrief": {
+      "key": "Ȍ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with double grave"
+    },
+    "020E-mathspeak-brief": {
+      "key": "Ȏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with inverted breve"
+    },
+    "020E-mathspeak-sbrief": {
+      "key": "Ȏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with inverted breve"
+    },
+    "0210-mathspeak-brief": {
+      "key": "Ȑ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper R with double grave"
+    },
+    "0210-mathspeak-sbrief": {
+      "key": "Ȑ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper R with double grave"
+    },
+    "0212-mathspeak-brief": {
+      "key": "Ȓ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper R with inverted breve"
+    },
+    "0212-mathspeak-sbrief": {
+      "key": "Ȓ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper R with inverted breve"
+    },
+    "0214-mathspeak-brief": {
+      "key": "Ȕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with double grave"
+    },
+    "0214-mathspeak-sbrief": {
+      "key": "Ȕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with double grave"
+    },
+    "0216-mathspeak-brief": {
+      "key": "Ȗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with inverted breve"
+    },
+    "0216-mathspeak-sbrief": {
+      "key": "Ȗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with inverted breve"
+    },
+    "0218-mathspeak-brief": {
+      "key": "Ș",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper S with comma below"
+    },
+    "0218-mathspeak-sbrief": {
+      "key": "Ș",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper S with comma below"
+    },
+    "021A-mathspeak-brief": {
+      "key": "Ț",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper T with comma below"
+    },
+    "021A-mathspeak-sbrief": {
+      "key": "Ț",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper T with comma below"
+    },
+    "021E-mathspeak-brief": {
+      "key": "Ȟ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper H with caron"
+    },
+    "021E-mathspeak-sbrief": {
+      "key": "Ȟ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper H with caron"
+    },
+    "0226-mathspeak-brief": {
+      "key": "Ȧ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with dot"
+    },
+    "0226-mathspeak-sbrief": {
+      "key": "Ȧ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with dot"
+    },
+    "0228-mathspeak-brief": {
+      "key": "Ȩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with cedilla"
+    },
+    "0228-mathspeak-sbrief": {
+      "key": "Ȩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with cedilla"
+    },
+    "022E-mathspeak-brief": {
+      "key": "Ȯ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with dot"
+    },
+    "022E-mathspeak-sbrief": {
+      "key": "Ȯ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with dot"
+    },
+    "0232-mathspeak-brief": {
+      "key": "Ȳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper Y overbar"
+    },
+    "0232-mathspeak-sbrief": {
+      "key": "Ȳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper Y overbar"
+    },
+    "1E00-mathspeak-brief": {
+      "key": "Ḁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper A with ring below"
+    },
+    "1E00-mathspeak-sbrief": {
+      "key": "Ḁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper A with ring below"
+    },
+    "1E02-mathspeak-brief": {
+      "key": "Ḃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper B with dot"
+    },
+    "1E02-mathspeak-sbrief": {
+      "key": "Ḃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper B with dot"
+    },
+    "1E04-mathspeak-brief": {
+      "key": "Ḅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper B with dot"
+    },
+    "1E04-mathspeak-sbrief": {
+      "key": "Ḅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper B with dot"
+    },
+    "1E06-mathspeak-brief": {
+      "key": "Ḇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper B underbar"
+    },
+    "1E06-mathspeak-sbrief": {
+      "key": "Ḇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper B underbar"
+    },
+    "1E0A-mathspeak-brief": {
+      "key": "Ḋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper D with dot"
+    },
+    "1E0A-mathspeak-sbrief": {
+      "key": "Ḋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper D with dot"
+    },
+    "1E0C-mathspeak-brief": {
+      "key": "Ḍ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper D with dot"
+    },
+    "1E0C-mathspeak-sbrief": {
+      "key": "Ḍ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper D with dot"
+    },
+    "1E0E-mathspeak-brief": {
+      "key": "Ḏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper D underbar"
+    },
+    "1E0E-mathspeak-sbrief": {
+      "key": "Ḏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper D underbar"
+    },
+    "1E10-mathspeak-brief": {
+      "key": "Ḑ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper D with cedilla"
+    },
+    "1E10-mathspeak-sbrief": {
+      "key": "Ḑ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper D with cedilla"
+    },
+    "1E12-mathspeak-brief": {
+      "key": "Ḓ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper D with caret"
+    },
+    "1E12-mathspeak-sbrief": {
+      "key": "Ḓ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper D with caret"
+    },
+    "1E18-mathspeak-brief": {
+      "key": "Ḙ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper E with caret"
+    },
+    "1E18-mathspeak-sbrief": {
+      "key": "Ḙ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper E with caret"
+    },
+    "1E1A-mathspeak-brief": {
+      "key": "Ḛ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper E undertilde"
+    },
+    "1E1A-mathspeak-sbrief": {
+      "key": "Ḛ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper E undertilde"
+    },
+    "1E1E-mathspeak-brief": {
+      "key": "Ḟ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper F with dot"
+    },
+    "1E1E-mathspeak-sbrief": {
+      "key": "Ḟ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper F with dot"
+    },
+    "1E20-mathspeak-brief": {
+      "key": "Ḡ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper G overbar"
+    },
+    "1E20-mathspeak-sbrief": {
+      "key": "Ḡ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper G overbar"
+    },
+    "1E22-mathspeak-brief": {
+      "key": "Ḣ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper H with dot"
+    },
+    "1E22-mathspeak-sbrief": {
+      "key": "Ḣ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper H with dot"
+    },
+    "1E24-mathspeak-brief": {
+      "key": "Ḥ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper H with dot"
+    },
+    "1E24-mathspeak-sbrief": {
+      "key": "Ḥ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper H with dot"
+    },
+    "1E26-mathspeak-brief": {
+      "key": "Ḧ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper H with double dot"
+    },
+    "1E26-mathspeak-sbrief": {
+      "key": "Ḧ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper H with double dot"
+    },
+    "1E28-mathspeak-brief": {
+      "key": "Ḩ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper H with cedilla"
+    },
+    "1E28-mathspeak-sbrief": {
+      "key": "Ḩ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper H with cedilla"
+    },
+    "1E2A-mathspeak-brief": {
+      "key": "Ḫ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper H with breve below"
+    },
+    "1E2A-mathspeak-sbrief": {
+      "key": "Ḫ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper H with breve below"
+    },
+    "1E2C-mathspeak-brief": {
+      "key": "Ḭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper I undertilde"
+    },
+    "1E2C-mathspeak-sbrief": {
+      "key": "Ḭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper I undertilde"
+    },
+    "1E30-mathspeak-brief": {
+      "key": "Ḱ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper K with acute"
+    },
+    "1E30-mathspeak-sbrief": {
+      "key": "Ḱ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper K with acute"
+    },
+    "1E32-mathspeak-brief": {
+      "key": "Ḳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper K with dot"
+    },
+    "1E32-mathspeak-sbrief": {
+      "key": "Ḳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper K with dot"
+    },
+    "1E34-mathspeak-brief": {
+      "key": "Ḵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper K underbar"
+    },
+    "1E34-mathspeak-sbrief": {
+      "key": "Ḵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper K underbar"
+    },
+    "1E36-mathspeak-brief": {
+      "key": "Ḷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper L with dot"
+    },
+    "1E36-mathspeak-sbrief": {
+      "key": "Ḷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper L with dot"
+    },
+    "1E3A-mathspeak-brief": {
+      "key": "Ḻ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper L underbar"
+    },
+    "1E3A-mathspeak-sbrief": {
+      "key": "Ḻ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper L underbar"
+    },
+    "1E3C-mathspeak-brief": {
+      "key": "Ḽ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper L with caret"
+    },
+    "1E3C-mathspeak-sbrief": {
+      "key": "Ḽ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper L with caret"
+    },
+    "1E3E-mathspeak-brief": {
+      "key": "Ḿ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper M with acute"
+    },
+    "1E3E-mathspeak-sbrief": {
+      "key": "Ḿ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper M with acute"
+    },
+    "1E40-mathspeak-brief": {
+      "key": "Ṁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper M with dot"
+    },
+    "1E40-mathspeak-sbrief": {
+      "key": "Ṁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper M with dot"
+    },
+    "1E42-mathspeak-brief": {
+      "key": "Ṃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper M with dot"
+    },
+    "1E42-mathspeak-sbrief": {
+      "key": "Ṃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper M with dot"
+    },
+    "1E44-mathspeak-brief": {
+      "key": "Ṅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper N with dot"
+    },
+    "1E44-mathspeak-sbrief": {
+      "key": "Ṅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper N with dot"
+    },
+    "1E46-mathspeak-brief": {
+      "key": "Ṇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper N with dot"
+    },
+    "1E46-mathspeak-sbrief": {
+      "key": "Ṇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper N with dot"
+    },
+    "1E48-mathspeak-brief": {
+      "key": "Ṉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper N underbar"
+    },
+    "1E48-mathspeak-sbrief": {
+      "key": "Ṉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper N underbar"
+    },
+    "1E4A-mathspeak-brief": {
+      "key": "Ṋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper N with caret"
+    },
+    "1E4A-mathspeak-sbrief": {
+      "key": "Ṋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper N with caret"
+    },
+    "1E54-mathspeak-brief": {
+      "key": "Ṕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper P with acute"
+    },
+    "1E54-mathspeak-sbrief": {
+      "key": "Ṕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper P with acute"
+    },
+    "1E56-mathspeak-brief": {
+      "key": "Ṗ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper P with dot"
+    },
+    "1E56-mathspeak-sbrief": {
+      "key": "Ṗ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper P with dot"
+    },
+    "1E58-mathspeak-brief": {
+      "key": "Ṙ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper R with dot"
+    },
+    "1E58-mathspeak-sbrief": {
+      "key": "Ṙ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper R with dot"
+    },
+    "1E5A-mathspeak-brief": {
+      "key": "Ṛ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper R with dot"
+    },
+    "1E5A-mathspeak-sbrief": {
+      "key": "Ṛ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper R with dot"
+    },
+    "1E5E-mathspeak-brief": {
+      "key": "Ṟ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper R underbar"
+    },
+    "1E5E-mathspeak-sbrief": {
+      "key": "Ṟ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper R underbar"
+    },
+    "1E60-mathspeak-brief": {
+      "key": "Ṡ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper S with dot"
+    },
+    "1E60-mathspeak-sbrief": {
+      "key": "Ṡ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper S with dot"
+    },
+    "1E62-mathspeak-brief": {
+      "key": "Ṣ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper S with dot"
+    },
+    "1E62-mathspeak-sbrief": {
+      "key": "Ṣ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper S with dot"
+    },
+    "1E6A-mathspeak-brief": {
+      "key": "Ṫ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper T with dot"
+    },
+    "1E6A-mathspeak-sbrief": {
+      "key": "Ṫ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper T with dot"
+    },
+    "1E6C-mathspeak-brief": {
+      "key": "Ṭ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper T with dot"
+    },
+    "1E6C-mathspeak-sbrief": {
+      "key": "Ṭ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper T with dot"
+    },
+    "1E6E-mathspeak-brief": {
+      "key": "Ṯ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper T underbar"
+    },
+    "1E6E-mathspeak-sbrief": {
+      "key": "Ṯ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper T underbar"
+    },
+    "1E70-mathspeak-brief": {
+      "key": "Ṱ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper T with caret"
+    },
+    "1E70-mathspeak-sbrief": {
+      "key": "Ṱ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper T with caret"
+    },
+    "1E72-mathspeak-brief": {
+      "key": "Ṳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper U with double dot"
+    },
+    "1E72-mathspeak-sbrief": {
+      "key": "Ṳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper U with double dot"
+    },
+    "1E74-mathspeak-brief": {
+      "key": "Ṵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper U undertilde"
+    },
+    "1E74-mathspeak-sbrief": {
+      "key": "Ṵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper U undertilde"
+    },
+    "1E76-mathspeak-brief": {
+      "key": "Ṷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper U with caret"
+    },
+    "1E76-mathspeak-sbrief": {
+      "key": "Ṷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper U with caret"
+    },
+    "1E7C-mathspeak-brief": {
+      "key": "Ṽ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper V overtilde"
+    },
+    "1E7C-mathspeak-sbrief": {
+      "key": "Ṽ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper V overtilde"
+    },
+    "1E7E-mathspeak-brief": {
+      "key": "Ṿ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper V with dot"
+    },
+    "1E7E-mathspeak-sbrief": {
+      "key": "Ṿ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper V with dot"
+    },
+    "1E80-mathspeak-brief": {
+      "key": "Ẁ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper W with grave"
+    },
+    "1E80-mathspeak-sbrief": {
+      "key": "Ẁ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper W with grave"
+    },
+    "1E82-mathspeak-brief": {
+      "key": "Ẃ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper W with acute"
+    },
+    "1E82-mathspeak-sbrief": {
+      "key": "Ẃ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper W with acute"
+    },
+    "1E84-mathspeak-brief": {
+      "key": "Ẅ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper W with double dot"
+    },
+    "1E84-mathspeak-sbrief": {
+      "key": "Ẅ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper W with double dot"
+    },
+    "1E86-mathspeak-brief": {
+      "key": "Ẇ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper W with dot"
+    },
+    "1E86-mathspeak-sbrief": {
+      "key": "Ẇ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper W with dot"
+    },
+    "1E88-mathspeak-brief": {
+      "key": "Ẉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper W with dot"
+    },
+    "1E88-mathspeak-sbrief": {
+      "key": "Ẉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper W with dot"
+    },
+    "1E8A-mathspeak-brief": {
+      "key": "Ẋ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper X with dot"
+    },
+    "1E8A-mathspeak-sbrief": {
+      "key": "Ẋ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper X with dot"
+    },
+    "1E8C-mathspeak-brief": {
+      "key": "Ẍ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper X with double dot"
+    },
+    "1E8C-mathspeak-sbrief": {
+      "key": "Ẍ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper X with double dot"
+    },
+    "1E8E-mathspeak-brief": {
+      "key": "Ẏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Y with dot"
+    },
+    "1E8E-mathspeak-sbrief": {
+      "key": "Ẏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Y with dot"
+    },
+    "1E90-mathspeak-brief": {
+      "key": "Ẑ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Z with circumflex"
+    },
+    "1E90-mathspeak-sbrief": {
+      "key": "Ẑ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Z with circumflex"
+    },
+    "1E92-mathspeak-brief": {
+      "key": "Ẓ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper Z with dot"
+    },
+    "1E92-mathspeak-sbrief": {
+      "key": "Ẓ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper Z with dot"
+    },
+    "1E94-mathspeak-brief": {
+      "key": "Ẕ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper Z underbar"
+    },
+    "1E94-mathspeak-sbrief": {
+      "key": "Ẕ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper Z underbar"
+    },
+    "1EA0-mathspeak-brief": {
+      "key": "Ạ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper A with dot"
+    },
+    "1EA0-mathspeak-sbrief": {
+      "key": "Ạ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper A with dot"
+    },
+    "1EA2-mathspeak-brief": {
+      "key": "Ả",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper A with hook"
+    },
+    "1EA2-mathspeak-sbrief": {
+      "key": "Ả",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper A with hook"
+    },
+    "1EB8-mathspeak-brief": {
+      "key": "Ẹ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper E with dot"
+    },
+    "1EB8-mathspeak-sbrief": {
+      "key": "Ẹ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper E with dot"
+    },
+    "1EBA-mathspeak-brief": {
+      "key": "Ẻ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper E with hook"
+    },
+    "1EBA-mathspeak-sbrief": {
+      "key": "Ẻ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper E with hook"
+    },
+    "1EBC-mathspeak-brief": {
+      "key": "Ẽ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper E overtilde"
+    },
+    "1EBC-mathspeak-sbrief": {
+      "key": "Ẽ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper E overtilde"
+    },
+    "1EC8-mathspeak-brief": {
+      "key": "Ỉ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper I with hook"
+    },
+    "1EC8-mathspeak-sbrief": {
+      "key": "Ỉ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper I with hook"
+    },
+    "1ECA-mathspeak-brief": {
+      "key": "Ị",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper I with dot"
+    },
+    "1ECA-mathspeak-sbrief": {
+      "key": "Ị",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper I with dot"
+    },
+    "1ECC-mathspeak-brief": {
+      "key": "Ọ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper O with dot"
+    },
+    "1ECC-mathspeak-sbrief": {
+      "key": "Ọ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper O with dot"
+    },
+    "1ECE-mathspeak-brief": {
+      "key": "Ỏ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper O with hook"
+    },
+    "1ECE-mathspeak-sbrief": {
+      "key": "Ỏ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper O with hook"
+    },
+    "1EE4-mathspeak-brief": {
+      "key": "Ụ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper U with dot"
+    },
+    "1EE4-mathspeak-sbrief": {
+      "key": "Ụ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper U with dot"
+    },
+    "1EE6-mathspeak-brief": {
+      "key": "Ủ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper U with hook"
+    },
+    "1EE6-mathspeak-sbrief": {
+      "key": "Ủ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper U with hook"
+    },
+    "1EF2-mathspeak-brief": {
+      "key": "Ỳ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Y with grave"
+    },
+    "1EF2-mathspeak-sbrief": {
+      "key": "Ỳ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Y with grave"
+    },
+    "1EF4-mathspeak-brief": {
+      "key": "Ỵ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod below upper Y with dot"
+    },
+    "1EF4-mathspeak-sbrief": {
+      "key": "Ỵ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod below upper Y with dot"
+    },
+    "1EF6-mathspeak-brief": {
+      "key": "Ỷ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "mod above upper Y with hook"
+    },
+    "1EF6-mathspeak-sbrief": {
+      "key": "Ỷ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "mod above upper Y with hook"
+    },
+    "1EF8-mathspeak-brief": {
+      "key": "Ỹ",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "upper Y overtilde"
+    },
+    "1EF8-mathspeak-sbrief": {
+      "key": "Ỹ",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "upper Y overtilde"
+    },
+    "219A-mathspeak-sbrief": {
+      "key": "↚",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with stroke"
+    },
+    "219B-mathspeak-sbrief": {
+      "key": "↛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with stroke"
+    },
+    "219C-mathspeak-sbrief": {
+      "key": "↜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L wave arrow"
+    },
+    "219D-mathspeak-sbrief": {
+      "key": "↝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R wave arrow"
+    },
+    "219E-mathspeak-sbrief": {
+      "key": "↞",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed L arrow"
+    },
+    "219F-mathspeak-sbrief": {
+      "key": "↟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed U arrow"
+    },
+    "21A0-mathspeak-sbrief": {
+      "key": "↠",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed R arrow"
+    },
+    "21A1-mathspeak-sbrief": {
+      "key": "↡",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "two headed D arrow"
+    },
+    "21A2-mathspeak-sbrief": {
+      "key": "↢",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with tail"
+    },
+    "21A3-mathspeak-sbrief": {
+      "key": "↣",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with tail"
+    },
+    "21A4-mathspeak-sbrief": {
+      "key": "↤",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow from bar"
+    },
+    "21A5-mathspeak-sbrief": {
+      "key": "↥",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow from bar"
+    },
+    "21A6-mathspeak-sbrief": {
+      "key": "↦",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow from bar"
+    },
+    "21A7-mathspeak-sbrief": {
+      "key": "↧",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow from bar"
+    },
+    "21A8-mathspeak-sbrief": {
+      "key": "↨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U D arrow with base"
+    },
+    "21A9-mathspeak-sbrief": {
+      "key": "↩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with hook"
+    },
+    "21AA-mathspeak-sbrief": {
+      "key": "↪",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with hook"
+    },
+    "21AB-mathspeak-sbrief": {
+      "key": "↫",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with loop"
+    },
+    "21AC-mathspeak-sbrief": {
+      "key": "↬",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with loop"
+    },
+    "21AD-mathspeak-sbrief": {
+      "key": "↭",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R wave arrow"
+    },
+    "21AE-mathspeak-sbrief": {
+      "key": "↮",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R arrow with stroke"
+    },
+    "21AF-mathspeak-sbrief": {
+      "key": "↯",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D zigzag arrow"
+    },
+    "21B0-mathspeak-sbrief": {
+      "key": "↰",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow with tip left"
+    },
+    "21B1-mathspeak-sbrief": {
+      "key": "↱",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow with tip right"
+    },
+    "21B2-mathspeak-sbrief": {
+      "key": "↲",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow with tip left"
+    },
+    "21B3-mathspeak-sbrief": {
+      "key": "↳",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow with tip right"
+    },
+    "21B4-mathspeak-sbrief": {
+      "key": "↴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with corner down"
+    },
+    "21B5-mathspeak-sbrief": {
+      "key": "↵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow with corner left"
+    },
+    "21B8-mathspeak-sbrief": {
+      "key": "↸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U L arrow to long bar"
+    },
+    "21B9-mathspeak-sbrief": {
+      "key": "↹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow to bar over R arrow to bar"
+    },
+    "21C4-mathspeak-sbrief": {
+      "key": "⇄",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow over L arrow"
+    },
+    "21C5-mathspeak-sbrief": {
+      "key": "⇅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow L of D arrow"
+    },
+    "21C6-mathspeak-sbrief": {
+      "key": "⇆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow over R arrow"
+    },
+    "21C7-mathspeak-sbrief": {
+      "key": "⇇",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L paired arrows"
+    },
+    "21C8-mathspeak-sbrief": {
+      "key": "⇈",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U paired arrows"
+    },
+    "21C9-mathspeak-sbrief": {
+      "key": "⇉",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R paired arrows"
+    },
+    "21CA-mathspeak-sbrief": {
+      "key": "⇊",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D paired arrows"
+    },
+    "21CD-mathspeak-sbrief": {
+      "key": "⇍",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L double arrow with stroke"
+    },
+    "21CE-mathspeak-sbrief": {
+      "key": "⇎",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R double arrow with stroke"
+    },
+    "21CF-mathspeak-sbrief": {
+      "key": "⇏",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R double arrow with stroke"
+    },
+    "21D0-mathspeak-sbrief": {
+      "key": "⇐",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L double arrow"
+    },
+    "21D1-mathspeak-sbrief": {
+      "key": "⇑",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U double arrow"
+    },
+    "21D2-mathspeak-sbrief": {
+      "key": "⇒",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R double arrow"
+    },
+    "21D3-mathspeak-sbrief": {
+      "key": "⇓",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D double arrow"
+    },
+    "21D4-mathspeak-sbrief": {
+      "key": "⇔",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R double arrow"
+    },
+    "21D5-mathspeak-sbrief": {
+      "key": "⇕",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U D double arrow"
+    },
+    "21D6-mathspeak-sbrief": {
+      "key": "⇖",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U L double arrow"
+    },
+    "21D7-mathspeak-sbrief": {
+      "key": "⇗",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U R double arrow"
+    },
+    "21D8-mathspeak-sbrief": {
+      "key": "⇘",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D R double arrow"
+    },
+    "21D9-mathspeak-sbrief": {
+      "key": "⇙",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D L double arrow"
+    },
+    "21DA-mathspeak-sbrief": {
+      "key": "⇚",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L triple arrow"
+    },
+    "21DB-mathspeak-sbrief": {
+      "key": "⇛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R triple arrow"
+    },
+    "21DC-mathspeak-sbrief": {
+      "key": "⇜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L squiggle arrow"
+    },
+    "21DD-mathspeak-sbrief": {
+      "key": "⇝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R squiggle arrow"
+    },
+    "21DE-mathspeak-sbrief": {
+      "key": "⇞",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow with double stroke"
+    },
+    "21DF-mathspeak-sbrief": {
+      "key": "⇟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow with double stroke"
+    },
+    "21E0-mathspeak-sbrief": {
+      "key": "⇠",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L dashed arrow"
+    },
+    "21E1-mathspeak-sbrief": {
+      "key": "⇡",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U dashed arrow"
+    },
+    "21E2-mathspeak-sbrief": {
+      "key": "⇢",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R dashed arrow"
+    },
+    "21E3-mathspeak-sbrief": {
+      "key": "⇣",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D dashed arrow"
+    },
+    "21E4-mathspeak-sbrief": {
+      "key": "⇤",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow to bar"
+    },
+    "21E5-mathspeak-sbrief": {
+      "key": "⇥",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow to bar"
+    },
+    "21E6-mathspeak-sbrief": {
+      "key": "⇦",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white L arrow"
+    },
+    "21E7-mathspeak-sbrief": {
+      "key": "⇧",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white U arrow"
+    },
+    "21E8-mathspeak-sbrief": {
+      "key": "⇨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white R arrow"
+    },
+    "21E9-mathspeak-sbrief": {
+      "key": "⇩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white D arrow"
+    },
+    "21EA-mathspeak-sbrief": {
+      "key": "⇪",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white U arrow from bar"
+    },
+    "21EB-mathspeak-sbrief": {
+      "key": "⇫",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white U arrow on pedestal"
+    },
+    "21EC-mathspeak-sbrief": {
+      "key": "⇬",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white U arrow on pedestal with horizontal bar"
+    },
+    "21ED-mathspeak-sbrief": {
+      "key": "⇭",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white U arrow on pedestal with vertical bar"
+    },
+    "21EE-mathspeak-sbrief": {
+      "key": "⇮",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white double U arrow"
+    },
+    "21EF-mathspeak-sbrief": {
+      "key": "⇯",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white double U arrow on pedestal"
+    },
+    "21F0-mathspeak-sbrief": {
+      "key": "⇰",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white R arrow from wall"
+    },
+    "21F3-mathspeak-sbrief": {
+      "key": "⇳",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U D white arrow"
+    },
+    "21F4-mathspeak-sbrief": {
+      "key": "⇴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with small circle"
+    },
+    "21F5-mathspeak-sbrief": {
+      "key": "⇵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D arrow L of U arrow"
+    },
+    "21F6-mathspeak-sbrief": {
+      "key": "⇶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "three R arrows"
+    },
+    "21F7-mathspeak-sbrief": {
+      "key": "⇷",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with vertical stroke"
+    },
+    "21F8-mathspeak-sbrief": {
+      "key": "⇸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with vertical stroke"
+    },
+    "21F9-mathspeak-sbrief": {
+      "key": "⇹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R arrow with vertical stroke"
+    },
+    "21FA-mathspeak-sbrief": {
+      "key": "⇺",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with double vertical stroke"
+    },
+    "21FB-mathspeak-sbrief": {
+      "key": "⇻",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with double vertical stroke"
+    },
+    "21FC-mathspeak-sbrief": {
+      "key": "⇼",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R arrow with double vertical stroke"
+    },
+    "21FD-mathspeak-sbrief": {
+      "key": "⇽",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L open headed arrow"
+    },
+    "21FE-mathspeak-sbrief": {
+      "key": "⇾",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r open headed arrow"
+    },
+    "21FF-mathspeak-sbrief": {
+      "key": "⇿",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R open headed arrow"
+    },
+    "279A-mathspeak-sbrief": {
+      "key": "➚",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy U R arrow"
+    },
+    "279B-mathspeak-sbrief": {
+      "key": "➛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "drafting point R arrow"
+    },
+    "279C-mathspeak-sbrief": {
+      "key": "➜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy round tipped R arrow"
+    },
+    "279D-mathspeak-sbrief": {
+      "key": "➝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "triangle headed R arrow"
+    },
+    "279E-mathspeak-sbrief": {
+      "key": "➞",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy triangle headed R arrow"
+    },
+    "279F-mathspeak-sbrief": {
+      "key": "➟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "dashed triangle headed R arrow"
+    },
+    "27A0-mathspeak-sbrief": {
+      "key": "➠",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy dashed triangle headed R arrow"
+    },
+    "27A1-mathspeak-sbrief": {
+      "key": "➡",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black R arrow"
+    },
+    "27A2-mathspeak-sbrief": {
+      "key": "➢",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "three d top lighted R arrowhead"
+    },
+    "27A3-mathspeak-sbrief": {
+      "key": "➣",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "three d bottom lighted R arrowhead"
+    },
+    "27A4-mathspeak-sbrief": {
+      "key": "➤",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black R arrowhead"
+    },
+    "27A5-mathspeak-sbrief": {
+      "key": "➥",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy black curved D and R arrow"
+    },
+    "27A6-mathspeak-sbrief": {
+      "key": "➦",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy black curved U and R arrow"
+    },
+    "27A7-mathspeak-sbrief": {
+      "key": "➧",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "squat black R arrow"
+    },
+    "27A8-mathspeak-sbrief": {
+      "key": "➨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy concave pointed black R arrow"
+    },
+    "27A9-mathspeak-sbrief": {
+      "key": "➩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "right shaded white R arrow"
+    },
+    "27AA-mathspeak-sbrief": {
+      "key": "➪",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "left shaded white R arrow"
+    },
+    "27AB-mathspeak-sbrief": {
+      "key": "➫",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "back tilted shadowed white R arrow"
+    },
+    "27AC-mathspeak-sbrief": {
+      "key": "➬",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "front tilted shadowed white R arrow"
+    },
+    "27AD-mathspeak-sbrief": {
+      "key": "➭",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy lower right shadowed white R arrow"
+    },
+    "27AE-mathspeak-sbrief": {
+      "key": "➮",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy upper right shadowed white R arrow"
+    },
+    "27AF-mathspeak-sbrief": {
+      "key": "➯",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "notched lower right shadowed white R arrow"
+    },
+    "27B1-mathspeak-sbrief": {
+      "key": "➱",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "notched upper right shadowed white R arrow"
+    },
+    "27B2-mathspeak-sbrief": {
+      "key": "➲",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "circled heavy white R arrow"
+    },
+    "27B3-mathspeak-sbrief": {
+      "key": "➳",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white feathered R arrow"
+    },
+    "27B4-mathspeak-sbrief": {
+      "key": "➴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black feathered D R arrow"
+    },
+    "27B5-mathspeak-sbrief": {
+      "key": "➵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black feathered R arrow"
+    },
+    "27B6-mathspeak-sbrief": {
+      "key": "➶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black feathered U R arrow"
+    },
+    "27B7-mathspeak-sbrief": {
+      "key": "➷",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy black feathered D R arrow"
+    },
+    "27B8-mathspeak-sbrief": {
+      "key": "➸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy black feathered R arrow"
+    },
+    "27B9-mathspeak-sbrief": {
+      "key": "➹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy black feathered U R arrow"
+    },
+    "27BA-mathspeak-sbrief": {
+      "key": "➺",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "teardrop barbed R arrow"
+    },
+    "27BB-mathspeak-sbrief": {
+      "key": "➻",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy teardrop shanked R arrow"
+    },
+    "27BC-mathspeak-sbrief": {
+      "key": "➼",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "wedge tailed R arrow"
+    },
+    "27BD-mathspeak-sbrief": {
+      "key": "➽",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "heavy wedge tailed R arrow"
+    },
+    "27BE-mathspeak-sbrief": {
+      "key": "➾",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "open outlined R arrow"
+    },
+    "27F0-mathspeak-sbrief": {
+      "key": "⟰",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U quadruple arrow"
+    },
+    "27F1-mathspeak-sbrief": {
+      "key": "⟱",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D quadrule arrow"
+    },
+    "27F4-mathspeak-sbrief": {
+      "key": "⟴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with circled plus"
+    },
+    "27F5-mathspeak-sbrief": {
+      "key": "⟵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long L arrow"
+    },
+    "27F6-mathspeak-sbrief": {
+      "key": "⟶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long R arrow"
+    },
+    "27F7-mathspeak-sbrief": {
+      "key": "⟷",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long L R arrow"
+    },
+    "27F8-mathspeak-sbrief": {
+      "key": "⟸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long l double arrow"
+    },
+    "27F9-mathspeak-sbrief": {
+      "key": "⟹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long R double arrow"
+    },
+    "27FA-mathspeak-sbrief": {
+      "key": "⟺",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long L R double arrow"
+    },
+    "27FB-mathspeak-sbrief": {
+      "key": "⟻",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long L arrow from bar"
+    },
+    "27FC-mathspeak-sbrief": {
+      "key": "⟼",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long R arrow from bar"
+    },
+    "27FD-mathspeak-sbrief": {
+      "key": "⟽",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long l double arrow from bar"
+    },
+    "27FE-mathspeak-sbrief": {
+      "key": "⟾",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long R double arrow from bar"
+    },
+    "27FF-mathspeak-sbrief": {
+      "key": "⟿",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long r squiggle arrow"
+    },
+    "290A-mathspeak-sbrief": {
+      "key": "⤊",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U triple arrow"
+    },
+    "290B-mathspeak-sbrief": {
+      "key": "⤋",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D triple arrow"
+    },
+    "290C-mathspeak-sbrief": {
+      "key": "⤌",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L double dash arrow"
+    },
+    "290D-mathspeak-sbrief": {
+      "key": "⤍",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R double dash arrow"
+    },
+    "290E-mathspeak-sbrief": {
+      "key": "⤎",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L triple dash arrow"
+    },
+    "290F-mathspeak-sbrief": {
+      "key": "⤏",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r triple dash arrow"
+    },
+    "291A-mathspeak-sbrief": {
+      "key": "⤚",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow tail"
+    },
+    "291B-mathspeak-sbrief": {
+      "key": "⤛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L double arrow tail"
+    },
+    "291C-mathspeak-sbrief": {
+      "key": "⤜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R double arrow tail"
+    },
+    "291D-mathspeak-sbrief": {
+      "key": "⤝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow to black diamond"
+    },
+    "291E-mathspeak-sbrief": {
+      "key": "⤞",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow to black diamond"
+    },
+    "291F-mathspeak-sbrief": {
+      "key": "⤟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow from bar to black diamond"
+    },
+    "293E-mathspeak-sbrief": {
+      "key": "⤾",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D R semicircular clockwise arrow"
+    },
+    "293F-mathspeak-sbrief": {
+      "key": "⤿",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D L semicircular anticlockwise arrow"
+    },
+    "297A-mathspeak-sbrief": {
+      "key": "⥺",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow through subset"
+    },
+    "297B-mathspeak-sbrief": {
+      "key": "⥻",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "suerset above L arrow"
+    },
+    "29B3-mathspeak-sbrief": {
+      "key": "⦳",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "empty set with R arrow above"
+    },
+    "29B4-mathspeak-sbrief": {
+      "key": "⦴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "empty set with L arrow above"
+    },
+    "29BD-mathspeak-sbrief": {
+      "key": "⦽",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U arrow through circle"
+    },
+    "29EA-mathspeak-sbrief": {
+      "key": "⧪",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black diamond with D arrow"
+    },
+    "29EC-mathspeak-sbrief": {
+      "key": "⧬",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "white circle with D arrow"
+    },
+    "29ED-mathspeak-sbrief": {
+      "key": "⧭",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "black circle with D arrow"
+    },
+    "2A17-mathspeak-sbrief": {
+      "key": "⨗",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "integral with L arrow with hook"
+    },
+    "2B04-mathspeak-sbrief": {
+      "key": "⬄",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R white arrow"
+    },
+    "2B05-mathspeak-sbrief": {
+      "key": "⬅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L black arrow"
+    },
+    "2B06-mathspeak-sbrief": {
+      "key": "⬆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U black arrow"
+    },
+    "2B07-mathspeak-sbrief": {
+      "key": "⬇",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "D black arrow"
+    },
+    "2B0C-mathspeak-sbrief": {
+      "key": "⬌",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L R black arrow"
+    },
+    "2B0D-mathspeak-sbrief": {
+      "key": "⬍",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "U D black arrow"
+    },
+    "2B0E-mathspeak-sbrief": {
+      "key": "⬎",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with tip down"
+    },
+    "2B0F-mathspeak-sbrief": {
+      "key": "⬏",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow with tip up"
+    },
+    "2B10-mathspeak-sbrief": {
+      "key": "⬐",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with tip down"
+    },
+    "2B11-mathspeak-sbrief": {
+      "key": "⬑",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with tip up"
+    },
+    "2B30-mathspeak-sbrief": {
+      "key": "⬰",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with small circle"
+    },
+    "2B31-mathspeak-sbrief": {
+      "key": "⬱",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "three L arrows"
+    },
+    "2B32-mathspeak-sbrief": {
+      "key": "⬲",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with circled plus"
+    },
+    "2B33-mathspeak-sbrief": {
+      "key": "⬳",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "long l squiggle arrow"
+    },
+    "2B34-mathspeak-sbrief": {
+      "key": "⬴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed arrow with vertical stroke"
+    },
+    "2B35-mathspeak-sbrief": {
+      "key": "⬵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed arrow with double vertical stroke"
+    },
+    "2B36-mathspeak-sbrief": {
+      "key": "⬶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed arrow from bar"
+    },
+    "2B37-mathspeak-sbrief": {
+      "key": "⬷",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed triple dash arrow"
+    },
+    "2B38-mathspeak-sbrief": {
+      "key": "⬸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with dotted stem"
+    },
+    "2B39-mathspeak-sbrief": {
+      "key": "⬹",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with tail with vertical stroke"
+    },
+    "2B3A-mathspeak-sbrief": {
+      "key": "⬺",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow with tail with double vertical stroke"
+    },
+    "2B3B-mathspeak-sbrief": {
+      "key": "⬻",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed arrow with tail"
+    },
+    "2B3C-mathspeak-sbrief": {
+      "key": "⬼",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed arrow with tail with vertical stroke"
+    },
+    "2B3D-mathspeak-sbrief": {
+      "key": "⬽",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L two headed arrow with tail with double vertical stroke"
+    },
+    "2B3E-mathspeak-sbrief": {
+      "key": "⬾",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow through x"
+    },
+    "2B40-mathspeak-sbrief": {
+      "key": "⭀",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "equals sign above L arrow"
+    },
+    "2B41-mathspeak-sbrief": {
+      "key": "⭁",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "reverse tilde operator above L arrow"
+    },
+    "2B42-mathspeak-sbrief": {
+      "key": "⭂",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow above reverse almost equals"
+    },
+    "2B43-mathspeak-sbrief": {
+      "key": "⭃",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow through greater than"
+    },
+    "2B44-mathspeak-sbrief": {
+      "key": "⭄",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow through superset"
+    },
+    "2B45-mathspeak-sbrief": {
+      "key": "⭅",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L quadrule arrow"
+    },
+    "2B46-mathspeak-sbrief": {
+      "key": "⭆",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R quadrule arrow"
+    },
+    "2B47-mathspeak-sbrief": {
+      "key": "⭇",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "reverse tilde operator above R arrow"
+    },
+    "2B48-mathspeak-sbrief": {
+      "key": "⭈",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow above reverse almost equals"
+    },
+    "2B49-mathspeak-sbrief": {
+      "key": "⭉",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "tilde operator above L arrow"
+    },
+    "2B4A-mathspeak-sbrief": {
+      "key": "⭊",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow above almost equals"
+    },
+    "2B4B-mathspeak-sbrief": {
+      "key": "⭋",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L arrow above reverse tilde operator"
+    },
+    "2B4C-mathspeak-sbrief": {
+      "key": "⭌",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R arrow above reverse tilde operator"
+    },
+    "FFE9-mathspeak-sbrief": {
+      "key": "￩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "halfwidth L arrow"
+    },
+    "FFEA-mathspeak-sbrief": {
+      "key": "￪",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "halfwidth U arrow"
+    },
+    "FFEB-mathspeak-sbrief": {
+      "key": "￫",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "halfwidth R arrow"
+    },
+    "FFEC-mathspeak-sbrief": {
+      "key": "￬",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "halfwidth D arrow"
+    },
+    "0028-mathspeak-brief": {
+      "key": "(",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left p'ren"
+    },
+    "0028-mathspeak-sbrief": {
+      "key": "(",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L p'ren"
+    },
+    "0029-mathspeak-brief": {
+      "key": ")",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right p'ren"
+    },
+    "0029-mathspeak-sbrief": {
+      "key": ")",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R p'ren"
+    },
+    "005B-mathspeak-brief": {
+      "key": "[",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack"
+    },
+    "005B-mathspeak-sbrief": {
+      "key": "[",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack"
+    },
+    "005D-mathspeak-brief": {
+      "key": "]",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack"
+    },
+    "005D-mathspeak-sbrief": {
+      "key": "]",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack"
+    },
+    "007B-mathspeak-sbrief": {
+      "key": "{",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brace"
+    },
+    "007D-mathspeak-sbrief": {
+      "key": "}",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brace"
+    },
+    "232A-default-physics": {
+      "key": "〉",
+      "domain": "default",
+      "style": "physics",
+      "expected": "ket"
+    },
+    "239B-mathspeak-brief": {
+      "key": "⎛",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left p'ren upper hook"
+    },
+    "239B-mathspeak-sbrief": {
+      "key": "⎛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L p'ren upper hook"
+    },
+    "239C-mathspeak-brief": {
+      "key": "⎜",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left p'ren extension"
+    },
+    "239C-mathspeak-sbrief": {
+      "key": "⎜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L p'ren extension"
+    },
+    "239D-mathspeak-brief": {
+      "key": "⎝",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left p'ren lower hook"
+    },
+    "239D-mathspeak-sbrief": {
+      "key": "⎝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L p'ren lower hook"
+    },
+    "239E-mathspeak-brief": {
+      "key": "⎞",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right p'ren upper hook"
+    },
+    "239E-mathspeak-sbrief": {
+      "key": "⎞",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R p'ren upper hook"
+    },
+    "239F-mathspeak-brief": {
+      "key": "⎟",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right p'ren extension"
+    },
+    "239F-mathspeak-sbrief": {
+      "key": "⎟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R p'ren extension"
+    },
+    "23A0-mathspeak-brief": {
+      "key": "⎠",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right p'ren lower hook"
+    },
+    "23A0-mathspeak-sbrief": {
+      "key": "⎠",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R p'ren lower hook"
+    },
+    "23A1-mathspeak-brief": {
+      "key": "⎡",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack upper corner"
+    },
+    "23A1-mathspeak-sbrief": {
+      "key": "⎡",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack upper corner"
+    },
+    "23A2-mathspeak-brief": {
+      "key": "⎢",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack extension"
+    },
+    "23A2-mathspeak-sbrief": {
+      "key": "⎢",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack extension"
+    },
+    "23A3-mathspeak-brief": {
+      "key": "⎣",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack lower corner"
+    },
+    "23A3-mathspeak-sbrief": {
+      "key": "⎣",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack lower corner"
+    },
+    "23A4-mathspeak-brief": {
+      "key": "⎤",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack upper corner"
+    },
+    "23A4-mathspeak-sbrief": {
+      "key": "⎤",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack upper corner"
+    },
+    "23A5-mathspeak-brief": {
+      "key": "⎥",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack extension"
+    },
+    "23A5-mathspeak-sbrief": {
+      "key": "⎥",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack extension"
+    },
+    "23A6-mathspeak-brief": {
+      "key": "⎦",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack lower corner"
+    },
+    "23A6-mathspeak-sbrief": {
+      "key": "⎦",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack lower corner"
+    },
+    "23A7-mathspeak-sbrief": {
+      "key": "⎧",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brace upper hook"
+    },
+    "23A8-mathspeak-sbrief": {
+      "key": "⎨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brace middle piece"
+    },
+    "23A9-mathspeak-sbrief": {
+      "key": "⎩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brace lower hook"
+    },
+    "23AB-mathspeak-sbrief": {
+      "key": "⎫",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brace upper hook"
+    },
+    "23AC-mathspeak-sbrief": {
+      "key": "⎬",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brace middle piece"
+    },
+    "23AD-mathspeak-sbrief": {
+      "key": "⎭",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brace lower hook"
+    },
+    "23B4-mathspeak-brief": {
+      "key": "⎴",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "top brack"
+    },
+    "23B4-mathspeak-sbrief": {
+      "key": "⎴",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "T brack"
+    },
+    "23B5-mathspeak-brief": {
+      "key": "⎵",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "bottom brack"
+    },
+    "23B5-mathspeak-sbrief": {
+      "key": "⎵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "B brack"
+    },
+    "23B6-mathspeak-brief": {
+      "key": "⎶",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "bottom brack over top brack"
+    },
+    "23B6-mathspeak-sbrief": {
+      "key": "⎶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "B brack over T brack"
+    },
+    "23DC-mathspeak-brief": {
+      "key": "⏜",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "top p'ren"
+    },
+    "23DC-mathspeak-sbrief": {
+      "key": "⏜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "t p'ren"
+    },
+    "23DD-mathspeak-brief": {
+      "key": "⏝",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "bottom p'ren"
+    },
+    "23DD-mathspeak-sbrief": {
+      "key": "⏝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "b p'ren"
+    },
+    "23DE-mathspeak-sbrief": {
+      "key": "⏞",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "T brace"
+    },
+    "23DF-mathspeak-sbrief": {
+      "key": "⏟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "B brace"
+    },
+    "276A-mathspeak-brief": {
+      "key": "❪",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "medium flattened left p'ren ornament"
+    },
+    "276A-mathspeak-sbrief": {
+      "key": "❪",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "medium flattened L p'ren ornament"
+    },
+    "276B-mathspeak-brief": {
+      "key": "❫",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "medium flattened right p'ren ornament"
+    },
+    "276B-mathspeak-sbrief": {
+      "key": "❫",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "medium flattened R p'ren ornament"
+    },
+    "27E8-mathspeak-sbrief": {
+      "key": "⟨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "l angle bracket"
+    },
+    "27E9-mathspeak-sbrief": {
+      "key": "⟩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "r angle bracket"
+    },
+    "27EE-mathspeak-brief": {
+      "key": "⟮",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "flattened left p'ren"
+    },
+    "27EE-mathspeak-sbrief": {
+      "key": "⟮",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "flattened L p'ren"
+    },
+    "27EF-mathspeak-brief": {
+      "key": "⟯",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "flattened right p'ren"
+    },
+    "27EF-mathspeak-sbrief": {
+      "key": "⟯",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "flattened R p'ren"
+    },
+    "298B-mathspeak-brief": {
+      "key": "⦋",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack with underbar"
+    },
+    "298B-mathspeak-sbrief": {
+      "key": "⦋",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack with underbar"
+    },
+    "298C-mathspeak-brief": {
+      "key": "⦌",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack with underbar"
+    },
+    "298C-mathspeak-sbrief": {
+      "key": "⦌",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack with underbar"
+    },
+    "298D-mathspeak-brief": {
+      "key": "⦍",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack with tick in top corner"
+    },
+    "298D-mathspeak-sbrief": {
+      "key": "⦍",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack with tick in top corner"
+    },
+    "298E-mathspeak-brief": {
+      "key": "⦎",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "right brack with tick in bottom corner"
+    },
+    "298E-mathspeak-sbrief": {
+      "key": "⦎",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "R brack with tick in bottom corner"
+    },
+    "298F-mathspeak-brief": {
+      "key": "⦏",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "left brack with tick in bottom corner"
+    },
+    "298F-mathspeak-sbrief": {
+      "key": "⦏",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "L brack with tick in bottom corner"
+    },
+    "2E22-mathspeak-brief": {
+      "key": "⸢",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "top half left brack"
+    },
+    "2E22-mathspeak-sbrief": {
+      "key": "⸢",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "top half L brack"
+    },
+    "2E23-mathspeak-brief": {
+      "key": "⸣",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "top half right brack"
+    },
+    "2E23-mathspeak-sbrief": {
+      "key": "⸣",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "top half R brack"
+    },
+    "2E24-mathspeak-brief": {
+      "key": "⸤",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "bottom half left brack"
+    },
+    "2E24-mathspeak-sbrief": {
+      "key": "⸤",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "bottom half L brack"
+    },
+    "2E25-mathspeak-brief": {
+      "key": "⸥",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "bottom half right brack"
+    },
+    "2E25-mathspeak-sbrief": {
+      "key": "⸥",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "bottom half R brack"
+    },
+    "2E28-mathspeak-brief": {
+      "key": "⸨",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "double left p'ren"
+    },
+    "2E28-mathspeak-sbrief": {
+      "key": "⸨",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double L p'ren"
+    },
+    "2E29-mathspeak-brief": {
+      "key": "⸩",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "double right p'ren"
+    },
+    "2E29-mathspeak-sbrief": {
+      "key": "⸩",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "double R p'ren"
+    },
+    "FD3E-mathspeak-brief": {
+      "key": "﴾",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "ornate left p'ren"
+    },
+    "FD3E-mathspeak-sbrief": {
+      "key": "﴾",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "ornate L p'ren"
+    },
+    "FD3F-mathspeak-brief": {
+      "key": "﴿",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "ornate right p'ren"
+    },
+    "FD3F-mathspeak-sbrief": {
+      "key": "﴿",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "ornate R p'ren"
+    },
+    "FE35-mathspeak-brief": {
+      "key": "︵",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "presentation form for vertical left p'ren"
+    },
+    "FE35-mathspeak-sbrief": {
+      "key": "︵",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical L p'ren"
+    },
+    "FE36-mathspeak-brief": {
+      "key": "︶",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "presentation form for vertical right p'ren"
+    },
+    "FE36-mathspeak-sbrief": {
+      "key": "︶",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical R p'ren"
+    },
+    "FE37-mathspeak-sbrief": {
+      "key": "︷",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical L brace"
+    },
+    "FE38-mathspeak-sbrief": {
+      "key": "︸",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical R brace"
+    },
+    "FE3F-mathspeak-sbrief": {
+      "key": "︿",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical L angle bracket"
+    },
+    "FE40-mathspeak-sbrief": {
+      "key": "﹀",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical R angle bracket"
+    },
+    "FE47-mathspeak-brief": {
+      "key": "﹇",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "presentation form for vertical left brack"
+    },
+    "FE47-mathspeak-sbrief": {
+      "key": "﹇",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical L brack"
+    },
+    "FE48-mathspeak-brief": {
+      "key": "﹈",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "presentation form for vertical right brack"
+    },
+    "FE48-mathspeak-sbrief": {
+      "key": "﹈",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "presentation form for vertical R brack"
+    },
+    "FE59-mathspeak-brief": {
+      "key": "﹙",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "small left p'ren"
+    },
+    "FE59-mathspeak-sbrief": {
+      "key": "﹙",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "small L p'ren"
+    },
+    "FE5A-mathspeak-brief": {
+      "key": "﹚",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "small right p'ren"
+    },
+    "FE5A-mathspeak-sbrief": {
+      "key": "﹚",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "small R p'ren"
+    },
+    "FE5B-mathspeak-sbrief": {
+      "key": "﹛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "small L brace"
+    },
+    "FE5C-mathspeak-sbrief": {
+      "key": "﹜",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "small R brace"
+    },
+    "FF08-mathspeak-brief": {
+      "key": "（",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "fullwidth left p'ren"
+    },
+    "FF08-mathspeak-sbrief": {
+      "key": "（",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth L p'ren"
+    },
+    "FF09-mathspeak-brief": {
+      "key": "）",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "fullwidth right p'ren"
+    },
+    "FF09-mathspeak-sbrief": {
+      "key": "）",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth R p'ren"
+    },
+    "FF3B-mathspeak-brief": {
+      "key": "［",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "fullwidth left brack"
+    },
+    "FF3B-mathspeak-sbrief": {
+      "key": "［",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth L brack"
+    },
+    "FF3D-mathspeak-brief": {
+      "key": "］",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "fullwidth right brack"
+    },
+    "FF3D-mathspeak-sbrief": {
+      "key": "］",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth R brack"
+    },
+    "FF5B-mathspeak-sbrief": {
+      "key": "｛",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth L brace"
+    },
+    "FF5D-mathspeak-sbrief": {
+      "key": "｝",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth R brace"
+    },
+    "FF5F-mathspeak-brief": {
+      "key": "｟",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "fullwidth white left p'ren"
+    },
+    "FF5F-mathspeak-sbrief": {
+      "key": "｟",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth white L p'ren"
+    },
+    "FF60-mathspeak-brief": {
+      "key": "｠",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "fullwidth white right p'ren"
+    },
+    "FF60-mathspeak-sbrief": {
+      "key": "｠",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "fullwidth white R p'ren"
+    },
+    "210F-default-physics": {
+      "key": "ℏ",
+      "domain": "default",
+      "style": "physics",
+      "expected": "planck constant over two pi"
+    },
+    "0023-mathspeak-brief": {
+      "key": "#",
+      "domain": "mathspeak",
+      "style": "brief",
+      "expected": "num sign"
+    },
+    "0023-mathspeak-sbrief": {
+      "key": "#",
+      "domain": "mathspeak",
+      "style": "sbrief",
+      "expected": "num sign"
+    },
+    "002F-default-alternative": {
+      "key": "/",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "solidus"
+    },
+    "005F-default-alternative": {
+      "key": "_",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "underline"
+    },
+    "00D7-clearspeak-MultsymbolX_By": {
+      "key": "×",
+      "domain": "clearspeak",
+      "style": "MultsymbolX_By",
+      "expected": "by"
+    },
+    "00D7-clearspeak-MultsymbolX_Cross": {
+      "key": "×",
+      "domain": "clearspeak",
+      "style": "MultsymbolX_Cross",
+      "expected": "cross"
+    },
+    "22C5-clearspeak-MultsymbolDot_Dot": {
+      "key": "⋅",
+      "domain": "clearspeak",
+      "style": "MultsymbolDot_Dot",
+      "expected": "dot"
+    },
+    "FE68-default-alternative": {
+      "key": "﹨",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "small reverse solidus"
+    },
+    "FF0F-default-alternative": {
+      "key": "／",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "solidus"
+    },
+    "FF3C-default-alternative": {
+      "key": "＼",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "reverse solidus"
+    },
+    "FF3E-default-alternative": {
+      "key": "＾",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "circumflex"
+    },
+    "FF3F-default-alternative": {
+      "key": "＿",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "underline"
+    },
+    "00A0-default-alternative": {
+      "key": " ",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "non breaking space"
+    },
+    "FEFF-default-alternative": {
+      "key": "﻿",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "byte order mark"
+    },
+    "26AA-default-alternative": {
+      "key": "⚪",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "medium white circle"
+    },
+    "26AB-default-alternative": {
+      "key": "⚫",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "medium black circle"
+    }
+  }
+}

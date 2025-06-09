@@ -1,0 +1,439 @@
+{
+  "name": "CatalanMathspeakSummary",
+  "factory": "summary",
+  "base": "input/common/summary_test.json",
+  "information": "Catalan Mathspeak Summary tests.",
+  "locale": "ca",
+  "domain": "mathspeak",
+  "active": "SummaryCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "suma amb 2 sumands"
+    },
+    "AbstrAddition_brief": {
+      "expected": "suma"
+    },
+    "AbstrAddition_sbrief": {
+      "expected": "suma"
+    },
+    "AbstrBigop_default": {
+      "expected": "sumatori"
+    },
+    "AbstrBigop_brief": {
+      "expected": "sumatori"
+    },
+    "AbstrBigop_sbrief": {
+      "expected": "sumatori"
+    },
+    "AbstrBinomial_default": {
+      "expected": "binomi"
+    },
+    "AbstrBinomial_brief": {
+      "expected": "binomi"
+    },
+    "AbstrBinomial_sbrief": {
+      "expected": "binomi"
+    },
+    "AbstrCases_default": {
+      "expected": "declaració de cas amb 2 casos"
+    },
+    "AbstrCases_brief": {
+      "expected": "declaració de cas"
+    },
+    "AbstrCases_sbrief": {
+      "expected": "declaració de cas"
+    },
+    "AbstrCell_default": {
+      "expected": "1a columna en taula"
+    },
+    "AbstrCell_brief": {
+      "expected": "1a columna en taula"
+    },
+    "AbstrCell_sbrief": {
+      "expected": "1a columna en taula"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "fracció contínua"
+    },
+    "AbstrContinuedFraction_brief": {
+      "expected": "frac contínua"
+    },
+    "AbstrContinuedFraction_sbrief": {
+      "expected": "frac contínua"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "determinant de dimensió 2"
+    },
+    "AbstrDeterminant_brief": {
+      "expected": "determinant"
+    },
+    "AbstrDeterminant_sbrief": {
+      "expected": "determinant"
+    },
+    "AbstrFraction_default": {
+      "expected": "fracció"
+    },
+    "AbstrFraction_brief": {
+      "expected": "frac"
+    },
+    "AbstrFraction_sbrief": {
+      "expected": "frac"
+    },
+    "AbstrFunction_default": {
+      "expected": "expressió funcional"
+    },
+    "AbstrFunction_brief": {
+      "expected": "funció"
+    },
+    "AbstrFunction_sbrief": {
+      "expected": "funció"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "identificador"
+    },
+    "AbstrIdentifier_brief": {
+      "expected": "identificador"
+    },
+    "AbstrIdentifier_sbrief": {
+      "expected": "identificador"
+    },
+    "AbstrInfixop_default": {
+      "expected": "divisió amb 2 elements"
+    },
+    "AbstrInfixop_brief": {
+      "expected": "divisió"
+    },
+    "AbstrInfixop_sbrief": {
+      "expected": "divisió"
+    },
+    "AbstrIntegral_default": {
+      "expected": "integral"
+    },
+    "AbstrIntegral_brief": {
+      "expected": "integral"
+    },
+    "AbstrIntegral_sbrief": {
+      "expected": "integral"
+    },
+    "AbstrLim_default": {
+      "expected": "funció de límit"
+    },
+    "AbstrLim_brief": {
+      "expected": "límit"
+    },
+    "AbstrLim_sbrief": {
+      "expected": "límit"
+    },
+    "AbstrLine_default": {
+      "expected": "1a fila en línies múltiples"
+    },
+    "AbstrLine_brief": {
+      "expected": "1a fila en línies múltiples"
+    },
+    "AbstrLine_sbrief": {
+      "expected": "1a fila en línies múltiples"
+    },
+    "AbstrMatrix_default": {
+      "expected": "3 per 2 matriu"
+    },
+    "AbstrMatrix_brief": {
+      "expected": "matriu"
+    },
+    "AbstrMatrix_sbrief": {
+      "expected": "matriu"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "nombre mixt"
+    },
+    "AbstrMixedNumber_brief": {
+      "expected": "nombre mixt"
+    },
+    "AbstrMixedNumber_sbrief": {
+      "expected": "nombre mixt"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "producte amb 2 factors"
+    },
+    "AbstrMultiplication_brief": {
+      "expected": "producte"
+    },
+    "AbstrMultiplication_sbrief": {
+      "expected": "producte"
+    },
+    "AbstrMultirel_default": {
+      "expected": "seqüència de relació amb 3 elements"
+    },
+    "AbstrMultirel_brief": {
+      "expected": "seqüència de relació"
+    },
+    "AbstrMultirel_sbrief": {
+      "expected": "seqüència de relació"
+    },
+    "AbstrNumber_default": {
+      "expected": "nombre"
+    },
+    "AbstrNumber_brief": {
+      "expected": "nombre"
+    },
+    "AbstrNumber_sbrief": {
+      "expected": "nombre"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "llista separada per comes de longitud 3"
+    },
+    "AbstrPunctuated_brief": {
+      "expected": "llista separada per comes"
+    },
+    "AbstrPunctuated_sbrief": {
+      "expected": "llista separada per comes"
+    },
+    "AbstrRelation_default": {
+      "expected": "igualtat"
+    },
+    "AbstrRelation_brief": {
+      "expected": "igualtat"
+    },
+    "AbstrRelation_sbrief": {
+      "expected": "igualtat"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "seqüència de igualtat amb 3 elements"
+    },
+    "AbstrRelationSeq_brief": {
+      "expected": "seqüència de igualtat"
+    },
+    "AbstrRelationSeq_sbrief": {
+      "expected": "seqüència de igualtat"
+    },
+    "AbstrRoot_default": {
+      "expected": "arrel de l'índex 3"
+    },
+    "AbstrRoot_brief": {
+      "expected": "arrel"
+    },
+    "AbstrRoot_sbrief": {
+      "expected": "arrel"
+    },
+    "AbstrRootNested_default": {
+      "expected": "arrel jerarquitzada de l'índex 3"
+    },
+    "AbstrRootNested_brief": {
+      "expected": "arrel jerarquitzada"
+    },
+    "AbstrRootNested_sbrief": {
+      "expected": "arrel jerarquitzada"
+    },
+    "AbstrRow_default": {
+      "expected": "1a fila en taula amb 2 columnes"
+    },
+    "AbstrRow_brief": {
+      "expected": "1a fila en taula amb 2 columnes"
+    },
+    "AbstrRow_sbrief": {
+      "expected": "1a fila en taula amb 2 columnes"
+    },
+    "AbstrRowvector_default": {
+      "expected": "vector fila de dimensió 2"
+    },
+    "AbstrRowvector_brief": {
+      "expected": "vector fila"
+    },
+    "AbstrRowvector_sbrief": {
+      "expected": "vector fila"
+    },
+    "AbstrSqrt_default": {
+      "expected": "arrel quadrada"
+    },
+    "AbstrSqrt_brief": {
+      "expected": "arrel quadrada"
+    },
+    "AbstrSqrt_sbrief": {
+      "expected": "arrel quadrada"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "arrel quadrada jerarquitzada"
+    },
+    "AbstrSqrtNested_brief": {
+      "expected": "arrel quadrada jerarquitzada"
+    },
+    "AbstrSqrtNested_sbrief": {
+      "expected": "arrel quadrada jerarquitzada"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "matriu quadrada de dimensió 2"
+    },
+    "AbstrSquarematrix_brief": {
+      "expected": "matriu quadrada"
+    },
+    "AbstrSquarematrix_sbrief": {
+      "expected": "matriu quadrada"
+    },
+    "AbstrSubscript_default": {
+      "expected": "subíndex"
+    },
+    "AbstrSubscript_brief": {
+      "expected": "subíndex"
+    },
+    "AbstrSubscript_sbrief": {
+      "expected": "subíndex"
+    },
+    "AbstrSubsup_default": {
+      "expected": "potència amb subíndex"
+    },
+    "AbstrSubsup_brief": {
+      "expected": "potència amb subíndex"
+    },
+    "AbstrSubsup_sbrief": {
+      "expected": "potència amb subíndex"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "potència"
+    },
+    "AbstrSuperscript_brief": {
+      "expected": "potència"
+    },
+    "AbstrSuperscript_sbrief": {
+      "expected": "potència"
+    },
+    "AbstrTable_default": {
+      "expected": "taula amb 2 files i 2 columnes"
+    },
+    "AbstrTable_brief": {
+      "expected": "taula amb 2 files i 2 columnes"
+    },
+    "AbstrTable_sbrief": {
+      "expected": "taula amb 2 files i 2 columnes"
+    },
+    "AbstrText_default": {
+      "expected": "text"
+    },
+    "AbstrText_brief": {
+      "expected": "text"
+    },
+    "AbstrText_sbrief": {
+      "expected": "text"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "suma amb nombre variable de sumands"
+    },
+    "AbstrVarAddition_brief": {
+      "expected": "suma"
+    },
+    "AbstrVarAddition_sbrief": {
+      "expected": "suma"
+    },
+    "AbstrVarCases_default": {
+      "expected": "declaració de cas amb nombre variable de casos"
+    },
+    "AbstrVarCases_brief": {
+      "expected": "declaració de cas"
+    },
+    "AbstrVarCases_sbrief": {
+      "expected": "declaració de cas"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "determinant de dimensió n"
+    },
+    "AbstrVarDeterminant_brief": {
+      "expected": "determinant"
+    },
+    "AbstrVarDeterminant_sbrief": {
+      "expected": "determinant"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "matriu de dimensió n per m"
+    },
+    "AbstrVarMatrix_brief": {
+      "expected": "matriu quadrada"
+    },
+    "AbstrVarMatrix_sbrief": {
+      "expected": "matriu quadrada"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "producte amb una quantitat variable de factors"
+    },
+    "AbstrVarMultiplication_brief": {
+      "expected": "producte"
+    },
+    "AbstrVarMultiplication_sbrief": {
+      "expected": "producte"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "seqüència de relació amb nombre variable d'elements"
+    },
+    "AbstrVarMultirel_brief": {
+      "expected": "seqüència de relació"
+    },
+    "AbstrVarMultirel_sbrief": {
+      "expected": "seqüència de relació"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "llista separada per comes de longitud variable"
+    },
+    "AbstrVarPunctuated_brief": {
+      "expected": "llista separada per comes"
+    },
+    "AbstrVarPunctuated_sbrief": {
+      "expected": "llista separada per comes"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "seqüència de igualtat amb una quantitat variable d'elements"
+    },
+    "AbstrVarRelation_brief": {
+      "expected": "seqüència de igualtat"
+    },
+    "AbstrVarRelation_sbrief": {
+      "expected": "seqüència de igualtat"
+    },
+    "AbstrVarVector_default": {
+      "expected": "vector de dimensió n"
+    },
+    "AbstrVarVector_brief": {
+      "expected": "vector"
+    },
+    "AbstrVarVector_sbrief": {
+      "expected": "vector"
+    },
+    "AbstrVector_default": {
+      "expected": "vector de dimensió 3"
+    },
+    "AbstrVector_brief": {
+      "expected": "vector"
+    },
+    "AbstrVector_sbrief": {
+      "expected": "vector"
+    },
+    "AbstrVarSubtraction_default": {
+      "expected": "resta amb una quantitat variable d'elements"
+    },
+    "AbstrVarSubtraction_brief": {
+      "expected": "resta"
+    },
+    "AbstrVarSubtraction_sbrief": {
+      "expected": "resta"
+    },
+    "AbstrCountImplicit_default": {
+      "expected": "producte amb 3 factors"
+    },
+    "AbstrCountImplicit_brief": {
+      "expected": "producte"
+    },
+    "AbstrCountImplicit_sbrief": {
+      "expected": "producte"
+    },
+    "AbstrVarImplicit_default": {
+      "expected": "producte amb una quantitat variable de factors"
+    },
+    "AbstrVarArrowRelation_default": {
+      "expected": "seqüència de fletxa amb una quantitat variable d'elements"
+    },
+    "AbstrArrowRelation_default": {
+      "expected": "fletxa"
+    },
+    "AbstrVarRowvector_default": {
+      "expected": "vector fila de dimensió n"
+    }
+  }
+}

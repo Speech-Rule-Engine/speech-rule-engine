@@ -1,0 +1,517 @@
+{
+  "name": "DanishMathspeakEmbellish",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
+  "information": "Danish Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "da",
+  "active": "EmbellishedSymbolsDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "a plustegn Sænket 2 Grundlinje b"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "a plustegn Sænket 2 Basis b"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "a plustegn Sænket 2 Basis b"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "a plustegn Hævet 2 Grundlinje b"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "a plustegn Hævet 2 Basis b"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "a plustegn Hævet 2 Basis b"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "a plustegn Hævet 3 Grundlinje b"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "a plustegn Hævet 3 Basis b"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "a plustegn Hævet 3 Basis b"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "a plustegn Hævet n Grundlinje b"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "a plustegn Hævet n Basis b"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "a plustegn Hævet n Basis b"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "a plustegn apostrof b"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "a plustegn apostrof b"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "a plustegn apostrof b"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "a plustegn Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "a plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "a plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "a plustegn Sænket m Hævet 3 Grundlinje b"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "a plustegn Sænket m Hævet 3 Basis b"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "a plustegn Sænket m Hævet 3 Basis b"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "a plustegn Sænket m Hævet n Grundlinje b"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "a plustegn Sænket m Hævet n Basis b"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "a plustegn Sænket m Hævet n Basis b"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "a plustegn apostrof Sænket m Grundlinje b"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "a plustegn apostrof Sænket m Basis b"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "a plustegn apostrof Sænket m Basis b"
+    },
+    "EmbellOpSubSuper_4_default": {
+      "expected": "a plustegn apostrof Sænket m Grundlinje b plustegn apostrof Sænket m Grundlinje c"
+    },
+    "EmbellOpSubSuper_4_brief": {
+      "expected": "a plustegn apostrof Sænket m Basis b plustegn apostrof Sænket m Basis c"
+    },
+    "EmbellOpSubSuper_4_sbrief": {
+      "expected": "a plustegn apostrof Sænket m Basis b plustegn apostrof Sænket m Basis c"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "a plustegn Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "a plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "a plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "a Hævet 3 Grundlinje plustegn Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "a Hævet 3 Basis plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "a Hævet 3 Basis plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "a Sænket 3 Grundlinje plustegn Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "a Sænket 3 Basis plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "a Sænket 3 Basis plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "a Sænket 3 Hævet n Grundlinje plustegn Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "a Sænket 3 Hævet n Basis plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "a Sænket 3 Hævet n Basis plustegn Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "a lig med Sænket 2 Grundlinje b"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "a lig med Sænket 2 Basis b"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "a lig med Sænket 2 Basis b"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "a lig med Hævet 2 Grundlinje b"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "a lig med Hævet 2 Basis b"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "a lig med Hævet 2 Basis b"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "a lig med Hævet 3 Grundlinje b"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "a lig med Hævet 3 Basis b"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "a lig med Hævet 3 Basis b"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "a lig med Hævet n Grundlinje b"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "a lig med Hævet n Basis b"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "a lig med Hævet n Basis b"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "a lig med apostrof b"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "a lig med apostrof b"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "a lig med apostrof b"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "a lig med Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "a lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "a lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "a lig med Sænket m Hævet 3 Grundlinje b"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "a lig med Sænket m Hævet 3 Basis b"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "a lig med Sænket m Hævet 3 Basis b"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "a lig med Sænket m Hævet n Grundlinje b"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "a lig med Sænket m Hævet n Basis b"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "a lig med Sænket m Hævet n Basis b"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "a lig med apostrof Sænket m Grundlinje b"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "a lig med apostrof Sænket m Basis b"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "a lig med apostrof Sænket m Basis b"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "a lig med Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "a lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "a lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "a Hævet 3 Grundlinje lig med Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "a Hævet 3 Basis lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "a Hævet 3 Basis lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "a Sænket 3 Grundlinje lig med Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "a Sænket 3 Basis lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "a Sænket 3 Basis lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "a Sænket 3 Hævet n Grundlinje lig med Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "a Sænket 3 Hævet n Basis lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "a Sænket 3 Hævet n Basis lig med Sænket m Hævet 2 Basis b"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "a lig med Sænket 2 Grundlinje b lig med c"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "a lig med Sænket 2 Basis b lig med c"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "a lig med Sænket 2 Basis b lig med c"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "a kolon Sænket 2 Grundlinje b"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "a kolon Sænket 2 Basis b"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "a kolon Sænket 2 Basis b"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "a kolon Hævet 2 Grundlinje b"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "a kolon Hævet 2 Basis b"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "a kolon Hævet 2 Basis b"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "a kolon Hævet 3 Grundlinje b"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "a kolon Hævet 3 Basis b"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "a kolon Hævet 3 Basis b"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "a kolon Hævet n Grundlinje b"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "a kolon Hævet n Basis b"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "a kolon Hævet n Basis b"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "a kolon apostrof b"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "a kolon apostrof b"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "a kolon apostrof b"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "a kolon Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "a kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "a kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "a kolon Sænket m Hævet 3 Grundlinje b"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "a kolon Sænket m Hævet 3 Basis b"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "a kolon Sænket m Hævet 3 Basis b"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "a kolon Sænket m Hævet n Grundlinje b"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "a kolon Sænket m Hævet n Basis b"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "a kolon Sænket m Hævet n Basis b"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "a kolon apostrof Sænket m Grundlinje b"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "a kolon apostrof Sænket m Basis b"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "a kolon apostrof Sænket m Basis b"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "a kolon Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "a kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "a kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "a Hævet 3 Grundlinje kolon Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "a Hævet 3 Basis kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "a Hævet 3 Basis kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "a Sænket 3 Grundlinje kolon Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "a Sænket 3 Basis kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "a Sænket 3 Basis kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "a Sænket 3 Hævet n Grundlinje kolon Sænket m Hævet 2 Grundlinje b"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "a Sænket 3 Hævet n Basis kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "a Sænket 3 Hævet n Basis kolon Sænket m Hævet 2 Basis b"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "a kolon Sænket 2 Grundlinje b kolon c"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "a kolon Sænket 2 Basis b kolon c"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "a kolon Sænket 2 Basis b kolon c"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotation_0_default": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "a plustegn b"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "a plustegn b"
+    }
+  }
+}

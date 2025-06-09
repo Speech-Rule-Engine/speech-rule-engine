@@ -1,0 +1,523 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakImpliedTimes",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
+  "information": "English Clearspeak ImpliedTimes rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Implied Times",
+    "ImpTimes001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"5\"/> times <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"5\"/> times <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> times <mark name=\"4\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 3 <mark name=\"8\"/> times <mark name=\"5\"/> 2 </prosody></speak>"
+    },
+    "ImpTimes007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> squared </prosody></speak>"
+    },
+    "ImpTimes008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open bracket <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close bracket <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open bracket <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close bracket </prosody></speak>"
+    },
+    "_comment2_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes010": {
+      "expected": "x times, y z"
+    },
+    "ImpTimes011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> minus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> times <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimes014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> 3 <mark name=\"5\"/> plus <mark name=\"6\"/> 7 <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> raised to the <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> raised to the <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> sub 2 <break time=\"250ms\"/> <mark name=\"13\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> to the <mark name=\"7\"/> negative <mark name=\"8\"/> 4 <mark name=\"10\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"22\"/> times <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> minus <mark name=\"14\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> close paren <break time=\"250ms\"/> <mark name=\"20\"/> to the <mark name=\"18\"/> negative <mark name=\"19\"/> 4 <mark name=\"21\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"10\"/> raised to the <mark name=\"1\"/> 4 <mark name=\"9\"/> times <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> plus <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> close paren <break time=\"250ms\"/> <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "ImpTimes019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> cubed </prosody></speak>"
+    },
+    "ImpTimes020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> raised to the <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 2 <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> the square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"9\"/> the square root of <prosody rate=\"+25%\"> <mark name=\"5\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody> </prosody></speak>"
+    },
+    "ImpTimes022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> the square root of <mark name=\"2\"/> 10 <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"6\"/> the square root of <mark name=\"5\"/> 30 </prosody></speak>"
+    },
+    "ImpTimes023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\"/> the square root of <mark name=\"1\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <mark name=\"2\"/> 2 <mark name=\"4\"/> the square root of <mark name=\"3\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <mark name=\"18\"/> times <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <mark name=\"18\"/> times <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> cosine <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"5\"/> cosine <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"7\"/> sine <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes027a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> the cosine <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> open paren <break time=\"250ms\"/> <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"11\"/> plus <mark name=\"12\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"14\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"6\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "ImpTimes029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> equals <break time=\"250ms\"/> <mark name=\"9\"/> log <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"11\"/> log <mark name=\"12\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"1\"/> Row 1: 1 <break time=\"250ms\"/> <mark name=\"3\"/> 3 <mark name=\"6\"/> Row 2: 5 <break time=\"250ms\"/> <mark name=\"8\"/> 2 <break time=\"750ms\"/> <mark name=\"28\"/> times <mark name=\"25\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"15\"/> Row 1: 7 <break time=\"250ms\"/> <mark name=\"17\"/> 4 <mark name=\"20\"/> Row 2: 0 <break time=\"250ms\"/> <mark name=\"22\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open second paren <break time=\"250ms\"/> <mark name=\"4\"/> open third paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close third paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close second paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open second paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close second paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"5\"/> times <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimes036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"13\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"9\"/> minus <mark name=\"10\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes037a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"9\"/> minus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> end absolute value </prosody></speak>"
+    },
+    "ImpTimes038": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"10\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> minus <mark name=\"12\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes0381": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value <break time=\"250ms\"/> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> end absolute value <break time=\"250ms\"/> <mark name=\"11\"/> minus <mark name=\"12\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"5\"/> times <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"5\"/> times <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes041": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> times <mark name=\"4\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes042": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes043": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes044": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 3 <mark name=\"8\"/> times <mark name=\"5\"/> 2 </prosody></speak>"
+    },
+    "ImpTimes045": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> squared </prosody></speak>"
+    },
+    "ImpTimes046": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes047": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open bracket <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close bracket <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open bracket <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close bracket </prosody></speak>"
+    },
+    "_comment3_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes048": {
+      "expected": "x times y times z"
+    },
+    "ImpTimes049": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes050": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes051": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> minus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> times <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimes052": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> 3 <mark name=\"5\"/> plus <mark name=\"6\"/> 7 <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes053": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> raised to the <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> raised to the <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> sub 2 <break time=\"250ms\"/> <mark name=\"13\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes054": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> to the <mark name=\"7\"/> negative <mark name=\"8\"/> 4 <mark name=\"10\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"22\"/> times <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> minus <mark name=\"14\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> close paren <break time=\"250ms\"/> <mark name=\"20\"/> to the <mark name=\"18\"/> negative <mark name=\"19\"/> 4 <mark name=\"21\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes055": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"10\"/> raised to the <mark name=\"1\"/> 4 <mark name=\"9\"/> times <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> plus <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> close paren <break time=\"250ms\"/> <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes056": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> times <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes057": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"6\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> cubed </prosody></speak>"
+    },
+    "ImpTimes058": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> raised to the <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 2 <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes059": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"3\"/> the square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"9\"/> the square root of <mark name=\"5\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"7\"/> times <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "ImpTimes060": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> 3 <break time=\"250ms\"/> <mark name=\"7\"/> times <mark name=\"3\"/> the square root of <mark name=\"2\"/> 10 <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"6\"/> the square root of <mark name=\"5\"/> 30 </prosody></speak>"
+    },
+    "ImpTimes061": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"3\"/> times <mark name=\"2\"/> the square root of <mark name=\"1\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes062": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <mark name=\"2\"/> 2 <mark name=\"5\"/> times <mark name=\"4\"/> the square root of <mark name=\"3\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes063": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <mark name=\"18\"/> times <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes064": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <mark name=\"18\"/> times <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes065": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"17\"/> times <mark name=\"2\"/> cosine <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> plus <mark name=\"5\"/> cosine <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"19\"/> times <mark name=\"7\"/> sine <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes065a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"8\"/> the cosine <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> open paren <break time=\"250ms\"/> <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"11\"/> plus <mark name=\"12\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"14\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes066": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes067": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> equals <mark name=\"9\"/> log <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"19\"/> times <mark name=\"11\"/> log <mark name=\"12\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes068": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"1\"/> Row 1: 1 <break time=\"250ms\"/> <mark name=\"3\"/> 3 <mark name=\"6\"/> Row 2: 5 <break time=\"250ms\"/> <mark name=\"8\"/> 2 <break time=\"750ms\"/> <mark name=\"28\"/> times <mark name=\"25\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"15\"/> Row 1: 7 <break time=\"250ms\"/> <mark name=\"17\"/> 4 <mark name=\"20\"/> Row 2: 0 <break time=\"250ms\"/> <mark name=\"22\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes069": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes070": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open second paren <break time=\"250ms\"/> <mark name=\"4\"/> open third paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close third paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close second paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes070a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes071": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open second paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close second paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes072": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"5\"/> times <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimes073": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes074": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"13\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"9\"/> minus <mark name=\"10\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes074a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"9\"/> minus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> end absolute value </prosody></speak>"
+    },
+    "ImpTimes075": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"10\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> minus <mark name=\"12\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes076": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value <break time=\"250ms\"/> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> end absolute value <break time=\"250ms\"/> <mark name=\"11\"/> minus <mark name=\"12\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes077": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes078": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes079": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> 3 <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes080": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes081": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes082": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 3 <break time=\"250ms\"/> <mark name=\"2\"/> close paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 2 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes083": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> squared </prosody></speak>"
+    },
+    "ImpTimes084": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes085": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open bracket <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close bracket <break time=\"250ms\"/> <mark name=\"7\"/> open bracket <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close bracket </prosody></speak>"
+    },
+    "_comment4_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes086": {
+      "expected": "x, open paren, y z, close paren"
+    },
+    "ImpTimes087": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes088": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes089": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> minus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimes090": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> 3 <mark name=\"5\"/> plus <mark name=\"6\"/> 7 <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes091": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> raised to the <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"8\"/> sub 2 <break time=\"250ms\"/> <mark name=\"11\"/> raised to the <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"10\"/> sub 2 <break time=\"250ms\"/> <mark name=\"13\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes092": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> to the <mark name=\"7\"/> negative <mark name=\"8\"/> 4 <mark name=\"10\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> minus <mark name=\"14\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> close paren <break time=\"250ms\"/> <mark name=\"20\"/> to the <mark name=\"18\"/> negative <mark name=\"19\"/> 4 <mark name=\"21\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes093": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"10\"/> raised to the <mark name=\"1\"/> 4 <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> plus <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> close paren <break time=\"250ms\"/> <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes094": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "ImpTimes095": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> cubed </prosody></speak>"
+    },
+    "ImpTimes096": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> raised to the <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 2 <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimes097": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> the square root of <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"9\"/> the square root of <prosody rate=\"+25%\"> <mark name=\"5\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody> </prosody></speak>"
+    },
+    "ImpTimes098": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the square root of <mark name=\"0\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> the square root of <mark name=\"2\"/> 10 <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"6\"/> the square root of <mark name=\"5\"/> 30 </prosody></speak>"
+    },
+    "ImpTimes099": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\"/> the square root of <mark name=\"1\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes100": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <mark name=\"2\"/> 2 <mark name=\"4\"/> the square root of <mark name=\"3\"/> 3 </prosody></speak>"
+    },
+    "ImpTimes101": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimes102": {
+      "expected": "f, open paren, x, close paren, equals x squared, open paren, x plus 1, close paren"
+    },
+    "ImpTimes103": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> cosine <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"5\"/> cosine <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"7\"/> sine <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes104": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"6\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "ImpTimes105": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> equals <break time=\"250ms\"/> <mark name=\"9\"/> log <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"11\"/> log <mark name=\"12\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes106": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"1\"/> Row 1: 1 <break time=\"250ms\"/> <mark name=\"3\"/> 3 <mark name=\"6\"/> Row 2: 5 <break time=\"250ms\"/> <mark name=\"8\"/> 2 <break time=\"750ms\"/> <mark name=\"25\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"15\"/> Row 1: 7 <break time=\"250ms\"/> <mark name=\"17\"/> 4 <mark name=\"20\"/> Row 2: 0 <break time=\"250ms\"/> <mark name=\"22\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes107": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes108": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open second paren <break time=\"250ms\"/> <mark name=\"4\"/> open third paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close third paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close second paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimes109": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes110": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open second paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close second paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimes111": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimes112": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> the absolute value of <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimes113": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"9\"/> minus <mark name=\"10\"/> 1 </prosody></speak>"
+    },
+    "ImpTimes114": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> the absolute value of <mark name=\"8\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> minus <mark name=\"12\"/> 1 </prosody></speak>"
+    },
+    "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
+    "ImpTimesSilPar001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimesSilPar003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> 3 <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimesSilPar006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 3 <break time=\"250ms\"/> <mark name=\"2\"/> close paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 2 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> plus <mark name=\"4\"/> 4 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> squared </prosody></speak>"
+    },
+    "ImpTimesSilPar008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open bracket <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <mark name=\"3\"/> 7 <break time=\"250ms\"/> <mark name=\"5\"/> close bracket <break time=\"250ms\"/> <mark name=\"7\"/> open bracket <break time=\"250ms\"/> <mark name=\"8\"/> 3 <mark name=\"9\"/> minus <mark name=\"10\"/> 6 <break time=\"250ms\"/> <mark name=\"12\"/> close bracket </prosody></speak>"
+    },
+    "_comment7_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimesSilPar010": {
+      "expected": "x, open paren, y z, close paren"
+    },
+    "ImpTimesSilPar011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"2\"/> minus <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ImpTimesSilPar014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> 3 <mark name=\"5\"/> plus <mark name=\"6\"/> 7 <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> to the <mark name=\"7\"/> negative <mark name=\"8\"/> 4 <mark name=\"10\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> minus <mark name=\"14\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> close paren <break time=\"250ms\"/> <mark name=\"20\"/> to the <mark name=\"18\"/> negative <mark name=\"19\"/> 4 <mark name=\"21\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimesSilPar016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"10\"/> raised to the <mark name=\"1\"/> 4 <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> plus <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> close paren <break time=\"250ms\"/> <mark name=\"11\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "ImpTimesSilPar017": {
+      "_comment8_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimesSilPar018": {
+      "expected": "f, open paren, x, close paren, equals, x squared, open paren, x plus 1"
+    },
+    "ImpTimesSilPar019": {
+      "_comment10_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> equals <break time=\"250ms\"/> <mark name=\"9\"/> log <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"11\"/> log <mark name=\"12\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "ImpTimesSilPar020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"1\"/> Row 1: 1 <break time=\"250ms\"/> <mark name=\"3\"/> 3 <mark name=\"6\"/> Row 2: 5 <break time=\"250ms\"/> <mark name=\"8\"/> 2 <break time=\"750ms\"/> <mark name=\"25\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"15\"/> Row 1: 7 <break time=\"250ms\"/> <mark name=\"17\"/> 4 <mark name=\"20\"/> Row 2: 0 <break time=\"250ms\"/> <mark name=\"22\"/> 1 </prosody></speak>"
+    },
+    "ImpTimesSilPar021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open second paren <break time=\"250ms\"/> <mark name=\"4\"/> open third paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close third paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close second paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ImpTimesSilPar023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "ImpTimesSilPar024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> open bracket <break time=\"250ms\"/> <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> open second paren <break time=\"250ms\"/> <mark name=\"5\"/> 4 <mark name=\"6\"/> plus <mark name=\"7\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> close second paren <break time=\"250ms\"/> <mark name=\"11\"/> plus <mark name=\"12\"/> 6 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close bracket </prosody></speak>"
+    },
+    "_comment11_": " Implied Times, Functions, or Something Else",
+    "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
+    "_comment13_": "       There is no preference ImpliedTimes_Rules. Reverted to Implied",
+    "_comment14_": "       Times_Auto.",
+    "Extra001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> equals <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"11\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> sub 1 <break time=\"250ms\"/> <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"9\"/> sub 2 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"14\"/> close paren </prosody></speak>"
+    },
+    "Extra002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> equals <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"15\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"11\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> sub 1 <break time=\"250ms\"/> <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"9\"/> sub 2 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"14\"/> close paren </prosody></speak>"
+    },
+    "Extra003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> 0 <break time=\"250ms\"/> <mark name=\"5\"/> equals <mark name=\"6\"/> 0 <mark name=\"15\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"11\"/> equals <mark name=\"12\"/> 0 </prosody></speak>"
+    },
+    "Extra004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\"/> times <mark name=\"2\"/> 0 <break time=\"250ms\"/> <mark name=\"5\"/> equals <mark name=\"6\"/> 0 <mark name=\"15\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"11\"/> equals <mark name=\"12\"/> 0 </prosody></speak>"
+    },
+    "Extra005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> times <mark name=\"2\"/> negative <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> negative <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Extra006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> of <mark name=\"2\"/> negative <mark name=\"3\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> negative <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "_comment15_": " TODO: (Simons) a is categorised as function!",
+    "Extra007": {
+      "expected": "a times b c, equals, a b times c"
+    },
+    "_comment16_": " TODO: (Simons) a is categorised as function!",
+    "Extra008": {
+      "expected": "a times, open paren, 1 over a, close paren, equals, 1"
+    },
+    "_comment17_": " TODO: (Simons) a is categorised as function!",
+    "Extra009": {
+      "expected": "negative u times v, equals u times negative v, equals negative u v"
+    },
+    "Extra010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 2 <mark name=\"3\"/> comma <mark name=\"4\"/> 6 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "Extra012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"7\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 2 <mark name=\"3\"/> comma <mark name=\"4\"/> 6 <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "_comment18_": " TODO: (Simons) Explore exact speech.",
+    "Extra013": {
+      "expected": "point B, open paren, 2 comma 6, close paren"
+    },
+    "Extra014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">p</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">w</say-as> </prosody></speak>"
+    },
+    "Extra015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">t</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> equals <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">t</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"8\"/> plus <mark name=\"9\"/> 4 </prosody></speak>"
+    },
+    "Extra016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">k</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> equals <break time=\"250ms\"/> <mark name=\"6\"/> open paren <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 3 <break time=\"250ms\"/> <mark name=\"11\"/> close paren <break time=\"250ms\"/> <mark name=\"22\"/> times <break time=\"250ms\"/> <mark name=\"13\"/> open paren <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"15\"/> minus <mark name=\"16\"/> 5 <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "_comment19_": " TODO: (Simons) a is categorised as function!",
+    "Extra017": {
+      "expected": "3 a squared minus 12 a, equals, 3 a, times a, minus 3 a, times 4"
+    },
+    "Extra018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">T</say-as> </prosody> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">t</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> equals <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"6\"/> <say-as interpret-as=\"character\">T</say-as> </prosody> <mark name=\"7\"/> sub <say-as interpret-as=\"character\">s</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"10\"/> open paren <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"11\"/> <say-as interpret-as=\"character\">T</say-as> </prosody> <mark name=\"12\"/> sub 0 <break time=\"250ms\"/> <mark name=\"14\"/> minus <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"15\"/> <say-as interpret-as=\"character\">T</say-as> </prosody> <mark name=\"16\"/> sub <say-as interpret-as=\"character\">s</say-as> <break time=\"250ms\"/> <mark name=\"19\"/> close paren <break time=\"250ms\"/> <mark name=\"31\"/> times <mark name=\"21\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"27\"/> raised to the <mark name=\"22\"/> negative <prosody rate=\"+25%\"> <mark name=\"23\"/> <say-as interpret-as=\"character\">k</say-as> <mark name=\"24\"/> <say-as interpret-as=\"character\">t</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"28\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "Extra019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">V</say-as> </prosody> <mark name=\"1\"/> equals <mark name=\"2\"/> script <say-as interpret-as=\"character\">l</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">w</say-as> <mark name=\"7\"/> of <mark name=\"5\"/> 8 </prosody></speak>",
+      "_comment20_": " w is considered a simple function.",
+      "_comment21_": "var speech = 'V, equals, script l, w, times 8';"
+    },
+    "_comment22_": " TODO: (Simons) Explore exact speech.",
+    "Extra020": {
+      "expected": "V, equals, l w, times 8"
+    }
+  }
+}

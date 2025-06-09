@@ -1,0 +1,272 @@
+{
+  "name": "Sekundarstufe1",
+  "information": "LaTeX Manual Sekundarstufe 1",
+  "base": "input/euro/Sekundarstufe1.json",
+  "locale": "euro",
+  "modality": "braille",
+  "factory": "speech",
+  "domain": "default",
+  "active": "Augenbit",
+  "tests": {
+    "_comment0_": "Mengen und deren Verknüpfungen",
+    "Mengen_0": {
+      "expected": "⡌⠷⠡⠂⠣⠂⠩⠂⠹⡌⠾"
+    },
+    "Mengen_1": {
+      "expected": "⡏⠀⠶⠷⠭⠌⠭⠊⠎⠞⡏⠗⠊⠍⠵⠁⠓⠇⠾"
+    },
+    "Mengen_2": {
+      "expected": "⠩⠀⡌⠊⠝⠀⡏"
+    },
+    "Mengen_3": {
+      "expected": "⠹⠀⡌⠝⠕⠞⠊⠝⠀⡏"
+    },
+    "Mengen_4": {
+      "expected": "⡁⠀⡌⠎⠥⠃⠎⠑⠞⠀⡃"
+    },
+    "Mengen_5": {
+      "expected": "⡁⠀⡌⠎⠥⠃⠎⠑⠞⠑⠟⠀⡃"
+    },
+    "Mengen_6": {
+      "expected": "⡁⠀⡌⠉⠥⠏⠀⡃"
+    },
+    "Mengen_7": {
+      "expected": "⡁⠀⡌⠉⠁⠏⠀⡃"
+    },
+    "Mengen_8": {
+      "expected": "⡁⠀⡌⠃⠁⠉⠅⠎⠇⠁⠎⠓⠀⡃"
+    },
+    "Mengen_9": {
+      "expected": "⡌⠷⡌⠾"
+    },
+    "Mengen_10": {
+      "expected": "⡌⠕⠧⠑⠗⠇⠊⠝⠑⠷⡁⠾"
+    },
+    "_comment1_": "Spezielle Zahlenmengen  1)",
+    "Spezielle_0": {
+      "expected": "⡌⠍⠁⠞⠓⠃⠃⠀⡝"
+    },
+    "Spezielle_1": {
+      "expected": "⡌⠍⠁⠞⠓⠃⠃⠀⡵"
+    },
+    "Spezielle_2": {
+      "expected": "⡌⠍⠁⠞⠓⠃⠃⠀⡵⡸⠬⡮⠤"
+    },
+    "Spezielle_3": {
+      "expected": "⡌⠍⠁⠞⠓⠃⠃⠀⡟"
+    },
+    "Spezielle_4": {
+      "expected": "⡌⠍⠁⠞⠓⠃⠃⠀⡗"
+    },
+    "Spezielle_5": {
+      "expected": "⡌⠍⠁⠞⠓⠉⠁⠇⠀⡏"
+    },
+    "Spezielle_0a": {
+      "expected": "⡌⡝"
+    },
+    "Spezielle_1a": {
+      "expected": "⡌⡵"
+    },
+    "Spezielle_2a": {
+      "expected": "⡌⡵⡸⠬⡮⠤"
+    },
+    "Spezielle_3a": {
+      "expected": "⡌⡟"
+    },
+    "Spezielle_4a": {
+      "expected": "⡌⡗"
+    },
+    "_comment2_": "Verknüpfungen von Zahlen",
+    "Verknüpfungen_0": {
+      "expected": "⠣⠀⠖⠹⠀⠶⠻"
+    },
+    "Verknüpfungen_1": {
+      "expected": "⠪⠀⠤⠩⡌⠝⠕⠞⠀⠶⠱"
+    },
+    "Verknüpfungen_1a": {
+      "expected": "⠪⠀⠤⠩⠀⡌⠝⠑⠟⠱"
+    },
+    "Verknüpfungen_2": {
+      "expected": "⠭⠀⡌⠏⠍⠩"
+    },
+    "Verknüpfungen_3": {
+      "expected": "⠣⠀⠔⠳⠀⠘⠡⠱"
+    },
+    "Verknüpfungen_4": {
+      "expected": "⠳⠀⠒⠹⠀⠰⠱"
+    },
+    "Verknüpfungen_5": {
+      "expected": "⠭⠀⡌⠇⠑⠡⠬"
+    },
+    "Verknüpfungen_6": {
+      "expected": "⠁⠀⡌⠛⠑⠀⠃"
+    },
+    "Verknüpfungen_7": {
+      "expected": "⠀⠘⠀⠘"
+    },
+    "Verknüpfungen_8": {
+      "expected": "⠀⠰⠀⠰"
+    },
+    "Verknüpfungen_9": {
+      "expected": "⡌⠏⠊⠀⠀⡌⠁⠏⠏⠗⠕⠭⠩⠂⠡⠹"
+    },
+    "Verknüpfungen_10": {
+      "expected": "⠦⠁⠀⠖⠃⠴⡮⠣"
+    },
+    "Verknüpfungen_11": {
+      "expected": "⡷⠭⠀⠤⠽⡾⡮⠩"
+    },
+    "Verknüpfungen_12": {
+      "expected": "⠎⠀⡌⠎⠊⠍⠀⠞"
+    },
+    "Verknüpfungen_13": {
+      "expected": "⠁⡌⠓⠁⠞⠷⠶⠾⠃"
+    },
+    "Verknüpfungen_14": {
+      "expected": "⠻⠌⠣⠳"
+    },
+    "_comment3_": "Verknüpfungen von Aussagen",
+    "Aussagen_0": {
+      "expected": "⠭⠀⡌⠊⠝⠀⡌⡝⠀⠀⡌⠺⠑⠙⠛⠑⠀⠭⠀⠰⠩"
+    },
+    "Aussagen_1": {
+      "expected": "⡁⠀⡌⡗⠊⠛⠓⠞⠁⠗⠗⠕⠺⠀⡃"
+    },
+    "Aussagen_2": {
+      "expected": "⠭⠀⡌⠞⠕⠀⡌⠊⠝⠋⠞⠽"
+    },
+    "Aussagen_3": {
+      "expected": "⠭⠀⠶⠡⠀⡌⠧⠑⠑⠀⠭⠀⠶⠣"
+    },
+    "Aussagen_4": {
+      "expected": "⠩⠭⠀⠶⠡⠣⠀⡌⡇⠑⠋⠞⠗⠊⠛⠓⠞⠁⠗⠗⠕⠺⠀⠭⠀⠶⠹"
+    },
+    "_comment4_": "Brüche  2) und Dezimalzahlen",
+    "Brüche_0": {
+      "expected": "⡌⠋⠗⠁⠉⠷⠣⠾⠷⠩⠾"
+    },
+    "Brüche_1": {
+      "expected": "⠹⡌⠋⠗⠁⠉⠷⠩⠾⠷⠱⠾"
+    },
+    "Brüche_2": {
+      "expected": "⡌⠋⠗⠁⠉⠷⠡⠾⠷⠭⠾"
+    },
+    "Brüche_3": {
+      "expected": "⡌⠋⠗⠁⠉⠷⠡⠾⠷⠭⠀⠖⠣⠾⡌⠝⠕⠞⠶⡌⠋⠗⠁⠉⠷⠡⠾⠷⠭⠾⠖⠣"
+    },
+    "Brüche_4": {
+      "expected": "⡌⠋⠗⠁⠉⠷⡌⠋⠗⠁⠉⠷⠁⠀⠖⠃⠾⠷⠣⠾⠾⠷⡌⠋⠗⠁⠉⠷⠭⠾⠷⠁⠀⠤⠃⠾⠾⠶⠡"
+    },
+    "Brüche_5": {
+      "expected": "⠬⠂⠣⠱⠀⠶⠡⠀⠲⠹"
+    },
+    "Brüche_6": {
+      "expected": "⠬⠂⠡⡌⠕⠧⠑⠗⠇⠊⠝⠑⠷⠫⠾⠶⠡⠀⠲⠫"
+    },
+    "Brüche_7": {
+      "expected": "⠻⠱⡌⠀⠿⠀⠶⠩⠀⠲⠹"
+    },
+    "Brüche_8": {
+      "expected": "⠣⠂⠱⠀⢊"
+    },
+    "_comment5_": "Potenzen, Wurzeln, Indizes",
+    "Potenzen,_0": {
+      "expected": "⠁⡮⠣"
+    },
+    "Potenzen,_1": {
+      "expected": "⠁⡮⠷⠡⠣⠾"
+    },
+    "Potenzen,_2": {
+      "expected": "⠣⡮⠷⠤⠩⠾⠶⠡⠀⠲⠳"
+    },
+    "Potenzen,_3": {
+      "expected": "⠁⡮⠷⠝⠀⠖⠡⠾⡌⠝⠕⠞⠶⠁⡮⠝⠀⠖⠡"
+    },
+    "Potenzen,_4": {
+      "expected": "⡌⠎⠟⠗⠞⠷⠣⠱⠾⠶⠱"
+    },
+    "Potenzen,_5": {
+      "expected": "⡌⠎⠟⠗⠞⠷⠭⡮⠣⠀⠖⠽⡮⠣⠾⡌⠝⠕⠞⠶⠭⠀⠖⠽"
+    },
+    "Potenzen,_6": {
+      "expected": "⡌⠎⠟⠗⠞⡷⠩⡾⠷⠳⠾⠶⠣"
+    },
+    "Potenzen,_7": {
+      "expected": "⡌⠎⠟⠗⠞⡷⠩⡾⠷⠁⡮⠣⠾⠶⠁⡮⠷⠣⠀⠲⠩⠾"
+    },
+    "Potenzen,_8": {
+      "expected": "⠁⡸⠡⠀⠖⠁⡸⠝"
+    },
+    "Potenzen,_9": {
+      "expected": "⠁⡸⠷⠝⠀⠤⠡⠾"
+    },
+    "Potenzen,_10": {
+      "expected": "⠷⠾⡸⠷⠪⠱⠾⡮⠷⠣⠩⠳⠾⡌⠍⠁⠞⠓⠗⠍⠷⡥⠾"
+    },
+    "_comment6_": "Weitere Rechenoperationen, Funktionen",
+    "Weitere_0": {
+      "expected": "⠋⠦⠭⠴⠀⠶⠣⠭⠀⠖⠡"
+    },
+    "Weitere_1": {
+      "expected": "⠋⠦⠩⠴⠀⠶⠻"
+    },
+    "Weitere_2": {
+      "expected": "⠋⡌⠆⠀⠒⡌⠆⠽⠀⠶⠣⠭⠀⠖⠡"
+    },
+    "Weitere_3": {
+      "expected": "⠋⠀⠒⠭⠀⡌⠍⠁⠏⠎⠞⠕⠣⠭⠀⠖⠡"
+    },
+    "Weitere_4": {
+      "expected": "⡏⠦⠩⠂⠱⠌⠳⠴"
+    },
+    "Weitere_5": {
+      "expected": "⠌⠁⠌"
+    },
+    "Weitere_6": {
+      "expected": "⡌⠇⠕⠛⡸⠁⠭"
+    },
+    "Weitere_7": {
+      "expected": "⡌⠇⠝⠀⠭"
+    },
+    "Weitere_8": {
+      "expected": "⡌⠎⠊⠝⠀⡌⠁⠇⠏⠓⠁"
+    },
+    "Weitere_9": {
+      "expected": "⡌⠉⠕⠎⡮⠣⡌⠃⠑⠞⠁"
+    },
+    "Weitere_10": {
+      "expected": "⡌⠞⠁⠝⠀⡌⠛⠁⠍⠍⠁"
+    },
+    "Weitere_11": {
+      "expected": "⡌⠉⠕⠞⠹⠱⢸"
+    },
+    "Weitere_12": {
+      "expected": "⡌⠎⠊⠝⠦⡌⠏⠊⠀⠲⠫⠴"
+    },
+    "_comment7_": "Geometrie",
+    "Geometrie_0": {
+      "expected": "⡌⠕⠧⠑⠗⠇⠊⠝⠑⠷⡁⡃⠾"
+    },
+    "Geometrie_1": {
+      "expected": "⡌⠞⠗⠊⠁⠝⠛⠇⠑⠀⡁⡃⡉"
+    },
+    "Geometrie_2": {
+      "expected": "⠀⡌⠁⠝⠛⠇⠑⠀⡃⡁⡉"
+    },
+    "Geometrie_3": {
+      "expected": "⡌⠁⠇⠏⠓⠁⠂⡌⠃⠑⠞⠁⠂⡌⠛⠁⠍⠍⠁⠂⡌⠙⠑⠇⠞⠁⠂⡌⠑⠏⠎⠊⠇⠕⠝"
+    },
+    "Geometrie_4": {
+      "expected": "⠛⡌⠏⠁⠗⠁⠇⠇⠑⠇⠀⠓"
+    },
+    "Geometrie_5": {
+      "expected": "⠛⠀⡌⠝⠏⠁⠗⠁⠇⠇⠑⠇⠀⠓"
+    },
+    "Geometrie_6": {
+      "expected": "⠛⡌⠏⠑⠗⠏⠀⠓"
+    },
+    "Geometrie_7": {
+      "expected": "⡋⠀⡌⠉⠕⠝⠛⠀⡋⠠"
+    }
+  }
+}

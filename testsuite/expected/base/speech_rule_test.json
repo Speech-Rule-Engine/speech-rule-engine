@@ -1,0 +1,436 @@
+{
+  "information": "Parsing tests for speech rule components.",
+  "factory": "rules",
+  "tests": {
+    "_comment0_": "Test speech rule grammar annotations.",
+    "Grammar_0": {
+      "kind": "Grammar",
+      "input": "font:annotation=\"unit\"",
+      "expected": {
+        "font": true,
+        "annotation": "\"unit\""
+      }
+    },
+    "Grammar_1": {
+      "kind": "Grammar",
+      "input": "!font:annotation=@unit",
+      "expected": {
+        "font": false,
+        "annotation": "@unit"
+      }
+    },
+    "_comment01_": "Whitespace test.",
+    "Grammar_2": {
+      "kind": "Grammar",
+      "input": " !font : annotation = @unit ",
+      "expected": {
+        "font": false,
+        "annotation": "@unit"
+      }
+    },
+    "_comment1_": "Test speech rule attributes.",
+    "Attributes_0": {
+      "kind": "Attributes",
+      "input": "(ctxtfunc:element,separator:\"plus\", volume:0.5)",
+      "expected": {
+        "ctxtfunc": "element",
+        "separator": "\"plus\"",
+        "volume": "0.5"
+      }
+    },
+    "Attributes_1": {
+      "kind": "Attributes",
+      "input": "(context:\"node\",pitch:0.5,difference)",
+      "expected": {
+        "context": "\"node\"",
+        "pitch": "0.5",
+        "difference": "true"
+      }
+    },
+    "Attributes_2": {
+      "kind": "Attributes",
+      "input": "(context:\"node\",grammar:font:annotation=\"unit\")",
+      "expected": {
+        "context": "\"node\"",
+        "grammar": {
+          "font": true,
+          "annotation": "\"unit\""
+        }
+      }
+    },
+    "Attributes_3": {
+      "kind": "Attributes",
+      "input": "(grammar:font:annotation=\"unit\")",
+      "expected": {
+        "grammar": {
+          "font": true,
+          "annotation": "\"unit\""
+        }
+      }
+    },
+    "_comment02_": "Whitespace test.",
+    "Attributes_4": {
+      "kind": "Attributes",
+      "input": "( context : \"node\" , pitch : 0.5 , difference )",
+      "expected": {
+        "context": "\"node\"",
+        "pitch": "0.5",
+        "difference": "true"
+      }
+    },
+    "_comment2_": "Test simple speech rule components.",
+    "SimpleComponents_0": {
+      "kind": "Components",
+      "input": "[m] ./*",
+      "expected": {
+        "type": "MULTI",
+        "content": "./*"
+      }
+    },
+    "SimpleComponents_1": {
+      "kind": "Components",
+      "input": "[n] ./*[1]",
+      "expected": {
+        "type": "NODE",
+        "content": "./*[1]"
+      }
+    },
+    "SimpleComponents_2": {
+      "kind": "Components",
+      "input": "[p] (pause:200)",
+      "expected": {
+        "type": "PERSONALITY",
+        "attributes": {
+          "pause": "200"
+        }
+      }
+    },
+    "SimpleComponents_3": {
+      "kind": "Components",
+      "input": "[t] \"super\"",
+      "expected": {
+        "type": "TEXT",
+        "content": "\"super\""
+      }
+    },
+    "SimpleComponents_4": {
+      "kind": "Components",
+      "input": "[t] text()",
+      "expected": {
+        "type": "TEXT",
+        "content": "text()"
+      }
+    },
+    "_comment3_": "Test speech rule components with attributes.",
+    "ComplexComponents_5": {
+      "kind": "Components",
+      "input": "[m] ./* (ctxtfunc:element,separator:\"plus\", volume:0.5)",
+      "expected": {
+        "type": "MULTI",
+        "content": "./*",
+        "attributes": {
+          "ctxtfunc": "element",
+          "separator": "\"plus\"",
+          "volume": "0.5"
+        }
+      }
+    },
+    "ComplexComponents_6": {
+      "kind": "Components",
+      "input": "[n] ./*[1] (context:\"node\",pitch:0.5)",
+      "expected": {
+        "type": "NODE",
+        "content": "./*[1]",
+        "attributes": {
+          "context": "\"node\"",
+          "pitch": "0.5"
+        }
+      }
+    },
+    "ComplexComponents_7": {
+      "kind": "Components",
+      "input": "[n] ./*[1] (context:\"node\",grammar:font:annotation=\"unit\")",
+      "expected": {
+        "type": "NODE",
+        "content": "./*[1]",
+        "attributes": {
+          "context": "\"node\""
+        },
+        "grammar": {
+          "font": true,
+          "annotation": "\"unit\""
+        }
+      }
+    },
+    "ComplexComponents_8": {
+      "kind": "Components",
+      "input": "[n] ./*[1] (grammar:font:annotation=\"unit\")",
+      "expected": {
+        "type": "NODE",
+        "content": "./*[1]",
+        "grammar": {
+          "font": true,
+          "annotation": "\"unit\""
+        }
+      }
+    },
+    "_comment4_": "Test speech rules.",
+    "Rules_0": {
+      "kind": "Actions",
+      "pick": [
+        [
+          "components",
+          -1
+        ]
+      ],
+      "input": "[t] \"Square root of\"; [n] ./*[1] (rate:0.2); [p] (pause:400)",
+      "expected": [
+        {
+          "type": "TEXT",
+          "content": "\"Square root of\""
+        },
+        {
+          "type": "NODE",
+          "content": "./*[1]",
+          "attributes": {
+            "rate": "0.2"
+          }
+        },
+        {
+          "type": "PERSONALITY",
+          "attributes": {
+            "pause": "400"
+          }
+        }
+      ]
+    },
+    "Rules_1": {
+      "kind": "Actions",
+      "pick": [
+        [
+          "components",
+          -1
+        ]
+      ],
+      "input": "[n] ./*[1]/*[1]/*[1]; [t] \"sub\"; [n] ./*[1]/*[3]/*[1] (pitch:-0.35) ;[p](pause:200); [t] \"super\";[n] ./*[1]/*[2]/*[1] (pitch:0.35) ;  [p] (pause:300)  ",
+      "expected": [
+        {
+          "type": "NODE",
+          "content": "./*[1]/*[1]/*[1]"
+        },
+        {
+          "type": "TEXT",
+          "content": "\"sub\"",
+          "attributes": {
+            "span": "./*[1]/*[3]/*[1]"
+          }
+        },
+        {
+          "type": "NODE",
+          "content": "./*[1]/*[3]/*[1]",
+          "attributes": {
+            "pitch": "-0.35"
+          }
+        },
+        {
+          "type": "PERSONALITY",
+          "attributes": {
+            "pause": "200"
+          }
+        },
+        {
+          "type": "TEXT",
+          "content": "\"super\"",
+          "attributes": {
+            "span": "./*[1]/*[2]/*[1]"
+          }
+        },
+        {
+          "type": "NODE",
+          "content": "./*[1]/*[2]/*[1]",
+          "attributes": {
+            "pitch": "0.35"
+          }
+        },
+        {
+          "type": "PERSONALITY",
+          "attributes": {
+            "pause": "300"
+          }
+        }
+      ]
+    },
+    "_comment5_": "Test translation of speech rule attributes.",
+    "AttributesList_0": {
+      "kind": "AttributesList",
+      "input": "[n] ./ (context:\"node\", pitch:0.5)",
+      "expected": [
+        "context:\"node\"",
+        "pitch:0.5"
+      ]
+    },
+    "AttributesList_1": {
+      "kind": "AttributesList",
+      "input": "[t] \"irrelevant\" (ctxtfunc:element,separator:\"plus\",volume:0.5)",
+      "expected": [
+        "ctxtfunc:element",
+        "separator:\"plus\"",
+        "volume:0.5"
+      ]
+    },
+    "_comment6_": "Test speech rule grammar annotations.",
+    "GrammarString_0": {
+      "kind": "Components",
+      "string": "Grammar",
+      "input": "[p] (grammar:font:annotation=\"unit\")",
+      "expected": "font:annotation=\"unit\""
+    },
+    "GrammarString_1": {
+      "kind": "Components",
+      "string": "Grammar",
+      "input": "[p] (grammar:!font:annotation=@unit)",
+      "expected": "!font:annotation=@unit"
+    },
+    "_comment7_": "Test speech rule attributes.",
+    "AttributesString_0": {
+      "kind": "Components",
+      "string": "Attributes",
+      "input": "[p] (ctxtfunc:element, separator:\"plus\", volume:0.5)",
+      "expected": "(ctxtfunc:element, separator:\"plus\", volume:0.5)"
+    },
+    "AttributesString_1": {
+      "kind": "Components",
+      "string": "Attributes",
+      "input": "[p] (context:\"node\", pitch:0.5, difference)",
+      "expected": "(context:\"node\", pitch:0.5, difference)"
+    },
+    "AttributesString_2": {
+      "kind": "Components",
+      "string": "Attributes",
+      "input": "[p] (context:\"node\", grammar:font:annotation=\"unit\")",
+      "expected": "(context:\"node\", grammar:font:annotation=\"unit\")"
+    },
+    "AttributesString_3": {
+      "kind": "Components",
+      "string": "Attributes",
+      "input": "[p] (grammar:font:annotation=\"unit\")",
+      "expected": "(grammar:font:annotation=\"unit\")"
+    },
+    "_comment8_": "Test translation of simple speech rule components.",
+    "SimpleComponentsString_0": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[m] ./*",
+      "expected": "[m] ./*"
+    },
+    "SimpleComponentsString_1": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[n] ./*[1]",
+      "expected": "[n] ./*[1]"
+    },
+    "SimpleComponentsString_2": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[p] (pause:200)",
+      "expected": "[p] (pause:200)"
+    },
+    "SimpleComponentsString_3": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[t] \"super\"",
+      "expected": "[t] \"super\""
+    },
+    "SimpleComponentsString_4": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[t] text()",
+      "expected": "[t] text()"
+    },
+    "_comment9_": "Test translation of speech rule components with attributes.",
+    "ComplexComponentsString_5": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[m] ./* (ctxtfunc:element, separator:\"plus\", volume:0.5)",
+      "expected": "[m] ./* (ctxtfunc:element, separator:\"plus\", volume:0.5)"
+    },
+    "ComplexComponentsString_6": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[n] ./*[1] (context:\"node\", pitch:0.5)",
+      "expected": "[n] ./*[1] (context:\"node\", pitch:0.5)"
+    },
+    "ComplexComponentsString_7": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[n] ./*[1] (context:\"node\", grammar:font:annotation=\"unit\")",
+      "expected": "[n] ./*[1] (context:\"node\", grammar:font:annotation=\"unit\")"
+    },
+    "ComplexComponentsString_8": {
+      "kind": "Components",
+      "string": "Components",
+      "input": "[n] ./*[1] (grammar:font:annotation=\"unit\")",
+      "expected": "[n] ./*[1] (grammar:font:annotation=\"unit\")"
+    },
+    "_comment10_": "Test translation of speech rules.",
+    "RulesString_0": {
+      "kind": "Actions",
+      "string": "Components",
+      "input": "[t] \"Square root of\"; [n] ./*[1] (rate:0.2); [p] (pause:400)",
+      "expected": "[t] \"Square root of\"; [n] ./*[1] (rate:0.2); [p] (pause:400)"
+    },
+    "RulesString_1": {
+      "kind": "Actions",
+      "string": "Components",
+      "input": "[n] ./*[1]/*[1]/*[1]; [t] \"sub\"; [n] ./*[1]/*[3]/*[1] (pitch:-0.35); [p] (pause:200); [t] \"super\"; [n] ./*[1]/*[2]/*[1] (pitch:0.35); [p] (pause:300)",
+      "expected": "[n] ./*[1]/*[1]/*[1]; [t] \"sub\" (span:./*[1]/*[3]/*[1]); [n] ./*[1]/*[3]/*[1] (pitch:-0.35); [p] (pause:200); [t] \"super\" (span:./*[1]/*[2]/*[1]); [n] ./*[1]/*[2]/*[1] (pitch:0.35); [p] (pause:300)"
+    },
+    "_comment11_": "Tests for double quoted string syntax.",
+    "SeparatorsInStrings_0": {
+      "kind": "Actions",
+      "string": "Components",
+      "input": "[t] \"matrix; 3 by 3\"; [n] ./*[1]",
+      "expected": "[t] \"matrix; 3 by 3\"; [n] ./*[1]"
+    },
+    "SeparatorsInStrings_1": {
+      "kind": "Actions",
+      "string": "Components",
+      "input": "[t] \"matrix; 3;\"\"by 3\"; [n] ./*[1]",
+      "expected": "[t] \"matrix; 3;\"\"by 3\"; [n] ./*[1]"
+    },
+    "SeparatorsInStrings_2": {
+      "kind": "Actions",
+      "string": "Components",
+      "input": "[t] \"matrix; by 3\"; [n] ./*[1] (context:\"where, who; why, when\", separator:@separator)",
+      "expected": "[t] \"matrix; by 3\"; [n] ./*[1] (context:\"where, who; why, when\", separator:@separator)"
+    },
+    "SeparatorsInStrings_3": {
+      "kind": "Actions",
+      "string": "Components",
+      "pick": [
+        [
+          "components",
+          0
+        ]
+      ],
+      "input": "[t] \"matrix; by 3\"; [n] ./*[1] (context:\"where, who; why, when\", separator:@separator)",
+      "expected": "[t] \"matrix; by 3\""
+    },
+    "SeparatorsInStrings_4": {
+      "kind": "Actions",
+      "string": "Components",
+      "pick": [
+        [
+          "components",
+          1
+        ],
+        [
+          "attributes",
+          "context"
+        ]
+      ],
+      "input": "[t] \"matrix; by 3\"; [n] ./*[1] (context:\"where, who; why, when\", separator:@separator)",
+      "expected": "\"where, who; why, when\""
+    }
+  }
+}

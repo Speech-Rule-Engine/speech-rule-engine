@@ -1,0 +1,421 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "BokmalClearspeakFractions",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "Bokmal Clearspeak Fractions rule tests.",
+  "active": "ClearspeakBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Frac001": {
+      "expected": "en andre"
+    },
+    "Frac002": {
+      "expected": "12 delt på 32"
+    },
+    "Frac002a": {
+      "expected": "x delt på y"
+    },
+    "Frac002b": {
+      "expected": "2 x delt på 3 y"
+    },
+    "Frac002c": {
+      "expected": "x y delt på c d"
+    },
+    "Frac002d": {
+      "expected": "en andre delt på en tredje"
+    },
+    "Frac002e": {
+      "expected": "minus x delt på y"
+    },
+    "Frac002f": {
+      "expected": "minus 2 x delt på 3 y"
+    },
+    "Frac002g": {
+      "expected": "x y delt på minus c d"
+    },
+    "Frac002h": {
+      "expected": "en andre delt på minus en tredje"
+    },
+    "Frac003": {
+      "expected": "brøk med teller 2 pluss 3, og nevner 13"
+    },
+    "Frac004": {
+      "expected": "brøk med teller x pluss y, og nevner 2"
+    },
+    "Frac005": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y"
+    },
+    "Frac006": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, pluss to tredje"
+    },
+    "Frac007": {
+      "expected": "miles delt på gallon"
+    },
+    "Frac008": {
+      "expected": "2 miles delt på 3 gallons"
+    },
+    "Frac009": {
+      "expected": "1 delt på 2"
+    },
+    "Frac010": {
+      "expected": "12 delt på 32"
+    },
+    "Frac011": {
+      "expected": "2 pluss 3 delt på 13"
+    },
+    "Frac012": {
+      "expected": "x pluss y delt på 2"
+    },
+    "Frac013": {
+      "expected": "x pluss y delt på x minus y"
+    },
+    "Frac014": {
+      "expected": "x pluss y delt på x minus y, pluss, 2 delt på 3"
+    },
+    "Frac015": {
+      "expected": "miles delt på gallon"
+    },
+    "Frac016": {
+      "expected": "2 miles delt på 3 gallons"
+    },
+    "Frac017": {
+      "expected": "1 delt på 2, slutt brøk"
+    },
+    "Frac018": {
+      "expected": "12 delt på 32, slutt brøk"
+    },
+    "Frac019": {
+      "expected": "2 pluss 3 delt på 13, slutt brøk"
+    },
+    "Frac020": {
+      "expected": "x pluss y delt på 2, slutt brøk"
+    },
+    "Frac021": {
+      "expected": "x pluss y delt på x minus y, slutt brøk"
+    },
+    "Frac022": {
+      "expected": "x pluss y delt på x minus y, slutt brøk, pluss, 2 delt på 3, slutt brøk"
+    },
+    "Frac023": {
+      "expected": "miles delt på gallons, slutt brøk"
+    },
+    "Frac024": {
+      "expected": "2 miles delt på 3 gallons, slutt brøk"
+    },
+    "Frac025": {
+      "expected": "brøk med teller 1, og nevner 2, slutt brøk"
+    },
+    "Frac026": {
+      "expected": "brøk med teller 12, og nevner 32, slutt brøk"
+    },
+    "Frac027": {
+      "expected": "brøk med teller 2 pluss 3, og nevner 13, slutt brøk"
+    },
+    "Frac028": {
+      "expected": "brøk med teller x pluss y, og nevner 2, slutt brøk"
+    },
+    "Frac029": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, slutt brøk"
+    },
+    "Frac030": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, slutt brøk, pluss, brøk med teller 2, og nevner 3, slutt brøk"
+    },
+    "Frac031": {
+      "expected": "brøk med teller miles, og nevner gallon, slutt brøk"
+    },
+    "Frac032": {
+      "expected": "brøk med teller 1, og nevner 2"
+    },
+    "Frac033": {
+      "expected": "brøk med teller 12, og nevner 32"
+    },
+    "Frac034": {
+      "expected": "brøk med teller 2 pluss 3, og nevner 13"
+    },
+    "Frac035": {
+      "expected": "brøk med teller x pluss y, og nevner 2"
+    },
+    "Frac036": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y"
+    },
+    "Frac037": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, pluss, brøk med teller 2, og nevner 3"
+    },
+    "Frac038": {
+      "expected": "brøk med teller miles, og nevner gallon"
+    },
+    "Frac039": {
+      "expected": "brøk med teller 2 miles, og nevner 3 gallons"
+    },
+    "Frac040": {
+      "expected": "brøk 1 delt på 2"
+    },
+    "Frac041": {
+      "expected": "brøk 12 delt på 32"
+    },
+    "Frac042": {
+      "expected": "brøk 2 pluss 3 delt på 13"
+    },
+    "Frac043": {
+      "expected": "brøk x pluss y delt på 2"
+    },
+    "Frac044": {
+      "expected": "brøk x pluss y delt på x minus y"
+    },
+    "Frac045": {
+      "expected": "brøk x pluss y delt på x minus y, pluss, brøk 2 delt på 3"
+    },
+    "Frac046": {
+      "expected": "brøk miles delt på gallon"
+    },
+    "Frac047": {
+      "expected": "brøk 2 miles delt på 3 gallons"
+    },
+    "Frac048": {
+      "expected": "1 per 2"
+    },
+    "Frac049": {
+      "expected": "12 per 32"
+    },
+    "Frac050": {
+      "expected": "2 pluss 3 per 13"
+    },
+    "Frac051": {
+      "expected": "x pluss y per 2"
+    },
+    "Frac052": {
+      "expected": "x pluss y per x minus y"
+    },
+    "Frac053": {
+      "expected": "x pluss y per x minus y, pluss, 2 per 3"
+    },
+    "Frac054": {
+      "expected": "miles per gallon"
+    },
+    "Frac055": {
+      "expected": "2 miles per 3 gallons"
+    },
+    "Frac056": {
+      "expected": "en andre"
+    },
+    "Frac057": {
+      "expected": "tolv trettiandre"
+    },
+    "Frac058": {
+      "expected": "brøk med teller 2 pluss 3, og nevner 13"
+    },
+    "Frac059": {
+      "expected": "brøk med teller x pluss y, og nevner 2"
+    },
+    "Frac060": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y"
+    },
+    "Frac061": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, pluss to tredje"
+    },
+    "Frac062": {
+      "expected": "miles delt på gallon"
+    },
+    "Frac063": {
+      "expected": "2 miles delt på 3 gallons"
+    },
+    "Frac064": {
+      "expected": "en andre"
+    },
+    "Frac065": {
+      "expected": "12 delt på 32, slutt brøk"
+    },
+    "Frac066": {
+      "expected": "brøk med teller 2 pluss 3, og nevner 13, slutt brøk"
+    },
+    "Frac067": {
+      "expected": "brøk med teller x pluss y, og nevner 2, slutt brøk"
+    },
+    "Frac068": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, slutt brøk"
+    },
+    "Frac069": {
+      "expected": "brøk med teller x pluss y, og nevner x minus y, slutt brøk, pluss to tredje"
+    },
+    "Frac070": {
+      "expected": "miles delt på gallons"
+    },
+    "Frac071": {
+      "expected": "2 miles delt på 3 gallons"
+    },
+    "FrTxt001": {
+      "expected": "2 miles delt på 3 gallons"
+    },
+    "FrTxt002": {
+      "expected": "rise delt på run"
+    },
+    "FrTxt003": {
+      "expected": "successful outcomes delt på total outcomes"
+    },
+    "FrTxt004": {
+      "expected": "6 ways of rolling a 7 delt på 36 ways of rolling the pair of dice"
+    },
+    "NestFrac001": {
+      "expected": "en andre delt på en tredje"
+    },
+    "NestFrac002": {
+      "expected": "brøk med teller 1, og nevner, 2 delt på en tredje"
+    },
+    "NestFrac003": {
+      "expected": "en andre delt på 3"
+    },
+    "NestFrac004": {
+      "expected": "1 delt på to tredje"
+    },
+    "NestFrac005": {
+      "expected": "brøk med teller, 11 delt på 32, og nevner, 16 delt på 51"
+    },
+    "NestFrac006": {
+      "expected": "brøk med teller 11, og nevner, brøk med teller 32, og nevner, 16 delt på 51"
+    },
+    "NestFrac007": {
+      "expected": "brøk med teller 1 pluss, 4 delt på x, og nevner 2"
+    },
+    "NestFrac008": {
+      "expected": "brøk med teller 3, og nevner 2 pluss, 4 delt på x"
+    },
+    "NestFrac009": {
+      "expected": "brøk med teller, 10 delt på 22, og nevner en andre"
+    },
+    "NestFrac010": {
+      "expected": "brøk med teller 1 pluss to tredje, og nevner 1 minus to tredje"
+    },
+    "NestFrac011": {
+      "expected": "brøk med teller 1 pluss, x delt på 2, og nevner 1 minus, x delt på 2"
+    },
+    "NestFrac012": {
+      "expected": "brøk med teller, brøk med teller x pluss 1, og nevner x minus 1, pluss 1, og nevner x pluss 1"
+    },
+    "NestFrac013": {
+      "expected": "brøk med teller, brøk med teller x pluss 1, og nevner x minus 4, pluss en andre, og nevner x pluss, 1 delt på 16"
+    },
+    "NestFrac014": {
+      "expected": "1 pluss, brøk med teller x, og nevner 1 pluss, 2 delt på x"
+    },
+    "NestFrac015": {
+      "expected": "1 pluss, brøk med teller x pluss 3, og nevner 1 pluss, brøk med teller 2, og nevner x pluss 3"
+    },
+    "NestFrac016": {
+      "expected": "1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss 1"
+    },
+    "NestFrac017": {
+      "expected": "1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss prikk prikk prikk"
+    },
+    "NestFrac018": {
+      "expected": "a indeks 0, pluss, brøk med teller 1, og nevner, a indeks 1, pluss, brøk med teller 1, og nevner, a indeks 2, pluss, brøk med teller 1, og nevner, a indeks 3, pluss prikk prikk prikk"
+    },
+    "NestFrac019": {
+      "expected": "en andre delt på en tredje"
+    },
+    "NestFrac020": {
+      "expected": "brøk med teller 1, og nevner, 2 delt på en tredje, slutt brøk"
+    },
+    "NestFrac021": {
+      "expected": "en andre delt på 3, slutt brøk"
+    },
+    "NestFrac022": {
+      "expected": "1 delt på to tredje, slutt brøk"
+    },
+    "NestFrac023": {
+      "expected": "brøk med teller, 11 delt på 32, og nevner, 16 delt på 51, slutt brøk"
+    },
+    "NestFrac024": {
+      "expected": "brøk med teller 11, og nevner, brøk med teller 32, og nevner, 16 delt på 51, slutt brøk"
+    },
+    "NestFrac025": {
+      "expected": "brøk med teller 1 pluss, 4 delt på x, og nevner 2, slutt brøk"
+    },
+    "NestFrac026": {
+      "expected": "brøk med teller 3, og nevner 2 pluss, 4 delt på x, slutt brøk"
+    },
+    "NestFrac027": {
+      "expected": "brøk med teller, 10 delt på 22, og nevner en andre, slutt brøk"
+    },
+    "NestFrac028": {
+      "expected": "brøk med teller 1 pluss to tredje, og nevner 1 minus to tredje, slutt brøk"
+    },
+    "NestFrac029": {
+      "expected": "brøk med teller 1 pluss, x delt på 2, og nevner 1 minus, x delt på 2, slutt brøk"
+    },
+    "NestFrac030": {
+      "expected": "brøk med teller, brøk med teller x pluss 1, og nevner x minus 1, pluss 1, og nevner x pluss 1, slutt brøk"
+    },
+    "NestFrac031": {
+      "expected": "brøk med teller, brøk med teller x pluss 1, og nevner x minus 4, pluss en andre, og nevner x pluss, 1 delt på 16, slutt brøk"
+    },
+    "NestFrac032": {
+      "expected": "1 pluss, brøk med teller x, og nevner 1 pluss, 2 delt på x, slutt brøk"
+    },
+    "NestFrac033": {
+      "expected": "1 pluss, brøk med teller x pluss 3, og nevner 1 pluss, brøk med teller 2, og nevner x pluss 3, slutt brøk"
+    },
+    "NestFrac034": {
+      "expected": "1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss 1, slutt brøk"
+    },
+    "NestFrac035": {
+      "expected": "1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss, brøk med teller 1, og nevner 1 pluss prikk prikk prikk, slutt brøk"
+    },
+    "NestFrac036": {
+      "expected": "a indeks 0, pluss, brøk med teller 1, og nevner, a indeks 1, pluss, brøk med teller 1, og nevner, a indeks 2, pluss, brøk med teller 1, og nevner, a indeks 3, pluss prikk prikk prikk, slutt brøk"
+    },
+    "Fracfunct001": {
+      "expected": "f av x, delt på g av x"
+    },
+    "Fracfunct002": {
+      "expected": "brøk med teller f av x, pluss g av x, og nevner g av x"
+    },
+    "Fracfunct003": {
+      "expected": "brøk med teller f av, venstre parentes, x pluss 1, høyre parentes, og nevner g av x"
+    },
+    "Fracfunct004": {
+      "expected": "f av x, delt på 2"
+    },
+    "Fracfunct005": {
+      "expected": "2 delt på f av x"
+    },
+    "Fracfunct006": {
+      "expected": "brøk med teller 2, og nevner g av x, pluss g av, venstre parentes, x pluss 1, høyre parentes"
+    },
+    "Fracfunct007": {
+      "expected": "sinus x delt på cosinus x"
+    },
+    "Fracfunct009": {
+      "expected": "brøk med teller sinus x pluss cosinus x, og nevner cosinus x"
+    },
+    "Fracfunct010": {
+      "expected": "sinus 2 x delt på cosinus 3 x"
+    },
+    "Fracfunct011": {
+      "expected": "brøk med teller, sinus av, venstre parentes, x pluss y, høyre parentes, og nevner, cosinus av, venstre parentes, x pluss y, høyre parentes"
+    },
+    "Fracfunct012": {
+      "expected": "f av 2 x, delt på g av 3 x"
+    },
+    "Fracfunct013": {
+      "expected": "log x delt på log y"
+    },
+    "Fracfunct014": {
+      "expected": "log 2 x delt på log 3 y"
+    },
+    "Fracfunct015": {
+      "expected": "log basis 10 av, x, delt på, log basis 5 av, y"
+    },
+    "Fracfunct016": {
+      "expected": "log basis 10 av, 2 x, delt på, log basis 5 av, 3 y"
+    },
+    "Fracfunct017": {
+      "expected": "brøk med teller, log av, venstre parentes, x pluss 1, høyre parentes, og nevner log y"
+    },
+    "Fracfunct018": {
+      "expected": "f indeks 1, av x, delt på, g indeks 1, av x"
+    }
+  }
+}

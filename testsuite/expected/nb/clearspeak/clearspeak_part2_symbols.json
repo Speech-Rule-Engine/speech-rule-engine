@@ -1,0 +1,214 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "BokmalClearspeakPart2Symbols",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "Bokmal Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "X001": {
+      "expected": "6 gangetegn 8"
+    },
+    "X002": {
+      "expected": "m gangetegn n"
+    },
+    "X003": {
+      "expected": "3 gangetegn 3"
+    },
+    "X004": {
+      "expected": "6 gangetegn 8"
+    },
+    "X005": {
+      "expected": "m gangetegn n"
+    },
+    "X006": {
+      "expected": "3 gangetegn 3"
+    },
+    "X007": {
+      "expected": "u gangetegn v"
+    },
+    "Dot001": {
+      "expected": "6 ganger 8"
+    },
+    "Dot002": {
+      "expected": "m ganger n"
+    },
+    "Dot003": {
+      "expected": "3 ganger 3"
+    },
+    "Dot004": {
+      "expected": "6 ganger 8"
+    },
+    "Dot005": {
+      "expected": "m ganger n"
+    },
+    "Dot006": {
+      "expected": "3 ganger 3"
+    },
+    "Triangle001": {
+      "expected": "triangel A B C"
+    },
+    "Triangle002": {
+      "expected": "triangel D E F"
+    },
+    "Triangle003": {
+      "expected": "stor Delta x"
+    },
+    "Triangle004": {
+      "expected": "f av, venstre parentes, x pluss stor Delta x, høyre parentes"
+    },
+    "Ellipses001": {
+      "expected": "1 komma 2 komma 3 komma prikk prikk prikk"
+    },
+    "Ellipses002": {
+      "expected": "1 komma 2 komma 3 komma prikk prikk prikk komma 20"
+    },
+    "Ellipses003": {
+      "expected": "prikk prikk prikk komma, minus 2, komma, minus 1, komma 0 komma 1 komma 2 komma prikk prikk prikk"
+    },
+    "Ellipses004": {
+      "expected": "1 komma 2 komma 3 komma og så videre"
+    },
+    "Ellipses005": {
+      "expected": "1 komma 2 komma 3 komma og så videre til komma 20"
+    },
+    "Ellipses006": {
+      "expected": "prikk prikk prikk komma, minus 2, komma, minus 1, komma 0 komma 1 komma 2 komma prikk prikk prikk"
+    },
+    "VertLine001": {
+      "expected": "3 deler 6"
+    },
+    "VertLine002": {
+      "expected": "hele mengden x med x er større enn 0"
+    },
+    "VertLine003": {
+      "expected": "hele mengden x med, den absolutte verdien av x, er større enn 2"
+    },
+    "VertLine004": {
+      "expected": "f av x, evaluert for x er lik 5"
+    },
+    "VertLine005": {
+      "expected": "x kvadrat pluss 2 x, evaluert for x er lik 2"
+    },
+    "VertLine006": {
+      "expected": "x kvadrat pluss x, evaluert for 1, minus det samme uttrykket evaluert for 0"
+    },
+    "VertLine007": {
+      "expected": "hele mengden x med x er større enn 0"
+    },
+    "VertLine008": {
+      "expected": "3 deler 6"
+    },
+    "VertLine009": {
+      "expected": "P av, venstre parentes, A gitt B, høyre parentes"
+    },
+    "MembSym001": {
+      "expected": "If x er et element av heltallene then 2 x, is an even number punktum"
+    },
+    "MembSym002": {
+      "expected": "hele mengden x i heltallene med x er større enn 5"
+    },
+    "MembSym003": {
+      "expected": "3 pluss 2 i, er ikke et element av de reelle tallene"
+    },
+    "MembSym004": {
+      "expected": "If x er et element av heltallene then 2 x, is an even number punktum"
+    },
+    "MembSym005": {
+      "expected": "hele mengden x medlem av heltallene med x er større enn 5"
+    },
+    "MembSym006": {
+      "expected": "3 pluss 2 i, er ikke et element av de reelle tallene"
+    },
+    "MembSym007": {
+      "expected": "If x er et element av heltallene then 2 x, is an even number punktum"
+    },
+    "MembSym008": {
+      "expected": "hele mengden x medlem av heltallene med x er større enn 5"
+    },
+    "MembSym009": {
+      "expected": "3 pluss 2 i, er ikke et element av de reelle tallene"
+    },
+    "MembSym010": {
+      "expected": "If x tilhører heltallene then 2 x, is an even number punktum"
+    },
+    "MembSym011": {
+      "expected": "hele mengden x tilhørende heltallene med x er større enn 5"
+    },
+    "MembSym012": {
+      "expected": "3 pluss 2 i, tilhører ikke de reelle tallene"
+    },
+    "MembSym013": {
+      "expected": "If x tilhører heltallene then 2 x, is an even number punktum"
+    },
+    "MembSym014": {
+      "expected": "hele mengden x tilhørende heltallene med x er større enn 5"
+    },
+    "MembSym015": {
+      "expected": "3 pluss 2 i, tilhører ikke de reelle tallene"
+    },
+    "SetMemb001": {
+      "expected": "mengden av x tilhørende heltallene med 2 er mindre enn x er mindre enn 7"
+    },
+    "SetMemb002": {
+      "expected": "mengden av x medlem av heltallene med x er større enn 5"
+    },
+    "Sum001": {
+      "expected": "sum fra n er lik 1 til 10 over n"
+    },
+    "Sum002": {
+      "expected": "sum fra n er lik 1 til uendelig over n"
+    },
+    "Sum003": {
+      "expected": "sum over i er et element av de positive heltallene, over i"
+    },
+    "Sum004": {
+      "expected": "sum over S, over i"
+    },
+    "Sum005": {
+      "expected": "sum over, a indeks i"
+    },
+    "Sum006": {
+      "expected": "produkt fra i er lik 1 til 10 over i"
+    },
+    "Sum007": {
+      "expected": "produkt over i er et element av de positive heltallene, over, brøk med teller i, og nevner i pluss 1"
+    },
+    "Sum008": {
+      "expected": "produkt over de positive heltallene, over, brøk med teller i, og nevner i pluss 1"
+    },
+    "Sum009": {
+      "expected": "produkt over, a indeks i"
+    },
+    "Sum010": {
+      "expected": "kryss fra i er lik 1 til 10 over, S indeks i"
+    },
+    "Sum011": {
+      "expected": "union fra i er lik 1 til 10 over, S indeks i"
+    },
+    "Sum012": {
+      "expected": "kryss av, S indeks i"
+    },
+    "Sum013": {
+      "expected": "union av, S indeks i"
+    },
+    "Sum014": {
+      "expected": "kryss over C, av, S indeks i"
+    },
+    "Sum015": {
+      "expected": "union over C, av, S indeks i"
+    },
+    "Sum016": {
+      "expected": "integral over f av x, d x"
+    },
+    "Sum017": {
+      "expected": "integral fra 0 til 1 over f av x, d x"
+    },
+    "Sum018": {
+      "expected": "integral over de reelle tallene, over f av x, d x"
+    }
+  }
+}

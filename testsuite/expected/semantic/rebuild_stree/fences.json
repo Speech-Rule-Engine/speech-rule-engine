@@ -1,0 +1,7 @@
+{
+  "factory": "rebuild",
+  "base": "input/semantic/fences.json",
+  "information": "Semantic Tree Rebuilding tests for fenced expressions.",
+  "exclude": [],
+  "tests": "ALL"
+}

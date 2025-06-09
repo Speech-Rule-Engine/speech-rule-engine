@@ -1,0 +1,7 @@
+{
+  "factory": "rebuildEnriched",
+  "base": "input/semantic/implicit.json",
+  "information": "Compare stree from input and enriched for juxtaposition heuristic.",
+  "exclude": ["Juxta_24", "Juxta_25", "OutsideNesting_0", "OutsideNesting_1", "OutsideNesting_2"],
+  "tests": "ALL"
+}

@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml limits tests.",
+  "base": "input/semantic/limits.json"
+}

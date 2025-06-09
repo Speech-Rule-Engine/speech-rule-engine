@@ -1,0 +1,59 @@
+{
+  "name": "SwedishMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "sv",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Swedish Mathspeak Inference rules.",
+  "active": "InferenceSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NoLabel_0": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "NoLabel_1": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "Premise_0": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "Premise_1": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "Axiom": {
+      "expected": "axiom stort A"
+    },
+    "EmptyAxiom": {
+      "expected": "tomt axiom"
+    },
+    "RightLabel_0": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "RightLabel_1": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 2 premisser"
+    },
+    "RightLabel_2": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 3 premisser"
+    },
+    "LeftLabel_0": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "LeftLabel_1": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 2 premisser"
+    },
+    "LeftLabel_2": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 3 premisser"
+    },
+    "Premises_0": {
+      "expected": "1:a premiss  axiom stort A"
+    },
+    "Premises_1": {
+      "expected": "1:a premiss  axiom stort A 2:a premiss  axiom stort B"
+    },
+    "Premises_2": {
+      "expected": "1:a premiss  axiom stort A 2:a premiss  axiom stort B 3:e premiss  axiom stort C"
+    }
+  }
+}

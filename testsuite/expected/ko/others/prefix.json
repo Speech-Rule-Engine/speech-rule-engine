@@ -1,0 +1,242 @@
+{
+  "name": "KoreanPrefix",
+  "locale": "ko",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Korean Prefix rule tests.",
+  "active": "PrefixKorean",
+  "exclude": [],
+  "tests": {
+    "Sub_0": {
+      "expected": "밑"
+    },
+    "Sub_1": {
+      "expected": "아래첨자"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "밑"
+    },
+    "Super_1": {
+      "expected": "지수"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "밑"
+    },
+    "Over_1": {
+      "expected": "위첨자"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "밑"
+    },
+    "Under_1": {
+      "expected": "하단첨자"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "분자"
+    },
+    "Fractions_1": {
+      "expected": "분모"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "근호 속의 수"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "근호 속의 수"
+    },
+    "Root_1": {
+      "expected": "제곱근"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "밑"
+    },
+    "SimpleTensors_1": {
+      "expected": "왼쪽 아래첨자"
+    },
+    "SimpleTensors_2": {
+      "expected": "왼쪽 위첨자"
+    },
+    "SimpleTensors_3": {
+      "expected": "오른쪽 아래첨자"
+    },
+    "SimpleTensors_4": {
+      "expected": "오른쪽 위첨자"
+    },
+    "ComplexTensors_0": {
+      "expected": "밑"
+    },
+    "ComplexTensors_1": {
+      "expected": "첫번째 왼쪽 아래첨자"
+    },
+    "ComplexTensors_2": {
+      "expected": "두번째 왼쪽 아래첨자"
+    },
+    "ComplexTensors_3": {
+      "expected": "첫번째 왼쪽 위첨자"
+    },
+    "ComplexTensors_4": {
+      "expected": "두번째 왼쪽 위첨자"
+    },
+    "ComplexTensors_5": {
+      "expected": "첫번째 오른쪽 아래첨자"
+    },
+    "ComplexTensors_6": {
+      "expected": "두번째 오른쪽 아래첨자"
+    },
+    "ComplexTensors_7": {
+      "expected": "첫번째 오른쪽 위첨자"
+    },
+    "ComplexTensors_8": {
+      "expected": "두번째 오른쪽 위첨자"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "조합 식"
+    },
+    "Binomials_1": {
+      "expected": "분할 식"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "첫번째 행"
+    },
+    "Vectors_1": {
+      "expected": "두번째 행"
+    },
+    "Vectors_2": {
+      "expected": "세번째 행"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "첫번째 행"
+    },
+    "Matrices_depth_1": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Matrices_depth_2": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Matrices_depth_3": {
+      "expected": "두번째 행"
+    },
+    "Matrices_depth_4": {
+      "expected": "두번째 행, 첫번째 열"
+    },
+    "Matrices_depth_5": {
+      "expected": "두번째 행, 두번째 열"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "첫번째 행"
+    },
+    "Matrices_1": {
+      "expected": "첫번째 열"
+    },
+    "Matrices_2": {
+      "expected": "두번째 열"
+    },
+    "Matrices_3": {
+      "expected": "두번째 행"
+    },
+    "Matrices_4": {
+      "expected": "첫번째 열"
+    },
+    "Matrices_5": {
+      "expected": "두번째 열"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "밑"
+    },
+    "LimBoth_1": {
+      "expected": "위첨자"
+    },
+    "LimBoth_2": {
+      "expected": "하단첨자"
+    },
+    "LimBoth_3": {
+      "expected": "밑"
+    },
+    "LimBoth_4": {
+      "expected": "밑"
+    },
+    "LimUpper_0": {
+      "expected": "위첨자"
+    },
+    "LimUpper_1": {
+      "expected": "위첨자"
+    },
+    "LimUpper_2": {
+      "expected": "밑"
+    },
+    "LimUpper_3": {
+      "expected": "밑"
+    },
+    "LimLower_0": {
+      "expected": "하단첨자"
+    },
+    "LimLower_1": {
+      "expected": "하단첨자"
+    },
+    "LimLower_2": {
+      "expected": "밑"
+    },
+    "LimLower_3": {
+      "expected": "밑"
+    }
+  }
+}

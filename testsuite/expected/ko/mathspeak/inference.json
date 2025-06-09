@@ -1,0 +1,58 @@
+{
+  "name": "KoreanMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "ko",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Korean Mathspeak Inference rules.",
+  "active": "InferenceKorean",
+  "exclude": [],
+  "tests": {
+    "NoLabel_0": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "NoLabel_1": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "Premise_0": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "Premise_1": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "Axiom": {
+      "expected": "공리 대문자 A"
+    },
+    "EmptyAxiom": {
+      "expected": "빈 공리"
+    },
+    "RightLabel_0": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "RightLabel_1": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 2 개"
+    },
+    "RightLabel_2": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 3 개"
+    },
+    "LeftLabel_0": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "LeftLabel_1": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 2 개"
+    },
+    "LeftLabel_2": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 3 개"
+    },
+    "Premises_0": {
+      "expected": "첫번째 전제  공리 대문자 A"
+    },
+    "Premises_1": {
+      "expected": "첫번째 전제  공리 대문자 A 두번째 전제  공리 대문자 B"
+    },
+    "Premises_2": {
+      "expected": "첫번째 전제  공리 대문자 A 두번째 전제  공리 대문자 B 세번째 전제  공리 대문자 C"
+    }
+  }
+}

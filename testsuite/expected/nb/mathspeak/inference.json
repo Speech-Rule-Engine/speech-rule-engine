@@ -1,0 +1,59 @@
+{
+  "name": "BokmalMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "nb",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Bokmal Mathspeak Inference rules.",
+  "active": "InferenceBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NoLabel_0": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "NoLabel_1": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "Premise_0": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "Premise_1": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "Axiom": {
+      "expected": "aksiom stor bokstav A"
+    },
+    "EmptyAxiom": {
+      "expected": "tomt aksiom"
+    },
+    "RightLabel_0": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "RightLabel_1": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 2 premisser"
+    },
+    "RightLabel_2": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 3 premisser"
+    },
+    "LeftLabel_0": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "LeftLabel_1": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 2 premisser"
+    },
+    "LeftLabel_2": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 3 premisser"
+    },
+    "Premises_0": {
+      "expected": "1. premiss  aksiom stor bokstav A"
+    },
+    "Premises_1": {
+      "expected": "1. premiss  aksiom stor bokstav A 2. premiss  aksiom stor bokstav B"
+    },
+    "Premises_2": {
+      "expected": "1. premiss  aksiom stor bokstav A 2. premiss  aksiom stor bokstav B 3. premiss  aksiom stor bokstav C"
+    }
+  }
+}

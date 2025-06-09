@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech integrals tests.",
+  "base": "input/semantic/integrals.json"
+}

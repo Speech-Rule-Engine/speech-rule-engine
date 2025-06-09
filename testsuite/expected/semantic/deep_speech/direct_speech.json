@@ -1,0 +1,6 @@
+{
+  "factory": "deepSpeech",
+  "tests": "ALL",
+  "information": "Deep speech direct speech tests.",
+  "base": "input/common/direct_speech.json"
+}

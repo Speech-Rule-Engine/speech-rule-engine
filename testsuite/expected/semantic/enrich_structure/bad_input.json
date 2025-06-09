@@ -1,0 +1,266 @@
+{
+  "factory": "enrichStructure",
+  "base": "input/semantic/bad_input.json",
+  "information": "Semantic Enrichment tests for badly formatted elements.",
+  "tests": {
+    "_comment_2": "Underspecified Layout Elements",
+    "Layout_Underspec_0": {
+      "_comment_": "Issue #317",
+      "expected": "<math structure=\"0\"><mover><mi type=\"punctuation\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">?</mi></mover></math>"
+    },
+    "Layout_Underspec_1": {
+      "expected": "<math structure=\"0\"><munder><mi type=\"punctuation\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">?</mi></munder></math>"
+    },
+    "Layout_Underspec_2": {
+      "expected": "<math structure=\"0\"><munderover><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></munderover></math>"
+    },
+    "Layout_Underspec_3": {
+      "expected": "<math structure=\"(2 0 1)\"><munderover type=\"underscore\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"punctuation\" annotation=\"accent:question\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">?</mi></munderover></math>"
+    },
+    "Layout_Underspec_4": {
+      "expected": "<math structure=\"0\"><msub><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></msub></math>"
+    },
+    "Layout_Underspec_5": {
+      "expected": "<math structure=\"0\"><msup><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></msup></math>"
+    },
+    "Layout_Underspec_6": {
+      "expected": "<math structure=\"0\"><msubsup><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></msubsup></math>"
+    },
+    "Layout_Underspec_7": {
+      "expected": "<math structure=\"(2 0 1)\"><msubsup type=\"subscript\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"punctuation\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">?</mi></msubsup></math>"
+    },
+    "_comment_3": "Overspecified Layout Elements",
+    "Layout_Overspec_0": {
+      "expected": "<math structure=\"(3 0 1)\"><mover type=\"overscore\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></mover></math>"
+    },
+    "Layout_Overspec_1": {
+      "expected": "<math structure=\"(3 0 1)\"><munder type=\"underscore\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></munder></math>"
+    },
+    "Layout_Overspec_2": {
+      "expected": "<math structure=\"(5 (4 0 1) 2)\"><munderover type=\"underover\" id=\"5\" children=\"0,1,2\" collapsed=\"(5 (4 0 1) 2)\" owns=\"0 1 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1 2\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"5\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"5\" aria-level=\"2\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"5\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">c</mi><mi>d</mi></munderover></math>"
+    },
+    "Layout_Overspec_3": {
+      "expected": "<math structure=\"(3 0 1)\"><msub type=\"subscript\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></msub></math>"
+    },
+    "Layout_Overspec_4": {
+      "expected": "<math structure=\"(3 0 1)\"><msup type=\"superscript\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></msup></math>"
+    },
+    "Layout_Overspec_5": {
+      "expected": "<math structure=\"(5 (4 0 1) 2)\"><msubsup type=\"subsup\" id=\"5\" children=\"0,1,2\" collapsed=\"(5 (4 0 1) 2)\" owns=\"0 1 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1 2\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"5\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"5\" aria-level=\"2\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"5\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">c</mi><mi>d</mi></msubsup></math>"
+    },
+    "_comment_4": "Empty  Layout Elements",
+    "Layout_Empty_0": {
+      "expected": "<math structure=\"0\"><mover type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "Layout_Empty_1": {
+      "expected": "<math structure=\"0\"><munder type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "Layout_Empty_2": {
+      "expected": "<math structure=\"0\"><munderover type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "Layout_Empty_3": {
+      "expected": "<math structure=\"0\"><msub type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "Layout_Empty_4": {
+      "expected": "<math structure=\"0\"><msup type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "Layout_Empty_5": {
+      "expected": "<math structure=\"0\"><msubsup type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "_comment_5": "Underspecified Layout Elements with Limit functions",
+    "Limit_Underspec_0": {
+      "expected": "<math structure=\"0\"><mover><mi type=\"function\" font=\"normal\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">lim</mi></mover></math>"
+    },
+    "Limit_Underspec_1": {
+      "expected": "<math structure=\"0\"><munder><mi type=\"function\" font=\"normal\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">lim</mi></munder></math>"
+    },
+    "Limit_Underspec_2": {
+      "expected": "<math structure=\"0\"><munderover><mi type=\"function\" font=\"normal\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">lim</mi></munderover></math>"
+    },
+    "Limit_Underspec_3": {
+      "expected": "<math structure=\"(2 0 1)\"><munderover type=\"limlower\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi></munderover></math>"
+    },
+    "Limit_Underspec_4": {
+      "expected": "<math structure=\"0\"><msub><mi type=\"function\" font=\"normal\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">lim</mi></msub></math>"
+    },
+    "Limit_Underspec_5": {
+      "expected": "<math structure=\"0\"><msup><mi type=\"function\" font=\"normal\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">lim</mi></msup></math>"
+    },
+    "Limit_Underspec_6": {
+      "expected": "<math structure=\"0\"><msubsup><mi type=\"function\" font=\"normal\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">lim</mi></msubsup></math>"
+    },
+    "Limit_Underspec_7": {
+      "expected": "<math structure=\"(2 0 1)\"><msubsup type=\"limlower\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi></msubsup></math>"
+    },
+    "_comment_5a": "Overspecified Layout Elements",
+    "Limit_Overspec_0": {
+      "expected": "<math structure=\"(3 0 1)\"><mover type=\"limupper\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></mover></math>"
+    },
+    "Limit_Overspec_1": {
+      "expected": "<math structure=\"(3 0 1)\"><munder type=\"limlower\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></munder></math>"
+    },
+    "Limit_Overspec_2": {
+      "expected": "<math structure=\"(4 0 1 2)\"><munderover type=\"limboth\" id=\"4\" children=\"0,1,2\" owns=\"0 1 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1 2\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"4\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"4\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">b</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">c</mi><mi>d</mi></munderover></math>"
+    },
+    "Limit_Overspec_3": {
+      "expected": "<math structure=\"(3 0 1)\"><msub type=\"limlower\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></msub></math>"
+    },
+    "Limit_Overspec_4": {
+      "expected": "<math structure=\"(3 0 1)\"><msup type=\"limupper\" id=\"3\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></msup></math>"
+    },
+    "Limit_Overspec_5": {
+      "expected": "<math structure=\"(4 0 1 2)\"><msubsup type=\"limboth\" id=\"4\" children=\"0,1,2\" owns=\"0 1 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1 2\"><mi type=\"function\" font=\"normal\" id=\"0\" parent=\"4\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\">lim</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"4\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">b</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">c</mi><mi>d</mi></msubsup></math>"
+    },
+    "_comment_6": "Underspecified Layout Elements with Bigop",
+    "Bigop_Underspec_0": {
+      "expected": "<math structure=\"0\"><mover><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∑</mi></mover></math>"
+    },
+    "Bigop_Underspec_1": {
+      "expected": "<math structure=\"0\"><munder><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∑</mi></munder></math>"
+    },
+    "Bigop_Underspec_2": {
+      "expected": "<math structure=\"0\"><munderover><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∑</mi></munderover></math>"
+    },
+    "Bigop_Underspec_3": {
+      "expected": "<math structure=\"(2 0 1)\"><munderover type=\"limlower\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"largeop\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">∑</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi></munderover></math>"
+    },
+    "Bigop_Underspec_4": {
+      "expected": "<math structure=\"0\"><msub><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∑</mi></msub></math>"
+    },
+    "Bigop_Underspec_5": {
+      "expected": "<math structure=\"0\"><msup><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∑</mi></msup></math>"
+    },
+    "Bigop_Underspec_6": {
+      "expected": "<math structure=\"0\"><msubsup><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∑</mi></msubsup></math>"
+    },
+    "Bigop_Underspec_7": {
+      "expected": "<math structure=\"(2 0 1)\"><msubsup type=\"limlower\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"largeop\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">∑</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi></msubsup></math>"
+    },
+    "_comment_7": "Underspecified Layout Elements with Integral",
+    "Integral_Underspec_0": {
+      "expected": "<math structure=\"0\"><mover><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∫</mi></mover></math>"
+    },
+    "Integral_Underspec_1": {
+      "expected": "<math structure=\"0\"><munder><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∫</mi></munder></math>"
+    },
+    "Integral_Underspec_2": {
+      "expected": "<math structure=\"0\"><munderover><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∫</mi></munderover></math>"
+    },
+    "Integral_Underspec_3": {
+      "expected": "<math structure=\"(2 0 1)\"><munderover type=\"limlower\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"largeop\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">∫</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi></munderover></math>"
+    },
+    "Integral_Underspec_4": {
+      "expected": "<math structure=\"0\"><msub><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∫</mi></msub></math>"
+    },
+    "Integral_Underspec_5": {
+      "expected": "<math structure=\"0\"><msup><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∫</mi></msup></math>"
+    },
+    "Integral_Underspec_6": {
+      "expected": "<math structure=\"0\"><msubsup><mi type=\"largeop\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">∫</mi></msubsup></math>"
+    },
+    "Integral_Underspec_7": {
+      "expected": "<math structure=\"(2 0 1)\"><msubsup type=\"limlower\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"largeop\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">∫</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi></msubsup></math>"
+    },
+    "_comment_8": "Underspecified Fraction",
+    "Fraction_Underspec": {
+      "expected": "<math structure=\"(2 0 1)\"><mfrac type=\"fraction\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mrow added=\"true\" type=\"empty\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\"/></mfrac></math>"
+    },
+    "_comment_9": "Empty Fraction",
+    "Fraction_Empty": {
+      "expected": "<math structure=\"0\"><mfrac type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "_comment_10": "Overspecified Fraction",
+    "Fraction_Overspec": {
+      "expected": "<math structure=\"(2 0 1)\"><mfrac type=\"fraction\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></mfrac></math>"
+    },
+    "_comment_11": "Underspecified Root",
+    "Root_Underspec": {
+      "expected": "<math structure=\"(1 0)\"><mroot type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></mroot></math>"
+    },
+    "_comment_12": "Empty Root",
+    "Root_Empty": {
+      "expected": "<math structure=\"(1 0)\"><mroot type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></mroot></math>"
+    },
+    "_comment_13": "Overspecified Root",
+    "Root_Overspec": {
+      "expected": "<math structure=\"(2 0 1)\"><mroot type=\"root\" id=\"2\" children=\"0,1\" owns=\"0 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">a</mi><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">b</mi><mi>c</mi></mroot></math>"
+    },
+    "_comment_14": "Empty display expressions that could lead to enrichment issues.",
+    "_comment_15": "Empty square root.",
+    "Sqrt_Display_0": {
+      "expected": "<math structure=\"(1 0)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt></math>"
+    },
+    "Sqrt_Display_1": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"4\" children=\"1,2\" content=\"3\" owns=\"1 3 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"1 3 2\" structure=\"(4 (1 0) 3 2)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" parent=\"4\" owns=\"0\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt><mo type=\"operator\" id=\"3\" parent=\"4\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></math>"
+    },
+    "Sqrt_Display_2": {
+      "expected": "<math type=\"infixop\" id=\"7\" children=\"6,4\" content=\"3\" owns=\"6 3 4\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"6 3 4\" structure=\"(7 (6 (1 0) 5 2) 3 4)\"><mrow added=\"true\" type=\"infixop\" annotation=\"clearspeak:unit\" id=\"6\" children=\"1,2\" content=\"5\" parent=\"7\" owns=\"1 5 2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"1 5 2\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" parent=\"6\" owns=\"0\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"3\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt><mo type=\"operator\" id=\"5\" parent=\"6\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"2\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"6\" aria-level=\"2\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></mrow><mo type=\"operator\" id=\"3\" parent=\"7\" operator=\"infixop,+\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">+</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\" parent=\"7\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">b</mi></math>"
+    },
+    "Sqrt_Display_3": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"4\" children=\"1,2\" content=\"3\" owns=\"1 3 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"1 3 2\" structure=\"(4 (1 0) 3 2)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" parent=\"4\" owns=\"0\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"1\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></msqrt><mo type=\"operator\" id=\"3\" parent=\"4\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">b</mi></math>"
+    },
+    "_comment_16": "Empty root.",
+    "Root_Display_0": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"4\" children=\"1,2\" content=\"3\" owns=\"1 3 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"1 3 2\" structure=\"(4 (1 0) 3 2)\"><mroot type=\"sqrt\" id=\"1\" children=\"0\" parent=\"4\" owns=\"0\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></mroot><mo type=\"operator\" id=\"3\" parent=\"4\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></math>"
+    },
+    "Root_Display_1": {
+      "expected": "<math type=\"infixop\" id=\"7\" children=\"6,4\" content=\"3\" owns=\"6 3 4\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"6 3 4\" structure=\"(7 (6 (1 0) 5 2) 3 4)\"><mrow added=\"true\" type=\"infixop\" annotation=\"clearspeak:unit\" id=\"6\" children=\"1,2\" content=\"5\" parent=\"7\" owns=\"1 5 2\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"1 5 2\"><mroot type=\"sqrt\" id=\"1\" children=\"0\" parent=\"6\" owns=\"0\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"3\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></mroot><mo type=\"operator\" id=\"5\" parent=\"6\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"2\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"6\" aria-level=\"2\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></mrow><mo type=\"operator\" id=\"3\" parent=\"7\" operator=\"infixop,+\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">+</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\" parent=\"7\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">b</mi></math>"
+    },
+    "Root_Display_2": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"4\" children=\"1,2\" content=\"3\" owns=\"1 3 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"1 3 2\" structure=\"(4 (1 0) 3 2)\"><mroot type=\"sqrt\" id=\"1\" children=\"0\" parent=\"4\" owns=\"0\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"1\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></mroot><mo type=\"operator\" id=\"3\" parent=\"4\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">b</mi></math>"
+    },
+    "_comment_17": "Various interspersed rubbish",
+    "Orphaned_Glyph_0": {
+      "expected": "<math structure=\"0\"><mglyph alt=\"some glyph\" type=\"unknown\" id=\"0\" attributes=\"ext-speech:some glyph\" postfix=\"image\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></math>"
+    },
+    "Orphaned_Glyph_1": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"3\" children=\"0,1\" content=\"2\" owns=\"0 2 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 2 1\" structure=\"(3 0 2 1)\"><mglyph alt=\"some glyph\" type=\"unknown\" id=\"0\" parent=\"3\" attributes=\"ext-speech:some glyph\" postfix=\"image\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\"/><mo type=\"operator\" id=\"2\" parent=\"3\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></math>"
+    },
+    "Orphaned_Glyph_2": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"3\" children=\"0,1\" content=\"2\" owns=\"0 2 1\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 2 1\" structure=\"(3 0 2 1)\"><mi type=\"identifier\" id=\"0\" parent=\"3\" attributes=\"ext-speech:some glyph\" postfix=\"image\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\"><mglyph alt=\"some glyph\"/></mi><mo type=\"operator\" id=\"2\" parent=\"3\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></math>"
+    },
+    "Orphaned_Glyph_3": {
+      "expected": "<math type=\"infixop\" id=\"6\" children=\"5,3\" content=\"2\" owns=\"5 2 3\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"5 2 3\" structure=\"(6 (5 0 4 1) 2 3)\"><mrow added=\"true\" type=\"infixop\" annotation=\"clearspeak:unit\" id=\"5\" children=\"0,1\" content=\"4\" parent=\"6\" owns=\"0 4 1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0 4 1\"><mglyph alt=\"some glyph\" type=\"unknown\" id=\"0\" parent=\"5\" attributes=\"ext-speech:some glyph\" postfix=\"image\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\"/><mo type=\"operator\" id=\"4\" parent=\"5\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"2\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"5\" aria-level=\"2\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></mrow><mo type=\"operator\" id=\"2\" parent=\"6\" operator=\"infixop,+\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">+</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\" parent=\"6\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">b</mi></math>"
+    },
+    "Orphaned_Glyph_4": {
+      "expected": "<math type=\"infixop\" annotation=\"clearspeak:unit\" id=\"4\" children=\"1,2\" content=\"3\" owns=\"1 3 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"1 3 2\" structure=\"(4 (1 0) 3 2)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" parent=\"4\" owns=\"0\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\" aria-owns=\"0\"><mglyph alt=\"some glyph\" type=\"unknown\" id=\"0\" parent=\"1\" attributes=\"ext-speech:some glyph\" postfix=\"image\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt><mo type=\"operator\" id=\"3\" parent=\"4\" added=\"true\" operator=\"infixop,⁢\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">⁢</mo><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">a</mi></math>"
+    },
+    "Rubbish_0": {
+      "expected": "<math type=\"empty\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" structure=\"0\">a</math>"
+    },
+    "Rubbish_1": {
+      "expected": "<math structure=\"0\"><div type=\"unknown\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</div></math>"
+    },
+    "Rubbish_2": {
+      "test": false,
+      "expected": ""
+    },
+    "Rubbish_3": {
+      "expected": "<math structure=\"0\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi>b</math>"
+    },
+    "Rubbish_4": {
+      "expected": "<math structure=\"0\">b<mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></math>"
+    },
+    "Rubbish_5": {
+      "expected": "<math structure=\"0\">b<mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi>c</math>"
+    },
+    "Rubbish_6": {
+      "expected": "<math structure=\"(1 0)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\">a<mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt></math>"
+    },
+    "Rubbish_7": {
+      "expected": "<math structure=\"(1 0)\">a<msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt></math>"
+    },
+    "Rubbish_8": {
+      "expected": "<math structure=\"(1 0)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\"><mrow added=\"true\" type=\"empty\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\"/></msqrt>b</math>"
+    },
+    "Rubbish_9": {
+      "expected": "<math structure=\"(1 0)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\">b<mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi></msqrt></math>"
+    },
+    "Rubbish_10": {
+      "expected": "<math structure=\"(1 0)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\"><mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi>b</msqrt></math>"
+    },
+    "Rubbish_11": {
+      "expected": "<math structure=\"(1 0)\"><msqrt type=\"sqrt\" id=\"1\" children=\"0\" owns=\"0\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0\">b<mi type=\"identifier\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"1\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\">a</mi>c</msqrt></math>"
+    }
+  }
+}

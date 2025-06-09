@@ -1,0 +1,323 @@
+{
+  "name": "KoreanMathspeakUnits",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Korean Mathspeak Units tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakKorean",
+  "exclude": [
+    "CurrencySingular_0_Currency_Position",
+    "CurrencySingular_0_Currency_Prefix",
+    "CurrencySingular_1_Currency_Position",
+    "CurrencySingular_1_Currency_Prefix",
+    "CurrencySingle_0_Currency_Position",
+    "CurrencySingle_0_Currency_Prefix",
+    "CurrencySingle_1_Currency_Position",
+    "CurrencySingle_1_Currency_Prefix",
+    "CurrencyPlural_0_Currency_Position",
+    "CurrencyPlural_0_Currency_Prefix",
+    "CurrencyPlural_1_Currency_Position",
+    "CurrencyPlural_1_Currency_Prefix",
+    "CurrencyMultitude_0_Currency_Position",
+    "CurrencyMultitude_0_Currency_Prefix",
+    "CurrencyMultitude_1_Currency_Position",
+    "CurrencyMultitude_1_Currency_Prefix"
+  ],
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "인치 제곱"
+    },
+    "UnitSquare_0_brief": {
+      "expected": "인치 제곱"
+    },
+    "UnitSquare_0_sbrief": {
+      "expected": "인치 제곱"
+    },
+    "UnitSquare_1_default": {
+      "expected": "초 제곱"
+    },
+    "UnitSquare_1_brief": {
+      "expected": "초 제곱"
+    },
+    "UnitSquare_1_sbrief": {
+      "expected": "초 제곱"
+    },
+    "UnitSquare_2_default": {
+      "expected": "미터 제곱"
+    },
+    "UnitSquare_2_brief": {
+      "expected": "미터 제곱"
+    },
+    "UnitSquare_2_sbrief": {
+      "expected": "미터 제곱"
+    },
+    "UnitCube_0_default": {
+      "expected": "인치 세제곱"
+    },
+    "UnitCube_0_brief": {
+      "expected": "인치 세제곱"
+    },
+    "UnitCube_0_sbrief": {
+      "expected": "인치 세제곱"
+    },
+    "UnitCube_1_default": {
+      "expected": "초 세제곱"
+    },
+    "UnitCube_1_brief": {
+      "expected": "초 세제곱"
+    },
+    "UnitCube_1_sbrief": {
+      "expected": "초 세제곱"
+    },
+    "UnitCube_2_default": {
+      "expected": "미터 세제곱"
+    },
+    "UnitCube_2_brief": {
+      "expected": "미터 세제곱"
+    },
+    "UnitCube_2_sbrief": {
+      "expected": "미터 세제곱"
+    },
+    "UnitInverse_default": {
+      "expected": "인치 위첨자 마이너스 1"
+    },
+    "UnitInverse_brief": {
+      "expected": "인치 위 마이너스 1"
+    },
+    "UnitInverse_sbrief": {
+      "expected": "인치 위 마이너스 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "인치 위첨자 마이너스 1 기준 밀리미터 위첨자 마이너스 1"
+    },
+    "UnitDoubleInverse_brief": {
+      "expected": "인치 위 마이너스 1 기준 밀리미터 위 마이너스 1"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "expected": "인치 위 마이너스 1 기준 밀리미터 위 마이너스 1"
+    },
+    "UnitDivide_default": {
+      "expected": "분수시작 밀리미터 분의 인치 분수끝"
+    },
+    "UnitDivide_brief": {
+      "expected": "분수시작 밀리미터 분의 인치 분수끝"
+    },
+    "UnitDivide_sbrief": {
+      "expected": "분수 밀리미터 분의 인치 분수끝"
+    },
+    "UnitsSingle_0": {
+      "expected": "킬로미터"
+    },
+    "UnitsSingle_1": {
+      "expected": "암페어"
+    },
+    "UnitsSingle_2": {
+      "expected": "옴"
+    },
+    "UnitsSingle_3": {
+      "expected": "킬로옴"
+    },
+    "UnitsSingle_4": {
+      "expected": "섭씨"
+    },
+    "UnitsSimple_0": {
+      "expected": "최솟값 분"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 킬로미터"
+    },
+    "UnitsSimple_2": {
+      "expected": "킬로미터 더하기 초"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "킬로미터 제곱"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "미터 세제곱"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "킬로미터 네제곱"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "미터 위첨자 마이너스 1"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "초 미터 위첨자 마이너스 1"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "분수시작 미터 분의 초 분수끝 위첨자 마이너스 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "분수시작 미터 분의 초 분수끝 위첨자 마이너스 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 미터 위첨자 마이너스 1"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "분수시작 시간 분의 킬로미터 분수끝"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "뉴턴 분수시작 시간 분의 킬로미터 분수끝"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "분수시작 킬로미터 분의 m 분수끝"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 킬로미터 시간"
+    },
+    "UnitsExpressions_0": {
+      "expected": "초 3 m 킬로미터 시간"
+    },
+    "UnitsExpressions_1": {
+      "expected": "킬로미터 초 제곱 3 m 킬로미터 시간"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m 킬로미터 시간 분수시작 초 제곱 분의 대문자 N 분수끝"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m 킬로미터 시간 분수시작 초 제곱 분의 뉴턴 분수끝"
+    },
+    "UnitPlural_1": {
+      "expected": "4 밀리미터"
+    },
+    "UnitPlural_2": {
+      "expected": "1 밀리미터"
+    },
+    "UnitPlural_3": {
+      "expected": "4 밀리미터"
+    },
+    "UnitPlural_4": {
+      "expected": "1 밀리미터"
+    },
+    "UnitCombine_0": {
+      "expected": "미터 초"
+    },
+    "UnitCombine_1": {
+      "expected": "m 초"
+    },
+    "UnitCombine_2": {
+      "expected": "미터 s"
+    },
+    "UnitCombine_3": {
+      "expected": "미터 초"
+    },
+    "UnitCombine_4": {
+      "expected": "m 초"
+    },
+    "UnitCombine_5": {
+      "expected": "미터 s"
+    },
+    "UnitCombine_6": {
+      "expected": "미터 초 리터"
+    },
+    "issue_364_1": {
+      "expected": "63360 인치 같다 63360 인치 같다 63360 더블 프라임 같다 63360 인치 같다 5280 피트 같다 5280 피트 같다 5280 프라임 같다 5280 피트 같다 1760 야드 같다 1760 야드 같다 1760 야드 같다 1 마일 같다 1 마일 같다 1 마일"
+    },
+    "issue_364_2": {
+      "expected": "8000 링크 같다 8000 링크 같다 8000 링크 같다 320 로드 같다 320 로드 같다 320 로드 같다 80 체인 같다 80 체인 같다 80 체인 같다 8 펄롱 같다 8 펄롱 같다 8 펄롱 같다 1 마일 같다 1 마일 같다 1 마일"
+    },
+    "issue_364_3": {
+      "expected": "43560 제곱피트 같다 43560 제곱피트 같다 43560 피트 제곱 같다 43560 프라임 제곱 같다 43560 제곱피트 같다 4840 제곱야드 같다 4840 제곱야드 같다 4840 야드 제곱 같다 4840 제곱야드 같다 160 제곱로드 같다 160 제곱로드 같다 160 로드 제곱 같다 160 제곱로드 같다 1 에이커 같다 1 에이커 같다 1 에이커 같다 분수시작 640 분의 1 분수끝 제곱마일 같다 분수시작 640 분의 1 분수끝 제곱마일 같다 분수시작 640 분의 1 분수끝 마일 제곱 같다 분수시작 640 분의 1 분수끝 제곱마일"
+    },
+    "issue_364_4": {
+      "expected": "46656 세제곱인치 같다 46656 세제곱인치 같다 46656 인치 세제곱 같다 46656 더블 프라임 세제곱 같다 46656 세제곱인치 같다 27 세제곱피트 같다 27 세제곱피트 같다 27 피트 세제곱 같다 27 프라임 세제곱 같다 27 세제곱피트 같다 1 세제곱야드 같다 1 세제곱야드 같다 1 야드 세제곱 같다 1 세제곱야드"
+    },
+    "issue_364_5": {
+      "expected": "1024 액량 드램 같다 1024 액량 드램 같다 1024 액량 드램 같다 768 티스푼 같다 768 티스푼 같다 768 티스푼 같다 256 테이블스푼 같다 256 테이블스푼 같다 256 테이블스푼 같다 128 액량 온스 같다 128 액량 온스 같다 128 액량 온스 같다 16 컵 같다 16 컵 같다 16 컵 같다 8 파인트 같다 8 파인트 같다 8 파인트 같다 4 쿼트 같다 4 쿼트 같다 4 쿼트 같다 1 갤런 같다 1 갤런 같다 1 갤런"
+    },
+    "issue_364_6": {
+      "expected": "256 드램 같다 256 드램 같다 256 드램 같다 16 온스 같다 16 온스 같다 16 온스 같다 1 # 같다 1 파운드 같다 1 파운드 같다 1 파운드 같다 100 헌드레드웨이트 같다 100 헌드레드웨이트 같다 100 헌드레드웨이트 같다 2000 톤"
+    },
+    "issue_366": {
+      "expected": "63360 인치 같다 63360 인치 같다 63360 더블 프라임 같다 63360 인치 같다 5280 피트 같다 5280 피트 같다 5280 프라임 같다 5280 피트 같다 1760 야드 같다 1760 야드 같다 1760 야드 같다 1 마일 같다 1 마일 같다 1 마일"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 줄 은 1 킬로그램 닷 미터 제곱 닷 초 위첨자 마이너스 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 줄 은 1 킬로그램 미터 제곱 초 위첨자 마이너스 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 줄 은 1 킬로그램 미터 제곱 초 위첨자 마이너스 2"
+    },
+    "unit_cube": {
+      "expected": "인치 세제곱"
+    },
+    "UnitDiv_0": {
+      "expected": "분수시작 줄 분의 킬로미터 킬로그램 초 제곱 분수끝"
+    },
+    "UnitDiv_1": {
+      "expected": "분수시작 줄 분의 3 킬로미터 1 킬로그램 초 제곱 분수끝"
+    },
+    "UnitDiv_2": {
+      "expected": "분수시작 줄 분의 1 킬로미터 킬로그램 초 제곱 분수끝"
+    },
+    "UnitDiv_3": {
+      "expected": "분수시작 5 줄 분의 1 킬로미터 킬로그램 초 제곱 분수끝"
+    },
+    "UnitKm": {
+      "expected": "킬로미터"
+    },
+    "UnitLong_1": {
+      "expected": "3 킬로미터 킬로그램 초 제곱 줄"
+    },
+    "UnitLong_2": {
+      "expected": "3 킬로미터 킬로그램 초 제곱 줄"
+    },
+    "UnitLong_3": {
+      "expected": "3 킬로미터 4 킬로그램 초 제곱 줄"
+    },
+    "UnitLong_4": {
+      "expected": "3 킬로미터 1 킬로그램 초 제곱 줄"
+    },
+    "UnitMultiple": {
+      "expected": "1 킬로미터 초 더하기 2 킬로미터 초 더하기 0 킬로미터 초 더하기 a 킬로미터 초 더하기"
+    },
+    "UnitMultitude": {
+      "expected": "1 킬로미터 더하기 2 킬로미터 더하기 0 킬로미터 더하기 a 킬로미터"
+    },
+    "UnitNumb_0": {
+      "expected": "1 과 3 분의 2 킬로그램"
+    },
+    "UnitNumb_1": {
+      "expected": "1 과 3 분의 2 킬로그램 킬로미터"
+    },
+    "UnitNumb_2": {
+      "expected": "1 킬로미터 2 킬로그램 킬로미터"
+    },
+    "UnitTriple": {
+      "expected": "1 킬로미터 킬로그램 초 더하기 2 킬로미터 킬로그램 초 더하기 0 킬로미터 킬로그램 초 더하기 a 킬로미터 킬로그램 초 더하기"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 달러"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "1 달러"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "달러"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "달러"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 달러"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "2 달러"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 달러 더하기 2 달러 더하기 0 달러 더하기 a 달러"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 달러 더하기 2 달러 더하기 0 달러 더하기 a 달러"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 유로 더하기 2 유로 더하기 0 유로 더하기 a 유로"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 파운드 더하기 2 파운드 더하기 0 파운드 더하기 a 파운드"
+    }
+  }
+}

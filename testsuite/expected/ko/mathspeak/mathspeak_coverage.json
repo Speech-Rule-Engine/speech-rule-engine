@@ -1,0 +1,139 @@
+{
+  "name": "KoreanMathspeakCoverage",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Korean Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesKorean",
+  "exclude": [],
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "알파 기준 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "알파 기준 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "알파 기준 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "기본 알레프 기준 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "기본 알레프 기준 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "기본 알레프 기준 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "알파 기준 bold 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "알파 기준 bold 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "알파 기준 bold 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "기본 알레프 기준 bold 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "기본 알레프 기준 bold 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "기본 알레프 기준 bold 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "알파 윗줄"
+    },
+    "OverbarOther_default": {
+      "expected": "기본 알레프 윗줄"
+    },
+    "UnderbarGreek_default": {
+      "expected": "알파 밑줄"
+    },
+    "UnderbarOther_default": {
+      "expected": "기본 알레프 밑줄"
+    },
+    "OvertildeGreek_default": {
+      "expected": "알파 윗물결"
+    },
+    "OvertildeOther_default": {
+      "expected": "기본 알레프 윗물결"
+    },
+    "UndertildeGreek_default": {
+      "expected": "알파 밑물결"
+    },
+    "UndertildeOther_default": {
+      "expected": "기본 알레프 밑물결"
+    },
+    "SetEmpty_default": {
+      "expected": "공집합"
+    },
+    "SetEmpty_brief": {
+      "expected": "공집합"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "공집합"
+    },
+    "SetSingleton_default": {
+      "expected": "집합시작 a 집합끝"
+    },
+    "SetSingleton_brief": {
+      "expected": "집합시작 a 집합끝"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "집합 a 집합끝"
+    },
+    "SetCollection_default": {
+      "expected": "집합시작 a 콤마 b 집합끝"
+    },
+    "SetCollection_brief": {
+      "expected": "집합시작 a 콤마 b 집합끝"
+    },
+    "SetCollection_sbrief": {
+      "expected": "집합 a 콤마 b 집합끝"
+    },
+    "SetExtended_default": {
+      "expected": "집합시작 a 콤마 b 집합끝"
+    },
+    "SetExtended_brief": {
+      "expected": "집합시작 a 콤마 b 집합끝"
+    },
+    "SetExtended_sbrief": {
+      "expected": "집합 a 콤마 b 집합끝"
+    },
+    "NumberSet": {
+      "expected": "칠판볼드체 대문자 C"
+    },
+    "LimitLower0_default": {
+      "expected": "리미트 아래에 있는 바 하단첨자 a 는 5 첨자끝 하단첨자 b 는 3 첨자끝"
+    },
+    "LimitLower1_default": {
+      "expected": "리미트 하단첨자 n 상단첨자 2 첨자끝 상단첨자 x 첨자끝"
+    },
+    "_comment10_": "Coverage for under/over scripts",
+    "BlankLineEmpty0_default": {
+      "expected": "배열시작 첫번째 행  a 두번째 행  빈 칸 배열끝"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c 1 h 아래첨자 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 c 2 h 아래첨자 4 빼기 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h 아래 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 c 2 h 아래 4 빼기 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h 아래 4 빼기 2 s 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 작거나 같다 c 2 h 아래 4 빼기 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c 1 h 아래첨자 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 c 2 h 아래첨자 4 빼기 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h 아래 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 c 2 h 아래 4 빼기 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h 아래 4 빼기 2 s 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 같다 c 2 h 아래 4 빼기 2 s"
+    }
+  }
+}

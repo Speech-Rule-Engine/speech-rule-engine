@@ -1,0 +1,208 @@
+{
+  "name": "KoreanDefaultFunction",
+  "locale": "ko",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsKorean",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Korean Default Function tests.",
+  "tests": {
+    "deg": {
+      "expected": "도"
+    },
+    "det": {
+      "expected": "행렬식"
+    },
+    "dim": {
+      "expected": "차원"
+    },
+    "hom": {
+      "expected": "준동형"
+    },
+    "Hom": {
+      "expected": "준동형"
+    },
+    "ker": {
+      "expected": "커널"
+    },
+    "Tr": {
+      "expected": "트레이스"
+    },
+    "tr": {
+      "expected": "트레이스"
+    },
+    "log": {
+      "expected": "로그"
+    },
+    "ln": {
+      "expected": "자연로그"
+    },
+    "lg": {
+      "expected": "상용로그"
+    },
+    "exp": {
+      "expected": "자연지수함수"
+    },
+    "expt": {
+      "expected": "자연지수함수"
+    },
+    "gcd": {
+      "expected": "최대공약수"
+    },
+    "lcm": {
+      "expected": "최소공배수"
+    },
+    "arg": {
+      "expected": "편각"
+    },
+    "im": {
+      "expected": "허수 부분"
+    },
+    "re": {
+      "expected": "실수 부분"
+    },
+    "inf": {
+      "expected": "하한"
+    },
+    "lim": {
+      "expected": "리미트"
+    },
+    "lim inf": {
+      "expected": "하극한"
+    },
+    "liminf": {
+      "expected": "하극한"
+    },
+    "lim sup": {
+      "expected": "상극한"
+    },
+    "limsup": {
+      "expected": "상극한"
+    },
+    "max": {
+      "expected": "최댓값"
+    },
+    "min": {
+      "expected": "최솟값"
+    },
+    "sup": {
+      "expected": "상한"
+    },
+    "injlim": {
+      "expected": "쌍대극한"
+    },
+    "inj lim": {
+      "expected": "쌍대극한"
+    },
+    "projlim": {
+      "expected": "역 극한"
+    },
+    "proj lim": {
+      "expected": "역 극한"
+    },
+    "mod": {
+      "expected": "모듈로"
+    },
+    "Pr": {
+      "expected": "확률"
+    },
+    "cosh": {
+      "expected": "하이퍼볼릭 코싸인"
+    },
+    "coth": {
+      "expected": "하이퍼볼릭 코탄젠트"
+    },
+    "csch": {
+      "expected": "하이퍼볼릭 코시컨트"
+    },
+    "sech": {
+      "expected": "하이퍼볼릭 시컨트"
+    },
+    "sinh": {
+      "expected": "하이퍼볼릭 싸인"
+    },
+    "tanh": {
+      "expected": "하이퍼볼릭 탄젠트"
+    },
+    "arcosh": {
+      "expected": "하이퍼볼릭 아크코싸인"
+    },
+    "arccosh": {
+      "expected": "하이퍼볼릭 아크코싸인"
+    },
+    "arcoth": {
+      "expected": "하이퍼볼릭 아크코탄젠트"
+    },
+    "arccoth": {
+      "expected": "하이퍼볼릭 아크코탄젠트"
+    },
+    "arcsch": {
+      "expected": "하이퍼볼릭 아크코시컨트"
+    },
+    "arccsch": {
+      "expected": "하이퍼볼릭 아크코시컨트"
+    },
+    "arsech": {
+      "expected": "하이퍼볼릭 아크시컨트"
+    },
+    "arcsech": {
+      "expected": "하이퍼볼릭 아크시컨트"
+    },
+    "arsinh": {
+      "expected": "하이퍼볼릭 아크싸인"
+    },
+    "arcsinh": {
+      "expected": "하이퍼볼릭 아크싸인"
+    },
+    "artanh": {
+      "expected": "하이퍼볼릭 아크탄젠트"
+    },
+    "arctanh": {
+      "expected": "하이퍼볼릭 아크탄젠트"
+    },
+    "cos": {
+      "expected": "코싸인"
+    },
+    "코싸인": {
+      "expected": "코싸인"
+    },
+    "cot": {
+      "expected": "코탄젠트"
+    },
+    "csc": {
+      "expected": "코시컨트"
+    },
+    "sec": {
+      "expected": "시컨트"
+    },
+    "sin": {
+      "expected": "싸인"
+    },
+    "sine": {
+      "expected": "싸인"
+    },
+    "tan": {
+      "expected": "탄젠트"
+    },
+    "arccos": {
+      "expected": "아크 코싸인"
+    },
+    "arccot": {
+      "expected": "아크 코탄젠트"
+    },
+    "arccsc": {
+      "expected": "아크 코시컨트"
+    },
+    "arcsec": {
+      "expected": "아크 시컨트"
+    },
+    "arcsin": {
+      "expected": "아크 싸인"
+    },
+    "arctan": {
+      "expected": "아크 탄젠트"
+    }
+  }
+}

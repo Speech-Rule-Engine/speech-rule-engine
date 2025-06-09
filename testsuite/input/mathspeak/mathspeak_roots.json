@@ -1,0 +1,605 @@
+{
+  "domain": "mathspeak",
+  "tests": {
+    "sqrt_0_default": {
+      "preference": "default",
+      "tex": "\\sqrt{a}",
+      "input": "<msqrt><mi>a</mi></msqrt>"
+    },
+    "sqrt_0_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt{a}",
+      "input": "<msqrt><mi>a</mi></msqrt>"
+    },
+    "sqrt_0_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt{a}",
+      "input": "<msqrt><mi>a</mi></msqrt>"
+    },
+    "sqrt_1_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{a}",
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>"
+    },
+    "sqrt_1_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{a}",
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>"
+    },
+    "sqrt_1_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{a}",
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>"
+    },
+    "sqrt_2_default": {
+      "preference": "default",
+      "tex": "\\sqrt{\\sqrt{a}}",
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt></msqrt>"
+    },
+    "sqrt_2_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt{\\sqrt{a}}",
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt></msqrt>"
+    },
+    "sqrt_2_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt{\\sqrt{a}}",
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt></msqrt>"
+    },
+    "sqrt_3_default": {
+      "preference": "default",
+      "tex": "\\sqrt{\\sqrt{\\sqrt{\\sqrt{a}}}}",
+      "input": "<msqrt><msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt></msqrt>"
+    },
+    "sqrt_3_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt{\\sqrt{\\sqrt{\\sqrt{a}}}}",
+      "input": "<msqrt><msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt></msqrt>"
+    },
+    "sqrt_3_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt{\\sqrt{\\sqrt{\\sqrt{a}}}}",
+      "input": "<msqrt><msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt></msqrt>"
+    },
+    "roots_0_default": {
+      "preference": "default",
+      "tex": "\\sqrt[1]{a}",
+      "input": "<mroot><mi>a</mi><mn>1</mn></mroot>"
+    },
+    "roots_0_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[1]{a}",
+      "input": "<mroot><mi>a</mi><mn>1</mn></mroot>"
+    },
+    "roots_0_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[1]{a}",
+      "input": "<mroot><mi>a</mi><mn>1</mn></mroot>"
+    },
+    "roots_1_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{a}",
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>"
+    },
+    "roots_1_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{a}",
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>"
+    },
+    "roots_1_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{a}",
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>"
+    },
+    "roots_2_default": {
+      "preference": "default",
+      "tex": "\\sqrt[3]{a}",
+      "input": "<mroot><mi>a</mi><mn>3</mn></mroot>"
+    },
+    "roots_2_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[3]{a}",
+      "input": "<mroot><mi>a</mi><mn>3</mn></mroot>"
+    },
+    "roots_2_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[3]{a}",
+      "input": "<mroot><mi>a</mi><mn>3</mn></mroot>"
+    },
+    "roots_3_default": {
+      "preference": "default",
+      "tex": "\\sqrt[4]{a}",
+      "input": "<mroot><mi>a</mi><mn>4</mn></mroot>"
+    },
+    "roots_3_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[4]{a}",
+      "input": "<mroot><mi>a</mi><mn>4</mn></mroot>"
+    },
+    "roots_3_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[4]{a}",
+      "input": "<mroot><mi>a</mi><mn>4</mn></mroot>"
+    },
+    "roots_4_default": {
+      "preference": "default",
+      "tex": "\\sqrt[5]{a}",
+      "input": "<mroot><mi>a</mi><mn>5</mn></mroot>"
+    },
+    "roots_4_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[5]{a}",
+      "input": "<mroot><mi>a</mi><mn>5</mn></mroot>"
+    },
+    "roots_4_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[5]{a}",
+      "input": "<mroot><mi>a</mi><mn>5</mn></mroot>"
+    },
+    "roots_5_default": {
+      "preference": "default",
+      "tex": "\\sqrt[6]{a}",
+      "input": "<mroot><mi>a</mi><mn>6</mn></mroot>"
+    },
+    "roots_5_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[6]{a}",
+      "input": "<mroot><mi>a</mi><mn>6</mn></mroot>"
+    },
+    "roots_5_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[6]{a}",
+      "input": "<mroot><mi>a</mi><mn>6</mn></mroot>"
+    },
+    "roots_6_default": {
+      "preference": "default",
+      "tex": "\\sqrt[7]{a}",
+      "input": "<mroot><mi>a</mi><mn>7</mn></mroot>"
+    },
+    "roots_6_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[7]{a}",
+      "input": "<mroot><mi>a</mi><mn>7</mn></mroot>"
+    },
+    "roots_6_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[7]{a}",
+      "input": "<mroot><mi>a</mi><mn>7</mn></mroot>"
+    },
+    "roots_7_default": {
+      "preference": "default",
+      "tex": "\\sqrt[8]{a}",
+      "input": "<mroot><mi>a</mi><mn>8</mn></mroot>"
+    },
+    "roots_7_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[8]{a}",
+      "input": "<mroot><mi>a</mi><mn>8</mn></mroot>"
+    },
+    "roots_7_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[8]{a}",
+      "input": "<mroot><mi>a</mi><mn>8</mn></mroot>"
+    },
+    "roots_8_default": {
+      "preference": "default",
+      "tex": "\\sqrt[9]{a}",
+      "input": "<mroot><mi>a</mi><mn>9</mn></mroot>"
+    },
+    "roots_8_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[9]{a}",
+      "input": "<mroot><mi>a</mi><mn>9</mn></mroot>"
+    },
+    "roots_8_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[9]{a}",
+      "input": "<mroot><mi>a</mi><mn>9</mn></mroot>"
+    },
+    "roots_9_default": {
+      "preference": "default",
+      "tex": "\\sqrt[10]{a}",
+      "input": "<mroot><mi>a</mi><mn>10</mn></mroot>"
+    },
+    "roots_9_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[10]{a}",
+      "input": "<mroot><mi>a</mi><mn>10</mn></mroot>"
+    },
+    "roots_9_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[10]{a}",
+      "input": "<mroot><mi>a</mi><mn>10</mn></mroot>"
+    },
+    "roots_10_default": {
+      "preference": "default",
+      "tex": "\\sqrt[11]{a}",
+      "input": "<mroot><mi>a</mi><mn>11</mn></mroot>"
+    },
+    "roots_10_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[11]{a}",
+      "input": "<mroot><mi>a</mi><mn>11</mn></mroot>"
+    },
+    "roots_10_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[11]{a}",
+      "input": "<mroot><mi>a</mi><mn>11</mn></mroot>"
+    },
+    "nested-roots_0_default": {
+      "preference": "default",
+      "tex": "\\sqrt[1]{\\sqrt[1]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>1</mn></mroot><mn>1</mn></mroot>"
+    },
+    "nested-roots_0_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[1]{\\sqrt[1]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>1</mn></mroot><mn>1</mn></mroot>"
+    },
+    "nested-roots_0_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[1]{\\sqrt[1]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>1</mn></mroot><mn>1</mn></mroot>"
+    },
+    "nested-roots_1_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{\\sqrt[2]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>"
+    },
+    "nested-roots_1_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{\\sqrt[2]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>"
+    },
+    "nested-roots_1_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{\\sqrt[2]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>"
+    },
+    "nested-roots_2_default": {
+      "preference": "default",
+      "tex": "\\sqrt[3]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>"
+    },
+    "nested-roots_2_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[3]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>"
+    },
+    "nested-roots_2_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[3]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>"
+    },
+    "nested-roots_3_default": {
+      "preference": "default",
+      "tex": "\\sqrt[4]{\\sqrt[4]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>"
+    },
+    "nested-roots_3_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[4]{\\sqrt[4]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>"
+    },
+    "nested-roots_3_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[4]{\\sqrt[4]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>"
+    },
+    "nested-roots_4_default": {
+      "preference": "default",
+      "tex": "\\sqrt[5]{\\sqrt[5]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>5</mn></mroot><mn>5</mn></mroot>"
+    },
+    "nested-roots_4_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[5]{\\sqrt[5]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>5</mn></mroot><mn>5</mn></mroot>"
+    },
+    "nested-roots_4_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[5]{\\sqrt[5]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>5</mn></mroot><mn>5</mn></mroot>"
+    },
+    "nested-roots_5_default": {
+      "preference": "default",
+      "tex": "\\sqrt[6]{\\sqrt[6]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>6</mn></mroot><mn>6</mn></mroot>"
+    },
+    "nested-roots_5_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[6]{\\sqrt[6]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>6</mn></mroot><mn>6</mn></mroot>"
+    },
+    "nested-roots_5_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[6]{\\sqrt[6]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>6</mn></mroot><mn>6</mn></mroot>"
+    },
+    "nested-roots_6_default": {
+      "preference": "default",
+      "tex": "\\sqrt[7]{\\sqrt[7]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>7</mn></mroot><mn>7</mn></mroot>"
+    },
+    "nested-roots_6_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[7]{\\sqrt[7]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>7</mn></mroot><mn>7</mn></mroot>"
+    },
+    "nested-roots_6_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[7]{\\sqrt[7]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>7</mn></mroot><mn>7</mn></mroot>"
+    },
+    "nested-roots_7_default": {
+      "preference": "default",
+      "tex": "\\sqrt[8]{\\sqrt[8]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>8</mn></mroot><mn>8</mn></mroot>"
+    },
+    "nested-roots_7_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[8]{\\sqrt[8]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>8</mn></mroot><mn>8</mn></mroot>"
+    },
+    "nested-roots_7_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[8]{\\sqrt[8]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>8</mn></mroot><mn>8</mn></mroot>"
+    },
+    "nested-roots_8_default": {
+      "preference": "default",
+      "tex": "\\sqrt[9]{\\sqrt[9]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>9</mn></mroot><mn>9</mn></mroot>"
+    },
+    "nested-roots_8_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[9]{\\sqrt[9]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>9</mn></mroot><mn>9</mn></mroot>"
+    },
+    "nested-roots_8_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[9]{\\sqrt[9]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>9</mn></mroot><mn>9</mn></mroot>"
+    },
+    "nested-roots_9_default": {
+      "preference": "default",
+      "tex": "\\sqrt[10]{\\sqrt[10]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>10</mn></mroot><mn>10</mn></mroot>"
+    },
+    "nested-roots_9_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[10]{\\sqrt[10]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>10</mn></mroot><mn>10</mn></mroot>"
+    },
+    "nested-roots_9_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[10]{\\sqrt[10]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>10</mn></mroot><mn>10</mn></mroot>"
+    },
+    "nested-roots_10_default": {
+      "preference": "default",
+      "tex": "\\sqrt[11]{\\sqrt[11]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>11</mn></mroot><mn>11</mn></mroot>"
+    },
+    "nested-roots_10_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[11]{\\sqrt[11]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>11</mn></mroot><mn>11</mn></mroot>"
+    },
+    "nested-roots_10_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[11]{\\sqrt[11]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>11</mn></mroot><mn>11</mn></mroot>"
+    },
+    "hybrided-nested-roots_0_default": {
+      "preference": "default",
+      "tex": "\\sqrt[1]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>1</mn></mroot>"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[1]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>1</mn></mroot>"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[1]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>1</mn></mroot>"
+    },
+    "hybrided-nested-roots_1_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "hybrided-nested-roots_2_default": {
+      "preference": "default",
+      "tex": "\\sqrt[3]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[3]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[3]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>"
+    },
+    "hybrided-nested-roots_3_default": {
+      "preference": "default",
+      "tex": "\\sqrt[4]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>4</mn></mroot>"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[4]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>4</mn></mroot>"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[4]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>4</mn></mroot>"
+    },
+    "hybrided-nested-roots_4_default": {
+      "preference": "default",
+      "tex": "\\sqrt[5]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>5</mn></mroot>"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[5]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>5</mn></mroot>"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[5]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>5</mn></mroot>"
+    },
+    "hybrided-nested-roots_5_default": {
+      "preference": "default",
+      "tex": "\\sqrt[6]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>6</mn></mroot>"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[6]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>6</mn></mroot>"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[6]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>6</mn></mroot>"
+    },
+    "hybrided-nested-roots_6_default": {
+      "preference": "default",
+      "tex": "\\sqrt[7]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>7</mn></mroot>"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[7]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>7</mn></mroot>"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[7]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>7</mn></mroot>"
+    },
+    "hybrided-nested-roots_7_default": {
+      "preference": "default",
+      "tex": "\\sqrt[8]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>8</mn></mroot>"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[8]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>8</mn></mroot>"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[8]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>8</mn></mroot>"
+    },
+    "hybrided-nested-roots_8_default": {
+      "preference": "default",
+      "tex": "\\sqrt[9]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>9</mn></mroot>"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[9]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>9</mn></mroot>"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[9]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>9</mn></mroot>"
+    },
+    "hybrided-nested-roots_9_default": {
+      "preference": "default",
+      "tex": "\\sqrt[10]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>10</mn></mroot>"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[10]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>10</mn></mroot>"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[10]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>10</mn></mroot>"
+    },
+    "hybrided-nested-roots_10_default": {
+      "preference": "default",
+      "tex": "\\sqrt[11]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>11</mn></mroot>"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[11]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>11</mn></mroot>"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[11]{\\sqrt[3]{a}}",
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>11</mn></mroot>"
+    },
+    "deep-nested-roots_0_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt[4]{\\sqrt[5]{a}}}}",
+      "input": "<mroot><mroot><mroot><mroot><mi>a</mi><mn>5</mn></mroot><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_0_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt[4]{\\sqrt[5]{a}}}}",
+      "input": "<mroot><mroot><mroot><mroot><mi>a</mi><mn>5</mn></mroot><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt[4]{\\sqrt[5]{a}}}}",
+      "input": "<mroot><mroot><mroot><mroot><mi>a</mi><mn>5</mn></mroot><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_1_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt[2]{\\sqrt[3]{a}}}}",
+      "input": "<mroot><mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>2</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_1_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt[2]{\\sqrt[3]{a}}}}",
+      "input": "<mroot><mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>2</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt[2]{\\sqrt[3]{a}}}}",
+      "input": "<mroot><mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>2</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_2_default": {
+      "preference": "default",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt{\\sqrt[3]{\\sqrt{a}}}}}",
+      "input": "<mroot><mroot><msqrt><mroot><msqrt><mi>a</mi></msqrt><mn>3</mn></mroot></msqrt><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_2_brief": {
+      "preference": "brief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt{\\sqrt[3]{\\sqrt{a}}}}}",
+      "input": "<mroot><mroot><msqrt><mroot><msqrt><mi>a</mi></msqrt><mn>3</mn></mroot></msqrt><mn>3</mn></mroot><mn>2</mn></mroot>"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "preference": "sbrief",
+      "tex": "\\sqrt[2]{\\sqrt[3]{\\sqrt{\\sqrt[3]{\\sqrt{a}}}}}",
+      "input": "<mroot><mroot><msqrt><mroot><msqrt><mi>a</mi></msqrt><mn>3</mn></mroot></msqrt><mn>3</mn></mroot><mn>2</mn></mroot>"
+    }
+  }
+}

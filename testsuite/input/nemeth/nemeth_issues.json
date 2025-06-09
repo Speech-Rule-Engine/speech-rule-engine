@@ -1,0 +1,76 @@
+{
+  "domain": "default",
+  "modality": "braille",
+  "tests": {
+    "bar_0": {
+      "input": "<mover><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x2015;</mo></mover>"
+    },
+    "bar_1": {
+      "input": "<mover><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x00AF;</mo></mover>"
+    },
+    "bar_2": {
+      "input": "<mover><mover><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x00AF;</mo></mover><mo>&#x00AF;</mo></mover>"
+    },
+    "bar_3": {
+      "input": "<mover><mover><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x2015;</mo></mover><mo>&#x00AF;</mo></mover>"
+    },
+    "bar_4": {
+      "input": "<mover><mover><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x00AF;</mo></mover><mo>&#x2015;</mo></mover>"
+    },
+    "bar_5": {
+      "input": "<mover><mover><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x2015;</mo></mover><mo>&#x2015;</mo></mover>"
+    },
+    "bar_6": {
+      "input": "<mover><mi>z</mi><mo>&#x2015;</mo></mover>"
+    },
+    "bar_7": {
+      "input": "<mover><mi>z</mi><mo>&#x00AF;</mo></mover>"
+    },
+    "bar_8": {
+      "input": "<munder><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x2015;</mo></munder>"
+    },
+    "bar_9": {
+      "input": "<munder><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x00AF;</mo></munder>"
+    },
+    "bar_10": {
+      "input": "<munder><munder><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x00AF;</mo></munder><mo>&#x00AF;</mo></munder>"
+    },
+    "bar_11": {
+      "input": "<munder><munder><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x2015;</mo></munder><mo>&#x00AF;</mo></munder>"
+    },
+    "bar_12": {
+      "input": "<munder><munder><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x00AF;</mo></munder><mo>&#x2015;</mo></munder>"
+    },
+    "bar_13": {
+      "input": "<munder><munder><mrow><mi>z</mi><mo>+</mo><mi>r</mi></mrow><mo>&#x2015;</mo></munder><mo>&#x2015;</mo></munder>"
+    },
+    "bar_14": {
+      "input": "<munder><mi>z</mi><mo>&#x2015;</mo></munder>"
+    },
+    "bar_15": {
+      "input": "<munder><mi>z</mi><mo>&#x00AF;</mo></munder>"
+    },
+    "issue_552_0": {
+      "input": "<math><mo>&#x22C5;</mo><msub><mrow><mi mathvariant=\"script\">O</mi></mrow><mrow><mrow><mover><mi>X</mi><mo>~</mo></mover></mrow></mrow></msub><mo>=</mo><mrow><mi mathvariant=\"script\">L</mi></mrow><mo>&#x22C5;</mo><mi mathvariant=\"normal\">_</mi><mrow><mrow><mover><mi>Z</mi><mo>~</mo></mover></mrow></mrow></math>"
+    },
+    "issue_552_1": {
+      "input": "<math><mi mathvariant=\"normal\">_</mi><mi>A</mi></math>"
+    },
+    "issue_552_2": {
+      "input": "<math><mi>B</mi><mi mathvariant=\"normal\">_</mi><mi>A</mi></math>"
+    },
+    "_comment0_": "These are just for testing the same with tilde. A different rules.",
+    "nueb_12.6.3_0": {
+      "input": "<math><mrow><mover><mi>u</mi><mo>~</mo></mover></mrow><mo>=</mo><mn>0.8</mn></math>"
+    },
+    "nueb_12.6.3_1": {
+      "input": "<math><mrow><mover><mi>A</mi><mo>~</mo></mover></mrow><mo>&#x222A;</mo><mrow><mover><mi>B</mi><mo>~</mo></mover></mrow></math>"
+    },
+    "nueb_12.6.3_2": {
+      "input": "<mover><mrow><mi>r</mi><mo>+</mo><mi>s</mi><mo>+</mo><mi>t</mi></mrow><mo>&#x007e;</mo></mover>"
+    },
+    "nueb_12.6.3_3": {
+      "input": "<mover><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mo>&#x007e;</mo></mover>"
+    }
+  }
+}

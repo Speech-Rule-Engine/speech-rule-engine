@@ -1,0 +1,320 @@
+{
+  "name": "HindiClearspeakUnits",
+  "locale": "hi",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Hindi Clearspeak Units tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakHindi",
+  "exclude": [
+    "UnitSquare_0_brief",
+    "UnitSquare_0_sbrief",
+    "UnitSquare_1_brief",
+    "UnitSquare_1_sbrief",
+    "UnitSquare_2_brief",
+    "UnitSquare_2_sbrief",
+    "UnitCube_0_brief",
+    "UnitCube_0_sbrief",
+    "UnitCube_1_brief",
+    "UnitCube_1_sbrief",
+    "UnitCube_2_brief",
+    "UnitCube_2_sbrief",
+    "UnitInverse_brief",
+    "UnitInverse_sbrief",
+    "UnitDoubleInverse_brief",
+    "UnitDoubleInverse_sbrief",
+    "UnitDivide_brief",
+    "UnitDivide_sbrief"
+  ],
+  "compare": true,
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "वर्ग इंच"
+    },
+    "UnitSquare_1_default": {
+      "expected": "सेकंड का घात दूसरा घातांक"
+    },
+    "UnitSquare_2_default": {
+      "expected": "वर्ग मीटर"
+    },
+    "UnitCube_0_default": {
+      "expected": "घन इंच"
+    },
+    "UnitCube_1_default": {
+      "expected": "सेकंड का घात तीसरा घातांक"
+    },
+    "UnitCube_2_default": {
+      "expected": "घन मीटर"
+    },
+    "UnitInverse_default": {
+      "expected": "व्युत्क्रम इंच"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "व्युत्क्रम इंच प्रति मिलीमीटर"
+    },
+    "UnitDivide_default": {
+      "expected": "इंच प्रति मिलीमीटर"
+    },
+    "UnitsSingle_0": {
+      "expected": "किलोमीटर"
+    },
+    "UnitsSingle_1": {
+      "expected": "एम्पियर"
+    },
+    "UnitsSingle_2": {
+      "expected": "ओह्म"
+    },
+    "UnitsSingle_3": {
+      "expected": "किलोओह्म"
+    },
+    "UnitsSingle_4": {
+      "expected": "सेल्शियस"
+    },
+    "UnitsSimple_0": {
+      "expected": "मिनट का फलन न्यूनतम"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 किलोमीटर"
+    },
+    "UnitsSimple_2": {
+      "expected": "किलोमीटर धन चिह्न सेकंड"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "वर्ग किलोमीटर"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "घन मीटर"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "किलोमीटर का घात चौथा घातांक"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "व्युत्क्रम मीटर"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "सेकंड प्रति मीटर"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "सेकंड प्रति मीटर का घात ऋण 1 घातांक"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "सेकंड प्रति मीटर का घात ऋण 1 घातांक"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 व्युत्क्रम मीटर"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "किलोमीटर प्रति घंटे"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "न्यूटन किलोमीटर प्रति घंटे"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "एम के हर में किलोमीटर"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 किलोमीटर घंटा"
+    },
+    "UnitsExpressions_0": {
+      "expected": "सेकंड 3 एम किलोमीटर घंटा"
+    },
+    "UnitsExpressions_1": {
+      "expected": "किलोमीटर सेकंड का घात दूसरा घातांक 3 एम किलोमीटर घंटा"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 एम किलोमीटर घंटा भिन्न जिसका अंश एन और हर सेकंड का घात दूसरा घातांक"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 एम किलोमीटर घंटा न्यूटन प्रति सेकंड का घात दूसरा घातांक"
+    },
+    "UnitPlural_1": {
+      "expected": "4 मिलीमीटर"
+    },
+    "UnitPlural_2": {
+      "expected": "1 मिलीमीटर"
+    },
+    "UnitPlural_3": {
+      "expected": "4 मिलीमीटर"
+    },
+    "UnitPlural_4": {
+      "expected": "1 मिलीमीटर"
+    },
+    "UnitCombine_0": {
+      "expected": "मीटर सेकंड"
+    },
+    "UnitCombine_1": {
+      "expected": "एम सेकंड"
+    },
+    "UnitCombine_2": {
+      "expected": "मीटर एस"
+    },
+    "UnitCombine_3": {
+      "expected": "मीटर सेकंड"
+    },
+    "UnitCombine_4": {
+      "expected": "एम सेकंड"
+    },
+    "UnitCombine_5": {
+      "expected": "मीटर एस"
+    },
+    "UnitCombine_6": {
+      "expected": "मीटर सेकंड लीटर"
+    },
+    "issue_364_1": {
+      "expected": "63360 इंच बराबर का चिह्न 63360 इंच बराबर का चिह्न 63360 इंच बराबर का चिह्न 63360 inches बराबर का चिह्न 5280 फिट बराबर का चिह्न 5280 फिट बराबर का चिह्न 5280 फिट बराबर का चिह्न 5280 feet बराबर का चिह्न 1760 गज बराबर का चिह्न 1760 गज बराबर का चिह्न 1760 yards बराबर का चिह्न 1 मील बराबर का चिह्न 1 मील बराबर का चिह्न 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 लिंक बराबर का चिह्न 8000 लिंक बराबर का चिह्न 8000 links बराबर का चिह्न 320 रॉड बराबर का चिह्न 320 रॉड बराबर का चिह्न 320 rods बराबर का चिह्न 80 चेन बराबर का चिह्न 80 चेन बराबर का चिह्न 80 chains बराबर का चिह्न 8 फ़र्लांग बराबर का चिह्न 8 फ़र्लांग बराबर का चिह्न 8 furlongs बराबर का चिह्न 1 मील बराबर का चिह्न 1 मील बराबर का चिह्न 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 वर्ग फिट बराबर का चिह्न 43560 वर्ग फिट बराबर का चिह्न 43560 वर्ग फिट बराबर का चिह्न 43560 फिट वर्गित बराबर का चिह्न 43560 square feet बराबर का चिह्न 4840 वर्ग गज बराबर का चिह्न 4840 वर्ग गज बराबर का चिह्न 4840 वर्ग गज बराबर का चिह्न 4840 square yards बराबर का चिह्न 160 वर्ग रॉड बराबर का चिह्न 160 वर्ग रॉड बराबर का चिह्न 160 वर्ग रॉड बराबर का चिह्न 160 square rods बराबर का चिह्न 1 एकर बराबर का चिह्न 1 एकर बराबर का चिह्न 1 acre बराबर का चिह्न 1 के हर में 640 वर्ग मील बराबर का चिह्न 1 के हर में 640 वर्ग मील बराबर का चिह्न 1 के हर में 640 वर्ग मील बराबर का चिह्न 1 के हर में 640 square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 घन इंच बराबर का चिह्न 46656 घन इंच बराबर का चिह्न 46656 घन इंच बराबर का चिह्न 46656 इंच घनित बराबर का चिह्न 46656 cubic inches बराबर का चिह्न 27 घन फीट बराबर का चिह्न 27 घन फीट बराबर का चिह्न 27 घन फिट बराबर का चिह्न 27 फिट घनित बराबर का चिह्न 27 cubic feet बराबर का चिह्न 1 घन गज बराबर का चिह्न 1 घन गज बराबर का चिह्न 1 घन गज बराबर का चिह्न 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 तरल ड्राम बराबर का चिह्न 1024 तरल ड्राम बराबर का चिह्न 1024 fluid drams बराबर का चिह्न 768 छोटी चम्मच बराबर का चिह्न 768 छोटी चम्मच बराबर का चिह्न 768 teaspoons बराबर का चिह्न 256 बड़ी चम्मच बराबर का चिह्न 256 बड़ी चम्मच बराबर का चिह्न 256 tablespoons बराबर का चिह्न 128 तरल औंस बराबर का चिह्न 128 तरल औंस बराबर का चिह्न 128 fluid ounces बराबर का चिह्न 16 कप बराबर का चिह्न 16 कप बराबर का चिह्न 16 cups बराबर का चिह्न 8 पाइंट बराबर का चिह्न 8 पाइंट बराबर का चिह्न 8 pints बराबर का चिह्न 4 क़्वार्ट बराबर का चिह्न 4 क़्वार्ट बराबर का चिह्न 4 quarts बराबर का चिह्न 1 गेलन बराबर का चिह्न 1 गेलन बराबर का चिह्न 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 ड्राम बराबर का चिह्न 256 ड्राम बराबर का चिह्न 256 drams बराबर का चिह्न 16 औंस बराबर का चिह्न 16 औंस बराबर का चिह्न 16 ounces बराबर का चिह्न 1 # बराबर का चिह्न 1 रतल बराबर का चिह्न 1 रतल बराबर का चिह्न 1 pounds बराबर का चिह्न 100 हन्ड्रेड्वेट बराबर का चिह्न 100 हन्ड्रेड्वेट बराबर का चिह्न 100 hundredweights बराबर का चिह्न 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 इंच बराबर का चिह्न 63360 इंच बराबर का चिह्न 63360 इंच बराबर का चिह्न 63360 inches बराबर का चिह्न 5280 फिट बराबर का चिह्न 5280 फिट बराबर का चिह्न 5280 फिट बराबर का चिह्न 5280 feet बराबर का चिह्न 1760 गज बराबर का चिह्न 1760 गज बराबर का चिह्न 1760 yards बराबर का चिह्न 1 मील बराबर का चिह्न 1 मील बराबर का चिह्न 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 जूल बराबर का चिह्न 1 किलोग्राम गुणन चिह्न वर्ग मीटर गुणन चिह्न सेकंड का घात ऋण 2 घातांक"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 जूल बराबर का चिह्न 1 किलोग्राम वर्ग मीटर सेकंड का घात ऋण 2 घातांक"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 जूल बराबर का चिह्न 1 किलोग्राम वर्ग मीटर सेकंड का घात ऋण 2 घातांक"
+    },
+    "unit_cube": {
+      "expected": "घन इंच"
+    },
+    "UnitDiv_0": {
+      "expected": "किलोमीटर किलोग्राम सेकंड का घात दूसरा घातांक प्रति जूल"
+    },
+    "UnitDiv_1": {
+      "expected": "3 किलोमीटर 1 किलोग्राम सेकंड का घात दूसरा घातांक के हर में जूल"
+    },
+    "UnitDiv_2": {
+      "expected": "1 किलोमीटर किलोग्राम सेकंड का घात दूसरा घातांक के हर में जूल"
+    },
+    "UnitDiv_3": {
+      "expected": "1 किलोमीटर किलोग्राम सेकंड का घात दूसरा घातांक के हर में 5 जूल"
+    },
+    "UnitKm": {
+      "expected": "किलोमीटर"
+    },
+    "UnitLong_1": {
+      "expected": "3 किलोमीटर किलोग्राम सेकंड का घात दूसरा घातांक जूल"
+    },
+    "UnitLong_2": {
+      "expected": "3 किलोमीटर किलोग्राम सेकंड का घात दूसरा घातांक जूल"
+    },
+    "UnitLong_3": {
+      "expected": "3 किलोमीटर 4 किलोग्राम सेकंड का घात दूसरा घातांक जूल"
+    },
+    "UnitLong_4": {
+      "expected": "3 किलोमीटर 1 किलोग्राम सेकंड का घात दूसरा घातांक जूल"
+    },
+    "UnitMultiple": {
+      "expected": "1 किलोमीटर सेकंड धन चिह्न 2 किलोमीटर सेकंड धन चिह्न 0 किलोमीटर सेकंड धन चिह्न ए किलोमीटर सेकंड धन चिह्न"
+    },
+    "UnitMultitude": {
+      "expected": "1 किलोमीटर धन चिह्न 2 किलोमीटर धन चिह्न 0 किलोमीटर धन चिह्न ए किलोमीटर"
+    },
+    "UnitNumb_0": {
+      "expected": "1 पूर्णांक दो तृतीयांश किलोग्राम"
+    },
+    "UnitNumb_1": {
+      "expected": "1 पूर्णांक दो तृतीयांश किलोग्राम किलोमीटर"
+    },
+    "UnitNumb_2": {
+      "expected": "1 किलोमीटर 2 किलोग्राम किलोमीटर"
+    },
+    "UnitTriple": {
+      "expected": "1 किलोमीटर किलोग्राम सेकंड धन चिह्न 2 किलोमीटर किलोग्राम सेकंड धन चिह्न 0 किलोमीटर किलोग्राम सेकंड धन चिह्न ए किलोमीटर किलोग्राम सेकंड धन चिह्न"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 डॉलर"
+    },
+    "CurrencySingular_0_Currency_Position": {
+      "expected": "1 डॉलर"
+    },
+    "CurrencySingular_0_Currency_Prefix": {
+      "expected": "डॉलर 1"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "1 डॉलर"
+    },
+    "CurrencySingular_1_Currency_Position": {
+      "expected": "डॉलर 1"
+    },
+    "CurrencySingular_1_Currency_Prefix": {
+      "expected": "डॉलर 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "डॉलर"
+    },
+    "CurrencySingle_0_Currency_Position": {
+      "expected": "डॉलर"
+    },
+    "CurrencySingle_0_Currency_Prefix": {
+      "expected": "डॉलर"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "डॉलर"
+    },
+    "CurrencySingle_1_Currency_Position": {
+      "expected": "डॉलर"
+    },
+    "CurrencySingle_1_Currency_Prefix": {
+      "expected": "डॉलर"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 डॉलर"
+    },
+    "CurrencyPlural_0_Currency_Position": {
+      "expected": "2 डॉलर"
+    },
+    "CurrencyPlural_0_Currency_Prefix": {
+      "expected": "डॉलर 2"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "2 डॉलर"
+    },
+    "CurrencyPlural_1_Currency_Position": {
+      "expected": "डॉलर 2"
+    },
+    "CurrencyPlural_1_Currency_Prefix": {
+      "expected": "डॉलर 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 डॉलर धन चिह्न 2 डॉलर धन चिह्न 0 डॉलर धन चिह्न ए डॉलर"
+    },
+    "CurrencyMultitude_0_Currency_Position": {
+      "expected": "1 डॉलर धन चिह्न 2 डॉलर धन चिह्न 0 डॉलर धन चिह्न ए डॉलर"
+    },
+    "CurrencyMultitude_0_Currency_Prefix": {
+      "expected": "डॉलर 1 धन चिह्न डॉलर 2 धन चिह्न डॉलर 0 धन चिह्न डॉलर ए"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 डॉलर धन चिह्न 2 डॉलर धन चिह्न 0 डॉलर धन चिह्न ए डॉलर"
+    },
+    "CurrencyMultitude_1_Currency_Position": {
+      "expected": "1 डॉलर धन चिह्न डॉलर 2 धन चिह्न 0 डॉलर धन चिह्न डॉलर ए"
+    },
+    "CurrencyMultitude_1_Currency_Prefix": {
+      "expected": "डॉलर 1 धन चिह्न डॉलर 2 धन चिह्न डॉलर 0 धन चिह्न डॉलर ए"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 यूरो धन चिह्न 2 यूरो धन चिह्न 0 यूरो धन चिह्न ए यूरो"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 पाउंड धन चिह्न 2 पाउंड धन चिह्न 0 पाउंड धन चिह्न ए पाउंड"
+    }
+  }
+}

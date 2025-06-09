@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "base": "input/semantic/bad_input.json",
+  "information": "Semantic API consistency tests for badly formatted input.",
+  "tests": "ALL"
+}

@@ -1,0 +1,265 @@
+{
+  "name": "AfrikaansClearspeakFencesNeutral",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/common/fences_neutral.json",
+  "information": "Afrikaans Clearspeak Neutral Fences rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [
+    "BarFenced_0_sbrief",
+    "BarFenced_1_sbrief",
+    "BarFenced_2_sbrief",
+    "BarFenced_3_sbrief",
+    "BarFenced_4_sbrief",
+    "BarFenced_5_sbrief",
+    "BarFenced_6_sbrief",
+    "BarFencedMixed_0_sbrief",
+    "BarFencedMixed_1_sbrief",
+    "BarFencedMixed_2_sbrief",
+    "BarFencedMixed_3_sbrief",
+    "CenterBar_0_sbrief",
+    "CenterBar_1_sbrief",
+    "CenterBar_2_sbrief",
+    "CenterBar_3_sbrief",
+    "CenterBar_4_sbrief",
+    "CenterBar_5_sbrief",
+    "Function_0_sbrief",
+    "Function_1_sbrief",
+    "Function_2_sbrief",
+    "Function_3_sbrief",
+    "Function_4_sbrief",
+    "Function_5_sbrief",
+    "FunctionMetric0_sbrief",
+    "FunctionMetric1_sbrief",
+    "FunctionMetric2_sbrief",
+    "FunctionMetric3_sbrief",
+    "FunctionMetric4_sbrief",
+    "FunctionMetric5_sbrief",
+    "CenterBarFunc_0_sbrief",
+    "CenterBarFunc_1_sbrief",
+    "CenterBarFunc_2_sbrief",
+    "CenterBarFunc_3_sbrief",
+    "CenterBarFunc_4_sbrief",
+    "CenterBarFunc_5_sbrief",
+    "CenterBarFunc_6_sbrief"
+  ],
+  "compare": true,
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "die absolute waarde van a"
+    },
+    "BarFenced_1_default": {
+      "expected": "die absolute waarde van a"
+    },
+    "BarFenced_2_default": {
+      "expected": "die absolute waarde van a"
+    },
+    "BarFenced_3_default": {
+      "expected": "die norm van a"
+    },
+    "BarFenced_4_default": {
+      "expected": "die norm van a"
+    },
+    "BarFenced_5_default": {
+      "expected": "die norm van a"
+    },
+    "BarFenced_6_default": {
+      "expected": "die norm van a"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "gedeel deur a dubbel vertikale streep"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "paralel aan a dubbel vertikale streep"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "gedeel deur a gedeel deur"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "trippel afstreep a dubbel vertikale streep"
+    },
+    "CenterBar_0_default": {
+      "expected": "a gedeel deur b"
+    },
+    "CenterBar_1_default": {
+      "expected": "a gedeel deur b"
+    },
+    "CenterBar_2_default": {
+      "expected": "a gedeel deur b"
+    },
+    "CenterBar_3_default": {
+      "expected": "a dubbel vertikale streep b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a paralel aan b"
+    },
+    "CenterBar_5_default": {
+      "expected": "a trippel afstreep b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f gedeel deur g"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f gedeel deur g"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f gedeel deur g"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f dubbel vertikale streep g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f paralel aan g"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f trippel afstreep g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "sinus trippel afstreep g"
+    },
+    "Function_0_default": {
+      "expected": "f van, die absolute waarde van a"
+    },
+    "Function_1_default": {
+      "expected": "g van, die absolute waarde van a"
+    },
+    "Function_2_default": {
+      "expected": "h van, die absolute waarde van a"
+    },
+    "Function_3_default": {
+      "expected": "r maal, die absolute waarde van a"
+    },
+    "Function_4_default": {
+      "expected": "sinus, die absolute waarde van a"
+    },
+    "Function_5_default": {
+      "expected": "die som van, die absolute waarde van a"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f van, die norm van a"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g van, die norm van a"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h van, die norm van a"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r maal, die norm van a"
+    },
+    "FunctionMetric4_default": {
+      "expected": "sinus, die norm van a"
+    },
+    "FunctionMetric5_default": {
+      "expected": "die som van, die norm van a"
+    },
+    "BarFenced_0_AbsoluteValue_AbsEnd": {
+      "expected": "die absolute waarde van a, end absolute waarde van"
+    },
+    "BarFenced_1_AbsoluteValue_AbsEnd": {
+      "expected": "die absolute waarde van a, end absolute waarde van"
+    },
+    "BarFenced_2_AbsoluteValue_AbsEnd": {
+      "expected": "die absolute waarde van a, end absolute waarde van"
+    },
+    "BarFenced_3_AbsoluteValue_AbsEnd": {
+      "expected": "die norm van a, end metric"
+    },
+    "BarFenced_4_AbsoluteValue_AbsEnd": {
+      "expected": "die norm van a, end metric"
+    },
+    "BarFenced_5_AbsoluteValue_AbsEnd": {
+      "expected": "die norm van a, end metric"
+    },
+    "BarFenced_6_AbsoluteValue_AbsEnd": {
+      "expected": "die norm van a, end metric"
+    },
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd": {
+      "expected": "gedeel deur a dubbel vertikale streep"
+    },
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd": {
+      "expected": "paralel aan a dubbel vertikale streep"
+    },
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd": {
+      "expected": "gedeel deur a gedeel deur"
+    },
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd": {
+      "expected": "trippel afstreep a dubbel vertikale streep"
+    },
+    "CenterBar_0_AbsoluteValue_AbsEnd": {
+      "expected": "a gedeel deur b"
+    },
+    "CenterBar_1_AbsoluteValue_AbsEnd": {
+      "expected": "a gedeel deur b"
+    },
+    "CenterBar_2_AbsoluteValue_AbsEnd": {
+      "expected": "a gedeel deur b"
+    },
+    "CenterBar_3_AbsoluteValue_AbsEnd": {
+      "expected": "a dubbel vertikale streep b"
+    },
+    "CenterBar_4_AbsoluteValue_AbsEnd": {
+      "expected": "a paralel aan b"
+    },
+    "CenterBar_5_AbsoluteValue_AbsEnd": {
+      "expected": "a trippel afstreep b"
+    },
+    "Function_0_AbsoluteValue_AbsEnd": {
+      "expected": "f van, die absolute waarde van a, end absolute waarde van"
+    },
+    "Function_1_AbsoluteValue_AbsEnd": {
+      "expected": "g van, die absolute waarde van a, end absolute waarde van"
+    },
+    "Function_2_AbsoluteValue_AbsEnd": {
+      "expected": "h van, die absolute waarde van a, end absolute waarde van"
+    },
+    "Function_3_AbsoluteValue_AbsEnd": {
+      "expected": "r maal, die absolute waarde van a, end absolute waarde van"
+    },
+    "Function_4_AbsoluteValue_AbsEnd": {
+      "expected": "sinus, die absolute waarde van a, end absolute waarde van"
+    },
+    "Function_5_AbsoluteValue_AbsEnd": {
+      "expected": "die som van, die absolute waarde van a, end absolute waarde van"
+    },
+    "FunctionMetric0_AbsoluteValue_AbsEnd": {
+      "expected": "f van, die norm van a, end metric"
+    },
+    "FunctionMetric1_AbsoluteValue_AbsEnd": {
+      "expected": "g van, die norm van a, end metric"
+    },
+    "FunctionMetric2_AbsoluteValue_AbsEnd": {
+      "expected": "h van, die norm van a, end metric"
+    },
+    "FunctionMetric3_AbsoluteValue_AbsEnd": {
+      "expected": "r maal, die norm van a, end metric"
+    },
+    "FunctionMetric4_AbsoluteValue_AbsEnd": {
+      "expected": "sinus, die norm van a, end metric"
+    },
+    "FunctionMetric5_AbsoluteValue_AbsEnd": {
+      "expected": "die som van, die norm van a, end metric"
+    },
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd": {
+      "expected": "f gedeel deur g"
+    },
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd": {
+      "expected": "f gedeel deur g"
+    },
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd": {
+      "expected": "f gedeel deur g"
+    },
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd": {
+      "expected": "f dubbel vertikale streep g"
+    },
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd": {
+      "expected": "f paralel aan g"
+    },
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd": {
+      "expected": "f trippel afstreep g"
+    },
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd": {
+      "expected": "sinus trippel afstreep g"
+    }
+  }
+}

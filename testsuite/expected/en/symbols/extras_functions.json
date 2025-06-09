@@ -1,0 +1,52 @@
+{
+  "locale": "en",
+  "name": "EnglishExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsEnglish",
+  "information": "English Extra Function tests.",
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "natural log"
+    },
+    "arccos-clearspeak-Trig_TrigInverse": {
+      "key": "arccos",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "cosine inverse"
+    },
+    "arccot-clearspeak-Trig_TrigInverse": {
+      "key": "arccot",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "cotangent inverse"
+    },
+    "arccsc-clearspeak-Trig_TrigInverse": {
+      "key": "arccsc",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "cosecant inverse"
+    },
+    "arcsec-clearspeak-Trig_TrigInverse": {
+      "key": "arcsec",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "secant inverse"
+    },
+    "arcsin-clearspeak-Trig_TrigInverse": {
+      "key": "arcsin",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "sine inverse"
+    },
+    "arctan-clearspeak-Trig_TrigInverse": {
+      "key": "arctan",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "tangent inverse"
+    }
+  }
+}

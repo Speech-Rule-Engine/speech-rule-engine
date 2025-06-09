@@ -1,0 +1,562 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakExponents",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_exponents.json",
+  "information": "Italian Clearspeak Exponents rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Exp001": {
+      "expected": "3 quadrato"
+    },
+    "Exp002a": {
+      "expected": "3 cubo"
+    },
+    "Exp003": {
+      "expected": "3 alla quinta potenza"
+    },
+    "Exp004": {
+      "expected": "3 alla prima potenza"
+    },
+    "Exp005": {
+      "expected": "b alla prima potenza"
+    },
+    "Exp006": {
+      "expected": "3 elevato alla 5,0"
+    },
+    "Exp007": {
+      "expected": "3 alla 0 potenza"
+    },
+    "Exp008": {
+      "expected": "4 alla 11a potenza"
+    },
+    "Exp009": {
+      "expected": "3 alla meno 2"
+    },
+    "Exp010a": {
+      "expected": "3 elevato alla meno 2,0"
+    },
+    "Exp011": {
+      "expected": "4 alla x-esima potenza"
+    },
+    "Exp012": {
+      "expected": "3 elevato alla y più 2"
+    },
+    "Exp013": {
+      "expected": "parentesi tonda aperta, 2 y, meno 3, parentesi tonda chiusa, elevato alla 3 z, più 8"
+    },
+    "Exp014": {
+      "expected": "p pedice 1, quadrato"
+    },
+    "Exp015": {
+      "expected": "p pedice 1, cubo"
+    },
+    "Exp016": {
+      "expected": "p pedice 1, alla quarta potenza"
+    },
+    "Exp017": {
+      "expected": "p pedice 1, alla decima potenza"
+    },
+    "Exp018": {
+      "expected": "p pedice 1, elevato alla x più 1"
+    },
+    "Exp019": {
+      "expected": "p pedice, x pedice 1, quadrato"
+    },
+    "Exp010b": {
+      "expected": "p pedice, x pedice 1, cubo"
+    },
+    "Exp011b": {
+      "expected": "p pedice, x pedice 1, alla quarta potenza"
+    },
+    "Exp012b": {
+      "expected": "p pedice, x pedice 1, alla decima potenza"
+    },
+    "Exp013b": {
+      "expected": "p pedice, x pedice 1, elevato alla y più 1"
+    },
+    "Exp014b": {
+      "expected": "3 elevato alla 2 quadrato"
+    },
+    "Exp015b": {
+      "expected": "3 elevato alla 2 x quadrato"
+    },
+    "Exp016b": {
+      "expected": "5 elevato alla 2 cubo"
+    },
+    "Exp017b": {
+      "expected": "5 elevato alla 2 x cubo"
+    },
+    "Exp018b": {
+      "expected": "3 elevato all'esponente, 2 quadrato più 1, fine esponente"
+    },
+    "Exp019b": {
+      "expected": "3 elevato alla 2 quadrato; più 1"
+    },
+    "Exp020": {
+      "expected": "2 elevato all'esponente, x quadrato più 3 x cubo, fine esponente"
+    },
+    "Exp021": {
+      "expected": "3 elevato all'esponente, 3 alla quarta potenza, fine esponente"
+    },
+    "Exp022": {
+      "expected": "3 elevato all'esponente, 3 alla quarta potenza, più 2, fine esponente"
+    },
+    "Exp023": {
+      "expected": "3 elevato all'esponente, 3 alla quarta potenza, fine esponente, più 2"
+    },
+    "Exp024": {
+      "expected": "2 elevato all'esponente, x alla quarta potenza, fine esponente"
+    },
+    "Exp025": {
+      "expected": "2 elevato all'esponente, 10 elevato alla x più 3; fine esponente"
+    },
+    "Exp026": {
+      "expected": "3 elevato all'esponente, 3 alla decima potenza, fine esponente"
+    },
+    "Exp027": {
+      "expected": "3 elevato all'esponente, 3 alla decima potenza, più 1, fine esponente"
+    },
+    "Exp028": {
+      "expected": "3 elevato all'esponente, 3 alla decima potenza, fine esponente, più 1"
+    },
+    "Exp029": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, quadrato, fine esponente"
+    },
+    "Exp030": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla decima potenza, fine esponente"
+    },
+    "Exp031": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato alla y più 2; fine esponente"
+    },
+    "Exp032": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla y-esima potenza, più 2, fine esponente"
+    },
+    "Exp033": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla y-esima potenza, fine esponente, più 2"
+    },
+    "Exp035": {
+      "expected": "e elevato all'esponente, meno un mezzo per, parentesi tonda aperta, frazione con numeratore x meno mu, e denominatore sigma, parentesi tonda chiusa, quadrato, fine esponente"
+    },
+    "Exp036": {
+      "expected": "2 alla n-esima potenza"
+    },
+    "Exp037": {
+      "expected": "2 alla m-esima potenza"
+    },
+    "Exp038": {
+      "expected": "2 alla i-esima potenza"
+    },
+    "Exp039": {
+      "expected": "2 alla j-esima potenza"
+    },
+    "Exp040": {
+      "expected": "2 alla a-esima potenza"
+    },
+    "Exp041": {
+      "expected": "3 alla seconda"
+    },
+    "Exp042": {
+      "expected": "3 alla terza"
+    },
+    "Exp043": {
+      "expected": "3 alla zero"
+    },
+    "Exp044": {
+      "expected": "3 alla prima"
+    },
+    "Exp045": {
+      "expected": "3 alla quinta"
+    },
+    "Exp046": {
+      "expected": "4 elevato alla 3,0"
+    },
+    "Exp047": {
+      "expected": "4 alla undicesima"
+    },
+    "Exp048": {
+      "expected": "3 alla meno 2"
+    },
+    "Exp049": {
+      "expected": "3 elevato alla meno 2,0"
+    },
+    "Exp050": {
+      "expected": "4 alla x-esima"
+    },
+    "Exp051": {
+      "expected": "3 elevato alla y più 2"
+    },
+    "Exp052": {
+      "expected": "parentesi tonda aperta, 2 y, meno 3, parentesi tonda chiusa, elevato alla 3 z, più 8"
+    },
+    "Exp053": {
+      "expected": "p pedice 1, alla seconda"
+    },
+    "Exp054": {
+      "expected": "p pedice 1, alla terza"
+    },
+    "Exp055": {
+      "expected": "p pedice 1, alla quarta"
+    },
+    "Exp056": {
+      "expected": "p pedice 1, alla decima"
+    },
+    "Exp057": {
+      "expected": "p pedice 1, elevato alla x più 1"
+    },
+    "Exp058": {
+      "expected": "p pedice, x pedice 1, alla seconda"
+    },
+    "Exp059": {
+      "expected": "p pedice, x pedice 1, alla terza"
+    },
+    "Exp060": {
+      "expected": "p pedice, x pedice 1, alla quarta"
+    },
+    "Exp061": {
+      "expected": "p pedice, x pedice 1, alla decima"
+    },
+    "Exp062": {
+      "expected": "p pedice, x pedice 1, elevato alla y più 1"
+    },
+    "Exp063": {
+      "expected": "3 elevato all'esponente, 2 alla seconda, fine esponente"
+    },
+    "Exp064": {
+      "expected": "3 elevato all'esponente, 2 x alla seconda, fine esponente"
+    },
+    "Exp065": {
+      "expected": "5 elevato all'esponente, 2 alla terza, fine esponente"
+    },
+    "Exp066": {
+      "expected": "5 elevato all'esponente, 2 x alla terza, fine esponente"
+    },
+    "Exp067": {
+      "expected": "3 elevato all'esponente, 2 alla seconda, più 1, fine esponente"
+    },
+    "Exp068": {
+      "expected": "3 elevato all'esponente, 2 alla seconda, fine esponente, più 1"
+    },
+    "Exp069": {
+      "expected": "2 elevato all'esponente, x alla seconda, più 3 x alla terza, fine esponente"
+    },
+    "Exp070": {
+      "expected": "3 elevato all'esponente, 3 alla quarta, fine esponente"
+    },
+    "Exp071": {
+      "expected": "3 elevato all'esponente, 3 alla quarta, più 2, fine esponente"
+    },
+    "Exp072": {
+      "expected": "3 elevato all'esponente, 3 alla quarta, fine esponente, più 2"
+    },
+    "Exp073": {
+      "expected": "2 elevato all'esponente, x alla quarta, fine esponente"
+    },
+    "Exp074": {
+      "expected": "2 elevato all'esponente, 10 elevato alla x più 3; fine esponente"
+    },
+    "Exp075": {
+      "expected": "3 elevato all'esponente, 3 alla decima, fine esponente"
+    },
+    "Exp076": {
+      "expected": "3 elevato all'esponente, 3 alla decima, più 1, fine esponente"
+    },
+    "Exp077": {
+      "expected": "3 elevato all'esponente, 3 alla decima, fine esponente, più 1"
+    },
+    "Exp078": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla seconda, fine esponente"
+    },
+    "Exp079": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla decima, fine esponente"
+    },
+    "Exp080": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato alla y più 2; fine esponente"
+    },
+    "Exp081": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla y-esima, più 2, fine esponente"
+    },
+    "Exp082": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla y-esima, fine esponente, più 2"
+    },
+    "Exp083": {
+      "expected": "e elevato all'esponente, meno un mezzo x alla seconda, fine esponente"
+    },
+    "Exp084": {
+      "expected": "e elevato all'esponente, meno un mezzo per, parentesi tonda aperta, frazione con numeratore x meno mu, e denominatore sigma, parentesi tonda chiusa, alla seconda, fine esponente"
+    },
+    "Exp085": {
+      "expected": "3 alla seconda potenza"
+    },
+    "Exp086": {
+      "expected": "3 alla terza potenza"
+    },
+    "Exp087": {
+      "expected": "3 alla zero potenza"
+    },
+    "Exp088": {
+      "expected": "3 alla prima potenza"
+    },
+    "Exp089": {
+      "expected": "3 alla quinta potenza"
+    },
+    "Exp090": {
+      "expected": "3 elevato alla 5,0"
+    },
+    "Exp091": {
+      "expected": "4 alla undicesima potenza"
+    },
+    "Exp092": {
+      "expected": "3 alla meno 2"
+    },
+    "Exp093": {
+      "expected": "3 elevato alla meno 2,0"
+    },
+    "Exp094": {
+      "expected": "4 alla x-esima potenza"
+    },
+    "Exp095": {
+      "expected": "3 elevato alla y più 2"
+    },
+    "Exp096": {
+      "expected": "parentesi tonda aperta, 2 y, meno 3, parentesi tonda chiusa, elevato alla 3 z, più 8"
+    },
+    "Exp097": {
+      "expected": "p pedice 1, alla seconda potenza"
+    },
+    "Exp098": {
+      "expected": "p pedice 1, alla terza potenza"
+    },
+    "Exp099": {
+      "expected": "p pedice 1, alla quarta potenza"
+    },
+    "Exp100": {
+      "expected": "p pedice 1, alla decima potenza"
+    },
+    "Exp101": {
+      "expected": "p pedice 1, elevato alla x più 1"
+    },
+    "Exp102": {
+      "expected": "p pedice, x pedice 1, alla seconda potenza"
+    },
+    "Exp103": {
+      "expected": "p pedice, x pedice 1, alla terza potenza"
+    },
+    "Exp104": {
+      "expected": "p pedice, x pedice 1, alla quarta potenza"
+    },
+    "Exp105": {
+      "expected": "p pedice, x pedice 1, alla decima potenza"
+    },
+    "Exp106": {
+      "expected": "p pedice, x pedice 1, elevato alla y più 1"
+    },
+    "Exp107": {
+      "expected": "3 elevato all'esponente, 2 alla seconda potenza, fine esponente"
+    },
+    "Exp108": {
+      "expected": "3 elevato all'esponente, 2 x alla seconda potenza, fine esponente"
+    },
+    "Exp109": {
+      "expected": "5 elevato all'esponente, 2 alla terza potenza, fine esponente"
+    },
+    "Exp110": {
+      "expected": "5 elevato all'esponente, 2 x alla terza potenza, fine esponente"
+    },
+    "Exp111": {
+      "expected": "3 elevato all'esponente, 2 alla seconda potenza, più 1, fine esponente"
+    },
+    "Exp112": {
+      "expected": "3 elevato all'esponente, 2 alla seconda potenza, fine esponente, più 1"
+    },
+    "Exp113": {
+      "expected": "2 elevato all'esponente, x alla seconda potenza, più 3 x alla terza potenza, fine esponente"
+    },
+    "Exp114": {
+      "expected": "3 elevato all'esponente, 3 alla quarta potenza, fine esponente"
+    },
+    "Exp115": {
+      "expected": "3 elevato all'esponente, 3 alla quarta potenza, più 2, fine esponente"
+    },
+    "Exp116": {
+      "expected": "3 elevato all'esponente, 3 alla quarta potenza, fine esponente, più 2"
+    },
+    "Exp117": {
+      "expected": "2 elevato all'esponente, x alla quarta potenza, fine esponente"
+    },
+    "Exp118": {
+      "expected": "2 elevato all'esponente, 10 elevato alla x più 3; fine esponente"
+    },
+    "Exp119": {
+      "expected": "3 elevato all'esponente, 3 alla decima potenza, fine esponente"
+    },
+    "Exp120": {
+      "expected": "3 elevato all'esponente, 3 alla decima potenza, più 1, fine esponente"
+    },
+    "Exp121": {
+      "expected": "3 elevato all'esponente, 3 alla decima potenza, fine esponente, più 1"
+    },
+    "Exp122": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla seconda potenza, fine esponente"
+    },
+    "Exp123": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla decima potenza, fine esponente"
+    },
+    "Exp124": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato alla y più 2; fine esponente"
+    },
+    "Exp125": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla y-esima potenza, più 2, fine esponente"
+    },
+    "Exp126": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, alla y-esima potenza, fine esponente, più 2"
+    },
+    "Exp127": {
+      "expected": "e elevato all'esponente, meno un mezzo x alla seconda potenza, fine esponente"
+    },
+    "Exp128": {
+      "expected": "e elevato all'esponente, meno un mezzo per, parentesi tonda aperta, frazione con numeratore x meno mu, e denominatore sigma, parentesi tonda chiusa, alla seconda potenza, fine esponente"
+    },
+    "Exp129": {
+      "expected": "3 elevato all'esponente 2"
+    },
+    "Exp130": {
+      "expected": "3 elevato all'esponente 3"
+    },
+    "Exp131": {
+      "expected": "3 elevato all'esponente 1"
+    },
+    "Exp132b": {
+      "expected": "3 elevato all'esponente 0"
+    },
+    "Exp133": {
+      "expected": "3 elevato all'esponente 5"
+    },
+    "Exp134": {
+      "expected": "3 elevato all'esponente 5,0"
+    },
+    "Exp135": {
+      "expected": "4 elevato all'esponente 11"
+    },
+    "Exp136": {
+      "expected": "3 elevato all'esponente meno 2"
+    },
+    "Exp137": {
+      "expected": "3 elevato all'esponente meno 2,0"
+    },
+    "Exp138": {
+      "expected": "4 elevato all'esponente x"
+    },
+    "Exp139": {
+      "expected": "3 elevato all'esponente y più 2"
+    },
+    "Exp140": {
+      "expected": "parentesi tonda aperta, 2 y, meno 3, parentesi tonda chiusa, elevato all'esponente 3 z più 8"
+    },
+    "Exp141": {
+      "expected": "p pedice 1, elevato all'esponente 2"
+    },
+    "Exp142": {
+      "expected": "p pedice 1, elevato all'esponente 3"
+    },
+    "Exp143": {
+      "expected": "p pedice 1, elevato all'esponente 4"
+    },
+    "Exp144": {
+      "expected": "p pedice 1, elevato all'esponente 10"
+    },
+    "Exp145": {
+      "expected": "p pedice 1, elevato all'esponente x più 1"
+    },
+    "Exp146": {
+      "expected": "p pedice, x pedice 1, elevato all'esponente 2"
+    },
+    "Exp147": {
+      "expected": "p pedice, x pedice 1, elevato all'esponente 3"
+    },
+    "Exp148": {
+      "expected": "p pedice, x pedice 1, elevato all'esponente 4"
+    },
+    "Exp149": {
+      "expected": "p pedice, x pedice 1, elevato all'esponente 10"
+    },
+    "Exp150": {
+      "expected": "p pedice, x pedice 1, elevato all'esponente y più 1"
+    },
+    "Exp151": {
+      "expected": "3 elevato all'esponente, 2 elevato all'esponente 2, fine esponente"
+    },
+    "Exp152": {
+      "expected": "3 elevato all'esponente, 2 x elevato all'esponente 2, fine esponente"
+    },
+    "Exp153": {
+      "expected": "3 elevato all'esponente, 2 elevato all'esponente 2, fine esponente"
+    },
+    "Exp154": {
+      "expected": "3 elevato all'esponente, 2 x elevato all'esponente 2, fine esponente"
+    },
+    "Exp155": {
+      "expected": "5 elevato all'esponente, 2 elevato all'esponente 3, fine esponente"
+    },
+    "Exp156": {
+      "expected": "5 elevato all'esponente, 2 x elevato all'esponente 3, fine esponente"
+    },
+    "Exp157": {
+      "expected": "3 elevato all'esponente, 2 elevato all'esponente 2, più 1, fine esponente"
+    },
+    "Exp158": {
+      "expected": "3 elevato all'esponente, 2 elevato all'esponente 2, fine esponente, più 1"
+    },
+    "Exp159": {
+      "expected": "2 elevato all'esponente, x elevato all'esponente 2, più 3 x elevato all'esponente 3, fine esponente"
+    },
+    "Exp160": {
+      "expected": "3 elevato all'esponente, 3 elevato all'esponente 4, fine esponente"
+    },
+    "Exp161": {
+      "expected": "3 elevato all'esponente, 3 elevato all'esponente 4, più 2, fine esponente"
+    },
+    "Exp162": {
+      "expected": "3 elevato all'esponente, 3 elevato all'esponente 4, fine esponente, più 2"
+    },
+    "Exp163": {
+      "expected": "2 elevato all'esponente, x elevato all'esponente 4, fine esponente"
+    },
+    "Exp164": {
+      "expected": "2 elevato all'esponente, 10 elevato all'esponente x più 3, fine esponente"
+    },
+    "Exp165": {
+      "expected": "3 elevato all'esponente, 3 elevato all'esponente 10, fine esponente"
+    },
+    "Exp166": {
+      "expected": "3 elevato all'esponente, 3 elevato all'esponente 10, più 1, fine esponente"
+    },
+    "Exp167": {
+      "expected": "3 elevato all'esponente, 3 elevato all'esponente 10, fine esponente, più 1"
+    },
+    "Exp168": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato all'esponente 2, fine esponente"
+    },
+    "Exp169": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato all'esponente 10, fine esponente"
+    },
+    "Exp170": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato all'esponente y più 2, fine esponente"
+    },
+    "Exp171": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato all'esponente y, più 2, fine esponente"
+    },
+    "Exp172": {
+      "expected": "3 elevato all'esponente, parentesi tonda aperta, x più 1, parentesi tonda chiusa, elevato all'esponente y, fine esponente, più 2"
+    },
+    "Exp173": {
+      "expected": "e elevato all'esponente, meno un mezzo x elevato all'esponente 2, fine esponente"
+    },
+    "Exp174": {
+      "expected": "e elevato all'esponente, meno un mezzo per, parentesi tonda aperta, frazione con numeratore x meno mu, e denominatore sigma, parentesi tonda chiusa, elevato all'esponente 2, fine esponente"
+    }
+  }
+}

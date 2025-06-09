@@ -1,0 +1,395 @@
+{
+  "name": "NemethTensors",
+  "locale": "nemeth",
+  "factory": "speech",
+  "modality": "braille",
+  "base": "input/mathspeak/mathspeak_tensors.json",
+  "information": "Nemeth Tensor tests.",
+  "domain": "default",
+  "style": "default",
+  "active": "NemethTensors",
+  "exclude": [
+    "PartialTensorABCD_brief",
+    "PartialTensorABCD_sbrief",
+    "PartialTensorABC_brief",
+    "PartialTensorABC_sbrief",
+    "PartialTensorABD_brief",
+    "PartialTensorABD_sbrief",
+    "PartialTensorABDR_brief",
+    "PartialTensorABDR_sbrief",
+    "PartialTensorABDRootR_brief",
+    "PartialTensorABDRootR_sbrief",
+    "PartialTensorABDRRoot_brief",
+    "PartialTensorABDRRoot_sbrief",
+    "PartialTensorABDFracR_brief",
+    "PartialTensorABDFracR_sbrief",
+    "PartialTensorABDRFrac_brief",
+    "PartialTensorABDRFrac_sbrief",
+    "PartialTensorAB_brief",
+    "PartialTensorAB_sbrief",
+    "PartialTensorABR_brief",
+    "PartialTensorABR_sbrief",
+    "PartialTensorABRootR_brief",
+    "PartialTensorABRootR_sbrief",
+    "PartialTensorABRRoot_brief",
+    "PartialTensorABRRoot_sbrief",
+    "PartialTensorABFracR_brief",
+    "PartialTensorABFracR_sbrief",
+    "PartialTensorABRFrac_brief",
+    "PartialTensorABRFrac_sbrief",
+    "PartialTensorABCR_brief",
+    "PartialTensorABCR_sbrief",
+    "PartialTensorABCDR_brief",
+    "PartialTensorABCDR_sbrief",
+    "PartialTensorABCDRoot_brief",
+    "PartialTensorABCDRoot_sbrief",
+    "PartialTensorABCDRootR_brief",
+    "PartialTensorABCDRootR_sbrief",
+    "PartialTensorABCDRRoot_brief",
+    "PartialTensorABCDRRoot_sbrief",
+    "PartialTensorABCDFrac_brief",
+    "PartialTensorABCDFrac_sbrief",
+    "PartialTensorABCDFracR_brief",
+    "PartialTensorABCDFracR_sbrief",
+    "PartialTensorABCDRFrac_brief",
+    "PartialTensorABCDRFrac_sbrief",
+    "PartialTensorB_brief",
+    "PartialTensorB_sbrief",
+    "PartialTensorBR_brief",
+    "PartialTensorBR_sbrief",
+    "PartialTensorBRootR_brief",
+    "PartialTensorBRootR_sbrief",
+    "PartialTensorBRRoot_brief",
+    "PartialTensorBRRoot_sbrief",
+    "PartialTensorBFracR_brief",
+    "PartialTensorBFracR_sbrief",
+    "PartialTensorBRFrac_brief",
+    "PartialTensorBRFrac_sbrief",
+    "PartialTensorBD_brief",
+    "PartialTensorBD_sbrief",
+    "PartialTensorBDR_brief",
+    "PartialTensorBDR_sbrief",
+    "PartialTensorBDRootR_brief",
+    "PartialTensorBDRootR_sbrief",
+    "PartialTensorBDRRoot_brief",
+    "PartialTensorBDRRoot_sbrief",
+    "PartialTensorBDFracR_brief",
+    "PartialTensorBDFracR_sbrief",
+    "PartialTensorBDRFrac_brief",
+    "PartialTensorBDRFrac_sbrief",
+    "PartialTensorBC_brief",
+    "PartialTensorBC_sbrief",
+    "PartialTensorBCR_brief",
+    "PartialTensorBCR_sbrief",
+    "PartialTensorBCRootR_brief",
+    "PartialTensorBCRootR_sbrief",
+    "PartialTensorBCRRoot_brief",
+    "PartialTensorBCRRoot_sbrief",
+    "PartialTensorBCFracR_brief",
+    "PartialTensorBCFracR_sbrief",
+    "PartialTensorBCRFrac_brief",
+    "PartialTensorBCRFrac_sbrief",
+    "PartialTensorBCD_brief",
+    "PartialTensorBCD_sbrief",
+    "PartialTensorBCDR_brief",
+    "PartialTensorBCDR_sbrief",
+    "PartialTensorBCDRootR_brief",
+    "PartialTensorBCDRootR_sbrief",
+    "PartialTensorBCDRRoot_brief",
+    "PartialTensorBCDRRoot_sbrief",
+    "PartialTensorBCDFracR_brief",
+    "PartialTensorBCDFracR_sbrief",
+    "PartialTensorBCDRFrac_brief",
+    "PartialTensorBCDRFrac_sbrief",
+    "PartialTensorA_brief",
+    "PartialTensorA_sbrief",
+    "PartialTensorAR_brief",
+    "PartialTensorAR_sbrief",
+    "PartialTensorARootR_brief",
+    "PartialTensorARootR_sbrief",
+    "PartialTensorARRoot_brief",
+    "PartialTensorARRoot_sbrief",
+    "PartialTensorAFracR_brief",
+    "PartialTensorAFracR_sbrief",
+    "PartialTensorARFrac_brief",
+    "PartialTensorARFrac_sbrief",
+    "PartialTensorAD_brief",
+    "PartialTensorAD_sbrief",
+    "PartialTensorADR_brief",
+    "PartialTensorADR_sbrief",
+    "PartialTensorADRootR_brief",
+    "PartialTensorADRootR_sbrief",
+    "PartialTensorADRRoot_brief",
+    "PartialTensorADRRoot_sbrief",
+    "PartialTensorADFracR_brief",
+    "PartialTensorADFracR_sbrief",
+    "PartialTensorADRFrac_brief",
+    "PartialTensorADRFrac_sbrief",
+    "PartialTensorAC_brief",
+    "PartialTensorAC_sbrief",
+    "PartialTensorACR_brief",
+    "PartialTensorACR_sbrief",
+    "PartialTensorACRootR_brief",
+    "PartialTensorACRootR_sbrief",
+    "PartialTensorACRRoot_brief",
+    "PartialTensorACRRoot_sbrief",
+    "PartialTensorACFracR_brief",
+    "PartialTensorACFracR_sbrief",
+    "PartialTensorACRFrac_brief",
+    "PartialTensorACRFrac_sbrief",
+    "PartialTensorACD_brief",
+    "PartialTensorACD_sbrief",
+    "PartialTensorACDR_brief",
+    "PartialTensorACDR_sbrief",
+    "PartialTensorACDRootR_brief",
+    "PartialTensorACDRootR_sbrief",
+    "PartialTensorACDRRoot_brief",
+    "PartialTensorACDRRoot_sbrief",
+    "PartialTensorACDFracR_brief",
+    "PartialTensorACDFracR_sbrief",
+    "PartialTensorACDRFrac_brief",
+    "PartialTensorACDRFrac_sbrief",
+    "TensorMultiSimpleABC_brief",
+    "TensorMultiSimpleABC_sbrief",
+    "TensorMultiSub_brief",
+    "TensorMultiSub_sbrief",
+    "TensorMultiSubSup_brief",
+    "TensorMultiSubSup_sbrief",
+    "TensorMultiSimple_brief",
+    "TensorMultiSimple_sbrief",
+    "TensorMultiComplex_brief",
+    "TensorMultiComplex_sbrief",
+    "TwoTensors_brief",
+    "TwoTensors_sbrief"
+  ],
+  "tests": {
+    "PartialTensorABCD_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙"
+    },
+    "PartialTensorABC_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉"
+    },
+    "PartialTensorABD_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠘⠙"
+    },
+    "PartialTensorABDR_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠘⠙⠐⠗"
+    },
+    "PartialTensorABDRootR_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠘⠙⠐⠻⠗"
+    },
+    "PartialTensorABDRRoot_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠘⠙⠐⠗⠻"
+    },
+    "PartialTensorABDFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠘⠙⠐⠼⠗"
+    },
+    "PartialTensorABDRFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠘⠙⠐⠗⠼"
+    },
+    "PartialTensorAB_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭"
+    },
+    "PartialTensorABR_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠗"
+    },
+    "PartialTensorABRootR_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠻⠗"
+    },
+    "PartialTensorABRRoot_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠗⠻"
+    },
+    "PartialTensorABFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠼⠗"
+    },
+    "PartialTensorABRFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠗⠼"
+    },
+    "PartialTensorABCR_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠐⠗"
+    },
+    "PartialTensorABCDR_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠐⠗"
+    },
+    "PartialTensorABCDRoot_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠻"
+    },
+    "PartialTensorABCDRootR_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠐⠻⠗"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "expected": "⠜⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠐⠗⠻"
+    },
+    "PartialTensorABCDFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠼"
+    },
+    "PartialTensorABCDFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠐⠼⠗"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠐⠗⠼"
+    },
+    "PartialTensorB_default": {
+      "expected": "⠘⠃⠐⠭"
+    },
+    "PartialTensorBR_default": {
+      "expected": "⠘⠃⠐⠭⠗"
+    },
+    "PartialTensorBRootR_default": {
+      "expected": "⠜⠘⠃⠐⠭⠻⠗"
+    },
+    "PartialTensorBRRoot_default": {
+      "expected": "⠜⠘⠃⠐⠭⠗⠻"
+    },
+    "PartialTensorBFracR_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠼⠗"
+    },
+    "PartialTensorBRFrac_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠗⠼"
+    },
+    "PartialTensorBD_default": {
+      "expected": "⠘⠃⠐⠭⠘⠙"
+    },
+    "PartialTensorBDR_default": {
+      "expected": "⠘⠃⠐⠭⠘⠙⠐⠗"
+    },
+    "PartialTensorBDRootR_default": {
+      "expected": "⠜⠘⠃⠐⠭⠘⠙⠐⠻⠗"
+    },
+    "PartialTensorBDRRoot_default": {
+      "expected": "⠜⠘⠃⠐⠭⠘⠙⠐⠗⠻"
+    },
+    "PartialTensorBDFracR_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠘⠙⠐⠼⠗"
+    },
+    "PartialTensorBDRFrac_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠘⠙⠐⠗⠼"
+    },
+    "PartialTensorBC_default": {
+      "expected": "⠘⠃⠐⠭⠰⠉"
+    },
+    "PartialTensorBCR_default": {
+      "expected": "⠘⠃⠐⠭⠰⠉⠐⠗"
+    },
+    "PartialTensorBCRootR_default": {
+      "expected": "⠜⠘⠃⠐⠭⠰⠉⠐⠻⠗"
+    },
+    "PartialTensorBCRRoot_default": {
+      "expected": "⠜⠘⠃⠐⠭⠰⠉⠐⠗⠻"
+    },
+    "PartialTensorBCFracR_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠰⠉⠐⠼⠗"
+    },
+    "PartialTensorBCRFrac_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠰⠉⠐⠗⠼"
+    },
+    "PartialTensorBCD_default": {
+      "expected": "⠘⠃⠐⠭⠰⠉⠘⠙"
+    },
+    "PartialTensorBCDR_default": {
+      "expected": "⠘⠃⠐⠭⠰⠉⠘⠙⠐⠗"
+    },
+    "PartialTensorBCDRootR_default": {
+      "expected": "⠜⠘⠃⠐⠭⠰⠉⠘⠙⠐⠻⠗"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "expected": "⠜⠘⠃⠐⠭⠰⠉⠘⠙⠐⠗⠻"
+    },
+    "PartialTensorBCDFracR_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠰⠉⠘⠙⠐⠼⠗"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "expected": "⠹⠂⠌⠘⠃⠐⠭⠰⠉⠘⠙⠐⠗⠼"
+    },
+    "PartialTensorA_default": {
+      "expected": "⠰⠁⠐⠭"
+    },
+    "PartialTensorAR_default": {
+      "expected": "⠰⠁⠐⠭⠗"
+    },
+    "PartialTensorARootR_default": {
+      "expected": "⠜⠰⠁⠐⠭⠻⠗"
+    },
+    "PartialTensorARRoot_default": {
+      "expected": "⠜⠰⠁⠐⠭⠗⠻"
+    },
+    "PartialTensorAFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠼⠗"
+    },
+    "PartialTensorARFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠗⠼"
+    },
+    "PartialTensorAD_default": {
+      "expected": "⠰⠁⠐⠭⠘⠙"
+    },
+    "PartialTensorADR_default": {
+      "expected": "⠰⠁⠐⠭⠘⠙⠐⠗"
+    },
+    "PartialTensorADRootR_default": {
+      "expected": "⠜⠰⠁⠐⠭⠘⠙⠐⠻⠗"
+    },
+    "PartialTensorADRRoot_default": {
+      "expected": "⠜⠰⠁⠐⠭⠘⠙⠐⠗⠻"
+    },
+    "PartialTensorADFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠘⠙⠐⠼⠗"
+    },
+    "PartialTensorADRFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠘⠙⠐⠗⠼"
+    },
+    "PartialTensorAC_default": {
+      "expected": "⠰⠁⠐⠭⠰⠉"
+    },
+    "PartialTensorACR_default": {
+      "expected": "⠰⠁⠐⠭⠰⠉⠐⠗"
+    },
+    "PartialTensorACRootR_default": {
+      "expected": "⠜⠰⠁⠐⠭⠰⠉⠐⠻⠗"
+    },
+    "PartialTensorACRRoot_default": {
+      "expected": "⠜⠰⠁⠐⠭⠰⠉⠐⠗⠻"
+    },
+    "PartialTensorACFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠰⠉⠐⠼⠗"
+    },
+    "PartialTensorACRFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠰⠉⠐⠗⠼"
+    },
+    "PartialTensorACD_default": {
+      "expected": "⠰⠁⠐⠭⠰⠉⠘⠙"
+    },
+    "PartialTensorACDR_default": {
+      "expected": "⠰⠁⠐⠭⠰⠉⠘⠙⠐⠗"
+    },
+    "PartialTensorACDRootR_default": {
+      "expected": "⠜⠰⠁⠐⠭⠰⠉⠘⠙⠐⠻⠗"
+    },
+    "PartialTensorACDRRoot_default": {
+      "expected": "⠜⠰⠁⠐⠭⠰⠉⠘⠙⠐⠗⠻"
+    },
+    "PartialTensorACDFracR_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠰⠉⠘⠙⠐⠼⠗"
+    },
+    "PartialTensorACDRFrac_default": {
+      "expected": "⠹⠂⠌⠰⠁⠐⠭⠰⠉⠘⠙⠐⠗⠼"
+    },
+    "TensorMultiSimpleABC_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠰⠘⠇"
+    },
+    "TensorMultiSub_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠰⠰⠇⠘⠙"
+    },
+    "TensorMultiSubSup_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠰⠰⠇⠰⠰⠘⠅⠰⠰⠰⠑⠘⠙"
+    },
+    "TensorMultiSimple_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠰⠘⠇⠘⠙"
+    },
+    "TensorMultiComplex_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠅⠰⠘⠇⠰⠘⠙"
+    },
+    "TwoTensors_default": {
+      "expected": "⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙⠐⠰⠁⠘⠃⠐⠭⠰⠉⠘⠙"
+    }
+  }
+}

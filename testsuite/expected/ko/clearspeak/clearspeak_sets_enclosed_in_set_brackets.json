@@ -1,0 +1,64 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakSetsEnclosedInSetBrackets",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "Korean Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Sets Enclosed in Set Brackets",
+    "Set001": {
+      "expected": "2 작다 x 작다 7 을 만족하는 모든 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "Set002": {
+      "expected": "절댓값 x, 는 2 보다 크다 를 만족하는 모든 x 의 집합"
+    },
+    "Set003": {
+      "expected": "2 작다 x 작다 7 을 만족하는 모든 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "Set004": {
+      "expected": "x is an even number 을 만족하는 모든 x 는 자연수 집합 의 원소이다 의 집합"
+    },
+    "Set005": {
+      "expected": "집합 1 콤마 2 콤마 3"
+    },
+    "Set006": {
+      "expected": "집합 1 콤마 112 콤마 1 콤마 253"
+    },
+    "Set007": {
+      "expected": "2 작다 x 작다 7 을 만족하는 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "Set008": {
+      "expected": "절댓값 x, 는 2 보다 크다 를 만족하는 x 의 집합"
+    },
+    "Set009": {
+      "expected": "2 작다 x 작다 7 을 만족하는 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "Set010": {
+      "expected": "집합 1 콤마 2 콤마 3"
+    },
+    "Set011": {
+      "expected": "집합 1 콤마 112 콤마 1 콤마 253"
+    },
+    "Set012": {
+      "expected": "2 작다 x 작다 7 을 만족하는 모든 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "Set013": {
+      "expected": "절댓값 x, 는 2 보다 크다 를 만족하는 모든 x 의 집합"
+    },
+    "Set014": {
+      "expected": "2 작다 x 작다 7 을 만족하는 모든 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "Set015": {
+      "expected": "x is an even number 을 만족하는 모든 x 는 자연수 집합 의 원소이다 의 집합"
+    },
+    "Set016": {
+      "expected": "1 콤마 2 콤마 3"
+    },
+    "Set017": {
+      "expected": "1 콤마 112 콤마 1 콤마 253"
+    }
+  }
+}

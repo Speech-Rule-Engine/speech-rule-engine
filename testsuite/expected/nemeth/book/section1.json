@@ -1,0 +1,242 @@
+{
+  "name": "NemethSection1",
+  "information": "Nemeth 2020 Book Section 1",
+  "factory": "speech",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Book2019",
+  "tests": {
+    "Example 1.4-1": {
+      "tex": "5\\quad 10\\quad 15\\quad 20",
+      "brf": "#5 #10 #15 #20",
+      "input": "<mn>5</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>10</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>15</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>20</mn>",
+      "expected": "⠼⠢⠀⠼⠂⠴⠀⠼⠂⠢⠀⠼⠆⠴"
+    },
+    "Example 1.4-2": {
+      "input": "<mn>987 654 321</mn>",
+      "brf": "#987 654 321",
+      "expected": "⠼⠔⠦⠶⠀⠖⠢⠲⠀⠒⠆⠂"
+    },
+    "Example 1.5-1": {
+      "tex": "987,654,321",
+      "brf": "#987,654,321",
+      "input": "<mn>987,654,321</mn>",
+      "expected": "⠼⠔⠦⠶⠠⠖⠢⠲⠠⠒⠆⠂"
+    },
+    "Example 1.5-2": {
+      "tex": "997, 998, 999, 1,000",
+      "brf": "#997, #998, #999, #1,000",
+      "input": "<mn>997</mn><mo>,</mo><mn>998</mn><mo>,</mo><mn>999</mn><mo>,</mo><mn>1,000</mn>",
+      "expected": "⠼⠔⠔⠶⠠⠀⠼⠔⠔⠦⠠⠀⠼⠔⠔⠔⠠⠀⠼⠂⠠⠴⠴⠴"
+    },
+    "Example 1.6-1": {
+      "tex": "3.14159",
+      "brf": "#3.14159",
+      "input": "<mn>3.14159</mn>",
+      "expected": "⠼⠒⠨⠂⠲⠂⠢⠔"
+    },
+    "Example 1.6-2": {
+      "tex": ".25\\quad .5\\quad .75",
+      "brf": "#.25 #.5 #.75",
+      "input": "<mn>.25</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>.5</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>.75</mn>",
+      "expected": "⠼⠨⠆⠢⠀⠼⠨⠢⠀⠼⠨⠶⠢"
+    },
+    "Plus": {
+      "tex": "+",
+      "brf": "+",
+      "input": "<mo>+</mo>",
+      "expected": "⠬"
+    },
+    "Minus": {
+      "tex": "-",
+      "brf": "-",
+      "input": "<mo>&#x2212;</mo>",
+      "expected": "⠤"
+    },
+    "Multiplication Cross": {
+      "tex": "\\times",
+      "brf": "@*",
+      "input": "<mo>&#xD7;</mo>",
+      "expected": "⠈⠡"
+    },
+    "Dot": {
+      "tex": "\\cdot",
+      "brf": "*",
+      "input": "<mo>&#x22C5;</mo>",
+      "expected": "⠡"
+    },
+    "Division": {
+      "tex": "÷",
+      "brf": "./",
+      "input": "<mi>&#xF7;</mi>",
+      "expected": "⠨⠌"
+    },
+    "Example 1.8-1": {
+      "tex": "834 + 75\\quad 53,613 - 2,016\\quad 19 \\times 18\\quad 950 \\cdot 92.3\\quad 40.3 ÷ 1.7",
+      "brf": "#834+75 #53,613-2,016 #19@*18 #950*92.3 #40.3./1.7",
+      "input": "<mn>834</mn><mo>+</mo><mn>75</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>53,613</mn><mo>&#x2212;</mo><mn>2,016</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>19</mn><mi>&#xD7;</mi><mn>18</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>950</mn><mo>&#x2219;</mo><mn>92.3</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>40.3</mn><mi>&#xF7;</mi><mn>1.7</mn>",
+      "expected": "⠼⠦⠒⠲⠬⠶⠢⠀⠼⠢⠒⠠⠖⠂⠒⠤⠆⠠⠴⠂⠖⠀⠼⠂⠔⠈⠡⠂⠦⠀⠼⠔⠢⠴⠡⠔⠆⠨⠒⠀⠼⠲⠴⠨⠒⠨⠌⠂⠨⠶"
+    },
+    "Example 1.8-2": {
+      "tex": "-3\\quad -2\\quad -1\\quad 0\\quad +1\\quad +2\\quad +3",
+      "brf": "-#3 -#2 -#1 #0 +1 +2 +3",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mn>3</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mn>2</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mn>0</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mo>+</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mo>+</mo><mn>2</mn><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mo>+</mo><mn>3</mn>",
+      "expected": "⠤⠼⠒⠀⠤⠼⠆⠀⠤⠼⠂⠀⠼⠴⠀⠬⠂⠀⠬⠆⠀⠬⠒"
+    },
+    "Example 1.8-3": {
+      "tex": "-.75, -.5, -.25, 0.0, +.25, +.5",
+      "brf": "-#.75, -#.5, -#.25, #0.0, +.25, +.5",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mn>.75</mn><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mn>.5</mn><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mn>.25</mn><mo>,</mo><mn>0.0</mn><mo>,</mo><mo>+</mo><mn>.25</mn><mo>,</mo><mo>+</mo><mn>.5</mn>",
+      "expected": "⠤⠼⠨⠶⠢⠠⠀⠤⠼⠨⠢⠠⠀⠤⠼⠨⠆⠢⠠⠀⠼⠴⠨⠴⠠⠀⠬⠨⠆⠢⠠⠀⠬⠨⠢"
+    },
+    "Equals": {
+      "tex": "=",
+      "brf": ".K",
+      "input": "<mo>=</mo>",
+      "expected": "⠨⠅"
+    },
+    "Greater Than(is greater than)": {
+      "tex": ">",
+      "brf": ".1",
+      "input": "<mo>&gt;</mo>",
+      "expected": "⠨⠂"
+    },
+    "Less Than (is less than)": {
+      "tex": "<",
+      "brf": "\"K",
+      "input": "<mo>&lt;</mo>",
+      "expected": "⠐⠅"
+    },
+    "Proportion (as)": {
+      "tex": "∷",
+      "brf": ";2",
+      "input": "<mo>&#x2237;</mo>",
+      "expected": "⠰⠆"
+    },
+    "Ratio (is to)": {
+      "tex": "∶",
+      "brf": "\"1",
+      "input": "<mo>&#x2236;</mo>",
+      "expected": "⠐⠂"
+    },
+    "Ratio (colon)": {
+      "tex": ":",
+      "brf": "3",
+      "input": "<mo>:</mo>",
+      "expected": "⠒"
+    },
+    "Example 1.9-1": {
+      "tex": "72,539 × 33.3 = 2,415,548.7",
+      "brf": "#72,539@*33.3 .K #2,415,548.7",
+      "input": "<mn>72,539</mn><mi>&#xD7;</mi><mn>33.3</mn><mo>=</mo><mn>2,415,548.7</mn>",
+      "expected": "⠼⠶⠆⠠⠢⠒⠔⠈⠡⠒⠒⠨⠒⠀⠨⠅⠀⠼⠆⠠⠲⠂⠢⠠⠢⠲⠦⠨⠶"
+    },
+    "Example 1.9-2": {
+      "tex": "-3 < 0 < +3",
+      "brf": "-#3 \"K #0 \"K +3",
+      "input": "<mo>&#x2212;</mo><mn>3</mn><mo>&lt;</mo><mn>0</mn><mo>&lt;</mo><mo>+</mo><mn>3</mn>",
+      "expected": "⠤⠼⠒⠀⠐⠅⠀⠼⠴⠀⠐⠅⠀⠬⠒"
+    },
+    "Example 1.9-3 (ratio)": {
+      "tex": "6 ∶ 9 ∷ 2 ∶ 3",
+      "brf": "#6 \"1 #9 ;2 #2 \"1 #3",
+      "input": "<mn>6</mn><mo>&#x2236;</mo><mn>9</mn><mo>&#x2237;</mo><mn>2</mn><mo>&#x2236;</mo><mn>3</mn>",
+      "expected": "⠼⠖⠀⠐⠂⠀⠼⠔⠀⠰⠆⠀⠼⠆⠀⠐⠂⠀⠼⠒"
+    },
+    "Example 1.9-3": {
+      "test": false,
+      "tex": "6 : 9 ∷ 2 : 3",
+      "brf": "#6 \"1 #9 ;2 #2 \"1 #3",
+      "input": "<mn>6</mn><mo>:</mo><mn>9</mn><mo>&#x2237;</mo><mn>2</mn><mo>:</mo><mn>3</mn>",
+      "expected": "⠼⠖⠀⠐⠂⠀⠼⠔⠀⠰⠆⠀⠼⠆⠀⠐⠂⠀⠼⠒"
+    },
+    "Cent": {
+      "tex": "¢",
+      "brf": "@c",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#xA2;</mo></mrow>",
+      "expected": "⠈⠉"
+    },
+    "Dollar": {
+      "tex": "$",
+      "brf": "@S",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>$</mo></mrow>",
+      "expected": "⠈⠎"
+    },
+    "Euro": {
+      "input": "<mi>€</mi>",
+      "brf": "@E",
+      "expected": "⠈⠑"
+    },
+    "Franc": {
+      "input": "<mi>₣</mi>",
+      "brf": "@F",
+      "expected": "⠈⠋"
+    },
+    "Naira": {
+      "input": "<mi>₦</mi>",
+      "brf": "@n",
+      "expected": "⠈⠝"
+    },
+    "Pound Sterling": {
+      "tex": "£",
+      "brf": "@L",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#xA3;</mo></mrow>",
+      "expected": "⠈⠇"
+    },
+    "Yen": {
+      "tex": "¥",
+      "brf": "@y",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#xA5;</mo></mrow>",
+      "expected": "⠈⠽"
+    },
+    "Example 1.10-1": {
+      "tex": "$3.50 = 350¢",
+      "brf": "@S3.50 .K #350@c",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>$</mo></mrow><mn>3.50</mn><mo>=</mo><mn>350</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#xA2;</mo></mrow>",
+      "expected": "⠈⠎⠒⠨⠢⠴⠀⠨⠅⠀⠼⠒⠢⠴⠈⠉"
+    },
+    "Percent sign": {
+      "tex": "\\%",
+      "brf": "@0",
+      "input": "<mi>%</mi>",
+      "expected": "⠈⠴"
+    },
+    "Per mille sign": {
+      "tex": "‰",
+      "brf": "@00",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow>",
+      "expected": "⠈⠴⠴"
+    },
+    "Example 1.11-1": {
+      "tex": "45\\% = 0.45",
+      "brf": "#45@0 .K #0.45",
+      "input": "<mn>45</mn><mi>%</mi><mo>=</mo><mn>0.45</mn>",
+      "expected": "⠼⠲⠢⠈⠴⠀⠨⠅⠀⠼⠴⠨⠲⠢"
+    },
+    "Example 1.11-2": {
+      "tex": "35‰ = .035",
+      "brf": "#35@00 .K #.035",
+      "input": "<mn>35</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow><mo>=</mo><mn>.035</mn>",
+      "expected": "⠼⠒⠢⠈⠴⠴⠀⠨⠅⠀⠼⠨⠴⠒⠢"
+    },
+    "Prime Sign": {
+      "tex": "'",
+      "brf": "'",
+      "input": "<msup><mi></mi><mo data-mjx-alternate=\"1\">&#x2032;</mo></msup>",
+      "expected": "⠄"
+    },
+    "(two prime signs)": {
+      "tex": "\"",
+      "brf": "''",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&quot;</mo></mrow>",
+      "expected": "⠄⠄"
+    },
+    "Example 1.12-1": {
+      "tex": "4'3'' > 43''",
+      "brf": "#4'3'' .1 #43''",
+      "input": "<msup><mn>4</mn><mo>&#x2032;</mo></msup><msup><mn>3</mn><mo>&#x2033;</mo></msup><mo>&gt;</mo><msup><mn>43</mn><mo>&#x2033;</mo></msup>",
+      "expected": "⠼⠲⠄⠒⠄⠄⠀⠨⠂⠀⠼⠲⠒⠄⠄"
+    }
+  }
+}

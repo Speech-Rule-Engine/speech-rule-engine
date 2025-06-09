@@ -1,0 +1,373 @@
+{
+  "name": "SpanishMathspeakRoots",
+  "locale": "es",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "Spanish Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakSpanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "sqrt_0_brief": {
+      "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "sqrt_1_default": {
+      "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "sqrt_1_brief": {
+      "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "sqrt_2_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "sqrt_2_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "raíz cuadrada raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "sqrt_3_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "sqrt_3_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "raíz cuadrada raíz cuadrada raíz cuadrada raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "roots_0_default": {
+      "expected": "índice de raíz 1 empezar raíz a finalizar raíz"
+    },
+    "roots_0_brief": {
+      "expected": "índice de raíz 1 empezar raíz a finalizar raíz"
+    },
+    "roots_0_sbrief": {
+      "expected": "1 raíz a finalizar raíz"
+    },
+    "roots_1_default": {
+      "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "roots_1_brief": {
+      "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "roots_1_sbrief": {
+      "expected": "raíz cuadrada a finalizar raíz cuadrada"
+    },
+    "roots_2_default": {
+      "expected": "empezar raíz cúbica a finalizar raíz cúbica"
+    },
+    "roots_2_brief": {
+      "expected": "empezar raíz cúbica a finalizar raíz cúbica"
+    },
+    "roots_2_sbrief": {
+      "expected": "raíz cúbica a finalizar raíz cúbica"
+    },
+    "roots_3_default": {
+      "expected": "empezar raíz a la cuarta a finalizar raíz a la cuarta"
+    },
+    "roots_3_brief": {
+      "expected": "empezar raíz a la cuarta a finalizar raíz a la cuarta"
+    },
+    "roots_3_sbrief": {
+      "expected": "raíz a la cuarta a finalizar raíz a la cuarta"
+    },
+    "roots_4_default": {
+      "expected": "empezar raíz a la quinta a finalizar raíz a la quinta"
+    },
+    "roots_4_brief": {
+      "expected": "empezar raíz a la quinta a finalizar raíz a la quinta"
+    },
+    "roots_4_sbrief": {
+      "expected": "raíz a la quinta a finalizar raíz a la quinta"
+    },
+    "roots_5_default": {
+      "expected": "empezar raíz a la sexta a finalizar raíz a la sexta"
+    },
+    "roots_5_brief": {
+      "expected": "empezar raíz a la sexta a finalizar raíz a la sexta"
+    },
+    "roots_5_sbrief": {
+      "expected": "raíz a la sexta a finalizar raíz a la sexta"
+    },
+    "roots_6_default": {
+      "expected": "empezar raíz a la séptima a finalizar raíz a la séptima"
+    },
+    "roots_6_brief": {
+      "expected": "empezar raíz a la séptima a finalizar raíz a la séptima"
+    },
+    "roots_6_sbrief": {
+      "expected": "raíz a la séptima a finalizar raíz a la séptima"
+    },
+    "roots_7_default": {
+      "expected": "empezar raíz a la octava a finalizar raíz a la octava"
+    },
+    "roots_7_brief": {
+      "expected": "empezar raíz a la octava a finalizar raíz a la octava"
+    },
+    "roots_7_sbrief": {
+      "expected": "raíz a la octava a finalizar raíz a la octava"
+    },
+    "roots_8_default": {
+      "expected": "empezar raíz a la novena a finalizar raíz a la novena"
+    },
+    "roots_8_brief": {
+      "expected": "empezar raíz a la novena a finalizar raíz a la novena"
+    },
+    "roots_8_sbrief": {
+      "expected": "raíz a la novena a finalizar raíz a la novena"
+    },
+    "roots_9_default": {
+      "expected": "empezar raíz a la décima a finalizar raíz a la décima"
+    },
+    "roots_9_brief": {
+      "expected": "empezar raíz a la décima a finalizar raíz a la décima"
+    },
+    "roots_9_sbrief": {
+      "expected": "raíz a la décima a finalizar raíz a la décima"
+    },
+    "roots_10_default": {
+      "expected": "índice de raíz 11 empezar raíz a finalizar raíz"
+    },
+    "roots_10_brief": {
+      "expected": "índice de raíz 11 empezar raíz a finalizar raíz"
+    },
+    "roots_10_sbrief": {
+      "expected": "11 raíz a finalizar raíz"
+    },
+    "nested-roots_0_default": {
+      "expected": "índice de raíz 1 empezar raíz índice de raíz 1 empezar raíz a finalizar raíz finalizar raíz"
+    },
+    "nested-roots_0_brief": {
+      "expected": "índice de raíz 1 empezar raíz índice de raíz 1 empezar raíz a finalizar raíz finalizar raíz"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "1 raíz 1 raíz a finalizar raíz finalizar raíz"
+    },
+    "nested-roots_1_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "nested-roots_1_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "raíz cuadrada raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+    },
+    "nested-roots_2_default": {
+      "expected": "empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+    },
+    "nested-roots_2_brief": {
+      "expected": "empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "raíz cúbica raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+    },
+    "nested-roots_3_default": {
+      "expected": "empezar raíz a la cuarta empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta"
+    },
+    "nested-roots_3_brief": {
+      "expected": "empezar raíz a la cuarta empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "raíz a la cuarta raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta"
+    },
+    "nested-roots_4_default": {
+      "expected": "empezar raíz a la quinta empezar raíz a la quinta a finalizar raíz a la quinta finalizar raíz a la quinta"
+    },
+    "nested-roots_4_brief": {
+      "expected": "empezar raíz a la quinta empezar raíz a la quinta a finalizar raíz a la quinta finalizar raíz a la quinta"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "raíz a la quinta raíz a la quinta a finalizar raíz a la quinta finalizar raíz a la quinta"
+    },
+    "nested-roots_5_default": {
+      "expected": "empezar raíz a la sexta empezar raíz a la sexta a finalizar raíz a la sexta finalizar raíz a la sexta"
+    },
+    "nested-roots_5_brief": {
+      "expected": "empezar raíz a la sexta empezar raíz a la sexta a finalizar raíz a la sexta finalizar raíz a la sexta"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "raíz a la sexta raíz a la sexta a finalizar raíz a la sexta finalizar raíz a la sexta"
+    },
+    "nested-roots_6_default": {
+      "expected": "empezar raíz a la séptima empezar raíz a la séptima a finalizar raíz a la séptima finalizar raíz a la séptima"
+    },
+    "nested-roots_6_brief": {
+      "expected": "empezar raíz a la séptima empezar raíz a la séptima a finalizar raíz a la séptima finalizar raíz a la séptima"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "raíz a la séptima raíz a la séptima a finalizar raíz a la séptima finalizar raíz a la séptima"
+    },
+    "nested-roots_7_default": {
+      "expected": "empezar raíz a la octava empezar raíz a la octava a finalizar raíz a la octava finalizar raíz a la octava"
+    },
+    "nested-roots_7_brief": {
+      "expected": "empezar raíz a la octava empezar raíz a la octava a finalizar raíz a la octava finalizar raíz a la octava"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "raíz a la octava raíz a la octava a finalizar raíz a la octava finalizar raíz a la octava"
+    },
+    "nested-roots_8_default": {
+      "expected": "empezar raíz a la novena empezar raíz a la novena a finalizar raíz a la novena finalizar raíz a la novena"
+    },
+    "nested-roots_8_brief": {
+      "expected": "empezar raíz a la novena empezar raíz a la novena a finalizar raíz a la novena finalizar raíz a la novena"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "raíz a la novena raíz a la novena a finalizar raíz a la novena finalizar raíz a la novena"
+    },
+    "nested-roots_9_default": {
+      "expected": "empezar raíz a la décima empezar raíz a la décima a finalizar raíz a la décima finalizar raíz a la décima"
+    },
+    "nested-roots_9_brief": {
+      "expected": "empezar raíz a la décima empezar raíz a la décima a finalizar raíz a la décima finalizar raíz a la décima"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "raíz a la décima raíz a la décima a finalizar raíz a la décima finalizar raíz a la décima"
+    },
+    "nested-roots_10_default": {
+      "expected": "índice de raíz 11 empezar raíz índice de raíz 11 empezar raíz a finalizar raíz finalizar raíz"
+    },
+    "nested-roots_10_brief": {
+      "expected": "índice de raíz 11 empezar raíz índice de raíz 11 empezar raíz a finalizar raíz finalizar raíz"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "11 raíz 11 raíz a finalizar raíz finalizar raíz"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "índice de raíz 1 empezar raíz empezar raíz cúbica a finalizar raíz cúbica finalizar raíz"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "índice de raíz 1 empezar raíz empezar raíz cúbica a finalizar raíz cúbica finalizar raíz"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "1 raíz raíz cúbica a finalizar raíz cúbica finalizar raíz"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "raíz cuadrada raíz cúbica a finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "raíz cúbica raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "empezar raíz a la cuarta empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la cuarta"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "empezar raíz a la cuarta empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la cuarta"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "raíz a la cuarta raíz cúbica a finalizar raíz cúbica finalizar raíz a la cuarta"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "empezar raíz a la quinta empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la quinta"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "empezar raíz a la quinta empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la quinta"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "raíz a la quinta raíz cúbica a finalizar raíz cúbica finalizar raíz a la quinta"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "empezar raíz a la sexta empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la sexta"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "empezar raíz a la sexta empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la sexta"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "raíz a la sexta raíz cúbica a finalizar raíz cúbica finalizar raíz a la sexta"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "empezar raíz a la séptima empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la séptima"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "empezar raíz a la séptima empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la séptima"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "raíz a la séptima raíz cúbica a finalizar raíz cúbica finalizar raíz a la séptima"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "empezar raíz a la octava empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la octava"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "empezar raíz a la octava empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la octava"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "raíz a la octava raíz cúbica a finalizar raíz cúbica finalizar raíz a la octava"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "empezar raíz a la novena empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la novena"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "empezar raíz a la novena empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la novena"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "raíz a la novena raíz cúbica a finalizar raíz cúbica finalizar raíz a la novena"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "empezar raíz a la décima empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la décima"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "empezar raíz a la décima empezar raíz cúbica a finalizar raíz cúbica finalizar raíz a la décima"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "raíz a la décima raíz cúbica a finalizar raíz cúbica finalizar raíz a la décima"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "índice de raíz 11 empezar raíz empezar raíz cúbica a finalizar raíz cúbica finalizar raíz"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "índice de raíz 11 empezar raíz empezar raíz cúbica a finalizar raíz cúbica finalizar raíz"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "11 raíz raíz cúbica a finalizar raíz cúbica finalizar raíz"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz a la cuarta empezar raíz a la quinta a finalizar raíz a la quinta finalizar raíz a la cuarta finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz a la cuarta empezar raíz a la quinta a finalizar raíz a la quinta finalizar raíz a la cuarta finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "raíz cuadrada raíz cúbica raíz a la cuarta raíz a la quinta a finalizar raíz a la quinta finalizar raíz a la cuarta finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz cuadrada empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz cuadrada empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "raíz cuadrada raíz cúbica raíz cuadrada raíz cúbica a finalizar raíz cúbica finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz cuadrada empezar raíz cúbica empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz cuadrada empezar raíz cúbica empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "raíz cuadrada raíz cúbica raíz cuadrada raíz cúbica raíz cuadrada a finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz cuadrada"
+    }
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "name": "DanishMathspeakIssues2",
+  "locale": "da",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Danish Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "StartRod a SlutRot"
+    },
+    "MathspeakRoots_1": {
+      "expected": "RodEksponent 2 StartRod a SlutRot"
+    },
+    "MathspeakRoots_2": {
+      "expected": "RodEksponent 3 StartRod a SlutRot"
+    },
+    "MathspeakRoots_3": {
+      "expected": "RodEksponent 4 StartRod a SlutRot"
+    },
+    "MathspeakRoots_4": {
+      "expected": "IndlejretStartRod StartRod a SlutRot IndlejretSlutRot"
+    },
+    "MathspeakRoots_5": {
+      "expected": "IndlejretDobbeltStartRod IndlejretStartRod StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+    },
+    "MathspeakRoots_6": {
+      "expected": "IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "MathspeakRoots_7": {
+      "expected": "IndlejretDobbeltRodEksponent 2 IndlejretDobbeltStartRod IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+    },
+    "MathspeakRoots_8": {
+      "expected": "IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "MathspeakRoots_9": {
+      "expected": "IndlejretDobbeltRodEksponent 3 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+    },
+    "MathspeakRoots_10": {
+      "expected": "IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "MathspeakRoots_11": {
+      "expected": "IndlejretDobbeltRodEksponent 4 IndlejretDobbeltStartRod IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+    },
+    "MathspeakRoots_12": {
+      "expected": "IndlejretDobbeltRodEksponent 2 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+    },
+    "MathspeakRoots_13": {
+      "expected": "IndlejretDobbeltRodEksponent 4 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+    },
+    "HtmlEntities_0": {
+      "expected": "mindre end"
+    },
+    "HtmlEntities_1": {
+      "expected": "større end"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "StartBinomialEllerMatrix n Vælg k SlutBinomialEllerMatrix"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "StartBinomialEllerMatrix n Vælg k SlutBinomialEllerMatrix"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "StartBinomialEllerMatrix n Vælg k SlutBinomialEllerMatrix"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "venstre parantes Start Brøk n Over k Slut Brøk højre parantes"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "venstre parantes Start Brøk n Over k Slut Brøk højre parantes"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "venstre parantes Start Brøk n Over k Slut Brøk højre parantes"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "en halve minus fem attendedele"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "minus Start Brøk 5,2 Over a Slut Brøk"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "minus Start Brøk 5,2 Over 18 Slut Brøk"
+    },
+    "TrivialStuff_0": {
+      "expected": "a lig med b"
+    },
+    "TrivialStuff_1": {
+      "expected": "anførselstegn"
+    },
+    "TrivialStuff_2": {
+      "expected": "anførselstegn x anførselstegn"
+    },
+    "TrivialStuff_3": {
+      "expected": "apostrof"
+    },
+    "GermanFonts_0": {
+      "expected": "stort A fraktur"
+    },
+    "GermanFonts_1": {
+      "expected": "stort A fed fraktur"
+    },
+    "GermanFonts_2": {
+      "expected": "stort A fraktur"
+    },
+    "GermanFonts_3": {
+      "expected": "stort A fed fraktur"
+    },
+    "GermanFonts_4": {
+      "expected": "abc fed fraktur"
+    },
+    "GermanFonts_5": {
+      "expected": "ABC fed fraktur"
+    },
+    "GermanFonts_6": {
+      "expected": "stort A stort B stort C fed fraktur"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "m normal"
+    },
+    "OtherFonts_2": {
+      "expected": "mi"
+    },
+    "OtherFonts_3": {
+      "expected": "mi kursiv"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "3 kursiv"
+    },
+    "OtherFonts_6": {
+      "expected": "30 grader"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m stort A"
+    },
+    "Multiline_0": {
+      "expected": "StartLayout 1. Række  a 2. Række  b SlutLayout"
+    },
+    "Multiline_1": {
+      "expected": "StartLayout 1. Række 1. Kolonne a 2. Kolonne c 2. Række 1. Kolonne b 2. Kolonne d SlutLayout"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "mindre end eller lig med 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "lig med 2 lig med"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "mindre end eller lig med 2 lig med"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "StartLayout 1. Række 1. Kolonne 1 2. Kolonne mindre end eller lig med 2 SlutLayout"
+    },
+    "EncloseGeneral": {
+      "expected": "StartOmsluttet cirkel a SlutOmsluttet"
+    },
+    "EncloseLeftbar": {
+      "expected": "lodret streg a"
+    },
+    "EncloseRightbar": {
+      "expected": "a lodret streg"
+    },
+    "LatinMathfonts_0": {
+      "expected": "stort A fraktur"
+    },
+    "LatinMathfonts_1": {
+      "expected": "stort A fed fraktur"
+    },
+    "LatinMathfonts_2": {
+      "expected": "stort A fed håndskrift"
+    },
+    "LatinMathfonts_3": {
+      "expected": "stort A fed kursiv"
+    },
+    "LatinMathfonts_4": {
+      "expected": "stort A fed"
+    },
+    "LatinMathfonts_5": {
+      "expected": "stort A dobbeltstreget"
+    },
+    "LatinMathfonts_6": {
+      "expected": "stort A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "stort A monospacieret"
+    },
+    "LatinMathfonts_8": {
+      "expected": "stort A sans serif fed"
+    },
+    "LatinMathfonts_9": {
+      "expected": "stort A sans serif kursiv"
+    },
+    "LatinMathfonts_10": {
+      "expected": "stort A sans serif fed kursiv"
+    },
+    "LatinMathfonts_11": {
+      "expected": "stort A sans serif"
+    },
+    "LatinMathfonts_12": {
+      "expected": "stort A håndskrift"
+    },
+    "GreekMathfonts_0": {
+      "expected": "stort Alfa fed"
+    },
+    "GreekMathfonts_1": {
+      "expected": "stort Alfa"
+    },
+    "GreekMathfonts_2": {
+      "expected": "stort Alfa fed kursiv"
+    },
+    "GreekMathfonts_3": {
+      "expected": "stort Alfa sans serif fed"
+    },
+    "GreekMathfonts_4": {
+      "expected": "stort Alfa sans serif fed kursiv"
+    },
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "StartLayout 1. Række  med Label venstre parantes 3 prik 1 prik 10 højre parantes SlutLabel SlutLayout"
+    },
+    "Issue320_0": {
+      "expected": "partielle afledte"
+    },
+    "Issue320_1": {
+      "expected": "x fakultet"
+    },
+    "Issue320_2": {
+      "expected": "minus minus x"
+    },
+    "Issue320_3": {
+      "expected": "plustegn plustegn x"
+    },
+    "Issue320_4": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_5": {
+      "expected": "partielle afledte partielle afledte x"
+    },
+    "Issue320_6": {
+      "expected": "venstre parantes Start Brøk partielle afledte kvadreret Over partielle afledte x kvadreret Slut Brøk plustegn Start Brøk partielle afledte kvadreret Over partielle afledte y kvadreret Slut Brøk højre parantes StartNumeriskVærdi phi venstre parantes x plustegn I normal y højre parantes SlutNumeriskVærdi kvadreret lig med 0"
+    },
+    "Prime_0": {
+      "expected": "x mærke"
+    },
+    "Prime_1": {
+      "expected": "x dobbelt mærke"
+    },
+    "Prime_2": {
+      "expected": "x trippel mærke"
+    },
+    "Prime_3": {
+      "expected": "x firdobbelt mærke"
+    },
+    "Prime_4": {
+      "expected": "x mærke"
+    },
+    "Prime_5": {
+      "expected": "x dobbelt mærke"
+    },
+    "Prime_6": {
+      "expected": "x primtegn"
+    },
+    "Prime_7": {
+      "expected": "x dobbelt primtegn"
+    },
+    "Prime_8": {
+      "expected": "x apostrof"
+    },
+    "Prime_9": {
+      "expected": "x dobbelt mærke"
+    },
+    "Prime_10": {
+      "expected": "x trippel mærke"
+    },
+    "Prime_11": {
+      "expected": "x firdobbelt mærke"
+    },
+    "Prime_12": {
+      "expected": "x fem primtegn"
+    },
+    "Prime_13": {
+      "expected": "x seks primtegn"
+    },
+    "Prime_14": {
+      "expected": "x dobbelt mærke"
+    },
+    "Prime_15": {
+      "expected": "x trippel mærke"
+    },
+    "Prime_16": {
+      "expected": "x firdobbelt mærke"
+    },
+    "Prime_17": {
+      "expected": "x fem primtegn"
+    },
+    "Prime_18": {
+      "expected": "x seks primtegn"
+    },
+    "LimBoth_0": {
+      "expected": "SymbolOver SymbolUnder sum Undertekst n Overtekst 2 Med understreget Med tilde"
+    },
+    "LimBoth_1": {
+      "expected": "SymbolOver SymbolUnder sum Undertekst n Overtekst 2 Med understreget Med tilde"
+    },
+    "LimBoth_2": {
+      "expected": "SymbolOver SymbolUnder sum Undertekst n Overtekst 2 Med understreget Med tilde"
+    },
+    "LimBoth_3": {
+      "expected": "sum Undertekst n Overtekst 2"
+    },
+    "LimBoth_4": {
+      "expected": "sum Undertekst n Overtekst 2 a"
+    },
+    "LimUpper_0": {
+      "expected": "sum Overtekst n"
+    },
+    "LimUpper_1": {
+      "expected": "sum Overtekst n a"
+    },
+    "LimUpper_2": {
+      "expected": "sum Overtekst n"
+    },
+    "LimUpper_3": {
+      "expected": "sum Overtekst n a"
+    },
+    "LimLower_0": {
+      "expected": "sum Undertekst n"
+    },
+    "LimLower_1": {
+      "expected": "sum Undertekst n a"
+    },
+    "LimLower_2": {
+      "expected": "sum Undertekst n"
+    },
+    "LimLower_3": {
+      "expected": "sum Undertekst n a"
+    },
+    "Issue_442_0": {
+      "expected": "9 divideret med 3 er ikke lig med 9 krydsprodukt 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 divideret med 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 divideret med 3 er ikke lig med 9 krydsprodukt 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 divideret med 3"
+    },
+    "Prime_19": {
+      "expected": "x apostrof dobbelt mærke"
+    },
+    "issue_728_0": {
+      "expected": "a mol"
+    },
+    "issue_728_1": {
+      "expected": "a mol 1"
+    },
+    "issue_767_0": {
+      "expected": "stort A Sænket n Grundlinje lodret linie Sænket kerne stort P Sænket Sænket n Sænket Grundlinje"
+    },
+    "issue_767_1": {
+      "expected": "stort A Sænket n Grundlinje lodret linie Sænket a b c stort P Sænket Sænket n Sænket Grundlinje"
+    },
+    "issue_767_2": {
+      "expected": "stort A Sænket n Grundlinje lodret linie Sænket abc stort P Sænket Sænket n Sænket Grundlinje"
+    },
+    "issue_767_3": {
+      "expected": "s I n venstre parantes x højre parantes"
+    },
+    "issue_767_4": {
+      "expected": "sinus venstre parantes x højre parantes"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "locale": "af",
+  "name": "AfrikaansExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsAfrikaans",
+  "information": "Afrikaans Extra Function tests.",
+  "compare": true,
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "natuurlike logaritme"
+    },
+    "arccos-clearspeak-Trig_TrigInverse": {
+      "key": "arccos",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "inverse cosine"
+    },
+    "arccot-clearspeak-Trig_TrigInverse": {
+      "key": "arccot",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "inverse cotangent"
+    },
+    "arccsc-clearspeak-Trig_TrigInverse": {
+      "key": "arccsc",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "inverse cosecant"
+    },
+    "arcsec-clearspeak-Trig_TrigInverse": {
+      "key": "arcsec",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "inverse secant"
+    },
+    "arcsin-clearspeak-Trig_TrigInverse": {
+      "key": "arcsin",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "inverse sine"
+    },
+    "arctan-clearspeak-Trig_TrigInverse": {
+      "key": "arctan",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "inverse tangent"
+    }
+  }
+}

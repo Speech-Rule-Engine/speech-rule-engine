@@ -1,0 +1,22 @@
+{
+  "locale": "it",
+  "name": "ItalianExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsItalian",
+  "information": "Italian Extra Character tests.",
+  "tests": {
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "Delta maiuscola"
+    },
+    "00D7-default-alternative": {
+      "key": "×",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "moltiplicato"
+    }
+  }
+}

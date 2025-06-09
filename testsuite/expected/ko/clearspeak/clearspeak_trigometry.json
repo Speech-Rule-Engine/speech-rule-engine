@@ -1,0 +1,456 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakTrigometry",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "Korean Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": ["TrigReciprocal001", "TrigReciprocal002", "TrigReciprocal003", "TrigReciprocal004", "TrigReciprocal005", "TrigReciprocal006", "TrigReciprocal007", "TrigReciprocal008", "TrigReciprocal009", "TrigReciprocal010", "TrigReciprocal011", "TrigReciprocal012", "TrigReciprocal013", "TrigReciprocal014", "TrigReciprocal015", "TrigReciprocal016", "TrigReciprocal017", "TrigReciprocal018", "TrigReciprocal019", "TrigReciprocal020", "TrigReciprocal021", "TrigReciprocal022", "TrigReciprocal023", "TrigReciprocal024", "TrigReciprocal025", "TrigReciprocal026", "HypTrigReciprocal001", "HypTrigReciprocal002", "HypTrigReciprocal003", "HypTrigReciprocal004", "HypTrigReciprocal005", "HypTrigReciprocal006", "HypTrigReciprocal007", "HypTrigReciprocal008", "HypTrigReciprocal009", "HypTrigReciprocal010", "HypTrigReciprocal011", "HypTrigReciprocal012", "HypTrigReciprocal013", "HypTrigReciprocal014", "HypTrigReciprocal015", "HypTrigReciprocal016", "HypTrigReciprocal017", "HypTrigReciprocal018", "HypTrigReciprocal019", "HypTrigReciprocal020"],
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "expected": "싸인 x"
+    },
+    "Trig002": {
+      "expected": "코싸인 x"
+    },
+    "Trig003": {
+      "expected": "탄젠트 쎄타"
+    },
+    "Trig004": {
+      "expected": "시컨트 쎄타"
+    },
+    "Trig005": {
+      "expected": "코시컨트 x"
+    },
+    "Trig006": {
+      "expected": "코탄젠트 x"
+    },
+    "Trig007": {
+      "expected": "싸인 제곱 x"
+    },
+    "Trig008": {
+      "expected": "코싸인 세제곱 x"
+    },
+    "Trig009": {
+      "expected": "탄젠트 제곱 x"
+    },
+    "Trig010": {
+      "expected": "시컨트 세제곱 x"
+    },
+    "Trig011": {
+      "expected": "코시컨트 제곱 x"
+    },
+    "Trig012": {
+      "expected": "코탄젠트 제곱 x"
+    },
+    "Trig013": {
+      "expected": "싸인 2 파이"
+    },
+    "Trig014": {
+      "expected": "싸인 의, 괄호 열고, 파이 k, 더하기, 2 분의 파이, 괄호 닫고"
+    },
+    "Trig015": {
+      "expected": "코싸인 의, 2 분의 파이"
+    },
+    "Trig016": {
+      "expected": "싸인 의, 2 분의 파이"
+    },
+    "Trig017": {
+      "expected": "2 분의 싸인 파이"
+    },
+    "Trig018": {
+      "expected": "싸인 파이 분의 2"
+    },
+    "Trig019": {
+      "expected": "분모가 3, 이고 분자가, 싸인 의, 2 분의 파이, 인 분수"
+    },
+    "Trig020": {
+      "expected": "탄젠트 마이너스 파이"
+    },
+    "Trig021": {
+      "expected": "싸인 의, 괄호 열고, x 더하기 파이, 괄호 닫고"
+    },
+    "Trig022": {
+      "expected": "코싸인 의, 괄호 열고, x 더하기, 2 분의 파이, 괄호 닫고"
+    },
+    "Trig023": {
+      "expected": "코싸인 의, 괄호 열고, 2 분의 파이, 더하기 x, 괄호 닫고"
+    },
+    "Trig024": {
+      "expected": "싸인 제곱 x, 더하기, 코싸인 제곱 x, 는 1"
+    },
+    "Trig025": {
+      "expected": "싸인 네제곱 x"
+    },
+    "Trig026": {
+      "expected": "5 제곱 코싸인 x"
+    },
+    "Trig027": {
+      "expected": "n 제곱 탄젠트 x"
+    },
+    "Trig028": {
+      "expected": "코싸인 x 분의 싸인 x"
+    },
+    "Trig029": {
+      "expected": "탄젠트 35 도"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "expected": "싸인 의, 괄호 열고, 45 도 더하기 30 도, 괄호 닫고"
+    },
+    "Trig031": {
+      "expected": "탄젠트 의, 괄호 열고, 각 D E F, 괄호 닫고"
+    },
+    "Trig032": {
+      "expected": "탄젠트 의, 괄호 열고, 각 D, 괄호 닫고"
+    },
+    "Trig033": {
+      "expected": "싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는, 싸인 x 코싸인 y, 더하기, 코싸인 x 싸인 y"
+    },
+    "Trig034": {
+      "expected": "코싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는, 코싸인 x 코싸인 y, 빼기, 싸인 x 싸인 y"
+    },
+    "Trig035": {
+      "expected": "탄젠트 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는, 분모가 1 빼기, 탄젠트 x 탄젠트 y, 이고 분자가 탄젠트 x 빼기 탄젠트 y, 인 분수"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "expected": "싸인 30 도 코싸인 15 도, 더하기, 코싸인 30 도 싸인 15 도"
+    },
+    "Trig037": {
+      "expected": "탄젠트 의, 괄호 열고, 6 분의 파이, 더하기, 3 분의 2 파이, 괄호 닫고, 는, 분모가 1 빼기, 탄젠트 의, 6 분의 파이, 탄젠트 의, 3 분의 2 파이, 이고 분자가, 탄젠트 의, 6 분의 파이, 빼기, 탄젠트 의, 3 분의 2 파이, 인 분수"
+    },
+    "Trig038": {
+      "expected": "탄젠트 2 x, 는, 분모가 1 빼기, 탄젠트 제곱 x, 이고 분자가 2 탄젠트 x, 인 분수"
+    },
+    "Trig039": {
+      "expected": "코싸인 2 x, 는 2, 코싸인 제곱 x, 빼기 1"
+    },
+    "Trig040": {
+      "expected": "싸인 의, 2 분의 x, 는 플러스마이너스 루트, 분모가 2, 이고 분자가 1 빼기 코싸인 x, 인 분수"
+    },
+    "Trig041": {
+      "expected": "탄젠트 의, 2 분의 x, 는 플러스마이너스 루트, 분모가 1 더하기 코싸인 x, 이고 분자가 1 빼기 코싸인 x, 인 분수"
+    },
+    "Trig042": {
+      "expected": "코싸인 x 코싸인 y, 는 2, 코싸인 의, 분모가 2, 이고 분자가 x 더하기 y, 인 분수, 코싸인 의, 분모가 2, 이고 분자가 x 빼기 y, 인 분수"
+    },
+    "Trig043": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 8 분의 파이, 괄호 닫고, 는 마이너스 2 분의 1 루트 2 빼기 루트 2, 루트끝, 루트끝"
+    },
+    "Trig044": {
+      "expected": "탄젠트 의, 8 분의 3 파이, 는, 분모가 루트, 루트 2, 루트끝, 빼기 1, 루트끝, 이고 분자가 루트, 루트 2, 루트끝, 더하기 1, 루트끝, 인 분수"
+    },
+    "Trig045": {
+      "expected": "탄젠트 의, 12 분의 파이, 는 2 분의 1 루트 2 빼기 루트 3, 루트끝, 루트끝"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "expected": "역함수 싸인 의 x"
+    },
+    "TrigInvAuto002": {
+      "expected": "역함수 코싸인 의 x"
+    },
+    "TrigInvAuto003": {
+      "expected": "역함수 탄젠트 의 x"
+    },
+    "TrigInvAuto004": {
+      "expected": "역함수 코탄젠트 의 x"
+    },
+    "TrigInvAuto005": {
+      "expected": "역함수 시컨트 의 x"
+    },
+    "TrigInvAuto006": {
+      "expected": "역함수 코시컨트 의 x"
+    },
+    "TrigInvAuto007": {
+      "expected": "역함수 싸인 의, 분모가 2, 이고 분자가 루트 2, 인 분수"
+    },
+    "TrigInvAuto008": {
+      "expected": "역함수 코싸인 의 2 분의 1"
+    },
+    "TrigInvAuto009": {
+      "expected": "역함수 탄젠트 의 17"
+    },
+    "TrigInvAuto010": {
+      "expected": "역함수 코탄젠트 의 32"
+    },
+    "TrigInvAuto011": {
+      "expected": "역함수 시컨트 의 100"
+    },
+    "TrigInvAuto012": {
+      "expected": "역함수 코시컨트 의 85"
+    },
+    "TrigInvAuto013": {
+      "expected": "역함수 싸인 의 마이너스 x"
+    },
+    "TrigInvAuto014": {
+      "expected": "역함수 코싸인 의 마이너스 x"
+    },
+    "TrigInvAuto015": {
+      "expected": "역함수 탄젠트 의, 괄호 열고, 마이너스 x 더하기 12, 괄호 닫고"
+    },
+    "TrigInvAuto016": {
+      "expected": "역함수 코탄젠트 의, 괄호 열고, 마이너스 x 빼기 1, 괄호 닫고"
+    },
+    "TrigInvAuto017": {
+      "expected": "역함수 싸인 의 싸인 0"
+    },
+    "TrigInvAuto018": {
+      "expected": "역함수 코시컨트 의 코시컨트 x"
+    },
+    "TrigInvAuto019": {
+      "expected": "코싸인 의, 괄호 열고, 역함수 코싸인 의, 괄호 열고, 마이너스, 분모가 2, 이고 분자가 루트 2, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "TrigInvAuto020": {
+      "expected": "코싸인 의, 괄호 열고, 마이너스, 역함수 코싸인 의, 괄호 열고, 분모가 2, 이고 분자가 루트 2, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "TrigInvAuto021": {
+      "expected": "역함수 싸인 의, 괄호 열고, 코싸인 의, 4 분의 파이, 괄호 닫고"
+    },
+    "TrigInvAuto022": {
+      "expected": "싸인, 역함수 코싸인 의 2 분의 1"
+    },
+    "TrigInvAuto023": {
+      "expected": "싸인, 역함수 탄젠트 의 1"
+    },
+    "TrigInvAuto024": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 역함수 탄젠트 의 1, 괄호 닫고"
+    },
+    "TrigInvAuto025": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 역함수 탄젠트 의 마이너스 1, 괄호 닫고"
+    },
+    "TrigInvAuto026": {
+      "expected": "역함수 시컨트 의 시컨트 x"
+    },
+    "TrigInverse001": {
+      "expected": "역함수 싸인 의 x"
+    },
+    "TrigInverse002": {
+      "expected": "역함수 코싸인 의 x"
+    },
+    "TrigInverse003": {
+      "expected": "역함수 탄젠트 의 x"
+    },
+    "TrigInverse004": {
+      "expected": "역함수 코탄젠트 의 x"
+    },
+    "TrigInverse005": {
+      "expected": "역함수 시컨트 의 x"
+    },
+    "TrigInverse006": {
+      "expected": "역함수 코시컨트 의 x"
+    },
+    "TrigInverse007": {
+      "expected": "역함수 싸인 의, 분모가 2, 이고 분자가 루트 2, 인 분수"
+    },
+    "TrigInverse008": {
+      "expected": "역함수 코싸인 의 2 분의 1"
+    },
+    "TrigInverse009": {
+      "expected": "역함수 탄젠트 의 17"
+    },
+    "TrigInverse010": {
+      "expected": "역함수 코탄젠트 의 32"
+    },
+    "TrigInverse011": {
+      "expected": "역함수 시컨트 의 100"
+    },
+    "TrigInverse012": {
+      "expected": "역함수 코시컨트 의 85"
+    },
+    "TrigInverse013": {
+      "expected": "역함수 싸인 의 마이너스 x"
+    },
+    "TrigInverse014": {
+      "expected": "역함수 코싸인 의 마이너스 x"
+    },
+    "TrigInverse015": {
+      "expected": "역함수 탄젠트 의, 괄호 열고, 마이너스 x 더하기 12, 괄호 닫고"
+    },
+    "TrigInverse016": {
+      "expected": "역함수 코탄젠트 의, 괄호 열고, 마이너스 x 빼기 1, 괄호 닫고"
+    },
+    "TrigInverse017": {
+      "expected": "역함수 싸인 의 싸인 0"
+    },
+    "TrigInverse018": {
+      "expected": "역함수 코시컨트 의 코시컨트 x"
+    },
+    "TrigInverse019": {
+      "expected": "코싸인 의, 괄호 열고, 역함수 코싸인 의, 괄호 열고, 마이너스, 분모가 2, 이고 분자가 루트 2, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "TrigInverse020": {
+      "expected": "코싸인 의, 괄호 열고, 마이너스, 역함수 코싸인 의, 괄호 열고, 분모가 2, 이고 분자가 루트 2, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "TrigInverse021": {
+      "expected": "역함수 싸인 의, 괄호 열고, 코싸인 의, 4 분의 파이, 괄호 닫고"
+    },
+    "TrigInverse022": {
+      "expected": "싸인, 역함수 코싸인 의 2 분의 1"
+    },
+    "TrigInverse023": {
+      "expected": "싸인, 역함수 탄젠트 의 1"
+    },
+    "TrigInverse024": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 역함수 탄젠트 의 1, 괄호 닫고"
+    },
+    "TrigInverse025": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 역함수 탄젠트 의 마이너스 1, 괄호 닫고"
+    },
+    "TrigInverse026": {
+      "expected": "역함수 시컨트 의 시컨트 x"
+    },
+    "ArcTrig001": {
+      "expected": "아크 싸인 x"
+    },
+    "ArcTrig002": {
+      "expected": "아크 코싸인 x"
+    },
+    "ArcTrig003": {
+      "expected": "아크 탄젠트 x"
+    },
+    "ArcTrig004": {
+      "expected": "아크 코탄젠트 x"
+    },
+    "ArcTrig005": {
+      "expected": "아크 시컨트 x"
+    },
+    "ArcTrig006": {
+      "expected": "아크 코시컨트 x"
+    },
+    "ArcTrig007": {
+      "expected": "아크 싸인 의, 분모가 2, 이고 분자가 루트 2, 인 분수"
+    },
+    "ArcTrig008": {
+      "expected": "아크 코싸인 2 분의 1"
+    },
+    "ArcTrig009": {
+      "expected": "아크 탄젠트 17"
+    },
+    "ArcTrig010": {
+      "expected": "아크 코탄젠트 32"
+    },
+    "ArcTrig011": {
+      "expected": "아크 시컨트 100"
+    },
+    "ArcTrig012": {
+      "expected": "아크 코시컨트 85"
+    },
+    "ArcTrig013": {
+      "expected": "아크 싸인 마이너스 x"
+    },
+    "ArcTrig014": {
+      "expected": "아크 코싸인 마이너스 x"
+    },
+    "ArcTrig015": {
+      "expected": "아크 탄젠트 의, 괄호 열고, 마이너스 x 더하기 12, 괄호 닫고"
+    },
+    "ArcTrig016": {
+      "expected": "아크 코탄젠트 의, 괄호 열고, 마이너스 x 빼기 1, 괄호 닫고"
+    },
+    "ArcTrig017": {
+      "expected": "아크 싸인, 싸인 0"
+    },
+    "ArcTrig018": {
+      "expected": "아크 코시컨트, 코시컨트 x"
+    },
+    "ArcTrig019": {
+      "expected": "코싸인 의, 괄호 열고, 아크 코싸인 의, 괄호 열고, 마이너스, 분모가 2, 이고 분자가 루트 2, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "ArcTrig020": {
+      "expected": "코싸인 의, 괄호 열고, 마이너스, 아크 코싸인 의, 괄호 열고, 분모가 2, 이고 분자가 루트 2, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "ArcTrig021": {
+      "expected": "아크 싸인 의, 괄호 열고, 코싸인 의, 4 분의 파이, 괄호 닫고"
+    },
+    "ArcTrig022": {
+      "expected": "싸인, 아크 코싸인 2 분의 1"
+    },
+    "ArcTrig023": {
+      "expected": "싸인, 아크 탄젠트 1"
+    },
+    "ArcTrig024": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 아크 탄젠트 1, 괄호 닫고"
+    },
+    "ArcTrig025": {
+      "expected": "싸인 의, 괄호 열고, 마이너스, 아크 탄젠트 마이너스 1, 괄호 닫고"
+    },
+    "ArcTrig026": {
+      "expected": "아크 시컨트, 시컨트 x"
+    },
+    "AllTrig01": {
+      "expected": "아크 싸인 x"
+    },
+    "AllTrig02": {
+      "expected": "아크 코싸인 x"
+    },
+    "AllTrig03": {
+      "expected": "아크 탄젠트 x"
+    },
+    "_comment6_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "expected": "하이퍼볼릭 싸인 의 x"
+    },
+    "HypTrig002": {
+      "expected": "하이퍼볼릭 코싸인 의 x"
+    },
+    "HypTrig003": {
+      "expected": "하이퍼볼릭 탄젠트 의 x"
+    },
+    "HypTrig004": {
+      "expected": "하이퍼볼릭 코탄젠트 의 x"
+    },
+    "HypTrig005": {
+      "expected": "하이퍼볼릭 시컨트 의 x"
+    },
+    "HypTrig006": {
+      "expected": "하이퍼볼릭 코시컨트 의 x"
+    },
+    "HypTrig007": {
+      "expected": "역함수 하이퍼볼릭 싸인 의 x"
+    },
+    "HypTrig008": {
+      "expected": "역함수 하이퍼볼릭 코싸인 의 x"
+    },
+    "HypTrig009": {
+      "expected": "역함수 하이퍼볼릭 탄젠트 의 x"
+    },
+    "HypTrig010": {
+      "expected": "역함수 하이퍼볼릭 코탄젠트 의 x"
+    },
+    "HypTrig011": {
+      "expected": "역함수 하이퍼볼릭 시컨트 의 x"
+    },
+    "HypTrig012": {
+      "expected": "역함수 하이퍼볼릭 코시컨트 의 x"
+    },
+    "HypTrig013": {
+      "expected": "하이퍼볼릭 싸인 의, 역함수 하이퍼볼릭 싸인 의 x"
+    },
+    "HypTrig014": {
+      "expected": "하이퍼볼릭 코싸인 의, 역함수 하이퍼볼릭 코싸인 의 x"
+    },
+    "HypTrig015": {
+      "expected": "하이퍼볼릭 탄젠트 의, 역함수 하이퍼볼릭 탄젠트 의 x"
+    },
+    "HypTrig016": {
+      "expected": "하이퍼볼릭 코탄젠트 의, 역함수 하이퍼볼릭 코탄젠트 의 x"
+    },
+    "HypTrig017": {
+      "expected": "역함수 하이퍼볼릭 싸인 의, 하이퍼볼릭 싸인 의 x"
+    },
+    "HypTrig018": {
+      "expected": "역함수 하이퍼볼릭 코싸인 의, 하이퍼볼릭 코싸인 의 x"
+    },
+    "HypTrig019": {
+      "expected": "역함수 하이퍼볼릭 탄젠트 의, 하이퍼볼릭 탄젠트 의 x"
+    },
+    "HypTrig020": {
+      "expected": "역함수 하이퍼볼릭 코탄젠트 의, 하이퍼볼릭 코탄젠트 의 x"
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "name": "EnglishClearspeakFencesNeutral",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/common/fences_neutral.json",
+  "information": "English Clearspeak Neutral Fences rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [
+    "BarFenced_0_sbrief",
+    "BarFenced_1_sbrief",
+    "BarFenced_2_sbrief",
+    "BarFenced_3_sbrief",
+    "BarFenced_4_sbrief",
+    "BarFenced_5_sbrief",
+    "BarFenced_6_sbrief",
+    "BarFencedMixed_0_sbrief",
+    "BarFencedMixed_1_sbrief",
+    "BarFencedMixed_2_sbrief",
+    "BarFencedMixed_3_sbrief",
+    "CenterBar_0_sbrief",
+    "CenterBar_1_sbrief",
+    "CenterBar_2_sbrief",
+    "CenterBar_3_sbrief",
+    "CenterBar_4_sbrief",
+    "CenterBar_5_sbrief",
+    "Function_0_sbrief",
+    "Function_1_sbrief",
+    "Function_2_sbrief",
+    "Function_3_sbrief",
+    "Function_4_sbrief",
+    "Function_5_sbrief",
+    "FunctionMetric0_sbrief",
+    "FunctionMetric1_sbrief",
+    "FunctionMetric2_sbrief",
+    "FunctionMetric3_sbrief",
+    "FunctionMetric4_sbrief",
+    "FunctionMetric5_sbrief",
+    "CenterBarFunc_0_sbrief",
+    "CenterBarFunc_1_sbrief",
+    "CenterBarFunc_2_sbrief",
+    "CenterBarFunc_3_sbrief",
+    "CenterBarFunc_4_sbrief",
+    "CenterBarFunc_5_sbrief",
+    "CenterBarFunc_6_sbrief"
+  ],
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFenced_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFenced_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFenced_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFenced_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFenced_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFenced_6_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> divides <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> double vertical bar </prosody></speak>"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> parallel to <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> double vertical bar </prosody></speak>"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> divides <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> divides </prosody></speak>"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> triple vertical bar <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> double vertical bar </prosody></speak>"
+    },
+    "CenterBar_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> double vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> parallel to <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> triple vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "BarFenced_0_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value </prosody></speak>"
+    },
+    "BarFenced_1_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value </prosody></speak>"
+    },
+    "BarFenced_2_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the absolute value of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end absolute value </prosody></speak>"
+    },
+    "BarFenced_3_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end metric </prosody></speak>"
+    },
+    "BarFenced_4_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end metric </prosody></speak>"
+    },
+    "BarFenced_5_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end metric </prosody></speak>"
+    },
+    "BarFenced_6_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the metric of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"0\"/> end metric </prosody></speak>"
+    },
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> divides <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> double vertical bar </prosody></speak>"
+    },
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> parallel to <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> double vertical bar </prosody></speak>"
+    },
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> divides <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> divides </prosody></speak>"
+    },
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> triple vertical bar <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> double vertical bar </prosody></speak>"
+    },
+    "CenterBar_0_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_1_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_2_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_3_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> double vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_4_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> parallel to <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBar_5_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> triple vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> double vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> parallel to <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> triple vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> triple vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "Function_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Function_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Function_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Function_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">r</say-as> <mark name=\"5\"/> times <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Function_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Function_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sum <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "FunctionMetric0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "FunctionMetric1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "FunctionMetric2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "FunctionMetric3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">r</say-as> <mark name=\"5\"/> times <break time=\"250ms\"/> <mark name=\"4\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "FunctionMetric4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"4\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "FunctionMetric5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sum <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Function_0_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end absolute value </prosody></speak>"
+    },
+    "Function_1_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end absolute value </prosody></speak>"
+    },
+    "Function_2_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end absolute value </prosody></speak>"
+    },
+    "Function_3_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">r</say-as> <mark name=\"5\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end absolute value </prosody></speak>"
+    },
+    "Function_4_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"1\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end absolute value </prosody></speak>"
+    },
+    "Function_5_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sum <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the absolute value of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end absolute value </prosody></speak>"
+    },
+    "FunctionMetric0_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end metric </prosody></speak>"
+    },
+    "FunctionMetric1_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end metric </prosody></speak>"
+    },
+    "FunctionMetric2_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end metric </prosody></speak>"
+    },
+    "FunctionMetric3_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">r</say-as> <mark name=\"5\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end metric </prosody></speak>"
+    },
+    "FunctionMetric4_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"1\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end metric </prosody></speak>"
+    },
+    "FunctionMetric5_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sum <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> the metric of <mark name=\"2\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> end metric </prosody></speak>"
+    },
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> divides <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> double vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> parallel to <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> triple vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    },
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> triple vertical bar <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> </prosody></speak>"
+    }
+  }
+}

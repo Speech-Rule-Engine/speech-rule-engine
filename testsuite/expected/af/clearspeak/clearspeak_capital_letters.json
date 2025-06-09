@@ -1,0 +1,86 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakCapitalLetters",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "Afrikaans Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "expected": "sinus A oor a, is gelyk aan, sinus B oor b"
+    },
+    "Cap002": {
+      "expected": "c kwadraat is gelyk aan a kwadraat plus b kwadraat minus 2 a b kosinus C"
+    },
+    "Cap003": {
+      "expected": "tangens A is gelyk aan, a oor b"
+    },
+    "Cap004": {
+      "expected": "A B"
+    },
+    "Cap005": {
+      "expected": "a A"
+    },
+    "Cap006": {
+      "expected": "b A"
+    },
+    "Cap007": {
+      "expected": "B a"
+    },
+    "Cap008": {
+      "expected": "hoek A B C"
+    },
+    "Cap009": {
+      "expected": "die hoekmaat hoek A B C"
+    },
+    "Cap010": {
+      "expected": "die hoekmaat hoek A"
+    },
+    "_comment5_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "expected": "sinus hoofletter A oor a, is gelyk aan, sinus hoofletter B oor b"
+    },
+    "Cap012": {
+      "expected": "c kwadraat is gelyk aan a kwadraat plus b kwadraat minus 2 a b kosinus hoofletter C"
+    },
+    "Cap013": {
+      "expected": "tangens hoofletter A is gelyk aan, a oor b"
+    },
+    "Cap014": {
+      "expected": "hoofletter A, hoofletter B"
+    },
+    "Cap015": {
+      "expected": "a, hoofletter A"
+    },
+    "Cap016": {
+      "expected": "b, hoofletter A"
+    },
+    "Cap017": {
+      "expected": "hoofletter B, a"
+    },
+    "Cap018": {
+      "expected": "hoek hoofletter A, hoofletter B, hoofletter C"
+    },
+    "Cap019": {
+      "expected": "die hoekmaat hoek hoofletter A, hoofletter B, hoofletter C"
+    },
+    "Cap020": {
+      "expected": "die hoekmaat hoek hoofletter A"
+    },
+    "Cap020a": {
+      "expected": "hoek hoofletter A"
+    },
+    "_comment8_": " /**",
+    "_comment9_": "  * Testing ClearspeakEnglishCapitalLetters Example Cap020 (extra)",
+    "_comment10_": "  */",
+    "_comment12_": "   var preference = 'Caps_SayCaps';",
+    "_comment13_": "   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';",
+    "_comment14_": "   var speech = 'angle cap A';",
+    "_comment16_": " };"
+  }
+}

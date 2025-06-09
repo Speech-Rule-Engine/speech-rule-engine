@@ -1,0 +1,152 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "ItalianClearspeakFontCaps",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_font_caps.json",
+  "information": "Italian Clearspeak Font tests with Caps preference.",
+  "domain": "clearspeak",
+  "locale": "it",
+  "active": "ClearspeakItalianFont",
+  "exclude": [],
+  "tests": {
+    "LatinMathfontsUpperCaps_0": {
+      "expected": "A maiuscola"
+    },
+    "LatinMathfontsUpperCaps_1": {
+      "expected": "A maiuscola"
+    },
+    "LatinMathfontsUpperCaps_2": {
+      "expected": "A maiuscola grassetto"
+    },
+    "LatinMathfontsUpperCaps_3": {
+      "expected": "A maiuscola"
+    },
+    "LatinMathfontsUpperCaps_4": {
+      "expected": "A maiuscola grassetto italico"
+    },
+    "LatinMathfontsUpperCaps_5": {
+      "expected": "A maiuscola script"
+    },
+    "LatinMathfontsUpperCaps_6": {
+      "expected": "A maiuscola grassetto script"
+    },
+    "LatinMathfontsUpperCaps_7": {
+      "expected": "A maiuscola gotico"
+    },
+    "LatinMathfontsUpperCaps_8": {
+      "expected": "A maiuscola grassetto da lavagna"
+    },
+    "LatinMathfontsUpperCaps_9": {
+      "expected": "A maiuscola grassetto gotico"
+    },
+    "LatinMathfontsUpperCaps_10": {
+      "expected": "A maiuscola senza grazie"
+    },
+    "LatinMathfontsUpperCaps_11": {
+      "expected": "A maiuscola senza grazie grassetto"
+    },
+    "LatinMathfontsUpperCaps_12": {
+      "expected": "A maiuscola senza grazie italico"
+    },
+    "LatinMathfontsUpperCaps_13": {
+      "expected": "A maiuscola senza grazie grassetto italico"
+    },
+    "LatinMathfontsUpperCaps_14": {
+      "expected": "A maiuscola monospazio"
+    },
+    "GreekMathfontsUpperCaps_0": {
+      "expected": "Alfa maiuscola"
+    },
+    "GreekMathfontsUpperCaps_1": {
+      "expected": "Alfa maiuscola grassetto"
+    },
+    "GreekMathfontsUpperCaps_2": {
+      "expected": "Alfa maiuscola"
+    },
+    "GreekMathfontsUpperCaps_3": {
+      "expected": "Alfa maiuscola grassetto italico"
+    },
+    "GreekMathfontsUpperCaps_4": {
+      "expected": "Alfa maiuscola senza grazie grassetto"
+    },
+    "GreekMathfontsUpperCaps_5": {
+      "expected": "Alfa maiuscola senza grazie grassetto italico"
+    },
+    "LatinMathvariantUpperCaps_0": {
+      "expected": "A maiuscola normale"
+    },
+    "LatinMathvariantUpperCaps_1": {
+      "expected": "A maiuscola grassetto"
+    },
+    "LatinMathvariantUpperCaps_2": {
+      "expected": "A maiuscola"
+    },
+    "LatinMathvariantUpperCaps_3": {
+      "expected": "A maiuscola grassetto italico"
+    },
+    "LatinMathvariantUpperCaps_4": {
+      "expected": "A maiuscola script"
+    },
+    "LatinMathvariantUpperCaps_5": {
+      "expected": "A maiuscola grassetto script"
+    },
+    "LatinMathvariantUpperCaps_6": {
+      "expected": "A maiuscola gotico"
+    },
+    "LatinMathvariantUpperCaps_7": {
+      "expected": "A maiuscola grassetto da lavagna"
+    },
+    "LatinMathvariantUpperCaps_8": {
+      "expected": "A maiuscola grassetto gotico"
+    },
+    "LatinMathvariantUpperCaps_9": {
+      "expected": "A maiuscola senza grazie"
+    },
+    "LatinMathvariantUpperCaps_10": {
+      "expected": "A maiuscola senza grazie grassetto"
+    },
+    "LatinMathvariantUpperCaps_11": {
+      "expected": "A maiuscola senza grazie italico"
+    },
+    "LatinMathvariantUpperCaps_12": {
+      "expected": "A maiuscola senza grazie grassetto italico"
+    },
+    "LatinMathvariantUpperCaps_13": {
+      "expected": "A maiuscola monospazio"
+    },
+    "LatinMathvariantMathJaxCaps_0": {
+      "expected": "A maiuscola calligrafico"
+    },
+    "LatinMathvariantMathJaxCaps_1": {
+      "expected": "A maiuscola grassetto calligrafico"
+    },
+    "LatinMathvariantMathJaxCaps_2": {
+      "expected": "A maiuscola calligrafico"
+    },
+    "LatinMathvariantMathJaxCaps_3": {
+      "expected": "A maiuscola grassetto calligrafico"
+    },
+    "LatinMathvariantMathJaxCaps_4": {
+      "expected": "A maiuscola"
+    },
+    "GreekMathvariantUpperCaps_0": {
+      "expected": "Alfa maiuscola normale"
+    },
+    "GreekMathvariantUpperCaps_1": {
+      "expected": "Alfa maiuscola grassetto"
+    },
+    "GreekMathvariantUpperCaps_2": {
+      "expected": "Alfa maiuscola"
+    },
+    "GreekMathvariantUpperCaps_3": {
+      "expected": "Alfa maiuscola grassetto italico"
+    },
+    "GreekMathvariantUpperCaps_4": {
+      "expected": "Alfa maiuscola senza grazie grassetto"
+    },
+    "GreekMathvariantUpperCaps_5": {
+      "expected": "Alfa maiuscola senza grazie grassetto italico"
+    }
+  }
+}

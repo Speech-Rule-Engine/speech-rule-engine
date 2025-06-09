@@ -1,0 +1,418 @@
+{
+  "name": "HindiMathspeakCollapse",
+  "locale": "hi",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Hindi Mathspeak Collapse tests.",
+  "domain": "mathspeak",
+  "active": "CollapseHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "निपातित 2 पद के साथ योग"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "निपातित योग"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "निपातित योग"
+    },
+    "CollapsedBigop_default": {
+      "expected": "निपातित योग चिह्न"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "निपातित योग चिह्न"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "निपातित योग चिह्न"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "निपातित द्विपद"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "निपातित द्विपद"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "निपातित द्विपद"
+    },
+    "CollapsedCases_default": {
+      "expected": "निपातित 2 फलन उपशर्त के साथ फलन उपशर्त कथन"
+    },
+    "CollapsedCases_brief": {
+      "expected": "निपातित फलन उपशर्त कथन"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "निपातित फलन उपशर्त कथन"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "निपातित सतत भिन्न"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "निपातित सतत अपूर्णांश"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "निपातित सतत अपूर्णांश"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "निपातित 2 विमीय सारणिक"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "निपातित सारणिक"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "निपातित सारणिक"
+    },
+    "CollapsedFraction_default": {
+      "expected": "निपातित भिन्न"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "निपातित अपूर्णांश"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "निपातित अपूर्णांश"
+    },
+    "CollapsedFunction_default": {
+      "expected": "निपातित फलन व्यंजक"
+    },
+    "CollapsedFunction_brief": {
+      "expected": "निपातित फलन"
+    },
+    "CollapsedFunction_sbrief": {
+      "expected": "निपातित फलन"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "निपातित दीर्घ तत्समक"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "निपातित दीर्घ तत्समक"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "निपातित दीर्घ तत्समक"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "निपातित 2 अवयव के साथ विभाजन"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "निपातित विभाजन"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "निपातित विभाजन"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "निपातित समाकल"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "निपातित समाकल"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "निपातित समाकल"
+    },
+    "CollapsedLim_default": {
+      "expected": "निपातित फलन सीमा"
+    },
+    "CollapsedLim_brief": {
+      "expected": "निपातित सीमा"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "निपातित सीमा"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "निपातित 3 गुणा 2 आव्यूह"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "निपातित आव्यूह"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "निपातित आव्यूह"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "निपातित दीर्घ मिश्र संख्या"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "निपातित दीर्घ मिश्र संख्या"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "निपातित दीर्घ मिश्र संख्या"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "निपातित 2 गुणनखंड के साथ गुणनफल"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "निपातित गुणनफल"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "निपातित गुणनफल"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "निपातित 3 अवयव के साथ संबंधानुक्रम"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "निपातित संबंधानुक्रम"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "निपातित संबंधानुक्रम"
+    },
+    "CollapsedNumber_default": {
+      "expected": "निपातित दीर्घ संख्या"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "निपातित दीर्घ संख्या"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "निपातित दीर्घ संख्या"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "निपातित 3 लम्बाई की अल्पविराम विभाजित सूचि"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "निपातित अल्पविराम विभाजित सूचि"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "निपातित अल्पविराम विभाजित सूचि"
+    },
+    "CollapsedRelation_default": {
+      "expected": "निपातित समता"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "निपातित समता"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "निपातित समता"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "निपातित 3 अवयव के साथ समता अनुक्रम"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "निपातित समता अनुक्रम"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "निपातित समता अनुक्रम"
+    },
+    "CollapsedRoot_default": {
+      "expected": "निपातित 3 वां मूल"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "निपातित मूल"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "निपातित मूल"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "निपातित नीड़ित मूल्यांक 3"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "निपातित नीड़ित मूल"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "निपातित नीड़ित मूल"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "निपातित 2 विमीय पंक्ति सदिश"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "निपातित पंक्ति सदिश"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "निपातित पंक्ति सदिश"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "निपातित वर्ग मूल"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "निपातित वर्ग मूल"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "निपातित वर्ग मूल"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "निपातित नीड़ित वर्ग मूल"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "निपातित नीड़ित वर्ग मूल"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "निपातित नीड़ित वर्ग मूल"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "निपातित 2 विमीय वर्ग आव्यूह"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "निपातित वर्ग आव्यूह"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "निपातित वर्ग आव्यूह"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "निपातित पादांक"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "निपातित पादांक"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "निपातित पादांक"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "निपातित पादांक वाला घातांक"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "निपातित पादांक वाला घातांक"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "निपातित पादांक वाला घातांक"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "निपातित घातांक"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "निपातित घातांक"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "निपातित घातांक"
+    },
+    "CollapsedTable_default": {
+      "expected": "निपातित 2 पक्तियां और 2 स्तंभ के साथ सारणी"
+    },
+    "CollapsedTable_brief": {
+      "expected": "निपातित 2 पक्तियां और 2 स्तंभ के साथ सारणी"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "निपातित 2 पक्तियां और 2 स्तंभ के साथ सारणी"
+    },
+    "CollapsedText_default": {
+      "expected": "निपातित पाठ"
+    },
+    "CollapsedText_brief": {
+      "expected": "निपातित पाठ"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "निपातित पाठ"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "निपातित चल तादात के पदों का योग"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "निपातित योग"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "निपातित योग"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "निपातित चल तादात की फलन उपशर्तों वाला फलन उपशर्त कथन"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "निपातित फलन उपशर्त कथन"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "निपातित फलन उपशर्त कथन"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "निपातित एन विमीय सारणिक"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "निपातित सारणिक"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "निपातित सारणिक"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "निपातित एन गुणा एम आव्यूह"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "निपातित वर्ग आव्यूह"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "निपातित वर्ग आव्यूह"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "निपातित चल तादात के गुणनखंडो का गुणनफल"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "निपातित गुणनफल"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "निपातित गुणनफल"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "निपातित चल तादात के अवयवों का संबंधानुक्रम"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "निपातित संबंधानुक्रम"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "निपातित संबंधानुक्रम"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "निपातित चल लम्बाई की अल्पविराम विभाजित सूचि"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "निपातित अल्पविराम विभाजित सूचि"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "निपातित अल्पविराम विभाजित सूचि"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "निपातित चल तादात के अवयवों के साथ समता अनुक्रम"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "निपातित समता अनुक्रम"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "निपातित समता अनुक्रम"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "निपातित एन विमीय सदिश"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "निपातित सदिश"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "निपातित सदिश"
+    },
+    "CollapsedVector_default": {
+      "expected": "निपातित 3 विमीय सदिश"
+    },
+    "CollapsedVector_brief": {
+      "expected": "निपातित सदिश"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "निपातित सदिश"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "निपातित चल तादात के अवयवों के साथ व्यवकलन"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "निपातित व्यवकलन"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "निपातित व्यवकलन"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "निपातित 3 गुणनखंड के साथ गुणनफल"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "निपातित गुणनफल"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "निपातित गुणनफल"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "निपातित चल तादात के गुणनखंडो का गुणनफल"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "निपातित चल तादात के अवयवों के साथ तीर अनुक्रम"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "निपातित तीर"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "निपातित एन विमीय पंक्ति सदिश"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "निपातित वां मूल 3 मूलांक समाप्त ए"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "निपातित नीड़ित मूल्यांक 3 मूलांक समाप्त ए"
+    }
+  }
+}

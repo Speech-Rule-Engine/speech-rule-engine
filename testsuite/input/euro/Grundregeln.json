@@ -1,0 +1,99 @@
+{
+  "tests": {
+    "_comment0_": "Textzeichen der Tastatur verwenden, solange dies eben geht!",
+    "Textzeichen_0": {
+      "tex": "2 +x =5",
+      "speech": "2 plus x ist gleich 5",
+      "code": "2 +x =5",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"2 +x =5\" display=\"block\"><mn data-latex=\"2\">2</mn><mo data-latex=\"+\">+</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"5\">5</mn></math>"
+    },
+    "Textzeichen_1": {
+      "tex": "|x - 1| = |1 - x|",
+      "speech": "Betrag von x minus 1 Betragende ist gleich Betrag von 1 minus x Betragende",
+      "code": "|x -1|=|1 -x|",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"|x - 1| = |1 - x|\" display=\"block\"><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mo data-latex=\"=\">=</mo><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"-\">&#x2212;</mo><mi data-latex=\"x\">x</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo></math>"
+    },
+    "Textzeichen_2": {
+      "tex": "n! = n*(n-1)!",
+      "speech": "n Fakultät ist gleich n mal runde Klammer auf n minus 1 runde Klammer zu Fakultät",
+      "code": "n! =n *(n -1)!",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"n! = n*(n-1)!\" display=\"block\"><mi data-latex=\"n\">n</mi><mo data-latex=\"!\">!</mo><mo data-latex=\"=\">=</mo><mi data-latex=\"n\">n</mi><mo data-latex=\"*\">&#x2217;</mo><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"n\">n</mi><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\")\" stretchy=\"false\">)</mo><mo data-latex=\"!\">!</mo></math>"
+    },
+    "_comment1_": "Abweichungen von der Grundlinie",
+    "Abweichungen_0": {
+      "tex": "x^2",
+      "speech": "x zum Quadrat",
+      "code": "x^2",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x^2\" display=\"block\"><msup data-latex=\"x^2 \"><mi data-latex=\"x\">x</mi><mn data-latex=\"2\">2</mn></msup></math>"
+    },
+    "Abweichungen_1": {
+      "tex": "x^{10}",
+      "speech": "x hoch Zehn",
+      "code": "x^{10}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x^{10}\" display=\"block\"><msup data-latex=\"x^{10}\"><mi data-latex=\"x\">x</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{0}\"><mn data-latex=\"0\">10</mn></mrow></msup></math>"
+    },
+    "Abweichungen_2": {
+      "tex": "a_1 +a_n",
+      "speech": "a Index 1 Indexende plus a Index n Indexende",
+      "code": "a_1 +a_n",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a_1 +a_n\" display=\"block\"><msub data-latex=\"a_1\"><mi data-latex=\"a\">a</mi><mn data-latex=\"1\">1</mn></msub><mo data-latex=\"+\">+</mo><msub data-latex=\"a_n\"><mi data-latex=\"a\">a</mi><mi data-latex=\"n\">n</mi></msub></math>"
+    },
+    "Abweichungen_3": {
+      "tex": "x^{n +m}",
+      "speech": "x hoch n plus m Exponentende",
+      "code": "x^{n +m}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x^{n +m}\" display=\"block\"><msup data-latex=\"x^{n +m}\"><mi data-latex=\"x\">x</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{n+m}\"><mi data-latex=\"n\">n</mi><mo data-latex=\"+\">+</mo><mi data-latex=\"m\">m</mi></mrow></msup></math>"
+    },
+    "Abweichungen_4": {
+      "tex": "a_{n -1}",
+      "speech": "a Index n minus 1 Indexende",
+      "code": "a_{n -1}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a_{n -1}\" display=\"block\"><msub data-latex=\"a_{n -1}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{n-1}\"><mi data-latex=\"n\">n</mi><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn></mrow></msub></math>"
+    },
+    "Abweichungen_5": {
+      "tex": "a_{12}",
+      "speech": "a Index 12",
+      "code": "a_{12}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a_{12}\" display=\"block\"><msub data-latex=\"a_{12}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\"><mn data-latex=\"2\">12</mn></mrow></msub></math>"
+    },
+    "_comment2_": "Mathematische Symbole, die es auf der Tastatur nicht gibt",
+    "Mathematische_0": {
+      "tex": "n \\to \\infty",
+      "speech": "n geht gegen Unendlich",
+      "code": "n \\to \\infty",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"n \\to \\infty\" display=\"block\"><mi data-latex=\"n\">n</mi><mo accent=\"false\" stretchy=\"false\" data-latex=\"\\to\">&#x2192;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi></math>"
+    },
+    "Mathematische_1": {
+      "tex": "x \\notin \\{ 3; 4 \\}",
+      "speech": "x ist nicht Element von Mengenklammer auf 3 Semikolon 4 Mengenklammer zu",
+      "code": "x \\notin \\{3; 4\\}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\notin \\{ 3; 4 \\}\" display=\"block\"><mi data-latex=\"x\">x</mi><mo data-latex=\"\\notin\">&#x2209;</mo><mo fence=\"false\" stretchy=\"false\" data-latex=\"\\{\">{</mo><mn data-latex=\"3\">3</mn><mo data-latex=\";\">;</mo><mn data-latex=\"4\">4</mn><mo fence=\"false\" stretchy=\"false\" data-latex=\"\\}\">}</mo></math>"
+    },
+    "_comment3_": "Konstrukte, die in sich bereits flächig angeordnet sind",
+    "Konstrukte,_0": {
+      "tex": "\\frac{a + b}{a - b}",
+      "speech": "Bruchanfang a plus b durch a minus b Bruchende",
+      "code": "\\frac{a +b}{a -b}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\frac{a + b}{a - b}\" display=\"block\"><mfrac data-latex=\"\\frac{a + b}{a - b}\"><mrow data-latex=\"a + b\"><mi data-latex=\"a\">a</mi><mo data-latex=\"+\">+</mo><mi data-latex=\"b\">b</mi></mrow><mrow data-latex=\"a - b\"><mi data-latex=\"a\">a</mi><mo data-latex=\"-\">&#x2212;</mo><mi data-latex=\"b\">b</mi></mrow></mfrac></math>"
+    },
+    "Konstrukte,_1": {
+      "tex": "\\sqrt{a + b}",
+      "speech": "Quadratwurzel aus a plus b Wurzelende",
+      "code": "\\sqrt{a +b}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sqrt{a + b}\" display=\"block\"><msqrt data-latex=\"\\sqrt{a + b}\"><mi data-latex=\"a\">a</mi><mo data-latex=\"+\">+</mo><mi data-latex=\"b\">b</mi></msqrt></math>"
+    },
+    "Konstrukte,_2": {
+      "tex": "\\sum_{n=1}^\\infty \\frac{1}{2^n} = 1",
+      "speech": "Summe von n gleich 1 bis Unendlich über Bruchanfang 1 durch 2 hoch n Bruchende ist gleich 1",
+      "code": "\\sum_{n =1}^\\infty \\frac{1}{2^n} =1",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sum_{n=1}^\\infty \\frac{1}{2^n} = 1\" display=\"block\"><munderover data-latex=\"\\infty\"><mo data-mjx-texclass=\"OP\" data-latex=\"\\sum\">&#x2211;</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{n=1}\"><mi data-latex=\"n\">n</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn></mrow><mi mathvariant=\"normal\" data-latex=\"infty\">&#x221E;</mi></munderover><mfrac data-latex=\"\\frac{1}{2^n}\"><mn data-latex=\"1\">1</mn><msup data-latex=\"2^n\"><mn data-latex=\"2\">2</mn><mi data-latex=\"n\">n</mi></msup></mfrac><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn></math>"
+    },
+    "_comment4_": "Anpassungen an persönliche Bedürfnisse",
+    "Anpassungen_0": {
+      "tex": "\\overline{A \\cup B}",
+      "speech": "langer Querstrich über (Komplement von) der Vereinigung von A und B",
+      "code": "\\overline{A \\cup B}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\overline{A \\cup B}\" display=\"block\"><mover data-latex=\"\\overline{A \\cup B}\"><mrow data-latex=\"A \\cup B\"><mi data-latex=\"A\">A</mi><mo data-latex=\"\\cup\">&#x222A;</mo><mi data-latex=\"B\">B</mi></mrow><mo accent=\"true\">&#x2015;</mo></mover></math>"
+    }
+  }
+}

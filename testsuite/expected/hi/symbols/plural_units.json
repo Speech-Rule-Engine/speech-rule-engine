@@ -1,0 +1,509 @@
+{
+  "name": "HindiPluralUnit",
+  "locale": "hi",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsHindi",
+  "grammar": {
+    "annotation": "unit",
+    "plural": true
+  },
+  "factory": "symbol",
+  "base": "input/common/units.json",
+  "information": "Hindi Plural Unit tests.",
+  "compare": true,
+  "tests": {
+    "sq": {
+      "expected": "वर्ग"
+    },
+    "sq.": {
+      "expected": "वर्ग"
+    },
+    "sq in": {
+      "expected": "वर्ग इंच"
+    },
+    "sq. in.": {
+      "expected": "वर्ग इंच"
+    },
+    "sq inch": {
+      "expected": "वर्ग इंच"
+    },
+    "sq. inch": {
+      "expected": "वर्ग इंच"
+    },
+    "sq rd": {
+      "expected": "वर्ग रॉड"
+    },
+    "sq. rd.": {
+      "expected": "वर्ग रॉड"
+    },
+    "sq ft": {
+      "expected": "वर्ग फिट"
+    },
+    "sq. ft.": {
+      "expected": "वर्ग फिट"
+    },
+    "sq yd": {
+      "expected": "वर्ग गज"
+    },
+    "sq. yd.": {
+      "expected": "वर्ग गज"
+    },
+    "sq mi": {
+      "expected": "वर्ग मील"
+    },
+    "sq. mi.": {
+      "expected": "वर्ग मील"
+    },
+    "ac": {
+      "expected": "एकर"
+    },
+    "ac.": {
+      "expected": "एकर"
+    },
+    "acr": {
+      "expected": "एकर"
+    },
+    "acr.": {
+      "expected": "एकर"
+    },
+    "ha": {
+      "expected": "हेक्टर"
+    },
+    "$": {
+      "expected": "डॉलर"
+    },
+    "💲": {
+      "expected": "डॉलर"
+    },
+    "＄": {
+      "expected": "डॉलर"
+    },
+    "﹩": {
+      "expected": "डॉलर"
+    },
+    "USD": {
+      "expected": "डॉलर"
+    },
+    "£": {
+      "expected": "पाउंड"
+    },
+    "￡": {
+      "expected": "पाउंड"
+    },
+    "GBP": {
+      "expected": "पाउंड"
+    },
+    "¥": {
+      "expected": "येन"
+    },
+    "￥": {
+      "expected": "येन"
+    },
+    "JPY": {
+      "expected": "येन"
+    },
+    "€": {
+      "expected": "यूरो"
+    },
+    "EUR": {
+      "expected": "यूरो"
+    },
+    "₡": {
+      "expected": "कोलोन"
+    },
+    "CRC": {
+      "expected": "कोलोन"
+    },
+    "₢": {
+      "expected": "क्रुज़ीरू"
+    },
+    "₣": {
+      "expected": "फ्रांक"
+    },
+    "₤": {
+      "expected": "लीरा"
+    },
+    "₥": {
+      "expected": "मिल"
+    },
+    "₦": {
+      "expected": "नाइरा"
+    },
+    "NGN": {
+      "expected": "नाइरा"
+    },
+    "₧": {
+      "expected": "पेसेता"
+    },
+    "₨": {
+      "expected": "रूपए"
+    },
+    "₹": {
+      "expected": "रूपए"
+    },
+    "INR": {
+      "expected": "रूपए"
+    },
+    "NPR": {
+      "expected": "रूपए"
+    },
+    "PKR": {
+      "expected": "रूपए"
+    },
+    "LKR": {
+      "expected": "रूपए"
+    },
+    "₩": {
+      "expected": "वॉन"
+    },
+    "￦": {
+      "expected": "वॉन"
+    },
+    "KRW": {
+      "expected": "वॉन"
+    },
+    "₪": {
+      "expected": "शेकेल"
+    },
+    "₫": {
+      "expected": "दोंग"
+    },
+    "₭": {
+      "expected": "किप"
+    },
+    "₮": {
+      "expected": "तुग्रिक"
+    },
+    "₯": {
+      "expected": "द्राख़्मा"
+    },
+    "₰": {
+      "expected": "फेनीग"
+    },
+    "₱": {
+      "expected": "पेसो"
+    },
+    "₲": {
+      "expected": "ग्वारानी"
+    },
+    "₳": {
+      "expected": "ऑस्ट्राल"
+    },
+    "₴": {
+      "expected": "ह्रीविन्या"
+    },
+    "UAH": {
+      "expected": "ह्रीविन्या"
+    },
+    "₵": {
+      "expected": "सीडी"
+    },
+    "GHS": {
+      "expected": "सीडी"
+    },
+    "₸": {
+      "expected": "तेंगे"
+    },
+    "KZT": {
+      "expected": "तेंगे"
+    },
+    "₺": {
+      "expected": "तुर्की लीरा"
+    },
+    "TRY": {
+      "expected": "तुर्की लीरा"
+    },
+    "元": {
+      "expected": "युआन"
+    },
+    "￠": {
+      "expected": "सेंट"
+    },
+    "¢": {
+      "expected": "सेंट"
+    },
+    "kwh": {
+      "expected": "किलोवॉट घंटा"
+    },
+    "kWh": {
+      "expected": "किलोवॉट घंटा"
+    },
+    "Ohm": {
+      "expected": "ओह्म"
+    },
+    "ohm": {
+      "expected": "ओह्म"
+    },
+    "ft": {
+      "expected": "फिट"
+    },
+    "ft.": {
+      "expected": "फिट"
+    },
+    "in": {
+      "expected": "इंच"
+    },
+    "in.": {
+      "expected": "इंच"
+    },
+    "mi": {
+      "expected": "मील"
+    },
+    "mi.": {
+      "expected": "मील"
+    },
+    "yd": {
+      "expected": "गज"
+    },
+    "yd.": {
+      "expected": "गज"
+    },
+    "li": {
+      "expected": "लिंक"
+    },
+    "li.": {
+      "expected": "लिंक"
+    },
+    "rd": {
+      "expected": "रॉड"
+    },
+    "rd.": {
+      "expected": "रॉड"
+    },
+    "ch": {
+      "expected": "चेन"
+    },
+    "ch.": {
+      "expected": "चेन"
+    },
+    "fur": {
+      "expected": "फ़र्लांग"
+    },
+    "fur.": {
+      "expected": "फ़र्लांग"
+    },
+    "n.m.": {
+      "expected": "समुद्री मील"
+    },
+    "b": {
+      "expected": "बिट"
+    },
+    "KB": {
+      "expected": "किलोबाईट"
+    },
+    "doz": {
+      "expected": "डज़न"
+    },
+    "doz.": {
+      "expected": "डज़न"
+    },
+    "dz": {
+      "expected": "डज़न"
+    },
+    "dz.": {
+      "expected": "डज़न"
+    },
+    "kt": {
+      "expected": "नॉट"
+    },
+    "kt.": {
+      "expected": "नॉट"
+    },
+    "mph": {
+      "expected": "मील प्रति घंटा"
+    },
+    "rpm": {
+      "expected": "परिक्रमण प्रति मिनट"
+    },
+    "kmh": {
+      "expected": "किलोमीटर प्रति घंटा"
+    },
+    "kph": {
+      "expected": "किलोमीटर प्रति घंटा"
+    },
+    "F": {
+      "expected": "फेरनहाइट"
+    },
+    "F.": {
+      "expected": "फेरनहाइट"
+    },
+    "°F": {
+      "expected": "फेरनहाइट"
+    },
+    "C": {
+      "expected": "सेल्शियस"
+    },
+    "°C": {
+      "expected": "सेल्शियस"
+    },
+    "K": {
+      "expected": "केल्विन"
+    },
+    "°K": {
+      "expected": "केल्विन"
+    },
+    "″": {
+      "expected": "सेकंड"
+    },
+    "min": {
+      "expected": "मिनट"
+    },
+    "′": {
+      "expected": "मिनट"
+    },
+    "°": {
+      "expected": "अंश"
+    },
+    "h": {
+      "expected": "घंटा"
+    },
+    "hr": {
+      "expected": "घंटा"
+    },
+    "cu": {
+      "expected": "घन"
+    },
+    "cu.": {
+      "expected": "घन"
+    },
+    "cu in": {
+      "expected": "घन इंच"
+    },
+    "cu. in.": {
+      "expected": "घन इंच"
+    },
+    "cu ft": {
+      "expected": "घन फीट"
+    },
+    "cu. ft.": {
+      "expected": "घन फीट"
+    },
+    "cu yd": {
+      "expected": "घन गज"
+    },
+    "cu. yd.": {
+      "expected": "घन गज"
+    },
+    "bbl.": {
+      "expected": "बैरल"
+    },
+    "bbl": {
+      "expected": "बैरल"
+    },
+    "fl. oz.": {
+      "expected": "तरल औंस"
+    },
+    "fl oz": {
+      "expected": "तरल औंस"
+    },
+    "gal": {
+      "expected": "गेलन"
+    },
+    "gal.": {
+      "expected": "गेलन"
+    },
+    "pt": {
+      "expected": "पाइंट"
+    },
+    "pt.": {
+      "expected": "पाइंट"
+    },
+    "qt": {
+      "expected": "क़्वार्ट"
+    },
+    "qt.": {
+      "expected": "क़्वार्ट"
+    },
+    "fl dr": {
+      "expected": "तरल ड्राम"
+    },
+    "fl. dr.": {
+      "expected": "तरल ड्राम"
+    },
+    "tbsp": {
+      "expected": "बड़ी चम्मच"
+    },
+    "tbsp.": {
+      "expected": "बड़ी चम्मच"
+    },
+    "Tbsp": {
+      "expected": "बड़ी चम्मच"
+    },
+    "Tbsp.": {
+      "expected": "बड़ी चम्मच"
+    },
+    "tsp": {
+      "expected": "छोटी चम्मच"
+    },
+    "tsp.": {
+      "expected": "छोटी चम्मच"
+    },
+    "cp": {
+      "expected": "कप"
+    },
+    "cp.": {
+      "expected": "कप"
+    },
+    "cc": {
+      "expected": "घन सेंटीमीटर"
+    },
+    "ccm": {
+      "expected": "घन सेंटीमीटर"
+    },
+    "dr": {
+      "expected": "ड्राम"
+    },
+    "dr.": {
+      "expected": "ड्राम"
+    },
+    "oz": {
+      "expected": "औंस"
+    },
+    "oz.": {
+      "expected": "औंस"
+    },
+    "lb": {
+      "expected": "रतल"
+    },
+    "lb.": {
+      "expected": "रतल"
+    },
+    "st": {
+      "expected": "स्टोन"
+    },
+    "st.": {
+      "expected": "स्टोन"
+    },
+    "qtr": {
+      "expected": "क़्वार्टर"
+    },
+    "qtr.": {
+      "expected": "क़्वार्टर"
+    },
+    "cwt": {
+      "expected": "हन्ड्रेड्वेट"
+    },
+    "cwt.": {
+      "expected": "हन्ड्रेड्वेट"
+    },
+    "LT": {
+      "expected": "इम्पीरियल टन"
+    },
+    "L.T.": {
+      "expected": "इम्पीरियल टन"
+    },
+    "gr": {
+      "expected": "ग्राम"
+    },
+    "mcg": {
+      "expected": "माइक्रोग्राम"
+    },
+    "t": {
+      "expected": "टन"
+    },
+    "T": {
+      "expected": "टन"
+    }
+  }
+}

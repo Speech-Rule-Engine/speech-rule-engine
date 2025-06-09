@@ -1,0 +1,71 @@
+{
+  "domain": "clearspeak",
+  "name": "KoreanClearspeakDirectSpeech",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/common/direct_speech.json",
+  "information": "Korean Clearspeak Direct speech attributes.",
+  "active": "DirectSpeechKorean",
+  "exclude": [],
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "AC line"
+    },
+    "AriaLabels_1": {
+      "expected": "derivative of x is equal to sigma 곱하기 left parenthesis y minus x right parenthesis"
+    },
+    "AltText_0": {
+      "expected": "A C under line"
+    },
+    "AltText_1": {
+      "expected": "AC line"
+    },
+    "ExactSpeech_0": {
+      "expected": "A C under line"
+    },
+    "ExactSpeech_1": {
+      "expected": "AC line"
+    },
+    "MglyphTokens_0": {
+      "_comment0_": " mi",
+      "expected": "my glyph"
+    },
+    "MglyphTokens_1": {
+      "expected": "your glyph",
+      "_comment1_": " mo"
+    },
+    "MglyphTokens_2": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_3": {
+      "expected": "your glyph",
+      "_comment2_": " mn"
+    },
+    "MglyphTokens_4": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_5": {
+      "expected": "your glyph",
+      "_comment3_": " mtext"
+    },
+    "MglyphTokens_6": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_7": {
+      "expected": "your glyph",
+      "_comment4_": " ms"
+    },
+    "MglyphTokens_8": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_9": {
+      "expected": "your glyph"
+    },
+    "MglyphGeneral_0": {
+      "expected": "23braid 더하기 132braid 는 13braid"
+    },
+    "MglyphGeneral_1": {
+      "expected": "N M 아래첨자 1 은 mfin 의 부분집합 이다"
+    }
+  }
+}

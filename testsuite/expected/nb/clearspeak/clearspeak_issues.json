@@ -1,0 +1,97 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
+  "name": "BokmalClearspeakIssues",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "Bokmal Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Issue230_1": {
+      "expected": "5 og, 3 delt på 224"
+    },
+    "Issue230_2": {
+      "expected": "5 og tre fjerde"
+    },
+    "IssueNumbers_1": {
+      "expected": "tall t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "tall talltegn F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "tall talltegn F F F F"
+    },
+    "Issue320_1": {
+      "expected": "partiellderivert"
+    },
+    "Issue320_2": {
+      "expected": "x fakultet"
+    },
+    "Issue320_3": {
+      "expected": "minus minus x"
+    },
+    "Issue320_4": {
+      "expected": "pluss pluss x"
+    },
+    "Issue320_5": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_6": {
+      "expected": "partiellderivert partiellderivert x"
+    },
+    "Issue320_7": {
+      "expected": "venstre parentes, brøk med teller partiellderivert kvadrat, og nevner partiellderivert x kvadrat, pluss, brøk med teller partiellderivert kvadrat, og nevner partiellderivert y kvadrat, høyre parentes, ganger, den absolutte verdien av pi ganger, venstre parentes, x pluss normal i y, høyre parentes, kvadrat er lik 0"
+    },
+    "Issue301_1": {
+      "expected": "4 millimeter"
+    },
+    "Issue301_2": {
+      "expected": "1 millimeter"
+    },
+    "Issue301_3": {
+      "expected": "4 millimeter"
+    },
+    "Issue301_4": {
+      "expected": "1 millimeter"
+    },
+    "Issue_442_0": {
+      "expected": "9 delt på 3 er ikke lik 9 gangetegn 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 delt på 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 delt på 3 er ikke lik 9 gangetegn 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 delt på 3"
+    },
+    "Integral_Issue_0": {
+      "expected": "integral over f av x, d x"
+    },
+    "Integral_Issue_1": {
+      "expected": "integral over f av x, d x"
+    },
+    "Integral_Issue_2": {
+      "expected": "integral over f av x, d x, er lik 8"
+    },
+    "Issue_689_0": {
+      "expected": "2 rader, rad 1:, 2 rader, rad 1: 100. rad 2: 200. rad 2:, 2 rader, rad 1: 300. rad 2: 400"
+    },
+    "Issue_689_1": {
+      "expected": "2 rader, rad 1: a; b. rad 2:, 2 rader, rad 1:, c indeks 1; c indeks 2. rad 2:, c indeks 3; c indeks 4. d"
+    },
+    "Issue_689_2": {
+      "expected": "2 tilfeller, tilfelle 1:, 2 tilfeller, tilfelle 1: b. tilfelle 2: c. tilfelle 2: d"
+    },
+    "Issue_689_3": {
+      "expected": "2 ganger 2 matrisen. rad 1: kolonne 1, a; kolonne 2, b. rad 2: kolonne 1, 2 ganger 2 matrisen. rad 1: c indeks 1, c indeks 2 rad 2: c indeks 3, c indeks 4. slutt matrise; kolonne 2, d. slutt matrise"
+    },
+    "Issue_689_4": {
+      "expected": "2 ganger 2 matrisen. rad 1: kolonne 1, a; kolonne 2, b. rad 2: kolonne 1, 2 ganger 2 matrisen. rad 1: kolonne 1,, c indeks 1; kolonne 2,, c indeks 2. rad 2: kolonne 1,, c indeks 3, pluss a pluss b; kolonne 2,, c indeks 4. slutt matrise; kolonne 2, d. slutt matrise"
+    }
+  }
+}

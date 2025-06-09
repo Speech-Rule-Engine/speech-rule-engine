@@ -1,0 +1,373 @@
+{
+  "name": "AfrikaansMathspeakRoots",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "Afrikaans Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "Begin wortel a End wortel"
+    },
+    "sqrt_0_brief": {
+      "expected": "Begin wortel a End wortel"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "Wortel a End wortel"
+    },
+    "sqrt_1_default": {
+      "expected": "WortelIndeks 2 Begin wortel a End wortel"
+    },
+    "sqrt_1_brief": {
+      "expected": "WortelIndeks 2 Begin wortel a End wortel"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "Indeks 2 Wortel a End wortel"
+    },
+    "sqrt_2_default": {
+      "expected": "genesBegin wortel Begin wortel a End wortel genesEnd wortel"
+    },
+    "sqrt_2_brief": {
+      "expected": "genesBegin wortel Begin wortel a End wortel genesEnd wortel"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "genesWortel Wortel a End wortel genesEnd wortel"
+    },
+    "sqrt_3_default": {
+      "expected": "genes3Begin wortel genesTwee keerBegin wortel genesBegin wortel Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "sqrt_3_brief": {
+      "expected": "genes3Begin wortel genesTwee keerBegin wortel genesBegin wortel Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "genes3Wortel genesTwee keerWortel genesWortel Wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "roots_0_default": {
+      "expected": "WortelIndeks 1 Begin wortel a End wortel"
+    },
+    "roots_0_brief": {
+      "expected": "WortelIndeks 1 Begin wortel a End wortel"
+    },
+    "roots_0_sbrief": {
+      "expected": "Indeks 1 Wortel a End wortel"
+    },
+    "roots_1_default": {
+      "expected": "WortelIndeks 2 Begin wortel a End wortel"
+    },
+    "roots_1_brief": {
+      "expected": "WortelIndeks 2 Begin wortel a End wortel"
+    },
+    "roots_1_sbrief": {
+      "expected": "Indeks 2 Wortel a End wortel"
+    },
+    "roots_2_default": {
+      "expected": "WortelIndeks 3 Begin wortel a End wortel"
+    },
+    "roots_2_brief": {
+      "expected": "WortelIndeks 3 Begin wortel a End wortel"
+    },
+    "roots_2_sbrief": {
+      "expected": "Indeks 3 Wortel a End wortel"
+    },
+    "roots_3_default": {
+      "expected": "WortelIndeks 4 Begin wortel a End wortel"
+    },
+    "roots_3_brief": {
+      "expected": "WortelIndeks 4 Begin wortel a End wortel"
+    },
+    "roots_3_sbrief": {
+      "expected": "Indeks 4 Wortel a End wortel"
+    },
+    "roots_4_default": {
+      "expected": "WortelIndeks 5 Begin wortel a End wortel"
+    },
+    "roots_4_brief": {
+      "expected": "WortelIndeks 5 Begin wortel a End wortel"
+    },
+    "roots_4_sbrief": {
+      "expected": "Indeks 5 Wortel a End wortel"
+    },
+    "roots_5_default": {
+      "expected": "WortelIndeks 6 Begin wortel a End wortel"
+    },
+    "roots_5_brief": {
+      "expected": "WortelIndeks 6 Begin wortel a End wortel"
+    },
+    "roots_5_sbrief": {
+      "expected": "Indeks 6 Wortel a End wortel"
+    },
+    "roots_6_default": {
+      "expected": "WortelIndeks 7 Begin wortel a End wortel"
+    },
+    "roots_6_brief": {
+      "expected": "WortelIndeks 7 Begin wortel a End wortel"
+    },
+    "roots_6_sbrief": {
+      "expected": "Indeks 7 Wortel a End wortel"
+    },
+    "roots_7_default": {
+      "expected": "WortelIndeks 8 Begin wortel a End wortel"
+    },
+    "roots_7_brief": {
+      "expected": "WortelIndeks 8 Begin wortel a End wortel"
+    },
+    "roots_7_sbrief": {
+      "expected": "Indeks 8 Wortel a End wortel"
+    },
+    "roots_8_default": {
+      "expected": "WortelIndeks 9 Begin wortel a End wortel"
+    },
+    "roots_8_brief": {
+      "expected": "WortelIndeks 9 Begin wortel a End wortel"
+    },
+    "roots_8_sbrief": {
+      "expected": "Indeks 9 Wortel a End wortel"
+    },
+    "roots_9_default": {
+      "expected": "WortelIndeks 10 Begin wortel a End wortel"
+    },
+    "roots_9_brief": {
+      "expected": "WortelIndeks 10 Begin wortel a End wortel"
+    },
+    "roots_9_sbrief": {
+      "expected": "Indeks 10 Wortel a End wortel"
+    },
+    "roots_10_default": {
+      "expected": "WortelIndeks 11 Begin wortel a End wortel"
+    },
+    "roots_10_brief": {
+      "expected": "WortelIndeks 11 Begin wortel a End wortel"
+    },
+    "roots_10_sbrief": {
+      "expected": "Indeks 11 Wortel a End wortel"
+    },
+    "nested-roots_0_default": {
+      "expected": "genesWortelIndeks 1 genesBegin wortel WortelIndeks 1 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_0_brief": {
+      "expected": "genesWortelIndeks 1 genesBegin wortel WortelIndeks 1 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "genesIndeks 1 genesWortel Indeks 1 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_1_default": {
+      "expected": "genesWortelIndeks 2 genesBegin wortel WortelIndeks 2 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_1_brief": {
+      "expected": "genesWortelIndeks 2 genesBegin wortel WortelIndeks 2 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "genesIndeks 2 genesWortel Indeks 2 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_2_default": {
+      "expected": "genesWortelIndeks 3 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_2_brief": {
+      "expected": "genesWortelIndeks 3 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "genesIndeks 3 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_3_default": {
+      "expected": "genesWortelIndeks 4 genesBegin wortel WortelIndeks 4 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_3_brief": {
+      "expected": "genesWortelIndeks 4 genesBegin wortel WortelIndeks 4 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "genesIndeks 4 genesWortel Indeks 4 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_4_default": {
+      "expected": "genesWortelIndeks 5 genesBegin wortel WortelIndeks 5 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_4_brief": {
+      "expected": "genesWortelIndeks 5 genesBegin wortel WortelIndeks 5 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "genesIndeks 5 genesWortel Indeks 5 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_5_default": {
+      "expected": "genesWortelIndeks 6 genesBegin wortel WortelIndeks 6 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_5_brief": {
+      "expected": "genesWortelIndeks 6 genesBegin wortel WortelIndeks 6 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "genesIndeks 6 genesWortel Indeks 6 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_6_default": {
+      "expected": "genesWortelIndeks 7 genesBegin wortel WortelIndeks 7 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_6_brief": {
+      "expected": "genesWortelIndeks 7 genesBegin wortel WortelIndeks 7 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "genesIndeks 7 genesWortel Indeks 7 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_7_default": {
+      "expected": "genesWortelIndeks 8 genesBegin wortel WortelIndeks 8 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_7_brief": {
+      "expected": "genesWortelIndeks 8 genesBegin wortel WortelIndeks 8 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "genesIndeks 8 genesWortel Indeks 8 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_8_default": {
+      "expected": "genesWortelIndeks 9 genesBegin wortel WortelIndeks 9 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_8_brief": {
+      "expected": "genesWortelIndeks 9 genesBegin wortel WortelIndeks 9 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "genesIndeks 9 genesWortel Indeks 9 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_9_default": {
+      "expected": "genesWortelIndeks 10 genesBegin wortel WortelIndeks 10 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_9_brief": {
+      "expected": "genesWortelIndeks 10 genesBegin wortel WortelIndeks 10 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "genesIndeks 10 genesWortel Indeks 10 Wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_10_default": {
+      "expected": "genesWortelIndeks 11 genesBegin wortel WortelIndeks 11 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_10_brief": {
+      "expected": "genesWortelIndeks 11 genesBegin wortel WortelIndeks 11 Begin wortel a End wortel genesEnd wortel"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "genesIndeks 11 genesWortel Indeks 11 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "genesWortelIndeks 1 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "genesWortelIndeks 1 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "genesIndeks 1 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "genesWortelIndeks 2 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "genesWortelIndeks 2 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "genesIndeks 2 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "genesWortelIndeks 3 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "genesWortelIndeks 3 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "genesIndeks 3 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "genesWortelIndeks 4 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "genesWortelIndeks 4 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "genesIndeks 4 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "genesWortelIndeks 5 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "genesWortelIndeks 5 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "genesIndeks 5 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "genesWortelIndeks 6 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "genesWortelIndeks 6 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "genesIndeks 6 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "genesWortelIndeks 7 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "genesWortelIndeks 7 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "genesIndeks 7 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "genesWortelIndeks 8 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "genesWortelIndeks 8 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "genesIndeks 8 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "genesWortelIndeks 9 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "genesWortelIndeks 9 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "genesIndeks 9 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "genesWortelIndeks 10 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "genesWortelIndeks 10 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "genesIndeks 10 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "genesWortelIndeks 11 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "genesWortelIndeks 11 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "genesIndeks 11 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "genes3WortelIndeks 2 genes3Begin wortel genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel genesWortelIndeks 4 genesBegin wortel WortelIndeks 5 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "genes3WortelIndeks 2 genes3Begin wortel genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel genesWortelIndeks 4 genesBegin wortel WortelIndeks 5 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "genes3Indeks 2 genes3Wortel genesTwee keerIndeks 3 genesTwee keerWortel genesIndeks 4 genesWortel Indeks 5 Wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "genes3WortelIndeks 2 genes3Begin wortel genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel genesWortelIndeks 2 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "genes3WortelIndeks 2 genes3Begin wortel genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel genesWortelIndeks 2 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "genes3Indeks 2 genes3Wortel genesTwee keerIndeks 3 genesTwee keerWortel genesIndeks 2 genesWortel Indeks 3 Wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "genes4WortelIndeks 2 genes4Begin wortel genes3WortelIndeks 3 genes3Begin wortel genesTwee keerBegin wortel genesWortelIndeks 3 genesBegin wortel Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel genes4End wortel"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "genes4WortelIndeks 2 genes4Begin wortel genes3WortelIndeks 3 genes3Begin wortel genesTwee keerBegin wortel genesWortelIndeks 3 genesBegin wortel Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel genes4End wortel"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "genes4Indeks 2 genes4Wortel genes3Indeks 3 genes3Wortel genesTwee keerWortel genesIndeks 3 genesWortel Wortel a End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel genes4End wortel"
+    }
+  }
+}

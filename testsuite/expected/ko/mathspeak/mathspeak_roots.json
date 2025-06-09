@@ -1,0 +1,372 @@
+{
+  "name": "KoreanMathspeakroots",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "Korean Mathspeak roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakKorean",
+  "exclude": [],
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "루트시작 a 루트끝"
+    },
+    "sqrt_0_brief": {
+      "expected": "루트시작 a 루트끝"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "루트 a 루트끝"
+    },
+    "sqrt_1_default": {
+      "expected": "제곱근 루트시작 a 루트끝"
+    },
+    "sqrt_1_brief": {
+      "expected": "제곱근 루트시작 a 루트끝"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "제곱근 루트 a 루트끝"
+    },
+    "sqrt_2_default": {
+      "expected": "중첩루트시작 루트시작 a 루트끝 중첩루트끝"
+    },
+    "sqrt_2_brief": {
+      "expected": "중첩루트시작 루트시작 a 루트끝 중첩루트끝"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "중첩루트 루트 a 루트끝 중첩루트끝"
+    },
+    "sqrt_3_default": {
+      "expected": "3중첩루트시작 이중첩루트시작 중첩루트시작 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "sqrt_3_brief": {
+      "expected": "3중첩루트시작 이중첩루트시작 중첩루트시작 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "3중첩루트 이중첩루트 중첩루트 루트 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "roots_0_default": {
+      "expected": "1 제곱근 루트시작 a 루트끝"
+    },
+    "roots_0_brief": {
+      "expected": "1 제곱근 루트시작 a 루트끝"
+    },
+    "roots_0_sbrief": {
+      "expected": "1 제곱근 루트 a 루트끝"
+    },
+    "roots_1_default": {
+      "expected": "제곱근 루트시작 a 루트끝"
+    },
+    "roots_1_brief": {
+      "expected": "제곱근 루트시작 a 루트끝"
+    },
+    "roots_1_sbrief": {
+      "expected": "제곱근 루트 a 루트끝"
+    },
+    "roots_2_default": {
+      "expected": "세제곱근 루트시작 a 루트끝"
+    },
+    "roots_2_brief": {
+      "expected": "세제곱근 루트시작 a 루트끝"
+    },
+    "roots_2_sbrief": {
+      "expected": "세제곱근 루트 a 루트끝"
+    },
+    "roots_3_default": {
+      "expected": "네제곱근 루트시작 a 루트끝"
+    },
+    "roots_3_brief": {
+      "expected": "네제곱근 루트시작 a 루트끝"
+    },
+    "roots_3_sbrief": {
+      "expected": "네제곱근 루트 a 루트끝"
+    },
+    "roots_4_default": {
+      "expected": "5 제곱근 루트시작 a 루트끝"
+    },
+    "roots_4_brief": {
+      "expected": "5 제곱근 루트시작 a 루트끝"
+    },
+    "roots_4_sbrief": {
+      "expected": "5 제곱근 루트 a 루트끝"
+    },
+    "roots_5_default": {
+      "expected": "6 제곱근 루트시작 a 루트끝"
+    },
+    "roots_5_brief": {
+      "expected": "6 제곱근 루트시작 a 루트끝"
+    },
+    "roots_5_sbrief": {
+      "expected": "6 제곱근 루트 a 루트끝"
+    },
+    "roots_6_default": {
+      "expected": "7 제곱근 루트시작 a 루트끝"
+    },
+    "roots_6_brief": {
+      "expected": "7 제곱근 루트시작 a 루트끝"
+    },
+    "roots_6_sbrief": {
+      "expected": "7 제곱근 루트 a 루트끝"
+    },
+    "roots_7_default": {
+      "expected": "8 제곱근 루트시작 a 루트끝"
+    },
+    "roots_7_brief": {
+      "expected": "8 제곱근 루트시작 a 루트끝"
+    },
+    "roots_7_sbrief": {
+      "expected": "8 제곱근 루트 a 루트끝"
+    },
+    "roots_8_default": {
+      "expected": "9 제곱근 루트시작 a 루트끝"
+    },
+    "roots_8_brief": {
+      "expected": "9 제곱근 루트시작 a 루트끝"
+    },
+    "roots_8_sbrief": {
+      "expected": "9 제곱근 루트 a 루트끝"
+    },
+    "roots_9_default": {
+      "expected": "10 제곱근 루트시작 a 루트끝"
+    },
+    "roots_9_brief": {
+      "expected": "10 제곱근 루트시작 a 루트끝"
+    },
+    "roots_9_sbrief": {
+      "expected": "10 제곱근 루트 a 루트끝"
+    },
+    "roots_10_default": {
+      "expected": "11 제곱근 루트시작 a 루트끝"
+    },
+    "roots_10_brief": {
+      "expected": "11 제곱근 루트시작 a 루트끝"
+    },
+    "roots_10_sbrief": {
+      "expected": "11 제곱근 루트 a 루트끝"
+    },
+    "nested-roots_0_default": {
+      "expected": "1 제곱근 중첩루트시작 1 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_0_brief": {
+      "expected": "1 제곱근 중첩루트시작 1 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "1 제곱근 중첩루트 1 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_1_default": {
+      "expected": "제곱근 중첩루트시작 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_1_brief": {
+      "expected": "제곱근 중첩루트시작 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "제곱근 중첩루트 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_2_default": {
+      "expected": "세제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_2_brief": {
+      "expected": "세제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "세제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_3_default": {
+      "expected": "네제곱근 중첩루트시작 네제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_3_brief": {
+      "expected": "네제곱근 중첩루트시작 네제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "네제곱근 중첩루트 네제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_4_default": {
+      "expected": "5 제곱근 중첩루트시작 5 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_4_brief": {
+      "expected": "5 제곱근 중첩루트시작 5 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "5 제곱근 중첩루트 5 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_5_default": {
+      "expected": "6 제곱근 중첩루트시작 6 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_5_brief": {
+      "expected": "6 제곱근 중첩루트시작 6 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "6 제곱근 중첩루트 6 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_6_default": {
+      "expected": "7 제곱근 중첩루트시작 7 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_6_brief": {
+      "expected": "7 제곱근 중첩루트시작 7 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "7 제곱근 중첩루트 7 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_7_default": {
+      "expected": "8 제곱근 중첩루트시작 8 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_7_brief": {
+      "expected": "8 제곱근 중첩루트시작 8 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "8 제곱근 중첩루트 8 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_8_default": {
+      "expected": "9 제곱근 중첩루트시작 9 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_8_brief": {
+      "expected": "9 제곱근 중첩루트시작 9 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "9 제곱근 중첩루트 9 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_9_default": {
+      "expected": "10 제곱근 중첩루트시작 10 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_9_brief": {
+      "expected": "10 제곱근 중첩루트시작 10 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "10 제곱근 중첩루트 10 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_10_default": {
+      "expected": "11 제곱근 중첩루트시작 11 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_10_brief": {
+      "expected": "11 제곱근 중첩루트시작 11 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "11 제곱근 중첩루트 11 제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "1 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "1 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "1 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "세제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "세제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "세제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "네제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "네제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "네제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "5 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "5 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "5 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "6 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "6 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "6 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "7 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "7 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "7 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "8 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "8 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "8 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "9 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "9 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "9 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "10 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "10 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "10 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "11 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "11 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "11 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "제곱근 3중첩루트시작 세제곱근 이중첩루트시작 네제곱근 중첩루트시작 5 제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "제곱근 3중첩루트시작 세제곱근 이중첩루트시작 네제곱근 중첩루트시작 5 제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "제곱근 3중첩루트 세제곱근 이중첩루트 네제곱근 중첩루트 5 제곱근 루트 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "제곱근 3중첩루트시작 세제곱근 이중첩루트시작 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "제곱근 3중첩루트시작 세제곱근 이중첩루트시작 제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "제곱근 3중첩루트 세제곱근 이중첩루트 제곱근 중첩루트 세제곱근 루트 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "제곱근 4중첩루트시작 세제곱근 3중첩루트시작 이중첩루트시작 세제곱근 중첩루트시작 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝 4중첩루트끝"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "제곱근 4중첩루트시작 세제곱근 3중첩루트시작 이중첩루트시작 세제곱근 중첩루트시작 루트시작 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝 4중첩루트끝"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "제곱근 4중첩루트 세제곱근 3중첩루트 이중첩루트 세제곱근 중첩루트 루트 a 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝 4중첩루트끝"
+    }
+  }
+}

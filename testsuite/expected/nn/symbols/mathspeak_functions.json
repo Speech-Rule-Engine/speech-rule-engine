@@ -1,0 +1,251 @@
+{
+  "name": "NynorskMathspeakFunction",
+  "locale": "nn",
+  "domain": "mathspeak",
+  "style": "default",
+  "active": "MathspeakSymbolsNynorsk",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Nynorsk Mathspeak Function tests.",
+  "compare": true,
+  "tests": {
+    "deg": {
+      "expected": "grad"
+    },
+    "Deg": {
+      "expected": "grad"
+    },
+    "det": {
+      "expected": "det"
+    },
+    "Det": {
+      "expected": "det"
+    },
+    "dim": {
+      "expected": "dimensjon"
+    },
+    "Dim": {
+      "expected": "dimensjon"
+    },
+    "hom": {
+      "expected": "hom"
+    },
+    "Hom": {
+      "expected": "hom"
+    },
+    "HOM": {
+      "expected": "hom"
+    },
+    "ker": {
+      "expected": "kjerne"
+    },
+    "Ker": {
+      "expected": "kjerne"
+    },
+    "Tr": {
+      "expected": "trase"
+    },
+    "tr": {
+      "expected": "trase"
+    },
+    "log": {
+      "expected": "log"
+    },
+    "ln": {
+      "expected": "ln"
+    },
+    "lg": {
+      "expected": "lg"
+    },
+    "exp": {
+      "expected": "eksponent"
+    },
+    "expt": {
+      "expected": "eksponent"
+    },
+    "gcd": {
+      "expected": "største fellesnemnar"
+    },
+    "GCD": {
+      "expected": "største fellesnemnar"
+    },
+    "lcm": {
+      "expected": "minste fellesnemnar"
+    },
+    "LCM": {
+      "expected": "minste fellesnemnar"
+    },
+    "arg": {
+      "expected": "arg"
+    },
+    "Arg": {
+      "expected": "arg"
+    },
+    "im": {
+      "expected": ""
+    },
+    "Im": {
+      "expected": ""
+    },
+    "re": {
+      "expected": ""
+    },
+    "Re": {
+      "expected": ""
+    },
+    "inf": {
+      "expected": "inf"
+    },
+    "Inf": {
+      "expected": "inf"
+    },
+    "lim": {
+      "expected": "grense"
+    },
+    "lim inf": {
+      "expected": "nedre grense"
+    },
+    "liminf": {
+      "expected": "nedre grense"
+    },
+    "lim sup": {
+      "expected": "øvre grense"
+    },
+    "limsup": {
+      "expected": "øvre grense"
+    },
+    "max": {
+      "expected": "maks"
+    },
+    "Max": {
+      "expected": "maks"
+    },
+    "min": {
+      "expected": "min"
+    },
+    "Min": {
+      "expected": "min"
+    },
+    "sup": {
+      "expected": "sup"
+    },
+    "Sup": {
+      "expected": "sup"
+    },
+    "injlim": {
+      "expected": ""
+    },
+    "inj lim": {
+      "expected": ""
+    },
+    "projlim": {
+      "expected": "omvendt grense"
+    },
+    "proj lim": {
+      "expected": "omvendt grense"
+    },
+    "mod": {
+      "expected": "mod"
+    },
+    "Pr": {
+      "expected": "sannsyn"
+    },
+    "cosh": {
+      "expected": "hyperbolsk cosinus"
+    },
+    "coth": {
+      "expected": "hyperbolsk cotangens"
+    },
+    "csch": {
+      "expected": "hyperbolsk cosecans"
+    },
+    "sech": {
+      "expected": "hyperbolsk secans"
+    },
+    "sinh": {
+      "expected": "hyperbolsk sinus"
+    },
+    "tanh": {
+      "expected": "hyperbolsk tangens"
+    },
+    "arcosh": {
+      "expected": "arealfunksjon for hyperbolsk cosinus"
+    },
+    "arccosh": {
+      "expected": "arealfunksjon for hyperbolsk cosinus"
+    },
+    "arcoth": {
+      "expected": "arealfunksjon for hyperbolsk cotangens"
+    },
+    "arccoth": {
+      "expected": "arealfunksjon for hyperbolsk cotangens"
+    },
+    "arcsch": {
+      "expected": "arealfunksjon for hyperbolsk cosecans"
+    },
+    "arccsch": {
+      "expected": "arealfunksjon for hyperbolsk cosecans"
+    },
+    "arsech": {
+      "expected": "arealfunksjon for hyperbolsk secans"
+    },
+    "arcsech": {
+      "expected": "arealfunksjon for hyperbolsk secans"
+    },
+    "arsinh": {
+      "expected": "arealfunksjon for hyperbolsk sinus"
+    },
+    "arcsinh": {
+      "expected": "arealfunksjon for hyperbolsk sinus"
+    },
+    "artanh": {
+      "expected": "arealfunksjon for hyperbolsk tangens"
+    },
+    "arctanh": {
+      "expected": "arealfunksjon for hyperbolsk tangens"
+    },
+    "cos": {
+      "expected": "cosinus"
+    },
+    "cosine": {
+      "expected": "cosinus"
+    },
+    "cot": {
+      "expected": "cotangens"
+    },
+    "csc": {
+      "expected": "cosecans"
+    },
+    "sec": {
+      "expected": "secans"
+    },
+    "sin": {
+      "expected": "sinus"
+    },
+    "sine": {
+      "expected": "sinus"
+    },
+    "tan": {
+      "expected": "tangens"
+    },
+    "arccos": {
+      "expected": "invers cosinus"
+    },
+    "arccot": {
+      "expected": "invers cotangens"
+    },
+    "arccsc": {
+      "expected": "invers cosecans"
+    },
+    "arcsec": {
+      "expected": "invers secans"
+    },
+    "arcsin": {
+      "expected": "invers sinus"
+    },
+    "arctan": {
+      "expected": "invers tangens"
+    }
+  }
+}

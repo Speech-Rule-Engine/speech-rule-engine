@@ -1,0 +1,644 @@
+{
+  "locale": "sv",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Swedish numeric ordinal tests.",
+  "kind": "numericOrdinal",
+  "active": "NumbersSwedish",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "0:e"
+    },
+    "Number_1": {
+      "expected": "1:a"
+    },
+    "Number_2": {
+      "expected": "2:a"
+    },
+    "Number_3": {
+      "expected": "3:e"
+    },
+    "Number_4": {
+      "expected": "4:e"
+    },
+    "Number_5": {
+      "expected": "5:e"
+    },
+    "Number_6": {
+      "expected": "6:e"
+    },
+    "Number_7": {
+      "expected": "7:e"
+    },
+    "Number_8": {
+      "expected": "8:e"
+    },
+    "Number_9": {
+      "expected": "9:e"
+    },
+    "Number_10": {
+      "expected": "10:e"
+    },
+    "Number_11": {
+      "expected": "11:e"
+    },
+    "Number_12": {
+      "expected": "12:e"
+    },
+    "Number_13": {
+      "expected": "13:e"
+    },
+    "Number_14": {
+      "expected": "14:e"
+    },
+    "Number_15": {
+      "expected": "15:e"
+    },
+    "Number_16": {
+      "expected": "16:e"
+    },
+    "Number_17": {
+      "expected": "17:e"
+    },
+    "Number_18": {
+      "expected": "18:e"
+    },
+    "Number_19": {
+      "expected": "19:e"
+    },
+    "Number_20": {
+      "expected": "20:e"
+    },
+    "Number_21": {
+      "expected": "21:a"
+    },
+    "Number_22": {
+      "expected": "22:a"
+    },
+    "Number_23": {
+      "expected": "23:e"
+    },
+    "Number_24": {
+      "expected": "24:e"
+    },
+    "Number_25": {
+      "expected": "25:e"
+    },
+    "Number_26": {
+      "expected": "26:e"
+    },
+    "Number_27": {
+      "expected": "27:e"
+    },
+    "Number_28": {
+      "expected": "28:e"
+    },
+    "Number_29": {
+      "expected": "29:e"
+    },
+    "Number_30": {
+      "expected": "30:e"
+    },
+    "Number_31": {
+      "expected": "31:a"
+    },
+    "Number_32": {
+      "expected": "32:a"
+    },
+    "Number_33": {
+      "expected": "33:e"
+    },
+    "Number_34": {
+      "expected": "34:e"
+    },
+    "Number_35": {
+      "expected": "35:e"
+    },
+    "Number_36": {
+      "expected": "36:e"
+    },
+    "Number_37": {
+      "expected": "37:e"
+    },
+    "Number_38": {
+      "expected": "38:e"
+    },
+    "Number_39": {
+      "expected": "39:e"
+    },
+    "Number_40": {
+      "expected": "40:e"
+    },
+    "Number_41": {
+      "expected": "41:a"
+    },
+    "Number_42": {
+      "expected": "42:a"
+    },
+    "Number_43": {
+      "expected": "43:e"
+    },
+    "Number_44": {
+      "expected": "44:e"
+    },
+    "Number_45": {
+      "expected": "45:e"
+    },
+    "Number_46": {
+      "expected": "46:e"
+    },
+    "Number_47": {
+      "expected": "47:e"
+    },
+    "Number_48": {
+      "expected": "48:e"
+    },
+    "Number_49": {
+      "expected": "49:e"
+    },
+    "Number_50": {
+      "expected": "50:e"
+    },
+    "Number_51": {
+      "expected": "51:a"
+    },
+    "Number_52": {
+      "expected": "52:a"
+    },
+    "Number_53": {
+      "expected": "53:e"
+    },
+    "Number_54": {
+      "expected": "54:e"
+    },
+    "Number_55": {
+      "expected": "55:e"
+    },
+    "Number_56": {
+      "expected": "56:e"
+    },
+    "Number_57": {
+      "expected": "57:e"
+    },
+    "Number_58": {
+      "expected": "58:e"
+    },
+    "Number_59": {
+      "expected": "59:e"
+    },
+    "Number_60": {
+      "expected": "60:e"
+    },
+    "Number_61": {
+      "expected": "61:a"
+    },
+    "Number_62": {
+      "expected": "62:a"
+    },
+    "Number_63": {
+      "expected": "63:e"
+    },
+    "Number_64": {
+      "expected": "64:e"
+    },
+    "Number_65": {
+      "expected": "65:e"
+    },
+    "Number_66": {
+      "expected": "66:e"
+    },
+    "Number_67": {
+      "expected": "67:e"
+    },
+    "Number_68": {
+      "expected": "68:e"
+    },
+    "Number_69": {
+      "expected": "69:e"
+    },
+    "Number_70": {
+      "expected": "70:e"
+    },
+    "Number_71": {
+      "expected": "71:a"
+    },
+    "Number_72": {
+      "expected": "72:a"
+    },
+    "Number_73": {
+      "expected": "73:e"
+    },
+    "Number_74": {
+      "expected": "74:e"
+    },
+    "Number_75": {
+      "expected": "75:e"
+    },
+    "Number_76": {
+      "expected": "76:e"
+    },
+    "Number_77": {
+      "expected": "77:e"
+    },
+    "Number_78": {
+      "expected": "78:e"
+    },
+    "Number_79": {
+      "expected": "79:e"
+    },
+    "Number_80": {
+      "expected": "80:e"
+    },
+    "Number_81": {
+      "expected": "81:a"
+    },
+    "Number_82": {
+      "expected": "82:a"
+    },
+    "Number_83": {
+      "expected": "83:e"
+    },
+    "Number_84": {
+      "expected": "84:e"
+    },
+    "Number_85": {
+      "expected": "85:e"
+    },
+    "Number_86": {
+      "expected": "86:e"
+    },
+    "Number_87": {
+      "expected": "87:e"
+    },
+    "Number_88": {
+      "expected": "88:e"
+    },
+    "Number_89": {
+      "expected": "89:e"
+    },
+    "Number_90": {
+      "expected": "90:e"
+    },
+    "Number_91": {
+      "expected": "91:a"
+    },
+    "Number_92": {
+      "expected": "92:a"
+    },
+    "Number_93": {
+      "expected": "93:e"
+    },
+    "Number_94": {
+      "expected": "94:e"
+    },
+    "Number_95": {
+      "expected": "95:e"
+    },
+    "Number_96": {
+      "expected": "96:e"
+    },
+    "Number_97": {
+      "expected": "97:e"
+    },
+    "Number_98": {
+      "expected": "98:e"
+    },
+    "Number_99": {
+      "expected": "99:e"
+    },
+    "Number_100": {
+      "expected": "100:e"
+    },
+    "Number_101": {
+      "expected": "101:a"
+    },
+    "Number_102": {
+      "expected": "102:a"
+    },
+    "Number_103": {
+      "expected": "103:e"
+    },
+    "Number_104": {
+      "expected": "104:e"
+    },
+    "Number_105": {
+      "expected": "105:e"
+    },
+    "Number_106": {
+      "expected": "106:e"
+    },
+    "Number_107": {
+      "expected": "107:e"
+    },
+    "Number_108": {
+      "expected": "108:e"
+    },
+    "Number_109": {
+      "expected": "109:e"
+    },
+    "Number_110": {
+      "expected": "110:e"
+    },
+    "Number_200": {
+      "expected": "200:e"
+    },
+    "Number_201": {
+      "expected": "201:a"
+    },
+    "Number_300": {
+      "expected": "300:e"
+    },
+    "Number_301": {
+      "expected": "301:a"
+    },
+    "Number_400": {
+      "expected": "400:e"
+    },
+    "Number_401": {
+      "expected": "401:a"
+    },
+    "Number_500": {
+      "expected": "500:e"
+    },
+    "Number_501": {
+      "expected": "501:a"
+    },
+    "Number_600": {
+      "expected": "600:e"
+    },
+    "Number_601": {
+      "expected": "601:a"
+    },
+    "Number_700": {
+      "expected": "700:e"
+    },
+    "Number_701": {
+      "expected": "701:a"
+    },
+    "Number_800": {
+      "expected": "800:e"
+    },
+    "Number_801": {
+      "expected": "801:a"
+    },
+    "Number_900": {
+      "expected": "900:e"
+    },
+    "Number_901": {
+      "expected": "901:a"
+    },
+    "Number_1000": {
+      "expected": "1000:e"
+    },
+    "Number_1001": {
+      "expected": "1001:a"
+    },
+    "Number_2000": {
+      "expected": "2000:e"
+    },
+    "Number_2001": {
+      "expected": "2001:a"
+    },
+    "Number_3000": {
+      "expected": "3000:e"
+    },
+    "Number_3001": {
+      "expected": "3001:a"
+    },
+    "Number_4000": {
+      "expected": "4000:e"
+    },
+    "Number_4001": {
+      "expected": "4001:a"
+    },
+    "Number_5000": {
+      "expected": "5000:e"
+    },
+    "Number_5001": {
+      "expected": "5001:a"
+    },
+    "Number_6000": {
+      "expected": "6000:e"
+    },
+    "Number_6001": {
+      "expected": "6001:a"
+    },
+    "Number_7000": {
+      "expected": "7000:e"
+    },
+    "Number_7001": {
+      "expected": "7001:a"
+    },
+    "Number_8000": {
+      "expected": "8000:e"
+    },
+    "Number_8001": {
+      "expected": "8001:a"
+    },
+    "Number_9000": {
+      "expected": "9000:e"
+    },
+    "Number_9001": {
+      "expected": "9001:a"
+    },
+    "Number_10000": {
+      "expected": "10000:e"
+    },
+    "Number_10001": {
+      "expected": "10001:a"
+    },
+    "Number_20000": {
+      "expected": "20000:e"
+    },
+    "Number_20001": {
+      "expected": "20001:a"
+    },
+    "Number_30000": {
+      "expected": "30000:e"
+    },
+    "Number_30001": {
+      "expected": "30001:a"
+    },
+    "Number_40000": {
+      "expected": "40000:e"
+    },
+    "Number_40001": {
+      "expected": "40001:a"
+    },
+    "Number_50000": {
+      "expected": "50000:e"
+    },
+    "Number_50001": {
+      "expected": "50001:a"
+    },
+    "Number_60000": {
+      "expected": "60000:e"
+    },
+    "Number_60001": {
+      "expected": "60001:a"
+    },
+    "Number_70000": {
+      "expected": "70000:e"
+    },
+    "Number_70001": {
+      "expected": "70001:a"
+    },
+    "Number_80000": {
+      "expected": "80000:e"
+    },
+    "Number_80001": {
+      "expected": "80001:a"
+    },
+    "Number_90000": {
+      "expected": "90000:e"
+    },
+    "Number_90001": {
+      "expected": "90001:a"
+    },
+    "Number_100000": {
+      "expected": "100000:e"
+    },
+    "Number_1000000": {
+      "expected": "1000000:e"
+    },
+    "Number_10000000": {
+      "expected": "10000000:e"
+    },
+    "Number_100000000": {
+      "expected": "100000000:e"
+    },
+    "Number_1000000000": {
+      "expected": "1000000000:e"
+    },
+    "Number_10000000000": {
+      "expected": "10000000000:e"
+    },
+    "Number_100000000000": {
+      "expected": "100000000000:e"
+    },
+    "Number_1000000000000": {
+      "expected": "1000000000000:e"
+    },
+    "Number_10000000000000": {
+      "expected": "10000000000000:e"
+    },
+    "Number_100000000000000": {
+      "expected": "100000000000000:e"
+    },
+    "Number_1000000000000000": {
+      "expected": "1000000000000000:e"
+    },
+    "Number_10000000000000000": {
+      "expected": "10000000000000000:e"
+    },
+    "Number_100001": {
+      "expected": "100001:a"
+    },
+    "Number_200000": {
+      "expected": "200000:e"
+    },
+    "Number_200001": {
+      "expected": "200001:a"
+    },
+    "Number_1000001": {
+      "expected": "1000001:a"
+    },
+    "Number_2000000": {
+      "expected": "2000000:e"
+    },
+    "Number_2000001": {
+      "expected": "2000001:a"
+    },
+    "Number_10000001": {
+      "expected": "10000001:a"
+    },
+    "Number_20000000": {
+      "expected": "20000000:e"
+    },
+    "Number_20000001": {
+      "expected": "20000001:a"
+    },
+    "Number_100000001": {
+      "expected": "100000001:a"
+    },
+    "Number_200000000": {
+      "expected": "200000000:e"
+    },
+    "Number_200000001": {
+      "expected": "200000001:a"
+    },
+    "Number_1000000001": {
+      "expected": "1000000001:a"
+    },
+    "Number_2000000000": {
+      "expected": "2000000000:e"
+    },
+    "Number_2000000001": {
+      "expected": "2000000001:a"
+    },
+    "Number_10000000001": {
+      "expected": "10000000001:a"
+    },
+    "Number_20000000000": {
+      "expected": "20000000000:e"
+    },
+    "Number_20000000001": {
+      "expected": "20000000001:a"
+    },
+    "Number_100000000001": {
+      "expected": "100000000001:a"
+    },
+    "Number_200000000000": {
+      "expected": "200000000000:e"
+    },
+    "Number_200000000001": {
+      "expected": "200000000001:a"
+    },
+    "Number_1000000000001": {
+      "expected": "1000000000001:a"
+    },
+    "Number_2000000000000": {
+      "expected": "2000000000000:e"
+    },
+    "Number_2000000000001": {
+      "expected": "2000000000001:a"
+    },
+    "Number_10000000000001": {
+      "expected": "10000000000001:a"
+    },
+    "Number_20000000000000": {
+      "expected": "20000000000000:e"
+    },
+    "Number_20000000000001": {
+      "expected": "20000000000001:a"
+    },
+    "Number_100000000000001": {
+      "expected": "100000000000001:a"
+    },
+    "Number_200000000000000": {
+      "expected": "200000000000000:e"
+    },
+    "Number_200000000000001": {
+      "expected": "200000000000001:a"
+    },
+    "Number_1000000000000001": {
+      "expected": "1000000000000001:a"
+    },
+    "Number_2000000000000000": {
+      "expected": "2000000000000000:e"
+    },
+    "Number_2000000000000001": {
+      "expected": "2000000000000001:a"
+    },
+    "Number_10000000000000001": {
+      "expected": "10000000000000000:e"
+    },
+    "Number_20000000000000000": {
+      "expected": "20000000000000000:e"
+    },
+    "Number_20000000000000001": {
+      "expected": "20000000000000000:e"
+    }
+  }
+}

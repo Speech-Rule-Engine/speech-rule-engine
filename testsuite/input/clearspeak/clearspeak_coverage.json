@@ -1,0 +1,348 @@
+{
+  "tests": {
+    "ApplSimple_0": {
+      "input": "<mi>f</mi><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "ApplSimple_1": {
+      "input": "<mi>f</mi><mi>g</mi><mi>x</mi><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "BinaryOperationPause_0": {
+      "input": "<mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>y</mi>"
+    },
+    "Empty_Line_0": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr></mtr></mtable>"
+    },
+    "Empty_Line_1": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd></mtd></mtr></mtable>"
+    },
+    "Empty_Line_2": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi></mi></mtd></mtr></mtable>"
+    },
+    "Empty_Cell_0": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr><mtr></mtr></mtable>"
+    },
+    "Empty_Cell_1": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd></mtd></mtr></mtable>"
+    },
+    "Empty_Cell_2": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi></mi></mtd></mtr></mtable>"
+    },
+    "Empty_Cell_3": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mo>=</mo></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd></mtd><mtd><mn>2</mn></mtd></mtr></mtable>"
+    },
+    "Angle_0_default": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>"
+    },
+    "Angle_1_default": {
+      "input": "<mrow><mn>1</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>"
+    },
+    "Angle_2_default": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>1</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>"
+    },
+    "Angle_3_default": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>1</mn><mo>″</mo></msup></mrow>"
+    },
+    "Angle_4_default": {
+      "input": "<mrow><msup><mn>1</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>"
+    },
+    "Angle_5_default": {
+      "input": "<mrow><msup><mn>10</mn><mo>′</mo></msup><msup><mn>1</mn><mo>″</mo></msup></mrow>"
+    },
+    "Angle_0_Angle": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "Angle_1_Angle": {
+      "input": "<mrow><mn>1</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "Angle_2_Angle": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>1</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "Angle_3_Angle": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>1</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "Angle_4_Angle": {
+      "input": "<mrow><msup><mn>1</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "Angle_5_Angle": {
+      "input": "<mrow><msup><mn>10</mn><mo>′</mo></msup><msup><mn>1</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "Angle_0_Length": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Length"
+    },
+    "Angle_1_Length": {
+      "input": "<mrow><mn>1</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Length"
+    },
+    "Angle_2_Length": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>1</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Length"
+    },
+    "Angle_3_Length": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>1</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Length"
+    },
+    "Angle_4_Length": {
+      "input": "<mrow><msup><mn>1</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Length"
+    },
+    "Angle_5_Length": {
+      "input": "<mrow><msup><mn>10</mn><mo>′</mo></msup><msup><mn>1</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Length"
+    },
+    "_comment_": "Cancellation and Crossout",
+    "Enclose_0": {
+      "input": "<menclose notation=\"box\"><mn>12</mn></menclose>",
+      "preference": "default"
+    },
+    "Enclose_1": {
+      "input": "<menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose>",
+      "preference": "default"
+    },
+    "Enclose_2": {
+      "input": "<munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder>",
+      "preference": "default"
+    },
+    "Enclose_3": {
+      "input": "<munder><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></munder>",
+      "preference": "default"
+    },
+    "Enclose_4": {
+      "input": "<mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover>",
+      "preference": "default"
+    },
+    "Enclose_5": {
+      "input": "<mover><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></mover>",
+      "preference": "default"
+    },
+    "Enclose_6": {
+      "input": "<menclose notation=\"box\"><mn>12</mn></menclose>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "Enclose_7": {
+      "input": "<menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "Enclose_8": {
+      "input": "<munder><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></munder>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "Enclose_9": {
+      "input": "<munder><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></munder>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "Enclose_10": {
+      "input": "<mover><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose><mn>2</mn></mover>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "Enclose_11": {
+      "input": "<mover><mn>2</mn><menclose notation=\"updiagonalstrike\"><mn>12</mn></menclose></mover>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "EncloseSpecial_0": {
+      "input": "<menclose notation=\"left\"><mi>A</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseSpecial_1": {
+      "input": "<menclose notation=\"top\"><mi>A</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseSpecial_2": {
+      "input": "<menclose notation=\"right\"><mi>A</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseSpecial_3": {
+      "input": "<menclose notation=\"bottom\"><mi>A</mi></menclose>",
+      "preference": "default"
+    },
+    "NestedRoots_0": {
+      "input": "<msqrt><mroot><mi>a</mi><mn>3</mn></mroot><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "default"
+    },
+    "NestedRoots_1": {
+      "input": "<msqrt><mroot><mi>a</mi><mn>4</mn></mroot><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "default"
+    },
+    "NestedRoots_2": {
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "default"
+    },
+    "NestedRoots_3": {
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "Roots_PosNegSqRoot"
+    },
+    "NestedRoots_4": {
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "Roots_PosNegSqRootEnd"
+    },
+    "NestedRoots_5": {
+      "input": "<msqrt><mo>-</mo><msqrt><mi>a</mi></msqrt><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "Roots_PosNegSqRootEnd"
+    },
+    "Tensor_0": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "Tensor_1": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>e</mi><mi>d</mi><mi>f</mi><mprescripts/><mi>a</mi><mi>g</mi><mi>b</mi><mi>h</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "Tensor_2": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "Tensor_3": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "Tensor_4": {
+      "input": "<mi>l</mi><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "Tensor_5": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "default"
+    },
+    "Set_0": {
+      "input": "<mo>{</mo><mi>x</mi><mo>&#x2209;</mo><mi>A</mi><mo>|</mo><mi>B</mi><mo>}</mo>",
+      "preference": "default"
+    },
+    "Set_1": {
+      "input": "<mo>{</mo><mi>x</mi><mo>&#x2209;</mo><mi>A</mi><mo>|</mo><mi>B</mi><mo>}</mo>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Set_2": {
+      "input": "<mo>{</mo><mi>x</mi><mo>&#x2209;</mo><mi>A</mi><mo>|</mo><mi>B</mi><mo>}</mo>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Set_3": {
+      "input": "<mo>{</mo><mi>x</mi><mo>&#x2209;</mo><mi>A</mi><mo>|</mo><mi>B</mi><mo>}</mo>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Set_4": {
+      "input": "<mo>{</mo><mi>B</mi><mo>}</mo>",
+      "preference": "default"
+    },
+    "Set_5": {
+      "input": "<mo>{</mo><mo>}</mo>",
+      "preference": "default"
+    },
+    "_comment_": "These could go into named sets.",
+    "NamedSet_0": {
+      "preference": "default",
+      "input": "<msup><mi mathvariant=\"double-struck\">Q</mi><mn>+</mn></msup>"
+    },
+    "NamedSet_1": {
+      "preference": "default",
+      "input": "<msup><mi>ℚ</mi><mn>+</mn></msup>"
+    },
+    "NamedSet_2": {
+      "preference": "default",
+      "input": "<msup><mi mathvariant=\"double-struck\">Q</mi><mn>-</mn></msup>"
+    },
+    "NamedSet_3": {
+      "preference": "default",
+      "input": "<msup><mi>ℚ</mi><mn>-</mn></msup>"
+    },
+    "NamedSet_4": {
+      "preference": "default",
+      "input": "<msup><mi mathvariant=\"double-struck\">Q</mi><mn>2</mn></msup>"
+    },
+    "NamedSet_5": {
+      "preference": "default",
+      "input": "<msup><mi>ℚ</mi><mn>2</mn></msup>"
+    },
+    "NamedSet_6": {
+      "preference": "default",
+      "input": "<msup><mi mathvariant=\"double-struck\">N</mi><mn>2</mn></msup>"
+    },
+    "NamedSet_7": {
+      "preference": "default",
+      "input": "<msup><mi>ℕ</mi><mn>2</mn></msup>"
+    },
+    "Unknown": {
+      "preference": "default",
+      "input": "<h1>a</h1>"
+    },
+    "MultiLines_0": {
+      "preference": "MultiLineLabel_Case",
+      "input": "<mrow><mtable><mtr><mtd><mrow><mi>f</mi><mo >(</mo><mi>x</mi><mo >)</mo><mo>=</mo><mo>−</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>"
+    },
+    "MultiLines_1": {
+      "preference": "MultiLineLabel_Constraint",
+      "input": "<mrow><mtable><mtr><mtd><mrow><mi>f</mi><mo >(</mo><mi>x</mi><mo >)</mo><mo>=</mo><mo>−</mo><mi>x</mi></mrow></mtd><mtd><mrow><mtext>if </mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>"
+    },
+    "_comment_": "The following two are not yet done.",
+    "VulgarFraction": {
+      "preference": "default",
+      "input": "<mfrac><mn>10</mn><mn>20</mn></mfrac>"
+    },
+    "UnitFraction": {
+      "preference": "default",
+      "input": "<mfrac><mrow><mn>2</mn><mi class=\"MathML-Unit\">km</mi></mrow><mtext>b</mtext></mfrac>"
+    },
+    "Decimal": {
+      "preference": "default",
+      "input": "<mrow><mn>1.4</mn><mover><mrow><mn>3</mn></mrow><mo>¯</mo></mover></mrow>"
+    },
+    "_comment_": "The expression does not make sense but tests the rule.",
+    "VertLine_SuchThat": {
+      "preference": "VerticalLine_SuchThat",
+      "input": "<mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow>"
+    },
+    "VectorEndDeterminant": {
+      "input": "<math><mo>|</mo><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>|</mo></math>",
+      "preference": "Matrix_EndVector"
+    },
+    "_comment_": "Exponents with square or cube.",
+    "SimpleExponentSquared_0": {
+      "input": "<msup><mn>3</mn><mrow><msup><mn>2</mn><mn>2</mn></msup></mrow></msup>"
+    },
+    "SimpleExponentSquared_1": {
+      "input": "<msup><mn>3</mn><mrow><msup><mi>i</mi><mn>2</mn></msup></mrow></msup>"
+    },
+    "SimpleExponentSquared_2": {
+      "input": "<msup><mn>3</mn><mrow><msup><mfrac><mn>2</mn><mn>3</mn></mfrac><mn>2</mn></msup></mrow></msup>"
+    },
+    "SimpleExponentCubed_0": {
+      "input": "<msup><mn>3</mn><mrow><msup><mn>2</mn><mn>3</mn></msup></mrow></msup>"
+    },
+    "SimpleExponentCubed_1": {
+      "input": "<msup><mn>3</mn><mrow><msup><mi>i</mi><mn>3</mn></msup></mrow></msup>"
+    },
+    "SimpleExponentCubed_2": {
+      "input": "<msup><mn>3</mn><mrow><msup><mfrac><mn>2</mn><mn>3</mn></mfrac><mn>3</mn></msup></mrow></msup>"
+    },
+    "MultiRel": {
+      "input": "<mrow><mi>a</mi><mo>≤</mo><mi>b</mi><mo>=</mo><mi>c</mi></mrow>"
+    },
+    "PrefixFunctionAsExponent": {
+      "input": "<msup><mn>3</mn><mrow><mi>sin</mi><mo>(</mo><mn>2</mn><mo>+</mo><mi>x</mi><mo>)</mo></mrow></msup>"
+    },
+    "CompositeFunctionFences": {
+      "input": "<mrow><mrow><mo>(</mo><mi>f</mi><mo>+</mo><mi>g</mi><mo>)</mo></mrow><mo>(</mo><mn>2</mn><mo>+</mo><mi>x</mi><mo>)</mo></mrow>",
+      "preference": "Paren_Speak"
+    },
+    "LimUpper": {
+      "input": "<mover><mo>&#x2211;</mo><mi>I</mi></mover>"
+    },
+    "Overscript": {
+      "input": "<mover><mi>A</mi><mi>B</mi></mover>"
+    },
+    "_comment_": "Italian coverage",
+    "DetFemale": {
+      "input": "<mi>det</mi><mi>A</mi>"
+    },
+    "_comment_": "French coverage",
+    "ExponentLatinCap": {
+      "input": "<msup><mi>x</mi><mi>A</mi></msup>",
+      "preference": "Exponent_Ordinal"
+    }
+  }
+}

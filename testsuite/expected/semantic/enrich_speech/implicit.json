@@ -1,0 +1,7 @@
+{
+  "factory": "enrichSpeech",
+  "base": "input/semantic/implicit.json",
+  "information": "Enrich Speech tests for juxtaposition heuristic.",
+  "exclude": [],
+  "tests": "ALL"
+}

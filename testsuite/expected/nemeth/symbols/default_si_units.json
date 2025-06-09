@@ -1,0 +1,806 @@
+{
+  "name": "NemethDefaultSiUnit",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "active": "DefaultSymbolsNemeth",
+  "grammar": {},
+  "factory": "symbol",
+  "base": "input/common/si_units.json",
+  "information": "Nemeth Default SI Unit tests.",
+  "tests": {
+    "YW": {
+      "expected": "⠠⠽⠠⠺"
+    },
+    "Yw": {
+      "expected": "⠠⠽⠺"
+    },
+    "ZW": {
+      "expected": "⠠⠵⠠⠺"
+    },
+    "Zw": {
+      "expected": "⠠⠵⠺"
+    },
+    "EW": {
+      "expected": "⠠⠑⠠⠺"
+    },
+    "Ew": {
+      "expected": "⠠⠑⠺"
+    },
+    "PW": {
+      "expected": "⠠⠏⠠⠺"
+    },
+    "Pw": {
+      "expected": "⠠⠏⠺"
+    },
+    "TW": {
+      "expected": "⠠⠞⠠⠺"
+    },
+    "Tw": {
+      "expected": "⠠⠞⠺"
+    },
+    "GW": {
+      "expected": "⠠⠛⠠⠺"
+    },
+    "Gw": {
+      "expected": "⠠⠛⠺"
+    },
+    "MW": {
+      "expected": "⠠⠍⠠⠺"
+    },
+    "Mw": {
+      "expected": "⠠⠍⠺"
+    },
+    "kW": {
+      "expected": "⠅⠠⠺"
+    },
+    "kw": {
+      "expected": "⠅⠺"
+    },
+    "hW": {
+      "expected": "⠓⠠⠺"
+    },
+    "hw": {
+      "expected": "⠓⠺"
+    },
+    "daW": {
+      "expected": "⠙⠁⠠⠺"
+    },
+    "daw": {
+      "expected": "⠙⠁⠺"
+    },
+    "dW": {
+      "expected": "⠙⠠⠺"
+    },
+    "dw": {
+      "expected": "⠙⠺"
+    },
+    "cW": {
+      "expected": "⠉⠠⠺"
+    },
+    "cw": {
+      "expected": "⠉⠺"
+    },
+    "mW": {
+      "expected": "⠍⠠⠺"
+    },
+    "mw": {
+      "expected": "⠍⠺"
+    },
+    "µW": {
+      "expected": "⠨⠍⠠⠺"
+    },
+    "µw": {
+      "expected": "⠨⠍⠺"
+    },
+    "μW": {
+      "expected": "⠨⠍⠠⠺"
+    },
+    "μw": {
+      "expected": "⠨⠍⠺"
+    },
+    "nW": {
+      "expected": "⠝⠠⠺"
+    },
+    "nw": {
+      "expected": "⠝⠺"
+    },
+    "pW": {
+      "expected": "⠏⠠⠺"
+    },
+    "pw": {
+      "expected": "⠏⠺"
+    },
+    "fW": {
+      "expected": "⠋⠠⠺"
+    },
+    "fw": {
+      "expected": "⠋⠺"
+    },
+    "aW": {
+      "expected": "⠁⠠⠺"
+    },
+    "aw": {
+      "expected": "⠁⠺"
+    },
+    "zW": {
+      "expected": "⠵⠠⠺"
+    },
+    "zw": {
+      "expected": "⠵⠺"
+    },
+    "yW": {
+      "expected": "⠽⠠⠺"
+    },
+    "yw": {
+      "expected": "⠽⠺"
+    },
+    "W": {
+      "expected": "⠠⠺"
+    },
+    "w": {
+      "expected": "⠺"
+    },
+    "YJ": {
+      "expected": "⠠⠽⠠⠚"
+    },
+    "ZJ": {
+      "expected": "⠠⠵⠠⠚"
+    },
+    "EJ": {
+      "expected": "⠠⠑⠠⠚"
+    },
+    "PJ": {
+      "expected": "⠠⠏⠠⠚"
+    },
+    "TJ": {
+      "expected": "⠠⠞⠠⠚"
+    },
+    "GJ": {
+      "expected": "⠠⠛⠠⠚"
+    },
+    "MJ": {
+      "expected": "⠠⠍⠠⠚"
+    },
+    "kJ": {
+      "expected": "⠅⠠⠚"
+    },
+    "hJ": {
+      "expected": "⠓⠠⠚"
+    },
+    "daJ": {
+      "expected": "⠙⠁⠠⠚"
+    },
+    "dJ": {
+      "expected": "⠙⠠⠚"
+    },
+    "cJ": {
+      "expected": "⠉⠠⠚"
+    },
+    "mJ": {
+      "expected": "⠍⠠⠚"
+    },
+    "µJ": {
+      "expected": "⠨⠍⠠⠚"
+    },
+    "μJ": {
+      "expected": "⠨⠍⠠⠚"
+    },
+    "nJ": {
+      "expected": "⠝⠠⠚"
+    },
+    "pJ": {
+      "expected": "⠏⠠⠚"
+    },
+    "fJ": {
+      "expected": "⠋⠠⠚"
+    },
+    "aJ": {
+      "expected": "⠁⠠⠚"
+    },
+    "zJ": {
+      "expected": "⠵⠠⠚"
+    },
+    "yJ": {
+      "expected": "⠽⠠⠚"
+    },
+    "J": {
+      "expected": "⠠⠚"
+    },
+    "YN": {
+      "expected": "⠠⠽⠠⠝"
+    },
+    "ZN": {
+      "expected": "⠠⠵⠠⠝"
+    },
+    "EN": {
+      "expected": "⠠⠑⠠⠝"
+    },
+    "PN": {
+      "expected": "⠠⠏⠠⠝"
+    },
+    "TN": {
+      "expected": "⠠⠞⠠⠝"
+    },
+    "GN": {
+      "expected": "⠠⠛⠠⠝"
+    },
+    "MN": {
+      "expected": "⠠⠍⠠⠝"
+    },
+    "kN": {
+      "expected": "⠅⠠⠝"
+    },
+    "hN": {
+      "expected": "⠓⠠⠝"
+    },
+    "daN": {
+      "expected": "⠙⠁⠠⠝"
+    },
+    "dN": {
+      "expected": "⠙⠠⠝"
+    },
+    "cN": {
+      "expected": "⠉⠠⠝"
+    },
+    "mN": {
+      "expected": "⠍⠠⠝"
+    },
+    "µN": {
+      "expected": "⠨⠍⠠⠝"
+    },
+    "μN": {
+      "expected": "⠨⠍⠠⠝"
+    },
+    "nN": {
+      "expected": "⠝⠠⠝"
+    },
+    "pN": {
+      "expected": "⠏⠠⠝"
+    },
+    "fN": {
+      "expected": "⠋⠠⠝"
+    },
+    "aN": {
+      "expected": "⠁⠠⠝"
+    },
+    "zN": {
+      "expected": "⠵⠠⠝"
+    },
+    "yN": {
+      "expected": "⠽⠠⠝"
+    },
+    "N": {
+      "expected": "⠠⠝"
+    },
+    "YA": {
+      "expected": "⠠⠽⠠⠁"
+    },
+    "ZA": {
+      "expected": "⠠⠵⠠⠁"
+    },
+    "EA": {
+      "expected": "⠠⠑⠠⠁"
+    },
+    "PA": {
+      "expected": "⠠⠏⠠⠁"
+    },
+    "TA": {
+      "expected": "⠠⠞⠠⠁"
+    },
+    "GA": {
+      "expected": "⠠⠛⠠⠁"
+    },
+    "MA": {
+      "expected": "⠠⠍⠠⠁"
+    },
+    "kA": {
+      "expected": "⠅⠠⠁"
+    },
+    "hA": {
+      "expected": "⠓⠠⠁"
+    },
+    "daA": {
+      "expected": "⠙⠁⠠⠁"
+    },
+    "dA": {
+      "expected": "⠙⠠⠁"
+    },
+    "cA": {
+      "expected": "⠉⠠⠁"
+    },
+    "mA": {
+      "expected": "⠍⠠⠁"
+    },
+    "µA": {
+      "expected": "⠨⠍⠠⠁"
+    },
+    "μA": {
+      "expected": "⠨⠍⠠⠁"
+    },
+    "nA": {
+      "expected": "⠝⠠⠁"
+    },
+    "pA": {
+      "expected": "⠏⠠⠁"
+    },
+    "fA": {
+      "expected": "⠋⠠⠁"
+    },
+    "aA": {
+      "expected": "⠁⠠⠁"
+    },
+    "zA": {
+      "expected": "⠵⠠⠁"
+    },
+    "yA": {
+      "expected": "⠽⠠⠁"
+    },
+    "A": {
+      "expected": "⠠⠁"
+    },
+    "YV": {
+      "expected": "⠠⠽⠠⠧"
+    },
+    "ZV": {
+      "expected": "⠠⠵⠠⠧"
+    },
+    "EV": {
+      "expected": "⠠⠑⠠⠧"
+    },
+    "PV": {
+      "expected": "⠠⠏⠠⠧"
+    },
+    "TV": {
+      "expected": "⠠⠞⠠⠧"
+    },
+    "GV": {
+      "expected": "⠠⠛⠠⠧"
+    },
+    "MV": {
+      "expected": "⠠⠍⠠⠧"
+    },
+    "kV": {
+      "expected": "⠅⠠⠧"
+    },
+    "hV": {
+      "expected": "⠓⠠⠧"
+    },
+    "daV": {
+      "expected": "⠙⠁⠠⠧"
+    },
+    "dV": {
+      "expected": "⠙⠠⠧"
+    },
+    "cV": {
+      "expected": "⠉⠠⠧"
+    },
+    "mV": {
+      "expected": "⠍⠠⠧"
+    },
+    "µV": {
+      "expected": "⠨⠍⠠⠧"
+    },
+    "μV": {
+      "expected": "⠨⠍⠠⠧"
+    },
+    "nV": {
+      "expected": "⠝⠠⠧"
+    },
+    "pV": {
+      "expected": "⠏⠠⠧"
+    },
+    "fV": {
+      "expected": "⠋⠠⠧"
+    },
+    "aV": {
+      "expected": "⠁⠠⠧"
+    },
+    "zV": {
+      "expected": "⠵⠠⠧"
+    },
+    "yV": {
+      "expected": "⠽⠠⠧"
+    },
+    "V": {
+      "expected": "⠠⠧"
+    },
+    "YΩ": {
+      "expected": "⠠⠽⠨⠠⠺"
+    },
+    "ZΩ": {
+      "expected": "⠠⠵⠨⠠⠺"
+    },
+    "EΩ": {
+      "expected": "⠠⠑⠨⠠⠺"
+    },
+    "PΩ": {
+      "expected": "⠠⠏⠨⠠⠺"
+    },
+    "TΩ": {
+      "expected": "⠠⠞⠨⠠⠺"
+    },
+    "GΩ": {
+      "expected": "⠠⠛⠨⠠⠺"
+    },
+    "MΩ": {
+      "expected": "⠠⠍⠨⠠⠺"
+    },
+    "kΩ": {
+      "expected": "⠅⠨⠠⠺"
+    },
+    "hΩ": {
+      "expected": "⠓⠨⠠⠺"
+    },
+    "daΩ": {
+      "expected": "⠙⠁⠨⠠⠺"
+    },
+    "dΩ": {
+      "expected": "⠙⠨⠠⠺"
+    },
+    "cΩ": {
+      "expected": "⠉⠨⠠⠺"
+    },
+    "mΩ": {
+      "expected": "⠍⠨⠠⠺"
+    },
+    "µΩ": {
+      "expected": "⠨⠍⠨⠠⠺"
+    },
+    "μΩ": {
+      "expected": "⠨⠍⠨⠠⠺"
+    },
+    "nΩ": {
+      "expected": "⠝⠨⠠⠺"
+    },
+    "pΩ": {
+      "expected": "⠏⠨⠠⠺"
+    },
+    "fΩ": {
+      "expected": "⠋⠨⠠⠺"
+    },
+    "aΩ": {
+      "expected": "⠁⠨⠠⠺"
+    },
+    "zΩ": {
+      "expected": "⠵⠨⠠⠺"
+    },
+    "yΩ": {
+      "expected": "⠽⠨⠠⠺"
+    },
+    "Ω": {
+      "expected": "⠨⠠⠺"
+    },
+    "Ym": {
+      "expected": "⠠⠽⠍"
+    },
+    "Zm": {
+      "expected": "⠠⠵⠍"
+    },
+    "Em": {
+      "expected": "⠠⠑⠍"
+    },
+    "Pm": {
+      "expected": "⠠⠏⠍"
+    },
+    "Tm": {
+      "expected": "⠠⠞⠍"
+    },
+    "Gm": {
+      "expected": "⠠⠛⠍"
+    },
+    "Mm": {
+      "expected": "⠠⠍⠍"
+    },
+    "km": {
+      "expected": "⠅⠍"
+    },
+    "hm": {
+      "expected": "⠓⠍"
+    },
+    "dam": {
+      "expected": "⠙⠁⠍"
+    },
+    "dm": {
+      "expected": "⠙⠍"
+    },
+    "cm": {
+      "expected": "⠉⠍"
+    },
+    "mm": {
+      "expected": "⠍⠍"
+    },
+    "µm": {
+      "expected": "⠨⠍⠍"
+    },
+    "μm": {
+      "expected": "⠨⠍⠍"
+    },
+    "nm": {
+      "expected": "⠝⠍"
+    },
+    "pm": {
+      "expected": "⠏⠍"
+    },
+    "fm": {
+      "expected": "⠋⠍"
+    },
+    "am": {
+      "expected": "⠁⠍"
+    },
+    "zm": {
+      "expected": "⠵⠍"
+    },
+    "ym": {
+      "expected": "⠽⠍"
+    },
+    "m": {
+      "expected": "⠍"
+    },
+    "YB": {
+      "expected": "⠠⠽⠠⠃"
+    },
+    "ZB": {
+      "expected": "⠠⠵⠠⠃"
+    },
+    "EB": {
+      "expected": "⠠⠑⠠⠃"
+    },
+    "PB": {
+      "expected": "⠠⠏⠠⠃"
+    },
+    "TB": {
+      "expected": "⠠⠞⠠⠃"
+    },
+    "GB": {
+      "expected": "⠠⠛⠠⠃"
+    },
+    "MB": {
+      "expected": "⠠⠍⠠⠃"
+    },
+    "kB": {
+      "expected": "⠅⠠⠃"
+    },
+    "hB": {
+      "expected": "⠓⠠⠃"
+    },
+    "daB": {
+      "expected": "⠙⠁⠠⠃"
+    },
+    "dB": {
+      "expected": "⠙⠠⠃"
+    },
+    "cB": {
+      "expected": "⠉⠠⠃"
+    },
+    "mB": {
+      "expected": "⠍⠠⠃"
+    },
+    "µB": {
+      "expected": "⠨⠍⠠⠃"
+    },
+    "μB": {
+      "expected": "⠨⠍⠠⠃"
+    },
+    "nB": {
+      "expected": "⠝⠠⠃"
+    },
+    "pB": {
+      "expected": "⠏⠠⠃"
+    },
+    "fB": {
+      "expected": "⠋⠠⠃"
+    },
+    "aB": {
+      "expected": "⠁⠠⠃"
+    },
+    "zB": {
+      "expected": "⠵⠠⠃"
+    },
+    "yB": {
+      "expected": "⠽⠠⠃"
+    },
+    "B": {
+      "expected": "⠠⠃"
+    },
+    "Ys": {
+      "expected": "⠠⠽⠎"
+    },
+    "Zs": {
+      "expected": "⠠⠵⠎"
+    },
+    "Es": {
+      "expected": "⠠⠑⠎"
+    },
+    "Ps": {
+      "expected": "⠠⠏⠎"
+    },
+    "Ts": {
+      "expected": "⠠⠞⠎"
+    },
+    "Gs": {
+      "expected": "⠠⠛⠎"
+    },
+    "Ms": {
+      "expected": "⠠⠍⠎"
+    },
+    "ks": {
+      "expected": "⠅⠎"
+    },
+    "hs": {
+      "expected": "⠓⠎"
+    },
+    "das": {
+      "expected": "⠙⠁⠎"
+    },
+    "ds": {
+      "expected": "⠙⠎"
+    },
+    "cs": {
+      "expected": "⠉⠎"
+    },
+    "ms": {
+      "expected": "⠍⠎"
+    },
+    "µs": {
+      "expected": "⠨⠍⠎"
+    },
+    "μs": {
+      "expected": "⠨⠍⠎"
+    },
+    "ns": {
+      "expected": "⠝⠎"
+    },
+    "ps": {
+      "expected": "⠏⠎"
+    },
+    "fs": {
+      "expected": "⠋⠎"
+    },
+    "as": {
+      "expected": "⠁⠎"
+    },
+    "zs": {
+      "expected": "⠵⠎"
+    },
+    "ys": {
+      "expected": "⠽⠎"
+    },
+    "s": {
+      "expected": "⠎"
+    },
+    "Yl": {
+      "expected": "⠠⠽⠇"
+    },
+    "Zl": {
+      "expected": "⠠⠵⠇"
+    },
+    "El": {
+      "expected": "⠠⠑⠇"
+    },
+    "Pl": {
+      "expected": "⠠⠏⠇"
+    },
+    "Tl": {
+      "expected": "⠠⠞⠇"
+    },
+    "Gl": {
+      "expected": "⠠⠛⠇"
+    },
+    "Ml": {
+      "expected": "⠠⠍⠇"
+    },
+    "kl": {
+      "expected": "⠅⠇"
+    },
+    "hl": {
+      "expected": "⠓⠇"
+    },
+    "dal": {
+      "expected": "⠙⠁⠇"
+    },
+    "dl": {
+      "expected": "⠙⠇"
+    },
+    "cl": {
+      "expected": "⠉⠇"
+    },
+    "ml": {
+      "expected": "⠍⠇"
+    },
+    "µl": {
+      "expected": "⠨⠍⠇"
+    },
+    "μl": {
+      "expected": "⠨⠍⠇"
+    },
+    "nl": {
+      "expected": "⠝⠇"
+    },
+    "pl": {
+      "expected": "⠏⠇"
+    },
+    "fl": {
+      "expected": "⠋⠇"
+    },
+    "al": {
+      "expected": "⠁⠇"
+    },
+    "zl": {
+      "expected": "⠵⠇"
+    },
+    "yl": {
+      "expected": "⠽⠇"
+    },
+    "l": {
+      "expected": "⠇"
+    },
+    "Yg": {
+      "expected": "⠠⠽⠛"
+    },
+    "Zg": {
+      "expected": "⠠⠵⠛"
+    },
+    "Eg": {
+      "expected": "⠠⠑⠛"
+    },
+    "Pg": {
+      "expected": "⠠⠏⠛"
+    },
+    "Tg": {
+      "expected": "⠠⠞⠛"
+    },
+    "Gg": {
+      "expected": "⠠⠛⠛"
+    },
+    "Mg": {
+      "expected": "⠠⠍⠛"
+    },
+    "kg": {
+      "expected": "⠅⠛"
+    },
+    "hg": {
+      "expected": "⠓⠛"
+    },
+    "dag": {
+      "expected": "⠙⠁⠛"
+    },
+    "dg": {
+      "expected": "⠙⠛"
+    },
+    "cg": {
+      "expected": "⠉⠛"
+    },
+    "mg": {
+      "expected": "⠍⠛"
+    },
+    "µg": {
+      "expected": "⠨⠍⠛"
+    },
+    "μg": {
+      "expected": "⠨⠍⠛"
+    },
+    "ng": {
+      "expected": "⠝⠛"
+    },
+    "pg": {
+      "expected": "⠏⠛"
+    },
+    "fg": {
+      "expected": "⠋⠛"
+    },
+    "ag": {
+      "expected": "⠁⠛"
+    },
+    "zg": {
+      "expected": "⠵⠛"
+    },
+    "yg": {
+      "expected": "⠽⠛"
+    },
+    "g": {
+      "expected": "⠛"
+    }
+  }
+}

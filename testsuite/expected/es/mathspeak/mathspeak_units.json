@@ -1,0 +1,328 @@
+{
+  "name": "SpanishMathspeakUnits",
+  "locale": "es",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Spanish Mathspeak Units tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakSpanish",
+  "exclude": [
+    "CurrencySingular_0_Currency_Position",
+    "CurrencySingular_0_Currency_Prefix",
+    "CurrencySingular_1_Currency_Position",
+    "CurrencySingular_1_Currency_Prefix",
+    "CurrencySingle_0_Currency_Position",
+    "CurrencySingle_0_Currency_Prefix",
+    "CurrencySingle_1_Currency_Position",
+    "CurrencySingle_1_Currency_Prefix",
+    "CurrencyPlural_0_Currency_Position",
+    "CurrencyPlural_0_Currency_Prefix",
+    "CurrencyPlural_1_Currency_Position",
+    "CurrencyPlural_1_Currency_Prefix",
+    "CurrencyMultitude_0_Currency_Position",
+    "CurrencyMultitude_0_Currency_Prefix",
+    "CurrencyMultitude_1_Currency_Position",
+    "CurrencyMultitude_1_Currency_Prefix"
+  ],
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "pulgadas cuadrado"
+    },
+    "UnitSquare_0_brief": {
+      "expected": "pulgadas cuadrado"
+    },
+    "UnitSquare_0_sbrief": {
+      "expected": "pulgadas cuadrado"
+    },
+    "UnitSquare_1_default": {
+      "expected": "segundos cuadrado"
+    },
+    "UnitSquare_1_brief": {
+      "expected": "segundos cuadrado"
+    },
+    "UnitSquare_1_sbrief": {
+      "expected": "segundos cuadrado"
+    },
+    "UnitSquare_2_default": {
+      "expected": "metros cuadrado"
+    },
+    "UnitSquare_2_brief": {
+      "expected": "metros cuadrado"
+    },
+    "UnitSquare_2_sbrief": {
+      "expected": "metros cuadrado"
+    },
+    "UnitCube_0_default": {
+      "expected": "pulgadas cúbico"
+    },
+    "UnitCube_0_brief": {
+      "expected": "pulgadas cúbico"
+    },
+    "UnitCube_0_sbrief": {
+      "expected": "pulgadas cúbico"
+    },
+    "UnitCube_1_default": {
+      "expected": "segundos cúbico"
+    },
+    "UnitCube_1_brief": {
+      "expected": "segundos cúbico"
+    },
+    "UnitCube_1_sbrief": {
+      "expected": "segundos cúbico"
+    },
+    "UnitCube_2_default": {
+      "expected": "metros cúbico"
+    },
+    "UnitCube_2_brief": {
+      "expected": "metros cúbico"
+    },
+    "UnitCube_2_sbrief": {
+      "expected": "metros cúbico"
+    },
+    "UnitInverse_default": {
+      "expected": "recíproco pulgadas"
+    },
+    "UnitInverse_brief": {
+      "expected": "pulgadas sup menos 1"
+    },
+    "UnitInverse_sbrief": {
+      "expected": "pulgadas sup menos 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "recíproco pulgadas por por milímetros"
+    },
+    "UnitDoubleInverse_brief": {
+      "expected": "pulgadas sup menos 1 base por milímetros sup menos 1"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "expected": "pulgadas sup menos 1 base por milímetros sup menos 1"
+    },
+    "UnitDivide_default": {
+      "expected": "pulgadas por milímetro"
+    },
+    "UnitDivide_brief": {
+      "expected": "empezar frac pulgadas entre milímetros finalizar frac"
+    },
+    "UnitDivide_sbrief": {
+      "expected": "empezar frac pulgadas entre milímetros finalizar frac"
+    },
+    "UnitsSingle_0": {
+      "expected": "kilómetros"
+    },
+    "UnitsSingle_1": {
+      "expected": "Amperes"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohmios"
+    },
+    "UnitsSingle_3": {
+      "expected": "kiloohmios"
+    },
+    "UnitsSingle_4": {
+      "expected": "centígrados"
+    },
+    "UnitsSimple_0": {
+      "expected": "mínimo minutos"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 kilómetros"
+    },
+    "UnitsSimple_2": {
+      "expected": "kilómetros más segundos"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "kilómetros cuadrado"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "metros cúbico"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "kilómetros superíndice 4"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "recíproco metros"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "segundos por por metros"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "segundos por metro superíndice menos 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "segundos por metro superíndice menos 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 recíproco metros"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "kilómetros por hora"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "Newtones por kilómetros por hora"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "empezar fracción m entre kilómetros finalizar fracción"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 kilómetros por horas"
+    },
+    "UnitsExpressions_0": {
+      "expected": "segundos 3 m kilómetros por horas"
+    },
+    "UnitsExpressions_1": {
+      "expected": "kilómetros por segundos cuadrado 3 m kilómetros por horas"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m kilómetros por horas empezar fracción mayúscula N entre segundos cuadrado finalizar fracción"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m kilómetros por horas por Newtones por segundo cuadrado"
+    },
+    "UnitPlural_1": {
+      "expected": "4 milímetros"
+    },
+    "UnitPlural_2": {
+      "expected": "1 milímetro"
+    },
+    "UnitPlural_3": {
+      "expected": "4 milímetros"
+    },
+    "UnitPlural_4": {
+      "expected": "1 milímetro"
+    },
+    "UnitCombine_0": {
+      "expected": "metros por segundos"
+    },
+    "UnitCombine_1": {
+      "expected": "m segundos"
+    },
+    "UnitCombine_2": {
+      "expected": "metros s"
+    },
+    "UnitCombine_3": {
+      "expected": "metros por segundos"
+    },
+    "UnitCombine_4": {
+      "expected": "m segundos"
+    },
+    "UnitCombine_5": {
+      "expected": "metros s"
+    },
+    "UnitCombine_6": {
+      "expected": "metros por segundos por litros"
+    },
+    "issue_364_1": {
+      "expected": "63360 pulgadas igual 63360 pulgadas igual 63360 dos prima igual 63360 inches igual 5280 pieses igual 5280 pieses igual 5280 prima igual 5280 feet igual 1760 yardas igual 1760 yardas igual 1760 yards igual 1 milla igual 1 milla igual 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 linkes igual 8000 linkes igual 8000 links igual 320 rodes igual 320 rodes igual 320 rods igual 80 cadenas igual 80 cadenas igual 80 chains igual 8 furlongues igual 8 furlongues igual 8 furlongs igual 1 milla igual 1 milla igual 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 pies cuadrado igual 43560 pies cuadrado igual 43560 pieses cuadrado igual 43560 prima al cuadrado igual 43560 square feet igual 4840 yardas cuadrada igual 4840 yardas cuadrada igual 4840 yardas cuadrado igual 4840 square yards igual 160 rods cuadrado igual 160 rods cuadrado igual 160 rodes cuadrado igual 160 square rods igual 1 acre igual 1 acre igual 1 acre igual empezar fracción 1 entre 640 finalizar fracción milla cuadradas igual empezar fracción 1 entre 640 finalizar fracción milla cuadradas igual empezar fracción 1 entre 640 finalizar fracción millas cuadrado igual empezar fracción 1 entre 640 finalizar fracción square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 pulgadas cúbicas igual 46656 pulgadas cúbicas igual 46656 pulgadas cúbico igual 46656 dos prima al cubo igual 46656 cubic inches igual 27 pies cúbicos igual 27 pies cúbicos igual 27 pieses cúbico igual 27 prima al cubo igual 27 cubic feet igual 1 yarda cúbica igual 1 yarda cúbica igual 1 yarda cúbico igual 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 dracma líquidas igual 1024 dracma líquidas igual 1024 fluid drams igual 768 cucharillas igual 768 cucharillas igual 768 teaspoons igual 256 cucharas igual 256 cucharas igual 256 tablespoons igual 128 onzas líquidas igual 128 onzas líquidas igual 128 fluid ounces igual 16 tazas igual 16 tazas igual 16 cups igual 8 pintas igual 8 pintas igual 8 pints igual 4 quartes igual 4 quartes igual 4 quarts igual 1 galone igual 1 galone igual 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 dracmas igual 256 dracmas igual 256 drams igual 16 onzas igual 16 onzas igual 16 ounces igual 1 # igual 1 libra igual 1 libra igual 1 pounds igual 100 centenas igual 100 centenas igual 100 hundredweights igual 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 pulgadas igual 63360 pulgadas igual 63360 dos prima igual 63360 inches igual 5280 pieses igual 5280 pieses igual 5280 prima igual 5280 feet igual 1760 yardas igual 1760 yardas igual 1760 yards igual 1 milla igual 1 milla igual 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 Joule igual 1 kilogramo por metros cuadrado por segundos superíndice menos 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 Joule igual 1 kilogramo por metros cuadrado por segundos superíndice menos 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 Joule igual 1 kilogramo por metros cuadrado por segundos superíndice menos 2"
+    },
+    "unit_cube": {
+      "expected": "pulgadas cúbico"
+    },
+    "UnitDiv_0": {
+      "expected": "kilómetros por kilogramos por segundos cuadrado por Joule"
+    },
+    "UnitDiv_1": {
+      "expected": "empezar fracción 3 kilómetros por 1 kilogramo por segundos cuadrado entre Joules finalizar fracción"
+    },
+    "UnitDiv_2": {
+      "expected": "empezar fracción 1 kilómetro por kilogramos por segundos cuadrado entre Joules finalizar fracción"
+    },
+    "UnitDiv_3": {
+      "expected": "empezar fracción 1 kilómetro por kilogramos por segundos cuadrado entre 5 Joules finalizar fracción"
+    },
+    "UnitKm": {
+      "expected": "kilómetros"
+    },
+    "UnitLong_1": {
+      "expected": "3 kilómetros por kilogramos por segundos cuadrado por Joules"
+    },
+    "UnitLong_2": {
+      "expected": "3 kilómetros por kilogramos por segundos cuadrado por Joules"
+    },
+    "UnitLong_3": {
+      "expected": "3 kilómetros por 4 kilogramos por segundos cuadrado por Joules"
+    },
+    "UnitLong_4": {
+      "expected": "3 kilómetros por 1 kilogramo por segundos cuadrado por Joules"
+    },
+    "UnitMultiple": {
+      "expected": "1 kilómetro por segundos más 2 kilómetros por segundos más 0 kilómetros por segundos más a kilómetros por segundos más"
+    },
+    "UnitMultitude": {
+      "expected": "1 kilómetro más 2 kilómetros más 0 kilómetros más a kilómetros"
+    },
+    "UnitNumb_0": {
+      "expected": "1 más empezar fracción 2 entre 3 finalizar fracción kilogramos"
+    },
+    "UnitNumb_1": {
+      "expected": "1 más empezar fracción 2 entre 3 finalizar fracción kilogramos por kilómetros"
+    },
+    "UnitNumb_2": {
+      "expected": "1 kilómetro por 2 kilogramos por kilómetros"
+    },
+    "UnitTriple": {
+      "expected": "1 kilómetro por kilogramos por segundos más 2 kilómetros por kilogramos por segundos más 0 kilómetros por kilogramos por segundos más a kilómetros por kilogramos por segundos más"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dólar"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "dólares 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dólares"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dólares"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dólares"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "dólares 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dólar más 2 dólares más 0 dólares más a dólares"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dólar más dólares 2 más 0 dólares más dólares a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euro más 2 euros más 0 euros más a euros"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 penique más 2 peniques más 0 peniques más a peniques"
+    },
+    "SpanishMultiSingular_default": {
+      "input": "<mrow><mn>1</mn><mfrac>  <mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>  <mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">l</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi></mrow></mfrac></mrow>",
+      "expected": "1 kilómetro por litro por segundos",
+      "preference": "default"
+    }
+  }
+}

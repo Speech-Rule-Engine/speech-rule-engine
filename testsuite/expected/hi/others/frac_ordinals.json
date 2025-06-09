@@ -1,0 +1,644 @@
+{
+  "locale": "hi",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Hindi Ordinal word as used in fractions tests.",
+  "kind": "numberToOrdinal",
+  "active": "NumbersHindi",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": ""
+    },
+    "Number_1": {
+      "expected": "एकांश"
+    },
+    "Number_2": {
+      "expected": "द्वितीयांश"
+    },
+    "Number_3": {
+      "expected": "तृतीयांश"
+    },
+    "Number_4": {
+      "expected": "चतुर्थांश"
+    },
+    "Number_5": {
+      "expected": "पंचमांश"
+    },
+    "Number_6": {
+      "expected": "षष्टांश"
+    },
+    "Number_7": {
+      "expected": "सप्तमांश"
+    },
+    "Number_8": {
+      "expected": "अष्टांश"
+    },
+    "Number_9": {
+      "expected": "नवमांश"
+    },
+    "Number_10": {
+      "expected": "दशांश"
+    },
+    "Number_11": {
+      "expected": "ग्यारहवाँ अंश"
+    },
+    "Number_12": {
+      "expected": "बारहवाँ अंश"
+    },
+    "Number_13": {
+      "expected": "तेरहवाँ अंश"
+    },
+    "Number_14": {
+      "expected": "चौदहवाँ अंश"
+    },
+    "Number_15": {
+      "expected": "पंद्रहवाँ अंश"
+    },
+    "Number_16": {
+      "expected": "सोलहवाँ अंश"
+    },
+    "Number_17": {
+      "expected": "सत्रहवाँ अंश"
+    },
+    "Number_18": {
+      "expected": "अठारहवाँ अंश"
+    },
+    "Number_19": {
+      "expected": "उन्नीसवाँ अंश"
+    },
+    "Number_20": {
+      "expected": "बीसवाँ अंश"
+    },
+    "Number_21": {
+      "expected": "इक्कीसवाँ अंश"
+    },
+    "Number_22": {
+      "expected": "बाईसवाँ अंश"
+    },
+    "Number_23": {
+      "expected": "तेइसवाँ अंश"
+    },
+    "Number_24": {
+      "expected": "चौबीसवाँ अंश"
+    },
+    "Number_25": {
+      "expected": "पच्चीसवाँ अंश"
+    },
+    "Number_26": {
+      "expected": "छब्बीसवाँ अंश"
+    },
+    "Number_27": {
+      "expected": "सताइसवाँ अंश"
+    },
+    "Number_28": {
+      "expected": "अट्ठाइसवाँ अंश"
+    },
+    "Number_29": {
+      "expected": "उनतीसवाँ अंश"
+    },
+    "Number_30": {
+      "expected": "तीसवाँ अंश"
+    },
+    "Number_31": {
+      "expected": "इकतीसवाँ अंश"
+    },
+    "Number_32": {
+      "expected": "बतीसवाँ अंश"
+    },
+    "Number_33": {
+      "expected": "तैंतीसवाँ अंश"
+    },
+    "Number_34": {
+      "expected": "चौंतीसवाँ अंश"
+    },
+    "Number_35": {
+      "expected": "पैंतीसवाँ अंश"
+    },
+    "Number_36": {
+      "expected": "छतीसवाँ अंश"
+    },
+    "Number_37": {
+      "expected": "सैंतीसवाँ अंश"
+    },
+    "Number_38": {
+      "expected": "अड़तीसवाँ अंश"
+    },
+    "Number_39": {
+      "expected": "उनतालीसवाँ अंश"
+    },
+    "Number_40": {
+      "expected": "चालीसवाँ अंश"
+    },
+    "Number_41": {
+      "expected": "इकतालीसवाँ अंश"
+    },
+    "Number_42": {
+      "expected": "बयालीसवाँ अंश"
+    },
+    "Number_43": {
+      "expected": "तैतालीसवाँ अंश"
+    },
+    "Number_44": {
+      "expected": "चवालीसवाँ अंश"
+    },
+    "Number_45": {
+      "expected": "पैंतालीसवाँ अंश"
+    },
+    "Number_46": {
+      "expected": "छयालिसवाँ अंश"
+    },
+    "Number_47": {
+      "expected": "सैंतालीसवाँ अंश"
+    },
+    "Number_48": {
+      "expected": "अड़तालीसवाँ अंश"
+    },
+    "Number_49": {
+      "expected": "उनचासवाँ अंश"
+    },
+    "Number_50": {
+      "expected": "पचासवाँ अंश"
+    },
+    "Number_51": {
+      "expected": "इक्यावनवाँ अंश"
+    },
+    "Number_52": {
+      "expected": "बावनवाँ अंश"
+    },
+    "Number_53": {
+      "expected": "तिरपनवाँ अंश"
+    },
+    "Number_54": {
+      "expected": "चौवनवाँ अंश"
+    },
+    "Number_55": {
+      "expected": "पचपनवाँ अंश"
+    },
+    "Number_56": {
+      "expected": "छप्पनवाँ अंश"
+    },
+    "Number_57": {
+      "expected": "सतावनवाँ अंश"
+    },
+    "Number_58": {
+      "expected": "अठावनवाँ अंश"
+    },
+    "Number_59": {
+      "expected": "उनसठवाँ अंश"
+    },
+    "Number_60": {
+      "expected": "साठवाँ अंश"
+    },
+    "Number_61": {
+      "expected": "इकसठवाँ अंश"
+    },
+    "Number_62": {
+      "expected": "बासठवाँ अंश"
+    },
+    "Number_63": {
+      "expected": "तिरसठवाँ अंश"
+    },
+    "Number_64": {
+      "expected": "चौंसठवाँ अंश"
+    },
+    "Number_65": {
+      "expected": "पैंसठवाँ अंश"
+    },
+    "Number_66": {
+      "expected": "छियासठवाँ अंश"
+    },
+    "Number_67": {
+      "expected": "सड़सठवाँ अंश"
+    },
+    "Number_68": {
+      "expected": "अड़सठवाँ अंश"
+    },
+    "Number_69": {
+      "expected": "उनहतरवाँ अंश"
+    },
+    "Number_70": {
+      "expected": "सत्तरवाँ अंश"
+    },
+    "Number_71": {
+      "expected": "इकहतरवाँ अंश"
+    },
+    "Number_72": {
+      "expected": "बहतरवाँ अंश"
+    },
+    "Number_73": {
+      "expected": "तिहतरवाँ अंश"
+    },
+    "Number_74": {
+      "expected": "चौहतरवाँ अंश"
+    },
+    "Number_75": {
+      "expected": "पचहतरवाँ अंश"
+    },
+    "Number_76": {
+      "expected": "छिहतरवाँ अंश"
+    },
+    "Number_77": {
+      "expected": "सतहतरवाँ अंश"
+    },
+    "Number_78": {
+      "expected": "अठहतरवाँ अंश"
+    },
+    "Number_79": {
+      "expected": "उन्नासीवाँ अंश"
+    },
+    "Number_80": {
+      "expected": "अस्सीवाँ अंश"
+    },
+    "Number_81": {
+      "expected": "इक्यासीवाँ अंश"
+    },
+    "Number_82": {
+      "expected": "बयासीवाँ अंश"
+    },
+    "Number_83": {
+      "expected": "तिरासीवाँ अंश"
+    },
+    "Number_84": {
+      "expected": "चौरासीवाँ अंश"
+    },
+    "Number_85": {
+      "expected": "पचासीवाँ अंश"
+    },
+    "Number_86": {
+      "expected": "छियासीवाँ अंश"
+    },
+    "Number_87": {
+      "expected": "सतासीवाँ अंश"
+    },
+    "Number_88": {
+      "expected": "अट्ठासीवाँ अंश"
+    },
+    "Number_89": {
+      "expected": "नवासीवाँ अंश"
+    },
+    "Number_90": {
+      "expected": "नब्बेवाँ अंश"
+    },
+    "Number_91": {
+      "expected": "इक्यानवेवाँ अंश"
+    },
+    "Number_92": {
+      "expected": "ब्यानवेवाँ अंश"
+    },
+    "Number_93": {
+      "expected": "तिरानवेवाँ अंश"
+    },
+    "Number_94": {
+      "expected": "चौरानवेवाँ अंश"
+    },
+    "Number_95": {
+      "expected": "पचानवेवाँ अंश"
+    },
+    "Number_96": {
+      "expected": "छियानवेवाँ अंश"
+    },
+    "Number_97": {
+      "expected": "सतानवेवाँ अंश"
+    },
+    "Number_98": {
+      "expected": "अट्ठानवेवाँ अंश"
+    },
+    "Number_99": {
+      "expected": "निन्यानवेवाँ अंश"
+    },
+    "Number_100": {
+      "expected": "एक सौवाँ अंश"
+    },
+    "Number_101": {
+      "expected": "एक सौ एकवाँ अंश"
+    },
+    "Number_102": {
+      "expected": "एक सौ दोवाँ अंश"
+    },
+    "Number_103": {
+      "expected": "एक सौ तीनवाँ अंश"
+    },
+    "Number_104": {
+      "expected": "एक सौ चारवाँ अंश"
+    },
+    "Number_105": {
+      "expected": "एक सौ पाँचवाँ अंश"
+    },
+    "Number_106": {
+      "expected": "एक सौ छःवाँ अंश"
+    },
+    "Number_107": {
+      "expected": "एक सौ सातवाँ अंश"
+    },
+    "Number_108": {
+      "expected": "एक सौ आठवाँ अंश"
+    },
+    "Number_109": {
+      "expected": "एक सौ नौवाँ अंश"
+    },
+    "Number_110": {
+      "expected": "एक सौ दसवाँ अंश"
+    },
+    "Number_200": {
+      "expected": "दो सौवाँ अंश"
+    },
+    "Number_201": {
+      "expected": "दो सौ एकवाँ अंश"
+    },
+    "Number_300": {
+      "expected": "तीन सौवाँ अंश"
+    },
+    "Number_301": {
+      "expected": "तीन सौ एकवाँ अंश"
+    },
+    "Number_400": {
+      "expected": "चार सौवाँ अंश"
+    },
+    "Number_401": {
+      "expected": "चार सौ एकवाँ अंश"
+    },
+    "Number_500": {
+      "expected": "पाँच सौवाँ अंश"
+    },
+    "Number_501": {
+      "expected": "पाँच सौ एकवाँ अंश"
+    },
+    "Number_600": {
+      "expected": "छः सौवाँ अंश"
+    },
+    "Number_601": {
+      "expected": "छः सौ एकवाँ अंश"
+    },
+    "Number_700": {
+      "expected": "सात सौवाँ अंश"
+    },
+    "Number_701": {
+      "expected": "सात सौ एकवाँ अंश"
+    },
+    "Number_800": {
+      "expected": "आठ सौवाँ अंश"
+    },
+    "Number_801": {
+      "expected": "आठ सौ एकवाँ अंश"
+    },
+    "Number_900": {
+      "expected": "नौ सौवाँ अंश"
+    },
+    "Number_901": {
+      "expected": "नौ सौ एकवाँ अंश"
+    },
+    "Number_1000": {
+      "expected": "एक हजारवाँ अंश"
+    },
+    "Number_1001": {
+      "expected": "एक हजार एकवाँ अंश"
+    },
+    "Number_2000": {
+      "expected": "दो हजारवाँ अंश"
+    },
+    "Number_2001": {
+      "expected": "दो हजार एकवाँ अंश"
+    },
+    "Number_3000": {
+      "expected": "तीन हजारवाँ अंश"
+    },
+    "Number_3001": {
+      "expected": "तीन हजार एकवाँ अंश"
+    },
+    "Number_4000": {
+      "expected": "चार हजारवाँ अंश"
+    },
+    "Number_4001": {
+      "expected": "चार हजार एकवाँ अंश"
+    },
+    "Number_5000": {
+      "expected": "पाँच हजारवाँ अंश"
+    },
+    "Number_5001": {
+      "expected": "पाँच हजार एकवाँ अंश"
+    },
+    "Number_6000": {
+      "expected": "छः हजारवाँ अंश"
+    },
+    "Number_6001": {
+      "expected": "छः हजार एकवाँ अंश"
+    },
+    "Number_7000": {
+      "expected": "सात हजारवाँ अंश"
+    },
+    "Number_7001": {
+      "expected": "सात हजार एकवाँ अंश"
+    },
+    "Number_8000": {
+      "expected": "आठ हजारवाँ अंश"
+    },
+    "Number_8001": {
+      "expected": "आठ हजार एकवाँ अंश"
+    },
+    "Number_9000": {
+      "expected": "नौ हजारवाँ अंश"
+    },
+    "Number_9001": {
+      "expected": "नौ हजार एकवाँ अंश"
+    },
+    "Number_10000": {
+      "expected": "दस हजारवाँ अंश"
+    },
+    "Number_10001": {
+      "expected": "दस हजार एकवाँ अंश"
+    },
+    "Number_20000": {
+      "expected": "बीस हजारवाँ अंश"
+    },
+    "Number_20001": {
+      "expected": "बीस हजार एकवाँ अंश"
+    },
+    "Number_30000": {
+      "expected": "तीस हजारवाँ अंश"
+    },
+    "Number_30001": {
+      "expected": "तीस हजार एकवाँ अंश"
+    },
+    "Number_40000": {
+      "expected": "चालीस हजारवाँ अंश"
+    },
+    "Number_40001": {
+      "expected": "चालीस हजार एकवाँ अंश"
+    },
+    "Number_50000": {
+      "expected": "पचास हजारवाँ अंश"
+    },
+    "Number_50001": {
+      "expected": "पचास हजार एकवाँ अंश"
+    },
+    "Number_60000": {
+      "expected": "साठ हजारवाँ अंश"
+    },
+    "Number_60001": {
+      "expected": "साठ हजार एकवाँ अंश"
+    },
+    "Number_70000": {
+      "expected": "सत्तर हजारवाँ अंश"
+    },
+    "Number_70001": {
+      "expected": "सत्तर हजार एकवाँ अंश"
+    },
+    "Number_80000": {
+      "expected": "अस्सी हजारवाँ अंश"
+    },
+    "Number_80001": {
+      "expected": "अस्सी हजार एकवाँ अंश"
+    },
+    "Number_90000": {
+      "expected": "नब्बे हजारवाँ अंश"
+    },
+    "Number_90001": {
+      "expected": "नब्बे हजार एकवाँ अंश"
+    },
+    "Number_100000": {
+      "expected": "एक लाखवाँ अंश"
+    },
+    "Number_1000000": {
+      "expected": "दस लाखवाँ अंश"
+    },
+    "Number_10000000": {
+      "expected": "एक करोड़वाँ अंश"
+    },
+    "Number_100000000": {
+      "expected": "दस करोड़वाँ अंश"
+    },
+    "Number_1000000000": {
+      "expected": "एक अरबवाँ अंश"
+    },
+    "Number_10000000000": {
+      "expected": "दस अरबवाँ अंश"
+    },
+    "Number_100000000000": {
+      "expected": "एक खरबवाँ अंश"
+    },
+    "Number_1000000000000": {
+      "expected": "दस खरबवाँ अंश"
+    },
+    "Number_10000000000000": {
+      "expected": "एक नीलवाँ अंश"
+    },
+    "Number_100000000000000": {
+      "expected": "दस नीलवाँ अंश"
+    },
+    "Number_1000000000000000": {
+      "expected": "एक पद्मावाँ अंश"
+    },
+    "Number_10000000000000000": {
+      "expected": "दस पद्मावाँ अंश"
+    },
+    "Number_100001": {
+      "expected": "एक लाख एकवाँ अंश"
+    },
+    "Number_200000": {
+      "expected": "दो लाखवाँ अंश"
+    },
+    "Number_200001": {
+      "expected": "दो लाख एकवाँ अंश"
+    },
+    "Number_1000001": {
+      "expected": "दस लाख एकवाँ अंश"
+    },
+    "Number_2000000": {
+      "expected": "बीस लाखवाँ अंश"
+    },
+    "Number_2000001": {
+      "expected": "बीस लाख एकवाँ अंश"
+    },
+    "Number_10000001": {
+      "expected": "एक करोड़ एकवाँ अंश"
+    },
+    "Number_20000000": {
+      "expected": "दो करोड़वाँ अंश"
+    },
+    "Number_20000001": {
+      "expected": "दो करोड़ एकवाँ अंश"
+    },
+    "Number_100000001": {
+      "expected": "दस करोड़ एकवाँ अंश"
+    },
+    "Number_200000000": {
+      "expected": "बीस करोड़वाँ अंश"
+    },
+    "Number_200000001": {
+      "expected": "बीस करोड़ एकवाँ अंश"
+    },
+    "Number_1000000001": {
+      "expected": "एक अरब एकवाँ अंश"
+    },
+    "Number_2000000000": {
+      "expected": "दो अरबवाँ अंश"
+    },
+    "Number_2000000001": {
+      "expected": "दो अरब एकवाँ अंश"
+    },
+    "Number_10000000001": {
+      "expected": "दस अरब एकवाँ अंश"
+    },
+    "Number_20000000000": {
+      "expected": "बीस अरबवाँ अंश"
+    },
+    "Number_20000000001": {
+      "expected": "बीस अरब एकवाँ अंश"
+    },
+    "Number_100000000001": {
+      "expected": "एक खरब एकवाँ अंश"
+    },
+    "Number_200000000000": {
+      "expected": "दो खरबवाँ अंश"
+    },
+    "Number_200000000001": {
+      "expected": "दो खरब एकवाँ अंश"
+    },
+    "Number_1000000000001": {
+      "expected": "दस खरब एकवाँ अंश"
+    },
+    "Number_2000000000000": {
+      "expected": "बीस खरबवाँ अंश"
+    },
+    "Number_2000000000001": {
+      "expected": "बीस खरब एकवाँ अंश"
+    },
+    "Number_10000000000001": {
+      "expected": "एक नील एकवाँ अंश"
+    },
+    "Number_20000000000000": {
+      "expected": "दो नीलवाँ अंश"
+    },
+    "Number_20000000000001": {
+      "expected": "दो नील एकवाँ अंश"
+    },
+    "Number_100000000000001": {
+      "expected": "दस नील एकवाँ अंश"
+    },
+    "Number_200000000000000": {
+      "expected": "बीस नीलवाँ अंश"
+    },
+    "Number_200000000000001": {
+      "expected": "बीस नील एकवाँ अंश"
+    },
+    "Number_1000000000000001": {
+      "expected": "एक पद्मा एकवाँ अंश"
+    },
+    "Number_2000000000000000": {
+      "expected": "दो पद्मावाँ अंश"
+    },
+    "Number_2000000000000001": {
+      "expected": "दो पद्मा एकवाँ अंश"
+    },
+    "Number_10000000000000001": {
+      "expected": "दस पद्मावाँ अंश"
+    },
+    "Number_20000000000000000": {
+      "expected": "बीस पद्मावाँ अंश"
+    },
+    "Number_20000000000000001": {
+      "expected": "बीस पद्मावाँ अंश"
+    }
+  }
+}

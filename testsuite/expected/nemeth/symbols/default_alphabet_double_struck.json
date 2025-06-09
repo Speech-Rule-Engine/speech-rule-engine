@@ -1,0 +1,200 @@
+{
+  "name": "NemethDefaultAlphabetDoubleStruck",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet double-struck tests.",
+  "tests": {
+    "𝔸": {
+      "expected": "⠈⠰⠠⠁"
+    },
+    "𝔹": {
+      "expected": "⠈⠰⠠⠃"
+    },
+    "ℂ": {
+      "expected": "⠈⠰⠠⠉"
+    },
+    "𝔻": {
+      "expected": "⠈⠰⠠⠙"
+    },
+    "𝔼": {
+      "expected": "⠈⠰⠠⠑"
+    },
+    "𝔽": {
+      "expected": "⠈⠰⠠⠋"
+    },
+    "𝔾": {
+      "expected": "⠈⠰⠠⠛"
+    },
+    "ℍ": {
+      "expected": "⠈⠰⠠⠓"
+    },
+    "𝕀": {
+      "expected": "⠈⠰⠠⠊"
+    },
+    "𝕁": {
+      "expected": "⠈⠰⠠⠚"
+    },
+    "𝕂": {
+      "expected": "⠈⠰⠠⠅"
+    },
+    "𝕃": {
+      "expected": "⠈⠰⠠⠇"
+    },
+    "𝕄": {
+      "expected": "⠈⠰⠠⠍"
+    },
+    "ℕ": {
+      "expected": "⠈⠰⠠⠝"
+    },
+    "𝕆": {
+      "expected": "⠈⠰⠠⠕"
+    },
+    "ℙ": {
+      "expected": "⠈⠰⠠⠏"
+    },
+    "ℚ": {
+      "expected": "⠈⠰⠠⠟"
+    },
+    "ℝ": {
+      "expected": "⠈⠰⠠⠗"
+    },
+    "𝕊": {
+      "expected": "⠈⠰⠠⠎"
+    },
+    "𝕋": {
+      "expected": "⠈⠰⠠⠞"
+    },
+    "𝕌": {
+      "expected": "⠈⠰⠠⠥"
+    },
+    "𝕍": {
+      "expected": "⠈⠰⠠⠧"
+    },
+    "𝕎": {
+      "expected": "⠈⠰⠠⠺"
+    },
+    "𝕏": {
+      "expected": "⠈⠰⠠⠭"
+    },
+    "𝕐": {
+      "expected": "⠈⠰⠠⠽"
+    },
+    "ℤ": {
+      "expected": "⠈⠰⠠⠵"
+    },
+    "𝕒": {
+      "expected": "⠈⠰⠁"
+    },
+    "𝕓": {
+      "expected": "⠈⠰⠃"
+    },
+    "𝕔": {
+      "expected": "⠈⠰⠉"
+    },
+    "𝕕": {
+      "expected": "⠈⠰⠙"
+    },
+    "𝕖": {
+      "expected": "⠈⠰⠑"
+    },
+    "𝕗": {
+      "expected": "⠈⠰⠋"
+    },
+    "𝕘": {
+      "expected": "⠈⠰⠛"
+    },
+    "𝕙": {
+      "expected": "⠈⠰⠓"
+    },
+    "𝕚": {
+      "expected": "⠈⠰⠊"
+    },
+    "𝕛": {
+      "expected": "⠈⠰⠚"
+    },
+    "𝕜": {
+      "expected": "⠈⠰⠅"
+    },
+    "𝕝": {
+      "expected": "⠈⠰⠇"
+    },
+    "𝕞": {
+      "expected": "⠈⠰⠍"
+    },
+    "𝕟": {
+      "expected": "⠈⠰⠝"
+    },
+    "𝕠": {
+      "expected": "⠈⠰⠕"
+    },
+    "𝕡": {
+      "expected": "⠈⠰⠏"
+    },
+    "𝕢": {
+      "expected": "⠈⠰⠟"
+    },
+    "𝕣": {
+      "expected": "⠈⠰⠗"
+    },
+    "𝕤": {
+      "expected": "⠈⠰⠎"
+    },
+    "𝕥": {
+      "expected": "⠈⠰⠞"
+    },
+    "𝕦": {
+      "expected": "⠈⠰⠥"
+    },
+    "𝕧": {
+      "expected": "⠈⠰⠧"
+    },
+    "𝕨": {
+      "expected": "⠈⠰⠺"
+    },
+    "𝕩": {
+      "expected": "⠈⠰⠭"
+    },
+    "𝕪": {
+      "expected": "⠈⠰⠽"
+    },
+    "𝕫": {
+      "expected": "⠈⠰⠵"
+    },
+    "𝟘": {
+      "expected": "⠈⠼⠴"
+    },
+    "𝟙": {
+      "expected": "⠈⠼⠂"
+    },
+    "𝟚": {
+      "expected": "⠈⠼⠆"
+    },
+    "𝟛": {
+      "expected": "⠈⠼⠒"
+    },
+    "𝟜": {
+      "expected": "⠈⠼⠲"
+    },
+    "𝟝": {
+      "expected": "⠈⠼⠢"
+    },
+    "𝟞": {
+      "expected": "⠈⠼⠖"
+    },
+    "𝟟": {
+      "expected": "⠈⠼⠶"
+    },
+    "𝟠": {
+      "expected": "⠈⠼⠦"
+    },
+    "𝟡": {
+      "expected": "⠈⠼⠔"
+    }
+  }
+}

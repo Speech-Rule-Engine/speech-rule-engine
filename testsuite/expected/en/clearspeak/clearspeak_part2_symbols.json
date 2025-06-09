@@ -1,0 +1,223 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakPart2Symbols",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "English Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 2: Symbols",
+    "_comment2_": " Multiplication Symbol",
+    "X001": {
+      "expected": "6 times 8"
+    },
+    "X002": {
+      "expected": "m times n"
+    },
+    "X003": {
+      "expected": "3 times 3"
+    },
+    "X004": {
+      "expected": "6 by 8"
+    },
+    "X005": {
+      "expected": "m by n"
+    },
+    "X006": {
+      "expected": "3 by 3"
+    },
+    "X007": {
+      "expected": "u cross v"
+    },
+    "_comment3_": " Multiplication Symbol",
+    "Dot001": {
+      "expected": "6 times 8"
+    },
+    "Dot002": {
+      "expected": "m times n"
+    },
+    "Dot003": {
+      "expected": "3 times 3"
+    },
+    "Dot004": {
+      "expected": "6 dot 8"
+    },
+    "Dot005": {
+      "expected": "m dot n"
+    },
+    "Dot006": {
+      "expected": "3 dot 3"
+    },
+    "_comment4_": " Triangle Symbol",
+    "Triangle001": {
+      "expected": "triangle A B C"
+    },
+    "Triangle002": {
+      "expected": "triangle D E F"
+    },
+    "Triangle003": {
+      "expected": "Delta x"
+    },
+    "Triangle004": {
+      "expected": "f of, open paren, x plus Delta x, close paren"
+    },
+    "_comment5_": " Ellipses",
+    "Ellipses001": {
+      "expected": "1 comma 2 comma 3 comma dot dot dot"
+    },
+    "Ellipses002": {
+      "expected": "1 comma 2 comma 3 comma dot dot dot comma 20"
+    },
+    "Ellipses003": {
+      "expected": "dot dot dot comma, negative 2, comma, negative 1, comma 0 comma 1 comma 2 comma dot dot dot"
+    },
+    "Ellipses004": {
+      "expected": "1 comma 2 comma 3 comma and so on"
+    },
+    "Ellipses005": {
+      "expected": "1 comma 2 comma 3 comma and so on up to comma 20"
+    },
+    "Ellipses006": {
+      "expected": "dot dot dot comma, negative 2, comma, negative 1, comma 0 comma 1 comma 2 comma dot dot dot"
+    },
+    "_comment6_": " Vertical Line",
+    "VertLine001": {
+      "expected": "3 divides 6"
+    },
+    "VertLine002": {
+      "expected": "the set of all x such that x is greater than 0"
+    },
+    "VertLine003": {
+      "expected": "the set of all x such that, the absolute value of x, is greater than 2"
+    },
+    "VertLine004": {
+      "expected": "f of x, evaluated at x equals 5"
+    },
+    "VertLine005": {
+      "expected": "x squared plus 2 x, evaluated at x equals 2"
+    },
+    "VertLine006": {
+      "expected": "x squared plus x, evaluated at 1, minus the same expression evaluated at 0"
+    },
+    "VertLine007": {
+      "expected": "the set of all x such that x is greater than 0"
+    },
+    "VertLine008": {
+      "expected": "3 divides 6"
+    },
+    "VertLine009": {
+      "expected": "P of, open paren, A given B, close paren"
+    },
+    "_comment7_": " Set Membership Symbols",
+    "MembSym001": {
+      "expected": "If x is a member of the integers then 2 x, is an even number period"
+    },
+    "MembSym002": {
+      "expected": "the set of all x in the integers such that x is greater than 5"
+    },
+    "MembSym003": {
+      "expected": "3 plus 2 i, is not a member of the real numbers"
+    },
+    "MembSym004": {
+      "expected": "If x is a member of the integers then 2 x, is an even number period"
+    },
+    "MembSym005": {
+      "expected": "the set of all x member of the integers such that x is greater than 5"
+    },
+    "MembSym006": {
+      "expected": "3 plus 2 i, is not a member of the real numbers"
+    },
+    "MembSym007": {
+      "expected": "If x is an element of the integers then 2 x, is an even number period"
+    },
+    "MembSym008": {
+      "expected": "the set of all x element of the integers such that x is greater than 5"
+    },
+    "MembSym009": {
+      "expected": "3 plus 2 i, is not an element of the real numbers"
+    },
+    "MembSym010": {
+      "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';",
+      "expected": "If x belongs to the integers then 2 x, is an even number period"
+    },
+    "MembSym011": {
+      "expected": "the set of all x belonging to the integers such that x is greater than 5"
+    },
+    "MembSym012": {
+      "expected": "3 plus 2 i, does not belong to the real numbers"
+    },
+    "MembSym013": {
+      "expected": "If x belongs to the integers then 2 x, is an even number period"
+    },
+    "MembSym014": {
+      "expected": "the set of all x belonging to the integers such that x is greater than 5"
+    },
+    "MembSym015": {
+      "expected": "3 plus 2 i, does not belong to the real numbers"
+    },
+    "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
+    "SetMemb001": {
+      "expected": "the set of x belonging to the integers such that 2 is less than x is less than 7"
+    },
+    "SetMemb002": {
+      "expected": "the set of x member of the integers such that x is greater than 5"
+    },
+    "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
+    "Sum001": {
+      "expected": "the sum from n equals 1 to 10 of n"
+    },
+    "Sum002": {
+      "expected": "the sum from n equals 1 to infinity of n"
+    },
+    "Sum003": {
+      "expected": "the sum over i is a member of the positive integers, of i"
+    },
+    "Sum004": {
+      "expected": "the sum over S, of i"
+    },
+    "Sum005": {
+      "expected": "the sum of, a sub i"
+    },
+    "Sum006": {
+      "expected": "the product from i equals 1 to 10 of i"
+    },
+    "Sum007": {
+      "expected": "the product over i is a member of the positive integers, of, the fraction with numerator i, and denominator i plus 1"
+    },
+    "Sum008": {
+      "expected": "the product over the positive integers, of, the fraction with numerator i, and denominator i plus 1"
+    },
+    "Sum009": {
+      "expected": "the product of, a sub i"
+    },
+    "Sum010": {
+      "expected": "the intersection from i equals 1 to 10 of, S sub i"
+    },
+    "Sum011": {
+      "expected": "the union from i equals 1 to 10 of, S sub i"
+    },
+    "Sum012": {
+      "expected": "the intersection of, S sub i"
+    },
+    "Sum013": {
+      "expected": "the union of, S sub i"
+    },
+    "Sum014": {
+      "expected": "the intersection over C, of, S sub i"
+    },
+    "Sum015": {
+      "expected": "the union over C, of, S sub i"
+    },
+    "Sum016": {
+      "expected": "the integral of f of x, d x"
+    },
+    "Sum017": {
+      "expected": "the integral from 0 to 1 of f of x, d x"
+    },
+    "Sum018": {
+      "expected": "the integral over the real numbers, of f of x, d x"
+    }
+  }
+}

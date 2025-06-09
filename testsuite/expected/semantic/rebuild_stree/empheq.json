@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree empheq tests.",
+  "base": "input/semantic/empheq.json"
+}

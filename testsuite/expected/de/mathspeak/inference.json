@@ -1,0 +1,58 @@
+{
+  "name": "GermanMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "de",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "German Mathspeak Inference rules.",
+  "active": "InferenceGerman",
+  "exclude": [],
+  "tests": {
+    "NoLabel_0": {
+      "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
+    },
+    "NoLabel_1": {
+      "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
+    },
+    "Premise_0": {
+      "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
+    },
+    "Premise_1": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "Axiom": {
+      "expected": "Axiom großes A"
+    },
+    "EmptyAxiom": {
+      "expected": "leeres Axiom"
+    },
+    "RightLabel_0": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "RightLabel_1": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 2 Prämissen"
+    },
+    "RightLabel_2": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 3 Prämissen"
+    },
+    "LeftLabel_0": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "LeftLabel_1": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 2 Prämissen"
+    },
+    "LeftLabel_2": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 3 Prämissen"
+    },
+    "Premises_0": {
+      "expected": "1. Prämisse  Axiom großes A"
+    },
+    "Premises_1": {
+      "expected": "1. Prämisse  Axiom großes A 2. Prämisse  Axiom großes B"
+    },
+    "Premises_2": {
+      "expected": "1. Prämisse  Axiom großes A 2. Prämisse  Axiom großes B 3. Prämisse  Axiom großes C"
+    }
+  }
+}

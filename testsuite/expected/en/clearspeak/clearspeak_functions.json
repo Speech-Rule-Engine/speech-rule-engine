@@ -1,0 +1,516 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakFunctions",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "English Clearspeak Functions rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": ["Function011b", "Function012b", "Function013b", "Function014b", "Function015b", "Function016b", "Function017b", "Function018b", "Function019b", "Function020b", "Function021b", "Function022b", "Function023b", "Function024b", "Function025b", "Function026b", "Function027b", "Function028b", "Function029b", "Function030b", "Function031b", "Function032b", "Function033b", "Function034b", "Function035b", "Function036b", "Function037b", "Function038b", "Function039b", "Function040b", "Function041b", "Function042b", "Function043b", "Function044b", "Function045b", "Function046b", "Function047b", "Function048b", "Function049b", "Function050b", "Function051b", "Function052b", "Function053b", "Function054b", "Function055b", "Function056b", "Function057b", "Function058b", "Function059b", "Function060b", "Function061b", "Function062b", "Function063b", "Function064b", "Function065b", "Function066b", "Function067b", "Function068b", "Function069b", "Function070b", "Function071b", "Function072b", "Function073b", "Function074b", "Function075b", "Function076b", "Function077b", "Function078b", "Function079b"],
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "expected": "f of x"
+    },
+    "Function002": {
+      "expected": "g of x"
+    },
+    "Function003": {
+      "expected": "h of x"
+    },
+    "Function004": {
+      "expected": "f of 2 x"
+    },
+    "Function005": {
+      "expected": "g of negative 2 x"
+    },
+    "Function006": {
+      "expected": "h of one half"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h of, open paren, 1 over 2, close paren"
+    },
+    "Function008": {
+      "expected": "f of, open paren, x plus 1, close paren, equals f of x, plus 1"
+    },
+    "Function009": {
+      "expected": "g of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function010": {
+      "expected": "g of, open paren, x squared, close paren"
+    },
+    "Function011": {
+      "expected": "f inverse of x"
+    },
+    "Function012": {
+      "expected": "g inverse of x"
+    },
+    "Function013": {
+      "expected": "h inverse of x"
+    },
+    "Function014": {
+      "expected": "f inverse of 2 x"
+    },
+    "Function015": {
+      "expected": "g inverse of negative 2 x"
+    },
+    "Function016": {
+      "expected": "f inverse of, open paren, 3 x, minus 1, close paren"
+    },
+    "Function017": {
+      "expected": "g inverse of, open paren, x squared, close paren"
+    },
+    "Function018": {
+      "expected": "h inverse of one half"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h inverse of, open paren, 1 over 2, close paren"
+    },
+    "Function020": {
+      "expected": "f inverse of, f of x"
+    },
+    "Function021": {
+      "expected": "g inverse of, g of x"
+    },
+    "Function022": {
+      "expected": "h inverse of, h of x"
+    },
+    "Function023": {
+      "expected": "f inverse of, f of 2 x"
+    },
+    "Function024": {
+      "expected": "g inverse of, g of negative 2 x"
+    },
+    "Function025": {
+      "expected": "h inverse of, h of one half"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h inverse of, open paren, h of, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function027": {
+      "expected": "f inverse of, open paren, f of, open paren, x plus 1, close paren, close paren, equals x plus 1"
+    },
+    "Function028": {
+      "expected": "g inverse of, open paren, g of, open paren, 2 x, plus 1, close paren, close paren"
+    },
+    "Function029": {
+      "expected": "g inverse of, open paren, g of, open paren, x squared, close paren, close paren"
+    },
+    "Function030": {
+      "expected": "f of, f inverse of x"
+    },
+    "Function031": {
+      "expected": "g of, g inverse of x"
+    },
+    "Function032": {
+      "expected": "h of, h inverse of x"
+    },
+    "Function033": {
+      "expected": "f of, f inverse of 2 x"
+    },
+    "Function034": {
+      "expected": "g of, g inverse of negative 2 x"
+    },
+    "Function035": {
+      "expected": "f of, open paren, f inverse of, open paren, 3 x, minus 1, close paren, close paren"
+    },
+    "Function036": {
+      "expected": "g of, g inverse of, open paren, x squared, close paren"
+    },
+    "Function037": {
+      "expected": "h of, h inverse of one half"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "expected": "h of, h inverse of, open paren, the fraction 1 over 2, close paren"
+    },
+    "Function039": {
+      "expected": "f of, g of x"
+    },
+    "Function040": {
+      "expected": "f of, open paren, g of, open paren, x plus 1, close paren, close paren"
+    },
+    "Function041": {
+      "expected": "h of, g of x"
+    },
+    "Function042": {
+      "expected": "h of, open paren, g of, open paren, the fraction with numerator x, and denominator x plus 1, close paren, close paren"
+    },
+    "Function043": {
+      "expected": "open paren, f plus g, close paren, of x, equals f of x, plus g of x"
+    },
+    "Function044": {
+      "expected": "open paren, f plus g, close paren, of, open paren, x plus 1, close paren, equals f of, open paren, x plus 1, close paren, plus g of, open paren, x plus 1, close paren"
+    },
+    "Function045": {
+      "expected": "open paren, f times g, close paren, of x"
+    },
+    "Function046": {
+      "expected": "open paren, f times g, close paren, of, open paren, 2 x, plus 5, close paren"
+    },
+    "Function047": {
+      "expected": "open paren, f over g, close paren, of x, equals, f of x, over g of x"
+    },
+    "Function048": {
+      "expected": "open paren, f over g, close paren, of, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator f of, open paren, 2 x, plus 5, close paren, and denominator g of, open paren, 2 x, plus 5, close paren"
+    },
+    "Function049": {
+      "expected": "open paren, f composed with g, close paren, of x, equals f of, g of x"
+    },
+    "Function050": {
+      "expected": "2 f of x"
+    },
+    "Function051": {
+      "expected": "c f of x"
+    },
+    "Function052": {
+      "expected": "f squared of x"
+    },
+    "Function053": {
+      "expected": "f squared of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function054": {
+      "expected": "f cubed of x"
+    },
+    "Function055": {
+      "expected": "f cubed of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function056": {
+      "expected": "the fourth power of, f of x"
+    },
+    "Function057": {
+      "expected": "the fourth power of, f of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function058": {
+      "expected": "the fifth power of, f of x"
+    },
+    "Function059": {
+      "expected": "the fifth power of, f of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function060": {
+      "expected": "the n-th power of, f of x"
+    },
+    "Function061": {
+      "expected": "the n-th power of, f of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function062": {
+      "expected": "g squared of x"
+    },
+    "Function063": {
+      "expected": "g squared of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function064": {
+      "expected": "h cubed of x"
+    },
+    "Function065": {
+      "expected": "h cubed of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function066": {
+      "expected": "the fourth power of, g of x"
+    },
+    "Function067": {
+      "expected": "the fourth power of, g of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function068": {
+      "expected": "the fifth power of, h of x"
+    },
+    "Function069": {
+      "expected": "the fifth power of, h of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function070": {
+      "expected": "the n-th power of, g of x"
+    },
+    "Function071": {
+      "expected": "the n-th power of, g of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function072": {
+      "expected": "f sub 1, of x"
+    },
+    "Function073": {
+      "expected": "g sub 2, of, open paren, x cubed, close paren"
+    },
+    "Function074": {
+      "expected": "h sub n, of, open paren, 3 x, minus 2, close paren"
+    },
+    "Function075": {
+      "expected": "f sub 1, inverse of x"
+    },
+    "Function076": {
+      "expected": "g sub 2, inverse of, open paren, 2 x, plus 1, close paren"
+    },
+    "Function077": {
+      "expected": "h sub n, inverse of x"
+    },
+    "Function078": {
+      "expected": "g sub 1, inverse of, g sub 2, of x"
+    },
+    "Function079": {
+      "expected": "f sub 1, of, g sub 2, inverse of x"
+    },
+    "Function080": {
+      "expected": "f of, open paren, x comma y, close paren"
+    },
+    "Function081": {
+      "expected": "f of, open paren, x comma y comma z, close paren"
+    },
+    "Function082": {
+      "expected": "f of, open paren, x plus 1, comma, 2 y, close paren"
+    },
+    "Function083": {
+      "expected": "f of, open paren, 2 x, comma, x plus 1, comma, x squared, close paren"
+    },
+    "Function084": {
+      "expected": "f times x"
+    },
+    "Function085": {
+      "expected": "g times x"
+    },
+    "Function086": {
+      "expected": "h times x"
+    },
+    "Function087": {
+      "expected": "f times 2 x"
+    },
+    "Function088": {
+      "expected": "g times negative 2 x"
+    },
+    "Function089": {
+      "expected": "h times one half"
+    },
+    "Function090": {
+      "expected": "h times, open paren, 1 over 2, close paren"
+    },
+    "Function091": {
+      "expected": "f times, open paren, x plus 1, close paren, equals, f times x, plus 1"
+    },
+    "Function092": {
+      "expected": "g times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function093": {
+      "expected": "g times, open paren, x squared, close paren"
+    },
+    "Function094": {
+      "expected": "f to the negative 1 power, times x"
+    },
+    "Function095": {
+      "expected": "g to the negative 1 power, times x"
+    },
+    "Function096": {
+      "expected": "h to the negative 1 power, times x"
+    },
+    "Function097": {
+      "expected": "f to the negative 1 power, times 2 x"
+    },
+    "Function098": {
+      "expected": "g to the negative 1 power, times negative 2 x"
+    },
+    "Function099": {
+      "expected": "f to the negative 1 power, times, open paren, 3 x, minus 1, close paren"
+    },
+    "Function100": {
+      "expected": "g to the negative 1 power, times, open paren, x squared, close paren"
+    },
+    "Function101": {
+      "expected": "h to the negative 1 power, times one half"
+    },
+    "Function102": {
+      "expected": "h to the negative 1 power, times, open paren, 1 over 2, close paren"
+    },
+    "Function103": {
+      "expected": "f to the negative 1 power, times, f times x"
+    },
+    "Function104": {
+      "expected": "g to the negative 1 power, times, g times x"
+    },
+    "Function105": {
+      "expected": "h to the negative 1 power, times, h times x"
+    },
+    "Function106": {
+      "expected": "f to the negative 1 power, times, f times 2 x"
+    },
+    "Function107": {
+      "expected": "g to the negative 1 power, times, g times negative 2 x"
+    },
+    "Function108": {
+      "expected": "h to the negative 1 power, times, h times one half"
+    },
+    "Function109": {
+      "expected": "h to the negative 1 power, times, open paren, h times, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function110": {
+      "expected": "f to the negative 1 power, times, open paren, f times, open paren, x plus 1, close paren, close paren, equals x plus 1"
+    },
+    "Function111": {
+      "expected": "g to the negative 1 power, times, open paren, g times, open paren, 2 x, plus 1, close paren, close paren"
+    },
+    "Function112": {
+      "expected": "g to the negative 1 power, times, open paren, g times, open paren, x squared, close paren, close paren"
+    },
+    "Function113": {
+      "expected": "f times, open paren, f to the negative 1 power, times x, close paren"
+    },
+    "Function114": {
+      "expected": "g times, open paren, g to the negative 1 power, times x, close paren"
+    },
+    "Function115": {
+      "expected": "h times, open paren, h to the negative 1 power, times x, close paren"
+    },
+    "Function116": {
+      "expected": "f times, open paren, f to the negative 1 power, times 2 x, close paren"
+    },
+    "Function117": {
+      "expected": "g times, open paren, g to the negative 1 power, times negative 2 x, close paren"
+    },
+    "Function118": {
+      "expected": "f times, open paren, f to the negative 1 power, times, open paren, 3 x, minus 1, close paren, close paren"
+    },
+    "Function119": {
+      "expected": "g times, open paren, g to the negative 1 power, times, open paren, x squared, close paren, close paren"
+    },
+    "Function120": {
+      "expected": "h times, open paren, h to the negative 1 power, times one half, close paren"
+    },
+    "Function121": {
+      "expected": "h times, open paren, h to the negative 1 power, times, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function122": {
+      "expected": "f times, g times x"
+    },
+    "Function123": {
+      "expected": "f times, open paren, g times, open paren, x plus 1, close paren, close paren"
+    },
+    "Function124": {
+      "expected": "h times, g times x"
+    },
+    "Function125": {
+      "expected": "h times, open paren, g times, open paren, the fraction with numerator x, and denominator x plus 1, close paren, close paren"
+    },
+    "Function126": {
+      "expected": "open paren, f plus g, close paren, times x, equals, f times x, plus, g times x"
+    },
+    "Function127": {
+      "expected": "open paren, f plus g, close paren, times, open paren, x plus 1, close paren, equals, f times, open paren, x plus 1, close paren, plus, g times, open paren, x plus 1, close paren"
+    },
+    "Function128": {
+      "expected": "open paren, f times g, close paren, times x"
+    },
+    "Function129": {
+      "expected": "open paren, f times g, close paren, times, open paren, 2 x, plus 5, close paren"
+    },
+    "Function130": {
+      "expected": "open paren, f over g, close paren, times x, equals, the fraction with numerator, f times x, and denominator, g times x"
+    },
+    "Function131": {
+      "expected": "open paren, f over g, close paren, times, open paren, 2 x, plus 5, close paren, equals, the fraction with numerator, f times, open paren, 2 x, plus 5, close paren, and denominator, g times, open paren, 2 x, plus 5, close paren"
+    },
+    "Function132": {
+      "expected": "2, f times x"
+    },
+    "Function133": {
+      "expected": "c, f times x"
+    },
+    "Function134": {
+      "expected": "f squared times x"
+    },
+    "Function135": {
+      "expected": "f squared times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function136": {
+      "expected": "f cubed times x"
+    },
+    "Function137": {
+      "expected": "f cubed times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function138": {
+      "expected": "f to the fourth power, times x"
+    },
+    "Function139": {
+      "expected": "f to the fourth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function140": {
+      "expected": "f to the fifth power, times x"
+    },
+    "Function141": {
+      "expected": "f to the fifth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function142": {
+      "expected": "f to the n-th power, times x"
+    },
+    "Function143": {
+      "expected": "f to the n-th power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function144": {
+      "expected": "g squared times x"
+    },
+    "Function145": {
+      "expected": "g squared times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function146": {
+      "expected": "h cubed times x"
+    },
+    "Function147": {
+      "expected": "h cubed times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function148": {
+      "expected": "g to the fourth power, times x"
+    },
+    "Function149": {
+      "expected": "g to the fourth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function150": {
+      "expected": "h to the fifth power, times x"
+    },
+    "Function151": {
+      "expected": "h to the fifth power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function152": {
+      "expected": "g to the n-th power, times x"
+    },
+    "Function153": {
+      "expected": "g to the n-th power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function154": {
+      "expected": "f sub 1, times x"
+    },
+    "Function156": {
+      "expected": "g sub 2, times, open paren, x cubed, close paren"
+    },
+    "Function157": {
+      "expected": "h sub n, times, open paren, 3 x, minus 2, close paren"
+    },
+    "Function158": {
+      "expected": "f sub 1, to the negative 1 power, times x"
+    },
+    "Function159": {
+      "expected": "g sub 2, to the negative 1 power, times, open paren, 2 x, plus 1, close paren"
+    },
+    "Function160": {
+      "expected": "h sub n, to the negative 1 power, times x"
+    },
+    "Function161": {
+      "expected": "g sub 1, to the negative 1 power, times, open paren, g sub 2, times x, close paren"
+    },
+    "Function162": {
+      "expected": "f sub 1, times, open paren, g sub 2, to the negative 1 power, times x, close paren"
+    },
+    "Function163": {
+      "expected": "f times, open paren, x comma y, close paren"
+    },
+    "Function164": {
+      "expected": "f times, open paren, x comma y comma z, close paren"
+    },
+    "Function165": {
+      "expected": "f times, open paren, x plus 1, comma, 2 y, close paren"
+    },
+    "Function166": {
+      "expected": "f times, open paren, 2 x, comma, x plus 1, comma, x squared, close paren"
+    }
+  }
+}

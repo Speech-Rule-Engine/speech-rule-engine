@@ -1,0 +1,64 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakSetsEnclosedInSetBrackets",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "Italian Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Set001": {
+      "expected": "l'insieme di tutti x in gli interi tale che 2 minore di x minore di 7"
+    },
+    "Set002": {
+      "expected": "l'insieme di tutti x tale che, valore assoluto di x, maggiore di 2"
+    },
+    "Set003": {
+      "expected": "l'insieme di tutti x in gli interi tale che 2 minore di x minore di 7"
+    },
+    "Set004": {
+      "expected": "l'insieme di tutti x in i numeri naturali tale che x is an even number"
+    },
+    "Set005": {
+      "expected": "l'insieme 1 virgola 2 virgola 3"
+    },
+    "Set006": {
+      "expected": "l'insieme 1 virgola 112 virgola 1 virgola 253"
+    },
+    "Set007": {
+      "expected": "l'insieme di x in gli interi tale che 2 minore di x minore di 7"
+    },
+    "Set008": {
+      "expected": "l'insieme di x tale che, valore assoluto di x, maggiore di 2"
+    },
+    "Set009": {
+      "expected": "l'insieme di x in gli interi tale che 2 minore di x minore di 7"
+    },
+    "Set010": {
+      "expected": "l'insieme 1 virgola 2 virgola 3"
+    },
+    "Set011": {
+      "expected": "l'insieme 1 virgola 112 virgola 1 virgola 253"
+    },
+    "Set012": {
+      "expected": "l'insieme di tutti x in gli interi tale che 2 minore di x minore di 7"
+    },
+    "Set013": {
+      "expected": "l'insieme di tutti x tale che, valore assoluto di x, maggiore di 2"
+    },
+    "Set014": {
+      "expected": "l'insieme di tutti x in gli interi tale che 2 minore di x minore di 7"
+    },
+    "Set015": {
+      "expected": "l'insieme di tutti x in i numeri naturali tale che x is an even number"
+    },
+    "Set016": {
+      "expected": "1 virgola 2 virgola 3"
+    },
+    "Set017": {
+      "expected": "1 virgola 112 virgola 1 virgola 253"
+    }
+  }
+}

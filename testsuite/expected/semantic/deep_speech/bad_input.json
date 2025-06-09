@@ -1,0 +1,7 @@
+{
+  "factory": "deepSpeech",
+  "base": "input/semantic/bad_input.json",
+  "information": "Deep Speech tests for badly formatted input.",
+  "exclude": ["Rubbish_2"],
+  "tests": "ALL"
+}

@@ -1,0 +1,97 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
+  "name": "EnglishClearspeakIssues",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "English Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 5 <mark name=\"3\"/> and <break time=\"250ms\"/> <mark name=\"1\"/> 3 <mark name=\"2\"/> over 224 </prosody></speak>"
+    },
+    "Issue230_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 5 <mark name=\"3\"/> and <mark name=\"1\"/> three <mark name=\"2\"/> fourths </prosody></speak>"
+    },
+    "IssueNumbers_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> number <mark name=\"1\"/> <say-as interpret-as=\"character\">t</say-as> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"4\"/> 4 </prosody></speak>"
+    },
+    "IssueNumbers_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> number <mark name=\"1\"/> number sign <mark name=\"2\"/> <say-as interpret-as=\"character\">F</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">F</say-as> <mark name=\"4\"/> 0 <mark name=\"5\"/> 0 <mark name=\"6\"/> 0 <mark name=\"7\"/> 0 </prosody></speak>"
+    },
+    "IssueNumbers_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> number <mark name=\"1\"/> number sign <mark name=\"2\"/> <say-as interpret-as=\"character\">F</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">F</say-as> <mark name=\"4\"/> <say-as interpret-as=\"character\">F</say-as> <mark name=\"5\"/> <say-as interpret-as=\"character\">F</say-as> </prosody></speak>"
+    },
+    "Issue320_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential </prosody></speak>"
+    },
+    "Issue320_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> factorial </prosody></speak>"
+    },
+    "Issue320_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> minus <mark name=\"1\"/> minus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> plus <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> sine <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> partial differential <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_7": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"1\"/> partial differential <mark name=\"2\"/> squared <break time=\"250ms\"/> <mark name=\"8\"/> and denominator <mark name=\"4\"/> partial differential <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <break time=\"250ms\"/> <mark name=\"10\"/> plus <break time=\"250ms\"/> <mark name=\"19\"/> the <mark name=\"13\"/> fraction with numerator <mark name=\"11\"/> partial differential <mark name=\"12\"/> squared <break time=\"250ms\"/> <mark name=\"18\"/> and denominator <mark name=\"14\"/> partial differential <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> squared <break time=\"250ms\"/> <mark name=\"20\"/> close paren <break time=\"250ms\"/> <mark name=\"43\"/> times <break time=\"250ms\"/> <mark name=\"38\"/> the absolute value of <mark name=\"24\"/> phi <mark name=\"36\"/> times <break time=\"250ms\"/> <mark name=\"25\"/> open paren <break time=\"250ms\"/> <mark name=\"26\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"27\"/> plus <prosody rate=\"+25%\"> <mark name=\"28\"/> normal <say-as interpret-as=\"character\">i</say-as> <break time=\"250ms\"/> <mark name=\"29\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"30\"/> close paren <break time=\"250ms\"/> <mark name=\"39\"/> squared <mark name=\"41\"/> equals <mark name=\"42\"/> 0 </prosody></speak>"
+    },
+    "Issue301_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 4 <mark name=\"2\"/> millimeters </prosody></speak>"
+    },
+    "Issue301_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\"/> millimeter </prosody></speak>"
+    },
+    "Issue301_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 4 <mark name=\"1\"/> millimeters </prosody></speak>"
+    },
+    "Issue301_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> millimeter </prosody></speak>"
+    },
+    "Issue_442_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 9 <mark name=\"1\"/> divided by <mark name=\"2\"/> 3 <mark name=\"3\"/> is not equal to <mark name=\"4\"/> 9 <mark name=\"5\"/> times <mark name=\"6\"/> 3 </prosody></speak>"
+    },
+    "Issue_442_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 9 <mark name=\"1\"/> divided by <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "Issue_442_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 9 <mark name=\"1\"/> divided by <mark name=\"2\"/> 3 <mark name=\"3\"/> is not equal to <mark name=\"4\"/> 9 <mark name=\"5\"/> times <mark name=\"6\"/> 3 </prosody></speak>"
+    },
+    "Issue_442_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 9 <mark name=\"1\"/> divided by <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "Integral_Issue_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the integral <mark name=\"8\"/> of <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> <say-as interpret-as=\"character\">d</say-as> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Integral_Issue_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the integral <mark name=\"9\"/> of <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">d</say-as> <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Integral_Issue_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the integral <mark name=\"11\"/> of <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"9\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">d</say-as> <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> 8 </prosody></speak>"
+    },
+    "Issue_689_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"18\"/> 2 lines <break time=\"250ms\"/> <mark name=\"6\"/> Line 1: <break time=\"250ms\"/> <mark name=\"6\"/> 2 lines <break time=\"250ms\"/> <mark name=\"0\"/> Line 1: 100 <break time=\"750ms\"/> <mark name=\"3\"/> Line 2: 200 <break time=\"750ms\"/> <mark name=\"15\"/> Line 2: <break time=\"250ms\"/> <mark name=\"15\"/> 2 lines <break time=\"250ms\"/> <mark name=\"9\"/> Line 1: 300 <break time=\"750ms\"/> <mark name=\"12\"/> Line 2: 400 </prosody></speak>"
+    },
+    "Issue_689_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"28\"/> 2 lines <break time=\"250ms\"/> <mark name=\"0\"/> Line 1: a <break time=\"500ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"750ms\"/> <mark name=\"23\"/> Line 2: <break time=\"250ms\"/> <mark name=\"23\"/> 2 lines <break time=\"250ms\"/> <mark name=\"7\"/> Line 1: <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"6\"/> sub 1 <break time=\"500ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"10\"/> sub 2 <break time=\"750ms\"/> <mark name=\"16\"/> Line 2: <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"15\"/> sub 3 <break time=\"500ms\"/> <mark name=\"18\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"19\"/> sub 4 <break time=\"750ms\"/> <mark name=\"25\"/> <say-as interpret-as=\"character\">d</say-as> </prosody></speak>"
+    },
+    "Issue_689_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> 2 cases <break time=\"250ms\"/> <mark name=\"8\"/> Case 1: <break time=\"250ms\"/> <mark name=\"8\"/> 2 cases <break time=\"250ms\"/> <mark name=\"2\"/> Case 1: b <break time=\"750ms\"/> <mark name=\"5\"/> Case 2: c <break time=\"750ms\"/> <mark name=\"12\"/> Case 2: d </prosody></speak>"
+    },
+    "Issue_689_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"32\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"1\"/> Row 1: Column 1, a <break time=\"500ms\"/> <mark name=\"3\"/> Column 2, b <break time=\"750ms\"/> <mark name=\"25\"/> Row 2: Column 1, the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"7\"/> Row 1: c <mark name=\"8\"/> sub 1 <break time=\"250ms\"/> <mark name=\"11\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"12\"/> sub 2 <mark name=\"16\"/> Row 2: c <mark name=\"17\"/> sub 3 <break time=\"250ms\"/> <mark name=\"20\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"21\"/> sub 4 <break time=\"750ms\"/> <mark name=\"25\" kind=\"LAST\"/> end matrix <break time=\"500ms\"/> <mark name=\"29\"/> Column 2, d <break time=\"750ms\"/> <mark name=\"32\" kind=\"LAST\"/> end matrix </prosody></speak>"
+    },
+    "Issue_689_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"37\"/> the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"1\"/> Row 1: Column 1, a <break time=\"500ms\"/> <mark name=\"3\"/> Column 2, b <break time=\"750ms\"/> <mark name=\"30\"/> Row 2: Column 1, the 2 by 2 matrix <break time=\"750ms\"/> <mark name=\"9\"/> Row 1: Column 1, <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"8\"/> sub 1 <break time=\"500ms\"/> <mark name=\"13\"/> Column 2, <break time=\"250ms\"/> <mark name=\"11\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"12\"/> sub 2 <break time=\"750ms\"/> <mark name=\"18\"/> Row 2: Column 1, <break time=\"250ms\"/> <mark name=\"16\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"17\"/> sub 3 <break time=\"250ms\"/> <mark name=\"19\"/> plus <mark name=\"20\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"21\"/> plus <mark name=\"22\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"500ms\"/> <mark name=\"27\"/> Column 2, <break time=\"250ms\"/> <mark name=\"25\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"26\"/> sub 4 <break time=\"750ms\"/> <mark name=\"30\" kind=\"LAST\"/> end matrix <break time=\"500ms\"/> <mark name=\"34\"/> Column 2, d <break time=\"750ms\"/> <mark name=\"37\" kind=\"LAST\"/> end matrix </prosody></speak>"
+    }
+  }
+}

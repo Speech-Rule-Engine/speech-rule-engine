@@ -1,0 +1,894 @@
+{
+  "information": "Markup function test.",
+  "factory": "markup",
+  "tests": {
+    "_comment0_": " Test for SSML Step markup.",
+    "_comment1_": " Default Tests with the quadratic equation.",
+    "SimpleString_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "x equals the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c and denominator 2 a",
+      "markup": "NONE"
+    },
+    "SimpleString_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "x equals negative b plus or minus Square root of b squared minus four times a times c divided by two times a",
+      "markup": "NONE"
+    },
+    "SimpleString_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "markup": "NONE"
+    },
+    "Acss_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "(exp \"x equals\" (pause . 250) \"the fraction with numerator negative b plus or minus the square root of b squared minus\" (text ((richness . 6)) \"4 a c\") (pause . 250) \"and denominator\" (text ((richness . 6)) \"2 a\"))",
+      "markup": "ACSS"
+    },
+    "Acss_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "(exp \"x\" (pause . 200) \"equals\" (pause . 450) (text ((richness . 6)) \"negative b plus or minus Square root of\") (text ((richness . 7)) \"b\") (text ((richness . 7) (average-pitch . 6)) \"squared\") (pause . 300) (text ((richness . 7)) \"minus four times a times c\") (pause . 650) \"divided by\" (text ((richness . 4)) \"two times a\"))",
+      "markup": "ACSS"
+    },
+    "Acss_Quadratic_MS": {
+      "domain": "clearspeak",
+      "expected": "(exp \"x equals\" (pause . 250) \"the fraction with numerator negative b plus or minus the square root of b squared minus\" (text ((richness . 6)) \"4 a c\") (pause . 250) \"and denominator\" (text ((richness . 6)) \"2 a\"))",
+      "markup": "ACSS"
+    },
+    "Sable_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "x equals <BREAK MSEC=\"250\"/> the fraction with numerator negative b plus or minus the square root of b squared minus <RATE SPEED=\"25%\"> 4 a c </RATE> <BREAK MSEC=\"250\"/> and denominator <RATE SPEED=\"25%\"> 2 a </RATE> <BREAK MSEC=\"250\"/>",
+      "markup": "SABLE"
+    },
+    "Sable_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "x <BREAK MSEC=\"200\"/> equals <BREAK MSEC=\"450\"/> <RATE SPEED=\"17.5%\"> negative b plus or minus Square root of </RATE> <RATE SPEED=\"35%\"> b <PITCH RANGE=\"17.5%\"> squared </PITCH> <BREAK MSEC=\"300\"/> minus four times a times c </RATE> <RATE SPEED=\"17.5%\"> <BREAK MSEC=\"650\"/> </RATE> divided by <RATE SPEED=\"-17.5%\"> two times a </RATE> <BREAK MSEC=\"400\"/>",
+      "markup": "SABLE"
+    },
+    "Sable_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "markup": "SABLE"
+    },
+    "Ssml_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "x equals <break time=\"250ms\"/> the fraction with numerator negative b plus or minus the square root of b squared minus <prosody rate=\"+25%\"> 4 a c </prosody> <break time=\"250ms\"/> and denominator <prosody rate=\"+25%\"> 2 a </prosody> <break time=\"250ms\"/>",
+      "markup": "SSML"
+    },
+    "Ssml_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "markup": "SSML"
+    },
+    "VoiceXml_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "x equals <break time=\"250ms\"/> the fraction with numerator negative b plus or minus the square root of b squared minus <prosody rate=\"+25%\"> 4 a c </prosody> <break time=\"250ms\"/> and denominator <prosody rate=\"+25%\"> 2 a </prosody> <break time=\"250ms\"/>",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "x <break time=\"200ms\"/> equals <break time=\"450ms\"/> <prosody rate=\"+17%\"> negative b plus or minus Square root of </prosody> <prosody rate=\"+35%\"> b <prosody pitch=\"+17%\"> squared </prosody> <break time=\"300ms\"/> minus four times a times c </prosody> <prosody rate=\"+17%\"> <break time=\"650ms\"/> </prosody> divided by <prosody rate=\"-18%\"> two times a </prosody> <break time=\"400ms\"/>",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "markup": "VOICEXML"
+    },
+    "SsmlStepAuto_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> equals <break time=\"250ms\"/> <mark name=\"23\"/> the <mark name=\"18\"/> fraction with numerator <mark name=\"2\"/> negative <mark name=\"3\"/> b <mark name=\"4\"/> plus or minus <mark name=\"16\"/> the square root of <mark name=\"5\"/> b <mark name=\"6\"/> squared <mark name=\"8\"/> minus <prosody rate=\"+25%\"> <mark name=\"9\"/> 4 <mark name=\"10\"/> a <mark name=\"11\"/> c </prosody> <break time=\"250ms\"/> <mark name=\"22\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"19\"/> 2 <mark name=\"20\"/> a </prosody> <break time=\"250ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "<mark name=\"0\"/> x <break time=\"200ms\"/> <mark name=\"1\"/> equals <break time=\"450ms\"/> <prosody rate=\"+17%\"> <mark name=\"17\"/> negative <mark name=\"3\"/> b <mark name=\"4\"/> plus or minus <mark name=\"16\"/> Square root of </prosody> <prosody rate=\"+35%\"> <mark name=\"5\"/> b <prosody pitch=\"+17%\"> <mark name=\"7\" kind=\"LAST\"/> squared </prosody> <break time=\"300ms\"/> <mark name=\"8\"/> minus <mark name=\"9\"/> four <mark name=\"12\"/> times <mark name=\"10\"/> a <mark name=\"13\"/> times <mark name=\"11\"/> c </prosody> <prosody rate=\"+17%\"> <break time=\"650ms\"/> </prosody> <mark name=\"22\"/> divided by <prosody rate=\"-18%\"> <mark name=\"19\"/> two <mark name=\"21\"/> times <mark name=\"20\"/> a </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> equals <mark name=\"23\"/> StartFraction <mark name=\"17\"/> negative <mark name=\"3\"/> b <mark name=\"4\"/> plus or minus <mark name=\"16\"/> StartRoot <mark name=\"5\"/> b <mark name=\"6\"/> squared <mark name=\"15\"/> minus <mark name=\"9\"/> 4 <mark name=\"10\"/> a <mark name=\"11\"/> c <mark name=\"16\" kind=\"LAST\"/> EndRoot <mark name=\"22\"/> Over <mark name=\"19\"/> 2 <mark name=\"20\"/> a <mark name=\"23\" kind=\"LAST\"/> EndFraction",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepExt_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> equals <break time=\"250ms\"/> <mark name=\"3\"/> the <mark name=\"4\"/> fraction with numerator <mark name=\"5\"/> negative <mark name=\"6\"/> b <mark name=\"7\"/> plus or minus <mark name=\"8\"/> the square root of <mark name=\"10\"/> b <mark name=\"11\"/> squared <mark name=\"12\"/> minus <prosody rate=\"+25%\"> <mark name=\"13\"/> 4 <mark name=\"14\"/> a <mark name=\"15\"/> c </prosody> <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"17\"/> 2 <mark name=\"18\"/> a </prosody> <break time=\"250ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "<mark name=\"0\"/> x <break time=\"200ms\"/> <mark name=\"1\"/> equals <break time=\"450ms\"/> <prosody rate=\"+17%\"> <mark name=\"4\"/> negative <mark name=\"6\"/> b <mark name=\"7\"/> plus or minus <mark name=\"8\"/> Square root of </prosody> <prosody rate=\"+35%\"> <mark name=\"10\"/> b <prosody pitch=\"+17%\"> <mark name=\"9\" kind=\"LAST\"/> squared </prosody> <break time=\"300ms\"/> <mark name=\"12\"/> minus <mark name=\"13\"/> four <mark name=\"8\"/> times <mark name=\"14\"/> a <mark name=\"8\"/> times <mark name=\"15\"/> c </prosody> <prosody rate=\"+17%\"> <break time=\"650ms\"/> </prosody> <mark name=\"16\"/> divided by <prosody rate=\"-18%\"> <mark name=\"17\"/> two <mark name=\"16\"/> times <mark name=\"18\"/> a </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> equals <mark name=\"3\"/> StartFraction <mark name=\"4\"/> negative <mark name=\"6\"/> b <mark name=\"7\"/> plus or minus <mark name=\"8\"/> StartRoot <mark name=\"10\"/> b <mark name=\"11\"/> squared <mark name=\"8\"/> minus <mark name=\"13\"/> 4 <mark name=\"14\"/> a <mark name=\"15\"/> c <mark name=\"8\" kind=\"LAST\"/> EndRoot <mark name=\"16\"/> Over <mark name=\"17\"/> 2 <mark name=\"18\"/> a <mark name=\"3\" kind=\"LAST\"/> EndFraction",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepChar_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> equals <break time=\"250ms\"/> the fraction with numerator negative <say-as interpret-as=\"character\">b</say-as> plus or minus the square root of <say-as interpret-as=\"character\">b</say-as> squared minus <prosody rate=\"+25%\"> 4 <say-as interpret-as=\"character\">a</say-as> <say-as interpret-as=\"character\">c</say-as> </prosody> <break time=\"250ms\"/> and denominator <prosody rate=\"+25%\"> 2 <say-as interpret-as=\"character\">a</say-as> </prosody> <break time=\"250ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> <break time=\"200ms\"/> equals <break time=\"450ms\"/> <prosody rate=\"+17%\"> negative <say-as interpret-as=\"character\">b</say-as> plus or minus Square root of </prosody> <prosody rate=\"+35%\"> <say-as interpret-as=\"character\">b</say-as> <prosody pitch=\"+17%\"> squared </prosody> <break time=\"300ms\"/> minus four times <say-as interpret-as=\"character\">a</say-as> times <say-as interpret-as=\"character\">c</say-as> </prosody> <prosody rate=\"+17%\"> <break time=\"650ms\"/> </prosody> divided by <prosody rate=\"-18%\"> two times <say-as interpret-as=\"character\">a</say-as> </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> equals StartFraction negative <say-as interpret-as=\"character\">b</say-as> plus or minus StartRoot <say-as interpret-as=\"character\">b</say-as> squared minus 4 <say-as interpret-as=\"character\">a</say-as> <say-as interpret-as=\"character\">c</say-as> EndRoot Over 2 <say-as interpret-as=\"character\">a</say-as> EndFraction",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepNopause_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "x equals <break time=\"250ms\"/> the fraction with numerator negative b plus or minus the square root of b squared minus <prosody rate=\"+25%\"> 4 a c </prosody> <break time=\"250ms\"/> and denominator <prosody rate=\"+25%\"> 2 a </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "x <break time=\"200ms\"/> equals <break time=\"450ms\"/> <prosody rate=\"+17%\"> negative b plus or minus Square root of </prosody> <prosody rate=\"+35%\"> b <prosody pitch=\"+17%\"> squared </prosody> <break time=\"300ms\"/> minus four times a times c </prosody> <prosody rate=\"+17%\"> <break time=\"650ms\"/> </prosody> divided by <prosody rate=\"-18%\"> two times a </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepDefault_Quadratic_CS": {
+      "domain": "clearspeak",
+      "expected": "<mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> equals <break time=\"250ms\"/> <mark name=\"3\"/> the <mark name=\"4\"/> fraction with numerator <mark name=\"5\"/> negative <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"7\"/> plus or minus <mark name=\"8\"/> the square root of <mark name=\"10\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"11\"/> squared <mark name=\"12\"/> minus <prosody rate=\"+25%\"> <mark name=\"13\"/> 4 <mark name=\"14\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"15\"/> <say-as interpret-as=\"character\">c</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <prosody rate=\"+25%\"> <mark name=\"17\"/> 2 <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_Quadratic_CV": {
+      "domain": "chromevox",
+      "expected": "<mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"200ms\"/> <mark name=\"1\"/> equals <break time=\"450ms\"/> <prosody rate=\"+17%\"> <mark name=\"4\"/> negative <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"7\"/> plus or minus <mark name=\"8\"/> Square root of </prosody> <prosody rate=\"+35%\"> <mark name=\"10\"/> <say-as interpret-as=\"character\">b</say-as> <prosody pitch=\"+17%\"> <mark name=\"9\" kind=\"LAST\"/> squared </prosody> <break time=\"300ms\"/> <mark name=\"12\"/> minus <mark name=\"13\"/> four <mark name=\"8\"/> times <mark name=\"14\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"8\"/> times <mark name=\"15\"/> <say-as interpret-as=\"character\">c</say-as> </prosody> <prosody rate=\"+17%\"> <break time=\"650ms\"/> </prosody> <mark name=\"16\"/> divided by <prosody rate=\"-18%\"> <mark name=\"17\"/> two <mark name=\"16\"/> times <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_Quadratic_MS": {
+      "domain": "mathspeak",
+      "expected": "<mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> equals <mark name=\"3\"/> StartFraction <mark name=\"4\"/> negative <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"7\"/> plus or minus <mark name=\"8\"/> StartRoot <mark name=\"10\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"11\"/> squared <mark name=\"8\"/> minus <mark name=\"13\"/> 4 <mark name=\"14\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"15\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"8\" kind=\"LAST\"/> EndRoot <mark name=\"16\"/> Over <mark name=\"17\"/> 2 <mark name=\"18\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndFraction",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "_comment2_": " Tests with vulgar fractions.",
+    "SimpleString_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "NONE"
+    },
+    "SimpleString_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one divided by two",
+      "markup": "NONE"
+    },
+    "SimpleString_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "NONE"
+    },
+    "Acss_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "(exp \"one half\")",
+      "markup": "ACSS"
+    },
+    "Acss_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "(exp (text ((richness . 6)) \"one\") (pause . 250) \"divided by\" (text ((richness . 4)) \"two\"))",
+      "markup": "ACSS"
+    },
+    "Acss_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "(exp \"one half\")",
+      "markup": "ACSS"
+    },
+    "Sable_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SABLE"
+    },
+    "Sable_VulgarFrac_CV": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SABLE"
+    },
+    "Ssml_VulgarFrac_CS": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<break time=\"250ms\"/> <prosody rate=\"+17%\"> one </prosody> <break time=\"250ms\"/> divided by <prosody rate=\"-18%\"> two </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML"
+    },
+    "Ssml_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<break time=\"250ms\"/> <prosody rate=\"+17%\"> one </prosody> <break time=\"250ms\"/> divided by <prosody rate=\"-18%\"> two </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML"
+    },
+    "Ssml_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SSML"
+    },
+    "VoiceXml_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<break time=\"250ms\"/> <prosody rate=\"+17%\"> one </prosody> <break time=\"250ms\"/> divided by <prosody rate=\"-18%\"> two </prosody> <break time=\"400ms\"/>",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "VOICEXML"
+    },
+    "SsmlStepAuto_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<mark name=\"0\"/> one <mark name=\"1\"/> half",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<break time=\"250ms\"/> <prosody rate=\"+17%\"> <mark name=\"0\"/> one </prosody> <break time=\"250ms\"/> <mark name=\"1\"/> divided by <prosody rate=\"-18%\"> <mark name=\"1\"/> two </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<mark name=\"0\"/> one <mark name=\"1\"/> half",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepExt_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<mark name=\"1\"/> one <mark name=\"2\"/> half",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<break time=\"250ms\"/> <prosody rate=\"+17%\"> <mark name=\"1\"/> one </prosody> <break time=\"250ms\"/> <mark name=\"2\"/> divided by <prosody rate=\"-18%\"> <mark name=\"2\"/> two </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<mark name=\"1\"/> one <mark name=\"2\"/> half",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepChar_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<break time=\"250ms\"/> <prosody rate=\"+17%\"> one </prosody> <break time=\"250ms\"/> divided by <prosody rate=\"-18%\"> two </prosody> <break time=\"400ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepNopause_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<prosody rate=\"+17%\"> one </prosody> <break time=\"250ms\"/> divided by <prosody rate=\"-18%\"> two </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "one half",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepDefault_VulgarFrac_CS": {
+      "domain": "clearspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<mark name=\"1\"/> one <mark name=\"2\"/> half",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_VulgarFrac_CV": {
+      "domain": "chromevox",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<prosody rate=\"+17%\"> <mark name=\"1\"/> one </prosody> <break time=\"250ms\"/> <mark name=\"2\"/> divided by <prosody rate=\"-18%\"> <mark name=\"2\"/> two </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_VulgarFrac_MS": {
+      "domain": "mathspeak",
+      "input": "<mfrac extid=\"0\"><mn extid=\"1\">1</mn><mn extid=\"2\">2</mn></mfrac>",
+      "expected": "<mark name=\"1\"/> one <mark name=\"2\"/> half",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "_comment3_": " Tests with squared.",
+    "SimpleString_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "NONE"
+    },
+    "SimpleString_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "NONE"
+    },
+    "SimpleString_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "NONE"
+    },
+    "Acss_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "(exp \"x squared\")",
+      "markup": "ACSS"
+    },
+    "Acss_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "(exp \"x\" (text ((average-pitch . 6)) \"squared\"))",
+      "markup": "ACSS"
+    },
+    "Acss_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "(exp \"x squared\")",
+      "markup": "ACSS"
+    },
+    "Sable_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "SABLE"
+    },
+    "Sable_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x <PITCH RANGE=\"17.5%\"> squared </PITCH> <BREAK MSEC=\"300\"/>",
+      "markup": "SABLE"
+    },
+    "Sable_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "SABLE"
+    },
+    "Ssml_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "SSML"
+    },
+    "Ssml_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x <prosody pitch=\"+17%\"> squared </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML"
+    },
+    "Ssml_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "SSML"
+    },
+    "VoiceXml_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x <prosody pitch=\"+17%\"> squared </prosody> <break time=\"300ms\"/>",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "VOICEXML"
+    },
+    "SsmlStepAuto_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> squared",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"0\"/> x <prosody pitch=\"+17%\"> <mark name=\"2\" kind=\"LAST\"/> squared </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> squared",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepExt_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"1\"/> x <mark name=\"2\"/> squared",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"1\"/> x <prosody pitch=\"+17%\"> <mark name=\"0\" kind=\"LAST\"/> squared </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"1\"/> x <mark name=\"2\"/> squared",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepChar_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> squared",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> <prosody pitch=\"+17%\"> squared </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> squared",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepNopause_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x <prosody pitch=\"+17%\"> squared </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "x squared",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepDefault_Squared_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> squared",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_Squared_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <prosody pitch=\"+17%\"> <mark name=\"0\" kind=\"LAST\"/> squared </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_Squared_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">2</mn></msup>",
+      "expected": "<mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> squared",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "_comment4_": " Tests with cubed.",
+    "SimpleString_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "NONE"
+    },
+    "SimpleString_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "NONE"
+    },
+    "SimpleString_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "NONE"
+    },
+    "Acss_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "(exp \"x cubed\")",
+      "markup": "ACSS"
+    },
+    "Acss_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "(exp \"x\" (text ((average-pitch . 6)) \"cubed\"))",
+      "markup": "ACSS"
+    },
+    "Acss_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "(exp \"x cubed\")",
+      "markup": "ACSS"
+    },
+    "Sable_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "SABLE"
+    },
+    "Sable_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x <PITCH RANGE=\"17.5%\"> cubed </PITCH> <BREAK MSEC=\"300\"/>",
+      "markup": "SABLE"
+    },
+    "Sable_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "SABLE"
+    },
+    "Ssml_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "SSML"
+    },
+    "Ssml_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x <prosody pitch=\"+17%\"> cubed </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML"
+    },
+    "Ssml_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "SSML"
+    },
+    "VoiceXml_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x <prosody pitch=\"+17%\"> cubed </prosody> <break time=\"300ms\"/>",
+      "markup": "VOICEXML"
+    },
+    "VoiceXml_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "VOICEXML"
+    },
+    "SsmlStepAuto_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> cubed",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"0\"/> x <prosody pitch=\"+17%\"> <mark name=\"2\" kind=\"LAST\"/> cubed </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepAuto_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"0\"/> x <mark name=\"1\"/> cubed",
+      "markup": "SSML",
+      "options": {
+        "automark": true
+      }
+    },
+    "SsmlStepExt_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"1\"/> x <mark name=\"2\"/> cubed",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"1\"/> x <prosody pitch=\"+17%\"> <mark name=\"0\" kind=\"LAST\"/> cubed </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepExt_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"1\"/> x <mark name=\"2\"/> cubed",
+      "markup": "SSML",
+      "options": {
+        "mark": true
+      }
+    },
+    "SsmlStepChar_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> cubed",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> <prosody pitch=\"+17%\"> cubed </prosody> <break time=\"300ms\"/>",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepChar_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<say-as interpret-as=\"character\">x</say-as> cubed",
+      "markup": "SSML",
+      "options": {
+        "character": true
+      }
+    },
+    "SsmlStepNopause_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x <prosody pitch=\"+17%\"> cubed </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepNopause_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "x cubed",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true
+      }
+    },
+    "SsmlStepDefault_Cubed_CS": {
+      "domain": "clearspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> cubed",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_Cubed_CV": {
+      "domain": "chromevox",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <prosody pitch=\"+17%\"> <mark name=\"0\" kind=\"LAST\"/> cubed </prosody>",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    },
+    "SsmlStepDefault_Cubed_MS": {
+      "domain": "mathspeak",
+      "input": "<msup extid=\"0\"><mi extid=\"1\">x</mi><mn extid=\"2\">3</mn></msup>",
+      "expected": "<mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> cubed",
+      "markup": "SSML",
+      "options": {
+        "cleanpause": true,
+        "mark": true,
+        "character": true
+      }
+    }
+  }
+}

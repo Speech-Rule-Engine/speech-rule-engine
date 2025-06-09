@@ -1,0 +1,47 @@
+{
+  "name": "NemethDefaultAlphabetNegativeCircledSansSerif",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet negative-circled-sans-serif tests.",
+  "tests": {
+    "🄌": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠴⠻"
+    },
+    "➊": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠂⠻"
+    },
+    "➋": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠆⠻"
+    },
+    "➌": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠒⠻"
+    },
+    "➍": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠲⠻"
+    },
+    "➎": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠢⠻"
+    },
+    "➏": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠖⠻"
+    },
+    "➐": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠶⠻"
+    },
+    "➑": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠦⠻"
+    },
+    "➒": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠔⠻"
+    },
+    "➓": {
+      "expected": "⠫⠸⠉⠸⠫⠠⠨⠼⠂⠴⠻"
+    }
+  }
+}

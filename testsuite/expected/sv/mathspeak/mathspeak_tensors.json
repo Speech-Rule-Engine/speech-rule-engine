@@ -1,0 +1,697 @@
+{
+  "name": "SwedishMathspeakTensors",
+  "locale": "sv",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_tensors.json",
+  "information": "Swedish Mathspeak Tensor tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "PartialTensorABCD_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d"
+    },
+    "PartialTensorABCD_brief": {
+      "expected": "Ned a Upp b Bas x Ned c Upp d"
+    },
+    "PartialTensorABCD_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c Upp d"
+    },
+    "PartialTensorABC_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c"
+    },
+    "PartialTensorABC_brief": {
+      "expected": "Ned a Upp b Bas x Ned c"
+    },
+    "PartialTensorABC_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c"
+    },
+    "PartialTensorABD_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Upphöjt d"
+    },
+    "PartialTensorABD_brief": {
+      "expected": "Ned a Upp b Bas x Upp d"
+    },
+    "PartialTensorABD_sbrief": {
+      "expected": "Ned a Upp b Bas x Upp d"
+    },
+    "PartialTensorABDR_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Upphöjt d Baslinje r"
+    },
+    "PartialTensorABDR_brief": {
+      "expected": "Ned a Upp b Bas x Upp d Bas r"
+    },
+    "PartialTensorABDR_sbrief": {
+      "expected": "Ned a Upp b Bas x Upp d Bas r"
+    },
+    "PartialTensorABDRootR_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x Upphöjt d Baslinje SlutRot r"
+    },
+    "PartialTensorABDRootR_brief": {
+      "expected": "StartRot Ned a Upp b Bas x Upp d Bas SlutRot r"
+    },
+    "PartialTensorABDRootR_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x Upp d Bas SlutRot r"
+    },
+    "PartialTensorABDRRoot_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x Upphöjt d Baslinje r SlutRot"
+    },
+    "PartialTensorABDRRoot_brief": {
+      "expected": "StartRot Ned a Upp b Bas x Upp d Bas r SlutRot"
+    },
+    "PartialTensorABDRRoot_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x Upp d Bas r SlutRot"
+    },
+    "PartialTensorABDFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x Upphöjt d Baslinje SlutBråk r"
+    },
+    "PartialTensorABDFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x Upp d Bas SlutBråk r"
+    },
+    "PartialTensorABDFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x Upp d Bas SlutBråk r"
+    },
+    "PartialTensorABDRFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x Upphöjt d Baslinje r SlutBråk"
+    },
+    "PartialTensorABDRFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x Upp d Bas r SlutBråk"
+    },
+    "PartialTensorABDRFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x Upp d Bas r SlutBråk"
+    },
+    "PartialTensorAB_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x"
+    },
+    "PartialTensorAB_brief": {
+      "expected": "Ned a Upp b Bas x"
+    },
+    "PartialTensorAB_sbrief": {
+      "expected": "Ned a Upp b Bas x"
+    },
+    "PartialTensorABR_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x r"
+    },
+    "PartialTensorABR_brief": {
+      "expected": "Ned a Upp b Bas x r"
+    },
+    "PartialTensorABR_sbrief": {
+      "expected": "Ned a Upp b Bas x r"
+    },
+    "PartialTensorABRootR_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x SlutRot r"
+    },
+    "PartialTensorABRootR_brief": {
+      "expected": "StartRot Ned a Upp b Bas x SlutRot r"
+    },
+    "PartialTensorABRootR_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x SlutRot r"
+    },
+    "PartialTensorABRRoot_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x r SlutRot"
+    },
+    "PartialTensorABRRoot_brief": {
+      "expected": "StartRot Ned a Upp b Bas x r SlutRot"
+    },
+    "PartialTensorABRRoot_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x r SlutRot"
+    },
+    "PartialTensorABFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x SlutBråk r"
+    },
+    "PartialTensorABFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x SlutBråk r"
+    },
+    "PartialTensorABFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x SlutBråk r"
+    },
+    "PartialTensorABRFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x r SlutBråk"
+    },
+    "PartialTensorABRFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x r SlutBråk"
+    },
+    "PartialTensorABRFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x r SlutBråk"
+    },
+    "PartialTensorABCR_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Baslinje r"
+    },
+    "PartialTensorABCR_brief": {
+      "expected": "Ned a Upp b Bas x Ned c Bas r"
+    },
+    "PartialTensorABCR_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c Bas r"
+    },
+    "PartialTensorABCDR_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje r"
+    },
+    "PartialTensorABCDR_brief": {
+      "expected": "Ned a Upp b Bas x Ned c Upp d Bas r"
+    },
+    "PartialTensorABCDR_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c Upp d Bas r"
+    },
+    "PartialTensorABCDRoot_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d SlutRot"
+    },
+    "PartialTensorABCDRoot_brief": {
+      "expected": "StartRot Ned a Upp b Bas x Ned c Upp d SlutRot"
+    },
+    "PartialTensorABCDRoot_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x Ned c Upp d SlutRot"
+    },
+    "PartialTensorABCDRootR_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje SlutRot r"
+    },
+    "PartialTensorABCDRootR_brief": {
+      "expected": "StartRot Ned a Upp b Bas x Ned c Upp d Bas SlutRot r"
+    },
+    "PartialTensorABCDRootR_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x Ned c Upp d Bas SlutRot r"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "expected": "StartRot Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje r SlutRot"
+    },
+    "PartialTensorABCDRRoot_brief": {
+      "expected": "StartRot Ned a Upp b Bas x Ned c Upp d Bas r SlutRot"
+    },
+    "PartialTensorABCDRRoot_sbrief": {
+      "expected": "Rot Ned a Upp b Bas x Ned c Upp d Bas r SlutRot"
+    },
+    "PartialTensorABCDFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d SlutBråk"
+    },
+    "PartialTensorABCDFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x Ned c Upp d SlutBråk"
+    },
+    "PartialTensorABCDFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x Ned c Upp d SlutBråk"
+    },
+    "PartialTensorABCDFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje SlutBråk r"
+    },
+    "PartialTensorABCDFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x Ned c Upp d Bas SlutBråk r"
+    },
+    "PartialTensorABCDFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x Ned c Upp d Bas SlutBråk r"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje r SlutBråk"
+    },
+    "PartialTensorABCDRFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Upp b Bas x Ned c Upp d Bas r SlutBråk"
+    },
+    "PartialTensorABCDRFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Upp b Bas x Ned c Upp d Bas r SlutBråk"
+    },
+    "PartialTensorB_default": {
+      "expected": "Upphöjt b Baslinje x"
+    },
+    "PartialTensorB_brief": {
+      "expected": "Upp b Bas x"
+    },
+    "PartialTensorB_sbrief": {
+      "expected": "Upp b Bas x"
+    },
+    "PartialTensorBR_default": {
+      "expected": "Upphöjt b Baslinje x r"
+    },
+    "PartialTensorBR_brief": {
+      "expected": "Upp b Bas x r"
+    },
+    "PartialTensorBR_sbrief": {
+      "expected": "Upp b Bas x r"
+    },
+    "PartialTensorBRootR_default": {
+      "expected": "StartRot Upphöjt b Baslinje x SlutRot r"
+    },
+    "PartialTensorBRootR_brief": {
+      "expected": "StartRot Upp b Bas x SlutRot r"
+    },
+    "PartialTensorBRootR_sbrief": {
+      "expected": "Rot Upp b Bas x SlutRot r"
+    },
+    "PartialTensorBRRoot_default": {
+      "expected": "StartRot Upphöjt b Baslinje x r SlutRot"
+    },
+    "PartialTensorBRRoot_brief": {
+      "expected": "StartRot Upp b Bas x r SlutRot"
+    },
+    "PartialTensorBRRoot_sbrief": {
+      "expected": "Rot Upp b Bas x r SlutRot"
+    },
+    "PartialTensorBFracR_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x SlutBråk r"
+    },
+    "PartialTensorBFracR_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x SlutBråk r"
+    },
+    "PartialTensorBFracR_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x SlutBråk r"
+    },
+    "PartialTensorBRFrac_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x r SlutBråk"
+    },
+    "PartialTensorBRFrac_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x r SlutBråk"
+    },
+    "PartialTensorBRFrac_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x r SlutBråk"
+    },
+    "PartialTensorBD_default": {
+      "expected": "Upphöjt b Baslinje x Upphöjt d"
+    },
+    "PartialTensorBD_brief": {
+      "expected": "Upp b Bas x Upp d"
+    },
+    "PartialTensorBD_sbrief": {
+      "expected": "Upp b Bas x Upp d"
+    },
+    "PartialTensorBDR_default": {
+      "expected": "Upphöjt b Baslinje x Upphöjt d Baslinje r"
+    },
+    "PartialTensorBDR_brief": {
+      "expected": "Upp b Bas x Upp d Bas r"
+    },
+    "PartialTensorBDR_sbrief": {
+      "expected": "Upp b Bas x Upp d Bas r"
+    },
+    "PartialTensorBDRootR_default": {
+      "expected": "StartRot Upphöjt b Baslinje x Upphöjt d Baslinje SlutRot r"
+    },
+    "PartialTensorBDRootR_brief": {
+      "expected": "StartRot Upp b Bas x Upp d Bas SlutRot r"
+    },
+    "PartialTensorBDRootR_sbrief": {
+      "expected": "Rot Upp b Bas x Upp d Bas SlutRot r"
+    },
+    "PartialTensorBDRRoot_default": {
+      "expected": "StartRot Upphöjt b Baslinje x Upphöjt d Baslinje r SlutRot"
+    },
+    "PartialTensorBDRRoot_brief": {
+      "expected": "StartRot Upp b Bas x Upp d Bas r SlutRot"
+    },
+    "PartialTensorBDRRoot_sbrief": {
+      "expected": "Rot Upp b Bas x Upp d Bas r SlutRot"
+    },
+    "PartialTensorBDFracR_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x Upphöjt d Baslinje SlutBråk r"
+    },
+    "PartialTensorBDFracR_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x Upp d Bas SlutBråk r"
+    },
+    "PartialTensorBDFracR_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x Upp d Bas SlutBråk r"
+    },
+    "PartialTensorBDRFrac_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x Upphöjt d Baslinje r SlutBråk"
+    },
+    "PartialTensorBDRFrac_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x Upp d Bas r SlutBråk"
+    },
+    "PartialTensorBDRFrac_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x Upp d Bas r SlutBråk"
+    },
+    "PartialTensorBC_default": {
+      "expected": "Upphöjt b Baslinje x Nedsänkt c"
+    },
+    "PartialTensorBC_brief": {
+      "expected": "Upp b Bas x Ned c"
+    },
+    "PartialTensorBC_sbrief": {
+      "expected": "Upp b Bas x Ned c"
+    },
+    "PartialTensorBCR_default": {
+      "expected": "Upphöjt b Baslinje x Nedsänkt c Baslinje r"
+    },
+    "PartialTensorBCR_brief": {
+      "expected": "Upp b Bas x Ned c Bas r"
+    },
+    "PartialTensorBCR_sbrief": {
+      "expected": "Upp b Bas x Ned c Bas r"
+    },
+    "PartialTensorBCRootR_default": {
+      "expected": "StartRot Upphöjt b Baslinje x Nedsänkt c Baslinje SlutRot r"
+    },
+    "PartialTensorBCRootR_brief": {
+      "expected": "StartRot Upp b Bas x Ned c Bas SlutRot r"
+    },
+    "PartialTensorBCRootR_sbrief": {
+      "expected": "Rot Upp b Bas x Ned c Bas SlutRot r"
+    },
+    "PartialTensorBCRRoot_default": {
+      "expected": "StartRot Upphöjt b Baslinje x Nedsänkt c Baslinje r SlutRot"
+    },
+    "PartialTensorBCRRoot_brief": {
+      "expected": "StartRot Upp b Bas x Ned c Bas r SlutRot"
+    },
+    "PartialTensorBCRRoot_sbrief": {
+      "expected": "Rot Upp b Bas x Ned c Bas r SlutRot"
+    },
+    "PartialTensorBCFracR_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x Nedsänkt c Baslinje SlutBråk r"
+    },
+    "PartialTensorBCFracR_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x Ned c Bas SlutBråk r"
+    },
+    "PartialTensorBCFracR_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x Ned c Bas SlutBråk r"
+    },
+    "PartialTensorBCRFrac_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x Nedsänkt c Baslinje r SlutBråk"
+    },
+    "PartialTensorBCRFrac_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x Ned c Bas r SlutBråk"
+    },
+    "PartialTensorBCRFrac_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x Ned c Bas r SlutBråk"
+    },
+    "PartialTensorBCD_default": {
+      "expected": "Upphöjt b Baslinje x Nedsänkt c Upphöjt d"
+    },
+    "PartialTensorBCD_brief": {
+      "expected": "Upp b Bas x Ned c Upp d"
+    },
+    "PartialTensorBCD_sbrief": {
+      "expected": "Upp b Bas x Ned c Upp d"
+    },
+    "PartialTensorBCDR_default": {
+      "expected": "Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje r"
+    },
+    "PartialTensorBCDR_brief": {
+      "expected": "Upp b Bas x Ned c Upp d Bas r"
+    },
+    "PartialTensorBCDR_sbrief": {
+      "expected": "Upp b Bas x Ned c Upp d Bas r"
+    },
+    "PartialTensorBCDRootR_default": {
+      "expected": "StartRot Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje SlutRot r"
+    },
+    "PartialTensorBCDRootR_brief": {
+      "expected": "StartRot Upp b Bas x Ned c Upp d Bas SlutRot r"
+    },
+    "PartialTensorBCDRootR_sbrief": {
+      "expected": "Rot Upp b Bas x Ned c Upp d Bas SlutRot r"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "expected": "StartRot Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje r SlutRot"
+    },
+    "PartialTensorBCDRRoot_brief": {
+      "expected": "StartRot Upp b Bas x Ned c Upp d Bas r SlutRot"
+    },
+    "PartialTensorBCDRRoot_sbrief": {
+      "expected": "Rot Upp b Bas x Ned c Upp d Bas r SlutRot"
+    },
+    "PartialTensorBCDFracR_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje SlutBråk r"
+    },
+    "PartialTensorBCDFracR_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x Ned c Upp d Bas SlutBråk r"
+    },
+    "PartialTensorBCDFracR_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x Ned c Upp d Bas SlutBråk r"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "expected": "StartBråk 1 Över Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje r SlutBråk"
+    },
+    "PartialTensorBCDRFrac_brief": {
+      "expected": "StartBråk 1 Över Upp b Bas x Ned c Upp d Bas r SlutBråk"
+    },
+    "PartialTensorBCDRFrac_sbrief": {
+      "expected": "Bråk 1 Över Upp b Bas x Ned c Upp d Bas r SlutBråk"
+    },
+    "PartialTensorA_default": {
+      "expected": "Nedsänkt a Baslinje x"
+    },
+    "PartialTensorA_brief": {
+      "expected": "Ned a Bas x"
+    },
+    "PartialTensorA_sbrief": {
+      "expected": "Ned a Bas x"
+    },
+    "PartialTensorAR_default": {
+      "expected": "Nedsänkt a Baslinje x r"
+    },
+    "PartialTensorAR_brief": {
+      "expected": "Ned a Bas x r"
+    },
+    "PartialTensorAR_sbrief": {
+      "expected": "Ned a Bas x r"
+    },
+    "PartialTensorARootR_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x SlutRot r"
+    },
+    "PartialTensorARootR_brief": {
+      "expected": "StartRot Ned a Bas x SlutRot r"
+    },
+    "PartialTensorARootR_sbrief": {
+      "expected": "Rot Ned a Bas x SlutRot r"
+    },
+    "PartialTensorARRoot_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x r SlutRot"
+    },
+    "PartialTensorARRoot_brief": {
+      "expected": "StartRot Ned a Bas x r SlutRot"
+    },
+    "PartialTensorARRoot_sbrief": {
+      "expected": "Rot Ned a Bas x r SlutRot"
+    },
+    "PartialTensorAFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x SlutBråk r"
+    },
+    "PartialTensorAFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x SlutBråk r"
+    },
+    "PartialTensorAFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x SlutBråk r"
+    },
+    "PartialTensorARFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x r SlutBråk"
+    },
+    "PartialTensorARFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x r SlutBråk"
+    },
+    "PartialTensorARFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x r SlutBråk"
+    },
+    "PartialTensorAD_default": {
+      "expected": "Nedsänkt a Baslinje x Upphöjt d"
+    },
+    "PartialTensorAD_brief": {
+      "expected": "Ned a Bas x Upp d"
+    },
+    "PartialTensorAD_sbrief": {
+      "expected": "Ned a Bas x Upp d"
+    },
+    "PartialTensorADR_default": {
+      "expected": "Nedsänkt a Baslinje x Upphöjt d Baslinje r"
+    },
+    "PartialTensorADR_brief": {
+      "expected": "Ned a Bas x Upp d Bas r"
+    },
+    "PartialTensorADR_sbrief": {
+      "expected": "Ned a Bas x Upp d Bas r"
+    },
+    "PartialTensorADRootR_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x Upphöjt d Baslinje SlutRot r"
+    },
+    "PartialTensorADRootR_brief": {
+      "expected": "StartRot Ned a Bas x Upp d Bas SlutRot r"
+    },
+    "PartialTensorADRootR_sbrief": {
+      "expected": "Rot Ned a Bas x Upp d Bas SlutRot r"
+    },
+    "PartialTensorADRRoot_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x Upphöjt d Baslinje r SlutRot"
+    },
+    "PartialTensorADRRoot_brief": {
+      "expected": "StartRot Ned a Bas x Upp d Bas r SlutRot"
+    },
+    "PartialTensorADRRoot_sbrief": {
+      "expected": "Rot Ned a Bas x Upp d Bas r SlutRot"
+    },
+    "PartialTensorADFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x Upphöjt d Baslinje SlutBråk r"
+    },
+    "PartialTensorADFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x Upp d Bas SlutBråk r"
+    },
+    "PartialTensorADFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x Upp d Bas SlutBråk r"
+    },
+    "PartialTensorADRFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x Upphöjt d Baslinje r SlutBråk"
+    },
+    "PartialTensorADRFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x Upp d Bas r SlutBråk"
+    },
+    "PartialTensorADRFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x Upp d Bas r SlutBråk"
+    },
+    "PartialTensorAC_default": {
+      "expected": "Nedsänkt a Baslinje x Nedsänkt c"
+    },
+    "PartialTensorAC_brief": {
+      "expected": "Ned a Bas x Ned c"
+    },
+    "PartialTensorAC_sbrief": {
+      "expected": "Ned a Bas x Ned c"
+    },
+    "PartialTensorACR_default": {
+      "expected": "Nedsänkt a Baslinje x Nedsänkt c Baslinje r"
+    },
+    "PartialTensorACR_brief": {
+      "expected": "Ned a Bas x Ned c Bas r"
+    },
+    "PartialTensorACR_sbrief": {
+      "expected": "Ned a Bas x Ned c Bas r"
+    },
+    "PartialTensorACRootR_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x Nedsänkt c Baslinje SlutRot r"
+    },
+    "PartialTensorACRootR_brief": {
+      "expected": "StartRot Ned a Bas x Ned c Bas SlutRot r"
+    },
+    "PartialTensorACRootR_sbrief": {
+      "expected": "Rot Ned a Bas x Ned c Bas SlutRot r"
+    },
+    "PartialTensorACRRoot_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x Nedsänkt c Baslinje r SlutRot"
+    },
+    "PartialTensorACRRoot_brief": {
+      "expected": "StartRot Ned a Bas x Ned c Bas r SlutRot"
+    },
+    "PartialTensorACRRoot_sbrief": {
+      "expected": "Rot Ned a Bas x Ned c Bas r SlutRot"
+    },
+    "PartialTensorACFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x Nedsänkt c Baslinje SlutBråk r"
+    },
+    "PartialTensorACFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x Ned c Bas SlutBråk r"
+    },
+    "PartialTensorACFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x Ned c Bas SlutBråk r"
+    },
+    "PartialTensorACRFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x Nedsänkt c Baslinje r SlutBråk"
+    },
+    "PartialTensorACRFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x Ned c Bas r SlutBråk"
+    },
+    "PartialTensorACRFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x Ned c Bas r SlutBråk"
+    },
+    "PartialTensorACD_default": {
+      "expected": "Nedsänkt a Baslinje x Nedsänkt c Upphöjt d"
+    },
+    "PartialTensorACD_brief": {
+      "expected": "Ned a Bas x Ned c Upp d"
+    },
+    "PartialTensorACD_sbrief": {
+      "expected": "Ned a Bas x Ned c Upp d"
+    },
+    "PartialTensorACDR_default": {
+      "expected": "Nedsänkt a Baslinje x Nedsänkt c Upphöjt d Baslinje r"
+    },
+    "PartialTensorACDR_brief": {
+      "expected": "Ned a Bas x Ned c Upp d Bas r"
+    },
+    "PartialTensorACDR_sbrief": {
+      "expected": "Ned a Bas x Ned c Upp d Bas r"
+    },
+    "PartialTensorACDRootR_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x Nedsänkt c Upphöjt d Baslinje SlutRot r"
+    },
+    "PartialTensorACDRootR_brief": {
+      "expected": "StartRot Ned a Bas x Ned c Upp d Bas SlutRot r"
+    },
+    "PartialTensorACDRootR_sbrief": {
+      "expected": "Rot Ned a Bas x Ned c Upp d Bas SlutRot r"
+    },
+    "PartialTensorACDRRoot_default": {
+      "expected": "StartRot Nedsänkt a Baslinje x Nedsänkt c Upphöjt d Baslinje r SlutRot"
+    },
+    "PartialTensorACDRRoot_brief": {
+      "expected": "StartRot Ned a Bas x Ned c Upp d Bas r SlutRot"
+    },
+    "PartialTensorACDRRoot_sbrief": {
+      "expected": "Rot Ned a Bas x Ned c Upp d Bas r SlutRot"
+    },
+    "PartialTensorACDFracR_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x Nedsänkt c Upphöjt d Baslinje SlutBråk r"
+    },
+    "PartialTensorACDFracR_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x Ned c Upp d Bas SlutBråk r"
+    },
+    "PartialTensorACDFracR_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x Ned c Upp d Bas SlutBråk r"
+    },
+    "PartialTensorACDRFrac_default": {
+      "expected": "StartBråk 1 Över Nedsänkt a Baslinje x Nedsänkt c Upphöjt d Baslinje r SlutBråk"
+    },
+    "PartialTensorACDRFrac_brief": {
+      "expected": "StartBråk 1 Över Ned a Bas x Ned c Upp d Bas r SlutBråk"
+    },
+    "PartialTensorACDRFrac_sbrief": {
+      "expected": "Bråk 1 Över Ned a Bas x Ned c Upp d Bas r SlutBråk"
+    },
+    "TensorMultiSimpleABC_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c NedUpphöjt l"
+    },
+    "TensorMultiSimpleABC_brief": {
+      "expected": "Ned a Upp b Bas x Ned c NedUpp l"
+    },
+    "TensorMultiSimpleABC_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c NedUpp l"
+    },
+    "TensorMultiSub_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c NedNedsänkt l Upphöjt d"
+    },
+    "TensorMultiSub_brief": {
+      "expected": "Ned a Upp b Bas x Ned c NedNed l Upp d"
+    },
+    "TensorMultiSub_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c NedNed l Upp d"
+    },
+    "TensorMultiSubSup_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c NedNedsänkt l NedNedUpphöjt k Nedsänkt e Upphöjt d"
+    },
+    "TensorMultiSubSup_brief": {
+      "expected": "Ned a Upp b Bas x Ned c NedNed l NedNedUpp k Ned e Upp d"
+    },
+    "TensorMultiSubSup_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c NedNed l NedNedUpp k Ned e Upp d"
+    },
+    "TensorMultiSimple_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c NedUpphöjt l Upphöjt d"
+    },
+    "TensorMultiSimple_brief": {
+      "expected": "Ned a Upp b Bas x Ned c NedUpp l Upp d"
+    },
+    "TensorMultiSimple_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c NedUpp l Upp d"
+    },
+    "TensorMultiComplex_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c k NedUpphöjt l Upphöjt d"
+    },
+    "TensorMultiComplex_brief": {
+      "expected": "Ned a Upp b Bas x Ned c k NedUpp l Upp d"
+    },
+    "TensorMultiComplex_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c k NedUpp l Upp d"
+    },
+    "TwoTensors_default": {
+      "expected": "Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d Baslinje Nedsänkt a Upphöjt b Baslinje x Nedsänkt c Upphöjt d"
+    },
+    "TwoTensors_brief": {
+      "expected": "Ned a Upp b Bas x Ned c Upp d Bas Ned a Upp b Bas x Ned c Upp d"
+    },
+    "TwoTensors_sbrief": {
+      "expected": "Ned a Upp b Bas x Ned c Upp d Bas Ned a Upp b Bas x Ned c Upp d"
+    }
+  }
+}

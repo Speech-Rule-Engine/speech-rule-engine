@@ -1,0 +1,373 @@
+{
+  "name": "FrenchMathspeakRoots",
+  "locale": "fr",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "French Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakFrench",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "sqrt_0_brief": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "racine carrée a fin racine carrée"
+    },
+    "sqrt_1_default": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "sqrt_1_brief": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "racine carrée a fin racine carrée"
+    },
+    "sqrt_2_default": {
+      "expected": "début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "sqrt_2_brief": {
+      "expected": "début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "racine carrée imbriquée racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "sqrt_3_default": {
+      "expected": "début racine carrée imbriquée début racine carrée imbriquée début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée fin racine carrée imbriquée"
+    },
+    "sqrt_3_brief": {
+      "expected": "début racine carrée imbriquée début racine carrée imbriquée début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée fin racine carrée imbriquée"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "racine carrée imbriquée racine carrée imbriquée racine carrée imbriquée racine carrée a fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée fin racine carrée imbriquée"
+    },
+    "roots_0_default": {
+      "expected": "indice du radical 1 début racine a fin racine"
+    },
+    "roots_0_brief": {
+      "expected": "indice du radical 1 début racine a fin racine"
+    },
+    "roots_0_sbrief": {
+      "expected": "indice 1 racine a fin racine"
+    },
+    "roots_1_default": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "roots_1_brief": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "roots_1_sbrief": {
+      "expected": "racine carrée a fin racine carrée"
+    },
+    "roots_2_default": {
+      "expected": "début racine cubique a fin racine cubique"
+    },
+    "roots_2_brief": {
+      "expected": "début racine cubique a fin racine cubique"
+    },
+    "roots_2_sbrief": {
+      "expected": "racine cubique a fin racine cubique"
+    },
+    "roots_3_default": {
+      "expected": "indice du radical 4 début racine a fin racine"
+    },
+    "roots_3_brief": {
+      "expected": "indice du radical 4 début racine a fin racine"
+    },
+    "roots_3_sbrief": {
+      "expected": "indice 4 racine a fin racine"
+    },
+    "roots_4_default": {
+      "expected": "indice du radical 5 début racine a fin racine"
+    },
+    "roots_4_brief": {
+      "expected": "indice du radical 5 début racine a fin racine"
+    },
+    "roots_4_sbrief": {
+      "expected": "indice 5 racine a fin racine"
+    },
+    "roots_5_default": {
+      "expected": "indice du radical 6 début racine a fin racine"
+    },
+    "roots_5_brief": {
+      "expected": "indice du radical 6 début racine a fin racine"
+    },
+    "roots_5_sbrief": {
+      "expected": "indice 6 racine a fin racine"
+    },
+    "roots_6_default": {
+      "expected": "indice du radical 7 début racine a fin racine"
+    },
+    "roots_6_brief": {
+      "expected": "indice du radical 7 début racine a fin racine"
+    },
+    "roots_6_sbrief": {
+      "expected": "indice 7 racine a fin racine"
+    },
+    "roots_7_default": {
+      "expected": "indice du radical 8 début racine a fin racine"
+    },
+    "roots_7_brief": {
+      "expected": "indice du radical 8 début racine a fin racine"
+    },
+    "roots_7_sbrief": {
+      "expected": "indice 8 racine a fin racine"
+    },
+    "roots_8_default": {
+      "expected": "indice du radical 9 début racine a fin racine"
+    },
+    "roots_8_brief": {
+      "expected": "indice du radical 9 début racine a fin racine"
+    },
+    "roots_8_sbrief": {
+      "expected": "indice 9 racine a fin racine"
+    },
+    "roots_9_default": {
+      "expected": "indice du radical 10 début racine a fin racine"
+    },
+    "roots_9_brief": {
+      "expected": "indice du radical 10 début racine a fin racine"
+    },
+    "roots_9_sbrief": {
+      "expected": "indice 10 racine a fin racine"
+    },
+    "roots_10_default": {
+      "expected": "indice du radical 11 début racine a fin racine"
+    },
+    "roots_10_brief": {
+      "expected": "indice du radical 11 début racine a fin racine"
+    },
+    "roots_10_sbrief": {
+      "expected": "indice 11 racine a fin racine"
+    },
+    "nested-roots_0_default": {
+      "expected": "indice du radical imbriquée 1 début racine imbriquée indice du radical 1 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_0_brief": {
+      "expected": "indice du radical imbriquée 1 début racine imbriquée indice du radical 1 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "indice imbriquée 1 racine imbriquée indice 1 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_1_default": {
+      "expected": "début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "nested-roots_1_brief": {
+      "expected": "début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "racine carrée imbriquée racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "nested-roots_2_default": {
+      "expected": "début racine cubique imbriquée début racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "nested-roots_2_brief": {
+      "expected": "début racine cubique imbriquée début racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "racine cubique imbriquée racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "nested-roots_3_default": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée indice du radical 4 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_3_brief": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée indice du radical 4 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "indice imbriquée 4 racine imbriquée indice 4 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_4_default": {
+      "expected": "indice du radical imbriquée 5 début racine imbriquée indice du radical 5 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_4_brief": {
+      "expected": "indice du radical imbriquée 5 début racine imbriquée indice du radical 5 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "indice imbriquée 5 racine imbriquée indice 5 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_5_default": {
+      "expected": "indice du radical imbriquée 6 début racine imbriquée indice du radical 6 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_5_brief": {
+      "expected": "indice du radical imbriquée 6 début racine imbriquée indice du radical 6 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "indice imbriquée 6 racine imbriquée indice 6 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_6_default": {
+      "expected": "indice du radical imbriquée 7 début racine imbriquée indice du radical 7 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_6_brief": {
+      "expected": "indice du radical imbriquée 7 début racine imbriquée indice du radical 7 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "indice imbriquée 7 racine imbriquée indice 7 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_7_default": {
+      "expected": "indice du radical imbriquée 8 début racine imbriquée indice du radical 8 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_7_brief": {
+      "expected": "indice du radical imbriquée 8 début racine imbriquée indice du radical 8 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "indice imbriquée 8 racine imbriquée indice 8 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_8_default": {
+      "expected": "indice du radical imbriquée 9 début racine imbriquée indice du radical 9 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_8_brief": {
+      "expected": "indice du radical imbriquée 9 début racine imbriquée indice du radical 9 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "indice imbriquée 9 racine imbriquée indice 9 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_9_default": {
+      "expected": "indice du radical imbriquée 10 début racine imbriquée indice du radical 10 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_9_brief": {
+      "expected": "indice du radical imbriquée 10 début racine imbriquée indice du radical 10 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "indice imbriquée 10 racine imbriquée indice 10 racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_10_default": {
+      "expected": "indice du radical imbriquée 11 début racine imbriquée indice du radical 11 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_10_brief": {
+      "expected": "indice du radical imbriquée 11 début racine imbriquée indice du radical 11 début racine a fin racine fin racine imbriquée"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "indice imbriquée 11 racine imbriquée indice 11 racine a fin racine fin racine imbriquée"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "indice du radical imbriquée 1 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "indice du radical imbriquée 1 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "indice imbriquée 1 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "début racine carrée imbriquée début racine cubique a fin racine cubique fin racine carrée imbriquée"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "début racine carrée imbriquée début racine cubique a fin racine cubique fin racine carrée imbriquée"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "racine carrée imbriquée racine cubique a fin racine cubique fin racine carrée imbriquée"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "début racine cubique imbriquée début racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "début racine cubique imbriquée début racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "racine cubique imbriquée racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "indice imbriquée 4 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "indice du radical imbriquée 5 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "indice du radical imbriquée 5 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "indice imbriquée 5 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "indice du radical imbriquée 6 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "indice du radical imbriquée 6 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "indice imbriquée 6 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "indice du radical imbriquée 7 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "indice du radical imbriquée 7 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "indice imbriquée 7 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "indice du radical imbriquée 8 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "indice du radical imbriquée 8 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "indice imbriquée 8 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "indice du radical imbriquée 9 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "indice du radical imbriquée 9 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "indice imbriquée 9 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "indice du radical imbriquée 10 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "indice du radical imbriquée 10 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "indice imbriquée 10 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "indice du radical imbriquée 11 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "indice du radical imbriquée 11 début racine imbriquée début racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "indice imbriquée 11 racine imbriquée racine cubique a fin racine cubique fin racine imbriquée"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée indice du radical imbriquée 4 début racine imbriquée indice du radical 5 début racine a fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée indice du radical imbriquée 4 début racine imbriquée indice du radical 5 début racine a fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "racine carrée imbriquée racine cubique imbriquée indice imbriquée 4 racine imbriquée indice 5 racine a fin racine fin racine imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée début racine carrée imbriquée début racine cubique a fin racine cubique fin racine carrée imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée début racine carrée imbriquée début racine cubique a fin racine cubique fin racine carrée imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "racine carrée imbriquée racine cubique imbriquée racine carrée imbriquée racine cubique a fin racine cubique fin racine carrée imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée début racine carrée imbriquée début racine cubique imbriquée début racine carrée a fin racine carrée fin racine cubique imbriquée fin racine carrée imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée début racine carrée imbriquée début racine cubique imbriquée début racine carrée a fin racine carrée fin racine cubique imbriquée fin racine carrée imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "racine carrée imbriquée racine cubique imbriquée racine carrée imbriquée racine cubique imbriquée racine carrée a fin racine carrée fin racine cubique imbriquée fin racine carrée imbriquée fin racine cubique imbriquée fin racine carrée imbriquée"
+    }
+  }
+}

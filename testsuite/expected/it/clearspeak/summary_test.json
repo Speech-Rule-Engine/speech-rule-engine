@@ -1,0 +1,255 @@
+{
+  "name": "ItalianClearspeakSummary",
+  "locale": "it",
+  "domain": "clearspeak",
+  "factory": "summary",
+  "base": "input/common/summary_test.json",
+  "information": "Italian Clearspeak Summary tests.",
+  "active": "SummaryItalian",
+  "exclude": [
+    "AbstrAddition_brief",
+    "AbstrAddition_sbrief",
+    "AbstrBigop_brief",
+    "AbstrBigop_sbrief",
+    "AbstrBinomial_brief",
+    "AbstrBinomial_sbrief",
+    "AbstrCases_brief",
+    "AbstrCases_sbrief",
+    "AbstrCell_brief",
+    "AbstrCell_sbrief",
+    "AbstrContinuedFraction_brief",
+    "AbstrContinuedFraction_sbrief",
+    "AbstrDeterminant_brief",
+    "AbstrDeterminant_sbrief",
+    "AbstrFraction_brief",
+    "AbstrFraction_sbrief",
+    "AbstrFunction_brief",
+    "AbstrFunction_sbrief",
+    "AbstrIdentifier_brief",
+    "AbstrIdentifier_sbrief",
+    "AbstrInfixop_brief",
+    "AbstrInfixop_sbrief",
+    "AbstrIntegral_brief",
+    "AbstrIntegral_sbrief",
+    "AbstrLim_brief",
+    "AbstrLim_sbrief",
+    "AbstrLine_brief",
+    "AbstrLine_sbrief",
+    "AbstrMatrix_brief",
+    "AbstrMatrix_sbrief",
+    "AbstrMixedNumber_brief",
+    "AbstrMixedNumber_sbrief",
+    "AbstrMultiplication_brief",
+    "AbstrMultiplication_sbrief",
+    "AbstrMultirel_brief",
+    "AbstrMultirel_sbrief",
+    "AbstrNumber_brief",
+    "AbstrNumber_sbrief",
+    "AbstrPunctuated_brief",
+    "AbstrPunctuated_sbrief",
+    "AbstrRelation_brief",
+    "AbstrRelation_sbrief",
+    "AbstrRelationSeq_brief",
+    "AbstrRelationSeq_sbrief",
+    "AbstrRoot_brief",
+    "AbstrRoot_sbrief",
+    "AbstrRootNested_brief",
+    "AbstrRootNested_sbrief",
+    "AbstrRow_brief",
+    "AbstrRow_sbrief",
+    "AbstrRowvector_brief",
+    "AbstrRowvector_sbrief",
+    "AbstrSqrt_brief",
+    "AbstrSqrt_sbrief",
+    "AbstrSqrtNested_brief",
+    "AbstrSqrtNested_sbrief",
+    "AbstrSquarematrix_brief",
+    "AbstrSquarematrix_sbrief",
+    "AbstrSubscript_brief",
+    "AbstrSubscript_sbrief",
+    "AbstrSubsup_brief",
+    "AbstrSubsup_sbrief",
+    "AbstrSuperscript_brief",
+    "AbstrSuperscript_sbrief",
+    "AbstrTable_brief",
+    "AbstrTable_sbrief",
+    "AbstrText_brief",
+    "AbstrText_sbrief",
+    "AbstrVarAddition_brief",
+    "AbstrVarAddition_sbrief",
+    "AbstrVarCases_brief",
+    "AbstrVarCases_sbrief",
+    "AbstrVarDeterminant_brief",
+    "AbstrVarDeterminant_sbrief",
+    "AbstrVarMatrix_brief",
+    "AbstrVarMatrix_sbrief",
+    "AbstrVarMultiplication_brief",
+    "AbstrVarMultiplication_sbrief",
+    "AbstrVarMultirel_brief",
+    "AbstrVarMultirel_sbrief",
+    "AbstrVarPunctuated_brief",
+    "AbstrVarPunctuated_sbrief",
+    "AbstrVarRelation_brief",
+    "AbstrVarRelation_sbrief",
+    "AbstrVarVector_brief",
+    "AbstrVarVector_sbrief",
+    "AbstrVector_brief",
+    "AbstrVector_sbrief",
+    "AbstrVarSubtraction_brief",
+    "AbstrVarSubtraction_sbrief",
+    "AbstrCountImplicit_brief",
+    "AbstrCountImplicit_sbrief"
+  ],
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "somma con 2 addendi"
+    },
+    "AbstrBigop_default": {
+      "expected": "sommatoria"
+    },
+    "AbstrBinomial_default": {
+      "expected": "binomiale"
+    },
+    "AbstrCases_default": {
+      "expected": "comando switch con 2 casi"
+    },
+    "AbstrCell_default": {
+      "expected": "1a colonna in tavola"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "frazione continua"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "2 derminante dimensionale"
+    },
+    "AbstrFraction_default": {
+      "expected": "frazione"
+    },
+    "AbstrFunction_default": {
+      "expected": "espressione funzionale"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "identificatore"
+    },
+    "AbstrInfixop_default": {
+      "expected": "divisione con 2 elementi"
+    },
+    "AbstrIntegral_default": {
+      "expected": "integrale"
+    },
+    "AbstrLim_default": {
+      "expected": "funzione limite"
+    },
+    "AbstrLine_default": {
+      "expected": "1a riga in linee multiple"
+    },
+    "AbstrMatrix_default": {
+      "expected": "3 per 2 matrice"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "numero misto"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "prodotto di 2 fattori"
+    },
+    "AbstrMultirel_default": {
+      "expected": "sequenza di relazione con 3 elementi"
+    },
+    "AbstrNumber_default": {
+      "expected": "numero"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "virgola lista separata di lunghezza 3"
+    },
+    "AbstrRelation_default": {
+      "expected": "uguaglianza"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "uguaglianza sequenza con 3 elementi"
+    },
+    "AbstrRoot_default": {
+      "expected": "radice di indice 3"
+    },
+    "AbstrRootNested_default": {
+      "expected": "radicale doppio di indice 3"
+    },
+    "AbstrRow_default": {
+      "expected": "1a riga in tavola con 2 colonne"
+    },
+    "AbstrRowvector_default": {
+      "expected": "2 vettore riga dimensionale"
+    },
+    "AbstrSqrt_default": {
+      "expected": "radice quadrata"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "radice quadrata doppia"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "2 matrice quadrata dimensionale"
+    },
+    "AbstrSubscript_default": {
+      "expected": "pedice"
+    },
+    "AbstrSubsup_default": {
+      "expected": "potenza con pedice"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "potenza"
+    },
+    "AbstrTable_default": {
+      "expected": "tavola con 2 righe e 2 colonne"
+    },
+    "AbstrText_default": {
+      "expected": "testo"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "somma con numero variabile di addendi"
+    },
+    "AbstrVarCases_default": {
+      "expected": "comando di switch con numero variabile di casi"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "determinante di dimensione n"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "matrice dimensionale n pr m"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "prodotto con numero variabile di fattori"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "sequenza di relazione con numero variabile di elementi"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "virgola lista separata di lunghezza variabile"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "uguaglianza sequenza con numero variabile di elementi"
+    },
+    "AbstrVarVector_default": {
+      "expected": "vettore di dimensione n"
+    },
+    "AbstrVector_default": {
+      "expected": "3 vettore dimensionale"
+    },
+    "AbstrVarSubtraction_default": {
+      "expected": "sottrazione con numero variabile di elementi"
+    },
+    "AbstrCountImplicit_default": {
+      "expected": "prodotto di 3 fattori"
+    },
+    "AbstrVarImplicit_default": {
+      "expected": "prodotto con numero variabile di fattori"
+    },
+    "AbstrVarArrowRelation_default": {
+      "expected": "freccia sequenza con numero variabile di elementi"
+    },
+    "AbstrArrowRelation_default": {
+      "expected": "freccia"
+    },
+    "AbstrVarRowvector_default": {
+      "expected": "vettore riga di dimensione n"
+    }
+  }
+}

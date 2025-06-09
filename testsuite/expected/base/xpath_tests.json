@@ -1,0 +1,63 @@
+{
+  "information": "Xpath utility tests.",
+  "factory": "xpath",
+  "_comment0_": " XPath evaluation test.",
+  "tests": {
+    "XpathEvaluate_0": {
+      "input": "<a><b>c</b><d>e</d></a>",
+      "type": "evalXPath",
+      "query": "//b",
+      "expected": "<b>c</b>"
+    },
+    "XpathEvaluate_1": {
+      "input": "<a><b>c</b><d>e</d></a>",
+      "type": "evalXPath",
+      "query": "//b/text()",
+      "expected": "c"
+    },
+    "XpathEvaluate_2": {
+      "input": "<a><b>c</b><d>e</d></a>",
+      "type": "evalXPath",
+      "query": "//b/following-sibling::*",
+      "expected": "<d>e</d>"
+    },
+    "_comment1_": " XPath boolean constraint test.",
+    "XpathBoolean_0": {
+      "input": "<a><b>c</b><d>e</d></a>",
+      "type": "evaluateBoolean",
+      "query": "//b",
+      "expected": true
+    },
+    "XpathBoolean_1": {
+      "input": "<a><b>c</b><d>e</d></a>",
+      "type": "evaluateBoolean",
+      "query": "//c",
+      "expected": false
+    },
+    "XpathBoolean_2": {
+      "input": "<a><b>c</b><d>e</d></a>",
+      "type": "evaluateBoolean",
+      "query": "//b/following-sibling::*",
+      "expected": true
+    },
+    "_comment2_": " XPath string computation.",
+    "XpathString_0": {
+      "input": "<a l=\"1\"><b m=\"2\">c</b><d>e</d></a>",
+      "type": "evaluateString",
+      "query": "@l",
+      "expected": "1"
+    },
+    "XpathString_1": {
+      "input": "<a l=\"1\"><b m=\"2\">c</b><d>e</d></a>",
+      "type": "evaluateString",
+      "query": "//*/@m",
+      "expected": "2"
+    },
+    "XpathString_2": {
+      "input": "<a l=\"1\"><b m=\"2\">c</b><d>e</d></a>",
+      "type": "evaluateString",
+      "query": "//b/following-sibling::*",
+      "expected": "e"
+    }
+  }
+}

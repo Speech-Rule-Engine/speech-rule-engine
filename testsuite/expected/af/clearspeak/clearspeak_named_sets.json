@@ -1,0 +1,87 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakNamedSets",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Afrikaans Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
+    "_comment2_": " Named Sets (Number Systems)",
+    "NumSys001": {
+      "expected": "die riële getalle"
+    },
+    "NumSys001a": {
+      "expected": "die riële getalle"
+    },
+    "NumSys002": {
+      "expected": "die komplekse getalle"
+    },
+    "NumSys002a": {
+      "expected": "die komplekse getalle"
+    },
+    "NumSys003": {
+      "expected": "die heelgetalle"
+    },
+    "NumSys003a": {
+      "expected": "die heelgetalle"
+    },
+    "NumSys004": {
+      "expected": "die rasionele getalle"
+    },
+    "NumSys004a": {
+      "expected": "die rasionele getalle"
+    },
+    "NumSys005": {
+      "expected": "die natuurlike getalle"
+    },
+    "NumSys005a": {
+      "expected": "die natuurlike getalle"
+    },
+    "NumSys005_1": {
+      "expected": "die natuurlike getalle met nul"
+    },
+    "NumSys005_1a": {
+      "expected": "die natuurlike getalle met nul"
+    },
+    "NumSys006": {
+      "expected": "die positiewe heelgetalle"
+    },
+    "NumSys006a": {
+      "expected": "die positiewe heelgetalle"
+    },
+    "NumSys006_1": {
+      "expected": "die negatiewe heelgetalle"
+    },
+    "NumSys006_1a": {
+      "expected": "die negatiewe heelgetalle"
+    },
+    "NumSys007": {
+      "expected": "r-twee"
+    },
+    "NumSys007a": {
+      "expected": "r-twee"
+    },
+    "NumSys008": {
+      "expected": "z-drie"
+    },
+    "NumSys008a": {
+      "expected": "z-drie"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-oneindigheid"
+    },
+    "NumSys010a": {
+      "expected": "r-oneindigheid"
+    }
+  }
+}

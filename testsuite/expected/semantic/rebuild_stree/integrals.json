@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree integrals tests.",
+  "base": "input/semantic/integrals.json"
+}

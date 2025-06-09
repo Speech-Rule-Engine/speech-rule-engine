@@ -1,0 +1,251 @@
+{
+  "name": "CatalanMathspeakFunction",
+  "locale": "ca",
+  "domain": "mathspeak",
+  "style": "default",
+  "active": "MathspeakSymbolsCatalan",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Catalan Mathspeak Function tests.",
+  "compare": true,
+  "tests": {
+    "deg": {
+      "expected": "graus"
+    },
+    "Deg": {
+      "expected": "graus"
+    },
+    "det": {
+      "expected": "determinant"
+    },
+    "Det": {
+      "expected": "determinant"
+    },
+    "dim": {
+      "expected": "dimensió"
+    },
+    "Dim": {
+      "expected": "dimensió"
+    },
+    "hom": {
+      "expected": "homomorfisme"
+    },
+    "Hom": {
+      "expected": "homomorfisme"
+    },
+    "HOM": {
+      "expected": "homomorfisme"
+    },
+    "ker": {
+      "expected": "nucli"
+    },
+    "Ker": {
+      "expected": "nucli"
+    },
+    "Tr": {
+      "expected": "traça"
+    },
+    "tr": {
+      "expected": "traça"
+    },
+    "log": {
+      "expected": "logaritme"
+    },
+    "ln": {
+      "expected": "logaritme neperià"
+    },
+    "lg": {
+      "expected": "logaritme base 10"
+    },
+    "exp": {
+      "expected": "exponent"
+    },
+    "expt": {
+      "expected": "exponent"
+    },
+    "gcd": {
+      "expected": "MCD"
+    },
+    "GCD": {
+      "expected": "MCD"
+    },
+    "lcm": {
+      "expected": "mcm"
+    },
+    "LCM": {
+      "expected": "mcm"
+    },
+    "arg": {
+      "expected": "argument"
+    },
+    "Arg": {
+      "expected": "argument"
+    },
+    "im": {
+      "expected": "part imaginària"
+    },
+    "Im": {
+      "expected": "part imaginària"
+    },
+    "re": {
+      "expected": "residu"
+    },
+    "Re": {
+      "expected": "residu"
+    },
+    "inf": {
+      "expected": "extrem inferior"
+    },
+    "Inf": {
+      "expected": "extrem inferior"
+    },
+    "lim": {
+      "expected": "límit"
+    },
+    "lim inf": {
+      "expected": ""
+    },
+    "liminf": {
+      "expected": ""
+    },
+    "lim sup": {
+      "expected": ""
+    },
+    "limsup": {
+      "expected": ""
+    },
+    "max": {
+      "expected": "màxim"
+    },
+    "Max": {
+      "expected": "màxim"
+    },
+    "min": {
+      "expected": "mínim"
+    },
+    "Min": {
+      "expected": "mínim"
+    },
+    "sup": {
+      "expected": "superior"
+    },
+    "Sup": {
+      "expected": "superior"
+    },
+    "injlim": {
+      "expected": "límit directe"
+    },
+    "inj lim": {
+      "expected": "límit directe"
+    },
+    "projlim": {
+      "expected": "límit invers"
+    },
+    "proj lim": {
+      "expected": "límit invers"
+    },
+    "mod": {
+      "expected": "mòdul"
+    },
+    "Pr": {
+      "expected": "probabilitat"
+    },
+    "cosh": {
+      "expected": "cosinus hiperbòlic"
+    },
+    "coth": {
+      "expected": "cotangent hiperbòlica"
+    },
+    "csch": {
+      "expected": "cosecant hiperbòlica"
+    },
+    "sech": {
+      "expected": "secant hiperbòlica"
+    },
+    "sinh": {
+      "expected": "sinus hiperbòlic"
+    },
+    "tanh": {
+      "expected": "tangent hiperbòlic"
+    },
+    "arcosh": {
+      "expected": "àrea del cosinus hiperbòlic"
+    },
+    "arccosh": {
+      "expected": "àrea del cosinus hiperbòlic"
+    },
+    "arcoth": {
+      "expected": "àrea de la cotangent hiperbòlica"
+    },
+    "arccoth": {
+      "expected": "àrea de la cotangent hiperbòlica"
+    },
+    "arcsch": {
+      "expected": "àrea de la cosecant hiperbòlica"
+    },
+    "arccsch": {
+      "expected": "àrea de la cosecant hiperbòlica"
+    },
+    "arsech": {
+      "expected": "àrea de la secant hiperbòlica"
+    },
+    "arcsech": {
+      "expected": "àrea de la secant hiperbòlica"
+    },
+    "arsinh": {
+      "expected": "àrea del sinus hiperbòlic"
+    },
+    "arcsinh": {
+      "expected": "àrea del sinus hiperbòlic"
+    },
+    "artanh": {
+      "expected": "àrea de la tangent hiperbòlica"
+    },
+    "arctanh": {
+      "expected": "àrea de la tangent hiperbòlica"
+    },
+    "cos": {
+      "expected": "cosinus"
+    },
+    "cosine": {
+      "expected": "cosinus"
+    },
+    "cot": {
+      "expected": "cotangent"
+    },
+    "csc": {
+      "expected": "cosecant"
+    },
+    "sec": {
+      "expected": "secant"
+    },
+    "sin": {
+      "expected": "sinus"
+    },
+    "sine": {
+      "expected": "sinus"
+    },
+    "tan": {
+      "expected": "tangent"
+    },
+    "arccos": {
+      "expected": "arc cosinus"
+    },
+    "arccot": {
+      "expected": "arc cotangent"
+    },
+    "arccsc": {
+      "expected": "arc cosecant"
+    },
+    "arcsec": {
+      "expected": "arc secant"
+    },
+    "arcsin": {
+      "expected": "arc sinus"
+    },
+    "arctan": {
+      "expected": "arc tangent"
+    }
+  }
+}

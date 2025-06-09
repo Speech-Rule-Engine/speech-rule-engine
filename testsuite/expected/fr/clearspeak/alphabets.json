@@ -1,0 +1,4677 @@
+{
+  "locale": "fr",
+  "factory": "speech",
+  "name": "FrenchClearspeakAlphabets",
+  "active": "AlphabetsFrench",
+  "information": "French Clearspeak Alphabet speech tests.",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "base": "input/common/alphabets.json",
+  "tests": {
+    "0": {
+      "expected": "0"
+    },
+    "1": {
+      "expected": "1"
+    },
+    "2": {
+      "expected": "2"
+    },
+    "3": {
+      "expected": "3"
+    },
+    "4": {
+      "expected": "4"
+    },
+    "5": {
+      "expected": "5"
+    },
+    "6": {
+      "expected": "6"
+    },
+    "7": {
+      "expected": "7"
+    },
+    "8": {
+      "expected": "8"
+    },
+    "9": {
+      "expected": "9"
+    },
+    "𝐀": {
+      "expected": "A en gras"
+    },
+    "𝐁": {
+      "expected": "B en gras"
+    },
+    "𝐂": {
+      "expected": "C en gras"
+    },
+    "𝐃": {
+      "expected": "D en gras"
+    },
+    "𝐄": {
+      "expected": "E en gras"
+    },
+    "𝐅": {
+      "expected": "F en gras"
+    },
+    "𝐆": {
+      "expected": "G en gras"
+    },
+    "𝐇": {
+      "expected": "H en gras"
+    },
+    "𝐈": {
+      "expected": "I en gras"
+    },
+    "𝐉": {
+      "expected": "J en gras"
+    },
+    "𝐊": {
+      "expected": "K en gras"
+    },
+    "𝐋": {
+      "expected": "L en gras"
+    },
+    "𝐌": {
+      "expected": "M en gras"
+    },
+    "𝐍": {
+      "expected": "N en gras"
+    },
+    "𝐎": {
+      "expected": "O en gras"
+    },
+    "𝐏": {
+      "expected": "P en gras"
+    },
+    "𝐐": {
+      "expected": "Q en gras"
+    },
+    "𝐑": {
+      "expected": "R en gras"
+    },
+    "𝐒": {
+      "expected": "S en gras"
+    },
+    "𝐓": {
+      "expected": "T en gras"
+    },
+    "𝐔": {
+      "expected": "U en gras"
+    },
+    "𝐕": {
+      "expected": "V en gras"
+    },
+    "𝐖": {
+      "expected": "W en gras"
+    },
+    "𝐗": {
+      "expected": "X en gras"
+    },
+    "𝐘": {
+      "expected": "Y en gras"
+    },
+    "𝐙": {
+      "expected": "Z en gras"
+    },
+    "𝐚": {
+      "expected": "a en gras"
+    },
+    "𝐛": {
+      "expected": "b en gras"
+    },
+    "𝐜": {
+      "expected": "c en gras"
+    },
+    "𝐝": {
+      "expected": "d en gras"
+    },
+    "𝐞": {
+      "expected": "e en gras"
+    },
+    "𝐟": {
+      "expected": "f en gras"
+    },
+    "𝐠": {
+      "expected": "g en gras"
+    },
+    "𝐡": {
+      "expected": "h en gras"
+    },
+    "𝐢": {
+      "expected": "i en gras"
+    },
+    "𝐣": {
+      "expected": "j en gras"
+    },
+    "𝐤": {
+      "expected": "k en gras"
+    },
+    "𝐥": {
+      "expected": "l en gras"
+    },
+    "𝐦": {
+      "expected": "m en gras"
+    },
+    "𝐧": {
+      "expected": "n en gras"
+    },
+    "𝐨": {
+      "expected": "o en gras"
+    },
+    "𝐩": {
+      "expected": "p en gras"
+    },
+    "𝐪": {
+      "expected": "q en gras"
+    },
+    "𝐫": {
+      "expected": "r en gras"
+    },
+    "𝐬": {
+      "expected": "s en gras"
+    },
+    "𝐭": {
+      "expected": "t en gras"
+    },
+    "𝐮": {
+      "expected": "u en gras"
+    },
+    "𝐯": {
+      "expected": "v en gras"
+    },
+    "𝐰": {
+      "expected": "w en gras"
+    },
+    "𝐱": {
+      "expected": "x en gras"
+    },
+    "𝐲": {
+      "expected": "y en gras"
+    },
+    "𝐳": {
+      "expected": "z en gras"
+    },
+    "𝚨": {
+      "expected": "Alpha en gras"
+    },
+    "𝚩": {
+      "expected": "Bêta en gras"
+    },
+    "𝚪": {
+      "expected": "Gamma en gras"
+    },
+    "𝚫": {
+      "expected": "Delta en gras"
+    },
+    "𝚬": {
+      "expected": "Epsilon en gras"
+    },
+    "𝚭": {
+      "expected": "Zêta en gras"
+    },
+    "𝚮": {
+      "expected": "Êta en gras"
+    },
+    "𝚯": {
+      "expected": "Thêta en gras"
+    },
+    "𝚰": {
+      "expected": "Iota en gras"
+    },
+    "𝚱": {
+      "expected": "Kappa en gras"
+    },
+    "𝚲": {
+      "expected": "Lambda en gras"
+    },
+    "𝚳": {
+      "expected": "Mû en gras"
+    },
+    "𝚴": {
+      "expected": "Nû en gras"
+    },
+    "𝚵": {
+      "expected": "Xi en gras"
+    },
+    "𝚶": {
+      "expected": "Omicron en gras"
+    },
+    "𝚷": {
+      "expected": "Pi en gras"
+    },
+    "𝚸": {
+      "expected": "Rhô en gras"
+    },
+    "𝚹": {
+      "expected": "Thêta en gras"
+    },
+    "𝚺": {
+      "expected": "Sigma en gras"
+    },
+    "𝚻": {
+      "expected": "Tau en gras"
+    },
+    "𝚼": {
+      "expected": "Upsilon en gras"
+    },
+    "𝚽": {
+      "expected": "Phi en gras"
+    },
+    "𝚾": {
+      "expected": "Chi en gras"
+    },
+    "𝚿": {
+      "expected": "Psi en gras"
+    },
+    "𝛀": {
+      "expected": "Oméga en gras"
+    },
+    "𝛁": {
+      "expected": "nabla en gras"
+    },
+    "𝛂": {
+      "expected": "alpha en gras"
+    },
+    "𝛃": {
+      "expected": "bêta en gras"
+    },
+    "𝛄": {
+      "expected": "gamma en gras"
+    },
+    "𝛅": {
+      "expected": "delta en gras"
+    },
+    "𝛆": {
+      "expected": "epsilon en gras"
+    },
+    "𝛇": {
+      "expected": "zêta en gras"
+    },
+    "𝛈": {
+      "expected": "êta en gras"
+    },
+    "𝛉": {
+      "expected": "thêta en gras"
+    },
+    "𝛊": {
+      "expected": "iota en gras"
+    },
+    "𝛋": {
+      "expected": "kappa en gras"
+    },
+    "𝛌": {
+      "expected": "lambda en gras"
+    },
+    "𝛍": {
+      "expected": "mû en gras"
+    },
+    "𝛎": {
+      "expected": "nû en gras"
+    },
+    "𝛏": {
+      "expected": "xi en gras"
+    },
+    "𝛐": {
+      "expected": "omicron en gras"
+    },
+    "𝛑": {
+      "expected": "pi en gras"
+    },
+    "𝛒": {
+      "expected": "rhô en gras"
+    },
+    "𝛓": {
+      "expected": "sigma final en gras"
+    },
+    "𝛔": {
+      "expected": "sigma en gras"
+    },
+    "𝛕": {
+      "expected": "tau en gras"
+    },
+    "𝛖": {
+      "expected": "upsilon en gras"
+    },
+    "𝛗": {
+      "expected": "phi en gras"
+    },
+    "𝛘": {
+      "expected": "chi en gras"
+    },
+    "𝛙": {
+      "expected": "psi en gras"
+    },
+    "𝛚": {
+      "expected": "oméga en gras"
+    },
+    "𝛛": {
+      "expected": "dérivée partielle en gras"
+    },
+    "𝛜": {
+      "expected": "epsilon en gras"
+    },
+    "𝛝": {
+      "expected": "thêta en gras"
+    },
+    "𝛞": {
+      "expected": "kappa en gras"
+    },
+    "𝛟": {
+      "expected": "phi en gras"
+    },
+    "𝛠": {
+      "expected": "rhô en gras"
+    },
+    "𝛡": {
+      "expected": "pi en gras"
+    },
+    "𝟎": {
+      "expected": "0 en gras"
+    },
+    "𝟏": {
+      "expected": "1 en gras"
+    },
+    "𝟐": {
+      "expected": "2 en gras"
+    },
+    "𝟑": {
+      "expected": "3 en gras"
+    },
+    "𝟒": {
+      "expected": "4 en gras"
+    },
+    "𝟓": {
+      "expected": "5 en gras"
+    },
+    "𝟔": {
+      "expected": "6 en gras"
+    },
+    "𝟕": {
+      "expected": "7 en gras"
+    },
+    "𝟖": {
+      "expected": "8 en gras"
+    },
+    "𝟗": {
+      "expected": "9 en gras"
+    },
+    "𝕬": {
+      "expected": "A en gothique gras"
+    },
+    "𝕭": {
+      "expected": "B en gothique gras"
+    },
+    "𝕮": {
+      "expected": "C en gothique gras"
+    },
+    "𝕯": {
+      "expected": "D en gothique gras"
+    },
+    "𝕰": {
+      "expected": "E en gothique gras"
+    },
+    "𝕱": {
+      "expected": "F en gothique gras"
+    },
+    "𝕲": {
+      "expected": "G en gothique gras"
+    },
+    "𝕳": {
+      "expected": "H en gothique gras"
+    },
+    "𝕴": {
+      "expected": "I en gothique gras"
+    },
+    "𝕵": {
+      "expected": "J en gothique gras"
+    },
+    "𝕶": {
+      "expected": "K en gothique gras"
+    },
+    "𝕷": {
+      "expected": "L en gothique gras"
+    },
+    "𝕸": {
+      "expected": "M en gothique gras"
+    },
+    "𝕹": {
+      "expected": "N en gothique gras"
+    },
+    "𝕺": {
+      "expected": "O en gothique gras"
+    },
+    "𝕻": {
+      "expected": "P en gothique gras"
+    },
+    "𝕼": {
+      "expected": "Q en gothique gras"
+    },
+    "𝕽": {
+      "expected": "R en gothique gras"
+    },
+    "𝕾": {
+      "expected": "S en gothique gras"
+    },
+    "𝕿": {
+      "expected": "T en gothique gras"
+    },
+    "𝖀": {
+      "expected": "U en gothique gras"
+    },
+    "𝖁": {
+      "expected": "V en gothique gras"
+    },
+    "𝖂": {
+      "expected": "W en gothique gras"
+    },
+    "𝖃": {
+      "expected": "X en gothique gras"
+    },
+    "𝖄": {
+      "expected": "Y en gothique gras"
+    },
+    "𝖅": {
+      "expected": "Z en gothique gras"
+    },
+    "𝖆": {
+      "expected": "a en gothique gras"
+    },
+    "𝖇": {
+      "expected": "b en gothique gras"
+    },
+    "𝖈": {
+      "expected": "c en gothique gras"
+    },
+    "𝖉": {
+      "expected": "d en gothique gras"
+    },
+    "𝖊": {
+      "expected": "e en gothique gras"
+    },
+    "𝖋": {
+      "expected": "f en gothique gras"
+    },
+    "𝖌": {
+      "expected": "g en gothique gras"
+    },
+    "𝖍": {
+      "expected": "h en gothique gras"
+    },
+    "𝖎": {
+      "expected": "i en gothique gras"
+    },
+    "𝖏": {
+      "expected": "j en gothique gras"
+    },
+    "𝖐": {
+      "expected": "k en gothique gras"
+    },
+    "𝖑": {
+      "expected": "l en gothique gras"
+    },
+    "𝖒": {
+      "expected": "m en gothique gras"
+    },
+    "𝖓": {
+      "expected": "n en gothique gras"
+    },
+    "𝖔": {
+      "expected": "o en gothique gras"
+    },
+    "𝖕": {
+      "expected": "p en gothique gras"
+    },
+    "𝖖": {
+      "expected": "q en gothique gras"
+    },
+    "𝖗": {
+      "expected": "r en gothique gras"
+    },
+    "𝖘": {
+      "expected": "s en gothique gras"
+    },
+    "𝖙": {
+      "expected": "t en gothique gras"
+    },
+    "𝖚": {
+      "expected": "u en gothique gras"
+    },
+    "𝖛": {
+      "expected": "v en gothique gras"
+    },
+    "𝖜": {
+      "expected": "w en gothique gras"
+    },
+    "𝖝": {
+      "expected": "x en gothique gras"
+    },
+    "𝖞": {
+      "expected": "y en gothique gras"
+    },
+    "𝖟": {
+      "expected": "z en gothique gras"
+    },
+    "𝑨": {
+      "expected": "A en italique gras"
+    },
+    "𝑩": {
+      "expected": "B en italique gras"
+    },
+    "𝑪": {
+      "expected": "C en italique gras"
+    },
+    "𝑫": {
+      "expected": "D en italique gras"
+    },
+    "𝑬": {
+      "expected": "E en italique gras"
+    },
+    "𝑭": {
+      "expected": "F en italique gras"
+    },
+    "𝑮": {
+      "expected": "G en italique gras"
+    },
+    "𝑯": {
+      "expected": "H en italique gras"
+    },
+    "𝑰": {
+      "expected": "I en italique gras"
+    },
+    "𝑱": {
+      "expected": "J en italique gras"
+    },
+    "𝑲": {
+      "expected": "K en italique gras"
+    },
+    "𝑳": {
+      "expected": "L en italique gras"
+    },
+    "𝑴": {
+      "expected": "M en italique gras"
+    },
+    "𝑵": {
+      "expected": "N en italique gras"
+    },
+    "𝑶": {
+      "expected": "O en italique gras"
+    },
+    "𝑷": {
+      "expected": "P en italique gras"
+    },
+    "𝑸": {
+      "expected": "Q en italique gras"
+    },
+    "𝑹": {
+      "expected": "R en italique gras"
+    },
+    "𝑺": {
+      "expected": "S en italique gras"
+    },
+    "𝑻": {
+      "expected": "T en italique gras"
+    },
+    "𝑼": {
+      "expected": "U en italique gras"
+    },
+    "𝑽": {
+      "expected": "V en italique gras"
+    },
+    "𝑾": {
+      "expected": "W en italique gras"
+    },
+    "𝑿": {
+      "expected": "X en italique gras"
+    },
+    "𝒀": {
+      "expected": "Y en italique gras"
+    },
+    "𝒁": {
+      "expected": "Z en italique gras"
+    },
+    "𝒂": {
+      "expected": "a en italique gras"
+    },
+    "𝒃": {
+      "expected": "b en italique gras"
+    },
+    "𝒄": {
+      "expected": "c en italique gras"
+    },
+    "𝒅": {
+      "expected": "d en italique gras"
+    },
+    "𝒆": {
+      "expected": "e en italique gras"
+    },
+    "𝒇": {
+      "expected": "f en italique gras"
+    },
+    "𝒈": {
+      "expected": "g en italique gras"
+    },
+    "𝒉": {
+      "expected": "h en italique gras"
+    },
+    "𝒊": {
+      "expected": "i en italique gras"
+    },
+    "𝒋": {
+      "expected": "j en italique gras"
+    },
+    "𝒌": {
+      "expected": "k en italique gras"
+    },
+    "𝒍": {
+      "expected": "l en italique gras"
+    },
+    "𝒎": {
+      "expected": "m en italique gras"
+    },
+    "𝒏": {
+      "expected": "n en italique gras"
+    },
+    "𝒐": {
+      "expected": "o en italique gras"
+    },
+    "𝒑": {
+      "expected": "p en italique gras"
+    },
+    "𝒒": {
+      "expected": "q en italique gras"
+    },
+    "𝒓": {
+      "expected": "r en italique gras"
+    },
+    "𝒔": {
+      "expected": "s en italique gras"
+    },
+    "𝒕": {
+      "expected": "t en italique gras"
+    },
+    "𝒖": {
+      "expected": "u en italique gras"
+    },
+    "𝒗": {
+      "expected": "v en italique gras"
+    },
+    "𝒘": {
+      "expected": "w en italique gras"
+    },
+    "𝒙": {
+      "expected": "x en italique gras"
+    },
+    "𝒚": {
+      "expected": "y en italique gras"
+    },
+    "𝒛": {
+      "expected": "z en italique gras"
+    },
+    "𝜜": {
+      "expected": "Alpha en italique gras"
+    },
+    "𝜝": {
+      "expected": "Bêta en italique gras"
+    },
+    "𝜞": {
+      "expected": "Gamma en italique gras"
+    },
+    "𝜟": {
+      "expected": "Delta en italique gras"
+    },
+    "𝜠": {
+      "expected": "Epsilon en italique gras"
+    },
+    "𝜡": {
+      "expected": "Zêta en italique gras"
+    },
+    "𝜢": {
+      "expected": "Êta en italique gras"
+    },
+    "𝜣": {
+      "expected": "Thêta en italique gras"
+    },
+    "𝜤": {
+      "expected": "Iota en italique gras"
+    },
+    "𝜥": {
+      "expected": "Kappa en italique gras"
+    },
+    "𝜦": {
+      "expected": "Lambda en italique gras"
+    },
+    "𝜧": {
+      "expected": "Mû en italique gras"
+    },
+    "𝜨": {
+      "expected": "Nû en italique gras"
+    },
+    "𝜩": {
+      "expected": "Xi en italique gras"
+    },
+    "𝜪": {
+      "expected": "Omicron en italique gras"
+    },
+    "𝜫": {
+      "expected": "Pi en italique gras"
+    },
+    "𝜬": {
+      "expected": "Rhô en italique gras"
+    },
+    "𝜭": {
+      "expected": "Thêta en italique gras"
+    },
+    "𝜮": {
+      "expected": "Sigma en italique gras"
+    },
+    "𝜯": {
+      "expected": "Tau en italique gras"
+    },
+    "𝜰": {
+      "expected": "Upsilon en italique gras"
+    },
+    "𝜱": {
+      "expected": "Phi en italique gras"
+    },
+    "𝜲": {
+      "expected": "Chi en italique gras"
+    },
+    "𝜳": {
+      "expected": "Psi en italique gras"
+    },
+    "𝜴": {
+      "expected": "Oméga en italique gras"
+    },
+    "𝜵": {
+      "expected": "nabla en italique gras"
+    },
+    "𝜶": {
+      "expected": "alpha en italique gras"
+    },
+    "𝜷": {
+      "expected": "bêta en italique gras"
+    },
+    "𝜸": {
+      "expected": "gamma en italique gras"
+    },
+    "𝜹": {
+      "expected": "delta en italique gras"
+    },
+    "𝜺": {
+      "expected": "epsilon en italique gras"
+    },
+    "𝜻": {
+      "expected": "zêta en italique gras"
+    },
+    "𝜼": {
+      "expected": "êta en italique gras"
+    },
+    "𝜽": {
+      "expected": "thêta en italique gras"
+    },
+    "𝜾": {
+      "expected": "iota en italique gras"
+    },
+    "𝜿": {
+      "expected": "kappa en italique gras"
+    },
+    "𝝀": {
+      "expected": "lambda en italique gras"
+    },
+    "𝝁": {
+      "expected": "mû en italique gras"
+    },
+    "𝝂": {
+      "expected": "nû en italique gras"
+    },
+    "𝝃": {
+      "expected": "xi en italique gras"
+    },
+    "𝝄": {
+      "expected": "omicron en italique gras"
+    },
+    "𝝅": {
+      "expected": "pi en italique gras"
+    },
+    "𝝆": {
+      "expected": "rhô en italique gras"
+    },
+    "𝝇": {
+      "expected": "sigma final en italique gras"
+    },
+    "𝝈": {
+      "expected": "sigma en italique gras"
+    },
+    "𝝉": {
+      "expected": "tau en italique gras"
+    },
+    "𝝊": {
+      "expected": "upsilon en italique gras"
+    },
+    "𝝋": {
+      "expected": "phi en italique gras"
+    },
+    "𝝌": {
+      "expected": "chi en italique gras"
+    },
+    "𝝍": {
+      "expected": "psi en italique gras"
+    },
+    "𝝎": {
+      "expected": "oméga en italique gras"
+    },
+    "𝝏": {
+      "expected": "dérivée partielle en italique gras"
+    },
+    "𝝐": {
+      "expected": "epsilon en italique gras"
+    },
+    "𝝑": {
+      "expected": "thêta en italique gras"
+    },
+    "𝝒": {
+      "expected": "kappa en italique gras"
+    },
+    "𝝓": {
+      "expected": "phi en italique gras"
+    },
+    "𝝔": {
+      "expected": "rhô en italique gras"
+    },
+    "𝝕": {
+      "expected": "pi en italique gras"
+    },
+    "𝓐": {
+      "expected": "A de ronde en gras"
+    },
+    "𝓑": {
+      "expected": "B de ronde en gras"
+    },
+    "𝓒": {
+      "expected": "C de ronde en gras"
+    },
+    "𝓓": {
+      "expected": "D de ronde en gras"
+    },
+    "𝓔": {
+      "expected": "E de ronde en gras"
+    },
+    "𝓕": {
+      "expected": "F de ronde en gras"
+    },
+    "𝓖": {
+      "expected": "G de ronde en gras"
+    },
+    "𝓗": {
+      "expected": "H de ronde en gras"
+    },
+    "𝓘": {
+      "expected": "I de ronde en gras"
+    },
+    "𝓙": {
+      "expected": "J de ronde en gras"
+    },
+    "𝓚": {
+      "expected": "K de ronde en gras"
+    },
+    "𝓛": {
+      "expected": "L de ronde en gras"
+    },
+    "𝓜": {
+      "expected": "M de ronde en gras"
+    },
+    "𝓝": {
+      "expected": "N de ronde en gras"
+    },
+    "𝓞": {
+      "expected": "O de ronde en gras"
+    },
+    "𝓟": {
+      "expected": "P de ronde en gras"
+    },
+    "𝓠": {
+      "expected": "Q de ronde en gras"
+    },
+    "𝓡": {
+      "expected": "R de ronde en gras"
+    },
+    "𝓢": {
+      "expected": "S de ronde en gras"
+    },
+    "𝓣": {
+      "expected": "T de ronde en gras"
+    },
+    "𝓤": {
+      "expected": "U de ronde en gras"
+    },
+    "𝓥": {
+      "expected": "V de ronde en gras"
+    },
+    "𝓦": {
+      "expected": "W de ronde en gras"
+    },
+    "𝓧": {
+      "expected": "X de ronde en gras"
+    },
+    "𝓨": {
+      "expected": "Y de ronde en gras"
+    },
+    "𝓩": {
+      "expected": "Z de ronde en gras"
+    },
+    "𝓪": {
+      "expected": "a de ronde en gras"
+    },
+    "𝓫": {
+      "expected": "b de ronde en gras"
+    },
+    "𝓬": {
+      "expected": "c de ronde en gras"
+    },
+    "𝓭": {
+      "expected": "d de ronde en gras"
+    },
+    "𝓮": {
+      "expected": "e de ronde en gras"
+    },
+    "𝓯": {
+      "expected": "f de ronde en gras"
+    },
+    "𝓰": {
+      "expected": "g de ronde en gras"
+    },
+    "𝓱": {
+      "expected": "h de ronde en gras"
+    },
+    "𝓲": {
+      "expected": "i de ronde en gras"
+    },
+    "𝓳": {
+      "expected": "j de ronde en gras"
+    },
+    "𝓴": {
+      "expected": "k de ronde en gras"
+    },
+    "𝓵": {
+      "expected": "l de ronde en gras"
+    },
+    "𝓶": {
+      "expected": "m de ronde en gras"
+    },
+    "𝓷": {
+      "expected": "n de ronde en gras"
+    },
+    "𝓸": {
+      "expected": "o de ronde en gras"
+    },
+    "𝓹": {
+      "expected": "p de ronde en gras"
+    },
+    "𝓺": {
+      "expected": "q de ronde en gras"
+    },
+    "𝓻": {
+      "expected": "r de ronde en gras"
+    },
+    "𝓼": {
+      "expected": "s de ronde en gras"
+    },
+    "𝓽": {
+      "expected": "t de ronde en gras"
+    },
+    "𝓾": {
+      "expected": "u de ronde en gras"
+    },
+    "𝓿": {
+      "expected": "v de ronde en gras"
+    },
+    "𝔀": {
+      "expected": "w de ronde en gras"
+    },
+    "𝔁": {
+      "expected": "x de ronde en gras"
+    },
+    "𝔂": {
+      "expected": "y de ronde en gras"
+    },
+    "𝔃": {
+      "expected": "z de ronde en gras"
+    },
+    "𝔸": {
+      "expected": "A ajouré"
+    },
+    "𝔹": {
+      "expected": "B ajouré"
+    },
+    "ℂ": {
+      "expected": "les nombres complexes"
+    },
+    "𝔻": {
+      "expected": "D ajouré"
+    },
+    "𝔼": {
+      "expected": "E ajouré"
+    },
+    "𝔽": {
+      "expected": "F ajouré"
+    },
+    "𝔾": {
+      "expected": "G ajouré"
+    },
+    "ℍ": {
+      "expected": "H majuscule ajouré"
+    },
+    "𝕀": {
+      "expected": "I ajouré"
+    },
+    "𝕁": {
+      "expected": "J ajouré"
+    },
+    "𝕂": {
+      "expected": "K ajouré"
+    },
+    "𝕃": {
+      "expected": "L ajouré"
+    },
+    "𝕄": {
+      "expected": "M ajouré"
+    },
+    "ℕ": {
+      "expected": "les nombres entier naturel"
+    },
+    "𝕆": {
+      "expected": "O ajouré"
+    },
+    "ℙ": {
+      "expected": "P majuscule ajouré"
+    },
+    "ℚ": {
+      "expected": "les nombres rationnels"
+    },
+    "ℝ": {
+      "expected": "les nombres réels"
+    },
+    "𝕊": {
+      "expected": "S ajouré"
+    },
+    "𝕋": {
+      "expected": "T ajouré"
+    },
+    "𝕌": {
+      "expected": "U ajouré"
+    },
+    "𝕍": {
+      "expected": "V ajouré"
+    },
+    "𝕎": {
+      "expected": "W ajouré"
+    },
+    "𝕏": {
+      "expected": "X ajouré"
+    },
+    "𝕐": {
+      "expected": "Y ajouré"
+    },
+    "ℤ": {
+      "expected": "les nombres entiers"
+    },
+    "𝕒": {
+      "expected": "a ajouré"
+    },
+    "𝕓": {
+      "expected": "b ajouré"
+    },
+    "𝕔": {
+      "expected": "c ajouré"
+    },
+    "𝕕": {
+      "expected": "d ajouré"
+    },
+    "𝕖": {
+      "expected": "e ajouré"
+    },
+    "𝕗": {
+      "expected": "f ajouré"
+    },
+    "𝕘": {
+      "expected": "g ajouré"
+    },
+    "𝕙": {
+      "expected": "h ajouré"
+    },
+    "𝕚": {
+      "expected": "i ajouré"
+    },
+    "𝕛": {
+      "expected": "j ajouré"
+    },
+    "𝕜": {
+      "expected": "k ajouré"
+    },
+    "𝕝": {
+      "expected": "l ajouré"
+    },
+    "𝕞": {
+      "expected": "m ajouré"
+    },
+    "𝕟": {
+      "expected": "n ajouré"
+    },
+    "𝕠": {
+      "expected": "o ajouré"
+    },
+    "𝕡": {
+      "expected": "p ajouré"
+    },
+    "𝕢": {
+      "expected": "q ajouré"
+    },
+    "𝕣": {
+      "expected": "r ajouré"
+    },
+    "𝕤": {
+      "expected": "s ajouré"
+    },
+    "𝕥": {
+      "expected": "t ajouré"
+    },
+    "𝕦": {
+      "expected": "u ajouré"
+    },
+    "𝕧": {
+      "expected": "v ajouré"
+    },
+    "𝕨": {
+      "expected": "w ajouré"
+    },
+    "𝕩": {
+      "expected": "x ajouré"
+    },
+    "𝕪": {
+      "expected": "y ajouré"
+    },
+    "𝕫": {
+      "expected": "z ajouré"
+    },
+    "𝟘": {
+      "expected": "0 ajouré"
+    },
+    "𝟙": {
+      "expected": "1 ajouré"
+    },
+    "𝟚": {
+      "expected": "2 ajouré"
+    },
+    "𝟛": {
+      "expected": "3 ajouré"
+    },
+    "𝟜": {
+      "expected": "4 ajouré"
+    },
+    "𝟝": {
+      "expected": "5 ajouré"
+    },
+    "𝟞": {
+      "expected": "6 ajouré"
+    },
+    "𝟟": {
+      "expected": "7 ajouré"
+    },
+    "𝟠": {
+      "expected": "8 ajouré"
+    },
+    "𝟡": {
+      "expected": "9 ajouré"
+    },
+    "Ａ": {
+      "expected": "A"
+    },
+    "Ｂ": {
+      "expected": "B"
+    },
+    "Ｃ": {
+      "expected": "C"
+    },
+    "Ｄ": {
+      "expected": "D"
+    },
+    "Ｅ": {
+      "expected": "E"
+    },
+    "Ｆ": {
+      "expected": "F"
+    },
+    "Ｇ": {
+      "expected": "G"
+    },
+    "Ｈ": {
+      "expected": "H"
+    },
+    "Ｉ": {
+      "expected": "I"
+    },
+    "Ｊ": {
+      "expected": "J"
+    },
+    "Ｋ": {
+      "expected": "K"
+    },
+    "Ｌ": {
+      "expected": "L"
+    },
+    "Ｍ": {
+      "expected": "M"
+    },
+    "Ｎ": {
+      "expected": "N"
+    },
+    "Ｏ": {
+      "expected": "O"
+    },
+    "Ｐ": {
+      "expected": "P"
+    },
+    "Ｑ": {
+      "expected": "Q"
+    },
+    "Ｒ": {
+      "expected": "R"
+    },
+    "Ｓ": {
+      "expected": "S"
+    },
+    "Ｔ": {
+      "expected": "T"
+    },
+    "Ｕ": {
+      "expected": "U"
+    },
+    "Ｖ": {
+      "expected": "V"
+    },
+    "Ｗ": {
+      "expected": "W"
+    },
+    "Ｘ": {
+      "expected": "X"
+    },
+    "Ｙ": {
+      "expected": "Y"
+    },
+    "Ｚ": {
+      "expected": "Z"
+    },
+    "ａ": {
+      "expected": "a"
+    },
+    "ｂ": {
+      "expected": "b"
+    },
+    "ｃ": {
+      "expected": "c"
+    },
+    "ｄ": {
+      "expected": "d"
+    },
+    "ｅ": {
+      "expected": "e"
+    },
+    "ｆ": {
+      "expected": "f"
+    },
+    "ｇ": {
+      "expected": "g"
+    },
+    "ｈ": {
+      "expected": "h"
+    },
+    "ｉ": {
+      "expected": "i"
+    },
+    "ｊ": {
+      "expected": "j"
+    },
+    "ｋ": {
+      "expected": "k"
+    },
+    "ｌ": {
+      "expected": "l"
+    },
+    "ｍ": {
+      "expected": "m"
+    },
+    "ｎ": {
+      "expected": "n"
+    },
+    "ｏ": {
+      "expected": "o"
+    },
+    "ｐ": {
+      "expected": "p"
+    },
+    "ｑ": {
+      "expected": "q"
+    },
+    "ｒ": {
+      "expected": "r"
+    },
+    "ｓ": {
+      "expected": "s"
+    },
+    "ｔ": {
+      "expected": "t"
+    },
+    "ｕ": {
+      "expected": "u"
+    },
+    "ｖ": {
+      "expected": "v"
+    },
+    "ｗ": {
+      "expected": "w"
+    },
+    "ｘ": {
+      "expected": "x"
+    },
+    "ｙ": {
+      "expected": "y"
+    },
+    "ｚ": {
+      "expected": "z"
+    },
+    "０": {
+      "expected": "0"
+    },
+    "１": {
+      "expected": "1"
+    },
+    "２": {
+      "expected": "2"
+    },
+    "３": {
+      "expected": "3"
+    },
+    "４": {
+      "expected": "4"
+    },
+    "５": {
+      "expected": "5"
+    },
+    "６": {
+      "expected": "6"
+    },
+    "７": {
+      "expected": "7"
+    },
+    "８": {
+      "expected": "8"
+    },
+    "９": {
+      "expected": "9"
+    },
+    "𝔄": {
+      "expected": "A en gothique"
+    },
+    "𝔅": {
+      "expected": "B en gothique"
+    },
+    "ℭ": {
+      "expected": "C en gothique"
+    },
+    "𝔇": {
+      "expected": "D en gothique"
+    },
+    "𝔈": {
+      "expected": "E en gothique"
+    },
+    "𝔉": {
+      "expected": "F en gothique"
+    },
+    "𝔊": {
+      "expected": "G en gothique"
+    },
+    "ℌ": {
+      "expected": "H en gothique"
+    },
+    "ℑ": {
+      "expected": "I en gothique"
+    },
+    "𝔍": {
+      "expected": "J en gothique"
+    },
+    "𝔎": {
+      "expected": "K en gothique"
+    },
+    "𝔏": {
+      "expected": "L en gothique"
+    },
+    "𝔐": {
+      "expected": "M en gothique"
+    },
+    "𝔑": {
+      "expected": "N en gothique"
+    },
+    "𝔒": {
+      "expected": "O en gothique"
+    },
+    "𝔓": {
+      "expected": "P en gothique"
+    },
+    "𝔔": {
+      "expected": "Q en gothique"
+    },
+    "ℜ": {
+      "expected": "R en gothique"
+    },
+    "𝔖": {
+      "expected": "S en gothique"
+    },
+    "𝔗": {
+      "expected": "T en gothique"
+    },
+    "𝔘": {
+      "expected": "U en gothique"
+    },
+    "𝔙": {
+      "expected": "V en gothique"
+    },
+    "𝔚": {
+      "expected": "W en gothique"
+    },
+    "𝔛": {
+      "expected": "X en gothique"
+    },
+    "𝔜": {
+      "expected": "Y en gothique"
+    },
+    "ℨ": {
+      "expected": "Z en gothique"
+    },
+    "𝔞": {
+      "expected": "a en gothique"
+    },
+    "𝔟": {
+      "expected": "b en gothique"
+    },
+    "𝔠": {
+      "expected": "c en gothique"
+    },
+    "𝔡": {
+      "expected": "d en gothique"
+    },
+    "𝔢": {
+      "expected": "e en gothique"
+    },
+    "𝔣": {
+      "expected": "f en gothique"
+    },
+    "𝔤": {
+      "expected": "g en gothique"
+    },
+    "𝔥": {
+      "expected": "h en gothique"
+    },
+    "𝔦": {
+      "expected": "i en gothique"
+    },
+    "𝔧": {
+      "expected": "j en gothique"
+    },
+    "𝔨": {
+      "expected": "k en gothique"
+    },
+    "𝔩": {
+      "expected": "l en gothique"
+    },
+    "𝔪": {
+      "expected": "m en gothique"
+    },
+    "𝔫": {
+      "expected": "n en gothique"
+    },
+    "𝔬": {
+      "expected": "o en gothique"
+    },
+    "𝔭": {
+      "expected": "p en gothique"
+    },
+    "𝔮": {
+      "expected": "q en gothique"
+    },
+    "𝔯": {
+      "expected": "r en gothique"
+    },
+    "𝔰": {
+      "expected": "s en gothique"
+    },
+    "𝔱": {
+      "expected": "t en gothique"
+    },
+    "𝔲": {
+      "expected": "u en gothique"
+    },
+    "𝔳": {
+      "expected": "v en gothique"
+    },
+    "𝔴": {
+      "expected": "w en gothique"
+    },
+    "𝔵": {
+      "expected": "x en gothique"
+    },
+    "𝔶": {
+      "expected": "y en gothique"
+    },
+    "𝔷": {
+      "expected": "z en gothique"
+    },
+    "𝐴": {
+      "expected": "A"
+    },
+    "𝐵": {
+      "expected": "B"
+    },
+    "𝐶": {
+      "expected": "C"
+    },
+    "𝐷": {
+      "expected": "D"
+    },
+    "𝐸": {
+      "expected": "E"
+    },
+    "𝐹": {
+      "expected": "F"
+    },
+    "𝐺": {
+      "expected": "G"
+    },
+    "𝐻": {
+      "expected": "H"
+    },
+    "𝐼": {
+      "expected": "I"
+    },
+    "𝐽": {
+      "expected": "J"
+    },
+    "𝐾": {
+      "expected": "K"
+    },
+    "𝐿": {
+      "expected": "L"
+    },
+    "𝑀": {
+      "expected": "M"
+    },
+    "𝑁": {
+      "expected": "N"
+    },
+    "𝑂": {
+      "expected": "O"
+    },
+    "𝑃": {
+      "expected": "P"
+    },
+    "𝑄": {
+      "expected": "Q"
+    },
+    "𝑅": {
+      "expected": "R"
+    },
+    "𝑆": {
+      "expected": "S"
+    },
+    "𝑇": {
+      "expected": "T"
+    },
+    "𝑈": {
+      "expected": "U"
+    },
+    "𝑉": {
+      "expected": "V"
+    },
+    "𝑊": {
+      "expected": "W"
+    },
+    "𝑋": {
+      "expected": "X"
+    },
+    "𝑌": {
+      "expected": "Y"
+    },
+    "𝑍": {
+      "expected": "Z"
+    },
+    "𝑎": {
+      "expected": "a"
+    },
+    "𝑏": {
+      "expected": "b"
+    },
+    "𝑐": {
+      "expected": "c"
+    },
+    "𝑑": {
+      "expected": "d"
+    },
+    "𝑒": {
+      "expected": "e"
+    },
+    "𝑓": {
+      "expected": "f"
+    },
+    "𝑔": {
+      "expected": "g"
+    },
+    "ℎ": {
+      "expected": "constante de planck"
+    },
+    "𝑖": {
+      "expected": "i"
+    },
+    "𝑗": {
+      "expected": "j"
+    },
+    "𝑘": {
+      "expected": "k"
+    },
+    "𝑙": {
+      "expected": "l"
+    },
+    "𝑚": {
+      "expected": "m"
+    },
+    "𝑛": {
+      "expected": "n"
+    },
+    "𝑜": {
+      "expected": "o"
+    },
+    "𝑝": {
+      "expected": "p"
+    },
+    "𝑞": {
+      "expected": "q"
+    },
+    "𝑟": {
+      "expected": "r"
+    },
+    "𝑠": {
+      "expected": "s"
+    },
+    "𝑡": {
+      "expected": "t"
+    },
+    "𝑢": {
+      "expected": "u"
+    },
+    "𝑣": {
+      "expected": "v"
+    },
+    "𝑤": {
+      "expected": "w"
+    },
+    "𝑥": {
+      "expected": "x"
+    },
+    "𝑦": {
+      "expected": "y"
+    },
+    "𝑧": {
+      "expected": "z"
+    },
+    "𝛢": {
+      "expected": "Alpha"
+    },
+    "𝛣": {
+      "expected": "Bêta"
+    },
+    "𝛤": {
+      "expected": "Gamma"
+    },
+    "𝛥": {
+      "expected": "Delta"
+    },
+    "𝛦": {
+      "expected": "Epsilon"
+    },
+    "𝛧": {
+      "expected": "Zêta"
+    },
+    "𝛨": {
+      "expected": "Êta"
+    },
+    "𝛩": {
+      "expected": "Thêta"
+    },
+    "𝛪": {
+      "expected": "Iota"
+    },
+    "𝛫": {
+      "expected": "Kappa"
+    },
+    "𝛬": {
+      "expected": "Lambda"
+    },
+    "𝛭": {
+      "expected": "Mû"
+    },
+    "𝛮": {
+      "expected": "Nû"
+    },
+    "𝛯": {
+      "expected": "Xi"
+    },
+    "𝛰": {
+      "expected": "Omicron"
+    },
+    "𝛱": {
+      "expected": "Pi"
+    },
+    "𝛲": {
+      "expected": "Rhô"
+    },
+    "𝛳": {
+      "expected": "Thêta"
+    },
+    "𝛴": {
+      "expected": "Sigma"
+    },
+    "𝛵": {
+      "expected": "Tau"
+    },
+    "𝛶": {
+      "expected": "Upsilon"
+    },
+    "𝛷": {
+      "expected": "Phi"
+    },
+    "𝛸": {
+      "expected": "Chi"
+    },
+    "𝛹": {
+      "expected": "Psi"
+    },
+    "𝛺": {
+      "expected": "Oméga"
+    },
+    "𝛻": {
+      "expected": "nabla en italique"
+    },
+    "𝛼": {
+      "expected": "alpha"
+    },
+    "𝛽": {
+      "expected": "bêta"
+    },
+    "𝛾": {
+      "expected": "gamma"
+    },
+    "𝛿": {
+      "expected": "delta"
+    },
+    "𝜀": {
+      "expected": "epsilon"
+    },
+    "𝜁": {
+      "expected": "zêta"
+    },
+    "𝜂": {
+      "expected": "êta"
+    },
+    "𝜃": {
+      "expected": "thêta"
+    },
+    "𝜄": {
+      "expected": "iota"
+    },
+    "𝜅": {
+      "expected": "kappa"
+    },
+    "𝜆": {
+      "expected": "lambda"
+    },
+    "𝜇": {
+      "expected": "mû"
+    },
+    "𝜈": {
+      "expected": "nû"
+    },
+    "𝜉": {
+      "expected": "xi"
+    },
+    "𝜊": {
+      "expected": "omicron"
+    },
+    "𝜋": {
+      "expected": "pi"
+    },
+    "𝜌": {
+      "expected": "rhô"
+    },
+    "𝜍": {
+      "expected": "sigma final"
+    },
+    "𝜎": {
+      "expected": "sigma"
+    },
+    "𝜏": {
+      "expected": "tau"
+    },
+    "𝜐": {
+      "expected": "upsilon"
+    },
+    "𝜑": {
+      "expected": "phi"
+    },
+    "𝜒": {
+      "expected": "chi"
+    },
+    "𝜓": {
+      "expected": "psi"
+    },
+    "𝜔": {
+      "expected": "oméga"
+    },
+    "𝜕": {
+      "expected": "dérivée partielle en italique"
+    },
+    "𝜖": {
+      "expected": "epsilon"
+    },
+    "𝜗": {
+      "expected": "thêta"
+    },
+    "𝜘": {
+      "expected": "kappa"
+    },
+    "𝜙": {
+      "expected": "phi"
+    },
+    "𝜚": {
+      "expected": "rhô"
+    },
+    "𝜛": {
+      "expected": "pi"
+    },
+    "𝙰": {
+      "expected": "A en chasse fixe"
+    },
+    "𝙱": {
+      "expected": "B en chasse fixe"
+    },
+    "𝙲": {
+      "expected": "C en chasse fixe"
+    },
+    "𝙳": {
+      "expected": "D en chasse fixe"
+    },
+    "𝙴": {
+      "expected": "E en chasse fixe"
+    },
+    "𝙵": {
+      "expected": "F en chasse fixe"
+    },
+    "𝙶": {
+      "expected": "G en chasse fixe"
+    },
+    "𝙷": {
+      "expected": "H en chasse fixe"
+    },
+    "𝙸": {
+      "expected": "I en chasse fixe"
+    },
+    "𝙹": {
+      "expected": "J en chasse fixe"
+    },
+    "𝙺": {
+      "expected": "K en chasse fixe"
+    },
+    "𝙻": {
+      "expected": "L en chasse fixe"
+    },
+    "𝙼": {
+      "expected": "M en chasse fixe"
+    },
+    "𝙽": {
+      "expected": "N en chasse fixe"
+    },
+    "𝙾": {
+      "expected": "O en chasse fixe"
+    },
+    "𝙿": {
+      "expected": "P en chasse fixe"
+    },
+    "𝚀": {
+      "expected": "Q en chasse fixe"
+    },
+    "𝚁": {
+      "expected": "R en chasse fixe"
+    },
+    "𝚂": {
+      "expected": "S en chasse fixe"
+    },
+    "𝚃": {
+      "expected": "T en chasse fixe"
+    },
+    "𝚄": {
+      "expected": "U en chasse fixe"
+    },
+    "𝚅": {
+      "expected": "V en chasse fixe"
+    },
+    "𝚆": {
+      "expected": "W en chasse fixe"
+    },
+    "𝚇": {
+      "expected": "X en chasse fixe"
+    },
+    "𝚈": {
+      "expected": "Y en chasse fixe"
+    },
+    "𝚉": {
+      "expected": "Z en chasse fixe"
+    },
+    "𝚊": {
+      "expected": "a en chasse fixe"
+    },
+    "𝚋": {
+      "expected": "b en chasse fixe"
+    },
+    "𝚌": {
+      "expected": "c en chasse fixe"
+    },
+    "𝚍": {
+      "expected": "d en chasse fixe"
+    },
+    "𝚎": {
+      "expected": "e en chasse fixe"
+    },
+    "𝚏": {
+      "expected": "f en chasse fixe"
+    },
+    "𝚐": {
+      "expected": "g en chasse fixe"
+    },
+    "𝚑": {
+      "expected": "h en chasse fixe"
+    },
+    "𝚒": {
+      "expected": "i en chasse fixe"
+    },
+    "𝚓": {
+      "expected": "j en chasse fixe"
+    },
+    "𝚔": {
+      "expected": "k en chasse fixe"
+    },
+    "𝚕": {
+      "expected": "l en chasse fixe"
+    },
+    "𝚖": {
+      "expected": "m en chasse fixe"
+    },
+    "𝚗": {
+      "expected": "n en chasse fixe"
+    },
+    "𝚘": {
+      "expected": "o en chasse fixe"
+    },
+    "𝚙": {
+      "expected": "p en chasse fixe"
+    },
+    "𝚚": {
+      "expected": "q en chasse fixe"
+    },
+    "𝚛": {
+      "expected": "r en chasse fixe"
+    },
+    "𝚜": {
+      "expected": "s en chasse fixe"
+    },
+    "𝚝": {
+      "expected": "t en chasse fixe"
+    },
+    "𝚞": {
+      "expected": "u en chasse fixe"
+    },
+    "𝚟": {
+      "expected": "v en chasse fixe"
+    },
+    "𝚠": {
+      "expected": "w en chasse fixe"
+    },
+    "𝚡": {
+      "expected": "x en chasse fixe"
+    },
+    "𝚢": {
+      "expected": "y en chasse fixe"
+    },
+    "𝚣": {
+      "expected": "z en chasse fixe"
+    },
+    "𝟶": {
+      "expected": "0 en chasse fixe"
+    },
+    "𝟷": {
+      "expected": "1 en chasse fixe"
+    },
+    "𝟸": {
+      "expected": "2 en chasse fixe"
+    },
+    "𝟹": {
+      "expected": "3 en chasse fixe"
+    },
+    "𝟺": {
+      "expected": "4 en chasse fixe"
+    },
+    "𝟻": {
+      "expected": "5 en chasse fixe"
+    },
+    "𝟼": {
+      "expected": "6 en chasse fixe"
+    },
+    "𝟽": {
+      "expected": "7 en chasse fixe"
+    },
+    "𝟾": {
+      "expected": "8 en chasse fixe"
+    },
+    "𝟿": {
+      "expected": "9 en chasse fixe"
+    },
+    "A": {
+      "expected": "A"
+    },
+    "B": {
+      "expected": "B"
+    },
+    "C": {
+      "expected": "C"
+    },
+    "D": {
+      "expected": "D"
+    },
+    "E": {
+      "expected": "E"
+    },
+    "F": {
+      "expected": "F"
+    },
+    "G": {
+      "expected": "G"
+    },
+    "H": {
+      "expected": "H"
+    },
+    "I": {
+      "expected": "I"
+    },
+    "J": {
+      "expected": "J"
+    },
+    "K": {
+      "expected": "K"
+    },
+    "L": {
+      "expected": "L"
+    },
+    "M": {
+      "expected": "M"
+    },
+    "N": {
+      "expected": "N"
+    },
+    "O": {
+      "expected": "O"
+    },
+    "P": {
+      "expected": "P"
+    },
+    "Q": {
+      "expected": "Q"
+    },
+    "R": {
+      "expected": "R"
+    },
+    "S": {
+      "expected": "S"
+    },
+    "T": {
+      "expected": "T"
+    },
+    "U": {
+      "expected": "U"
+    },
+    "V": {
+      "expected": "V"
+    },
+    "W": {
+      "expected": "W"
+    },
+    "X": {
+      "expected": "X"
+    },
+    "Y": {
+      "expected": "Y"
+    },
+    "Z": {
+      "expected": "Z"
+    },
+    "a": {
+      "expected": "a"
+    },
+    "b": {
+      "expected": "b"
+    },
+    "c": {
+      "expected": "c"
+    },
+    "d": {
+      "expected": "d"
+    },
+    "e": {
+      "expected": "e"
+    },
+    "f": {
+      "expected": "f"
+    },
+    "g": {
+      "expected": "g"
+    },
+    "h": {
+      "expected": "h"
+    },
+    "i": {
+      "expected": "i"
+    },
+    "j": {
+      "expected": "j"
+    },
+    "k": {
+      "expected": "k"
+    },
+    "l": {
+      "expected": "l"
+    },
+    "m": {
+      "expected": "m"
+    },
+    "n": {
+      "expected": "n"
+    },
+    "o": {
+      "expected": "o"
+    },
+    "p": {
+      "expected": "p"
+    },
+    "q": {
+      "expected": "q"
+    },
+    "r": {
+      "expected": "r"
+    },
+    "s": {
+      "expected": "s"
+    },
+    "t": {
+      "expected": "t"
+    },
+    "u": {
+      "expected": "u"
+    },
+    "v": {
+      "expected": "v"
+    },
+    "w": {
+      "expected": "w"
+    },
+    "x": {
+      "expected": "x"
+    },
+    "y": {
+      "expected": "y"
+    },
+    "z": {
+      "expected": "z"
+    },
+    "Α": {
+      "expected": "Alpha"
+    },
+    "Β": {
+      "expected": "Bêta"
+    },
+    "Γ": {
+      "expected": "Gamma"
+    },
+    "Δ": {
+      "expected": "triangle"
+    },
+    "Ε": {
+      "expected": "Epsilon"
+    },
+    "Ζ": {
+      "expected": "Zêta"
+    },
+    "Η": {
+      "expected": "Êta"
+    },
+    "Θ": {
+      "expected": "Thêta"
+    },
+    "Ι": {
+      "expected": "Iota"
+    },
+    "Κ": {
+      "expected": "Kappa"
+    },
+    "Λ": {
+      "expected": "Lambda"
+    },
+    "Μ": {
+      "expected": "Mû"
+    },
+    "Ν": {
+      "expected": "Nû"
+    },
+    "Ξ": {
+      "expected": "Xi"
+    },
+    "Ο": {
+      "expected": "Omicron"
+    },
+    "Π": {
+      "expected": "Pi"
+    },
+    "Ρ": {
+      "expected": "Rhô"
+    },
+    "ϴ": {
+      "expected": "Thêta"
+    },
+    "Σ": {
+      "expected": "Sigma"
+    },
+    "Τ": {
+      "expected": "Tau"
+    },
+    "Υ": {
+      "expected": "Upsilon"
+    },
+    "Φ": {
+      "expected": "Phi"
+    },
+    "Χ": {
+      "expected": "Chi"
+    },
+    "Ψ": {
+      "expected": "Psi"
+    },
+    "Ω": {
+      "expected": "Oméga"
+    },
+    "∇": {
+      "expected": "nabla"
+    },
+    "α": {
+      "expected": "alpha"
+    },
+    "β": {
+      "expected": "bêta"
+    },
+    "γ": {
+      "expected": "gamma"
+    },
+    "δ": {
+      "expected": "delta"
+    },
+    "ε": {
+      "expected": "epsilon"
+    },
+    "ζ": {
+      "expected": "zêta"
+    },
+    "η": {
+      "expected": "êta"
+    },
+    "θ": {
+      "expected": "thêta"
+    },
+    "ι": {
+      "expected": "iota"
+    },
+    "κ": {
+      "expected": "kappa"
+    },
+    "λ": {
+      "expected": "lambda"
+    },
+    "μ": {
+      "expected": "mû"
+    },
+    "ν": {
+      "expected": "nû"
+    },
+    "ξ": {
+      "expected": "xi"
+    },
+    "ο": {
+      "expected": "omicron"
+    },
+    "π": {
+      "expected": "pi"
+    },
+    "ρ": {
+      "expected": "rhô"
+    },
+    "ς": {
+      "expected": "sigma final"
+    },
+    "σ": {
+      "expected": "sigma"
+    },
+    "τ": {
+      "expected": "tau"
+    },
+    "υ": {
+      "expected": "upsilon"
+    },
+    "φ": {
+      "expected": "phi"
+    },
+    "χ": {
+      "expected": "chi"
+    },
+    "ψ": {
+      "expected": "psi"
+    },
+    "ω": {
+      "expected": "oméga"
+    },
+    "∂": {
+      "expected": "dérivée partielle"
+    },
+    "ϵ": {
+      "expected": "epsilon"
+    },
+    "ϑ": {
+      "expected": "thêta"
+    },
+    "ϰ": {
+      "expected": "kappa"
+    },
+    "ϕ": {
+      "expected": "phi"
+    },
+    "ϱ": {
+      "expected": "rhô"
+    },
+    "ϖ": {
+      "expected": "pi"
+    },
+    "𝒜": {
+      "expected": "A de ronde"
+    },
+    "ℬ": {
+      "expected": "B de ronde"
+    },
+    "𝒞": {
+      "expected": "C de ronde"
+    },
+    "𝒟": {
+      "expected": "D de ronde"
+    },
+    "ℰ": {
+      "expected": "E de ronde"
+    },
+    "ℱ": {
+      "expected": "F de ronde"
+    },
+    "𝒢": {
+      "expected": "G de ronde"
+    },
+    "ℋ": {
+      "expected": "H de ronde"
+    },
+    "ℐ": {
+      "expected": "I de ronde"
+    },
+    "𝒥": {
+      "expected": "J de ronde"
+    },
+    "𝒦": {
+      "expected": "K de ronde"
+    },
+    "ℒ": {
+      "expected": "L de ronde"
+    },
+    "ℳ": {
+      "expected": "M de ronde"
+    },
+    "𝒩": {
+      "expected": "N de ronde"
+    },
+    "𝒪": {
+      "expected": "O de ronde"
+    },
+    "𝒫": {
+      "expected": "P de ronde"
+    },
+    "𝒬": {
+      "expected": "Q de ronde"
+    },
+    "ℛ": {
+      "expected": "R de ronde"
+    },
+    "𝒮": {
+      "expected": "S de ronde"
+    },
+    "𝒯": {
+      "expected": "T de ronde"
+    },
+    "𝒰": {
+      "expected": "U de ronde"
+    },
+    "𝒱": {
+      "expected": "V de ronde"
+    },
+    "𝒲": {
+      "expected": "W de ronde"
+    },
+    "𝒳": {
+      "expected": "X de ronde"
+    },
+    "𝒴": {
+      "expected": "Y de ronde"
+    },
+    "𝒵": {
+      "expected": "Z de ronde"
+    },
+    "𝒶": {
+      "expected": "a de ronde"
+    },
+    "𝒷": {
+      "expected": "b de ronde"
+    },
+    "𝒸": {
+      "expected": "c de ronde"
+    },
+    "𝒹": {
+      "expected": "d de ronde"
+    },
+    "ℯ": {
+      "expected": "e de ronde"
+    },
+    "𝒻": {
+      "expected": "f de ronde"
+    },
+    "ℊ": {
+      "expected": "g de ronde"
+    },
+    "𝒽": {
+      "expected": "h de ronde"
+    },
+    "𝒾": {
+      "expected": "i de ronde"
+    },
+    "𝒿": {
+      "expected": "j de ronde"
+    },
+    "𝓀": {
+      "expected": "k de ronde"
+    },
+    "𝓁": {
+      "expected": "l de ronde"
+    },
+    "𝓂": {
+      "expected": "m de ronde"
+    },
+    "𝓃": {
+      "expected": "n de ronde"
+    },
+    "ℴ": {
+      "expected": "o de ronde"
+    },
+    "𝓅": {
+      "expected": "p de ronde"
+    },
+    "𝓆": {
+      "expected": "q de ronde"
+    },
+    "𝓇": {
+      "expected": "r de ronde"
+    },
+    "𝓈": {
+      "expected": "s de ronde"
+    },
+    "𝓉": {
+      "expected": "t de ronde"
+    },
+    "𝓊": {
+      "expected": "u de ronde"
+    },
+    "𝓋": {
+      "expected": "v de ronde"
+    },
+    "𝓌": {
+      "expected": "w de ronde"
+    },
+    "𝓍": {
+      "expected": "x de ronde"
+    },
+    "𝓎": {
+      "expected": "y de ronde"
+    },
+    "𝓏": {
+      "expected": "z de ronde"
+    },
+    "𝖠": {
+      "expected": "A sans empattement"
+    },
+    "𝖡": {
+      "expected": "B sans empattement"
+    },
+    "𝖢": {
+      "expected": "C sans empattement"
+    },
+    "𝖣": {
+      "expected": "D sans empattement"
+    },
+    "𝖤": {
+      "expected": "E sans empattement"
+    },
+    "𝖥": {
+      "expected": "F sans empattement"
+    },
+    "𝖦": {
+      "expected": "G sans empattement"
+    },
+    "𝖧": {
+      "expected": "H sans empattement"
+    },
+    "𝖨": {
+      "expected": "I sans empattement"
+    },
+    "𝖩": {
+      "expected": "J sans empattement"
+    },
+    "𝖪": {
+      "expected": "K sans empattement"
+    },
+    "𝖫": {
+      "expected": "L sans empattement"
+    },
+    "𝖬": {
+      "expected": "M sans empattement"
+    },
+    "𝖭": {
+      "expected": "N sans empattement"
+    },
+    "𝖮": {
+      "expected": "O sans empattement"
+    },
+    "𝖯": {
+      "expected": "P sans empattement"
+    },
+    "𝖰": {
+      "expected": "Q sans empattement"
+    },
+    "𝖱": {
+      "expected": "R sans empattement"
+    },
+    "𝖲": {
+      "expected": "S sans empattement"
+    },
+    "𝖳": {
+      "expected": "T sans empattement"
+    },
+    "𝖴": {
+      "expected": "U sans empattement"
+    },
+    "𝖵": {
+      "expected": "V sans empattement"
+    },
+    "𝖶": {
+      "expected": "W sans empattement"
+    },
+    "𝖷": {
+      "expected": "X sans empattement"
+    },
+    "𝖸": {
+      "expected": "Y sans empattement"
+    },
+    "𝖹": {
+      "expected": "Z sans empattement"
+    },
+    "𝖺": {
+      "expected": "a sans empattement"
+    },
+    "𝖻": {
+      "expected": "b sans empattement"
+    },
+    "𝖼": {
+      "expected": "c sans empattement"
+    },
+    "𝖽": {
+      "expected": "d sans empattement"
+    },
+    "𝖾": {
+      "expected": "e sans empattement"
+    },
+    "𝖿": {
+      "expected": "f sans empattement"
+    },
+    "𝗀": {
+      "expected": "g sans empattement"
+    },
+    "𝗁": {
+      "expected": "h sans empattement"
+    },
+    "𝗂": {
+      "expected": "i sans empattement"
+    },
+    "𝗃": {
+      "expected": "j sans empattement"
+    },
+    "𝗄": {
+      "expected": "k sans empattement"
+    },
+    "𝗅": {
+      "expected": "l sans empattement"
+    },
+    "𝗆": {
+      "expected": "m sans empattement"
+    },
+    "𝗇": {
+      "expected": "n sans empattement"
+    },
+    "𝗈": {
+      "expected": "o sans empattement"
+    },
+    "𝗉": {
+      "expected": "p sans empattement"
+    },
+    "𝗊": {
+      "expected": "q sans empattement"
+    },
+    "𝗋": {
+      "expected": "r sans empattement"
+    },
+    "𝗌": {
+      "expected": "s sans empattement"
+    },
+    "𝗍": {
+      "expected": "t sans empattement"
+    },
+    "𝗎": {
+      "expected": "u sans empattement"
+    },
+    "𝗏": {
+      "expected": "v sans empattement"
+    },
+    "𝗐": {
+      "expected": "w sans empattement"
+    },
+    "𝗑": {
+      "expected": "x sans empattement"
+    },
+    "𝗒": {
+      "expected": "y sans empattement"
+    },
+    "𝗓": {
+      "expected": "z sans empattement"
+    },
+    "𝟢": {
+      "expected": "0 sans empattement"
+    },
+    "𝟣": {
+      "expected": "1 sans empattement"
+    },
+    "𝟤": {
+      "expected": "2 sans empattement"
+    },
+    "𝟥": {
+      "expected": "3 sans empattement"
+    },
+    "𝟦": {
+      "expected": "4 sans empattement"
+    },
+    "𝟧": {
+      "expected": "5 sans empattement"
+    },
+    "𝟨": {
+      "expected": "6 sans empattement"
+    },
+    "𝟩": {
+      "expected": "7 sans empattement"
+    },
+    "𝟪": {
+      "expected": "8 sans empattement"
+    },
+    "𝟫": {
+      "expected": "9 sans empattement"
+    },
+    "𝘈": {
+      "expected": "A en italique sans empattement"
+    },
+    "𝘉": {
+      "expected": "B en italique sans empattement"
+    },
+    "𝘊": {
+      "expected": "C en italique sans empattement"
+    },
+    "𝘋": {
+      "expected": "D en italique sans empattement"
+    },
+    "𝘌": {
+      "expected": "E en italique sans empattement"
+    },
+    "𝘍": {
+      "expected": "F en italique sans empattement"
+    },
+    "𝘎": {
+      "expected": "G en italique sans empattement"
+    },
+    "𝘏": {
+      "expected": "H en italique sans empattement"
+    },
+    "𝘐": {
+      "expected": "I en italique sans empattement"
+    },
+    "𝘑": {
+      "expected": "J en italique sans empattement"
+    },
+    "𝘒": {
+      "expected": "K en italique sans empattement"
+    },
+    "𝘓": {
+      "expected": "L en italique sans empattement"
+    },
+    "𝘔": {
+      "expected": "M en italique sans empattement"
+    },
+    "𝘕": {
+      "expected": "N en italique sans empattement"
+    },
+    "𝘖": {
+      "expected": "O en italique sans empattement"
+    },
+    "𝘗": {
+      "expected": "P en italique sans empattement"
+    },
+    "𝘘": {
+      "expected": "Q en italique sans empattement"
+    },
+    "𝘙": {
+      "expected": "R en italique sans empattement"
+    },
+    "𝘚": {
+      "expected": "S en italique sans empattement"
+    },
+    "𝘛": {
+      "expected": "T en italique sans empattement"
+    },
+    "𝘜": {
+      "expected": "U en italique sans empattement"
+    },
+    "𝘝": {
+      "expected": "V en italique sans empattement"
+    },
+    "𝘞": {
+      "expected": "W en italique sans empattement"
+    },
+    "𝘟": {
+      "expected": "X en italique sans empattement"
+    },
+    "𝘠": {
+      "expected": "Y en italique sans empattement"
+    },
+    "𝘡": {
+      "expected": "Z en italique sans empattement"
+    },
+    "𝘢": {
+      "expected": "a en italique sans empattement"
+    },
+    "𝘣": {
+      "expected": "b en italique sans empattement"
+    },
+    "𝘤": {
+      "expected": "c en italique sans empattement"
+    },
+    "𝘥": {
+      "expected": "d en italique sans empattement"
+    },
+    "𝘦": {
+      "expected": "e en italique sans empattement"
+    },
+    "𝘧": {
+      "expected": "f en italique sans empattement"
+    },
+    "𝘨": {
+      "expected": "g en italique sans empattement"
+    },
+    "𝘩": {
+      "expected": "h en italique sans empattement"
+    },
+    "𝘪": {
+      "expected": "i en italique sans empattement"
+    },
+    "𝘫": {
+      "expected": "j en italique sans empattement"
+    },
+    "𝘬": {
+      "expected": "k en italique sans empattement"
+    },
+    "𝘭": {
+      "expected": "l en italique sans empattement"
+    },
+    "𝘮": {
+      "expected": "m en italique sans empattement"
+    },
+    "𝘯": {
+      "expected": "n en italique sans empattement"
+    },
+    "𝘰": {
+      "expected": "o en italique sans empattement"
+    },
+    "𝘱": {
+      "expected": "p en italique sans empattement"
+    },
+    "𝘲": {
+      "expected": "q en italique sans empattement"
+    },
+    "𝘳": {
+      "expected": "r en italique sans empattement"
+    },
+    "𝘴": {
+      "expected": "s en italique sans empattement"
+    },
+    "𝘵": {
+      "expected": "t en italique sans empattement"
+    },
+    "𝘶": {
+      "expected": "u en italique sans empattement"
+    },
+    "𝘷": {
+      "expected": "v en italique sans empattement"
+    },
+    "𝘸": {
+      "expected": "w en italique sans empattement"
+    },
+    "𝘹": {
+      "expected": "x en italique sans empattement"
+    },
+    "𝘺": {
+      "expected": "y en italique sans empattement"
+    },
+    "𝘻": {
+      "expected": "z en italique sans empattement"
+    },
+    "𝗔": {
+      "expected": "A en gras sans empattement"
+    },
+    "𝗕": {
+      "expected": "B en gras sans empattement"
+    },
+    "𝗖": {
+      "expected": "C en gras sans empattement"
+    },
+    "𝗗": {
+      "expected": "D en gras sans empattement"
+    },
+    "𝗘": {
+      "expected": "E en gras sans empattement"
+    },
+    "𝗙": {
+      "expected": "F en gras sans empattement"
+    },
+    "𝗚": {
+      "expected": "G en gras sans empattement"
+    },
+    "𝗛": {
+      "expected": "H en gras sans empattement"
+    },
+    "𝗜": {
+      "expected": "I en gras sans empattement"
+    },
+    "𝗝": {
+      "expected": "J en gras sans empattement"
+    },
+    "𝗞": {
+      "expected": "K en gras sans empattement"
+    },
+    "𝗟": {
+      "expected": "L en gras sans empattement"
+    },
+    "𝗠": {
+      "expected": "M en gras sans empattement"
+    },
+    "𝗡": {
+      "expected": "N en gras sans empattement"
+    },
+    "𝗢": {
+      "expected": "O en gras sans empattement"
+    },
+    "𝗣": {
+      "expected": "P en gras sans empattement"
+    },
+    "𝗤": {
+      "expected": "Q en gras sans empattement"
+    },
+    "𝗥": {
+      "expected": "R en gras sans empattement"
+    },
+    "𝗦": {
+      "expected": "S en gras sans empattement"
+    },
+    "𝗧": {
+      "expected": "T en gras sans empattement"
+    },
+    "𝗨": {
+      "expected": "U en gras sans empattement"
+    },
+    "𝗩": {
+      "expected": "V en gras sans empattement"
+    },
+    "𝗪": {
+      "expected": "W en gras sans empattement"
+    },
+    "𝗫": {
+      "expected": "X en gras sans empattement"
+    },
+    "𝗬": {
+      "expected": "Y en gras sans empattement"
+    },
+    "𝗭": {
+      "expected": "Z en gras sans empattement"
+    },
+    "𝗮": {
+      "expected": "a en gras sans empattement"
+    },
+    "𝗯": {
+      "expected": "b en gras sans empattement"
+    },
+    "𝗰": {
+      "expected": "c en gras sans empattement"
+    },
+    "𝗱": {
+      "expected": "d en gras sans empattement"
+    },
+    "𝗲": {
+      "expected": "e en gras sans empattement"
+    },
+    "𝗳": {
+      "expected": "f en gras sans empattement"
+    },
+    "𝗴": {
+      "expected": "g en gras sans empattement"
+    },
+    "𝗵": {
+      "expected": "h en gras sans empattement"
+    },
+    "𝗶": {
+      "expected": "i en gras sans empattement"
+    },
+    "𝗷": {
+      "expected": "j en gras sans empattement"
+    },
+    "𝗸": {
+      "expected": "k en gras sans empattement"
+    },
+    "𝗹": {
+      "expected": "l en gras sans empattement"
+    },
+    "𝗺": {
+      "expected": "m en gras sans empattement"
+    },
+    "𝗻": {
+      "expected": "n en gras sans empattement"
+    },
+    "𝗼": {
+      "expected": "o en gras sans empattement"
+    },
+    "𝗽": {
+      "expected": "p en gras sans empattement"
+    },
+    "𝗾": {
+      "expected": "q en gras sans empattement"
+    },
+    "𝗿": {
+      "expected": "r en gras sans empattement"
+    },
+    "𝘀": {
+      "expected": "s en gras sans empattement"
+    },
+    "𝘁": {
+      "expected": "t en gras sans empattement"
+    },
+    "𝘂": {
+      "expected": "u en gras sans empattement"
+    },
+    "𝘃": {
+      "expected": "v en gras sans empattement"
+    },
+    "𝘄": {
+      "expected": "w en gras sans empattement"
+    },
+    "𝘅": {
+      "expected": "x en gras sans empattement"
+    },
+    "𝘆": {
+      "expected": "y en gras sans empattement"
+    },
+    "𝘇": {
+      "expected": "z en gras sans empattement"
+    },
+    "𝝖": {
+      "expected": "Alpha en gras sans empattement"
+    },
+    "𝝗": {
+      "expected": "Bêta en gras sans empattement"
+    },
+    "𝝘": {
+      "expected": "Gamma en gras sans empattement"
+    },
+    "𝝙": {
+      "expected": "Delta en gras sans empattement"
+    },
+    "𝝚": {
+      "expected": "Epsilon en gras sans empattement"
+    },
+    "𝝛": {
+      "expected": "Zêta en gras sans empattement"
+    },
+    "𝝜": {
+      "expected": "Êta en gras sans empattement"
+    },
+    "𝝝": {
+      "expected": "Thêta en gras sans empattement"
+    },
+    "𝝞": {
+      "expected": "Iota en gras sans empattement"
+    },
+    "𝝟": {
+      "expected": "Kappa en gras sans empattement"
+    },
+    "𝝠": {
+      "expected": "Lambda en gras sans empattement"
+    },
+    "𝝡": {
+      "expected": "Mû en gras sans empattement"
+    },
+    "𝝢": {
+      "expected": "Nû en gras sans empattement"
+    },
+    "𝝣": {
+      "expected": "Xi en gras sans empattement"
+    },
+    "𝝤": {
+      "expected": "Omicron en gras sans empattement"
+    },
+    "𝝥": {
+      "expected": "Pi en gras sans empattement"
+    },
+    "𝝦": {
+      "expected": "Rhô en gras sans empattement"
+    },
+    "𝝧": {
+      "expected": "Thêta en gras sans empattement"
+    },
+    "𝝨": {
+      "expected": "Sigma en gras sans empattement"
+    },
+    "𝝩": {
+      "expected": "Tau en gras sans empattement"
+    },
+    "𝝪": {
+      "expected": "Upsilon en gras sans empattement"
+    },
+    "𝝫": {
+      "expected": "Phi en gras sans empattement"
+    },
+    "𝝬": {
+      "expected": "Chi en gras sans empattement"
+    },
+    "𝝭": {
+      "expected": "Psi en gras sans empattement"
+    },
+    "𝝮": {
+      "expected": "Oméga en gras sans empattement"
+    },
+    "𝝯": {
+      "expected": "nabla en gras sans empattement"
+    },
+    "𝝰": {
+      "expected": "alpha en gras sans empattement"
+    },
+    "𝝱": {
+      "expected": "bêta en gras sans empattement"
+    },
+    "𝝲": {
+      "expected": "gamma en gras sans empattement"
+    },
+    "𝝳": {
+      "expected": "delta en gras sans empattement"
+    },
+    "𝝴": {
+      "expected": "epsilon en gras sans empattement"
+    },
+    "𝝵": {
+      "expected": "zêta en gras sans empattement"
+    },
+    "𝝶": {
+      "expected": "êta en gras sans empattement"
+    },
+    "𝝷": {
+      "expected": "thêta en gras sans empattement"
+    },
+    "𝝸": {
+      "expected": "iota en gras sans empattement"
+    },
+    "𝝹": {
+      "expected": "kappa en gras sans empattement"
+    },
+    "𝝺": {
+      "expected": "lambda en gras sans empattement"
+    },
+    "𝝻": {
+      "expected": "mû en gras sans empattement"
+    },
+    "𝝼": {
+      "expected": "nû en gras sans empattement"
+    },
+    "𝝽": {
+      "expected": "xi en gras sans empattement"
+    },
+    "𝝾": {
+      "expected": "omicron en gras sans empattement"
+    },
+    "𝝿": {
+      "expected": "pi en gras sans empattement"
+    },
+    "𝞀": {
+      "expected": "rhô en gras sans empattement"
+    },
+    "𝞁": {
+      "expected": "sigma final en gras sans empattement"
+    },
+    "𝞂": {
+      "expected": "sigma en gras sans empattement"
+    },
+    "𝞃": {
+      "expected": "tau en gras sans empattement"
+    },
+    "𝞄": {
+      "expected": "upsilon en gras sans empattement"
+    },
+    "𝞅": {
+      "expected": "phi en gras sans empattement"
+    },
+    "𝞆": {
+      "expected": "chi en gras sans empattement"
+    },
+    "𝞇": {
+      "expected": "psi en gras sans empattement"
+    },
+    "𝞈": {
+      "expected": "oméga en gras sans empattement"
+    },
+    "𝞉": {
+      "expected": "dérivée partielle en gras sans empattement"
+    },
+    "𝞊": {
+      "expected": "epsilon en gras sans empattement"
+    },
+    "𝞋": {
+      "expected": "thêta en gras sans empattement"
+    },
+    "𝞌": {
+      "expected": "kappa en gras sans empattement"
+    },
+    "𝞍": {
+      "expected": "phi en gras sans empattement"
+    },
+    "𝞎": {
+      "expected": "rhô en gras sans empattement"
+    },
+    "𝞏": {
+      "expected": "pi en gras sans empattement"
+    },
+    "𝟬": {
+      "expected": "0 en gras sans empattement"
+    },
+    "𝟭": {
+      "expected": "1 en gras sans empattement"
+    },
+    "𝟮": {
+      "expected": "2 en gras sans empattement"
+    },
+    "𝟯": {
+      "expected": "3 en gras sans empattement"
+    },
+    "𝟰": {
+      "expected": "4 en gras sans empattement"
+    },
+    "𝟱": {
+      "expected": "5 en gras sans empattement"
+    },
+    "𝟲": {
+      "expected": "6 en gras sans empattement"
+    },
+    "𝟳": {
+      "expected": "7 en gras sans empattement"
+    },
+    "𝟴": {
+      "expected": "8 en gras sans empattement"
+    },
+    "𝟵": {
+      "expected": "9 en gras sans empattement"
+    },
+    "𝘼": {
+      "expected": "A en italique gras sans empattement"
+    },
+    "𝘽": {
+      "expected": "B en italique gras sans empattement"
+    },
+    "𝘾": {
+      "expected": "C en italique gras sans empattement"
+    },
+    "𝘿": {
+      "expected": "D en italique gras sans empattement"
+    },
+    "𝙀": {
+      "expected": "E en italique gras sans empattement"
+    },
+    "𝙁": {
+      "expected": "F en italique gras sans empattement"
+    },
+    "𝙂": {
+      "expected": "G en italique gras sans empattement"
+    },
+    "𝙃": {
+      "expected": "H en italique gras sans empattement"
+    },
+    "𝙄": {
+      "expected": "I en italique gras sans empattement"
+    },
+    "𝙅": {
+      "expected": "J en italique gras sans empattement"
+    },
+    "𝙆": {
+      "expected": "K en italique gras sans empattement"
+    },
+    "𝙇": {
+      "expected": "L en italique gras sans empattement"
+    },
+    "𝙈": {
+      "expected": "M en italique gras sans empattement"
+    },
+    "𝙉": {
+      "expected": "N en italique gras sans empattement"
+    },
+    "𝙊": {
+      "expected": "O en italique gras sans empattement"
+    },
+    "𝙋": {
+      "expected": "P en italique gras sans empattement"
+    },
+    "𝙌": {
+      "expected": "Q en italique gras sans empattement"
+    },
+    "𝙍": {
+      "expected": "R en italique gras sans empattement"
+    },
+    "𝙎": {
+      "expected": "S en italique gras sans empattement"
+    },
+    "𝙏": {
+      "expected": "T en italique gras sans empattement"
+    },
+    "𝙐": {
+      "expected": "U en italique gras sans empattement"
+    },
+    "𝙑": {
+      "expected": "V en italique gras sans empattement"
+    },
+    "𝙒": {
+      "expected": "W en italique gras sans empattement"
+    },
+    "𝙓": {
+      "expected": "X en italique gras sans empattement"
+    },
+    "𝙔": {
+      "expected": "Y en italique gras sans empattement"
+    },
+    "𝙕": {
+      "expected": "Z en italique gras sans empattement"
+    },
+    "𝙖": {
+      "expected": "a en italique gras sans empattement"
+    },
+    "𝙗": {
+      "expected": "b en italique gras sans empattement"
+    },
+    "𝙘": {
+      "expected": "c en italique gras sans empattement"
+    },
+    "𝙙": {
+      "expected": "d en italique gras sans empattement"
+    },
+    "𝙚": {
+      "expected": "e en italique gras sans empattement"
+    },
+    "𝙛": {
+      "expected": "f en italique gras sans empattement"
+    },
+    "𝙜": {
+      "expected": "g en italique gras sans empattement"
+    },
+    "𝙝": {
+      "expected": "h en italique gras sans empattement"
+    },
+    "𝙞": {
+      "expected": "i en italique gras sans empattement"
+    },
+    "𝙟": {
+      "expected": "j en italique gras sans empattement"
+    },
+    "𝙠": {
+      "expected": "k en italique gras sans empattement"
+    },
+    "𝙡": {
+      "expected": "l en italique gras sans empattement"
+    },
+    "𝙢": {
+      "expected": "m en italique gras sans empattement"
+    },
+    "𝙣": {
+      "expected": "n en italique gras sans empattement"
+    },
+    "𝙤": {
+      "expected": "o en italique gras sans empattement"
+    },
+    "𝙥": {
+      "expected": "p en italique gras sans empattement"
+    },
+    "𝙦": {
+      "expected": "q en italique gras sans empattement"
+    },
+    "𝙧": {
+      "expected": "r en italique gras sans empattement"
+    },
+    "𝙨": {
+      "expected": "s en italique gras sans empattement"
+    },
+    "𝙩": {
+      "expected": "t en italique gras sans empattement"
+    },
+    "𝙪": {
+      "expected": "u en italique gras sans empattement"
+    },
+    "𝙫": {
+      "expected": "v en italique gras sans empattement"
+    },
+    "𝙬": {
+      "expected": "w en italique gras sans empattement"
+    },
+    "𝙭": {
+      "expected": "x en italique gras sans empattement"
+    },
+    "𝙮": {
+      "expected": "y en italique gras sans empattement"
+    },
+    "𝙯": {
+      "expected": "z en italique gras sans empattement"
+    },
+    "𝞐": {
+      "expected": "Alpha en italique gras sans empattement"
+    },
+    "𝞑": {
+      "expected": "Bêta en italique gras sans empattement"
+    },
+    "𝞒": {
+      "expected": "Gamma en italique gras sans empattement"
+    },
+    "𝞓": {
+      "expected": "Delta en italique gras sans empattement"
+    },
+    "𝞔": {
+      "expected": "Epsilon en italique gras sans empattement"
+    },
+    "𝞕": {
+      "expected": "Zêta en italique gras sans empattement"
+    },
+    "𝞖": {
+      "expected": "Êta en italique gras sans empattement"
+    },
+    "𝞗": {
+      "expected": "Thêta en italique gras sans empattement"
+    },
+    "𝞘": {
+      "expected": "Iota en italique gras sans empattement"
+    },
+    "𝞙": {
+      "expected": "Kappa en italique gras sans empattement"
+    },
+    "𝞚": {
+      "expected": "Lambda en italique gras sans empattement"
+    },
+    "𝞛": {
+      "expected": "Mû en italique gras sans empattement"
+    },
+    "𝞜": {
+      "expected": "Nû en italique gras sans empattement"
+    },
+    "𝞝": {
+      "expected": "Xi en italique gras sans empattement"
+    },
+    "𝞞": {
+      "expected": "Omicron en italique gras sans empattement"
+    },
+    "𝞟": {
+      "expected": "Pi en italique gras sans empattement"
+    },
+    "𝞠": {
+      "expected": "Rhô en italique gras sans empattement"
+    },
+    "𝞡": {
+      "expected": "Thêta en italique gras sans empattement"
+    },
+    "𝞢": {
+      "expected": "Sigma en italique gras sans empattement"
+    },
+    "𝞣": {
+      "expected": "Tau en italique gras sans empattement"
+    },
+    "𝞤": {
+      "expected": "Upsilon en italique gras sans empattement"
+    },
+    "𝞥": {
+      "expected": "Phi en italique gras sans empattement"
+    },
+    "𝞦": {
+      "expected": "Chi en italique gras sans empattement"
+    },
+    "𝞧": {
+      "expected": "Psi en italique gras sans empattement"
+    },
+    "𝞨": {
+      "expected": "Oméga en italique gras sans empattement"
+    },
+    "𝞩": {
+      "expected": "nabla en italique gras sans empattement"
+    },
+    "𝞪": {
+      "expected": "alpha en italique gras sans empattement"
+    },
+    "𝞫": {
+      "expected": "bêta en italique gras sans empattement"
+    },
+    "𝞬": {
+      "expected": "gamma en italique gras sans empattement"
+    },
+    "𝞭": {
+      "expected": "delta en italique gras sans empattement"
+    },
+    "𝞮": {
+      "expected": "epsilon en italique gras sans empattement"
+    },
+    "𝞯": {
+      "expected": "zêta en italique gras sans empattement"
+    },
+    "𝞰": {
+      "expected": "êta en italique gras sans empattement"
+    },
+    "𝞱": {
+      "expected": "thêta en italique gras sans empattement"
+    },
+    "𝞲": {
+      "expected": "iota en italique gras sans empattement"
+    },
+    "𝞳": {
+      "expected": "kappa en italique gras sans empattement"
+    },
+    "𝞴": {
+      "expected": "lambda en italique gras sans empattement"
+    },
+    "𝞵": {
+      "expected": "mû en italique gras sans empattement"
+    },
+    "𝞶": {
+      "expected": "nû en italique gras sans empattement"
+    },
+    "𝞷": {
+      "expected": "xi en italique gras sans empattement"
+    },
+    "𝞸": {
+      "expected": "omicron en italique gras sans empattement"
+    },
+    "𝞹": {
+      "expected": "pi en italique gras sans empattement"
+    },
+    "𝞺": {
+      "expected": "rhô en italique gras sans empattement"
+    },
+    "𝞻": {
+      "expected": "sigma final en italique gras sans empattement"
+    },
+    "𝞼": {
+      "expected": "sigma en italique gras sans empattement"
+    },
+    "𝞽": {
+      "expected": "tau en italique gras sans empattement"
+    },
+    "𝞾": {
+      "expected": "upsilon en italique gras sans empattement"
+    },
+    "𝞿": {
+      "expected": "phi en italique gras sans empattement"
+    },
+    "𝟀": {
+      "expected": "chi en italique gras sans empattement"
+    },
+    "𝟁": {
+      "expected": "psi en italique gras sans empattement"
+    },
+    "𝟂": {
+      "expected": "oméga en italique gras sans empattement"
+    },
+    "𝟃": {
+      "expected": "dérivée partielle en italique gras sans empattement"
+    },
+    "𝟄": {
+      "expected": "epsilon en italique gras sans empattement"
+    },
+    "𝟅": {
+      "expected": "thêta en italique gras sans empattement"
+    },
+    "𝟆": {
+      "expected": "kappa en italique gras sans empattement"
+    },
+    "𝟇": {
+      "expected": "phi en italique gras sans empattement"
+    },
+    "𝟈": {
+      "expected": "rhô en italique gras sans empattement"
+    },
+    "𝟉": {
+      "expected": "pi en italique gras sans empattement"
+    },
+    "⁰": {
+      "expected": "exposant 0"
+    },
+    "¹": {
+      "expected": "exposant 1"
+    },
+    "²": {
+      "expected": "au carré"
+    },
+    "³": {
+      "expected": "cubique"
+    },
+    "⁴": {
+      "expected": "exposant 4"
+    },
+    "⁵": {
+      "expected": "exposant 5"
+    },
+    "⁶": {
+      "expected": "exposant 6"
+    },
+    "⁷": {
+      "expected": "exposant 7"
+    },
+    "⁸": {
+      "expected": "exposant 8"
+    },
+    "⁹": {
+      "expected": "exposant 9"
+    },
+    "₀": {
+      "expected": "indice 0"
+    },
+    "₁": {
+      "expected": "indice 1"
+    },
+    "₂": {
+      "expected": "indice 2"
+    },
+    "₃": {
+      "expected": "indice 3"
+    },
+    "₄": {
+      "expected": "indice 4"
+    },
+    "₅": {
+      "expected": "indice 5"
+    },
+    "₆": {
+      "expected": "indice 6"
+    },
+    "₇": {
+      "expected": "indice 7"
+    },
+    "₈": {
+      "expected": "indice 8"
+    },
+    "₉": {
+      "expected": "indice 9"
+    },
+    "Ⓐ": {
+      "expected": "A majuscule encerclé"
+    },
+    "Ⓑ": {
+      "expected": "B majuscule encerclé"
+    },
+    "Ⓒ": {
+      "expected": "C majuscule encerclé"
+    },
+    "Ⓓ": {
+      "expected": "D majuscule encerclé"
+    },
+    "Ⓔ": {
+      "expected": "E majuscule encerclé"
+    },
+    "Ⓕ": {
+      "expected": "F majuscule encerclé"
+    },
+    "Ⓖ": {
+      "expected": "G majuscule encerclé"
+    },
+    "Ⓗ": {
+      "expected": "H majuscule encerclé"
+    },
+    "Ⓘ": {
+      "expected": "I majuscule encerclé"
+    },
+    "Ⓙ": {
+      "expected": "J majuscule encerclé"
+    },
+    "Ⓚ": {
+      "expected": "K majuscule encerclé"
+    },
+    "Ⓛ": {
+      "expected": "L majuscule encerclé"
+    },
+    "Ⓜ": {
+      "expected": "M majuscule encerclé"
+    },
+    "Ⓝ": {
+      "expected": "N majuscule encerclé"
+    },
+    "Ⓞ": {
+      "expected": "O majuscule encerclé"
+    },
+    "Ⓟ": {
+      "expected": "P majuscule encerclé"
+    },
+    "Ⓠ": {
+      "expected": "Q majuscule encerclé"
+    },
+    "Ⓡ": {
+      "expected": "R majuscule encerclé"
+    },
+    "Ⓢ": {
+      "expected": "S majuscule encerclé"
+    },
+    "Ⓣ": {
+      "expected": "T majuscule encerclé"
+    },
+    "Ⓤ": {
+      "expected": "U majuscule encerclé"
+    },
+    "Ⓥ": {
+      "expected": "V majuscule encerclé"
+    },
+    "Ⓦ": {
+      "expected": "W majuscule encerclé"
+    },
+    "Ⓧ": {
+      "expected": "X majuscule encerclé"
+    },
+    "Ⓨ": {
+      "expected": "Y majuscule encerclé"
+    },
+    "Ⓩ": {
+      "expected": "Z majuscule encerclé"
+    },
+    "ⓐ": {
+      "expected": "a encerclé"
+    },
+    "ⓑ": {
+      "expected": "b encerclé"
+    },
+    "ⓒ": {
+      "expected": "c encerclé"
+    },
+    "ⓓ": {
+      "expected": "d encerclé"
+    },
+    "ⓔ": {
+      "expected": "e encerclé"
+    },
+    "ⓕ": {
+      "expected": "f encerclé"
+    },
+    "ⓖ": {
+      "expected": "g encerclé"
+    },
+    "ⓗ": {
+      "expected": "h encerclé"
+    },
+    "ⓘ": {
+      "expected": "i encerclé"
+    },
+    "ⓙ": {
+      "expected": "j encerclé"
+    },
+    "ⓚ": {
+      "expected": "k encerclé"
+    },
+    "ⓛ": {
+      "expected": "l encerclé"
+    },
+    "ⓜ": {
+      "expected": "m encerclé"
+    },
+    "ⓝ": {
+      "expected": "n encerclé"
+    },
+    "ⓞ": {
+      "expected": "o encerclé"
+    },
+    "ⓟ": {
+      "expected": "p encerclé"
+    },
+    "ⓠ": {
+      "expected": "q encerclé"
+    },
+    "ⓡ": {
+      "expected": "r encerclé"
+    },
+    "ⓢ": {
+      "expected": "s encerclé"
+    },
+    "ⓣ": {
+      "expected": "t encerclé"
+    },
+    "ⓤ": {
+      "expected": "u encerclé"
+    },
+    "ⓥ": {
+      "expected": "v encerclé"
+    },
+    "ⓦ": {
+      "expected": "w encerclé"
+    },
+    "ⓧ": {
+      "expected": "x encerclé"
+    },
+    "ⓨ": {
+      "expected": "y encerclé"
+    },
+    "ⓩ": {
+      "expected": "z encerclé"
+    },
+    "⓪": {
+      "expected": "0 encerclé"
+    },
+    "①": {
+      "expected": "1 encerclé"
+    },
+    "②": {
+      "expected": "2 encerclé"
+    },
+    "③": {
+      "expected": "3 encerclé"
+    },
+    "④": {
+      "expected": "4 encerclé"
+    },
+    "⑤": {
+      "expected": "5 encerclé"
+    },
+    "⑥": {
+      "expected": "6 encerclé"
+    },
+    "⑦": {
+      "expected": "7 encerclé"
+    },
+    "⑧": {
+      "expected": "8 encerclé"
+    },
+    "⑨": {
+      "expected": "9 encerclé"
+    },
+    "⑩": {
+      "expected": "10 encerclé"
+    },
+    "⑪": {
+      "expected": "11 encerclé"
+    },
+    "⑫": {
+      "expected": "12 encerclé"
+    },
+    "⑬": {
+      "expected": "13 encerclé"
+    },
+    "⑭": {
+      "expected": "14 encerclé"
+    },
+    "⑮": {
+      "expected": "15 encerclé"
+    },
+    "⑯": {
+      "expected": "16 encerclé"
+    },
+    "⑰": {
+      "expected": "17 encerclé"
+    },
+    "⑱": {
+      "expected": "18 encerclé"
+    },
+    "⑲": {
+      "expected": "19 encerclé"
+    },
+    "⑳": {
+      "expected": "20 encerclé"
+    },
+    "㉑": {
+      "expected": "21 encerclé"
+    },
+    "㉒": {
+      "expected": "22 encerclé"
+    },
+    "㉓": {
+      "expected": "23 encerclé"
+    },
+    "㉔": {
+      "expected": "24 encerclé"
+    },
+    "㉕": {
+      "expected": "25 encerclé"
+    },
+    "㉖": {
+      "expected": "26 encerclé"
+    },
+    "㉗": {
+      "expected": "27 encerclé"
+    },
+    "㉘": {
+      "expected": "28 encerclé"
+    },
+    "㉙": {
+      "expected": "29 encerclé"
+    },
+    "㉚": {
+      "expected": "30 encerclé"
+    },
+    "㉛": {
+      "expected": "31 encerclé"
+    },
+    "㉜": {
+      "expected": "32 encerclé"
+    },
+    "㉝": {
+      "expected": "33 encerclé"
+    },
+    "㉞": {
+      "expected": "34 encerclé"
+    },
+    "㉟": {
+      "expected": "35 encerclé"
+    },
+    "㊱": {
+      "expected": "36 encerclé"
+    },
+    "㊲": {
+      "expected": "37 encerclé"
+    },
+    "㊳": {
+      "expected": "38 encerclé"
+    },
+    "㊴": {
+      "expected": "39 encerclé"
+    },
+    "㊵": {
+      "expected": "40 encerclé"
+    },
+    "㊶": {
+      "expected": "41 encerclé"
+    },
+    "㊷": {
+      "expected": "42 encerclé"
+    },
+    "㊸": {
+      "expected": "43 encerclé"
+    },
+    "㊹": {
+      "expected": "44 encerclé"
+    },
+    "㊺": {
+      "expected": "45 encerclé"
+    },
+    "㊻": {
+      "expected": "46 encerclé"
+    },
+    "㊼": {
+      "expected": "47 encerclé"
+    },
+    "㊽": {
+      "expected": "48 encerclé"
+    },
+    "㊾": {
+      "expected": "49 encerclé"
+    },
+    "㊿": {
+      "expected": "50 encerclé"
+    },
+    "🄐": {
+      "expected": "A majuscule entre parenthèses"
+    },
+    "🄑": {
+      "expected": "B majuscule entre parenthèses"
+    },
+    "🄒": {
+      "expected": "C majuscule entre parenthèses"
+    },
+    "🄓": {
+      "expected": "D majuscule entre parenthèses"
+    },
+    "🄔": {
+      "expected": "E majuscule entre parenthèses"
+    },
+    "🄕": {
+      "expected": "F majuscule entre parenthèses"
+    },
+    "🄖": {
+      "expected": "G majuscule entre parenthèses"
+    },
+    "🄗": {
+      "expected": "H majuscule entre parenthèses"
+    },
+    "🄘": {
+      "expected": "I majuscule entre parenthèses"
+    },
+    "🄙": {
+      "expected": "J majuscule entre parenthèses"
+    },
+    "🄚": {
+      "expected": "K majuscule entre parenthèses"
+    },
+    "🄛": {
+      "expected": "L majuscule entre parenthèses"
+    },
+    "🄜": {
+      "expected": "M majuscule entre parenthèses"
+    },
+    "🄝": {
+      "expected": "N majuscule entre parenthèses"
+    },
+    "🄞": {
+      "expected": "O majuscule entre parenthèses"
+    },
+    "🄟": {
+      "expected": "P majuscule entre parenthèses"
+    },
+    "🄠": {
+      "expected": "Q majuscule entre parenthèses"
+    },
+    "🄡": {
+      "expected": "R majuscule entre parenthèses"
+    },
+    "🄢": {
+      "expected": "S majuscule entre parenthèses"
+    },
+    "🄣": {
+      "expected": "T majuscule entre parenthèses"
+    },
+    "🄤": {
+      "expected": "U majuscule entre parenthèses"
+    },
+    "🄥": {
+      "expected": "V majuscule entre parenthèses"
+    },
+    "🄦": {
+      "expected": "W majuscule entre parenthèses"
+    },
+    "🄧": {
+      "expected": "X majuscule entre parenthèses"
+    },
+    "🄨": {
+      "expected": "Y majuscule entre parenthèses"
+    },
+    "🄩": {
+      "expected": "Z majuscule entre parenthèses"
+    },
+    "⒜": {
+      "expected": "a entre parenthèses"
+    },
+    "⒝": {
+      "expected": "b entre parenthèses"
+    },
+    "⒞": {
+      "expected": "c entre parenthèses"
+    },
+    "⒟": {
+      "expected": "d entre parenthèses"
+    },
+    "⒠": {
+      "expected": "e entre parenthèses"
+    },
+    "⒡": {
+      "expected": "f entre parenthèses"
+    },
+    "⒢": {
+      "expected": "g entre parenthèses"
+    },
+    "⒣": {
+      "expected": "h entre parenthèses"
+    },
+    "⒤": {
+      "expected": "i entre parenthèses"
+    },
+    "⒥": {
+      "expected": "j entre parenthèses"
+    },
+    "⒦": {
+      "expected": "k entre parenthèses"
+    },
+    "⒧": {
+      "expected": "l entre parenthèses"
+    },
+    "⒨": {
+      "expected": "m entre parenthèses"
+    },
+    "⒩": {
+      "expected": "n entre parenthèses"
+    },
+    "⒪": {
+      "expected": "o entre parenthèses"
+    },
+    "⒫": {
+      "expected": "p entre parenthèses"
+    },
+    "⒬": {
+      "expected": "q entre parenthèses"
+    },
+    "⒭": {
+      "expected": "r entre parenthèses"
+    },
+    "⒮": {
+      "expected": "s entre parenthèses"
+    },
+    "⒯": {
+      "expected": "t entre parenthèses"
+    },
+    "⒰": {
+      "expected": "u entre parenthèses"
+    },
+    "⒱": {
+      "expected": "v entre parenthèses"
+    },
+    "⒲": {
+      "expected": "w entre parenthèses"
+    },
+    "⒳": {
+      "expected": "x entre parenthèses"
+    },
+    "⒴": {
+      "expected": "y entre parenthèses"
+    },
+    "⒵": {
+      "expected": "z entre parenthèses"
+    },
+    "⑴": {
+      "expected": "1 entre parenthèses"
+    },
+    "⑵": {
+      "expected": "2 entre parenthèses"
+    },
+    "⑶": {
+      "expected": "3 entre parenthèses"
+    },
+    "⑷": {
+      "expected": "4 entre parenthèses"
+    },
+    "⑸": {
+      "expected": "5 entre parenthèses"
+    },
+    "⑹": {
+      "expected": "6 entre parenthèses"
+    },
+    "⑺": {
+      "expected": "7 entre parenthèses"
+    },
+    "⑻": {
+      "expected": "8 entre parenthèses"
+    },
+    "⑼": {
+      "expected": "9 entre parenthèses"
+    },
+    "⑽": {
+      "expected": "10 entre parenthèses"
+    },
+    "⑾": {
+      "expected": "11 entre parenthèses"
+    },
+    "⑿": {
+      "expected": "12 entre parenthèses"
+    },
+    "⒀": {
+      "expected": "13 entre parenthèses"
+    },
+    "⒁": {
+      "expected": "14 entre parenthèses"
+    },
+    "⒂": {
+      "expected": "15 entre parenthèses"
+    },
+    "⒃": {
+      "expected": "16 entre parenthèses"
+    },
+    "⒄": {
+      "expected": "17 entre parenthèses"
+    },
+    "⒅": {
+      "expected": "18 entre parenthèses"
+    },
+    "⒆": {
+      "expected": "19 entre parenthèses"
+    },
+    "⒇": {
+      "expected": "20 entre parenthèses"
+    },
+    "🄀": {
+      "expected": "0 un point"
+    },
+    "⒈": {
+      "expected": "1 un point"
+    },
+    "⒉": {
+      "expected": "2 un point"
+    },
+    "⒊": {
+      "expected": "3 un point"
+    },
+    "⒋": {
+      "expected": "4 un point"
+    },
+    "⒌": {
+      "expected": "5 un point"
+    },
+    "⒍": {
+      "expected": "6 un point"
+    },
+    "⒎": {
+      "expected": "7 un point"
+    },
+    "⒏": {
+      "expected": "8 un point"
+    },
+    "⒐": {
+      "expected": "9 un point"
+    },
+    "⒑": {
+      "expected": "10 un point"
+    },
+    "⒒": {
+      "expected": "11 un point"
+    },
+    "⒓": {
+      "expected": "12 un point"
+    },
+    "⒔": {
+      "expected": "13 un point"
+    },
+    "⒕": {
+      "expected": "14 un point"
+    },
+    "⒖": {
+      "expected": "15 un point"
+    },
+    "⒗": {
+      "expected": "16 un point"
+    },
+    "⒘": {
+      "expected": "17 un point"
+    },
+    "⒙": {
+      "expected": "18 un point"
+    },
+    "⒚": {
+      "expected": "19 un point"
+    },
+    "⒛": {
+      "expected": "20 un point"
+    },
+    "🅐": {
+      "expected": "A majuscule encerclé noir"
+    },
+    "🅑": {
+      "expected": "B majuscule encerclé noir"
+    },
+    "🅒": {
+      "expected": "C majuscule encerclé noir"
+    },
+    "🅓": {
+      "expected": "D majuscule encerclé noir"
+    },
+    "🅔": {
+      "expected": "E majuscule encerclé noir"
+    },
+    "🅕": {
+      "expected": "F majuscule encerclé noir"
+    },
+    "🅖": {
+      "expected": "G majuscule encerclé noir"
+    },
+    "🅗": {
+      "expected": "H majuscule encerclé noir"
+    },
+    "🅘": {
+      "expected": "I majuscule encerclé noir"
+    },
+    "🅙": {
+      "expected": "J majuscule encerclé noir"
+    },
+    "🅚": {
+      "expected": "K majuscule encerclé noir"
+    },
+    "🅛": {
+      "expected": "L majuscule encerclé noir"
+    },
+    "🅜": {
+      "expected": "M majuscule encerclé noir"
+    },
+    "🅝": {
+      "expected": "N majuscule encerclé noir"
+    },
+    "🅞": {
+      "expected": "O majuscule encerclé noir"
+    },
+    "🅟": {
+      "expected": "P majuscule encerclé noir"
+    },
+    "🅠": {
+      "expected": "Q majuscule encerclé noir"
+    },
+    "🅡": {
+      "expected": "R majuscule encerclé noir"
+    },
+    "🅢": {
+      "expected": "S majuscule encerclé noir"
+    },
+    "🅣": {
+      "expected": "T majuscule encerclé noir"
+    },
+    "🅤": {
+      "expected": "U majuscule encerclé noir"
+    },
+    "🅥": {
+      "expected": "V majuscule encerclé noir"
+    },
+    "🅦": {
+      "expected": "W majuscule encerclé noir"
+    },
+    "🅧": {
+      "expected": "X majuscule encerclé noir"
+    },
+    "🅨": {
+      "expected": "Y majuscule encerclé noir"
+    },
+    "🅩": {
+      "expected": "Z majuscule encerclé noir"
+    },
+    "⓿": {
+      "expected": "0 encerclé noir"
+    },
+    "❶": {
+      "expected": "1 encerclé noir"
+    },
+    "❷": {
+      "expected": "2 encerclé noir"
+    },
+    "❸": {
+      "expected": "3 encerclé noir"
+    },
+    "❹": {
+      "expected": "4 encerclé noir"
+    },
+    "❺": {
+      "expected": "5 encerclé noir"
+    },
+    "❻": {
+      "expected": "6 encerclé noir"
+    },
+    "❼": {
+      "expected": "7 encerclé noir"
+    },
+    "❽": {
+      "expected": "8 encerclé noir"
+    },
+    "❾": {
+      "expected": "9 encerclé noir"
+    },
+    "❿": {
+      "expected": "10 encerclé noir"
+    },
+    "⓫": {
+      "expected": "11 encerclé noir"
+    },
+    "⓬": {
+      "expected": "12 encerclé noir"
+    },
+    "⓭": {
+      "expected": "13 encerclé noir"
+    },
+    "⓮": {
+      "expected": "14 encerclé noir"
+    },
+    "⓯": {
+      "expected": "15 encerclé noir"
+    },
+    "⓰": {
+      "expected": "16 encerclé noir"
+    },
+    "⓱": {
+      "expected": "17 encerclé noir"
+    },
+    "⓲": {
+      "expected": "18 encerclé noir"
+    },
+    "⓳": {
+      "expected": "19 encerclé noir"
+    },
+    "⓴": {
+      "expected": "20 encerclé noir"
+    },
+    "⓵": {
+      "expected": "1 encerclé double"
+    },
+    "⓶": {
+      "expected": "2 encerclé double"
+    },
+    "⓷": {
+      "expected": "3 encerclé double"
+    },
+    "⓸": {
+      "expected": "4 encerclé double"
+    },
+    "⓹": {
+      "expected": "5 encerclé double"
+    },
+    "⓺": {
+      "expected": "6 encerclé double"
+    },
+    "⓻": {
+      "expected": "7 encerclé double"
+    },
+    "⓼": {
+      "expected": "8 encerclé double"
+    },
+    "⓽": {
+      "expected": "9 encerclé double"
+    },
+    "⓾": {
+      "expected": "10 encerclé double"
+    },
+    "🄋": {
+      "expected": "0 sans empattement encerclé"
+    },
+    "➀": {
+      "expected": "1 sans empattement encerclé"
+    },
+    "➁": {
+      "expected": "2 sans empattement encerclé"
+    },
+    "➂": {
+      "expected": "3 sans empattement encerclé"
+    },
+    "➃": {
+      "expected": "4 sans empattement encerclé"
+    },
+    "➄": {
+      "expected": "5 sans empattement encerclé"
+    },
+    "➅": {
+      "expected": "6 sans empattement encerclé"
+    },
+    "➆": {
+      "expected": "7 sans empattement encerclé"
+    },
+    "➇": {
+      "expected": "8 sans empattement encerclé"
+    },
+    "➈": {
+      "expected": "9 sans empattement encerclé"
+    },
+    "➉": {
+      "expected": "10 sans empattement encerclé"
+    },
+    "🄌": {
+      "expected": "0 sans empattement encerclé noir"
+    },
+    "➊": {
+      "expected": "1 sans empattement encerclé noir"
+    },
+    "➋": {
+      "expected": "2 sans empattement encerclé noir"
+    },
+    "➌": {
+      "expected": "3 sans empattement encerclé noir"
+    },
+    "➍": {
+      "expected": "4 sans empattement encerclé noir"
+    },
+    "➎": {
+      "expected": "5 sans empattement encerclé noir"
+    },
+    "➏": {
+      "expected": "6 sans empattement encerclé noir"
+    },
+    "➐": {
+      "expected": "7 sans empattement encerclé noir"
+    },
+    "➑": {
+      "expected": "8 sans empattement encerclé noir"
+    },
+    "➒": {
+      "expected": "9 sans empattement encerclé noir"
+    },
+    "➓": {
+      "expected": "10 sans empattement encerclé noir"
+    },
+    "🄁": {
+      "expected": "0 virgule"
+    },
+    "🄂": {
+      "expected": "1 virgule"
+    },
+    "🄃": {
+      "expected": "2 virgule"
+    },
+    "🄄": {
+      "expected": "3 virgule"
+    },
+    "🄅": {
+      "expected": "4 virgule"
+    },
+    "🄆": {
+      "expected": "5 virgule"
+    },
+    "🄇": {
+      "expected": "6 virgule"
+    },
+    "🄈": {
+      "expected": "7 virgule"
+    },
+    "🄉": {
+      "expected": "8 virgule"
+    },
+    "🄊": {
+      "expected": "9 virgule"
+    },
+    "🄰": {
+      "expected": "A majuscule encadré"
+    },
+    "🄱": {
+      "expected": "B majuscule encadré"
+    },
+    "🄲": {
+      "expected": "C majuscule encadré"
+    },
+    "🄳": {
+      "expected": "D majuscule encadré"
+    },
+    "🄴": {
+      "expected": "E majuscule encadré"
+    },
+    "🄵": {
+      "expected": "F majuscule encadré"
+    },
+    "🄶": {
+      "expected": "G majuscule encadré"
+    },
+    "🄷": {
+      "expected": "H majuscule encadré"
+    },
+    "🄸": {
+      "expected": "I majuscule encadré"
+    },
+    "🄹": {
+      "expected": "J majuscule encadré"
+    },
+    "🄺": {
+      "expected": "K majuscule encadré"
+    },
+    "🄻": {
+      "expected": "L majuscule encadré"
+    },
+    "🄼": {
+      "expected": "M majuscule encadré"
+    },
+    "🄽": {
+      "expected": "N majuscule encadré"
+    },
+    "🄾": {
+      "expected": "O majuscule encadré"
+    },
+    "🄿": {
+      "expected": "P majuscule encadré"
+    },
+    "🅀": {
+      "expected": "Q majuscule encadré"
+    },
+    "🅁": {
+      "expected": "R majuscule encadré"
+    },
+    "🅂": {
+      "expected": "S majuscule encadré"
+    },
+    "🅃": {
+      "expected": "T majuscule encadré"
+    },
+    "🅄": {
+      "expected": "U majuscule encadré"
+    },
+    "🅅": {
+      "expected": "V majuscule encadré"
+    },
+    "🅆": {
+      "expected": "W majuscule encadré"
+    },
+    "🅇": {
+      "expected": "X majuscule encadré"
+    },
+    "🅈": {
+      "expected": "Y majuscule encadré"
+    },
+    "🅉": {
+      "expected": "Z majuscule encadré"
+    },
+    "🅰": {
+      "expected": "A majuscule encadré inverse"
+    },
+    "🅱": {
+      "expected": "B majuscule encadré inverse"
+    },
+    "🅲": {
+      "expected": "C majuscule encadré inverse"
+    },
+    "🅳": {
+      "expected": "D majuscule encadré inverse"
+    },
+    "🅴": {
+      "expected": "E majuscule encadré inverse"
+    },
+    "🅵": {
+      "expected": "F majuscule encadré inverse"
+    },
+    "🅶": {
+      "expected": "G majuscule encadré inverse"
+    },
+    "🅷": {
+      "expected": "H majuscule encadré inverse"
+    },
+    "🅸": {
+      "expected": "I majuscule encadré inverse"
+    },
+    "🅹": {
+      "expected": "J majuscule encadré inverse"
+    },
+    "🅺": {
+      "expected": "K majuscule encadré inverse"
+    },
+    "🅻": {
+      "expected": "L majuscule encadré inverse"
+    },
+    "🅼": {
+      "expected": "M majuscule encadré inverse"
+    },
+    "🅽": {
+      "expected": "N majuscule encadré inverse"
+    },
+    "🅾": {
+      "expected": "O majuscule encadré inverse"
+    },
+    "🅿": {
+      "expected": "P majuscule encadré inverse"
+    },
+    "🆀": {
+      "expected": "Q majuscule encadré inverse"
+    },
+    "🆁": {
+      "expected": "R majuscule encadré inverse"
+    },
+    "🆂": {
+      "expected": "S majuscule encadré inverse"
+    },
+    "🆃": {
+      "expected": "T majuscule encadré inverse"
+    },
+    "🆄": {
+      "expected": "U majuscule encadré inverse"
+    },
+    "🆅": {
+      "expected": "V majuscule encadré inverse"
+    },
+    "🆆": {
+      "expected": "W majuscule encadré inverse"
+    },
+    "🆇": {
+      "expected": "X majuscule encadré inverse"
+    },
+    "🆈": {
+      "expected": "Y majuscule encadré inverse"
+    },
+    "🆉": {
+      "expected": "Z majuscule encadré inverse"
+    }
+  }
+}

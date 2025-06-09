@@ -1,0 +1,4677 @@
+{
+  "locale": "da",
+  "factory": "speech",
+  "name": "DanishMathspeakAlphabets",
+  "active": "AlphabetsDanish",
+  "information": "Danish Mathspeak Alphabet speech tests.",
+  "domain": "mathspeak",
+  "modality": "speech",
+  "base": "input/common/alphabets.json",
+  "tests": {
+    "0": {
+      "expected": "0"
+    },
+    "1": {
+      "expected": "1"
+    },
+    "2": {
+      "expected": "2"
+    },
+    "3": {
+      "expected": "3"
+    },
+    "4": {
+      "expected": "4"
+    },
+    "5": {
+      "expected": "5"
+    },
+    "6": {
+      "expected": "6"
+    },
+    "7": {
+      "expected": "7"
+    },
+    "8": {
+      "expected": "8"
+    },
+    "9": {
+      "expected": "9"
+    },
+    "𝐀": {
+      "expected": "stort A fed"
+    },
+    "𝐁": {
+      "expected": "stort B fed"
+    },
+    "𝐂": {
+      "expected": "stort C fed"
+    },
+    "𝐃": {
+      "expected": "stort D fed"
+    },
+    "𝐄": {
+      "expected": "stort E fed"
+    },
+    "𝐅": {
+      "expected": "stort F fed"
+    },
+    "𝐆": {
+      "expected": "stort G fed"
+    },
+    "𝐇": {
+      "expected": "stort H fed"
+    },
+    "𝐈": {
+      "expected": "stort I fed"
+    },
+    "𝐉": {
+      "expected": "stort J fed"
+    },
+    "𝐊": {
+      "expected": "stort K fed"
+    },
+    "𝐋": {
+      "expected": "stort L fed"
+    },
+    "𝐌": {
+      "expected": "stort M fed"
+    },
+    "𝐍": {
+      "expected": "stort N fed"
+    },
+    "𝐎": {
+      "expected": "stort O fed"
+    },
+    "𝐏": {
+      "expected": "stort P fed"
+    },
+    "𝐐": {
+      "expected": "stort Q fed"
+    },
+    "𝐑": {
+      "expected": "stort R fed"
+    },
+    "𝐒": {
+      "expected": "stort S fed"
+    },
+    "𝐓": {
+      "expected": "stort T fed"
+    },
+    "𝐔": {
+      "expected": "stort U fed"
+    },
+    "𝐕": {
+      "expected": "stort V fed"
+    },
+    "𝐖": {
+      "expected": "stort W fed"
+    },
+    "𝐗": {
+      "expected": "stort X fed"
+    },
+    "𝐘": {
+      "expected": "stort Y fed"
+    },
+    "𝐙": {
+      "expected": "stort Z fed"
+    },
+    "𝐚": {
+      "expected": "a fed"
+    },
+    "𝐛": {
+      "expected": "b fed"
+    },
+    "𝐜": {
+      "expected": "c fed"
+    },
+    "𝐝": {
+      "expected": "d fed"
+    },
+    "𝐞": {
+      "expected": "e fed"
+    },
+    "𝐟": {
+      "expected": "f fed"
+    },
+    "𝐠": {
+      "expected": "g fed"
+    },
+    "𝐡": {
+      "expected": "h fed"
+    },
+    "𝐢": {
+      "expected": "I fed"
+    },
+    "𝐣": {
+      "expected": "j fed"
+    },
+    "𝐤": {
+      "expected": "k fed"
+    },
+    "𝐥": {
+      "expected": "l fed"
+    },
+    "𝐦": {
+      "expected": "m fed"
+    },
+    "𝐧": {
+      "expected": "n fed"
+    },
+    "𝐨": {
+      "expected": "o fed"
+    },
+    "𝐩": {
+      "expected": "p fed"
+    },
+    "𝐪": {
+      "expected": "q fed"
+    },
+    "𝐫": {
+      "expected": "r fed"
+    },
+    "𝐬": {
+      "expected": "s fed"
+    },
+    "𝐭": {
+      "expected": "t fed"
+    },
+    "𝐮": {
+      "expected": "u fed"
+    },
+    "𝐯": {
+      "expected": "v fed"
+    },
+    "𝐰": {
+      "expected": "w fed"
+    },
+    "𝐱": {
+      "expected": "x fed"
+    },
+    "𝐲": {
+      "expected": "y fed"
+    },
+    "𝐳": {
+      "expected": "z fed"
+    },
+    "𝚨": {
+      "expected": "stort Alfa fed"
+    },
+    "𝚩": {
+      "expected": "stort Beta fed"
+    },
+    "𝚪": {
+      "expected": "stort Gamma fed"
+    },
+    "𝚫": {
+      "expected": "stort Delta fed"
+    },
+    "𝚬": {
+      "expected": "stort Epsilon fed"
+    },
+    "𝚭": {
+      "expected": "stort Zeta fed"
+    },
+    "𝚮": {
+      "expected": "stort Eta fed"
+    },
+    "𝚯": {
+      "expected": "stort Theta fed"
+    },
+    "𝚰": {
+      "expected": "stort Jota fed"
+    },
+    "𝚱": {
+      "expected": "stort Kappa fed"
+    },
+    "𝚲": {
+      "expected": "stort Lambda fed"
+    },
+    "𝚳": {
+      "expected": "stort My fed"
+    },
+    "𝚴": {
+      "expected": "stort Ny fed"
+    },
+    "𝚵": {
+      "expected": "stort Xi fed"
+    },
+    "𝚶": {
+      "expected": "stort Omikron fed"
+    },
+    "𝚷": {
+      "expected": "stort Pi fed"
+    },
+    "𝚸": {
+      "expected": "stort Rho fed"
+    },
+    "𝚹": {
+      "expected": "stort Afsluttende sigma fed"
+    },
+    "𝚺": {
+      "expected": "stort Sigma fed"
+    },
+    "𝚻": {
+      "expected": "stort Tau fed"
+    },
+    "𝚼": {
+      "expected": "stort Ypsilon fed"
+    },
+    "𝚽": {
+      "expected": "stort Phi fed"
+    },
+    "𝚾": {
+      "expected": "stort Chi fed"
+    },
+    "𝚿": {
+      "expected": "stort Psi fed"
+    },
+    "𝛀": {
+      "expected": "stort Omega fed"
+    },
+    "𝛁": {
+      "expected": "nabla fed"
+    },
+    "𝛂": {
+      "expected": "alfa fed"
+    },
+    "𝛃": {
+      "expected": "beta fed"
+    },
+    "𝛄": {
+      "expected": "gamma fed"
+    },
+    "𝛅": {
+      "expected": "delta fed"
+    },
+    "𝛆": {
+      "expected": "epsilon fed"
+    },
+    "𝛇": {
+      "expected": "zeta fed"
+    },
+    "𝛈": {
+      "expected": "eta fed"
+    },
+    "𝛉": {
+      "expected": "theta fed"
+    },
+    "𝛊": {
+      "expected": "jota fed"
+    },
+    "𝛋": {
+      "expected": "kappa fed"
+    },
+    "𝛌": {
+      "expected": "lambda fed"
+    },
+    "𝛍": {
+      "expected": "my fed"
+    },
+    "𝛎": {
+      "expected": "ny fed"
+    },
+    "𝛏": {
+      "expected": "xi fed"
+    },
+    "𝛐": {
+      "expected": "omikron fed"
+    },
+    "𝛑": {
+      "expected": "pi fed"
+    },
+    "𝛒": {
+      "expected": "rho fed"
+    },
+    "𝛓": {
+      "expected": "afsluttende sigma fed"
+    },
+    "𝛔": {
+      "expected": "sigma fed"
+    },
+    "𝛕": {
+      "expected": "tau fed"
+    },
+    "𝛖": {
+      "expected": "ypsilon fed"
+    },
+    "𝛗": {
+      "expected": "phi fed"
+    },
+    "𝛘": {
+      "expected": "chi fed"
+    },
+    "𝛙": {
+      "expected": "psi fed"
+    },
+    "𝛚": {
+      "expected": "omega fed"
+    },
+    "𝛛": {
+      "expected": "partielle afledte fed"
+    },
+    "𝛜": {
+      "expected": "epsilon fed"
+    },
+    "𝛝": {
+      "expected": "theta fed"
+    },
+    "𝛞": {
+      "expected": "kappa fed"
+    },
+    "𝛟": {
+      "expected": "phi fed"
+    },
+    "𝛠": {
+      "expected": "rho fed"
+    },
+    "𝛡": {
+      "expected": "pi fed"
+    },
+    "𝟎": {
+      "expected": "0 fed"
+    },
+    "𝟏": {
+      "expected": "1 fed"
+    },
+    "𝟐": {
+      "expected": "2 fed"
+    },
+    "𝟑": {
+      "expected": "3 fed"
+    },
+    "𝟒": {
+      "expected": "4 fed"
+    },
+    "𝟓": {
+      "expected": "5 fed"
+    },
+    "𝟔": {
+      "expected": "6 fed"
+    },
+    "𝟕": {
+      "expected": "7 fed"
+    },
+    "𝟖": {
+      "expected": "8 fed"
+    },
+    "𝟗": {
+      "expected": "9 fed"
+    },
+    "𝕬": {
+      "expected": "stort A fed fraktur"
+    },
+    "𝕭": {
+      "expected": "stort B fed fraktur"
+    },
+    "𝕮": {
+      "expected": "stort C fed fraktur"
+    },
+    "𝕯": {
+      "expected": "stort D fed fraktur"
+    },
+    "𝕰": {
+      "expected": "stort E fed fraktur"
+    },
+    "𝕱": {
+      "expected": "stort F fed fraktur"
+    },
+    "𝕲": {
+      "expected": "stort G fed fraktur"
+    },
+    "𝕳": {
+      "expected": "stort H fed fraktur"
+    },
+    "𝕴": {
+      "expected": "stort I fed fraktur"
+    },
+    "𝕵": {
+      "expected": "stort J fed fraktur"
+    },
+    "𝕶": {
+      "expected": "stort K fed fraktur"
+    },
+    "𝕷": {
+      "expected": "stort L fed fraktur"
+    },
+    "𝕸": {
+      "expected": "stort M fed fraktur"
+    },
+    "𝕹": {
+      "expected": "stort N fed fraktur"
+    },
+    "𝕺": {
+      "expected": "stort O fed fraktur"
+    },
+    "𝕻": {
+      "expected": "stort P fed fraktur"
+    },
+    "𝕼": {
+      "expected": "stort Q fed fraktur"
+    },
+    "𝕽": {
+      "expected": "stort R fed fraktur"
+    },
+    "𝕾": {
+      "expected": "stort S fed fraktur"
+    },
+    "𝕿": {
+      "expected": "stort T fed fraktur"
+    },
+    "𝖀": {
+      "expected": "stort U fed fraktur"
+    },
+    "𝖁": {
+      "expected": "stort V fed fraktur"
+    },
+    "𝖂": {
+      "expected": "stort W fed fraktur"
+    },
+    "𝖃": {
+      "expected": "stort X fed fraktur"
+    },
+    "𝖄": {
+      "expected": "stort Y fed fraktur"
+    },
+    "𝖅": {
+      "expected": "stort Z fed fraktur"
+    },
+    "𝖆": {
+      "expected": "a fed fraktur"
+    },
+    "𝖇": {
+      "expected": "b fed fraktur"
+    },
+    "𝖈": {
+      "expected": "c fed fraktur"
+    },
+    "𝖉": {
+      "expected": "d fed fraktur"
+    },
+    "𝖊": {
+      "expected": "e fed fraktur"
+    },
+    "𝖋": {
+      "expected": "f fed fraktur"
+    },
+    "𝖌": {
+      "expected": "g fed fraktur"
+    },
+    "𝖍": {
+      "expected": "h fed fraktur"
+    },
+    "𝖎": {
+      "expected": "I fed fraktur"
+    },
+    "𝖏": {
+      "expected": "j fed fraktur"
+    },
+    "𝖐": {
+      "expected": "k fed fraktur"
+    },
+    "𝖑": {
+      "expected": "l fed fraktur"
+    },
+    "𝖒": {
+      "expected": "m fed fraktur"
+    },
+    "𝖓": {
+      "expected": "n fed fraktur"
+    },
+    "𝖔": {
+      "expected": "o fed fraktur"
+    },
+    "𝖕": {
+      "expected": "p fed fraktur"
+    },
+    "𝖖": {
+      "expected": "q fed fraktur"
+    },
+    "𝖗": {
+      "expected": "r fed fraktur"
+    },
+    "𝖘": {
+      "expected": "s fed fraktur"
+    },
+    "𝖙": {
+      "expected": "t fed fraktur"
+    },
+    "𝖚": {
+      "expected": "u fed fraktur"
+    },
+    "𝖛": {
+      "expected": "v fed fraktur"
+    },
+    "𝖜": {
+      "expected": "w fed fraktur"
+    },
+    "𝖝": {
+      "expected": "x fed fraktur"
+    },
+    "𝖞": {
+      "expected": "y fed fraktur"
+    },
+    "𝖟": {
+      "expected": "z fed fraktur"
+    },
+    "𝑨": {
+      "expected": "stort A fed kursiv"
+    },
+    "𝑩": {
+      "expected": "stort B fed kursiv"
+    },
+    "𝑪": {
+      "expected": "stort C fed kursiv"
+    },
+    "𝑫": {
+      "expected": "stort D fed kursiv"
+    },
+    "𝑬": {
+      "expected": "stort E fed kursiv"
+    },
+    "𝑭": {
+      "expected": "stort F fed kursiv"
+    },
+    "𝑮": {
+      "expected": "stort G fed kursiv"
+    },
+    "𝑯": {
+      "expected": "stort H fed kursiv"
+    },
+    "𝑰": {
+      "expected": "stort I fed kursiv"
+    },
+    "𝑱": {
+      "expected": "stort J fed kursiv"
+    },
+    "𝑲": {
+      "expected": "stort K fed kursiv"
+    },
+    "𝑳": {
+      "expected": "stort L fed kursiv"
+    },
+    "𝑴": {
+      "expected": "stort M fed kursiv"
+    },
+    "𝑵": {
+      "expected": "stort N fed kursiv"
+    },
+    "𝑶": {
+      "expected": "stort O fed kursiv"
+    },
+    "𝑷": {
+      "expected": "stort P fed kursiv"
+    },
+    "𝑸": {
+      "expected": "stort Q fed kursiv"
+    },
+    "𝑹": {
+      "expected": "stort R fed kursiv"
+    },
+    "𝑺": {
+      "expected": "stort S fed kursiv"
+    },
+    "𝑻": {
+      "expected": "stort T fed kursiv"
+    },
+    "𝑼": {
+      "expected": "stort U fed kursiv"
+    },
+    "𝑽": {
+      "expected": "stort V fed kursiv"
+    },
+    "𝑾": {
+      "expected": "stort W fed kursiv"
+    },
+    "𝑿": {
+      "expected": "stort X fed kursiv"
+    },
+    "𝒀": {
+      "expected": "stort Y fed kursiv"
+    },
+    "𝒁": {
+      "expected": "stort Z fed kursiv"
+    },
+    "𝒂": {
+      "expected": "a fed kursiv"
+    },
+    "𝒃": {
+      "expected": "b fed kursiv"
+    },
+    "𝒄": {
+      "expected": "c fed kursiv"
+    },
+    "𝒅": {
+      "expected": "d fed kursiv"
+    },
+    "𝒆": {
+      "expected": "e fed kursiv"
+    },
+    "𝒇": {
+      "expected": "f fed kursiv"
+    },
+    "𝒈": {
+      "expected": "g fed kursiv"
+    },
+    "𝒉": {
+      "expected": "h fed kursiv"
+    },
+    "𝒊": {
+      "expected": "I fed kursiv"
+    },
+    "𝒋": {
+      "expected": "j fed kursiv"
+    },
+    "𝒌": {
+      "expected": "k fed kursiv"
+    },
+    "𝒍": {
+      "expected": "l fed kursiv"
+    },
+    "𝒎": {
+      "expected": "m fed kursiv"
+    },
+    "𝒏": {
+      "expected": "n fed kursiv"
+    },
+    "𝒐": {
+      "expected": "o fed kursiv"
+    },
+    "𝒑": {
+      "expected": "p fed kursiv"
+    },
+    "𝒒": {
+      "expected": "q fed kursiv"
+    },
+    "𝒓": {
+      "expected": "r fed kursiv"
+    },
+    "𝒔": {
+      "expected": "s fed kursiv"
+    },
+    "𝒕": {
+      "expected": "t fed kursiv"
+    },
+    "𝒖": {
+      "expected": "u fed kursiv"
+    },
+    "𝒗": {
+      "expected": "v fed kursiv"
+    },
+    "𝒘": {
+      "expected": "w fed kursiv"
+    },
+    "𝒙": {
+      "expected": "x fed kursiv"
+    },
+    "𝒚": {
+      "expected": "y fed kursiv"
+    },
+    "𝒛": {
+      "expected": "z fed kursiv"
+    },
+    "𝜜": {
+      "expected": "stort Alfa fed kursiv"
+    },
+    "𝜝": {
+      "expected": "stort Beta fed kursiv"
+    },
+    "𝜞": {
+      "expected": "stort Gamma fed kursiv"
+    },
+    "𝜟": {
+      "expected": "stort Delta fed kursiv"
+    },
+    "𝜠": {
+      "expected": "stort Epsilon fed kursiv"
+    },
+    "𝜡": {
+      "expected": "stort Zeta fed kursiv"
+    },
+    "𝜢": {
+      "expected": "stort Eta fed kursiv"
+    },
+    "𝜣": {
+      "expected": "stort Theta fed kursiv"
+    },
+    "𝜤": {
+      "expected": "stort Jota fed kursiv"
+    },
+    "𝜥": {
+      "expected": "stort Kappa fed kursiv"
+    },
+    "𝜦": {
+      "expected": "stort Lambda fed kursiv"
+    },
+    "𝜧": {
+      "expected": "stort My fed kursiv"
+    },
+    "𝜨": {
+      "expected": "stort Ny fed kursiv"
+    },
+    "𝜩": {
+      "expected": "stort Xi fed kursiv"
+    },
+    "𝜪": {
+      "expected": "stort Omikron fed kursiv"
+    },
+    "𝜫": {
+      "expected": "stort Pi fed kursiv"
+    },
+    "𝜬": {
+      "expected": "stort Rho fed kursiv"
+    },
+    "𝜭": {
+      "expected": "stort Afsluttende sigma fed kursiv"
+    },
+    "𝜮": {
+      "expected": "stort Sigma fed kursiv"
+    },
+    "𝜯": {
+      "expected": "stort Tau fed kursiv"
+    },
+    "𝜰": {
+      "expected": "stort Ypsilon fed kursiv"
+    },
+    "𝜱": {
+      "expected": "stort Phi fed kursiv"
+    },
+    "𝜲": {
+      "expected": "stort Chi fed kursiv"
+    },
+    "𝜳": {
+      "expected": "stort Psi fed kursiv"
+    },
+    "𝜴": {
+      "expected": "stort Omega fed kursiv"
+    },
+    "𝜵": {
+      "expected": "nabla fed kursiv"
+    },
+    "𝜶": {
+      "expected": "alfa fed kursiv"
+    },
+    "𝜷": {
+      "expected": "beta fed kursiv"
+    },
+    "𝜸": {
+      "expected": "gamma fed kursiv"
+    },
+    "𝜹": {
+      "expected": "delta fed kursiv"
+    },
+    "𝜺": {
+      "expected": "epsilon fed kursiv"
+    },
+    "𝜻": {
+      "expected": "zeta fed kursiv"
+    },
+    "𝜼": {
+      "expected": "eta fed kursiv"
+    },
+    "𝜽": {
+      "expected": "theta fed kursiv"
+    },
+    "𝜾": {
+      "expected": "jota fed kursiv"
+    },
+    "𝜿": {
+      "expected": "kappa fed kursiv"
+    },
+    "𝝀": {
+      "expected": "lambda fed kursiv"
+    },
+    "𝝁": {
+      "expected": "my fed kursiv"
+    },
+    "𝝂": {
+      "expected": "ny fed kursiv"
+    },
+    "𝝃": {
+      "expected": "xi fed kursiv"
+    },
+    "𝝄": {
+      "expected": "omikron fed kursiv"
+    },
+    "𝝅": {
+      "expected": "pi fed kursiv"
+    },
+    "𝝆": {
+      "expected": "rho fed kursiv"
+    },
+    "𝝇": {
+      "expected": "afsluttende sigma fed kursiv"
+    },
+    "𝝈": {
+      "expected": "sigma fed kursiv"
+    },
+    "𝝉": {
+      "expected": "tau fed kursiv"
+    },
+    "𝝊": {
+      "expected": "ypsilon fed kursiv"
+    },
+    "𝝋": {
+      "expected": "phi fed kursiv"
+    },
+    "𝝌": {
+      "expected": "chi fed kursiv"
+    },
+    "𝝍": {
+      "expected": "psi fed kursiv"
+    },
+    "𝝎": {
+      "expected": "omega fed kursiv"
+    },
+    "𝝏": {
+      "expected": "partielle afledte fed kursiv"
+    },
+    "𝝐": {
+      "expected": "epsilon fed kursiv"
+    },
+    "𝝑": {
+      "expected": "theta fed kursiv"
+    },
+    "𝝒": {
+      "expected": "kappa fed kursiv"
+    },
+    "𝝓": {
+      "expected": "phi fed kursiv"
+    },
+    "𝝔": {
+      "expected": "rho fed kursiv"
+    },
+    "𝝕": {
+      "expected": "pi fed kursiv"
+    },
+    "𝓐": {
+      "expected": "stort A fed håndskrift"
+    },
+    "𝓑": {
+      "expected": "stort B fed håndskrift"
+    },
+    "𝓒": {
+      "expected": "stort C fed håndskrift"
+    },
+    "𝓓": {
+      "expected": "stort D fed håndskrift"
+    },
+    "𝓔": {
+      "expected": "stort E fed håndskrift"
+    },
+    "𝓕": {
+      "expected": "stort F fed håndskrift"
+    },
+    "𝓖": {
+      "expected": "stort G fed håndskrift"
+    },
+    "𝓗": {
+      "expected": "stort H fed håndskrift"
+    },
+    "𝓘": {
+      "expected": "stort I fed håndskrift"
+    },
+    "𝓙": {
+      "expected": "stort J fed håndskrift"
+    },
+    "𝓚": {
+      "expected": "stort K fed håndskrift"
+    },
+    "𝓛": {
+      "expected": "stort L fed håndskrift"
+    },
+    "𝓜": {
+      "expected": "stort M fed håndskrift"
+    },
+    "𝓝": {
+      "expected": "stort N fed håndskrift"
+    },
+    "𝓞": {
+      "expected": "stort O fed håndskrift"
+    },
+    "𝓟": {
+      "expected": "stort P fed håndskrift"
+    },
+    "𝓠": {
+      "expected": "stort Q fed håndskrift"
+    },
+    "𝓡": {
+      "expected": "stort R fed håndskrift"
+    },
+    "𝓢": {
+      "expected": "stort S fed håndskrift"
+    },
+    "𝓣": {
+      "expected": "stort T fed håndskrift"
+    },
+    "𝓤": {
+      "expected": "stort U fed håndskrift"
+    },
+    "𝓥": {
+      "expected": "stort V fed håndskrift"
+    },
+    "𝓦": {
+      "expected": "stort W fed håndskrift"
+    },
+    "𝓧": {
+      "expected": "stort X fed håndskrift"
+    },
+    "𝓨": {
+      "expected": "stort Y fed håndskrift"
+    },
+    "𝓩": {
+      "expected": "stort Z fed håndskrift"
+    },
+    "𝓪": {
+      "expected": "a fed håndskrift"
+    },
+    "𝓫": {
+      "expected": "b fed håndskrift"
+    },
+    "𝓬": {
+      "expected": "c fed håndskrift"
+    },
+    "𝓭": {
+      "expected": "d fed håndskrift"
+    },
+    "𝓮": {
+      "expected": "e fed håndskrift"
+    },
+    "𝓯": {
+      "expected": "f fed håndskrift"
+    },
+    "𝓰": {
+      "expected": "g fed håndskrift"
+    },
+    "𝓱": {
+      "expected": "h fed håndskrift"
+    },
+    "𝓲": {
+      "expected": "I fed håndskrift"
+    },
+    "𝓳": {
+      "expected": "j fed håndskrift"
+    },
+    "𝓴": {
+      "expected": "k fed håndskrift"
+    },
+    "𝓵": {
+      "expected": "l fed håndskrift"
+    },
+    "𝓶": {
+      "expected": "m fed håndskrift"
+    },
+    "𝓷": {
+      "expected": "n fed håndskrift"
+    },
+    "𝓸": {
+      "expected": "o fed håndskrift"
+    },
+    "𝓹": {
+      "expected": "p fed håndskrift"
+    },
+    "𝓺": {
+      "expected": "q fed håndskrift"
+    },
+    "𝓻": {
+      "expected": "r fed håndskrift"
+    },
+    "𝓼": {
+      "expected": "s fed håndskrift"
+    },
+    "𝓽": {
+      "expected": "t fed håndskrift"
+    },
+    "𝓾": {
+      "expected": "u fed håndskrift"
+    },
+    "𝓿": {
+      "expected": "v fed håndskrift"
+    },
+    "𝔀": {
+      "expected": "w fed håndskrift"
+    },
+    "𝔁": {
+      "expected": "x fed håndskrift"
+    },
+    "𝔂": {
+      "expected": "y fed håndskrift"
+    },
+    "𝔃": {
+      "expected": "z fed håndskrift"
+    },
+    "𝔸": {
+      "expected": "stort A dobbeltstreget"
+    },
+    "𝔹": {
+      "expected": "stort B dobbeltstreget"
+    },
+    "ℂ": {
+      "expected": "stort C dobbeltstreget"
+    },
+    "𝔻": {
+      "expected": "stort D dobbeltstreget"
+    },
+    "𝔼": {
+      "expected": "stort E dobbeltstreget"
+    },
+    "𝔽": {
+      "expected": "stort F dobbeltstreget"
+    },
+    "𝔾": {
+      "expected": "stort G dobbeltstreget"
+    },
+    "ℍ": {
+      "expected": "stort H dobbeltstreget"
+    },
+    "𝕀": {
+      "expected": "stort I dobbeltstreget"
+    },
+    "𝕁": {
+      "expected": "stort J dobbeltstreget"
+    },
+    "𝕂": {
+      "expected": "stort K dobbeltstreget"
+    },
+    "𝕃": {
+      "expected": "stort L dobbeltstreget"
+    },
+    "𝕄": {
+      "expected": "stort M dobbeltstreget"
+    },
+    "ℕ": {
+      "expected": "stort N dobbeltstreget"
+    },
+    "𝕆": {
+      "expected": "stort O dobbeltstreget"
+    },
+    "ℙ": {
+      "expected": "stort P dobbeltstreget"
+    },
+    "ℚ": {
+      "expected": "stort Q dobbeltstreget"
+    },
+    "ℝ": {
+      "expected": "stort R dobbeltstreget"
+    },
+    "𝕊": {
+      "expected": "stort S dobbeltstreget"
+    },
+    "𝕋": {
+      "expected": "stort T dobbeltstreget"
+    },
+    "𝕌": {
+      "expected": "stort U dobbeltstreget"
+    },
+    "𝕍": {
+      "expected": "stort V dobbeltstreget"
+    },
+    "𝕎": {
+      "expected": "stort W dobbeltstreget"
+    },
+    "𝕏": {
+      "expected": "stort X dobbeltstreget"
+    },
+    "𝕐": {
+      "expected": "stort Y dobbeltstreget"
+    },
+    "ℤ": {
+      "expected": "stort Z dobbeltstreget"
+    },
+    "𝕒": {
+      "expected": "a dobbeltstreget"
+    },
+    "𝕓": {
+      "expected": "b dobbeltstreget"
+    },
+    "𝕔": {
+      "expected": "c dobbeltstreget"
+    },
+    "𝕕": {
+      "expected": "d dobbeltstreget"
+    },
+    "𝕖": {
+      "expected": "e dobbeltstreget"
+    },
+    "𝕗": {
+      "expected": "f dobbeltstreget"
+    },
+    "𝕘": {
+      "expected": "g dobbeltstreget"
+    },
+    "𝕙": {
+      "expected": "h dobbeltstreget"
+    },
+    "𝕚": {
+      "expected": "I dobbeltstreget"
+    },
+    "𝕛": {
+      "expected": "j dobbeltstreget"
+    },
+    "𝕜": {
+      "expected": "k dobbeltstreget"
+    },
+    "𝕝": {
+      "expected": "l dobbeltstreget"
+    },
+    "𝕞": {
+      "expected": "m dobbeltstreget"
+    },
+    "𝕟": {
+      "expected": "n dobbeltstreget"
+    },
+    "𝕠": {
+      "expected": "o dobbeltstreget"
+    },
+    "𝕡": {
+      "expected": "p dobbeltstreget"
+    },
+    "𝕢": {
+      "expected": "q dobbeltstreget"
+    },
+    "𝕣": {
+      "expected": "r dobbeltstreget"
+    },
+    "𝕤": {
+      "expected": "s dobbeltstreget"
+    },
+    "𝕥": {
+      "expected": "t dobbeltstreget"
+    },
+    "𝕦": {
+      "expected": "u dobbeltstreget"
+    },
+    "𝕧": {
+      "expected": "v dobbeltstreget"
+    },
+    "𝕨": {
+      "expected": "w dobbeltstreget"
+    },
+    "𝕩": {
+      "expected": "x dobbeltstreget"
+    },
+    "𝕪": {
+      "expected": "y dobbeltstreget"
+    },
+    "𝕫": {
+      "expected": "z dobbeltstreget"
+    },
+    "𝟘": {
+      "expected": "0 dobbeltstreget"
+    },
+    "𝟙": {
+      "expected": "1 dobbeltstreget"
+    },
+    "𝟚": {
+      "expected": "2 dobbeltstreget"
+    },
+    "𝟛": {
+      "expected": "3 dobbeltstreget"
+    },
+    "𝟜": {
+      "expected": "4 dobbeltstreget"
+    },
+    "𝟝": {
+      "expected": "5 dobbeltstreget"
+    },
+    "𝟞": {
+      "expected": "6 dobbeltstreget"
+    },
+    "𝟟": {
+      "expected": "7 dobbeltstreget"
+    },
+    "𝟠": {
+      "expected": "8 dobbeltstreget"
+    },
+    "𝟡": {
+      "expected": "9 dobbeltstreget"
+    },
+    "Ａ": {
+      "expected": "stort A"
+    },
+    "Ｂ": {
+      "expected": "stort B"
+    },
+    "Ｃ": {
+      "expected": "stort C"
+    },
+    "Ｄ": {
+      "expected": "stort D"
+    },
+    "Ｅ": {
+      "expected": "stort E"
+    },
+    "Ｆ": {
+      "expected": "stort F"
+    },
+    "Ｇ": {
+      "expected": "stort G"
+    },
+    "Ｈ": {
+      "expected": "stort H"
+    },
+    "Ｉ": {
+      "expected": "stort I"
+    },
+    "Ｊ": {
+      "expected": "stort J"
+    },
+    "Ｋ": {
+      "expected": "stort K"
+    },
+    "Ｌ": {
+      "expected": "stort L"
+    },
+    "Ｍ": {
+      "expected": "stort M"
+    },
+    "Ｎ": {
+      "expected": "stort N"
+    },
+    "Ｏ": {
+      "expected": "stort O"
+    },
+    "Ｐ": {
+      "expected": "stort P"
+    },
+    "Ｑ": {
+      "expected": "stort Q"
+    },
+    "Ｒ": {
+      "expected": "stort R"
+    },
+    "Ｓ": {
+      "expected": "stort S"
+    },
+    "Ｔ": {
+      "expected": "stort T"
+    },
+    "Ｕ": {
+      "expected": "stort U"
+    },
+    "Ｖ": {
+      "expected": "stort V"
+    },
+    "Ｗ": {
+      "expected": "stort W"
+    },
+    "Ｘ": {
+      "expected": "stort X"
+    },
+    "Ｙ": {
+      "expected": "stort Y"
+    },
+    "Ｚ": {
+      "expected": "stort Z"
+    },
+    "ａ": {
+      "expected": "a"
+    },
+    "ｂ": {
+      "expected": "b"
+    },
+    "ｃ": {
+      "expected": "c"
+    },
+    "ｄ": {
+      "expected": "d"
+    },
+    "ｅ": {
+      "expected": "e"
+    },
+    "ｆ": {
+      "expected": "f"
+    },
+    "ｇ": {
+      "expected": "g"
+    },
+    "ｈ": {
+      "expected": "h"
+    },
+    "ｉ": {
+      "expected": "I"
+    },
+    "ｊ": {
+      "expected": "j"
+    },
+    "ｋ": {
+      "expected": "k"
+    },
+    "ｌ": {
+      "expected": "l"
+    },
+    "ｍ": {
+      "expected": "m"
+    },
+    "ｎ": {
+      "expected": "n"
+    },
+    "ｏ": {
+      "expected": "o"
+    },
+    "ｐ": {
+      "expected": "p"
+    },
+    "ｑ": {
+      "expected": "q"
+    },
+    "ｒ": {
+      "expected": "r"
+    },
+    "ｓ": {
+      "expected": "s"
+    },
+    "ｔ": {
+      "expected": "t"
+    },
+    "ｕ": {
+      "expected": "u"
+    },
+    "ｖ": {
+      "expected": "v"
+    },
+    "ｗ": {
+      "expected": "w"
+    },
+    "ｘ": {
+      "expected": "x"
+    },
+    "ｙ": {
+      "expected": "y"
+    },
+    "ｚ": {
+      "expected": "z"
+    },
+    "０": {
+      "expected": "0"
+    },
+    "１": {
+      "expected": "1"
+    },
+    "２": {
+      "expected": "2"
+    },
+    "３": {
+      "expected": "3"
+    },
+    "４": {
+      "expected": "4"
+    },
+    "５": {
+      "expected": "5"
+    },
+    "６": {
+      "expected": "6"
+    },
+    "７": {
+      "expected": "7"
+    },
+    "８": {
+      "expected": "8"
+    },
+    "９": {
+      "expected": "9"
+    },
+    "𝔄": {
+      "expected": "stort A fraktur"
+    },
+    "𝔅": {
+      "expected": "stort B fraktur"
+    },
+    "ℭ": {
+      "expected": "stort C fraktur"
+    },
+    "𝔇": {
+      "expected": "stort D fraktur"
+    },
+    "𝔈": {
+      "expected": "stort E fraktur"
+    },
+    "𝔉": {
+      "expected": "stort F fraktur"
+    },
+    "𝔊": {
+      "expected": "stort G fraktur"
+    },
+    "ℌ": {
+      "expected": "stort H fraktur"
+    },
+    "ℑ": {
+      "expected": "stort I fraktur"
+    },
+    "𝔍": {
+      "expected": "stort J fraktur"
+    },
+    "𝔎": {
+      "expected": "stort K fraktur"
+    },
+    "𝔏": {
+      "expected": "stort L fraktur"
+    },
+    "𝔐": {
+      "expected": "stort M fraktur"
+    },
+    "𝔑": {
+      "expected": "stort N fraktur"
+    },
+    "𝔒": {
+      "expected": "stort O fraktur"
+    },
+    "𝔓": {
+      "expected": "stort P fraktur"
+    },
+    "𝔔": {
+      "expected": "stort Q fraktur"
+    },
+    "ℜ": {
+      "expected": "stort R fraktur"
+    },
+    "𝔖": {
+      "expected": "stort S fraktur"
+    },
+    "𝔗": {
+      "expected": "stort T fraktur"
+    },
+    "𝔘": {
+      "expected": "stort U fraktur"
+    },
+    "𝔙": {
+      "expected": "stort V fraktur"
+    },
+    "𝔚": {
+      "expected": "stort W fraktur"
+    },
+    "𝔛": {
+      "expected": "stort X fraktur"
+    },
+    "𝔜": {
+      "expected": "stort Y fraktur"
+    },
+    "ℨ": {
+      "expected": "stort Z fraktur"
+    },
+    "𝔞": {
+      "expected": "a fraktur"
+    },
+    "𝔟": {
+      "expected": "b fraktur"
+    },
+    "𝔠": {
+      "expected": "c fraktur"
+    },
+    "𝔡": {
+      "expected": "d fraktur"
+    },
+    "𝔢": {
+      "expected": "e fraktur"
+    },
+    "𝔣": {
+      "expected": "f fraktur"
+    },
+    "𝔤": {
+      "expected": "g fraktur"
+    },
+    "𝔥": {
+      "expected": "h fraktur"
+    },
+    "𝔦": {
+      "expected": "I fraktur"
+    },
+    "𝔧": {
+      "expected": "j fraktur"
+    },
+    "𝔨": {
+      "expected": "k fraktur"
+    },
+    "𝔩": {
+      "expected": "l fraktur"
+    },
+    "𝔪": {
+      "expected": "m fraktur"
+    },
+    "𝔫": {
+      "expected": "n fraktur"
+    },
+    "𝔬": {
+      "expected": "o fraktur"
+    },
+    "𝔭": {
+      "expected": "p fraktur"
+    },
+    "𝔮": {
+      "expected": "q fraktur"
+    },
+    "𝔯": {
+      "expected": "r fraktur"
+    },
+    "𝔰": {
+      "expected": "s fraktur"
+    },
+    "𝔱": {
+      "expected": "t fraktur"
+    },
+    "𝔲": {
+      "expected": "u fraktur"
+    },
+    "𝔳": {
+      "expected": "v fraktur"
+    },
+    "𝔴": {
+      "expected": "w fraktur"
+    },
+    "𝔵": {
+      "expected": "x fraktur"
+    },
+    "𝔶": {
+      "expected": "y fraktur"
+    },
+    "𝔷": {
+      "expected": "z fraktur"
+    },
+    "𝐴": {
+      "expected": "stort A"
+    },
+    "𝐵": {
+      "expected": "stort B"
+    },
+    "𝐶": {
+      "expected": "stort C"
+    },
+    "𝐷": {
+      "expected": "stort D"
+    },
+    "𝐸": {
+      "expected": "stort E"
+    },
+    "𝐹": {
+      "expected": "stort F"
+    },
+    "𝐺": {
+      "expected": "stort G"
+    },
+    "𝐻": {
+      "expected": "stort H"
+    },
+    "𝐼": {
+      "expected": "stort I"
+    },
+    "𝐽": {
+      "expected": "stort J"
+    },
+    "𝐾": {
+      "expected": "stort K"
+    },
+    "𝐿": {
+      "expected": "stort L"
+    },
+    "𝑀": {
+      "expected": "stort M"
+    },
+    "𝑁": {
+      "expected": "stort N"
+    },
+    "𝑂": {
+      "expected": "stort O"
+    },
+    "𝑃": {
+      "expected": "stort P"
+    },
+    "𝑄": {
+      "expected": "stort Q"
+    },
+    "𝑅": {
+      "expected": "stort R"
+    },
+    "𝑆": {
+      "expected": "stort S"
+    },
+    "𝑇": {
+      "expected": "stort T"
+    },
+    "𝑈": {
+      "expected": "stort U"
+    },
+    "𝑉": {
+      "expected": "stort V"
+    },
+    "𝑊": {
+      "expected": "stort W"
+    },
+    "𝑋": {
+      "expected": "stort X"
+    },
+    "𝑌": {
+      "expected": "stort Y"
+    },
+    "𝑍": {
+      "expected": "stort Z"
+    },
+    "𝑎": {
+      "expected": "a"
+    },
+    "𝑏": {
+      "expected": "b"
+    },
+    "𝑐": {
+      "expected": "c"
+    },
+    "𝑑": {
+      "expected": "d"
+    },
+    "𝑒": {
+      "expected": "e"
+    },
+    "𝑓": {
+      "expected": "f"
+    },
+    "𝑔": {
+      "expected": "g"
+    },
+    "ℎ": {
+      "expected": "h med"
+    },
+    "𝑖": {
+      "expected": "I"
+    },
+    "𝑗": {
+      "expected": "j"
+    },
+    "𝑘": {
+      "expected": "k"
+    },
+    "𝑙": {
+      "expected": "l"
+    },
+    "𝑚": {
+      "expected": "m"
+    },
+    "𝑛": {
+      "expected": "n"
+    },
+    "𝑜": {
+      "expected": "o"
+    },
+    "𝑝": {
+      "expected": "p"
+    },
+    "𝑞": {
+      "expected": "q"
+    },
+    "𝑟": {
+      "expected": "r"
+    },
+    "𝑠": {
+      "expected": "s"
+    },
+    "𝑡": {
+      "expected": "t"
+    },
+    "𝑢": {
+      "expected": "u"
+    },
+    "𝑣": {
+      "expected": "v"
+    },
+    "𝑤": {
+      "expected": "w"
+    },
+    "𝑥": {
+      "expected": "x"
+    },
+    "𝑦": {
+      "expected": "y"
+    },
+    "𝑧": {
+      "expected": "z"
+    },
+    "𝛢": {
+      "expected": "stort Alfa"
+    },
+    "𝛣": {
+      "expected": "stort Beta"
+    },
+    "𝛤": {
+      "expected": "stort Gamma"
+    },
+    "𝛥": {
+      "expected": "stort Delta"
+    },
+    "𝛦": {
+      "expected": "stort Epsilon"
+    },
+    "𝛧": {
+      "expected": "stort Zeta"
+    },
+    "𝛨": {
+      "expected": "stort Eta"
+    },
+    "𝛩": {
+      "expected": "stort Theta"
+    },
+    "𝛪": {
+      "expected": "stort Jota"
+    },
+    "𝛫": {
+      "expected": "stort Kappa"
+    },
+    "𝛬": {
+      "expected": "stort Lambda"
+    },
+    "𝛭": {
+      "expected": "stort My"
+    },
+    "𝛮": {
+      "expected": "stort Ny"
+    },
+    "𝛯": {
+      "expected": "stort Xi"
+    },
+    "𝛰": {
+      "expected": "stort Omikron"
+    },
+    "𝛱": {
+      "expected": "stort Pi"
+    },
+    "𝛲": {
+      "expected": "stort Rho"
+    },
+    "𝛳": {
+      "expected": "stort Afsluttende sigma"
+    },
+    "𝛴": {
+      "expected": "stort Sigma"
+    },
+    "𝛵": {
+      "expected": "stort Tau"
+    },
+    "𝛶": {
+      "expected": "stort Ypsilon"
+    },
+    "𝛷": {
+      "expected": "stort Phi"
+    },
+    "𝛸": {
+      "expected": "stort Chi"
+    },
+    "𝛹": {
+      "expected": "stort Psi"
+    },
+    "𝛺": {
+      "expected": "stort Omega"
+    },
+    "𝛻": {
+      "expected": "nabla kursiv"
+    },
+    "𝛼": {
+      "expected": "alfa"
+    },
+    "𝛽": {
+      "expected": "beta"
+    },
+    "𝛾": {
+      "expected": "gamma"
+    },
+    "𝛿": {
+      "expected": "delta"
+    },
+    "𝜀": {
+      "expected": "epsilon"
+    },
+    "𝜁": {
+      "expected": "zeta"
+    },
+    "𝜂": {
+      "expected": "eta"
+    },
+    "𝜃": {
+      "expected": "theta"
+    },
+    "𝜄": {
+      "expected": "jota"
+    },
+    "𝜅": {
+      "expected": "kappa"
+    },
+    "𝜆": {
+      "expected": "lambda"
+    },
+    "𝜇": {
+      "expected": "my"
+    },
+    "𝜈": {
+      "expected": "ny"
+    },
+    "𝜉": {
+      "expected": "xi"
+    },
+    "𝜊": {
+      "expected": "omikron"
+    },
+    "𝜋": {
+      "expected": "pi"
+    },
+    "𝜌": {
+      "expected": "rho"
+    },
+    "𝜍": {
+      "expected": "afsluttende sigma"
+    },
+    "𝜎": {
+      "expected": "sigma"
+    },
+    "𝜏": {
+      "expected": "tau"
+    },
+    "𝜐": {
+      "expected": "ypsilon"
+    },
+    "𝜑": {
+      "expected": "phi"
+    },
+    "𝜒": {
+      "expected": "chi"
+    },
+    "𝜓": {
+      "expected": "psi"
+    },
+    "𝜔": {
+      "expected": "omega"
+    },
+    "𝜕": {
+      "expected": "partielle afledte kursiv"
+    },
+    "𝜖": {
+      "expected": "epsilon"
+    },
+    "𝜗": {
+      "expected": "theta"
+    },
+    "𝜘": {
+      "expected": "kappa"
+    },
+    "𝜙": {
+      "expected": "phi"
+    },
+    "𝜚": {
+      "expected": "rho"
+    },
+    "𝜛": {
+      "expected": "pi"
+    },
+    "𝙰": {
+      "expected": "stort A monospacieret"
+    },
+    "𝙱": {
+      "expected": "stort B monospacieret"
+    },
+    "𝙲": {
+      "expected": "stort C monospacieret"
+    },
+    "𝙳": {
+      "expected": "stort D monospacieret"
+    },
+    "𝙴": {
+      "expected": "stort E monospacieret"
+    },
+    "𝙵": {
+      "expected": "stort F monospacieret"
+    },
+    "𝙶": {
+      "expected": "stort G monospacieret"
+    },
+    "𝙷": {
+      "expected": "stort H monospacieret"
+    },
+    "𝙸": {
+      "expected": "stort I monospacieret"
+    },
+    "𝙹": {
+      "expected": "stort J monospacieret"
+    },
+    "𝙺": {
+      "expected": "stort K monospacieret"
+    },
+    "𝙻": {
+      "expected": "stort L monospacieret"
+    },
+    "𝙼": {
+      "expected": "stort M monospacieret"
+    },
+    "𝙽": {
+      "expected": "stort N monospacieret"
+    },
+    "𝙾": {
+      "expected": "stort O monospacieret"
+    },
+    "𝙿": {
+      "expected": "stort P monospacieret"
+    },
+    "𝚀": {
+      "expected": "stort Q monospacieret"
+    },
+    "𝚁": {
+      "expected": "stort R monospacieret"
+    },
+    "𝚂": {
+      "expected": "stort S monospacieret"
+    },
+    "𝚃": {
+      "expected": "stort T monospacieret"
+    },
+    "𝚄": {
+      "expected": "stort U monospacieret"
+    },
+    "𝚅": {
+      "expected": "stort V monospacieret"
+    },
+    "𝚆": {
+      "expected": "stort W monospacieret"
+    },
+    "𝚇": {
+      "expected": "stort X monospacieret"
+    },
+    "𝚈": {
+      "expected": "stort Y monospacieret"
+    },
+    "𝚉": {
+      "expected": "stort Z monospacieret"
+    },
+    "𝚊": {
+      "expected": "a monospacieret"
+    },
+    "𝚋": {
+      "expected": "b monospacieret"
+    },
+    "𝚌": {
+      "expected": "c monospacieret"
+    },
+    "𝚍": {
+      "expected": "d monospacieret"
+    },
+    "𝚎": {
+      "expected": "e monospacieret"
+    },
+    "𝚏": {
+      "expected": "f monospacieret"
+    },
+    "𝚐": {
+      "expected": "g monospacieret"
+    },
+    "𝚑": {
+      "expected": "h monospacieret"
+    },
+    "𝚒": {
+      "expected": "I monospacieret"
+    },
+    "𝚓": {
+      "expected": "j monospacieret"
+    },
+    "𝚔": {
+      "expected": "k monospacieret"
+    },
+    "𝚕": {
+      "expected": "l monospacieret"
+    },
+    "𝚖": {
+      "expected": "m monospacieret"
+    },
+    "𝚗": {
+      "expected": "n monospacieret"
+    },
+    "𝚘": {
+      "expected": "o monospacieret"
+    },
+    "𝚙": {
+      "expected": "p monospacieret"
+    },
+    "𝚚": {
+      "expected": "q monospacieret"
+    },
+    "𝚛": {
+      "expected": "r monospacieret"
+    },
+    "𝚜": {
+      "expected": "s monospacieret"
+    },
+    "𝚝": {
+      "expected": "t monospacieret"
+    },
+    "𝚞": {
+      "expected": "u monospacieret"
+    },
+    "𝚟": {
+      "expected": "v monospacieret"
+    },
+    "𝚠": {
+      "expected": "w monospacieret"
+    },
+    "𝚡": {
+      "expected": "x monospacieret"
+    },
+    "𝚢": {
+      "expected": "y monospacieret"
+    },
+    "𝚣": {
+      "expected": "z monospacieret"
+    },
+    "𝟶": {
+      "expected": "0 monospacieret"
+    },
+    "𝟷": {
+      "expected": "1 monospacieret"
+    },
+    "𝟸": {
+      "expected": "2 monospacieret"
+    },
+    "𝟹": {
+      "expected": "3 monospacieret"
+    },
+    "𝟺": {
+      "expected": "4 monospacieret"
+    },
+    "𝟻": {
+      "expected": "5 monospacieret"
+    },
+    "𝟼": {
+      "expected": "6 monospacieret"
+    },
+    "𝟽": {
+      "expected": "7 monospacieret"
+    },
+    "𝟾": {
+      "expected": "8 monospacieret"
+    },
+    "𝟿": {
+      "expected": "9 monospacieret"
+    },
+    "A": {
+      "expected": "stort A"
+    },
+    "B": {
+      "expected": "stort B"
+    },
+    "C": {
+      "expected": "stort C"
+    },
+    "D": {
+      "expected": "stort D"
+    },
+    "E": {
+      "expected": "stort E"
+    },
+    "F": {
+      "expected": "stort F"
+    },
+    "G": {
+      "expected": "stort G"
+    },
+    "H": {
+      "expected": "stort H"
+    },
+    "I": {
+      "expected": "stort I"
+    },
+    "J": {
+      "expected": "stort J"
+    },
+    "K": {
+      "expected": "stort K"
+    },
+    "L": {
+      "expected": "stort L"
+    },
+    "M": {
+      "expected": "stort M"
+    },
+    "N": {
+      "expected": "stort N"
+    },
+    "O": {
+      "expected": "stort O"
+    },
+    "P": {
+      "expected": "stort P"
+    },
+    "Q": {
+      "expected": "stort Q"
+    },
+    "R": {
+      "expected": "stort R"
+    },
+    "S": {
+      "expected": "stort S"
+    },
+    "T": {
+      "expected": "stort T"
+    },
+    "U": {
+      "expected": "stort U"
+    },
+    "V": {
+      "expected": "stort V"
+    },
+    "W": {
+      "expected": "stort W"
+    },
+    "X": {
+      "expected": "stort X"
+    },
+    "Y": {
+      "expected": "stort Y"
+    },
+    "Z": {
+      "expected": "stort Z"
+    },
+    "a": {
+      "expected": "a"
+    },
+    "b": {
+      "expected": "b"
+    },
+    "c": {
+      "expected": "c"
+    },
+    "d": {
+      "expected": "d"
+    },
+    "e": {
+      "expected": "e"
+    },
+    "f": {
+      "expected": "f"
+    },
+    "g": {
+      "expected": "g"
+    },
+    "h": {
+      "expected": "h"
+    },
+    "i": {
+      "expected": "I"
+    },
+    "j": {
+      "expected": "j"
+    },
+    "k": {
+      "expected": "k"
+    },
+    "l": {
+      "expected": "l"
+    },
+    "m": {
+      "expected": "m"
+    },
+    "n": {
+      "expected": "n"
+    },
+    "o": {
+      "expected": "o"
+    },
+    "p": {
+      "expected": "p"
+    },
+    "q": {
+      "expected": "q"
+    },
+    "r": {
+      "expected": "r"
+    },
+    "s": {
+      "expected": "s"
+    },
+    "t": {
+      "expected": "t"
+    },
+    "u": {
+      "expected": "u"
+    },
+    "v": {
+      "expected": "v"
+    },
+    "w": {
+      "expected": "w"
+    },
+    "x": {
+      "expected": "x"
+    },
+    "y": {
+      "expected": "y"
+    },
+    "z": {
+      "expected": "z"
+    },
+    "Α": {
+      "expected": "stort Alfa"
+    },
+    "Β": {
+      "expected": "stort Beta"
+    },
+    "Γ": {
+      "expected": "stort Gamma"
+    },
+    "Δ": {
+      "expected": "stort Delta"
+    },
+    "Ε": {
+      "expected": "stort Epsilon"
+    },
+    "Ζ": {
+      "expected": "stort Zeta"
+    },
+    "Η": {
+      "expected": "stort Eta"
+    },
+    "Θ": {
+      "expected": "stort Theta"
+    },
+    "Ι": {
+      "expected": "stort Jota"
+    },
+    "Κ": {
+      "expected": "stort Kappa"
+    },
+    "Λ": {
+      "expected": "stort Lambda"
+    },
+    "Μ": {
+      "expected": "stort My"
+    },
+    "Ν": {
+      "expected": "stort Ny"
+    },
+    "Ξ": {
+      "expected": "stort Xi"
+    },
+    "Ο": {
+      "expected": "stort Omikron"
+    },
+    "Π": {
+      "expected": "stort Pi"
+    },
+    "Ρ": {
+      "expected": "stort Rho"
+    },
+    "ϴ": {
+      "expected": "stort Afsluttende sigma"
+    },
+    "Σ": {
+      "expected": "stort Sigma"
+    },
+    "Τ": {
+      "expected": "stort Tau"
+    },
+    "Υ": {
+      "expected": "stort Ypsilon"
+    },
+    "Φ": {
+      "expected": "stort Phi"
+    },
+    "Χ": {
+      "expected": "stort Chi"
+    },
+    "Ψ": {
+      "expected": "stort Psi"
+    },
+    "Ω": {
+      "expected": "stort Omega"
+    },
+    "∇": {
+      "expected": "nabla"
+    },
+    "α": {
+      "expected": "alfa"
+    },
+    "β": {
+      "expected": "beta"
+    },
+    "γ": {
+      "expected": "gamma"
+    },
+    "δ": {
+      "expected": "delta"
+    },
+    "ε": {
+      "expected": "epsilon"
+    },
+    "ζ": {
+      "expected": "zeta"
+    },
+    "η": {
+      "expected": "eta"
+    },
+    "θ": {
+      "expected": "theta"
+    },
+    "ι": {
+      "expected": "jota"
+    },
+    "κ": {
+      "expected": "kappa"
+    },
+    "λ": {
+      "expected": "lambda"
+    },
+    "μ": {
+      "expected": "my"
+    },
+    "ν": {
+      "expected": "ny"
+    },
+    "ξ": {
+      "expected": "xi"
+    },
+    "ο": {
+      "expected": "omikron"
+    },
+    "π": {
+      "expected": "pi"
+    },
+    "ρ": {
+      "expected": "rho"
+    },
+    "ς": {
+      "expected": "afsluttende sigma"
+    },
+    "σ": {
+      "expected": "sigma"
+    },
+    "τ": {
+      "expected": "tau"
+    },
+    "υ": {
+      "expected": "ypsilon"
+    },
+    "φ": {
+      "expected": "phi"
+    },
+    "χ": {
+      "expected": "chi"
+    },
+    "ψ": {
+      "expected": "psi"
+    },
+    "ω": {
+      "expected": "omega"
+    },
+    "∂": {
+      "expected": "partielle afledte"
+    },
+    "ϵ": {
+      "expected": "epsilon"
+    },
+    "ϑ": {
+      "expected": "theta"
+    },
+    "ϰ": {
+      "expected": "kappa"
+    },
+    "ϕ": {
+      "expected": "phi"
+    },
+    "ϱ": {
+      "expected": "rho"
+    },
+    "ϖ": {
+      "expected": "pi"
+    },
+    "𝒜": {
+      "expected": "stort A håndskrift"
+    },
+    "ℬ": {
+      "expected": "stort B håndskrift"
+    },
+    "𝒞": {
+      "expected": "stort C håndskrift"
+    },
+    "𝒟": {
+      "expected": "stort D håndskrift"
+    },
+    "ℰ": {
+      "expected": "stort E håndskrift"
+    },
+    "ℱ": {
+      "expected": "stort F håndskrift"
+    },
+    "𝒢": {
+      "expected": "stort G håndskrift"
+    },
+    "ℋ": {
+      "expected": "stort H håndskrift"
+    },
+    "ℐ": {
+      "expected": "stort I håndskrift"
+    },
+    "𝒥": {
+      "expected": "stort J håndskrift"
+    },
+    "𝒦": {
+      "expected": "stort K håndskrift"
+    },
+    "ℒ": {
+      "expected": "stort L håndskrift"
+    },
+    "ℳ": {
+      "expected": "stort M håndskrift"
+    },
+    "𝒩": {
+      "expected": "stort N håndskrift"
+    },
+    "𝒪": {
+      "expected": "stort O håndskrift"
+    },
+    "𝒫": {
+      "expected": "stort P håndskrift"
+    },
+    "𝒬": {
+      "expected": "stort Q håndskrift"
+    },
+    "ℛ": {
+      "expected": "stort R håndskrift"
+    },
+    "𝒮": {
+      "expected": "stort S håndskrift"
+    },
+    "𝒯": {
+      "expected": "stort T håndskrift"
+    },
+    "𝒰": {
+      "expected": "stort U håndskrift"
+    },
+    "𝒱": {
+      "expected": "stort V håndskrift"
+    },
+    "𝒲": {
+      "expected": "stort W håndskrift"
+    },
+    "𝒳": {
+      "expected": "stort X håndskrift"
+    },
+    "𝒴": {
+      "expected": "stort Y håndskrift"
+    },
+    "𝒵": {
+      "expected": "stort Z håndskrift"
+    },
+    "𝒶": {
+      "expected": "a håndskrift"
+    },
+    "𝒷": {
+      "expected": "b håndskrift"
+    },
+    "𝒸": {
+      "expected": "c håndskrift"
+    },
+    "𝒹": {
+      "expected": "d håndskrift"
+    },
+    "ℯ": {
+      "expected": "e håndskrift"
+    },
+    "𝒻": {
+      "expected": "f håndskrift"
+    },
+    "ℊ": {
+      "expected": "g håndskrift"
+    },
+    "𝒽": {
+      "expected": "h håndskrift"
+    },
+    "𝒾": {
+      "expected": "I håndskrift"
+    },
+    "𝒿": {
+      "expected": "j håndskrift"
+    },
+    "𝓀": {
+      "expected": "k håndskrift"
+    },
+    "𝓁": {
+      "expected": "l håndskrift"
+    },
+    "𝓂": {
+      "expected": "m håndskrift"
+    },
+    "𝓃": {
+      "expected": "n håndskrift"
+    },
+    "ℴ": {
+      "expected": "o håndskrift"
+    },
+    "𝓅": {
+      "expected": "p håndskrift"
+    },
+    "𝓆": {
+      "expected": "q håndskrift"
+    },
+    "𝓇": {
+      "expected": "r håndskrift"
+    },
+    "𝓈": {
+      "expected": "s håndskrift"
+    },
+    "𝓉": {
+      "expected": "t håndskrift"
+    },
+    "𝓊": {
+      "expected": "u håndskrift"
+    },
+    "𝓋": {
+      "expected": "v håndskrift"
+    },
+    "𝓌": {
+      "expected": "w håndskrift"
+    },
+    "𝓍": {
+      "expected": "x håndskrift"
+    },
+    "𝓎": {
+      "expected": "y håndskrift"
+    },
+    "𝓏": {
+      "expected": "z håndskrift"
+    },
+    "𝖠": {
+      "expected": "stort A sans serif"
+    },
+    "𝖡": {
+      "expected": "stort B sans serif"
+    },
+    "𝖢": {
+      "expected": "stort C sans serif"
+    },
+    "𝖣": {
+      "expected": "stort D sans serif"
+    },
+    "𝖤": {
+      "expected": "stort E sans serif"
+    },
+    "𝖥": {
+      "expected": "stort F sans serif"
+    },
+    "𝖦": {
+      "expected": "stort G sans serif"
+    },
+    "𝖧": {
+      "expected": "stort H sans serif"
+    },
+    "𝖨": {
+      "expected": "stort I sans serif"
+    },
+    "𝖩": {
+      "expected": "stort J sans serif"
+    },
+    "𝖪": {
+      "expected": "stort K sans serif"
+    },
+    "𝖫": {
+      "expected": "stort L sans serif"
+    },
+    "𝖬": {
+      "expected": "stort M sans serif"
+    },
+    "𝖭": {
+      "expected": "stort N sans serif"
+    },
+    "𝖮": {
+      "expected": "stort O sans serif"
+    },
+    "𝖯": {
+      "expected": "stort P sans serif"
+    },
+    "𝖰": {
+      "expected": "stort Q sans serif"
+    },
+    "𝖱": {
+      "expected": "stort R sans serif"
+    },
+    "𝖲": {
+      "expected": "stort S sans serif"
+    },
+    "𝖳": {
+      "expected": "stort T sans serif"
+    },
+    "𝖴": {
+      "expected": "stort U sans serif"
+    },
+    "𝖵": {
+      "expected": "stort V sans serif"
+    },
+    "𝖶": {
+      "expected": "stort W sans serif"
+    },
+    "𝖷": {
+      "expected": "stort X sans serif"
+    },
+    "𝖸": {
+      "expected": "stort Y sans serif"
+    },
+    "𝖹": {
+      "expected": "stort Z sans serif"
+    },
+    "𝖺": {
+      "expected": "a sans serif"
+    },
+    "𝖻": {
+      "expected": "b sans serif"
+    },
+    "𝖼": {
+      "expected": "c sans serif"
+    },
+    "𝖽": {
+      "expected": "d sans serif"
+    },
+    "𝖾": {
+      "expected": "e sans serif"
+    },
+    "𝖿": {
+      "expected": "f sans serif"
+    },
+    "𝗀": {
+      "expected": "g sans serif"
+    },
+    "𝗁": {
+      "expected": "h sans serif"
+    },
+    "𝗂": {
+      "expected": "I sans serif"
+    },
+    "𝗃": {
+      "expected": "j sans serif"
+    },
+    "𝗄": {
+      "expected": "k sans serif"
+    },
+    "𝗅": {
+      "expected": "l sans serif"
+    },
+    "𝗆": {
+      "expected": "m sans serif"
+    },
+    "𝗇": {
+      "expected": "n sans serif"
+    },
+    "𝗈": {
+      "expected": "o sans serif"
+    },
+    "𝗉": {
+      "expected": "p sans serif"
+    },
+    "𝗊": {
+      "expected": "q sans serif"
+    },
+    "𝗋": {
+      "expected": "r sans serif"
+    },
+    "𝗌": {
+      "expected": "s sans serif"
+    },
+    "𝗍": {
+      "expected": "t sans serif"
+    },
+    "𝗎": {
+      "expected": "u sans serif"
+    },
+    "𝗏": {
+      "expected": "v sans serif"
+    },
+    "𝗐": {
+      "expected": "w sans serif"
+    },
+    "𝗑": {
+      "expected": "x sans serif"
+    },
+    "𝗒": {
+      "expected": "y sans serif"
+    },
+    "𝗓": {
+      "expected": "z sans serif"
+    },
+    "𝟢": {
+      "expected": "0 sans serif"
+    },
+    "𝟣": {
+      "expected": "1 sans serif"
+    },
+    "𝟤": {
+      "expected": "2 sans serif"
+    },
+    "𝟥": {
+      "expected": "3 sans serif"
+    },
+    "𝟦": {
+      "expected": "4 sans serif"
+    },
+    "𝟧": {
+      "expected": "5 sans serif"
+    },
+    "𝟨": {
+      "expected": "6 sans serif"
+    },
+    "𝟩": {
+      "expected": "7 sans serif"
+    },
+    "𝟪": {
+      "expected": "8 sans serif"
+    },
+    "𝟫": {
+      "expected": "9 sans serif"
+    },
+    "𝘈": {
+      "expected": "stort A sans serif kursiv"
+    },
+    "𝘉": {
+      "expected": "stort B sans serif kursiv"
+    },
+    "𝘊": {
+      "expected": "stort C sans serif kursiv"
+    },
+    "𝘋": {
+      "expected": "stort D sans serif kursiv"
+    },
+    "𝘌": {
+      "expected": "stort E sans serif kursiv"
+    },
+    "𝘍": {
+      "expected": "stort F sans serif kursiv"
+    },
+    "𝘎": {
+      "expected": "stort G sans serif kursiv"
+    },
+    "𝘏": {
+      "expected": "stort H sans serif kursiv"
+    },
+    "𝘐": {
+      "expected": "stort I sans serif kursiv"
+    },
+    "𝘑": {
+      "expected": "stort J sans serif kursiv"
+    },
+    "𝘒": {
+      "expected": "stort K sans serif kursiv"
+    },
+    "𝘓": {
+      "expected": "stort L sans serif kursiv"
+    },
+    "𝘔": {
+      "expected": "stort M sans serif kursiv"
+    },
+    "𝘕": {
+      "expected": "stort N sans serif kursiv"
+    },
+    "𝘖": {
+      "expected": "stort O sans serif kursiv"
+    },
+    "𝘗": {
+      "expected": "stort P sans serif kursiv"
+    },
+    "𝘘": {
+      "expected": "stort Q sans serif kursiv"
+    },
+    "𝘙": {
+      "expected": "stort R sans serif kursiv"
+    },
+    "𝘚": {
+      "expected": "stort S sans serif kursiv"
+    },
+    "𝘛": {
+      "expected": "stort T sans serif kursiv"
+    },
+    "𝘜": {
+      "expected": "stort U sans serif kursiv"
+    },
+    "𝘝": {
+      "expected": "stort V sans serif kursiv"
+    },
+    "𝘞": {
+      "expected": "stort W sans serif kursiv"
+    },
+    "𝘟": {
+      "expected": "stort X sans serif kursiv"
+    },
+    "𝘠": {
+      "expected": "stort Y sans serif kursiv"
+    },
+    "𝘡": {
+      "expected": "stort Z sans serif kursiv"
+    },
+    "𝘢": {
+      "expected": "a sans serif kursiv"
+    },
+    "𝘣": {
+      "expected": "b sans serif kursiv"
+    },
+    "𝘤": {
+      "expected": "c sans serif kursiv"
+    },
+    "𝘥": {
+      "expected": "d sans serif kursiv"
+    },
+    "𝘦": {
+      "expected": "e sans serif kursiv"
+    },
+    "𝘧": {
+      "expected": "f sans serif kursiv"
+    },
+    "𝘨": {
+      "expected": "g sans serif kursiv"
+    },
+    "𝘩": {
+      "expected": "h sans serif kursiv"
+    },
+    "𝘪": {
+      "expected": "I sans serif kursiv"
+    },
+    "𝘫": {
+      "expected": "j sans serif kursiv"
+    },
+    "𝘬": {
+      "expected": "k sans serif kursiv"
+    },
+    "𝘭": {
+      "expected": "l sans serif kursiv"
+    },
+    "𝘮": {
+      "expected": "m sans serif kursiv"
+    },
+    "𝘯": {
+      "expected": "n sans serif kursiv"
+    },
+    "𝘰": {
+      "expected": "o sans serif kursiv"
+    },
+    "𝘱": {
+      "expected": "p sans serif kursiv"
+    },
+    "𝘲": {
+      "expected": "q sans serif kursiv"
+    },
+    "𝘳": {
+      "expected": "r sans serif kursiv"
+    },
+    "𝘴": {
+      "expected": "s sans serif kursiv"
+    },
+    "𝘵": {
+      "expected": "t sans serif kursiv"
+    },
+    "𝘶": {
+      "expected": "u sans serif kursiv"
+    },
+    "𝘷": {
+      "expected": "v sans serif kursiv"
+    },
+    "𝘸": {
+      "expected": "w sans serif kursiv"
+    },
+    "𝘹": {
+      "expected": "x sans serif kursiv"
+    },
+    "𝘺": {
+      "expected": "y sans serif kursiv"
+    },
+    "𝘻": {
+      "expected": "z sans serif kursiv"
+    },
+    "𝗔": {
+      "expected": "stort A sans serif fed"
+    },
+    "𝗕": {
+      "expected": "stort B sans serif fed"
+    },
+    "𝗖": {
+      "expected": "stort C sans serif fed"
+    },
+    "𝗗": {
+      "expected": "stort D sans serif fed"
+    },
+    "𝗘": {
+      "expected": "stort E sans serif fed"
+    },
+    "𝗙": {
+      "expected": "stort F sans serif fed"
+    },
+    "𝗚": {
+      "expected": "stort G sans serif fed"
+    },
+    "𝗛": {
+      "expected": "stort H sans serif fed"
+    },
+    "𝗜": {
+      "expected": "stort I sans serif fed"
+    },
+    "𝗝": {
+      "expected": "stort J sans serif fed"
+    },
+    "𝗞": {
+      "expected": "stort K sans serif fed"
+    },
+    "𝗟": {
+      "expected": "stort L sans serif fed"
+    },
+    "𝗠": {
+      "expected": "stort M sans serif fed"
+    },
+    "𝗡": {
+      "expected": "stort N sans serif fed"
+    },
+    "𝗢": {
+      "expected": "stort O sans serif fed"
+    },
+    "𝗣": {
+      "expected": "stort P sans serif fed"
+    },
+    "𝗤": {
+      "expected": "stort Q sans serif fed"
+    },
+    "𝗥": {
+      "expected": "stort R sans serif fed"
+    },
+    "𝗦": {
+      "expected": "stort S sans serif fed"
+    },
+    "𝗧": {
+      "expected": "stort T sans serif fed"
+    },
+    "𝗨": {
+      "expected": "stort U sans serif fed"
+    },
+    "𝗩": {
+      "expected": "stort V sans serif fed"
+    },
+    "𝗪": {
+      "expected": "stort W sans serif fed"
+    },
+    "𝗫": {
+      "expected": "stort X sans serif fed"
+    },
+    "𝗬": {
+      "expected": "stort Y sans serif fed"
+    },
+    "𝗭": {
+      "expected": "stort Z sans serif fed"
+    },
+    "𝗮": {
+      "expected": "a sans serif fed"
+    },
+    "𝗯": {
+      "expected": "b sans serif fed"
+    },
+    "𝗰": {
+      "expected": "c sans serif fed"
+    },
+    "𝗱": {
+      "expected": "d sans serif fed"
+    },
+    "𝗲": {
+      "expected": "e sans serif fed"
+    },
+    "𝗳": {
+      "expected": "f sans serif fed"
+    },
+    "𝗴": {
+      "expected": "g sans serif fed"
+    },
+    "𝗵": {
+      "expected": "h sans serif fed"
+    },
+    "𝗶": {
+      "expected": "I sans serif fed"
+    },
+    "𝗷": {
+      "expected": "j sans serif fed"
+    },
+    "𝗸": {
+      "expected": "k sans serif fed"
+    },
+    "𝗹": {
+      "expected": "l sans serif fed"
+    },
+    "𝗺": {
+      "expected": "m sans serif fed"
+    },
+    "𝗻": {
+      "expected": "n sans serif fed"
+    },
+    "𝗼": {
+      "expected": "o sans serif fed"
+    },
+    "𝗽": {
+      "expected": "p sans serif fed"
+    },
+    "𝗾": {
+      "expected": "q sans serif fed"
+    },
+    "𝗿": {
+      "expected": "r sans serif fed"
+    },
+    "𝘀": {
+      "expected": "s sans serif fed"
+    },
+    "𝘁": {
+      "expected": "t sans serif fed"
+    },
+    "𝘂": {
+      "expected": "u sans serif fed"
+    },
+    "𝘃": {
+      "expected": "v sans serif fed"
+    },
+    "𝘄": {
+      "expected": "w sans serif fed"
+    },
+    "𝘅": {
+      "expected": "x sans serif fed"
+    },
+    "𝘆": {
+      "expected": "y sans serif fed"
+    },
+    "𝘇": {
+      "expected": "z sans serif fed"
+    },
+    "𝝖": {
+      "expected": "stort Alfa sans serif fed"
+    },
+    "𝝗": {
+      "expected": "stort Beta sans serif fed"
+    },
+    "𝝘": {
+      "expected": "stort Gamma sans serif fed"
+    },
+    "𝝙": {
+      "expected": "stort Delta sans serif fed"
+    },
+    "𝝚": {
+      "expected": "stort Epsilon sans serif fed"
+    },
+    "𝝛": {
+      "expected": "stort Zeta sans serif fed"
+    },
+    "𝝜": {
+      "expected": "stort Eta sans serif fed"
+    },
+    "𝝝": {
+      "expected": "stort Theta sans serif fed"
+    },
+    "𝝞": {
+      "expected": "stort Jota sans serif fed"
+    },
+    "𝝟": {
+      "expected": "stort Kappa sans serif fed"
+    },
+    "𝝠": {
+      "expected": "stort Lambda sans serif fed"
+    },
+    "𝝡": {
+      "expected": "stort My sans serif fed"
+    },
+    "𝝢": {
+      "expected": "stort Ny sans serif fed"
+    },
+    "𝝣": {
+      "expected": "stort Xi sans serif fed"
+    },
+    "𝝤": {
+      "expected": "stort Omikron sans serif fed"
+    },
+    "𝝥": {
+      "expected": "stort Pi sans serif fed"
+    },
+    "𝝦": {
+      "expected": "stort Rho sans serif fed"
+    },
+    "𝝧": {
+      "expected": "stort Afsluttende sigma sans serif fed"
+    },
+    "𝝨": {
+      "expected": "stort Sigma sans serif fed"
+    },
+    "𝝩": {
+      "expected": "stort Tau sans serif fed"
+    },
+    "𝝪": {
+      "expected": "stort Ypsilon sans serif fed"
+    },
+    "𝝫": {
+      "expected": "stort Phi sans serif fed"
+    },
+    "𝝬": {
+      "expected": "stort Chi sans serif fed"
+    },
+    "𝝭": {
+      "expected": "stort Psi sans serif fed"
+    },
+    "𝝮": {
+      "expected": "stort Omega sans serif fed"
+    },
+    "𝝯": {
+      "expected": "nabla sans serif fed"
+    },
+    "𝝰": {
+      "expected": "alfa sans serif fed"
+    },
+    "𝝱": {
+      "expected": "beta sans serif fed"
+    },
+    "𝝲": {
+      "expected": "gamma sans serif fed"
+    },
+    "𝝳": {
+      "expected": "delta sans serif fed"
+    },
+    "𝝴": {
+      "expected": "epsilon sans serif fed"
+    },
+    "𝝵": {
+      "expected": "zeta sans serif fed"
+    },
+    "𝝶": {
+      "expected": "eta sans serif fed"
+    },
+    "𝝷": {
+      "expected": "theta sans serif fed"
+    },
+    "𝝸": {
+      "expected": "jota sans serif fed"
+    },
+    "𝝹": {
+      "expected": "kappa sans serif fed"
+    },
+    "𝝺": {
+      "expected": "lambda sans serif fed"
+    },
+    "𝝻": {
+      "expected": "my sans serif fed"
+    },
+    "𝝼": {
+      "expected": "ny sans serif fed"
+    },
+    "𝝽": {
+      "expected": "xi sans serif fed"
+    },
+    "𝝾": {
+      "expected": "omikron sans serif fed"
+    },
+    "𝝿": {
+      "expected": "pi sans serif fed"
+    },
+    "𝞀": {
+      "expected": "rho sans serif fed"
+    },
+    "𝞁": {
+      "expected": "afsluttende sigma sans serif fed"
+    },
+    "𝞂": {
+      "expected": "sigma sans serif fed"
+    },
+    "𝞃": {
+      "expected": "tau sans serif fed"
+    },
+    "𝞄": {
+      "expected": "ypsilon sans serif fed"
+    },
+    "𝞅": {
+      "expected": "phi sans serif fed"
+    },
+    "𝞆": {
+      "expected": "chi sans serif fed"
+    },
+    "𝞇": {
+      "expected": "psi sans serif fed"
+    },
+    "𝞈": {
+      "expected": "omega sans serif fed"
+    },
+    "𝞉": {
+      "expected": "partielle afledte sans serif fed"
+    },
+    "𝞊": {
+      "expected": "epsilon sans serif fed"
+    },
+    "𝞋": {
+      "expected": "theta sans serif fed"
+    },
+    "𝞌": {
+      "expected": "kappa sans serif fed"
+    },
+    "𝞍": {
+      "expected": "phi sans serif fed"
+    },
+    "𝞎": {
+      "expected": "rho sans serif fed"
+    },
+    "𝞏": {
+      "expected": "pi sans serif fed"
+    },
+    "𝟬": {
+      "expected": "0 sans serif fed"
+    },
+    "𝟭": {
+      "expected": "1 sans serif fed"
+    },
+    "𝟮": {
+      "expected": "2 sans serif fed"
+    },
+    "𝟯": {
+      "expected": "3 sans serif fed"
+    },
+    "𝟰": {
+      "expected": "4 sans serif fed"
+    },
+    "𝟱": {
+      "expected": "5 sans serif fed"
+    },
+    "𝟲": {
+      "expected": "6 sans serif fed"
+    },
+    "𝟳": {
+      "expected": "7 sans serif fed"
+    },
+    "𝟴": {
+      "expected": "8 sans serif fed"
+    },
+    "𝟵": {
+      "expected": "9 sans serif fed"
+    },
+    "𝘼": {
+      "expected": "stort A sans serif fed kursiv"
+    },
+    "𝘽": {
+      "expected": "stort B sans serif fed kursiv"
+    },
+    "𝘾": {
+      "expected": "stort C sans serif fed kursiv"
+    },
+    "𝘿": {
+      "expected": "stort D sans serif fed kursiv"
+    },
+    "𝙀": {
+      "expected": "stort E sans serif fed kursiv"
+    },
+    "𝙁": {
+      "expected": "stort F sans serif fed kursiv"
+    },
+    "𝙂": {
+      "expected": "stort G sans serif fed kursiv"
+    },
+    "𝙃": {
+      "expected": "stort H sans serif fed kursiv"
+    },
+    "𝙄": {
+      "expected": "stort I sans serif fed kursiv"
+    },
+    "𝙅": {
+      "expected": "stort J sans serif fed kursiv"
+    },
+    "𝙆": {
+      "expected": "stort K sans serif fed kursiv"
+    },
+    "𝙇": {
+      "expected": "stort L sans serif fed kursiv"
+    },
+    "𝙈": {
+      "expected": "stort M sans serif fed kursiv"
+    },
+    "𝙉": {
+      "expected": "stort N sans serif fed kursiv"
+    },
+    "𝙊": {
+      "expected": "stort O sans serif fed kursiv"
+    },
+    "𝙋": {
+      "expected": "stort P sans serif fed kursiv"
+    },
+    "𝙌": {
+      "expected": "stort Q sans serif fed kursiv"
+    },
+    "𝙍": {
+      "expected": "stort R sans serif fed kursiv"
+    },
+    "𝙎": {
+      "expected": "stort S sans serif fed kursiv"
+    },
+    "𝙏": {
+      "expected": "stort T sans serif fed kursiv"
+    },
+    "𝙐": {
+      "expected": "stort U sans serif fed kursiv"
+    },
+    "𝙑": {
+      "expected": "stort V sans serif fed kursiv"
+    },
+    "𝙒": {
+      "expected": "stort W sans serif fed kursiv"
+    },
+    "𝙓": {
+      "expected": "stort X sans serif fed kursiv"
+    },
+    "𝙔": {
+      "expected": "stort Y sans serif fed kursiv"
+    },
+    "𝙕": {
+      "expected": "stort Z sans serif fed kursiv"
+    },
+    "𝙖": {
+      "expected": "a sans serif fed kursiv"
+    },
+    "𝙗": {
+      "expected": "b sans serif fed kursiv"
+    },
+    "𝙘": {
+      "expected": "c sans serif fed kursiv"
+    },
+    "𝙙": {
+      "expected": "d sans serif fed kursiv"
+    },
+    "𝙚": {
+      "expected": "e sans serif fed kursiv"
+    },
+    "𝙛": {
+      "expected": "f sans serif fed kursiv"
+    },
+    "𝙜": {
+      "expected": "g sans serif fed kursiv"
+    },
+    "𝙝": {
+      "expected": "h sans serif fed kursiv"
+    },
+    "𝙞": {
+      "expected": "I sans serif fed kursiv"
+    },
+    "𝙟": {
+      "expected": "j sans serif fed kursiv"
+    },
+    "𝙠": {
+      "expected": "k sans serif fed kursiv"
+    },
+    "𝙡": {
+      "expected": "l sans serif fed kursiv"
+    },
+    "𝙢": {
+      "expected": "m sans serif fed kursiv"
+    },
+    "𝙣": {
+      "expected": "n sans serif fed kursiv"
+    },
+    "𝙤": {
+      "expected": "o sans serif fed kursiv"
+    },
+    "𝙥": {
+      "expected": "p sans serif fed kursiv"
+    },
+    "𝙦": {
+      "expected": "q sans serif fed kursiv"
+    },
+    "𝙧": {
+      "expected": "r sans serif fed kursiv"
+    },
+    "𝙨": {
+      "expected": "s sans serif fed kursiv"
+    },
+    "𝙩": {
+      "expected": "t sans serif fed kursiv"
+    },
+    "𝙪": {
+      "expected": "u sans serif fed kursiv"
+    },
+    "𝙫": {
+      "expected": "v sans serif fed kursiv"
+    },
+    "𝙬": {
+      "expected": "w sans serif fed kursiv"
+    },
+    "𝙭": {
+      "expected": "x sans serif fed kursiv"
+    },
+    "𝙮": {
+      "expected": "y sans serif fed kursiv"
+    },
+    "𝙯": {
+      "expected": "z sans serif fed kursiv"
+    },
+    "𝞐": {
+      "expected": "stort Alfa sans serif fed kursiv"
+    },
+    "𝞑": {
+      "expected": "stort Beta sans serif fed kursiv"
+    },
+    "𝞒": {
+      "expected": "stort Gamma sans serif fed kursiv"
+    },
+    "𝞓": {
+      "expected": "stort Delta sans serif fed kursiv"
+    },
+    "𝞔": {
+      "expected": "stort Epsilon sans serif fed kursiv"
+    },
+    "𝞕": {
+      "expected": "stort Zeta sans serif fed kursiv"
+    },
+    "𝞖": {
+      "expected": "stort Eta sans serif fed kursiv"
+    },
+    "𝞗": {
+      "expected": "stort Theta sans serif fed kursiv"
+    },
+    "𝞘": {
+      "expected": "stort Jota sans serif fed kursiv"
+    },
+    "𝞙": {
+      "expected": "stort Kappa sans serif fed kursiv"
+    },
+    "𝞚": {
+      "expected": "stort Lambda sans serif fed kursiv"
+    },
+    "𝞛": {
+      "expected": "stort My sans serif fed kursiv"
+    },
+    "𝞜": {
+      "expected": "stort Ny sans serif fed kursiv"
+    },
+    "𝞝": {
+      "expected": "stort Xi sans serif fed kursiv"
+    },
+    "𝞞": {
+      "expected": "stort Omikron sans serif fed kursiv"
+    },
+    "𝞟": {
+      "expected": "stort Pi sans serif fed kursiv"
+    },
+    "𝞠": {
+      "expected": "stort Rho sans serif fed kursiv"
+    },
+    "𝞡": {
+      "expected": "stort Afsluttende sigma sans serif fed kursiv"
+    },
+    "𝞢": {
+      "expected": "stort Sigma sans serif fed kursiv"
+    },
+    "𝞣": {
+      "expected": "stort Tau sans serif fed kursiv"
+    },
+    "𝞤": {
+      "expected": "stort Ypsilon sans serif fed kursiv"
+    },
+    "𝞥": {
+      "expected": "stort Phi sans serif fed kursiv"
+    },
+    "𝞦": {
+      "expected": "stort Chi sans serif fed kursiv"
+    },
+    "𝞧": {
+      "expected": "stort Psi sans serif fed kursiv"
+    },
+    "𝞨": {
+      "expected": "stort Omega sans serif fed kursiv"
+    },
+    "𝞩": {
+      "expected": "nabla sans serif fed kursiv"
+    },
+    "𝞪": {
+      "expected": "alfa sans serif fed kursiv"
+    },
+    "𝞫": {
+      "expected": "beta sans serif fed kursiv"
+    },
+    "𝞬": {
+      "expected": "gamma sans serif fed kursiv"
+    },
+    "𝞭": {
+      "expected": "delta sans serif fed kursiv"
+    },
+    "𝞮": {
+      "expected": "epsilon sans serif fed kursiv"
+    },
+    "𝞯": {
+      "expected": "zeta sans serif fed kursiv"
+    },
+    "𝞰": {
+      "expected": "eta sans serif fed kursiv"
+    },
+    "𝞱": {
+      "expected": "theta sans serif fed kursiv"
+    },
+    "𝞲": {
+      "expected": "jota sans serif fed kursiv"
+    },
+    "𝞳": {
+      "expected": "kappa sans serif fed kursiv"
+    },
+    "𝞴": {
+      "expected": "lambda sans serif fed kursiv"
+    },
+    "𝞵": {
+      "expected": "my sans serif fed kursiv"
+    },
+    "𝞶": {
+      "expected": "ny sans serif fed kursiv"
+    },
+    "𝞷": {
+      "expected": "xi sans serif fed kursiv"
+    },
+    "𝞸": {
+      "expected": "omikron sans serif fed kursiv"
+    },
+    "𝞹": {
+      "expected": "pi sans serif fed kursiv"
+    },
+    "𝞺": {
+      "expected": "rho sans serif fed kursiv"
+    },
+    "𝞻": {
+      "expected": "afsluttende sigma sans serif fed kursiv"
+    },
+    "𝞼": {
+      "expected": "sigma sans serif fed kursiv"
+    },
+    "𝞽": {
+      "expected": "tau sans serif fed kursiv"
+    },
+    "𝞾": {
+      "expected": "ypsilon sans serif fed kursiv"
+    },
+    "𝞿": {
+      "expected": "phi sans serif fed kursiv"
+    },
+    "𝟀": {
+      "expected": "chi sans serif fed kursiv"
+    },
+    "𝟁": {
+      "expected": "psi sans serif fed kursiv"
+    },
+    "𝟂": {
+      "expected": "omega sans serif fed kursiv"
+    },
+    "𝟃": {
+      "expected": "partielle afledte sans serif fed kursiv"
+    },
+    "𝟄": {
+      "expected": "epsilon sans serif fed kursiv"
+    },
+    "𝟅": {
+      "expected": "theta sans serif fed kursiv"
+    },
+    "𝟆": {
+      "expected": "kappa sans serif fed kursiv"
+    },
+    "𝟇": {
+      "expected": "phi sans serif fed kursiv"
+    },
+    "𝟈": {
+      "expected": "rho sans serif fed kursiv"
+    },
+    "𝟉": {
+      "expected": "pi sans serif fed kursiv"
+    },
+    "⁰": {
+      "expected": "hævet 0"
+    },
+    "¹": {
+      "expected": "hævet 1"
+    },
+    "²": {
+      "expected": "hævet 2"
+    },
+    "³": {
+      "expected": "hævet 3"
+    },
+    "⁴": {
+      "expected": "hævet 4"
+    },
+    "⁵": {
+      "expected": "hævet 5"
+    },
+    "⁶": {
+      "expected": "hævet 6"
+    },
+    "⁷": {
+      "expected": "hævet 7"
+    },
+    "⁸": {
+      "expected": "hævet 8"
+    },
+    "⁹": {
+      "expected": "hævet 9"
+    },
+    "₀": {
+      "expected": "sænket 0"
+    },
+    "₁": {
+      "expected": "sænket 1"
+    },
+    "₂": {
+      "expected": "sænket 2"
+    },
+    "₃": {
+      "expected": "sænket 3"
+    },
+    "₄": {
+      "expected": "sænket 4"
+    },
+    "₅": {
+      "expected": "sænket 5"
+    },
+    "₆": {
+      "expected": "sænket 6"
+    },
+    "₇": {
+      "expected": "sænket 7"
+    },
+    "₈": {
+      "expected": "sænket 8"
+    },
+    "₉": {
+      "expected": "sænket 9"
+    },
+    "Ⓐ": {
+      "expected": "stort A i cirkel"
+    },
+    "Ⓑ": {
+      "expected": "stort B i cirkel"
+    },
+    "Ⓒ": {
+      "expected": "stort C i cirkel"
+    },
+    "Ⓓ": {
+      "expected": "stort D i cirkel"
+    },
+    "Ⓔ": {
+      "expected": "stort E i cirkel"
+    },
+    "Ⓕ": {
+      "expected": "stort F i cirkel"
+    },
+    "Ⓖ": {
+      "expected": "stort G i cirkel"
+    },
+    "Ⓗ": {
+      "expected": "stort H i cirkel"
+    },
+    "Ⓘ": {
+      "expected": "stort I i cirkel"
+    },
+    "Ⓙ": {
+      "expected": "stort J i cirkel"
+    },
+    "Ⓚ": {
+      "expected": "stort K i cirkel"
+    },
+    "Ⓛ": {
+      "expected": "stort L i cirkel"
+    },
+    "Ⓜ": {
+      "expected": "stort M i cirkel"
+    },
+    "Ⓝ": {
+      "expected": "stort N i cirkel"
+    },
+    "Ⓞ": {
+      "expected": "stort O i cirkel"
+    },
+    "Ⓟ": {
+      "expected": "stort P i cirkel"
+    },
+    "Ⓠ": {
+      "expected": "stort Q i cirkel"
+    },
+    "Ⓡ": {
+      "expected": "stort R i cirkel"
+    },
+    "Ⓢ": {
+      "expected": "stort S i cirkel"
+    },
+    "Ⓣ": {
+      "expected": "stort T i cirkel"
+    },
+    "Ⓤ": {
+      "expected": "stort U i cirkel"
+    },
+    "Ⓥ": {
+      "expected": "stort V i cirkel"
+    },
+    "Ⓦ": {
+      "expected": "stort W i cirkel"
+    },
+    "Ⓧ": {
+      "expected": "stort X i cirkel"
+    },
+    "Ⓨ": {
+      "expected": "stort Y i cirkel"
+    },
+    "Ⓩ": {
+      "expected": "stort Z i cirkel"
+    },
+    "ⓐ": {
+      "expected": "a i cirkel"
+    },
+    "ⓑ": {
+      "expected": "b i cirkel"
+    },
+    "ⓒ": {
+      "expected": "c i cirkel"
+    },
+    "ⓓ": {
+      "expected": "d i cirkel"
+    },
+    "ⓔ": {
+      "expected": "e i cirkel"
+    },
+    "ⓕ": {
+      "expected": "f i cirkel"
+    },
+    "ⓖ": {
+      "expected": "g i cirkel"
+    },
+    "ⓗ": {
+      "expected": "h i cirkel"
+    },
+    "ⓘ": {
+      "expected": "I i cirkel"
+    },
+    "ⓙ": {
+      "expected": "j i cirkel"
+    },
+    "ⓚ": {
+      "expected": "k i cirkel"
+    },
+    "ⓛ": {
+      "expected": "l i cirkel"
+    },
+    "ⓜ": {
+      "expected": "m i cirkel"
+    },
+    "ⓝ": {
+      "expected": "n i cirkel"
+    },
+    "ⓞ": {
+      "expected": "o i cirkel"
+    },
+    "ⓟ": {
+      "expected": "p i cirkel"
+    },
+    "ⓠ": {
+      "expected": "q i cirkel"
+    },
+    "ⓡ": {
+      "expected": "r i cirkel"
+    },
+    "ⓢ": {
+      "expected": "s i cirkel"
+    },
+    "ⓣ": {
+      "expected": "t i cirkel"
+    },
+    "ⓤ": {
+      "expected": "u i cirkel"
+    },
+    "ⓥ": {
+      "expected": "v i cirkel"
+    },
+    "ⓦ": {
+      "expected": "w i cirkel"
+    },
+    "ⓧ": {
+      "expected": "x i cirkel"
+    },
+    "ⓨ": {
+      "expected": "y i cirkel"
+    },
+    "ⓩ": {
+      "expected": "z i cirkel"
+    },
+    "⓪": {
+      "expected": "0 i cirkel"
+    },
+    "①": {
+      "expected": "1 i cirkel"
+    },
+    "②": {
+      "expected": "2 i cirkel"
+    },
+    "③": {
+      "expected": "3 i cirkel"
+    },
+    "④": {
+      "expected": "4 i cirkel"
+    },
+    "⑤": {
+      "expected": "5 i cirkel"
+    },
+    "⑥": {
+      "expected": "6 i cirkel"
+    },
+    "⑦": {
+      "expected": "7 i cirkel"
+    },
+    "⑧": {
+      "expected": "8 i cirkel"
+    },
+    "⑨": {
+      "expected": "9 i cirkel"
+    },
+    "⑩": {
+      "expected": "10 i cirkel"
+    },
+    "⑪": {
+      "expected": "11 i cirkel"
+    },
+    "⑫": {
+      "expected": "12 i cirkel"
+    },
+    "⑬": {
+      "expected": "13 i cirkel"
+    },
+    "⑭": {
+      "expected": "14 i cirkel"
+    },
+    "⑮": {
+      "expected": "15 i cirkel"
+    },
+    "⑯": {
+      "expected": "16 i cirkel"
+    },
+    "⑰": {
+      "expected": "17 i cirkel"
+    },
+    "⑱": {
+      "expected": "18 i cirkel"
+    },
+    "⑲": {
+      "expected": "19 i cirkel"
+    },
+    "⑳": {
+      "expected": "20 i cirkel"
+    },
+    "㉑": {
+      "expected": "21 i cirkel"
+    },
+    "㉒": {
+      "expected": "22 i cirkel"
+    },
+    "㉓": {
+      "expected": "23 i cirkel"
+    },
+    "㉔": {
+      "expected": "24 i cirkel"
+    },
+    "㉕": {
+      "expected": "25 i cirkel"
+    },
+    "㉖": {
+      "expected": "26 i cirkel"
+    },
+    "㉗": {
+      "expected": "27 i cirkel"
+    },
+    "㉘": {
+      "expected": "28 i cirkel"
+    },
+    "㉙": {
+      "expected": "29 i cirkel"
+    },
+    "㉚": {
+      "expected": "30 i cirkel"
+    },
+    "㉛": {
+      "expected": "31 i cirkel"
+    },
+    "㉜": {
+      "expected": "32 i cirkel"
+    },
+    "㉝": {
+      "expected": "33 i cirkel"
+    },
+    "㉞": {
+      "expected": "34 i cirkel"
+    },
+    "㉟": {
+      "expected": "35 i cirkel"
+    },
+    "㊱": {
+      "expected": "36 i cirkel"
+    },
+    "㊲": {
+      "expected": "37 i cirkel"
+    },
+    "㊳": {
+      "expected": "38 i cirkel"
+    },
+    "㊴": {
+      "expected": "39 i cirkel"
+    },
+    "㊵": {
+      "expected": "40 i cirkel"
+    },
+    "㊶": {
+      "expected": "41 i cirkel"
+    },
+    "㊷": {
+      "expected": "42 i cirkel"
+    },
+    "㊸": {
+      "expected": "43 i cirkel"
+    },
+    "㊹": {
+      "expected": "44 i cirkel"
+    },
+    "㊺": {
+      "expected": "45 i cirkel"
+    },
+    "㊻": {
+      "expected": "46 i cirkel"
+    },
+    "㊼": {
+      "expected": "47 i cirkel"
+    },
+    "㊽": {
+      "expected": "48 i cirkel"
+    },
+    "㊾": {
+      "expected": "49 i cirkel"
+    },
+    "㊿": {
+      "expected": "50 i cirkel"
+    },
+    "🄐": {
+      "expected": "stort A i parentes"
+    },
+    "🄑": {
+      "expected": "stort B i parentes"
+    },
+    "🄒": {
+      "expected": "stort C i parentes"
+    },
+    "🄓": {
+      "expected": "stort D i parentes"
+    },
+    "🄔": {
+      "expected": "stort E i parentes"
+    },
+    "🄕": {
+      "expected": "stort F i parentes"
+    },
+    "🄖": {
+      "expected": "stort G i parentes"
+    },
+    "🄗": {
+      "expected": "stort H i parentes"
+    },
+    "🄘": {
+      "expected": "stort I i parentes"
+    },
+    "🄙": {
+      "expected": "stort J i parentes"
+    },
+    "🄚": {
+      "expected": "stort K i parentes"
+    },
+    "🄛": {
+      "expected": "stort L i parentes"
+    },
+    "🄜": {
+      "expected": "stort M i parentes"
+    },
+    "🄝": {
+      "expected": "stort N i parentes"
+    },
+    "🄞": {
+      "expected": "stort O i parentes"
+    },
+    "🄟": {
+      "expected": "stort P i parentes"
+    },
+    "🄠": {
+      "expected": "stort Q i parentes"
+    },
+    "🄡": {
+      "expected": "stort R i parentes"
+    },
+    "🄢": {
+      "expected": "stort S i parentes"
+    },
+    "🄣": {
+      "expected": "stort T i parentes"
+    },
+    "🄤": {
+      "expected": "stort U i parentes"
+    },
+    "🄥": {
+      "expected": "stort V i parentes"
+    },
+    "🄦": {
+      "expected": "stort W i parentes"
+    },
+    "🄧": {
+      "expected": "stort X i parentes"
+    },
+    "🄨": {
+      "expected": "stort Y i parentes"
+    },
+    "🄩": {
+      "expected": "stort Z i parentes"
+    },
+    "⒜": {
+      "expected": "a i parentes"
+    },
+    "⒝": {
+      "expected": "b i parentes"
+    },
+    "⒞": {
+      "expected": "c i parentes"
+    },
+    "⒟": {
+      "expected": "d i parentes"
+    },
+    "⒠": {
+      "expected": "e i parentes"
+    },
+    "⒡": {
+      "expected": "f i parentes"
+    },
+    "⒢": {
+      "expected": "g i parentes"
+    },
+    "⒣": {
+      "expected": "h i parentes"
+    },
+    "⒤": {
+      "expected": "I i parentes"
+    },
+    "⒥": {
+      "expected": "j i parentes"
+    },
+    "⒦": {
+      "expected": "k i parentes"
+    },
+    "⒧": {
+      "expected": "l i parentes"
+    },
+    "⒨": {
+      "expected": "m i parentes"
+    },
+    "⒩": {
+      "expected": "n i parentes"
+    },
+    "⒪": {
+      "expected": "o i parentes"
+    },
+    "⒫": {
+      "expected": "p i parentes"
+    },
+    "⒬": {
+      "expected": "q i parentes"
+    },
+    "⒭": {
+      "expected": "r i parentes"
+    },
+    "⒮": {
+      "expected": "s i parentes"
+    },
+    "⒯": {
+      "expected": "t i parentes"
+    },
+    "⒰": {
+      "expected": "u i parentes"
+    },
+    "⒱": {
+      "expected": "v i parentes"
+    },
+    "⒲": {
+      "expected": "w i parentes"
+    },
+    "⒳": {
+      "expected": "x i parentes"
+    },
+    "⒴": {
+      "expected": "y i parentes"
+    },
+    "⒵": {
+      "expected": "z i parentes"
+    },
+    "⑴": {
+      "expected": "1 i parentes"
+    },
+    "⑵": {
+      "expected": "2 i parentes"
+    },
+    "⑶": {
+      "expected": "3 i parentes"
+    },
+    "⑷": {
+      "expected": "4 i parentes"
+    },
+    "⑸": {
+      "expected": "5 i parentes"
+    },
+    "⑹": {
+      "expected": "6 i parentes"
+    },
+    "⑺": {
+      "expected": "7 i parentes"
+    },
+    "⑻": {
+      "expected": "8 i parentes"
+    },
+    "⑼": {
+      "expected": "9 i parentes"
+    },
+    "⑽": {
+      "expected": "10 i parentes"
+    },
+    "⑾": {
+      "expected": "11 i parentes"
+    },
+    "⑿": {
+      "expected": "12 i parentes"
+    },
+    "⒀": {
+      "expected": "13 i parentes"
+    },
+    "⒁": {
+      "expected": "14 i parentes"
+    },
+    "⒂": {
+      "expected": "15 i parentes"
+    },
+    "⒃": {
+      "expected": "16 i parentes"
+    },
+    "⒄": {
+      "expected": "17 i parentes"
+    },
+    "⒅": {
+      "expected": "18 i parentes"
+    },
+    "⒆": {
+      "expected": "19 i parentes"
+    },
+    "⒇": {
+      "expected": "20 i parentes"
+    },
+    "🄀": {
+      "expected": "0 punktum"
+    },
+    "⒈": {
+      "expected": "1 punktum"
+    },
+    "⒉": {
+      "expected": "2 punktum"
+    },
+    "⒊": {
+      "expected": "3 punktum"
+    },
+    "⒋": {
+      "expected": "4 punktum"
+    },
+    "⒌": {
+      "expected": "5 punktum"
+    },
+    "⒍": {
+      "expected": "6 punktum"
+    },
+    "⒎": {
+      "expected": "7 punktum"
+    },
+    "⒏": {
+      "expected": "8 punktum"
+    },
+    "⒐": {
+      "expected": "9 punktum"
+    },
+    "⒑": {
+      "expected": "10 punktum"
+    },
+    "⒒": {
+      "expected": "11 punktum"
+    },
+    "⒓": {
+      "expected": "12 punktum"
+    },
+    "⒔": {
+      "expected": "13 punktum"
+    },
+    "⒕": {
+      "expected": "14 punktum"
+    },
+    "⒖": {
+      "expected": "15 punktum"
+    },
+    "⒗": {
+      "expected": "16 punktum"
+    },
+    "⒘": {
+      "expected": "17 punktum"
+    },
+    "⒙": {
+      "expected": "18 punktum"
+    },
+    "⒚": {
+      "expected": "19 punktum"
+    },
+    "⒛": {
+      "expected": "20 punktum"
+    },
+    "🅐": {
+      "expected": "stort A i sort cirkel"
+    },
+    "🅑": {
+      "expected": "stort B i sort cirkel"
+    },
+    "🅒": {
+      "expected": "stort C i sort cirkel"
+    },
+    "🅓": {
+      "expected": "stort D i sort cirkel"
+    },
+    "🅔": {
+      "expected": "stort E i sort cirkel"
+    },
+    "🅕": {
+      "expected": "stort F i sort cirkel"
+    },
+    "🅖": {
+      "expected": "stort G i sort cirkel"
+    },
+    "🅗": {
+      "expected": "stort H i sort cirkel"
+    },
+    "🅘": {
+      "expected": "stort I i sort cirkel"
+    },
+    "🅙": {
+      "expected": "stort J i sort cirkel"
+    },
+    "🅚": {
+      "expected": "stort K i sort cirkel"
+    },
+    "🅛": {
+      "expected": "stort L i sort cirkel"
+    },
+    "🅜": {
+      "expected": "stort M i sort cirkel"
+    },
+    "🅝": {
+      "expected": "stort N i sort cirkel"
+    },
+    "🅞": {
+      "expected": "stort O i sort cirkel"
+    },
+    "🅟": {
+      "expected": "stort P i sort cirkel"
+    },
+    "🅠": {
+      "expected": "stort Q i sort cirkel"
+    },
+    "🅡": {
+      "expected": "stort R i sort cirkel"
+    },
+    "🅢": {
+      "expected": "stort S i sort cirkel"
+    },
+    "🅣": {
+      "expected": "stort T i sort cirkel"
+    },
+    "🅤": {
+      "expected": "stort U i sort cirkel"
+    },
+    "🅥": {
+      "expected": "stort V i sort cirkel"
+    },
+    "🅦": {
+      "expected": "stort W i sort cirkel"
+    },
+    "🅧": {
+      "expected": "stort X i sort cirkel"
+    },
+    "🅨": {
+      "expected": "stort Y i sort cirkel"
+    },
+    "🅩": {
+      "expected": "stort Z i sort cirkel"
+    },
+    "⓿": {
+      "expected": "0 i sort cirkel"
+    },
+    "❶": {
+      "expected": "1 i sort cirkel"
+    },
+    "❷": {
+      "expected": "2 i sort cirkel"
+    },
+    "❸": {
+      "expected": "3 i sort cirkel"
+    },
+    "❹": {
+      "expected": "4 i sort cirkel"
+    },
+    "❺": {
+      "expected": "5 i sort cirkel"
+    },
+    "❻": {
+      "expected": "6 i sort cirkel"
+    },
+    "❼": {
+      "expected": "7 i sort cirkel"
+    },
+    "❽": {
+      "expected": "8 i sort cirkel"
+    },
+    "❾": {
+      "expected": "9 i sort cirkel"
+    },
+    "❿": {
+      "expected": "10 i sort cirkel"
+    },
+    "⓫": {
+      "expected": "11 i sort cirkel"
+    },
+    "⓬": {
+      "expected": "12 i sort cirkel"
+    },
+    "⓭": {
+      "expected": "13 i sort cirkel"
+    },
+    "⓮": {
+      "expected": "14 i sort cirkel"
+    },
+    "⓯": {
+      "expected": "15 i sort cirkel"
+    },
+    "⓰": {
+      "expected": "16 i sort cirkel"
+    },
+    "⓱": {
+      "expected": "17 i sort cirkel"
+    },
+    "⓲": {
+      "expected": "18 i sort cirkel"
+    },
+    "⓳": {
+      "expected": "19 i sort cirkel"
+    },
+    "⓴": {
+      "expected": "20 i sort cirkel"
+    },
+    "⓵": {
+      "expected": "1 i dobbelt cirkel"
+    },
+    "⓶": {
+      "expected": "2 i dobbelt cirkel"
+    },
+    "⓷": {
+      "expected": "3 i dobbelt cirkel"
+    },
+    "⓸": {
+      "expected": "4 i dobbelt cirkel"
+    },
+    "⓹": {
+      "expected": "5 i dobbelt cirkel"
+    },
+    "⓺": {
+      "expected": "6 i dobbelt cirkel"
+    },
+    "⓻": {
+      "expected": "7 i dobbelt cirkel"
+    },
+    "⓼": {
+      "expected": "8 i dobbelt cirkel"
+    },
+    "⓽": {
+      "expected": "9 i dobbelt cirkel"
+    },
+    "⓾": {
+      "expected": "10 i dobbelt cirkel"
+    },
+    "🄋": {
+      "expected": "0 uden serif i cirkel"
+    },
+    "➀": {
+      "expected": "1 uden serif i cirkel"
+    },
+    "➁": {
+      "expected": "2 uden serif i cirkel"
+    },
+    "➂": {
+      "expected": "3 uden serif i cirkel"
+    },
+    "➃": {
+      "expected": "4 uden serif i cirkel"
+    },
+    "➄": {
+      "expected": "5 uden serif i cirkel"
+    },
+    "➅": {
+      "expected": "6 uden serif i cirkel"
+    },
+    "➆": {
+      "expected": "7 uden serif i cirkel"
+    },
+    "➇": {
+      "expected": "8 uden serif i cirkel"
+    },
+    "➈": {
+      "expected": "9 uden serif i cirkel"
+    },
+    "➉": {
+      "expected": "10 uden serif i cirkel"
+    },
+    "🄌": {
+      "expected": "0 uden serif i sort cirkel"
+    },
+    "➊": {
+      "expected": "1 uden serif i sort cirkel"
+    },
+    "➋": {
+      "expected": "2 uden serif i sort cirkel"
+    },
+    "➌": {
+      "expected": "3 uden serif i sort cirkel"
+    },
+    "➍": {
+      "expected": "4 uden serif i sort cirkel"
+    },
+    "➎": {
+      "expected": "5 uden serif i sort cirkel"
+    },
+    "➏": {
+      "expected": "6 uden serif i sort cirkel"
+    },
+    "➐": {
+      "expected": "7 uden serif i sort cirkel"
+    },
+    "➑": {
+      "expected": "8 uden serif i sort cirkel"
+    },
+    "➒": {
+      "expected": "9 uden serif i sort cirkel"
+    },
+    "➓": {
+      "expected": "10 uden serif i sort cirkel"
+    },
+    "🄁": {
+      "expected": "0 komma"
+    },
+    "🄂": {
+      "expected": "1 komma"
+    },
+    "🄃": {
+      "expected": "2 komma"
+    },
+    "🄄": {
+      "expected": "3 komma"
+    },
+    "🄅": {
+      "expected": "4 komma"
+    },
+    "🄆": {
+      "expected": "5 komma"
+    },
+    "🄇": {
+      "expected": "6 komma"
+    },
+    "🄈": {
+      "expected": "7 komma"
+    },
+    "🄉": {
+      "expected": "8 komma"
+    },
+    "🄊": {
+      "expected": "9 komma"
+    },
+    "🄰": {
+      "expected": "stort A i kvadrat"
+    },
+    "🄱": {
+      "expected": "stort B i kvadrat"
+    },
+    "🄲": {
+      "expected": "stort C i kvadrat"
+    },
+    "🄳": {
+      "expected": "stort D i kvadrat"
+    },
+    "🄴": {
+      "expected": "stort E i kvadrat"
+    },
+    "🄵": {
+      "expected": "stort F i kvadrat"
+    },
+    "🄶": {
+      "expected": "stort G i kvadrat"
+    },
+    "🄷": {
+      "expected": "stort H i kvadrat"
+    },
+    "🄸": {
+      "expected": "stort I i kvadrat"
+    },
+    "🄹": {
+      "expected": "stort J i kvadrat"
+    },
+    "🄺": {
+      "expected": "stort K i kvadrat"
+    },
+    "🄻": {
+      "expected": "stort L i kvadrat"
+    },
+    "🄼": {
+      "expected": "stort M i kvadrat"
+    },
+    "🄽": {
+      "expected": "stort N i kvadrat"
+    },
+    "🄾": {
+      "expected": "stort O i kvadrat"
+    },
+    "🄿": {
+      "expected": "stort P i kvadrat"
+    },
+    "🅀": {
+      "expected": "stort Q i kvadrat"
+    },
+    "🅁": {
+      "expected": "stort R i kvadrat"
+    },
+    "🅂": {
+      "expected": "stort S i kvadrat"
+    },
+    "🅃": {
+      "expected": "stort T i kvadrat"
+    },
+    "🅄": {
+      "expected": "stort U i kvadrat"
+    },
+    "🅅": {
+      "expected": "stort V i kvadrat"
+    },
+    "🅆": {
+      "expected": "stort W i kvadrat"
+    },
+    "🅇": {
+      "expected": "stort X i kvadrat"
+    },
+    "🅈": {
+      "expected": "stort Y i kvadrat"
+    },
+    "🅉": {
+      "expected": "stort Z i kvadrat"
+    },
+    "🅰": {
+      "expected": "stort A i sort kvadrat"
+    },
+    "🅱": {
+      "expected": "stort B i sort kvadrat"
+    },
+    "🅲": {
+      "expected": "stort C i sort kvadrat"
+    },
+    "🅳": {
+      "expected": "stort D i sort kvadrat"
+    },
+    "🅴": {
+      "expected": "stort E i sort kvadrat"
+    },
+    "🅵": {
+      "expected": "stort F i sort kvadrat"
+    },
+    "🅶": {
+      "expected": "stort G i sort kvadrat"
+    },
+    "🅷": {
+      "expected": "stort H i sort kvadrat"
+    },
+    "🅸": {
+      "expected": "stort I i sort kvadrat"
+    },
+    "🅹": {
+      "expected": "stort J i sort kvadrat"
+    },
+    "🅺": {
+      "expected": "stort K i sort kvadrat"
+    },
+    "🅻": {
+      "expected": "stort L i sort kvadrat"
+    },
+    "🅼": {
+      "expected": "stort M i sort kvadrat"
+    },
+    "🅽": {
+      "expected": "stort N i sort kvadrat"
+    },
+    "🅾": {
+      "expected": "stort O i sort kvadrat"
+    },
+    "🅿": {
+      "expected": "stort P i sort kvadrat"
+    },
+    "🆀": {
+      "expected": "stort Q i sort kvadrat"
+    },
+    "🆁": {
+      "expected": "stort R i sort kvadrat"
+    },
+    "🆂": {
+      "expected": "stort S i sort kvadrat"
+    },
+    "🆃": {
+      "expected": "stort T i sort kvadrat"
+    },
+    "🆄": {
+      "expected": "stort U i sort kvadrat"
+    },
+    "🆅": {
+      "expected": "stort V i sort kvadrat"
+    },
+    "🆆": {
+      "expected": "stort W i sort kvadrat"
+    },
+    "🆇": {
+      "expected": "stort X i sort kvadrat"
+    },
+    "🆈": {
+      "expected": "stort Y i sort kvadrat"
+    },
+    "🆉": {
+      "expected": "stort Z i sort kvadrat"
+    }
+  }
+}

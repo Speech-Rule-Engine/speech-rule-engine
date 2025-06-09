@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakNamedSets",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Swedish Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NumSys001": {
+      "expected": "de reella talen"
+    },
+    "NumSys001a": {
+      "expected": "de reella talen"
+    },
+    "NumSys002": {
+      "expected": "de komplexa talen"
+    },
+    "NumSys002a": {
+      "expected": "de komplexa talen"
+    },
+    "NumSys003": {
+      "expected": "heltalen"
+    },
+    "NumSys003a": {
+      "expected": "heltalen"
+    },
+    "NumSys004": {
+      "expected": "de rationella talen"
+    },
+    "NumSys004a": {
+      "expected": "de rationella talen"
+    },
+    "NumSys005": {
+      "expected": "de naturliga talen"
+    },
+    "NumSys005a": {
+      "expected": "de naturliga talen"
+    },
+    "NumSys005_1": {
+      "expected": "de naturliga talen med noll"
+    },
+    "NumSys005_1a": {
+      "expected": "de naturliga talen med noll"
+    },
+    "NumSys006": {
+      "expected": "de positiva heltalen"
+    },
+    "NumSys006a": {
+      "expected": "de positiva heltalen"
+    },
+    "NumSys006_1": {
+      "expected": "de negativa heltalen"
+    },
+    "NumSys006_1a": {
+      "expected": "de negativa heltalen"
+    },
+    "NumSys007": {
+      "expected": "r-två"
+    },
+    "NumSys007a": {
+      "expected": "r-två"
+    },
+    "NumSys008": {
+      "expected": "z-tre"
+    },
+    "NumSys008a": {
+      "expected": "z-tre"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-oändlighet"
+    },
+    "NumSys010a": {
+      "expected": "r-oändlighet"
+    }
+  }
+}
