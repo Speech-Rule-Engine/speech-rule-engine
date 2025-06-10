@@ -492,7 +492,6 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
     return style;
   }
 
-  console.log(`${locale} ${domain} ${style}`);
   if (domain === 'mathspeak') {
     const styles = ['default', 'brief', 'sbrief'];
     const index = styles.indexOf(style);
@@ -514,15 +513,11 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
       return x.split('_')[1];
     });
     const index = options.indexOf(current);
-    console.log(current);
     if (index === -1) {
-      console.log(31);
       return style;
     }
     const next = index >= options.length - 1 ? options[0] : options[index + 1];
     const result = addPreference(style, smart, next);
-    console.log(32);
-    console.log(result);
     return result;
   }
   return style;

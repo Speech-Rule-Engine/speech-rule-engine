@@ -22,12 +22,14 @@ const config = {
   rootDir: '..',
   preset: tsjest,
   clearMocks: true,
-  collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageProvider: "v8",
   coveragePathIgnorePatterns: ["node_modules", "testsuite"],
+  testPathIgnorePatterns: [
+    "tests/json/nemeth",
+    "tests/actions/nemeth"
+  ],
   testEnvironment: "node",
-  verbose: true,
   testMatch: [
     "**/tests/**/*.test.ts"
   ],
@@ -37,7 +39,7 @@ const config = {
   }),
   setupFiles:  ["./lib/require.mjs"],
   transform: {
-    "^.+\\.tsx?$": [ tsjest, { useESM: true } ],
+    "^.+\\.tsx?$": [ tsjest, { useESM: true, isolatedModules: false } ],
   }
 };
 

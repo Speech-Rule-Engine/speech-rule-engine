@@ -1,0 +1,133 @@
+# This workflow will do a clean install of node dependencies, build the source
+# code and run tests in block on the latest version of node.
+
+name: test
+
+on:
+  push:
+    branches:
+      - new_testsuite
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    name: Compile SRE with locales
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
+
+      - name: Setup Speech Rule Engine
+        run: pnpm i; pnpm build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: sre-library
+          path: |
+                lib
+                js
+                package.json
+
+  test:
+    strategy:
+      matrix:
+        block: [base, walker, semantic, en, en-ssml, ca, de, da, fr, es, it, hi, ko, nb, nn, sv]
+    needs: setup
+    runs-on: ubuntu-latest
+    name: SRE jests tests for ${{ matrix.block }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
+
+      - name: Downloading the build
+        uses: actions/download-artifact@v4
+        with:
+          name: sre-library
+
+      - name: Set up tests
+        run: |
+          pnpm -r i --ignore-scripts
+          cd testsuite; pnpm build;
+
+      - name: Run tests for ${{ matrix.block }}
+        run: pnpm actionTest tests/actions/${{ matrix.block }}.test.ts
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.block }}
+          path: coverage
+
+  combine-coverage:
+    # needs: test
+    runs-on: ubuntu-latest
+    name: Combine Coverage Reports
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
+
+      - name: Install merge tool
+        run: pnpm add -g nyc
+
+      - name: Download all coverage artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: coverage-artifacts
+
+      - name: Merge coverage reports
+        run: |
+          mkdir -p combine
+          cd coverage-artifacts
+          for i in coverage-*; do cp $i/coverage-final.json ../combine/$i.json; done
+          cd ..
+          nyc merge ./combine/ coverage.json
+          ls -l combine/
+          ls -l coverage.json
+          # mkdir -p merged
+          # ls -l coverage-artifacts/coverage-*/lcov.info
+          # # find coverage-artifacts -name 'lcov.info' -print -exec cp {} merged/ \;
+          # # ls -l merged
+          # lcov-result-merger coverage-artifacts/coverage-*/lcov.info > lcov.info
+          # # lcov-result-merger merged/*.info > lcov.info
+          # ls -l lcov.info
+
+      - name: Upload final result
+        uses: actions/upload-artifact@v4
+        with:
+          name: result
+          path: coverage.json
+
+      # - name: Output coverage summary
+      #   run: |
+          # pnpm add -g coveralls # optional if uploading
+          # cat lcov.info
+
+      # Optional: Upload to Codecov or Coveralls
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: speech-rule-engine/speech-rule-engine
+          file: coverage.json
+          name: codecov-$(date +%Y%m%d)
