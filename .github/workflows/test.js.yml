@@ -75,7 +75,7 @@ jobs:
           path: coverage
 
   combine-coverage:
-    # needs: test
+    needs: test
     runs-on: ubuntu-latest
     name: Combine Coverage Reports
     steps:
@@ -102,8 +102,8 @@ jobs:
           for i in coverage-*; do cp $i/coverage-final.json ../combine/$i.json; done
           cd ..
           nyc merge ./combine/ coverage.json
-          ls -l combine/
-          ls -l coverage.json
+          # ls -l combine/
+          # ls -l coverage.json
           # mkdir -p merged
           # ls -l coverage-artifacts/coverage-*/lcov.info
           # # find coverage-artifacts -name 'lcov.info' -print -exec cp {} merged/ \;
@@ -112,11 +112,11 @@ jobs:
           # # lcov-result-merger merged/*.info > lcov.info
           # ls -l lcov.info
 
-      - name: Upload final result
-        uses: actions/upload-artifact@v4
-        with:
-          name: result
-          path: coverage.json
+      # - name: Upload final result
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: result
+      #     path: coverage.json
 
       # - name: Output coverage summary
       #   run: |
