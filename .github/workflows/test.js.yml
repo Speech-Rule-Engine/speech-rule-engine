@@ -6,7 +6,6 @@ name: test
 on:
   push:
     branches:
-      - new_testsuite
       - develop
   pull_request:
     branches:
@@ -66,13 +65,13 @@ jobs:
           cd testsuite; pnpm build;
 
       - name: Run tests for ${{ matrix.block }}
-        run: pnpm actionTest tests/actions/${{ matrix.block }}.test.ts
+        run: pnpm actionTest tests/actions/${{ matrix.block }}.test.ts --coverageReporters=json
 
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4
         with:
           name: coverage-${{ matrix.block }}
-          path: coverage
+          path: coverage/coverage-final.json
 
   combine-coverage:
     needs: test
@@ -102,28 +101,7 @@ jobs:
           for i in coverage-*; do cp $i/coverage-final.json ../combine/$i.json; done
           cd ..
           nyc merge ./combine/ coverage.json
-          # ls -l combine/
-          # ls -l coverage.json
-          # mkdir -p merged
-          # ls -l coverage-artifacts/coverage-*/lcov.info
-          # # find coverage-artifacts -name 'lcov.info' -print -exec cp {} merged/ \;
-          # # ls -l merged
-          # lcov-result-merger coverage-artifacts/coverage-*/lcov.info > lcov.info
-          # # lcov-result-merger merged/*.info > lcov.info
-          # ls -l lcov.info
 
-      # - name: Upload final result
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: result
-      #     path: coverage.json
-
-      # - name: Output coverage summary
-      #   run: |
-          # pnpm add -g coveralls # optional if uploading
-          # cat lcov.info
-
-      # Optional: Upload to Codecov or Coveralls
       - name: Upload to Codecov
         uses: codecov/codecov-action@v5
         with:
