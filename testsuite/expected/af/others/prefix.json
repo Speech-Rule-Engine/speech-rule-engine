@@ -1,0 +1,243 @@
+{
+  "name": "AfrikaansPrefix",
+  "locale": "af",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Afrikaans Prefix rule tests.",
+  "active": "PrefixAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sub_0": {
+      "expected": "Basis"
+    },
+    "Sub_1": {
+      "expected": "indeks"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Basis"
+    },
+    "Super_1": {
+      "expected": "Eksponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Basis"
+    },
+    "Over_1": {
+      "expected": "boskrif"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Basis"
+    },
+    "Under_1": {
+      "expected": "Onderskrif"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "teller"
+    },
+    "Fractions_1": {
+      "expected": "noemer"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radikant"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radikant"
+    },
+    "Root_1": {
+      "expected": "Indeks"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Basis"
+    },
+    "SimpleTensors_1": {
+      "expected": "Linker Onderskrif"
+    },
+    "SimpleTensors_2": {
+      "expected": "Linker Boskrif"
+    },
+    "SimpleTensors_3": {
+      "expected": "Regter Onderskrif"
+    },
+    "SimpleTensors_4": {
+      "expected": "Regter Boskrif"
+    },
+    "ComplexTensors_0": {
+      "expected": "Basis"
+    },
+    "ComplexTensors_1": {
+      "expected": "1. Linker Onderskrif"
+    },
+    "ComplexTensors_2": {
+      "expected": "2. Linker Onderskrif"
+    },
+    "ComplexTensors_3": {
+      "expected": "1. Linker Boskrif"
+    },
+    "ComplexTensors_4": {
+      "expected": "2. Linker Boskrif"
+    },
+    "ComplexTensors_5": {
+      "expected": "1. Regter Onderskrif"
+    },
+    "ComplexTensors_6": {
+      "expected": "2. Regter Onderskrif"
+    },
+    "ComplexTensors_7": {
+      "expected": "1. Regter Boskrif"
+    },
+    "ComplexTensors_8": {
+      "expected": "2. Regter Boskrif"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "Beskikbare Hoeveelheid"
+    },
+    "Binomials_1": {
+      "expected": "Gekose Hoeveelheid"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "1. Ry"
+    },
+    "Vectors_1": {
+      "expected": "2. Ry"
+    },
+    "Vectors_2": {
+      "expected": "3. Ry"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1. Ry"
+    },
+    "Matrices_depth_1": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Matrices_depth_2": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Matrices_depth_3": {
+      "expected": "2. Ry"
+    },
+    "Matrices_depth_4": {
+      "expected": "2. Ry, 1. kolom"
+    },
+    "Matrices_depth_5": {
+      "expected": "2. Ry, 2. kolom"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1. Ry"
+    },
+    "Matrices_1": {
+      "expected": "1. Kolom"
+    },
+    "Matrices_2": {
+      "expected": "2. Kolom"
+    },
+    "Matrices_3": {
+      "expected": "2. Ry"
+    },
+    "Matrices_4": {
+      "expected": "1. Kolom"
+    },
+    "Matrices_5": {
+      "expected": "2. Kolom"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "Basis"
+    },
+    "LimBoth_1": {
+      "expected": "boskrif"
+    },
+    "LimBoth_2": {
+      "expected": "Onderskrif"
+    },
+    "LimBoth_3": {
+      "expected": "Basis"
+    },
+    "LimBoth_4": {
+      "expected": "Basis"
+    },
+    "LimUpper_0": {
+      "expected": "boskrif"
+    },
+    "LimUpper_1": {
+      "expected": "boskrif"
+    },
+    "LimUpper_2": {
+      "expected": "Basis"
+    },
+    "LimUpper_3": {
+      "expected": "Basis"
+    },
+    "LimLower_0": {
+      "expected": "Onderskrif"
+    },
+    "LimLower_1": {
+      "expected": "Onderskrif"
+    },
+    "LimLower_2": {
+      "expected": "Basis"
+    },
+    "LimLower_3": {
+      "expected": "Basis"
+    }
+  }
+}

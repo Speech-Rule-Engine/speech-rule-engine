@@ -4,6 +4,7 @@
     "target": "ES6",
     "module": "nodenext",
     "moduleResolution": "nodenext",
+    "esModuleInterop": true,
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -13,16 +14,23 @@
     "downlevelIteration": true,
     "noLib": false,
     "alwaysStrict": true,
-    "lib": ["es2017", "dom"],
+    "sourceMap": true,
+    "isolatedModules": true,
+    "lib": ["ES6", "DOM", "ES2022"],
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules/@node"
     ],
+    "baseUrl": ".",
+    "paths": {
+      "common/*": ["ts/common/*"],
+      "#source/*": ["../components/mjs/*"],
+      "#src/*": ["./src/*"],
+      "#helpers": ["./src/index.js"]
+    },
     "outDir": "js"
   },
   "include": ["ts/**/*"],
-  "typeRoots": [],
-  "types": [],
   "exclude": [
     "dist",
     "js",

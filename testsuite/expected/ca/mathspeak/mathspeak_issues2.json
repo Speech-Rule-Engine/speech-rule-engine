@@ -1,0 +1,403 @@
+{
+  "name": "CatalanMathspeakIssues2",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Catalan Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "locale": "ca",
+  "active": "MathspeakIssuesCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_1": {
+      "expected": "començar arrel quadrada a finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_2": {
+      "expected": "començar arrel cúbica a finalitzar arrel cúbica"
+    },
+    "MathspeakRoots_3": {
+      "expected": "començar arrel a la quarta a finalitzar arrel a la quarta"
+    },
+    "MathspeakRoots_4": {
+      "expected": "començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_5": {
+      "expected": "començar arrel quadrada començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_6": {
+      "expected": "començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_7": {
+      "expected": "començar arrel quadrada començar arrel quadrada començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_8": {
+      "expected": "començar arrel cúbica començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "MathspeakRoots_9": {
+      "expected": "començar arrel cúbica començar arrel cúbica començar arrel cúbica a finalitzar arrel cúbica finalitzar arrel cúbica finalitzar arrel cúbica"
+    },
+    "MathspeakRoots_10": {
+      "expected": "començar arrel a la quarta començar arrel a la quarta a finalitzar arrel a la quarta finalitzar arrel a la quarta"
+    },
+    "MathspeakRoots_11": {
+      "expected": "començar arrel a la quarta començar arrel a la quarta començar arrel a la quarta a finalitzar arrel a la quarta finalitzar arrel a la quarta finalitzar arrel a la quarta"
+    },
+    "MathspeakRoots_12": {
+      "expected": "començar arrel quadrada començar arrel cúbica començar arrel a la quarta a finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada"
+    },
+    "MathspeakRoots_13": {
+      "expected": "començar arrel a la quarta començar arrel cúbica començar arrel quadrada a finalitzar arrel quadrada finalitzar arrel cúbica finalitzar arrel a la quarta"
+    },
+    "HtmlEntities_0": {
+      "expected": "menor que"
+    },
+    "HtmlEntities_1": {
+      "expected": "ajor que"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "començar binomial n en k finalitzar binomial"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "començar binomial n en k finalitzar binomial"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "començar binomial n en k finalitzar binomial"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "parèntesi esquerre començar fracció n entre k finalitzar fracció parèntesi dret"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "parèntesi esquerre començar fracció n entre k finalitzar fracció parèntesi dret"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "parèntesi esquerre començar fracció n entre k finalitzar fracció parèntesi dret"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "començar fracció 1 entre 2 finalitzar fracció menos començar fracció 5 entre 18 finalitzar fracció"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "menys començar fracció 5,2 entre a finalitzar fracció"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "menys començar fracció 5,2 entre 18 finalitzar fracció"
+    },
+    "TrivialStuff_0": {
+      "expected": "a igual b"
+    },
+    "TrivialStuff_1": {
+      "expected": "cometes"
+    },
+    "TrivialStuff_2": {
+      "expected": "cometes x cometes"
+    },
+    "TrivialStuff_3": {
+      "expected": "prima"
+    },
+    "GermanFonts_0": {
+      "expected": "Fraktur majúscula A"
+    },
+    "GermanFonts_1": {
+      "expected": "negreta Fraktur majúscula A"
+    },
+    "GermanFonts_2": {
+      "expected": "Fraktur majúscula A"
+    },
+    "GermanFonts_3": {
+      "expected": "negreta Fraktur majúscula A"
+    },
+    "GermanFonts_4": {
+      "expected": "negreta Fraktur abc"
+    },
+    "GermanFonts_5": {
+      "expected": "negreta Fraktur ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "negreta Fraktur majúscula A majúscula B majúscula C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "normal m"
+    },
+    "OtherFonts_2": {
+      "expected": "mi"
+    },
+    "OtherFonts_3": {
+      "expected": "cursiva mi"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "cursiva 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 grau"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m majúscula A"
+    },
+    "Multiline_0": {
+      "expected": "començar esquema primera fila  a segona fila  b finalitzar esquema"
+    },
+    "Multiline_1": {
+      "expected": "començar esquema primera fila primera columna a segona columna c segona fila primera columna b segona columna d finalitzar esquema"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "menor o igual que 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "igual 2 igual"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "menor o igual que 2 igual"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "començar esquema primera fila primera columna 1 segona columna menor o igual que 2 finalitzar esquema"
+    },
+    "EncloseGeneral": {
+      "expected": "començar a encerclar cercle a finalitzar encerclar"
+    },
+    "EncloseLeftbar": {
+      "expected": "barra vertical a"
+    },
+    "EncloseRightbar": {
+      "expected": "a barra vertical"
+    },
+    "LatinMathfonts_0": {
+      "expected": "Fraktur majúscula A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "negreta Fraktur majúscula A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "negreta script majúscula A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "negreta cursiva majúscula A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "negreta majúscula A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "negreta de pissarra majúscula A"
+    },
+    "LatinMathfonts_6": {
+      "expected": "majúscula A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "monoespai majúscula A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "sans serif cursiva majúscula A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "sans serif negreta majúscula A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "sans serif negreta cursiva majúscula A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "sans serif majúscula A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "script majúscula A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "negreta majúscula Alfa"
+    },
+    "GreekMathfonts_1": {
+      "expected": "majúscula Alfa"
+    },
+    "GreekMathfonts_2": {
+      "expected": "negreta cursiva majúscula Alfa"
+    },
+    "GreekMathfonts_3": {
+      "expected": "sans serif cursiva majúscula Alfa"
+    },
+    "GreekMathfonts_4": {
+      "expected": "sans serif negreta cursiva majúscula Alfa"
+    },
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "començar esquema primera fila  amb etiqueta parèntesi esquerre 3 punt 1 punt 10 parèntesi dret finalitzar etiqueta finalitzar esquema"
+    },
+    "Issue320_0": {
+      "expected": "diferencial parcial"
+    },
+    "Issue320_1": {
+      "expected": "x factorial"
+    },
+    "Issue320_2": {
+      "expected": "menys menys x"
+    },
+    "Issue320_3": {
+      "expected": "més més x"
+    },
+    "Issue320_4": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_5": {
+      "expected": "diferencial parcial diferencial parcial x"
+    },
+    "Issue320_6": {
+      "expected": "parèntesi esquerre començar fracció diferencial parcial al quadrat entre diferencial parcial x al quadrat finalitzar fracció més començar fracció diferencial parcial al quadrat entre diferencial parcial y al quadrat finalitzar fracció parèntesi dret començar valor absolut fi parèntesi esquerre x més normal i y parèntesi dret finalitzar valor absolut al quadrat igual 0"
+    },
+    "Prime_0": {
+      "expected": "x prima"
+    },
+    "Prime_1": {
+      "expected": "x dos prima"
+    },
+    "Prime_2": {
+      "expected": "x tres prima"
+    },
+    "Prime_3": {
+      "expected": "x quatre prima"
+    },
+    "Prime_4": {
+      "expected": "x prima"
+    },
+    "Prime_5": {
+      "expected": "x dos prima"
+    },
+    "Prime_6": {
+      "expected": "x prima"
+    },
+    "Prime_7": {
+      "expected": "x dos prima"
+    },
+    "Prime_8": {
+      "expected": "x prima"
+    },
+    "Prime_9": {
+      "expected": "x dos prima"
+    },
+    "Prime_10": {
+      "expected": "x tres prima"
+    },
+    "Prime_11": {
+      "expected": "x quatre prima"
+    },
+    "Prime_12": {
+      "expected": "x cinc prima"
+    },
+    "Prime_13": {
+      "expected": "x sis prima"
+    },
+    "Prime_14": {
+      "expected": "x dos prima"
+    },
+    "Prime_15": {
+      "expected": "x tres prima"
+    },
+    "Prime_16": {
+      "expected": "x quatre prima"
+    },
+    "Prime_17": {
+      "expected": "x cinc prima"
+    },
+    "Prime_18": {
+      "expected": "x sis prima"
+    },
+    "LimBoth_0": {
+      "expected": "modificand superior modificand inferior sumatori sotaíndex n sobreíndex 2 amb subratllat amb titlla"
+    },
+    "LimBoth_1": {
+      "expected": "modificand superior modificand inferior sumatori sotaíndex n sobreíndex 2 amb subratllat amb titlla"
+    },
+    "LimBoth_2": {
+      "expected": "modificand superior modificand inferior sumatori sotaíndex n sobreíndex 2 amb subratllat amb titlla"
+    },
+    "LimBoth_3": {
+      "expected": "sumatori sotaíndex n sobreíndex 2"
+    },
+    "LimBoth_4": {
+      "expected": "sumatori sotaíndex n sobreíndex 2 a"
+    },
+    "LimUpper_0": {
+      "expected": "sumatori sobreíndex n"
+    },
+    "LimUpper_1": {
+      "expected": "sumatori sobreíndex n a"
+    },
+    "LimUpper_2": {
+      "expected": "sumatori sobreíndex n"
+    },
+    "LimUpper_3": {
+      "expected": "sumatori sobreíndex n a"
+    },
+    "LimLower_0": {
+      "expected": "sumatori sotaíndex n"
+    },
+    "LimLower_1": {
+      "expected": "sumatori sotaíndex n a"
+    },
+    "LimLower_2": {
+      "expected": "sumatori sotaíndex n"
+    },
+    "LimLower_3": {
+      "expected": "sumatori sotaíndex n a"
+    },
+    "Issue_442_0": {
+      "expected": "9 dividit 3 no és igual a 9 per 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 dividit 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 dividit 3 no és igual a 9 per 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 dividit 3"
+    },
+    "Prime_19": {
+      "expected": "x prima dos prima"
+    },
+    "issue_728_0": {
+      "expected": "a mol"
+    },
+    "issue_728_1": {
+      "expected": "a mol 1"
+    },
+    "issue_767_0": {
+      "expected": "majúscula A subíndex n línia base barra vertical subíndex nucli majúscula P sub subíndex n subíndex línia base"
+    },
+    "issue_767_1": {
+      "expected": "majúscula A subíndex n línia base barra vertical subíndex a b c majúscula P sub subíndex n subíndex línia base"
+    },
+    "issue_767_2": {
+      "expected": "majúscula A subíndex n línia base barra vertical subíndex abc majúscula P sub subíndex n subíndex línia base"
+    },
+    "issue_767_3": {
+      "expected": "s i n parèntesi esquerre x parèntesi dret"
+    },
+    "issue_767_4": {
+      "expected": "sinus parèntesi esquerre x parèntesi dret"
+    }
+  }
+}

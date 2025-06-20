@@ -1,0 +1,15 @@
+{
+  "locale": "it",
+  "name": "ItalianExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsItalian",
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "logaritmo naturale"
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "name": "KoreanClearspeakCollapse",
+  "locale": "ko",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Korean Clearspeak Collapse tests.",
+  "domain": "clearspeak",
+  "active": "CollapseKorean",
+  "exclude": [
+    "CollapsedAddition_brief",
+    "CollapsedAddition_sbrief",
+    "CollapsedBigop_brief",
+    "CollapsedBigop_sbrief",
+    "CollapsedBinomial_brief",
+    "CollapsedBinomial_sbrief",
+    "CollapsedCases_brief",
+    "CollapsedCases_sbrief",
+    "CollapsedCell_brief",
+    "CollapsedCell_sbrief",
+    "CollapsedContinuedFraction_brief",
+    "CollapsedContinuedFraction_sbrief",
+    "CollapsedDeterminant_brief",
+    "CollapsedDeterminant_sbrief",
+    "CollapsedFraction_brief",
+    "CollapsedFraction_sbrief",
+    "CollapsedFunction_brief",
+    "CollapsedFunction_sbrief",
+    "CollapsedIdentifier_brief",
+    "CollapsedIdentifier_sbrief",
+    "CollapsedInfixop_brief",
+    "CollapsedInfixop_sbrief",
+    "CollapsedIntegral_brief",
+    "CollapsedIntegral_sbrief",
+    "CollapsedLim_brief",
+    "CollapsedLim_sbrief",
+    "CollapsedLine_brief",
+    "CollapsedLine_sbrief",
+    "CollapsedMatrix_brief",
+    "CollapsedMatrix_sbrief",
+    "CollapsedMixedNumber_brief",
+    "CollapsedMixedNumber_sbrief",
+    "CollapsedMultiplication_brief",
+    "CollapsedMultiplication_sbrief",
+    "CollapsedMultirel_brief",
+    "CollapsedMultirel_sbrief",
+    "CollapsedNumber_brief",
+    "CollapsedNumber_sbrief",
+    "CollapsedPunctuated_brief",
+    "CollapsedPunctuated_sbrief",
+    "CollapsedRelation_brief",
+    "CollapsedRelation_sbrief",
+    "CollapsedRelationSeq_brief",
+    "CollapsedRelationSeq_sbrief",
+    "CollapsedRoot_brief",
+    "CollapsedRoot_sbrief",
+    "CollapsedRootNested_brief",
+    "CollapsedRootNested_sbrief",
+    "CollapsedRow_brief",
+    "CollapsedRow_sbrief",
+    "CollapsedRowvector_brief",
+    "CollapsedRowvector_sbrief",
+    "CollapsedSqrt_brief",
+    "CollapsedSqrt_sbrief",
+    "CollapsedSqrtNested_brief",
+    "CollapsedSqrtNested_sbrief",
+    "CollapsedSquarematrix_brief",
+    "CollapsedSquarematrix_sbrief",
+    "CollapsedSubscript_brief",
+    "CollapsedSubscript_sbrief",
+    "CollapsedSubsup_brief",
+    "CollapsedSubsup_sbrief",
+    "CollapsedSuperscript_brief",
+    "CollapsedSuperscript_sbrief",
+    "CollapsedTable_brief",
+    "CollapsedTable_sbrief",
+    "CollapsedText_brief",
+    "CollapsedText_sbrief",
+    "CollapsedVarAddition_brief",
+    "CollapsedVarAddition_sbrief",
+    "CollapsedVarCases_brief",
+    "CollapsedVarCases_sbrief",
+    "CollapsedVarDeterminant_brief",
+    "CollapsedVarDeterminant_sbrief",
+    "CollapsedVarMatrix_brief",
+    "CollapsedVarMatrix_sbrief",
+    "CollapsedVarMultiplication_brief",
+    "CollapsedVarMultiplication_sbrief",
+    "CollapsedVarMultirel_brief",
+    "CollapsedVarMultirel_sbrief",
+    "CollapsedVarPunctuated_brief",
+    "CollapsedVarPunctuated_sbrief",
+    "CollapsedVarRelation_brief",
+    "CollapsedVarRelation_sbrief",
+    "CollapsedVarVector_brief",
+    "CollapsedVarVector_sbrief",
+    "CollapsedVector_brief",
+    "CollapsedVector_sbrief"
+  ],
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "여닫기 항이 두 개인 덧셈"
+    },
+    "CollapsedBigop_default": {
+      "expected": "여닫기 시그마"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "여닫기 이항식"
+    },
+    "CollapsedCases_default": {
+      "expected": "여닫기 케이스가 두 개인 조건문"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "여닫기 연분수"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "여닫기 2 차원 행렬식"
+    },
+    "CollapsedFraction_default": {
+      "expected": "여닫기 분수"
+    },
+    "CollapsedFunction_default": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "여닫기 함수"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "여닫기 긴 변수"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "여닫기 인자가 두 개인 나눗셈"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "여닫기 인테그럴"
+    },
+    "CollapsedLim_default": {
+      "expected": "여닫기 리미트"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "여닫기 3 행 2 열의 행렬"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "여닫기 긴 대분수"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "여닫기 인자가 두 개인 곱셈"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "여닫기 두 개의 연속된 관계식"
+    },
+    "CollapsedNumber_default": {
+      "expected": "여닫기 긴 수"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "여닫기 세 개의 원소가 콤마 로 나누어진 리스트"
+    },
+    "CollapsedRelation_default": {
+      "expected": "여닫기 등식"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "여닫기 두 개의 연속된 등식"
+    },
+    "CollapsedRoot_default": {
+      "expected": "여닫기 세제곱근 루트"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "여닫기 세제곱근 중첩루트"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "여닫기 2 차원 행 벡터"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "여닫기 루트"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "여닫기 중첩루트"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "여닫기 2 차원 정방행렬"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "여닫기 아래첨자"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "여닫기 거듭제곱과 아래첨자"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "여닫기 거듭제곱"
+    },
+    "CollapsedTable_default": {
+      "expected": "여닫기 2 행 2 열로 이루어진 표"
+    },
+    "CollapsedText_default": {
+      "expected": "여닫기 문자"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "여닫기 항이 여러 개인 덧셈"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "여닫기 케이스가 여러 개인 조건문"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "여닫기 n 차원 행렬식"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "여닫기 n 행 m 열의 행렬"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "여닫기 인자가 여러 개인 곱셈"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "여닫기 여러 개의 연속된 관계식"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "여닫기 여러 개의 원소가 콤마 로 나누어진 리스트"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "여닫기 여러 개의 연속된 등식"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "여닫기 n 차원 벡터"
+    },
+    "CollapsedVector_default": {
+      "expected": "여닫기 3 차원 벡터"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "여닫기 세제곱근 루트 a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "여닫기 세제곱근 중첩루트 a"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "여닫기 항이 여러 개인 뺄셈"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "여닫기 항이 여러 개인 뺄셈"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "여닫기 항이 여러 개인 뺄셈"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "여닫기 인자가 세 개인 곱셈"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "여닫기 인자가 세 개인 곱셈"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "여닫기 인자가 세 개인 곱셈"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "여닫기 인자가 여러 개인 곱셈"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "여닫기 여러 개의 연속된 화살표"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "여닫기 화살표"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "여닫기 n 차원 행 벡터"
+    }
+  }
+}

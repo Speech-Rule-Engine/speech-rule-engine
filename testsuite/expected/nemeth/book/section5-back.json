@@ -1,0 +1,113 @@
+{
+  "name": "NemethSection5",
+  "information": "Nemeth 2020 Book Section 5 partial",
+  "factory": "speech",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Book2019",
+  "tests": {
+    "Example 5.13-4": {
+      "tex": "(𝑥 + 𝑦) d𝑥 d𝑦 = \\_\\_\\_\\_",
+      "brf": "(X+Y)DXDY .K ----",
+      "input": "<mo stretchy=\"false\">(</mo><mi>&#x1D465;</mi><mo>+</mo><mi>&#x1D466;</mi><mo stretchy=\"false\">)</mo><mi>d</mi><mi>&#x1D465;</mi><mi>d</mi><mi>&#x1D466;</mi><mo>=</mo><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi>",
+      "expected": "⠷⠭⠬⠽⠾⠙⠭⠙⠽⠀⠨⠅⠀⠤⠤⠤⠤"
+    },
+    "Example 5.14-1": {
+      "tex": "𝑖 (𝑎 + 𝑏𝑖 ) = −𝑏 + 𝑎𝑖",
+      "brf": "I(A+BI) .K -B+AI",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>&#x1D456;</mi><mo stretchy=\"false\">(</mo><mi>&#x1D44E;</mi><mo>+</mo><mi>&#x1D44F;</mi><mi>&#x1D456;</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo>&#x2212;</mo><mi>&#x1D44F;</mi><mo>+</mo><mi>&#x1D44E;</mi><mi>&#x1D456;</mi></math>",
+      "expected": "⠊⠷⠁⠬⠃⠊⠾⠀⠨⠅⠀⠤⠃⠬⠁⠊"
+    },
+    "Example 5.14-2": {
+      "tex": "𝐶 = 2𝜋𝑟 + 𝜋Δ𝑟",
+      "brf": ",C .K #2.PR+.P.,DR",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>&#x1D436;</mi><mo>=</mo><mn>2</mn><mi>&#x1D70B;</mi><mi>&#x1D45F;</mi><mo>+</mo><mi>&#x1D70B;</mi><mi>&#x394;</mi><mi>&#x1D45F;</mi></math>",
+      "expected": "⠠⠉⠀⠨⠅⠀⠼⠆⠨⠏⠗⠬⠨⠏⠨⠠⠙⠗"
+    },
+    "Example 5.15-1": {
+      "tex": "{2, 4, 6, 8}",
+      "brf": ".(2, 4, 6, 8.)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>8</mn></mrow></math>",
+      "expected": "⠨⠷⠆⠠⠀⠲⠠⠀⠖⠠⠀⠦⠨⠾"
+    },
+    "Example 5.15-2": {
+      "tex": "(–3.1, –2, –.9, 0, .9, 2, 3.1)",
+      "brf": "(-3.1, -2, -.9, 0, .9, 2, 3.1)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo stretchy=\"false\">(</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x2013;</mo></mrow><mn>3.1</mn><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x2013;</mo></mrow><mn>2</mn><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x2013;</mo></mrow><mn>.9</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>.9</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3.1</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠤⠒⠨⠂⠠⠀⠤⠆⠠⠀⠤⠨⠔⠠⠀⠴⠠⠀⠨⠔⠠⠀⠆⠠⠀⠒⠨⠂⠾"
+    },
+    "Example 5.15-3": {
+      "tex": "{5 + 5, 10 + 10}.",
+      "brf": ".(5+5, 10+10.)4",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>5</mn><mo>+</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo>+</mo><mn>10</mn></mrow><mo>.</mo></math>",
+      "expected": "⠨⠷⠢⠬⠢⠠⠀⠂⠴⠬⠂⠴⠨⠾⠲"
+    },
+    "Example 5.15-5": {
+      "tex": "[3, 4, 5; .3, .4, .5]",
+      "brf": "@(3, #4, #5_2 #.3, #.4, #.5@)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo stretchy=\"false\">[</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>;</mo><mn>.3</mn><mo>,</mo><mn>.4</mn><mo>,</mo><mn>.5</mn><mo stretchy=\"false\">]</mo></math>",
+      "expected": "⠈⠷⠒⠠⠀⠼⠲⠠⠀⠼⠢⠸⠆⠀⠼⠨⠒⠠⠀⠼⠨⠲⠠⠀⠼⠨⠢⠈⠾"
+    },
+    "Example 5.15-6": {
+      "tex": "P(3 AND 7)",
+      "brf": ",P(3 ,,AND #7)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>P</mi><mo stretchy=\"false\">(</mo><mn>3</mn><mi>A</mi><mi>N</mi><mi>D</mi><mn>7</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠠⠏⠷⠒⠀⠠⠠⠁⠝⠙⠀⠼⠶⠾"
+    },
+    "Example 5.15-7": {
+      "tex": "(a, 2x, … , b, 𝑎𝑏)",
+      "brf": "(A, 2X, ''', B, AB)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mn>2</mn><mi>x</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi><mo>,</mo><mi>&#x1D44E;</mi><mi>&#x1D44F;</mi><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠁⠠⠀⠆⠭⠠⠀⠄⠄⠄⠠⠀⠃⠠⠀⠁⠃⠾"
+    },
+    "Example 5.15-9": {
+      "tex": "(i, ii, iii, iv)",
+      "brf": "(I, II, III, IV)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo stretchy=\"false\">(</mo><mi>i</mi><mo>,</mo><mi>i</mi><mi>i</mi><mo>,</mo><mi>i</mi><mi>i</mi><mi>i</mi><mo>,</mo><mi>i</mi><mi>v</mi><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠊⠠⠀⠊⠊⠠⠀⠊⠊⠊⠠⠀⠊⠧⠾"
+    },
+    "Example 5.15-10": {
+      "tex": "(𝛼, 𝑎, 𝛽, 𝑏)",
+      "brf": "(.A, A, .B, B)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo stretchy=\"false\">(</mo><mi>&#x1D6FC;</mi><mo>,</mo><mi>&#x1D44E;</mi><mo>,</mo><mi>&#x1D6FD;</mi><mo>,</mo><mi>&#x1D44F;</mi><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠨⠁⠠⠀⠁⠠⠀⠨⠃⠠⠀⠃⠾"
+    },
+    "Example 5.15-11": {
+      "tex": "(1, 3, ? , ? , 9)",
+      "brf": "(1, 3, =, =, 9)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo stretchy=\"false\">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mo>?</mo><mo>,</mo><mo>?</mo><mo>,</mo><mn>9</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠂⠠⠀⠒⠠⠀⠿⠠⠀⠿⠠⠀⠔⠾"
+    },
+    "Example 5.15-12": {
+      "tex": "{𝑚, 𝑛, 𝑜, 𝑝, 𝑞, 𝑟, 𝑠, 𝑡, 𝑢, 𝑣}.",
+      "brf": ".(M, N, O, P, Q, R, S, T, U, V.)4",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x1D45A;</mi><mo>,</mo><mi>&#x1D45B;</mi><mo>,</mo><mi>&#x1D45C;</mi><mo>,</mo><mi>&#x1D45D;</mi><mo>,</mo><mi>&#x1D45E;</mi><mo>,</mo><mi>&#x1D45F;</mi><mo>,</mo><mi>&#x1D460;</mi><mo>,</mo><mi>&#x1D461;</mi><mo>,</mo><mi>&#x1D462;</mi><mo>,</mo><mi>&#x1D463;</mi></mrow><mo>.</mo></math>",
+      "expected": "⠨⠷⠍⠠⠀⠝⠠⠀⠕⠠⠀⠏⠠⠀⠟⠠⠀⠗⠠⠀⠎⠠⠀⠞⠠⠀⠥⠠⠀⠧⠨⠾⠲"
+    },
+    "Example 5.15-13": {
+      "tex": "{… , −4, −3, −2, −1, 0, 1, 2, 3, 4, … }",
+      "brf": ".(''', -4, -3, -2, -1, 0, 1, 2, 3, 4, '''.)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mo>&#x2026;</mo><mo>,</mo><mo>&#x2212;</mo><mn>4</mn><mo>,</mo><mo>&#x2212;</mo><mn>3</mn><mo>,</mo><mo>&#x2212;</mo><mn>2</mn><mo>,</mo><mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mo>&#x2026;</mo></mrow></math>",
+      "expected": "⠨⠷⠄⠄⠄⠠⠀⠤⠲⠠⠀⠤⠒⠠⠀⠤⠆⠠⠀⠤⠂⠠⠀⠴⠠⠀⠂⠠⠀⠆⠠⠀⠒⠠⠀⠲⠠⠀⠄⠄⠄⠨⠾"
+    },
+    "Example 5.15-15a": {
+      "tex": "{25, 50, 75, 100, 125, ...}",
+      "brf": ".(25, 50, 75, 100, 125, '''.)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>25</mn><mo>,</mo><mn>50</mn><mo>,</mo><mn>75</mn><mo>,</mo><mn>100</mn><mo>,</mo><mn>125</mn><mo>,</mo><mo>.</mo><mo>.</mo><mo>.</mo></mrow></math>",
+      "expected": "⠨⠷⠆⠢⠠⠀⠢⠴⠠⠀⠶⠢⠠⠀⠂⠴⠴⠠⠀⠂⠆⠢⠠⠀⠄⠄⠄⠨⠾"
+    },
+    "Example 5.15-15b": {
+      "tex": "{50, 100, 150, 200, 250, 300 ...}",
+      "brf": ".(50, 100, 150, 200, 250, 300 '''.)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>50</mn><mo>,</mo><mn>100</mn><mo>,</mo><mn>150</mn><mo>,</mo><mn>200</mn><mo>,</mo><mn>250</mn><mo>,</mo><mn>300</mn><mo>.</mo><mo>.</mo><mo>.</mo></mrow></math>",
+      "expected": "⠨⠷⠢⠴⠠⠀⠂⠴⠴⠠⠀⠂⠢⠴⠠⠀⠆⠴⠴⠠⠀⠆⠢⠴⠠⠀⠒⠴⠴⠀⠄⠄⠄⠨⠾"
+    },
+    "Example 5.15-15c": {
+      "tex": "{100, 200, 300, 400, 500, 600, 700, ...}",
+      "brf": ".(100, 200, 300, 400, 500, 600, 700, '''.)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow data-mjx-texclass=\"ORD\"><mn>100</mn><mo>,</mo><mn>200</mn><mo>,</mo><mn>300</mn><mo>,</mo><mn>400</mn><mo>,</mo><mn>500</mn><mo>,</mo><mn>600</mn><mo>,</mo><mn>700</mn><mo>,</mo><mo>.</mo><mo>.</mo><mo>.</mo></mrow></math>",
+      "expected": "⠨⠷⠂⠴⠴⠠⠀⠆⠴⠴⠠⠀⠒⠴⠴⠠⠀⠲⠴⠴⠠⠀⠢⠴⠴⠠⠀⠖⠴⠴⠠⠀⠶⠴⠴⠠⠀⠄⠄⠄⠨⠾"
+    }
+  }
+}

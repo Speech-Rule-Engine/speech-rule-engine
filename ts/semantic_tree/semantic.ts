@@ -42,7 +42,7 @@ export type Role = SemanticRole;
  */
 export type Type = SemanticType;
 type Attr = Font | Role | Type;
-export { Attr };
+export type { Attr };
 
 /**
  * Creates the semantic tree for a given MathML node.

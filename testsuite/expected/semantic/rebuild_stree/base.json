@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "base": "input/semantic/base.json",
+  "information": "Semantic Tree Rebuilding tests.",
+  "tests": "ALL"
+}

@@ -1,0 +1,492 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakTrigometry",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "Swedish Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [
+    "TrigReciprocal001",
+    "TrigReciprocal002",
+    "TrigReciprocal003",
+    "TrigReciprocal004",
+    "TrigReciprocal005",
+    "TrigReciprocal006",
+    "TrigReciprocal007",
+    "TrigReciprocal008",
+    "TrigReciprocal009",
+    "TrigReciprocal010",
+    "TrigReciprocal011",
+    "TrigReciprocal012",
+    "TrigReciprocal013",
+    "TrigReciprocal014",
+    "TrigReciprocal015",
+    "TrigReciprocal016",
+    "TrigReciprocal017",
+    "TrigReciprocal018",
+    "TrigReciprocal019",
+    "TrigReciprocal020",
+    "TrigReciprocal021",
+    "TrigReciprocal022",
+    "TrigReciprocal023",
+    "TrigReciprocal024",
+    "TrigReciprocal025",
+    "TrigReciprocal026",
+    "HypTrigReciprocal001",
+    "HypTrigReciprocal002",
+    "HypTrigReciprocal003",
+    "HypTrigReciprocal004",
+    "HypTrigReciprocal005",
+    "HypTrigReciprocal006",
+    "HypTrigReciprocal007",
+    "HypTrigReciprocal008",
+    "HypTrigReciprocal009",
+    "HypTrigReciprocal010",
+    "HypTrigReciprocal011",
+    "HypTrigReciprocal012",
+    "HypTrigReciprocal013",
+    "HypTrigReciprocal014",
+    "HypTrigReciprocal015",
+    "HypTrigReciprocal016",
+    "HypTrigReciprocal017",
+    "HypTrigReciprocal018",
+    "HypTrigReciprocal019",
+    "HypTrigReciprocal020"
+  ],
+  "compare": true,
+  "tests": {
+    "Trig001": {
+      "expected": "sinus x"
+    },
+    "Trig002": {
+      "expected": "cosinus x"
+    },
+    "Trig003": {
+      "expected": "tangens theta"
+    },
+    "Trig004": {
+      "expected": "sekant theta"
+    },
+    "Trig005": {
+      "expected": "kosekant x"
+    },
+    "Trig006": {
+      "expected": "kotangent x"
+    },
+    "Trig007": {
+      "expected": "sinus kvadrat x"
+    },
+    "Trig008": {
+      "expected": "cosinus kubik x"
+    },
+    "Trig009": {
+      "expected": "tangens kvadrat x"
+    },
+    "Trig010": {
+      "expected": "sekant kubik x"
+    },
+    "Trig011": {
+      "expected": "kosekant kvadrat x"
+    },
+    "Trig012": {
+      "expected": "kotangent kvadrat x"
+    },
+    "Trig013": {
+      "expected": "sinus 2 pi"
+    },
+    "Trig014": {
+      "expected": "sinus av, öppna, pi k, plus, pi delat med 2, stäng"
+    },
+    "Trig015": {
+      "expected": "cosinus av, pi delat med 2"
+    },
+    "Trig016": {
+      "expected": "sinus av, pi delat med 2"
+    },
+    "Trig017": {
+      "expected": "sinus pi delat med 2"
+    },
+    "Trig018": {
+      "expected": "2 delat med sinus pi"
+    },
+    "Trig019": {
+      "expected": "bråket med täljare, sinus av, pi delat med 2, och nämnare 3"
+    },
+    "Trig020": {
+      "expected": "tangens minus pi"
+    },
+    "Trig021": {
+      "expected": "sinus av, öppna, x plus pi, stäng"
+    },
+    "Trig022": {
+      "expected": "cosinus av, öppna, x plus, pi delat med 2, stäng"
+    },
+    "Trig023": {
+      "expected": "cosinus av, öppna, pi delat med 2, plus x, stäng"
+    },
+    "Trig024": {
+      "expected": "sinus kvadrat x, plus, cosinus kvadrat x, är lika med 1"
+    },
+    "Trig025": {
+      "expected": "fjärde upphöjt till sinus x"
+    },
+    "Trig026": {
+      "expected": "femte upphöjt till cosinus x"
+    },
+    "Trig027": {
+      "expected": "n upphöjt till tangens x"
+    },
+    "Trig028": {
+      "expected": "sinus x delat med cosinus x"
+    },
+    "Trig029": {
+      "expected": "tangens 35 grader"
+    },
+    "Trig031": {
+      "expected": "tangens av, öppna, vinkel D E F, stäng"
+    },
+    "Trig032": {
+      "expected": "tangens av, öppna, vinkel D, stäng"
+    },
+    "Trig033": {
+      "expected": "sinus av, öppna, x plus y, stäng, är lika med, sinus x cosinus y, plus, cosinus x sinus y"
+    },
+    "Trig034": {
+      "expected": "cosinus av, öppna, x plus y, stäng, är lika med, cosinus x cosinus y, minus, sinus x sinus y"
+    },
+    "Trig035": {
+      "expected": "tangens av, öppna, x plus y, stäng, är lika med, bråket med täljare tangens x minus tangens y, och nämnare 1 minus, tangens x tangens y"
+    },
+    "Trig037": {
+      "expected": "tangens av, öppna, pi delat med 6, plus, 2 pi delat med 3, stäng, är lika med, bråket med täljare, tangens av, pi delat med 6, minus, tangens av, 2 pi delat med 3, och nämnare 1 minus, tangens av, pi delat med 6, tangens av, 2 pi delat med 3"
+    },
+    "Trig038": {
+      "expected": "tangens 2 x, är lika med, bråket med täljare 2 tangens x, och nämnare 1 minus, tangens kvadrat x"
+    },
+    "Trig039": {
+      "expected": "cosinus 2 x, är lika med 2, cosinus kvadrat x, minus 1"
+    },
+    "Trig040": {
+      "expected": "sinus av, x delat med 2, är lika med plus minus kvadratroten av, bråket med täljare 1 minus cosinus x, och nämnare 2"
+    },
+    "Trig041": {
+      "expected": "tangens av, x delat med 2, är lika med plus minus kvadratroten av, bråket med täljare 1 minus cosinus x, och nämnare 1 plus cosinus x"
+    },
+    "Trig042": {
+      "expected": "cosinus x cosinus y, är lika med 2, cosinus av, bråket med täljare x plus y, och nämnare 2, cosinus av, bråket med täljare x minus y, och nämnare 2"
+    },
+    "Trig043": {
+      "expected": "sinus av, öppna, minus, pi delat med 8, stäng, är lika med minus en halv kvadratroten av 2 minus kvadratroten av 2, slut rot, slut rot"
+    },
+    "Trig044": {
+      "expected": "tangens av, 3 pi delat med 8, är lika med, bråket med täljare kvadratroten av, kvadratroten av 2, slut rot, plus 1, slut rot, och nämnare kvadratroten av, kvadratroten av 2, slut rot, minus 1, slut rot"
+    },
+    "Trig045": {
+      "expected": "tangens av, pi delat med 12, är lika med en halv kvadratroten av 2 minus kvadratroten av 3, slut rot, slut rot"
+    },
+    "TrigInvAuto001": {
+      "expected": "inversen sinus av x"
+    },
+    "TrigInvAuto002": {
+      "expected": "inversen cosinus av x"
+    },
+    "TrigInvAuto003": {
+      "expected": "inversen tangens av x"
+    },
+    "TrigInvAuto004": {
+      "expected": "inversen kotangent av x"
+    },
+    "TrigInvAuto005": {
+      "expected": "inversen sekant av x"
+    },
+    "TrigInvAuto006": {
+      "expected": "inversen kosekant av x"
+    },
+    "TrigInvAuto007": {
+      "expected": "inversen sinus av, bråket med täljare kvadratroten av 2, och nämnare 2"
+    },
+    "TrigInvAuto008": {
+      "expected": "inversen cosinus av en halv"
+    },
+    "TrigInvAuto009": {
+      "expected": "inversen tangens av 17"
+    },
+    "TrigInvAuto010": {
+      "expected": "inversen kotangent av 32"
+    },
+    "TrigInvAuto011": {
+      "expected": "inversen sekant av 100"
+    },
+    "TrigInvAuto012": {
+      "expected": "inversen kosekant av 85"
+    },
+    "TrigInvAuto013": {
+      "expected": "inversen sinus av minus x"
+    },
+    "TrigInvAuto014": {
+      "expected": "inversen cosinus av minus x"
+    },
+    "TrigInvAuto015": {
+      "expected": "inversen tangens av, öppna, minus x plus 12, stäng"
+    },
+    "TrigInvAuto016": {
+      "expected": "inversen kotangent av, öppna, minus x minus 1, stäng"
+    },
+    "TrigInvAuto017": {
+      "expected": "inversen sinus av sinus 0"
+    },
+    "TrigInvAuto018": {
+      "expected": "inversen kosekant av kosekant x"
+    },
+    "TrigInvAuto019": {
+      "expected": "cosinus av, öppna, inversen cosinus av, öppna, minus, bråket med täljare kvadratroten av 2, och nämnare 2, stäng, stäng"
+    },
+    "TrigInvAuto020": {
+      "expected": "cosinus av, öppna, minus, inversen cosinus av, öppna, bråket med täljare kvadratroten av 2, och nämnare 2, stäng, stäng"
+    },
+    "TrigInvAuto021": {
+      "expected": "inversen sinus av, öppna, cosinus av, pi delat med 4, stäng"
+    },
+    "TrigInvAuto022": {
+      "expected": "sinus, inversen cosinus av en halv"
+    },
+    "TrigInvAuto023": {
+      "expected": "sinus, inversen tangens av 1"
+    },
+    "TrigInvAuto024": {
+      "expected": "sinus av, öppna, minus, inversen tangens av 1, stäng"
+    },
+    "TrigInvAuto025": {
+      "expected": "sinus av, öppna, minus, inversen tangens av minus 1, stäng"
+    },
+    "TrigInvAuto026": {
+      "expected": "inversen sekant av sekant x"
+    },
+    "TrigInverse001": {
+      "expected": "sinus invers av x"
+    },
+    "TrigInverse002": {
+      "expected": "cosinus invers av x"
+    },
+    "TrigInverse003": {
+      "expected": "tangens invers av x"
+    },
+    "TrigInverse004": {
+      "expected": "kotangent invers av x"
+    },
+    "TrigInverse005": {
+      "expected": "sekant invers av x"
+    },
+    "TrigInverse006": {
+      "expected": "kosekant invers av x"
+    },
+    "TrigInverse007": {
+      "expected": "sinus invers av, bråket med täljare kvadratroten av 2, och nämnare 2"
+    },
+    "TrigInverse008": {
+      "expected": "cosinus invers av en halv"
+    },
+    "TrigInverse009": {
+      "expected": "tangens invers av 17"
+    },
+    "TrigInverse010": {
+      "expected": "kotangent invers av 32"
+    },
+    "TrigInverse011": {
+      "expected": "sekant invers av 100"
+    },
+    "TrigInverse012": {
+      "expected": "kosekant invers av 85"
+    },
+    "TrigInverse013": {
+      "expected": "sinus invers av minus x"
+    },
+    "TrigInverse014": {
+      "expected": "cosinus invers av minus x"
+    },
+    "TrigInverse015": {
+      "expected": "tangens invers av, öppna, minus x plus 12, stäng"
+    },
+    "TrigInverse016": {
+      "expected": "kotangent invers av, öppna, minus x minus 1, stäng"
+    },
+    "TrigInverse017": {
+      "expected": "sinus invers av sinus 0"
+    },
+    "TrigInverse018": {
+      "expected": "kosekant invers av kosekant x"
+    },
+    "TrigInverse019": {
+      "expected": "cosinus av, öppna, cosinus invers av, öppna, minus, bråket med täljare kvadratroten av 2, och nämnare 2, stäng, stäng"
+    },
+    "TrigInverse020": {
+      "expected": "cosinus av, öppna, minus, cosinus invers av, öppna, bråket med täljare kvadratroten av 2, och nämnare 2, stäng, stäng"
+    },
+    "TrigInverse021": {
+      "expected": "sinus invers av, öppna, cosinus av, pi delat med 4, stäng"
+    },
+    "TrigInverse022": {
+      "expected": "sinus, cosinus invers av en halv"
+    },
+    "TrigInverse023": {
+      "expected": "sinus, tangens invers av 1"
+    },
+    "TrigInverse024": {
+      "expected": "sinus av, öppna, minus, tangens invers av 1, stäng"
+    },
+    "TrigInverse025": {
+      "expected": "sinus av, öppna, minus, tangens invers av minus 1, stäng"
+    },
+    "TrigInverse026": {
+      "expected": "sekant invers av sekant x"
+    },
+    "ArcTrig001": {
+      "expected": "arcus sinus x"
+    },
+    "ArcTrig002": {
+      "expected": "arcus cosinus x"
+    },
+    "ArcTrig003": {
+      "expected": "arcus tangens x"
+    },
+    "ArcTrig004": {
+      "expected": "arcus kotangent x"
+    },
+    "ArcTrig005": {
+      "expected": "arcus sekant x"
+    },
+    "ArcTrig006": {
+      "expected": "arcus kosekant x"
+    },
+    "ArcTrig007": {
+      "expected": "arcus sinus av, bråket med täljare kvadratroten av 2, och nämnare 2"
+    },
+    "ArcTrig008": {
+      "expected": "arcus cosinus en halv"
+    },
+    "ArcTrig009": {
+      "expected": "arcus tangens 17"
+    },
+    "ArcTrig010": {
+      "expected": "arcus kotangent 32"
+    },
+    "ArcTrig011": {
+      "expected": "arcus sekant 100"
+    },
+    "ArcTrig012": {
+      "expected": "arcus kosekant 85"
+    },
+    "ArcTrig013": {
+      "expected": "arcus sinus minus x"
+    },
+    "ArcTrig014": {
+      "expected": "arcus cosinus minus x"
+    },
+    "ArcTrig015": {
+      "expected": "arcus tangens av, öppna, minus x plus 12, stäng"
+    },
+    "ArcTrig016": {
+      "expected": "arcus kotangent av, öppna, minus x minus 1, stäng"
+    },
+    "ArcTrig017": {
+      "expected": "arcus sinus, sinus 0"
+    },
+    "ArcTrig018": {
+      "expected": "arcus kosekant, kosekant x"
+    },
+    "ArcTrig019": {
+      "expected": "cosinus av, öppna, arcus cosinus av, öppna, minus, bråket med täljare kvadratroten av 2, och nämnare 2, stäng, stäng"
+    },
+    "ArcTrig020": {
+      "expected": "cosinus av, öppna, minus, arcus cosinus av, öppna, bråket med täljare kvadratroten av 2, och nämnare 2, stäng, stäng"
+    },
+    "ArcTrig021": {
+      "expected": "arcus sinus av, öppna, cosinus av, pi delat med 4, stäng"
+    },
+    "ArcTrig022": {
+      "expected": "sinus, arcus cosinus en halv"
+    },
+    "ArcTrig023": {
+      "expected": "sinus, arcus tangens 1"
+    },
+    "ArcTrig024": {
+      "expected": "sinus av, öppna, minus, arcus tangens 1, stäng"
+    },
+    "ArcTrig025": {
+      "expected": "sinus av, öppna, minus, arcus tangens minus 1, stäng"
+    },
+    "ArcTrig026": {
+      "expected": "arcus sekant, sekant x"
+    },
+    "AllTrig01": {
+      "expected": "arcus sinus x"
+    },
+    "AllTrig02": {
+      "expected": "arcus cosinus x"
+    },
+    "AllTrig03": {
+      "expected": "arcus tangens x"
+    },
+    "HypTrig001": {
+      "expected": "sinus hyperbolicus av x"
+    },
+    "HypTrig002": {
+      "expected": "cosinus hyperbolicus av x"
+    },
+    "HypTrig003": {
+      "expected": "hyperbolisk tangent av x"
+    },
+    "HypTrig004": {
+      "expected": "hyperbolisk kotangent av x"
+    },
+    "HypTrig005": {
+      "expected": "hyperbolisk sekant av x"
+    },
+    "HypTrig006": {
+      "expected": "hyperbolisk kosekant av x"
+    },
+    "HypTrig007": {
+      "expected": "inversen sinus hyperbolicus av x"
+    },
+    "HypTrig008": {
+      "expected": "inversen cosinus hyperbolicus av x"
+    },
+    "HypTrig009": {
+      "expected": "inversen hyperbolisk tangent av x"
+    },
+    "HypTrig010": {
+      "expected": "inversen hyperbolisk kotangent av x"
+    },
+    "HypTrig011": {
+      "expected": "inversen hyperbolisk sekant av x"
+    },
+    "HypTrig012": {
+      "expected": "inversen hyperbolisk kosekant av x"
+    },
+    "HypTrig013": {
+      "expected": "sinus hyperbolicus av, inversen sinus hyperbolicus av x"
+    },
+    "HypTrig014": {
+      "expected": "cosinus hyperbolicus av, inversen cosinus hyperbolicus av x"
+    },
+    "HypTrig015": {
+      "expected": "hyperbolisk tangent av, inversen hyperbolisk tangent av x"
+    },
+    "HypTrig016": {
+      "expected": "hyperbolisk kotangent av, inversen hyperbolisk kotangent av x"
+    },
+    "HypTrig017": {
+      "expected": "inversen sinus hyperbolicus av, sinus hyperbolicus av x"
+    },
+    "HypTrig018": {
+      "expected": "inversen cosinus hyperbolicus av, cosinus hyperbolicus av x"
+    },
+    "HypTrig019": {
+      "expected": "inversen hyperbolisk tangent av, hyperbolisk tangent av x"
+    },
+    "HypTrig020": {
+      "expected": "inversen hyperbolisk kotangent av, hyperbolisk kotangent av x"
+    }
+  }
+}

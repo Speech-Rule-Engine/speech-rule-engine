@@ -1,0 +1,403 @@
+{
+  "name": "AfrikaansMathspeakIssues2",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Afrikaans Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "Begin wortel a End wortel"
+    },
+    "MathspeakRoots_1": {
+      "expected": "WortelIndeks 2 Begin wortel a End wortel"
+    },
+    "MathspeakRoots_2": {
+      "expected": "WortelIndeks 3 Begin wortel a End wortel"
+    },
+    "MathspeakRoots_3": {
+      "expected": "WortelIndeks 4 Begin wortel a End wortel"
+    },
+    "MathspeakRoots_4": {
+      "expected": "genesBegin wortel Begin wortel a End wortel genesEnd wortel"
+    },
+    "MathspeakRoots_5": {
+      "expected": "genesTwee keerBegin wortel genesBegin wortel Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel"
+    },
+    "MathspeakRoots_6": {
+      "expected": "genesWortelIndeks 2 genesBegin wortel WortelIndeks 2 Begin wortel a End wortel genesEnd wortel"
+    },
+    "MathspeakRoots_7": {
+      "expected": "genesTwee keerWortelIndeks 2 genesTwee keerBegin wortel genesWortelIndeks 2 genesBegin wortel WortelIndeks 2 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel"
+    },
+    "MathspeakRoots_8": {
+      "expected": "genesWortelIndeks 3 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel"
+    },
+    "MathspeakRoots_9": {
+      "expected": "genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel genesWortelIndeks 3 genesBegin wortel WortelIndeks 3 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel"
+    },
+    "MathspeakRoots_10": {
+      "expected": "genesWortelIndeks 4 genesBegin wortel WortelIndeks 4 Begin wortel a End wortel genesEnd wortel"
+    },
+    "MathspeakRoots_11": {
+      "expected": "genesTwee keerWortelIndeks 4 genesTwee keerBegin wortel genesWortelIndeks 4 genesBegin wortel WortelIndeks 4 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel"
+    },
+    "MathspeakRoots_12": {
+      "expected": "genesTwee keerWortelIndeks 2 genesTwee keerBegin wortel genesWortelIndeks 3 genesBegin wortel WortelIndeks 4 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel"
+    },
+    "MathspeakRoots_13": {
+      "expected": "genesTwee keerWortelIndeks 4 genesTwee keerBegin wortel genesWortelIndeks 3 genesBegin wortel WortelIndeks 2 Begin wortel a End wortel genesEnd wortel genesTwee keerEnd wortel"
+    },
+    "HtmlEntities_0": {
+      "expected": "kleiner as"
+    },
+    "HtmlEntities_1": {
+      "expected": "groter as"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "Begin Binomiaal of Matriks n Kies k End Binomiaal of Matriks"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "Begin Binomiaal of Matriks n Kies k End Binomiaal of Matriks"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "Begin Binomiaal of Matriks n Kies k End Binomiaal of Matriks"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "links hakkie BeginBreuk n Oor k EndBreuk regs hakkie"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "links hakkie BeginBreuk n Oor k EndBreuk regs hakkie"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "links hakkie BeginBreuk n Oor k EndBreuk regs hakkie"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "een helfte minus vyf agtiendes"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "minus BeginBreuk 5,2 Oor a EndBreuk"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "minus BeginBreuk 5,2 Oor 18 EndBreuk"
+    },
+    "TrivialStuff_0": {
+      "expected": "a is gelyk aan b"
+    },
+    "TrivialStuff_1": {
+      "expected": "haal aan"
+    },
+    "TrivialStuff_2": {
+      "expected": "haal aan x haal aan"
+    },
+    "TrivialStuff_3": {
+      "expected": "priem"
+    },
+    "GermanFonts_0": {
+      "expected": "fraktur hoofletter A"
+    },
+    "GermanFonts_1": {
+      "expected": "vetgedruk fraktur hoofletter A"
+    },
+    "GermanFonts_2": {
+      "expected": "fraktur hoofletter A"
+    },
+    "GermanFonts_3": {
+      "expected": "vetgedruk fraktur hoofletter A"
+    },
+    "GermanFonts_4": {
+      "expected": "vetgedruk fraktur abc"
+    },
+    "GermanFonts_5": {
+      "expected": "vetgedruk fraktur ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "vetgedruk fraktur hoofletter A hoofletter B hoofletter C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "normaal m"
+    },
+    "OtherFonts_2": {
+      "expected": "mi"
+    },
+    "OtherFonts_3": {
+      "expected": "kursief mi"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "kursief 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 graad"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m hoofletter A"
+    },
+    "Multiline_0": {
+      "expected": "Begin uitleg 1. Ry  a 2. Ry  b End uitleg"
+    },
+    "Multiline_1": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom a 2. Kolom c 2. Ry 1. Kolom b 2. Kolom d End uitleg"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "kleiner of gelyk aan 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "is gelyk aan 2 is gelyk aan"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "kleiner of gelyk aan 2 is gelyk aan"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom 1 2. Kolom kleiner of gelyk aan 2 End uitleg"
+    },
+    "EncloseGeneral": {
+      "expected": "Begin omhein sirkel a End omhein"
+    },
+    "EncloseLeftbar": {
+      "expected": "afstreep a"
+    },
+    "EncloseRightbar": {
+      "expected": "a afstreep"
+    },
+    "LatinMathfonts_0": {
+      "expected": "fraktur hoofletter A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "vetgedruk fraktur hoofletter A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "vetgedruk skrif hoofletter A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "vetgedruk kursief hoofletter A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "vetgedruk hoofletter A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "hoofletter A dubbelgeslaan"
+    },
+    "LatinMathfonts_6": {
+      "expected": "hoofletter A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "monospasie hoofletter A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "sans serif vetgedruk hoofletter A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "sans serif kursief hoofletter A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "sans serif vetgedruk kursief hoofletter A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "sans serif hoofletter A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "skrif hoofletter A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "vetgedruk hoofletter Alfa"
+    },
+    "GreekMathfonts_1": {
+      "expected": "hoofletter Alfa"
+    },
+    "GreekMathfonts_2": {
+      "expected": "vetgedruk kursief hoofletter Alfa"
+    },
+    "GreekMathfonts_3": {
+      "expected": "sans serif vetgedruk hoofletter Alfa"
+    },
+    "GreekMathfonts_4": {
+      "expected": "sans serif vetgedruk kursief hoofletter Alfa"
+    },
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "Begin uitleg 1. Ry  met opskrif links hakkie 3 punt 1 punt 10 regs hakkie End opskrif End uitleg"
+    },
+    "Issue320_0": {
+      "expected": "partiële afgeleide"
+    },
+    "Issue320_1": {
+      "expected": "x faktoriaal"
+    },
+    "Issue320_2": {
+      "expected": "minus minus x"
+    },
+    "Issue320_3": {
+      "expected": "plus plus x"
+    },
+    "Issue320_4": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_5": {
+      "expected": "partiële afgeleide partiële afgeleide x"
+    },
+    "Issue320_6": {
+      "expected": "links hakkie BeginBreuk partiële afgeleide kwadraat Oor partiële afgeleide x kwadraat EndBreuk plus BeginBreuk partiële afgeleide kwadraat Oor partiële afgeleide y kwadraat EndBreuk regs hakkie begin absolute Waarde phi links hakkie x plus normaal i y regs hakkie End Absolute Waarde kwadraat is gelyk aan 0"
+    },
+    "Prime_0": {
+      "expected": "x priem"
+    },
+    "Prime_1": {
+      "expected": "x dubbelpriem"
+    },
+    "Prime_2": {
+      "expected": "x trippelpriem"
+    },
+    "Prime_3": {
+      "expected": "x vierdubbele priem"
+    },
+    "Prime_4": {
+      "expected": "x priem"
+    },
+    "Prime_5": {
+      "expected": "x dubbelpriem"
+    },
+    "Prime_6": {
+      "expected": "x priem"
+    },
+    "Prime_7": {
+      "expected": "x dubbelpriem"
+    },
+    "Prime_8": {
+      "expected": "x priem"
+    },
+    "Prime_9": {
+      "expected": "x dubbelpriem"
+    },
+    "Prime_10": {
+      "expected": "x trippelpriem"
+    },
+    "Prime_11": {
+      "expected": "x vierdubbele priem"
+    },
+    "Prime_12": {
+      "expected": "x vyf priem"
+    },
+    "Prime_13": {
+      "expected": "x ses priem"
+    },
+    "Prime_14": {
+      "expected": "x dubbelpriem"
+    },
+    "Prime_15": {
+      "expected": "x trippelpriem"
+    },
+    "Prime_16": {
+      "expected": "x vierdubbele priem"
+    },
+    "Prime_17": {
+      "expected": "x vyf priem"
+    },
+    "Prime_18": {
+      "expected": "x ses priem"
+    },
+    "Prime_19": {
+      "expected": "x priem dubbelpriem"
+    },
+    "LimBoth_0": {
+      "expected": "pas boonste aan Pas aan onder som Onderskrif n Boskrif 2 End skrifte met lyn met tilde"
+    },
+    "LimBoth_1": {
+      "expected": "pas boonste aan Pas aan onder som Onderskrif n Boskrif 2 End skrifte met lyn met tilde"
+    },
+    "LimBoth_2": {
+      "expected": "pas boonste aan Pas aan onder som Onderskrif n Boskrif 2 End skrifte met lyn met tilde"
+    },
+    "LimBoth_3": {
+      "expected": "som Onderskrif n Boskrif 2 End skrifte"
+    },
+    "LimBoth_4": {
+      "expected": "som Onderskrif n Boskrif 2 End skrifte a"
+    },
+    "LimUpper_0": {
+      "expected": "som Boskrif n End skrifte"
+    },
+    "LimUpper_1": {
+      "expected": "som Boskrif n End skrifte a"
+    },
+    "LimUpper_2": {
+      "expected": "som Boskrif n End skrifte"
+    },
+    "LimUpper_3": {
+      "expected": "som Boskrif n End skrifte a"
+    },
+    "LimLower_0": {
+      "expected": "som Onderskrif n End skrifte"
+    },
+    "LimLower_1": {
+      "expected": "som Onderskrif n End skrifte a"
+    },
+    "LimLower_2": {
+      "expected": "som Onderskrif n End skrifte"
+    },
+    "LimLower_3": {
+      "expected": "som Onderskrif n End skrifte a"
+    },
+    "Issue_442_0": {
+      "expected": "9 gedeel deur 3 is nie gelyk aan 9 maal 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 gedeel deur 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 gedeel deur 3 is nie gelyk aan 9 maal 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 gedeel deur 3"
+    },
+    "issue_728_0": {
+      "expected": "a mol"
+    },
+    "issue_728_1": {
+      "expected": "a mol 1"
+    },
+    "issue_767_0": {
+      "expected": "hoofletter A Onderskrif n Basislyn afstreep Onderskrif kern hoofletter P Onderskrif Onderskrif n Onderskrif Basislyn"
+    },
+    "issue_767_1": {
+      "expected": "hoofletter A Onderskrif n Basislyn afstreep Onderskrif a b c hoofletter P Onderskrif Onderskrif n Onderskrif Basislyn"
+    },
+    "issue_767_2": {
+      "expected": "hoofletter A Onderskrif n Basislyn afstreep Onderskrif abc hoofletter P Onderskrif Onderskrif n Onderskrif Basislyn"
+    },
+    "issue_767_3": {
+      "expected": "s i n links hakkie x regs hakkie"
+    },
+    "issue_767_4": {
+      "expected": "sinus links hakkie x regs hakkie"
+    }
+  }
+}

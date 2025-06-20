@@ -1,0 +1,403 @@
+{
+  "name": "BokmalMathspeakIssues2",
+  "locale": "nb",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Bokmal Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "StartRot a SluttRot"
+    },
+    "MathspeakRoots_1": {
+      "expected": "RotIndeks 2 StartRot a SluttRot"
+    },
+    "MathspeakRoots_2": {
+      "expected": "RotIndeks 3 StartRot a SluttRot"
+    },
+    "MathspeakRoots_3": {
+      "expected": "RotIndeks 4 StartRot a SluttRot"
+    },
+    "MathspeakRoots_4": {
+      "expected": "NøstetStartRot StartRot a SluttRot NøstetSluttRot"
+    },
+    "MathspeakRoots_5": {
+      "expected": "NøstetTo gangerStartRot NøstetStartRot StartRot a SluttRot NøstetSluttRot NøstetTo gangerSluttRot"
+    },
+    "MathspeakRoots_6": {
+      "expected": "NøstetRotIndeks 2 NøstetStartRot RotIndeks 2 StartRot a SluttRot NøstetSluttRot"
+    },
+    "MathspeakRoots_7": {
+      "expected": "NøstetTo gangerRotIndeks 2 NøstetTo gangerStartRot NøstetRotIndeks 2 NøstetStartRot RotIndeks 2 StartRot a SluttRot NøstetSluttRot NøstetTo gangerSluttRot"
+    },
+    "MathspeakRoots_8": {
+      "expected": "NøstetRotIndeks 3 NøstetStartRot RotIndeks 3 StartRot a SluttRot NøstetSluttRot"
+    },
+    "MathspeakRoots_9": {
+      "expected": "NøstetTo gangerRotIndeks 3 NøstetTo gangerStartRot NøstetRotIndeks 3 NøstetStartRot RotIndeks 3 StartRot a SluttRot NøstetSluttRot NøstetTo gangerSluttRot"
+    },
+    "MathspeakRoots_10": {
+      "expected": "NøstetRotIndeks 4 NøstetStartRot RotIndeks 4 StartRot a SluttRot NøstetSluttRot"
+    },
+    "MathspeakRoots_11": {
+      "expected": "NøstetTo gangerRotIndeks 4 NøstetTo gangerStartRot NøstetRotIndeks 4 NøstetStartRot RotIndeks 4 StartRot a SluttRot NøstetSluttRot NøstetTo gangerSluttRot"
+    },
+    "MathspeakRoots_12": {
+      "expected": "NøstetTo gangerRotIndeks 2 NøstetTo gangerStartRot NøstetRotIndeks 3 NøstetStartRot RotIndeks 4 StartRot a SluttRot NøstetSluttRot NøstetTo gangerSluttRot"
+    },
+    "MathspeakRoots_13": {
+      "expected": "NøstetTo gangerRotIndeks 4 NøstetTo gangerStartRot NøstetRotIndeks 3 NøstetStartRot RotIndeks 2 StartRot a SluttRot NøstetSluttRot NøstetTo gangerSluttRot"
+    },
+    "HtmlEntities_0": {
+      "expected": "er mindre enn"
+    },
+    "HtmlEntities_1": {
+      "expected": "er større enn"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "StartBinomialEllerMatrise n Velg k StoppBinomialEllerMatrise"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "StartBinomialEllerMatrise n Velg k StoppBinomialEllerMatrise"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "StartBinomialEllerMatrise n Velg k StoppBinomialEllerMatrise"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "venstre parentes Start Brøk n Over k Slutt Brøk høyre parentes"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "venstre parentes Start Brøk n Over k Slutt Brøk høyre parentes"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "venstre parentes Start Brøk n Over k Slutt Brøk høyre parentes"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "en andre minus fem åttende"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "minus Start Brøk 5,2 Over a Slutt Brøk"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "minus Start Brøk 5,2 Over 18 Slutt Brøk"
+    },
+    "TrivialStuff_0": {
+      "expected": "a er lik b"
+    },
+    "TrivialStuff_1": {
+      "expected": "sitat-tegn"
+    },
+    "TrivialStuff_2": {
+      "expected": "sitat-tegn x sitat-tegn"
+    },
+    "TrivialStuff_3": {
+      "expected": "apostrof"
+    },
+    "GermanFonts_0": {
+      "expected": "gotisk stor bokstav A"
+    },
+    "GermanFonts_1": {
+      "expected": "fet gotisk stor bokstav A"
+    },
+    "GermanFonts_2": {
+      "expected": "gotisk stor bokstav A"
+    },
+    "GermanFonts_3": {
+      "expected": "fet gotisk stor bokstav A"
+    },
+    "GermanFonts_4": {
+      "expected": "fet gotisk abc"
+    },
+    "GermanFonts_5": {
+      "expected": "fet gotisk ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "fet gotisk stor bokstav A stor bokstav B stor bokstav C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "normal m"
+    },
+    "OtherFonts_2": {
+      "expected": "mi"
+    },
+    "OtherFonts_3": {
+      "expected": "kursiv mi"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "kursiv 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 grader"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m stor bokstav A"
+    },
+    "Multiline_0": {
+      "expected": "StartOppsett 1. Rad  a 2. Rad  b StoppOppsett"
+    },
+    "Multiline_1": {
+      "expected": "StartOppsett 1. Rad 1. Kolonne a 2. Kolonne c 2. Rad 1. Kolonne b 2. Kolonne d StoppOppsett"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "er mindre enn eller er lik 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "er lik 2 er lik"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "er mindre enn eller er lik 2 er lik"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "StartOppsett 1. Rad 1. Kolonne 1 2. Kolonne er mindre enn eller er lik 2 StoppOppsett"
+    },
+    "EncloseGeneral": {
+      "expected": "StartOmslutting sirkel a StoppOmslutting"
+    },
+    "EncloseLeftbar": {
+      "expected": "vertikal strek a"
+    },
+    "EncloseRightbar": {
+      "expected": "a vertikal strek"
+    },
+    "LatinMathfonts_0": {
+      "expected": "gotisk stor bokstav A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "fet gotisk stor bokstav A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "fet  stor bokstav A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "fet kursiv stor bokstav A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "fet stor bokstav A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "double-struck stor bokstav A"
+    },
+    "LatinMathfonts_6": {
+      "expected": "stor bokstav A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "smal stor bokstav A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "uten seriffer fet stor bokstav A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "uten seriffer kursiv stor bokstav A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "uten seriffer fet kursiv stor bokstav A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "uten seriffer stor bokstav A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "script stor bokstav A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "fet stor bokstav Alfa"
+    },
+    "GreekMathfonts_1": {
+      "expected": "stor bokstav Alfa"
+    },
+    "GreekMathfonts_2": {
+      "expected": "fet kursiv stor bokstav Alfa"
+    },
+    "GreekMathfonts_3": {
+      "expected": "uten seriffer fet stor bokstav Alfa"
+    },
+    "GreekMathfonts_4": {
+      "expected": "uten seriffer fet kursiv stor bokstav Alfa"
+    },
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "StartOppsett 1. Rad  med Etikett venstre parentes 3 punktum 1 punktum 10 høyre parentes StoppEtikett StoppOppsett"
+    },
+    "Issue320_0": {
+      "expected": "partiellderivert"
+    },
+    "Issue320_1": {
+      "expected": "x faktorisk"
+    },
+    "Issue320_2": {
+      "expected": "minus minus x"
+    },
+    "Issue320_3": {
+      "expected": "pluss pluss x"
+    },
+    "Issue320_4": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_5": {
+      "expected": "partiellderivert partiellderivert x"
+    },
+    "Issue320_6": {
+      "expected": "venstre parentes Start Brøk partiellderivert i andre potens Over partiellderivert x i andre potens Slutt Brøk pluss Start Brøk partiellderivert i andre potens Over partiellderivert y i andre potens Slutt Brøk høyre parentes StartAbsoluttVerdi pi venstre parentes x pluss normal i y høyre parentes StoppAbsoluttVerdi i andre potens er lik 0"
+    },
+    "Prime_0": {
+      "expected": "x prim"
+    },
+    "Prime_1": {
+      "expected": "x dobbel prim"
+    },
+    "Prime_2": {
+      "expected": "x trippelprom"
+    },
+    "Prime_3": {
+      "expected": "x kvadruppel prim"
+    },
+    "Prime_4": {
+      "expected": "x prim"
+    },
+    "Prime_5": {
+      "expected": "x dobbel prim"
+    },
+    "Prime_6": {
+      "expected": "x prim"
+    },
+    "Prime_7": {
+      "expected": "x dobbelt prim"
+    },
+    "Prime_8": {
+      "expected": "x apostrof"
+    },
+    "Prime_9": {
+      "expected": "x dobbel prim"
+    },
+    "Prime_10": {
+      "expected": "x trippelprom"
+    },
+    "Prime_11": {
+      "expected": "x kvadruppel prim"
+    },
+    "Prime_12": {
+      "expected": "x fem prim"
+    },
+    "Prime_13": {
+      "expected": "x seks prim"
+    },
+    "Prime_14": {
+      "expected": "x dobbel prim"
+    },
+    "Prime_15": {
+      "expected": "x trippelprom"
+    },
+    "Prime_16": {
+      "expected": "x kvadruppel prim"
+    },
+    "Prime_17": {
+      "expected": "x fem prim"
+    },
+    "Prime_18": {
+      "expected": "x seks prim"
+    },
+    "LimBoth_0": {
+      "expected": "ModifiserOver ModifiserUnder sum Underskript n Overskript 2 Sluttskript Med understrek Med tilde"
+    },
+    "LimBoth_1": {
+      "expected": "ModifiserOver ModifiserUnder sum Underskript n Overskript 2 Sluttskript Med understrek Med tilde"
+    },
+    "LimBoth_2": {
+      "expected": "ModifiserOver ModifiserUnder sum Underskript n Overskript 2 Sluttskript Med understrek Med tilde"
+    },
+    "LimBoth_3": {
+      "expected": "sum Underskript n Overskript 2 Sluttskript"
+    },
+    "LimBoth_4": {
+      "expected": "sum Underskript n Overskript 2 Sluttskript a"
+    },
+    "LimUpper_0": {
+      "expected": "sum Overskript n Sluttskript"
+    },
+    "LimUpper_1": {
+      "expected": "sum Overskript n Sluttskript a"
+    },
+    "LimUpper_2": {
+      "expected": "sum Overskript n Sluttskript"
+    },
+    "LimUpper_3": {
+      "expected": "sum Overskript n Sluttskript a"
+    },
+    "LimLower_0": {
+      "expected": "sum Underskript n Sluttskript"
+    },
+    "LimLower_1": {
+      "expected": "sum Underskript n Sluttskript a"
+    },
+    "LimLower_2": {
+      "expected": "sum Underskript n Sluttskript"
+    },
+    "LimLower_3": {
+      "expected": "sum Underskript n Sluttskript a"
+    },
+    "Issue_442_0": {
+      "expected": "9 delt på 3 er ikke lik 9 gangetegn 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 delt på 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 delt på 3 er ikke lik 9 gangetegn 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 delt på 3"
+    },
+    "Prime_19": {
+      "expected": "x apostrof dobbel prim"
+    },
+    "issue_728_0": {
+      "expected": "a mol"
+    },
+    "issue_728_1": {
+      "expected": "a mol 1"
+    },
+    "issue_767_0": {
+      "expected": "stor bokstav A Subskript n Grunnlinje vertikalstrek Subskript kjerne stor bokstav P Sub Subskript n Subskript Grunnlinje"
+    },
+    "issue_767_1": {
+      "expected": "stor bokstav A Subskript n Grunnlinje vertikalstrek Subskript a b c stor bokstav P Sub Subskript n Subskript Grunnlinje"
+    },
+    "issue_767_2": {
+      "expected": "stor bokstav A Subskript n Grunnlinje vertikalstrek Subskript abc stor bokstav P Sub Subskript n Subskript Grunnlinje"
+    },
+    "issue_767_3": {
+      "expected": "s i n venstre parentes x høyre parentes"
+    },
+    "issue_767_4": {
+      "expected": "sinus venstre parentes x høyre parentes"
+    }
+  }
+}

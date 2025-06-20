@@ -1,0 +1,425 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakRoots",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "Korean Clearspeak Roots rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "expected": "루트 2"
+    },
+    "Root002": {
+      "expected": "3 더하기 루트 2"
+    },
+    "Root003": {
+      "expected": "3 플러스마이너스 루트 2"
+    },
+    "Root004": {
+      "expected": "3 마이너스플러스 루트 2"
+    },
+    "Root005": {
+      "expected": "마이너스 루트 2"
+    },
+    "Root006": {
+      "expected": "3 빼기 루트 2"
+    },
+    "Root007": {
+      "expected": "3 더하기 마이너스 루트 2"
+    },
+    "Root008": {
+      "expected": "3 빼기 마이너스 루트 2"
+    },
+    "Root009": {
+      "expected": "3 더하기, 괄호 열고, 마이너스 루트 2, 괄호 닫고"
+    },
+    "Root010": {
+      "expected": "3 빼기, 괄호 열고, 마이너스 루트 2, 괄호 닫고"
+    },
+    "Root011": {
+      "expected": "루트 x 더하기 1"
+    },
+    "Root011a": {
+      "expected": "루트 x, 더하기 1"
+    },
+    "Root012": {
+      "expected": "마이너스 루트 x"
+    },
+    "Root013": {
+      "expected": "괄호 열고, 루트 x, 괄호 닫고, 제곱"
+    },
+    "Root014": {
+      "expected": "마이너스, 괄호 열고, 루트 x, 괄호 닫고, 제곱"
+    },
+    "Root015": {
+      "expected": "루트 x, 제곱"
+    },
+    "Root016": {
+      "expected": "루트 x 제곱"
+    },
+    "Root017": {
+      "expected": "루트 x 제곱 더하기 y 제곱"
+    },
+    "Root018": {
+      "expected": "루트, x 아래첨자 1, 제곱 더하기, x 아래첨자 2, 제곱"
+    },
+    "Root019": {
+      "expected": "루트, 괄호 열고, x 아래첨자 2, 빼기, x 아래첨자 1, 괄호 닫고, 제곱 더하기, 괄호 열고, y 아래첨자 2, 빼기, y 아래첨자 1, 괄호 닫고, 제곱"
+    },
+    "Root020": {
+      "expected": "루트 2 분의 1"
+    },
+    "Root021": {
+      "expected": "루트, 66 분의 23"
+    },
+    "Root022": {
+      "expected": "루트, 분모가 2 x, 더하기 5, 이고 분자가 x 더하기 1, 인 분수"
+    },
+    "Root023": {
+      "expected": "분모가 2 a, 이고 분자가 마이너스 b 플러스마이너스 루트 b 제곱 빼기 4 a c, 인 분수"
+    },
+    "Root024": {
+      "expected": "플러스 루트 2"
+    },
+    "Root025": {
+      "expected": "3 더하기 플러스 루트 2"
+    },
+    "Root026": {
+      "expected": "3 플러스마이너스 루트 2"
+    },
+    "Root027": {
+      "expected": "3 마이너스플러스 루트 2"
+    },
+    "Root028": {
+      "expected": "마이너스 루트 2"
+    },
+    "Root029": {
+      "expected": "3 빼기 플러스 루트 2"
+    },
+    "Root030": {
+      "expected": "3 더하기 마이너스 루트 2"
+    },
+    "Root031": {
+      "expected": "3 빼기 마이너스 루트 2"
+    },
+    "Root032": {
+      "expected": "3 더하기, 괄호 열고, 마이너스 루트 2, 괄호 닫고"
+    },
+    "Root033": {
+      "expected": "3 빼기, 괄호 열고, 마이너스 루트 2, 괄호 닫고"
+    },
+    "Root034": {
+      "expected": "플러스 루트 x 더하기 1"
+    },
+    "Root034a": {
+      "expected": "플러스 루트 x, 더하기 1"
+    },
+    "Root035": {
+      "expected": "마이너스 루트 x"
+    },
+    "Root036": {
+      "expected": "괄호 열고, 플러스 루트 x, 괄호 닫고, 제곱"
+    },
+    "Root037": {
+      "expected": "괄호 열고, 마이너스 루트 x, 괄호 닫고, 제곱"
+    },
+    "Root038": {
+      "expected": "마이너스, 괄호 열고, 플러스 루트 x, 괄호 닫고, 제곱"
+    },
+    "Root039": {
+      "expected": "플러스 루트 x, 제곱"
+    },
+    "Root040": {
+      "expected": "플러스 루트 x 제곱"
+    },
+    "Root041": {
+      "expected": "플러스 루트 x 제곱 더하기 y 제곱"
+    },
+    "Root042": {
+      "expected": "플러스 루트, x 아래첨자 1, 제곱 더하기, x 아래첨자 2, 제곱"
+    },
+    "Root043": {
+      "expected": "플러스 루트, 괄호 열고, x 아래첨자 2, 빼기, x 아래첨자 1, 괄호 닫고, 제곱 더하기, 괄호 열고, y 아래첨자 2, 빼기, y 아래첨자 1, 괄호 닫고, 제곱"
+    },
+    "Root044": {
+      "expected": "플러스 루트 2 분의 1"
+    },
+    "Root045": {
+      "expected": "플러스 루트, 66 분의 23"
+    },
+    "Root046": {
+      "expected": "플러스 루트, 분모가 2 x, 더하기 5, 이고 분자가 x 더하기 1, 인 분수"
+    },
+    "Root047": {
+      "expected": "분모가 2 a, 이고 분자가 마이너스 b 플러스마이너스 루트 b 제곱 빼기 4 a c, 인 분수"
+    },
+    "Root048": {
+      "expected": "루트 2, 루트끝"
+    },
+    "Root049": {
+      "expected": "3 더하기 루트 2, 루트끝"
+    },
+    "Root050": {
+      "expected": "3 플러스마이너스 루트 2, 루트끝"
+    },
+    "Root051": {
+      "expected": "3 마이너스플러스 루트 2, 루트끝"
+    },
+    "Root052": {
+      "expected": "마이너스 루트 2, 루트끝"
+    },
+    "Root053": {
+      "expected": "3 빼기 루트 2, 루트끝"
+    },
+    "Root054": {
+      "expected": "3 더하기 마이너스 루트 2, 루트끝"
+    },
+    "Root055": {
+      "expected": "3 빼기 마이너스 루트 2, 루트끝"
+    },
+    "Root056": {
+      "expected": "3 더하기, 괄호 열고, 마이너스 루트 2, 루트끝, 괄호 닫고"
+    },
+    "Root057": {
+      "expected": "3 빼기, 괄호 열고, 마이너스 루트 2, 루트끝, 괄호 닫고"
+    },
+    "Root058": {
+      "expected": "루트 x 더하기 1, 루트끝"
+    },
+    "Root058a": {
+      "expected": "루트 x, 루트끝, 더하기 1"
+    },
+    "Root059": {
+      "expected": "마이너스 루트 x, 루트끝"
+    },
+    "Root060": {
+      "expected": "괄호 열고, 루트 x, 루트끝, 괄호 닫고, 제곱"
+    },
+    "Root061": {
+      "expected": "마이너스, 괄호 열고, 루트 x, 루트끝, 괄호 닫고, 제곱"
+    },
+    "Root062": {
+      "expected": "루트 x, 루트끝, 제곱"
+    },
+    "Root063": {
+      "expected": "루트 x 제곱, 루트끝"
+    },
+    "Root064": {
+      "expected": "루트 x 제곱 더하기 y 제곱, 루트끝"
+    },
+    "Root065": {
+      "expected": "루트, x 아래첨자 1, 제곱 더하기, x 아래첨자 2, 제곱, 루트끝"
+    },
+    "Root066": {
+      "expected": "루트, 괄호 열고, x 아래첨자 2, 빼기, x 아래첨자 1, 괄호 닫고, 제곱 더하기, 괄호 열고, y 아래첨자 2, 빼기, y 아래첨자 1, 괄호 닫고, 제곱, 루트끝"
+    },
+    "Root067": {
+      "expected": "루트 2 분의 1, 루트끝"
+    },
+    "Root068": {
+      "expected": "루트, 66 분의 23, 루트끝"
+    },
+    "Root069": {
+      "expected": "루트, 분모가 2 x, 더하기 5, 이고 분자가 x 더하기 1, 인 분수, 루트끝"
+    },
+    "Root070": {
+      "expected": "분모가 2 a, 이고 분자가 마이너스 b 플러스마이너스 루트 b 제곱 빼기 4 a c, 루트끝, 인 분수"
+    },
+    "Root071": {
+      "expected": "플러스 루트 2, 루트끝"
+    },
+    "Root072": {
+      "expected": "3 더하기 플러스 루트 2, 루트끝"
+    },
+    "Root073": {
+      "expected": "3 플러스마이너스 루트 2, 루트끝"
+    },
+    "Root074": {
+      "expected": "3 마이너스플러스 루트 2, 루트끝"
+    },
+    "Root075": {
+      "expected": "마이너스 루트 2, 루트끝"
+    },
+    "Root076": {
+      "expected": "3 빼기 플러스 루트 2, 루트끝"
+    },
+    "Root077": {
+      "expected": "3 더하기 마이너스 루트 2, 루트끝"
+    },
+    "Root078": {
+      "expected": "3 빼기 마이너스 루트 2, 루트끝"
+    },
+    "Root079": {
+      "expected": "3 더하기, 괄호 열고, 마이너스 루트 2, 루트끝, 괄호 닫고"
+    },
+    "Root080": {
+      "expected": "3 빼기, 괄호 열고, 마이너스 루트 2, 루트끝, 괄호 닫고"
+    },
+    "Root081": {
+      "expected": "플러스 루트 x 더하기 1, 루트끝"
+    },
+    "Root081a": {
+      "expected": "플러스 루트 x, 루트끝, 더하기 1"
+    },
+    "Root082": {
+      "expected": "마이너스 루트 x, 루트끝"
+    },
+    "Root083": {
+      "expected": "괄호 열고, 플러스 루트 x, 루트끝, 괄호 닫고, 제곱"
+    },
+    "Root084": {
+      "expected": "괄호 열고, 마이너스 루트 x, 루트끝, 괄호 닫고, 제곱"
+    },
+    "Root085": {
+      "expected": "플러스 루트 x, 루트끝, 제곱"
+    },
+    "Root086": {
+      "expected": "플러스 루트 x 제곱, 루트끝"
+    },
+    "Root087": {
+      "expected": "플러스 루트 x 제곱 더하기 y 제곱, 루트끝"
+    },
+    "Root088": {
+      "expected": "플러스 루트, x 아래첨자 1, 제곱 더하기, x 아래첨자 2, 제곱, 루트끝"
+    },
+    "Root089": {
+      "expected": "플러스 루트, 괄호 열고, x 아래첨자 2, 빼기, x 아래첨자 1, 괄호 닫고, 제곱 더하기, 괄호 열고, y 아래첨자 2, 빼기, y 아래첨자 1, 괄호 닫고, 제곱, 루트끝"
+    },
+    "Root090": {
+      "expected": "플러스 루트 2 분의 1, 루트끝"
+    },
+    "Root091": {
+      "expected": "플러스 루트, 66 분의 23, 루트끝"
+    },
+    "Root092": {
+      "expected": "플러스 루트, 분모가 2 x, 더하기 5, 이고 분자가 x 더하기 1, 인 분수, 루트끝"
+    },
+    "Root093": {
+      "expected": "분모가 2 a, 이고 분자가 마이너스 b 플러스마이너스 루트 b 제곱 빼기 4 a c, 루트끝, 인 분수"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "expected": "세제곱근 y"
+    },
+    "HighRoot002": {
+      "expected": "네제곱근 n"
+    },
+    "HighRoot003": {
+      "expected": "5 제곱근 35"
+    },
+    "HighRoot004": {
+      "expected": "9 제곱근 146"
+    },
+    "HighRoot005": {
+      "expected": "n 제곱근 d"
+    },
+    "HighRoot006": {
+      "expected": "m 제곱근 243"
+    },
+    "HighRoot007": {
+      "expected": "i 제곱근 2 의 i 제곱"
+    },
+    "HighRoot008": {
+      "expected": "j 제곱근 125"
+    },
+    "HighRoot009": {
+      "expected": "마이너스 세제곱근 y"
+    },
+    "HighRoot010": {
+      "expected": "마이너스 네제곱근 n"
+    },
+    "HighRoot011": {
+      "expected": "세제곱근 y, 루트끝"
+    },
+    "HighRoot012": {
+      "expected": "네제곱근 n, 루트끝"
+    },
+    "HighRoot013": {
+      "expected": "5 제곱근 35, 루트끝"
+    },
+    "HighRoot014": {
+      "expected": "9 제곱근 146, 루트끝"
+    },
+    "HighRoot015": {
+      "expected": "n 제곱근 d, 루트끝"
+    },
+    "HighRoot016": {
+      "expected": "m 제곱근 243, 루트끝"
+    },
+    "HighRoot017": {
+      "expected": "i 제곱근 2 의 i 제곱, 루트끝"
+    },
+    "HighRoot018": {
+      "expected": "j 제곱근 125, 루트끝"
+    },
+    "HighRoot019": {
+      "expected": "마이너스 세제곱근 y, 루트끝"
+    },
+    "HighRoot020": {
+      "expected": "마이너스 네제곱근 n, 루트끝"
+    },
+    "HighRoot021": {
+      "expected": "세제곱근 y"
+    },
+    "HighRoot022": {
+      "expected": "네제곱근 n"
+    },
+    "HighRoot023": {
+      "expected": "5 제곱근 35"
+    },
+    "HighRoot024": {
+      "expected": "9 제곱근 146"
+    },
+    "HighRoot025": {
+      "expected": "n 제곱근 d"
+    },
+    "HighRoot026": {
+      "expected": "m 제곱근 243"
+    },
+    "HighRoot027": {
+      "expected": "i 제곱근 2 의 i 제곱"
+    },
+    "HighRoot028": {
+      "expected": "j 제곱근 125"
+    },
+    "HighRoot029": {
+      "expected": "마이너스 세제곱근 y"
+    },
+    "HighRoot030": {
+      "expected": "마이너스 네제곱근 n"
+    },
+    "HighRoot031": {
+      "expected": "세제곱근 y, 루트끝"
+    },
+    "HighRoot032": {
+      "expected": "네제곱근 n, 루트끝"
+    },
+    "HighRoot033": {
+      "expected": "5 제곱근 35, 루트끝"
+    },
+    "HighRoot034": {
+      "expected": "9 제곱근 146, 루트끝"
+    },
+    "HighRoot035": {
+      "expected": "n 제곱근 d, 루트끝"
+    },
+    "HighRoot036": {
+      "expected": "m 제곱근 243, 루트끝"
+    },
+    "HighRoot037": {
+      "expected": "i 제곱근 2 의 i 제곱, 루트끝"
+    },
+    "HighRoot038": {
+      "expected": "j 제곱근 125, 루트끝"
+    },
+    "HighRoot039": {
+      "expected": "마이너스 세제곱근 y, 루트끝"
+    },
+    "HighRoot040": {
+      "expected": "마이너스 네제곱근 n, 루트끝"
+    }
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "name": "EnglishMathspeakRoots",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "English Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> StartRoot <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "sqrt_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> StartRoot <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> Root <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "sqrt_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 2 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "sqrt_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 2 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 2 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "sqrt_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> NestedStartRoot <mark name=\"1\"/> StartRoot <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot <mark name=\"2\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "sqrt_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> NestStartRoot <mark name=\"1\"/> StartRoot <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot <mark name=\"2\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> NestRoot <mark name=\"1\"/> Root <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot <mark name=\"2\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "sqrt_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> Nested3StartRoot <mark name=\"3\"/> NestedTwiceStartRoot <mark name=\"2\"/> NestedStartRoot <mark name=\"1\"/> StartRoot <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot <mark name=\"2\" kind=\"LAST\"/> NestedEndRoot <mark name=\"3\" kind=\"LAST\"/> NestedTwiceEndRoot <mark name=\"4\" kind=\"LAST\"/> Nested3EndRoot </prosody></speak>"
+    },
+    "sqrt_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> Nest3StartRoot <mark name=\"3\"/> NestTwiceStartRoot <mark name=\"2\"/> NestStartRoot <mark name=\"1\"/> StartRoot <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot <mark name=\"2\" kind=\"LAST\"/> NestEndRoot <mark name=\"3\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"4\" kind=\"LAST\"/> Nest3EndRoot </prosody></speak>"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> Nest3Root <mark name=\"3\"/> NestTwiceRoot <mark name=\"2\"/> NestRoot <mark name=\"1\"/> Root <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> EndRoot <mark name=\"2\" kind=\"LAST\"/> NestEndRoot <mark name=\"3\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"4\" kind=\"LAST\"/> Nest3EndRoot </prosody></speak>"
+    },
+    "roots_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 1 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 1 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 1 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 2 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 2 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 2 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 3 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 3 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 3 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 4 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 4 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 4 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 5 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_4_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 5 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_4_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 5 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 6 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_5_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 6 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_5_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 6 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_6_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 7 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_6_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 7 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_6_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 7 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_7_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 8 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_7_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 8 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_7_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 8 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_8_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 9 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_8_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 9 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_8_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 9 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_9_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 10 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_9_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 10 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_9_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 10 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_10_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 11 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_10_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> RootIndex <mark name=\"0\"/> 11 <mark name=\"1\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "roots_10_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> Index <mark name=\"0\"/> 11 <mark name=\"1\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\" kind=\"LAST\"/> EndRoot </prosody></speak>"
+    },
+    "nested-roots_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 1 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 1 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 1 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 1 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 1 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 1 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 2 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 2 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 2 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 2 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 2 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 2 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 3 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 3 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 3 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 4 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 4 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 4 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 4 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 4 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 4 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 5 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 5 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_4_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 5 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 5 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 5 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 5 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 6 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 6 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_5_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 6 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 6 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 6 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 6 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_6_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 7 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 7 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_6_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 7 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 7 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 7 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 7 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_7_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 8 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 8 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_7_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 8 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 8 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 8 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 8 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_8_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 9 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 9 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_8_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 9 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 9 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 9 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 9 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_9_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 10 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 10 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_9_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 10 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 10 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 10 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 10 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_10_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 11 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 11 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "nested-roots_10_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 11 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 11 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 11 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 11 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 1 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 1 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 1 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 2 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 2 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 2 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 3 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 3 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 3 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 4 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 4 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 4 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 5 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 5 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 5 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 6 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 6 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 6 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 7 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 7 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 7 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 8 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 8 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 8 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 9 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 9 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 9 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 10 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 10 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 10 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestedRootIndex <mark name=\"0\"/> 11 <mark name=\"3\"/> NestedStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestedEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestRootIndex <mark name=\"0\"/> 11 <mark name=\"3\"/> NestStartRoot RootIndex <mark name=\"1\"/> 3 <mark name=\"2\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> NestIndex <mark name=\"0\"/> 11 <mark name=\"3\"/> NestRoot Index <mark name=\"1\"/> 3 <mark name=\"2\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndRoot <mark name=\"4\" kind=\"LAST\"/> NestEndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nested3RootIndex <mark name=\"0\"/> 2 <mark name=\"7\"/> Nested3StartRoot NestedTwiceRootIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> NestedTwiceStartRoot NestedRootIndex <mark name=\"2\"/> 4 <mark name=\"5\"/> NestedStartRoot RootIndex <mark name=\"3\"/> 5 <mark name=\"4\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndRoot <mark name=\"6\" kind=\"LAST\"/> NestedEndRoot <mark name=\"7\" kind=\"LAST\"/> NestedTwiceEndRoot <mark name=\"8\" kind=\"LAST\"/> Nested3EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nest3RootIndex <mark name=\"0\"/> 2 <mark name=\"7\"/> Nest3StartRoot NestTwiceRootIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> NestTwiceStartRoot NestRootIndex <mark name=\"2\"/> 4 <mark name=\"5\"/> NestStartRoot RootIndex <mark name=\"3\"/> 5 <mark name=\"4\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndRoot <mark name=\"6\" kind=\"LAST\"/> NestEndRoot <mark name=\"7\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"8\" kind=\"LAST\"/> Nest3EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nest3Index <mark name=\"0\"/> 2 <mark name=\"7\"/> Nest3Root NestTwiceIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> NestTwiceRoot NestIndex <mark name=\"2\"/> 4 <mark name=\"5\"/> NestRoot Index <mark name=\"3\"/> 5 <mark name=\"4\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndRoot <mark name=\"6\" kind=\"LAST\"/> NestEndRoot <mark name=\"7\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"8\" kind=\"LAST\"/> Nest3EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nested3RootIndex <mark name=\"0\"/> 2 <mark name=\"7\"/> Nested3StartRoot NestedTwiceRootIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> NestedTwiceStartRoot NestedRootIndex <mark name=\"2\"/> 2 <mark name=\"5\"/> NestedStartRoot RootIndex <mark name=\"3\"/> 3 <mark name=\"4\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndRoot <mark name=\"6\" kind=\"LAST\"/> NestedEndRoot <mark name=\"7\" kind=\"LAST\"/> NestedTwiceEndRoot <mark name=\"8\" kind=\"LAST\"/> Nested3EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nest3RootIndex <mark name=\"0\"/> 2 <mark name=\"7\"/> Nest3StartRoot NestTwiceRootIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> NestTwiceStartRoot NestRootIndex <mark name=\"2\"/> 2 <mark name=\"5\"/> NestStartRoot RootIndex <mark name=\"3\"/> 3 <mark name=\"4\"/> StartRoot <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndRoot <mark name=\"6\" kind=\"LAST\"/> NestEndRoot <mark name=\"7\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"8\" kind=\"LAST\"/> Nest3EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nest3Index <mark name=\"0\"/> 2 <mark name=\"7\"/> Nest3Root NestTwiceIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> NestTwiceRoot NestIndex <mark name=\"2\"/> 2 <mark name=\"5\"/> NestRoot Index <mark name=\"3\"/> 3 <mark name=\"4\"/> Root <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\" kind=\"LAST\"/> EndRoot <mark name=\"6\" kind=\"LAST\"/> NestEndRoot <mark name=\"7\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"8\" kind=\"LAST\"/> Nest3EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nested4RootIndex <mark name=\"0\"/> 2 <mark name=\"7\"/> Nested4StartRoot Nested3RootIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> Nested3StartRoot NestedTwiceStartRoot <mark name=\"5\"/> NestedRootIndex <mark name=\"2\"/> 3 <mark name=\"4\"/> NestedStartRoot StartRoot <mark name=\"3\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\" kind=\"LAST\"/> EndRoot <mark name=\"5\" kind=\"LAST\"/> NestedEndRoot <mark name=\"6\" kind=\"LAST\"/> NestedTwiceEndRoot <mark name=\"7\" kind=\"LAST\"/> Nested3EndRoot <mark name=\"8\" kind=\"LAST\"/> Nested4EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nest4RootIndex <mark name=\"0\"/> 2 <mark name=\"7\"/> Nest4StartRoot Nest3RootIndex <mark name=\"1\"/> 3 <mark name=\"6\"/> Nest3StartRoot NestTwiceStartRoot <mark name=\"5\"/> NestRootIndex <mark name=\"2\"/> 3 <mark name=\"4\"/> NestStartRoot StartRoot <mark name=\"3\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\" kind=\"LAST\"/> EndRoot <mark name=\"5\" kind=\"LAST\"/> NestEndRoot <mark name=\"6\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"7\" kind=\"LAST\"/> Nest3EndRoot <mark name=\"8\" kind=\"LAST\"/> Nest4EndRoot </prosody></speak>"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> Nest4Index <mark name=\"0\"/> 2 <mark name=\"7\"/> Nest4Root Nest3Index <mark name=\"1\"/> 3 <mark name=\"6\"/> Nest3Root NestTwiceRoot <mark name=\"5\"/> NestIndex <mark name=\"2\"/> 3 <mark name=\"4\"/> NestRoot Root <mark name=\"3\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\" kind=\"LAST\"/> EndRoot <mark name=\"5\" kind=\"LAST\"/> NestEndRoot <mark name=\"6\" kind=\"LAST\"/> NestTwiceEndRoot <mark name=\"7\" kind=\"LAST\"/> Nest3EndRoot <mark name=\"8\" kind=\"LAST\"/> Nest4EndRoot </prosody></speak>"
+    }
+  }
+}

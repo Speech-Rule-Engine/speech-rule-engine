@@ -1,0 +1,41 @@
+{
+  "locale": "da",
+  "name": "DanishExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsDanish",
+  "information": "Danish Extra Character tests.",
+  "compare": true,
+  "tests": {
+    "00B2-clearspeak-Exponent_Exponent": {
+      "key": "²",
+      "domain": "clearspeak",
+      "style": "Exponent_Exponent",
+      "expected": "hævet 2"
+    },
+    "00B2-clearspeak-Exponent_OrdinalPower": {
+      "key": "²",
+      "domain": "clearspeak",
+      "style": "Exponent_OrdinalPower",
+      "expected": "hævet 2"
+    },
+    "00B3-clearspeak-Exponent_Exponent": {
+      "key": "³",
+      "domain": "clearspeak",
+      "style": "Exponent_Exponent",
+      "expected": "hævet 3"
+    },
+    "00B3-clearspeak-Exponent_OrdinalPower": {
+      "key": "³",
+      "domain": "clearspeak",
+      "style": "Exponent_OrdinalPower",
+      "expected": "hævet 3"
+    },
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "stort Delta"
+    }
+  }
+}

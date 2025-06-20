@@ -1,0 +1,642 @@
+{
+  "locale": "es",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Spanish Ordinal word as used in fractions tests.",
+  "kind": "numberToOrdinal",
+  "active": "NumbersSpanish",
+  "compare": true,
+  "tests": {
+    "Number_0": {},
+    "Number_1": {
+      "expected": "primera"
+    },
+    "Number_2": {
+      "expected": "segunda"
+    },
+    "Number_3": {
+      "expected": "tercera"
+    },
+    "Number_4": {
+      "expected": "cuarta"
+    },
+    "Number_5": {
+      "expected": "quinta"
+    },
+    "Number_6": {
+      "expected": "sexta"
+    },
+    "Number_7": {
+      "expected": "séptima"
+    },
+    "Number_8": {
+      "expected": "octava"
+    },
+    "Number_9": {
+      "expected": "novena"
+    },
+    "Number_10": {
+      "expected": "décima"
+    },
+    "Number_11": {
+      "expected": "undécima"
+    },
+    "Number_12": {
+      "expected": "duodécima"
+    },
+    "Number_13": {
+      "expected": "décima tercera"
+    },
+    "Number_14": {
+      "expected": "décima cuarta"
+    },
+    "Number_15": {
+      "expected": "décima quinta"
+    },
+    "Number_16": {
+      "expected": "décima sexta"
+    },
+    "Number_17": {
+      "expected": "décima séptima"
+    },
+    "Number_18": {
+      "expected": "décima octava"
+    },
+    "Number_19": {
+      "expected": "décima novena"
+    },
+    "Number_20": {
+      "expected": "vigésima"
+    },
+    "Number_21": {
+      "expected": "vigésima primera"
+    },
+    "Number_22": {
+      "expected": "vigésima segunda"
+    },
+    "Number_23": {
+      "expected": "vigésima tercera"
+    },
+    "Number_24": {
+      "expected": "vigésima cuarta"
+    },
+    "Number_25": {
+      "expected": "vigésima quinta"
+    },
+    "Number_26": {
+      "expected": "vigésima sexta"
+    },
+    "Number_27": {
+      "expected": "vigésima séptima"
+    },
+    "Number_28": {
+      "expected": "vigésima octava"
+    },
+    "Number_29": {
+      "expected": "vigésima novena"
+    },
+    "Number_30": {
+      "expected": "trigésima"
+    },
+    "Number_31": {
+      "expected": "trigésima primera"
+    },
+    "Number_32": {
+      "expected": "trigésima segunda"
+    },
+    "Number_33": {
+      "expected": "trigésima tercera"
+    },
+    "Number_34": {
+      "expected": "trigésima cuarta"
+    },
+    "Number_35": {
+      "expected": "trigésima quinta"
+    },
+    "Number_36": {
+      "expected": "trigésima sexta"
+    },
+    "Number_37": {
+      "expected": "trigésima séptima"
+    },
+    "Number_38": {
+      "expected": "trigésima octava"
+    },
+    "Number_39": {
+      "expected": "trigésima novena"
+    },
+    "Number_40": {
+      "expected": "cuadragésima"
+    },
+    "Number_41": {
+      "expected": "cuadragésima primera"
+    },
+    "Number_42": {
+      "expected": "cuadragésima segunda"
+    },
+    "Number_43": {
+      "expected": "cuadragésima tercera"
+    },
+    "Number_44": {
+      "expected": "cuadragésima cuarta"
+    },
+    "Number_45": {
+      "expected": "cuadragésima quinta"
+    },
+    "Number_46": {
+      "expected": "cuadragésima sexta"
+    },
+    "Number_47": {
+      "expected": "cuadragésima séptima"
+    },
+    "Number_48": {
+      "expected": "cuadragésima octava"
+    },
+    "Number_49": {
+      "expected": "cuadragésima novena"
+    },
+    "Number_50": {
+      "expected": "quincuagésima"
+    },
+    "Number_51": {
+      "expected": "quincuagésima primera"
+    },
+    "Number_52": {
+      "expected": "quincuagésima segunda"
+    },
+    "Number_53": {
+      "expected": "quincuagésima tercera"
+    },
+    "Number_54": {
+      "expected": "quincuagésima cuarta"
+    },
+    "Number_55": {
+      "expected": "quincuagésima quinta"
+    },
+    "Number_56": {
+      "expected": "quincuagésima sexta"
+    },
+    "Number_57": {
+      "expected": "quincuagésima séptima"
+    },
+    "Number_58": {
+      "expected": "quincuagésima octava"
+    },
+    "Number_59": {
+      "expected": "quincuagésima novena"
+    },
+    "Number_60": {
+      "expected": "sexagésima"
+    },
+    "Number_61": {
+      "expected": "sexagésima primera"
+    },
+    "Number_62": {
+      "expected": "sexagésima segunda"
+    },
+    "Number_63": {
+      "expected": "sexagésima tercera"
+    },
+    "Number_64": {
+      "expected": "sexagésima cuarta"
+    },
+    "Number_65": {
+      "expected": "sexagésima quinta"
+    },
+    "Number_66": {
+      "expected": "sexagésima sexta"
+    },
+    "Number_67": {
+      "expected": "sexagésima séptima"
+    },
+    "Number_68": {
+      "expected": "sexagésima octava"
+    },
+    "Number_69": {
+      "expected": "sexagésima novena"
+    },
+    "Number_70": {
+      "expected": "septuagésima"
+    },
+    "Number_71": {
+      "expected": "septuagésima primera"
+    },
+    "Number_72": {
+      "expected": "septuagésima segunda"
+    },
+    "Number_73": {
+      "expected": "septuagésima tercera"
+    },
+    "Number_74": {
+      "expected": "septuagésima cuarta"
+    },
+    "Number_75": {
+      "expected": "septuagésima quinta"
+    },
+    "Number_76": {
+      "expected": "septuagésima sexta"
+    },
+    "Number_77": {
+      "expected": "septuagésima séptima"
+    },
+    "Number_78": {
+      "expected": "septuagésima octava"
+    },
+    "Number_79": {
+      "expected": "septuagésima novena"
+    },
+    "Number_80": {
+      "expected": "octogésima"
+    },
+    "Number_81": {
+      "expected": "octogésima primera"
+    },
+    "Number_82": {
+      "expected": "octogésima segunda"
+    },
+    "Number_83": {
+      "expected": "octogésima tercera"
+    },
+    "Number_84": {
+      "expected": "octogésima cuarta"
+    },
+    "Number_85": {
+      "expected": "octogésima quinta"
+    },
+    "Number_86": {
+      "expected": "octogésima sexta"
+    },
+    "Number_87": {
+      "expected": "octogésima séptima"
+    },
+    "Number_88": {
+      "expected": "octogésima octava"
+    },
+    "Number_89": {
+      "expected": "octogésima novena"
+    },
+    "Number_90": {
+      "expected": "nonagésima"
+    },
+    "Number_91": {
+      "expected": "nonagésima primera"
+    },
+    "Number_92": {
+      "expected": "nonagésima segunda"
+    },
+    "Number_93": {
+      "expected": "nonagésima tercera"
+    },
+    "Number_94": {
+      "expected": "nonagésima cuarta"
+    },
+    "Number_95": {
+      "expected": "nonagésima quinta"
+    },
+    "Number_96": {
+      "expected": "nonagésima sexta"
+    },
+    "Number_97": {
+      "expected": "nonagésima séptima"
+    },
+    "Number_98": {
+      "expected": "nonagésima octava"
+    },
+    "Number_99": {
+      "expected": "nonagésima novena"
+    },
+    "Number_100": {
+      "expected": "centésima "
+    },
+    "Number_101": {
+      "expected": "centésima primera"
+    },
+    "Number_102": {
+      "expected": "centésima segunda"
+    },
+    "Number_103": {
+      "expected": "centésima tercera"
+    },
+    "Number_104": {
+      "expected": "centésima cuarta"
+    },
+    "Number_105": {
+      "expected": "centésima quinta"
+    },
+    "Number_106": {
+      "expected": "centésima sexta"
+    },
+    "Number_107": {
+      "expected": "centésima séptima"
+    },
+    "Number_108": {
+      "expected": "centésima octava"
+    },
+    "Number_109": {
+      "expected": "centésima novena"
+    },
+    "Number_110": {
+      "expected": "centésima décima"
+    },
+    "Number_200": {
+      "expected": "ducentésima "
+    },
+    "Number_201": {
+      "expected": "ducentésima primera"
+    },
+    "Number_300": {
+      "expected": "tricentésima "
+    },
+    "Number_301": {
+      "expected": "tricentésima primera"
+    },
+    "Number_400": {
+      "expected": "cuadringentésima "
+    },
+    "Number_401": {
+      "expected": "cuadringentésima primera"
+    },
+    "Number_500": {
+      "expected": "quingentésima "
+    },
+    "Number_501": {
+      "expected": "quingentésima primera"
+    },
+    "Number_600": {
+      "expected": "sexcentésima "
+    },
+    "Number_601": {
+      "expected": "sexcentésima primera"
+    },
+    "Number_700": {
+      "expected": "septingentésima "
+    },
+    "Number_701": {
+      "expected": "septingentésima primera"
+    },
+    "Number_800": {
+      "expected": "octingentésima "
+    },
+    "Number_801": {
+      "expected": "octingentésima primera"
+    },
+    "Number_900": {
+      "expected": "noningentésima "
+    },
+    "Number_901": {
+      "expected": "noningentésima primera"
+    },
+    "Number_1000": {
+      "expected": "milésima"
+    },
+    "Number_1001": {
+      "expected": "milésima primera"
+    },
+    "Number_2000": {
+      "expected": "2000a"
+    },
+    "Number_2001": {
+      "expected": "2001a"
+    },
+    "Number_3000": {
+      "expected": "3000a"
+    },
+    "Number_3001": {
+      "expected": "3001a"
+    },
+    "Number_4000": {
+      "expected": "4000a"
+    },
+    "Number_4001": {
+      "expected": "4001a"
+    },
+    "Number_5000": {
+      "expected": "5000a"
+    },
+    "Number_5001": {
+      "expected": "5001a"
+    },
+    "Number_6000": {
+      "expected": "6000a"
+    },
+    "Number_6001": {
+      "expected": "6001a"
+    },
+    "Number_7000": {
+      "expected": "7000a"
+    },
+    "Number_7001": {
+      "expected": "7001a"
+    },
+    "Number_8000": {
+      "expected": "8000a"
+    },
+    "Number_8001": {
+      "expected": "8001a"
+    },
+    "Number_9000": {
+      "expected": "9000a"
+    },
+    "Number_9001": {
+      "expected": "9001a"
+    },
+    "Number_10000": {
+      "expected": "10000a"
+    },
+    "Number_10001": {
+      "expected": "10001a"
+    },
+    "Number_20000": {
+      "expected": "20000a"
+    },
+    "Number_20001": {
+      "expected": "20001a"
+    },
+    "Number_30000": {
+      "expected": "30000a"
+    },
+    "Number_30001": {
+      "expected": "30001a"
+    },
+    "Number_40000": {
+      "expected": "40000a"
+    },
+    "Number_40001": {
+      "expected": "40001a"
+    },
+    "Number_50000": {
+      "expected": "50000a"
+    },
+    "Number_50001": {
+      "expected": "50001a"
+    },
+    "Number_60000": {
+      "expected": "60000a"
+    },
+    "Number_60001": {
+      "expected": "60001a"
+    },
+    "Number_70000": {
+      "expected": "70000a"
+    },
+    "Number_70001": {
+      "expected": "70001a"
+    },
+    "Number_80000": {
+      "expected": "80000a"
+    },
+    "Number_80001": {
+      "expected": "80001a"
+    },
+    "Number_90000": {
+      "expected": "90000a"
+    },
+    "Number_90001": {
+      "expected": "90001a"
+    },
+    "Number_100000": {
+      "expected": "100000a"
+    },
+    "Number_1000000": {
+      "expected": "1000000a"
+    },
+    "Number_10000000": {
+      "expected": "10000000a"
+    },
+    "Number_100000000": {
+      "expected": "100000000a"
+    },
+    "Number_1000000000": {
+      "expected": "1000000000a"
+    },
+    "Number_10000000000": {
+      "expected": "10000000000a"
+    },
+    "Number_100000000000": {
+      "expected": "100000000000a"
+    },
+    "Number_1000000000000": {
+      "expected": "1000000000000a"
+    },
+    "Number_10000000000000": {
+      "expected": "10000000000000a"
+    },
+    "Number_100000000000000": {
+      "expected": "100000000000000a"
+    },
+    "Number_1000000000000000": {
+      "expected": "1000000000000000a"
+    },
+    "Number_10000000000000000": {
+      "expected": "10000000000000000a"
+    },
+    "Number_100001": {
+      "expected": "100001a"
+    },
+    "Number_200000": {
+      "expected": "200000a"
+    },
+    "Number_200001": {
+      "expected": "200001a"
+    },
+    "Number_1000001": {
+      "expected": "1000001a"
+    },
+    "Number_2000000": {
+      "expected": "2000000a"
+    },
+    "Number_2000001": {
+      "expected": "2000001a"
+    },
+    "Number_10000001": {
+      "expected": "10000001a"
+    },
+    "Number_20000000": {
+      "expected": "20000000a"
+    },
+    "Number_20000001": {
+      "expected": "20000001a"
+    },
+    "Number_100000001": {
+      "expected": "100000001a"
+    },
+    "Number_200000000": {
+      "expected": "200000000a"
+    },
+    "Number_200000001": {
+      "expected": "200000001a"
+    },
+    "Number_1000000001": {
+      "expected": "1000000001a"
+    },
+    "Number_2000000000": {
+      "expected": "2000000000a"
+    },
+    "Number_2000000001": {
+      "expected": "2000000001a"
+    },
+    "Number_10000000001": {
+      "expected": "10000000001a"
+    },
+    "Number_20000000000": {
+      "expected": "20000000000a"
+    },
+    "Number_20000000001": {
+      "expected": "20000000001a"
+    },
+    "Number_100000000001": {
+      "expected": "100000000001a"
+    },
+    "Number_200000000000": {
+      "expected": "200000000000a"
+    },
+    "Number_200000000001": {
+      "expected": "200000000001a"
+    },
+    "Number_1000000000001": {
+      "expected": "1000000000001a"
+    },
+    "Number_2000000000000": {
+      "expected": "2000000000000a"
+    },
+    "Number_2000000000001": {
+      "expected": "2000000000001a"
+    },
+    "Number_10000000000001": {
+      "expected": "10000000000001a"
+    },
+    "Number_20000000000000": {
+      "expected": "20000000000000a"
+    },
+    "Number_20000000000001": {
+      "expected": "20000000000001a"
+    },
+    "Number_100000000000001": {
+      "expected": "100000000000001a"
+    },
+    "Number_200000000000000": {
+      "expected": "200000000000000a"
+    },
+    "Number_200000000000001": {
+      "expected": "200000000000001a"
+    },
+    "Number_1000000000000001": {
+      "expected": "1000000000000001a"
+    },
+    "Number_2000000000000000": {
+      "expected": "2000000000000000a"
+    },
+    "Number_2000000000000001": {
+      "expected": "2000000000000001a"
+    },
+    "Number_10000000000000001": {
+      "expected": "10000000000000000a"
+    },
+    "Number_20000000000000000": {
+      "expected": "20000000000000000a"
+    },
+    "Number_20000000000000001": {
+      "expected": "20000000000000000a"
+    }
+  }
+}

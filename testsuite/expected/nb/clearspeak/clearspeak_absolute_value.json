@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "BokmalClearspeakAbsoluteValue",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_absolute_value.json",
+  "information": "Bokmal Clearspeak AbsoluteValue rule tests.",
+  "active": "ClearspeakBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Abs01": {
+      "expected": "den absolutte verdien av x"
+    },
+    "Abs02": {
+      "expected": "den absolutte verdien av x pluss 1"
+    },
+    "Abs03": {
+      "expected": "den absolutte verdien av x, pluss 1"
+    },
+    "Abs04": {
+      "expected": "den absolutte verdien av x, pluss, den absolutte verdien av y, er større enn eller er lik, den absolutte verdien av z"
+    },
+    "AbsEnd01": {
+      "expected": "den absolutte verdien av x, slutt absolutt verdi"
+    },
+    "AbsEnd02": {
+      "expected": "den absolutte verdien av x pluss 1, slutt absolutt verdi"
+    },
+    "AbsEnd03": {
+      "expected": "den absolutte verdien av x, slutt absolutt verdi, pluss 1"
+    },
+    "AbsEnd04": {
+      "expected": "den absolutte verdien av x, slutt absolutt verdi, pluss, den absolutte verdien av y, slutt absolutt verdi, er større enn eller er lik, den absolutte verdien av z, slutt absolutt verdi"
+    },
+    "Card01": {
+      "expected": "kardinaliteten til S"
+    },
+    "Determinant01": {
+      "expected": "determinanten til M"
+    },
+    "AbsDet01": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: 2, 1 rad 2: 7, 5"
+    },
+    "AbsDet02": {
+      "expected": "determinanten til 3 ganger 3 matrisen. rad 1: 2, 4, 1 rad 2: 3, 5, 2 rad 3: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "expected": "determinanten til 4 ganger 4 matrisen. rad 1: kolonne 1, 0; kolonne 2, 3; kolonne 3, 4; kolonne 4, 3. rad 2: kolonne 1, 2; kolonne 2, 1; kolonne 3, 0; kolonne 4, 9. rad 3: kolonne 1, 3; kolonne 2, 0; kolonne 3, 2; kolonne 4, 1. rad 4: kolonne 1, 6; kolonne 2, 2; kolonne 3, 9; kolonne 4, 0"
+    },
+    "AbsDet04": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: kolonne 1, 2; kolonne 2, 1. rad 2: kolonne 1, 7; kolonne 2, 5 pluss x"
+    },
+    "AbsDet05": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: 2 x, 1 rad 2: 7, 5"
+    },
+    "AbsDet06": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: 2 x, y rad 2: en andre, to tredje"
+    },
+    "AbsDet07": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: en andre, to tredje rad 2: tre fjerde, en femte"
+    },
+    "AbsDet08": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: 2, 1 rad 2: 7, 5"
+    },
+    "AbsDet09": {
+      "expected": "determinanten til 3 ganger 3 matrisen. rad 1: 2, 4, 1 rad 2: 3, 5, 2 rad 3: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "expected": "determinanten til 4 ganger 4 matrisen. rad 1: kolonne 1, 0; kolonne 2, 3; kolonne 3, 4; kolonne 4, 3. rad 2: kolonne 1, 2; kolonne 2, 1; kolonne 3, 0; kolonne 4, 9. rad 3: kolonne 1, 3; kolonne 2, 0; kolonne 3, 2; kolonne 4, 1. rad 4: kolonne 1, 6; kolonne 2, 2; kolonne 3, 9; kolonne 4, 0"
+    },
+    "AbsDet11": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: kolonne 1, 2; kolonne 2, 1. rad 2: kolonne 1, 7; kolonne 2, 5 pluss x"
+    },
+    "AbsDet12": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: 2 x, 1 rad 2: 7, 5"
+    },
+    "AbsDet13": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: 2 x, y rad 2: en andre, to tredje"
+    },
+    "AbsDet14": {
+      "expected": "determinanten til 2 ganger 2 matrisen. rad 1: en andre, to tredje rad 2: tre fjerde, en femte"
+    }
+  }
+}

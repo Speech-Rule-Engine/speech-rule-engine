@@ -1,0 +1,139 @@
+{
+  "name": "CatalanMathspeakCoverage",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Catalan Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "locale": "ca",
+  "active": "MathspeakIssuesCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alfa línia base 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alfa base 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alfa base 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "normal alef línia base 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "normal alef base 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "normal alef base 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alfa línia base negreta 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alfa base negreta 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alfa base negreta 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "normal alef línia base negreta 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "normal alef base negreta 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "normal alef base negreta 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alfa barra"
+    },
+    "OverbarOther_default": {
+      "expected": "normal alef barra"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alfa subbarra"
+    },
+    "UnderbarOther_default": {
+      "expected": "normal alef subbarra"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alfa titlla"
+    },
+    "OvertildeOther_default": {
+      "expected": "normal alef titlla"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alfa subtitlla"
+    },
+    "UndertildeOther_default": {
+      "expected": "normal alef subtitlla"
+    },
+    "SetEmpty_default": {
+      "expected": "conjunt buit"
+    },
+    "SetEmpty_brief": {
+      "expected": "conjunt buit"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "conjunt buit"
+    },
+    "SetSingleton_default": {
+      "expected": "començar clau a finalitzar clau"
+    },
+    "SetSingleton_brief": {
+      "expected": "començar clau a finalitzar clau"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "clau a finalitzar clau"
+    },
+    "SetCollection_default": {
+      "expected": "començar clau a coma b finalitzar clau"
+    },
+    "SetCollection_brief": {
+      "expected": "començar clau a coma b finalitzar clau"
+    },
+    "SetCollection_sbrief": {
+      "expected": "clau a coma b finalitzar clau"
+    },
+    "SetExtended_default": {
+      "expected": "començar clau a coma b finalitzar clau"
+    },
+    "SetExtended_brief": {
+      "expected": "començar clau a coma b finalitzar clau"
+    },
+    "SetExtended_sbrief": {
+      "expected": "clau a coma b finalitzar clau"
+    },
+    "NumberSet": {
+      "expected": "negreta de pissarra majúscula C"
+    },
+    "LimitLower0_default": {
+      "expected": "modificand inferior límit amb subratllat sotaíndex a igual 5 sotaíndex b igual 3"
+    },
+    "LimitLower1_default": {
+      "expected": "límit sotaíndex n sobreíndex 2 sobreíndex x"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "començar esquema primera fila  a segona fila  espai finalitzar esquema"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c subíndex 1 línia base h subíndex 4 menos 2 s línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció menor o igual que c subíndex 2 línia base h subíndex 4 menos 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que c sub 2 base h sub 4 menos 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac menor o igual que c sub 2 base h sub 4 menos 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c subíndex 1 línia base h subíndex 4 menos 2 s línia base menor o igual que començar fracció 1 entre 2 majúscula T finalitzar fracció igual c subíndex 2 línia base h subíndex 4 menos 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual c sub 2 base h sub 4 menos 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que començar frac 1 entre 2 majúscula T finalitzar frac igual c sub 2 base h sub 4 menos 2 s"
+    }
+  }
+}

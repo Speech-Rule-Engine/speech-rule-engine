@@ -1,0 +1,421 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakFractions",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "Swedish Clearspeak Fractions rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Frac001": {
+      "expected": "en halv"
+    },
+    "Frac002": {
+      "expected": "12 delat med 32"
+    },
+    "Frac002a": {
+      "expected": "x delat med y"
+    },
+    "Frac002b": {
+      "expected": "2 x delat med 3 y"
+    },
+    "Frac002c": {
+      "expected": "x y delat med c d"
+    },
+    "Frac002d": {
+      "expected": "en halv delat med en tredjedel"
+    },
+    "Frac002e": {
+      "expected": "minus x delat med y"
+    },
+    "Frac002f": {
+      "expected": "minus 2 x delat med 3 y"
+    },
+    "Frac002g": {
+      "expected": "x y delat med minus c d"
+    },
+    "Frac002h": {
+      "expected": "en halv delat med minus en tredjedel"
+    },
+    "Frac003": {
+      "expected": "bråket med täljare 2 plus 3, och nämnare 13"
+    },
+    "Frac004": {
+      "expected": "bråket med täljare x plus y, och nämnare 2"
+    },
+    "Frac005": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y"
+    },
+    "Frac006": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, plus två tredjedelar"
+    },
+    "Frac007": {
+      "expected": "miles delat med gallon"
+    },
+    "Frac008": {
+      "expected": "2 miles delat med 3 gallons"
+    },
+    "Frac009": {
+      "expected": "1 delat med 2"
+    },
+    "Frac010": {
+      "expected": "12 delat med 32"
+    },
+    "Frac011": {
+      "expected": "2 plus 3 delat med 13"
+    },
+    "Frac012": {
+      "expected": "x plus y delat med 2"
+    },
+    "Frac013": {
+      "expected": "x plus y delat med x minus y"
+    },
+    "Frac014": {
+      "expected": "x plus y delat med x minus y, plus, 2 delat med 3"
+    },
+    "Frac015": {
+      "expected": "miles delat med gallon"
+    },
+    "Frac016": {
+      "expected": "2 miles delat med 3 gallons"
+    },
+    "Frac017": {
+      "expected": "1 delat med 2, slut bråk"
+    },
+    "Frac018": {
+      "expected": "12 delat med 32, slut bråk"
+    },
+    "Frac019": {
+      "expected": "2 plus 3 delat med 13, slut bråk"
+    },
+    "Frac020": {
+      "expected": "x plus y delat med 2, slut bråk"
+    },
+    "Frac021": {
+      "expected": "x plus y delat med x minus y, slut bråk"
+    },
+    "Frac022": {
+      "expected": "x plus y delat med x minus y, slut bråk, plus, 2 delat med 3, slut bråk"
+    },
+    "Frac023": {
+      "expected": "miles delat med gallons, slut bråk"
+    },
+    "Frac024": {
+      "expected": "2 miles delat med 3 gallons, slut bråk"
+    },
+    "Frac025": {
+      "expected": "bråket med täljare 1, och nämnare 2, slut bråk"
+    },
+    "Frac026": {
+      "expected": "bråket med täljare 12, och nämnare 32, slut bråk"
+    },
+    "Frac027": {
+      "expected": "bråket med täljare 2 plus 3, och nämnare 13, slut bråk"
+    },
+    "Frac028": {
+      "expected": "bråket med täljare x plus y, och nämnare 2, slut bråk"
+    },
+    "Frac029": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, slut bråk"
+    },
+    "Frac030": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, slut bråk, plus, bråket med täljare 2, och nämnare 3, slut bråk"
+    },
+    "Frac031": {
+      "expected": "bråket med täljare miles, och nämnare gallon, slut bråk"
+    },
+    "Frac032": {
+      "expected": "bråket med täljare 1, och nämnare 2"
+    },
+    "Frac033": {
+      "expected": "bråket med täljare 12, och nämnare 32"
+    },
+    "Frac034": {
+      "expected": "bråket med täljare 2 plus 3, och nämnare 13"
+    },
+    "Frac035": {
+      "expected": "bråket med täljare x plus y, och nämnare 2"
+    },
+    "Frac036": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y"
+    },
+    "Frac037": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, plus, bråket med täljare 2, och nämnare 3"
+    },
+    "Frac038": {
+      "expected": "bråket med täljare miles, och nämnare gallon"
+    },
+    "Frac039": {
+      "expected": "bråket med täljare 2 miles, och nämnare 3 gallons"
+    },
+    "Frac040": {
+      "expected": "bråket 1 delat med 2"
+    },
+    "Frac041": {
+      "expected": "bråket 12 delat med 32"
+    },
+    "Frac042": {
+      "expected": "bråket 2 plus 3 delat med 13"
+    },
+    "Frac043": {
+      "expected": "bråket x plus y delat med 2"
+    },
+    "Frac044": {
+      "expected": "bråket x plus y delat med x minus y"
+    },
+    "Frac045": {
+      "expected": "bråket x plus y delat med x minus y, plus, bråket 2 delat med 3"
+    },
+    "Frac046": {
+      "expected": "bråket miles delat med gallon"
+    },
+    "Frac047": {
+      "expected": "bråket 2 miles delat med 3 gallons"
+    },
+    "Frac048": {
+      "expected": "1 per 2"
+    },
+    "Frac049": {
+      "expected": "12 per 32"
+    },
+    "Frac050": {
+      "expected": "2 plus 3 per 13"
+    },
+    "Frac051": {
+      "expected": "x plus y per 2"
+    },
+    "Frac052": {
+      "expected": "x plus y per x minus y"
+    },
+    "Frac053": {
+      "expected": "x plus y per x minus y, plus, 2 per 3"
+    },
+    "Frac054": {
+      "expected": "miles per gallon"
+    },
+    "Frac055": {
+      "expected": "2 miles per 3 gallons"
+    },
+    "Frac056": {
+      "expected": "ett halv"
+    },
+    "Frac057": {
+      "expected": "tolv trettioandradelar"
+    },
+    "Frac058": {
+      "expected": "bråket med täljare 2 plus 3, och nämnare 13"
+    },
+    "Frac059": {
+      "expected": "bråket med täljare x plus y, och nämnare 2"
+    },
+    "Frac060": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y"
+    },
+    "Frac061": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, plus två tredjedelar"
+    },
+    "Frac062": {
+      "expected": "miles delat med gallon"
+    },
+    "Frac063": {
+      "expected": "2 miles delat med 3 gallons"
+    },
+    "Frac064": {
+      "expected": "ett halv"
+    },
+    "Frac065": {
+      "expected": "12 delat med 32, slut bråk"
+    },
+    "Frac066": {
+      "expected": "bråket med täljare 2 plus 3, och nämnare 13, slut bråk"
+    },
+    "Frac067": {
+      "expected": "bråket med täljare x plus y, och nämnare 2, slut bråk"
+    },
+    "Frac068": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, slut bråk"
+    },
+    "Frac069": {
+      "expected": "bråket med täljare x plus y, och nämnare x minus y, slut bråk, plus två tredjedelar"
+    },
+    "Frac070": {
+      "expected": "miles delat med gallons"
+    },
+    "Frac071": {
+      "expected": "2 miles delat med 3 gallons"
+    },
+    "FrTxt001": {
+      "expected": "2 miles delat med 3 gallons"
+    },
+    "FrTxt002": {
+      "expected": "rise delat med run"
+    },
+    "FrTxt003": {
+      "expected": "successful outcomes delat med total outcomes"
+    },
+    "FrTxt004": {
+      "expected": "6 ways of rolling a 7 delat med 36 ways of rolling the pair of dice"
+    },
+    "NestFrac001": {
+      "expected": "en halv delat med en tredjedel"
+    },
+    "NestFrac002": {
+      "expected": "bråket med täljare 1, och nämnare, 2 delat med en tredjedel"
+    },
+    "NestFrac003": {
+      "expected": "en halv delat med 3"
+    },
+    "NestFrac004": {
+      "expected": "1 delat med två tredjedelar"
+    },
+    "NestFrac005": {
+      "expected": "bråket med täljare, 11 delat med 32, och nämnare, 16 delat med 51"
+    },
+    "NestFrac006": {
+      "expected": "bråket med täljare 11, och nämnare, bråket med täljare 32, och nämnare, 16 delat med 51"
+    },
+    "NestFrac007": {
+      "expected": "bråket med täljare 1 plus, 4 delat med x, och nämnare 2"
+    },
+    "NestFrac008": {
+      "expected": "bråket med täljare 3, och nämnare 2 plus, 4 delat med x"
+    },
+    "NestFrac009": {
+      "expected": "bråket med täljare, 10 delat med 22, och nämnare en halv"
+    },
+    "NestFrac010": {
+      "expected": "bråket med täljare 1 plus två tredjedelar, och nämnare 1 minus två tredjedelar"
+    },
+    "NestFrac011": {
+      "expected": "bråket med täljare 1 plus, x delat med 2, och nämnare 1 minus, x delat med 2"
+    },
+    "NestFrac012": {
+      "expected": "bråket med täljare, bråket med täljare x plus 1, och nämnare x minus 1, plus 1, och nämnare x plus 1"
+    },
+    "NestFrac013": {
+      "expected": "bråket med täljare, bråket med täljare x plus 1, och nämnare x minus 4, plus en halv, och nämnare x plus, 1 delat med 16"
+    },
+    "NestFrac014": {
+      "expected": "1 plus, bråket med täljare x, och nämnare 1 plus, 2 delat med x"
+    },
+    "NestFrac015": {
+      "expected": "1 plus, bråket med täljare x plus 3, och nämnare 1 plus, bråket med täljare 2, och nämnare x plus 3"
+    },
+    "NestFrac016": {
+      "expected": "1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus 1"
+    },
+    "NestFrac017": {
+      "expected": "1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus halvhög horisontell ellips"
+    },
+    "NestFrac018": {
+      "expected": "a index 0, plus, bråket med täljare 1, och nämnare, a index 1, plus, bråket med täljare 1, och nämnare, a index 2, plus, bråket med täljare 1, och nämnare, a index 3, plus halvhög horisontell ellips"
+    },
+    "NestFrac019": {
+      "expected": "ett halv delat med ett tredjedel"
+    },
+    "NestFrac020": {
+      "expected": "bråket med täljare 1, och nämnare, 2 delat med ett tredjedel, slut bråk"
+    },
+    "NestFrac021": {
+      "expected": "ett halv delat med 3, slut bråk"
+    },
+    "NestFrac022": {
+      "expected": "1 delat med två tredjedelar, slut bråk"
+    },
+    "NestFrac023": {
+      "expected": "bråket med täljare, 11 delat med 32, och nämnare, 16 delat med 51, slut bråk"
+    },
+    "NestFrac024": {
+      "expected": "bråket med täljare 11, och nämnare, bråket med täljare 32, och nämnare, 16 delat med 51, slut bråk"
+    },
+    "NestFrac025": {
+      "expected": "bråket med täljare 1 plus, 4 delat med x, och nämnare 2, slut bråk"
+    },
+    "NestFrac026": {
+      "expected": "bråket med täljare 3, och nämnare 2 plus, 4 delat med x, slut bråk"
+    },
+    "NestFrac027": {
+      "expected": "bråket med täljare, 10 delat med 22, och nämnare ett halv, slut bråk"
+    },
+    "NestFrac028": {
+      "expected": "bråket med täljare 1 plus två tredjedelar, och nämnare 1 minus två tredjedelar, slut bråk"
+    },
+    "NestFrac029": {
+      "expected": "bråket med täljare 1 plus, x delat med 2, och nämnare 1 minus, x delat med 2, slut bråk"
+    },
+    "NestFrac030": {
+      "expected": "bråket med täljare, bråket med täljare x plus 1, och nämnare x minus 1, plus 1, och nämnare x plus 1, slut bråk"
+    },
+    "NestFrac031": {
+      "expected": "bråket med täljare, bråket med täljare x plus 1, och nämnare x minus 4, plus ett halv, och nämnare x plus, 1 delat med 16, slut bråk"
+    },
+    "NestFrac032": {
+      "expected": "1 plus, bråket med täljare x, och nämnare 1 plus, 2 delat med x, slut bråk"
+    },
+    "NestFrac033": {
+      "expected": "1 plus, bråket med täljare x plus 3, och nämnare 1 plus, bråket med täljare 2, och nämnare x plus 3, slut bråk"
+    },
+    "NestFrac034": {
+      "expected": "1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus 1, slut bråk"
+    },
+    "NestFrac035": {
+      "expected": "1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus, bråket med täljare 1, och nämnare 1 plus halvhög horisontell ellips, slut bråk"
+    },
+    "NestFrac036": {
+      "expected": "a index 0, plus, bråket med täljare 1, och nämnare, a index 1, plus, bråket med täljare 1, och nämnare, a index 2, plus, bråket med täljare 1, och nämnare, a index 3, plus halvhög horisontell ellips, slut bråk"
+    },
+    "Fracfunct001": {
+      "expected": "f av x, delat med g av x"
+    },
+    "Fracfunct002": {
+      "expected": "bråket med täljare f av x, plus g av x, och nämnare g av x"
+    },
+    "Fracfunct003": {
+      "expected": "bråket med täljare f av, öppna, x plus 1, stäng, och nämnare g av x"
+    },
+    "Fracfunct004": {
+      "expected": "f av x, delat med 2"
+    },
+    "Fracfunct005": {
+      "expected": "2 delat med f av x"
+    },
+    "Fracfunct006": {
+      "expected": "bråket med täljare 2, och nämnare g av x, plus g av, öppna, x plus 1, stäng"
+    },
+    "Fracfunct007": {
+      "expected": "sinus x delat med cosinus x"
+    },
+    "Fracfunct009": {
+      "expected": "bråket med täljare sinus x plus cosinus x, och nämnare cosinus x"
+    },
+    "Fracfunct010": {
+      "expected": "sinus 2 x delat med cosinus 3 x"
+    },
+    "Fracfunct011": {
+      "expected": "bråket med täljare, sinus av, öppna, x plus y, stäng, och nämnare, cosinus av, öppna, x plus y, stäng"
+    },
+    "Fracfunct012": {
+      "expected": "f av 2 x, delat med g av 3 x"
+    },
+    "Fracfunct013": {
+      "expected": "logaritmen x delat med logaritmen y"
+    },
+    "Fracfunct014": {
+      "expected": "logaritmen 2 x delat med logaritmen 3 y"
+    },
+    "Fracfunct015": {
+      "expected": "logaritmen bas 10 av, x, delat med, logaritmen bas 5 av, y"
+    },
+    "Fracfunct016": {
+      "expected": "logaritmen bas 10 av, 2 x, delat med, logaritmen bas 5 av, 3 y"
+    },
+    "Fracfunct017": {
+      "expected": "bråket med täljare, logaritmen av, öppna, x plus 1, stäng, och nämnare logaritmen y"
+    },
+    "Fracfunct018": {
+      "expected": "f index 1, av x, delat med, g index 1, av x"
+    }
+  }
+}

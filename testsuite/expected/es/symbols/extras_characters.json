@@ -1,0 +1,142 @@
+{
+  "locale": "es",
+  "name": "SpanishExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsSpanish",
+  "information": "Spanish Extra Character tests.",
+  "tests": {
+    "2039-default-defaultMP": {
+      "key": "‹",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "abre comillas"
+    },
+    "2192-default-defaultMP": {
+      "key": "→",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "flecha"
+    },
+    "2248-default-defaultMP": {
+      "key": "≈",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "casi igual a"
+    },
+    "2260-default-defaultMP": {
+      "key": "≠",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "distinto de"
+    },
+    "00FD-default-defaultMP": {
+      "key": "ý",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "ye aguda"
+    },
+    "00FF-default-defaultMP": {
+      "key": "ÿ",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "ye diéresis"
+    },
+    "0028-default-defaultMP": {
+      "key": "(",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "paréntesis"
+    },
+    "0029-default-defaultMP": {
+      "key": ")",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra paréntesis"
+    },
+    "005B-default-defaultMP": {
+      "key": "[",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "abre corchetes"
+    },
+    "005D-default-defaultMP": {
+      "key": "]",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra corchetes"
+    },
+    "007B-default-defaultMP": {
+      "key": "{",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "abre llaves"
+    },
+    "007D-default-defaultMP": {
+      "key": "}",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra llaves"
+    },
+    "300B-default-defaultMP": {
+      "key": "》",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra paréntesis angular doble"
+    },
+    "301B-default-defaultMP": {
+      "key": "〛",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra corchete vacío"
+    },
+    "0023-default-defaultMP": {
+      "key": "#",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "signo de número"
+    },
+    "0027-default-defaultMP": {
+      "key": "'",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "apóstrofo"
+    },
+    "003F-default-defaultMP": {
+      "key": "?",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra interrogación"
+    },
+    "00A1-default-defaultMP": {
+      "key": "¡",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "abre admiración"
+    },
+    "00AB-default-defaultMP": {
+      "key": "«",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "abre comillas angulares"
+    },
+    "00BB-default-defaultMP": {
+      "key": "»",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra comillas angulares"
+    },
+    "00BF-default-defaultMP": {
+      "key": "¿",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "abre interrogación"
+    },
+    "203A-default-defaultMP": {
+      "key": "›",
+      "domain": "default",
+      "style": "defaultMP",
+      "expected": "cierra comillas"
+    }
+  }
+}

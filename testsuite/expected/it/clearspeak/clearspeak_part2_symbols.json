@@ -1,0 +1,214 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakPart2Symbols",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "Italian Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "X001": {
+      "expected": "6 per 8"
+    },
+    "X002": {
+      "expected": "m per n"
+    },
+    "X003": {
+      "expected": "3 per 3"
+    },
+    "X004": {
+      "expected": "6 per 8"
+    },
+    "X005": {
+      "expected": "m per n"
+    },
+    "X006": {
+      "expected": "3 per 3"
+    },
+    "X007": {
+      "expected": "u per v"
+    },
+    "Dot001": {
+      "expected": "6 punto 8"
+    },
+    "Dot002": {
+      "expected": "m punto n"
+    },
+    "Dot003": {
+      "expected": "3 punto 3"
+    },
+    "Dot004": {
+      "expected": "6 punto 8"
+    },
+    "Dot005": {
+      "expected": "m punto n"
+    },
+    "Dot006": {
+      "expected": "3 punto 3"
+    },
+    "Triangle001": {
+      "expected": "triangolo A B C"
+    },
+    "Triangle002": {
+      "expected": "triangolo D E F"
+    },
+    "Triangle003": {
+      "expected": "Delta x"
+    },
+    "Triangle004": {
+      "expected": "f di, parentesi tonda aperta, x più Delta x, parentesi tonda chiusa"
+    },
+    "Ellipses001": {
+      "expected": "1 virgola 2 virgola 3 virgola punti di sospensione"
+    },
+    "Ellipses002": {
+      "expected": "1 virgola 2 virgola 3 virgola punti di sospensione virgola 20"
+    },
+    "Ellipses003": {
+      "expected": "punti di sospensione virgola, meno 2, virgola, meno 1, virgola 0 virgola 1 virgola 2 virgola punti di sospensione"
+    },
+    "Ellipses004": {
+      "expected": "1 virgola 2 virgola 3 virgola e così via"
+    },
+    "Ellipses005": {
+      "expected": "1 virgola 2 virgola 3 virgola e così via fino a virgola 20"
+    },
+    "Ellipses006": {
+      "expected": "punti di sospensione virgola, meno 2, virgola, meno 1, virgola 0 virgola 1 virgola 2 virgola punti di sospensione"
+    },
+    "VertLine001": {
+      "expected": "3 divide 6"
+    },
+    "VertLine002": {
+      "expected": "l'insieme di tutti x tale che x maggiore di 0"
+    },
+    "VertLine003": {
+      "expected": "l'insieme di tutti x tale che, valore assoluto di x, maggiore di 2"
+    },
+    "VertLine004": {
+      "expected": "f di x, valutato a x uguale a 5"
+    },
+    "VertLine005": {
+      "expected": "x quadrato più 2 x, valutato a x uguale a 2"
+    },
+    "VertLine006": {
+      "expected": "x quadrato più x, valutato a 1, meno la stessa espressione valutata a 0"
+    },
+    "VertLine007": {
+      "expected": "l'insieme di tutti x tale che x maggiore di 0"
+    },
+    "VertLine008": {
+      "expected": "3 divide 6"
+    },
+    "VertLine009": {
+      "expected": "P di, parentesi tonda aperta, A dato B, parentesi tonda chiusa"
+    },
+    "MembSym001": {
+      "expected": "If x appartiene ad gli interi then 2 x, is an even number punto"
+    },
+    "MembSym002": {
+      "expected": "l'insieme di tutti x in gli interi tale che x maggiore di 5"
+    },
+    "MembSym003": {
+      "expected": "3 più 2 i, non appartiene ad i numeri reali"
+    },
+    "MembSym004": {
+      "expected": "If x membro di gli interi then 2 x, is an even number punto"
+    },
+    "MembSym005": {
+      "expected": "l'insieme di tutti x membro di gli interi tale che x maggiore di 5"
+    },
+    "MembSym006": {
+      "expected": "3 più 2 i, non membro di i numeri reali"
+    },
+    "MembSym007": {
+      "expected": "If x elemento di gli interi then 2 x, is an even number punto"
+    },
+    "MembSym008": {
+      "expected": "l'insieme di tutti x elemento di gli interi tale che x maggiore di 5"
+    },
+    "MembSym009": {
+      "expected": "3 più 2 i, non elemento di i numeri reali"
+    },
+    "MembSym010": {
+      "expected": "If x appartiene ad gli interi then 2 x, is an even number punto"
+    },
+    "MembSym011": {
+      "expected": "l'insieme di tutti x appartenente a gli interi tale che x maggiore di 5"
+    },
+    "MembSym012": {
+      "expected": "3 più 2 i, non appartiene ad i numeri reali"
+    },
+    "MembSym013": {
+      "expected": "If x appartiene ad gli interi then 2 x, is an even number punto"
+    },
+    "MembSym014": {
+      "expected": "l'insieme di tutti x appartenente a gli interi tale che x maggiore di 5"
+    },
+    "MembSym015": {
+      "expected": "3 più 2 i, non appartiene ad i numeri reali"
+    },
+    "SetMemb001": {
+      "expected": "l'insieme di x appartenente a gli interi tale che 2 minore di x minore di 7"
+    },
+    "SetMemb002": {
+      "expected": "l'insieme di x membro di gli interi tale che x maggiore di 5"
+    },
+    "Sum001": {
+      "expected": "il sommatoria da n uguale a 1 a 10 di n"
+    },
+    "Sum002": {
+      "expected": "il sommatoria da n uguale a 1 a infinito di n"
+    },
+    "Sum003": {
+      "expected": "il sommatoria sopra i appartiene ad gli interi positivi, di i"
+    },
+    "Sum004": {
+      "expected": "il sommatoria sopra S, di i"
+    },
+    "Sum005": {
+      "expected": "il sommatoria di, a pedice i"
+    },
+    "Sum006": {
+      "expected": "il produttoria da i uguale a 1 a 10 di i"
+    },
+    "Sum007": {
+      "expected": "il produttoria sopra i appartiene ad gli interi positivi, di, frazione con numeratore i, e denominatore i più 1"
+    },
+    "Sum008": {
+      "expected": "il produttoria sopra gli interi positivi, di, frazione con numeratore i, e denominatore i più 1"
+    },
+    "Sum009": {
+      "expected": "il produttoria di, a pedice i"
+    },
+    "Sum010": {
+      "expected": "il intersezione da i uguale a 1 a 10 di, S pedice i"
+    },
+    "Sum011": {
+      "expected": "il unione da i uguale a 1 a 10 di, S pedice i"
+    },
+    "Sum012": {
+      "expected": "il intersezione di, S pedice i"
+    },
+    "Sum013": {
+      "expected": "il unione di, S pedice i"
+    },
+    "Sum014": {
+      "expected": "il intersezione sopra C, di, S pedice i"
+    },
+    "Sum015": {
+      "expected": "il unione sopra C, di, S pedice i"
+    },
+    "Sum016": {
+      "expected": "il integrale di f di x, d x"
+    },
+    "Sum017": {
+      "expected": "il integrale da 0 a 1 di f di x, d x"
+    },
+    "Sum018": {
+      "expected": "il integrale sopra i numeri reali, di f di x, d x"
+    }
+  }
+}

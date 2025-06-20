@@ -1,0 +1,53 @@
+{
+  "locale": "sv",
+  "name": "SwedishExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsSwedish",
+  "information": "Swedish Extra Function tests.",
+  "compare": true,
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "naturliga logaritmen"
+    },
+    "arccos-clearspeak-Trig_TrigInverse": {
+      "key": "arccos",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "cosinus invers"
+    },
+    "arccot-clearspeak-Trig_TrigInverse": {
+      "key": "arccot",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "cotangens invers"
+    },
+    "arccsc-clearspeak-Trig_TrigInverse": {
+      "key": "arccsc",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "cosecans invers"
+    },
+    "arcsec-clearspeak-Trig_TrigInverse": {
+      "key": "arcsec",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "secans invers"
+    },
+    "arcsin-clearspeak-Trig_TrigInverse": {
+      "key": "arcsin",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "sinus invers"
+    },
+    "arctan-clearspeak-Trig_TrigInverse": {
+      "key": "arctan",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "tangens invers"
+    }
+  }
+}

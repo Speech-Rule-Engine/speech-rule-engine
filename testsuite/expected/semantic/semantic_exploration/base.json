@@ -1,0 +1,3203 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration base tests.",
+  "base": "input/semantic/base.json",
+  "tests": {
+    "Wrappers_0": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "Wrappers_1": {
+      "expected": [
+        13,
+        0,
+        12,
+        [
+          3,
+          1,
+          2
+        ],
+        9,
+        4,
+        6,
+        5,
+        10,
+        8
+      ]
+    },
+    "Wrappers_2": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "Scripts_0": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Scripts_1": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Scripts_2": {
+      "expected": [
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "Scripts_3": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Scripts_4": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Scripts_5": {
+      "expected": [
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "Scripts_6": {
+      "expected": [
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "Scripts_7": {
+      "expected": [
+        7,
+        0,
+        [
+          4,
+          1,
+          3,
+          2
+        ],
+        5
+      ]
+    },
+    "Numbers_0": {
+      "expected": 0
+    },
+    "Numbers_1": {
+      "expected": 0
+    },
+    "Numbers_2": {
+      "expected": 0
+    },
+    "Numbers_3": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Numbers_4": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "MixedNumbers_0": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "MixedNumbers_1": {
+      "expected": [
+        5,
+        [
+          2,
+          0,
+          1
+        ],
+        4,
+        3
+      ]
+    },
+    "MixedNumbers_2": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "MixedNumbers_3": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "MixedNumbers_4": {
+      "expected": [
+        5,
+        [
+          2,
+          0,
+          1
+        ],
+        4,
+        3
+      ]
+    },
+    "MixedNumbers_5": {
+      "expected": [
+        7,
+        [
+          5,
+          0,
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        6,
+        4
+      ]
+    },
+    "MixedNumbers_6": {
+      "expected": [
+        9,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ]
+        ],
+        8,
+        5
+      ]
+    },
+    "Relations_0": {
+      "expected": 0
+    },
+    "Relations_1": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "Relations_2": {
+      "expected": [
+        5,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Relations_3": {
+      "expected": [
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "PrePostfixOperators_0": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrePostfixOperators_1": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "PrePostfixOperators_2": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrePostfixOperators_3": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "PrePostfixOperators_4": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          1,
+          2
+        ],
+        3,
+        4
+      ]
+    },
+    "PrePostfixOperators_5": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          1,
+          2
+        ],
+        3,
+        4
+      ]
+    },
+    "PrePostfixOperators_6": {
+      "expected": [
+        9,
+        [
+          7,
+          0,
+          1,
+          2
+        ],
+        3,
+        [
+          10,
+          [
+            8,
+            4,
+            5
+          ],
+          6
+        ]
+      ]
+    },
+    "PrePostfixOperators_7": {
+      "expected": [
+        14,
+        [
+          12,
+          [
+            10,
+            0,
+            1,
+            2
+          ],
+          3,
+          [
+            11,
+            4,
+            5
+          ]
+        ],
+        6,
+        [
+          15,
+          [
+            13,
+            7,
+            8
+          ],
+          9
+        ]
+      ]
+    },
+    "SingleOperators_0": {
+      "expected": 0
+    },
+    "SingleOperators_1": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "SingleOperators_2": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "SingleOperators_3": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "SingleOperators_4": {
+      "expected": [
+        5,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "SingleOperators_5": {
+      "expected": [
+        8,
+        0,
+        1,
+        [
+          7,
+          2,
+          6,
+          3
+        ],
+        4,
+        5
+      ]
+    },
+    "MultipleOperators_0": {
+      "expected": [
+        9,
+        [
+          8,
+          [
+            7,
+            0,
+            1,
+            2
+          ],
+          3,
+          4
+        ],
+        5,
+        6
+      ]
+    },
+    "MultipleOperators_1": {
+      "expected": [
+        10,
+        [
+          9,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "MultipleOperators_2": {
+      "expected": [
+        7,
+        0,
+        1,
+        [
+          8,
+          2,
+          3,
+          4
+        ],
+        5,
+        6
+      ]
+    },
+    "MultipleOperators_3": {
+      "expected": [
+        10,
+        0,
+        1,
+        [
+          13,
+          2,
+          3,
+          [
+            12,
+            4,
+            11,
+            5
+          ]
+        ],
+        6,
+        [
+          14,
+          7,
+          8,
+          9
+        ]
+      ]
+    },
+    "MultipleOperators_4": {
+      "expected": [
+        28,
+        [
+          27,
+          [
+            25,
+            [
+              21,
+              0,
+              1,
+              2,
+              3,
+              [
+                23,
+                4,
+                22,
+                5
+              ],
+              6,
+              [
+                24,
+                7,
+                8,
+                9
+              ]
+            ],
+            10,
+            11
+          ],
+          12,
+          [
+            26,
+            13,
+            14
+          ]
+        ],
+        15,
+        16,
+        17,
+        [
+          29,
+          18,
+          19,
+          20
+        ]
+      ]
+    },
+    "MultiplicationOperators_0": {
+      "expected": [
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "MultiplicationOperators_1": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2,
+        3
+      ]
+    },
+    "MultiplicationOperators_2": {
+      "expected": [
+        8,
+        [
+          7,
+          0,
+          6,
+          1
+        ],
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "MultiplicationOperators_3": {
+      "expected": [
+        13,
+        [
+          12,
+          0,
+          11,
+          1
+        ],
+        2,
+        3,
+        4,
+        5,
+        6,
+        [
+          15,
+          7,
+          14,
+          8
+        ],
+        9,
+        10
+      ]
+    },
+    "MultiplicationOperators_4": {
+      "expected": [
+        14,
+        [
+          13,
+          0,
+          12,
+          1
+        ],
+        2,
+        [
+          5,
+          3,
+          4
+        ],
+        6,
+        [
+          11,
+          7,
+          [
+            10,
+            8,
+            9
+          ]
+        ]
+      ]
+    },
+    "MultiplicationOperators_5": {
+      "expected": [
+        20,
+        [
+          16,
+          0,
+          15,
+          1
+        ],
+        2,
+        [
+          19,
+          [
+            18,
+            3,
+            17,
+            4
+          ],
+          5,
+          [
+            8,
+            6,
+            7
+          ],
+          9,
+          [
+            14,
+            10,
+            [
+              13,
+              11,
+              12
+            ]
+          ]
+        ]
+      ]
+    },
+    "SquareRoots_0": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "SquareRoots_1": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "SquareRoots_2": {
+      "expected": [
+        2,
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "SquareRoots_3": {
+      "expected": [
+        4,
+        [
+          3,
+          0,
+          2,
+          1
+        ]
+      ]
+    },
+    "SquareRoots_4": {
+      "expected": [
+        6,
+        [
+          5,
+          [
+            2,
+            [
+              1,
+              0
+            ]
+          ],
+          4,
+          3
+        ]
+      ]
+    },
+    "RegularRoots_0": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "RegularRoots_1": {
+      "expected": [
+        8,
+        [
+          3,
+          0,
+          1,
+          2
+        ],
+        [
+          7,
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    "RegularRoots_2": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "RegularRoots_3": {
+      "expected": [
+        9,
+        0,
+        [
+          8,
+          [
+            3,
+            1,
+            2
+          ],
+          7,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "MixedRoots_0": {
+      "expected": [
+        3,
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    },
+    "MixedRoots_1": {
+      "expected": [
+        3,
+        0,
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    "MixedRoots_2": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          [
+            4,
+            1,
+            3,
+            2
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_0": {
+      "expected": 0
+    },
+    "SimpleFuncsSingle_1": {
+      "expected": [
+        6,
+        0,
+        5,
+        [
+          4,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_2": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2,
+            5,
+            3
+          ],
+          4
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_3": {
+      "expected": [
+        11,
+        0,
+        10,
+        [
+          9,
+          1,
+          [
+            8,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          7
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_4": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_5": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_6": {
+      "expected": [
+        10,
+        0,
+        9,
+        [
+          8,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          7
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_7": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_8": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_9": {
+      "expected": [
+        10,
+        0,
+        9,
+        [
+          8,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          7
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_10": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsSingle_11": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsWithOps_0": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          [
+            6,
+            3,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsWithOps_1": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          [
+            6,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        5
+      ]
+    },
+    "SimpleFuncsWithOps_2": {
+      "expected": [
+        11,
+        0,
+        1,
+        [
+          10,
+          2,
+          9,
+          [
+            8,
+            3,
+            4,
+            5
+          ]
+        ],
+        6,
+        7
+      ]
+    },
+    "SimpleFuncsWithOps_3": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          [
+            6,
+            3,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsWithOps_4": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          [
+            6,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        5
+      ]
+    },
+    "SimpleFuncsWithOps_5": {
+      "expected": [
+        11,
+        0,
+        1,
+        [
+          10,
+          2,
+          9,
+          [
+            8,
+            3,
+            4,
+            5
+          ]
+        ],
+        6,
+        7
+      ]
+    },
+    "SimpleFuncsWithOps_6": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          [
+            6,
+            3,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsWithOps_7": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          [
+            6,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        5
+      ]
+    },
+    "SimpleFuncsWithOps_8": {
+      "expected": [
+        11,
+        0,
+        1,
+        [
+          10,
+          2,
+          9,
+          [
+            8,
+            3,
+            4,
+            5
+          ]
+        ],
+        6,
+        7
+      ]
+    },
+    "SimpleFuncsMulti_0": {
+      "expected": [
+        15,
+        [
+          14,
+          0,
+          13,
+          [
+            9,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          12,
+          5,
+          11,
+          [
+            10,
+            6,
+            7,
+            8
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsMulti_1": {
+      "expected": [
+        24,
+        [
+          23,
+          [
+            22,
+            0,
+            21,
+            [
+              14,
+              1,
+              2,
+              3
+            ]
+          ],
+          4,
+          [
+            20,
+            5,
+            19,
+            [
+              15,
+              6,
+              7,
+              8
+            ]
+          ]
+        ],
+        9,
+        [
+          18,
+          10,
+          17,
+          [
+            16,
+            11,
+            12,
+            13
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsMulti_2": {
+      "expected": [
+        27,
+        [
+          26,
+          [
+            25,
+            0,
+            24,
+            [
+              15,
+              1,
+              2,
+              3
+            ]
+          ],
+          4,
+          [
+            23,
+            5,
+            22,
+            [
+              16,
+              6,
+              7,
+              8
+            ]
+          ]
+        ],
+        9,
+        [
+          21,
+          10,
+          20,
+          [
+            19,
+            11,
+            [
+              18,
+              12,
+              17,
+              13
+            ],
+            14
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsNested_0": {
+      "expected": [
+        12,
+        0,
+        11,
+        [
+          10,
+          1,
+          [
+            9,
+            2,
+            8,
+            [
+              7,
+              3,
+              4,
+              5
+            ]
+          ],
+          6
+        ]
+      ]
+    },
+    "SimpleFuncsNested_1": {
+      "expected": [
+        21,
+        0,
+        20,
+        [
+          19,
+          1,
+          [
+            18,
+            [
+              16,
+              2,
+              15,
+              [
+                11,
+                3,
+                4,
+                5
+              ]
+            ],
+            17,
+            [
+              14,
+              6,
+              13,
+              [
+                12,
+                7,
+                8,
+                9
+              ]
+            ]
+          ],
+          10
+        ]
+      ]
+    },
+    "SimpleFuncsNested_2": {
+      "expected": [
+        21,
+        0,
+        20,
+        [
+          19,
+          1,
+          [
+            18,
+            [
+              17,
+              2,
+              16,
+              [
+                12,
+                3,
+                4,
+                5
+              ]
+            ],
+            6,
+            [
+              15,
+              7,
+              14,
+              [
+                13,
+                8,
+                9,
+                10
+              ]
+            ]
+          ],
+          11
+        ]
+      ]
+    },
+    "SimpleFuncsNested_3": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          5
+        ]
+      ]
+    },
+    "SimpleFuncsExplicitApp_0": {
+      "expected": [
+        10,
+        0,
+        9,
+        [
+          8,
+          2,
+          [
+            7,
+            3,
+            4,
+            5
+          ],
+          6
+        ]
+      ]
+    },
+    "SimpleFuncsExplicitApp_1": {
+      "expected": [
+        22,
+        [
+          21,
+          0,
+          20,
+          [
+            15,
+            2,
+            [
+              14,
+              3,
+              4,
+              5
+            ],
+            6
+          ]
+        ],
+        7,
+        [
+          19,
+          8,
+          18,
+          [
+            17,
+            9,
+            [
+              16,
+              10,
+              11,
+              12
+            ],
+            13
+          ]
+        ]
+      ]
+    },
+    "SimpleFuncsExplicitApp_2": {
+      "expected": [
+        12,
+        [
+          2,
+          0,
+          1
+        ],
+        11,
+        [
+          10,
+          4,
+          [
+            9,
+            5,
+            6,
+            7
+          ],
+          8
+        ]
+      ]
+    },
+    "SimpleFuncsExplicitApp_3": {
+      "expected": [
+        30,
+        [
+          29,
+          [
+            4,
+            [
+              2,
+              0,
+              1
+            ],
+            3
+          ],
+          28,
+          [
+            23,
+            6,
+            [
+              22,
+              7,
+              8,
+              9
+            ],
+            10
+          ]
+        ],
+        11,
+        [
+          27,
+          [
+            16,
+            [
+              14,
+              12,
+              13
+            ],
+            15
+          ],
+          26,
+          [
+            25,
+            17,
+            [
+              24,
+              18,
+              19,
+              20
+            ],
+            21
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_0": {
+      "expected": [
+        6,
+        0,
+        5,
+        [
+          4,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_1": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2,
+            5,
+            3
+          ],
+          4
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_2": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_3": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_4": {
+      "expected": [
+        10,
+        0,
+        9,
+        [
+          8,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          7
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_5": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_6": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_7": {
+      "expected": [
+        10,
+        0,
+        9,
+        [
+          8,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          7
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_8": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            4,
+            2,
+            3
+          ],
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsSingle_9": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2,
+            3,
+            4
+          ],
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsWithOps_0": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          [
+            6,
+            3,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsWithOps_1": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          [
+            6,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        5
+      ]
+    },
+    "PrefixFuncsWithOps_2": {
+      "expected": [
+        11,
+        0,
+        1,
+        [
+          10,
+          2,
+          9,
+          [
+            8,
+            3,
+            4,
+            5
+          ]
+        ],
+        6,
+        7
+      ]
+    },
+    "PrefixFuncsWithOps_3": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          [
+            6,
+            3,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsWithOps_4": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          [
+            6,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        5
+      ]
+    },
+    "PrefixFuncsWithOps_5": {
+      "expected": [
+        11,
+        0,
+        1,
+        [
+          10,
+          2,
+          9,
+          [
+            8,
+            3,
+            4,
+            5
+          ]
+        ],
+        6,
+        7
+      ]
+    },
+    "PrefixFuncsWithOps_6": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          [
+            6,
+            3,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsWithOps_7": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          [
+            6,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        5
+      ]
+    },
+    "PrefixFuncsWithOps_8": {
+      "expected": [
+        11,
+        0,
+        1,
+        [
+          10,
+          2,
+          9,
+          [
+            8,
+            3,
+            4,
+            5
+          ]
+        ],
+        6,
+        7
+      ]
+    },
+    "PrefixFuncsMulti_0": {
+      "expected": [
+        15,
+        [
+          14,
+          0,
+          13,
+          [
+            9,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          12,
+          5,
+          11,
+          [
+            10,
+            6,
+            7,
+            8
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsMulti_1": {
+      "expected": [
+        24,
+        [
+          23,
+          [
+            22,
+            0,
+            21,
+            [
+              14,
+              1,
+              2,
+              3
+            ]
+          ],
+          4,
+          [
+            20,
+            5,
+            19,
+            [
+              15,
+              6,
+              7,
+              8
+            ]
+          ]
+        ],
+        9,
+        [
+          18,
+          10,
+          17,
+          [
+            16,
+            11,
+            12,
+            13
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsMulti_2": {
+      "expected": [
+        27,
+        [
+          26,
+          [
+            25,
+            0,
+            24,
+            [
+              15,
+              1,
+              2,
+              3
+            ]
+          ],
+          4,
+          [
+            23,
+            5,
+            22,
+            [
+              16,
+              6,
+              7,
+              8
+            ]
+          ]
+        ],
+        9,
+        [
+          21,
+          10,
+          20,
+          [
+            19,
+            11,
+            [
+              18,
+              12,
+              17,
+              13
+            ],
+            14
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsScripts_0": {
+      "expected": [
+        8,
+        [
+          2,
+          0,
+          1
+        ],
+        7,
+        [
+          6,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsScripts_1": {
+      "expected": [
+        8,
+        [
+          2,
+          0,
+          1
+        ],
+        7,
+        [
+          6,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsScripts_2": {
+      "expected": [
+        10,
+        [
+          4,
+          0,
+          1,
+          2
+        ],
+        9,
+        [
+          8,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    "PrefixFuncsScripts_3": {
+      "expected": [
+        22,
+        [
+          21,
+          [
+            20,
+            [
+              2,
+              0,
+              1
+            ],
+            19,
+            [
+              15,
+              3,
+              4,
+              5
+            ]
+          ],
+          6,
+          [
+            18,
+            [
+              9,
+              7,
+              8
+            ],
+            17,
+            [
+              16,
+              10,
+              11,
+              12
+            ]
+          ]
+        ],
+        13,
+        14
+      ]
+    },
+    "PrefixFuncsUnfenced_0": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "PrefixFuncsUnfenced_1": {
+      "expected": [
+        6,
+        0,
+        5,
+        [
+          4,
+          1,
+          3,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_2": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_3": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_4": {
+      "expected": [
+        7,
+        0,
+        6,
+        [
+          5,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_5": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_6": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_7": {
+      "expected": [
+        7,
+        0,
+        6,
+        [
+          5,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsUnfenced_8": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsUnfencedOps_0": {
+      "expected": [
+        6,
+        0,
+        1,
+        [
+          5,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsUnfencedOps_1": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2,
+        3
+      ]
+    },
+    "PrefixFuncsUnfencedOps_2": {
+      "expected": [
+        8,
+        0,
+        1,
+        [
+          7,
+          2,
+          6,
+          3
+        ],
+        4,
+        5
+      ]
+    },
+    "PrefixFuncsUnfencedOps_3": {
+      "expected": [
+        6,
+        0,
+        1,
+        [
+          5,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsUnfencedOps_4": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2,
+        3
+      ]
+    },
+    "PrefixFuncsUnfencedOps_5": {
+      "expected": [
+        8,
+        0,
+        1,
+        [
+          7,
+          2,
+          6,
+          3
+        ],
+        4,
+        5
+      ]
+    },
+    "PrefixFuncsUnfencedOps_6": {
+      "expected": [
+        6,
+        0,
+        1,
+        [
+          5,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsUnfencedOps_7": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2,
+        3
+      ]
+    },
+    "PrefixFuncsUnfencedOps_8": {
+      "expected": [
+        8,
+        0,
+        1,
+        [
+          7,
+          2,
+          6,
+          3
+        ],
+        4,
+        5
+      ]
+    },
+    "PrefixFuncsMultiUnfenced_0": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          7,
+          1
+        ],
+        2,
+        [
+          6,
+          3,
+          5,
+          4
+        ]
+      ]
+    },
+    "PrefixFuncsMultiUnfenced_1": {
+      "expected": [
+        15,
+        [
+          14,
+          [
+            13,
+            0,
+            12,
+            1
+          ],
+          2,
+          [
+            11,
+            3,
+            10,
+            4
+          ]
+        ],
+        5,
+        [
+          9,
+          6,
+          8,
+          7
+        ]
+      ]
+    },
+    "PrefixFuncsMultiUnfenced_2": {
+      "expected": [
+        18,
+        [
+          17,
+          [
+            16,
+            0,
+            15,
+            1
+          ],
+          2,
+          [
+            14,
+            3,
+            13,
+            4
+          ]
+        ],
+        5,
+        [
+          12,
+          6,
+          11,
+          [
+            10,
+            7,
+            9,
+            8
+          ]
+        ]
+      ]
+    },
+    "PrefixFuncsScriptUnfenced_0": {
+      "expected": [
+        5,
+        [
+          2,
+          0,
+          1
+        ],
+        4,
+        3
+      ]
+    },
+    "PrefixFuncsScriptUnfenced_1": {
+      "expected": [
+        5,
+        [
+          2,
+          0,
+          1
+        ],
+        4,
+        3
+      ]
+    },
+    "PrefixFuncsScriptUnfenced_2": {
+      "expected": [
+        7,
+        [
+          4,
+          0,
+          1,
+          2
+        ],
+        6,
+        5
+      ]
+    },
+    "PrefixFuncsScriptUnfenced_3": {
+      "expected": [
+        16,
+        [
+          15,
+          [
+            14,
+            [
+              2,
+              0,
+              1
+            ],
+            13,
+            3
+          ],
+          4,
+          [
+            12,
+            [
+              7,
+              5,
+              6
+            ],
+            11,
+            8
+          ]
+        ],
+        9,
+        10
+      ]
+    },
+    "PrefixFuncsScriptUnfenced_4": {
+      "expected": [
+        11,
+        [
+          8,
+          [
+            4,
+            0,
+            1,
+            2
+          ],
+          5,
+          6
+        ],
+        10,
+        9
+      ]
+    },
+    "PrefixFuncsNoArgs_0": {
+      "expected": 0
+    },
+    "PrefixFuncsNoArgs_1": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "PrefixFuncsNoArgs_2": {
+      "expected": [
+        7,
+        [
+          2,
+          0,
+          1
+        ],
+        3,
+        [
+          6,
+          4,
+          5
+        ]
+      ]
+    },
+    "PrefixFuncsNoArgs_3": {
+      "expected": [
+        10,
+        [
+          9,
+          [
+            2,
+            0,
+            1
+          ],
+          3,
+          [
+            6,
+            4,
+            5
+          ]
+        ],
+        7,
+        8
+      ]
+    },
+    "PrefixFuncsNoArgs_4": {
+      "expected": [
+        5,
+        0,
+        1,
+        [
+          4,
+          2,
+          3
+        ]
+      ]
+    },
+    "PrefixFuncsNested_0": {
+      "expected": [
+        6,
+        0,
+        5,
+        [
+          4,
+          1,
+          3,
+          2
+        ]
+      ]
+    },
+    "PrefixFuncsNested_1": {
+      "expected": [
+        12,
+        0,
+        11,
+        [
+          10,
+          1,
+          [
+            9,
+            2,
+            8,
+            [
+              7,
+              3,
+              4,
+              5
+            ]
+          ],
+          6
+        ]
+      ]
+    },
+    "PrefixFuncsNested_2": {
+      "expected": [
+        21,
+        [
+          20,
+          0,
+          19,
+          [
+            18,
+            1,
+            17,
+            2
+          ]
+        ],
+        3,
+        [
+          16,
+          4,
+          15,
+          [
+            14,
+            5,
+            [
+              13,
+              6,
+              12,
+              [
+                11,
+                7,
+                8,
+                9
+              ]
+            ],
+            10
+          ]
+        ]
+      ]
+    },
+    "Sets_0": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "Sets_1": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "Sets_2": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        4
+      ]
+    },
+    "Sets_3": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        4
+      ]
+    },
+    "Sets_4": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        4
+      ]
+    },
+    "Sets_5": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        4
+      ]
+    },
+    "Sets_6": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1,
+          4,
+          2
+        ],
+        3
+      ]
+    },
+    "Sets_7": {
+      "expected": [
+        5,
+        0,
+        [
+          3,
+          1,
+          2
+        ],
+        4
+      ]
+    },
+    "Sets_8": {
+      "expected": [
+        6,
+        0,
+        5,
+        [
+          4,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "Sets_9": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        4
+      ]
+    },
+    "Sets_10": {
+      "expected": [
+        13,
+        [
+          7,
+          0,
+          [
+            6,
+            1,
+            [
+              4,
+              2,
+              3
+            ],
+            5
+          ]
+        ],
+        12,
+        [
+          11,
+          8,
+          9,
+          10
+        ]
+      ]
+    },
+    "HiddenIgnoreElements_0": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "HiddenIgnoreElements_1": {
+      "expected": [
+        5,
+        [
+          3,
+          0,
+          2,
+          1
+        ],
+        4
+      ]
+    },
+    "HiddenIgnoreElements_2": {
+      "expected": [
+        4,
+        0,
+        3
+      ]
+    },
+    "HiddenEmptyTokens_0": {
+      "expected": [
+        3,
+        1,
+        2
+      ]
+    },
+    "HiddenEmptyTokens_1": {
+      "expected": [
+        3,
+        1,
+        2
+      ]
+    },
+    "HiddenEmptyTokens_2": {
+      "expected": [
+        4,
+        2,
+        3
+      ]
+    },
+    "VulgarFractions_0": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "VulgarFractions_1": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "VulgarFractions_2": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "VulgarFractions_3": {
+      "expected": [
+        6,
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          5,
+          3,
+          4
+        ]
+      ]
+    },
+    "Issue376_0": {
+      "expected": [
+        5,
+        0,
+        1,
+        [
+          6,
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    "Issue382_0": {
+      "expected": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    "Issue382_1": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "Issue383_0": {
+      "expected": [
+        6,
+        [
+          2,
+          0,
+          1
+        ],
+        5,
+        4
+      ]
+    },
+    "Issue284_0": {
+      "expected": [
+        5,
+        0,
+        [
+          4,
+          2,
+          3
+        ]
+      ]
+    },
+    "Issue284_1": {
+      "expected": [
+        8,
+        0,
+        1,
+        [
+          7,
+          2,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "Issue284_2": {
+      "expected": [
+        8,
+        0,
+        1,
+        [
+          7,
+          2,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "Issue284_3": {
+      "expected": [
+        8,
+        [
+          7,
+          0,
+          [
+            4,
+            2,
+            3
+          ]
+        ],
+        5,
+        6
+      ]
+    },
+    "Issue284_4": {
+      "expected": [
+        5,
+        0,
+        [
+          4,
+          2,
+          3
+        ]
+      ]
+    },
+    "MglyphTokens_0": {
+      "expected": 0
+    },
+    "MglyphToken_1": {
+      "expected": 0
+    },
+    "MglyphToken_2": {
+      "expected": 0
+    },
+    "MglyphToken_3": {
+      "expected": 0
+    },
+    "MglyphToken_4": {
+      "expected": 0
+    },
+    "MglyphToken_5": {
+      "expected": 0
+    },
+    "MglyphToken_6": {
+      "expected": 0
+    },
+    "MglyphToken_7": {
+      "expected": 0
+    },
+    "MglyphToken_8": {
+      "expected": 0
+    },
+    "MglyphToken_9": {
+      "expected": 0
+    },
+    "MglyphGeneral_0": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          1,
+          2
+        ],
+        3,
+        4
+      ]
+    },
+    "MglyphGeneral_1": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          1,
+          [
+            5,
+            2,
+            3,
+            4
+          ]
+        ]
+      ]
+    },
+    "issue451_0": {
+      "expected":      [
+       15,
+       [
+         14,
+         0,
+         13,
+         [
+           10,
+           1,
+           2,
+           3
+         ]
+       ],
+       4,
+       [
+         12,
+         [
+           7,
+           5,
+           6
+         ],
+         11,
+         9
+       ]
+     ]
+    },
+    "issue451_1": {
+      "expected": [
+        16,
+        [
+          15,
+          0,
+          14,
+          [
+            11,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          13,
+          [
+            8,
+            5,
+            7,
+            6
+          ],
+          12,
+          10
+        ]
+      ]
+    },
+    "issue451_2": {
+      "expected": [
+        10,
+        [
+          4,
+          0,
+          1,
+          2
+        ],
+        9,
+        [
+          8,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    "issue451_3": {
+      "expected": [
+        10,
+        [
+          4,
+          0,
+          1,
+          2
+        ],
+        9,
+        [
+          8,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    "issue451_4": {
+      "expected":   [
+        15,
+        [
+          14,
+          0,
+          13,
+          [
+            10,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          12,
+          [
+            7,
+            5,
+            6
+          ],
+          11,
+          9
+        ]
+      ]
+    },
+    "issue451_5": {
+      "expected": [
+        19,
+        [
+          18,
+          0,
+          17,
+          [
+            12,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          16,
+          [
+            8,
+            5,
+            7,
+            6
+          ],
+          15,
+          [
+            14,
+            10,
+            13,
+            11
+          ]
+        ]
+      ]
+    },
+    "issue451_6": {
+      "expected": [
+        19,
+        [
+          16,
+          0,
+          15,
+          [
+            14,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          18,
+          [
+            12,
+            [
+              8,
+              5,
+              7,
+              6
+            ],
+            11,
+            10
+          ],
+          17,
+          13
+        ]
+      ]
+    }
+  }
+}

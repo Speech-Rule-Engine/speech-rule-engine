@@ -1,0 +1,427 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakFractions",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "Korean Clearspeak Fractions rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Fractions",
+    "Frac001": {
+      "expected": "2 분의 1"
+    },
+    "Frac002": {
+      "expected": "32 분의 12"
+    },
+    "Frac002a": {
+      "expected": "y 분의 x"
+    },
+    "Frac002b": {
+      "expected": "3 y, 분의 2 x"
+    },
+    "Frac002c": {
+      "expected": "c d, 분의 x y"
+    },
+    "Frac002d": {
+      "expected": "3 분의 1 분의 2 분의 1"
+    },
+    "Frac002e": {
+      "expected": "y 분의 마이너스 x"
+    },
+    "Frac002f": {
+      "expected": "3 y, 분의 마이너스 2 x"
+    },
+    "Frac002g": {
+      "expected": "마이너스 c d, 분의 x y"
+    },
+    "Frac002h": {
+      "expected": "마이너스 3 분의 1 분의 2 분의 1"
+    },
+    "Frac003": {
+      "expected": "분모가 13, 이고 분자가 2 더하기 3, 인 분수"
+    },
+    "Frac004": {
+      "expected": "분모가 2, 이고 분자가 x 더하기 y, 인 분수"
+    },
+    "Frac005": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수"
+    },
+    "Frac006": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수 더하기 3 분의 2"
+    },
+    "Frac007": {
+      "expected": "gallon 분의 miles"
+    },
+    "Frac008": {
+      "expected": "3 갤런 분의 2 마일"
+    },
+    "Frac009": {
+      "expected": "2 분의 1"
+    },
+    "Frac010": {
+      "expected": "32 분의 12"
+    },
+    "Frac011": {
+      "expected": "13 분의 2 더하기 3"
+    },
+    "Frac012": {
+      "expected": "2 분의 x 더하기 y"
+    },
+    "Frac013": {
+      "expected": "x 빼기 y 분의 x 더하기 y"
+    },
+    "Frac014": {
+      "expected": "x 빼기 y 분의 x 더하기 y, 더하기, 3 분의 2"
+    },
+    "Frac015": {
+      "expected": "gallon 분의 miles"
+    },
+    "Frac016": {
+      "expected": "3 갤런 분의 2 마일"
+    },
+    "Frac017": {
+      "expected": "2 분의 1, 분수끝"
+    },
+    "Frac018": {
+      "expected": "32 분의 12, 분수끝"
+    },
+    "Frac019": {
+      "expected": "13 분의 2 더하기 3, 분수끝"
+    },
+    "Frac020": {
+      "expected": "2 분의 x 더하기 y, 분수끝"
+    },
+    "Frac021": {
+      "expected": "x 빼기 y 분의 x 더하기 y, 분수끝"
+    },
+    "Frac022": {
+      "expected": "x 빼기 y 분의 x 더하기 y, 분수끝, 더하기, 3 분의 2, 분수끝"
+    },
+    "Frac023": {
+      "expected": "gallons 분의 miles, 분수끝"
+    },
+    "Frac024": {
+      "expected": "3 갤런 분의 2 마일, 분수끝"
+    },
+    "Frac025": {
+      "expected": "분수시작, 분모가 2, 이고 분자가 1, 인 분수끝"
+    },
+    "Frac026": {
+      "expected": "분수시작, 분모가 32, 이고 분자가 12, 인 분수끝"
+    },
+    "Frac027": {
+      "expected": "분수시작, 분모가 13, 이고 분자가 2 더하기 3, 인 분수끝"
+    },
+    "Frac028": {
+      "expected": "분수시작, 분모가 2, 이고 분자가 x 더하기 y, 인 분수끝"
+    },
+    "Frac029": {
+      "expected": "분수시작, 분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수끝"
+    },
+    "Frac030": {
+      "expected": "분수시작, 분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수끝, 더하기, 분수시작, 분모가 3, 이고 분자가 2, 인 분수끝"
+    },
+    "Frac031": {
+      "expected": "분수시작, 분모가 gallon, 이고 분자가 miles, 인 분수끝"
+    },
+    "Frac032": {
+      "expected": "분모가 2, 이고 분자가 1, 인 분수"
+    },
+    "Frac033": {
+      "expected": "분모가 32, 이고 분자가 12, 인 분수"
+    },
+    "Frac034": {
+      "expected": "분모가 13, 이고 분자가 2 더하기 3, 인 분수"
+    },
+    "Frac035": {
+      "expected": "분모가 2, 이고 분자가 x 더하기 y, 인 분수"
+    },
+    "Frac036": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수"
+    },
+    "Frac037": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수, 더하기, 분모가 3, 이고 분자가 2, 인 분수"
+    },
+    "Frac038": {
+      "expected": "분모가 gallon, 이고 분자가 miles, 인 분수"
+    },
+    "Frac039": {
+      "expected": "분모가 3 갤런, 이고 분자가 2 마일, 인 분수"
+    },
+    "Frac040": {
+      "expected": "분수 2 분의 1"
+    },
+    "Frac041": {
+      "expected": "분수 32 분의 12"
+    },
+    "Frac042": {
+      "expected": "분수 13 분의 2 더하기 3"
+    },
+    "Frac043": {
+      "expected": "분수 2 분의 x 더하기 y"
+    },
+    "Frac044": {
+      "expected": "분수 x 빼기 y 분의 x 더하기 y"
+    },
+    "Frac045": {
+      "expected": "분수 x 빼기 y 분의 x 더하기 y, 더하기, 분수 3 분의 2"
+    },
+    "Frac046": {
+      "expected": "분수 gallon 분의 miles"
+    },
+    "Frac047": {
+      "expected": "분수 3 갤런 분의 2 마일"
+    },
+    "Frac048": {
+      "expected": "1 퍼 2"
+    },
+    "Frac049": {
+      "expected": "12 퍼 32"
+    },
+    "Frac050": {
+      "expected": "2 더하기 3 퍼 13"
+    },
+    "Frac051": {
+      "expected": "x 더하기 y 퍼 2"
+    },
+    "Frac052": {
+      "expected": "x 더하기 y 퍼 x 빼기 y"
+    },
+    "Frac053": {
+      "expected": "x 더하기 y 퍼 x 빼기 y, 더하기, 2 퍼 3"
+    },
+    "Frac054": {
+      "expected": "miles 퍼 gallon"
+    },
+    "Frac055": {
+      "expected": "2 마일 퍼 3 갤런"
+    },
+    "Frac056": {
+      "expected": "2 분의 1"
+    },
+    "Frac057": {
+      "expected": "32 분의 12"
+    },
+    "Frac058": {
+      "expected": "분모가 13, 이고 분자가 2 더하기 3, 인 분수"
+    },
+    "Frac059": {
+      "expected": "분모가 2, 이고 분자가 x 더하기 y, 인 분수"
+    },
+    "Frac060": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수"
+    },
+    "Frac061": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수 더하기 3 분의 2"
+    },
+    "Frac062": {
+      "expected": "gallon 분의 miles"
+    },
+    "Frac063": {
+      "expected": "3 갤런 분의 2 마일"
+    },
+    "Frac064": {
+      "expected": "2 분의 1"
+    },
+    "Frac065": {
+      "expected": "32 분의 12, 분수끝"
+    },
+    "Frac066": {
+      "expected": "분모가 13, 이고 분자가 2 더하기 3, 인 분수 분수끝"
+    },
+    "Frac067": {
+      "expected": "분모가 2, 이고 분자가 x 더하기 y, 인 분수 분수끝"
+    },
+    "Frac068": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수 분수끝"
+    },
+    "Frac069": {
+      "expected": "분모가 x 빼기 y, 이고 분자가 x 더하기 y, 인 분수 분수끝, 더하기 3 분의 2"
+    },
+    "Frac070": {
+      "expected": "gallons 분의 miles"
+    },
+    "Frac071": {
+      "expected": "3 갤런 분의 2 마일"
+    },
+    "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
+    "FrTxt001": {
+      "expected": "3 갤런 분의 2 마일"
+    },
+    "FrTxt002": {
+      "expected": "run 분의 rise"
+    },
+    "FrTxt003": {
+      "expected": "total outcomes 분의 successful outcomes"
+    },
+    "FrTxt004": {
+      "expected": "36 ways of rolling the pair of dice 분의 6 ways of rolling a 7"
+    },
+    "_comment3_": " Nested Fractions",
+    "NestFrac001": {
+      "expected": "3 분의 1 분의 2 분의 1"
+    },
+    "NestFrac002": {
+      "expected": "분모가, 3 분의 1 분의 2, 이고 분자가 1, 인 분수"
+    },
+    "NestFrac003": {
+      "expected": "3 분의 2 분의 1"
+    },
+    "NestFrac004": {
+      "expected": "3 분의 2 분의 1"
+    },
+    "NestFrac005": {
+      "expected": "분모가, 51 분의 16, 이고 분자가, 32 분의 11, 인 분수"
+    },
+    "NestFrac006": {
+      "expected": "분모가, 분모가, 51 분의 16, 이고 분자가 32, 인 분수, 이고 분자가 11, 인 분수"
+    },
+    "NestFrac007": {
+      "expected": "분모가 2, 이고 분자가 1 더하기, x 분의 4, 인 분수"
+    },
+    "NestFrac008": {
+      "expected": "분모가 2 더하기, x 분의 4, 이고 분자가 3, 인 분수"
+    },
+    "NestFrac009": {
+      "expected": "분모가 2 분의 1, 이고 분자가, 22 분의 10, 인 분수"
+    },
+    "NestFrac010": {
+      "expected": "분모가 1 빼기 3 분의 2, 이고 분자가 1 더하기 3 분의 2, 인 분수"
+    },
+    "NestFrac011": {
+      "expected": "분모가 1 빼기, 2 분의 x, 이고 분자가 1 더하기, 2 분의 x, 인 분수"
+    },
+    "NestFrac012": {
+      "expected": "분모가 x 더하기 1, 이고 분자가, 분모가 x 빼기 1, 이고 분자가 x 더하기 1, 인 분수 더하기 1, 인 분수"
+    },
+    "NestFrac013": {
+      "expected": "분모가 x 더하기, 16 분의 1, 이고 분자가, 분모가 x 빼기 4, 이고 분자가 x 더하기 1, 인 분수 더하기 2 분의 1, 인 분수"
+    },
+    "NestFrac014": {
+      "expected": "1 더하기, 분모가 1 더하기, x 분의 2, 이고 분자가 x, 인 분수"
+    },
+    "NestFrac015": {
+      "expected": "1 더하기, 분모가 1 더하기, 분모가 x 더하기 3, 이고 분자가 2, 인 분수, 이고 분자가 x 더하기 3, 인 분수"
+    },
+    "NestFrac016": {
+      "expected": "1 더하기, 분모가 1 더하기, 분모가 1 더하기, 분모가 1 더하기 1, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수"
+    },
+    "NestFrac017": {
+      "expected": "1 더하기, 분모가 1 더하기, 분모가 1 더하기, 분모가 1 더하기 점 점 점, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수"
+    },
+    "NestFrac018": {
+      "expected": "a 아래첨자 0, 더하기, 분모가, a 아래첨자 1, 더하기, 분모가, a 아래첨자 2, 더하기, 분모가, a 아래첨자 3, 더하기 점 점 점, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수"
+    },
+    "NestFrac019": {
+      "expected": "3 분의 1 분의 2 분의 1"
+    },
+    "NestFrac020": {
+      "expected": "분모가, 3 분의 1 분의 2, 이고 분자가 1, 인 분수 분수끝"
+    },
+    "NestFrac021": {
+      "expected": "3 분의 2 분의 1, 분수끝"
+    },
+    "NestFrac022": {
+      "expected": "3 분의 2 분의 1, 분수끝"
+    },
+    "NestFrac023": {
+      "expected": "분모가, 51 분의 16, 이고 분자가, 32 분의 11, 인 분수 분수끝"
+    },
+    "NestFrac024": {
+      "expected": "분모가, 분모가, 51 분의 16, 이고 분자가 32, 인 분수, 이고 분자가 11, 인 분수 분수끝"
+    },
+    "NestFrac025": {
+      "expected": "분모가 2, 이고 분자가 1 더하기, x 분의 4, 인 분수 분수끝"
+    },
+    "NestFrac026": {
+      "expected": "분모가 2 더하기, x 분의 4, 이고 분자가 3, 인 분수 분수끝"
+    },
+    "NestFrac027": {
+      "expected": "분모가 2 분의 1, 이고 분자가, 22 분의 10, 인 분수 분수끝"
+    },
+    "NestFrac028": {
+      "expected": "분모가 1 빼기 3 분의 2, 이고 분자가 1 더하기 3 분의 2, 인 분수 분수끝"
+    },
+    "NestFrac029": {
+      "expected": "분모가 1 빼기, 2 분의 x, 이고 분자가 1 더하기, 2 분의 x, 인 분수 분수끝"
+    },
+    "NestFrac030": {
+      "expected": "분모가 x 더하기 1, 이고 분자가, 분모가 x 빼기 1, 이고 분자가 x 더하기 1, 인 분수 더하기 1, 인 분수 분수끝"
+    },
+    "NestFrac031": {
+      "expected": "분모가 x 더하기, 16 분의 1, 이고 분자가, 분모가 x 빼기 4, 이고 분자가 x 더하기 1, 인 분수 더하기 2 분의 1, 인 분수 분수끝"
+    },
+    "NestFrac032": {
+      "expected": "1 더하기, 분모가 1 더하기, x 분의 2, 이고 분자가 x, 인 분수 분수끝"
+    },
+    "NestFrac033": {
+      "expected": "1 더하기, 분모가 1 더하기, 분모가 x 더하기 3, 이고 분자가 2, 인 분수, 이고 분자가 x 더하기 3, 인 분수 분수끝"
+    },
+    "NestFrac034": {
+      "expected": "1 더하기, 분모가 1 더하기, 분모가 1 더하기, 분모가 1 더하기 1, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수 분수끝"
+    },
+    "NestFrac035": {
+      "expected": "1 더하기, 분모가 1 더하기, 분모가 1 더하기, 분모가 1 더하기 점 점 점, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수 분수끝"
+    },
+    "NestFrac036": {
+      "expected": "a 아래첨자 0, 더하기, 분모가, a 아래첨자 1, 더하기, 분모가, a 아래첨자 2, 더하기, 분모가, a 아래첨자 3, 더하기 점 점 점, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수, 이고 분자가 1, 인 분수 분수끝"
+    },
+    "_comment4_": " Fractions with Functions",
+    "Fracfunct001": {
+      "expected": "g 의 x, 분의 f 의 x"
+    },
+    "Fracfunct002": {
+      "expected": "분모가 g 의 x, 이고 분자가 f 의 x, 더하기 g 의 x, 인 분수"
+    },
+    "Fracfunct003": {
+      "expected": "분모가 g 의 x, 이고 분자가 f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 인 분수"
+    },
+    "Fracfunct004": {
+      "expected": "2 분의 f 의 x"
+    },
+    "Fracfunct005": {
+      "expected": "f 의 x, 분의 2"
+    },
+    "Fracfunct006": {
+      "expected": "분모가 g 의 x, 더하기 g 의, 괄호 열고, x 더하기 1, 괄호 닫고, 이고 분자가 2, 인 분수"
+    },
+    "Fracfunct007": {
+      "expected": "코싸인 x 분의 싸인 x"
+    },
+    "Fracfunct008": {
+      "expected": "sine, open paren, x plus y, close paren, over, cosine, open paren, x plus y, close paren"
+    },
+    "Fracfunct009": {
+      "expected": "분모가 코싸인 x, 이고 분자가 싸인 x 더하기 코싸인 x, 인 분수"
+    },
+    "Fracfunct010": {
+      "expected": "코싸인 3 x, 분의 싸인 2 x"
+    },
+    "Fracfunct011": {
+      "expected": "분모가, 코싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고, 이고 분자가, 싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고, 인 분수"
+    },
+    "Fracfunct012": {
+      "expected": "g 의 3 x, 분의 f 의 2 x"
+    },
+    "Fracfunct013": {
+      "expected": "로그 y 분의 로그 x"
+    },
+    "Fracfunct014": {
+      "expected": "로그 3 y, 분의 로그 2 x"
+    },
+    "Fracfunct015": {
+      "expected": "밑이 5 인 로그 의, y, 분의, 밑이 10 인 로그 의, x"
+    },
+    "Fracfunct016": {
+      "expected": "밑이 5 인 로그 의, 3 y, 분의, 밑이 10 인 로그 의, 2 x"
+    },
+    "Fracfunct017": {
+      "expected": "분모가 로그 y, 이고 분자가, 로그 의, 괄호 열고, x 더하기 1, 괄호 닫고, 인 분수"
+    },
+    "Fracfunct018": {
+      "expected": "g 아래첨자 1, 의 x, 분의, f 아래첨자 1, 의 x"
+    }
+  }
+}

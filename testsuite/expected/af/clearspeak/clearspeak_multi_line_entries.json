@@ -1,0 +1,246 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakMultiLineEntries",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_multi_line_entries.json",
+  "information": "Afrikaans Clearspeak MultiLineEntries rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Multi-Line Entries Examples",
+    "Multiline001": {
+      "expected": "2 lyne, Lyn 1: x plus y is gelyk aan 7. Lyn 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline002": {
+      "expected": "2 lyne, Lyn 1: x plus y; is gelyk aan; 7. Lyn 2: 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline003": {
+      "expected": "2 lyne, Lyn 1: x; plus; y; is gelyk aan; 7. Lyn 2: 2 x; plus; 3 y; is gelyk aan; 17"
+    },
+    "Multiline004": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt x plus y is gelyk aan 7. Lyn 2: Equation 2 dubbelpunt 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline005": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt; x plus y is gelyk aan 7. Lyn 2: Equation 2 dubbelpunt; 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline006": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt; x plus y; is gelyk aan; 7. Lyn 2: Equation 2 dubbelpunt; 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline007": {
+      "expected": "3 lyne, Lyn 1: 4 x, plus 3 y, plus 2 z, is gelyk aan 17. Lyn 2: 2 x, plus 4 y, plus 6 z, is gelyk aan 6. Lyn 3: 3 x, plus 2 y, plus 5 z, is gelyk aan 1"
+    },
+    "Multiline008": {
+      "expected": "3 lyne, Lyn 1: 4 x; plus; 3 y; plus; 2 z; is gelyk aan; 1. Lyn 2: 2 x; plus; 4 y; plus; 6 z; is gelyk aan; 6. Lyn 3: 3 x; plus; 2 y; plus; 5 z; is gelyk aan; 1"
+    },
+    "Multiline009": {
+      "expected": "3 lyne, Lyn 1: Equation 1 dubbelpunt 4 x, plus 3 y, plus 2 z, is gelyk aan 17. Lyn 2: Equation 2 dubbelpunt 2 x, plus 4 y, plus 6 z, is gelyk aan 6. Lyn 3: Equation 3 dubbelpunt 3 x, plus 2 y, plus 5 z, is gelyk aan 1"
+    },
+    "Multiline010": {
+      "expected": "3 lyne, Lyn 1: x groter of gelyk aan 0. Lyn 2: y groter of gelyk aan 0. Lyn 3: 3 x, minus 5 y, kleiner of gelyk aan 30"
+    },
+    "Multiline011": {
+      "expected": "4 lyne, Lyn 1: 3 x, plus 8 is gelyk aan 5 x. Lyn 2: 8 is gelyk aan 5 x, minus 3 x. Lyn 3: 8 is gelyk aan 2 x. Lyn 4: 4 is gelyk aan x"
+    },
+    "Multiline012": {
+      "expected": "4 lyne, Lyn 1: 3 x; plus; 8; is gelyk aan; 5 x; leeg; leeg. Lyn 2: leeg; leeg; 8; is gelyk aan; 5 x; minus; 3 x. Lyn 3: leeg; leeg; 8; is gelyk aan; 2 x; leeg; leeg. Lyn 4: leeg; leeg; 4; is gelyk aan; x; leeg; leeg"
+    },
+    "Multiline013": {
+      "expected": "4 lyne, Lyn 1: Step 1 dubbelpunt 3 x, plus 8 is gelyk aan 5 x. Lyn 2: Step 2 dubbelpunt 8 is gelyk aan 5 x, minus 3 x. Lyn 3: Step 3 dubbelpunt 8 is gelyk aan 2 x. Lyn 4: Step 4 dubbelpunt 4 is gelyk aan x"
+    },
+    "Multiline014": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x if x kleiner as 0. Geval 2: x if x groter of gelyk aan 0"
+    },
+    "Multiline015": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x; if x kleiner as 0. Geval 2: x; if x groter of gelyk aan 0"
+    },
+    "Multiline016": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x if x kleiner as 0. Geval 2: x if x groter of gelyk aan 0"
+    },
+    "Multiline017": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x; if x kleiner as 0. Geval 2: x; if x groter of gelyk aan 0"
+    },
+    "Multiline018": {
+      "expected": "2 gevalle, Geval 1: f van x, is gelyk aan negatiewe x; if x kleiner as 0. Geval 2: f van x, is gelyk aan x; if x groter of gelyk aan 0"
+    },
+    "Multiline019": {
+      "expected": "2 vergelykings, Vergelyking 1: x plus y is gelyk aan 7. Vergelyking 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline019a": {
+      "expected": "2 vergelykings, Vergelyking 1: x plus y; is gelyk aan; 7. Vergelyking 2: 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline020": {
+      "expected": "2 lyne, Lyn 1: x plus y is gelyk aan 7. Lyn 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline021": {
+      "expected": "2 lyne, Lyn 1: x plus y; is gelyk aan; 7. Lyn 2: 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline022": {
+      "expected": "2 rye, Ry 1: x plus y is gelyk aan 7. Ry 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline023": {
+      "expected": "2 rye, Ry 1: x plus y; is gelyk aan; 7. Ry 2: 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline024": {
+      "expected": "4 stappe, Stap 1: 3 x, plus 8 is gelyk aan 5 x. Stap 2: 8 is gelyk aan 5 x, minus 3 x. Stap 3: 8 is gelyk aan 2 x. Stap 4: 4 is gelyk aan x"
+    },
+    "Multiline025": {
+      "expected": "4 stappe, Stap 1: 3 x; plus; 8; is gelyk aan; 5 x; leeg; leeg. Stap 2: leeg; leeg; 8; is gelyk aan; 5 x; minus; 3 x. Stap 3: leeg; leeg; 8; is gelyk aan; 2 x; leeg; leeg. Stap 4: leeg; leeg; 4; is gelyk aan; x; leeg; leeg"
+    },
+    "Multiline026": {
+      "expected": "3 beperkings, beperking 1: x groter of gelyk aan 0. beperking 2: y groter of gelyk aan 0. beperking 3: 3 x, minus 5 y, kleiner of gelyk aan 30"
+    },
+    "_comment2_": " Added examples for preference Label_None.",
+    "Multiline026a": {
+      "expected": "3 lyne, x groter of gelyk aan 0. y groter of gelyk aan 0. 3 x, minus 5 y, kleiner of gelyk aan 30"
+    },
+    "Multiline026b": {
+      "expected": "4 lyne, 3 x; plus; 8; is gelyk aan; 5 x; leeg; leeg. leeg; leeg; 8; is gelyk aan; 5 x; minus; 3 x. leeg; leeg; 8; is gelyk aan; 2 x; leeg; leeg. leeg; leeg; 4; is gelyk aan; x; leeg; leeg"
+    },
+    "Multiline026c": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, negatiewe x if x kleiner as 0. x if x groter of gelyk aan 0"
+    },
+    "Multiline027": {
+      "expected": "2 lyne, Lyn 1: x plus y is gelyk aan 7. Lyn 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline028": {
+      "expected": "2 lyne, Lyn 1: x plus y. is gelyk aan. 7. Lyn 2: 2 x, plus 3 y. is gelyk aan. 17"
+    },
+    "Multiline029": {
+      "expected": "2 lyne, Lyn 1: x. plus. y. is gelyk aan. 7. Lyn 2: 2 x. plus. 3 y. is gelyk aan. 17"
+    },
+    "Multiline030": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt. x plus y is gelyk aan 7. Lyn 2: Equation 2 dubbelpunt. 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline031": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt. x plus y. is gelyk aan. 7. Lyn 2: Equation 2 dubbelpunt. 2 x, plus 3 y. is gelyk aan. 17"
+    },
+    "Multiline032": {
+      "expected": "3 lyne, Lyn 1: 4 x. plus. 3 y. plus. 2 z. is gelyk aan. 1. Lyn 2: 2 x. plus. 4 y. plus. 6 z. is gelyk aan. 6. Lyn 3: 3 x. plus. 2 y. plus. 5 z. is gelyk aan. 1"
+    },
+    "Multiline033": {
+      "expected": "4 lyne, Lyn 1: 3 x. plus. 8. is gelyk aan. 5 x. leeg. leeg. Lyn 2: leeg. leeg. 8. is gelyk aan. 5 x. minus. 3 x. Lyn 3: leeg. leeg. 8. is gelyk aan. 2 x. leeg. leeg. Lyn 4: leeg. leeg. 4. is gelyk aan. x. leeg. leeg"
+    },
+    "Multiline034": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x. if x kleiner as 0. Geval 2: x. if x groter of gelyk aan 0"
+    },
+    "Multiline035": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x. if x kleiner as 0. Geval 2: x. if x groter of gelyk aan 0"
+    },
+    "Multiline036": {
+      "expected": "2 gevalle, Geval 1: f van x, is gelyk aan negatiewe x. if x kleiner as 0. Geval 2: f van x, is gelyk aan x. if x groter of gelyk aan 0"
+    },
+    "Multiline037": {
+      "expected": "2 vergelykings, Vergelyking 1: x plus y. is gelyk aan. 7. Vergelyking 2: 2 x, plus 3 y. is gelyk aan. 17"
+    },
+    "Multiline038": {
+      "expected": "2 lyne, Lyn 1: x plus y. is gelyk aan. 7. Lyn 2: 2 x, plus 3 y. is gelyk aan. 17"
+    },
+    "Multiline039": {
+      "expected": "2 rye, Ry 1: x plus y. is gelyk aan. 7. Ry 2: 2 x, plus 3 y. is gelyk aan. 17"
+    },
+    "Multiline040": {
+      "expected": "4 stappe, Stap 1: 3 x. plus. 8. is gelyk aan. 5 x. leeg. leeg. Stap 2: leeg. leeg. 8. is gelyk aan. 5 x. minus. 3 x. Stap 3: leeg. leeg. 8. is gelyk aan. 2 x. leeg. leeg. Stap 4: leeg. leeg. 4. is gelyk aan. x. leeg. leeg"
+    },
+    "Multiline041": {
+      "expected": "2 lyne, Lyn 1: x plus y, is gelyk aan, 7. Lyn 2: 2 x, plus 3 y, is gelyk aan, 17"
+    },
+    "Multiline042": {
+      "expected": "2 lyne, Lyn 1: x, plus, y, is gelyk aan, 7. Lyn 2: 2 x, plus, 3 y, is gelyk aan, 17"
+    },
+    "Multiline043": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt, x plus y is gelyk aan 7. Lyn 2: Equation 2 dubbelpunt, 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline044": {
+      "expected": "2 lyne, Lyn 1: Equation 1 dubbelpunt, x plus y, is gelyk aan, 7. Lyn 2: Equation 2 dubbelpunt, 2 x, plus 3 y, is gelyk aan, 17"
+    },
+    "Multiline045": {
+      "expected": "3 lyne, Lyn 1: 4 x, plus, 3 y, plus, 2 z, is gelyk aan, 1. Lyn 2: 2 x, plus, 4 y, plus, 6 z, is gelyk aan, 6. Lyn 3: 3 x, plus, 2 y, plus, 5 z, is gelyk aan, 1"
+    },
+    "Multiline046": {
+      "expected": "4 lyne, Lyn 1: 3 x, plus, 8, is gelyk aan, 5 x, leeg, leeg. Lyn 2: leeg, leeg, 8, is gelyk aan, 5 x, minus, 3 x. Lyn 3: leeg, leeg, 8, is gelyk aan, 2 x, leeg, leeg. Lyn 4: leeg, leeg, 4, is gelyk aan, x, leeg, leeg"
+    },
+    "Multiline047": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x, if x kleiner as 0. Geval 2: x, if x groter of gelyk aan 0"
+    },
+    "Multiline048": {
+      "expected": "f van x, is gelyk aan, 2 gevalle, Geval 1: negatiewe x, if x kleiner as 0. Geval 2: x, if x groter of gelyk aan 0"
+    },
+    "Multiline049": {
+      "expected": "2 gevalle, Geval 1: f van x, is gelyk aan negatiewe x, if x kleiner as 0. Geval 2: f van x, is gelyk aan x, if x groter of gelyk aan 0"
+    },
+    "Multiline050": {
+      "expected": "2 vergelykings, Vergelyking 1: x plus y, is gelyk aan, 7. Vergelyking 2: 2 x, plus 3 y, is gelyk aan, 17"
+    },
+    "Multiline051": {
+      "expected": "2 lyne, Lyn 1: x plus y, is gelyk aan, 7. Lyn 2: 2 x, plus 3 y, is gelyk aan, 17"
+    },
+    "Multiline052": {
+      "expected": "2 rye, Ry 1: x plus y, is gelyk aan, 7. Ry 2: 2 x, plus 3 y, is gelyk aan, 17"
+    },
+    "Multiline053": {
+      "expected": "4 stappe, Stap 1: 3 x, plus, 8, is gelyk aan, 5 x, leeg, leeg. Stap 2: leeg, leeg, 8, is gelyk aan, 5 x, minus, 3 x. Stap 3: leeg, leeg, 8, is gelyk aan, 2 x, leeg, leeg. Stap 4: leeg, leeg, 4, is gelyk aan, x, leeg, leeg"
+    },
+    "Multiline054": {
+      "expected": "Lyn 1: x plus y is gelyk aan 7. Lyn 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline055": {
+      "expected": "Lyn 1: x plus y; is gelyk aan; 7. Lyn 2: 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline056": {
+      "expected": "Lyn 1: x; plus; y; is gelyk aan; 7. Lyn 2: 2 x; plus; 3 y; is gelyk aan; 17"
+    },
+    "Multiline057": {
+      "expected": "Lyn 1: Equation 1 dubbelpunt x plus y is gelyk aan 7. Lyn 2: Equation 2 dubbelpunt 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline058": {
+      "expected": "Lyn 1: Equation 1 dubbelpunt; x plus y is gelyk aan 7. Lyn 2: Equation 2 dubbelpunt; 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline059": {
+      "expected": "Lyn 1: Equation 1 dubbelpunt; x plus y; is gelyk aan; 7. Lyn 2: Equation 2 dubbelpunt; 2 x, plus 3 y; is gelyk aan; 17"
+    },
+    "Multiline060": {
+      "expected": "Lyn 1: 4 x, plus 3 y, plus 2 z, is gelyk aan 17. Lyn 2: 2 x, plus 4 y, plus 6 z, is gelyk aan 6. Lyn 3: 3 x, plus 2 y, plus 5 z, is gelyk aan 1"
+    },
+    "Multiline061": {
+      "expected": "Lyn 1: 4 x; plus; 3 y; plus; 2 z; is gelyk aan; 1. Lyn 2: 2 x; plus; 4 y; plus; 6 z; is gelyk aan; 6. Lyn 3: 3 x; plus; 2 y; plus; 5 z; is gelyk aan; 1"
+    },
+    "Multiline062": {
+      "expected": "Lyn 1: Equation 1 dubbelpunt 4 x, plus 3 y, plus 2 z, is gelyk aan 17. Lyn 2: Equation 2 dubbelpunt 2 x, plus 4 y, plus 6 z, is gelyk aan 6. Lyn 3: Equation 3 dubbelpunt 3 x, plus 2 y, plus 5 z, is gelyk aan 1"
+    },
+    "Multiline063": {
+      "expected": "Lyn 1: Step 1 dubbelpunt 3 x, plus 8 is gelyk aan 5 x. Lyn 2: Step 2 dubbelpunt 8 is gelyk aan 5 x, minus 3 x. Lyn 3: Step 3 dubbelpunt 8 is gelyk aan 2 x. Lyn 4: Step 4 dubbelpunt 4 is gelyk aan x"
+    },
+    "Multiline064": {
+      "expected": "f van x, is gelyk aan, Geval 1: negatiewe x if x kleiner as 0. Geval 2: x if x groter of gelyk aan 0"
+    },
+    "Multiline065": {
+      "expected": "f van x, is gelyk aan, Geval 1: negatiewe x; if x kleiner as 0. Geval 2: x; if x groter of gelyk aan 0"
+    },
+    "Multiline066": {
+      "expected": "f van x, is gelyk aan, Geval 1: negatiewe x if x kleiner as 0. Geval 2: x if x groter of gelyk aan 0"
+    },
+    "Multiline067": {
+      "expected": "Geval 1: f van x, is gelyk aan negatiewe x; if x kleiner as 0. Geval 2: f van x, is gelyk aan x; if x groter of gelyk aan 0"
+    },
+    "Multiline068": {
+      "expected": "Vergelyking 1: x plus y is gelyk aan 7. Vergelyking 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline069": {
+      "expected": "Lyn 1: x plus y is gelyk aan 7. Lyn 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline070": {
+      "expected": "Ry 1: x plus y is gelyk aan 7. Ry 2: 2 x, plus 3 y, is gelyk aan 17"
+    },
+    "Multiline071": {
+      "expected": "Stap 1: 3 x, plus 8 is gelyk aan 5 x. Stap 2: 8 is gelyk aan 5 x, minus 3 x. Stap 3: 8 is gelyk aan 2 x. Stap 4: 4 is gelyk aan x"
+    },
+    "Multiline072": {
+      "expected": "Stap 1: 3 x; plus; 8; is gelyk aan; 5 x; leeg; leeg. Stap 2: leeg; leeg; 8; is gelyk aan; 5 x; minus; 3 x. Stap 3: leeg; leeg; 8; is gelyk aan; 2 x; leeg; leeg. Stap 4: leeg; leeg; 4; is gelyk aan; x; leeg; leeg"
+    },
+    "Multiline073": {
+      "expected": "beperking 1: x groter of gelyk aan 0. beperking 2: y groter of gelyk aan 0. beperking 3: 3 x, minus 5 y, kleiner of gelyk aan 30"
+    }
+  }
+}

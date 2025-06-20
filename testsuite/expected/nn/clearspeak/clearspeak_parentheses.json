@@ -1,0 +1,247 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakParentheses",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_parentheses.json",
+  "information": "Nynorsk Clearspeak Parentheses rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Paren001": {
+      "expected": "25"
+    },
+    "Paren002": {
+      "expected": "2 x"
+    },
+    "Paren003": {
+      "expected": "2 pluss minus 2"
+    },
+    "Paren004": {
+      "expected": "2 minus minus 2"
+    },
+    "Paren004a": {
+      "expected": "2 minus minus 2"
+    },
+    "Paren005": {
+      "expected": "2 minus, venstreparentes, minus 2, høgreparentes, kubikk"
+    },
+    "Paren006": {
+      "expected": "venstreparentes, 2 x, høgreparentes, kvadrat"
+    },
+    "Paren007": {
+      "expected": "venstreparentes, 2 x, høgreparentes, heva til y pluss 1"
+    },
+    "Paren008": {
+      "expected": "minus 2 x"
+    },
+    "Paren009": {
+      "expected": "venstreparentes, minus 2 x, høgreparentes, kvadrat"
+    },
+    "Paren010": {
+      "expected": "minus, venstreparentes, 2 x, høgreparentes, kvadrat"
+    },
+    "Paren011": {
+      "expected": "ein andre"
+    },
+    "Paren012": {
+      "expected": "tre fjerde x"
+    },
+    "Paren013": {
+      "expected": "venstreparentes, 11 delt på 22, høgreparentes"
+    },
+    "Paren014": {
+      "expected": "ein andre i fjerde potens"
+    },
+    "Paren015": {
+      "expected": "venstreparentes, 11 delt på 15, høgreparentes, kvadrat"
+    },
+    "Paren016": {
+      "expected": "venstreparentes, 25, høgreparentes"
+    },
+    "Paren017": {
+      "expected": "venstreparentes, 2 x, høgreparentes"
+    },
+    "Paren018": {
+      "expected": "2 pluss, venstreparentes, minus 2, høgreparentes"
+    },
+    "Paren019": {
+      "expected": "2 minus, venstreparentes, minus 2, høgreparentes"
+    },
+    "Paren020": {
+      "expected": "2 minus, venstreparentes, minus 2, høgreparentes, kubikk"
+    },
+    "Paren021": {
+      "expected": "venstreparentes, 2 x, høgreparentes, kvadrat"
+    },
+    "Paren022": {
+      "expected": "venstreparentes, 2 x, høgreparentes, heva til y pluss 1"
+    },
+    "Paren023": {
+      "expected": "venstreparentes, minus 2 x, høgreparentes"
+    },
+    "Paren024": {
+      "expected": "venstreparentes, minus 2 x, høgreparentes, kvadrat"
+    },
+    "Paren025": {
+      "expected": "minus, venstreparentes, 2 x, høgreparentes, kvadrat"
+    },
+    "Paren026": {
+      "expected": "venstreparentes, ein andre, høgreparentes"
+    },
+    "Paren027": {
+      "expected": "venstreparentes, tre fjerde x, høgreparentes"
+    },
+    "Paren028": {
+      "expected": "venstreparentes, 11 delt på 22, høgreparentes"
+    },
+    "Paren029": {
+      "expected": "venstreparentes, ein andre, høgreparentes, i fjerde potens"
+    },
+    "Paren030": {
+      "expected": "venstreparentes, 11 delt på 15, høgreparentes, kvadrat"
+    },
+    "Paren031": {
+      "expected": "punktet med koordinatar 1 komma 2"
+    },
+    "Paren032": {
+      "expected": "punktet med koordinatar x komma y"
+    },
+    "Paren033": {
+      "expected": "punktet med koordinatar 1 komma 2 komma 3"
+    },
+    "Paren034": {
+      "expected": "punktet med koordinatar x komma y komma z"
+    },
+    "Paren035": {
+      "expected": "punktet med koordinatar 1 komma 2 komma 386"
+    },
+    "Paren036": {
+      "expected": "intervallet frå a til b, utan a eller b"
+    },
+    "Paren037": {
+      "expected": "intervallet frå 0 til 1, utan 0 eller 1"
+    },
+    "Paren038": {
+      "expected": "intervallet frå a til b, inkludert a, men utan b"
+    },
+    "Paren039": {
+      "expected": "intervallet frå 0 til 1, inkludert 0, men utan 1"
+    },
+    "Paren040": {
+      "expected": "intervallet frå a til b, utan a, men inkludert b"
+    },
+    "Paren041": {
+      "expected": "intervallet frå 0 til 1, utan 0, men inkludert 1"
+    },
+    "Paren042": {
+      "expected": "intervallet frå a til b, inkludert a og b"
+    },
+    "Paren043": {
+      "expected": "intervallet frå 0 til 1, inkludert 0 og 1"
+    },
+    "Paren044": {
+      "expected": "intervallet frå minus uendeleg til b, utan b"
+    },
+    "Paren045": {
+      "expected": "intervallet frå minus uendeleg til 1, utan 1"
+    },
+    "Paren046": {
+      "expected": "intervallet frå minus uendeleg til b, inkludert b"
+    },
+    "Paren047": {
+      "expected": "intervallet frå minus uendeleg til 1, inkludert 1"
+    },
+    "Paren048": {
+      "expected": "intervallet frå a til uendeleg, utan a"
+    },
+    "Paren049": {
+      "expected": "intervallet frå 1 til uendeleg, utan 1"
+    },
+    "Paren050": {
+      "expected": "intervallet frå a til uendeleg, inkludert a"
+    },
+    "Paren051": {
+      "expected": "intervallet frå 1 til uendeleg, inkludert 1"
+    },
+    "Paren052": {
+      "expected": "intervallet frå minus uendeleg til uendeleg"
+    },
+    "Paren053": {
+      "expected": "intervallet frå minus uendeleg til pluss uendeleg"
+    },
+    "Nest001": {
+      "expected": "f av, g av x"
+    },
+    "Nest002": {
+      "expected": "f av, venstreparentes, g av, venstreparentes, x pluss 1, høgreparentes, høgreparentes"
+    },
+    "Nest003": {
+      "expected": "6 minus, venstre hakeparentes, 2 minus, venstreparentes, 3 pluss 5, høgreparentes, høgre hakeparentes"
+    },
+    "Nest004": {
+      "expected": "6 minus, venstreparentes, 2 minus, andre venstreparentes, 3 pluss 5, andre høgreparentes, høgreparentes"
+    },
+    "Nest005": {
+      "expected": "4 ganger, venstre hakeparentes, x pluss 3 ganger, venstreparentes, 2 x, pluss 1, høgreparentes, høgre hakeparentes"
+    },
+    "Nest006": {
+      "expected": "4 ganger, venstreparentes, x pluss 3 ganger, andre venstreparentes, 2 x, pluss 1, andre høgreparentes, høgreparentes"
+    },
+    "Nest007": {
+      "expected": "1 pluss, venstreparentes, 2 pluss, andre venstreparentes, 3 pluss 7, andre høgreparentes, minus, andre venstreparentes, 2 pluss 8, andre høgreparentes, høgreparentes"
+    },
+    "Nest008": {
+      "expected": "1 pluss, venstreparentes, 2 pluss, andre venstreparentes, 3 minus, tredje venstreparentes, 4 minus 5, tredje høgreparentes, andre høgreparentes, høgreparentes"
+    },
+    "Nest009": {
+      "expected": "venstreparentes, andre venstreparentes, 2 pluss, tredje venstreparentes, 3 pluss 4, tredje høgreparentes, pluss 5, andre høgreparentes, pluss 6 pluss, andre venstreparentes, tredje venstreparentes, 7 pluss, fjerde venstreparentes, 8 pluss 1, fjerde høgreparentes, tredje høgreparentes, pluss 2, andre høgreparentes, høgreparentes"
+    },
+    "SilParen001": {
+      "expected": "25"
+    },
+    "SilParen002": {
+      "expected": "2 x"
+    },
+    "SilParen003": {
+      "expected": "2 pluss, minus 2"
+    },
+    "SilParen004": {
+      "expected": "2 minus, minus 2"
+    },
+    "SilParen005": {
+      "expected": "2 minus, minus 2, kubikk"
+    },
+    "SilParen006": {
+      "expected": "2 x, kvadrat"
+    },
+    "SilParen007": {
+      "expected": "2 x, heva til y pluss 1"
+    },
+    "SilParen008": {
+      "expected": "minus 2 x"
+    },
+    "SilParen009": {
+      "expected": "minus 2 x, kvadrat"
+    },
+    "SilParen010": {
+      "expected": "minus, 2 x, kvadrat"
+    },
+    "SilParen011": {
+      "expected": "ein andre"
+    },
+    "SilParen012": {
+      "expected": "tre fjerde x"
+    },
+    "SilParen013": {
+      "expected": "11 delt på 22"
+    },
+    "SilParen014": {
+      "expected": "ein andre, i fjerde potens"
+    },
+    "SilParen015": {
+      "expected": "11 delt på 15, kvadrat"
+    }
+  }
+}

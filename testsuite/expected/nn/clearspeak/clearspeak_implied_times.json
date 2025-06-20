@@ -1,0 +1,466 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakImpliedTimes",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
+  "information": "Nynorsk Clearspeak ImpliedTimes rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "ImpTimes001": {
+      "expected": "2 ganger 3"
+    },
+    "ImpTimes002": {
+      "expected": "2 ganger 3"
+    },
+    "ImpTimes003": {
+      "expected": "2 i fjerde potens, ganger 3"
+    },
+    "ImpTimes004": {
+      "expected": "2 ganger, venstreparentes, 3 pluss 4, høgreparentes"
+    },
+    "ImpTimes005": {
+      "expected": "2 ganger, venstre hakeparentes, 3 pluss 4, høgre hakeparentes"
+    },
+    "ImpTimes006": {
+      "expected": "3 ganger 2"
+    },
+    "ImpTimes007": {
+      "expected": "2 ganger, venstreparentes, 3 pluss 4, høgreparentes, kvadrat"
+    },
+    "ImpTimes008": {
+      "expected": "venstreparentes, 2 pluss 7, høgreparentes, ganger, venstreparentes, 3 minus 6, høgreparentes"
+    },
+    "ImpTimes009": {
+      "expected": "venstre hakeparentes, 2 pluss 7, høgre hakeparentes, ganger, venstre hakeparentes, 3 minus 6, høgre hakeparentes"
+    },
+    "ImpTimes011": {
+      "expected": "x ganger, venstreparentes, y pluss z, høgreparentes"
+    },
+    "ImpTimes012": {
+      "expected": "2 ganger, venstreparentes, y pluss 1, høgreparentes"
+    },
+    "ImpTimes013": {
+      "expected": "venstreparentes, 2 minus 1, høgreparentes, ganger x"
+    },
+    "ImpTimes014": {
+      "expected": "p indeks 1, ganger, venstreparentes, 3 pluss 7, høgreparentes"
+    },
+    "ImpTimes015": {
+      "expected": "p indeks 1, heva til, a indeks 1, p indeks 2, heva til, a indeks 2"
+    },
+    "ImpTimes016": {
+      "expected": "venstreparentes, x pluss y, høgreparentes, med eksponent minus 4, ganger, venstreparentes, x minus y, høgreparentes, med eksponent minus 4"
+    },
+    "ImpTimes017": {
+      "expected": "2 heva til 4 ganger, venstreparentes, x pluss y, høgreparentes"
+    },
+    "ImpTimes018": {
+      "expected": "x y"
+    },
+    "ImpTimes019": {
+      "expected": "x kvadrat, y kubikk"
+    },
+    "ImpTimes020": {
+      "expected": "x heva til y pluss 1, x heva til y pluss 2"
+    },
+    "ImpTimes021": {
+      "expected": "kvadratrota av a, kvadratrota av b, er lik kvadratrota av a b"
+    },
+    "ImpTimes022": {
+      "expected": "kvadratrota av 3, kvadratrota av 10, er lik kvadratrota av 30"
+    },
+    "ImpTimes023": {
+      "expected": "2 kvadratrota av 3"
+    },
+    "ImpTimes024": {
+      "expected": "1 pluss 2 kvadratrota av 3"
+    },
+    "ImpTimes025": {
+      "expected": "f av x, er lik x kvadrat ganger, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "ImpTimes026": {
+      "expected": "f ganger x, er lik x kvadrat ganger, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "ImpTimes027": {
+      "expected": "sinus x cosinus y, pluss, cosinus x sinus y"
+    },
+    "ImpTimes027a": {
+      "expected": "sinus av, venstreparentes, x pluss y, høgreparentes, cosinus av, venstreparentes, x pluss y, høgreparentes"
+    },
+    "ImpTimes028": {
+      "expected": "log basis 10 av, x y"
+    },
+    "ImpTimes029": {
+      "expected": "log av, venstreparentes, x pluss y, høgreparentes, er lik, log x log y"
+    },
+    "ImpTimes030": {
+      "expected": "2 ganger 2 matrisen. rad 1: 1, 3 rad 2: 5, 2. ganger 2 ganger 2 matrisen. rad 1: 7, 4 rad 2: 0, 1"
+    },
+    "ImpTimes031": {
+      "expected": "2 ganger, venstreparentes, 3 ganger, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgreparentes"
+    },
+    "ImpTimes032": {
+      "expected": "2 ganger, venstreparentes, 3 ganger, andre venstreparentes, tredje venstreparentes, 4 pluss 5, tredje høgreparentes, pluss 6, andre høgreparentes, høgreparentes"
+    },
+    "ImpTimes033": {
+      "expected": "2 ganger, venstre hakeparentes, 3 ganger, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimes034": {
+      "expected": "2 ganger, venstre hakeparentes, 3 ganger, venstreparentes, andre venstreparentes, 4 pluss 5, andre høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimes035": {
+      "expected": "2 ganger, den absolutte verdien av x"
+    },
+    "ImpTimes036": {
+      "expected": "den absolutte verdien av x, ganger, den absolutte verdien av y"
+    },
+    "ImpTimes037": {
+      "expected": "den absolutte verdien av x pluss 1, ganger, den absolutte verdien av y minus 1"
+    },
+    "ImpTimes037a": {
+      "expected": "den absolutte verdien av x pluss 1, slutt absolutt verdi, ganger, den absolutte verdien av y minus 1, slutt absolutt verdi"
+    },
+    "ImpTimes038": {
+      "expected": "den absolutte verdien av x pluss 1, ganger, den absolutte verdien av y, minus 1"
+    },
+    "ImpTimes0381": {
+      "expected": "den absolutte verdien av x pluss 1, slutt absolutt verdi, ganger, den absolutte verdien av y, slutt absolutt verdi, minus 1"
+    },
+    "ImpTimes039": {
+      "expected": "2 ganger 3"
+    },
+    "ImpTimes040": {
+      "expected": "2 ganger 3"
+    },
+    "ImpTimes041": {
+      "expected": "2 i fjerde potens, ganger 3"
+    },
+    "ImpTimes042": {
+      "expected": "2 ganger, venstreparentes, 3 pluss 4, høgreparentes"
+    },
+    "ImpTimes043": {
+      "expected": "2 ganger, venstre hakeparentes, 3 pluss 4, høgre hakeparentes"
+    },
+    "ImpTimes044": {
+      "expected": "3 ganger 2"
+    },
+    "ImpTimes045": {
+      "expected": "2 ganger, venstreparentes, 3 pluss 4, høgreparentes, kvadrat"
+    },
+    "ImpTimes046": {
+      "expected": "venstreparentes, 2 pluss 7, høgreparentes, ganger, venstreparentes, 3 minus 6, høgreparentes"
+    },
+    "ImpTimes047": {
+      "expected": "venstre hakeparentes, 2 pluss 7, høgre hakeparentes, ganger, venstre hakeparentes, 3 minus 6, høgre hakeparentes"
+    },
+    "ImpTimes049": {
+      "expected": "x ganger, venstreparentes, y pluss z, høgreparentes"
+    },
+    "ImpTimes050": {
+      "expected": "2 ganger, venstreparentes, y pluss 1, høgreparentes"
+    },
+    "ImpTimes051": {
+      "expected": "venstreparentes, 2 minus 1, høgreparentes, ganger x"
+    },
+    "ImpTimes052": {
+      "expected": "p indeks 1, ganger, venstreparentes, 3 pluss 7, høgreparentes"
+    },
+    "ImpTimes053": {
+      "expected": "p indeks 1, heva til, a indeks 1, ganger, p indeks 2, heva til, a indeks 2"
+    },
+    "ImpTimes054": {
+      "expected": "venstreparentes, x pluss y, høgreparentes, med eksponent minus 4, ganger, venstreparentes, x minus y, høgreparentes, med eksponent minus 4"
+    },
+    "ImpTimes055": {
+      "expected": "2 heva til 4 ganger, venstreparentes, x pluss y, høgreparentes"
+    },
+    "ImpTimes056": {
+      "expected": "x ganger y"
+    },
+    "ImpTimes057": {
+      "expected": "x kvadrat ganger y kubikk"
+    },
+    "ImpTimes058": {
+      "expected": "x heva til y pluss 1, ganger x heva til y pluss 2"
+    },
+    "ImpTimes059": {
+      "expected": "kvadratrota av a, ganger kvadratrota av b, er lik kvadratrota av a ganger b"
+    },
+    "ImpTimes060": {
+      "expected": "kvadratrota av 3, ganger kvadratrota av 10, er lik kvadratrota av 30"
+    },
+    "ImpTimes061": {
+      "expected": "2 ganger kvadratrota av 3"
+    },
+    "ImpTimes062": {
+      "expected": "1 pluss 2 ganger kvadratrota av 3"
+    },
+    "ImpTimes063": {
+      "expected": "f av x, er lik x kvadrat ganger, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "ImpTimes064": {
+      "expected": "f ganger x, er lik x kvadrat ganger, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "ImpTimes065": {
+      "expected": "sinus x, ganger cosinus y pluss cosinus x, ganger sinus y"
+    },
+    "ImpTimes065a": {
+      "expected": "sinus av, venstreparentes, x pluss y, høgreparentes, ganger, cosinus av, venstreparentes, x pluss y, høgreparentes"
+    },
+    "ImpTimes066": {
+      "expected": "log basis 10 av, x ganger y"
+    },
+    "ImpTimes067": {
+      "expected": "log av, venstreparentes, x pluss y, høgreparentes, er lik log x, ganger log y"
+    },
+    "ImpTimes068": {
+      "expected": "2 ganger 2 matrisen. rad 1: 1, 3 rad 2: 5, 2. ganger 2 ganger 2 matrisen. rad 1: 7, 4 rad 2: 0, 1"
+    },
+    "ImpTimes069": {
+      "expected": "2 ganger, venstreparentes, 3 ganger, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgreparentes"
+    },
+    "ImpTimes070": {
+      "expected": "2 ganger, venstreparentes, 3 ganger, andre venstreparentes, tredje venstreparentes, 4 pluss 5, tredje høgreparentes, pluss 6, andre høgreparentes, høgreparentes"
+    },
+    "ImpTimes070a": {
+      "expected": "2 ganger, venstre hakeparentes, 3 ganger, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimes071": {
+      "expected": "2 ganger, venstre hakeparentes, 3 ganger, venstreparentes, andre venstreparentes, 4 pluss 5, andre høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimes072": {
+      "expected": "2 ganger, den absolutte verdien av x"
+    },
+    "ImpTimes073": {
+      "expected": "den absolutte verdien av x, ganger, den absolutte verdien av y"
+    },
+    "ImpTimes074": {
+      "expected": "den absolutte verdien av x pluss 1, ganger, den absolutte verdien av y minus 1"
+    },
+    "ImpTimes074a": {
+      "expected": "den absolutte verdien av x pluss 1, slutt absolutt verdi, ganger, den absolutte verdien av y minus 1, slutt absolutt verdi"
+    },
+    "ImpTimes075": {
+      "expected": "den absolutte verdien av x pluss 1, ganger, den absolutte verdien av y, minus 1"
+    },
+    "ImpTimes076": {
+      "expected": "den absolutte verdien av x pluss 1, slutt absolutt verdi, ganger, den absolutte verdien av y, slutt absolutt verdi, minus 1"
+    },
+    "ImpTimes077": {
+      "expected": "2, venstreparentes, 3, høgreparentes"
+    },
+    "ImpTimes078": {
+      "expected": "2, venstre hakeparentes, 3, høgre hakeparentes"
+    },
+    "ImpTimes079": {
+      "expected": "2 i fjerde potens, venstreparentes, 3, høgreparentes"
+    },
+    "ImpTimes080": {
+      "expected": "2, venstreparentes, 3 pluss 4, høgreparentes"
+    },
+    "ImpTimes081": {
+      "expected": "2, venstre hakeparentes, 3 pluss 4, høgre hakeparentes"
+    },
+    "ImpTimes082": {
+      "expected": "venstreparentes, 3, høgreparentes, venstreparentes, 2, høgreparentes"
+    },
+    "ImpTimes083": {
+      "expected": "2, venstreparentes, 3 pluss 4, høgreparentes, kvadrat"
+    },
+    "ImpTimes084": {
+      "expected": "venstreparentes, 2 pluss 7, høgreparentes, venstreparentes, 3 minus 6, høgreparentes"
+    },
+    "ImpTimes085": {
+      "expected": "venstre hakeparentes, 2 pluss 7, høgre hakeparentes, venstre hakeparentes, 3 minus 6, høgre hakeparentes"
+    },
+    "ImpTimes087": {
+      "expected": "x, venstreparentes, y pluss z, høgreparentes"
+    },
+    "ImpTimes088": {
+      "expected": "2, venstreparentes, y pluss 1, høgreparentes"
+    },
+    "ImpTimes089": {
+      "expected": "venstreparentes, 2 minus 1, høgreparentes, x"
+    },
+    "ImpTimes090": {
+      "expected": "p indeks 1, venstreparentes, 3 pluss 7, høgreparentes"
+    },
+    "ImpTimes091": {
+      "expected": "p indeks 1, heva til, a indeks 1, p indeks 2, heva til, a indeks 2"
+    },
+    "ImpTimes092": {
+      "expected": "venstreparentes, x pluss y, høgreparentes, med eksponent minus 4, venstreparentes, x minus y, høgreparentes, med eksponent minus 4"
+    },
+    "ImpTimes093": {
+      "expected": "2 heva til 4, venstreparentes, x pluss y, høgreparentes"
+    },
+    "ImpTimes094": {
+      "expected": "x y"
+    },
+    "ImpTimes095": {
+      "expected": "x kvadrat y kubikk"
+    },
+    "ImpTimes096": {
+      "expected": "x heva til y pluss 1, x heva til y pluss 2"
+    },
+    "ImpTimes097": {
+      "expected": "kvadratrota av a, kvadratrota av b, er lik kvadratrota av a b"
+    },
+    "ImpTimes098": {
+      "expected": "kvadratrota av 3, kvadratrota av 10, er lik kvadratrota av 30"
+    },
+    "ImpTimes099": {
+      "expected": "2 kvadratrota av 3"
+    },
+    "ImpTimes100": {
+      "expected": "1 pluss 2 kvadratrota av 3"
+    },
+    "ImpTimes101": {
+      "expected": "f av x, er lik x kvadrat, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "ImpTimes103": {
+      "expected": "sinus x cosinus y, pluss, cosinus x sinus y"
+    },
+    "ImpTimes104": {
+      "expected": "log basis 10 av, x y"
+    },
+    "ImpTimes105": {
+      "expected": "log av, venstreparentes, x pluss y, høgreparentes, er lik, log x log y"
+    },
+    "ImpTimes106": {
+      "expected": "2 ganger 2 matrisen. rad 1: 1, 3 rad 2: 5, 2. 2 ganger 2 matrisen. rad 1: 7, 4 rad 2: 0, 1"
+    },
+    "ImpTimes107": {
+      "expected": "2, venstreparentes, 3, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgreparentes"
+    },
+    "ImpTimes108": {
+      "expected": "2, venstreparentes, 3, andre venstreparentes, tredje venstreparentes, 4 pluss 5, tredje høgreparentes, pluss 6, andre høgreparentes, høgreparentes"
+    },
+    "ImpTimes109": {
+      "expected": "2, venstre hakeparentes, 3, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimes110": {
+      "expected": "2, venstre hakeparentes, 3, venstreparentes, andre venstreparentes, 4 pluss 5, andre høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimes111": {
+      "expected": "2, den absolutte verdien av x"
+    },
+    "ImpTimes112": {
+      "expected": "den absolutte verdien av x, den absolutte verdien av y"
+    },
+    "ImpTimes113": {
+      "expected": "den absolutte verdien av x pluss 1, den absolutte verdien av y minus 1"
+    },
+    "ImpTimes114": {
+      "expected": "den absolutte verdien av x pluss 1, den absolutte verdien av y, minus 1"
+    },
+    "ImpTimesSilPar001": {
+      "expected": "2, venstreparentes, 3, høgreparentes"
+    },
+    "ImpTimesSilPar002": {
+      "expected": "2, venstre hakeparentes, 3, høgre hakeparentes"
+    },
+    "ImpTimesSilPar003": {
+      "expected": "2 i fjerde potens, venstreparentes, 3, høgreparentes"
+    },
+    "ImpTimesSilPar004": {
+      "expected": "2, venstreparentes, 3 pluss 4, høgreparentes"
+    },
+    "ImpTimesSilPar005": {
+      "expected": "2, venstre hakeparentes, 3 pluss 4, høgre hakeparentes"
+    },
+    "ImpTimesSilPar006": {
+      "expected": "venstreparentes, 3, høgreparentes, venstreparentes, 2, høgreparentes"
+    },
+    "ImpTimesSilPar007": {
+      "expected": "2, venstreparentes, 3 pluss 4, høgreparentes, kvadrat"
+    },
+    "ImpTimesSilPar008": {
+      "expected": "venstreparentes, 2 pluss 7, høgreparentes, venstreparentes, 3 minus 6, høgreparentes"
+    },
+    "ImpTimesSilPar009": {
+      "expected": "venstre hakeparentes, 2 pluss 7, høgre hakeparentes, venstre hakeparentes, 3 minus 6, høgre hakeparentes"
+    },
+    "ImpTimesSilPar011": {
+      "expected": "x, venstreparentes, y pluss z, høgreparentes"
+    },
+    "ImpTimesSilPar012": {
+      "expected": "2, venstreparentes, y pluss 1, høgreparentes"
+    },
+    "ImpTimesSilPar013": {
+      "expected": "venstreparentes, 2 minus 1, høgreparentes, x"
+    },
+    "ImpTimesSilPar014": {
+      "expected": "p indeks 1, venstreparentes, 3 pluss 7, høgreparentes"
+    },
+    "ImpTimesSilPar015": {
+      "expected": "venstreparentes, x pluss y, høgreparentes, med eksponent minus 4, venstreparentes, x minus y, høgreparentes, med eksponent minus 4"
+    },
+    "ImpTimesSilPar016": {
+      "expected": "2 heva til 4, venstreparentes, x pluss y, høgreparentes"
+    },
+    "ImpTimesSilPar017": {
+      "expected": "f av x, er lik x kvadrat, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "ImpTimesSilPar019": {
+      "expected": "log av, venstreparentes, x pluss y, høgreparentes, er lik, log x log y"
+    },
+    "ImpTimesSilPar020": {
+      "expected": "2 ganger 2 matrisen. rad 1: 1, 3 rad 2: 5, 2. 2 ganger 2 matrisen. rad 1: 7, 4 rad 2: 0, 1"
+    },
+    "ImpTimesSilPar021": {
+      "expected": "2, venstreparentes, 3, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgreparentes"
+    },
+    "ImpTimesSilPar022": {
+      "expected": "2, venstreparentes, 3, andre venstreparentes, tredje venstreparentes, 4 pluss 5, tredje høgreparentes, pluss 6, andre høgreparentes, høgreparentes"
+    },
+    "ImpTimesSilPar023": {
+      "expected": "2, venstre hakeparentes, 3, venstreparentes, venstreparentes, 4 pluss 5, høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "ImpTimesSilPar024": {
+      "expected": "2, venstre hakeparentes, 3, venstreparentes, andre venstreparentes, 4 pluss 5, andre høgreparentes, pluss 6, høgreparentes, høgre hakeparentes"
+    },
+    "Extra001": {
+      "expected": "A er lik h av, venstreparentes, brøk med tellar, b indeks 1, pluss, b indeks 2, og nemnar 2, høgreparentes"
+    },
+    "Extra002": {
+      "expected": "A er lik, h ganger, venstreparentes, brøk med tellar, b indeks 1, pluss, b indeks 2, og nemnar 2, høgreparentes"
+    },
+    "Extra003": {
+      "expected": "a av 0, er lik 0 ganger a er lik 0"
+    },
+    "Extra004": {
+      "expected": "a ganger 0, er lik 0 ganger a er lik 0"
+    },
+    "Extra005": {
+      "expected": "a ganger minus 1, er lik minus a"
+    },
+    "Extra006": {
+      "expected": "a av minus 1, er lik minus a"
+    },
+    "Extra010": {
+      "expected": "B av, venstreparentes, 2 komma 6, høgreparentes"
+    },
+    "Extra012": {
+      "expected": "B ganger, venstreparentes, 2 komma 6, høgreparentes"
+    },
+    "Extra014": {
+      "expected": "p av w"
+    },
+    "Extra015": {
+      "expected": "x av t, er lik 2 t, pluss 4"
+    },
+    "Extra016": {
+      "expected": "k av x, er lik, venstreparentes, x pluss 3, høgreparentes, ganger, venstreparentes, x minus 5, høgreparentes"
+    },
+    "Extra018": {
+      "expected": "T av t, er lik, T indeks s, pluss, venstreparentes, T indeks 0, minus, T indeks s, høgreparentes, ganger e heva til minus k t"
+    },
+    "Extra019": {
+      "expected": "V er lik script l, w av 8"
+    }
+  }
+}

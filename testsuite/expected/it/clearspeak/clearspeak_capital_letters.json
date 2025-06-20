@@ -1,0 +1,76 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakCapitalLetters",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "Italian Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Cap001": {
+      "expected": "seno di A fratto a, uguale a, seno di B fratto b"
+    },
+    "Cap002": {
+      "expected": "c quadrato uguale a a quadrato più b quadrato meno 2 a b coseno di C"
+    },
+    "Cap003": {
+      "expected": "tangente di A uguale a, a fratto b"
+    },
+    "Cap004": {
+      "expected": "A B"
+    },
+    "Cap005": {
+      "expected": "a A"
+    },
+    "Cap006": {
+      "expected": "b A"
+    },
+    "Cap007": {
+      "expected": "B a"
+    },
+    "Cap008": {
+      "expected": "angolo A B C"
+    },
+    "Cap009": {
+      "expected": "misura di angolo A B C"
+    },
+    "Cap010": {
+      "expected": "misura di angolo A"
+    },
+    "Cap011": {
+      "expected": "seno di A maiuscola fratto a, uguale a, seno di B maiuscola fratto b"
+    },
+    "Cap012": {
+      "expected": "c quadrato uguale a a quadrato più b quadrato meno 2 a b coseno di C maiuscola"
+    },
+    "Cap013": {
+      "expected": "tangente di A maiuscola uguale a, a fratto b"
+    },
+    "Cap014": {
+      "expected": "A maiuscola, B maiuscola"
+    },
+    "Cap015": {
+      "expected": "a, A maiuscola"
+    },
+    "Cap016": {
+      "expected": "b, A maiuscola"
+    },
+    "Cap017": {
+      "expected": "B maiuscola, a"
+    },
+    "Cap018": {
+      "expected": "angolo A maiuscola, B maiuscola, C maiuscola"
+    },
+    "Cap019": {
+      "expected": "misura di angolo A maiuscola, B maiuscola, C maiuscola"
+    },
+    "Cap020": {
+      "expected": "misura di angolo A maiuscola"
+    },
+    "Cap020a": {
+      "expected": "angolo A maiuscola"
+    }
+  }
+}

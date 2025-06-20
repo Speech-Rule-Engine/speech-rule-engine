@@ -1,0 +1,286 @@
+{
+  "name": "AfrikaansClearspeakCoverage",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "Afrikaans Clearspeak Coverage tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f van, g van x"
+    },
+    "ApplSimple_1": {
+      "expected": "f van, g van x, is gelyk aan f van x, plus g van x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "sinus x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 lyne, Lyn 1: a. Lyn 2: leeg"
+    },
+    "Empty_Line_1": {
+      "expected": "2 lyne, Lyn 1: a. Lyn 2: leeg"
+    },
+    "Empty_Line_2": {
+      "expected": "2 lyne, Lyn 1: a. Lyn 2: leeg"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 lyne, Lyn 1: a; is gelyk aan; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 lyne, Lyn 1: a; is gelyk aan; b. Lyn 2: leeg"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 lyne, Lyn 1: a; is gelyk aan; b. Lyn 2: leeg"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 lyne, Lyn 1: a; is gelyk aan; b. Lyn 2: 1; leeg; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 grade, 10 minute, 20 sekondes"
+    },
+    "Angle_1_default": {
+      "expected": "1 graad, 10 minute, 20 sekondes"
+    },
+    "Angle_2_default": {
+      "expected": "45 grade, 1 minuut, 20 sekondes"
+    },
+    "Angle_3_default": {
+      "expected": "45 grade, 10 minute, 1 sekonde"
+    },
+    "Angle_4_default": {
+      "expected": "1 voet, 20 duim"
+    },
+    "Angle_5_default": {
+      "expected": "10 voet, 1 duim"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 grade, 10 minute, 20 sekondes"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 graad, 10 minute, 20 sekondes"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 grade, 1 minuut, 20 sekondes"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 grade, 10 minute, 1 sekonde"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 minuut, 20 sekondes"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 minute, 1 sekonde"
+    },
+    "Angle_0_Length": {
+      "expected": "45 grade, 10 minute, 20 sekondes"
+    },
+    "Angle_1_Length": {
+      "expected": "1 graad, 10 minute, 20 sekondes"
+    },
+    "Angle_2_Length": {
+      "expected": "45 grade, 1 minuut, 20 sekondes"
+    },
+    "Angle_3_Length": {
+      "expected": "45 grade, 10 minute, 1 sekonde"
+    },
+    "Angle_4_Length": {
+      "expected": "1 voet, 20 duim"
+    },
+    "Angle_5_Length": {
+      "expected": "10 voet, 1 duim"
+    },
+    "_comment_": "French coverage",
+    "Enclose_0": {
+      "expected": "omring deur boks 12"
+    },
+    "Enclose_1": {
+      "expected": "doodgetrek 12"
+    },
+    "Enclose_2": {
+      "expected": "12 oorskryf met 2"
+    },
+    "Enclose_3": {
+      "expected": "12 oorskryf met 2"
+    },
+    "Enclose_4": {
+      "expected": "12 oorskryf met 2"
+    },
+    "Enclose_5": {
+      "expected": "12 oorskryf met 2"
+    },
+    "Enclose_6": {
+      "expected": "omring deur boks 12 end omring deur"
+    },
+    "Enclose_7": {
+      "expected": "doodgetrek 12 end "
+    },
+    "Enclose_8": {
+      "expected": "oorskryf 12 met 2 end oorskryf"
+    },
+    "Enclose_9": {
+      "expected": "oorskryf 12 met 2 end oorskryf"
+    },
+    "Enclose_10": {
+      "expected": "oorskryf 12 met 2 end oorskryf"
+    },
+    "Enclose_11": {
+      "expected": "oorskryf 12 met 2 end oorskryf"
+    },
+    "EncloseSpecial_0": {
+      "expected": "vertikale lyn A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A horisontale lyn"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A vertikale lyn"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A oor horisontale lyn"
+    },
+    "NestedRoots_0": {
+      "expected": "die vierkantswortel van, die derdemagswortel van a, plus b"
+    },
+    "NestedRoots_1": {
+      "expected": "die vierkantswortel van, die vierde wortel van a, plus b"
+    },
+    "NestedRoots_2": {
+      "expected": "die vierkantswortel van, die vierkantswortel van a, plus b"
+    },
+    "NestedRoots_3": {
+      "expected": "die positiewe vierkantswortel van, die positiewe vierkantswortel van a, plus b"
+    },
+    "NestedRoots_4": {
+      "expected": "die positiewe vierkantswortel van, die positiewe vierkantswortel van a, plus b, end wortel"
+    },
+    "NestedRoots_5": {
+      "expected": "die positiewe vierkantswortel van, die negatiewe vierkantswortel van a, end wortel, plus b, end wortel"
+    },
+    "Tensor_0": {
+      "expected": "linker onderskrif a linker boskrif b x regter onderskrif c regter boskrif d"
+    },
+    "Tensor_1": {
+      "expected": "linker onderskrif a b linker boskrif g h x regter onderskrif c d regter boskrif e f"
+    },
+    "Tensor_2": {
+      "expected": "linker onderskrif a linker boskrif b x; regter boskrif d"
+    },
+    "Tensor_3": {
+      "expected": "linker onderskrif a linker boskrif b x regter onderskrif c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; linker boskrif b x regter onderskrif c regter boskrif d"
+    },
+    "Tensor_5": {
+      "expected": "linker onderskrif a; x regter onderskrif c regter boskrif d"
+    },
+    "Set_0": {
+      "expected": "die versameling van alle x nie in A sodat B"
+    },
+    "Set_1": {
+      "expected": "die versameling van alle x behoordnie aan A sodat B"
+    },
+    "Set_2": {
+      "expected": "die versameling van alle x nie 'n element van A sodat B"
+    },
+    "Set_3": {
+      "expected": "die versameling van alle x nie 'n element van A sodat B"
+    },
+    "Set_4": {
+      "expected": "die versameling B"
+    },
+    "Set_5": {
+      "expected": "die leë versameling"
+    },
+    "NamedSet_0": {
+      "expected": "die positiewe rasionele getalle"
+    },
+    "NamedSet_1": {
+      "expected": "die positiewe rasionele getalle"
+    },
+    "NamedSet_2": {
+      "expected": "die negatiewe rasionele getalle"
+    },
+    "NamedSet_3": {
+      "expected": "die negatiewe rasionele getalle"
+    },
+    "NamedSet_4": {
+      "expected": "q-twee"
+    },
+    "NamedSet_5": {
+      "expected": "q-twee"
+    },
+    "NamedSet_6": {
+      "expected": "n-twee"
+    },
+    "NamedSet_7": {
+      "expected": "n-twee"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 gevalle, Geval 1: f van x, is gelyk aan negatiewe x, if x kleiner as 0. Geval 2: f van x, is gelyk aan x, if x groter of gelyk aan 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 beperkings, beperking 1: f van x, is gelyk aan negatiewe x; if x kleiner as 0. beperking 2: f van x, is gelyk aan x, if x groter of gelyk aan 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 oor 20"
+    },
+    "UnitFraction": {
+      "expected": "2 kilometer oor b"
+    },
+    "Decimal": {
+      "expected": "die herhalende dessimaal 1 punt 4 gevolg deur herhalende syfer 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 sodat 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "die determinant van die 2 by 2 matriks. Ry 1: 2, 1 Ry 2: 7, 5. sluit determinant"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 verhef tot die 2 kwadraat mag"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 verhef tot die i kwadraat mag"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 verhef tot die twee derdes kwadraat mag"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 verhef tot die 2 tot die mag drie mag"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 verhef tot die i tot die mag drie mag"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 verhef tot die twee derdes tot die mag drie mag"
+    },
+    "MultiRel": {
+      "expected": "a kleiner of gelyk aan b is gelyk aan c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 verhef tot die sinus van, links hakkie, 2 plus x, regs hakkie, mag"
+    },
+    "CompositeFunctionFences": {
+      "expected": "links hakkie, f plus g, regs hakkie, van, links hakkie, 2 plus x, regs hakkie"
+    },
+    "LimUpper": {
+      "expected": "som onder I"
+    },
+    "Overscript": {
+      "expected": "A onder B"
+    },
+    "DetFemale": {
+      "expected": "determinant A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x tot die A"
+    }
+  }
+}

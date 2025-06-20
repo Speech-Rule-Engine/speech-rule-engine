@@ -1,0 +1,139 @@
+{
+  "name": "DanishMathspeakCoverage",
+  "locale": "da",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Danish Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alfa Grundlinje 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alfa Grund 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alfa Grund 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "første transfinitte kardinaltal normal Grundlinje 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "første transfinitte kardinaltal normal Grund 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "første transfinitte kardinaltal normal Grund 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alfa Grundlinje bold 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alfa Grund bold 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alfa Grund bold 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "første transfinitte kardinaltal normal Grundlinje bold 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "første transfinitte kardinaltal normal Grund bold 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "første transfinitte kardinaltal normal Grund bold 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alfa overstreg"
+    },
+    "OverbarOther_default": {
+      "expected": "første transfinitte kardinaltal normal overstreg"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alfa understreg"
+    },
+    "UnderbarOther_default": {
+      "expected": "første transfinitte kardinaltal normal understreg"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alfa overtilde"
+    },
+    "OvertildeOther_default": {
+      "expected": "første transfinitte kardinaltal normal overtilde"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alfa undertilde"
+    },
+    "UndertildeOther_default": {
+      "expected": "første transfinitte kardinaltal normal undertilde"
+    },
+    "SetEmpty_default": {
+      "expected": "den tomme mængde"
+    },
+    "SetEmpty_brief": {
+      "expected": "den tomme mængde"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "den tomme mængde"
+    },
+    "SetSingleton_default": {
+      "expected": "StartMængde a SlutMængde"
+    },
+    "SetSingleton_brief": {
+      "expected": "StartMængde a SlutMængde"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "Mængde a SlutMængde"
+    },
+    "SetCollection_default": {
+      "expected": "StartMængde a komma b SlutMængde"
+    },
+    "SetCollection_brief": {
+      "expected": "StartMængde a komma b SlutMængde"
+    },
+    "SetCollection_sbrief": {
+      "expected": "Mængde a komma b SlutMængde"
+    },
+    "SetExtended_default": {
+      "expected": "StartMængde a komma b SlutMængde"
+    },
+    "SetExtended_brief": {
+      "expected": "StartMængde a komma b SlutMængde"
+    },
+    "SetExtended_sbrief": {
+      "expected": "Mængde a komma b SlutMængde"
+    },
+    "NumberSet": {
+      "expected": "stort C dobbeltstreget"
+    },
+    "LimitLower0_default": {
+      "expected": "SymbolUnder grænseværdi Med understreget Undertekst a lig med 5 Undertekst b lig med 3"
+    },
+    "LimitLower1_default": {
+      "expected": "grænseværdi Undertekst n Overtekst 2 Overtekst x"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "StartLayout 1. Række  a 2. Række  Blank SlutLayout"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c 1 h Sænket 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med c 2 h Sænket 4 minus 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med c 2 h Sænket 4 minus 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med c 2 h Sænket 4 minus 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c 1 h Sænket 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Sænket 4 minus 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Sænket 4 minus 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med c 2 h Sænket 4 minus 2 s"
+    }
+  }
+}

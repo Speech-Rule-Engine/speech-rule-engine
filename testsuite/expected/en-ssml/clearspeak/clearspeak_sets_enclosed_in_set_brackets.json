@@ -1,0 +1,64 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakSetsEnclosedInSetBrackets",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "English Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Sets Enclosed in Set Brackets",
+    "Set001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "Set002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> such that <break time=\"250ms\"/> <mark name=\"6\"/> the absolute value of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> is greater than <mark name=\"8\"/> 2 </prosody></speak>"
+    },
+    "Set003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "Set004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the natural numbers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is an even number </prosody></speak>"
+    },
+    "Set005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the set <mark name=\"1\"/> 1 <mark name=\"2\"/> comma <mark name=\"4\"/> 2 <mark name=\"5\"/> comma <mark name=\"8\"/> 3 </prosody></speak>"
+    },
+    "Set006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the set <mark name=\"1\"/> 1 <mark name=\"2\"/> comma <mark name=\"3\"/> 112 <mark name=\"4\"/> comma <mark name=\"6\"/> 1 <mark name=\"7\"/> comma <mark name=\"8\"/> 253 </prosody></speak>"
+    },
+    "Set007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "Set008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> such that <break time=\"250ms\"/> <mark name=\"6\"/> the absolute value of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> is greater than <mark name=\"8\"/> 2 </prosody></speak>"
+    },
+    "Set009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "Set010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the set <mark name=\"1\"/> 1 <mark name=\"2\"/> comma <mark name=\"4\"/> 2 <mark name=\"5\"/> comma <mark name=\"8\"/> 3 </prosody></speak>"
+    },
+    "Set011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the set <mark name=\"1\"/> 1 <mark name=\"2\"/> comma <mark name=\"4\"/> 112 <mark name=\"5\"/> comma <mark name=\"7\"/> 1 <mark name=\"8\"/> comma <mark name=\"10\"/> 253 </prosody></speak>"
+    },
+    "Set012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "Set013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> such that <break time=\"250ms\"/> <mark name=\"6\"/> the absolute value of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> is greater than <mark name=\"8\"/> 2 </prosody></speak>"
+    },
+    "Set014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "Set015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the natural numbers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is an even number </prosody></speak>"
+    },
+    "Set016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 1 <mark name=\"2\"/> comma <mark name=\"4\"/> 2 <mark name=\"5\"/> comma <mark name=\"8\"/> 3 </prosody></speak>"
+    },
+    "Set017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 1 <mark name=\"2\"/> comma <mark name=\"4\"/> 112 <mark name=\"5\"/> comma <mark name=\"7\"/> 1 <mark name=\"8\"/> comma <mark name=\"10\"/> 253 </prosody></speak>"
+    }
+  }
+}

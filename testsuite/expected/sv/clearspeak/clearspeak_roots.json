@@ -1,0 +1,424 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakRoots",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "Swedish Clearspeak Roots rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Root001": {
+      "expected": "kvadratroten av 2"
+    },
+    "Root002": {
+      "expected": "3 plus kvadratroten av 2"
+    },
+    "Root003": {
+      "expected": "3 plus minus kvadratroten av 2"
+    },
+    "Root004": {
+      "expected": "3 minus plus kvadratroten av 2"
+    },
+    "Root005": {
+      "expected": "den negativa kvadratroten av 2"
+    },
+    "Root006": {
+      "expected": "3 minus kvadratroten av 2"
+    },
+    "Root007": {
+      "expected": "3 plus den negativa kvadratroten av 2"
+    },
+    "Root008": {
+      "expected": "3 minus den negativa kvadratroten av 2"
+    },
+    "Root009": {
+      "expected": "3 plus, öppna, den negativa kvadratroten av 2, stäng"
+    },
+    "Root010": {
+      "expected": "3 minus, öppna, den negativa kvadratroten av 2, stäng"
+    },
+    "Root011": {
+      "expected": "kvadratroten av x plus 1"
+    },
+    "Root011a": {
+      "expected": "kvadratroten av x, plus 1"
+    },
+    "Root012": {
+      "expected": "den negativa kvadratroten av x"
+    },
+    "Root013": {
+      "expected": "öppna, kvadratroten av x, stäng, kvadrat"
+    },
+    "Root014": {
+      "expected": "minus, öppna, kvadratroten av x, stäng, kvadrat"
+    },
+    "Root015": {
+      "expected": "kvadratroten av x, kvadrat"
+    },
+    "Root016": {
+      "expected": "kvadratroten av x kvadrat"
+    },
+    "Root017": {
+      "expected": "kvadratroten av x kvadrat plus y kvadrat"
+    },
+    "Root018": {
+      "expected": "kvadratroten av, x index 1, kvadrat plus, x index 2, kvadrat"
+    },
+    "Root019": {
+      "expected": "kvadratroten av, öppna, x index 2, minus, x index 1, stäng, kvadrat plus, öppna, y index 2, minus, y index 1, stäng, kvadrat"
+    },
+    "Root020": {
+      "expected": "kvadratroten av en halv"
+    },
+    "Root021": {
+      "expected": "kvadratroten av, 23 delat med 66"
+    },
+    "Root022": {
+      "expected": "kvadratroten av, bråket med täljare x plus 1, och nämnare 2 x, plus 5"
+    },
+    "Root023": {
+      "expected": "bråket med täljare minus b plus minus kvadratroten av b kvadrat minus 4 a c, och nämnare 2 a"
+    },
+    "Root024": {
+      "expected": "den positiva kvadratroten av 2"
+    },
+    "Root025": {
+      "expected": "3 plus den positiva kvadratroten av 2"
+    },
+    "Root026": {
+      "expected": "3 plus minus kvadratroten av 2"
+    },
+    "Root027": {
+      "expected": "3 minus plus kvadratroten av 2"
+    },
+    "Root028": {
+      "expected": "den negativa kvadratroten av 2"
+    },
+    "Root029": {
+      "expected": "3 minus den positiva kvadratroten av 2"
+    },
+    "Root030": {
+      "expected": "3 plus den negativa kvadratroten av 2"
+    },
+    "Root031": {
+      "expected": "3 minus den negativa kvadratroten av 2"
+    },
+    "Root032": {
+      "expected": "3 plus, öppna, den negativa kvadratroten av 2, stäng"
+    },
+    "Root033": {
+      "expected": "3 minus, öppna, den negativa kvadratroten av 2, stäng"
+    },
+    "Root034": {
+      "expected": "den positiva kvadratroten av x plus 1"
+    },
+    "Root034a": {
+      "expected": "den positiva kvadratroten av x, plus 1"
+    },
+    "Root035": {
+      "expected": "den negativa kvadratroten av x"
+    },
+    "Root036": {
+      "expected": "öppna, den positiva kvadratroten av x, stäng, kvadrat"
+    },
+    "Root037": {
+      "expected": "öppna, den negativa kvadratroten av x, stäng, kvadrat"
+    },
+    "Root038": {
+      "expected": "minus, öppna, den positiva kvadratroten av x, stäng, kvadrat"
+    },
+    "Root039": {
+      "expected": "den positiva kvadratroten av x, kvadrat"
+    },
+    "Root040": {
+      "expected": "den positiva kvadratroten av x kvadrat"
+    },
+    "Root041": {
+      "expected": "den positiva kvadratroten av x kvadrat plus y kvadrat"
+    },
+    "Root042": {
+      "expected": "den positiva kvadratroten av, x index 1, kvadrat plus, x index 2, kvadrat"
+    },
+    "Root043": {
+      "expected": "den positiva kvadratroten av, öppna, x index 2, minus, x index 1, stäng, kvadrat plus, öppna, y index 2, minus, y index 1, stäng, kvadrat"
+    },
+    "Root044": {
+      "expected": "den positiva kvadratroten av en halv"
+    },
+    "Root045": {
+      "expected": "den positiva kvadratroten av, 23 delat med 66"
+    },
+    "Root046": {
+      "expected": "den positiva kvadratroten av, bråket med täljare x plus 1, och nämnare 2 x, plus 5"
+    },
+    "Root047": {
+      "expected": "bråket med täljare minus b plus minus kvadratroten av b kvadrat minus 4 a c, och nämnare 2 a"
+    },
+    "Root048": {
+      "expected": "kvadratroten av 2, slut rot"
+    },
+    "Root049": {
+      "expected": "3 plus kvadratroten av 2, slut rot"
+    },
+    "Root050": {
+      "expected": "3 plus minus kvadratroten av 2, slut rot"
+    },
+    "Root051": {
+      "expected": "3 minus plus kvadratroten av 2, slut rot"
+    },
+    "Root052": {
+      "expected": "den negativa kvadratroten av 2, slut rot"
+    },
+    "Root053": {
+      "expected": "3 minus kvadratroten av 2, slut rot"
+    },
+    "Root054": {
+      "expected": "3 plus den negativa kvadratroten av 2, slut rot"
+    },
+    "Root055": {
+      "expected": "3 minus den negativa kvadratroten av 2, slut rot"
+    },
+    "Root056": {
+      "expected": "3 plus, öppna, den negativa kvadratroten av 2, slut rot, stäng"
+    },
+    "Root057": {
+      "expected": "3 minus, öppna, den negativa kvadratroten av 2, slut rot, stäng"
+    },
+    "Root058": {
+      "expected": "kvadratroten av x plus 1, slut rot"
+    },
+    "Root058a": {
+      "expected": "kvadratroten av x, slut rot, plus 1"
+    },
+    "Root059": {
+      "expected": "den negativa kvadratroten av x, slut rot"
+    },
+    "Root060": {
+      "expected": "öppna, kvadratroten av x, slut rot, stäng, kvadrat"
+    },
+    "Root061": {
+      "expected": "minus, öppna, kvadratroten av x, slut rot, stäng, kvadrat"
+    },
+    "Root062": {
+      "expected": "kvadratroten av x, slut rot, kvadrat"
+    },
+    "Root063": {
+      "expected": "kvadratroten av x kvadrat, slut rot"
+    },
+    "Root064": {
+      "expected": "kvadratroten av x kvadrat plus y kvadrat, slut rot"
+    },
+    "Root065": {
+      "expected": "kvadratroten av, x index 1, kvadrat plus, x index 2, kvadrat, slut rot"
+    },
+    "Root066": {
+      "expected": "kvadratroten av, öppna, x index 2, minus, x index 1, stäng, kvadrat plus, öppna, y index 2, minus, y index 1, stäng, kvadrat, slut rot"
+    },
+    "Root067": {
+      "expected": "kvadratroten av en halv, slut rot"
+    },
+    "Root068": {
+      "expected": "kvadratroten av, 23 delat med 66, slut rot"
+    },
+    "Root069": {
+      "expected": "kvadratroten av, bråket med täljare x plus 1, och nämnare 2 x, plus 5, slut rot"
+    },
+    "Root070": {
+      "expected": "bråket med täljare minus b plus minus kvadratroten av b kvadrat minus 4 a c, slut rot, och nämnare 2 a"
+    },
+    "Root071": {
+      "expected": "den positiva kvadratroten av 2, slut rot"
+    },
+    "Root072": {
+      "expected": "3 plus den positiva kvadratroten av 2, slut rot"
+    },
+    "Root073": {
+      "expected": "3 plus minus kvadratroten av 2, slut rot"
+    },
+    "Root074": {
+      "expected": "3 minus plus kvadratroten av 2, slut rot"
+    },
+    "Root075": {
+      "expected": "den negativa kvadratroten av 2, slut rot"
+    },
+    "Root076": {
+      "expected": "3 minus den positiva kvadratroten av 2, slut rot"
+    },
+    "Root077": {
+      "expected": "3 plus den negativa kvadratroten av 2, slut rot"
+    },
+    "Root078": {
+      "expected": "3 minus den negativa kvadratroten av 2, slut rot"
+    },
+    "Root079": {
+      "expected": "3 plus, öppna, den negativa kvadratroten av 2, slut rot, stäng"
+    },
+    "Root080": {
+      "expected": "3 minus, öppna, den negativa kvadratroten av 2, slut rot, stäng"
+    },
+    "Root081": {
+      "expected": "den positiva kvadratroten av x plus 1, slut rot"
+    },
+    "Root081a": {
+      "expected": "den positiva kvadratroten av x, slut rot, plus 1"
+    },
+    "Root082": {
+      "expected": "den negativa kvadratroten av x, slut rot"
+    },
+    "Root083": {
+      "expected": "öppna, den positiva kvadratroten av x, slut rot, stäng, kvadrat"
+    },
+    "Root084": {
+      "expected": "öppna, den negativa kvadratroten av x, slut rot, stäng, kvadrat"
+    },
+    "Root085": {
+      "expected": "den positiva kvadratroten av x, slut rot, kvadrat"
+    },
+    "Root086": {
+      "expected": "den positiva kvadratroten av x kvadrat, slut rot"
+    },
+    "Root087": {
+      "expected": "den positiva kvadratroten av x kvadrat plus y kvadrat, slut rot"
+    },
+    "Root088": {
+      "expected": "den positiva kvadratroten av, x index 1, kvadrat plus, x index 2, kvadrat, slut rot"
+    },
+    "Root089": {
+      "expected": "den positiva kvadratroten av, öppna, x index 2, minus, x index 1, stäng, kvadrat plus, öppna, y index 2, minus, y index 1, stäng, kvadrat, slut rot"
+    },
+    "Root090": {
+      "expected": "den positiva kvadratroten av en halv, slut rot"
+    },
+    "Root091": {
+      "expected": "den positiva kvadratroten av, 23 delat med 66, slut rot"
+    },
+    "Root092": {
+      "expected": "den positiva kvadratroten av, bråket med täljare x plus 1, och nämnare 2 x, plus 5, slut rot"
+    },
+    "Root093": {
+      "expected": "bråket med täljare minus b plus minus kvadratroten av b kvadrat minus 4 a c, slut rot, och nämnare 2 a"
+    },
+    "HighRoot001": {
+      "expected": "kubikroten av y"
+    },
+    "HighRoot002": {
+      "expected": "fjärde roten av n"
+    },
+    "HighRoot003": {
+      "expected": "femte roten av 35"
+    },
+    "HighRoot004": {
+      "expected": "nionde roten av 146"
+    },
+    "HighRoot005": {
+      "expected": "n roten av d"
+    },
+    "HighRoot006": {
+      "expected": "m roten av 243"
+    },
+    "HighRoot007": {
+      "expected": "I roten av 2 upphöjt till I"
+    },
+    "HighRoot008": {
+      "expected": "j roten av 125"
+    },
+    "HighRoot009": {
+      "expected": "minus kubikroten av y"
+    },
+    "HighRoot010": {
+      "expected": "minus fjärde roten av n"
+    },
+    "HighRoot011": {
+      "expected": "kubikroten av y, slut rot"
+    },
+    "HighRoot012": {
+      "expected": "fjärde roten av n, slut rot"
+    },
+    "HighRoot013": {
+      "expected": "femte roten av 35, slut rot"
+    },
+    "HighRoot014": {
+      "expected": "nionde roten av 146, slut rot"
+    },
+    "HighRoot015": {
+      "expected": "n roten av d, slut rot"
+    },
+    "HighRoot016": {
+      "expected": "m roten av 243, slut rot"
+    },
+    "HighRoot017": {
+      "expected": "I roten av 2 upphöjt till I, slut rot"
+    },
+    "HighRoot018": {
+      "expected": "j roten av 125, slut rot"
+    },
+    "HighRoot019": {
+      "expected": "minus kubikroten av y, slut rot"
+    },
+    "HighRoot020": {
+      "expected": "minus fjärde roten av n, slut rot"
+    },
+    "HighRoot021": {
+      "expected": "kubikroten av y"
+    },
+    "HighRoot022": {
+      "expected": "fjärde roten av n"
+    },
+    "HighRoot023": {
+      "expected": "femte roten av 35"
+    },
+    "HighRoot024": {
+      "expected": "nionde roten av 146"
+    },
+    "HighRoot025": {
+      "expected": "n roten av d"
+    },
+    "HighRoot026": {
+      "expected": "m roten av 243"
+    },
+    "HighRoot027": {
+      "expected": "I roten av 2 upphöjt till I"
+    },
+    "HighRoot028": {
+      "expected": "j roten av 125"
+    },
+    "HighRoot029": {
+      "expected": "minus kubikroten av y"
+    },
+    "HighRoot030": {
+      "expected": "minus fjärde roten av n"
+    },
+    "HighRoot031": {
+      "expected": "kubikroten av y, slut rot"
+    },
+    "HighRoot032": {
+      "expected": "fjärde roten av n, slut rot"
+    },
+    "HighRoot033": {
+      "expected": "femte roten av 35, slut rot"
+    },
+    "HighRoot034": {
+      "expected": "nionde roten av 146, slut rot"
+    },
+    "HighRoot035": {
+      "expected": "n roten av d, slut rot"
+    },
+    "HighRoot036": {
+      "expected": "m roten av 243, slut rot"
+    },
+    "HighRoot037": {
+      "expected": "I roten av 2 upphöjt till I, slut rot"
+    },
+    "HighRoot038": {
+      "expected": "j roten av 125, slut rot"
+    },
+    "HighRoot039": {
+      "expected": "minus kubikroten av y, slut rot"
+    },
+    "HighRoot040": {
+      "expected": "minus fjärde roten av n, slut rot"
+    }
+  }
+}

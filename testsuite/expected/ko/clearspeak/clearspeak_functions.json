@@ -1,0 +1,517 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakFunctions",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "Korean Clearspeak Functions rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": ["Function011b", "Function012b", "Function013b", "Function014b", "Function015b", "Function016b", "Function017b", "Function018b", "Function019b", "Function020b", "Function021b", "Function022b", "Function023b", "Function024b", "Function025b", "Function026b", "Function027b", "Function028b", "Function029b", "Function030b", "Function031b", "Function032b", "Function033b", "Function034b", "Function035b", "Function036b", "Function037b", "Function038b", "Function039b", "Function040b", "Function041b", "Function042b", "Function043b", "Function044b", "Function045b", "Function046b", "Function047b", "Function048b", "Function049b", "Function050b", "Function051b", "Function052b", "Function053b", "Function054b", "Function055b", "Function056b", "Function057b", "Function058b", "Function059b", "Function060b", "Function061b", "Function062b", "Function063b", "Function064b", "Function065b", "Function066b", "Function067b", "Function068b", "Function069b", "Function070b", "Function071b", "Function072b", "Function073b", "Function074b", "Function075b", "Function076b", "Function077b", "Function078b", "Function079b"],
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "expected": "f 의 x"
+    },
+    "Function002": {
+      "expected": "g 의 x"
+    },
+    "Function003": {
+      "expected": "h 의 x"
+    },
+    "Function004": {
+      "expected": "f 의 2 x"
+    },
+    "Function005": {
+      "expected": "g 의 마이너스 2 x"
+    },
+    "Function006": {
+      "expected": "h 의 2 분의 1"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h 의, 괄호 열고, 2 분의 1, 괄호 닫고"
+    },
+    "Function008": {
+      "expected": "f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 는 f 의 x, 더하기 1"
+    },
+    "Function009": {
+      "expected": "g 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function010": {
+      "expected": "g 의, 괄호 열고, x 제곱, 괄호 닫고"
+    },
+    "Function011": {
+      "expected": "역함수 f 의 x"
+    },
+    "Function012": {
+      "expected": "역함수 g 의 x"
+    },
+    "Function013": {
+      "expected": "역함수 h 의 x"
+    },
+    "Function014": {
+      "expected": "역함수 f 의 2 x"
+    },
+    "Function015": {
+      "expected": "역함수 g 의 마이너스 2 x"
+    },
+    "Function016": {
+      "expected": "역함수 f 의, 괄호 열고, 3 x, 빼기 1, 괄호 닫고"
+    },
+    "Function017": {
+      "expected": "역함수 g 의, 괄호 열고, x 제곱, 괄호 닫고"
+    },
+    "Function018": {
+      "expected": "역함수 h 의 2 분의 1"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "역함수 h 의, 괄호 열고, 2 분의 1, 괄호 닫고"
+    },
+    "Function020": {
+      "expected": "역함수 f 의, f 의 x"
+    },
+    "Function021": {
+      "expected": "역함수 g 의, g 의 x"
+    },
+    "Function022": {
+      "expected": "역함수 h 의, h 의 x"
+    },
+    "Function023": {
+      "expected": "역함수 f 의, f 의 2 x"
+    },
+    "Function024": {
+      "expected": "역함수 g 의, g 의 마이너스 2 x"
+    },
+    "Function025": {
+      "expected": "역함수 h 의, h 의 2 분의 1"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "역함수 h 의, 괄호 열고, h 의, 괄호 열고, 2 분의 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function027": {
+      "expected": "역함수 f 의, 괄호 열고, f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 괄호 닫고, 는 x 더하기 1"
+    },
+    "Function028": {
+      "expected": "역함수 g 의, 괄호 열고, g 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function029": {
+      "expected": "역함수 g 의, 괄호 열고, g 의, 괄호 열고, x 제곱, 괄호 닫고, 괄호 닫고"
+    },
+    "Function030": {
+      "expected": "f 의, 역함수 f 의 x"
+    },
+    "Function031": {
+      "expected": "g 의, 역함수 g 의 x"
+    },
+    "Function032": {
+      "expected": "h 의, 역함수 h 의 x"
+    },
+    "Function033": {
+      "expected": "f 의, 역함수 f 의 2 x"
+    },
+    "Function034": {
+      "expected": "g 의, 역함수 g 의 마이너스 2 x"
+    },
+    "Function035": {
+      "expected": "f 의, 괄호 열고, 역함수 f 의, 괄호 열고, 3 x, 빼기 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function036": {
+      "expected": "g 의, 역함수 g 의, 괄호 열고, x 제곱, 괄호 닫고"
+    },
+    "Function037": {
+      "expected": "h 의, 역함수 h 의 2 분의 1"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "expected": "h 의, 역함수 h 의, 괄호 열고, 분수 2 분의 1, 괄호 닫고"
+    },
+    "Function039": {
+      "expected": "f 의, g 의 x"
+    },
+    "Function040": {
+      "expected": "f 의, 괄호 열고, g 의, 괄호 열고, x 더하기 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function041": {
+      "expected": "h 의, g 의 x"
+    },
+    "Function042": {
+      "expected": "h 의, 괄호 열고, g 의, 괄호 열고, 분모가 x 더하기 1, 이고 분자가 x, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "Function043": {
+      "expected": "괄호 열고, f 더하기 g, 괄호 닫고, 의 x, 는 f 의 x, 더하기 g 의 x"
+    },
+    "Function044": {
+      "expected": "괄호 열고, f 더하기 g, 괄호 닫고, 의, 괄호 열고, x 더하기 1, 괄호 닫고, 는 f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 더하기 g 의, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "Function045": { 
+      "expected": "괄호 열고, f 닷 g, 괄호 닫고, 의 x"
+    },
+    "Function046": { 
+      "expected": "괄호 열고, f 닷 g, 괄호 닫고, 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고"
+    },
+    "Function047": {
+      "expected": "괄호 열고, g 분의 f, 괄호 닫고, 의 x, 는, g 의 x, 분의 f 의 x"
+    },
+    "Function048": {
+      "expected": "괄호 열고, g 분의 f, 괄호 닫고, 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고, 는, 분모가 g 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고, 이고 분자가 f 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고, 인 분수"
+    },
+    "Function049": {
+      "expected": "괄호 열고, f 합성 함수 g, 괄호 닫고, 의 x, 는 f 의, g 의 x"
+    },
+    "Function050": {
+      "expected": "2 f 의 x"
+    },
+    "Function051": {
+      "expected": "c f 의 x"
+    },
+    "Function052": {
+      "expected": "f 제곱 의 x"
+    },
+    "Function053": {
+      "expected": "f 제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function054": {
+      "expected": "f 세제곱 의 x"
+    },
+    "Function055": {
+      "expected": "f 세제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function056": {
+      "expected": "f 4 제곱, 의 x"
+    },
+    "Function057": {
+      "expected": "f 4 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function058": {
+      "expected": "f 5 제곱, 의 x"
+    },
+    "Function059": {
+      "expected": "f 5 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function060": {
+      "expected": "f n 제곱, 의 x"
+    },
+    "Function061": {
+      "expected": "f n 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function062": {
+      "expected": "g 제곱 의 x"
+    },
+    "Function063": {
+      "expected": "g 제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function064": {
+      "expected": "h 세제곱 의 x"
+    },
+    "Function065": {
+      "expected": "h 세제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function066": {
+      "expected": "g 4 제곱, 의 x"
+    },
+    "Function067": {
+      "expected": "g 4 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function068": {
+      "expected": "h 5 제곱, 의 x"
+    },
+    "Function069": {
+      "expected": "h 5 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function070": {
+      "expected": "g n 제곱, 의 x"
+    },
+    "Function071": {
+      "expected": "g n 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function072": {
+      "expected": "f 아래첨자 1, 의 x"
+    },
+    "Function073": {
+      "expected": "g 아래첨자 2, 의, 괄호 열고, x 세제곱, 괄호 닫고"
+    },
+    "Function074": {
+      "expected": "h 아래첨자 n, 의, 괄호 열고, 3 x, 빼기 2, 괄호 닫고"
+    },
+    "Function075": {
+      "expected": "역함수, f 아래첨자 1, 의 x"
+    },
+    "Function076": {
+      "expected": "역함수, g 아래첨자 2, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function077": {
+      "expected": "역함수, h 아래첨자 n, 의 x"
+    },
+    "Function078": {
+      "expected": "역함수, g 아래첨자 1, 의, g 아래첨자 2, 의 x"
+    },
+    "Function079": {
+      "expected": "f 아래첨자 1, 의, 역함수, g 아래첨자 2, 의 x"
+    },
+    "Function080": {
+      "expected": "f 의, 괄호 열고, x 콤마 y, 괄호 닫고"
+    },
+    "Function081": {
+      "expected": "f 의, 괄호 열고, x 콤마 y 콤마 z, 괄호 닫고"
+    },
+    "Function082": {
+      "expected": "f 의, 괄호 열고, x 더하기 1, 콤마, 2 y, 괄호 닫고"
+    },
+    "Function083": {
+      "expected": "f 의, 괄호 열고, 2 x, 콤마, x 더하기 1, 콤마, x 제곱, 괄호 닫고"
+    },
+    "Function084": {
+      "expected": "f 의 x"
+    },
+    "Function085": {
+      "expected": "g 의 x"
+    },
+    "Function086": {
+      "expected": "h 의 x"
+    },
+    "Function087": {
+      "expected": "f 의 2 x"
+    },
+    "Function088": {
+      "expected": "g 의 마이너스 2 x"
+    },
+    "Function089": {
+      "expected": "h 의 2 분의 1"
+    },
+    "Function090": {
+      "expected": "h 곱하기, 괄호 열고, 2 분의 1, 괄호 닫고"
+    },
+    "Function091": {
+      "expected": "f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 는, f 의 x, 더하기 1"
+    },
+    "Function092": {
+      "expected": "g 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function093": {
+      "expected": "g 의, 괄호 열고, x 제곱, 괄호 닫고"
+    },
+    "Function094": {
+      "expected": "f 의 마이너스 1 제곱, 의 x"
+    },
+    "Function095": {
+      "expected": "g 의 마이너스 1 제곱, 의 x"
+    },
+    "Function096": {
+      "expected": "h 의 마이너스 1 제곱, 의 x"
+    },
+    "Function097": {
+      "expected": "f 의 마이너스 1 제곱, 의 2 x"
+    },
+    "Function098": {
+      "expected": "g 의 마이너스 1 제곱, 의 마이너스 2 x"
+    },
+    "Function099": {
+      "expected": "f 의 마이너스 1 제곱, 의, 괄호 열고, 3 x, 빼기 1, 괄호 닫고"
+    },
+    "Function100": {
+      "expected": "g 의 마이너스 1 제곱, 의, 괄호 열고, x 제곱, 괄호 닫고"
+    },
+    "Function101": {
+      "expected": "h 의 마이너스 1 제곱, 의 2 분의 1"
+    },
+    "Function102": {
+      "expected": "h 의 마이너스 1 제곱, 곱하기, 괄호 열고, 2 분의 1, 괄호 닫고"
+    },
+    "Function103": {
+      "expected": "f 의 마이너스 1 제곱, 의, f 의 x"
+    },
+    "Function104": {
+      "expected": "g 의 마이너스 1 제곱, 의, g 의 x"
+    },
+    "Function105": {
+      "expected": "h 의 마이너스 1 제곱, 의, h 의 x"
+    },
+    "Function106": {
+      "expected": "f 의 마이너스 1 제곱, 의, f 의 2 x"
+    },
+    "Function107": {
+      "expected": "g 의 마이너스 1 제곱, 의, g 의 마이너스 2 x"
+    },
+    "Function108": {
+      "expected": "h 의 마이너스 1 제곱, 의, h 의 2 분의 1"
+    },
+    "Function109": {
+      "expected": "h 의 마이너스 1 제곱, 곱하기, 괄호 열고, h 곱하기, 괄호 열고, 2 분의 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function110": {
+      "expected": "f 의 마이너스 1 제곱, 의, 괄호 열고, f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 괄호 닫고, 는 x 더하기 1"
+    },
+    "Function111": {
+      "expected": "g 의 마이너스 1 제곱, 의, 괄호 열고, g 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function112": {
+      "expected": "g 의 마이너스 1 제곱, 의, 괄호 열고, g 의, 괄호 열고, x 제곱, 괄호 닫고, 괄호 닫고"
+    },
+    "Function113": {
+      "expected": "f 의, 괄호 열고, f 의 마이너스 1 제곱, 의 x, 괄호 닫고"
+    },
+    "Function114": {
+      "expected": "g 의, 괄호 열고, g 의 마이너스 1 제곱, 의 x, 괄호 닫고"
+    },
+    "Function115": {
+      "expected": "h 의, 괄호 열고, h 의 마이너스 1 제곱, 의 x, 괄호 닫고"
+    },
+    "Function116": {
+      "expected": "f 의, 괄호 열고, f 의 마이너스 1 제곱, 의 2 x, 괄호 닫고"
+    },
+    "Function117": {
+      "expected": "g 의, 괄호 열고, g 의 마이너스 1 제곱, 의 마이너스 2 x, 괄호 닫고"
+    },
+    "Function118": {
+      "expected": "f 의, 괄호 열고, f 의 마이너스 1 제곱, 의, 괄호 열고, 3 x, 빼기 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function119": {
+      "expected": "g 의, 괄호 열고, g 의 마이너스 1 제곱, 의, 괄호 열고, x 제곱, 괄호 닫고, 괄호 닫고"
+    },
+    "Function120": {
+      "expected": "h 의, 괄호 열고, h 의 마이너스 1 제곱, 의 2 분의 1, 괄호 닫고"
+    },
+    "Function121": {
+      "expected": "h 곱하기, 괄호 열고, h 의 마이너스 1 제곱, 곱하기, 괄호 열고, 2 분의 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function122": {
+      "expected": "f 의, g 의 x"
+    },
+    "Function123": {
+      "expected": "f 의, 괄호 열고, g 의, 괄호 열고, x 더하기 1, 괄호 닫고, 괄호 닫고"
+    },
+    "Function124": {
+      "expected": "h 의, g 의 x"
+    },
+    "Function125": {
+      "expected": "h 의, 괄호 열고, g 의, 괄호 열고, 분모가 x 더하기 1, 이고 분자가 x, 인 분수, 괄호 닫고, 괄호 닫고"
+    },
+    "Function126": {
+      "expected": "괄호 열고, f 더하기 g, 괄호 닫고, 의 x, 는, f 의 x, 더하기, g 의 x"
+    },
+    "Function127": {
+      "expected": "괄호 열고, f 더하기 g, 괄호 닫고, 의, 괄호 열고, x 더하기 1, 괄호 닫고, 는, f 의, 괄호 열고, x 더하기 1, 괄호 닫고, 더하기, g 의, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "Function128": {
+      "expected": "괄호 열고, f 닷 g, 괄호 닫고, 의 x"
+    },
+    "Function129": {
+      "expected": "괄호 열고, f 닷 g, 괄호 닫고, 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고"
+    },
+    "Function130": {
+      "expected": "괄호 열고, g 분의 f, 괄호 닫고, 의 x, 는, 분모가, g 의 x, 이고 분자가, f 의 x, 인 분수"
+    },
+    "Function131": {
+      "expected": "괄호 열고, g 분의 f, 괄호 닫고, 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고, 는, 분모가, g 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고, 이고 분자가, f 의, 괄호 열고, 2 x, 더하기 5, 괄호 닫고, 인 분수"
+    },
+    "Function132": {
+      "expected": "2, f 의 x"
+    },
+    "Function133": {
+      "expected": "c, f 의 x"
+    },
+    "Function134": {
+      "expected": "f 제곱 의 x"
+    },
+    "Function135": {
+      "expected": "f 제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function136": {
+      "expected": "f 세제곱 의 x"
+    },
+    "Function137": {
+      "expected": "f 세제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function138": {
+      "expected": "f 네제곱 의 x"
+    },
+    "Function139": {
+      "expected": "f 네제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function140": {
+      "expected": "f 의 5 제곱, 의 x"
+    },
+    "Function141": {
+      "expected": "f 의 5 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function142": {
+      "expected": "f 의 n 제곱, 의 x"
+    },
+    "Function143": {
+      "expected": "f 의 n 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function144": {
+      "expected": "g 제곱 의 x"
+    },
+    "Function145": {
+      "expected": "g 제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function146": {
+      "expected": "h 세제곱 의 x"
+    },
+    "Function147": {
+      "expected": "h 세제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function148": {
+      "expected": "g 네제곱 의 x"
+    },
+    "Function149": {
+      "expected": "g 네제곱 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function150": {
+      "expected": "h 의 5 제곱, 의 x"
+    },
+    "Function151": {
+      "expected": "h 의 5 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function152": {
+      "expected": "g 의 n 제곱, 의 x"
+    },
+    "Function153": {
+      "expected": "g 의 n 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function154": {
+      "expected": "f 아래첨자 1, 의 x"
+    },
+    "Function156": {
+      "expected": "g 아래첨자 2, 의, 괄호 열고, x 세제곱, 괄호 닫고"
+    },
+    "Function157": {
+      "expected": "h 아래첨자 n, 의, 괄호 열고, 3 x, 빼기 2, 괄호 닫고"
+    },
+    "Function158": {
+      "expected": "f 아래첨자 1, 의 마이너스 1 제곱, 의 x"
+    },
+    "Function159": {
+      "expected": "g 아래첨자 2, 의 마이너스 1 제곱, 의, 괄호 열고, 2 x, 더하기 1, 괄호 닫고"
+    },
+    "Function160": {
+      "expected": "h 아래첨자 n, 의 마이너스 1 제곱, 의 x"
+    },
+    "Function161": {
+      "expected": "g 아래첨자 1, 의 마이너스 1 제곱, 의, 괄호 열고, g 아래첨자 2, 의 x, 괄호 닫고"
+    },
+    "Function162": {
+      "expected": "f 아래첨자 1, 의, 괄호 열고, g 아래첨자 2, 의 마이너스 1 제곱, 의 x, 괄호 닫고"
+    },
+    "Function163": {
+      "expected": "f 의, 괄호 열고, x 콤마 y, 괄호 닫고"
+    },
+    "Function164": {
+      "expected": "f 의, 괄호 열고, x 콤마 y 콤마 z, 괄호 닫고"
+    },
+    "Function165": {
+      "expected": "f 의, 괄호 열고, x 더하기 1, 콤마, 2 y, 괄호 닫고"
+    },
+    "Function166": {
+      "expected": "f 의, 괄호 열고, 2 x, 콤마, x 더하기 1, 콤마, x 제곱, 괄호 닫고"
+    }
+  }
+}
+

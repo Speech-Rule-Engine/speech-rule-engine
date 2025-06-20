@@ -1,0 +1,105 @@
+{
+  "_comment_": "Testing the integral heuristics.",
+  "tests": {
+    "_comment0_": "Operations on integrals without explicit differential variable.",
+    "Integral_Novar_Scalar_Op_0": {
+      "tex": "a \\int x + b \\int y",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>y</mi></math>"
+    },
+    "Integral_Novar_Scalar_Op_1": {
+      "tex": "a \\int x + b \\int y - c \\int z",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>y</mi><mo>&#x2212;</mo><mi>c</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>z</mi></math>"
+    },
+    "Integral_Novar_Scalar_Op_2": {
+      "tex": "a \\int x + b \\int y + c \\int z",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>y</mi><mo>+</mo><mi>c</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>z</mi></math>"
+    },
+    "Integral_Novar_Scalar_Op_3": {
+      "tex": "c_{1}\\int_{a}^{b}f+c_{2}\\int_{a}^{b}g",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow></msubsup><mi>f</mi><mo>+</mo><msub><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow></msubsup><mi>g</mi></math>"
+    },
+    "Integral_Novar_Scalar_Op_4": {
+      "tex": "\\int _{a}^{b}(c_{1}f+c_{2}g)=c_{1}\\int _{a}^{b}f+c_{2}\\int _{a}^{b}g",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow></msubsup><mo stretchy=\"false\">(</mo><msub><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mi>f</mi><mo>+</mo><msub><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><mi>g</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msub><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow></msubsup><mi>f</mi><mo>+</mo><msub><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow></msubsup><mi>g</mi></math>"
+    },
+    "Integral_Novar_Op_0": {
+      "tex": "\\int + \\int",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mo>+</mo><mo data-mjx-texclass=\"OP\">&#x222B;</mo></math>"
+    },
+    "Integral_Novar_Op_1": {
+      "tex": "\\int + \\int + \\int",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mo>+</mo><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mo>+</mo><mo data-mjx-texclass=\"OP\">&#x222B;</mo></math>"
+    },
+    "Integral_Novar_Op_2": {
+      "tex": "\\int_a + \\int_b + \\int_c",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>a</mi></msub><mo>+</mo><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>b</mi></msub><mo>+</mo><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>c</mi></msub></math>"
+    },
+    "_comment0_": "Integrals with nested differential variable.",
+    "Integral_Nested_Var_0": {
+      "tex": "\\int  x {m{dx}}r ",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>x</mi></mrow></mrow><mi>r</mi></math>"
+    },
+    "Integral_Nested_Var_1": {
+      "tex": "\\int  x {m{d{x}}}r ",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mrow data-mjx-texclass=\"ORD\"><mi>x</mi></mrow></mrow></mrow><mi>r</mi></math>"
+    },
+    "Integral_Nested_Var_2": {
+      "tex": "\\int  x {m{d{x}}}rdy ",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mrow data-mjx-texclass=\"ORD\"><mi>x</mi></mrow></mrow></mrow><mi>r</mi><mi>d</mi><mi>y</mi></math>"
+    },
+    "Integral_Nested_Var_Op_0": {
+      "tex": "\\int  x {m{dx}}r + \\int yl {dy} m",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>x</mi></mrow></mrow><mi>r</mi><mo>+</mo><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>y</mi><mi>l</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>y</mi></mrow><mi>m</mi></math>"
+    },
+    "Integral_Nested_Var_Op_1": {
+      "tex": "\\int  x {m{dx}}r + \\int yl {dy} m",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>x</mi></mrow></mrow><mi>r</mi><mo>+</mo><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>y</mi><mi>l</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>y</mi></mrow><mi>m</mi></math>"
+    },
+    "Integral_Frac_Var_0": {
+      "tex": "\\int \\frac{dx}{x}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mi>x</mi></mfrac></math>"
+    },
+    "Integral_Frac_Var_1": {
+      "tex": "\\int \\frac{dx}{x^2}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><msup><mi>x</mi><mn>2</mn></msup></mfrac></math>"
+    },
+    "Integral_Frac_Var_2": {
+      "tex": "\\int \\frac{dy}{x^2}dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><msup><mi>x</mi><mn>2</mn></msup></mfrac><mi>d</mi><mi>x</mi></math>"
+    },
+    "Integral_Frac_Var_3": {
+      "tex": "\\int \\frac{xdx}{x}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><mi>x</mi><mi>d</mi><mi>x</mi></mrow><mi>x</mi></mfrac></math>"
+    },
+    "Integral_Frac_Var_4": {
+      "tex": "\\int \\frac{x{dx}}{x}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>x</mi></mrow></mrow><mi>x</mi></mfrac></math>"
+    },
+    "Integral_Frac_Var_5": {
+      "tex": "\\int \\frac{x^2{dx}}{x}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mrow data-mjx-texclass=\"ORD\"><mi>d</mi><mi>x</mi></mrow></mrow><mi>x</mi></mfrac></math>"
+    },
+    "Integral_Frac_Var_6": {
+      "tex": "\\int  \\frac{ x^{2}dx }{ (x^{3} + 5)^{2}}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mfrac><mrow><msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>d</mi><mi>x</mi></mrow><mrow><mo stretchy=\"false\">(</mo><msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>3</mn></mrow></msup><mo>+</mo><mn>5</mn><msup><mo stretchy=\"false\">)</mo><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></math>"
+    },
+    "Integral_Frac_CombVar_0": {
+      "input": "<mo>&#x222B;</mo><mfrac><mi>dx</mi><mi>x</mi></mfrac>"
+    },
+    "Integral_Frac_CombVar_1": {
+      "input": "<mo>&#x222B;</mo><mfrac><mrow><mi>x</mi><mi>dx</mi></mrow><mi>x</mi></mfrac>"
+    },
+    "Integral_Frac_CombVar_2": {
+      "input": "<mo>&#x222B;</mo><mfrac><mi>dx</mi><mi>x</mi></mfrac><mi>dy</mi>"
+    },
+    "Integral_Frac_CombVar_3": {
+      "input": "<mo>&#x222B;</mo><mfrac><mrow><mi>x</mi><mi>dx</mi></mrow><mi>x</mi></mfrac><mi>dy</mi>"
+    },
+    "Integral_Frac_CombVar_4": {
+      "input": "<mo>&#x222B;</mo><mfrac><mi>dx</mi><mi>x</mi></mfrac><mi>d</mi><mi>y</mi>"
+    },
+    "Integral_Frac_CombVar_5": {
+      "input": "<mo>&#x222B;</mo><mfrac><mrow><mi>x</mi><mi>dx</mi></mrow><mi>x</mi></mfrac><mi>d</mi><mi>y</mi>"
+    }
+  }
+}

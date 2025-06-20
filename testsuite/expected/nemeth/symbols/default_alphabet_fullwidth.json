@@ -1,0 +1,200 @@
+{
+  "name": "NemethDefaultAlphabetFullwidth",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet fullwidth tests.",
+  "tests": {
+    "Ａ": {
+      "expected": "⠠⠁"
+    },
+    "Ｂ": {
+      "expected": "⠠⠃"
+    },
+    "Ｃ": {
+      "expected": "⠠⠉"
+    },
+    "Ｄ": {
+      "expected": "⠠⠙"
+    },
+    "Ｅ": {
+      "expected": "⠠⠑"
+    },
+    "Ｆ": {
+      "expected": "⠠⠋"
+    },
+    "Ｇ": {
+      "expected": "⠠⠛"
+    },
+    "Ｈ": {
+      "expected": "⠠⠓"
+    },
+    "Ｉ": {
+      "expected": "⠠⠊"
+    },
+    "Ｊ": {
+      "expected": "⠠⠚"
+    },
+    "Ｋ": {
+      "expected": "⠠⠅"
+    },
+    "Ｌ": {
+      "expected": "⠠⠇"
+    },
+    "Ｍ": {
+      "expected": "⠠⠍"
+    },
+    "Ｎ": {
+      "expected": "⠠⠝"
+    },
+    "Ｏ": {
+      "expected": "⠠⠕"
+    },
+    "Ｐ": {
+      "expected": "⠠⠏"
+    },
+    "Ｑ": {
+      "expected": "⠠⠟"
+    },
+    "Ｒ": {
+      "expected": "⠠⠗"
+    },
+    "Ｓ": {
+      "expected": "⠠⠎"
+    },
+    "Ｔ": {
+      "expected": "⠠⠞"
+    },
+    "Ｕ": {
+      "expected": "⠠⠥"
+    },
+    "Ｖ": {
+      "expected": "⠠⠧"
+    },
+    "Ｗ": {
+      "expected": "⠠⠺"
+    },
+    "Ｘ": {
+      "expected": "⠠⠭"
+    },
+    "Ｙ": {
+      "expected": "⠠⠽"
+    },
+    "Ｚ": {
+      "expected": "⠠⠵"
+    },
+    "ａ": {
+      "expected": "⠁"
+    },
+    "ｂ": {
+      "expected": "⠃"
+    },
+    "ｃ": {
+      "expected": "⠉"
+    },
+    "ｄ": {
+      "expected": "⠙"
+    },
+    "ｅ": {
+      "expected": "⠑"
+    },
+    "ｆ": {
+      "expected": "⠋"
+    },
+    "ｇ": {
+      "expected": "⠛"
+    },
+    "ｈ": {
+      "expected": "⠓"
+    },
+    "ｉ": {
+      "expected": "⠊"
+    },
+    "ｊ": {
+      "expected": "⠚"
+    },
+    "ｋ": {
+      "expected": "⠅"
+    },
+    "ｌ": {
+      "expected": "⠇"
+    },
+    "ｍ": {
+      "expected": "⠍"
+    },
+    "ｎ": {
+      "expected": "⠝"
+    },
+    "ｏ": {
+      "expected": "⠕"
+    },
+    "ｐ": {
+      "expected": "⠏"
+    },
+    "ｑ": {
+      "expected": "⠟"
+    },
+    "ｒ": {
+      "expected": "⠗"
+    },
+    "ｓ": {
+      "expected": "⠎"
+    },
+    "ｔ": {
+      "expected": "⠞"
+    },
+    "ｕ": {
+      "expected": "⠥"
+    },
+    "ｖ": {
+      "expected": "⠧"
+    },
+    "ｗ": {
+      "expected": "⠺"
+    },
+    "ｘ": {
+      "expected": "⠭"
+    },
+    "ｙ": {
+      "expected": "⠽"
+    },
+    "ｚ": {
+      "expected": "⠵"
+    },
+    "０": {
+      "expected": "⠴"
+    },
+    "１": {
+      "expected": "⠂"
+    },
+    "２": {
+      "expected": "⠆"
+    },
+    "３": {
+      "expected": "⠒"
+    },
+    "４": {
+      "expected": "⠲"
+    },
+    "５": {
+      "expected": "⠢"
+    },
+    "６": {
+      "expected": "⠖"
+    },
+    "７": {
+      "expected": "⠶"
+    },
+    "８": {
+      "expected": "⠦"
+    },
+    "９": {
+      "expected": "⠔"
+    }
+  }
+}

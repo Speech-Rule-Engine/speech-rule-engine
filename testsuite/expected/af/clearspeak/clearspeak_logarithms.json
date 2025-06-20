@@ -1,0 +1,132 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakLogarithms",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_logarithms.json",
+  "information": "Afrikaans Clearspeak Logarithms rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Logarithms",
+    "Log001": {
+      "expected": "logaritme x"
+    },
+    "Log002": {
+      "expected": "die logaritme basis 10 van, x"
+    },
+    "Log003": {
+      "expected": "die logaritme basis b van, a x, is gelyk aan, die logaritme basis b van, a, plus, die logaritme basis b van, x"
+    },
+    "Log004": {
+      "expected": "die logaritme basis b van, S oor T, is gelyk aan, die logaritme basis b van, S, minus, die logaritme basis b van, T"
+    },
+    "Log005": {
+      "expected": "die logaritme basis b van, links hakkie, x tot die k-de mag, regs hakkie, is gelyk aan k, die logaritme basis b van, x"
+    },
+    "Log006": {
+      "expected": "10 verhef tot die logaritme basis 10 van, x, mag, is gelyk aan x"
+    },
+    "Log007": {
+      "expected": "die logaritme basis 10 van, 10 tot die x-de mag, is gelyk aan x"
+    },
+    "Log008": {
+      "expected": "10 verhef tot die logaritme basis 10 van, 5, mag, is gelyk aan 5"
+    },
+    "Log009": {
+      "expected": "die logaritme basis 10 van, 10 tot die mag drie, is gelyk aan 3"
+    },
+    "Log010": {
+      "expected": "die logaritme basis a van, x, is gelyk aan, die logaritme basis b van, x, oor, die logaritme basis b van, a"
+    },
+    "Log011": {
+      "expected": "die logaritme basis 10 van, 18, oor, die logaritme basis 10 van, 3, is gelyk aan, die logaritme basis 3 van, 18"
+    },
+    "Log012": {
+      "expected": "logaritme x oor logaritme a"
+    },
+    "Log013": {
+      "expected": "die logaritme van, links hakkie, x plus 1, regs hakkie"
+    },
+    "Log014": {
+      "expected": "die logaritme van, links hakkie, x plus 1, regs hakkie, kwadraat"
+    },
+    "Log015": {
+      "expected": "logaritme x y"
+    },
+    "Log016": {
+      "expected": "die breuk met teller, die logaritme van, links hakkie, x plus 1, regs hakkie, en noemer, die logaritme van, links hakkie, x plus 2, regs hakkie"
+    },
+    "Log017": {
+      "expected": "die breuk met teller, die logaritme basis 6 van, links hakkie, x plus 1, regs hakkie, en noemer, die logaritme basis 6 van, links hakkie, x plus 2, regs hakkie"
+    },
+    "Log018": {
+      "expected": "die breuk met teller logaritme 40 plus logaritme 60, en noemer logaritme 5"
+    },
+    "Log019": {
+      "expected": "die breuk met teller, die logaritme basis 3 van, 40, plus, die logaritme basis 3 van, 60, en noemer, die logaritme basis 3 van, 5"
+    },
+    "Log020": {
+      "expected": "die logaritme van, links hakkie, 3 tot die vierde mag, 12 tot die negende mag, regs hakkie, is gelyk aan 4 logaritme 3, plus 9 logaritme 12"
+    },
+    "Log021": {
+      "expected": "die logaritme van, links hakkie, x oor y, regs hakkie"
+    },
+    "_comment2_": " TODO: Fix the vulgar fraction predicate!",
+    "Log022": {
+      "expected": "die logaritme van, links hakkie, die breuk met teller 3 tot die vierde mag, en noemer 8 tot die tiende mag, regs hakkie, is gelyk aan 4 logaritme 3, minus 10 logaritme 8"
+    },
+    "Log023": {
+      "expected": "10 verhef tot die logaritme x mag"
+    },
+    "NatLog001": {
+      "expected": "l n x"
+    },
+    "NatLog002": {
+      "expected": "l n x, minus l n van, links hakkie, x minus 1, regs hakkie, is gelyk aan l n van, links hakkie, die breuk met teller x, en noemer x minus 1, regs hakkie"
+    },
+    "NatLog003": {
+      "expected": "l n van, links hakkie, e tot die x-de mag, regs hakkie, is gelyk aan x"
+    },
+    "NatLog004": {
+      "expected": "e verhef tot die l n x mag, is gelyk aan x"
+    },
+    "NatLog005": {
+      "expected": "l n van, links hakkie, e tot die x-de mag, regs hakkie, is gelyk aan x"
+    },
+    "NatLog006": {
+      "expected": "e verhef tot die l n 4 mag, is gelyk aan 4"
+    },
+    "NatLog007": {
+      "expected": "l n 40, oor l n 5, is gelyk aan, die logaritme basis 5 van, 40"
+    },
+    "NatLog008": {
+      "expected": "die breuk met teller l n 40, plus l n 60, en noemer l n 5"
+    },
+    "NatLog009": {
+      "expected": "natuurlike logaritme x"
+    },
+    "NatLog010": {
+      "expected": "natuurlike logaritme x, minus, die natuurlike logaritme van, links hakkie, x minus 1, regs hakkie, is gelyk aan, die natuurlike logaritme van, links hakkie, die breuk met teller x, en noemer x minus 1, regs hakkie"
+    },
+    "NatLog011": {
+      "expected": "die natuurlike logaritme van, links hakkie, e tot die x-de mag, regs hakkie, is gelyk aan x"
+    },
+    "NatLog012": {
+      "expected": "e verhef tot die natuurlike logaritme x mag, is gelyk aan x"
+    },
+    "NatLog013": {
+      "expected": "die natuurlike logaritme van, links hakkie, e tot die x-de mag, regs hakkie, is gelyk aan x"
+    },
+    "NatLog014": {
+      "expected": "e verhef tot die natuurlike logaritme 4 mag, is gelyk aan 4"
+    },
+    "NatLog015": {
+      "expected": "natuurlike logaritme 40, oor natuurlike logaritme 5, is gelyk aan, die logaritme basis 5 van, 40"
+    },
+    "NatLog016": {
+      "expected": "die breuk met teller natuurlike logaritme 40, plus natuurlike logaritme 60, en noemer natuurlike logaritme 5"
+    }
+  }
+}

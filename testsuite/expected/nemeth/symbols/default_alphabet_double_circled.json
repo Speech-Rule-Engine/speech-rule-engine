@@ -1,0 +1,44 @@
+{
+  "name": "NemethDefaultAlphabetDoubleCircled",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet double-circled tests.",
+  "tests": {
+    "⓵": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠂⠻⠻"
+    },
+    "⓶": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠆⠻⠻"
+    },
+    "⓷": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠒⠻⠻"
+    },
+    "⓸": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠲⠻⠻"
+    },
+    "⓹": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠢⠻⠻"
+    },
+    "⓺": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠖⠻⠻"
+    },
+    "⓻": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠶⠻⠻"
+    },
+    "⓼": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠦⠻⠻"
+    },
+    "⓽": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠔⠻⠻"
+    },
+    "⓾": {
+      "expected": "⠫⠉⠸⠫⠫⠉⠸⠫⠼⠂⠴⠻⠻"
+    }
+  }
+}

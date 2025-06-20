@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml juxtaposition tests.",
+  "base": "input/semantic/juxtaposition.json"
+}

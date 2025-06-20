@@ -1,0 +1,425 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakRoots",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "English Clearspeak Roots rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "expected": "the square root of 2"
+    },
+    "Root002": {
+      "expected": "3 plus the square root of 2"
+    },
+    "Root003": {
+      "expected": "3 plus or minus the square root of 2"
+    },
+    "Root004": {
+      "expected": "3 minus or plus the square root of 2"
+    },
+    "Root005": {
+      "expected": "the negative square root of 2"
+    },
+    "Root006": {
+      "expected": "3 minus the square root of 2"
+    },
+    "Root007": {
+      "expected": "3 plus the negative square root of 2"
+    },
+    "Root008": {
+      "expected": "3 minus the negative square root of 2"
+    },
+    "Root009": {
+      "expected": "3 plus, open paren, the negative square root of 2, close paren"
+    },
+    "Root010": {
+      "expected": "3 minus, open paren, the negative square root of 2, close paren"
+    },
+    "Root011": {
+      "expected": "the square root of x plus 1"
+    },
+    "Root011a": {
+      "expected": "the square root of x, plus 1"
+    },
+    "Root012": {
+      "expected": "the negative square root of x"
+    },
+    "Root013": {
+      "expected": "open paren, the square root of x, close paren, squared"
+    },
+    "Root014": {
+      "expected": "negative, open paren, the square root of x, close paren, squared"
+    },
+    "Root015": {
+      "expected": "the square root of x, squared"
+    },
+    "Root016": {
+      "expected": "the square root of x squared"
+    },
+    "Root017": {
+      "expected": "the square root of x squared plus y squared"
+    },
+    "Root018": {
+      "expected": "the square root of, x sub 1, squared plus, x sub 2, squared"
+    },
+    "Root019": {
+      "expected": "the square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared"
+    },
+    "Root020": {
+      "expected": "the square root of one half"
+    },
+    "Root021": {
+      "expected": "the square root of, 23 over 66"
+    },
+    "Root022": {
+      "expected": "the square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5"
+    },
+    "Root023": {
+      "expected": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, and denominator 2 a"
+    },
+    "Root024": {
+      "expected": "the positive square root of 2"
+    },
+    "Root025": {
+      "expected": "3 plus the positive square root of 2"
+    },
+    "Root026": {
+      "expected": "3 plus or minus the square root of 2"
+    },
+    "Root027": {
+      "expected": "3 minus or plus the square root of 2"
+    },
+    "Root028": {
+      "expected": "the negative square root of 2"
+    },
+    "Root029": {
+      "expected": "3 minus the positive square root of 2"
+    },
+    "Root030": {
+      "expected": "3 plus the negative square root of 2"
+    },
+    "Root031": {
+      "expected": "3 minus the negative square root of 2"
+    },
+    "Root032": {
+      "expected": "3 plus, open paren, the negative square root of 2, close paren"
+    },
+    "Root033": {
+      "expected": "3 minus, open paren, the negative square root of 2, close paren"
+    },
+    "Root034": {
+      "expected": "the positive square root of x plus 1"
+    },
+    "Root034a": {
+      "expected": "the positive square root of x, plus 1"
+    },
+    "Root035": {
+      "expected": "the negative square root of x"
+    },
+    "Root036": {
+      "expected": "open paren, the positive square root of x, close paren, squared"
+    },
+    "Root037": {
+      "expected": "open paren, the negative square root of x, close paren, squared"
+    },
+    "Root038": {
+      "expected": "negative, open paren, the positive square root of x, close paren, squared"
+    },
+    "Root039": {
+      "expected": "the positive square root of x, squared"
+    },
+    "Root040": {
+      "expected": "the positive square root of x squared"
+    },
+    "Root041": {
+      "expected": "the positive square root of x squared plus y squared"
+    },
+    "Root042": {
+      "expected": "the positive square root of, x sub 1, squared plus, x sub 2, squared"
+    },
+    "Root043": {
+      "expected": "the positive square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared"
+    },
+    "Root044": {
+      "expected": "the positive square root of one half"
+    },
+    "Root045": {
+      "expected": "the positive square root of, 23 over 66"
+    },
+    "Root046": {
+      "expected": "the positive square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5"
+    },
+    "Root047": {
+      "expected": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, and denominator 2 a"
+    },
+    "Root048": {
+      "expected": "the square root of 2, end root"
+    },
+    "Root049": {
+      "expected": "3 plus the square root of 2, end root"
+    },
+    "Root050": {
+      "expected": "3 plus or minus the square root of 2, end root"
+    },
+    "Root051": {
+      "expected": "3 minus or plus the square root of 2, end root"
+    },
+    "Root052": {
+      "expected": "the negative square root of 2, end root"
+    },
+    "Root053": {
+      "expected": "3 minus the square root of 2, end root"
+    },
+    "Root054": {
+      "expected": "3 plus the negative square root of 2, end root"
+    },
+    "Root055": {
+      "expected": "3 minus the negative square root of 2, end root"
+    },
+    "Root056": {
+      "expected": "3 plus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root057": {
+      "expected": "3 minus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root058": {
+      "expected": "the square root of x plus 1, end root"
+    },
+    "Root058a": {
+      "expected": "the square root of x, end root, plus 1"
+    },
+    "Root059": {
+      "expected": "the negative square root of x, end root"
+    },
+    "Root060": {
+      "expected": "open paren, the square root of x, end root, close paren, squared"
+    },
+    "Root061": {
+      "expected": "negative, open paren, the square root of x, end root, close paren, squared"
+    },
+    "Root062": {
+      "expected": "the square root of x, end root, squared"
+    },
+    "Root063": {
+      "expected": "the square root of x squared, end root"
+    },
+    "Root064": {
+      "expected": "the square root of x squared plus y squared, end root"
+    },
+    "Root065": {
+      "expected": "the square root of, x sub 1, squared plus, x sub 2, squared, end root"
+    },
+    "Root066": {
+      "expected": "the square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared, end root"
+    },
+    "Root067": {
+      "expected": "the square root of one half, end root"
+    },
+    "Root068": {
+      "expected": "the square root of, 23 over 66, end root"
+    },
+    "Root069": {
+      "expected": "the square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5, end root"
+    },
+    "Root070": {
+      "expected": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, end root, and denominator 2 a"
+    },
+    "Root071": {
+      "expected": "the positive square root of 2, end root"
+    },
+    "Root072": {
+      "expected": "3 plus the positive square root of 2, end root"
+    },
+    "Root073": {
+      "expected": "3 plus or minus the square root of 2, end root"
+    },
+    "Root074": {
+      "expected": "3 minus or plus the square root of 2, end root"
+    },
+    "Root075": {
+      "expected": "the negative square root of 2, end root"
+    },
+    "Root076": {
+      "expected": "3 minus the positive square root of 2, end root"
+    },
+    "Root077": {
+      "expected": "3 plus the negative square root of 2, end root"
+    },
+    "Root078": {
+      "expected": "3 minus the negative square root of 2, end root"
+    },
+    "Root079": {
+      "expected": "3 plus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root080": {
+      "expected": "3 minus, open paren, the negative square root of 2, end root, close paren"
+    },
+    "Root081": {
+      "expected": "the positive square root of x plus 1, end root"
+    },
+    "Root081a": {
+      "expected": "the positive square root of x, end root, plus 1"
+    },
+    "Root082": {
+      "expected": "the negative square root of x, end root"
+    },
+    "Root083": {
+      "expected": "open paren, the positive square root of x, end root, close paren, squared"
+    },
+    "Root084": {
+      "expected": "open paren, the negative square root of x, end root, close paren, squared"
+    },
+    "Root085": {
+      "expected": "the positive square root of x, end root, squared"
+    },
+    "Root086": {
+      "expected": "the positive square root of x squared, end root"
+    },
+    "Root087": {
+      "expected": "the positive square root of x squared plus y squared, end root"
+    },
+    "Root088": {
+      "expected": "the positive square root of, x sub 1, squared plus, x sub 2, squared, end root"
+    },
+    "Root089": {
+      "expected": "the positive square root of, open paren, x sub 2, minus, x sub 1, close paren, squared plus, open paren, y sub 2, minus, y sub 1, close paren, squared, end root"
+    },
+    "Root090": {
+      "expected": "the positive square root of one half, end root"
+    },
+    "Root091": {
+      "expected": "the positive square root of, 23 over 66, end root"
+    },
+    "Root092": {
+      "expected": "the positive square root of, the fraction with numerator x plus 1, and denominator 2 x, plus 5, end root"
+    },
+    "Root093": {
+      "expected": "the fraction with numerator negative b plus or minus the square root of b squared minus 4 a c, end root, and denominator 2 a"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "expected": "the cube root of y"
+    },
+    "HighRoot002": {
+      "expected": "the fourth root of n"
+    },
+    "HighRoot003": {
+      "expected": "the fifth root of 35"
+    },
+    "HighRoot004": {
+      "expected": "the ninth root of 146"
+    },
+    "HighRoot005": {
+      "expected": "the n-th root of d"
+    },
+    "HighRoot006": {
+      "expected": "the m-th root of 243"
+    },
+    "HighRoot007": {
+      "expected": "the i-th root of 2 to the i-th power"
+    },
+    "HighRoot008": {
+      "expected": "the j-th root of 125"
+    },
+    "HighRoot009": {
+      "expected": "negative the cube root of y"
+    },
+    "HighRoot010": {
+      "expected": "negative the fourth root of n"
+    },
+    "HighRoot011": {
+      "expected": "the cube root of y, end root"
+    },
+    "HighRoot012": {
+      "expected": "the fourth root of n, end root"
+    },
+    "HighRoot013": {
+      "expected": "the fifth root of 35, end root"
+    },
+    "HighRoot014": {
+      "expected": "the ninth root of 146, end root"
+    },
+    "HighRoot015": {
+      "expected": "the n-th root of d, end root"
+    },
+    "HighRoot016": {
+      "expected": "the m-th root of 243, end root"
+    },
+    "HighRoot017": {
+      "expected": "the i-th root of 2 to the i-th power, end root"
+    },
+    "HighRoot018": {
+      "expected": "the j-th root of 125, end root"
+    },
+    "HighRoot019": {
+      "expected": "negative the cube root of y, end root"
+    },
+    "HighRoot020": {
+      "expected": "negative the fourth root of n, end root"
+    },
+    "HighRoot021": {
+      "expected": "the cube root of y"
+    },
+    "HighRoot022": {
+      "expected": "the fourth root of n"
+    },
+    "HighRoot023": {
+      "expected": "the fifth root of 35"
+    },
+    "HighRoot024": {
+      "expected": "the ninth root of 146"
+    },
+    "HighRoot025": {
+      "expected": "the n-th root of d"
+    },
+    "HighRoot026": {
+      "expected": "the m-th root of 243"
+    },
+    "HighRoot027": {
+      "expected": "the i-th root of 2 to the i-th power"
+    },
+    "HighRoot028": {
+      "expected": "the j-th root of 125"
+    },
+    "HighRoot029": {
+      "expected": "negative the cube root of y"
+    },
+    "HighRoot030": {
+      "expected": "negative the fourth root of n"
+    },
+    "HighRoot031": {
+      "expected": "the cube root of y, end root"
+    },
+    "HighRoot032": {
+      "expected": "the fourth root of n, end root"
+    },
+    "HighRoot033": {
+      "expected": "the fifth root of 35, end root"
+    },
+    "HighRoot034": {
+      "expected": "the ninth root of 146, end root"
+    },
+    "HighRoot035": {
+      "expected": "the n-th root of d, end root"
+    },
+    "HighRoot036": {
+      "expected": "the m-th root of 243, end root"
+    },
+    "HighRoot037": {
+      "expected": "the i-th root of 2 to the i-th power, end root"
+    },
+    "HighRoot038": {
+      "expected": "the j-th root of 125, end root"
+    },
+    "HighRoot039": {
+      "expected": "negative the cube root of y, end root"
+    },
+    "HighRoot040": {
+      "expected": "negative the fourth root of n, end root"
+    }
+  }
+}

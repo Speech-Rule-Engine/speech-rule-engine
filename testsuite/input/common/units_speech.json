@@ -1,0 +1,489 @@
+{
+  "tests": {
+    "UnitSquare_0_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>2</mn></msup>",
+      "preference": "default"
+    },
+    "UnitSquare_0_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>2</mn></msup>",
+      "preference": "brief"
+    },
+    "UnitSquare_0_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>2</mn></msup>",
+      "preference": "sbrief"
+    },
+    "UnitSquare_1_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">s</mi><mn>2</mn></msup>",
+      "preference": "default"
+    },
+    "UnitSquare_1_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">s</mi><mn>2</mn></msup>",
+      "preference": "brief"
+    },
+    "UnitSquare_1_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">s</mi><mn>2</mn></msup>",
+      "preference": "sbrief"
+    },
+    "UnitSquare_2_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">m</mi><mn>2</mn></msup>",
+      "preference": "default"
+    },
+    "UnitSquare_2_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">m</mi><mn>2</mn></msup>",
+      "preference": "brief"
+    },
+    "UnitSquare_2_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">m</mi><mn>2</mn></msup>",
+      "preference": "sbrief"
+    },
+    "UnitCube_0_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>3</mn></msup>",
+      "preference": "default"
+    },
+    "UnitCube_0_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>3</mn></msup>",
+      "preference": "brief"
+    },
+    "UnitCube_0_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>3</mn></msup>",
+      "preference": "sbrief"
+    },
+    "UnitCube_1_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">s</mi><mn>3</mn></msup>",
+      "preference": "default"
+    },
+    "UnitCube_1_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">s</mi><mn>3</mn></msup>",
+      "preference": "brief"
+    },
+    "UnitCube_1_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">s</mi><mn>3</mn></msup>",
+      "preference": "sbrief"
+    },
+    "UnitCube_2_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">m</mi><mn>3</mn></msup>",
+      "preference": "default"
+    },
+    "UnitCube_2_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">m</mi><mn>3</mn></msup>",
+      "preference": "brief"
+    },
+    "UnitCube_2_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">m</mi><mn>3</mn></msup>",
+      "preference": "sbrief"
+    },
+    "UnitInverse_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitInverse_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "brief"
+    },
+    "UnitInverse_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "sbrief"
+    },
+    "UnitDoubleInverse_default": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><msup><mi class=\"MathML-Unit\">mm</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitDoubleInverse_brief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><msup><mi class=\"MathML-Unit\">mm</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "brief"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><msup><mi class=\"MathML-Unit\">mm</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "sbrief"
+    },
+    "UnitDivide_default": {
+      "input": "<mfrac><mi class=\"MathML-Unit\">in</mi><mi class=\"MathML-Unit\">mm</mi></mfrac>",
+      "preference": "default"
+    },
+    "UnitDivide_brief": {
+      "input": "<mfrac><mi class=\"MathML-Unit\">in</mi><mi class=\"MathML-Unit\">mm</mi></mfrac>",
+      "preference": "brief"
+    },
+    "UnitDivide_sbrief": {
+      "input": "<mfrac><mi class=\"MathML-Unit\">in</mi><mi class=\"MathML-Unit\">mm</mi></mfrac>",
+      "preference": "sbrief"
+    },
+    "UnitsSingle_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>",
+      "preference": "default"
+    },
+    "UnitsSingle_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">A</mi>",
+      "preference": "default"
+    },
+    "UnitsSingle_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">Ω</mi>",
+      "preference": "default"
+    },
+    "UnitsSingle_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">kΩ</mi>",
+      "preference": "default"
+    },
+    "UnitsSingle_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">°C</mi>",
+      "preference": "default"
+    },
+    "UnitsSimple_0": {
+      "test": true,
+      "input": "<mi>min</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">min</mi>",
+      "preference": "default"
+    },
+    "UnitsSimple_1": {
+      "test": true,
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>",
+      "preference": "default"
+    },
+    "UnitsSimple_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_0": {
+      "test": true,
+      "input": "<msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>2</mn></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_1": {
+      "test": true,
+      "input": "<msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>3</mn></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_2": {
+      "test": true,
+      "input": "<msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>4</mn></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_3": {
+      "test": true,
+      "input": "<msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_5": {
+      "test": true,
+      "input": "<msup><mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mfrac><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_6": {
+      "test": true,
+      "input": "<msup><mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mfrac><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_7": {
+      "test": true,
+      "input": "<mn>3</mn><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_8": {
+      "test": true,
+      "input": "<mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi></mfrac>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_9": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">N</mi><mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi></mfrac>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_10": {
+      "test": true,
+      "input": "<mfrac><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi></mfrac>",
+      "preference": "default"
+    },
+    "UnitsSuperscript_11": {
+      "test": true,
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>",
+      "preference": "default"
+    },
+    "UnitsExpressions_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>",
+      "preference": "default"
+    },
+    "UnitsExpressions_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi>",
+      "preference": "default"
+    },
+    "UnitsExpressions_2": {
+      "test": true,
+      "input": "<mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi><mfrac><mi>N</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mfrac>",
+      "preference": "default"
+    },
+    "UnitsExpressions_3": {
+      "test": true,
+      "input": "<mn>3</mn><mi>m</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">h</mi><mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">N</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mfrac>",
+      "preference": "default"
+    },
+    "UnitPlural_1": {
+      "preference": "default",
+      "input": "<mn>4</mn><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "UnitPlural_2": {
+      "preference": "default",
+      "input": "<mn>1</mn><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "UnitPlural_3": {
+      "preference": "default",
+      "input": "<mn>4</mn><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "UnitPlural_4": {
+      "preference": "default",
+      "input": "<mn>1</mn><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "UnitCombine_0": {
+      "preference": "default",
+      "input": "<mi class=\"MathML-Unit\">m</mi><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">s</mi>"
+    },
+    "UnitCombine_1": {
+      "preference": "default",
+      "input": "<mi>m</mi><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">s</mi>"
+    },
+    "UnitCombine_2": {
+      "preference": "default",
+      "input": "<mi class=\"MathML-Unit\">m</mi><mo>&InvisibleTimes;</mo><mi>s</mi>"
+    },
+    "UnitCombine_3": {
+      "preference": "default",
+      "input": "<mi class=\"MathML-Unit\">m</mi><mi class=\"MathML-Unit\">s</mi>"
+    },
+    "UnitCombine_4": {
+      "preference": "default",
+      "input": "<mi>m</mi><mi class=\"MathML-Unit\">s</mi>"
+    },
+    "UnitCombine_5": {
+      "preference": "default",
+      "input": "<mi class=\"MathML-Unit\">m</mi><mi>s</mi>"
+    },
+    "UnitCombine_6": {
+      "preference": "default",
+      "input": "<mi class=\"MathML-Unit\">m</mi><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">s</mi><mi class=\"MathML-Unit\">l</mi>"
+    },
+    "issue_364_1": {
+      "input": "<mrow><mn>63360</mn><mi class=\"MathML-Unit\">in</mi></mrow><mo>=</mo><mrow><mn>63360</mn><mi class=\"MathML-Unit\">in.</mi></mrow><mo>=</mo><mrow><msup><mn>63360</mn><mo>&Prime;</mo></msup></mrow><mo>=</mo><mrow><mn>63360</mn><mi class=\"MathML-Unit\">inches</mi></mrow><mo>=</mo><mrow><mn>5280</mn><mi class=\"MathML-Unit\">ft</mi></mrow><mo>=</mo><mrow><mn>5280</mn><mi class=\"MathML-Unit\">ft.</mi></mrow><mo>=</mo><mrow><msup><mn>5280</mn><mo>&prime;</mo></msup></mrow><mo>=</mo><mrow><mn>5280</mn><mi class=\"MathML-Unit\">feet</mi></mrow><mo>=</mo><mrow><mn>1760</mn><mi class=\"MathML-Unit\">yd</mi></mrow><mo>=</mo><mrow><mn>1760</mn><mi class=\"MathML-Unit\">yd.</mi></mrow><mo>=</mo><mrow><mn>1760</mn><mi class=\"MathML-Unit\">yards</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mi</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mi.</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mile</mi></mrow>",
+      "preference": "default"
+    },
+    "issue_364_2": {
+      "_comment0_": "Imperial Survey Units of Length (US)",
+      "input": "<mrow><mn>8000</mn><mi class=\"MathML-Unit\">li</mi></mrow><mo>=</mo><mrow><mn>8000</mn><mi class=\"MathML-Unit\">li.</mi></mrow><mo>=</mo><mrow><mn>8000</mn><mi class=\"MathML-Unit\">links</mi></mrow><mo>=</mo><mrow><mn>320</mn><mi class=\"MathML-Unit\">rd</mi></mrow><mo>=</mo><mrow><mn>320</mn><mi class=\"MathML-Unit\">rd.</mi></mrow><mo>=</mo><mrow><mn>320</mn><mi class=\"MathML-Unit\">rods</mi></mrow><mo>=</mo><mrow><mn>80</mn><mi class=\"MathML-Unit\">ch</mi></mrow><mo>=</mo><mrow><mn>80</mn><mi class=\"MathML-Unit\">ch.</mi></mrow><mo>=</mo><mrow><mn>80</mn><mi class=\"MathML-Unit\">chains</mi></mrow><mo>=</mo><mrow><mn>8</mn><mi class=\"MathML-Unit\">fur</mi></mrow><mo>=</mo><mrow><mn>8</mn><mi class=\"MathML-Unit\">fur.</mi></mrow><mo>=</mo><mrow><mn>8</mn><mi class=\"MathML-Unit\">furlongs</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mi</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mi.</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mile</mi></mrow>",
+      "preference": "default"
+    },
+
+    "issue_364_3": {
+      "_comment1_": "Imperial Units of Area (US)",
+      "input": "<mrow><mn>43560</mn><mi class=\"MathML-Unit\">sq ft</mi></mrow><mo>=</mo><mrow><mn>43560</mn><mi class=\"MathML-Unit\">sq. ft.</mi></mrow><mo>=</mo><mrow><mn>43560</mn><msup><mi class=\"MathML-Unit\">ft</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><msup><mn>43560</mn><mo>&prime;</mo></msup><mn>2</mn></msup></mrow><mo>=</mo><mrow><mn>43560</mn><mi class=\"MathML-Unit\">square feet</mi></mrow><mo>=</mo><mrow><mn>4840</mn><mi class=\"MathML-Unit\">sq yd</mi></mrow><mo>=</mo><mrow><mn>4840</mn><mi class=\"MathML-Unit\">sq. yd.</mi></mrow><mo>=</mo><mrow><mn>4840</mn><msup><mi class=\"MathML-Unit\">yd</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mn>4840</mn><mi class=\"MathML-Unit\">square yards</mi></mrow><mo>=</mo><mrow><mn>160</mn><mi class=\"MathML-Unit\">sq rd</mi></mrow><mo>=</mo><mrow><mn>160</mn><mi class=\"MathML-Unit\">sq. rd.</mi></mrow><mo>=</mo><mrow><mn>160</mn><msup><mi class=\"MathML-Unit\">rd</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mn>160</mn><mi class=\"MathML-Unit\">square rods</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">ac</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">ac.</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">acre</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>640</mn></mfrac><mi class=\"MathML-Unit\">sq mi</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>640</mn></mfrac><mi class=\"MathML-Unit\">sq. mi.</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>640</mn></mfrac><msup><mi class=\"MathML-Unit\">mi</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>640</mn></mfrac><mi class=\"MathML-Unit\">square miles</mi></mrow>",
+      "preference": "default"
+    },
+    "issue_364_4": {
+      "_comment2_": "Imperial Units of Dry Volume (US)",
+      "input": "<mrow><mn>46656</mn><mi class=\"MathML-Unit\">cu in</mi></mrow><mo>=</mo><mrow><mn>46656</mn><mi class=\"MathML-Unit\">cu. in.</mi></mrow><mo>=</mo><mrow><mn>46656</mn><msup><mi class=\"MathML-Unit\">in</mi><mn>3</mn></msup></mrow><mo>=</mo><mrow><msup><msup><mn>46656</mn><mo>&Prime;</mo></msup><mn>3</mn></msup></mrow><mo>=</mo><mrow><mn>46656</mn><mi class=\"MathML-Unit\">cubic inches</mi></mrow><mo>=</mo><mrow><mn>27</mn><mi class=\"MathML-Unit\">cu ft</mi></mrow><mo>=</mo><mrow><mn>27</mn><mi class=\"MathML-Unit\">cu. ft.</mi></mrow><mo>=</mo><mrow><mn>27</mn><msup><mi class=\"MathML-Unit\">ft</mi><mn>3</mn></msup></mrow><mo>=</mo><mrow><msup><msup><mn>27</mn><mo>&prime;</mo></msup><mn>3</mn></msup></mrow><mo>=</mo><mrow><mn>27</mn><mi class=\"MathML-Unit\">cubic feet</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">cu yd</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">cu. yd.</mi></mrow><mo>=</mo><mrow><mn>1</mn><msup><mi class=\"MathML-Unit\">yd</mi><mn>3</mn></msup></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">cubic yard</mi></mrow>",
+      "preference": "default"
+    },
+    "issue_364_5": {
+      "input": "<mrow><mn>1024</mn><mi class=\"MathML-Unit\">fl dr</mi></mrow><mo>=</mo><mrow><mn>1024</mn><mi class=\"MathML-Unit\">fl. dr.</mi></mrow><mo>=</mo><mrow><mn>1024</mn><mi class=\"MathML-Unit\">fluid drams</mi></mrow><mo>=</mo><mrow><mn>768</mn><mi class=\"MathML-Unit\">tsp</mi></mrow><mo>=</mo><mrow><mn>768</mn><mi class=\"MathML-Unit\">tsp.</mi></mrow><mo>=</mo><mrow><mn>768</mn><mi class=\"MathML-Unit\">teaspoons</mi></mrow><mo>=</mo><mrow><mn>256</mn><mi class=\"MathML-Unit\">Tbsp</mi></mrow><mo>=</mo><mrow><mn>256</mn><mi class=\"MathML-Unit\">Tbsp.</mi></mrow><mo>=</mo><mrow><mn>256</mn><mi class=\"MathML-Unit\">tablespoons</mi></mrow><mo>=</mo><mrow><mn>128</mn><mi class=\"MathML-Unit\">fl oz</mi></mrow><mo>=</mo><mrow><mn>128</mn><mi class=\"MathML-Unit\">fl. oz.</mi></mrow><mo>=</mo><mrow><mn>128</mn><mi class=\"MathML-Unit\">fluid ounces</mi></mrow><mo>=</mo><mrow><mn>16</mn><mi class=\"MathML-Unit\">cp</mi></mrow><mo>=</mo><mrow><mn>16</mn><mi class=\"MathML-Unit\">cp.</mi></mrow><mo>=</mo><mrow><mn>16</mn><mi class=\"MathML-Unit\">cups</mi></mrow><mo>=</mo><mrow><mn>8</mn><mi class=\"MathML-Unit\">pt</mi></mrow><mo>=</mo><mrow><mn>8</mn><mi class=\"MathML-Unit\">pt.</mi></mrow><mo>=</mo><mrow><mn>8</mn><mi class=\"MathML-Unit\">pints</mi></mrow><mo>=</mo><mrow><mn>4</mn><mi class=\"MathML-Unit\">qt</mi></mrow><mo>=</mo><mrow><mn>4</mn><mi class=\"MathML-Unit\">qt.</mi></mrow><mo>=</mo><mrow><mn>4</mn><mi class=\"MathML-Unit\">quarts</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">gal</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">gal.</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">gallon</mi></mrow>",
+      "preference": "default"
+    },
+    "issue_364_6": {
+      "input": "<mrow><mn>256</mn><mi class=\"MathML-Unit\">dr</mi></mrow><mo>=</mo><mrow><mn>256</mn><mi class=\"MathML-Unit\">dr.</mi></mrow><mo>=</mo><mrow><mn>256</mn><mi class=\"MathML-Unit\">drams</mi></mrow><mo>=</mo><mrow><mn>16</mn><mi class=\"MathML-Unit\">oz</mi></mrow><mo>=</mo><mrow><mn>16</mn><mi class=\"MathML-Unit\">oz.</mi></mrow><mo>=</mo><mrow><mn>16</mn><mi class=\"MathML-Unit\">ounces</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">#</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">lb</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">lb.</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">pounds</mi></mrow><mo>=</mo><mrow><mn>100</mn><mi class=\"MathML-Unit\">cwt</mi></mrow><mo>=</mo><mrow><mn>100</mn><mi class=\"MathML-Unit\">cwt.</mi></mrow><mo>=</mo><mrow><mn>100</mn><mi class=\"MathML-Unit\">hundredweights</mi></mrow><mo>=</mo><mrow><mn>2000</mn><mi class=\"MathML-Unit\">tons</mi></mrow>",
+      "preference": "default"
+    },
+    "issue_366": {
+      "input": "<mrow><mn>63360</mn><mi class=\"MathML-Unit\">in</mi></mrow><mo>=</mo><mrow><mn>63360</mn><mi class=\"MathML-Unit\">in.</mi></mrow><mo>=</mo><mrow><msup><mn>63360</mn><mo>&Prime;</mo></msup></mrow><mo>=</mo><mrow><mn>63360</mn><mi class=\"MathML-Unit\">inches</mi></mrow><mo>=</mo><mrow><mn>5280</mn><mi class=\"MathML-Unit\">ft</mi></mrow><mo>=</mo><mrow><mn>5280</mn><mi class=\"MathML-Unit\">ft.</mi></mrow><mo>=</mo><mrow><msup><mn>5280</mn><mo>&prime;</mo></msup></mrow><mo>=</mo><mrow><mn>5280</mn><mi class=\"MathML-Unit\">feet</mi></mrow><mo>=</mo><mrow><mn>1760</mn><mi class=\"MathML-Unit\">yd</mi></mrow><mo>=</mo><mrow><mn>1760</mn><mi class=\"MathML-Unit\">yd.</mi></mrow><mo>=</mo><mrow><mn>1760</mn><mi class=\"MathML-Unit\">yards</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mi</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mi.</mi></mrow><mo>=</mo><mrow><mn>1</mn><mi class=\"MathML-Unit\">mile</mi></mrow>",
+      "preference": "default"
+    },
+    "testSample_13_1_2_var0": {
+      "_comment3_": "Variations of the standard Mathspeak test.",
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
+      "preference": "default"
+    },
+    "testSample_13_1_2_var1": {
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
+      "preference": "default"
+    },
+    "testSample_13_1_2_var2": {
+      "input": "<mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi><mo>=</mo><mn>1</mn><mo>·</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup><mo>·</mo><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>",
+      "preference": "default"
+    },
+    "unit_cube": {
+      "input": "<msup><mi class=\"MathML-Unit\">in</mi><mn>3</mn></msup>",
+      "preference": "default"
+    },
+    "UnitDiv_0": {
+      "input": "<mfrac><mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mrow><mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "UnitDiv_1": {
+      "input": "<mfrac><mrow><mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mrow><mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "UnitDiv_2": {
+      "input": "<mfrac><mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mrow><mrow><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "UnitDiv_3": {
+      "input": "<mfrac><mrow><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup></mrow><mrow><mn>5</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "UnitKm": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>",
+      "preference": "default"
+    },
+    "UnitLong_1": {
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi>",
+      "preference": "default"
+    },
+    "UnitLong_2": {
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi>",
+      "preference": "default"
+    },
+    "UnitLong_3": {
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>4</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi>",
+      "preference": "default"
+    },
+    "UnitLong_4": {
+      "input": "<mn>3</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mn>2</mn></msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">J</mi>",
+      "preference": "default"
+    },
+    "UnitMultiple": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo>",
+      "preference": "default"
+    },
+    "UnitMultitude": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>",
+      "preference": "default"
+    },
+    "UnitNumb_0": {
+      "input": "<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi>",
+      "preference": "default"
+    },
+    "UnitNumb_1": {
+      "input": "<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>",
+      "preference": "default"
+    },
+    "UnitNumb_2": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi>",
+      "preference": "default"
+    },
+    "UnitTriple": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">km</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">kg</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">s</mi><mo>+</mo>",
+      "preference": "default"
+    },
+    "CurrencySingular_0_default": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "default"
+    },
+    "CurrencySingular_0_Currency_Position": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Position"
+    },
+    "CurrencySingular_0_Currency_Prefix": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencySingular_1_default": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>1</mn>",
+      "preference": "default"
+    },
+    "CurrencySingular_1_Currency_Position": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>1</mn>",
+      "preference": "Currency_Position"
+    },
+    "CurrencySingular_1_Currency_Prefix": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>1</mn>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencySingle_0_default": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "default"
+    },
+    "CurrencySingle_0_Currency_Position": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Position"
+    },
+    "CurrencySingle_0_Currency_Prefix": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencySingle_1_default": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "default"
+    },
+    "CurrencySingle_1_Currency_Position": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Position"
+    },
+    "CurrencySingle_1_Currency_Prefix": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencyPlural_0_default": {
+      "input": "<mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "default"
+    },
+    "CurrencyPlural_0_Currency_Position": {
+      "input": "<mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Position"
+    },
+    "CurrencyPlural_0_Currency_Prefix": {
+      "input": "<mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencyPlural_1_default": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>2</mn>",
+      "preference": "default"
+    },
+    "CurrencyPlural_1_Currency_Position": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>2</mn>",
+      "preference": "Currency_Position"
+    },
+    "CurrencyPlural_1_Currency_Prefix": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>2</mn>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencyMultitude_0_default": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "default"
+    },
+    "CurrencyMultitude_0_Currency_Position": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Position"
+    },
+    "CurrencyMultitude_0_Currency_Prefix": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencyMultitude_1_default": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>2</mn><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mi>a</mi>",
+      "preference": "default"
+    },
+    "CurrencyMultitude_1_Currency_Position": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>2</mn><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mi>a</mi>",
+      "preference": "Currency_Position"
+    },
+    "CurrencyMultitude_1_Currency_Prefix": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mn>2</mn><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mo>+</mo><mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi><mi>a</mi>",
+      "preference": "Currency_Prefix"
+    },
+    "CurrencyMultitude_2_default": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">€</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">€</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">€</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">€</mi>",
+      "preference": "default"
+    },
+    "CurrencyMultitude_3_default": {
+      "input": "<mn>1</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">￡</mi><mo>+</mo><mn>2</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">￡</mi><mo>+</mo><mn>0</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">￡</mi><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\" class=\"MathML-Unit\">￡</mi>",
+      "preference": "default"
+    }
+  }
+}

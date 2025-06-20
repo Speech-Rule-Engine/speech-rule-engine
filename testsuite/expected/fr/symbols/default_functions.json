@@ -1,0 +1,287 @@
+{
+  "name": "FrenchDefaultFunction",
+  "locale": "fr",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsFrench",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "French Default Function tests.",
+  "tests": {
+    "deg": {
+      "expected": "degré"
+    },
+    "Deg": {
+      "expected": "degré"
+    },
+    "det": {
+      "expected": "déterminant"
+    },
+    "Det": {
+      "expected": "déterminant"
+    },
+    "dim": {
+      "expected": "dimension"
+    },
+    "Dim": {
+      "expected": "dimension"
+    },
+    "hom": {
+      "expected": "homomorphisme"
+    },
+    "Hom": {
+      "expected": "homomorphisme"
+    },
+    "HOM": {
+      "expected": "homomorphisme"
+    },
+    "ker": {
+      "expected": "noyau"
+    },
+    "Ker": {
+      "expected": "noyau"
+    },
+    "Tr": {
+      "expected": "trace"
+    },
+    "tr": {
+      "expected": "trace"
+    },
+    "log": {
+      "expected": "log"
+    },
+    "ln": {
+      "expected": "logarithme népérien"
+    },
+    "lg": {
+      "expected": "logarithme décimal"
+    },
+    "exp": {
+      "expected": "exponentielle"
+    },
+    "expt": {
+      "expected": "exponentielle"
+    },
+    "gcd": {
+      "expected": "pgcd"
+    },
+    "GCD": {
+      "expected": "pgcd"
+    },
+    "lcm": {
+      "expected": "ppcm"
+    },
+    "LCM": {
+      "expected": "ppcm"
+    },
+    "arg": {
+      "expected": "argument"
+    },
+    "Arg": {
+      "expected": "argument"
+    },
+    "im": {
+      "expected": "partie imaginaire"
+    },
+    "Im": {
+      "expected": "partie imaginaire"
+    },
+    "re": {
+      "expected": "partie réelle"
+    },
+    "Re": {
+      "expected": "partie réelle"
+    },
+    "inf": {
+      "expected": "borne inférieure"
+    },
+    "Inf": {
+      "expected": "borne inférieure"
+    },
+    "lim": {
+      "expected": "limite"
+    },
+    "lim inf": {
+      "expected": "limite inferior"
+    },
+    "liminf": {
+      "expected": "limite inferior"
+    },
+    "lim sup": {
+      "expected": "limite superior"
+    },
+    "limsup": {
+      "expected": "limite superior"
+    },
+    "max": {
+      "expected": "maximum"
+    },
+    "Max": {
+      "expected": "maximum"
+    },
+    "min": {
+      "expected": "minimum"
+    },
+    "Min": {
+      "expected": "minimum"
+    },
+    "sup": {
+      "expected": "borne supérieure"
+    },
+    "Sup": {
+      "expected": "borne supérieure"
+    },
+    "injlim": {
+      "expected": "limite inductive"
+    },
+    "inj lim": {
+      "expected": "limite inductive"
+    },
+    "projlim": {
+      "expected": "limite projective"
+    },
+    "proj lim": {
+      "expected": "limite projective"
+    },
+    "mod": {
+      "expected": "modulo"
+    },
+    "Pr": {
+      "expected": "probabilité"
+    },
+    "cosh": {
+      "expected": "cosinus hyperbolique"
+    },
+    "coth": {
+      "expected": "cotangente hyperbolique"
+    },
+    "csch": {
+      "expected": "cosécante hyperbolique"
+    },
+    "sech": {
+      "expected": "sécante hyperbolique"
+    },
+    "sinh": {
+      "expected": "sinus hyperbolique"
+    },
+    "tanh": {
+      "expected": "tangente hyperbolique"
+    },
+    "arcosh": {
+      "expected": "argument cosinus hyperbolique"
+    },
+    "arccosh": {
+      "expected": "argument cosinus hyperbolique"
+    },
+    "arcoth": {
+      "expected": "argument cotangente hyperbolique"
+    },
+    "arccoth": {
+      "expected": "argument cotangente hyperbolique"
+    },
+    "arcsch": {
+      "expected": "argument cosécante hyperbolique"
+    },
+    "arccsch": {
+      "expected": "argument cosécante hyperbolique"
+    },
+    "arsech": {
+      "expected": "argument sécante hyperbolique"
+    },
+    "arcsech": {
+      "expected": "argument sécante hyperbolique"
+    },
+    "arsinh": {
+      "expected": "argument sinus hyperbolique"
+    },
+    "arcsinh": {
+      "expected": "argument sinus hyperbolique"
+    },
+    "artanh": {
+      "expected": "argument tangente hyperbolique"
+    },
+    "arctanh": {
+      "expected": "argument tangente hyperbolique"
+    },
+    "cos": {
+      "expected": "cosinus"
+    },
+    "cosine": {
+      "expected": "cosinus"
+    },
+    "cot": {
+      "expected": "cotangente"
+    },
+    "csc": {
+      "expected": "cosécante"
+    },
+    "sec": {
+      "expected": "sécante"
+    },
+    "sin": {
+      "expected": "sinus"
+    },
+    "sine": {
+      "expected": "sinus"
+    },
+    "tan": {
+      "expected": "tangente"
+    },
+    "arccos": {
+      "expected": "arc cosinus"
+    },
+    "arccot": {
+      "expected": "arc cotangente"
+    },
+    "arccsc": {
+      "expected": "arc cosécante"
+    },
+    "arcsec": {
+      "expected": "arc sécante"
+    },
+    "arcsin": {
+      "expected": "arc sinus"
+    },
+    "arctan": {
+      "expected": "arc tangente"
+    },
+    "_commentAdded_": "Add for locale",
+    "PGCD": {
+      "expected": "pgcd"
+    },
+    "pgcd": {
+      "expected": "pgcd"
+    },
+    "ppcm": {
+      "expected": "ppcm"
+    },
+    "PPCM": {
+      "expected": "ppcm"
+    },
+    "PPMC": {
+      "expected": "ppcm"
+    },
+    "ppmc": {
+      "expected": "ppcm"
+    },
+    "argch": {
+      "expected": "argument cosinus hyperbolique"
+    },
+    "argcoth": {
+      "expected": "argument cotangente hyperbolique"
+    },
+    "argcsch": {
+      "expected": "argument cosécante hyperbolique"
+    },
+    "argsech": {
+      "expected": "argument sécante hyperbolique"
+    },
+    "argsh": {
+      "expected": "argument sinus hyperbolique"
+    },
+    "argth": {
+      "expected": "argument tangente hyperbolique"
+    }
+  }
+}

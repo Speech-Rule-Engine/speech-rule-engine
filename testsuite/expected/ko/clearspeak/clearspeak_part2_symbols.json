@@ -1,0 +1,223 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakPart2Symbols",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "Korean Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 2: Symbols",
+    "_comment2_": " Multiplication Symbol",
+    "X001": {
+      "expected": "6 곱하기 8"
+    },
+    "X002": {
+      "expected": "m 곱하기 n"
+    },
+    "X003": {
+      "expected": "3 곱하기 3"
+    },
+    "X004": {
+      "expected": "6 곱하기 8"
+    },
+    "X005": {
+      "expected": "m 곱하기 n"
+    },
+    "X006": {
+      "expected": "3 곱하기 3"
+    },
+    "X007": {
+      "expected": "u 외적 v"
+    },
+    "_comment3_": " Multiplication Symbol",
+    "Dot001": {
+      "expected": "6 닷 8"
+    },
+    "Dot002": {
+      "expected": "m 닷 n"
+    },
+    "Dot003": {
+      "expected": "3 닷 3"
+    },
+    "Dot004": {
+      "expected": "6 내적 8"
+    },
+    "Dot005": {
+      "expected": "m 내적 n"
+    },
+    "Dot006": {
+      "expected": "3 내적 3"
+    },
+    "_comment4_": " Triangle Symbol",
+    "Triangle001": {
+      "expected": "삼각형 A B C"
+    },
+    "Triangle002": {
+      "expected": "삼각형 D E F"
+    },
+    "Triangle003": {
+      "expected": "델타 x"
+    },
+    "Triangle004": {
+      "expected": "f 의, 괄호 열고, x 더하기 델타 x, 괄호 닫고"
+    },
+    "_comment5_": " Ellipses",
+    "Ellipses001": {
+      "expected": "1 콤마 2 콤마 3 콤마 점 점 점"
+    },
+    "Ellipses002": {
+      "expected": "1 콤마 2 콤마 3 콤마 점 점 점 콤마 20"
+    },
+    "Ellipses003": {
+      "expected": "점 점 점 콤마, 마이너스 2, 콤마, 마이너스 1, 콤마 0 콤마 1 콤마 2 콤마 점 점 점"
+    },
+    "Ellipses004": {
+      "expected": "1 콤마 2 콤마 3 콤마 점 점 점"
+    },
+    "Ellipses005": {
+      "expected": "1 콤마 2 콤마 3 콤마 점 점 점 콤마 20"
+    },
+    "Ellipses006": {
+      "expected": "점 점 점 콤마, 마이너스 2, 콤마, 마이너스 1, 콤마 0 콤마 1 콤마 2 콤마 점 점 점"
+    },
+    "_comment6_": " Vertical Line",
+    "VertLine001": {
+      "expected": "3 은 6 의 약수이다"
+    },
+    "VertLine002": {
+      "expected": "x 는 0 보다 크다 를 만족하는 모든 x 의 집합"
+    },
+    "VertLine003": {
+      "expected": "절댓값 x, 는 2 보다 크다 를 만족하는 모든 x 의 집합"
+    },
+    "VertLine004": {
+      "expected": "f 의 x, 조건 x 는 5"
+    },
+    "VertLine005": {
+      "expected": "x 제곱 더하기 2 x, 조건 x 는 2"
+    },
+    "VertLine006": {
+      "expected": "x 제곱 더하기 x, 1, 일 때 빼기 같은 수식 0, 일 때"
+    },
+    "VertLine007": {
+      "expected": "x 는 0 보다 크다 를 만족하는 모든 x 의 집합"
+    },
+    "VertLine008": {
+      "expected": "3 은 6 의 약수이다"
+    },
+    "VertLine009": {
+      "expected": "P 의, 괄호 열고, A 는 B 의 약수이다, 괄호 닫고"
+    },
+    "_comment7_": " Set Membership Symbols",
+    "MembSym001": {
+      "expected": "If x 는 정수 집합 의 원소이다 then 2 x, is an even number 마침표"
+    },
+    "MembSym002": {
+      "expected": "x 는 5 보다 크다 를 만족하는 모든 x 는 정수 집합 의 원소이다 의 집합"
+    },
+    "MembSym003": {
+      "expected": "3 더하기 2 i, 는 실수 집합 의 원소가 아니다"
+    },
+    "MembSym004": {
+      "expected": "If x 는 정수 집합 의 원소이다 then 2 x, is an even number 마침표"
+    },
+    "MembSym005": {
+      "expected": "x 는 5 보다 크다 를 만족하는 모든 정수 집합 의 원소인 x 의 집합"
+    },
+    "MembSym006": {
+      "expected": "3 더하기 2 i, 는 실수 집합 의 원소가 아니다"
+    },
+    "MembSym007": {
+      "expected": "If x 는 정수 집합 의 원소이다 then 2 x, is an even number 마침표"
+    },
+    "MembSym008": {
+      "expected": "x 는 5 보다 크다 를 만족하는 모든 정수 집합 의 원소인 x 의 집합"
+    },
+    "MembSym009": {
+      "expected": "3 더하기 2 i, 는 실수 집합 의 원소가 아니다"
+    },
+    "MembSym010": {
+      "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';",
+      "expected": "If x 는 정수 집합 의 원소이다 then 2 x, is an even number 마침표"
+    },
+    "MembSym011": {
+      "expected": "x 는 5 보다 크다 를 만족하는 모든 정수 집합 에 속하는 x 의 집합"
+    },
+    "MembSym012": {
+      "expected": "3 더하기 2 i, 는 실수 집합 의 원소가 아니다"
+    },
+    "MembSym013": {
+      "expected": "If x 는 정수 집합 의 원소이다 then 2 x, is an even number 마침표"
+    },
+    "MembSym014": {
+      "expected": "x 는 5 보다 크다 를 만족하는 모든 정수 집합 에 속하는 x 의 집합"
+    },
+    "MembSym015": {
+      "expected": "3 더하기 2 i, 는 실수 집합 의 원소가 아니다"
+    },
+    "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
+    "SetMemb001": {
+      "expected": "2 작다 x 작다 7 을 만족하는 정수 집합 에 속하는 x 의 집합"
+    },
+    "SetMemb002": {
+      "expected": "x 는 5 보다 크다 를 만족하는 정수 집합 의 원소인 x 의 집합"
+    },
+    "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
+    "Sum001": {
+      "expected": "시그마 n 은 1 에서 10 까지 n"
+    },
+    "Sum002": {
+      "expected": "시그마 n 은 1 에서 무한대 까지 n"
+    },
+    "Sum003": {
+      "expected": "i 는 양의 정수 집합 의 원소이다 에 대한 시그마, i"
+    },
+    "Sum004": {
+      "expected": "S 에 대한 시그마, i"
+    },
+    "Sum005": {
+      "expected": "시그마, a 아래첨자 i"
+    },
+    "Sum006": {
+      "expected": "파이 i 는 1 에서 10 까지 i"
+    },
+    "Sum007": {
+      "expected": "i 는 양의 정수 집합 의 원소이다 에 대한 파이, 분모가 i 더하기 1, 이고 분자가 i, 인 분수"
+    },
+    "Sum008": {
+      "expected": "양의 정수 집합 에 대한 파이, 분모가 i 더하기 1, 이고 분자가 i, 인 분수"
+    },
+    "Sum009": {
+      "expected": "파이, a 아래첨자 i"
+    },
+    "Sum010": {
+      "expected": "교집합 i 는 1 에서 10 까지, S 아래첨자 i"
+    },
+    "Sum011": {
+      "expected": "합집합 i 는 1 에서 10 까지, S 아래첨자 i"
+    },
+    "Sum012": {
+      "expected": "교집합, S 아래첨자 i"
+    },
+    "Sum013": {
+      "expected": "합집합, S 아래첨자 i"
+    },
+    "Sum014": {
+      "expected": "조건 C 에 대한 교집합, S 아래첨자 i"
+    },
+    "Sum015": {
+      "expected": "조건 C 에 대한 합집합, S 아래첨자 i"
+    },
+    "Sum016": {
+      "expected": "인테그럴 f 의 x, d x"
+    },
+    "Sum017": {
+      "expected": "인테그럴 0 에서 1 까지 f 의 x, d x"
+    },
+    "Sum018": {
+      "expected": "실수 집합 에 대한 인테그럴, f 의 x, d x"
+    }
+  }
+}

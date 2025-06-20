@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakAbsoluteValue",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_absolute_value.json",
+  "information": "Italian Clearspeak AbsoluteValue rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Abs01": {
+      "expected": "valore assoluto di x"
+    },
+    "Abs02": {
+      "expected": "valore assoluto di x più 1"
+    },
+    "Abs03": {
+      "expected": "valore assoluto di x, più 1"
+    },
+    "Abs04": {
+      "expected": "valore assoluto di x, più, valore assoluto di y, maggiore o uguale a, valore assoluto di z"
+    },
+    "AbsEnd01": {
+      "expected": "valore assoluto di x, fine valore assoluto"
+    },
+    "AbsEnd02": {
+      "expected": "valore assoluto di x più 1, fine valore assoluto"
+    },
+    "AbsEnd03": {
+      "expected": "valore assoluto di x, fine valore assoluto, più 1"
+    },
+    "AbsEnd04": {
+      "expected": "valore assoluto di x, fine valore assoluto, più, valore assoluto di y, fine valore assoluto, maggiore o uguale a, valore assoluto di z, fine valore assoluto"
+    },
+    "Card01": {
+      "expected": "cardinalità di S"
+    },
+    "Determinant01": {
+      "expected": "determinante della M"
+    },
+    "AbsDet01": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "AbsDet02": {
+      "expected": "determinante della matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "expected": "determinante della matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "AbsDet04": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "AbsDet05": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "AbsDet06": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "AbsDet07": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "AbsDet08": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "AbsDet09": {
+      "expected": "determinante della matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "expected": "determinante della matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "AbsDet11": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "AbsDet12": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "AbsDet13": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "AbsDet14": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    }
+  }
+}

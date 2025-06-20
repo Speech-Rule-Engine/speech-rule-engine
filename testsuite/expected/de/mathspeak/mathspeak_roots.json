@@ -1,0 +1,373 @@
+{
+  "name": "GermanMathspeakRoots",
+  "locale": "de",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "German Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakGerman",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "sqrt_0_brief": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "Quadratwurzel a Ende Quadratwurzel"
+    },
+    "sqrt_1_default": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "sqrt_1_brief": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "Quadratwurzel a Ende Quadratwurzel"
+    },
+    "sqrt_2_default": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "sqrt_2_brief": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "geschachtelte Quadratwurzel Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "sqrt_3_default": {
+      "expected": "Anfang dreifach geschachtelte Quadratwurzel Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "sqrt_3_brief": {
+      "expected": "Anfang dreifach geschachtelte Quadratwurzel Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "dreifach geschachtelte Quadratwurzel zweifach geschachtelte Quadratwurzel geschachtelte Quadratwurzel Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Quadratwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "roots_0_default": {
+      "expected": "Wurzelexponent 1 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_0_brief": {
+      "expected": "Wurzelexponent 1 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_0_sbrief": {
+      "expected": "Exponent 1 Wurzel a Ende Wurzel"
+    },
+    "roots_1_default": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "roots_1_brief": {
+      "expected": "Anfang Quadratwurzel a Ende Quadratwurzel"
+    },
+    "roots_1_sbrief": {
+      "expected": "Quadratwurzel a Ende Quadratwurzel"
+    },
+    "roots_2_default": {
+      "expected": "Anfang Kubikwurzel a Ende Kubikwurzel"
+    },
+    "roots_2_brief": {
+      "expected": "Anfang Kubikwurzel a Ende Kubikwurzel"
+    },
+    "roots_2_sbrief": {
+      "expected": "Kubikwurzel a Ende Kubikwurzel"
+    },
+    "roots_3_default": {
+      "expected": "Wurzelexponent 4 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_3_brief": {
+      "expected": "Wurzelexponent 4 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_3_sbrief": {
+      "expected": "Exponent 4 Wurzel a Ende Wurzel"
+    },
+    "roots_4_default": {
+      "expected": "Wurzelexponent 5 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_4_brief": {
+      "expected": "Wurzelexponent 5 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_4_sbrief": {
+      "expected": "Exponent 5 Wurzel a Ende Wurzel"
+    },
+    "roots_5_default": {
+      "expected": "Wurzelexponent 6 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_5_brief": {
+      "expected": "Wurzelexponent 6 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_5_sbrief": {
+      "expected": "Exponent 6 Wurzel a Ende Wurzel"
+    },
+    "roots_6_default": {
+      "expected": "Wurzelexponent 7 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_6_brief": {
+      "expected": "Wurzelexponent 7 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_6_sbrief": {
+      "expected": "Exponent 7 Wurzel a Ende Wurzel"
+    },
+    "roots_7_default": {
+      "expected": "Wurzelexponent 8 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_7_brief": {
+      "expected": "Wurzelexponent 8 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_7_sbrief": {
+      "expected": "Exponent 8 Wurzel a Ende Wurzel"
+    },
+    "roots_8_default": {
+      "expected": "Wurzelexponent 9 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_8_brief": {
+      "expected": "Wurzelexponent 9 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_8_sbrief": {
+      "expected": "Exponent 9 Wurzel a Ende Wurzel"
+    },
+    "roots_9_default": {
+      "expected": "Wurzelexponent 10 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_9_brief": {
+      "expected": "Wurzelexponent 10 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_9_sbrief": {
+      "expected": "Exponent 10 Wurzel a Ende Wurzel"
+    },
+    "roots_10_default": {
+      "expected": "Wurzelexponent 11 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_10_brief": {
+      "expected": "Wurzelexponent 11 Anfang Wurzel a Ende Wurzel"
+    },
+    "roots_10_sbrief": {
+      "expected": "Exponent 11 Wurzel a Ende Wurzel"
+    },
+    "nested-roots_0_default": {
+      "expected": "geschachtelter Wurzelexponent 1 Anfang geschachtelte Wurzel Wurzelexponent 1 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_0_brief": {
+      "expected": "geschachtelter Wurzelexponent 1 Anfang geschachtelte Wurzel Wurzelexponent 1 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "geschachtelte Exponent 1 geschachtelte Wurzel Exponent 1 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_1_default": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "nested-roots_1_brief": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "geschachtelte Quadratwurzel Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "nested-roots_2_default": {
+      "expected": "Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "nested-roots_2_brief": {
+      "expected": "Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "geschachtelte Kubikwurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "nested-roots_3_default": {
+      "expected": "geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_3_brief": {
+      "expected": "geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 4 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "geschachtelte Exponent 4 geschachtelte Wurzel Exponent 4 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_4_default": {
+      "expected": "geschachtelter Wurzelexponent 5 Anfang geschachtelte Wurzel Wurzelexponent 5 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_4_brief": {
+      "expected": "geschachtelter Wurzelexponent 5 Anfang geschachtelte Wurzel Wurzelexponent 5 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "geschachtelte Exponent 5 geschachtelte Wurzel Exponent 5 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_5_default": {
+      "expected": "geschachtelter Wurzelexponent 6 Anfang geschachtelte Wurzel Wurzelexponent 6 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_5_brief": {
+      "expected": "geschachtelter Wurzelexponent 6 Anfang geschachtelte Wurzel Wurzelexponent 6 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "geschachtelte Exponent 6 geschachtelte Wurzel Exponent 6 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_6_default": {
+      "expected": "geschachtelter Wurzelexponent 7 Anfang geschachtelte Wurzel Wurzelexponent 7 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_6_brief": {
+      "expected": "geschachtelter Wurzelexponent 7 Anfang geschachtelte Wurzel Wurzelexponent 7 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "geschachtelte Exponent 7 geschachtelte Wurzel Exponent 7 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_7_default": {
+      "expected": "geschachtelter Wurzelexponent 8 Anfang geschachtelte Wurzel Wurzelexponent 8 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_7_brief": {
+      "expected": "geschachtelter Wurzelexponent 8 Anfang geschachtelte Wurzel Wurzelexponent 8 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "geschachtelte Exponent 8 geschachtelte Wurzel Exponent 8 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_8_default": {
+      "expected": "geschachtelter Wurzelexponent 9 Anfang geschachtelte Wurzel Wurzelexponent 9 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_8_brief": {
+      "expected": "geschachtelter Wurzelexponent 9 Anfang geschachtelte Wurzel Wurzelexponent 9 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "geschachtelte Exponent 9 geschachtelte Wurzel Exponent 9 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_9_default": {
+      "expected": "geschachtelter Wurzelexponent 10 Anfang geschachtelte Wurzel Wurzelexponent 10 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_9_brief": {
+      "expected": "geschachtelter Wurzelexponent 10 Anfang geschachtelte Wurzel Wurzelexponent 10 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "geschachtelte Exponent 10 geschachtelte Wurzel Exponent 10 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_10_default": {
+      "expected": "geschachtelter Wurzelexponent 11 Anfang geschachtelte Wurzel Wurzelexponent 11 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_10_brief": {
+      "expected": "geschachtelter Wurzelexponent 11 Anfang geschachtelte Wurzel Wurzelexponent 11 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "geschachtelte Exponent 11 geschachtelte Wurzel Exponent 11 Wurzel a Ende Wurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "geschachtelter Wurzelexponent 1 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "geschachtelter Wurzelexponent 1 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "geschachtelte Exponent 1 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "Anfang geschachtelte Quadratwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "geschachtelte Quadratwurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Quadratwurzel"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "Anfang geschachtelte Kubikwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "geschachtelte Kubikwurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Kubikwurzel"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "geschachtelte Exponent 4 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "geschachtelter Wurzelexponent 5 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "geschachtelter Wurzelexponent 5 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "geschachtelte Exponent 5 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "geschachtelter Wurzelexponent 6 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "geschachtelter Wurzelexponent 6 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "geschachtelte Exponent 6 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "geschachtelter Wurzelexponent 7 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "geschachtelter Wurzelexponent 7 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "geschachtelte Exponent 7 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "geschachtelter Wurzelexponent 8 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "geschachtelter Wurzelexponent 8 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "geschachtelte Exponent 8 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "geschachtelter Wurzelexponent 9 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "geschachtelter Wurzelexponent 9 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "geschachtelte Exponent 9 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "geschachtelter Wurzelexponent 10 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "geschachtelter Wurzelexponent 10 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "geschachtelte Exponent 10 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "geschachtelter Wurzelexponent 11 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "geschachtelter Wurzelexponent 11 Anfang geschachtelte Wurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "geschachtelte Exponent 11 geschachtelte Wurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Wurzel"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "Anfang dreifach geschachtelte Quadratwurzel Anfang zweifach geschachtelte Kubikwurzel geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 5 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "Anfang dreifach geschachtelte Quadratwurzel Anfang zweifach geschachtelte Kubikwurzel geschachtelter Wurzelexponent 4 Anfang geschachtelte Wurzel Wurzelexponent 5 Anfang Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "dreifach geschachtelte Quadratwurzel zweifach geschachtelte Kubikwurzel geschachtelte Exponent 4 geschachtelte Wurzel Exponent 5 Wurzel a Ende Wurzel Ende geschachtelte Wurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "Anfang dreifach geschachtelte Quadratwurzel Anfang zweifach geschachtelte Kubikwurzel Anfang geschachtelte Quadratwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "Anfang dreifach geschachtelte Quadratwurzel Anfang zweifach geschachtelte Kubikwurzel Anfang geschachtelte Quadratwurzel Anfang Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "dreifach geschachtelte Quadratwurzel zweifach geschachtelte Kubikwurzel geschachtelte Quadratwurzel Kubikwurzel a Ende Kubikwurzel Ende geschachtelte Quadratwurzel Ende zweifach geschachtelte Kubikwurzel Ende dreifach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "Anfang vierfach geschachtelte Quadratwurzel Anfang dreifach geschachtelte Kubikwurzel Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Kubikwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel Ende dreifach geschachtelte Kubikwurzel Ende vierfach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "Anfang vierfach geschachtelte Quadratwurzel Anfang dreifach geschachtelte Kubikwurzel Anfang zweifach geschachtelte Quadratwurzel Anfang geschachtelte Kubikwurzel Anfang Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel Ende dreifach geschachtelte Kubikwurzel Ende vierfach geschachtelte Quadratwurzel"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "vierfach geschachtelte Quadratwurzel dreifach geschachtelte Kubikwurzel zweifach geschachtelte Quadratwurzel geschachtelte Kubikwurzel Quadratwurzel a Ende Quadratwurzel Ende geschachtelte Kubikwurzel Ende zweifach geschachtelte Quadratwurzel Ende dreifach geschachtelte Kubikwurzel Ende vierfach geschachtelte Quadratwurzel"
+    }
+  }
+}

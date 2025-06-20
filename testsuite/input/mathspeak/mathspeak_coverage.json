@@ -1,0 +1,193 @@
+{
+  "domain": "mathspeak",
+  "tests": {
+    "_comment0_": "Letter related disjunctive rules.",
+    "_comment1_": "number-baseline for greekletter",
+    "BaselineNumberGreek_default": {
+      "input": "<mrow><mi>α</mi><mn>2</mn></mrow>",
+      "preference": "default"
+    },
+    "BaselineNumberGreek_brief": {
+      "input": "<mrow><mi>α</mi><mn>2</mn></mrow>",
+      "preference": "brief"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "input": "<mrow><mi>α</mi><mn>2</mn></mrow>",
+      "preference": "sbrief"
+    },
+    "_comment2_": "number-baseline for otherletter",
+    "BaselineNumberOther_default": {
+      "input": "<mrow><mi>ℵ</mi><mn>2</mn></mrow>",
+      "preference": "default"
+    },
+    "BaselineNumberOther_brief": {
+      "input": "<mrow><mi>ℵ</mi><mn>2</mn></mrow>",
+      "preference": "brief"
+    },
+    "BaselineNumberOther_sbrief": {
+      "input": "<mrow><mi>ℵ</mi><mn>2</mn></mrow>",
+      "preference": "sbrief"
+    },
+    "_comment3_": "number-baseline for greekletter",
+    "BaselineNumberFontGreek_default": {
+      "input": "<mrow><mi>α</mi><mn mathvariant=\"bold\">2</mn></mrow>",
+      "preference": "default"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "input": "<mrow><mi>α</mi><mn mathvariant=\"bold\">2</mn></mrow>",
+      "preference": "brief"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "input": "<mrow><mi>α</mi><mn mathvariant=\"bold\">2</mn></mrow>",
+      "preference": "sbrief"
+    },
+    "_comment4_": "number-baseline for otherletter",
+    "BaselineNumberFontOther_default": {
+      "input": "<mrow><mi>ℵ</mi><mn mathvariant=\"bold\">2</mn></mrow>",
+      "preference": "default"
+    },
+    "BaselineNumberFontOther_brief": {
+      "input": "<mrow><mi>ℵ</mi><mn mathvariant=\"bold\">2</mn></mrow>",
+      "preference": "brief"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "input": "<mrow><mi>ℵ</mi><mn mathvariant=\"bold\">2</mn></mrow>",
+      "preference": "sbrief"
+    },
+    "OverbarGreek_default": {
+      "_comment_": "Greek letter with overbar",
+      "input": "<mover accent=\"true\"><mi>α</mi><mo>¯</mo></mover>",
+      "preference": "default"
+    },
+    "OverbarOther_default": {
+      "_comment_": "Other letter with overbar",
+      "input": "<mover accent=\"true\"><mi>ℵ</mi><mo>¯</mo></mover>",
+      "preference": "default"
+    },
+    "UnderbarGreek_default": {
+      "_comment_": "Greek letter with underbar",
+      "input": "<munder accent=\"true\"><mi>α</mi><mo>¯</mo></munder>",
+      "preference": "default"
+    },
+    "UnderbarOther_default": {
+      "_comment_": "Other letter with underbar",
+      "input": "<munder accent=\"true\"><mi>ℵ</mi><mo>¯</mo></munder>",
+      "preference": "default"
+    },
+    "OvertildeGreek_default": {
+      "_comment_": "Greek letter with overtilde",
+      "input": "<mover accent=\"true\"><mi>α</mi><mo>~</mo></mover>",
+      "preference": "default"
+    },
+    "OvertildeOther_default": {
+      "_comment_": "Other letter with overtilde",
+      "input": "<mover accent=\"true\"><mi>ℵ</mi><mo>~</mo></mover>",
+      "preference": "default"
+    },
+    "UndertildeGreek_default": {
+      "_comment_": "Greek letter with undertilde",
+      "input": "<munder accent=\"true\"><mi>α</mi><mo>~</mo></munder>",
+      "preference": "default"
+    },
+    "UndertildeOther_default": {
+      "_comment_": "Other letter with undertilde",
+      "input": "<munder accent=\"true\"><mi>ℵ</mi><mo>~</mo></munder>",
+      "preference": "default"
+    },
+    "_comment5_": "set rules",
+    "SetEmpty_default": {
+      "input": "<mo>{</mo><mo>}</mo>",
+      "preference": "default"
+    },
+    "SetEmpty_brief": {
+      "input": "<mo>{</mo><mo>}</mo>",
+      "preference": "brief"
+    },
+    "SetEmpty_sbrief": {
+      "input": "<mo>{</mo><mo>}</mo>",
+      "preference": "sbrief"
+    },
+    "SetSingleton_default": {
+      "input": "<mo>{</mo><mi>a</mi><mo>}</mo>",
+      "preference": "default"
+    },
+    "SetSingleton_brief": {
+      "input": "<mo>{</mo><mi>a</mi><mo>}</mo>",
+      "preference": "brief"
+    },
+    "SetSingleton_sbrief": {
+      "input": "<mo>{</mo><mi>a</mi><mo>}</mo>",
+      "preference": "sbrief"
+    },
+    "SetCollection_default": {
+      "input": "<mo>{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>}</mo>",
+      "preference": "default"
+    },
+    "SetCollection_brief": {
+      "input": "<mo>{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>}</mo>",
+      "preference": "brief"
+    },
+    "SetCollection_sbrief": {
+      "input": "<mo>{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>}</mo>",
+      "preference": "sbrief"
+    },
+    "SetExtended_default": {
+      "input": "<mo>{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>}</mo>",
+      "preference": "default"
+    },
+    "SetExtended_brief": {
+      "input": "<mo>{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>}</mo>",
+      "preference": "brief"
+    },
+    "SetExtended_sbrief": {
+      "input": "<mo>{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>}</mo>",
+      "preference": "sbrief"
+    },
+    "NumberSet": {
+      "input": "<mi>ℂ</mi>",
+      "preference": "default"
+    },
+    "LimitLower0_default": {
+      "input": "<mrow><munder><munder><munder><mrow><mi>lim</mi></mrow> <mo>_</mo></munder><mrow><mi>a</mi><mo>=</mo><mn>5</mn></mrow></munder><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></munder></mrow>",
+      "preference": "default"
+    },
+    "LimitLower1_default": {
+      "input": "<mover><munderover><mo>lim</mo><mi>n</mi><mn>2</mn></munderover><mrow><mi>x</mi></mrow></mover>",
+      "preference": "default"
+    },
+    "BlankLineEmpty0_default": {
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi></mi></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "SubBaseRelseq_default": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub></mrow>",
+      "preference": "default"
+    },
+    "SubBaseRelseq_brief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub></mrow>",
+      "preference": "brief"
+    },
+    "SubBaseRelseq_sbrief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub></mrow>",
+      "preference": "sbrief"
+    },
+    "SubBaseMultirel_default": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub></mrow>",
+      "preference": "default"
+    },
+    "SubBaseMultirel_brief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub></mrow>",
+      "preference": "brief"
+    },
+    "SubBaseMultirel_sbrief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msub></mrow>",
+      "preference": "sbrief"
+    }
+  }
+}

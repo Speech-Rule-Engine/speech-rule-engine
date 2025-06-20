@@ -1,0 +1,417 @@
+{
+  "name": "ItalianMathspeakCollapse",
+  "locale": "it",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Italian Mathspeak Collapse tests.",
+  "domain": "mathspeak",
+  "active": "CollapseItalian",
+  "exclude": [],
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "somma con 2 addendi collassata"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "somma collassata"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "somma collassata"
+    },
+    "CollapsedBigop_default": {
+      "expected": "sommatoria collassato"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "sommatoria collassato"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "sommatoria collassato"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "binomiale collassato"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "binomiale collassato"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "binomiale collassato"
+    },
+    "CollapsedCases_default": {
+      "expected": "comando switch con 2 casi collassato"
+    },
+    "CollapsedCases_brief": {
+      "expected": "comando switch collassato"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "comando switch collassato"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "frazione continua collassata"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "frazione continua collassata"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "frazione continua collassata"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "2 derminante dimensionale collassato"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "determinante collassato"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "determinante collassato"
+    },
+    "CollapsedFraction_default": {
+      "expected": "frazione collassata"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "frazione collassata"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "frazione collassata"
+    },
+    "CollapsedFunction_default": {
+      "expected": "espressione funzionale collassata"
+    },
+    "CollapsedFunction_brief": {
+      "expected": "funzione collassata"
+    },
+    "CollapsedFunction_sbrief": {
+      "expected": "funzione collassata"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "identificatore lungo collassato"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "identificatore lungo collassato"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "identificatore lungo collassato"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "divisione con 2 elementi collassato"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "divisione collassato"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "divisione collassato"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "integrale collassata"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "integrale collassata"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "integrale collassata"
+    },
+    "CollapsedLim_default": {
+      "expected": "funzione limite collassata"
+    },
+    "CollapsedLim_brief": {
+      "expected": "limite collassata"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "limite collassata"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "3 per 2 matrice collassata"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "matrice collassata"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "matrice collassata"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "numero misto lungo collassato"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "numero misto lungo collassato"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "numero misto lungo collassato"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "prodotto di 2 fattori collassato"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "prodotto collassato"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "prodotto collassato"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "sequenza di relazione con 3 elementi collassata"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "sequenza di relazione collassata"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "sequenza di relazione collassata"
+    },
+    "CollapsedNumber_default": {
+      "expected": "intero lungo collassato"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "intero lungo collassato"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "intero lungo collassato"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "virgola lista separata di lunghezza 3 collassata"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "virgola lista separata collassata"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "virgola lista separata collassata"
+    },
+    "CollapsedRelation_default": {
+      "expected": "uguaglianza collassato"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "uguaglianza collassato"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "uguaglianza collassato"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "uguaglianza sequenza con 3 elementi collassata"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "uguaglianza sequenza collassata"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "uguaglianza sequenza collassata"
+    },
+    "CollapsedRoot_default": {
+      "expected": "radice di indice 3 collassata"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "radice  collassata"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "radice  collassata"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "radicale doppio di indice 3 collassato"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "radicale doppio collassato"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "radicale doppio collassato"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "2 vettore riga dimensionale collassato"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "vettore riga collassata"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "vettore riga collassata"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "radice quadrata collassata"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "radice quadrata collassata"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "radice quadrata collassata"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "radice quadrata doppia collassata"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "radice quadrata doppia collassata"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "radice quadrata doppia collassata"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "2 matrice quadrata dimensionale collassata"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "matrice quadrata collassata"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "matrice quadrata collassata"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "pedice collassato"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "pedice collassato"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "pedice collassato"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "potenza con pedice collassata"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "potenza con pedice collassata"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "potenza con pedice collassata"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "potenza collassata"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "potenza collassata"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "potenza collassata"
+    },
+    "CollapsedTable_default": {
+      "expected": "tavola con 2 righe e 2 colonne collassata"
+    },
+    "CollapsedTable_brief": {
+      "expected": "tavola con 2 righe e 2 colonne collassata"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "tavola con 2 righe e 2 colonne collassata"
+    },
+    "CollapsedText_default": {
+      "expected": "testo collassato"
+    },
+    "CollapsedText_brief": {
+      "expected": "testo collassato"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "testo collassato"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "somma con numero variabile di addendi collassata"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "somma collassata"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "somma collassata"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "comando di switch con numero variabile di casi collassato"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "comando switch collassato"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "comando switch collassato"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "determinante di dimensione n collassato"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "determinante collassato"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "determinante collassato"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "matrice dimensionale n pr m collassata"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "matrice quadrata collassata"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "matrice quadrata collassata"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "prodotto con numero variabile di fattori collassato"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "prodotto collassato"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "prodotto collassato"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "sequenza di relazione con numero variabile di elementi collassata"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "sequenza di relazione collassata"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "sequenza di relazione collassata"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "virgola lista separata di lunghezza variabile collassata"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "virgola lista separata collassata"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "virgola lista separata collassata"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "uguaglianza sequenza con numero variabile di elementi collassata"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "uguaglianza sequenza collassata"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "uguaglianza sequenza collassata"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "vettore di dimensione n collassato"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "vettore"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "vettore"
+    },
+    "CollapsedVector_default": {
+      "expected": "3 vettore dimensionale collassato"
+    },
+    "CollapsedVector_brief": {
+      "expected": "vettore"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "vettore"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "sottrazione con numero variabile di elementi collassato"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "sottrazione collassato"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "sottrazione collassato"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "prodotto di 3 fattori collassato"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "prodotto collassato"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "prodotto collassato"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "prodotto con numero variabile di fattori collassato"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "freccia sequenza con numero variabile di elementi collassata"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "freccia collassato"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "vettore riga di dimensione n collassata"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "radice di indice 3 indice finale collassata a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "radicale doppio di indice 3 indice finale collassato a"
+    }
+  }
+}

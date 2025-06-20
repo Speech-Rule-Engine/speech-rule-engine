@@ -1,0 +1,86 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakAbsoluteValue",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_absolute_value.json",
+  "information": "English Clearspeak AbsoluteValue rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Absolute Value",
+    "Abs01": {
+      "expected": "the absolute value of x"
+    },
+    "Abs02": {
+      "expected": "the absolute value of x plus 1"
+    },
+    "Abs03": {
+      "expected": "the absolute value of x, plus 1"
+    },
+    "Abs04": {
+      "expected": "the absolute value of x, plus, the absolute value of y, is greater than or equal to, the absolute value of z"
+    },
+    "AbsEnd01": {
+      "expected": "the absolute value of x, end absolute value"
+    },
+    "AbsEnd02": {
+      "expected": "the absolute value of x plus 1, end absolute value"
+    },
+    "AbsEnd03": {
+      "expected": "the absolute value of x, end absolute value, plus 1"
+    },
+    "AbsEnd04": {
+      "expected": "the absolute value of x, end absolute value, plus, the absolute value of y, end absolute value, is greater than or equal to, the absolute value of z, end absolute value"
+    },
+    "Card01": {
+      "expected": "the cardinality of S"
+    },
+    "Determinant01": {
+      "expected": "the determinant of M"
+    },
+    "_comment2_": " Absolute Value (Determinants)",
+    "AbsDet01": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "AbsDet02": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "AbsDet04": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "AbsDet05": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "AbsDet06": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "AbsDet07": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    },
+    "AbsDet08": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2, 1 Row 2: 7, 5"
+    },
+    "AbsDet09": {
+      "expected": "the determinant of the 3 by 3 matrix. Row 1: 2, 4, 1 Row 2: 3, 5, 2 Row 3: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "expected": "the determinant of the 4 by 4 matrix. Row 1: Column 1, 0; Column 2, 3; Column 3, 4; Column 4, 3. Row 2: Column 1, 2; Column 2, 1; Column 3, 0; Column 4, 9. Row 3: Column 1, 3; Column 2, 0; Column 3, 2; Column 4, 1. Row 4: Column 1, 6; Column 2, 2; Column 3, 9; Column 4, 0"
+    },
+    "AbsDet11": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: Column 1, 2; Column 2, 1. Row 2: Column 1, 7; Column 2, 5 plus x"
+    },
+    "AbsDet12": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, 1 Row 2: 7, 5"
+    },
+    "AbsDet13": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: 2 x, y Row 2: one half, two thirds"
+    },
+    "AbsDet14": {
+      "expected": "the determinant of the 2 by 2 matrix. Row 1: one half, two thirds Row 2: three fourths, one fifth"
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "_comment0_": "Testcases for the color picker.",
+  "information": "Color Picker tests.",
+  "factory": "colorPicker",
+  "exclude": [],
+  "tests": {
+    "_comment1_": "Test RGB colors.",
+    "Default_0": {
+      "input": {
+        "color": "deflt"
+      },
+      "expected": "rgba(0,0,255,1)"
+    },
+    "Default_1": {
+      "input": {
+        "color": "deflt",
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,0,255,0.5)"
+    },
+    "_comment2_": "Test RGB colors.",
+    "NamedRgb_0": {
+      "input": {
+        "color": "red"
+      },
+      "expected": "rgba(255,0,0,1)"
+    },
+    "NamedRgb_1": {
+      "input": {
+        "color": "green"
+      },
+      "expected": "rgba(0,255,0,1)"
+    },
+    "NamedRgb_2": {
+      "input": {
+        "color": "blue"
+      },
+      "expected": "rgba(0,0,255,1)"
+    },
+    "_comment3_": "Test RGB colors with alpha",
+    "NamedRgb_0": {
+      "input": {
+        "color": "red",
+        "alpha": 0.5
+      },
+      "expected": "rgba(255,0,0,0.5)"
+    },
+    "NamedRgb_3": {
+      "input": {
+        "color": "green",
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,255,0,0.5)"
+    },
+    "NamedRgb_4": {
+      "input": {
+        "color": "blue",
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,0,255,0.5)"
+    },
+    "_comment4_": "Test CMYK colors.",
+    "NamedCmyk_0": {
+      "input": {
+        "color": "cyan"
+      },
+      "expected": "rgba(0,255,255,1)"
+    },
+    "NamedCmyk_1": {
+      "input": {
+        "color": "magenta"
+      },
+      "expected": "rgba(255,0,255,1)"
+    },
+    "NamedCmyk_2": {
+      "input": {
+        "color": "yellow"
+      },
+      "expected": "rgba(255,255,0,1)"
+    },
+    "NamedCmyk_3": {
+      "input": {
+        "color": "black"
+      },
+      "expected": "rgba(0,0,0,1)"
+    },
+    "_comment5_": "Test CMYK colors with alpha",
+    "NamedCmyk_0": {
+      "input": {
+        "color": "cyan",
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,255,255,0.5)"
+    },
+    "NamedCmyk_4": {
+      "input": {
+        "color": "magenta",
+        "alpha": 0.5
+      },
+      "expected": "rgba(255,0,255,0.5)"
+    },
+    "NamedCmyk_5": {
+      "input": {
+        "color": "yellow",
+        "alpha": 0.5
+      },
+      "expected": "rgba(255,255,0,0.5)"
+    },
+    "NamedCmyk_6": {
+      "input": {
+        "color": "black",
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,0,0,0.5)"
+    },
+    "_comment6_": "Test colors given in channel style.",
+    "ChannelColor_0": {
+      "input": {
+        "red": 100,
+        "green": 0,
+        "blue": 0
+      },
+      "expected": "rgba(100,0,0,1)"
+    },
+    "ChannelColor_1": {
+      "input": {
+        "red": 0,
+        "green": 100,
+        "blue": 0
+      },
+      "expected": "rgba(0,100,0,1)"
+    },
+    "ChannelColor_2": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": 100
+      },
+      "expected": "rgba(0,0,100,1)"
+    },
+    "ChannelColor_3": {
+      "input": {
+        "red": 10,
+        "green": 10,
+        "blue": 10
+      },
+      "expected": "rgba(10,10,10,1)"
+    },
+    "_comment7_": "Test colors given in channel style with alpha.",
+    "ChannelColor_0": {
+      "input": {
+        "red": 100,
+        "green": 0,
+        "blue": 0,
+        "alpha": 0.5
+      },
+      "expected": "rgba(100,0,0,0.5)"
+    },
+    "ChannelColor_4": {
+      "input": {
+        "red": 0,
+        "green": 100,
+        "blue": 0,
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,100,0,0.5)"
+    },
+    "ChannelColor_5": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": 100,
+        "alpha": 0.5
+      },
+      "expected": "rgba(0,0,100,0.5)"
+    },
+    "ChannelColor_6": {
+      "input": {
+        "red": 10,
+        "green": 10,
+        "blue": 10,
+        "alpha": 0.5
+      },
+      "expected": "rgba(10,10,10,0.5)"
+    },
+    "_comment8_": "Test colors given with values color channels greater than 255 or alpha",
+    "_comment9_": "channel greater than 1.",
+    "ChannelMax_0": {
+      "input": {
+        "red": 256,
+        "green": 0,
+        "blue": 0,
+        "alpha": 0
+      },
+      "expected": "rgba(255,0,0,0)"
+    },
+    "ChannelMax_1": {
+      "input": {
+        "red": 0,
+        "green": 256,
+        "blue": 0,
+        "alpha": 0
+      },
+      "expected": "rgba(0,255,0,0)"
+    },
+    "ChannelMax_2": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": 256,
+        "alpha": 0
+      },
+      "expected": "rgba(0,0,255,0)"
+    },
+    "ChannelMax_3": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": 0,
+        "alpha": 1.5
+      },
+      "expected": "rgba(0,0,0,1)"
+    },
+    "_comment10_": "Test colors given with values color or alpha channels less than 0.",
+    "ChannelMin_0": {
+      "input": {
+        "red": -256,
+        "green": 0,
+        "blue": 0,
+        "alpha": 0
+      },
+      "expected": "rgba(0,0,0,0)"
+    },
+    "ChannelMin_1": {
+      "input": {
+        "red": 0,
+        "green": -256,
+        "blue": 0,
+        "alpha": 0
+      },
+      "expected": "rgba(0,0,0,0)"
+    },
+    "ChannelMin_2": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": -256,
+        "alpha": 0
+      },
+      "expected": "rgba(0,0,0,0)"
+    },
+    "ChannelMin_3": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": 0,
+        "alpha": -1
+      },
+      "expected": "rgba(0,0,0,0)"
+    },
+    "_comment11_": "Test colors given with color channel values given as floating point numbers.",
+    "ChannelFloat_0": {
+      "input": {
+        "red": 1.5,
+        "green": 0,
+        "blue": 0,
+        "alpha": 0
+      },
+      "expected": "rgba(2,0,0,0)"
+    },
+    "ChannelFloat_1": {
+      "input": {
+        "red": 0,
+        "green": 1.4,
+        "blue": 0,
+        "alpha": 0
+      },
+      "expected": "rgba(0,1,0,0)"
+    },
+    "ChannelFloat_2": {
+      "input": {
+        "red": 0,
+        "green": 0,
+        "blue": 27.6,
+        "alpha": 0
+      },
+      "expected": "rgba(0,0,28,0)"
+    },
+    "OutputHex": {
+      "input": {
+        "red": 0,
+        "green": 100,
+        "blue": 0,
+        "alpha": 0.5
+      },
+      "type": "hex",
+      "expected": "#006400"
+    },
+    "OutputRGB": {
+      "input": {
+        "red": 0,
+        "green": 100,
+        "blue": 0,
+        "alpha": 0.5
+      },
+      "type": "rgb",
+      "expected": "rgb(0,100,0)"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "tests": 
+  {
+    "Abs01": {
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>"
+    },
+    "Cap001": {
+      "preference": "Caps_Auto",
+      "input": "<mi>A</mi>"
+    },
+    "In_set_0": {
+      "input": "<mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo>",
+      "preference": "default"
+    },
+    "Preferences_in_0": {
+      "input": "<mi>z</mi><mo>&#x2208;</mo><mi>A</mi>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Enclose_0": {
+      "input": "<menclose notation=\"box\"><mn>12</mn></menclose>",
+      "preference": "default"
+    },
+    "NamedSet_0": {
+      "preference": "default",
+      "input": "<msup><mi mathvariant=\"double-struck\">Q</mi><mn>+</mn></msup>"
+    },
+    "Enclose_6": {
+      "input": "<menclose notation=\"box\"><mn>12</mn></menclose>",
+      "preference": "Enclosed_EndEnclose"
+    },
+    "ExponentLatinCap": {
+      "input": "<msup><mi>x</mi><mi>A</mi></msup>",
+      "preference": "Exponent_Ordinal"
+    },
+    "VectorEndDeterminant": {
+      "input": "<mo>|</mo><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>|</mo>",
+      "preference": "Matrix_EndVector"
+    },
+    "MultiLines_0": {
+      "preference": "MultiLineLabel_Case",
+      "input": "<mrow><mtable><mtr><mtd><mrow><mi>f</mi><mo >(</mo><mi>x</mi><mo >)</mo><mo>=</mo><mo>−</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>"
+    },
+    "CompositeFunctionFences": {
+      "input": "<mrow><mrow><mo>(</mo><mi>f</mi><mo>+</mo><mi>g</mi><mo>)</mo></mrow><mo>(</mo><mn>2</mn><mo>+</mo><mi>x</mi><mo>)</mo></mrow>",
+      "preference": "Paren_Speak"
+    },
+    "Angle_0_Angle": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>",
+      "preference": "Prime_Angle"
+    },
+    "NestedRoots_3": {
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt><mo>+</mo><mi>b</mi></msqrt>",
+      "preference": "Roots_PosNegSqRoot"
+    },
+    "Set_1": {
+      "input": "<mo>{</mo><mi>x</mi><mo>&#x2209;</mo><mi>A</mi><mo>|</mo><mi>B</mi><mo>}</mo>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "VertLine_SuchThat": {
+      "preference": "VerticalLine_SuchThat",
+      "input": "<mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow>"
+    },
+    "Exp001": {
+      "preference": "Exponent_Auto",
+      "input": "<mrow><msup><mn>3</mn><mn>2</mn></msup></mrow>"
+    },
+    "LatinMathfontsUpperCaps_0": {
+      "input": "<mi>&#x0041;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "Frac001": {
+      "preference": "Fraction_Auto",
+      "input": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>"
+    },
+    "Function007": {
+      "preference": "Fraction_Over",
+      "input": "<mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>"
+    },
+    "Function001": {
+      "preference": "Functions_Auto",
+      "input": "<mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>"
+    },
+    "ImpTimes001": {
+      "preference": "ImpliedTimes_Auto",
+      "input": "<mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow>"
+    },
+    "Issue230_1": {
+      "preference": "default",
+      "input": "<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>"
+    },
+    "Issue_689_3": {
+      "preference": "Matrix_EndMatrix",
+      "input": "<mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>3</mn></msub></mtd><mtd><msub><mi>c</mi><mn>4</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow>"
+    },
+    "Log001": {
+      "preference": "Log_Auto",
+      "input": "<mrow><mi>log</mi><mi>x</mi></mrow>"
+    },
+    "Matrix001": {
+      "preference": "Matrix_Auto",
+      "input": "<mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>"
+    },
+    "Multiline001": {
+      "preference": "MultiLineLabel_Auto:MultiLineOverview_Auto:MultiLinePausesBetweenColumns_Auto",
+      "input": "<mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable>"
+    },
+    "Multiline016": {
+      "preference": "MultiLineOverview_Auto:MultiLinePausesBetweenColumns_Auto:MultiLineLabel_Case",
+      "input": "<mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd><mrow><mo>−</mo><mi>x</mi><mtext>&#xA0;if&#xA0;</mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>  &#xA0;if&#xA0;</mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow></mrow></mrow>"
+    },
+    "Multiline020": {
+      "preference": "MultiLinePausesBetweenColumns_Auto:MultiLineOverview_Auto:MultiLineLabel_Line",
+      "input": "<math style=\"background-color:#\"><semantics><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></semantics>"
+    },
+    "NumSys001": {
+      "preference": "default",
+      "input": "<mi>ℝ</mi>"
+    },
+    "Paren001": {
+      "preference": "Paren_Auto",
+      "input": "<mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow>"
+    },
+    "Sum001": {
+      "preference": "default",
+      "input": "<mrow><mstyle displaystyle=\"true\"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>n</mi></mstyle></mrow>"
+    },
+    "Ellipses001": {
+      "preference": "Ellipses_Auto",
+      "input": "<mrow><mn>1</mn><mo>,</mo><mtext></mtext><mn>2</mn><mo>,</mo><mtext></mtext><mn>3</mn><mo>,</mo><mtext></mtext><mo>…</mo></mrow>"
+    },
+    "Dot001": {
+      "preference": "MultsymbolDot_Auto",
+      "input": "<mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow>"
+    },
+    "X001": {
+      "preference": "MultsymbolX_Auto",
+      "input": "<mrow><mn>6</mn><mo>×</mo><mn>8</mn></mrow>"
+    },
+    "MembSym001": {
+      "preference": "SetMemberSymbol_Auto",
+      "input": "<mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext>"
+    },
+    "SetMemb001": {
+      "preference": "Sets_woAll:SetMemberSymbol_Belongs",
+      "input": "<mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow>"
+    },
+    "Triangle001": {
+      "preference": "TriangleSymbol_Auto",
+      "input": "<mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow>"
+    },
+    "VertLine001": {
+      "preference": "VerticalLine_Auto",
+      "input": "<mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow>"
+    },
+    "Bar001": {
+      "preference": "Bar_Auto",
+      "input": "<mover accent=\"true\"><mi>f</mi><mo>¯</mo></mover>"
+    },
+    "CombPerm001": {
+      "test": false,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>"
+    },
+    "Prime001": {
+      "preference": "Prime_Auto",
+      "input": "<mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B</mi><mo>′</mo></msup></mrow>"
+    },
+    "Root001": {
+      "preference": "Roots_Auto",
+      "input": "<mrow><msqrt><mn>2</mn></msqrt></mrow>"
+    },
+    "Set001": {
+      "preference": "Sets_Auto",
+      "input": "<mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow>"
+    },
+    "Trig001": {
+      "preference": "Trig_Auto",
+      "input": "<mrow><mi>sin</mi><mi>x</mi></mrow>"
+    }
+  }
+}

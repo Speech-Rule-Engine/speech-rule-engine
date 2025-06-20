@@ -1,0 +1,202 @@
+{
+  "factory": "semanticMeaning",
+  "information": "Semantic Meaning Tests for single functions",
+  "base": "input/common/functions.json",
+  "tests": {
+    "deg": {
+      "expected": "<function role=\"prefix function\">deg</function>"
+    },
+    "det": {
+      "expected": "<function role=\"prefix function\">det</function>"
+    },
+    "dim": {
+      "expected": "<function role=\"prefix function\">dim</function>"
+    },
+    "hom": {
+      "expected": "<function role=\"prefix function\">hom</function>"
+    },
+    "Hom": {
+      "expected": "<function role=\"prefix function\">Hom</function>"
+    },
+    "ker": {
+      "expected": "<function role=\"prefix function\">ker</function>"
+    },
+    "Tr": {
+      "expected": "<function role=\"prefix function\">Tr</function>"
+    },
+    "tr": {
+      "expected": "<function role=\"prefix function\">tr</function>"
+    },
+    "log": {
+      "expected": "<function role=\"prefix function\">log</function>"
+    },
+    "ln": {
+      "expected": "<function role=\"prefix function\">ln</function>"
+    },
+    "lg": {
+      "expected": "<function role=\"prefix function\">lg</function>"
+    },
+    "exp": {
+      "expected": "<function role=\"prefix function\">exp</function>"
+    },
+    "expt": {
+      "expected": "<function role=\"prefix function\">expt</function>"
+    },
+    "gcd": {
+      "expected": "<function role=\"prefix function\">gcd</function>"
+    },
+    "lcm": {
+      "expected": "<function role=\"prefix function\">lcm</function>"
+    },
+    "arg": {
+      "expected": "<function role=\"prefix function\">arg</function>"
+    },
+    "im": {
+      "expected": "<function role=\"prefix function\">im</function>"
+    },
+    "re": {
+      "expected": "<function role=\"prefix function\">re</function>"
+    },
+    "inf": {
+      "expected": "<function role=\"limit function\">inf</function>"
+    },
+    "lim": {
+      "expected": "<function role=\"limit function\">lim</function>"
+    },
+    "lim inf": {
+      "expected": "<function role=\"limit function\">lim inf</function>"
+    },
+    "liminf": {
+      "expected": "<function role=\"limit function\">liminf</function>"
+    },
+    "lim sup": {
+      "expected": "<function role=\"limit function\">lim sup</function>"
+    },
+    "limsup": {
+      "expected": "<function role=\"limit function\">limsup</function>"
+    },
+    "max": {
+      "expected": "<function role=\"limit function\">max</function>"
+    },
+    "min": {
+      "expected": "<function role=\"limit function\">min</function>"
+    },
+    "sup": {
+      "expected": "<function role=\"limit function\">sup</function>"
+    },
+    "injlim": {
+      "expected": "<function role=\"limit function\">injlim</function>"
+    },
+    "inj lim": {
+      "expected": "<function role=\"limit function\">inj lim</function>"
+    },
+    "projlim": {
+      "expected": "<function role=\"limit function\">projlim</function>"
+    },
+    "proj lim": {
+      "expected": "<function role=\"limit function\">proj lim</function>"
+    },
+    "mod": {
+      "expected": "<operator role=\"prefix function\">mod</operator>"
+    },
+    "Pr": {
+      "expected": "<function role=\"prefix function\">Pr</function>"
+    },
+    "cosh": {
+      "expected": "<function role=\"prefix function\">cosh</function>"
+    },
+    "coth": {
+      "expected": "<function role=\"prefix function\">coth</function>"
+    },
+    "csch": {
+      "expected": "<function role=\"prefix function\">csch</function>"
+    },
+    "sech": {
+      "expected": "<function role=\"prefix function\">sech</function>"
+    },
+    "sinh": {
+      "expected": "<function role=\"prefix function\">sinh</function>"
+    },
+    "tanh": {
+      "expected": "<function role=\"prefix function\">tanh</function>"
+    },
+    "arcosh": {
+      "expected": "<function role=\"prefix function\">arcosh</function>"
+    },
+    "arccosh": {
+      "expected": "<function role=\"prefix function\">arccosh</function>"
+    },
+    "arcoth": {
+      "expected": "<function role=\"prefix function\">arcoth</function>"
+    },
+    "arccoth": {
+      "expected": "<function role=\"prefix function\">arccoth</function>"
+    },
+    "arcsch": {
+      "expected": "<function role=\"prefix function\">arcsch</function>"
+    },
+    "arccsch": {
+      "expected": "<function role=\"prefix function\">arccsch</function>"
+    },
+    "arsech": {
+      "expected": "<function role=\"prefix function\">arsech</function>"
+    },
+    "arcsech": {
+      "expected": "<function role=\"prefix function\">arcsech</function>"
+    },
+    "arsinh": {
+      "expected": "<function role=\"prefix function\">arsinh</function>"
+    },
+    "arcsinh": {
+      "expected": "<function role=\"prefix function\">arcsinh</function>"
+    },
+    "artanh": {
+      "expected": "<function role=\"prefix function\">artanh</function>"
+    },
+    "arctanh": {
+      "expected": "<function role=\"prefix function\">arctanh</function>"
+    },
+    "cos": {
+      "expected": "<function role=\"prefix function\">cos</function>"
+    },
+    "cosine": {
+      "expected": "<function role=\"prefix function\">cosine</function>"
+    },
+    "cot": {
+      "expected": "<function role=\"prefix function\">cot</function>"
+    },
+    "csc": {
+      "expected": "<function role=\"prefix function\">csc</function>"
+    },
+    "sec": {
+      "expected": "<function role=\"prefix function\">sec</function>"
+    },
+    "sin": {
+      "expected": "<function role=\"prefix function\">sin</function>"
+    },
+    "sine": {
+      "expected": "<function role=\"prefix function\">sine</function>"
+    },
+    "tan": {
+      "expected": "<function role=\"prefix function\">tan</function>"
+    },
+    "arccos": {
+      "expected": "<function role=\"prefix function\">arccos</function>"
+    },
+    "arccot": {
+      "expected": "<function role=\"prefix function\">arccot</function>"
+    },
+    "arccsc": {
+      "expected": "<function role=\"prefix function\">arccsc</function>"
+    },
+    "arcsec": {
+      "expected": "<function role=\"prefix function\">arcsec</function>"
+    },
+    "arcsin": {
+      "expected": "<function role=\"prefix function\">arcsin</function>"
+    },
+    "arctan": {
+      "expected": "<function role=\"prefix function\">arctan</function>"
+    }
+  }
+}

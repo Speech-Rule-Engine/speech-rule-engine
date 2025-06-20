@@ -1,0 +1,403 @@
+{
+  "name": "KoreanMathspeakIssues2",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Korean Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesKorean",
+  "exclude": [],
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "루트시작 a 루트끝"
+    },
+    "MathspeakRoots_1": {
+      "expected": "제곱근 루트시작 a 루트끝"
+    },
+    "MathspeakRoots_2": {
+      "expected": "세제곱근 루트시작 a 루트끝"
+    },
+    "MathspeakRoots_3": {
+      "expected": "네제곱근 루트시작 a 루트끝"
+    },
+    "MathspeakRoots_4": {
+      "expected": "중첩루트시작 루트시작 a 루트끝 중첩루트끝"
+    },
+    "MathspeakRoots_5": {
+      "expected": "이중첩루트시작 중첩루트시작 루트시작 a 루트끝 중첩루트끝 이중첩루트끝"
+    },
+    "MathspeakRoots_6": {
+      "expected": "제곱근 중첩루트시작 제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "MathspeakRoots_7": {
+      "expected": "제곱근 이중첩루트시작 제곱근 중첩루트시작 제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝"
+    },
+    "MathspeakRoots_8": {
+      "expected": "세제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "MathspeakRoots_9": {
+      "expected": "세제곱근 이중첩루트시작 세제곱근 중첩루트시작 세제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝"
+    },
+    "MathspeakRoots_10": {
+      "expected": "네제곱근 중첩루트시작 네제곱근 루트시작 a 루트끝 중첩루트끝"
+    },
+    "MathspeakRoots_11": {
+      "expected": "네제곱근 이중첩루트시작 네제곱근 중첩루트시작 네제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝"
+    },
+    "MathspeakRoots_12": {
+      "expected": "제곱근 이중첩루트시작 세제곱근 중첩루트시작 네제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝"
+    },
+    "MathspeakRoots_13": {
+      "expected": "네제곱근 이중첩루트시작 세제곱근 중첩루트시작 제곱근 루트시작 a 루트끝 중첩루트끝 이중첩루트끝"
+    },
+    "HtmlEntities_0": {
+      "expected": "작다"
+    },
+    "HtmlEntities_1": {
+      "expected": "크다"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "이항계수시작 조합 n 씨 k 이항계수끝"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "이항계수시작 조합 n 씨 k 이항계수끝"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "이항계수시작 조합 n 씨 k 이항계수끝"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "괄호 열고 분수시작 k 분의 n 분수끝 괄호 닫고"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "괄호 열고 분수시작 k 분의 n 분수끝 괄호 닫고"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "괄호 열고 분수시작 k 분의 n 분수끝 괄호 닫고"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "2 분의 1 빼기 18 분의 5"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "빼기 분수시작 a 분의 5.2 분수끝"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "빼기 분수시작 18 분의 5.2 분수끝"
+    },
+    "TrivialStuff_0": {
+      "expected": "a 는 b"
+    },
+    "TrivialStuff_1": {
+      "expected": "큰따옴표"
+    },
+    "TrivialStuff_2": {
+      "expected": "큰따옴표 x 큰따옴표"
+    },
+    "TrivialStuff_3": {
+      "expected": "프라임"
+    },
+    "GermanFonts_0": {
+      "expected": "프락투어 대문자 A"
+    },
+    "GermanFonts_1": {
+      "expected": "진한 프락투어 대문자 A"
+    },
+    "GermanFonts_2": {
+      "expected": "프락투어 대문자 A"
+    },
+    "GermanFonts_3": {
+      "expected": "진한 프락투어 대문자 A"
+    },
+    "GermanFonts_4": {
+      "expected": "진한 프락투어 abc"
+    },
+    "GermanFonts_5": {
+      "expected": "진한 프락투어 ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "진한 프락투어 대문자 A 대문자 B 대문자 C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "기본 m"
+    },
+    "OtherFonts_2": {
+      "expected": "mi"
+    },
+    "OtherFonts_3": {
+      "expected": "기울임체 mi"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "기울임체 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 도"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m 대문자 A"
+    },
+    "Multiline_0": {
+      "expected": "배열시작 첫번째 행  a 두번째 행  b 배열끝"
+    },
+    "Multiline_1": {
+      "expected": "배열시작 첫번째 행 첫번째 열 a 두번째 열 c 두번째 행 첫번째 열 b 두번째 열 d 배열끝"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "작거나 같다 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "같다 2 같다"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "작거나 같다 2 같다"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "배열시작 첫번째 행 첫번째 열 1 두번째 열 작거나 같다 2 배열끝"
+    },
+    "EncloseGeneral": {
+      "expected": "인클로즈시작 동그라미 a 인클로즈끝"
+    },
+    "EncloseLeftbar": {
+      "expected": "세로선 a"
+    },
+    "EncloseRightbar": {
+      "expected": "a 세로선"
+    },
+    "_comment_": " mglyph is ignored!",
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "배열시작 첫번째 행  꼬리표시작 괄호 열고 3.1 .10 괄호 닫고 꼬리표끝 배열끝"
+    },
+    "Issue320_0": {
+      "expected": "편미분"
+    },
+    "Issue320_1": {
+      "expected": "x 팩토리얼"
+    },
+    "Issue320_2": {
+      "expected": "빼기 빼기 x"
+    },
+    "Issue320_3": {
+      "expected": "더하기 더하기 x"
+    },
+    "Issue320_4": {
+      "expected": "싸인 싸인 x"
+    },
+    "Issue320_5": {
+      "expected": "편미분 편미분 x"
+    },
+    "Issue320_6": {
+      "expected": "괄호 열고 분수시작 편미분 x 제곱 분의 편미분 제곱 분수끝 더하기 분수시작 편미분 y 제곱 분의 편미분 제곱 분수끝 괄호 닫고 절댓값시작 파이 괄호 열고 x 더하기 기본 i y 괄호 닫고 절댓값끝 제곱 은 0"
+    },
+    "LatinMathfonts_0": {
+      "expected": "프락투어 대문자 A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "진한 프락투어 대문자 A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "진한 필기체 대문자 A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "진한 기울임체 대문자 A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "진한 대문자 A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "칠판볼드체 대문자 A"
+    },
+    "LatinMathfonts_6": {
+      "expected": "대문자 A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "고정폭 대문자 A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "진한 고딕 대문자 A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "기울인 고딕 대문자 A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "진한 고딕 기울임체 대문자 A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "고딕 대문자 A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "필기체 대문자 A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "진한 대문자 알파"
+    },
+    "GreekMathfonts_1": {
+      "expected": "대문자 알파"
+    },
+    "GreekMathfonts_2": {
+      "expected": "진한 기울임체 대문자 알파"
+    },
+    "GreekMathfonts_3": {
+      "expected": "진한 고딕 대문자 알파"
+    },
+    "GreekMathfonts_4": {
+      "expected": "진한 고딕 기울임체 대문자 알파"
+    },
+    "Prime_0": {
+      "expected": "x 프라임"
+    },
+    "Prime_1": {
+      "expected": "x 더블 프라임"
+    },
+    "Prime_2": {
+      "expected": "x 트리플 프라임"
+    },
+    "Prime_3": {
+      "expected": "x 쿼드 프라임"
+    },
+    "Prime_4": {
+      "expected": "x 프라임"
+    },
+    "Prime_5": {
+      "expected": "x 더블 프라임"
+    },
+    "Prime_6": {
+      "expected": "x 프라임"
+    },
+    "Prime_7": {
+      "expected": "x 더블 프라임"
+    },
+    "Prime_8": {
+      "expected": "x 프라임"
+    },
+    "Prime_9": {
+      "expected": "x 더블 프라임"
+    },
+    "Prime_10": {
+      "expected": "x 트리플 프라임"
+    },
+    "Prime_11": {
+      "expected": "x 쿼드 프라임"
+    },
+    "Prime_12": {
+      "expected": "x 오 프라임"
+    },
+    "Prime_13": {
+      "expected": "x 육 프라임"
+    },
+    "Prime_14": {
+      "expected": "x 더블 프라임"
+    },
+    "Prime_15": {
+      "expected": "x 트리플 프라임"
+    },
+    "Prime_16": {
+      "expected": "x 쿼드 프라임"
+    },
+    "Prime_17": {
+      "expected": "x 오 프라임"
+    },
+    "Prime_18": {
+      "expected": "x 육 프라임"
+    },
+    "LimBoth_0": {
+      "expected": "시그마 합 하단첨자 n 상단첨자 2 첨자끝 아래에 있는 바 위에 있는 물결표"
+    },
+    "LimBoth_1": {
+      "expected": "시그마 합 하단첨자 n 상단첨자 2 첨자끝 아래에 있는 바 위에 있는 물결표"
+    },
+    "LimBoth_2": {
+      "expected": "시그마 합 하단첨자 n 상단첨자 2 첨자끝 아래에 있는 바 위에 있는 물결표"
+    },
+    "LimBoth_3": {
+      "expected": "시그마 합 하단첨자 n 상단첨자 2 첨자끝"
+    },
+    "LimBoth_4": {
+      "expected": "시그마 합 하단첨자 n 상단첨자 2 첨자끝 a"
+    },
+    "LimUpper_0": {
+      "expected": "시그마 합 상단첨자 n 첨자끝"
+    },
+    "LimUpper_1": {
+      "expected": "시그마 합 상단첨자 n 첨자끝 a"
+    },
+    "LimUpper_2": {
+      "expected": "시그마 합 상단첨자 n 첨자끝"
+    },
+    "LimUpper_3": {
+      "expected": "시그마 합 상단첨자 n 첨자끝 a"
+    },
+    "LimLower_0": {
+      "expected": "시그마 합 하단첨자 n 첨자끝"
+    },
+    "LimLower_1": {
+      "expected": "시그마 합 하단첨자 n 첨자끝 a"
+    },
+    "LimLower_2": {
+      "expected": "시그마 합 하단첨자 n 첨자끝"
+    },
+    "LimLower_3": {
+      "expected": "시그마 합 하단첨자 n 첨자끝 a"
+    },
+    "Issue_442_0": {
+      "expected": "9 나누기 3 같지 않다 9 곱하기 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 나누기 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 나누기 3 같지 않다 9 곱하기 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 나누기 3"
+    },
+    "Prime_19": {
+      "expected": "x 프라임 더블 프라임"
+    },
+    "issue_728_0": {
+      "expected": "a mol"
+    },
+    "issue_728_1": {
+      "expected": "a mol 1"
+    },
+    "issue_767_0": {
+      "expected": "대문자 A 아래첨자 n 기준 세로선 아래첨자 커널 대문자 P 아래 아래첨자 n 아래첨자 기준"
+    },
+    "issue_767_1": {
+      "expected": "대문자 A 아래첨자 n 기준 세로선 아래첨자 a b c 대문자 P 아래 아래첨자 n 아래첨자 기준"
+    },
+    "issue_767_2": {
+      "expected": "대문자 A 아래첨자 n 기준 세로선 아래첨자 abc 대문자 P 아래 아래첨자 n 아래첨자 기준"
+    },
+    "issue_767_3": {
+      "expected": "s i n 괄호 열고 x 괄호 닫고"
+    },
+    "issue_767_4": {
+      "expected": "싸인 괄호 열고 x 괄호 닫고"
+    }
+  }
+}

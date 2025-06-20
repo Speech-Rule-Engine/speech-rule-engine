@@ -1,0 +1,16 @@
+{
+  "factory": "braille2D",
+  "name": "Nemeth2dCasesTests",
+  "information": "Two Dimensional rules for case statements structures.",
+  "locale": "nemeth",
+  "domain": "default",
+  "style": "default",
+  "modality": "braille",
+  "active": "Nemeth2D",
+  "tests": {
+    "case_16.4-1": {
+      "input": "<mrow><mo>{</mo><mtable columnalign=\"left left\" columnspacing=\"1em\" rowspacing=\".2em\"><mtr><mtd><mi>x</mi><mo>=</mo><mi>y</mi></mtd></mtr><mtr><mtd><mn>5</mn><mi>x</mi><mo>&#x2212;</mo><mi>y</mi><mo>=</mo><mn>4</mn></mtd></mtr></mtable><mo></mo></mrow>",
+      "expected": "⠨⠠⠷⠭⠀⠨⠅⠀⠽⠀⠀⠀⠀⠀\n⠨⠠⠷⠼⠢⠭⠤⠽⠀⠨⠅⠀⠼⠲"
+    }
+  }
+}

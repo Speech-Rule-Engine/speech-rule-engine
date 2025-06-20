@@ -1,0 +1,202 @@
+{
+  "factory": "category",
+  "information": "Semantic Meaning Tests for single functions",
+  "base": "input/common/functions.json",
+  "tests": {
+    "deg": {
+      "expected": "Algebra"
+    },
+    "det": {
+      "expected": "Algebra"
+    },
+    "dim": {
+      "expected": "Algebra"
+    },
+    "hom": {
+      "expected": "Algebra"
+    },
+    "Hom": {
+      "expected": "Algebra"
+    },
+    "ker": {
+      "expected": "Algebra"
+    },
+    "Tr": {
+      "expected": "Algebra"
+    },
+    "tr": {
+      "expected": "Algebra"
+    },
+    "log": {
+      "expected": "Logarithm"
+    },
+    "ln": {
+      "expected": "Logarithm"
+    },
+    "lg": {
+      "expected": "Logarithm"
+    },
+    "exp": {
+      "expected": "Elementary"
+    },
+    "expt": {
+      "expected": "Elementary"
+    },
+    "gcd": {
+      "expected": "Elementary"
+    },
+    "lcm": {
+      "expected": "Elementary"
+    },
+    "arg": {
+      "expected": "Complex"
+    },
+    "im": {
+      "expected": "Complex"
+    },
+    "re": {
+      "expected": "Complex"
+    },
+    "inf": {
+      "expected": "Limits"
+    },
+    "lim": {
+      "expected": "Limits"
+    },
+    "lim inf": {
+      "expected": "Limits"
+    },
+    "liminf": {
+      "expected": "Limits"
+    },
+    "lim sup": {
+      "expected": "Limits"
+    },
+    "limsup": {
+      "expected": "Limits"
+    },
+    "max": {
+      "expected": "Limits"
+    },
+    "min": {
+      "expected": "Limits"
+    },
+    "sup": {
+      "expected": "Limits"
+    },
+    "injlim": {
+      "expected": "Limits"
+    },
+    "inj lim": {
+      "expected": "Limits"
+    },
+    "projlim": {
+      "expected": "Limits"
+    },
+    "proj lim": {
+      "expected": "Limits"
+    },
+    "mod": {
+      "expected": "Elementary"
+    },
+    "Pr": {
+      "expected": "Probability"
+    },
+    "cosh": {
+      "expected": "Hyperbolic"
+    },
+    "coth": {
+      "expected": "Hyperbolic"
+    },
+    "csch": {
+      "expected": "Hyperbolic"
+    },
+    "sech": {
+      "expected": "Hyperbolic"
+    },
+    "sinh": {
+      "expected": "Hyperbolic"
+    },
+    "tanh": {
+      "expected": "Hyperbolic"
+    },
+    "arcosh": {
+      "expected": "Area"
+    },
+    "arccosh": {
+      "expected": "Area"
+    },
+    "arcoth": {
+      "expected": "Area"
+    },
+    "arccoth": {
+      "expected": "Area"
+    },
+    "arcsch": {
+      "expected": "Area"
+    },
+    "arccsch": {
+      "expected": "Area"
+    },
+    "arsech": {
+      "expected": "Area"
+    },
+    "arcsech": {
+      "expected": "Area"
+    },
+    "arsinh": {
+      "expected": "Area"
+    },
+    "arcsinh": {
+      "expected": "Area"
+    },
+    "artanh": {
+      "expected": "Area"
+    },
+    "arctanh": {
+      "expected": "Area"
+    },
+    "cos": {
+      "expected": "Trigonometric"
+    },
+    "cosine": {
+      "expected": "Trigonometric"
+    },
+    "cot": {
+      "expected": "Trigonometric"
+    },
+    "csc": {
+      "expected": "Trigonometric"
+    },
+    "sec": {
+      "expected": "Trigonometric"
+    },
+    "sin": {
+      "expected": "Trigonometric"
+    },
+    "sine": {
+      "expected": "Trigonometric"
+    },
+    "tan": {
+      "expected": "Trigonometric"
+    },
+    "arccos": {
+      "expected": "Cyclometric"
+    },
+    "arccot": {
+      "expected": "Cyclometric"
+    },
+    "arccsc": {
+      "expected": "Cyclometric"
+    },
+    "arcsec": {
+      "expected": "Cyclometric"
+    },
+    "arcsin": {
+      "expected": "Cyclometric"
+    },
+    "arctan": {
+      "expected": "Cyclometric"
+    }
+  }
+}

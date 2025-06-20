@@ -1,0 +1,2858 @@
+{
+  "domain": "default",
+  "modality": "braille",
+  "tests": {
+    "AataExpression_1": {
+      "test": true,
+      "input": "<mi>r</mi><mo>≡<!-- ≡ --></mo><mi>s</mi><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mi>n</mi><mo stretchy=\"false\">)</mo>",
+      "_comment1_": " ⠗⠸⠇⠎⠷⠍⠕⠙⠝⠾",
+      "reference": {
+        "m-485": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+        "m-497": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+        "m-503": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "AataExpression_2": {
+      "test": true,
+      "input": "<mi>y</mi><mo>=</mo><msup><mi>x</mi><mi>E</mi></msup><mspace width=\"0.667em\"></mspace><mi>mod</mi><mspace width=\"thinmathspace\"></mspace><mspace width=\"thinmathspace\"></mspace><mi>n</mi>",
+      "_comment2_": " ⠽⠀⠨⠅⠀⠭⠘⠠⠑⠐⠍⠕⠙⠝"
+    },
+    "AataExpression_3": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>X</mi><mo>~<!-- ~ --></mo></mover></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mo>=</mo><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mtext></mtext><mn>16</mn>",
+      "_comment3_": " ⠳⠠⠭overTilde⠳⠀⠨⠅⠀⠆⠘⠲⠐⠀⠨⠅⠀16"
+    },
+    "AataExpression_4": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mi class=\"MJX-tex-caligraphic\" mathvariant=\"script\">S</mi></mrow>",
+      "_comment4_": " caligraphic⠠⠎",
+      "reference": {
+        "m-1": "http://abstract.ups.edu/aata/section-note-on-proofs.html#jIW",
+        "m-2": "http://abstract.ups.edu/aata/section-note-on-proofs.html#jIW",
+        "m-3": "http://abstract.ups.edu/aata/section-note-on-proofs.html#jIW",
+        "m-8169": "http://abstract.ups.edu/aata/section-sylow-theorems.html#cLR",
+        "m-8172": "http://abstract.ups.edu/aata/section-sylow-theorems.html#cLR",
+        "m-8175": "http://abstract.ups.edu/aata/section-sylow-theorems.html#cLR",
+        "m-8177": "http://abstract.ups.edu/aata/section-sylow-theorems.html#cLR",
+        "m-8259": "http://abstract.ups.edu/aata/section-sylow-theorems.html#lCN",
+        "m-8295": "http://abstract.ups.edu/aata/section-sylow-theorems.html#RJW",
+        "m-8701": "http://abstract.ups.edu/aata/exercises-sylow.html#GPs",
+        "m-8707": "http://abstract.ups.edu/aata/exercises-sylow.html#mWB"
+      }
+    },
+    "AataExpression_5": {
+      "test": true,
+      "input": "<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>=</mo><mn>0</mn>",
+      "reference": {
+        "m-8": "http://abstract.ups.edu/aata/section-note-on-proofs.html#EOk",
+        "m-22": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex",
+        "m-24": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex",
+        "m-26": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex",
+        "m-10449": "http://abstract.ups.edu/aata/section-irreducible-poly.html#vju",
+        "m-15320": "http://abstract.ups.edu/aata/section-galois-applications.html#Qxm"
+      }
+    },
+    "AataExpression_6": {
+      "test": true,
+      "input": "<mi>A</mi><mrow class=\"MJX-TeXAtom-REL\"><mover><mrow class=\"MJX-TeXAtom-OP MJX-fixedlimits\"><mo stretchy=\"false\">→<!-- → --></mo></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mi>f</mi></mrow></mover></mrow><mi>B</mi>"
+    },
+    "AataExpression_7": {
+      "test": true,
+      "input": "<mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot>",
+      "reference": {
+        "m-245": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#djQ"
+      }
+    },
+    "AataExpression_8": {
+      "test": true,
+      "input": "<msubsup><mi>T</mi><mi>A</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msubsup><mo>=</mo><msub><mi>T</mi><mrow class=\"MJX-TeXAtom-ORD\"><msup><mi>A</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup></mrow></msub>",
+      "reference": {
+        "m-304": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hTJ"
+      }
+    },
+    "AataExpression_9": {
+      "test": true,
+      "input": "<munder><mo>⋃<!-- ⋃ --></mo><mi>k</mi></munder><msub><mi>X</mi><mi>k</mi></msub><mo>=</mo><mi>X</mi>"
+    },
+    "AataExpression_10": {
+      "test": true,
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>f</mi><mo stretchy=\"false\">(</mo><mi>p</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>q</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>p</mi><mo>−<!-- − --></mo><mn>2</mn></mrow></mfrac></mstyle>",
+      "reference": {
+        "m-566": "http://abstract.ups.edu/aata/exercises-sets.html#KhX"
+      }
+    },
+    "AataExpression_11": {
+      "test": true,
+      "input": "<mi>X</mi><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">N</mi></mrow></mrow><mo>∪<!-- ∪ --></mo><mo fence=\"false\" stretchy=\"false\">{</mo><msqrt><mn>2</mn></msqrt><mspace width=\"thinmathspace\"></mspace><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_12": {
+      "test": true,
+      "input": "<mover><mi>z</mi><mo accent=\"false\">¯<!-- ¯ --></mo></mover><mo>=</mo><mi>a</mi><mo>−<!-- − --></mo><mi>b</mi><mi>i</mi>",
+      "reference": {
+        "m-2210": "http://abstract.ups.edu/aata/section-mult-group-c.html#oVJ"
+      }
+    },
+    "AataExpression_13": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><msub><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow><mn>8</mn></msub></mrow>",
+      "reference": {
+        "m-1305": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+        "m-1314": "http://abstract.ups.edu/aata/section-mod-n-sym.html#PPF",
+        "m-1734": "http://abstract.ups.edu/aata/reading-questions-3.html#PXJ",
+        "m-2312": "http://abstract.ups.edu/aata/reading-questions-4.html#YeL",
+        "m-4703": "http://abstract.ups.edu/aata/section-isomorph-definitions.html#IvB",
+        "m-6231": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#qmg"
+      }
+    },
+    "AataExpression_14": {
+      "test": true,
+      "input": "<mi>C</mi><mo>=</mo><mrow><mo>{</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>:</mo><mi>G</mi><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mtext>for</mtext><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>∈<!-- ∈ --></mo><msubsup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mn>2</mn><mi>k</mi></msubsup><mo>}</mo></mrow>"
+    },
+    "AataExpression_15": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn><mo>+</mo><msqrt><mn>3</mn></msqrt></msqrt>",
+      "reference": {
+        "m-13019": "http://abstract.ups.edu/aata/section-extension-fields.html#NkL",
+        "m-13105": "http://abstract.ups.edu/aata/section-extension-fields.html#trU"
+      }
+    },
+    "AataExpression_16": {
+      "test": true,
+      "input": "<msqrt><mroot><mn>2</mn><mn>3</mn></mroot><mo>−<!-- − --></mo><mi>i</mi></msqrt>",
+      "reference": {
+        "m-13717": "http://abstract.ups.edu/aata/exercises-fields.html#LCC"
+      }
+    },
+    "AataExpression_17": {
+      "test": true,
+      "input": "<msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>3</mn></msup>",
+      "reference": {
+        "m-170": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#ywv",
+        "m-6575": "http://abstract.ups.edu/aata/section-symmetry.html#upJ",
+        "m-6577": "http://abstract.ups.edu/aata/section-symmetry.html#DJv",
+        "m-6613": "http://abstract.ups.edu/aata/section-symmetry.html#mLk",
+        "m-6659": "http://abstract.ups.edu/aata/section-symmetry.html#cmf",
+        "m-6662": "http://abstract.ups.edu/aata/section-symmetry.html#cmf",
+        "m-12445": "http://abstract.ups.edu/aata/section-subspaces.html#QMH",
+        "m-12448": "http://abstract.ups.edu/aata/section-subspaces.html#QMH",
+        "m-12521": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ",
+        "m-12522": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ",
+        "m-12524": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ",
+        "m-12528": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ",
+        "m-12530": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ",
+        "m-12535": "http://abstract.ups.edu/aata/section-linear-independence.html#ynE",
+        "m-12608": "http://abstract.ups.edu/aata/exercises-vect.html#SBU",
+        "m-12616": "http://abstract.ups.edu/aata/exercises-vect.html#yJd"
+      }
+    },
+    "AataExpression_18": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>X</mi><mo>~<!-- ~ --></mo></mover></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></msub><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>X</mi><mo>~<!-- ~ --></mo></mover></mrow>",
+      "reference": {
+        "m-7648": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#GlP"
+      }
+    },
+    "AataExpression_19": {
+      "test": true,
+      "input": "<msub><mi>G</mi><mn>0</mn></msub><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>A</mi><mo>:</mo><mo stretchy=\"false\">(</mo><mi>A</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo><mo>∈<!-- ∈ --></mo><mi>G</mi><mtext>for some</mtext><mi>b</mi><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_20": {
+      "test": true,
+      "input": "<mn>300</mn><mo>!</mo>",
+      "reference": {
+        "m-686": "http://abstract.ups.edu/aata/sets-sage.html#sHj"
+      }
+    },
+    "AataExpression_21": {
+      "test": true,
+      "input": "<mi>A</mi><mo>∪<!-- ∪ --></mo><mo stretchy=\"false\">(</mo><mi>B</mi><mo>∪<!-- ∪ --></mo><mi>C</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mi>A</mi><mo>∪<!-- ∪ --></mo><mi>B</mi><mo stretchy=\"false\">)</mo><mo>∪<!-- ∪ --></mo><mi>C</mi>",
+      "reference": {
+        "m-113": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#OhW"
+      }
+    },
+    "AataExpression_22": {
+      "test": true,
+      "input": "<mrow><mstyle scriptlevel=\"0\"><mrow class=\"MJX-TeXAtom-OPEN\"><mo maxsize=\"1.2em\" minsize=\"1.2em\">(</mo></mrow></mstyle><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac><mstyle scriptlevel=\"0\"><mrow class=\"MJX-TeXAtom-CLOSE\"><mo maxsize=\"1.2em\" minsize=\"1.2em\">)</mo></mrow></mstyle></mrow>"
+    },
+    "AataExpression_23": {
+      "test": true,
+      "input": "<mn>3</mn><mo>+</mo><mn>56</mn><mo>−<!-- − --></mo><mn>13</mn><mo>+</mo><mn>8</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>2</mn>",
+      "reference": {
+        "m-4": "http://abstract.ups.edu/aata/section-note-on-proofs.html#glA"
+      }
+    },
+    "AataExpression_24": {
+      "test": true,
+      "input": "<mi>w</mi><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo stretchy=\"false\">)</mo><mo>=</mo><mi>d</mi><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>,</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mn mathvariant=\"bold\">0</mn></mrow></mrow><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3879": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ",
+        "m-3892": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URK",
+        "m-4589": "http://abstract.ups.edu/aata/exercises-algcodes.html#XqR"
+      }
+    },
+    "AataExpression_25": {
+      "test": true,
+      "input": "<mn>6.00000</mn><mo>+</mo><mn>0.00000</mn><mi>i</mi>",
+      "reference": {
+        "m-1947": "http://abstract.ups.edu/aata/groups-sage.html#QGD"
+      }
+    },
+    "AataExpression_26": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.0001</mn>",
+      "reference": {
+        "m-4568": "http://abstract.ups.edu/aata/exercises-algcodes.html#vMx"
+      }
+    },
+    "AataExpression_27": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.01</mn>",
+      "reference": {
+        "m-4567": "http://abstract.ups.edu/aata/exercises-algcodes.html#vMx"
+      }
+    },
+    "AataExpression_28": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.995</mn>",
+      "reference": {
+        "m-3851": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#WzT"
+      }
+    },
+    "AataExpression_29": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.999</mn>",
+      "reference": {
+        "m-3835": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#LFp"
+      }
+    },
+    "AataExpression_30": {
+      "test": true,
+      "input": "<mtext>A</mtext><mo>=</mo><mn>00</mn><mo>,</mo><mtext>B</mtext><mo>=</mo><mn>01</mn><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><mtext>Z</mtext><mo>=</mo><mn>25</mn>",
+      "reference": {
+        "m-3518": "http://abstract.ups.edu/aata/section-private-key-crypt.html#RSA"
+      }
+    },
+    "AataExpression_31": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>000</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3784": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3817": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#qsK",
+        "m-4463": "http://abstract.ups.edu/aata/section-efficient-decoding.html#lQi",
+        "m-4571": "http://abstract.ups.edu/aata/exercises-algcodes.html#Uph"
+      }
+    },
+    "AataExpression_32": {
+      "test": true,
+      "input": "<mn>0000</mn>",
+      "reference": {
+        "m-3910": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3918": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "AataExpression_33": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>1</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>00000</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4037": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#OVu"
+      }
+    },
+    "AataExpression_34": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00001</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4440": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_35": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0000101100</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4640": "http://abstract.ups.edu/aata/exercises-algcodes.html#RBF"
+      }
+    },
+    "AataExpression_36": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00010</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4438": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4461": "http://abstract.ups.edu/aata/section-efficient-decoding.html#QKH",
+        "m-4580": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "AataExpression_37": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">z</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>00011</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3886": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#iOl"
+      }
+    },
+    "AataExpression_38": {
+      "test": true,
+      "input": "<mn>001</mn>",
+      "reference": {
+        "m-3792": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4194": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4526": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4533": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-8015": "http://abstract.ups.edu/aata/actions-sage.html#aHw"
+      }
+    },
+    "AataExpression_39": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4436": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4579": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "AataExpression_40": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0010000101</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4639": "http://abstract.ups.edu/aata/exercises-algcodes.html#RBF"
+      }
+    },
+    "AataExpression_41": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>001001</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4638": "http://abstract.ups.edu/aata/exercises-algcodes.html#RBF"
+      }
+    },
+    "AataExpression_42": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>01000</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>00101</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11011</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10110</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4435": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_43": {
+      "test": true,
+      "input": "<mn>0011</mn>",
+      "reference": {
+        "m-3911": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3927": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "AataExpression_44": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00110</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4444": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_45": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>2</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>00111</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4038": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#OVu"
+      }
+    },
+    "AataExpression_46": {
+      "test": true,
+      "input": "<mn>010</mn>",
+      "reference": {
+        "m-3793": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4196": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4527": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-8014": "http://abstract.ups.edu/aata/actions-sage.html#aHw"
+      }
+    },
+    "AataExpression_47": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0100</mn><mspace width=\"thickmathspace\"></mspace><mn>0101</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_48": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>01000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4434": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4578": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "AataExpression_49": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00100</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01001</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10111</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11010</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4437": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_50": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>010011</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-4142": "http://abstract.ups.edu/aata/section-linear-codes.html#nye"
+      }
+    },
+    "AataExpression_51": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00111</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01010</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10100</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11001</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4443": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_52": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>011011</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>111011</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>100011</mn><mo stretchy=\"false\">)</mo><mspace linebreak=\"newline\"></mspace><mo stretchy=\"false\">(</mo><mn>000000</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>010101</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110011</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_53": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>11110101</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>01010100</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4539": "http://abstract.ups.edu/aata/exercises-algcodes.html#FIM"
+      }
+    },
+    "AataExpression_54": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">z</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>010111</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-4400": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ewp"
+      }
+    },
+    "AataExpression_55": {
+      "test": true,
+      "input": "<mn>011</mn>",
+      "reference": {
+        "m-3794": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4198": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4528": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg"
+      }
+    },
+    "AataExpression_56": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0110</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3748": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#lIR",
+        "m-3751": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#lIR",
+        "m-4322": "http://abstract.ups.edu/aata/section-parity-check.html#shX"
+      }
+    },
+    "AataExpression_57": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00001</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01100</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10010</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11111</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4441": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_58": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>011001</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-4096": "http://abstract.ups.edu/aata/section-linear-codes.html#Bgk"
+      }
+    },
+    "AataExpression_59": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>011010</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4538": "http://abstract.ups.edu/aata/exercises-algcodes.html#ZBD"
+      }
+    },
+    "AataExpression_60": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0110110</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>0111100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>1110000</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>1111111</mn><mo stretchy=\"false\">)</mo><mspace linebreak=\"newline\"></mspace><mo stretchy=\"false\">(</mo><mn>1001001</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>1000011</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>0001111</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>0000000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_61": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1001</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>0111</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4541": "http://abstract.ups.edu/aata/exercises-algcodes.html#RXe"
+      }
+    },
+    "AataExpression_62": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>10000</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11101</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>00011</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01110</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4433": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_63": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00010</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01111</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10001</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11100</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4439": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_64": {
+      "test": true,
+      "input": "<mtext>A</mtext><mo>=</mo><mn>00</mn><mo>,</mo><mtext>B</mtext><mo>=</mo><mn>02</mn><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><mtext>Z</mtext><mo>=</mo><mn>25</mn>",
+      "reference": {
+        "m-3569": "http://abstract.ups.edu/aata/section-public-key-crypt.html#Dtw"
+      }
+    },
+    "AataExpression_65": {
+      "test": true,
+      "input": "<mi>c</mi><mo>=</mo><mn>4</mn><mspace width=\"thinmathspace\"></mspace><mn>598</mn><mspace width=\"thinmathspace\"></mspace><mn>037</mn><mspace width=\"thinmathspace\"></mspace><mn>234</mn>"
+    },
+    "AataExpression_66": {
+      "test": true,
+      "input": "<mtext>E</mtext><mo>=</mo><mn>04</mn>",
+      "reference": {
+        "m-3525": "http://abstract.ups.edu/aata/section-private-key-crypt.html#xZJ"
+      }
+    },
+    "AataExpression_67": {
+      "test": true,
+      "input": "<mn>10</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>5</mn><mo>=</mo><mn>2</mn>",
+      "reference": {
+        "m-15": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex"
+      }
+    },
+    "AataExpression_68": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1254</mn><msup><mo stretchy=\"false\">)</mo><mrow class=\"MJX-TeXAtom-ORD\"><mn>100</mn></mrow></msup>",
+      "reference": {
+        "m-2872": "http://abstract.ups.edu/aata/exercises-permute.html#wXu"
+      }
+    },
+    "AataExpression_69": {
+      "test": true,
+      "input": "<mn>1000</mn>",
+      "reference": {
+        "m-3482": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#RqK",
+        "m-3487": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#dFc",
+        "m-4565": "http://abstract.ups.edu/aata/exercises-algcodes.html#vMx"
+      }
+    },
+    "AataExpression_70": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>10000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4432": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4577": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "AataExpression_71": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1001</mn><mspace width=\"thickmathspace\"></mspace><mn>1000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_72": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>101</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3787": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-4473": "http://abstract.ups.edu/aata/section-efficient-decoding.html#lQi"
+      }
+    },
+    "AataExpression_73": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1010</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3905": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#wwr"
+      }
+    },
+    "AataExpression_74": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>10100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>",
+      "reference": {
+        "m-4442": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_75": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>10101</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3884": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#iOl"
+      }
+    },
+    "AataExpression_76": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>101011</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4635": "http://abstract.ups.edu/aata/exercises-algcodes.html#luw"
+      }
+    },
+    "AataExpression_77": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1011</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4548": "http://abstract.ups.edu/aata/exercises-algcodes.html#qzO"
+      }
+    },
+    "AataExpression_78": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>000000</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>010111</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>101101</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>111010</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4562": "http://abstract.ups.edu/aata/exercises-algcodes.html#zTA"
+      }
+    },
+    "AataExpression_79": {
+      "test": true,
+      "input": "<mo movablelimits=\"true\" form=\"prefix\">gcd</mo><mo stretchy=\"false\">(</mo><mn>120</mn><mo>,</mo><mn>102</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mn>6</mn>"
+    },
+    "AataExpression_80": {
+      "test": true,
+      "input": "<mn>108</mn>",
+      "reference": {
+        "m-8646": "http://abstract.ups.edu/aata/exercises-sylow.html#vzp"
+      }
+    },
+    "AataExpression_81": {
+      "test": true,
+      "input": "<mn>110</mn>",
+      "reference": {
+        "m-3797": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4204": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4530": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg"
+      }
+    },
+    "AataExpression_82": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1100</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3899": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#wwr"
+      }
+    },
+    "AataExpression_83": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00110</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01011</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10101</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11000</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4445": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "AataExpression_84": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>011010</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110111</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_85": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>000000</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110101</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110001</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_86": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1101</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3898": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#wwr"
+      }
+    },
+    "AataExpression_87": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>11010</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3885": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#iOl"
+      }
+    },
+    "AataExpression_88": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>110101</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-4097": "http://abstract.ups.edu/aata/section-linear-codes.html#Bgk"
+      }
+    },
+    "AataExpression_89": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>4</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>11011</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4040": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#OVu"
+      }
+    },
+    "AataExpression_90": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>110110</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4405": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ewp"
+      }
+    },
+    "AataExpression_91": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>111</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3786": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3790": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3818": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#qsK",
+        "m-4477": "http://abstract.ups.edu/aata/section-efficient-decoding.html#lQi",
+        "m-4572": "http://abstract.ups.edu/aata/exercises-algcodes.html#Uph"
+      }
+    },
+    "AataExpression_92": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0110</mn><mspace width=\"thickmathspace\"></mspace><mn>1110</mn><mspace width=\"thickmathspace\"></mspace><mn>0110</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_93": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>3</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>11100</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4039": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#OVu"
+      }
+    },
+    "AataExpression_94": {
+      "test": true,
+      "input": "<mn>1111</mn>",
+      "reference": {
+        "m-3917": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3981": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "AataExpression_95": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>111110</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-4398": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ewp"
+      }
+    },
+    "AataExpression_96": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>111111</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-4399": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ewp"
+      }
+    },
+    "AataExpression_97": {
+      "test": true,
+      "input": "<mn>112135</mn><mn>25032</mn><mn>442</mn>",
+      "reference": {
+        "m-3641": "http://abstract.ups.edu/aata/exercises-crypt.html#ZwZ"
+      }
+    },
+    "AataExpression_98": {
+      "test": true,
+      "input": "<msup><mn>7</mn><mn>6</mn></msup><mo>=</mo><mn>117</mn><mspace width=\"thinmathspace\"></mspace><mn>649</mn>"
+    },
+    "AataExpression_99": {
+      "test": true,
+      "input": "<mo movablelimits=\"true\" form=\"prefix\">gcd</mo><mo stretchy=\"false\">(</mo><mn>24</mn><mo>,</mo><mn>36</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mn>12</mn>"
+    },
+    "AataExpression_100": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>120979</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>13251</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>142371</mn>",
+      "reference": {
+        "m-3638": "http://abstract.ups.edu/aata/exercises-crypt.html#yvi"
+      }
+    },
+    "AataExpression_101": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12345</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>678</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2905": "http://abstract.ups.edu/aata/exercises-permute.html#FAi"
+      }
+    },
+    "AataExpression_102": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">[</mo><mo stretchy=\"false\">(</mo><mn>1235</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>467</mn><mo stretchy=\"false\">)</mo><msup><mo stretchy=\"false\">]</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup>",
+      "reference": {
+        "m-2878": "http://abstract.ups.edu/aata/exercises-permute.html#hOw"
+      }
+    },
+    "AataExpression_103": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>37986733</mn><mo>,</mo><mn>12371</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3654": "http://abstract.ups.edu/aata/exercises-crypt.html#sFW"
+      }
+    },
+    "AataExpression_104": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12453</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2861": "http://abstract.ups.edu/aata/exercises-permute.html#AQp"
+      }
+    },
+    "AataExpression_105": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>1253</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2864": "http://abstract.ups.edu/aata/exercises-permute.html#zSa"
+      }
+    },
+    "AataExpression_106": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12537</mn><msup><mo stretchy=\"false\">)</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup>",
+      "reference": {
+        "m-2876": "http://abstract.ups.edu/aata/exercises-permute.html#VAe"
+      }
+    },
+    "AataExpression_107": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1254</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>13</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>25</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2867": "http://abstract.ups.edu/aata/exercises-permute.html#snB"
+      }
+    },
+    "AataExpression_108": {
+      "test": true,
+      "input": "<mn>1260</mn>",
+      "reference": {
+        "m-9536": "http://abstract.ups.edu/aata/section-software-application.html#cPV"
+      }
+    },
+    "AataExpression_109": {
+      "test": true,
+      "input": "<msup><mn>128</mn><mn>4</mn></msup><mo>=</mo><mn>268</mn><mo>,</mo><mn>435</mn><mo>,</mo><mn>456</mn>",
+      "reference": {
+        "m-3723": "http://abstract.ups.edu/aata/crypt-sage.html#lpS"
+      }
+    },
+    "AataExpression_110": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>79403</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>671</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>129381</mn>",
+      "reference": {
+        "m-3647": "http://abstract.ups.edu/aata/exercises-crypt.html#bHL"
+      }
+    },
+    "AataExpression_111": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1423</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>34</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>56</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>1324</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2866": "http://abstract.ups.edu/aata/exercises-permute.html#Mgs"
+      }
+    },
+    "AataExpression_112": {
+      "test": true,
+      "input": "<mo fence=\"false\" stretchy=\"false\">{</mo><mo stretchy=\"false\">(</mo><mn>13</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>13</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>24</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>132</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>134</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>1324</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>1342</mn><mo stretchy=\"false\">)</mo><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-2899": "http://abstract.ups.edu/aata/exercises-permute.html#ZsZ"
+      }
+    },
+    "AataExpression_113": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1345</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>234</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2863": "http://abstract.ups.edu/aata/exercises-permute.html#TKR"
+      }
+    },
+    "AataExpression_114": {
+      "test": true,
+      "input": "<mn>14</mn>",
+      "reference": {
+        "m-1104": "http://abstract.ups.edu/aata/exercises-integers.html#bNP",
+        "m-2555": "http://abstract.ups.edu/aata/cyclic-sage.html#MAe",
+        "m-3633": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+        "m-3649": "http://abstract.ups.edu/aata/exercises-crypt.html#FEi",
+        "m-5322": "http://abstract.ups.edu/aata/isomorph-sage.html#jbT",
+        "m-7263": "http://abstract.ups.edu/aata/struct-sage.html#XYy",
+        "m-8736": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8768": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8791": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8812": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_115": {
+      "test": true,
+      "input": "<mi>x</mi><mo>=</mo><mn>142528</mn>",
+      "reference": {
+        "m-3632": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG"
+      }
+    },
+    "AataExpression_116": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1426</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>142</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2886": "http://abstract.ups.edu/aata/exercises-permute.html#ajX"
+      }
+    },
+    "AataExpression_117": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>142637</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2888": "http://abstract.ups.edu/aata/exercises-permute.html#myp"
+      }
+    },
+    "AataExpression_118": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>14356</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2884": "http://abstract.ups.edu/aata/exercises-permute.html#NVF"
+      }
+    },
+    "AataExpression_119": {
+      "test": true,
+      "input": "<mn>191</mn><mi>E</mi><mo>=</mo><mn>1</mn><mo>+</mo><mn>151</mn><mi>m</mi>",
+      "reference": {
+        "m-3582": "http://abstract.ups.edu/aata/section-public-key-crypt.html#qvk"
+      }
+    },
+    "AataExpression_120": {
+      "test": true,
+      "input": "<mn>1523</mn>",
+      "reference": {
+        "m-2433": "http://abstract.ups.edu/aata/exercises-cyclic.html#SDL"
+      }
+    },
+    "AataExpression_121": {
+      "test": true,
+      "input": "<mn>1531</mn>",
+      "reference": {
+        "m-9539": "http://abstract.ups.edu/aata/section-software-application.html#IXe"
+      }
+    },
+    "AataExpression_122": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>17254</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>1423</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>154632</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2887": "http://abstract.ups.edu/aata/exercises-permute.html#Grg"
+      }
+    },
+    "AataExpression_123": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>156</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>234</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2885": "http://abstract.ups.edu/aata/exercises-permute.html#ucO"
+      }
+    },
+    "AataExpression_124": {
+      "test": true,
+      "input": "<mi>s</mi><mo>=</mo><mo>−<!-- − --></mo><mn>16</mn>",
+      "reference": {
+        "m-942": "http://abstract.ups.edu/aata/section-division-algorithm.html#PNS"
+      }
+    },
+    "AataExpression_125": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mn mathvariant=\"bold\">16</mn></mrow>",
+      "reference": {
+        "m-7276": "http://abstract.ups.edu/aata/struct-sage.html#OTh"
+      }
+    },
+    "AataExpression_126": {
+      "test": true,
+      "input": "<mn>160</mn>",
+      "reference": {
+        "m-8602": "http://abstract.ups.edu/aata/exercises-sylow.html#SmM"
+      }
+    },
+    "AataExpression_127": {
+      "test": true,
+      "input": "<mi>μ<!-- μ --></mi><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1634</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2649": "http://abstract.ups.edu/aata/section-permutation-definitions.html#KTV"
+      }
+    },
+    "AataExpression_128": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>16394854313</mn><mo>,</mo><mn>34578451</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3655": "http://abstract.ups.edu/aata/exercises-crypt.html#YNf"
+      }
+    },
+    "AataExpression_129": {
+      "test": true,
+      "input": "<mn>5</mn><mo>⋅<!-- ⋅ --></mo><mn>7</mn><mo>⋅<!-- ⋅ --></mo><mn>47</mn><mo>=</mo><mn>1645</mn>",
+      "reference": {
+        "m-8399": "http://abstract.ups.edu/aata/section-sylow-applications.html#Vhs",
+        "m-8409": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW"
+      }
+    },
+    "AataExpression_130": {
+      "test": true,
+      "input": "<mn>165</mn>",
+      "reference": {
+        "m-1107": "http://abstract.ups.edu/aata/exercises-integers.html#HUY"
+      }
+    },
+    "AataExpression_131": {
+      "test": true,
+      "input": "<mn>168</mn>",
+      "reference": {
+        "m-15858": "http://abstract.ups.edu/aata/galois-sage-exercises.html#HdA"
+      }
+    },
+    "AataExpression_132": {
+      "test": true,
+      "input": "<mn>41</mn><mo>≡<!-- ≡ --></mo><mn>17</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>8</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-489": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "AataExpression_133": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>17352</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2883": "http://abstract.ups.edu/aata/exercises-permute.html#gXy"
+      }
+    },
+    "AataExpression_134": {
+      "test": true,
+      "input": "<mn>1739</mn>",
+      "reference": {
+        "m-1108": "http://abstract.ups.edu/aata/exercises-integers.html#och"
+      }
+    },
+    "AataExpression_135": {
+      "test": true,
+      "input": "<mn>175</mn>",
+      "reference": {
+        "m-8647": "http://abstract.ups.edu/aata/exercises-sylow.html#bGy"
+      }
+    },
+    "AataExpression_136": {
+      "test": true,
+      "input": "<msup><mn>180</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>",
+      "reference": {
+        "m-1351": "http://abstract.ups.edu/aata/section-mod-n-sym.html#eao",
+        "m-2855": "http://abstract.ups.edu/aata/section-dihedral-groups.html#hlG"
+      }
+    },
+    "AataExpression_137": {
+      "test": true,
+      "input": "<mn>19</mn>",
+      "reference": {
+        "m-8755": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-9533": "http://abstract.ups.edu/aata/section-software-application.html#cPV",
+        "m-9535": "http://abstract.ups.edu/aata/section-software-application.html#cPV"
+      }
+    },
+    "AataExpression_138": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>3053</mn><mo>,</mo><mn>1921</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3653": "http://abstract.ups.edu/aata/exercises-crypt.html#MyN"
+      }
+    },
+    "AataExpression_139": {
+      "test": true,
+      "input": "<mn>196,833</mn><mo>×<!-- × --></mo><mn>196,833</mn>",
+      "reference": {
+        "m-5607": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#DPi"
+      }
+    },
+    "AataExpression_140": {
+      "test": true,
+      "input": "<mn>19945</mn>",
+      "reference": {
+        "m-1113": "http://abstract.ups.edu/aata/exercises-integers.html#Aqz"
+      }
+    },
+    "AataExpression_141": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>3551</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>1997</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>2791</mn>",
+      "reference": {
+        "m-3644": "http://abstract.ups.edu/aata/exercises-crypt.html#jmk"
+      }
+    },
+    "AataExpression_142": {
+      "test": true,
+      "input": "<mn>200</mn>",
+      "reference": {
+        "m-7135": "http://abstract.ups.edu/aata/exercises-struct.html#UtY"
+      }
+    },
+    "AataExpression_143": {
+      "test": true,
+      "input": "<mn>2000</mn>",
+      "reference": {
+        "m-3701": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs",
+        "m-3702": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs",
+        "m-3703": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs"
+      }
+    },
+    "AataExpression_144": {
+      "test": true,
+      "input": "<msup><mn>2071</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>9521</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>4724</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2430": "http://abstract.ups.edu/aata/exercises-cyclic.html#PuK"
+      }
+    },
+    "AataExpression_145": {
+      "test": true,
+      "input": "<mn>2134</mn>",
+      "reference": {
+        "m-9538": "http://abstract.ups.edu/aata/section-software-application.html#IXe"
+      }
+    },
+    "AataExpression_146": {
+      "test": true,
+      "input": "<mi>x</mi><mo>≡<!-- ≡ --></mo><mn>214</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>2772</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-9614": "http://abstract.ups.edu/aata/exercises-rings.html#HDq"
+      }
+    },
+    "AataExpression_147": {
+      "test": true,
+      "input": "<mn>2234</mn><mo>+</mo><mn>4121</mn>",
+      "reference": {
+        "m-9615": "http://abstract.ups.edu/aata/exercises-rings.html#nYU"
+      }
+    },
+    "AataExpression_148": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>2257</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>47</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>23</mn>",
+      "reference": {
+        "m-3637": "http://abstract.ups.edu/aata/exercises-crypt.html#SnZ"
+      }
+    },
+    "AataExpression_149": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>451</mn><mo>,</mo><mn>231</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3652": "http://abstract.ups.edu/aata/exercises-crypt.html#grE"
+      }
+    },
+    "AataExpression_150": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>45629</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>781</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>231561</mn>",
+      "reference": {
+        "m-3639": "http://abstract.ups.edu/aata/exercises-crypt.html#eCr"
+      }
+    },
+    "AataExpression_151": {
+      "test": true,
+      "input": "<mn>234</mn>",
+      "reference": {
+        "m-1106": "http://abstract.ups.edu/aata/exercises-integers.html#HUY"
+      }
+    },
+    "AataExpression_152": {
+      "test": true,
+      "input": "<mn>23771</mn>",
+      "reference": {
+        "m-1112": "http://abstract.ups.edu/aata/exercises-integers.html#Aqz"
+      }
+    },
+    "AataExpression_153": {
+      "test": true,
+      "input": "<mn>41</mn><mo>−<!-- − --></mo><mn>17</mn><mo>=</mo><mn>24</mn>",
+      "reference": {
+        "m-490": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "AataExpression_154": {
+      "test": true,
+      "input": "<mn>72</mn><mo>∈<!-- ∈ --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>240</mn></mrow></msub>",
+      "reference": {
+        "m-2324": "http://abstract.ups.edu/aata/exercises-cyclic.html#MlJ"
+      }
+    },
+    "AataExpression_155": {
+      "test": true,
+      "input": "<mn>2415</mn>",
+      "reference": {
+        "m-916": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-924": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-927": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-930": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "AataExpression_156": {
+      "test": true,
+      "input": "<mi>N</mi><mo>=</mo><mn>250</mn>",
+      "reference": {
+        "m-1224": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn"
+      }
+    },
+    "AataExpression_157": {
+      "test": true,
+      "input": "<mn>255</mn>",
+      "reference": {
+        "m-8648": "http://abstract.ups.edu/aata/exercises-sylow.html#HNH"
+      }
+    },
+    "AataExpression_158": {
+      "test": true,
+      "input": "<msup><mn>2557</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>341</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>5681</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2429": "http://abstract.ups.edu/aata/exercises-cyclic.html#jnB"
+      }
+    },
+    "AataExpression_159": {
+      "test": true,
+      "input": "<msup><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>8</mn></mrow></msup><mo>=</mo><mn>256</mn>",
+      "reference": {
+        "m-3760": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa"
+      }
+    },
+    "AataExpression_160": {
+      "test": true,
+      "input": "<mn>5</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>≡<!-- ≡ --></mo><mn>13</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>26</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-1743": "http://abstract.ups.edu/aata/exercises-groups.html#Vjf"
+      }
+    },
+    "AataExpression_161": {
+      "test": true,
+      "input": "<mn>2600</mn><mo>=</mo><msup><mn>2</mn><mn>3</mn></msup><mo>×<!-- × --></mo><msup><mn>5</mn><mn>2</mn></msup><mo>×<!-- × --></mo><mn>13</mn>",
+      "reference": {
+        "m-1264": "http://abstract.ups.edu/aata/integers-sage.html#YMf"
+      }
+    },
+    "AataExpression_162": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>27</mn></mrow></msub>",
+      "reference": {
+        "m-6810": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#Blb"
+      }
+    },
+    "AataExpression_163": {
+      "test": true,
+      "input": "<msup><mn>271</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>321</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>481</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2301": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#rQp",
+        "m-2302": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#rQp"
+      }
+    },
+    "AataExpression_164": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>120979</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>27331</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>112135</mn>",
+      "reference": {
+        "m-3646": "http://abstract.ups.edu/aata/exercises-crypt.html#vAC"
+      }
+    },
+    "AataExpression_165": {
+      "test": true,
+      "input": "<mn>2791</mn>",
+      "reference": {
+        "m-3640": "http://abstract.ups.edu/aata/exercises-crypt.html#ZwZ"
+      }
+    },
+    "AataExpression_166": {
+      "test": true,
+      "input": "<mn>28</mn>",
+      "reference": {
+        "m-3635": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+        "m-8808": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_167": {
+      "test": true,
+      "input": "<mi>q</mi><mo>=</mo><mn>29</mn>",
+      "reference": {
+        "m-3579": "http://abstract.ups.edu/aata/section-public-key-crypt.html#qvk"
+      }
+    },
+    "AataExpression_168": {
+      "test": true,
+      "input": "<msup><mn>292</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>3171</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>582</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2428": "http://abstract.ups.edu/aata/exercises-cyclic.html#Dgs"
+      }
+    },
+    "AataExpression_169": {
+      "test": true,
+      "input": "<mn>2134</mn><mo>⋅<!-- ⋅ --></mo><mn>1531</mn><mo>=</mo><mn>3,267,154</mn>",
+      "reference": {
+        "m-9547": "http://abstract.ups.edu/aata/section-software-application.html#IXe"
+      }
+    },
+    "AataExpression_170": {
+      "test": true,
+      "input": "<mi>U</mi><mo stretchy=\"false\">(</mo><mn>30</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2368": "http://abstract.ups.edu/aata/exercises-cyclic.html#jgx"
+      }
+    },
+    "AataExpression_171": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>3551</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>629</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>31</mn>",
+      "reference": {
+        "m-3636": "http://abstract.ups.edu/aata/exercises-crypt.html#mgQ"
+      }
+    },
+    "AataExpression_172": {
+      "test": true,
+      "input": "<mn>312</mn><mo>∈<!-- ∈ --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>471</mn></mrow></msub>",
+      "reference": {
+        "m-2325": "http://abstract.ups.edu/aata/exercises-cyclic.html#ssS"
+      }
+    },
+    "AataExpression_173": {
+      "test": true,
+      "input": "<mn>342</mn>",
+      "reference": {
+        "m-3687": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#pLq"
+      }
+    },
+    "AataExpression_174": {
+      "test": true,
+      "input": "<mi>G</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>345</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>354</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>345</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>354</mn><mo stretchy=\"false\">)</mo><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-7894": "http://abstract.ups.edu/aata/exercises-actions.html#jys"
+      }
+    },
+    "AataExpression_175": {
+      "test": true,
+      "input": "<mn>44</mn><mspace width=\"thinmathspace\"></mspace><mn>352</mn><mspace width=\"thinmathspace\"></mspace><mn>000</mn>"
+    },
+    "AataExpression_176": {
+      "test": true,
+      "input": "<msup><mn>360</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>",
+      "reference": {
+        "m-1352": "http://abstract.ups.edu/aata/section-mod-n-sym.html#eao"
+      }
+    },
+    "AataExpression_177": {
+      "test": true,
+      "input": "<mn>37</mn>",
+      "reference": {
+        "m-8773": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_178": {
+      "test": true,
+      "input": "<mn>3754</mn>",
+      "reference": {
+        "m-1115": "http://abstract.ups.edu/aata/exercises-integers.html#gxI"
+      }
+    },
+    "AataExpression_179": {
+      "test": true,
+      "input": "<mn>38</mn>",
+      "reference": {
+        "m-8779": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_180": {
+      "test": true,
+      "input": "<mn>39</mn>",
+      "reference": {
+        "m-1105": "http://abstract.ups.edu/aata/exercises-integers.html#bNP",
+        "m-8783": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_181": {
+      "test": true,
+      "input": "<mn>391</mn><mo>=</mo><mn>17</mn><mo>⋅<!-- ⋅ --></mo><mn>23</mn>",
+      "reference": {
+        "m-3477": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#RqK"
+      }
+    },
+    "AataExpression_182": {
+      "test": true,
+      "input": "<mi>x</mi><mo>=</mo><mn>4</mn>",
+      "reference": {
+        "m-7": "http://abstract.ups.edu/aata/section-note-on-proofs.html#YHb",
+        "m-12": "http://abstract.ups.edu/aata/section-note-on-proofs.html#vXo"
+      }
+    },
+    "AataExpression_183": {
+      "test": true,
+      "input": "<mn>40</mn>",
+      "reference": {
+        "m-2563": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#AOC",
+        "m-2564": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#AOC",
+        "m-7134": "http://abstract.ups.edu/aata/exercises-struct.html#omP",
+        "m-8790": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8876": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#JCU"
+      }
+    },
+    "AataExpression_184": {
+      "test": true,
+      "input": "<mn>42</mn>",
+      "reference": {
+        "m-8804": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_185": {
+      "test": true,
+      "input": "<mn>43</mn><mo>−<!-- − --></mo><mn>18</mn><mi>i</mi>",
+      "reference": {
+        "m-2394": "http://abstract.ups.edu/aata/exercises-cyclic.html#ubb"
+      }
+    },
+    "AataExpression_186": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>8779</mn><mo>⋅<!-- ⋅ --></mo><mn>4327</mn>",
+      "reference": {
+        "m-3657": "http://abstract.ups.edu/aata/exercises-crypt.html#lLr"
+      }
+    },
+    "AataExpression_187": {
+      "test": true,
+      "input": "<mo>−<!-- − --></mo><mn>4357</mn>",
+      "reference": {
+        "m-1114": "http://abstract.ups.edu/aata/exercises-integers.html#gxI"
+      }
+    },
+    "AataExpression_188": {
+      "test": true,
+      "input": "<mn>44</mn>",
+      "reference": {
+        "m-8815": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_189": {
+      "test": true,
+      "input": "<mn>46</mn>",
+      "reference": {
+        "m-689": "http://abstract.ups.edu/aata/sets-sage.html#RjT",
+        "m-8739": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_190": {
+      "test": true,
+      "input": "<mn>46,388</mn>",
+      "reference": {
+        "m-2287": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#cVM"
+      }
+    },
+    "AataExpression_191": {
+      "test": true,
+      "input": "<msub><mi>D</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>470448</mn></mrow></msub>",
+      "reference": {
+        "m-5787": "http://abstract.ups.edu/aata/normal-sage-exercises.html#zfp",
+        "m-5788": "http://abstract.ups.edu/aata/normal-sage-exercises.html#zfp"
+      }
+    },
+    "AataExpression_192": {
+      "test": true,
+      "input": "<mn>471</mn>",
+      "reference": {
+        "m-1110": "http://abstract.ups.edu/aata/exercises-integers.html#Ujq"
+      }
+    },
+    "AataExpression_193": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>48</mn></mrow></msub>",
+      "reference": {
+        "m-2335": "http://abstract.ups.edu/aata/exercises-cyclic.html#djU",
+        "m-7138": "http://abstract.ups.edu/aata/exercises-struct.html#vCT"
+      }
+    },
+    "AataExpression_194": {
+      "test": true,
+      "input": "<mi>E</mi><mo>=</mo><mn>487</mn>",
+      "reference": {
+        "m-3580": "http://abstract.ups.edu/aata/section-public-key-crypt.html#qvk"
+      }
+    },
+    "AataExpression_195": {
+      "test": true,
+      "input": "<mi>U</mi><mo stretchy=\"false\">(</mo><mn>49</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2572": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#tkd",
+        "m-2573": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#tkd"
+      }
+    },
+    "AataExpression_196": {
+      "test": true,
+      "input": "<mn>2</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>5</mn>",
+      "reference": {
+        "m-5": "http://abstract.ups.edu/aata/section-note-on-proofs.html#szS"
+      }
+    },
+    "AataExpression_197": {
+      "test": true,
+      "input": "<mn>500</mn>",
+      "reference": {
+        "m-3852": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#WzT"
+      }
+    },
+    "AataExpression_198": {
+      "test": true,
+      "input": "<mn>7</mn><mo>!</mo><mo>=</mo><mn>5040</mn>",
+      "reference": {
+        "m-3492": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#pTu"
+      }
+    },
+    "AataExpression_199": {
+      "test": true,
+      "input": "<mn>51</mn>",
+      "reference": {
+        "m-5106": "http://abstract.ups.edu/aata/exercises-isomorph.html#Szh",
+        "m-8745": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8769": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_200": {
+      "test": true,
+      "input": "<msup><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>511</mn></mrow></msup><mo>−<!-- − --></mo><mn>1</mn>",
+      "reference": {
+        "m-9537": "http://abstract.ups.edu/aata/section-software-application.html#Dwn"
+      }
+    },
+    "AataExpression_201": {
+      "test": true,
+      "input": "<mn>52</mn>",
+      "reference": {
+        "m-1044": "http://abstract.ups.edu/aata/reading-questions-2.html#LJp",
+        "m-5107": "http://abstract.ups.edu/aata/exercises-isomorph.html#yGq",
+        "m-8753": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8775": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_202": {
+      "test": true,
+      "input": "<mn>53</mn>",
+      "reference": {
+        "m-8780": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_203": {
+      "test": true,
+      "input": "<mn>54</mn>",
+      "reference": {
+        "m-8563": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+        "m-8785": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_204": {
+      "test": true,
+      "input": "<mn>540</mn><mo>=</mo><msup><mn>2</mn><mn>2</mn></msup><mo>⋅<!-- ⋅ --></mo><msup><mn>3</mn><mn>3</mn></msup><mo>⋅<!-- ⋅ --></mo><mn>5</mn>",
+      "reference": {
+        "m-6815": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#mxC"
+      }
+    },
+    "AataExpression_205": {
+      "test": true,
+      "input": "<mn>561</mn>",
+      "reference": {
+        "m-3689": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#igR"
+      }
+    },
+    "AataExpression_206": {
+      "test": true,
+      "input": "<mn>562</mn>",
+      "reference": {
+        "m-1111": "http://abstract.ups.edu/aata/exercises-integers.html#Ujq"
+      }
+    },
+    "AataExpression_207": {
+      "test": true,
+      "input": "<mn>57</mn><mo>=</mo><msup><mn>2</mn><mn>0</mn></msup><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><msup><mn>2</mn><mn>4</mn></msup><mo>+</mo><msup><mn>2</mn><mn>5</mn></msup>",
+      "reference": {
+        "m-2293": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#JcV"
+      }
+    },
+    "AataExpression_208": {
+      "test": true,
+      "input": "<mn>58</mn>",
+      "reference": {
+        "m-8811": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_209": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>5893</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>81</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>34</mn>",
+      "reference": {
+        "m-3645": "http://abstract.ups.edu/aata/exercises-crypt.html#Ptt"
+      }
+    },
+    "AataExpression_210": {
+      "test": true,
+      "input": "<mn>59</mn>",
+      "reference": {
+        "m-8817": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "AataExpression_211": {
+      "test": true,
+      "input": "<mn>2</mn><mi>x</mi><mo>=</mo><mn>6</mn>",
+      "reference": {
+        "m-6": "http://abstract.ups.edu/aata/section-note-on-proofs.html#YHb",
+        "m-11": "http://abstract.ups.edu/aata/section-note-on-proofs.html#vXo"
+      }
+    },
+    "AataExpression_212": {
+      "test": true,
+      "input": "<mn>6.00000</mn>",
+      "reference": {
+        "m-1946": "http://abstract.ups.edu/aata/groups-sage.html#QGD"
+      }
+    },
+    "AataExpression_213": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>8</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>3</mn><mo>,</mo><mn>6.12</mn><mo>,</mo><mn>9</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>7</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>13</mn><mo>,</mo><mn>11</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-7868": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#dQx"
+      }
+    },
+    "AataExpression_214": {
+      "test": true,
+      "input": "<mi>z</mi><mo>=</mo><mn>2</mn><mi>cis</mi><mo>⁡<!-- ⁡ --></mo><msup><mn>60</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>",
+      "reference": {
+        "m-2233": "http://abstract.ups.edu/aata/section-mult-group-c.html#GZn"
+      }
+    },
+    "AataExpression_215": {
+      "test": true,
+      "input": "<msup><mi>x</mi><mn>4</mn></msup><mo>−<!-- − --></mo><mo stretchy=\"false\">(</mo><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>3</mn><mo stretchy=\"false\">)</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−<!-- − --></mo><mn>62</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>9</mn>",
+      "reference": {
+        "m-13718": "http://abstract.ups.edu/aata/exercises-fields.html#Tvw"
+      }
+    },
+    "AataExpression_216": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">[</mo><mi>GF</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mn>625</mn><mo stretchy=\"false\">)</mo><mo>:</mo><mi>GF</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mn>25</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">]</mo>",
+      "reference": {
+        "m-14485": "http://abstract.ups.edu/aata/exercises-finite.html#wqN"
+      }
+    },
+    "AataExpression_217": {
+      "test": true,
+      "input": "<mn>631</mn>",
+      "reference": {
+        "m-3691": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#uvj"
+      }
+    },
+    "AataExpression_218": {
+      "test": true,
+      "input": "<mn>64</mn>",
+      "reference": {
+        "m-8465": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8868": "http://abstract.ups.edu/aata/sylow-sage.html#ZvM",
+        "m-8869": "http://abstract.ups.edu/aata/sylow-sage.html#ZvM"
+      }
+    },
+    "AataExpression_219": {
+      "test": true,
+      "input": "<msup><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><msup><mn>2</mn><mn>4</mn></msup></mrow></msup><mo>=</mo><mn>65,536</mn>",
+      "reference": {
+        "m-7843": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#bMP"
+      }
+    },
+    "AataExpression_220": {
+      "test": true,
+      "input": "<mn>66</mn>",
+      "reference": {
+        "m-688": "http://abstract.ups.edu/aata/sets-sage.html#RjT"
+      }
+    },
+    "AataExpression_221": {
+      "test": true,
+      "input": "<mn>720</mn>",
+      "reference": {
+        "m-7136": "http://abstract.ups.edu/aata/exercises-struct.html#ABh"
+      }
+    },
+    "AataExpression_222": {
+      "test": true,
+      "input": "<mn>729</mn>",
+      "reference": {
+        "m-10671": "http://abstract.ups.edu/aata/poly-sage-exercises.html#elj"
+      }
+    },
+    "AataExpression_223": {
+      "test": true,
+      "input": "<msup><mn>971</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>321</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>765</mn><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-2431": "http://abstract.ups.edu/aata/exercises-cyclic.html#vBT"
+      }
+    },
+    "AataExpression_224": {
+      "test": true,
+      "input": "<mn>771</mn>",
+      "reference": {
+        "m-3690": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#Ooa"
+      }
+    },
+    "AataExpression_225": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>10</mn></mrow></msub><mo>×<!-- × --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>24</mn></mrow></msub><mo>×<!-- × --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>80</mn></mrow></msub>",
+      "reference": {
+        "m-5074": "http://abstract.ups.edu/aata/exercises-isomorph.html#iUC"
+      }
+    },
+    "AataExpression_226": {
+      "test": true,
+      "input": "<msup><mn>7</mn><mn>5</mn></msup><mo>=</mo><mn>16</mn><mspace width=\"thinmathspace\"></mspace><mn>807</mn>"
+    },
+    "AataExpression_227": {
+      "test": true,
+      "input": "<mn>811</mn>",
+      "reference": {
+        "m-3688": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#VSz"
+      }
+    },
+    "AataExpression_228": {
+      "test": true,
+      "input": "<mn>95</mn><mo>⋅<!-- ⋅ --></mo><mn>97</mn><mo>⋅<!-- ⋅ --></mo><mn>98</mn><mo>⋅<!-- ⋅ --></mo><mn>99</mn><mo>=</mo><mn>89,403,930</mn>",
+      "reference": {
+        "m-9545": "http://abstract.ups.edu/aata/section-software-application.html#IXe"
+      }
+    },
+    "AataExpression_229": {
+      "test": true,
+      "input": "<msup><mn>90</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>",
+      "reference": {
+        "m-1353": "http://abstract.ups.edu/aata/section-mod-n-sym.html#eao",
+        "m-7576": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#lCa",
+        "m-13564": "http://abstract.ups.edu/aata/section-constructions.html#boq"
+      }
+    },
+    "AataExpression_230": {
+      "test": true,
+      "input": "<mn>945</mn>",
+      "reference": {
+        "m-915": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-922": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-926": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-929": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "AataExpression_231": {
+      "test": true,
+      "input": "<mn>95</mn>",
+      "reference": {
+        "m-9540": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9616": "http://abstract.ups.edu/aata/exercises-rings.html#nYU"
+      }
+    },
+    "AataExpression_232": {
+      "test": true,
+      "input": "<mn>96</mn>",
+      "reference": {
+        "m-8588": "http://abstract.ups.edu/aata/exercises-sylow.html#mfD"
+      }
+    },
+    "AataExpression_233": {
+      "test": true,
+      "input": "<mn>97</mn>",
+      "reference": {
+        "m-9541": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9617": "http://abstract.ups.edu/aata/exercises-rings.html#nYU"
+      }
+    },
+    "AataExpression_234": {
+      "test": true,
+      "input": "<mn>98</mn>",
+      "reference": {
+        "m-9542": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9618": "http://abstract.ups.edu/aata/exercises-rings.html#nYU",
+        "m-9621": "http://abstract.ups.edu/aata/exercises-rings.html#Ugd"
+      }
+    },
+    "AataExpression_235": {
+      "test": true,
+      "input": "<mn>99</mn>",
+      "reference": {
+        "m-1068": "http://abstract.ups.edu/aata/exercises-integers.html#FoN",
+        "m-8371": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8396": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-9543": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9619": "http://abstract.ups.edu/aata/exercises-rings.html#nYU",
+        "m-9622": "http://abstract.ups.edu/aata/exercises-rings.html#Ugd"
+      }
+    },
+    "AataExpression_236": {
+      "test": true,
+      "input": "<mn>9923</mn>",
+      "reference": {
+        "m-1109": "http://abstract.ups.edu/aata/exercises-integers.html#och"
+      }
+    },
+    "AataExpression_237": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∈<!-- ∈ --></mo><mi>A</mi>",
+      "reference": {
+        "m-41": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#pcJ",
+        "m-175": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#eDE",
+        "m-215": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#WZf",
+        "m-271": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#nXd",
+        "m-275": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#nXd",
+        "m-280": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#nXd",
+        "m-321": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Uem",
+        "m-329": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Uem"
+      }
+    },
+    "AataExpression_238": {
+      "test": true,
+      "input": "<mi>Aut</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-5150": "http://abstract.ups.edu/aata/exercises-isomorph.html#Uou",
+        "m-5152": "http://abstract.ups.edu/aata/exercises-isomorph.html#Uou",
+        "m-5172": "http://abstract.ups.edu/aata/exercises-isomorph.html#YYn",
+        "m-6209": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#ZnV",
+        "m-6219": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#lCn"
+      }
+    },
+    "AataExpression_239": {
+      "test": true,
+      "input": "<mi>A</mi><mo>⊂<!-- ⊂ --></mo><mi>B</mi>",
+      "reference": {
+        "m-58": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hyk",
+        "m-73": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hyk",
+        "m-552": "http://abstract.ups.edu/aata/exercises-sets.html#RFs",
+        "m-11601": "http://abstract.ups.edu/aata/section-boolean-lattices.html#sJA"
+      }
+    },
+    "AataExpression_240": {
+      "test": true,
+      "input": "<mi>h</mi><mo>:</mo><mi>C</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>D</mi>",
+      "reference": {
+        "m-260": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#buD"
+      }
+    },
+    "AataExpression_241": {
+      "test": true,
+      "input": "<mi>G</mi><mo>×<!-- × --></mo><mi>G</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>G</mi>",
+      "reference": {
+        "m-1385": "http://abstract.ups.edu/aata/section-groups-define.html#fBg"
+      }
+    },
+    "AataExpression_242": {
+      "test": true,
+      "input": "<mi>GF</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><msup><mi>p</mi><mi>n</mi></msup><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-14120": "http://abstract.ups.edu/aata/section-finite-field.html#ePZ",
+        "m-14122": "http://abstract.ups.edu/aata/section-finite-field.html#Snm",
+        "m-14128": "http://abstract.ups.edu/aata/section-finite-field.html#Snm",
+        "m-14149": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14571": "http://abstract.ups.edu/aata/exercises-finite.html#ATC",
+        "m-14576": "http://abstract.ups.edu/aata/exercises-finite.html#haL"
+      }
+    },
+    "AataExpression_243": {
+      "test": true,
+      "input": "<mi>H</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>e</mi><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-1607": "http://abstract.ups.edu/aata/section-subgroups.html#Ylc",
+        "m-2089": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#gHd"
+      }
+    },
+    "AataExpression_244": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">H</mi></mrow></mrow>",
+      "reference": {
+        "m-8993": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY",
+        "m-8996": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY",
+        "m-9000": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY",
+        "m-9005": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY",
+        "m-9009": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY"
+      }
+    },
+    "AataExpression_245": {
+      "test": true,
+      "input": "<mi>Hom</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-12748": "http://abstract.ups.edu/aata/exercises-vect.html#ZRY"
+      }
+    },
+    "AataExpression_246": {
+      "test": true,
+      "input": "<mi>Inn</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-5168": "http://abstract.ups.edu/aata/exercises-isomorph.html#sRe",
+        "m-5171": "http://abstract.ups.edu/aata/exercises-isomorph.html#YYn",
+        "m-6217": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#lCn",
+        "m-6218": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#lCn",
+        "m-6224": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#xQF"
+      }
+    },
+    "AataExpression_247": {
+      "test": true,
+      "input": "<mi>G</mi><msub><mi>L</mi><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-1464": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1468": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1479": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1637": "http://abstract.ups.edu/aata/section-subgroups.html#OCV",
+        "m-1656": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-1760": "http://abstract.ups.edu/aata/exercises-groups.html#NxC",
+        "m-1764": "http://abstract.ups.edu/aata/exercises-groups.html#FTd",
+        "m-1765": "http://abstract.ups.edu/aata/exercises-groups.html#FTd",
+        "m-1768": "http://abstract.ups.edu/aata/exercises-groups.html#FTd",
+        "m-2358": "http://abstract.ups.edu/aata/exercises-cyclic.html#KDN",
+        "m-2383": "http://abstract.ups.edu/aata/exercises-cyclic.html#TXz",
+        "m-3382": "http://abstract.ups.edu/aata/exercises-cosets.html#eKv",
+        "m-3384": "http://abstract.ups.edu/aata/exercises-cosets.html#eKv",
+        "m-5035": "http://abstract.ups.edu/aata/exercises-isomorph.html#nxr",
+        "m-5148": "http://abstract.ups.edu/aata/exercises-isomorph.html#ohl",
+        "m-5661": "http://abstract.ups.edu/aata/exercises-normal.html#NZS",
+        "m-5713": "http://abstract.ups.edu/aata/exercises-normal.html#eYd",
+        "m-6112": "http://abstract.ups.edu/aata/exercises-homomorph.html#mHG",
+        "m-6359": "http://abstract.ups.edu/aata/section-matrix-groups.html#EeU"
+      }
+    },
+    "AataExpression_248": {
+      "test": true,
+      "input": "<mi>ϕ<!-- ϕ --></mi><mo>:</mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi class=\"MJX-tex-caligraphic\" mathvariant=\"script\">L</mi></mrow></mrow><mi>H</mi></msub><mo stretchy=\"false\">→<!-- → --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi class=\"MJX-tex-caligraphic\" mathvariant=\"script\">R</mi></mrow></mrow><mi>H</mi></msub>",
+      "reference": {
+        "m-3167": "http://abstract.ups.edu/aata/section-cosets.html#dxL",
+        "m-3406": "http://abstract.ups.edu/aata/exercises-cosets.html#vIG"
+      }
+    },
+    "AataExpression_249": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">M</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-1462": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1465": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1652": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-1654": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-1655": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-6119": "http://abstract.ups.edu/aata/exercises-homomorph.html#oiy",
+        "m-9578": "http://abstract.ups.edu/aata/exercises-rings.html#cnf",
+        "m-9610": "http://abstract.ups.edu/aata/exercises-rings.html#Pwk",
+        "m-9773": "http://abstract.ups.edu/aata/exercises-rings.html#sus"
+      }
+    },
+    "AataExpression_250": {
+      "test": true,
+      "input": "<mi>R</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>M</mi>",
+      "reference": {
+        "m-9383": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#Ink",
+        "m-9387": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9389": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9390": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9392": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9419": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9420": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9433": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl"
+      }
+    },
+    "AataExpression_251": {
+      "test": true,
+      "input": "<mn>1</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mi>N</mi>",
+      "reference": {
+        "m-1217": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn"
+      }
+    },
+    "AataExpression_252": {
+      "test": true,
+      "input": "<mi>Null</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-4119": "http://abstract.ups.edu/aata/section-linear-codes.html#hnt",
+        "m-4209": "http://abstract.ups.edu/aata/section-parity-check.html#jTE",
+        "m-4296": "http://abstract.ups.edu/aata/section-parity-check.html#hng",
+        "m-4316": "http://abstract.ups.edu/aata/section-parity-check.html#shX",
+        "m-4325": "http://abstract.ups.edu/aata/section-parity-check.html#shX"
+      }
+    },
+    "AataExpression_253": {
+      "test": true,
+      "input": "<mi>O</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-6374": "http://abstract.ups.edu/aata/section-matrix-groups.html#vnL",
+        "m-6378": "http://abstract.ups.edu/aata/section-matrix-groups.html#dry",
+        "m-6380": "http://abstract.ups.edu/aata/section-matrix-groups.html#dry",
+        "m-6382": "http://abstract.ups.edu/aata/section-matrix-groups.html#JyH",
+        "m-6468": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6470": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6474": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6489": "http://abstract.ups.edu/aata/section-symmetry.html#ION",
+        "m-6491": "http://abstract.ups.edu/aata/section-symmetry.html#ION",
+        "m-6496": "http://abstract.ups.edu/aata/section-symmetry.html#ION",
+        "m-6666": "http://abstract.ups.edu/aata/exercises-matrix.html#ZMY",
+        "m-6700": "http://abstract.ups.edu/aata/exercises-matrix.html#CZB",
+        "m-6708": "http://abstract.ups.edu/aata/exercises-matrix.html#vvc"
+      }
+    },
+    "AataExpression_254": {
+      "test": true,
+      "input": "<mi>P</mi><mi>A</mi><msup><mi>P</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup><mo>=</mo><mi>B</mi>",
+      "reference": {
+        "m-398": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#mDC",
+        "m-400": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#mDC",
+        "m-406": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#mDC",
+        "m-411": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#mDC"
+      }
+    },
+    "AataExpression_255": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">P</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-685": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ"
+      }
+    },
+    "AataExpression_256": {
+      "test": true,
+      "input": "<mi>Q</mi><mi>B</mi><msup><mi>Q</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup><mo>=</mo><mi>C</mi>",
+      "reference": {
+        "m-412": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#mDC"
+      }
+    },
+    "AataExpression_257": {
+      "test": true,
+      "input": "<mi>R</mi><mo>⊂<!-- ⊂ --></mo><mi>X</mi><mo>×<!-- × --></mo><mi>X</mi>",
+      "reference": {
+        "m-337": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#vBP"
+      }
+    },
+    "AataExpression_258": {
+      "test": true,
+      "input": "<mi>S</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-252": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#pyi",
+        "m-309": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#OaS"
+      }
+    },
+    "AataExpression_259": {
+      "test": true,
+      "input": "<mtext>S</mtext><mo>=</mo><mn>18</mn>",
+      "reference": {
+        "m-3526": "http://abstract.ups.edu/aata/section-private-key-crypt.html#xZJ"
+      }
+    },
+    "AataExpression_260": {
+      "test": true,
+      "input": "<msub><mi>T</mi><mi>A</mi></msub><mo>:</mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup><mo stretchy=\"false\">→<!-- → --></mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup>",
+      "reference": {
+        "m-247": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#JqZ"
+      }
+    },
+    "AataExpression_261": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">T</mi></mrow></mrow><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>z</mi><mo>∈<!-- ∈ --></mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">C</mi></mrow></mrow><mo>∗<!-- ∗ --></mo></msup><mo>:</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>z</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mo>=</mo><mn>1</mn><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_262": {
+      "test": true,
+      "input": "<mi>A</mi><mo>⊂<!-- ⊂ --></mo><mi>U</mi>",
+      "reference": {
+        "m-96": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#GaU"
+      }
+    },
+    "AataExpression_263": {
+      "test": true,
+      "input": "<mi>v</mi><mo>∈<!-- ∈ --></mo><mi>V</mi>",
+      "reference": {
+        "m-12362": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Vbb",
+        "m-12413": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#orc",
+        "m-12420": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#gMD",
+        "m-12423": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#MTM",
+        "m-12626": "http://abstract.ups.edu/aata/exercises-vect.html#KXv",
+        "m-12716": "http://abstract.ups.edu/aata/exercises-vect.html#bVG",
+        "m-12729": "http://abstract.ups.edu/aata/exercises-vect.html#ITN",
+        "m-12754": "http://abstract.ups.edu/aata/exercises-vect.html#ZRY",
+        "m-12778": "http://abstract.ups.edu/aata/exercises-vect.html#Snz"
+      }
+    },
+    "AataExpression_264": {
+      "test": true,
+      "input": "<mi>Y</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>B</mi><mo>,</mo><mi>W</mi><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-7627": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#Dkf"
+      }
+    },
+    "AataExpression_265": {
+      "test": true,
+      "input": "<mi>f</mi><mo>:</mo><mi>X</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>Y</mi>",
+      "reference": {
+        "m-626": "http://abstract.ups.edu/aata/exercises-sets.html#LQg",
+        "m-7630": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#Dkf",
+        "m-7634": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#Dkf"
+      }
+    },
+    "AataExpression_266": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">M</mi></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mi>m</mi><mo>×<!-- × --></mo><mi>n</mi></mrow></msub><mo stretchy=\"false\">(</mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">Z</mi></mrow><mn>2</mn></msub><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_267": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>y</mi><mo>∈<!-- ∈ --></mo><mi>X</mi><mo>:</mo><mi>y</mi><mo>∼<!-- ∼ --></mo><mi>x</mi><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-422": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#bIY"
+      }
+    },
+    "AataExpression_268": {
+      "test": true,
+      "input": "<mi>F</mi><mo fence=\"false\" stretchy=\"false\">[</mo><mi>x</mi><mo fence=\"false\" stretchy=\"false\">]</mo>",
+      "reference": {
+        "m-9948": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+        "m-10025": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10039": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#pfN",
+        "m-10059": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#VmW",
+        "m-10116": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10123": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10171": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10184": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10360": "http://abstract.ups.edu/aata/section-irreducible-poly.html#ZWC",
+        "m-10362": "http://abstract.ups.edu/aata/section-irreducible-poly.html#iVc",
+        "m-10366": "http://abstract.ups.edu/aata/section-irreducible-poly.html#qVa",
+        "m-10370": "http://abstract.ups.edu/aata/section-irreducible-poly.html#kvU",
+        "m-10372": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10375": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10380": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10388": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10414": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10416": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10417": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10428": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10430": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10447": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10547": "http://abstract.ups.edu/aata/exercises-poly.html#JIy",
+        "m-10579": "http://abstract.ups.edu/aata/exercises-poly.html#uzA",
+        "m-10590": "http://abstract.ups.edu/aata/exercises-poly.html#Tck",
+        "m-10604": "http://abstract.ups.edu/aata/exercises-poly.html#zjt",
+        "m-10605": "http://abstract.ups.edu/aata/exercises-poly.html#ovT",
+        "m-10656": "http://abstract.ups.edu/aata/poly-sage.html#VBr",
+        "m-10829": "http://abstract.ups.edu/aata/section-factorization-domains.html#Ade",
+        "m-11097": "http://abstract.ups.edu/aata/section-factorization-domains.html#Bix",
+        "m-11119": "http://abstract.ups.edu/aata/section-factorization-domains.html#PVW",
+        "m-11138": "http://abstract.ups.edu/aata/section-factorization-domains.html#jeT",
+        "m-11269": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-11299": "http://abstract.ups.edu/aata/section-factorization-domains.html#NwP",
+        "m-11306": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY",
+        "m-11351": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11355": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11382": "http://abstract.ups.edu/aata/section-factorization-domains.html#ZLh",
+        "m-11425": "http://abstract.ups.edu/aata/exercises-domains.html#flY",
+        "m-12381": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Yrg",
+        "m-12383": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Yrg",
+        "m-12455": "http://abstract.ups.edu/aata/section-subspaces.html#wTQ",
+        "m-12571": "http://abstract.ups.edu/aata/exercises-vect.html#hKS",
+        "m-12573": "http://abstract.ups.edu/aata/exercises-vect.html#hKS",
+        "m-12592": "http://abstract.ups.edu/aata/exercises-vect.html#GnC",
+        "m-12919": "http://abstract.ups.edu/aata/section-extension-fields.html#ldB",
+        "m-12931": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-13039": "http://abstract.ups.edu/aata/section-extension-fields.html#RkK",
+        "m-13049": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG",
+        "m-13050": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG",
+        "m-13061": "http://abstract.ups.edu/aata/section-extension-fields.html#xrT",
+        "m-13069": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13072": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13148": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13367": "http://abstract.ups.edu/aata/section-extension-fields.html#uLI",
+        "m-13370": "http://abstract.ups.edu/aata/section-extension-fields.html#iiV",
+        "m-13371": "http://abstract.ups.edu/aata/section-extension-fields.html#iiV",
+        "m-13385": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13402": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13413": "http://abstract.ups.edu/aata/section-splitting-fields.html#drY",
+        "m-13473": "http://abstract.ups.edu/aata/section-splitting-fields.html#fop",
+        "m-13491": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13508": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13560": "http://abstract.ups.edu/aata/section-splitting-fields.html#ctJ",
+        "m-13780": "http://abstract.ups.edu/aata/exercises-fields.html#wWu",
+        "m-13815": "http://abstract.ups.edu/aata/exercises-fields.html#hNw",
+        "m-13818": "http://abstract.ups.edu/aata/exercises-fields.html#NUF",
+        "m-13887": "http://abstract.ups.edu/aata/exercises-fields.html#ktH",
+        "m-14028": "http://abstract.ups.edu/aata/section-finite-field.html#SBH",
+        "m-14041": "http://abstract.ups.edu/aata/section-finite-field.html#yIQ",
+        "m-14718": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+        "m-14748": "http://abstract.ups.edu/aata/section-field-automorphisms.html#USK",
+        "m-14773": "http://abstract.ups.edu/aata/section-field-automorphisms.html#XNq",
+        "m-14897": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14900": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14916": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14928": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-15083": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Jom",
+        "m-15088": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Jom",
+        "m-15454": "http://abstract.ups.edu/aata/section-galois-applications.html#wqa",
+        "m-15651": "http://abstract.ups.edu/aata/exercises-galois.html#Xdw",
+        "m-15723": "http://abstract.ups.edu/aata/exercises-galois.html#gLD"
+      }
+    },
+    "AataExpression_269": {
+      "test": true,
+      "input": "<mi>char</mi><mo>⁡<!-- ⁡ --></mo><mi>R</mi>",
+      "reference": {
+        "m-9140": "http://abstract.ups.edu/aata/section-domains-and-fields.html#ucB"
+      }
+    },
+    "AataExpression_270": {
+      "test": true,
+      "input": "<mi>r</mi><mi>cis</mi><mo>⁡<!-- ⁡ --></mo><mi>θ<!-- θ --></mi>",
+      "reference": {
+        "m-2228": "http://abstract.ups.edu/aata/section-mult-group-c.html#Bkb"
+      }
+    },
+    "AataExpression_271": {
+      "test": true,
+      "input": "<mi>α<!-- α --></mi><mi>β<!-- β --></mi><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"normal\">i</mi><mi mathvariant=\"normal\">d</mi></mrow>",
+      "reference": {
+        "m-1382": "http://abstract.ups.edu/aata/section-mod-n-sym.html#WvP"
+      }
+    },
+    "AataExpression_272": {
+      "test": true,
+      "input": "<mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>n</mi>",
+      "reference": {
+        "m-9852": "http://abstract.ups.edu/aata/section-poly-rings.html#NWS",
+        "m-9960": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX"
+      }
+    },
+    "AataExpression_273": {
+      "test": true,
+      "input": "<mo movablelimits=\"true\" form=\"prefix\">det</mo><mi>A</mi><mo>=</mo><mi>a</mi><mi>d</mi><mo>−<!-- − --></mo><mi>b</mi><mi>c</mi><mo>≠<!-- ≠ --></mo><mn>0</mn>"
+    },
+    "AataExpression_274": {
+      "test": true,
+      "input": "<mi>dim</mi><mo>⁡<!-- ⁡ --></mo><mi>V</mi><mo>=</mo><mi>n</mi>",
+      "reference": {
+        "m-12550": "http://abstract.ups.edu/aata/section-linear-independence.html#euN"
+      }
+    },
+    "AataExpression_275": {
+      "test": true,
+      "input": "<msup><mi>f</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup>",
+      "reference": {
+        "m-298": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#BMA"
+      }
+    },
+    "AataExpression_276": {
+      "test": true,
+      "input": "<mi>f</mi><mo>⊂<!-- ⊂ --></mo><mi>A</mi><mo>×<!-- × --></mo><mi>B</mi>",
+      "reference": {
+        "m-172": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#eDE"
+      }
+    },
+    "AataExpression_277": {
+      "test": true,
+      "input": "<mi>g</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mi>a</mi>",
+      "reference": {
+        "m-199": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#YzX"
+      }
+    },
+    "AataExpression_278": {
+      "test": true,
+      "input": "<mi>d</mi><mo>=</mo><mo movablelimits=\"true\" form=\"prefix\">gcd</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_279": {
+      "test": true,
+      "input": "<msub><mi>X</mi><mi>i</mi></msub><mo>∩<!-- ∩ --></mo><msub><mi>X</mi><mi>j</mi></msub><mo>=</mo><mi mathvariant=\"normal\">∅<!-- ∅ --></mi>",
+      "reference": {
+        "m-416": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#bIY"
+      }
+    },
+    "AataExpression_280": {
+      "test": true,
+      "input": "<mi>ker</mi><mo>⁡<!-- ⁡ --></mo><mi>ϕ<!-- ϕ --></mi>",
+      "reference": {
+        "m-5894": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#NJx",
+        "m-5942": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#tQG",
+        "m-9285": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#XvV",
+        "m-9291": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#XvV"
+      }
+    },
+    "AataExpression_281": {
+      "test": true,
+      "input": "<mi>s</mi><mo>−<!-- − --></mo><mi>t</mi><mo>=</mo><mi>l</mi><mi>n</mi>",
+      "reference": {
+        "m-508": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "AataExpression_282": {
+      "test": true,
+      "input": "<mi>lcm</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-1167": "http://abstract.ups.edu/aata/exercises-integers.html#fGK"
+      }
+    },
+    "AataExpression_283": {
+      "test": true,
+      "input": "<munder><mo movablelimits=\"true\" form=\"prefix\">lim</mo><mrow class=\"MJX-TeXAtom-ORD\"><mi>n</mi><mo stretchy=\"false\">→<!-- → --></mo><mi mathvariant=\"normal\">∞<!-- ∞ --></mi></mrow></munder><msub><mi>f</mi><mi>n</mi></msub><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><msub><mi>f</mi><mrow class=\"MJX-TeXAtom-ORD\"><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mo stretchy=\"false\">(</mo><msqrt><mn>5</mn></msqrt><mo>−<!-- − --></mo><mn>1</mn><mo stretchy=\"false\">)</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>2</mn>"
+    },
+    "AataExpression_284": {
+      "test": true,
+      "input": "<mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>ln</mi><mo>⁡<!-- ⁡ --></mo><mi>x</mi>",
+      "reference": {
+        "m-297": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#BMA"
+      }
+    },
+    "AataExpression_285": {
+      "test": true,
+      "input": "<msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mi>m</mi></msup>",
+      "reference": {
+        "m-251": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#JqZ",
+        "m-672": "http://abstract.ups.edu/aata/exercises-sets.html#ElH",
+        "m-6301": "http://abstract.ups.edu/aata/section-matrix-groups.html#Mtn",
+        "m-6306": "http://abstract.ups.edu/aata/section-matrix-groups.html#Mtn"
+      }
+    },
+    "AataExpression_286": {
+      "test": true,
+      "input": "<mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo><mo>≤<!-- ≤ --></mo><mo movablelimits=\"true\" form=\"prefix\">max</mo><mo stretchy=\"false\">(</mo><mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>,</mo><mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_287": {
+      "test": true,
+      "input": "<msub><mi>d</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo movablelimits=\"true\" form=\"prefix\">min</mo></mrow></msub>"
+    },
+    "AataExpression_288": {
+      "test": true,
+      "input": "<mi>r</mi><mo>=</mo><mi>s</mi>",
+      "reference": {
+        "m-30": "http://abstract.ups.edu/aata/section-note-on-proofs.html#Jyd",
+        "m-10880": "http://abstract.ups.edu/aata/section-factorization-domains.html#MyA",
+        "m-11094": "http://abstract.ups.edu/aata/section-factorization-domains.html#twH"
+      }
+    },
+    "AataExpression_289": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">r</mi></mrow></mrow>",
+      "reference": {
+        "m-4389": "http://abstract.ups.edu/aata/section-efficient-decoding.html#oDx",
+        "m-4391": "http://abstract.ups.edu/aata/section-efficient-decoding.html#oDx",
+        "m-4393": "http://abstract.ups.edu/aata/section-efficient-decoding.html#oDx",
+        "m-4447": "http://abstract.ups.edu/aata/section-efficient-decoding.html#ZIU",
+        "m-4452": "http://abstract.ups.edu/aata/section-efficient-decoding.html#ZIU",
+        "m-4460": "http://abstract.ups.edu/aata/section-efficient-decoding.html#QKH"
+      }
+    },
+    "AataExpression_290": {
+      "test": true,
+      "input": "<mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>sin</mi><mo>⁡<!-- ⁡ --></mo><mi>x</mi>",
+      "reference": {
+        "m-578": "http://abstract.ups.edu/aata/exercises-sets.html#uYZ",
+        "m-12396": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Eyp"
+      }
+    },
+    "AataExpression_291": {
+      "test": true,
+      "input": "<mi>r</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>s</mi><mo>∼<!-- ∼ --></mo><mi>t</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>u</mi>",
+      "reference": {
+        "m-362": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#uib"
+      }
+    },
+    "AataExpression_292": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">b</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>",
+      "reference": {
+        "m-3550": "http://abstract.ups.edu/aata/section-private-key-crypt.html#Kob"
+      }
+    },
+    "AataExpression_293": {
+      "test": true,
+      "input": "<mi>v</mi><mo>∈<!-- ∈ --></mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup>",
+      "reference": {
+        "m-7309": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#rrm"
+      }
+    },
+    "AataExpression_294": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">w</mi></mrow></mrow>",
+      "reference": {
+        "m-6392": "http://abstract.ups.edu/aata/section-matrix-groups.html#fCk",
+        "m-6672": "http://abstract.ups.edu/aata/exercises-matrix.html#ypI"
+      }
+    },
+    "AataExpression_295": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3863": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ"
+      }
+    },
+    "AataExpression_296": {
+      "test": true,
+      "input": "<mi>A</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo fence=\"false\" stretchy=\"false\">}</mo>",
+      "reference": {
+        "m-158": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#ssO"
+      }
+    },
+    "AataExpression_297": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-3864": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ"
+      }
+    },
+    "AataExpression_298": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>x</mi><mo>−<!-- − --></mo><mi>y</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mo>≤<!-- ≤ --></mo><mn>4</mn>"
+    },
+    "AataExpression_299": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>σ<!-- σ --></mi><mo>~<!-- ~ --></mo></mover></mrow>",
+      "reference": {
+        "m-7632": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#Dkf",
+        "m-7641": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#Dkf",
+        "m-7705": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#cKR"
+      }
+    },
+    "AataExpression_300": {
+      "test": true,
+      "input": "<mi>A</mi><mo>×<!-- × --></mo><mi>B</mi>",
+      "reference": {
+        "m-153": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Spm",
+        "m-161": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#ssO",
+        "m-171": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#eDE",
+        "m-530": "http://abstract.ups.edu/aata/exercises-sets.html#NcD",
+        "m-5211": "http://abstract.ups.edu/aata/exercises-isomorph.html#WdH"
+      }
+    },
+    "AataExpression_301": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">Δ<!-- Δ --></mi><mo>=</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−<!-- − --></mo><mn>4</mn><mi>a</mi><mi>c</mi>",
+      "reference": {
+        "m-10617": "http://abstract.ups.edu/aata/poly-exercises-cubics-quartics.html#XMd"
+      }
+    },
+    "AataExpression_302": {
+      "test": true,
+      "input": "<mi>α<!-- α --></mi>",
+      "reference": {
+        "m-1380": "http://abstract.ups.edu/aata/section-mod-n-sym.html#WvP",
+        "m-1458": "http://abstract.ups.edu/aata/section-groups-define.html#dLT",
+        "m-2978": "http://abstract.ups.edu/aata/exercises-permute.html#ZHu",
+        "m-3012": "http://abstract.ups.edu/aata/exercises-permute.html#lVM",
+        "m-3014": "http://abstract.ups.edu/aata/exercises-permute.html#ScV",
+        "m-3016": "http://abstract.ups.edu/aata/exercises-permute.html#ScV",
+        "m-3421": "http://abstract.ups.edu/aata/exercises-cosets.html#Elh",
+        "m-6307": "http://abstract.ups.edu/aata/section-matrix-groups.html#Mtn",
+        "m-9929": "http://abstract.ups.edu/aata/section-poly-rings.html#LTk",
+        "m-9936": "http://abstract.ups.edu/aata/section-poly-rings.html#Gst",
+        "m-10027": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10031": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10078": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10086": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10094": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10281": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Buf",
+        "m-10283": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Buf",
+        "m-12378": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#sjX",
+        "m-12604": "http://abstract.ups.edu/aata/exercises-vect.html#muL",
+        "m-12893": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12909": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12927": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12957": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12961": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12976": "http://abstract.ups.edu/aata/section-extension-fields.html#lrW",
+        "m-13026": "http://abstract.ups.edu/aata/section-extension-fields.html#NkL",
+        "m-13035": "http://abstract.ups.edu/aata/section-extension-fields.html#RkK",
+        "m-13041": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG",
+        "m-13042": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG",
+        "m-13056": "http://abstract.ups.edu/aata/section-extension-fields.html#xrT",
+        "m-13070": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13073": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13080": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13081": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13097": "http://abstract.ups.edu/aata/section-extension-fields.html#JUG",
+        "m-13100": "http://abstract.ups.edu/aata/section-extension-fields.html#JUG",
+        "m-13112": "http://abstract.ups.edu/aata/section-extension-fields.html#zhg",
+        "m-13117": "http://abstract.ups.edu/aata/section-extension-fields.html#hrK",
+        "m-13122": "http://abstract.ups.edu/aata/section-extension-fields.html#hrK",
+        "m-13127": "http://abstract.ups.edu/aata/section-extension-fields.html#dzc",
+        "m-13136": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13138": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13142": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13152": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13376": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13395": "http://abstract.ups.edu/aata/section-extension-fields.html#mbD",
+        "m-13501": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13528": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13567": "http://abstract.ups.edu/aata/section-constructions.html#nhj",
+        "m-13570": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13577": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13592": "http://abstract.ups.edu/aata/section-constructions.html#Lvy",
+        "m-13658": "http://abstract.ups.edu/aata/section-constructions.html#XJQ",
+        "m-13660": "http://abstract.ups.edu/aata/section-constructions.html#SZX",
+        "m-13689": "http://abstract.ups.edu/aata/section-constructions.html#wAV",
+        "m-13694": "http://abstract.ups.edu/aata/section-constructions.html#wAV",
+        "m-13706": "http://abstract.ups.edu/aata/reading-questions-21.html#KLa",
+        "m-13763": "http://abstract.ups.edu/aata/exercises-fields.html#LQX",
+        "m-13798": "http://abstract.ups.edu/aata/exercises-fields.html#Yfp",
+        "m-13800": "http://abstract.ups.edu/aata/exercises-fields.html#Yfp",
+        "m-13804": "http://abstract.ups.edu/aata/exercises-fields.html#Yfp",
+        "m-13820": "http://abstract.ups.edu/aata/exercises-fields.html#ubO",
+        "m-13834": "http://abstract.ups.edu/aata/exercises-fields.html#Gqg",
+        "m-13878": "http://abstract.ups.edu/aata/exercises-fields.html#ktH",
+        "m-13888": "http://abstract.ups.edu/aata/exercises-fields.html#ktH",
+        "m-13889": "http://abstract.ups.edu/aata/exercises-fields.html#Xor",
+        "m-13948": "http://abstract.ups.edu/aata/section-finite-field.html#Gnp",
+        "m-13957": "http://abstract.ups.edu/aata/section-finite-field.html#Gnp",
+        "m-13991": "http://abstract.ups.edu/aata/section-finite-field.html#BRE",
+        "m-14037": "http://abstract.ups.edu/aata/section-finite-field.html#Ucz",
+        "m-14040": "http://abstract.ups.edu/aata/section-finite-field.html#Ucz",
+        "m-14079": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14089": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14108": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14171": "http://abstract.ups.edu/aata/section-finite-field.html#doU",
+        "m-14176": "http://abstract.ups.edu/aata/section-finite-field.html#doU",
+        "m-14189": "http://abstract.ups.edu/aata/section-finite-field.html#auo",
+        "m-14200": "http://abstract.ups.edu/aata/section-finite-field.html#gqR",
+        "m-14490": "http://abstract.ups.edu/aata/exercises-finite.html#uuw",
+        "m-14498": "http://abstract.ups.edu/aata/exercises-finite.html#Cuu",
+        "m-14551": "http://abstract.ups.edu/aata/exercises-finite.html#TsF",
+        "m-14766": "http://abstract.ups.edu/aata/section-field-automorphisms.html#AZT",
+        "m-14789": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14852": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm",
+        "m-14946": "http://abstract.ups.edu/aata/section-field-automorphisms.html#LNt",
+        "m-14956": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-15103": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15107": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15129": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15137": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15154": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15215": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ",
+        "m-15390": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15392": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15536": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15557": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr"
+      }
+    },
+    "AataExpression_303": {
+      "test": true,
+      "input": "<mi>β<!-- β --></mi>",
+      "reference": {
+        "m-1381": "http://abstract.ups.edu/aata/section-mod-n-sym.html#WvP",
+        "m-1459": "http://abstract.ups.edu/aata/section-groups-define.html#dLT",
+        "m-2979": "http://abstract.ups.edu/aata/exercises-permute.html#ZHu",
+        "m-3422": "http://abstract.ups.edu/aata/exercises-cosets.html#Elh",
+        "m-10084": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-13472": "http://abstract.ups.edu/aata/section-splitting-fields.html#fop",
+        "m-13502": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13530": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13571": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13578": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13821": "http://abstract.ups.edu/aata/exercises-fields.html#ubO",
+        "m-13881": "http://abstract.ups.edu/aata/exercises-fields.html#ktH",
+        "m-14080": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14767": "http://abstract.ups.edu/aata/section-field-automorphisms.html#AZT",
+        "m-14853": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm",
+        "m-14957": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14989": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14991": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-15245": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ",
+        "m-15250": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ",
+        "m-15439": "http://abstract.ups.edu/aata/section-galois-applications.html#FXU",
+        "m-15581": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr"
+      }
+    },
+    "AataExpression_304": {
+      "test": true,
+      "input": "<mo fence=\"false\" stretchy=\"false\">⟨<!-- ⟨ --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">a</mi></mrow></mrow><mi>r</mi></msub><mo>,</mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">a</mi></mrow></mrow><mi>s</mi></msub><mo fence=\"false\" stretchy=\"false\">⟩<!-- ⟩ --></mo><mo>=</mo><msub><mi>δ<!-- δ --></mi><mrow class=\"MJX-TeXAtom-ORD\"><mi>r</mi><mi>s</mi></mrow></msub>",
+      "reference": {
+        "m-6413": "http://abstract.ups.edu/aata/section-matrix-groups.html#pFQ"
+      }
+    },
+    "AataExpression_305": {
+      "test": true,
+      "input": "<mi>η<!-- η --></mi><mo>:</mo><mi>G</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>K</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>ψ<!-- ψ --></mi><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-5952": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#MpJ",
+        "m-5956": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#mOK",
+        "m-5963": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#mOK"
+      }
+    },
+    "AataExpression_306": {
+      "test": true,
+      "input": "<mi>λ<!-- λ --></mi>",
+      "reference": {
+        "m-681": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ"
+      }
+    },
+    "AataExpression_307": {
+      "test": true,
+      "input": "<msub><mi>μ<!-- μ --></mi><mn>1</mn></msub><msub><mi>ρ<!-- ρ --></mi><mn>1</mn></msub>",
+      "reference": {
+        "m-1371": "http://abstract.ups.edu/aata/section-mod-n-sym.html#qoG"
+      }
+    },
+    "AataExpression_308": {
+      "test": true,
+      "input": "<mi>ν<!-- ν --></mi><mo>:</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>3</mn></msqrt><mspace width=\"thinmathspace\"></mspace><mi>i</mi><mo stretchy=\"false\">]</mo><mo stretchy=\"false\">→<!-- → --></mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">N</mi></mrow></mrow><mo>∪<!-- ∪ --></mo><mo fence=\"false\" stretchy=\"false\">{</mo><mn>0</mn><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_309": {
+      "test": true,
+      "input": "<mi>π<!-- π --></mi><mo>:</mo><mi>S</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>S</mi>",
+      "reference": {
+        "m-253": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#pyi",
+        "m-256": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#pyi",
+        "m-1360": "http://abstract.ups.edu/aata/section-mod-n-sym.html#Khx",
+        "m-2581": "http://abstract.ups.edu/aata/permute.html#UnH"
+      }
+    },
+    "AataExpression_310": {
+      "test": true,
+      "input": "<mi>ψ<!-- ψ --></mi>",
+      "reference": {
+        "m-4708": "http://abstract.ups.edu/aata/section-isomorph-definitions.html#IvB",
+        "m-5973": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#mOK",
+        "m-10795": "http://abstract.ups.edu/aata/section-field-of-fractions.html#hip",
+        "m-10803": "http://abstract.ups.edu/aata/section-field-of-fractions.html#hip",
+        "m-10804": "http://abstract.ups.edu/aata/section-field-of-fractions.html#hip",
+        "m-10808": "http://abstract.ups.edu/aata/section-field-of-fractions.html#hip",
+        "m-10811": "http://abstract.ups.edu/aata/section-field-of-fractions.html#hip",
+        "m-11566": "http://abstract.ups.edu/aata/exercises-domains.html#egF",
+        "m-12939": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12940": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12947": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12948": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-13552": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13556": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj"
+      }
+    },
+    "AataExpression_311": {
+      "test": true,
+      "input": "<mi>w</mi><mo>=</mo><mi>s</mi><mi>cis</mi><mo>⁡<!-- ⁡ --></mo><mi>ϕ<!-- ϕ --></mi>",
+      "reference": {
+        "m-2238": "http://abstract.ups.edu/aata/section-mult-group-c.html#lrj"
+      }
+    },
+    "AataExpression_312": {
+      "test": true,
+      "input": "<msup><mi>A</mi><mo>′</mo></msup>",
+      "reference": {
+        "m-98": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#GaU"
+      }
+    },
+    "AataExpression_313": {
+      "test": true,
+      "input": "<msup><mi>g</mi><mo>″</mo></msup>",
+      "reference": {
+        "m-1519": "http://abstract.ups.edu/aata/section-groups-define.html#uYz"
+      }
+    },
+    "AataExpression_314": {
+      "test": true,
+      "input": "<mi>ℓ<!-- ℓ --></mi>",
+      "reference": {
+        "m-6466": "http://abstract.ups.edu/aata/section-matrix-groups.html#pyz"
+      }
+    },
+    "AataExpression_315": {
+      "test": true,
+      "input": "<mi>f</mi><mo>:</mo><mi>A</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>B</mi>",
+      "reference": {
+        "m-181": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#eDE",
+        "m-201": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#KKN",
+        "m-210": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#WZf",
+        "m-230": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Dgo",
+        "m-237": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#QVy",
+        "m-258": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#buD",
+        "m-289": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#jnx",
+        "m-311": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Uem",
+        "m-585": "http://abstract.ups.edu/aata/exercises-sets.html#Hgn",
+        "m-596": "http://abstract.ups.edu/aata/exercises-sets.html#zBO"
+      }
+    },
+    "AataExpression_316": {
+      "test": true,
+      "input": "<mi>f</mi><mo>:</mo><mi>a</mi><mo stretchy=\"false\">↦<!-- ↦ --></mo><mi>b</mi>",
+      "reference": {
+        "m-185": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#eDE"
+      }
+    },
+    "AataExpression_317": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mo stretchy=\"false\">⇐<!-- ⇐ --></mo><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-12288": "http://abstract.ups.edu/aata/exercises-boolean.html#jbt"
+      }
+    },
+    "AataExpression_318": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">∅<!-- ∅ --></mi>",
+      "reference": {
+        "m-75": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#NFt",
+        "m-11856": "http://abstract.ups.edu/aata/section-boolean-algebras.html#Kdk"
+      }
+    },
+    "AataExpression_319": {
+      "test": true,
+      "input": "<mo>−<!-- − --></mo><mn>3</mn><mo>∉<!-- ∉ --></mo><mi>E</mi>",
+      "reference": {
+        "m-53": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#VjS"
+      }
+    },
+    "AataExpression_320": {
+      "test": true,
+      "input": "<msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">C</mi></mrow></mrow><mo>∗<!-- ∗ --></mo></msup>",
+      "reference": {
+        "m-1490": "http://abstract.ups.edu/aata/section-groups-define.html#Whu",
+        "m-1491": "http://abstract.ups.edu/aata/section-groups-define.html#Whu",
+        "m-1630": "http://abstract.ups.edu/aata/section-subgroups.html#ivM",
+        "m-1633": "http://abstract.ups.edu/aata/section-subgroups.html#ivM",
+        "m-1863": "http://abstract.ups.edu/aata/exercises-groups.html#VLV",
+        "m-2252": "http://abstract.ups.edu/aata/section-mult-group-c.html#RMN",
+        "m-2255": "http://abstract.ups.edu/aata/section-mult-group-c.html#RMN",
+        "m-2256": "http://abstract.ups.edu/aata/section-mult-group-c.html#Rys",
+        "m-2340": "http://abstract.ups.edu/aata/exercises-cyclic.html#BME",
+        "m-2343": "http://abstract.ups.edu/aata/exercises-cyclic.html#hTN",
+        "m-2345": "http://abstract.ups.edu/aata/exercises-cyclic.html#OaW",
+        "m-2347": "http://abstract.ups.edu/aata/exercises-cyclic.html#uif",
+        "m-2524": "http://abstract.ups.edu/aata/exercises-cyclic.html#jQr",
+        "m-2557": "http://abstract.ups.edu/aata/cyclic-sage.html#YOw",
+        "m-3367": "http://abstract.ups.edu/aata/exercises-cosets.html#Tnb",
+        "m-5034": "http://abstract.ups.edu/aata/exercises-isomorph.html#nxr",
+        "m-5144": "http://abstract.ups.edu/aata/exercises-isomorph.html#Iac"
+      }
+    },
+    "AataExpression_321": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>g</mi><mo>∘<!-- ∘ --></mo><mi>f</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-236": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Dgo"
+      }
+    },
+    "AataExpression_322": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∣<!-- ∣ --></mo><mi>b</mi>",
+      "reference": {
+        "m-849": "http://abstract.ups.edu/aata/section-division-algorithm.html#Ijt",
+        "m-10836": "http://abstract.ups.edu/aata/section-factorization-domains.html#gkn",
+        "m-10920": "http://abstract.ups.edu/aata/section-factorization-domains.html#sFJ",
+        "m-10928": "http://abstract.ups.edu/aata/section-factorization-domains.html#KuS",
+        "m-10939": "http://abstract.ups.edu/aata/section-factorization-domains.html#KuS",
+        "m-10949": "http://abstract.ups.edu/aata/section-factorization-domains.html#KuS",
+        "m-11628": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MXQ",
+        "m-12167": "http://abstract.ups.edu/aata/exercises-boolean.html#IXR",
+        "m-12175": "http://abstract.ups.edu/aata/exercises-boolean.html#pfa",
+        "m-12192": "http://abstract.ups.edu/aata/exercises-boolean.html#ZWc",
+        "m-12265": "http://abstract.ups.edu/aata/exercises-boolean.html#HZC"
+      }
+    },
+    "AataExpression_323": {
+      "test": true,
+      "input": "<mi>p</mi><mo>∤<!-- ∤ --></mo><mi>a</mi>",
+      "reference": {
+        "m-3325": "http://abstract.ups.edu/aata/section-fermat-euler.html#iKu"
+      }
+    },
+    "AataExpression_324": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∧<!-- ∧ --></mo><mi>b</mi>",
+      "reference": {
+        "m-11700": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lfb",
+        "m-11814": "http://abstract.ups.edu/aata/section-boolean-lattices.html#SNc",
+        "m-11834": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11849": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11947": "http://abstract.ups.edu/aata/section-boolean-algebras.html#ZeR",
+        "m-12019": "http://abstract.ups.edu/aata/section-boolean-algebras.html#xHB",
+        "m-12130": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#bbv",
+        "m-12138": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#fLo",
+        "m-12140": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#npN",
+        "m-12201": "http://abstract.ups.edu/aata/exercises-boolean.html#Gdl"
+      }
+    },
+    "AataExpression_325": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∨<!-- ∨ --></mo><mi>b</mi>",
+      "reference": {
+        "m-11694": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lfb",
+        "m-11763": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+        "m-11813": "http://abstract.ups.edu/aata/section-boolean-lattices.html#SNc",
+        "m-11833": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11840": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11946": "http://abstract.ups.edu/aata/section-boolean-algebras.html#ZeR",
+        "m-12137": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#bbv",
+        "m-12139": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#LSx"
+      }
+    },
+    "AataExpression_326": {
+      "test": true,
+      "input": "<mi>A</mi><mo>∪<!-- ∪ --></mo><mi>B</mi>",
+      "reference": {
+        "m-76": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#tMC",
+        "m-522": "http://abstract.ups.edu/aata/exercises-sets.html#clB",
+        "m-11711": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11712": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11721": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11722": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr"
+      }
+    },
+    "AataExpression_327": {
+      "test": true,
+      "input": "<mi>x</mi><mo>∼<!-- ∼ --></mo><mi>y</mi>",
+      "reference": {
+        "m-347": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#vBP",
+        "m-446": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Alv",
+        "m-456": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Alv",
+        "m-652": "http://abstract.ups.edu/aata/exercises-sets.html#mph",
+        "m-658": "http://abstract.ups.edu/aata/exercises-sets.html#yDz",
+        "m-673": "http://abstract.ups.edu/aata/exercises-sets.html#ksQ",
+        "m-677": "http://abstract.ups.edu/aata/exercises-sets.html#NqY",
+        "m-2989": "http://abstract.ups.edu/aata/exercises-permute.html#FOD",
+        "m-7370": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#XMQ",
+        "m-7378": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#Qwz",
+        "m-7384": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#Qwz",
+        "m-7579": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#fcU",
+        "m-7586": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#ISa"
+      }
+    },
+    "AataExpression_328": {
+      "test": true,
+      "input": "<mo>≅<!-- ≅ --></mo>",
+      "reference": {
+        "m-351": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#vBP"
+      }
+    },
+    "AataExpression_329": {
+      "test": true,
+      "input": "<mi>a</mi><mo>≠<!-- ≠ --></mo><mn>0</mn>",
+      "reference": {
+        "m-9": "http://abstract.ups.edu/aata/section-note-on-proofs.html#EOk",
+        "m-23": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex",
+        "m-25": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex",
+        "m-27": "http://abstract.ups.edu/aata/section-note-on-proofs.html#cex",
+        "m-8946": "http://abstract.ups.edu/aata/section-rings-definitions.html#deq",
+        "m-9093": "http://abstract.ups.edu/aata/section-domains-and-fields.html#roM",
+        "m-9101": "http://abstract.ups.edu/aata/section-domains-and-fields.html#roM",
+        "m-9112": "http://abstract.ups.edu/aata/section-domains-and-fields.html#Ocj",
+        "m-9694": "http://abstract.ups.edu/aata/exercises-rings.html#zYR",
+        "m-10750": "http://abstract.ups.edu/aata/section-field-of-fractions.html#enJ",
+        "m-10873": "http://abstract.ups.edu/aata/section-factorization-domains.html#grr",
+        "m-15007": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#hvk"
+      }
+    },
+    "AataExpression_330": {
+      "test": true,
+      "input": "<mo>≡<!-- ≡ --></mo>",
+      "reference": {
+        "m-350": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#vBP"
+      }
+    },
+    "AataExpression_331": {
+      "test": true,
+      "input": "<mi>q</mi><mo>≢</mo><mn>1</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mi>p</mi><mo stretchy=\"false\">)</mo>",
+      "reference": {
+        "m-8332": "http://abstract.ups.edu/aata/section-sylow-applications.html#xKb"
+      }
+    },
+    "AataExpression_332": {
+      "test": true,
+      "input": "<mi>x</mi><mo>≥<!-- ≥ --></mo><mi>y</mi>",
+      "reference": {
+        "m-654": "http://abstract.ups.edu/aata/exercises-sets.html#mph"
+      }
+    },
+    "AataExpression_333": {
+      "test": true,
+      "input": "<mi>B</mi><mo>⊃<!-- ⊃ --></mo><mi>A</mi>",
+      "reference": {
+        "m-59": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hyk"
+      }
+    },
+    "AataExpression_334": {
+      "test": true,
+      "input": "<mi>A</mi><mo>⊄</mo><mi>B</mi>",
+      "reference": {
+        "m-70": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hyk"
+      }
+    },
+    "AataExpression_335": {
+      "test": true,
+      "input": "<mi>W</mi><mo>=</mo><mi>U</mi><mo>⊕<!-- ⊕ --></mo><mi>V</mi>",
+      "reference": {
+        "m-12723": "http://abstract.ups.edu/aata/exercises-vect.html#ITN",
+        "m-12736": "http://abstract.ups.edu/aata/exercises-vect.html#paW"
+      }
+    },
+    "AataExpression_336": {
+      "test": true,
+      "input": "<mn>2</mn><mo>⋅<!-- ⋅ --></mo><mn>4</mn>",
+      "reference": {
+        "m-13": "http://abstract.ups.edu/aata/section-note-on-proofs.html#vXo"
+      }
+    },
+    "AataExpression_337": {
+      "test": true,
+      "input": "<msub><mi>Z</mi><mn>3</mn></msub><mo>⋊<!-- ⋊ --></mo><msub><mi>Z</mi><mn>4</mn></msub>",
+      "reference": {
+        "m-7277": "http://abstract.ups.edu/aata/struct-sage.html#vaq"
+      }
+    },
+    "AataExpression_338": {
+      "test": true,
+      "input": "<mo>△<!-- △ --></mo><mi>A</mi><mi>B</mi><mi>C</mi>",
+      "reference": {
+        "m-1354": "http://abstract.ups.edu/aata/section-mod-n-sym.html#Khx",
+        "m-1355": "http://abstract.ups.edu/aata/section-mod-n-sym.html#Khx",
+        "m-1370": "http://abstract.ups.edu/aata/section-mod-n-sym.html#qoG",
+        "m-1379": "http://abstract.ups.edu/aata/section-mod-n-sym.html#qoG",
+        "m-2579": "http://abstract.ups.edu/aata/permute.html#UnH"
+      }
+    },
+    "AataExpression_339": {
+      "test": true,
+      "input": "<mi>a</mi><mo>⪯<!-- ⪯ --></mo><mi>b</mi>",
+      "reference": {
+        "m-11596": "http://abstract.ups.edu/aata/section-boolean-lattices.html#sJA",
+        "m-11627": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MXQ",
+        "m-11806": "http://abstract.ups.edu/aata/section-boolean-lattices.html#SNc",
+        "m-11821": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11827": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11995": "http://abstract.ups.edu/aata/section-boolean-algebras.html#DEe",
+        "m-12026": "http://abstract.ups.edu/aata/section-boolean-algebras.html#xHB",
+        "m-12033": "http://abstract.ups.edu/aata/section-boolean-algebras.html#hHF",
+        "m-12037": "http://abstract.ups.edu/aata/section-boolean-algebras.html#dOK",
+        "m-12044": "http://abstract.ups.edu/aata/section-boolean-algebras.html#dOK",
+        "m-12051": "http://abstract.ups.edu/aata/section-boolean-algebras.html#vZF",
+        "m-12056": "http://abstract.ups.edu/aata/section-boolean-algebras.html#JVT",
+        "m-12065": "http://abstract.ups.edu/aata/section-boolean-algebras.html#cgO",
+        "m-12077": "http://abstract.ups.edu/aata/section-boolean-algebras.html#qdc",
+        "m-12080": "http://abstract.ups.edu/aata/section-boolean-algebras.html#qdc",
+        "m-12166": "http://abstract.ups.edu/aata/exercises-boolean.html#IXR",
+        "m-12174": "http://abstract.ups.edu/aata/exercises-boolean.html#pfa",
+        "m-12191": "http://abstract.ups.edu/aata/exercises-boolean.html#ZWc",
+        "m-12197": "http://abstract.ups.edu/aata/exercises-boolean.html#Gdl",
+        "m-12262": "http://abstract.ups.edu/aata/exercises-boolean.html#qUn",
+        "m-12275": "http://abstract.ups.edu/aata/exercises-boolean.html#Xbw"
+      }
+    },
+    "AataExpression_340": {
+      "test": true,
+      "input": "<mo>⪰<!-- ⪰ --></mo>",
+      "reference": {
+        "m-11748": "http://abstract.ups.edu/aata/section-boolean-lattices.html#ovg"
+      }
+    }
+  }
+}

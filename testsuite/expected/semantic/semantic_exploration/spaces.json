@@ -1,0 +1,564 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration Tests for semantically annotated spacing elements",
+  "base": "input/semantic/spaces.json",
+  "tests": {
+    "FootnoteWithText": {
+      "expected": [
+        19,
+        0,
+        1,
+        [
+          4,
+          2,
+          3
+        ],
+        5,
+        [
+          8,
+          6,
+          7
+        ],
+        9,
+        [
+          12,
+          10,
+          11
+        ]
+      ]
+    },
+    "ExprWithSpaces_0": {
+      "expected": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    "ExprWithSpaces_1": {
+      "expected": [
+        9,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "ExprWithSpaces_2": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          4
+        ],
+        5,
+        6
+      ]
+    },
+    "ExprWithSpaces_3": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          2,
+          7,
+          4
+        ],
+        5,
+        6
+      ]
+    },
+    "ExprWithSpaces_4": {
+      "expected": [
+        10,
+        0,
+        1,
+        [
+          9,
+          2,
+          3,
+          4
+        ],
+        5,
+        6
+      ]
+    },
+    "ExprWithSpaces_5": {
+      "expected": [
+        15,
+        [
+          12,
+          0,
+          1,
+          2
+        ],
+        3,
+        [
+          11,
+          4,
+          [
+            10,
+            5,
+            9,
+            7
+          ],
+          8
+        ]
+      ]
+    },
+    "ExprWithSpaces_6": {
+      "expected": [
+        14,
+        0,
+        1,
+        [
+          13,
+          2,
+          12,
+          [
+            11,
+            4,
+            [
+              10,
+              5,
+              9,
+              7
+            ],
+            8
+          ]
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_0": {
+      "expected": [
+        10,
+        0,
+        1,
+        [
+          6,
+          2,
+          3,
+          4
+        ],
+        5
+      ]
+    },
+    "FunctionsWithSpaces_1": {
+      "expected": [
+        15,
+        0,
+        1,
+        [
+          11,
+          2,
+          [
+            10,
+            3,
+            4,
+            5
+          ],
+          6
+        ],
+        7
+      ]
+    },
+    "FunctionsWithSpaces_2": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          2,
+          5,
+          4
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_3": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          2,
+          5,
+          4
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_4": {
+      "expected": [
+        22,
+        [
+          16,
+          0,
+          15,
+          [
+            14,
+            2,
+            13,
+            4
+          ]
+        ],
+        5,
+        [
+          19,
+          6,
+          7,
+          [
+            18,
+            8,
+            17,
+            [
+              12,
+              9,
+              10,
+              11
+            ]
+          ]
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_5": {
+      "expected": [
+        17,
+        [
+          16,
+          0,
+          15,
+          [
+            14,
+            2,
+            13,
+            4
+          ]
+        ],
+        5,
+        [
+          12,
+          6,
+          11,
+          [
+            10,
+            7,
+            8,
+            9
+          ]
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_6": {
+      "expected": [
+        22,
+        [
+          16,
+          0,
+          15,
+          [
+            14,
+            2,
+            13,
+            4
+          ]
+        ],
+        5,
+        [
+          19,
+          6,
+          7,
+          [
+            18,
+            8,
+            17,
+            [
+              12,
+              9,
+              10,
+              11
+            ]
+          ]
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_7": {
+      "expected": [
+        18,
+        [
+          12,
+          0,
+          11,
+          2
+        ],
+        3,
+        [
+          15,
+          4,
+          5,
+          [
+            14,
+            6,
+            13,
+            [
+              10,
+              7,
+              8,
+              9
+            ]
+          ]
+        ]
+      ]
+    },
+    "FunctionsWithSpaces_8": {
+      "expected": [
+        17,
+        [
+          16,
+          0,
+          15,
+          [
+            14,
+            2,
+            13,
+            4
+          ]
+        ],
+        5,
+        [
+          12,
+          6,
+          11,
+          [
+            10,
+            7,
+            8,
+            9
+          ]
+        ]
+      ]
+    },
+    "BigopsWithSpaces_0": {
+      "expected": [
+        5,
+        [
+          2,
+          0,
+          1
+        ],
+        4
+      ]
+    },
+    "BigopsWithSpaces_1": {
+      "expected": [
+        6,
+        [
+          2,
+          0,
+          1
+        ],
+        5
+      ]
+    },
+    "BigopsWithSpaces_2": {
+      "expected": [
+        8,
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          7,
+          4,
+          6,
+          5
+        ]
+      ]
+    },
+    "BigopsWithSpaces_3": {
+      "expected": [
+        9,
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          8,
+          4,
+          7,
+          6
+        ]
+      ]
+    },
+    "BigopsWithSpaces_4": {
+      "expected": [
+        9,
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          8,
+          4,
+          7,
+          6
+        ]
+      ]
+    },
+    "BigopsWithSpaces_5": {
+      "expected": [
+        12,
+        [
+          11,
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            10,
+            4,
+            9,
+            6
+          ]
+        ],
+        7,
+        8
+      ]
+    },
+    "IntegralsWithSpaces_0": {
+      "expected": [
+        8,
+        [
+          2,
+          0,
+          1
+        ],
+        3,
+        [
+          7,
+          5,
+          6
+        ]
+      ]
+    },
+    "IntegralsWithSpaces_1": {
+      "expected": [
+        8,
+        [
+          2,
+          0,
+          1
+        ],
+        3,
+        [
+          7,
+          5,
+          6
+        ]
+      ]
+    },
+    "IntegralsWithSpaces_2": {
+      "expected": [
+        13,
+        [
+          8,
+          [
+            2,
+            0,
+            1
+          ],
+          3,
+          7
+        ],
+        4,
+        [
+          10,
+          5,
+          9,
+          6
+        ]
+      ]
+    },
+    "IntegralsWithSpaces_3": {
+      "expected": [
+        9,
+        [
+          2,
+          0,
+          1
+        ],
+        4,
+        [
+          8,
+          6,
+          7
+        ]
+      ]
+    },
+    "IntegralsWithSpaces_4": {
+      "expected": [
+        14,
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          12,
+          [
+            5,
+            3,
+            4
+          ],
+          7,
+          [
+            11,
+            9,
+            10
+          ]
+        ],
+        13
+      ]
+    },
+    "IntegralsWithSpaces_5": {
+      "expected": [
+        17,
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          15,
+          [
+            5,
+            3,
+            4
+          ],
+          7,
+          [
+            14,
+            9,
+            10
+          ]
+        ],
+        [
+          16,
+          12,
+          13
+        ]
+      ]
+    }
+  }
+}

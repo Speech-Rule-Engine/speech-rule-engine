@@ -1,0 +1,509 @@
+{
+  "name": "CatalanPluralUnit",
+  "locale": "ca",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsCatalan",
+  "grammar": {
+    "annotation": "unit",
+    "plural": true
+  },
+  "factory": "symbol",
+  "base": "input/common/units.json",
+  "information": "Catalan Plural Unit tests.",
+  "compare": true,
+  "tests": {
+    "sq": {
+      "expected": "quadrats"
+    },
+    "sq.": {
+      "expected": "quadrats"
+    },
+    "sq in": {
+      "expected": "polzades quadrades"
+    },
+    "sq. in.": {
+      "expected": "polzades quadrades"
+    },
+    "sq inch": {
+      "expected": "polzades quadrades"
+    },
+    "sq. inch": {
+      "expected": "polzades quadrades"
+    },
+    "sq rd": {
+      "expected": "rods quadrats"
+    },
+    "sq. rd.": {
+      "expected": "rods quadrats"
+    },
+    "sq ft": {
+      "expected": "polzades quadrades"
+    },
+    "sq. ft.": {
+      "expected": "polzades quadrades"
+    },
+    "sq yd": {
+      "expected": "iardes quadrades"
+    },
+    "sq. yd.": {
+      "expected": "iardes quadrades"
+    },
+    "sq mi": {
+      "expected": "milles quadrades"
+    },
+    "sq. mi.": {
+      "expected": "milles quadrades"
+    },
+    "ac": {
+      "expected": "acres"
+    },
+    "ac.": {
+      "expected": "acres"
+    },
+    "acr": {
+      "expected": "acres"
+    },
+    "acr.": {
+      "expected": "acres"
+    },
+    "ha": {
+      "expected": "hectàrees"
+    },
+    "$": {
+      "expected": "dòlars"
+    },
+    "💲": {
+      "expected": "dòlars"
+    },
+    "＄": {
+      "expected": "dòlars"
+    },
+    "﹩": {
+      "expected": "dòlars"
+    },
+    "USD": {
+      "expected": "dòlars"
+    },
+    "£": {
+      "expected": "penics"
+    },
+    "￡": {
+      "expected": "penics"
+    },
+    "GBP": {
+      "expected": "penics"
+    },
+    "¥": {
+      "expected": "iens"
+    },
+    "￥": {
+      "expected": "iens"
+    },
+    "JPY": {
+      "expected": "iens"
+    },
+    "€": {
+      "expected": "euros"
+    },
+    "EUR": {
+      "expected": "euros"
+    },
+    "₡": {
+      "expected": "colons"
+    },
+    "CRC": {
+      "expected": "colons"
+    },
+    "₢": {
+      "expected": "cruzeiros"
+    },
+    "₣": {
+      "expected": "francs"
+    },
+    "₤": {
+      "expected": "lires"
+    },
+    "₥": {
+      "expected": "mills"
+    },
+    "₦": {
+      "expected": "naires"
+    },
+    "NGN": {
+      "expected": "naires"
+    },
+    "₧": {
+      "expected": "pessetes"
+    },
+    "₨": {
+      "expected": "rupies"
+    },
+    "₹": {
+      "expected": "rupies"
+    },
+    "INR": {
+      "expected": "rupies"
+    },
+    "NPR": {
+      "expected": "rupies"
+    },
+    "PKR": {
+      "expected": "rupies"
+    },
+    "LKR": {
+      "expected": "rupies"
+    },
+    "₩": {
+      "expected": "wons"
+    },
+    "￦": {
+      "expected": "wons"
+    },
+    "KRW": {
+      "expected": "wons"
+    },
+    "₪": {
+      "expected": "siclens"
+    },
+    "₫": {
+      "expected": "dongs"
+    },
+    "₭": {
+      "expected": "kips"
+    },
+    "₮": {
+      "expected": "tögrögs"
+    },
+    "₯": {
+      "expected": "dracmes"
+    },
+    "₰": {
+      "expected": "penic alemanys"
+    },
+    "₱": {
+      "expected": "pesos"
+    },
+    "₲": {
+      "expected": "guaranins"
+    },
+    "₳": {
+      "expected": "australs"
+    },
+    "₴": {
+      "expected": "hrívnies"
+    },
+    "UAH": {
+      "expected": "hrívnies"
+    },
+    "₵": {
+      "expected": "cedins"
+    },
+    "GHS": {
+      "expected": "cedins"
+    },
+    "₸": {
+      "expected": "tengens"
+    },
+    "KZT": {
+      "expected": "tengens"
+    },
+    "₺": {
+      "expected": "turkish lires"
+    },
+    "TRY": {
+      "expected": "turkish lires"
+    },
+    "元": {
+      "expected": "iuans"
+    },
+    "￠": {
+      "expected": "centèsims"
+    },
+    "¢": {
+      "expected": "centèsims"
+    },
+    "kwh": {
+      "expected": "quilowatts hora"
+    },
+    "kWh": {
+      "expected": "quilowatts hora"
+    },
+    "Ohm": {
+      "expected": "Ohm"
+    },
+    "ohm": {
+      "expected": "ohm"
+    },
+    "ft": {
+      "expected": "peus"
+    },
+    "ft.": {
+      "expected": "peus"
+    },
+    "in": {
+      "expected": "polzades"
+    },
+    "in.": {
+      "expected": "polzades"
+    },
+    "mi": {
+      "expected": "milles"
+    },
+    "mi.": {
+      "expected": "milles"
+    },
+    "yd": {
+      "expected": "iardes"
+    },
+    "yd.": {
+      "expected": "iardes"
+    },
+    "li": {
+      "expected": "links"
+    },
+    "li.": {
+      "expected": "links"
+    },
+    "rd": {
+      "expected": "rods"
+    },
+    "rd.": {
+      "expected": "rods"
+    },
+    "ch": {
+      "expected": "cadenes"
+    },
+    "ch.": {
+      "expected": "cadenes"
+    },
+    "fur": {
+      "expected": "furlongs"
+    },
+    "fur.": {
+      "expected": "furlongs"
+    },
+    "n.m.": {
+      "expected": "milles nàutiques"
+    },
+    "b": {
+      "expected": "bits"
+    },
+    "KB": {
+      "expected": "kilobytes"
+    },
+    "doz": {
+      "expected": "dotzenes"
+    },
+    "doz.": {
+      "expected": "dotzenes"
+    },
+    "dz": {
+      "expected": "dotzenes"
+    },
+    "dz.": {
+      "expected": "dotzenes"
+    },
+    "kt": {
+      "expected": "nusos"
+    },
+    "kt.": {
+      "expected": "nusos"
+    },
+    "mph": {
+      "expected": "milles per hora"
+    },
+    "rpm": {
+      "expected": "revolucions per minut"
+    },
+    "kmh": {
+      "expected": "quilòmetres per hora"
+    },
+    "kph": {
+      "expected": "quilòmetres per hora"
+    },
+    "F": {
+      "expected": "graus Fahrenheit"
+    },
+    "F.": {
+      "expected": "graus Fahrenheit"
+    },
+    "°F": {
+      "expected": "graus Fahrenheit"
+    },
+    "C": {
+      "expected": "centígrads"
+    },
+    "°C": {
+      "expected": "centígrads"
+    },
+    "K": {
+      "expected": "kelvins"
+    },
+    "°K": {
+      "expected": "kelvins"
+    },
+    "″": {
+      "expected": "segons"
+    },
+    "min": {
+      "expected": "minuts"
+    },
+    "′": {
+      "expected": "minuts"
+    },
+    "°": {
+      "expected": "graus"
+    },
+    "h": {
+      "expected": "hores"
+    },
+    "hr": {
+      "expected": "hores"
+    },
+    "cu": {
+      "expected": "cúbics"
+    },
+    "cu.": {
+      "expected": "cúbics"
+    },
+    "cu in": {
+      "expected": "plozades cúbiques"
+    },
+    "cu. in.": {
+      "expected": "plozades cúbiques"
+    },
+    "cu ft": {
+      "expected": "peus cúbics"
+    },
+    "cu. ft.": {
+      "expected": "peus cúbics"
+    },
+    "cu yd": {
+      "expected": "iardes cúbiques"
+    },
+    "cu. yd.": {
+      "expected": "iardes cúbiques"
+    },
+    "bbl.": {
+      "expected": "barrils"
+    },
+    "bbl": {
+      "expected": "barrils"
+    },
+    "fl. oz.": {
+      "expected": "unces líquides"
+    },
+    "fl oz": {
+      "expected": "unces líquides"
+    },
+    "gal": {
+      "expected": "galons"
+    },
+    "gal.": {
+      "expected": "galons"
+    },
+    "pt": {
+      "expected": "pintes"
+    },
+    "pt.": {
+      "expected": "pintes"
+    },
+    "qt": {
+      "expected": "quarts"
+    },
+    "qt.": {
+      "expected": "quarts"
+    },
+    "fl dr": {
+      "expected": "dracmes líquides"
+    },
+    "fl. dr.": {
+      "expected": "dracmes líquides"
+    },
+    "tbsp": {
+      "expected": "cullerades"
+    },
+    "tbsp.": {
+      "expected": "cullerades"
+    },
+    "Tbsp": {
+      "expected": "cullerades"
+    },
+    "Tbsp.": {
+      "expected": "cullerades"
+    },
+    "tsp": {
+      "expected": "culleradetes"
+    },
+    "tsp.": {
+      "expected": "culleradetes"
+    },
+    "cp": {
+      "expected": "tasses"
+    },
+    "cp.": {
+      "expected": "tasses"
+    },
+    "cc": {
+      "expected": "centímetres cúbics"
+    },
+    "ccm": {
+      "expected": "centímetres cúbics"
+    },
+    "dr": {
+      "expected": "dracmes"
+    },
+    "dr.": {
+      "expected": "dracmes"
+    },
+    "oz": {
+      "expected": "unces"
+    },
+    "oz.": {
+      "expected": "unces"
+    },
+    "lb": {
+      "expected": "lliures"
+    },
+    "lb.": {
+      "expected": "lliures"
+    },
+    "st": {
+      "expected": "stones"
+    },
+    "st.": {
+      "expected": "stones"
+    },
+    "qtr": {
+      "expected": "quarts curts"
+    },
+    "qtr.": {
+      "expected": "quarts curts"
+    },
+    "cwt": {
+      "expected": "centenes"
+    },
+    "cwt.": {
+      "expected": "centenes"
+    },
+    "LT": {
+      "expected": "lliures imperials"
+    },
+    "L.T.": {
+      "expected": "lliures imperials"
+    },
+    "gr": {
+      "expected": "grams"
+    },
+    "mcg": {
+      "expected": "micrograms"
+    },
+    "t": {
+      "expected": "tones"
+    },
+    "T": {
+      "expected": "tones"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "information": "Dummy walker with Node generator on Equation HtmlCss expression.",
+  "walker": "Dummy",
+  "generator": "Node",
+  "base": "input/base/walker_test.json",
+  "factory": "walker",
+  "renderer": "HTML-CSS",
+  "expression": "Equation_HtmlCss",
+  "tests": {
+    "Step_0": {
+      "input": null,
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd Column d EndLayout"},
+    "Step_1": {
+      "input": "X",
+      "expected": "table with 2 rows and 3 columns"},
+    "Step_2": {
+      "input": "DOWN",
+      "expected": "table with 2 rows and 3 columns"},
+    "Step_3": {
+      "input": "Z",
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd Column d EndLayout"},
+    "Step_4": {
+      "input": "HOME",
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd Column d EndLayout"},
+    "Step_5": {
+      "input": "UP",
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd Column d EndLayout"}
+  }
+}

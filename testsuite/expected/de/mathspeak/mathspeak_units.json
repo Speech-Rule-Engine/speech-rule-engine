@@ -1,0 +1,323 @@
+{
+  "name": "GermanMathspeakUnits",
+  "locale": "de",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "German Mathspeak Units tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakGerman",
+  "exclude": [
+    "CurrencySingular_0_Currency_Position",
+    "CurrencySingular_0_Currency_Prefix",
+    "CurrencySingular_1_Currency_Position",
+    "CurrencySingular_1_Currency_Prefix",
+    "CurrencySingle_0_Currency_Position",
+    "CurrencySingle_0_Currency_Prefix",
+    "CurrencySingle_1_Currency_Position",
+    "CurrencySingle_1_Currency_Prefix",
+    "CurrencyPlural_0_Currency_Position",
+    "CurrencyPlural_0_Currency_Prefix",
+    "CurrencyPlural_1_Currency_Position",
+    "CurrencyPlural_1_Currency_Prefix",
+    "CurrencyMultitude_0_Currency_Position",
+    "CurrencyMultitude_0_Currency_Prefix",
+    "CurrencyMultitude_1_Currency_Position",
+    "CurrencyMultitude_1_Currency_Prefix"
+  ],
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "Zoll Quadrat"
+    },
+    "UnitSquare_0_brief": {
+      "expected": "Zoll Quadrat"
+    },
+    "UnitSquare_0_sbrief": {
+      "expected": "Zoll Quadrat"
+    },
+    "UnitSquare_1_default": {
+      "expected": "Sekunden Quadrat"
+    },
+    "UnitSquare_1_brief": {
+      "expected": "Sekunden Quadrat"
+    },
+    "UnitSquare_1_sbrief": {
+      "expected": "Sekunden Quadrat"
+    },
+    "UnitSquare_2_default": {
+      "expected": "Meter Quadrat"
+    },
+    "UnitSquare_2_brief": {
+      "expected": "Meter Quadrat"
+    },
+    "UnitSquare_2_sbrief": {
+      "expected": "Meter Quadrat"
+    },
+    "UnitCube_0_default": {
+      "expected": "Zoll Kubik"
+    },
+    "UnitCube_0_brief": {
+      "expected": "Zoll Kubik"
+    },
+    "UnitCube_0_sbrief": {
+      "expected": "Zoll Kubik"
+    },
+    "UnitCube_1_default": {
+      "expected": "Sekunden Kubik"
+    },
+    "UnitCube_1_brief": {
+      "expected": "Sekunden Kubik"
+    },
+    "UnitCube_1_sbrief": {
+      "expected": "Sekunden Kubik"
+    },
+    "UnitCube_2_default": {
+      "expected": "Meter Kubik"
+    },
+    "UnitCube_2_brief": {
+      "expected": "Meter Kubik"
+    },
+    "UnitCube_2_sbrief": {
+      "expected": "Meter Kubik"
+    },
+    "UnitInverse_default": {
+      "expected": "Zoll hoch minus 1"
+    },
+    "UnitInverse_brief": {
+      "expected": "Zoll hoch minus 1"
+    },
+    "UnitInverse_sbrief": {
+      "expected": "Zoll hoch minus 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "Zoll hoch minus 1 Grundlinie Millimeter hoch minus 1"
+    },
+    "UnitDoubleInverse_brief": {
+      "expected": "Zoll hoch minus 1 Grund Millimeter hoch minus 1"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "expected": "Zoll hoch minus 1 Grund Millimeter hoch minus 1"
+    },
+    "UnitDivide_default": {
+      "expected": "Anfang Bruch Zoll durch Millimeter Ende Bruch"
+    },
+    "UnitDivide_brief": {
+      "expected": "Anfang Bruch Zoll durch Millimeter Ende Bruch"
+    },
+    "UnitDivide_sbrief": {
+      "expected": "Bruch Zoll durch Millimeter Ende Bruch"
+    },
+    "UnitsSingle_0": {
+      "expected": "Kilometer"
+    },
+    "UnitsSingle_1": {
+      "expected": "Ampere"
+    },
+    "UnitsSingle_2": {
+      "expected": "Ohm"
+    },
+    "UnitsSingle_3": {
+      "expected": "Kiloohm"
+    },
+    "UnitsSingle_4": {
+      "expected": "Grad Celsius"
+    },
+    "UnitsSimple_0": {
+      "expected": "Minimum Minuten"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 Kilometer"
+    },
+    "UnitsSimple_2": {
+      "expected": "Kilometer plus Sekunden"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "Kilometer Quadrat"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "Meter Kubik"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "Kilometer hoch 4"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "Meter hoch minus 1"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "Sekunden Meter hoch minus 1"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "Anfang Bruch Sekunden durch Meter Ende Bruch hoch minus 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "Anfang Bruch Sekunden durch Meter Ende Bruch hoch minus 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 Meter hoch minus 1"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "Anfang Bruch Kilometer durch Stunden Ende Bruch"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "Newton Anfang Bruch Kilometer durch Stunden Ende Bruch"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "Anfang Bruch m durch Kilometer Ende Bruch"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 Kilometer Stunden"
+    },
+    "UnitsExpressions_0": {
+      "expected": "Sekunden 3 m Kilometer Stunden"
+    },
+    "UnitsExpressions_1": {
+      "expected": "Kilometer Sekunden Quadrat 3 m Kilometer Stunden"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m Kilometer Stunden Anfang Bruch großes N durch Sekunden Quadrat Ende Bruch"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m Kilometer Stunden Anfang Bruch Newton durch Sekunden Quadrat Ende Bruch"
+    },
+    "UnitPlural_1": {
+      "expected": "4 Millimeter"
+    },
+    "UnitPlural_2": {
+      "expected": "1 Millimeter"
+    },
+    "UnitPlural_3": {
+      "expected": "4 Millimeter"
+    },
+    "UnitPlural_4": {
+      "expected": "1 Millimeter"
+    },
+    "UnitCombine_0": {
+      "expected": "Meter Sekunden"
+    },
+    "UnitCombine_1": {
+      "expected": "m Sekunden"
+    },
+    "UnitCombine_2": {
+      "expected": "Meter s"
+    },
+    "UnitCombine_3": {
+      "expected": "Meter Sekunden"
+    },
+    "UnitCombine_4": {
+      "expected": "m Sekunden"
+    },
+    "UnitCombine_5": {
+      "expected": "Meter s"
+    },
+    "UnitCombine_6": {
+      "expected": "Meter Sekunden Liter"
+    },
+    "issue_364_1": {
+      "expected": "63360 Zoll ist gleich 63360 Zoll ist gleich 63360 zwei Strich ist gleich 63360 inches ist gleich 5280 Fuß ist gleich 5280 Fuß ist gleich 5280 Strich ist gleich 5280 feet ist gleich 1760 Yards ist gleich 1760 Yards ist gleich 1760 yards ist gleich 1 Meilen ist gleich 1 Meilen ist gleich 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 Kettenglieder ist gleich 8000 Kettenglieder ist gleich 8000 links ist gleich 320 Ruten ist gleich 320 Ruten ist gleich 320 rods ist gleich 80 Ketten ist gleich 80 Ketten ist gleich 80 chains ist gleich 8 Furchenlängen ist gleich 8 Furchenlängen ist gleich 8 furlongs ist gleich 1 Meilen ist gleich 1 Meilen ist gleich 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 Quadratfuß ist gleich 43560 Quadratfuß ist gleich 43560 Fuß Quadrat ist gleich 43560 Strich Quadrat ist gleich 43560 square feet ist gleich 4840 Quadratyards ist gleich 4840 Quadratyards ist gleich 4840 Yards Quadrat ist gleich 4840 square yards ist gleich 160 Quadratruten ist gleich 160 Quadratruten ist gleich 160 Ruten Quadrat ist gleich 160 square rods ist gleich 1 Morgen ist gleich 1 Morgen ist gleich 1 acre ist gleich Anfang Bruch 1 durch 640 Ende Bruch Quadratmeilen ist gleich Anfang Bruch 1 durch 640 Ende Bruch Quadratmeilen ist gleich Anfang Bruch 1 durch 640 Ende Bruch Meilen Quadrat ist gleich Anfang Bruch 1 durch 640 Ende Bruch square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 Kubikinch ist gleich 46656 Kubikinch ist gleich 46656 Zoll Kubik ist gleich 46656 zwei Strich Kubik ist gleich 46656 cubic inches ist gleich 27 Kubikfuß ist gleich 27 Kubikfuß ist gleich 27 Fuß Kubik ist gleich 27 Strich Kubik ist gleich 27 cubic feet ist gleich 1 Kubikyards ist gleich 1 Kubikyards ist gleich 1 Yards Kubik ist gleich 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 Flüssigdrachmen ist gleich 1024 Flüssigdrachmen ist gleich 1024 fluid drams ist gleich 768 Teelöffel ist gleich 768 Teelöffel ist gleich 768 teaspoons ist gleich 256 Esslöffel ist gleich 256 Esslöffel ist gleich 256 tablespoons ist gleich 128 Fluid ounces ist gleich 128 Fluid ounces ist gleich 128 fluid ounces ist gleich 16 Tassen ist gleich 16 Tassen ist gleich 16 cups ist gleich 8 Pint ist gleich 8 Pint ist gleich 8 pints ist gleich 4 Quarts ist gleich 4 Quarts ist gleich 4 quarts ist gleich 1 Gallonen ist gleich 1 Gallonen ist gleich 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 Drachmen ist gleich 256 Drachmen ist gleich 256 drams ist gleich 16 Unzen ist gleich 16 Unzen ist gleich 16 ounces ist gleich 1 # ist gleich 1 Pfund ist gleich 1 Pfund ist gleich 1 pounds ist gleich 100 Zentner ist gleich 100 Zentner ist gleich 100 hundredweights ist gleich 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 Zoll ist gleich 63360 Zoll ist gleich 63360 zwei Strich ist gleich 63360 inches ist gleich 5280 Fuß ist gleich 5280 Fuß ist gleich 5280 Strich ist gleich 5280 feet ist gleich 1760 Yards ist gleich 1760 Yards ist gleich 1760 yards ist gleich 1 Meilen ist gleich 1 Meilen ist gleich 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 Joule ist gleich 1 Kilogramm mal Meter Quadrat mal Sekunden hoch minus 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 Joule ist gleich 1 Kilogramm Meter Quadrat Sekunden hoch minus 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 Joule ist gleich 1 Kilogramm Meter Quadrat Sekunden hoch minus 2"
+    },
+    "unit_cube": {
+      "expected": "Zoll Kubik"
+    },
+    "UnitDiv_0": {
+      "expected": "Anfang Bruch Kilometer Kilogramm Sekunden Quadrat durch Joule Ende Bruch"
+    },
+    "UnitDiv_1": {
+      "expected": "Anfang Bruch 3 Kilometer 1 Kilogramm Sekunden Quadrat durch Joule Ende Bruch"
+    },
+    "UnitDiv_2": {
+      "expected": "Anfang Bruch 1 Kilometer Kilogramm Sekunden Quadrat durch Joule Ende Bruch"
+    },
+    "UnitDiv_3": {
+      "expected": "Anfang Bruch 1 Kilometer Kilogramm Sekunden Quadrat durch 5 Joule Ende Bruch"
+    },
+    "UnitKm": {
+      "expected": "Kilometer"
+    },
+    "UnitLong_1": {
+      "expected": "3 Kilometer Kilogramm Sekunden Quadrat Joule"
+    },
+    "UnitLong_2": {
+      "expected": "3 Kilometer Kilogramm Sekunden Quadrat Joule"
+    },
+    "UnitLong_3": {
+      "expected": "3 Kilometer 4 Kilogramm Sekunden Quadrat Joule"
+    },
+    "UnitLong_4": {
+      "expected": "3 Kilometer 1 Kilogramm Sekunden Quadrat Joule"
+    },
+    "UnitMultiple": {
+      "expected": "1 Kilometer Sekunden plus 2 Kilometer Sekunden plus 0 Kilometer Sekunden plus a Kilometer Sekunden plus"
+    },
+    "UnitMultitude": {
+      "expected": "1 Kilometer plus 2 Kilometer plus 0 Kilometer plus a Kilometer"
+    },
+    "UnitNumb_0": {
+      "expected": "1 zwei drittel Kilogramm"
+    },
+    "UnitNumb_1": {
+      "expected": "1 zwei drittel Kilogramm Kilometer"
+    },
+    "UnitNumb_2": {
+      "expected": "1 Kilometer 2 Kilogramm Kilometer"
+    },
+    "UnitTriple": {
+      "expected": "1 Kilometer Kilogramm Sekunden plus 2 Kilometer Kilogramm Sekunden plus 0 Kilometer Kilogramm Sekunden plus a Kilometer Kilogramm Sekunden plus"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 Dollar"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "Dollar 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "Dollar"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "Dollar"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 Dollar"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "Dollar 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 Dollar plus 2 Dollar plus 0 Dollar plus a Dollar"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 Dollar plus Dollar 2 plus 0 Dollar plus Dollar a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 Euro plus 2 Euro plus 0 Euro plus a Euro"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 Pfund plus 2 Pfund plus 0 Pfund plus a Pfund"
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "name": "AfrikaansMathspeakIssues1",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Afrikaans Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "Absolute Waarde a End Absolute Waarde"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "Absolute Waarde a End Absolute Waarde"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "negatief vyf agtiendes"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "negatief vyf agtiendes"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "negatief vyf agtiendes"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 graad"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 graad"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 graad"
+    },
+    "MixedIdentifier_default": {
+      "expected": "hoofletter S i normaal hoofletter O 2 plus 6 normaal hoofletter H normaal hoofletter F regs pyltjie normaal hoofletter H 2 hoofletter S i normaal hoofletter F 6 plus 2 normaal hoofletter H 2 normaal hoofletter O"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "hoofletter S i normaal hoofletter O 2 plus 6 normaal hoofletter H normaal hoofletter F regs pyltjie normaal hoofletter H 2 hoofletter S i normaal hoofletter F 6 plus 2 normaal hoofletter H 2 normaal hoofletter O"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "hoofletter S i normaal hoofletter O 2 plus 6 normaal hoofletter H normaal hoofletter F regs pyltjie normaal hoofletter H 2 hoofletter S i normaal hoofletter F 6 plus 2 normaal hoofletter H 2 normaal hoofletter O"
+    },
+    "ParenSuper_default": {
+      "expected": "links hakkie a regs hakkie kwadraat"
+    },
+    "ParenSuper_brief": {
+      "expected": "links hakkie a regs hakkie kwadraat"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "links hakkie a regs hakkie kwadraat"
+    },
+    "ParenConvoluted_default": {
+      "expected": "links hakkie minus x kwadraat skuinsstreep 2 regs hakkie"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "links hakkie minus x kwadraat skuinsstreep 2 regs hakkie"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "links hakkie minus x kwadraat skuinsstreep 2 regs hakkie"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h Superskrif 4 minus 2 s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan c 2 h Superskrif 4 minus 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h Sup 4 minus 2 s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan c 2 h Sup 4 minus 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h Sup 4 minus 2 s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk kleiner of gelyk aan c 2 h Sup 4 minus 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h Superskrif 4 minus 2 s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan c 2 h Superskrif 4 minus 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h Sup 4 minus 2 s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan c 2 h Sup 4 minus 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h Sup 4 minus 2 s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk is gelyk aan c 2 h Sup 4 minus 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h Onderskrif s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan h Onderskrif s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h Onderskrif s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan h Onderskrif s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h Onderskrif s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk kleiner of gelyk aan h Onderskrif s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h Onderskrif s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan h Onderskrif s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h Onderskrif s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan h Onderskrif s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h Onderskrif s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk is gelyk aan h Onderskrif s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h Onderskrif s Superskrif t Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan h Onderskrif s Superskrif t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h Onderskrif s Sup t Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan h Onderskrif s Sup t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h Onderskrif s Sup t Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk kleiner of gelyk aan h Onderskrif s Sup t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h Onderskrif s Superskrif t Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan h Onderskrif s Superskrif t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h Onderskrif s Sup t Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan h Onderskrif s Sup t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h Onderskrif s Sup t Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk is gelyk aan h Onderskrif s Sup t"
+    },
+    "SquareWithText_default": {
+      "expected": "BeginBreuk area of triangle Oor area of square EndBreuk is gelyk aan BeginBreuk 1 unit kwadraat Oor 16 units kubbiek EndBreuk"
+    },
+    "SquareWithText_brief": {
+      "expected": "BeginBreuk area of triangle Oor area of square EndBreuk is gelyk aan BeginBreuk 1 unit kwadraat Oor 16 units kubbiek EndBreuk"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "Breuk area of triangle Oor area of square End breuk is gelyk aan Breuk 1 unit kwadraat Oor 16 units kubbiek End breuk"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square Superskrif 1 Basislyn 1 unit Superskrif 2 Basislyn 16 units Superskrif 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square Sup 1 Basis 1 unit Sup 2 Basis 16 units Sup 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square Sup 1 Basis 1 unit Sup 2 Basis 16 units Sup 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle Superskrif 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle Sup 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle Sup 2"
+    },
+    "LabelledRow_default": {
+      "expected": "Begin uitleg 1. Ry  met opskrif links hakkie 1 regs hakkie End opskrif 1. Kolom a 2. Kolom b End uitleg"
+    },
+    "LabelledRow_brief": {
+      "expected": "Begin uitleg 1. Ry  opskrif links hakkie 1 regs hakkie 1. Kolom a 2. Kolom b End uitleg"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "uitleg 1. Ry  opskrif links hakkie 1 regs hakkie 1. Kolom a 2. Kolom b End uitleg"
+    },
+    "LabelledLine_default": {
+      "expected": "Begin uitleg 1. Ry  met opskrif links hakkie 1 regs hakkie End opskrif a End uitleg"
+    },
+    "LabelledLine_brief": {
+      "expected": "Begin uitleg 1. Ry  Opskrif links hakkie 1 regs hakkie a End uitleg"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "uitleg 1. Ry  Opskrif links hakkie 1 regs hakkie a End uitleg"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "Begin uitleg 1. Ry  met opskrif links hakkie 1 regs hakkie End opskrif Leeg End uitleg"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "Begin uitleg 1. Ry  opskrif links hakkie 1 regs hakkie Leeg End uitleg"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "uitleg 1. Ry  opskrif links hakkie 1 regs hakkie Leeg End uitleg"
+    },
+    "EmptyLine_default": {
+      "expected": "Begin uitleg 1. Ry  leeg End uitleg"
+    },
+    "EmptyLine_brief": {
+      "expected": "Begin uitleg 1. Ry  leeg End uitleg"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "uitleg 1. Ry  leeg End uitleg"
+    },
+    "EmptyRow_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom a 2. Kolom b 2. Ry  leeg End uitleg"
+    },
+    "EmptyRow_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom a 2. Kolom b 2. Ry  leeg End uitleg"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom a 2. Kolom b 2. Ry  leeg End uitleg"
+    },
+    "EmptyCell_default": {
+      "expected": "Begin uitleg 1. Ry  leeg End uitleg"
+    },
+    "EmptyCell_brief": {
+      "expected": "Begin uitleg 1. Ry  leeg End uitleg"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "uitleg 1. Ry  leeg End uitleg"
+    },
+    "TextLabelledLine_default": {
+      "expected": "Begin uitleg 1. Ry  met opskrif links hakkie 1 regs hakkie End opskrif a End uitleg"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "Begin uitleg 1. Ry  Opskrif links hakkie 1 regs hakkie a End uitleg"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "uitleg 1. Ry  Opskrif 1 a End uitleg"
+    },
+    "TextLabelledRow_default": {
+      "expected": "Begin uitleg 1. Ry  met opskrif links hakkie 1 regs hakkie End opskrif 1. Kolom a 2. Kolom b End uitleg"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "Begin uitleg 1. Ry  opskrif links hakkie 1 regs hakkie 1. Kolom a 2. Kolom b End uitleg"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "uitleg 1. Ry  opskrif 1 1. Kolom a 2. Kolom b End uitleg"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a bostaaf"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a bostaaf"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a bostaaf"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a onderstaaf"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a onderstaaf"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a onderstaaf"
+    },
+    "PrefixopSquare_default": {
+      "expected": "partiële afgeleide kwadraat x"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "partiële afgeleide kwadraat x"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "partiële afgeleide kwadraat x"
+    },
+    "PrefixopCube_default": {
+      "expected": "partiële afgeleide kubbiek x"
+    },
+    "PrefixopCube_brief": {
+      "expected": "partiële afgeleide kubbiek x"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "partiële afgeleide kubbiek x"
+    },
+    "Vector_default": {
+      "expected": "Begin 3 By 1 Matriks 1. Ry  a 2. Ry  b 3. Ry  c End Matriks"
+    },
+    "Vector_brief": {
+      "expected": "Begin 3 By 1 Matriks 1. Ry  a 2. Ry  b 3. Ry  c End Matriks"
+    },
+    "Vector_sbrief": {
+      "expected": "3 By 1 Matriks 1. Ry  a 2. Ry  b 3. Ry  c End Matriks"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "NemethDefaultAlphabetSuper",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet super tests.",
+  "tests": {
+    "⁰": {
+      "expected": "⠘⠴"
+    },
+    "¹": {
+      "expected": "⠘⠂"
+    },
+    "²": {
+      "expected": "⠘⠆"
+    },
+    "³": {
+      "expected": "⠘⠒"
+    },
+    "⁴": {
+      "expected": "⠘⠲"
+    },
+    "⁵": {
+      "expected": "⠘⠢"
+    },
+    "⁶": {
+      "expected": "⠘⠖"
+    },
+    "⁷": {
+      "expected": "⠘⠶"
+    },
+    "⁸": {
+      "expected": "⠘⠦"
+    },
+    "⁹": {
+      "expected": "⠘⠔"
+    }
+  }
+}

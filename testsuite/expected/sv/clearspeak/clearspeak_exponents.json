@@ -1,0 +1,562 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakExponents",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_exponents.json",
+  "information": "Swedish Clearspeak Exponents rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Exp001": {
+      "expected": "3 kvadrat"
+    },
+    "Exp002a": {
+      "expected": "3 kubik"
+    },
+    "Exp003": {
+      "expected": "3 upphöjt till femte"
+    },
+    "Exp004": {
+      "expected": "3 upphöjt till första"
+    },
+    "Exp005": {
+      "expected": "b upphöjt till första"
+    },
+    "Exp006": {
+      "expected": "3 upphöjt till 5,0"
+    },
+    "Exp007": {
+      "expected": "3 upphöjt till 0"
+    },
+    "Exp008": {
+      "expected": "4 upphöjt till 11:e"
+    },
+    "Exp009": {
+      "expected": "3 upphöjt till minus 2"
+    },
+    "Exp010a": {
+      "expected": "3 upphöjt till minus 2,0"
+    },
+    "Exp011": {
+      "expected": "4 upphöjt till x"
+    },
+    "Exp012": {
+      "expected": "3 upphöjt till y plus 2"
+    },
+    "Exp013": {
+      "expected": "öppna, 2 y, minus 3, stäng, upphöjt till 3 z, plus 8"
+    },
+    "Exp014": {
+      "expected": "p index 1, kvadrat"
+    },
+    "Exp015": {
+      "expected": "p index 1, kubik"
+    },
+    "Exp016": {
+      "expected": "p index 1, upphöjt till fjärde"
+    },
+    "Exp017": {
+      "expected": "p index 1, upphöjt till tionde"
+    },
+    "Exp018": {
+      "expected": "p index 1, upphöjt till x plus 1"
+    },
+    "Exp019": {
+      "expected": "p index, x index 1, kvadrat"
+    },
+    "Exp010b": {
+      "expected": "p index, x index 1, kubik"
+    },
+    "Exp011b": {
+      "expected": "p index, x index 1, upphöjt till fjärde"
+    },
+    "Exp012b": {
+      "expected": "p index, x index 1, upphöjt till tionde"
+    },
+    "Exp013b": {
+      "expected": "p index, x index 1, upphöjt till y plus 1"
+    },
+    "Exp014b": {
+      "expected": "3 upphöjt till 2 kvadrat"
+    },
+    "Exp015b": {
+      "expected": "3 upphöjt till 2 x kvadrat"
+    },
+    "Exp016b": {
+      "expected": "5 upphöjt till 2 kubik"
+    },
+    "Exp017b": {
+      "expected": "5 upphöjt till 2 x kubik"
+    },
+    "Exp018b": {
+      "expected": "3 upphöjt till exponenten, 2 kvadrat plus 1, slut exponent"
+    },
+    "Exp019b": {
+      "expected": "3 upphöjt till 2 kvadrat plus 1"
+    },
+    "Exp020": {
+      "expected": "2 upphöjt till exponenten, x kvadrat plus 3 x kubik, slut exponent"
+    },
+    "Exp021": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, slut exponent"
+    },
+    "Exp022": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, plus 2, slut exponent"
+    },
+    "Exp023": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, slut exponent, plus 2"
+    },
+    "Exp024": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till fjärde, slut exponent"
+    },
+    "Exp025": {
+      "expected": "2 upphöjt till exponenten, 10 upphöjt till x plus 3, slut exponent"
+    },
+    "Exp026": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, slut exponent"
+    },
+    "Exp027": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, plus 1, slut exponent"
+    },
+    "Exp028": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, slut exponent, plus 1"
+    },
+    "Exp029": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, kvadrat, slut exponent"
+    },
+    "Exp030": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till tionde, slut exponent"
+    },
+    "Exp031": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y plus 2, slut exponent"
+    },
+    "Exp032": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y, plus 2, slut exponent"
+    },
+    "Exp033": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y, slut exponent, plus 2"
+    },
+    "Exp035": {
+      "expected": "e upphöjt till exponenten, minus en halv gånger, öppna, bråket med täljare x minus my, och nämnare sigma, stäng, kvadrat, slut exponent"
+    },
+    "Exp036": {
+      "expected": "2 upphöjt till n"
+    },
+    "Exp037": {
+      "expected": "2 upphöjt till m"
+    },
+    "Exp038": {
+      "expected": "2 upphöjt till I"
+    },
+    "Exp039": {
+      "expected": "2 upphöjt till j"
+    },
+    "Exp040": {
+      "expected": "2 upphöjt till a"
+    },
+    "Exp041": {
+      "expected": "3 upphöjt till andra"
+    },
+    "Exp042": {
+      "expected": "3 upphöjt till tredje"
+    },
+    "Exp043": {
+      "expected": "3 upphöjt till noll"
+    },
+    "Exp044": {
+      "expected": "3 upphöjt till första"
+    },
+    "Exp045": {
+      "expected": "3 upphöjt till femte"
+    },
+    "Exp046": {
+      "expected": "4 upphöjt till 3,0"
+    },
+    "Exp047": {
+      "expected": "4 upphöjt till elfte"
+    },
+    "Exp048": {
+      "expected": "3 upphöjt till minus 2"
+    },
+    "Exp049": {
+      "expected": "3 upphöjt till minus 2,0"
+    },
+    "Exp050": {
+      "expected": "4 upphöjt till x"
+    },
+    "Exp051": {
+      "expected": "3 upphöjt till y plus 2"
+    },
+    "Exp052": {
+      "expected": "öppna, 2 y, minus 3, stäng, upphöjt till 3 z, plus 8"
+    },
+    "Exp053": {
+      "expected": "p index 1, upphöjt till andra"
+    },
+    "Exp054": {
+      "expected": "p index 1, upphöjt till tredje"
+    },
+    "Exp055": {
+      "expected": "p index 1, upphöjt till fjärde"
+    },
+    "Exp056": {
+      "expected": "p index 1, upphöjt till tionde"
+    },
+    "Exp057": {
+      "expected": "p index 1, upphöjt till x plus 1"
+    },
+    "Exp058": {
+      "expected": "p index, x index 1, upphöjt till andra"
+    },
+    "Exp059": {
+      "expected": "p index, x index 1, upphöjt till tredje"
+    },
+    "Exp060": {
+      "expected": "p index, x index 1, upphöjt till fjärde"
+    },
+    "Exp061": {
+      "expected": "p index, x index 1, upphöjt till tionde"
+    },
+    "Exp062": {
+      "expected": "p index, x index 1, upphöjt till y plus 1"
+    },
+    "Exp063": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till andra, slut exponent"
+    },
+    "Exp064": {
+      "expected": "3 upphöjt till exponenten, 2 x upphöjt till andra, slut exponent"
+    },
+    "Exp065": {
+      "expected": "5 upphöjt till exponenten, 2 upphöjt till tredje, slut exponent"
+    },
+    "Exp066": {
+      "expected": "5 upphöjt till exponenten, 2 x upphöjt till tredje, slut exponent"
+    },
+    "Exp067": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till andra, plus 1, slut exponent"
+    },
+    "Exp068": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till andra, slut exponent, plus 1"
+    },
+    "Exp069": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till andra, plus 3 x upphöjt till tredje, slut exponent"
+    },
+    "Exp070": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, slut exponent"
+    },
+    "Exp071": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, plus 2, slut exponent"
+    },
+    "Exp072": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, slut exponent, plus 2"
+    },
+    "Exp073": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till fjärde, slut exponent"
+    },
+    "Exp074": {
+      "expected": "2 upphöjt till exponenten, 10 upphöjt till x plus 3, slut exponent"
+    },
+    "Exp075": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, slut exponent"
+    },
+    "Exp076": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, plus 1, slut exponent"
+    },
+    "Exp077": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, slut exponent, plus 1"
+    },
+    "Exp078": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till andra, slut exponent"
+    },
+    "Exp079": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till tionde, slut exponent"
+    },
+    "Exp080": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y plus 2, slut exponent"
+    },
+    "Exp081": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y, plus 2, slut exponent"
+    },
+    "Exp082": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y, slut exponent, plus 2"
+    },
+    "Exp083": {
+      "expected": "e upphöjt till exponenten, minus en halv x upphöjt till andra, slut exponent"
+    },
+    "Exp084": {
+      "expected": "e upphöjt till exponenten, minus en halv gånger, öppna, bråket med täljare x minus my, och nämnare sigma, stäng, upphöjt till andra, slut exponent"
+    },
+    "Exp085": {
+      "expected": "3 upphöjt till andra"
+    },
+    "Exp086": {
+      "expected": "3 upphöjt till tredje"
+    },
+    "Exp087": {
+      "expected": "3 upphöjt till noll"
+    },
+    "Exp088": {
+      "expected": "3 upphöjt till första"
+    },
+    "Exp089": {
+      "expected": "3 upphöjt till femte"
+    },
+    "Exp090": {
+      "expected": "3 upphöjt till 5,0"
+    },
+    "Exp091": {
+      "expected": "4 upphöjt till elfte"
+    },
+    "Exp092": {
+      "expected": "3 upphöjt till minus 2"
+    },
+    "Exp093": {
+      "expected": "3 upphöjt till minus 2,0"
+    },
+    "Exp094": {
+      "expected": "4 upphöjt till x"
+    },
+    "Exp095": {
+      "expected": "3 upphöjt till y plus 2"
+    },
+    "Exp096": {
+      "expected": "öppna, 2 y, minus 3, stäng, upphöjt till 3 z, plus 8"
+    },
+    "Exp097": {
+      "expected": "p index 1, upphöjt till andra"
+    },
+    "Exp098": {
+      "expected": "p index 1, upphöjt till tredje"
+    },
+    "Exp099": {
+      "expected": "p index 1, upphöjt till fjärde"
+    },
+    "Exp100": {
+      "expected": "p index 1, upphöjt till tionde"
+    },
+    "Exp101": {
+      "expected": "p index 1, upphöjt till x plus 1"
+    },
+    "Exp102": {
+      "expected": "p index, x index 1, upphöjt till andra"
+    },
+    "Exp103": {
+      "expected": "p index, x index 1, upphöjt till tredje"
+    },
+    "Exp104": {
+      "expected": "p index, x index 1, upphöjt till fjärde"
+    },
+    "Exp105": {
+      "expected": "p index, x index 1, upphöjt till tionde"
+    },
+    "Exp106": {
+      "expected": "p index, x index 1, upphöjt till y plus 1"
+    },
+    "Exp107": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till andra, slut exponent"
+    },
+    "Exp108": {
+      "expected": "3 upphöjt till exponenten, 2 x upphöjt till andra, slut exponent"
+    },
+    "Exp109": {
+      "expected": "5 upphöjt till exponenten, 2 upphöjt till tredje, slut exponent"
+    },
+    "Exp110": {
+      "expected": "5 upphöjt till exponenten, 2 x upphöjt till tredje, slut exponent"
+    },
+    "Exp111": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till andra, plus 1, slut exponent"
+    },
+    "Exp112": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till andra, slut exponent, plus 1"
+    },
+    "Exp113": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till andra, plus 3 x upphöjt till tredje, slut exponent"
+    },
+    "Exp114": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, slut exponent"
+    },
+    "Exp115": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, plus 2, slut exponent"
+    },
+    "Exp116": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till fjärde, slut exponent, plus 2"
+    },
+    "Exp117": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till fjärde, slut exponent"
+    },
+    "Exp118": {
+      "expected": "2 upphöjt till exponenten, 10 upphöjt till x plus 3, slut exponent"
+    },
+    "Exp119": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, slut exponent"
+    },
+    "Exp120": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, plus 1, slut exponent"
+    },
+    "Exp121": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till tionde, slut exponent, plus 1"
+    },
+    "Exp122": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till andra, slut exponent"
+    },
+    "Exp123": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till tionde, slut exponent"
+    },
+    "Exp124": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y plus 2, slut exponent"
+    },
+    "Exp125": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y, plus 2, slut exponent"
+    },
+    "Exp126": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till y, slut exponent, plus 2"
+    },
+    "Exp127": {
+      "expected": "e upphöjt till exponenten, minus en halv x upphöjt till andra, slut exponent"
+    },
+    "Exp128": {
+      "expected": "e upphöjt till exponenten, minus en halv gånger, öppna, bråket med täljare x minus my, och nämnare sigma, stäng, upphöjt till andra, slut exponent"
+    },
+    "Exp129": {
+      "expected": "3 upphöjt till exponenten 2"
+    },
+    "Exp130": {
+      "expected": "3 upphöjt till exponenten 3"
+    },
+    "Exp131": {
+      "expected": "3 upphöjt till exponenten 1"
+    },
+    "Exp132b": {
+      "expected": "3 upphöjt till exponenten 0"
+    },
+    "Exp133": {
+      "expected": "3 upphöjt till exponenten 5"
+    },
+    "Exp134": {
+      "expected": "3 upphöjt till exponenten 5,0"
+    },
+    "Exp135": {
+      "expected": "4 upphöjt till exponenten 11"
+    },
+    "Exp136": {
+      "expected": "3 upphöjt till exponenten minus 2"
+    },
+    "Exp137": {
+      "expected": "3 upphöjt till exponenten minus 2,0"
+    },
+    "Exp138": {
+      "expected": "4 upphöjt till exponenten x"
+    },
+    "Exp139": {
+      "expected": "3 upphöjt till exponenten y plus 2"
+    },
+    "Exp140": {
+      "expected": "öppna, 2 y, minus 3, stäng, upphöjt till exponenten 3 z plus 8"
+    },
+    "Exp141": {
+      "expected": "p index 1, upphöjt till exponenten 2"
+    },
+    "Exp142": {
+      "expected": "p index 1, upphöjt till exponenten 3"
+    },
+    "Exp143": {
+      "expected": "p index 1, upphöjt till exponenten 4"
+    },
+    "Exp144": {
+      "expected": "p index 1, upphöjt till exponenten 10"
+    },
+    "Exp145": {
+      "expected": "p index 1, upphöjt till exponenten x plus 1"
+    },
+    "Exp146": {
+      "expected": "p index, x index 1, upphöjt till exponenten 2"
+    },
+    "Exp147": {
+      "expected": "p index, x index 1, upphöjt till exponenten 3"
+    },
+    "Exp148": {
+      "expected": "p index, x index 1, upphöjt till exponenten 4"
+    },
+    "Exp149": {
+      "expected": "p index, x index 1, upphöjt till exponenten 10"
+    },
+    "Exp150": {
+      "expected": "p index, x index 1, upphöjt till exponenten y plus 1"
+    },
+    "Exp151": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till exponenten 2, slut exponent"
+    },
+    "Exp152": {
+      "expected": "3 upphöjt till exponenten, 2 x upphöjt till exponenten 2, slut exponent"
+    },
+    "Exp153": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till exponenten 2, slut exponent"
+    },
+    "Exp154": {
+      "expected": "3 upphöjt till exponenten, 2 x upphöjt till exponenten 2, slut exponent"
+    },
+    "Exp155": {
+      "expected": "5 upphöjt till exponenten, 2 upphöjt till exponenten 3, slut exponent"
+    },
+    "Exp156": {
+      "expected": "5 upphöjt till exponenten, 2 x upphöjt till exponenten 3, slut exponent"
+    },
+    "Exp157": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till exponenten 2, plus 1, slut exponent"
+    },
+    "Exp158": {
+      "expected": "3 upphöjt till exponenten, 2 upphöjt till exponenten 2, slut exponent, plus 1"
+    },
+    "Exp159": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till exponenten 2, plus 3 x upphöjt till exponenten 3, slut exponent"
+    },
+    "Exp160": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till exponenten 4, slut exponent"
+    },
+    "Exp161": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till exponenten 4, plus 2, slut exponent"
+    },
+    "Exp162": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till exponenten 4, slut exponent, plus 2"
+    },
+    "Exp163": {
+      "expected": "2 upphöjt till exponenten, x upphöjt till exponenten 4, slut exponent"
+    },
+    "Exp164": {
+      "expected": "2 upphöjt till exponenten, 10 upphöjt till exponenten x plus 3, slut exponent"
+    },
+    "Exp165": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till exponenten 10, slut exponent"
+    },
+    "Exp166": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till exponenten 10, plus 1, slut exponent"
+    },
+    "Exp167": {
+      "expected": "3 upphöjt till exponenten, 3 upphöjt till exponenten 10, slut exponent, plus 1"
+    },
+    "Exp168": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till exponenten 2, slut exponent"
+    },
+    "Exp169": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till exponenten 10, slut exponent"
+    },
+    "Exp170": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till exponenten y plus 2, slut exponent"
+    },
+    "Exp171": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till exponenten y, plus 2, slut exponent"
+    },
+    "Exp172": {
+      "expected": "3 upphöjt till exponenten, öppna, x plus 1, stäng, upphöjt till exponenten y, slut exponent, plus 2"
+    },
+    "Exp173": {
+      "expected": "e upphöjt till exponenten, minus en halv x upphöjt till exponenten 2, slut exponent"
+    },
+    "Exp174": {
+      "expected": "e upphöjt till exponenten, minus en halv gånger, öppna, bråket med täljare x minus my, och nämnare sigma, stäng, upphöjt till exponenten 2, slut exponent"
+    }
+  }
+}

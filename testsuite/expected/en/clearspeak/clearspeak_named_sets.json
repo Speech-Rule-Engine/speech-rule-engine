@@ -1,0 +1,86 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakNamedSets",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "English Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
+    "_comment2_": " Named Sets (Number Systems)",
+    "NumSys001": {
+      "expected": "the real numbers"
+    },
+    "NumSys001a": {
+      "expected": "the real numbers"
+    },
+    "NumSys002": {
+      "expected": "the complex numbers"
+    },
+    "NumSys002a": {
+      "expected": "the complex numbers"
+    },
+    "NumSys003": {
+      "expected": "the integers"
+    },
+    "NumSys003a": {
+      "expected": "the integers"
+    },
+    "NumSys004": {
+      "expected": "the rational numbers"
+    },
+    "NumSys004a": {
+      "expected": "the rational numbers"
+    },
+    "NumSys005": {
+      "expected": "the natural numbers"
+    },
+    "NumSys005a": {
+      "expected": "the natural numbers"
+    },
+    "NumSys005_1": {
+      "expected": "the natural numbers with zero"
+    },
+    "NumSys005_1a": {
+      "expected": "the natural numbers with zero"
+    },
+    "NumSys006": {
+      "expected": "the positive integers"
+    },
+    "NumSys006a": {
+      "expected": "the positive integers"
+    },
+    "NumSys006_1": {
+      "expected": "the negative integers"
+    },
+    "NumSys006_1a": {
+      "expected": "the negative integers"
+    },
+    "NumSys007": {
+      "expected": "r-two"
+    },
+    "NumSys007a": {
+      "expected": "r-two"
+    },
+    "NumSys008": {
+      "expected": "z-three"
+    },
+    "NumSys008a": {
+      "expected": "z-three"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-infinity"
+    },
+    "NumSys010a": {
+      "expected": "r-infinity"
+    }
+  }
+}

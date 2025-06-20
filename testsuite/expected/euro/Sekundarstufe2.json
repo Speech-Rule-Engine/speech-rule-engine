@@ -1,0 +1,54 @@
+{
+  "name": "Sekundarstufe2",
+  "information": "LaTeX Manual Sekundarstufe 2",
+  "base": "input/euro/Sekundarstufe2.json",
+  "locale": "euro",
+  "modality": "braille",
+  "factory": "speech",
+  "domain": "default",
+  "active": "Augenbit",
+  "tests": {
+    "_comment0_": "Analysis",
+    "Analysis_0": {
+      "expected": "⠝⠀⡌⠞⠕⠀⡌⠊⠝⠋⠞⠽"
+    },
+    "Analysis_1": {
+      "expected": "⡌⠇⠊⠍⡸⠷⠓⠀⡌⠞⠕⠬⠾"
+    },
+    "Analysis_2": {
+      "expected": "⡌⠇⠊⠍⡸⠷⠭⠀⡌⠞⠕⠀⠭⡸⠬⠾"
+    },
+    "Analysis_3": {
+      "expected": "⠋⡌⠠⠦⠭⠴⠂⠋⡌⠠⠠⠦⠭⠴"
+    },
+    "Analysis_4": {
+      "expected": "⡌⠎⠥⠍⡸⠷⠊⠀⠶⠬⠾⡮⠝⡁⡸⠝"
+    },
+    "Analysis_5": {
+      "expected": "⡌⠊⠝⠞⡸⠁⡮⠃⠋⠦⠭⠴⠙⠭"
+    },
+    "_comment1_": "Stochastik",
+    "Stochastik_0": {
+      "expected": "⠝⠐"
+    },
+    "Stochastik_1": {
+      "expected": "⠷⠝⡌⠉⠓⠕⠕⠎⠑⠀⠅⠾"
+    },
+    "Stochastik_2": {
+      "expected": "⡌⠎⠊⠛⠍⠁⠀⡌⠟⠟⠥⠁⠙⠀⡌⡕⠍⠑⠛⠁"
+    },
+    "_comment2_": "Analytische Geometrie",
+    "Analytische_0": {
+      "expected": "⡌⠧⠑⠉⠷⠏⠾⠶⡌⠃⠑⠛⠊⠝⠷⠏⠍⠁⠞⠗⠊⠭⠾⠭⠆⠯⠽⠆⠯⠵⠀⠤⠩⡌⠑⠝⠙⠷⠏⠍⠁⠞⠗⠊⠭⠾"
+    },
+    "Analytische_1": {
+      "expected": "⡌⠧⠑⠉⠷⠟⠾⠶⡌⠃⠑⠛⠊⠝⠷⠏⠍⠁⠞⠗⠊⠭⠾⠤⠱⡌⡌⠬⠂⠱⡌⡌⠀⠅⠀⠖⠹⡌⠑⠝⠙⠷⠏⠍⠁⠞⠗⠊⠭⠾"
+    },
+    "Analytische_2": {
+      "expected": "⡌⠧⠑⠉⠷⠏⠾⡌⠞⠊⠍⠑⠎⠀⡌⠧⠑⠉⠷⠟⠾"
+    },
+    "Analytische_3": {
+      "expected": "⡌⠃⠑⠛⠊⠝⠷⠏⠍⠁⠞⠗⠊⠭⠾⠁⠯⠃⠯⠉⡌⡌⠀⠙⠯⠑⠯⠋⡌⠑⠝⠙⠷⠏⠍⠁⠞⠗⠊⠭⠾"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "domain": "clearspeak",
+  "name": "EnglishClearspeakDirectSpeech",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/common/direct_speech.json",
+  "information": "English Clearspeak Direct speech attributes.",
+  "active": "DirectSpeechEnglish",
+  "exclude": [],
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> AC <mark name=\"1\"/> line </prosody></speak>"
+    },
+    "AriaLabels_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> derivative of x <mark name=\"4\"/> is equal to <mark name=\"5\"/> sigma <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> left parenthesis <break time=\"250ms\"/> <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"8\"/> minus <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"10\"/> right parenthesis </prosody></speak>"
+    },
+    "AltText_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> A C under line </prosody></speak>"
+    },
+    "AltText_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> AC <mark name=\"1\"/> line </prosody></speak>"
+    },
+    "ExactSpeech_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> A C under line </prosody></speak>"
+    },
+    "ExactSpeech_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> AC <mark name=\"1\"/> line </prosody></speak>"
+    },
+    "MglyphTokens_0": {
+      "_comment0_": " mi",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> my glyph </prosody></speak>"
+    },
+    "MglyphTokens_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> your glyph </prosody></speak>",
+      "_comment1_": " mo"
+    },
+    "MglyphTokens_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> my glyph </prosody></speak>"
+    },
+    "MglyphTokens_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> your glyph </prosody></speak>",
+      "_comment2_": " mn"
+    },
+    "MglyphTokens_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> my glyph </prosody></speak>"
+    },
+    "MglyphTokens_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> your glyph </prosody></speak>",
+      "_comment3_": " mtext"
+    },
+    "MglyphTokens_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> my glyph </prosody></speak>"
+    },
+    "MglyphTokens_7": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> your glyph </prosody></speak>",
+      "_comment4_": " ms"
+    },
+    "MglyphTokens_8": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> my glyph </prosody></speak>"
+    },
+    "MglyphTokens_9": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> your glyph </prosody></speak>"
+    },
+    "MglyphGeneral_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 23braid <mark name=\"1\"/> plus <mark name=\"2\"/> 132braid <mark name=\"3\"/> equals <mark name=\"4\"/> 13braid </prosody></speak>"
+    },
+    "MglyphGeneral_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">N</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">M</say-as> </prosody> <mark name=\"5\"/> sub <mark name=\"2\"/> 1 <mark name=\"3\"/> subset of <mark name=\"4\"/> mfin </prosody></speak>"
+    },
+    "Issue_635": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> 132braid <mark name=\"3\"/> equals <mark name=\"4\"/> 13braid </prosody></speak>"
+    },
+    "Issue_644_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 35 <mark name=\"1\"/> mickeys per hour </prosody></speak>"
+    },
+    "Issue_644_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 35 <mark name=\"1\"/> miles per hour </prosody></speak>"
+    },
+    "Issue_644_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 35 <mark name=\"1\"/> mickeys per hour </prosody></speak>"
+    }
+  }
+}

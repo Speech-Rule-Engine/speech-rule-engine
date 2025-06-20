@@ -1,0 +1,71 @@
+{
+  "name": "EnglishMathspeakDirectSpeech",
+  "domain": "mathspeak",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/common/direct_speech.json",
+  "information": "English Mathspeak Direct speech attributes.",
+  "active": "DirectSpeechEnglish",
+  "exclude": [],
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "ModifyingAbove upper A upper C With line"
+    },
+    "AriaLabels_1": {
+      "expected": "derivative of x is equal to sigma left parenthesis y minus x right parenthesis"
+    },
+    "AltText_0": {
+      "expected": "A C under line"
+    },
+    "AltText_1": {
+      "expected": "ModifyingAbove upper A upper C With line"
+    },
+    "ExactSpeech_0": {
+      "expected": "A C under line"
+    },
+    "ExactSpeech_1": {
+      "expected": "ModifyingAbove upper A upper C With line"
+    },
+    "MglyphTokens_0": {
+      "_comment0_": " mi",
+      "expected": "my glyph"
+    },
+    "MglyphTokens_1": {
+      "expected": "your glyph",
+      "_comment1_": " mo"
+    },
+    "MglyphTokens_2": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_3": {
+      "expected": "your glyph",
+      "_comment2_": " mn"
+    },
+    "MglyphTokens_4": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_5": {
+      "expected": "your glyph",
+      "_comment3_": " mtext"
+    },
+    "MglyphTokens_6": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_7": {
+      "expected": "your glyph",
+      "_comment4_": " ms"
+    },
+    "MglyphTokens_8": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_9": {
+      "expected": "your glyph"
+    },
+    "MglyphGeneral_0": {
+      "expected": "23braid plus 132braid equals 13braid"
+    },
+    "MglyphGeneral_1": {
+      "expected": "upper N upper M Subscript 1 subset of mfin"
+    }
+  }
+}

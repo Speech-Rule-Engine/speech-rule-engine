@@ -1,0 +1,45 @@
+{
+  "name": "sre-tests",
+  "version": "1.0.0",
+  "description": "Speech Rule Engine tests with Jest",
+  "directories": {
+    "test": "tests"
+  },
+  "type": "module",
+  "scripts": {
+    "=============================================================================== tests": "",
+    "test:all": "pnpm test:files; pnpm test:output; pnpm test:analytics",
+    "test:files": "pnpm test --silent --testPathPattern tests/json",
+    "test:actions": "pnpm test --silent --testPathPattern tests/actions",
+    "test:output": "pnpm test --silent --testPathPattern tests/output",
+    "test:analytics": "pnpm rimraf analysis; pnpm test --silent --testPathPattern tests/analyse; pnpm test:allrules",
+    "test:allrules": "echo \"import('./js/module_loader.js').then((m) => m.loadPromise('at')).then(m => m.default.outputAllRules())\" | node ",
+    "analyse:tries": "echo \"import('./js/module_loader.js').then((m) => m.loadPromise('atrie')).then(m => m.default.output())\" | node ",
+    "compile": "pnpm tsc",
+    "prepare": "node tests.config.js",
+    "build": "pnpm clean; pnpm prepare && pnpm compile",
+    "clean": "pnpm rimraf dist js tests/output tests/json tests/analyse tests/actions coverage",
+    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
+  },
+  "imports": {
+    "#js/*": "../js/*",
+    "#source/*": "../components/mjs/*",
+    "#src/*": "./src/*",
+    "#helpers": "./js/src/index.js",
+    "#mathjax/*": "mathjax-full/mjs/*",
+    "#tests/*": "./js/*"
+  },
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "cross-env": "^7.0.3",
+    "firebase-admin": "^13.4.0",
+    "jest": "^29.7.0",
+    "mathjax-full": "4.0.0-beta.4",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "xml-js": "^1.6.11"
+  }
+}

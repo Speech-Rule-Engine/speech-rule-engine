@@ -1,0 +1,284 @@
+{
+  "name": "Punctuation",
+  "factory": "speech",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Book2019",
+  "tests": {
+    "_comment_0": "3.1",
+    "punctuation_00": {
+      "tex": "5.0, 8.2, 11.4, 14.6, \\ldots",
+      "brf": "#5.0, #8.2, #11.4, #14.6, '''",
+      "input": "<math><mn>5.0</mn><mo>,</mo><mn>8.2</mn><mo>,</mo><mn>11.4</mn><mo>,</mo><mn>14.6</mn><mo>,</mo><mo>&#x2026;</mo></math>",
+      "expected": "⠼⠢⠨⠴⠠⠀⠼⠦⠨⠆⠠⠀⠼⠂⠂⠨⠲⠠⠀⠼⠂⠲⠨⠖⠠⠀⠄⠄⠄"
+    },
+    "_comment_1": "3.3",
+    "punctuation_01": {
+      "tex": "64\\div 8",
+      "brf": "#64./8",
+      "input": "<math><mn>64</mn><mo>&#xF7;</mo><mn>8</mn></math>",
+      "expected": "⠼⠖⠲⠨⠌⠦"
+    },
+    "punctuation_02": {
+      "tex": "8-14=-6",
+      "brf": "#8-14 .K -#6",
+      "input": "<math><mn>8</mn><mo>&#x2212;</mo><mn>14</mn><mo>=</mo><mo>&#x2212;</mo><mn>6</mn></math>",
+      "expected": "⠼⠦⠤⠂⠲⠀⠨⠅⠀⠤⠼⠖"
+    },
+    "punctuation_03": {
+      "tex": "5 \\times 2 = 5 + 5, 5 \\times 3 = 5 + 5 + 5, 5 \\times 4 = 5 + 5 + 5 + 5,",
+      "brf": "#5@*2 .K #5+5, #5@*3 .K #5+5+5, #5@*4 .K #5+5+5+5, ",
+      "input": "<math><mn>5</mn><mo>&#xD7;</mo><mn>2</mn><mo>=</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>&#xD7;</mo><mn>3</mn><mo>=</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo>,</mo><mn>5</mn><mo>&#xD7;</mo><mn>4</mn><mo>=</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>5</mn><mo>,</mo></math>",
+      "expected": "⠼⠢⠈⠡⠆⠀⠨⠅⠀⠼⠢⠬⠢⠠⠀⠼⠢⠈⠡⠒⠀⠨⠅⠀⠼⠢⠬⠢⠬⠢⠠⠀⠼⠢⠈⠡⠲⠀⠨⠅⠀⠼⠢⠬⠢⠬⠢⠬⠢⠠"
+    },
+    "_comment_2": "3.5",
+    "punctuation_04": {
+      "tex": "2\\cdot 2\\cdot 2;",
+      "brf": "#2*2*2_2",
+      "input": "<math><mn>2</mn><mo>&#x22C5;</mo><mn>2</mn><mo>&#x22C5;</mo><mn>2</mn><mo>;</mo></math>",
+      "expected": "⠼⠆⠡⠆⠡⠆⠸⠆"
+    },
+    "punctuation_05": {
+      "tex": " 2\\cdot 2, 2\\cdot 2\\cdot 2; 3\\cdot 3, 3\\cdot 3\\cdot 3; 4\\cdot 4, 4\\cdot 4\\cdot 4",
+      "brf": "#2*2, #2*2*2_2 #3*3, #3*3*3_2 #4*4, #4*4*4",
+      "input": "<math><mn>2</mn><mo>&#x22C5;</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>&#x22C5;</mo><mn>2</mn><mo>&#x22C5;</mo><mn>2</mn><mo>;</mo><mn>3</mn><mo>&#x22C5;</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>&#x22C5;</mo><mn>3</mn><mo>&#x22C5;</mo><mn>3</mn><mo>;</mo><mn>4</mn><mo>&#x22C5;</mo><mn>4</mn><mo>,</mo><mn>4</mn><mo>&#x22C5;</mo><mn>4</mn><mo>&#x22C5;</mo><mn>4</mn></math>",
+      "expected": "⠼⠆⠡⠆⠠⠀⠼⠆⠡⠆⠡⠆⠸⠆⠀⠼⠒⠡⠒⠠⠀⠼⠒⠡⠒⠡⠒⠸⠆⠀⠼⠲⠡⠲⠠⠀⠼⠲⠡⠲⠡⠲"
+    },
+    "punctuation_06": {
+      "tex": "``-'', ``=''.",
+      "brf": "8-_0, 8.K_04",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow><mo>.</mo></math>",
+      "expected": "⠦⠤⠸⠴⠠⠀⠦⠨⠅⠸⠴⠲"
+    },
+    "punctuation_07": {
+      "tex": "\"40+10=50\"",
+      "brf": "8#40+10 .K #50_0",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mn>40</mn><mo>+</mo><mn>10</mn><mo>=</mo><mn>50</mn><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow></math>",
+      "expected": "⠦⠼⠲⠴⠬⠂⠴⠀⠨⠅⠀⠼⠢⠴⠸⠴"
+    },
+    "_comment_times": "The following reprsent times rather than ratios",
+    "punctuation_08": {
+      "test": false,
+      "tex": "3:30",
+      "brf": "#3_3#30",
+      "input": "<math><mn>3</mn><mo>:</mo><mn>30</mn></math>",
+      "expected": "⠼⠒⠸⠒⠼⠒⠴"
+    },
+    "punctuation_09": {
+      "test": false,
+      "tex": "7:45-8:20",
+      "brf": "#7_3#45-8_3#20 ",
+      "input": "<math><mn>7</mn><mo>:</mo><mn>45</mn><mo>&#x2212;</mo><mn>8</mn><mo>:</mo><mn>20</mn></math>",
+      "expected": "⠼⠶⠸⠒⠼⠲⠢⠤⠦⠸⠒⠼⠆⠴"
+    },
+    "_comment_3": "3.5",
+    "_comment_4": "3.6",
+    "punctuation_10": {
+      "tex": "2\\times\\ldots,",
+      "brf": "#2@* ''',",
+      "input": "<math><mn>2</mn><mo>&#xD7;</mo><mo>&#x2026;</mo><mo>,</mo></math>",
+      "expected": "⠼⠆⠈⠡⠀⠄⠄⠄⠠"
+    },
+    "punctuation_11": {
+      "tex": "2 \\times \\_\\_\\_\\_.",
+      "brf": "#2@* ----_4",
+      "input": "<mn>2</mn><mo>&#xD7;</mo><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mo>.</mo>",
+      "expected": "⠼⠆⠈⠡⠀⠤⠤⠤⠤⠸⠲"
+    },
+    "punctuation_12": {
+      "tex": " 2 \\times?;",
+      "brf": "#2@*=_2",
+      "input": "<math><mn>2</mn><mo>&#xD7;</mo><mo>?</mo><mo>;</mo></math>",
+      "expected": "⠼⠆⠈⠡⠿⠸⠆"
+    },
+    "punctuation_13": {
+      "tex": "40\\% - \\_\\_\\_. \\_\\_\\_ -80\\%",
+      "brf": "#40@0- ----_4 ---- -#80@0",
+      "input": "<math><mn>40</mn></math>",
+      "expected": "⠼⠲⠴⠈⠴⠤⠀⠤⠤⠤⠤⠸⠲⠀⠤⠤⠤⠤⠀⠤⠼⠦⠴⠈⠴"
+    },
+    "_comment_5": "3.7",
+    "punctuation_14": {
+      "tex": " 4\\ldots 2 = 8; 8\\ldots 2 = 10",
+      "brf": "#4 ''' #2 .K #8_2 #8 ''' #2 .K #10",
+      "input": "<math><mn>4</mn><mo>&#x2026;</mo><mn>2</mn><mo>=</mo><mn>8</mn><mo>;</mo><mn>8</mn><mo>&#x2026;</mo><mn>2</mn><mo>=</mo><mn>10</mn></math>",
+      "expected": "⠼⠲⠀⠄⠄⠄⠀⠼⠆⠀⠨⠅⠀⠼⠦⠸⠆⠀⠼⠦⠀⠄⠄⠄⠀⠼⠆⠀⠨⠅⠀⠼⠂⠴"
+    },
+    "punctuation_15": {
+      "tex": "\\times\\box{'s}",
+      "brf": "@*_'S_3",
+      "input": "<math><mo>&#xD7;</mo><mtext mathcolor=\"red\">\\box</mtext><mrow data-mjx-texclass=\"ORD\"><msup><mi></mi><mo data-mjx-alternate=\"1\">&#x2032;</mo></msup><mi>s</mi></mrow></math>",
+      "expected": "⠈⠡⠸⠄⠎⠸⠒"
+    },
+    "punctuation_16": {
+      "tex": "=\\mbox{s}",
+      "brf": ".KS",
+      "input": "<math><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>s</mtext></mstyle></math>",
+      "expected": "⠨⠅⠎"
+    },
+    "punctuation_17": {
+      "tex": "=\\mbox{'s}",
+      "brf": ".K_'S",
+      "input": "<math><mo>=</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#x2019;s</mtext></mstyle></math>",
+      "expected": "⠨⠅⠸⠄⠎"
+    },
+    "_comment_6": "3.8",
+    "punctuation_18": {
+      "tex": "5-0,",
+      "brf": "#5.0,",
+      "input": "<math><mn>5</mn><mo>&#x2212;</mo><mn>0</mn><mo>,</mo></math>",
+      "expected": "⠼⠢⠨⠴⠠"
+    },
+    "punctuation_19": {
+      "tex": " 5.0, 8.2, 11.4, 14.6, \\ldots",
+      "brf": "#5.0, #8.2, #11.4, #14.6, '''",
+      "input": "<math><mn>5.0</mn><mo>,</mo><mn>8.2</mn><mo>,</mo><mn>11.4</mn><mo>,</mo><mn>14.6</mn><mo>,</mo><mo>&#x2026;</mo></math>",
+      "expected": "⠼⠢⠨⠴⠠⠀⠼⠦⠨⠆⠠⠀⠼⠂⠂⠨⠲⠠⠀⠼⠂⠲⠨⠖⠠⠀⠄⠄⠄"
+    },
+    "punctuation_20": {
+      "tex": "5.5-7.0",
+      "brf": "#5.5-7.0",
+      "input": "<math><mn>5.5</mn><mo>&#x2212;</mo><mn>7.0</mn></math>",
+      "expected": "⠼⠢⠨⠢⠤⠶⠨⠴"
+    },
+    "punctuation_21": {
+      "tex": "$47,689—2.6%",
+      "brf": "@S47,689--#2.6@0",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mo>$</mo></mrow><mn>47</mn><mo>,</mo><mn>689</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#x2014;</mo></mrow><mn>2.6</mn></math>",
+      "expected": "⠈⠎⠲⠶⠠⠖⠦⠔⠤⠤⠼⠆⠨⠖⠈⠴"
+    },
+    "punctuation_22": {
+      "tex": "\"+\", \"-\"",
+      "brf": "8+_0, 8-_0",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mo>+</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo>-</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow></math>",
+      "expected": "⠦⠬⠸⠴⠠⠀⠦⠤⠸⠴"
+    },
+    "punctuation_23": {
+      "tex": "\"=\".",
+      "brf": "8.K_04",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mo>=</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow><mo>.</mo></math>",
+      "expected": "⠦⠨⠅⠸⠴⠲"
+    },
+    "_comment_7": "3.9",
+    "_comment_8": "3.10",
+    "punctuation_24": {
+      "tex": " (3)(.5)",
+      "brf": "(3)(.5)",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>3</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>.5</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠒⠾⠷⠨⠢⠾"
+    },
+    "punctuation_25": {
+      "tex": "|-8|",
+      "brf": "\\-8\\",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mo>&#x2212;</mo><mn>8</mn><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>",
+      "expected": "⠳⠤⠦⠳"
+    },
+    "punctuation_26": {
+      "tex": "1)",
+      "brf": "#1)",
+      "input": "<math><mn>1</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠼⠂⠾"
+    },
+    "punctuation_27": {
+      "tex": "(1)",
+      "brf": "(1)",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠂⠾"
+    },
+    "_comment_9": "3.11",
+    "punctuation_28": {
+      "tex": "\\{−5\\}, (0), [+5].",
+      "brf": ".(-5.), (0), @(+5@)_4",
+      "input": "<math><mo fence=\"false\" stretchy=\"false\">{</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>5</mn></mrow><mo fence=\"false\" stretchy=\"false\">}</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>0</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">[</mo><mo>+</mo><mn>5</mn><mo stretchy=\"false\">]</mo><mo>.</mo></math>",
+      "expected": "⠨⠷⠤⠢⠨⠾⠠⠀⠷⠴⠾⠠⠀⠈⠷⠬⠢⠈⠾⠸⠲"
+    },
+    "punctuation_29": {
+      "tex": "(\"20\\%\"),",
+      "brf": "(_8#20@0_0),",
+      "input": "<math><mo stretchy=\"false\">(</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mn>20</mn><mi mathvariant=\"normal\">%</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow><mo stretchy=\"false\">)</mo><mo>,</mo></math>",
+      "expected": "⠷⠸⠦⠼⠆⠴⠈⠴⠸⠴⠾⠠"
+    },
+    "_comment_10": "3.13",
+    "punctuation_30": {
+      "tex": "\\left(( 4 + 7) − ( 7 + 4)\\right)",
+      "brf": "((4+7)-(7+4))",
+      "input": "<math><mo>(</mo><mo stretchy=\"false\">(</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo stretchy=\"false\">)</mo><mo>&#x2212;</mo><mo stretchy=\"false\">(</mo><mn>7</mn><mo>+</mo><mn>4</mn><mo stretchy=\"false\">)</mo><mo>)</mo></math>",
+      "expected": "⠷⠷⠲⠬⠶⠾⠤⠷⠶⠬⠲⠾⠾"
+    },
+    "punctuation_31": {
+      "tex": "\"+\"",
+      "brf": "8+_0",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">“</mo></mrow><mo>+</mo><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">”</mo></mrow></math>",
+      "expected": "⠦⠬⠸⠴"
+    },
+    "punctuation_32": {
+      "tex": " (\\times)",
+      "brf": "(@*)",
+      "input": "<math><mo stretchy=\"false\">(</mo><mo>&#xD7;</mo><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠈⠡⠾"
+    },
+    "punctuation_33": {
+      "tex": "(\\times).",
+      "brf": "(@*)_4",
+      "input": "<math><mo stretchy=\"false\">(</mo><mo>&#xD7;</mo><mo stretchy=\"false\">)</mo><mo>.</mo></math>",
+      "expected": "⠷⠈⠡⠾⠸⠲"
+    },
+    "_comment_11": "3.15",
+    "punctuation_34": {
+      "tex": " [−4]",
+      "brf": "@(-4@)",
+      "input": "<math><mo stretchy=\"false\">[</mo><mo>&#x2212;</mo><mn>4</mn><mo stretchy=\"false\">]</mo></math>",
+      "expected": "⠈⠷⠤⠲⠈⠾"
+    },
+    "punctuation_35": {
+      "tex": " (12¢)",
+      "brf": "(12@C)",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>12</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#xA2;</mo></mrow><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠂⠆⠈⠉⠾"
+    },
+    "punctuation_36": {
+      "tex": "\\|\\ldots\\|",
+      "brf": "\\'''\\",
+      "input": "<math><mo data-mjx-texclass=\"ORD\">&#x2225;</mo><mo>&#x2026;</mo><mo data-mjx-texclass=\"ORD\">&#x2225;</mo></math>",
+      "expected": "⠳⠳⠄⠄⠄⠳⠳"
+    },
+    "punctuation_37": {
+      "tex": " (<, =, >)",
+      "brf": "(\"K, .K, .1)",
+      "input": "<math><mo stretchy=\"false\">(</mo><mo>&lt;</mo><mo>,</mo><mo>=</mo><mo>,</mo><mo>&gt;</mo><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠐⠅⠠⠀⠨⠅⠠⠀⠨⠂⠾"
+    },
+    "punctuation_38": {
+      "tex": "14 \\div 7\\ (<, =, >)\\ 14 − 7",
+      "brf": "#14./7 (\"K, .K, .1) #14-7 ",
+      "input": "<math><mn>14</mn><mo>&#xF7;</mo><mn>7</mn><mtext>&#xA0;</mtext><mo stretchy=\"false\">(</mo><mo>&lt;</mo><mo>,</mo><mo>=</mo><mo>,</mo><mo>&gt;</mo><mo stretchy=\"false\">)</mo><mtext>&#xA0;</mtext><mn>14</mn><mo>&#x2212;</mo><mn>7</mn></math>",
+      "expected": "⠼⠂⠲⠨⠌⠶⠀⠷⠐⠅⠠⠀⠨⠅⠠⠀⠨⠂⠾⠀⠼⠂⠲⠤⠶"
+    },
+    "_comment_12": "3.16",
+    "punctuation_39": {
+      "tex": "(4 \\times 30) + (4 \\times 2) = 128",
+      "brf": "(4@*30)+(4@*2) .K #128 ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>4</mn><mo>&#xD7;</mo><mn>30</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>4</mn><mo>&#xD7;</mo><mn>2</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mn>128</mn></math>",
+      "expected": "⠷⠲⠈⠡⠒⠴⠾⠬⠷⠲⠈⠡⠆⠾⠀⠨⠅⠀⠼⠂⠆⠦"
+    },
+    "punctuation_40": {
+      "tex": "(0.1) \\ldots (0.9)",
+      "brf": "(0.1) ''' (0.9)",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>0.1</mn><mo stretchy=\"false\">)</mo><mo>&#x2026;</mo><mo stretchy=\"false\">(</mo><mn>0.9</mn><mo stretchy=\"false\">)</mo></math>",
+      "expected": "⠷⠴⠨⠂⠾⠀⠄⠄⠄⠀⠷⠴⠨⠔⠾"
+    },
+    "punctuation_41": {
+      "tex": " 5 (9 + 7) = (5\\cdot 9) + 7",
+      "brf": "#5(9+7) .K (5*9)+7",
+      "input": "<math><mn>5</mn><mo stretchy=\"false\">(</mo><mn>9</mn><mo>+</mo><mn>7</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>5</mn><mo>&#x22C5;</mo><mn>9</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mn>7</mn></math>",
+      "expected": "⠼⠢⠷⠔⠬⠶⠾⠀⠨⠅⠀⠷⠢⠡⠔⠾⠬⠶"
+    },
+    "punctuation_42": {
+      "tex": "[(3)(−1)] + [(1)(−3)]",
+      "brf": "@((3)(-1)@)+@((1)(-3)@)",
+      "input": "<math><mo stretchy=\"false\">[</mo><mo stretchy=\"false\">(</mo><mn>3</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mo>&#x2212;</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">]</mo><mo>+</mo><mo stretchy=\"false\">[</mo><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mo>&#x2212;</mo><mn>3</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">]</mo></math>",
+      "expected": "⠈⠷⠷⠒⠾⠷⠤⠂⠾⠈⠾⠬⠈⠷⠷⠂⠾⠷⠤⠒⠾⠈⠾"
+    }
+  }
+}

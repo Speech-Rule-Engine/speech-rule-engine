@@ -1,0 +1,503 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakTrigometry",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "English Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [
+    "TrigReciprocal001",
+    "TrigReciprocal002",
+    "TrigReciprocal003",
+    "TrigReciprocal004",
+    "TrigReciprocal005",
+    "TrigReciprocal006",
+    "TrigReciprocal007",
+    "TrigReciprocal008",
+    "TrigReciprocal009",
+    "TrigReciprocal010",
+    "TrigReciprocal011",
+    "TrigReciprocal012",
+    "TrigReciprocal013",
+    "TrigReciprocal014",
+    "TrigReciprocal015",
+    "TrigReciprocal016",
+    "TrigReciprocal017",
+    "TrigReciprocal018",
+    "TrigReciprocal019",
+    "TrigReciprocal020",
+    "TrigReciprocal021",
+    "TrigReciprocal022",
+    "TrigReciprocal023",
+    "TrigReciprocal024",
+    "TrigReciprocal025",
+    "TrigReciprocal026",
+    "HypTrigReciprocal001",
+    "HypTrigReciprocal002",
+    "HypTrigReciprocal003",
+    "HypTrigReciprocal004",
+    "HypTrigReciprocal005",
+    "HypTrigReciprocal006",
+    "HypTrigReciprocal007",
+    "HypTrigReciprocal008",
+    "HypTrigReciprocal009",
+    "HypTrigReciprocal010",
+    "HypTrigReciprocal011",
+    "HypTrigReciprocal012",
+    "HypTrigReciprocal013",
+    "HypTrigReciprocal014",
+    "HypTrigReciprocal015",
+    "HypTrigReciprocal016",
+    "HypTrigReciprocal017",
+    "HypTrigReciprocal018",
+    "HypTrigReciprocal019",
+    "HypTrigReciprocal020"
+  ],
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"1\"/> theta </prosody></speak>"
+    },
+    "Trig004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> secant <mark name=\"1\"/> theta </prosody></speak>"
+    },
+    "Trig005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosecant <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cotangent <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <mark name=\"1\"/> cubed <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> secant <mark name=\"1\"/> cubed <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosecant <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cotangent <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <prosody rate=\"+25%\"> <mark name=\"1\"/> 2 <mark name=\"2\"/> pi </prosody> </prosody></speak>"
+    },
+    "Trig014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"2\"/> pi <mark name=\"3\"/> <say-as interpret-as=\"character\">k</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"5\"/> pi <mark name=\"6\"/> over 2 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Trig015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> pi <mark name=\"2\"/> over 2 </prosody></speak>"
+    },
+    "Trig016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> pi <mark name=\"2\"/> over 2 </prosody></speak>"
+    },
+    "Trig017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> pi </prosody> <mark name=\"4\"/> over 2 </prosody></speak>"
+    },
+    "Trig018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"4\"/> over <mark name=\"1\"/> sine <mark name=\"2\"/> pi </prosody></speak>"
+    },
+    "Trig019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"5\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> the sine <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> pi <mark name=\"2\"/> over 2 <break time=\"250ms\"/> <mark name=\"6\"/> and denominator 3 </prosody></speak>"
+    },
+    "Trig020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"2\"/> negative <mark name=\"3\"/> pi </prosody></speak>"
+    },
+    "Trig021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> pi <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "Trig022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <break time=\"250ms\"/> <mark name=\"4\"/> pi <mark name=\"5\"/> over 2 <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "Trig023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> pi <mark name=\"3\"/> over 2 <break time=\"250ms\"/> <mark name=\"5\"/> plus <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "Trig024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> squared <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"5\"/> cosine <mark name=\"6\"/> squared <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> equals <mark name=\"10\"/> 1 </prosody></speak>"
+    },
+    "Trig025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fourth <mark name=\"0\"/> power of sine <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fifth <mark name=\"0\"/> power of cosine <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the n-th <mark name=\"0\"/> power of tangent <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"7\"/> over <mark name=\"4\"/> cosine <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"1\"/> 35 <mark name=\"2\"/> degrees </prosody></speak>"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "expected": "the sine of, open paren, 45 degrees plus 30 degrees, close paren"
+    },
+    "Trig031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> angle <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">D</say-as> <mark name=\"4\"/> <say-as interpret-as=\"character\">E</say-as> <mark name=\"5\"/> <say-as interpret-as=\"character\">F</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> close paren </prosody></speak>"
+    },
+    "Trig032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> angle <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">D</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "Trig033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"6\"/> equals <break time=\"250ms\"/> <mark name=\"7\"/> sine <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> cosine <mark name=\"10\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> plus <break time=\"250ms\"/> <mark name=\"12\"/> cosine <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"14\"/> sine <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Trig034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"6\"/> equals <break time=\"250ms\"/> <mark name=\"7\"/> cosine <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> cosine <mark name=\"10\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> minus <break time=\"250ms\"/> <mark name=\"12\"/> sine <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"14\"/> sine <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Trig035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"32\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"6\"/> equals <break time=\"250ms\"/> <mark name=\"30\"/> the <mark name=\"16\"/> fraction with numerator <mark name=\"7\"/> tangent <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> minus <mark name=\"10\"/> tangent <mark name=\"11\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"29\"/> and denominator <mark name=\"17\"/> 1 <mark name=\"18\"/> minus <break time=\"250ms\"/> <mark name=\"19\"/> tangent <mark name=\"20\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"21\"/> tangent <mark name=\"22\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "expected": "sine 30 degrees cosine 15 degrees, plus, cosine 30 degrees sine 15 degrees"
+    },
+    "Trig037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> pi <mark name=\"3\"/> over 6 <break time=\"250ms\"/> <mark name=\"5\"/> plus <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> pi </prosody> <mark name=\"10\"/> over 3 <break time=\"250ms\"/> <mark name=\"13\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> equals <break time=\"250ms\"/> <mark name=\"53\"/> the <mark name=\"32\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"16\"/> the tangent <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"17\"/> pi <mark name=\"18\"/> over 6 <break time=\"250ms\"/> <mark name=\"20\"/> minus <break time=\"250ms\"/> <mark name=\"21\"/> the tangent <mark name=\"27\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"22\"/> 2 <mark name=\"23\"/> pi </prosody> <mark name=\"26\"/> over 3 <break time=\"250ms\"/> <mark name=\"52\"/> and denominator <mark name=\"33\"/> 1 <mark name=\"34\"/> minus <break time=\"250ms\"/> <mark name=\"35\"/> the tangent <mark name=\"38\"/> of <break time=\"250ms\"/> <mark name=\"36\"/> pi <mark name=\"37\"/> over 6 <break time=\"250ms\"/> <mark name=\"39\"/> the tangent <mark name=\"45\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"40\"/> 2 <mark name=\"41\"/> pi </prosody> <mark name=\"44\"/> over 3 </prosody></speak>"
+    },
+    "Trig038": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <prosody rate=\"+25%\"> <mark name=\"1\"/> 2 <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"3\"/> equals <break time=\"250ms\"/> <mark name=\"20\"/> the <mark name=\"10\"/> fraction with numerator <mark name=\"4\"/> 2 <mark name=\"5\"/> tangent <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <mark name=\"11\"/> 1 <mark name=\"12\"/> minus <break time=\"250ms\"/> <mark name=\"13\"/> tangent <mark name=\"14\"/> squared <mark name=\"16\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <prosody rate=\"+25%\"> <mark name=\"1\"/> 2 <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"3\"/> equals <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"5\"/> cosine <mark name=\"6\"/> squared <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> minus <mark name=\"10\"/> 1 </prosody></speak>"
+    },
+    "Trig040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> over 2 <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> plus or minus <mark name=\"15\"/> the square root of <break time=\"250ms\"/> <mark name=\"14\"/> the <mark name=\"12\"/> fraction with numerator <mark name=\"6\"/> 1 <mark name=\"7\"/> minus <mark name=\"8\"/> cosine <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> and denominator 2 </prosody></speak>"
+    },
+    "Trig041": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> over 2 <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> plus or minus <mark name=\"21\"/> the square root of <break time=\"250ms\"/> <mark name=\"20\"/> the <mark name=\"12\"/> fraction with numerator <mark name=\"6\"/> 1 <mark name=\"7\"/> minus <mark name=\"8\"/> cosine <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <mark name=\"13\"/> 1 <mark name=\"14\"/> plus <mark name=\"15\"/> cosine <mark name=\"16\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Trig042": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> cosine <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> 2 <break time=\"250ms\"/> <mark name=\"6\"/> the cosine <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"13\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"19\"/> the <mark name=\"17\"/> fraction with numerator <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"15\"/> minus <mark name=\"16\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"18\"/> and denominator 2 </prosody></speak>"
+    },
+    "Trig043": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"3\"/> pi <mark name=\"4\"/> over 8 <break time=\"250ms\"/> <mark name=\"7\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> equals <mark name=\"10\"/> negative <mark name=\"11\"/> one <mark name=\"12\"/> half <mark name=\"19\"/> the square root of <mark name=\"14\"/> 2 <mark name=\"15\"/> minus <mark name=\"17\"/> the square root of <mark name=\"16\"/> 2 <break time=\"250ms\"/> <mark name=\"17\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"19\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Trig044": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"6\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"1\"/> 3 <mark name=\"2\"/> pi </prosody> <mark name=\"5\"/> over 8 <break time=\"250ms\"/> <mark name=\"7\"/> equals <break time=\"250ms\"/> <mark name=\"20\"/> the <mark name=\"13\"/> fraction with numerator the square root of <break time=\"250ms\"/> <mark name=\"9\"/> the square root of <mark name=\"8\"/> 2 <break time=\"250ms\"/> <mark name=\"9\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"13\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"19\"/> and denominator the square root of <break time=\"250ms\"/> <mark name=\"15\"/> the square root of <mark name=\"14\"/> 2 <break time=\"250ms\"/> <mark name=\"15\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"16\"/> minus <mark name=\"17\"/> 1 <break time=\"250ms\"/> <mark name=\"19\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "Trig045": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the tangent <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> pi <mark name=\"2\"/> over 12 <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> one <mark name=\"6\"/> half <mark name=\"13\"/> the square root of <mark name=\"8\"/> 2 <mark name=\"9\"/> minus <mark name=\"11\"/> the square root of <mark name=\"10\"/> 3 <break time=\"250ms\"/> <mark name=\"11\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"13\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> sine <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> cosine <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> tangent <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> cotangent <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> secant <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> cosecant <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"10\"/> the inverse <mark name=\"0\"/> sine <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"6\"/> fraction with numerator the square root of <mark name=\"5\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator 2 </prosody></speak>"
+    },
+    "TrigInvAuto008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the inverse <mark name=\"0\"/> cosine <mark name=\"7\"/> of <mark name=\"5\"/> one <mark name=\"6\"/> half </prosody></speak>"
+    },
+    "TrigInvAuto009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> tangent <mark name=\"5\"/> of 17 </prosody></speak>"
+    },
+    "TrigInvAuto010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> cotangent <mark name=\"5\"/> of 32 </prosody></speak>"
+    },
+    "TrigInvAuto011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> secant <mark name=\"5\"/> of 100 </prosody></speak>"
+    },
+    "TrigInvAuto012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> cosecant <mark name=\"5\"/> of 85 </prosody></speak>"
+    },
+    "TrigInvAuto013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the inverse <mark name=\"0\"/> sine <mark name=\"10\"/> of <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the inverse <mark name=\"0\"/> cosine <mark name=\"10\"/> of <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> the inverse <mark name=\"0\"/> tangent <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 12 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> the inverse <mark name=\"0\"/> cotangent <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> minus <mark name=\"9\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> sine <mark name=\"11\"/> of <mark name=\"6\"/> sine <mark name=\"7\"/> 0 </prosody></speak>"
+    },
+    "TrigInvAuto018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> cosecant <mark name=\"11\"/> of <mark name=\"6\"/> cosecant <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInvAuto019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"17\"/> the inverse <mark name=\"2\"/> cosine <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> negative <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator the square root of <mark name=\"9\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"16\"/> the inverse <mark name=\"3\"/> cosine <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator the square root of <mark name=\"9\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"13\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> the inverse <mark name=\"0\"/> sine <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the cosine <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> pi <mark name=\"8\"/> over 4 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"11\"/> the inverse <mark name=\"2\"/> cosine <mark name=\"9\"/> of <mark name=\"7\"/> one <mark name=\"8\"/> half </prosody></speak>"
+    },
+    "TrigInvAuto023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"9\"/> the inverse <mark name=\"2\"/> tangent <mark name=\"7\"/> of 1 </prosody></speak>"
+    },
+    "TrigInvAuto024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"10\"/> the inverse <mark name=\"3\"/> tangent <mark name=\"8\"/> of 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"18\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"15\"/> the inverse <mark name=\"3\"/> tangent <mark name=\"13\"/> of <mark name=\"9\"/> negative <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"17\"/> close paren </prosody></speak>"
+    },
+    "TrigInvAuto026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> secant <mark name=\"11\"/> of <mark name=\"6\"/> secant <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cotangent <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> secant <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosecant <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"6\"/> fraction with numerator the square root of <mark name=\"5\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator 2 </prosody></speak>"
+    },
+    "TrigInverse008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"7\"/> of <mark name=\"5\"/> one <mark name=\"6\"/> half </prosody></speak>"
+    },
+    "TrigInverse009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of 17 </prosody></speak>"
+    },
+    "TrigInverse010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cotangent <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of 32 </prosody></speak>"
+    },
+    "TrigInverse011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> secant <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of 100 </prosody></speak>"
+    },
+    "TrigInverse012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosecant <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"5\"/> of 85 </prosody></speak>"
+    },
+    "TrigInverse013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 12 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cotangent <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> minus <mark name=\"9\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"11\"/> of <mark name=\"6\"/> sine <mark name=\"7\"/> 0 </prosody></speak>"
+    },
+    "TrigInverse018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> cosecant <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"11\"/> of <mark name=\"6\"/> cosecant <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "TrigInverse019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> cosine <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> negative <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator the square root of <mark name=\"9\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"3\"/> cosine <mark name=\"7\" kind=\"LAST\"/> inverse <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator the square root of <mark name=\"9\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"13\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the cosine <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> pi <mark name=\"8\"/> over 4 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"2\"/> cosine <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"9\"/> of <mark name=\"7\"/> one <mark name=\"8\"/> half </prosody></speak>"
+    },
+    "TrigInverse023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"2\"/> tangent <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"7\"/> of 1 </prosody></speak>"
+    },
+    "TrigInverse024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"3\"/> tangent <mark name=\"7\" kind=\"LAST\"/> inverse <mark name=\"8\"/> of 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"18\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"3\"/> tangent <mark name=\"7\" kind=\"LAST\"/> inverse <mark name=\"13\"/> of <mark name=\"9\"/> negative <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"17\"/> close paren </prosody></speak>"
+    },
+    "TrigInverse026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> secant <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"11\"/> of <mark name=\"6\"/> secant <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> sine <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> cosine <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> tangent <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> cotangent <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> secant <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> cosecant <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"10\"/> arc <mark name=\"0\"/> sine <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"6\"/> fraction with numerator the square root of <mark name=\"5\"/> 2 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator 2 </prosody></speak>"
+    },
+    "ArcTrig008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> arc <mark name=\"0\"/> cosine <mark name=\"5\"/> one <mark name=\"6\"/> half </prosody></speak>"
+    },
+    "ArcTrig009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> tangent <mark name=\"5\"/> 17 </prosody></speak>"
+    },
+    "ArcTrig010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> cotangent <mark name=\"5\"/> 32 </prosody></speak>"
+    },
+    "ArcTrig011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> secant <mark name=\"5\"/> 100 </prosody></speak>"
+    },
+    "ArcTrig012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> arc <mark name=\"0\"/> cosecant <mark name=\"5\"/> 85 </prosody></speak>"
+    },
+    "ArcTrig013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> arc <mark name=\"0\"/> sine <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> arc <mark name=\"0\"/> cosine <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> arc <mark name=\"0\"/> tangent <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> plus <mark name=\"9\"/> 12 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> arc <mark name=\"0\"/> cotangent <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> negative <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> minus <mark name=\"9\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> arc <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"6\"/> sine <mark name=\"7\"/> 0 </prosody></speak>"
+    },
+    "ArcTrig018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> arc <mark name=\"0\"/> cosecant <break time=\"250ms\"/> <mark name=\"6\"/> cosecant <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "ArcTrig019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"17\"/> arc <mark name=\"2\"/> cosine <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> negative <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator the square root of <mark name=\"9\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the cosine <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"16\"/> arc <mark name=\"3\"/> cosine <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> fraction with numerator the square root of <mark name=\"9\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"13\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"15\"/> arc <mark name=\"0\"/> sine <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> the cosine <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> pi <mark name=\"8\"/> over 4 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"11\"/> arc <mark name=\"2\"/> cosine <mark name=\"7\"/> one <mark name=\"8\"/> half </prosody></speak>"
+    },
+    "ArcTrig023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <break time=\"250ms\"/> <mark name=\"9\"/> arc <mark name=\"2\"/> tangent <mark name=\"7\"/> 1 </prosody></speak>"
+    },
+    "ArcTrig024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"10\"/> arc <mark name=\"3\"/> tangent <mark name=\"8\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sine <mark name=\"18\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> negative <break time=\"250ms\"/> <mark name=\"15\"/> arc <mark name=\"3\"/> tangent <mark name=\"9\"/> negative <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"17\"/> close paren </prosody></speak>"
+    },
+    "ArcTrig026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> arc <mark name=\"0\"/> secant <break time=\"250ms\"/> <mark name=\"6\"/> secant <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "AllTrig01": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> arc sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "AllTrig02": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> arc cosine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "AllTrig03": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> arc tangent <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "_comment6_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic sine <mark name=\"1\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic cosine <mark name=\"1\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic tangent <mark name=\"1\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic cotangent <mark name=\"1\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic secant <mark name=\"1\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic cosecant <mark name=\"1\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> hyperbolic sine <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> hyperbolic cosine <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> hyperbolic tangent <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> hyperbolic cotangent <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> hyperbolic secant <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the inverse <mark name=\"0\"/> hyperbolic cosecant <mark name=\"5\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic sine <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> the inverse <mark name=\"2\"/> hyperbolic sine <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic cosine <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> the inverse <mark name=\"2\"/> hyperbolic cosine <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic tangent <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> the inverse <mark name=\"2\"/> hyperbolic tangent <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> hyperbolic cotangent <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> the inverse <mark name=\"2\"/> hyperbolic cotangent <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> hyperbolic sine <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> hyperbolic sine <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> hyperbolic cosine <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> hyperbolic cosine <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> hyperbolic tangent <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> hyperbolic tangent <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "HypTrig020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"13\"/> the inverse <mark name=\"0\"/> hyperbolic cotangent <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> hyperbolic cotangent <mark name=\"7\"/> of <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    }
+  }
+}

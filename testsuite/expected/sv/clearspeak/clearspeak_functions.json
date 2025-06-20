@@ -1,0 +1,566 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakFunctions",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "Swedish Clearspeak Functions rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [
+    "Function011b",
+    "Function012b",
+    "Function013b",
+    "Function014b",
+    "Function015b",
+    "Function016b",
+    "Function017b",
+    "Function018b",
+    "Function019b",
+    "Function020b",
+    "Function021b",
+    "Function022b",
+    "Function023b",
+    "Function024b",
+    "Function025b",
+    "Function026b",
+    "Function027b",
+    "Function028b",
+    "Function029b",
+    "Function030b",
+    "Function031b",
+    "Function032b",
+    "Function033b",
+    "Function034b",
+    "Function035b",
+    "Function036b",
+    "Function037b",
+    "Function038b",
+    "Function039b",
+    "Function040b",
+    "Function041b",
+    "Function042b",
+    "Function043b",
+    "Function044b",
+    "Function045b",
+    "Function046b",
+    "Function047b",
+    "Function048b",
+    "Function049b",
+    "Function050b",
+    "Function051b",
+    "Function052b",
+    "Function053b",
+    "Function054b",
+    "Function055b",
+    "Function056b",
+    "Function057b",
+    "Function058b",
+    "Function059b",
+    "Function060b",
+    "Function061b",
+    "Function062b",
+    "Function063b",
+    "Function064b",
+    "Function065b",
+    "Function066b",
+    "Function067b",
+    "Function068b",
+    "Function069b",
+    "Function070b",
+    "Function071b",
+    "Function072b",
+    "Function073b",
+    "Function074b",
+    "Function075b",
+    "Function076b",
+    "Function077b",
+    "Function078b",
+    "Function079b"
+  ],
+  "compare": true,
+  "tests": {
+    "Function001": {
+      "expected": "f av x"
+    },
+    "Function002": {
+      "expected": "g av x"
+    },
+    "Function003": {
+      "expected": "h av x"
+    },
+    "Function004": {
+      "expected": "f av 2 x"
+    },
+    "Function005": {
+      "expected": "g av minus 2 x"
+    },
+    "Function006": {
+      "expected": "h av en halv"
+    },
+    "Function007": {
+      "expected": "h av, öppna, 1 delat med 2, stäng"
+    },
+    "Function008": {
+      "expected": "f av, öppna, x plus 1, stäng, är lika med f av x, plus 1"
+    },
+    "Function009": {
+      "expected": "g av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function010": {
+      "expected": "g av, öppna, x kvadrat, stäng"
+    },
+    "Function011": {
+      "expected": "f invers av x"
+    },
+    "Function012": {
+      "expected": "g invers av x"
+    },
+    "Function013": {
+      "expected": "h invers av x"
+    },
+    "Function014": {
+      "expected": "f invers av 2 x"
+    },
+    "Function015": {
+      "expected": "g invers av minus 2 x"
+    },
+    "Function016": {
+      "expected": "f invers av, öppna, 3 x, minus 1, stäng"
+    },
+    "Function017": {
+      "expected": "g invers av, öppna, x kvadrat, stäng"
+    },
+    "Function018": {
+      "expected": "h invers av en halv"
+    },
+    "Function019": {
+      "expected": "h invers av, öppna, 1 delat med 2, stäng"
+    },
+    "Function020": {
+      "expected": "f invers av, f av x"
+    },
+    "Function021": {
+      "expected": "g invers av, g av x"
+    },
+    "Function022": {
+      "expected": "h invers av, h av x"
+    },
+    "Function023": {
+      "expected": "f invers av, f av 2 x"
+    },
+    "Function024": {
+      "expected": "g invers av, g av minus 2 x"
+    },
+    "Function025": {
+      "expected": "h invers av, h av en halv"
+    },
+    "Function026": {
+      "expected": "h invers av, öppna, h av, öppna, 1 delat med 2, stäng, stäng"
+    },
+    "Function027": {
+      "expected": "f invers av, öppna, f av, öppna, x plus 1, stäng, stäng, är lika med x plus 1"
+    },
+    "Function028": {
+      "expected": "g invers av, öppna, g av, öppna, 2 x, plus 1, stäng, stäng"
+    },
+    "Function029": {
+      "expected": "g invers av, öppna, g av, öppna, x kvadrat, stäng, stäng"
+    },
+    "Function030": {
+      "expected": "f av, f invers av x"
+    },
+    "Function031": {
+      "expected": "g av, g invers av x"
+    },
+    "Function032": {
+      "expected": "h av, h invers av x"
+    },
+    "Function033": {
+      "expected": "f av, f invers av 2 x"
+    },
+    "Function034": {
+      "expected": "g av, g invers av minus 2 x"
+    },
+    "Function035": {
+      "expected": "f av, öppna, f invers av, öppna, 3 x, minus 1, stäng, stäng"
+    },
+    "Function036": {
+      "expected": "g av, g invers av, öppna, x kvadrat, stäng"
+    },
+    "Function037": {
+      "expected": "h av, h invers av en halv"
+    },
+    "Function038": {
+      "expected": "h av, h invers av, öppna, bråket 1 delat med 2, stäng"
+    },
+    "Function039": {
+      "expected": "f av, g av x"
+    },
+    "Function040": {
+      "expected": "f av, öppna, g av, öppna, x plus 1, stäng, stäng"
+    },
+    "Function041": {
+      "expected": "h av, g av x"
+    },
+    "Function042": {
+      "expected": "h av, öppna, g av, öppna, bråket med täljare x, och nämnare x plus 1, stäng, stäng"
+    },
+    "Function043": {
+      "expected": "öppna, f plus g, stäng, av x, är lika med f av x, plus g av x"
+    },
+    "Function044": {
+      "expected": "öppna, f plus g, stäng, av, öppna, x plus 1, stäng, är lika med f av, öppna, x plus 1, stäng, plus g av, öppna, x plus 1, stäng"
+    },
+    "Function045": {
+      "expected": "öppna, f punkt g, stäng, av x"
+    },
+    "Function046": {
+      "expected": "öppna, f punkt g, stäng, av, öppna, 2 x, plus 5, stäng"
+    },
+    "Function047": {
+      "expected": "öppna, f delat med g, stäng, av x, är lika med, f av x, delat med g av x"
+    },
+    "Function048": {
+      "expected": "öppna, f delat med g, stäng, av, öppna, 2 x, plus 5, stäng, är lika med, bråket med täljare f av, öppna, 2 x, plus 5, stäng, och nämnare g av, öppna, 2 x, plus 5, stäng"
+    },
+    "Function049": {
+      "expected": "öppna, f och g, stäng, av x, är lika med f av, g av x"
+    },
+    "Function050": {
+      "expected": "2 f av x"
+    },
+    "Function051": {
+      "expected": "c f av x"
+    },
+    "Function052": {
+      "expected": "f kvadrat av x"
+    },
+    "Function053": {
+      "expected": "f kvadrat av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function054": {
+      "expected": "f kubik av x"
+    },
+    "Function055": {
+      "expected": "f kubik av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function056": {
+      "expected": "fjärde upphöjt till, f av x"
+    },
+    "Function057": {
+      "expected": "fjärde upphöjt till, f av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function058": {
+      "expected": "femte upphöjt till, f av x"
+    },
+    "Function059": {
+      "expected": "femte upphöjt till, f av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function060": {
+      "expected": "n upphöjt till, f av x"
+    },
+    "Function061": {
+      "expected": "n upphöjt till, f av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function062": {
+      "expected": "g kvadrat av x"
+    },
+    "Function063": {
+      "expected": "g kvadrat av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function064": {
+      "expected": "h kubik av x"
+    },
+    "Function065": {
+      "expected": "h kubik av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function066": {
+      "expected": "fjärde upphöjt till, g av x"
+    },
+    "Function067": {
+      "expected": "fjärde upphöjt till, g av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function068": {
+      "expected": "femte upphöjt till, h av x"
+    },
+    "Function069": {
+      "expected": "femte upphöjt till, h av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function070": {
+      "expected": "n upphöjt till, g av x"
+    },
+    "Function071": {
+      "expected": "n upphöjt till, g av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function072": {
+      "expected": "f index 1, av x"
+    },
+    "Function073": {
+      "expected": "g index 2, av, öppna, x kubik, stäng"
+    },
+    "Function074": {
+      "expected": "h index n, av, öppna, 3 x, minus 2, stäng"
+    },
+    "Function075": {
+      "expected": "f index 1, invers av x"
+    },
+    "Function076": {
+      "expected": "g index 2, invers av, öppna, 2 x, plus 1, stäng"
+    },
+    "Function077": {
+      "expected": "h index n, invers av x"
+    },
+    "Function078": {
+      "expected": "g index 1, invers av, g index 2, av x"
+    },
+    "Function079": {
+      "expected": "f index 1, av, g index 2, invers av x"
+    },
+    "Function080": {
+      "expected": "f av, öppna, x komma y, stäng"
+    },
+    "Function081": {
+      "expected": "f av, öppna, x komma y komma z, stäng"
+    },
+    "Function082": {
+      "expected": "f av, öppna, x plus 1, komma, 2 y, stäng"
+    },
+    "Function083": {
+      "expected": "f av, öppna, 2 x, komma, x plus 1, komma, x kvadrat, stäng"
+    },
+    "Function084": {
+      "expected": "f gånger x"
+    },
+    "Function085": {
+      "expected": "g gånger x"
+    },
+    "Function086": {
+      "expected": "h gånger x"
+    },
+    "Function087": {
+      "expected": "f gånger 2 x"
+    },
+    "Function088": {
+      "expected": "g gånger minus 2 x"
+    },
+    "Function089": {
+      "expected": "h gånger en halv"
+    },
+    "Function091": {
+      "expected": "f gånger, öppna, x plus 1, stäng, är lika med, f gånger x, plus 1"
+    },
+    "Function092": {
+      "expected": "g gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function093": {
+      "expected": "g gånger, öppna, x kvadrat, stäng"
+    },
+    "Function094": {
+      "expected": "f upphöjt till minus 1, gånger x"
+    },
+    "Function095": {
+      "expected": "g upphöjt till minus 1, gånger x"
+    },
+    "Function096": {
+      "expected": "h upphöjt till minus 1, gånger x"
+    },
+    "Function097": {
+      "expected": "f upphöjt till minus 1, gånger 2 x"
+    },
+    "Function098": {
+      "expected": "g upphöjt till minus 1, gånger minus 2 x"
+    },
+    "Function099": {
+      "expected": "f upphöjt till minus 1, gånger, öppna, 3 x, minus 1, stäng"
+    },
+    "Function100": {
+      "expected": "g upphöjt till minus 1, gånger, öppna, x kvadrat, stäng"
+    },
+    "Function101": {
+      "expected": "h upphöjt till minus 1, gånger en halv"
+    },
+    "Function103": {
+      "expected": "f upphöjt till minus 1, gånger, f gånger x"
+    },
+    "Function104": {
+      "expected": "g upphöjt till minus 1, gånger, g gånger x"
+    },
+    "Function105": {
+      "expected": "h upphöjt till minus 1, gånger, h gånger x"
+    },
+    "Function106": {
+      "expected": "f upphöjt till minus 1, gånger, f gånger 2 x"
+    },
+    "Function107": {
+      "expected": "g upphöjt till minus 1, gånger, g gånger minus 2 x"
+    },
+    "Function108": {
+      "expected": "h upphöjt till minus 1, gånger, h gånger en halv"
+    },
+    "Function110": {
+      "expected": "f upphöjt till minus 1, gånger, öppna, f gånger, öppna, x plus 1, stäng, stäng, är lika med x plus 1"
+    },
+    "Function111": {
+      "expected": "g upphöjt till minus 1, gånger, öppna, g gånger, öppna, 2 x, plus 1, stäng, stäng"
+    },
+    "Function112": {
+      "expected": "g upphöjt till minus 1, gånger, öppna, g gånger, öppna, x kvadrat, stäng, stäng"
+    },
+    "Function113": {
+      "expected": "f gånger, öppna, f upphöjt till minus 1, gånger x, stäng"
+    },
+    "Function114": {
+      "expected": "g gånger, öppna, g upphöjt till minus 1, gånger x, stäng"
+    },
+    "Function115": {
+      "expected": "h gånger, öppna, h upphöjt till minus 1, gånger x, stäng"
+    },
+    "Function116": {
+      "expected": "f gånger, öppna, f upphöjt till minus 1, gånger 2 x, stäng"
+    },
+    "Function117": {
+      "expected": "g gånger, öppna, g upphöjt till minus 1, gånger minus 2 x, stäng"
+    },
+    "Function118": {
+      "expected": "f gånger, öppna, f upphöjt till minus 1, gånger, öppna, 3 x, minus 1, stäng, stäng"
+    },
+    "Function119": {
+      "expected": "g gånger, öppna, g upphöjt till minus 1, gånger, öppna, x kvadrat, stäng, stäng"
+    },
+    "Function120": {
+      "expected": "h gånger, öppna, h upphöjt till minus 1, gånger en halv, stäng"
+    },
+    "Function122": {
+      "expected": "f gånger, g gånger x"
+    },
+    "Function123": {
+      "expected": "f gånger, öppna, g gånger, öppna, x plus 1, stäng, stäng"
+    },
+    "Function124": {
+      "expected": "h gånger, g gånger x"
+    },
+    "Function125": {
+      "expected": "h gånger, öppna, g gånger, öppna, bråket med täljare x, och nämnare x plus 1, stäng, stäng"
+    },
+    "Function126": {
+      "expected": "öppna, f plus g, stäng, gånger x, är lika med, f gånger x, plus, g gånger x"
+    },
+    "Function127": {
+      "expected": "öppna, f plus g, stäng, gånger, öppna, x plus 1, stäng, är lika med, f gånger, öppna, x plus 1, stäng, plus, g gånger, öppna, x plus 1, stäng"
+    },
+    "Function128": {
+      "expected": "öppna, f punkt g, stäng, gånger x"
+    },
+    "Function129": {
+      "expected": "öppna, f punkt g, stäng, gånger, öppna, 2 x, plus 5, stäng"
+    },
+    "Function130": {
+      "expected": "öppna, f delat med g, stäng, gånger x, är lika med, bråket med täljare, f gånger x, och nämnare, g gånger x"
+    },
+    "Function131": {
+      "expected": "öppna, f delat med g, stäng, gånger, öppna, 2 x, plus 5, stäng, är lika med, bråket med täljare, f gånger, öppna, 2 x, plus 5, stäng, och nämnare, g gånger, öppna, 2 x, plus 5, stäng"
+    },
+    "Function132": {
+      "expected": "2, f gånger x"
+    },
+    "Function133": {
+      "expected": "c, f gånger x"
+    },
+    "Function134": {
+      "expected": "f kvadrat gånger x"
+    },
+    "Function135": {
+      "expected": "f kvadrat gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function136": {
+      "expected": "f kubik gånger x"
+    },
+    "Function137": {
+      "expected": "f kubik gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function138": {
+      "expected": "f upphöjt till fjärde, gånger x"
+    },
+    "Function139": {
+      "expected": "f upphöjt till fjärde, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function140": {
+      "expected": "f upphöjt till femte, gånger x"
+    },
+    "Function141": {
+      "expected": "f upphöjt till femte, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function142": {
+      "expected": "f upphöjt till n, gånger x"
+    },
+    "Function143": {
+      "expected": "f upphöjt till n, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function144": {
+      "expected": "g kvadrat gånger x"
+    },
+    "Function145": {
+      "expected": "g kvadrat gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function146": {
+      "expected": "h kubik gånger x"
+    },
+    "Function147": {
+      "expected": "h kubik gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function148": {
+      "expected": "g upphöjt till fjärde, gånger x"
+    },
+    "Function149": {
+      "expected": "g upphöjt till fjärde, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function150": {
+      "expected": "h upphöjt till femte, gånger x"
+    },
+    "Function151": {
+      "expected": "h upphöjt till femte, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function152": {
+      "expected": "g upphöjt till n, gånger x"
+    },
+    "Function153": {
+      "expected": "g upphöjt till n, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function154": {
+      "expected": "f index 1, gånger x"
+    },
+    "Function156": {
+      "expected": "g index 2, gånger, öppna, x kubik, stäng"
+    },
+    "Function157": {
+      "expected": "h index n, gånger, öppna, 3 x, minus 2, stäng"
+    },
+    "Function158": {
+      "expected": "f index 1, upphöjt till minus 1, gånger x"
+    },
+    "Function159": {
+      "expected": "g index 2, upphöjt till minus 1, gånger, öppna, 2 x, plus 1, stäng"
+    },
+    "Function160": {
+      "expected": "h index n, upphöjt till minus 1, gånger x"
+    },
+    "Function161": {
+      "expected": "g index 1, upphöjt till minus 1, gånger, öppna, g index 2, gånger x, stäng"
+    },
+    "Function162": {
+      "expected": "f index 1, gånger, öppna, g index 2, upphöjt till minus 1, gånger x, stäng"
+    },
+    "Function163": {
+      "expected": "f gånger, öppna, x komma y, stäng"
+    },
+    "Function164": {
+      "expected": "f gånger, öppna, x komma y komma z, stäng"
+    },
+    "Function165": {
+      "expected": "f gånger, öppna, x plus 1, komma, 2 y, stäng"
+    },
+    "Function166": {
+      "expected": "f gånger, öppna, 2 x, komma, x plus 1, komma, x kvadrat, stäng"
+    }
+  }
+}

@@ -1,0 +1,643 @@
+{
+  "locale": "ko",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Korean Ordinal word tests.",
+  "kind": "wordOrdinal",
+  "active": "NumbersKorean",
+  "tests": {
+    "Number_0": {
+      "expected": "영"
+    },
+    "Number_1": {
+      "expected": "한"
+    },
+    "Number_2": {
+      "expected": "두"
+    },
+    "Number_3": {
+      "expected": "세"
+    },
+    "Number_4": {
+      "expected": "네"
+    },
+    "Number_5": {
+      "expected": "다섯"
+    },
+    "Number_6": {
+      "expected": "여섯"
+    },
+    "Number_7": {
+      "expected": "일곱"
+    },
+    "Number_8": {
+      "expected": "여덟"
+    },
+    "Number_9": {
+      "expected": "아홉"
+    },
+    "Number_10": {
+      "expected": "열"
+    },
+    "Number_11": {
+      "expected": "열한"
+    },
+    "Number_12": {
+      "expected": "열두"
+    },
+    "Number_13": {
+      "expected": "열세"
+    },
+    "Number_14": {
+      "expected": "열네"
+    },
+    "Number_15": {
+      "expected": "열다섯"
+    },
+    "Number_16": {
+      "expected": "열여섯"
+    },
+    "Number_17": {
+      "expected": "열일곱"
+    },
+    "Number_18": {
+      "expected": "열여덟"
+    },
+    "Number_19": {
+      "expected": "열아홉"
+    },
+    "Number_20": {
+      "expected": "스무"
+    },
+    "Number_21": {
+      "expected": "스물한"
+    },
+    "Number_22": {
+      "expected": "스물두"
+    },
+    "Number_23": {
+      "expected": "스물세"
+    },
+    "Number_24": {
+      "expected": "스물네"
+    },
+    "Number_25": {
+      "expected": "스물다섯"
+    },
+    "Number_26": {
+      "expected": "스물여섯"
+    },
+    "Number_27": {
+      "expected": "스물일곱"
+    },
+    "Number_28": {
+      "expected": "스물여덟"
+    },
+    "Number_29": {
+      "expected": "스물아홉"
+    },
+    "Number_30": {
+      "expected": "서른"
+    },
+    "Number_31": {
+      "expected": "서른한"
+    },
+    "Number_32": {
+      "expected": "서른두"
+    },
+    "Number_33": {
+      "expected": "서른세"
+    },
+    "Number_34": {
+      "expected": "서른네"
+    },
+    "Number_35": {
+      "expected": "서른다섯"
+    },
+    "Number_36": {
+      "expected": "서른여섯"
+    },
+    "Number_37": {
+      "expected": "서른일곱"
+    },
+    "Number_38": {
+      "expected": "서른여덟"
+    },
+    "Number_39": {
+      "expected": "서른아홉"
+    },
+    "Number_40": {
+      "expected": "마흔"
+    },
+    "Number_41": {
+      "expected": "마흔한"
+    },
+    "Number_42": {
+      "expected": "마흔두"
+    },
+    "Number_43": {
+      "expected": "마흔세"
+    },
+    "Number_44": {
+      "expected": "마흔네"
+    },
+    "Number_45": {
+      "expected": "마흔다섯"
+    },
+    "Number_46": {
+      "expected": "마흔여섯"
+    },
+    "Number_47": {
+      "expected": "마흔일곱"
+    },
+    "Number_48": {
+      "expected": "마흔여덟"
+    },
+    "Number_49": {
+      "expected": "마흔아홉"
+    },
+    "Number_50": {
+      "expected": "쉰"
+    },
+    "Number_51": {
+      "expected": "쉰한"
+    },
+    "Number_52": {
+      "expected": "쉰두"
+    },
+    "Number_53": {
+      "expected": "쉰세"
+    },
+    "Number_54": {
+      "expected": "쉰네"
+    },
+    "Number_55": {
+      "expected": "쉰다섯"
+    },
+    "Number_56": {
+      "expected": "쉰여섯"
+    },
+    "Number_57": {
+      "expected": "쉰일곱"
+    },
+    "Number_58": {
+      "expected": "쉰여덟"
+    },
+    "Number_59": {
+      "expected": "쉰아홉"
+    },
+    "Number_60": {
+      "expected": "예순"
+    },
+    "Number_61": {
+      "expected": "예순한"
+    },
+    "Number_62": {
+      "expected": "예순두"
+    },
+    "Number_63": {
+      "expected": "예순세"
+    },
+    "Number_64": {
+      "expected": "예순네"
+    },
+    "Number_65": {
+      "expected": "예순다섯"
+    },
+    "Number_66": {
+      "expected": "예순여섯"
+    },
+    "Number_67": {
+      "expected": "예순일곱"
+    },
+    "Number_68": {
+      "expected": "예순여덟"
+    },
+    "Number_69": {
+      "expected": "예순아홉"
+    },
+    "Number_70": {
+      "expected": "일흔"
+    },
+    "Number_71": {
+      "expected": "일흔한"
+    },
+    "Number_72": {
+      "expected": "일흔두"
+    },
+    "Number_73": {
+      "expected": "일흔세"
+    },
+    "Number_74": {
+      "expected": "일흔네"
+    },
+    "Number_75": {
+      "expected": "일흔다섯"
+    },
+    "Number_76": {
+      "expected": "일흔여섯"
+    },
+    "Number_77": {
+      "expected": "일흔일곱"
+    },
+    "Number_78": {
+      "expected": "일흔여덟"
+    },
+    "Number_79": {
+      "expected": "일흔아홉"
+    },
+    "Number_80": {
+      "expected": "여든"
+    },
+    "Number_81": {
+      "expected": "여든한"
+    },
+    "Number_82": {
+      "expected": "여든두"
+    },
+    "Number_83": {
+      "expected": "여든세"
+    },
+    "Number_84": {
+      "expected": "여든네"
+    },
+    "Number_85": {
+      "expected": "여든다섯"
+    },
+    "Number_86": {
+      "expected": "여든여섯"
+    },
+    "Number_87": {
+      "expected": "여든일곱"
+    },
+    "Number_88": {
+      "expected": "여든여덟"
+    },
+    "Number_89": {
+      "expected": "여든아홉"
+    },
+    "Number_90": {
+      "expected": "아흔"
+    },
+    "Number_91": {
+      "expected": "아흔한"
+    },
+    "Number_92": {
+      "expected": "아흔두"
+    },
+    "Number_93": {
+      "expected": "아흔세"
+    },
+    "Number_94": {
+      "expected": "아흔네"
+    },
+    "Number_95": {
+      "expected": "아흔다섯"
+    },
+    "Number_96": {
+      "expected": "아흔여섯"
+    },
+    "Number_97": {
+      "expected": "아흔일곱"
+    },
+    "Number_98": {
+      "expected": "아흔여덟"
+    },
+    "Number_99": {
+      "expected": "아흔아홉"
+    },
+    "Number_100": {
+      "expected": "백"
+    },
+    "Number_101": {
+      "expected": "백한"
+    },
+    "Number_102": {
+      "expected": "백두"
+    },
+    "Number_103": {
+      "expected": "백세"
+    },
+    "Number_104": {
+      "expected": "백네"
+    },
+    "Number_105": {
+      "expected": "백다섯"
+    },
+    "Number_106": {
+      "expected": "백여섯"
+    },
+    "Number_107": {
+      "expected": "백일곱"
+    },
+    "Number_108": {
+      "expected": "백여덟"
+    },
+    "Number_109": {
+      "expected": "백아홉"
+    },
+    "Number_110": {
+      "expected": "백열"
+    },
+    "Number_200": {
+      "expected": "이백"
+    },
+    "Number_201": {
+      "expected": "이백한"
+    },
+    "Number_300": {
+      "expected": "삼백"
+    },
+    "Number_301": {
+      "expected": "삼백한"
+    },
+    "Number_400": {
+      "expected": "사백"
+    },
+    "Number_401": {
+      "expected": "사백한"
+    },
+    "Number_500": {
+      "expected": "오백"
+    },
+    "Number_501": {
+      "expected": "오백한"
+    },
+    "Number_600": {
+      "expected": "육백"
+    },
+    "Number_601": {
+      "expected": "육백한"
+    },
+    "Number_700": {
+      "expected": "칠백"
+    },
+    "Number_701": {
+      "expected": "칠백한"
+    },
+    "Number_800": {
+      "expected": "팔백"
+    },
+    "Number_801": {
+      "expected": "팔백한"
+    },
+    "Number_900": {
+      "expected": "구백"
+    },
+    "Number_901": {
+      "expected": "구백한"
+    },
+    "Number_1000": {
+      "expected": "천"
+    },
+    "Number_1001": {
+      "expected": "천한"
+    },
+    "Number_2000": {
+      "expected": "이천"
+    },
+    "Number_2001": {
+      "expected": "이천한"
+    },
+    "Number_3000": {
+      "expected": "삼천"
+    },
+    "Number_3001": {
+      "expected": "삼천한"
+    },
+    "Number_4000": {
+      "expected": "사천"
+    },
+    "Number_4001": {
+      "expected": "사천한"
+    },
+    "Number_5000": {
+      "expected": "오천"
+    },
+    "Number_5001": {
+      "expected": "오천한"
+    },
+    "Number_6000": {
+      "expected": "육천"
+    },
+    "Number_6001": {
+      "expected": "육천한"
+    },
+    "Number_7000": {
+      "expected": "칠천"
+    },
+    "Number_7001": {
+      "expected": "칠천한"
+    },
+    "Number_8000": {
+      "expected": "팔천"
+    },
+    "Number_8001": {
+      "expected": "팔천한"
+    },
+    "Number_9000": {
+      "expected": "구천"
+    },
+    "Number_9001": {
+      "expected": "구천한"
+    },
+    "Number_10000": {
+      "expected": "일만"
+    },
+    "Number_10001": {
+      "expected": "일만 한"
+    },
+    "Number_20000": {
+      "expected": "이만"
+    },
+    "Number_20001": {
+      "expected": "이만 한"
+    },
+    "Number_30000": {
+      "expected": "삼만"
+    },
+    "Number_30001": {
+      "expected": "삼만 한"
+    },
+    "Number_40000": {
+      "expected": "사만"
+    },
+    "Number_40001": {
+      "expected": "사만 한"
+    },
+    "Number_50000": {
+      "expected": "오만"
+    },
+    "Number_50001": {
+      "expected": "오만 한"
+    },
+    "Number_60000": {
+      "expected": "육만"
+    },
+    "Number_60001": {
+      "expected": "육만 한"
+    },
+    "Number_70000": {
+      "expected": "칠만"
+    },
+    "Number_70001": {
+      "expected": "칠만 한"
+    },
+    "Number_80000": {
+      "expected": "팔만"
+    },
+    "Number_80001": {
+      "expected": "팔만 한"
+    },
+    "Number_90000": {
+      "expected": "구만"
+    },
+    "Number_90001": {
+      "expected": "구만 한"
+    },
+    "Number_100000": {
+      "expected": "십만"
+    },
+    "Number_1000000": {
+      "expected": "백만"
+    },
+    "Number_10000000": {
+      "expected": "천만"
+    },
+    "Number_100000000": {
+      "expected": "일억"
+    },
+    "Number_1000000000": {
+      "expected": "십억"
+    },
+    "Number_10000000000": {
+      "expected": "백억"
+    },
+    "Number_100000000000": {
+      "expected": "천억"
+    },
+    "Number_1000000000000": {
+      "expected": "일조"
+    },
+    "Number_10000000000000": {
+      "expected": "십조"
+    },
+    "Number_100000000000000": {
+      "expected": "백조"
+    },
+    "Number_1000000000000000": {
+      "expected": "천조"
+    },
+    "Number_10000000000000000": {
+      "expected": "일경"
+    },
+    "Number_100001": {
+      "expected": "십만 한"
+    },
+    "Number_200000": {
+      "expected": "이십만"
+    },
+    "Number_200001": {
+      "expected": "이십만 한"
+    },
+    "Number_1000001": {
+      "expected": "백만 한"
+    },
+    "Number_2000000": {
+      "expected": "이백만"
+    },
+    "Number_2000001": {
+      "expected": "이백만 한"
+    },
+    "Number_10000001": {
+      "expected": "천만 한"
+    },
+    "Number_20000000": {
+      "expected": "이천만"
+    },
+    "Number_20000001": {
+      "expected": "이천만 한"
+    },
+    "Number_100000001": {
+      "expected": "일억 한"
+    },
+    "Number_200000000": {
+      "expected": "이억"
+    },
+    "Number_200000001": {
+      "expected": "이억 한"
+    },
+    "Number_1000000001": {
+      "expected": "십억 한"
+    },
+    "Number_2000000000": {
+      "expected": "이십억"
+    },
+    "Number_2000000001": {
+      "expected": "이십억 한"
+    },
+    "Number_10000000001": {
+      "expected": "백억 한"
+    },
+    "Number_20000000000": {
+      "expected": "이백억"
+    },
+    "Number_20000000001": {
+      "expected": "이백억 한"
+    },
+    "Number_100000000001": {
+      "expected": "천억 한"
+    },
+    "Number_200000000000": {
+      "expected": "이천억"
+    },
+    "Number_200000000001": {
+      "expected": "이천억 한"
+    },
+    "Number_1000000000001": {
+      "expected": "일조 한"
+    },
+    "Number_2000000000000": {
+      "expected": "이조"
+    },
+    "Number_2000000000001": {
+      "expected": "이조 한"
+    },
+    "Number_10000000000001": {
+      "expected": "십조 한"
+    },
+    "Number_20000000000000": {
+      "expected": "이십조"
+    },
+    "Number_20000000000001": {
+      "expected": "이십조 한"
+    },
+    "Number_100000000000001": {
+      "expected": "백조 한"
+    },
+    "Number_200000000000000": {
+      "expected": "이백조"
+    },
+    "Number_200000000000001": {
+      "expected": "이백조 한"
+    },
+    "Number_1000000000000001": {
+      "expected": "천조 한"
+    },
+    "Number_2000000000000000": {
+      "expected": "이천조"
+    },
+    "Number_2000000000000001": {
+      "expected": "이천조 한"
+    },
+    "Number_10000000000000001": {
+      "expected": "일경"
+    },
+    "Number_20000000000000000": {
+      "expected": "이경"
+    },
+    "Number_20000000000000001": {
+      "expected": "이경"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "AfrikaansMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "af",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Afrikaans Mathspeak Inference rules.",
+  "active": "InferenceAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NoLabel_0": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "NoLabel_1": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "Premise_0": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "Premise_1": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "Axiom": {
+      "expected": "aksioom hoofletter A"
+    },
+    "EmptyAxiom": {
+      "expected": "leë aksioom"
+    },
+    "RightLabel_0": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "RightLabel_1": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 2 uitgangspunte"
+    },
+    "RightLabel_2": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 3 uitgangspunte"
+    },
+    "LeftLabel_0": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "LeftLabel_1": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 2 uitgangspunte"
+    },
+    "LeftLabel_2": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 3 uitgangspunte"
+    },
+    "Premises_0": {
+      "expected": "1. uitgangspunt  aksioom hoofletter A"
+    },
+    "Premises_1": {
+      "expected": "1. uitgangspunt  aksioom hoofletter A 2. uitgangspunt  aksioom hoofletter B"
+    },
+    "Premises_2": {
+      "expected": "1. uitgangspunt  aksioom hoofletter A 2. uitgangspunt  aksioom hoofletter B 3. uitgangspunt  aksioom hoofletter C"
+    }
+  }
+}

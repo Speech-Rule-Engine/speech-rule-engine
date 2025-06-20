@@ -1,0 +1,516 @@
+{
+  "tests": {
+    "_comment0_": "Mengen und deren Verknüpfungen",
+    "Mengen_0": {
+      "tex": "\\{ 1, 2, 3, 4 \\}",
+      "speech": "Mengenklammer auf, 1, 2, 3, 4, Mengenklammer zu",
+      "code": "\\{ 1, 2, 3, 4 \\}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\{ 1, 2, 3, 4 \\}\" display=\"block\"><mo fence=\"false\" stretchy=\"false\" data-latex=\"\\{\">{</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"2\">2</mn><mo data-latex=\",\">,</mo><mn data-latex=\"3\">3</mn><mo data-latex=\",\">,</mo><mn data-latex=\"4\">4</mn><mo fence=\"false\" stretchy=\"false\" data-latex=\"\\}\">}</mo></math>"
+    },
+    "Mengen_1": {
+      "tex": "P = { x | x ist Primzahl }",
+      "speech": "groß P ist Menge der Elemente klein x, für die gilt: x ist Primzahl",
+      "code": "P = \\{x|x ist Primzahl \\}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"P = { x | x ist Primzahl }\" display=\"block\"><mi data-latex=\"P\">P</mi><mo data-latex=\"=\">=</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{x|x i s t P r i m z a h l}\"><mi data-latex=\"x\">x</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mi data-latex=\"x\">x</mi><mi data-latex=\"i\">i</mi><mi data-latex=\"s\">s</mi><mi data-latex=\"t\">t</mi><mi data-latex=\"P\">P</mi><mi data-latex=\"r\">r</mi><mi data-latex=\"i\">i</mi><mi data-latex=\"m\">m</mi><mi data-latex=\"z\">z</mi><mi data-latex=\"a\">a</mi><mi data-latex=\"h\">h</mi><mi data-latex=\"l\">l</mi></mrow></math>"
+    },
+    "Mengen_2": {
+      "tex": "3 \\in P",
+      "speech": "3 ist Element der Menge P",
+      "code": "3 \\in P",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"3 \\in P\" display=\"block\"><mn data-latex=\"3\">3</mn><mo data-latex=\"\\in\">&#x2208;</mo><mi data-latex=\"P\">P</mi></math>"
+    },
+    "Mengen_3": {
+      "tex": "4 \\notin P",
+      "speech": "4 ist nicht Element von P",
+      "code": "4 \\notin P",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"4 \\notin P\" display=\"block\"><mn data-latex=\"4\">4</mn><mo data-latex=\"\\notin\">&#x2209;</mo><mi data-latex=\"P\">P</mi></math>"
+    },
+    "Mengen_4": {
+      "tex": "A \\subset B",
+      "speech": "Menge A ist echt in Menge B enthalten",
+      "code": "A \\subset B",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"A \\subset B\" display=\"block\"><mi data-latex=\"A\">A</mi><mo data-latex=\"\\subset\">&#x2282;</mo><mi data-latex=\"B\">B</mi></math>"
+    },
+    "Mengen_5": {
+      "tex": "A \\subseteq B",
+      "speech": "Menge A ist in Menge B enthalten oder ist gleich der Menge B",
+      "code": "A \\subseteq B",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"A \\subseteq B\" display=\"block\"><mi data-latex=\"A\">A</mi><mo data-latex=\"\\subseteq\">&#x2286;</mo><mi data-latex=\"B\">B</mi></math>"
+    },
+    "Mengen_6": {
+      "tex": "A \\cup B",
+      "speech": "Vereinigung der Mengen A und B",
+      "code": "A \\cup B",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"A \\cup B\" display=\"block\"><mi data-latex=\"A\">A</mi><mo data-latex=\"\\cup\">&#x222A;</mo><mi data-latex=\"B\">B</mi></math>"
+    },
+    "Mengen_7": {
+      "tex": "A \\cap B",
+      "speech": "Durchschnitt der Mengen A und B",
+      "code": "A \\cap B",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"A \\cap B\" display=\"block\"><mi data-latex=\"A\">A</mi><mo data-latex=\"\\cap\">&#x2229;</mo><mi data-latex=\"B\">B</mi></math>"
+    },
+    "Mengen_8": {
+      "tex": "A \\backslash B",
+      "speech": "Menge A ohne die Menge B",
+      "code": "A \\backslash B",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"A \\backslash B\" display=\"block\"><mi data-latex=\"A\">A</mi><mi mathvariant=\"normal\" data-latex=\"\\backslash\">&#x2216;</mi><mi data-latex=\"B\">B</mi></math>"
+    },
+    "Mengen_9": {
+      "tex": "\\{ \\}",
+      "speech": "leere Menge als leere Mengenklammern bzw. als Symbol",
+      "code": "\\{ \\} bzw. \\emptyset",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\{ \\}\" display=\"block\"><mo fence=\"false\" stretchy=\"false\" data-latex=\"\\{\">{</mo><mo fence=\"false\" stretchy=\"false\" data-latex=\"\\}\">}</mo></math>"
+    },
+    "Mengen_10": {
+      "tex": "\\overline{A}",
+      "speech": "Menge A quer",
+      "code": "\\overline{A}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\overline{A}\" display=\"block\"><mover data-latex=\"\\overline{A}\"><mi data-latex=\"A\">A</mi><mo accent=\"true\">&#x2015;</mo></mover></math>"
+    },
+    "_comment1_": "Spezielle Zahlenmengen  1)",
+    "Spezielle_0": {
+      "tex": "\\mathbb N",
+      "speech": "Menge der natürlichen Zahlen",
+      "code": "\\N",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbb N\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb N\"><mi mathvariant=\"double-struck\" data-latex=\"N\">N</mi></mrow></math>"
+    },
+    "Spezielle_1": {
+      "tex": "\\mathbb Z",
+      "speech": "Menge der ganzen Zahlen",
+      "code": "\\Z",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbb Z\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb Z\"><mi mathvariant=\"double-struck\" data-latex=\"Z\">Z</mi></mrow></math>"
+    },
+    "Spezielle_2": {
+      "tex": "\\mathbb Z_0^-",
+      "speech": "Menge der negativen ganzen Zahlen einschließlich der Zahl 0",
+      "code": "\\Z_0^-",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbb Z_0^-\" display=\"block\"><msubsup data-latex=\"\\mathbb Z_0 ^-\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb Z\"><mi mathvariant=\"double-struck\" data-latex=\"Z\">Z</mi></mrow><mn data-latex=\"0\">0</mn><mo data-latex=\"-\">&#x2212;</mo></msubsup></math>"
+    },
+    "Spezielle_3": {
+      "tex": "\\mathbb Q",
+      "speech": "Menge der rationalen Zahlen",
+      "code": "\\Q",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbb Q\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb Q\"><mi mathvariant=\"double-struck\" data-latex=\"Q\">Q</mi></mrow></math>"
+    },
+    "Spezielle_4": {
+      "tex": "\\mathbb R",
+      "speech": "Menge der reellen Zahlen",
+      "code": "\\R",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathbb R\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb R\"><mi mathvariant=\"double-struck\" data-latex=\"R\">R</mi></mrow></math>"
+    },
+    "Spezielle_5": {
+      "tex": "\\mathcal P",
+      "speech": "Potenzmenge P",
+      "code": "\\mathcal P",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\mathcal P\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathcal P\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\" data-latex=\"P\">P</mi></mrow></math>"
+    },
+    "Spezielle_0a": {
+      "tex": "\\N",
+      "speech": "Menge der natürlichen Zahlen",
+      "code": "\\mathbb N",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\N\" display=\"block\"><mtext mathcolor=\"red\" data-latex=\"\\N\">\\N</mtext></math>"
+    },
+    "Spezielle_1a": {
+      "tex": "\\Z",
+      "speech": "Menge der ganzen Zahlen",
+      "code": "\\mathbb Z",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\Z\" display=\"block\"><mtext mathcolor=\"red\" data-latex=\"\\Z\">\\Z</mtext></math>"
+    },
+    "Spezielle_2a": {
+      "tex": "\\Z_0^-",
+      "speech": "Menge der negativen ganzen Zahlen einschließlich der Zahl 0",
+      "code": "\\mathbb Z_0^-",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\Z_0^-\" display=\"block\"><msubsup data-latex=\"\\Z_0 ^-\"><mtext mathcolor=\"red\" data-latex=\"\\Z\">\\Z</mtext><mn data-latex=\"0\">0</mn><mo data-latex=\"-\">&#x2212;</mo></msubsup></math>"
+    },
+    "Spezielle_3a": {
+      "tex": "\\Q",
+      "speech": "Menge der rationalen Zahlen",
+      "code": "\\mathbb Q",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\Q\" display=\"block\"><mtext mathcolor=\"red\" data-latex=\"\\Q\">\\Q</mtext></math>"
+    },
+    "Spezielle_4a": {
+      "tex": "\\R",
+      "speech": "Menge der reellen Zahlen",
+      "code": "\\mathbb R",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\R\" display=\"block\"><mtext mathcolor=\"red\" data-latex=\"\\R\">\\R</mtext></math>"
+    },
+    "_comment2_": "Verknüpfungen von Zahlen",
+    "Verknüpfungen_0": {
+      "tex": "2+4 =7",
+      "speech": "3 plus 4 ist gleich 7",
+      "code": "2 +4 = 7",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"2+4 =7\" display=\"block\"><mn data-latex=\"2\">2</mn><mo data-latex=\"+\">+</mo><mn data-latex=\"4\">4</mn><mo data-latex=\"=\">=</mo><mn data-latex=\"7\">7</mn></math>"
+    },
+    "Verknüpfungen_1": {
+      "tex": " 9-3 \\not= 5",
+      "speech": "9 minus 3 ist ungleich 5",
+      "code": "9 -3 \\not= 5",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\" 9-3 \\not= 5\" display=\"block\"><mn data-latex=\"9\">9</mn><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"3\">3</mn><mo data-latex=\"=\">&#x2260;</mo><mn data-latex=\"5\">5</mn></math>"
+    },
+    "Verknüpfungen_1a": {
+      "tex": " 9-3 \\neq 5",
+      "speech": "9 minus 3 ist ungleich 5",
+      "code": "9 -3 \\neq 5",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\" 9-3 \\neq 5\" display=\"block\"><mn data-latex=\"9\">9</mn><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"3\">3</mn><mo data-latex=\"\\neq\">&#x2260;</mo><mn data-latex=\"5\">5</mn></math>"
+    },
+    "Verknüpfungen_2": {
+      "tex": "x \\pm 3",
+      "speech": "x plus minus drei",
+      "code": " x \\pm 3",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\pm 3\" display=\"block\"><mi data-latex=\"x\">x</mi><mo data-latex=\"\\pm\">&#xB1;</mo><mn data-latex=\"3\">3</mn></math>"
+    },
+    "Verknüpfungen_3": {
+      "tex": "2*8 \\gt 15",
+      "speech": "2 mal 8 ist echt größer als 15",
+      "code": "2*8 \\gt  15",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"2*8 \\gt 15\" display=\"block\"><mn data-latex=\"2\">2</mn><mo data-latex=\"*\">&#x2217;</mo><mn data-latex=\"8\">8</mn><mo data-latex=\"\\gt\">&gt;</mo><mn data-latex=\"5\">15</mn></math>"
+    },
+    "Verknüpfungen_4": {
+      "tex": "8:4 \\lt 5",
+      "speech": "8 geteilt durch 4 ist echt kleiner als 5",
+      "code": "8: 4 \\lt  5",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"8:4 \\lt 5\" display=\"block\"><mn data-latex=\"8\">8</mn><mo data-latex=\":\">:</mo><mn data-latex=\"4\">4</mn><mo data-latex=\"\\lt\">&lt;</mo><mn data-latex=\"5\">5</mn></math>"
+    },
+    "Verknüpfungen_5": {
+      "tex": "x \\le 10",
+      "speech": "x ist kleiner oder gleich 10",
+      "code": "x \\le 10",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\le 10\" display=\"block\"><mi data-latex=\"x\">x</mi><mo data-latex=\"\\le\">&#x2264;</mo><mn data-latex=\"0\">10</mn></math>"
+    },
+    "Verknüpfungen_6": {
+      "tex": "a \\ge b",
+      "speech": "a ist größer oder gleich b",
+      "code": "a \\ge b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a \\ge b\" display=\"block\"><mi data-latex=\"a\">a</mi><mo data-latex=\"\\ge\">&#x2265;</mo><mi data-latex=\"b\">b</mi></math>"
+    },
+    "Verknüpfungen_7": {
+      "tex": ">>",
+      "speech": "viel größer als",
+      "code": "\\gg",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"&gt;&gt;\" display=\"block\"><mo data-latex=\"&gt;\">&gt;&gt;</mo></math>"
+    },
+    "Verknüpfungen_8": {
+      "tex": "<<",
+      "speech": "viel kleiner als",
+      "code": "\\ll",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"&lt;&lt;\" display=\"block\"><mo data-latex=\"&lt;\">&lt;&lt;</mo></math>"
+    },
+    "Verknüpfungen_9": {
+      "tex": "\\pi \\approx 3,14",
+      "speech": "Die Zahl pi ist ungefähr gleich 3,14",
+      "code": "\\pi \\approx 3,14",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\pi \\approx 3,14\" display=\"block\"><mi data-latex=\"\\pi\">&#x3C0;</mi><mo data-latex=\"\\approx\">&#x2248;</mo><mn data-latex=\"3\">3</mn><mo data-latex=\",\">,</mo><mn data-latex=\"4\">14</mn></math>"
+    },
+    "Verknüpfungen_10": {
+      "tex": "(a +b)^2",
+      "speech": "runde Klammer auf, a plus b, runde Klammer zu, hoch 2",
+      "code": "(a +b)^2",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"(a +b)^2\" display=\"block\"><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\"+\">+</mo><mi data-latex=\"b\">b</mi><msup data-latex=\")^2\"><mo data-latex=\")\" stretchy=\"false\">)</mo><mn data-latex=\"2\">2</mn></msup></math>"
+    },
+    "Verknüpfungen_11": {
+      "tex": "[x -y]^3",
+      "speech": "eckige Klammer auf, x minus y, eckige Klammer zu, hoch 3",
+      "code": "[x -y]^3",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"[x -y]^3\" display=\"block\"><mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"-\">&#x2212;</mo><mi data-latex=\"y\">y</mi><msup data-latex=\"]^3\"><mo data-latex=\"]\" stretchy=\"false\">]</mo><mn data-latex=\"3\">3</mn></msup></math>"
+    },
+    "Verknüpfungen_12": {
+      "tex": "s \\sim t",
+      "speech": "s ist proportional zu t (das Zeichen bedeutet auch \"ähnlich\" (similar))",
+      "code": "s \\sim t",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"s \\sim t\" display=\"block\"><mi data-latex=\"s\">s</mi><mo data-latex=\"\\sim\">&#x223C;</mo><mi data-latex=\"t\">t</mi></math>"
+    },
+    "Verknüpfungen_13": {
+      "tex": "a \\hat{=} b",
+      "speech": "a entspricht b",
+      "code": "a \\hat{=} b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a \\hat{=} b\" display=\"block\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\hat{=}\"><mover><mo data-latex=\"=\">=</mo><mo stretchy=\"false\">^</mo></mover></mrow><mi data-latex=\"b\">b</mi></math>"
+    },
+    "Verknüpfungen_14": {
+      "tex": "7|28",
+      "speech": "7 teilt die Zahl 28",
+      "code": "7 | 28",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"7|28\" display=\"block\"><mn data-latex=\"7\">7</mn><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mn data-latex=\"8\">28</mn></math>"
+    },
+    "_comment3_": "Verknüpfungen von Aussagen",
+    "Aussagen_0": {
+      "tex": "x \\in \\N \\wedge x \\lt  3",
+      "speech": "x ist Element von N und x ist echt kleiner 3",
+      "code": "x \\in \\N \\wedge x < 3",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\in \\N \\wedge x \\lt  3\" display=\"block\"><mi data-latex=\"x\">x</mi><mo data-latex=\"\\in\">&#x2208;</mo><mtext mathcolor=\"red\" data-latex=\"\\N\">\\N</mtext><mo data-latex=\"\\wedge\">&#x2227;</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"\\lt\">&lt;</mo><mn data-latex=\"3\">3</mn></math>"
+    },
+    "Aussagen_1": {
+      "tex": "A \\Rightarrow B",
+      "speech": "Aus A folgt B (\"Wer A sagt, muss auch B sagen.\")",
+      "code": "A \\Rightarrow B",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"A \\Rightarrow B\" display=\"block\"><mi data-latex=\"A\">A</mi><mo stretchy=\"false\" data-latex=\"\\Rightarrow\">&#x21D2;</mo><mi data-latex=\"B\">B</mi></math>"
+    },
+    "Aussagen_2": {
+      "tex": "x \\to \\infty",
+      "speech": "x geht gegen unendlich",
+      "code": "x \\to \\infty",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x \\to \\infty\" display=\"block\"><mi data-latex=\"x\">x</mi><mo accent=\"false\" stretchy=\"false\" data-latex=\"\\to\">&#x2192;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi></math>"
+    },
+    "Aussagen_3": {
+      "tex": "x =1 \\vee x =2",
+      "speech": "x = 1 oder x = 2",
+      "code": "x =1 \\vee x =2",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"x =1 \\vee x =2\" display=\"block\"><mi data-latex=\"x\">x</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"\\vee\">&#x2228;</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"2\">2</mn></math>"
+    },
+    "Aussagen_4": {
+      "tex": "3x =12 \\Leftrightarrow x =4",
+      "speech": "3x = 12 ist äquivalent zu x = 4",
+      "code": "3x =12 \\Leftrightarrow x =4",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"3x =12 \\Leftrightarrow x =4\" display=\"block\"><mn data-latex=\"3\">3</mn><mi data-latex=\"x\">x</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"2\">12</mn><mo stretchy=\"false\" data-latex=\"\\Leftrightarrow\">&#x21D4;</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"4\">4</mn></math>"
+    },
+    "_comment4_": "Brüche  2) und Dezimalzahlen",
+    "Brüche_0": {
+      "tex": "\\frac{2}{3}",
+      "speech": "zwei Drittel bzw. Bruchanfang, 2 durch 3, Bruchende",
+      "code": "2/3  bzw.  \\frac{2}{3}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\frac{2}{3}\" display=\"block\"><mfrac data-latex=\"\\frac{2}{3}\"><mn data-latex=\"2\">2</mn><mn data-latex=\"3\">3</mn></mfrac></math>"
+    },
+    "Brüche_1": {
+      "tex": "4\\frac{3}{5}",
+      "speech": "vier Dreifünftel bzw. 4 Bruchanfang, 3 durch 5, Bruchende",
+      "code": "4 \\frac{3}{5}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"4\\frac{3}{5}\" display=\"block\"><mn data-latex=\"4\">4</mn><mfrac data-latex=\"\\frac{3}{5}\"><mn data-latex=\"3\">3</mn><mn data-latex=\"5\">5</mn></mfrac></math>"
+    },
+    "Brüche_2": {
+      "tex": "\\frac{1}{x}",
+      "speech": "1 durch x bzw. Bruchanfang, 1 durch x, Bruchende",
+      "code": "\\frac{1}{x}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\frac{1}{x}\" display=\"block\"><mfrac data-latex=\"\\frac{1}{x}\"><mn data-latex=\"1\">1</mn><mi data-latex=\"x\">x</mi></mfrac></math>"
+    },
+    "Brüche_3": {
+      "tex": "\\frac{1}{x +2} \\not= \\frac{1}{x} +2",
+      "speech": "Bruchanfang 1 durch x plus 2 Bruchende ist ungleich Bruchanfang 1 durch x Bruchende plus 2",
+      "code": "\\frac{1}{x +2} \\not= \\frac{1}{x} +2",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\frac{1}{x +2} \\not= \\frac{1}{x} +2\" display=\"block\"><mfrac data-latex=\"\\frac{1}{x +2}\"><mn data-latex=\"1\">1</mn><mrow data-latex=\"x +2\"><mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mn data-latex=\"2\">2</mn></mrow></mfrac><mo data-latex=\"=\">&#x2260;</mo><mfrac data-latex=\"\\frac{1}{x}\"><mn data-latex=\"1\">1</mn><mi data-latex=\"x\">x</mi></mfrac><mo data-latex=\"+\">+</mo><mn data-latex=\"2\">2</mn></math>"
+    },
+    "Brüche_4": {
+      "tex": "\\frac{ \\frac{a+b}{2}}{\\frac{x}{a-b}} =1",
+      "speech": "Bruchanfang Bruchanfang a plus b durch 2 Bruchende durch Bruchanfang x durch a minus b Bruchende Bruchende ist gleich 1",
+      "code": "\\frac{ \\frac{a+b}{2} }{ \\frac{x}{a-b} } =1",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\frac{ \\frac{a+b}{2}}{\\frac{x}{a-b}} =1\" display=\"block\"><mfrac data-latex=\"\\frac{ \\frac{a+b}{2}}{\\frac{x}{a-b}}\"><mfrac data-latex=\" \\frac{a+b}{2}\"><mrow data-latex=\"a+b\"><mi data-latex=\"a\">a</mi><mo data-latex=\"+\">+</mo><mi data-latex=\"b\">b</mi></mrow><mn data-latex=\"2\">2</mn></mfrac><mfrac data-latex=\"\\frac{x}{a-b}\"><mi data-latex=\"x\">x</mi><mrow data-latex=\"a-b\"><mi data-latex=\"a\">a</mi><mo data-latex=\"-\">&#x2212;</mo><mi data-latex=\"b\">b</mi></mrow></mfrac></mfrac><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn></math>"
+    },
+    "Brüche_5": {
+      "tex": "0,25 = 1/4",
+      "speech": "0 Komma 25 ist gleich ein Viertel",
+      "code": "0,25 = 1/4",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"0,25 = 1/4\" display=\"block\"><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mn data-latex=\"5\">25</mn><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"/\">/</mo></mrow><mn data-latex=\"4\">4</mn></math>"
+    },
+    "Brüche_6": {
+      "tex": "0,1\\overline{6} = 1/6",
+      "speech": "0 Komma 1 Periode 6 ist gleich ein Sechstel",
+      "code": "0,1\\overline{6} = 1/6",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"0,1\\overline{6} = 1/6\" display=\"block\"><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mover data-latex=\"\\overline{6}\"><mn data-latex=\"6\">6</mn><mo accent=\"true\">&#x2015;</mo></mover><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"/\">/</mo></mrow><mn data-latex=\"6\">6</mn></math>"
+    },
+    "Brüche_7": {
+      "tex": "75\\% = 3/4",
+      "speech": "75 Prozent sind gleich 3 Viertel",
+      "code": "75\\% = 3/4",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"75\\% = 3/4\" display=\"block\"><mn data-latex=\"5\">75</mn><mi mathvariant=\"normal\" data-latex=\"\\%\">%</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"3\">3</mn><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"/\">/</mo></mrow><mn data-latex=\"4\">4</mn></math>"
+    },
+    "Brüche_8": {
+      "tex": "2,5 ‰",
+      "speech": "2,5 Promille",
+      "code": "2,5 \\permil",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"2,5 &#x2030;\" display=\"block\"><mn data-latex=\"2\">2</mn><mo data-latex=\",\">,</mo><mn data-latex=\"5\">5</mn><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"&#x2030;\">&#x2030;</mo></mrow></math>"
+    },
+    "_comment5_": "Potenzen, Wurzeln, Indizes",
+    "Potenzen,_0": {
+      "tex": "a^2",
+      "speech": "a zum Quadrat",
+      "code": "a^2",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a^2\" display=\"block\"><msup data-latex=\"a^2 \"><mi data-latex=\"a\">a</mi><mn data-latex=\"2\">2</mn></msup></math>"
+    },
+    "Potenzen,_1": {
+      "tex": "a^{12}",
+      "speech": "a hoch 12",
+      "code": "a^{12}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a^{12}\" display=\"block\"><msup data-latex=\"a^{12}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\"><mn data-latex=\"2\">12</mn></mrow></msup></math>"
+    },
+    "Potenzen,_2": {
+      "tex": "2^{-3} =1/8",
+      "speech": "2 hoch minus 3 ist gleich ein Achtel",
+      "code": "2^{-3} =1/8",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"2^{-3} =1/8\" display=\"block\"><msup data-latex=\"2^{-3}\"><mn data-latex=\"2\">2</mn><mrow data-mjx-texclass=\"ORD\" data-latex=\"{-3}\"><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"3\">3</mn></mrow></msup><mo data-latex=\"=\">=</mo><mn data-latex=\"1\">1</mn><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"/\">/</mo></mrow><mn data-latex=\"8\">8</mn></math>"
+    },
+    "Potenzen,_3": {
+      "tex": "a^{n+1} \\not= a^n +1",
+      "speech": "a hoch Exponentanfang n + 1 Exponentende ist ungleich a hoch Exponentanfang n Exponentende + 1",
+      "code": "a^{n+1} \\not= a^n +1",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a^{n+1} \\not= a^n +1\" display=\"block\"><msup data-latex=\"a^{n+1}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{n+1}\"><mi data-latex=\"n\">n</mi><mo data-latex=\"+\">+</mo><mn data-latex=\"1\">1</mn></mrow></msup><mo data-latex=\"=\">&#x2260;</mo><msup data-latex=\"a^n\"><mi data-latex=\"a\">a</mi><mi data-latex=\"n\">n</mi></msup><mo data-latex=\"+\">+</mo><mn data-latex=\"1\">1</mn></math>"
+    },
+    "Potenzen,_4": {
+      "tex": "\\sqrt{25} = 5",
+      "speech": "Die Quadratwurzel aus 25 ist gleich 5",
+      "code": "\\sqrt{25} = 5",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sqrt{25} = 5\" display=\"block\"><msqrt data-latex=\"\\sqrt{25}\"><mn data-latex=\"25\">25</mn></msqrt><mo data-latex=\"=\">=</mo><mn data-latex=\"5\">5</mn></math>"
+    },
+    "Potenzen,_5": {
+      "tex": "\\sqrt{x^2 +y^2} \\not= x +y",
+      "speech": "Die Wurzel aus x hoch 2 plus y hoch 2 Wurzelende ist ungleich x plus y",
+      "code": "\\sqrt{x^2 +y^2} \\not= x +y",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sqrt{x^2 +y^2} \\not= x +y\" display=\"block\"><msqrt data-latex=\"\\sqrt{x^2 +y^2}\"><msup data-latex=\"x^2\"><mi data-latex=\"x\">x</mi><mn data-latex=\"2\">2</mn></msup><mo data-latex=\"+\">+</mo><msup data-latex=\"y^2\"><mi data-latex=\"y\">y</mi><mn data-latex=\"2\">2</mn></msup></msqrt><mo data-latex=\"=\">&#x2260;</mo><mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi></math>"
+    },
+    "Potenzen,_6": {
+      "tex": "\\sqrt[3]{8} = 2",
+      "speech": "Die dritte Wurzel aus 8 ist gleich 2",
+      "code": "\\sqrt[3]{8} = 2",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sqrt[3]{8} = 2\" display=\"block\"><mroot data-latex=\"\\sqrt[3]{8}\"><mn data-latex=\"8\">8</mn><mn data-latex=\"3\">3</mn></mroot><mo data-latex=\"=\">=</mo><mn data-latex=\"2\">2</mn></math>"
+    },
+    "Potenzen,_7": {
+      "tex": "\\sqrt[3]{a^2}  =a^{2/3}",
+      "speech": "Die dritte Wurzel aus a hoch 2 Wurzelende ist gleich a hoch zwei Drittel",
+      "code": "\\sqrt[3]{a^2}  =a^{2/3}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sqrt[3]{a^2}  =a^{2/3}\" display=\"block\"><mroot data-latex=\"\\sqrt[3]{a^2}\"><msup data-latex=\"a^2 \"><mi data-latex=\"a\">a</mi><mn data-latex=\"2\">2</mn></msup><mn data-latex=\"3\">3</mn></mroot><mo data-latex=\"=\">=</mo><msup data-latex=\"a^{2/3}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{2/3}\"><mn data-latex=\"2\">2</mn><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"/\">/</mo></mrow><mn data-latex=\"3\">3</mn></mrow></msup></math>"
+    },
+    "Potenzen,_8": {
+      "tex": "a_1 + a_n",
+      "speech": "a Index 1 plus a Index n",
+      "code": "a_1 + a_n",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a_1 + a_n\" display=\"block\"><msub data-latex=\"a_1\"><mi data-latex=\"a\">a</mi><mn data-latex=\"1\">1</mn></msub><mo data-latex=\"+\">+</mo><msub data-latex=\"a_n\"><mi data-latex=\"a\">a</mi><mi data-latex=\"n\">n</mi></msub></math>"
+    },
+    "Potenzen,_9": {
+      "tex": "a_{n -1}",
+      "speech": "a Index n minus 1 Indexende",
+      "code": "a_{n -1}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"a_{n -1}\" display=\"block\"><msub data-latex=\"a_{n -1}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{n-1}\"><mi data-latex=\"n\">n</mi><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn></mrow></msub></math>"
+    },
+    "Potenzen,_10": {
+      "tex": "{}_{95}^{238}\\mathrm{U}",
+      "speech": "Index und Exponent vor einem Zeichen (Bsp. Chemie)",
+      "code": "_{95}^{238}U",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"{}_{95}^{238}\\mathrm{U}\" display=\"block\"><msubsup data-latex=\"{}^{38}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{5}\"><mn data-latex=\"5\">95</mn></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{38}\"><mn data-latex=\"38\">238</mn></mrow></msubsup><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathrm{U}\"><mi mathvariant=\"normal\" data-latex=\"U\">U</mi></mrow></math>"
+    },
+    "_comment6_": "Weitere Rechenoperationen, Funktionen",
+    "Weitere_0": {
+      "tex": "f(x) =2x +1",
+      "speech": "f von x ist gleich 2x +1",
+      "code": "f(x) =2x +1",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"f(x) =2x +1\" display=\"block\"><mi data-latex=\"f\">f</mi><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"x\">x</mi><mo data-latex=\")\" stretchy=\"false\">)</mo><mo data-latex=\"=\">=</mo><mn data-latex=\"2\">2</mn><mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mn data-latex=\"1\">1</mn></math>"
+    },
+    "Weitere_1": {
+      "tex": "f(3) =7",
+      "speech": "f von 3 ist gleich 7",
+      "code": "f(3) =7",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"f(3) =7\" display=\"block\"><mi data-latex=\"f\">f</mi><mo data-latex=\"(\" stretchy=\"false\">(</mo><mn data-latex=\"3\">3</mn><mo data-latex=\")\" stretchy=\"false\">)</mo><mo data-latex=\"=\">=</mo><mn data-latex=\"7\">7</mn></math>"
+    },
+    "Weitere_2": {
+      "tex": "f \\; : \\; y = 2x +1",
+      "speech": "Die Zuordnungsvorschrift der Funktion f lautet: y =2x +1",
+      "code": "f: y =2x +1",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"f \\;&#xA0;: \\; y = 2x +1\" display=\"block\"><mi data-latex=\"f\">f</mi><mstyle scriptlevel=\"0\" data-latex=\"\\;\"><mspace width=\"0.278em\"></mspace></mstyle><mo data-latex=\":\">:</mo><mstyle scriptlevel=\"0\" data-latex=\"\\;\"><mspace width=\"0.278em\"></mspace></mstyle><mi data-latex=\"y\">y</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"2\">2</mn><mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mn data-latex=\"1\">1</mn></math>"
+    },
+    "Weitere_3": {
+      "tex": "f: x \\mapsto 2x +1",
+      "speech": "Die Zuordnungsvorschrift der Funktion f lautet: x Zuordnungspfeil nach rechts 2x +1",
+      "code": "f: x \\mapsto 2x +1",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"f: x \\mapsto 2x +1\" display=\"block\"><mi data-latex=\"f\">f</mi><mo data-latex=\":\">:</mo><mi data-latex=\"x\">x</mi><mo stretchy=\"false\" data-latex=\"\\mapsto\">&#x21A6;</mo><mn data-latex=\"2\">2</mn><mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mn data-latex=\"1\">1</mn></math>"
+    },
+    "Weitere_4": {
+      "tex": "P(3,5 | 8)",
+      "speech": "Punkt P mit der x-Koordinate 3,5 und der y-Koordinate 8",
+      "code": "P(3,5|8)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"P(3,5 | 8)\" display=\"block\"><mi data-latex=\"P\">P</mi><mo data-latex=\"(\" stretchy=\"false\">(</mo><mn data-latex=\"3\">3</mn><mo data-latex=\",\">,</mo><mn data-latex=\"5\">5</mn><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mn data-latex=\"8\">8</mn><mo data-latex=\")\" stretchy=\"false\">)</mo></math>"
+    },
+    "Weitere_5": {
+      "tex": "|a|",
+      "speech": "Betrag von a",
+      "code": "|a|",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"|a|\" display=\"block\"><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo><mi data-latex=\"a\">a</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" data-latex=\"|\">|</mo></math>"
+    },
+    "Weitere_6": {
+      "tex": "\\log_a x",
+      "speech": "Logarithmus von x zur Basis a",
+      "code": "\\log_a x",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\log_a x\" display=\"block\"><msub data-latex=\"\\log_a\"><mi data-latex=\"\\log\">log</mi><mi data-latex=\"a\">a</mi></msub><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mi data-latex=\"x\">x</mi></math>"
+    },
+    "Weitere_7": {
+      "tex": "\\ln x",
+      "speech": "natürlicher Logarithmus (Logarithmus von x zur Basis e)",
+      "code": "\\ln x",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\ln x\" display=\"block\"><mi data-latex=\"\\ln\">ln</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mi data-latex=\"x\">x</mi></math>"
+    },
+    "Weitere_8": {
+      "tex": "\\sin \\alpha",
+      "speech": "Sinus von klein alpha",
+      "code": "\\sin \\alpha",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sin \\alpha\" display=\"block\"><mi data-latex=\"\\sin\">sin</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mi data-latex=\"\\alpha\">&#x3B1;</mi></math>"
+    },
+    "Weitere_9": {
+      "tex": "\\cos^2 \\beta",
+      "speech": "Kosinus Quadrat von klein beta",
+      "code": "\\cos^2 \\beta",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\cos^2 \\beta\" display=\"block\"><msup data-latex=\"\\cos^2\"><mi data-latex=\"\\cos\">cos</mi><mn data-latex=\"2\">2</mn></msup><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mi data-latex=\"\\beta\">&#x3B2;</mi></math>"
+    },
+    "Weitere_10": {
+      "tex": "\\tan \\gamma",
+      "speech": "Tangens von klein gamma",
+      "code": "\\tan \\gamma",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\tan \\gamma\" display=\"block\"><mi data-latex=\"\\tan\">tan</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mi data-latex=\"\\gamma\">&#x3B3;</mi></math>"
+    },
+    "Weitere_11": {
+      "tex": "\\cot 45°",
+      "speech": "Kotangens 45 Grad",
+      "code": "\\cot 45°",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\cot 45&#xB0;\" display=\"block\"><mi data-latex=\"\\cot\">cot</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mn data-latex=\"5\">45</mn><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\" data-latex=\"&#xB0;\">&#xB0;</mo></mrow></math>"
+    },
+    "Weitere_12": {
+      "tex": "\\sin (\\pi /6)",
+      "speech": "Sinus von Klammer auf Pi Sechstel Klammer zu",
+      "code": "\\sin (\\pi /6)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sin (\\pi /6)\" display=\"block\"><mi data-latex=\"\\sin\">sin</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"\\pi\">&#x3C0;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-latex=\"/\">/</mo></mrow><mn data-latex=\"6\">6</mn><mo data-latex=\")\" stretchy=\"false\">)</mo></math>"
+    },
+    "_comment7_": "Geometrie",
+    "Geometrie_0": {
+      "tex": "\\overline{AB}",
+      "speech": "Strecke AB",
+      "code": "\\overline{AB}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\overline{AB}\" display=\"block\"><mover data-latex=\"\\overline{AB}\"><mrow data-latex=\"AB\"><mi data-latex=\"A\">A</mi><mi data-latex=\"B\">B</mi></mrow><mo accent=\"true\">&#x2015;</mo></mover></math>"
+    },
+    "Geometrie_1": {
+      "tex": "\\triangle ABC",
+      "speech": "Dreieck ABC",
+      "code": "\\triangle ABC",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\triangle ABC\" display=\"block\"><mi mathvariant=\"normal\" data-latex=\"\\triangle\">&#x25B3;</mi><mi data-latex=\"A\">A</mi><mi data-latex=\"B\">B</mi><mi data-latex=\"C\">C</mi></math>"
+    },
+    "Geometrie_2": {
+      "tex": "\\angle BAC",
+      "speech": "Winkel BAC",
+      "code": "\\angle BAC",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\angle BAC\" display=\"block\"><mi mathvariant=\"normal\" data-latex=\"\\angle\">&#x2220;</mi><mi data-latex=\"B\">B</mi><mi data-latex=\"A\">A</mi><mi data-latex=\"C\">C</mi></math>"
+    },
+    "Geometrie_3": {
+      "tex": "\\alpha, \\beta, \\gamma, \\delta, \\epsilon",
+      "speech": "klein alpha, beta, gamma, delta, epsilon",
+      "code": "\\alpha, \\beta, \\gamma, \\delta, \\epsilon",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\alpha, \\beta, \\gamma, \\delta, \\epsilon\" display=\"block\"><mi data-latex=\"\\alpha\">&#x3B1;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"\\beta\">&#x3B2;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"\\gamma\">&#x3B3;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"\\delta\">&#x3B4;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"\\epsilon\">&#x3F5;</mi></math>"
+    },
+    "Geometrie_4": {
+      "tex": "g \\parallel h",
+      "speech": "g parallel zu h",
+      "code": "g \\parallel h",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"g \\parallel h\" display=\"block\"><mi data-latex=\"g\">g</mi><mo data-latex=\"\\parallel\">&#x2225;</mo><mi data-latex=\"h\">h</mi></math>"
+    },
+    "Geometrie_5": {
+      "tex": "g \\nparallel h",
+      "speech": "g nicht parallel zu h",
+      "code": "g \\nparallel h",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"g \\nparallel h\" display=\"block\"><mi data-latex=\"g\">g</mi><mo data-latex=\"\\nparallel\">&#x2226;</mo><mi data-latex=\"h\">h</mi></math>"
+    },
+    "Geometrie_6": {
+      "tex": "g \\perp h",
+      "speech": "g senkrecht zu h",
+      "code": "g \\perp h",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"g \\perp h\" display=\"block\"><mi data-latex=\"g\">g</mi><mo data-latex=\"\\perp\">&#x22A5;</mo><mi data-latex=\"h\">h</mi></math>"
+    },
+    "Geometrie_7": {
+      "tex": "F \\cong F'",
+      "speech": "F kongruent zu F Strich",
+      "code": "F \\cong F'",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"F \\cong F'\" display=\"block\"><mi data-latex=\"F\">F</mi><mo data-latex=\"\\cong\">&#x2245;</mo><msup><mi data-latex=\"F\">F</mi><mo data-mjx-alternate=\"1\" data-latex=\"'\">&#x2032;</mo></msup></math>"
+    }
+  }
+}

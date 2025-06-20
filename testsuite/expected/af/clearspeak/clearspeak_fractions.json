@@ -1,0 +1,425 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakFractions",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "Afrikaans Clearspeak Fractions rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Fractions",
+    "Frac001": {
+      "expected": "een helfte"
+    },
+    "Frac002": {
+      "expected": "12 oor 32"
+    },
+    "Frac002a": {
+      "expected": "x oor y"
+    },
+    "Frac002b": {
+      "expected": "2 x oor 3 y"
+    },
+    "Frac002c": {
+      "expected": "x y oor c d"
+    },
+    "Frac002d": {
+      "expected": "een helfte oor een derde"
+    },
+    "Frac002e": {
+      "expected": "negatiewe x oor y"
+    },
+    "Frac002f": {
+      "expected": "negatiewe 2 x oor 3 y"
+    },
+    "Frac002g": {
+      "expected": "x y oor negatiewe c d"
+    },
+    "Frac002h": {
+      "expected": "een helfte oor negatiewe een derde"
+    },
+    "Frac003": {
+      "expected": "die breuk met teller 2 plus 3, en noemer 13"
+    },
+    "Frac004": {
+      "expected": "die breuk met teller x plus y, en noemer 2"
+    },
+    "Frac005": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y"
+    },
+    "Frac006": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, plus twee derdes"
+    },
+    "Frac007": {
+      "expected": "miles oor gallon"
+    },
+    "Frac008": {
+      "expected": "2 miles oor 3 gallons"
+    },
+    "Frac009": {
+      "expected": "1 oor 2"
+    },
+    "Frac010": {
+      "expected": "12 oor 32"
+    },
+    "Frac011": {
+      "expected": "2 plus 3 oor 13"
+    },
+    "Frac012": {
+      "expected": "x plus y oor 2"
+    },
+    "Frac013": {
+      "expected": "x plus y oor x minus y"
+    },
+    "Frac014": {
+      "expected": "x plus y oor x minus y, plus, 2 oor 3"
+    },
+    "Frac015": {
+      "expected": "miles oor gallon"
+    },
+    "Frac016": {
+      "expected": "2 miles oor 3 gallons"
+    },
+    "Frac017": {
+      "expected": "1 oor 2, end breuk"
+    },
+    "Frac018": {
+      "expected": "12 oor 32, end breuk"
+    },
+    "Frac019": {
+      "expected": "2 plus 3 oor 13, end breuk"
+    },
+    "Frac020": {
+      "expected": "x plus y oor 2, end breuk"
+    },
+    "Frac021": {
+      "expected": "x plus y oor x minus y, end breuk"
+    },
+    "Frac022": {
+      "expected": "x plus y oor x minus y, end breuk, plus, 2 oor 3, end breuk"
+    },
+    "Frac023": {
+      "expected": "miles oor gallons, end breuk"
+    },
+    "Frac024": {
+      "expected": "2 miles oor 3 gallons, end breuk"
+    },
+    "Frac025": {
+      "expected": "die breuk met teller 1, en noemer 2, end breuk"
+    },
+    "Frac026": {
+      "expected": "die breuk met teller 12, en noemer 32, end breuk"
+    },
+    "Frac027": {
+      "expected": "die breuk met teller 2 plus 3, en noemer 13, end breuk"
+    },
+    "Frac028": {
+      "expected": "die breuk met teller x plus y, en noemer 2, end breuk"
+    },
+    "Frac029": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, end breuk"
+    },
+    "Frac030": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, end breuk, plus, die breuk met teller 2, en noemer 3, end breuk"
+    },
+    "Frac031": {
+      "expected": "die breuk met teller miles, en noemer gallon, end breuk"
+    },
+    "Frac032": {
+      "expected": "die breuk met teller 1, en noemer 2"
+    },
+    "Frac033": {
+      "expected": "die breuk met teller 12, en noemer 32"
+    },
+    "Frac034": {
+      "expected": "die breuk met teller 2 plus 3, en noemer 13"
+    },
+    "Frac035": {
+      "expected": "die breuk met teller x plus y, en noemer 2"
+    },
+    "Frac036": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y"
+    },
+    "Frac037": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, plus, die breuk met teller 2, en noemer 3"
+    },
+    "Frac038": {
+      "expected": "die breuk met teller miles, en noemer gallon"
+    },
+    "Frac039": {
+      "expected": "die breuk met teller 2 miles, en noemer 3 gallons"
+    },
+    "Frac040": {
+      "expected": "die breuk 1 oor 2"
+    },
+    "Frac041": {
+      "expected": "die breuk 12 oor 32"
+    },
+    "Frac042": {
+      "expected": "die breuk 2 plus 3 oor 13"
+    },
+    "Frac043": {
+      "expected": "die breuk x plus y oor 2"
+    },
+    "Frac044": {
+      "expected": "die breuk x plus y oor x minus y"
+    },
+    "Frac045": {
+      "expected": "die breuk x plus y oor x minus y, plus, die breuk 2 oor 3"
+    },
+    "Frac046": {
+      "expected": "die breuk miles oor gallon"
+    },
+    "Frac047": {
+      "expected": "die breuk 2 miles oor 3 gallons"
+    },
+    "Frac048": {
+      "expected": "1 per 2"
+    },
+    "Frac049": {
+      "expected": "12 per 32"
+    },
+    "Frac050": {
+      "expected": "2 plus 3 per 13"
+    },
+    "Frac051": {
+      "expected": "x plus y per 2"
+    },
+    "Frac052": {
+      "expected": "x plus y per x minus y"
+    },
+    "Frac053": {
+      "expected": "x plus y per x minus y, plus, 2 per 3"
+    },
+    "Frac054": {
+      "expected": "miles per gallon"
+    },
+    "Frac055": {
+      "expected": "2 miles per 3 gallons"
+    },
+    "Frac056": {
+      "expected": "een helfte"
+    },
+    "Frac057": {
+      "expected": "twaalf twee-en-dertigstes"
+    },
+    "Frac058": {
+      "expected": "die breuk met teller 2 plus 3, en noemer 13"
+    },
+    "Frac059": {
+      "expected": "die breuk met teller x plus y, en noemer 2"
+    },
+    "Frac060": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y"
+    },
+    "Frac061": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, plus twee derdes"
+    },
+    "Frac062": {
+      "expected": "miles oor gallon"
+    },
+    "Frac063": {
+      "expected": "2 miles oor 3 gallons"
+    },
+    "Frac064": {
+      "expected": "een helfte"
+    },
+    "Frac065": {
+      "expected": "12 oor 32, end breuk"
+    },
+    "Frac066": {
+      "expected": "die breuk met teller 2 plus 3, en noemer 13, end breuk"
+    },
+    "Frac067": {
+      "expected": "die breuk met teller x plus y, en noemer 2, end breuk"
+    },
+    "Frac068": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, end breuk"
+    },
+    "Frac069": {
+      "expected": "die breuk met teller x plus y, en noemer x minus y, end breuk, plus twee derdes"
+    },
+    "Frac070": {
+      "expected": "miles oor gallons"
+    },
+    "Frac071": {
+      "expected": "2 miles oor 3 gallons"
+    },
+    "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
+    "FrTxt001": {
+      "expected": "2 miles oor 3 gallons"
+    },
+    "FrTxt002": {
+      "expected": "rise oor run"
+    },
+    "FrTxt003": {
+      "expected": "successful outcomes oor total outcomes"
+    },
+    "FrTxt004": {
+      "expected": "6 ways of rolling a 7 oor 36 ways of rolling the pair of dice"
+    },
+    "_comment3_": " Nested Fractions",
+    "NestFrac001": {
+      "expected": "een helfte oor een derde"
+    },
+    "NestFrac002": {
+      "expected": "die breuk met teller 1, en noemer, 2 oor een derde"
+    },
+    "NestFrac003": {
+      "expected": "een helfte oor 3"
+    },
+    "NestFrac004": {
+      "expected": "1 oor twee derdes"
+    },
+    "NestFrac005": {
+      "expected": "die breuk met teller, 11 oor 32, en noemer, 16 oor 51"
+    },
+    "NestFrac006": {
+      "expected": "die breuk met teller 11, en noemer, die breuk met teller 32, en noemer, 16 oor 51"
+    },
+    "NestFrac007": {
+      "expected": "die breuk met teller 1 plus, 4 oor x, en noemer 2"
+    },
+    "NestFrac008": {
+      "expected": "die breuk met teller 3, en noemer 2 plus, 4 oor x"
+    },
+    "NestFrac009": {
+      "expected": "die breuk met teller, 10 oor 22, en noemer een helfte"
+    },
+    "NestFrac010": {
+      "expected": "die breuk met teller 1 plus twee derdes, en noemer 1 minus twee derdes"
+    },
+    "NestFrac011": {
+      "expected": "die breuk met teller 1 plus, x oor 2, en noemer 1 minus, x oor 2"
+    },
+    "NestFrac012": {
+      "expected": "die breuk met teller, die breuk met teller x plus 1, en noemer x minus 1, plus 1, en noemer x plus 1"
+    },
+    "NestFrac013": {
+      "expected": "die breuk met teller, die breuk met teller x plus 1, en noemer x minus 4, plus een helfte, en noemer x plus, 1 oor 16"
+    },
+    "NestFrac014": {
+      "expected": "1 plus, die breuk met teller x, en noemer 1 plus, 2 oor x"
+    },
+    "NestFrac015": {
+      "expected": "1 plus, die breuk met teller x plus 3, en noemer 1 plus, die breuk met teller 2, en noemer x plus 3"
+    },
+    "NestFrac016": {
+      "expected": "1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus 1"
+    },
+    "NestFrac017": {
+      "expected": "1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus middellyn horisontale elipses"
+    },
+    "NestFrac018": {
+      "expected": "a onderskrif 0, plus, die breuk met teller 1, en noemer, a onderskrif 1, plus, die breuk met teller 1, en noemer, a onderskrif 2, plus, die breuk met teller 1, en noemer, a onderskrif 3, plus middellyn horisontale elipses"
+    },
+    "NestFrac019": {
+      "expected": "een helfte oor een derde"
+    },
+    "NestFrac020": {
+      "expected": "die breuk met teller 1, en noemer, 2 oor een derde, end breuk"
+    },
+    "NestFrac021": {
+      "expected": "een helfte oor 3, end breuk"
+    },
+    "NestFrac022": {
+      "expected": "1 oor twee derdes, end breuk"
+    },
+    "NestFrac023": {
+      "expected": "die breuk met teller, 11 oor 32, en noemer, 16 oor 51, end breuk"
+    },
+    "NestFrac024": {
+      "expected": "die breuk met teller 11, en noemer, die breuk met teller 32, en noemer, 16 oor 51, end breuk"
+    },
+    "NestFrac025": {
+      "expected": "die breuk met teller 1 plus, 4 oor x, en noemer 2, end breuk"
+    },
+    "NestFrac026": {
+      "expected": "die breuk met teller 3, en noemer 2 plus, 4 oor x, end breuk"
+    },
+    "NestFrac027": {
+      "expected": "die breuk met teller, 10 oor 22, en noemer een helfte, end breuk"
+    },
+    "NestFrac028": {
+      "expected": "die breuk met teller 1 plus twee derdes, en noemer 1 minus twee derdes, end breuk"
+    },
+    "NestFrac029": {
+      "expected": "die breuk met teller 1 plus, x oor 2, en noemer 1 minus, x oor 2, end breuk"
+    },
+    "NestFrac030": {
+      "expected": "die breuk met teller, die breuk met teller x plus 1, en noemer x minus 1, plus 1, en noemer x plus 1, end breuk"
+    },
+    "NestFrac031": {
+      "expected": "die breuk met teller, die breuk met teller x plus 1, en noemer x minus 4, plus een helfte, en noemer x plus, 1 oor 16, end breuk"
+    },
+    "NestFrac032": {
+      "expected": "1 plus, die breuk met teller x, en noemer 1 plus, 2 oor x, end breuk"
+    },
+    "NestFrac033": {
+      "expected": "1 plus, die breuk met teller x plus 3, en noemer 1 plus, die breuk met teller 2, en noemer x plus 3, end breuk"
+    },
+    "NestFrac034": {
+      "expected": "1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus 1, end breuk"
+    },
+    "NestFrac035": {
+      "expected": "1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus, die breuk met teller 1, en noemer 1 plus middellyn horisontale elipses, end breuk"
+    },
+    "NestFrac036": {
+      "expected": "a onderskrif 0, plus, die breuk met teller 1, en noemer, a onderskrif 1, plus, die breuk met teller 1, en noemer, a onderskrif 2, plus, die breuk met teller 1, en noemer, a onderskrif 3, plus middellyn horisontale elipses, end breuk"
+    },
+    "_comment4_": " Fractions with Functions",
+    "Fracfunct001": {
+      "expected": "f van x, oor g van x"
+    },
+    "Fracfunct002": {
+      "expected": "die breuk met teller f van x, plus g van x, en noemer g van x"
+    },
+    "Fracfunct003": {
+      "expected": "die breuk met teller f van, links hakkie, x plus 1, regs hakkie, en noemer g van x"
+    },
+    "Fracfunct004": {
+      "expected": "f van x, oor 2"
+    },
+    "Fracfunct005": {
+      "expected": "2 oor f van x"
+    },
+    "Fracfunct006": {
+      "expected": "die breuk met teller 2, en noemer g van x, plus g van, links hakkie, x plus 1, regs hakkie"
+    },
+    "Fracfunct007": {
+      "expected": "sinus x oor kosinus x"
+    },
+    "Fracfunct009": {
+      "expected": "die breuk met teller sinus x plus kosinus x, en noemer kosinus x"
+    },
+    "Fracfunct010": {
+      "expected": "sinus 2 x oor kosinus 3 x"
+    },
+    "Fracfunct011": {
+      "expected": "die breuk met teller, die sinus van, links hakkie, x plus y, regs hakkie, en noemer, die kosinus van, links hakkie, x plus y, regs hakkie"
+    },
+    "Fracfunct012": {
+      "expected": "f van 2 x, oor g van 3 x"
+    },
+    "Fracfunct013": {
+      "expected": "logaritme x oor logaritme y"
+    },
+    "Fracfunct014": {
+      "expected": "logaritme 2 x oor logaritme 3 y"
+    },
+    "Fracfunct015": {
+      "expected": "die logaritme basis 10 van, x, oor, die logaritme basis 5 van, y"
+    },
+    "Fracfunct016": {
+      "expected": "die logaritme basis 10 van, 2 x, oor, die logaritme basis 5 van, 3 y"
+    },
+    "Fracfunct017": {
+      "expected": "die breuk met teller, die logaritme van, links hakkie, x plus 1, regs hakkie, en noemer logaritme y"
+    },
+    "Fracfunct018": {
+      "expected": "f onderskrif 1, van x, oor, g onderskrif 1, van x"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "locale": "af",
+  "name": "AfrikaansExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsAfrikaans",
+  "information": "Afrikaans Extra Character tests.",
+  "compare": true,
+  "tests": {
+    "00B2-clearspeak-Exponent_Exponent": {
+      "key": "²",
+      "domain": "clearspeak",
+      "style": "Exponent_Exponent",
+      "expected": "met eksponent 2"
+    },
+    "00B2-clearspeak-Exponent_OrdinalPower": {
+      "key": "²",
+      "domain": "clearspeak",
+      "style": "Exponent_OrdinalPower",
+      "expected": "tweede mag"
+    },
+    "00B3-clearspeak-Exponent_Exponent": {
+      "key": "³",
+      "domain": "clearspeak",
+      "style": "Exponent_Exponent",
+      "expected": "met eksponent 3"
+    },
+    "00B3-clearspeak-Exponent_OrdinalPower": {
+      "key": "³",
+      "domain": "clearspeak",
+      "style": "Exponent_OrdinalPower",
+      "expected": "derde mag"
+    },
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "groot delta"
+    },
+    "00AF-default-alternative": {
+      "key": "¯",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "makron"
+    },
+    "00B7-default-alternative": {
+      "key": "·",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "dot"
+    },
+    "22C5-default-alternative": {
+      "key": "⋅",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "punt"
+    },
+    "FFE3-default-alternative": {
+      "key": "￣",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "macron"
+    }
+  }
+}

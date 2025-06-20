@@ -1,0 +1,242 @@
+{
+  "name": "EnglishPrefix",
+  "locale": "en",
+  "factory": "prefixMarkup",
+  "base": "input/common/prefix.json",
+  "information": "English Prefix rule tests.",
+  "active": "PrefixEnglish",
+  "exclude": [],
+  "tests": {
+    "Sub_0": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "Sub_1": {
+      "expected": "<mark name=\"1\"/> Subscript <break time=\"200ms\"/>"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "Super_1": {
+      "expected": "<mark name=\"1\"/> Exponent <break time=\"200ms\"/>"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "Over_1": {
+      "expected": "<mark name=\"1\"/> Overscript <break time=\"200ms\"/>"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "Under_1": {
+      "expected": "<mark name=\"1\"/> Underscript <break time=\"200ms\"/>"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "<mark name=\"0\"/> Numerator <break time=\"200ms\"/>"
+    },
+    "Fractions_1": {
+      "expected": "<mark name=\"1\"/> Denominator <break time=\"200ms\"/>"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "<mark name=\"0\"/> Radicand <break time=\"200ms\"/>"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "<mark name=\"1\"/> Radicand <break time=\"200ms\"/>"
+    },
+    "Root_1": {
+      "expected": "<mark name=\"0\"/> Index <break time=\"200ms\"/>"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "SimpleTensors_1": {
+      "expected": "<mark name=\"1\"/> Left Subscript <break time=\"200ms\"/>"
+    },
+    "SimpleTensors_2": {
+      "expected": "<mark name=\"2\"/> Left Superscript <break time=\"200ms\"/>"
+    },
+    "SimpleTensors_3": {
+      "expected": "<mark name=\"3\"/> Right Subscript <break time=\"200ms\"/>"
+    },
+    "SimpleTensors_4": {
+      "expected": "<mark name=\"4\"/> Right Superscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_0": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_1": {
+      "expected": "<mark name=\"1\"/> 1st Left Subscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_2": {
+      "expected": "<mark name=\"2\"/> 2nd Left Subscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_3": {
+      "expected": "<mark name=\"3\"/> 1st Left Superscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_4": {
+      "expected": "<mark name=\"4\"/> 2nd Left Superscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_5": {
+      "expected": "<mark name=\"5\"/> 1st Right Subscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_6": {
+      "expected": "<mark name=\"6\"/> 2nd Right Subscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_7": {
+      "expected": "<mark name=\"7\"/> 1st Right Superscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_8": {
+      "expected": "<mark name=\"8\"/> 2nd Right Superscript <break time=\"200ms\"/>"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "<mark name=\"2\"/> Choice Quantity <break time=\"200ms\"/>"
+    },
+    "Binomials_1": {
+      "expected": "<mark name=\"3\"/> Selection Quantity <break time=\"200ms\"/>"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Vectors_1": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Vectors_2": {
+      "expected": "<mark name=\"8\"/> 3rd Row <break time=\"200ms\"/>"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_2": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_3": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_4": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Matrices_1": {
+      "expected": "<mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_2": {
+      "expected": "<mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_3": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Matrices_4": {
+      "expected": "<mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_5": {
+      "expected": "<mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "<mark name=\"1\"/> Base <break time=\"200ms\"/>"
+    },
+    "LimBoth_1": {
+      "expected": "<mark name=\"3\"/> Overscript <break time=\"200ms\"/>"
+    },
+    "LimBoth_2": {
+      "expected": "<mark name=\"2\"/> Underscript <break time=\"200ms\"/>"
+    },
+    "LimBoth_3": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "LimBoth_4": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "LimUpper_0": {
+      "expected": "<mark name=\"1\"/> Overscript <break time=\"200ms\"/>"
+    },
+    "LimUpper_1": {
+      "expected": "<mark name=\"1\"/> Overscript <break time=\"200ms\"/>"
+    },
+    "LimUpper_2": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "LimUpper_3": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "LimLower_0": {
+      "expected": "<mark name=\"1\"/> Underscript <break time=\"200ms\"/>"
+    },
+    "LimLower_1": {
+      "expected": "<mark name=\"1\"/> Underscript <break time=\"200ms\"/>"
+    },
+    "LimLower_2": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "LimLower_3": {
+      "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    }
+  }
+}

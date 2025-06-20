@@ -1,0 +1,139 @@
+{
+  "name": "SwedishMathspeakCoverage",
+  "locale": "sv",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Swedish Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alpha Basnivå 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alpha Bas 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alpha Bas 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "normal alef Basnivå 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "normal alef Bas 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "normal alef Bas 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alpha Basnivå bold 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alpha Bas bold 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alpha Bas bold 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "normal alef Basnivå bold 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "normal alef Bas bold 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "normal alef Bas bold 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alpha överstreck"
+    },
+    "OverbarOther_default": {
+      "expected": "normal alef överstreck"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alpha understreck"
+    },
+    "UnderbarOther_default": {
+      "expected": "normal alef understreck"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alpha övertilde"
+    },
+    "OvertildeOther_default": {
+      "expected": "normal alef övertilde"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alpha undetilde"
+    },
+    "UndertildeOther_default": {
+      "expected": "normal alef undetilde"
+    },
+    "SetEmpty_default": {
+      "expected": "tomma mängden"
+    },
+    "SetEmpty_brief": {
+      "expected": "tomma mängden"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "tomma mängden"
+    },
+    "SetSingleton_default": {
+      "expected": "StartMängd a SlutMängd"
+    },
+    "SetSingleton_brief": {
+      "expected": "StartMängd a SlutMängd"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "Mängds a SlutMängd"
+    },
+    "SetCollection_default": {
+      "expected": "StartMängd a komma b SlutMängd"
+    },
+    "SetCollection_brief": {
+      "expected": "StartMängd a komma b SlutMängd"
+    },
+    "SetCollection_sbrief": {
+      "expected": "Mängds a komma b SlutMängd"
+    },
+    "SetExtended_default": {
+      "expected": "StartMängd a komma b SlutMängd"
+    },
+    "SetExtended_brief": {
+      "expected": "StartMängd a komma b SlutMängd"
+    },
+    "SetExtended_sbrief": {
+      "expected": "Mängds a komma b SlutMängd"
+    },
+    "NumberSet": {
+      "expected": "stort C med dubbelstreck"
+    },
+    "LimitLower0_default": {
+      "expected": "ModifieradUnder gränsvärde Med streck UnderSkrift a är lika med 5 UnderSkrift b är lika med 3"
+    },
+    "LimitLower1_default": {
+      "expected": "gränsvärde UnderSkrift n ÖverSkrift 2 ÖverSkrift x"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "StartLayout 1:a Rad  a 2:a Rad  Tom SlutLayout"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c 1 h Nedsänkt 4 minus 2 s Baslinje mindre än eller lika med StartBråk 1 Över 2 stort T SlutBråk mindre än eller lika med c 2 h Nedsänkt 4 minus 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h Ned 4 minus 2 s Bas mindre än eller lika med StartBråk 1 Över 2 stort T SlutBråk mindre än eller lika med c 2 h Ned 4 minus 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h Ned 4 minus 2 s Bas mindre än eller lika med Bråk 1 Över 2 stort T SlutBråk mindre än eller lika med c 2 h Ned 4 minus 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c 1 h Nedsänkt 4 minus 2 s Baslinje mindre än eller lika med StartBråk 1 Över 2 stort T SlutBråk är lika med c 2 h Nedsänkt 4 minus 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h Ned 4 minus 2 s Bas mindre än eller lika med StartBråk 1 Över 2 stort T SlutBråk är lika med c 2 h Ned 4 minus 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h Ned 4 minus 2 s Bas mindre än eller lika med Bråk 1 Över 2 stort T SlutBråk är lika med c 2 h Ned 4 minus 2 s"
+    }
+  }
+}

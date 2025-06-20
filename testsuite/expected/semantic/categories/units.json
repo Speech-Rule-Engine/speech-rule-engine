@@ -1,0 +1,484 @@
+{
+  "factory": "category",
+  "information": "Semantic Meaning Tests for single units",
+  "base": "input/common/units.json",
+  "tests": {
+    "sq": {
+      "expected": "other"
+    },
+    "sq.": {
+      "expected": "other"
+    },
+    "sq in": {
+      "expected": "area"
+    },
+    "sq. in.": {
+      "expected": "area"
+    },
+    "sq inch": {
+      "expected": "area"
+    },
+    "sq. inch": {
+      "expected": "area"
+    },
+    "sq rd": {
+      "expected": "area"
+    },
+    "sq. rd.": {
+      "expected": "area"
+    },
+    "sq ft": {
+      "expected": "area"
+    },
+    "sq. ft.": {
+      "expected": "area"
+    },
+    "sq yd": {
+      "expected": "area"
+    },
+    "sq. yd.": {
+      "expected": "area"
+    },
+    "sq mi": {
+      "expected": "area"
+    },
+    "sq. mi.": {
+      "expected": "area"
+    },
+    "ac": {
+      "expected": "area"
+    },
+    "ac.": {
+      "expected": "area"
+    },
+    "acr": {
+      "expected": "area"
+    },
+    "acr.": {
+      "expected": "area"
+    },
+    "ha": {
+      "expected": "area"
+    },
+    "$": {
+      "expected": "currency"
+    },
+    "💲": {
+      "expected": "currency"
+    },
+    "＄": {
+      "expected": "currency"
+    },
+    "﹩": {
+      "expected": "currency"
+    },
+    "USD": {
+      "expected": "currency"
+    },
+    "£": {
+      "expected": "currency"
+    },
+    "￡": {
+      "expected": "currency"
+    },
+    "GBP": {
+      "expected": "currency"
+    },
+    "¥": {
+      "expected": "currency"
+    },
+    "￥": {
+      "expected": "currency"
+    },
+    "JPY": {
+      "expected": "currency"
+    },
+    "€": {
+      "expected": "currency"
+    },
+    "EUR": {
+      "expected": "currency"
+    },
+    "₡": {
+      "expected": "currency"
+    },
+    "CRC": {
+      "expected": "currency"
+    },
+    "₢": {
+      "expected": "currency"
+    },
+    "₣": {
+      "expected": "currency"
+    },
+    "₤": {
+      "expected": "currency"
+    },
+    "₥": {
+      "expected": "currency"
+    },
+    "₦": {
+      "expected": "currency"
+    },
+    "NGN": {
+      "expected": "currency"
+    },
+    "₧": {
+      "expected": "currency"
+    },
+    "₨": {
+      "expected": "currency"
+    },
+    "₹": {
+      "expected": "currency"
+    },
+    "INR": {
+      "expected": "currency"
+    },
+    "NPR": {
+      "expected": "currency"
+    },
+    "PKR": {
+      "expected": "currency"
+    },
+    "LKR": {
+      "expected": "currency"
+    },
+    "₩": {
+      "expected": "currency"
+    },
+    "￦": {
+      "expected": "currency"
+    },
+    "KRW": {
+      "expected": "currency"
+    },
+    "₪": {
+      "expected": "currency"
+    },
+    "₫": {
+      "expected": "currency"
+    },
+    "₭": {
+      "expected": "currency"
+    },
+    "₮": {
+      "expected": "currency"
+    },
+    "₯": {
+      "expected": "currency"
+    },
+    "₰": {
+      "expected": "currency"
+    },
+    "₱": {
+      "expected": "currency"
+    },
+    "₲": {
+      "expected": "currency"
+    },
+    "₳": {
+      "expected": "currency"
+    },
+    "₴": {
+      "expected": "currency"
+    },
+    "UAH": {
+      "expected": "currency"
+    },
+    "₵": {
+      "expected": "currency"
+    },
+    "GHS": {
+      "expected": "currency"
+    },
+    "元": {
+      "expected": "currency"
+    },
+    "￠": {
+      "expected": "currency"
+    },
+    "¢": {
+      "expected": "currency"
+    },
+    "kwh": {
+      "expected": "energy"
+    },
+    "kWh": {
+      "expected": "energy"
+    },
+    "Ohm": {
+      "expected": "energy"
+    },
+    "ohm": {
+      "expected": "energy"
+    },
+    "ft": {
+      "expected": "length"
+    },
+    "ft.": {
+      "expected": "length"
+    },
+    "in": {
+      "expected": "length"
+    },
+    "in.": {
+      "expected": "length"
+    },
+    "mi": {
+      "expected": "length"
+    },
+    "mi.": {
+      "expected": "length"
+    },
+    "yd": {
+      "expected": "length"
+    },
+    "yd.": {
+      "expected": "length"
+    },
+    "li": {
+      "expected": "length"
+    },
+    "li.": {
+      "expected": "length"
+    },
+    "rd": {
+      "expected": "length"
+    },
+    "rd.": {
+      "expected": "length"
+    },
+    "ch": {
+      "expected": "length"
+    },
+    "ch.": {
+      "expected": "length"
+    },
+    "fur": {
+      "expected": "length"
+    },
+    "fur.": {
+      "expected": "length"
+    },
+    "n.m.": {
+      "expected": "length"
+    },
+    "b": {
+      "expected": "memory"
+    },
+    "KB": {
+      "expected": "memory"
+    },
+    "doz": {
+      "expected": "other"
+    },
+    "doz.": {
+      "expected": "other"
+    },
+    "dz": {
+      "expected": "other"
+    },
+    "dz.": {
+      "expected": "other"
+    },
+    "kt": {
+      "expected": "speed"
+    },
+    "kt.": {
+      "expected": "speed"
+    },
+    "mph": {
+      "expected": "speed"
+    },
+    "rpm": {
+      "expected": "speed"
+    },
+    "kmh": {
+      "expected": "speed"
+    },
+    "F": {
+      "expected": "temperature"
+    },
+    "F.": {
+      "expected": "temperature"
+    },
+    "°F": {
+      "expected": "temperature"
+    },
+    "C": {
+      "expected": "temperature"
+    },
+    "°C": {
+      "expected": "temperature"
+    },
+    "K": {
+      "expected": "temperature"
+    },
+    "°K": {
+      "expected": "temperature"
+    },
+    "min": {
+      "expected": "time"
+    },
+    "h": {
+      "expected": "time"
+    },
+    "hr": {
+      "expected": "time"
+    },
+    "cu": {
+      "expected": "volume"
+    },
+    "cu.": {
+      "expected": "volume"
+    },
+    "cu in": {
+      "expected": "volume"
+    },
+    "cu. in.": {
+      "expected": "volume"
+    },
+    "cu ft": {
+      "expected": "volume"
+    },
+    "cu. ft.": {
+      "expected": "volume"
+    },
+    "cu yd": {
+      "expected": "volume"
+    },
+    "cu. yd.": {
+      "expected": "volume"
+    },
+    "bbl.": {
+      "expected": "volume"
+    },
+    "bbl": {
+      "expected": "volume"
+    },
+    "fl. oz.": {
+      "expected": "volume"
+    },
+    "fl oz": {
+      "expected": "volume"
+    },
+    "gal": {
+      "expected": "volume"
+    },
+    "gal.": {
+      "expected": "volume"
+    },
+    "pt": {
+      "expected": "volume"
+    },
+    "pt.": {
+      "expected": "volume"
+    },
+    "qt": {
+      "expected": "volume"
+    },
+    "qt.": {
+      "expected": "volume"
+    },
+    "fl dr": {
+      "expected": "volume"
+    },
+    "fl. dr.": {
+      "expected": "volume"
+    },
+    "tbsp": {
+      "expected": "volume"
+    },
+    "tbsp.": {
+      "expected": "volume"
+    },
+    "Tbsp": {
+      "expected": "volume"
+    },
+    "Tbsp.": {
+      "expected": "volume"
+    },
+    "tsp": {
+      "expected": "volume"
+    },
+    "tsp.": {
+      "expected": "volume"
+    },
+    "cp": {
+      "expected": "volume"
+    },
+    "cp.": {
+      "expected": "volume"
+    },
+    "cc": {
+      "expected": "volume"
+    },
+    "ccm": {
+      "expected": "volume"
+    },
+    "dr": {
+      "expected": "weight"
+    },
+    "dr.": {
+      "expected": "weight"
+    },
+    "oz": {
+      "expected": "weight"
+    },
+    "oz.": {
+      "expected": "weight"
+    },
+    "lb": {
+      "expected": "weight"
+    },
+    "lb.": {
+      "expected": "weight"
+    },
+    "st": {
+      "expected": "weight"
+    },
+    "st.": {
+      "expected": "weight"
+    },
+    "qtr": {
+      "expected": "weight"
+    },
+    "qtr.": {
+      "expected": "weight"
+    },
+    "cwt": {
+      "expected": "weight"
+    },
+    "cwt.": {
+      "expected": "weight"
+    },
+    "LT": {
+      "expected": "weight"
+    },
+    "L.T.": {
+      "expected": "weight"
+    },
+    "gr": {
+      "expected": "weight"
+    },
+    "mcg": {
+      "expected": "weight"
+    },
+    "t": {
+      "expected": "weight"
+    },
+    "T": {
+      "expected": "weight"
+    },
+    "′": {
+      "expected": "time"
+    },
+    "°": {
+      "expected": "time"
+    },
+    "″": {
+      "expected": "time"
+    }
+  }
+}

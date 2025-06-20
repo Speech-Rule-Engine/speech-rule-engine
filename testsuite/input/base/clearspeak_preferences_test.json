@@ -1,0 +1,154 @@
+{
+  "tests": 
+  {
+    "Abs01": {
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>"
+    },
+    "Metric01": {
+      "input": "<mrow><mrow><mo>‖</mo><mi>x</mi><mo>‖</mo></mrow></mrow>"
+    },
+    "Bar001": {
+      "input": "<mover accent=\"true\"><mi>f</mi><mo>¯</mo></mover>"
+    },
+    "Cap001": {
+      "input": "<mi>A</mi>"
+    },
+    "Currency001": {
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">$</mi>"
+    },
+    "In_set_0": {
+      "input": "<mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo>"
+    },
+    "Preferences_in_0": {
+      "input": "<mo>&#x2208;</mo>"
+    },
+    "Enclose_0": {
+      "input": "<menclose notation=\"box\"><mn>12</mn></menclose>"
+    },
+    "NamedSet_0": {
+      "input": "<msup><mi mathvariant=\"double-struck\">Q</mi><mn>+</mn></msup>"
+    },
+    "ExponentLatinCap": {
+      "input": "<msup><mi>x</mi><mi>A</mi></msup>"
+    },
+    "VectorEndDeterminant": {
+      "input": "<mo>|</mo><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>|</mo>"
+    },
+    "MultiLines_0": {
+      "input": "<mrow><mtable><mtr><mtd><mrow><mi>f</mi><mo >(</mo><mi>x</mi><mo >)</mo><mo>=</mo><mo>−</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow>"
+    },
+    "CompositeFunctionFences": {
+      "input": "<mrow><mrow><mo>(</mo><mi>f</mi><mo>+</mo><mi>g</mi><mo>)</mo></mrow><mo>(</mo><mn>2</mn><mo>+</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "Angle_0_Angle": {
+      "input": "<mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>20</mn><mo>″</mo></msup></mrow>"
+    },
+    "NestedRoots_3": {
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt><mo>+</mo><mi>b</mi></msqrt>"
+    },
+    "Set_1": {
+      "input": "<mo>{</mo><mi>x</mi><mo>&#x2209;</mo><mi>A</mi><mo>|</mo><mi>B</mi><mo>}</mo>"
+    },
+    "VertLine_SuchThat": {
+      "input": "<mrow><mn>3</mn><mo>|</mo><mn>6</mn></mrow>",
+      "id": 1
+    },
+    "Exp001": {
+      "input": "<mrow><msup><mn>3</mn><mn>2</mn></msup></mrow>"
+    },
+    "LatinMathfontsUpperCaps_0": {
+      "input": "<mi>&#x0041;</mi>"
+    },
+    "Frac001": {
+      "input": "<mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>"
+    },
+    "Function007": {
+      "input": "<mrow><mi>h</mi><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow>"
+    },
+    "Function001": {
+      "input": "<mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>"
+    },
+    "ImpTimes001": {
+      "input": "<mrow><mn>2</mn><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow>"
+    },
+    "Issue230_1": {
+      "input": "<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>"
+    },
+    "Issue_689_3": {
+      "input": "<mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>3</mn></msub></mtd><mtd><msub><mi>c</mi><mn>4</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow>"
+    },
+    "Log001": {
+      "input": "<mrow><mi>log</mi><mi>x</mi></mrow>"
+    },
+    "Log002": {
+      "input": "<mi>log</mi>"
+    },
+    "Matrix001": {
+      "input": "<mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>)</mo></mrow></mrow>"
+    },
+    "Multiline001": {
+      "input": "<mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable>"
+    },
+    "Multiline016": {
+      "input": "<mrow><mo>{</mo><mrow><mtable><mtr><mtd><mrow><mo>−</mo><mi>x</mi><mtext>&#xA0;if&#xA0;</mtext><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>x</mi><mtext>  &#xA0;if&#xA0;</mtext><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow></mrow>"
+    },
+    "Multiline020": {
+      "input": "<math style=\"background-color:#\"><semantics><mtable><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>7</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>17</mn></mtd></mtr></mtable></semantics></math>"
+    },
+    "NumSys001": {
+      "input": "<mi>ℝ</mi>"
+    },
+    "Paren001": {
+      "input": "<mrow><mrow><mo>(</mo><mrow><mn>25</mn></mrow><mo>)</mo></mrow></mrow>"
+    },
+    "Sum001": {
+      "input": "<mrow><mstyle displaystyle=\"true\"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>10</mn></mrow></munderover><mi>n</mi></mstyle></mrow>"
+    },
+    "Ellipses001": {
+      "input": "<mrow><mo>…</mo></mrow>"
+    },
+    "Dot001": {
+      "input": "<mrow><mo>⋅</mo></mrow>"
+    },
+    "X001": {
+      "input": "<mrow><mo>×</mo></mrow>"
+    },
+    "MembSym001": {
+      "input": "<mtext>If </mtext><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow><mtext> then </mtext><mrow><mn>2</mn><mi>x</mi></mrow><mtext> is an even  number.</mtext>"
+    },
+    "SetMemb001": {
+      "input": "<mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>:</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow>"
+    },
+    "Triangle001": {
+      "input": "<mrow><mi>Δ</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow>"
+    },
+    "VertLine001": {
+      "input": "<mo>|</mo>"
+    },
+    "CombPerm001": {
+      "test": false,
+      "input": "<mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow>"
+    },
+    "Prime001": {
+      "input": "<mrow><mo>′</mo></mrow>"
+    },
+    "Root001": {
+      "input": "<mrow><msqrt><mn>2</mn></msqrt></mrow>"
+    },
+    "Root002": {
+      "input": "<mrow><mroot><mn>3</mn><mn>2</mn></mroot></mrow>"
+    },
+    "Set001": {
+      "input": "<mrow><mo>{</mo><mi>x</mi><mo>∈</mo><mi>ℤ</mi><mo>|</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>7</mn><mo>}</mo></mrow>"
+    },
+    "Trig001": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi></mrow>"
+    },
+    "Trig002": {
+      "input": "<mi>sin</mi>"
+    },
+    "Triangle": {
+      "input": "<mrow><mi>Δ</mi></mrow>"
+    }
+  }
+}

@@ -1,0 +1,3022 @@
+{
+  "factory": "speech",
+  "name": "PreTeXtAataApplTests",
+  "information": "PreTeXt Aata document Appl expressions.",
+  "locale": "nemeth",
+  "domain": "default",
+  "style": "default",
+  "modality": "braille",
+  "tests": {
+    "Appl_0": {
+      "id": "m-466",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#yRU",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(x)",
+      "expected": "⠋⠷⠭⠾",
+      "reference": {
+        "m-466": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#yRU",
+        "m-9946": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+        "m-9956": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9959": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-10181": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10187": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10325": "http://abstract.ups.edu/aata/section-irreducible-poly.html#EoL",
+        "m-10327": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mzp",
+        "m-10355": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mzp",
+        "m-10384": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10397": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10422": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10439": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10441": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10444": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10546": "http://abstract.ups.edu/aata/exercises-poly.html#JIy",
+        "m-10592": "http://abstract.ups.edu/aata/exercises-poly.html#Tck",
+        "m-10600": "http://abstract.ups.edu/aata/exercises-poly.html#rLY",
+        "m-10601": "http://abstract.ups.edu/aata/exercises-poly.html#rLY",
+        "m-11114": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-11219": "http://abstract.ups.edu/aata/section-factorization-domains.html#fAt",
+        "m-11267": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-12389": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Eyp",
+        "m-13060": "http://abstract.ups.edu/aata/section-extension-fields.html#xrT",
+        "m-13064": "http://abstract.ups.edu/aata/section-extension-fields.html#xrT",
+        "m-13075": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13078": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13541": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13546": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-14021": "http://abstract.ups.edu/aata/section-finite-field.html#SBH",
+        "m-14022": "http://abstract.ups.edu/aata/section-finite-field.html#SBH",
+        "m-14042": "http://abstract.ups.edu/aata/section-finite-field.html#yIQ",
+        "m-14045": "http://abstract.ups.edu/aata/section-finite-field.html#vzP",
+        "m-14046": "http://abstract.ups.edu/aata/section-finite-field.html#vzP",
+        "m-14048": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14049": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14054": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14055": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14059": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14070": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14071": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14075": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14076": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14078": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14081": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14084": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14087": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14088": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14090": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14092": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14097": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14099": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14106": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14107": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14117": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14220": "http://abstract.ups.edu/aata/section-poly-codes.html#fVs",
+        "m-14239": "http://abstract.ups.edu/aata/section-poly-codes.html#McB",
+        "m-14388": "http://abstract.ups.edu/aata/section-poly-codes.html#pDm",
+        "m-14394": "http://abstract.ups.edu/aata/section-poly-codes.html#pDm",
+        "m-14436": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv",
+        "m-14442": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv",
+        "m-14600": "http://abstract.ups.edu/aata/exercises-finite.html#lKE",
+        "m-14717": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+        "m-14720": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+        "m-14722": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+        "m-14747": "http://abstract.ups.edu/aata/section-field-automorphisms.html#USK",
+        "m-14750": "http://abstract.ups.edu/aata/section-field-automorphisms.html#USK",
+        "m-14753": "http://abstract.ups.edu/aata/section-field-automorphisms.html#VgS",
+        "m-14756": "http://abstract.ups.edu/aata/section-field-automorphisms.html#VgS",
+        "m-14772": "http://abstract.ups.edu/aata/section-field-automorphisms.html#XNq",
+        "m-14775": "http://abstract.ups.edu/aata/section-field-automorphisms.html#XNq",
+        "m-14777": "http://abstract.ups.edu/aata/section-field-automorphisms.html#XNq",
+        "m-14786": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14795": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14805": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14809": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14880": "http://abstract.ups.edu/aata/section-field-automorphisms.html#iWp",
+        "m-14882": "http://abstract.ups.edu/aata/section-field-automorphisms.html#iWp",
+        "m-14885": "http://abstract.ups.edu/aata/section-field-automorphisms.html#iWp",
+        "m-14896": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14899": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14901": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14904": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14910": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14917": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14919": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-14923": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-14929": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-14932": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Bob",
+        "m-14954": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14959": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14961": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-15106": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15110": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15113": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15131": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15134": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15153": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15214": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ",
+        "m-15218": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ",
+        "m-15274": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15276": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15278": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15286": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15298": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#nGi",
+        "m-15317": "http://abstract.ups.edu/aata/section-galois-applications.html#Qxm",
+        "m-15318": "http://abstract.ups.edu/aata/section-galois-applications.html#Qxm",
+        "m-15328": "http://abstract.ups.edu/aata/section-galois-applications.html#wEv",
+        "m-15331": "http://abstract.ups.edu/aata/section-galois-applications.html#wEv",
+        "m-15334": "http://abstract.ups.edu/aata/section-galois-applications.html#wEv",
+        "m-15335": "http://abstract.ups.edu/aata/section-galois-applications.html#wEv",
+        "m-15453": "http://abstract.ups.edu/aata/section-galois-applications.html#wqa",
+        "m-15456": "http://abstract.ups.edu/aata/section-galois-applications.html#wqa",
+        "m-15457": "http://abstract.ups.edu/aata/section-galois-applications.html#wqa",
+        "m-15459": "http://abstract.ups.edu/aata/section-galois-applications.html#wEi",
+        "m-15464": "http://abstract.ups.edu/aata/section-galois-applications.html#wEi",
+        "m-15500": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15503": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15504": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15508": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15509": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15516": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15517": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15519": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15520": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15524": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15532": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15537": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15551": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15558": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+        "m-15561": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+        "m-15582": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+        "m-15672": "http://abstract.ups.edu/aata/exercises-galois.html#Dza",
+        "m-15674": "http://abstract.ups.edu/aata/exercises-galois.html#Dza",
+        "m-15676": "http://abstract.ups.edu/aata/exercises-galois.html#jGj",
+        "m-15691": "http://abstract.ups.edu/aata/exercises-galois.html#vUB",
+        "m-15763": "http://abstract.ups.edu/aata/exercises-galois.html#Zhe",
+        "m-15765": "http://abstract.ups.edu/aata/exercises-galois.html#Zhe",
+        "m-15768": "http://abstract.ups.edu/aata/exercises-galois.html#Zhe",
+        "m-15777": "http://abstract.ups.edu/aata/exercises-galois.html#gSH",
+        "m-15780": "http://abstract.ups.edu/aata/exercises-galois.html#MZQ"
+      }
+    },
+    "Appl_1": {
+      "id": "m-467",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#yRU",
+      "input": "<math><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "g(x)",
+      "expected": "⠛⠷⠭⠾",
+      "reference": {
+        "m-467": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#yRU",
+        "m-9947": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+        "m-9950": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+        "m-9972": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9985": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-10182": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10185": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10440": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10443": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-11115": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-11220": "http://abstract.ups.edu/aata/section-factorization-domains.html#fAt",
+        "m-11268": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-12390": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Eyp",
+        "m-13150": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13153": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13542": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13549": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-14230": "http://abstract.ups.edu/aata/section-poly-codes.html#McB",
+        "m-14240": "http://abstract.ups.edu/aata/section-poly-codes.html#McB",
+        "m-14244": "http://abstract.ups.edu/aata/section-poly-codes.html#McB",
+        "m-14326": "http://abstract.ups.edu/aata/section-poly-codes.html#Eyc",
+        "m-14385": "http://abstract.ups.edu/aata/section-poly-codes.html#KIN",
+        "m-14393": "http://abstract.ups.edu/aata/section-poly-codes.html#pDm",
+        "m-14441": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv",
+        "m-14587": "http://abstract.ups.edu/aata/exercises-finite.html#tpd",
+        "m-14601": "http://abstract.ups.edu/aata/exercises-finite.html#lKE",
+        "m-14927": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-14955": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14960": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14964": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14987": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14992": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-15141": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15146": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15148": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15149": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ",
+        "m-15150": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ"
+      }
+    },
+    "Appl_2": {
+      "id": "m-638",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(A_2)",
+      "expected": "⠋⠷⠠⠁⠆⠾",
+      "reference": {
+        "m-638": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+        "m-643": "http://abstract.ups.edu/aata/exercises-sets.html#BcG"
+      }
+    },
+    "Appl_3": {
+      "id": "m-685",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">P</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb P}({\\mathbb R})",
+      "expected": "⠈⠰⠠⠏⠷⠈⠰⠠⠗⠾",
+      "reference": {
+        "m-685": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ"
+      }
+    },
+    "Appl_4": {
+      "id": "m-704",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#yPH",
+      "input": "<math><mi>S</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "S(n)",
+      "expected": "⠠⠎⠷⠝⠾",
+      "reference": {
+        "m-704": "http://abstract.ups.edu/aata/section-math-induction.html#yPH",
+        "m-712": "http://abstract.ups.edu/aata/section-math-induction.html#yPH",
+        "m-740": "http://abstract.ups.edu/aata/section-math-induction.html#eWQ",
+        "m-747": "http://abstract.ups.edu/aata/section-math-induction.html#eWQ",
+        "m-1052": "http://abstract.ups.edu/aata/exercises-integers.html#iWP",
+        "m-1061": "http://abstract.ups.edu/aata/exercises-integers.html#PdY",
+        "m-1083": "http://abstract.ups.edu/aata/exercises-integers.html#bsq"
+      }
+    },
+    "Appl_5": {
+      "id": "m-706",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#yPH",
+      "input": "<math><mi>S</mi><mo stretchy=\"false\">(</mo><msub><mi>n</mi><mn>0</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "S(n_0)",
+      "expected": "⠠⠎⠷⠝⠴⠾",
+      "reference": {
+        "m-706": "http://abstract.ups.edu/aata/section-math-induction.html#yPH",
+        "m-742": "http://abstract.ups.edu/aata/section-math-induction.html#eWQ"
+      }
+    },
+    "Appl_6": {
+      "id": "m-710",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#yPH",
+      "input": "<math><mi>S</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "S(k)",
+      "expected": "⠠⠎⠷⠅⠾",
+      "reference": {
+        "m-710": "http://abstract.ups.edu/aata/section-math-induction.html#yPH"
+      }
+    },
+    "Appl_7": {
+      "id": "m-1032",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#eBr",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(n)",
+      "expected": "⠋⠷⠝⠾",
+      "reference": {
+        "m-1032": "http://abstract.ups.edu/aata/section-division-algorithm.html#eBr"
+      }
+    },
+    "Appl_8": {
+      "id": "m-1070",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#RDf",
+      "input": "<math><msup><mi>f</mi><mrow><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></mrow></msup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f^{(n)} (x)",
+      "expected": "⠋⠘⠷⠝⠾⠐⠷⠭⠾",
+      "reference": {
+        "m-1070": "http://abstract.ups.edu/aata/exercises-integers.html#RDf"
+      }
+    },
+    "Appl_9": {
+      "id": "m-1087",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#qfP",
+      "input": "<math><mrow><mrow><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">P</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mi>X</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathcal P}(X)",
+      "expected": "⠈⠰⠠⠏⠷⠠⠭⠾",
+      "reference": {
+        "m-1087": "http://abstract.ups.edu/aata/exercises-integers.html#qfP",
+        "m-11616": "http://abstract.ups.edu/aata/section-boolean-lattices.html#AJy",
+        "m-11618": "http://abstract.ups.edu/aata/section-boolean-lattices.html#AJy",
+        "m-11705": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11708": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11852": "http://abstract.ups.edu/aata/section-boolean-algebras.html#Kdk",
+        "m-11854": "http://abstract.ups.edu/aata/section-boolean-algebras.html#Kdk",
+        "m-11858": "http://abstract.ups.edu/aata/section-boolean-algebras.html#Kdk",
+        "m-11870": "http://abstract.ups.edu/aata/section-boolean-algebras.html#qkt",
+        "m-11885": "http://abstract.ups.edu/aata/section-boolean-algebras.html#WrC",
+        "m-11897": "http://abstract.ups.edu/aata/section-boolean-algebras.html#CyL",
+        "m-12097": "http://abstract.ups.edu/aata/section-boolean-algebras.html#rpM",
+        "m-12099": "http://abstract.ups.edu/aata/section-boolean-algebras.html#ltj",
+        "m-12171": "http://abstract.ups.edu/aata/exercises-boolean.html#IXR"
+      }
+    },
+    "Appl_10": {
+      "id": "m-1100",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#iBq",
+      "input": "<math><mo data-mjx-texclass=\"OP\" movablelimits=\"true\">gcd</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gcd(a,b)",
+      "expected": "⠛⠉⠙⠀⠷⠁⠠⠀⠃⠾",
+      "reference": {
+        "m-1100": "http://abstract.ups.edu/aata/exercises-integers.html#iBq",
+        "m-1236": "http://abstract.ups.edu/aata/integers-exercises-programming.html#VhF",
+        "m-11489": "http://abstract.ups.edu/aata/exercises-domains.html#ZwM"
+      }
+    },
+    "Appl_11": {
+      "id": "m-1167",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#fGK",
+      "input": "<math><mi>lcm</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\lcm(a,b)",
+      "expected": "⠇⠉⠍⠀⠷⠁⠠⠀⠃⠾",
+      "reference": {
+        "m-1167": "http://abstract.ups.edu/aata/exercises-integers.html#fGK"
+      }
+    },
+    "Appl_12": {
+      "id": "m-1231",
+      "url": "http://abstract.ups.edu/aata/integers-exercises-programming.html#paw",
+      "input": "<math><mi>A</mi><mo stretchy=\"false\">(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "A(3, 1)",
+      "expected": "⠠⠁⠷⠒⠠⠀⠂⠾",
+      "reference": {
+        "m-1231": "http://abstract.ups.edu/aata/integers-exercises-programming.html#paw"
+      }
+    },
+    "Appl_13": {
+      "id": "m-1232",
+      "url": "http://abstract.ups.edu/aata/integers-exercises-programming.html#paw",
+      "input": "<math><mi>A</mi><mo stretchy=\"false\">(</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "A(4, 1)",
+      "expected": "⠠⠁⠷⠲⠠⠀⠂⠾",
+      "reference": {
+        "m-1232": "http://abstract.ups.edu/aata/integers-exercises-programming.html#paw"
+      }
+    },
+    "Appl_14": {
+      "id": "m-1233",
+      "url": "http://abstract.ups.edu/aata/integers-exercises-programming.html#paw",
+      "input": "<math><mi>A</mi><mo stretchy=\"false\">(</mo><mn>5</mn><mo>,</mo><mn>1</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "A(5, 1)",
+      "expected": "⠠⠁⠷⠢⠠⠀⠂⠾",
+      "reference": {
+        "m-1233": "http://abstract.ups.edu/aata/integers-exercises-programming.html#paw"
+      }
+    },
+    "Appl_15": {
+      "id": "m-1323",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#HfA",
+      "input": "<math><mi>a</mi><mspace width=\"0.444em\" /><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\" /><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "a \\pmod{n}",
+      "expected": "⠁⠷⠍⠕⠙⠀⠝⠾",
+      "reference": {
+        "m-1323": "http://abstract.ups.edu/aata/section-mod-n-sym.html#HfA"
+      }
+    },
+    "Appl_16": {
+      "id": "m-1451",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(n)",
+      "expected": "⠠⠥⠷⠝⠾",
+      "reference": {
+        "m-1451": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+        "m-1453": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+        "m-1809": "http://abstract.ups.edu/aata/exercises-groups.html#TWI",
+        "m-2382": "http://abstract.ups.edu/aata/exercises-cyclic.html#nQq",
+        "m-2562": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#FTU",
+        "m-2577": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#Fyv",
+        "m-3301": "http://abstract.ups.edu/aata/section-fermat-euler.html#cVi",
+        "m-3307": "http://abstract.ups.edu/aata/section-fermat-euler.html#Wwc",
+        "m-3315": "http://abstract.ups.edu/aata/section-fermat-euler.html#VTm"
+      }
+    },
+    "Appl_17": {
+      "id": "m-1455",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>8</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(8)",
+      "expected": "⠠⠥⠷⠦⠾",
+      "reference": {
+        "m-1455": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+        "m-1456": "http://abstract.ups.edu/aata/section-groups-define.html#cdX",
+        "m-2316": "http://abstract.ups.edu/aata/exercises-cyclic.html#Pgp",
+        "m-3357": "http://abstract.ups.edu/aata/exercises-cosets.html#ODi",
+        "m-4969": "http://abstract.ups.edu/aata/section-direct-products.html#RPn",
+        "m-5038": "http://abstract.ups.edu/aata/exercises-isomorph.html#zLJ"
+      }
+    },
+    "Appl_18": {
+      "id": "m-1462",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"double-struck\">M</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb M}_2 ( {\\mathbb R})",
+      "expected": "⠈⠰⠠⠍⠆⠷⠈⠰⠠⠗⠾",
+      "reference": {
+        "m-1462": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1465": "http://abstract.ups.edu/aata/section-groups-define.html#JTc",
+        "m-1652": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-1654": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-1655": "http://abstract.ups.edu/aata/section-subgroups.html#uKe",
+        "m-6119": "http://abstract.ups.edu/aata/exercises-homomorph.html#oiy",
+        "m-9578": "http://abstract.ups.edu/aata/exercises-rings.html#cnf",
+        "m-9610": "http://abstract.ups.edu/aata/exercises-rings.html#Pwk",
+        "m-9773": "http://abstract.ups.edu/aata/exercises-rings.html#sus"
+      }
+    },
+    "Appl_19": {
+      "id": "m-1737",
+      "url": "http://abstract.ups.edu/aata/reading-questions-3.html#weS",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>16</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(16)",
+      "expected": "⠠⠥⠷⠂⠖⠾",
+      "reference": {
+        "m-1737": "http://abstract.ups.edu/aata/reading-questions-3.html#weS"
+      }
+    },
+    "Appl_20": {
+      "id": "m-1753",
+      "url": "http://abstract.ups.edu/aata/exercises-groups.html#Bjk",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(12)",
+      "expected": "⠠⠥⠷⠂⠆⠾",
+      "reference": {
+        "m-1753": "http://abstract.ups.edu/aata/exercises-groups.html#Bjk",
+        "m-5041": "http://abstract.ups.edu/aata/exercises-isomorph.html#fSS"
+      }
+    },
+    "Appl_21": {
+      "id": "m-1915",
+      "url": "http://abstract.ups.edu/aata/exercises-groups.html#DIr",
+      "input": "<math><mi>C</mi><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "C(H)",
+      "expected": "⠠⠉⠷⠠⠓⠾",
+      "reference": {
+        "m-1915": "http://abstract.ups.edu/aata/exercises-groups.html#DIr"
+      }
+    },
+    "Appl_22": {
+      "id": "m-2063",
+      "url": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Cpu",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>9</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(9)",
+      "expected": "⠠⠥⠷⠔⠾",
+      "reference": {
+        "m-2063": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Cpu",
+        "m-2065": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Cpu",
+        "m-2067": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Cpu"
+      }
+    },
+    "Appl_23": {
+      "id": "m-2298",
+      "url": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#pke",
+      "input": "<math><msup><mi>a</mi><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow></msup><mspace width=\"0.444em\" /><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\" /><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "a^{2^k} \\pmod{ n}",
+      "expected": "⠁⠘⠆⠘⠘⠅⠘⠐⠷⠍⠕⠙⠀⠝⠾",
+      "reference": {
+        "m-2298": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#pke"
+      }
+    },
+    "Appl_24": {
+      "id": "m-2309",
+      "url": "http://abstract.ups.edu/aata/reading-questions-4.html#LQt",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>20</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(20)",
+      "expected": "⠠⠥⠷⠆⠴⠾",
+      "reference": {
+        "m-2309": "http://abstract.ups.edu/aata/reading-questions-4.html#LQt",
+        "m-2336": "http://abstract.ups.edu/aata/exercises-cyclic.html#Jrd"
+      }
+    },
+    "Appl_25": {
+      "id": "m-2311",
+      "url": "http://abstract.ups.edu/aata/reading-questions-4.html#rXC",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>23</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(23)",
+      "expected": "⠠⠥⠷⠆⠒⠾",
+      "reference": {
+        "m-2311": "http://abstract.ups.edu/aata/reading-questions-4.html#rXC"
+      }
+    },
+    "Appl_26": {
+      "id": "m-2337",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#pym",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>18</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(18)",
+      "expected": "⠠⠥⠷⠂⠦⠾",
+      "reference": {
+        "m-2337": "http://abstract.ups.edu/aata/exercises-cyclic.html#pym"
+      }
+    },
+    "Appl_27": {
+      "id": "m-2368",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#jgx",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>30</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(30)",
+      "expected": "⠠⠥⠷⠒⠴⠾",
+      "reference": {
+        "m-2368": "http://abstract.ups.edu/aata/exercises-cyclic.html#jgx"
+      }
+    },
+    "Appl_28": {
+      "id": "m-2541",
+      "url": "http://abstract.ups.edu/aata/cyclic-exercises-programming.html#UHt",
+      "input": "<math><msup><mi>a</mi><mi>x</mi></msup><mspace width=\"0.444em\" /><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\" /><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "a^x \\pmod{ n}",
+      "expected": "⠁⠘⠭⠐⠷⠍⠕⠙⠀⠝⠾",
+      "reference": {
+        "m-2541": "http://abstract.ups.edu/aata/cyclic-exercises-programming.html#UHt"
+      }
+    },
+    "Appl_29": {
+      "id": "m-2565",
+      "url": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#gVL",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>40</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(40)",
+      "expected": "⠠⠥⠷⠲⠴⠾",
+      "reference": {
+        "m-2565": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#gVL",
+        "m-2571": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#NcU"
+      }
+    },
+    "Appl_30": {
+      "id": "m-2572",
+      "url": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#tkd",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>49</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(49)",
+      "expected": "⠠⠥⠷⠲⠔⠾",
+      "reference": {
+        "m-2572": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#tkd",
+        "m-2573": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#tkd"
+      }
+    },
+    "Appl_31": {
+      "id": "m-2574",
+      "url": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#Zrm",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>35</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(35)",
+      "expected": "⠠⠥⠷⠒⠢⠾",
+      "reference": {
+        "m-2574": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#Zrm",
+        "m-2576": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#Zrm"
+      }
+    },
+    "Appl_32": {
+      "id": "m-2629",
+      "url": "http://abstract.ups.edu/aata/section-permutation-definitions.html#bSg",
+      "input": "<math><mi>σ</mi><mo stretchy=\"false\">(</mo><mi>τ</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\sigma( \\tau( x))",
+      "expected": "⠨⠎⠷⠨⠞⠷⠭⠾⠾",
+      "reference": {
+        "m-2629": "http://abstract.ups.edu/aata/section-permutation-definitions.html#bSg"
+      }
+    },
+    "Appl_33": {
+      "id": "m-2630",
+      "url": "http://abstract.ups.edu/aata/section-permutation-definitions.html#bSg",
+      "input": "<math><mi>σ</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\sigma(x)",
+      "expected": "⠨⠎⠷⠭⠾",
+      "reference": {
+        "m-2630": "http://abstract.ups.edu/aata/section-permutation-definitions.html#bSg"
+      }
+    },
+    "Appl_34": {
+      "id": "m-3297",
+      "url": "http://abstract.ups.edu/aata/section-fermat-euler.html#wNZ",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi(n)",
+      "expected": "⠋⠷⠝⠾",
+      "reference": {
+        "m-3297": "http://abstract.ups.edu/aata/section-fermat-euler.html#wNZ",
+        "m-3303": "http://abstract.ups.edu/aata/section-fermat-euler.html#cVi",
+        "m-3316": "http://abstract.ups.edu/aata/section-fermat-euler.html#VTm",
+        "m-3453": "http://abstract.ups.edu/aata/exercises-cosets.html#sOa"
+      }
+    },
+    "Appl_35": {
+      "id": "m-3620",
+      "url": "http://abstract.ups.edu/aata/reading-questions-7.html#Rdc",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mn>893</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mn>456</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mn>123</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi(893\\,456\\,123)",
+      "expected": "⠨⠋⠷⠼⠦⠔⠒⠀⠼⠲⠢⠖⠀⠼⠂⠆⠒⠾",
+      "reference": {
+        "m-3620": "http://abstract.ups.edu/aata/reading-questions-7.html#Rdc"
+      }
+    },
+    "Appl_36": {
+      "id": "m-3866",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ",
+      "input": "<math><mi>d</mi><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "d({\\mathbf x}, {\\mathbf y})",
+      "expected": "⠙⠷⠸⠰⠭⠠⠀⠸⠰⠽⠾",
+      "reference": {
+        "m-3866": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ",
+        "m-3872": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ"
+      }
+    },
+    "Appl_37": {
+      "id": "m-3875",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ",
+      "input": "<math><mi>w</mi><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "w({\\mathbf x})",
+      "expected": "⠺⠷⠸⠰⠭⠾",
+      "reference": {
+        "m-3875": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ"
+      }
+    },
+    "Appl_38": {
+      "id": "m-4110",
+      "url": "http://abstract.ups.edu/aata/section-linear-codes.html#hnt",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"double-struck\">M</mi></mrow></mrow><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub><mo stretchy=\"false\">(</mo><msub><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb M}_{m \\times n}({\\mathbb Z}_2)",
+      "expected": "⠈⠰⠠⠍⠰⠍⠈⠡⠝⠐⠷⠈⠰⠠⠵⠆⠾",
+      "reference": {
+        "m-4110": "http://abstract.ups.edu/aata/section-linear-codes.html#hnt",
+        "m-4129": "http://abstract.ups.edu/aata/section-linear-codes.html#DMv",
+        "m-4134": "http://abstract.ups.edu/aata/section-linear-codes.html#oRF"
+      }
+    },
+    "Appl_39": {
+      "id": "m-4119",
+      "url": "http://abstract.ups.edu/aata/section-linear-codes.html#hnt",
+      "input": "<math><mi>Null</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\Null(H)",
+      "expected": "⠠⠝⠥⠇⠇⠷⠠⠓⠾",
+      "reference": {
+        "m-4119": "http://abstract.ups.edu/aata/section-linear-codes.html#hnt",
+        "m-4209": "http://abstract.ups.edu/aata/section-parity-check.html#jTE",
+        "m-4296": "http://abstract.ups.edu/aata/section-parity-check.html#hng",
+        "m-4316": "http://abstract.ups.edu/aata/section-parity-check.html#shX",
+        "m-4325": "http://abstract.ups.edu/aata/section-parity-check.html#shX"
+      }
+    },
+    "Appl_40": {
+      "id": "m-5039",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#fSS",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>5</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(5)",
+      "expected": "⠠⠥⠷⠢⠾",
+      "reference": {
+        "m-5039": "http://abstract.ups.edu/aata/exercises-isomorph.html#fSS"
+      }
+    },
+    "Appl_41": {
+      "id": "m-5040",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#fSS",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>10</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(10)",
+      "expected": "⠠⠥⠷⠂⠴⠾",
+      "reference": {
+        "m-5040": "http://abstract.ups.edu/aata/exercises-isomorph.html#fSS"
+      }
+    },
+    "Appl_42": {
+      "id": "m-5121",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#vxp",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>a</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi(a)",
+      "expected": "⠋⠷⠁⠾",
+      "reference": {
+        "m-5121": "http://abstract.ups.edu/aata/exercises-isomorph.html#vxp"
+      }
+    },
+    "Appl_43": {
+      "id": "m-5136",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#PEB",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mi>p</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(p)",
+      "expected": "⠠⠥⠷⠏⠾",
+      "reference": {
+        "m-5136": "http://abstract.ups.edu/aata/exercises-isomorph.html#PEB"
+      }
+    },
+    "Appl_44": {
+      "id": "m-5150",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#Uou",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut(G)",
+      "expected": "⠠⠁⠥⠞⠷⠠⠛⠾",
+      "reference": {
+        "m-5150": "http://abstract.ups.edu/aata/exercises-isomorph.html#Uou",
+        "m-5152": "http://abstract.ups.edu/aata/exercises-isomorph.html#Uou",
+        "m-5172": "http://abstract.ups.edu/aata/exercises-isomorph.html#YYn",
+        "m-6209": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#ZnV",
+        "m-6219": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#lCn"
+      }
+    },
+    "Appl_45": {
+      "id": "m-5155",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#AvD",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msub><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mn>6</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut( {\\mathbb Z}_6)",
+      "expected": "⠠⠁⠥⠞⠷⠈⠰⠠⠵⠖⠾",
+      "reference": {
+        "m-5155": "http://abstract.ups.edu/aata/exercises-isomorph.html#AvD"
+      }
+    },
+    "Appl_46": {
+      "id": "m-5158",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#gCM",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut( {\\mathbb Z})",
+      "expected": "⠠⠁⠥⠞⠷⠈⠰⠠⠵⠾",
+      "reference": {
+        "m-5158": "http://abstract.ups.edu/aata/exercises-isomorph.html#gCM",
+        "m-6230": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#KeX",
+        "m-9756": "http://abstract.ups.edu/aata/exercises-rings.html#cWZ"
+      }
+    },
+    "Appl_47": {
+      "id": "m-5168",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#sRe",
+      "input": "<math><mi>Inn</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\inn(G)",
+      "expected": "⠠⠊⠝⠝⠷⠠⠛⠾",
+      "reference": {
+        "m-5168": "http://abstract.ups.edu/aata/exercises-isomorph.html#sRe",
+        "m-5171": "http://abstract.ups.edu/aata/exercises-isomorph.html#YYn",
+        "m-6217": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#lCn",
+        "m-6218": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#lCn",
+        "m-6224": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#xQF"
+      }
+    },
+    "Appl_48": {
+      "id": "m-5358",
+      "url": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#Yvx",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mn>24</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(24)",
+      "expected": "⠠⠥⠷⠆⠲⠾",
+      "reference": {
+        "m-5358": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#Yvx",
+        "m-5359": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#Yvx"
+      }
+    },
+    "Appl_49": {
+      "id": "m-5694",
+      "url": "http://abstract.ups.edu/aata/exercises-normal.html#LPg",
+      "input": "<math><msub><mi>i</mi><mi>g</mi></msub><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "i_g(H)",
+      "expected": "⠊⠰⠛⠐⠷⠠⠓⠾",
+      "reference": {
+        "m-5694": "http://abstract.ups.edu/aata/exercises-normal.html#LPg"
+      }
+    },
+    "Appl_50": {
+      "id": "m-5697",
+      "url": "http://abstract.ups.edu/aata/exercises-normal.html#VSM",
+      "input": "<math><mi>C</mi><mo stretchy=\"false\">(</mo><mi>g</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "C(g)",
+      "expected": "⠠⠉⠷⠛⠾",
+      "reference": {
+        "m-5697": "http://abstract.ups.edu/aata/exercises-normal.html#VSM",
+        "m-5701": "http://abstract.ups.edu/aata/exercises-normal.html#VSM",
+        "m-5709": "http://abstract.ups.edu/aata/exercises-normal.html#rWp"
+      }
+    },
+    "Appl_51": {
+      "id": "m-5827",
+      "url": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#rde",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>e</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi( e)",
+      "expected": "⠋⠷⠑⠾",
+      "reference": {
+        "m-5827": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#rde"
+      }
+    },
+    "Appl_52": {
+      "id": "m-5833",
+      "url": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#Drw",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><msub><mi>H</mi><mn>1</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi( H_1 )",
+      "expected": "⠋⠷⠠⠓⠂⠾",
+      "reference": {
+        "m-5833": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#Drw",
+        "m-5848": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#fkl",
+        "m-5850": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#fkl",
+        "m-5855": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#fkl",
+        "m-5859": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#fkl"
+      }
+    },
+    "Appl_53": {
+      "id": "m-5841",
+      "url": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#jyF",
+      "input": "<math><msup><mi>ϕ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">(</mo><msub><mi>H</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi^{-1}(H_2)",
+      "expected": "⠋⠘⠤⠂⠐⠷⠠⠓⠆⠾",
+      "reference": {
+        "m-5841": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#jyF",
+        "m-5864": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#fkl"
+      }
+    },
+    "Appl_54": {
+      "id": "m-5891",
+      "url": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#NJx",
+      "input": "<math><msup><mi>ϕ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">(</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>e</mi><mo fence=\"false\" stretchy=\"false\">}</mo><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi^{-1} ( \\{ e \\} )",
+      "expected": "⠋⠘⠤⠂⠐⠷⠨⠷⠑⠨⠾⠾",
+      "reference": {
+        "m-5891": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#NJx"
+      }
+    },
+    "Appl_55": {
+      "id": "m-5894",
+      "url": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#NJx",
+      "input": "<math><mi>ker</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>ϕ</mi></math>",
+      "tex": "\\ker \\phi",
+      "expected": "⠅⠑⠗⠀⠨⠋",
+      "reference": {
+        "m-5894": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#NJx",
+        "m-5942": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#tQG",
+        "m-9285": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#XvV",
+        "m-9291": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#XvV"
+      }
+    },
+    "Appl_56": {
+      "id": "m-5967",
+      "url": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#mOK",
+      "input": "<math><mi>ψ</mi><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\psi( G)",
+      "expected": "⠨⠽⠷⠠⠛⠾",
+      "reference": {
+        "m-5967": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#mOK"
+      }
+    },
+    "Appl_57": {
+      "id": "m-6158",
+      "url": "http://abstract.ups.edu/aata/exercises-homomorph.html#jNa",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi(G)",
+      "expected": "⠋⠷⠠⠛⠾",
+      "reference": {
+        "m-6158": "http://abstract.ups.edu/aata/exercises-homomorph.html#jNa",
+        "m-6163": "http://abstract.ups.edu/aata/exercises-homomorph.html#PUj"
+      }
+    },
+    "Appl_58": {
+      "id": "m-6175",
+      "url": "http://abstract.ups.edu/aata/exercises-homomorph.html#owT",
+      "input": "<math><msup><mi>ϕ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi^{-1}(H)",
+      "expected": "⠋⠘⠤⠂⠐⠷⠠⠓⠾",
+      "reference": {
+        "m-6175": "http://abstract.ups.edu/aata/exercises-homomorph.html#owT"
+      }
+    },
+    "Appl_59": {
+      "id": "m-6225",
+      "url": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#xQF",
+      "input": "<math><mi>Z</mi><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "Z(G)",
+      "expected": "⠠⠵⠷⠠⠛⠾",
+      "reference": {
+        "m-6225": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#xQF",
+        "m-7554": "http://abstract.ups.edu/aata/section-class-equation.html#oZj",
+        "m-7567": "http://abstract.ups.edu/aata/section-class-equation.html#oZj",
+        "m-8096": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Zov",
+        "m-8097": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Zov",
+        "m-8140": "http://abstract.ups.edu/aata/section-sylow-theorems.html#FvE",
+        "m-8146": "http://abstract.ups.edu/aata/section-sylow-theorems.html#FvE",
+        "m-8147": "http://abstract.ups.edu/aata/section-sylow-theorems.html#FvE",
+        "m-8150": "http://abstract.ups.edu/aata/section-sylow-theorems.html#FvE"
+      }
+    },
+    "Appl_60": {
+      "id": "m-6226",
+      "url": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#dXO",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msub><mi>S</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut(S_3)",
+      "expected": "⠠⠁⠥⠞⠷⠠⠎⠒⠾",
+      "reference": {
+        "m-6226": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#dXO"
+      }
+    },
+    "Appl_61": {
+      "id": "m-6227",
+      "url": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#dXO",
+      "input": "<math><mi>Inn</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msub><mi>S</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\inn(S_3)",
+      "expected": "⠠⠊⠝⠝⠷⠠⠎⠒⠾",
+      "reference": {
+        "m-6227": "http://abstract.ups.edu/aata/homomorph-exercises-automorphisms.html#dXO"
+      }
+    },
+    "Appl_62": {
+      "id": "m-6374",
+      "url": "http://abstract.ups.edu/aata/section-matrix-groups.html#vnL",
+      "input": "<math><mi>O</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "O(n)",
+      "expected": "⠠⠕⠷⠝⠾",
+      "reference": {
+        "m-6374": "http://abstract.ups.edu/aata/section-matrix-groups.html#vnL",
+        "m-6378": "http://abstract.ups.edu/aata/section-matrix-groups.html#dry",
+        "m-6380": "http://abstract.ups.edu/aata/section-matrix-groups.html#dry",
+        "m-6382": "http://abstract.ups.edu/aata/section-matrix-groups.html#JyH",
+        "m-6468": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6470": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6474": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6489": "http://abstract.ups.edu/aata/section-symmetry.html#ION",
+        "m-6491": "http://abstract.ups.edu/aata/section-symmetry.html#ION",
+        "m-6496": "http://abstract.ups.edu/aata/section-symmetry.html#ION",
+        "m-6666": "http://abstract.ups.edu/aata/exercises-matrix.html#ZMY",
+        "m-6700": "http://abstract.ups.edu/aata/exercises-matrix.html#CZB",
+        "m-6708": "http://abstract.ups.edu/aata/exercises-matrix.html#vvc"
+      }
+    },
+    "Appl_63": {
+      "id": "m-6447",
+      "url": "http://abstract.ups.edu/aata/section-matrix-groups.html#ibr",
+      "input": "<math><mi>O</mi><mo stretchy=\"false\">(</mo><mn>2</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "O(2)",
+      "expected": "⠠⠕⠷⠆⠾",
+      "reference": {
+        "m-6447": "http://abstract.ups.edu/aata/section-matrix-groups.html#ibr",
+        "m-6456": "http://abstract.ups.edu/aata/section-matrix-groups.html#wAv",
+        "m-6503": "http://abstract.ups.edu/aata/section-symmetry.html#LJt",
+        "m-6534": "http://abstract.ups.edu/aata/section-symmetry.html#Bko",
+        "m-6542": "http://abstract.ups.edu/aata/section-symmetry.html#RFJ",
+        "m-6543": "http://abstract.ups.edu/aata/section-symmetry.html#RFJ",
+        "m-6622": "http://abstract.ups.edu/aata/section-symmetry.html#yZC",
+        "m-6727": "http://abstract.ups.edu/aata/exercises-matrix.html#Jkm"
+      }
+    },
+    "Appl_64": {
+      "id": "m-6471",
+      "url": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+      "input": "<math><mi>E</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "E(n)",
+      "expected": "⠠⠑⠷⠝⠾",
+      "reference": {
+        "m-6471": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi",
+        "m-6480": "http://abstract.ups.edu/aata/section-matrix-groups.html#BUi"
+      }
+    },
+    "Appl_65": {
+      "id": "m-6522",
+      "url": "http://abstract.ups.edu/aata/section-symmetry.html#Vdf",
+      "input": "<math><mi>E</mi><mo stretchy=\"false\">(</mo><mn>2</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "E(2)",
+      "expected": "⠠⠑⠷⠆⠾",
+      "reference": {
+        "m-6522": "http://abstract.ups.edu/aata/section-symmetry.html#Vdf",
+        "m-6524": "http://abstract.ups.edu/aata/section-symmetry.html#aSr",
+        "m-6539": "http://abstract.ups.edu/aata/section-symmetry.html#RFJ",
+        "m-6611": "http://abstract.ups.edu/aata/section-symmetry.html#mLk",
+        "m-6688": "http://abstract.ups.edu/aata/exercises-matrix.html#qLj",
+        "m-6705": "http://abstract.ups.edu/aata/exercises-matrix.html#PnT",
+        "m-6726": "http://abstract.ups.edu/aata/exercises-matrix.html#Jkm"
+      }
+    },
+    "Appl_66": {
+      "id": "m-6669",
+      "url": "http://abstract.ups.edu/aata/exercises-matrix.html#Utl",
+      "input": "<math><mi>O</mi><mo stretchy=\"false\">(</mo><mn>3</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "O(3)",
+      "expected": "⠠⠕⠷⠒⠾",
+      "reference": {
+        "m-6669": "http://abstract.ups.edu/aata/exercises-matrix.html#Utl"
+      }
+    },
+    "Appl_67": {
+      "id": "m-8079",
+      "url": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Zov",
+      "input": "<math><mi>C</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "C(x_i)",
+      "expected": "⠠⠉⠷⠭⠰⠊⠐⠾",
+      "reference": {
+        "m-8079": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Zov",
+        "m-8083": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Zov",
+        "m-8087": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Zov",
+        "m-8132": "http://abstract.ups.edu/aata/section-sylow-theorems.html#FvE"
+      }
+    },
+    "Appl_68": {
+      "id": "m-8183",
+      "url": "http://abstract.ups.edu/aata/section-sylow-theorems.html#ITa",
+      "input": "<math><mi>N</mi><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "N(H)",
+      "expected": "⠠⠝⠷⠠⠓⠾",
+      "reference": {
+        "m-8183": "http://abstract.ups.edu/aata/section-sylow-theorems.html#ITa",
+        "m-8184": "http://abstract.ups.edu/aata/section-sylow-theorems.html#ITa",
+        "m-8587": "http://abstract.ups.edu/aata/exercises-sylow.html#FYu",
+        "m-8690": "http://abstract.ups.edu/aata/exercises-sylow.html#yPu"
+      }
+    },
+    "Appl_69": {
+      "id": "m-8198",
+      "url": "http://abstract.ups.edu/aata/section-sylow-theorems.html#dYo",
+      "input": "<math><mi>N</mi><mo stretchy=\"false\">(</mo><mi>P</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "N(P)",
+      "expected": "⠠⠝⠷⠠⠏⠾",
+      "reference": {
+        "m-8198": "http://abstract.ups.edu/aata/section-sylow-theorems.html#dYo"
+      }
+    },
+    "Appl_70": {
+      "id": "m-9069",
+      "url": "http://abstract.ups.edu/aata/section-domains-and-fields.html#baI",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>i</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[ i ]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠊⠈⠾",
+      "reference": {
+        "m-9069": "http://abstract.ups.edu/aata/section-domains-and-fields.html#baI",
+        "m-9611": "http://abstract.ups.edu/aata/exercises-rings.html#vDt",
+        "m-11144": "http://abstract.ups.edu/aata/section-factorization-domains.html#vtl",
+        "m-11152": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+        "m-11156": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+        "m-11163": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+        "m-11176": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+        "m-11178": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+        "m-11404": "http://abstract.ups.edu/aata/exercises-domains.html#Rbp",
+        "m-11405": "http://abstract.ups.edu/aata/exercises-domains.html#Rbp",
+        "m-11443": "http://abstract.ups.edu/aata/exercises-domains.html#hZA",
+        "m-11446": "http://abstract.ups.edu/aata/exercises-domains.html#reR"
+      }
+    },
+    "Appl_71": {
+      "id": "m-9084",
+      "url": "http://abstract.ups.edu/aata/section-domains-and-fields.html#npa",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>2</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{2}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠆⠻⠾",
+      "reference": {
+        "m-9084": "http://abstract.ups.edu/aata/section-domains-and-fields.html#npa",
+        "m-9557": "http://abstract.ups.edu/aata/exercises-rings.html#CTx",
+        "m-12534": "http://abstract.ups.edu/aata/section-linear-independence.html#Jii",
+        "m-12536": "http://abstract.ups.edu/aata/section-linear-independence.html#ynE",
+        "m-12576": "http://abstract.ups.edu/aata/exercises-vect.html#NSb",
+        "m-13731": "http://abstract.ups.edu/aata/exercises-fields.html#Bdx",
+        "m-14032": "http://abstract.ups.edu/aata/section-finite-field.html#Ucz",
+        "m-14035": "http://abstract.ups.edu/aata/section-finite-field.html#Ucz",
+        "m-14761": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EEt"
+      }
+    },
+    "Appl_72": {
+      "id": "m-9140",
+      "url": "http://abstract.ups.edu/aata/section-domains-and-fields.html#ucB",
+      "input": "<math><mi>char</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>R</mi></math>",
+      "tex": "\\chr R",
+      "expected": "⠉⠓⠁⠗⠀⠠⠗",
+      "reference": {
+        "m-9140": "http://abstract.ups.edu/aata/section-domains-and-fields.html#ucB"
+      }
+    },
+    "Appl_73": {
+      "id": "m-9193",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#fKB",
+      "input": "<math><mi>C</mi><mo stretchy=\"false\">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "C[a, b]",
+      "expected": "⠠⠉⠈⠷⠁⠠⠀⠃⠈⠾",
+      "reference": {
+        "m-9193": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#fKB"
+      }
+    },
+    "Appl_74": {
+      "id": "m-9201",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#nRD",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>R</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi(R)",
+      "expected": "⠋⠷⠠⠗⠾",
+      "reference": {
+        "m-9201": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#nRD",
+        "m-9211": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#gne",
+        "m-9634": "http://abstract.ups.edu/aata/exercises-rings.html#vaD",
+        "m-9644": "http://abstract.ups.edu/aata/exercises-rings.html#nwe"
+      }
+    },
+    "Appl_75": {
+      "id": "m-9334",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#jKA",
+      "input": "<math><mi>ker</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>ψ</mi></math>",
+      "tex": "\\ker \\psi",
+      "expected": "⠅⠑⠗⠀⠨⠽",
+      "reference": {
+        "m-9334": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#jKA"
+      }
+    },
+    "Appl_76": {
+      "id": "m-9568",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#zaC",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"double-struck\">M</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb M}_2( {\\mathbb Z} )",
+      "expected": "⠈⠰⠠⠍⠆⠷⠈⠰⠠⠵⠾",
+      "reference": {
+        "m-9568": "http://abstract.ups.edu/aata/exercises-rings.html#zaC",
+        "m-9581": "http://abstract.ups.edu/aata/exercises-rings.html#Iuo"
+      }
+    },
+    "Appl_77": {
+      "id": "m-9571",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#fhL",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"double-struck\">M</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><msub><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb M}_2( {\\mathbb Z}_2 )",
+      "expected": "⠈⠰⠠⠍⠆⠷⠈⠰⠠⠵⠆⠾",
+      "reference": {
+        "m-9571": "http://abstract.ups.edu/aata/exercises-rings.html#fhL"
+      }
+    },
+    "Appl_78": {
+      "id": "m-9725",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#aFj",
+      "input": "<math><mi>Z</mi><mo stretchy=\"false\">(</mo><mi>R</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "Z(R)",
+      "expected": "⠠⠵⠷⠠⠗⠾",
+      "reference": {
+        "m-9725": "http://abstract.ups.edu/aata/exercises-rings.html#aFj"
+      }
+    },
+    "Appl_79": {
+      "id": "m-9747",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#kBy",
+      "input": "<math><mi>Inn</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>R</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\inn(R)",
+      "expected": "⠠⠊⠝⠝⠷⠠⠗⠾",
+      "reference": {
+        "m-9747": "http://abstract.ups.edu/aata/exercises-rings.html#kBy",
+        "m-9750": "http://abstract.ups.edu/aata/exercises-rings.html#QIH"
+      }
+    },
+    "Appl_80": {
+      "id": "m-9749",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#QIH",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>R</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut(R)",
+      "expected": "⠠⠁⠥⠞⠷⠠⠗⠾",
+      "reference": {
+        "m-9749": "http://abstract.ups.edu/aata/exercises-rings.html#QIH",
+        "m-9751": "http://abstract.ups.edu/aata/exercises-rings.html#QIH"
+      }
+    },
+    "Appl_81": {
+      "id": "m-9752",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#wPQ",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mi>R</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U(R)",
+      "expected": "⠠⠥⠷⠠⠗⠾",
+      "reference": {
+        "m-9752": "http://abstract.ups.edu/aata/exercises-rings.html#wPQ"
+      }
+    },
+    "Appl_82": {
+      "id": "m-9757",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#cWZ",
+      "input": "<math><mi>Inn</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\inn( {\\mathbb Z})",
+      "expected": "⠠⠊⠝⠝⠷⠈⠰⠠⠵⠾",
+      "reference": {
+        "m-9757": "http://abstract.ups.edu/aata/exercises-rings.html#cWZ"
+      }
+    },
+    "Appl_83": {
+      "id": "m-9758",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#cWZ",
+      "input": "<math><mi>U</mi><mo stretchy=\"false\">(</mo><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "U( {\\mathbb Z})",
+      "expected": "⠠⠥⠷⠈⠰⠠⠵⠾",
+      "reference": {
+        "m-9758": "http://abstract.ups.edu/aata/exercises-rings.html#cWZ"
+      }
+    },
+    "Appl_84": {
+      "id": "m-9799",
+      "url": "http://abstract.ups.edu/aata/rings-sage.html#KTv",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mi>n</mi></msqrt><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Q}[\\sqrt{n}]",
+      "expected": "⠈⠰⠠⠟⠈⠷⠜⠝⠻⠈⠾",
+      "reference": {
+        "m-9799": "http://abstract.ups.edu/aata/rings-sage.html#KTv"
+      }
+    },
+    "Appl_85": {
+      "id": "m-9858",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#NWS",
+      "input": "<math><mi>R</mi><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "R[x]",
+      "expected": "⠠⠗⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-9858": "http://abstract.ups.edu/aata/section-poly-rings.html#NWS",
+        "m-9878": "http://abstract.ups.edu/aata/section-poly-rings.html#NIx",
+        "m-9881": "http://abstract.ups.edu/aata/section-poly-rings.html#fMb",
+        "m-9882": "http://abstract.ups.edu/aata/section-poly-rings.html#NWF",
+        "m-9890": "http://abstract.ups.edu/aata/section-poly-rings.html#wKm",
+        "m-9893": "http://abstract.ups.edu/aata/section-poly-rings.html#wKm",
+        "m-9909": "http://abstract.ups.edu/aata/section-poly-rings.html#eUQ",
+        "m-10581": "http://abstract.ups.edu/aata/exercises-poly.html#aGJ",
+        "m-10583": "http://abstract.ups.edu/aata/exercises-poly.html#GNS",
+        "m-10609": "http://abstract.ups.edu/aata/exercises-poly.html#LxL",
+        "m-10614": "http://abstract.ups.edu/aata/exercises-poly.html#rEU"
+      }
+    },
+    "Appl_86": {
+      "id": "m-9863",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#ueb",
+      "input": "<math><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p(x)",
+      "expected": "⠏⠷⠭⠾",
+      "reference": {
+        "m-9863": "http://abstract.ups.edu/aata/section-poly-rings.html#ueb",
+        "m-9867": "http://abstract.ups.edu/aata/section-poly-rings.html#ueb",
+        "m-9875": "http://abstract.ups.edu/aata/section-poly-rings.html#NIx",
+        "m-9885": "http://abstract.ups.edu/aata/section-poly-rings.html#NWF",
+        "m-9888": "http://abstract.ups.edu/aata/section-poly-rings.html#wKm",
+        "m-9896": "http://abstract.ups.edu/aata/section-poly-rings.html#eUQ",
+        "m-10024": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10028": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10029": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10032": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10038": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#pfN",
+        "m-10051": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10053": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10057": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#VmW",
+        "m-10062": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10064": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10072": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10076": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10079": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10085": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10095": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10102": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10105": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10109": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10114": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10125": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10128": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10134": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10140": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10144": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10147": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10150": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10154": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10162": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10164": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10167": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10197": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mlh",
+        "m-10206": "http://abstract.ups.edu/aata/section-irreducible-poly.html#rji",
+        "m-10215": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10221": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10236": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10278": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Buf",
+        "m-10280": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Buf",
+        "m-10285": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jEJ",
+        "m-10287": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jEJ",
+        "m-10289": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jEJ",
+        "m-10295": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Ssq",
+        "m-10297": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Ssq",
+        "m-10298": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Ssq",
+        "m-10301": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Ssq",
+        "m-10302": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yzz",
+        "m-10308": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yzz",
+        "m-10309": "http://abstract.ups.edu/aata/section-irreducible-poly.html#eGI",
+        "m-10318": "http://abstract.ups.edu/aata/section-irreducible-poly.html#eGI",
+        "m-10364": "http://abstract.ups.edu/aata/section-irreducible-poly.html#iVc",
+        "m-10378": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10395": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10411": "http://abstract.ups.edu/aata/section-irreducible-poly.html#QDd",
+        "m-10412": "http://abstract.ups.edu/aata/section-irreducible-poly.html#QDd",
+        "m-10413": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10418": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10419": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10424": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10427": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10438": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10451": "http://abstract.ups.edu/aata/reading-questions-17.html#iSl",
+        "m-10453": "http://abstract.ups.edu/aata/reading-questions-17.html#iSl",
+        "m-10490": "http://abstract.ups.edu/aata/exercises-poly.html#UhD",
+        "m-10520": "http://abstract.ups.edu/aata/exercises-poly.html#MDe",
+        "m-10535": "http://abstract.ups.edu/aata/exercises-poly.html#lfO",
+        "m-10562": "http://abstract.ups.edu/aata/exercises-poly.html#VWQ",
+        "m-10612": "http://abstract.ups.edu/aata/exercises-poly.html#rEU",
+        "m-10816": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI",
+        "m-11208": "http://abstract.ups.edu/aata/section-factorization-domains.html#Irx",
+        "m-11210": "http://abstract.ups.edu/aata/section-factorization-domains.html#Irx",
+        "m-11245": "http://abstract.ups.edu/aata/section-factorization-domains.html#wyE",
+        "m-11249": "http://abstract.ups.edu/aata/section-factorization-domains.html#wyE",
+        "m-11255": "http://abstract.ups.edu/aata/section-factorization-domains.html#WJk",
+        "m-11297": "http://abstract.ups.edu/aata/section-factorization-domains.html#NwP",
+        "m-11303": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY",
+        "m-11315": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11317": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11319": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11324": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11347": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-12456": "http://abstract.ups.edu/aata/section-subspaces.html#wTQ",
+        "m-12856": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-12859": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-12862": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-12863": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-12890": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12896": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12910": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12918": "http://abstract.ups.edu/aata/section-extension-fields.html#ldB",
+        "m-12924": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12930": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12942": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12944": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12954": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12962": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-12964": "http://abstract.ups.edu/aata/section-extension-fields.html#AWt",
+        "m-12969": "http://abstract.ups.edu/aata/section-extension-fields.html#AWt",
+        "m-13063": "http://abstract.ups.edu/aata/section-extension-fields.html#xrT",
+        "m-13077": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13079": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13085": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13091": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13096": "http://abstract.ups.edu/aata/section-extension-fields.html#JUG",
+        "m-13099": "http://abstract.ups.edu/aata/section-extension-fields.html#JUG",
+        "m-13111": "http://abstract.ups.edu/aata/section-extension-fields.html#zhg",
+        "m-13116": "http://abstract.ups.edu/aata/section-extension-fields.html#hrK",
+        "m-13151": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13259": "http://abstract.ups.edu/aata/section-extension-fields.html#jYi",
+        "m-13340": "http://abstract.ups.edu/aata/section-extension-fields.html#OEz",
+        "m-13374": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13378": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13383": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13384": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13401": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13404": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13407": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13409": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13410": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13416": "http://abstract.ups.edu/aata/section-splitting-fields.html#drY",
+        "m-13425": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+        "m-13429": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+        "m-13432": "http://abstract.ups.edu/aata/section-splitting-fields.html#ybN",
+        "m-13434": "http://abstract.ups.edu/aata/section-splitting-fields.html#ybN",
+        "m-13438": "http://abstract.ups.edu/aata/section-splitting-fields.html#aEw",
+        "m-13439": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13441": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13446": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13448": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13457": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13458": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13469": "http://abstract.ups.edu/aata/section-splitting-fields.html#fop",
+        "m-13474": "http://abstract.ups.edu/aata/section-splitting-fields.html#fop",
+        "m-13482": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13505": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13510": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13515": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13516": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13525": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13526": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13543": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13559": "http://abstract.ups.edu/aata/section-splitting-fields.html#ctJ",
+        "m-13562": "http://abstract.ups.edu/aata/section-splitting-fields.html#ctJ",
+        "m-13778": "http://abstract.ups.edu/aata/exercises-fields.html#wWu",
+        "m-13782": "http://abstract.ups.edu/aata/exercises-fields.html#wWu",
+        "m-13814": "http://abstract.ups.edu/aata/exercises-fields.html#hNw",
+        "m-13817": "http://abstract.ups.edu/aata/exercises-fields.html#NUF",
+        "m-13853": "http://abstract.ups.edu/aata/exercises-fields.html#yLH",
+        "m-13856": "http://abstract.ups.edu/aata/exercises-fields.html#yLH",
+        "m-13909": "http://abstract.ups.edu/aata/fields-sage-exercises.html#DvA",
+        "m-13911": "http://abstract.ups.edu/aata/fields-sage-exercises.html#DvA",
+        "m-13913": "http://abstract.ups.edu/aata/fields-sage-exercises.html#jCJ",
+        "m-13914": "http://abstract.ups.edu/aata/fields-sage-exercises.html#PJS",
+        "m-13916": "http://abstract.ups.edu/aata/fields-sage-exercises.html#PJS",
+        "m-13918": "http://abstract.ups.edu/aata/fields-sage-exercises.html#vRb",
+        "m-13919": "http://abstract.ups.edu/aata/fields-sage-exercises.html#bYk",
+        "m-14372": "http://abstract.ups.edu/aata/section-poly-codes.html#unf",
+        "m-14373": "http://abstract.ups.edu/aata/section-poly-codes.html#unf",
+        "m-14375": "http://abstract.ups.edu/aata/section-poly-codes.html#unf",
+        "m-14500": "http://abstract.ups.edu/aata/exercises-finite.html#iBD",
+        "m-14783": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14790": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14793": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14796": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14803": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-15834": "http://abstract.ups.edu/aata/galois-sage-exercises.html#lvw",
+        "m-15839": "http://abstract.ups.edu/aata/galois-sage-exercises.html#WtC",
+        "m-15840": "http://abstract.ups.edu/aata/galois-sage-exercises.html#WtC",
+        "m-15842": "http://abstract.ups.edu/aata/galois-sage-exercises.html#bdv",
+        "m-15848": "http://abstract.ups.edu/aata/galois-sage-exercises.html#aWr"
+      }
+    },
+    "Appl_87": {
+      "id": "m-9864",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#ueb",
+      "input": "<math><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "q(x)",
+      "expected": "⠟⠷⠭⠾",
+      "reference": {
+        "m-9864": "http://abstract.ups.edu/aata/section-poly-rings.html#ueb",
+        "m-9868": "http://abstract.ups.edu/aata/section-poly-rings.html#ueb",
+        "m-9876": "http://abstract.ups.edu/aata/section-poly-rings.html#NIx",
+        "m-9889": "http://abstract.ups.edu/aata/section-poly-rings.html#wKm",
+        "m-9897": "http://abstract.ups.edu/aata/section-poly-rings.html#eUQ",
+        "m-9954": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9975": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-10042": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10082": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10091": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10103": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10106": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10110": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10115": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10126": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10135": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10142": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10145": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10148": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10151": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10155": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10163": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10165": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10168": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10300": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Ssq",
+        "m-10386": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10472": "http://abstract.ups.edu/aata/exercises-poly.html#oau",
+        "m-10491": "http://abstract.ups.edu/aata/exercises-poly.html#UhD",
+        "m-10613": "http://abstract.ups.edu/aata/exercises-poly.html#rEU",
+        "m-10817": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI",
+        "m-10818": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI",
+        "m-11216": "http://abstract.ups.edu/aata/section-factorization-domains.html#HHD",
+        "m-11246": "http://abstract.ups.edu/aata/section-factorization-domains.html#wyE",
+        "m-11250": "http://abstract.ups.edu/aata/section-factorization-domains.html#wyE",
+        "m-11256": "http://abstract.ups.edu/aata/section-factorization-domains.html#WJk",
+        "m-11428": "http://abstract.ups.edu/aata/exercises-domains.html#flY",
+        "m-12457": "http://abstract.ups.edu/aata/section-subspaces.html#wTQ",
+        "m-13261": "http://abstract.ups.edu/aata/section-extension-fields.html#jYi",
+        "m-13455": "http://abstract.ups.edu/aata/section-splitting-fields.html#IPa",
+        "m-13507": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13512": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13518": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13531": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13544": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13928": "http://abstract.ups.edu/aata/fields-sage-exercises.html#MPm",
+        "m-13932": "http://abstract.ups.edu/aata/fields-sage-exercises.html#MPm",
+        "m-13935": "http://abstract.ups.edu/aata/fields-sage-exercises.html#ZdE",
+        "m-13937": "http://abstract.ups.edu/aata/fields-sage-exercises.html#FkN",
+        "m-13939": "http://abstract.ups.edu/aata/fields-sage-exercises.html#FkN"
+      }
+    },
+    "Appl_88": {
+      "id": "m-9870",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#hBo",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[x]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-9870": "http://abstract.ups.edu/aata/section-poly-rings.html#hBo",
+        "m-10225": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10290": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jEJ",
+        "m-10310": "http://abstract.ups.edu/aata/section-irreducible-poly.html#eGI",
+        "m-10328": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mzp",
+        "m-10329": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mzp",
+        "m-10519": "http://abstract.ups.edu/aata/exercises-poly.html#gvV",
+        "m-10541": "http://abstract.ups.edu/aata/exercises-poly.html#xug",
+        "m-10677": "http://abstract.ups.edu/aata/domains.html#TVV",
+        "m-11098": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-11099": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-11102": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-11116": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-11204": "http://abstract.ups.edu/aata/section-factorization-domains.html#cko",
+        "m-11205": "http://abstract.ups.edu/aata/section-factorization-domains.html#cko",
+        "m-11212": "http://abstract.ups.edu/aata/section-factorization-domains.html#HHD",
+        "m-11383": "http://abstract.ups.edu/aata/section-factorization-domains.html#FSq",
+        "m-11386": "http://abstract.ups.edu/aata/section-factorization-domains.html#nOM",
+        "m-13691": "http://abstract.ups.edu/aata/section-constructions.html#wAV"
+      }
+    },
+    "Appl_89": {
+      "id": "m-9916",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#alk",
+      "input": "<math><mi>R</mi><mo stretchy=\"false\">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "R[x,y]",
+      "expected": "⠠⠗⠈⠷⠭⠠⠀⠽⠈⠾",
+      "reference": {
+        "m-9916": "http://abstract.ups.edu/aata/section-poly-rings.html#alk",
+        "m-9917": "http://abstract.ups.edu/aata/section-poly-rings.html#alk"
+      }
+    },
+    "Appl_90": {
+      "id": "m-9924",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#alk",
+      "input": "<math><mi>R</mi><mo stretchy=\"false\">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">]</mo></math>",
+      "tex": "R[x_1, x_2, \\ldots, x_n]",
+      "expected": "⠠⠗⠈⠷⠭⠂⠠⠀⠭⠆⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠈⠾",
+      "reference": {
+        "m-9924": "http://abstract.ups.edu/aata/section-poly-rings.html#alk"
+      }
+    },
+    "Appl_91": {
+      "id": "m-9948",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "F[x]",
+      "expected": "⠠⠋⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-9948": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+        "m-10025": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#SGL",
+        "m-10039": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#pfN",
+        "m-10059": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#VmW",
+        "m-10116": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10123": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10171": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10184": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10360": "http://abstract.ups.edu/aata/section-irreducible-poly.html#ZWC",
+        "m-10362": "http://abstract.ups.edu/aata/section-irreducible-poly.html#iVc",
+        "m-10366": "http://abstract.ups.edu/aata/section-irreducible-poly.html#qVa",
+        "m-10370": "http://abstract.ups.edu/aata/section-irreducible-poly.html#kvU",
+        "m-10372": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10375": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10380": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10388": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10414": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10416": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10417": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10428": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10430": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10447": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yNH",
+        "m-10547": "http://abstract.ups.edu/aata/exercises-poly.html#JIy",
+        "m-10579": "http://abstract.ups.edu/aata/exercises-poly.html#uzA",
+        "m-10590": "http://abstract.ups.edu/aata/exercises-poly.html#Tck",
+        "m-10604": "http://abstract.ups.edu/aata/exercises-poly.html#zjt",
+        "m-10605": "http://abstract.ups.edu/aata/exercises-poly.html#ovT",
+        "m-10656": "http://abstract.ups.edu/aata/poly-sage.html#VBr",
+        "m-10829": "http://abstract.ups.edu/aata/section-factorization-domains.html#Ade",
+        "m-11097": "http://abstract.ups.edu/aata/section-factorization-domains.html#Bix",
+        "m-11119": "http://abstract.ups.edu/aata/section-factorization-domains.html#PVW",
+        "m-11138": "http://abstract.ups.edu/aata/section-factorization-domains.html#jeT",
+        "m-11269": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-11299": "http://abstract.ups.edu/aata/section-factorization-domains.html#NwP",
+        "m-11306": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY",
+        "m-11351": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11355": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11382": "http://abstract.ups.edu/aata/section-factorization-domains.html#ZLh",
+        "m-11425": "http://abstract.ups.edu/aata/exercises-domains.html#flY",
+        "m-12381": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Yrg",
+        "m-12383": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Yrg",
+        "m-12455": "http://abstract.ups.edu/aata/section-subspaces.html#wTQ",
+        "m-12571": "http://abstract.ups.edu/aata/exercises-vect.html#hKS",
+        "m-12573": "http://abstract.ups.edu/aata/exercises-vect.html#hKS",
+        "m-12592": "http://abstract.ups.edu/aata/exercises-vect.html#GnC",
+        "m-12919": "http://abstract.ups.edu/aata/section-extension-fields.html#ldB",
+        "m-12931": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx",
+        "m-13039": "http://abstract.ups.edu/aata/section-extension-fields.html#RkK",
+        "m-13049": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG",
+        "m-13050": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG",
+        "m-13061": "http://abstract.ups.edu/aata/section-extension-fields.html#xrT",
+        "m-13069": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13072": "http://abstract.ups.edu/aata/section-extension-fields.html#rQP",
+        "m-13148": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+        "m-13367": "http://abstract.ups.edu/aata/section-extension-fields.html#uLI",
+        "m-13370": "http://abstract.ups.edu/aata/section-extension-fields.html#iiV",
+        "m-13371": "http://abstract.ups.edu/aata/section-extension-fields.html#iiV",
+        "m-13385": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13402": "http://abstract.ups.edu/aata/section-splitting-fields.html#xkP",
+        "m-13413": "http://abstract.ups.edu/aata/section-splitting-fields.html#drY",
+        "m-13473": "http://abstract.ups.edu/aata/section-splitting-fields.html#fop",
+        "m-13491": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13508": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13560": "http://abstract.ups.edu/aata/section-splitting-fields.html#ctJ",
+        "m-13780": "http://abstract.ups.edu/aata/exercises-fields.html#wWu",
+        "m-13815": "http://abstract.ups.edu/aata/exercises-fields.html#hNw",
+        "m-13818": "http://abstract.ups.edu/aata/exercises-fields.html#NUF",
+        "m-13887": "http://abstract.ups.edu/aata/exercises-fields.html#ktH",
+        "m-14028": "http://abstract.ups.edu/aata/section-finite-field.html#SBH",
+        "m-14041": "http://abstract.ups.edu/aata/section-finite-field.html#yIQ",
+        "m-14718": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+        "m-14748": "http://abstract.ups.edu/aata/section-field-automorphisms.html#USK",
+        "m-14773": "http://abstract.ups.edu/aata/section-field-automorphisms.html#XNq",
+        "m-14897": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14900": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14916": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-14928": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-15083": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Jom",
+        "m-15088": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Jom",
+        "m-15454": "http://abstract.ups.edu/aata/section-galois-applications.html#wqa",
+        "m-15651": "http://abstract.ups.edu/aata/exercises-galois.html#Xdw",
+        "m-15723": "http://abstract.ups.edu/aata/exercises-galois.html#gLD"
+      }
+    },
+    "Appl_92": {
+      "id": "m-9953",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+      "input": "<math><mi>r</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "r(x)",
+      "expected": "⠗⠷⠭⠾",
+      "reference": {
+        "m-9953": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#sat",
+        "m-9955": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9969": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9971": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9973": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9976": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9983": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-10043": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10044": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10046": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10117": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10121": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10387": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10396": "http://abstract.ups.edu/aata/section-irreducible-poly.html#SGy",
+        "m-10473": "http://abstract.ups.edu/aata/exercises-poly.html#oau",
+        "m-10674": "http://abstract.ups.edu/aata/poly-sage-exercises.html#qzB",
+        "m-12900": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12902": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-13922": "http://abstract.ups.edu/aata/fields-sage-exercises.html#omC",
+        "m-13923": "http://abstract.ups.edu/aata/fields-sage-exercises.html#UtL"
+      }
+    },
+    "Appl_93": {
+      "id": "m-9968",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+      "input": "<math><msup><mi>q</mi><mo>′</mo></msup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "q'(x)",
+      "expected": "⠟⠘⠄⠐⠷⠭⠾",
+      "reference": {
+        "m-9968": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX"
+      }
+    },
+    "Appl_94": {
+      "id": "m-9977",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+      "input": "<math><msub><mi>q</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "q_1(x)",
+      "expected": "⠟⠂⠷⠭⠾",
+      "reference": {
+        "m-9977": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-11258": "http://abstract.ups.edu/aata/section-factorization-domains.html#WJk",
+        "m-13381": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR"
+      }
+    },
+    "Appl_95": {
+      "id": "m-9978",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+      "input": "<math><msub><mi>r</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "r_1(x)",
+      "expected": "⠗⠂⠷⠭⠾",
+      "reference": {
+        "m-9978": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+        "m-9984": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX"
+      }
+    },
+    "Appl_96": {
+      "id": "m-10099",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+      "input": "<math><mi>d</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "d(x)",
+      "expected": "⠙⠷⠭⠾",
+      "reference": {
+        "m-10099": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10101": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10113": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10119": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10124": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10127": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10138": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10139": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10141": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10143": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10146": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10161": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10173": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10176": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ"
+      }
+    },
+    "Appl_97": {
+      "id": "m-10104",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+      "input": "<math><msup><mi>d</mi><mo>′</mo></msup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "d'(x)",
+      "expected": "⠙⠘⠄⠐⠷⠭⠾",
+      "reference": {
+        "m-10104": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#yNU",
+        "m-10149": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10153": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10166": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10174": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10177": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ"
+      }
+    },
+    "Appl_98": {
+      "id": "m-10118",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+      "input": "<math><mi>s</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "s(x)",
+      "expected": "⠎⠷⠭⠾",
+      "reference": {
+        "m-10118": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#cRv",
+        "m-10122": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10675": "http://abstract.ups.edu/aata/poly-sage-exercises.html#qzB",
+        "m-13925": "http://abstract.ups.edu/aata/fields-sage-exercises.html#gId"
+      }
+    },
+    "Appl_99": {
+      "id": "m-10129",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+      "input": "<math><mi>a</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "a(x)",
+      "expected": "⠁⠷⠭⠾",
+      "reference": {
+        "m-10129": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10223": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10493": "http://abstract.ups.edu/aata/exercises-poly.html#UhD"
+      }
+    },
+    "Appl_100": {
+      "id": "m-10130",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+      "input": "<math><mi>b</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "b(x)",
+      "expected": "⠃⠷⠭⠾",
+      "reference": {
+        "m-10130": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10132": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10137": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10224": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10494": "http://abstract.ups.edu/aata/exercises-poly.html#UhD"
+      }
+    },
+    "Appl_101": {
+      "id": "m-10156",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+      "input": "<math><mi>u</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "u(x)",
+      "expected": "⠥⠷⠭⠾",
+      "reference": {
+        "m-10156": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10169": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ"
+      }
+    },
+    "Appl_102": {
+      "id": "m-10157",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+      "input": "<math><mi>v</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "v(x)",
+      "expected": "⠧⠷⠭⠾",
+      "reference": {
+        "m-10157": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ",
+        "m-10170": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#LbZ"
+      }
+    },
+    "Appl_103": {
+      "id": "m-10183",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+      "input": "<math><mi>h</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "h(x)",
+      "expected": "⠓⠷⠭⠾",
+      "reference": {
+        "m-10183": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-10186": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jqB",
+        "m-14986": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14993": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH"
+      }
+    },
+    "Appl_104": {
+      "id": "m-10216",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+      "input": "<math><mi>α</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\alpha(x)",
+      "expected": "⠨⠁⠷⠭⠾",
+      "reference": {
+        "m-10216": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10219": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC"
+      }
+    },
+    "Appl_105": {
+      "id": "m-10217",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+      "input": "<math><mi>β</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\beta(x)",
+      "expected": "⠨⠃⠷⠭⠾",
+      "reference": {
+        "m-10217": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10220": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC"
+      }
+    },
+    "Appl_106": {
+      "id": "m-10218",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Q}[x]",
+      "expected": "⠈⠰⠠⠟⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-10218": "http://abstract.ups.edu/aata/section-irreducible-poly.html#YhC",
+        "m-10296": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Ssq",
+        "m-10303": "http://abstract.ups.edu/aata/section-irreducible-poly.html#yzz",
+        "m-10359": "http://abstract.ups.edu/aata/section-irreducible-poly.html#PxK",
+        "m-10524": "http://abstract.ups.edu/aata/exercises-poly.html#sKn",
+        "m-10813": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI",
+        "m-10814": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI",
+        "m-12858": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-12861": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-13424": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+        "m-13431": "http://abstract.ups.edu/aata/section-splitting-fields.html#ybN",
+        "m-13692": "http://abstract.ups.edu/aata/section-constructions.html#wAV",
+        "m-15629": "http://abstract.ups.edu/aata/exercises-galois.html#SHY",
+        "m-15641": "http://abstract.ups.edu/aata/exercises-galois.html#yPh",
+        "m-15677": "http://abstract.ups.edu/aata/exercises-galois.html#jGj"
+      }
+    },
+    "Appl_107": {
+      "id": "m-10243",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+      "input": "<math><msub><mi>α</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\alpha_1(x)",
+      "expected": "⠨⠁⠂⠷⠭⠾",
+      "reference": {
+        "m-10243": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10256": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10265": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg"
+      }
+    },
+    "Appl_108": {
+      "id": "m-10244",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+      "input": "<math><msub><mi>β</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\beta_1(x)",
+      "expected": "⠨⠃⠂⠷⠭⠾",
+      "reference": {
+        "m-10244": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10260": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10266": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg"
+      }
+    },
+    "Appl_109": {
+      "id": "m-10262",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+      "input": "<math><msubsup><mi>α</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\alpha_1'(x)",
+      "expected": "⠨⠁⠄⠂⠷⠭⠾",
+      "reference": {
+        "m-10262": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10271": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg"
+      }
+    },
+    "Appl_110": {
+      "id": "m-10263",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+      "input": "<math><msubsup><mi>β</mi><mn>1</mn><mo>′</mo></msubsup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\beta_1'(x)",
+      "expected": "⠨⠃⠄⠂⠷⠭⠾",
+      "reference": {
+        "m-10263": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg",
+        "m-10272": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Gsg"
+      }
+    },
+    "Appl_111": {
+      "id": "m-10402",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Xcj",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "F[x,y]",
+      "expected": "⠠⠋⠈⠷⠭⠠⠀⠽⠈⠾",
+      "reference": {
+        "m-10402": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Xcj",
+        "m-10403": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Xcj",
+        "m-10406": "http://abstract.ups.edu/aata/section-irreducible-poly.html#Xcj"
+      }
+    },
+    "Appl_112": {
+      "id": "m-10540",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#RmX",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">]</mo></math>",
+      "tex": "F[x_1, \\ldots,\n          x_n]",
+      "expected": "⠠⠋⠈⠷⠭⠂⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠈⠾",
+      "reference": {
+        "m-10540": "http://abstract.ups.edu/aata/exercises-poly.html#RmX",
+        "m-11432": "http://abstract.ups.edu/aata/exercises-domains.html#Lth",
+        "m-11434": "http://abstract.ups.edu/aata/exercises-domains.html#Lth",
+        "m-11435": "http://abstract.ups.edu/aata/exercises-domains.html#Lth"
+      }
+    },
+    "Appl_113": {
+      "id": "m-10561",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#VWQ",
+      "input": "<math><mi>p</mi><mo stretchy=\"false\">(</mo><mi>a</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p(a)",
+      "expected": "⠏⠷⠁⠾",
+      "reference": {
+        "m-10561": "http://abstract.ups.edu/aata/exercises-poly.html#VWQ"
+      }
+    },
+    "Appl_114": {
+      "id": "m-10572",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#Osr",
+      "input": "<math><msub><mi mathvariant=\"normal\">Φ</mi><mi>p</mi></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\Phi_p(x)",
+      "expected": "⠨⠠⠋⠰⠏⠐⠷⠭⠾",
+      "reference": {
+        "m-10572": "http://abstract.ups.edu/aata/exercises-poly.html#Osr",
+        "m-10575": "http://abstract.ups.edu/aata/exercises-poly.html#IoK",
+        "m-15727": "http://abstract.ups.edu/aata/exercises-galois.html#MSM",
+        "m-15730": "http://abstract.ups.edu/aata/exercises-galois.html#LkD",
+        "m-15731": "http://abstract.ups.edu/aata/exercises-galois.html#LkD"
+      }
+    },
+    "Appl_115": {
+      "id": "m-10602",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#rLY",
+      "input": "<math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f'(x)",
+      "expected": "⠋⠘⠄⠐⠷⠭⠾",
+      "reference": {
+        "m-10602": "http://abstract.ups.edu/aata/exercises-poly.html#rLY",
+        "m-14047": "http://abstract.ups.edu/aata/section-finite-field.html#vzP",
+        "m-14056": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14060": "http://abstract.ups.edu/aata/section-finite-field.html#OfW",
+        "m-14934": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Bob",
+        "m-14936": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Bob",
+        "m-14937": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Bob",
+        "m-15507": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA"
+      }
+    },
+    "Appl_116": {
+      "id": "m-10607",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#fqC",
+      "input": "<math><mi>R</mi><mo stretchy=\"false\">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">]</mo></math>",
+      "tex": "R[x_1, \\ldots, x_n]",
+      "expected": "⠠⠗⠈⠷⠭⠂⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠈⠾",
+      "reference": {
+        "m-10607": "http://abstract.ups.edu/aata/exercises-poly.html#fqC"
+      }
+    },
+    "Appl_117": {
+      "id": "m-10819",
+      "url": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(x)",
+      "expected": "⠈⠰⠠⠟⠷⠭⠾",
+      "reference": {
+        "m-10819": "http://abstract.ups.edu/aata/section-field-of-fractions.html#SgI"
+      }
+    },
+    "Appl_118": {
+      "id": "m-10856",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#ynR",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Q}[x, y]",
+      "expected": "⠈⠰⠠⠟⠈⠷⠭⠠⠀⠽⠈⠾",
+      "reference": {
+        "m-10856": "http://abstract.ups.edu/aata/section-factorization-domains.html#ynR"
+      }
+    },
+    "Appl_119": {
+      "id": "m-10894",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#KCj",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>3</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[ \\sqrt{3}\\, i ]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠜⠒⠻⠊⠈⠾",
+      "reference": {
+        "m-10894": "http://abstract.ups.edu/aata/section-factorization-domains.html#KCj",
+        "m-10898": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10902": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10905": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-11394": "http://abstract.ups.edu/aata/exercises-domains.html#kUg",
+        "m-11397": "http://abstract.ups.edu/aata/exercises-domains.html#kUg",
+        "m-11401": "http://abstract.ups.edu/aata/exercises-domains.html#yJq"
+      }
+    },
+    "Appl_120": {
+      "id": "m-11164",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(i)",
+      "expected": "⠈⠰⠠⠟⠷⠊⠾",
+      "reference": {
+        "m-11164": "http://abstract.ups.edu/aata/section-factorization-domains.html#bAu",
+        "m-15646": "http://abstract.ups.edu/aata/exercises-galois.html#qWn",
+        "m-15822": "http://abstract.ups.edu/aata/galois-sage.html#mPk"
+      }
+    },
+    "Appl_121": {
+      "id": "m-11187",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#ZDQ",
+      "input": "<math><mi>ν</mi><mo stretchy=\"false\">(</mo><mi>b</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\nu(b)",
+      "expected": "⠨⠝⠷⠃⠾",
+      "reference": {
+        "m-11187": "http://abstract.ups.edu/aata/section-factorization-domains.html#ZDQ"
+      }
+    },
+    "Appl_122": {
+      "id": "m-11203",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#zHs",
+      "input": "<math><mi>D</mi><mo fence=\"false\" stretchy=\"false\">[</mo><mi>x</mi><mo fence=\"false\" stretchy=\"false\">]</mo></math>",
+      "tex": "D\\lbrack x \\rbrack",
+      "expected": "⠠⠙⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-11203": "http://abstract.ups.edu/aata/section-factorization-domains.html#zHs",
+        "m-11207": "http://abstract.ups.edu/aata/section-factorization-domains.html#Irx",
+        "m-11221": "http://abstract.ups.edu/aata/section-factorization-domains.html#fAt",
+        "m-11247": "http://abstract.ups.edu/aata/section-factorization-domains.html#wyE",
+        "m-11273": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-11280": "http://abstract.ups.edu/aata/section-factorization-domains.html#CQt",
+        "m-11286": "http://abstract.ups.edu/aata/section-factorization-domains.html#CQt",
+        "m-11298": "http://abstract.ups.edu/aata/section-factorization-domains.html#NwP",
+        "m-11300": "http://abstract.ups.edu/aata/section-factorization-domains.html#NwP",
+        "m-11304": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY",
+        "m-11310": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY",
+        "m-11314": "http://abstract.ups.edu/aata/section-factorization-domains.html#LHC",
+        "m-11316": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11320": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11328": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11332": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11334": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11348": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi"
+      }
+    },
+    "Appl_123": {
+      "id": "m-11257",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#WJk",
+      "input": "<math><msub><mi>p</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p_1(x)",
+      "expected": "⠏⠂⠷⠭⠾",
+      "reference": {
+        "m-11257": "http://abstract.ups.edu/aata/section-factorization-domains.html#WJk"
+      }
+    },
+    "Appl_124": {
+      "id": "m-11271",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+      "input": "<math><msub><mi>f</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f_1(x)",
+      "expected": "⠋⠂⠷⠭⠾",
+      "reference": {
+        "m-11271": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-11284": "http://abstract.ups.edu/aata/section-factorization-domains.html#CQt",
+        "m-11288": "http://abstract.ups.edu/aata/section-factorization-domains.html#CQt",
+        "m-11308": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY"
+      }
+    },
+    "Appl_125": {
+      "id": "m-11272",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+      "input": "<math><msub><mi>g</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "g_1(x)",
+      "expected": "⠛⠂⠷⠭⠾",
+      "reference": {
+        "m-11272": "http://abstract.ups.edu/aata/section-factorization-domains.html#cFN",
+        "m-11285": "http://abstract.ups.edu/aata/section-factorization-domains.html#CQt",
+        "m-11289": "http://abstract.ups.edu/aata/section-factorization-domains.html#CQt",
+        "m-11309": "http://abstract.ups.edu/aata/section-factorization-domains.html#tDY"
+      }
+    },
+    "Appl_126": {
+      "id": "m-11325",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+      "input": "<math><msub><mi>f</mi><mi>i</mi></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f_i(x)",
+      "expected": "⠋⠰⠊⠐⠷⠭⠾",
+      "reference": {
+        "m-11325": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11358": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11366": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi"
+      }
+    },
+    "Appl_127": {
+      "id": "m-11331",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+      "input": "<math><msub><mi>g</mi><mi>i</mi></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "g_i(x)",
+      "expected": "⠛⠰⠊⠐⠷⠭⠾",
+      "reference": {
+        "m-11331": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11333": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11357": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11359": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi",
+        "m-11367": "http://abstract.ups.edu/aata/section-factorization-domains.html#lSi"
+      }
+    },
+    "Appl_128": {
+      "id": "m-11385",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#lZz",
+      "input": "<math><mi>D</mi><mo stretchy=\"false\">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">]</mo></math>",
+      "tex": "D[x_1, \\ldots, x_n]",
+      "expected": "⠠⠙⠈⠷⠭⠂⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠈⠾",
+      "reference": {
+        "m-11385": "http://abstract.ups.edu/aata/section-factorization-domains.html#lZz"
+      }
+    },
+    "Appl_129": {
+      "id": "m-11426",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#flY",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F(x)",
+      "expected": "⠠⠋⠷⠭⠾",
+      "reference": {
+        "m-11426": "http://abstract.ups.edu/aata/exercises-domains.html#flY",
+        "m-13038": "http://abstract.ups.edu/aata/section-extension-fields.html#RkK",
+        "m-13051": "http://abstract.ups.edu/aata/section-extension-fields.html#LJG"
+      }
+    },
+    "Appl_130": {
+      "id": "m-11430",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#Lth",
+      "input": "<math><mi>p</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p(x_1, \\ldots, x_n)",
+      "expected": "⠏⠷⠭⠂⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠾",
+      "reference": {
+        "m-11430": "http://abstract.ups.edu/aata/exercises-domains.html#Lth"
+      }
+    },
+    "Appl_131": {
+      "id": "m-11431",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#Lth",
+      "input": "<math><mi>q</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "q(x_1, \\ldots,\n                x_n)",
+      "expected": "⠟⠷⠭⠂⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠾",
+      "reference": {
+        "m-11431": "http://abstract.ups.edu/aata/exercises-domains.html#Lth"
+      }
+    },
+    "Appl_132": {
+      "id": "m-11436",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#Lth",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F(x_1, \\ldots, x_n)",
+      "expected": "⠠⠋⠷⠭⠂⠠⠀⠄⠄⠄⠠⠀⠭⠰⠝⠐⠾",
+      "reference": {
+        "m-11436": "http://abstract.ups.edu/aata/exercises-domains.html#Lth"
+      }
+    },
+    "Appl_133": {
+      "id": "m-11462",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#crs",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>2</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[ \\sqrt{2}\\, ]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠜⠆⠻⠈⠾",
+      "reference": {
+        "m-11462": "http://abstract.ups.edu/aata/exercises-domains.html#crs",
+        "m-11463": "http://abstract.ups.edu/aata/exercises-domains.html#IyB",
+        "m-11464": "http://abstract.ups.edu/aata/exercises-domains.html#oFK"
+      }
+    },
+    "Appl_134": {
+      "id": "m-11465",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#UMT",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>2</mn></msqrt><mi>i</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[ \\sqrt{2} i ]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠜⠆⠻⠊⠈⠾",
+      "reference": {
+        "m-11465": "http://abstract.ups.edu/aata/exercises-domains.html#UMT"
+      }
+    },
+    "Appl_135": {
+      "id": "m-11523",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#yXL",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>5</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[\\sqrt{5}\\, i]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠜⠢⠻⠊⠈⠾",
+      "reference": {
+        "m-11523": "http://abstract.ups.edu/aata/exercises-domains.html#yXL"
+      }
+    },
+    "Appl_136": {
+      "id": "m-11578",
+      "url": "http://abstract.ups.edu/aata/domains-sage.html#Wvc",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>3</mn></msqrt><mi>i</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[\\sqrt{3}i]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠜⠒⠻⠊⠈⠾",
+      "reference": {
+        "m-11578": "http://abstract.ups.edu/aata/domains-sage.html#Wvc"
+      }
+    },
+    "Appl_137": {
+      "id": "m-11623",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#JHL",
+      "input": "<math><mrow><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">P</mi></mrow><mo stretchy=\"false\">(</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo fence=\"false\" stretchy=\"false\">}</mo><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\mathcal P( \\{ a, b, c \\})",
+      "expected": "⠈⠰⠠⠏⠷⠨⠷⠁⠠⠀⠃⠠⠀⠉⠨⠾⠾",
+      "reference": {
+        "m-11623": "http://abstract.ups.edu/aata/section-boolean-lattices.html#JHL"
+      }
+    },
+    "Appl_138": {
+      "id": "m-12577",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#tZk",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><msqrt><mn>3</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q }( \\sqrt{2}, \\sqrt{3}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠆⠻⠠⠀⠜⠒⠻⠾",
+      "reference": {
+        "m-12577": "http://abstract.ups.edu/aata/exercises-vect.html#tZk",
+        "m-12581": "http://abstract.ups.edu/aata/exercises-vect.html#tZk",
+        "m-12584": "http://abstract.ups.edu/aata/exercises-vect.html#tZk",
+        "m-12585": "http://abstract.ups.edu/aata/exercises-vect.html#haY"
+      }
+    },
+    "Appl_139": {
+      "id": "m-12621",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#eQm",
+      "input": "<math><mi>C</mi><mo stretchy=\"false\">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy=\"false\">]</mo></math>",
+      "tex": "C[0, 1]",
+      "expected": "⠠⠉⠈⠷⠴⠠⠀⠂⠈⠾",
+      "reference": {
+        "m-12621": "http://abstract.ups.edu/aata/exercises-vect.html#eQm"
+      }
+    },
+    "Appl_140": {
+      "id": "m-12690",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#lKR",
+      "input": "<math><mi>ker</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>T</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\ker(T)",
+      "expected": "⠅⠑⠗⠀⠷⠠⠞⠾",
+      "reference": {
+        "m-12690": "http://abstract.ups.edu/aata/exercises-vect.html#lKR"
+      }
+    },
+    "Appl_141": {
+      "id": "m-12748",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#ZRY",
+      "input": "<math><mi>Hom</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\Hom(V, W)",
+      "expected": "⠠⠓⠕⠍⠀⠷⠠⠧⠠⠀⠠⠺⠾",
+      "reference": {
+        "m-12748": "http://abstract.ups.edu/aata/exercises-vect.html#ZRY"
+      }
+    },
+    "Appl_142": {
+      "id": "m-12811",
+      "url": "http://abstract.ups.edu/aata/vect-sage-exercises.html#MMI",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mroot><mn>2</mn><mn>4</mn></mroot><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Q}[\\sqrt[4]{2}]",
+      "expected": "⠈⠰⠠⠟⠈⠷⠣⠲⠜⠆⠻⠈⠾",
+      "reference": {
+        "m-12811": "http://abstract.ups.edu/aata/vect-sage-exercises.html#MMI"
+      }
+    },
+    "Appl_143": {
+      "id": "m-12857",
+      "url": "http://abstract.ups.edu/aata/fields.html#qxo",
+      "input": "<math><mi>E</mi><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "E[x]",
+      "expected": "⠠⠑⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-12857": "http://abstract.ups.edu/aata/fields.html#qxo",
+        "m-13422": "http://abstract.ups.edu/aata/section-splitting-fields.html#drY",
+        "m-13490": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13506": "http://abstract.ups.edu/aata/section-splitting-fields.html#GLF",
+        "m-13803": "http://abstract.ups.edu/aata/exercises-fields.html#Yfp",
+        "m-14911": "http://abstract.ups.edu/aata/section-field-automorphisms.html#fGk",
+        "m-15090": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Jom",
+        "m-15132": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#kpQ"
+      }
+    },
+    "Appl_144": {
+      "id": "m-12996",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#lrW",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F( \\alpha_1, \\ldots, \\alpha_n)",
+      "expected": "⠠⠋⠷⠨⠁⠂⠠⠀⠄⠄⠄⠠⠀⠨⠁⠰⠝⠐⠾",
+      "reference": {
+        "m-12996": "http://abstract.ups.edu/aata/section-extension-fields.html#lrW",
+        "m-13284": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm"
+      }
+    },
+    "Appl_145": {
+      "id": "m-13037",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#RkK",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><mi>α</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F( \\alpha )",
+      "expected": "⠠⠋⠷⠨⠁⠾",
+      "reference": {
+        "m-13037": "http://abstract.ups.edu/aata/section-extension-fields.html#RkK",
+        "m-13120": "http://abstract.ups.edu/aata/section-extension-fields.html#hrK",
+        "m-13870": "http://abstract.ups.edu/aata/exercises-fields.html#rhi",
+        "m-14549": "http://abstract.ups.edu/aata/exercises-finite.html#cqS",
+        "m-14807": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14821": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq",
+        "m-14941": "http://abstract.ups.edu/aata/section-field-automorphisms.html#LNt"
+      }
+    },
+    "Appl_146": {
+      "id": "m-13135",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><mi>α</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(\\alpha)",
+      "expected": "⠋⠷⠨⠁⠾",
+      "reference": {
+        "m-13135": "http://abstract.ups.edu/aata/section-extension-fields.html#XXY"
+      }
+    },
+    "Appl_147": {
+      "id": "m-13159",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb R}[x]",
+      "expected": "⠈⠰⠠⠗⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-13159": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd"
+      }
+    },
+    "Appl_148": {
+      "id": "m-13169",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mi>α</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb R}( \\alpha )",
+      "expected": "⠈⠰⠠⠗⠷⠨⠁⠾",
+      "reference": {
+        "m-13169": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd"
+      }
+    },
+    "Appl_149": {
+      "id": "m-13262",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#jYi",
+      "input": "<math><mi>deg</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\deg q(x)",
+      "expected": "⠙⠑⠛⠀⠟⠷⠭⠾",
+      "reference": {
+        "m-13262": "http://abstract.ups.edu/aata/section-extension-fields.html#jYi"
+      }
+    },
+    "Appl_150": {
+      "id": "m-13263",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#jYi",
+      "input": "<math><mi>deg</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\deg p(x)",
+      "expected": "⠙⠑⠛⠀⠏⠷⠭⠾",
+      "reference": {
+        "m-13263": "http://abstract.ups.edu/aata/section-extension-fields.html#jYi"
+      }
+    },
+    "Appl_151": {
+      "id": "m-13272",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{3}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠾",
+      "reference": {
+        "m-13272": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+        "m-13275": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+        "m-13277": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+        "m-13280": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+        "m-14733": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX"
+      }
+    },
+    "Appl_152": {
+      "id": "m-13287",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>5</mn><mn>3</mn></mroot><mo>,</mo><msqrt><mn>5</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt[3]{5}, \\sqrt{5} \\, i )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠒⠜⠢⠻⠠⠀⠜⠢⠻⠊⠾",
+      "reference": {
+        "m-13287": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+        "m-13294": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+        "m-13299": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv"
+      }
+    },
+    "Appl_153": {
+      "id": "m-13295",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>5</mn><mn>3</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt[3]{5}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠒⠜⠢⠻⠾",
+      "reference": {
+        "m-13295": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+        "m-13297": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv"
+      }
+    },
+    "Appl_154": {
+      "id": "m-13313",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#JNp",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>α</mi><mi>i</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F(\\alpha_1, \\ldots, \\alpha_i)",
+      "expected": "⠠⠋⠷⠨⠁⠂⠠⠀⠄⠄⠄⠠⠀⠨⠁⠰⠊⠐⠾",
+      "reference": {
+        "m-13313": "http://abstract.ups.edu/aata/section-extension-fields.html#JNp",
+        "m-13329": "http://abstract.ups.edu/aata/section-extension-fields.html#Qtz",
+        "m-13332": "http://abstract.ups.edu/aata/section-extension-fields.html#Qtz"
+      }
+    },
+    "Appl_155": {
+      "id": "m-13314",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#JNp",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>α</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F(\\alpha_1, \\ldots, \\alpha_{i-1})",
+      "expected": "⠠⠋⠷⠨⠁⠂⠠⠀⠄⠄⠄⠠⠀⠨⠁⠰⠊⠤⠂⠐⠾",
+      "reference": {
+        "m-13314": "http://abstract.ups.edu/aata/section-extension-fields.html#JNp",
+        "m-13330": "http://abstract.ups.edu/aata/section-extension-fields.html#Qtz",
+        "m-13333": "http://abstract.ups.edu/aata/section-extension-fields.html#Qtz",
+        "m-13335": "http://abstract.ups.edu/aata/section-extension-fields.html#Qtz"
+      }
+    },
+    "Appl_156": {
+      "id": "m-13348",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#wAI",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F( \\alpha, \\beta )",
+      "expected": "⠠⠋⠷⠨⠁⠠⠀⠨⠃⠾",
+      "reference": {
+        "m-13348": "http://abstract.ups.edu/aata/section-extension-fields.html#wAI",
+        "m-13350": "http://abstract.ups.edu/aata/section-extension-fields.html#wAI",
+        "m-14953": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH"
+      }
+    },
+    "Appl_157": {
+      "id": "m-13428",
+      "url": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{2}, i )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠆⠻⠠⠀⠊⠾",
+      "reference": {
+        "m-13428": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+        "m-13724": "http://abstract.ups.edu/aata/exercises-fields.html#IHW"
+      }
+    },
+    "Appl_158": {
+      "id": "m-13433",
+      "url": "http://abstract.ups.edu/aata/section-splitting-fields.html#ybN",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>3</mn><mn>3</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt[3]{3}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠒⠜⠒⠻⠾",
+      "reference": {
+        "m-13433": "http://abstract.ups.edu/aata/section-splitting-fields.html#ybN",
+        "m-13435": "http://abstract.ups.edu/aata/section-splitting-fields.html#ybN"
+      }
+    },
+    "Appl_159": {
+      "id": "m-13484",
+      "url": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+      "input": "<math><mi>E</mi><mo stretchy=\"false\">(</mo><mi>α</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "E( \\alpha )",
+      "expected": "⠠⠑⠷⠨⠁⠾",
+      "reference": {
+        "m-13484": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13486": "http://abstract.ups.edu/aata/section-splitting-fields.html#NyT",
+        "m-13547": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-13554": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj"
+      }
+    },
+    "Appl_160": {
+      "id": "m-13550",
+      "url": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><mi>β</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F( \\beta )",
+      "expected": "⠠⠋⠷⠨⠃⠾",
+      "reference": {
+        "m-13550": "http://abstract.ups.edu/aata/section-splitting-fields.html#oWj",
+        "m-14810": "http://abstract.ups.edu/aata/section-field-automorphisms.html#gLq"
+      }
+    },
+    "Appl_161": {
+      "id": "m-13653",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#fCK",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><msqrt><mi>α</mi></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F( \\sqrt{\\alpha}\\, )",
+      "expected": "⠠⠋⠷⠜⠨⠁⠻⠾",
+      "reference": {
+        "m-13653": "http://abstract.ups.edu/aata/section-constructions.html#fCK",
+        "m-13657": "http://abstract.ups.edu/aata/section-constructions.html#XJQ",
+        "m-15714": "http://abstract.ups.edu/aata/exercises-galois.html#Uxl"
+      }
+    },
+    "Appl_162": {
+      "id": "m-13698",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#BkO",
+      "input": "<math><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p(x, y)",
+      "expected": "⠏⠷⠭⠠⠀⠽⠾",
+      "reference": {
+        "m-13698": "http://abstract.ups.edu/aata/section-constructions.html#BkO"
+      }
+    },
+    "Appl_163": {
+      "id": "m-13699",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#BkO",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb Z}[x,y]",
+      "expected": "⠈⠰⠠⠵⠈⠷⠭⠠⠀⠽⠈⠾",
+      "reference": {
+        "m-13699": "http://abstract.ups.edu/aata/section-constructions.html#BkO"
+      }
+    },
+    "Appl_164": {
+      "id": "m-13720",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#wtE",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><msqrt><mn>6</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{3}, \\sqrt{6}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠠⠀⠜⠖⠻⠾",
+      "reference": {
+        "m-13720": "http://abstract.ups.edu/aata/exercises-fields.html#wtE"
+      }
+    },
+    "Appl_165": {
+      "id": "m-13722",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#cAN",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>2</mn><mn>3</mn></mroot><mo>,</mo><mroot><mn>3</mn><mn>3</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt[3]{2}, \\sqrt[3]{3}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠒⠜⠆⠻⠠⠀⠣⠒⠜⠒⠻⠾",
+      "reference": {
+        "m-13722": "http://abstract.ups.edu/aata/exercises-fields.html#cAN"
+      }
+    },
+    "Appl_166": {
+      "id": "m-13726",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#oPf",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><msqrt><mn>5</mn></msqrt><mo>,</mo><msqrt><mn>7</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{3}, \\sqrt{5}, \\sqrt{7}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠠⠀⠜⠢⠻⠠⠀⠜⠶⠻⠾",
+      "reference": {
+        "m-13726": "http://abstract.ups.edu/aata/exercises-fields.html#oPf"
+      }
+    },
+    "Appl_167": {
+      "id": "m-13728",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#UWo",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><mroot><mn>2</mn><mn>3</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{2}, \\root 3 \\of{2}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠆⠻⠠⠀⠣⠒⠜⠆⠻⠾",
+      "reference": {
+        "m-13728": "http://abstract.ups.edu/aata/exercises-fields.html#UWo"
+      }
+    },
+    "Appl_168": {
+      "id": "m-13730",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Bdx",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>8</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{8}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠦⠻⠾",
+      "reference": {
+        "m-13730": "http://abstract.ups.edu/aata/exercises-fields.html#Bdx"
+      }
+    },
+    "Appl_169": {
+      "id": "m-13732",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#hkG",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mi>i</mi><mo>,</mo><msqrt><mn>2</mn></msqrt><mo>+</mo><mi>i</mi><mo>,</mo><msqrt><mn>3</mn></msqrt><mo>+</mo><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(i, \\sqrt{2} +i, \\sqrt{3} + i )",
+      "expected": "⠈⠰⠠⠟⠷⠊⠠⠀⠜⠆⠻⠬⠊⠠⠀⠜⠒⠻⠬⠊⠾",
+      "reference": {
+        "m-13732": "http://abstract.ups.edu/aata/exercises-fields.html#hkG"
+      }
+    },
+    "Appl_170": {
+      "id": "m-13735",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#NrP",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>5</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q} ( \\sqrt{5}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠢⠻⠾",
+      "reference": {
+        "m-13735": "http://abstract.ups.edu/aata/exercises-fields.html#NrP",
+        "m-14731": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX",
+        "m-15026": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Pdy"
+      }
+    },
+    "Appl_171": {
+      "id": "m-13736",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#tyY",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>2</mn></msqrt><mo>,</mo><msqrt><mn>6</mn></msqrt><mo>+</mo><msqrt><mn>10</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt{2}, \\sqrt{6} + \\sqrt{10}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠆⠻⠠⠀⠜⠖⠻⠬⠜⠂⠴⠻⠾",
+      "reference": {
+        "m-13736": "http://abstract.ups.edu/aata/exercises-fields.html#tyY"
+      }
+    },
+    "Appl_172": {
+      "id": "m-13749",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#fJO",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><msqrt><mn>7</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt{3}, \\sqrt{7}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠠⠀⠜⠶⠻⠾",
+      "reference": {
+        "m-13749": "http://abstract.ups.edu/aata/exercises-fields.html#fJO",
+        "m-13840": "http://abstract.ups.edu/aata/exercises-fields.html#Emy"
+      }
+    },
+    "Appl_173": {
+      "id": "m-13750",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#fYj",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>3</mn><mn>4</mn></mroot><mo>,</mo><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt[4]{3}, i )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠒⠻⠠⠀⠊⠾",
+      "reference": {
+        "m-13750": "http://abstract.ups.edu/aata/exercises-fields.html#fYj",
+        "m-13752": "http://abstract.ups.edu/aata/exercises-fields.html#zYe",
+        "m-13756": "http://abstract.ups.edu/aata/exercises-fields.html#gfn",
+        "m-13759": "http://abstract.ups.edu/aata/exercises-fields.html#Mmw"
+      }
+    },
+    "Appl_174": {
+      "id": "m-13772",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#YtK",
+      "input": "<math><mi>cos</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><msup><mn>1</mn><mo>∘</mo></msup></math>",
+      "tex": "\\cos 1^\\circ",
+      "expected": "⠉⠕⠎⠀⠼⠂⠘⠨⠡",
+      "reference": {
+        "m-13772": "http://abstract.ups.edu/aata/exercises-fields.html#YtK"
+      }
+    },
+    "Appl_175": {
+      "id": "m-13774",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#kIc",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><mroot><mn>3</mn><mn>4</mn></mroot><mo>,</mo><mroot><mn>3</mn><mn>8</mn></mroot><mo>,</mo><mo>…</mo><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt{3}, \\sqrt[4]{3}, \\sqrt[8]{3}, \\ldots )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠠⠀⠣⠲⠜⠒⠻⠠⠀⠣⠦⠜⠒⠻⠠⠀⠄⠄⠄⠾",
+      "reference": {
+        "m-13774": "http://abstract.ups.edu/aata/exercises-fields.html#kIc"
+      }
+    },
+    "Appl_176": {
+      "id": "m-13777",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#QPl",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msup><mi>π</mi><mn>3</mn></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\pi^3)",
+      "expected": "⠈⠰⠠⠟⠷⠨⠏⠘⠒⠐⠾",
+      "reference": {
+        "m-13777": "http://abstract.ups.edu/aata/exercises-fields.html#QPl"
+      }
+    },
+    "Appl_177": {
+      "id": "m-13785",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#JkM",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>3</mn><mn>4</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt[4]{3}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠒⠻⠾",
+      "reference": {
+        "m-13785": "http://abstract.ups.edu/aata/exercises-fields.html#JkM"
+      }
+    },
+    "Appl_178": {
+      "id": "m-13786",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#JkM",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>3</mn><mn>4</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt[4]{3}\\, i)",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠒⠻⠊⠾",
+      "reference": {
+        "m-13786": "http://abstract.ups.edu/aata/exercises-fields.html#JkM"
+      }
+    },
+    "Appl_179": {
+      "id": "m-13805",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Yfp",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><msub><mi>β</mi><mn>0</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>β</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F(\\beta_0, \\ldots, \\beta_n)",
+      "expected": "⠠⠋⠷⠨⠃⠴⠠⠀⠄⠄⠄⠠⠀⠨⠃⠰⠝⠐⠾",
+      "reference": {
+        "m-13805": "http://abstract.ups.edu/aata/exercises-fields.html#Yfp"
+      }
+    },
+    "Appl_180": {
+      "id": "m-14120",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#ePZ",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msup><mi>p</mi><mi>n</mi></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(p^n)",
+      "expected": "⠠⠠⠛⠋⠷⠏⠘⠝⠐⠾",
+      "reference": {
+        "m-14120": "http://abstract.ups.edu/aata/section-finite-field.html#ePZ",
+        "m-14122": "http://abstract.ups.edu/aata/section-finite-field.html#Snm",
+        "m-14128": "http://abstract.ups.edu/aata/section-finite-field.html#Snm",
+        "m-14149": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14571": "http://abstract.ups.edu/aata/exercises-finite.html#ATC",
+        "m-14576": "http://abstract.ups.edu/aata/exercises-finite.html#haL"
+      }
+    },
+    "Appl_181": {
+      "id": "m-14129",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#Snm",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msup><mi>p</mi><mi>m</mi></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(p^m)",
+      "expected": "⠠⠠⠛⠋⠷⠏⠘⠍⠐⠾",
+      "reference": {
+        "m-14129": "http://abstract.ups.edu/aata/section-finite-field.html#Snm",
+        "m-14151": "http://abstract.ups.edu/aata/section-finite-field.html#xhL"
+      }
+    },
+    "Appl_182": {
+      "id": "m-14152",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#AjI",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msup><mi>p</mi><mrow><mn>24</mn></mrow></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(p^{24})",
+      "expected": "⠠⠠⠛⠋⠷⠏⠘⠆⠲⠐⠾",
+      "reference": {
+        "m-14152": "http://abstract.ups.edu/aata/section-finite-field.html#AjI",
+        "m-14153": "http://abstract.ups.edu/aata/section-finite-field.html#rer"
+      }
+    },
+    "Appl_183": {
+      "id": "m-14193",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#gqR",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msup><mn>2</mn><mn>4</mn></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(2^4)",
+      "expected": "⠠⠠⠛⠋⠷⠆⠘⠲⠐⠾",
+      "reference": {
+        "m-14193": "http://abstract.ups.edu/aata/section-finite-field.html#gqR",
+        "m-14195": "http://abstract.ups.edu/aata/section-finite-field.html#gqR",
+        "m-14197": "http://abstract.ups.edu/aata/section-finite-field.html#gqR",
+        "m-14198": "http://abstract.ups.edu/aata/section-finite-field.html#gqR",
+        "m-14463": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT"
+      }
+    },
+    "Appl_184": {
+      "id": "m-14278",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#YqT",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(t)",
+      "expected": "⠋⠷⠞⠾",
+      "reference": {
+        "m-14278": "http://abstract.ups.edu/aata/section-poly-codes.html#YqT",
+        "m-14285": "http://abstract.ups.edu/aata/section-poly-codes.html#Jwd",
+        "m-14421": "http://abstract.ups.edu/aata/section-poly-codes.html#XOd",
+        "m-14427": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv",
+        "m-14449": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv"
+      }
+    },
+    "Appl_185": {
+      "id": "m-14294",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#Jwd",
+      "input": "<math><mi>p</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p(t)",
+      "expected": "⠏⠷⠞⠾",
+      "reference": {
+        "m-14294": "http://abstract.ups.edu/aata/section-poly-codes.html#Jwd"
+      }
+    },
+    "Appl_186": {
+      "id": "m-14315",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#Eyc",
+      "input": "<math><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>I</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\phi(I)",
+      "expected": "⠋⠷⠠⠊⠾",
+      "reference": {
+        "m-14315": "http://abstract.ups.edu/aata/section-poly-codes.html#Eyc"
+      }
+    },
+    "Appl_187": {
+      "id": "m-14337",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#ETB",
+      "input": "<math><mi>g</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "g(t)",
+      "expected": "⠛⠷⠞⠾",
+      "reference": {
+        "m-14337": "http://abstract.ups.edu/aata/section-poly-codes.html#ETB",
+        "m-14351": "http://abstract.ups.edu/aata/section-poly-codes.html#kFl",
+        "m-14584": "http://abstract.ups.edu/aata/exercises-finite.html#tpd",
+        "m-14596": "http://abstract.ups.edu/aata/exercises-finite.html#lKE"
+      }
+    },
+    "Appl_188": {
+      "id": "m-14408",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#JhV",
+      "input": "<math><msub><mi>m</mi><mi>i</mi></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "m_i(x)",
+      "expected": "⠍⠰⠊⠐⠷⠭⠾",
+      "reference": {
+        "m-14408": "http://abstract.ups.edu/aata/section-poly-codes.html#JhV",
+        "m-14437": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv",
+        "m-14438": "http://abstract.ups.edu/aata/section-poly-codes.html#VKv"
+      }
+    },
+    "Appl_189": {
+      "id": "m-14470",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT",
+      "input": "<math><msub><mi>m</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "m_1(x)",
+      "expected": "⠍⠂⠷⠭⠾",
+      "reference": {
+        "m-14470": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT",
+        "m-14477": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT"
+      }
+    },
+    "Appl_190": {
+      "id": "m-14478",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT",
+      "input": "<math><msub><mi>m</mi><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "m_2(x)",
+      "expected": "⠍⠆⠷⠭⠾",
+      "reference": {
+        "m-14478": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT"
+      }
+    },
+    "Appl_191": {
+      "id": "m-14489",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#Onn",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><msup><mi>p</mi><mrow><mn>30</mn></mrow></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(p^{30})",
+      "expected": "⠠⠠⠛⠋⠷⠏⠘⠒⠴⠐⠾",
+      "reference": {
+        "m-14489": "http://abstract.ups.edu/aata/exercises-finite.html#Onn"
+      }
+    },
+    "Appl_192": {
+      "id": "m-14626",
+      "url": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#pKD",
+      "input": "<math><mi>c</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "c(t)",
+      "expected": "⠉⠷⠞⠾",
+      "reference": {
+        "m-14626": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#pKD"
+      }
+    },
+    "Appl_193": {
+      "id": "m-14627",
+      "url": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#pKD",
+      "input": "<math><mi>w</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "w(t)",
+      "expected": "⠺⠷⠞⠾",
+      "reference": {
+        "m-14627": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#pKD",
+        "m-14629": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#pKD",
+        "m-14635": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#pKD",
+        "m-14637": "http://abstract.ups.edu/aata/finite-exercises-bch-codes.html#xYW"
+      }
+    },
+    "Appl_194": {
+      "id": "m-14656",
+      "url": "http://abstract.ups.edu/aata/finite-sage-exercises.html#blz",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><msqrt><mn>7</mn></msqrt><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt{3},\\sqrt{7})",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠠⠀⠜⠶⠻⠾",
+      "reference": {
+        "m-14656": "http://abstract.ups.edu/aata/finite-sage-exercises.html#blz",
+        "m-14661": "http://abstract.ups.edu/aata/finite-sage-exercises.html#nzR"
+      }
+    },
+    "Appl_195": {
+      "id": "m-14712",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>E</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut(E)",
+      "expected": "⠠⠁⠥⠞⠷⠠⠑⠾",
+      "reference": {
+        "m-14712": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Yxk",
+        "m-14851": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm"
+      }
+    },
+    "Appl_196": {
+      "id": "m-14730",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>3</mn></msqrt><mo>,</mo><msqrt><mn>5</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt{3}, \\sqrt{5}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠜⠒⠻⠠⠀⠜⠢⠻⠾",
+      "reference": {
+        "m-14730": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX",
+        "m-14732": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX",
+        "m-14738": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX",
+        "m-14741": "http://abstract.ups.edu/aata/section-field-automorphisms.html#WHX",
+        "m-14872": "http://abstract.ups.edu/aata/section-field-automorphisms.html#CPg",
+        "m-15027": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Pdy",
+        "m-15166": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#vkH"
+      }
+    },
+    "Appl_197": {
+      "id": "m-14755",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#VgS",
+      "input": "<math><mi>σ</mi><mo stretchy=\"false\">(</mo><mi>α</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\sigma( \\alpha )",
+      "expected": "⠨⠎⠷⠨⠁⠾",
+      "reference": {
+        "m-14755": "http://abstract.ups.edu/aata/section-field-automorphisms.html#VgS",
+        "m-15217": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ",
+        "m-15232": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#QwZ"
+      }
+    },
+    "Appl_198": {
+      "id": "m-14886",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#iWp",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mi>ω</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\omega)",
+      "expected": "⠈⠰⠠⠟⠷⠨⠺⠾",
+      "reference": {
+        "m-14886": "http://abstract.ups.edu/aata/section-field-automorphisms.html#iWp",
+        "m-14888": "http://abstract.ups.edu/aata/section-field-automorphisms.html#iWp",
+        "m-15347": "http://abstract.ups.edu/aata/section-galois-applications.html#TNr",
+        "m-15728": "http://abstract.ups.edu/aata/exercises-galois.html#MSM",
+        "m-15749": "http://abstract.ups.edu/aata/exercises-galois.html#PUw"
+      }
+    },
+    "Appl_199": {
+      "id": "m-14990",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+      "input": "<math><mi>F</mi><mo stretchy=\"false\">(</mo><mi>γ</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "F( \\gamma )",
+      "expected": "⠠⠋⠷⠨⠛⠾",
+      "reference": {
+        "m-14990": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-14996": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH"
+      }
+    },
+    "Appl_200": {
+      "id": "m-15014",
+      "url": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#emw",
+      "input": "<math><mi>Aut</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mi>F</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\aut(F)",
+      "expected": "⠠⠁⠥⠞⠷⠠⠋⠾",
+      "reference": {
+        "m-15014": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#emw",
+        "m-15021": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#wZU"
+      }
+    },
+    "Appl_201": {
+      "id": "m-15275",
+      "url": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>2</mn><mn>4</mn></mroot><mo>,</mo><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}( \\sqrt[4]{2}, i )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠆⠻⠠⠀⠊⠾",
+      "reference": {
+        "m-15275": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15293": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#HyZ",
+        "m-15296": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#HyZ"
+      }
+    },
+    "Appl_202": {
+      "id": "m-15285",
+      "url": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>2</mn><mn>4</mn></mroot><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt[4]{2}\\, )",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠆⠻⠾",
+      "reference": {
+        "m-15285": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15290": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#HyZ"
+      }
+    },
+    "Appl_203": {
+      "id": "m-15405",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+      "input": "<math><mi>σ</mi><mo stretchy=\"false\">(</mo><mi>ω</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\sigma( \\omega)",
+      "expected": "⠨⠎⠷⠨⠺⠾",
+      "reference": {
+        "m-15405": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL"
+      }
+    },
+    "Appl_204": {
+      "id": "m-15539",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+      "input": "<math><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow><mo stretchy=\"false\">(</mo><mi>α</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\mathbb Q(\\alpha)",
+      "expected": "⠈⠰⠠⠟⠷⠨⠁⠾",
+      "reference": {
+        "m-15539": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA"
+      }
+    },
+    "Appl_205": {
+      "id": "m-15552",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#cxj",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">C</mi></mrow></mrow><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "{\\mathbb C}[x]",
+      "expected": "⠈⠰⠠⠉⠈⠷⠭⠈⠾",
+      "reference": {
+        "m-15552": "http://abstract.ups.edu/aata/section-galois-applications.html#cxj",
+        "m-15559": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+        "m-15596": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr"
+      }
+    },
+    "Appl_206": {
+      "id": "m-15622",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#mAP",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mn>729</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(729)",
+      "expected": "⠠⠠⠛⠋⠷⠶⠆⠔⠾",
+      "reference": {
+        "m-15622": "http://abstract.ups.edu/aata/exercises-galois.html#mAP"
+      }
+    },
+    "Appl_207": {
+      "id": "m-15623",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#mAP",
+      "input": "<math><mi>GF</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mo stretchy=\"false\">(</mo><mn>9</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\gf(9)",
+      "expected": "⠠⠠⠛⠋⠷⠔⠾",
+      "reference": {
+        "m-15623": "http://abstract.ups.edu/aata/exercises-galois.html#mAP"
+      }
+    },
+    "Appl_208": {
+      "id": "m-15740",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#DGe",
+      "input": "<math><msub><mi mathvariant=\"normal\">Φ</mi><mi>p</mi></msub><mo stretchy=\"false\">(</mo><msup><mi>ω</mi><mi>i</mi></msup><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\Phi_p( \\omega^i)",
+      "expected": "⠨⠠⠋⠰⠏⠐⠷⠨⠺⠘⠊⠐⠾",
+      "reference": {
+        "m-15740": "http://abstract.ups.edu/aata/exercises-galois.html#DGe"
+      }
+    },
+    "Appl_209": {
+      "id": "m-15799",
+      "url": "http://abstract.ups.edu/aata/galois-sage.html#gqe",
+      "input": "<math><mi>τ</mi><mo stretchy=\"false\">(</mo><mi>c</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "\\tau(c)",
+      "expected": "⠨⠞⠷⠉⠾",
+      "reference": {
+        "m-15799": "http://abstract.ups.edu/aata/galois-sage.html#gqe"
+      }
+    },
+    "Appl_210": {
+      "id": "m-15806",
+      "url": "http://abstract.ups.edu/aata/galois-sage.html#ESO",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>2</mn><mn>4</mn></mroot><mi>i</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt[4]{2}i)",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠆⠻⠊⠾",
+      "reference": {
+        "m-15806": "http://abstract.ups.edu/aata/galois-sage.html#ESO",
+        "m-15807": "http://abstract.ups.edu/aata/galois-sage.html#Rhg"
+      }
+    },
+    "Appl_211": {
+      "id": "m-15818",
+      "url": "http://abstract.ups.edu/aata/galois-sage.html#utJ",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><msqrt><mn>2</mn></msqrt><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt{2})",
+      "expected": "⠈⠰⠠⠟⠷⠜⠆⠻⠾",
+      "reference": {
+        "m-15818": "http://abstract.ups.edu/aata/galois-sage.html#utJ"
+      }
+    },
+    "Appl_212": {
+      "id": "m-15825",
+      "url": "http://abstract.ups.edu/aata/galois-sage.html#rzd",
+      "input": "<math><mrow><mrow><mi mathvariant=\"double-struck\">Q</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mroot><mn>2</mn><mn>4</mn></mroot><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb Q}(\\sqrt[4]{2})",
+      "expected": "⠈⠰⠠⠟⠷⠣⠲⠜⠆⠻⠾",
+      "reference": {
+        "m-15825": "http://abstract.ups.edu/aata/galois-sage.html#rzd",
+        "m-15827": "http://abstract.ups.edu/aata/galois-sage.html#rzd",
+        "m-15829": "http://abstract.ups.edu/aata/galois-sage.html#XGm"
+      }
+    }
+  }
+}

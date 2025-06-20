@@ -1,0 +1,444 @@
+{
+  "name": "KoreanMathspeakSummary",
+  "locale": "ko",
+  "domain": "mathspeak",
+  "factory": "summary",
+  "base": "input/common/summary_test.json",
+  "information": "Korean Mathspeak Summary tests.",
+  "active": "SummaryKorean",
+  "exclude": [],
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "항이 두 개인 덧셈"
+    },
+    "AbstrAddition_brief": {
+      "expected": "합"
+    },
+    "AbstrAddition_sbrief": {
+      "expected": "합"
+    },
+    "AbstrBigop_default": {
+      "expected": "시그마 합"
+    },
+    "AbstrBigop_brief": {
+      "expected": "시그마 합"
+    },
+    "AbstrBigop_sbrief": {
+      "expected": "시그마 합"
+    },
+    "AbstrBinomial_default": {
+      "expected": "이항식"
+    },
+    "AbstrBinomial_brief": {
+      "expected": "이항식"
+    },
+    "AbstrBinomial_sbrief": {
+      "expected": "이항식"
+    },
+    "AbstrCases_default": {
+      "expected": "케이스가 두 개인 조건문"
+    },
+    "AbstrCases_brief": {
+      "expected": "조건문"
+    },
+    "AbstrCases_sbrief": {
+      "expected": "조건문"
+    },
+    "_comment0_": " TODO",
+    "AbstrCell_default": {
+      "expected": "첫번째 열 이 다음과 같은 표"
+    },
+    "AbstrCell_brief": {
+      "expected": "첫번째 열 이 다음과 같은 표"
+    },
+    "AbstrCell_sbrief": {
+      "expected": "첫번째 열 이 다음과 같은 표"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "연분수"
+    },
+    "AbstrContinuedFraction_brief": {
+      "expected": "연분수"
+    },
+    "AbstrContinuedFraction_sbrief": {
+      "expected": "연분수"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "2 차원 행렬식"
+    },
+    "AbstrDeterminant_brief": {
+      "expected": "행렬식"
+    },
+    "AbstrDeterminant_sbrief": {
+      "expected": "행렬식"
+    },
+    "AbstrFraction_default": {
+      "expected": "분수"
+    },
+    "AbstrFraction_brief": {
+      "expected": "분수"
+    },
+    "AbstrFraction_sbrief": {
+      "expected": "분수"
+    },
+    "AbstrFunction_default": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "함수"
+    },
+    "AbstrFunction_brief": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "함수"
+    },
+    "AbstrFunction_sbrief": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "함수"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "변수"
+    },
+    "AbstrIdentifier_brief": {
+      "expected": "변수"
+    },
+    "AbstrIdentifier_sbrief": {
+      "expected": "변수"
+    },
+    "AbstrInfixop_default": {
+      "expected": "인자가 두 개인 나눗셈"
+    },
+    "AbstrInfixop_brief": {
+      "expected": "나눗셈"
+    },
+    "AbstrInfixop_sbrief": {
+      "expected": "나눗셈"
+    },
+    "AbstrIntegral_default": {
+      "expected": "인테그럴"
+    },
+    "AbstrIntegral_brief": {
+      "expected": "인테그럴"
+    },
+    "AbstrIntegral_sbrief": {
+      "expected": "인테그럴"
+    },
+    "AbstrLim_default": {
+      "expected": "리미트"
+    },
+    "AbstrLim_brief": {
+      "expected": "리미트"
+    },
+    "AbstrLim_sbrief": {
+      "expected": "리미트"
+    },
+    "_comment2_": " TODO",
+    "AbstrLine_default": {
+      "expected": "첫번째 행 이 다음과 같은 연립"
+    },
+    "AbstrLine_brief": {
+      "expected": "첫번째 행 이 다음과 같은 연립"
+    },
+    "AbstrLine_sbrief": {
+      "expected": "첫번째 행 이 다음과 같은 연립"
+    },
+    "AbstrMatrix_default": {
+      "expected": "3 행 2 열의 행렬"
+    },
+    "AbstrMatrix_brief": {
+      "expected": "행렬"
+    },
+    "AbstrMatrix_sbrief": {
+      "expected": "행렬"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "대분수"
+    },
+    "AbstrMixedNumber_brief": {
+      "expected": "대분수"
+    },
+    "AbstrMixedNumber_sbrief": {
+      "expected": "대분수"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "인자가 두 개인 곱셈"
+    },
+    "AbstrMultiplication_brief": {
+      "expected": "곱"
+    },
+    "AbstrMultiplication_sbrief": {
+      "expected": "곱"
+    },
+    "AbstrMultirel_default": {
+      "expected": "두 개의 연속된 관계식"
+    },
+    "AbstrMultirel_brief": {
+      "expected": "연속된 관계식"
+    },
+    "AbstrMultirel_sbrief": {
+      "expected": "연속된 관계식"
+    },
+    "AbstrNumber_default": {
+      "expected": "수"
+    },
+    "AbstrNumber_brief": {
+      "expected": "수"
+    },
+    "AbstrNumber_sbrief": {
+      "expected": "수"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "세 개의 원소가 콤마 로 나누어진 리스트"
+    },
+    "AbstrPunctuated_brief": {
+      "expected": "콤마 로 나누어진 리스트"
+    },
+    "AbstrPunctuated_sbrief": {
+      "expected": "콤마 로 나누어진 리스트"
+    },
+    "AbstrRelation_default": {
+      "expected": "등식"
+    },
+    "AbstrRelation_brief": {
+      "expected": "등식"
+    },
+    "AbstrRelation_sbrief": {
+      "expected": "등식"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "두 개의 연속된 등식"
+    },
+    "AbstrRelationSeq_brief": {
+      "expected": "연속된 등식"
+    },
+    "AbstrRelationSeq_sbrief": {
+      "expected": "연속된 등식"
+    },
+    "AbstrRoot_default": {
+      "expected": "세제곱근 루트"
+    },
+    "AbstrRoot_brief": {
+      "expected": "루트"
+    },
+    "AbstrRoot_sbrief": {
+      "expected": "루트"
+    },
+    "AbstrRootNested_default": {
+      "expected": "세제곱근 중첩루트"
+    },
+    "AbstrRootNested_brief": {
+      "expected": "중첩루트"
+    },
+    "AbstrRootNested_sbrief": {
+      "expected": "중첩루트"
+    },
+    "_comment3_": " TODO",
+    "AbstrRow_default": {
+      "expected": "첫번째 행 이 다음과 같은 2 열의 표"
+    },
+    "AbstrRow_brief": {
+      "expected": "첫번째 행 이 다음과 같은 2 열의 표"
+    },
+    "AbstrRow_sbrief": {
+      "expected": "첫번째 행 이 다음과 같은 2 열의 표"
+    },
+    "AbstrRowvector_default": {
+      "expected": "2 차원 행 벡터"
+    },
+    "AbstrRowvector_brief": {
+      "expected": "행 벡터"
+    },
+    "AbstrRowvector_sbrief": {
+      "expected": "행 벡터"
+    },
+    "AbstrSqrt_default": {
+      "expected": "루트"
+    },
+    "AbstrSqrt_brief": {
+      "expected": "루트"
+    },
+    "AbstrSqrt_sbrief": {
+      "expected": "루트"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "중첩루트"
+    },
+    "AbstrSqrtNested_brief": {
+      "expected": "중첩루트"
+    },
+    "AbstrSqrtNested_sbrief": {
+      "expected": "중첩루트"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "2 차원 정방행렬"
+    },
+    "AbstrSquarematrix_brief": {
+      "expected": "정방행렬"
+    },
+    "AbstrSquarematrix_sbrief": {
+      "expected": "정방행렬"
+    },
+    "AbstrSubscript_default": {
+      "expected": "아래첨자"
+    },
+    "AbstrSubscript_brief": {
+      "expected": "아래첨자"
+    },
+    "AbstrSubscript_sbrief": {
+      "expected": "아래첨자"
+    },
+    "AbstrSubsup_default": {
+      "expected": "거듭제곱과 아래첨자"
+    },
+    "AbstrSubsup_brief": {
+      "expected": "거듭제곱과 아래첨자"
+    },
+    "AbstrSubsup_sbrief": {
+      "expected": "거듭제곱과 아래첨자"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "거듭제곱"
+    },
+    "AbstrSuperscript_brief": {
+      "expected": "거듭제곱"
+    },
+    "AbstrSuperscript_sbrief": {
+      "expected": "거듭제곱"
+    },
+    "AbstrTable_default": {
+      "expected": "2 행 2 열로 이루어진 표"
+    },
+    "AbstrTable_brief": {
+      "expected": "2 행 2 열로 이루어진 표"
+    },
+    "AbstrTable_sbrief": {
+      "expected": "2 행 2 열로 이루어진 표"
+    },
+    "AbstrText_default": {
+      "expected": "문자"
+    },
+    "AbstrText_brief": {
+      "expected": "문자"
+    },
+    "AbstrText_sbrief": {
+      "expected": "문자"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "항이 여러 개인 덧셈"
+    },
+    "AbstrVarAddition_brief": {
+      "expected": "합"
+    },
+    "AbstrVarAddition_sbrief": {
+      "expected": "합"
+    },
+    "AbstrVarCases_default": {
+      "expected": "케이스가 여러 개인 조건문"
+    },
+    "AbstrVarCases_brief": {
+      "expected": "조건문"
+    },
+    "AbstrVarCases_sbrief": {
+      "expected": "조건문"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "n 차원 행렬식"
+    },
+    "AbstrVarDeterminant_brief": {
+      "expected": "행렬식"
+    },
+    "AbstrVarDeterminant_sbrief": {
+      "expected": "행렬식"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "n 행 m 열의 행렬"
+    },
+    "AbstrVarMatrix_brief": {
+      "expected": "정방행렬"
+    },
+    "AbstrVarMatrix_sbrief": {
+      "expected": "정방행렬"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "인자가 여러 개인 곱셈"
+    },
+    "AbstrVarMultiplication_brief": {
+      "expected": "곱"
+    },
+    "AbstrVarMultiplication_sbrief": {
+      "expected": "곱"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "여러 개의 연속된 관계식"
+    },
+    "AbstrVarMultirel_brief": {
+      "expected": "연속된 관계식"
+    },
+    "AbstrVarMultirel_sbrief": {
+      "expected": "연속된 관계식"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "여러 개의 원소가 콤마 로 나누어진 리스트"
+    },
+    "AbstrVarPunctuated_brief": {
+      "expected": "콤마 로 나누어진 리스트"
+    },
+    "AbstrVarPunctuated_sbrief": {
+      "expected": "콤마 로 나누어진 리스트"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "여러 개의 연속된 등식"
+    },
+    "AbstrVarRelation_brief": {
+      "expected": "연속된 등식"
+    },
+    "AbstrVarRelation_sbrief": {
+      "expected": "연속된 등식"
+    },
+    "AbstrVarVector_default": {
+      "expected": "n 차원 벡터"
+    },
+    "AbstrVarVector_brief": {
+      "expected": "벡터"
+    },
+    "AbstrVarVector_sbrief": {
+      "expected": "벡터"
+    },
+    "AbstrVector_default": {
+      "expected": "3 차원 벡터"
+    },
+    "AbstrVector_brief": {
+      "expected": "벡터"
+    },
+    "AbstrVector_sbrief": {
+      "expected": "벡터"
+    },
+    "AbstrVarSubtraction_default": {
+      "expected": "항이 여러 개인 뺄셈"
+    },
+    "AbstrVarSubtraction_brief": {
+      "expected": "차"
+    },
+    "AbstrVarSubtraction_sbrief": {
+      "expected": "차"
+    },
+    "AbstrCountImplicit_default": {
+      "expected": "인자가 세 개인 곱셈"
+    },
+    "AbstrCountImplicit_brief": {
+      "expected": "곱"
+    },
+    "AbstrCountImplicit_sbrief": {
+      "expected": "곱"
+    },
+    "AbstrVarImplicit_default": {
+      "expected": "인자가 여러 개인 곱셈"
+    },
+    "AbstrVarArrowRelation_default": {
+      "expected": "여러 개의 연속된 화살표"
+    },
+    "AbstrArrowRelation_default": {
+      "expected": "화살표"
+    },
+    "AbstrVarRowvector_default": {
+      "expected": "n 차원 행 벡터"
+    }
+  }
+}

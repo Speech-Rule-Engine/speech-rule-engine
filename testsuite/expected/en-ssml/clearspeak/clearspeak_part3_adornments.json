@@ -1,0 +1,296 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakPart3Adornments",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
+  "information": "English Clearspeak Part3Adornments rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 3: Adornments",
+    "_comment2_": " Prime, Double Prime, and Triple Prime",
+    "Prime001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> prime </prosody></speak>"
+    },
+    "Prime002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> double prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> double prime </prosody></speak>"
+    },
+    "Prime003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> triple prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> triple prime </prosody></speak>"
+    },
+    "Prime004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> double prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> triple prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\" kind=\"LAST\"/> foot </prosody></speak>"
+    },
+    "Prime008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\" kind=\"LAST\"/> feet </prosody></speak>"
+    },
+    "Prime009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\" kind=\"LAST\"/> inch </prosody></speak>"
+    },
+    "Prime010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\" kind=\"LAST\"/> inches </prosody></speak>"
+    },
+    "Prime011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 16 <mark name=\"2\" kind=\"LAST\"/> feet <break time=\"250ms\"/> <mark name=\"3\"/> 10 <mark name=\"5\" kind=\"LAST\"/> inches </prosody></speak>"
+    },
+    "_comment3_": " TODO: (Simons) Better handling of degrees.",
+    "Prime012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 45 <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> 10 <mark name=\"4\"/> minutes </prosody></speak>"
+    },
+    "Prime013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> minutes </prosody></speak>"
+    },
+    "Prime014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 45 <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> 10 <mark name=\"4\"/> minutes <break time=\"250ms\"/> <mark name=\"5\"/> 25 <mark name=\"7\"/> seconds </prosody></speak>"
+    },
+    "Prime015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> minutes <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"7\"/> seconds </prosody></speak>"
+    },
+    "Prime016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\"/> minute </prosody></speak>"
+    },
+    "Prime017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> minutes </prosody></speak>"
+    },
+    "Prime018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\"/> minutes </prosody></speak>"
+    },
+    "Prime019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\"/> second </prosody></speak>"
+    },
+    "Prime020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> seconds </prosody></speak>"
+    },
+    "Prime021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\"/> seconds </prosody></speak>"
+    },
+    "Prime022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 16 <mark name=\"2\"/> minutes <break time=\"250ms\"/> <mark name=\"3\"/> 10 <mark name=\"5\"/> seconds </prosody></speak>"
+    },
+    "Prime023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> minutes <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> seconds </prosody></speak>"
+    },
+    "Prime024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 45 <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> 10 <mark name=\"4\"/> minutes </prosody></speak>"
+    },
+    "Prime025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 45 <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> 10 <mark name=\"4\"/> minutes <break time=\"250ms\"/> <mark name=\"5\"/> 25 <mark name=\"7\"/> seconds </prosody></speak>"
+    },
+    "Prime026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> prime </prosody></speak>"
+    },
+    "Prime027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> double prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> double prime </prosody></speak>"
+    },
+    "Prime028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> triple prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> triple prime </prosody></speak>"
+    },
+    "Prime029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> double prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> triple prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\" kind=\"LAST\"/> foot </prosody></speak>"
+    },
+    "Prime033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\" kind=\"LAST\"/> feet </prosody></speak>"
+    },
+    "Prime034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\" kind=\"LAST\"/> feet </prosody></speak>"
+    },
+    "Prime035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"2\" kind=\"LAST\"/> inch </prosody></speak>"
+    },
+    "Prime036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\" kind=\"LAST\"/> inches </prosody></speak>"
+    },
+    "Prime037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\" kind=\"LAST\"/> inches </prosody></speak>"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite prime etc into superscript.",
+    "Prime038": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 16 <mark name=\"2\" kind=\"LAST\"/> feet <break time=\"250ms\"/> <mark name=\"3\"/> 10 <mark name=\"5\" kind=\"LAST\"/> inches </prosody></speak>"
+    },
+    "Prime039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\" kind=\"LAST\"/> feet <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\" kind=\"LAST\"/> inches </prosody></speak>"
+    },
+    "Prime040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 45 <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> 10 <mark name=\"4\"/> minutes </prosody></speak>"
+    },
+    "Prime041": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 45 <mark name=\"1\"/> degrees <break time=\"250ms\"/> <mark name=\"2\"/> 10 <mark name=\"4\"/> minutes <break time=\"250ms\"/> <mark name=\"5\"/> 25 <mark name=\"7\"/> seconds </prosody></speak>"
+    },
+    "Prime042": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> prime </prosody></speak>"
+    },
+    "Prime043": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> double prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> double prime </prosody></speak>"
+    },
+    "Prime044": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> triple prime <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"4\"/> triple prime </prosody></speak>"
+    },
+    "Prime045": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime046": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> double prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Prime047": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> triple prime <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "_comment5_": " Combinations and Permutations",
+    "_comment6_": " These 8 tests come out of the clearspeak documents from MathType.  The MathML",
+    "_comment7_": " has a redundant use of subscripts leaving the actual correct placing of the",
+    "_comment8_": " right index in the multiscript empty.",
+    "_comment9_": " TODO: (Simons) Have a cleanup heuristic to combine multiscripts with",
+    "_comment10_": "                sub/superscripts.",
+    "CombPerm001": {
+      "expected": "n C r"
+    },
+    "CombPerm002": {
+      "expected": "n P r"
+    },
+    "CombPerm003": {
+      "expected": "10 C 3"
+    },
+    "CombPerm004": {
+      "expected": "10 P 3"
+    },
+    "CombPerm005": {
+      "expected": "n choose r"
+    },
+    "CombPerm006": {
+      "expected": "n permute r"
+    },
+    "CombPerm007": {
+      "expected": "10 choose 3"
+    },
+    "CombPerm008": {
+      "expected": "10 permute 3"
+    },
+    "_comment11_": " Cleaned up tests with the correct usage of multiscript elements.",
+    "CombPerm001a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">n</say-as> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <mark name=\"3\"/> <say-as interpret-as=\"character\">r</say-as> </prosody></speak>"
+    },
+    "CombPerm002a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">n</say-as> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">P</say-as> </prosody> <mark name=\"3\"/> <say-as interpret-as=\"character\">r</say-as> </prosody></speak>"
+    },
+    "CombPerm003a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 10 <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <mark name=\"3\"/> 3 </prosody></speak>"
+    },
+    "CombPerm004a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 10 <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">P</say-as> </prosody> <mark name=\"3\"/> 3 </prosody></speak>"
+    },
+    "CombPerm005a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\"/> choose <say-as interpret-as=\"character\">r</say-as> </prosody></speak>"
+    },
+    "CombPerm006a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\"/> permute <say-as interpret-as=\"character\">r</say-as> </prosody></speak>"
+    },
+    "CombPerm007a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 10 <mark name=\"3\"/> choose 3 </prosody></speak>"
+    },
+    "CombPerm008a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> 10 <mark name=\"3\"/> permute 3 </prosody></speak>"
+    },
+    "_comment12_": " Bar",
+    "Bar001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> bar </prosody></speak>"
+    },
+    "Bar002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> bar <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Bar003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"3\"/> bar </prosody></speak>"
+    },
+    "Bar004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"3\"/> bar <mark name=\"8\"/> of <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Bar005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> bar </prosody></speak>"
+    },
+    "Bar006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 0 <mark name=\"2\"/> point followed by repeating digit <mark name=\"7\"/> 3 </prosody></speak>"
+    },
+    "Bar007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 0 <mark name=\"2\"/> point followed by repeating digits <mark name=\"7\"/> 1 <mark name=\"8\"/> 2 </prosody></speak>"
+    },
+    "Bar008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 2 <mark name=\"2\"/> point followed by repeating digits <mark name=\"7\"/> 1 <mark name=\"8\"/> 3 <mark name=\"9\"/> 4 </prosody></speak>"
+    },
+    "Bar009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> point <mark name=\"7\"/> 1 <mark name=\"8\"/> 3 <mark name=\"1\"/> followed by repeating digits <mark name=\"9\"/> 4 <mark name=\"10\"/> 6 <mark name=\"11\"/> 7 </prosody></speak>"
+    },
+    "Bar010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 2 <mark name=\"7\"/> 5 <mark name=\"8\"/> point <mark name=\"9\"/> 1 <mark name=\"10\"/> 2 <mark name=\"1\"/> followed by repeating digits <mark name=\"11\"/> 6 <mark name=\"12\"/> 3 <mark name=\"13\"/> 2 </prosody></speak>"
+    },
+    "Bar011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"3\"/> bar </prosody></speak>"
+    },
+    "Bar012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the line segment <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">C</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">D</say-as> </prosody> </prosody></speak>"
+    },
+    "Bar013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the line segment <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <mark name=\"1\"/> prime <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">D</say-as> </prosody> <mark name=\"4\"/> prime </prosody></speak>"
+    },
+    "Bar014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the line segment <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <mark name=\"1\"/> double prime <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">D</say-as> </prosody> <mark name=\"4\"/> double prime </prosody></speak>"
+    },
+    "Bar015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the line segment <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <mark name=\"1\"/> triple prime <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">D</say-as> </prosody> <mark name=\"4\"/> triple prime </prosody></speak>"
+    },
+    "Bar016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the complex conjugate of <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Bar017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> the complex conjugate of <mark name=\"2\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Bar018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the complex conjugate of <mark name=\"0\"/> 3 <mark name=\"1\"/> minus <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"9\"/> equals <mark name=\"10\"/> 3 <mark name=\"11\"/> plus <prosody rate=\"+25%\"> <mark name=\"12\"/> 2 <mark name=\"13\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> </prosody></speak>"
+    },
+    "_comment13_": " Added! Test that still decimal period still works.",
+    "Bar006a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 0 <mark name=\"2\"/> point followed by repeating digit <mark name=\"7\"/> 3 </prosody></speak>"
+    },
+    "Bar007a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 0 <mark name=\"2\"/> point followed by repeating digits <mark name=\"7\"/> 1 <mark name=\"8\"/> 2 </prosody></speak>"
+    },
+    "Bar008a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 2 <mark name=\"2\"/> point followed by repeating digits <mark name=\"7\"/> 1 <mark name=\"8\"/> 3 <mark name=\"9\"/> 4 </prosody></speak>"
+    },
+    "Bar009a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> point <mark name=\"7\"/> 1 <mark name=\"8\"/> 3 <mark name=\"1\"/> followed by repeating digits <mark name=\"9\"/> 4 <mark name=\"10\"/> 6 <mark name=\"11\"/> 7 </prosody></speak>"
+    },
+    "Bar010a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 2 <mark name=\"7\"/> 5 <mark name=\"8\"/> point <mark name=\"9\"/> 1 <mark name=\"10\"/> 2 <mark name=\"1\"/> followed by repeating digits <mark name=\"11\"/> 6 <mark name=\"12\"/> 3 <mark name=\"13\"/> 2 </prosody></speak>"
+    },
+    "_comment14_": " Equals Sign with Adornments",
+    "Equal001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> is defined to be </prosody></speak>"
+    },
+    "Equal002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> composed with <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> is defined to be <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"24\"/> of <break time=\"250ms\"/> <mark name=\"16\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"20\"/> of <mark name=\"18\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Equal003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> equals <mark name=\"1\"/> sign with question mark <mark name=\"2\" kind=\"LAST\"/> over it </prosody></speak>"
+    },
+    "Equal004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 2 <mark name=\"3\"/> equals <mark name=\"4\"/> sign with question mark <mark name=\"5\" kind=\"LAST\"/> over it <mark name=\"6\"/> 4 </prosody></speak>"
+    }
+  }
+}

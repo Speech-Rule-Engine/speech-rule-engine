@@ -1,0 +1,76 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakCapitalLetters",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "Swedish Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Cap001": {
+      "expected": "sinus A delat med a, är lika med, sinus B delat med b"
+    },
+    "Cap002": {
+      "expected": "c kvadrat är lika med a kvadrat plus b kvadrat minus 2 a b cosinus C"
+    },
+    "Cap003": {
+      "expected": "tangens A är lika med, a delat med b"
+    },
+    "Cap004": {
+      "expected": "A B"
+    },
+    "Cap005": {
+      "expected": "a A"
+    },
+    "Cap006": {
+      "expected": "b A"
+    },
+    "Cap007": {
+      "expected": "B a"
+    },
+    "Cap008": {
+      "expected": "vinkel A B C"
+    },
+    "Cap009": {
+      "expected": "vinkelmåttet av vinkel A B C"
+    },
+    "Cap010": {
+      "expected": "vinkelmåttet av vinkel A"
+    },
+    "Cap011": {
+      "expected": "sinus stort A delat med a, är lika med, sinus stort B delat med b"
+    },
+    "Cap012": {
+      "expected": "c kvadrat är lika med a kvadrat plus b kvadrat minus 2 a b cosinus stort C"
+    },
+    "Cap013": {
+      "expected": "tangens stort A är lika med, a delat med b"
+    },
+    "Cap014": {
+      "expected": "stort A, stort B"
+    },
+    "Cap015": {
+      "expected": "a, stort A"
+    },
+    "Cap016": {
+      "expected": "b, stort A"
+    },
+    "Cap017": {
+      "expected": "stort B, a"
+    },
+    "Cap018": {
+      "expected": "vinkel stort A, stort B, stort C"
+    },
+    "Cap019": {
+      "expected": "vinkelmåttet av vinkel stort A, stort B, stort C"
+    },
+    "Cap020": {
+      "expected": "vinkelmåttet av vinkel stort A"
+    },
+    "Cap020a": {
+      "expected": "vinkel stort A"
+    }
+  }
+}

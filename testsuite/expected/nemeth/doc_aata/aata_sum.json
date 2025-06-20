@@ -1,0 +1,3210 @@
+{
+  "factory": "speech",
+  "name": "PreTeXtAataSumTests",
+  "information": "PreTeXt Aata document Sum expressions.",
+  "locale": "nemeth",
+  "domain": "default",
+  "style": "default",
+  "modality": "braille",
+  "tests": {
+    "Sum_0": {
+      "id": "m-4",
+      "url": "http://abstract.ups.edu/aata/section-note-on-proofs.html#glA",
+      "input": "<math><mn>3</mn><mo>+</mo><mn>56</mn><mo>−</mo><mn>13</mn><mo>+</mo><mn>8</mn><mrow><mo>/</mo></mrow><mn>2</mn></math>",
+      "tex": "3 + 56 - 13 + 8/2",
+      "expected": "⠼⠒⠬⠢⠖⠤⠂⠒⠬⠦⠸⠌⠆",
+      "reference": {
+        "m-4": "http://abstract.ups.edu/aata/section-note-on-proofs.html#glA"
+      }
+    },
+    "Sum_1": {
+      "id": "m-10",
+      "url": "http://abstract.ups.edu/aata/section-note-on-proofs.html#kVt",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>6</mn></math>",
+      "tex": "x^3 - 4x^2 + 5 x - 6",
+      "expected": "⠭⠘⠒⠐⠤⠲⠭⠘⠆⠐⠬⠢⠭⠤⠖",
+      "reference": {
+        "m-10": "http://abstract.ups.edu/aata/section-note-on-proofs.html#kVt"
+      }
+    },
+    "Sum_2": {
+      "id": "m-76",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#tMC",
+      "input": "<math><mi>A</mi><mo>∪</mo><mi>B</mi></math>",
+      "tex": "A \\cup B",
+      "expected": "⠠⠁⠨⠬⠠⠃",
+      "reference": {
+        "m-76": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#tMC",
+        "m-522": "http://abstract.ups.edu/aata/exercises-sets.html#clB",
+        "m-11711": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11712": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11721": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+        "m-11722": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr"
+      }
+    },
+    "Sum_3": {
+      "id": "m-131",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+      "input": "<math><mo stretchy=\"false\">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><msup><mo stretchy=\"false\">)</mo><mo>′</mo></msup><mo>⊂</mo><msup><mi>A</mi><mo>′</mo></msup><mo>∩</mo><msup><mi>B</mi><mo>′</mo></msup></math>",
+      "tex": "(A \\cup B)' \\subset A' \\cap B'",
+      "expected": "⠷⠠⠁⠨⠬⠠⠃⠾⠄⠀⠸⠐⠅⠀⠠⠁⠘⠄⠐⠨⠩⠠⠃⠄",
+      "reference": {
+        "m-131": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+        "m-141": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU"
+      }
+    },
+    "Sum_4": {
+      "id": "m-132",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+      "input": "<math><mo stretchy=\"false\">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><msup><mo stretchy=\"false\">)</mo><mo>′</mo></msup><mo>⊃</mo><msup><mi>A</mi><mo>′</mo></msup><mo>∩</mo><msup><mi>B</mi><mo>′</mo></msup></math>",
+      "tex": "(A \\cup B)' \\supset A' \\cap B'",
+      "expected": "⠷⠠⠁⠨⠬⠠⠃⠾⠄⠀⠸⠨⠂⠀⠠⠁⠘⠄⠐⠨⠩⠠⠃⠄",
+      "reference": {
+        "m-132": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+        "m-149": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU"
+      }
+    },
+    "Sum_5": {
+      "id": "m-134",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+      "input": "<math><mi>x</mi><mo>∉</mo><mi>A</mi><mo>∪</mo><mi>B</mi></math>",
+      "tex": "x \\notin A \\cup B",
+      "expected": "⠭⠀⠌⠈⠑⠀⠠⠁⠨⠬⠠⠃",
+      "reference": {
+        "m-134": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+        "m-147": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU"
+      }
+    },
+    "Sum_6": {
+      "id": "m-140",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+      "input": "<math><mi>x</mi><mo>∈</mo><msup><mi>A</mi><mo>′</mo></msup><mo>∩</mo><msup><mi>B</mi><mo>′</mo></msup></math>",
+      "tex": "x \\in A' \\cap B'",
+      "expected": "⠭⠀⠈⠑⠀⠠⠁⠘⠄⠐⠨⠩⠠⠃⠄",
+      "reference": {
+        "m-140": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU",
+        "m-142": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#HPU"
+      }
+    },
+    "Sum_7": {
+      "id": "m-443",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Alv",
+      "input": "<math><mi>z</mi><mo>∈</mo><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo><mo>∩</mo><mo stretchy=\"false\">[</mo><mi>y</mi><mo stretchy=\"false\">]</mo></math>",
+      "tex": "z \\in [x] \\cap [y]",
+      "expected": "⠵⠀⠈⠑⠀⠈⠷⠭⠈⠾⠨⠩⠈⠷⠽⠈⠾",
+      "reference": {
+        "m-443": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Alv"
+      }
+    },
+    "Sum_8": {
+      "id": "m-481",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+      "input": "<math><mi>r</mi><mo>−</mo><mi>s</mi></math>",
+      "tex": "r - s",
+      "expected": "⠗⠤⠎",
+      "reference": {
+        "m-481": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "Sum_9": {
+      "id": "m-500",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+      "input": "<math><mi>s</mi><mo>−</mo><mi>r</mi></math>",
+      "tex": "s - r",
+      "expected": "⠎⠤⠗",
+      "reference": {
+        "m-500": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "Sum_10": {
+      "id": "m-509",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+      "input": "<math><mi>r</mi><mo>−</mo><mi>t</mi></math>",
+      "tex": "r - t",
+      "expected": "⠗⠤⠞",
+      "reference": {
+        "m-509": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+        "m-511": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm"
+      }
+    },
+    "Sum_11": {
+      "id": "m-520",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#PXj",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>A</mi><mo>∩</mo><mi>B</mi></mstyle></math>",
+      "tex": "A \\cap B",
+      "expected": "⠠⠁⠨⠩⠠⠃",
+      "reference": {
+        "m-520": "http://abstract.ups.edu/aata/exercises-sets.html#PXj",
+        "m-11727": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr"
+      }
+    },
+    "Sum_12": {
+      "id": "m-521",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#wes",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>B</mi><mo>∩</mo><mi>C</mi></mstyle></math>",
+      "tex": "B \\cap C",
+      "expected": "⠠⠃⠨⠩⠠⠉",
+      "reference": {
+        "m-521": "http://abstract.ups.edu/aata/exercises-sets.html#wes"
+      }
+    },
+    "Sum_13": {
+      "id": "m-523",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#IsK",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>A</mi><mo>∩</mo><mo stretchy=\"false\">(</mo><mi>B</mi><mo>∪</mo><mi>C</mi><mo stretchy=\"false\">)</mo></mstyle></math>",
+      "tex": "A \\cap (B \\cup C)",
+      "expected": "⠠⠁⠨⠩⠷⠠⠃⠨⠬⠠⠉⠾",
+      "reference": {
+        "m-523": "http://abstract.ups.edu/aata/exercises-sets.html#IsK"
+      }
+    },
+    "Sum_14": {
+      "id": "m-544",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#DXm",
+      "input": "<math><mi>x</mi><mo>∈</mo><mi>A</mi><mo>∪</mo><mi>B</mi></math>",
+      "tex": "x \\in A \\cup B",
+      "expected": "⠭⠀⠈⠑⠀⠠⠁⠨⠬⠠⠃",
+      "reference": {
+        "m-544": "http://abstract.ups.edu/aata/exercises-sets.html#DXm"
+      }
+    },
+    "Sum_15": {
+      "id": "m-549",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#DXm",
+      "input": "<math><mi>x</mi><mo>∈</mo><mi>B</mi><mo>∪</mo><mi>A</mi></math>",
+      "tex": "x \\in B \\cup A",
+      "expected": "⠭⠀⠈⠑⠀⠠⠃⠨⠬⠠⠁",
+      "reference": {
+        "m-549": "http://abstract.ups.edu/aata/exercises-sets.html#DXm"
+      }
+    },
+    "Sum_16": {
+      "id": "m-630",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#JcE",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>⊂</mo><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy=\"false\">)</mo><mo>∩</mo><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f( A_1 \\cap A_2 ) \\subset f( A_1) \\cap f( A_2 )",
+      "expected": "⠋⠷⠠⠁⠂⠨⠩⠠⠁⠆⠾⠀⠸⠐⠅⠀⠋⠷⠠⠁⠂⠾⠨⠩⠋⠷⠠⠁⠆⠾",
+      "reference": {
+        "m-630": "http://abstract.ups.edu/aata/exercises-sets.html#JcE"
+      }
+    },
+    "Sum_17": {
+      "id": "m-635",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+      "input": "<math><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub></math>",
+      "tex": "x \\in A_1 \\cup A_2",
+      "expected": "⠭⠀⠈⠑⠀⠠⠁⠂⠨⠬⠠⠁⠆",
+      "reference": {
+        "m-635": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+        "m-648": "http://abstract.ups.edu/aata/exercises-sets.html#BcG"
+      }
+    },
+    "Sum_18": {
+      "id": "m-639",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+      "input": "<math><mi>y</mi><mo>∈</mo><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy=\"false\">)</mo><mo>∪</mo><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "y \\in f(A_1) \\cup f(A_2)",
+      "expected": "⠽⠀⠈⠑⠀⠋⠷⠠⠁⠂⠾⠨⠬⠋⠷⠠⠁⠆⠾",
+      "reference": {
+        "m-639": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+        "m-641": "http://abstract.ups.edu/aata/exercises-sets.html#BcG"
+      }
+    },
+    "Sum_19": {
+      "id": "m-640",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#BcG",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo><mo>⊂</mo><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>1</mn></msub><mo stretchy=\"false\">)</mo><mo>∪</mo><mi>f</mi><mo stretchy=\"false\">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(A_1 \\cup A_2) \\subset f(A_1) \\cup f(A_2)",
+      "expected": "⠋⠷⠠⠁⠂⠨⠬⠠⠁⠆⠾⠀⠸⠐⠅⠀⠋⠷⠠⠁⠂⠾⠨⠬⠋⠷⠠⠁⠆⠾",
+      "reference": {
+        "m-640": "http://abstract.ups.edu/aata/exercises-sets.html#BcG"
+      }
+    },
+    "Sum_20": {
+      "id": "m-679",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ",
+      "input": "<math><msup><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup><mo>∖</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mo stretchy=\"false\">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy=\"false\">)</mo><mo fence=\"false\" stretchy=\"false\">}</mo></math>",
+      "tex": "{\\mathbb R}^2 \\setminus \\{ (0,0) \\}",
+      "expected": "⠈⠰⠠⠗⠘⠆⠐⠸⠡⠨⠷⠷⠴⠠⠀⠴⠾⠨⠾",
+      "reference": {
+        "m-679": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ"
+      }
+    },
+    "Sum_21": {
+      "id": "m-684",
+      "url": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ",
+      "input": "<math><msup><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup><mo>∖</mo><mo stretchy=\"false\">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "{\\mathbb R}^2 \\setminus (0,0)",
+      "expected": "⠈⠰⠠⠗⠘⠆⠐⠸⠡⠷⠴⠠⠀⠴⠾",
+      "reference": {
+        "m-684": "http://abstract.ups.edu/aata/exercises-sets.html#QzZ"
+      }
+    },
+    "Sum_22": {
+      "id": "m-723",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+      "input": "<math><msup><mn>10</mn><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>3</mn><mo>⋅</mo><msup><mn>10</mn><mi>n</mi></msup><mo>+</mo><mn>5</mn></math>",
+      "tex": "10^{n + 1} + 3 \\cdot 10^n + 5",
+      "expected": "⠼⠂⠴⠘⠝⠬⠂⠐⠬⠒⠡⠂⠴⠘⠝⠐⠬⠢",
+      "reference": {
+        "m-723": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr"
+      }
+    },
+    "Sum_23": {
+      "id": "m-728",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+      "input": "<math><msup><mn>10</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>3</mn><mo>⋅</mo><msup><mn>10</mn><mi>k</mi></msup><mo>+</mo><mn>5</mn></math>",
+      "tex": "10^{k + 1} + 3 \\cdot 10^k + 5",
+      "expected": "⠼⠂⠴⠘⠅⠬⠂⠐⠬⠒⠡⠂⠴⠘⠅⠐⠬⠢",
+      "reference": {
+        "m-728": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr"
+      }
+    },
+    "Sum_24": {
+      "id": "m-761",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#xhy",
+      "input": "<math><mi>n</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "n + 1",
+      "expected": "⠝⠬⠂",
+      "reference": {
+        "m-761": "http://abstract.ups.edu/aata/section-math-induction.html#xhy",
+        "m-773": "http://abstract.ups.edu/aata/section-math-induction.html#sxF",
+        "m-776": "http://abstract.ups.edu/aata/section-math-induction.html#sxF",
+        "m-777": "http://abstract.ups.edu/aata/section-math-induction.html#sxF",
+        "m-14016": "http://abstract.ups.edu/aata/section-finite-field.html#hYN",
+        "m-15044": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#tJC"
+      }
+    },
+    "Sum_25": {
+      "id": "m-821",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#YEO",
+      "input": "<math><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy=\"false\">(</mo><mi>q</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "a - b(q + 1)",
+      "expected": "⠁⠤⠃⠷⠟⠬⠂⠾",
+      "reference": {
+        "m-821": "http://abstract.ups.edu/aata/section-division-algorithm.html#YEO"
+      }
+    },
+    "Sum_26": {
+      "id": "m-840",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#YEO",
+      "input": "<math><msup><mi>r</mi><mo>′</mo></msup><mo>−</mo><mi>r</mi></math>",
+      "tex": "r' - r",
+      "expected": "⠗⠘⠄⠐⠤⠗",
+      "reference": {
+        "m-840": "http://abstract.ups.edu/aata/section-division-algorithm.html#YEO"
+      }
+    },
+    "Sum_27": {
+      "id": "m-1034",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#eBr",
+      "input": "<math><msup><mn>2</mn><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "2^{2^n} + 1",
+      "expected": "⠼⠆⠘⠆⠘⠘⠝⠘⠐⠬⠂",
+      "reference": {
+        "m-1034": "http://abstract.ups.edu/aata/section-division-algorithm.html#eBr"
+      }
+    },
+    "Sum_28": {
+      "id": "m-1064",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#ZhE",
+      "input": "<math><msup><mn>10</mn><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>+</mo><msup><mn>10</mn><mi>n</mi></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "10^{n + 1} + 10^n + 1",
+      "expected": "⠼⠂⠴⠘⠝⠬⠂⠐⠬⠂⠴⠘⠝⠐⠬⠂",
+      "reference": {
+        "m-1064": "http://abstract.ups.edu/aata/exercises-integers.html#ZhE"
+      }
+    },
+    "Sum_29": {
+      "id": "m-1067",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#FoN",
+      "input": "<math><mn>4</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mn>2</mn><mi>n</mi></mrow></msup><mo>+</mo><mn>9</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mn>2</mn><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>5</mn></math>",
+      "tex": "4 \\cdot 10^{2n} + 9 \\cdot 10^{2n - 1} + 5",
+      "expected": "⠼⠲⠡⠂⠴⠘⠆⠝⠐⠬⠔⠡⠂⠴⠘⠆⠝⠤⠂⠐⠬⠢",
+      "reference": {
+        "m-1067": "http://abstract.ups.edu/aata/exercises-integers.html#FoN"
+      }
+    },
+    "Sum_30": {
+      "id": "m-1149",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#nlj",
+      "input": "<math><mn>4</mn><mi>k</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "4k + 1",
+      "expected": "⠼⠲⠅⠬⠂",
+      "reference": {
+        "m-1149": "http://abstract.ups.edu/aata/exercises-integers.html#nlj"
+      }
+    },
+    "Sum_31": {
+      "id": "m-1201",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#kqD",
+      "input": "<math><msup><mn>2</mn><mi>p</mi></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "2^p - 1",
+      "expected": "⠼⠆⠘⠏⠐⠤⠂",
+      "reference": {
+        "m-1201": "http://abstract.ups.edu/aata/exercises-integers.html#kqD"
+      }
+    },
+    "Sum_32": {
+      "id": "m-1203",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#QxM",
+      "input": "<math><mn>6</mn><mi>n</mi><mo>+</mo><mn>5</mn></math>",
+      "tex": "6n + 5",
+      "expected": "⠼⠖⠝⠬⠢",
+      "reference": {
+        "m-1203": "http://abstract.ups.edu/aata/exercises-integers.html#QxM",
+        "m-1207": "http://abstract.ups.edu/aata/exercises-integers.html#gcj"
+      }
+    },
+    "Sum_33": {
+      "id": "m-1206",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#gcj",
+      "input": "<math><mn>6</mn><mi>n</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "6n + 1",
+      "expected": "⠼⠖⠝⠬⠂",
+      "reference": {
+        "m-1206": "http://abstract.ups.edu/aata/exercises-integers.html#gcj"
+      }
+    },
+    "Sum_34": {
+      "id": "m-1208",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#gcj",
+      "input": "<math><mn>6</mn><mi>k</mi><mo>+</mo><mn>5</mn></math>",
+      "tex": "6k + 5",
+      "expected": "⠼⠖⠅⠬⠢",
+      "reference": {
+        "m-1208": "http://abstract.ups.edu/aata/exercises-integers.html#gcj"
+      }
+    },
+    "Sum_35": {
+      "id": "m-1209",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#wEV",
+      "input": "<math><mn>4</mn><mi>n</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "4n - 1",
+      "expected": "⠼⠲⠝⠤⠂",
+      "reference": {
+        "m-1209": "http://abstract.ups.edu/aata/exercises-integers.html#wEV"
+      }
+    },
+    "Sum_36": {
+      "id": "m-1263",
+      "url": "http://abstract.ups.edu/aata/integers-sage.html#gqE",
+      "input": "<math><mi>b</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "b-1",
+      "expected": "⠃⠤⠂",
+      "reference": {
+        "m-1263": "http://abstract.ups.edu/aata/integers-sage.html#gqE"
+      }
+    },
+    "Sum_37": {
+      "id": "m-1280",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#xTf",
+      "input": "<math><mi>a</mi><mo>−</mo><mi>b</mi></math>",
+      "tex": "a - b",
+      "expected": "⠁⠤⠃",
+      "reference": {
+        "m-1280": "http://abstract.ups.edu/aata/section-mod-n-sym.html#xTf",
+        "m-11029": "http://abstract.ups.edu/aata/section-factorization-domains.html#qCb",
+        "m-12941": "http://abstract.ups.edu/aata/section-extension-fields.html#fCx"
+      }
+    },
+    "Sum_38": {
+      "id": "m-1294",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#xTf",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>b</mi></math>",
+      "tex": "a + b",
+      "expected": "⠁⠬⠃",
+      "reference": {
+        "m-1294": "http://abstract.ups.edu/aata/section-mod-n-sym.html#xTf",
+        "m-1326": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq"
+      }
+    },
+    "Sum_39": {
+      "id": "m-1328",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq",
+      "input": "<math><mi>b</mi><mo>+</mo><mi>a</mi></math>",
+      "tex": "b + a",
+      "expected": "⠃⠬⠁",
+      "reference": {
+        "m-1328": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq"
+      }
+    },
+    "Sum_40": {
+      "id": "m-1342",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq",
+      "input": "<math><mi>a</mi><mi>b</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "ab -1",
+      "expected": "⠁⠃⠤⠂",
+      "reference": {
+        "m-1342": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq"
+      }
+    },
+    "Sum_41": {
+      "id": "m-1347",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq",
+      "input": "<math><mi>a</mi><mi>b</mi><mo>−</mo><mi>n</mi><mi>k</mi></math>",
+      "tex": "ab - nk",
+      "expected": "⠁⠃⠤⠝⠅",
+      "reference": {
+        "m-1347": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq"
+      }
+    },
+    "Sum_42": {
+      "id": "m-1407",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#Zca",
+      "input": "<math><mi>m</mi><mo>+</mo><mi>n</mi></math>",
+      "tex": "m + n",
+      "expected": "⠍⠬⠝",
+      "reference": {
+        "m-1407": "http://abstract.ups.edu/aata/section-groups-define.html#Zca",
+        "m-1416": "http://abstract.ups.edu/aata/section-groups-define.html#rPy",
+        "m-1429": "http://abstract.ups.edu/aata/section-groups-define.html#Fjj",
+        "m-9904": "http://abstract.ups.edu/aata/section-poly-rings.html#eUQ"
+      }
+    },
+    "Sum_43": {
+      "id": "m-1418",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#rPy",
+      "input": "<math><mi>m</mi><mo>−</mo><mi>n</mi></math>",
+      "tex": "m - n",
+      "expected": "⠍⠤⠝",
+      "reference": {
+        "m-1418": "http://abstract.ups.edu/aata/section-groups-define.html#rPy"
+      }
+    },
+    "Sum_44": {
+      "id": "m-1419",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#rPy",
+      "input": "<math><mi>m</mi><mo>+</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>n</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "m + (-n)",
+      "expected": "⠍⠬⠷⠤⠝⠾",
+      "reference": {
+        "m-1419": "http://abstract.ups.edu/aata/section-groups-define.html#rPy"
+      }
+    },
+    "Sum_45": {
+      "id": "m-1444",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mi>n</mi></msub><mo>∖</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mn>0</mn><mo fence=\"false\" stretchy=\"false\">}</mo></math>",
+      "tex": "{\\mathbb Z}_n \\setminus \\{0 \\}",
+      "expected": "⠈⠰⠠⠵⠰⠝⠐⠸⠡⠨⠷⠴⠨⠾",
+      "reference": {
+        "m-1444": "http://abstract.ups.edu/aata/section-groups-define.html#RxB"
+      }
+    },
+    "Sum_46": {
+      "id": "m-1735",
+      "url": "http://abstract.ups.edu/aata/reading-questions-3.html#PXJ",
+      "input": "<math><mn>6</mn><mo>+</mo><mn>7</mn></math>",
+      "tex": "6+7",
+      "expected": "⠼⠖⠬⠶",
+      "reference": {
+        "m-1735": "http://abstract.ups.edu/aata/reading-questions-3.html#PXJ"
+      }
+    },
+    "Sum_47": {
+      "id": "m-1748",
+      "url": "http://abstract.ups.edu/aata/exercises-groups.html#nBe",
+      "input": "<math><mn>18</mn><mo>+</mo><mn>26</mn><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></math>",
+      "tex": "18 + 26 \\mathbb Z",
+      "expected": "⠼⠂⠦⠬⠆⠖⠈⠰⠠⠵",
+      "reference": {
+        "m-1748": "http://abstract.ups.edu/aata/exercises-groups.html#nBe"
+      }
+    },
+    "Sum_48": {
+      "id": "m-1749",
+      "url": "http://abstract.ups.edu/aata/exercises-groups.html#nBe",
+      "input": "<math><mn>5</mn><mo>+</mo><mn>6</mn><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></math>",
+      "tex": "5 + 6 \\mathbb Z",
+      "expected": "⠼⠢⠬⠖⠈⠰⠠⠵",
+      "reference": {
+        "m-1749": "http://abstract.ups.edu/aata/exercises-groups.html#nBe"
+      }
+    },
+    "Sum_49": {
+      "id": "m-1790",
+      "url": "http://abstract.ups.edu/aata/exercises-groups.html#Ezp",
+      "input": "<math><mi>n</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "n - 1",
+      "expected": "⠝⠤⠂",
+      "reference": {
+        "m-1790": "http://abstract.ups.edu/aata/exercises-groups.html#Ezp",
+        "m-2939": "http://abstract.ups.edu/aata/exercises-permute.html#kgz",
+        "m-3484": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#dFc",
+        "m-10083": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-10092": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#DxA",
+        "m-14221": "http://abstract.ups.edu/aata/section-poly-codes.html#fVs",
+        "m-14371": "http://abstract.ups.edu/aata/section-poly-codes.html#unf",
+        "m-14374": "http://abstract.ups.edu/aata/section-poly-codes.html#unf"
+      }
+    },
+    "Sum_50": {
+      "id": "m-1888",
+      "url": "http://abstract.ups.edu/aata/exercises-groups.html#mKg",
+      "input": "<math><mi>H</mi><mo>∪</mo><mi>K</mi></math>",
+      "tex": "H \\cup K",
+      "expected": "⠠⠓⠨⠬⠠⠅",
+      "reference": {
+        "m-1888": "http://abstract.ups.edu/aata/exercises-groups.html#mKg",
+        "m-11740": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lAA",
+        "m-11744": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lAA",
+        "m-12210": "http://abstract.ups.edu/aata/exercises-boolean.html#mku"
+      }
+    },
+    "Sum_51": {
+      "id": "m-1947",
+      "url": "http://abstract.ups.edu/aata/groups-sage.html#QGD",
+      "input": "<math><mn>6.00000</mn><mo>+</mo><mn>0.00000</mn><mi>i</mi></math>",
+      "tex": "6.00000+0.00000i",
+      "expected": "⠼⠖⠨⠴⠴⠴⠴⠴⠬⠴⠨⠴⠴⠴⠴⠴⠊",
+      "reference": {
+        "m-1947": "http://abstract.ups.edu/aata/groups-sage.html#QGD"
+      }
+    },
+    "Sum_52": {
+      "id": "m-2229",
+      "url": "http://abstract.ups.edu/aata/section-mult-group-c.html#Bkb",
+      "input": "<math><mi>cos</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>θ</mi><mo>+</mo><mi>i</mi><mi>sin</mi><mo data-mjx-texclass=\"NONE\">⁡</mo><mi>θ</mi></math>",
+      "tex": "\\cos \\theta + i \\sin \\theta",
+      "expected": "⠉⠕⠎⠀⠨⠹⠬⠊⠎⠊⠝⠀⠨⠹",
+      "reference": {
+        "m-2229": "http://abstract.ups.edu/aata/section-mult-group-c.html#Bkb",
+        "m-13714": "http://abstract.ups.edu/aata/exercises-fields.html#fvt"
+      }
+    },
+    "Sum_53": {
+      "id": "m-2387",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#qig",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo stretchy=\"false\">(</mo><mn>3</mn><mo>−</mo><mn>2</mn><mi>i</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>5</mn><mi>i</mi><mo>−</mo><mn>6</mn><mo stretchy=\"false\">)</mo></mstyle></math>",
+      "tex": "(3-2i)+ (5i-6)",
+      "expected": "⠷⠒⠤⠆⠊⠾⠬⠷⠢⠊⠤⠖⠾",
+      "reference": {
+        "m-2387": "http://abstract.ups.edu/aata/exercises-cyclic.html#qig"
+      }
+    },
+    "Sum_54": {
+      "id": "m-2388",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#Wpp",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo stretchy=\"false\">(</mo><mn>4</mn><mo>−</mo><mn>5</mn><mi>i</mi><mo stretchy=\"false\">)</mo><mo>−</mo><mover><mrow><mo stretchy=\"false\">(</mo><mn>4</mn><mi>i</mi><mo>−</mo><mn>4</mn><mo stretchy=\"false\">)</mo></mrow><mo accent=\"false\">¯</mo></mover></mstyle></math>",
+      "tex": "(4-5i)-\\overline{(4i -4)}",
+      "expected": "⠷⠲⠤⠢⠊⠾⠤⠐⠷⠲⠊⠤⠲⠾⠣⠱⠻",
+      "reference": {
+        "m-2388": "http://abstract.ups.edu/aata/exercises-cyclic.html#Wpp"
+      }
+    },
+    "Sum_55": {
+      "id": "m-2392",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#uRZ",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo stretchy=\"false\">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mover><mrow><mo stretchy=\"false\">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo stretchy=\"false\">)</mo></mrow><mo accent=\"false\">¯</mo></mover></mstyle></math>",
+      "tex": "(1+i)+\\overline{(1+i)}",
+      "expected": "⠷⠂⠬⠊⠾⠬⠐⠷⠂⠬⠊⠾⠣⠱⠻",
+      "reference": {
+        "m-2392": "http://abstract.ups.edu/aata/exercises-cyclic.html#uRZ"
+      }
+    },
+    "Sum_56": {
+      "id": "m-2393",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#ubb",
+      "input": "<math><mo>−</mo><mn>3</mn><mo>+</mo><mn>3</mn><mi>i</mi></math>",
+      "tex": "-3 + 3i",
+      "expected": "⠤⠼⠒⠬⠒⠊",
+      "reference": {
+        "m-2393": "http://abstract.ups.edu/aata/exercises-cyclic.html#ubb"
+      }
+    },
+    "Sum_57": {
+      "id": "m-2394",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#ubb",
+      "input": "<math><mn>43</mn><mo>−</mo><mn>18</mn><mi>i</mi></math>",
+      "tex": "43- 18i",
+      "expected": "⠼⠲⠒⠤⠂⠦⠊",
+      "reference": {
+        "m-2394": "http://abstract.ups.edu/aata/exercises-cyclic.html#ubb"
+      }
+    },
+    "Sum_58": {
+      "id": "m-2396",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#glR",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></math>",
+      "tex": "a + bi",
+      "expected": "⠁⠬⠃⠊",
+      "reference": {
+        "m-2396": "http://abstract.ups.edu/aata/exercises-cyclic.html#glR",
+        "m-11139": "http://abstract.ups.edu/aata/section-factorization-domains.html#Pmc",
+        "m-13172": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd"
+      }
+    },
+    "Sum_59": {
+      "id": "m-2401",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#aik",
+      "input": "<math><msqrt><mn>3</mn></msqrt><mo>+</mo><mi>i</mi></math>",
+      "tex": "\\sqrt{3} + i",
+      "expected": "⠜⠒⠻⠬⠊",
+      "reference": {
+        "m-2401": "http://abstract.ups.edu/aata/exercises-cyclic.html#aik",
+        "m-2406": "http://abstract.ups.edu/aata/exercises-cyclic.html#rXt"
+      }
+    },
+    "Sum_60": {
+      "id": "m-2403",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#zBS",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>1</mn><mo>−</mo><mi>i</mi></mstyle></math>",
+      "tex": "1-i",
+      "expected": "⠼⠂⠤⠊",
+      "reference": {
+        "m-2403": "http://abstract.ups.edu/aata/exercises-cyclic.html#zBS"
+      }
+    },
+    "Sum_61": {
+      "id": "m-2405",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#LQk",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>2</mn><mo>+</mo><mn>2</mn><mi>i</mi></mstyle></math>",
+      "tex": "2+2i",
+      "expected": "⠼⠆⠬⠆⠊",
+      "reference": {
+        "m-2405": "http://abstract.ups.edu/aata/exercises-cyclic.html#LQk"
+      }
+    },
+    "Sum_62": {
+      "id": "m-2408",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#ElL",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>2</mn><mi>i</mi><mo>+</mo><mn>2</mn><msqrt><mn>3</mn></msqrt></mstyle></math>",
+      "tex": "2i + 2 \\sqrt{3}",
+      "expected": "⠼⠆⠊⠬⠆⠜⠒⠻",
+      "reference": {
+        "m-2408": "http://abstract.ups.edu/aata/exercises-cyclic.html#ElL"
+      }
+    },
+    "Sum_63": {
+      "id": "m-2454",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#VMM",
+      "input": "<math><mo fence=\"false\" stretchy=\"false\">⟨</mo><mi>g</mi><mo fence=\"false\" stretchy=\"false\">⟩</mo><mo>∩</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mi>h</mi><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "\\langle g \\rangle \\cap \\langle h \\rangle",
+      "expected": "⠨⠨⠷⠛⠨⠨⠾⠨⠩⠨⠨⠷⠓⠨⠨⠾",
+      "reference": {
+        "m-2454": "http://abstract.ups.edu/aata/exercises-cyclic.html#VMM"
+      }
+    },
+    "Sum_64": {
+      "id": "m-2458",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#BTV",
+      "input": "<math><mo fence=\"false\" stretchy=\"false\">⟨</mo><msup><mi>a</mi><mi>m</mi></msup><mo fence=\"false\" stretchy=\"false\">⟩</mo><mo>∩</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><msup><mi>a</mi><mi>n</mi></msup><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "\\langle a^m \\rangle \\cap \\langle a^n \\rangle",
+      "expected": "⠨⠨⠷⠁⠘⠍⠐⠨⠨⠾⠨⠩⠨⠨⠷⠁⠘⠝⠐⠨⠨⠾",
+      "reference": {
+        "m-2458": "http://abstract.ups.edu/aata/exercises-cyclic.html#BTV"
+      }
+    },
+    "Sum_65": {
+      "id": "m-2723",
+      "url": "http://abstract.ups.edu/aata/section-permutation-definitions.html#ZHh",
+      "input": "<math><mi>r</mi><mo>−</mo><mn>2</mn></math>",
+      "tex": "r - 2",
+      "expected": "⠗⠤⠆",
+      "reference": {
+        "m-2723": "http://abstract.ups.edu/aata/section-permutation-definitions.html#ZHh",
+        "m-2729": "http://abstract.ups.edu/aata/section-permutation-definitions.html#ZHh",
+        "m-2733": "http://abstract.ups.edu/aata/section-permutation-definitions.html#ZHh",
+        "m-2737": "http://abstract.ups.edu/aata/section-permutation-definitions.html#ZHh"
+      }
+    },
+    "Sum_66": {
+      "id": "m-2789",
+      "url": "http://abstract.ups.edu/aata/section-dihedral-groups.html#sQr",
+      "input": "<math><mi>k</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "k+1",
+      "expected": "⠅⠬⠂",
+      "reference": {
+        "m-2789": "http://abstract.ups.edu/aata/section-dihedral-groups.html#sQr",
+        "m-2821": "http://abstract.ups.edu/aata/section-dihedral-groups.html#Bex",
+        "m-2823": "http://abstract.ups.edu/aata/section-dihedral-groups.html#Bex"
+      }
+    },
+    "Sum_67": {
+      "id": "m-2790",
+      "url": "http://abstract.ups.edu/aata/section-dihedral-groups.html#sQr",
+      "input": "<math><mi>k</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "k-1",
+      "expected": "⠅⠤⠂",
+      "reference": {
+        "m-2790": "http://abstract.ups.edu/aata/section-dihedral-groups.html#sQr",
+        "m-2822": "http://abstract.ups.edu/aata/section-dihedral-groups.html#Bex",
+        "m-2825": "http://abstract.ups.edu/aata/section-dihedral-groups.html#Bex"
+      }
+    },
+    "Sum_68": {
+      "id": "m-2943",
+      "url": "http://abstract.ups.edu/aata/exercises-permute.html#QnI",
+      "input": "<math><mi>n</mi><mo>−</mo><mn>2</mn></math>",
+      "tex": "n - 2",
+      "expected": "⠝⠤⠆",
+      "reference": {
+        "m-2943": "http://abstract.ups.edu/aata/exercises-permute.html#QnI"
+      }
+    },
+    "Sum_69": {
+      "id": "m-3125",
+      "url": "http://abstract.ups.edu/aata/section-cosets.html#xqC",
+      "input": "<math><mi>a</mi><mo>∈</mo><msub><mi>g</mi><mn>1</mn></msub><mi>H</mi><mo>∩</mo><msub><mi>g</mi><mn>2</mn></msub><mi>H</mi></math>",
+      "tex": "a \\in g_1 H \\cap g_2 H",
+      "expected": "⠁⠀⠈⠑⠀⠛⠂⠠⠓⠨⠩⠛⠆⠠⠓",
+      "reference": {
+        "m-3125": "http://abstract.ups.edu/aata/section-cosets.html#xqC"
+      }
+    },
+    "Sum_70": {
+      "id": "m-3319",
+      "url": "http://abstract.ups.edu/aata/section-fermat-euler.html#VTm",
+      "input": "<math><msup><mi>a</mi><mrow><mi>ϕ</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo></mrow></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "a^{\\phi(n)} - 1",
+      "expected": "⠁⠘⠋⠷⠝⠾⠐⠤⠂",
+      "reference": {
+        "m-3319": "http://abstract.ups.edu/aata/section-fermat-euler.html#VTm"
+      }
+    },
+    "Sum_71": {
+      "id": "m-3371",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>1</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "1 + \\langle 8 \\rangle",
+      "expected": "⠼⠂⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3371": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_72": {
+      "id": "m-3372",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>2</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "2 + \\langle 8 \\rangle",
+      "expected": "⠼⠆⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3372": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_73": {
+      "id": "m-3373",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>3</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "3 + \\langle 8 \\rangle",
+      "expected": "⠼⠒⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3373": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_74": {
+      "id": "m-3374",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>4</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "4 + \\langle 8 \\rangle",
+      "expected": "⠼⠲⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3374": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_75": {
+      "id": "m-3375",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>5</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "5 + \\langle 8 \\rangle",
+      "expected": "⠼⠢⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3375": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_76": {
+      "id": "m-3376",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>6</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "6 + \\langle 8 \\rangle",
+      "expected": "⠼⠖⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3376": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_77": {
+      "id": "m-3377",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>7</mn><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mn>8</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "7 + \\langle 8 \\rangle",
+      "expected": "⠼⠶⠬⠨⠨⠷⠦⠨⠨⠾",
+      "reference": {
+        "m-3377": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_78": {
+      "id": "m-3379",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>1</mn><mo>+</mo><mn>3</mn><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></math>",
+      "tex": "1 + 3 {\\mathbb Z}",
+      "expected": "⠼⠂⠬⠒⠈⠰⠠⠵",
+      "reference": {
+        "m-3379": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_79": {
+      "id": "m-3380",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN",
+      "input": "<math><mn>2</mn><mo>+</mo><mn>3</mn><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></math>",
+      "tex": "2 + 3 {\\mathbb Z}",
+      "expected": "⠼⠆⠬⠒⠈⠰⠠⠵",
+      "reference": {
+        "m-3380": "http://abstract.ups.edu/aata/exercises-cosets.html#jPN"
+      }
+    },
+    "Sum_80": {
+      "id": "m-3436",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#gzI",
+      "input": "<math><mi>g</mi><mi>H</mi><mo>∩</mo><mi>g</mi><mi>K</mi></math>",
+      "tex": "gH \\cap gK",
+      "expected": "⠛⠠⠓⠨⠩⠛⠠⠅",
+      "reference": {
+        "m-3436": "http://abstract.ups.edu/aata/exercises-cosets.html#gzI"
+      }
+    },
+    "Sum_81": {
+      "id": "m-3437",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#gzI",
+      "input": "<math><mi>H</mi><mo>∩</mo><mi>K</mi></math>",
+      "tex": "H \\cap K",
+      "expected": "⠠⠓⠨⠩⠠⠅",
+      "reference": {
+        "m-3437": "http://abstract.ups.edu/aata/exercises-cosets.html#gzI",
+        "m-8521": "http://abstract.ups.edu/aata/section-sylow-applications.html#qmG",
+        "m-8537": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8542": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8598": "http://abstract.ups.edu/aata/exercises-sylow.html#amK",
+        "m-11739": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lAA"
+      }
+    },
+    "Sum_82": {
+      "id": "m-3843",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#wwe",
+      "input": "<math><mi>n</mi><mo>−</mo><mi>k</mi></math>",
+      "tex": "n-k",
+      "expected": "⠝⠤⠅",
+      "reference": {
+        "m-3843": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#wwe",
+        "m-12735": "http://abstract.ups.edu/aata/exercises-vect.html#paW",
+        "m-14232": "http://abstract.ups.edu/aata/section-poly-codes.html#McB",
+        "m-14591": "http://abstract.ups.edu/aata/exercises-finite.html#Zwm"
+      }
+    },
+    "Sum_83": {
+      "id": "m-4033",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#cDn",
+      "input": "<math><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "2n +1",
+      "expected": "⠼⠆⠝⠬⠂",
+      "reference": {
+        "m-4033": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#cDn"
+      }
+    },
+    "Sum_84": {
+      "id": "m-4137",
+      "url": "http://abstract.ups.edu/aata/section-linear-codes.html#oRF",
+      "input": "<math><mrow><mrow><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>+</mo><mrow><mrow><mi mathvariant=\"bold\">y</mi></mrow></mrow></math>",
+      "tex": "{\\mathbf x} + {\\mathbf y}",
+      "expected": "⠸⠰⠭⠬⠸⠰⠽",
+      "reference": {
+        "m-4137": "http://abstract.ups.edu/aata/section-linear-codes.html#oRF"
+      }
+    },
+    "Sum_85": {
+      "id": "m-4211",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#jTE",
+      "input": "<math><mi>n</mi><mo>−</mo><mi>m</mi></math>",
+      "tex": "n-m",
+      "expected": "⠝⠤⠍",
+      "reference": {
+        "m-4211": "http://abstract.ups.edu/aata/section-parity-check.html#jTE",
+        "m-4215": "http://abstract.ups.edu/aata/section-parity-check.html#jTE",
+        "m-4218": "http://abstract.ups.edu/aata/section-parity-check.html#YDB",
+        "m-4348": "http://abstract.ups.edu/aata/section-parity-check.html#JuD"
+      }
+    },
+    "Sum_86": {
+      "id": "m-4228",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#UYO",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"bold\">y</mi></mrow></mrow><mn>1</mn></msub><mo>+</mo><msub><mrow><mrow><mi mathvariant=\"bold\">y</mi></mrow></mrow><mn>2</mn></msub></math>",
+      "tex": "{\\mathbf y}_1 + {\\mathbf y}_2",
+      "expected": "⠸⠰⠽⠂⠬⠸⠰⠽⠆",
+      "reference": {
+        "m-4228": "http://abstract.ups.edu/aata/section-parity-check.html#UYO"
+      }
+    },
+    "Sum_87": {
+      "id": "m-4334",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#Nup",
+      "input": "<math><msub><mrow><mrow><mi mathvariant=\"bold\">e</mi></mrow></mrow><mrow><mi>i</mi></mrow></msub><mo>+</mo><msub><mrow><mrow><mi mathvariant=\"bold\">e</mi></mrow></mrow><mrow><mi>j</mi></mrow></msub></math>",
+      "tex": "{\\mathbf e}_{i} +{\\mathbf e}_{j}",
+      "expected": "⠸⠰⠑⠰⠊⠐⠬⠸⠰⠑⠰⠚",
+      "reference": {
+        "m-4334": "http://abstract.ups.edu/aata/section-parity-check.html#Nup"
+      }
+    },
+    "Sum_88": {
+      "id": "m-4352",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#JuD",
+      "input": "<math><msup><mn>2</mn><mi>m</mi></msup><mo>−</mo><mo stretchy=\"false\">(</mo><mn>1</mn><mo>+</mo><mi>m</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "2^m - (1 + m)",
+      "expected": "⠼⠆⠘⠍⠐⠤⠷⠂⠬⠍⠾",
+      "reference": {
+        "m-4352": "http://abstract.ups.edu/aata/section-parity-check.html#JuD"
+      }
+    },
+    "Sum_89": {
+      "id": "m-4418",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#tBL",
+      "input": "<math><mrow><mrow><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>+</mo><mi>C</mi></math>",
+      "tex": "{\\mathbf x} + C",
+      "expected": "⠸⠰⠭⠬⠠⠉",
+      "reference": {
+        "m-4418": "http://abstract.ups.edu/aata/section-efficient-decoding.html#tBL"
+      }
+    },
+    "Sum_90": {
+      "id": "m-4432",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>10000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(10000) + C",
+      "expected": "⠷⠂⠴⠴⠴⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4432": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4577": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_91": {
+      "id": "m-4434",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>01000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(01000) + C",
+      "expected": "⠷⠴⠂⠴⠴⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4434": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4578": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_92": {
+      "id": "m-4436",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>00100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(00100) + C",
+      "expected": "⠷⠴⠴⠂⠴⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4436": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4579": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_93": {
+      "id": "m-4438",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>00010</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(00010) + C",
+      "expected": "⠷⠴⠴⠴⠂⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4438": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+        "m-4461": "http://abstract.ups.edu/aata/section-efficient-decoding.html#QKH",
+        "m-4580": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_94": {
+      "id": "m-4440",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>00001</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(00001) + C",
+      "expected": "⠷⠴⠴⠴⠴⠂⠾⠬⠠⠉",
+      "reference": {
+        "m-4440": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "Sum_95": {
+      "id": "m-4442",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>10100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(10100) + C",
+      "expected": "⠷⠂⠴⠂⠴⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4442": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "Sum_96": {
+      "id": "m-4444",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>00110</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(00110) + C",
+      "expected": "⠷⠴⠴⠂⠂⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4444": "http://abstract.ups.edu/aata/section-efficient-decoding.html#FIZ"
+      }
+    },
+    "Sum_97": {
+      "id": "m-4453",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#ZIU",
+      "input": "<math><mrow><mrow><mi mathvariant=\"bold\">e</mi></mrow></mrow><mo>+</mo><mi>C</mi></math>",
+      "tex": "{\\mathbf e} + C",
+      "expected": "⠸⠰⠑⠬⠠⠉",
+      "reference": {
+        "m-4453": "http://abstract.ups.edu/aata/section-efficient-decoding.html#ZIU"
+      }
+    },
+    "Sum_98": {
+      "id": "m-4457",
+      "url": "http://abstract.ups.edu/aata/section-efficient-decoding.html#ZIU",
+      "input": "<math><mrow><mrow><mi mathvariant=\"bold\">r</mi></mrow></mrow><mo>+</mo><mrow><mrow><mi mathvariant=\"bold\">e</mi></mrow></mrow></math>",
+      "tex": "{\\mathbf r} + {\\mathbf e}",
+      "expected": "⠸⠰⠗⠬⠸⠰⠑",
+      "reference": {
+        "m-4457": "http://abstract.ups.edu/aata/section-efficient-decoding.html#ZIU"
+      }
+    },
+    "Sum_99": {
+      "id": "m-4581",
+      "url": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>11000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(11000) + C",
+      "expected": "⠷⠂⠂⠴⠴⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4581": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_100": {
+      "id": "m-4582",
+      "url": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>01100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(01100) + C",
+      "expected": "⠷⠴⠂⠂⠴⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4582": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_101": {
+      "id": "m-4583",
+      "url": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>01010</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi></math>",
+      "tex": "(01010) + C",
+      "expected": "⠷⠴⠂⠴⠂⠴⠾⠬⠠⠉",
+      "reference": {
+        "m-4583": "http://abstract.ups.edu/aata/exercises-algcodes.html#kYX"
+      }
+    },
+    "Sum_102": {
+      "id": "m-5494",
+      "url": "http://abstract.ups.edu/aata/section-factor-groups.html#vAP",
+      "input": "<math><mi>k</mi><mo>+</mo><mi>n</mi><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></math>",
+      "tex": "k + n{\\mathbb Z}",
+      "expected": "⠅⠬⠝⠈⠰⠠⠵",
+      "reference": {
+        "m-5494": "http://abstract.ups.edu/aata/section-factor-groups.html#vAP"
+      }
+    },
+    "Sum_103": {
+      "id": "m-5495",
+      "url": "http://abstract.ups.edu/aata/section-factor-groups.html#vAP",
+      "input": "<math><mi>l</mi><mo>+</mo><mi>n</mi><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></math>",
+      "tex": "l + n{\\mathbb Z}",
+      "expected": "⠇⠬⠝⠈⠰⠠⠵",
+      "reference": {
+        "m-5495": "http://abstract.ups.edu/aata/section-factor-groups.html#vAP"
+      }
+    },
+    "Sum_104": {
+      "id": "m-5496",
+      "url": "http://abstract.ups.edu/aata/section-factor-groups.html#vAP",
+      "input": "<math><mi>k</mi><mo>+</mo><mi>l</mi><mo>+</mo><mi>n</mi><mrow><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></math>",
+      "tex": "k+l + n{\\mathbb Z}",
+      "expected": "⠅⠬⠇⠬⠝⠈⠰⠠⠵",
+      "reference": {
+        "m-5496": "http://abstract.ups.edu/aata/section-factor-groups.html#vAP"
+      }
+    },
+    "Sum_105": {
+      "id": "m-5619",
+      "url": "http://abstract.ups.edu/aata/reading-questions-10.html#mLg",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>3</mn><mo>+</mo><mn>8</mn><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>7</mn><mo>+</mo><mn>8</mn><mrow><mi mathvariant=\"double-struck\">Z</mi></mrow><mo stretchy=\"false\">)</mo></math>",
+      "tex": "(3+8\\mathbb Z)+(7+8\\mathbb Z)",
+      "expected": "⠷⠒⠬⠦⠈⠰⠠⠵⠾⠬⠷⠶⠬⠦⠈⠰⠠⠵⠾",
+      "reference": {
+        "m-5619": "http://abstract.ups.edu/aata/reading-questions-10.html#mLg"
+      }
+    },
+    "Sum_106": {
+      "id": "m-6000",
+      "url": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#swS",
+      "input": "<math><mi>H</mi><mo>∩</mo><mi>N</mi></math>",
+      "tex": "H \\cap N",
+      "expected": "⠠⠓⠨⠩⠠⠝",
+      "reference": {
+        "m-6000": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#swS",
+        "m-6010": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#SVT",
+        "m-6147": "http://abstract.ups.edu/aata/exercises-homomorph.html#YZA"
+      }
+    },
+    "Sum_107": {
+      "id": "m-6013",
+      "url": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#SVT",
+      "input": "<math><mi>n</mi><mo>∈</mo><mi>H</mi><mo>∩</mo><mi>N</mi></math>",
+      "tex": "n \\in H \\cap N",
+      "expected": "⠝⠀⠈⠑⠀⠠⠓⠨⠩⠠⠝",
+      "reference": {
+        "m-6013": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#SVT"
+      }
+    },
+    "Sum_108": {
+      "id": "m-6019",
+      "url": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#SVT",
+      "input": "<math><msup><mi>h</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>n</mi><mi>h</mi><mo>∈</mo><mi>H</mi><mo>∩</mo><mi>N</mi></math>",
+      "tex": "h^{-1} n h \\in H \\cap N",
+      "expected": "⠓⠘⠤⠂⠐⠝⠓⠀⠈⠑⠀⠠⠓⠨⠩⠠⠝",
+      "reference": {
+        "m-6019": "http://abstract.ups.edu/aata/section-group-isomorphism-theorems.html#SVT"
+      }
+    },
+    "Sum_109": {
+      "id": "m-6146",
+      "url": "http://abstract.ups.edu/aata/exercises-homomorph.html#YZA",
+      "input": "<math><mi>H</mi><mo>+</mo><mi>N</mi></math>",
+      "tex": "H + N",
+      "expected": "⠠⠓⠬⠠⠝",
+      "reference": {
+        "m-6146": "http://abstract.ups.edu/aata/exercises-homomorph.html#YZA"
+      }
+    },
+    "Sum_110": {
+      "id": "m-6358",
+      "url": "http://abstract.ups.edu/aata/section-matrix-groups.html#EeU",
+      "input": "<math><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></math>",
+      "tex": "ad-bc",
+      "expected": "⠁⠙⠤⠃⠉",
+      "reference": {
+        "m-6358": "http://abstract.ups.edu/aata/section-matrix-groups.html#EeU"
+      }
+    },
+    "Sum_111": {
+      "id": "m-6389",
+      "url": "http://abstract.ups.edu/aata/section-matrix-groups.html#JyH",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">∥</mo><mrow><mrow><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>−</mo><mrow><mrow><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">∥</mo></math>",
+      "tex": "\\| {\\mathbf x}-{\\mathbf y} \\|",
+      "expected": "⠳⠳⠸⠰⠭⠤⠸⠰⠽⠳⠳",
+      "reference": {
+        "m-6389": "http://abstract.ups.edu/aata/section-matrix-groups.html#JyH"
+      }
+    },
+    "Sum_112": {
+      "id": "m-6561",
+      "url": "http://abstract.ups.edu/aata/section-symmetry.html#RFJ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo><msub><mi>θ</mi><mn>0</mn></msub><mo>−</mo><msub><mi>θ</mi><mn>1</mn></msub></math>",
+      "tex": "(n+1) \\theta_0 - \\theta_1",
+      "expected": "⠷⠝⠬⠂⠾⠨⠹⠴⠤⠨⠹⠂",
+      "reference": {
+        "m-6561": "http://abstract.ups.edu/aata/section-symmetry.html#RFJ"
+      }
+    },
+    "Sum_113": {
+      "id": "m-6583",
+      "url": "http://abstract.ups.edu/aata/section-symmetry.html#awS",
+      "input": "<math><mi>m</mi><mrow><mrow><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>+</mo><mi>n</mi><mrow><mrow><mi mathvariant=\"bold\">y</mi></mrow></mrow></math>",
+      "tex": "m {\\mathbf x} + n {\\mathbf y}",
+      "expected": "⠍⠸⠰⠭⠬⠝⠸⠰⠽",
+      "reference": {
+        "m-6583": "http://abstract.ups.edu/aata/section-symmetry.html#awS"
+      }
+    },
+    "Sum_114": {
+      "id": "m-6841",
+      "url": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#xdL",
+      "input": "<math><mi>p</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "p - 1",
+      "expected": "⠏⠤⠂",
+      "reference": {
+        "m-6841": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#xdL",
+        "m-15733": "http://abstract.ups.edu/aata/exercises-galois.html#rrM"
+      }
+    },
+    "Sum_115": {
+      "id": "m-7032",
+      "url": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#pzm",
+      "input": "<math><mi>b</mi><mo>∈</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mi>g</mi><mo fence=\"false\" stretchy=\"false\">⟩</mo><mo>∩</mo><mi>K</mi></math>",
+      "tex": "b \\in \\langle g \\rangle \\cap K",
+      "expected": "⠃⠀⠈⠑⠀⠨⠨⠷⠛⠨⠨⠾⠨⠩⠠⠅",
+      "reference": {
+        "m-7032": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#pzm"
+      }
+    },
+    "Sum_116": {
+      "id": "m-7095",
+      "url": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt",
+      "input": "<math><msub><mi>H</mi><mi>i</mi></msub><mo>∩</mo><msub><mi>K</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msub></math>",
+      "tex": "H_i \\cap K_{m-1}",
+      "expected": "⠠⠓⠰⠊⠐⠨⠩⠠⠅⠰⠍⠤⠂",
+      "reference": {
+        "m-7095": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt",
+        "m-7099": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt"
+      }
+    },
+    "Sum_117": {
+      "id": "m-7096",
+      "url": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt",
+      "input": "<math><msub><mi>H</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>∩</mo><msub><mi>K</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msub></math>",
+      "tex": "H_{i+1} \\cap K_{m-1}",
+      "expected": "⠠⠓⠰⠊⠬⠂⠐⠨⠩⠠⠅⠰⠍⠤⠂",
+      "reference": {
+        "m-7096": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt",
+        "m-7100": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt"
+      }
+    },
+    "Sum_118": {
+      "id": "m-7097",
+      "url": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt",
+      "input": "<math><msub><mi>K</mi><mi>j</mi></msub><mo>∩</mo><msub><mi>H</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></math>",
+      "tex": "K_j \\cap H_{n-1}",
+      "expected": "⠠⠅⠰⠚⠐⠨⠩⠠⠓⠰⠝⠤⠂",
+      "reference": {
+        "m-7097": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt"
+      }
+    },
+    "Sum_119": {
+      "id": "m-7098",
+      "url": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt",
+      "input": "<math><msub><mi>K</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>∩</mo><msub><mi>H</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></math>",
+      "tex": "K_{j+1} \\cap H_{n-1}",
+      "expected": "⠠⠅⠰⠚⠬⠂⠐⠨⠩⠠⠓⠰⠝⠤⠂",
+      "reference": {
+        "m-7098": "http://abstract.ups.edu/aata/section-solvable-groups.html#kPt"
+      }
+    },
+    "Sum_120": {
+      "id": "m-7887",
+      "url": "http://abstract.ups.edu/aata/exercises-actions.html#nMM",
+      "input": "<math><msup><mrow><mrow><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup><mo>∖</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mn>0</mn><mo fence=\"false\" stretchy=\"false\">}</mo></math>",
+      "tex": "{\\mathbb R}^2 \\setminus \\{ 0 \\}",
+      "expected": "⠈⠰⠠⠗⠘⠆⠐⠸⠡⠨⠷⠴⠨⠾",
+      "reference": {
+        "m-7887": "http://abstract.ups.edu/aata/exercises-actions.html#nMM"
+      }
+    },
+    "Sum_121": {
+      "id": "m-8221",
+      "url": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Kfx",
+      "input": "<math><mi>N</mi><mo stretchy=\"false\">(</mo><mi>K</mi><mo stretchy=\"false\">)</mo><mo>∩</mo><mi>H</mi></math>",
+      "tex": "N(K) \\cap H",
+      "expected": "⠠⠝⠷⠠⠅⠾⠨⠩⠠⠓",
+      "reference": {
+        "m-8221": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Kfx",
+        "m-8230": "http://abstract.ups.edu/aata/section-sylow-theorems.html#Kfx"
+      }
+    },
+    "Sum_122": {
+      "id": "m-8339",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#xRf",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>k</mi><mi>q</mi></math>",
+      "tex": "1 + kq",
+      "expected": "⠼⠂⠬⠅⠟",
+      "reference": {
+        "m-8339": "http://abstract.ups.edu/aata/section-sylow-applications.html#xRf"
+      }
+    },
+    "Sum_123": {
+      "id": "m-8341",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#xRf",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>q</mi></math>",
+      "tex": "1 + q",
+      "expected": "⠼⠂⠬⠟",
+      "reference": {
+        "m-8341": "http://abstract.ups.edu/aata/section-sylow-applications.html#xRf"
+      }
+    },
+    "Sum_124": {
+      "id": "m-8350",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#xRf",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>k</mi><mi>p</mi></math>",
+      "tex": "1 + kp",
+      "expected": "⠼⠂⠬⠅⠏",
+      "reference": {
+        "m-8350": "http://abstract.ups.edu/aata/section-sylow-applications.html#xRf"
+      }
+    },
+    "Sum_125": {
+      "id": "m-8372",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+      "input": "<math><mn>1</mn><mo>+</mo><mn>3</mn><mi>k</mi></math>",
+      "tex": "1 + 3k",
+      "expected": "⠼⠂⠬⠒⠅",
+      "reference": {
+        "m-8372": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8376": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN"
+      }
+    },
+    "Sum_126": {
+      "id": "m-8381",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+      "input": "<math><mn>1</mn><mo>+</mo><mn>11</mn><mi>k</mi></math>",
+      "tex": "1 +11k",
+      "expected": "⠼⠂⠬⠂⠂⠅",
+      "reference": {
+        "m-8381": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8383": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN"
+      }
+    },
+    "Sum_127": {
+      "id": "m-8506",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#qmG",
+      "input": "<math><mi>a</mi><mo>∈</mo><mi>H</mi><mo>∩</mo><mi>K</mi></math>",
+      "tex": "a \\in H \\cap K",
+      "expected": "⠁⠀⠈⠑⠀⠠⠓⠨⠩⠠⠅",
+      "reference": {
+        "m-8506": "http://abstract.ups.edu/aata/section-sylow-applications.html#qmG"
+      }
+    },
+    "Sum_128": {
+      "id": "m-8513",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#qmG",
+      "input": "<math><mi>b</mi><mo>∈</mo><mi>H</mi><mo>∩</mo><mi>K</mi></math>",
+      "tex": "b \\in H \\cap K",
+      "expected": "⠃⠀⠈⠑⠀⠠⠓⠨⠩⠠⠅",
+      "reference": {
+        "m-8513": "http://abstract.ups.edu/aata/section-sylow-applications.html#qmG"
+      }
+    },
+    "Sum_129": {
+      "id": "m-8614",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#eBe",
+      "input": "<math><mi>q</mi><mo>∤</mo><msup><mi>p</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "q \\nmid p^2 - 1",
+      "expected": "⠟⠌⠳⠏⠘⠆⠐⠤⠂",
+      "reference": {
+        "m-8614": "http://abstract.ups.edu/aata/exercises-sylow.html#eBe"
+      }
+    },
+    "Sum_130": {
+      "id": "m-8615",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#eBe",
+      "input": "<math><mi>p</mi><mo>∤</mo><msup><mi>q</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "p \\nmid q^2 - 1",
+      "expected": "⠏⠌⠳⠟⠘⠆⠐⠤⠂",
+      "reference": {
+        "m-8615": "http://abstract.ups.edu/aata/exercises-sylow.html#eBe"
+      }
+    },
+    "Sum_131": {
+      "id": "m-8994",
+      "url": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>b</mi><mrow><mrow><mi mathvariant=\"bold\">i</mi></mrow></mrow><mo>+</mo><mi>c</mi><mrow><mrow><mi mathvariant=\"bold\">j</mi></mrow></mrow><mo>+</mo><mi>d</mi><mrow><mrow><mi mathvariant=\"bold\">k</mi></mrow></mrow></math>",
+      "tex": "a + b {\\mathbf i} + c {\\mathbf j} +d {\\mathbf k}",
+      "expected": "⠁⠬⠃⠸⠰⠊⠬⠉⠸⠰⠚⠬⠙⠸⠰⠅",
+      "reference": {
+        "m-8994": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY"
+      }
+    },
+    "Sum_132": {
+      "id": "m-9052",
+      "url": "http://abstract.ups.edu/aata/section-rings-definitions.html#uTz",
+      "input": "<math><mi>A</mi><mo>−</mo><mi>B</mi></math>",
+      "tex": "A-B",
+      "expected": "⠠⠁⠤⠠⠃",
+      "reference": {
+        "m-9052": "http://abstract.ups.edu/aata/section-rings-definitions.html#uTz"
+      }
+    },
+    "Sum_133": {
+      "id": "m-9074",
+      "url": "http://abstract.ups.edu/aata/section-domains-and-fields.html#baI",
+      "input": "<math><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></math>",
+      "tex": "a^2 + b^2",
+      "expected": "⠁⠘⠆⠐⠬⠃⠘⠆",
+      "reference": {
+        "m-9074": "http://abstract.ups.edu/aata/section-domains-and-fields.html#baI"
+      }
+    },
+    "Sum_134": {
+      "id": "m-9083",
+      "url": "http://abstract.ups.edu/aata/section-domains-and-fields.html#npa",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>b</mi><msqrt><mn>2</mn></msqrt></math>",
+      "tex": "a + b \\sqrt{2}",
+      "expected": "⠁⠬⠃⠜⠆⠻",
+      "reference": {
+        "m-9083": "http://abstract.ups.edu/aata/section-domains-and-fields.html#npa"
+      }
+    },
+    "Sum_135": {
+      "id": "m-9130",
+      "url": "http://abstract.ups.edu/aata/section-domains-and-fields.html#ucB",
+      "input": "<math><mi>r</mi><mo>+</mo><mo>⋯</mo><mo>+</mo><mi>r</mi></math>",
+      "tex": "r + \\cdots + r",
+      "expected": "⠗⠬⠄⠄⠄⠀⠬⠗",
+      "reference": {
+        "m-9130": "http://abstract.ups.edu/aata/section-domains-and-fields.html#ucB"
+      }
+    },
+    "Sum_136": {
+      "id": "m-9302",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+      "input": "<math><mi>r</mi><mo>+</mo><mi>I</mi></math>",
+      "tex": "r+I",
+      "expected": "⠗⠬⠠⠊",
+      "reference": {
+        "m-9302": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK"
+      }
+    },
+    "Sum_137": {
+      "id": "m-9303",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+      "input": "<math><mi>s</mi><mo>+</mo><mi>I</mi></math>",
+      "tex": "s +I",
+      "expected": "⠎⠬⠠⠊",
+      "reference": {
+        "m-9303": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK"
+      }
+    },
+    "Sum_138": {
+      "id": "m-9306",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+      "input": "<math><msup><mi>r</mi><mo>′</mo></msup><mo>∈</mo><mi>r</mi><mo>+</mo><mi>I</mi></math>",
+      "tex": "r' \\in r+I",
+      "expected": "⠗⠘⠄⠐⠀⠈⠑⠀⠗⠬⠠⠊",
+      "reference": {
+        "m-9306": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+        "m-9310": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK"
+      }
+    },
+    "Sum_139": {
+      "id": "m-9307",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+      "input": "<math><msup><mi>s</mi><mo>′</mo></msup><mo>∈</mo><mi>s</mi><mo>+</mo><mi>I</mi></math>",
+      "tex": "s' \\in s+I",
+      "expected": "⠎⠘⠄⠐⠀⠈⠑⠀⠎⠬⠠⠊",
+      "reference": {
+        "m-9307": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK"
+      }
+    },
+    "Sum_140": {
+      "id": "m-9309",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+      "input": "<math><mi>r</mi><mi>s</mi><mo>+</mo><mi>I</mi></math>",
+      "tex": "rs+I",
+      "expected": "⠗⠎⠬⠠⠊",
+      "reference": {
+        "m-9309": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK"
+      }
+    },
+    "Sum_141": {
+      "id": "m-9318",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK",
+      "input": "<math><msup><mi>r</mi><mo>′</mo></msup><msup><mi>s</mi><mo>′</mo></msup><mo>∈</mo><mi>r</mi><mi>s</mi><mo>+</mo><mi>I</mi></math>",
+      "tex": "r' s' \\in rs + I",
+      "expected": "⠗⠘⠄⠐⠎⠘⠄⠐⠀⠈⠑⠀⠗⠎⠬⠠⠊",
+      "reference": {
+        "m-9318": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GxK"
+      }
+    },
+    "Sum_142": {
+      "id": "m-9349",
+      "url": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#PRJ",
+      "input": "<math><mi>I</mi><mo>∩</mo><mi>J</mi></math>",
+      "tex": "I \\cap J",
+      "expected": "⠠⠊⠨⠩⠠⠚",
+      "reference": {
+        "m-9349": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#PRJ",
+        "m-9651": "http://abstract.ups.edu/aata/exercises-rings.html#YPW",
+        "m-9785": "http://abstract.ups.edu/aata/exercises-rings.html#act",
+        "m-12219": "http://abstract.ups.edu/aata/exercises-boolean.html#SrD"
+      }
+    },
+    "Sum_143": {
+      "id": "m-9388",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>M</mi></math>",
+      "tex": "1 + M",
+      "expected": "⠼⠂⠬⠠⠍",
+      "reference": {
+        "m-9388": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9422": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl"
+      }
+    },
+    "Sum_144": {
+      "id": "m-9391",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>M</mi></math>",
+      "tex": "a + M",
+      "expected": "⠁⠬⠠⠍",
+      "reference": {
+        "m-9391": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9431": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl"
+      }
+    },
+    "Sum_145": {
+      "id": "m-9401",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+      "input": "<math><msub><mi>r</mi><mn>1</mn></msub><mi>a</mi><mo>+</mo><msub><mi>m</mi><mn>1</mn></msub></math>",
+      "tex": "r_1 a + m_1",
+      "expected": "⠗⠂⠁⠬⠍⠂",
+      "reference": {
+        "m-9401": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl"
+      }
+    },
+    "Sum_146": {
+      "id": "m-9402",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+      "input": "<math><msub><mi>r</mi><mn>2</mn></msub><mi>a</mi><mo>+</mo><msub><mi>m</mi><mn>2</mn></msub></math>",
+      "tex": "r_2 a + m_2",
+      "expected": "⠗⠆⠁⠬⠍⠆",
+      "reference": {
+        "m-9402": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl"
+      }
+    },
+    "Sum_147": {
+      "id": "m-9432",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+      "input": "<math><mi>b</mi><mo>+</mo><mi>M</mi></math>",
+      "tex": "b +M",
+      "expected": "⠃⠬⠠⠍",
+      "reference": {
+        "m-9432": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl"
+      }
+    },
+    "Sum_148": {
+      "id": "m-9464",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#DDe",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>P</mi></math>",
+      "tex": "a + P",
+      "expected": "⠁⠬⠠⠏",
+      "reference": {
+        "m-9464": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#DDe"
+      }
+    },
+    "Sum_149": {
+      "id": "m-9465",
+      "url": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#DDe",
+      "input": "<math><mi>b</mi><mo>+</mo><mi>P</mi></math>",
+      "tex": "b + P",
+      "expected": "⠃⠬⠠⠏",
+      "reference": {
+        "m-9465": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#DDe"
+      }
+    },
+    "Sum_150": {
+      "id": "m-9497",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#PRw",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>k</mi><mi>m</mi></math>",
+      "tex": "a + km",
+      "expected": "⠁⠬⠅⠍",
+      "reference": {
+        "m-9497": "http://abstract.ups.edu/aata/section-software-application.html#PRw"
+      }
+    },
+    "Sum_151": {
+      "id": "m-9513",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#PRw",
+      "input": "<math><msub><mi>c</mi><mn>1</mn></msub><mo>−</mo><msub><mi>c</mi><mn>2</mn></msub></math>",
+      "tex": "c_1 - c_2",
+      "expected": "⠉⠂⠤⠉⠆",
+      "reference": {
+        "m-9513": "http://abstract.ups.edu/aata/section-software-application.html#PRw"
+      }
+    },
+    "Sum_152": {
+      "id": "m-9537",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#Dwn",
+      "input": "<math><msup><mn>2</mn><mrow><mn>511</mn></mrow></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "2^{511} - 1",
+      "expected": "⠼⠆⠘⠢⠂⠂⠐⠤⠂",
+      "reference": {
+        "m-9537": "http://abstract.ups.edu/aata/section-software-application.html#Dwn"
+      }
+    },
+    "Sum_153": {
+      "id": "m-9615",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#nYU",
+      "input": "<math><mn>2234</mn><mo>+</mo><mn>4121</mn></math>",
+      "tex": "2234 + 4121",
+      "expected": "⠼⠆⠆⠒⠲⠬⠲⠂⠆⠂",
+      "reference": {
+        "m-9615": "http://abstract.ups.edu/aata/exercises-rings.html#nYU"
+      }
+    },
+    "Sum_154": {
+      "id": "m-9687",
+      "url": "http://abstract.ups.edu/aata/exercises-rings.html#dzP",
+      "input": "<math><msub><mi>I</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>I</mi><mn>2</mn></msub></math>",
+      "tex": "I_1 \\cup I_2",
+      "expected": "⠠⠊⠂⠨⠬⠠⠊⠆",
+      "reference": {
+        "m-9687": "http://abstract.ups.edu/aata/exercises-rings.html#dzP"
+      }
+    },
+    "Sum_155": {
+      "id": "m-9805",
+      "url": "http://abstract.ups.edu/aata/rings-sage.html#Nly",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>7</mn></math>",
+      "tex": "x^2-7",
+      "expected": "⠭⠘⠆⠐⠤⠶",
+      "reference": {
+        "m-9805": "http://abstract.ups.edu/aata/rings-sage.html#Nly",
+        "m-9808": "http://abstract.ups.edu/aata/rings-sage.html#tsH",
+        "m-9809": "http://abstract.ups.edu/aata/rings-sage.html#FGZ",
+        "m-14658": "http://abstract.ups.edu/aata/finite-sage-exercises.html#blz"
+      }
+    },
+    "Sum_156": {
+      "id": "m-9833",
+      "url": "http://abstract.ups.edu/aata/rings-sage-exercises.html#MII",
+      "input": "<math><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><mi>z</mi><mo>+</mo><mn>3</mn></math>",
+      "tex": "z^2+z+3",
+      "expected": "⠵⠘⠆⠐⠬⠵⠬⠒",
+      "reference": {
+        "m-9833": "http://abstract.ups.edu/aata/rings-sage-exercises.html#MII"
+      }
+    },
+    "Sum_157": {
+      "id": "m-9838",
+      "url": "http://abstract.ups.edu/aata/poly.html#Djs",
+      "input": "<math><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "p(x) + q(x)",
+      "expected": "⠏⠷⠭⠾⠬⠟⠷⠭⠾",
+      "reference": {
+        "m-9838": "http://abstract.ups.edu/aata/poly.html#Djs",
+        "m-12458": "http://abstract.ups.edu/aata/section-subspaces.html#wTQ"
+      }
+    },
+    "Sum_158": {
+      "id": "m-9877",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#NIx",
+      "input": "<math><mn>7</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>4</mn></msup></math>",
+      "tex": "7 + 4 x^2 + 3 x^3 + 4 x^4",
+      "expected": "⠼⠶⠬⠲⠭⠘⠆⠐⠬⠒⠭⠘⠒⠐⠬⠲⠭⠘⠲",
+      "reference": {
+        "m-9877": "http://abstract.ups.edu/aata/section-poly-rings.html#NIx"
+      }
+    },
+    "Sum_159": {
+      "id": "m-9910",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#alk",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mi>y</mi><mo>+</mo><mn>2</mn><msup><mi>y</mi><mn>3</mn></msup></math>",
+      "tex": "x^2 - 3 x y + 2 y^3",
+      "expected": "⠭⠘⠆⠐⠤⠒⠭⠽⠬⠆⠽⠘⠒",
+      "reference": {
+        "m-9910": "http://abstract.ups.edu/aata/section-poly-rings.html#alk"
+      }
+    },
+    "Sum_160": {
+      "id": "m-9982",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX",
+      "input": "<math><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>−</mo><msub><mi>q</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "q(x) - q_1(x)",
+      "expected": "⠟⠷⠭⠾⠤⠟⠂⠷⠭⠾",
+      "reference": {
+        "m-9982": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#akX"
+      }
+    },
+    "Sum_161": {
+      "id": "m-9988",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#tPG",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn></math>",
+      "tex": "x^3 - x^2 + 2 x - 3",
+      "expected": "⠭⠘⠒⠐⠤⠭⠘⠆⠐⠬⠆⠭⠤⠒",
+      "reference": {
+        "m-9988": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#tPG"
+      }
+    },
+    "Sum_162": {
+      "id": "m-9989",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#tPG",
+      "input": "<math><mi>x</mi><mo>−</mo><mn>2</mn></math>",
+      "tex": "x - 2",
+      "expected": "⠭⠤⠆",
+      "reference": {
+        "m-9989": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#tPG"
+      }
+    },
+    "Sum_163": {
+      "id": "m-10037",
+      "url": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#pfN",
+      "input": "<math><mi>x</mi><mo>−</mo><mi>α</mi></math>",
+      "tex": "x - \\alpha",
+      "expected": "⠭⠤⠨⠁",
+      "reference": {
+        "m-10037": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#pfN",
+        "m-10045": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10050": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-10052": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#Xqr",
+        "m-13377": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+        "m-13396": "http://abstract.ups.edu/aata/section-extension-fields.html#mbD"
+      }
+    },
+    "Sum_164": {
+      "id": "m-10189",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#GdY",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^2 + 1",
+      "expected": "⠭⠘⠆⠐⠬⠂",
+      "reference": {
+        "m-10189": "http://abstract.ups.edu/aata/section-irreducible-poly.html#GdY",
+        "m-13007": "http://abstract.ups.edu/aata/section-extension-fields.html#hdC",
+        "m-13156": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd",
+        "m-13162": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd",
+        "m-15284": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ"
+      }
+    },
+    "Sum_165": {
+      "id": "m-10193",
+      "url": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mlh",
+      "input": "<math><mi>x</mi><mo>−</mo><mi>a</mi></math>",
+      "tex": "x - a",
+      "expected": "⠭⠤⠁",
+      "reference": {
+        "m-10193": "http://abstract.ups.edu/aata/section-irreducible-poly.html#mlh",
+        "m-10288": "http://abstract.ups.edu/aata/section-irreducible-poly.html#jEJ",
+        "m-10563": "http://abstract.ups.edu/aata/exercises-poly.html#VWQ",
+        "m-14038": "http://abstract.ups.edu/aata/section-finite-field.html#Ucz"
+      }
+    },
+    "Sum_166": {
+      "id": "m-10454",
+      "url": "http://abstract.ups.edu/aata/reading-questions-17.html#vgD",
+      "input": "<math><mn>8</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><msup><mi>x</mi><mrow><mn>5</mn></mrow></msup><mo>−</mo><mn>18</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><msup><mi>x</mi><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>20</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><msup><mi>x</mi><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>25</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><msup><mi>x</mi><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>20</mn></math>",
+      "tex": "8 \\, x^{5} - 18 \\, x^{4} + 20 \\, x^{3} - 25 \\, x^{2} + 20",
+      "expected": "⠼⠦⠭⠘⠢⠐⠤⠂⠦⠭⠘⠲⠐⠬⠆⠴⠭⠘⠒⠐⠤⠆⠢⠭⠘⠆⠐⠬⠆⠴",
+      "reference": {
+        "m-10454": "http://abstract.ups.edu/aata/reading-questions-17.html#vgD"
+      }
+    },
+    "Sum_167": {
+      "id": "m-10455",
+      "url": "http://abstract.ups.edu/aata/reading-questions-17.html#vgD",
+      "input": "<math><mn>4</mn><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><msup><mi>x</mi><mrow><mn>2</mn></mrow></msup><mo>−</mo><mi>x</mi><mo>−</mo><mn>2</mn></math>",
+      "tex": "4 \\, x^{2} - x - 2",
+      "expected": "⠼⠲⠭⠘⠆⠐⠤⠭⠤⠆",
+      "reference": {
+        "m-10455": "http://abstract.ups.edu/aata/reading-questions-17.html#vgD"
+      }
+    },
+    "Sum_168": {
+      "id": "m-10458",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#JfI",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>5</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>+</mo><mn>9</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "(5x^2 + 3x - 4) + (4x^2 - x + 9)",
+      "expected": "⠷⠢⠭⠘⠆⠐⠬⠒⠭⠤⠲⠾⠬⠷⠲⠭⠘⠆⠐⠤⠭⠬⠔⠾",
+      "reference": {
+        "m-10458": "http://abstract.ups.edu/aata/exercises-poly.html#JfI"
+      }
+    },
+    "Sum_169": {
+      "id": "m-10462",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#Vua",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>7</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "(7x^3 + 3x^2 - x) + (6x^2 - 8x + 4)",
+      "expected": "⠷⠶⠭⠘⠒⠐⠬⠒⠭⠘⠆⠐⠤⠭⠾⠬⠷⠖⠭⠘⠆⠐⠤⠦⠭⠬⠲⠾",
+      "reference": {
+        "m-10462": "http://abstract.ups.edu/aata/exercises-poly.html#Vua"
+      }
+    },
+    "Sum_170": {
+      "id": "m-10464",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#BBj",
+      "input": "<math><mo stretchy=\"false\">(</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo stretchy=\"false\">)</mo></math>",
+      "tex": "(3x^2 + 2x - 4) + (4x^2 + 2)",
+      "expected": "⠷⠒⠭⠘⠆⠐⠬⠆⠭⠤⠲⠾⠬⠷⠲⠭⠘⠆⠐⠬⠆⠾",
+      "reference": {
+        "m-10464": "http://abstract.ups.edu/aata/exercises-poly.html#BBj"
+      }
+    },
+    "Sum_171": {
+      "id": "m-10470",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#fch",
+      "input": "<math><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn></math>",
+      "tex": "9x^2 + 2x + 5",
+      "expected": "⠼⠔⠭⠘⠆⠐⠬⠆⠭⠬⠢",
+      "reference": {
+        "m-10470": "http://abstract.ups.edu/aata/exercises-poly.html#fch"
+      }
+    },
+    "Sum_172": {
+      "id": "m-10471",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#fch",
+      "input": "<math><mn>8</mn><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>7</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>7</mn><mi>x</mi></math>",
+      "tex": "8x^4 + 7x^3 + 2x^2 + 7x",
+      "expected": "⠼⠦⠭⠘⠲⠐⠬⠶⠭⠘⠒⠐⠬⠆⠭⠘⠆⠐⠬⠶⠭",
+      "reference": {
+        "m-10471": "http://abstract.ups.edu/aata/exercises-poly.html#fch"
+      }
+    },
+    "Sum_173": {
+      "id": "m-10508",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#YYA",
+      "input": "<math><mn>5</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>+</mo><mn>9</mn></math>",
+      "tex": "5x^3 + 4x^2 - x + 9",
+      "expected": "⠼⠢⠭⠘⠒⠐⠬⠲⠭⠘⠆⠐⠤⠭⠬⠔",
+      "reference": {
+        "m-10508": "http://abstract.ups.edu/aata/exercises-poly.html#YYA"
+      }
+    },
+    "Sum_174": {
+      "id": "m-10510",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#FfJ",
+      "input": "<math><mn>3</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>+</mo><mn>4</mn></math>",
+      "tex": "3x^3 - 4x^2 - x + 4",
+      "expected": "⠼⠒⠭⠘⠒⠐⠤⠲⠭⠘⠆⠐⠤⠭⠬⠲",
+      "reference": {
+        "m-10510": "http://abstract.ups.edu/aata/exercises-poly.html#FfJ"
+      }
+    },
+    "Sum_175": {
+      "id": "m-10512",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#lmS",
+      "input": "<math><mn>5</mn><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn></math>",
+      "tex": "5x^4 + 2x^2 - 3",
+      "expected": "⠼⠢⠭⠘⠲⠐⠬⠆⠭⠘⠆⠐⠤⠒",
+      "reference": {
+        "m-10512": "http://abstract.ups.edu/aata/exercises-poly.html#lmS"
+      }
+    },
+    "Sum_176": {
+      "id": "m-10514",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#Rub",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^3 + x + 1",
+      "expected": "⠭⠘⠒⠐⠬⠭⠬⠂",
+      "reference": {
+        "m-10514": "http://abstract.ups.edu/aata/exercises-poly.html#Rub",
+        "m-12966": "http://abstract.ups.edu/aata/section-extension-fields.html#AWt"
+      }
+    },
+    "Sum_177": {
+      "id": "m-10525",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#WdU",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>2</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>4</mn></mstyle></math>",
+      "tex": "x^4 - 2x^3 + 2x^2 + x + 4",
+      "expected": "⠭⠘⠲⠐⠤⠆⠭⠘⠒⠐⠬⠆⠭⠘⠆⠐⠬⠭⠬⠲",
+      "reference": {
+        "m-10525": "http://abstract.ups.edu/aata/exercises-poly.html#WdU"
+      }
+    },
+    "Sum_178": {
+      "id": "m-10526",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#Cld",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>5</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn></mstyle></math>",
+      "tex": "x^4 - 5x^3 + 3x - 2",
+      "expected": "⠭⠘⠲⠐⠤⠢⠭⠘⠒⠐⠬⠒⠭⠤⠆",
+      "reference": {
+        "m-10526": "http://abstract.ups.edu/aata/exercises-poly.html#Cld"
+      }
+    },
+    "Sum_179": {
+      "id": "m-10527",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#ism",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>3</mn><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mn>4</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>6</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>6</mn></mstyle></math>",
+      "tex": "3x^5 - 4x^3 - 6x^2 + 6",
+      "expected": "⠼⠒⠭⠘⠢⠐⠤⠲⠭⠘⠒⠐⠤⠖⠭⠘⠆⠐⠬⠖",
+      "reference": {
+        "m-10527": "http://abstract.ups.edu/aata/exercises-poly.html#ism"
+      }
+    },
+    "Sum_180": {
+      "id": "m-10528",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#Ozv",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>5</mn><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mn>6</mn><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>15</mn></mstyle></math>",
+      "tex": "5x^5 - 6x^4 - 3x^2 + 9 x - 15",
+      "expected": "⠼⠢⠭⠘⠢⠐⠤⠖⠭⠘⠲⠐⠤⠒⠭⠘⠆⠐⠬⠔⠭⠤⠂⠢",
+      "reference": {
+        "m-10528": "http://abstract.ups.edu/aata/exercises-poly.html#Ozv"
+      }
+    },
+    "Sum_181": {
+      "id": "m-10532",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#EYF",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>8</mn></math>",
+      "tex": "x^2 + x + 8",
+      "expected": "⠭⠘⠆⠐⠬⠭⠬⠦",
+      "reference": {
+        "m-10532": "http://abstract.ups.edu/aata/exercises-poly.html#EYF"
+      }
+    },
+    "Sum_182": {
+      "id": "m-10543",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#dBp",
+      "input": "<math><msup><mi>x</mi><mi>p</mi></msup><mo>+</mo><mi>a</mi></math>",
+      "tex": "x^p + a",
+      "expected": "⠭⠘⠏⠐⠬⠁",
+      "reference": {
+        "m-10543": "http://abstract.ups.edu/aata/exercises-poly.html#dBp"
+      }
+    },
+    "Sum_183": {
+      "id": "m-10584",
+      "url": "http://abstract.ups.edu/aata/exercises-poly.html#mVb",
+      "input": "<math><msup><mi>x</mi><mi>p</mi></msup><mo>−</mo><mi>x</mi></math>",
+      "tex": "x^p - x",
+      "expected": "⠭⠘⠏⠐⠤⠭",
+      "reference": {
+        "m-10584": "http://abstract.ups.edu/aata/exercises-poly.html#mVb"
+      }
+    },
+    "Sum_184": {
+      "id": "m-10650",
+      "url": "http://abstract.ups.edu/aata/poly-sage.html#wYH",
+      "input": "<math><mi>a</mi><mo>+</mo><mn>2</mn></math>",
+      "tex": "a+2",
+      "expected": "⠁⠬⠆",
+      "reference": {
+        "m-10650": "http://abstract.ups.edu/aata/poly-sage.html#wYH"
+      }
+    },
+    "Sum_185": {
+      "id": "m-10660",
+      "url": "http://abstract.ups.edu/aata/poly-sage.html#hPJ",
+      "input": "<math><mi>x</mi><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><msup><mi>x</mi><mn>5</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "x + \\langle x^5+ x + 4\\rangle",
+      "expected": "⠭⠬⠨⠨⠷⠭⠘⠢⠐⠬⠭⠬⠲⠨⠨⠾",
+      "reference": {
+        "m-10660": "http://abstract.ups.edu/aata/poly-sage.html#hPJ"
+      }
+    },
+    "Sum_186": {
+      "id": "m-10661",
+      "url": "http://abstract.ups.edu/aata/poly-sage-exercises.html#ZBq",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>4</mn></math>",
+      "tex": "x^3-3x+4",
+      "expected": "⠭⠘⠒⠐⠤⠒⠭⠬⠲",
+      "reference": {
+        "m-10661": "http://abstract.ups.edu/aata/poly-sage-exercises.html#ZBq"
+      }
+    },
+    "Sum_187": {
+      "id": "m-10676",
+      "url": "http://abstract.ups.edu/aata/poly-sage-exercises.html#qzB",
+      "input": "<math><mi>r</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>s</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "r(x)p(x)+s(x)q(x)",
+      "expected": "⠗⠷⠭⠾⠏⠷⠭⠾⠬⠎⠷⠭⠾⠟⠷⠭⠾",
+      "reference": {
+        "m-10676": "http://abstract.ups.edu/aata/poly-sage-exercises.html#qzB"
+      }
+    },
+    "Sum_188": {
+      "id": "m-10909",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+      "input": "<math><mn>1</mn><mo>−</mo><msqrt><mn>3</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi></math>",
+      "tex": "1 - \\sqrt{3}\\, i",
+      "expected": "⠼⠂⠤⠜⠒⠻⠊",
+      "reference": {
+        "m-10909": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10912": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs"
+      }
+    },
+    "Sum_189": {
+      "id": "m-10910",
+      "url": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+      "input": "<math><mn>1</mn><mo>+</mo><msqrt><mn>3</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi></math>",
+      "tex": "1 + \\sqrt{3}\\, i",
+      "expected": "⠼⠂⠬⠜⠒⠻⠊",
+      "reference": {
+        "m-10910": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10913": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs"
+      }
+    },
+    "Sum_190": {
+      "id": "m-11407",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#dwL",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>1</mn><mo>+</mo><mn>3</mn><mi>i</mi></mstyle></math>",
+      "tex": "1 + 3i",
+      "expected": "⠼⠂⠬⠒⠊",
+      "reference": {
+        "m-11407": "http://abstract.ups.edu/aata/exercises-domains.html#dwL"
+      }
+    },
+    "Sum_191": {
+      "id": "m-11408",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#JDU",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>6</mn><mo>+</mo><mn>8</mn><mi>i</mi></mstyle></math>",
+      "tex": "6 + 8i",
+      "expected": "⠼⠖⠬⠦⠊",
+      "reference": {
+        "m-11408": "http://abstract.ups.edu/aata/exercises-domains.html#JDU"
+      }
+    },
+    "Sum_192": {
+      "id": "m-11528",
+      "url": "http://abstract.ups.edu/aata/exercises-domains.html#Lmd",
+      "input": "<math><msub><mi>a</mi><mn>1</mn></msub><msub><mi>r</mi><mn>1</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>a</mi><mi>n</mi></msub><msub><mi>r</mi><mi>n</mi></msub></math>",
+      "tex": "a_1 r_1 + \\cdots + a_n r_n",
+      "expected": "⠁⠂⠗⠂⠬⠄⠄⠄⠀⠬⠁⠰⠝⠐⠗⠰⠝",
+      "reference": {
+        "m-11528": "http://abstract.ups.edu/aata/exercises-domains.html#Lmd"
+      }
+    },
+    "Sum_193": {
+      "id": "m-11694",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lfb",
+      "input": "<math><mi>a</mi><mo>∨</mo><mi>b</mi></math>",
+      "tex": "a \\vee b",
+      "expected": "⠁⠈⠬⠃",
+      "reference": {
+        "m-11694": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lfb",
+        "m-11763": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+        "m-11813": "http://abstract.ups.edu/aata/section-boolean-lattices.html#SNc",
+        "m-11833": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11840": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11946": "http://abstract.ups.edu/aata/section-boolean-algebras.html#ZeR",
+        "m-12137": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#bbv",
+        "m-12139": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#LSx"
+      }
+    },
+    "Sum_194": {
+      "id": "m-11700",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lfb",
+      "input": "<math><mi>a</mi><mo>∧</mo><mi>b</mi></math>",
+      "tex": "a \\wedge b",
+      "expected": "⠁⠈⠩⠃",
+      "reference": {
+        "m-11700": "http://abstract.ups.edu/aata/section-boolean-lattices.html#lfb",
+        "m-11814": "http://abstract.ups.edu/aata/section-boolean-lattices.html#SNc",
+        "m-11834": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11849": "http://abstract.ups.edu/aata/section-boolean-lattices.html#MQz",
+        "m-11947": "http://abstract.ups.edu/aata/section-boolean-algebras.html#ZeR",
+        "m-12019": "http://abstract.ups.edu/aata/section-boolean-algebras.html#xHB",
+        "m-12130": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#bbv",
+        "m-12138": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#fLo",
+        "m-12140": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#npN",
+        "m-12201": "http://abstract.ups.edu/aata/exercises-boolean.html#Gdl"
+      }
+    },
+    "Sum_195": {
+      "id": "m-11715",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+      "input": "<math><mi>A</mi><mo>⊂</mo><mi>A</mi><mo>∪</mo><mi>B</mi></math>",
+      "tex": "A \\subset A \\cup B",
+      "expected": "⠠⠁⠀⠸⠐⠅⠀⠠⠁⠨⠬⠠⠃",
+      "reference": {
+        "m-11715": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr"
+      }
+    },
+    "Sum_196": {
+      "id": "m-11716",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr",
+      "input": "<math><mi>B</mi><mo>⊂</mo><mi>A</mi><mo>∪</mo><mi>B</mi></math>",
+      "tex": "B \\subset A \\cup B",
+      "expected": "⠠⠃⠀⠸⠐⠅⠀⠠⠁⠨⠬⠠⠃",
+      "reference": {
+        "m-11716": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Ftr"
+      }
+    },
+    "Sum_197": {
+      "id": "m-11746",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Rmk",
+      "input": "<math><msup><mi>A</mi><mo>′</mo></msup><mo>∩</mo><msup><mi>B</mi><mo>′</mo></msup></math>",
+      "tex": "A' \\cap B'",
+      "expected": "⠠⠁⠘⠄⠐⠨⠩⠠⠃⠄",
+      "reference": {
+        "m-11746": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Rmk"
+      }
+    },
+    "Sum_198": {
+      "id": "m-11765",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+      "input": "<math><mi>b</mi><mo>∨</mo><mi>a</mi></math>",
+      "tex": "b \\vee a",
+      "expected": "⠃⠈⠬⠁",
+      "reference": {
+        "m-11765": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq"
+      }
+    },
+    "Sum_199": {
+      "id": "m-11768",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+      "input": "<math><mi>a</mi><mo>∨</mo><mo stretchy=\"false\">(</mo><mi>b</mi><mo>∨</mo><mi>c</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "a \\vee ( b \\vee c)",
+      "expected": "⠁⠈⠬⠷⠃⠈⠬⠉⠾",
+      "reference": {
+        "m-11768": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+        "m-11787": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq"
+      }
+    },
+    "Sum_200": {
+      "id": "m-11769",
+      "url": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+      "input": "<math><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><mo stretchy=\"false\">)</mo><mo>∨</mo><mi>c</mi></math>",
+      "tex": "(a \\vee b) \\vee c",
+      "expected": "⠷⠁⠈⠬⠃⠾⠈⠬⠉",
+      "reference": {
+        "m-11769": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+        "m-11774": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+        "m-11776": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq",
+        "m-11785": "http://abstract.ups.edu/aata/section-boolean-lattices.html#gJq"
+      }
+    },
+    "Sum_201": {
+      "id": "m-12090",
+      "url": "http://abstract.ups.edu/aata/section-boolean-algebras.html#qdc",
+      "input": "<math><mi>a</mi><mo>∧</mo><msub><mi>a</mi><mi>i</mi></msub></math>",
+      "tex": "a \\wedge a_i",
+      "expected": "⠁⠈⠩⠁⠰⠊",
+      "reference": {
+        "m-12090": "http://abstract.ups.edu/aata/section-boolean-algebras.html#qdc"
+      }
+    },
+    "Sum_202": {
+      "id": "m-12141",
+      "url": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#npN",
+      "input": "<math><mi>b</mi><mo>∧</mo><mi>a</mi></math>",
+      "tex": "b \\wedge a",
+      "expected": "⠃⠈⠩⠁",
+      "reference": {
+        "m-12141": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#npN"
+      }
+    },
+    "Sum_203": {
+      "id": "m-12156",
+      "url": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#RHJ",
+      "input": "<math><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><mo stretchy=\"false\">)</mo><mo>∧</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><msup><mi>b</mi><mo>′</mo></msup><mo stretchy=\"false\">)</mo><mo>∧</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "(a \\vee b) \\wedge (a \\vee b') \\wedge (a \\vee b)",
+      "expected": "⠷⠁⠈⠬⠃⠾⠈⠩⠷⠁⠈⠬⠃⠘⠄⠐⠾⠈⠩⠷⠁⠈⠬⠃⠾",
+      "reference": {
+        "m-12156": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#RHJ",
+        "m-12158": "http://abstract.ups.edu/aata/section-algebra-of-circuits.html#EnY"
+      }
+    },
+    "Sum_204": {
+      "id": "m-12176",
+      "url": "http://abstract.ups.edu/aata/exercises-boolean.html#adg",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><mo>∨</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy=\"false\">)</mo><mo>∧</mo><mi>a</mi></mstyle></math>",
+      "tex": "(a \\vee b \\vee a') \\wedge a",
+      "expected": "⠷⠁⠈⠬⠃⠈⠬⠁⠘⠄⠐⠾⠈⠩⠁",
+      "reference": {
+        "m-12176": "http://abstract.ups.edu/aata/exercises-boolean.html#adg",
+        "m-12180": "http://abstract.ups.edu/aata/exercises-boolean.html#ykr"
+      }
+    },
+    "Sum_205": {
+      "id": "m-12177",
+      "url": "http://abstract.ups.edu/aata/exercises-boolean.html#Gkp",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><msup><mo stretchy=\"false\">)</mo><mo>′</mo></msup><mo>∧</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><mo stretchy=\"false\">)</mo></mstyle></math>",
+      "tex": "(a \\vee b)' \\wedge (a \\vee b)",
+      "expected": "⠷⠁⠈⠬⠃⠾⠘⠄⠐⠈⠩⠷⠁⠈⠬⠃⠾",
+      "reference": {
+        "m-12177": "http://abstract.ups.edu/aata/exercises-boolean.html#Gkp"
+      }
+    },
+    "Sum_206": {
+      "id": "m-12178",
+      "url": "http://abstract.ups.edu/aata/exercises-boolean.html#mry",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>a</mi><mo>∨</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∧</mo><mi>b</mi><mo stretchy=\"false\">)</mo></mstyle></math>",
+      "tex": "a \\vee (a \\wedge b)",
+      "expected": "⠁⠈⠬⠷⠁⠈⠩⠃⠾",
+      "reference": {
+        "m-12178": "http://abstract.ups.edu/aata/exercises-boolean.html#mry",
+        "m-12181": "http://abstract.ups.edu/aata/exercises-boolean.html#erA"
+      }
+    },
+    "Sum_207": {
+      "id": "m-12179",
+      "url": "http://abstract.ups.edu/aata/exercises-boolean.html#SyH",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo stretchy=\"false\">(</mo><mi>c</mi><mo>∨</mo><mi>a</mi><mo>∨</mo><mi>b</mi><mo stretchy=\"false\">)</mo><mo>∧</mo><msup><mi>c</mi><mo>′</mo></msup><mo>∧</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>∨</mo><mi>b</mi><msup><mo stretchy=\"false\">)</mo><mo>′</mo></msup></mstyle></math>",
+      "tex": "(c \\vee a \\vee b) \\wedge c' \\wedge (a \\vee b)'",
+      "expected": "⠷⠉⠈⠬⠁⠈⠬⠃⠾⠈⠩⠉⠘⠄⠐⠈⠩⠷⠁⠈⠬⠃⠾⠄",
+      "reference": {
+        "m-12179": "http://abstract.ups.edu/aata/exercises-boolean.html#SyH"
+      }
+    },
+    "Sum_208": {
+      "id": "m-12222",
+      "url": "http://abstract.ups.edu/aata/exercises-boolean.html#SrD",
+      "input": "<math><mi>I</mi><mo>+</mo><mi>J</mi></math>",
+      "tex": "I + J",
+      "expected": "⠠⠊⠬⠠⠚",
+      "reference": {
+        "m-12222": "http://abstract.ups.edu/aata/exercises-boolean.html#SrD",
+        "m-12233": "http://abstract.ups.edu/aata/exercises-boolean.html#WNb",
+        "m-12236": "http://abstract.ups.edu/aata/exercises-boolean.html#WNb"
+      }
+    },
+    "Sum_209": {
+      "id": "m-12313",
+      "url": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+      "input": "<math><mi>x</mi><mo>∨</mo><mi>y</mi></math>",
+      "tex": "x \\vee y",
+      "expected": "⠭⠈⠬⠽",
+      "reference": {
+        "m-12313": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl"
+      }
+    },
+    "Sum_210": {
+      "id": "m-12314",
+      "url": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+      "input": "<math><mi>x</mi><mo>∧</mo><mi>y</mi></math>",
+      "tex": "x \\wedge y",
+      "expected": "⠭⠈⠩⠽",
+      "reference": {
+        "m-12314": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl"
+      }
+    },
+    "Sum_211": {
+      "id": "m-12393",
+      "url": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Eyp",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>",
+      "tex": "f(x) + g(x)",
+      "expected": "⠋⠷⠭⠾⠬⠛⠷⠭⠾",
+      "reference": {
+        "m-12393": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Eyp"
+      }
+    },
+    "Sum_212": {
+      "id": "m-12441",
+      "url": "http://abstract.ups.edu/aata/section-subspaces.html#NwC",
+      "input": "<math><mi>u</mi><mo>+</mo><mi>v</mi></math>",
+      "tex": "u + v",
+      "expected": "⠥⠬⠧",
+      "reference": {
+        "m-12441": "http://abstract.ups.edu/aata/section-subspaces.html#NwC",
+        "m-12714": "http://abstract.ups.edu/aata/exercises-vect.html#bVG"
+      }
+    },
+    "Sum_213": {
+      "id": "m-12525",
+      "url": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ",
+      "input": "<math><msub><mi>x</mi><mn>1</mn></msub><msub><mi>e</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><msub><mi>e</mi><mn>2</mn></msub><mo>+</mo><msub><mi>x</mi><mn>3</mn></msub><msub><mi>e</mi><mn>3</mn></msub></math>",
+      "tex": "x_1 e_1 + x_2 e_2 + x_3 e_3",
+      "expected": "⠭⠂⠑⠂⠬⠭⠆⠑⠆⠬⠭⠒⠑⠒",
+      "reference": {
+        "m-12525": "http://abstract.ups.edu/aata/section-linear-independence.html#daZ"
+      }
+    },
+    "Sum_214": {
+      "id": "m-12578",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#tZk",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>b</mi><msqrt><mn>2</mn></msqrt><mo>+</mo><mi>c</mi><msqrt><mn>3</mn></msqrt><mo>+</mo><mi>d</mi><msqrt><mn>6</mn></msqrt></math>",
+      "tex": "a + b \\sqrt{2} + c \\sqrt{3} + d \\sqrt{6}",
+      "expected": "⠁⠬⠃⠜⠆⠻⠬⠉⠜⠒⠻⠬⠙⠜⠖⠻",
+      "reference": {
+        "m-12578": "http://abstract.ups.edu/aata/exercises-vect.html#tZk"
+      }
+    },
+    "Sum_215": {
+      "id": "m-12684",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#LOt",
+      "input": "<math><mi>m</mi><mo>−</mo><mi>k</mi></math>",
+      "tex": "m - k",
+      "expected": "⠍⠤⠅",
+      "reference": {
+        "m-12684": "http://abstract.ups.edu/aata/exercises-vect.html#LOt"
+      }
+    },
+    "Sum_216": {
+      "id": "m-12713",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#bVG",
+      "input": "<math><mi>U</mi><mo>+</mo><mi>V</mi></math>",
+      "tex": "U + V",
+      "expected": "⠠⠥⠬⠠⠧",
+      "reference": {
+        "m-12713": "http://abstract.ups.edu/aata/exercises-vect.html#bVG",
+        "m-12717": "http://abstract.ups.edu/aata/exercises-vect.html#cME"
+      }
+    },
+    "Sum_217": {
+      "id": "m-12718",
+      "url": "http://abstract.ups.edu/aata/exercises-vect.html#cME",
+      "input": "<math><mi>U</mi><mo>∩</mo><mi>V</mi></math>",
+      "tex": "U \\cap V",
+      "expected": "⠠⠥⠨⠩⠠⠧",
+      "reference": {
+        "m-12718": "http://abstract.ups.edu/aata/exercises-vect.html#cME"
+      }
+    },
+    "Sum_218": {
+      "id": "m-12796",
+      "url": "http://abstract.ups.edu/aata/vect-sage-exercises.html#ojY",
+      "input": "<math><mi>U</mi><mo>+</mo><mi>W</mi></math>",
+      "tex": "U+W",
+      "expected": "⠠⠥⠬⠠⠺",
+      "reference": {
+        "m-12796": "http://abstract.ups.edu/aata/vect-sage-exercises.html#ojY",
+        "m-12809": "http://abstract.ups.edu/aata/vect-sage-exercises.html#Ayq"
+      }
+    },
+    "Sum_219": {
+      "id": "m-12808",
+      "url": "http://abstract.ups.edu/aata/vect-sage-exercises.html#Ayq",
+      "input": "<math><mi>U</mi><mo>∩</mo><mi>W</mi></math>",
+      "tex": "U\\cap W",
+      "expected": "⠠⠥⠨⠩⠠⠺",
+      "reference": {
+        "m-12808": "http://abstract.ups.edu/aata/vect-sage-exercises.html#Ayq"
+      }
+    },
+    "Sum_220": {
+      "id": "m-12873",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#oIb",
+      "input": "<math><msqrt><mn>2</mn></msqrt><mo>+</mo><msqrt><mn>3</mn></msqrt></math>",
+      "tex": "\\sqrt{2} + \\sqrt{3}",
+      "expected": "⠜⠆⠻⠬⠜⠒⠻",
+      "reference": {
+        "m-12873": "http://abstract.ups.edu/aata/section-extension-fields.html#oIb",
+        "m-12880": "http://abstract.ups.edu/aata/section-extension-fields.html#oIb",
+        "m-12884": "http://abstract.ups.edu/aata/section-extension-fields.html#oIb"
+      }
+    },
+    "Sum_221": {
+      "id": "m-12885",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#oIb",
+      "input": "<math><msqrt><mn>3</mn></msqrt><mo>−</mo><msqrt><mn>2</mn></msqrt></math>",
+      "tex": "\\sqrt{3} - \\sqrt{2}",
+      "expected": "⠜⠒⠻⠤⠜⠆⠻",
+      "reference": {
+        "m-12885": "http://abstract.ups.edu/aata/section-extension-fields.html#oIb"
+      }
+    },
+    "Sum_222": {
+      "id": "m-12898",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+      "input": "<math><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mo fence=\"false\" stretchy=\"false\">⟨</mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo fence=\"false\" stretchy=\"false\">⟩</mo></math>",
+      "tex": "f(x) + \\langle p(x) \\rangle",
+      "expected": "⠋⠷⠭⠾⠬⠨⠨⠷⠏⠷⠭⠾⠨⠨⠾",
+      "reference": {
+        "m-12898": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk"
+      }
+    },
+    "Sum_223": {
+      "id": "m-12901",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^2 + x + 1",
+      "expected": "⠭⠘⠆⠐⠬⠭⠬⠂",
+      "reference": {
+        "m-12901": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-12965": "http://abstract.ups.edu/aata/section-extension-fields.html#AWt"
+      }
+    },
+    "Sum_224": {
+      "id": "m-12906",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>x</mi></math>",
+      "tex": "1 + x",
+      "expected": "⠼⠂⠬⠭",
+      "reference": {
+        "m-12906": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk"
+      }
+    },
+    "Sum_225": {
+      "id": "m-13006",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#hdC",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn></math>",
+      "tex": "x^2 -2",
+      "expected": "⠭⠘⠆⠐⠤⠆",
+      "reference": {
+        "m-13006": "http://abstract.ups.edu/aata/section-extension-fields.html#hdC",
+        "m-13426": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+        "m-14029": "http://abstract.ups.edu/aata/section-finite-field.html#Ucz",
+        "m-14765": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EEt"
+      }
+    },
+    "Sum_226": {
+      "id": "m-13015",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#hdC",
+      "input": "<math><mi>π</mi><mo>+</mo><mi>e</mi></math>",
+      "tex": "\\pi + e",
+      "expected": "⠨⠏⠬⠑",
+      "reference": {
+        "m-13015": "http://abstract.ups.edu/aata/section-extension-fields.html#hdC"
+      }
+    },
+    "Sum_227": {
+      "id": "m-13171",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd",
+      "input": "<math><mi>a</mi><mo>+</mo><mi>b</mi><mi>α</mi></math>",
+      "tex": "a + b \\alpha",
+      "expected": "⠁⠬⠃⠨⠁",
+      "reference": {
+        "m-13171": "http://abstract.ups.edu/aata/section-extension-fields.html#Zzd"
+      }
+    },
+    "Sum_228": {
+      "id": "m-13268",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+      "input": "<math><msqrt><mn>3</mn></msqrt><mo>+</mo><msqrt><mn>5</mn></msqrt></math>",
+      "tex": "\\sqrt{3} + \\sqrt{5}",
+      "expected": "⠜⠒⠻⠬⠜⠢⠻",
+      "reference": {
+        "m-13268": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+        "m-13269": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+        "m-13274": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm"
+      }
+    },
+    "Sum_229": {
+      "id": "m-13270",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></math>",
+      "tex": "x^4 - 16 x^2 + 4",
+      "expected": "⠭⠘⠲⠐⠤⠂⠖⠭⠘⠆⠐⠬⠲",
+      "reference": {
+        "m-13270": "http://abstract.ups.edu/aata/section-extension-fields.html#FGm"
+      }
+    },
+    "Sum_230": {
+      "id": "m-13302",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+      "input": "<math><msup><mi>x</mi><mn>6</mn></msup><mo>+</mo><mn>5</mn></math>",
+      "tex": "x^6 + 5",
+      "expected": "⠭⠘⠖⠐⠬⠢",
+      "reference": {
+        "m-13302": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv"
+      }
+    },
+    "Sum_231": {
+      "id": "m-13352",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#wAI",
+      "input": "<math><mi>α</mi><mo>±</mo><mi>β</mi></math>",
+      "tex": "\\alpha \\pm \\beta",
+      "expected": "⠨⠁⠬⠤⠨⠃",
+      "reference": {
+        "m-13352": "http://abstract.ups.edu/aata/section-extension-fields.html#wAI"
+      }
+    },
+    "Sum_232": {
+      "id": "m-13386",
+      "url": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR",
+      "input": "<math><mi>a</mi><mi>x</mi><mo>−</mo><mi>b</mi></math>",
+      "tex": "ax - b",
+      "expected": "⠁⠭⠤⠃",
+      "reference": {
+        "m-13386": "http://abstract.ups.edu/aata/section-extension-fields.html#cHR"
+      }
+    },
+    "Sum_233": {
+      "id": "m-13427",
+      "url": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn></math>",
+      "tex": "x^2 + 4",
+      "expected": "⠭⠘⠆⠐⠬⠲",
+      "reference": {
+        "m-13427": "http://abstract.ups.edu/aata/section-splitting-fields.html#RUE"
+      }
+    },
+    "Sum_234": {
+      "id": "m-13572",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+      "input": "<math><mi>α</mi><mo>+</mo><mi>β</mi></math>",
+      "tex": "\\alpha + \\beta",
+      "expected": "⠨⠁⠬⠨⠃",
+      "reference": {
+        "m-13572": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13580": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13865": "http://abstract.ups.edu/aata/exercises-fields.html#KZZ",
+        "m-14082": "http://abstract.ups.edu/aata/section-finite-field.html#RaC"
+      }
+    },
+    "Sum_235": {
+      "id": "m-13573",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+      "input": "<math><mi>α</mi><mo>−</mo><mi>β</mi></math>",
+      "tex": "\\alpha - \\beta",
+      "expected": "⠨⠁⠤⠨⠃",
+      "reference": {
+        "m-13573": "http://abstract.ups.edu/aata/section-constructions.html#Vds",
+        "m-13581": "http://abstract.ups.edu/aata/section-constructions.html#Vds"
+      }
+    },
+    "Sum_236": {
+      "id": "m-13674",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>2</mn></math>",
+      "tex": "x^3 -2",
+      "expected": "⠭⠘⠒⠐⠤⠆",
+      "reference": {
+        "m-13674": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+        "m-15645": "http://abstract.ups.edu/aata/exercises-galois.html#GAK"
+      }
+    },
+    "Sum_237": {
+      "id": "m-13690",
+      "url": "http://abstract.ups.edu/aata/section-constructions.html#wAV",
+      "input": "<math><mn>8</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "8 x^3 - 6 x -1",
+      "expected": "⠼⠦⠭⠘⠒⠐⠤⠖⠭⠤⠂",
+      "reference": {
+        "m-13690": "http://abstract.ups.edu/aata/section-constructions.html#wAV"
+      }
+    },
+    "Sum_238": {
+      "id": "m-13712",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Thb",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msqrt><mn>3</mn></msqrt><mo>+</mo><mroot><mn>5</mn><mn>3</mn></mroot></mstyle></math>",
+      "tex": "\\sqrt{ 3} + \\sqrt[3]{5}",
+      "expected": "⠜⠒⠻⠬⠣⠒⠜⠢⠻",
+      "reference": {
+        "m-13712": "http://abstract.ups.edu/aata/exercises-fields.html#Thb"
+      }
+    },
+    "Sum_239": {
+      "id": "m-13713",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#zok",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msqrt><mn>3</mn></msqrt><mo>+</mo><msqrt><mn>2</mn></msqrt><mstyle scriptlevel=\"0\"><mspace width=\"thinmathspace\" /></mstyle><mi>i</mi></mstyle></math>",
+      "tex": "\\sqrt{3} + \\sqrt{2}\\, i",
+      "expected": "⠜⠒⠻⠬⠜⠆⠻⠊",
+      "reference": {
+        "m-13713": "http://abstract.ups.edu/aata/exercises-fields.html#zok"
+      }
+    },
+    "Sum_240": {
+      "id": "m-13718",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Tvw",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mo stretchy=\"false\">(</mo><mn>2</mn><mrow><mo>/</mo></mrow><mn>3</mn><mo stretchy=\"false\">)</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>62</mn><mrow><mo>/</mo></mrow><mn>9</mn></math>",
+      "tex": "x^4 - (2/3) x^2 - 62/9",
+      "expected": "⠭⠘⠲⠐⠤⠷⠆⠸⠌⠒⠾⠭⠘⠆⠐⠤⠖⠆⠸⠌⠔",
+      "reference": {
+        "m-13718": "http://abstract.ups.edu/aata/exercises-fields.html#Tvw"
+      }
+    },
+    "Sum_241": {
+      "id": "m-13719",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Tvw",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>25</mn></math>",
+      "tex": "x^4 - 2 x^2 + 25",
+      "expected": "⠭⠘⠲⠐⠤⠆⠭⠘⠆⠐⠬⠆⠢",
+      "reference": {
+        "m-13719": "http://abstract.ups.edu/aata/exercises-fields.html#Tvw"
+      }
+    },
+    "Sum_242": {
+      "id": "m-13741",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#CSK",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>10</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>21</mn></math>",
+      "tex": "x^4 - 10 x^2 + 21",
+      "expected": "⠭⠘⠲⠐⠤⠂⠴⠭⠘⠆⠐⠬⠆⠂",
+      "reference": {
+        "m-13741": "http://abstract.ups.edu/aata/exercises-fields.html#CSK"
+      }
+    },
+    "Sum_243": {
+      "id": "m-13743",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#iZT",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^4 + 1",
+      "expected": "⠭⠘⠲⠐⠬⠂",
+      "reference": {
+        "m-13743": "http://abstract.ups.edu/aata/exercises-fields.html#iZT"
+      }
+    },
+    "Sum_244": {
+      "id": "m-13745",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Phc",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></math>",
+      "tex": "x^3 + 2x + 2",
+      "expected": "⠭⠘⠒⠐⠬⠆⠭⠬⠆",
+      "reference": {
+        "m-13745": "http://abstract.ups.edu/aata/exercises-fields.html#Phc"
+      }
+    },
+    "Sum_245": {
+      "id": "m-13747",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#vol",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>3</mn></math>",
+      "tex": "x^3 - 3",
+      "expected": "⠭⠘⠒⠐⠤⠒",
+      "reference": {
+        "m-13747": "http://abstract.ups.edu/aata/exercises-fields.html#vol"
+      }
+    },
+    "Sum_246": {
+      "id": "m-13764",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#LQX",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>α</mi></math>",
+      "tex": "1 + \\alpha",
+      "expected": "⠼⠂⠬⠨⠁",
+      "reference": {
+        "m-13764": "http://abstract.ups.edu/aata/exercises-fields.html#LQX"
+      }
+    },
+    "Sum_247": {
+      "id": "m-13766",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#LQX",
+      "input": "<math><mn>1</mn><mo>+</mo><msup><mi>α</mi><mn>2</mn></msup></math>",
+      "tex": "1 + \\alpha^2",
+      "expected": "⠼⠂⠬⠨⠁⠘⠆",
+      "reference": {
+        "m-13766": "http://abstract.ups.edu/aata/exercises-fields.html#LQX"
+      }
+    },
+    "Sum_248": {
+      "id": "m-13767",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#LQX",
+      "input": "<math><mi>α</mi><mo>+</mo><msup><mi>α</mi><mn>2</mn></msup></math>",
+      "tex": "\\alpha + \\alpha^2",
+      "expected": "⠨⠁⠬⠨⠁⠘⠆",
+      "reference": {
+        "m-13767": "http://abstract.ups.edu/aata/exercises-fields.html#LQX"
+      }
+    },
+    "Sum_249": {
+      "id": "m-13768",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#LQX",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>α</mi><mo>+</mo><msup><mi>α</mi><mn>2</mn></msup></math>",
+      "tex": "1 + \\alpha + \\alpha^2",
+      "expected": "⠼⠂⠬⠨⠁⠬⠨⠁⠘⠆",
+      "reference": {
+        "m-13768": "http://abstract.ups.edu/aata/exercises-fields.html#LQX"
+      }
+    },
+    "Sum_250": {
+      "id": "m-13845",
+      "url": "http://abstract.ups.edu/aata/exercises-fields.html#Emy",
+      "input": "<math><msqrt><mn>3</mn></msqrt><mo>+</mo><msqrt><mn>7</mn></msqrt></math>",
+      "tex": "\\sqrt{3} +\\sqrt{7}",
+      "expected": "⠜⠒⠻⠬⠜⠶⠻",
+      "reference": {
+        "m-13845": "http://abstract.ups.edu/aata/exercises-fields.html#Emy"
+      }
+    },
+    "Sum_251": {
+      "id": "m-13894",
+      "url": "http://abstract.ups.edu/aata/fields-sage.html#qLJ",
+      "input": "<math><msqrt><mn>2</mn></msqrt><mo>−</mo><msqrt><mn>3</mn></msqrt></math>",
+      "tex": "\\sqrt{2}-\\sqrt{3}",
+      "expected": "⠜⠆⠻⠤⠜⠒⠻",
+      "reference": {
+        "m-13894": "http://abstract.ups.edu/aata/fields-sage.html#qLJ"
+      }
+    },
+    "Sum_252": {
+      "id": "m-13899",
+      "url": "http://abstract.ups.edu/aata/fields-sage.html#vvC",
+      "input": "<math><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "a^2+1",
+      "expected": "⠁⠘⠆⠐⠬⠂",
+      "reference": {
+        "m-13899": "http://abstract.ups.edu/aata/fields-sage.html#vvC"
+      }
+    },
+    "Sum_253": {
+      "id": "m-14066",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#mgd",
+      "input": "<math><msup><mi>x</mi><mrow><msup><mi>p</mi><mi>n</mi></msup></mrow></msup><mo>−</mo><mi>x</mi></math>",
+      "tex": "x^{p^n} -x",
+      "expected": "⠭⠘⠏⠘⠘⠝⠘⠐⠤⠭",
+      "reference": {
+        "m-14066": "http://abstract.ups.edu/aata/section-finite-field.html#mgd",
+        "m-14146": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14148": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14861": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm"
+      }
+    },
+    "Sum_254": {
+      "id": "m-14111",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+      "input": "<math><msup><mi>p</mi><mi>n</mi></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "p^n-1",
+      "expected": "⠏⠘⠝⠐⠤⠂",
+      "reference": {
+        "m-14111": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+        "m-14142": "http://abstract.ups.edu/aata/section-finite-field.html#xhL"
+      }
+    },
+    "Sum_255": {
+      "id": "m-14141",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+      "input": "<math><msup><mi>p</mi><mi>m</mi></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "p^m -1",
+      "expected": "⠏⠘⠍⠐⠤⠂",
+      "reference": {
+        "m-14141": "http://abstract.ups.edu/aata/section-finite-field.html#xhL"
+      }
+    },
+    "Sum_256": {
+      "id": "m-14143",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+      "input": "<math><msup><mi>x</mi><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^{p^m -1} - 1",
+      "expected": "⠭⠘⠏⠘⠘⠍⠘⠤⠂⠐⠤⠂",
+      "reference": {
+        "m-14143": "http://abstract.ups.edu/aata/section-finite-field.html#xhL"
+      }
+    },
+    "Sum_257": {
+      "id": "m-14144",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+      "input": "<math><msup><mi>x</mi><mrow><msup><mi>p</mi><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^{p^n -1} -1",
+      "expected": "⠭⠘⠏⠘⠘⠝⠘⠤⠂⠐⠤⠂",
+      "reference": {
+        "m-14144": "http://abstract.ups.edu/aata/section-finite-field.html#xhL"
+      }
+    },
+    "Sum_258": {
+      "id": "m-14145",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+      "input": "<math><msup><mi>x</mi><mrow><msup><mi>p</mi><mi>m</mi></msup></mrow></msup><mo>−</mo><mi>x</mi></math>",
+      "tex": "x^{p^m} - x",
+      "expected": "⠭⠘⠏⠘⠘⠍⠘⠐⠤⠭",
+      "reference": {
+        "m-14145": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14147": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14150": "http://abstract.ups.edu/aata/section-finite-field.html#xhL",
+        "m-14838": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm",
+        "m-14841": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm"
+      }
+    },
+    "Sum_259": {
+      "id": "m-14173",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#doU",
+      "input": "<math><msup><mi>x</mi><mi>r</mi></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^r - 1",
+      "expected": "⠭⠘⠗⠐⠤⠂",
+      "reference": {
+        "m-14173": "http://abstract.ups.edu/aata/section-finite-field.html#doU"
+      }
+    },
+    "Sum_260": {
+      "id": "m-14177",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#doU",
+      "input": "<math><msup><mi>x</mi><mi>m</mi></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^m - 1",
+      "expected": "⠭⠘⠍⠐⠤⠂",
+      "reference": {
+        "m-14177": "http://abstract.ups.edu/aata/section-finite-field.html#doU",
+        "m-14178": "http://abstract.ups.edu/aata/section-finite-field.html#doU"
+      }
+    },
+    "Sum_261": {
+      "id": "m-14227",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#fVs",
+      "input": "<math><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup></math>",
+      "tex": "x + x^2 + x^4",
+      "expected": "⠭⠬⠭⠘⠆⠐⠬⠭⠘⠲",
+      "reference": {
+        "m-14227": "http://abstract.ups.edu/aata/section-poly-codes.html#fVs"
+      }
+    },
+    "Sum_262": {
+      "id": "m-14251",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#sFj",
+      "input": "<math><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup></math>",
+      "tex": "1 + x^3",
+      "expected": "⠼⠂⠬⠭⠘⠒",
+      "reference": {
+        "m-14251": "http://abstract.ups.edu/aata/section-poly-codes.html#sFj"
+      }
+    },
+    "Sum_263": {
+      "id": "m-14259",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#sFj",
+      "input": "<math><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>x</mi><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup></math>",
+      "tex": "a_0 + a_1 x + a_2 x^2",
+      "expected": "⠁⠴⠬⠁⠂⠭⠬⠁⠆⠭⠘⠆",
+      "reference": {
+        "m-14259": "http://abstract.ups.edu/aata/section-poly-codes.html#sFj"
+      }
+    },
+    "Sum_264": {
+      "id": "m-14312",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#Eyc",
+      "input": "<math><msup><mi>x</mi><mi>n</mi></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^n - 1",
+      "expected": "⠭⠘⠝⠐⠤⠂",
+      "reference": {
+        "m-14312": "http://abstract.ups.edu/aata/section-poly-codes.html#Eyc",
+        "m-14327": "http://abstract.ups.edu/aata/section-poly-codes.html#Eyc",
+        "m-15337": "http://abstract.ups.edu/aata/section-galois-applications.html#cLE",
+        "m-15339": "http://abstract.ups.edu/aata/section-galois-applications.html#cLE",
+        "m-15342": "http://abstract.ups.edu/aata/section-galois-applications.html#TNr",
+        "m-15345": "http://abstract.ups.edu/aata/section-galois-applications.html#TNr",
+        "m-15400": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15408": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL"
+      }
+    },
+    "Sum_265": {
+      "id": "m-14332",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#ETB",
+      "input": "<math><msup><mi>x</mi><mn>7</mn></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^7 - 1",
+      "expected": "⠭⠘⠶⠐⠤⠂",
+      "reference": {
+        "m-14332": "http://abstract.ups.edu/aata/section-poly-codes.html#ETB"
+      }
+    },
+    "Sum_266": {
+      "id": "m-14370",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#unf",
+      "input": "<math><msub><mi>α</mi><mn>2</mn></msub><mo>−</mo><msub><mi>α</mi><mn>1</mn></msub></math>",
+      "tex": "\\alpha_2 - \\alpha_1",
+      "expected": "⠨⠁⠆⠤⠨⠁⠂",
+      "reference": {
+        "m-14370": "http://abstract.ups.edu/aata/section-poly-codes.html#unf"
+      }
+    },
+    "Sum_267": {
+      "id": "m-14387",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#KIN",
+      "input": "<math><mi>s</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "s + 1",
+      "expected": "⠎⠬⠂",
+      "reference": {
+        "m-14387": "http://abstract.ups.edu/aata/section-poly-codes.html#KIN"
+      }
+    },
+    "Sum_268": {
+      "id": "m-14462",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT",
+      "input": "<math><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup></math>",
+      "tex": "1 + x + x^4",
+      "expected": "⠼⠂⠬⠭⠬⠭⠘⠲",
+      "reference": {
+        "m-14462": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT"
+      }
+    },
+    "Sum_269": {
+      "id": "m-14479",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT",
+      "input": "<math><msup><mi>x</mi><mrow><mn>15</mn></mrow></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^{15} - 1",
+      "expected": "⠭⠘⠂⠢⠐⠤⠂",
+      "reference": {
+        "m-14479": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT"
+      }
+    },
+    "Sum_270": {
+      "id": "m-14491",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#uuw",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^3 + x^2 + 1",
+      "expected": "⠭⠘⠒⠐⠬⠭⠘⠆⠐⠬⠂",
+      "reference": {
+        "m-14491": "http://abstract.ups.edu/aata/exercises-finite.html#uuw",
+        "m-14494": "http://abstract.ups.edu/aata/exercises-finite.html#uuw",
+        "m-14497": "http://abstract.ups.edu/aata/exercises-finite.html#Cuu",
+        "m-15616": "http://abstract.ups.edu/aata/exercises-galois.html#CWk"
+      }
+    },
+    "Sum_271": {
+      "id": "m-14507",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#IFf",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^5- 1",
+      "expected": "⠭⠘⠢⠐⠤⠂",
+      "reference": {
+        "m-14507": "http://abstract.ups.edu/aata/exercises-finite.html#IFf"
+      }
+    },
+    "Sum_272": {
+      "id": "m-14508",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#oMo",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>6</mn></msup><mo>+</mo><msup><mi>x</mi><mn>5</mn></msup><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^6 + x^5 + x^4 + x^3 + x^2 + x + 1",
+      "expected": "⠭⠘⠖⠐⠬⠭⠘⠢⠐⠬⠭⠘⠲⠐⠬⠭⠘⠒⠐⠬⠭⠘⠆⠐⠬⠭⠬⠂",
+      "reference": {
+        "m-14508": "http://abstract.ups.edu/aata/exercises-finite.html#oMo"
+      }
+    },
+    "Sum_273": {
+      "id": "m-14509",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#UTx",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>9</mn></msup><mo>−</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^9 - 1",
+      "expected": "⠭⠘⠔⠐⠤⠂",
+      "reference": {
+        "m-14509": "http://abstract.ups.edu/aata/exercises-finite.html#UTx"
+      }
+    },
+    "Sum_274": {
+      "id": "m-14510",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#BaG",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^4 +x^3 + x^2 + x + 1",
+      "expected": "⠭⠘⠲⠐⠬⠭⠘⠒⠐⠬⠭⠘⠆⠐⠬⠭⠬⠂",
+      "reference": {
+        "m-14510": "http://abstract.ups.edu/aata/exercises-finite.html#BaG"
+      }
+    },
+    "Sum_275": {
+      "id": "m-14579",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#haL",
+      "input": "<math><mi>E</mi><mo>∩</mo><mi>F</mi></math>",
+      "tex": "E \\cap F",
+      "expected": "⠠⠑⠨⠩⠠⠋",
+      "reference": {
+        "m-14579": "http://abstract.ups.edu/aata/exercises-finite.html#haL"
+      }
+    },
+    "Sum_276": {
+      "id": "m-14582",
+      "url": "http://abstract.ups.edu/aata/exercises-finite.html#zzO",
+      "input": "<math><msup><mi>x</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^{p-1} - 1",
+      "expected": "⠭⠘⠏⠤⠂⠐⠤⠂",
+      "reference": {
+        "m-14582": "http://abstract.ups.edu/aata/exercises-finite.html#zzO"
+      }
+    },
+    "Sum_277": {
+      "id": "m-14657",
+      "url": "http://abstract.ups.edu/aata/finite-sage-exercises.html#blz",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn></math>",
+      "tex": "x^2-3",
+      "expected": "⠭⠘⠆⠐⠤⠒",
+      "reference": {
+        "m-14657": "http://abstract.ups.edu/aata/finite-sage-exercises.html#blz"
+      }
+    },
+    "Sum_278": {
+      "id": "m-14870",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm",
+      "input": "<math><msup><mi>x</mi><mrow><msup><mi>p</mi><mrow><mi>n</mi><mi>r</mi></mrow></msup></mrow></msup><mo>−</mo><mi>x</mi></math>",
+      "tex": "x^{p^{nr}} - x",
+      "expected": "⠭⠘⠏⠘⠘⠝⠗⠘⠐⠤⠭",
+      "reference": {
+        "m-14870": "http://abstract.ups.edu/aata/section-field-automorphisms.html#Smm"
+      }
+    },
+    "Sum_279": {
+      "id": "m-15273",
+      "url": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>2</mn></math>",
+      "tex": "x^4-2",
+      "expected": "⠭⠘⠲⠐⠤⠆",
+      "reference": {
+        "m-15273": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#brQ",
+        "m-15316": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#NYf",
+        "m-15826": "http://abstract.ups.edu/aata/galois-sage.html#rzd",
+        "m-15830": "http://abstract.ups.edu/aata/galois-sage.html#XGm"
+      }
+    },
+    "Sum_280": {
+      "id": "m-15336",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#cLE",
+      "input": "<math><msup><mi>x</mi><mi>n</mi></msup><mo>−</mo><mi>a</mi></math>",
+      "tex": "x^n - a",
+      "expected": "⠭⠘⠝⠐⠤⠁",
+      "reference": {
+        "m-15336": "http://abstract.ups.edu/aata/section-galois-applications.html#cLE",
+        "m-15359": "http://abstract.ups.edu/aata/section-galois-applications.html#FJM",
+        "m-15363": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15370": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15371": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15375": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15391": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL",
+        "m-15394": "http://abstract.ups.edu/aata/section-galois-applications.html#ZQL"
+      }
+    },
+    "Sum_281": {
+      "id": "m-15430",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#FXU",
+      "input": "<math><msup><mi>x</mi><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow></msup><mo>−</mo><msubsup><mi>α</mi><mn>1</mn><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow></msubsup></math>",
+      "tex": "x^{n_1} - \\alpha_1^{n_1}",
+      "expected": "⠭⠘⠝⠂⠐⠤⠨⠁⠂⠘⠝⠂",
+      "reference": {
+        "m-15430": "http://abstract.ups.edu/aata/section-galois-applications.html#FXU",
+        "m-15440": "http://abstract.ups.edu/aata/section-galois-applications.html#FXU",
+        "m-15441": "http://abstract.ups.edu/aata/section-galois-applications.html#FXU"
+      }
+    },
+    "Sum_282": {
+      "id": "m-15595",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+      "input": "<math><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></math>",
+      "tex": "x^2 + b x + c",
+      "expected": "⠭⠘⠆⠐⠬⠃⠭⠬⠉",
+      "reference": {
+        "m-15595": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr"
+      }
+    },
+    "Sum_283": {
+      "id": "m-15599",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+      "input": "<math><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>c</mi></math>",
+      "tex": "b^2 - 4 c",
+      "expected": "⠃⠘⠆⠐⠤⠲⠉",
+      "reference": {
+        "m-15599": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr"
+      }
+    },
+    "Sum_284": {
+      "id": "m-15610",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#KAJ",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>−</mo><mn>2</mn></math>",
+      "tex": "x^3 + 2 x^2 - x - 2",
+      "expected": "⠭⠘⠒⠐⠬⠆⠭⠘⠆⠐⠤⠭⠤⠆",
+      "reference": {
+        "m-15610": "http://abstract.ups.edu/aata/exercises-galois.html#KAJ"
+      }
+    },
+    "Sum_285": {
+      "id": "m-15612",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#qHS",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^4 + 2 x^2 + 1",
+      "expected": "⠭⠘⠲⠐⠬⠆⠭⠘⠆⠐⠬⠂",
+      "reference": {
+        "m-15612": "http://abstract.ups.edu/aata/exercises-galois.html#qHS"
+      }
+    },
+    "Sum_286": {
+      "id": "m-15614",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#WPb",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^4 + x^2 + 1",
+      "expected": "⠭⠘⠲⠐⠬⠭⠘⠆⠐⠬⠂",
+      "reference": {
+        "m-15614": "http://abstract.ups.edu/aata/exercises-galois.html#WPb"
+      }
+    },
+    "Sum_287": {
+      "id": "m-15630",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#HGd",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mn>12</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></mstyle></math>",
+      "tex": "x^5 - 12 x^2 + 2",
+      "expected": "⠭⠘⠢⠐⠤⠂⠆⠭⠘⠆⠐⠬⠆",
+      "reference": {
+        "m-15630": "http://abstract.ups.edu/aata/exercises-galois.html#HGd"
+      }
+    },
+    "Sum_288": {
+      "id": "m-15631",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#nNm",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mn>4</mn><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></mstyle></math>",
+      "tex": "x^5 - 4 x^4 + 2 x + 2",
+      "expected": "⠭⠘⠢⠐⠤⠲⠭⠘⠲⠐⠬⠆⠭⠬⠆",
+      "reference": {
+        "m-15631": "http://abstract.ups.edu/aata/exercises-galois.html#nNm"
+      }
+    },
+    "Sum_289": {
+      "id": "m-15632",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#TUv",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>5</mn></mstyle></math>",
+      "tex": "x^3 - 5",
+      "expected": "⠭⠘⠒⠐⠤⠢",
+      "reference": {
+        "m-15632": "http://abstract.ups.edu/aata/exercises-galois.html#TUv"
+      }
+    },
+    "Sum_290": {
+      "id": "m-15633",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#AbE",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>6</mn></mstyle></math>",
+      "tex": "x^4 - x^2 - 6",
+      "expected": "⠭⠘⠲⠐⠤⠭⠘⠆⠐⠤⠖",
+      "reference": {
+        "m-15633": "http://abstract.ups.edu/aata/exercises-galois.html#AbE"
+      }
+    },
+    "Sum_291": {
+      "id": "m-15634",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#giN",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>5</mn></msup><mo>+</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^5 + 1",
+      "expected": "⠭⠘⠢⠐⠬⠂",
+      "reference": {
+        "m-15634": "http://abstract.ups.edu/aata/exercises-galois.html#giN"
+      }
+    },
+    "Sum_292": {
+      "id": "m-15636",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#sxf",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>8</mn></msup><mo>−</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^8 - 1",
+      "expected": "⠭⠘⠦⠐⠤⠂",
+      "reference": {
+        "m-15636": "http://abstract.ups.edu/aata/exercises-galois.html#sxf"
+      }
+    },
+    "Sum_293": {
+      "id": "m-15637",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#YEo",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>8</mn></msup><mo>+</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^8 + 1",
+      "expected": "⠭⠘⠦⠐⠬⠂",
+      "reference": {
+        "m-15637": "http://abstract.ups.edu/aata/exercises-galois.html#YEo"
+      }
+    },
+    "Sum_294": {
+      "id": "m-15638",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#ELx",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>10</mn></mstyle></math>",
+      "tex": "x^4 - 3 x^2 -10",
+      "expected": "⠭⠘⠲⠐⠤⠒⠭⠘⠆⠐⠤⠂⠴",
+      "reference": {
+        "m-15638": "http://abstract.ups.edu/aata/exercises-galois.html#ELx"
+      }
+    },
+    "Sum_295": {
+      "id": "m-15642",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#Ofj",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>1</mn></mstyle></math>",
+      "tex": "x^4 - 1",
+      "expected": "⠭⠘⠲⠐⠤⠂",
+      "reference": {
+        "m-15642": "http://abstract.ups.edu/aata/exercises-galois.html#Ofj"
+      }
+    },
+    "Sum_296": {
+      "id": "m-15643",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#ums",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>8</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>15</mn></mstyle></math>",
+      "tex": "x^4 - 8 x^2 + 15",
+      "expected": "⠭⠘⠲⠐⠤⠦⠭⠘⠆⠐⠬⠂⠢",
+      "reference": {
+        "m-15643": "http://abstract.ups.edu/aata/exercises-galois.html#ums"
+      }
+    },
+    "Sum_297": {
+      "id": "m-15644",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#atB",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>15</mn></mstyle></math>",
+      "tex": "x^4 - 2 x^2 - 15",
+      "expected": "⠭⠘⠲⠐⠤⠆⠭⠘⠆⠐⠤⠂⠢",
+      "reference": {
+        "m-15644": "http://abstract.ups.edu/aata/exercises-galois.html#atB"
+      }
+    },
+    "Sum_298": {
+      "id": "m-15785",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#Zoi",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>4</mn></math>",
+      "tex": "x^3 + 2 x - 4",
+      "expected": "⠭⠘⠒⠐⠬⠆⠭⠤⠲",
+      "reference": {
+        "m-15785": "http://abstract.ups.edu/aata/exercises-galois.html#Zoi"
+      }
+    },
+    "Sum_299": {
+      "id": "m-15786",
+      "url": "http://abstract.ups.edu/aata/exercises-galois.html#Zoi",
+      "input": "<math><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mi>x</mi><mo>−</mo><mn>3</mn></math>",
+      "tex": "x^3 + x -3",
+      "expected": "⠭⠘⠒⠐⠬⠭⠤⠒",
+      "reference": {
+        "m-15786": "http://abstract.ups.edu/aata/exercises-galois.html#Zoi"
+      }
+    },
+    "Sum_300": {
+      "id": "m-15810",
+      "url": "http://abstract.ups.edu/aata/galois-sage.html#VQZ",
+      "input": "<math><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>8</mn></math>",
+      "tex": "x^4+8",
+      "expected": "⠭⠘⠲⠐⠬⠦",
+      "reference": {
+        "m-15810": "http://abstract.ups.edu/aata/galois-sage.html#VQZ",
+        "m-15812": "http://abstract.ups.edu/aata/galois-sage.html#VQZ"
+      }
+    },
+    "Sum_301": {
+      "id": "m-15835",
+      "url": "http://abstract.ups.edu/aata/galois-sage-exercises.html#RCF",
+      "input": "<math><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></math>",
+      "tex": "x^5-x-1",
+      "expected": "⠭⠘⠢⠐⠤⠭⠤⠂",
+      "reference": {
+        "m-15835": "http://abstract.ups.edu/aata/galois-sage-exercises.html#RCF",
+        "m-15844": "http://abstract.ups.edu/aata/galois-sage-exercises.html#dQX"
+      }
+    },
+    "Sum_302": {
+      "id": "m-15846",
+      "url": "http://abstract.ups.edu/aata/galois-sage-exercises.html#Wmy",
+      "input": "<math><msup><mi>x</mi><mn>6</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></math>",
+      "tex": "x^6+x^2+2x+1",
+      "expected": "⠭⠘⠖⠐⠬⠭⠘⠆⠐⠬⠆⠭⠬⠂",
+      "reference": {
+        "m-15846": "http://abstract.ups.edu/aata/galois-sage-exercises.html#Wmy"
+      }
+    }
+  }
+}

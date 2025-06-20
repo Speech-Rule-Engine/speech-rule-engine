@@ -1,0 +1,1093 @@
+{
+  "name": "CatalanMathspeak",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_test.json",
+  "information": "Catalan Mathspeak tests.",
+  "domain": "mathspeak",
+  "locale": "ca",
+  "active": "MathspeakCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sample_1_1_1_default": {
+      "expected": "pi aproximat 3,14159"
+    },
+    "Sample_1_1_1_brief": {
+      "expected": "pi aproximat 3,14159"
+    },
+    "Sample_1_1_1_sbrief": {
+      "expected": "pi aproximat 3,14159"
+    },
+    "Sample_1_1_2_default": {
+      "expected": "102 més 2,214 més 15 igual 2,331"
+    },
+    "Sample_1_1_2_brief": {
+      "expected": "102 més 2,214 més 15 igual 2,331"
+    },
+    "Sample_1_1_2_sbrief": {
+      "expected": "102 més 2,214 més 15 igual 2,331"
+    },
+    "Sample_1_1_3_default": {
+      "expected": "59 per 0 igual 0"
+    },
+    "Sample_1_1_3_brief": {
+      "expected": "59 per 0 igual 0"
+    },
+    "Sample_1_1_3_sbrief": {
+      "expected": "59 per 0 igual 0"
+    },
+    "Sample_1_2_1_default": {
+      "expected": "3 menos menys 2"
+    },
+    "Sample_1_2_1_brief": {
+      "expected": "3 menos menys 2"
+    },
+    "Sample_1_2_1_sbrief": {
+      "expected": "3 menos menys 2"
+    },
+    "Sample_1_2_2_default": {
+      "expected": "menys y"
+    },
+    "Sample_1_2_2_brief": {
+      "expected": "menys y"
+    },
+    "Sample_1_2_2_sbrief": {
+      "expected": "menys y"
+    },
+    "Sample_1_2_3_default": {
+      "expected": "menys 32"
+    },
+    "Sample_1_2_3_brief": {
+      "expected": "menys 32"
+    },
+    "Sample_1_2_3_sbrief": {
+      "expected": "menys 32"
+    },
+    "Sample_1_4_1_default": {
+      "expected": "número t 2 e 4"
+    },
+    "Sample_1_4_1_brief": {
+      "expected": "núm t 2 e 4"
+    },
+    "Sample_1_4_1_sbrief": {
+      "expected": "núm t 2 e 4"
+    },
+    "Sample_1_4_2_default": {
+      "expected": "número coixinet F F 0 0 0 0"
+    },
+    "Sample_1_4_2_brief": {
+      "expected": "núm coixinet F F 0 0 0 0"
+    },
+    "Sample_1_4_2_sbrief": {
+      "expected": "núm coixinet F F 0 0 0 0"
+    },
+    "Sample_1_4_3_default": {
+      "expected": "número 0 x 1 5 F F més número 0 x 2 B 0 1 igual número 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_brief": {
+      "expected": "núm 0 x 1 5 F F més núm 0 x 2 B 0 1 igual núm 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_sbrief": {
+      "expected": "núm 0 x 1 5 F F més núm 0 x 2 B 0 1 igual núm 0 x 4 1 0 0"
+    },
+    "Sample_1_5_1_default": {
+      "expected": "majúscula I coma majúscula I I coma majúscula I I I coma majúscula I V coma majúscula V punt"
+    },
+    "Sample_1_5_1_brief": {
+      "expected": "majúscula I coma majúscula I I coma majúscula I I I coma majúscula I V coma majúscula V punt"
+    },
+    "Sample_1_5_1_sbrief": {
+      "expected": "majúscula I coma majúscula I I coma majúscula I I I coma majúscula I V coma majúscula V punt"
+    },
+    "Sample_2_1_1_default": {
+      "expected": "d igual començar arrel quadrada parèntesi esquerre majúscula X menos x parèntesi dret al quadrat menos parèntesi esquerre majúscula Y menos y parèntesi dret al quadrat finalitzar arrel quadrada"
+    },
+    "Sample_2_1_1_brief": {
+      "expected": "d igual començar arrel quadrada parèntesi esquerre majúscula X menos x parèntesi dret al quadrat menos parèntesi esquerre majúscula Y menos y parèntesi dret al quadrat finalitzar arrel quadrada"
+    },
+    "Sample_2_1_1_sbrief": {
+      "expected": "d igual arrel quadrada parèntesi esquerre majúscula X menos x parèntesi dret al quadrat menos parèntesi esquerre majúscula Y menos y parèntesi dret al quadrat finalitzar arrel quadrada"
+    },
+    "Sample_2_3_1_default": {
+      "expected": "If majúscula A fletxa dreta majúscula B and majúscula B fletxa dreta majúscula C then majúscula A fletxa dreta majúscula C punt"
+    },
+    "Sample_2_3_1_brief": {
+      "expected": "If majúscula A fletxa dreta majúscula B and majúscula B fletxa dreta majúscula C then majúscula A fletxa dreta majúscula C punt"
+    },
+    "Sample_2_3_1_sbrief": {
+      "expected": "If majúscula A fletxa dreta majúscula B and majúscula B fletxa dreta majúscula C then majúscula A fletxa dreta majúscula C punt"
+    },
+    "Sample_2_6_1_default": {
+      "expected": "negreta claudàtor esquerre x negreta claudàtor dret"
+    },
+    "Sample_2_6_1_brief": {
+      "expected": "negreta claudàtor esquerre x negreta claudàtor dret"
+    },
+    "Sample_2_6_1_sbrief": {
+      "expected": "negreta claudàtor esquerre x negreta claudàtor dret"
+    },
+    "Sample_2_6_2_default": {
+      "expected": "integral de contorn majúscula E punt mitjà d negreta l igual menys començar fracció d majúscula Fi majúscula B entre d t finalitzar fracció"
+    },
+    "Sample_2_6_2_brief": {
+      "expected": "integral de contorn majúscula E punt mitjà d negreta l igual menys començar frac d majúscula Fi majúscula B entre d t finalitzar frac"
+    },
+    "Sample_2_6_2_sbrief": {
+      "expected": "integral de contorn majúscula E punt mitjà d negreta l igual menys començar frac d majúscula Fi majúscula B entre d t finalitzar frac"
+    },
+    "NegativeVsMinus_0": {
+      "expected": "menys començar fracció 1 entre b finalitzar fracció"
+    },
+    "NegativeVsMinus_1": {
+      "expected": "menys començar fracció a entre b finalitzar fracció"
+    },
+    "NegativeVsMinus_2": {
+      "expected": "menys 3 més començar fracció 1 entre 2 finalitzar fracció"
+    },
+    "Sample_4_2_1_default": {
+      "expected": "Uppercase parèntesi esquerre començar clau alfa coma beta coma gamma coma delta coma èpsilon coma fi finalitzar clau parèntesi dret igual començar clau majúscula Alfa coma majúscula Beta coma majúscula Gamma coma majúscula Delta coma majúscula èpsilon coma majúscula Fi finalitzar clau"
+    },
+    "Sample_4_2_1_brief": {
+      "expected": "Uppercase parèntesi esquerre començar clau alfa coma beta coma gamma coma delta coma èpsilon coma fi finalitzar clau parèntesi dret igual començar clau majúscula Alfa coma majúscula Beta coma majúscula Gamma coma majúscula Delta coma majúscula èpsilon coma majúscula Fi finalitzar clau"
+    },
+    "Sample_4_2_1_sbrief": {
+      "expected": "Uppercase parèntesi esquerre clau alfa coma beta coma gamma coma delta coma èpsilon coma fi finalitzar clau parèntesi dret igual clau majúscula Alfa coma majúscula Beta coma majúscula Gamma coma majúscula Delta coma majúscula èpsilon coma majúscula Fi finalitzar clau"
+    },
+    "Sample_5_1_1_default": {
+      "expected": "y menos 1"
+    },
+    "Sample_5_1_1_brief": {
+      "expected": "y menos 1"
+    },
+    "Sample_5_1_1_sbrief": {
+      "expected": "y menos 1"
+    },
+    "Sample_5_1_2_default": {
+      "expected": "parèntesi esquerre 1 menys to menys 1 parèntesi dret"
+    },
+    "Sample_5_1_2_brief": {
+      "expected": "parèntesi esquerre 1 menys to menys 1 parèntesi dret"
+    },
+    "Sample_5_1_2_sbrief": {
+      "expected": "parèntesi esquerre 1 menys to menys 1 parèntesi dret"
+    },
+    "Sample_5_1_3_default": {
+      "expected": "menys 1"
+    },
+    "Sample_5_1_3_brief": {
+      "expected": "menys 1"
+    },
+    "Sample_5_1_3_sbrief": {
+      "expected": "menys 1"
+    },
+    "Sample_6_1_1_default": {
+      "expected": "The Fibonacci numbers are dos punts començar clau 0 coma 1 coma 1 coma 2 coma 3 coma 5 coma 8 coma punts suspensius finalitzar clau"
+    },
+    "Sample_6_1_1_brief": {
+      "expected": "The Fibonacci numbers are dos punts començar clau 0 coma 1 coma 1 coma 2 coma 3 coma 5 coma 8 coma punts suspensius finalitzar clau"
+    },
+    "Sample_6_1_1_sbrief": {
+      "expected": "The Fibonacci numbers are dos punts clau 0 coma 1 coma 1 coma 2 coma 3 coma 5 coma 8 coma punts suspensius finalitzar clau"
+    },
+    "Sample_6_2_1_default": {
+      "expected": "començar valor absolut 4 menos 7 finalitzar valor absolut igual 3"
+    },
+    "Sample_6_2_1_brief": {
+      "expected": "començar valor absolut 4 menos 7 finalitzar valor absolut igual 3"
+    },
+    "Sample_6_2_1_sbrief": {
+      "expected": "valor absolut 4 menos 7 finalitzar valor absolut igual 3"
+    },
+    "Sample_6_2_2_default": {
+      "expected": "començar valor absolut a més menys començar valor absolut b menos c finalitzar valor absolut finalitzar valor absolut no és igual a començar valor absolut a finalitzar valor absolut més menys començar valor absolut b menos c finalitzar valor absolut"
+    },
+    "Sample_6_2_2_brief": {
+      "expected": "començar valor absolut a més menys començar valor absolut b menos c finalitzar valor absolut finalitzar valor absolut no és igual a començar valor absolut a finalitzar valor absolut més menys començar valor absolut b menos c finalitzar valor absolut"
+    },
+    "Sample_6_2_2_sbrief": {
+      "expected": "valor absolut a més menys valor absolut b menos c finalitzar valor absolut finalitzar valor absolut no és igual a valor absolut a finalitzar valor absolut més menys valor absolut b menos c finalitzar valor absolut"
+    },
+    "Sample_7_1_1_default": {
+      "expected": "començar fracció 1 entre x finalitzar fracció"
+    },
+    "Sample_7_1_1_brief": {
+      "expected": "començar frac 1 entre x finalitzar frac"
+    },
+    "Sample_7_1_1_sbrief": {
+      "expected": "començar frac 1 entre x finalitzar frac"
+    },
+    "Sample_7_1_2_default": {
+      "expected": "a menos començar fracció b més c entre d menos e finalitzar fracció per f"
+    },
+    "Sample_7_1_2_brief": {
+      "expected": "a menos començar frac b més c entre d menos e finalitzar frac per f"
+    },
+    "Sample_7_1_2_sbrief": {
+      "expected": "a menos començar frac b més c entre d menos e finalitzar frac per f"
+    },
+    "Sample_7_2_1_default": {
+      "expected": "començar començar fracció començar fracció x entre y finalitzar fracció entre entre z finalitzar finalitzar fracció no és igual a començar començar fracció x entre entre començar fracció y entre z finalitzar fracció finalitzar finalitzar fracció"
+    },
+    "Sample_7_2_1_brief": {
+      "expected": "començar començar frac començar frac x entre y finalitzar frac entre entre z finalitzar finalitzar frac no és igual a començar començar frac x entre entre començar frac y entre z finalitzar frac finalitzar finalitzar frac"
+    },
+    "Sample_7_2_1_sbrief": {
+      "expected": "començar començar frac començar frac x entre y finalitzar frac entre entre z finalitzar finalitzar frac no és igual a començar començar frac x entre entre començar frac y entre z finalitzar frac finalitzar finalitzar frac"
+    },
+    "Sample_7_3_1_default": {
+      "expected": "començar començar començar fracció començar començar fracció parèntesi esquerre 1 menos x parèntesi dret començar fracció d entre d x finalitzar fracció parèntesi esquerre 2 x parèntesi dret menos 2 x començar fracció d entre d x finalitzar fracció parèntesi esquerre 1 menos x parèntesi dret entre entre parèntesi esquerre 1 menos x parèntesi dret al quadrat finalitzar finalitzar fracció entre entre entre 1 més parèntesi esquerre començar fracció 2 x entre 1 menos x finalitzar fracció parèntesi dret al quadrat finalitzar finalitzar finalitzar fracció"
+    },
+    "Sample_7_3_1_brief": {
+      "expected": "començar començar començar frac començar començar frac parèntesi esquerre 1 menos x parèntesi dret començar frac d entre d x finalitzar frac parèntesi esquerre 2 x parèntesi dret menos 2 x començar frac d entre d x finalitzar frac parèntesi esquerre 1 menos x parèntesi dret entre entre parèntesi esquerre 1 menos x parèntesi dret al quadrat finalitzar finalitzar frac entre entre entre 1 més parèntesi esquerre començar frac 2 x entre 1 menos x finalitzar frac parèntesi dret al quadrat finalitzar finalitzar finalitzar frac"
+    },
+    "Sample_7_3_1_sbrief": {
+      "expected": "començar començar començar frac començar començar frac parèntesi esquerre 1 menos x parèntesi dret començar frac d entre d x finalitzar frac parèntesi esquerre 2 x parèntesi dret menos 2 x començar frac d entre d x finalitzar frac parèntesi esquerre 1 menos x parèntesi dret entre entre parèntesi esquerre 1 menos x parèntesi dret al quadrat finalitzar finalitzar frac entre entre entre 1 més parèntesi esquerre començar frac 2 x entre 1 menos x finalitzar frac parèntesi dret al quadrat finalitzar finalitzar finalitzar frac"
+    },
+    "Sample_7_3_2_default": {
+      "expected": "a subíndex 0 línia base més començar començar començar començar fracció 1 entre entre entre entre a subíndex 1 línia base més començar començar començar fracció 1 entre entre entre a subíndex 2 línia base més començar començar fracció 1 entre entre punts suspensius més començar fracció 1 entre a subíndex n línia base finalitzar fracció finalitzar finalitzar fracció finalitzar finalitzar finalitzar fracció finalitzar finalitzar finalitzar finalitzar fracció"
+    },
+    "Sample_7_3_2_brief": {
+      "expected": "a sub 0 base més començar començar començar començar frac 1 entre entre entre entre a sub 1 base més començar començar començar frac 1 entre entre entre a sub 2 base més començar començar frac 1 entre entre punts suspensius més començar frac 1 entre a sub n base finalitzar frac finalitzar finalitzar frac finalitzar finalitzar finalitzar frac finalitzar finalitzar finalitzar finalitzar frac"
+    },
+    "Sample_7_3_2_sbrief": {
+      "expected": "a sub 0 base més començar començar començar començar frac 1 entre entre entre entre a sub 1 base més començar començar començar frac 1 entre entre entre a sub 2 base més començar començar frac 1 entre entre punts suspensius més començar frac 1 entre a sub n base finalitzar frac finalitzar finalitzar frac finalitzar finalitzar finalitzar frac finalitzar finalitzar finalitzar finalitzar frac"
+    },
+    "Sample_7_4_1_default": {
+      "expected": "començar fracció 1 entre 2 finalitzar fracció més començar fracció 2 entre 2 finalitzar fracció més començar fracció 3 entre 2 finalitzar fracció més començar fracció 4 entre 2 finalitzar fracció més punts suspensius igual sumatori sotaíndex n igual 1 sobreíndex infinit començar fracció n entre 2 finalitzar fracció"
+    },
+    "Sample_7_4_1_brief": {
+      "expected": "començar frac 1 entre 2 finalitzar frac més començar frac 2 entre 2 finalitzar frac més començar frac 3 entre 2 finalitzar frac més començar frac 4 entre 2 finalitzar frac més punts suspensius igual sumatori sotaíndex n igual 1 sobreíndex infinit començar frac n entre 2 finalitzar frac"
+    },
+    "Sample_7_4_1_sbrief": {
+      "expected": "començar frac 1 entre 2 finalitzar frac més començar frac 2 entre 2 finalitzar frac més començar frac 3 entre 2 finalitzar frac més començar frac 4 entre 2 finalitzar frac més punts suspensius igual sumatori sotaíndex n igual 1 sobreíndex infinit començar frac n entre 2 finalitzar frac"
+    },
+    "Sample_7_4_2_default": {
+      "expected": "començar fracció 20 entre 5 finalitzar fracció per començar fracció 1 entre 100 finalitzar fracció igual començar fracció 1 entre 25 finalitzar fracció"
+    },
+    "Sample_7_4_2_brief": {
+      "expected": "començar frac 20 entre 5 finalitzar frac per començar frac 1 entre 100 finalitzar frac igual començar frac 1 entre 25 finalitzar frac"
+    },
+    "Sample_7_4_2_sbrief": {
+      "expected": "començar frac 20 entre 5 finalitzar frac per començar frac 1 entre 100 finalitzar frac igual començar frac 1 entre 25 finalitzar frac"
+    },
+    "Sample_7_4_3_default": {
+      "expected": "començar començar fracció començar fracció 3 entre 5 finalitzar fracció entre entre 8 finalitzar finalitzar fracció igual començar fracció 3 entre 5 finalitzar fracció per començar fracció 1 entre 8 finalitzar fracció"
+    },
+    "Sample_7_4_3_brief": {
+      "expected": "començar començar frac començar frac 3 entre 5 finalitzar frac entre entre 8 finalitzar finalitzar frac igual començar frac 3 entre 5 finalitzar frac per començar frac 1 entre 8 finalitzar frac"
+    },
+    "Sample_7_4_3_sbrief": {
+      "expected": "començar començar frac començar frac 3 entre 5 finalitzar frac entre entre 8 finalitzar finalitzar frac igual començar frac 3 entre 5 finalitzar frac per començar frac 1 entre 8 finalitzar frac"
+    },
+    "Sample_7_5_1_default": {
+      "expected": "3 més començar fracció 5 entre 8 finalitzar fracció igual començar fracció 29 entre 8 finalitzar fracció"
+    },
+    "Sample_7_5_1_brief": {
+      "expected": "3 més començar frac 5 entre 8 finalitzar frac igual començar frac 29 entre 8 finalitzar frac"
+    },
+    "Sample_7_5_1_sbrief": {
+      "expected": "3 més començar frac 5 entre 8 finalitzar frac igual començar frac 29 entre 8 finalitzar frac"
+    },
+    "Sample_7_6_1_default": {
+      "expected": "a subíndex 0 línia base més fracció contínua b subíndex 1 línia base entre a subíndex 1 línia base més començar fracció b subíndex 2 línia base entre a subíndex 2 línia base més començar fracció b subíndex 3 línia base entre a subíndex 3 línia base més punts suspensius igual a subíndex 0 línia base més començar fracció b subíndex 1 línia base entre a subíndex 1 línia base finalitzar fracció més començar fracció b subíndex 2 línia base entre a subíndex 2 línia base finalitzar fracció més punts suspensius"
+    },
+    "Sample_7_6_1_brief": {
+      "expected": "a sub 0 base més frac contínua b sub 1 base entre a sub 1 base més començar frac b sub 2 base entre a sub 2 base més començar frac b sub 3 base entre a sub 3 base més punts suspensius igual a sub 0 base més començar frac b sub 1 base entre a sub 1 base finalitzar frac més començar frac b sub 2 base entre a sub 2 base finalitzar frac més punts suspensius"
+    },
+    "Sample_7_6_1_sbrief": {
+      "expected": "a sub 0 base més frac contínua b sub 1 base entre a sub 1 base més frac b sub 2 base entre a sub 2 base més frac b sub 3 base entre a sub 3 base més punts suspensius igual a sub 0 base més començar frac b sub 1 base entre a sub 1 base finalitzar frac més començar frac b sub 2 base entre a sub 2 base finalitzar frac més punts suspensius"
+    },
+    "Sample_8_1_1_default": {
+      "expected": "x al cub més 6 x al quadrat menos x igual 30"
+    },
+    "Sample_8_1_1_brief": {
+      "expected": "x al cub més 6 x al quadrat menos x igual 30"
+    },
+    "Sample_8_1_1_sbrief": {
+      "expected": "x al cub més 6 x al quadrat menos x igual 30"
+    },
+    "Sample_8_1_2_default": {
+      "expected": "començar fracció d al quadrat y entre d x al quadrat finalitzar fracció més parèntesi esquerre a x al quadrat més b x més c parèntesi dret y igual 0"
+    },
+    "Sample_8_1_2_brief": {
+      "expected": "començar frac d al quadrat y entre d x al quadrat finalitzar frac més parèntesi esquerre a x al quadrat més b x més c parèntesi dret y igual 0"
+    },
+    "Sample_8_1_2_sbrief": {
+      "expected": "començar frac d al quadrat y entre d x al quadrat finalitzar frac més parèntesi esquerre a x al quadrat més b x més c parèntesi dret y igual 0"
+    },
+    "Sample_8_2_1_default": {
+      "expected": "x superíndex començar fracció 1 entre 2 finalitzar fracció"
+    },
+    "Sample_8_2_1_brief": {
+      "expected": "x sup començar frac 1 entre 2 finalitzar frac"
+    },
+    "Sample_8_2_1_sbrief": {
+      "expected": "x sup començar frac 1 entre 2 finalitzar frac"
+    },
+    "Sample_8_2_2_default": {
+      "expected": "x subíndex n"
+    },
+    "Sample_8_2_2_brief": {
+      "expected": "x sub n"
+    },
+    "Sample_8_2_2_sbrief": {
+      "expected": "x sub n"
+    },
+    "Sample_8_2_3_default": {
+      "expected": "x superíndex a"
+    },
+    "Sample_8_2_3_brief": {
+      "expected": "x sup a"
+    },
+    "Sample_8_2_3_sbrief": {
+      "expected": "x sup a"
+    },
+    "Sample_8_3_1_default": {
+      "expected": "x superíndex m més n"
+    },
+    "Sample_8_3_1_brief": {
+      "expected": "x sup m més n"
+    },
+    "Sample_8_3_1_sbrief": {
+      "expected": "x sup m més n"
+    },
+    "Sample_8_3_2_default": {
+      "expected": "majúscula T subíndex n menos 1 línia base més 5 igual 0"
+    },
+    "Sample_8_3_2_brief": {
+      "expected": "majúscula T sub n menos 1 base més 5 igual 0"
+    },
+    "Sample_8_3_2_sbrief": {
+      "expected": "majúscula T sub n menos 1 base més 5 igual 0"
+    },
+    "Sample_8_3_3_default": {
+      "expected": "x superíndex m més n línia base igual x superíndex m línia base x superíndex n"
+    },
+    "Sample_8_3_3_brief": {
+      "expected": "x sup m més n base igual x sup m base x sup n"
+    },
+    "Sample_8_3_3_sbrief": {
+      "expected": "x sup m més n base igual x sup m base x sup n"
+    },
+    "Sample_8_4_1_default": {
+      "expected": "x superíndex a súper subíndex n superíndex més a súper subíndex n menos 1"
+    },
+    "Sample_8_4_1_brief": {
+      "expected": "x sup a sup sub n sup més a sup sub n menos 1"
+    },
+    "Sample_8_4_1_sbrief": {
+      "expected": "x sup a sup sub n sup més a sup sub n menos 1"
+    },
+    "Sample_8_4_2_default": {
+      "expected": "x superíndex a súper subíndex b"
+    },
+    "Sample_8_4_2_brief": {
+      "expected": "x sup a sup sub b"
+    },
+    "Sample_8_4_2_sbrief": {
+      "expected": "x sup a sup sub b"
+    },
+    "Sample_8_4_3_default": {
+      "expected": "x subíndex a sub superíndex b"
+    },
+    "Sample_8_4_3_brief": {
+      "expected": "x sub a sub sup b"
+    },
+    "Sample_8_4_3_sbrief": {
+      "expected": "x sub a sub sup b"
+    },
+    "Sample_8_4_4_default": {
+      "expected": "y superíndex a súper superíndex b súper súper subíndex c línia base no és igual a y superíndex a súper superíndex b superíndex c"
+    },
+    "Sample_8_4_4_brief": {
+      "expected": "y sup a sup sup b sup sup sub c base no és igual a y sup a sup sup b sup c"
+    },
+    "Sample_8_4_4_sbrief": {
+      "expected": "y sup a sup sup b sup sup sub c base no és igual a y sup a sup sup b sup c"
+    },
+    "Sample_8_4_5_default": {
+      "expected": "y superíndex a súper súper subíndex c súper superíndex b"
+    },
+    "Sample_8_4_5_brief": {
+      "expected": "y sup a sup sup sub c sup sup b"
+    },
+    "Sample_8_4_5_sbrief": {
+      "expected": "y sup a sup sup sub c sup sup b"
+    },
+    "Sample_8_4_5Short_default": {
+      "expected": "y superíndex a súper súper subíndex c"
+    },
+    "Sample_8_4_5Short_brief": {
+      "expected": "y sup a sup sup sub c"
+    },
+    "Sample_8_4_5Short_sbrief": {
+      "expected": "y sup a sup sup sub c"
+    },
+    "Sample_8_4_5Inv_default": {
+      "expected": "y subíndex a sub sub superíndex c"
+    },
+    "Sample_8_4_5Inv_brief": {
+      "expected": "y sub a sub sub sup c"
+    },
+    "Sample_8_4_5Inv_sbrief": {
+      "expected": "y sub a sub sub sup c"
+    },
+    "Sample_8_4_5InvShort_default": {
+      "expected": "y subíndex a sub sub superíndex c sub subíndex b"
+    },
+    "Sample_8_4_5InvShort_brief": {
+      "expected": "y sub a sub sub sup c sub sub b"
+    },
+    "Sample_8_4_5InvShort_sbrief": {
+      "expected": "y sub a sub sub sup c sub sub b"
+    },
+    "Sample_8_4_6_default": {
+      "expected": "x superíndex a súper superíndex b"
+    },
+    "Sample_8_4_6_brief": {
+      "expected": "x sup a sup sup b"
+    },
+    "Sample_8_4_6_sbrief": {
+      "expected": "x sup a sup sup b"
+    },
+    "Sample_8_4_7_default": {
+      "expected": "x subíndex a sub subíndex b"
+    },
+    "Sample_8_4_7_brief": {
+      "expected": "x sub a sub sub b"
+    },
+    "Sample_8_4_7_sbrief": {
+      "expected": "x sub a sub sub b"
+    },
+    "Sample_8_4_8_default": {
+      "expected": "majúscula T superíndex parèntesi esquerre x súper superíndex a superíndex més y súper superíndex b superíndex parèntesi dret"
+    },
+    "Sample_8_4_8_brief": {
+      "expected": "majúscula T sup parèntesi esquerre x sup sup a sup més y sup sup b sup parèntesi dret"
+    },
+    "Sample_8_4_8_sbrief": {
+      "expected": "majúscula T sup parèntesi esquerre x sup sup a sup més y sup sup b sup parèntesi dret"
+    },
+    "Sample_8_5_1_default": {
+      "expected": "x subíndex 1"
+    },
+    "Sample_8_5_1_brief": {
+      "expected": "x sub 1"
+    },
+    "Sample_8_5_1_sbrief": {
+      "expected": "x sub 1"
+    },
+    "Sample_8_5_2_default": {
+      "expected": "x subíndex menys 1"
+    },
+    "Sample_8_5_2_brief": {
+      "expected": "x sub menys 1"
+    },
+    "Sample_8_5_2_sbrief": {
+      "expected": "x sub menys 1"
+    },
+    "Sample_8_5_3_default": {
+      "expected": "x subíndex 10,000"
+    },
+    "Sample_8_5_3_brief": {
+      "expected": "x sub 10,000"
+    },
+    "Sample_8_5_3_sbrief": {
+      "expected": "x sub 10,000"
+    },
+    "Sample_8_5_4_default": {
+      "expected": "x subíndex 1,3"
+    },
+    "Sample_8_5_4_brief": {
+      "expected": "x sub 1,3"
+    },
+    "Sample_8_5_4_sbrief": {
+      "expected": "x sub 1,3"
+    },
+    "Sample_8_5_5_default": {
+      "expected": "4 majúscula F e més 3 majúscula O subíndex 2 línia base fletxa dreta 2 majúscula F e subíndex 2 línia base majúscula O subíndex 3"
+    },
+    "Sample_8_5_5_brief": {
+      "expected": "4 majúscula F e més 3 majúscula O sub 2 base fletxa dreta 2 majúscula F e sub 2 base majúscula O sub 3"
+    },
+    "Sample_8_5_5_sbrief": {
+      "expected": "4 majúscula F e més 3 majúscula O sub 2 base fletxa dreta 2 majúscula F e sub 2 base majúscula O sub 3"
+    },
+    "Sample_8_5_6_default": {
+      "expected": "a subíndex 2 coma 3"
+    },
+    "Sample_8_5_6_brief": {
+      "expected": "a sub 2 coma 3"
+    },
+    "Sample_8_5_6_sbrief": {
+      "expected": "a sub 2 coma 3"
+    },
+    "Sample_8_5_7_default": {
+      "expected": "majúscula T subíndex n sub subíndex 1 subíndex més n sub subíndex 0"
+    },
+    "Sample_8_5_7_brief": {
+      "expected": "majúscula T sub n sub sub 1 sub més n sub sub 0"
+    },
+    "Sample_8_5_7_sbrief": {
+      "expected": "majúscula T sub n sub sub 1 sub més n sub sub 0"
+    },
+    "Sample_8_5_8_default": {
+      "expected": "logaritme subíndex 2 línia base parèntesi esquerre x parèntesi dret igual començar fracció logaritme subíndex 10 línia base parèntesi esquerre x parèntesi dret entre logaritme subíndex 10 línia base parèntesi esquerre 2 parèntesi dret finalitzar fracció"
+    },
+    "Sample_8_5_8_brief": {
+      "expected": "logaritme sub 2 base parèntesi esquerre x parèntesi dret igual començar frac logaritme sub 10 base parèntesi esquerre x parèntesi dret entre logaritme sub 10 base parèntesi esquerre 2 parèntesi dret finalitzar frac"
+    },
+    "Sample_8_5_8_sbrief": {
+      "expected": "logaritme sub 2 base parèntesi esquerre x parèntesi dret igual començar frac logaritme sub 10 base parèntesi esquerre x parèntesi dret entre logaritme sub 10 base parèntesi esquerre 2 parèntesi dret finalitzar frac"
+    },
+    "Sample_8_5_9_default": {
+      "expected": "majúscula Fi subíndex 5"
+    },
+    "Sample_8_5_9_brief": {
+      "expected": "majúscula Fi sub 5"
+    },
+    "Sample_8_5_9_sbrief": {
+      "expected": "majúscula Fi sub 5"
+    },
+    "Sample_8_5_10_default": {
+      "expected": "logaritme neperià x igual integral definida subíndex 1 superíndex x línia base començar fracció d t entre t finalitzar fracció"
+    },
+    "Sample_8_5_10_brief": {
+      "expected": "logaritme neperià x igual integral Sub 1 Sup x Base començar frac d t entre t finalitzar frac"
+    },
+    "Sample_8_5_10_sbrief": {
+      "expected": "logaritme neperià x igual integral Sub 1 Sup x Base començar frac d t entre t finalitzar frac"
+    },
+    "Sample_8_6_1_default": {
+      "expected": "dòlar n línia base 2 igual 2 per dòlar n més 1 punt i coma"
+    },
+    "Sample_8_6_1_brief": {
+      "expected": "dòlar n base 2 igual 2 per dòlar n més 1 punt i coma"
+    },
+    "Sample_8_6_1_sbrief": {
+      "expected": "dòlar n base 2 igual 2 per dòlar n més 1 punt i coma"
+    },
+    "BaselineNumberFont_default": {
+      "expected": "n línia base negreta 2"
+    },
+    "BaselineNumberFont_brief": {
+      "expected": "n base negreta 2"
+    },
+    "BaselineNumberFont_sbrief": {
+      "expected": "n base negreta 2"
+    },
+    "Sample_8_8_1_naive_default": {
+      "expected": "subíndex c d superíndex a b línia base x subíndex e f superíndex g h"
+    },
+    "Sample_8_8_1_naive_brief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "Sample_8_8_1_naive_sbrief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "Sample_8_8_1_default": {
+      "expected": "subíndex c d superíndex a b línia base x subíndex e f superíndex g h"
+    },
+    "Sample_8_8_1_brief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "Sample_8_8_1_sbrief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "SampleSimpleSquare_default": {
+      "expected": "majúscula T subíndex 0 al quadrat"
+    },
+    "SampleSimpleSquare_brief": {
+      "expected": "majúscula T sub 0 al quadrat"
+    },
+    "SampleSimpleSquare_sbrief": {
+      "expected": "majúscula T sub 0 al quadrat"
+    },
+    "SampleSimpleSquare_2_default": {
+      "expected": "majúscula T subíndex 0 línia base al quadrat"
+    },
+    "SampleSimpleSquare_2_brief": {
+      "expected": "majúscula T sub 0 base al quadrat"
+    },
+    "SampleSimpleSquare_2_sbrief": {
+      "expected": "majúscula T sub 0 base al quadrat"
+    },
+    "SampleSimpleCube_default": {
+      "expected": "majúscula T subíndex 0 al cub"
+    },
+    "SampleSimpleCube_brief": {
+      "expected": "majúscula T sub 0 al cub"
+    },
+    "SampleSimpleCube_sbrief": {
+      "expected": "majúscula T sub 0 al cub"
+    },
+    "SampleSimpleCube_2_default": {
+      "expected": "majúscula T subíndex 0 línia base al cub"
+    },
+    "SampleSimpleCube_2_brief": {
+      "expected": "majúscula T sub 0 base al cub"
+    },
+    "SampleSimpleCube_2_sbrief": {
+      "expected": "majúscula T sub 0 base al cub"
+    },
+    "Sample_8_8_2_default": {
+      "expected": "majúscula T subíndex n menos 1 superíndex 2"
+    },
+    "Sample_8_8_2_brief": {
+      "expected": "majúscula T sub n menos 1 sup 2"
+    },
+    "Sample_8_8_2_sbrief": {
+      "expected": "majúscula T sub n menos 1 sup 2"
+    },
+    "Sample_8_9_1_default": {
+      "expected": "x prima"
+    },
+    "Sample_8_9_1_brief": {
+      "expected": "x prima"
+    },
+    "Sample_8_9_1_sbrief": {
+      "expected": "x prima"
+    },
+    "Sample_8_9_2_default": {
+      "expected": "f tres prima parèntesi esquerre y parèntesi dret igual començar fracció d f dos prima parèntesi esquerre y parèntesi dret entre d y finalitzar fracció"
+    },
+    "Sample_8_9_2_brief": {
+      "expected": "f tres prima parèntesi esquerre y parèntesi dret igual començar frac d f dos prima parèntesi esquerre y parèntesi dret entre d y finalitzar frac"
+    },
+    "Sample_8_9_2_sbrief": {
+      "expected": "f tres prima parèntesi esquerre y parèntesi dret igual començar frac d f dos prima parèntesi esquerre y parèntesi dret entre d y finalitzar frac"
+    },
+    "Sample_8_10_1_default": {
+      "expected": "ro prima igual ro prima subíndex més línia base més ro prima subíndex menys"
+    },
+    "Sample_8_10_1_brief": {
+      "expected": "ro prima igual ro prima sub més base més ro prima sub menys"
+    },
+    "Sample_8_10_1_sbrief": {
+      "expected": "ro prima igual ro prima sub més base més ro prima sub menys"
+    },
+    "Sample_8_10_2_default": {
+      "expected": "x prima subíndex 10"
+    },
+    "Sample_8_10_2_brief": {
+      "expected": "x prima sub 10"
+    },
+    "Sample_8_10_2_sbrief": {
+      "expected": "x prima sub 10"
+    },
+    "Sample_8_10_3_default": {
+      "expected": "majúscula T prima subíndex n"
+    },
+    "Sample_8_10_3_brief": {
+      "expected": "majúscula T prima sub n"
+    },
+    "Sample_8_10_3_sbrief": {
+      "expected": "majúscula T prima sub n"
+    },
+    "Sample_8_11_1_default": {
+      "expected": "començar matriu 2 per 3 primera fila primera columna x superíndex n segona columna y superíndex n tercera columna z superíndex n segona fila primera columna x superíndex n més 1 segona columna y superíndex n més 1 tercera columna z superíndex n més 1 finalitzar matriu"
+    },
+    "Sample_8_11_1_brief": {
+      "expected": "començar matriu 2 per 3 primera fila primera columna x sup n segona columna y sup n tercera columna z sup n segona fila primera columna x sup n més 1 segona columna y sup n més 1 tercera columna z sup n més 1 finalitzar matriu"
+    },
+    "Sample_8_11_1_sbrief": {
+      "expected": "matriu 2 per 3 primera  primera columna x sup n segona columna y sup n tercera columna z sup n segona  primera columna x sup n més 1 segona columna y sup n més 1 tercera columna z sup n més 1 finalitzar matriu"
+    },
+    "Sample_8_12_1_default": {
+      "expected": "x subíndex a línia base superíndex b"
+    },
+    "Sample_8_12_1_brief": {
+      "expected": "x sub a base sup b"
+    },
+    "Sample_8_12_1_sbrief": {
+      "expected": "x sub a base sup b"
+    },
+    "Sample_8_12_2_default": {
+      "expected": "x superíndex b línia base subíndex a"
+    },
+    "Sample_8_12_2_brief": {
+      "expected": "x sup b base sub a"
+    },
+    "Sample_8_12_2_sbrief": {
+      "expected": "x sup b base sub a"
+    },
+    "Sample_8_13_1_default": {
+      "expected": "logaritme superíndex 4 superíndex b línia base x"
+    },
+    "Sample_8_13_1_brief": {
+      "expected": "logaritme sup 4 sup b base x"
+    },
+    "Sample_8_13_1_sbrief": {
+      "expected": "logaritme sup 4 sup b base x"
+    },
+    "Sample_8_13_2_default": {
+      "expected": "majúscula T subíndex n subíndex a línia base y"
+    },
+    "Sample_8_13_2_brief": {
+      "expected": "majúscula T sub n sub a base y"
+    },
+    "Sample_8_13_2_sbrief": {
+      "expected": "majúscula T sub n sub a base y"
+    },
+    "Sample_9_1_1_default": {
+      "expected": "començar arrel quadrada 2 finalitzar arrel quadrada"
+    },
+    "Sample_9_1_1_brief": {
+      "expected": "començar arrel quadrada 2 finalitzar arrel quadrada"
+    },
+    "Sample_9_1_1_sbrief": {
+      "expected": "arrel quadrada 2 finalitzar arrel quadrada"
+    },
+    "Sample_9_1_2_default": {
+      "expected": "començar arrel quadrada m més n finalitzar arrel quadrada"
+    },
+    "Sample_9_1_2_brief": {
+      "expected": "començar arrel quadrada m més n finalitzar arrel quadrada"
+    },
+    "Sample_9_1_2_sbrief": {
+      "expected": "arrel quadrada m més n finalitzar arrel quadrada"
+    },
+    "Sample_9_2_1_default": {
+      "expected": "índex d'arrel m més n començar arrel x més y finalitzar arrel"
+    },
+    "Sample_9_2_1_brief": {
+      "expected": "índex d'arrel m més n començar arrel x més y finalitzar arrel"
+    },
+    "Sample_9_2_1_sbrief": {
+      "expected": "índex m més n arrel x més y finalitzar arrel"
+    },
+    "Sample_9_2_2_default": {
+      "expected": "índex d'arrel n començar arrel x superíndex m línia base finalitzar arrel igual parèntesi esquerre índex d'arrel n començar arrel x finalitzar arrel parèntesi dret superíndex m línia base igual x superíndex començar fracció m entre n finalitzar fracció línia base coma x ajor que 0"
+    },
+    "Sample_9_2_2_brief": {
+      "expected": "índex d'arrel n començar arrel x sup m base finalitzar arrel igual parèntesi esquerre índex d'arrel n començar arrel x finalitzar arrel parèntesi dret sup m base igual x sup començar frac m entre n finalitzar frac base coma x ajor que 0"
+    },
+    "Sample_9_2_2_sbrief": {
+      "expected": "índex n arrel x sup m base finalitzar arrel igual parèntesi esquerre índex n arrel x finalitzar arrel parèntesi dret sup m base igual x sup començar frac m entre n finalitzar frac base coma x ajor que 0"
+    },
+    "Sample_9_2_3_default": {
+      "expected": "començar arrel cúbica x finalitzar arrel cúbica igual x superíndex començar fracció 1 entre 3 finalitzar fracció"
+    },
+    "Sample_9_2_3_brief": {
+      "expected": "començar arrel cúbica x finalitzar arrel cúbica igual x sup començar frac 1 entre 3 finalitzar frac"
+    },
+    "Sample_9_2_3_sbrief": {
+      "expected": "arrel cúbica x finalitzar arrel cúbica igual x sup començar frac 1 entre 3 finalitzar frac"
+    },
+    "Sample_9_3_1_default": {
+      "expected": "començar arrel quadrada començar arrel quadrada x més 1 finalitzar arrel quadrada més començar arrel quadrada y més 1 finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "Sample_9_3_1_brief": {
+      "expected": "començar arrel quadrada començar arrel quadrada x més 1 finalitzar arrel quadrada més començar arrel quadrada y més 1 finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "Sample_9_3_1_sbrief": {
+      "expected": "arrel quadrada arrel quadrada x més 1 finalitzar arrel quadrada més arrel quadrada y més 1 finalitzar arrel quadrada finalitzar arrel quadrada"
+    },
+    "Sample_9_3_2_default": {
+      "expected": "índex d'arrel n començar arrel índex d'arrel m començar arrel x finalitzar arrel finalitzar arrel igual índex d'arrel m començar arrel índex d'arrel n començar arrel x finalitzar arrel finalitzar arrel"
+    },
+    "Sample_9_3_2_brief": {
+      "expected": "índex d'arrel n començar arrel índex d'arrel m començar arrel x finalitzar arrel finalitzar arrel igual índex d'arrel m començar arrel índex d'arrel n començar arrel x finalitzar arrel finalitzar arrel"
+    },
+    "Sample_9_3_2_sbrief": {
+      "expected": "índex n arrel índex m arrel x finalitzar arrel finalitzar arrel igual índex m arrel índex n arrel x finalitzar arrel finalitzar arrel"
+    },
+    "Sample_9_3_3_default": {
+      "expected": "x superíndex e menos 2 línia base igual començar arrel quadrada x començar arrel cúbica x començar arrel a la quarta x començar arrel a la cinquena x punts suspensius finalitzar arrel a la cinquena finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada coma x pertanyent a negreta de pissarra majúscula R"
+    },
+    "Sample_9_3_3_brief": {
+      "expected": "x sup e menos 2 base igual començar arrel quadrada x començar arrel cúbica x començar arrel a la quarta x començar arrel a la cinquena x punts suspensius finalitzar arrel a la cinquena finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada coma x pertanyent a negreta de pissarra majúscula R"
+    },
+    "Sample_9_3_3_sbrief": {
+      "expected": "x sup e menos 2 base igual arrel quadrada x arrel cúbica x arrel a la quarta x arrel a la cinquena x punts suspensius finalitzar arrel a la cinquena finalitzar arrel a la quarta finalitzar arrel cúbica finalitzar arrel quadrada coma x pertanyent a negreta de pissarra majúscula R"
+    },
+    "Sample_9_3_4_default": {
+      "expected": "començar fracció 2 entre pi finalitzar fracció igual començar fracció començar arrel quadrada 2 finalitzar arrel quadrada entre 2 finalitzar fracció començar fracció començar arrel quadrada 2 més començar arrel quadrada 2 finalitzar arrel quadrada finalitzar arrel quadrada entre 2 finalitzar fracció començar fracció començar arrel quadrada 2 més començar arrel quadrada 2 més començar arrel quadrada 2 finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada entre 2 finalitzar fracció punts suspensius"
+    },
+    "Sample_9_3_4_brief": {
+      "expected": "començar frac 2 entre pi finalitzar frac igual començar frac començar arrel quadrada 2 finalitzar arrel quadrada entre 2 finalitzar frac començar frac començar arrel quadrada 2 més començar arrel quadrada 2 finalitzar arrel quadrada finalitzar arrel quadrada entre 2 finalitzar frac començar frac començar arrel quadrada 2 més començar arrel quadrada 2 més començar arrel quadrada 2 finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada entre 2 finalitzar frac punts suspensius"
+    },
+    "Sample_9_3_4_sbrief": {
+      "expected": "començar frac 2 entre pi finalitzar frac igual començar frac arrel quadrada 2 finalitzar arrel quadrada entre 2 finalitzar frac començar frac arrel quadrada 2 més arrel quadrada 2 finalitzar arrel quadrada finalitzar arrel quadrada entre 2 finalitzar frac començar frac arrel quadrada 2 més arrel quadrada 2 més arrel quadrada 2 finalitzar arrel quadrada finalitzar arrel quadrada finalitzar arrel quadrada entre 2 finalitzar frac punts suspensius"
+    },
+    "Sample_10_1_1_default": {
+      "expected": "començar fracció 5 x ratllada y finalitzar ratllada entre 2 ratllada y finalitzar ratllada finalitzar fracció igual començar fracció 5 entre 2 finalitzar fracció x"
+    },
+    "Sample_10_1_1_brief": {
+      "expected": "començar frac 5 x ratllada y finalitzar ratllada entre 2 ratllada y finalitzar ratllada finalitzar frac igual començar frac 5 entre 2 finalitzar frac x"
+    },
+    "Sample_10_1_1_sbrief": {
+      "expected": "començar frac 5 x ratllada y finalitzar ratllada entre 2 ratllada y finalitzar ratllada finalitzar frac igual començar frac 5 entre 2 finalitzar frac x"
+    },
+    "Sample_10_2_1_default": {
+      "expected": "començar fracció 12 entre 18 finalitzar fracció igual començar fracció ratllada 12 amb 2 finalitzar ratllada entre ratllada 18 amb 3 finalitzar ratllada finalitzar fracció igual començar fracció 2 entre 3 finalitzar fracció"
+    },
+    "Sample_10_2_1_brief": {
+      "expected": "començar frac 12 entre 18 finalitzar frac igual començar frac ratllada 12 amb 2 finalitzar ratllada entre ratllada 18 amb 3 finalitzar ratllada finalitzar frac igual començar frac 2 entre 3 finalitzar frac"
+    },
+    "Sample_10_2_1_sbrief": {
+      "expected": "començar frac 12 entre 18 finalitzar frac igual començar frac ratllada 12 amb 2 finalitzar ratllada entre ratllada 18 amb 3 finalitzar ratllada finalitzar frac igual començar frac 2 entre 3 finalitzar frac"
+    },
+    "Sample_10_2_2_default": {
+      "expected": "començar fracció 12 entre 18 finalitzar fracció igual començar fracció ratllada 12 amb 2 finalitzar ratllada entre ratllada 18 amb 3 finalitzar ratllada finalitzar fracció igual començar fracció 2 entre 3 finalitzar fracció"
+    },
+    "Sample_10_2_2_brief": {
+      "expected": "començar frac 12 entre 18 finalitzar frac igual començar frac ratllada 12 amb 2 finalitzar ratllada entre ratllada 18 amb 3 finalitzar ratllada finalitzar frac igual començar frac 2 entre 3 finalitzar frac"
+    },
+    "Sample_10_2_2_sbrief": {
+      "expected": "començar frac 12 entre 18 finalitzar frac igual començar frac ratllada 12 amb 2 finalitzar ratllada entre ratllada 18 amb 3 finalitzar ratllada finalitzar frac igual començar frac 2 entre 3 finalitzar frac"
+    },
+    "Sample_11_1_1_default": {
+      "expected": "modificand superior x amb dièresi"
+    },
+    "Sample_11_1_1_brief": {
+      "expected": "mod superior x amb dièresi"
+    },
+    "Sample_11_1_1_sbrief": {
+      "expected": "mod superior x amb dièresi"
+    },
+    "Sample_11_1_2_default": {
+      "expected": "modificand superior x més y amb fletxa dreta"
+    },
+    "Sample_11_1_2_brief": {
+      "expected": "mod superior x més y amb fletxa dreta"
+    },
+    "Sample_11_1_2_sbrief": {
+      "expected": "mod superior x més y amb fletxa dreta"
+    },
+    "Sample_11_1_3_default": {
+      "expected": "modificand superior x amb circumflex"
+    },
+    "Sample_11_1_3_brief": {
+      "expected": "mod superior x amb circumflex"
+    },
+    "Sample_11_1_3_sbrief": {
+      "expected": "mod superior x amb circumflex"
+    },
+    "Sample_11_2_1_default": {
+      "expected": "modificand inferior x amb punt en superescrit"
+    },
+    "Sample_11_2_1_brief": {
+      "expected": "mod inferior x amb punt en superescrit"
+    },
+    "Sample_11_2_1_sbrief": {
+      "expected": "mod inferior x amb punt en superescrit"
+    },
+    "Sample_11_3_1_default": {
+      "expected": "x titlla"
+    },
+    "Sample_11_3_1_brief": {
+      "expected": "x titlla"
+    },
+    "Sample_11_3_1_sbrief": {
+      "expected": "x titlla"
+    },
+    "Sample_11_3_2_default": {
+      "expected": "x barra"
+    },
+    "Sample_11_3_2_brief": {
+      "expected": "x barra"
+    },
+    "Sample_11_3_2_sbrief": {
+      "expected": "x barra"
+    },
+    "Sample_11_3_3_default": {
+      "expected": "y subtitlla"
+    },
+    "Sample_11_3_3_brief": {
+      "expected": "y subtitlla"
+    },
+    "Sample_11_3_3_sbrief": {
+      "expected": "y subtitlla"
+    },
+    "Sample_11_4_1_default": {
+      "expected": "x barra barra"
+    },
+    "Sample_11_4_1_brief": {
+      "expected": "x barra barra"
+    },
+    "Sample_11_4_1_sbrief": {
+      "expected": "x barra barra"
+    },
+    "Sample_11_4_2_default": {
+      "expected": "y barra barra subbarra subbarra"
+    },
+    "Sample_11_4_2_brief": {
+      "expected": "y barra barra subbarra subbarra"
+    },
+    "Sample_11_4_2_sbrief": {
+      "expected": "y barra barra subbarra subbarra"
+    },
+    "Sample_11_6_1_default": {
+      "expected": "modificand inferior inferior modificand inferior a més b amb subratllat amb per"
+    },
+    "Sample_11_6_1_brief": {
+      "expected": "mod inferior inferior mod inferior a més b amb subratllat amb per"
+    },
+    "Sample_11_6_1_sbrief": {
+      "expected": "mod inferior inferior mod inferior a més b amb subratllat amb per"
+    },
+    "Sample_11_6_3_default": {
+      "expected": "modificand superior superior modificand superior x més y amb titlla amb barra"
+    },
+    "Sample_11_6_3_brief": {
+      "expected": "mod superior superior mod superior x més y amb titlla amb barra"
+    },
+    "Sample_11_6_3_sbrief": {
+      "expected": "mod superior superior mod superior x més y amb titlla amb barra"
+    },
+    "Sample_11_7_1_default": {
+      "expected": "sumatori sotaíndex n igual 1 sobreíndex infinit a subíndex n"
+    },
+    "Sample_11_7_1_brief": {
+      "expected": "sumatori sotaíndex n igual 1 sobreíndex infinit a sub n"
+    },
+    "Sample_11_7_1_sbrief": {
+      "expected": "sumatori sotaíndex n igual 1 sobreíndex infinit a sub n"
+    },
+    "Sample_11_8_1_default": {
+      "expected": "modificand inferior x més y amb subratllat sotaíndex a igual 5 sotasotaíndex b igual 3"
+    },
+    "Sample_11_8_1_brief": {
+      "expected": "mod inferior x més y amb subratllat sotaíndex a igual 5 sotasotaíndex b igual 3"
+    },
+    "Sample_11_8_1_sbrief": {
+      "expected": "mod inferior x més y amb subratllat sotaíndex a igual 5 sotasotaíndex b igual 3"
+    },
+    "Sample_11_8_2_default": {
+      "expected": "modificand superior x més y amb barra sobreíndex n igual 1 sobresobreíndex m igual 2"
+    },
+    "Sample_11_8_2_brief": {
+      "expected": "mod superior x més y amb barra sobreíndex n igual 1 sobresobreíndex m igual 2"
+    },
+    "Sample_11_8_2_sbrief": {
+      "expected": "mod superior x més y amb barra sobreíndex n igual 1 sobresobreíndex m igual 2"
+    },
+    "Sample_12_1_1_default": {
+      "expected": "logaritme subíndex b línia base x"
+    },
+    "Sample_12_1_1_brief": {
+      "expected": "logaritme sub b base x"
+    },
+    "Sample_12_1_1_sbrief": {
+      "expected": "logaritme sub b base x"
+    },
+    "Sample_12_1_2_default": {
+      "expected": "cosinus y"
+    },
+    "Sample_12_1_2_brief": {
+      "expected": "cosinus y"
+    },
+    "Sample_12_1_2_sbrief": {
+      "expected": "cosinus y"
+    },
+    "Sample_12_1_3_default": {
+      "expected": "sinus x"
+    },
+    "Sample_12_1_3_brief": {
+      "expected": "sinus x"
+    },
+    "Sample_12_1_3_sbrief": {
+      "expected": "sinus x"
+    },
+    "Sample_13_1_1_default": {
+      "expected": "començar fracció 60 ratllada milles finalitzar ratllada entre ratllada hores finalitzar ratllada finalitzar fracció per començar fracció 5,280 peus entre 1 ratllada milles finalitzar ratllada finalitzar fracció per començar fracció 1 ratllada hores finalitzar ratllada entre 60 minuts finalitzar fracció igual començar fracció 5,280 peus entre minuts finalitzar fracció"
+    },
+    "Sample_13_1_1_brief": {
+      "expected": "començar frac 60 ratllada milles finalitzar ratllada entre ratllada hores finalitzar ratllada finalitzar frac per començar frac 5,280 peus entre 1 ratllada milles finalitzar ratllada finalitzar frac per començar frac 1 ratllada hores finalitzar ratllada entre 60 minuts finalitzar frac igual començar frac 5,280 peus entre minuts finalitzar frac"
+    },
+    "Sample_13_1_1_sbrief": {
+      "expected": "començar frac 60 ratllada milles finalitzar ratllada entre ratllada hores finalitzar ratllada finalitzar frac per començar frac 5,280 peus entre 1 ratllada milles finalitzar ratllada finalitzar frac per començar frac 1 ratllada hores finalitzar ratllada entre 60 minuts finalitzar frac igual començar frac 5,280 peus entre minuts finalitzar frac"
+    },
+    "Sample_13_1_2_default": {
+      "expected": "1 joule igual 1 quilogram metres quadrat segons superíndex menys 2"
+    },
+    "Sample_13_1_2_brief": {
+      "expected": "1 joule igual 1 quilogram metres quadrat segons sup menys 2"
+    },
+    "Sample_13_1_2_sbrief": {
+      "expected": "1 joule igual 1 quilogram metres quadrat segons sup menys 2"
+    },
+    "Sample_13_1_3_default": {
+      "expected": "m metres igual 100 m centímetres igual començar fracció m entre 1,000 finalitzar fracció quilòmetres"
+    },
+    "Sample_13_1_3_brief": {
+      "expected": "m metres igual 100 m centímetres igual començar frac m entre 1,000 finalitzar frac quilòmetres"
+    },
+    "Sample_13_1_3_sbrief": {
+      "expected": "m metres igual 100 m centímetres igual començar frac m entre 1,000 finalitzar frac quilòmetres"
+    },
+    "Sample_13_1_4_default": {
+      "expected": "1 milla aproximat 1,6 quilòmetres"
+    },
+    "Sample_13_1_4_brief": {
+      "expected": "1 milla aproximat 1,6 quilòmetres"
+    },
+    "Sample_13_1_4_sbrief": {
+      "expected": "1 milla aproximat 1,6 quilòmetres"
+    },
+    "Sample_13_1_5_default": {
+      "expected": "1 polzada igual 2,54 centímetres"
+    },
+    "Sample_13_1_5_brief": {
+      "expected": "1 polzada igual 2,54 centímetres"
+    },
+    "Sample_13_1_5_sbrief": {
+      "expected": "1 polzada igual 2,54 centímetres"
+    },
+    "Sample_14_1_1_default": {
+      "expected": "començar esquema primera fila primera columna majúscula H subíndex 2 segona columna més tercera columna majúscula F subíndex 2 quarta columna fletxa dreta cinquena columna 2 majúscula H majúscula F segona fila primera columna hydrogen segona columna espai tercera columna fluorine quarta columna espai cinquena columna hydrogen fluoride finalitzar esquema"
+    },
+    "Sample_14_1_1_brief": {
+      "expected": "començar esquema primera fila primera columna majúscula H sub 2 segona columna més tercera columna majúscula F sub 2 quarta columna fletxa dreta cinquena columna 2 majúscula H majúscula F segona fila primera columna hydrogen segona columna espai tercera columna fluorine quarta columna espai cinquena columna hydrogen fluoride finalitzar esquema"
+    },
+    "Sample_14_1_1_sbrief": {
+      "expected": "esquema primera fila primera columna majúscula H sub 2 segona columna més tercera columna majúscula F sub 2 quarta columna fletxa dreta cinquena columna 2 majúscula H majúscula F segona fila primera columna hydrogen segona columna espai tercera columna fluorine quarta columna espai cinquena columna hydrogen fluoride finalitzar esquema"
+    },
+    "Sample_14_3_1_default": {
+      "expected": "x igual començar esquema clau esquerra allargada primera fila primera columna y menor que 0 segona columna 0 segona fila primera columna y major o igual que 0 segona columna 2 y finalitzar esquema"
+    },
+    "Sample_14_3_1_brief": {
+      "expected": "x igual començar esquema clau esquerra allargada primera fila primera columna y menor que 0 segona columna 0 segona fila primera columna y major o igual que 0 segona columna 2 y finalitzar esquema"
+    },
+    "Sample_14_3_1_sbrief": {
+      "expected": "x igual esquema clau esquerra allargada primera fila primera columna y menor que 0 segona columna 0 segona fila primera columna y major o igual que 0 segona columna 2 y finalitzar esquema"
+    },
+    "Sample_15_1_1_default": {
+      "expected": "començar matriu 3 per 3 primera fila primera columna x més a segona columna x més b tercera columna x més c segona fila primera columna y més a segona columna y més b tercera columna y més c tercera fila primera columna z més a segona columna z més b tercera columna z més c finalitzar matriu"
+    },
+    "Sample_15_1_1_brief": {
+      "expected": "començar matriu 3 per 3 primera fila primera columna x més a segona columna x més b tercera columna x més c segona fila primera columna y més a segona columna y més b tercera columna y més c tercera fila primera columna z més a segona columna z més b tercera columna z més c finalitzar matriu"
+    },
+    "Sample_15_1_1_sbrief": {
+      "expected": "matriu 3 per 3 primera  primera columna x més a segona columna x més b tercera columna x més c segona  primera columna y més a segona columna y més b tercera columna y més c tercera  primera columna z més a segona columna z més b tercera columna z més c finalitzar matriu"
+    },
+    "Sample_15_2_1_default": {
+      "expected": "començar determinant 2 per 2 primera fila primera columna a més 1 segona columna b segona fila primera columna c segona columna d finalitzar determinant igual parèntesi esquerre a més 1 parèntesi dret d menos b c"
+    },
+    "Sample_15_2_1_brief": {
+      "expected": "començar determinant 2 per 2 primera fila primera columna a més 1 segona columna b segona fila primera columna c segona columna d finalitzar determinant igual parèntesi esquerre a més 1 parèntesi dret d menos b c"
+    },
+    "Sample_15_2_1_sbrief": {
+      "expected": "determinant 2 per 2 primera fila primera columna a més 1 segona columna b segona fila primera columna c segona columna d finalitzar determinant igual parèntesi esquerre a més 1 parèntesi dret d menos b c"
+    },
+    "Sample_15_4_1_default": {
+      "expected": "començar determinant 2 per 2 primera fila a b segona fila c d finalitzar determinant igual a d menos b c"
+    },
+    "Sample_15_4_1_brief": {
+      "expected": "començar determinant 2 per 2 primera fila a b segona fila c d finalitzar determinant igual a d menos b c"
+    },
+    "Sample_15_4_1_sbrief": {
+      "expected": "determinant 2 per 2 primera fila a b segona fila c d finalitzar determinant igual a d menos b c"
+    },
+    "Sample_15_6_1_default": {
+      "expected": "començar binomial x en y finalitzar binomial"
+    },
+    "Sample_15_6_1_brief": {
+      "expected": "començar binomial x en y finalitzar binomial"
+    },
+    "Sample_15_6_1_sbrief": {
+      "expected": "binomial x en y finalitzar binomial"
+    }
+  }
+}

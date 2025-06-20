@@ -1,0 +1,441 @@
+{
+  "name": "AfrikaansMathspeakSummary",
+  "locale": "af",
+  "domain": "mathspeak",
+  "factory": "summary",
+  "base": "input/common/summary_test.json",
+  "information": "Afrikaans Mathspeak Summary tests.",
+  "active": "SummaryAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "som met 2 terme"
+    },
+    "AbstrAddition_brief": {
+      "expected": "som"
+    },
+    "AbstrAddition_sbrief": {
+      "expected": "som"
+    },
+    "AbstrBigop_default": {
+      "expected": "som"
+    },
+    "AbstrBigop_brief": {
+      "expected": "som"
+    },
+    "AbstrBigop_sbrief": {
+      "expected": "som"
+    },
+    "AbstrBinomial_default": {
+      "expected": "binomiaal"
+    },
+    "AbstrBinomial_brief": {
+      "expected": "binomiaal"
+    },
+    "AbstrBinomial_sbrief": {
+      "expected": "binomiaal"
+    },
+    "AbstrCases_default": {
+      "expected": "gevalstelling met 2 gevalle"
+    },
+    "AbstrCases_brief": {
+      "expected": "gevalstelling"
+    },
+    "AbstrCases_sbrief": {
+      "expected": "gevalstelling"
+    },
+    "AbstrCell_default": {
+      "expected": "1. Kolom in tabêl"
+    },
+    "AbstrCell_brief": {
+      "expected": "1. Kolom in tabêl"
+    },
+    "AbstrCell_sbrief": {
+      "expected": "1. Kolom in tabêl"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "voortgesette breuk"
+    },
+    "AbstrContinuedFraction_brief": {
+      "expected": "voortgesette breuk"
+    },
+    "AbstrContinuedFraction_sbrief": {
+      "expected": "voortgesette breuk"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "2 dimensionele determinant"
+    },
+    "AbstrDeterminant_brief": {
+      "expected": "determinant"
+    },
+    "AbstrDeterminant_sbrief": {
+      "expected": "determinant"
+    },
+    "AbstrFraction_default": {
+      "expected": "breuk"
+    },
+    "AbstrFraction_brief": {
+      "expected": "breuk"
+    },
+    "AbstrFraction_sbrief": {
+      "expected": "breuk"
+    },
+    "AbstrFunction_default": {
+      "expected": "funksionele uitdrukking"
+    },
+    "AbstrFunction_brief": {
+      "expected": "funksie"
+    },
+    "AbstrFunction_sbrief": {
+      "expected": "funksie"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "identifiseerder"
+    },
+    "AbstrIdentifier_brief": {
+      "expected": "identifiseerder"
+    },
+    "AbstrIdentifier_sbrief": {
+      "expected": "identifiseerder"
+    },
+    "AbstrInfixop_default": {
+      "expected": "deling met 2 elemente"
+    },
+    "AbstrInfixop_brief": {
+      "expected": "deling"
+    },
+    "AbstrInfixop_sbrief": {
+      "expected": "deling"
+    },
+    "AbstrIntegral_default": {
+      "expected": "integraal"
+    },
+    "AbstrIntegral_brief": {
+      "expected": "integraal"
+    },
+    "AbstrIntegral_sbrief": {
+      "expected": "integraal"
+    },
+    "AbstrLim_default": {
+      "expected": "limiet funksie"
+    },
+    "AbstrLim_brief": {
+      "expected": "limïet"
+    },
+    "AbstrLim_sbrief": {
+      "expected": "limïet"
+    },
+    "_comment2_": " TODO",
+    "AbstrLine_default": {
+      "expected": "1. Ry in meerdere lyne"
+    },
+    "AbstrLine_brief": {
+      "expected": "1. Ry in meerdere lyne"
+    },
+    "AbstrLine_sbrief": {
+      "expected": "1. Ry in meerdere lyne"
+    },
+    "AbstrMatrix_default": {
+      "expected": "3 by 2 matriks"
+    },
+    "AbstrMatrix_brief": {
+      "expected": "matriks"
+    },
+    "AbstrMatrix_sbrief": {
+      "expected": "matriks"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "gemengde getal"
+    },
+    "AbstrMixedNumber_brief": {
+      "expected": "gemengde getal"
+    },
+    "AbstrMixedNumber_sbrief": {
+      "expected": "gemengde getal"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "produk met 2 faktore"
+    },
+    "AbstrMultiplication_brief": {
+      "expected": "produk"
+    },
+    "AbstrMultiplication_sbrief": {
+      "expected": "produk"
+    },
+    "AbstrMultirel_default": {
+      "expected": "verwantskapsketting met 3 elemente"
+    },
+    "AbstrMultirel_brief": {
+      "expected": "verwantskapsketting"
+    },
+    "AbstrMultirel_sbrief": {
+      "expected": "verwantskapsketting"
+    },
+    "AbstrNumber_default": {
+      "expected": "getal"
+    },
+    "AbstrNumber_brief": {
+      "expected": "getal"
+    },
+    "AbstrNumber_sbrief": {
+      "expected": "getal"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "komma opgebreekte lys met lengte 3"
+    },
+    "AbstrPunctuated_brief": {
+      "expected": "komma opgebreekte lys"
+    },
+    "AbstrPunctuated_sbrief": {
+      "expected": "komma opgebreekte lys"
+    },
+    "AbstrRelation_default": {
+      "expected": "gelykheid"
+    },
+    "AbstrRelation_brief": {
+      "expected": "gelykheid"
+    },
+    "AbstrRelation_sbrief": {
+      "expected": "gelykheid"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "gelykheid ketting met 3 elemente"
+    },
+    "AbstrRelationSeq_brief": {
+      "expected": "gelykheid ketting"
+    },
+    "AbstrRelationSeq_sbrief": {
+      "expected": "gelykheid ketting"
+    },
+    "AbstrRoot_default": {
+      "expected": "wortel van indeks 3"
+    },
+    "AbstrRoot_brief": {
+      "expected": "wortel"
+    },
+    "AbstrRoot_sbrief": {
+      "expected": "wortel"
+    },
+    "AbstrRootNested_default": {
+      "expected": "genesde wortel van indeks 3"
+    },
+    "AbstrRootNested_brief": {
+      "expected": "genesde wortel"
+    },
+    "AbstrRootNested_sbrief": {
+      "expected": "genesde wortel"
+    },
+    "_comment3_": " TODO",
+    "AbstrRow_default": {
+      "expected": "1. Ry in tabêl met 2 kolomme"
+    },
+    "AbstrRow_brief": {
+      "expected": "1. Ry in tabêl met 2 kolomme"
+    },
+    "AbstrRow_sbrief": {
+      "expected": "1. Ry in tabêl met 2 kolomme"
+    },
+    "AbstrRowvector_default": {
+      "expected": "2 dimensionele ry vektor"
+    },
+    "AbstrRowvector_brief": {
+      "expected": "ry vektor"
+    },
+    "AbstrRowvector_sbrief": {
+      "expected": "ry vektor"
+    },
+    "AbstrSqrt_default": {
+      "expected": "vierkantswortel"
+    },
+    "AbstrSqrt_brief": {
+      "expected": "vierkantswortel"
+    },
+    "AbstrSqrt_sbrief": {
+      "expected": "vierkantswortel"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "genesde vierkantswortel"
+    },
+    "AbstrSqrtNested_brief": {
+      "expected": "genesde vierkantswortel"
+    },
+    "AbstrSqrtNested_sbrief": {
+      "expected": "genesde vierkantswortel"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "2 dimensionele vierkant matriks"
+    },
+    "AbstrSquarematrix_brief": {
+      "expected": "vierkant matriks"
+    },
+    "AbstrSquarematrix_sbrief": {
+      "expected": "vierkant matriks"
+    },
+    "AbstrSubscript_default": {
+      "expected": "onderskrif"
+    },
+    "AbstrSubscript_brief": {
+      "expected": "onderskrif"
+    },
+    "AbstrSubscript_sbrief": {
+      "expected": "onderskrif"
+    },
+    "AbstrSubsup_default": {
+      "expected": "mag met onderskrif"
+    },
+    "AbstrSubsup_brief": {
+      "expected": "mag met onderskrif"
+    },
+    "AbstrSubsup_sbrief": {
+      "expected": "mag met onderskrif"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "mag"
+    },
+    "AbstrSuperscript_brief": {
+      "expected": "mag"
+    },
+    "AbstrSuperscript_sbrief": {
+      "expected": "mag"
+    },
+    "AbstrTable_default": {
+      "expected": "tabêl met 2 rye en 2 kolomme"
+    },
+    "AbstrTable_brief": {
+      "expected": "tabêl met 2 rye en 2 kolomme"
+    },
+    "AbstrTable_sbrief": {
+      "expected": "tabêl met 2 rye en 2 kolomme"
+    },
+    "AbstrText_default": {
+      "expected": "teks"
+    },
+    "AbstrText_brief": {
+      "expected": "teks"
+    },
+    "AbstrText_sbrief": {
+      "expected": "teks"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "som met wisselende aantal terme"
+    },
+    "AbstrVarAddition_brief": {
+      "expected": "som"
+    },
+    "AbstrVarAddition_sbrief": {
+      "expected": "som"
+    },
+    "AbstrVarCases_default": {
+      "expected": "gevalstelling met wisselende hoeveelheid gevalle"
+    },
+    "AbstrVarCases_brief": {
+      "expected": "gevalstelling"
+    },
+    "AbstrVarCases_sbrief": {
+      "expected": "gevalstelling"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "n dimensional determinant"
+    },
+    "AbstrVarDeterminant_brief": {
+      "expected": "determinant"
+    },
+    "AbstrVarDeterminant_sbrief": {
+      "expected": "determinant"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "n by m dimensionele matriks"
+    },
+    "AbstrVarMatrix_brief": {
+      "expected": "vierkant matriks"
+    },
+    "AbstrVarMatrix_sbrief": {
+      "expected": "vierkant matriks"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "produk met wisselende hoeveelheid faktore"
+    },
+    "AbstrVarMultiplication_brief": {
+      "expected": "produk"
+    },
+    "AbstrVarMultiplication_sbrief": {
+      "expected": "produk"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "verwantskapsketting met 'n wisselende aantal elemente"
+    },
+    "AbstrVarMultirel_brief": {
+      "expected": "verwantskapsketting"
+    },
+    "AbstrVarMultirel_sbrief": {
+      "expected": "verwantskapsketting"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "komma opgebreekte lys met wisselende lengte"
+    },
+    "AbstrVarPunctuated_brief": {
+      "expected": "komma opgebreekte lys"
+    },
+    "AbstrVarPunctuated_sbrief": {
+      "expected": "komma opgebreekte lys"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "gelykheid ketting met wisselende hoeveelheid elemente"
+    },
+    "AbstrVarRelation_brief": {
+      "expected": "gelykheid ketting"
+    },
+    "AbstrVarRelation_sbrief": {
+      "expected": "gelykheid ketting"
+    },
+    "AbstrVarVector_default": {
+      "expected": "n dimensionele vektor"
+    },
+    "AbstrVarVector_brief": {
+      "expected": "vektor"
+    },
+    "AbstrVarVector_sbrief": {
+      "expected": "vektor"
+    },
+    "AbstrVector_default": {
+      "expected": "3 dimensionele vektor"
+    },
+    "AbstrVector_brief": {
+      "expected": "vektor"
+    },
+    "AbstrVector_sbrief": {
+      "expected": "vektor"
+    },
+    "AbstrVarSubtraction_default": {
+      "expected": "aftrekking met wisselende hoeveelheid elemente"
+    },
+    "AbstrVarSubtraction_brief": {
+      "expected": "aftrekking"
+    },
+    "AbstrVarSubtraction_sbrief": {
+      "expected": "aftrekking"
+    },
+    "AbstrCountImplicit_default": {
+      "expected": "produk met 3 faktore"
+    },
+    "AbstrCountImplicit_brief": {
+      "expected": "produk"
+    },
+    "AbstrCountImplicit_sbrief": {
+      "expected": "produk"
+    },
+    "AbstrVarImplicit_default": {
+      "expected": "produk met wisselende hoeveelheid faktore"
+    },
+    "AbstrVarArrowRelation_default": {
+      "expected": "pyltjie ketting met wisselende hoeveelheid elemente"
+    },
+    "AbstrArrowRelation_default": {
+      "expected": "pyltjie"
+    },
+    "AbstrVarRowvector_default": {
+      "expected": "n dimensionele ry vektor"
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "name": "SwedishPrefix",
+  "locale": "sv",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Swedish Prefix rule tests.",
+  "active": "PrefixSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sub_0": {
+      "expected": "Bas"
+    },
+    "Sub_1": {
+      "expected": "Index"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Bas"
+    },
+    "Super_1": {
+      "expected": "Exponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Bas"
+    },
+    "Over_1": {
+      "expected": "Överskrift"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Bas"
+    },
+    "Under_1": {
+      "expected": "Underskrift"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "Täljare"
+    },
+    "Fractions_1": {
+      "expected": "Nämnare"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radikand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radikand"
+    },
+    "Root_1": {
+      "expected": "Index"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Bas"
+    },
+    "SimpleTensors_1": {
+      "expected": "Vänster Index"
+    },
+    "SimpleTensors_2": {
+      "expected": "Vänster Exponent"
+    },
+    "SimpleTensors_3": {
+      "expected": "Höger Index"
+    },
+    "SimpleTensors_4": {
+      "expected": "Höger Exponent"
+    },
+    "ComplexTensors_0": {
+      "expected": "Bas"
+    },
+    "ComplexTensors_1": {
+      "expected": "1:a Vänstra Indexet"
+    },
+    "ComplexTensors_2": {
+      "expected": "2:a Vänstra Indexet"
+    },
+    "ComplexTensors_3": {
+      "expected": "1:a Vänstra Exponenten"
+    },
+    "ComplexTensors_4": {
+      "expected": "2:a Vänstra Exponenten"
+    },
+    "ComplexTensors_5": {
+      "expected": "1:a Högra Indexet"
+    },
+    "ComplexTensors_6": {
+      "expected": "2:a Högra Indexet"
+    },
+    "ComplexTensors_7": {
+      "expected": "1:a Högra Exponenten"
+    },
+    "ComplexTensors_8": {
+      "expected": "2:a Högra Exponenten"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "Valmängd"
+    },
+    "Binomials_1": {
+      "expected": "Urvalsmängd"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "1:a Raden"
+    },
+    "Vectors_1": {
+      "expected": "2:a Raden"
+    },
+    "Vectors_2": {
+      "expected": "3:e Raden"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1:a Raden"
+    },
+    "Matrices_depth_1": {
+      "expected": "1:a Raden, 1:a Kolumnen"
+    },
+    "Matrices_depth_2": {
+      "expected": "1:a Raden, 2:a Kolumnen"
+    },
+    "Matrices_depth_3": {
+      "expected": "2:a Raden"
+    },
+    "Matrices_depth_4": {
+      "expected": "2:a Raden, 1:a Kolumnen"
+    },
+    "Matrices_depth_5": {
+      "expected": "2:a Raden, 2:a Kolumnen"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1:a Raden"
+    },
+    "Matrices_1": {
+      "expected": "1:a Kolumn"
+    },
+    "Matrices_2": {
+      "expected": "2:a Kolumn"
+    },
+    "Matrices_3": {
+      "expected": "2:a Raden"
+    },
+    "Matrices_4": {
+      "expected": "1:a Kolumn"
+    },
+    "Matrices_5": {
+      "expected": "2:a Kolumn"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "Bas"
+    },
+    "LimBoth_1": {
+      "expected": "Överskrift"
+    },
+    "LimBoth_2": {
+      "expected": "Underskrift"
+    },
+    "LimBoth_3": {
+      "expected": "Bas"
+    },
+    "LimBoth_4": {
+      "expected": "Bas"
+    },
+    "LimUpper_0": {
+      "expected": "Överskrift"
+    },
+    "LimUpper_1": {
+      "expected": "Överskrift"
+    },
+    "LimUpper_2": {
+      "expected": "Bas"
+    },
+    "LimUpper_3": {
+      "expected": "Bas"
+    },
+    "LimLower_0": {
+      "expected": "Underskrift"
+    },
+    "LimLower_1": {
+      "expected": "Underskrift"
+    },
+    "LimLower_2": {
+      "expected": "Bas"
+    },
+    "LimLower_3": {
+      "expected": "Bas"
+    }
+  }
+}

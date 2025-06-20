@@ -1,0 +1,138 @@
+{
+  "name": "SpanishMathspeakCoverage",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Spanish Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "locale": "es",
+  "active": "MathspeakIssuesSpanish",
+  "exclude": [],
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alfa línea base 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alfa base 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alfa base 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "normal alef línea base 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "normal alef base 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "normal alef base 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alfa línea base negrita 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alfa base negrita 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alfa base negrita 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "normal alef línea base negrita 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "normal alef base negrita 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "normal alef base negrita 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alfa barra"
+    },
+    "OverbarOther_default": {
+      "expected": "normal alef barra"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alfa subbarra"
+    },
+    "UnderbarOther_default": {
+      "expected": "normal alef subbarra"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alfa tilde"
+    },
+    "OvertildeOther_default": {
+      "expected": "normal alef tilde"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alfa subtilde"
+    },
+    "UndertildeOther_default": {
+      "expected": "normal alef subtilde"
+    },
+    "SetEmpty_default": {
+      "expected": "conjunto vacío"
+    },
+    "SetEmpty_brief": {
+      "expected": "conjunto vacío"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "conjunto vacío"
+    },
+    "SetSingleton_default": {
+      "expected": "empezar llave a finalizar llave"
+    },
+    "SetSingleton_brief": {
+      "expected": "empezar llave a finalizar llave"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "llave a finalizar llave"
+    },
+    "SetCollection_default": {
+      "expected": "empezar llave a coma b finalizar llave"
+    },
+    "SetCollection_brief": {
+      "expected": "empezar llave a coma b finalizar llave"
+    },
+    "SetCollection_sbrief": {
+      "expected": "llave a coma b finalizar llave"
+    },
+    "SetExtended_default": {
+      "expected": "empezar llave a coma b finalizar llave"
+    },
+    "SetExtended_brief": {
+      "expected": "empezar llave a coma b finalizar llave"
+    },
+    "SetExtended_sbrief": {
+      "expected": "llave a coma b finalizar llave"
+    },
+    "NumberSet": {
+      "expected": "negrita de pizarra mayúscula C"
+    },
+    "LimitLower0_default": {
+      "expected": "modificando inferior límite con subrayado bajoíndice a igual 5 finalizar índices bajoíndice b igual 3 finalizar índices"
+    },
+    "LimitLower1_default": {
+      "expected": "límite bajoíndice n sobreíndice 2 finalizar índices sobreíndice x finalizar índices"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "empezar esquema primera fila  a segunda fila  espacio finalizar esquema"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c subíndice 1 línea base h subíndice 4 menos 2 s línea base menor o igual que empezar fracción 1 entre 2 mayúscula T finalizar fracción menor o igual que c subíndice 2 línea base h subíndice 4 menos 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que empezar frac 1 entre 2 mayúscula T finalizar frac menor o igual que c sub 2 base h sub 4 menos 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que empezar frac 1 entre 2 mayúscula T finalizar frac menor o igual que c sub 2 base h sub 4 menos 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c subíndice 1 línea base h subíndice 4 menos 2 s línea base menor o igual que empezar fracción 1 entre 2 mayúscula T finalizar fracción igual c subíndice 2 línea base h subíndice 4 menos 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que empezar frac 1 entre 2 mayúscula T finalizar frac igual c sub 2 base h sub 4 menos 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c sub 1 base h sub 4 menos 2 s base menor o igual que empezar frac 1 entre 2 mayúscula T finalizar frac igual c sub 2 base h sub 4 menos 2 s"
+    }
+  }
+}

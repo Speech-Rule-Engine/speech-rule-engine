@@ -1,0 +1,749 @@
+{
+  "name": "NemethSection6Symbols",
+  "information": "Nemeth 2020 Book Section 6 Symbols",
+  "factory": "speech",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Book2019",
+  "tests": {
+    "_comment0_": "Section 6_1",
+    "Plus": {
+      "tex": "+",
+      "brf": "+",
+      "input": "<mo>+</mo>",
+      "expected": "⠬"
+    },
+    "Minus": {
+      "tex": "-",
+      "brf": "-",
+      "input": "<mo>&#x2212;</mo>",
+      "expected": "⠤"
+    },
+    "Multiplication Cross": {
+      "tex": "\\times",
+      "brf": "@*",
+      "input": "<mo>&#xD7;</mo>",
+      "expected": "⠈⠡"
+    },
+    "Multiplication Dot": {
+      "tex": "\\cdot",
+      "brf": "*",
+      "input": "<mo>&#x22C5;</mo>",
+      "expected": "⠡"
+    },
+    "Division": {
+      "tex": "÷",
+      "brf": "./",
+      "input": "<mi>&#xF7;</mi>",
+      "expected": "⠨⠌"
+    },
+    "_comment1_": "Section 6_2",
+    "\"Plus or Minus\"": {
+      "tex": "±",
+      "brf": "+-",
+      "input": "<mo>&#xB1;</mo>",
+      "expected": "⠬⠤"
+    },
+    "\"Minus or Plus\"": {
+      "tex": "∓",
+      "brf": "-+",
+      "input": "<mo>&#x2213;</mo>",
+      "expected": "⠤⠬"
+    },
+    "Plus followed by Minus": {
+      "tex": "+−",
+      "brf": "+\"-",
+      "input": "<mo>+</mo><mo>&#x2212;</mo>",
+      "expected": "⠬⠐⠤"
+    },
+    "Minus followed by Plus": {
+      "tex": "−+",
+      "brf": "-\"+",
+      "input": "<mo>&#x2212;</mo><mo>+</mo>",
+      "expected": "⠤⠐⠬"
+    },
+    "Minus followed by Minus": {
+      "tex": "−−",
+      "brf": "-\"-",
+      "input": "<mo>&#x2212;</mo><mo>&#x2212;</mo>",
+      "expected": "⠤⠐⠤"
+    },
+    "_comment2_": "Section 6_3",
+    "Ampersand": {
+      "tex": "\\&",
+      "brf": "_&",
+      "input": "<mi mathvariant=\"normal\">&amp;</mi>",
+      "expected": "⠸⠯"
+    },
+    "Asterisk": {
+      "tex": "*",
+      "brf": "@#",
+      "input": "<mo>&#x2217;</mo>",
+      "expected": "⠈⠼"
+    },
+    "Crosshatch": {
+      "tex": "\\#",
+      "brf": ".#",
+      "input": "<mi mathvariant=\"normal\">#</mi>",
+      "expected": "⠨⠼"
+    },
+    "Dagger, Single": {
+      "tex": "†",
+      "brf": "_]",
+      "input": "<mo>&#x2020;</mo>",
+      "expected": "⠸⠻"
+    },
+    "Dagger, Double": {
+      "tex": "‡",
+      "brf": "__]",
+      "input": "<mo>&#x2021;</mo>",
+      "expected": "⠸⠸⠻"
+    },
+    "Paragraph Mark": {
+      "tex": "¶",
+      "brf": "@,P",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#xB6;</mo></mrow>",
+      "expected": "⠈⠠⠏"
+    },
+    "Section Mark": {
+      "tex": "§",
+      "brf": "@,S",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#xA7;</mo></mrow>",
+      "expected": "⠈⠠⠎"
+    },
+    "_comment3_": "Section 6_4",
+    "Slash": {
+      "tex": "/",
+      "brf": "_/",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>/</mo></mrow>",
+      "expected": "⠸⠌"
+    },
+    "Back Slash": {
+      "tex": "\\backslash",
+      "brf": "_*",
+      "input": "<mi mathvariant=\"normal\">&#x2216;</mi>",
+      "expected": "⠸⠡"
+    },
+    "Dot": {
+      "tex": "\\cdot",
+      "brf": "*",
+      "input": "<mo>&#x22C5;</mo>",
+      "expected": "⠡"
+    },
+    "Hollow Dot": {
+      "tex": "∘",
+      "brf": ".*",
+      "input": "<mo>&#x2218;</mo>",
+      "expected": "⠨⠡"
+    },
+    "Intersection (\"cap\")": {
+      "tex": "∩",
+      "brf": ".%",
+      "input": "<mo>&#x2229;</mo>",
+      "expected": "⠨⠩"
+    },
+    "Logical Product": {
+      "tex": "∧",
+      "brf": "@%",
+      "input": "<mo>&#x2227;</mo>",
+      "expected": "⠈⠩"
+    },
+    "Logical Sum": {
+      "tex": "∨",
+      "brf": "@+",
+      "input": "<mo>&#x2228;</mo>",
+      "expected": "⠈⠬"
+    },
+    "Minus with Dot Over": {
+      "tex": "∸",
+      "brf": ".-",
+      "input": "<mo>&#x2238;</mo>",
+      "expected": "⠨⠤"
+    },
+    "Tilde, Simple": {
+      "tex": "∼",
+      "brf": "@:",
+      "input": "<mo>&#x223C;</mo>",
+      "expected": "⠈⠱"
+    },
+    "Tilde, Extended": {
+      "tex": "\\widetilde{}",
+      "brf": "@,:",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mrow></mrow><mo>~</mo></mover></mrow>",
+      "expected": "⠈⠠⠱"
+    },
+    "Union (\"cup\")": {
+      "tex": "∪",
+      "brf": ".+",
+      "input": "<mo>&#x222A;</mo>",
+      "expected": "⠨⠬"
+    },
+    "Vertical Bar": {
+      "tex": "|",
+      "brf": "|",
+      "input": "<mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo>",
+      "expected": "⠳"
+    },
+    "Vertical Bar Negated": {
+      "tex": "\\not|",
+      "brf": "/|",
+      "input": "<mo data-mjx-texclass=\"ORD\">|&#x338;</mo>",
+      "expected": "⠌⠳"
+    },
+    "_comment4_": "Section 6_6",
+    "Equals": {
+      "tex": "=",
+      "brf": ".k",
+      "input": "<mo>=</mo>",
+      "expected": "⠨⠅"
+    },
+    "Greater Than": {
+      "tex": ">",
+      "brf": ".1",
+      "input": "<mo>&gt;</mo>",
+      "expected": "⠨⠂"
+    },
+    "Less Than": {
+      "tex": "<",
+      "brf": "\"K",
+      "input": "<mo>&lt;</mo>",
+      "expected": "⠐⠅"
+    },
+    "Proportion": {
+      "tex": "∷",
+      "brf": ";2",
+      "input": "<mo>&#x2237;</mo>",
+      "expected": "⠰⠆"
+    },
+    "Ratio": {
+      "tex": "∶",
+      "brf": "\"1",
+      "input": "<mo>&#x2236;</mo>",
+      "expected": "⠐⠂"
+    },
+    "_comment5_": "Section 6_7",
+    "Greater Than with Curved Sides": {
+      "tex": "≻",
+      "brf": "..1",
+      "input": "<mo>&#x227B;</mo>",
+      "expected": "⠨⠨⠂"
+    },
+    "Less Than with Curved Sides": {
+      "tex": "≺",
+      "brf": ".\"K",
+      "input": "<mo>&#x227A;</mo>",
+      "expected": "⠨⠐⠅"
+    },
+    "Arc, Concave Upward": {
+      "tex": "⌢",
+      "brf": "$A",
+      "input": "<mo>&#x2322;</mo>",
+      "expected": "⠫⠁"
+    },
+    "Arc, Concave Downward": {
+      "tex": "⌣",
+      "brf": "$'",
+      "input": "<mo>&#x2323;</mo>",
+      "expected": "⠫⠄"
+    },
+    "Equivalence": {
+      "tex": "≎",
+      "brf": "@<,<",
+      "input": "<mo>&#x224E;</mo>",
+      "expected": "⠈⠣⠠⠣"
+    },
+    "Identity": {
+      "tex": "≡",
+      "brf": "_l",
+      "input": "<mo>&#x2261;</mo>",
+      "expected": "⠸⠇"
+    },
+    "Inclusion": {
+      "tex": "⊂",
+      "brf": "_\"k",
+      "input": "<mo>&#x2282;</mo>",
+      "expected": "⠸⠐⠅"
+    },
+    "Membership 1": {
+      "tex": "ε",
+      "brf": "@E",
+      "input": "<mi>&#x3B5;</mi>",
+      "expected": "⠈⠑"
+    },
+    "Membership 2": {
+      "tex": "ℇ",
+      "brf": "",
+      "input": "<mi>&#x2107;</mi>",
+      "expected": ""
+    },
+    "Membership 3": {
+      "tex": "∈",
+      "brf": "@E",
+      "input": "<mo>&#x2208;</mo>",
+      "expected": "⠈⠑"
+    },
+    "Parallel to": {
+      "tex": "||",
+      "brf": "$l",
+      "input": "<mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo>",
+      "expected": "⠫⠇"
+    },
+    "Perpendicular to": {
+      "tex": "⊥",
+      "brf": "$p",
+      "input": "<mo>&#x22A5;</mo>",
+      "expected": "⠫⠏"
+    },
+    "Relation": {
+      "tex": "R",
+      "brf": ",r",
+      "input": "<mi>R</mi>",
+      "expected": "⠠⠗"
+    },
+    "Reverse Inclusion": {
+      "tex": "⊃",
+      "brf": "_.1",
+      "input": "<mo>&#x2283;</mo>",
+      "expected": "⠸⠨⠂"
+    },
+    "Reverse Membership": {
+      "tex": "∋",
+      "brf": "@5",
+      "input": "<mo>&#x220B;</mo>",
+      "expected": "⠈⠢"
+    },
+    "Variation": {
+      "tex": "∝",
+      "brf": "_=",
+      "input": "<mo>&#x221D;</mo>",
+      "expected": "⠸⠿"
+    },
+    "_comment6_": "Section 6_8_1",
+    "Bar Over Greater Than 1": {
+      "tex": "⋝",
+      "brf": ":.1",
+      "input": "<mo>&#x22DD;</mo>",
+      "expected": "⠱⠨⠂"
+    },
+    "Bar Over Greater Than 2": {
+      "tex": "⪖",
+      "brf": ":.1",
+      "input": "<mo>&#x2A96;</mo>",
+      "expected": "⠱⠨⠂"
+    },
+    "Equals Sign Over Greater Than 1": {
+      "tex": "⪚",
+      "brf": ".k.1",
+      "input": "<mo>&#x2A9A;</mo>",
+      "expected": "⠨⠅⠨⠂"
+    },
+    "Equals Sign Over Greater Than 2": {
+      "tex": "⪜",
+      "brf": ".k.1",
+      "input": "<mo>&#x2A9C;</mo>",
+      "expected": "⠨⠅⠨⠂"
+    },
+    "Greater Than with Bar Under 1": {
+      "tex": "≥",
+      "brf": ".1:",
+      "input": "<mo>&#x2265;</mo>",
+      "expected": "⠨⠂⠱"
+    },
+    "Greater Than with Bar Under 2": {
+      "tex": "⩾",
+      "brf": ".1:",
+      "input": "<mo>&#x2A7E;</mo>",
+      "expected": "⠨⠂⠱"
+    },
+    "Greater Than with Equals Sign Under 1": {
+      "tex": "≧",
+      "brf": ".1.k",
+      "input": "<mo>&#x2267;</mo>",
+      "expected": "⠨⠂⠨⠅"
+    },
+    "Greater Than with Equals Sign Under 2": {
+      "tex": "⫺",
+      "brf": ".1.k",
+      "input": "<mo>&#x2AFA;</mo>",
+      "expected": "⠨⠂⠨⠅"
+    },
+    "_comment7_": "Section 6_8_2",
+    "Bar Over Inclusion": {
+      "tex": "\\bar{\\subset}",
+      "brf": ":_\"k",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mo>&#x2282;</mo><mo stretchy=\"false\">&#xAF;</mo></mover></mrow>",
+      "expected": "⠱⠸⠐⠅"
+    },
+    "Equals Sign Over Inclusion Accent": {
+      "tex": "\\bar{\\bar{\\subset}}",
+      "brf": ".k_\"k",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mrow data-mjx-texclass=\"ORD\"><mover><mo>&#x2282;</mo><mo stretchy=\"false\">&#xAF;</mo></mover></mrow><mo stretchy=\"false\">&#xAF;</mo></mover></mrow>",
+      "expected": "⠨⠅⠸⠐⠅"
+    },
+    "Equals Sign Over Inclusion": {
+      "tex": "\\stackrel{=}{\\subset}",
+      "brf": ".k_\"k",
+      "input": "<mrow data-mjx-texclass=\"REL\"><mover><mrow data-mjx-texclass=\"OP\"><mo>&#x2282;</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo>=</mo></mrow></mover></mrow>",
+      "expected": "⠨⠅⠸⠐⠅"
+    },
+    "Inclusion with Bar Under": {
+      "tex": "⊆",
+      "brf": "_\"k:",
+      "input": "<mo>&#x2286;</mo>",
+      "expected": "⠸⠐⠅⠱"
+    },
+    "Inclusion with Equals Sign Under": {
+      "tex": "⫅",
+      "brf": "_\"k.k",
+      "input": "<mo>&#x2AC5;</mo>",
+      "expected": "⠸⠐⠅⠨⠅"
+    },
+    "_comment8_": "Section 6_8_3",
+    "Intersection with Bar Under 1": {
+      "tex": "\\underline{⋂}",
+      "brf": ".%:",
+      "input": "<munder><mo movablelimits=\"false\">&#x22C2;</mo><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠨⠩⠱"
+    },
+    "Intersection with Bar Under 2": {
+      "tex": "\\underline{\\bigcap}",
+      "brf": ".%:",
+      "input": "<munder><mo data-mjx-texclass=\"OP\" movablelimits=\"false\">&#x22C2;</mo><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠨⠩⠱"
+    },
+    "Intersection with Bar Under 3": {
+      "tex": "\\underline{\\bigcap}",
+      "brf": ".%:",
+      "input": "<munder><mo data-mjx-texclass=\"OP\" movablelimits=\"false\">&#x22C2;</mo><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠨⠩⠱"
+    },
+    "Intersection with Equals Sign Under": {
+      "tex": "<munder><mo>&#x222c</mo><mo accent=\"true\">=</mo></munder>",
+      "brf": ".%.k",
+      "input": "<munder><mo>&#x222c</mo><mo accent=\"true\">=</mo></munder>",
+      "expected": "⠨⠩⠨⠅"
+    },
+    "_comment9_": "Section 6_8_4",
+    "Bar Over Less Than 1": {
+      "tex": "⋜",
+      "brf": ":\"k",
+      "input": "<mo>&#x22DC;</mo>",
+      "expected": "⠱⠐⠅"
+    },
+    "Bar Over Less Than 2": {
+      "tex": " ⪕",
+      "brf": ":\"k",
+      "input": "<mo>&#x2A95;</mo>",
+      "expected": "⠱⠐⠅"
+    },
+    "Equals Sign Over Less Than 1": {
+      "tex": " ⪙",
+      "brf": " .k\"k",
+      "input": "<mo>&#x2A99;</mo>",
+      "expected": "⠀⠨⠅⠐⠅"
+    },
+    "Equals Sign Over Less Than 2": {
+      "tex": " ⪛",
+      "brf": " .k\"k",
+      "input": "<mo>&#x2A9B;</mo>",
+      "expected": "⠀⠨⠅⠐⠅"
+    },
+    "Less Than with Bar Under 1": {
+      "tex": "≤",
+      "brf": "\"k:",
+      "input": "<mo>&#x2264;</mo>",
+      "expected": "⠐⠅⠱"
+    },
+    "Less Than with Bar Under 2": {
+      "tex": " ⩽",
+      "brf": "\"k:",
+      "input": "<mo>&#x2A7D;</mo>",
+      "expected": "⠐⠅⠱"
+    },
+    "Less Than with Equals Sign Under 1": {
+      "tex": " ≦",
+      "brf": " \"k.k",
+      "input": "<mo>&#x2266;</mo>",
+      "expected": "⠀⠐⠅⠨⠅"
+    },
+    "Less Than with Equals Sign Under 2": {
+      "tex": " ⫹",
+      "brf": " \"k.k",
+      "input": "<mo>&#x2AF9;</mo>",
+      "expected": "⠀⠐⠅⠨⠅"
+    },
+    "_comment10_": "Section 6_8_5",
+    "Bar Over Logical Product": {
+      "tex": "⊼",
+      "brf": ":@%",
+      "input": "<mo>&#x22BC;</mo>",
+      "expected": "⠱⠈⠩"
+    },
+    "Bar Over and Bar Under Logical Product": {
+      "tex": "⊼",
+      "brf": ":@%:",
+      "input": "<mo>&#x22BC;</mo>",
+      "expected": "⠱⠈⠩⠱"
+    },
+    "Bar Over and Equals Sign Under Logical Product": {
+      "tex": "⩠̅",
+      "brf": ":@%.k",
+      "input": "<mo>&#x2A60;</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x305;</mo></mrow>",
+      "expected": "⠱⠈⠩⠨⠅"
+    },
+    "Logical Product with Bar Under": {
+      "tex": "⩟",
+      "brf": "@%:",
+      "input": "<mo>&#x2A5F;</mo>",
+      "expected": "⠈⠩⠱"
+    },
+    "Equals Sign Over Logical Product 1": {
+      "tex": "⩞",
+      "brf": ".k@%",
+      "input": "<mo>&#x2A5E;</mo>",
+      "expected": "⠨⠅⠈⠩"
+    },
+    "Equals Sign Over Logical Product 2": {
+      "tex": "<mover><mo>⋁</mo><mo accent=\"true\">=</mo></mover>",
+      "brf": ".k@%",
+      "input": "<mover><mo>⋁</mo><mo accent=\"true\">=</mo></mover>",
+      "expected": "⠨⠅⠈⠩"
+    },
+    "Equals Sign Over and Bar Under Logical Product": {
+      "tex": "\\underline{⋀}\\limits^{=}",
+      "brf": ".k@%:",
+      "input": "<munderover><mo>&#x22C0;</mo><mo accent=\"true\">&#x2015;</mo><mo>=</mo></munderover>",
+      "expected": "⠨⠅⠈⠩⠱"
+    },
+    "Equals Sign Over and Equals Sign Under Logical Product": {
+      "tex": "<munderover><mo >&#x22C0;</mo><mo>=</mo><mo latex=\"=\">=</mo></munderover>",
+      "brf": ".k@%.k",
+      "input": "<munderover><mo >&#x22C0;</mo><mo>=</mo><mo latex=\"=\">=</mo></munderover>",
+      "expected": "⠨⠅⠈⠩⠨⠅"
+    },
+    "Logical Product with Equals Sign Under": {
+      "tex": "⩠",
+      "brf": "@%.k",
+      "input": "<mo>&#x2A60;</mo>",
+      "expected": "⠈⠩⠨⠅"
+    },
+    "_comment11_": "Section 6_8_6",
+    "Bar Over Logical Sum": {
+      "tex": "\\bar{⋁}",
+      "brf": ":@+",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mo movablelimits=\"false\">&#x22C1;</mo><mo stretchy=\"false\">&#xAF;</mo></mover></mrow>",
+      "expected": "⠱⠈⠬"
+    },
+    "Bar Over and Bar Under Logical Sum": {
+      "tex": "\\underline{\\bar{⋁}}",
+      "brf": ":@+:",
+      "input": "<munder><mrow data-mjx-texclass=\"ORD\"><mover><mo movablelimits=\"false\">&#x22C1;</mo><mo stretchy=\"false\">&#xAF;</mo></mover></mrow><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠱⠈⠬⠱"
+    },
+    "Bar Over and Equals Sign Under Logical Sum": {
+      "tex": "\\bar{⩣}",
+      "brf": ":@+.k",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mo>&#x2A63;</mo><mo stretchy=\"false\">&#xAF;</mo></mover></mrow>",
+      "expected": "⠱⠈⠬⠨⠅"
+    },
+    "Logical Sum with Bar Under": {
+      "tex": "\\underline{⋁}",
+      "brf": "@+:",
+      "input": "<munder><mo movablelimits=\"false\">&#x22C1;</mo><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠈⠬⠱"
+    },
+    "Equals Sign Over Logical Sum": {
+      "tex": "<mover><mo>⋁</mo><mo accent=\"true\">=</mo></mover>",
+      "brf": ".k@+",
+      "input": "<mover><mo>⋁</mo><mo accent=\"true\">=</mo></mover>",
+      "expected": "⠨⠅⠈⠬"
+    },
+    "Equals Sign Over and Bar Under Logical Sum": {
+      "tex": "\\underline{⩢}",
+      "brf": ".k@+:",
+      "input": "<munder><mo>&#x2A62;</mo><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠨⠅⠈⠬⠱"
+    },
+    "Equals Sign Over and Equals Sign Under Logical Sum": {
+      "tex": "<mover><mo>⩣</mo><mo accent=\"true\">=</mo></mover>",
+      "brf": ".k@+.k",
+      "input": "<mover><mo>⩣</mo><mo accent=\"true\">=</mo></mover>",
+      "expected": "⠨⠅⠈⠬⠨⠅"
+    },
+    "Logical Sum with Equals Sign Under": {
+      "tex": "⩣",
+      "brf": "@+.k",
+      "input": "<mo>&#x2A63;</mo>",
+      "expected": "⠈⠬⠨⠅"
+    },
+    "_comment12_": "Section 6_8_7",
+    "Bar Over Reverse Inclusion": {
+      "tex": "\\bar{\\superset}",
+      "brf": ":_.1",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mtext mathcolor=\"red\">\\superset</mtext><mo stretchy=\"false\">&#xAF;</mo></mover></mrow>",
+      "expected": "⠱⠸⠨⠂"
+    },
+    "Equals Sign Over Reverse Inclusion": {
+      "tex": "<mover><mo>⊃</mo><mo accent=\"true\">=</mo></mover>",
+      "brf": ".k_.1",
+      "input": "<mover><mo>⊃</mo><mo accent=\"true\">=</mo></mover>",
+      "expected": "⠨⠅⠸⠨⠂"
+    },
+    "Reverse Inclusion with Bar Under": {
+      "tex": "⊇",
+      "brf": "_.1:",
+      "input": "<mo>&#x2287;</mo>",
+      "expected": "⠸⠨⠂⠱"
+    },
+    "Reverse Inclusion with Equals Sign Under": {
+      "tex": "⫆",
+      "brf": "_.1.k",
+      "input": "<mo>&#x2AC6;</mo>",
+      "expected": "⠸⠨⠂⠨⠅"
+    },
+    "_comment13_": "Section 6_8_8",
+    "Bar Over Single Tilde": {
+      "tex": "≂",
+      "brf": ":@:",
+      "input": "<mo>&#x2242;</mo>",
+      "expected": "⠱⠈⠱"
+    },
+    "Equals Sign Over Single Tilde": {
+      "tex": "⩳",
+      "brf": ".k@:",
+      "input": "<mo>&#x2A73;</mo>",
+      "expected": "⠨⠅⠈⠱"
+    },
+    "Double Tilde": {
+      "tex": "≈",
+      "brf": "@:@:",
+      "input": "<mo>&#x2248;</mo>",
+      "expected": "⠈⠱⠈⠱"
+    },
+    "Bar Over Double Tilde": {
+      "tex": "\\bar{≈}",
+      "brf": ":@:@:",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mover><mo>&#x2248;</mo><mo stretchy=\"false\">&#xAF;</mo></mover></mrow>",
+      "expected": "⠱⠈⠱⠈⠱"
+    },
+    "Equals Sign Over Double Tilde": {
+      "tex": "<mover><mo>≈</mo><mo accent=\"true\">=</mo></mover>",
+      "brf": ".k@:@:",
+      "input": "<mover><mo>≈</mo><mo accent=\"true\">=</mo></mover>",
+      "expected": "⠨⠅⠈⠱⠈⠱"
+    },
+    "Single Tilde with Bar Under": {
+      "tex": "≃",
+      "brf": "@::",
+      "input": "<mo>&#x2243;</mo>",
+      "expected": "⠈⠱⠱"
+    },
+    "Single Tilde with Equals Sign Under": {
+      "tex": "≅",
+      "brf": "@:.k",
+      "input": "<mo>&#x2245;</mo>",
+      "expected": "⠈⠱⠨⠅"
+    },
+    "Double Tilde with Bar Under": {
+      "tex": "≊",
+      "brf": "@:@::",
+      "input": "<mo>&#x224A;</mo>",
+      "expected": "⠈⠱⠈⠱⠱"
+    },
+    "Double Tilde with Equals Sign Under": {
+      "tex": "<mover><mo>=</mo><mo accent=\"true\">≈</mo></mover>",
+      "brf": "@:@:.k",
+      "input": "<mover><mo>=</mo><mo accent=\"true\">≈</mo></mover>",
+      "expected": "⠈⠱⠈⠱⠨⠅"
+    },
+    "_comment14_": "Section 6_8_9",
+    "Bar Under Union": {
+      "tex": "\\underline{⋃}",
+      "brf": ".+:",
+      "input": "<munder><mo movablelimits=\"false\">&#x22C3;</mo><mo accent=\"true\">&#x2015;</mo></munder>",
+      "expected": "⠨⠬⠱"
+    },
+    "Equals Sign Under Union": {
+      "tex": "<mover><mo>=</mo><mo accent=\"true\">∩</mo></mover>",
+      "brf": ".+.k",
+      "input": "<mover><mo>=</mo><mo accent=\"true\">∩</mo></mover>",
+      "expected": "⠨⠬⠨⠅"
+    },
+    "_comment15_": "Section 6_9_1",
+    "Followed by Less Than": {
+      "tex": "><",
+      "brf": ".1\"\"k",
+      "input": "<mo>&gt;&lt;</mo>",
+      "expected": "⠨⠂⠐⠐⠅"
+    },
+    "Followed by Equals Followed by Less Than": {
+      "tex": ">=<",
+      "brf": ".1\".k\"\"k",
+      "input": "<mo>&gt;=&lt;</mo>",
+      "expected": "⠨⠂⠐⠨⠅⠐⠐⠅"
+    },
+    "_comment16_": "Section 6_9_2",
+    "Followed by Greater Than": {
+      "tex": "<>",
+      "brf": "\"k\".1",
+      "input": "<mo>&lt;&gt;</mo>",
+      "expected": "⠐⠅⠐⠨⠂"
+    },
+    "Followed by Equals Followed by Greater Than": {
+      "tex": "<=>",
+      "brf": "\"k\".k\".1",
+      "input": "<mo>&lt;=&gt;</mo>",
+      "expected": "⠐⠅⠐⠨⠅⠐⠨⠂"
+    },
+    "_comment17_": "Section 6_10",
+    "Negated Equals Sign 1": {
+      "tex": "≠",
+      "brf": "/.k",
+      "input": "<mo>&#x2260;</mo>",
+      "expected": "⠌⠨⠅"
+    },
+    "Negated Equals Sign 2": {
+      "tex": "\\neq",
+      "brf": "/.k",
+      "input": "<mo>&#x2260;</mo>",
+      "expected": "⠌⠨⠅"
+    },
+    "Negated Parallel To 1": {
+      "tex": "\\not\\|",
+      "brf": "/$l",
+      "input": "<mo data-mjx-texclass=\"ORD\">&#x2226;</mo>",
+      "expected": "⠌⠫⠇"
+    },
+    "Negated Parallel To 2": {
+      "tex": "∦",
+      "brf": "/$l",
+      "input": "<mo>&#x2226;</mo>",
+      "expected": "⠌⠫⠇"
+    },
+    "Negated Perpendicular To": {
+      "tex": "⊥",
+      "brf": "/$p",
+      "input": "<mo>&#x22A5;</mo>",
+      "expected": "⠌⠫⠏"
+    },
+    "Negated Greater Than or Equal To": {
+      "tex": "≱",
+      "brf": "/.1:",
+      "input": "<mo>&#x2271;</mo>",
+      "expected": "⠌⠨⠂⠱"
+    },
+    "Negated Membership 1": {
+      "tex": "∉",
+      "brf": "/@E",
+      "input": "<mo>&#x2209;</mo>",
+      "expected": "⠌⠈⠑"
+    },
+    "Negated Membership 2": {
+      "tex": "\\not\\in",
+      "brf": "/@E",
+      "input": "<mo>&#x2209;</mo>",
+      "expected": "⠌⠈⠑"
+    }
+  }
+}

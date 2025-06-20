@@ -1,0 +1,397 @@
+{
+  "factory": "api",
+  "information": "API function test.",
+  "tests": {
+    "SetupEngine_0": {
+      "type": "toSpeech",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "SetupEngine_1": {
+      "type": "toSpeech",
+      "expected": "x equals negative b plus or minus Square root of b squared minus four times a times c divided by two times a",
+      "setup": {
+        "domain": "chromevox",
+        "style": "default"
+      }
+    },
+    "ToSpeech": {
+      "type": "toSpeech",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "ToSemantic_0": {
+      "type": "toSemantic",
+      "expected": "<stree><relseq role=\"equality\" annotation=\"depth:1\" id=\"24\">=<content><relation role=\"equality\" annotation=\"depth:2\" id=\"1\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:2\" id=\"0\">x</identifier><fraction role=\"division\" annotation=\"depth:2\" id=\"23\"><children><infixop role=\"addition\" annotation=\"depth:3\" id=\"18\">±<content><operator role=\"addition\" annotation=\"depth:4\" id=\"4\">±</operator></content><children><prefixop role=\"negative\" annotation=\"clearspeak:simple;depth:4\" id=\"17\">−<content><operator role=\"subtraction\" annotation=\"depth:5\" id=\"2\">−</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:5\" id=\"3\">b</identifier></children></prefixop><sqrt role=\"unknown\" annotation=\"depth:4\" id=\"16\"><children><infixop role=\"subtraction\" annotation=\"depth:5\" id=\"15\">−<content><operator role=\"subtraction\" annotation=\"depth:6\" id=\"8\">−</operator></content><children><superscript role=\"latinletter\" annotation=\"depth:6\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"5\">b</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:7\" id=\"6\">2</number></children></superscript><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit;depth:6\" id=\"14\">⁢<content><operator role=\"multiplication\" annotation=\"depth:7\" id=\"12\">⁢</operator><operator role=\"multiplication\" annotation=\"depth:7\" id=\"13\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:7\" id=\"9\">4</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"10\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"11\">c</identifier></children></infixop></children></infixop></children></sqrt></children></infixop><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit;depth:3\" id=\"22\">⁢<content><operator role=\"multiplication\" annotation=\"depth:4\" id=\"21\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:4\" id=\"19\">2</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:4\" id=\"20\">a</identifier></children></infixop></children></fraction></children></relseq></stree>"
+    },
+    "ToSemantic_1": {
+      "type": "toSemantic",
+      "expected": "<stree speech=\"x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"><relseq role=\"equality\" annotation=\"depth:1\" id=\"24\">=<content><relation role=\"equality\" annotation=\"depth:2\" id=\"1\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:2\" id=\"0\">x</identifier><fraction role=\"division\" annotation=\"depth:2\" id=\"23\"><children><infixop role=\"addition\" annotation=\"depth:3\" id=\"18\">±<content><operator role=\"addition\" annotation=\"depth:4\" id=\"4\">±</operator></content><children><prefixop role=\"negative\" annotation=\"clearspeak:simple;depth:4\" id=\"17\">−<content><operator role=\"subtraction\" annotation=\"depth:5\" id=\"2\">−</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:5\" id=\"3\">b</identifier></children></prefixop><sqrt role=\"unknown\" annotation=\"depth:4\" id=\"16\"><children><infixop role=\"subtraction\" annotation=\"depth:5\" id=\"15\">−<content><operator role=\"subtraction\" annotation=\"depth:6\" id=\"8\">−</operator></content><children><superscript role=\"latinletter\" annotation=\"depth:6\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"5\">b</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:7\" id=\"6\">2</number></children></superscript><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit;depth:6\" id=\"14\">⁢<content><operator role=\"multiplication\" annotation=\"depth:7\" id=\"12\">⁢</operator><operator role=\"multiplication\" annotation=\"depth:7\" id=\"13\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:7\" id=\"9\">4</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"10\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"11\">c</identifier></children></infixop></children></infixop></children></sqrt></children></infixop><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit;depth:3\" id=\"22\">⁢<content><operator role=\"multiplication\" annotation=\"depth:4\" id=\"21\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:4\" id=\"19\">2</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:4\" id=\"20\">a</identifier></children></infixop></children></fraction></children></relseq></stree>",
+      "setup": {
+        "speech": "shallow"
+      }
+    },
+    "ToSemantic_2": {
+      "type": "toSemantic",
+      "expected": "<stree><relseq role=\"equality\" annotation=\"depth:1\" id=\"24\" speech=\"x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\">=<content><relation role=\"equality\" annotation=\"depth:2\" id=\"1\" speech=\"equals\">=</relation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:2\" id=\"0\" speech=\"x\">x</identifier><fraction role=\"division\" annotation=\"depth:2\" id=\"23\" speech=\"StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"><children><infixop role=\"addition\" annotation=\"depth:3\" id=\"18\" speech=\"negative b plus or minus StartRoot b squared minus 4 a c EndRoot\">±<content><operator role=\"addition\" annotation=\"depth:4\" id=\"4\" speech=\"plus or minus\">±</operator></content><children><prefixop role=\"negative\" annotation=\"clearspeak:simple;depth:4\" id=\"17\" speech=\"negative b\">−<content><operator role=\"subtraction\" annotation=\"depth:5\" id=\"2\" speech=\"minus\">−</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:5\" id=\"3\" speech=\"b\">b</identifier></children></prefixop><sqrt role=\"unknown\" annotation=\"depth:4\" id=\"16\" speech=\"StartRoot b squared minus 4 a c EndRoot\"><children><infixop role=\"subtraction\" annotation=\"depth:5\" id=\"15\" speech=\"b squared minus 4 a c\">−<content><operator role=\"subtraction\" annotation=\"depth:6\" id=\"8\" speech=\"minus\">−</operator></content><children><superscript role=\"latinletter\" annotation=\"depth:6\" id=\"7\" speech=\"b squared\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"5\" speech=\"b\">b</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:7\" id=\"6\" speech=\"2\">2</number></children></superscript><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit;depth:6\" id=\"14\" speech=\"4 a c\">⁢<content><operator role=\"multiplication\" annotation=\"depth:7\" id=\"12\" speech=\"times\">⁢</operator><operator role=\"multiplication\" annotation=\"depth:7\" id=\"13\" speech=\"times\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:7\" id=\"9\" speech=\"4\">4</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"10\" speech=\"a\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:7\" id=\"11\" speech=\"c\">c</identifier></children></infixop></children></infixop></children></sqrt></children></infixop><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit;depth:3\" id=\"22\" speech=\"2 a\">⁢<content><operator role=\"multiplication\" annotation=\"depth:4\" id=\"21\" speech=\"times\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:4\" id=\"19\" speech=\"2\">2</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:4\" id=\"20\" speech=\"a\">a</identifier></children></infixop></children></fraction></children></relseq></stree>",
+      "setup": {
+        "speech": "deep"
+      }
+    },
+    "ToJson_0": {
+      "type": "toJson",
+      "expected": "{\"stree\":{\"type\":\"relseq\",\"role\":\"equality\",\"annotation\":\"depth:1\",\"id\":\"24\",\"$t\":\"=\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:2\",\"id\":\"0\",\"$t\":\"x\"},{\"type\":\"fraction\",\"role\":\"division\",\"annotation\":\"depth:2\",\"id\":\"23\",\"children\":[{\"type\":\"infixop\",\"role\":\"addition\",\"annotation\":\"depth:3\",\"id\":\"18\",\"$t\":\"±\",\"children\":[{\"type\":\"prefixop\",\"role\":\"negative\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"17\",\"$t\":\"−\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:5\",\"id\":\"3\",\"$t\":\"b\"}],\"content\":[{\"type\":\"operator\",\"role\":\"subtraction\",\"annotation\":\"depth:5\",\"id\":\"2\",\"$t\":\"−\"}]},{\"type\":\"sqrt\",\"role\":\"unknown\",\"annotation\":\"depth:4\",\"id\":\"16\",\"children\":[{\"type\":\"infixop\",\"role\":\"subtraction\",\"annotation\":\"depth:5\",\"id\":\"15\",\"$t\":\"−\",\"children\":[{\"type\":\"superscript\",\"role\":\"latinletter\",\"annotation\":\"depth:6\",\"id\":\"7\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"5\",\"$t\":\"b\"},{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"6\",\"$t\":\"2\"}]},{\"type\":\"infixop\",\"role\":\"implicit\",\"annotation\":\"clearspeak:simple;clearspeak:unit;depth:6\",\"id\":\"14\",\"$t\":\"⁢\",\"children\":[{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"9\",\"$t\":\"4\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"10\",\"$t\":\"a\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"11\",\"$t\":\"c\"}],\"content\":[{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:7\",\"id\":\"12\",\"$t\":\"⁢\"},{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:7\",\"id\":\"13\",\"$t\":\"⁢\"}]}],\"content\":[{\"type\":\"operator\",\"role\":\"subtraction\",\"annotation\":\"depth:6\",\"id\":\"8\",\"$t\":\"−\"}]}]}],\"content\":[{\"type\":\"operator\",\"role\":\"addition\",\"annotation\":\"depth:4\",\"id\":\"4\",\"$t\":\"±\"}]},{\"type\":\"infixop\",\"role\":\"implicit\",\"annotation\":\"clearspeak:simple;clearspeak:unit;depth:3\",\"id\":\"22\",\"$t\":\"⁢\",\"children\":[{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"19\",\"$t\":\"2\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"20\",\"$t\":\"a\"}],\"content\":[{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:4\",\"id\":\"21\",\"$t\":\"⁢\"}]}]}],\"content\":[{\"type\":\"relation\",\"role\":\"equality\",\"annotation\":\"depth:2\",\"id\":\"1\",\"$t\":\"=\"}]}}",
+      "json": true
+    },
+    "ToJson_1": {
+      "type": "toJson",
+      "expected": "{\"stree\":{\"type\":\"relseq\",\"role\":\"equality\",\"annotation\":\"depth:1\",\"id\":\"24\",\"$t\":\"=\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:2\",\"id\":\"0\",\"$t\":\"x\"},{\"type\":\"fraction\",\"role\":\"division\",\"annotation\":\"depth:2\",\"id\":\"23\",\"children\":[{\"type\":\"infixop\",\"role\":\"addition\",\"annotation\":\"depth:3\",\"id\":\"18\",\"$t\":\"±\",\"children\":[{\"type\":\"prefixop\",\"role\":\"negative\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"17\",\"$t\":\"−\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:5\",\"id\":\"3\",\"$t\":\"b\"}],\"content\":[{\"type\":\"operator\",\"role\":\"subtraction\",\"annotation\":\"depth:5\",\"id\":\"2\",\"$t\":\"−\"}]},{\"type\":\"sqrt\",\"role\":\"unknown\",\"annotation\":\"depth:4\",\"id\":\"16\",\"children\":[{\"type\":\"infixop\",\"role\":\"subtraction\",\"annotation\":\"depth:5\",\"id\":\"15\",\"$t\":\"−\",\"children\":[{\"type\":\"superscript\",\"role\":\"latinletter\",\"annotation\":\"depth:6\",\"id\":\"7\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"5\",\"$t\":\"b\"},{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"6\",\"$t\":\"2\"}]},{\"type\":\"infixop\",\"role\":\"implicit\",\"annotation\":\"clearspeak:simple;clearspeak:unit;depth:6\",\"id\":\"14\",\"$t\":\"⁢\",\"children\":[{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"9\",\"$t\":\"4\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"10\",\"$t\":\"a\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"11\",\"$t\":\"c\"}],\"content\":[{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:7\",\"id\":\"12\",\"$t\":\"⁢\"},{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:7\",\"id\":\"13\",\"$t\":\"⁢\"}]}],\"content\":[{\"type\":\"operator\",\"role\":\"subtraction\",\"annotation\":\"depth:6\",\"id\":\"8\",\"$t\":\"−\"}]}]}],\"content\":[{\"type\":\"operator\",\"role\":\"addition\",\"annotation\":\"depth:4\",\"id\":\"4\",\"$t\":\"±\"}]},{\"type\":\"infixop\",\"role\":\"implicit\",\"annotation\":\"clearspeak:simple;clearspeak:unit;depth:3\",\"id\":\"22\",\"$t\":\"⁢\",\"children\":[{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"19\",\"$t\":\"2\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"20\",\"$t\":\"a\"}],\"content\":[{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:4\",\"id\":\"21\",\"$t\":\"⁢\"}]}]}],\"content\":[{\"type\":\"relation\",\"role\":\"equality\",\"annotation\":\"depth:2\",\"id\":\"1\",\"$t\":\"=\"}],\"speech\":\"x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"}}",
+      "json": true,
+      "setup": {
+        "speech": "shallow"
+      }
+    },
+    "ToJson_2": {
+      "type": "toJson",
+      "expected": "{\"stree\":{\"type\":\"relseq\",\"role\":\"equality\",\"annotation\":\"depth:1\",\"id\":\"24\",\"$t\":\"=\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:2\",\"id\":\"0\",\"$t\":\"x\",\"speech\":\"x\"},{\"type\":\"fraction\",\"role\":\"division\",\"annotation\":\"depth:2\",\"id\":\"23\",\"children\":[{\"type\":\"infixop\",\"role\":\"addition\",\"annotation\":\"depth:3\",\"id\":\"18\",\"$t\":\"±\",\"children\":[{\"type\":\"prefixop\",\"role\":\"negative\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"17\",\"$t\":\"−\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:5\",\"id\":\"3\",\"$t\":\"b\",\"speech\":\"b\"}],\"content\":[{\"type\":\"operator\",\"role\":\"subtraction\",\"annotation\":\"depth:5\",\"id\":\"2\",\"$t\":\"−\"}],\"speech\":\"negative b\"},{\"type\":\"sqrt\",\"role\":\"unknown\",\"annotation\":\"depth:4\",\"id\":\"16\",\"children\":[{\"type\":\"infixop\",\"role\":\"subtraction\",\"annotation\":\"depth:5\",\"id\":\"15\",\"$t\":\"−\",\"children\":[{\"type\":\"superscript\",\"role\":\"latinletter\",\"annotation\":\"depth:6\",\"id\":\"7\",\"children\":[{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"5\",\"$t\":\"b\",\"speech\":\"b\"},{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"6\",\"$t\":\"2\",\"speech\":\"2\"}],\"speech\":\"b squared\"},{\"type\":\"infixop\",\"role\":\"implicit\",\"annotation\":\"clearspeak:simple;clearspeak:unit;depth:6\",\"id\":\"14\",\"$t\":\"⁢\",\"children\":[{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"9\",\"$t\":\"4\",\"speech\":\"4\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"10\",\"$t\":\"a\",\"speech\":\"a\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:7\",\"id\":\"11\",\"$t\":\"c\",\"speech\":\"c\"}],\"content\":[{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:7\",\"id\":\"12\",\"$t\":\"⁢\"},{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:7\",\"id\":\"13\",\"$t\":\"⁢\"}],\"speech\":\"4 a c\"}],\"content\":[{\"type\":\"operator\",\"role\":\"subtraction\",\"annotation\":\"depth:6\",\"id\":\"8\",\"$t\":\"−\"}],\"speech\":\"b squared minus 4 a c\"}],\"speech\":\"StartRoot b squared minus 4 a c EndRoot\"}],\"content\":[{\"type\":\"operator\",\"role\":\"addition\",\"annotation\":\"depth:4\",\"id\":\"4\",\"$t\":\"±\"}],\"speech\":\"negative b plus or minus StartRoot b squared minus 4 a c EndRoot\"},{\"type\":\"infixop\",\"role\":\"implicit\",\"annotation\":\"clearspeak:simple;clearspeak:unit;depth:3\",\"id\":\"22\",\"$t\":\"⁢\",\"children\":[{\"type\":\"number\",\"role\":\"integer\",\"font\":\"normal\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"19\",\"$t\":\"2\",\"speech\":\"2\"},{\"type\":\"identifier\",\"role\":\"latinletter\",\"font\":\"italic\",\"annotation\":\"clearspeak:simple;depth:4\",\"id\":\"20\",\"$t\":\"a\",\"speech\":\"a\"}],\"content\":[{\"type\":\"operator\",\"role\":\"multiplication\",\"annotation\":\"depth:4\",\"id\":\"21\",\"$t\":\"⁢\"}],\"speech\":\"2 a\"}],\"speech\":\"StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"}],\"content\":[{\"type\":\"relation\",\"role\":\"equality\",\"annotation\":\"depth:2\",\"id\":\"1\",\"$t\":\"=\"}],\"speech\":\"x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"}}",
+      "json": true,
+      "setup": {
+        "speech": "deep"
+      }
+    },
+    "ToDescription": {
+      "type": "toDescription",
+      "expected": "[{\"context\":\"\",\"text\":\"x\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"0\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"equals\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"1\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"StartFraction\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"23\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"negative\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"17\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"b\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"3\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"plus or minus\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"4\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"StartRoot\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"16\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"b\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"5\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"squared\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"6\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"minus\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"15\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"4\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"9\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"14\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"a\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"10\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"14\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"c\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"11\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"EndRoot\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"kind\":\"LAST\",\"id\":\"16\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"Over\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"22\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"2\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"19\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"22\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"a\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"id\":\"20\"},\"personality\":{},\"layout\":\"\"},{\"context\":\"\",\"text\":\"EndFraction\",\"userValue\":\"\",\"annotation\":\"\",\"attributes\":{\"kind\":\"LAST\",\"id\":\"23\"},\"personality\":{},\"layout\":\"\"}]",
+      "json": true
+    },
+    "ToEnriched_0": {
+      "type": "toEnriched",
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" data-semantic-type=\"relseq\" data-semantic-role=\"equality\" data-semantic-annotation=\"depth:1\" data-semantic-id=\"24\" data-semantic-children=\"0,23\" data-semantic-content=\"1\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:2\" data-semantic-id=\"0\" data-semantic-parent=\"24\">x</mi><mo data-semantic-type=\"relation\" data-semantic-role=\"equality\" data-semantic-annotation=\"depth:2\" data-semantic-id=\"1\" data-semantic-parent=\"24\" data-semantic-operator=\"relseq,=\">=</mo><mfrac data-semantic-type=\"fraction\" data-semantic-role=\"division\" data-semantic-annotation=\"depth:2\" data-semantic-id=\"23\" data-semantic-children=\"18,22\" data-semantic-parent=\"24\"><mrow data-semantic-type=\"infixop\" data-semantic-role=\"addition\" data-semantic-annotation=\"depth:3\" data-semantic-id=\"18\" data-semantic-children=\"17,16\" data-semantic-content=\"4\" data-semantic-parent=\"23\"><mrow data-semantic-added=\"true\" data-semantic-type=\"prefixop\" data-semantic-role=\"negative\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"17\" data-semantic-children=\"3\" data-semantic-content=\"2\" data-semantic-parent=\"18\"><mo data-semantic-type=\"operator\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:5\" data-semantic-id=\"2\" data-semantic-parent=\"17\" data-semantic-operator=\"prefixop,−\">−<!-- − --></mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:5\" data-semantic-id=\"3\" data-semantic-parent=\"17\">b</mi></mrow><mo data-semantic-type=\"operator\" data-semantic-role=\"addition\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"4\" data-semantic-parent=\"18\" data-semantic-operator=\"infixop,±\">±<!-- ± --></mo><msqrt data-semantic-type=\"sqrt\" data-semantic-role=\"unknown\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"16\" data-semantic-children=\"15\" data-semantic-parent=\"18\"><mrow data-semantic-added=\"true\" data-semantic-type=\"infixop\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:5\" data-semantic-id=\"15\" data-semantic-children=\"7,14\" data-semantic-content=\"8\" data-semantic-parent=\"16\"><msup data-semantic-type=\"superscript\" data-semantic-role=\"latinletter\" data-semantic-annotation=\"depth:6\" data-semantic-id=\"7\" data-semantic-children=\"5,6\" data-semantic-parent=\"15\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"5\" data-semantic-parent=\"7\">b</mi><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"6\" data-semantic-parent=\"7\">2</mn></msup><mo data-semantic-type=\"operator\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:6\" data-semantic-id=\"8\" data-semantic-parent=\"15\" data-semantic-operator=\"infixop,−\">−<!-- − --></mo><mrow data-semantic-added=\"true\" data-semantic-type=\"infixop\" data-semantic-role=\"implicit\" data-semantic-annotation=\"clearspeak:simple;clearspeak:unit;depth:6\" data-semantic-id=\"14\" data-semantic-children=\"9,10,11\" data-semantic-content=\"12,13\" data-semantic-parent=\"15\"><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"9\" data-semantic-parent=\"14\">4</mn><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:7\" data-semantic-id=\"12\" data-semantic-parent=\"14\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"10\" data-semantic-parent=\"14\">a</mi><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:7\" data-semantic-id=\"13\" data-semantic-parent=\"14\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"11\" data-semantic-parent=\"14\">c</mi></mrow></mrow></msqrt></mrow><mrow data-semantic-type=\"infixop\" data-semantic-role=\"implicit\" data-semantic-annotation=\"clearspeak:simple;clearspeak:unit;depth:3\" data-semantic-id=\"22\" data-semantic-children=\"19,20\" data-semantic-content=\"21\" data-semantic-parent=\"23\"><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"19\" data-semantic-parent=\"22\">2</mn><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"21\" data-semantic-parent=\"22\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"20\" data-semantic-parent=\"22\">a</mi></mrow></mfrac></math>"
+    },
+    "ToEnriched_1": {
+      "type": "toEnriched",
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" data-semantic-type=\"relseq\" data-semantic-role=\"equality\" data-semantic-annotation=\"depth:1\" data-semantic-id=\"24\" data-semantic-children=\"0,23\" data-semantic-content=\"1\" data-semantic-speech=\"x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:2\" data-semantic-id=\"0\" data-semantic-parent=\"24\">x</mi><mo data-semantic-type=\"relation\" data-semantic-role=\"equality\" data-semantic-annotation=\"depth:2\" data-semantic-id=\"1\" data-semantic-parent=\"24\" data-semantic-operator=\"relseq,=\">=</mo><mfrac data-semantic-type=\"fraction\" data-semantic-role=\"division\" data-semantic-annotation=\"depth:2\" data-semantic-id=\"23\" data-semantic-children=\"18,22\" data-semantic-parent=\"24\"><mrow data-semantic-type=\"infixop\" data-semantic-role=\"addition\" data-semantic-annotation=\"depth:3\" data-semantic-id=\"18\" data-semantic-children=\"17,16\" data-semantic-content=\"4\" data-semantic-parent=\"23\"><mrow data-semantic-added=\"true\" data-semantic-type=\"prefixop\" data-semantic-role=\"negative\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"17\" data-semantic-children=\"3\" data-semantic-content=\"2\" data-semantic-parent=\"18\"><mo data-semantic-type=\"operator\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:5\" data-semantic-id=\"2\" data-semantic-parent=\"17\" data-semantic-operator=\"prefixop,−\">−<!-- − --></mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:5\" data-semantic-id=\"3\" data-semantic-parent=\"17\">b</mi></mrow><mo data-semantic-type=\"operator\" data-semantic-role=\"addition\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"4\" data-semantic-parent=\"18\" data-semantic-operator=\"infixop,±\">±<!-- ± --></mo><msqrt data-semantic-type=\"sqrt\" data-semantic-role=\"unknown\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"16\" data-semantic-children=\"15\" data-semantic-parent=\"18\"><mrow data-semantic-added=\"true\" data-semantic-type=\"infixop\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:5\" data-semantic-id=\"15\" data-semantic-children=\"7,14\" data-semantic-content=\"8\" data-semantic-parent=\"16\"><msup data-semantic-type=\"superscript\" data-semantic-role=\"latinletter\" data-semantic-annotation=\"depth:6\" data-semantic-id=\"7\" data-semantic-children=\"5,6\" data-semantic-parent=\"15\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"5\" data-semantic-parent=\"7\">b</mi><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"6\" data-semantic-parent=\"7\">2</mn></msup><mo data-semantic-type=\"operator\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:6\" data-semantic-id=\"8\" data-semantic-parent=\"15\" data-semantic-operator=\"infixop,−\">−<!-- − --></mo><mrow data-semantic-added=\"true\" data-semantic-type=\"infixop\" data-semantic-role=\"implicit\" data-semantic-annotation=\"clearspeak:simple;clearspeak:unit;depth:6\" data-semantic-id=\"14\" data-semantic-children=\"9,10,11\" data-semantic-content=\"12,13\" data-semantic-parent=\"15\"><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"9\" data-semantic-parent=\"14\">4</mn><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:7\" data-semantic-id=\"12\" data-semantic-parent=\"14\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"10\" data-semantic-parent=\"14\">a</mi><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:7\" data-semantic-id=\"13\" data-semantic-parent=\"14\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"11\" data-semantic-parent=\"14\">c</mi></mrow></mrow></msqrt></mrow><mrow data-semantic-type=\"infixop\" data-semantic-role=\"implicit\" data-semantic-annotation=\"clearspeak:simple;clearspeak:unit;depth:3\" data-semantic-id=\"22\" data-semantic-children=\"19,20\" data-semantic-content=\"21\" data-semantic-parent=\"23\"><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"19\" data-semantic-parent=\"22\">2</mn><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"21\" data-semantic-parent=\"22\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"20\" data-semantic-parent=\"22\">a</mi></mrow></mfrac></math>",
+      "setup": {
+        "speech": "shallow"
+      }
+    },
+    "ToEnriched_2": {
+      "type": "toEnriched",
+      "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" data-semantic-type=\"relseq\" data-semantic-role=\"equality\" data-semantic-annotation=\"depth:1\" data-semantic-id=\"24\" data-semantic-children=\"0,23\" data-semantic-content=\"1\" data-semantic-speech=\"x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:2\" data-semantic-id=\"0\" data-semantic-parent=\"24\" data-semantic-speech=\"x\">x</mi><mo data-semantic-type=\"relation\" data-semantic-role=\"equality\" data-semantic-annotation=\"depth:2\" data-semantic-id=\"1\" data-semantic-parent=\"24\" data-semantic-operator=\"relseq,=\" data-semantic-speech=\"equals\">=</mo><mfrac data-semantic-type=\"fraction\" data-semantic-role=\"division\" data-semantic-annotation=\"depth:2\" data-semantic-id=\"23\" data-semantic-children=\"18,22\" data-semantic-parent=\"24\" data-semantic-speech=\"StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction\"><mrow data-semantic-type=\"infixop\" data-semantic-role=\"addition\" data-semantic-annotation=\"depth:3\" data-semantic-id=\"18\" data-semantic-children=\"17,16\" data-semantic-content=\"4\" data-semantic-parent=\"23\" data-semantic-speech=\"negative b plus or minus StartRoot b squared minus 4 a c EndRoot\" data-semantic-prefix=\"Numerator\"><mrow data-semantic-added=\"true\" data-semantic-type=\"prefixop\" data-semantic-role=\"negative\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"17\" data-semantic-children=\"3\" data-semantic-content=\"2\" data-semantic-parent=\"18\" data-semantic-speech=\"negative b\"><mo data-semantic-type=\"operator\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:5\" data-semantic-id=\"2\" data-semantic-parent=\"17\" data-semantic-operator=\"prefixop,−\" data-semantic-speech=\"minus\">−<!-- − --></mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:5\" data-semantic-id=\"3\" data-semantic-parent=\"17\" data-semantic-speech=\"b\">b</mi></mrow><mo data-semantic-type=\"operator\" data-semantic-role=\"addition\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"4\" data-semantic-parent=\"18\" data-semantic-operator=\"infixop,±\" data-semantic-speech=\"plus or minus\">±<!-- ± --></mo><msqrt data-semantic-type=\"sqrt\" data-semantic-role=\"unknown\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"16\" data-semantic-children=\"15\" data-semantic-parent=\"18\" data-semantic-speech=\"StartRoot b squared minus 4 a c EndRoot\"><mrow data-semantic-added=\"true\" data-semantic-type=\"infixop\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:5\" data-semantic-id=\"15\" data-semantic-children=\"7,14\" data-semantic-content=\"8\" data-semantic-parent=\"16\" data-semantic-speech=\"b squared minus 4 a c\" data-semantic-prefix=\"Radicand\"><msup data-semantic-type=\"superscript\" data-semantic-role=\"latinletter\" data-semantic-annotation=\"depth:6\" data-semantic-id=\"7\" data-semantic-children=\"5,6\" data-semantic-parent=\"15\" data-semantic-speech=\"b squared\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"5\" data-semantic-parent=\"7\" data-semantic-speech=\"b\" data-semantic-prefix=\"Base\">b</mi><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"6\" data-semantic-parent=\"7\" data-semantic-speech=\"2\" data-semantic-prefix=\"Exponent\">2</mn></msup><mo data-semantic-type=\"operator\" data-semantic-role=\"subtraction\" data-semantic-annotation=\"depth:6\" data-semantic-id=\"8\" data-semantic-parent=\"15\" data-semantic-operator=\"infixop,−\" data-semantic-speech=\"minus\">−<!-- − --></mo><mrow data-semantic-added=\"true\" data-semantic-type=\"infixop\" data-semantic-role=\"implicit\" data-semantic-annotation=\"clearspeak:simple;clearspeak:unit;depth:6\" data-semantic-id=\"14\" data-semantic-children=\"9,10,11\" data-semantic-content=\"12,13\" data-semantic-parent=\"15\" data-semantic-speech=\"4 a c\"><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"9\" data-semantic-parent=\"14\" data-semantic-speech=\"4\">4</mn><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:7\" data-semantic-id=\"12\" data-semantic-parent=\"14\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\" data-semantic-speech=\"times\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"10\" data-semantic-parent=\"14\" data-semantic-speech=\"a\">a</mi><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:7\" data-semantic-id=\"13\" data-semantic-parent=\"14\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\" data-semantic-speech=\"times\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:7\" data-semantic-id=\"11\" data-semantic-parent=\"14\" data-semantic-speech=\"c\">c</mi></mrow></mrow></msqrt></mrow><mrow data-semantic-type=\"infixop\" data-semantic-role=\"implicit\" data-semantic-annotation=\"clearspeak:simple;clearspeak:unit;depth:3\" data-semantic-id=\"22\" data-semantic-children=\"19,20\" data-semantic-content=\"21\" data-semantic-parent=\"23\" data-semantic-speech=\"2 a\" data-semantic-prefix=\"Denominator\"><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"19\" data-semantic-parent=\"22\" data-semantic-speech=\"2\">2</mn><mo data-semantic-type=\"operator\" data-semantic-role=\"multiplication\" data-semantic-annotation=\"depth:4\" data-semantic-id=\"21\" data-semantic-parent=\"22\" data-semantic-added=\"true\" data-semantic-operator=\"infixop,⁢\" data-semantic-speech=\"times\">⁢</mo><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;depth:4\" data-semantic-id=\"20\" data-semantic-parent=\"22\" data-semantic-speech=\"a\">a</mi></mrow></mfrac></math>",
+      "setup": {
+        "speech": "deep"
+      }
+    },
+    "SyntaxWalker_0": {
+      "type": "walk",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "setup": {
+        "walker": "Syntax"
+      }
+    },
+    "SyntaxWalker_1": {
+      "type": "move",
+      "input": "DOWN",
+      "move": true,
+      "expected": "x"
+    },
+    "SyntaxWalker_2": {
+      "type": "move",
+      "input": "RIGHT",
+      "move": true,
+      "expected": "equals"
+    },
+    "SyntaxWalker_3": {
+      "type": "move",
+      "input": "RIGHT",
+      "move": true,
+      "expected": "StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "SyntaxWalker_4": {
+      "type": "move",
+      "input": "DOWN",
+      "move": true,
+      "expected": "Numerator negative b plus or minus StartRoot b squared minus 4 a c EndRoot"
+    },
+    "SyntaxWalker_5": {
+      "type": "move",
+      "input": "SPACE",
+      "move": true,
+      "expected": "Level 2 Numerator"
+    },
+    "SyntaxWalker_6": {
+      "type": "move",
+      "input": "UP",
+      "move": true,
+      "expected": "StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "SyntaxWalker_7": {
+      "type": "move",
+      "input": "LEFT",
+      "move": true,
+      "expected": "equals"
+    },
+    "SyntaxWalker_8": {
+      "type": "move",
+      "input": "LEFT",
+      "move": true,
+      "expected": "x"
+    },
+    "SyntaxWalker_9": {
+      "type": "move",
+      "input": "LEFT",
+      "move": true,
+      "expected": null
+    },
+    "SemanticWalker_0": {
+      "type": "walk",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+      "setup": {
+        "walker": "Semantic"
+      }
+    },
+    "SemanticWalker_1": {
+      "type": "move",
+      "input": "DOWN",
+      "move": true,
+      "expected": "x"
+    },
+    "SemanticWalker_2": {
+      "type": "move",
+      "input": "RIGHT",
+      "move": true,
+      "expected": "equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "SemanticWalker_3": {
+      "type": "move",
+      "input": "DOWN",
+      "move": true,
+      "expected": "Numerator negative b plus or minus StartRoot b squared minus 4 a c EndRoot"
+    },
+    "SemanticWalker_4": {
+      "type": "move",
+      "input": "SPACE",
+      "move": true,
+      "expected": "Level 2 Numerator"
+    },
+    "SemanticWalker_5": {
+      "type": "move",
+      "input": "UP",
+      "move": true,
+      "expected": "equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "SemanticWalker_6": {
+      "type": "move",
+      "input": "LEFT",
+      "move": true,
+      "expected": "x"
+    },
+    "SemanticWalker_7": {
+      "type": "move",
+      "input": "LEFT",
+      "move": true,
+      "expected": null
+    },
+    "_comment_": "The following depend on some of the previous setups until the first reset.",
+    "Prepare_0": {
+      "type": "setupEngine",
+      "expected": "[object Promise]",
+      "setup": {
+        "locale": "es"
+      }
+    },
+    "Prepare_1": {
+      "type": "setupEngine",
+      "expected": "[object Promise]",
+      "setup": {
+        "locale": "fr"
+      }
+    },
+    "Prepare_2": {
+      "type": "setupEngine",
+      "expected": "[object Promise]",
+      "setup": {
+        "locale": "de"
+      }
+    },
+    "EngineSetup_JsonPath": {
+      "_comment_": "This is important, as the paths are computed and depend on the location of the tests. This is particularly important to run on github!",
+      "type": "engineSetup",
+      "setup": {
+        "locale": "en",
+        "json": "IGNORE"
+      },
+      "expected": "{\"mode\":\"async\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Semantic\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_0": {
+      "type": "engineSetup",
+      "input": {},
+      "expected": "{\"mode\":\"async\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Semantic\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "ResetEngine_0": {
+      "type": "resetEngine",
+      "input": {}
+    },
+    "EngineSetup_AfterReset_0": {
+      "type": "engineSetup",
+      "input": {},
+      "expected": "{\"mode\":\"async\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_1": {
+      "type": "engineSetup",
+      "setup": {
+        "foo": "bar"
+      },
+      "expected": "{\"mode\":\"async\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_2": {
+      "type": "engineSetup",
+      "setup": {
+        "mode": "sync"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_3": {
+      "type": "engineSetup",
+      "setup": {
+        "delay": true,
+        "structure": true,
+        "pprint": true
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":true,\"aria\":false,\"pprint\":true,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_4": {
+      "type": "engineSetup",
+      "setup": {
+        "structure": false,
+        "pprint": false
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_5": {
+      "type": "engineSetup",
+      "setup": {
+        "domain": "clearspeak",
+        "markup": "ssml"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"clearspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"IGNORE/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_6": {
+      "type": "engineSetup",
+      "setup": {
+        "json": "../node_modules/speech-rule-engine/lib/mathmaps"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"clearspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../node_modules/speech-rule-engine/lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_7": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "es",
+        "json": "../lib/mathmaps"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"es\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_8": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "es",
+        "domain": "clearspeak"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"es\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_9": {
+      "type": "engineSetup",
+      "setup": {
+        "modality": "summary"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"es\",\"delay\":false,\"modality\":\"summary\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_10": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "en"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"summary\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_11": {
+      "type": "engineSetup",
+      "setup": {
+        "modality": "speech",
+        "domain": "default"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_12": {
+      "type": "engineSetup",
+      "setup": {
+        "domain": "chromevox"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"chromevox\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_13": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "fr"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"fr\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"fr\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_14": {
+      "type": "engineSetup",
+      "setup": {
+        "domain": "nix"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"fr\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"fr\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_15": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "en"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_16": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "es",
+        "domain": "mathspeak"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"es\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "EngineSetup_17": {
+      "type": "engineSetup",
+      "setup": {
+        "locale": "de",
+        "domain": "clearspeak"
+      },
+      "expected": "{\"mode\":\"sync\",\"markup\":\"ssml\",\"style\":\"default\",\"domain\":\"clearspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"de\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    },
+    "ResetEngine_1": {
+      "type": "resetEngine",
+      "input": {}
+    },
+    "EngineSetup_AfterReset_1": {
+      "type": "engineSetup",
+      "input": {},
+      "expected": "{\"mode\":\"sync\",\"markup\":\"none\",\"style\":\"default\",\"domain\":\"mathspeak\",\"speech\":\"none\",\"walker\":\"Table\",\"locale\":\"en\",\"delay\":false,\"modality\":\"speech\",\"rate\":\"100\",\"rules\":\"\",\"subiso\":\"\",\"prune\":\"\",\"automark\":false,\"mark\":true,\"character\":true,\"cleanpause\":true,\"strict\":false,\"structure\":false,\"aria\":false,\"pprint\":false,\"cayleyshort\":true,\"linebreaks\":false,\"tree\":false,\"json\":\"../lib/mathmaps/\",\"xpath\":\"https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js\"}",
+      "json": true
+    }
+  }
+}

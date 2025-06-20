@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech postfix rewrite tests.",
+  "base": "input/semantic/postfix_rewrite.json"
+}

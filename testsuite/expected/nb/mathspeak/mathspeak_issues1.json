@@ -1,0 +1,274 @@
+{
+  "name": "BokmalMathspeakIssues1",
+  "locale": "nb",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Bokmal Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "negativ fem åttende"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "negativ fem åttende"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "negativ fem åttende"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 grader"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 grader"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 grader"
+    },
+    "MixedIdentifier_default": {
+      "expected": "stor bokstav S i normal stor bokstav O 2 pluss 6 normal stor bokstav H normal stor bokstav F høyrepil normal stor bokstav H 2 stor bokstav S i normal stor bokstav F 6 pluss 2 normal stor bokstav H 2 normal stor bokstav O"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "stor bokstav S i normal stor bokstav O 2 pluss 6 normal stor bokstav H normal stor bokstav F høyrepil normal stor bokstav H 2 stor bokstav S i normal stor bokstav F 6 pluss 2 normal stor bokstav H 2 normal stor bokstav O"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "stor bokstav S i normal stor bokstav O 2 pluss 6 normal stor bokstav H normal stor bokstav F høyrepil normal stor bokstav H 2 stor bokstav S i normal stor bokstav F 6 pluss 2 normal stor bokstav H 2 normal stor bokstav O"
+    },
+    "ParenSuper_default": {
+      "expected": "venstre parentes a høyre parentes i andre potens"
+    },
+    "ParenSuper_brief": {
+      "expected": "venstre parentes a høyre parentes i andre potens"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "venstre parentes a høyre parentes i andre potens"
+    },
+    "ParenConvoluted_default": {
+      "expected": "venstre parentes minus x i andre potens skråstrek 2 høyre parentes"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "venstre parentes minus x i andre potens skråstrek 2 høyre parentes"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "venstre parentes minus x i andre potens skråstrek 2 høyre parentes"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h Superskript 4 minus 2 s Grunnlinje er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er mindre enn eller er lik c 2 h Superskript 4 minus 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h Sub 4 minus 2 s Basis er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er mindre enn eller er lik c 2 h Sub 4 minus 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h Sub 4 minus 2 s Basis er mindre enn eller er lik Brøk 1 Over 2 stor bokstav T SluttBrøk er mindre enn eller er lik c 2 h Sub 4 minus 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h Superskript 4 minus 2 s Grunnlinje er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er lik c 2 h Superskript 4 minus 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h Sub 4 minus 2 s Basis er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er lik c 2 h Sub 4 minus 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h Sub 4 minus 2 s Basis er mindre enn eller er lik Brøk 1 Over 2 stor bokstav T SluttBrøk er lik c 2 h Sub 4 minus 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h Subskript s Grunnlinje er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er mindre enn eller er lik h Subskript s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h Sub s Basis er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er mindre enn eller er lik h Sub s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h Sub s Basis er mindre enn eller er lik Brøk 1 Over 2 stor bokstav T SluttBrøk er mindre enn eller er lik h Sub s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h Subskript s Grunnlinje er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er lik h Subskript s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h Sub s Basis er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er lik h Sub s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h Sub s Basis er mindre enn eller er lik Brøk 1 Over 2 stor bokstav T SluttBrøk er lik h Sub s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h Subskript s Superskript t Grunnlinje er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er mindre enn eller er lik h Subskript s Superskript t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h Sub s Sub t Basis er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er mindre enn eller er lik h Sub s Sub t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h Sub s Sub t Basis er mindre enn eller er lik Brøk 1 Over 2 stor bokstav T SluttBrøk er mindre enn eller er lik h Sub s Sub t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h Subskript s Superskript t Grunnlinje er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er lik h Subskript s Superskript t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h Sub s Sub t Basis er mindre enn eller er lik Start Brøk 1 Over 2 stor bokstav T Slutt Brøk er lik h Sub s Sub t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h Sub s Sub t Basis er mindre enn eller er lik Brøk 1 Over 2 stor bokstav T SluttBrøk er lik h Sub s Sub t"
+    },
+    "SquareWithText_default": {
+      "expected": "Start Brøk area of triangle Over area of square Slutt Brøk er lik Start Brøk 1 unit i andre potens Over 16 units i tredje potens Slutt Brøk"
+    },
+    "SquareWithText_brief": {
+      "expected": "Start Brøk area of triangle Over area of square Slutt Brøk er lik Start Brøk 1 unit i andre potens Over 16 units i tredje potens Slutt Brøk"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "Brøk area of triangle Over area of square SluttBrøk er lik Brøk 1 unit i andre potens Over 16 units i tredje potens SluttBrøk"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square Superskript 1 Grunnlinje 1 unit Superskript 2 Grunnlinje 16 units Superskript 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square Sub 1 Basis 1 unit Sub 2 Basis 16 units Sub 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square Sub 1 Basis 1 unit Sub 2 Basis 16 units Sub 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle Superskript 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle Sub 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle Sub 2"
+    },
+    "LabelledRow_default": {
+      "expected": "StartOppsett 1. Rad  med etikett venstre parentes 1 høyre parentes StoppEtikett 1. Kolonne a 2. Kolonne b StoppOppsett"
+    },
+    "LabelledRow_brief": {
+      "expected": "StartOppsett 1. Rad  Etikett venstre parentes 1 høyre parentes 1. Kolonne a 2. Kolonne b StoppOppsett"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "Oppsett 1. Rad  Etikett venstre parentes 1 høyre parentes 1. Kolonne a 2. Kolonne b StoppOppsett"
+    },
+    "LabelledLine_default": {
+      "expected": "StartOppsett 1. Rad  med Etikett venstre parentes 1 høyre parentes StoppEtikett a StoppOppsett"
+    },
+    "LabelledLine_brief": {
+      "expected": "StartOppsett 1. Rad  Etikett venstre parentes 1 høyre parentes a StoppOppsett"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "Oppsett 1. Rad  Etikett venstre parentes 1 høyre parentes a StoppOppsett"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "StartOppsett 1. Rad  med Etikett venstre parentes 1 høyre parentes StoppEtikett Tom StoppOppsett"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "StartOppsett 1. Rad  Etikett venstre parentes 1 høyre parentes Tom StoppOppsett"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "Oppsett 1. Rad  Etikett venstre parentes 1 høyre parentes Tom StoppOppsett"
+    },
+    "EmptyLine_default": {
+      "expected": "StartOppsett 1. Rad  Tom StoppOppsett"
+    },
+    "EmptyLine_brief": {
+      "expected": "StartOppsett 1. Rad  Tom StoppOppsett"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "Oppsett 1. Rad  Tom StoppOppsett"
+    },
+    "EmptyRow_default": {
+      "expected": "StartOppsett 1. Rad 1. Kolonne a 2. Kolonne b 2. Rad  Tom StoppOppsett"
+    },
+    "EmptyRow_brief": {
+      "expected": "StartOppsett 1. Rad 1. Kolonne a 2. Kolonne b 2. Rad  Tom StoppOppsett"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "Oppsett 1. Rad 1. Kolonne a 2. Kolonne b 2. Rad  Tom StoppOppsett"
+    },
+    "EmptyCell_default": {
+      "expected": "StartOppsett 1. Rad  Tom StoppOppsett"
+    },
+    "EmptyCell_brief": {
+      "expected": "StartOppsett 1. Rad  Tom StoppOppsett"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "Oppsett 1. Rad  Tom StoppOppsett"
+    },
+    "TextLabelledLine_default": {
+      "expected": "StartOppsett 1. Rad  med Etikett venstre parentes 1 høyre parentes StoppEtikett a StoppOppsett"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "StartOppsett 1. Rad  Etikett venstre parentes 1 høyre parentes a StoppOppsett"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "Oppsett 1. Rad  Etikett 1 a StoppOppsett"
+    },
+    "TextLabelledRow_default": {
+      "expected": "StartOppsett 1. Rad  med etikett venstre parentes 1 høyre parentes StoppEtikett 1. Kolonne a 2. Kolonne b StoppOppsett"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "StartOppsett 1. Rad  Etikett venstre parentes 1 høyre parentes 1. Kolonne a 2. Kolonne b StoppOppsett"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "Oppsett 1. Rad  Etikett 1 1. Kolonne a 2. Kolonne b StoppOppsett"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a overstrek"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a overstrek"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a overstrek"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a understrek"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a understrek"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a understrek"
+    },
+    "PrefixopSquare_default": {
+      "expected": "partiellderivert i andre potens x"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "partiellderivert i andre potens x"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "partiellderivert i andre potens x"
+    },
+    "PrefixopCube_default": {
+      "expected": "partiellderivert i tredje potens x"
+    },
+    "PrefixopCube_brief": {
+      "expected": "partiellderivert i tredje potens x"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "partiellderivert i tredje potens x"
+    },
+    "Vector_default": {
+      "expected": "Start 3 Med 1 Matrise 1. Rad  a 2. Rad  b 3. Rad  c StoppMatrise"
+    },
+    "Vector_brief": {
+      "expected": "Start 3 Med 1 Matrise 1. Rad  a 2. Rad  b 3. Rad  c StoppMatrise"
+    },
+    "Vector_sbrief": {
+      "expected": "3 Med 1 Matrise 1. Rad  a 2. Rad  b 3. Rad  c StoppMatrise"
+    }
+  }
+}

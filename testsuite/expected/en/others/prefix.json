@@ -1,0 +1,242 @@
+{
+  "name": "EnglishPrefix",
+  "locale": "en",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "English Prefix rule tests.",
+  "active": "PrefixEnglish",
+  "exclude": [],
+  "tests": {
+    "Sub_0": {
+      "expected": "Base"
+    },
+    "Sub_1": {
+      "expected": "Subscript"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Base"
+    },
+    "Super_1": {
+      "expected": "Exponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Base"
+    },
+    "Over_1": {
+      "expected": "Overscript"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Base"
+    },
+    "Under_1": {
+      "expected": "Underscript"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "Numerator"
+    },
+    "Fractions_1": {
+      "expected": "Denominator"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radicand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radicand"
+    },
+    "Root_1": {
+      "expected": "Index"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Base"
+    },
+    "SimpleTensors_1": {
+      "expected": "Left Subscript"
+    },
+    "SimpleTensors_2": {
+      "expected": "Left Superscript"
+    },
+    "SimpleTensors_3": {
+      "expected": "Right Subscript"
+    },
+    "SimpleTensors_4": {
+      "expected": "Right Superscript"
+    },
+    "ComplexTensors_0": {
+      "expected": "Base"
+    },
+    "ComplexTensors_1": {
+      "expected": "1st Left Subscript"
+    },
+    "ComplexTensors_2": {
+      "expected": "2nd Left Subscript"
+    },
+    "ComplexTensors_3": {
+      "expected": "1st Left Superscript"
+    },
+    "ComplexTensors_4": {
+      "expected": "2nd Left Superscript"
+    },
+    "ComplexTensors_5": {
+      "expected": "1st Right Subscript"
+    },
+    "ComplexTensors_6": {
+      "expected": "2nd Right Subscript"
+    },
+    "ComplexTensors_7": {
+      "expected": "1st Right Superscript"
+    },
+    "ComplexTensors_8": {
+      "expected": "2nd Right Superscript"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "Choice Quantity"
+    },
+    "Binomials_1": {
+      "expected": "Selection Quantity"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "1st Row"
+    },
+    "Vectors_1": {
+      "expected": "2nd Row"
+    },
+    "Vectors_2": {
+      "expected": "3rd Row"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1st Row"
+    },
+    "Matrices_depth_1": {
+      "expected": "1st Row, 1st Column"
+    },
+    "Matrices_depth_2": {
+      "expected": "1st Row, 2nd Column"
+    },
+    "Matrices_depth_3": {
+      "expected": "2nd Row"
+    },
+    "Matrices_depth_4": {
+      "expected": "2nd Row, 1st Column"
+    },
+    "Matrices_depth_5": {
+      "expected": "2nd Row, 2nd Column"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1st Row"
+    },
+    "Matrices_1": {
+      "expected": "1st Column"
+    },
+    "Matrices_2": {
+      "expected": "2nd Column"
+    },
+    "Matrices_3": {
+      "expected": "2nd Row"
+    },
+    "Matrices_4": {
+      "expected": "1st Column"
+    },
+    "Matrices_5": {
+      "expected": "2nd Column"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "Base"
+    },
+    "LimBoth_1": {
+      "expected": "Overscript"
+    },
+    "LimBoth_2": {
+      "expected": "Underscript"
+    },
+    "LimBoth_3": {
+      "expected": "Base"
+    },
+    "LimBoth_4": {
+      "expected": "Base"
+    },
+    "LimUpper_0": {
+      "expected": "Overscript"
+    },
+    "LimUpper_1": {
+      "expected": "Overscript"
+    },
+    "LimUpper_2": {
+      "expected": "Base"
+    },
+    "LimUpper_3": {
+      "expected": "Base"
+    },
+    "LimLower_0": {
+      "expected": "Underscript"
+    },
+    "LimLower_1": {
+      "expected": "Underscript"
+    },
+    "LimLower_2": {
+      "expected": "Base"
+    },
+    "LimLower_3": {
+      "expected": "Base"
+    }
+  }
+}

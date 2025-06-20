@@ -1,0 +1,568 @@
+{
+  "name": "NemethSection6",
+  "information": "Nemeth 2020 Book Section 6",
+  "factory": "speech",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Book2019",
+  "tests": {
+    "_comment0_": "Section 6_2",
+    "Example 6.2-extra-1": {
+      "tex": "38 ± 7",
+      "brf": "#38+-7",
+      "input": "<mn>38</mn><mo>&#xB1;</mo><mn>7</mn>",
+      "expected": "⠼⠒⠦⠬⠤⠶"
+    },
+    "Example 6.2-extra-2": {
+      "tex": "38 ∓ 7",
+      "brf": "#38-+7",
+      "input": "<mn>38</mn><mo>&#x2213;</mo><mn>7</mn>",
+      "expected": "⠼⠒⠦⠤⠬⠶"
+    },
+    "Example 6.2-extra-3": {
+      "tex": "10 + −5 ",
+      "brf": "#10+\"-5",
+      "input": "<mn>10</mn><mo>+</mo><mo>&#x2212;</mo><mn>5</mn>",
+      "expected": "⠼⠂⠴⠬⠐⠤⠢"
+    },
+    "Example 6.2-extra-4": {
+      "tex": "10 − +5",
+      "brf": "#10-\"+5",
+      "input": "<mn>10</mn><mo>&#x2212;</mo><mo>+</mo><mn>5</mn>",
+      "expected": "⠼⠂⠴⠤⠐⠬⠢"
+    },
+    "Example 6.2-extra-5": {
+      "tex": "10 − −5 ",
+      "brf": "#10-\"-5",
+      "input": "<mn>10</mn><mo>&#x2212;</mo><mo>&#x2212;</mo><mn>5</mn>",
+      "expected": "⠼⠂⠴⠤⠐⠤⠢"
+    },
+    "Example 6.2-1": {
+      "tex": "±5 \\mbox{ means } +5 \\mbox{ and } −5",
+      "brf": "+-5 ,'m1ns +5 ,'& -#54",
+      "input": "<mo>&#xB1;</mo><mn>5</mn><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#xA0;means&#xA0;</mtext></mstyle><mo>+</mo><mn>5</mn><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#xA0;and&#xA0;</mtext></mstyle><mo>&#x2212;</mo><mn>5</mn>",
+      "expected": "⠬⠤⠢⠀⠠⠄⠍⠂⠝⠎⠀⠬⠢⠀⠠⠄⠯⠀⠤⠼⠢⠲"
+    },
+    "Example 6.2-2": {
+      "tex": "3 ± 1 = +4 \\mbox{\\it and } +2?",
+      "brf": "#3+-1 .K +4 ,'.1& +28",
+      "input": "<mn>3</mn><mo>&#xB1;</mo><mn>1</mn><mo>=</mo><mo>+</mo><mn>4</mn><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext data-mjx-variant=\"-tex-mathit\" mathvariant=\"italic\">and&#xA0;</mtext></mstyle><mo>+</mo><mn>2</mn><mo>?</mo>",
+      "expected": "⠼⠒⠬⠤⠂⠀⠨⠅⠀⠬⠲⠀⠠⠄⠨⠂⠯⠀⠬⠆⠦"
+    },
+    "Example 6.2-3": {
+      "tex": "20 + −3; 20 − −3; −20 − −3; −20 + 3",
+      "brf": "#20+\"-3_2 #20-\"-3_2 -#20-\"-3_2 -#20+3",
+      "input": "<mn>20</mn><mo>+</mo><mo>&#x2212;</mo><mn>3</mn><mo>;</mo><mn>20</mn><mo>&#x2212;</mo><mo>&#x2212;</mo><mn>3</mn><mo>;</mo><mo>&#x2212;</mo><mn>20</mn><mo>&#x2212;</mo><mo>&#x2212;</mo><mn>3</mn><mo>;</mo><mo>&#x2212;</mo><mn>20</mn><mo>+</mo><mn>3</mn>",
+      "expected": "⠼⠆⠴⠬⠐⠤⠒⠸⠆⠀⠼⠆⠴⠤⠐⠤⠒⠸⠆⠀⠤⠼⠆⠴⠤⠐⠤⠒⠸⠆⠀⠤⠼⠆⠴⠬⠒"
+    },
+    "_comment1_": "Section 6_3",
+    "Example 6.3-1": {
+      "tex": "p \\& –p ",
+      "brf": "P_&-P",
+      "input": "<mi>p</mi><mi mathvariant=\"normal\">&amp;</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2013;</mo></mrow><mi>p</mi>",
+      "expected": "⠏⠸⠯⠤⠏"
+    },
+    "6.3.2 Asterisk A": {
+      "tex": "3 ∗ 9 = 27 ",
+      "brf": "#3@##9 .K #27",
+      "input": "<mn>3</mn><mo>&#x2217;</mo><mn>9</mn><mo>=</mo><mn>27</mn>",
+      "expected": "⠼⠒⠈⠼⠼⠔⠀⠨⠅⠀⠼⠆⠶"
+    },
+    "6.3.2 Asterisk B": {
+      "tex": ". 3 ∗ .9 = 0.27 ",
+      "brf": "#.3@##.9 .K #0.27",
+      "input": "<mo>.</mo><mn>3</mn><mo>&#x2217;</mo><mn>.9</mn><mo>=</mo><mn>0.27</mn>",
+      "expected": "⠼⠨⠒⠈⠼⠼⠨⠔⠀⠨⠅⠀⠼⠴⠨⠆⠶"
+    },
+    "Example 6.3-3": {
+      "tex": "n x \\# y = y \\# x",
+      "brf": "X.#Y .K Y.#X ",
+      "input": "<mi>n</mi><mi>x</mi><mi mathvariant=\"normal\">#</mi><mi>y</mi><mo>=</mo><mi>y</mi><mi mathvariant=\"normal\">#</mi><mi>x</mi>",
+      "expected": "⠭⠨⠼⠽⠀⠨⠅⠀⠽⠨⠼⠭⠀"
+    },
+    "Example 6.3-4": {
+      "tex": "𝐴\\#𝐵",
+      "brf": ",A.#,B ",
+      "input": "<mi>&#x1D434;</mi><mi mathvariant=\"normal\">#</mi><mi>&#x1D435;</mi>",
+      "expected": "⠠⠁⠨⠼⠠⠃⠀"
+    },
+    "Example 6.3-4a": {
+      "tex": "1 \\# .2 = .2 \\# 1",
+      "brf": "#1.##.2 .k #.2.##1",
+      "input": "<mn>1</mn><mi mathvariant=\"normal\">#</mi><mn>.2</mn><mo>=</mo><mn>.2</mn><mi mathvariant=\"normal\">#</mi><mn>1</mn>",
+      "expected": "⠼⠂⠨⠼⠼⠨⠆⠀⠨⠅⠀⠼⠨⠆⠨⠼⠼⠂"
+    },
+    "6.3.4 Dagger": {
+      "tex": "A†B=B†A ",
+      "brf": ",A_],B .K ,B_],A",
+      "input": "<mi>A</mi><mo>&#x2020;</mo><mi>B</mi><mo>=</mo><mi>B</mi><mo>&#x2020;</mo><mi>A</mi>",
+      "expected": "⠠⠁⠸⠻⠠⠃⠀⠨⠅⠀⠠⠃⠸⠻⠠⠁"
+    },
+    "6.3.4 Double Dagger": {
+      "tex": "A‡B=B‡A ",
+      "brf": ",A__],B .K ,B__],A",
+      "input": "<mi>A</mi><mo>&#x2021;</mo><mi>B</mi><mo>=</mo><mi>B</mi><mo>&#x2021;</mo><mi>A</mi>",
+      "expected": "⠠⠁⠸⠸⠻⠠⠃⠀⠨⠅⠀⠠⠃⠸⠸⠻⠠⠁"
+    },
+    "6.3.5 Paragraph Mark A": {
+      "tex": "A¶B",
+      "brf": ",A@,P,B",
+      "input": "<mi>A</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#xB6;</mo></mrow><mi>B</mi>",
+      "expected": "⠠⠁⠈⠠⠏⠠⠃"
+    },
+    "6.3.5 Paragraph Mark B": {
+      "tex": "3¶4=4¶3",
+      "brf": "#3@,P#4 .K #4@,P#3",
+      "input": "<mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#xB6;</mo></mrow><mn>4</mn><mo>=</mo><mn>4</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#xB6;</mo></mrow><mn>3</mn>",
+      "expected": "⠼⠒⠈⠠⠏⠼⠲⠀⠨⠅⠀⠼⠲⠈⠠⠏⠼⠒"
+    },
+    "6.3.6 Section Mark A": {
+      "tex": "A§B",
+      "brf": ",A@,s,B",
+      "input": "<mi>A</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#xA7;</mo></mrow><mi>B</mi>",
+      "expected": "⠠⠁⠈⠠⠎⠠⠃"
+    },
+    "6.3.6 Section Mark B": {
+      "tex": "3§4=4§3",
+      "brf": "#3@,s#4 .K #4@,s#3",
+      "input": "<mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#xA7;</mo></mrow><mn>4</mn><mo>=</mo><mn>4</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#xA7;</mo></mrow><mn>3</mn>",
+      "expected": "⠼⠒⠈⠠⠎⠼⠲⠀⠨⠅⠀⠼⠲⠈⠠⠎⠼⠒"
+    },
+    "_comment2_": "Section 6_4",
+    "Example 6.4-1 ": {
+      "tex": "3/8 ",
+      "brf": "#3_/8",
+      "input": "<mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mo>/</mo></mrow><mn>8</mn>",
+      "expected": "⠼⠒⠸⠌⠦"
+    },
+    "Example 6.4-8": {
+      "tex": "𝑎 ∘ (𝑏 ∘ 𝑐) = (𝑎 ∘ 𝑏) ∘ 𝑐",
+      "brf": "A.*(B.*C) .K (A.*B).*C",
+      "input": "<mi>&#x1D44E;</mi><mo>&#x2218;</mo><mo stretchy=\"false\">(</mo><mi>&#x1D44F;</mi><mo>&#x2218;</mo><mi>&#x1D450;</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mi>&#x1D44E;</mi><mo>&#x2218;</mo><mi>&#x1D44F;</mi><mo stretchy=\"false\">)</mo><mo>&#x2218;</mo><mi>&#x1D450;</mi>",
+      "expected": "⠁⠨⠡⠷⠃⠨⠡⠉⠾⠀⠨⠅⠀⠷⠁⠨⠡⠃⠾⠨⠡⠉"
+    },
+    "Example 6.4-8b": {
+      "tex": "(𝑓 ∘ 𝑔)",
+      "brf": "(F.*G)",
+      "input": "<mo stretchy=\"false\">(</mo><mi>&#x1D453;</mi><mo>&#x2218;</mo><mi>&#x1D454;</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠋⠨⠡⠛⠾"
+    },
+    "Example 6.4-9": {
+      "tex": "(𝑓 ∘ 𝑔)(𝑥)",
+      "brf": "(F.*G)(X)",
+      "input": "<mo stretchy=\"false\">(</mo><mi>&#x1D453;</mi><mo>&#x2218;</mo><mi>&#x1D454;</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mi>&#x1D465;</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠋⠨⠡⠛⠾⠷⠭⠾"
+    },
+    "6.4.5 Intersection: This operation symbol is also called a \"cap\".": {
+      "tex": "𝐴∩𝐵 =𝐵∩𝐴",
+      "brf": ",A.%,B .K ,B.%,A",
+      "input": "<mi>&#x1D434;</mi><mo>&#x2229;</mo><mi>&#x1D435;</mi><mo>=</mo><mi>&#x1D435;</mi><mo>&#x2229;</mo><mi>&#x1D434;</mi>",
+      "expected": "⠠⠁⠨⠩⠠⠃⠀⠨⠅⠀⠠⠃⠨⠩⠠⠁"
+    },
+    "6.4.6 Logical Product: In the study of logic, this operation sign means \"and\" or \"meet\".": {
+      "tex": "𝑝∧𝑞∧𝑟",
+      "brf": "P@%Q@%R",
+      "input": "<mi>&#x1D45D;</mi><mo>&#x2227;</mo><mi>&#x1D45E;</mi><mo>&#x2227;</mo><mi>&#x1D45F;</mi>",
+      "expected": "⠏⠈⠩⠟⠈⠩⠗"
+    },
+    "6.4.7 Logical Sum: In the study of logic, this operation sign means \"or\" or \"join\".": {
+      "tex": "𝑝∨𝑞∨𝑟",
+      "brf": "P@+Q@+R",
+      "input": "<mi>&#x1D45D;</mi><mo>&#x2228;</mo><mi>&#x1D45E;</mi><mo>&#x2228;</mo><mi>&#x1D45F;</mi>",
+      "expected": "⠏⠈⠬⠟⠈⠬⠗"
+    },
+    "6.4.8 Minus With Dot Over: This operation sign means \"proper difference\".": {
+      "tex": "𝑥∸𝑦=0",
+      "brf": "X.-Y .K #0",
+      "input": "<mi>&#x1D465;</mi><mo>&#x2238;</mo><mi>&#x1D466;</mi><mo>=</mo><mn>0</mn>",
+      "expected": "⠭⠨⠤⠽⠀⠨⠅⠀⠼⠴"
+    },
+    "6.4.9 Tilde: a": {
+      "tex": "∼𝑝",
+      "brf": "@:P",
+      "input": "<mo>&#x223C;</mo><mi>&#x1D45D;</mi>",
+      "expected": "⠈⠱⠏"
+    },
+    "6.4.9 Tilde: b": {
+      "tex": "∼ (∼ 𝑝)",
+      "brf": "@:(@:P)",
+      "input": "<mo>&#x223C;</mo><mo stretchy=\"false\">(</mo><mo>&#x223C;</mo><mi>&#x1D45D;</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠈⠱⠷⠈⠱⠏⠾"
+    },
+    "6.4.9 Tilde: c": {
+      "tex": "∼∼ 𝑝∨𝑞",
+      "brf": "@:\"@:P@+Q",
+      "input": "<mo>&#x223C;&#x223C;</mo><mi>&#x1D45D;</mi><mo>&#x2228;</mo><mi>&#x1D45E;</mi>",
+      "expected": "⠈⠱⠐⠈⠱⠏⠈⠬⠟"
+    },
+    "6.4.9 Tilde: d": {
+      "tex": "",
+      "brf": "@,:",
+      "expected": "⠈⠠⠱"
+    },
+    "6.4.9 Tilde: e": {
+      "tex": " 𝑠 ∨ 𝑡",
+      "brf": "@,:S@+T",
+      "expected": "⠈⠠⠱⠎⠈⠬⠞"
+    },
+    "6.4.10 Union: This operation symbol is also called a \"cup\".": {
+      "tex": "𝐴∪𝐵 =𝐵∪𝐴",
+      "brf": ",A.+,B .K ,B.+,A",
+      "input": "<mi>&#x1D434;</mi><mo>&#x222A;</mo><mi>&#x1D435;</mi><mo>=</mo><mi>&#x1D435;</mi><mo>&#x222A;</mo><mi>&#x1D434;</mi>",
+      "expected": "⠠⠁⠨⠬⠠⠃⠀⠨⠅⠀⠠⠃⠨⠬⠠⠁"
+    },
+    "Example 6.4-11": {
+      "tex": "𝑏|𝑎",
+      "brf": "B\\A",
+      "input": "<mi>&#x1D44F;</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>&#x1D44E;</mi>",
+      "expected": "⠃⠳⠁"
+    },
+    "Example 6.4-11b": {
+      "tex": "6 | 12",
+      "brf": "#6\\12",
+      "input": "<mn>6</mn><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mn>12</mn>",
+      "expected": "⠼⠖⠳⠂⠆"
+    },
+    "6.4.12 Negated Vertical Bar": {
+      "tex": "∤",
+      "brf": "/|",
+      "input": "<mo>&#x2224;</mo>",
+      "expected": "⠌⠳"
+    },
+    "6.4.12 Negated Vertical Bar Example": {
+      "tex": "5∤𝑛",
+      "brf": "#5/|n",
+      "input": "<mn>5</mn><mo>&#x2224;</mo><mi>&#x1D45B;</mi>",
+      "expected": "⠼⠢⠌⠳⠝"
+    },
+    "_comment3_": "Section 6_7",
+    "6.7.1 Greater Than With Curved Sides (\"is greater than\")": {
+      "tex": "7≻4≻3",
+      "brf": "#7 ..1 #4 ..1 #3",
+      "input": "<mn>7</mn><mo>&#x227B;</mo><mn>4</mn><mo>&#x227B;</mo><mn>3</mn>",
+      "expected": "⠼⠶⠀⠨⠨⠂⠀⠼⠲⠀⠨⠨⠂⠀⠼⠒"
+    },
+    "6.7.2 Less Than With Curved Sides (\"is less than\")": {
+      "tex": "5 ≺ 9 ≺ 11",
+      "brf": "#5 .\"K #9 .\"K #11",
+      "input": "<mn>5</mn><mo>&#x227A;</mo><mn>9</mn><mo>&#x227A;</mo><mn>11</mn>",
+      "expected": "⠼⠢⠀⠨⠐⠅⠀⠼⠔⠀⠨⠐⠅⠀⠼⠂⠂"
+    },
+    "6.7.3 Arc, Concave Upward": {
+      "tex": "",
+      "brf": "X $A Y",
+      "input": "",
+      "expected": "⠭⠀⠫⠁⠀⠽"
+    },
+    "6.7.4 Arc, Concave Downward": {
+      "tex": "",
+      "brf": "X $' Y",
+      "input": "",
+      "expected": "⠭⠀⠫⠄⠀⠽"
+    },
+    "6.7.5 Equivalence (\"is equivalent to\")": {
+      "tex": "𝑥≎𝑦",
+      "brf": "X @<,< Y",
+      "input": "<mi>&#x1D465;</mi><mo>&#x224E;</mo><mi>&#x1D466;</mi>",
+      "expected": "⠭⠀⠈⠣⠠⠣⠀⠽"
+    },
+    "6.7.6 Identity (Triple Bar): This symbol is used in several different contexts. Most commonly": {
+      "tex": "A+B≡B+A",
+      "brf": ",A+,B _L ,B+,A",
+      "input": "<mi>A</mi><mo>+</mo><mi>B</mi><mo>&#x2261;</mo><mi>B</mi><mo>+</mo><mi>A</mi>",
+      "expected": "⠠⠁⠬⠠⠃⠀⠸⠇⠀⠠⠃⠬⠠⠁"
+    },
+    "6.7.7 Inclusion: This symbol is generally used for sets and their elements, meaning \"is": {
+      "tex": "𝐴⊂𝐷",
+      "brf": ",A _\"K ,D",
+      "input": "<mi>&#x1D434;</mi><mo>&#x2282;</mo><mi>&#x1D437;</mi>",
+      "expected": "⠠⠁⠀⠸⠐⠅⠀⠠⠙"
+    },
+    "6.7.8 Membership: This symbol is generally used for sets and their elements, meaning \"is an": {
+      "tex": "5∈𝐵",
+      "brf": "#5 @E ,B",
+      "input": "<mn>5</mn><mo>&#x2208;</mo><mi>&#x1D435;</mi>",
+      "expected": "⠼⠢⠀⠈⠑⠀⠠⠃"
+    },
+    "6.7.9 Parallel To (\"is parallel to\")": {
+      "tex": "𝐴𝐵 ∥ 𝐶𝐷",
+      "brf": ",A,B $L ,C,D",
+      "input": "<mi>&#x1D434;</mi><mi>&#x1D435;</mi><mo>&#x2225;</mo><mi>&#x1D436;</mi><mi>&#x1D437;</mi>",
+      "expected": "⠠⠁⠠⠃⠀⠫⠇⠀⠠⠉⠠⠙"
+    },
+    "6.7.10 Perpendicular To (\"is perpendicular to\")": {
+      "tex": "𝑃𝑄 ⊥ 𝑅𝑆",
+      "brf": ",P,Q $P ,R,S",
+      "input": "<mi>&#x1D443;</mi><mi>&#x1D444;</mi><mo>&#x22A5;</mo><mi>&#x1D445;</mi><mi>&#x1D446;</mi>",
+      "expected": "⠠⠏⠠⠟⠀⠫⠏⠀⠠⠗⠠⠎"
+    },
+    "\f6.7.11 Relation: When a letter R is used between two expressions to show relation (\"is related": {
+      "tex": "𝐷⊃𝐴",
+      "brf": ",D _.1 ,A",
+      "input": "<mi>&#x1D437;</mi><mo>&#x2283;</mo><mi>&#x1D434;</mi>",
+      "expected": "⠠⠙⠀⠸⠨⠂⠀⠠⠁"
+    },
+    "6.7.13 Reverse Membership: This symbol means \"contains the element\".": {
+      "tex": "𝐵∋5",
+      "brf": ",B @5 #5",
+      "input": "<mi>&#x1D435;</mi><mo>&#x220B;</mo><mn>5</mn>",
+      "expected": "⠠⠃⠀⠈⠢⠀⠼⠢"
+    },
+    "6.7.14 Tilde as a Sign of Comparison: When used as a comparison sign (often encountered in": {
+      "tex": "x  y",
+      "brf": "X @,: Y",
+      "expected": "⠭⠀⠈⠠⠱⠀⠽"
+    },
+    "\f6.7.15 Variation (\"varies as\")": {
+      "tex": "𝑥∝𝑦",
+      "brf": "X _= Y",
+      "input": "<mi>&#x1D465;</mi><mo>&#x221D;</mo><mi>&#x1D466;</mi>",
+      "expected": "⠭⠀⠸⠿⠀⠽"
+    },
+    "Example 6.7-4": {
+      "tex": "{𝑥 ∈ 𝐸|Φ(𝑥)}",
+      "brf": ".(X @E ,E \\ .,F(X).)",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mi>&#x1D465;</mi><mo>&#x2208;</mo><mi>&#x1D438;</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>&#x3A6;</mi><mo stretchy=\"false\">(</mo><mi>&#x1D465;</mi><mo stretchy=\"false\">)</mo></mrow>",
+      "expected": "⠨⠷⠭⠀⠈⠑⠀⠠⠑⠀⠳⠀⠨⠠⠋⠷⠭⠾⠨⠾"
+    },
+    "EXample 6.7-4b": {
+      "tex": "{(𝑥, 𝑦)|𝑥 + 𝑦 < 6} ",
+      "brf": ".((X, Y) \\ X+Y \"K #6.)",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo stretchy=\"false\">(</mo><mi>&#x1D465;</mi><mo>,</mo><mi>&#x1D466;</mi><mo stretchy=\"false\">)</mo><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>&#x1D465;</mi><mo>+</mo><mi>&#x1D466;</mi><mo>&lt;</mo><mn>6</mn></mrow>",
+      "expected": "⠨⠷⠷⠭⠠⠀⠽⠾⠀⠳⠀⠭⠬⠽⠀⠐⠅⠀⠼⠖⠨⠾"
+    },
+    "Example 6.7-5": {
+      "tex": "P(A|B)",
+      "brf": ",P(,A \\ ,B)",
+      "input": "<mi>P</mi><mo stretchy=\"false\">(</mo><mi>A</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>B</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠠⠏⠷⠠⠁⠀⠳⠀⠠⠃⠾"
+    },
+    "Example 6.7-6": {
+      "tex": "{𝑥 ∶ 𝑥 > 0}",
+      "brf": ".(;X_3 X .1 #0.)",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mi>&#x1D465;</mi><mo>&#x2236;</mo><mi>&#x1D465;</mi><mo>&gt;</mo><mn>0</mn></mrow>",
+      "expected": "⠨⠷⠰⠭⠸⠒⠀⠭⠀⠨⠂⠀⠼⠴⠨⠾"
+    },
+    "_comment4_": "Section 6_8",
+    "6.8.1a": {
+      "tex": "𝑎⋝𝑏",
+      "brf": "A :.1 B",
+      "input": "<mi>&#x1D44E;</mi><mo>&#x22DD;</mo><mi>&#x1D44F;</mi>",
+      "expected": "⠁⠀⠱⠨⠂⠀⠃"
+    },
+    "6.8.1b": {
+      "tex": "𝑎⪚𝑏",
+      "brf": "A .K.1 B",
+      "input": "<mi>&#x1D44E;</mi><mo>&#x2A9A;</mo><mi>&#x1D44F;</mi>",
+      "expected": "⠁⠀⠨⠅⠨⠂⠀⠃"
+    },
+    "6.8.1c": {
+      "tex": "𝑥≥𝑦",
+      "brf": "x .1: y",
+      "input": "<mi>&#x1D465;</mi><mo>&#x2265;</mo><mi>&#x1D466;</mi>",
+      "expected": "⠭⠀⠨⠂⠱⠀⠽"
+    },
+    "6.8.1d": {
+      "tex": "|𝑥| ≧ 0",
+      "brf": "\\X\\ .1.K #0",
+      "input": "<mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>&#x1D465;</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mo>&#x2267;</mo><mn>0</mn>",
+      "expected": "⠳⠭⠳⠀⠨⠂⠨⠅⠀⠼⠴"
+    },
+    "6.8.2a": {
+      "tex": "𝐶⊂̅ 𝐵′",
+      "brf": ",C :_\"K ,B'",
+      "input": "<mi>&#x1D436;</mi><mo>&#x2282;</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x305;</mo></mrow><mi>&#x1D435;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow>",
+      "expected": "⠠⠉⠀⠱⠸⠐⠅⠀⠠⠃⠄"
+    },
+    "6.8.2b": {
+      "tex": "𝐶⊂̿ 𝐵′",
+      "brf": ",C .K_\"K ,B'",
+      "input": "<mi>&#x1D436;</mi><mo>&#x2282;</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x33F;</mo></mrow><mi>&#x1D435;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow>",
+      "expected": "⠠⠉⠀⠨⠅⠸⠐⠅⠀⠠⠃⠄"
+    },
+    "6.8.2c": {
+      "tex": "(𝐷 ∩ 𝐸) ⊆ (𝐸 × 𝐸)",
+      "brf": "(,D.%,E) _\"K: (,E@*,E)",
+      "input": "<mo stretchy=\"false\">(</mo><mi>&#x1D437;</mi><mo>&#x2229;</mo><mi>&#x1D438;</mi><mo stretchy=\"false\">)</mo><mo>&#x2286;</mo><mo stretchy=\"false\">(</mo><mi>&#x1D438;</mi><mi>&#xD7;</mi><mi>&#x1D438;</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠠⠙⠨⠩⠠⠑⠾⠀⠸⠐⠅⠱⠀⠷⠠⠑⠈⠡⠠⠑⠾"
+    },
+    "6.8.2d": {
+      "tex": "(𝐷 ∩ 𝐸) ⫅ (𝐸 × 𝐸)",
+      "brf": "(,D.%,E) _\"K.K (,E@*,E)",
+      "input": "<mo stretchy=\"false\">(</mo><mi>&#x1D437;</mi><mo>&#x2229;</mo><mi>&#x1D438;</mi><mo stretchy=\"false\">)</mo><mo>&#x2AC5;</mo><mo stretchy=\"false\">(</mo><mi>&#x1D438;</mi><mi>&#xD7;</mi><mi>&#x1D438;</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠠⠙⠨⠩⠠⠑⠾⠀⠸⠐⠅⠨⠅⠀⠷⠠⠑⠈⠡⠠⠑⠾"
+    },
+    "6.8.3a": {
+      "tex": "𝑋 ∩ 𝑌",
+      "brf": ",X .%: ,Y",
+      "input": "<mi>&#x1D44B;</mi><mo>&#x2229;</mo><mi>&#x1D44C;</mi>",
+      "expected": "⠠⠭⠀⠨⠩⠱⠀⠠⠽"
+    },
+    "6.8.3b": {
+      "tex": "X ∩Y",
+      "brf": ",X .%.K ,Y",
+      "input": "<mi>X</mi><mo>&#x2229;</mo><mi>Y</mi>",
+      "expected": "⠠⠭⠀⠨⠩⠨⠅⠀⠠⠽"
+    },
+    "6.8.4a": {
+      "tex": "𝑣−1⋜5",
+      "brf": "V-1 :\"K #5",
+      "input": "<mi>&#x1D463;</mi><mo>&#x2212;</mo><mn>1</mn><mo>&#x22DC;</mo><mn>5</mn>",
+      "expected": "⠧⠤⠂⠀⠱⠐⠅⠀⠼⠢"
+    },
+    "6.8.4b": {
+      "tex": "𝑣−1⪛5",
+      "brf": "V-1 .K\"K #5",
+      "input": "<mi>&#x1D463;</mi><mo>&#x2212;</mo><mn>1</mn><mo>&#x2A9B;</mo><mn>5</mn>",
+      "expected": "⠧⠤⠂⠀⠨⠅⠐⠅⠀⠼⠢"
+    },
+    "6.8.4c": {
+      "tex": "6≤𝑥≤9",
+      "brf": "#6 \"K: X \"K: #9",
+      "input": "<mn>6</mn><mo>&#x2264;</mo><mi>&#x1D465;</mi><mo>&#x2264;</mo><mn>9</mn>",
+      "expected": "⠼⠖⠀⠐⠅⠱⠀⠭⠀⠐⠅⠱⠀⠼⠔"
+    },
+    "6.8.4d": {
+      "tex": "6⫹𝑥⫹9",
+      "brf": "#6 \"K.K X \"K.K #9",
+      "input": "<mn>6</mn><mo>&#x2AF9;</mo><mi>&#x1D465;</mi><mo>&#x2AF9;</mo><mn>9</mn>",
+      "expected": "⠼⠖⠀⠐⠅⠨⠅⠀⠭⠀⠐⠅⠨⠅⠀⠼⠔"
+    },
+    "6.8.5a": {
+      "tex": "𝐴𝐵𝐷 ∧ 𝐴′𝐵′𝐷′",
+      "brf": ",A,B,D :@% ,A',B',D'",
+      "input": "<mi>&#x1D434;</mi><mi>&#x1D435;</mi><mi>&#x1D437;</mi><mo>&#x2227;</mo><mi>&#x1D434;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow><mi>&#x1D435;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow><mi>&#x1D437;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow>",
+      "expected": "⠠⠁⠠⠃⠠⠙⠀⠱⠈⠩⠀⠠⠁⠄⠠⠃⠄⠠⠙⠄"
+    },
+    "6.8.5b": {
+      "tex": "{𝐴} ⩠ 𝐾",
+      "brf": ".(,A.) @%.K ,K",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mi>&#x1D434;</mi></mrow><mo>&#x2A60;</mo><mi>&#x1D43E;</mi>",
+      "expected": "⠨⠷⠠⠁⠨⠾⠀⠈⠩⠨⠅⠀⠠⠅"
+    },
+    "6.8.5c": {
+      "tex": "𝑝∧𝑞",
+      "brf": "P @%: Q",
+      "input": "<mi>&#x1D45D;</mi><mo>&#x2227;</mo><mi>&#x1D45E;</mi>",
+      "expected": "⠏⠀⠈⠩⠱⠀⠟"
+    },
+    "6.8.6a": {
+      "tex": "𝐴𝐵𝐶 ⊽ 𝐴′𝐵′𝐶′",
+      "brf": ",A,B,C :@+ ,A',B',C'",
+      "input": "<mi>&#x1D434;</mi><mi>&#x1D435;</mi><mi>&#x1D436;</mi><mo>&#x22BD;</mo><mi>&#x1D434;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow><mi>&#x1D435;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow><mi>&#x1D436;</mi><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-pseudoscript=\"true\">&#x2032;</mo></mrow>",
+      "expected": "⠠⠁⠠⠃⠠⠉⠀⠱⠈⠬⠀⠠⠁⠄⠠⠃⠄⠠⠉⠄"
+    },
+    "6.8.6b": {
+      "tex": "𝑃(𝐸 ∨ 𝐹)",
+      "brf": ",P(,E @+: ,F)",
+      "input": "<mi>&#x1D443;</mi><mo stretchy=\"false\">(</mo><mi>&#x1D438;</mi><mo>&#x2228;</mo><mi>&#x1D439;</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠠⠏⠷⠠⠑⠀⠈⠬⠱⠀⠠⠋⠾"
+    },
+    "6.8.7a": {
+      "tex": "𝐵⊃𝐴",
+      "brf": ",B :_.1 ,A",
+      "input": "<mi>&#x1D435;</mi><mo>&#x2283;</mo><mi>&#x1D434;</mi>",
+      "expected": "⠠⠃⠀⠱⠸⠨⠂⠀⠠⠁"
+    },
+    "6.8.7b": {
+      "tex": "𝐷⫆𝐶",
+      "brf": ",D _.1.K ,C",
+      "input": "<mi>&#x1D437;</mi><mo>&#x2AC6;</mo><mi>&#x1D436;</mi>",
+      "expected": "⠠⠙⠀⠸⠨⠂⠨⠅⠀⠠⠉"
+    },
+    "6.8.8a": {
+      "tex": "3.14159 ≈ 3.1416",
+      "brf": "#3.14159 @:@: #3.1416",
+      "input": "<mn>3.14159</mn><mo>&#x2248;</mo><mn>3.1416</mn>",
+      "expected": "⠼⠒⠨⠂⠲⠂⠢⠔⠀⠈⠱⠈⠱⠀⠼⠒⠨⠂⠲⠂⠖"
+    },
+    "6.8.8b": {
+      "tex": "𝐴𝐵𝐶 ≅ 𝐷𝐸𝐹",
+      "brf": ",A,B,C @:.K ,D,E,F",
+      "input": "<mi>&#x1D434;</mi><mi>&#x1D435;</mi><mi>&#x1D436;</mi><mo>&#x2245;</mo><mi>&#x1D437;</mi><mi>&#x1D438;</mi><mi>&#x1D439;</mi>",
+      "expected": "⠠⠁⠠⠃⠠⠉⠀⠈⠱⠨⠅⠀⠠⠙⠠⠑⠠⠋"
+    },
+    "6.8.9": {
+      "tex": "𝐴∪𝐵",
+      "brf": ",A .+: ,B",
+      "input": "<mi>&#x1D434;</mi><mo>&#x222A;</mo><mi>&#x1D435;</mi>",
+      "expected": "⠠⠁⠀⠨⠬⠱⠀⠠⠃"
+    },
+    "_comment5_": "Section 6_9",
+    "6.9.1a": {
+      "tex": "𝑛 ><1",
+      "brf": "N .1\"\"K #1",
+      "input": "<mi>&#x1D45B;</mi><mo>&gt;&lt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠨⠂⠐⠐⠅⠀⠼⠂"
+    },
+    "6.9.1b": {
+      "tex": "𝑛 >=<1",
+      "brf": "N .1\".K\"\"K #1",
+      "input": "<mi>&#x1D45B;</mi><mo>&gt;=&lt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠨⠂⠐⠨⠅⠐⠐⠅⠀⠼⠂"
+    },
+    "6.9.2a": {
+      "tex": "𝑛 <>1",
+      "brf": "N \"K\".1 #1",
+      "input": "<mi>&#x1D45B;</mi><mo>&lt;&gt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠐⠅⠐⠨⠂⠀⠼⠂"
+    },
+    "6.9.2b": {
+      "tex": "𝑛 <=>1",
+      "brf": "N \"K\".K\".1 #1",
+      "input": "<mi>&#x1D45B;</mi><mo>&lt;=&gt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠐⠅⠐⠨⠅⠐⠨⠂⠀⠼⠂"
+    },
+    "_comment5alt_": "Alternatives without explicit italic character.",
+    "6.9.1a_alt": {
+      "tex": "n ><1",
+      "brf": "N .1\"\"K #1",
+      "input": "<mi>n</mi><mo>&gt;&lt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠨⠂⠐⠐⠅⠀⠼⠂"
+    },
+    "6.9.1b_alt": {
+      "tex": "n >=<1",
+      "brf": "N .1\".K\"\"K #1",
+      "input": "<mi>n</mi><mo>&gt;=&lt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠨⠂⠐⠨⠅⠐⠐⠅⠀⠼⠂"
+    },
+    "6.9.2a_alt": {
+      "tex": "n <>1",
+      "brf": "N \"K\".1 #1",
+      "input": "<mi>n</mi><mo>&lt;&gt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠐⠅⠐⠨⠂⠀⠼⠂"
+    },
+    "6.9.2b_alt": {
+      "tex": "n <=>1",
+      "brf": "N \"K\".K\".1 #1",
+      "input": "<mi>n</mi><mo>&lt;=&gt;</mo><mn>1</mn>",
+      "expected": "⠝⠀⠐⠅⠐⠨⠅⠐⠨⠂⠀⠼⠂"
+    },
+    "_comment6_": "Section 6_10",
+    "6.10a": {
+      "tex": "4 × 13 ≠ 14",
+      "brf": "#4@*13 /.K #14",
+      "input": "<mn>4</mn><mi>&#xD7;</mi><mn>13</mn><mo>&#x2260;</mo><mn>14</mn>",
+      "expected": "⠼⠲⠈⠡⠂⠒⠀⠌⠨⠅⠀⠼⠂⠲"
+    },
+    "6.10b": {
+      "tex": "𝐶𝐷 ∦ 𝐸𝐹 ⊥ 𝐺𝐻",
+      "brf": ",C,D /$L ,E,F /$p ,g,h",
+      "input": "<mi>&#x1D436;</mi><mi>&#x1D437;</mi><mo>&#x2226;</mo><mi>&#x1D438;</mi><mi>&#x1D439;</mi><mo>&#x22A5;</mo><mi>&#x1D43A;</mi><mi>&#x1D43B;</mi>",
+      "expected": "⠠⠉⠠⠙⠀⠌⠫⠇⠀⠠⠑⠠⠋⠀⠌⠫⠏⠀⠠⠛⠠⠓"
+    },
+    "6.10c": {
+      "tex": "4≱7",
+      "brf": "#4 /.1: #7",
+      "input": "<mn>4</mn><mo>&#x2271;</mo><mn>7</mn>",
+      "expected": "⠼⠲⠀⠌⠨⠂⠱⠀⠼⠶"
+    },
+    "6.10d": {
+      "tex": "9∉𝐷",
+      "brf": "#9 /@E ,D",
+      "input": "<mn>9</mn><mo>&#x2209;</mo><mi>&#x1D437;</mi>",
+      "expected": "⠼⠔⠀⠌⠈⠑⠀⠠⠙"
+    }
+  }
+}

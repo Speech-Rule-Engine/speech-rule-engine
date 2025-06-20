@@ -1,0 +1,427 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakFractions",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "English Clearspeak Fractions rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Fractions",
+    "Frac001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody></speak>"
+    },
+    "Frac002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 12 <mark name=\"1\"/> over 32 </prosody></speak>"
+    },
+    "Frac002a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> over <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac002b": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"7\"/> over <prosody rate=\"+25%\"> <mark name=\"4\"/> 3 <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "Frac002c": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> <mark name=\"7\"/> over <prosody rate=\"+25%\"> <mark name=\"4\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"5\"/> <say-as interpret-as=\"character\">d</say-as> </prosody> </prosody></speak>"
+    },
+    "Frac002d": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody> <mark name=\"5\"/> over <mark name=\"3\"/> one <mark name=\"4\"/> third </prosody></speak>"
+    },
+    "Frac002e": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> negative <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"3\"/> over <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac002f": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> negative <mark name=\"1\"/> 2 <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"9\"/> over <prosody rate=\"+25%\"> <mark name=\"6\"/> 3 <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "Frac002g": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> <mark name=\"9\"/> over <mark name=\"4\"/> negative <prosody rate=\"+25%\"> <mark name=\"5\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"6\"/> <say-as interpret-as=\"character\">d</say-as> </prosody> </prosody></speak>"
+    },
+    "Frac002h": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody> <mark name=\"7\"/> over <mark name=\"3\"/> negative <mark name=\"4\"/> one <mark name=\"5\"/> third </prosody></speak>"
+    },
+    "Frac003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 13 </prosody></speak>"
+    },
+    "Frac004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 2 </prosody></speak>"
+    },
+    "Frac005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> two <mark name=\"11\"/> thirds </prosody></speak>"
+    },
+    "Frac007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> miles <mark name=\"1\"/> over gallon </prosody></speak>"
+    },
+    "Frac008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> over <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "Frac009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> over 2 </prosody></speak>"
+    },
+    "Frac010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 12 <mark name=\"1\"/> over 32 </prosody></speak>"
+    },
+    "Frac011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <mark name=\"4\"/> over 13 </prosody></speak>"
+    },
+    "Frac012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> over 2 </prosody></speak>"
+    },
+    "Frac013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> over <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> over <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"10\"/> 2 <mark name=\"11\"/> over 3 </prosody></speak>"
+    },
+    "Frac015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> miles <mark name=\"1\"/> over gallon </prosody></speak>"
+    },
+    "Frac016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> over <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "Frac017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> over 2 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 12 <mark name=\"1\"/> over 32 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <mark name=\"4\"/> over 13 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> over 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> over <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> over <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"10\"/> 2 <mark name=\"11\"/> over 3 <break time=\"250ms\"/> <mark name=\"12\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> miles <mark name=\"1\"/> over gallons <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> over <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction with numerator <mark name=\"0\"/> 1 <break time=\"250ms\"/> <mark name=\"1\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction with numerator <mark name=\"0\"/> 12 <break time=\"250ms\"/> <mark name=\"1\"/> and denominator 32 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the fraction with numerator <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 13 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"12\"/> the fraction with numerator <mark name=\"10\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 3 <break time=\"250ms\"/> <mark name=\"12\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction with numerator <mark name=\"0\"/> miles <break time=\"250ms\"/> <mark name=\"1\"/> and denominator gallon <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction with numerator <mark name=\"0\"/> 1 <break time=\"250ms\"/> <mark name=\"1\"/> and denominator 2 </prosody></speak>"
+    },
+    "Frac033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction with numerator <mark name=\"0\"/> 12 <break time=\"250ms\"/> <mark name=\"1\"/> and denominator 32 </prosody></speak>"
+    },
+    "Frac034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the fraction with numerator <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 13 </prosody></speak>"
+    },
+    "Frac035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 2 </prosody></speak>"
+    },
+    "Frac036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"12\"/> the fraction with numerator <mark name=\"10\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator 3 </prosody></speak>"
+    },
+    "Frac038": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction with numerator <mark name=\"0\"/> miles <break time=\"250ms\"/> <mark name=\"1\"/> and denominator gallon </prosody></speak>"
+    },
+    "Frac039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction with numerator <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "Frac040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction <mark name=\"0\"/> 1 <mark name=\"1\"/> over 2 </prosody></speak>"
+    },
+    "Frac041": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction <mark name=\"0\"/> 12 <mark name=\"1\"/> over 32 </prosody></speak>"
+    },
+    "Frac042": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the fraction <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <mark name=\"4\"/> over 13 </prosody></speak>"
+    },
+    "Frac043": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the fraction <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> over 2 </prosody></speak>"
+    },
+    "Frac044": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> over <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac045": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> over <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"12\"/> the fraction <mark name=\"10\"/> 2 <mark name=\"11\"/> over 3 </prosody></speak>"
+    },
+    "Frac046": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the fraction <mark name=\"0\"/> miles <mark name=\"1\"/> over gallon </prosody></speak>"
+    },
+    "Frac047": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the fraction <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> over <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "Frac048": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> per 2 </prosody></speak>"
+    },
+    "Frac049": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 12 <mark name=\"1\"/> per 32 </prosody></speak>"
+    },
+    "Frac050": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <mark name=\"4\"/> per 13 </prosody></speak>"
+    },
+    "Frac051": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"4\"/> per 2 </prosody></speak>"
+    },
+    "Frac052": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> per <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac053": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"7\"/> per <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <break time=\"250ms\"/> <mark name=\"10\"/> 2 <mark name=\"11\"/> per 3 </prosody></speak>"
+    },
+    "Frac054": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> miles <mark name=\"1\"/> per gallon </prosody></speak>"
+    },
+    "Frac055": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> per <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "Frac056": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody></speak>"
+    },
+    "Frac057": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> twelve <mark name=\"1\"/> thirty seconds </prosody></speak>"
+    },
+    "Frac058": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 13 </prosody></speak>"
+    },
+    "Frac059": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 2 </prosody></speak>"
+    },
+    "Frac060": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Frac061": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> two <mark name=\"11\"/> thirds </prosody></speak>"
+    },
+    "Frac062": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> miles <mark name=\"1\"/> over gallon </prosody></speak>"
+    },
+    "Frac063": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> over <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "Frac064": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody></speak>"
+    },
+    "Frac065": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 12 <mark name=\"1\"/> over 32 <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac066": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> 2 <mark name=\"1\"/> plus <mark name=\"2\"/> 3 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 13 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac067": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac068": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "Frac069": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"8\" kind=\"LAST\"/> end fraction <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> two <mark name=\"11\"/> thirds </prosody></speak>"
+    },
+    "Frac070": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> miles <mark name=\"1\"/> over gallons </prosody></speak>"
+    },
+    "Frac071": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> miles <mark name=\"7\"/> over <mark name=\"4\"/> 3 <mark name=\"5\"/> gallons </prosody></speak>"
+    },
+    "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
+    "FrTxt001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"2\"/> miles <mark name=\"9\"/> over <mark name=\"5\"/> 3 <mark name=\"7\"/> gallons </prosody></speak>"
+    },
+    "FrTxt002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> rise <mark name=\"1\"/> over run </prosody></speak>"
+    },
+    "FrTxt003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> successful outcomes <mark name=\"1\"/> over total outcomes </prosody></speak>"
+    },
+    "FrTxt004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 6 <mark name=\"1\"/> ways of rolling <say-as interpret-as=\"character\">a</say-as> 7 <mark name=\"7\"/> over <mark name=\"4\"/> 36 <mark name=\"5\"/> ways of rolling the pair of dice </prosody></speak>"
+    },
+    "_comment3_": " Nested Fractions",
+    "NestFrac001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody> <mark name=\"5\"/> over <mark name=\"3\"/> one <mark name=\"4\"/> third </prosody></speak>"
+    },
+    "NestFrac002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"4\"/> over <mark name=\"2\"/> one <mark name=\"3\"/> third </prosody></speak>"
+    },
+    "NestFrac003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half </prosody> <mark name=\"3\"/> over 3 </prosody></speak>"
+    },
+    "NestFrac004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"3\"/> over <mark name=\"1\"/> two <mark name=\"2\"/> thirds </prosody></speak>"
+    },
+    "NestFrac005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"2\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> 11 <mark name=\"1\"/> over 32 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <break time=\"250ms\"/> <mark name=\"3\"/> 16 <mark name=\"4\"/> over 51 </prosody></speak>"
+    },
+    "NestFrac006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> fraction with numerator 11 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <break time=\"250ms\"/> <mark name=\"5\"/> the <mark name=\"1\"/> fraction with numerator 32 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator <break time=\"250ms\"/> <mark name=\"2\"/> 16 <mark name=\"3\"/> over 51 </prosody></speak>"
+    },
+    "NestFrac007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> 4 <mark name=\"3\"/> over <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> and denominator 2 </prosody></speak>"
+    },
+    "NestFrac008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"0\"/> fraction with numerator 3 <break time=\"250ms\"/> <mark name=\"6\"/> and denominator <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <break time=\"250ms\"/> <mark name=\"3\"/> 4 <mark name=\"4\"/> over <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NestFrac009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"2\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> 10 <mark name=\"1\"/> over 22 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <mark name=\"3\"/> one <mark name=\"4\"/> half </prosody></speak>"
+    },
+    "NestFrac010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <mark name=\"2\"/> two <mark name=\"3\"/> thirds <break time=\"250ms\"/> <mark name=\"11\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> minus <mark name=\"8\"/> two <mark name=\"9\"/> thirds </prosody></speak>"
+    },
+    "NestFrac011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> over 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> minus <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> over 2 </prosody></speak>"
+    },
+    "NestFrac012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"16\"/> the <mark name=\"11\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> 1 <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> and denominator <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> plus <mark name=\"14\"/> 1 </prosody></speak>"
+    },
+    "NestFrac013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"20\"/> the <mark name=\"13\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> 4 <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> one <mark name=\"11\"/> half <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"15\"/> plus <break time=\"250ms\"/> <mark name=\"16\"/> 1 <mark name=\"17\"/> over 16 </prosody></speak>"
+    },
+    "NestFrac014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"9\"/> the <mark name=\"2\"/> fraction with numerator <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> and denominator <mark name=\"3\"/> 1 <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"5\"/> 2 <mark name=\"6\"/> over <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NestFrac015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"15\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 3 <break time=\"250ms\"/> <mark name=\"14\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator 2 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 3 </prosody></speak>"
+    },
+    "NestFrac016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"17\"/> the <mark name=\"2\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"3\"/> 1 <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"15\"/> the <mark name=\"5\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"14\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> 1 <mark name=\"10\"/> plus <mark name=\"11\"/> 1 </prosody></speak>"
+    },
+    "NestFrac017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"17\"/> the <mark name=\"2\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"3\"/> 1 <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"15\"/> the <mark name=\"5\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"14\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> 1 <mark name=\"10\"/> plus <mark name=\"11\"/> dot dot dot </prosody></speak>"
+    },
+    "NestFrac018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> sub 0 <break time=\"250ms\"/> <mark name=\"3\"/> plus <break time=\"250ms\"/> <mark name=\"25\"/> the <mark name=\"4\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"24\"/> and denominator <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> sub 1 <break time=\"250ms\"/> <mark name=\"8\"/> plus <break time=\"250ms\"/> <mark name=\"23\"/> the <mark name=\"9\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"22\"/> and denominator <break time=\"250ms\"/> <mark name=\"10\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"11\"/> sub 2 <break time=\"250ms\"/> <mark name=\"13\"/> plus <break time=\"250ms\"/> <mark name=\"21\"/> the <mark name=\"14\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"20\"/> and denominator <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"16\"/> sub 3 <break time=\"250ms\"/> <mark name=\"18\"/> plus <mark name=\"19\"/> dot dot dot </prosody></speak>"
+    },
+    "NestFrac019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half <mark name=\"5\"/> over <mark name=\"3\"/> one <mark name=\"4\"/> third </prosody></speak>"
+    },
+    "NestFrac020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <break time=\"250ms\"/> <mark name=\"1\"/> 2 <mark name=\"4\"/> over <mark name=\"2\"/> one <mark name=\"3\"/> third <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> one <mark name=\"1\"/> half <mark name=\"3\"/> over 3 <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"3\"/> over <mark name=\"1\"/> two <mark name=\"2\"/> thirds <break time=\"250ms\"/> <mark name=\"4\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"2\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> 11 <mark name=\"1\"/> over 32 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <break time=\"250ms\"/> <mark name=\"3\"/> 16 <mark name=\"4\"/> over 51 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> fraction with numerator 11 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <break time=\"250ms\"/> <mark name=\"5\"/> the <mark name=\"1\"/> fraction with numerator 32 <break time=\"250ms\"/> <mark name=\"4\"/> and denominator <break time=\"250ms\"/> <mark name=\"2\"/> 16 <mark name=\"3\"/> over 51 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> 4 <mark name=\"3\"/> over <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> and denominator 2 <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac026": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"0\"/> fraction with numerator 3 <break time=\"250ms\"/> <mark name=\"6\"/> and denominator <mark name=\"1\"/> 2 <mark name=\"2\"/> plus <break time=\"250ms\"/> <mark name=\"3\"/> 4 <mark name=\"4\"/> over <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"2\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> 10 <mark name=\"1\"/> over 22 <break time=\"250ms\"/> <mark name=\"5\"/> and denominator <mark name=\"3\"/> one <mark name=\"4\"/> half <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <mark name=\"2\"/> two <mark name=\"3\"/> thirds <break time=\"250ms\"/> <mark name=\"11\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> minus <mark name=\"8\"/> two <mark name=\"9\"/> thirds <break time=\"250ms\"/> <mark name=\"12\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> over 2 <break time=\"250ms\"/> <mark name=\"11\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> minus <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> over 2 <break time=\"250ms\"/> <mark name=\"12\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"16\"/> the <mark name=\"11\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> 1 <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> and denominator <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> plus <mark name=\"14\"/> 1 <break time=\"250ms\"/> <mark name=\"16\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"20\"/> the <mark name=\"13\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"3\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> 1 <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> minus <mark name=\"6\"/> 4 <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> one <mark name=\"11\"/> half <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"15\"/> plus <break time=\"250ms\"/> <mark name=\"16\"/> 1 <mark name=\"17\"/> over 16 <break time=\"250ms\"/> <mark name=\"20\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"9\"/> the <mark name=\"2\"/> fraction with numerator <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> and denominator <mark name=\"3\"/> 1 <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"5\"/> 2 <mark name=\"6\"/> over <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"9\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"15\"/> the <mark name=\"5\"/> fraction with numerator <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 3 <break time=\"250ms\"/> <mark name=\"14\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator 2 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 3 <break time=\"250ms\"/> <mark name=\"15\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"17\"/> the <mark name=\"2\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"3\"/> 1 <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"15\"/> the <mark name=\"5\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"14\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> 1 <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"17\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> plus <break time=\"250ms\"/> <mark name=\"17\"/> the <mark name=\"2\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"3\"/> 1 <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"15\"/> the <mark name=\"5\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"14\"/> and denominator <mark name=\"6\"/> 1 <mark name=\"7\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> 1 <mark name=\"10\"/> plus <mark name=\"11\"/> dot dot dot <break time=\"250ms\"/> <mark name=\"17\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "NestFrac036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> sub 0 <break time=\"250ms\"/> <mark name=\"3\"/> plus <break time=\"250ms\"/> <mark name=\"25\"/> the <mark name=\"4\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"24\"/> and denominator <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> sub 1 <break time=\"250ms\"/> <mark name=\"8\"/> plus <break time=\"250ms\"/> <mark name=\"23\"/> the <mark name=\"9\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"22\"/> and denominator <break time=\"250ms\"/> <mark name=\"10\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"11\"/> sub 2 <break time=\"250ms\"/> <mark name=\"13\"/> plus <break time=\"250ms\"/> <mark name=\"21\"/> the <mark name=\"14\"/> fraction with numerator 1 <break time=\"250ms\"/> <mark name=\"20\"/> and denominator <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"16\"/> sub 3 <break time=\"250ms\"/> <mark name=\"18\"/> plus <mark name=\"19\"/> dot dot dot <break time=\"250ms\"/> <mark name=\"25\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    },
+    "_comment4_": " Fractions with Functions",
+    "Fracfunct001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"13\"/> over <mark name=\"7\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"11\"/> of <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Fracfunct002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"23\"/> the <mark name=\"15\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> plus <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"22\"/> and denominator <mark name=\"16\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"20\"/> of <mark name=\"18\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Fracfunct003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"17\"/> the <mark name=\"9\"/> fraction with numerator <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"10\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"14\"/> of <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Fracfunct004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"7\"/> over 2 </prosody></speak>"
+    },
+    "Fracfunct005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"7\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Fracfunct006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"20\"/> the <mark name=\"0\"/> fraction with numerator 2 <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <mark name=\"1\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"5\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "Fracfunct007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"7\"/> over <mark name=\"4\"/> cosine <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Fracfunct008": {
+      "expected": "sine, open paren, x plus y, close paren, over, cosine, open paren, x plus y, close paren"
+    },
+    "Fracfunct009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the <mark name=\"9\"/> fraction with numerator <mark name=\"0\"/> sine <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> cosine <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> and denominator <mark name=\"10\"/> cosine <mark name=\"11\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Fracfunct010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> 2 <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"13\"/> over <mark name=\"7\"/> cosine <prosody rate=\"+25%\"> <mark name=\"8\"/> 3 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Fracfunct011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"20\"/> the <mark name=\"9\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> the sine <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <break time=\"250ms\"/> <mark name=\"10\"/> the cosine <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> plus <mark name=\"14\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> close paren </prosody></speak>"
+    },
+    "Fracfunct012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"19\"/> over <mark name=\"10\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"17\"/> of <prosody rate=\"+25%\"> <mark name=\"12\"/> 3 <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Fracfunct013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> log <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"7\"/> over <mark name=\"4\"/> log <mark name=\"5\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Fracfunct014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> log <mark name=\"1\"/> 2 <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"13\"/> over <mark name=\"7\"/> log <prosody rate=\"+25%\"> <mark name=\"8\"/> 3 <mark name=\"9\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "Fracfunct015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"11\"/> over <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"6\"/> log <mark name=\"7\"/> base 5 <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Fracfunct016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> 2 <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"17\"/> over <break time=\"250ms\"/> <mark name=\"11\"/> the <mark name=\"9\"/> log <mark name=\"10\"/> base 5 <mark name=\"15\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"12\"/> 3 <mark name=\"13\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "Fracfunct017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the <mark name=\"9\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"13\"/> and denominator <mark name=\"10\"/> log <mark name=\"11\"/> <say-as interpret-as=\"character\">y</say-as> </prosody></speak>"
+    },
+    "Fracfunct018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"17\"/> over <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"10\"/> sub 1 <break time=\"250ms\"/> <mark name=\"15\"/> of <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "name": "AfrikaansMathspeakCoverage",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Afrikaans Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment0_": "Letter related disjunctive rules.",
+    "_comment1_": "number-baseline for greekletter",
+    "BaselineNumberGreek_default": {
+      "expected": "alfa Basislyn 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alfa Basis 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alfa Basis 2"
+    },
+    "_comment2_": "number-baseline for otherletter",
+    "BaselineNumberOther_default": {
+      "expected": "normaal first transfinite cardinal Basislyn 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "normaal first transfinite cardinal Basis 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "normaal first transfinite cardinal Basis 2"
+    },
+    "_comment3_": "number-baseline for greekletter",
+    "BaselineNumberFontGreek_default": {
+      "expected": "alfa Basislyn bold 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alfa Basis bold 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alfa Basis bold 2"
+    },
+    "_comment4_": "number-baseline for otherletter",
+    "BaselineNumberFontOther_default": {
+      "expected": "normaal first transfinite cardinal Basislyn bold 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "normaal first transfinite cardinal Basis bold 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "normaal first transfinite cardinal Basis bold 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alfa bostaaf"
+    },
+    "OverbarOther_default": {
+      "expected": "normaal first transfinite cardinal bostaaf"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alfa onderstaaf"
+    },
+    "UnderbarOther_default": {
+      "expected": "normaal first transfinite cardinal onderstaaf"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alfa oor tilde"
+    },
+    "OvertildeOther_default": {
+      "expected": "normaal first transfinite cardinal oor tilde"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alfa onder tilde"
+    },
+    "UndertildeOther_default": {
+      "expected": "normaal first transfinite cardinal onder tilde"
+    },
+    "_comment5_": "set rules",
+    "SetEmpty_default": {
+      "expected": "leë versameling"
+    },
+    "SetEmpty_brief": {
+      "expected": "leë versameling"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "leë versameling"
+    },
+    "SetSingleton_default": {
+      "expected": "begin versameling a End versameling"
+    },
+    "SetSingleton_brief": {
+      "expected": "begin versameling a End versameling"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "Versameling a End Versameling"
+    },
+    "SetCollection_default": {
+      "expected": "begin versameling a komma b End versameling"
+    },
+    "SetCollection_brief": {
+      "expected": "begin versameling a komma b End versameling"
+    },
+    "SetCollection_sbrief": {
+      "expected": "Versameling a komma b End Versameling"
+    },
+    "SetExtended_default": {
+      "expected": "begin versameling a komma b End versameling"
+    },
+    "SetExtended_brief": {
+      "expected": "begin versameling a komma b End versameling"
+    },
+    "SetExtended_sbrief": {
+      "expected": "Versameling a komma b End Versameling"
+    },
+    "NumberSet": {
+      "expected": "hoofletter C dubbelgeslaan"
+    },
+    "LimitLower0_default": {
+      "expected": "Pas aan onder limit met lyn Onderskrif a is gelyk aan 5 End skrifte Onderskrif b is gelyk aan 3 End skrifte"
+    },
+    "LimitLower1_default": {
+      "expected": "limit Onderskrif n Boskrif 2 End skrifte Boskrif x End skrifte"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "Begin uitleg 1. Ry  a 2. Ry  Leeg End uitleg"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c 1 h Onderskrif 4 minus 2 s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan c 2 h Onderskrif 4 minus 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h Onderskrif 4 minus 2 s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk kleiner of gelyk aan c 2 h Onderskrif 4 minus 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h Onderskrif 4 minus 2 s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk kleiner of gelyk aan c 2 h Onderskrif 4 minus 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c 1 h Onderskrif 4 minus 2 s Basislyn kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan c 2 h Onderskrif 4 minus 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h Onderskrif 4 minus 2 s Basis kleiner of gelyk aan BeginBreuk 1 Oor 2 hoofletter T EndBreuk is gelyk aan c 2 h Onderskrif 4 minus 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h Onderskrif 4 minus 2 s Basis kleiner of gelyk aan Breuk 1 Oor 2 hoofletter T End breuk is gelyk aan c 2 h Onderskrif 4 minus 2 s"
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "name": "SwedishClearspeakCollapse",
+  "locale": "sv",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Swedish Clearspeak Collapse tests.",
+  "domain": "clearspeak",
+  "active": "CollapseSwedish",
+  "exclude": [
+    "CollapsedAddition_brief",
+    "CollapsedAddition_sbrief",
+    "CollapsedBigop_brief",
+    "CollapsedBigop_sbrief",
+    "CollapsedBinomial_brief",
+    "CollapsedBinomial_sbrief",
+    "CollapsedCases_brief",
+    "CollapsedCases_sbrief",
+    "CollapsedCell_brief",
+    "CollapsedCell_sbrief",
+    "CollapsedContinuedFraction_brief",
+    "CollapsedContinuedFraction_sbrief",
+    "CollapsedDeterminant_brief",
+    "CollapsedDeterminant_sbrief",
+    "CollapsedFraction_brief",
+    "CollapsedFraction_sbrief",
+    "CollapsedFunction_brief",
+    "CollapsedFunction_sbrief",
+    "CollapsedIdentifier_brief",
+    "CollapsedIdentifier_sbrief",
+    "CollapsedInfixop_brief",
+    "CollapsedInfixop_sbrief",
+    "CollapsedIntegral_brief",
+    "CollapsedIntegral_sbrief",
+    "CollapsedLim_brief",
+    "CollapsedLim_sbrief",
+    "CollapsedLine_brief",
+    "CollapsedLine_sbrief",
+    "CollapsedMatrix_brief",
+    "CollapsedMatrix_sbrief",
+    "CollapsedMixedNumber_brief",
+    "CollapsedMixedNumber_sbrief",
+    "CollapsedMultiplication_brief",
+    "CollapsedMultiplication_sbrief",
+    "CollapsedMultirel_brief",
+    "CollapsedMultirel_sbrief",
+    "CollapsedNumber_brief",
+    "CollapsedNumber_sbrief",
+    "CollapsedPunctuated_brief",
+    "CollapsedPunctuated_sbrief",
+    "CollapsedRelation_brief",
+    "CollapsedRelation_sbrief",
+    "CollapsedRelationSeq_brief",
+    "CollapsedRelationSeq_sbrief",
+    "CollapsedRoot_brief",
+    "CollapsedRoot_sbrief",
+    "CollapsedRootNested_brief",
+    "CollapsedRootNested_sbrief",
+    "CollapsedRow_brief",
+    "CollapsedRow_sbrief",
+    "CollapsedRowvector_brief",
+    "CollapsedRowvector_sbrief",
+    "CollapsedSqrt_brief",
+    "CollapsedSqrt_sbrief",
+    "CollapsedSqrtNested_brief",
+    "CollapsedSqrtNested_sbrief",
+    "CollapsedSquarematrix_brief",
+    "CollapsedSquarematrix_sbrief",
+    "CollapsedSubscript_brief",
+    "CollapsedSubscript_sbrief",
+    "CollapsedSubsup_brief",
+    "CollapsedSubsup_sbrief",
+    "CollapsedSuperscript_brief",
+    "CollapsedSuperscript_sbrief",
+    "CollapsedTable_brief",
+    "CollapsedTable_sbrief",
+    "CollapsedText_brief",
+    "CollapsedText_sbrief",
+    "CollapsedVarAddition_brief",
+    "CollapsedVarAddition_sbrief",
+    "CollapsedVarCases_brief",
+    "CollapsedVarCases_sbrief",
+    "CollapsedVarDeterminant_brief",
+    "CollapsedVarDeterminant_sbrief",
+    "CollapsedVarMatrix_brief",
+    "CollapsedVarMatrix_sbrief",
+    "CollapsedVarMultiplication_brief",
+    "CollapsedVarMultiplication_sbrief",
+    "CollapsedVarMultirel_brief",
+    "CollapsedVarMultirel_sbrief",
+    "CollapsedVarPunctuated_brief",
+    "CollapsedVarPunctuated_sbrief",
+    "CollapsedVarRelation_brief",
+    "CollapsedVarRelation_sbrief",
+    "CollapsedVarVector_brief",
+    "CollapsedVarVector_sbrief",
+    "CollapsedVector_brief",
+    "CollapsedVector_sbrief"
+  ],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "kollapsad Summa med 2 summander"
+    },
+    "CollapsedBigop_default": {
+      "expected": "kollapsad summa"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "kollapsad binom"
+    },
+    "CollapsedCases_default": {
+      "expected": "kollapsad case-sats med 2 case"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "kollapsad förlängt bråk"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "kollapsad 2-dimensionell determinant"
+    },
+    "CollapsedFraction_default": {
+      "expected": "kollapsad bråk"
+    },
+    "CollapsedFunction_default": {
+      "expected": "kollapsad funktionsuttryck"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "kollapsad lång identifierare"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "kollapsad division med 2 element"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "kollapsad integral"
+    },
+    "CollapsedLim_default": {
+      "expected": "kollapsad gränsfunktion"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "kollapsad 3 gånger 2 matris"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "kollapsad långt blandat nummer"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "kollapsad produkt med 2 faktorer"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "kollapsad sambandssekvens med 3 element"
+    },
+    "CollapsedNumber_default": {
+      "expected": "kollapsad långt nummer"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "kollapsad kommaseparerad lista med längden 3"
+    },
+    "CollapsedRelation_default": {
+      "expected": "kollapsad likhet"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "kollapsad likhetsekvens med 3 element"
+    },
+    "CollapsedRoot_default": {
+      "expected": "kollapsad rot med index 3"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "kollapsad nästlad rot med index 3"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "kollapsad 2-dimensionell radvektor"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "kollapsad kvadratrot"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "kollapsad nästlad kvadratrot"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "kollapsad 2-dimensionell kvadratisk matris"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "kollapsad uttryck med index"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "kollapsad potens med index"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "kollapsad potens"
+    },
+    "CollapsedTable_default": {
+      "expected": "kollapsad tabell med 2 rader och 2 kolumner"
+    },
+    "CollapsedText_default": {
+      "expected": "kollapsad text"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "kollapsad summa med varierande antal summander"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "kollapsad case-sats med varierande antal case"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "kollapsad n-dimensionell determinant"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "kollapsad n gånger m-dimensionell matris"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "kollapsad produkt med varierande antal faktorer"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "kollapsad sambandssekvens med varierande antal element"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "kollapsad kommaseparerad lista med varierande längd"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "kollapsad likhetsekvens med varierande antal element"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "kollapsad n-dimensionell vektor"
+    },
+    "CollapsedVector_default": {
+      "expected": "kollapsad 3-dimensionell vektor"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "kollapsad subtraktion med varierande antal element"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "kollapsad subtraktion med varierande antal element"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "kollapsad subtraktion med varierande antal element"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "kollapsad produkt med 3 faktorer"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "kollapsad produkt med 3 faktorer"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "kollapsad produkt med 3 faktorer"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "kollapsad produkt med varierande antal faktorer"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "kollapsad pilsekvens med varierande antal element"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "kollapsad pil"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "kollapsad n-dimensionell radvektor"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "kollapsad rot med index 3 slutindex a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "kollapsad nästlad rot med index 3 slutindex a"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "factory": "semanticMap",
+  "map": "FencesHoriz",
+  "information": "Horizontal fence pairs.",
+  "tests": {
+    "(": {
+      "expected": ")"
+    },
+    "[": {
+      "expected": "]"
+    },
+    "{": {
+      "expected": "}"
+    },
+    "⁅": {
+      "expected": "⁆"
+    },
+    "〈": {
+      "expected": "〉"
+    },
+    "❨": {
+      "expected": "❩"
+    },
+    "❪": {
+      "expected": "❫"
+    },
+    "❬": {
+      "expected": "❭"
+    },
+    "❮": {
+      "expected": "❯"
+    },
+    "❰": {
+      "expected": "❱"
+    },
+    "❲": {
+      "expected": "❳"
+    },
+    "❴": {
+      "expected": "❵"
+    },
+    "⟅": {
+      "expected": "⟆"
+    },
+    "⟦": {
+      "expected": "⟧"
+    },
+    "⟨": {
+      "expected": "⟩"
+    },
+    "⟪": {
+      "expected": "⟫"
+    },
+    "⟬": {
+      "expected": "⟭"
+    },
+    "⟮": {
+      "expected": "⟯"
+    },
+    "⦃": {
+      "expected": "⦄"
+    },
+    "⦅": {
+      "expected": "⦆"
+    },
+    "⦇": {
+      "expected": "⦈"
+    },
+    "⦉": {
+      "expected": "⦊"
+    },
+    "⦋": {
+      "expected": "⦌"
+    },
+    "⦍": {
+      "expected": "⦎"
+    },
+    "⦏": {
+      "expected": "⦐"
+    },
+    "⦑": {
+      "expected": "⦒"
+    },
+    "⦓": {
+      "expected": "⦔"
+    },
+    "⦕": {
+      "expected": "⦖"
+    },
+    "⦗": {
+      "expected": "⦘"
+    },
+    "⧘": {
+      "expected": "⧙"
+    },
+    "⧚": {
+      "expected": "⧛"
+    },
+    "⧼": {
+      "expected": "⧽"
+    },
+    "⸢": {
+      "expected": "⸣"
+    },
+    "⸤": {
+      "expected": "⸥"
+    },
+    "⸦": {
+      "expected": "⸧"
+    },
+    "⸨": {
+      "expected": "⸩"
+    },
+    "〈": {
+      "expected": "〉"
+    },
+    "《": {
+      "expected": "》"
+    },
+    "「": {
+      "expected": "」"
+    },
+    "『": {
+      "expected": "』"
+    },
+    "【": {
+      "expected": "】"
+    },
+    "〔": {
+      "expected": "〕"
+    },
+    "〖": {
+      "expected": "〗"
+    },
+    "〘": {
+      "expected": "〙"
+    },
+    "〚": {
+      "expected": "〛"
+    },
+    "﴾": {
+      "expected": "﴿"
+    },
+    "︗": {
+      "expected": "︘"
+    },
+    "﹙": {
+      "expected": "﹚"
+    },
+    "﹛": {
+      "expected": "﹜"
+    },
+    "﹝": {
+      "expected": "﹞"
+    },
+    "（": {
+      "expected": "）"
+    },
+    "［": {
+      "expected": "］"
+    },
+    "｛": {
+      "expected": "｝"
+    },
+    "｟": {
+      "expected": "｠"
+    },
+    "｢": {
+      "expected": "｣"
+    },
+    "⌈": {
+      "expected": "⌉"
+    },
+    "⌊": {
+      "expected": "⌋"
+    },
+    "⌌": {
+      "expected": "⌍"
+    },
+    "⌎": {
+      "expected": "⌏"
+    },
+    "⌜": {
+      "expected": "⌝"
+    },
+    "⌞": {
+      "expected": "⌟"
+    },
+    "⎛": {
+      "expected": "⎞"
+    },
+    "⎜": {
+      "expected": "⎟"
+    },
+    "⎝": {
+      "expected": "⎠"
+    },
+    "⎡": {
+      "expected": "⎤"
+    },
+    "⎢": {
+      "expected": "⎥"
+    },
+    "⎣": {
+      "expected": "⎦"
+    },
+    "⎧": {
+      "expected": "⎫"
+    },
+    "⎨": {
+      "expected": "⎬"
+    },
+    "⎩": {
+      "expected": "⎭"
+    },
+    "⎰": {
+      "expected": "⎱"
+    }
+  }
+}

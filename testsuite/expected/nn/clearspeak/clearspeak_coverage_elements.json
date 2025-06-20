@@ -1,0 +1,159 @@
+{
+  "name": "NynorskClearspeakCoverageElements",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_elements.json",
+  "information": "Nynorsk Clearspeak Coverage for Elements symbol tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "In_set_0": {
+      "expected": "heile mengda z i A med z"
+    },
+    "In_set_1": {
+      "expected": "heile mengda z i A med z"
+    },
+    "In_set_2": {
+      "expected": "heile mengda z ikkje i A med z"
+    },
+    "In_set_3": {
+      "expected": "heile mengda A inneheld som medlem z med z"
+    },
+    "In_set_4": {
+      "expected": "heile mengda A inneheld som medlem z med z"
+    },
+    "In_set_5": {
+      "expected": "heile mengda A inneheld ikkje som medlem z med z"
+    },
+    "Free_standing_0": {
+      "expected": "z er eit element av A"
+    },
+    "Free_standing_1": {
+      "expected": "z er eit element av A"
+    },
+    "Free_standing_2": {
+      "expected": "z er ikkje eit element av A"
+    },
+    "Free_standing_3": {
+      "expected": "A inneheld som medlem z"
+    },
+    "Free_standing_4": {
+      "expected": "A inneheld som medlem z"
+    },
+    "Free_standing_5": {
+      "expected": "A inneheld ikkje som medlem z"
+    },
+    "Under_bigop_0": {
+      "expected": "sum over z er eit element av A"
+    },
+    "Under_bigop_1": {
+      "expected": "sum over z er eit element av A"
+    },
+    "Under_bigop_2": {
+      "expected": "sum over z er ikkje eit element av A"
+    },
+    "Under_bigop_3": {
+      "expected": "sum over A inneheld som medlem z"
+    },
+    "Under_bigop_4": {
+      "expected": "sum over A inneheld som medlem z"
+    },
+    "Under_bigop_5": {
+      "expected": "sum over A inneheld ikkje som medlem z"
+    },
+    "Preferences_in_0": {
+      "expected": "z er eit element av A"
+    },
+    "Preferences_in_1": {
+      "expected": "heile mengda z i A med z"
+    },
+    "Preferences_in_2": {
+      "expected": "sum over z er eit element av A"
+    },
+    "Preferences_in_3": {
+      "expected": "z er eit element av A"
+    },
+    "Preferences_in_4": {
+      "expected": "heile mengda z medlem av A med z"
+    },
+    "Preferences_in_5": {
+      "expected": "sum over z er eit element av A"
+    },
+    "Preferences_in_6": {
+      "expected": "z er eit element av A"
+    },
+    "Preferences_in_7": {
+      "expected": "heile mengda z medlem av A med z"
+    },
+    "Preferences_in_8": {
+      "expected": "sum over z er eit element av A"
+    },
+    "Preferences_in_9": {
+      "expected": "z er i A"
+    },
+    "Preferences_in_10": {
+      "expected": "heile mengda z i A med z"
+    },
+    "Preferences_in_11": {
+      "expected": "sum over z er i A"
+    },
+    "Preferences_in_12": {
+      "expected": "z tilhøyrer A"
+    },
+    "Preferences_in_13": {
+      "expected": "heile mengda z tilhøyrande A med z"
+    },
+    "Preferences_in_14": {
+      "expected": "sum over z tilhøyrer A"
+    },
+    "Preferences_not_in_0": {
+      "expected": "z er ikkje eit element av A"
+    },
+    "Preferences_not_in_1": {
+      "expected": "heile mengda z ikkje i A med z"
+    },
+    "Preferences_not_in_2": {
+      "expected": "sum over z er ikkje eit element av A"
+    },
+    "Preferences_not_in_3": {
+      "expected": "z er ikkje eit element av A"
+    },
+    "Preferences_not_in_4": {
+      "expected": "heile mengda z ikkje eit element av A med z"
+    },
+    "Preferences_not_in_5": {
+      "expected": "sum over z er ikkje eit element av A"
+    },
+    "Preferences_not_in_6": {
+      "expected": "z er ikkje eit element av A"
+    },
+    "Preferences_not_in_7": {
+      "expected": "heile mengda z ikkje eit element av A med z"
+    },
+    "Preferences_not_in_8": {
+      "expected": "sum over z er ikkje eit element av A"
+    },
+    "Preferences_not_in_9": {
+      "expected": "z er ikkje i A"
+    },
+    "Preferences_not_in_10": {
+      "expected": "heile mengda z ikkje i A med z"
+    },
+    "Preferences_not_in_11": {
+      "expected": "sum over z er ikkje i A"
+    },
+    "Preferences_not_in_12": {
+      "expected": "z tilhører ikke A"
+    },
+    "Preferences_not_in_13": {
+      "expected": "heile mengda z tilhøyrer ikkje A med z"
+    },
+    "Preferences_not_in_14": {
+      "expected": "sum over z tilhører ikke A"
+    },
+    "Complex": {
+      "expected": "heile mengda a tilhøyrande, stor bokstav A med, brøk med tellar 1, og nemnar a, slutt brøk"
+    }
+  }
+}

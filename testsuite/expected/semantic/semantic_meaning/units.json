@@ -1,0 +1,484 @@
+{
+  "factory": "semanticMeaning",
+  "information": "Semantic Meaning Tests for single units",
+  "base": "input/common/units.json",
+  "tests": {
+    "sq": {
+      "expected": "<unknown role=\"unknown\">sq</unknown>"
+    },
+    "sq.": {
+      "expected": "<unknown role=\"unknown\">sq.</unknown>"
+    },
+    "sq in": {
+      "expected": "<unknown role=\"unknown\">sq in</unknown>"
+    },
+    "sq. in.": {
+      "expected": "<unknown role=\"unknown\">sq. in.</unknown>"
+    },
+    "sq inch": {
+      "expected": "<unknown role=\"unknown\">sq inch</unknown>"
+    },
+    "sq. inch": {
+      "expected": "<unknown role=\"unknown\">sq. inch</unknown>"
+    },
+    "sq rd": {
+      "expected": "<unknown role=\"unknown\">sq rd</unknown>"
+    },
+    "sq. rd.": {
+      "expected": "<unknown role=\"unknown\">sq. rd.</unknown>"
+    },
+    "sq ft": {
+      "expected": "<unknown role=\"unknown\">sq ft</unknown>"
+    },
+    "sq. ft.": {
+      "expected": "<unknown role=\"unknown\">sq. ft.</unknown>"
+    },
+    "sq yd": {
+      "expected": "<unknown role=\"unknown\">sq yd</unknown>"
+    },
+    "sq. yd.": {
+      "expected": "<unknown role=\"unknown\">sq. yd.</unknown>"
+    },
+    "sq mi": {
+      "expected": "<unknown role=\"unknown\">sq mi</unknown>"
+    },
+    "sq. mi.": {
+      "expected": "<unknown role=\"unknown\">sq. mi.</unknown>"
+    },
+    "ac": {
+      "expected": "<unknown role=\"unknown\">ac</unknown>"
+    },
+    "ac.": {
+      "expected": "<unknown role=\"unknown\">ac.</unknown>"
+    },
+    "acr": {
+      "expected": "<unknown role=\"unknown\">acr</unknown>"
+    },
+    "acr.": {
+      "expected": "<unknown role=\"unknown\">acr.</unknown>"
+    },
+    "ha": {
+      "expected": "<unknown role=\"unknown\">ha</unknown>"
+    },
+    "$": {
+      "expected": "<identifier role=\"unknown\">$</identifier>"
+    },
+    "💲": {
+      "expected": "<unknown role=\"unknown\">💲</unknown>"
+    },
+    "＄": {
+      "expected": "<identifier role=\"unknown\">＄</identifier>"
+    },
+    "﹩": {
+      "expected": "<identifier role=\"unknown\">﹩</identifier>"
+    },
+    "USD": {
+      "expected": "<unknown role=\"unknown\">USD</unknown>"
+    },
+    "£": {
+      "expected": "<identifier role=\"unknown\">£</identifier>"
+    },
+    "￡": {
+      "expected": "<identifier role=\"unknown\">￡</identifier>"
+    },
+    "GBP": {
+      "expected": "<unknown role=\"unknown\">GBP</unknown>"
+    },
+    "¥": {
+      "expected": "<identifier role=\"unknown\">¥</identifier>"
+    },
+    "￥": {
+      "expected": "<identifier role=\"unknown\">￥</identifier>"
+    },
+    "JPY": {
+      "expected": "<unknown role=\"unknown\">JPY</unknown>"
+    },
+    "€": {
+      "expected": "<unknown role=\"unknown\">€</unknown>"
+    },
+    "EUR": {
+      "expected": "<unknown role=\"unknown\">EUR</unknown>"
+    },
+    "₡": {
+      "expected": "<unknown role=\"unknown\">₡</unknown>"
+    },
+    "CRC": {
+      "expected": "<unknown role=\"unknown\">CRC</unknown>"
+    },
+    "₢": {
+      "expected": "<unknown role=\"unknown\">₢</unknown>"
+    },
+    "₣": {
+      "expected": "<unknown role=\"unknown\">₣</unknown>"
+    },
+    "₤": {
+      "expected": "<unknown role=\"unknown\">₤</unknown>"
+    },
+    "₥": {
+      "expected": "<unknown role=\"unknown\">₥</unknown>"
+    },
+    "₦": {
+      "expected": "<unknown role=\"unknown\">₦</unknown>"
+    },
+    "NGN": {
+      "expected": "<unknown role=\"unknown\">NGN</unknown>"
+    },
+    "₧": {
+      "expected": "<unknown role=\"unknown\">₧</unknown>"
+    },
+    "₨": {
+      "expected": "<unknown role=\"unknown\">₨</unknown>"
+    },
+    "₹": {
+      "expected": "<unknown role=\"unknown\">₹</unknown>"
+    },
+    "INR": {
+      "expected": "<unknown role=\"unknown\">INR</unknown>"
+    },
+    "NPR": {
+      "expected": "<unknown role=\"unknown\">NPR</unknown>"
+    },
+    "PKR": {
+      "expected": "<unknown role=\"unknown\">PKR</unknown>"
+    },
+    "LKR": {
+      "expected": "<unknown role=\"unknown\">LKR</unknown>"
+    },
+    "₩": {
+      "expected": "<unknown role=\"unknown\">₩</unknown>"
+    },
+    "￦": {
+      "expected": "<identifier role=\"unknown\">￦</identifier>"
+    },
+    "KRW": {
+      "expected": "<unknown role=\"unknown\">KRW</unknown>"
+    },
+    "₪": {
+      "expected": "<unknown role=\"unknown\">₪</unknown>"
+    },
+    "₫": {
+      "expected": "<unknown role=\"unknown\">₫</unknown>"
+    },
+    "₭": {
+      "expected": "<unknown role=\"unknown\">₭</unknown>"
+    },
+    "₮": {
+      "expected": "<unknown role=\"unknown\">₮</unknown>"
+    },
+    "₯": {
+      "expected": "<unknown role=\"unknown\">₯</unknown>"
+    },
+    "₰": {
+      "expected": "<unknown role=\"unknown\">₰</unknown>"
+    },
+    "₱": {
+      "expected": "<unknown role=\"unknown\">₱</unknown>"
+    },
+    "₲": {
+      "expected": "<unknown role=\"unknown\">₲</unknown>"
+    },
+    "₳": {
+      "expected": "<unknown role=\"unknown\">₳</unknown>"
+    },
+    "₴": {
+      "expected": "<unknown role=\"unknown\">₴</unknown>"
+    },
+    "UAH": {
+      "expected": "<unknown role=\"unknown\">UAH</unknown>"
+    },
+    "₵": {
+      "expected": "<unknown role=\"unknown\">₵</unknown>"
+    },
+    "GHS": {
+      "expected": "<unknown role=\"unknown\">GHS</unknown>"
+    },
+    "元": {
+      "expected": "<unknown role=\"unknown\">元</unknown>"
+    },
+    "￠": {
+      "expected": "<identifier role=\"unknown\">￠</identifier>"
+    },
+    "¢": {
+      "expected": "<identifier role=\"unknown\">¢</identifier>"
+    },
+    "kwh": {
+      "expected": "<unknown role=\"unknown\">kwh</unknown>"
+    },
+    "kWh": {
+      "expected": "<unknown role=\"unknown\">kWh</unknown>"
+    },
+    "Ohm": {
+      "expected": "<unknown role=\"unknown\">Ohm</unknown>"
+    },
+    "ohm": {
+      "expected": "<unknown role=\"unknown\">ohm</unknown>"
+    },
+    "ft": {
+      "expected": "<unknown role=\"unknown\">ft</unknown>"
+    },
+    "ft.": {
+      "expected": "<unknown role=\"unknown\">ft.</unknown>"
+    },
+    "in": {
+      "expected": "<unknown role=\"unknown\">in</unknown>"
+    },
+    "in.": {
+      "expected": "<unknown role=\"unknown\">in.</unknown>"
+    },
+    "mi": {
+      "expected": "<unknown role=\"unknown\">mi</unknown>"
+    },
+    "mi.": {
+      "expected": "<unknown role=\"unknown\">mi.</unknown>"
+    },
+    "yd": {
+      "expected": "<unknown role=\"unknown\">yd</unknown>"
+    },
+    "yd.": {
+      "expected": "<unknown role=\"unknown\">yd.</unknown>"
+    },
+    "li": {
+      "expected": "<unknown role=\"unknown\">li</unknown>"
+    },
+    "li.": {
+      "expected": "<unknown role=\"unknown\">li.</unknown>"
+    },
+    "rd": {
+      "expected": "<unknown role=\"unknown\">rd</unknown>"
+    },
+    "rd.": {
+      "expected": "<unknown role=\"unknown\">rd.</unknown>"
+    },
+    "ch": {
+      "expected": "<unknown role=\"unknown\">ch</unknown>"
+    },
+    "ch.": {
+      "expected": "<unknown role=\"unknown\">ch.</unknown>"
+    },
+    "fur": {
+      "expected": "<unknown role=\"unknown\">fur</unknown>"
+    },
+    "fur.": {
+      "expected": "<unknown role=\"unknown\">fur.</unknown>"
+    },
+    "n.m.": {
+      "expected": "<unknown role=\"unknown\">n.m.</unknown>"
+    },
+    "b": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">b</identifier>"
+    },
+    "KB": {
+      "expected": "<unknown role=\"unknown\">KB</unknown>"
+    },
+    "doz": {
+      "expected": "<unknown role=\"unknown\">doz</unknown>"
+    },
+    "doz.": {
+      "expected": "<unknown role=\"unknown\">doz.</unknown>"
+    },
+    "dz": {
+      "expected": "<unknown role=\"unknown\">dz</unknown>"
+    },
+    "dz.": {
+      "expected": "<unknown role=\"unknown\">dz.</unknown>"
+    },
+    "kt": {
+      "expected": "<unknown role=\"unknown\">kt</unknown>"
+    },
+    "kt.": {
+      "expected": "<unknown role=\"unknown\">kt.</unknown>"
+    },
+    "mph": {
+      "expected": "<unknown role=\"unknown\">mph</unknown>"
+    },
+    "rpm": {
+      "expected": "<unknown role=\"unknown\">rpm</unknown>"
+    },
+    "kmh": {
+      "expected": "<unknown role=\"unknown\">kmh</unknown>"
+    },
+    "F": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">F</identifier>"
+    },
+    "F.": {
+      "expected": "<unknown role=\"unknown\">F.</unknown>"
+    },
+    "°F": {
+      "expected": "<unknown role=\"unknown\">°F</unknown>"
+    },
+    "C": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">C</identifier>"
+    },
+    "°C": {
+      "expected": "<unknown role=\"unknown\">°C</unknown>"
+    },
+    "K": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">K</identifier>"
+    },
+    "°K": {
+      "expected": "<unknown role=\"unknown\">°K</unknown>"
+    },
+    "min": {
+      "expected": "<function role=\"limit function\">min</function>"
+    },
+    "h": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">h</identifier>"
+    },
+    "hr": {
+      "expected": "<unknown role=\"unknown\">hr</unknown>"
+    },
+    "cu": {
+      "expected": "<unknown role=\"unknown\">cu</unknown>"
+    },
+    "cu.": {
+      "expected": "<unknown role=\"unknown\">cu.</unknown>"
+    },
+    "cu in": {
+      "expected": "<unknown role=\"unknown\">cu in</unknown>"
+    },
+    "cu. in.": {
+      "expected": "<unknown role=\"unknown\">cu. in.</unknown>"
+    },
+    "cu ft": {
+      "expected": "<unknown role=\"unknown\">cu ft</unknown>"
+    },
+    "cu. ft.": {
+      "expected": "<unknown role=\"unknown\">cu. ft.</unknown>"
+    },
+    "cu yd": {
+      "expected": "<unknown role=\"unknown\">cu yd</unknown>"
+    },
+    "cu. yd.": {
+      "expected": "<unknown role=\"unknown\">cu. yd.</unknown>"
+    },
+    "bbl.": {
+      "expected": "<unknown role=\"unknown\">bbl.</unknown>"
+    },
+    "bbl": {
+      "expected": "<unknown role=\"unknown\">bbl</unknown>"
+    },
+    "fl. oz.": {
+      "expected": "<unknown role=\"unknown\">fl. oz.</unknown>"
+    },
+    "fl oz": {
+      "expected": "<unknown role=\"unknown\">fl oz</unknown>"
+    },
+    "gal": {
+      "expected": "<unknown role=\"unknown\">gal</unknown>"
+    },
+    "gal.": {
+      "expected": "<unknown role=\"unknown\">gal.</unknown>"
+    },
+    "pt": {
+      "expected": "<unknown role=\"unknown\">pt</unknown>"
+    },
+    "pt.": {
+      "expected": "<unknown role=\"unknown\">pt.</unknown>"
+    },
+    "qt": {
+      "expected": "<unknown role=\"unknown\">qt</unknown>"
+    },
+    "qt.": {
+      "expected": "<unknown role=\"unknown\">qt.</unknown>"
+    },
+    "fl dr": {
+      "expected": "<unknown role=\"unknown\">fl dr</unknown>"
+    },
+    "fl. dr.": {
+      "expected": "<unknown role=\"unknown\">fl. dr.</unknown>"
+    },
+    "tbsp": {
+      "expected": "<unknown role=\"unknown\">tbsp</unknown>"
+    },
+    "tbsp.": {
+      "expected": "<unknown role=\"unknown\">tbsp.</unknown>"
+    },
+    "Tbsp": {
+      "expected": "<unknown role=\"unknown\">Tbsp</unknown>"
+    },
+    "Tbsp.": {
+      "expected": "<unknown role=\"unknown\">Tbsp.</unknown>"
+    },
+    "tsp": {
+      "expected": "<unknown role=\"unknown\">tsp</unknown>"
+    },
+    "tsp.": {
+      "expected": "<unknown role=\"unknown\">tsp.</unknown>"
+    },
+    "cp": {
+      "expected": "<unknown role=\"unknown\">cp</unknown>"
+    },
+    "cp.": {
+      "expected": "<unknown role=\"unknown\">cp.</unknown>"
+    },
+    "cc": {
+      "expected": "<unknown role=\"unknown\">cc</unknown>"
+    },
+    "ccm": {
+      "expected": "<unknown role=\"unknown\">ccm</unknown>"
+    },
+    "dr": {
+      "expected": "<unknown role=\"unknown\">dr</unknown>"
+    },
+    "dr.": {
+      "expected": "<unknown role=\"unknown\">dr.</unknown>"
+    },
+    "oz": {
+      "expected": "<unknown role=\"unknown\">oz</unknown>"
+    },
+    "oz.": {
+      "expected": "<unknown role=\"unknown\">oz.</unknown>"
+    },
+    "lb": {
+      "expected": "<unknown role=\"unknown\">lb</unknown>"
+    },
+    "lb.": {
+      "expected": "<unknown role=\"unknown\">lb.</unknown>"
+    },
+    "st": {
+      "expected": "<unknown role=\"unknown\">st</unknown>"
+    },
+    "st.": {
+      "expected": "<unknown role=\"unknown\">st.</unknown>"
+    },
+    "qtr": {
+      "expected": "<unknown role=\"unknown\">qtr</unknown>"
+    },
+    "qtr.": {
+      "expected": "<unknown role=\"unknown\">qtr.</unknown>"
+    },
+    "cwt": {
+      "expected": "<unknown role=\"unknown\">cwt</unknown>"
+    },
+    "cwt.": {
+      "expected": "<unknown role=\"unknown\">cwt.</unknown>"
+    },
+    "LT": {
+      "expected": "<unknown role=\"unknown\">LT</unknown>"
+    },
+    "L.T.": {
+      "expected": "<unknown role=\"unknown\">L.T.</unknown>"
+    },
+    "gr": {
+      "expected": "<unknown role=\"unknown\">gr</unknown>"
+    },
+    "mcg": {
+      "expected": "<unknown role=\"unknown\">mcg</unknown>"
+    },
+    "t": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">t</identifier>"
+    },
+    "T": {
+      "expected": "<identifier role=\"latinletter\" font=\"normal\">T</identifier>"
+    },
+    "′": {
+      "expected": "<punctuation role=\"prime\">′</punctuation>"
+    },
+    "°": {
+      "expected": "<punctuation role=\"degree\">°</punctuation>"
+    },
+    "″": {
+      "expected": "<punctuation role=\"prime\">″</punctuation>"
+    }
+  }
+}
