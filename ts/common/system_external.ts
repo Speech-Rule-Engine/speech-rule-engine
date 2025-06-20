@@ -121,15 +121,5 @@ export const SystemExternal: any = {
       : process.cwd() + '/lib/mathmaps';
   })(),
 
-  /**
-   * Path to Xpath library file.
-   */
-  WGXpath: Variables.WGXpath,
-
-  /**
-   * WGXpath library.
-   */
-  wgxpath: null as any,
-
   xpath: xpath
 };

@@ -20,7 +20,6 @@
 
 import * as L10n from '../l10n/l10n.js';
 import * as MathMap from '../speech_rules/math_map.js';
-import * as BrowserUtil from './browser_util.js';
 import { Debugger } from './debugger.js';
 import { Engine, EnginePromise } from './engine.js';
 import { SystemExternal } from './system_external.js';
@@ -41,7 +40,6 @@ export async function setupEngine(feature: { [key: string]: boolean | string }) 
   }
   const engine = Engine.getInstance();
   engine.setup(feature);
-  setupBrowsers(engine);
   L10n.setLocale();
   engine.setDynamicCstr();
   // We add a break in the execution flow so custom loaders can set up.
@@ -62,17 +60,6 @@ export async function setupEngine(feature: { [key: string]: boolean | string }) 
 }
 
 /**
- * Sets up browser specific functionality.
- *
- * @param engine The Engine object.
- * @deprecated
- */
-function setupBrowsers(engine: Engine) {
-  engine.isIE = BrowserUtil.detectIE();
-  engine.isEdge = BrowserUtil.detectEdge();
-}
-
-/**
  * Query the engine setup.
  *
  * @returns Object vector with all engine feature
@@ -81,7 +68,6 @@ function setupBrowsers(engine: Engine) {
 export function engineSetup(): { [key: string]: boolean | string } {
   const features: { [key: string]: string | boolean } = Engine.getInstance().json();
   features.json = SystemExternal.jsonPath;
-  features.xpath = SystemExternal.WGXpath;
   return features;
 }
 
