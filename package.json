@@ -79,11 +79,5 @@
     "js/",
     "cjs/"
   ],
-  "exports": {
-    "./js/*": {
-      "import": "./js/*",
-      "require": "./cjs/*"
-    }
-  },
   "main": "lib/sre.js"
 }
