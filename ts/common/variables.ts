@@ -78,10 +78,4 @@ export class Variables {
     'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
     Variables.VERSION +
     '/lib/mathmaps';
-
-  /**
-   * Path to Xpath library file.
-   */
-  public static readonly WGXpath: string =
-    'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
 }

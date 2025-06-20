@@ -21,7 +21,6 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as BrowserUtil from '../common/browser_util.js';
 import { Engine, EnginePromise } from '../common/engine.js';
 import * as EngineConst from '../common/engine_const.js';
 import * as FileUtil from '../common/file_util.js';
@@ -135,11 +134,12 @@ export function standardLoader() {
 }
 
 /**
- * Retrieves JSON rule mappings for a given locale.
+ * Retrieves JSON rule mappings for a given locale and adds them to the
+ * respective stores.
  *
  * @param locale The target locale.
  */
-function retrieveFiles(locale: string) {
+function retrieveMaps(locale: string) {
   const loader = loadMethod();
   const promise = new Promise<string>((res) => {
     const inner = loader(locale);
@@ -193,39 +193,6 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
     }
     addSymbols[info[1]](json[key]);
   }
-}
-
-/**
- * Retrieves mappings and adds them to the respective stores.
- *
- * @param locale The target locale.
- */
-function retrieveMaps(locale: string) {
-  if (
-    Engine.getInstance().isIE &&
-    Engine.getInstance().mode === EngineConst.Mode.HTTP
-  ) {
-    getJsonIE_(locale);
-    return;
-  }
-  retrieveFiles(locale);
-}
-
-/**
- * Gets JSON elements from the global JSON object in case of IE browsers.
- *
- * @param locale The target locale.
- * @param opt_count Optional counter argument for callback.
- */
-function getJsonIE_(locale: string, opt_count?: number) {
-  let count = opt_count || 1;
-  if (!BrowserUtil.mapsForIE) {
-    if (count <= 5) {
-      setTimeout((() => getJsonIE_(locale, count++)).bind(this), 300);
-    }
-    return;
-  }
-  addMaps(BrowserUtil.mapsForIE as MathMapJson, locale);
 }
 
 /**

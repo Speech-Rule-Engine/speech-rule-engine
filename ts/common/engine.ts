@@ -119,16 +119,6 @@ export class Engine {
   }
 
   /**
-   * Current browser is MS Internet Explorer but not Edge.
-   */
-  public isIE = false;
-
-  /**
-   * Current browser is MS Edge.
-   */
-  public isEdge = false;
-
-  /**
    * @returns The Engine object.
    */
   public static getInstance(): Engine {
@@ -273,9 +263,6 @@ export class Engine {
     this.options.set(feature);
     if (feature.json) {
       SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
-    }
-    if (feature.xpath) {
-      SystemExternal.WGXpath = feature.xpath as string;
     }
     this.setCustomLoader(feature.custom);
   }
